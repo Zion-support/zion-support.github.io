@@ -2,11 +2,19 @@
 
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 ;
 console.log(`'[INFO] 🔧 Starting advanced syntax error fix automation...');
 ;
 function fixAdvancedSyntaxErrors(filePath) {;
   try {;
+=======
+
+console.log(`[INFO] 🔧 Starting advanced syntax error fix automation...`);
+
+function fixAdvancedSyntaxErrors(filePath) {
+  try {
+>>>>>>> main
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     let fixes = 0;
@@ -68,10 +76,17 @@ function fixAdvancedSyntaxErrors(filePath) {;
     if (content !== originalContent) {;
       fs.writeFileSync(filePath, content, 'utf8');
       fixes++;
+<<<<<<< HEAD
       console.log(`[INFO] ✅ Fixed advanced syntax errors in ${path.basename(filePath)});
     }
 ;
     return fixes;
+=======
+      console.log(`[INFO] ✅ Fixed advanced syntax errors in ${path.basename(filePath)});`);
+    }`);
+`);
+    return fixes;`);
+>>>>>>> main
   } catch (error) {console.log([ERROR] Failed to fix ${filePath}: ${error.message}``);
     return 0;
   }

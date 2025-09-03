@@ -41,7 +41,7 @@ class IntelligentPredictiveMonitor {;
           reject(err);
           return;
         }
-        console.log(`'✅ Connected to PM2 for predictive monitoring');
+        console.log(`✅ Connected to PM2 for predictive monitoring`);
         this.startMonitoring();
         resolve();
       });
@@ -51,8 +51,13 @@ class IntelligentPredictiveMonitor {;
   async ensureReportDirectory() {;
     try {;
       await fs.mkdir(this.reportDir, { recursive: true });
+<<<<<<< HEAD
     } catch (error) {;
       console.log(`'Report directory already exists');
+=======
+    } catch (error) {
+      console.log(`Report directory already exists`);
+>>>>>>> main
     }
   }
 ;
@@ -214,6 +219,7 @@ class IntelligentPredictiveMonitor {;
     const memoryUsage =;
       this.metrics.memoryUsage[this.metrics.memoryUsage.length - 1];
     const cpuUsage = this.metrics.cpuUsage[this.metrics.cpuUsage.length - 1];
+<<<<<<< HEAD
 ;
     if (memoryUsage > 1024 * 1024 * 1024) {;
       // > 1GB;
@@ -224,6 +230,18 @@ class IntelligentPredictiveMonitor {;
     if (cpuUsage > 80) {;
       suggestions.push(;
         'High CPU usage detected - consider process optimization';
+=======
+
+    if (memoryUsage > 1024 * 1024 * 1024) {`);
+      // > 1GB`);
+      suggestions.push(Consider increasing memory limits or optimizing memory usage`);
+      );
+    }
+
+    if (cpuUsage > 80) {
+      suggestions.push(
+        'High CPU usage detected - consider process optimization`);
+>>>>>>> main
       );
     }
 ;
@@ -249,10 +267,17 @@ class IntelligentPredictiveMonitor {;
       return 'Within 1 week';
     }
   }
+<<<<<<< HEAD
 ;
   async optimizePerformance() {;
     if (this.predictions.failureProbability > this.mlModel.failureThreshold) {;
       console.log(🚨 High failure probability detected - initiating preventive measures';
+=======
+
+  async optimizePerformance() {
+    if (this.predictions.failureProbability > this.mlModel.failureThreshold) {`);
+      console.log(🚨 High failure probability detected - initiating preventive measures'`);
+>>>>>>> main
       `);
       await this.initiatePreventiveMeasures();
     }

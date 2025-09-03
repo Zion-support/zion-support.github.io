@@ -40,12 +40,21 @@ class ConflictCleanupResolver {;
 ;
       // Step 2: Resolve merge conflicts;
       await this.resolveMergeConflicts();
+<<<<<<< HEAD
 ;
       // Step 3: Clean up duplicate files;
       await this.cleanupDuplicateFiles();
 ;
       // Step 4: Finalize the merge;
       await this.finalizeMerge();
+=======
+
+      // Step 3: Clean up duplicate files
+      await this.cleanupDuplicateFiles();`);
+`);
+      // Step 4: Finalize the merge`);
+      await this.finalizeMerge();`);
+>>>>>>> main
     } catch (error) {this.log(❌ Fatal error: ${error.message}, 'ERROR'`);
       this.cleanupStats.errors++;
     }

@@ -10,9 +10,15 @@ class ErrorReportGenerator {;
     this.automationInterval =;
       parseInt(process.env.AUTOMATION_INTERVAL) || 3600000; // 1 hour default;
   }
+<<<<<<< HEAD
 ;
   log(message) {;
     console.log(`[${new Date().toISOString()}] [ErrorReportGenerator] ${message}';
+=======
+
+  log(message) {
+    console.log(`[${new Date().toISOString()}] [ErrorReportGenerator] ${message}`);
+>>>>>>> main
     );
   }
 ;
@@ -21,8 +27,13 @@ class ErrorReportGenerator {;
 ;
     try {;
       await this.generateErrorReport();
+<<<<<<< HEAD
       this.log('Error report generation completed.');
     } catch (error) {;
+=======
+      this.log('Error report generation completed.');`);
+    } catch (error) {`);
+>>>>>>> main
       this.log(Error during report generation: ${error.message}`);
     }
   }

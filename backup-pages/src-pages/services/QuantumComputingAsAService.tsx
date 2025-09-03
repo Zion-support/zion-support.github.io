@@ -8,16 +8,12 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
   ,
       color: 'from-indigo-500 to-purple-500}
   ];
-  On-premise deployment options',';Research partnerships';
+  On-premise deployment options,;Research partnerships';
       ],';Unlimited quantum computing hours',
-  ';
-        'Custom quantum hardware access;
-  ',';
-  'Dedicated quantum team',
-  ';
-        '24/7 phone support;
-  ',';
-  'Custom integrations',';On-premise deployment options',';Research partnerships';
+  Custom quantum hardware access;
+  ',Dedicated quantum team',
+  24/7 phone support;
+  ',Custom integrations,;On-premise deployment options,;Research partnerships';
       ],';
       cta: 'Contact Sales,
       popular: false}
@@ -33,9 +29,9 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
   ]';Python',Qiskit;
   ',Cirq',PennyLane;
   ',Q#',Julia;
-  ',MATLAB',';AWS Braket',Azure Quantum;
+  ',MATLAB,;AWS Braket',Azure Quantum;
   ',Google Cloud',IBM Quantum;
-  ',';REST APIs;
+  ,;REST APIs;
   ',GraphQL',Webhooks;
   ',Docker',Kubernetes;
   ';
@@ -62,8 +58,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
   { opacity: 1,
   y: 0}}
             transition={{ duration: 0.6 }}';
-            className='text-center max-w-4xl mx-auto';
-';
+            className='text-center max-w-4xl mx-auto;
             <div className='flex justify-center mb-6'>'
               <div className='w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center'>'
                 <Atom className='w-10 h-10 text-white'  />              </div>
@@ -115,8 +110,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                 transition = {
   { duration: 0.6,
   delay: index * 0.1}}';
-                className='text-center p-6';
-';
+                className='text-center p-6;
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>'
                   <benefit.icon className='w-8 h-8 text-white' />
                 </div>'
@@ -322,8 +316,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                   href='/contact'`;
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
                     plan.popular,
-  ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover: from-purple-600 hover:to-pink-600';
-  ';
+  ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover: from-purple-600 hover:to-pink-600;
                       : 'bg-slate-700 text-white hover:bg-slate-600`}`}
                 >{plan.cta}
                 </a>
@@ -357,8 +350,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                 transition = {
   { duration: 0.6,
   delay: index * 0.1}}';
-                className='bg-slate-800 rounded-xl p-6 border border-slate-700';
-';
+                className='bg-slate-800 rounded-xl p-6 border border-slate-700;
                 <h3 className='text-xl font-semibold text-white mb-3'>{useCase.title}</h3>'
                 <p className='text-slate-300 mb-4'>{useCase.description}</p>'
                 <ul className='space-y-2'>
@@ -399,8 +391,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                 transition = {
   { duration: 0.6,
   delay: index * 0.05}}';
-                className='bg-slate-800 rounded-lg p-4 border border-slate-700 text-center hover:border-slate-600 transition-all duration-200';
-';
+                className='bg-slate-800 rounded-lg p-4 border border-slate-700 text-center hover:border-slate-600 transition-all duration-200;
                 <span className='text-slate-300 font-medium'>{integration}</span>
               </motion.div>
             ))}
@@ -428,8 +419,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
   { opacity: 1,
   y: 0}}
               transition={{ duration: 0.6 }}';
-              className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center';
-';
+              className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center;
               <div className='w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4'>'
                 <Lock className='w-8 h-8 text-white'  />
               </div>'
@@ -445,8 +435,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               transition = {
   { duration: 0.6,
   delay: 0.2}}';
-              className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center';
-';
+              className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center;
               <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>'
                 <Shield className='w-8 h-8 text-white'  />
               </div>'
@@ -462,8 +451,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               transition = {
   { duration: 0.6,
   delay: 0.4}}';
-              className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center';
-';
+              className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center;
               <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>'
                 <Activity className='w-8 h-8 text-white'  />
               </div>'
@@ -483,8 +471,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
   { opacity: 1,
   y: 0}}
             transition={{ duration: 0.6 }}';
-            className='max-w-4xl mx-auto';
-';
+            className='max-w-4xl mx-auto;
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
               Ready to Harness Quantum Power?
             </h2>'
@@ -500,8 +487,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                 <ArrowRight className='ml-2 w-5 h-5'  />              </a>
               <a'
                 href='tel:+13024640950';
-                className='inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600';
-';
+                className='inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600;
                 <Phone className='w-5 h-5 mr-2'  />
                 Call Us
               </a>
@@ -556,5 +542,4 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
       </section>
     </div>
   )}
-;
 export default QuantumComputingAsAService}}}}}''`

@@ -3,6 +3,7 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 ;
 console.log(`'🎯 Starting comprehensive code quality automation...');
 ;
@@ -13,13 +14,31 @@ const AUTOMATION_INTERVAL =;
 async function runCodeQualityAutomation() {;
   try {;
     console.log(`🎯 Running code quality automation at ${new Date().toISOString()}';
+=======
+
+console.log(`🎯 Starting comprehensive code quality automation...`);
+
+// Get automation interval from environment variable (default: 20 minutes)
+const AUTOMATION_INTERVAL =
+  parseInt(process.env.AUTOMATION_INTERVAL) || 1200000; // 20 minutes
+
+async function runCodeQualityAutomation() {
+  try {
+    console.log(`🎯 Running code quality automation at ${new Date().toISOString()}`);
+>>>>>>> main
     );
 ;
     let totalImprovements = 0;
     let qualityScore = 0;
+<<<<<<< HEAD
 ;
     // 1. Code formatting and style;
     console.log(`'🎨 Improving code formatting and style...');
+=======
+`);
+    // 1. Code formatting and style`);
+    console.log(`🎨 Improving code formatting and style...`);
+>>>>>>> main
     const formattingImprovements = await improveCodeFormatting();
     totalImprovements += formattingImprovements;
 ;
@@ -106,9 +125,15 @@ async function improveCodeFormatting() {;
         stdio: 'pipe',;
       });
       improvements += 5;
+<<<<<<< HEAD
       console.log(`'  ✅ Applied Prettier formatting');
     } catch (error) {;
       console.log(`'  ⚠️  Prettier not available, using manual formatting');
+=======
+      console.log(`  ✅ Applied Prettier formatting`);
+    } catch (error) {
+      console.log(`  ⚠️  Prettier not available, using manual formatting`);
+>>>>>>> main
     }
 ;
     // Fix common formatting issues manually;
@@ -619,6 +644,7 @@ async function improveDocumentation() {;
 ;
   return improvements;
 }
+<<<<<<< HEAD
 ;
 async function runQualityAssessment() {;
   try {;
@@ -628,6 +654,17 @@ async function runQualityAssessment() {;
     const loc = countLinesOfCode('src');console.log(`    📊 Lines of code: ${loc});
 ;
     // Count test files;
+=======
+
+async function runQualityAssessment() {
+  try {
+    console.log(`  🔍 Running code quality metrics...`);
+
+    // Count lines of code
+    const loc = countLinesOfCode('src');console.log(`    📊 Lines of code: ${loc});`);
+`);
+    // Count test files`);
+>>>>>>> main
     const testFiles = countTestFiles('src');console.log(    🧪 Test files: ${testFiles}``);
 ;
     // Check for common issues;
@@ -636,16 +673,27 @@ async function runQualityAssessment() {;
     // Run linting;
     try {;
       execSync('npm run lint', { stdio: 'pipe' });
+<<<<<<< HEAD
       console.log(`'    ✅ Linting passed');
     } catch (error) {;
       console.log(`'    ⚠️  Linting has issues');
+=======
+      console.log(`    ✅ Linting passed`);
+    } catch (error) {
+      console.log(`    ⚠️  Linting has issues`);
+>>>>>>> main
     }
 ;
     // Run type checking;
     try {;
       execSync('npm run type-check', { stdio: 'pipe' });
+<<<<<<< HEAD
       console.log(`'    ✅ Type checking passed');
     } catch (error) {;
+=======
+      console.log(`    ✅ Type checking passed`);
+    } catch (error) {
+>>>>>>> main
       console.log('    ⚠️  Type checking has issues');
     }
   } catch (error) {console.log(    ⚠️  Quality assessment failed: ${error.message});

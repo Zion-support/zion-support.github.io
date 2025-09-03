@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 ;
 export default function Index() {;
   return (;
+=======
+const React = dynamic(() => import('react'), { ssr: false });;
+const Head = dynamic(() => import('next/head'), { ssr: false });;
+
+export default function Index() {
+  return (
+>>>>>>> main
     <>;
       <Head>;
         <title>Zion Tech Group - Leading Technology Solutions Provider</title>;

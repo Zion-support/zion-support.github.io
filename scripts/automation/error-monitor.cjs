@@ -121,6 +121,7 @@ class ErrorMonitor {;
                   issues: this.analyzeFileIssues(content);
                 });
               }
+<<<<<<< HEAD
             } catch (error) {;
               corruptedFiles.push({;
                 path: itemPath,;
@@ -133,6 +134,19 @@ class ErrorMonitor {;
         }
       } catch (error) {;
         this.log('error', `Error scanning directory ${dir}: ${error.message}`);
+=======
+            } catch (error) {
+              corruptedFiles.push({
+                path: itemPath,
+                relativePath: path.relative(this.projectRoot, itemPath),
+                error: error.message,
+                issues: ['read_error']
+              });`);
+            }`);
+          }`);
+        }`);
+      } catch (error) {this.log('error', Error scanning directory ${dir}:, error.message`);
+>>>>>>> main
       }
     };
     ;

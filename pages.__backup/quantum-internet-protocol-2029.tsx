@@ -23,43 +23,21 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709,
   website:,
   https: //ziontechgroup.com}
-;
 const features = [
 <:pages/quantum-internet-protocol-2029.tsx,
-  Quantum entanglement distribution',
-  'Quantum key distribution',
-  'Quantum teleportation',
-  'Quantum routing protocols',
-  'Quantum network security',
-  'Global quantum connectivity',
-  'Quantum internet backbone',
-  'Quantum network management';
+  Quantum entanglement distribution,Quantum key distribution,Quantum teleportation,Quantum routing protocols,Quantum network security,Global quantum connectivity,Quantum internet backbone,Quantum network management';
 ];
 const benefits = [
-  'Unbreakable quantum encryption',
-  'Faster-than-light communication',
-  'Global quantum network access',
-  'Quantum internet infrastructure',
-  'Future-proof networking',
-  'Quantum advantage in communication';
+  'Unbreakable quantum encryption,Faster-than-light communication,Global quantum network access,Quantum internet infrastructure,Future-proof networking,Quantum advantage in communication';
 ];
 const useCases = [
-  'Government communications',
-  'Financial institutions',
-  'Healthcare networks',
-  'Research institutions',
-  'Military communications',
-  'Global enterprises';
+  'Government communications,Financial institutions,Healthcare networks,Research institutions,Military communications,Global enterprises';
 ];
 const technology = [
-  'Quantum Entanglement',
-  'Quantum Key Distribution',
-  'Quantum Networks',
-  'Quantum Routing',
-  'Quantum Cryptography',
-  'Quantum Error Correction';
+  'Quantum Entanglement,Quantum Key Distribution,Quantum Networks,Quantum Routing,Quantum Cryptography,Quantum Error Correction';
 ];
-const pricingPlans = [{
+const pricingPlans = [
+  {
 <: pages/quantum-internet-protocol-2029.tsxname:;
   'Government Standard,
     price:,
@@ -69,10 +47,7 @@ const pricingPlans = [{
   Perfect for government agencies and research institutions',
     features: [;
   'Basic quantum network access,
-  'Quantum encryption protocols',
-  'Network security features',
-  'Basic support',
-  'Compliance certification';
+  'Quantum encryption protocols,Network security features,Basic support,Compliance certification';
 ],
     popular: false},
   {
@@ -85,11 +60,7 @@ const pricingPlans = [{
   For large enterprises and financial institutions',
     features: [;
   'Full quantum network access,
-  'Advanced quantum protocols',
-  'Custom network configurations',
-  'Priority support',
-  'Custom training',
-  'Integration services';
+  'Advanced quantum protocols,Custom network configurations,Priority support,Custom training,Integration services';
     ],
     popular: true},
   {
@@ -102,11 +73,7 @@ const pricingPlans = [{
   For military and defense organizations',
     features: [;
   'Military-grade quantum security,
-  'Custom quantum protocols',
-  'On-site deployment',
-  '24/7 dedicated support',
-  'Compliance certification',
-  'Training and certification';
+  'Custom quantum protocols,On-site deployment,24/7 dedicated support,Compliance certification,Training and certification';
 ],
     popular: false}
 ];

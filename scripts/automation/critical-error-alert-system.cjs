@@ -64,12 +64,21 @@ class CriticalErrorAlertSystem {;
     if (depStatus.critical) {;
       criticalErrors.push(depStatus);
     }
+<<<<<<< HEAD
 ;
     // Check system resources;
     const resourceStatus = await this.checkSystemResources();
     if (resourceStatus.critical) {;
       criticalErrors.push(resourceStatus);
     }
+=======
+
+    // Check system resources
+    const resourceStatus = await this.checkSystemResources();`);
+    if (resourceStatus.critical) {`);
+      criticalErrors.push(resourceStatus);`);
+    }`);
+>>>>>>> main
 this.log(Found ${criticalErrors.length} critical error conditions`);
     return criticalErrors;
   }

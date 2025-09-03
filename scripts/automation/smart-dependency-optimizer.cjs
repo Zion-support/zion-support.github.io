@@ -13,6 +13,7 @@ const crypto = require('crypto');
 class SmartDependencyOptimizer {;
   constructor() {;
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
     this.logFile = path.join(;
       this.projectRoot,logs',;
       'smart-dependency-optimizer.log';
@@ -24,6 +25,19 @@ class SmartDependencyOptimizer {;
     this.usageAnalysis = path.join(;
       this.projectRoot,logs',;
       'dependency-usage-analysis.json';
+=======
+    this.logFile = path.join(
+      this.projectRoot, 'logs',
+      'smart-dependency-optimizer.log'
+    );
+    this.optimizationLog = path.join(
+      this.projectRoot, 'logs',
+      'dependency-optimizations.json'
+    );
+    this.usageAnalysis = path.join(
+      this.projectRoot, 'logs',
+      'dependency-usage-analysis.json'
+>>>>>>> main
     );
     this.ensureLogsDirectory();
     this.loadOptimizationHistory();
@@ -799,9 +813,15 @@ return `${major}.${minor + 1}.${patch}`;
       recommendations: recommendations,;
       history: this.optimizationHistory,;
     };
+<<<<<<< HEAD
 ;
     const reportPath = path.join(;
       this.projectRoot,logs', `dependency-optimization-report-${Date.now()}.json`;
+=======
+
+    const reportPath = path.join(
+      this.projectRoot, 'logs', `dependency-optimization-report-${Date.now()}.json`
+>>>>>>> main
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 this.log(`📊 Optimization Report generated: ${reportPath}`);

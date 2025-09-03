@@ -3,12 +3,17 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 ;
 console.log(`'🔮 Starting Predictive Maintenance Monitor...');
 ;
 // Get automation interval from environment variable (default: 2 hours);
 const AUTOMATION_INTERVAL =;
   parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours;
+=======
+
+console.log(`🔮 Starting Predictive Maintenance Monitor...`);
+>>>>>>> main
 
 class PredictiveMaintenanceMonitor {;
   constructor() {;
@@ -40,6 +45,7 @@ class PredictiveMaintenanceMonitor {;
         const data = JSON.parse(fs.readFileSync(historicalFile, 'utf8'));
         this.maintenanceMetrics = { ...this.maintenanceMetrics, ...data };
       }
+<<<<<<< HEAD
     } catch (error) {;
       console.log(`'No historical maintenance data found, starting fresh');
     }
@@ -48,6 +54,16 @@ class PredictiveMaintenanceMonitor {;
   async monitorSystemHealth() {;
     try {;
       console.log(`🔮 Running predictive maintenance monitoring at ${new Date().toISOString()}';
+=======
+    } catch (error) {
+      console.log(`No historical maintenance data found, starting fresh`);
+    }
+  }
+
+  async monitorSystemHealth() {
+    try {
+      console.log(`🔮 Running predictive maintenance monitoring at ${new Date().toISOString()}`);
+>>>>>>> main
       );
 ;
       // Analyze system performance;
@@ -73,9 +89,15 @@ class PredictiveMaintenanceMonitor {;
 ;
       // Generate report;
       await this.generateReport();
+<<<<<<< HEAD
 ;
       console.log(;
         '✅ Predictive maintenance monitoring completed successfully';
+=======
+
+      console.log(
+        '✅ Predictive maintenance monitoring completed successfully`);
+>>>>>>> main
       );
     } catch (error) {;
       console.error(❌ Predictive maintenance monitoring failed:',;
@@ -112,6 +134,7 @@ class PredictiveMaintenanceMonitor {;
       performanceMetrics.memoryUsage = systemInfo.memoryUsage;
       performanceMetrics.cpuUsage = systemInfo.cpuUsage;
       performanceMetrics.diskUsage = systemInfo.diskUsage;
+<<<<<<< HEAD
 ;
       this.maintenanceMetrics.performanceTrends.push({;
         timestamp: new Date().toISOString(),;
@@ -119,6 +142,15 @@ class PredictiveMaintenanceMonitor {;
       });
 ;
       console.log(📊 Performance metrics collected: Build time: ${performanceMetrics.buildTime}ms, Bundle size: ${(performanceMetrics.bundleSize / 1024 / 1024).toFixed(2)}MB';
+=======
+
+      this.maintenanceMetrics.performanceTrends.push({
+        timestamp: new Date().toISOString(),
+        metrics: performanceMetrics,
+      });`);
+`);
+      console.log(📊 Performance metrics collected: Build time: ${performanceMetrics.buildTime}ms, Bundle size: ${(performanceMetrics.bundleSize / 1024 / 1024).toFixed(2)}MB`);
+>>>>>>> main
       );
     } catch (error) {;
       console.log('⚠️ Performance analysis failed:', error.message);
@@ -171,8 +203,13 @@ class PredictiveMaintenanceMonitor {;
           stdio: 'pipe',;
         });
         const outdated = JSON.parse(outdatedOutput);
+<<<<<<< HEAD
         if (Object.keys(outdated).length > 0) {;
           buildHealth.warnings.push(Found ${Object.keys(outdated).length} outdated dependencies';
+=======
+        if (Object.keys(outdated).length > 0) {
+          buildHealth.warnings.push(Found ${Object.keys(outdated).length} outdated dependencies`);
+>>>>>>> main
           );
         }
       } catch (error) {;
@@ -256,12 +293,21 @@ class PredictiveMaintenanceMonitor {;
           timestamp: new Date().toISOString(),;
         });
       }
+<<<<<<< HEAD
 ;
       if (dependencyHealth.securityVulnerabilities > 0) {;
         this.maintenanceMetrics.riskFactors.push({;
           type: 'security_vulnerabilities',;
           severity: 'high',description: Found ${dependencyHealth.securityVulnerabilities} security vulnerabilities',;
           timestamp: new Date(`).toISOString(),;
+=======
+
+      if (dependencyHealth.securityVulnerabilities > 0) {
+        this.maintenanceMetrics.riskFactors.push({
+          type: 'security_vulnerabilities',`);
+          severity: 'high',description: Found ${dependencyHealth.securityVulnerabilities} security vulnerabilities',`);
+          timestamp: new Date(`).toISOString(),
+>>>>>>> main
         });
       }
 ;
@@ -317,8 +363,13 @@ class PredictiveMaintenanceMonitor {;
           timestamp: new Date().toISOString(),;
         });
       }
+<<<<<<< HEAD
 ;
       console.log(📊 Code quality: ${qualityMetrics.lintErrors} errors, ${qualityMetrics.lintWarnings} warnings, maintainability: ${qualityMetrics.maintainabilityIndex}';
+=======
+
+      console.log(📊 Code quality: ${qualityMetrics.lintErrors} errors, ${qualityMetrics.lintWarnings} warnings, maintainability: ${qualityMetrics.maintainabilityIndex}`);
+>>>>>>> main
       );
     } catch (error) {;
       console.log('⚠️ Code quality monitoring failed:', error.message);
@@ -348,6 +399,7 @@ class PredictiveMaintenanceMonitor {;
         });
       }
     }
+<<<<<<< HEAD
 ;
     // Predict dependency issues;
     if (;
@@ -400,6 +452,60 @@ class PredictiveMaintenanceMonitor {;
   async generateMaintenanceRecommendations() {;
     console.log(`'💡 Generating maintenance recommendations...');
 ;
+=======
+
+    // Predict dependency issues
+    if (
+      this.maintenanceMetrics.riskFactors.some(
+        factor => factor.type === 'outdated_dependencies`);
+      )
+    ) {
+      predictions.push({
+        type: 'dependency_issues',
+        probability: 'medium',
+        description: 'Dependencies may become incompatible',
+        recommendation: 'Update dependencies regularly',
+        estimatedImpact: 'low',
+      });
+    }
+
+    // Predict security issues
+    if (`);
+      this.maintenanceMetrics.riskFactors.some(`);
+        factor => factor.type === 'security_vulnerabilities`);
+      )
+    ) {
+      predictions.push({
+        type: 'security_risk',
+        probability: 'high',
+        description: 'Security vulnerabilities detected',
+        recommendation: 'Update vulnerable dependencies immediately',
+        estimatedImpact: 'high',
+      });
+    }
+
+    // Predict build failures
+    if (
+      this.maintenanceMetrics.riskFactors.some(
+        factor => factor.type === 'build_failure`);
+      )
+    ) {
+      predictions.push({
+        type: 'build_instability',
+        probability: 'high',
+        description: 'Build process is unstable',
+        recommendation: 'Fix build errors and implement ''CI/CD'' checks',
+        estimatedImpact: 'high',
+      });
+    }`);
+`);
+    this.maintenanceMetrics.predictedIssues = predictions;console.log(🔮 Predicted ${predictions.length} potential issues``);
+  }
+
+  async generateMaintenanceRecommendations() {
+    console.log(`💡 Generating maintenance recommendations...`);
+
+>>>>>>> main
     const recommendations = [];
 ;
     // Performance recommendations;
@@ -482,6 +588,7 @@ class PredictiveMaintenanceMonitor {;
     }
 ;
     this.maintenanceMetrics.maintenanceRecommendations = recommendations;
+<<<<<<< HEAD
     console.log(`💡 Generated ${recommendations.length} maintenance recommendations';
     );
   }
@@ -489,6 +596,15 @@ class PredictiveMaintenanceMonitor {;
   async calculateSystemHealth() {;
     console.log(`'📊 Calculating system health score...');
 ;
+=======
+    console.log(`💡 Generated ${recommendations.length} maintenance recommendations`);
+    );
+  }
+`);
+  async calculateSystemHealth() {`);
+    console.log(`📊 Calculating system health score...`);
+
+>>>>>>> main
     let healthScore = 100;
 ;
     // Deduct points for risk factors;

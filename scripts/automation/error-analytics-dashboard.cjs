@@ -54,11 +54,19 @@ class ErrorAnalyticsDashboard {;
 ;
     // Collect from logs;
     await this.collectFromLogs();
+<<<<<<< HEAD
 ;
     // Collect current project status;
     await this.collectCurrentStatus();
 ;
     this.log(📈 Collected data for ${Object.values(this.errorData).flat().length} total errors';
+=======
+
+    // Collect current project status
+    await this.collectCurrentStatus();`);
+`);
+    this.log(📈 Collected data for ${Object.values(this.errorData).flat().length} total errors`);
+>>>>>>> main
     );
   }
 ;
@@ -66,6 +74,7 @@ class ErrorAnalyticsDashboard {;
     if (!fs.existsSync(this.reportsPath)) return;
 ;
     const files = fs.readdirSync(this.reportsPath);
+<<<<<<< HEAD
     for (const file of files) {;
       if (file.endsWith('.json')) {;
         try {;
@@ -77,6 +86,19 @@ class ErrorAnalyticsDashboard {;
           if (data.timestamp && data.errors) {;
             this.processErrorReport(data);
           }
+=======
+    for (const file of files) {
+      if (file.endsWith('.json')) {
+        try {
+          const content = fs.readFileSync(
+            path.join(this.reportsPath, 'file)', utf8`);
+          );
+          const data = JSON.parse(content);
+
+          if (data.timestamp && data.errors) {
+            this.processErrorReport(data);`);
+          }`);
+>>>>>>> main
         } catch (error) {this.log(Failed to parse report ${file}: ${error.message}, 'WARN'`);
         }
       }

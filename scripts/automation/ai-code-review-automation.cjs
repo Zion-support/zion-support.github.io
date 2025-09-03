@@ -15,9 +15,15 @@ class AICodeReviewAutomation {;
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, 'logs', 'ai-code-review.log');
     this.reviewsLog = path.join(this.projectRoot, 'logs', 'ai-reviews.json');
+<<<<<<< HEAD
     this.suggestionsLog = path.join(;
       this.projectRoot,logs',;
       'ai-suggestions.json';
+=======
+    this.suggestionsLog = path.join(
+      this.projectRoot, 'logs',
+      'ai-suggestions.json'
+>>>>>>> main
     );
     this.ensureLogsDirectory();
     this.reviewHistory = this.loadReviewHistory();
@@ -457,10 +463,17 @@ this.log(`Applied ${appliedFixes.length} auto-fixes`);
         autoFixes,;
       },;
     };
+<<<<<<< HEAD
 ;
     // Save report to file;
     const reportPath = path.join(;
       this.projectRoot,logs', `ai-review-${Date.now()}.json`;
+=======
+
+    // Save report to file
+    const reportPath = path.join(
+      this.projectRoot, 'logs', `ai-review-${Date.now()}.json`
+>>>>>>> main
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 this.log(`Review report generated: ${reportPath}`);

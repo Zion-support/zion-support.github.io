@@ -14,6 +14,7 @@ class ContinuousErrorMonitor {;
     this.runCount = 0;
     this.errorCount = 0;
   }
+<<<<<<< HEAD
 ;
   log(message) {;
     console.log(`[${new Date().toISOString()}] [ContinuousErrorMonitor] ${message}';
@@ -23,6 +24,17 @@ class ContinuousErrorMonitor {;
   async start() {;
     this.log(;
       Starting continuous error monitoring with ${this.automationInterval / 1000 / 60} minute intervals;
+=======
+
+  log(message) {
+    console.log(`[${new Date().toISOString()}] [ContinuousErrorMonitor] ${message}`);
+    );
+  }
+
+  async start() {
+    this.log(`);
+      Starting continuous error monitoring with ${this.automationInterval / 1000 / 60} minute intervals`);
+>>>>>>> main
     `);
 ;
     // Run initial check;

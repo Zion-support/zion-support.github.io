@@ -31,12 +31,21 @@ class SecurityAutomation {;
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}`;
     console.log(`logEntry);
+<<<<<<< HEAD
 ;
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + '\n');
   }
 ;
   async runCommand(command, cwd = this.projectRoot) {;
+=======
+
+    // Append to log file
+    fs.appendFileSync(this.logFile, logEntry + '\n');`);
+  }`);
+`);
+  async runCommand(command, cwd = this.projectRoot) {`);
+>>>>>>> main
     return new Promise((resolve, reject) => {this.log(Running command: ${command}`);
 ;
       const child = spawn(command, [], {;

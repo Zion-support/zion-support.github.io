@@ -3,11 +3,16 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 ;
 console.log(`'🧠 Starting intelligent automation orchestrator...');
 ;
 // Get automation interval from environment variable (default: 5 minutes);
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 300000; // 5 minutes;
+=======
+
+console.log(`🧠 Starting intelligent automation orchestrator...`);
+>>>>>>> main
 
 // Automation priorities and schedules;
 const AUTOMATION_SCHEDULE = {;
@@ -34,6 +39,7 @@ const automationStatus = new Map();
 let lastRunTimes = new Map();
 let errorCounts = new Map();
 let successCounts = new Map();
+<<<<<<< HEAD
 ;
 async function runIntelligentAutomationOrchestrator() {;
   try {;
@@ -47,6 +53,21 @@ async function runIntelligentAutomationOrchestrator() {;
     );
 ;
     // Determine which automations to run based on project state;
+=======
+
+async function runIntelligentAutomationOrchestrator() {
+  try {
+    console.log(`🧠 Running intelligent automation orchestrator at ${new Date().toISOString()}`);
+    );
+
+    // Analyze project state`);
+    const projectState = await analyzeProjectState();`);
+    console.log(`
+      📊 Project state analysis: ${JSON.stringify(projectState, null, 2)}`);
+    );`);
+`);
+    // Determine which automations to run based on project state`);
+>>>>>>> main
     const automationsToRun = determineAutomationsToRun(projectState);console.log(🎯 Automations to run: ${automationsToRun.join(', ')}`);
 ;
     // Execute automations with intelligent scheduling;
@@ -73,10 +94,17 @@ async function runIntelligentAutomationOrchestrator() {;
       process.cwd(),intelligent-automation-orchestrator-report.json';
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+<<<<<<< HEAD
     console.log(` ✅ Intelligent automation orchestrator report saved to ${reportPath}';
     );
 ;
     console.log(✅ Intelligent automation orchestrator completed successfully';
+=======
+    console.log(` ✅ Intelligent automation orchestrator report saved to ${reportPath}`);
+    );
+
+    console.log(✅ Intelligent automation orchestrator completed successfully`);
+>>>>>>> main
     );
   } catch (error) {;
     console.error(;
@@ -108,6 +136,7 @@ async function analyzeProjectState() {;
       state.errorCount = (lintResult.match(/'error/g') || []).length;
       state.warningCount = (lintResult.match(/'warning/g') || []).length;
       state.hasErrors = state.errorCount > 0;
+<<<<<<< HEAD
     } catch (error) {;
       state.hasErrors = true;
       state.errorCount = parseInt(;
@@ -115,6 +144,15 @@ async function analyzeProjectState() {;
       );
       state.warningCount = parseInt(;
         error.message.match(/(\d+)\s+warnings?/)?.[1] || '0';
+=======
+    } catch (error) {
+      state.hasErrors = true;`);
+      state.errorCount = parseInt(`);
+        error.message.match(/(\d+)\s+errors?/)?.[1] || '0`);
+      );
+      state.warningCount = parseInt(
+        error.message.match(/(\d+)\s+warnings?/)?.[1] || '0`);
+>>>>>>> main
       );
     }
 ;
@@ -153,10 +191,17 @@ async function analyzeProjectState() {;
 ;
     // Check security;
     state.securityStatus = await checkSecurityStatus();
+<<<<<<< HEAD
 ;
     // Check performance;
     state.performanceStatus = await checkPerformanceStatus();
   } catch (error) {;
+=======
+
+    // Check performance
+    state.performanceStatus = await checkPerformanceStatus();`);
+  } catch (error) {`);
+>>>>>>> main
     console.log(  ⚠️  Project state analysis failed: ${error.message}``);
   }
 ;
@@ -392,9 +437,15 @@ async function executeAutomations(automations) {;
 ;
       // Update success count;
       successCounts.set(automation, (successCounts.get(automation) || 0) + 1);
+<<<<<<< HEAD
 ;
       console.log(`✅ Automation ${automation} completed successfully in ${executionTime}ms';
       );
+=======
+
+      console.log(`✅ Automation ${automation} completed successfully in ${executionTime}ms'`);
+      );`);
+>>>>>>> main
     } catch (error) {console.error(❌ Automation ${automation} failed:, error.message`);
 ;
       results.push({;

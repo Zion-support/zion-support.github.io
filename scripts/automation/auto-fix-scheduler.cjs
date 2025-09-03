@@ -24,11 +24,19 @@ class AutoFixScheduler {;
     };
     this.fixHistory = [];
   }
+<<<<<<< HEAD
 ;
   async start() {;
     console.log(`'⏰ Starting Auto-Fix Scheduler...');
 ;
     // Create logs directory if it doesn't exist;
+=======
+
+  async start() {
+    console.log(`⏰ Starting Auto-Fix Scheduler...`);
+
+    // Create logs directory if it doesn't exist
+>>>>>>> main
     this.ensureLogsDirectory();
 ;
     // Load last run times;
@@ -52,8 +60,13 @@ class AutoFixScheduler {;
         const history = JSON.parse(fs.readFileSync(historyFile, 'utf8'));
         this.lastRun = history.lastRun || this.lastRun;
         this.fixHistory = history.fixHistory || [];
+<<<<<<< HEAD
       } catch (error) {;
         console.log(`'⚠️  Could not load fix history, starting fresh');
+=======
+      } catch (error) {
+        console.log(`⚠️  Could not load fix history, starting fresh`);
+>>>>>>> main
       }
     }
   }
@@ -66,12 +79,21 @@ class AutoFixScheduler {;
     };
     fs.writeFileSync(historyFile, JSON.stringify(history, null, 2));
   }
+<<<<<<< HEAD
 ;
   startScheduling() {;
     console.log(`'📅 Setting up fix schedules...');
 ;
     // Check every minute for scheduled tasks;
     setInterval(() => {;
+=======
+
+  startScheduling() {
+    console.log(`📅 Setting up fix schedules...`);
+
+    // Check every minute for scheduled tasks
+    setInterval(() => {
+>>>>>>> main
       this.checkScheduledTasks();
     }, 60 * 1000);
 ;
@@ -404,10 +426,17 @@ execSync(node ${tempFile}, { cwd: this.projectRoot, stdio: 'inherit' }`);
         projectStats: await this.getProjectStats(),;
         recommendations: this.generateRecommendations(),;
       };
+<<<<<<< HEAD
 ;
       const reportPath = path.join(;
         this.projectRoot,logs',;
         'project-health-report.json';
+=======
+
+      const reportPath = path.join(
+        this.projectRoot, 'logs',
+        'project-health-report.json'
+>>>>>>> main
       );
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 ;

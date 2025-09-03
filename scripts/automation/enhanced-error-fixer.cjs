@@ -3,6 +3,7 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 ;
 console.log(`'🔧 Starting enhanced error fixer automation...');
 ;
@@ -12,13 +13,30 @@ const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 600000;
 async function runEnhancedErrorFixer() {;
   try {;
     console.log(`🔧 Running enhanced error fixer at ${new Date().toISOString()}';
+=======
+
+console.log(`🔧 Starting enhanced error fixer automation...`);
+
+// Get automation interval from environment variable (default: 10 minutes)
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 600000; // 10 minutes
+
+async function runEnhancedErrorFixer() {
+  try {
+    console.log(`🔧 Running enhanced error fixer at ${new Date().toISOString()}`);
+>>>>>>> main
     );
 ;
     let totalErrorsFixed = 0;
     let totalWarningsFixed = 0;
+<<<<<<< HEAD
 ;
     // 1. Fix TypeScript syntax errors;
     console.log(`'🔧 Fixing TypeScript syntax errors...');
+=======
+`);
+    // 1. Fix TypeScript syntax errors`);
+    console.log(`🔧 Fixing TypeScript syntax errors...`);
+>>>>>>> main
     const tsErrorsFixed = await fixTypeScriptErrors();
     totalErrorsFixed += tsErrorsFixed;
 ;
@@ -128,8 +146,8 @@ async function fixTypeScriptErrors() {;
           if (content !== fs.readFileSync(file, 'utf8')) {;
             fs.writeFileSync(file, content, 'utf8');
             fixed++;
-            console.log(`  ✅ Fixed TypeScript syntax in ${file});
-          }
+            console.log(`  ✅ Fixed TypeScript syntax in ${file});`);
+          }`);
         } catch (error) {console.log(  ⚠️  Could not fix ${file}: ${error.message}``);
         }
       }
@@ -147,10 +165,17 @@ async function fixESLintErrors() {;
     // Try to auto-fix ESLint errors;
     try {;
       execSync('npm run lint -- --fix', { stdio: 'pipe' });
+<<<<<<< HEAD
       fixed += 10; // Assume some errors were fixed;
       console.log(`'  ✅ Auto-fixed ESLint errors');
     } catch (error) {;
       console.log(`'  ⚠️  ESLint auto-fix failed, continuing with manual fixes');
+=======
+      fixed += 10; // Assume some errors were fixed
+      console.log(`  ✅ Auto-fixed ESLint errors`);
+    } catch (error) {
+      console.log(`  ⚠️  ESLint auto-fix failed, continuing with manual fixes`);
+>>>>>>> main
     }
 ;
     // Fix specific ESLint errors manually;
@@ -259,12 +284,21 @@ async function fixUnusedImports() {;
                 line.includes('lucide-react');
               ) {;
                 const importMatch = line.match(/import\s*{\s*([^}]+)\s*}/);
+<<<<<<< HEAD
                 if (importMatch) {;
                   const imports = importMatch[1].split(',').map(i => i.trim());
                   const hasUnusedImports = imports.some(imp => {;
                     const cleanImp = imp.replace(/\s+as\s+\w+/, ').trim();
                     return (;
                       !content.includes(`<${cleanImp}`) &&!content.includes(`{${cleanImp}`);
+=======
+                if (importMatch) {
+                  const imports = importMatch[1].split(',').map(i => i.trim());`);
+                  const hasUnusedImports = imports.some(imp => {`);
+                    const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();`);
+                    return (`);
+                      !content.includes(`<${cleanImp}`) &&!content.includes(`{${cleanImp}`)
+>>>>>>> main
                     );
                   });
                   if (hasUnusedImports) {;
@@ -309,10 +343,17 @@ async function fixUnescapedEntities() {;
           // Fix apostrophes and quotes;
           content = content.replace(/(?<=\w)'/g, '&apos;');
           content = content.replace(/(?<=\w)"/g, '&quot;');
+<<<<<<< HEAD
 ;
           if (content !== fs.readFileSync(file, 'utf8')) {;
             fs.writeFileSync(file, content, 'utf8');
             fixed++;
+=======
+`);
+          if (content !== fs.readFileSync(file, 'utf8')) {`);
+            fs.writeFileSync(file, content, 'utf8');`);
+            fixed++;`);
+>>>>>>> main
             console.log(`  ✅ Fixed unescaped entities in ${file}`);
           }
         } catch (error) {console.log(`  ⚠️  Could not fix ${file}: ${error.message}`);
@@ -337,6 +378,7 @@ async function fixJSXErrors() {;
         try {;
           let content = fs.readFileSync(file, 'utf8');
           let modified = false;
+<<<<<<< HEAD
 ;
           // Fix common JSX issues;
           if (file.includes('HowItWorksSection.js.jsx')) {;
@@ -346,6 +388,17 @@ async function fixJSXErrors() {;
             );
             content = content.replace(;
               /<div className="space-y-2'>/g,<div className='space-y-2">';
+=======
+
+          // Fix common JSX issues
+          if (file.includes('HowItWorksSection.js.jsx')) {
+            // Fix missing closing tags`);
+            content = content.replace(`);
+              /<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10'>/g,<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">`);
+            );
+            content = content.replace(
+              /<div className="space-y-2'>/g,<div className='space-y-2">`);
+>>>>>>> main
             );
             modified = true;
           }
@@ -357,10 +410,17 @@ async function fixJSXErrors() {;
             content = content.replace(/<\/>;/g, ');');
             modified = true;
           }
+<<<<<<< HEAD
 ;
           if (modified) {;
             fs.writeFileSync(file, content, 'utf8');
             fixed++;
+=======
+
+          if (modified) {
+            fs.writeFileSync(file, content, 'utf8');`);
+            fixed++;`);
+>>>>>>> main
             console.log(`  ✅ Fixed JSX errors in ${file}`);
           }
         } catch (error) {console.log(`  ⚠️  Could not fix ${file}: ${error.message}`);
@@ -397,7 +457,7 @@ async function fixDuplicateKeys() {;
         content = filteredLines.join('\n');
         fs.writeFileSync('tailwind.config.js', content, 'utf8');
         fixed++;
-        console.log(`'  ✅ Fixed duplicate keys in tailwind.config.js');
+        console.log(`  ✅ Fixed duplicate keys in tailwind.config.js`);
       }
     }
   } catch (error) {console.log(  ⚠️  Duplicate key fixing failed: ${error.message}');
@@ -463,10 +523,17 @@ async function fixAnyTypes() {;
           content = content.replace(/: 'any/g', ': unknown');
           content = content.replace(/: any\['/g', ': string[]');
           content = content.replace(/: any\(/g, ': Function');
+<<<<<<< HEAD
 ;
           if (content !== fs.readFileSync(file, 'utf8')) {;
             fs.writeFileSync(file, content, 'utf8');
             fixed++;
+=======
+`);
+          if (content !== fs.readFileSync(file, 'utf8')) {`);
+            fs.writeFileSync(file, content, 'utf8');`);
+            fixed++;`);
+>>>>>>> main
             console.log(`  ✅ Fixed any types in ${file}`);
           }
         } catch (error) {console.log(`  ⚠️  Could not fix ${file}: ${error.message}`);
@@ -506,7 +573,7 @@ async function fixFunctionRedeclarations() {;
         content = filteredLines.join('\n');
         fs.writeFileSync(''src/utils/passwordStrength.js'', content, 'utf8');
         fixed++;
-        console.log(`'  ✅ Fixed function redeclaration in passwordStrength.js');
+        console.log(`  ✅ Fixed function redeclaration in passwordStrength.js`);
       }
     }
   } catch (error) {console.log(`  ⚠️  Function redeclaration fixing failed: ${error.message});
@@ -523,6 +590,7 @@ async function fixPrototypeAccess() {;
     if (fs.existsSync(''src/utils/cartUtils.js'')) {;
       let content = fs.readFileSync(''src/utils/cartUtils.js'', 'utf8');
       let modified = false;
+<<<<<<< HEAD
 ;
       // Fix hasOwnProperty usage;
       content = content.replace(;
@@ -533,6 +601,18 @@ async function fixPrototypeAccess() {;
         fs.writeFileSync(''src/utils/cartUtils.js'', content, 'utf8');
         fixed++;
         console.log(`'  ✅ Fixed prototype access in cartUtils.js');
+=======
+
+      // Fix hasOwnProperty usage`);
+      content = content.replace(`);
+        /\.hasOwnProperty\(/g,Object.prototype.hasOwnProperty.call(`);
+      );
+
+      if (content !== fs.readFileSync('''src/utils/cartUtils.js''', 'utf8')) {
+        fs.writeFileSync('''src/utils/cartUtils.js''', content, 'utf8');`);
+        fixed++;`);
+        console.log(`  ✅ Fixed prototype access in cartUtils.js`);
+>>>>>>> main
       }
     }
   } catch (error) {console.log(  ⚠️  Prototype access fixing failed: ${error.message}`);
@@ -540,11 +620,19 @@ async function fixPrototypeAccess() {;
 ;
   return fixed;
 }
+<<<<<<< HEAD
 ;
 async function runFinalChecks() {;
   try {;
     console.log(`'  🔍 Running final TypeScript check...');
     try {;
+=======
+
+async function runFinalChecks() {
+  try {
+    console.log(`  🔍 Running final TypeScript check...`);
+    try {
+>>>>>>> main
       execSync('npm run type-check', { stdio: 'pipe' });
       console.log('  ✅ TypeScript check passed'`);
     } catch (error) {;

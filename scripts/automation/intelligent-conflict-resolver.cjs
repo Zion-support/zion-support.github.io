@@ -50,11 +50,19 @@ class IntelligentConflictResolver {;
         .split('\n');
         .filter(line => line.startsWith('UU '));
         .map(line => line.substring(3));
+<<<<<<< HEAD
 ;
       if (conflictFiles.length === 0) {;
         this.log('No merge conflicts detected');
         return [];
       }
+=======
+
+      if (conflictFiles.length === 0) {`);
+        this.log('No merge conflicts detected');`);
+        return [];`);
+      }`);
+>>>>>>> main
 this.log(Found ${conflictFiles.length} files with merge conflicts`);
       return conflictFiles;
     } catch (error) {this.log(`Failed to check for conflicts: ${error.message}`, 'ERROR');

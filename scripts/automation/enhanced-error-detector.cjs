@@ -3,6 +3,7 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 ;
 console.log(`'🔍 Starting enhanced error detector...');
 ;
@@ -23,6 +24,28 @@ async function detectAllErrors() {;
       const tsResult = execSync('npx tsc --noEmit', {;
         encoding: 'utf8',;
         stdio: 'pipe',;
+=======
+
+console.log(`🔍 Starting enhanced error detector...`);
+
+async function detectAllErrors() {
+  const errors = {
+    typescript: [],
+    linting: [],
+    build: [],
+    dependencies: [],
+    syntax: [],
+    timestamp: new Date().toISOString(),
+  };
+
+  try {
+    // 1. Detect TypeScript errors
+    console.log(`🔍 Detecting TypeScript errors...`);
+    try {
+      const tsResult = execSync('npx tsc --noEmit', {
+        encoding: 'utf8',
+        stdio: 'pipe',
+>>>>>>> main
       });
     } catch (error) {;
       const tsOutput = error.stdout || error.stderr || ';

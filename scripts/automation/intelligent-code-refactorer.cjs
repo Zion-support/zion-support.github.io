@@ -3,12 +3,17 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 ;
 console.log(`'🔧 Starting Intelligent Code Refactorer...');
 ;
 // Get automation interval from environment variable (default: 12 hours);
 const AUTOMATION_INTERVAL =;
   parseInt(process.env.AUTOMATION_INTERVAL) || 43200000; // 12 hours;
+=======
+
+console.log(`🔧 Starting Intelligent Code Refactorer...`);
+>>>>>>> main
 
 class IntelligentCodeRefactorer {;
   constructor() {;
@@ -28,10 +33,17 @@ class IntelligentCodeRefactorer {;
       fs.mkdirSync(this.reportDir, { recursive: true });
     }
   }
+<<<<<<< HEAD
 ;
   async refactorCodebase() {;
     try {;
       console.log(`🔧 Running intelligent code refactoring at ${new Date().toISOString()}';
+=======
+
+  async refactorCodebase() {
+    try {
+      console.log(`🔧 Running intelligent code refactoring at ${new Date().toISOString()}`);
+>>>>>>> main
       );
 ;
       // Analyze code patterns;
@@ -48,12 +60,21 @@ class IntelligentCodeRefactorer {;
 ;
       // Calculate quality improvements;
       await this.calculateQualityImprovements();
+<<<<<<< HEAD
 ;
       // Generate report;
       await this.generateReport();
 ;
       console.log(`'✅ Intelligent code refactoring completed successfully');
     } catch (error) {;
+=======
+
+      // Generate report
+      await this.generateReport();`);
+`);
+      console.log(`✅ Intelligent code refactoring completed successfully`);
+    } catch (error) {
+>>>>>>> main
       console.error('❌ Intelligent code refactoring failed:', error.message);
     }
   }
@@ -245,6 +266,7 @@ class IntelligentCodeRefactorer {;
           file: pattern.file,;
           timestamp: new Date().toISOString(),description: `Extracted ${magicNumbers.length} magic numbers`,;
         });
+<<<<<<< HEAD
 console.log(`✅ Extracted magic numbers from ${pattern.file}');
       } catch (error) {;
         console.log(`⚠️ Failed to extract magic numbers from ${pattern.file}:',;
@@ -260,6 +282,23 @@ console.log(`✅ Extracted magic numbers from ${pattern.file}');
     for (const pattern of namingPatterns.slice(0, 2)) {;
       // Limit to 2 files per run;
       try {;
+=======
+console.log(`✅ Extracted magic numbers from ${pattern.file}');`);
+      } catch (error) {`);
+        console.log(`⚠️ Failed to extract magic numbers from ${pattern.file}:',
+          error.message
+        );
+      }
+    }`);
+  }`);
+`);
+  async standardizeNaming(namingPatterns) {`);
+    console.log(`📝 Standardizing naming conventions...`);
+
+    for (const pattern of namingPatterns.slice(0, 2)) {
+      // Limit to 2 files per run
+      try {
+>>>>>>> main
         const filePath = path.join(process.cwd(), 'src', pattern.file);
         let content = fs.readFileSync(filePath, 'utf8');
 ;
@@ -283,14 +322,22 @@ console.log(`✅ Extracted magic numbers from ${pattern.file}');
           timestamp: new Date().toISOString(),;
           description: Standardized ${inconsistencies.length} naming inconsistencies,;
         });
+<<<<<<< HEAD
 console.log(`✅ Standardized naming in ${pattern.file}');
       } catch (error) {;
         console.log(⚠️ Failed to standardize naming in ${pattern.file}:',;
           error.message;
+=======
+console.log(`✅ Standardized naming in ${pattern.file}');`);
+      } catch (error) {`);
+        console.log(⚠️ Failed to standardize naming in ${pattern.file}:',`);
+          error.message`);
+>>>>>>> main
         `);
       }
     }
   }
+<<<<<<< HEAD
 ;
   async simplifyCode(conditionalPatterns) {;
     console.log(`'🔧 Simplifying complex code...');
@@ -298,6 +345,15 @@ console.log(`✅ Standardized naming in ${pattern.file}');
     for (const pattern of conditionalPatterns.slice(0, 2)) {;
       // Limit to 2 files per run;
       try {;
+=======
+
+  async simplifyCode(conditionalPatterns) {
+    console.log(`🔧 Simplifying complex code...`);
+
+    for (const pattern of conditionalPatterns.slice(0, 2)) {
+      // Limit to 2 files per run
+      try {
+>>>>>>> main
         const filePath = path.join(process.cwd(), 'src', pattern.file);
         let content = fs.readFileSync(filePath, 'utf8');
 ;
@@ -321,19 +377,34 @@ console.log(`✅ Standardized naming in ${pattern.file}');
           timestamp: new Date().toISOString(),;
           description: Simplified ${conditionals.length} complex conditionals,;
         });
+<<<<<<< HEAD
 console.log(`✅ Simplified code in ${pattern.file}');
       } catch (error) {;
         console.log(⚠️ Failed to simplify code in ${pattern.file}:',;
           error.message;
+=======
+console.log(`✅ Simplified code in ${pattern.file}');`);
+      } catch (error) {`);
+        console.log(⚠️ Failed to simplify code in ${pattern.file}:',`);
+          error.message`);
+>>>>>>> main
         `);
       }
     }
   }
+<<<<<<< HEAD
 ;
   async generateRefactoringSuggestions() {;
     console.log(`'💡 Generating refactoring suggestions...');
 ;
     const patterns =;
+=======
+
+  async generateRefactoringSuggestions() {
+    console.log(`💡 Generating refactoring suggestions...`);
+
+    const patterns =
+>>>>>>> main
       this.refactoringMetrics.refactoringPatterns.get('patterns');
     if (!patterns) return;
 ;
@@ -362,11 +433,19 @@ console.log(`✅ Simplified code in ${pattern.file}');
       });
     }
   }
+<<<<<<< HEAD
 ;
   async calculateQualityImprovements() {;
     console.log(`'📊 Calculating quality improvements...');
 ;
     const patterns =;
+=======
+
+  async calculateQualityImprovements() {
+    console.log(`📊 Calculating quality improvements...`);
+
+    const patterns =
+>>>>>>> main
       this.refactoringMetrics.refactoringPatterns.get('patterns');
     if (!patterns) return;
 ;

@@ -85,10 +85,17 @@ const nextConfig = {;
     // Add any webpack customizations here;
     return config;
   }
+<<<<<<< HEAD
 };
 ;
 module.exports = nextConfig;;
       ;
+=======
+};`);
+`);
+module.exports = nextConfig;;`);
+      `);
+>>>>>>> main
       await fs.writeFile(nextConfigPath, fixedConfig`);
       await this.log('✅ Next.js configuration fixed');
       this.fixesApplied.push({;

@@ -12,9 +12,15 @@ const { execSync, spawn } = require('child_process');
 class DependencyManager {;
   constructor() {;
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
     this.logFile = path.join(;
       this.projectRoot,logs',;
       'dependency-manager.log';
+=======
+    this.logFile = path.join(
+      this.projectRoot, 'logs',
+      'dependency-manager.log'
+>>>>>>> main
     );
     this.reportsDir = path.join(this.projectRoot, 'logs', 'dependency-reports');
     this.ensureLogsDirectory();

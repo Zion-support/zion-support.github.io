@@ -25,17 +25,23 @@ class AutoCommitFixes {;
   '});
       if (!status.trim()) {;
         return { hasChanges: false, files: [] }
-;
       const files = status.split('\n;
   ');
         .filter(line => line.trim());
         .map(line => {;
           const parts = line.trim().split(/\s+/);
+<<<<<<< HEAD
           return {;
             status: parts[0],;
             file: parts.slice(1).join(';
   ')}
         });
+=======
+          return {
+            status: parts[0],
+            file: parts.slice(1).join()}
+        })
+>>>>>>> main
       return { hasChanges: true, files }
     } catch (error) {;
       this.log(`Error checking git status: ${error.message}`);
@@ -65,9 +71,14 @@ class AutoCommitFixes {;
   async stageFiles(files) {;
     try {;
       if (files.length === 0) return;
+<<<<<<< HEAD
       execSync(`git add ${files.join(';
   ')}`, {;
         cwd: this.projectRoot,;
+=======
+      execSync(`git add ${files.join()}`, {
+        cwd: this.projectRoot,
+>>>>>>> main
         stdio: 'pipe;
   '});
       this.log(`Staged ${files.length} files`)} catch (error) {;
@@ -92,6 +103,7 @@ class AutoCommitFixes {;
       deleted: [],;
       renamed: [],;
       other: []}
+<<<<<<< HEAD
 ;
     files.forEach(file => {;
       const status = file.status;
@@ -99,6 +111,14 @@ class AutoCommitFixes {;
       if (status === 'A;
   ' || status === '??;
   ') {;
+=======
+    files.forEach(file => {
+      const status = file.status;
+      const fileName = file.file;
+      if (status === 'A;
+  ' || status === '?.;
+  ') {
+>>>>>>> main
         changes.added.push(fileName)} else if (status === 'M;
   ') {;
         changes.modified.push(fileName)} else if (status === 'D;

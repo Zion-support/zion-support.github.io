@@ -3,6 +3,7 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 ;
 console.log(`'🧪 Starting Enhanced Testing Automation...');
 ;
@@ -15,6 +16,20 @@ class EnhancedTestingAutomation {;
       performance: { status: 'pending', results: [] },;
       accessibility: { status: 'pending', results: [] },;
       coverage: { status: 'pending', results: [] },;
+=======
+
+console.log(`🧪 Starting Enhanced Testing Automation...`);
+
+class EnhancedTestingAutomation {
+  constructor() {
+    this.testResults = {
+      unit: { status: 'pending', results: [] },
+      integration: { status: 'pending', results: [] },
+      e2e: { status: 'pending', results: [] },
+      performance: { status: 'pending', results: [] },
+      accessibility: { status: 'pending', results: [] },
+      coverage: { status: 'pending', results: [] },
+>>>>>>> main
     };
     this.reportDir = path.join(process.cwd(), 'test-reports');
     this.ensureReportDirectory();
@@ -25,6 +40,7 @@ class EnhancedTestingAutomation {;
       fs.mkdirSync(this.reportDir, { recursive: true });
     }
   }
+<<<<<<< HEAD
 ;
   async runUnitTests() {;
     console.log(`'🧪 Running Unit Tests...');
@@ -33,17 +49,36 @@ class EnhancedTestingAutomation {;
         {;
           encoding: 'utf8',;
           cwd: process.cwd(),;
+=======
+
+  async runUnitTests() {
+    console.log(`🧪 Running Unit Tests...`);
+    try {
+      const output = execSync(npm run test:unit || npm test || echo 'No unit tests found"',
+        {
+          encoding: 'utf8',
+          cwd: process.cwd(),
+>>>>>>> main
         }
       );
 ;
       this.testResults.unit.status = 'success';
       this.testResults.unit.results = output;
+<<<<<<< HEAD
       console.log(`'✅ Unit tests completed');
 ;
       // Save results;
       fs.writeFileSync(;
         path.join(this.reportDir, 'unit-test-results.txt'),;
         output;
+=======
+      console.log(`✅ Unit tests completed`);
+
+      // Save results
+      fs.writeFileSync(
+        path.join(this.reportDir, 'unit-test-results.txt'),
+        output
+>>>>>>> main
       );
     } catch (error) {;
       this.testResults.unit.status = 'failure';
@@ -184,6 +219,7 @@ class EnhancedTestingAutomation {;
       const hasAxe = fs.existsSync(;
         path.join(process.cwd(), ''node_modules/axe-core'');
       );
+<<<<<<< HEAD
 ;
       if (hasAxe) {;
         console.log(`'♿ Running axe-core accessibility tests...');
@@ -191,6 +227,15 @@ class EnhancedTestingAutomation {;
           {;
             encoding: 'utf8',;
             cwd: process.cwd(),;
+=======
+
+      if (hasAxe) {
+        console.log(`♿ Running axe-core accessibility tests...`);
+        const output = execSync(npm run test:accessibility || echo 'No accessibility tests found"',
+          {
+            encoding: 'utf8',
+            cwd: process.cwd(),
+>>>>>>> main
           }
         );
         this.testResults.accessibility.results = output;
@@ -218,6 +263,7 @@ class EnhancedTestingAutomation {;
       this.testResults.accessibility.status = 'failure';
       this.testResults.accessibility.results = error.message;
       console.log(`'❌ Accessibility tests failed:', error.message);
+<<<<<<< HEAD
     }
   }
 ;
@@ -225,6 +271,15 @@ class EnhancedTestingAutomation {;
     console.log(`'📊 Generating Coverage Report...');
     try {;
       // Check if coverage tools are available;
+=======
+    }`);
+  }`);
+`);
+  async generateCoverageReport() {`);
+    console.log(`📊 Generating Coverage Report...`);
+    try {
+      // Check if coverage tools are available
+>>>>>>> main
       const hasCoverage = fs.existsSync(path.join(process.cwd(), 'coverage'));
 ;
       if (hasCoverage) {;
@@ -285,6 +340,7 @@ class EnhancedTestingAutomation {;
 ;
   async generateTestReport() {;
     console.log('📋 Generating Test Report...');
+<<<<<<< HEAD
 ;
     const report = {;
       timestamp: new Date().toISOString(),;
@@ -299,6 +355,22 @@ class EnhancedTestingAutomation {;
       },;
       results: this.testResults,;
       qualityGates: await this.runQualityGates(),;
+=======
+
+    const report = {
+      timestamp: new Date().toISOString(),
+      summary: {
+        total: Object.keys(this.testResults).length,
+        passed: Object.values(this.testResults).filter(
+          r => r.status === 'success`);
+        ).length,`);
+        failed: Object.values(this.testResults).filter(`);
+          r => r.status === 'failure`);
+        ).length,
+      },
+      results: this.testResults,
+      qualityGates: await this.runQualityGates(),
+>>>>>>> main
     };
 ;
     // Save JSON report;
@@ -338,6 +410,7 @@ ${Object.entries(report.results);
 ;
 ## Quality Gates;
 ${report.qualityGates ? '✅ All quality gates passed successfully!' : '❌ Some quality gates failed. Check individual test results above.'}
+<<<<<<< HEAD
 ;
 ## Recommendations;
 ${;
@@ -348,15 +421,35 @@ ${;
     : 1. All tests are passing - ready for deployment;
 2. Consider adding more test coverage;
 3. Monitor test performance trends';
+=======
+
+## Recommendations
+${
+  report.summary.failed > 0? 1. Review failed test suites
+2. Fix failing tests before deployment
+3. Investigate root causes of failures
+4. Update test coverage as needed
+    : 1. All tests are passing - ready for deployment
+2. Consider adding more test coverage
+3. Monitor test performance trends`);
+>>>>>>> main
 }
 ;
 ---;
 *Report generated by Enhanced Testing Automation*;
+<<<<<<< HEAD
   }
 ;
   async runAllTests(``) {;
     console.log(`'🚀 Starting comprehensive test suite...');
 ;
+=======
+  }`);
+`);
+  async runAllTests(``) {
+    console.log(`🚀 Starting comprehensive test suite...`);
+
+>>>>>>> main
     await this.runUnitTests();
     await this.runIntegrationTests();
     await this.runE2ETests();
@@ -365,9 +458,15 @@ ${;
     await this.generateCoverageReport();
 ;
     const report = await this.generateTestReport();
+<<<<<<< HEAD
 ;
     console.log(`'\n🎯 Test Suite Summary:');console.log(Total: ${report.summary.total});console.log(Passed: ${report.summary.passed} ✅``);console.log(`Failed: ${report.summary.failed} ❌');
     console.log(Quality Gates: ${report.qualityGates ? 'PASSED' : 'FAILED'} ${report.qualityGates ? '✅' : '❌'}`;
+=======
+
+    console.log(`\n🎯 Test Suite Summary:`);console.log(Total: ${report.summary.total});console.log(Passed: ${report.summary.passed} ✅``);console.log(`Failed: ${report.summary.failed} ❌');`);
+    console.log(Quality Gates: ${report.qualityGates ? 'PASSED' : 'FAILED'} ${report.qualityGates ? '✅' : '❌'}`
+>>>>>>> main
     );
 ;
     return report;

@@ -69,7 +69,6 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
   ';
         aria-label='Open accessibility controls;
         aria-expanded={isOpen}
-;
         <Settings className=,
   w-6 h-6;
   '                                                                                                                                                                              />
@@ -140,8 +139,6 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
   highContrast;
   ',
   e.target.checked);
-;
-;
 }
                     className='w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus: ring-cyan-500 focus:ring-2;
   '
@@ -160,8 +157,6 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
   largeText;
   ',
   e.target.checked);
-;
-;
 }
                     className='w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus: ring-cyan-500 focus:ring-2;
   '
@@ -193,8 +188,6 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
   reducedMotion;
   ',
   e.target.checked);
-;
-;
 }
                     className='w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus: ring-cyan-500 focus:ring-2;
   '
@@ -226,8 +219,6 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
   focusIndicator;
   ',
   e.target.checked);
-;
-;
 }
                     className='w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus: ring-cyan-500 focus:ring-2;
   '
@@ -246,8 +237,6 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
   keyboardNavigation;
   ',
   e.target.checked);
-;
-;
 }
                     className='w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus: ring-cyan-500 focus:ring-2;
   '
@@ -279,8 +268,6 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
   screenReader;
   ',
   e.target.checked);
-;
-;
 }
                     className='w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus: ring-cyan-500 focus:ring-2;
   '

@@ -54,6 +54,7 @@ class AutoMergeConflictResolver {;
 ;
     const conflictedFiles = [];
     const lines = status.output.split('\n');
+<<<<<<< HEAD
     ;
     for (const line of lines) {;
       if (line.includes('UU ') || line.includes('AA ') || line.includes('DD ')) {;
@@ -61,6 +62,15 @@ class AutoMergeConflictResolver {;
         conflictedFiles.push(filePath);
       }
     }
+=======
+    
+    for (const line of lines) {
+      if (line.includes('UU ') || line.includes('AA ') || line.includes('DD ')) {
+        const filePath = line.substring(3);`);
+        conflictedFiles.push(filePath);`);
+      }`);
+    }`);
+>>>>>>> main
 this.log(📊 Found ${conflictedFiles.length} conflicted files`);
     return conflictedFiles;
   }

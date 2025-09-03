@@ -13,9 +13,15 @@ const crypto = require('crypto');
 class ProjectHealthMonitor {;
   constructor() {;
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
     this.logFile = path.join(;
       this.projectRoot,logs',;
       'project-health-monitor.log';
+=======
+    this.logFile = path.join(
+      this.projectRoot, 'logs',
+      'project-health-monitor.log'
+>>>>>>> main
     );
     this.issuesLog = path.join(this.projectRoot, 'logs', 'health-issues.json');
     this.fixesLog = path.join(this.projectRoot, 'logs', 'health-fixes.json');

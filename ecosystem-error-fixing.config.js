@@ -191,4 +191,3 @@ export default {
       error_file:,
   logs/pm2/error-report-generator-error.log',
       out_file: 'logs/pm2/error-report-generator-out.log}]}
-;

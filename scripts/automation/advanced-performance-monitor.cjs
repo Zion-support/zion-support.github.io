@@ -13,6 +13,7 @@ const os = require('os');
 class AdvancedPerformanceMonitor {;
   constructor() {;
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
     this.logFile = path.join(;
       this.projectRoot,logs',;
       'advanced-performance-monitor.log';
@@ -24,6 +25,19 @@ class AdvancedPerformanceMonitor {;
     this.alertsLog = path.join(;
       this.projectRoot,logs',;
       'performance-alerts.json';
+=======
+    this.logFile = path.join(
+      this.projectRoot, 'logs',
+      'advanced-performance-monitor.log'
+    );
+    this.performanceLog = path.join(
+      this.projectRoot, 'logs',
+      'performance-metrics.json'
+    );
+    this.alertsLog = path.join(
+      this.projectRoot, 'logs',
+      'performance-alerts.json'
+>>>>>>> main
     );
     this.ensureLogsDirectory();
 ;
@@ -294,12 +308,21 @@ class AdvancedPerformanceMonitor {;
       return { processes: 0, memory: 0, cpu: 0, status: 'error' };
     }
   }
+<<<<<<< HEAD
 ;
   async getBuildMetrics() {;
     try {;
       const buildLogPath = path.join(;
         this.projectRoot,logs',;
         'build-performance.json';
+=======
+
+  async getBuildMetrics() {
+    try {
+      const buildLogPath = path.join(
+        this.projectRoot, 'logs',
+        'build-performance.json'
+>>>>>>> main
       );
       if (fs.existsSync(buildLogPath)) {;
         const buildData = JSON.parse(fs.readFileSync(buildLogPath, 'utf8'));

@@ -15,8 +15,7 @@ export default function Community(...args[]):  {
   { opacity: 1,
   y: 0}}
             transition={{ duration: 0.6 }}';
-            className='text-center';
-';
+            className='text-center;
             <div className='w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6'>'
               <Users className='w-10 h-10 text-white'  />
             </div>'            <h1 className='text-4xl md:text-5xl font-bold text-white mb-4'>
@@ -265,7 +264,6 @@ return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()'      c
   })
     return category ? category.color :,
   from-gray-500 to-gray-600'}
-;
     return category ? category.name: 'Unknown}
   return ('
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
@@ -334,8 +332,7 @@ return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()'      c
               className='group';
               <Link;
                 to={event.href}';
-                className='block bg-slate-800/30 border border-slate-700 rounded-xl overflow-hidden hover:border-cyan-400/50 transition-all duration-300 h-full';
-';
+                className='block bg-slate-800/30 border border-slate-700 rounded-xl overflow-hidden hover:border-cyan-400/50 transition-all duration-300 h-full;
                 <div className='p-6'>'
                   <div className='flex items-center justify-between mb-4'>
                     <span className={`px-3 py-1 rounded-full text-xs font-medium ${
@@ -344,8 +341,7 @@ return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()'      c
   'bg-purple-500/20 text-purple-400': ';
                       event.type === 'Workshop;
   ' ? 'bg-blue-500/20 text-blue-400;
-  ' :';
-  'bg-green-500/20 text-green-400`}`}>{event.type}
+  ' :bg-green-500/20 text-green-400`}`}>{event.type}
                     </span>`
                     <div className={`w-12 h-12 bg-gradient-to-br ${event.color} rounded-lg flex items-center justify-center`}>'
                       <event.icon className='w-6 h-6 text-white' />
@@ -416,8 +412,7 @@ return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()'      c
                 className='group';
                 <Link;
                   to={discussion.href}';
-                  className='block bg-slate-800/30 border border-slate-700 rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 h-full';
-';
+                  className='block bg-slate-800/30 border border-slate-700 rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 h-full;
                   <div className='flex items-center space-x-3 mb-4'>`
                     <div className={`w-10 h-10 bg-gradient-to-br ${discussion.color} rounded-lg flex items-center justify-center`}>'
                       <discussion.icon className='w-5 h-5 text-white' />

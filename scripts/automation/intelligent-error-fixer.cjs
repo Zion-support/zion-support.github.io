@@ -3,6 +3,7 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 ;
 console.log(`'🤖 Starting intelligent error fixer...');
 ;
@@ -15,6 +16,20 @@ async function fixAllErrors() {;
 ;
     // 1. Fix missing dependencies;
     console.log(`'🔧 Fixing missing dependencies...');
+=======
+
+console.log(`🤖 Starting intelligent error fixer...`);
+
+async function fixAllErrors() {
+  let totalFixes = 0;
+
+  try {
+    console.log(`🤖 Running intelligent error fixer at ${new Date().toISOString()}`);
+    );
+`);
+    // 1. Fix missing dependencies`);
+    console.log(`🔧 Fixing missing dependencies...`);
+>>>>>>> main
     totalFixes += await fixMissingDependencies();
 ;
     // 2. Fix TypeScript errors;
@@ -129,18 +144,32 @@ async function fixLintingErrors() {;
   for (const file of files) {;
     try {;
       let content = fs.readFileSync(file, 'utf8');
+<<<<<<< HEAD
       let originalContent = content;
 ;
       for (const fix of lintingFixes) {;
         if (fix.pattern.test(content)) {;
+=======
+      let originalContent = content;`);
+`);
+      for (const fix of lintingFixes) {`);
+        if (fix.pattern.test(content)) {`);
+>>>>>>> main
           content = content.replace(fix.pattern, fix.replacement);console.log(`🔧 Applied linting fix in ${file}: ${fix.description});
           fixes++;
         }
       }
+<<<<<<< HEAD
 ;
       if (content !== originalContent) {;
         fs.writeFileSync(file, content);
       }
+=======
+`);
+      if (content !== originalContent) {`);
+        fs.writeFileSync(file, content);`);
+      }`);
+>>>>>>> main
     } catch (error) {console.log(⚠️  Could not fix ${file}: ${error.message}``);
     }
   }
@@ -150,6 +179,7 @@ async function fixLintingErrors() {;
 ;
 async function fixBuildErrors() {;
   let fixes = 0;
+<<<<<<< HEAD
 ;
   // Fix common build errors;
   const buildFixes = ['{;
@@ -160,6 +190,18 @@ async function fixBuildErrors() {;
           return 1;
         } catch (error) {;
           console.log(`'⚠️  Could not install react-error-boundary');
+=======
+
+  // Fix common build errors
+  const buildFixes = ['{
+      pattern: /Cannot find module 'react-error-boundary'/g', 'action: async () => {
+        try {
+          execSync('npm install react-error-boundary'', '{ stdio: 'pipe' });
+          console.log(`✅ Installed react-error-boundary`);
+          return 1;
+        } catch (error) {
+          console.log(`⚠️  Could not install react-error-boundary`);
+>>>>>>> main
           return 0;
         }
       }', 'description: 'Install missing react-error-boundary', '}', '{;
@@ -231,11 +273,19 @@ async function fixSyntaxErrors() {;
 ;
 async function runAutoFixCommands() {;
   let fixes = 0;
+<<<<<<< HEAD
 ;
   const autoFixCommands = ['npm run lint -- --fix', 'npx prettier --write .', 'npm run format', '];
 ;
   for (const command of autoFixCommands) {;
     try {;
+=======
+
+  const autoFixCommands = ['npm run lint -- --fix'', 'npx prettier --write .', 'npm run format'', ''];`);
+`);
+  for (const command of autoFixCommands) {`);
+    try {`);
+>>>>>>> main
       console.log(`🔧 Running: ${command}`);
       execSync(command, { stdio: 'pipe' });console.log(`✅ Completed: ${command}`);
       fixes++;

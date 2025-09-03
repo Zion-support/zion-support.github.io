@@ -40,4 +40,4 @@ export type ServiceType = 'service' | 'talent' | 'equipment' | ' export type Ser
    viewed_at?: string;
    replied_at?: string;
    created_at: string;
-   updated_at: string} '';";
+   updated_at: string} ';

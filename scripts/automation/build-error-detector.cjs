@@ -38,10 +38,17 @@ class BuildErrorDetector {;
         encoding: 'utf8',;
         stdio: 'pipe',;
       });
+<<<<<<< HEAD
       this.log('✅ Build check passed successfully');
       return { success: true, output: result, errors: [] };
     } catch (error) {;
       if (error.stdout) {;
+=======
+      this.log('✅ Build check passed successfully');`);
+      return { success: true, output: result, errors: [] };`);
+    } catch (error) {`);
+      if (error.stdout) {`);
+>>>>>>> main
         const errors = this.parseBuildErrors(error.stdout);this.log(❌ Build check failed with ${errors.length} errors`);
         return { success: false, output: error.stdout, errors };
       }

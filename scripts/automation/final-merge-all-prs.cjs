@@ -44,9 +44,15 @@ class FinalMergeAllPRs {;
 ;
       // Step 3: Process branches in batches;
       const batchSize = 10;
+<<<<<<< HEAD
       for (let i = 0; i < allBranches.length; i += batchSize) {;
         const batch = allBranches.slice(i, i + batchSize);
         this.log(Processing batch ${Math.floor(i / batchSize) + 1}/${Math.ceil(allBranches.length / batchSize)}';
+=======
+      for (let i = 0; i < allBranches.length; i += batchSize) {`);
+        const batch = allBranches.slice(i, i + batchSize);`);
+        this.log(Processing batch ${Math.floor(i / batchSize) + 1}/${Math.ceil(allBranches.length / batchSize)}`);
+>>>>>>> main
         );
 ;
         for (const branch of batch) {;
@@ -56,10 +62,17 @@ class FinalMergeAllPRs {;
         // Small delay between batches;
         await this.delay(1000);
       }
+<<<<<<< HEAD
 ;
       // Step 4: Final cleanup and push;
       await this.finalizeMerges();
     } catch (error) {;
+=======
+
+      // Step 4: Final cleanup and push
+      await this.finalizeMerges();`);
+    } catch (error) {`);
+>>>>>>> main
       this.log(❌ Fatal error: ${error.message}`, 'ERROR'`);
       this.mergeStats.errors++;
     }

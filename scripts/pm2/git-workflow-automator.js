@@ -40,9 +40,13 @@ class GitWorkflowAutomator {;
       createPR: false,;
       reviewRequired: true,;
       protectedBranches: [;
+<<<<<<< HEAD
   'main',;
   'master',;
   'develop'],;
+=======
+  'main,master,develop'],
+>>>>>>> main
       maxBranchAge: 30, // days;
       cleanupOldBranches: true,;
       autoMerge: false,;
@@ -101,9 +105,14 @@ class GitWorkflowAutomator {;
         .split(;
   '\n');
         .filter(Boolean);
+<<<<<<< HEAD
         .map(branch => branch.trim().replace(;
   'origin/', ';
   '));
+=======
+        .map(branch => branch.trim().replace(
+  'origin/', ));
+>>>>>>> main
         .filter(branch => !branch.includes('HEAD;
   '))} catch (error) {;
       this.log(`Error getting remote branches: ${error.message}`);
@@ -121,9 +130,14 @@ class GitWorkflowAutomator {;
   ');
         .filter(Boolean);
         .map(branch => branch.trim().replace('*;
+<<<<<<< HEAD
   ', '));
         .filter(branch => branch !== ';
   ')} catch (error) {;
+=======
+  ,'));
+        .filter(branch => branch !== )} catch (error) {
+>>>>>>> main
       this.log(`Error getting local branches: ${error.message}`);
       return []}
   }
@@ -180,8 +194,12 @@ class GitWorkflowAutomator {;
 ,;
   R;
   ': 'renamed}
+<<<<<<< HEAD
 ;
     const summary = changes.reduce((acc, change) => {;
+=======
+    const summary = changes.reduce((acc, change) => {
+>>>>>>> main
       const type = change.charAt(0);
       const file = change.substring(3);
       const changeType = changeTypes[type] || 'changed;
@@ -191,8 +209,12 @@ class GitWorkflowAutomator {;
       return acc}, {});
     const message = Object.entries(summary);
       .map(([type, files]) => `${type} ${files.length} file(s)`);
+<<<<<<< HEAD
       .join(',;
   ');
+=======
+      .join(,);
+>>>>>>> main
     return `feat: ${message}`}
   async pushBranch(branchName) {;
     try {;
@@ -331,10 +353,16 @@ class GitWorkflowAutomator {;
           // Try to auto-resolve common conflicts;
           const content = fs.readFileSync(file,;
   'utf8');
+<<<<<<< HEAD
 if (content.includes(;
   '<<<<<<<') && content.includes(';
   ') && content.includes('>>>>>>>;
   ')) {;
+=======
+if (content.includes(
+  '<<<<<<<') && content.includes() && content.includes('>>>>>>>;
+  ')) {
+>>>>>>> main
             // Simple conflict resolution - take the incoming change;
             const resolved = content.replace(/\n[\s\S]*?fs.writeFileSync(file, resolved);fs.writeFileSync(file, resolved);
 execSync(`git add ${file}`, { cwd: this.projectRoot, stdio: 'pipe;
@@ -365,7 +393,6 @@ execSync(`git add ${file}`, { cwd: this.projectRoot, stdio: 'pipe;
       localBranches: await this.getLocalBranches(),;
       remoteBranches: await this.getRemoteBranches(),;
       recommendations: []}
-;
     // Generate recommendations;
     if (report.branchStatus && report.branchStatus.behind > 0) {;
       report.recommendations.push(`Branch is ${report.branchStatus.behind} commits behind origin. Consider pulling latest changes.`)}

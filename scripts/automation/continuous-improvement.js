@@ -1,12 +1,8 @@
 #!/usr/bin/env node;
-import { execSync } from;
-  'child_process';
-import fs from;
-  'fs';
-import path from;
-  'path';
-import { fileURLToPath } from;
-  'url';
+import { execSync } from "child_processchild_process';
+import fs from "fsfs';
+import path from "pathpath';
+import { fileURLToPath } from "urlurl';
 const __dirname = path.dirname(__filename);
 // // // // // // // console.log(;
   '🚀 Starting continuous improvement automation...');
@@ -122,8 +118,12 @@ async function runContinuousImprovement() {;
   '⚠️  Bundle analysis failed but continuing...')}
     // Generate report;
   status: 'completed}
+<<<<<<< HEAD
 ;
     const reportPath = path.join(process.cwd(),;
+=======
+    const reportPath = path.join(process.cwd(),
+>>>>>>> main
   'continuous-improvement-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     // // // console.log(`📊 Report saved to ${reportPath}`);

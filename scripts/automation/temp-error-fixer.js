@@ -11,9 +11,14 @@ console.log = (...args) => {;
       fixCount = parseInt(match[1])}
   }
   originalLog(...args)}
+<<<<<<< HEAD
 ;
 try {;
   require(;
+=======
+try {
+  require(
+>>>>>>> main
   '/workspace/scripts/automation/console-error-fixer.cjs');
   setTimeout(() => {;
     process.exit(0)}, 5000)} catch (error) {;

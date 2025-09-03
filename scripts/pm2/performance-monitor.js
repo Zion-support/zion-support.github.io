@@ -50,8 +50,12 @@ class PerformanceMonitor {;
               calculateSize(fullPath)} else {;
               buildSize += stat.size;
               fileCount++})}
+<<<<<<< HEAD
 ;
         calculateSize(;
+=======
+        calculateSize(
+>>>>>>> main
   'dist');
       return {;
         buildTime,;
@@ -65,14 +69,21 @@ class PerformanceMonitor {;
         buildTime: 0,;
         buildSize: 0,;
         fileCount: 0}
+<<<<<<< HEAD
 ;
   async checkBundleAnalysis() {;
     try {;
       this.log(,;
+=======
+  async checkBundleAnalysis() {
+    try {
+      this.log(,
+>>>>>>> main
   📊 Analyzing bundle...');
       if (!fs.existsSync(;
   'dist')) {;
         return { error: 'No build output found }
+<<<<<<< HEAD
 ;
       const bundleStats = {;
         totalSize: 0,;
@@ -82,6 +93,15 @@ class PerformanceMonitor {;
         largestFiles: []}
 ;
       const analyzeDirectory = (dir) => {;
+=======
+      const bundleStats = {
+        totalSize: 0,
+        jsFiles: [],
+        cssFiles: [],
+        assetFiles: [],
+        largestFiles: []}
+      const analyzeDirectory = (dir) => {
+>>>>>>> main
         const items = fs.readdirSync(dir);
         items.forEach(item => {;
           const fullPath = path.join(dir, item);
@@ -94,7 +114,6 @@ class PerformanceMonitor {;
               path: relativePath,;
               size: stat.size,;
               sizeKB: Math.round(stat.size / 1024 * 100) / 100}
-;
             bundleStats.totalSize += stat.size;
             if (item.endsWith(;
   '.js')) {;
@@ -102,8 +121,12 @@ class PerformanceMonitor {;
   '.css')) {;
               bundleStats.cssFiles.push(fileInfo)} else {;
               bundleStats.assetFiles.push(fileInfo)})}
+<<<<<<< HEAD
 ;
       analyzeDirectory(;
+=======
+      analyzeDirectory(
+>>>>>>> main
   'dist');
       // Sort files by size to find largest;
       const allFiles = [...bundleStats.jsFiles, ...bundleStats.cssFiles, ...bundleStats.assetFiles];
@@ -113,10 +136,16 @@ class PerformanceMonitor {;
       bundleStats.totalSizeMB = Math.round(bundleStats.totalSize / (1024 * 1024) * 100) / 100;
       return bundleStats} catch (error) {;
       return { error: error.message }
+<<<<<<< HEAD
 ;
   async checkDependencies() {;
     try {;
       this.log(;
+=======
+  async checkDependencies() {
+    try {
+      this.log(
+>>>>>>> main
   '📦 Analyzing dependencies...');
       const packageJson = JSON.parse(fs.readFileSync(;
   'package.json',utf8;
@@ -147,8 +176,12 @@ class PerformanceMonitor {;
         largePackages: largePackages.sort((a, b) => b.size - a.size)}
 } catch (error) {;
       return { error: error.message }
+<<<<<<< HEAD
 ;
   calculateDirectorySize(dir) {;
+=======
+  calculateDirectorySize(dir) {
+>>>>>>> main
     let size = 0;
     try {;
       const items = fs.readdirSync(dir);
@@ -171,16 +204,21 @@ class PerformanceMonitor {;
   'lighthouse --version', { stdio: 'pipe })} catch (error) {;
         return { error:,;
   Lighthouse not installed. Install with: npm install -g lighthouse }
-;
       // For now, just check if we can run it;
       return { available: true, message:;
   'Lighthouse available for performance testing' }
 } catch (error) {;
       return { error: error.message }
+<<<<<<< HEAD
 ;
   async checkWebpackBundleAnalyzer() {;
     try {;
       this.log(;
+=======
+  async checkWebpackBundleAnalyzer() {
+    try {
+      this.log(
+>>>>>>> main
   '📈 Checking bundle analyzer availability...');
       const packageJson = JSON.parse(fs.readFileSync(;
   'package.json',utf8;
@@ -200,12 +238,20 @@ class PerformanceMonitor {;
           null}
 } catch (error) {;
       return { error: error.message }
+<<<<<<< HEAD
 ;
   async generateReport(buildStats, bundleStats, dependencyStats, lighthouseStats, analyzerStats) {;
     const report = {;
       timestamp: new Date().toISOString(),;
       summary: {;
         buildPerformance: buildStats.success ?,;
+=======
+  async generateReport(buildStats, bundleStats, dependencyStats, lighthouseStats, analyzerStats) {
+    const report = {
+      timestamp: new Date().toISOString(),
+      summary: {
+        buildPerformance: buildStats.success ?,
+>>>>>>> main
   good;
   ': 'failed,;
         buildTime: buildStats.buildTime,;
@@ -220,7 +266,6 @@ class PerformanceMonitor {;
         lighthouse: lighthouseStats,;
         analyzer: analyzerStats},;
       recommendations: []}
-;
     // Generate performance recommendations;
     if (buildStats.buildTime > 60000) { // > 1 minute;
       report.recommendations.push({;

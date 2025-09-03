@@ -1,12 +1,8 @@
 #!/usr/bin/env node;
-import fs from;
-  'fs';
-import path from;
-  'path';
-import { execSync } from;
-  'child_process';
-import { fileURLToPath } from;
-  'url';
+import fs from "fsfs';
+import path from "pathpath';
+import { execSync } from "child_processchild_process';
+import { fileURLToPath } from "urlurl';
 const __dirname = path.dirname(__filename);
 // // // // // // // console.log(;
   '🔗 Starting continuous link checker automation...');
@@ -109,8 +105,12 @@ async function checkLinks() {;
     // Don;
   't exit, just log the error and continue;
   summary: 'Link check completed}
+<<<<<<< HEAD
 ;
     const reportPath = path.join(process.cwd(), ,;
+=======
+    const reportPath = path.join(process.cwd(), ,
+>>>>>>> main
   link-checker-report.json;
   ');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -131,6 +131,7 @@ function files = [];
 function findReferences(content) {;
   const references = [];
   // Find href attributes;
+<<<<<<< HEAD
   const hrefMatches = content.match(/href=[';
   ']([^']+)[';
   ']/g);
@@ -155,6 +156,27 @@ function findReferences(content) {;
   'blob:') && !src.startsWith(;
   'http)) {;
         references.push(src)});
+=======
+  const hrefMatches = content.match(/href=[]([^'']+)[]/g);
+  if (hrefMatches) {
+    hrefMatches.forEach(match => {
+      const href = match.match(/href=['']([^]+)['']/)[1];
+      if (href && !href.startsWith(
+  '#') && !href.startsWith(
+  'javascript: ') && !href.startsWith(
+  'http)) {
+        references.push(href)})
+  // Find src attributes;
+  const srcMatches = content.match(/src=[']([^'']+)[]/g);
+  if (srcMatches) {
+    srcMatches.forEach(match => {
+      const src = match.match(/src=['']([^]+)['']/)[1];
+      if (src && !src.startsWith(
+  'data: ') && !src.startsWith(
+  'blob:') && !src.startsWith(
+  'http)) {
+        references.push(src)})
+>>>>>>> main
   return references;
 function isValidReference(ref, distPath) {;
   if (ref.startsWith(;

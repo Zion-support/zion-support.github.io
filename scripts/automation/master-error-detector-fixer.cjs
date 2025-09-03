@@ -25,8 +25,13 @@ class MasterErrorDetectorFixer {;
     ;
     // Ensure directories exist;
     this.ensureDirectories();
+<<<<<<< HEAD
     ;
     console.log(`'🚀 Master Error Detector & Fixer Started');
+=======
+    
+    console.log(`🚀 Master Error Detector & Fixer Started`);
+>>>>>>> main
     console.log(`📁 Project Root: ${this.projectRoot});console.log(📊 Log Directory: ${this.logDir}``);
   }
 ;
@@ -55,11 +60,19 @@ class MasterErrorDetectorFixer {;
         ...options;
       });
       return { success: true, output: result };
+<<<<<<< HEAD
     } catch (error) {;
       return { ;
         success: false, ;
         error: error.message, ;
         output: error.stdout || error.stderr || ';
+=======
+    } catch (error) {
+      return { 
+        success: false, `);
+        error: error.message, `);
+        output: error.stdout || error.stderr || '`);
+>>>>>>> main
       };
     }
   }
@@ -71,12 +84,21 @@ class MasterErrorDetectorFixer {;
     ;
     if (!result.success) {;
       const errors = this.parseTypeScriptErrors(result.output);
+<<<<<<< HEAD
       this.errors.push({;
         type: 'typescript',;
         count: errors.length,;
         details: errors,;
         severity: 'high';
       });
+=======
+      this.errors.push({
+        type: 'typescript',
+        count: errors.length,
+        details: errors,
+        severity: 'high'`);
+      });`);
+>>>>>>> main
       await this.log(❌ Found ${errors.length} TypeScript errors, 'ERROR'`);
       return errors;
     }

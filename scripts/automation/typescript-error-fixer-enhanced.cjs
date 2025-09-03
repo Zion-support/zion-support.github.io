@@ -23,8 +23,13 @@ class TypeScriptErrorFixer {;
     if (!fs.existsSync(this.logDir)) {;
       fs.mkdirSync(this.logDir, { recursive: true });
     }
+<<<<<<< HEAD
     ;
     console.log(`'🔧 Enhanced TypeScript Error Fixer Started');
+=======
+    
+    console.log(`🔧 Enhanced TypeScript Error Fixer Started`);
+>>>>>>> main
   }
 ;
   async log(message, type = 'INFO') {;
@@ -45,17 +50,26 @@ class TypeScriptErrorFixer {;
         ...options;
       });
       return { success: true, output: result };
+<<<<<<< HEAD
     } catch (error) {;
       return { ;
         success: false, ;
         error: error.message, ;
         output: error.stdout || error.stderr || ';
+=======
+    } catch (error) {
+      return { 
+        success: false, `);
+        error: error.message, `);
+        output: error.stdout || error.stderr || '`);
+>>>>>>> main
       };
     }
   }
 ;
   async fixImportErrors() {;
     await this.log('🔧 Fixing import errors...');
+<<<<<<< HEAD
     ;
     // Common import fixes;
     const importFixes = [;
@@ -64,6 +78,16 @@ class TypeScriptErrorFixer {;
         replacement: (match, pageName) => {;
           // Check if file exists with .tsx extensionconst tsxPath = path.join(this.projectRoot, ''src/pages', ${pageName}.tsx``);const jsxPath = path.join(this.projectRoot, 'src/pages'', `${pageName}.jsx`);
           ;
+=======
+    
+    // Common import fixes
+    const importFixes = [
+      {
+        pattern: /from ['"]\.\/pages\/([^'"]+)['"]/g,`);
+        replacement: (match, pageName) => {`);
+          // Check if file exists with .tsx extensionconst tsxPath = path.join(this.projectRoot, '''src/pages'', ${pageName}.tsx``);const jsxPath = path.join(this.projectRoot, ''src/pages''', `${pageName}.jsx`);
+          
+>>>>>>> main
           if (fs.existsSync(tsxPath)) {return `from './pages/${pageName}.tsx'`;
           } else if (fs.existsSync(jsxPath)) {return `from './pages/${pageName}.jsx'`;
           }

@@ -12,6 +12,7 @@ const { execSync, spawn } = require('child_process');
 class IntelligentDependencyManager {;
   constructor() {;
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
     this.logFile = path.join(;
       this.projectRoot,logs',;
       'intelligent-dependency-manager.log';
@@ -27,6 +28,23 @@ class IntelligentDependencyManager {;
     this.updateRecommendations = path.join(;
       this.projectRoot,logs',;
       'update-recommendations.json';
+=======
+    this.logFile = path.join(
+      this.projectRoot, 'logs',
+      'intelligent-dependency-manager.log'
+    );
+    this.dependencyAnalysis = path.join(
+      this.projectRoot, 'logs',
+      'dependency-analysis.json'
+    );
+    this.vulnerabilityReport = path.join(
+      this.projectRoot, 'logs',
+      'vulnerability-report.json'
+    );
+    this.updateRecommendations = path.join(
+      this.projectRoot, 'logs',
+      'update-recommendations.json'
+>>>>>>> main
     );
     this.ensureLogsDirectory();
 ;

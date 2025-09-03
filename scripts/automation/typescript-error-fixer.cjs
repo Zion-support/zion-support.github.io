@@ -334,9 +334,15 @@ class TypeScriptErrorFixer {;
     return report;
   }
 }
+<<<<<<< HEAD
 ;
 console.log(`'🔧 Starting TypeScript error fixer automation...');
 ;
+=======
+
+console.log(`🔧 Starting TypeScript error fixer automation...`);
+
+>>>>>>> main
 const errorFixer = new TypeScriptErrorFixer();
 ;
 // Main continuous loop;

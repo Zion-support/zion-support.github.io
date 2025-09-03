@@ -1,12 +1,19 @@
 #!/usr/bin/env node;
 import { execSync, spawn } from;
   'child_process';
+<<<<<<< HEAD
 import fs from;
   'fs';
 import path from;
   'path';
 class BuildErrorMonitor {;
   constructor() {;
+=======
+import fs from "fsfs';
+import path from "pathpath';
+class BuildErrorMonitor {
+  constructor() {
+>>>>>>> main
     this.buildCheckInterval = process.env.BUILD_CHECK_INTERVAL || 900000 // 15 minutes;
     this.autoFixBuild = process.env.AUTO_FIX_BUILD ===;
   'true';
@@ -38,8 +45,12 @@ class BuildErrorMonitor {;
         skipped: []},;
       buildTime: null,;
       suggestions: []}
+<<<<<<< HEAD
 ;
     try {;
+=======
+    try {
+>>>>>>> main
       const startTime = Date.now();
       const buildResult = await this.runBuild();
       const endTime = Date.now();
@@ -173,9 +184,13 @@ class BuildErrorMonitor {;
   }
   async fixModuleResolutionError(message) {;
     // Extract module name from error message;
+<<<<<<< HEAD
     const moduleMatch = message.match(/[';
   ']([^']+)[";
   ']/);
+=======
+    const moduleMatch = message.match(/[]([^'']+)[]/);
+>>>>>>> main
     if (!moduleMatch) return false;
     const moduleName = moduleMatch[1];
     // Try to install missing dependencies;
@@ -192,9 +207,15 @@ class BuildErrorMonitor {;
     return false}
   async fixImportExportError(message) {;
     // Simple fixes for common import/export issues;
+<<<<<<< HEAD
     const commonFixes = [;
       {;
         pattern: /export\s*{\s*default\s*}/,;
+=======
+    const commonFixes = [
+  {
+        pattern: /export\s*{\s*default\s*}/,
+>>>>>>> main
         replacement: 'export default {}
   '},;
       {;

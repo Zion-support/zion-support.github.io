@@ -19,11 +19,19 @@ class PM2ErrorPrevention {;
       backupBeforeFix: true,;
     };
   }
+<<<<<<< HEAD
 ;
   async start() {;
     console.log(`'🚀 Starting PM2 Error Prevention Automation...');
 ;
     // Set up monitoring;
+=======
+
+  async start() {
+    console.log(`🚀 Starting PM2 Error Prevention Automation...`);
+
+    // Set up monitoring
+>>>>>>> main
     this.setupMonitoring();
 ;
     // Start the prevention loop;
@@ -53,8 +61,13 @@ class PM2ErrorPrevention {;
       ecosystemPath,;
       module.exports = ${JSON.stringify(ecosystemConfig, null, 2)};
     `);
+<<<<<<< HEAD
 ;
     console.log(`'✅ PM2 ecosystem configuration created');
+=======
+
+    console.log(`✅ PM2 ecosystem configuration created`);
+>>>>>>> main
   }
 ;
   startPreventionLoop() {;
@@ -66,11 +79,19 @@ class PM2ErrorPrevention {;
       }
     }, this.config.checkInterval);
   }
+<<<<<<< HEAD
 ;
   async runPreventionChecks() {;
     console.log(`'🔍 Running error prevention checks...');
 ;
     // Check 1: TypeScript errors;
+=======
+
+  async runPreventionChecks() {
+    console.log(`🔍 Running error prevention checks...`);
+
+    // Check 1: TypeScript errors
+>>>>>>> main
     await this.checkTypeScriptErrors();
 ;
     // Check 2: Import issues;
@@ -81,8 +102,13 @@ class PM2ErrorPrevention {;
 ;
     // Check 4: Unused imports;
     await this.checkUnusedImports();
+<<<<<<< HEAD
 ;
     console.log(`'✅ Prevention checks completed');
+=======
+
+    console.log(`✅ Prevention checks completed`);
+>>>>>>> main
   }
 ;
   async checkTypeScriptErrors() {;
@@ -138,8 +164,13 @@ class PM2ErrorPrevention {;
       if (this.config.autoFix) {;
         await this.autoFixImportIssues();
       }
+<<<<<<< HEAD
     } else {;
       console.log(`'✅ No import issues found');
+=======
+    } else {
+      console.log(`✅ No import issues found`);
+>>>>>>> main
     }
   }
 ;
@@ -167,12 +198,21 @@ class PM2ErrorPrevention {;
     }
 ;
     if (syntaxIssues > 0) {console.log(`⚠️  Found ${syntaxIssues} syntax issues);
+<<<<<<< HEAD
 ;
       if (this.config.autoFix) {;
         await this.autoFixSyntaxIssues();
       }
     } else {;
       console.log(`'✅ No syntax issues found');
+=======
+
+      if (this.config.autoFix) {`);
+        await this.autoFixSyntaxIssues();`);
+      }`);
+    } else {`);
+      console.log(`✅ No syntax issues found`);
+>>>>>>> main
     }
   }
 ;

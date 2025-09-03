@@ -1,12 +1,19 @@
 #!/usr/bin/env node;
 import { execSync, spawn } from;
   'child_process';
+<<<<<<< HEAD
 import fs from;
   'fs';
 import path from;
   'path';
 class DependencyErrorResolver {;
   constructor() {;
+=======
+import fs from "fsfs';
+import path from "pathpath';
+class DependencyErrorResolver {
+  constructor() {
+>>>>>>> main
     this.checkInterval = process.env.CHECK_INTERVAL || 600000 // 10 minutes;
     this.autoInstall = process.env.AUTO_INSTALL ===;
   'true';
@@ -40,8 +47,12 @@ class DependencyErrorResolver {;
         failed: [],;
         skipped: []},;
       recommendations: []}
+<<<<<<< HEAD
 ;
     try {;
+=======
+    try {
+>>>>>>> main
       // Check for missing dependencies;
       await this.checkMissingDependencies(report);
       // Check for outdated dependencies;
@@ -162,11 +173,18 @@ class DependencyErrorResolver {;
       }
     }
   }
+<<<<<<< HEAD
   async checkDependencyConflicts(report) {;
     try {;
       const packageJson = JSON.parse(fs.readFileSync(;
   'package.json',;
   'utf8'));
+=======
+  async checkDependencyConflicts(report) {
+    try {
+      const packageJson = JSON.parse(fs.readFileSync(
+  'package.json,utf8'));
+>>>>>>> main
       const conflicts = [];
       // Check for peer dependency conflicts;
       if (packageJson.peerDependencies) {;

@@ -156,10 +156,17 @@ class ProjectErrorAutomation {;
           content = content.replace(;
             /import React from 'react'/,import React, { useState } from 'react'";
           );
+<<<<<<< HEAD
           modified = true;
         }
         ;
         if (modified) {;
+=======
+          modified = true;`);
+        }`);
+        `);
+        if (modified) {`);
+>>>>>>> main
           await fs.writeFile(filePath, content);await this.log(✅ Fixed imports in ${file}`);
           this.fixesApplied.push({;
             type: 'import-fix',;

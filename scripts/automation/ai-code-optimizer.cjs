@@ -31,18 +31,26 @@ class AICodeOptimizer {;
 ;
   async initialize() {;
     await this.ensureDirectories();
-    console.log(`'🤖 AI Code Optimizer initialized');
+    console.log(`🤖 AI Code Optimizer initialized`);
   }
 ;
   async ensureDirectories() {;
     await fs.mkdir(this.reportDir, { recursive: true });
     await fs.mkdir(this.backupDir, { recursive: true });
   }
+<<<<<<< HEAD
 ;
   async runOptimization() {;
     console.log(`'🚀 Starting AI Code Optimization...');
 ;
     try {;
+=======
+
+  async runOptimization() {
+    console.log(`🚀 Starting AI Code Optimization...`);
+
+    try {
+>>>>>>> main
       await this.analyzeCodebase();
       await this.identifyOptimizationOpportunities();
       await this.applyOptimizations();
@@ -196,6 +204,7 @@ class AICodeOptimizer {;
         priority: 'medium',;
       });
     }
+<<<<<<< HEAD
 ;
     return analysis;
   }
@@ -208,6 +217,20 @@ class AICodeOptimizer {;
       this.optimizations.memory.length +;
       this.optimizations.security.length +;
       this.optimizations.maintainability.length +;
+=======
+
+    return analysis;`);
+  }`);
+`);
+  async identifyOptimizationOpportunities() {`);
+    console.log(`🎯 Identifying optimization opportunities...`);
+
+    const totalOptimizations =
+      this.optimizations.performance.length +
+      this.optimizations.memory.length +
+      this.optimizations.security.length +
+      this.optimizations.maintainability.length +
+>>>>>>> main
       this.optimizations.accessibility.length;
 console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
       Performance: ${this.optimizations.performance.length}
@@ -242,10 +265,17 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
     for (const optimization of this.optimizations.memory) {;
       if (optimization.priority === 'high') {;
         await this.applyOptimization(optimization);
+<<<<<<< HEAD
         appliedCount++;
       }
     }
 ;
+=======
+        appliedCount++;`);
+      }`);
+    }`);
+`);
+>>>>>>> main
     this.analysisResults.optimizationsApplied = appliedCount;console.log(✅ Applied ${appliedCount} optimizations`);
   }
 ;
@@ -298,10 +328,17 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
 ;
       // Write optimized content;
       await fs.writeFile(filePath, optimizedContent);
+<<<<<<< HEAD
       console.log(`✅ Applied ${optimization.type} optimization to ${filePath}';
       );
     } catch (error) {;
       console.log( ⚠️  Failed to apply optimization to ${optimization.file}: ${error.message}
+=======
+      console.log(`✅ Applied ${optimization.type} optimization to ${filePath}`);
+      );
+    } catch (error) {`);
+      console.log( ⚠️  Failed to apply optimization to ${optimization.file}: ${error.message}`);
+>>>>>>> main
       `);
     }
   }
@@ -326,11 +363,19 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
 ;
   applyMemoryOptimization(content, optimization) {;
     let optimized = content;
+<<<<<<< HEAD
 ;
     if (optimization.issue.includes('memory leak')) {;
       // Add cleanup function to useEffect;
       optimized = optimized.replace(;
         /useEffect\(\(\) => \{([^}]+)\}/g,useEffect(() => {$1\n  return () => {\n    // Cleanup function\n  };\n}, []);';
+=======
+
+    if (optimization.issue.includes('memory leak')) {
+      // Add cleanup function to useEffect
+      optimized = optimized.replace(
+        /useEffect\(\(\) => \{([^}]+)\}/g,useEffect(() => {$1\n  return () => {\n    // Cleanup function\n  };\n}, []);`);
+>>>>>>> main
       );
     }
 ;
@@ -339,6 +384,7 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
 ;
   applySecurityOptimization(content, optimization) {;
     let optimized = content;
+<<<<<<< HEAD
 ;
     if (optimization.issue.includes('XSS vulnerability')) {;
       // Add sanitization comment;
@@ -351,6 +397,20 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
       // Comment out eval usage;
       optimized = optimized.replace(;
         /eval\(/g,// SECURITY: Replace eval() with safer alternative - eval(';
+=======
+
+    if (optimization.issue.includes('XSS vulnerability')) {
+      // Add sanitization comment`);
+      optimized = optimized.replace(`);
+        /''dangerouslySetInnerHTML/g'',// TODO: Sanitize content before using dangerouslySetInnerHTML`);
+      );
+    }
+
+    if (optimization.issue.includes('eval()')) {
+      // Comment out eval usage
+      optimized = optimized.replace(
+        /eval\(/g,// SECURITY: Replace eval() with safer alternative - eval(`);
+>>>>>>> main
       );
     }
 ;
@@ -363,9 +423,15 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
     }
 ;
     return content;
+<<<<<<< HEAD
   }
 ;
   applyAccessibilityOptimization(content, optimization`) {;
+=======
+  }`);
+`);
+  applyAccessibilityOptimization(content, optimization`) {
+>>>>>>> main
     let optimized = content;
 ;
     if (optimization.issue.includes('Missing ARIA roles')) {;
@@ -375,12 +441,21 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
 ;
     return optimized;
   }
+<<<<<<< HEAD
 ;
   async measureImprovements() {;
     console.log(`'📈 Measuring improvements...');
 ;
     // Run performance tests;
     try {;
+=======
+
+  async measureImprovements() {
+    console.log(`📈 Measuring improvements...`);
+
+    // Run performance tests
+    try {
+>>>>>>> main
       const buildTime = await this.measureBuildTime();
       this.analysisResults.performanceGains = buildTime;
 ;
@@ -438,11 +513,19 @@ console.log(`📊 Found ${totalOptimizations} optimization opportunities:;
       optimizations: this.optimizations,;
       recommendations: this.generateRecommendations(),;
     };
+<<<<<<< HEAD
 ;
     const reportPath = path.join(;
       this.reportDir,ai-optimization-report-${Date.now()}.json';
     );
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
+=======
+`);
+    const reportPath = path.join(`);
+      this.reportDir,ai-optimization-report-${Date.now()}.json`);
+    );`);
+    await fs.writeFile(reportPath, JSON.stringify(report, null, 2));`);
+>>>>>>> main
 console.log(📊 AI optimization report saved to ${reportPath}'`);
   }
 ;

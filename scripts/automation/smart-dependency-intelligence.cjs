@@ -13,6 +13,7 @@ const crypto = require('crypto');
 class SmartDependencyIntelligence {;
   constructor() {;
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
     this.logFile = path.join(;
       this.projectRoot,logs',;
       'smart-dependency-intelligence.log';
@@ -24,6 +25,19 @@ class SmartDependencyIntelligence {;
     this.predictionsLog = path.join(;
       this.projectRoot,logs',;
       'dependency-predictions.json';
+=======
+    this.logFile = path.join(
+      this.projectRoot, 'logs',
+      'smart-dependency-intelligence.log'
+    );
+    this.intelligenceLog = path.join(
+      this.projectRoot, 'logs',
+      'dependency-intelligence.json'
+    );
+    this.predictionsLog = path.join(
+      this.projectRoot, 'logs',
+      'dependency-predictions.json'
+>>>>>>> main
     );
     this.ensureLogsDirectory();
     this.intelligenceData = this.loadIntelligenceData();
@@ -713,10 +727,17 @@ this.log(`Applied ${appliedOptimizations.length} optimizations`);
         optimizations;
       ),;
     };
+<<<<<<< HEAD
 ;
     // Save report to file;
     const reportPath = path.join(;
       this.projectRoot,logs', `dependency-intelligence-${Date.now()}.json`;
+=======
+
+    // Save report to file
+    const reportPath = path.join(
+      this.projectRoot, 'logs', `dependency-intelligence-${Date.now()}.json`
+>>>>>>> main
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 this.log(`Intelligence report generated: ${reportPath}`);

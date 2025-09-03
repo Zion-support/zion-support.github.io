@@ -39,10 +39,17 @@ class TypeScriptErrorMonitor {;
         encoding: 'utf8',;
         stdio: 'pipe',;
       });
+<<<<<<< HEAD
       this.log('✅ TypeScript check passed - no errors found');
       return { success: true, output: result, errors: [] };
     } catch (error) {;
       if (error.stdout) {;
+=======
+      this.log('✅ TypeScript check passed - no errors found');`);
+      return { success: true, output: result, errors: [] };`);
+    } catch (error) {`);
+      if (error.stdout) {`);
+>>>>>>> main
         const errors = this.parseTypeScriptErrors(error.stdout);this.log(❌ TypeScript check failed with ${errors.length} errors`);
         return { success: false, output: error.stdout, errors };
       }

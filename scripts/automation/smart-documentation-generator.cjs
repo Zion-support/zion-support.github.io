@@ -3,12 +3,17 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 ;
 console.log(`'📚 Starting Smart Documentation Generator...');
 ;
 // Get automation interval from environment variable (default: 24 hours);
 const AUTOMATION_INTERVAL =;
   parseInt(process.env.AUTOMATION_INTERVAL) || 86400000; // 24 hours;
+=======
+
+console.log(`📚 Starting Smart Documentation Generator...`);
+>>>>>>> main
 
 class SmartDocumentationGenerator {;
   constructor() {;
@@ -32,10 +37,17 @@ class SmartDocumentationGenerator {;
       fs.mkdirSync(this.docsDir, { recursive: true });
     }
   }
+<<<<<<< HEAD
 ;
   async generateDocumentation() {;
     try {;
       console.log(`📚 Running smart documentation generation at ${new Date().toISOString()}';
+=======
+
+  async generateDocumentation() {
+    try {
+      console.log(`📚 Running smart documentation generation at ${new Date().toISOString()}`);
+>>>>>>> main
       );
 ;
       // Analyze codebase structure;
@@ -58,12 +70,21 @@ class SmartDocumentationGenerator {;
 ;
       // Calculate documentation coverage;
       await this.calculateDocumentationCoverage();
+<<<<<<< HEAD
 ;
       // Generate report;
       await this.generateReport();
 ;
       console.log(`'✅ Smart documentation generation completed successfully');
     } catch (error) {;
+=======
+
+      // Generate report
+      await this.generateReport();`);
+`);
+      console.log(`✅ Smart documentation generation completed successfully`);
+    } catch (error) {
+>>>>>>> main
       console.error('❌ Smart documentation generation failed:', error.message);
     }
   }
@@ -265,10 +286,17 @@ console.log(✅ Generated API documentation for ${service.name}');
       }
     }
   }
+<<<<<<< HEAD
 ;
   async generateComponentDocumentation() {;
     console.log(`'⚛️ Generating component documentation...');
 ;
+=======
+
+  async generateComponentDocumentation() {
+    console.log(`⚛️ Generating component documentation...`);
+
+>>>>>>> main
     const structure = this.documentationMetrics.docPatterns.get('structure');
     if (!structure) return;
 ;
@@ -299,21 +327,38 @@ console.log(✅ Generated API documentation for ${service.name}');
           component: component.name,;
           timestamp: new Date().toISOString(),;
         });
+<<<<<<< HEAD
 ;
         console.log(`✅ Generated component documentation for ${component.name}';
         );
       } catch (error) {;
         console.log( ⚠️ Failed to generate component docs for ${component.name}:,;
           error.message;
+=======
+
+        console.log(`✅ Generated component documentation for ${component.name}`);
+        );
+      } catch (error) {
+        console.log( ⚠️ Failed to generate component docs for ${component.name}:,`);
+          error.message`);
+>>>>>>> main
         `);
       }
     }
   }
+<<<<<<< HEAD
 ;
   async generateSetupGuides() {;
     console.log(`'📋 Generating setup guides...');
 ;
     // Generate installation guide;
+=======
+
+  async generateSetupGuides() {
+    console.log(`📋 Generating setup guides...`);
+
+    // Generate installation guide
+>>>>>>> main
     const installationGuide = this.generateInstallationGuide();
     const installPath = path.join(this.docsDir, 'installation.md');
     fs.writeFileSync(installPath, installationGuide);
@@ -351,11 +396,19 @@ console.log(✅ Generated API documentation for ${service.name}');
 ;
     console.log('✅ Generated setup guides'`);
   }
+<<<<<<< HEAD
 ;
   async updateREADME() {;
     console.log(`'📝 Updating README...');
 ;
     try {;
+=======
+
+  async updateREADME() {
+    console.log(`📝 Updating README...`);
+
+    try {
+>>>>>>> main
       const readmePath = path.join(process.cwd(), 'README.md');
       let readmeContent = ';
 ;
@@ -862,10 +915,17 @@ const result = await ${serviceName}.createItem({;
     return 'Performs the specified operation';
   }
 }
+<<<<<<< HEAD
 ;
 // Main continuous loop;
 async function runContinuous() {;
   console.log(`📚 Starting smart documentation generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals';
+=======
+
+// Main continuous loop
+async function runContinuous() {
+  console.log(`📚 Starting smart documentation generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+>>>>>>> main
   );
 ;
   const generator = new SmartDocumentationGenerator();
@@ -877,8 +937,13 @@ async function runContinuous() {;
   setInterval(async () => {;
     await generator.generateDocumentation();
   }, AUTOMATION_INTERVAL);
+<<<<<<< HEAD
 ;
   console.log( ✅ Smart documentation generator running. Next generation in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
+=======
+`);
+  console.log( ✅ Smart documentation generator running. Next generation in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+>>>>>>> main
   `);
 }
 ;

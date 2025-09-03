@@ -18,12 +18,21 @@ class ErrorFixerAutomation {;
     this.errorsFound = [];
     this.startTime = Date.now();
   }
+<<<<<<< HEAD
 ;
   async run() {;
     console.log(`'🚀 Starting Error Fixer Automation...');
 ;
     try {;
       // Create reports directory;
+=======
+
+  async run() {
+    console.log(`🚀 Starting Error Fixer Automation...`);
+
+    try {
+      // Create reports directory
+>>>>>>> main
       this.ensureReportsDirectory();
 ;
       // Run all error fixing operations;
@@ -40,8 +49,13 @@ class ErrorFixerAutomation {;
 ;
       // Generate report;
       this.generateReport();
+<<<<<<< HEAD
 ;
       console.log(`'✅ Error Fixer Automation completed successfully!');
+=======
+
+      console.log(`✅ Error Fixer Automation completed successfully!`);
+>>>>>>> main
       console.log(📊 Fixed ${this.fixesApplied.length} issues);console.log(📊 Found ${this.errorsFound.length} remaining issues``);
     } catch (error) {;
       console.error('❌ Error Fixer Automation failed:', error);
@@ -54,12 +68,21 @@ class ErrorFixerAutomation {;
       fs.mkdirSync(this.reportsDir, { recursive: true });
     }
   }
+<<<<<<< HEAD
 ;
   async fixMergeConflicts() {;
     console.log(`'🔧 Fixing merge conflicts...');
 ;
     const files = glob.sync('**/*.{js,jsx,ts,tsx}', {;
       ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],;
+=======
+
+  async fixMergeConflicts() {
+    console.log(`🔧 Fixing merge conflicts...`);
+
+    const files = glob.sync('**/*.{js,jsx,ts,tsx}', {
+      ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],
+>>>>>>> main
     });
 ;
     for (const file of files) {;
@@ -69,27 +92,48 @@ class ErrorFixerAutomation {;
           content.includes(') ||;
           content.includes('>>>>>>>');
         ) {console.log(`  Fixing merge conflicts in ${file});
+<<<<<<< HEAD
 ;
           // Remove merge conflict markers and keep the first version;
           let fixedContent = content;
             .replace(;
               /\n([\s\S]*?)\n              '$1';
+=======
+
+          // Remove merge conflict markers and keep the first version
+          let fixedContent = content`);
+            .replace(`);
+              /\n([\s\S]*?)\n              '$1`);
+            )
+            .replace(
+              /\n([\s\S]*?)\n              '$1`);
+>>>>>>> main
             );
             .replace(;
               /\n([\s\S]*?)\n              '$1';
             );
 ;
           fs.writeFileSync(file, fixedContent);
+<<<<<<< HEAD
           this.fixesApplied.push({;
             type: 'merge_conflict',;
             file,;
             description: 'Removed merge conflict markers',;
           });
         }
+=======
+          this.fixesApplied.push({
+            type: 'merge_conflict',
+            file,
+            description: 'Removed merge conflict markers',
+          });`);
+        }`);
+>>>>>>> main
       } catch (error) {this.logError(Error fixing merge conflicts in ${file}`, error`);
       }
     }
   }
+<<<<<<< HEAD
 ;
   async fixSyntaxErrors() {;
     console.log(`'🔧 Fixing syntax errors...');
@@ -112,6 +156,30 @@ class ErrorFixerAutomation {;
 ;
     const files = glob.sync('**/*.{js,jsx,ts,tsx}', {;
       ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],;
+=======
+
+  async fixSyntaxErrors() {
+    console.log(`🔧 Fixing syntax errors...`);
+
+    // Fix common syntax errors
+    const syntaxFixes = [
+      {
+        pattern: /(\w+)\s*=\s*{\s*([^}]+)\s*,\s*([^}]+)\s*}/g,
+        replacement: '$1 = {\n  $2,\n  $3\n}',
+        description: 'Fix object literal syntax',
+      },
+      {
+        pattern: /export\s+function\s+(\w+).*?export\s+function\s+\1/g,
+        replacement: 'export function $1',
+        description: 'Remove duplicate function declarations',
+      },
+      {
+        pattern:
+          /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];\s*import\s+{\s*\1\s*}\s+from\s+['"]\2['"]/g, 'replacement: 'import { $1 } from "$2"'', 'description: 'Remove duplicate imports'', '}', ''];
+
+    const files = glob.sync('**/*.{js,jsx,ts,tsx}', {
+      ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],
+>>>>>>> main
     });
 ;
     for (const file of files) {;
@@ -135,6 +203,7 @@ class ErrorFixerAutomation {;
       }
     }
   }
+<<<<<<< HEAD
 ;
   async fixUnusedImports() {;
     console.log(`'🔧 Fixing unused imports...');
@@ -144,6 +213,17 @@ class ErrorFixerAutomation {;
       execSync('npm run lint -- --fix', {;
         cwd: this.projectRoot,;
         stdio: 'pipe',;
+=======
+
+  async fixUnusedImports() {
+    console.log(`🔧 Fixing unused imports...`);
+
+    try {
+      // Run ESLint with --fix to auto-fix unused imports
+      execSync('npm run lint -- --fix', {
+        cwd: this.projectRoot,
+        stdio: 'pipe',
+>>>>>>> main
       });
 ;
       this.fixesApplied.push({;
@@ -154,12 +234,21 @@ class ErrorFixerAutomation {;
       this.logError('Error fixing unused imports', error);
     }
   }
+<<<<<<< HEAD
 ;
   async fixTypeScriptErrors() {;
     console.log(`'🔧 Fixing TypeScript errors...');
 ;
     const files = glob.sync('**/*.{ts,tsx}', {;
       ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],;
+=======
+
+  async fixTypeScriptErrors() {
+    console.log(`🔧 Fixing TypeScript errors...`);
+
+    const files = glob.sync('**/*.{ts,tsx}', {
+      ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],
+>>>>>>> main
     });
 ;
     for (const file of files) {;
@@ -194,6 +283,7 @@ class ErrorFixerAutomation {;
       }
     }
   }
+<<<<<<< HEAD
 ;
   async fixLintingErrors() {;
     console.log(`'🔧 Fixing linting errors...');
@@ -203,6 +293,17 @@ class ErrorFixerAutomation {;
       execSync('npm run lint -- --fix', {;
         cwd: this.projectRoot,;
         stdio: 'pipe',;
+=======
+
+  async fixLintingErrors() {
+    console.log(`🔧 Fixing linting errors...`);
+
+    try {
+      // Run ESLint with auto-fix
+      execSync('npm run lint -- --fix', {
+        cwd: this.projectRoot,
+        stdio: 'pipe',
+>>>>>>> main
       });
 ;
       this.fixesApplied.push({;
@@ -248,12 +349,21 @@ class ErrorFixerAutomation {;
       }
     }
   }
+<<<<<<< HEAD
 ;
   async fixMissingExports() {;
     console.log(`'🔧 Fixing missing exports...');
 ;
     const files = glob.sync('**/*.{js,jsx,ts,tsx}', {;
       ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],;
+=======
+
+  async fixMissingExports() {
+    console.log(`🔧 Fixing missing exports...`);
+
+    const files = glob.sync('**/*.{js,jsx,ts,tsx}', {
+      ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],
+>>>>>>> main
     });
 ;
     for (const file of files) {;
@@ -285,12 +395,21 @@ class ErrorFixerAutomation {;
       }
     }
   }
+<<<<<<< HEAD
 ;
   async fixImportErrors() {;
     console.log(`'🔧 Fixing import errors...');
 ;
     const files = glob.sync('**/*.{js,jsx,ts,tsx}', {;
       ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],;
+=======
+
+  async fixImportErrors() {
+    console.log(`🔧 Fixing import errors...`);
+
+    const files = glob.sync('**/*.{js,jsx,ts,tsx}', {
+      ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],
+>>>>>>> main
     });
 ;
     for (const file of files) {;
@@ -322,12 +441,21 @@ class ErrorFixerAutomation {;
       }
     }
   }
+<<<<<<< HEAD
 ;
   async fixUndefinedVariables() {;
     console.log(`'🔧 Fixing undefined variables...');
 ;
     const files = glob.sync('**/*.{js,jsx,ts,tsx}', {;
       ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],;
+=======
+
+  async fixUndefinedVariables() {
+    console.log(`🔧 Fixing undefined variables...`);
+
+    const files = glob.sync('**/*.{js,jsx,ts,tsx}', {
+      ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],
+>>>>>>> main
     });
 ;
     for (const file of files) {;
@@ -356,12 +484,21 @@ class ErrorFixerAutomation {;
       }
     }
   }
+<<<<<<< HEAD
 ;
   async fixConsoleStatements() {;
     console.log(`'🔧 Fixing console statements...');
 ;
     const files = glob.sync('**/*.{js,jsx,ts,tsx}', {;
       ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],;
+=======
+
+  async fixConsoleStatements() {
+    console.log(`🔧 Fixing console statements...`);
+
+    const files = glob.sync('**/*.{js,jsx,ts,tsx}', {
+      ignore: ['node_modules/**', 'dist/**', 'build/**', '.git/**'],
+>>>>>>> main
     });
 ;
     for (const file of files) {;

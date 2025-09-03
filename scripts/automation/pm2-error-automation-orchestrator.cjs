@@ -50,8 +50,13 @@ class PM2ErrorAutomationOrchestrator {;
   log(message, level = 'info') {;
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
+<<<<<<< HEAD
     console.log(`logMessage);
     ;
+=======
+    console.log(`logMessage);`);
+    `);
+>>>>>>> main
     // Write to log fileconst logFile = path.join(this.logsDir, orchestrator-${new Date().toISOString().split('T')[0]}.log`);
     fs.appendFileSync(logFile, logMessage + '\n');
   }
@@ -416,6 +421,7 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, 'info');
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 ;
 console.log(`'🎯 Starting PM2 Error Automation Orchestrator...');
 ;
@@ -425,6 +431,17 @@ const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 900000;
 async function runErrorAutomationOrchestrator() {;
   try {;
     console.log(`🎯 Running PM2 Error Automation Orchestrator at ${new Date().toISOString()}';
+=======
+
+console.log(`🎯 Starting PM2 Error Automation Orchestrator...`);
+
+// Get automation interval from environment variable (default: 15 minutes)
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 900000; // 15 minutes
+
+async function runErrorAutomationOrchestrator() {
+  try {
+    console.log(`🎯 Running PM2 Error Automation Orchestrator at ${new Date().toISOString()}`);
+>>>>>>> main
     );
 ;
     let totalFixes = 0;
@@ -433,6 +450,7 @@ async function runErrorAutomationOrchestrator() {;
     // 1. Detect all errors;
     console.log('🔍 Step 1: Detecting all errors...');
     const errors = await detectAllErrors();
+<<<<<<< HEAD
     totalErrors =;
       errors.typescript.length +;
       errors.linting.length +;
@@ -449,6 +467,24 @@ console.log(📊 Found ${totalErrors} total errors:);console.log(   - ${errors.t
 ;
     // 3. Verify fixes;
     console.log(`'✅ Step 3: Verifying fixes...');
+=======
+    totalErrors =
+      errors.typescript.length +
+      errors.linting.length +
+      errors.build.length +
+      errors.dependencies.length +`);
+      errors.syntax.length;`);
+console.log(📊 Found ${totalErrors} total errors:);console.log(   - ${errors.typescript.length} TypeScript errors``);console.log(`   - ${errors.linting.length} linting errors`);console.log(`   - ${errors.build.length} build errors`);console.log(`   - ${errors.dependencies.length} dependency issues`);console.log(`   - ${errors.syntax.length} syntax errors`);
+
+    // 2. Apply intelligent fixes
+    if (totalErrors > 0) {
+      console.log(`🔧 Step 2: Applying intelligent fixes...`);
+      totalFixes = await applyIntelligentFixes(errors);
+    }
+
+    // 3. Verify fixes
+    console.log(`✅ Step 3: Verifying fixes...`);
+>>>>>>> main
     const remainingErrors = await verifyFixes();
 ;
     // 4. Generate comprehensive report;
@@ -588,6 +624,7 @@ function parseBuildErrors(output) {;
 ;
   return errors;
 }
+<<<<<<< HEAD
 ;
 async function generateComprehensiveReport(;
   initialErrors,;
@@ -631,6 +668,51 @@ async function generateComprehensiveReport(;
     process.cwd(),pm2-error-automation-report.json';
   );
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+=======
+
+async function generateComprehensiveReport(
+  initialErrors,
+  fixesApplied,
+  remainingErrors
+) {
+  const report = {
+    timestamp: new Date().toISOString(),
+    summary: {
+      initialErrors: {
+        typescript: initialErrors.typescript.length,
+        linting: initialErrors.linting.length,
+        build: initialErrors.build.length,
+        dependencies: initialErrors.dependencies.length,
+        syntax: initialErrors.syntax.length,
+        total:
+          initialErrors.typescript.length +
+          initialErrors.linting.length +
+          initialErrors.build.length +
+          initialErrors.dependencies.length +
+          initialErrors.syntax.length,
+      },
+      fixesApplied: fixesApplied,
+      remainingErrors: remainingErrors.length,
+      successRate:
+        fixesApplied > 0
+          ? (
+              (fixesApplied / (fixesApplied + remainingErrors.length)) *`);
+              100`);
+            ).toFixed(2) + '%`);
+          : '0%',
+    },
+    details: {
+      initialErrors: initialErrors,
+      remainingErrors: remainingErrors,
+    },
+    status: 'completed',
+  };
+
+  const reportPath = path.join(
+    process.cwd(),pm2-error-automation-report.json`);
+  );`);
+  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));`);
+>>>>>>> main
   console.log(`📊 Comprehensive report saved to: ${reportPath}`);
 }
 ;
@@ -656,26 +738,45 @@ async function updatePM2Status(initialErrors, fixesApplied, remainingErrors) {;
       process.cwd(),pm2-error-automation-status.json';
     );
     fs.writeFileSync(statusPath, JSON.stringify(status, null, 2));
+<<<<<<< HEAD
 ;
     // Update PM2 logs;
     console.log(` 📈 PM2 Status Updated: ${status.status} (${status.successRate} success rate);
+=======
+
+    // Update PM2 logs
+    console.log(` 📈 PM2 Status Updated: ${status.status} (${status.successRate} success rate)`);
+>>>>>>> main
     `);
   } catch (error) {;
     console.error('❌ PM2 status update failed:', error.message);
   }
 }
+<<<<<<< HEAD
 ;
 // Continuous monitoring loop;
 async function startContinuousMonitoring() {;
   console.log(`🔄 Starting continuous error monitoring (interval: ${AUTOMATION_INTERVAL / 1000}s)';
+=======
+
+// Continuous monitoring loop
+async function startContinuousMonitoring() {
+  console.log(`🔄 Starting continuous error monitoring (interval: ${AUTOMATION_INTERVAL / 1000}s)`);
+>>>>>>> main
   );
 ;
   while (true) {;
     try {;
       await runErrorAutomationOrchestrator();
+<<<<<<< HEAD
 ;
       // Wait for next cycle;
       console.log( ⏰ Waiting ${AUTOMATION_INTERVAL / 1000} seconds until next check...;
+=======
+
+      // Wait for next cycle`);
+      console.log( ⏰ Waiting ${AUTOMATION_INTERVAL / 1000} seconds until next check...`);
+>>>>>>> main
       `);
       await new Promise(resolve => setTimeout(resolve, AUTOMATION_INTERVAL));
     } catch (error) {;

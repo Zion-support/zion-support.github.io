@@ -3,13 +3,24 @@
  * Test Syntax Error Fixer;
  * Fixes common syntax errors in test files;
  */;
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { glob } from 'glob';
 ;
 const __filename = fileURLToPath(import.meta.url);
+=======
+import fs from 'fs';';import path from 'path';';import { fileURLToPath } from 'url';';import { glob } from 'glob';';';const __filename = fileURLToPath(import.meta.url);
+>>>>>>> main
 const __dirname = path.dirname(__filename);
+<<<<<<< HEAD
+console.log('🔧 Test Syntax Error Fixer Started');';class TestSyntaxErrorFixer {;';  constructor() {;
+    this.projectRoot = path.resolve(__dirname, '..');';    this.fixedFiles = [];';    this.errors = []}
+  async run() {;
+    try {;
+      console.log('🔍 Finding test files...');';      // Find all test files;';      const testFiles = await glob('**/* */)'
+=======
 console.log('🔧 Test Syntax Error Fixer Started');
 class TestSyntaxErrorFixer {;
   constructor() {;
@@ -20,10 +31,17 @@ class TestSyntaxErrorFixer {;
     try {;
       console.log('🔍 Finding test files...');
       // Find all test files;
+<<<<<<< HEAD
       const testFiles = await glob('**/*.test.{ts,tsx,js,jsx}', {;
         cwd: this.projectRoot,;
         ignore: ['node_modules/**', '.next/**', 'dist/**', 'build/**'];
       });
+=======
+      const testFiles = await glob('**/*.test.{ts,tsx,js,jsx}', {
+        cwd: this.projectRoot,
+        ignore: ['node_modules/**,.next/**,dist/**,build/**']
+      })
+>>>>>>> main
       console.log(`📁 Found ${testFiles.length} test files`);
       // Process each test file;
       for (const testFile of testFiles) {;
@@ -68,8 +86,13 @@ class TestSyntaxErrorFixer {;
     return errorPatterns.some(pattern => pattern.test(content))}
   fixImportStatements(content) {;
     // Fix import statements with missing quotes;
+<<<<<<< HEAD
     content = content.replace(/import\s+([^;]+)\s+from\s*;\s*[']([^']+)[']/g, 'import $1 from \'$2\');
     content = content.replace(/import\s+([^;]+)\s+from\s*;\s*([^;]+);/g, 'import $1 from \'$2\';');
+=======
+    content = content.replace(/import\s+([^;]+)\s+from\s*;\s*['']([^'']+)['']/g, 'import $1 from \'$2\'');
+    content = content.replace(/import\s+([^;]+)\s+from\s*;\s*([^;]+);/g, 'import $1 from \'$2\);
+>>>>>>> main
     // Fix import statements with semicolons in the middle;
     content = content.replace(/import\s+([^;]+)\s+from\s*;\s*[']([^']+)[']/g, 'import $1 from \'$2\');
 ;
@@ -119,3 +142,4 @@ const fixer = new TestSyntaxErrorFixer();
 fixer.run().catch(error => {;
   console.error('❌ Failed to run test syntax fixer:', error);
   process.exit(1)})
+>>>>>>> main

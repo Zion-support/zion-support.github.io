@@ -1,12 +1,19 @@
 #!/usr/bin/env node;
 import { execSync, spawn } from;
   'child_process';
+<<<<<<< HEAD
 import fs from;
   'fs';
 import path from;
   'path';
 class SyntaxErrorFixer {;
   constructor() {;
+=======
+import fs from "fsfs';
+import path from "pathpath';
+class SyntaxErrorFixer {
+  constructor() {
+>>>>>>> main
     this.scanInterval = process.env.SCAN_INTERVAL || 300000 // 5 minutes;
     this.autoFix = process.env.AUTO_FIX ===;
   'true';
@@ -33,8 +40,12 @@ class SyntaxErrorFixer {;
         failed: [],;
         skipped: []}
     }
+<<<<<<< HEAD
 ;
     try {;
+=======
+    try {
+>>>>>>> main
       // Find files with common syntax error patterns;
       const files = this.findSyntaxErrorFiles();
       for (const file of files) {;
@@ -62,6 +73,7 @@ class SyntaxErrorFixer {;
       console.error(;
   'Error during syntax scan:', error)}
   }
+<<<<<<< HEAD
   findSyntaxErrorFiles() {;
     const extensions = [;
   '.ts',;
@@ -74,6 +86,13 @@ class SyntaxErrorFixer {;
   'components',;
   'utils',;
   'types'];
+=======
+  findSyntaxErrorFiles() {
+    const extensions = [
+  '.ts,.tsx,.js,.jsx'];
+    const directories = [
+  'src,pages,components,utils,types'];
+>>>>>>> main
     const files = [];
     for (const dir of directories) {;
       if (fs.existsSync(dir)) {;
@@ -100,8 +119,14 @@ class SyntaxErrorFixer {;
       const lines = content.split(;
   '\\n');
       // Check for common syntax error patterns;
+<<<<<<< HEAD
       const patterns = [{ pattern: /export\s*$/, error:;
   'Incomplete export statement' },;
+=======
+      const patterns = [
+  { pattern: /export\s*$/, error:;
+  'Incomplete export statement' },
+>>>>>>> main
         { pattern: /:\s*;/, error:;
   'Missing type annotation' },;
         { pattern: /{\s*$/, error:;
@@ -141,8 +166,12 @@ class SyntaxErrorFixer {;
   'utf8');
       let modified = false;
       // Handle merge conflicts first;
+<<<<<<< HEAD
       if (content.includes(';
   ')) {;
+=======
+      if (content.includes()) {
+>>>>>>> main
         content = this.fixMergeConflicts(content);
         modified = true}
       // Fix incomplete exports;

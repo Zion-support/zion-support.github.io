@@ -3,6 +3,7 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 ;
 console.log(`'📦 Starting continuous dependency updates automation...');
 ;
@@ -17,15 +18,38 @@ async function runDependencyUpdates() {;
     // Check for outdated dependencies;
     console.log(`'🔍 Checking for outdated dependencies...');
     try {;
+=======
+
+console.log(`📦 Starting continuous dependency updates automation...`);
+
+// Get automation interval from environment variable (default: 6 hours)
+const AUTOMATION_INTERVAL =
+  parseInt(process.env.AUTOMATION_INTERVAL) || 21600000; // 6 hours
+
+async function runDependencyUpdates() {
+  try {
+    console.log(`📦 Running dependency updates at ${new Date().toISOString()});`);
+`);
+    // Check for outdated dependencies`);
+    console.log(`🔍 Checking for outdated dependencies...`);
+    try {
+>>>>>>> main
       execSync('npm outdated', { stdio: 'inherit' });
     } catch (error) {;
       console.log('✅ All dependencies are up to date'`);
       return;
     }
+<<<<<<< HEAD
 ;
     // Check for security vulnerabilities;
     console.log(`'🔒 Checking for security vulnerabilities...');
     try {;
+=======
+
+    // Check for security vulnerabilities
+    console.log(`🔒 Checking for security vulnerabilities...`);
+    try {
+>>>>>>> main
       execSync('npm audit --audit-level=moderate', { stdio: 'inherit' });
       console.log('✅ No security vulnerabilities found');
     } catch (error) {;
@@ -70,8 +94,13 @@ async function runDependencyUpdates() {;
       } else {;
         console.log('✅ No major version updates available'`);
       }
+<<<<<<< HEAD
     } catch (error) {;
       console.log(`'ℹ️  Could not check for major updates');
+=======
+    } catch (error) {
+      console.log(`ℹ️  Could not check for major updates`);
+>>>>>>> main
     }
 ;
     // Install dependencies;

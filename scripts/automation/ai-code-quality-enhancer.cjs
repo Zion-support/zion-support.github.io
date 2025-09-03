@@ -14,6 +14,7 @@ const crypto = require('crypto');
 class AICodeQualityEnhancer {;
   constructor() {;
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
     this.logFile = path.join(;
       this.projectRoot,logs',;
       'ai-code-quality-enhancer.log';
@@ -21,6 +22,15 @@ class AICodeQualityEnhancer {;
     this.improvementsLog = path.join(;
       this.projectRoot,logs',;
       'ai-improvements.json';
+=======
+    this.logFile = path.join(
+      this.projectRoot, 'logs',
+      'ai-code-quality-enhancer.log'
+    );
+    this.improvementsLog = path.join(
+      this.projectRoot, 'logs',
+      'ai-improvements.json'
+>>>>>>> main
     );
     this.patternsLog = path.join(this.projectRoot, 'logs', 'ai-patterns.json');
     this.ensureLogsDirectory();

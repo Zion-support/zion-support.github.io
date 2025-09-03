@@ -64,6 +64,7 @@ class LucideReactIconFixer {;
 ;
       // 3. Generate report;
       await this.generateReport(fixes, errors);
+<<<<<<< HEAD
       ;
       // 4. Commit fixes if successful;
       if (fixes.length > 0 && errors.length === 0) {;
@@ -71,6 +72,15 @@ class LucideReactIconFixer {;
       }
 ;
     } catch (error) {;
+=======
+      
+      // 4. Commit fixes if successful
+      if (fixes.length > 0 && errors.length === 0) {
+        await this.commitFixes(fixes);`);
+      }`);
+`);
+    } catch (error) {`);
+>>>>>>> main
       this.log(`Icon fix automation failed: ${error.message}`, 'ERROR');
     }
 ;

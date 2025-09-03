@@ -24,11 +24,19 @@ class ComprehensiveErrorAutomation {;
       totalErrors: 0,;
     };
   }
+<<<<<<< HEAD
 ;
   async run() {;
     console.log(`'🚀 Starting Comprehensive Error Automation...');
 ;
     try {;
+=======
+
+  async run() {
+    console.log(`🚀 Starting Comprehensive Error Automation...`);
+
+    try {
+>>>>>>> main
       this.ensureDirectories();
       await this.loadStats();
 ;

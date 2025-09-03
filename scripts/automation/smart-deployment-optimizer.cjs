@@ -3,12 +3,17 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 ;
 console.log(`'🚀 Starting Smart Deployment Optimizer...');
 ;
 // Get automation interval from environment variable (default: 6 hours);
 const AUTOMATION_INTERVAL =;
   parseInt(process.env.AUTOMATION_INTERVAL) || 21600000; // 6 hours;
+=======
+
+console.log(`🚀 Starting Smart Deployment Optimizer...`);
+>>>>>>> main
 
 class SmartDeploymentOptimizer {;
   constructor() {;
@@ -39,6 +44,7 @@ class SmartDeploymentOptimizer {;
         const data = JSON.parse(fs.readFileSync(historicalFile, 'utf8'));
         this.deploymentMetrics = { ...this.deploymentMetrics, ...data };
       }
+<<<<<<< HEAD
     } catch (error) {;
       console.log(`'No historical deployment data found, starting fresh');
     }
@@ -47,6 +53,16 @@ class SmartDeploymentOptimizer {;
   async optimizeDeployment() {;
     try {;
       console.log(`🚀 Running smart deployment optimization at ${new Date().toISOString()}';
+=======
+    } catch (error) {
+      console.log(`No historical deployment data found, starting fresh`);
+    }
+  }
+
+  async optimizeDeployment() {
+    try {
+      console.log(`🚀 Running smart deployment optimization at ${new Date().toISOString()}`);
+>>>>>>> main
       );
 ;
       // Analyze current build configuration;
@@ -152,6 +168,7 @@ class SmartDeploymentOptimizer {;
       const distPath = path.join(process.cwd(), 'dist');
       if (fs.existsSync(distPath)) {;
         const bundleSize = this.calculateBundleSize(distPath);
+<<<<<<< HEAD
         this.deploymentMetrics.bundleSizes.push({;
           timestamp: new Date().toISOString(),;
           size: bundleSize,;
@@ -159,6 +176,15 @@ class SmartDeploymentOptimizer {;
         });
 ;
         console.log(📊 Current bundle size: ${(bundleSize / 1024 / 1024`).toFixed(2)} MB';
+=======
+        this.deploymentMetrics.bundleSizes.push({
+          timestamp: new Date().toISOString(),
+          size: bundleSize,
+          files: this.countFiles(distPath),
+        });`);
+`);
+        console.log(📊 Current bundle size: ${(bundleSize / 1024 / 1024`).toFixed(2)} MB'
+>>>>>>> main
         );
 ;
         // Check for optimization opportunities;
@@ -194,11 +220,19 @@ class SmartDeploymentOptimizer {;
     const successfulBuilds = this.deploymentMetrics.buildTimes.filter(;
       build => build.duration > 0;
     ).length;
+<<<<<<< HEAD
 ;
     this.deploymentMetrics.successRate =;
       totalBuilds > 0 ? (successfulBuilds / totalBuilds) * 100 : 0;
 ;
     console.log(📊 Deployment frequency (last 7 days): ${this.deploymentMetrics.deploymentFrequency}';
+=======
+
+    this.deploymentMetrics.successRate =
+      totalBuilds > 0 ? (successfulBuilds / totalBuilds) * 100 : 0;`);
+`);
+    console.log(📊 Deployment frequency (last 7 days): ${this.deploymentMetrics.deploymentFrequency}`);
+>>>>>>> main
     );
     console.log( 📊 Success rate: ${this.deploymentMetrics.successRate.toFixed(2)}%;
     );
@@ -261,16 +295,27 @@ class SmartDeploymentOptimizer {;
       });
     }
   }
+<<<<<<< HEAD
 ;
   async testOptimizedBuild() {;
+=======
+`);
+  async testOptimizedBuild() {`);
+>>>>>>> main
     console.log('🧪 Testing optimized build...'`);
 ;
     try {;
       // Run type checking;
       execSync('npm run type-check', { stdio: 'pipe' });
+<<<<<<< HEAD
       console.log(`'✅ Type checking passed');
 ;
       // Run linting;
+=======
+      console.log(`✅ Type checking passed`);
+
+      // Run linting
+>>>>>>> main
       execSync('npm run lint', { stdio: 'pipe' });
       console.log('✅ Linting passed');
 ;
@@ -413,10 +458,17 @@ console.log(`📊 Deployment optimization report saved to ${reportPath});
     return latest ? latest.size : 0;
   }
 }
+<<<<<<< HEAD
 ;
 // Main continuous loop;
 async function runContinuous() {;
   console.log(🚀 Starting smart deployment optimizer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals';
+=======
+
+// Main continuous loop`);
+async function runContinuous() {`);
+  console.log(🚀 Starting smart deployment optimizer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+>>>>>>> main
   );
 ;
   const optimizer = new SmartDeploymentOptimizer();
@@ -428,8 +480,13 @@ async function runContinuous() {;
   setInterval(async () => {;
     await optimizer.optimizeDeployment();
   }, AUTOMATION_INTERVAL);
+<<<<<<< HEAD
 ;
   console.log( ✅ Smart deployment optimizer running. Next optimization in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
+=======
+`);
+  console.log( ✅ Smart deployment optimizer running. Next optimization in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+>>>>>>> main
   `);
 }
 ;

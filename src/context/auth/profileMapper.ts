@@ -1,16 +1,27 @@
+<<<<<<< HEAD
 interface SupabaseUser {;
   id: string;
    email?: string;
    user_metadata?: { full_name?: string;
    avatar_url?: string} created_at?: string updated_at?: string} interface Profile {;
   id: string;
+=======
+interface SupabaseUser {id: string;
+   email?: string;
+   user_metadata?: {  full_name?: string
+   avatar_url?: string} created_at?: string updated_at?: string} interface Profile {id: string;
+>>>>>>> main
    display_name?: string;
    avatar_url?: string;
    role?: string;
    is_email_verified?: boolean;
    created_at?: string;
+<<<<<<< HEAD
    updated_at?: string} interface MappedUser {;
   id: string;
+=======
+   updated_at?: string} interface MappedUser {id: string;
+>>>>>>> main
    email: string;
    displayName?: string;
    avatar?: string;

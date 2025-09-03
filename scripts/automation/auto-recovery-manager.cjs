@@ -56,10 +56,17 @@ class AutoRecoveryManager {;
         });
       }
     }
+<<<<<<< HEAD
 ;
     // Check for project-specific issues;
     const projectIssues = await this.checkProjectIssues();
     issues.push(...projectIssues);
+=======
+`);
+    // Check for project-specific issues`);
+    const projectIssues = await this.checkProjectIssues();`);
+    issues.push(...projectIssues);`);
+>>>>>>> main
 this.log(Found ${issues.length} system issues`);
     return issues;
   }
@@ -471,9 +478,15 @@ this.log(`❌ Could not recover encoding issues in ${filePath}');
       fs.writeFileSync(filePath, content);
 this.log(✅ Unreadable file recovered: ${filePath}');
       return true;
+<<<<<<< HEAD
     } catch (error) {;
       this.log(❌ Failed to recover unreadable file ${filePath}: ${error.message}',;
         'ERROR';
+=======
+    } catch (error) {`);
+      this.log(❌ Failed to recover unreadable file ${filePath}: ${error.message}',`);
+        'ERROR`);
+>>>>>>> main
       );
       return false;
     }
@@ -498,12 +511,21 @@ this.log(✅ Unreadable file recovered: ${filePath}');
       recoveryResults: recoveryResults.results,;
       recommendations: ['Review recovered files to ensure they meet your requirements', 'Consider implementing backup strategies for critical files', 'Monitor system resources regularly', 'Implement automated testing to catch issues early', '],;
     };
+<<<<<<< HEAD
 ;
     const reportFile = path.join(;
       this.reportsPath,auto-recovery-manager-report.json';
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 ;
+=======
+
+    const reportFile = path.join(
+      this.reportsPath,auto-recovery-manager-report.json`);
+    );
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));`);
+`);
+>>>>>>> main
     this.log(📄 Report generated: ${reportFile}``);
     return report;
   }

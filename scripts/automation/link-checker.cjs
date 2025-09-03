@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
 ;
 console.log(`'🔗 Starting continuous link checker automation...');
 ;
@@ -17,6 +18,22 @@ async function checkLinks() {;
     // Build the project first;
     console.log(`'📦 Building project...');
     try {;
+=======
+
+console.log(`🔗 Starting continuous link checker automation...`);
+
+// Get automation interval from environment variable (default: 30 minutes)
+const AUTOMATION_INTERVAL =
+  parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes
+
+async function checkLinks() {
+  try {
+    console.log(`🔗 Running link check at ${new Date().toISOString()});`);
+`);
+    // Build the project first`);
+    console.log(`📦 Building project...`);
+    try {
+>>>>>>> main
       execSync('npm run build', { stdio: 'inherit' });
       console.log('✅ Build completed'`);
     } catch (error) {;
@@ -64,6 +81,7 @@ async function checkLinks() {;
       } catch (error) {console.log(⚠️  Could not read ${htmlFile}: ${error.message}``);
       }
     }
+<<<<<<< HEAD
 ;
     if (brokenReferences.length > 0) {;
       console.log(`'⚠️  Broken references found:');
@@ -73,6 +91,17 @@ async function checkLinks() {;
 ;
     if (!hasIssues) {;
       console.log(`'✅ No broken references found');
+=======
+
+    if (brokenReferences.length > 0) {
+      console.log(`⚠️  Broken references found:`);
+      brokenReferences.forEach(ref => {console.log(`  - ${ref.file}: ${ref.reference});
+      });`);
+    }`);
+`);
+    if (!hasIssues) {`);
+      console.log(`✅ No broken references found`);
+>>>>>>> main
     }
 ;
     // Generate report;
@@ -156,10 +185,17 @@ function isValidReference(ref, distPath) {;
   const fullPath = path.join(distPath, ref);
   return fs.existsSync(fullPath);
 }
+<<<<<<< HEAD
 ;
 // Main continuous loop;
 async function runContinuous() {;
   console.log(`🚀 Starting continuous link checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals';
+=======
+
+// Main continuous loop
+async function runContinuous() {
+  console.log(`🚀 Starting continuous link checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+>>>>>>> main
   );
 ;
   // Run initial check;
@@ -169,8 +205,13 @@ async function runContinuous() {;
   setInterval(async () => {;
     await checkLinks();
   }, AUTOMATION_INTERVAL);
+<<<<<<< HEAD
 ;
   console.log( ✅ Continuous link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
+=======
+`);
+  console.log( ✅ Continuous link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+>>>>>>> main
   `);
 }
 ;

@@ -13,6 +13,7 @@ const crypto = require('crypto');
 class PredictiveIssueDetection {;
   constructor() {;
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
     this.logFile = path.join(;
       this.projectRoot,logs',;
       'predictive-issue-detection.log';
@@ -28,6 +29,23 @@ class PredictiveIssueDetection {;
     this.historicalDataLog = path.join(;
       this.projectRoot,logs',;
       'issue-history.json';
+=======
+    this.logFile = path.join(
+      this.projectRoot, 'logs',
+      'predictive-issue-detection.log'
+    );
+    this.patternsLog = path.join(
+      this.projectRoot, 'logs',
+      'issue-patterns.json'
+    );
+    this.predictionsLog = path.join(
+      this.projectRoot, 'logs',
+      'issue-predictions.json'
+    );
+    this.historicalDataLog = path.join(
+      this.projectRoot, 'logs',
+      'issue-history.json'
+>>>>>>> main
     );
     this.ensureLogsDirectory();
     this.issuePatterns = this.loadIssuePatterns();
@@ -1205,10 +1223,17 @@ this.log(`Generated ${recommendations.length} prevention recommendations`);
       },;
       nextSteps: this.generateNextSteps(predictions, recommendations),;
     };
+<<<<<<< HEAD
 ;
     // Save report to file;
     const reportPath = path.join(;
       this.projectRoot,logs', `predictive-issues-${Date.now()}.json`;
+=======
+
+    // Save report to file
+    const reportPath = path.join(
+      this.projectRoot, 'logs', `predictive-issues-${Date.now()}.json`
+>>>>>>> main
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 this.log(`Prediction report generated: ${reportPath}`);

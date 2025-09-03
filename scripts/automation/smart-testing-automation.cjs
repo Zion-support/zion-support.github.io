@@ -14,6 +14,7 @@ const crypto = require('crypto');
 class SmartTestingAutomation {;
   constructor() {;
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
     this.logFile = path.join(;
       this.projectRoot,logs',;
       'smart-testing-automation.log';
@@ -25,6 +26,19 @@ class SmartTestingAutomation {;
     this.coverageLog = path.join(;
       this.projectRoot,logs',;
       'test-coverage.json';
+=======
+    this.logFile = path.join(
+      this.projectRoot, 'logs',
+      'smart-testing-automation.log'
+    );
+    this.testResultsLog = path.join(
+      this.projectRoot, 'logs',
+      'test-results.json'
+    );
+    this.coverageLog = path.join(
+      this.projectRoot, 'logs',
+      'test-coverage.json'
+>>>>>>> main
     );
     this.ensureLogsDirectory();
 ;

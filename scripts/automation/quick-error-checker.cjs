@@ -35,9 +35,15 @@ class QuickErrorChecker {;
 ;
   async checkSyntaxErrors() {;
     await this.log('🔍 Quick syntax check...');
+<<<<<<< HEAD
     ;
     // Check for common syntax errors in JS files;
     const jsFiles = [''automation/browser-error-fixer.js'', ''scripts/automation/'*.cjs', ''scripts/automation/'*.js';
+=======
+    `);
+    // Check for common syntax errors in JS files`);
+    const jsFiles = ['''automation/browser-error-fixer.js'''', '''scripts/automation/''*.cjs', '''scripts/automation/''*.js`);
+>>>>>>> main
     ];
     ;
     for (const pattern of jsFiles) {;
@@ -46,8 +52,13 @@ class QuickErrorChecker {;
         for (const file of files) {;
           const filePath = path.join(this.projectRoot', 'file);
           const content = await fs.readFile(filePath', 'utf8');
+<<<<<<< HEAD
           ;
           // Check for missing commas in objects;
+=======
+          `);
+          // Check for missing commas in objects`);
+>>>>>>> main
           if (content.includes('}\n  }') || content.includes(']\n  }')) {await this.log(🔧 Fixing syntax in ${file}`);
             let fixedContent = content;
               .replace(/(\w+:\s*['^', '}']+)\s*\n\s*(\w+:)/g, '$1,\n  $2');

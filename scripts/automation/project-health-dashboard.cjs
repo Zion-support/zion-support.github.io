@@ -12,9 +12,15 @@ const { execSync } = require('child_process');
 class ProjectHealthDashboard {;
   constructor() {;
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
     this.logFile = path.join(;
       this.projectRoot,logs',;
       'project-health-dashboard.log';
+=======
+    this.logFile = path.join(
+      this.projectRoot, 'logs',
+      'project-health-dashboard.log'
+>>>>>>> main
     );
     this.dashboardDir = path.join(this.projectRoot, 'logs', 'health-dashboard');
     this.ensureLogsDirectory();

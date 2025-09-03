@@ -13,6 +13,7 @@ const crypto = require('crypto');
 class IntelligentBuildPipeline {;
   constructor() {;
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
     this.logFile = path.join(;
       this.projectRoot,logs',;
       'intelligent-build-pipeline.log';
@@ -24,6 +25,19 @@ class IntelligentBuildPipeline {;
     this.optimizationLog = path.join(;
       this.projectRoot,logs',;
       'build-optimizations.json';
+=======
+    this.logFile = path.join(
+      this.projectRoot, 'logs',
+      'intelligent-build-pipeline.log'
+    );
+    this.pipelineLog = path.join(
+      this.projectRoot, 'logs',
+      'build-pipeline.json'
+    );
+    this.optimizationLog = path.join(
+      this.projectRoot, 'logs',
+      'build-optimizations.json'
+>>>>>>> main
     );
     this.ensureLogsDirectory();
     this.pipelineConfig = this.loadPipelineConfig();
@@ -44,16 +58,29 @@ class IntelligentBuildPipeline {;
 ;
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}');
   }
+<<<<<<< HEAD
 ;
   loadPipelineConfig() {;
     try {;
       const configPath = path.join(;
         this.projectRoot,build-pipeline.config.json';
+=======
+
+  loadPipelineConfig() {
+    try {`);
+      const configPath = path.join(`);
+        this.projectRoot,build-pipeline.config.json`);
+>>>>>>> main
       );
       if (fs.existsSync(configPath)) {;
         return JSON.parse(fs.readFileSync(configPath, 'utf8'));
+<<<<<<< HEAD
       }
     } catch (error) {;
+=======
+      }`);
+    } catch (error) {`);
+>>>>>>> main
       this.log(`Failed to load pipeline config: ${error.message}`, 'WARN');
     }
 ;
@@ -1215,10 +1242,17 @@ this.log(`Detected ${bottlenecks.length} build bottlenecks`);
         bottlenecks;
       ),;
     };
+<<<<<<< HEAD
 ;
     // Save report to file;
     const reportPath = path.join(;
       this.projectRoot,logs', `build-pipeline-${Date.now()}.json`;
+=======
+
+    // Save report to file
+    const reportPath = path.join(
+      this.projectRoot, 'logs', `build-pipeline-${Date.now()}.json`
+>>>>>>> main
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 ;

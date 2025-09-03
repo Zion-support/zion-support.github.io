@@ -10,9 +10,15 @@ class BuildHealthMonitor {;
     this.automationInterval =;
       parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes default;
   }
+<<<<<<< HEAD
 ;
   log(message) {;
     console.log(`[${new Date().toISOString()}] [BuildHealthMonitor] ${message}';
+=======
+
+  log(message) {
+    console.log(`[${new Date().toISOString()}] [BuildHealthMonitor] ${message}`);
+>>>>>>> main
     );
   }
 ;
@@ -21,8 +27,13 @@ class BuildHealthMonitor {;
 ;
     try {;
       await this.monitorBuildHealth();
+<<<<<<< HEAD
       this.log('Build health monitoring completed.');
     } catch (error) {;
+=======
+      this.log('Build health monitoring completed.');`);
+    } catch (error) {`);
+>>>>>>> main
       this.log(Error during build health monitoring: ${error.message}`);
     }
   }

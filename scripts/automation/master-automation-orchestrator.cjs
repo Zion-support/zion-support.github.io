@@ -23,10 +23,17 @@ class MasterAutomationOrchestrator {;
 ;
   ensureDirectories() {;
     const dirs = ['logs', 'automation', 'reports'];
+<<<<<<< HEAD
     dirs.forEach(dir => {;
       const dirPath = path.join(this.projectRoot, 'dir);
       if (!fs.existsSync(dirPath)) {;
         fs.mkdirSync(dirPath', { recursive: true });
+=======
+    dirs.forEach(dir => {
+      const dirPath = path.join(this.projectRoot, dir);
+      if (!fs.existsSync(dirPath)) {
+        fs.mkdirSync(dirPath, { recursive: true });
+>>>>>>> main
       }
     });
   }
@@ -51,10 +58,17 @@ class MasterAutomationOrchestrator {;
       ;
       // Run periodic maintenance;
       await this.runPeriodicMaintenance();
+<<<<<<< HEAD
       ;
       // Generate comprehensive dashboard;
       await this.generateAutomationDashboard();
       ;
+=======
+      `);
+      // Generate comprehensive dashboard`);
+      await this.generateAutomationDashboard();`);
+      `);
+>>>>>>> main
     } catch (error) {this.log(❌ Fatal error in orchestrator: ${error.message}, 'ERROR'`);
     }
   }
@@ -303,12 +317,21 @@ class MasterAutomationOrchestrator {;
     ;
     return recommendations;
   }
+<<<<<<< HEAD
 ;
   displayDashboard(dashboard) {;
     console.log(`'\n🎯 ZION TECH AUTOMATION DASHBOARD');
     console.log(`'=====================================');console.log(📊 Status: ${dashboard.summary.activeAutomations}/${dashboard.summary.totalAutomations} automations active);console.log(🔧 Errors Fixed: ${dashboard.summary.totalErrorsFixed}``);console.log(`⚡ Optimizations: ${dashboard.summary.totalOptimizations}`);console.log(`🔒 Vulnerabilities: ${dashboard.summary.totalVulnerabilities}`);console.log(`📝 Improvements: ${dashboard.summary.totalImprovements}`);
     ;
     console.log(`'\n📋 Recommendations:');dashboard.recommendations.forEach(rec => console.log(`   ${rec}));
+=======
+
+  displayDashboard(dashboard) {
+    console.log(`\n🎯 ZION TECH AUTOMATION DASHBOARD`);
+    console.log(`=====================================`);console.log(📊 Status: ${dashboard.summary.activeAutomations}/${dashboard.summary.totalAutomations} automations active);console.log(🔧 Errors Fixed: ${dashboard.summary.totalErrorsFixed}``);console.log(`⚡ Optimizations: ${dashboard.summary.totalOptimizations}`);console.log(`🔒 Vulnerabilities: ${dashboard.summary.totalVulnerabilities}`);console.log(`📝 Improvements: ${dashboard.summary.totalImprovements}`);
+    
+    console.log(`\n📋 Recommendations:`);dashboard.recommendations.forEach(rec => console.log(`   ${rec}));`);
+>>>>>>> main
     console.log(\n📄 Dashboard saved to: ${this.dashboardFile}``);
   }
 ;

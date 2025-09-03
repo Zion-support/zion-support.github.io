@@ -12,6 +12,7 @@ const { execSync, spawn } = require('child_process');
 class IntelligentPerformanceMonitor {;
   constructor() {;
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
     this.logFile = path.join(;
       this.projectRoot,logs',;
       'performance-monitor.log';
@@ -19,6 +20,15 @@ class IntelligentPerformanceMonitor {;
     this.performanceHistory = path.join(;
       this.projectRoot,logs',;
       'performance-history.json';
+=======
+    this.logFile = path.join(
+      this.projectRoot, 'logs',
+      'performance-monitor.log'
+    );
+    this.performanceHistory = path.join(
+      this.projectRoot, 'logs',
+      'performance-history.json'
+>>>>>>> main
     );
     this.metrics = {;
       buildTime: 0,;
@@ -37,9 +47,15 @@ class IntelligentPerformanceMonitor {;
       errorRate: 5 // 5%;
     };
   }
+<<<<<<< HEAD
 ;
   async initialize() {;
     console.log(`'📊 Intelligent Performance Monitor Initialized');
+=======
+
+  async initialize() {
+    console.log(`📊 Intelligent Performance Monitor Initialized`);
+>>>>>>> main
     this.ensureLogDirectory();
     this.loadPerformanceHistory();
     ;
@@ -83,11 +99,19 @@ class IntelligentPerformanceMonitor {;
       };
     }
   }
+<<<<<<< HEAD
 ;
   startContinuousMonitoring() {;
     console.log(`'🔍 Starting continuous performance monitoring...');
     ;
     // Initial performance measurement;
+=======
+
+  startContinuousMonitoring() {
+    console.log(`🔍 Starting continuous performance monitoring...`);
+    
+    // Initial performance measurement
+>>>>>>> main
     this.measurePerformance();
     ;
     // Set up periodic monitoring;
@@ -101,10 +125,17 @@ class IntelligentPerformanceMonitor {;
     // Set up runtime monitoring;
     this.monitorRuntime();
   }
+<<<<<<< HEAD
 ;
   async measurePerformance() {;
     console.log(`'📈 Measuring application performance...');
     ;
+=======
+
+  async measurePerformance() {
+    console.log(`📈 Measuring application performance...`);
+    
+>>>>>>> main
     const startTime = Date.now();
     const measurement = {;
       timestamp: new Date().toISOString(),;
@@ -226,12 +257,21 @@ class IntelligentPerformanceMonitor {;
       };
     }
   }
+<<<<<<< HEAD
 ;
   async measureBundleSize(measurement) {;
     console.log(`'📦 Measuring bundle size...');
     ;
     try {;
       // Check for build output directory;
+=======
+
+  async measureBundleSize(measurement) {
+    console.log(`📦 Measuring bundle size...`);
+    
+    try {
+      // Check for build output directory
+>>>>>>> main
       const buildDirs = ['dist', 'build', '.next', 'out'];
       let totalSize = 0;
       ;
@@ -290,12 +330,21 @@ class IntelligentPerformanceMonitor {;
     ;
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   }
+<<<<<<< HEAD
 ;
   async measureRuntimePerformance(measurement) {;
     console.log(`'⚡ Measuring runtime performance...');
     ;
     try {;
       // Get system resource usage;
+=======
+
+  async measureRuntimePerformance(measurement) {
+    console.log(`⚡ Measuring runtime performance...`);
+    
+    try {
+      // Get system resource usage
+>>>>>>> main
       const systemMetrics = await this.getSystemMetrics();
       ;
       measurement.memoryUsage = systemMetrics.memory;

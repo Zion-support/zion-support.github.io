@@ -1,12 +1,19 @@
 #!/usr/bin/env node;
 import { execSync, spawn } from;
   'child_process';
+<<<<<<< HEAD
 import fs from;
   'fs';
 import path from;
   'path';
 class LintErrorAutoFixer {;
   constructor() {;
+=======
+import fs from "fsfs';
+import path from "pathpath';
+class LintErrorAutoFixer {
+  constructor() {
+>>>>>>> main
     this.lintCheckInterval = process.env.LINT_CHECK_INTERVAL || 240000 // 4 minutes;
     this.autoFixLint = process.env.AUTO_FIX_LINT ===;
   'true';
@@ -40,8 +47,12 @@ class LintErrorAutoFixer {;
         applied: [],;
         failed: [],;
         skipped: []}}
+<<<<<<< HEAD
 ;
     try {;
+=======
+    try {
+>>>>>>> main
       // Run ESLint;
       const lintResult = await this.runLint();
       report.summary.totalErrors = lintResult.errors.length;
@@ -238,27 +249,42 @@ class LintErrorAutoFixer {;
   'double quotes')) {;
       // Convert single quotes to double quotes;
       lines[lineIndex] = line.replace(/;
+<<<<<<< HEAD
   '/g, ';
   ');
+=======
+  '/g, ');
+>>>>>>> main
       return true}
     return false}
   fixSemicolons(lines, lineIndex, message) {;
     const line = lines[lineIndex];
     if (message.includes('Missing semicolon;
   ')) {      lines[lineIndex] = line + ';
+<<<<<<< HEAD
       return true} else if (message.includes(;
   'Extra semicolon')) {;
       lines[lineIndex] = line.replace(/;+$/, ';
   ');
+=======
+      return true} else if (message.includes(
+  'Extra semicolon')) {
+      lines[lineIndex] = line.replace(/;+$/, );
+>>>>>>> main
       return true}
     return false}
   fixIndentation(lines, lineIndex) {;
     const line = lines[lineIndex];
     // Simple indentation fix - convert tabs to spaces;
     if (line.includes('\\t;
+<<<<<<< HEAD
   ')) {;
       lines[lineIndex] = line.replace(/\\t/g, ';
   ');
+=======
+  ')) {
+      lines[lineIndex] = line.replace(/\\t/g, );
+>>>>>>> main
       return true}
     return false}
   fixTrailingSpaces(lines, lineIndex) {;
@@ -270,9 +296,14 @@ class LintErrorAutoFixer {;
     return false}
   fixEolLast(lines) {;
     // Ensure file ends with newline;
+<<<<<<< HEAD
     if (lines[lines.length - 1] !== ') {;
       lines.push(';
   ');
+=======
+    if (lines[lines.length - 1] !== '') {
+      lines.push();
+>>>>>>> main
       return true}
     return false}
   fixPreferConst(lines, lineIndex) {;
@@ -280,9 +311,14 @@ class LintErrorAutoFixer {;
     if (line.includes('let;
   ') && !line.includes('=;
   ')) {      // Only fix if it's a simple let declaration that could be const;
+<<<<<<< HEAD
       lines[lineIndex] = line.replace(;
   'let ',;
   'const ');
+=======
+      lines[lineIndex] = line.replace(
+  'let ,const ');
+>>>>>>> main
       return true}
     return false}
   applyGenericLintFix(lines, lineIndex, rule, message) {;

@@ -30,9 +30,14 @@ class DependencyMonitor {;
       const audit = JSON.parse(auditResult);
       return audit} catch (error) {;
       // npm audit might fail if there are vulnerabilities;
+<<<<<<< HEAD
       try {;
         const output = error.stdout?.toString() || error.stderr?.toString() || ';
   ';
+=======
+      try {
+        const output = error.stdout?.toString() || error.stderr?.toString() || ;
+>>>>>>> main
         if (output.includes('npm ERR!;
   ')) {;
           // Try to parse the error output for vulnerability info;
@@ -74,15 +79,19 @@ class DependencyMonitor {;
           return JSON.parse(output)} catch (parseError) {;
         this.log(`Error parsing npm outdated output: ${parseError.message}`);
       return { /* empty */ }
+<<<<<<< HEAD
 ;
   async checkPackageLock() {;
     try {;
+=======
+  async checkPackageLock() {
+    try {
+>>>>>>> main
       const packageLockPath = path.join(this.projectRoot,package-lock.json;
   ');
       if (!fs.existsSync(packageLockPath)) {;
         return { exists: false, message: 'No package-lock.json found;
   ' }
-;
       const packageLock = JSON.parse(fs.readFileSync(packageLockPath,utf8'));
       const lockfileVersion = packageLock.lockfileVersion;
       return {;
@@ -92,9 +101,14 @@ class DependencyMonitor {;
         devDependencies: Object.keys(packageLock.devDependencies || { /* empty */ }).length}
     } catch (error) {;
       return { exists: false, error: error.message }
+<<<<<<< HEAD
 ;
   async checkNodeVersion() {;
     try {;
+=======
+  async checkNodeVersion() {
+    try {
+>>>>>>> main
       const nodeVersion = process.version;
       const npmVersion = execSync(;
   'npm --version', {;
@@ -104,15 +118,19 @@ class DependencyMonitor {;
       return { nodeVersion, npmVersion }
     } catch (error) {;
       return { error: error.message }
+<<<<<<< HEAD
 ;
   async checkGitHooks() {;
     try {;
+=======
+  async checkGitHooks() {
+    try {
+>>>>>>> main
       const hooksDir = path.join(this.projectRoot,.git/hooks;
   ');
       if (!fs.existsSync(hooksDir)) {;
         return { exists: false, message: 'No git hooks directory found;
   ' }
-;
       const hooks = fs.readdirSync(hooksDir);
       const activeHooks = hooks.filter(hook => {;
         const hookPath = path.join(hooksDir, hook);
@@ -122,6 +140,7 @@ class DependencyMonitor {;
       return { exists: true, hooks: activeHooks }
     } catch (error) {;
       return { error: error.message }
+<<<<<<< HEAD
 ;
   async generateReport(auditResult, outdatedResult, packageLockInfo, nodeInfo, gitHooksInfo) {;
     const report = {;
@@ -135,6 +154,20 @@ class DependencyMonitor {;
           low: 0},;
         outdatedPackages: Object.keys(outdatedResult).length,;
         packageLockStatus: packageLockInfo.exists ?,;
+=======
+  async generateReport(auditResult, outdatedResult, packageLockInfo, nodeInfo, gitHooksInfo) {
+    const report = {
+      timestamp: new Date().toISOString(),
+      summary: {
+        vulnerabilities: {
+          total: 0,
+          critical: 0,
+          high: 0,
+          moderate: 0,
+          low: 0},
+        outdatedPackages: Object.keys(outdatedResult).length,
+        packageLockStatus: packageLockInfo.exists ?,
+>>>>>>> main
   healthy;
   ': 'missing,;
         nodeVersion: nodeInfo.nodeVersion,;
@@ -146,7 +179,6 @@ class DependencyMonitor {;
         node: nodeInfo,;
         gitHooks: gitHooksInfo},;
       recommendations: []}
-;
     // Count vulnerabilities by severity;
     if (auditResult.vulnerabilities) {;
       Object.values(auditResult.vulnerabilities).forEach(vuln => {;

@@ -51,10 +51,17 @@ class ConsoleErrorFixer {;
           });
           modified = true;
         }
+<<<<<<< HEAD
 ;
         // Fix undefined variable references;
         const undefinedVarRegex = /([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*undefined\s*;?\s*$/gm;
         if (undefinedVarRegex.test(content)) {;
+=======
+`);
+        // Fix undefined variable references`);
+        const undefinedVarRegex = /([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*undefined\s*;?\s*$/gm;`);
+        if (undefinedVarRegex.test(content)) {`);
+>>>>>>> main
           content = content.replace(undefinedVarRegex, (match, varName) => {return ${varName} = undefined;`;
           }`);
           modified = true;

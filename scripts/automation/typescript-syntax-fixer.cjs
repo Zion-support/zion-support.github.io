@@ -12,9 +12,15 @@ const { execSync } = require('child_process');
 class TypeScriptSyntaxFixer {;
   constructor() {;
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
     this.logFile = path.join(;
       this.projectRoot,logs',;
       'typescript-syntax-fixer.log';
+=======
+    this.logFile = path.join(
+      this.projectRoot, 'logs',
+      'typescript-syntax-fixer.log'
+>>>>>>> main
     );
     this.fixesLog = path.join(this.projectRoot, 'logs', 'syntax-fixes.json');
     this.ensureLogsDirectory();

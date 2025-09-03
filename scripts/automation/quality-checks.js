@@ -1,12 +1,8 @@
 #!/usr/bin/env node;
-import { execSync } from;
-  'child_process';
-import fs from;
-  'fs';
-import path from;
-  'path';
-import { fileURLToPath } from;
-  'url';
+import { execSync } from "child_processchild_process';
+import fs from "fsfs';
+import path from "pathpath';
+import { fileURLToPath } from "urlurl';
 const __dirname = path.dirname(__filename);
 // // // // // // // console.log(;
   '🔍 Starting continuous quality checks automation...');
@@ -165,8 +161,12 @@ async function runQualityChecks() {;
     // // // // // // // console.log(;
   '📊 Generating quality report...');
   status: 'completed}
+<<<<<<< HEAD
 ;
     console.log(;
+=======
+    console.log(
+>>>>>>> main
   '📊 Generating quality report...');
     const reportPath = path.join(process.cwd(),;
   'quality-report.json');

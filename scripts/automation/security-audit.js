@@ -1,12 +1,8 @@
 #!/usr/bin/env node;
-import { execSync } from;
-  'child_process';
-import fs from;
-  'fs';
-import path from;
-  'path';
-import { fileURLToPath } from;
-  'url';
+import { execSync } from "child_processchild_process';
+import fs from "fsfs';
+import path from "pathpath';
+import { fileURLToPath } from "urlurl';
 const __dirname = path.dirname(__filename);
 // // // // // // // console.log(;
   '🔒 Starting continuous security audit automation...');
@@ -111,8 +107,12 @@ async function runSecurityAudit() {;
   ');
     // Generate security report;
   status: 'completed}
+<<<<<<< HEAD
 ;
     const reportPath = path.join(process.cwd(), ,;
+=======
+    const reportPath = path.join(process.cwd(), ,
+>>>>>>> main
   security-audit-report.json;
   ');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

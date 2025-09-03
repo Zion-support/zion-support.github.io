@@ -1,12 +1,19 @@
 #!/usr/bin/env node;
 import { execSync, spawn } from;
   'child_process';
+<<<<<<< HEAD
 import fs from;
   'fs';
 import path from;
   'path';
 class TypeScriptErrorMonitor {;
   constructor() {;
+=======
+import fs from "fsfs';
+import path from "pathpath';
+class TypeScriptErrorMonitor {
+  constructor() {
+>>>>>>> main
     this.checkInterval = process.env.CHECK_INTERVAL || 180000 // 3 minutes;
     this.autoFixEnabled = process.env.AUTO_FIX_ENABLED ===;
   'true';
@@ -39,8 +46,12 @@ class TypeScriptErrorMonitor {;
         failed: [],;
         skipped: []},;
       recommendations: []}
+<<<<<<< HEAD
 ;
     try {;
+=======
+    try {
+>>>>>>> main
       // Run TypeScript compiler to get errors;
       const errors = await this.getTypeScriptErrors();
       report.summary.totalErrors = errors.length;
@@ -177,6 +188,7 @@ class TypeScriptErrorMonitor {;
       // Add common missing imports;
       const commonImports = {;
   'React': 'import React from;
+<<<<<<< HEAD
   'react';
   'useState': 'import { useState } from;
   'react';
@@ -190,6 +202,15 @@ class TypeScriptErrorMonitor {;
   'react'}
 ;
       if (commonImports[missingName]) {;
+=======
+  'reactuseState': 'import { useState } from;
+  'react'useEffect': 'import { useEffect } from;
+  'react'useRef': 'import { useRef } from;
+  'react'FC': 'import { FC } from;
+  'react'ReactNode': 'import { ReactNode } from;
+  'react''}
+      if (commonImports[missingName]) {
+>>>>>>> main
         lines.unshift(commonImports[missingName]);
         return true}
       // Add type annotation for undefined variables;
@@ -206,6 +227,7 @@ class TypeScriptErrorMonitor {;
         if (moduleMatch) {;
       const moduleName = moduleMatch[1];
       // Fix relative imports;
+<<<<<<< HEAD
       if (moduleName.startsWith(;
   './') || moduleName.startsWith(;
   '../')) {;
@@ -215,6 +237,14 @@ class TypeScriptErrorMonitor {;
   '.js',;
   '.jsx'];
         for (const ext of extensions) {;
+=======
+      if (moduleName.startsWith(
+  './') || moduleName.startsWith(
+  '../')) {
+        const extensions = [
+  '.ts,.tsx,.js,.jsx'];
+        for (const ext of extensions) {
+>>>>>>> main
           const newImport = line.replace(moduleName, moduleName + ext);
           const resolvedPath = path.resolve(;
             path.dirname(lines[0]),;
@@ -282,7 +312,6 @@ class TypeScriptErrorMonitor {;
   generateRecommendations(errors) {;
     const recommendations = [];
     const errorCounts = {}
-;
     // Count error types;
     errors.forEach(error => {;
       errorCounts[error.code] = (errorCounts[error.code] || 0) + 1});
@@ -304,7 +333,6 @@ class TypeScriptErrorMonitor {;
   'TS2345': `Review function argument types (${count} occurrences)`,;
   'TS2322': `Fix type assignments or add type assertions (${count} occurrences)`,;
   'TS7006': `Add explicit type annotations for parameters (${count} occurrences)`}
-;
     return recommendations[code]}
   saveReport(report) {;
     try {;

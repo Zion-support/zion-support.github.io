@@ -42,6 +42,7 @@ class ConfigErrorFixer {;
       if (fs.existsSync(filePath)) {;
         try {;
           const fileIssues = await this.analyzeConfigFile(filePath);
+<<<<<<< HEAD
           issues.push(...fileIssues);
         } catch (error) {;
           this.log( ⚠️ Could not analyze ${configFile}: ${error.message}',WARN';
@@ -50,6 +51,16 @@ class ConfigErrorFixer {;
       }
     }
 ;
+=======
+          issues.push(...fileIssues);`);
+        } catch (error) {`);
+          this.log( ⚠️ Could not analyze ${configFile}: ${error.message}',WARN`);
+          );
+        }
+      }
+    }`);
+`);
+>>>>>>> main
     this.log(Found ${issues.length} configuration issues``);
     return issues;
   }

@@ -30,12 +30,21 @@ class EnhancedProjectErrorFixer {;
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
     console.log(`logMessage);
+<<<<<<< HEAD
 ;
     // Append to log file;
     fs.appendFileSync(this.logFile, logMessage + '\n');
   }
 ;
   async run() {;
+=======
+
+    // Append to log file
+    fs.appendFileSync(this.logFile, logMessage + '\n');`);
+  }`);
+`);
+  async run() {`);
+>>>>>>> main
     this.log('🚀 Starting Enhanced Project Error Fixer');this.log(📁 Project root: ${this.projectRoot}`);
 ;
     try {;

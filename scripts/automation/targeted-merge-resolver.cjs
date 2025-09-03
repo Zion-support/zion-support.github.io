@@ -34,12 +34,21 @@ class TargetedMergeResolver {;
 ;
   async run() {;
     this.log('🚀 Starting Targeted Merge Conflict Resolver...');
+<<<<<<< HEAD
 ;
     try {;
       // Step 1: Ensure we're on main branch;
       await this.ensureMainBranch();
 ;
       // Step 2: Get priority branches (focus on the most important ones first);
+=======
+
+    try {
+      // Step 1: Ensure we're on main branch`);
+      await this.ensureMainBranch();`);
+`);
+      // Step 2: Get priority branches (focus on the most important ones first)`);
+>>>>>>> main
       const priorityBranches = await this.getPriorityBranches();this.log(Found ${priorityBranches.length} priority branches to process`);
 ;
       // Step 3: Process priority branches;

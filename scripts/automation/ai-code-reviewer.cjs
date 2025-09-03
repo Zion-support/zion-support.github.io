@@ -15,9 +15,15 @@ class AICodeReviewer {;
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, 'logs', 'ai-code-reviewer.log');
     this.reviewsLog = path.join(this.projectRoot, 'logs', 'ai-reviews.json');
+<<<<<<< HEAD
     this.learningData = path.join(;
       this.projectRoot,logs',;
       'ai-learning-data.json';
+=======
+    this.learningData = path.join(
+      this.projectRoot, 'logs',
+      'ai-learning-data.json'
+>>>>>>> main
     );
     this.ensureLogsDirectory();
     this.loadLearningData();
@@ -461,9 +467,15 @@ class AICodeReviewer {;
         performance;
       ),;
     };
+<<<<<<< HEAD
 ;
     const reportPath = path.join(;
       this.projectRoot,logs', `ai-review-report-${Date.now()}.json`;
+=======
+
+    const reportPath = path.join(
+      this.projectRoot, 'logs', `ai-review-report-${Date.now()}.json`
+>>>>>>> main
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 this.log(`📊 AI Review Report generated: ${reportPath}`);

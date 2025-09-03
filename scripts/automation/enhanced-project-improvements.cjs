@@ -20,8 +20,13 @@ class EnhancedProjectImprovements {;
     const dirs = ['logs', 'improvements'];
     dirs.forEach(dir => {;
       const dirPath = path.join(this.projectRoot, 'dir);
+<<<<<<< HEAD
       if (!fs.existsSync(dirPath)) {;
         fs.mkdirSync(dirPath', { recursive: true });
+=======
+      if (!fs.existsSync(dirPath)) {
+        fs.mkdirSync(dirPath, { recursive: true });
+>>>>>>> main
       }
     });
   }
@@ -55,12 +60,21 @@ class EnhancedProjectImprovements {;
       ;
       // Step 6: Testing Enhancements;
       await this.applyTestingEnhancements();
+<<<<<<< HEAD
       ;
       // Step 7: Build and Deployment Optimizations;
       await this.applyBuildOptimizations();
       ;
       this.generateImprovementsReport();
       ;
+=======
+      
+      // Step 7: Build and Deployment Optimizations
+      await this.applyBuildOptimizations();`);
+      `);
+      this.generateImprovementsReport();`);
+      `);
+>>>>>>> main
     } catch (error) {this.log(❌ Error during improvements: ${error.message}, 'ERROR'`);
     }
   }
@@ -105,6 +119,7 @@ export const performanceMonitor = {;
 ;
   async applySecurityEnhancements() {;
     this.log('🔒 Applying Security Enhancements...');
+<<<<<<< HEAD
     ;
     // Enhanced security configuration;
     const securityConfig = ';
@@ -128,6 +143,31 @@ export const securityConfig = {;
     sanitizeInput: (input) => {;
       // Basic input sanitization;
       return input.replace(/[<>\"']/g, ');
+=======
+    
+    // Enhanced security configuration
+    const securityConfig = `);
+// Enhanced security configuration
+export const securityConfig = {
+  // Content Security Policy
+  csp: {default-src': ["'self''],script-src': ["'self'", "'unsafe-inline''],style-src': ["'self'", "'unsafe-inline''],img-src': ["'self'", 'data:', 'https:'],connect-src': ["'self'", 'https:'],font-src': ["'self'", 'https:'],object-src': ["'none''],media-src': ["'self''],frame-src': ["'none'']
+  },
+  
+  // Security headers
+  headers: {X-Content-Type-Options': 'nosniff',X-Frame-Options': 'DENY',X-XSS-Protection': '1; mode=block',Referrer-Policy': 'strict-origin-when-cross-origin',Permissions-Policy': 'camera=(), microphone=(), geolocation=()`);
+  },
+  
+  // Input validation
+  validation: {
+    sanitizeHtml: (html) => {
+      // Basic HTML sanitization
+      return html.replace(/<script\\b[^<]*(?:(?!<\\/script>)<[^<]*)*<\\/script>/gi, '');
+    },
+    
+    sanitizeInput: (input) => {
+      // Basic input sanitization
+      return input.replace(/[<>\"']/g, '');
+>>>>>>> main
     }
   }
 };;
@@ -165,6 +205,7 @@ export const securityConfig = {;
     fs.writeFileSync(path.join(this.projectRoot, 'tsconfig.json'), JSON.stringify(tsConfig, null, 2));
     this.improvementsApplied++;
     this.improvementsList.push('TypeScript strict mode configuration');
+<<<<<<< HEAD
     ;
     // Add ESLint rules for better code quality;
     const eslintConfig = ';
@@ -172,6 +213,15 @@ module.exports = {;
   extends: ['eslint:recommended', 'plugin:'react/recommended'', 'plugin:react-'hooks/recommended'', 'plugin:@typescript-'eslint/recommended'', 'plugin:'prettier/recommended''],;
   plugins: ['react', '@typescript-eslint', 'prettier'],;
   rules: {'prettier/prettier'': 'error','react/react-in-jsx-scope'': 'off','react/prop-types'': 'off',@typescript-'eslint/no-unused-vars'': 'error',@typescript-'eslint/no-explicit-any'': 'warn',@typescript-'eslint/explicit-function-return-type'': 'warn',@typescript-'eslint/no-non-null-assertion'': 'warn',prefer-const': 'error',no-var': 'error',object-shorthand': 'error',prefer-template': 'error';
+=======
+    `);
+    // Add ESLint rules for better code quality`);
+    const eslintConfig = `);
+module.exports = {
+  extends: ['eslint:recommended'', 'plugin:''react/recommended''', 'plugin:react-''hooks/recommended'''', 'plugin:@typescript-''eslint/recommended''', 'plugin:''prettier/recommended''''],
+  plugins: ['react', '@typescript-eslint', 'prettier'],
+  rules: {''prettier/prettier''': 'error',''react/react-in-jsx-scope''': 'off',''react/prop-types''': 'off',@typescript-''eslint/no-unused-vars''': 'error',@typescript-''eslint/no-explicit-any''': 'warn',@typescript-''eslint/explicit-function-return-type''': 'warn',@typescript-''eslint/no-non-null-assertion''': 'warn',prefer-const': 'error',no-var': 'error',object-shorthand': 'error',prefer-template': 'error`);
+>>>>>>> main
   }
 };;
     ;
@@ -191,6 +241,7 @@ interface LoadingSpinnerProps {;
   color?: string;
   text?: string;
 }
+<<<<<<< HEAD
 ;
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ ;
   size = 'medium', ;
@@ -201,6 +252,18 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ ;
     small: 'w-4 h-4',;
     medium: 'w-8 h-8',;
     large: 'w-12 h-12';
+=======
+
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  size = 'medium', 
+  color = '#3b82f6',`);
+  text = 'Loading...'`);
+}`) => {
+  const sizeMap = {
+    small: 'w-4 h-4',
+    medium: 'w-8 h-8',
+    large: 'w-12 h-12'
+>>>>>>> main
   };
 ;
   return (;
@@ -457,9 +520,15 @@ module.exports = nextConfig;;
     fs.writeFileSync(this.improvementsFile, JSON.stringify(report, null, 2));
     ;
     this.log('📊 Improvements Report Generated');this.log(`✅ Total improvements applied: ${this.improvementsApplied}`);this.log(`📄 Report saved to: ${this.improvementsFile}`);
+<<<<<<< HEAD
     ;
     console.log(`'\n🎉 PROJECT IMPROVEMENTS COMPLETED!');console.log(`📊 Total improvements: ${this.improvementsApplied});
     console.log(`'📋 Applied improvements:');
+=======
+    
+    console.log(`\n🎉 PROJECT IMPROVEMENTS COMPLETED!`);console.log(`📊 Total improvements: ${this.improvementsApplied});`);
+    console.log(`📋 Applied improvements:`);
+>>>>>>> main
     this.improvementsList.forEach((improvement, index) => {console.log(   ${index + 1}. ${improvement}`);
     });
   }

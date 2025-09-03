@@ -3,6 +3,7 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 ;
 console.log(`'🔒 Starting continuous security audit automation...');
 ;
@@ -22,6 +23,27 @@ async function runSecurityAudit() {;
     } catch (error) {;
       console.log(`'⚠️  Security issues found, attempting auto-fix...');
       try {;
+=======
+
+console.log(`🔒 Starting continuous security audit automation...`);
+
+// Get automation interval from environment variable (default: 4 hours)
+const AUTOMATION_INTERVAL =
+  parseInt(process.env.AUTOMATION_INTERVAL) || 14400000; // 4 hours
+
+async function runSecurityAudit() {
+  try {
+    console.log(`🔒 Running security audit at ${new Date().toISOString()});`);
+`);
+    // Run npm audit`);
+    console.log(`🔍 Running npm security audit...`);
+    try {
+      execSync('npm audit --audit-level=moderate', { stdio: 'inherit' });
+      console.log('✅ Security audit completed - no issues found'`);
+    } catch (error) {
+      console.log(`⚠️  Security issues found, attempting auto-fix...`);
+      try {
+>>>>>>> main
         execSync('npm audit fix --audit-level=moderate', { stdio: 'inherit' });
         console.log('✅ Security issues auto-fixed');
       } catch (fixError) {;

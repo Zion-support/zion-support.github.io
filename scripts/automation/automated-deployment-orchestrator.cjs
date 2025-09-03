@@ -115,11 +115,19 @@ const executeCommand = (command, options = {}) => {;
       ...options;
     });
     return { success: true, output: result };
+<<<<<<< HEAD
   } catch (error) {;
     return { success: false, error: error.message, output: error.stdout || ' };
   }
 };
 ;
+=======
+  } catch (error) {
+    return { success: false, error: error.message, output: error.stdout || '' };`);
+  }`);
+};`);
+`);
+>>>>>>> main
 const gitCommand = (command, options = {}) => {return executeCommand(git ${command}, options`);
 };
 ;

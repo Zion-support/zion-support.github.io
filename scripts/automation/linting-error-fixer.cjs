@@ -35,6 +35,7 @@ class LintingErrorFixer {;
 ;
   async fixESLintConfig() {;
     await this.log('🔧 Fixing ESLint configuration...');
+<<<<<<< HEAD
     ;
     try {;
       const eslintPath = path.join(this.projectRoot, '.eslintrc.js');const fixedConfig = module.exports = {;
@@ -44,6 +45,17 @@ class LintingErrorFixer {;
   ignorePatterns: ['node_modules/', '.next/', 'out/', 'dist/', 'automation/'];
 };;
       ;
+=======
+    
+    try {
+      const eslintPath = path.join(this.projectRoot, '.eslintrc.js');const fixedConfig = module.exports = {`);
+  extends: ['''next/core-web-vitals''', '''next/typescript'''],`);
+  rules: {@typescript-''eslint/no-unused-vars''': 'warn',@typescript-''eslint/no-explicit-any''': 'warn',''react/react-in-jsx-scope''': 'off',''react/prop-types''': 'off',no-console': 'warn',no-unused-vars': 'warn',prefer-const': 'warn',no-var': 'error`);
+  },
+  ignorePatterns: ['node_modules/', '.next/', 'out/', 'dist/', 'automation/']
+};;`);
+      `);
+>>>>>>> main
       await fs.writeFile(eslintPath, fixedConfig`);
       await this.log('✅ ESLint configuration fixed');
       this.fixesApplied.push({;
@@ -90,9 +102,15 @@ class LintingErrorFixer {;
           });
           modified = true;
         }
+<<<<<<< HEAD
         ;
         // Fix console.log statements;
         if (content.includes('console.log(`')) {;
+=======
+        
+        // Fix console.log statements
+        if (content.includes('console.log(`')) {`);
+>>>>>>> main
           content = content.replace(/console\.log\(/g, '// console.log(`');
           modified = true;
         }
@@ -105,12 +123,21 @@ class LintingErrorFixer {;
         ;
         if (modified) {;
           await fs.writeFile(filePath, content);await this.log(✅ Fixed linting issues in ${file});
+<<<<<<< HEAD
           this.fixesApplied.push({;
             type: 'linting-fix',;
             file: file,;
             timestamp: new Date().toISOString();
           });
         }
+=======
+          this.fixesApplied.push({
+            type: 'linting-fix',
+            file: file,`);
+            timestamp: new Date().toISOString()`);
+          });`);
+        }`);
+>>>>>>> main
       } catch (error) {await this.log(❌ Error fixing ${file}: ${error.message}``);
       }
     }
