@@ -1,34 +1,6 @@
-export interface UltimateInnovativeService {;
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
-  roi: string;
-  innovationLevel: string;
-contactInfo: {;
-
-    phone: string;
-    email: string;
-    website: string;,
+export interface UltimateInnovativeService {};
 };
-  technicalSpecs?: {;
-
-    technology: string[];
-    integrations: string[];
-    apiEndpoints: number;
-    uptime: string;
+  technicalSpecs?: {};
     security: string[]};
   competitors?: string[];
   caseStudies?: string[]}
@@ -51,5 +23,5 @@ export ;
   'Space Technology',;'  'Green Technology';
 ];
 ;
-export const SERVICE_SUBCATEGORIES = {;
+export const SERVICE_SUBCATEGORIES = {};
 }

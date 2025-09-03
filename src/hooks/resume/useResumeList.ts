@@ -1,24 +1,16 @@
 import { useState, useEffect, useCallback } from 'react'; // Added useCallback;
 import { supabase } from '@/integrations/supabase/client';
-export default function Page() {;
-);
+export default function Page() {};
+  return null;
+}
         .order('created_at', { ascending: false });
       ;
       if(resumeError) throw resumeError;
       ;
-      if(!resumeData || resumeData.length === 0) {;
-        setResumes([]);
-        return [];,
+      if(!resumeData || resumeData.length === 0) {};
 }
       ;
-      const transformedResumes: Resume[] = resumeData.map(resume => ({;
-        id: resume.id,;
-        user_id: resume.user_id,;
-        basic_info: {;
-          id: resume.id,;
-          title: resume.title,;
-          headline: resume.headline,;
-          summary: resume.summary;,
+      const transformedResumes: Resume[] = resumeData.map(resume => ({};
 },;
         work_experience: [],;
         education: [],;
@@ -29,32 +21,18 @@ export default function Page() {;
       ;
       setResumes(transformedResumes);
       return transformedResumes;,
-} catch(e: any) {;
-      console.error('Error fetching resumes:', e);
-      setError(e.message);
-      setResumes([]); // Clear resumes on error;
-      return [];,
-} finally {;
-      setIsLoading(false);,
+} catch(e: unknown) {};
+} finally {};
 }
   }, [user]); // user is a dependency of fetchResumes;
   ;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
+  useEffect(() => {};
 }, []);
-    if(user) {;
-      fetchResumes();,
-} else {;
-      // Clear resumes if user logs out or is not available initially;
-      setResumes([]);
-      setError(null); // Clear any previous errors;,
+    if(user) {};
+} else {};
 }
   }, [user, fetchResumes]); // Added fetchResumes;
   ;
-  return {;
-    isLoading,;
-    error,;
-    resumes,;
-    fetchResumes;,
+  return {};
 };,
 }

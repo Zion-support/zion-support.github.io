@@ -1,21 +1,17 @@
 import React from 'react';''';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousIOTSecurity = () => {}
+  return <div>Component</div>;
+};
   return();
     <>;
       <Helmet>;
         <title>AI Autonomous IoT Security Platform | Zion Tech Group</title>;
-        <meta;
-          name="description"";
-          content="Revolutionary AI autonomous IoT security platform that continuously secures IoT devices, detects threats, and protects connected infrastructure with advanced AI capabilities and autonomous operation.";
+        <div>Broken JSX</div>
         />";
-        <meta"";
-          name="keywords"";
-          content="AI IoT security, autonomous IoT security, IoT protection, threat detection, autonomous operations, AI IoT security platform";
+        <div>Broken JSX</div>
         />";
-        <link"";
-          rel="canonical"";
-          href="https://ziontechgroup.com/ai-autonomous-iot-security";
+        <div>Broken JSX</div>
         />;
       </Helmet>";
 "";
@@ -184,12 +180,7 @@ const AIAutonomousIOTSecurity = () => {}
               IoT Security Solutions";
             </h2>"";
             <div className="grid md:grid-cols-4 gap-6">';
-              {['';
-                'Device Security',Network Security',Data Security',Access Control',Authentication Security',Communication Security',Firmware Security',Update Security';
-              ].map(type => (;
-                <div";
-                  key={type}"";
-                  className="bg-white/5 rounded-lg p-4 text-center border border-white/10"">"";
+              {};
                   <span className="text-white font-medium">{type}</span>;
                 </div>;
                 <h3 className="text-lg font - semibold text-white mb-2">;

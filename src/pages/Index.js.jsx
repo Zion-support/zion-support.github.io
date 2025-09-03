@@ -24,7 +24,9 @@ import {}
   Sparkles,'';
   BarChart3,''';
   Smartphone} from 'lucide-react';
-export default function Index() {}
+export {};
+  return null;
+}
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
   // Tools and features showcase;
@@ -71,11 +73,7 @@ export default function Index() {}
   ];";
   return ("";
     <div className="min-h-screen bg-zion-blue text-white">';
-      <SEO'';
-        title={t('home.seo_title')}';
-        description={t('home.seo_description')}'";
-        keywords={t('home.seo_keywords')}"";
-        canonical="https://ziontechgroup.com/";
+      <div>Broken JSX</div>
       />;
       <Header />;
       <HeroSection />;
@@ -92,15 +90,9 @@ export default function Index() {}
             </p>';
           </div>'';
 ''';
-          <div'''';
-            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}
+          <div>Broken JSX</div>
           >;
-            {toolsFeatures.map((feature, index) => (;
-              <Link;
-                key={index}";
-                to={feature.link}"";
-                className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300"">"";
-                <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">;
+            {};
                   {feature.icon}";
                 </div>"";
                 <h3 className="text-xl font-bold text-white mb-2">;
@@ -109,12 +101,10 @@ export default function Index() {}
                 <p className="text-zion-slate-light mb-4">;
                   {feature.description}
                 </p>'`;
-                <div'`'`;
-                  className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}
+                <div>Broken JSX</div>
                 >';
                   <span>{t('general.explore')}</span>'`;
-                  <ArrowRight'`'`;
-                    className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`}
+                  <div>Broken JSX</div>
                   />;
                 </div>;
               </Link>;

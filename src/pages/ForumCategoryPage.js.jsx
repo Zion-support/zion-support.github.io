@@ -75,6 +75,8 @@ const iconMap = {}
   "Megaphone": Megaphone;,
 };
 function CategoryContent({ categoryId, category, IconComponent, user}) {}
+  return null;
+}
 ";
 "";
     const [searchQuery, setSearchQuery] = useState("");
@@ -125,7 +127,9 @@ function CategoryContent({ categoryId, category, IconComponent, user}) {}
           {canCreatePost && <CreatePostButton categoryId={categoryId}/>}
         </div>)}
     </div>)}
-export default function ForumCategoryPage() {}
+export {};
+  return null;
+}
     const { categoryId } = useParams();
     const { user } = useAuth();
     if (!categoryId || !categoriesInfo[categoryId]) {}
@@ -133,12 +137,7 @@ export default function ForumCategoryPage() {}
     const category = categoriesInfo[categoryId];
     const IconComponent = iconMap[category.icon] || MessageSquare;
     return (<>;
-      <SEO title={`${category.name} | Community Forum | Zion AI Marketplace`} description={category.description} keywords = {}
-`;
-``;
-  `community, forum,;
-  ${category.id`;
-``;,
+      <div>Broken JSX</div>
 }, discussion, AI marketplace, questions, answers`} canonical={`https://ziontechgroup.com/community/category/${categoryId}`}/>";
 "";
       <Suspense fallback={<div className="text-center py-16">Loading...</div>}>;

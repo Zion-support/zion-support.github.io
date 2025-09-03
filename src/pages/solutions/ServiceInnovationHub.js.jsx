@@ -2,6 +2,8 @@ import React from 'react';''';
 import { Link } from 'react-router-dom';''';
 import { CogIcon } from '@heroicons/react/24/outline';
 const ServiceInnovationHub = () => {}
+  return <div>Component</div>;
+};
   return();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">"";
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">"";
@@ -18,8 +20,7 @@ const ServiceInnovationHub = () => {}
             Central hub for service innovation and development. This page is;
             under development.;
           </p>";
-          <Link"";
-            to="/contact"";
+          <div>Broken JSX</div>
             className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg">;
             Contact Us for More Information;
           </Link>;

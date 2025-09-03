@@ -14,6 +14,8 @@ import {}
   Globe} from 'lucide-react';
 ;
 const News = () => {}
+  return <div>Component</div>;
+};
 ';
   const [searchTerm, setSearchTerm] = useState('');';
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -125,21 +127,17 @@ const News = () => {}
             <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">"";
               <div className="relative flex-1 max-w-md">"";
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />";
-                <input"";
-                  type="text"";
-                  placeholder="Search news...";
-                  value={searchTerm}";
+                <div>Broken JSX</div>
                   onChange={e => setSearchTerm(e.target.value)}"";
                   className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
                 />;
               </div>";
 "";
               <div className="flex flex-wrap gap-3">;
-                <select;
-                  value={selectedCategory}";
+                <div>Broken JSX</div>
                   onChange={e => setSelectedCategory(e.target.value)}"";
                   className="px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">;
-                  {categories.map(category => (;
+                  {};
                     <option key={category} value={category}>;
                       {category}
                     </option>;
@@ -150,27 +148,7 @@ const News = () => {}
           </div>;
 
           {/* Featured News */}";
-          {filteredNews.filter(item => item.featured).length > 0 && ("";
-            <div className="mb-16">"";
-              <h2 className="text-2xl font-bold mb-8 text-center">;
-                Featured News";
-              </h2>"";
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-                {filteredNews;
-                  .filter(item => item.featured);
-                  .map(item => (;
-                    <div";
-                      key={item.id}"";
-                      className="bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700 hover:border-slate-600 transition-all hover:transform hover:scale-105"">"";
-                      <div className="aspect-video bg-slate-700 flex items-center justify-center">"";
-                        <div className="text-slate-500 text-center">"";
-                          <Globe className="h-16 w-16 mx-auto mb-2" />;
-                          <p>News Image</p>;
-                        </div>";
-                      </div>"";
-                      <div className="p-6">"";
-                        <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">"";
-                          <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full">;
+          {};
                             {item.category}";
                           </span>"";
                           <div className="flex items-center gap-1">"";
@@ -202,19 +180,7 @@ const News = () => {}
           <div>"";
             <h2 className="text-2xl font-bold mb-8 text-center">Latest News</h2>"";
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-              {filteredNews.map(item => (;
-                <div";
-                  key={item.id}"";
-                  className="bg-slate-800/50 rounded-xl overflow-hidden border border-slate-700 hover:border-slate-600 transition-all hover:transform hover:scale-105"">"";
-                  <div className="aspect-video bg-slate-700 flex items-center justify-center">"";
-                    <div className="text-slate-500 text-center">"";
-                      <Globe className="h-12 w-12 mx-auto mb-2" />;
-                      <p>News Image</p>;
-                    </div>";
-                  </div>"";
-                  <div className="p-6">"";
-                    <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">"";
-                      <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs">;
+              {};
                         {item.category}";
                       </span>"";
                       <div className="flex items-center gap-1">"";
@@ -242,16 +208,7 @@ const News = () => {}
             </div>;
           </div>;
 ";
-          {filteredNews.length === 0 && ("";
-            <div className="text-center py-16">"";
-              <Globe className="w-16 h-16 text-gray-400 mx-auto mb-4" />"";
-              <h3 className="text-xl font-semibold text-white mb-2">;
-                No news found";
-              </h3>"";
-              <p className="text-gray-400">;
-                Try adjusting your search criteria or category filter.;
-              </p>;
-            </div>;
+          {};
           )}
         </div>;
       </section>;

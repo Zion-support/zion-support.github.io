@@ -1,9 +1,5 @@
 import React from 'react';
-const Match: React.FC = () => {;'''';
-  const [selectedCategory, setSelectedCategory] = useState('all');'''';
-  const [searchQuery, setSearchQuery] = useState('');';
-'';
-  ''';
+const Match: React.FC = () => {};
     { id: 'all', name: 'All Categories', icon: Sparkles, count: 150 },;''';
     { id: 'ai', name: 'AI Services', icon: Brain, count: 45 },;''';
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 32 },;''';
@@ -100,27 +96,14 @@ const Match: React.FC = () => {;'''';
     return matchesCategory && matchesSearch}) ;";
   return ("";
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
-      <SEO "";
-        title="AI Service Matcher - Zion Tech Group""";
-        description="Find the perfect AI and technology services for your business with our intelligent matching algorithm. Get personalized recommendations based on your needs.""        keywords="AI service matcher, technology matching, business solutions, Zion Tech Group";
+      <div>Broken JSX</div>
        />;
 ";
       {/* Hero Section */}"";
       <section className="relative py-20 overflow-hidden">"";
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>"";
         <div className="relative z-10 container mx-auto px-4">;
-          <motion.div;
-            initial = {}
-  { opacity: 0,;
-  y: 30;,
-}}
-            animate = {}
-  { opacity: 1,;
-  y: 0;,
-}}";
-            transition={{ duration: 0.8 }}"";
-            className="text-center max-w-4xl mx-auto"";
-"";
+          <div>Broken JSX</div>
             <div className="flex items-center justify-center mb-6">"";
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4">"";
                 <Sparkles className="w-8 h-8 text-white"  />";
@@ -140,16 +123,9 @@ const Match: React.FC = () => {;'''';
             </p>";
 "";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <Link"";
-                to="/contact"";
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25";
-";
-                Get Matched"";
+              <div>Broken JSX</div>
                 <ArrowRight className="ml-2 w-5 h-5"  />              </Link>";
-              <Link"";
-                to="/services"";
-                className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200";
-                Browse All Services;
+              <div>Broken JSX</div>
               </Link>;
             </div>;
           </motion.div>;
@@ -163,9 +139,7 @@ const Match: React.FC = () => {;'''';
             {/* Search Bar */}"";
             <div className="relative mb-8">"";
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400"  />";
-              <input"";
-                type="text""                placeholder="Search for services, features, or use cases...";
-                value={searchQuery}";
+              <div>Broken JSX</div>
                 onChange={(e) => setSearchQuery(e.target.value)}"";
                 className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200";
               />;
@@ -173,9 +147,7 @@ const Match: React.FC = () => {;'''';
 ";
             {/* Category Filters */}"";
             <div className="flex flex-wrap gap-3 justify-center">;
-              {categories.map((category) => (;
-                <button;
-                  key={category.id}
+              {};
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-200 ${}
 ';
@@ -198,18 +170,7 @@ const Match: React.FC = () => {;'''';
       {/* Matched Services Section */}"";
       <section className="py-20">;"";
         <div className="container mx-auto px-4">;
-          <motion.div;
-            initial = {}
-  { opacity: 0,;
-  y: 30;,
-}}
-            whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}}";
-            transition={{ duration: 0.8 }}"";
-            className="text-center mb-16"";
-"";
+          <div>Broken JSX</div>
             <h2 className="text-4xl font-bold text-white mb-6">"";
               Your <span className="text-cyan-400">Perfect Matches</span>";
             </h2>"";
@@ -220,37 +181,7 @@ const Match: React.FC = () => {;'''';
           </motion.div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {filteredServices.map((service, index) => (;
-              <motion.div;
-                key={service.id}
-                initial = {}
-  { opacity: 0,;
-  y: 30;,
-}}
-                whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}}
-                transition = {}
-  { duration: 0.6,;
-  delay: index * 0.1;
-`;,
-}}``;
-                className={`bg-slate-800/50 border rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 ${}
-'`;
-                  service.featured ? 'border-cyan-400/30 bg-gradient-to-br from-cyan-400/5 to-blue-500/5' : 'border-slate-700/50'``;,
-}`}
-";
-                {/* Header */}"";
-                <div className="flex items-start justify-between mb-4">"";
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center">"";
-                    <service.icon className="w-6 h-6 text-cyan-400" />";
-                  </div>"";
-                  <div className="text-right">";
-                    {service.featured && ("";
-                      <div className="flex items-center mb-2">"";
-                        <Star className="w-4 h-4 text-yellow-400 mr-1"  />"                        <span className="text-yellow-400 text-xs font-semibold">Featured</span>;
-                      </div>";
+            {};
                     )}"";
                     <div className="bg-cyan-500 text-white text-xs font-bold px-2 py-1 rounded-full">;
                       {service.matchScore}% Match;
@@ -266,7 +197,7 @@ const Match: React.FC = () => {;'''';
                 <div className="flex items-center justify-between mb-4">"";
                   <div className="flex items-center">"";
                     <div className="flex items-center text-yellow-400 mr-2">'`;
-                      {[...Array(5)].map((_, i) => ('`'`;
+                      {};
                         <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'fill-current' : ''}`}  />                      ))}";
                     </div>"";
                     <span className="text-slate-400 text-sm">{service.rating} ({service.reviews})</span>";
@@ -276,61 +207,27 @@ const Match: React.FC = () => {;'''';
 ";
                 {/* Features */}"";
                 <div className="space-y-2 mb-6">";
-                  {service.features.slice(0, 3).map((feature, featureIndex) => ("";
+                  {};
                     <div key={featureIndex} className="flex items-center text-sm text-slate-400">"";
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0"  />                      {feature}
                     </div>;
                   ))}";
-                  {service.features.length > 3 && ("";
-                    <div className="text-slate-500 text-sm text-center">;
+                  {};
                       +{service.features.length - 3} more features;
                     </div>) }
                 </div>;
 ";
                 {/* Actions */}"";
                 <div className="flex gap-2">;
-                  <Link;
-                    to = {}
-`;
-`'`;
-`'`'`;
-`'`'`'`;
-  `/services/${service.name.toLowerCase().replace(/\s+/g,-');
-
-`;
-`"`;,
-}`}"";
-                    className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200";
-                    Learn More;
+                  <div>Broken JSX</div>
                   </Link>";
-                  <Link"";
-                    to="/contact"";
-                    className="inline-flex items-center justify-center px-4 py-2 border border-cyan-400/30 text-cyan-400 text-sm font-medium rounded-lg hover:bg-cyan-400/10 transition-all duration-200";
-                    Contact;
+                  <div>Broken JSX</div>
                   </Link>;
                 </div>;
               </motion.div>) ) }
           </div>;
 
-          {filteredServices.length === 0 && (;
-            <motion.div;
-              initial={{ opacity: 0 }}";
-              animate={{ opacity: 1 }}"";
-              className="text-center py-16"";
-"";
-              <div className="w-24 h-24 bg-slate-700/50 rounded-full flex items-center justify-center mx-auto mb-6">"";
-                <Search className="w-12 h-12 text-slate-400"  />";
-              </div>"";
-              <h3 className="text-2xl font-bold text-white mb-4">No matches found</h3>"";
-              <p className="text-slate-300 mb-6">;
-                Try adjusting your search criteria or browse all our services.;
-              </p>";
-              <Link"";
-                to="/services"";
-                className="inline-flex items-center px-6 py-3 bg-cyan-500 text-white font-medium rounded-lg hover:bg-cyan-400 transition-all duration-200";
-";
-                Browse All Services"";
-                <ArrowRight className="ml-2 w-4 h-4"  />              </Link>;
+          {};
             </motion.div>) }
         </div>;
       </section>;
@@ -338,18 +235,7 @@ const Match: React.FC = () => {;'''';
       {/* How It Works Section */}"";
       <section className="py-20 bg-slate-800/50">;"";
         <div className="container mx-auto px-4">;
-          <motion.div;
-            initial = {}
-  { opacity: 0,;
-  y: 30;,
-}}
-            whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}}";
-            transition={{ duration: 0.8 }}"";
-            className="text-center mb-16"";
-"";
+          <div>Broken JSX</div>
             <h2 className="text-4xl font-bold text-white mb-6">"";
               How Our <span className="text-cyan-400">AI Matcher</span> Works";
             </h2>"";
@@ -360,7 +246,7 @@ const Match: React.FC = () => {;'''';
           </motion.div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">;
-            {[];
+            {};
               {}
 ";
 "";
@@ -385,23 +271,7 @@ const Match: React.FC = () => {;'''';
                 description: "Receive personalized recommendations with match scores and detailed analysis.",;
                 icon: Sparkles;
             ].map((step, index) => (;
-              <motion.div;
-                key={index}
-                initial = {}
-  { opacity: 0,;
-  y: 30;,
-}}
-                whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}}
-                transition = {}
-  { duration: 0.6,;
-  delay: index * 0.1;
-";,
-}}"";
-                className="text-center"";
-"";
+              <div>Broken JSX</div>
                 <div className="w-20 h-20 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">"";
                   <step.icon className="w-10 h-10 text-cyan-400" />";
                 </div>"";
@@ -417,17 +287,7 @@ const Match: React.FC = () => {;'''';
       {/* CTA Section */}"";
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">;"";
         <div className="container mx-auto px-4 text-center">;
-          <motion.div;
-            initial = {}
-  { opacity: 0,;
-  y: 30;,
-}}
-            whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}}
-            transition={{ duration: 0.8 }}";
-"";
+          <div>Broken JSX</div>
             <h2 className="text-4xl font-bold text-white mb-6">;
               Ready to Find Your Perfect Match?";
             </h2>"";
@@ -437,14 +297,9 @@ const Match: React.FC = () => {;'''';
             </p>";
 "";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <Link"";
-                to="/contact"";
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25";
-";
-                Start Matching"";
+              <div>Broken JSX</div>
                 <ArrowRight className="ml-2 w-5 h-5"  />              </Link>";
-              <Link"";
-                to="/services"";
+              <div>Broken JSX</div>
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200">;
                 Browse All Services;
               </Link>;

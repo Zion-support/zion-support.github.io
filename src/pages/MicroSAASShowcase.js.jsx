@@ -29,7 +29,9 @@ import { Link } from 'react-router-dom';''';
 const microSAASServices = COMPREHENSIVE_SERVICES.filter('''';
   service => service.category === 'Micro SAAS';
 );
-export default function MicroSAASShowcase() {}
+export {};
+  return null;
+}
   return();
     <div className="min-h-screen bg-background">";
       {/* Hero Section */}"";
@@ -48,17 +50,14 @@ export default function MicroSAASShowcase() {}
           </p>"";
           <div className="flex flex-wrap justify-center gap-4">"";
             <Link to="/contact">";
-              <Button"";
-                size="lg"";
+              <div>Broken JSX</div>
                 className="bg-white hover:bg-gray-100 text-zion-blue font-bold"">"";
                 <Zap className="w-4 h-4 mr-2" />;
                 Start Free Trial;
               </Button>";
             </Link>"";
             <Link to="/request-quote">";
-              <Button"";
-                size="lg"";
-                variant="outline"";
+              <div>Broken JSX</div>
                 className="border-white text-white hover:bg-white/10"">"";
                 <Target className="w-4 h-4 mr-2" />;
                 Get Demo;
@@ -109,17 +108,7 @@ export default function MicroSAASShowcase() {}
           </div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {microSAASServices.map(service => (;
-              <Card";
-                key={service.id}"";
-                className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-zion-blue-light"">"";
-                <div className="relative">;
-                  <img;
-                    src={service.images[0]}";
-                    alt={service.title}"";
-                    className="w-full h-48 object-cover rounded-t-lg"";
-                  />"";
-                  <Badge className="absolute top-4 right-4 bg-zion-cyan text-zion-blue font-bold">;
+            {};
                     {service.subcategory}
                   </Badge>;
                 </div>;
@@ -152,11 +141,7 @@ export default function MicroSAASShowcase() {}
                       Key Features";
                     </h4>"";
                     <div className="flex flex-wrap gap-2">;
-                      {service.tags.slice(0, 4).map((tag, index) => (;
-                        <Badge";
-                          key={index}"";
-                          variant="secondary"";
-                          className="text-xs bg-zion-cyan-light text-zion-blue">;
+                      {};
                           {tag}
                         </Badge>;
                       ))}
@@ -183,8 +168,7 @@ export default function MicroSAASShowcase() {}
                       Category";
                     </h4>"";
                     <div className="flex flex-wrap gap-2">";
-                      <Badge"";
-                        variant="secondary"";
+                      <div>Broken JSX</div>
                         className="text-xs bg-zion-cyan-light text-zion-blue">;
                         {service.category}
                       </Badge>;
@@ -197,21 +181,18 @@ export default function MicroSAASShowcase() {}
                       Ready to get started?";
                     </div>"";
                     <div className="flex flex-col gap-2">";
-                      <a"";
-                        href="tel:+13024640950"";
+                      <div>Broken JSX</div>
                         className="flex items-center justify-center gap-2 text-zion-cyan hover:text-zion-cyan-dark transition-colors font-medium"">"";
                         <Phone className="w-4 h-4" />;
                         +1 302 464 0950;
                       </a>";
-                      <a"";
-                        href="mailto:kleber@ziontechgroup.com"";
+                      <div>Broken JSX</div>
                         className="flex items-center justify-center gap-2 text-zion-cyan hover:text-zion-cyan-dark transition-colors font-medium"">"";
                         <Mail className="w-4 h-4" />;
                         kleber@ziontechgroup.com;
                       </a>;
                     </div>";
-                    <Link"";
-                      to="/contact"";
+                    <div>Broken JSX</div>
                       className="inline-flex items-center gap-2 text-sm text-zion-purple hover:text-zion-purple-dark transition-colors font-medium"">"";
                       Get Demo <ArrowRight className="w-4 h-4" />;
                     </Link>;
@@ -450,17 +431,14 @@ export default function MicroSAASShowcase() {}
           </p>"";
           <div className="flex flex-wrap justify-center gap-4">"";
             <Link to="/contact">";
-              <Button"";
-                size="lg"";
+              <div>Broken JSX</div>
                 className="bg-white hover:bg-gray-100 text-zion-blue font-bold"">"";
                 <Cloud className="w-4 h-4 mr-2" />;
                 Start Free Trial;
               </Button>";
             </Link>"";
             <Link to="/request-quote">";
-              <Button"";
-                size="lg"";
-                variant="outline"";
+              <div>Broken JSX</div>
                 className="border-white text-white hover:bg-white/10"">"";
                 <Target className="w-4 h-4 mr-2" />;
                 Schedule Demo;
@@ -485,10 +463,7 @@ export default function MicroSAASShowcase() {}
             </div>"";
             <div className="flex items-center gap-2">"";
               <Globe className="w-5 h-5 text-zion-cyan" />";
-              <a"";
-                href="https://ziontechgroup.com"";
-                target="_blank"";
-                rel="noopener noreferrer"";
+              <div>Broken JSX</div>
                 className="hover:text-zion-cyan transition-colors">;
                 ziontechgroup.com;
               </a>;

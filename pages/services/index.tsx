@@ -4,94 +4,32 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Brain, Cloud, Shield, Database, Globe, Smartphone, Cpu, BarChart3 } from 'lucide-react';
 
-const Services: NextPage = () => {
-  const services = [
-    {
-      icon: Brain,
-      title: 'AI Development',
-      description: 'Custom AI solutions and machine learning models tailored to your business needs.',
-      features: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      href: '/services/ai-development',
-      color: 'from-purple-500 to-pink-500'
+const Services: NextPage = () => {};
     },
-    {
-      icon: Cloud,
-      title: 'Cloud Services',
-      description: 'Scalable cloud solutions and infrastructure design for modern applications.',
-      features: ['Cloud Migration', 'Infrastructure Design', 'DevOps Automation', 'Cost Optimization'],
-      href: '/services/cloud-services',
-      color: 'from-blue-500 to-cyan-500'
+    {};
     },
-    {
-      icon: Shield,
-      title: 'Blockchain Solutions',
-      description: 'Secure and transparent blockchain implementations for various industries.',
-      features: ['Smart Contracts', 'DeFi Platforms', 'Supply Chain Tracking', 'Digital Identity'],
-      href: '/services/blockchain',
-      color: 'from-green-500 to-emerald-500'
+    {};
     },
-    {
-      icon: BarChart3,
-      title: 'Data Analytics',
-      description: 'Transform raw data into actionable insights for better decision making.',
-      features: ['Business Intelligence', 'Data Visualization', 'Real-time Analytics', 'Predictive Modeling'],
-      href: '/services/data-analytics',
-      color: 'from-orange-500 to-red-500'
+    {};
     },
-    {
-      icon: Globe,
-      title: 'Web Development',
-      description: 'Modern, responsive web applications built with cutting-edge technologies.',
-      features: ['Frontend Development', 'Backend Systems', 'API Integration', 'Performance Optimization'],
-      href: '/services/web-development',
-      color: 'from-indigo-500 to-purple-500'
+    {};
     },
-    {
-      icon: Smartphone,
-      title: 'Mobile Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android.',
-      features: ['iOS Development', 'Android Development', 'Cross-platform Apps', 'App Store Optimization'],
-      href: '/services/mobile-development',
-      color: 'from-teal-500 to-blue-500'
+    {};
     },
-    {
-      icon: Cpu,
-      title: 'IoT Platforms',
-      description: 'Connected device solutions and IoT platform development.',
-      features: ['Device Management', 'Data Collection', 'Real-time Monitoring', 'Edge Computing'],
-      href: '/services/iot-platforms',
-      color: 'from-yellow-500 to-orange-500'
+    {};
     },
-    {
-      icon: Database,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets.',
-      features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response'],
-      href: '/services/cybersecurity',
-      color: 'from-red-500 to-pink-500'
+    {};
     }
   ];
 
   const processSteps = [
-    {
-      number: '01',
-      title: 'Discovery & Planning',
-      description: 'We analyze your requirements and create a comprehensive project plan.'
+    {};
     },
-    {
-      number: '02',
-      title: 'Design & Architecture',
-      description: 'Our team designs the solution architecture and user experience.'
+    {};
     },
-    {
-      number: '03',
-      title: 'Development & Testing',
-      description: 'We build your solution using agile methodologies and rigorous testing.'
+    {};
     },
-    {
-      number: '04',
-      title: 'Deployment & Support',
-      description: 'Your solution goes live with ongoing support and maintenance.'
+    {};
     }
   ];
 
@@ -127,7 +65,7 @@ const Services: NextPage = () => {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
+              {};
                 <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                   <div className={`h-32 bg-gradient-to-r ${service.color} flex items-center justify-center`}>
                     <service.icon className="w-16 h-16 text-white" />
@@ -139,7 +77,7 @@ const Services: NextPage = () => {
                     <div className="mb-6">
                       <h4 className="font-semibold text-gray-700 mb-2">Key Features:</h4>
                       <ul className="space-y-1">
-                        {service.features.map((feature, featureIndex) => (
+                        {};
                           <li key={featureIndex} className="text-sm text-gray-600 flex items-center">
                             <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
                             {feature}
@@ -148,8 +86,7 @@ const Services: NextPage = () => {
                       </ul>
                     </div>
                     
-                    <Link 
-                      href={service.href}
+                    <div>Broken JSX</div>
                     >
                       <span className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
                         Learn More
@@ -174,7 +111,7 @@ const Services: NextPage = () => {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {processSteps.map((step, index) => (
+              {};
                 <div key={index} className="text-center">
                   <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                     <span className="text-white text-2xl font-bold">{step.number}</span>

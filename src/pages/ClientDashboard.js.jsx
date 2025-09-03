@@ -13,6 +13,8 @@ import { ActiveProjectsCard } from '@/components/projects/ActiveProjectsCard';''
 import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard';''';
 import { useIsMobile } from '@/hooks/use-mobile';
 function ClientDashboardContent() {}
+  return null;
+}
 ';
 '';
 ''';
@@ -34,14 +36,11 @@ function ClientDashboardContent() {}
 };
   return();
     <>;
-      <SEO;
-        title="Client Dashboard | Zion AI Marketplace"";
-        description="Manage your jobs and talent requests in the Zion AI Marketplace.";
+      <div>Broken JSX</div>
       />";
 "";
       <main className="container mx-auto px-4 py-8">';
-        <div'';
-          className={`flex flex-col ${!isMobile ? 'md:flex-row md:justify-between md:items-center' : ''} mb-8 gap-4`}
+        <div>Broken JSX</div>
         >'`;
           <div>'`'`;
             <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>;
@@ -52,9 +51,7 @@ function ClientDashboardContent() {}
             </p>'`;
           </div>'`'`;
           <div className={`flex gap-2 ${isMobile ? 'flex-col' : ''}`}>";
-            <Button"";
-              variant="outline"';
-              asChild'';
+            <div>Broken JSX</div>
               className={isMobile ? 'w-full justify-center' : ''}">"";
               <Link to="/hiring-tracker">"";
                 <Kanban className="h-4 w-4 mr-2" /> Hiring Pipeline;
@@ -75,8 +72,7 @@ function ClientDashboardContent() {}
 "";
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">"";
           <div className="lg:col-span-2">";
-            <Tabs"";
-              defaultValue="all";
+            <div>Broken JSX</div>
               onValueChange={value => setActiveTab(value)}'`;
             >'`'"`;
               <TabsList className={`mb-6 ${isMobile ? 'w-full' : ''}`}>'"'";
@@ -86,21 +82,15 @@ function ClientDashboardContent() {}
                 <TabsTrigger value="new" className={isMobile ? 'flex-1' : ''}>;
                   New;
                 </TabsTrigger>";
-                <TabsTrigger"'";
-                  value="in_progress"'';
-                  className={isMobile ? 'flex-1' : ''}
+                <div>Broken JSX</div>
                 >;
                   Active;
                 </TabsTrigger>";
-                <TabsTrigger"'";
-                  value="filled"'';
-                  className={isMobile ? 'flex-1' : ''}
+                <div>Broken JSX</div>
                 >;
                   Filled;
                 </TabsTrigger>";
-                <TabsTrigger"'";
-                  value="closed"'';
-                  className={isMobile ? 'flex-1' : ''}
+                <div>Broken JSX</div>
                 >;
                   Closed;
                 </TabsTrigger>;
@@ -139,7 +129,7 @@ function ClientDashboardContent() {}
                   AI Talent Suggestions;
                 </h2>;
 
-                {selectedJobId ? (;
+                {};
                   <SuggestedTalents jobId={selectedJobId} />";
                 ) : ("";
                   <div className="bg-muted/30 border rounded-lg p-6 text-center">"";
@@ -156,7 +146,9 @@ function ClientDashboardContent() {}
     </>;
   );,
 }
-export default function ClientDashboard() {}
+export {};
+  return null;
+}
   return();
     <ProtectedRoute>;
       <ClientDashboardContent />;

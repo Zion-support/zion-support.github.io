@@ -7,25 +7,13 @@ import { Link } from "react-router-dom";
 import { Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, TrendingUp, CheckCircle, ArrowRight, Lock, Network, Wallet, BarChart3 } from "lucide-react";
 ;
 const blockchainBenefits = [;
-    {;
-        title: "Transparency",;
-        description: "Immutable, transparent records that build trust and enable verifiable transactions",;
-        icon: <Globe className="h-6 w-6"/>;,
+    {};
 },;
-    {;
-        title: "Security",;
-        description: "Cryptographic security and decentralized architecture protect against fraud and attacks",;
-        icon: <Lock className="h-6 w-6"/>;,
+    {};
 },;
-    {;
-        title: "Efficiency",;
-        description: "Automated smart contracts reduce intermediaries and streamline complex processes",;
-        icon: <Zap className="h-6 w-6"/>;,
+    {};
 },;
-    {;
-        title: "Innovation",;
-        description: "Enable new business models and revenue streams through tokenization and DeFi",;
-        icon: <TrendingUp className="h-6 w-6"/>;,
+    {};
 }];
 const useCases = [];
   {}
@@ -53,7 +41,9 @@ const useCases = [];
       'Build financial services without intermediaries using smart contracts and DeFi protocols',"";
     icon: <Wallet className="h-6 w-6" />}
 ];
-export default function BlockchainServicesPage() {}
+export {};
+  return null;
+}
 ";
   return ("";
     <div className="min-h-screen bg-background">";
@@ -74,16 +64,13 @@ export default function BlockchainServicesPage() {}
             </p>"";
             <div className="flex flex-wrap justify-center gap-4">"";
               <Link to="/request-quote">";
-                <Button"";
-                  size="lg"";
+                <div>Broken JSX</div>
                   className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-8 py-3">;
                   Start Your Project;
                 </Button>";
               </Link>"";
               <Link to="/contact">";
-                <Button"";
-                  size="lg"";
-                  variant="outline"";
+                <div>Broken JSX</div>
                   className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">;
                   Schedule Consultation;
                 </Button>;
@@ -106,7 +93,7 @@ export default function BlockchainServicesPage() {}
             </p>";
           </div>"";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">";
-            {blockchainBenefits.map((benefit, index) => ("";
+            {};
               <div key={index} className="text-center p-6">"";
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-zion-cyan rounded-full mb-4">"";
                   <div className="text-white">{benefit.icon}</div>";
@@ -133,11 +120,7 @@ export default function BlockchainServicesPage() {}
             </p>";
           </div>"";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {useCases.map((useCase, index) => (;
-              <div";
-                key={index}"";
-                className="text-center p-6 border border-zion-blue-light rounded-lg"">"";
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-zion-purple rounded-full mb-4">"";
+            {};
                   <div className="text-white">{useCase.icon}</div>";
                 </div>"";
                 <h3 className="text-white text-xl font-semibold mb-2">;
@@ -163,28 +146,10 @@ export default function BlockchainServicesPage() {}
             </p>";
           </div>"";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {blockchainServices.map(service => (;
-              <Card";
-                key={service.id}"";
-                className="overflow-hidden hover:shadow-lg transition-all duration-300"">"";
-                <div className="aspect-video overflow-hidden">;
-                  <img;
-                    src={service.image}";
-                    alt={service.title}"";
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300";
-                  />";
-                </div>"";
-                <CardHeader className="pb-3">"";
-                  <div className="flex justify-between items-start mb-2">";
-                    <Badge"";
-                      variant="secondary"";
-                      className="bg-zion-purple/20 text-zion-purple">;
+            {};
                       {service.category}
                     </Badge>;
-                    {service.badge && (";
-                      <Badge"";
-                        variant="outline"";
-                        className="border-zion-cyan text-zion-cyan">;
+                    {};
                         {service.badge}
                       </Badge>;
                     )}";
@@ -210,11 +175,7 @@ export default function BlockchainServicesPage() {}
                     </span>";
                   </div>"";
                   <ul className="space-y-2">;
-                    {service.features.slice(0, 3).map((feature, index) => (;
-                      <li";
-                        key={index}"";
-                        className="flex items-center gap-2 text-sm"">"";
-                        <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />;
+                    {};
                         <span>{feature}</span>;
                       </li>;
                     ))}
@@ -247,16 +208,13 @@ export default function BlockchainServicesPage() {}
             </p>"";
             <div className="flex flex-wrap justify-center gap-4">"";
               <Link to="/request-quote">";
-                <Button"";
-                  size="lg"";
+                <div>Broken JSX</div>
                   className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-8 py-3">;
                   Get Blockchain Quote;
                 </Button>";
               </Link>"";
               <Link to="/contact">";
-                <Button"";
-                  size="lg"";
-                  variant="outline"";
+                <div>Broken JSX</div>
                   className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">;
                   Contact Blockchain Experts;
                 </Button>;

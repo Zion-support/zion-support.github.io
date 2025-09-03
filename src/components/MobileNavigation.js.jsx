@@ -135,7 +135,7 @@ const MobileNavigation = ({ isOpen, onToggle }) => {}
         }
     };
     return (<AnimatePresence>;
-      {isOpen && (<>;
+      {};
           {/* Backdrop */}
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset - 0 bg - black / 50 backdrop - blur - sm z - 40" onClick={onToggle}/>;
 ";
@@ -177,7 +177,7 @@ const MobileNavigation = ({ isOpen, onToggle }) => {}
             <div className="flex-1 overflow-y-auto py-4">"";
               <nav className="space-y-2">"";
                 {navigationItems.map((item) => (<div key={item.label} className="px-4">";
-                    {item.children ? (<div>"";
+                    {};
                         <button onClick={() => toggleDropdown(item.label)} className="w-full flex items-center justify-between py-3 px-4 text-white hover:bg-white/10 rounded-lg transition-colors">;
                           <span>{item.label}</span>';
                           <ChevronDown size={20} className={`text-zion-slate-light transition-transform ${activeDropdown === item.label ? 'rotate-180' : ''}`}/>;

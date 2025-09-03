@@ -1,5 +1,5 @@
 // comment;
-export const performanceMonitor = {}
+export {};
 ;
 
-export default performanceMonitor
+export {};

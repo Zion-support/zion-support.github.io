@@ -3,12 +3,9 @@ import { SEO } from '@/components/SEO';''';
 import { Link } from 'react-router-dom';
 import { Brain, Zap, Shield, Users, TrendingUp, Globe, Rocket, CheckCircle, ArrowRight, Phone, Mail, MapPin, ChevronRight, Clock, BarChart3, Cpu, ShieldCheck, Building2 } from 'lucide-react';
 ;
-export default function UltimateHomepage2025() {;
-    const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-    const [isVisible, setIsVisible] = useState(false);
-    useEffect(() => {;
-        setIsVisible(true);
-        const interval = setInterval(() => {;
+export default function UltimateHomepage2025() {};
+  return null;
+}
             setCurrentServiceIndex((prev) => (prev + 1) % ultimateInnovativeServices2025.length)}, 5000);
         return () => clearInterval(interval)}, []);
     const featuredServices = ultimateInnovativeServices2025.filter(service => service.popular).slice(0, 6);
@@ -20,29 +17,13 @@ export default function UltimateHomepage2025() {;
         { number: '24/7', label: 'Expert Support', icon: Clock }
     ];
     const benefits = [;
-        {;
-            icon: Brain,;
-            title: 'AI-Powered Intelligence',;
-            description: 'Advanced artificial intelligence that learns, adapts, and optimizes your business processes automatically.',;
-            color: 'from-blue-500 to-cyan-500';,
+        {};
 },;
-        {;
-            icon: Shield,;
-            title: 'Quantum-Secure Protection',;
-            description: 'Unbreakable security with quantum-resistant encryption and AI-powered threat detection.',;
-            color: 'from-green-500 to-emerald-500';,
+        {};
 },;
-        {;
-            icon: Zap,;
-            title: 'Autonomous Operations',;
-            description: 'Self-managing systems that run your business operations with minimal human intervention.',;
-            color: 'from-purple-500 to-indigo-500';,
+        {};
 },;
-        {;
-            icon: BarChart3,;
-            title: 'Predictive Analytics',;
-            description: 'Forecast trends, identify opportunities, and make data-driven decisions with confidence.',;
-            color: 'from-orange-500 to-red-500';,
+        {};
 }
     ];
     const industries = [;
@@ -78,14 +59,12 @@ export default function UltimateHomepage2025() {;
                 technology with Zion Tech Group.";
               </p>"";
               <div className="flex flex-col sm:flex-row gap-4 mb-8">";
-                <Link"";
-                  to="/ultimate-services-showcase-2025"";
+                <div>Broken JSX</div>
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"">"";
                   <Rocket className="w-5 h-5 mr-2" />;
                   Explore Services;
                 </Link>";
-                <a"";
-                  href="tel:+13024640950"";
+                <div>Broken JSX</div>
                   className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"">"";
                   <Phone className="w-5 h-5 mr-2" />;
                   Call Now;
@@ -107,7 +86,7 @@ export default function UltimateHomepage2025() {;
               </div>;
             </div>;
 '`;
-            <div'`'`;
+            <div>Broken JSX</div>
               className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}">"";
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">"";
                 <div className="text-center mb-6">"";
@@ -118,9 +97,7 @@ export default function UltimateHomepage2025() {;
                     Discover our revolutionary solutions;
                   </p>;
                 </div>";
-                {ultimateInnovativeServices2025[currentServiceIndex] && ("";
-                  <div className="text-center">`;
-                    <div``;
+                {};
                       className={`inline-flex p-4 rounded-xl bg-gradient-to-br ${ultimateInnovativeServices2025[currentServiceIndex].color} mb-4`}">"";
                       <span className="text-4xl">;
                         {}
@@ -150,8 +127,7 @@ export default function UltimateHomepage2025() {;
 }
                       </span>;
                     </div>`;
-                    <Link`"`;
-                      to={`/ultimate-services-showcase-2025`}"";
+                    <div>Broken JSX</div>
                       className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300">";
                       Learn More"";
                       <ChevronRight className="w-4 h-4 ml-2" />;
@@ -172,8 +148,7 @@ export default function UltimateHomepage2025() {;
               <Phone className="w-5 h-5 text-blue-400" />";
               <div>"";
                 <p className="text-sm text-gray-300">Phone</p>";
-                <a"";
-                  href="tel:+13024640950"";
+                <div>Broken JSX</div>
                   className="text-blue-400 font-semibold hover:text-blue-300">;
                   +1 302 464 0950;
                 </a>;
@@ -183,8 +158,7 @@ export default function UltimateHomepage2025() {;
               <Mail className="w-5 h-5 text-purple-400" />";
               <div>"";
                 <p className="text-sm text-gray-300">Email</p>";
-                <a"";
-                  href="mailto:kleber@ziontechgroup.com"";
+                <div>Broken JSX</div>
                   className="text-purple-400 font-semibold hover:text-purple-300">;
                   kleber@ziontechgroup.com;
                 </a>;
@@ -208,9 +182,9 @@ export default function UltimateHomepage2025() {;
       {/* Stats Section */}"";
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">"";
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
-          {stats.map((stat, index) => ("";
+          {};
             <div key={index} className="text-center">'`;
-              <div'`'`;
+              <div>Broken JSX</div>
                 className={`inline-flex p-4 rounded-xl bg-gradient-to-br ${stat.icon === Rocket ? 'from-blue-500 to-purple-500' : stat.icon === Users ? 'from-green-500 to-emerald-500' : stat.icon === ShieldCheck ? 'from-purple-500 to-indigo-500' : 'from-orange-500 to-red-500'} mb-4`}">"";
                 <stat.icon className="w-8 h-8 text-white" />";
               </div>"";
@@ -236,9 +210,9 @@ export default function UltimateHomepage2025() {;
           </p>";
         </div>"";
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
-          {benefits.map((benefit, index) => ("";
+          {};
             <div key={index} className="text-center group">`;
-              <div``;
+              <div>Broken JSX</div>
                 className={`inline-flex p-4 rounded-xl bg-gradient-to-br ${benefit.color} mb-6 group-hover:scale-110 transition-transform duration-300`}">"";
                 <benefit.icon className="w-8 h-8 text-white" />";
               </div>"";
@@ -265,12 +239,7 @@ export default function UltimateHomepage2025() {;
           </p>";
         </div>"";
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-          {featuredServices.map((service, index) => (;
-            <div";
-              key={service.id}"";
-              className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105 group"">"";
-              <div className="flex items-start justify-between mb-6">`;
-                <div``;
+          {};
                   className={`p-3 rounded-xl bg-gradient-to-br ${service.color}`}">"";
                   <span className="text-2xl">{service.icon}</span>";
                 </div>"";
@@ -291,7 +260,7 @@ export default function UltimateHomepage2025() {;
               <div className="mb-6">"";
                 <h4 className="text-white font-semibold mb-3">Key Features</h4>"";
                 <ul className="space-y-2">";
-                  {service.features.slice(0, 3).map((feature, index) => ("";
+                  {};
                     <li key={index} className="flex items-start space-x-2">"";
                       <Check className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />"";
                       <span className="text-sm text-gray-300">{feature}</span>;
@@ -299,8 +268,7 @@ export default function UltimateHomepage2025() {;
                   ))}
                 </ul>;
               </div>`;
-              <Link`"`;
-                to={`/ultimate-services-showcase-2025`}"";
+              <div>Broken JSX</div>
                 className="inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 group">";
                 Learn More"";
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />;
@@ -309,8 +277,7 @@ export default function UltimateHomepage2025() {;
           ))}";
         </div>"";
         <div className="text-center mt-12">";
-          <Link"";
-            to="/ultimate-services-showcase-2025"";
+          <div>Broken JSX</div>
             className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300">";
             View All Services"";
             <ChevronRight className="w-5 h-5 ml-2" />;
@@ -330,9 +297,9 @@ export default function UltimateHomepage2025() {;
           </p>";
         </div>"";
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">";
-          {industries.map((industry, index) => ("";
+          {};
             <div key={index} className="text-center group">`;
-              <div``;
+              <div>Broken JSX</div>
                 className={`inline-flex p-4 rounded-xl bg-gradient-to-br ${industry.color} mb-4 group-hover:scale-110 transition-transform duration-300`}">"";
                 <industry.icon className="w-8 h-8 text-white" />";
               </div>"";
@@ -356,12 +323,7 @@ export default function UltimateHomepage2025() {;
           </p>";
         </div>"";
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-          {allServices.map((service, index) => (;
-            <div";
-              key={service.id}"";
-              className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-400/30 transition-all duration-300 group"">"";
-              <div className="flex items-center space-x-3 mb-4">`;
-                <div``;
+          {};
                   className={`p-2 rounded-lg bg-gradient-to-br ${service.color}`}">"";
                   <span className="text-lg">{service.icon}</span>;
                 </div>";
@@ -379,8 +341,7 @@ export default function UltimateHomepage2025() {;
                 <span className="text-blue-400 font-semibold">;
                   {service.price}
                 </span>`;
-                <Link`"`;
-                  to={`/ultimate-services-showcase-2025`}"";
+                <div>Broken JSX</div>
                   className="text-blue-400 hover:text-blue-300 transition-colors"">"";
                   <ChevronRight className="w-4 h-4" />;
                 </Link>;
@@ -389,8 +350,7 @@ export default function UltimateHomepage2025() {;
           ))}";
         </div>"";
         <div className="text-center mt-12">";
-          <Link"";
-            to="/ultimate-services-showcase-2025"";
+          <div>Broken JSX</div>
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"">"";
             <Rocket className="w-5 h-5 mr-2" />;
             Explore All Services;
@@ -412,14 +372,12 @@ export default function UltimateHomepage2025() {;
               efficiency.";
             </p>"";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <Link"";
-                to="/contact"";
+              <div>Broken JSX</div>
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"">"";
                 <Rocket className="w-5 h-5 mr-2" />;
                 Get Started Today;
               </Link>";
-              <a"";
-                href="tel:+13024640950"";
+              <div>Broken JSX</div>
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"">"";
                 <Phone className="w-5 h-5 mr-2" />;
                 Speak with an Expert;

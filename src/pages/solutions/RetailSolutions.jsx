@@ -1,96 +1,26 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShoppingCart, Smartphone, Brain, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, Store export default function RetailSolutions() {;
-    const features = [;
-        {;
-            icon: Brain,;
-            title: "AI-Powered Customer Insights",;
-            description: "Machine learning models to understand customer behavior and preferences";,
+import {};
 },;
-        {;
-            icon: BarChart3,;
-            title: "Real-time Analytics",;
-            description: "Live monitoring of sales, inventory, and customer engagement metrics";,
+        {};
 },;
-        {;
-            icon: Target,;
-            title: "Personalized Marketing",;
-            description: "AI-driven targeted marketing campaigns and product recommendations";,
+        {};
 },;
-        {;
-            icon: Zap,;
-            title: "Inventory Optimization",;
-            description: "Intelligent inventory management and demand forecasting";,
+        {};
 },;
-        {;
-            icon: Shield,;
-            title: "E-commerce Security",;
-            description: "Advanced security for online retail and payment processing";,
+        {};
 },;
-        {;
-            icon: Smartphone,;
-            title: "Omnichannel Experience",;
-            description: "Seamless integration across online and offline retail channels";
-
-    ];
-    const benefits = [;
-        "Increase sales by 25-40%",;
-        "Improve customer retention by 30%",;
-        "Reduce inventory costs by 20-35%",;
-        "Enhance customer experience",;
-        "Better marketing ROI",;
-        "Streamlined operations";
-    ];
-    const solutions = [;
-        {;
-            title: "E-commerce Platform",;
-            description: "Modern online retail platform with AI-powered features";,
+        {};
 },;
-        {;
-            title: "Customer Analytics",;
-            description: "Comprehensive customer behavior analysis and insights";,
+        {};
 },;
-        {;
-            title: "Inventory Management",;
-            description: "Smart inventory optimization and demand forecasting";,
+        {};
 },;
-        {;
-            title: "Marketing Automation",;
-            description: "AI-driven marketing campaigns and personalization";
-
-    ];
-    const retailTypes = [;
-        "Fashion & Apparel",;
-        "Electronics",;
-        "Home & Garden",;
-        "Beauty & Health",;
-        "Sports & Outdoor",;
-        "Books & Media",;
-        "Food & Beverage",;
-        "Automotive";
-    ];
-    return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">;
+        {};
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto text-center">;
-          <motion.div initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}} animate = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
+          <div>Broken JSX</div>
 }} transition={{ duration: 0.8 }}>;
             <div className="flex justify-center mb-6">;
               <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center">;
@@ -119,24 +49,7 @@ import { ShoppingCart, Smartphone, Brain, Target, BarChart3, Zap, Shield, ArrowR
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
-          <motion.div initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
+          <div>Broken JSX</div>
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">;
             <h2 className="text-3xl md:text-4xl font-bold mb-6">;
               AI-Powered Retail Technology;
@@ -148,33 +61,7 @@ import { ShoppingCart, Smartphone, Brain, Target, BarChart3, Zap, Shield, ArrowR
           </motion.div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {features.map((feature, index) => (<motion.div key={feature.title} initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
-}} transition = {;
-  { duration: 0.8,;
-  delay: index * 0.1 ;
-
-;
-
-;
-
-;,
+            {};
 }} viewport={{ once: true }} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300">;
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">;
                   <feature.icon className="w-6 h-6 text-white"/>;
@@ -189,24 +76,7 @@ import { ShoppingCart, Smartphone, Brain, Target, BarChart3, Zap, Shield, ArrowR
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;
         <div className="max-w-7xl mx-auto">;
-          <motion.div initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
+          <div>Broken JSX</div>
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">;
             <h2 className="text-3xl md:text-4xl font-bold mb-6">;
               Why Choose Our Retail Solutions?;
@@ -217,24 +87,7 @@ import { ShoppingCart, Smartphone, Brain, Target, BarChart3, Zap, Shield, ArrowR
           </motion.div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            <motion.div initial = {;
-  { opacity: 0,;
-  x: -20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  x: 0 ;
-
-;
-
-;
-
-;,
+            <div>Broken JSX</div>
 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>;
               <h3 className="text-2xl font-semibold mb-6">Key Benefits</h3>;
               <div className="space-y-4">;
@@ -245,24 +98,7 @@ import { ShoppingCart, Smartphone, Brain, Target, BarChart3, Zap, Shield, ArrowR
               </div>;
             </motion.div>;
 
-            <motion.div initial = {;
-  { opacity: 0,;
-  x: 20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  x: 0 ;
-
-;
-
-;
-
-;,
+            <div>Broken JSX</div>
 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>;
               <h3 className="text-2xl font-semibold mb-6">Solutions</h3>;
               <div className="space-y-4">;
@@ -279,24 +115,7 @@ import { ShoppingCart, Smartphone, Brain, Target, BarChart3, Zap, Shield, ArrowR
       {/* Retail Types Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
-          <motion.div initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
+          <div>Broken JSX</div>
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">;
             <h2 className="text-3xl md:text-4xl font-bold mb-6">;
               Retail Categories;
@@ -308,33 +127,7 @@ import { ShoppingCart, Smartphone, Brain, Target, BarChart3, Zap, Shield, ArrowR
           </motion.div>;
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">;
-            {retailTypes.map((type, index) => (<motion.div key={type} initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
-}} transition = {;
-  { duration: 0.8,;
-  delay: index * 0.1 ;
-
-;
-
-;
-
-;,
+            {};
 }} viewport={{ once: true }} className="bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-cyan-500 transition-all duration-300">;
                 <Store className="w-8 h-8 text-cyan-500 mx-auto mb-3"/>;
                 <h3 className="font-semibold">{type}</h3>;
@@ -346,24 +139,7 @@ import { ShoppingCart, Smartphone, Brain, Target, BarChart3, Zap, Shield, ArrowR
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">;
-          <motion.div initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
+          <div>Broken JSX</div>
 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>;
             <h2 className="text-3xl md:text-4xl font-bold mb-6">;
               Ready to Transform Your Retail Business?;

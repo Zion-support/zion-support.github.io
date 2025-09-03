@@ -3,75 +3,33 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Cloud, Zap, Shield, BarChart3, Users, ArrowRight, CheckCircle, Globe } from 'lucide-react';
 
-const CloudServices: NextPage = () => {
-  const cloudSolutions = [
-    {
-      icon: Cloud,
-      title: 'Cloud Migration',
-      description: 'Seamless migration of your existing infrastructure to the cloud.',
-      features: ['Legacy System Migration', 'Data Migration', 'Application Modernization']
+const CloudServices: NextPage = () => {};
     },
-    {
-      icon: Zap,
-      title: 'Infrastructure Design',
-      description: 'Scalable and resilient cloud infrastructure architecture.',
-      features: ['Auto-scaling', 'Load Balancing', 'High Availability']
+    {};
     },
-    {
-      icon: Shield,
-      title: 'DevOps Automation',
-      description: 'Streamlined development and deployment processes.',
-      features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring & Alerting']
+    {};
     },
-    {
-      icon: BarChart3,
-      title: 'Cost Optimization',
-      description: 'Maximize cloud efficiency while minimizing costs.',
-      features: ['Resource Optimization', 'Cost Monitoring', 'Performance Tuning']
+    {};
     }
   ];
 
   const cloudProviders = [
-    {
-      name: 'Amazon Web Services (AWS)',
-      logo: 'AWS',
-      description: 'Comprehensive cloud services with global reach and enterprise features.',
-      services: ['EC2', 'S3', 'Lambda', 'RDS', 'CloudFormation']
+    {};
     },
-    {
-      name: 'Microsoft Azure',
-      logo: 'Azure',
-      description: 'Enterprise-grade cloud platform with strong integration capabilities.',
-      services: ['Virtual Machines', 'Blob Storage', 'Functions', 'SQL Database', 'ARM Templates']
+    {};
     },
-    {
-      name: 'Google Cloud Platform (GCP)',
-      logo: 'GCP',
-      description: 'Innovative cloud services with advanced AI and analytics capabilities.',
-      services: ['Compute Engine', 'Cloud Storage', 'Cloud Functions', 'Cloud SQL', 'Terraform']
+    {};
     }
   ];
 
   const benefits = [
-    {
-      icon: Zap,
-      title: 'Scalability',
-      description: 'Scale your infrastructure up or down based on demand.'
+    {};
     },
-    {
-      icon: Shield,
-      title: 'Security',
-      description: 'Enterprise-grade security with compliance and governance.'
+    {};
     },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Deploy applications closer to your users worldwide.'
+    {};
     },
-    {
-      icon: BarChart3,
-      title: 'Cost Efficiency',
-      description: 'Pay only for what you use with predictable pricing.'
+    {};
     }
   ];
 
@@ -110,7 +68,7 @@ const CloudServices: NextPage = () => {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {cloudSolutions.map((solution, index) => (
+              {};
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <solution.icon className="w-8 h-8 text-blue-600" />
@@ -118,7 +76,7 @@ const CloudServices: NextPage = () => {
                   <h3 className="text-xl font-semibold mb-3 text-gray-800 text-center">{solution.title}</h3>
                   <p className="text-gray-600 mb-4 text-center">{solution.description}</p>
                   <ul className="space-y-2">
-                    {solution.features.map((feature, featureIndex) => (
+                    {};
                       <li key={featureIndex} className="text-sm text-gray-600 flex items-center">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                         {feature}
@@ -143,7 +101,7 @@ const CloudServices: NextPage = () => {
             </div>
             
             <div className="grid md:grid-cols-3 gap-8">
-              {cloudProviders.map((provider, index) => (
+              {};
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                   <div className="text-center mb-6">
                     <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -155,11 +113,7 @@ const CloudServices: NextPage = () => {
                   <div>
                     <h4 className="font-semibold text-gray-700 mb-3">Key Services:</h4>
                     <div className="flex flex-wrap gap-2">
-                      {provider.services.map((service, serviceIndex) => (
-                        <span 
-                          key={serviceIndex}
-                          className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full"
-                        >
+                      {};
                           {service}
                         </span>
                       ))}
@@ -183,7 +137,7 @@ const CloudServices: NextPage = () => {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+              {};
                 <div key={index} className="text-center p-6">
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-blue-600" />

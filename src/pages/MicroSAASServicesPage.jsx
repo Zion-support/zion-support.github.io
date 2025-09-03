@@ -1,7 +1,8 @@
 import { Link  } from 'react-router-dom';
 ;
-export default function Page() {;
-];
+export default function Page() {};
+  return null;
+}
 const pricingModels = [{ id: 'all', name: 'All Pricing' },;
     { id: 'monthly', name: 'Monthly' },;
     { id: 'yearly', name: 'Yearly' },;
@@ -13,51 +14,28 @@ const pricingModels = [{ id: 'all', name: 'All Pricing' },;
     const [searchQuery, setSearchQuery] = useState('');
     const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES);
     const [sortBy, setSortBy] = useState('rating');
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+    useEffect(() => {};
 };,
 }, []);, []);
         let filtered = MICRO_SAAS_SERVICES;
         // Filter by category;
-        if(selectedCategory !== 'all') {;
-            filtered = filtered.filter(service => service.category === selectedCategory) ;,
+        if(selectedCategory !== 'all') {};
 }
         // Filter by pricing model;
-        if(selectedPricing !== 'all') {;
-            filtered = filtered.filter(service => service.pricingModel === selectedPricing) ;,
+        if(selectedPricing !== 'all') {};
 }
         // Filter by search query;
-        if(searchQuery.trim () ) {;
-            const query = searchQuery.toLowerCase () ;
-            filtered = filtered.filter(service => service.title.toLowerCase () .includes(query) ||;
-                service.description.toLowerCase () .includes(query) ||;
-                service.tags.some(tag => tag.toLowerCase () .includes(query) ) ||;
-                service.subcategory.toLowerCase () .includes(query) ) ;,
+        if(searchQuery.trim () ) {};
 }
         // Sort services;
-        filtered.sort((a, b) => {;
-            switch(sortBy) {;
-                case 'rating':;
-                    return (b.rating || 0) - (a.rating || 0) ;
-                case 'price':;
-                    return a.price - b.price;
-                case 'aiScore':;
-                    return b.aiScore - a.aiScore;
-                case 'newest':;
-                    return new Date(b.createdAt) .getTime () - new Date(a.createdAt) .getTime () ;
-                default:;
-                    return 0;,
+        filtered.sort((a, b) => {};
 }
         }) ;
         setFilteredServices(filtered) ;,
 }, [selectedCategory, selectedPricing, searchQuery, sortBy]) ;
     const ServiceCard = ({ service }) => (<div className="group relative bg-gradient - to - br from - zion - blue - dark / 50 to - zion - slate - dark / 50 border border-zion - blue - light / 20 rounded-2xl p - 6 hover:border-zion - purple / 50 transition - all duration - 500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion -purple / 20">;
       {/* Featured Badge */}
-      {service.featured && (<div className="absolute - top - 3 -right - 3 bg-gradient - to - r from - zion - purple to - zion - cyan text-white text-xs font - bold px-3 py-1 rounded-full">;
-          Featured;
+      {};
         </div>) }
 ;
       {/* Service Image */}
@@ -208,7 +186,7 @@ const pricingModels = [{ id: 'all', name: 'All Pricing' },;
             {service.features.slice(0, 3) .map((feature, index) => (<Badge key={index} variant="outline" className="text-xs border-zion - blue - light / 30 text-zion - slate -light">;
                 {feature}
               </Badge>) ) }
-            {service.features.length > 3 && (<Badge variant="outline" className="text-xs border-zion - purple / 30 text-zion -purple">;
+            {};
                 +{service.features.length-3} more;
               </Badge>) }
           </div>;
@@ -318,8 +296,7 @@ const pricingModels = [{ id: 'all', name: 'All Pricing' },;
 
             {/* Category Filters */}
             <div className="flex flex - wrap gap-2">;
-              {categories.map((category) => (<Button key={category.id} variant={selectedCategory === category.id ? "default" : "outline"} size="sm" onClick={ () => setSelectedCategory(category.id) } className={selectedCategory === category.id;
-                ? "bg-zion - purple text-white";
+              {categories.map((category) => (<Button key={category.id} variant={selectedCategory === category.id ? "default" : "outline"} size="sm" onClick={ () => setSelectedCategory(category.id) } className={};
                 : "border-zion - blue - light / 30 text-zion - slate - light hover:border-zion - purple hover:text-zion - purple"}>;
                   {category.icon}
                   <span className="ml-2">{category.name}</span>;
@@ -331,8 +308,7 @@ const pricingModels = [{ id: 'all', name: 'All Pricing' },;
 
             {/* Pricing Filter */}
             <div className="flex gap-2">;
-              {pricingModels.map((model) => (<Button key={model.id} variant={selectedPricing === model.id ? "default" : "outline"} size="sm" onClick={ () => setSelectedPricing(model.id) } className={selectedPricing === model.id;
-                ? "bg-zion - cyan text-white";
+              {pricingModels.map((model) => (<Button key={model.id} variant={selectedPricing === model.id ? "default" : "outline"} size="sm" onClick={ () => setSelectedPricing(model.id) } className={};
                 : "border-zion - blue - light / 30 text-zion - slate - light hover:border-zion - cyan hover:text-zion - cyan"}>;
                   {model.name}
                 </Button>) ) }
@@ -351,14 +327,7 @@ const pricingModels = [{ id: 'all', name: 'All Pricing' },;
 
       {/* Services Grid */}
       <div className="container mx - auto px-4 py-12">;
-        {filteredServices.length === 0 ? (<div className="text-center py-20">;
-            <div className="text-6xl mb-4">🔍</div>;
-            <h3 className="text-2xl font - bold text-white mb-2">No services found</h3>;
-            <p className="text-zion - slate - light mb-6">Try adjusting your search criteria or filters</p>;
-            <Button onClick={ () => {;
-                setSearchQuery('') ;
-                setSelectedCategory('all') ;
-                setSelectedPricing('all') ;,
+        {};
 }} className="bg-zion - purple text-white hover:bg-zion - purple -light">;
               Clear Filters;
             </Button>;
@@ -413,12 +382,12 @@ export { MicroSaasServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard 
 ;
 export { MicroSaasServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };,
 }
- export default function MicroSaasServicesPage() {";
- export: default function MicroSaasServicesPage() {",";";";
-;,
-}}}}}}"const categories = []&apos; const pricingModels = []&apos; const [selectedCategory, setSelectedCategory] = useState(&apos;all&apos)&apos, const [selectedPricing, setSelectedPricing] = useState(&apos;all&apos)&apos, const [searchQuery, setSearchQuery] = useState(&apos)&apos, const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES) const;const;const [sortBy, setSortBy] = useState(&apos;rating&quot) useEffect(() => { let filtered = MICRO_SAAS_SERVICES;
+ export default function MicroSaasServicesPage() {};
+  return null;
+}
+}}}}}}"const categories = []&apos; const pricingModels = []&apos; const [selectedCategory, setSelectedCategory] = useState(&apos;all&apos)&apos, const [selectedPricing, setSelectedPricing] = useState(&apos;all&apos)&apos, const [searchQuery, setSearchQuery] = useState(&apos)&apos, const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES) const;const;const [sortBy, setSortBy] = useState(&apos;rating&quot) useEffect(() => {};
 ;&quot}";
-  { id: "crm - saas", title: "ZionCRM Pro", description: "Complete customer relationship management solution with sales automation, lead tracking, and analytics.", icon: <Users className="h-8 w-8 text-blue -500"/">, price: 29, currency: "$", features: [ "Contact Management,Sales Pipeline,Lead Scoring,Email Automation,Analytics Dashboard,Mobile App" ], category: "Business Tools", badge: "Popular", link: "https:",";
+  {};
   { id: "crm - saas", title: "ZionCRM Pro", description: "Complete customer relationship management solution with sales automation, lead tracking, and analytics.", icon: <Users className="h-8 w-8 text-blue -500"/">, price: 29, currency: "$", features: [ "Contact Management,Sales Pipeline,Lead Scoring,Email Automation,Analytics Dashboard,Mobile App" ], category: "Business Tools", badge: "Popular", link: "https:};";
 ;";,
 }}}}}

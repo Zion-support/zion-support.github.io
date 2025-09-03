@@ -1,140 +1,42 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ;
-  Mail, ;
-  Bot, ;
-  TrendingUp, ;
-  Users, ;
-  BarChart3, ;
-  Zap, ;
-  Shield, ;
-  CheckCircle,;
-  ArrowRight,;
-  Star,;
-  Award,;
-  Globe,;
-  Smartphone,;
-  Clock,;
-  Target,;
-  Send,;
-  Eye,;
-  MousePointer,;
-  Palette,;
-  Database,;
-  Cpu,;
-  Network,;
-  Lock,;
-  Phone,;
-  MapPin;,
+import {};
 } from 'lucide-react';
 ;
-const AIAutonomousEmailMarketingPlatform = () => {;
+const AIAutonomousEmailMarketingPlatform = () => {};
+};
   const features = [;
-    {;
-      icon: <Bot className="w-6 h-6" />,;
-      title: "AI-Powered Content Generation",;
-      description: "Automatically create personalized email content using advanced AI that understands your brand voice and audience preferences.";,
+    {};
 },;
-    {;
-      icon: <Target className="w-6 h-6" />,;
-      title: "Intelligent Audience Segmentation",;
-      description: "AI-driven segmentation that automatically categorizes subscribers based on behavior, preferences, and engagement patterns.";,
+    {};
 },;
-    {;
-      icon: <TrendingUp className="w-6 h-6" />,;
-      title: "Predictive Send Time Optimization",;
-      description: "Machine learning algorithms determine the optimal send times for each subscriber to maximize open and click rates.";,
+    {};
 },;
-    {;
-      icon: <BarChart3 className="w-6 h-6" />,;
-      title: "Real-Time Performance Analytics",;
-      description: "Advanced analytics dashboard with predictive insights, A/B testing automation, and ROI optimization recommendations.";,
+    {};
 },;
-    {;
-      icon: <Zap className="w-6 h-6" />,;
-      title: "Automated Campaign Orchestration",;
-      description: "Set up complex multi-touch email sequences that adapt in real-time based on subscriber behavior and engagement.";,
+    {};
 },;
-    {;
-      icon: <Shield className="w-6 h-6" />,;
-      title: "Compliance & Deliverability",;
-      description: "Built-in GDPR, CAN-SPAM, and CASL compliance with advanced deliverability monitoring and optimization.";,
+    {};
 }
   ];
 ;
   const pricingTiers = [;
-    {;
-      name: "Starter",;
-      price: "$99",;
-      period: "/month",;
-      description: "Perfect for small businesses",;
-      features: [;
-        "Up to 10,000 subscribers",;
-        "AI content generation",;
-        "Basic segmentation",;
-        "Email templates",;
-        "Basic analytics",;
-        "Email support";
-      ],;
-      cta: "Start Free Trial",;
-      popular: false;,
+    {};
 },;
-    {;
-      name: "Professional",;
-      price: "$299",;
-      period: "/month",;
-      description: "Ideal for growing businesses",;
-      features: [;
-        "Up to 50,000 subscribers",;
-        "Advanced AI features",;
-        "Predictive analytics",;
-        "A/B testing automation",;
-        "Advanced segmentation",;
-        "Priority support",;
-        "API access";
-      ],;
-      cta: "Start Free Trial",;
-      popular: true;,
+    {};
 },;
-    {;
-      name: "Enterprise",;
-      price: "$799",;
-      period: "/month",;
-      description: "For large organizations",;
-      features: [;
-        "Unlimited subscribers",;
-        "Custom AI models",;
-        "White-label options",;
-        "Advanced integrations",;
-        "Dedicated account manager",;
-        "24/7 phone support",;
-        "Custom reporting";
-      ],;
-      cta: "Contact Sales",;
-      popular: false;,
+    {};
 }
   ];
 ;
   const benefits = [;
-    {;
-      icon: <TrendingUp className="w-8 h-8 text-green-500" />,;
-      title: "40% Higher Open Rates",;
-      description: "AI-optimized send times and personalized content significantly improve engagement.";,
+    {};
 },;
-    {;
-      icon: <Clock className="w-8 h-8 text-blue-500" />,;
-      title: "80% Time Savings",;
-      description: "Automated campaign creation and management reduces manual work by 80%.";,
+    {};
 },;
-    {;
-      icon: <Target className="w-8 h-8 text-purple-500" />,;
-      title: "3x Better Targeting",;
-      description: "Advanced segmentation and personalization improve campaign effectiveness.";,
+    {};
 },;
-    {;
-      icon: <BarChart3 className="w-8 h-8 text-orange-500" />,;
-      title: "25% Higher ROI",;
-      description: "Predictive analytics and optimization recommendations boost campaign performance.";,
+    {};
 }
   ];
 ;
@@ -143,10 +45,7 @@ const AIAutonomousEmailMarketingPlatform = () => {;
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div>Broken JSX</div>
             className="text-center">;
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">;
               <Bot className="w-4 h-4 mr-2" />;
@@ -176,10 +75,7 @@ const AIAutonomousEmailMarketingPlatform = () => {;
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div>Broken JSX</div>
             className="text-center mb-16">;
             <h2 className="text-4xl font-bold text-white mb-4">;
               Powerful AI Features;
@@ -190,14 +86,7 @@ const AIAutonomousEmailMarketingPlatform = () => {;
           </motion.div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {features.map((feature, index) => (;
-              <motion.div;
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-colors">;
-                <div className="text-blue-400 mb-4">;
+            {};
                   {feature.icon}
                 </div>;
                 <h3 className="text-xl font-semibold text-white mb-3">;
@@ -215,10 +104,7 @@ const AIAutonomousEmailMarketingPlatform = () => {;
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;
         <div className="max-w-7xl mx-auto">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div>Broken JSX</div>
             className="text-center mb-16">;
             <h2 className="text-4xl font-bold text-white mb-4">;
               Proven Results;
@@ -229,14 +115,7 @@ const AIAutonomousEmailMarketingPlatform = () => {;
           </motion.div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {benefits.map((benefit, index) => (;
-              <motion.div;
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="text-center">;
-                <div className="flex justify-center mb-4">;
+            {};
                   {benefit.icon}
                 </div>;
                 <h3 className="text-2xl font-bold text-white mb-2">;
@@ -254,10 +133,7 @@ const AIAutonomousEmailMarketingPlatform = () => {;
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div>Broken JSX</div>
             className="text-center mb-16">;
             <h2 className="text-4xl font-bold text-white mb-4">;
               Simple, Transparent Pricing;
@@ -268,24 +144,7 @@ const AIAutonomousEmailMarketingPlatform = () => {;
           </motion.div>;
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {pricingTiers.map((tier, index) => (;
-              <motion.div;
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 relative ${;
-                  tier.popular ;
-                    ? 'border-blue-500 ring-2 ring-blue-500/20' ;
-                    : 'border-slate-700';,
-}`}
-              >;
-                {tier.popular && (;
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
-                    <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">;
-                      Most Popular;
-                    </span>;
-                  </div>;
+            {};
                 )}
                 ;
                 <div className="text-center mb-8">;
@@ -306,7 +165,7 @@ const AIAutonomousEmailMarketingPlatform = () => {;
                 </div>;
 
                 <ul className="space-y-4 mb-8">;
-                  {tier.features.map((feature, featureIndex) => (;
+                  {};
                     <li key={featureIndex} className="flex items-center">;
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />;
                       <span className="text-gray-300">{feature}</span>;
@@ -314,10 +173,7 @@ const AIAutonomousEmailMarketingPlatform = () => {;
                   ))}
                 </ul>;
 
-                <button className={`w-full py-3 rounded-lg font-semibold transition-colors ${;
-                  tier.popular;
-                    ? 'bg-blue-600 hover:bg-blue-700 text-white';
-                    : 'bg-slate-700 hover:bg-slate-600 text-white';,
+                <div>Broken JSX</div>
 }`}>;
                   {tier.cta}
                 </button>;
@@ -330,10 +186,7 @@ const AIAutonomousEmailMarketingPlatform = () => {;
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">;
         <div className="max-w-4xl mx-auto text-center">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div>Broken JSX</div>
           >;
             <h2 className="text-4xl font-bold text-white mb-6">;
               Ready to Transform Your Email Marketing?;
@@ -383,20 +236,11 @@ const AIAutonomousEmailMarketingPlatform = () => {;
               </div>;
               <div>;
                 <form className="space-y-4">;
-                  <input;
-                    type="text";
-                    placeholder="Your Name";
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500";
+                  <div>Broken JSX</div>
                   />;
-                  <input;
-                    type="email";
-                    placeholder="Your Email";
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500";
+                  <div>Broken JSX</div>
                   />;
-                  <textarea;
-                    placeholder="Your Message";
-                    rows={4}
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500";
+                  <div>Broken JSX</div>
                   />;
                   <button className="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors">;
                     Send Message;

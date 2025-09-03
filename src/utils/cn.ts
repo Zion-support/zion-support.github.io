@@ -1,5 +1,5 @@
 // comment;
-export const cn = {}
+export {};
 ;
   return twMerge(clsx (inputs) ) ;,
 }

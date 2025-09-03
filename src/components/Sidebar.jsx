@@ -2,20 +2,19 @@ import React, {useState } from "react";
   Newspaper, X,";
   Code;", ";,
 } from "lucide-react;
-export function Sidebar({ isOpen = false, onClose }) {;
-  const location = useLocation();
-  Newspaper,;
-  X,;
+export function Sidebar({ isOpen = false, onClose }) {};
+  return null;
+}
   Code} from "lucide-react;
-export function Sidebar({isOpen = false, onClose }) {const location = useLocation();,
+export function Sidebar({isOpen = false, onClose }) {};
+  return null;
 }
-export function Sidebar({ isOpen = false, onClose }) {;
-  const router = useRouter()";
-  const [expandedSections, setExpandedSections] = useState(["services", "solutions"]);,
 }
-  const toggleSection = (sectionName) => {;
-    setExpandedSections(prev => ;
-      prev.includes(sectionName);,
+export function Sidebar({ isOpen = false, onClose }) {};
+  return null;
+}
+}
+  const toggleSection = (sectionName) => {};
 }
         ? prev.filter(s => s !== sectionName);,
 }
@@ -23,8 +22,7 @@ export function Sidebar({ isOpen = false, onClose }) {;
     )}
 ;
   const navigationSections = []},";
-    {";
-      title: "Core Services", items: ["",;
+    {};
         { name: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud, description: "Infrastructure & Automation" }, ";
         { name: "Digital Twin", href: "/services/digital-twin", icon: Globe, description: "Simulation & Monitoring" }, ";
         { name: "AI & Machine Learning", href: "/services/ai-ml", icon: Brain, description: "Intelligent Solutions" }, ";
@@ -33,8 +31,7 @@ export function Sidebar({ isOpen = false, onClose }) {;
         { name: "Digital Transformation", href: "/services/transformation", icon: Rocket, description: "Business Evolution" }
 ;
       ]},";
-    {";
-      title: "Industry Solutions", items: ["",;
+    {};
         { name: "Manufacturing", href: "/solutions/manufacturing", icon: Cpu, description: "Smart Factory Solutions" }, ";
         { name: "Financial Services", href: "/solutions/financial", icon: DollarSign, description: "FinTech & Banking" }, ";
         { name: "Healthcare", href: "/solutions/healthcare", icon: Heart, description: "Digital Health" }, ";
@@ -43,8 +40,7 @@ export function Sidebar({ isOpen = false, onClose }) {;
         { name: "Energy", href: "/solutions/energy", icon: Zap, description: "Renewable & Smart Grid" }
 ;
       ]},";
-    {";
-      title: "Resources", items: ["",;
+    {};
         { name: "White Papers", href: "/white-papers", icon: FileText, description: "Industry Insights" }, ";
         { name: "Webinars", href: "/webinars", icon: Video, description: "Expert Knowledge" }, ";
         { name: "Training", href: "/training", icon: Award, description: "Skill Development" }, ";
@@ -53,8 +49,7 @@ export function Sidebar({ isOpen = false, onClose }) {;
         { name: "Status Page", href: "/status", icon: BarChart3, description: "System Health" }
 ;
       ]},";
-    {";
-      title: "Support", items: ["",;
+    {};
         { name: "Help Center", href: "/support", icon: HelpCircle, description: "Self-Service Support" }, ";
         { name: "Contact Us", href: "/contact", icon: MessageCircle, description: "Get in Touch" }, ";
         { name: "Request Quote", href: "/request-quote", icon: DollarSign, description: "Custom Pricing" }, ";
@@ -65,8 +60,7 @@ export function Sidebar({ isOpen = false, onClose }) {;
 ;
   ];
 ";
-  const isActive = (href) => {";
-    if (href === "/") {;
+  const isActive = (href) => {};
       return location.pathname === "/"}
 ;
     return location.pathname.startsWith(href)}
@@ -76,7 +70,7 @@ export function Sidebar({ isOpen = false, onClose }) {;
 ;
   const navigationSections = [];,
 },";
-    {title: "Core Services",";
+    {};
       items: [{ name: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud, description: "Infrastructure & Automation" },";
         {name: "Digital Twin", href: "/services/digital-twin", icon: Globe, description: "Simulation & Monitoring" },";
         {name: "AI & Machine Learning", href: "/services/ai-ml", icon: Brain, description: "Intelligent Solutions" },";
@@ -86,7 +80,7 @@ export function Sidebar({ isOpen = false, onClose }) {;
 ;
       ];,
 },";
-    {title: "Industry Solutions",";
+    {};
       items: [{ name: "Manufacturing", href: "/solutions/manufacturing", icon: Cpu, description: "Smart Factory Solutions" },";
         {name: "Financial Services", href: "/solutions/financial", icon: DollarSign, description: "FinTech & Banking" },";
         {name: "Healthcare", href: "/solutions/healthcare", icon: Heart, description: "Digital Health" },";
@@ -96,7 +90,7 @@ export function Sidebar({ isOpen = false, onClose }) {;
 ;
       ];,
 },";
-    {title: "Resources",";
+    {};
       items: [{ name: "White Papers", href: "/white-papers", icon: FileText, description: "Industry Insights" },";
         {name: "Webinars", href: "/webinars", icon: Video, description: "Expert Knowledge" },";
         {name: "Training", href: "/training", icon: Award, description: "Skill Development" },";
@@ -106,7 +100,7 @@ export function Sidebar({ isOpen = false, onClose }) {;
 ;
       ];,
 },";
-    {title: "Support",";
+    {};
       items: [{ name: "Help Center", href: "/support", icon: HelpCircle, description: "Self-Service Support" },";
         {name: "Contact Us", href: "/contact", icon: MessageCircle, description: "Get in Touch" },";
         {name: "Request Quote", href: "/request-quote", icon: DollarSign, description: "Custom Pricing" },";
@@ -122,10 +116,7 @@ export function Sidebar({ isOpen = false, onClose }) {;
 ;
       ];,
 },";
-    {;
-      title: "Core Services",";
-      items: [",;
-        { nam,";
+    {};
     e: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud, description: "Infrastructure & Automation" },";
         { name: "Digital Twin", href: "/services/digital-twin", icon: Globe, description: "Simulation & Monitoring" },";
         { name: "AI & Machine Learning", href: "/services/ai-ml", icon: Brain, description: "Intelligent Solutions" },";
@@ -135,10 +126,7 @@ export function Sidebar({ isOpen = false, onClose }) {;
 ;
       ];,
 },";
-    {;
-      title: "Industry Solutions",";
-      items: [",;
-        { nam,";
+    {};
     e: "Manufacturing", href: "/solutions/manufacturing", icon: Cpu, description: "Smart Factory Solutions" },";
         { name: "Financial Services", href: "/solutions/financial", icon: DollarSign, description: "FinTech & Banking" },";
         { name: "Healthcare", href: "/solutions/healthcare", icon: Heart, description: "Digital Health" },";
@@ -156,9 +144,7 @@ export function Sidebar({ isOpen = false, onClose }) {;
 ;
       ];,
 },;
-    {";
-      title: "Solutions",;
-      items: [",;
+    {};
         { name: "AI Content Creation", href: "/solutions/ai-content-creation", icon: Brain, description: "AI-Powered Content" },";
         { name: "Customer Support", href: "/solutions/customer-support", icon: MessageCircle, description: "Support Automation" },";
         { name: "Email Automation", href: "/solutions/email-automation", icon: Mail, description: "Email Marketing" },";
@@ -168,10 +154,7 @@ export function Sidebar({ isOpen = false, onClose }) {;
 ;
       ];,
 },";
-    {;
-      title: "Resources",";
-      items: [",;
-        { nam,";
+    {};
     e: "White Papers", href: "/white-papers", icon: FileText, description: "Industry Insights" },";
         { name: "Webinars", href: "/webinars", icon: Video, description: "Expert Knowledge" },";
         { name: "Training", href: "/training", icon: Award, description: "Skill Development" },;
@@ -185,10 +168,7 @@ export function Sidebar({ isOpen = false, onClose }) {;
 ;
       ];,
 },";
-    {;
-      title: "Support",";
-      items: [",;
-        { nam,";
+    {};
     e: "Help Center", href: "/support", icon: HelpCircle, description: "Self-Service Support" },";
         { name: "Contact Us", href: "/contact", icon: MessageCircle, description: "Get in Touch" },";
         { name: "Partners", href: "/partners", icon: Users, description: "Become a Partner" },";
@@ -200,14 +180,7 @@ export function Sidebar({ isOpen = false, onClose }) {;
 ;
   ];
 
-  const isActive = (href) => {";
-    if (href === "/") {";
-      return location.pathname === "/";
-  const isActive = (href) => {if (href === "/") {;
-      return location.pathname === "/;
-  const isActive = (href) => {;
-    if (href === "/") {;
-      return router.pathname === "/;,
+  const isActive = (href) => {};
 }
 ;
     return router.pathname.startsWith(href);,
@@ -215,16 +188,13 @@ export function Sidebar({ isOpen = false, onClose }) {;
 ;
   return (;
     <>;
-      {/* comment */}, {isOpen && (";
+      {/* comment */}, {};
         <div className = "{"fixed" inset-0 bg-black/50 z-40 lg: hidden" onClick="{onClose}"  />;
       )}, {/* comment */}";
       <div className="{"" fixed top-0 left-0 h-full w-64 bg-zion-blue-dark border-r border-zion-purple/20 transform transition-transform duration-300 ease-in-out z-50 ${isOpen ? "translate-x-0" : "-translate-x-full lg: translate-x-0"} lg: relative lg:inset-0 "}>;
       {/* comment */}
 ;
-      {isOpen && (";
-        <div ";
-        <div ""}";
-          className="fixed inset-0 bg-black/50 z-40 lg: hidden"">;
+      {};
           onClick="{onClose}
         /">;
         <div className="fixed inset-0 bg-black/50 z-40 lg: hidden"">;
@@ -232,12 +202,7 @@ export function Sidebar({ isOpen = false, onClose }) {;
       )}
 ;
       {/* comment */}
-      <div className="{;
-        fixed top-0 left-0 h-full w-64 bg-zion-blue-dark border-r border-zion-purple/20,;
-transform transition-transform duration-300 ease-in-out z-50;
-        ${isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
-;
-        lg:relative l,";
+      <div>Broken JSX</div>
     g: inset-0">;
       "}>;
         {/* comment */}
@@ -257,7 +222,7 @@ transform transition-transform duration-300 ease-in-out z-50;
             </div>";
             <span className="text-white font-semibold">Zion Tech</span>;
           </div>";
-          <button onClick={onClose}";
+          <div>Broken JSX</div>
             className="lg: hidden p-1 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded"">;
             <X className="h-5 w-5" /">";
           </button>;
@@ -265,7 +230,7 @@ transform transition-transform duration-300 ease-in-out z-50;
 ",;
         {/* comment */}";
         <div className="flex-1 overflow-y-auto py-4">";
-          {navigationSections.map((section, sectionIndex) => (";
+          {};
             <div key="{section.title}" className="mb-6">";
               <h3 className="px-4 text-xs font-semibold text-zion-cyan uppercase tracking-wider mb-3">;
                 {section.title}
@@ -273,7 +238,7 @@ transform transition-transform duration-300 ease-in-out z-50;
               </h3>";
               ";
               <div className="space-y-1">;
-                {section.items.map((item, itemIndex) => (";
+                {};
                   <div key={item.name}">";
         fixed top-0 left-0 h-full w-64 bg-gray-900 border-r border-gray-700,;
 transform transition-transform duration-300 ease-in-out z-50";
@@ -288,13 +253,13 @@ transform transition-transform duration-300 ease-in-out z-50";
             </div>;
             <span className="text-white font-semibold">Zion Tech</span>;
           </div>";
-          <button onClick={onClose}
+          <div>Broken JSX</div>
             className="lg: hidden p-1 text-zion-slate-light hove>;
     r:text-white hove,";
     r: bg-zion-purple/10 rounded;
           >",;
           <button onClick="{onClose}" className="lg: hidden p-1 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded">",;
-          <button onClick="{onClose}
+          <div>Broken JSX</div>
             className="lg: hidden p-1 text-gray-400 hover:text-white hover:bg-gray-800 rounded">";
             <X className="h-5 w-5"  />;
           </button>;
@@ -302,63 +267,44 @@ transform transition-transform duration-300 ease-in-out z-50";
 ",;
         {/* comment */}
         <div className="flex-1 overflow-y-auto py-4">";
-          {navigationSections.map((section, sectionIndex) => (;
+          {};
             <div key="{section.title}" className="mb-6">;
               <h3 className="px-4 text-xs font-semibold text-zion-cyan uppercase tracking-wider mb-3">;
                 {section.title}
 ;
               </h3>";
               ";
-          {navigationSections.map((section, sectionIndex) => (";
+          {};
             <div key="{section.title}" className="mb-6">";
               <h3 className="px-4 text-xs font-semibold text-blue-400 uppercase tracking-wider mb-3">;
                 {section.title}
 ;
               </h3>";
               <div className="space-y-1">;
-                {section.items.map((item, itemIndex) => (";
+                {};
                   <div key="{item.name}">;
-                    {item.href ? (";
-                      <Link to="{item.href}";
-                        className="{;
-                          flex items-center px-4 py-2 text-sm transition-colors group>;
-                          ${isActive(item.href);
-                            ? "text-zion-cyan bg-zion-purple/10 border-r-2 border-zion-cyan";
-                            : "text-zion-slate-light hover:text-white hove,";
+                    {};
     r: bg-zion-purple/10"}
 ;
                         "}";
                         onClick="{onClose}">;
                         <item.icon className=""h-4" w-4 mr-3 flex-shrink-0" />;
                         <span className="flex-1">{item.name}</span>";
-                        {item.description && (;
-                          <span className="{"text-xs" text-zion-slate-light opacity-0 group-hover: opacity-100 transition-opacity">",;
+                        {};
                       <Link to="{item.href}" className="{"" flex items-center px-4 py-2 text-sm transition-colors group ${isActive(item.href) ? "text-zion-cyan bg-zion-purple/10 border-r-2 border-zion-cyan" : "text-zion-slate-light hover: text-white hover:bg-zion-purple/10" } "} onClick="{onClose}">";
                         <item.icon className=""h-4" w-4 mr-3 flex-shrink-0"} />";
                         <span className="flex-1">{item.name}</span>;
-                        {item.description && (";
-                          <span className="{"text-xs" text-zion-slate-light opacity-0 group-hover: opacity-100 transition-opacity">",;
-                      <Link href="{item.href}
-                        className="{;
-                          flex items-center px-4 py-2 text-sm transition-colors group";
-                          ${isActive(item.href);
-                            ? "text-zion-cyan bg-zion-purple/10 border-r-2 border-zion-cyan;
-                            : "text-zion-slate-light hover:text-white hover:bg-zion-purple/10"}";
-                        "}";
+                        {};
                         onClick="{onClose}"">"}";
                         <item .icon className="h-4 w-4 mr-3 flex-shrink-0" /">;
                         <span className="flex-1">{item.name}</span>";
-                        {item.description && (";
-                          <span className="{"text-xs" text-zion-slate-light opacity-0 group-hover: opacity-100 transition-opacity">;
-                          ${isActive(item.href),;
-                            ? "text-blue-400 bg-blue-900/20 border-r-2 border-blue-400",,;
+                        {};
                             : "text-gray-300 hover:text-white hover:bg-gray-800"}";,
 }";
                         onClick = "{onClose}">";
                         <item.icon className=""h-4" w-4 mr-3 flex-shrink-0"} />";
                         <span className="flex-1">{item.name}</span>;
-                        {item.description && (";
-                          <span className="text-xs text-gray-400 opacity-0 group-hover: opacity-100 transition-opacity">,;
+                        {};
                             {item.description}
 ;
                           </span>;
@@ -366,11 +312,7 @@ transform transition-transform duration-300 ease-in-out z-50";
 ;
                       </Link>;
                     ) : (";
-                      <button onClick="{()" => toggleSection(item.name.toLowerCase());
-                        className = "w-full flex items-center justify-between px-4 py-2 text-sm text-zion-slate-light hover:text-white hove,";
-    r: bg-zion-purple/10 transition-colors;
-                      >;
-                        <div className="flex items-center">",;
+                      <button onClick="{};
                       <button onClick="{()" => toggleSection(item.name.toLowerCase())}";
                         className="w-full flex items-center justify-between px-4 py-2 text-sm text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors",;
                       <button onClick="{()" ="> toggleSection(item.name.toLowerCase())}
@@ -380,20 +322,14 @@ transform transition-transform duration-300 ease-in-out z-50";
                           <item .icon className="h-4 w-4 mr-3 flex-shrink-0" /">",;
                           <span>{item.name}</span>;
                         </div>";
-                        {expandedSections.includes(item.name.toLowerCase()) ? (";
-                          <ChevronDown className="h-4 w-4" /">;
-                        ) : (";
-                          <ChevronRight className="h-4 w-4" /">;
+                        {};
                       <button onClick="{()" => toggleSection(item.name.toLowerCase())}";
                         className="w-full flex items-center justify-between px-4 py-2 text-sm text-gray-300 hover: text-white hover:bg-gray-800 transition-colors">";
                         <div className="flex items-center">";
                           <item.icon className="h-4 w-4 mr-3 flex-shrink-0" />,;
                           <span>{item.name}</span>;
                         </div>";
-                        {expandedSections.includes(item.name.toLowerCase()) ? (;
-                          <ChevronDown className="h-4 w-4"  />";
-                        ) : (;
-                          <ChevronRight className="h-4 w-4"  />;
+                        {};
                         )}
 ;
                       </button>;
@@ -413,8 +349,7 @@ transform transition-transform duration-300 ease-in-out z-50";
             <p className="text-xs text-zion-slate-light mb-2">;
               Need help? Contact our support team,;
             </p>";
-            <Link;
-              to="/contact";
+            <div>Broken JSX</div>
               className="inline-flex items-center text-xs text-zion-cyan hover: text-white transition-colors"">;
               onClick="{onClose}
             >;
@@ -425,8 +360,7 @@ transform transition-transform duration-300 ease-in-out z-50";
               Need help? Contact our support team,;
             </p>";
             <Link to="/contact" className="inline-flex items-center text-xs text-zion-cyan hover: text-white transition-colors" onClick="{onClose}">";
-            <Link ";
-              to="/contact;
+            <div>Broken JSX</div>
               className="inline-flex items-center text-xs text-zion-cyan hover: text-white transition-colors"">;
               onClick={onClose}">;
               <MessageCircle className="h-3 w-3 mr-1" /">";
@@ -436,7 +370,7 @@ transform transition-transform duration-300 ease-in-out z-50";
             <p className="text-xs text-gray-400 mb-2">;
               Need help? Contact our support team,;
             </p>";
-            <Link href="/contact;
+            <div>Broken JSX</div>
               className="inline-flex items-center text-xs text-blue-400 hover: text-white transition-colors"">;
               onClick="{onClose}">";
               <MessageCircle className="h-3 w-3 mr-1"  />;
@@ -450,4 +384,4 @@ transform transition-transform duration-300 ease-in-out z-50";
 }";
 ";
 
-export default Component}}))))))))
+export {};

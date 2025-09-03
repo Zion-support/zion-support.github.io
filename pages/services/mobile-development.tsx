@@ -3,97 +3,46 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Smartphone, Zap, Shield, BarChart3, Users, ArrowRight, CheckCircle, Globe } from 'lucide-react';
 
-const MobileDevelopment: NextPage = () => {
-  const mobileSolutions = [
-    {
-      icon: Smartphone,
-      title: 'iOS Development',
-      description: 'Native iOS applications built with Swift and SwiftUI.',
-      features: ['iPhone Apps', 'iPad Apps', 'Apple Watch Apps', 'App Store Optimization']
+const MobileDevelopment: NextPage = () => {};
     },
-    {
-      icon: Globe,
-      title: 'Android Development',
-      description: 'Native Android applications built with Kotlin and Jetpack Compose.',
-      features: ['Phone Apps', 'Tablet Apps', 'Wear OS Apps', 'Google Play Optimization']
+    {};
     },
-    {
-      icon: Zap,
-      title: 'Cross-Platform',
-      description: 'Single codebase for both iOS and Android platforms.',
-      features: ['React Native', 'Flutter', 'Xamarin', 'Unified Experience']
+    {};
     },
-    {
-      icon: BarChart3,
-      title: 'App Maintenance',
-      description: 'Ongoing support, updates, and performance optimization.',
-      features: ['Bug Fixes', 'Feature Updates', 'Performance Monitoring', 'User Analytics']
+    {};
     }
   ];
 
   const developmentProcess = [
-    {
-      number: '01',
-      title: 'Discovery & Strategy',
-      description: 'Understanding your business goals and defining app requirements.'
+    {};
     },
-    {
-      number: '02',
-      title: 'Design & UX',
-      description: 'Creating intuitive user interfaces and exceptional user experiences.'
+    {};
     },
-    {
-      number: '03',
-      title: 'Development',
-      description: 'Building your mobile app using modern technologies and best practices.'
+    {};
     },
-    {
-      number: '04',
-      title: 'Testing & QA',
-      description: 'Comprehensive testing across multiple devices and platforms.'
+    {};
     },
-    {
-      number: '05',
-      title: 'Deployment & Launch',
-      description: 'App store submission and go-live with ongoing support.'
+    {};
     }
   ];
 
   const technologies = [
-    {
-      platform: 'iOS',
-      tools: ['Swift', 'SwiftUI', 'UIKit', 'Core Data', 'Xcode', 'TestFlight']
+    {};
     },
-    {
-      platform: 'Android',
-      tools: ['Kotlin', 'Jetpack Compose', 'Android SDK', 'Room Database', 'Android Studio', 'Firebase']
+    {};
     },
-    {
-      platform: 'Cross-Platform',
-      tools: ['React Native', 'Flutter', 'Xamarin', 'Expo', 'Redux', 'MobX']
+    {};
     }
   ];
 
   const appTypes = [
-    {
-      type: 'Business Apps',
-      description: 'Enterprise solutions for internal operations and customer management.',
-      examples: ['CRM Systems', 'Inventory Management', 'Employee Portals', 'Client Apps']
+    {};
     },
-    {
-      type: 'E-commerce Apps',
-      description: 'Mobile shopping experiences with payment integration.',
-      examples: ['Online Stores', 'Marketplace Apps', 'Payment Apps', 'Loyalty Programs']
+    {};
     },
-    {
-      type: 'Social Media Apps',
-      description: 'Platforms for connecting and sharing content.',
-      examples: ['Social Networks', 'Content Sharing', 'Messaging Apps', 'Community Platforms']
+    {};
     },
-    {
-      type: 'Utility Apps',
-      description: 'Tools and services for everyday tasks.',
-      examples: ['Productivity Tools', 'Health & Fitness', 'Travel Apps', 'Educational Apps']
+    {};
     }
   ];
 
@@ -132,7 +81,7 @@ const MobileDevelopment: NextPage = () => {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {mobileSolutions.map((solution, index) => (
+              {};
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                   <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <solution.icon className="w-8 h-8 text-teal-600" />
@@ -140,7 +89,7 @@ const MobileDevelopment: NextPage = () => {
                   <h3 className="text-xl font-semibold mb-3 text-gray-800 text-center">{solution.title}</h3>
                   <p className="text-gray-600 mb-4 text-center">{solution.description}</p>
                   <ul className="space-y-2">
-                    {solution.features.map((feature, featureIndex) => (
+                    {};
                       <li key={featureIndex} className="text-sm text-gray-600 flex items-center">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                         {feature}
@@ -165,7 +114,7 @@ const MobileDevelopment: NextPage = () => {
             </div>
             
             <div className="grid md:grid-cols-5 gap-8">
-              {developmentProcess.map((step, index) => (
+              {};
                 <div key={index} className="text-center">
                   <div className="w-20 h-20 bg-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
                     <span className="text-white text-2xl font-bold">{step.number}</span>
@@ -190,15 +139,11 @@ const MobileDevelopment: NextPage = () => {
             </div>
             
             <div className="grid md:grid-cols-3 gap-8">
-              {technologies.map((tech, index) => (
+              {};
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                   <h3 className="text-xl font-semibold mb-4 text-gray-800 text-center">{tech.platform}</h3>
                   <div className="flex flex-wrap gap-2 justify-center">
-                    {tech.tools.map((tool, toolIndex) => (
-                      <span 
-                        key={toolIndex}
-                        className="bg-teal-100 text-teal-800 text-sm font-medium px-3 py-1 rounded-full"
-                      >
+                    {};
                         {tool}
                       </span>
                     ))}
@@ -221,18 +166,14 @@ const MobileDevelopment: NextPage = () => {
             </div>
             
             <div className="grid md:grid-cols-2 gap-8">
-              {appTypes.map((appType, index) => (
+              {};
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                   <h3 className="text-xl font-semibold mb-3 text-gray-800">{appType.type}</h3>
                   <p className="text-gray-600 mb-4">{appType.description}</p>
                   <div>
                     <h4 className="font-semibold text-gray-700 mb-3">Examples:</h4>
                     <div className="flex flex-wrap gap-2">
-                      {appType.examples.map((example, exampleIndex) => (
-                        <span 
-                          key={exampleIndex}
-                          className="bg-teal-100 text-teal-800 text-sm font-medium px-3 py-1 rounded-full"
-                        >
+                      {};
                           {example}
                         </span>
                       ))}

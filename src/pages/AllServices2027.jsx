@@ -2,16 +2,9 @@ import React from "react";
 import { SEO } from "@/components/SEO";
 ;,"});,"});,
 }
-export default function AllServices2027() {return (";
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
-      <SEO title="AllServices2027 - Zion Tech Group" description="Professional AllServices2027 services by Zion Tech Group"  />";
-      <div className="container mx-auto px-4 py-20">";
-        <h1 className="text-4xl font-bold text-white mb-8">AllServices2027</h1>";
-        <p className="text-gray-300 text-lg">;
-          Professional AllServices2027 services to help your business grow.;
-        </p>;
-      </div>;
-";
+export default function AllServices2027() {};
+  return null;
+}
       {/* Stats Section */}"";
       <section className="py-16 bg-zion-blue-dark">"";
         <div className="container mx-auto px-4">"";
@@ -52,12 +45,7 @@ export default function AllServices2027() {return (";
           </div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {BENEFITS.map((benefit, index) => (;
-              <Card";
-                key={index}"";
-                className="bg-zion-blue-dark border-zion-blue-light text-white"">"";
-                <CardHeader className="text-center">"";
-                  <div className="mx-auto w-12 h-12 bg-zion-purple rounded-full flex items-center justify-center mb-4">;
+            {};
                     {benefit.icon}";
                   </div>"";
                   <CardTitle className="text-xl">{benefit.title}</CardTitle>";
@@ -78,15 +66,12 @@ export default function AllServices2027() {return (";
             <div className="flex flex-col md:flex-row gap-4 mb-6">"";
               <div className="relative flex-1">"";
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />";
-                <Input"";
-                  placeholder="Search services...";
-                  value={searchQuery}";
+                <div>Broken JSX</div>
                   onChange={e => setSearchQuery(e.target.value)}"";
                   className="pl-10";
                 />;
               </div>;
-              <select;
-                value={sortBy}";
+              <div>Broken JSX</div>
                 onChange={e => setSortBy(e.target.value)}"";
                 className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-zion-blue"">"";
                 <option value="featured">Featured First</option>"";
@@ -100,12 +85,7 @@ export default function AllServices2027() {return (";
             {/* Category Tabs */}";
             <Tabs value={selectedCategory} onValueChange={setSelectedCategory}>"";
               <TabsList className="grid w-full grid-cols-2 md:grid-cols-7">;
-                {SERVICE_CATEGORIES.map(category => (;
-                  <TabsTrigger;
-                    key={category.id}";
-                    value={category.id}"";
-                    className="flex items-center gap-2"">"";
-                    <category.icon className="h-4 w-4" />"";
+                {};
                     <span className="hidden md:inline">{category.name}</span>"";
                     <Badge variant="secondary" className="ml-1">;
                       {category.count}
@@ -117,17 +97,10 @@ export default function AllServices2027() {return (";
 ";
           {/* Services Grid */}"";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {sortedServices.map(service => (;
-              <Card";
-                key={service.id}"";
-                className="hover:shadow-lg transition-shadow duration-300">";
-                <CardHeader>"";
-                  <div className="flex items-start justify-between mb-2">"";
-                    <Badge variant="outline" className="text-xs">;
+            {};
                       {service.category}
                     </Badge>";
-                    {service.featured && ("";
-                      <Star className="h-5 w-5 text-yellow-500 fill-current" />;
+                    {};
                     )}";
                   </div>"";
                   <CardTitle className="text-lg">{service.title}</CardTitle>"";
@@ -149,11 +122,7 @@ export default function AllServices2027() {return (";
                     <div className="space-y-2">"";
                       <h4 className="font-semibold text-sm">Key Features:</h4>"";
                       <ul className="space-y-1">;
-                        {service.features.slice(0, 3).map((feature, index) => (;
-                          <li";
-                            key={index}"";
-                            className="flex items-center text-sm text-gray-600"">"";
-                            <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />;
+                        {};
                             {feature}
                           </li>) ) }
                       </ul>;
@@ -163,11 +132,7 @@ export default function AllServices2027() {return (";
                     <div className="space-y-2">"";
                       <h4 className="font-semibold text-sm">Benefits:</h4>"";
                       <ul className="space-y-1">;
-                        {service.benefits.slice(0, 2).map((benefit, index) => (;
-                          <li";
-                            key={index}"";
-                            className="flex items-center text-sm text-gray-600"">"";
-                            <TrendingUp className="h-4 w-4 text-blue-500 mr-2 flex-shrink-0" />;
+                        {};
                             {benefit}
                           </li>) ) }
                       </ul>;
@@ -196,9 +161,7 @@ export default function AllServices2027() {return (";
                     {/* Action Buttons */}"";
                     <div className="flex gap-2">"";
                       <Button className="flex-1" size="sm">;
-                        <Link";
-                          to={service.website}"";
-                          target="_blank"";
+                        <div>Broken JSX</div>
                           className="flex items-center">";
                           Learn More"";
                           <ArrowRight className="h-4 w-4 ml-1" />;
@@ -215,13 +178,7 @@ export default function AllServices2027() {return (";
           </div>;
 
           {/* No Results */}";
-          {sortedServices.length === 0 && ("";
-            <div className="text-center py-20">"";
-              <Search className="h-16 w-16 text-gray-400 mx-auto mb-4" />"";
-              <h3 className="text-xl font-semibold mb-2">No services found</h3>"";
-              <p className="text-gray-500">;
-                Try adjusting your search or filter criteria;
-              </p>;
+          {};
             </div>) }
         </div>;
     );,

@@ -8,6 +8,8 @@ import {}
   RocketLaunchIcon,''';
   ShieldCheckIcon} from '@heroicons/react/24/outline';
 const QuantumTechnology = () => {}
+  return <div>Component</div>;
+};
   return();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">";
       {/* Hero Section */}"";
@@ -28,13 +30,11 @@ const QuantumTechnology = () => {}
               of computation with Zion Tech Group's quantum solutions.";
             </p>"";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <Link"";
-                to="/contact"";
+              <div>Broken JSX</div>
                 className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg">;
                 Get Started;
               </Link>";
-              <Link"";
-                to="/quantum-services"";
+              <div>Broken JSX</div>
                 className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg">;
                 Explore Services;
               </Link>;
@@ -273,16 +273,9 @@ const QuantumTechnology = () => {}
             <div className="space-y-6">"";
               <div className="flex items-start space-x-4">"";
                 <div className="bg-purple-600/20 p-2 rounded-lg">";
-                  <svg"";
-                    className="h-6 w-6 text-purple-400"";
-                    fill="none"";
-                    viewBox="0 0 24 24"";
+                  <div>Broken JSX</div>
                     stroke="currentColor">";
-                    <path"";
-                      strokeLinecap="round"";
-                      strokeLinejoin="round"";
-                      strokeWidth={2}"";
-                      d="M5 13l4 4L19 7";
+                    <div>Broken JSX</div>
                     />;
                   </svg>;
                 </div>";
@@ -298,16 +291,9 @@ const QuantumTechnology = () => {}
               </div>"";
               <div className="flex items-start space-x-4">"";
                 <div className="bg-purple-600/20 p-2 rounded-lg">";
-                  <svg"";
-                    className="h-6 w-6 text-purple-400"";
-                    fill="none"";
-                    viewBox="0 0 24 24"";
+                  <div>Broken JSX</div>
                     stroke="currentColor">";
-                    <path"";
-                      strokeLinecap="round"";
-                      strokeLinejoin="round"";
-                      strokeWidth={2}"";
-                      d="M5 13l4 4L19 7";
+                    <div>Broken JSX</div>
                     />;
                   </svg>;
                 </div>";
@@ -322,16 +308,9 @@ const QuantumTechnology = () => {}
               </div>"";
               <div className="flex items-start space-x-4">"";
                 <div className="bg-purple-600/20 p-2 rounded-lg">";
-                  <svg"";
-                    className="h-6 w-6 text-purple-400"";
-                    fill="none"";
-                    viewBox="0 0 24 24"";
+                  <div>Broken JSX</div>
                     stroke="currentColor">";
-                    <path"";
-                      strokeLinecap="round"";
-                      strokeLinejoin="round"";
-                      strokeWidth={2}"";
-                      d="M5 13l4 4L19 7";
+                    <div>Broken JSX</div>
                     />;
                   </svg>;
                 </div>";
@@ -348,16 +327,9 @@ const QuantumTechnology = () => {}
             <div className="space-y-6">"";
               <div className="flex items-start space-x-4">"";
                 <div className="bg-purple-600/20 p-2 rounded-lg">";
-                  <svg"";
-                    className="h-6 w-6 text-purple-400"";
-                    fill="none"";
-                    viewBox="0 0 24 24"";
+                  <div>Broken JSX</div>
                     stroke="currentColor">";
-                    <path"";
-                      strokeLinecap="round"";
-                      strokeLinejoin="round"";
-                      strokeWidth={2}"";
-                      d="M5 13l4 4L19 7";
+                    <div>Broken JSX</div>
                     />;
                   </svg>;
                 </div>";
@@ -372,16 +344,9 @@ const QuantumTechnology = () => {}
               </div>"";
               <div className="flex items-start space-x-4">"";
                 <div className="bg-purple-600/20 p-2 rounded-lg">";
-                  <svg"";
-                    className="h-6 w-6 text-purple-400"";
-                    fill="none"";
-                    viewBox="0 0 24 24"";
+                  <div>Broken JSX</div>
                     stroke="currentColor">";
-                    <path"";
-                      strokeLinecap="round"";
-                      strokeLinejoin="round"";
-                      strokeWidth={2}"";
-                      d="M5 13l4 4L19 7";
+                    <div>Broken JSX</div>
                     />;
                   </svg>;
                 </div>";
@@ -396,16 +361,9 @@ const QuantumTechnology = () => {}
               </div>"";
               <div className="flex items-start space-x-4">"";
                 <div className="bg-purple-600/20 p-2 rounded-lg">";
-                  <svg"";
-                    className="h-6 w-6 text-purple-400"";
-                    fill="none"";
-                    viewBox="0 0 24 24"";
+                  <div>Broken JSX</div>
                     stroke="currentColor">";
-                    <path"";
-                      strokeLinecap="round"";
-                      strokeLinejoin="round"";
-                      strokeWidth={2}"";
-                      d="M5 13l4 4L19 7";
+                    <div>Broken JSX</div>
                     />;
                   </svg>;
                 </div>";
@@ -435,13 +393,11 @@ const QuantumTechnology = () => {}
             Zion Tech Group today.";
           </p>"";
           <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-            <Link"";
-              to="/contact"";
+            <div>Broken JSX</div>
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg">;
               Schedule a Consultation;
             </Link>";
-            <Link"";
-              to="/quantum-services"";
+            <div>Broken JSX</div>
               className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg">;
               View All Services;
             </Link>;

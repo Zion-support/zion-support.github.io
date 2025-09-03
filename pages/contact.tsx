@@ -2,52 +2,20 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import { Mail, Phone, MapPin, Clock, MessageCircle } from 'lucide-react';
 
-const Contact: NextPage = () => {
-  const offices = [
-    {
-      city: 'San Francisco',
-      address: '123 Innovation Drive, San Francisco, CA 94105',
-      phone: '+1 (415) 555-0123',
-      email: 'sf@ziontechgroup.com',
-      hours: 'Mon-Fri: 9:00 AM - 6:00 PM PST'
+const Contact: NextPage = () => {};
     },
-    {
-      city: 'New York',
-      address: '456 Tech Avenue, New York, NY 10001',
-      phone: '+1 (212) 555-0456',
-      email: 'nyc@ziontechgroup.com',
-      hours: 'Mon-Fri: 9:00 AM - 6:00 PM EST'
+    {};
     },
-    {
-      city: 'London',
-      address: '789 Digital Street, London, UK EC1A 1BB',
-      phone: '+44 20 7123 4567',
-      email: 'london@ziontechgroup.com',
-      hours: 'Mon-Fri: 9:00 AM - 6:00 PM GMT'
+    {};
     }
   ];
 
   const contactMethods = [
-    {
-      icon: Mail,
-      title: 'Email Us',
-      description: 'Send us a message and we\'ll get back to you within 24 hours.',
-      contact: 'info@ziontechgroup.com',
-      action: 'mailto:info@ziontechgroup.com'
+    {};
     },
-    {
-      icon: Phone,
-      title: 'Call Us',
-      description: 'Speak directly with our team during business hours.',
-      contact: '+1 (555) 123-4567',
-      action: 'tel:+15551234567'
+    {};
     },
-    {
-      icon: MessageCircle,
-      title: 'Live Chat',
-      description: 'Chat with our support team in real-time.',
-      contact: 'Available 24/7',
-      action: '#chat'
+    {};
     }
   ];
 
@@ -82,16 +50,14 @@ const Contact: NextPage = () => {
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
-              {contactMethods.map((method, index) => (
+              {};
                 <div key={index} className="text-center p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                     <method.icon className="w-8 h-8 text-blue-600" />
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-gray-800">{method.title}</h3>
                   <p className="text-gray-600 mb-4">{method.description}</p>
-                  <a 
-                    href={method.action}
-                    className="text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+                  <div>Broken JSX</div>
                   >
                     {method.contact}
                   </a>
@@ -118,26 +84,14 @@ const Contact: NextPage = () => {
                     <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
                       First Name *
                     </label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Your first name"
+                    <div>Broken JSX</div>
                     />
                   </div>
                   <div>
                     <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
                       Last Name *
                     </label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Your last name"
+                    <div>Broken JSX</div>
                     />
                   </div>
                 </div>
@@ -147,25 +101,14 @@ const Contact: NextPage = () => {
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                       Email Address *
                     </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="your.email@example.com"
+                    <div>Broken JSX</div>
                     />
                   </div>
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                       Phone Number
                     </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="+1 (555) 123-4567"
+                    <div>Broken JSX</div>
                     />
                   </div>
                 </div>
@@ -174,12 +117,7 @@ const Contact: NextPage = () => {
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                     Company Name
                   </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your company name"
+                  <div>Broken JSX</div>
                   />
                 </div>
                 
@@ -187,10 +125,7 @@ const Contact: NextPage = () => {
                   <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                     Service of Interest
                   </label>
-                  <select
-                    id="service"
-                    name="service"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  <div>Broken JSX</div>
                   >
                     <option value="">Select a service</option>
                     <option value="ai-development">AI Development</option>
@@ -209,20 +144,12 @@ const Contact: NextPage = () => {
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                     Message *
                   </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={6}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Tell us about your project or how we can help..."
+                  <div>Broken JSX</div>
                   ></textarea>
                 </div>
                 
                 <div className="text-center">
-                  <button
-                    type="submit"
-                    className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+                  <div>Broken JSX</div>
                   >
                     Send Message
                   </button>
@@ -243,7 +170,7 @@ const Contact: NextPage = () => {
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
-              {offices.map((office, index) => (
+              {};
                 <div key={index} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-gray-800 mb-2">{office.city}</h3>

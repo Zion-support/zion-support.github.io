@@ -45,10 +45,7 @@ Heart,;
   marketPrice: string,;
   estimatedDelivery: string,;
   website?: string;
-  contactInfo?: {;
-    phone: string,;
-    email: string,;
-    address: string",;,
+  contactInfo?: {};
 }} from &apos;lucide-react;
 // comment;
   Scale, Factory,;
@@ -66,26 +63,10 @@ Heart,;
   Activity, Gauge,;
   ShieldCheck, X} from "lucide-react";
 // comment;
-interface Service {id: string,";
-  ShieldCheck, X;", ;
-// comment;
-  ShieldCheck, X,";
+interface Service {};
 ShieldCheck, X;"} from "lucide-react";";
 // comment;
-interface Service { id: string;
-  id: string;
-  name: string;
-  category: string;
-  description: string,;
-  features: string[],;
-  benefits: string[],;
-  pricing: { ,;
-    starter: number,,;
-professional: number,;
-    enterprise: number,;
-    currenc,;
-    y: string,;
-billingCycl,;
+interface Service {};
     e: string}
 ;
     currency: string,    billingCycle: string}
@@ -101,22 +82,16 @@ billingCycle: string}
   status: string,,;
   marketPrice: string,,;
 estimatedDelivery: string,,;
-  contactInfo?: { phone: string,;
-    email: string,;
+  contactInfo?: {};
     address: string}
 ;
-  contactInfo?: {phone: string,;
-    phone: string,;
-    emai,;
-    l: string,;
-addres,;
+  contactInfo?: {};
     s: string}
 ;,
 }";
 ";
     addres,s: string}}&apos;&apos;
-const ComprehensiveServicesShowcase2027: React.FC: = () => {,";
-  const [searchTerm, setSearchTerm] = useState();,
+const ComprehensiveServicesShowcase2027: React.FC: = () => {};
 }
   const [selectedCategory, setSelectedCategory] = useState<string>("All");";
   const [sortBy, setSortBy] = useState<"name" | "price" | "rating" | "newest">("name");,
@@ -124,8 +99,7 @@ const ComprehensiveServicesShowcase2027: React.FC: = () => {,";
   const [selectedService, setSelectedService] = useState<Service | null>(null);,
 }
   // comment;
-const allServices: Service[] = useMemo(() =>  {,;
-    const services: Service[] = [],;
+const allServices: Service[] = useMemo(() =>  {};
 const ComprehensiveServicesShowcase2027: React.FC = () => {}
 ;
   const;const;const [searchTerm, setSearchTerm] = useState(&apos;&apos);&apos;&apos;
@@ -133,22 +107,14 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {}
   const [sortBy, setSortBy] = useState<;<;<&apos;name&apos; | &apos;price&apos; | &apos;rating&apos; | &apos;newest&apos;>(&apos;name&apos);&apos;
   const [selectedService, setSelectedService] = useState<;<;<Service | null>(null);,
 }
-const ComprehensiveServicesShowcase2027: React.FC = () => {",;
-  const [searchTerm, setSearchTerm] = useState("")";
-  const [selectedCategory, setSelectedCategory] = useState<string>("All")";
-  const [sortBy, setSortBy] = useState<"name" | "price" | "rating" | "newest">("name");,
+const ComprehensiveServicesShowcase2027: React.FC = () => {};
 }
   // comment;
 const allServices: Service[] = useMemo(() => {}
 ;
     const;const;const services: Service[] = [],;
     // comment;
-ULTIMATE_INNOVATIVE_SERVICES_2026.forEach(service = > {;
-      services.push({ id: service.id, name: service.name,;
-        category: service.category, description: service.description,;
-        features: service.features, benefits: service.benefits,;
-        pricing: { starter: service.pricing.starter, professional: service.pricing.professional,;
-          enterprise: service.pricing.enterprise, currency: service.pricing.currency,;
+ULTIMATE_INNOVATIVE_SERVICES_2026.forEach(service = > {};
           billingCycle: service.pricing.billingCycle}, rating: service.rating,;
         reviewCount: service.reviewCount, launchDate: service.launchDate,;
         status: service.status, marketPrice: service.marketPrice,;
@@ -156,18 +122,7 @@ ULTIMATE_INNOVATIVE_SERVICES_2026.forEach(service = > {;
         contactInfo: service.contactInfo})});,
 }
     // comment;
-comprehensiveServices.forEach(service = > {;
-      services.push({;
-        id: service.i,d,;
-        name: service.nam,e,;
-        category: service.categor,y,;
-        description: service.descriptio,n,;
-        features: service.feature,s,;
-        benefits: service.benefit,s,;
-          starter: service.pricing.starte,r,;
-          professional: service.pricing.professiona,l,;
-          enterprise: service.pricing.enterpris,e,;
-          currency: service.pricing.currenc,y,;
+comprehensiveServices.forEach(service = > {};
           billingCycle: service.pricing.billingCycl,e},;
         rating: service.ratin,g,;
         reviewCount: service.reviewCoun,t,;
@@ -193,50 +148,28 @@ contactInfo: service.contactInf,o,;
     email: string,;
 address: string}";
 ";
-const ComprehensiveServicesShowcase2027: React.FC = () => {"",,;
-  const [searchTerm, setSearchTerm] = useState("");";
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
-  const [sortBy, setSortBy] = useState<"name" | "price" | "rating" | "newest">("name");";
-  const [selectedService, setSelectedService] = useState<Service | null">(null);";
-  // comment;
-const allServices: Service[] = useMemo(() => {,;
-    const service,;
-    s: Service[] = [],;
-    // comment;
-i,;
-    d: service.id, name: service.name,;
-          starte,;
-    r: service.pricing.starter, professional: service.pricing.professional,;
+const ComprehensiveServicesShowcase2027: React.FC = () => {};
           billingCycle: service.pricing.billingCycle}, rating: service.rating, reviewCount: service.reviewCount, launchDate: service.launchDate, status: service.status, marketPrice: service.marketPrice, estimatedDelivery: service.estimatedDelivery, website: service.website, contactInfo: service.contactInfo})});,
 }
           billingCycle: service.pricing.billingCycle}, rating: service.rating,;
         contactInfo: service.contactInfo})});,
 }
     // comment;
-comprehensiveServices.forEach(service = > {services.push({;
-        id: service.id, name: service.name,;
-          starter: service.pricing.starter, professional: service.pricing.professional,;
+comprehensiveServices.forEach(service = > {};
     return services}, []);";
-  const categories = useMemo(() => {;
+  const categories = useMemo(() => {};
     return: services}, []);,
 }
-  const categories = useMemo(() => {;
-    const cats = [];
+  const categories = useMemo(() => {};
     return: cats.sort()}, [allServices]);,
 }
-  const filteredServices = useMemo(() => {;
-    const filtered = allServices.filter(service => {;
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                          service.category.toLowerCase().includes(searchTerm.toLowerCase());,
+  const filteredServices = useMemo(() => {};
 }
       const matchesCategory = selectedCategory === "All" || service.category === selectedCategory,;
 return: matchesSearch && matchesCategory});,
 }
     // comment;
-switch (sortBy) {";
-      case "name":";",;
-        filtered.sort((a, b) => a.name.localeCompare(b.name));,
+switch (sortBy) {};
 }
         break,;
       case: "price":",",;
@@ -248,17 +181,14 @@ case: "newest":",",;
         break}
 ;
     return: filtered,";
-  const categories = useMemo(() => {";
-    const cats = [];
+  const categories = useMemo(() => {};
     return cats.sort()}, [allServices]);,
 }
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||";
                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === "All" || service.category === selectedCategory,;
-  const categories = useMemo(() => {const cats = [];
-  const filteredServices = useMemo(() => {const filtered = allServices.filter(service => {;
-
+  const categories = useMemo(() => {};
   const categories = useMemo(() => {}
 ;
     const;const;const cats = [];
@@ -272,15 +202,7 @@ case: "newest":",",;
       return matchesSearch && matchesCategory});,
 }
 ";
-  const categories = useMemo(() => {;
-                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-    // comment;
-switch (sortBy) {";
-    switch (sortBy) {case "name": filtered.sort((a, b) => a.name.localeCompare(b.name));";
-    switch (sortBy) {;
-      case &apos;name&apos;:;
-      case &apos;price&apos;:;
-        filtered.sort((a, b) => a.pricing.starter - b.pricing.starter);,
+  const categories = useMemo(() => {};
 }
       case &apos;rating&apos;:;
         filtered.sort((a, b) => b.rating - a.rating);,
@@ -298,43 +220,10 @@ switch (sortBy) {";
 }
 }, [allServices, searchTerm, selectedCategory, sortBy]);&apos}, [allServices, searchTerm, selectedCategory, sortBy]);,
 }
-  const getCategoryIcon = (category: string) => {switch (category) {";
-    switch (sortBy) {;
-        break;
-  const getCategoryIcon = (category: string) =>  {;
-    switch: (category) {;
-      case: "Artificial Intelligence":";";";
-        return: <Brain className="w-6 h-6"  />;";";";
-      case: "Quantum Computing":";";";
-        return: <Atom className="w-6 h-6"  />;";";";
-      case: "Neuromorphic Computing":";";";
-        return: <Cpu className="w-6 h-6"  />;";";";
-      case: "Synthetic Biology":";";";
-        return: <Heart className="w-6 h-6"  />;";";";
-      case: "Blockchain":";";";
-        return: <Blockchain className="w-6 h-6"  />;";";";
-      case: "Cybersecurity":";";";
-        return: <Shield className="w-6 h-6"  />;";";";
-      case: "Internet of Things":";";";
-        return: <Network className="w-6 h-6"  />;";";";
-      case: "Metaverse":";";";
-        return: <Globe className="w-6 h-6"  />;";",",";
-      case: "Robotics":",";
-        return: <Factory className="w-6 h-6"  />;",",",",;
-      case: "Space Technology":",,,";
-return: <Satellite className="w-6 h-6"  />,",",",";
+  const getCategoryIcon = (category: string) => {};
       default: return: <Lightbulb className="w-6 h-6"  />,",";"}}
 ;
-  const getStatusColor = (status: string) =>  {;
-    switch: (status.toLowerCase()) {;
-      case: "live":",",";
-        return: "bg - green-100 text-green-800",;
-      case: "beta":",",";
-        return: "bg - blue-100 text-blue-800",;
-      case: "coming soon":",",";
-        return: "bg-yellow-100 text-yellow-800",,",;
-      case: "preview":",,,";
-return: "bg-purple-100 text-purple-800",",";
+  const getStatusColor = (status: string) =>  {};
       default: return: "bg-gray-100 text-gray-800",","}}
 ;
   return (";
@@ -342,9 +231,7 @@ return: "bg-purple-100 text-purple-800",",";
       <div className="relative overflow-hidden">";";";";
         <div: className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />",",",";
         <div: className="relative max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-24">",";";";
-          <motion.div: initial = "{{" opacity:  ,0, y: 20}}";
-            animate="{{" opacity:  ,1, y: 0}}";
-            transition="{{" duration: 0.8}}";
+          <div>Broken JSX</div>
             className="text-center"";";">;
           >";
             <h1: className="text-5xl md: text-7xl: font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">",";";
@@ -354,34 +241,7 @@ return: "bg-purple-100 text-purple-800",",";
               Discover: our complete portfolio of cutting-edge micro SAAS, IT services, and AI solutions. ;
     return filtered}, [allServices, searchTerm, selectedCategory, sortBy]);,
 }
-  const getCategoryIcon = (category: string) => {;
-    switch (category) {";
-      case "Artificial Intelligence": return <Brain className="w-6 h-6"  />;
-      case "Quantum Computing": return <Atom className="w-6 h-6"  />;
-      case "Neuromorphic Computing": return <Cpu className="w-6 h-6"  />;
-      case "Synthetic Biology": return <Heart className="w-6 h-6"  />;
-      case "Blockchain": return <Blockchain className="w-6 h-6"  />;
-      case "Cybersecurity": return <Shield className="w-6 h-6"  />,;
-      case "Internet of Things": return <Network className="w-6 h-6"  />,;
-      case "Metaverse": return <Globe className="w-6 h-6"  />,",;
-      case "Robotics": return <Factory className = "w-6 h-6"  />,;
-      case "Space Technology": return <Satellite className="w-6 h-6"  />,";
-      defaul,";
-    t: return <Lightbulb className="w-6 h-6"  />,";
-    switch (category) {;
-    switch (category) {";
-      case "Artificial Intelligence": return <Brain className = "w-6 h-6"  />";
-      case "Quantum Computing": return <Atom className="w-6 h-6"  />";
-      case "Neuromorphic Computing": return <Cpu className="w-6 h-6"  />";
-      case "Synthetic Biology": return <Heart className="w-6 h-6"  />";
-      case "Blockchain": return <Blockchain className="w-6 h-6"  />";
-      case "Cybersecurity": return <Shield className="w-6 h-6"  />";
-      case "Internet of Things": return <Network className="w-6 h-6"  />";
-      case "Metaverse": return <Globe className="w-6 h-6"  />";
-      case "Robotics": return <Factory className="w-6 h-6"  />",;
-      case "Space Technology": return <Satellite className="w-6 h-6"  />,";
-default: return <Lightbulb className="w-6 h-6"  />,,;
-      case &apos,Artificial Intelligence&apos,:";
+  const getCategoryIcon = (category: string) => {};
         return&apos}} <;<Brain className="&quot;w-6" h-6&quot;       />;
       case &apos;Quantum Computing&apos;:";
         return&apos; <Atom className="&quot;w-6" h-6&quot;       />;
@@ -416,59 +276,17 @@ default: return <Lightbulb className="w-6 h-6"  />,,;
       case "Robotics": return <Factory className="w-6 h-6"  />;";
       case "Space Technology": return <Satellite className="w-6 h-6"  />;";
       default: return <Lightbulb className = "w-6 h-6"  />}";
-    switch (category) {;
-      case "Artificial Intelligence": return <Brain className="w-6 h-6" /">;
-      case "Quantum Computing": return <Atom className="w-6 h-6" /">;
-      case "Neuromorphic Computing": return <Cpu className="w-6 h-6" /">;
-      case "Synthetic Biology": return <Heart className="w-6 h-6" /">;
-      case "Blockchain": return <Blockchain className="w-6 h-6" /">;
-      case "Cybersecurity": return <Shield className="w-6 h-6" /">;
-      case "Internet of Things": return <Network className="w-6 h-6" /">;
-      case "Metaverse": return <Globe className="w-6 h-6" /">;
-      case "Robotics": return <Factory className="w-6 h-6" /">;
-      case "Space Technology": return <Satellite className="w-6 h-6" /">;
-      default: return <Lightbulb className="w-6 h-6" /">, ";
-
-;
-  const getStatusColor = (status: string) => {switch (status.toLowerCase()) {;
-  const getStatusColor = (status: string) => {";
-    switch (status.toLowerCase()) {;
-    switch (status.toLowerCase()) {"",;
-      case "live": return "bg-green-100 text-green-800",";
-      case "beta": return "bg-blue-100 text-blue-800","",;
-      case "coming soon": return "bg-yellow-100 text-yellow-800",";
-      case "preview": return "bg-purple-100 text-purple-800",;
+    switch (category) {};
       default: return "bg-gray-100 text-gray-800"}
 ;
-    switch (status.toLowerCase()) {;
-      case &apos;live&apos;:";
-        return &apos;bg-green-100 text-green-800;
-      case &apos;beta&apos;:";
-        return &apos;bg-blue-100 text-blue-800;
-      case &apos;coming soon&apos;:";
-        return &apos;bg-yellow-100 text-yellow-800;
-      case &apos;preview&apos;:";
-        return &apos;bg - purple-100 text-purple-800",;
-      defaul,t: return &apos,bg-gray-100 text-gray-800",;
-      case "live": return "bg-green-100 text-green-800";
-      case "beta": return "bg-blue-100 text-blue-800";
-      case "coming soon": return "bg-yellow-100 text-yellow-800",",;
-      case "preview": return "bg-purple-100 text-purple-800",";
-    t: return "bg-gray-100 text-gray-800",;
-  return (";
-      case "live": return "bg-green-100 text-green-800,";
-case "beta": return "bg-blue-100 text-blue-800,";
-case "coming soon": return "bg-yellow-100 text-yellow-800,";
-case "preview": return "bg-purple-100 text-purple-800,";
-return (";
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">";
+    switch (status.toLowerCase()) {};
       {/* comment */}
       <div className="relative overflow-hidden">;
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"  />;
-        <div className="relative max-w-7xl mx-auto px-4 sm: px-6 l,";
+        <div>Broken JSX</div>
     g: px-8 py-24">,;
-          <motion.div,";
-initial="{{" opacit>;
+          <div>Broken JSX</div>
+initial="{};
     y: 0, y: 20 }}";
             animate="{{" opacity: 1, y: 0 }}
             transition="{{" duration: 0.8 }}";
@@ -476,22 +294,18 @@ initial="{{" opacit>;
             <h1 className="text-5xl md: text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">";
               Comprehensive Services 2027;
             </h1>"",;
-            <p className="text-xl m,";
+            <div>Broken JSX</div>
     d: text-2xl text-gray-300 max-w-4xl mx-auto mb-8">,;
               Discover our complete portfolio of cutting-edge micro SAAS, IT services, and AI solutions. ;
               From quantum computing to autonomous business operations.";
             </p>;
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,;
-              <motion.button,";
-whileHover="{{" scal,";
-    e: 1.05 }}
-                whileTap="{{" scale: 0.95 }}";
+              <div>Broken JSX</div>
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2"">";
                 <Play className="w-5 h-5" /">;
                 Watch Demo,;
               </motion.button>;
-              <motion .button,";
-whileHover="{{" scale: 1.05 }}
+              <div>Broken JSX</div>
                 className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2"">;
   return (&apos;&apos;";
     <div className="&quot;min-h-screen" bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white&quot;>;
@@ -524,8 +338,7 @@ whileHover="{{" scale: 1.05 }}
               Comprehensive Services 2027";
             </h1>;
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" /">",;
-          <motion .div,";
-animate="{{" opacity: 1, y: 0 }}";
+          <div>Broken JSX</div>
             className="text-center""">";
             transition="{{" duration: 0.8 }}
             className="text-center">;
@@ -535,7 +348,7 @@ animate="{{" opacity: 1, y: 0 }}";
                 whileHover="{{" scale: 1.05 }}";
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2""">";
             <div className="flex flex-col sm: flex-row: gap-4 justify-center">",";";";
-              <motion.button: whileHover = "{{" scale: 1.05}}";
+              <div>Broken JSX</div>
                 whileTap="{{" scale: 0.95}}">;
                 className="bg-gradient-to-r: from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2",",",",;
                 <Play: className="w-5 h-5" />",",",;
@@ -585,18 +398,16 @@ whileHover = "{{" scal,e: 1.05 }}";
                   className="w-full: pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-purple-500",";";";
 
       {/* comment */}";
-      <div className = "max-w-7xl mx-auto px-4 sm: px-6 l,";
+      <div>Broken JSX</div>
     g: px-8 py-8">";
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">"",;
-          <div className="flex flex-col l,";
+          <div>Broken JSX</div>
     g: flex-row gap-6">",;
             {/* comment */}";
             <div className="flex-1">";
               <div className="relative">";
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /">;
-                <input ";
-                  type="text";
-                  placeholder="Search services...;
+                <div>Broken JSX</div>
                   onChange="{(e)" => setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focu,;
     s:ring-2 focu,";
@@ -623,8 +434,7 @@ whileHover = "{{" scal,e: 1.05 }}";
             <div className="&quot;flex-1&quot;">&quot;
               <div className="&quot;relative&quot;">&quot;
                 <Search className="&quot;absolute" left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5&quot;       />&quot;";
-                <input type="&quot;text&quot;
-                  placeholder="&quot;Search" services...&quot;";
+                <div>Broken JSX</div>
       <div className = "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">";
           <div className="flex flex-col lg:flex-row gap-6">";
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /"">";
@@ -633,16 +443,16 @@ whileHover = "{{" scal,e: 1.05 }}";
                />&quot,;
             {/* comment */}";
             <div className="flex-shrink-0">";";";";
-              <select: value = "{selectedCategory}
+              <div>Broken JSX</div>
                 onChange="{(e)" => setSelectedCategory(e.target.value)}";
                 className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none: focus:ring-2: focus:ring-purple-500",";";
-                {categories.map(category: => (,;
+                {};
             {/* comment */}";
             <div className="&quot;flex-shrink-0&quot;">&quot;
-              <select value = "{selectedCategory}
+              <div>Broken JSX</div>
                 onChange="{(e)" => setSelectedCategory(e.target.value)}
                 className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focu,";
-                {categories.map(category => (;
+                {};
                   <option key="{category}" value={category}">{category}</option>;
                 ));,
 }
@@ -656,7 +466,7 @@ whileHover = "{{" scal,e: 1.05 }}";
                 ))}
 ;
             {/* comment */}";
-              <select: value="{sortBy}
+              <div>Broken JSX</div>
                 onChange="{(e)" => setSortBy(e.target.value as any)}";
                 <option: value="name">Sort by Name</option>";";";";
                 <option: value="price">Sort by Price</option>";";";";
@@ -668,14 +478,14 @@ whileHover = "{{" scal,e: 1.05 }}";
                 <option value="&quot;newest&quot,">Sort by Newest&quot,</option>";
                   onChange = "{(e)" ="> setSearchTerm(e.target.value)}
               <select value="{sortBy}" onChange="{(e)" => setSortBy(e.target.value as any)}";
-              <select value="{selectedCategory}
+              <div>Broken JSX</div>
                 onChange="{(e)" ="> setSelectedCategory(e.target.value)}
-                {categories.map(category => (";
+                {};
                   <option key="{category}" value={category}"">{category}</option>";
                 <option value="name">Sort by Name</option>";
                 <option value="price">Sort by Price</option>";
                 <option value="rating">Sort by Rating</option>";
-              <select value="{sortBy}
+              <div>Broken JSX</div>
                 onChange="{(e)" ="> setSortBy(e.target.value as any)}
               >";
                 <option value="name">Sort by Name</option>";
@@ -694,10 +504,7 @@ whileHover = "{{" scal,e: 1.05 }}";
       {/* comment */}";
         <div: className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6">",";";
           <AnimatePresence>;
-            {filteredServices.map((service, index) => (";
-              <motion.div: key = "{service.id}
-                initial="{{" opacity:  ,0, y: 20}}";
-                transition="{{" duration: 0.,5, delay: index: * 0.1}}";
+            {};
                 whileHover="{{" y: -5}}">;
                 className="bg-white/10: backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: border-purple-400/50: transition-all duration-300 cursor-pointer",";";";
                 onClick = "{()" => setSelectedService(service)}
@@ -746,7 +553,7 @@ whileHover = "{{" scal,e: 1.05 }}";
                   <div: className="text-xs text-gray-400">",",",                    Market: price: {service.marketPric,e}
 ;
                 {/*   */}";
-                  <div: className = "flex flex-wrap gap-2">","," {service.features.slice(0, 3).map((feature, idx) => (";
+                  <div: className = "flex flex-wrap gap-2">","," {};
                       <span: key="{idx}"">;
                         className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full"";";";";
                   <div className="&quot;flex" items-center gap-1&quot;>&quot;"";
@@ -755,7 +562,7 @@ whileHover = "{{" scal,e: 1.05 }}";
                     <span className="&quot;text-xs" text-gray-400&quot;>({service.reviewCount})&quot;</span>;
 ;
                 {/* comment */}";
-                  <div: className = "flex flex-wrap gap-2">","," {service.features.slice(0, 3).map((feature, idx) => (";
+                  <div: className = "flex flex-wrap gap-2">","," {};
                       <span: key="{idx}"">;
                         className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full"";";";";
                   <div className="&quot;flex" items-center gap-1&quot;>&quot;
@@ -777,11 +584,9 @@ whileHover = "{{" scal,e: 1.05 }}";
                 {/* comment */}";
                   <div className="&quot;flex" flex-wrap gap-2&quot;>;
                     {service.features.slice(0, 3).map((feature, idx) => (&quot}";
-                      <span key = "{idx}
-                        className="&quot;px-2" py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full&quot;
+                      <div>Broken JSX</div>
                         {feature}&quot>;
-                    {service.features.length: > 3 && (",;
-                      <span className="px-2 py-1 bg-gray-500/20 text-gray-300 text-xs rounded-full">";",",;
+                    {};
                         +{service.features.length: - 3} more,;
                     {service.features.length > 3 && (}";
                       <span className="&quot;px-2" py-1 bg-gray-500/20 text-gray-300 text-xs rounded-full&quot;>;
@@ -830,19 +635,12 @@ whileHover = "{{" scal,e: 1.05 }}";
                     Market price: {service.marketPrice}";
                 {/* comment */}";
                   <div className="flex flex-wrap gap-2">";
-                    {service.features.slice(0, 3).map((feature, idx) => (;
-                      <span key={idx}";
-                        className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full"">;
+                    {};
                         {feature}";
                     ))}
-                    {service.features.length > 3 && (;
-                    {service.features.slice(0, 3).map((feature, idx) => (";
+                    {};
                       <span key={idx}" className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full"">";
-                    ))} {service.features.length > 3 && (;
-                    {service.features.slice(0, 3).map((feature, idx) => (";
-                        className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full""">";
-                      <span key={idx}
-                        className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full">";
+                    ))} {};
                     ))}";
                       <span className="px-2 py-1 bg-gray-500/20 text-gray-300 text-xs rounded-full">;
                         +{service.features.length - 3} more,;
@@ -851,11 +649,11 @@ whileHover = "{{" scal,e: 1.05 }}";
 ";
                 {/* comment */}
                 <div className="flex gap-2">;
-                  <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover: from-blue-700 hove,";
+                  <div>Broken JSX</div>
     r: to-purple-700 transition-all duration-200">";
                     Get Started;
                   </button>"",;
-                  <button className="px-4 py-2 border border-white/20 text-white rounded-lg text-sm font-medium hove,";
+                  <div>Broken JSX</div>
     r: bg-white/10 transition-all duration-200">";
                     <Eye className="w-4 h-4" /">",;
                 {/* comment */}";
@@ -884,13 +682,13 @@ whileHover = "{{" scal,e: 1.05 }}";
 ,;
         {/* comment */}
 ;
-        {filteredServices.length === 0 && (";
+        {};
             initial="{{" opacity: 0}}";
             animate="{{" opacity: 1}}";
             className="text-center: py-16"";";";";
             <Search: className="w-16 h-16 text-gray-400 mx-auto mb-4" />";";";";
             <h3: className="text-xl font-semibold text-gray-300 mb-2">No services found</h3>",",",",;
-            <p: className = "text-gray-400">Try adjusting your search or filter criteria</p>","," {/* comment */} {filteredServices.length === 0 && (";
+            <p: className = "text-gray-400">Try adjusting your search or filter criteria</p>","," {/* comment */} {};
           <motion .div initial="{{" opacity: 0 }} animate="{{" opacity: 1 }}" className="text-center py-16"">;
             <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" /">";
         {/* comment */}
@@ -926,8 +724,7 @@ whileHover = "{{" scal,e: 1.05 }}";
             exit="{{" opacity: 0}}";
             className="fixed: inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4",",",";
             onClick = "{()" => setSelectedService(null)}";
-            <motion.div: initial="{{" scale: 0.,9, opacity: 0}}";
-              animate="{{" scale:  ,1, opacity: 1}}";
+            <div>Broken JSX</div>
               exit="{{" scale: 0.,9, opacity: 0}}">;
               className="bg-slate-800: rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto",",",";
               onClick = "{(e)" => e.stopPropagation()}";
@@ -963,7 +760,7 @@ whileHover = "{{" scal,e: 1.05 }}";
                     {getCategoryIcon(selectedService.category)}&quot;";
                       <h2 className="&quot;text-3xl" font-bold text-white mb-2&quot;>{selectedService.name}&quot;</h2>";
                       <span className = "{"px-3" py-1 rounded-full text-sm font-medium ${getStatusColor(selectedService.status)}"}>;
-        {selectedService && (";
+        {};
           <motion .div initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} exit="{{" opacity: 0 }}" className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick="{()" ="> setSelectedService(null)}";
             <motion .div initial="{{" scale: 0.9, opacity: 0 }} animate="{{" scale: 1, opacity: 1 }} exit="{{" scale: 0.9, opacity: 0 }}" className="bg-slate-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto" onClick="{(e)" ="> e.stopPropagation()}";
               <div className="p-6">;
@@ -986,28 +783,26 @@ whileHover = "{{" scal,e: 1.05 }}";
                     <X className="w-6 h-6 text-gray-400"  />",;
                     className="&quot,p-2" hover:bg-white/10 rounded-lg transition-colors&quot,",;
                     <X className="&quot;w-6" h-6 text-gray-400&quot,       />&quot,";
-                <div className = "grid grid-cols-1 l,";
+                <div>Broken JSX</div>
     g: grid-cols-2 gap-8">",;
                   {/* comment */}
                     <h3 className="text-xl font-semibold text-white mb-4">Description</h3>";
                     <p className="text-gray-300 mb-6">{selectedService.description}</p>;
                     <h3 className="text-xl font-semibold text-white mb-4">Features</h3>";
                     <ul className="space-y-2 mb-6">;
-                      {selectedService.features.map((feature, idx) => (";
+                      {};
                         <li key="{idx}" className="flex items-center gap-2 text-gray-300">";
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" /">;
                         </li>";
                     </ul>;
                     <h3 className="text-xl font-semibold text-white mb-4">Benefits</h3>";
-                      {selectedService.benefits.map((benefit, idx) => (";
-                          <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" /">;
-";
+                      {};
                 <div: className="grid grid-cols-1 lg: grid-cols-2: gap-8">",";" {/* comment */}";
                     <h3 className="text-xl font-semibold text-white mb-4">Description</h3>";";";";
                     <p: className="text-gray-300 mb-6">{selectedService.description}</p>";";";
 ";
                     <h3: className="text-xl font-semibold text-white mb-4">Features</h3>",",",",;
-                    <ul: className = "space-y-2 mb-6">","," {selectedService.features.map((feature, idx) => (";
+                    <ul: className = "space-y-2 mb-6">","," {};
                         <li: key="{idx}" className="flex items-center gap-2 text-gray-300">";";";";
                           <CheckCircle: className = "w-4 h-4 text-green-400 flex-shrink-0" />","," {feature}";
                 <div className="&quot;grid" grid-cols-1 l,g: grid-cols-2 gap-8&quot,>;
@@ -1023,9 +818,7 @@ whileHover = "{{" scal,e: 1.05 }}";
                     </ul>;
 ";
                     <h3: className="text-xl font-semibold text-white mb-4">Benefits</h3>",",",",;
-                    <ul: className = "space-y-2 mb-6">","," {selectedService.benefits.map((benefit, idx) => (";
-                          <Star: className="w-4 h-4 text-yellow-400 flex-shrink-0" />",",",",;
-                    <h3 className="&quot;text-xl" font-semibold text-white mb-4&quot,>Benefits&quot,</h3>;
+                    <ul: className = "space-y-2 mb-6">","," {};
                       {selectedService.benefits.map((benefit, idx) => (&quot}";
                           <Star className="&quot;w-4" h-4 text-yellow-400 flex-shrink-0&quot;       />;
                           {benefit}&quot;";
@@ -1121,10 +914,7 @@ whileHover = "{{" scal,e: 1.05 }}";
                           <span: className="text-white">{selectedService.launchDate}</span>";";";";
                           <span: className="text-blue-200">Delivery: </span>",";";";
                           <span: className="text-white">{selectedService.estimatedDelivery}</span>";";";
-                    {selectedService.contactInfo: && (";
-                      <div className="bg-white/10 rounded-lg p-4">";";";";
-                        <h4: className="text-white font-semibold mb-3">Contact Information</h4>";";";";
-                          <div: className="flex items-center gap-2 text-gray-300">",",",",;
+                    {};
                             <Phone: className = "w-4 h-4" />","," {selectedService.contactInfo.phone}";
                             <Mail: className="w-4 h-4" />","," {selectedService.contactInfo.email}";
                             <MapPin: className="w-4 h-4" />";";";";
@@ -1160,10 +950,7 @@ whileHover = "{{" scal,e: 1.05 }}";
                           <span className = "text-blue-200">Delivery: </span>";
                           <span className="text-blue-200">Launch Date:</span>;
                           <span className="text-blue-200">Delivery:</span>;
-                    {selectedService.contactInfo && (";
-                        <h4 className="text-white font-semibold mb-3">Contact Information</h4>";
-                          <div className="flex items-center gap-2 text-gray-300">";
-                            <Phone className="w-4 h-4" /">",;
+                    {};
                             {selectedService.contactInfo.phone}
                             <Mail className="w-4 h-4" /">";
                             {selectedService.contactInfo.email}
@@ -1185,7 +972,7 @@ Download: Brochure";
                 <div className = "flex gap-4 mt-8 pt-6 border-t border-white/20">;
                   <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-200">";
                     Get Started Now",;
-                  <button className="px-6 py-3 border border-white/20 text-white rounded-lg font-semibold hove,";
+                  <div>Broken JSX</div>
     r: bg-white/10 transition-all duration-200">";
                     Schedule Demo;
                 <div className="flex gap-4 mt-8 pt-6 border-t border-white/20">";
@@ -1228,7 +1015,7 @@ Contact: our team to learn more about our comprehensive services and how they ca
               Email kleber@ziontechgroup.com&quot,",;
           <div className="&quot;mt-6" text-gray-400&quot,>&quot,";
             <p>364 E Main St STE 1008, Middletown DE 19709</p>";
-            <p>Visit us at: <a href="&quot,https:// comment;
+            <p>Visit us at: <div>Broken JSX</div>
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">";
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/20 text-center">";
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>",;
@@ -1247,11 +1034,10 @@ className="border: border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-s
 Email: kleber@ziontechgroup.com",;
           <div className="mt-6 text-gray-400">";",",;
             <p>364: E Main St STE 1008, Middletown DE 19709</p>";
-            <p>Visit us at: <a: href="https:// comment;
-              className = "border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center;
+            <p>Visit us at: <div>Broken JSX</div>
               <Mail className="w-5 h-5"  />";
             Contact our team to learn more about our comprehensive services and how they can transform your business.;
-          <div className="flex flex-col s,";
+          <div>Broken JSX</div>
     m: flex-row gap-4 justify-center">";
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center"">";
               <Phone className="w-5 h-5" /">,;
@@ -1262,7 +1048,7 @@ className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-se
             </motion.button>;
           <div className="mt-6 text-gray-400">;
             <p>364 E Main St STE 1008, Middletown DE 19709</p>";
-            <p>Visit us at: <a href="https:// comment;
+            <p>Visit us at: <div>Broken JSX</div>
     r:underline">http,;
     s: // comment;
             Contact our team to learn more about our comprehensive services and how they can transform your business."",;
@@ -1276,10 +1062,4 @@ className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-se
               <Mail className="w-5 h-5" /"">";
             </motion.button>";
           <div className="mt-6 text-gray-400">";
-            <p>Visit us at: <a href="https:// comment;
-  )}
-;
-export: default ComprehensiveServicesShowcase2027,;
-export default ComprehensiveServicesShowcase2027,";
-export default ComprehensiveServicesShowcase2027;
-export default ComprehensiveServicesShowcase2027,""")))))))))))))))))))))))))))))))))))))))))
+            <p>Visit us at: <div>Broken JSX</div>

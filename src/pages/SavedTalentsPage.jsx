@@ -5,7 +5,9 @@ import { useAuth } from '@/hooks/useAuth';''';
 import { supabase } from '@/integrations/supabase/client';''';
 import { toast } from '@/components/ui/use-toast';''';
 import { useNavigate } from 'react-router-dom';
-export default function SavedTalentsPage() {}
+export {};
+  return null;
+}
   const { user } = useAuth();
   const [savedTalents, setSavedTalents] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -47,7 +49,9 @@ export default function SavedTalentsPage() {}
           throw error;,
 }
         if (data) {}
-export default function Page() {}
+export {};
+  return null;
+}
         if(data) {}
           // Extract talent profiles and convert to TalentProfile type;
           const talentProfiles = data.map(item => item.talent_profile) ;
@@ -170,9 +174,7 @@ export default function Page() {}
   };
   return();
     <>";
-      <SEO"";
-        title="Saved Talents | Zion AI Marketplace"";
-        description="View and manage your saved talents in the Zion AI Marketplace";
+      <div>Broken JSX</div>
       />";
 "";
       <div className="container mx-auto px-4 py-8">"";
@@ -181,21 +183,7 @@ export default function Page() {}
           Here are the talents you've saved for future reference.;
         </p>;
 ";
-        {isLoading ? ("";
-          <div className="text-center py-8">Loading saved talents...</div>";
-        ) : savedTalents.length === 0 ? ("";
-          <div className="text-center py-8">No talents saved yet.</div>";
-        ) : ("";
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">;
-            {savedTalents.map(talent => (;
-              <TalentCard;
-                key={talent.id}
-                talent={talent}
-                onViewProfile={handleViewProfile}
-                onRequestHire={handleRequestHire}
-                isSaved={true}
-                onToggleSave={handleToggleSave}
-                isAuthenticated={!!user}
+        {};
               />) ) }
           </div>) }
       </div>;

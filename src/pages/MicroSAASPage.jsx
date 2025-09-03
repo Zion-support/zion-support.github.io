@@ -2,7 +2,9 @@ import React from 'react';''';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';''';
 import { Button } from '@/components/ui/button';''';
 import { Badge } from '@/components/ui/badge';
-import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquare, FileText, Database, Search, Phone, Star, CheckCircle, Clock export default function MicroSAASPage() {}
+import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquare, FileText, Database, Search, Phone, Star, CheckCircle, Clock export {};
+  return null;
+}
     const microSAASServices = [];
         {}
             id: "email-automation","";
@@ -415,8 +417,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
       {/* Category Filter */}"";
       <div className="container mx-auto px-4 py-8">"";
         <div className="flex flex-wrap justify-center gap-2 mb-8">"'";
-          {categories.map((category) => (<Button key={category} variant={selectedCategory === category ? "default" : "outline"} onClick={() => setSelectedCategory(category)} className={`${selectedCategory === category''`;
-                ? 'bg-zion-purple text-white''`'`;
+          {categories.map((category) => (<Button key={category} variant={selectedCategory === category ? "default" : "outline"} onClick={() => setSelectedCategory(category)} className={};
                 : 'border-zion-purple text-zion-purple hover:bg-zion-purple/10'}`}>;
               {category}
             </Button>) ) }
@@ -433,7 +434,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
                     {service.icon}";
                   </div>"";
                   <div className="flex flex-col items-end gap-2">"";
-                    {service.badge && (<Badge className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white border-0">;
+                    {};
                         {service.badge}";
                       </Badge>)}"";
                     <div className="flex items-center gap-1 text-sm text-zion-slate-light">"";

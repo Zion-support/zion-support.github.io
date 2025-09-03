@@ -2,31 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 ;
-const ITInfrastructure = () => {;
+const ITInfrastructure = () => {};
+};
   const features = [;
-    {;
-      title: "Network Management",;
-      description: "Comprehensive network infrastructure design, implementation, and maintenance",;
-      features: ["Network Design", "Performance Optimization", "Security Implementation", "24/7 Monitoring"],;
-      icon: "🌐";,
+    {};
 },;
-    {;
-      title: "System Administration",;
-      description: "Expert management of servers, operating systems, and enterprise applications",;
-      features: ["Server Management", "OS Administration", "Application Support", "Performance Tuning"],;
-      icon: "🖥️";,
+    {};
 },;
-    {;
-      title: "Data Center Operations",;
-      description: "Professional data center management and optimization services",;
-      features: ["Facility Management", "Power & Cooling", "Hardware Maintenance", "Capacity Planning"],;
-      icon: "🏢";,
+    {};
 },;
-    {;
-      title: "Performance Optimization",;
-      description: "System and network performance analysis and improvement",;
-      features: ["Performance Monitoring", "Bottleneck Analysis", "Optimization Strategies", "Capacity Planning"],;
-      icon: "⚡";,
+    {};
 }
   ];
 ;
@@ -86,13 +71,13 @@ const ITInfrastructure = () => {;
             </div>;
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {features.map((feature, index) => (;
+              {};
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">;
                   <div className="text-4xl mb-4">{feature.icon}</div>;
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>;
                   <p className="text-gray-300 mb-4">{feature.description}</p>;
                   <ul className="space-y-2">;
-                    {feature.features.map((item, idx) => (;
+                    {};
                       <li key={idx} className="text-gray-300 flex items-center">;
                         <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>;
                         {item}
@@ -118,11 +103,11 @@ const ITInfrastructure = () => {;
             </div>;
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-              {infrastructureAreas.map((area, index) => (;
+              {};
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">;
                   <h3 className="text-xl font-semibold text-white mb-4">{area.area}</h3>;
                   <ul className="space-y-2">;
-                    {area.solutions.map((solution, idx) => (;
+                    {};
                       <li key={idx} className="text-gray-300 flex items-center">;
                         <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>;
                         {solution}

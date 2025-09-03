@@ -1,9 +1,9 @@
 import React from 'react';
 import { Code, Shield, Zap, Brain, Users, TrendingUp, CheckCircle, Star } from 'lucide-react';
 ;
-export default function AIAutonomousCodeReview() {;
-  return (;
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">;
+export default function AIAutonomousCodeReview() {};
+  return null;
+}
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto text-center">;
@@ -19,13 +19,11 @@ export default function AIAutonomousCodeReview() {;
             Revolutionize your development workflow with AI-powered code analysis, security scanning, and automated quality assurance.;
           </p>;
           <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-            <a;
-              href="https://ziontechgroup.com/contact";
+            <div>Broken JSX</div>
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">;
               Get Started;
             </a>;
-            <a;
-              href="#demo";
+            <div>Broken JSX</div>
               className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300">;
               Watch Demo;
             </a>;
@@ -139,8 +137,7 @@ export default function AIAutonomousCodeReview() {;
                   Email support;
                 </li>;
               </ul>;
-              <a;
-                href="https://ziontechgroup.com/contact";
+              <div>Broken JSX</div>
                 className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 block text-center">;
                 Get Started;
               </a>;
@@ -182,8 +179,7 @@ export default function AIAutonomousCodeReview() {;
                   Custom integrations;
                 </li>;
               </ul>;
-              <a;
-                href="https://ziontechgroup.com/contact";
+              <div>Broken JSX</div>
                 className="w-full bg-white text-blue-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 block text-center">;
                 Get Started;
               </a>;
@@ -222,8 +218,7 @@ export default function AIAutonomousCodeReview() {;
                   Custom training;
                 </li>;
               </ul>;
-              <a;
-                href="https://ziontechgroup.com/contact";
+              <div>Broken JSX</div>
                 className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 block text-center">;
                 Contact Sales;
               </a>;
@@ -311,13 +306,11 @@ export default function AIAutonomousCodeReview() {;
             Join thousands of developers who trust AI Autonomous Code Review for better, faster, and more secure code.;
           </p>;
           <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-            <a;
-              href="https://ziontechgroup.com/contact";
+            <div>Broken JSX</div>
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300">;
               Start Free Trial;
             </a>;
-            <a;
-              href="tel:+13024640950";
+            <div>Broken JSX</div>
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300">;
               Call +1 302 464 0950;
             </a>;

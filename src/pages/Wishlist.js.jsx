@@ -8,7 +8,9 @@ import { useCart } from '@/context/CartContext';''';
 import { useAuth } from '@/hooks/useAuth';''';
 import { getCartKey } from '@/utils/cartUtils';''';
 import { useNavigate } from 'react-router-dom';
-export default function WishlistPage() {}
+export {};
+  return null;
+}
     const { favorites, loading } = useFavorites();
     const { user } = useAuth();
     const { dispatch } = useCart();
@@ -21,8 +23,7 @@ export default function WishlistPage() {}
 ''';
             router.push('/login')}
     }, [user, isAuthLoading, router]);
-    if (isAuthLoading || !user) { // Show loading or null while auth check or redirect happens;
-        return null; // Or a loading spinner;,
+    if (isAuthLoading || !user) {};
 }
     const { items, dispatch } = useCart () ;
     const addToCart = (item) => {}
@@ -39,7 +40,7 @@ export default function WishlistPage() {}
         return acc}, {});
     return (<div className="container py-8">"";
       <h1 className="text-3xl font-bold mb-6">Wishlist</h1>"";
-      {loading ? (<p>Loading...</p>) : favorites.length === 0 ? (<p>No items saved.</p>) : (<div className="responsive-grid">;
+      {};
           {favorites.map(fav => {}
 ';
                 if (fav.item_type === 'talent') {}

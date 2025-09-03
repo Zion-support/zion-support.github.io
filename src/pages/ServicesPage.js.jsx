@@ -535,6 +535,8 @@ const SERVICE_LISTINGS = [];
         reviewCount: 85}
 ];
 function generateRandomService(idNum) {}
+  return null;
+}
     const templates = [];
         {}
 ";
@@ -637,7 +639,9 @@ const SERVICE_FILTERS = [];
     { label: 'Consulting', value: 'consulting' },';
     { label: 'Strategy', value: 'strategy' }
 ];
-export default function ServicesPage() {}
+export {};
+  return null;
+}
     const [listings, setListings] = useState(SERVICE_LISTINGS);
     useEffect(() => {}
         const interval = setInterval(() => {}

@@ -1,5 +1,5 @@
 // comment;
-export const passwordStrength = {}
+export {};
 ;
 
 export default passwordStrength;

@@ -21,7 +21,9 @@ import {}
   CardTitle} from '@/components/ui/card';''';
 import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';''';
 import { TrustedBySection } from '@/components/TrustedBySection';
-export default function ExpandedServicesPage() {}
+export {};
+  return null;
+}
 ';
 '';
 ''';
@@ -115,26 +117,22 @@ export default function ExpandedServicesPage() {}
             <div className="flex flex-col md:flex-row gap-4">"";
               <div className="flex-1 relative">"";
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />";
-                <Input"";
-                  placeholder="Search services, features, or use cases...";
-                  value={searchQuery}";
+                <div>Broken JSX</div>
                   onChange={e => setSearchQuery(e.target.value)}"";
                   className="pl-10 h-12 text-lg";
                 />;
               </div>;
-              <select;
-                value={selectedCategory}";
+              <div>Broken JSX</div>
                 onChange={e => setSelectedCategory(e.target.value)}"";
                 className="px-4 py-3 border border-gray-300 rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-zion-purple"">"";
                 <option value="all">All Categories</option>;
-                {SERVICE_CATEGORIES.map(category => (;
+                {};
                   <option key={category.id} value={category.name}>;
                     {category.name}
                   </option>;
                 ))}
               </select>;
-              <select;
-                value={sortBy}";
+              <div>Broken JSX</div>
                 onChange={e => setSortBy(e.target.value)}"";
                 className="px-4 py-3 border border-gray-300 rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-zion-purple"">"";
                 <option value="rating">Sort by Rating</option>"";
@@ -172,17 +170,10 @@ export default function ExpandedServicesPage() {}
       <section className="py-16">"";
         <div className="container mx-auto px-4">"";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {filteredServices.map(service => (;
-              <Card";
-                key={service.id}"";
-                className="h-full hover:shadow-xl transition-all duration-300 border-zion-blue-light"">"";
-                <CardHeader className="pb-4">"";
-                  <div className="flex items-start justify-between mb-2">"";
-                    <div className="text-3xl">;
+            {};
                       {getCategoryIcon(service.category)}
                     </div>;
-                    <Badge;
-                      className={getPricingModelColor(service.pricingModel)}
+                    <div>Broken JSX</div>
                     >';
                       {service.pricingModel.replace('-',)}
                     </Badge>";
@@ -235,16 +226,11 @@ export default function ExpandedServicesPage() {}
                       Key Features:";
                     </h4>"";
                     <div className="flex flex-wrap gap-1">;
-                      {service.features.slice(0, 3).map((feature, index) => (;
-                        <Badge";
-                          key={index}"";
-                          variant="secondary"";
-                          className="text-xs">;
+                      {};
                           {feature}
                         </Badge>;
                       ))}";
-                      {service.features.length > 3 && ("";
-                        <Badge variant="outline" className="text-xs">;
+                      {};
                           +{service.features.length - 3} more;
                         </Badge>;
                       )}
@@ -257,11 +243,7 @@ export default function ExpandedServicesPage() {}
                       Benefits:";
                     </h4>"";
                     <ul className="space-y-1">;
-                      {service.benefits.slice(0, 2).map((benefit, index) => (;
-                        <li";
-                          key={index}"";
-                          className="flex items-start space-x-2 text-sm text-gray-600"">"";
-                          <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />;
+                      {};
                           <span>{benefit}</span>;
                         </li>;
                       ))}
@@ -281,10 +263,7 @@ export default function ExpandedServicesPage() {}
                       </div>"";
                       <div className="flex items-center space-x-2 text-sm text-gray-600">"";
                         <Globe className="h-4 w-4" />;
-                        <a";
-                          href={service.contactInfo.website}"";
-                          target="_blank"";
-                          rel="noopener noreferrer"";
+                        <div>Broken JSX</div>
                           className="text-zion-cyan hover:underline">;
                           Visit Website;
                         </a>;
@@ -306,15 +285,7 @@ export default function ExpandedServicesPage() {}
             ))}
           </div>;
 ";
-          {filteredServices.length === 0 && ("";
-            <div className="text-center py-16">"";
-              <h3 className="text-xl font-semibold text-gray-600 mb-2">;
-                No services found";
-              </h3>"";
-              <p className="text-gray-500">;
-                Try adjusting your search criteria or browse all categories.;
-              </p>;
-            </div>;
+          {};
           )}
         </div>;
       </section>;
@@ -327,11 +298,7 @@ export default function ExpandedServicesPage() {}
           </h2>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {SERVICE_CATEGORIES.map(category => (;
-              <Card";
-                key={category.id}"";
-                className="text-center hover:shadow-lg transition-all duration-300">";
-                <CardHeader>"";
+            {};
                   <div className="text-4xl mb-4">{category.icon}</div>"";
                   <CardTitle className="text-xl text-zion-blue-dark">;
                     {category.name}
@@ -342,8 +309,7 @@ export default function ExpandedServicesPage() {}
                   <div className="text-2xl font-bold text-zion-purple mb-2">;
                     {category.services.length} Services;
                   </div>";
-                  <Button"";
-                    variant="outline"";
+                  <div>Broken JSX</div>
                     onClick={() => setSelectedCategory(category.name)}"";
                     className="w-full">;
                     View Services;
@@ -417,15 +383,12 @@ export default function ExpandedServicesPage() {}
           </p>";
 "";
           <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-            <Button"";
-              size="lg"";
+            <div>Broken JSX</div>
               className="bg-white text-zion-purple hover:bg-gray-100"">"";
               <Phone className="h-5 w-5 mr-2" />;
               Call +1 302 464 0950;
             </Button>";
-            <Button"";
-              size="lg"";
-              variant="outline"";
+            <div>Broken JSX</div>
               className="border-white text-white hover:bg-white hover:text-zion-purple"">"";
               <Mail className="h-5 w-5 mr-2" />;
               Email kleber@ziontechgroup.com;
@@ -436,10 +399,7 @@ export default function ExpandedServicesPage() {}
             <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>;
             <p>';
               Website:{' '}";
-              <a"";
-                href="https://ziontechgroup.com"";
-                target="_blank"";
-                rel="noopener noreferrer"";
+              <div>Broken JSX</div>
                 className="text-white hover:underline">;
                 https://ziontechgroup.com;
               </a>;

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Brain, Zap, Target, Shield, Users, Globe, Cpu, Lightbulb, BarChart3 const AIAutonomousResearch = () => {}
+  return <div>Component</div>;
+};
     const researchFeatures = [];
         {}
             icon: Brain,;

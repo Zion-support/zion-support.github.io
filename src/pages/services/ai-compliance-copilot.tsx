@@ -1,90 +1,21 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ;
-  Shield, ;
-  Brain, ;
-  CheckCircle, ;
-  AlertTriangle, ;
-  FileText, ;
-  Users, ;
-  Building2, ;
-  Zap,;
-  Lock,;
-  Eye,;
-  BarChart3,;
-  TrendingUp,;
-  Globe,;
-  ArrowRight,;
-  Star,;
-  Award,;
-  Clock,;
-  DollarSign,;
-  Target,;
-  Workflow,;
-  Database,;
-  Cloud,;
-  Smartphone,;
-  Server,;
-  Cpu,;
-  Network,;
-  ShieldCheck,;
-  Bot,;
-  Activity,;
-  MessageCircle,;
-  Search,;
-  BarChart,;
-  Users2,;
-  Settings,;
-  Palette,;
-  Handshake,;
-  Lightbulb,;
-  Code,;
-  Rocket,;
-  Atom,;
-  Leaf,;
-  Gamepad2,;
-  Coins,;
-  Satellite,;
-  Heart,;
-  ShoppingCart,;
-  BookOpen,;
-  Calendar,;
-  Phone,;
-  Mail,;
-  MapPin;,
+import {};
 } from 'lucide-react';
 ;
-export default function AIComplianceCopilot() {;
-  const features = [;
-    {;
-      icon: Shield,;
-      title: 'Regulatory Compliance',;
-      description: 'Automated monitoring and enforcement of industry regulations and standards';,
+export default function AIComplianceCopilot() {};
+  return null;
+}
 },;
-    {;
-      icon: Brain,;
-      title: 'AI-Powered Analysis',;
-      description: 'Intelligent risk assessment and compliance gap identification';,
+    {};
 },;
-    {;
-      icon: CheckCircle,;
-      title: 'Audit Trail',;
-      description: 'Comprehensive tracking and documentation of all compliance activities';,
+    {};
 },;
-    {;
-      icon: AlertTriangle,;
-      title: 'Risk Detection',;
-      description: 'Proactive identification of potential compliance violations and risks';,
+    {};
 },;
-    {;
-      icon: FileText,;
-      title: 'Document Management',;
-      description: 'Automated document generation, review, and approval workflows';,
+    {};
 },;
-    {;
-      icon: Users,;
-      title: 'Team Collaboration',;
-      description: 'Streamlined communication and coordination across compliance teams';,
+    {};
 }
   ];
 ;
@@ -98,21 +29,13 @@ export default function AIComplianceCopilot() {;
   ];
 ;
   const useCases = [;
-    {;
-      industry: 'Financial Services',;
-      description: 'Automated regulatory reporting, risk assessment, and compliance monitoring for banks and financial institutions';,
+    {};
 },;
-    {;
-      industry: 'Healthcare',;
-      description: 'HIPAA compliance, patient data protection, and medical record management automation';,
+    {};
 },;
-    {;
-      industry: 'Manufacturing',;
-      description: 'Quality control compliance, safety standards, and environmental regulations monitoring';,
+    {};
 },;
-    {;
-      industry: 'Technology',;
-      description: 'Data privacy compliance, cybersecurity standards, and software licensing compliance';,
+    {};
 }
   ];
 ;
@@ -164,9 +87,7 @@ export default function AIComplianceCopilot() {;
           </div>;
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {features.map((feature, index) => {;
-              const Icon = feature.icon;
-              return (;
+            {};
                 <div key={index} className="bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6 hover:border-zion-cyan/50 transition-all duration-300">;
                   <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4">;
                     <Icon className="w-6 h-6 text-white" />;
@@ -189,7 +110,7 @@ export default function AIComplianceCopilot() {;
                 Why Choose AI Compliance Copilot?;
               </h2>;
               <div className="space-y-4">;
-                {benefits.map((benefit, index) => (;
+                {};
                   <div key={index} className="flex items-center space-x-3">;
                     <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />;
                     <span className="text-zion-slate-light">{benefit}</span>;
@@ -241,7 +162,7 @@ export default function AIComplianceCopilot() {;
           </div>;
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
-            {useCases.map((useCase, index) => (;
+            {};
               <div key={index} className="bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">;
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>;
                 <p className="text-zion-slate-light">{useCase.description}</p>;

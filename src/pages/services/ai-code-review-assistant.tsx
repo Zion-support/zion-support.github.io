@@ -1,66 +1,25 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { ;
-  Code, Brain, Shield, Zap, CheckCircle, Star, ArrowRight, ;
-  Users, Clock, BarChart3, GitBranch, Bug, FileText, ;
-  ExternalLink, Phone, Mail, MapPin, Globe;,
+import {};
 } from "lucide-react";
 
-export default function AICodeReviewAssistant() {;
-  const features = [;
-    "AI-Powered Code Analysis",;
-    "Automated Security Scanning", ;
-    "Performance Optimization Suggestions",;
-    "Code Quality Metrics",;
-    "Real-time Collaboration",;
-    "Integration with Git Platforms",;
-    "Custom Rule Configuration",;
-    "Automated Testing Recommendations";
-  ];
-
-  const benefits = [;
-    "Reduce code review time by 70%",;
-    "Catch 95% of security vulnerabilities",;
-    "Improve code quality by 60%",;
-    "Accelerate development cycles",;
-    "Reduce production bugs by 80%",;
-    "Enhance team collaboration";
-  ];
-
-  const pricing = [;
-    {;
-      name: "Starter",;
-      price: "$299/month",;
-      details: ["Up to 5 developers", "Basic AI analysis", "GitHub integration", "Email support", "10,000 lines/month"];,
+export default function AICodeReviewAssistant() {};
+  return null;
+}
 },;
-    {;
-      name: "Professional", ;
-      price: "$799/month",;
-      details: ["Up to 25 developers", "Advanced AI analysis", "Multi-platform integration", "Priority support", "100,000 lines/month", "Custom rules"];,
+    {};
 },;
-    {;
-      name: "Enterprise",;
-      price: "$1,999/month", ;
-      details: ["Unlimited developers", "Full AI suite", "All integrations", "24/7 support", "Unlimited lines", "Custom training", "SLA guarantee"];,
+    {};
 }
   ];
 
   const useCases = [;
-    {;
-      title: "Startup Development Teams",;
-      description: "Accelerate development with AI-powered code reviews that catch issues before they reach production.",;
-      icon: Users;,
+    {};
 },;
-    {;
-      title: "Enterprise Security",;
-      description: "Ensure code security compliance with automated vulnerability detection and security best practices.",;
-      icon: Shield;,
+    {};
 },;
-    {;
-      title: "DevOps Integration",;
-      description: "Seamlessly integrate with CI/CD pipelines for automated code quality checks and deployment gates.",;
-      icon: GitBranch;,
+    {};
 }
   ];
 
@@ -107,7 +66,7 @@ export default function AICodeReviewAssistant() {;
           </div>;
           ;
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {features.map((feature, index) => (;
+            {};
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">;
                 <div className="flex items-center mb-3">;
                   <Brain className="w-6 h-6 text-blue-600 mr-3" />;
@@ -137,7 +96,7 @@ export default function AICodeReviewAssistant() {;
             </div>;
             ;
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {benefits.map((benefit, index) => (;
+              {};
                 <div key={index} className="bg-white p-6 rounded-lg shadow-sm">;
                   <div className="flex items-center mb-3">;
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />;
@@ -157,7 +116,7 @@ export default function AICodeReviewAssistant() {;
           </div>;
           ;
           <div className="grid md:grid-cols-3 gap-8">;
-            {useCases.map((useCase, index) => (;
+            {};
               <div key={index} className="text-center">;
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
                   <useCase.icon className="w-8 h-8 text-blue-600" />;
@@ -178,12 +137,9 @@ export default function AICodeReviewAssistant() {;
             </div>;
             ;
             <div className="grid md:grid-cols-3 gap-8">;
-              {pricing.map((tier, index) => (;
+              {};
                 <div key={index} className={`bg-white rounded-xl p-8 shadow-lg ${tier.name === 'Professional' ? 'ring-2 ring-blue-500 relative' : ''}`}>;
-                  {tier.name === 'Professional' && (;
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
-                      <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>;
-                    </div>;
+                  {};
                   )}
                   <div className="text-center mb-6">;
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{tier.name}</h3>;
@@ -191,7 +147,7 @@ export default function AICodeReviewAssistant() {;
                     <p className="text-gray-600">per month</p>;
                   </div>;
                   <ul className="space-y-3 mb-8">;
-                    {tier.details.map((detail, detailIndex) => (;
+                    {};
                       <li key={detailIndex} className="flex items-start">;
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />;
                         <span className="text-gray-700">{detail}</span>;

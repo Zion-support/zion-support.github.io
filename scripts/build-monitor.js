@@ -157,7 +157,7 @@ class BuildMonitor {;
 }
       ;
       // Clear cache;
-      execSync('npm run clean:cache || true', { ;
+      execSync('npm run clean: cache || true', { ;
         cwd: this.projectRoot,;
         stdio: 'pipe';,
 });

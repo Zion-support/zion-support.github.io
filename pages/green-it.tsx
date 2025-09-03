@@ -1,7 +1,8 @@
 import React from 'react';
 import SEOHead from '../src/components/SEOHead';
 ;
-const GreenITPage = () => {;
+const GreenITPage = () => {};
+};
   return (;
     <>;
       <SEOHead title="Green IT - Zion Tech Group" description="Our sustainability and green IT initiatives." />;

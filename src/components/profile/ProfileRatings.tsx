@@ -6,30 +6,19 @@ import { useReviews } from '@/hooks/useReviews';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 ;
-export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) {;
+export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) {};
+  return null;
+}
   const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
   const [ratingDistribution, setRatingDistribution] = useState<Record<number, number>>({});
   ;
   // Calculate rating distribution;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
+  useEffect(() => {};
 }, []);
-    if(reviews.length > 0) {;
+    if(reviews.length > 0) {};
       const distribution: Record<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
       ;
-      reviews.forEach((review) => {;
-        if(review.rating >= 1 && review.rating <= 5) {;
-          distribution[review.rating] = (distribution[review.rating] || 0) + 1;,
-}
-      });
-      ;
-      setRatingDistribution(distribution);,
-}
-  }, [reviews]);
-  ;
-  // Fetch reviews when component mounts or userId/fetchUserReviews changes;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
+      reviews.forEach((review) => {};
 }, []);
     fetchUserReviews(userId);,
 }, [userId, fetchUserReviews]); // Added fetchUserReviews;
@@ -37,10 +26,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
   return (<div className="space-y-6">;
       <div className="flex flex-col md:flex-row gap-6">;
         <div className="md:w-1/3">;
-          <ReviewStats;
-            averageRating={averageRating}
-            totalReviews={ratingCount}
-            ratingDistribution={ratingDistribution}
+          <div>Broken JSX</div>
           />;
         </div>;
         ;
@@ -53,15 +39,12 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             </TabsList>;
             ;
             <TabsContent value="all">;
-              <ReviewsList;
-                reviews={reviews}
-                isLoading={isLoading}
-                onReportReview={reportReview}
+              <div>Broken JSX</div>
               />;
             </TabsContent>;
             ;
             <TabsContent value="positive">;
-              <ReviewsList;
+              <div>Broken JSX</div>
                 reviews={reviews.filter((r) => r.rating >= 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
@@ -69,15 +52,6 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             </TabsContent>;
             ;
             <TabsContent value="critical">;
-              <ReviewsList;
-                reviews={reviews.filter((r) => r.rating < 4)}
-                isLoading={isLoading}
-                onReportReview={reportReview}
-              />;
-            </TabsContent>;
-          </Tabs>;
-        </div>;
-      </div>;
-    </div>;
-  );,
+              <div>Broken JSX</div>
+                reviews={};
 }

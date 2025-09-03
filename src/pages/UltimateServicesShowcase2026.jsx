@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 // import { ultimateInnovativeServices2026 } from '../data/ultimateInnovativeServices2026';
 // ;
-const UltimateServicesShowcase2026 = () => {;
+const UltimateServicesShowcase2026 = () => {};
+};
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');    const [sortBy, setSortBy] = useState('name');
     // Combine all services;
@@ -77,11 +78,7 @@ const UltimateServicesShowcase2026 = () => {;
       {/* Hero Section */}"";
       <section className="py-20 px-4 sm:px-6 lg:px-8">"";
         <div className="max-w-7xl mx-auto text-center">";
-          <motion.h1 "";
-            className="text-4xl md:text-6xl font-bold mb-6";
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div>Broken JSX</div>
           >";
             Ultimate"";
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">"";
@@ -95,10 +92,7 @@ const UltimateServicesShowcase2026 = () => {;
           </motion.p>;
 
           {/* Contact Information */}";
-          <motion.div "";
-            className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 mb-8";
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div>Broken JSX</div>
             transition={{ duration: 0.8, delay: 0.4 }}">"";
             <h3 className="text-2xl font-bold mb-4 text-cyan-400">Contact Zion Tech Group</h3>"";
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">;
@@ -118,27 +112,7 @@ const UltimateServicesShowcase2026 = () => {;
             </div>;
           </motion.div>;
 ";
-const UltimateServicesShowcase2026: React.FC = () => {;
-  return (";
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
-      <SEO title="UltimateServicesShowcase2026 - Zion Tech Group;
-        description="Professional UltimateServicesShowcase2026 services by Zion Tech Group"">;
-        keywords="ultimateservicesshowcase2026, technology, services" />";
-      <div className="container mx-auto px-4 py-20">";
-        <div className="text-center">";
-          <h1 className="text-4xl font-bold text-white mb-6">UltimateServicesShowcase2026</h1>";
-          <p className="text-xl text-gray-300 mb-8">;
-            Professional UltimateServicesShowcase2026 services to help your business grow.;
-          </p>";
-          <div className="flex justify-center">";
-            <a href="/contact" ";
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover: shadow-lg transition-all duration-300">;
-              Get Started,;
-            </a>;
-          </div>;
-        </div>;
-      </section>;
-";
+const UltimateServicesShowcase2026: React.FC = () => {};
       {/* Filters Section */}"";
       <section className="py-8 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">"";
         <div className="max-w-7xl mx-auto">"";
@@ -174,22 +148,13 @@ const UltimateServicesShowcase2026: React.FC = () => {;
       <section className="py-16 px-4 sm:px-6 lg:px-8">"";
         <div className="max-w-7xl mx-auto">"";
           <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" variants={containerVariants} initial="hidden" animate="visible">"";
-            {filteredServices.map((service, index) => (<motion.div key={service.id} variants={itemVariants} className="group" whileHover = {}
-  { scale: 1.02,;
-  y: -5;,
-}} transition = {}
-";
-"";
-  { type: "spring",;
-  stiffness: 300;
-";,
+            {};
 }}>"";
                 <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/25 h-full">";
                   {/* Service Header */}"";
                   <div className="flex items-start justify-between mb-4">"";
                     <div className="text-4xl">{service.icon}</div>"";
-                    {service.popular && (<span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full">;
-                        Popular;
+                    {};
                       </span>) }
                   </div>;
 ";
@@ -278,13 +243,7 @@ const UltimateServicesShowcase2026: React.FC = () => {;
       {/* CTA Section */}"";
       <section className="py-20 px-4 sm:px-6 lg:px-8">"";
         <div className="max-w-4xl mx-auto text-center">;
-          <motion.div initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
-  { opacity: 1,;
-  y: 0;
-";,
+          <div>Broken JSX</div>
 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>"";
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"";
               Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Transform</span> Your Business?";

@@ -1,110 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ;
-  Users, ;
-  Search, ;
-  Filter, ;
-  MapPin, ;
-  Clock, ;
-  Star, ;
-  Award, ;
-  TrendingUp,;
-  CheckCircle,;
-  ArrowRight,;
-  Briefcase,;
-  GraduationCap,;
-  Code,;
-  Database,;
-  Shield,;
-  Cloud,;
-  Brain,;
-  Zap;,
+import {};
 } from 'lucide-react';
 ;
-export function TalentPage() {;
-  const talentCategories = [;
-    {;
-      title: 'AI & Machine Learning',;
-      icon: Brain,;
-      count: 45,;
-      skills: ['TensorFlow', 'PyTorch', 'Computer Vision', 'NLP', 'Deep Learning'];,
+export function TalentPage() {};
+  return null;
+}
 },;
-    {;
-      title: 'Cloud & DevOps',;
-      icon: Cloud,;
-      count: 32,;
-      skills: ['AWS', 'Azure', 'Kubernetes', 'Docker', 'Terraform'];,
+    {};
 },;
-    {;
-      title: 'Cybersecurity',;
-      icon: Shield,;
-      count: 28,;
-      skills: ['Penetration Testing', 'SOC', 'Compliance', 'Risk Assessment', 'Incident Response'];,
+    {};
 },;
-    {;
-      title: 'Full Stack Development',;
-      icon: Code,;
-      count: 67,;
-      skills: ['React', 'Node.js', 'Python', 'TypeScript', 'PostgreSQL'];,
+    {};
 },;
-    {;
-      title: 'Data Science',;
-      icon: Database,;
-      count: 23,;
-      skills: ['Python', 'R', 'SQL', 'Tableau', 'Machine Learning'];,
+    {};
 },;
-    {;
-      title: 'Blockchain',;
-      icon: Zap,;
-      count: 15,;
-      skills: ['Solidity', 'Web3', 'DeFi', 'Smart Contracts', 'Ethereum'];,
+    {};
 }
   ];
 ;
   const featuredProfessionals = [;
-    {;
-      name: 'Sarah Chen',;
-      title: 'Senior AI Engineer',;
-      location: 'San Francisco, CA',;
-      rating: 4.9,;
-      projects: 47,;
-      skills: ['Machine Learning', 'Python', 'TensorFlow', 'Computer Vision'],;
-      availability: 'Available',;
-      hourlyRate: '$120-150',;
-      avatar: '👩‍💻';,
+    {};
 },;
-    {;
-      name: 'Marcus Rodriguez',;
-      title: 'Cloud Solutions Architect',;
-      location: 'Austin, TX',;
-      rating: 4.8,;
-      projects: 32,;
-      skills: ['AWS', 'Kubernetes', 'Terraform', 'DevOps'],;
-      availability: 'Available',;
-      hourlyRate: '$100-130',;
-      avatar: '👨‍💻';,
+    {};
 },;
-    {;
-      name: 'Dr. Emily Watson',;
-      title: 'Cybersecurity Expert',;
-      location: 'New York, NY',;
-      rating: 5.0,;
-      projects: 28,;
-      skills: ['Penetration Testing', 'SOC', 'Compliance', 'Risk Assessment'],;
-      availability: 'Available',;
-      hourlyRate: '$150-200',;
-      avatar: '👩‍🔬';,
+    {};
 },;
-    {;
-      name: 'Alex Kim',;
-      title: 'Full Stack Developer',;
-      location: 'Seattle, WA',;
-      rating: 4.9,;
-      projects: 56,;
-      skills: ['React', 'Node.js', 'TypeScript', 'PostgreSQL'],;
-      availability: 'Available',;
-      hourlyRate: '$80-120',;
-      avatar: '👨‍💻';,
+    {};
 }
   ];
 ;
@@ -126,10 +48,7 @@ export function TalentPage() {;
             <div className="max-w-2xl mx-auto mb-8">;
               <div className="relative">;
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />;
-                <input;
-                  type="text";
-                  placeholder="Search by skills, location, or expertise...";
-                  className="w-full pl-12 pr-4 py-4 bg-zion-slate-darker border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent";
+                <div>Broken JSX</div>
                 />;
                 <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-zion-cyan text-white px-6 py-2 rounded-lg hover:bg-zion-cyan-light transition-colors">;
                   Search;
@@ -173,7 +92,7 @@ export function TalentPage() {;
           </div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {talentCategories.map((category, index) => (;
+            {};
               <div key={index} className="bg-zion-slate-dark border border-zion-purple/20 rounded-lg p-6 hover:border-zion-cyan/50 transition-all duration-300 group">;
                 <div className="flex items-center justify-between mb-4">;
                   <div className="flex items-center space-x-3">;
@@ -186,15 +105,14 @@ export function TalentPage() {;
                 </div>;
                 ;
                 <div className="flex flex-wrap gap-2 mb-4">;
-                  {category.skills.map((skill, skillIndex) => (;
+                  {};
                     <span key={skillIndex} className="text-xs bg-zion-blue-dark text-zion-cyan px-2 py-1 rounded">;
                       {skill}
                     </span>;
                   ))}
                 </div>;
                 ;
-                <Link;
-                  to={`/talent?category=${category.title.toLowerCase().replace(/\s+/g, '-')}`}
+                <div>Broken JSX</div>
                   className="text-zion-cyan hover:text-zion-cyan-light transition-colors flex items-center group-hover:translate-x-1 transform duration-300">;
                   View Professionals;
                   <ArrowRight className="w-4 h-4 ml-2" />;
@@ -218,7 +136,7 @@ export function TalentPage() {;
           </div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {featuredProfessionals.map((professional, index) => (;
+            {};
               <div key={index} className="bg-zion-slate-darker border border-zion-purple/20 rounded-lg p-6 hover:border-zion-cyan/50 transition-all duration-300">;
                 <div className="text-center mb-4">;
                   <div className="text-4xl mb-2">{professional.avatar}</div>;
@@ -259,7 +177,7 @@ export function TalentPage() {;
 
                 <div className="mb-4">;
                   <div className="flex flex-wrap gap-1">;
-                    {professional.skills.map((skill, skillIndex) => (;
+                    {};
                       <span key={skillIndex} className="text-xs bg-zion-blue-dark text-zion-cyan px-2 py-1 rounded">;
                         {skill}
                       </span>;
@@ -332,13 +250,11 @@ export function TalentPage() {;
             Join thousands of companies that trust Zion Tech Group to connect them with top talent.;
           </p>;
           <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-            <Link;
-              to="/request-quote";
+            <div>Broken JSX</div>
               className="bg-white text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-slate-light transition-colors">;
               Post a Job;
             </Link>;
-            <Link;
-              to="/contact";
+            <div>Broken JSX</div>
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-zion-cyan transition-colors">;
               Contact Us;
             </Link>;

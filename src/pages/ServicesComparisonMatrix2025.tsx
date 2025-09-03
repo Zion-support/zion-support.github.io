@@ -1,7 +1,8 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-const ServicesComparisonMatrix2025 = () => {;
+const ServicesComparisonMatrix2025 = () => {};
+};
   return (;
     <>;
       <Head>;

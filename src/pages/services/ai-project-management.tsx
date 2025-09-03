@@ -3,37 +3,17 @@ import { motion  } from 'framer-motion.ts';
 import { Target, Brain, Users, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, Zap, TrendingUp, BarChart3, Globe, Heart, Settings, Monitor, Smartphone, Laptop, Calendar, GitBranch, PieChart, AlertTriangle  } from 'lucide-react.ts';
 import { SEO  } from '@/components/SEO';
 ;
-export default function AIProjectManagement(...args: unknown[]): unknown {;
-  const features = [;
-    {;
-      icon: Brain,;
-      title: "AI-Powered Planning",;
-      description: "Intelligent project planning with predictive analytics and resource optimization";,
+export default function AIProjectManagement(...args: unknown[]): unknown {};
 },;
-    {;
-      icon: Target,;
-      title: "Smart Goal Setting",;
-      description: "AI-driven milestone tracking and adaptive goal adjustment";,
+    {};
 },;
-    {;
-      icon: Users,;
-      title: "Team Optimization",;
-      description: "Automated team allocation and workload balancing";,
+    {};
 },;
-    {;
-      icon: Clock,;
-      title: "Predictive Scheduling",;
-      description: "Forecast project timelines and identify potential delays";,
+    {};
 },;
-    {;
-      icon: BarChart3,;
-      title: "Real-Time Analytics",;
-      description: "Live project insights and performance metrics";,
+    {};
 },;
-    {;
-      icon: Shield,;
-      title: "Risk Management",;
-      description: "AI-powered risk identification and mitigation strategies";,
+    {};
 }
   ];
 ;
@@ -47,29 +27,13 @@ export default function AIProjectManagement(...args: unknown[]): unknown {;
   ];
 ;
   const solutions = [;
-    {;
-      title: "AI Project Planning",;
-      description: "Intelligent project planning and scheduling with predictive analytics",;
-      features: ["Smart milestone planning", "Resource optimization", "Timeline forecasting"],;
-      price: "From $3,000/month";,
+    {};
 },;
-    {;
-      title: "Team Management AI",;
-      description: "AI-powered team allocation and performance optimization",;
-      features: ["Workload balancing", "Skill matching", "Performance tracking"],;
-      price: "From $2,500/month";,
+    {};
 },;
-    {;
-      title: "Risk Management Platform",;
-      description: "Advanced risk identification and mitigation strategies",;
-      features: ["Risk prediction", "Mitigation planning", "Real-time alerts"],;
-      price: "From $2,000/month";,
+    {};
 },;
-    {;
-      title: "Complete PM Suite",;
-      description: "Full AI-powered project management solution",;
-      features: ["All features", "Custom integrations", "Enterprise support"],;
-      price: "From $6,000/month";,
+    {};
 }
   ];
 ;
@@ -84,19 +48,14 @@ export default function AIProjectManagement(...args: unknown[]): unknown {;
 ;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-      <SEO ;
-        title="AI Project Management Services - Zion Tech Group";
-        description="Revolutionary AI-powered project management that optimizes planning, resource allocation, and risk management. Deliver projects faster, cheaper, and with higher success rates.";
+      <div>Broken JSX</div>
       />;
       ;
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">;
         <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10"></div>;
         <div className="container mx-auto px-4 relative z-10">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div>Broken JSX</div>
             className="text-center max-w-4xl mx-auto">;
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full border border-orange-400/30 mb-6">;
               <Target className="w-5 h-5 text-orange-400 mr-2" />;
@@ -118,16 +77,12 @@ export default function AIProjectManagement(...args: unknown[]): unknown {;
             </p>;
             ;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <div>Broken JSX</div>
                 className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 flex items-center justify-center">;
                 <Rocket className="w-5 h-5 mr-2" />;
                 Start Free Trial;
               </motion.button>;
-              <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <div>Broken JSX</div>
                 className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-300 flex items-center justify-center">;
                 <Video className="w-5 h-5 mr-2" />;
                 Watch Demo;
@@ -140,10 +95,7 @@ export default function AIProjectManagement(...args: unknown[]): unknown {;
       {/* Features Section */}
       <section className="py-20">;
         <div className="container mx-auto px-4">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div>Broken JSX</div>
             className="text-center mb-16">;
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">;
               Advanced AI Technology for Better Project Delivery;
@@ -155,16 +107,7 @@ export default function AIProjectManagement(...args: unknown[]): unknown {;
           </motion.div>;
 
           <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">;
-            {features.map((feature, index)  => (;
-              <motion.div;
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-300 group">;
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-orange-400/40 group-hover:to-red-500/40 transition-all duration-300">;
-                  <feature.icon className="w-6 h-6 text-orange-400" />;
-                </div>;
+            {};
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>;
                 <p className="text-gray-300">{feature.description}</p>;
               </motion.div>;
@@ -176,10 +119,7 @@ export default function AIProjectManagement(...args: unknown[]): unknown {;
       {/* Benefits Section */}
       <section className="py-20 bg-slate-800/30">;
         <div className="container mx-auto px-4">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div>Broken JSX</div>
             className="text-center mb-16">;
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">;
               Proven Results & Benefits;
@@ -191,14 +131,7 @@ export default function AIProjectManagement(...args: unknown[]): unknown {;
           </motion.div>;
 
           <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-6">;
-            {benefits.map((benefit, index)  => (;
-              <motion.div;
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="flex items-center space-x-4 bg-slate-700/30 rounded-lg p-4">;
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />;
+            {};
                 <span className="text-white font-medium">{benefit}</span>;
               </motion.div>;
             ))}
@@ -209,10 +142,7 @@ export default function AIProjectManagement(...args: unknown[]): unknown {;
       {/* Solutions Section */}
       <section className="py-20">;
         <div className="container mx-auto px-4">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div>Broken JSX</div>
             className="text-center mb-16">;
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">;
               Flexible Solutions for Every Project;
@@ -224,18 +154,12 @@ export default function AIProjectManagement(...args: unknown[]): unknown {;
           </motion.div>;
 
           <div className="grid grid-cols-1 md: unknowngrid-cols-2 gap-8">;
-            {solutions.map((solution, index)  => (;
-              <motion.div;
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-orange-400/30 transition-all duration-300">;
+            {};
                 <h3 className="text-2xl font-semibold text-white mb-4">{solution.title}</h3>;
                 <p className="text-gray-300 mb-6">{solution.description}</p>;
                 ;
                 <div className="space-y-3 mb-6">;
-                  {solution.features.map((feature, featureIndex) => (;
+                  {};
                     <div key={featureIndex} className="flex items-center space-x-3">;
                       <CheckCircle className="w-5 h-5 text-orange-400 flex-shrink-0" />;
                       <span className="text-gray-300">{feature}</span>;
@@ -256,10 +180,7 @@ export default function AIProjectManagement(...args: unknown[]): unknown {;
       {/* Project Types Section */}
       <section className="py-20 bg-slate-800/30">;
         <div className="container mx-auto px-4">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div>Broken JSX</div>
             className="text-center mb-16">;
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">;
               Optimized for Any Project Type;
@@ -271,16 +192,7 @@ export default function AIProjectManagement(...args: unknown[]): unknown {;
           </motion.div>;
 
           <div className="grid grid-cols-2 md: unknowngrid-cols-3 lg:grid-cols-6 gap-6">;
-            {projectTypes.map((projectType, index)  => (;
-              <motion.div;
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-700/30 rounded-lg p-4 text-center hover:bg-slate-700/50 transition-all duration-300">;
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">;
-                  <GitBranch className="w-6 h-6 text-orange-400" />;
-                </div>;
+            {};
                 <span className="text-white font-medium text-sm">{projectType}</span>;
               </motion.div>;
             ))}
@@ -291,10 +203,7 @@ export default function AIProjectManagement(...args: unknown[]): unknown {;
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10">;
         <div className="container mx-auto px-4 text-center">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div>Broken JSX</div>
           >;
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">;
               Ready to Transform Your Project Delivery?;
@@ -304,16 +213,12 @@ export default function AIProjectManagement(...args: unknown[]): unknown {;
               faster, cheaper, and with higher success rates.;
             </p>;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <div>Broken JSX</div>
                 className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 flex items-center justify-center">;
                 <ArrowRight className="w-5 h-5 mr-2" />;
                 Start Your Free Trial;
               </motion.button>;
-              <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <div>Broken JSX</div>
                 className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-300 flex items-center justify-center">;
                 <Phone className="w-5 h-5 mr-2" />;
                 Call +1 302 464 0950;

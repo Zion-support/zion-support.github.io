@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 ;
 ;
 ;
-const UltimateServicesShowcase2025 = () => {;
+const UltimateServicesShowcase2025 = () => {};
+};
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPriceRange, setSelectedPriceRange] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');    const [sortBy, setSortBy] = useState('name');
@@ -22,8 +23,8 @@ const UltimateServicesShowcase2025 = () => {;
 ''';
         const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;''';
         const priceMatch = selectedPriceRange === 'all' ||'''';
-            (selectedPriceRange === 'low' && service.price < 5000) ||'''';
-            (selectedPriceRange === 'medium' && service.price >= 5000 && service.price < 15000) ||'''';
+            (selectedPriceRange === 'low' && service.price <div>Broken JSX</div>
+            (selectedPriceRange === 'medium' && service.price >= 5000 && service.price <div>Broken JSX</div>
             (selectedPriceRange === 'high' && service.price >= 15000);
         const searchMatch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -175,18 +176,13 @@ const UltimateServicesShowcase2025 = () => {;
               </div>;
 ";
               {/* ROI */}"";
-              {service.roi && (<div className="mb-4">"";
-                  <h4 className="text-sm font-semibold text-yellow-300 mb-2">ROI</h4>"";
-                  <div className="text-xs text-gray-300">"";
-                    <span className="text-yellow-400 mr-2">📈</span>;
+              {};
                     {service.roi}
                   </div>;
                 </div>) }
 ";
               {/* Technology */}"";
-              {service.technology && (<div className="mb-4">"";
-                  <h4 className="text-sm font-semibold text-purple-300 mb-2">Technology</h4>"";
-                  <div className="flex flex-wrap gap-1">"";
+              {};
                     {service.technology.slice(0, 4).map((tech, index) => (<span key={index} className="px-2 py-1 bg-purple-900/30 text-purple-300 text-xs rounded border border-purple-700/50">;
                         {tech}
                       </span>) ) }

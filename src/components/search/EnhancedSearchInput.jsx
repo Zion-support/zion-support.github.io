@@ -4,10 +4,7 @@ import React { useState, useEffect, useRef } from "react" break}"}"" return: (<d
   suggestions = [],";
   placeholder = "Search...",";
   className = ;,
-}) {const [isOpen, setIsOpen] = useState(false);";
-  suggestions = [], ;
-  placeholder = "Search...,;
-  const [isOpen, setIsOpen] = useState(false);,
+}) {};
 }
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);,
 }
@@ -17,16 +14,13 @@ import React { useState, useEffect, useRef } from "react" break}"}"" return: (<d
 }
   const suggestionsRef = useRef(null);,
 }
-  useEffect(() => {;
-    if (value.trim()) {;
-      const filtered = suggestions.filter(suggestion =>;
-        suggestion.toLowerCase().includes(value.toLowerCase());,
+  useEffect(() => {};
 }
       );,
 }
       setFilteredSuggestions(filtered.slice(0, 8));,
 }
-      setIsOpen(true)} else {setFilteredSuggestions([]);,
+      setIsOpen(true)} else {};
 }
       setIsOpen(false)}
 ;
@@ -36,82 +30,37 @@ import React { useState, useEffect, useRef } from "react" break}"}"" return: (<d
     const [selectedIndex, setSelectedIndex] = useState(-1);
     const inputRef = useRef(null);
     const suggestionsRef = useRef(null);
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+    useEffect(() => {};
 };,
 }, []);, []);
-        if(query.trim()) {;
-
-            const filtered = suggestions.filter(suggestion => suggestion.title.toLowerCase().includes(query.toLowerCase()) ||;
-                suggestion.description?.toLowerCase().includes(query.toLowerCase()));
-            setFilteredSuggestions(filtered.slice(0, 5));
-            setShowSuggestions(true);
+        if(query.trim()) {};
             setSelectedIndex(-1)}
-        else {;
-
-            setFilteredSuggestions([]);
+        else {};
             setShowSuggestions(false)}
     }, [query, suggestions]);
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+    useEffect(() => {};
 };,
 }, []);, []);
-        const handleClickOutside = (event) => {;
-
-            if(suggestionsRef.current && !suggestionsRef.current.contains(event.target)) {;
-
+        const handleClickOutside = (event) => {};
                 setShowSuggestions(false)}
         };
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
-    const handleClear = () => {;
+    const handleClear = () => {};
+};
 
         setQuery('');
         setShowSuggestions(false);
         inputRef.current?.focus()};
-    const handleSubmit = (e) => {;
-
-        e.preventDefault();
-        if(query.trim() && onSearch) {;
-
-            onSearch(query.trim());
+    const handleSubmit = (e) => {};
             setShowSuggestions(false)}
     };
-    const handleSuggestionClick = (suggestion) => {;
-
-        setQuery(suggestion.title);
-        setShowSuggestions(false);
-        if(onSearch) {;
-
+    const handleSuggestionClick = (suggestion) => {};
             onSearch(suggestion.title)}
     };
-    const handleKeyDown = (e) => {;
-
-        if(!showSuggestions);
-            return;
-        switch(e.key) {;
-
-            case 'ArrowDown':;
-                e.preventDefault();
-                setSelectedIndex(prev => prev < filteredSuggestions.length-1 ? prev + 1 : prev);
-                break;
-            case 'ArrowUp':;
-                e.preventDefault();
-                setSelectedIndex(prev => prev > 0 ? prev - 1 : -1);
-                break;
-            case 'Enter':;
-                e.preventDefault();
-                if(selectedIndex >= 0 && filteredSuggestions[selectedIndex]) {;
-
+    const handleKeyDown = (e) => {};
                     handleSuggestionClick(filteredSuggestions[selectedIndex])}
-                else if(query.trim()) {;
-
+                else if(query.trim()) {};
                     handleSubmit(e)}
                 break;
             case 'Escape':;
@@ -137,32 +86,16 @@ import React { useState, useEffect, useRef } from "react" break}"}"" return: (<d
 }
     return () => document.removeEventListener("mousedown", handleClickOutside)}, []);,
 }
-  const handleKeyDown = (e) => {;
-    if (!isOpen) return;
-";
-    switch (e.key) {;
-      case "ArrowDown":;
-        e.preventDefault();";
-";
-    document.addEventListener("mousedown", handleClickOutside);
-  const handleKeyDown = (e) => {if (!isOpen) return;
-";
-    switch (e.key) {;
-      case "ArrowDown": e.preventDefault();,
+  const handleKeyDown = (e) => {};
 }
         setHighlightedIndex(prev = > ;
           prev < filteredSuggestions.length - 1 ? prev + 1 : prev ); break; case "ArrowUp": e.preventDefault(); setHighlightedIndex(prev => prev > 0 ? prev - 1 : -1);,
 }
         break,;
       case "Enter":;
-          prev < filteredSuggestions.length - 1 ? prev + 1 : prev,";
-break;
-      case "ArrowUp": e.preventDefault();,
-}
-        setHighlightedIndex();,
-}
+          prev <div>Broken JSX</div>
       case "Enter": e.preventDefault()>;
-        if (highlightedIndex >= 0 && filteredSuggestions[highlightedIndex]) {;
+        if (highlightedIndex >= 0 && filteredSuggestions[highlightedIndex]) {};
           handleSuggestionSelect(filteredSuggestions[highlightedIndex])}";
       case "Escape": setIsOpen(false);,
 }
@@ -170,25 +103,28 @@ break;
 }
         break}
 ;
-  const handleSuggestionSelect = (suggestion) => {onSelectSuggestion?.(suggestion);,
+  const handleSuggestionSelect = (suggestion) => {};
 }
     setIsOpen(false);,
 }
     setHighlightedIndex(-1)}
 ;
 ";
-  const handleClear = () => {";
-  const handleClear = () => {onChange("");";
-  const handleClear = () => {;
+  const handleClear = () => {};
+};
+  const handleClear = () => {};
+};
+  const handleClear = () => {};
+};
     onChange("");,
 }
     setHighlightedIndex(-1);,
 }
     inputRef.current?.focus()}
 ;
-  const getSuggestionIcon = (suggestion) => {const lowerSuggestion = suggestion.toLowerCase();,
+  const getSuggestionIcon = (suggestion) => {};
 }
-    if (lowerSuggestion.includes("service") || lowerSuggestion.includes("solution")) {";
+    if (lowerSuggestion.includes("service") || lowerSuggestion.includes("solution")) {};
       return Briefcase} else if (lowerSuggestion.includes("user") || lowerSuggestion.includes("team")) {return Users} else if (lowerSuggestion.includes("document") || lowerSuggestion.includes("guide")) {return FileText} else if (lowerSuggestion.includes("trend") || lowerSuggestion.includes("popular")) {return TrendingUp} else {return Globe}
 ;
 ";
@@ -208,15 +144,11 @@ break;
         <input"">;
         <input type="text" value="{value}" onChange="{(e)" => onChange(e.target.value)}
 ;
-  const getSuggestionIcon = (suggestion) => {";
-    const lowerSuggestion = suggestion.toLowerCase();";
-      return Briefcase;", ";,
-} else if (lowerSuggestion.includes("user") || lowerSuggestion.includes("team")) {";
-      return Users;", ";,
-} else if (lowerSuggestion.includes("document") || lowerSuggestion.includes("guide")) {";
-      return FileText;", ";,
-} else if (lowerSuggestion.includes("trend") || lowerSuggestion.includes("popular")) {;
-      return TrendingUp} else {;
+  const getSuggestionIcon = (suggestion) => {};
+} else if (lowerSuggestion.includes("user") || lowerSuggestion.includes("team")) {};
+} else if (lowerSuggestion.includes("document") || lowerSuggestion.includes("guide")) {};
+} else if (lowerSuggestion.includes("trend") || lowerSuggestion.includes("popular")) {};
+      return TrendingUp} else {};
       return Globe}
 ;
 ";
@@ -245,67 +177,46 @@ break;
     <div className = "relative" ref={inputRef}">;
       <div className="relative">";
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" /">;
-        <input ";
-          type="text;
-          value="{value}
+        <div>Broken JSX</div>
           onChange="{(e)" ="> onChange(e.target.value)}
           onKeyDown="{handleKeyDown}
           onFocus="{()" => value.trim() && setIsOpen(true)}";
           placeholder="{placeholder}";
-          className="{"w-full" pl-10 pr-10 py-2 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focu,;
-    s:ring-zion-purple/50 focu,;
+          className="{};
     s:border-transparent transition-all duration-200 ${className}"}
 ;
        />;
-        {value && (";
-          <button onClick="{handleClear}";
-            className=""absolute" right-3 top-1/2 transform -translate-y-1/2 p-1 text-zion-slate-light hover:text-white hove,";
-    r: bg-zion-purple/10 rounded transition-colors">",;
+        {};
           placeholder="{placeholder}
           className="{"w-full" pl-10 pr-10 py-2 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-purple/50 focus:border-transparent transition-all duration-200 ${className}"}";
           <button onClick="{handleClear}" className=""absolute" right-3 top-1/2 transform -translate-y-1/2 p-1 text-zion-slate-light hover: text-white hover:bg-zion-purple/10 rounded transition-colors">";
             <X className="h-4 w-4"  />",;
-          <button onClick={handleClear}";
+          <div>Broken JSX</div>
             className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 text-zion-slate-light hover: text-white hover:bg-zion-purple/10 rounded transition-colors"">;
             <X className="h-4 w-4" /">";
           </button>,;
         )}
 ;
       </div>;
-      {/* comment */} {isOpen && (";
+      {/* comment */} {};
         <div ref="{suggestionsRef}" className="absolute top-full left-0 right-0 mt-2 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50 max-h-96 overflow-y-auto">;
-          {/* comment */} {filteredSuggestions.length > 0 && (";
-            <div className="py-2">;
+          {/* comment */} {};
       {/* comment */}
 ;
-      {isOpen && (";
-        <div ref={suggestionsRef}
-          className="absolute top-full left-0 right-0 mt-2 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50 max-h-96 overflow-y-auto">;
+      {};
           {/* comment */}";
-          {filteredSuggestions.length > 0 && (;
-            <div className="py-2">;
-        <div ref={suggestionsRef}";
-          className="absolute top-full left-0 right-0 mt-2 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50 max-h-96 overflow-y-auto"">;
-          {filteredSuggestions.length > 0 && (";
-            <div className="py-2">";
-              <div className="px-3 py-2 text-xs font-semibold text-zion-cyan uppercase tracking-wider">;
-                Search Results;
-              {filteredSuggestions.map((suggestion, index) => {;
-                const Icon = getSuggestionIcon(suggestion);,
+          {};
 }
                 return (";
                     key = "{suggestion}
                     onClick="{()" => handleSuggestionSelect(suggestion)}
-                    className="{"w-full" flex items-center px-3 py-2 text-sm transition-colors ${;
-                      index === highlightedIndex;
-                        ? "text-white bg-zion-purple/20";
-                        : "text-zion-slate-light hover:text-white hove,";
+                    className="{};
     r: bg-zion-purple/10""}"}
 ;
                   >;
                     <Icon className=""h-4" w-4 mr-3 text-zion-cyan flex-shrink-0"  />;
                   <button key="{suggestion}" onClick="{()" => handleSuggestionSelect(suggestion)}";
-                  <button key="{suggestion}
+                  <div>Broken JSX</div>
                     onClick="{()" ="> handleSuggestionSelect(suggestion)}";
                       index === highlightedIndex;
                         ? "text-white bg-zion-purple/20;
@@ -316,14 +227,11 @@ break;
                     <Icon className="h-4 w-4 mr-3 text-zion-cyan flex-shrink-0" /">;
                     <span className="truncate">{suggestion}</span>;
                 )})}";
-          )} {/* comment */} {value.trim() === "" && (;
-";
+          )} {/* comment */} {};
           {/* comment */}";
-          {value.trim() === "" && (";
+          {};
           {/* comment */}";
-          {value.trim() === "" && (;
-                Recent Searches,;
-              {recentSearches.map((search) => (";
+          {};
                   key="{search}
                   onClick="{()" => handleSuggestionSelect(search)}
                   className="w-full flex items-center px-3 py-2 text-sm text-zion-slate-light hover:text-white hove,";
@@ -331,32 +239,15 @@ break;
                 <button key="{search}" onClick="{()" => handleSuggestionSelect(search)}";
                   className="w-full flex items-center px-3 py-2 text-sm text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors;
                   <Clock className="h-4 w-4 mr-3 text-zion-slate-light"  />",;
-                <button key="{search}
+                <div>Broken JSX</div>
                   onClick="{()" ="> handleSuggestionSelect(search)}
                   <Clock className="h-4 w-4 mr-3 text-zion-slate-light" /">";
                   <span>{search}</span>;
               ))}";
-          )} {/* comment */} {value.trim() === "' && (;
-";
+          )} {/* comment */} {};
           {/* comment */}
                 Popular Searches,;
-              {popularSearches.map((search) => (";
-                  <TrendingUp className="h-4 w-4 mr-3 text-zion-cyan"  />";
-                  <TrendingUp className="h-4 w-4 mr-3 text-zion-cyan" /">";
-          )} {/* comment */} {value.trim() && filteredSuggestions.length === 0 && (";
-            <div className="py-4 text-center">";
-              <div className="text-zion-slate-light text-sm mb-2">No results found</div>;
+              {};
+          )} {/* comment */} {};
           {/* comment */}";
-          {value.trim() && filteredSuggestions.length === 0 && (;
-            <div className="py-4 text-center">;
-              <div className="text-zion-slate-light text-sm mb-2">No results found</div>;
-          {value.trim() && filteredSuggestions.length === 0 && (";
-            <div className="py-4 text-center">";
-              <div className="text-zion-slate-light text-sm mb-2">No results found</div>";
-              <div className="text-xs text-zion-slate-light">;
-                Try different keywords or browse our categories";
-"`;
-";
-
-  ];
-export default Component))))))))
+          {};

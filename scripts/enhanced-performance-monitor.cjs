@@ -11,11 +11,11 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
   async checkBuildPerformance() {;
     this.log("🔍 Checking build performance");"";    const startTime = Date.now();
     try {;
-      execSync("npm run build", {""cwd": this.projectRoot,);        "stdio": "pipe",""timeout": 300000,,"});
+      execSync("npm run build", {""cwd": this.projectRoot,);        "stdio": "pipe", ""timeout": 300000,,"});
       const buildTime = Date.now() - startTime;
       return {;
         "success": true,""buildTime": buildTime,""status":;";          buildTime < 60000;
-            ? "excellent"";            : buildTime < 120000;";              ? "good"";              : "needs_optimization","},"} catch (error) {;
+            ? "excellent"";            : buildTime < 120000;";              ? "good"";              : "needs_optimization", "},"} catch (error) {;
       return {;
         "success": false,""error": error.message,""buildTime": Date.now() - startTime,,"},,;,
 }
@@ -44,7 +44,7 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
       const sizeInMB = (bundleSize / 1024 / 1024).toFixed(2);
       return {;
         "size": bundleSize,""sizeInMB": sizeInMB,""status":;";          sizeInMB < 5;
-            ? "excellent"";            : sizeInMB < 10;";              ? "good"";              : "needs_optimization","},"} catch (error) {;
+            ? "excellent"";            : sizeInMB < 10;";              ? "good"";              : "needs_optimization", "},"} catch (error) {;
       return { "error": error.message },"}
   }
 ;
@@ -59,7 +59,7 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
       const securityIssues = [];
       // Check for known security issues;
       const knownIssues = {;
-        "react": "18.2.0",""next": "15.5.2",""typescript": "5.9.2","};";
+        "react": "18.2.0", ""next": "15.5.2", ""typescript": "5.9.2", "};";
       for (const [dep, version] of Object.entries(knownIssues)) {;
         if (dependencies[dep] && dependencies[dep] !== version) {;
           outdatedDeps.push({);            dep,;
@@ -77,7 +77,7 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
 ;
   generateReport(results) {;
     const report = {;
-      "timestamp": new Date().toISOString(),""performance": results.build,""bundle": results.bundle,""dependencies": results.dependencies,""summary": {""buildStatus": results.build?.status || "unknown",""bundleStatus": results.bundle?.status || "unknown",""totalDependencies": results.dependencies?.totalDeps || 0,""outdatedDependencies": results.dependencies?.outdatedDeps?.length || 0,,,;,
+      "timestamp": new Date().toISOString(),""performance": results.build,""bundle": results.bundle,""dependencies": results.dependencies,""summary": {""buildStatus": results.build?.status || "unknown", ""bundleStatus": results.bundle?.status || "unknown", ""totalDependencies": results.dependencies?.totalDeps || 0,""outdatedDependencies": results.dependencies?.outdatedDeps?.length || 0,,,;,
 },,,;,
 }
 ;

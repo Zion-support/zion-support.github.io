@@ -2,6 +2,8 @@ import React from 'react';
 export default Soc2ComplianceAutomation;
 ;
 const Soc2ComplianceAutomation = () => {}
+  return <div>Component</div>;
+};
     const features = [];
         {}
             title: "Automated Monitoring","";

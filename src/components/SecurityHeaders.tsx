@@ -1,9 +1,8 @@
 import React from "react";
 import { useEffect } from "react";
-const SecurityHeaders = () => {;
-  useEffect(() => {;
-    // comment;
-const meta = document.createElement("meta");,
+const SecurityHeaders = () => {};
+};
+  useEffect(() => {};
 }
     meta.httpEquiv = "Content - Security-Policy",;
     meta.content = "default-src "self"; script-src "self" "unsafe-inline" "unsafe-eval" https: // comment;
@@ -11,8 +10,7 @@ const meta = document.createElement("meta");,
     // comment;
 const securityHeaders = [];
 
-    securityHeaders.forEach(header => {;
-      const metaTag = document.createElement("meta");,
+    securityHeaders.forEach(header => {};
 }
       metaTag.httpEquiv = header.httpEquiv;
       metaTag.content = header.content;
@@ -20,16 +18,9 @@ const securityHeaders = [];
 }
     });,
 }
-    return () => {;
-      // comment;
-const securityMetaTags = document.querySelectorAll("meta[http-equiv]");,
+    return () => {};
 }
-      securityMetaTags.forEach(tag = > {";
-        if (tag.getAttribute("http-equiv")?.startsWith("X-") || ";
-            tag.getAttribute("http-equiv") === "Content-Security-Policy" ||";
-            tag.getAttribute("http-equiv") === "Referrer-Policy" ||";
-            tag.getAttribute("http-equiv") === "Permissions-Policy") {;
-          tag.remove();,
+      securityMetaTags.forEach(tag = > {};
 }
 ;,
 });,

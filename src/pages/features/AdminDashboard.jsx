@@ -6,7 +6,9 @@ import { GradientHeading } from '@/components/GradientHeading';''';
 import { Button } from '@/components/ui/button';''';
 import { Link } from 'react-router-dom';
 export { function };
-export default function AdminDashboard() {}
+export {};
+  return null;
+}
   const schema = {}
 ';
 '';
@@ -18,16 +20,10 @@ export default function AdminDashboard() {}
     url: 'https://app.ziontechgroup.com/features/admin-dashboard'};
   return();
     <>;
-      <SEO;
-        title="Admin Dashboard"";
-        description="Gain insight into your marketplace with powerful administration tools."";
-        keywords="admin dashboard, analytics, manage listings"";
-        canonical="https://app.ziontechgroup.com/features/admin-dashboard";
+      <div>Broken JSX</div>
       />;
       {/* Use a normal script tag so JSON-LD is correctly parsed */}";
-      <script"";
-        type="application/ld+json";
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      <div>Broken JSX</div>
       ></script>";
       <Header />"";
       <main className="bg-background text-white py-12">"";
@@ -39,11 +35,7 @@ export default function AdminDashboard() {}
             Visualize user activity, manage orders and keep your marketplace;
             running smoothly.;
           </p>";
-          <img"";
-            loading="lazy"";
-            src="https://placehold.co/800x400"";
-            alt="Screenshot of admin dashboard"";
-            className="rounded-lg shadow-xl mx-auto mb-12"";
+          <div>Broken JSX</div>
           />"";
           <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>"";
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">;

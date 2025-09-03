@@ -1,19 +1,9 @@
 import React, { useState } from 'react';import * as React from 'react';
 ;
-const ThemeContext = React.createContext({;
-
-  theme: 'dark',;
+const ThemeContext = React.createContext({};
   setTheme: () => null});
 ;
-export const ThemeProvider = ({ children }) => {;
-
-  const [theme, setTheme] = React.useState('dark');
-;
-  React.useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+export const ThemeProvider = ({ children }) => {};
 };,
 }, []);, []);
     const root = window.document.documentElement;
@@ -21,9 +11,7 @@ export const ThemeProvider = ({ children }) => {;
     root.classList.add(theme);,
 }, [theme]);
 ;
-  const value = {;
-
-    theme,;
+  const value = {};
     setTheme};
 ;
   return ();
@@ -31,18 +19,14 @@ export const ThemeProvider = ({ children }) => {;
   );,
 };
 ;
-    const value = {;
-      theme,;
-      setTheme,;,
+    const value = {};
 };
 ;
     return (<ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>) ;,
 };
 ;
   const context = React.useContext(ThemeContext) ;
-  if(context === null) {;
-
-    throw new Error('useTheme must be used within a ThemeProvider');,
+  if(context === null) {};
 }
   return context;,
 };

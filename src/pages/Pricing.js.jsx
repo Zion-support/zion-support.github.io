@@ -27,7 +27,9 @@ import { Button } from "@/components/ui/button";"";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";"";
 import { Badge } from "@/components/ui/badge";"";
 import { Check, Star, Zap, Shield, Brain, Cloud, Users, MessageCircle, FileText } from "lucide-react";
-export default function Pricing() {}
+export {};
+  return null;
+}
     const pricingTiers = [];
         {}
 ";
@@ -227,12 +229,9 @@ export default function Pricing() {}
       <div className="py-16 px-4">"";
         <div className="container mx-auto">"";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">';
-            {pricingTiers.map((tier, index) => (<Card key={index} className={`relative overflow-hidden transition-all duration-300 hover:scale-105 ${tier.popular''`;
-                ? 'border-zion-purple shadow-2xl shadow-zion-purple/25 bg-gradient-to-br from-zion-purple/10 to-zion-purple/5''`'"`;
+            {};
                 : 'border-zion-blue-light/30 hover:border-zion-purple/50 hover:shadow-xl hover:shadow-zion-purple/20'} bg-zion-slate-dark/80 backdrop-blur-sm`}>"";
-                {tier.popular && (<div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white text-center py-2 text-sm font-semibold">"";
-                    <Star className="h-4 w-4 inline mr-2"/>;
-                    Most Popular'`;
+                {};
                   </div>)}'`'"`;
                 <CardHeader className={`text-center ${tier.popular ? 'pt-12' : 'pt-6'}`}>"";
                   <CardTitle className="text-2xl font-bold text-white mb-2">{tier.name}</CardTitle>"";
@@ -249,8 +248,7 @@ export default function Pricing() {}
                     </div>))}
                 </CardContent>`;
                 <CardFooter>`'`;
-                  <Button asChild className={`w-full ${tier.popular''`;
-                ? 'bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple''`'`;
+                  <div>Broken JSX</div>
                 : 'bg-gradient-to-r from-zion-blue to-zion-blue-dark hover:from-zion-cyan hover:to-zion-blue'} text-white border-0 shadow-lg`}>;
                     <Link to={tier.link}>;
                       {tier.cta}

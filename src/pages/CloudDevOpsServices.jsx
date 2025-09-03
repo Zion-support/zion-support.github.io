@@ -1,6 +1,8 @@
 import React, { useState } from 'react';''';
 import { Search, Zap, Cloud, Shield, Server, Code, GitFork, Phone, Mail, MapPin } from 'lucide-react';
 const CloudDevOpsServices = () => {}
+  return <div>Component</div>;
+};
 ';
 '';
 ''';

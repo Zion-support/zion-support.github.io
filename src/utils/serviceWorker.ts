@@ -1,5 +1,5 @@
 // comment;
-export const serviceWorker = {}
+export {};
 ;
 
 export default serviceWorker;

@@ -1,112 +1,25 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ;
-  Server, ;
-  Cloud, ;
-  Shield, ;
-  Database, ;
-  Network, ;
-  Code, ;
-  Settings, ;
-  Users, ;
-  CheckCircle, ;
-  ArrowRight,;
-  Phone,;
-  Mail,;
-  MapPin;,
+import {};
 } from 'lucide-react';
 ;
-const ITServices: React.FC = () => {;
-  const itServiceCategories = [;
-    {;
-      name: "Cloud Infrastructure & Migration",;
-      description: "Comprehensive cloud solutions and seamless migration services",;
-      icon: Cloud,;
-      count: 15,;
-      color: "from-blue-400 to-cyan-500",;
-      services: [;
-        "AWS, Azure, GCP Management",;
-        "Cloud Migration Strategy",;
-        "Infrastructure as Code",;
-        "Container Orchestration";
-      ];,
+const ITServices: React.FC = () => {};
 },;
-    {;
-      name: "Cybersecurity & Compliance",;
-      description: "Advanced security solutions to protect your digital assets",;
-      icon: Shield,;
-      count: 20,;
-      color: "from-red-400 to-orange-500",;
-      services: [;
-        "Security Audits & Assessments",;
-        "Penetration Testing",;
-        "Compliance Management",;
-        "Threat Detection & Response";
-      ];,
+    {};
 },;
-    {;
-      name: "Network & Infrastructure",;
-      description: "Robust network solutions and infrastructure management",;
-      icon: Network,;
-      count: 18,;
-      color: "from-green-400 to-emerald-500",;
-      services: [;
-        "Network Design & Implementation",;
-        "Wireless Solutions",;
-        "VPN & Remote Access",;
-        "Network Monitoring";
-      ];,
+    {};
 },;
-    {;
-      name: "Software Development",;
-      description: "Custom software solutions built with modern technologies",;
-      icon: Code,;
-      count: 25,;
-      color: "from-purple-400 to-pink-500",;
-      services: [;
-        "Web Application Development",;
-        "Mobile App Development",;
-        "API Development",;
-        "Legacy System Modernization";
-      ];,
+    {};
 }
   ];
 ;
   const featuredITServices = [;
-    {;
-      title: "Quantum Cloud Infrastructure",;
-      description: "Next-generation quantum-enhanced cloud infrastructure with AI optimization, zero-trust security, and 99.99% uptime guarantee.",;
-      price: "From $5,999/month",;
-      features: ["Quantum-Enhanced Computing", "Hybrid Cloud Architecture", "AI-Optimized Resource Allocation", "Zero-Trust Security Framework", "Edge Computing Integration", "Automated Scaling"],;
-      href: "/services/quantum-cloud-infrastructure",;
-      color: "from-purple-400 to-indigo-500",;
-      popular: true,;
-      benefits: ["Reduce infrastructure costs by 60%", "Improve performance by 300%", "Achieve 99.99% uptime SLA", "Scale instantly to meet demand"];,
+    {};
 },;
-    {;
-      title: "Cloud Migration & Modernization",;
-      description: "End-to-end cloud migration services with modern architecture and optimization for AWS, Azure, and Google Cloud platforms.",;
-      price: "From $15,000",;
-      features: ["Cloud Strategy", "Migration Planning", "Architecture Design", "Data Migration", "Performance Optimization", "Cost Management"],;
-      href: "/services/cloud-migration",;
-      color: "from-blue-400 to-cyan-500",;
-      benefits: ["Reduce infrastructure costs by 40%", "Improve scalability and performance", "Enhance security and compliance", "Enable remote work capabilities"];,
+    {};
 },;
-    {;
-      title: "Advanced Cybersecurity Suite",;
-      description: "Complete security solution protecting your organization from modern threats",;
-      price: "From $2,999/month",;
-      features: [;
-        "24/7 Threat Monitoring",;
-        "Automated Incident Response",;
-        "Compliance Management",;
-        "Security Training";
-      ],;
-      href: "/services/cybersecurity",;
-      color: "from-red-400 to-orange-500",;
-      popular: true,;
-      icon: Shield;,
+    {};
 }
   ];
 ;
@@ -136,14 +49,12 @@ const ITServices: React.FC = () => {;
                 Comprehensive IT services to keep your business running smoothly and securely;
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link ;
-                  to="/contact" ;
+                <div>Broken JSX</div>
                   className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center">;
                   Get IT Consultation;
                   <ArrowRight className="ml-2 h-5 w-5" />;
                 </Link>;
-                <Link ;
-                  to="/services" ;
+                <div>Broken JSX</div>
                   className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors">;
                   View All Services;
                 </Link>;
@@ -165,7 +76,7 @@ const ITServices: React.FC = () => {;
             </div>;
             ;
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {itServiceCategories.map((category, index) => (;
+              {};
                 <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">;
                   <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center mb-6`}>;
                     <category.icon className="h-8 w-8 text-white" />;
@@ -181,7 +92,7 @@ const ITServices: React.FC = () => {;
                       {category.count} Services Available;
                     </p>;
                     <ul className="space-y-2">;
-                      {category.services.map((service, serviceIndex) => (;
+                      {};
                         <li key={serviceIndex} className="flex items-center text-sm text-gray-600">;
                           <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />;
                           {service}
@@ -189,8 +100,7 @@ const ITServices: React.FC = () => {;
                       ))}
                     </ul>;
                   </div>;
-                  <Link ;
-                    to={`/it-services/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
+                  <div>Broken JSX</div>
                     className="inline-flex items-center text-cyan-600 hover:text-cyan-700 font-semibold">;
                     Learn More;
                     <ArrowRight className="ml-1 h-4 w-4" />;
@@ -214,14 +124,9 @@ const ITServices: React.FC = () => {;
             </div>;
             ;
             <div className="grid lg:grid-cols-2 gap-8">;
-              {featuredITServices.map((service, index) => (;
+              {};
                 <div key={index} className={`relative bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 ${service.popular ? 'ring-2 ring-cyan-500' : ''}`}>;
-                  {service.popular && (;
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
-                      <span className="bg-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">;
-                        Most Popular;
-                      </span>;
-                    </div>;
+                  {};
                   )}
                   ;
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6`}>;
@@ -241,7 +146,7 @@ const ITServices: React.FC = () => {;
                       {service.price}
                     </p>;
                     <ul className="space-y-2">;
-                      {service.features.map((feature, featureIndex) => (;
+                      {};
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">;
                           <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />;
                           {feature}
@@ -250,8 +155,7 @@ const ITServices: React.FC = () => {;
                     </ul>;
                   </div>;
                   ;
-                  <Link ;
-                    to={service.href}
+                  <div>Broken JSX</div>
                     className="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center">;
                     Get Started;
                     <ArrowRight className="ml-2 h-4 w-4" />;
@@ -293,8 +197,7 @@ const ITServices: React.FC = () => {;
             </div>;
             ;
             <div className="text-center">;
-              <Link ;
-                to="/contact" ;
+              <div>Broken JSX</div>
                 className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors inline-flex items-center">;
                 Schedule IT Consultation;
                 <ArrowRight className="ml-2 h-5 w-5" />;

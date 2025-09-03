@@ -1,15 +1,11 @@
-  it(displays expected content", () => {;
-    render(<ProductReviews  />)";
+  it(displays expected content", () => {};
 import { render, screen } from &apos;@testing - library/react",;
 import ProductReviews from &apos;./ProductReviews;
-describe(&apos;ProductReviews&apos, () => {;
-  it(&apos;renders without crashing&apos, () => {;
-    render();,
+describe(&apos;ProductReviews&apos, () => {};
 }
     expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});,
 }
-  it(&apos;displays expected content&apos, () => {;
-    render();,
+  it(&apos;displays expected content&apos, () => {};
 }
     // comment;
     render(<ProductReviews / >)";

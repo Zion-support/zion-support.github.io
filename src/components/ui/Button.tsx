@@ -1,37 +1,20 @@
 import React from "react";
-interface ButtonProps {;
-;
-  children: React.ReactNode,;
-  variant?: "default" | "outline" | "ghost" | "link",;
-  size?: "sm" | "md" | "lg" | "icon;
-  asChild?: boolean;
-  className?: string,,;
-  onClick?: () => void,";
-  type?: "button" | "submit" | "reset",;
+interface ButtonProps {};
   disabled?: boolean}
 ;
-export const Button: React.FC<ButtonProps> = ({ children,";
-  variant = "default",";
-  size = "md",;
-  asChild = false,";
-  className = ",;
-  onClick,";
-  type = "button",;
-  disabled = false}) => {";
-  const baseClasses = "inline-flex items-center justify-center font-medium rounded-md transition-colors focus: outline-none focus:ring-2 focus:ring-offset-2',;
+export const Button: React.FC<ButtonProps> = ({};
+  disabled = false}) => {};
   const variantClasses = {}
 ;
   const sizeClasses = {}
 ;
   const classes = "${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}";
-  if (asChild) {;
+  if (asChild) {};
     return <span className="{classes}">{children}</span>;,
 }
 ;
   return (";
-    <button type = "{type}
-      className="{classes}
-      onClick="{onClick}
+    <div>Broken JSX</div>
       disabled="{disabled}">;
       {children}
 ;
@@ -39,10 +22,7 @@ export const Button: React.FC<ButtonProps> = ({ children,";
   )}
 ;
   return (";
-    <button type = "{type}"";
-      className="{classes}"";
-      onClick="{onClick}"";
-      disabled="{disabled}";
+    <div>Broken JSX</div>
     >;
       {children}
     </button>;

@@ -1,15 +1,4 @@
-export interface EnhancedService {;
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech';
-pricing: {;
-
-    monthly: string;
-    yearly: string;
-    enterprise: string;
-    setup: string;,
+export interface EnhancedService {};
 };
   features: string[];
   benefits: string[];
@@ -25,26 +14,10 @@ pricing: {;
   icon: string;
   color: string;
   link: string;
-  contactInfo: {;
-
-    mobile: string;
-    email: string;
-    address: string;
+  contactInfo: {};
     website: string}};
 export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [// AI-Powered Autonomous Services;
-  {;
-
-    id: "ai-autonomous-business-manager",";
-    title: "AI Autonomous Business Manager",";
-    description: "Fully autonomous business operations powered by advanced AI with real-time decision making, resource optimization, and strategic planning.",";
-    category: "AI & Autonomous Systems",;
-    price: 2999,";
-    currency: "$",";
-    tags["Autonomous Operations", "AI Decision Making", "Business Intelligence", "Strategic Planning"],;
-    author: {;
-";
-      name: "Zion AI Labs",";
-      id: "zion-ai-labs",";
+  {};
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto = format&fit=crop&w=100&h=100"},";
     images["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],;";
     createdAt: "2025-01-15T10:00:00.000Z",;
@@ -64,11 +37,7 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [// AI-Powered Auto
     targetAudience: "Enterprise businesses, Fortune 500 companies, tech startups",;
     trialDays: 30,";
     setupTime: "2-4 weeks",;
-    contactInfo: {;
-
-        mobile: string;
-        email: string;
-        address: string;
+    contactInfo: {};
         website: string};
 ;
 ;,
@@ -78,13 +47,7 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [// AI-Powered Auto
   ;
   website: 'https://ziontechgroup.com'};
 ;
-export const enhancedServices2025: EnhancedService[] = [{;
-
-        id: 'ai-powered-code-review-assistant',;
-        name: 'AI-Powered Code Review Assistant',;
-        tagline: 'Automated code quality, security scanning, and best-practice guidance',;
-        description: 'Analyzes pull requests to flag security risks, style issues, and performance regressions.Posts actionable comments, gates CI on severity rules, and learns from team decisions.',;
-        category: 'micro-saas',;
+export const enhancedServices2025: EnhancedService[] = [{};
         pricing: { monthly: '$199/month', yearly: '$1,999/year', enterprise: 'Custom', setup: '$299 one-time' },;
         features: [';
             'OWASP and supply‑chain risk checks',PR auto-comments with code snippets',Custom policy rules and severity gates',Multi-language static analysis + ML insights',CI/CD integrations(GitHub, GitLab, Bitbucket);
@@ -106,13 +69,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
         competitors: ['SonarQube',CodeClimate',Snyk Code'],;
         contactInfo: CONTACT;,
 },;
-    {;
-
-        id: 'intelligent-incident-response-platform',;
-        name: 'Intelligent Incident Response Platform',;
-        tagline: 'AI detection, response runbooks, and post-mortems',;
-        description: 'Unifies alert correlation, automated triage, and guided remediation with live runbooks and evidence capture for faster incident resolution.',;
-        category: 'micro-saas',;
+    {};
         pricing: { monthly: '$299/month', yearly: '$2,999/year', enterprise: 'Custom', setup: '$499 one-time' },;
         features: [';
             'Alert deduplication and correlation',Auto-triage and enrichment',Runbook automation',RCA templates and knowledge capture',SIEM/EDR integrations';
@@ -128,13 +85,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
         integrations: ['SIEM',EDR',Slack',Teams',Jira'],;
         contactInfo: CONTACT;,
 },;
-    {;
-
-        id: 'smart-invoice-management-system',;
-        name: 'Smart Invoice Management System',;
-        tagline: 'OCR, approvals, and payment reconciliation',;
-        description: 'End-to-end AP automation with invoice capture, duplicate detection, policy workflows, and payment status sync.',;
-        category: 'micro-saas',;
+    {};
         pricing: { monthly: '$79/month', yearly: '$799/year', enterprise: 'Custom', setup: '$199 one-time' },;
         features: ['OCR and entity extraction',Approval workflows',3‑way match',Vendor portal',Analytics'],;
         benefits: ['Cycle time ↓ 90%',Errors ↓ 95%',Better cash visibility'],;
@@ -146,13 +97,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
         link: '/services/invoice-management',;
         contactInfo: CONTACT;,
 },;
-    {;
-
-        id: 'ai-customer-success-automation',;
-        name: 'AI Customer Success Automation',;
-        tagline: 'Onboarding journeys, churn prediction, and health scoring',;
-        description: 'Customer lifecycle automation with risk prediction, QBR prep, and proactive playbooks to scale CS impact.',;
-        category: 'micro-saas',;
+    {};
         pricing: { monthly: '$149/month', yearly: '$1,499/year', enterprise: 'Custom', setup: '$299 one-time' },;
         features: ['Journeys & playbooks',Churn prediction',Health scores',NPS/CSAT',CRM sync'],;
         benefits: ['Retention ↑ 25–30%',Time-to-value ↓',Scaled touch coverage'],;
@@ -164,13 +109,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
         link: '/services/customer-success-automation',;
         contactInfo: CONTACT;,
 },;
-    {;
-
-        id: 'intelligent-data-analytics-dashboard',;
-        name: 'Intelligent Data Analytics Dashboard',;
-        tagline: 'Real‑time KPIs and predictive analytics',;
-        description: 'Unified dashboards with live connectors and automated narrative insights for business users.',;
-        category: 'micro-saas',;
+    {};
         pricing: { monthly: '$199/month', yearly: '$1,999/year', enterprise: 'Custom', setup: '$399 one-time' },;
         features: ['Live connectors',Forecasting',Anomaly detection',Custom alerts',Embed SDK'],;
         benefits: ['Decisions ↑ 40%',Reporting time ↓ 80%',Self‑serve BI'],;
@@ -183,13 +122,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
         contactInfo: CONTACT;,
 },;
     // IT services;
-    {;
-
-        id: 'network-security-monitoring',;
-        name: 'Network Security Monitoring',;
-        tagline: '24/7 threat detection and compliance reporting',;
-        description: 'Managed detection, continuous monitoring, and incident assistance for hybrid networks and clouds.',;
-        category: 'it-services',;
+    {};
         pricing: { monthly: '$1,500/month', yearly: '$15,000/year', enterprise: 'Custom', setup: '$2,000 one-time' },;
         features: ['SIEM tuning',Threat intel',Vuln scanning',Compliance packs',IR support'],;
         benefits: ['Fewer incidents',Audit readiness',Expert coverage'],;
@@ -201,13 +134,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
         link: '/services/network-security-monitoring',;
         contactInfo: CONTACT;,
 },;
-    {;
-
-        id: 'data-backup-recovery-solutions',;
-        name: 'Data Backup & Recovery Solutions',;
-        tagline: 'Automated backups with DR runbooks',;
-        description: 'Policy-based backups, cross-region replication, encrypted stores, and verified recovery drills.',;
-        category: 'it-services',;
+    {};
         pricing: { monthly: '$800/month', yearly: '$8,000/year', enterprise: 'Custom', setup: '$1,500 one-time' },;
         features: ['RPO/RTO design',Immutable backups',DR tests',BCP docs',24/7 support'],;
         benefits: ['99.99% recovery',Compliance',Downtime ↓ 80%'],;
@@ -219,13 +146,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
         link: '/services/backup-recovery',;
         contactInfo: CONTACT;,
 },;
-    {;
-
-        id: 'it-asset-management-platform',;
-        name: 'IT Asset Management Platform',;
-        tagline: 'Unified hardware, software, and license lifecycle',;
-        description: 'Discovery, license compliance, depreciation tracking, and cost optimization with vendor workflows.',;
-        category: 'it-services',;
+    {};
         pricing: { monthly: '$500/month', yearly: '$5,000/year', enterprise: 'Custom', setup: '$1,000 one-time' },;
         features: ['Agent/agentless discovery',License compliance',Contracts & vendors',APIs',Mobile'],;
         benefits: ['IT spend ↓ 30%',Audit time ↓',Better visibility'],;
@@ -238,13 +159,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
         contactInfo: CONTACT;,
 },;
     // AI services;
-    {;
-
-        id: 'ai-chatbot-development',;
-        name: 'AI Chatbot Development',;
-        tagline: 'Custom multilingual chat and voice bots',;
-        description: '24/7 support across channels with domain-tuned LLMs, guardrails, and human handoff.',;
-        category: 'ai-services',;
+    {};
         pricing: { monthly: '$2,000/month', yearly: '$20,000/year', enterprise: 'Custom', setup: '$5,000 one-time' },;
         features: ['NLP/NLU',Retrieval augmentation',Voice IVR',Analytics',Escalation'],;
         benefits: ['Costs ↓ 40%',CSAT ↑',Scale support'],;
@@ -256,13 +171,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
         link: '/services/ai-chatbot',;
         contactInfo: CONTACT;,
 },;
-    {;
-
-        id: 'predictive-analytics-platform',;
-        name: 'Predictive Analytics Platform',;
-        tagline: 'Forecasting and scenario planning',;
-        description: 'Automated model building with explainability and connectors for operational forecasting.',;
-        category: 'ai-services',;
+    {};
         pricing: { monthly: '$3,500/month', yearly: '$35,000/year', enterprise: 'Custom', setup: '$8,000 one-time' },;
         features: ['AutoML',Explainability',What‑if',Real‑time scoring',APIs'],;
         benefits: ['Revenue ↑',Stockouts ↓',Better planning'],;
@@ -274,13 +183,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
         link: '/services/predictive-analytics',;
         contactInfo: CONTACT;,
 },;
-    {;
-
-        id: 'computer-vision-solutions',;
-        name: 'Computer Vision Solutions',;
-        tagline: 'Inspection, safety, and retail analytics',;
-        description: 'Edge and cloud vision systems for detection, tracking, and QA with human-in-the-loop.',;
-        category: 'ai-services',;
+    {};
         pricing: { monthly: '$4,000/month', yearly: '$40,000/year', enterprise: 'Custom', setup: '$10,000 one-time' },;
         features: ['Detection/classification',Video analytics',Realtime/edge',MLOps',Mobile SDK'],;
         benefits: ['Defects ↓ 60%',Throughput ↑',Safety ↑'],;
@@ -293,13 +196,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
         contactInfo: CONTACT;,
 },;
     // Emerging tech;
-    {;
-
-        id: 'quantum-computing-solutions',;
-        name: 'Quantum Computing Solutions',;
-        tagline: 'Optimization and cryptography research services',;
-        description: 'Advisory and prototypes on major quantum platforms for hard optimization and simulation problems.',;
-        category: 'emerging-tech',;
+    {};
         pricing: { monthly: '$10,000/month', yearly: '$100,000/year', enterprise: 'Custom', setup: '$25,000 one-time' },;
         features: ['Algorithm design',Benchmarking',Cloud quantum access',Training',Research'],;
         benefits: ['Solve intractable problems',Future readiness'],;
@@ -311,13 +208,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
         link: '/services/quantum-computing',;
         contactInfo: CONTACT;,
 },;
-    {;
-
-        id: 'blockchain-web3-solutions',;
-        name: 'Blockchain & Web3 Solutions',;
-        tagline: 'Smart contracts, DeFi, and tokenization',;
-        description: 'End-to-end Web3 product development with audits and token economics design.',;
-        category: 'emerging-tech',;
+    {};
         pricing: { monthly: '$5,000/month', yearly: '$50,000/year', enterprise: 'Custom', setup: '$15,000 one-time' },;
         features: ['Smart contracts',NFT/DeFi',Audits',Cross-chain',Wallets'],;
         benefits: ['Transparency ↑',Intermediaries ↓',Security ↑'],;
@@ -330,13 +221,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
         contactInfo: CONTACT;,
 },;
     // New additions;
-    {;
-
-        id: 'seo-content-optimizer',;
-        name: 'SEO Content Optimizer',;
-        tagline: 'Programmatic SEO at scale with AI',;
-        description: 'Generates, audits, and A/B tests landing pages with structured data and internal links.',;
-        category: 'micro-saas',;
+    {};
         pricing: { monthly: '$129/month', yearly: '$1,290/year', enterprise: 'Custom', setup: '$199 one-time' },;
         features: ['Keyword clustering',Content briefs',On-page audit',Internal linking',A/B testing'],;
         benefits: ['Organic traffic ↑',Publishing velocity ↑'],;
@@ -348,13 +233,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
         link: '/services/seo-content-optimizer',;
         contactInfo: CONTACT;,
 },;
-    {;
-
-        id: 'ai-sales-email-copilot',;
-        name: 'AI Sales Email Copilot',;
-        tagline: 'Personalized outbound that actually converts',;
-        description: 'Enrich leads, draft multi-step sequences, and adapt tone by persona with live A/B improvements.',;
-        category: 'micro-saas',;
+    {};
         pricing: { monthly: '$99/month', yearly: '$990/year', enterprise: 'Custom', setup: '$149 one-time' },;
         features: ['Lead enrichment',Sequence drafts',Deliverability guardrails',CRM sync',Analytics'],;
         benefits: ['Reply rate ↑',Time saved for AEs'],;
@@ -366,13 +245,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
         link: '/services/ai-sales-email-copilot',;
         contactInfo: CONTACT;,
 },;
-    {;
-
-        id: 'cloud-cost-optimizer',;
-        name: 'Cloud Cost Optimizer',;
-        tagline: 'Rightsizing, RI/SP management, and anomaly alerts',;
-        description: 'Identifies idle resources, optimizes storage tiers, and automates savings plan purchases safely.',;
-        category: 'it-services',;
+    {};
         pricing: { monthly: '$600/month', yearly: '$6,000/year', enterprise: 'Custom', setup: '$1,000 one-time' },;
         features: ['Idle detection',Scheduling',Storage tiering',RI/SP advisor',Alerts'],;
         benefits: ['Cloud spend ↓ 20–40%'],;
@@ -384,13 +257,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
         link: '/services/cloud-cost-optimizer',;
         contactInfo: CONTACT;,
 },;
-    {;
-
-        id: 'data-governance-suite',;
-        name: 'Data Governance Suite',;
-        tagline: 'Lineage, PII detection, and access controls',;
-        description: 'Map data flows, classify sensitive data, and enforce access with audit trails.',;
-        category: 'it-services',;
+    {};
         pricing: { monthly: '$1,200/month', yearly: '$12,000/year', enterprise: 'Custom', setup: '$3,000 one-time' },;
         features: ['Catalog and lineage',PII scanners',DLP policies',RBAC/ABAC',Audit'],;
         benefits: ['Compliance readiness',Reduced data risk'],;
@@ -402,13 +269,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
         link: '/services/data-governance-suite',;
         contactInfo: CONTACT;,
 },;
-    {;
-
-        id: 'ai-rag-knowledge-base',;
-        name: 'AI RAG Knowledge Base',;
-        tagline: 'Private, secure retrieval-augmented generation',;
-        description: 'Index your documents and systems to power grounded LLM answers with citations and access controls.',;
-        category: 'ai-services',;
+    {};
         pricing: { monthly: '$1,500/month', yearly: '$15,000/year', enterprise: 'Custom', setup: '$4,000 one-time' },;
         features: ['Connectors',Chunking & embeddings',Citations',Guardrails',Admin console'],;
         benefits: ['Faster knowledge access',Reduced support load'],;
@@ -420,13 +281,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
         link: '/services/ai-rag-knowledge-base',;
         contactInfo: CONTACT;,
 },;
-    {;
-
-        id: 'edge-iot-observability',;
-        name: 'Edge IoT Observability',;
-        tagline: 'Unified metrics, logs, and traces for fleets',;
-        description: 'Collects telemetry from constrained devices and gateways with offline buffering and OTA updates.',;
-        category: 'emerging-tech',;
+    {};
         pricing: { monthly: '$1,000/month', yearly: '$10,000/year', enterprise: 'Custom', setup: '$2,000 one-time' },;
         features: ['OpenTelemetry',Edge buffering',Fleet updates',Digital twins',Rules engine'],;
         benefits: ['Fewer truck rolls',Uptime ↑'],;
@@ -440,18 +295,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
 }
   },;
   // Quantum Computing Services;
-  {;
-
-    id: 'ai-powered-code-review-assistant',;
-    name: 'AI-Powered Code Review Assistant',;
-    tagline: 'Automated code quality analysis, security scanning, and best practice recommendations',;
-    description: 'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.',;
-    category: 'micro-saas',;
-    pricing: {;
-
-      monthly: '$199/month',;
-      yearly: '$1,999/year',;
-      enterprise: 'Custom pricing',;
+  {};
       setup: '$299 one-time'},;
     features = [';
       'Automated security vulnerability detection',Code quality scoring and metrics',Best practice recommendations',Integration with GitHub/GitLab/Bitbucket',Custom rule configuration',Team performance analytics',Automated PR comments',Compliance checking(SOC2, HIPAA),Performance impact analysis',Multi-language support'    ],;
@@ -473,18 +317,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
     contactInfo;,
 },;
   // Advanced Cybersecurity Services;
-  {;
-
-    id: 'intelligent-incident-response-platform',;
-    name: 'Intelligent Incident Response Platform',;
-    tagline: 'AI-driven incident detection, automated response, and post-mortem analysis',;
-    description: 'Comprehensive incident management platform that uses AI to detect, respond to, and analyze security incidents in real-time, reducing response time and improving resolution quality.',;
-    category: 'micro-saas',;
-    pricing: {;
-
-      monthly: '$299/month',;
-      yearly: '$2,999/year',;
-      enterprise: 'Custom pricing',;
+  {};
       setup: '$499 one-time'},;
     features = [';
       'AI-powered threat detection',Automated incident response workflows',Real-time alerting and notifications',Incident timeline tracking',Post-mortem analysis tools',Integration with security tools',Compliance reporting',Team collaboration features',Knowledge base management',Performance metrics dashboard'    ],";
@@ -494,26 +327,10 @@ export const enhancedServices2025: EnhancedService[] = [{;
     targetAudience: "Large enterprises, government agencies, financial institutions",;
     trialDays: 30,;";
     setupTime: "3-5 weeks",;
-    contactInfo: {;
-";
-      mobile: "+1 302 464 0950",";
-      email: "kleber@ziontechgroup.com",;";
-      address: "364 E Main St STE 1008 Middletown DE 19709",;";
+    contactInfo: {};
       website: "https://ziontechgroup.com"}  },;
   // Edge Computing & IoT Services;
-  {;
-";
-    id: "edge-computing-platform",";
-    title: "Edge Computing Platform",;";
-    description: "Deploy and manage applications at the edge for improved performance, reduced latency, and real-time processing with global edge network.",;";
-    category: "Edge Computing & IoT",;
-    price: 149,;";
-    currency: "$",;";
-    tags["Edge Computing", "IoT Integration", "Real-time Processing", "Global Network"],;
-    author: {;
-";
-      name: "Zion Edge Computing",";
-      id: "zion-edge-computing",;";
+  {};
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto = format&fit=crop&w=100&h=100",},";
     images["https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500"],"    createdAt: "2025-01-26T08:45:00.000Z",;
     aiScore: 94,;
@@ -541,18 +358,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
     contactInfo;,
 },;
   // AI-Powered Healthcare Services;
-  {;
-
-    id: 'smart-invoice-management-system',;
-    name: 'Smart Invoice Management System',;
-    tagline: 'AI-powered invoice processing, approval workflows, and payment tracking',;
-    description: 'Intelligent invoice management platform that automates the entire invoice lifecycle from receipt to payment, reducing processing time and improving accuracy.',;
-    category: 'micro-saas',;
-    pricing: {;
-
-      monthly: '$79/month',;
-      yearly: '$799/year',;
-      enterprise: 'Custom pricing',;
+  {};
       setup: '$199 one-time'},;
     features = [';
       'OCR invoice processing',Automated approval workflows',Payment integration',Analytics dashboard',Multi-currency support',Vendor management',Compliance checking',Mobile app access',API integration',Custom reporting'    ],;
@@ -574,18 +380,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
     contactInfo;,
 },;
   // Financial AI Services;
-  {;
-
-    id: 'ai-customer-success-automation',;
-    name: 'AI Customer Success Automation',;
-    tagline: 'Intelligent customer onboarding, support, and retention automation',;
-    description: 'AI-driven platform that automates customer success processes, predicts churn, and optimizes customer experience to improve retention and satisfaction.',;
-    category: 'micro-saas',;
-    pricing: {;
-
-      monthly: '$149/month',;
-      yearly: '$1,499/year',;
-      enterprise: 'Custom pricing',;
+  {};
       setup: '$299 one-time'},;
     features = [';
       'Automated onboarding workflows',Predictive churn analysis',Support ticket routing',Success metrics tracking',Customer health scoring',Automated outreach campaigns',Integration with CRM systems',Performance analytics',Custom dashboards',API access'    ],";
@@ -595,26 +390,10 @@ export const enhancedServices2025: EnhancedService[] = [{;
     targetAudience: "Individual investors, financial advisors, wealth management firms",;
     trialDays: 30,;";
     setupTime: "1-2 weeks",;
-    contactInfo: {;
-";
-      mobile: "+1 302 464 0950",";
-      email: "kleber@ziontechgroup.com",;";
-      address: "364 E Main St STE 1008 Middletown DE 19709",;";
+    contactInfo: {};
       website: "https://ziontechgroup.com"}  },;
   // Legal AI Services;
-  {;
-";
-    id: "ai-legal-review",";
-    title: "AI Legal Document Review",;";
-    description: "Automated legal document analysis, contract review, and compliance checking with advanced AI and legal expertise.",;";
-    category: "Legal AI",;
-    price: 149,;";
-    currency: "$",;";
-    tags["Legal Review", "Contract Analysis", "Risk Assessment", "Compliance"],;
-    author: {;
-";
-      name: "Zion Legal Tech",";
-      id: "zion-legal-tech",;";
+  {};
       avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto = format&fit=crop&w=100&h=100",},";
     images["https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500"],"    createdAt: "2025-01-19T12:15:00.000Z",;
     aiScore: 93,;
@@ -642,18 +421,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
     contactInfo;,
 },;
   // Marketing AI Services;
-  {;
-
-    id: 'intelligent-data-analytics-dashboard',;
-    name: 'Intelligent Data Analytics Dashboard',;
-    tagline: 'Real-time business intelligence and KPI monitoring platform',;
-    description: 'Advanced analytics platform that provides real-time insights, custom dashboards, and predictive analytics to drive data-driven decision making.',;
-    category: 'micro-saas',;
-    pricing: {;
-
-      monthly: '$199/month',;
-      yearly: '$1,999/year',;
-      enterprise: 'Custom pricing',;
+  {};
       setup: '$399 one-time'},;
     features = [';
       'Real-time data visualization',Custom dashboard builder',Predictive analytics',Data integration tools',Automated reporting',Mobile app access',API access',Custom alerts',Data export capabilities',Team collaboration'    ],;
@@ -675,18 +443,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
     contactInfo;,
 },;
   // Supply Chain AI Services;
-  {;
-
-    id: 'network-security-monitoring',;
-    name: 'Network Security Monitoring',;
-    tagline: '24/7 network security monitoring and threat detection',;
-    description: 'Comprehensive network security monitoring service that provides real-time threat detection, incident response, and compliance reporting for enterprise networks.',;
-    category: 'it-services',;
-    pricing: {;
-
-      monthly: '$1,500/month',;
-      yearly: '$15,000/year',;
-      enterprise: 'Custom pricing',;
+  {};
       setup: '$2,000 one-time'},;
     features = [';
       '24/7 network monitoring',Real-time threat detection',Incident response support',Compliance reporting',Vulnerability assessment',Security consulting',Penetration testing',Security awareness training',Incident post-mortem',Continuous improvement'    ],;
@@ -708,18 +465,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
     contactInfo;,
 },;
   // Education AI Services;
-  {;
-
-    id: 'data-backup-recovery-solutions',;
-    name: 'Data Backup & Recovery Solutions',;
-    tagline: 'Automated backup solutions with disaster recovery planning',;
-    description: 'Comprehensive data protection service that includes automated backups, cloud storage, disaster recovery planning, and business continuity solutions.',;
-    category: 'it-services',;
-    pricing: {;
-
-      monthly: '$800/month',;
-      yearly: '$8,000/year',;
-      enterprise: 'Custom pricing',;
+  {};
       setup: '$1,500 one-time'},;
     features = [';
       'Automated backup scheduling',Cloud storage integration',Disaster recovery planning',Recovery testing',RTO optimization',Data encryption',Compliance support',24/7 support',Recovery documentation',Business continuity planning'    ],;
@@ -740,18 +486,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
     link: '/services/backup-recovery',;
     contactInfo;,
 },;
-  {;
-
-    id: 'it-asset-management-platform',;
-    name: 'IT Asset Management Platform',;
-    tagline: 'Comprehensive IT asset tracking and lifecycle management',;
-    description: 'Complete IT asset management solution that tracks hardware, software, licenses, and provides lifecycle management, cost optimization, and compliance reporting.',;
-    category: 'it-services',;
-    pricing: {;
-
-      monthly: '$500/month',;
-      yearly: '$5,000/year',;
-      enterprise: 'Custom pricing',;
+  {};
       setup: '$1,000 one-time'},;
     features = [';
       'Asset discovery and tracking',License management',Depreciation tracking',Maintenance scheduling',Cost optimization',Compliance reporting',Vendor management',Contract tracking',Mobile app access',API integration'    ],;
@@ -773,18 +508,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
     contactInfo;,
 },;
   // AI SERVICES;
-  {;
-
-    id: 'ai-chatbot-development',;
-    name: 'AI Chatbot Development',;
-    tagline: 'Custom AI chatbots for customer service and support',;
-    description: 'Intelligent chatbot solutions that provide 24/7 customer support, handle complex queries, and integrate seamlessly with your existing systems.',;
-    category: 'ai-services',;
-    pricing: {;
-
-      monthly: '$2,000/month',;
-      yearly: '$20,000/year',;
-      enterprise: 'Custom pricing',;
+  {};
       setup: '$5,000 one-time'},;
     features = [';
       'Natural language processing',Multi-language support',Integration APIs',Analytics dashboard',Custom training',Voice recognition',Sentiment analysis',Escalation handling',Knowledge base integration',Performance monitoring'    ],;
@@ -805,18 +529,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
     link: '/services/ai-chatbot',;
     contactInfo;,
 },;
-  {;
-
-    id: 'predictive-analytics-platform',;
-    name: 'Predictive Analytics Platform',;
-    tagline: 'AI-powered predictive analytics for business forecasting',;
-    description: 'Advanced predictive analytics platform that uses machine learning to forecast trends, identify opportunities, and optimize business decisions.',;
-    category: 'ai-services',;
-    pricing: {;
-
-      monthly: '$3,500/month',;
-      yearly: '$35,000/year',;
-      enterprise: 'Custom pricing',;
+  {};
       setup: '$8,000 one-time'},;
     features = [';
       'Data modeling and analysis',Forecasting algorithms',Visualization tools',API integration',Custom model training',Real-time predictions',Performance monitoring',Automated insights',Scenario planning',Risk assessment'    ],;
@@ -837,18 +550,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
     link: '/services/predictive-analytics',;
     contactInfo;,
 },;
-  {;
-
-    id: 'computer-vision-solutions',;
-    name: 'Computer Vision Solutions',;
-    tagline: 'AI-powered image and video analysis for various industries',;
-    description: 'Advanced computer vision solutions that analyze images and videos for quality control, process automation, and business intelligence across multiple industries.',;
-    category: 'ai-services',;
-    pricing: {;
-
-      monthly: '$4,000/month',;
-      yearly: '$40,000/year',;
-      enterprise: 'Custom pricing',;
+  {};
       setup: '$10,000 one-time'},;
     features = [';
       'Object detection and recognition',Image classification',Video analysis',Custom model training',Real-time processing',Quality control automation',Process monitoring',Analytics dashboard',API access',Mobile integration'    ],;
@@ -870,18 +572,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
     contactInfo;,
 },;
   // EMERGING TECH SERVICES;
-  {;
-
-    id: 'quantum-computing-solutions',;
-    name: 'Quantum Computing Solutions',;
-    tagline: 'Next-generation quantum computing services for complex problem solving',;
-    description: 'Cutting-edge quantum computing solutions that solve complex optimization problems, cryptography challenges, and scientific simulations.',;
-    category: 'emerging-tech',;
-    pricing: {;
-
-      monthly: '$10,000/month',;
-      yearly: '$100,000/year',;
-      enterprise: 'Custom pricing',;
+  {};
       setup: '$25,000 one-time'},;
     features = [';
       'Quantum algorithm development',Optimization problem solving',Cryptography services',Scientific simulations',Quantum consulting',Training and education',Research collaboration',Performance benchmarking',Custom development',Ongoing support'    ],;
@@ -902,18 +593,7 @@ export const enhancedServices2025: EnhancedService[] = [{;
     link: '/services/quantum-computing',;
     contactInfo;,
 },;
-  {;
-
-    id: 'blockchain-web3-solutions',;
-    name: 'Blockchain & Web3 Solutions',;
-    tagline: 'Decentralized applications and blockchain infrastructure development',;
-    description: 'Comprehensive blockchain and Web3 solutions including smart contract development, DeFi applications, NFT platforms, and decentralized infrastructure.',;
-    category: 'emerging-tech',;
-    pricing: {;
-
-      monthly: '$5,000/month',;
-      yearly: '$50,000/year',;
-      enterprise: 'Custom pricing',;
+  {};
       setup: '$15,000 one-time'},;
     features = [';
       'Smart contract development',DeFi application building',NFT platform development',Blockchain infrastructure',Web3 consulting',Security auditing',Token economics',Governance systems',Cross-chain solutions',Mobile integration'    ],;
@@ -936,4 +616,4 @@ export const enhancedServices2025: EnhancedService[] = [{;
 }
 ];
 ;
-export default enhancedServices2025}}'"
+export {};

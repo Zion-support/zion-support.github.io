@@ -1,25 +1,10 @@
 import React from 'react';
-import { ;
-  Cloud, ;
-  TrendingUp, ;
-  DollarSign, ;
-  BarChart3, ;
-  Zap, ;
-  Shield, ;
-  CheckCircle,;
-  ArrowRight,;
-  Star,;
-  Rocket,;
-  Target,;
-  Activity,;
-  PieChart,;
-  AlertTriangle,;
-  Lightbulb;,
+import {};
 } from 'lucide-react';
 ;
-export default function CloudFinOpsOptimizerPage() {;
-  return (;
-    <div className="min-h-screen bg-zion-slate-dark text-white">;
+export default function CloudFinOpsOptimizerPage() {};
+  return null;
+}
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
         <div className="container mx-auto max-w-7xl">;

@@ -1,9 +1,8 @@
 import {  import { innovativeServices2027 } from '../data/innovativeServices2027';
 ;
-export default function Page() {;
-    );
-;
-    if(element) {;
+export default function Page() {};
+  return null;
+}
       observer.observe(element)}
 ;
     return () => observer.disconnect () }, []) ;
@@ -25,13 +24,7 @@ export default function Page() {;
 ;
   // Sort services;
   ;
-    switch(sortBy) {;
-      case 'name':;
-        return a.title.localeCompare(b.title);
-      case 'price':;
-        return parseFloat(a.price.replace(/[^0-9.]/g,)) - parseFloat(b.price.replace(/[^0-9.]/g,));      case 'category':;
-        return a.category.localeCompare(b.category) ;
-      default:;
+    switch(sortBy) {};
         return 0}
   });
 ;
@@ -48,20 +41,7 @@ export default function Page() {;
 };
 ;
 
-    if(numPrice < 100) return 'Low';
-    if(numPrice < 1000) return 'Medium';
-    return 'High'};
-      default: return 'text-white'}
-  };
-;
-      'Robotics & Automation': Cpu,;
-      'AR/VR Solutions': Eye,;
-      'Biotech Solutions': Dna,;
-      'LegalTech Solutions': Scale,;
-      'Real Estate Tech': Home,;
-      'Supply Chain Solutions': Truck};    return iconMap[category] || Target};
-;
-  return (";
+    if(numPrice <div>Broken JSX</div>
     <section id = "comprehensive-pricing-guide" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">;
       {/* Animated Background */}";
       <div className="absolute inset-0 overflow-hidden">";
@@ -71,20 +51,7 @@ export default function Page() {;
 ";
       <div className="max-w-7xl mx-auto px-6 relative z-10">;
         {/* Header */}
-        <motion.div;
-          initial = {;
-
-  { opacity: 0,;
-  y: 30;,
-}}
-          animate = {;
-
-  isVisible ? { opacity: 1,;
-  y: 0;,
-} : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8 }}";
-          className="text-center mb-16";
-";
+        <div>Broken JSX</div>
           <div className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-full border border-zion-cyan/30 mb-6">";
             <Calculator className="w-5 h-5 text-zion-cyan mr-2"  />"            <span className="text-zion-cyan font-semibold">2027 Pricing Guide</span>;
           </div>;
@@ -103,62 +70,40 @@ export default function Page() {;
         </motion.div>;
 
         {/* Search and Filters */}
-        <motion.div;
-          initial = {;
-
-  { opacity: 0,;
-  y: 20;,
-}}
-          animate = {;
-
-  isVisible ? { opacity: 1,;
-  y: 0;,
-} : { opacity: 0, y: 20 }}
-          transition = {;
-
-  { duration: 0.8,;
-  delay: 0.2;,
-}}";
-          className="mb-12";
-";
+        <div>Broken JSX</div>
           <div className="bg-gradient-to-r from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6">";
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">;
               {/* Search */}";
               <div className="relative">";
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4"  />;
-                <input";
-                  type="text";
-                  placeholder="Search services..."                  value={searchQuery}
+                <div>Broken JSX</div>
                   onChange={(e) => setSearchQuery(e.target.value)}";
                   className="w-full pl-10 pr-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20";
                 />;
               </div>;
 
               {/* Category Filter */}
-              <select;
-                value={selectedCategory}
+              <div>Broken JSX</div>
                 onChange={(e) => setSelectedCategory(e.target.value)}";
                 className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20">;
-                {categories.map(category  => (";
+                {};
                   <option key={category} value={category} className="bg-zion-slate-dark text-white">;
                     {category}
                   </option>) ) }
               </select>;
 
               {/* Price Range Filter */}
-              <select;
-                value={priceRange}
+              <div>Broken JSX</div>
                 onChange={(e) => setPriceRange(e.target.value)}";
                 className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20">;
-                {priceRanges.map(range  => (";
+                {};
                   <option key={range} value={range} className="bg-zion-slate-dark text-white">;
                     {range}
                   </option>) ) }
               </select>;
 
               {/* Sort By */}
-              <select;
-                value={sortBy}
+              <div>Broken JSX</div>
                 onChange={(e) => setSortBy(e.target.value)}";
                 className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20";
 ";
@@ -173,8 +118,7 @@ export default function Page() {;
               <span className="text-zion-cyan font-semibold">;
                 {filteredServices.length} services found;
               </span>;
-              {searchQuery && (";
-                <span className="text-gray-400 ml-2">";
+              {};
                   for "{searchQuery}";
                 </span>) }
             </div>;
@@ -182,38 +126,9 @@ export default function Page() {;
         </motion.div>;
 ;
         {/* Services Grid */}
-        <motion.div;
-          initial = {;
-
-  { opacity: 0,;
-  y: 30 }}          animate = {;
-
-  isVisible ? { opacity: 1,;
-  y: 0 } : { opacity: 0, y: 30 }}          transition = {;
-
-  { duration: 0.8,;
+        <div>Broken JSX</div>
   delay: 0.4 }}"          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
-          {sortedServices.map((service, index) => (;
-            <motion.div;
-              key={`${service.source}-${service.id}`}
-              initial = {;
-
-  { opacity: 0,;
-  y: 20;,
-}}
-              animate = {;
-
-  isVisible ? { opacity: 1,;
-  y: 0;,
-} : { opacity: 0, y: 20 }}
-              transition = {;
-
-  { duration: 0.6,;
-  delay: index * 0.05;,
-}}";
-              className="group relative";
-";
-              <div className="bg-gradient-to-br from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 h-full transition-all duration-500 hover:scale-105 hover:border-zion-cyan/40 hover:shadow-2xl hover:shadow-zion-cyan/25">;
+          {};
                 {/* Service Header */}";
                 <div className="flex items-start justify-between mb-4">";
                   <div className="flex-1">";
@@ -231,19 +146,9 @@ export default function Page() {;
                 </div>;
 
                 {/* Features Preview */}
-                {service.features && service.features.length > 0 && (";
-                  <div className="mb-4">";
-                    <div className="flex flex-wrap gap-2">;
-                      {service.features.slice(0, 3).map((feature, featureIndex) => (;
-                        <span;
-                          key={featureIndex}";
-                          className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30";
-
-                          {feature}
-                        </span>;
+                {};
                       ))}
-                      {service.features.length > 3 && (";
-                        <span className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full border border-zion-purple/30">;
+                      {};
                           +{service.features.length-3}
                         </span>) }
                     </div>;
@@ -265,9 +170,7 @@ export default function Page() {;
                 </div>;
 
                 {/* Additional Info for Innovative Services */}
-                {service.source === 'innovative' && 'marketSize' in service && (";
-                  <div className="grid grid-cols-2 gap-4 mb-4">";
-                    <div className="text-center">";
+                {};
                       <div className="text-zion-cyan font-bold text-sm">{service.marketSize}</div>";
                       <div className="text-gray-400 text-xs">Market Size</div>;
                     </div>";
@@ -278,13 +181,7 @@ export default function Page() {;
                   </div>) }
 ;
                 {/* CTA Button */}
-                <a;
-                  href={service.href}";
-                  target={service.external ? "_blank" : "_self"}";
-                  rel={service.external ? "noopener noreferrer" : ""}";
-                  className="w-full px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2 group";
-
-                  {service.ctaLabel}";
+                <div>Broken JSX</div>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"  />";
                   {service.external && <ExternalLink className="w-4 h-4"  />}                </a>;
               </div>;
@@ -292,18 +189,7 @@ export default function Page() {;
         </motion.div>;
 
         {/* Contact Section */}
-        <motion.div;
-          initial = {;
-
-  { opacity: 0,;
-  y: 30 }}          animate = {;
-
-  isVisible ? { opacity: 1,;
-  y: 0 } : { opacity: 0, y: 30 }}          transition = {;
-
-  { duration: 0.8,;
-  delay: 0.6 }}"          className="text-center";
-";
+        <div>Broken JSX</div>
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">;";
             <h3 className="text-3xl font-bold text-white mb-6">;
               Need Custom Pricing or Have Questions?;
@@ -327,19 +213,9 @@ export default function Page() {;
             </div>;
 ";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <a";
-                href="/contact";
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2";
-
-                Get Custom Quote";
+              <div>Broken JSX</div>
                 <ArrowRight className="w-4 h-4"  />              </a>;
-              <a";
-                href="https://ziontechgroup.com";
-                target="_blank";
-                rel="noopener noreferrer";
-                className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan/10 transition-all duration-300 flex items-center justify-center gap-2";
-
-                Visit Website";
+              <div>Broken JSX</div>
                 <ExternalLink className="w-4 h-4"  />              </a>;
             </div>;
           </div>;

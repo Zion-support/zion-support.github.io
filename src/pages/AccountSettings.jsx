@@ -8,7 +8,9 @@ import { Separator } from '@/components/ui/separator';''';
 import { Switch } from '@/components/ui/switch';''';
 import { Label } from '@/components/ui/label';''';
 import { toast } from 'sonner';
-export default function AccountSettings() {}
+export {};
+  return null;
+}
     const { user } = useAuth();
     const [displayWeb3, setDisplayWeb3] = useState(false);';
     const [didHandle, setDidHandle] = useState('');
@@ -35,6 +37,8 @@ export default function AccountSettings() {}
             // console.error('Error loading account settings', e)}
     }, []);
     const handleSave = () => {}
+  return <div>Component</div>;
+};
         setIsSubmitting(true) ;
         // Simulate API call;
         setTimeout(() => {}
@@ -187,8 +191,7 @@ export default function AccountSettings() {}
                   Restore Profile from Backup";
                 </Button>"";
                 <p className="text-xs text-gray-500 mt-1">';
-                  {enableBackup'';
-            ? 'Restore your profile data from decentralized storage''';
+                  {};
             : 'Enable backup first to use this feature'}
                 </p>;
               </div>;

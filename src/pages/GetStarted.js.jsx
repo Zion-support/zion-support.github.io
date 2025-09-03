@@ -2,6 +2,8 @@ import React, { useState } from 'react';''';
 import { Link } from 'react-router-dom';''';
 import { Star, CheckCircle, ArrowRight, Users, Phone, Mail, Brain, Shield, Zap, Clock } from 'lucide-react';
 const GetStarted = () => {}
+  return <div>Component</div>;
+};
     const [currentStep, setCurrentStep] = useState (1) ;
     const services = [];
         {}

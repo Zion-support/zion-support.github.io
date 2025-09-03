@@ -1,17 +1,13 @@
 // comment;
-export class authService {;
-  constructor() {;
-    this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api";,
+export class authService {};
 }
 ;
-  async get() {;
-    try {;
+  async get() {};
       const response = await fetch("${this.baseUrl}/auth");,
 }
       return await response.json();,
 }
-    } catch (error) {;
-      console.error("Error fetching data:", error);,
+    } catch (error) {};
 }
       throw error;,
 }

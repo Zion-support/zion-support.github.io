@@ -1,3 +1,2 @@
-"";,"});,"})";
-";
-&apos,"
+// Auto-generated module
+export {};

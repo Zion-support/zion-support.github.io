@@ -1,28 +1,12 @@
 import Head from 'next/head';
 ;
-interface SEOHeadProps {;
-  title: string;
-  description: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: 'website' | 'article' | 'service';
-  structuredData?: object;
-  noIndex?: boolean;
-  noFollow?: boolean;,
+interface SEOHeadProps {};
 }
 ;
-export default function SEOHead({ ;
-  title, ;
-  description, ;
-  keywords = [], ;
-  canonicalUrl, ;
-  ogImage = '/images/zion-tech-group-og.jpg', ;
-  ogType = 'website', ;
-  structuredData, ;
-  noIndex = false, ;
-  noFollow = false ;,
-}: SEOHeadProps) {;
+export default function SEOHead({};
+}: SEOHeadProps) {};
+  return null;
+}
   const fullTitle = `${title} | Zion Tech Group - AI & Technology Solutions`;
   ;
   const defaultKeywords = [;
@@ -65,33 +49,12 @@ export default function SEOHead({ ;
       <meta name="msapplication-TileColor" content="#0ea5e9" />;
       ;
       {/* Structured Data */}
-      {structuredData && (;
-        <script type="application/ld+json" dangerouslySetInnerHTML={{;
-          __html: JSON.stringify(structuredData);,
+      {};
 }} />;
       )}
       ;
       {/* Default organization structured data */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{;
-        __html: JSON.stringify({;
-          "@context": "https://schema.org",;
-          "@type": "Organization",;
-          "name": "Zion Tech Group",;
-          "url": "https://ziontechgroup.com",;
-          "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",;
-          "description": "Leading provider of AI services, IT solutions, and innovative technology consulting for enterprise digital transformation.",;
-          "contactPoint": {;
-            "@type": "ContactPoint",;
-            "telephone": "+1-302-464-0950",;
-            "contactType": "Customer Service",;
-            "availableLanguage": "English";,
-},;
-          "sameAs": [;
-            "https://linkedin.com/company/ziontechgroup",;
-            "https://twitter.com/ziontechgroup",;
-            "https://github.com/ziontechgroup";
-          ];,
-});,
+      <div>Broken JSX</div>
 }} />;
     </Head>;
   );,

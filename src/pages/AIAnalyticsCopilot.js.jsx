@@ -10,17 +10,15 @@ import {}
   Shield,''';
   Database} from 'lucide-react';
 const AIAnalyticsCopilot = () => {}
+  return <div>Component</div>;
+};
   return();
     <>;
       <Helmet>;
         <title>AI Analytics Copilot - Zion Tech Group</title>;
-        <meta;
-          name="description"";
-          content="Intelligent analytics copilot that transforms raw data into actionable insights with AI-powered analysis and visualization.";
+        <div>Broken JSX</div>
         />";
-        <meta"";
-          name="keywords"";
-          content="AI analytics, data insights, business intelligence, analytics copilot, data visualization";
+        <div>Broken JSX</div>
         />;
       </Helmet>";
 "";
@@ -65,7 +63,7 @@ const AIAnalyticsCopilot = () => {}
             </div>";
 "";
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
-              {[];
+              {};
                 {}
                   icon: Brain,';
                   title: 'Natural Language Queries',';
@@ -97,8 +95,7 @@ const AIAnalyticsCopilot = () => {}
                   description:'';
                     'Generate comprehensive reports and dashboards automatically based on your requirements'}
               ].map((feature, index) => (;
-                <div";
-                  key={index}"";
+                <div>Broken JSX</div>
                   className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-colors"">"";
                   <feature.icon className="w-12 h-12 text-blue-400 mb-6" />"";
                   <h3 className="text-xl font-semibold text-white mb-4">;
@@ -127,7 +124,7 @@ const AIAnalyticsCopilot = () => {}
             </div>";
 "";
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {[];
+              {};
                 {}
 ';
 '';

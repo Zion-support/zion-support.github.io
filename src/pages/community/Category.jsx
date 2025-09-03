@@ -8,7 +8,9 @@ import PostCard from '@/components/community/PostCard';''';
 import Empty from '@/components/community/Empty';''';
 import { fetchPostsByCategory } from '@/api/community';
 ;
-export default function Category() {}
+export {};
+  return null;
+}
   const { slug } = useParams();
   const {}
     data: posts = [],;
@@ -21,7 +23,7 @@ export default function Category() {}
 ;
   return posts.length ? (";
     <div className="space-y-4">;
-      {posts.map(p => (;
+      {};
         <PostCard key={p.id} post={p} />;
       ))}
     </div>;

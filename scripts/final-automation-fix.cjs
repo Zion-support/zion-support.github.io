@@ -40,7 +40,7 @@ class FinalAutomationFix {;
       // Fix malformed function declarations;
       content = content.replace(/const:\s*(\w+):\s*(\w+):\s*=\s*\(\s*\)\s*=>\s*,\s*\{/g, "const $1: $2 = () => {");
       // Fix malformed object properties;
-      content = content.replace(/question:\s*"([^"]*):\s*([^"]*),","";"/g, "question: "$1: $2",");
+      content = content.replace(/question:\s*"([^"]*):\s*([^"]*),", "";"/g, "question: "$1: $2", ");
       // Fix malformed array syntax;
       content = content.replace(/const\s+(\w+)\s*=\s*\[/g, "const $1 = [");
       content = content.replace(/{\s*;/g, "{");

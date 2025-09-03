@@ -4,27 +4,16 @@ import { BarChart3, PieChart, TrendingUp, Globe, ArrowRight, CheckCircle, Rocket
 import AdvancedServicePortfolioDashboard from "../components/AdvancedServicePortfolioDashboard.jsx";
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
-const ServicePortfolioDashboard = () => {;
+const ServicePortfolioDashboard = () => {};
+};
     const features = [;
-        {;
-            icon: <BarChart3 className="w-6 h-6 text-zion-cyan"/>,;
-            title: 'Comprehensive Analytics',;
-            description: 'Real-time insights into service performance, revenue, and growth metrics';,
+        {};
 },;
-        {;
-            icon: <PieChart className="w-6 h-6 text-zion-purple"/>,;
-            title: 'Portfolio Visualization',;
-            description: 'Interactive charts and graphs showing service distribution and trends';,
+        {};
 },;
-        {;
-            icon: <TrendingUp className="w-6 h-6 text-zion-green"/>,;
-            title: 'Performance Tracking',;
-            description: 'Monitor service performance, client satisfaction, and market demand';,
+        {};
 },;
-        {;
-            icon: <Target className="w-6 h-6 text-zion-orange"/>,;
-            title: 'Strategic Insights',;
-            description: 'Data-driven recommendations for portfolio optimization and growth';,
+        {};
 }
     ];
     const benefits = [;
@@ -36,29 +25,13 @@ const ServicePortfolioDashboard = () => {;
         'Technology maturity assessment and innovation tracking';
     ];
     const portfolioStats = [;
-        {;
-            label: 'Total Services',;
-            value: '52+',;
-            description: 'Cutting-edge technology solutions',;
-            icon: <Rocket className="w-8 h-8 text-zion-cyan"/>;,
+        {};
 },;
-        {;
-            label: 'Technology Categories',;
-            value: '12+',;
-            description: 'Major technology sectors covered',;
-            icon: <Brain className="w-8 h-8 text-zion-purple"/>;,
+        {};
 },;
-        {;
-            label: 'Price Range',;
-            value: '$5K-$2M',;
-            description: 'Monthly service pricing',;
-            icon: <DollarSign className="w-8 h-8 text-zion-green"/>;,
+        {};
 },;
-        {;
-            label: 'Market Coverage',;
-            value: '95%+',;
-            description: 'Technology market segments',;
-            icon: <Globe className="w-8 h-8 text-zion-orange"/>;,
+        {};
 }
     ];
     return (<div className="min-h-screen bg-zion-blue-dark">;
@@ -70,9 +43,7 @@ const ServicePortfolioDashboard = () => {;
         </div>";
 "";
         <div className="max-w-4xl mx-auto text-center relative z-10">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div>Broken JSX</div>
             transition={{ duration: 0.6 }}">"";
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
               Service Portfolio Dashboard";
@@ -83,23 +54,16 @@ const ServicePortfolioDashboard = () => {;
               making and portfolio optimization.";
             </p>"";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <Button"";
-                className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4";
-                onClick={() =>';
-                  document'';
-                    .getElementById('portfolio-dashboard')';
+              <div>Broken JSX</div>
+                onClick={};
                     ?.scrollIntoView({ behavior: 'smooth' });,
 }
               >";
                 View Dashboard"";
                 <ArrowRight className="w-5 h-5 ml-2" />;
               </Button>";
-              <Button"";
-                className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4";
-                onClick={() =>';
-                  window.open('';
-                    'mailto:kleber@ziontechgroup.com?subject=Portfolio Strategy Consultation',_blank';
-                  );,
+              <div>Broken JSX</div>
+                onClick={};
 }
               >;
                 Get Consultation;
@@ -112,11 +76,7 @@ const ServicePortfolioDashboard = () => {;
       {/* Portfolio Statistics */}"";
       <section className="py-16 px-6 bg-white">"";
         <div className="max-w-6xl mx-auto">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}";
-            viewport={{ once: true }}"";
+          <div>Broken JSX</div>
             className="text-center mb-12"">"";
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">;
               Portfolio Overview";
@@ -129,12 +89,7 @@ const ServicePortfolioDashboard = () => {;
           </motion.div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {portfolioStats.map((stat, index) => (;
-              <motion.div;
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {};
                 viewport={{ once: true }}">"";
                 <Card className="h-full text-center hover:shadow-lg transition-shadow">";
                   <CardHeader>"";
@@ -161,11 +116,7 @@ const ServicePortfolioDashboard = () => {;
       {/* Features Section */}"";
       <section className="py-16 px-6 bg-zion-blue-light/5">"";
         <div className="max-w-6xl mx-auto">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}";
-            viewport={{ once: true }}"";
+          <div>Broken JSX</div>
             className="text-center mb-12"">"";
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">;
               Dashboard Features";
@@ -177,12 +128,7 @@ const ServicePortfolioDashboard = () => {;
           </motion.div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
-            {features.map((feature, index) => (;
-              <motion.div;
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {};
                 viewport={{ once: true }}">"";
                 <Card className="h-full hover:shadow-lg transition-shadow">";
                   <CardHeader>"";
@@ -210,11 +156,7 @@ const ServicePortfolioDashboard = () => {;
       {/* Benefits Section */}"";
       <section className="py-16 px-6 bg-white">"";
         <div className="max-w-4xl mx-auto">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}";
-            viewport={{ once: true }}"";
+          <div>Broken JSX</div>
             className="text-center mb-12"">"";
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">;
               Why Use Our Portfolio Dashboard?";
@@ -226,15 +168,7 @@ const ServicePortfolioDashboard = () => {;
           </motion.div>";
 "";
           <div className="space-y-4">;
-            {benefits.map((benefit, index) => (;
-              <motion.div;
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}";
-                viewport={{ once: true }}"";
-                className="flex items-start gap-3"">"";
-                <CheckCircle className="w-5 h-5 text-zion-cyan mt-1 flex-shrink-0" />"";
+            {};
                 <span className="text-zion-slate-dark">{benefit}</span>;
               </motion.div>;
             ))}
@@ -243,15 +177,10 @@ const ServicePortfolioDashboard = () => {;
       </section>;
 
       {/* Portfolio Dashboard Section */}";
-      <section"";
-        id="portfolio-dashboard"";
+      <div>Broken JSX</div>
         className="py-16 px-6 bg-zion-blue-light/5"">"";
         <div className="max-w-7xl mx-auto">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}";
-            viewport={{ once: true }}"";
+          <div>Broken JSX</div>
             className="text-center mb-12"">"";
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">;
               Interactive Portfolio Dashboard";
@@ -269,10 +198,7 @@ const ServicePortfolioDashboard = () => {;
       {/* CTA Section */}"";
       <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan">"";
         <div className="max-w-4xl mx-auto text-center">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div>Broken JSX</div>
             viewport={{ once: true }}">"";
             <h2 className="text-4xl font-bold text-white mb-6">;
               Ready to Optimize Your Portfolio?";
@@ -283,18 +209,13 @@ const ServicePortfolioDashboard = () => {;
               technology investments.";
             </p>"";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <Button"";
-                className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4";
-                onClick={() =>';
-                  window.open('';
-                    'mailto:kleber@ziontechgroup.com?subject=Portfolio Optimization Consultation',_blank';
-                  );,
+              <div>Broken JSX</div>
+                onClick={};
 }">"";
                 <Rocket className="w-5 h-5 mr-2" />;
                 Get Portfolio Strategy;
               </Button>";
-              <Button"'";
-                className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4"'';
+              <div>Broken JSX</div>
                 onClick={() => window.open('tel:+13024640950',_blank')}">"";
                 <Shield className="w-5 h-5 mr-2" />;
                 Speak with an Expert;

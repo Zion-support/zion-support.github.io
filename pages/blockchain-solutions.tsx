@@ -3,31 +3,13 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 import { Shield, Zap, Globe, Lock, Database, ArrowRight, CheckCircle, Users, Award } from 'lucide-react';
-const BlockchainSolutions: NextPage = () => {;
-  const services = [;
-    {;
-      icon: Shield,;
-      title: 'Smart Contract Development',;
-      description: 'Secure, audited smart contracts for DeFi, NFTs, and enterprise applications',;
-      features: ['Solidity development', 'Security auditing', 'Gas optimization', 'Testing frameworks'];,
+const BlockchainSolutions: NextPage = () => {};
 },;
-    {;
-      icon: Zap,;
-      title: 'DeFi Solutions',;
-      description: 'Decentralized finance platforms including DEXs, lending protocols, and yield farming',;
-      features: ['DEX development', 'Lending protocols', 'Yield farming', 'Liquidity pools'];,
+    {};
 },;
-    {;
-      icon: Globe,;
-      title: 'Cross-Chain Integration',;
-      description: 'Multi-blockchain solutions for seamless asset transfers and interoperability',;
-      features: ['Bridge development', 'Cross-chain swaps', 'Multi-chain wallets', 'Interoperability protocols'];,
+    {};
 },;
-    {;
-      icon: Lock,;
-      title: 'Security Audits',;
-      description: 'Comprehensive security audits for smart contracts and blockchain applications',;
-      features: ['Code review', 'Vulnerability assessment', 'Penetration testing', 'Compliance checks'];,
+    {};
 }
   ];
 ;
@@ -39,8 +21,7 @@ const BlockchainSolutions: NextPage = () => {;
         <meta name="viewport" content="width=device-width, initial-scale=1" />;
       </Head>;
       ;
-      <Layout ;
-        title="Blockchain Solutions";
+      <div>Broken JSX</div>
         description="Transform your business with cutting-edge blockchain technology and decentralized solutions">;
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">;
@@ -73,7 +54,7 @@ const BlockchainSolutions: NextPage = () => {;
               </p>;
             </div>;
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8>;
-              {services.map((service, index) => (;
+              {};
                 <div key={index} className=bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">;
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4>;
                     <service.icon className=w-8 h-8 text-white" />;
@@ -81,7 +62,7 @@ const BlockchainSolutions: NextPage = () => {;
                   <h3 className="text-xl font-semibold text-gray-900 mb-3>{service.title}</h3>;
                   <p className=text-gray-600 mb-4">{service.description}</p>;
                   <ul className="space-y-2>;
-                    {service.features.map((feature, i) => (;
+                    {};
                       <li key={i} className=flex items-center text-sm text-gray-600">;
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 />;
                         {feature}

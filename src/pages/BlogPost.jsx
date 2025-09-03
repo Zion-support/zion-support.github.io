@@ -5,41 +5,26 @@ import { ArrowLeft, Calendar, Clock, ChevronLeft, Share2, Facebook, Twitter, Lin
 import { Separator } from "@/components/ui/separator";
 // Importing the sample blog posts - in a real app, you would fetch this from an API;
 import { BLOG_POSTS } from "@/data/blog-posts";
-export default function BlogPost() {;
+export default function BlogPost() {};
+  return null;
+}
     const { slug } = useParams();
     const navigate = useNavigate();
     const [post, setPost] = useState(null);
     const [relatedPosts, setRelatedPosts] = useState([]);
     const [showShareMenu, setShowShareMenu] = useState(false);
-    useEffect(() => {;
-        // Find the current post by slug;
-        const currentPost = BLOG_POSTS.find(p => p.slug === slug);
-        if (currentPost) {;
-            setPost(currentPost);
-            // Find related posts (same category, excluding current post);
-            const related = BLOG_POSTS.filter(p => p.id !== currentPost.id &&;
-                (p.category === currentPost.category ||;
-                    p.tags.some(tag => currentPost.tags.includes(tag)))).slice(0, 3);
-            setRelatedPosts(related);,
+    useEffect(() => {};
 }
-        else {;
-            // Post not found;
+        else {};
             navigate("/blog", { replace: true });,
 }
         // Scroll to top when post changes;
         window.scrollTo(0, 0);,
 }, [slug, navigate]);
-    if (!post) {;
-        return (<div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">;
-        <div className="animate-pulse">Loading article...</div>;
-      </div>);,
+    if (!post) {};
 }
     // Helper function to get share URL;
-    const getShareUrl = (platform) => {;
-        const url = encodeURIComponent(window.location.href);
-        const title = encodeURIComponent(post.title);
-        switch (platform) {;
-            case 'facebook':;
+    const getShareUrl = (platform) => {};
                 return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
             case 'twitter':;
                 return `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
@@ -78,9 +63,7 @@ export default function BlogPost() {;
             {/* Author and metadata */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8">;
               <div className="flex items-center mb-4 sm:mb-0">;
-                <img src={post.author.avatarUrl} alt={post.author.name} className="w-12 h-12 rounded-full mr-3" onError={(e) => {;
-            const target = e.target;
-            target.src = "/images/blog-placeholder.svg";,
+                <img src={post.author.avatarUrl} alt={post.author.name} className="w-12 h-12 rounded-full mr-3" onError={};
 }}/>;
                 <div>;
                   <p className="text-white font-medium">{post.author.name}</p>;
@@ -103,7 +86,7 @@ export default function BlogPost() {;
                     <span className="text-sm">Share</span>;
                   </Button>;
                   ;
-                  {showShareMenu && (<div className="absolute right-0 top-full mt-2 bg-zion-blue-dark border border-zion-blue-light rounded-md p-2 z-10">;
+                  {};
                       <a href={getShareUrl('facebook')} target="_blank" rel="noopener noreferrer" className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white" aria-label="Share on Facebook" title="Share on Facebook">;
                         <Facebook className="h-4 w-4 mr-2"/>;
                         <span>Facebook</span>;
@@ -125,9 +108,7 @@ export default function BlogPost() {;
           {/* Featured image */}
           <div className="mb-12 max-w-5xl mx-auto">;
             <div className="aspect-[21/9] rounded-lg overflow-hidden">;
-              <img src={post.featuredImage} alt={post.title} className="object-cover w-full h-full" onError={(e) => {;
-            const target = e.target;
-            target.src = "/images/blog-placeholder.svg";,
+              <img src={post.featuredImage} alt={post.title} className="object-cover w-full h-full" onError={};
 }}/>;
             </div>;
           </div>;
@@ -146,14 +127,10 @@ export default function BlogPost() {;
             <Separator className="my-12 bg-zion-blue-light"/>;
             ;
             {/* Related articles */}
-            {relatedPosts.length > 0 && (<div className="mt-12">;
-                <h3 className="text-2xl font-bold text-white mb-6">Related Articles</h3>;
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
+            {};
                   {relatedPosts.map(relatedPost => (<Link key={relatedPost.id} to={`/blog/${relatedPost.slug}`} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300">;
                       <div className="aspect-[16/9] relative">;
-                        <img src={relatedPost.featuredImage} alt={relatedPost.title} className="object-cover w-full h-full" onError={(e) => {;
-                    const target = e.target;
-                    target.src = "/images/blog-placeholder.svg";,
+                        <img src={relatedPost.featuredImage} alt={relatedPost.title} className="object-cover w-full h-full" onError={};
 }}/>;
                       </div>;
                       <div className="p-4">;

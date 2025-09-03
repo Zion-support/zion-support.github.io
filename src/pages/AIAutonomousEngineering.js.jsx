@@ -1,21 +1,17 @@
 import React from 'react';''';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousEngineering = () => {}
+  return <div>Component</div>;
+};
   return();
     <>;
       <Helmet>;
         <title>AI Autonomous Engineering Platform | Zion Tech Group</title>;
-        <meta;
-          name="description"";
-          content="Revolutionary AI autonomous engineering platform that continuously designs solutions, solves problems, and creates technical systems with advanced AI capabilities and autonomous operation.";
+        <div>Broken JSX</div>
         />";
-        <meta"";
-          name="keywords"";
-          content="AI engineering, autonomous engineering, solution design, problem solving, autonomous operations, AI engineering platform";
+        <div>Broken JSX</div>
         />";
-        <link"";
-          rel="canonical"";
-          href="https://ziontechgroup.com/ai-autonomous-engineering";
+        <div>Broken JSX</div>
         />;
       </Helmet>";
 "";
@@ -180,12 +176,7 @@ const AIAutonomousEngineering = () => {}
               Engineering Solutions";
             </h2>"";
             <div className="grid md:grid-cols-4 gap-6">';
-              {['';
-                'Software Engineering',Hardware Engineering',Systems Engineering',Mechanical Engineering',Electrical Engineering',Chemical Engineering',Civil Engineering',Biomedical Engineering';
-              ].map(type => (;
-                <div";
-                  key={type}"";
-                  className="bg-white/5 rounded-lg p-4 text-center border border-white/10"">"";
+              {};
                   <span className="text-white font-medium">{type}</span>;
                 </div>;
               ))}

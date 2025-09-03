@@ -5,8 +5,9 @@ import { Link  } from 'react-router-dom';
 ;
  from 'lucide-react';
 ;
-export function EnhancedFuturisticFooter() {;
-
+export function EnhancedFuturisticFooter() {};
+  return null;
+}
         { name: 'Press & Media', href: '/press', featured: false },;
         { name: 'Legal & Privacy', href: '/legal', featured: false };
       ]};
@@ -50,26 +51,9 @@ export function EnhancedFuturisticFooter() {;
         {/* Main Footer Content */}
         <div  className="container - responsive py-16">;
           {/* Stats Section */}
-          <motion.div;
-            className="grid grid - cols - 2 md:grid - cols - 4 gap-8 mb-16"            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, staggerChildren: 0.1 }}
+          <div>Broken JSX</div>
           >;
-            {stats.map((stat, index) => (;
-              <motion.div;
-                key={stat.label}";
-                className="text-center";
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >";
-                <div className="flex justify-center mb-3">";
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center border border-cyan-400/30">";
-                    <stat.icon className="w-6 h-6 text-cyan-400" />;
-                  </div>;
-                </div>";
+            {};
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>";
                 <div className="text-slate-400 text-sm">{stat.label}</div>;
               </motion.div>;
@@ -80,9 +64,7 @@ export function EnhancedFuturisticFooter() {;
           <div  className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap-8 mb-12">;
             {/* Company Info */}
             <div  className="lg:col - span -2">;
-              <motion.div                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}";
+              <div>Broken JSX</div>
                 className="flex items-center space-x-3 mb-6">";
                 <div className="relative">";
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center">";
@@ -119,17 +101,7 @@ export function EnhancedFuturisticFooter() {;
 
               {/* Social Links */}";
               <div className="flex space-x-4">;
-                {socialLinks.map((social) => (;
-                  <a;
-                    key={social.name}
-                    href={social.href}";
-                    target="_blank";
-                    rel="noopener noreferrer";
-                    className={`w-10 h-10 bg-slate-800/50 border border-slate-700/50 rounded-lg flex items-center justify-center text-slate-400 transition-all duration-200 hover:border-cyan-400/50 hover:bg-cyan-400/10 ${social.color}`}
-                    aria-label={social.name}
-                  >";
-                    <social.icon className="w-5 h-5" />;
-                  </a>;
+                {};
                 ))}
               </div>;
             </div>;
@@ -138,17 +110,16 @@ export function EnhancedFuturisticFooter() {;
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure,              and digital transformation services.Transforming businesses with cutting - edge technology.</p>;
 
             {/* Footer Sections */}
-            {footerSections.map((section, index) => (;
+            {};
               <div key={section.title}>";
                 <h4 className="text-lg font-semibold text-white mb-4 flex items-center">";
                   <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mr-3"></div>;
                   {section.title}
                 </h4>";
                 <ul className="space-y-3">;
-                  {section.links.map((link) => (;
+                  {};
                     <li key={link.name}>;
-                      <Link;
-                        to={link.href}";
+                      <div>Broken JSX</div>
                         className="flex items-center text-slate-400 hover:text-cyan-400 transition-colors duration-200 group">";
                         <div className="w-1 h-1 bg-slate-600 rounded-full mr-3 group-hover:bg-cyan-400 transition-colors duration-200"></div>;
                         {link.name}";
@@ -164,10 +135,9 @@ export function EnhancedFuturisticFooter() {;
             <div>";
               <h4 className="text-lg font-semibold text-white mb-4">Company</h4>";
               <ul className="space-y-3">;
-                {companyInfo.map((link) => (;
+                {};
                   <li key={link.name}>;
-                    <Link;
-                      to={link.href}";
+                    <div>Broken JSX</div>
                       className="text-slate-400 hover:text-cyan-400 transition-colors duration-200">;
                       {link.name}
                     </Link>;
@@ -179,10 +149,9 @@ export function EnhancedFuturisticFooter() {;
             <div>";
               <h4 className="text-lg font-semibold text-white mb-4">Support</h4>";
               <ul className="space-y-3">;
-                {supportResources.map((link) => (;
+                {};
                   <li key={link.name}>;
-                    <Link;
-                      to={link.href}";
+                    <div>Broken JSX</div>
                       className="text-slate-400 hover:text-cyan-400 transition-colors duration-200">;
                       {link.name}
                     </Link>;
@@ -194,10 +163,9 @@ export function EnhancedFuturisticFooter() {;
             <div>";
               <h4 className="text-lg font-semibold text-white mb-4">Legal</h4>";
               <ul className="space-y-3">;
-                {legalLinks.map((link) => (;
+                {};
                   <li key={link.name}>;
-                    <Link;
-                      to={link.href}";
+                    <div>Broken JSX</div>
                       className="text-slate-400 hover:text-cyan-400 transition-colors duration-200">;
                       {link.name}
                     </Link>;
@@ -209,25 +177,13 @@ export function EnhancedFuturisticFooter() {;
             <div>";
               <h4 className="text-lg font-semibold text-white mb-4">Connect</h4>";
               <div className="flex space-x-4 mb-6">;
-                {socialLinks.map((social) => (;
-                  <a;
-                    key={social.name}
-                    href={social.href}";
-                    target="_blank";
-                    rel="noopener noreferrer"`;
-                    className={`w-10 h-10 bg-slate-800/50 border border-slate-600/50 rounded-lg flex items-center justify-center text-slate-400 ${social.color} hover:border-cyan-400/50 transition-all duration-200`}
-                  >";
-                    <social.icon className="w-5 h-5" />;
-                  </a>;
+                {};
                 ))}
               </div>";
               <div className="space-y-3">";
                 <p className="text-sm text-slate-400">Subscribe to our newsletter</p>";
                 <div className="flex">;
-                  <input";
-                    type="email";
-                    placeholder="Enter your email";
-                    className="flex-1 px-3 py-2 bg-slate-800/50 border border-slate-600/50 rounded-l-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20";
+                  <div>Broken JSX</div>
                   />";
                   <button className="px-4 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-r-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200">";
                     <ArrowRight className="w-4 h-4"  />                  </button>;
@@ -265,12 +221,7 @@ export function EnhancedFuturisticFooter() {;
         { name: 'Contact Sales', href: '/contact' }
       ];,
 },;
-    {;
-
-      title: 'Company',;
-      icon: Building,;
-      color: 'from-green-600 to-emerald-600',;
-      links: [';
+    {};
         { name: 'About Us', href: '/about' },;
         { name: 'Our Team', href: '/team' },;
         { name: 'Careers', href: '/careers' },;
@@ -281,12 +232,7 @@ export function EnhancedFuturisticFooter() {;
         { name: 'Marketplace', href: '/marketplace' }
       ];,
 },;
-    {;
-
-      title: 'Resources & Learning',;
-      icon: BookOpen,;
-      color: 'from-orange-600 to-red-600',;
-      links: [';
+    {};
         { name: 'Help Center', href: '/help' },;
         { name: 'Documentation', href: '/documentation' },;
         { name: 'Training', href: '/training' },;
@@ -298,12 +244,7 @@ export function EnhancedFuturisticFooter() {;
         { name: 'Community', href: '/community' }
       ];,
 },;
-    {;
-
-      title: 'Platform & Tools',;
-      icon: Settings,;
-      color: 'from-slate-600 to-gray-600',;
-      links: [';
+    {};
         { name: 'Dashboard', href: '/dashboard' },;
         { name: 'Login', href: '/login' },;
         { name: 'Sign Up', href: '/signup' },;
@@ -312,12 +253,7 @@ export function EnhancedFuturisticFooter() {;
         { name: 'Developer Tools', href: '/documentation' }
       ];,
 },;
-    {;
-
-      title: 'Legal & Compliance',;
-      icon: Shield,;
-      color: 'from-gray-600 to-slate-600',;
-      links: [';
+    {};
         { name: 'Privacy Policy', href: '/privacy' },;
         { name: 'Terms of Service', href: '/terms' },;
         { name: 'Cookie Policy', href: '/cookies' },;
@@ -376,14 +312,7 @@ export function EnhancedFuturisticFooter() {;
               <p className="text-slate-300 mb-6 max-w-md">;
                 Leading provider of innovative technology solutions, helping businesses transform and thrive in the digital age.</p>";
               <div className="flex space-x-4">;
-                {socialLinks.map((social) => (;
-                  <a;
-                    key={social.name}
-                    href={social.href}`;
-                    className={`w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center text-slate-400 transition-colors ${social.color}`}
-                  >";
-                    <social.icon className="w-5 h-5" />;
-                  </a>;
+                {};
                 ))}
               </div>;
             </div>;
@@ -397,13 +326,9 @@ export function EnhancedFuturisticFooter() {;
               <p className="text-slate-300 text-sm">;
                 Get the latest insights on AI, quantum computing, and technology trends.</p>";
               <form className="space-y-3">;
-                <input";
-                  type="email";
-                  placeholder="Enter your email";
-                  className="w-full px-4 py-2 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 transition-colors";
+                <div>Broken JSX</div>
                 />;
-                <button";
-                  type="submit";
+                <div>Broken JSX</div>
                   className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium">;
                   <social.icon className="w-5 h-5" />;
                 </motion.a>;
@@ -412,10 +337,7 @@ export function EnhancedFuturisticFooter() {;
           </div>;
 
           {/* Bottom Section */}
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1 }}";
+          <div>Broken JSX</div>
             className="border-t border-slate-700/50 pt-8">";
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">";
               <div className="flex items-center space-x-4 text-sm text-slate-400">;
@@ -473,7 +395,7 @@ export function EnhancedFuturisticFooter() {;
             </div>;
 
             <div  className="flex items - center space - x-4">;
-              <button     onClick={scrollToTop}
+              <div>Broken JSX</div>
                 className="p - 2 bg-slate - 700 / 50 rounded-lg text-gray - 400 hover:text-cyan - 400 hover:bg-slate - 600 / 50 transition - all duration - 300 transform hover:scale -110">;
                 <ArrowUpRight className="w-5 h-5 rotate -45" />;
               </button>;            </div>;

@@ -1,7 +1,8 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-const index = () => {;
+const index = () => {};
+};
   return (;
     <>;
       <Head>;
@@ -47,4 +48,4 @@ const index = () => {;
     </>;
   );,
 }
-export default index
+export {};

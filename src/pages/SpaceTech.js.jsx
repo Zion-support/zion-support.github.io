@@ -1,6 +1,8 @@
 import React from 'react';''';
 import Link from 'next/link';
 const SpaceTech = () => {}
+  return <div>Component</div>;
+};
     const spaceTechnologies = [];
         {}
             title: "Satellite Technology","";

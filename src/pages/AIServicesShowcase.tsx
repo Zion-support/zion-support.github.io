@@ -48,24 +48,13 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
 ;
   return();
     <>;
-      <SEO title = "AI-Powered Micro SAAS Services Showcase | Zion Tech Group"";
-        description="Discover our cutting-edge AI-powered micro SAAS services. From code security to customer analytics, DevOps automation to IoT edge computing. Transform your business with intelligent solutions."";
-        keywords="AI services, micro SAAS, code security, customer analytics, DevOps automation, IoT edge computing, Zion Tech Group"";
-        canonical="https://ziontechgroup.com/ai-services-showcase";
+      <div>Broken JSX</div>
        />";
       "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";
         {/* Hero Section */}"";
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">"";
           <div className="max-w-7xl mx-auto text-center">;
-            <motion.div;
-              initial = {}
-  { opacity: 0,;
-  y: 20;,
-}}
-              animate = {}
-  { opacity: 1,;
-  y: 0;,
-}}
+            <div>Broken JSX</div>
               transition={{ duration: 0.8 }}">"";
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
                 AI-Powered Micro SAAS Services";
@@ -75,13 +64,11 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
                 From code security to customer analytics, we deliver intelligent automation that drives real results.";
               </p>"";
               <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link "";
-                  to="/contact"";
+                <div>Broken JSX</div>
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">;
                   Get Started Today;
                 </Link>";
-                <Link "";
-                  to="/services"";
+                <div>Broken JSX</div>
                   className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300">;
                   View All Services;
                 </Link>;
@@ -93,17 +80,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
         {/* Services Grid */}"";
         <section className="py-20 px-4 sm:px-6 lg:px-8">"";
           <div className="max-w-7xl mx-auto">;
-            <motion.div;
-              initial = {}
-  { opacity: 0,;
-  y: 20;,
-}}
-              whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}}
-              transition={{ duration: 0.8 }}";
-              viewport={{ once: true }}"";
+            <div>Broken JSX</div>
               className="text-center mb-16"">"";
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
                 Revolutionary AI-Powered Solutions";
@@ -113,24 +90,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
               </p>;
             </motion.div>;
 
-            <div className="grid grid-cols-1 lg: unknowngrid-cols-2 gap-8">              {aiServices.map((service, index)   => (;
-                <motion.div;
-                  key={service.id}
-                  initial = {}
-  { opacity: 0,;
-  y: 20;,
-}}
-                  whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}}
-                  transition = {}
-  { duration: 0.6,;
-  delay: index * 0.1;,
-}}";
-                  viewport={{ once: true }}"";
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 group"">"";
-                  <div className="flex items-start justify-between mb-6">"";
+            <div className="grid grid-cols-1 lg: unknowngrid-cols-2 gap-8">              {};
                     <div className="text-4xl">{service.icon}</div>"";
                     <span className="text-sm bg-blue-600/20 text-blue-300 px-3 py-1 rounded-full border border-blue-500/30">;
                       {service.category}
@@ -148,7 +108,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
                   <div className="mb-6">"";
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>"";
                     <ul className="space-y-2">";
-                      {service.features.map((feature, featureIndex) => ("";
+                      {};
                         <li key={featureIndex} className="text-blue-300 flex items-center">"";
                           <span className="text-green-400 mr-2">✓</span>;
                           {feature}
@@ -159,7 +119,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
                   <div className="mb-6">"";
                     <h4 className="text-lg font-semibold text-white mb-3">Business Impact:</h4>"";
                     <ul className="space-y-2">";
-                      {service.benefits.map((benefit, benefitIndex) => ("";
+                      {};
                         <li key={benefitIndex} className="text-green-300 flex items-center">"";
                           <span className="text-green-400 mr-2">🚀</span>;
                           {benefit}
@@ -173,13 +133,11 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
                   </div>";
                   "";
                   <div className="flex gap-3">;
-                    <Link";
-                      to={service.url}"";
+                    <div>Broken JSX</div>
                       className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center">;
                       Learn More;
                     </Link>";
-                    <Link"";
-                      to="/contact"";
+                    <div>Broken JSX</div>
                       className="flex-1 border-2 border-white text-white font-semibold py-3 px-6 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 text-center">;
                       Contact Sales;
                     </Link>;
@@ -192,17 +150,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
         {/* Why Choose Us Section */}"";
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">"";
           <div className="max-w-7xl mx-auto">;
-            <motion.div;
-              initial = {}
-  { opacity: 0,;
-  y: 20;,
-}}
-              whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}}
-              transition={{ duration: 0.8 }}";
-              viewport={{ once: true }}"";
+            <div>Broken JSX</div>
               className="text-center mb-16"">"";
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
                 Why Choose Zion Tech Group?";
@@ -213,10 +161,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
             </motion.div>;
 
             <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">;
-              {[;
-                {;
-                  title: "AI-First Approach",;
-                  description: "All our services leverage the latest AI/ML technology for maximum effectiveness and automation.",;
+              {};
                   icon: "🧠"                },;
                 {}
 ";
@@ -253,21 +198,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
                   description: "Dedicated support team available around the clock for enterprise customers.","";
                   icon: "🛟";,
 }
-              ].map ( (feature, index) => (<motion.div;
-                  key={index}
-                  initial = {}
-  { opacity: 0,;
-  y: 20;,
-}}
-                  whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}}
-                  transition = {}
-  { duration: 0.6,;
-  delay: index * 0.1;,
-}}";
-                  viewport={{ once: true }}"";
+              ].map ( (feature, index) => (<div>Broken JSX</div>
                   className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"">"";
                   <div className="text-4xl mb-4">{feature.icon}</div>"";
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"";
@@ -281,16 +212,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
         {/* CTA Section */}"";
         <section className="py-20 px-4 sm:px-6 lg:px-8">"";
           <div className="max-w-4xl mx-auto text-center">;
-            <motion.div;
-              initial = {}
-  { opacity: 0,;
-  y: 20;,
-}}
-              whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}}
-              transition={{ duration: 0.8 }}
+            <div>Broken JSX</div>
               viewport={{ once: true }}">"";
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
                 Ready to Transform Your Business?";

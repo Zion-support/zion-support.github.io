@@ -2,25 +2,22 @@ import React from "react";
   text?: string;
   fullScreen?: boolean}
 ;
-export default function Loading() {;
-;
-export default function Loading() {;
-
+export default function Loading() {};
+  return null;
+}
   const sizeClasses = {}
 ;
   const content = (;
-    <div className="{"flex" flex-col items-center justify-center space-y-4">";
+    <div className="{};
       <Loader2 className="{"${sizeClasses[size]}" animate-spin text-blue-600"}       />;
-      {text && (";
+      {};
         <p className=""text-gray-600" text-sm font-medium"}>{text}</p>;
       )}
 ;
     </div>;
   );,
 }
-  if (fullScreen) {;
-    return (";
-    <div className = "min-h-screen flex items-center justify-center bg-white">;
+  if (fullScreen) {};
         {content}
 ;
       </div>;
@@ -35,24 +32,15 @@ export default function Loading() {;
   );,
 }
 // comment;
-export function SkeletonCard() {;
-
-  return (";
-    <div className = "bg-white rounded-lg p-6 shadow-sm animate-pulse">";
-      <div className="h-4 bg-gray-200 rounded w-3/4 mb-4"></di></div>";
-      <div className="h-3 bg-gray-200 rounded w-1/2 mb-2"></di></div>";
-      <div className="h-3 bg-gray-200 rounded w-2/3"></di></div>;
-    </div>;
-  );,
+export function SkeletonCard() {};
+  return null;
 }
-export function SkeletonText() {;
-
-  return (";
-    <div className="animate-pulse space-y-2">;
-      {Array.from({ length: lines,;,
+}
+export function SkeletonText() {};
+  return null;
+}
 }).map((_, i) => (";
-        <div key="{i}
-          className="{"h-3" bg-gray-200 rounded ${;
+        <div>Broken JSX</div>
             i === lines - 1 ? "w-2/3" : 'w-full>;,
 }"}
 ;

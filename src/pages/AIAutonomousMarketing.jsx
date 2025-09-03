@@ -1,21 +1,17 @@
 import React from 'react';''';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousMarketing = () => {}
+  return <div>Component</div>;
+};
   return();
     <>;
       <Helmet>;
         <title>AI Autonomous Marketing Platform | Zion Tech Group</title>;
-        <meta;
-          name="description"";
-          content="Revolutionary AI autonomous marketing platform that provides intelligent campaign optimization, automated content creation, and personalized customer targeting with advanced AI capabilities.";
+        <div>Broken JSX</div>
         />";
-        <meta"";
-          name="keywords"";
-          content="AI marketing, autonomous campaigns, marketing automation, AI content creation, personalized marketing, marketing AI";
+        <div>Broken JSX</div>
         />";
-        <link"";
-          rel="canonical"";
-          href="https://ziontechgroup.com/ai-autonomous-marketing";
+        <div>Broken JSX</div>
         />;
       </Helmet>";
 "";
@@ -170,12 +166,7 @@ const AIAutonomousMarketing = () => {}
               Marketing Channels";
             </h2>"";
             <div className="grid md:grid-cols-4 gap-6">';
-              {['';
-                'Email Marketing',Social Media',Content Marketing',PPC Advertising',SEO/SEM',Influencer Marketing',Video Marketing',Mobile Marketing';
-              ].map(channel => (;
-                <div";
-                  key={channel}"";
-                  className="bg-white/5 rounded-lg p-4 text-center border border-white/10"">"";
+              {};
                   <span className="text-white font-medium">{channel}</span>;
                 </div>;
                 <h3 className="text-xl font - semibold text-white mb-3">;

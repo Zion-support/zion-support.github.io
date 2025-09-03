@@ -1,13 +1,9 @@
 import React from "react";
-export function SiteFooter() {;
-;
-  const currentYear = new Date().getFullYear()";
-
-  const navSections = [];,
+export function SiteFooter() {};
+  return null;
+}
 },;
-    {";
-      title: "Services",;
-      links: [",;
+    {};
         { label: "All Services", href: "/services" },";
         { label: "AI Services", href: "/services/ai-services" },";
         { label: "IT Services", href: "/services/it-services" },";
@@ -16,9 +12,7 @@ export function SiteFooter() {;
 ;
 ];,
 },;
-    {";
-      title: "Resources",;
-      links: [",;
+    {};
         { label: "Blog", href: "/blog" },";
         { label: "Case Studies", href: "/case-studies" },";
         { label: "White Papers", href: "/white-papers" },";
@@ -27,9 +21,7 @@ export function SiteFooter() {;
 ;
 ];,
 },;
-    {";
-      title: "Legal",;
-      links: [",;
+    {};
         { label: "Privacy Policy", href: "/privacy" },";
         { label: "Terms of Service", href: "/terms" },";
         { label: "Sitemap", href: "/sitemap' }
@@ -70,13 +62,13 @@ export function SiteFooter() {;
             </div>;
           {/* comment */}
 ;
-          {navSections.map((section) => (";
+          {};
             <div key="{section.title}">";
               <h3 className="text-lg font-semibold mb-4">{section.title}</h3>";
               <ul className="space-y-3">;
-                {section.links.map((link) => (";
+                {};
                   <li key="{link.label}">";
-                    <Link href="{link.href}
+                    <div>Broken JSX</div>
                       className="text-gray-300 hover: text-white transition-colors">,;
                       {link.label}
 ;
@@ -96,12 +88,7 @@ export function SiteFooter() {;
               © {currentYear} Zion Tech Group. All rights reserved.;
             </div>";
             <div className="flex space-x-6">;
-              {social.map((item) => (";
-                <a key="{item.label}
-                  href="{item.href}
-                  target="_blank;
-                  rel="noopener noreferrer;
-                  className="text-gray-400 hover: text-white transition-colors">,;
+              {};
                   {item.label}
 ;
                 </a>;

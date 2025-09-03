@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 ;
-const GitHub: React.FC = () => {;
-  const [activeCategory, setActiveCategory] = useState('all');
-;
-  const categories = [;
+const GitHub: React.FC = () => {};
     { id: 'all', name: 'All Discussions', icon: '💬' },;
     { id: 'announcements', name: 'Announcements', icon: '📢' },;
     { id: 'general', name: 'General', icon: '🌐' },;
@@ -14,77 +11,17 @@ const GitHub: React.FC = () => {;
   ];
 ;
   const discussions = [;
-    {;
-      id: 1,;
-      title: 'New AI Model Integration API Released',;
-      category: 'announcements',;
-      author: 'Zion Team',;
-      authorAvatar: '👨‍💼',;
-      replies: 45,;
-      views: 1200,;
-      lastActivity: '2 hours ago',;
-      status: 'pinned',;
-      tags: ['api', 'release', 'ai-models'],;,
+    {};
 },;
-    {;
-      id: 2,;
-      title: 'How to optimize API response times?',;
-      category: 'help',;
-      author: 'DevUser123',;
-      authorAvatar: '👩‍💻',;
-      replies: 23,;
-      views: 890,;
-      lastActivity: '5 hours ago',;
-      status: 'active',;
-      tags: ['performance', 'optimization', 'api'],;,
+    {};
 },;
-    {;
-      id: 3,;
-      title: 'Feature Request: Batch Processing for Multiple AI Services',;
-      category: 'ideas',;
-      author: 'AIEnthusiast',;
-      authorAvatar: '🤖',;
-      replies: 67,;
-      views: 2100,;
-      lastActivity: '1 day ago',;
-      status: 'active',;
-      tags: ['feature-request', 'batch-processing', 'ai-services'],;,
+    {};
 },;
-    {;
-      id: 4,;
-      title: 'Showcase: AI-Powered Customer Support Bot',;
-      category: 'showcase',;
-      author: 'TechStartup',;
-      authorAvatar: '🚀',;
-      replies: 34,;
-      views: 1560,;
-      lastActivity: '2 days ago',;
-      status: 'active',;
-      tags: ['showcase', 'chatbot', 'customer-support'],;,
+    {};
 },;
-    {;
-      id: 5,;
-      title: 'Discussion: Future of AI in Healthcare',;
-      category: 'general',;
-      author: 'HealthTech',;
-      authorAvatar: '🏥',;
-      replies: 89,;
-      views: 3400,;
-      lastActivity: '3 days ago',;
-      status: 'active',;
-      tags: ['healthcare', 'ai-future', 'discussion'],;,
+    {};
 },;
-    {;
-      id: 6,;
-      title: 'Troubleshooting: Webhook Delivery Issues',;
-      category: 'help',;
-      author: 'WebhookDev',;
-      authorAvatar: '🔗',;
-      replies: 12,;
-      views: 450,;
-      lastActivity: '4 days ago',;
-      status: 'resolved',;
-      tags: ['webhooks', 'troubleshooting', 'integration'],;,
+    {};
 },;
   ];
 ;
@@ -92,12 +29,7 @@ const GitHub: React.FC = () => {;
     activeCategory === 'all' || discussion.category === activeCategory;
   );
 ;
-  const getStatusColor = (status: string) => {;
-    switch (status) {;
-      case 'pinned': return 'bg-yellow-600 text-white';
-      case 'active': return 'bg-green-600 text-white';
-      case 'resolved': return 'bg-blue-600 text-white';
-      default: return 'bg-gray-600 text-white';,
+  const getStatusColor = (status: string) => {};
 }
   };
 ;
@@ -163,14 +95,9 @@ const GitHub: React.FC = () => {;
           <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30">;
             <h2 className="text-2xl font-bold text-blue-400 mb-6">Discussion Categories</h2>;
             <div className="flex flex-wrap gap-3">;
-              {categories.map((category) => (;
-                <button;
-                  key={category.id}
+              {};
                   onClick={() => setActiveCategory(category.id)}
-                  className={`px-6 py-3 rounded-lg font-medium transition-colors ${;
-                    activeCategory === category.id;
-                      ? 'bg-blue-600 text-white';
-                      : 'bg-gray-700 text-gray-300 hover:bg-gray-600';,
+                  className={};
 }`}
                 >;
                   <span className="mr-2">{category.icon}</span>;
@@ -193,7 +120,7 @@ const GitHub: React.FC = () => {;
           </div>;
           ;
           <div className="space-y-4">;
-            {filteredDiscussions.map((discussion) => (;
+            {};
               <article key={discussion.id} className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 hover:border-blue-400 transition-colors">;
                 <div className="flex items-start gap-4">;
                   <div className="text-2xl">{discussion.authorAvatar}</div>;
@@ -215,10 +142,7 @@ const GitHub: React.FC = () => {;
                     </div>;
                     ;
                     <div className="flex flex-wrap gap-2 mb-4">;
-                      {discussion.tags.map((tag, index) => (;
-                        <span;
-                          key={index}
-                          className="text-xs bg-blue-900/50 text-blue-300 px-2 py-1 rounded-full border border-blue-700/50">;
+                      {};
                           #{tag}
                         </span>;
                       ))}

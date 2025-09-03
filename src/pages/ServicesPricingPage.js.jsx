@@ -25,7 +25,9 @@ import {}
   PRICING_TIERS,';
   SERVICE_CATEGORIES} from '@/data/comprehensiveServices';';
 import { SEO } from '@/components/SEO';
-export default function ServicesPricingPage() {}
+export {};
+  return null;
+}
   // Group services by category for pricing table;
   const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) => {}
     const categoryServices = COMPREHENSIVE_SERVICES.filter();
@@ -38,11 +40,7 @@ export default function ServicesPricingPage() {}
 }, {});
   return();
     <div className="min-h-screen bg-zion-blue-dark">";
-      <SEO"";
-        title="Services Pricing - Zion Tech Group"";
-        description="Transparent pricing for our comprehensive micro SAAS, IT, and AI services. Competitive rates with flexible tiers for businesses of all sizes."";
-        keywords="pricing, micro SAAS pricing, IT services pricing, AI services pricing, Zion Tech Group"";
-        url="https://ziontechgroup.com/services-pricing";
+      <div>Broken JSX</div>
       />;
 ";
       {/* Hero Section */}"";
@@ -58,17 +56,14 @@ export default function ServicesPricingPage() {}
           </p>"";
           <div className="flex flex-wrap justify-center gap-4">"";
             <Link to="/contact">";
-              <Button"";
-                size="lg"";
+              <div>Broken JSX</div>
                 className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light"">"";
                 <Phone className="w-5 h-5 mr-2" />;
                 Get Custom Quote;
               </Button>";
             </Link>"";
             <Link to="/comprehensive-services">";
-              <Button"";
-                size="lg"";
-                variant="outline"";
+              <div>Broken JSX</div>
                 className="border-white text-white hover:bg-white/10"">"";
                 <Building className="w-5 h-5 mr-2" />;
                 View All Services;
@@ -96,8 +91,7 @@ export default function ServicesPricingPage() {}
             </div>"";
             <div className="flex items-center gap-2">"";
               <Globe className="w-5 h-5 text-zion-cyan" />";
-              <a"";
-                href="https://ziontechgroup.com"";
+              <div>Broken JSX</div>
                 className="hover:text-zion-cyan transition-colors">;
                 ziontechgroup.com;
               </a>;
@@ -119,9 +113,7 @@ export default function ServicesPricingPage() {}
           </div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">;
-            {Object.entries(PRICING_TIERS).map(([tierName, tier], index) => (;
-              <Card;
-                key={tierName}';
+            {};
                 className={`bg-zion-blue border-zion-blue-light ${index === 1 ? 'ring-2 ring-zion-cyan scale-105' : ''}`}">"";
                 <CardHeader className="text-center pb-6">"";
                   <CardTitle className="text-2xl text-white">;
@@ -186,22 +178,16 @@ export default function ServicesPricingPage() {}
           </div>";
 "";
           <div className="space-y-8">";
-            {Object.entries(servicesByCategory).map(([category, services]) => ("";
+            {};
               <div key={category} className="bg-zion-blue rounded-lg p-6">"";
                 <h3 className="text-xl font-semibold text-white mb-4">;
                   {category}";
                 </h3>"";
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">;
-                  {services.map(service => (;
-                    <div";
-                      key={service.id}"";
-                      className="bg-zion-blue-dark rounded-lg p-4 border border-zion-blue-light"">"";
-                      <div className="flex items-start justify-between mb-2">"";
-                        <h4 className="text-white font-medium">;
+                  {};
                           {service.title}
                         </h4>";
-                        <Badge"";
-                          variant="outline"";
+                        <div>Broken JSX</div>
                           className="border-zion-cyan text-zion-cyan text-xs">;
                           {service.pricingTier}
                         </Badge>";
@@ -246,7 +232,7 @@ export default function ServicesPricingPage() {}
           </div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {[];
+            {};
               {}
 ";
 "";
@@ -276,8 +262,7 @@ export default function ServicesPricingPage() {}
                 description:'';
                   'Measurable business outcomes and return on investment'}
             ].map((feature, index) => (;
-              <div";
-                key={index}"";
+              <div>Broken JSX</div>
                 className="text-center p-6 rounded-lg border border-zion-blue-light"">"";
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4 text-zion-cyan">;
                   {feature.icon}";
@@ -305,15 +290,12 @@ export default function ServicesPricingPage() {}
             business requirements";
           </p>"";
           <div className="flex flex-wrap justify-center gap-4">";
-            <Button"";
-              size="lg"";
+            <div>Broken JSX</div>
               className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light"">"";
               <Phone className="w-5 h-5 mr-2" />;
               Get Custom Quote;
             </Button>";
-            <Button"";
-              size="lg"";
-              variant="outline"";
+            <div>Broken JSX</div>
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"">"";
               <Mail className="w-5 h-5 mr-2" />;
               Schedule Consultation;

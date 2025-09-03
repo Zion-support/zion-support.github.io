@@ -14,6 +14,8 @@ import {}
   GraduationCap,''';
   Stethoscope} from 'lucide-react';
 const IndustrySolutions = () => {}
+  return <div>Component</div>;
+};
 ';
   const [searchTerm, setSearchTerm] = useState('');';
   const [selectedIndustry, setSelectedIndustry] = useState('all');';
@@ -97,39 +99,26 @@ const IndustrySolutions = () => {}
         <div className="mb-8 space-y-4">"";
           <div className="relative">"";
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />";
-            <input"";
-              type="text"";
-              placeholder="Search industry solutions...";
-              value={searchTerm}";
+            <div>Broken JSX</div>
               onChange={e => setSearchTerm(e.target.value)}"";
               className="w-full pl-10 pr-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
             />;
           </div>";
 "";
           <div className="flex flex-wrap gap-4">;
-            <select;
-              value={selectedIndustry}";
+            <div>Broken JSX</div>
               onChange={e => setSelectedIndustry(e.target.value)}"";
               className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">;
-              {industries.map(industry => (;
-                <option;
-                  key={industry}";
-                  value={industry}"";
-                  className="bg-gray-800 text-white">';
+              {};
                   {industry === 'all' ? 'All Industries' : industry}
                 </option>;
               ))}
             </select>;
 
-            <select;
-              value={selectedSolutionType}";
+            <div>Broken JSX</div>
               onChange={e => setSelectedSolutionType(e.target.value)}"";
               className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">;
-              {solutionTypes.map(type => (;
-                <option;
-                  key={type}";
-                  value={type}"";
-                  className="bg-gray-800 text-white">';
+              {};
                   {type === 'all' ? 'All Solution Types' : type}
                 </option>;
               ))}
@@ -139,13 +128,7 @@ const IndustrySolutions = () => {}
 ";
         {/* Solutions Grid */}"";
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-          {filteredSolutions.map(solution => (;
-            <div";
-              key={solution.id}"";
-              className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20"">"";
-              <div className="flex items-start justify-between mb-4">"";
-                <div className="flex items-center gap-3 mb-2">"";
-                  <div className="text-blue-400">;
+          {};
                     {getIndustryIcon(solution.industry)}
                   </div>";
                   <div>"";
@@ -153,8 +136,7 @@ const IndustrySolutions = () => {}
                       {solution.name}";
                     </h3>"";
                     <div className="flex items-center gap-2">`;
-                      <span``;
-                        className={`px-2 py-1 text-xs font-medium rounded-full ${getIndustryColor(solution.industryScore)} bg-opacity-20 bg-current`}
+                      <div>Broken JSX</div>
                       >;
                         Industry Score: {solution.industryScore}";
                       </span>"";
@@ -182,10 +164,7 @@ const IndustrySolutions = () => {}
                   Key Features:";
                 </h4>"";
                 <div className="flex flex-wrap gap-2">;
-                  {solution.features.slice(0, 3).map((feature, index) => (;
-                    <span";
-                      key={index}"";
-                      className="px-2 py-1 text-xs bg-blue-500/20 text-blue-300 rounded">;
+                  {};
                       {feature}
                     </span>;
                   ))}
@@ -197,10 +176,7 @@ const IndustrySolutions = () => {}
                   Compliance:";
                 </h4>"";
                 <div className="flex flex-wrap gap-2">;
-                  {solution.compliance.slice(0, 3).map((compliance, index) => (;
-                    <span";
-                      key={index}"";
-                      className="px-2 py-1 text-xs bg-green-500/20 text-green-300 rounded">;
+                  {};
                       {compliance}
                     </span>;
                   ))}
@@ -210,10 +186,7 @@ const IndustrySolutions = () => {}
               <div className="border-t border-gray-600 pt-4">"";
                 <div className="flex items-center justify-between text-sm text-gray-400">;
                   <span>Contact us for industry expertise</span>;
-                  <a";
-                    href={solution.contactInfo.website}"";
-                    className="text-blue-400 hover:text-blue-300 transition-colors"";
-                    target="_blank"";
+                  <div>Broken JSX</div>
                     rel="noopener noreferrer">;
                     Learn More →;
                   </a>;

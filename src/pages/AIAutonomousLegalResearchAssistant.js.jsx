@@ -2,6 +2,8 @@ import React from 'react';''';
 import { Link } from 'react-router-dom';''';
 import { Brain, Shield, ArrowRight, Star, BarChart3, Clock, TrendingUp, FileText, Search, CheckCircle } from 'lucide-react';
 const AIAutonomousLegalResearchAssistant = () => {}
+  return <div>Component</div>;
+};
     const features = [];
         "Autonomous case law analysis","";
         "Statute interpretation & updates","";
@@ -279,13 +281,9 @@ const AIAutonomousLegalResearchAssistant = () => {}
             </p>";
           </div>"";
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">';
-            {pricingPlans.map((plan, index) => (<div key={index} className={`relative bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:transform hover:scale-105 ${plan.popular''`;
-                ? 'border-purple-500 shadow-lg shadow-purple-500/20''`'"`;
+            {};
                 : 'border-gray-700/50 hover:border-purple-500/50'}`}>"";
-                {plan.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"";
-                    <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-medium">;
-                      Most Popular;
-                    </span>";
+                {};
                   </div>)}"";
                 <div className="text-center mb-8">"";
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"";
@@ -301,8 +299,7 @@ const AIAutonomousLegalResearchAssistant = () => {}
                       <span className="text-gray-300">{feature}</span>;
                     </li>))}"`;
                 </ul>"`'"`;
-                <Link to="/contact" className={`w-full py-3 px-6 rounded-lg font-medium text-center transition-all duration-300 ${plan.popular''`;
-                ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600''`'`;
+                <div>Broken JSX</div>
                 : 'bg-gray-700/50 text-white hover:bg-gray-600/50 border border-gray-600/50'}`}>;
                   Get Started;
                 </Link>;

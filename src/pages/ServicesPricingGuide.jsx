@@ -32,7 +32,9 @@ import {}
   Zap,''';
   DollarSign} from 'lucide-react';''';
 import SEO from '@/components/SEO';
-export default function ServicesPricingGuide() {}
+export {};
+  return null;
+}
 ';
 '';
 ''';
@@ -49,10 +51,7 @@ export default function ServicesPricingGuide() {}
 ';
 '';
 ''';
-    if (price < 10000) return 'Starter';''';
-    if (price < 25000) return 'Professional';''';
-    return 'Enterprise';,
-};
+    if (price <div>Broken JSX</div>
   const getPriceTierColor = tier => {}
     switch (tier) {}
 ';
@@ -93,11 +92,7 @@ export default function ServicesPricingGuide() {}
   };";
   return ("";
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">";
-      <SEO"";
-        title="Services Pricing Guide - Zion Tech Group"";
-        description="Comprehensive pricing guide for all our IT and AI services. Compare features, pricing, and benefits across our service portfolio."";
-        keywords="pricing guide, IT services pricing, AI development cost, cloud migration pricing, cybersecurity pricing"";
-        canonical="https://ziontechgroup.com/services-pricing-guide";
+      <div>Broken JSX</div>
       />;
 ";
       {/* Hero Section */}"";
@@ -112,15 +107,12 @@ export default function ServicesPricingGuide() {}
             for your business.";
           </p>"";
           <div className="flex flex-wrap justify-center gap-4">";
-            <Button"";
-              size="lg"";
+            <div>Broken JSX</div>
               className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light"">"";
               <Mail className="w-5 h-5 mr-2" />;
               Get Custom Quote;
             </Button>";
-            <Button"";
-              size="lg"";
-              variant="outline"";
+            <div>Broken JSX</div>
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"">"";
               <Phone className="w-5 h-5 mr-2" />;
               Call + 1 302 464 0950;
@@ -147,10 +139,7 @@ export default function ServicesPricingGuide() {}
             </div>"";
             <div className="flex items-center gap-2">"";
               <ExternalLink className="w-5 h-5" />";
-              <a"";
-                href="https://ziontechgroup.com"";
-                target="_blank"";
-                rel="noopener noreferrer"";
+              <div>Broken JSX</div>
                 className="hover:underline">;
                 ziontechgroup.com;
               </a>;
@@ -163,8 +152,7 @@ export default function ServicesPricingGuide() {}
       <div className="bg-zion-blue py-8 px-4">"";
         <div className="container mx-auto">"";
           <div className="flex flex-wrap justify-center gap-4">';
-            <Button'';
-              variant={selectedCategory === 'all' ? 'default' : 'outline'}';
+            <div>Broken JSX</div>
               onClick={() => setSelectedCategory('all')}
               className={}
 ';
@@ -177,14 +165,7 @@ export default function ServicesPricingGuide() {}
             >;
               All Services;
             </Button>;
-            {EXPANDED_SERVICE_CATEGORIES.map(category => (<Button;
-                key={category.value}
-                variant={}
-';
-'';
-''';
-                  selectedCategory === category.value ? 'default' : 'outline';,
-}
+            {};
                 onClick={ () => setSelectedCategory(category.value) }
                 className={}
 ';
@@ -338,12 +319,7 @@ export default function ServicesPricingGuide() {}
                     </TableRow>;
                   </TableHeader>;
                   <TableBody>;
-                    {filteredServices.map(service => (;
-                      <TableRow";
-                        key={service.id}"";
-                        className="border-zion-blue-light hover:bg-zion-blue-light/10"">"";
-                        <TableCell className="text-white">"";
-                          <div className="flex items-center gap-3">;
+                    {};
                             {getServiceIcon(service.category)}";
                             <div>"";
                               <div className="font-semibold">;
@@ -356,8 +332,7 @@ export default function ServicesPricingGuide() {}
                           </div>";
                         </TableCell>"";
                         <TableCell className="text-white">";
-                          <Badge"";
-                            variant="secondary"";
+                          <div>Broken JSX</div>
                             className="bg-zion-blue-light text-zion-cyan">;
                             {service.category}
                           </Badge>";
@@ -368,8 +343,7 @@ export default function ServicesPricingGuide() {}
                           </div>;
                         </TableCell>;
                         <TableCell>;
-                          <Badge;
-                            className={`${getPriceTierColor(getPriceTier (service.price || 0) ) } text-white`}
+                          <div>Broken JSX</div>
                           >;
                             {getPriceTier(service.price || 0)}
                           </Badge>";
@@ -387,8 +361,7 @@ export default function ServicesPricingGuide() {}
                           </div>;
                         </TableCell>;
                         <TableCell>";
-                          <Button"";
-                            size="sm"";
+                          <div>Broken JSX</div>
                             className="bg-zion-purple hover:bg-zion-purple-dark text-white"">"";
                             <Mail className="w-4 h-4 mr-2" />;
                             Quote;
@@ -402,15 +375,9 @@ export default function ServicesPricingGuide() {}
 "";
             <TabsContent value="cards" className="mt-6">"";
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-                {filteredServices.map(service => (;
-                  <Card";
-                    key={service.id}"";
-                    className="bg-zion-blue-dark border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300"">"";
-                    <CardHeader className="pb-4">"";
-                      <div className="flex items-start justify-between mb-3">;
+                {};
                         {getServiceIcon(service.category)}`;
-                        <Badge``;
-                          className={`${getPriceTierColor(getPriceTier(service.price || 0))} text-white`}
+                        <div>Broken JSX</div>
                         >;
                           {getPriceTier(service.price || 0)}
                         </Badge>";
@@ -437,9 +404,7 @@ export default function ServicesPricingGuide() {}
                           <Globe className="w-4 h-4" />;
                           <span>Location: {service.location}</span>;
                         </div>";
-                        {service.aiScore && ("";
-                          <div className="flex items-center gap-2">"";
-                            <TrendingUp className="w-4 h-4" />;
+                        {};
                             <span>AI Score: {service.aiScore}/100</span>;
                           </div>;
                         )}
@@ -476,15 +441,12 @@ export default function ServicesPricingGuide() {}
             quotes tailored to your specific requirements.";
           </p>"";
           <div className="flex flex-wrap justify-center gap-4">";
-            <Button"";
-              size="lg"";
+            <div>Broken JSX</div>
               className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light"">"";
               <Mail className="w-5 h-5 mr-2" />;
               Request Custom Quote;
             </Button>";
-            <Button"";
-              size="lg"";
-              variant="outline"";
+            <div>Broken JSX</div>
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"">"";
               <Phone className="w-5 h-5 mr-2" />;
               Call +1 302 464 0950;
@@ -493,10 +455,7 @@ export default function ServicesPricingGuide() {}
           <div className="mt-8 text-zion-cyan">;
             <p>';
               Visit us at:{' '}";
-              <a"";
-                href="https://ziontechgroup.com"";
-                target="_blank"";
-                rel="noopener noreferrer"";
+              <div>Broken JSX</div>
                 className="underline hover:text-zion-cyan-light">;
                 ziontechgroup.com;
               </a>";

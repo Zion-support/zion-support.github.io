@@ -18,6 +18,8 @@ import { supabase } from "@/integrations/supabase/client";"";
 import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection";"";
 import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle} from "lucide-react";
 function ProjectDetailsContent() {}
+  return null;
+}
     const router = useRouter();
     // Get projectId from Next.js router query params;
     const { projectId } = router.query;
@@ -32,6 +34,8 @@ function ProjectDetailsContent() {}
     // Load project data;
     useEffect(() => {}
         async function loadProject() {}
+  return null;
+}
             if (!projectId);
                 return;
             setIsLoading(true);
@@ -195,24 +199,7 @@ function ProjectDetailsContent() {}
             ";
             {/* Action Buttons Based on Role and Status */}"";
             <div className="space-x-2">;
-              {isTalent && isOfferPending && (<>;
-                  <AlertDialog>";
-                    <AlertDialogTrigger asChild>"";
-                      <Button variant="default">"";
-                        <CheckCircle2 className="mr-2 h-4 w-4"/> Accept Offer;
-                      </Button>;
-                    </AlertDialogTrigger>;
-                    <AlertDialogContent>;
-                      <AlertDialogHeader>;
-                        <AlertDialogTitle > Accept Project Offer?;
-                        </AlertDialogTitle>;
-                        <AlertDialogDescription > By accepting this offer, you agree to the project;
-                          terms and timeline. This will initiate the contract;
-                          and start the project.;
-                        </AlertDialogDescription>;
-                      </AlertDialogHeader>;
-                      <AlertDialogFooter>";
-                        <AlertDialogCancel>Cancel</AlertDialogCancel>"";
+              {};
                         <AlertDialogAction onClick={() => handleStatusChange("offer_accepted")}>;
                           Accept Offer;
                         </AlertDialogAction>;
@@ -225,23 +212,7 @@ function ProjectDetailsContent() {}
                   </Button>;
                 </>)}";
               "";
-              {(isClient || isTalent) && project.status === "in_progress" && (<AlertDialog>";
-                  <AlertDialogTrigger asChild>"";
-                    <Button variant="default">"";
-                      <CheckCircle2 className="mr-2 h-4 w-4"/> Mark as Completed;
-                    </Button>;
-                  </AlertDialogTrigger>;
-                  <AlertDialogContent>;
-                    <AlertDialogHeader>;
-                      <AlertDialogTitle > Mark Project as Completed?;
-                      </AlertDialogTitle>;
-                      <AlertDialogDescription > This will finalize the project and mark it as complete.;
-                        Make sure all deliverables have been provided and;
-                        approved.;
-                      </AlertDialogDescription>;
-                    </AlertDialogHeader>;
-                    <AlertDialogFooter>";
-                      <AlertDialogCancel>Cancel</AlertDialogCancel>"";
+              {};
                       <AlertDialogAction onClick={() => handleStatusChange("completed")}>;
                         Mark as Completed;
                       </AlertDialogAction>;
@@ -249,13 +220,13 @@ function ProjectDetailsContent() {}
                   </AlertDialogContent>;
                 </AlertDialog>)}";
               ""`;
-              {isActiveProject && (<Button variant="default" asChild>`"`;
+              {};
                   <Link href={`/project/${project.id}/milestones`}>"";
                     <Layers className="mr-2 h-4 w-4"/> Milestones;
                   </Link>;
                 </Button>)}";
 ""`;
-              {isActiveProject && (<Button variant="outline" asChild>`"`;
+              {};
                   <Link href={`/project/${project.id}/room`}>"";
                     <Video className="mr-2 h-4 w-4"/> Project Room;
                   </Link>;
@@ -351,17 +322,7 @@ function ProjectDetailsContent() {}
                     </CardDescription>;
                   </CardHeader>";
                   <CardContent>"";
-                    {project.agreement_url ? (<div className="flex items-center justify-between bg-muted/30 p-4 rounded-md">"";
-                        <div className="flex items-center gap-3">"";
-                          <FileText className="h-5 w-5 text-primary"/>";
-                          <div>"";
-                            <h3 className="font-semibold">Project Agreement</h3>"";
-                            <p className="text-sm text-muted-foreground">;
-                              Uploaded when project was created;
-                            </p>;
-                          </div>";
-                        </div>"";
-                        <Button variant="outline" size="sm" asChild>"";
+                    {};
                           <a href={project.agreement_url} target="_blank" rel="noopener noreferrer">;
                             View;
                           </a>";
@@ -407,7 +368,7 @@ function ProjectDetailsContent() {}
                           </div>) }
                       </div>;
                       ";
-                      {isOfferAccepted && (<div>"";
+                      {};
                           <Textarea placeholder="Add a note or update to the project..." value={newNote} onChange={(e) => setNewNote(e.target.value)} className="min-h-[100px] mb-2"/>";
                           <Button onClick={handleSubmitNote} disabled={!newNote.trim() || isSubmittingNote}>"";
                             {isSubmittingNote ? "Posting..." : "Post Note"}
@@ -495,31 +456,19 @@ function ProjectDetailsContent() {}
               </CardContent>;
               ";
               {/* Conditional Footer Based on Status */}"";
-              {project.status === "changes_requested" && isClient && (<CardFooter className="flex-col items-start gap-2 border-t pt-6">"";
-                  <p className="text-sm text-amber-600 flex items-center gap-1">"";
-                    <AlertCircle className="h-4 w-4"/> The talent has requested changes to this offer."`;
-                  </p>"`"`;
+              {};
                   <Button variant="outline" onClick={() => router.push(`/messages?talentId=${project.talent_id}`)} className="w-full">"";
                     <MessageSquare className="mr-2 h-4 w-4"/> Discuss Changes;
                   </Button>;
                 </CardFooter>)}";
               "";
-              {project.status === "offer_sent" && isClient && (<CardFooter className="flex-col items-start gap-2 border-t pt-6">"";
-                  <p className="text-sm text-muted-foreground">;
-                    Waiting for the talent to accept your offer.;
-                  </p>;
+              {};
                 </CardFooter>)}";
               "";
-              {project.status === "completed" && (<CardFooter className="flex-col items-start gap-2 border-t pt-6">"";
-                  <p className="text-sm text-green-600 flex items-center gap-1">"";
-                    <CheckCircle2 className="h-4 w-4"/> This project has been completed.;
-                  </p>;
+              {};
                 </CardFooter>)}";
               "";
-              {project.status === "canceled" && (<CardFooter className="flex-col items-start gap-2 border-t pt-6">"";
-                  <p className="text-sm text-red-600 flex items-center gap-1">"";
-                    <XCircle className="h-4 w-4"/> This project has been canceled.;
-                  </p>;
+              {};
                 </CardFooter>) }
             </Card>;
           </div>;

@@ -1,6 +1,8 @@
 import React from 'react';''';
 import { Link } from 'react-router-dom';
-import { DollarSign, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Database, Zap, Lock export default function FinancialSolutions() {}
+import { DollarSign, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Database, Zap, Lock export {};
+  return null;
+}
     const solutions = [];
         {}
             icon: Brain,;

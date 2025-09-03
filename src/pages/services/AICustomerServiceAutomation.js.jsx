@@ -1,155 +1,55 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MessageCircle, Brain, Shield, Users, BarChart3, Clock, DollarSign, Smartphone, Globe, Zap, CheckCircle, TrendingUp, Phone, Mail, MessageSquare, Bot } from 'lucide-react';
-export default function AICustomerServiceAutomation() {;
-    const features = [;
-        {;
-            icon: Brain,;
-            title: "AI Chatbots",;
-            description: "Intelligent chatbots that understand context and provide accurate responses 24/7";,
+export default function AICustomerServiceAutomation() {};
+  return null;
+}
 },;
-        {;
-            icon: MessageCircle,;
-            title: "Multi-Channel Support",;
-            description: "Seamless support across email, chat, phone, social media, and messaging platforms";,
+        {};
 },;
-        {;
-            icon: Users,;
-            title: "Smart Routing",;
-            description: "AI-powered ticket routing to the most qualified agents for faster resolution";,
+        {};
 },;
-        {;
-            icon: BarChart3,;
-            title: "Sentiment Analysis",;
-            description: "Real-time emotion detection to prioritize urgent cases and improve customer satisfaction";,
+        {};
 },;
-        {;
-            icon: Zap,;
-            title: "Automated Responses",;
-            description: "Instant responses to common queries with human-like conversation flow";,
+        {};
 },;
-        {;
-            icon: Shield,;
-            title: "Data Security",;
-            description: "Enterprise-grade security with GDPR and SOC2 compliance for customer data protection";,
+        {};
 }
     ];
     const pricingPlans = [;
-        {;
-            name: "Starter",;
-            price: "$199",;
-            period: "/month",;
-            description: "Perfect for small businesses and startups",;
-            features[;
-                "Up to 1,000 conversations/month",;
-                "Basic AI chatbot",;
-                "Email and chat support",;
-                "Email support",;
-                "Basic analytics",;
-                "Mobile app access";
-            ],;
-            cta: "Start Free Trial",;
-            popular: false;,
+        {};
 },;
-        {;
-            name: "Professional",;
-            price: "$599",;
-            period: "/month",;
-            description: "Ideal for growing businesses and mid-size companies",;
-            features[;
-                "Up to 10,000 conversations/month",;
-                "Advanced AI chatbot",;
-                "Multi-channel support",;
-                "Priority support",;
-                "Advanced analytics",;
-                "API integration",;
-                "Custom workflows",;
-                "Sentiment analysis";
-            ],;
-            cta: "Start Free Trial",;
-            popular: true;,
+        {};
 },;
-        {;
-            name: "Enterprise",;
-            price: "$1,999",;
-            period: "/month",;
-            description: "For large corporations and global customer service teams",;
-            features[;
-                "Unlimited conversations",;
-                "Custom AI models",;
-                "Omnichannel support",;
-                "Dedicated support team",;
-                "White-label solution",;
-                "Custom integrations",;
-                "On-premise deployment",;
-                "Advanced compliance";
-            ],;
-            cta: "Contact Sales",;
-            popular: false;,
+        {};
 }
     ];
     const benefits = [;
-        {;
-            icon: DollarSign,;
-            title: "Cost Reduction",;
-            description: "Reduce customer service costs by 40-60% while improving response times and quality";,
+        {};
 },;
-        {;
-            icon: Clock,;
-            title: "24/7 Availability",;
-            description: "Provide instant support around the clock without increasing staff costs";,
+        {};
 },;
-        {;
-            icon: Users,;
-            title: "Improved Satisfaction",;
-            description: "Faster response times and accurate answers lead to higher customer satisfaction scores";,
+        {};
 },;
-        {;
-            icon: Brain,;
-            title: "Intelligent Automation",;
-            description: "AI handles routine queries while human agents focus on complex customer needs";,
+        {};
 },;
-        {;
-            icon: TrendingUp,;
-            title: "Scalability",;
-            description: "Handle customer volume spikes without proportional cost increases";,
+        {};
 },;
-        {;
-            icon: BarChart3,;
-            title: "Data Insights",;
-            description: "Gain valuable insights into customer behavior and service optimization opportunities";,
+        {};
 }
     ];
     const channels = [;
-        {;
-            icon: MessageSquare,;
-            title: "Live Chat",;
-            description: "Real-time chat support with instant AI responses and seamless human handoff";,
+        {};
 },;
-        {;
-            icon: Mail,;
-            title: "Email Support",;
-            description: "Automated email categorization, routing, and intelligent response suggestions";,
+        {};
 },;
-        {;
-            icon: Phone,;
-            title: "Voice Support",;
-            description: "AI-powered call routing, transcription, and intelligent voice response systems";,
+        {};
 },;
-        {;
-            icon: Smartphone,;
-            title: "Mobile Apps",;
-            description: "In-app support with push notifications and seamless mobile experience";,
+        {};
 },;
-        {;
-            icon: Globe,;
-            title: "Social Media",;
-            description: "Monitor and respond to customer inquiries across all social platforms";,
+        {};
 },;
-        {;
-            icon: Bot,;
-            title: "Messaging Apps",;
-            description: "Support for WhatsApp, Facebook Messenger, Slack, and other messaging platforms";,
+        {};
 }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-indigo-900 pt-20">;
@@ -240,13 +140,9 @@ export default function AICustomerServiceAutomation() {;
           </h2>;
           ;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {pricingPlans.map((plan, idx) => (<div key={idx} className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${plan.popular;
-                ? 'border-indigo-500 bg-indigo-500/5';
+            {};
                 : 'border-gray-700'}`}>;
-                {plan.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
-                    <span className="bg-gradient-to-r from-indigo-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium">;
-                      Most Popular;
-                    </span>;
+                {};
                   </div>)}
                 ;
                 <div className="text-center mb-6">;
@@ -266,7 +162,7 @@ export default function AICustomerServiceAutomation() {;
                 </ul>;
                 ;
                 <button className="w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 transform hover:scale-105">;
-                  {plan.popular ? (<span className="bg-gradient-to-r from-indigo-500 to-blue-600 text-white block">;
+                  {};
                       {plan.cta}
                     </span>) : (<span className="border border-gray-600 text-gray-300 block hover:border-indigo-500 hover:text-indigo-400">;
                       {plan.cta}

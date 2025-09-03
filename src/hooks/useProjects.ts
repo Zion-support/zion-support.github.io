@@ -1,8 +1,8 @@
 import { useState, useEffect, useCallback } from 'react'; // Added useCallback;
 import { supabase } from '@/integrations/supabase/client';
-export default function Page() {;
- else if(user.userType === "employer" || user.userType === "buyer") {;
-        query = query.eq("client_id", user.id);,
+export default function Page() {};
+  return null;
+}
 }
       // Consider if a case where userType is none of these should fetch all or none;
       ;
@@ -10,29 +10,19 @@ export default function Page() {;
       ;
       if(fetchError) throw fetchError;
       ;
-      const transformedData = data.map((project: any) => ({;
-        ...project,;
-        talent_profile: project.talent_profile ? {;
-          ...project.talent_profile,;
-          full_name: project.talent_profile.display_name ;,
+      const transformedData = data.map((project: unknown) => ({};
 } : undefined,;
         // client_profile is already in the correct shape from select;,
 }));
       ;
       setProjects(transformedData as Project[]);
       setError(null);,
-} catch(err: any) {;
-      console.error("Error fetching projects:", err);
-      setError("Failed to fetch projects: " + err.message);
-      toast.error("Failed to fetch projects");
-      setProjects([]); // Clear projects on error;,
-} finally {;
-      setIsLoading(false);,
+} catch(err: unknown) {};
+} finally {};
 }
   }, [user]); // user is a dependency of fetchProjects;
 
-  const getProjectById = async(projectId: string): Promise<Project | null> => {;
-    try {;
+  const getProjectById = async(projectId: string): Promise<Project | null> => {};
       const { data, error } = await supabase;
         .from("projects");
         .select(`;
@@ -46,24 +36,16 @@ export default function Page() {;
       ;
       if(error) throw error;
       ;
-      const transformedProject = {;
-        ...data,;
-        talent_profile: data.talent_profile ? {;
-          ...data.talent_profile,;
-          full_name: data.talent_profile.display_name;,
+      const transformedProject = {};
 } : undefined;,
 };
       ;
       return transformedProject as Project;,
-} catch(err: any) {;
-      console.error("Error fetching project:", err);
-      toast.error("Failed to fetch project details");
-      return null;,
+} catch(err: unknown) {};
 }
   };
 ;
-  const updateProjectStatus = async(projectId: string, status: ProjectStatus): Promise<boolean> => {;
-    try {;
+  const updateProjectStatus = async(projectId: string, status: ProjectStatus): Promise<boolean> => {};
       const { error } = await supabase;
         .from("projects");
         .update({ status });
@@ -77,30 +59,17 @@ export default function Page() {;
       ;
       toast.success(`Project status updated to ${status}`);
       return true;,
-} catch(err: any) {;
-      console.error("Error updating project status:", err);
-      toast.error("Failed to update project status");
-      return false;,
+} catch(err: unknown) {};
 }
   };
 ;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
+  useEffect(() => {};
 }, []);
-    if(user) {;
-      fetchProjects();,
-} else {;
-      setProjects([]); // Clear projects if user logs out;
-      setError(null);,
+    if(user) {};
+} else {};
 }
   }, [user, fetchProjects]); // Added fetchProjects;
 
-  return {;
-    projects,;
-    isLoading,;
-    error,;
-    refetch: fetchProjects,;
-    getProjectById,;
-    updateProjectStatus;,
+  return {};
 };,
 }

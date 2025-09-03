@@ -61,7 +61,7 @@ class AutomatedTestingSuite {;
 ;
   async runCoverageTest() {;
     this.log("📊 Running coverage test...");
-    return await this.runCommand("npm run test:coverage", "Coverage Test"),;,
+    return await this.runCommand("npm run test: coverage", "Coverage Test"),;,
 }
 ;
   async runIntegrationTests() {;
@@ -95,7 +95,7 @@ class AutomatedTestingSuite {;
 }
     }
 ;
-    return await this.runCommand("npm run test:e2e", "E2E Tests"),;,
+    return await this.runCommand("npm run test: e2e", "E2E Tests"),;,
 }
 ;
   async runPerformanceTests() {;

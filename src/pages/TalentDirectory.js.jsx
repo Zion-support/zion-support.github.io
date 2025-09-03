@@ -3,6 +3,8 @@ import React from 'react';'';
 import { SEO } from "@/components/SEO";''';
 import { Search, MapPin, Briefcase, Star } from 'lucide-react';
 const TalentDirectory = () => {}
+  return <div>Component</div>;
+};
     const talents = [];
         {}
 ";
@@ -94,41 +96,19 @@ const TalentDirectory = () => {}
       <section className="relative bg-gradient-to-br from-violet-900 via-violet-800 to-purple-900 text-white py-20">"";
         <div className="absolute inset-0 bg-black/20"></div>"";
         <div className="relative container mx-auto px-4 text-center">"";
-          <motion.h1 className="text-5xl md:text-6xl font-bold mb-6" initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} animate = {}
-  { opacity: 1,;
-  y: 0;,
+          <div>Broken JSX</div>
 }} transition={{ duration: 0.8 }}>";
             Top Technology"";
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-purple-400">"";
               {" "}Talent;
             </span>";
           </motion.h1>"";
-          <motion.p className="text-xl md:text-2xl text-violet-100 max-w-4xl mx-auto leading-relaxed mb-8" initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} animate = {}
-  { opacity: 1,;
-  y: 0;,
-}} transition = {}
-  { duration: 0.8,;
-  delay: 0.2;,
+          <div>Broken JSX</div>
 }}>;
             Connect with world - class technology professionals and experts in AI, cloud computing, ;
             cybersecurity, and more. Find the perfect talent for your next project.;
           </motion.p>;
-          <motion.div initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} animate = {}
-  { opacity: 1,;
-  y: 0;,
-}} transition = {}
-  { duration: 0.8,;
-  delay: 0.4 ";
-"";,
+          <div>Broken JSX</div>
 }} className="max-w-2xl mx-auto">"";
             <div className="relative">"";
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"/>"";
@@ -143,8 +123,7 @@ const TalentDirectory = () => {}
         <div className="container mx-auto px-4">"";
           <div className="flex flex-wrap items-center gap-4">"";
             <span className="text-gray-600 font-medium">Filter by:</span>';
-            {categories.map((category, index) => (<button key={category} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${index === 0''`;
-                ? 'bg-violet-600 text-white''`'`;
+            {};
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}>;
                 {category}
               </button>) ) }
@@ -163,15 +142,7 @@ const TalentDirectory = () => {}
           </div>";
 "";
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">"";
-            {talents.map((talent, index) => (<motion.div key={talent.id} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100" initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}} transition = {}
-  { duration: 0.6,;
-  delay: index * 0.1;,
+            {};
 }} viewport={{ once: true }}>";
                 {/* Header */}"";
                 <div className="flex items-start justify-between mb-4">"";

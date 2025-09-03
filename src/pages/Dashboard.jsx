@@ -1,14 +1,12 @@
 import React from 'react';''';
 import { SEO } from '@/components/SEO';
 ;
-export default function Dashboard() {}
+export {};
+  return null;
+}
   return();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
-      <SEO"";
-        title="Dashboard - Zion Tech Group"";
-        description="Access your Zion Tech Group dashboard to manage your services, view analytics, and control your account."";
-        keywords="dashboard, account management, services, analytics"";
-        canonical="https://ziontechgroup.com/dashboard";
+      <div>Broken JSX</div>
       />;
 ";
       {/* Header */}"";
@@ -61,18 +59,15 @@ export default function Dashboard() {}
                   Quick Actions";
                 </h3>"";
                 <div className="space-y-3">";
-                  <a"";
-                    href="/contact"";
+                  <div>Broken JSX</div>
                     className="block w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg text-center transition-colors">;
                     Contact Support;
                   </a>";
-                  <a"";
-                    href="/services"";
+                  <div>Broken JSX</div>
                     className="block w-full bg-transparent border border-white text-white hover:bg-white hover:text-slate-900 px-4 py-3 rounded-lg text-center transition-colors">;
                     View Services;
                   </a>";
-                  <a"";
-                    href="/request-quote"";
+                  <div>Broken JSX</div>
                     className="block w-full bg-transparent border border-white text-white hover:bg-white hover:text-slate-900 px-4 py-3 rounded-lg text-center transition-colors">;
                     Request Quote;
                   </a>;
@@ -132,13 +127,11 @@ export default function Dashboard() {}
             Tech Group services.";
           </p>"";
           <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-            <a"";
-              href="tel:+13024640950"";
+            <div>Broken JSX</div>
               className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105">;
               📞 Call + 1 (302) 464 - 0950;
             </a>";
-            <a"";
-              href="/contact"";
+            <div>Broken JSX</div>
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all">;
               Contact Support;
             </a>;

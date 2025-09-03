@@ -1,14 +1,11 @@
 import React from 'react';
 ;
-type SidebarProps = {;
-  isOpen: boolean;
-  onClose: () => void;,
+type SidebarProps = {};
 };
 ;
-export default function Sidebar({ isOpen, onClose }: SidebarProps) {;
-  if (!isOpen) return null;
-  return (;
-    <div className="fixed inset-0 z-50" role="dialog" aria-modal="true">;
+export default function Sidebar({ isOpen, onClose }: SidebarProps) {};
+  return null;
+}
       <div className="absolute inset-0 bg-black/40" onClick={onClose} />;
       <div className="absolute right-0 top-0 h-full w-80 bg-white shadow-xl p-4">;
         <button onClick={onClose} className="text-sm text-gray-600">Close</button>;

@@ -26,7 +26,9 @@ const mockPost = {}
     isAnswered: true,;
   isFeatured: true;,
 };
-export default function EditPostPage() {}
+export {};
+  return null;
+}
     const { postId } = useParams();
     const navigate = useNavigate();
     const { toast } = useToast();

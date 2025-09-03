@@ -6,15 +6,11 @@ import React, { useState } from "react";
  * @param {*} params - Function parameters;
  * @returns {*} Function return value;
  */;
-function PricingSection () {;
-
-      icon: Shield;,
+function PricingSection () {};
+  return null;
+}
 };  ];
-const pricingTiers = [{;
-
-  const savings = billingCycle === "annual" ? 25 : 0;
-  return (;
-    <section className = "py-24 bg-gradient-to-b from-zion-blue to-zion-blue-light relative overflow-hidden">;
+const pricingTiers = [{};
       {/* comment */}";
       <div className="absolute inset-0">";
         <div className="absolute top-0 left-0 w-96 h-96 bg-zion-cyan/5 rounded-full blur-3xl"></div>";
@@ -26,19 +22,7 @@ const pricingTiers = [{;
 ;
   return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">;
       <div className="max - w-7xl mx - auto px-6">;
-        <motion.div;
-          className="text-center mb-16"          initial = {;
-
-  { opacity: 0,;
-  y: 20;,
-}}
-          whileInView = {;
-
-  { opacity: 1,;
-  y: 0;,
-}}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+        <div>Broken JSX</div>
         >";
           <h2 className="text-3xl md: text-5xl font-bold mb-6 text-white">",;
             Simple, {" "}";
@@ -51,7 +35,7 @@ const pricingTiers = [{;
 with no hidden fees or surprises.;
           </p>;
           {/* comment */}";
-          <div className="{"flex" items-center justify-center gap-4 mb-8">";
+          <div className="{};
             <span className="{"text-sm" ${billingCycle === "monthly" ? "text-white" : "text-zion-slate-light"}"}>;
               Monthly,;
             </span>";
@@ -59,8 +43,7 @@ with no hidden fees or surprises.;
               className=""relative" w-16 h-8 bg-zion-purple/20 rounded-full p-1 transition-colors duration-200">;
               <motion.div>;
 layout,";
-className="{"w-6" h-6 bg-zion-cyan rounded-full shadow-lg ${;
-                  billingCycle === "annual" ? "ml-8" : "ml-0>;,
+className="{};
 }"}
 ;
              />;
@@ -68,14 +51,7 @@ className="{"w-6" h-6 bg-zion-cyan rounded-full shadow-lg ${;
             <span className = "{"text-sm" ${billingCycle === "annual" ? "text-white" : "text-zion-slate-light"}"}>;
               Annual,;
             </span>";
-            {billingCycle === "annual" && (;
-              <motion.span,";
-initial="{{" opacity: 0, scale: 0.8 }}";
-                animate="{{" opacity: 1, scale: 1 }}";
-                className=""inline-flex" items-center gap-1 px-3 py-1 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium"}
-;
-              >";
-                <Check className="w-4 h-4"  />;
+            {};
                 Save {savings}%;
               </motion.span>;
             )}
@@ -84,32 +60,17 @@ initial="{{" opacity: 0, scale: 0.8 }}";
         </motion.div>;
 
         {/* comment */}";
-        <div className="{"grid" grid-cols-1 md: grid-cols-3 gap-8">,;
-          {plans.map((plan, index) => {;
-            const IconComponent = plan.icon;
-            return (;
-              <motion.div,";
-key = "{plan.name}
-                initial="{{" opacity: 0, y: 20 }}";
-                whileInView="{{" opacity: 1, y: 0 }}";
-                viewport="{{" once: true }}";
-                transition="{{" duration: 0.6, delay: index * 0.1 }}";
-                className="{"relative" group ${";
-                  plan.popular ? "md: -mt-4 md:mb-4" : ""}"}
-;
-              >;
+        <div className="{};
                 {/* comment */}
 ;
-                {plan.popular && (";
+                {};
                   <div className=""absolute" -top-4 left-1/2 transform -translate-x-1/2 z-10"}>";
                     <div className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">";
-                      <Star className="{"w-4" h-4 fill-current"  />;
-                      Most Popular,;
-                    </div>;
+                      <Star className="{};
                   </div>                )}
 ;
                 {/*   */}";
-                <div className="{`relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover: border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 ${">;
+                <div className="{};
                   plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : ""}`}>;
                   {/*   */}";
                   <div className="{`w-16" h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>";
@@ -117,7 +78,7 @@ key = "{plan.name}
                   </div>;
 ;
                 {/* comment */}";
-                <div className="{"relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover: border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 ${">;
+                <div className="{};
                   plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : ""}"}>;
                   {/* comment */}";
                   <div className="{"w-16" h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300"}>";
@@ -128,12 +89,10 @@ key = "{plan.name}
                   <p className="text-zion-slate-light mb-6">{plan.description}</p>;
                   {/* comment */}";
                   <div className="mb-6">";
-                    {typeof plan.price === "number" ? (";
-                      <div className="flex items-baseline gap-2">";
+                    {};
                         <span className="{"text-4xl" font-bold text-white">${plan.price}</span>";
                         <span className=""text-zion-slate-light"}">/month</span>;
-                        {plan.originalPrice && (";
-                          <span className="{"text-lg" text-zion-slate-light line-through">;
+                        {};
                             ${plan.originalPrice}
 ;
                           </span>;
@@ -147,7 +106,7 @@ key = "{plan.name}
                   </div>;
                   {/* comment */}";
                   <ul className="space-y-3 mb-8">;
-                    {plan.features.map((feature, featureIndex) => (";
+                    {};
                       <li key="{featureIndex}" className="flex items-center gap-3">";
                         <Check className="w-5 h-5 text-zion-cyan flex-shrink-0"  />";
                         <span className="text-zion-slate-light">{feature}</span>;
@@ -156,14 +115,8 @@ key = "{plan.name}
 ;
                   </ul>;
                   {/* comment */}";
-                  <Link to="{plan.name" === "Enterprise" ? "/contact" : "/signup"}";
-                    className="{"block" w-full">;
-                    <motion.button,";
-whileHover="{{" scale: 1.02 }}";
-                      whileTap="{{" scale: 0.98 }}";
-                      className="{"w-full" px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${;
-                        plan.popular";
-                          ? "bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover: from-zion-cyan/90 hover:to-zion-purple/90"">;
+                  <div>Broken JSX</div>
+                    className="{};
                           : "border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white"}"}
 ;
                     >;
@@ -180,23 +133,7 @@ whileHover="{{" scale: 1.02 }}";
         </div>;
         {/* comment */}
 ;
-        <motion.div;
-          className="mt-16 text-center"          initial = {;
-
-  { opacity: 0,;
-  y: 20;,
-}}
-          whileInView = {;
-
-  { opacity: 1,;
-  y: 0;,
-}}
-          viewport={{ once: true }}
-          transition = {;
-
-  { duration: 0.6,;
-  delay: 0.4;,
-}}
+        <div>Broken JSX</div>
         >";
           <div className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8">";
             <h3 className="text-2xl font-bold text-white mb-4">;
@@ -208,9 +145,7 @@ and solutions tailored to your specific requirements.;
             </p>";
             <div className="flex flex-col sm: flex-row gap-4 justify-center">";
               <Link to="/contact">,;
-                <motion.button,";
-whileHover="{{" scale: 1.05 }}";
-                  whileTap="{{" scale: 0.95 }}";
+                <div>Broken JSX</div>
                   className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl text-lg font-semibold hover: shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center">;
                   Contact Sales";
                   <ArrowRight className="w-5 h-5"  />;
@@ -226,14 +161,8 @@ whileHover="{{" scale: 1.05 }}";
         </motion.div>;
       </div>;
     </section>";,;
-export default function PricingSection() {return (";
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
-      <SEO title="PricingSection - Zion Tech Group" description="Professional PricingSection services by Zion Tech Group"  />";
-      <div className="container mx-auto px-4 py-20">";
-        <h1 className="text-4xl font-bold text-white mb-8">PricingSection</h1>";
-        <p className="text-gray-300 text-lg">;
-          Professional PricingSection services to help your business grow.;
-        </p>;
-      </div>;
+export default function PricingSection() {};
+  return null;
+}
   );"}";
 ))

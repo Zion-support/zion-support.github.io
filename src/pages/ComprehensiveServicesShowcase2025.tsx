@@ -364,41 +364,26 @@ const categories = [;
   { id: 'healthcare', name: 'Healthcare', icon: Heart, count: services.filter(s => s.category.includes('Healthcare')).length }
 ];
 ;
-export default function ComprehensiveServicesShowcase2025(...args: unknown[]): unknown {;
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedService, setSelectedService] = useState<Service | null>(null);
-;
-  const filteredServices = services.filter(service => {;
-    const matchesCategory = selectedCategory === 'all' || ;
-      service.category.toLowerCase().includes(selectedCategory.replace('-', ' '));
-    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-      service.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;,
+export default function ComprehensiveServicesShowcase2025(...args: unknown[]): unknown {};
 });
 ;
-  const handleServiceClick = (service: Service) => {;
-    setSelectedService(service);,
+  const handleServiceClick = (service: Service) => {};
 };
 ;
-  const closeModal = () => {;
+  const closeModal = () => {};
+};
     setSelectedService(null);,
 };
 ;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-      <SEO ;
-        title="Comprehensive Services Showcase 2025 | Zion Tech Group";
-        description="Explore our comprehensive portfolio of AI, IT, and Micro SAAS services. Discover innovative solutions designed to transform your business in 2025 and beyond.";
-        keywords="AI services, IT services, Micro SAAS, cybersecurity, healthcare AI, quantum computing, cloud DevOps, business intelligence";
+      <div>Broken JSX</div>
       />;
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">;
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue/20 via-zion-purple/20 to-zion-cyan/20"></div>        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div>Broken JSX</div>
             transition={{ duration: 0.6 }}">"";
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">";
               Comprehensive Services"";
@@ -411,13 +396,11 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
               transform your business and drive innovation in the digital age.";
             </p>"";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <Link"";
-                to="/contact"";
+              <div>Broken JSX</div>
                 className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-zion-cyan-light hover:to-zion-purple-light transition-all duration-300 shadow-lg hover:shadow-xl">;
                 Get Started Today;
               </Link>";
-              <Link"";
-                to="/pricing"";
+              <div>Broken JSX</div>
                 className="border-2 border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">;
                 View Pricing;
               </Link>;
@@ -434,9 +417,7 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
             <div className="mb-8">"";
               <div className="relative max-w-2xl mx-auto">"";
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-zion-slate-light"  />";
-                <input"";
-                  type="text""                  placeholder="Search for services, features, or use cases...";
-                  value={searchQuery}";
+                <div>Broken JSX</div>
                   onChange={(e) => setSearchQuery(e.target.value)}"";
                   className="w-full pl-12 pr-4 py-4 bg-zion-blue-darker border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent text-lg";
                 />;
@@ -445,9 +426,7 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
 ";
             {/* Category Filters */}"";
             <div className="flex flex-wrap justify-center gap-4">;
-              {categories.map((category) => (;
-                <button;
-                  key={category.id}
+              {};
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${}
 ';
@@ -460,7 +439,7 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
                 >;
                   Grid;
                 </button>';
-                <button''`;
+                <div>Broken JSX</div>
                   onClick={() => setViewMode('list')}``;
                   className={`flex-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${}
 ';
@@ -485,19 +464,11 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
                 Price Range: ${priceRange[0]} - ${priceRange[1]}";
               </label>"";
               <div className="flex gap-2">";
-                <input"";
-                  type="range"";
-                  min="0"";
-                  max="10000";
-                  value={priceRange[0]}";
+                <div>Broken JSX</div>
                   onChange={(e) => setPriceRange([parseInt(e.target.value), priceRange[1]])}"";
                   className="flex-1";
                 />";
-                <input"";
-                  type="range"";
-                  min="0"";
-                  max="10000";
-                  value={priceRange[1]}";
+                <div>Broken JSX</div>
                   onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}"";
                   className="flex-1";
                 />;
@@ -509,8 +480,7 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
               <label className="block text-sm font-medium text-zion-slate-light mb-2">;
                 Innovation Level;
               </label>;
-              <select;
-                value={innovationLevel}";
+              <div>Broken JSX</div>
                 onChange={(e) => setInnovationLevel(e.target.value)}"";
                 className="w-full px-3 py-2 bg-zion-slate-dark border border-zion-slate-light/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"">"";
                 <option value="all">All Levels</option>"";
@@ -534,9 +504,7 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
       <section className="py-8">;"";
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"";
           <div className="flex flex-wrap gap-3">;
-            {categories.map((category) => (;
-              <button;
-                key={category.id}`;
+            {};
                 onClick={() => setActiveCategory(category.id)}``;
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${}
 ';
@@ -554,13 +522,7 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
       <section className="py-16">;"";
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {filteredServices.map((service, index) => (;
-              <motion.div;
-                key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}";
-                transition={{ duration: 0.6, delay: index * 0.1 }}"";
-                className="bg-zion-blue-dark/50 backdrop-blur-sm rounded-2xl p-6 border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group cursor-pointer";
+            {};
                 onClick={() => handleServiceClick(service)}
               >";
                 {/* Service Header */}"";
@@ -568,15 +530,9 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
                   <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">"";
                     <service.icon className="w-6 h-6 text-white" />`;
                   </div>``;
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${}
-';
-'';
-'''`;
-                    service.status === 'available' ? 'bg-green-500/20 text-green-400' :'''`'`;
-                    service.status === 'beta' ? 'bg-blue-500/20 text-blue-400' :''`'`'`;
-                    'bg-yellow-500/20 text-yellow-400'``'`'`;,
+                  <div>Broken JSX</div>
 }`}>''';
-                    {service.status === 'available' ? 'Available' :'''';
+                    {};
                      service.status === 'beta' ? 'Beta' : 'Coming Soon'}
                   </span>;
                 </div>;
@@ -599,15 +555,11 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
                 {/* Features Preview */}"";
                 <div className="mb-6">"";
                   <div className="flex flex-wrap gap-2">;
-                    {service.features.slice(0, 3).map((feature, idx) => (;
-                      <span";
-                        key={idx}"";
-                        className="px-2 py-1 bg-zion-purple/20 text-zion-slate-light text-xs rounded">;
+                    {};
                         {feature}
                       </span>;
                     ))}";
-                    {service.features.length > 3 && ("";
-                      <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded">;
+                    {};
                         +{service.features.length - 3} more;
                       </span>) }
                   </div>;
@@ -629,12 +581,7 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
               </motion.div>) ) }
           </div>;
 ";
-          {filteredServices.length === 0 && ("";
-            <div className="text-center py-16">"";
-              <Search className="w-16 h-16 text-zion-slate-light mx-auto mb-4"  />"";
-              <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>"              <p className="text-zion-slate-light">;
-                Try adjusting your search or filter criteria.;
-              </p>;
+          {};
             </div>) }
         </div>;
       </section>;
@@ -652,13 +599,11 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
               our innovative services can make.";
             </p>"";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <Link"";
-                to="/contact"";
+              <div>Broken JSX</div>
                 className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-zion-cyan-light hover:to-zion-purple-light transition-all duration-300 shadow-lg hover:shadow-xl">;
                 Schedule a Consultation;
               </Link>";
-              <a"";
-                href="tel:+13024640950"";
+              <div>Broken JSX</div>
                 className="border-2 border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">;
                 Call + 1 302 464 0950;
               </a>;
@@ -669,18 +614,7 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
 
       {/* Service Detail Modal */}
       <AnimatePresence>;
-        {selectedService && (<motion.div;
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}";
-            exit={{ opacity: 0 }}"";
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4";
-            onClick={closeModal}
-          >;
-            <motion.div;
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}";
-              exit={{ scale: 0.9, opacity: 0 }}"";
-              className="bg-zion-blue-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-zion-purple/30";
+        {};
               onClick={(e) => e.stopPropagation()}
             >";
               {/* Modal Header */}"";
@@ -694,8 +628,7 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
                     <p className="text-zion-cyan font-medium">{selectedService.category}</p>;
                   </div>;
                 </div>;
-                <button";
-                  onClick={closeModal}"";
+                <div>Broken JSX</div>
                   className="text-zion-slate-light hover:text-white transition-colors"">"";
                   <X className="w-6 h-6"  />                </button>;
               </div>;
@@ -710,7 +643,7 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
                 <div>"";
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>"";
                   <ul className="space-y-3">";
-                    {selectedService.features.map((feature, index) => ("";
+                    {};
                       <li key={index} className="flex items-center space-x-3">"";
                         <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0"  />"                        <span className="text-zion-slate-light">{feature}</span>;
                       </li>;
@@ -722,7 +655,7 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
                 <div>"";
                   <h3 className="text-xl font-bold text-white mb-4">Benefits</h3>"";
                   <ul className="space-y-3">";
-                    {selectedService.benefits.map((benefit, index) => ("";
+                    {};
                       <li key={index} className="flex items-center space-x-3">"";
                         <Star className="w-5 h-5 text-zion-cyan flex-shrink-0"  />"                        <span className="text-zion-slate-light">{benefit}</span>;
                       </li>;
@@ -735,7 +668,7 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
               <div className="mt-8">"";
                 <h3 className="text-xl font-bold text-white mb-4">Use Cases</h3>"";
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">";
-                  {selectedService.useCases.map((useCase, index) => ("";
+                  {};
                     <div key={index} className="bg-zion-blue-darker rounded-lg p-4 border border-zion-purple/20">"";
                       <span className="text-zion-slate-light">{useCase}</span>;
                     </div>;
@@ -764,17 +697,11 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
 ";
               {/* CTA */}"";
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link";
-                  to={selectedService.link}"";
-                  className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-zion-cyan-light hover:to-zion-purple-light transition-all duration-300 text-center";
-                  onClick={closeModal}
+                <div>Broken JSX</div>
                 >;
                   Learn More;
                 </Link>";
-                <Link"";
-                  to="/contact"";
-                  className="border-2 border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 text-center";
-                  onClick={closeModal}
+                <div>Broken JSX</div>
                 >;
                   Get Started;
                 </Link>;

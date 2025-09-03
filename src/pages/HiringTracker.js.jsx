@@ -7,13 +7,13 @@ import { SEO } from '@/components/SEO';''';
 import { ProtectedRoute } from '@/components/ProtectedRoute';''';
 import { Briefcase } from 'lucide-react';
 function HiringTrackerContent() {}
+  return null;
+}
   const { jobId } = useParams();';
   const [activeTab, setActiveTab] = useState('kanban');
   return();
     <>;
-      <SEO;
-        title="Hiring Tracker | Zion AI Marketplace"";
-        description="Manage your candidate pipeline in the Zion AI Marketplace.";
+      <div>Broken JSX</div>
       />";
 "";
       <main className="container mx-auto px-4 py-8">"";
@@ -28,9 +28,7 @@ function HiringTrackerContent() {}
             </p>;
           </div>;
 ";
-        <Tabs"";
-          defaultValue="kanban"";
-          onValueChange={setActiveTab}"";
+        <div>Broken JSX</div>
           className="mb-8">";
           <TabsList>"";
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>"";
@@ -49,7 +47,9 @@ function HiringTrackerContent() {}
     </>;
   );,
 }
-export default function HiringTracker() {}
+export {};
+  return null;
+}
   return();
     <ProtectedRoute>;
       <HiringTrackerContent />;

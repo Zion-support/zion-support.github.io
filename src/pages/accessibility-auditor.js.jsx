@@ -1,6 +1,8 @@
 import React from 'react';''';
 import Link from 'next/link';
 const AccessibilityAuditor = () => {}
+  return <div>Component</div>;
+};
     const features = [];
         {}
             title: "Automated Testing","";

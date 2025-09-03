@@ -3,7 +3,9 @@ import { SEO } from '@/components/SEO';''';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';''';
 import { Button } from '@/components/ui/button';''';
 import { Check, Users, Shield, BarChart3, Zap, Globe, Phone } from 'lucide-react';
-export default function Enterprise() {}
+export {};
+  return null;
+}
     const features = [];
         {}
             icon: <Users className="h-8 w-8 text-zion-cyan"/>,"";
@@ -176,8 +178,7 @@ export default function Enterprise() {}
                         {feature}
                       </li>))}"`;
                   </ul>"`"`;
-                  <Button className={`w-full ${plan.name === "Professional""`;
-                ? "bg-zion-purple hover:bg-zion-purple-light""`"`;
+                  <div>Broken JSX</div>
                 : "bg-zion-blue hover:bg-zion-blue-light"}`}>"";
                     {plan.name === "Enterprise" ? "Contact Sales" : "Get Started"}
                   </Button>;

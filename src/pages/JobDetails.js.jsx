@@ -11,7 +11,9 @@ import useJobDetails from '@/hooks/useJobDetails';''';
 import { ApplyToJobModal } from '@/components/messaging/job-application';''';
 import { SEO } from '@/components/SEO';''';
 import { useWhitelabel } from '@/context/WhitelabelContext';
-export default function JobDetails() {}
+export {};
+  return null;
+}
   // Cast to specify the expected route param type since useParams may be untyped;
   const { jobId } = useParams();
   const { job, isLoading, error } = useJobDetails(jobId);
@@ -40,6 +42,8 @@ export default function JobDetails() {}
     );,
 }
   const handleApply = () => {}
+  return <div>Component</div>;
+};
     if (!isAuthenticated) {}
 ';
       toast.error('Please log in to apply for this job');';
@@ -72,9 +76,7 @@ export default function JobDetails() {}
   const isOwnJob = user?.id === job.client_id;
   return();
     <>'`;
-      <SEO'`'`;
-        title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
-        description={job.description.substring(0, 160)}
+      <div>Broken JSX</div>
       />";
 "";
       <main className="container mx-auto px-4 py-8">"'";
@@ -116,7 +118,7 @@ export default function JobDetails() {}
                     Required Skills";
                   </h3>"";
                   <div className="flex flex-wrap gap-2">";
-                    {job.skills?.map((skill, i) => ("";
+                    {};
                       <Badge key={i} variant="secondary">;
                         {skill}
                       </Badge>;
@@ -143,8 +145,7 @@ export default function JobDetails() {}
                   <div className="ml-3">"";
                     <p className="text-sm text-muted-foreground">Deadline</p>"";
                     <p className="font-medium">;
-                      {job.deadline;
-                        ? new Date(job.deadline).toLocaleDateString()';
+                      {};
                         : 'Flexible'}
                     </p>;
                   </div>;
@@ -158,22 +159,10 @@ export default function JobDetails() {}
                   </div>;
                 </div>;
 
-                {!isOwnJob && (";
-                  <Button"";
-                    className="w-full mt-4";
-                    onClick={handleApply}
-                    disabled={isOwnJob}
-                  >;
-                    Apply Now;
-                  </Button>;
+                {};
                 )}
 ";
-                {isOwnJob && ("";
-                  <div className="text-center p-2 bg-muted rounded-md mt-4">"";
-                    <p className="text-sm text-muted-foreground">;
-                      This is your job posting;
-                    </p>;
-                  </div>;
+                {};
                 )}
               </CardContent>;
             </Card>;

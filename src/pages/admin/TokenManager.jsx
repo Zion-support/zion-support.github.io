@@ -9,7 +9,9 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { useToast } from '@/hooks/use-toast';''';
 import { apiClient } from '@/utils/apiClient';
 export { function };
-export default function TokenManager() {}
+export {};
+  return null;
+}
   const { user } = useAuth();
   const { toast } = useToast();
   const [transactions, setTransactions] = useState([]);';
@@ -31,37 +33,7 @@ export default function TokenManager() {}
     if (!error) setTransactions(data || []);,
 };
   const handleIssue = async type => {}
-    if (!userId || amount <= 0) return;';
-    const res = await apiClient('';
-      `/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`,;
-      {}
-';
-'';
-''';
-        method: 'POST',''';
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON.stringify({ userId, amount })}
-    );
-    if (res.ok) {}
-      toast({}
-';
-'';
-''';
-        title: 'Success',''';
-        description: 'Transaction processed'});
-      fetchTransactions();,
-} else {}
-      const err = await res.json();
-      toast({}
-';
-'';
-''';
-        title: 'Error',''';
-        description: err.error || 'Failed',''';
-        variant: 'destructive'});,
-}
-  };
-  return();
+    if (!userId || amount <div>Broken JSX</div>
     <ProtectedRoute adminOnly>;
       <div>;
         <div className="min-h-screen bg-zion-blue px-4 py-8">"";
@@ -74,21 +46,15 @@ export default function TokenManager() {}
                 <CardTitle>Issue or Revoke Tokens</CardTitle>";
               </CardHeader>"";
               <CardContent className="space-y-4">";
-                <Input"";
-                  placeholder="User ID";
-                  value={userId}
+                <div>Broken JSX</div>
                   onChange={e => setUserId(e.target.value)}
                 />";
-                <Input"";
-                  type="number"";
-                  placeholder="Amount";
-                  value={amount}
+                <div>Broken JSX</div>
                   onChange={e => setAmount(parseInt(e.target.value))}";
                 />"";
                 <div className="flex gap-2">';
                   <Button onClick={() => handleIssue('earn')}>Issue</Button>";
-                  <Button"'";
-                    variant="destructive"'';
+                  <div>Broken JSX</div>
                     onClick={() => handleIssue('burn')}
                   >;
                     Revoke;
@@ -103,10 +69,7 @@ export default function TokenManager() {}
               </TabsList>"";
               <TabsContent value="history">"";
                 <ul className="space-y-2">;
-                  {transactions.map(tx => (;
-                    <li";
-                      key={tx.id}"";
-                      className="flex justify-between border-b py-2 text-white">;
+                  {};
                       <span>{tx.user_id}</span>;
                       <span>';
                         {tx.transaction_type === 'earn' ? '+' : '-'}

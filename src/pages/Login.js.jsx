@@ -2,7 +2,9 @@ import React, { useState } from 'react';''';
 import { SEO } from '@/components/SEO';''';
 import { GradientHeading } from '@/components/GradientHeading';''';
 import { Button } from '@/components/ui/button';
-export default function Login() {}
+export {};
+  return null;
+}
   const { isAuthenticated, user, isLoading } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();

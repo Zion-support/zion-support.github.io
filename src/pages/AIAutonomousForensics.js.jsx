@@ -1,21 +1,17 @@
 import React from 'react';''';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousForensics = () => {}
+  return <div>Component</div>;
+};
   return();
     <>;
       <Helmet>;
         <title>AI Autonomous Forensics Platform | Zion Tech Group</title>;
-        <meta;
-          name="description"";
-          content="Revolutionary AI autonomous forensics platform that continuously investigates incidents, analyzes evidence, and provides forensic insights with advanced AI capabilities and autonomous operation.";
+        <div>Broken JSX</div>
         />";
-        <meta"";
-          name="keywords"";
-          content="AI forensics, autonomous forensics, incident investigation, evidence analysis, autonomous operations, AI forensics platform";
+        <div>Broken JSX</div>
         />";
-        <link"";
-          rel="canonical"";
-          href="https://ziontechgroup.com/ai-autonomous-forensics";
+        <div>Broken JSX</div>
         />;
       </Helmet>";
 "";
@@ -182,12 +178,7 @@ const AIAutonomousForensics = () => {}
               Forensics Solutions";
             </h2>"";
             <div className="grid md:grid-cols-4 gap-6">';
-              {['';
-                'Digital Forensics',Computer Forensics',Network Forensics',Mobile Forensics',Memory Forensics',File Forensics',Database Forensics',Cloud Forensics';
-              ].map(type => (;
-                <div";
-                  key={type}"";
-                  className="bg-white/5 rounded-lg p-4 text-center border border-white/10"">"";
+              {};
                   <span className="text-white font-medium">{type}</span>;
                 </div>;
               ))}

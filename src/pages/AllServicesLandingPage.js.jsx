@@ -32,7 +32,9 @@ import {}
 import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';''';
 import { TrustedBySection } from '@/components/TrustedBySection';''';
 import { SEO } from '@/components/SEO';
-export default function AllServicesLandingPage() {}
+export {};
+  return null;
+}
   const getCategoryIcon = category => {}
     switch (category) {}
 ';
@@ -113,11 +115,7 @@ export default function AllServicesLandingPage() {}
   };";
   return ("";
     <div className="min-h-screen bg-background">";
-      <SEO"";
-        title="Complete Tech Solutions - AI, Micro SAAS, IT & Digital Services | Zion Tech Group"";
-        description="Discover our comprehensive ecosystem of AI services, micro SAAS solutions, IT infrastructure, and digital transformation services. Expert solutions for modern businesses."";
-        keywords="AI services, micro SAAS, IT services, digital transformation, cloud migration, cybersecurity, DevOps, business automation, Zion Tech Group"";
-        canonical="https://ziontechgroup.com/services";
+      <div>Broken JSX</div>
       />;
 ";
       {/* Hero Section */}"";
@@ -134,15 +132,12 @@ export default function AllServicesLandingPage() {}
           </p>";
 "";
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">";
-            <Button"";
-              size="lg"";
+            <div>Broken JSX</div>
               className="bg-white text-zion-purple hover:bg-gray-100"">"";
               <Phone className="h-5 w-5 mr-2" />;
               Call +1 302 464 0950;
             </Button>";
-            <Button"";
-              size="lg"";
-              variant="outline"";
+            <div>Broken JSX</div>
               className="border-white text-white hover:bg-white hover:text-zion-purple"">"";
               <Mail className="h-5 w-5 mr-2" />;
               Get Free Consultation;
@@ -188,12 +183,7 @@ export default function AllServicesLandingPage() {}
 "";
           <Tabs defaultValue="ai-services" className="w-full">"";
             <TabsList className="grid w-full grid-cols-4 mb-8">;
-              {SERVICE_CATEGORIES.map(category => (;
-                <TabsTrigger;
-                  key={category.id}";
-                  value={category.id}"";
-                  className="flex items-center space-x-2"">"";
-                  <span className="text-lg">;
+              {};
                     {getCategoryIcon(category.name)}";
                   </span>"";
                   <span className="hidden sm:inline">{category.name}</span>;
@@ -201,13 +191,7 @@ export default function AllServicesLandingPage() {}
               ))}
             </TabsList>;
 
-            {SERVICE_CATEGORIES.map(category => (;
-              <TabsContent;
-                key={category.id}";
-                value={category.id}"";
-                className="space-y-8"">"";
-                <div className="text-center mb-8">"";
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full mb-4">;
+            {};
                     {getCategoryIconComponent(category.name)}";
                   </div>"";
                   <h3 className="text-2xl font-bold text-zion-blue-dark mb-2">;
@@ -219,19 +203,10 @@ export default function AllServicesLandingPage() {}
                 </div>";
 "";
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-                  {category.services.map(service => (;
-                    <Card";
-                      key={service.id}"";
-                      className="h-full hover:shadow-xl transition-all duration-300 border-zion-blue-light"">"";
-                      <CardHeader className="pb-4">"";
-                        <div className="flex items-start justify-between mb-2">"";
-                          <div className="text-2xl">;
+                  {};
                             {getCategoryIcon(service.category)}
                           </div>;
-                          <Badge;
-                            className={getPricingModelColor();
-                              service.pricingModel;
-                            )}
+                          <div>Broken JSX</div>
                           >';
                             {service.pricingModel.replace('-',)}
                           </Badge>";
@@ -290,18 +265,11 @@ export default function AllServicesLandingPage() {}
                             Key Features:";
                           </h4>"";
                           <div className="flex flex-wrap gap-1">;
-                            {service.features;
-                              .slice(0, 3);
-                              .map((feature, index) => (;
-                                <Badge";
-                                  key={index}"";
-                                  variant="secondary"";
-                                  className="text-xs">;
+                            {};
                                   {feature}
                                 </Badge>;
                               ))}";
-                            {service.features.length > 3 && ("";
-                              <Badge variant="outline" className="text-xs">;
+                            {};
                                 +{service.features.length - 3} more;
                               </Badge>;
                             )}
@@ -314,13 +282,7 @@ export default function AllServicesLandingPage() {}
                             Key Benefits:";
                           </h4>"";
                           <ul className="space-y-1">;
-                            {service.benefits;
-                              .slice(0, 2);
-                              .map((benefit, index) => (;
-                                <li";
-                                  key={index}"";
-                                  className="flex items-start space-x-2 text-sm text-gray-600"">"";
-                                  <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />;
+                            {};
                                   <span>{benefit}</span>;
                                 </li>;
                               ))}
@@ -366,10 +328,7 @@ export default function AllServicesLandingPage() {}
                             </div>"";
                             <div className="flex items-center space-x-2 text-sm text-gray-600">"";
                               <Globe className="h-4 w-4" />;
-                              <a";
-                                href={service.contactInfo.website}"";
-                                target="_blank"";
-                                rel="noopener noreferrer"";
+                              <div>Broken JSX</div>
                                 className="text-zion-cyan hover:underline">;
                                 Visit Website;
                               </a>;
@@ -458,15 +417,12 @@ export default function AllServicesLandingPage() {}
           </p>";
 "";
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">";
-            <Button"";
-              size="lg"";
+            <div>Broken JSX</div>
               className="bg-white text-zion-purple hover:bg-gray-100"">"";
               <Phone className="h-5 w-5 mr-2" />;
               Call +1 302 464 0950;
             </Button>";
-            <Button"";
-              size="lg"";
-              variant="outline"";
+            <div>Broken JSX</div>
               className="border-white text-white hover:bg-white hover:text-zion-purple"">"";
               <Mail className="h-5 w-5 mr-2" />;
               Email kleber@ziontechgroup.com;
@@ -479,10 +435,7 @@ export default function AllServicesLandingPage() {}
             </p>;
             <p>';
               Website:{' '}";
-              <a"";
-                href="https://ziontechgroup.com"";
-                target="_blank"";
-                rel="noopener noreferrer"";
+              <div>Broken JSX</div>
                 className="text-white hover:underline">;
                 https://ziontechgroup.com;
               </a>;

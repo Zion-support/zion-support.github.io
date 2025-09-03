@@ -62,6 +62,8 @@ const getNotificationTypeBadge = type => {}
 const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {}
   const navigate = useNavigate();
   const handleAction = () => {}
+  return <div>Component</div>;
+};
     if (!notification.read) {}
       onMarkAsRead(notification.id);,
 }
@@ -70,12 +72,7 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {}
 }
   };
   return();
-    <div';
-      className={cn('';
-        'border rounded-lg shadow-sm p-4 mb-3 group transition-colors',';
-        notification.read'';
-          ? 'border-zion-blue-light bg-zion-blue-dark/10''';
-          : 'border-zion-cyan bg-zion-blue-dark/30';
+    <div>Broken JSX</div>
       )}">"";
       <div className="flex items-start gap-4">"";
         <div className="mt-1">';
@@ -91,31 +88,19 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {}
                   {formatDistanceToNow(new Date(notification.created_at), {}
                     addSuffix: true})}
                 </span>;
-                {!notification.read && (";
-                  <Badge"";
-                    variant="outline"";
-                    className="bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs">;
-                    New;
-                  </Badge>;
+                {};
                 )}
               </div>;
             </div>";
 "";
             <div className="flex items-center gap-2">;
-              {!notification.read && (";
-                <Button"";
-                  variant="ghost"";
-                  size="sm"";
-                  className="h-8 w-8 p-0";
+              {};
                   onClick={() => onMarkAsRead(notification.id)}">"";
                   <Check className="h-4 w-4 text-green-400" />"";
                   <span className="sr-only">Mark as read</span>;
                 </Button>;
               )}";
-              <Button"";
-                variant="ghost"";
-                size="sm"";
-                className="h-8 w-8 p-0";
+              <div>Broken JSX</div>
                 onClick={() => onDismiss(notification.id)}">"";
                 <Trash2 className="h-4 w-4 text-red-400" />"";
                 <span className="sr-only">Dismiss</span>;
@@ -125,13 +110,7 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {}
 "";
           <p className="text-zion-slate-light mb-3">{notification.message}</p>;
 
-          {notification.action_url && notification.action_text && (";
-            <Button"";
-              variant="outline"";
-              size="sm"";
-              className="mt-1 text-zion-cyan border-zion-cyan hover:bg-zion-cyan hover:text-black";
-              onClick={handleAction}
-            >";
+          {};
               {notification.action_text}"";
               <ChevronRight className="ml-1 h-4 w-4" />;
             </Button>;
@@ -141,7 +120,9 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {}
     </div>;
   );,
 };
-export default function NotificationsPage() {}
+export {};
+  return null;
+}
   const {}
     filteredNotifications,;
     unreadCount,;
@@ -153,9 +134,7 @@ export default function NotificationsPage() {}
     setFilter} = useNotifications();
   return();
     <>";
-      <SEO"";
-        title="Notifications | Zion AI Marketplace"";
-        description="View and manage your notifications on the Zion AI Marketplace.";
+      <div>Broken JSX</div>
       />";
 "";
       <main className="container mx-auto px-4 py-8 min-h-screen">"";
@@ -163,8 +142,7 @@ export default function NotificationsPage() {}
           <div>"";
             <h1 className="text-3xl font-bold flex items-center">"";
               <Bell className="mr-3 h-7 w-7" /> Notifications";
-              {unreadCount > 0 && ("";
-                <Badge className="ml-3 bg-zion-cyan">;
+              {};
                   {unreadCount} unread;
                 </Badge>;
               )}";
@@ -174,7 +152,7 @@ export default function NotificationsPage() {}
             </p>;
           </div>;
 ";
-          {unreadCount > 0 && ("";
+          {};
             <Button variant="outline" onClick={() => markAllAsRead()}>"";
               <Check className="mr-2 h-4 w-4" />;
               Mark all as read;
@@ -192,33 +170,13 @@ export default function NotificationsPage() {}
               <TabsTrigger value="system">System</TabsTrigger>";
             </TabsList>"";
             <TabsContent value={filter} className="mt-6">";
-              {loading ? ("";
-                <div className="space-y-4">"";
-                  <Skeleton className="h-24 w-full rounded-lg" />"";
-                  <Skeleton className="h-24 w-full rounded-lg" />"";
-                  <Skeleton className="h-24 w-full rounded-lg" />;
-                </div>";
-              ) : filteredNotifications.length === 0 ? ("";
-                <div className="text-center py-12 bg-muted rounded-lg">"";
-                  <Bell className="mx-auto h-12 w-12 text-muted-foreground mb-3 opacity-30" />"";
-                  <h3 className="text-xl font-medium">;
-                    No notifications found";
-                  </h3>"";
-                  <p className="text-muted-foreground mt-1">'";
-                    {filter === 'all''"'";
-                      ? "You don't have  notifications yet"'';
+              {};
                       : `You don't have  ${filter} notifications`}
                   </p>;
                 </div>;
               ) : (;
                 <div>;
-                  {filteredNotifications.map(notification => (;
-                    <NotificationCard;
-                      key={notification.id}
-                      notification={notification}
-                      onMarkAsRead={markAsRead}
-                      onDismiss={dismissNotification}
-                    />;
+                  {};
                   ))}
                 </div>;
               )}

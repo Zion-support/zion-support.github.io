@@ -2,83 +2,16 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import {;
-  Brain,;
-  Cloud,;
-  Shield,;
-  Rocket,;
-  Zap,;
-  Users,;
-  Globe,;
-  Cpu,;
-  Lock,;
-  Heart,;
-  Star,;
-  ArrowRight,;
-  CheckCircle,;
-  TrendingUp,;
-  Code,;
-  Database,;
-  Network,;
-  Smartphone,;
-  BarChart3,;
-  MessageSquare,;
-  FileText,;
-  ShoppingCart,;
-  Headphones,;
-  Mail,;
-  Search,;
-  Clock,;
-  DollarSign,;
-  Target,;
-  Workflow,;
-  Atom,;
-  Truck,;
-  Factory,;
-  Leaf,;
-  Satellite,;
-  Building,;
-  Gauge,;
-  MessageCircle,;
-  Calendar,;
-  Package,;
-  CreditCard,;
-  Globe2,;
-  ShieldCheck,;
-  BookOpen,;
-  Award,;
-  Timer,;
-  Home,;
-  Info,;
-  Phone,;
-  Settings,;
-  HelpCircle,;
-  GraduationCap,;
-  Users as UsersIcon,;
-  Briefcase,;
-  ExternalLink;,
+import {};
 } from 'lucide-react';
 ;
-interface SitemapSection {;
-  title: string;
-  icon: React.ComponentType<any>;
-  description: string;
-  links: Array<{;
-    name: string;
-    href: string;
-    description?: string;
-    icon?: React.ComponentType<any>;
-    external?: boolean;,
+interface SitemapSection {};
 }>;,
 }
 ;
-export default function ComprehensiveSitemap() {;
-  const sitemapSections: SitemapSection[] = [;
-    {;
-      title: 'Main Pages',;
-      icon: Home,;
-      description: 'Core website pages and navigation',;
-      links: [;
+export default function ComprehensiveSitemap() {};
+  return null;
+}
         { name: 'Home', href: '/', description: 'Main landing page' },;
         { name: 'About Us', href: '/about', description: 'Company information and mission' },;
         { name: 'Contact', href: '/contact', description: 'Get in touch with our team' },;
@@ -91,11 +24,7 @@ export default function ComprehensiveSitemap() {;
         { name: 'Research & Development', href: '/research-development', description: 'Innovation and R&D initiatives' }
       ];,
 },;
-    {;
-      title: 'Enhanced Services Showcase 2025',;
-      icon: Star,;
-      description: 'Our comprehensive portfolio of AI-powered micro SAAS services and solutions',;
-      links: [;
+    {};
         { name: 'Enhanced Services Overview', href: '/enhanced-services-showcase-2025', description: 'Complete services portfolio' },;
         { name: 'AI Sales Copilot Pro', href: '/services/ai-sales-copilot', description: 'Intelligent sales automation' },;
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cloud cost management' },;
@@ -120,11 +49,7 @@ export default function ComprehensiveSitemap() {;
         { name: 'AI Cybersecurity Threat Intelligence', href: '/services/ai-cybersecurity-threat-intelligence', description: 'Advanced cybersecurity' }
       ];,
 },;
-    {;
-      title: 'AI Services & Solutions',;
-      icon: Brain,;
-      description: 'Artificial Intelligence services and specialized solutions',;
-      links: [;
+    {};
         { name: 'AI Services Overview', href: '/ai-services', description: 'Complete AI services portfolio' },;
         { name: 'AI Solutions', href: '/ai-solutions', description: 'AI-powered business solutions' },;
         { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', description: 'AI-powered security' },;
@@ -137,11 +62,7 @@ export default function ComprehensiveSitemap() {;
         { name: 'AI Financial Trading', href: '/services/ai-financial-trading', description: 'FinTech AI solutions' }
       ];,
 },;
-    {;
-      title: 'IT Services & Infrastructure',;
-      icon: Settings,;
-      description: 'Information Technology services and infrastructure solutions',;
-      links: [;
+    {};
         { name: 'IT Services Overview', href: '/it-services', description: 'Complete IT services portfolio' },;
         { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Cloud infrastructure' },;
         { name: 'Cybersecurity Suite', href: '/services/ai-compliance-copilot', description: 'Security solutions' },;
@@ -155,11 +76,7 @@ export default function ComprehensiveSitemap() {;
         { name: 'AI-Powered IT Asset Management', href: '/services/ai-powered-it-asset-management', description: 'Asset management' }
       ];,
 },;
-    {;
-      title: 'Micro SaaS Products',;
-      icon: ShoppingCart,;
-      description: 'Software-as-a-Service products and solutions',;
-      links: [;
+    {};
         { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions', description: 'All SaaS products' },;
         { name: 'AI Lead Scoring', href: '/services/ai-lead-scoring', description: 'Lead qualification' },;
         { name: 'Website AI Chatbot', href: '/services/website-ai-chatbot', description: 'Customer support' },;
@@ -171,11 +88,7 @@ export default function ComprehensiveSitemap() {;
         { name: 'Smart Project Management Platform', href: '/revolutionary-services-showcase-2034', description: 'Project management' }
       ];,
 },;
-    {;
-      title: 'Specialized Solutions',;
-      icon: Target,;
-      description: 'Industry-specific and specialized technology solutions',;
-      links: [;
+    {};
         { name: 'Healthcare Technology', href: '/services/healthcare-tech', description: 'Medical technology' },;
         { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', description: 'Blockchain technology' },;
         { name: 'Quantum Computing', href: '/services/quantum-computing', description: 'Quantum solutions' },;
@@ -188,11 +101,7 @@ export default function ComprehensiveSitemap() {;
         { name: 'Emerging Technology', href: '/emerging-tech', description: 'Cutting-edge technology' }
       ];,
 },;
-    {;
-      title: 'Pricing & Plans',;
-      icon: DollarSign,;
-      description: 'Service pricing, plans, and cost information',;
-      links: [;
+    {};
         { name: 'Comprehensive Pricing Guide 2025', href: '/comprehensive-pricing-guide-2025', description: 'Detailed pricing information' },;
         { name: 'Pricing Overview', href: '/pricing', description: 'Service pricing' },;
         { name: 'Pricing Guide', href: '/pricing-guide', description: 'Detailed pricing info' },;
@@ -202,11 +111,7 @@ export default function ComprehensiveSitemap() {;
         { name: 'Schedule Demo', href: '/schedule-demo', description: 'Book a product demonstration' }
       ];,
 },;
-    {;
-      title: 'Resources & Learning',;
-      icon: BookOpen,;
-      description: 'Educational resources, documentation, and support',;
-      links: [;
+    {};
         { name: 'Help Center', href: '/help', description: 'Get support and assistance' },;
         { name: 'Documentation', href: '/documentation', description: 'Technical documentation' },;
         { name: 'Training', href: '/training', description: 'Learning resources and training' },;
@@ -219,11 +124,7 @@ export default function ComprehensiveSitemap() {;
         { name: 'API Documentation', href: '/api', description: 'API reference and guides' }
       ];,
 },;
-    {;
-      title: 'Company & Platform',;
-      icon: Building,;
-      description: 'Company information and platform features',;
-      links: [;
+    {};
         { name: 'Our Team', href: '/team', description: 'Meet our experts' },;
         { name: 'Dashboard', href: '/dashboard', description: 'User dashboard' },;
         { name: 'Login', href: '/login', description: 'Sign in to your account' },;
@@ -234,11 +135,7 @@ export default function ComprehensiveSitemap() {;
         { name: 'Enterprise Solutions', href: '/enterprise', description: 'Enterprise-grade solutions' }
       ];,
 },;
-    {;
-      title: 'Legal & Policies',;
-      icon: FileText,;
-      description: 'Legal information, policies, and compliance',;
-      links: [;
+    {};
         { name: 'Privacy Policy', href: '/privacy', description: 'Privacy information' },;
         { name: 'Terms of Service', href: '/terms', description: 'Terms and conditions' },;
         { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },;
@@ -247,11 +144,7 @@ export default function ComprehensiveSitemap() {;
         { name: 'Accessibility', href: '/accessibility', description: 'Accessibility features' }
       ];,
 },;
-    {;
-      title: 'Contact & Support',;
-      icon: Phone,;
-      description: 'Ways to get in touch and receive support',;
-      links: [;
+    {};
         { name: 'Contact Us', href: '/contact', description: 'Get in touch with our team' },;
         { name: 'Request Quote', href: '/request-quote', description: 'Request pricing information' },;
         { name: 'Schedule Demo', href: '/schedule-demo', description: 'Book a product demonstration' },;
@@ -278,10 +171,7 @@ export default function ComprehensiveSitemap() {;
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto text-center">;
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+            <div>Broken JSX</div>
             >;
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
                 Comprehensive;
@@ -292,14 +182,12 @@ export default function ComprehensiveSitemap() {;
                 solutions, and resources in one organized location.;
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link;
-                  to="/enhanced-services-showcase-2025";
+                <div>Broken JSX</div>
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105">;
                   Explore Services;
                   <ArrowRight className="ml-2 w-5 h-5" />;
                 </Link>;
-                <Link;
-                  to="/comprehensive-pricing-guide-2025";
+                <div>Broken JSX</div>
                   className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">;
                   View Pricing;
                 </Link>;
@@ -312,51 +200,17 @@ export default function ComprehensiveSitemap() {;
         <section className="py-16 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
-              {sitemapSections.map((section, sectionIndex) => {;
-                const Icon = section.icon;
-                return (;
-                  <motion.div;
-                    key={section.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: sectionIndex * 0.1 }}
-                    viewport={{ once: true }}
-                    className="bg-zion-slate-dark border border-zion-purple/30 rounded-xl p-6">;
-                    <div className="flex items-center mb-6">;
-                      <div className="p-3 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-lg mr-4">;
-                        <Icon className="w-6 h-6 text-zion-cyan" />;
-                      </div>;
-                      <div>;
+              {};
                         <h2 className="text-xl font-bold text-white">{section.title}</h2>;
                         <p className="text-zion-slate-light text-sm">{section.description}</p>;
                       </div>;
                     </div>;
 
                     <div className="space-y-3">;
-                      {section.links.map((link, linkIndex) => {;
-                        const LinkIcon = link.icon || ExternalLink;
-                        return (;
-                          <motion.div;
-                            key={link.name}
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.3, delay: linkIndex * 0.05 }}
-                            viewport={{ once: true }}
-                          >;
-                            {link.external ? (;
-                              <a;
-                                href={link.href}
-                                target="_blank";
-                                rel="noopener noreferrer";
-                                className="flex items-center justify-between p-3 rounded-lg text-zion-slate-light hover:text-zion-cyan hover:bg-zion-slate-darker transition-all duration-300 group">;
-                                <div className="flex items-center space-x-3">;
-                                  <LinkIcon className="w-4 h-4 text-zion-cyan" />;
-                                  <div>;
-                                    <div className="font-medium text-white group-hover:text-zion-cyan transition-colors">;
+                      {};
                                       {link.name}
                                     </div>;
-                                    {link.description && (;
-                                      <div className="text-xs text-zion-slate-light">;
+                                    {};
                                         {link.description}
                                       </div>;
                                     )}
@@ -365,8 +219,7 @@ export default function ComprehensiveSitemap() {;
                                 <ExternalLink className="w-4 h-4 text-zion-slate-light group-hover:text-zion-cyan transition-colors" />;
                               </a>;
                             ) : (;
-                              <Link;
-                                to={link.href}
+                              <div>Broken JSX</div>
                                 className="flex items-center justify-between p-3 rounded-lg text-zion-slate-light hover:text-zion-cyan hover:bg-zion-slate-darker transition-all duration-300 group">;
                                 <div className="flex items-center space-x-3">;
                                   <LinkIcon className="w-4 h-4 text-zion-cyan" />;
@@ -374,8 +227,7 @@ export default function ComprehensiveSitemap() {;
                                     <div className="font-medium text-white group-hover:text-zion-cyan transition-colors">;
                                       {link.name}
                                     </div>;
-                                    {link.description && (;
-                                      <div className="text-xs text-zion-slate-light">;
+                                    {};
                                         {link.description}
                                       </div>;
                                     )}
@@ -398,11 +250,7 @@ export default function ComprehensiveSitemap() {;
         {/* Quick Actions */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">;
           <div className="max-w-4xl mx-auto text-center">;
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+            <div>Broken JSX</div>
             >;
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
                 Need Help Finding Something?;
@@ -411,14 +259,12 @@ export default function ComprehensiveSitemap() {;
                 Our team is here to help you navigate our services and find the right solution;
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link;
-                  to="/contact";
+                <div>Broken JSX</div>
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300">;
                   Contact Support;
                   <ArrowRight className="ml-2 w-5 h-5" />;
                 </Link>;
-                <a;
-                  href="tel:+13024640950";
+                <div>Broken JSX</div>
                   className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">;
                   Call +1 (302) 464-0950;
                 </a>;

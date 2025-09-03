@@ -2,7 +2,9 @@ import { Link, useNavigate, useSearchParams } from 'react-router-dom';''';
 import { SEO } from '@/components/SEO';''';
 import PostForm from '@/components/community/PostForm';''';
 import { useToast } from '@/hooks/use-toast';
-export default function CreatePostPage() {}
+export {};
+  return null;
+}
   const navigate = useNavigate();
   const { toast } = useToast();
   const [searchParams] = useSearchParams();
@@ -41,17 +43,13 @@ export default function CreatePostPage() {}
   };
   return();
     (;
-      <SEO;
-        title="Create New Post | Community Forum | Zion AI Marketplace"";
-        description="Create a new discussion post in the Zion AI Marketplace community forum."";
-        keywords="community, forum, discussion, create post, new thread";
+      <div>Broken JSX</div>
       />;
     ),";
     ("";
       <div className="container py-8">"";
         <div className="flex items-center gap-3 mb-6">";
-          <Link"";
-            to="/community"";
+          <div>Broken JSX</div>
             className="text-sm text-muted-foreground hover:text-foreground">;
             Forum";
           </Link>"";

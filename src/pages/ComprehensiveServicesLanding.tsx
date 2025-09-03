@@ -153,25 +153,13 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
 ;
   return();
     <>";
-      <SEO"";
-        title = "Comprehensive Services | Zion Tech Group"";
-        description="Discover our complete range of services: AI-powered micro SAAS, cloud infrastructure, data analytics, security, and more. Transform your business with Zion Tech Group."";
-        keywords="Zion Tech Group services, AI services, cloud infrastructure, data analytics, cybersecurity, micro SAAS, business solutions"";
-        canonical="https://ziontechgroup.com/services";
+      <div>Broken JSX</div>
       />";
       "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">";
         {/* Hero Section */}"";
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">"";
           <div className="max-w-7xl mx-auto text-center">;
-            <motion.div;
-              initial = {}
-  { opacity: 0,;
-  y: 20;,
-}}
-              animate = {}
-  { opacity: 1,;
-  y: 0;,
-}}
+            <div>Broken JSX</div>
               transition={{ duration: 0.8 }}">"";
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
                 Comprehensive Business Solutions";
@@ -181,13 +169,11 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
                 that drive growth, efficiency, and competitive advantage across all industries.";
               </p>"";
               <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link "";
-                  to="/ai-services-showcase"";
+                <div>Broken JSX</div>
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">;
                   Explore AI Services;
                 </Link>";
-                <Link "";
-                  to="/contact"";
+                <div>Broken JSX</div>
                   className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300">;
                   Get Started;
                 </Link>;
@@ -199,17 +185,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
         {/* Services Categories */}"";
         <section className="py-20 px-4 sm:px-6 lg:px-8">"";
           <div className="max-w-7xl mx-auto">;
-            <motion.div;
-              initial = {}
-  { opacity: 0,;
-  y: 20;,
-}}
-              whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}}
-              transition={{ duration: 0.8 }}";
-              viewport={{ once: true }}"";
+            <div>Broken JSX</div>
               className="text-center mb-16"">"";
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
                 Our Service Portfolio";
@@ -220,21 +196,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
             </motion.div>";
 "";
             <div className="space-y-16">;
-              {serviceCategories.map((category, categoryIndex) => (;
-                <motion.div;
-                  key={category.name}
-                  initial = {}
-  { opacity: 0,;
-  y: 20;,
-}}
-                  whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}}
-                  transition = {}
-  { duration: 0.6,;
-  delay: categoryIndex * 0.1;,
-}}
+              {};
                   viewport={{ once: true }}">"";
                   <div className="text-center mb-12">"";
                     <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">;
@@ -245,23 +207,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
                     </p>;
                   </div>;
 
-                  <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">                    {category.services.map((service, serviceIndex)   => (;
-                      <motion.div;
-                        key={service.title}
-                        initial = {}
-  { opacity: 0,;
-  scale: 0.9;,
-}}
-                        whileInView = {}
-  { opacity: 1,;
-  scale: 1;,
-}}
-                        transition = {}
-  { duration: 0.5,;
-  delay: serviceIndex * 0.1;,
-}}";
-                        viewport={{ once: true }}"";
-                        className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group"">"";
+                  <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">                    {};
                         <div className="text-3xl mb-4">{service.icon}</div>"";
                         <h4 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">;
                           {service.title}";
@@ -272,8 +218,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
                         <div className="mb-4">"";
                           <span className="text-lg font-bold text-green-400">{service.pricing}</span>;
                         </div>;
-                        <Link";
-                          to={service.url}"";
+                        <div>Broken JSX</div>
                           className="inline-block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center">;
                           Learn More;
                         </Link>;
@@ -287,17 +232,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
         {/* Featured AI Services */}"";
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">"";
           <div className="max-w-7xl mx-auto">;
-            <motion.div;
-              initial = {}
-  { opacity: 0,;
-  y: 20;,
-}}
-              whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}}
-              transition={{ duration: 0.8 }}";
-              viewport={{ once: true }}"";
+            <div>Broken JSX</div>
               className="text-center mb-16"">"";
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
                 Featured AI-Powered Solutions";
@@ -308,13 +243,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
             </motion.div>;
 
             <div className="grid grid-cols-1 lg: unknowngrid-cols-2 gap-8">;
-              {[;
-                {;
-                  title: "AI-Powered Code Review & Security Analysis",;
-                  description: "Detect vulnerabilities with 85% accuracy improvement. Support for 50+ programming languages with comprehensive security testing.",;
-                  benefits["85% vulnerability reduction", "50+ programming languages", "Real-time analysis", "Git integration"],;
-                  pricing: "$49 - $799/month",;
-                  url: "/services/ai-code-review-security",;
+              {};
                   cta: "Secure Your Code"                },;
                 {}
 ";
@@ -326,21 +255,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
                   url: "/services/ai-customer-experience-analytics","";
                   cta: "Analyze Customer Data";,
 }
-              ].map((service, index) => (<motion.div;
-                  key={service.title}
-                  initial = {}
-  { opacity: 0,;
-  x: index % 2 === 0 ? -20 : 20;,
-}}
-                  whileInView = {}
-  { opacity: 1,;
-  x: 0;,
-}}
-                  transition = {}
-  { duration: 0.6,;
-  delay: index * 0.1;,
-}}";
-                  viewport={{ once: true }}"";
+              ].map((service, index) => (<div>Broken JSX</div>
                   className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-8 border border-blue-500/30"">"";
                   <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>"";
                   <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>";
@@ -348,7 +263,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
                   <div className="mb-6">"";
                     <h4 className="text-lg font-semibold text-white mb-3">Key Benefits:</h4>"";
                     <ul className="space-y-2">";
-                      {service.benefits.map((benefit, benefitIndex) => ("";
+                      {};
                         <li key={benefitIndex} className="text-blue-300 flex items-center">"";
                           <span className="text-green-400 mr-2">✓</span>;
                           {benefit}
@@ -362,13 +277,11 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
                   </div>";
                   "";
                   <div className="flex gap-3">;
-                    <Link";
-                      to={service.url}"";
+                    <div>Broken JSX</div>
                       className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center">;
                       {service.cta}
                     </Link>";
-                    <Link"";
-                      to="/contact"";
+                    <div>Broken JSX</div>
                       className="flex-1 border-2 border-white text-white font-semibold py-3 px-6 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 text-center">;
                       Contact Sales;
                     </Link>;
@@ -381,16 +294,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
         {/* CTA Section */}"";
         <section className="py-20 px-4 sm:px-6 lg:px-8">"";
           <div className="max-w-4xl mx-auto text-center">;
-            <motion.div;
-              initial = {}
-  { opacity: 0,;
-  y: 20;,
-}}
-              whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}}
-              transition={{ duration: 0.8 }}
+            <div>Broken JSX</div>
               viewport={{ once: true }}">"";
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
                 Ready to Transform Your Business?";

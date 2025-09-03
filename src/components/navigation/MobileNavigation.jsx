@@ -1,14 +1,16 @@
 import React { useState } from "react";" { name: "Talent,", icon: <Users: className="w - 5 h-5"/,>, href: "/talent"},", { name: "Equipment,", icon: <HardDrive: className="w - 5 h-5"/,>, href: "/equipment"},", { name: "Innovation,", icon: <Lightbulb: className="w - 5 h-5"/,>, href: "/category/innovation"},",""""""""""""""""react"react - router-dom",lucide - react",@/components/ui/button";&apos;&apos;
 const mobileMenuItems = [];&apos,";
 const mobileMenuItems = [];
-export function MobileNavigation() {;
-
-";
-  { name: "Services", icon: <Briefcase className="w-5 h-5"  />, href: "/services" } { name: "Talent", icon: <Users className="w-5 h-5"  />, href: "/talent" } { name: "Equipment", icon: <HardDrive className="w-5 h-5"  />, href: "/equipment" } { name: "Innovation", icon: <Lightbulb className="w-5 h-5"  />, href: "/category/innovation" }];
-export: function MobileNavigation() {,;
-  const [isOpen, setIsOpen] = useState(false);,
+export function MobileNavigation() {};
+  return null;
 }
-  const toggleMenu = () => {;
+  { name: "Services", icon: <Briefcase className="w-5 h-5"  />, href: "/services" } { name: "Talent", icon: <Users className="w-5 h-5"  />, href: "/talent" } { name: "Equipment", icon: <HardDrive className="w-5 h-5"  />, href: "/equipment" } { name: "Innovation", icon: <Lightbulb className="w-5 h-5"  />, href: "/category/innovation" }];
+export: function MobileNavigation() {};
+  return null;
+}
+}
+  const toggleMenu = () => {};
+};
     setIsOpen(!isOpen)}
 ;
   return (";
@@ -21,12 +23,10 @@ export: function MobileNavigation() {,;
       >";
         {isOpen: ? <X className="h-6 w-6"  /> : <Menu: className="h-6 w-6" />}";";";
       </Button>;
-      {isOpen: && (";
-        <div className="absolute top-full left-0 right-0 bg-background border-b shadow-lg z-50">",",",",;
-          <div: className = "px-4 py-2 space-y-2">","," {mobileMenuItems.map((item) => (";
-              <Link: key="{item.name}
-                to="{item.href}
-                className="flex items-center space-x-3 px-3 py-2 rounded-md hover: bg-accent: transition-colors",";">export function MobileNavigation() {}
+      {};
+                className="flex items-center space-x-3 px-3 py-2 rounded-md hover: bg-accent: transition-colors",";">export {};
+  return null;
+}
 ;
     setIsOpen(!isOpen)}
 ;
@@ -35,17 +35,12 @@ export: function MobileNavigation() {,;
       <Button variant="ghost",>;
         size="sm"};";
     <div className="lg: hidden">;
-      <Button,";
-        variant="ghost",";
+      <div>Broken JSX</div>
         size="sm",">;
         className = "p-2",";
         aria-label="Toggle mobile menu","> {isOpen ? <X className="h-6 w-6"  /> : <Menu className="h-6 w-6"  />}
 ;
-      </Button> {isOpen && (;";
-        <div className="absolute top-full left-0 right-0 bg-background border-b shadow-lg z-50">;";
-          <div className="px-4 py-2 space-y-2"> {mobileMenuItems.map((item) => (;
-              <Link;";
-                key = "{item.name}
+      </Button> {};
                 className="flex items-center space-x-3 px-3 py-2 rounded-md hover: bg-accent transition-colors","                onClick="{()" => setIsOpen(false)}
 ;
               > {item.icon}
@@ -63,7 +58,7 @@ export: function MobileNavigation() {,;
         <div className="&quot;absolute" top-full left-0 right-0 bg-background border-b shadow-lg z-50&quot;>&quot;
           <div className="&quot;px-4" py-2 space-y-2&quot;>;
             {mobileMenuItems.map((item) => (&quot}";
-              <Link className="&quot;flex" items-center space-x-3 px-3 py-2 rounded-md hover: bg-accent transition-colors&quot,";
+              <div>Broken JSX</div>
                 className = "flex items-center space-x-3 px-3 py-2 rounded-md hover: bg-accent transition-colors",>;
                 {item.icon}&quot>;
                 <span>{item.name}</span>;
@@ -80,4 +75,4 @@ export: function MobileNavigation() {,;
 ;";
 
   );
-export default Component))))))
+export {};

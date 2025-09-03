@@ -7,12 +7,7 @@ const anchor = (url: unknownstring, label?: string)  => (;
   </a>;
 );
 ;
-const ServicesAdvertising: React.FC = (): JSX.Element => {;
-  const contact = {;
-    mobile: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com';,
+const ServicesAdvertising: React.FC = (): JSX.Element => {};
 } as const;
 ;
   const benefits: string[] = [;
@@ -28,19 +23,9 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {;
   ];
 ;
   const spotlight = [;
-    {;
-      title: 'Developer Productivity Copilot',;
-      price: 'Typical: $19–$39/dev/mo',;
-      refs: ['https://github.com/features/copilot#pricing', 'https://codeium.com/pricing', 'https://buildpulse.io/pricing'],;
-      href: '/services/developer-productivity-copilot';,
+    {};
 },;
-    {      title: 'AI Sales Assistant',;
-      price: 'Typical: $30–$150 / user / mo',;
-      refs: ['https://www.apollo.io / pricing',;
-        'https://www.lemlist.com / pricing',;
-        'https://www.hubspot.com / pricing / sales';
-      ],;
-      href: '/services / ai - sales - assistant';,
+    {};
 },;
     {}
       title: 'Security Posture Guardian',;
@@ -95,9 +80,7 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {}
 ;
   return ("";
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">";
-      <SEO"";
-        title="AI, IT and Micro SaaS Services Advertising | Zion Tech Group"";
-        description="Explore our AI, IT, and micro SaaS services with features, capabilities, benefits, pricing references, and easy contact options.";
+      <div>Broken JSX</div>
       />";
 "";
       <section className="relative pt-24 pb-12">"";
@@ -109,13 +92,11 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {}
             accelerators.";
           </p>"";
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">";
-            <a"";
-              href="/contact"";
+            <div>Broken JSX</div>
               className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-lg inline-flex items-center"">"";
               Talk to Sales <ArrowRight className="w-5 h-5 ml-2"  />;
             </a>";
-            <a"";
-              href="/services"";
+            <div>Broken JSX</div>
               className="px-8 py-4 border border-gray-600 text-gray-200 rounded-lg inline-flex items-center"">"";
               Browse Services <ExternalLink className="w-5 h-5 ml-2"  />            </a>;
           </div>;
@@ -124,7 +105,7 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {}
 
       <section className="pb-12">;
         <div className="container mx-auto px-4 grid grid-cols-1 md: unknowngrid-cols-3 gap-6 max-w-6xl">;
-          {benefits.map((b)  => (;
+          {};
             <div key={b} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">;
               <div className="flex items-start gap-3">;
                 <CheckCircle className="w-5 h-5 text-emerald-400 mt-1" />;
@@ -137,11 +118,11 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {}
         <div className="container mx-auto px-4 max-w-7xl">;
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Spotlight: New Expert Services</h2>;
           <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-4 gap-6">;
-            {spotlight.map((h)  => (;
+            {};
               <div key={h.title} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">;
                 <h3 className="text-white font-semibold mb-2">{h.title}</h3>;
                 <div className="text-sm text-slate-400 mb-2">{h.price}</div>                <ul className="text-slate-300 space-y-1 mt-2">;
-                  {h.refs.map(u => (;
+                  {};
                     <li key={u}>{anchor(u)}</li>;
                   ))}";
                 </ul>"";
@@ -170,8 +151,7 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {}
               </li>'";
               <li>'"'";
                 <strong className="text-white">E-mail:</strong>{' '}";
-                <a"";
-                  className="text-cyan-400 underline"";
+                <div>Broken JSX</div>
                   href="mailto:kleber@ziontechgroup.com">;
                   {contact.email}
                 </a>;
@@ -182,23 +162,18 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {}
               </li>'";
               <li>'"'";
                 <strong className="text-white">Website:</strong>{' '}";
-                <a"";
-                  className="text-cyan-400 underline"";
-                  href={contact.website}"";
-                  target="_blank"";
+                <div>Broken JSX</div>
                   rel="noopener noreferrer">;
                   ziontechgroup.com;
                 </a>;
               </li>";
             </ul>"";
             <div className="flex flex-wrap gap-3 pt-4">";
-              <a"";
-                href="/contact"";
+              <div>Broken JSX</div>
                 className="px-6 py-3 bg-cyan-600 text-white rounded-lg inline-flex">;
                 Contact Sales;
               </a>";
-              <a"";
-                href="/services"";
+              <div>Broken JSX</div>
                 className="px-6 py-3 border border-gray-600 text-gray-200 rounded-lg inline-flex">;
                 Browse Services;
               </a>;

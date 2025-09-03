@@ -27,6 +27,8 @@ import { MyApplications } from '@/components/jobs/MyApplications';''';
 import { ProjectOfferBanner } from '@/components/projects/ProjectOfferBanner';''';
 import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard';
 function TalentDashboardContent() {}
+  return null;
+}
   const { user } = useAuth();';
   const [activeTab, setActiveTab] = useState('job-matches');
   const onboardingStatus = useOnboardingStatus();
@@ -37,9 +39,7 @@ function TalentDashboardContent() {}
     onboardingStatus.matchReceived;
   return();
     <>;
-      <SEO;
-        title="Talent Dashboard | Zion AI Marketplace"";
-        description="Your personalized talent dashboard with job matches and professional opportunities.";
+      <div>Broken JSX</div>
       />";
 "";
       <main className="container mx-auto px-4 py-8">"";
@@ -75,14 +75,7 @@ function TalentDashboardContent() {}
                 <div className="flex items-center justify-between">"";
                   <div className="flex items-center gap-3">"";
                     <Avatar className="h-12 w-12 border">;
-                      {user?.avatarUrl ? (";
-                        <img"";
-                          loading="lazy";
-                          src={user.avatarUrl}';
-                          alt={user.displayName || 'User'}
-                        />";
-                      ) : ("";
-                        <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">';
+                      {};
                           {user?.displayName?.charAt(0) || 'U'}
                         </div>;
                       )}
@@ -129,10 +122,7 @@ function TalentDashboardContent() {}
 
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />";
-            {showAdvanced && ("";
-              <div className="mt-6">;
-                <AdvancedOnboardingSteps />;
-              </div>;
+            {};
             )}
 ";
             {/* Upcoming Interviews Card */}"";
@@ -215,7 +205,9 @@ function TalentDashboardContent() {}
     </>;
   );,
 }
-export default function TalentDashboard() {}
+export {};
+  return null;
+}
   return();
     <ProtectedRoute>;
       <TalentDashboardContent />;

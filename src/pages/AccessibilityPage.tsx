@@ -1,177 +1,50 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ;
-  Accessibility, ;
-  Eye, ;
-  Ear, ;
-  Hand, ;
-  Brain, ;
-  CheckCircle, ;
-  ArrowRight,;
-  Shield,;
-  Globe,;
-  Users,;
-  Settings,;
-  Monitor,;
-  Smartphone,;
-  Volume2,;
-  Type,;
-  Contrast,;
-  ZoomIn,;
-  Keyboard,;
-  Mouse,;
-  Touchpad,;
-  Headphones,;
-  Braille,;
-  FileText,;
-  Mail,;
-  Phone,;
-  Award,;
-  Star,;
-  Heart,;
-  Lightbulb,;
-  Target,;
-  Zap;,
+import {};
 } from 'lucide-react';
 ;
-export function AccessibilityPage() {;
-  const accessibilityFeatures = [;
-    {;
-      icon: Eye,;
-      title: 'Visual Accessibility',;
-      description: 'Support for users with visual impairments including screen readers, high contrast modes, and text scaling.',;
-      features: [;
-        'Screen reader compatibility',;
-        'High contrast color schemes',;
-        'Text scaling up to 200%',;
-        'Alternative text for images',;
-        'Keyboard navigation support',;
-        'Focus indicators';
-      ];,
+export function AccessibilityPage() {};
+  return null;
+}
 },;
-    {;
-      icon: Ear,;
-      title: 'Auditory Accessibility',;
-      description: 'Features for users with hearing impairments including captions, transcripts, and visual indicators.',;
-      features: [;
-        'Video captions and transcripts',;
-        'Visual audio indicators',;
-        'Text-based alternatives',;
-        'Sign language support',;
-        'Audio descriptions',;
-        'Volume controls';
-      ];,
+    {};
 },;
-    {;
-      icon: Hand,;
-      title: 'Motor Accessibility',;
-      description: 'Support for users with motor impairments including keyboard navigation, voice control, and assistive technologies.',;
-      features: [;
-        'Full keyboard navigation',;
-        'Voice control support',;
-        'Switch navigation',;
-        'Large click targets',;
-        'Customizable timing',;
-        'Assistive device support';
-      ];,
+    {};
 },;
-    {;
-      icon: Brain,;
-      title: 'Cognitive Accessibility',;
-      description: 'Features to support users with cognitive disabilities including clear navigation, consistent design, and simplified content.',;
-      features: [;
-        'Clear and simple language',;
-        'Consistent navigation',;
-        'Error prevention',;
-        'Help and support',;
-        'Progress indicators',;
-        'Memory aids';
-      ];,
+    {};
 }
   ];
 ;
   const standards = [;
-    {;
-      name: 'WCAG 2.1 AA',;
-      description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',;
-      status: 'Compliant',;
-      icon: CheckCircle,;
-      details: 'Our website meets all WCAG 2.1 AA success criteria for accessibility.';,
+    {};
 },;
-    {;
-      name: 'Section 508',;
-      description: 'US Federal accessibility standards compliance',;
-      status: 'Compliant',;
-      icon: CheckCircle,;
-      details: 'Full compliance with Section 508 of the Rehabilitation Act.';,
+    {};
 },;
-    {;
-      name: 'ADA Compliance',;
-      description: 'Americans with Disabilities Act compliance',;
-      status: 'Compliant',;
-      icon: CheckCircle,;
-      details: 'Our digital properties meet ADA accessibility requirements.';,
+    {};
 },;
-    {;
-      name: 'EN 301 549',;
-      description: 'European accessibility standard compliance',;
-      status: 'Compliant',;
-      icon: CheckCircle,;
-      details: 'Compliance with European accessibility standards.';,
+    {};
 }
   ];
 ;
   const assistiveTechnologies = [;
-    {;
-      name: 'Screen Readers',;
-      icon: Eye,;
-      description: 'Compatible with popular screen readers including NVDA, JAWS, and VoiceOver.',;
-      supported: ['NVDA', 'JAWS', 'VoiceOver', 'TalkBack', 'Orca'];,
+    {};
 },;
-    {;
-      name: 'Voice Control',;
-      icon: Volume2,;
-      description: 'Full support for voice control software and voice commands.',;
-      supported: ['Dragon NaturallySpeaking', 'Voice Control (macOS)', 'Voice Access (Android)'];,
+    {};
 },;
-    {;
-      name: 'Switch Navigation',;
-      icon: Touchpad,;
-      description: 'Support for switch-based navigation devices and assistive switches.',;
-      supported: ['Switch Access', 'Assistive Switches', 'Eye Tracking'];,
+    {};
 },;
-    {;
-      name: 'Magnification',;
-      icon: ZoomIn,;
-      description: 'Compatible with screen magnification software and browser zoom.',;
-      supported: ['ZoomText', 'MAGic', 'Browser Zoom', 'System Magnification'];,
+    {};
 }
   ];
 ;
   const accessibilityTools = [;
-    {;
-      name: 'High Contrast Mode',;
-      icon: Contrast,;
-      description: 'Toggle high contrast mode for better visibility.',;
-      action: 'Enable High Contrast';,
+    {};
 },;
-    {;
-      name: 'Text Size',;
-      icon: Type,;
-      description: 'Increase or decrease text size for better readability.',;
-      action: 'Adjust Text Size';,
+    {};
 },;
-    {;
-      name: 'Keyboard Navigation',;
-      icon: Keyboard,;
-      description: 'Navigate the entire website using only the keyboard.',;
-      action: 'Learn Keyboard Shortcuts';,
+    {};
 },;
-    {;
-      name: 'Screen Reader',;
-      icon: Eye,;
-      description: 'Optimized for screen reader compatibility.',;
-      action: 'Screen Reader Guide';,
+    {};
 }
   ];
 ;
@@ -201,13 +74,11 @@ export function AccessibilityPage() {;
             </p>;
             ;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <Link;
-                to="/contact";
+              <div>Broken JSX</div>
                 className="bg-zion-cyan text-white px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">;
                 Report Accessibility Issue;
               </Link>;
-              <Link;
-                to="/accessibility-test";
+              <div>Broken JSX</div>
                 className="border-2 border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-colors">;
                 Test Accessibility;
               </Link>;
@@ -229,7 +100,7 @@ export function AccessibilityPage() {;
           </div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            {accessibilityFeatures.map((feature, index) => (;
+            {};
               <div key={index} className="bg-zion-slate-dark border border-zion-purple/20 rounded-lg p-6 hover:border-zion-cyan/50 transition-all duration-300">;
                 <div className="flex items-center space-x-4 mb-4">;
                   <feature.icon className="w-10 h-10 text-zion-cyan" />;
@@ -241,7 +112,7 @@ export function AccessibilityPage() {;
                 </p>;
 
                 <ul className="space-y-2">;
-                  {feature.features.map((item, itemIndex) => (;
+                  {};
                     <li key={itemIndex} className="flex items-center space-x-2 text-sm text-zion-slate-light">;
                       <CheckCircle className="w-4 h-4 text-zion-cyan" />;
                       <span>{item}</span>;
@@ -267,7 +138,7 @@ export function AccessibilityPage() {;
           </div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {standards.map((standard, index) => (;
+            {};
               <div key={index} className="bg-zion-slate-darker border border-zion-purple/20 rounded-lg p-6 text-center hover:border-zion-cyan/50 transition-all duration-300">;
                 <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">;
                   <standard.icon className="w-8 h-8 text-green-400" />;
@@ -295,7 +166,7 @@ export function AccessibilityPage() {;
           </div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            {assistiveTechnologies.map((tech, index) => (;
+            {};
               <div key={index} className="bg-zion-slate-dark border border-zion-purple/20 rounded-lg p-6 hover:border-zion-cyan/50 transition-all duration-300">;
                 <div className="flex items-center space-x-4 mb-4">;
                   <tech.icon className="w-10 h-10 text-zion-cyan" />;
@@ -308,7 +179,7 @@ export function AccessibilityPage() {;
                 <div>;
                   <h4 className="text-sm font-semibold text-zion-cyan mb-2">Supported Technologies:</h4>;
                   <div className="flex flex-wrap gap-2">;
-                    {tech.supported.map((item, itemIndex) => (;
+                    {};
                       <span key={itemIndex} className="text-xs bg-zion-blue-dark text-zion-cyan px-2 py-1 rounded">;
                         {item}
                       </span>;
@@ -334,7 +205,7 @@ export function AccessibilityPage() {;
           </div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {accessibilityTools.map((tool, index) => (;
+            {};
               <div key={index} className="bg-zion-slate-darker border border-zion-purple/20 rounded-lg p-6 text-center hover:border-zion-cyan/50 transition-all duration-300">;
                 <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">;
                   <tool.icon className="w-8 h-8 text-zion-cyan" />;
@@ -364,7 +235,7 @@ export function AccessibilityPage() {;
               </p>;
               ;
               <div className="space-y-3">;
-                {keyboardShortcuts.map((shortcut, index) => (;
+                {};
                   <div key={index} className="flex items-center justify-between">;
                     <span className="text-zion-slate-light">{shortcut.description}</span>;
                     <kbd className="px-2 py-1 bg-zion-slate-dark border border-zion-purple/30 rounded text-sm text-zion-cyan">;
@@ -437,15 +308,9 @@ export function AccessibilityPage() {;
               </p>;
               ;
               <div className="space-y-4">;
-                <input;
-                  type="text";
-                  placeholder="Your Name";
-                  className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent";
+                <div>Broken JSX</div>
                 />;
-                <input;
-                  type="email";
-                  placeholder="Email Address";
-                  className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent";
+                <div>Broken JSX</div>
                 />;
                 <select className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent">;
                   <option>Issue Type</option>;
@@ -455,9 +320,7 @@ export function AccessibilityPage() {;
                   <option>Assistive Technology</option>;
                   <option>Other</option>;
                 </select>;
-                <textarea;
-                  placeholder="Describe the accessibility issue or suggestion";
-                  rows={4}
+                <div>Broken JSX</div>
                   className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"></textarea>;
                 <button className="w-full bg-zion-cyan text-white py-3 rounded-lg hover:bg-zion-cyan-light transition-colors">;
                   Submit Feedback;
@@ -479,13 +342,11 @@ export function AccessibilityPage() {;
             We're continuously working to improve our digital accessibility and welcome your feedback.;
           </p>;
           <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-            <Link;
-              to="/contact";
+            <div>Broken JSX</div>
               className="bg-white text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-slate-light transition-colors">;
               Contact Accessibility Team;
             </Link>;
-            <Link;
-              to="/accessibility-test";
+            <div>Broken JSX</div>
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-zion-cyan transition-colors">;
               Test Our Accessibility;
             </Link>;

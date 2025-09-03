@@ -2,59 +2,15 @@ import React from 'react';
 import { SEO } from "@/components/SEO";
 import Link from 'next/link';
 import { Check, Wifi, Cpu, Database, Shield, Zap, Globe, Target } from 'lucide-react';
-export default function IoTEdgeComputingServices() {;
-    const industries = [;
-        'Smart Cities & Municipalities',;
-        'Manufacturing & Industry 4.0',;
-        'Healthcare & Medical Devices',;
-        'Agriculture & Precision Farming',;
-        'Energy & Utilities',;
-        'Transportation & Logistics',;
-        'Retail & Smart Stores',;
-        'Building Management & Smart Homes';
-    ];
-    const technologies = [;
-        'LoRaWAN & NB-IoT',;
-        '5G & Edge Computing',;
-        'MQTT & CoAP Protocols',;
-        'Kubernetes & Docker',;
-        'Apache Kafka & Spark',;
-        'TensorFlow Lite & ONNX',;
-        'AWS IoT & Azure IoT',;
-        'Google Cloud IoT & IBM Watson';
-    ];
-    const benefits = [;
-        'Real-time data processing and insights',;
-        'Reduced latency and improved performance',;
-        'Lower bandwidth and cloud costs',;
-        'Enhanced security and privacy',;
-        'Scalable IoT deployments',;
-        'Predictive maintenance and optimization';
-    ];
-    const useCases = [;
-        {;
-            title: 'Smart Manufacturing',;
-            description: 'Real-time monitoring of production lines, predictive maintenance, and quality control automation.',;
-            roi: '25-40% cost reduction',;
-            implementation: '8-12 weeks';,
+export default function IoTEdgeComputingServices() {};
+  return null;
+}
 },;
-        {;
-            title: 'Smart Cities',;
-            description: 'Traffic management, environmental monitoring, public safety, and utility optimization.',;
-            roi: '30-50% efficiency improvement',;
-            implementation: '12-20 weeks';,
+        {};
 },;
-        {;
-            title: 'Healthcare IoT',;
-            description: 'Patient monitoring, medical device management, and healthcare facility optimization.',;
-            roi: '20-35% operational improvement',;
-            implementation: '10-16 weeks';,
+        {};
 },;
-        {;
-            title: 'Agricultural IoT',;
-            description: 'Precision farming, crop monitoring, irrigation control, and livestock management.',;
-            roi: '15-30% yield improvement',;
-            implementation: '6-10 weeks';,
+        {};
 }
     ];
     return (<div className="min-h-screen bg-background">;

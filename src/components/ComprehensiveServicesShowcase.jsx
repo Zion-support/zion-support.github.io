@@ -4,7 +4,8 @@ import { motion } from 'framer-motion';
 ;
 ;
 ;
-const ComprehensiveServicesShowcase = () => {    const [selectedCategory, setSelectedCategory] = useState('all');
+const ComprehensiveServicesShowcase = () => {};
+};
     const [selectedService, setSelectedService] = useState(null);
     const allServices = [];
         ...comprehensiveMicroSaasServices2025,;
@@ -63,9 +64,7 @@ const ComprehensiveServicesShowcase = () => {    const [selectedCategory, setSel
             if(!category);
                 return true;
             // Handle special category mappings;
-            const categoryMappings = {;
-
-;
+            const categoryMappings = {};
 export { ComprehensiveServicesShowcase };
 ;
 export { ComprehensiveServicesShowcase };
@@ -109,6 +108,8 @@ id: &apos,micro-saas&apos,"&apos;&apos,;
 ;
 ];&apos;&apos;
 export function ComprehensiveServicesShowcase() {}";
+  return null;
+}
 
   const [selectedCategory, setSelectedCategory] = useState("micro-saas");,
 }
@@ -153,13 +154,13 @@ delayChildren: 0.2}
 ;
   const itemVariants = {}
 ;
-  hidden: { y: 20,;
+  hidden: {};
 opacity: 0},;
       y: 0,";
 duration: 0.5,;
         ease: "easeOut""}
 ;
-  hidden: { ,y: 20,;
+  hidden: {};
   opacity: 0},;
   hidden: { y: 20, opacity: 0},;
       y: 0, opacity: 1,;
@@ -171,21 +172,12 @@ duration: 0.5,;
 ;
   const cardVariants = {}
 ;
-  hidden: { scale: 0.95,;
-scale: 1,;
-duration: 0.4,;,
+  hidden: {};
 }";
   return ("";";
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"";";
       <div className="max - w-7xl mx-auto px-4 sm:px-6 lg:px-8"> {/* comment */}",;
-        <motion.div "";";
-          className="text-center mb-16";
-          initial = {}
-;
-  { opacity: 0,;
-y: 30}}
-;
-  hidden: { scal,e: 0.95,;
+        <div>Broken JSX</div>
   hidden: { scale: 0.95, opacity: 0}>;
       scale: 1, opacity: 1,>;
         duration: 0.4,&apos;&apos,";
@@ -193,7 +185,7 @@ y: 30}}
     <section className="&apos;py-20" bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light&apos;>"&apos;&apos,&apos;&apos;";
       <div className="&apos;max-w-7xl" mx-auto px-4 sm:px-6 l,g: px-8&apos,>";
         {/* comment */}&apos;&apos,&apos;&apos,;
-        <motion.div &apos;&apos,";";
+        <div>Broken JSX</div>
           className="&apos;text-center" mb-16&apos;&apos>;
         duration: 0.4, "";,
 }";
@@ -201,12 +193,8 @@ y: 30}}
     <section className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"";
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",,;
         {/* comment */}"";
-        <motion.div """";";
-          className="text-center mb-16"  { opacity: 0, y: 30}}
-;
-          animate = {}
-;
-  { opacity: 1>;
+        <div>Broken JSX</div>
+  {};
 y: 0}}">;
           transition="{{" duration: 0.6 }}"">"";";
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,;
@@ -290,19 +278,11 @@ designed to transform your business and drive exponential growth.;
                 364 E Main St STE 1008 Middletown DE 19709,;
         </motion.div>";,;
         {/* comment */}&apos;&apos,&apos;&apos,;
-        <motion.div &apos;&apos,&apos;";
-          className="&apos;flex" flex-wrap justify-center gap-4 mb-12&apos;&apos {/* comment */}""";
-        <motion.div "";
-          className="flex flex-wrap justify-center gap-4 mb-12"  { opacity: 0, y: 20}}
-;
-          transition = {}
-;
-  { duration: 0.6, { duration: 0.6>;
+        <div>Broken JSX</div>
+  {};
   delay: 0.2}}>;
-        >{serviceCategories.map ( (category) => (&apos}&apos;<button { duration: 0.6, delay: 0.2}}
-;
-        >{serviceCategories.map ( (category) => (<button;";
-              key = "{category.id}
+        >{serviceCategories.map ( (category) => (&apos}&apos;<div>Broken JSX</div>
+        >{};
               onClick="{()" => setSelectedCategory(category.id)}";
               className="{"flex" items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${}
 ;
@@ -325,10 +305,7 @@ designed to transform your business and drive exponential growth.;
               <span>{category.name}</span>;
             </button>) ) }";
         {/* comment */}&apos;&apos,&apos;&apos,;
-        <motion.div&apos;&apos,&apos;";
-          className="&apos;grid" grid-cols-1 md:grid-cols-2 l,g: grid-cols-3 gap-8&apos,&apos,",";
-          variants={containerVariants}&apos;&apos,";
-          initial=&apos;hidden&apos;&apos,";
+        <div>Broken JSX</div>
           animate="&apos;visible&apos;&apos,">{currentServices.map((service) => (&apos}&apos;
             <motion.div&apos;&apos>;
               key={service.id}&apos;&apos,";";
@@ -337,13 +314,7 @@ designed to transform your business and drive exponential growth.;
               onClick="{" () => setSelectedService (service) }
 ;
             >&apos;&apos,&apos;&apos,;
-              <motion.div&apos;&apos,";";
-                className="&apos;bg-zion-slate-dark/80" backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/40 transition-all duration-300 h-full&apos,&apos,";
-                variants = "{cardVariants}"                whileHover = {}
-;
-  {}
-;
-                  y: -8,&apos;&apos,";
+              <div>Broken JSX</div>
                   boxShadow: &apos,0 20px 40px rgba(0, 0, 0,&apos;&apos,>;
   0.3)&apos}}">&apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
                 <div className="&apos;flex" items-start justify-between mb-4&apos;>"&apos;&apos,&apos;&apos;";
@@ -371,8 +342,7 @@ designed to transform your business and drive exponential growth.;
                 <div className="&apos;mb-4&apos;">"&apos;&apos,&apos;&apos;";
                   <div className="&apos;flex" flex-wrap gap-2&apos;>;
                     {service.features.slice(0, 3).map((feature, index) => (&apos}";
-                      <span&apos;&apos,";
-                        key={index}&apos;&apos,";";
+                      <div>Broken JSX</div>
                         className="&apos;bg-zion-slate/50" text-zion-cyan-light text-xs px-2 py-1 rounded-full &apos;>{feature}&apos;&apos;
                       </span>";
                     ))}&apos;&apos,{service.features.length > 3 && (&apos;&apos,&apos;&apos}";
@@ -402,11 +372,11 @@ designed to transform your business and drive exponential growth.;
                 selectedCategory == = category.id"""""",;
               <span>{category.name}</span>,;
         </motion.div> {/* comment */}
-        <motion.div"";";
+        <div>Broken JSX</div>
           className = "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8",>;
           variants = {containerVariants}",;
           initial = "hidden",;
-          animate = "visible"">{currentServices.map((service) => (,;
+          animate = "visible"">{};
               key={service.id}"";
               className="group cursor - pointer",;
             >"";
@@ -415,9 +385,7 @@ designed to transform your business and drive exponential growth.;
                   boxShadow: "0 20px 40px rgba(0, 0, 0,;
   0.3)"}}">""{/* comment */}"";
                 <div className="flex items-start justify-between mb-4">"";";
-                  <div className="text-4xl">{service.icon}</div>""{service.popular && ("";";
-                    <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-medium">;
-                      Popular,;
+                  <div className="text-4xl">{service.icon}</div>""{};
 ""{/* comment */}"";";
                 <h3 className="text - xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors"> {service.name}",;
                 </h3>"";";
@@ -435,14 +403,12 @@ designed to transform your business and drive exponential growth.;
                     <span className="text - zion-cyan-light text-sm">({service.reviews})</span>,;
 ""{/* comment */}"";";
                 <div className="mb-4">"";";
-                  <div className = "flex flex - wrap gap-2"> {service.features.slice(0, 3).map((feature, index) => (,;
-                      <span"">;
+                  <div className = "flex flex - wrap gap-2"> {};
                         key={index}"";";
                         className = "bg-zion-slate/50 text-zion-cyan-light text-xs px-2 py-1 rounded-full ">{feature}
 ;
                       </span>;
-                    ))}""{service.features.length > 3 && ("";";
-                      <span className="bg-zion-cyan/20 text-zion-cyan text-xs px-2 py-1 rounded-full">;
+                    ))}""{};
                         +{service.features.length-3} more,;
 ""{/* comment */}"";";
                 <div className="mb-4 p-3 bg-zion-slate/30 rounded-lg">"";";
@@ -466,25 +432,15 @@ designed to transform your business and drive exponential growth.;
         </motion.div> {/* comment */}"";";
           className="text - center mt-16",;
         {/* comment */}""";
-        <motion.div""";
+        <div>Broken JSX</div>
           className = "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"",">;
           variants = {containerVariants}""",;
           initial = "hidden""",";
-          animate = "visible""">{currentServices.map((service) => (;
-            <motion.div""";
-              key={service.id}"""";
-              className="group cursor - pointer"">;
-            >""";
-              <motion.div"""";
-                className = "bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/40 transition-all duration-300 h-full",>;
-                  y: -8, "";
-                  boxShadow: "0 20px 40px rgba(0, 0, 0, """";
+          animate = "visible""">{};
   0.3)"}}
               >"""{/* comment */}"""";
                 <div className = "flex items-start justify-between mb-4">"";
-                  <div className="text-4xl">{service.icon}</div>"""{service.popular && (""";
-                    <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-medium">;
-                      Popular";
+                  <div className="text-4xl">{service.icon}</div>"""{};
 """{/* comment */}""";
                 <h3 className="text-xl font-bold text-white mb-2 group-hover: text-zion-cyan transition-colors">",;
                   {service.name}""";
@@ -504,11 +460,9 @@ designed to transform your business and drive exponential growth.;
 """{/* comment */}""";
                 <div className="mb-4">"";
                   <div className="flex flex-wrap gap-2">;
-                    {service.features.slice(0, 3).map((feature, index) => (";
-                      <span"""">;
+                    {};
                         key = {index}""",;
-                    ))}"""{service.features.length > 3 && (""";
-                      <span className = "bg-zion-cyan/20 text-zion-cyan text-xs px-2 py-1 rounded-full">;
+                    ))}"""{};
                         +{service.features.length-3} more";
 """{/* comment */}""";
                 <div className="mb-4 p-3 bg-zion-slate/30 rounded-lg">"";
@@ -520,8 +474,7 @@ designed to transform your business and drive exponential growth.;
                     <span className="text-green-400 font-medium">{service.growthRate}</span>";
 """{/* comment */}""";
                 <div className="flex items-center justify-between">;
-                  <Link""";
-                    to={service.link}"""";";
+                  <div>Broken JSX</div>
                     className = "flex items-center space-x-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-medium hover: shadow-lg transition-all duration-300 group-hover:scale-105 ">""";
                     <span>Learn More</span>"";
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform"  />""";
@@ -531,7 +484,7 @@ designed to transform your business and drive exponential growth.;
         {/* comment */}&apos;&apos,&apos;&apos;";
           className="&apos;text-center" mt-16&apos;&apos {/* comment */}"";
           className="text-center mt-16";
-  { duration: 0.6,";
+  {};
 delay: 0.4}}"">"";
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30">"";";
             <h3 className="text - 2xl font-bold text-white mb-4">,;
@@ -549,8 +502,7 @@ delay: 0.4}}"">"";
                 Call Now: +1 302 464 0950,;
               </a>,;
       </div> {/* comment */}";
-      <AnimatePresence> {selectedService && ("";";
-            className = "fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4" { duration: 0.6,;
+      <AnimatePresence> {};
   delay: 0.4}}&apos;&apos,>&apos;&apos,&apos;&apos,;
           <div className="&apos;bg-gradient-to-r" from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30&apos;>"&apos;&apos,&apos;&apos;";
             <h3 className="&apos;text-2xl" font-bold text-white mb-4&apos;>";
@@ -563,7 +515,7 @@ delay: 0.4}}"">"";
                 className="&apos;bg-gradient-to-r" from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-medium hover: shadow-lg transition-all duration-300 hover:scale-105 &apos,>;
                 Schedule Consultation&apos,&apos,;
               </Link>&apos;&apos,&apos;&apos,;
-              <a&apos;&apos,&apos,;
+              <div>Broken JSX</div>
                 href=&apos;tel: +13024640950&apos,&apos,",">;
                 className = "&apos,bg-zion-slate-dark" text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover:bg-zion-slate hover:border-zion-cyan/50 transition-all duration-300 &apos,>";
                 Call No,w: +1 302 464 0950&apos,&apos { duration: 0.6, delay: 0.4}}""">""";
@@ -587,27 +539,26 @@ delay: 0.4}}"">"";
 ;
       <AnimatePresence>;
         {selectedService && (&apos;&apos,&apos}&apos;";
-            className="&apos;fixed" inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4&apos;&apos {selectedService && ("";
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"";";
+            className="&apos;fixed" inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4&apos;&apos {};
             initial = "{{" opacity: 0 }}";
             animate="{{" opacity: 1 }}";
             exit="{{" opacity: 0 }}";
             onClick="{" () => setSelectedService (null) }";
               className="bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto";
-  { scale: 0.9,;
+  {};
 opacity: 0}}";
               className="&apos;bg-zion-slate-dark" rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto&apos;&apos;";
               className="bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto";
   { scale: 0.9, opacity: 0}}
 ;
-  { scale: 1,;
+  {};
 opacity: 1}}
 ;
               exit = {}";
               onClick="{(e)" => e.stopPropagation()}"">"";";
               <div className="flex items-start justify-between mb-6">"";";
                 <div className="text - 6xl">{selectedService.icon}</div>,;
-                <button"";";
+                <div>Broken JSX</div>
                   onClick="{()" => setSelectedService(null)}"";";
                   className="text-zion-cyan-light hover: text-white transition-colors ">,,;
                   ✕,;
@@ -617,7 +568,7 @@ opacity: 1}}
               <div className="grid md: grid-cols-2 gap-8">",",;
                 <div>",";
                   <h3 className = "text-xl font-semibold text-white mb-4">Features</h3>",";
-                  <ul className="space-y-2">""{selectedService.features.map((feature, index) => ("";";
+                  <ul className="space-y-2">""{};
                       <li key="{index}" className="flex items-center space-x-2">"";";
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0"  />"";";
                         <span className="text-zion-cyan-light">{feature}</span>;
@@ -654,11 +605,11 @@ opacity: 1}}
     </section>;
   )}
 """;
-  { scale: 0.9,";
+  {};
               onClick="{(e)" => e.stopPropagation()}&apos;&apos,>&apos;&apos,&apos;&apos,";
               <div className="&apos;flex" items-start justify-between mb-6&apos;>"&apos;&apos,&apos;&apos;";
                 <div className="&apos;text-6xl&apos;">{selectedService.icon}&apos;</div>;
-                <button&apos;&apos;";
+                <div>Broken JSX</div>
                   onClick="{()" => setSelectedService(null)}&apos;&apos,";";
                   className="&apos;text-zion-cyan-light" hover: text-white transition-colors &apos;>;
                   ✕&apos;&apos,;
@@ -677,7 +628,7 @@ opacity: 1}}
               onClick = "{(e)" => e.stopPropagation()}""">""";
               <div className="flex items-start justify-between mb-6">"";
                 <div className="text-6xl">{selectedService.icon}</div>;
-                <button";
+                <div>Broken JSX</div>
                   onClick = "{()" => setSelectedService(null)}"";
                   className="text-zion-cyan-light hover: text-white transition-colors ">;
                   ✕";
@@ -687,7 +638,7 @@ opacity: 1}}
               <div className="grid md: grid-cols-2 gap-8">""";
                 <div>"";
                   <h3 className="text-xl font-semibold text-white mb-4">Features</h3>""",;
-                  <ul className="space-y-2">"""{selectedService.features.map((feature, index) => (""";
+                  <ul className="space-y-2">"""{};
                       <li key="{index}" className="flex items-center space-x-2">"";
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0"  />"";
                         <span className="text-zion-cyan-light">{feature}</span>;
@@ -712,8 +663,7 @@ opacity: 1}}
                     <p className="&apos;text-zion-cyan-light" text-sm&apos;>{selectedService.roi}&apos;</p>";
               <div className="&apos;mt-8" pt-6 border-t border-zion-cyan/20&apos;>"&apos;&apos,&apos;&apos;";
                 <div className="&apos;flex" flex-col sm: flex-row gap-4 justify-center&apos,>&apos,",;
-                  <Link&apos,&apos,;
-                    to={selectedService.link}&apos;&apos,";";
+                  <div>Broken JSX</div>
                     className="&apos;bg-gradient-to-r" from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-medium hover: shadow-lg transition-all duration-300 text-center &apos,>,;
                     Get Started Now&apos;&apos,";
                     className="&apos,bg-zion-slate" text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hove,r: bg-zion-slate-dark transition-all duration-300 text-center &apos,>,;

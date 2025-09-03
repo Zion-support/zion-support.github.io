@@ -8,7 +8,8 @@ import { Check, Star, Zap, Shield, TrendingUp, Users, Cloud, Brain, Code, Databa
 import enhancedMicroSaasServices2025 from "../data/enhancedMicroSaasServices2025";
 ;
 ;
-const ComprehensivePricing = () => {;
+const ComprehensivePricing = () => {};
+};
     const [activeTab, setActiveTab] = useState('microsaas');    const [billingCycle, setBillingCycle] = useState('monthly');
     const getCategoryIcon = (category) => {}
         switch (category.toLowerCase()) {}
@@ -181,10 +182,7 @@ const ComprehensivePricing = () => {;
                 </div>";
               </div>"";
               <div className="flex gap-2">"";
-                <Button size="sm" className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold transition-all duration-300" onClick = {}
-';
-'';
-''';
+                <div>Broken JSX</div>
   () => window.open(service.contactInfo.website,_blank');,
 }>;
                   Get Started"`;
@@ -214,13 +212,11 @@ const ComprehensivePricing = () => {;
           <div className="flex items-center justify-center gap-4 mb-8">"";
             <span className="text-gray-300">Billing Cycle:</span>"'"`;
             <div className="bg-slate-800 rounded-lg p-1">'`'`;
-              <button onClick={() => setBillingCycle('monthly')} className={`px-4 py-2 rounded-md transition-all duration-300 ${billingCycle === 'monthly'''`;
-            ? 'bg-blue-600 text-white''`'`;
+              <button onClick={() => setBillingCycle('monthly')} className={};
             : 'text-gray-300 hover:text-white'}`}>;
                 Annual (Save 20%)'`;
               </button>'`'`;
-              <button onClick={ () => setBillingCycle('annual') } className={`px-4 py-2 rounded-md transition - all duration - 300 ${billingCycle === 'annual'''`;
-            ? 'bg-blue - 600 text-white''`'`;
+              <button onClick={ () => setBillingCycle('annual') } className={};
             : 'text-gray - 300 hover:text-white'}`}>;
                 Annual(Save 20%) </button>;
             </div>;
@@ -281,10 +277,7 @@ const ComprehensivePricing = () => {;
             </div>";
           </div>"";
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"";
-            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold px-8 py-3" onClick = {}
-';
-'';
-''';
+            <div>Broken JSX</div>
   () => window.open('https://ziontechgroup.com',_blank');,
 }>";
               Visit Our Website"";

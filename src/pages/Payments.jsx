@@ -2,7 +2,9 @@ import React from "react";"";
 import { TransactionHistory } from "@/components/transactions/TransactionHistory";"";
 import { GradientHeading } from "@/components/GradientHeading";"";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-export default function Payments() {}
+export {};
+  return null;
+}
     return (<>";
 "";
       <div className="min-h-screen bg-zion-blue py-12 px-4">"";
@@ -36,7 +38,7 @@ export default function Payments() {}
                     <p className="text-zion-slate-light mb-4">;
                       Manage your payment methods and set your default preference.;
                     </p>;
-                    <Button onClick = {}
+                    <div>Broken JSX</div>
   () => window.open('https://stripe.com',_blank');
 
 ";

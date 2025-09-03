@@ -6,7 +6,9 @@ import { generateInvoicePdf } from '@/utils/generateInvoicePdf';''';
 import { useAuth } from '@/hooks/useAuth';''';
 import { supabase } from '@/integrations/supabase/client';''';
 import { toast } from '@/hooks/use-toast';
-export default function OrderDetailPage() {}
+export {};
+  return null;
+}
   const { orderId } = useParams();
   const { user } = useAuth();
   const { data: order, isLoading } = useGetOrderQuery(orderId);
@@ -56,7 +58,7 @@ export default function OrderDetailPage() {}
       <div>"";
         <h2 className="font-semibold mb-2">Items</h2>"";
         <ul className="space-y-1">";
-          {order.items.map((item, idx) => ("";
+          {};
             <li key={idx} className="flex justify-between">;
               <span>;
                 {item.name} x {item.quantity}

@@ -1,44 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 ;
-import { ;
-  Brain, ;
-  Shield, ;
-  Cloud, ;
-  Server, ;
-  Building2,;
-  FileText, ;
-  BarChart3, ;
-  Workflow,;
-  Mic,;
-  Users,;
-  Calendar,;
-  PieChart,;
-  Package,;
-  Mail,;
-  Phone,;
-  MapPin,;
-  Globe,;
-  Star,;
-  CheckCircle,;
-  ArrowRight,;
-  Sparkles,;
-  Cpu,;
-  Eye,;
-  Factory,;
-  Heart,;
-  ShoppingCart,;
-  DollarSign,;
-  Wifi,;
-  Link as LinkIcon;,
+import {};
 } from 'lucide-react';
 ;
-const ServicesOverview = () => {;
-  const contactInfo = {;
-    phone: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com';,
+const ServicesOverview = () => {};
+};
+  const contactInfo = {};
 };
 ;
   return (;
@@ -47,32 +15,22 @@ const ServicesOverview = () => {;
       <div className="bg-white shadow-lg">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">;
           <div className="text-center">;
-            <h1 ;
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
+            <div>Broken JSX</div>
               className="text-5xl font-bold text-gray-900 mb-4">;
               Zion Tech Group Services;
             </h1>;
-            <p ;
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
+            <div>Broken JSX</div>
               className="text-xl text-gray-600 mb-8">;
               Comprehensive Technology Solutions & Micro SaaS Services;
             </p>;
-            <div ;
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
+            <div>Broken JSX</div>
               className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <a ;
-                href={`tel:${contactInfo.phone}`}
+              <div>Broken JSX</div>
                 className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center">;
                 <Phone className="w-5 h-5 mr-2" />;
                 Call Now: {contactInfo.phone}
               </a>;
-              <a ;
-                href={`mailto:${contactInfo.email}`}
+              <div>Broken JSX</div>
                 className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center">;
                 <Mail className="w-5 h-5 mr-2" />;
                 Email Us;
@@ -91,9 +49,7 @@ const ServicesOverview = () => {;
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
           {/* AI Services */}
-          <div;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div>Broken JSX</div>
             className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">;
             <div className="h-2 bg-gradient-to-r from-purple-500 to-cyan-500"></div>;
             <div className="p-6">;
@@ -133,14 +89,12 @@ const ServicesOverview = () => {;
                 </p>;
               </div>;
               <div className="flex flex-col gap-2">;
-                <Link;
-                  to="/services/ai-content-generation-suite";
+                <div>Broken JSX</div>
                   className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center flex items-center justify-center">;
                   Learn More;
                   <ArrowRight className="w-4 h-4 ml-2" />;
                 </Link>;
-                <a;
-                  href={`tel:${contactInfo.phone}`}
+                <div>Broken JSX</div>
                   className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors text-center flex items-center justify-center">;
                   <Phone className="w-4 h-4 mr-2" />;
                   Call Now;
@@ -150,10 +104,7 @@ const ServicesOverview = () => {;
           </div>;
 
           {/* IT Services */}
-          <div;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
+          <div>Broken JSX</div>
             className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">;
             <div className="h-2 bg-gradient-to-r from-blue-500 to-indigo-600"></div>;
             <div className="p-6">;
@@ -193,14 +144,12 @@ const ServicesOverview = () => {;
                 </p>;
               </div>;
               <div className="flex flex-col gap-2">;
-                <Link;
-                  to="/services/cloud-migration-services";
+                <div>Broken JSX</div>
                   className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center flex items-center justify-center">;
                   Learn More;
                   <ArrowRight className="w-4 h-4 ml-2" />;
                 </Link>;
-                <a;
-                  href={`tel:${contactInfo.phone}`}
+                <div>Broken JSX</div>
                   className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors text-center flex items-center justify-center">;
                   <Phone className="w-4 h-4 mr-2" />;
                   Call Now;
@@ -210,10 +159,7 @@ const ServicesOverview = () => {;
           </div>;
 
           {/* Business SaaS */}
-          <div;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+          <div>Broken JSX</div>
             className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">;
             <div className="h-2 bg-gradient-to-r from-green-500 to-emerald-600"></div>;
             <div className="p-6">;
@@ -253,14 +199,12 @@ const ServicesOverview = () => {;
                 </p>;
               </div>;
               <div className="flex flex-col gap-2">;
-                <Link;
-                  to="/services/smart-crm-platform";
+                <div>Broken JSX</div>
                   className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center flex items-center justify-center">;
                   Learn More;
                   <ArrowRight className="w-4 h-4 ml-2" />;
                 </Link>;
-                <a;
-                  href={`tel:${contactInfo.phone}`}
+                <div>Broken JSX</div>
                   className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors text-center flex items-center justify-center">;
                   <Phone className="w-4 h-4 mr-2" />;
                   Call Now;

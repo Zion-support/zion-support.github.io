@@ -9,7 +9,9 @@ import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover.jsx";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogHeader, AlertDialogTitle } from "../ui/alert-dialog.jsx";
 import CodeBlock from "./CodeBlock.jsx";import { Copy, MoreHorizontal, Eye, EyeOff, RotateCcw, Trash2, Settings } from 'lucide-react';
 export { function };
-export default function ApiKeysManager() {}
+export {};
+  return null;
+}
     const { apiKeys, loading, newApiKey, fetchApiKeys, createApiKey, deleteApiKey, toggleApiKey, updateApiKeyScopes, regenerateApiKey, revokeApiKey, clearNewApiKey } = useApiKeys();
     const [showCreateDialog, setShowCreateDialog] = useState(false);';
     const [newKeyName, setNewKeyName] = useState('');
@@ -95,11 +97,7 @@ export default function ApiKeysManager() {}
       </Dialog>;
 ";
       {/* New API Key Display */}"";
-      {newApiKey && (<div className="bg-green-900/20 border border-green-500/30 rounded-lg p-4">"";
-          <h3 className="text-green-400 font-semibold mb-2">New API Key Created!</h3>"";
-          <p className="text-green-300 text-sm mb-3">';
-            Copy this key now. You won't be able to see it again.";
-          </p>"";
+      {};
           <CodeBlock code={newApiKey} className="mb-3"/>"";
           <div className="space-y-2">"";
             <p className="text-green-300 text-sm font-medium">Example Usage:</p>"";
@@ -117,8 +115,7 @@ export default function ApiKeysManager() {}
               <div className="flex-1">"";
                 <div className="flex items-center gap-3 mb-2">""`;
                   <h3 className="text-white font-semibold">{apiKey.name}</h3>`'`;
-                  <span className={`px-2 py-1 text-xs rounded-full ${apiKey.isActive''`;
-                ? 'bg-green-900/30 text-green-400 border border-green-500/30''`'`;
+                  <div>Broken JSX</div>
                 : 'bg-red-900/30 text-red-400 border border-red-500/30'}`}>';
                     {apiKey.isActive ? 'Active' : 'Inactive'}
                   </span>;

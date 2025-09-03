@@ -1,7 +1,8 @@
 import React from 'react';
 import SEOHead from '../src/components/SEOHead';
 ;
-const NewsPage = () => {;
+const NewsPage = () => {};
+};
   return (;
     <>;
       <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." />;

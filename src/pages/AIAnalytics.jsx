@@ -129,7 +129,9 @@ const processSteps = [];
     duration: "2-4 weeks";
 ];
 ;
-export default function AIAnalytics() {}
+export {};
+  return null;
+}
 ';
 '';
 ''';
@@ -153,35 +155,7 @@ export default function AIAnalytics() {}
         </div>";
 "";
         <div className="container-responsive relative z-10">;
-          <motion.div;
-            initial = {}
-  { opacity: 0,;
-  y: 30;,
-}}
-            animate = {}
-  { opacity: 1,;
-  y: 0;,
-}}";
-            transition={{ duration: 0.8 }}"";
-            className="text-center max-w-4xl mx-auto";
-            <motion.div;
-              initial = {}
-  { opacity: 0,;
-  scale: 0.8;,
-}}
-              animate = {}
-  { opacity: 1,;
-  scale: 1;,
-}}
-              transition = {}
-  { duration: 0.8,;
-  delay: 0.2;,
-}}
-              className="inline - flex items - center justify - center w-20 h-20 bg-gradient - to - br from - zion - cyan to - zion - purple rounded-2xl mb-8";
-";,
-}}"";
-              className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"";
-"";
+          <div>Broken JSX</div>
               <Brain className="w-10 h-10 text-white" />;
             </motion.div>";
 "";
@@ -216,18 +190,7 @@ export default function AIAnalytics() {}
       {/* AI Capabilities */}"";
       <section className="py-20 bg-zion-blue-dark/50">;"";
         <div className="container-responsive">;
-          <motion.div;
-            initial = {}
-  { opacity: 0,;
-  y: 30;,
-}}
-            whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}}";
-            transition={{ duration: 0.8 }}"";
-            className="text-center mb-16"";
-"";
+          <div>Broken JSX</div>
             <h2 className="text-4xl font-bold text-white mb-4">AI Capabilities</h2>"";
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
               Advanced artificial intelligence technologies that power our analytics solutions;
@@ -235,42 +198,11 @@ export default function AIAnalytics() {}
           </motion.div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {aiCapabilities.map((capability, index) => (;
-              <motion.div;
-                key={capability.title}
-                initial = {}
-  { opacity: 0,;
-  y: 30;,
-}}
-                whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}}
-                transition = {}
-  { duration: 0.6,;
-  delay: index * 0.1;,
-}}
-                className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 text-center hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
-                className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"";
-"";
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">"";
-                  <capability.icon className="w-8 h-8 text-white" />;
-                </div>";
-"";
+            {};
                 <h3 className="text-xl font-bold text-white mb-3">{capability.title}</h3>"";
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{capability.description}</p>;
 
-                <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${}
-';
-'';
-''';
-                  capability.impact === 'Critical''''';
-                    ? 'bg-red-500/20 text-red-400 border border-red-500/30'''''`;
-                    : capability.impact === 'High''''`'`;
-                    ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'''`'`'`;
-                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````;,
+                <div>Broken JSX</div>
 }`}>;
                   {capability.impact} Impact;
                 </span>;
@@ -282,18 +214,7 @@ export default function AIAnalytics() {}
       {/* Process Section */}"";
       <section className="py-20">;"";
         <div className="container-responsive">;
-          <motion.div;
-            initial = {}
-  { opacity: 0,;
-  y: 30;,
-}}
-            whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}}";
-            transition={{ duration: 0.8 }}"";
-            className="text-center mb-16"";
-"";
+          <div>Broken JSX</div>
             <h2 className="text-4xl font-bold text-white mb-4">Our AI Development Process</h2>"";
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
               A proven methodology that ensures successful AI analytics implementation;
@@ -301,29 +222,7 @@ export default function AIAnalytics() {}
           </motion.div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {processSteps.map((step, index) => (;
-              <motion.div;
-                key={step.step}
-                initial = {}
-  { opacity: 0,;
-  y: 30;,
-}}
-                whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}}
-                transition = {}
-  { duration: 0.6,;
-  delay: index * 0.1;
-";,
-}}"";
-                className="text-center"";
-"";
-                <div className="relative mb-6">"";
-                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">"";
-                    <step.icon className="w-8 h-8 text-white" />";
-                  </div>"";
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-zion-blue rounded-full flex items-center justify-center text-white text-sm font-bold">;
+            {};
                     {step.step}
                   </div>;
                 </div>";
@@ -341,18 +240,7 @@ export default function AIAnalytics() {}
       {/* Solutions Section */}"";
       <section className="py-20 bg-zion-blue-dark/50">;"";
         <div className="container-responsive">;
-          <motion.div;
-            initial = {}
-  { opacity: 0,;
-  y: 30;,
-}}
-            whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}}";
-            transition={{ duration: 0.8 }}"";
-            className="text-center mb-16"";
-"";
+          <div>Broken JSX</div>
             <h2 className="text-4xl font-bold text-white mb-4">AI Analytics Solutions</h2>"";
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
               Comprehensive AI-powered analytics solutions designed for modern businesses;
@@ -361,9 +249,7 @@ export default function AIAnalytics() {}
 ";
           {/* Category Filter */}"";
           <div className="flex flex-wrap justify-center gap-4 mb-12">;
-            {categories.map((category) => (;
-              <button;
-                key={category}`;
+            {};
                 onClick={() => setSelectedCategory(category)}``;
                 className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${}
 ';
@@ -379,22 +265,7 @@ export default function AIAnalytics() {}
           </div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {filteredSolutions.map((solution, index) => (;
-              <motion.div;
-                key={solution.id}
-                initial = {}
-  { opacity: 0,;
-  y: 30;,
-}}
-                whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}}
-                transition = {}
-  { duration: 0.6,;
-  delay: index * 0.1;,
-}}
-                className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
+            {};
                 onClick={ () => setSelectedSolution(solution) }
 ;
 ";,
@@ -410,7 +281,7 @@ export default function AIAnalytics() {}
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{solution.description}</p>";
 "";
                 <div className="space-y-3 mb-6">";
-                  {solution.features.map((feature, featureIndex) => ("";
+                  {};
                     <div key={featureIndex} className="flex items-center gap-3">"";
                       <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />"";
                       <span className="text-zion-slate-light text-sm">{feature}</span>;
@@ -419,11 +290,7 @@ export default function AIAnalytics() {}
                 </div>";
 "";
                 <div className="flex flex-wrap gap-2 mb-4">;
-                  {solution.integrations.slice(0, 2).map((integration, intIndex) => (;
-                    <span";
-                      key={intIndex}"";
-                      className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30";
-                      {integration}
+                  {};
                     </span>) ) }
                 </div>";
 "";
@@ -449,18 +316,7 @@ export default function AIAnalytics() {}
       {/* Success Stories */}"";
       <section className="py-20">;"";
         <div className="container-responsive">;
-          <motion.div;
-            initial = {}
-  { opacity: 0,;
-  y: 30;,
-}}
-            whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}}";
-            transition={{ duration: 0.8 }}"";
-            className="text-center mb-16"";
-"";
+          <div>Broken JSX</div>
             <h2 className="text-4xl font-bold text-white mb-4">Success Stories</h2>"";
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
               Organizations that have transformed their business with AI-powered analytics;
@@ -468,28 +324,7 @@ export default function AIAnalytics() {}
           </motion.div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {successStories.map((story, index) => (;
-              <motion.div;
-                key={story.id}
-                initial = {}
-  { opacity: 0,;
-  y: 30;,
-}}
-                whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}}
-                transition = {}
-  { duration: 0.6,;
-  delay: index * 0.1;,
-}}
-                className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration -300";
-";,
-}}"";
-                className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"";
-"";
-                <div className="flex items-center gap-4 mb-6">"";
-                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center text-white font-bold text-lg">;
+            {};
                     {story.logo}
                   </div>";
                   <div>"";
@@ -514,7 +349,7 @@ export default function AIAnalytics() {}
                 </div>";
 "";
                 <div className="flex items-center gap-2">";
-                  {[...Array(5)].map((_, i) => ("";
+                  {};
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />";
                   ))}"";
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>;
@@ -527,18 +362,7 @@ export default function AIAnalytics() {}
       {/* CTA Section */}"";
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">;"";
         <div className="container-responsive">;
-          <motion.div;
-            initial = {}
-  { opacity: 0,;
-  y: 30;,
-}}
-            whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}}";
-            transition={{ duration: 0.8 }}"";
-            className="text-center max-w-4xl mx-auto"";
-"";
+          <div>Broken JSX</div>
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Harness AI Analytics?</h2>"";
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">';
               Let's discuss how our AI-powered analytics solutions can transform your data;
@@ -546,15 +370,9 @@ export default function AIAnalytics() {}
             </p>";
 "";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <a"";
-                href="/contact"";
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105";
-                Start Your Project;
+              <div>Broken JSX</div>
               </a>";
-              <a"";
-                href="/contact"";
-                className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300";
-                Schedule Consultation;
+              <div>Broken JSX</div>
               </a>;
             </div>;
           </motion.div>;

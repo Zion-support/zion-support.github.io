@@ -1,17 +1,14 @@
 import React from "react"; export default function ExpensiveComponent() { const [data, setData] = useState([]); const [loading, setLoading] = useState(true); useEffect(() => {}
+  return null;
+}
 ;
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+  useEffect(() => {};
 };,
 }, []);, []);
     // Simulate expensive computation;
-    const timer = setTimeout(() => {;
-      const expensiveData = Array.from();
+    const timer = setTimeout(() => {};
         { length: 10000 },;
         (_, i) => Math.sqrt(i) * Math.PI * Math.random();
       );
@@ -63,26 +60,26 @@ const timer = setTimeout(() => {}
   if(loading) {}";
     return();
       <div className="text-center p-8">"""';
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"> <// comment;
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"> <div>Broken JSX</div>
       </div>    </div>)}
 ;
-export { ExpensiveComponent }
+export {};
 ;
-export { ExpensiveComponent }
+export {};
 ;
-export { ExpensiveComponent }
+export {};
 ;
-export { ExpensiveComponent }
+export {};
 ;
 export { ExpensiveComponent }";
 ;"";
-export { ExpensiveComponent }
+export {};
 ;
-export { ExpensiveComponent }
+export {};
 ;
-export { ExpensiveComponent }
+export {};
 ;
-export { ExpensiveComponent }
+export {};
 ;
 export { ExpensiveComponent };";
 ;"";

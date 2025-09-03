@@ -5,12 +5,12 @@ import { Inbox } from 'lucide-react';''';
 import { ProtectedRoute } from '@/components/ProtectedRoute';''';
 import { useIsMobile } from '@/hooks/use-mobile';
 function ApplicationStatusTrackerContent() {}
+  return null;
+}
   const isMobile = useIsMobile();
   return();
     <>;
-      <SEO;
-        title="Application Status Tracker | Zion AI Marketplace"";
-        description="Track the status of your job applications in the Zion AI marketplace.";
+      <div>Broken JSX</div>
       />";
 "";
       <div className="container mx-auto px-4 py-8">"";
@@ -39,11 +39,9 @@ function ApplicationStatusTrackerContent() {}
         </div>;
       </div>;
     </>)}
-export default function ApplicationStatusTracker() {;
-    return (<ProtectedRoute>;
-      ;
-        <ApplicationStatusTrackerContent />;
-      ;
+export default function ApplicationStatusTracker() {};
+  return null;
+}
     </ProtectedRoute>)}
 ;
 

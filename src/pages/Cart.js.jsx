@@ -3,7 +3,9 @@ import Link from 'next/link';''';
 import { useState, useEffect } from 'react';''';
 import Skeleton from '@/components/ui/skeleton';''';
 import { useAuth } from '@/hooks/useAuth';
-export default function CartPage() {}
+export {};
+  return null;
+}
     const navigate = useNavigate();
     const { items, dispatch } = useCart();
     const { user } = useAuth();
@@ -58,6 +60,8 @@ export default function CartPage() {}
     const removeItem = (id) => {}
         dispatch(removeItemAction(id))};
     const handleCheckout = () => {}
+  return <div>Component</div>;
+};
 ';
 '';
 ''';
@@ -99,8 +103,7 @@ export default function CartPage() {}
               <p className="text-sm text-muted-foreground">${item.price.toFixed(2)}</p>";
             </div>"";
             <div className="flex items-center gap-2">"";
-              <input type="number" min={1} value={item.quantity} onChange = {}
-';
+              <div>Broken JSX</div>
   e => updateQuantity(item.id, parseInt(e.target.value || '1',;
   10))";
 "";,

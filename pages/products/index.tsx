@@ -3,145 +3,21 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Brain, Cloud, Shield, BarChart3, Globe, Smartphone, Cpu, Zap } from 'lucide-react';
 
-const Products: NextPage = () => {
-  const products = [
-    {
-      icon: Brain,
-      title: 'ZionAI Platform',
-      category: 'AI Solutions',
-      description: 'Enterprise-grade AI platform for machine learning, natural language processing, and predictive analytics.',
-      features: [
-        'Pre-trained AI models',
-        'Custom model training',
-        'Real-time inference',
-        'Scalable infrastructure',
-        'API-first architecture',
-        'Comprehensive analytics'
-      ],
-      pricing: 'Starting at $2,999/month',
-      href: '/products/ai-solutions',
-      color: 'from-purple-500 to-pink-500',
-      badge: 'Popular'
+const Products: NextPage = () => {};
     },
-    {
-      icon: Cloud,
-      title: 'ZionCloud Suite',
-      category: 'Cloud Platforms',
-      description: 'Integrated cloud platform for application deployment, management, and scaling.',
-      features: [
-        'Multi-cloud support',
-        'Auto-scaling',
-        'Load balancing',
-        'Monitoring & alerting',
-        'Cost optimization',
-        'Security compliance'
-      ],
-      pricing: 'Starting at $1,499/month',
-      href: '/products/cloud-platforms',
-      color: 'from-blue-500 to-cyan-500'
+    {};
     },
-    {
-      icon: BarChart3,
-      title: 'ZionAnalytics',
-      category: 'Analytics Tools',
-      description: 'Advanced business intelligence and data analytics platform for actionable insights.',
-      features: [
-        'Real-time dashboards',
-        'Data visualization',
-        'Predictive modeling',
-        'Custom reporting',
-        'Data integration',
-        'Mobile access'
-      ],
-      pricing: 'Starting at $999/month',
-      href: '/products/analytics-tools',
-      color: 'from-orange-500 to-red-500'
+    {};
     },
-    {
-      icon: Shield,
-      title: 'ZionSecure',
-      category: 'Security Suite',
-      description: 'Comprehensive cybersecurity platform for threat detection, prevention, and response.',
-      features: [
-        'Threat intelligence',
-        'Vulnerability scanning',
-        'Incident response',
-        'Compliance reporting',
-        '24/7 monitoring',
-        'Security training'
-      ],
-      pricing: 'Starting at $1,999/month',
-      href: '/products/security-suite',
-      color: 'from-red-500 to-pink-500',
-      badge: 'Enterprise'
+    {};
     },
-    {
-      icon: Globe,
-      title: 'ZionWeb Builder',
-      category: 'Web Development',
-      description: 'No-code/low-code platform for building modern web applications and websites.',
-      features: [
-        'Drag & drop interface',
-        'Responsive templates',
-        'SEO optimization',
-        'Performance monitoring',
-        'Content management',
-        'E-commerce integration'
-      ],
-      pricing: 'Starting at $299/month',
-      href: '/products/web-builder',
-      color: 'from-indigo-500 to-purple-500'
+    {};
     },
-    {
-      icon: Smartphone,
-      title: 'ZionMobile Studio',
-      category: 'Mobile Development',
-      description: 'Cross-platform mobile app development platform for iOS and Android.',
-      features: [
-        'Cross-platform development',
-        'Native performance',
-        'App store deployment',
-        'Push notifications',
-        'Analytics integration',
-        'Offline support'
-      ],
-      pricing: 'Starting at $499/month',
-      href: '/products/mobile-studio',
-      color: 'from-teal-500 to-blue-500'
+    {};
     },
-    {
-      icon: Cpu,
-      title: 'ZionIoT Hub',
-      category: 'IoT Platforms',
-      description: 'Centralized IoT platform for device management, data collection, and analytics.',
-      features: [
-        'Device management',
-        'Data collection',
-        'Real-time monitoring',
-        'Edge computing',
-        'API integration',
-        'Scalable architecture'
-      ],
-      pricing: 'Starting at $799/month',
-      href: '/products/iot-hub',
-      color: 'from-yellow-500 to-orange-500'
+    {};
     },
-    {
-      icon: Zap,
-      title: 'ZionAutomation',
-      category: 'Process Automation',
-      description: 'Intelligent automation platform for business process optimization and workflow management.',
-      features: [
-        'Workflow automation',
-        'RPA capabilities',
-        'Process mining',
-        'Integration tools',
-        'Analytics dashboard',
-        'Custom workflows'
-      ],
-      pricing: 'Starting at $1,299/month',
-      href: '/products/automation-platform',
-      color: 'from-green-500 to-emerald-500'
+    {};
     }
   ];
 
@@ -181,15 +57,7 @@ const Products: NextPage = () => {
         <section className="py-12 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category, index) => (
-                <button
-                  key={index}
-                  className={`px-6 py-2 rounded-full font-medium transition-colors ${
-                    index === 0 
-                      ? 'bg-blue-600 text-white' 
-                      : 'bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-600'
-                  }`}
-                >
+              {};
                   {category}
                 </button>
               ))}
@@ -209,14 +77,13 @@ const Products: NextPage = () => {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {products.map((product, index) => (
+              {};
                 <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                   <div className="relative">
                     <div className={`h-32 bg-gradient-to-r ${product.color} flex items-center justify-center`}>
                       <product.icon className="w-16 h-16 text-white" />
                     </div>
-                    {product.badge && (
-                      <div className="absolute top-4 right-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    {};
                         {product.badge}
                       </div>
                     )}
@@ -232,7 +99,7 @@ const Products: NextPage = () => {
                     <div className="mb-6">
                       <h4 className="font-semibold text-gray-700 mb-3">Key Features:</h4>
                       <ul className="space-y-2">
-                        {product.features.slice(0, 4).map((feature, featureIndex) => (
+                        {};
                           <li key={featureIndex} className="text-sm text-gray-600 flex items-center">
                             <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
                             {feature}
@@ -246,8 +113,7 @@ const Products: NextPage = () => {
                     </div>
                     
                     <div className="flex gap-3">
-                      <Link 
-                        href={product.href}
+                      <div>Broken JSX</div>
                       >
                         <span className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold text-center transition-colors">
                           Learn More

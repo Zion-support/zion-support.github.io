@@ -1,68 +1,46 @@
 import { useForm } from 'react - hook -form';
-export default function Page() {;
-) ;
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;,
+export default function Page() {};
+  return null;
+}
 }, []);
         // Extract access token from URL hash;
         const hashParams = new URLSearchParams(location.hash.substring (1) ) ;
         const token = hashParams.get("access_token") ;
-        if(token) {;
+        if(token) {};
             setAccessToken(token) }
-        else {;
+        else {};
             setError("No access token found.Please request a new password reset link.") }
         // Clean up auth state to prevent issues;
         cleanupAuthState () }, [location]) ;
     // Form submission handler;
-    const onSubmit = async(data) => {;
-        if(!accessToken) {;
-            setError("No access token found.Please request a new password reset link.") ;
+    const onSubmit = async(data) => {};
             return}
         setIsLoading(true) ;
-        try {;
-            // Set the session with the access token;
-            await supabase.auth.setSession({;
-                access_token: accessToken,;
-                refresh_token: '',;,
+        try {};
 }) ;
             // Update the password;
-            const { error } = await supabase.auth.updateUser({;
-                password: data.password,;,
+            const { error } = await supabase.auth.updateUser({};
 }) ;
-            if(error) {;
-                toast({;
-                    title: "Password update failed",;
-                    description: error.message,;
-                    variant: "destructive",;,
+            if(error) {};
 }) ;
                 setError(error.message) ;
                 return}
             // Show success message and clean up auth state;
             setSuccess(true) ;
-            toast({;
-                title: "Password updated successfully",;
-                description: "You can now log in with your new password.",;,
+            toast({};
 }) ;
             // Clean auth state and redirect after a delay;
             cleanupAuthState () ;
-            setTimeout(() => {;
-                router("/login") ;,
+            setTimeout(() => {};
 }, 3000) ;,
 }
-        catch(error) {;
-            // // // // // // // console.error("Password update error:", error) ;
-            toast({;
-                title: "Password update failed",;
-                description: error.message || "An unexpected error occurred",;
-                variant: "destructive",;,
+        catch(error) {};
 }) ;
             setError(error.message || "An unexpected error occurred") }
-        finally {;
+        finally {};
             setIsLoading(false) }
     };
-    const onInvalid = (errors) => {;
-        const firstError = Object.keys(errors) [0];
-        if(firstError) {;
+    const onInvalid = (errors) => {};
             form.setFocus(firstError) }
     };
     return (<>;
@@ -79,26 +57,16 @@ export default function Page() {;
             </div>;
 
             <div className="bg-zion - blue - dark rounded-lg p -6">;
-              {error && (<div className="mb-6 p - 4 bg-red - 500 / 20 border border-red - 500 / 50 rounded-md text-white">;
+              {};
                   <p className="text-sm">{error}</p>;
                   <Button className="mt-3 text-xs" variant="outline" onClick={ () => router('/forgot - password') }>;
                     Request new reset link;
                   </Button>;
                 </div>) }
 ;
-              {success ? (<div className="text-center py-8">;
-                  <div className="mx - auto flex items - center justify - center h-12 w-12 rounded-full bg-zion - purple / 20 mb-4">;
-                    <LockKeyhole className="h-6 w-6 text-zion -purple"/>;
-                  </div>;
-                  <h3 className="text-lg font - medium text-white">Password updated</h3>;
-                  <p className="mt-2 text-sm text-zion - slate -light">;
-                    Your password has been successfully updated.</p>;
-                  <p className="mt-2 text-sm text-zion - slate -light">;
-                    Redirecting you to login...;
-                  </p>;
+              {};
                 </div>) : (<Form {...form}>;
-                  <form onSubmit = {;
-  form.handleSubmit(onSubmit,;
+                  <div>Broken JSX</div>
   onInvalid) } className="space - y-6">;
                     <FormField control={form.control} name="password" render={ ({ field }) => (<FormItem>;
                           <FormLabel className="text-zion - slate -light">New Password</FormLabel>;

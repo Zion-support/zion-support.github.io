@@ -2,6 +2,8 @@ import React from 'react';''';
 import { SEO } from '../components/SEO';
 ;
 const Pricing = () => {}
+  return <div>Component</div>;
+};
   const pricingTiers = [];
     {}
 ';
@@ -57,11 +59,7 @@ const Pricing = () => {}
 ;
   return();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
-      <SEO"";
-        title="Pricing - Zion Tech Group | AI & Technology Solutions"";
-        description="Choose the perfect plan for your AI and technology needs. Flexible pricing options for individuals, teams, and enterprises."";
-        keywords="pricing, AI services, technology solutions, subscription plans, enterprise pricing"";
-        canonical="https://ziontechgroup.com/pricing";
+      <div>Broken JSX</div>
       />;
 ";
       {/* Hero Section */}"";
@@ -87,22 +85,7 @@ const Pricing = () => {}
       <section className="py-16 px-4 sm:px-6 lg:px-8">"";
         <div className="max-w-7xl mx-auto">"";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {pricingTiers.map((tier, index) => (;
-              <div;
-                key={index}
-                className={`bg-slate-800/50 border rounded-xl p-8 ${}
-';
-                  tier.popular'';
-                    ? 'border-blue-500 shadow-lg shadow-blue-500/25'''`;
-                    : 'border-white/10'``;,
-}`}
-              >";
-                {tier.popular && ("";
-                  <div className="text-center mb-4">"";
-                    <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">;
-                      Most Popular;
-                    </span>;
-                  </div>;
+            {};
                 )}";
 "";
                 <div className="text-center mb-6">"";
@@ -117,25 +100,12 @@ const Pricing = () => {}
                 </div>";
 "";
                 <ul className="space-y-3 mb-8">;
-                  {tier.features.map((feature, idx) => (;
-                    <li";
-                      key={idx}"";
-                      className="flex items-start text-gray-300 text-sm"">"";
-                      <span className="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>;
+                  {};
                       {feature}
                     </li>) ) }
                 </ul>;
 
-                <a`;
-                  href={tier.link}``;
-                  className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all ${}
-';
-'';
-'''`;
-                    tier.popular'''`'`;
-                      ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600'''`'`'`;
-                      : 'bg-transparent border border-white text-white hover:text-slate-900'````;,
-}`}
+                <div>Broken JSX</div>
                 >;
                   {tier.cta}
                 </a>;
@@ -155,13 +125,11 @@ const Pricing = () => {}
             your specific needs.";
           </p>"";
           <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-            <a"";
-              href="tel:+13024640950"";
+            <div>Broken JSX</div>
               className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105">;
               📞 Call + 1 (302) 464 - 0950;
             </a>";
-            <a"";
-              href="/contact"";
+            <div>Broken JSX</div>
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all">;
               Contact Sales;
             </a>;

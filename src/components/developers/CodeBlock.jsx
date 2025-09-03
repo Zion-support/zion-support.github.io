@@ -1,9 +1,11 @@
-export default function CodeBlock({}
+export {};
   children,;
   code,;
   language = 'text',''';
   className = '',;
   showLineNumbers = false}) {}
+  return null;
+}
 ';
 '';
 ''';
@@ -14,11 +16,8 @@ export default function CodeBlock({}
         <span className="text-xs text-gray-400 uppercase tracking-wide">;
           {language}
         </span>;
-        <button;
-          onClick={() =>';
-            navigator.clipboard.writeText('';
-              typeof content === 'string' ? content : content.toString();
-            )";,
+        <div>Broken JSX</div>
+          onClick={};
 }"";
           className="text-xs text-gray-400 hover:text-white transition-colors">;
           Copy;

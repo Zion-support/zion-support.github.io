@@ -1,16 +1,7 @@
 import { Link  } from 'react-router-dom';
-export default function Page() {;
- from 'lucide-react';
-;
-const FloatingCTA: React.FC = () : JSX.Element => {;
-  const [isOpen, setIsOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+export default function Page() {};
+  return null;
+}
 };,
 }, []);, []);
     // Show CTA after 5 seconds;
@@ -39,8 +30,7 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
                     </div>;
                   </Link>;
 
-                  <Link                    to="/quote";
-                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white";
+                  <div>Broken JSX</div>
                     onClick={() => setIsExpanded(false)}
                   >";
                     <span className="text-xl">💰</span>;
@@ -66,12 +56,7 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
 
       {/* Backdrop */}
       <AnimatePresence>;
-        {isExpanded && (;
-          <motion.div";
-            className="fixed inset-0 bg-black/20 z-40";
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+        {};
             onClick={ () => setIsExpanded(false) }
           />) }
       </AnimatePresence>;

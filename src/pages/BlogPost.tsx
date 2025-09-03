@@ -1,55 +1,34 @@
 import React from 'react';
 import { SEO } from '@/components / SEO';
-export default function Page() {;
-,;
-    ],;,
+export default function Page() {};
+  return null;
+}
 };
 ;
-  const formatDate = (dateString: string) => {;
-    return new Date(dateString) .toLocaleDateString('en - US', {;
-      year: 'numeric',;
-      month: 'long',;
-      day: 'numeric',;,
+  const formatDate = (dateString: string) => {};
 }) ;,
 };
 ;
-  const getCategoryIcon = (category: string) => {;
-    const categoryIcons: { [key: string]: any } = {;
-      ai: Brain,;
-      quantum: Cpu,;
-      security: Shield,;
-      cloud: Cloud,;
-      business: TrendingUp,;
-      iot: Network,;
-      emerging: Zap,;,
+  const getCategoryIcon = (category: string) => {};
+    const categoryIcons: { [key: string]: unknown } = {};
 };
     return categoryIcons[category] || BookOpen;,
 };
 ;
-  const getCategoryName = (category: string) => {;
-    const categoryNames: { [key: string]: string } = {;
-      ai: 'Artificial Intelligence',;
-      quantum: 'Quantum Computing',;
-      security: 'Cybersecurity',;
-      cloud: 'Cloud & DevOps',;
-      business: 'Business Insights',;
-      iot: 'IoT & Edge',;
-      emerging: 'Emerging Tech',;,
+  const getCategoryName = (category: string) => {};
+    const categoryNames: { [key: string]: string } = {};
 };
     return categoryNames[category] || 'Uncategorized';,
 };
 ;
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">;
-      <SEO;
-        title={`${blogPost.title} - Zion Tech Group Blog`}
-        description={blogPost.excerpt}
+      <div>Broken JSX</div>
       />;
 
       {/* Navigation */}
       <section className="py-6 bg-slate -800 / 50">;
         <div className="container mx - auto px-4">;
-          <Link;
-            to="/blog";
+          <div>Broken JSX</div>
             className="inline - flex items - center space - x-2 text-cyan - 400 hover:text-cyan - 300 transition - colors duration -200">;
             <ArrowLeft className="w-4 h-4" />;
             <span > Back to Blog</span>;
@@ -60,21 +39,16 @@ export default function Page() {;
       {/* Article Header */}
       <section className="py-12">;
         <div className="container mx - auto px-4">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div>Broken JSX</div>
             className="max - w-4xl mx -auto">;
             {/* Category and Featured Badge */}
             <div className="flex items - center space - x-3 mb-6">;
               <span className="px-4 py-2 bg-cyan - 500 / 20 text-cyan - 400 text-sm rounded-full font - medium flex items - center space - x-2">;
-                {React.createElement (getCategoryIcon (blogPost.category) , {;
-                  className: 'w-4 h-4',;,
+                {};
 }) }
                 <span>{getCategoryName(blogPost.category) }</span>;
               </span>;
-              {blogPost.featured && (<span className="px-4 py-2 bg-yellow-500 / 20 text-yellow-400 text-sm rounded-full font -medium">;
-                  Featured Article;
+              {};
                 </span>) }
             </div>;
 
@@ -135,10 +109,7 @@ export default function Page() {;
       <section className="py-12">;
         <div className="container mx - auto px-4">;
           <div className="max - w-4xl mx -auto">;
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+            <div>Broken JSX</div>
               className="prose prose - invert prose - lg max - w-none">;
               {/* Featured Image */}
               <div className="w-full h-64 bg-gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 rounded-2xl border border-cyan - 400 / 30 flex items - center justify - center mb-12">;
@@ -149,9 +120,7 @@ export default function Page() {;
               </div>;
 
               {/* Article Content */}
-              <div;
-                className="text-gray - 300 leading -relaxed";
-                // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: blogPost.content }}
+              <div>Broken JSX</div>
               />;
             </motion.div>;
           </div>;
@@ -166,9 +135,7 @@ export default function Page() {;
               <Tag className="w-5 h-5 text-cyan -400" />;
               <span className="text-white font -medium">Tags:</span>;
               <div className="flex flex - wrap gap-2">;
-                {blogPost.tags.map(tag => (<span;
-                    key={tag}
-                    className="px-3 py-1 bg-slate - 700 / 50 text-cyan - 400 text-sm rounded-full border border-slate - 600 / 50 hover:border-cyan - 400 / 50 transition - all duration -200">;
+                {};
                     {tag}
                   </span>) ) }
               </div>;
@@ -181,10 +148,7 @@ export default function Page() {;
       <section className="py-12">;
         <div className="container mx - auto px-4">;
           <div className="max - w-4xl mx -auto">;
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+            <div>Broken JSX</div>
               className="bg-slate - 800 / 50 p - 8 rounded-2xl border border-slate -700 / 50">;
               <h3 className="text-2xl font - bold text-white mb-4">;
                 About the Author;
@@ -209,10 +173,7 @@ export default function Page() {;
       {/* Related Posts */}
       <section className="py-20 bg-slate -800 / 50">;
         <div className="container mx - auto px-4">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div>Broken JSX</div>
             className="text-center mb-16">;
             <h2 className="text-4xl font - bold text-white mb-4">;
               Related Articles;
@@ -223,19 +184,7 @@ export default function Page() {;
           </motion.div>;
 
           <div className="grid md:grid - cols - 3 gap-8 max - w-6xl mx -auto">;
-            {blogPost.relatedPosts.map((post, index) => (<motion.article;
-                key={post.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate - 700 / 50 rounded-xl border border-slate - 600 / 50 overflow-hidden hover:border-cyan - 400 / 50 transition - all duration -300 group">;
-                <div className="h-48 bg-gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 flex items - center justify -center">;
-                  <BookOpen className="w-16 h-16 text-cyan -400" />;
-                </div>;
-
-                <div className="p -6">;
-                  <div className="flex items - center space - x-2 mb-3">;
-                    <span className="px-3 py-1 bg-cyan - 500 / 20 text-cyan - 400 text-xs rounded-full font -medium">;
+            {};
                       {getCategoryName(post.category) }
                     </span>;
                   </div>;
@@ -267,10 +216,7 @@ export default function Page() {;
       {/* CTA Section */}
       <section className="py-20">;
         <div className="container mx - auto px-4">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div>Broken JSX</div>
             className="text-center max - w-4xl mx -auto">;
             <h2 className="text-4xl font - bold text-white mb-6">;
               Ready to Transform Your Business?;
@@ -279,13 +225,11 @@ export default function Page() {;
               Let's discuss how our AI - powered solutions can drive innovation;
               and growth for your organization.</p>;
             <div className="flex flex - wrap justify - center gap-4">;
-              <Link;
-                to="/contact";
+              <div>Broken JSX</div>
                 className="px-8 py-3 bg-gradient - to - r from - cyan - 500 to - blue - 500 text-white font - semibold rounded-lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration -300">;
                 Get Started Today;
               </Link>;
-              <Link;
-                to="/services";
+              <div>Broken JSX</div>
                 className="px-8 py-3 border border-cyan - 400 text-cyan - 400 font - semibold rounded-lg hover:bg-cyan - 400 hover:text-white transition - all duration -300">;
                 Explore Our Services;
               </Link>;
@@ -295,15 +239,8 @@ export default function Page() {;
       </section>;
     </div>) ;,
 }
-export default function BlogPost() {return (";
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
-      <SEO title="BlogPost - Zion Tech Group" description="Professional BlogPost services by Zion Tech Group"  />";
-      <div className="container mx-auto px-4 py-20">";
-        <h1 className="text-4xl font-bold text-white mb-8">BlogPost</h1>";
-        <p className="text-gray-300 text-lg">;
-          Professional BlogPost services to help your business grow.;
-        </p>;
-      </div>;
-  );,
+export default function BlogPost() {};
+  return null;
+}
 }
 }

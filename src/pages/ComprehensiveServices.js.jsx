@@ -32,7 +32,9 @@ import {}
   COMPREHENSIVE_SERVICES,;
   SERVICE_CATEGORIES,';
   PRICING_TIERS} from '@/data/comprehensiveServices';
-export default function ComprehensiveServicesPage() {}
+export {};
+  return null;
+}
 ';
 '';
 ''';
@@ -65,17 +67,14 @@ export default function ComprehensiveServicesPage() {}
           </p>"";
           <div className="flex flex-wrap justify-center gap-4">"";
             <Link to="/contact">";
-              <Button"";
-                size="lg"";
+              <div>Broken JSX</div>
                 className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light"">"";
                 <Phone className="w-5 h-5 mr-2" />;
                 Get Started Today;
               </Button>";
             </Link>"";
             <Link to="/services-pricing">";
-              <Button"";
-                size="lg"";
-                variant="outline"";
+              <div>Broken JSX</div>
                 className="border-white text-white hover:bg-white/10"">"";
                 <DollarSign className="w-5 h-5 mr-2" />;
                 View Pricing;
@@ -103,8 +102,7 @@ export default function ComprehensiveServicesPage() {}
             </div>"";
             <div className="flex items-center gap-2">"";
               <Globe className="w-5 h-5 text-zion-cyan" />";
-              <a"";
-                href="https://ziontechgroup.com"";
+              <div>Broken JSX</div>
                 className="hover:text-zion-cyan transition-colors">;
                 ziontechgroup.com;
               </a>;
@@ -119,37 +117,33 @@ export default function ComprehensiveServicesPage() {}
           <div className="flex flex-col md:flex-row gap-4 max-w-4xl mx-auto">"";
             <div className="flex-1 relative">"";
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />";
-              <Input"";
-                placeholder="Search services...";
-                value={searchTerm}";
+              <div>Broken JSX</div>
                 onChange={e => setSearchTerm(e.target.value)}"";
                 className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light";
               />;
             </div>;
-            <Select;
-              value={selectedCategory}
+            <div>Broken JSX</div>
               onValueChange={setSelectedCategory}">"";
               <SelectTrigger className="w-full md:w-48 bg-zion-blue border-zion-blue-light text-white">"";
                 <SelectValue placeholder="Category" />";
               </SelectTrigger>"";
               <SelectContent className="bg-zion-blue border-zion-blue-light">"";
                 <SelectItem value="all">All Categories</SelectItem>;
-                {SERVICE_CATEGORIES.map(category => (;
+                {};
                   <SelectItem key={category} value={category}>;
                     {category}
                   </SelectItem>;
                 ))}
               </SelectContent>;
             </Select>;
-            <Select;
-              value={selectedPricingTier}
+            <div>Broken JSX</div>
               onValueChange={setSelectedPricingTier}">"";
               <SelectTrigger className="w-full md:w-48 bg-zion-blue border-zion-blue-light text-white">"";
                 <SelectValue placeholder="Pricing Tier" />";
               </SelectTrigger>"";
               <SelectContent className="bg-zion-blue border-zion-blue-light">"";
                 <SelectItem value="all">All Tiers</SelectItem>;
-                {Object.keys(PRICING_TIERS).map(tier => (;
+                {};
                   <SelectItem key={tier} value={tier}>;
                     {tier}
                   </SelectItem>;
@@ -164,18 +158,7 @@ export default function ComprehensiveServicesPage() {}
       <div className="py-16 px-4">"";
         <div className="container mx-auto">"";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {filteredServices.map(service => (;
-              <Card";
-                key={service.id}"";
-                className="bg-zion-blue border-zion-blue-light hover:border-zion-cyan transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20"">"";
-                <CardHeader className="pb-4">"";
-                  <div className="flex items-start justify-between">"";
-                    <div className="w-12 h-12 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-lg flex items-center justify-center text-zion-cyan mb-3">"";
-                      <Building className="w-6 h-6" />;
-                    </div>";
-                    <Badge"";
-                      variant="outline"";
-                      className="border-zion-cyan text-zion-cyan">;
+            {};
                       {service.category}
                     </Badge>";
                   </div>"";
@@ -189,11 +172,7 @@ export default function ComprehensiveServicesPage() {}
                 <CardContent className="space-y-4">";
                   {/* Tags */}"";
                   <div className="flex flex-wrap gap-2 mb-4">;
-                    {service.tags.slice(0, 3).map(tag => (;
-                      <Badge";
-                        key={tag}"";
-                        variant="secondary"";
-                        className="bg-zion-blue-light text-zion-cyan">;
+                    {};
                         {tag}
                       </Badge>;
                     ))}
@@ -217,8 +196,7 @@ export default function ComprehensiveServicesPage() {}
                       <Phone className="w-4 h-4 mr-2" />;
                       Get Quote;
                     </Button>";
-                    <Button"";
-                      variant="outline"";
+                    <div>Broken JSX</div>
                       className="border-zion-blue-light text-zion-cyan hover:bg-zion-blue-light/10"">"";
                       <Eye className="w-4 h-4" />;
                     </Button>;
@@ -228,12 +206,7 @@ export default function ComprehensiveServicesPage() {}
             ))}
           </div>;
 ";
-          {filteredServices.length === 0 && ("";
-            <div className="text-center py-16">"";
-              <div className="text-zion-slate-light text-xl mb-4">;
-                No services found matching your criteria;
-              </div>;
-              <Button;
+          {};
                 onClick={() => {}
 ';
 '';
@@ -264,7 +237,7 @@ export default function ComprehensiveServicesPage() {}
           </div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {[];
+            {};
               {}
 ";
 "";
@@ -294,8 +267,7 @@ export default function ComprehensiveServicesPage() {}
                 description:'';
                   '24/7 technical support and dedicated account management for enterprise clients'}
             ].map((feature, index) => (;
-              <div";
-                key={index}"";
+              <div>Broken JSX</div>
                 className="text-center p-6 rounded-lg border border-zion-blue-light"">"";
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4 text-zion-cyan">;
                   {feature.icon}";
@@ -323,15 +295,12 @@ export default function ComprehensiveServicesPage() {}
             discover how we can help you achieve your goals.";
           </p>"";
           <div className="flex flex-wrap justify-center gap-4">";
-            <Button"";
-              size="lg"";
+            <div>Broken JSX</div>
               className="bg-white text-zion-purple hover:bg-zion-cyan hover:text-white"">"";
               <Phone className="w-5 h-5 mr-2" />;
               Call +1 302 464 0950;
             </Button>";
-            <Button"";
-              size="lg"";
-              variant="outline"";
+            <div>Broken JSX</div>
               className="border-white text-white hover:bg-white hover:text-zion-purple"">"";
               <Mail className="w-5 h-5 mr-2" />;
               Email kleber@ziontechgroup.com;
@@ -341,8 +310,7 @@ export default function ComprehensiveServicesPage() {}
             <p>Visit us: 364 E Main St STE 1008, Middletown DE 19709</p>;
             <p>';
               Website:{' '}";
-              <a"";
-                href="https://ziontechgroup.com"";
+              <div>Broken JSX</div>
                 className="underline hover:text-white">;
                 https://ziontechgroup.com;
               </a>;

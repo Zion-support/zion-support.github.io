@@ -6,6 +6,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"";
 import { Star, AlertTriangle import { toast } from "@/components/ui/use-toast";
 function ReviewsModerationContent() {}
+  return null;
+}
 ";
 "";
     const [activeTab, setActiveTab] = useState("pending");
@@ -34,6 +36,8 @@ function ReviewsModerationContent() {}
     useEffect(() => {}
         fetchReviews()}, [activeTab]);
     const handleRefresh = () => {}
+  return <div>Component</div>;
+};
         fetchReviews()};";
     return (<>"";
       <SEO title="Review Moderation | Zion AI Marketplace" description="Moderate and manage reviews in the Zion AI Marketplace"/>";
@@ -83,7 +87,9 @@ function ReviewsModerationContent() {}
 
     </>)};
 export { function };
-export default function ReviewsModeration() {}
+export {};
+  return null;
+}
     return (<ProtectedRoute>;
       <ReviewsModerationContent />;
     </ProtectedRoute>)}

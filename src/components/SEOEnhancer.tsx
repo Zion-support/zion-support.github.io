@@ -1,65 +1,28 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 ;
-interface SEOEnhancerProps {;
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonical?: string;
-  ogImage?: string;
-  structuredData?: any;,
+interface SEOEnhancerProps {};
 }
 ;
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({;
-  title = "Zion Tech Group - AI Services, IT Solutions & Micro SaaS",;
-  description = "Leading provider of AI services, IT solutions, and micro SaaS applications. Transform your business with cutting-edge technology and innovative solutions.",;
-  keywords = ["AI services", "IT solutions", "micro SaaS", "artificial intelligence", "cloud computing", "digital transformation"],;
-  canonical,;
-  ogImage = "/og-image.jpg",;
-  structuredData;,
-}) => {;
-  useEffect(() => {;
-    // Add structured data;
-    if (structuredData) {;
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify(structuredData);
-      document.head.appendChild(script);,
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({};
+}) => {};
 }
 ;
     // Optimize meta tags;
     const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {;
-      metaDescription.setAttribute('content', description);,
+    if (metaDescription) {};
 }
 ;
     // Add canonical URL;
-    if (canonical) {;
-      let canonicalLink = document.querySelector('link[rel="canonical"]');
-      if (!canonicalLink) {;
-        canonicalLink = document.createElement('link');
-        canonicalLink.setAttribute('rel', 'canonical');
-        document.head.appendChild(canonicalLink);,
+    if (canonical) {};
 }
       canonicalLink.setAttribute('href', canonical);,
 }
   }, [description, canonical, structuredData]);
 ;
-  const defaultStructuredData = {;
-    "@context": "https://schema.org",;
-    "@type": "Organization",;
-    "name": "Zion Tech Group",;
-    "url": "https://ziontechgroup.com",;
-    "logo": "https://ziontechgroup.com/logo.png",;
-    "description": description,;
-    "address": {;
-      "@type": "PostalAddress",;
-      "addressCountry": "US";,
+  const defaultStructuredData = {};
 },;
-    "contactPoint": {;
-      "@type": "ContactPoint",;
-      "telephone": "+1-555-0123",;
-      "contactType": "customer service";,
+    "contactPoint": {};
 },;
     "sameAs": [;
       "https://linkedin.com/company/zion-tech-group",;
@@ -96,11 +59,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({;
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />;
       ;
       {/* Structured Data */}
-      <script;
-        type="application/ld+json";
-        dangerouslySetInnerHTML={{;
-          __html: JSON.stringify(structuredData || defaultStructuredData);,
-}}
+      <div>Broken JSX</div>
       />;
     </Head>;
   );,

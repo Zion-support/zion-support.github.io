@@ -3,14 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, Mail, MapPin, ChevronDown, Search, User, ShoppingCart } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 ;
-const Header: React.FC = () => {;
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const location = useLocation();
-;
-  useEffect(() => {;
-    const handleScroll = () => {;
+const Header: React.FC = () => {};
+};
       setIsScrolled(window.scrollY > 10);,
 };
     window.addEventListener('scroll', handleScroll);
@@ -18,10 +12,7 @@ const Header: React.FC = () => {;
 }, []);
 ;
   const navigationItems = [;
-    {;
-      name: 'Services',;
-      href: '/services',;
-      dropdown: [;
+    {};
         { name: 'AI & Machine Learning', href: '/services/ai-services' },;
         { name: 'Micro SaaS Solutions', href: '/services/micro-saas' },;
         { name: 'IT Infrastructure', href: '/services/it-infrastructure' },;
@@ -110,10 +101,7 @@ const Header: React.FC = () => {;
         { name: 'Zion Hire AI', href: '/services/zion-hire-ai' }
       ];,
 },;
-    {;
-      name: 'Solutions',;
-      href: '/solutions',;
-      dropdown: [;
+    {};
         { name: 'Enterprise Solutions', href: '/solutions/enterprise' },;
         { name: 'SMB Solutions', href: '/solutions/smb' },;
         { name: 'Startup Solutions', href: '/solutions/startup' },;
@@ -126,10 +114,7 @@ const Header: React.FC = () => {;
         { name: 'Non-Profit Solutions', href: '/solutions/non-profit' }
       ];,
 },;
-    {;
-      name: 'About',;
-      href: '/about',;
-      dropdown: [;
+    {};
         { name: 'Our Story', href: '/about/story' },;
         { name: 'Team', href: '/about/team' },;
         { name: 'Careers', href: '/careers' },;
@@ -139,10 +124,7 @@ const Header: React.FC = () => {;
         { name: 'Research & Development', href: '/research-development' }
       ];,
 },;
-    {;
-      name: 'Resources',;
-      href: '/resources',;
-      dropdown: [;
+    {};
         { name: 'Blog', href: '/blog' },;
         { name: 'Documentation', href: '/docs' },;
         { name: 'API Reference', href: '/api' },;
@@ -152,10 +134,7 @@ const Header: React.FC = () => {;
         { name: 'Webinars', href: '/webinars' }
       ];,
 },;
-    {;
-      name: 'Support',;
-      href: '/support',;
-      dropdown: [;
+    {};
         { name: 'Help Center', href: '/help' },;
         { name: 'Contact Support', href: '/contact' },;
         { name: 'Request Quote', href: '/request-quote' },;
@@ -165,17 +144,11 @@ const Header: React.FC = () => {;
 }
   ];
 ;
-  const contactInfo = {;
-    phone: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709';,
+  const contactInfo = {};
 };
 ;
   return (;
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${;
-      isScrolled ;
-        ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' ;
-        : 'bg-white';,
+    <div>Broken JSX</div>
 }`}>;
       {/* Top contact bar */}
       <div className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-2 px-4">;
@@ -222,10 +195,9 @@ const Header: React.FC = () => {;
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">;
-            {navigationItems.map((item) => (;
+            {};
               <div key={item.name} className="relative group">;
-                <button;
-                  className="flex items-center space-x-1 text-gray-700 hover:text-cyan-600 px-3 py-2 text-sm font-medium transition-colors duration-200";
+                <div>Broken JSX</div>
                   onMouseEnter={() => setActiveDropdown(item.name)}
                   onMouseLeave={() => setActiveDropdown(null)}
                 >;
@@ -233,18 +205,12 @@ const Header: React.FC = () => {;
                   {item.dropdown && <ChevronDown className="w-4 h-4" />}
                 </button>;
                 ;
-                {item.dropdown && activeDropdown === item.name && (;
-                  <div;
-                    className="absolute top-full left-0 w-80 bg-white border border-gray-200 rounded-lg shadow-xl py-2 z-50";
+                {};
                     onMouseEnter={() => setActiveDropdown(item.name)}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >;
                     <div className="grid grid-cols-1 gap-1 p-2">;
-                      {item.dropdown.map((subItem) => (;
-                        <Link;
-                          key={subItem.name}
-                          to={subItem.href}
-                          className="flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600 rounded-md transition-colors duration-200">;
+                      {};
                           {subItem.name}
                         </Link>;
                       ))}
@@ -270,7 +236,7 @@ const Header: React.FC = () => {;
 
           {/* Mobile menu button */}
           <div className="lg:hidden">;
-            <button;
+            <div>Broken JSX</div>
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 text-gray-400 hover:text-gray-600 transition-colors">;
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -281,38 +247,20 @@ const Header: React.FC = () => {;
 
       {/* Mobile Navigation */}
       <AnimatePresence>;
-        {isMenuOpen && (;
-          <motion.div;
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white border-t border-gray-200">;
-            <div className="px-4 py-6 space-y-4">;
-              {navigationItems.map((item) => (;
+        {};
                 <div key={item.name}>;
-                  <Link;
-                    to={item.href}
-                    className="block text-gray-700 hover:text-cyan-600 py-2 text-base font-medium";
+                  <div>Broken JSX</div>
                     onClick={() => setIsMenuOpen(false)}
                   >;
                     {item.name}
                   </Link>;
-                  {item.dropdown && (;
-                    <div className="ml-4 mt-2 space-y-2">;
-                      {item.dropdown.slice(0, 5).map((subItem) => (;
-                        <Link;
-                          key={subItem.name}
-                          to={subItem.href}
-                          className="block text-gray-600 hover:text-cyan-600 py-1 text-sm";
+                  {};
                           onClick={() => setIsMenuOpen(false)}
                         >;
                           {subItem.name}
                         </Link>;
                       ))}
-                      {item.dropdown.length > 5 && (;
-                        <Link;
-                          to={item.href}
-                          className="block text-cyan-600 hover:text-cyan-700 py-1 text-sm font-medium";
+                      {};
                           onClick={() => setIsMenuOpen(false)}
                         >;
                           View All {item.name} →;
@@ -323,16 +271,12 @@ const Header: React.FC = () => {;
                 </div>;
               ))}
               <div className="pt-4 border-t border-gray-200">;
-                <Link;
-                  to="/pricing";
-                  className="block text-gray-700 hover:text-cyan-600 py-2 text-base font-medium";
+                <div>Broken JSX</div>
                   onClick={() => setIsMenuOpen(false)}
                 >;
                   Pricing;
                 </Link>;
-                <Link;
-                  to="/contact";
-                  className="block bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg text-center font-medium mt-4";
+                <div>Broken JSX</div>
                   onClick={() => setIsMenuOpen(false)}
                 >;
                   Get Started;

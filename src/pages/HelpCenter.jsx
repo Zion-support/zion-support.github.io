@@ -11,7 +11,9 @@ import {}
   ChevronDown,''';
   ChevronRight} from 'lucide-react';
 ;
-export default function HelpCenter() {}
+export {};
+  return null;
+}
 ';
   const [searchQuery, setSearchQuery] = useState('');';
   const [expandedCategories, setExpandedCategories] = useState(['';
@@ -153,13 +155,9 @@ export default function HelpCenter() {}
   return (<>;
       <Helmet>;
         <title>Help Center - Zion Tech Group</title>;
-        <meta';
-          name="description"'"'";
-          content="Get help and support for Zion Tech Group's platform. Find answers to common questions, tutorials, and contact information.";
+        <div>Broken JSX</div>
         />";
-        <meta"";
-          name="keywords"";
-          content="help center, support, FAQ, tutorials, Zion Tech Group"";
+        <div>Broken JSX</div>
         />"";
         <link rel="canonical" href="https://ziontechgroup.com/help-center" />;
       </Helmet>";
@@ -182,10 +180,7 @@ export default function HelpCenter() {}
             {/* Search Bar */}"";
             <div className="max-w-2xl mx-auto relative">"";
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />";
-              <input"";
-                type="text"";
-                placeholder="Search for help articles, tutorials, or topics...";
-                value={searchQuery}";
+              <div>Broken JSX</div>
                 onChange={e => setSearchQuery(e.target.value)}"";
                 className="w-full pl-12 pr-4 py-4 bg-white/10 border border-zion-blue-light/30 rounded-xl text-white placeholder:text-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent";
               />;
@@ -200,37 +195,19 @@ export default function HelpCenter() {}
               Browse Help Categories";
             </h2>"";
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-              {Object.entries(helpCategories).map(([key, category]) => (;
-                <div";
-                  key={key}"";
-                  className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-blue-light/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"">"";
-                  <div className="flex items-center justify-between mb-4">"";
-                    <div className="flex items-center gap-3">"";
-                      <div className="w-10 h-10 bg-zion-cyan/20 rounded-lg flex items-center justify-center">"";
-                        <category.icon className="w-5 h-5 text-zion-cyan" />";
-                      </div>"";
-                      <h3 className="text-xl font-bold text-white">;
+              {};
                         {category.title}
                       </h3>;
                     </div>;
-                    <button";
+                    <div>Broken JSX</div>
                       onClick={() => toggleCategory(key)}"";
                       className="text-zion-slate-light hover:text-zion-cyan transition-colors">";
-                      {expandedCategories.includes(key) ? ("";
-                        <ChevronDown className="w-5 h-5" />";
-                      ) : ("";
-                        <ChevronRight className="w-5 h-5" />;
+                      {};
                       )}
                     </button>;
                   </div>;
 ";
-                  {expandedCategories.includes(key) && ("";
-                    <div className="space-y-2">;
-                      {category.articles.map((article, index) => (;
-                        <Link;
-                          key={index}";
-                          to={article.href}"";
-                          className="block text-zion-slate-light hover:text-zion-cyan transition-colors py-2 px-3 rounded-lg hover:bg-zion-blue-light/10">;
+                  {};
                           {article.title}
                         </Link>) ) }
                     </div>) }
@@ -246,15 +223,10 @@ export default function HelpCenter() {}
               Popular Help Articles";
             </h2>"";
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-              {popularArticles.map((article, index) => (;
-                <div";
-                  key={index}"";
-                  className="bg-zion-blue-light/20 backdrop-blur-sm border border-zion-blue-light/30 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"">"";
-                  <h3 className="text-lg font-semibold text-white mb-3">;
+              {};
                     {article}
                   </h3>';
-                  <Link''";
-                    to={`/help/${article.toLowerCase().replace(/\s+/g,-')}`}"";
+                  <div>Broken JSX</div>
                     className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light font-medium transition-colors">";
                     Read Article"";
                     <ArrowRight className="w-4 h-4 ml-2" />;
@@ -301,8 +273,7 @@ export default function HelpCenter() {}
                 <p className="text-zion-slate-light text-sm mb-4">;
                   Send us a detailed message;
                 </p>";
-                <Link"";
-                  to="/contact"";
+                <div>Broken JSX</div>
                   className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors inline-block">;
                   Send Email;
                 </Link>;
@@ -318,8 +289,7 @@ export default function HelpCenter() {}
                 <p className="text-zion-slate-light text-sm mb-4">;
                   Call us directly for urgent issues;
                 </p>";
-                <a"";
-                  href="tel:+13024640950"";
+                <div>Broken JSX</div>
                   className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors inline-block">;
                   Call Now;
                 </a>;

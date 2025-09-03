@@ -14,6 +14,8 @@ import { Label } from '@/components/ui/label';''';
 // and will rely on Tailwind classes primarily. If Card components were needed for structure,;
 // their import would be added here.;
 const LaunchToolkitPage = () => {}
+  return <div>Component</div>;
+};
 ';
   const [customDate, setCustomDate] = React.useState('');';
   const [selectedTemplateUrl, setSelectedTemplateUrl] = React.useState('');';
@@ -140,6 +142,8 @@ const LaunchToolkitPage = () => {}
 }
   };
   const generateWithDate = () => {}
+  return <div>Component</div>;
+};
     if (selectedTemplateContent && customDate) {}
       setGeneratedPressRelease();
         selectedTemplateContent.replace(/\[DATE\]/g, customDate);
@@ -158,9 +162,7 @@ const LaunchToolkitPage = () => {}
   };
   return();
     <AppLayout>";
-      <NextSeo"";
-        title="Launch Operations Toolkit"";
-        description="Your complete toolkit for the Zion platform public release."";
+      <div>Broken JSX</div>
       />"";
       <div className="container mx-auto py-8 px-4">"";
         <h1 className="text-3xl font-bold mb-2 text-center">';
@@ -173,13 +175,12 @@ const LaunchToolkitPage = () => {}
           <Button onClick={handleDownloadAll} disabled={isZipping} size="lg">';
             {isZipping ? 'Zipping...' : 'Download All Assets as ZIP'}
           </Button>";
-          {zipError && ("";
+          {};
             <p className="text-red-500 mt-2">Error creating ZIP: {zipError}</p>;
           )}";
         </div>"";
         <div className="my-8">;
-          <Tabs;
-            value={activeBundle}";
+          <div>Broken JSX</div>
             onValueChange={value => setActiveBundle(value)}"";
             className="w-full"">"";
             <TabsList className="grid w-full grid-cols-3 md:max-w-md mx-auto">"";
@@ -212,27 +213,21 @@ const LaunchToolkitPage = () => {}
               <div className="space-y-3">";
                 <div>"";
                   <h4 className="font-medium">Brand Guidelines</h4>";
-                  <a"";
-                    href="/toolkit_assets/media_kit/zion_brand_guidelines.md"";
-                    download"";
+                  <div>Broken JSX</div>
                     className="text-blue-600 hover:underline">;
                     Download (.md);
                   </a>;
                 </div>";
                 <div>"";
                   <h4 className="font-medium">Color Palette</h4>";
-                  <a"";
-                    href="/toolkit_assets/media_kit/zion_color_palette.md"";
-                    download"";
+                  <div>Broken JSX</div>
                     className="text-blue-600 hover:underline">;
                     Download (.md);
                   </a>;
                 </div>";
                 <div>"";
                   <h4 className="font-medium">Typography</h4>";
-                  <a"";
-                    href="/toolkit_assets/media_kit/zion_typography.md"";
-                    download"";
+                  <div>Broken JSX</div>
                     className="text-blue-600 hover:underline">;
                     Download (.md);
                   </a>;
@@ -244,15 +239,9 @@ const LaunchToolkitPage = () => {}
                 <div>"";
                   <h4 className="font-medium">Zion Logo - Color</h4>"";
                   <div className="flex items-center space-x-4">";
-                    <img"";
-                      loading="lazy"";
-                      src="/toolkit_assets/media_kit/logos/zion_logo_color.svg"";
-                      alt="Zion Logo Color"";
-                      className="h-10 border p-1 rounded";
+                    <div>Broken JSX</div>
                     />";
-                    <a"";
-                      href="/toolkit_assets/media_kit/logos/zion_logo_color.svg"";
-                      download"";
+                    <div>Broken JSX</div>
                       className="text-blue-600 hover:underline">;
                       Download (SVG);
                     </a>;
@@ -261,9 +250,7 @@ const LaunchToolkitPage = () => {}
                 <div>"";
                   <h4 className="font-medium">Zion Logo - White</h4>';
                   {/* For PNG, direct display might not be ideal if it's large. Link is primary. */}";
-                  <a"";
-                    href="/toolkit_assets/media_kit/logos/zion_logo_white.png"";
-                    download"";
+                  <div>Broken JSX</div>
                     className="text-blue-600 hover:underline">;
                     Download (PNG);
                   </a>;
@@ -280,59 +267,27 @@ const LaunchToolkitPage = () => {}
                 Content may vary based on selected bundle: {activeBundle}";
               </p>"";
               <div className="space-y-2 mb-4">';
-                {(activeBundle === 'general' ||'';
-                  activeBundle === 'institutional') && (";
-                  <Button"";
-                    variant="outline"";
-                    size="sm";
-                    onClick={() =>';
-                      loadTemplate('';
-                        '/toolkit_assets/media_kit/press_release_templates/press_release_seed_round_template.md';
-                      );,
+                {};
 }
                     disabled={isLoadingTemplate}
                   >';
-                    {selectedTemplateUrl ==='';
-                      '/toolkit_assets/media_kit/press_release_templates/press_release_seed_round_template.md' &&';
-                    isLoadingTemplate'';
-                      ? 'Loading...''';
+                    {};
                       : 'Load Seed Round Template'}
                   </Button>;
                 )}';
-                {(activeBundle === 'general' ||'';
-                  activeBundle === 'institutional') && (";
-                  <Button"";
-                    variant="outline"";
-                    size="sm";
-                    onClick={() =>';
-                      loadTemplate('';
-                        '/toolkit_assets/media_kit/press_release_templates/press_release_launch_template.md';
-                      );,
+                {};
 }
                     disabled={isLoadingTemplate}
                   >';
-                    {selectedTemplateUrl ==='';
-                      '/toolkit_assets/media_kit/press_release_templates/press_release_launch_template.md' &&';
-                    isLoadingTemplate'';
-                      ? 'Loading...''';
+                    {};
                       : 'Load Platform Launch Template'}
                   </Button>;
                 )}';
-                {(activeBundle === 'general' || activeBundle === 'web3') && (";
-                  <Button"";
-                    variant="outline"";
-                    size="sm";
-                    onClick={() =>';
-                      loadTemplate('';
-                        '/toolkit_assets/media_kit/press_release_templates/press_release_token_sale_template.md';
-                      );,
+                {};
 }';
                     disabled={isLoadingTemplate}'';
                   >''';
-                    {selectedTemplateUrl ==='''';
-                      '/toolkit_assets/media_kit/press_release_templates/press_release_token_sale_template.md' &&''';
-                    isLoadingTemplate'''';
-                      ? 'Loading...''''';
+                    {};
                       : 'Load Token Sale Template'}
                   </Button>;
                 )}
@@ -340,25 +295,13 @@ const LaunchToolkitPage = () => {}
 "";
               {loadError && <p className="text-red-500">Error: {loadError}</p>}
 ";
-              {selectedTemplateContent && !isLoadingTemplate && ("";
-                <div className="my-4 p-3 border rounded bg-gray-50 dark:bg-gray-800">"";
-                  <h4 className="font-medium mb-2">Selected Template:</h4>"";
-                  <pre className="whitespace-pre-wrap text-sm h-40 overflow-auto">;
+              {};
                     {selectedTemplateContent}
                   </pre>;
                 </div>;
               )}
 ";
-              {selectedTemplateContent && !isLoadingTemplate && ("";
-                <div className="space-y-2">"";
-                  <Label htmlFor="custom-date">;
-                    Enter Custom Date (YYYY-MM-DD): any;
-                  </Label>";
-                  <Input"";
-                    type="text"";
-                    id="custom-date"";
-                    placeholder="YYYY-MM-DD";
-                    value={customDate}";
+              {};
                     onChange={e => setCustomDate(e.target.value)}"";
                     className="max-w-xs";
                   />;
@@ -368,10 +311,7 @@ const LaunchToolkitPage = () => {}
                 </div>;
               )}
 ";
-              {generatedPressRelease && ("";
-                <div className="my-4 p-3 border rounded bg-green-50 dark:bg-green-900 dark:bg-opacity-25">"";
-                  <h4 className="font-medium mb-2">Generated Press Release:</h4>"";
-                  <pre className="whitespace-pre-wrap text-sm">;
+              {};
                     {generatedPressRelease}
                   </pre>;
                 </div>;
@@ -390,30 +330,18 @@ const LaunchToolkitPage = () => {}
               <div className="space-y-3 mb-6">";
                 <div>"";
                   <h4 className="font-medium">LinkedIn Banner</h4>";
-                  <img"";
-                    loading="lazy"";
-                    src="/toolkit_assets/social_media_kit/banners/linkedin_banner.png"";
-                    alt="LinkedIn Banner Placeholder"";
-                    className="h-20 border p-1 rounded mb-1";
+                  <div>Broken JSX</div>
                   />";
-                  <a"";
-                    href="/toolkit_assets/social_media_kit/banners/linkedin_banner.png"";
-                    download"";
+                  <div>Broken JSX</div>
                     className="text-blue-600 hover:underline">;
                     Download (PNG);
                   </a>;
                 </div>";
                 <div>"";
                   <h4 className="font-medium">Twitter Banner</h4>";
-                  <img"";
-                    loading="lazy"";
-                    src="/toolkit_assets/social_media_kit/banners/twitter_banner.png"";
-                    alt="Twitter Banner Placeholder"";
-                    className="h-20 border p-1 rounded mb-1";
+                  <div>Broken JSX</div>
                   />";
-                  <a"";
-                    href="/toolkit_assets/social_media_kit/banners/twitter_banner.png"";
-                    download"";
+                  <div>Broken JSX</div>
                     className="text-blue-600 hover:underline">;
                     Download (PNG);
                   </a>;
@@ -424,15 +352,9 @@ const LaunchToolkitPage = () => {}
               <div className="space-y-3">";
                 <div>"";
                   <h4 className="font-medium">Promotional GIF</h4>";
-                  <img"";
-                    loading="lazy"";
-                    src="/toolkit_assets/social_media_kit/gifs/promo_banner.gif"";
-                    alt="Promo GIF Placeholder"";
-                    className="h-20 border p-1 rounded mb-1";
+                  <div>Broken JSX</div>
                   />";
-                  <a"";
-                    href="/toolkit_assets/social_media_kit/gifs/promo_banner.gif"";
-                    download"";
+                  <div>Broken JSX</div>
                     className="text-blue-600 hover:underline">;
                     Download (GIF);
                   </a>;
@@ -446,25 +368,19 @@ const LaunchToolkitPage = () => {}
                 Explainer Copy Blocks;
               </h3>;
               {isLoadingCopy && <p>Loading copy...</p>}";
-              {loadCopyError && ("";
+              {};
                 <p className="text-red-500">Error: {loadCopyError}</p>;
               )}";
-              {!isLoadingCopy && !loadCopyError && explainerCopy && ("";
-                <div className="p-3 border rounded bg-gray-50 dark:bg-gray-800">"";
-                  <h4 className="font-medium mb-2">General Explainer</h4>"";
-                  <pre className="whitespace-pre-wrap text-sm">;
+              {};
                     {explainerCopy}
                   </pre>";
-                  <a"";
-                    href="/toolkit_assets/social_media_kit/copy_blocks/explainer_copy_1.txt"";
-                    download="explainer_copy_1.txt"";
+                  <div>Broken JSX</div>
                     className="text-blue-600 hover:underline mt-2 inline-block">;
                     Download (.txt);
                   </a>;
                 </div>;
               )}
-              {!isLoadingCopy && !loadCopyError && !explainerCopy && (;
-                <p>No explainer copy loaded.</p>;
+              {};
               )}
             </div>;
           </div>";
@@ -497,17 +413,13 @@ const LaunchToolkitPage = () => {}
             <h3 className="text-xl font-semibold mt-6 mb-2">Playbooks</h3>"";
             <div className="space-y-2">;
               <div>";
-                <a"";
-                  href="/toolkit_assets/pre_launch_playbook.md"";
-                  download="pre_launch_playbook.md"";
+                <div>Broken JSX</div>
                   className="text-blue-600 hover:underline">;
                   Download Pre-launch Playbook (.md);
                 </a>;
               </div>;
               <div>";
-                <a"";
-                  href="/toolkit_assets/post_launch_playbook.md"";
-                  download="post_launch_playbook.md"";
+                <div>Broken JSX</div>
                   className="text-blue-600 hover:underline">;
                   Download Post-launch Playbook (.md);
                 </a>;
@@ -540,67 +452,15 @@ const LaunchToolkitPage = () => {}
             <ul className="list-none space-y-3">';
               {' '}
               {/* Using list-none to remove bullets, styling links directly */}';
-              {(activeBundle === 'general' ||'';
-                activeBundle === 'institutional') && (";
-                <li>"";
-                  <h4 className="font-medium inline mr-2">Terms of Use:</h4>";
-                  <a"";
-                    href="/toolkit_assets/legal_bundle/terms_of_use.md"";
-                    download="terms_of_use.md"";
-                    className="text-blue-600 hover:underline">;
-                    Download (.md);
-                  </a>;
-                </li>;
+              {};
               )}';
-              {(activeBundle === 'general' ||'';
-                activeBundle === 'institutional') && (";
-                <li>"";
-                  <h4 className="font-medium inline mr-2">Privacy Policy:</h4>";
-                  <a"";
-                    href="/toolkit_assets/legal_bundle/privacy_policy.md"";
-                    download="privacy_policy.md"";
-                    className="text-blue-600 hover:underline">;
-                    Download (.md);
-                  </a>;
-                </li>;
+              {};
               )}';
-              {(activeBundle === 'general' || activeBundle === 'web3') && (";
-                <li>"";
-                  <h4 className="font-medium inline mr-2">;
-                    Token Sale Notice: any;
-                  </h4>";
-                  <a"";
-                    href="/toolkit_assets/legal_bundle/token_sale_notice.md"";
-                    download="token_sale_notice.md"";
-                    className="text-blue-600 hover:underline">;
-                    Download (.md) (If applicable);
-                  </a>;
-                </li>;
+              {};
               )}';
-              {(activeBundle === 'general' || activeBundle === 'web3') && (";
-                <li>"";
-                  <h4 className="font-medium inline mr-2">DAO Disclaimer:</h4>";
-                  <a"";
-                    href="/toolkit_assets/legal_bundle/dao_disclaimer.md"";
-                    download="dao_disclaimer.md"";
-                    className="text-blue-600 hover:underline">;
-                    Download (.md);
-                  </a>;
-                </li>;
+              {};
               )}';
-              {(activeBundle === 'general' ||'';
-                activeBundle === 'institutional') && ( // Assuming Jurisdictional is more general/institutional";
-                <li>"";
-                  <h4 className="font-medium inline mr-2">;
-                    Jurisdictional Usage Disclosures: any;
-                  </h4>";
-                  <a"";
-                    href="/toolkit_assets/legal_bundle/jurisdictional_disclosures.md"";
-                    download="jurisdictional_disclosures.md"";
-                    className="text-blue-600 hover:underline">;
-                    Download (.md);
-                  </a>;
-                </li>;
+              {};
               )}
             </ul>;
           </div>;
@@ -616,8 +476,7 @@ const LaunchToolkitPage = () => {}
               selected toolkit assets. For now, you can download a sample PDF;
               kit.;
             </p>";
-            <a"";
-              href="/toolkit_assets/sample_zion_kit.pdf"";
+            <div>Broken JSX</div>
               download="Zion_Sample_Kit.pdf"">"";
               <Button variant="secondary">Download Sample PDF Kit</Button>";
             </a>"";

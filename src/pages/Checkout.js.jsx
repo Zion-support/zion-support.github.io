@@ -6,7 +6,9 @@ import { safeStorage } from '@/utils/safeStorage';''';
 import { getCartKey } from '@/utils/cartUtils';''';
 import { getStripe } from '@/utils/getStripe';''';
 import { apiClient } from '@/utils/apiClient';
-export default function CheckoutPage() {}
+export {};
+  return null;
+}
     const navigate = useNavigate();
     const { t } = useTranslation();
     const [items, setItems] = useState([]);

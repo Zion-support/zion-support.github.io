@@ -1,6 +1,8 @@
 import React from 'react';''';
 import Link from 'next/link';
 const ResearchDevelopment = () => {}
+  return <div>Component</div>;
+};
     const researchAreas = [];
         {}
             title: "Artificial Intelligence & Machine Learning","";

@@ -5,6 +5,8 @@ import AdvancedServiceInnovationHub from "../components/AdvancedServiceInnovatio
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";import { Badge } from "../components/ui/badge";
 const ServiceInnovationHub = () => {}
+  return <div>Component</div>;
+};
     const innovationAreas = [];
         {}
 ";
@@ -107,13 +109,7 @@ const ServiceInnovationHub = () => {}
         </div>";
         "";
         <div className="max-w-4xl mx-auto text-center relative z-10">;
-          <motion.div initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} animate = {}
-  { opacity: 1,;
-  y: 0;
-";,
+          <div>Broken JSX</div>
 }} transition={{ duration: 0.6 }}>"";
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
               Service Innovation Hub";
@@ -127,10 +123,7 @@ const ServiceInnovationHub = () => {}
                 Explore Innovation Hub"";
                 <ArrowRight className="w-5 h-5 ml-2"/>";
               </Button>"";
-              <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {}
-';
-'';
-''';
+              <div>Broken JSX</div>
   () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Strategy Consultation',_blank');,
 }>;
                 Get Innovation Strategy;
@@ -143,13 +136,7 @@ const ServiceInnovationHub = () => {}
       {/* Innovation Areas Overview */}"";
       <section className="py-16 px-6 bg-white">"";
         <div className="max-w-6xl mx-auto">;
-          <motion.div initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
-  { opacity: 1,;
-  y: 0 ";
-"";,
+          <div>Broken JSX</div>
 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">"";
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">;
               Innovation Areas";
@@ -161,16 +148,7 @@ const ServiceInnovationHub = () => {}
           </motion.div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {innovationAreas.map((area, index) => (<motion.div key={index} initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}} transition = {}
-  { duration: 0.6,;
-  delay: index * 0.1;
-";,
+            {};
 }} viewport={{ once: true }}>"";
                 <Card className="h-full hover:shadow-lg transition-shadow">";
                   <CardHeader>"";
@@ -211,13 +189,7 @@ const ServiceInnovationHub = () => {}
       {/* Key Insights Section */}"";
       <section className="py-16 px-6 bg-zion-blue-light/5">"";
         <div className="max-w-4xl mx-auto">;
-          <motion.div initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
-  { opacity: 1,;
-  y: 0 ";
-"";,
+          <div>Broken JSX</div>
 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">"";
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">;
               Key Innovation Insights";
@@ -228,16 +200,7 @@ const ServiceInnovationHub = () => {}
           </motion.div>";
 "";
           <div className="space-y-6">;
-            {keyInsights.map((insight, index) => (<motion.div key={index} initial = {}
-  { opacity: 0,;
-  x: -20;,
-}} whileInView = {}
-  { opacity: 1,;
-  x: 0;,
-}} transition = {}
-  { duration: 0.6,;
-  delay: index * 0.1;
-";,
+            {};
 }} viewport={{ once: true }}>"";
                 <Card className="hover:shadow-lg transition-shadow">"";
                   <CardContent className="p-6">"";
@@ -272,13 +235,7 @@ const ServiceInnovationHub = () => {}
       {/* Innovation Hub Section */}"";
       <section id="innovation-hub" className="py-16 px-6 bg-white">"";
         <div className="max-w-7xl mx-auto">;
-          <motion.div initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
-  { opacity: 1,;
-  y: 0 ";
-"";,
+          <div>Broken JSX</div>
 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">"";
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">;
               Interactive Innovation Hub";
@@ -296,13 +253,7 @@ const ServiceInnovationHub = () => {}
       {/* CTA Section */}"";
       <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan">"";
         <div className="max-w-4xl mx-auto text-center">;
-          <motion.div initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
-  { opacity: 1,;
-  y: 0;
-";,
+          <div>Broken JSX</div>
 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>"";
             <h2 className="text-4xl font-bold text-white mb-6">;
               Ready to Lead the Innovation Revolution?";
@@ -312,16 +263,14 @@ const ServiceInnovationHub = () => {}
               of emerging technologies and capitalize on future opportunities.";
             </p>"";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"";
-              <Button className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4" onClick = {}
-';
+              <div>Broken JSX</div>
   () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Leadership Consultation',_blank');
 ";,
 }>"";
                 <Rocket className="w-5 h-5 mr-2"/>;
                 Lead Innovation";
               </Button>"";
-              <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {}
-';
+              <div>Broken JSX</div>
   () => window.open('tel:+13024640950',_blank');
 ";,
 }>"";

@@ -1,6 +1,8 @@
 import React from 'react';''';
 import Link from 'next/link';
 const AdvancedCybersecuritySuite = () => {}
+  return <div>Component</div>;
+};
     const features = [];
         {}
             title: "Threat Detection","";

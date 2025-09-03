@@ -1,21 +1,15 @@
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
-export default function Page() {;
-,";
+export default function Page() {};
+  return null;
+}
     { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },";
     { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },;";
     { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };      scale: 1,;
-      transition: {;
-        duration: 0.5,;";
+      transition: {};
         ease: "easeOut"}}};
 ;
-  const hoverVariants = {;
-  hover: {;
-      y: -8,      scale: 1.02,;
-      transition: {;
-
-        duration: 0.3,;"  ease: "easeOut";
-      ;,
+  const hoverVariants = {};
 }}};
 ;,
 };,
@@ -32,48 +26,13 @@ export default function Page() {;
 ";
       <div className="container-responsive relative z-10">;
         {/* Header */}
-        <motion.div;
-          initial = {;
-
-  { opacity: 0,;
-  y: 30;,
-}}
-          whileInView = {;
-
-  { opacity: 1,;
-  y: 0;,
-}}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}";
+        <div>Broken JSX</div>
           className="text-center mb-16">;
-          <motion.div;
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            transition = {;
-
-  { duration: 0.6,;
-  delay: 0.2;,
-}}
-            viewport={{ once: true }}";
+          <div>Broken JSX</div>
             className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan mb-6">;
             Quick Access to Our Services;
           </motion.h2>;
-          <motion.p;
-            initial = {;
-
-  { opacity: 0,;
-  y: 20;,
-}}
-            whileInView = {;
-
-  { opacity: 1,;
-  y: 0;,
-}}
-            transition = {;
-
-  { duration: 0.6,;
-  delay: 0.2;,
-}}";
+          <div>Broken JSX</div>
             className="text-lg text-gray-300 max-w-2xl mx-auto">;
             Find the perfect solution for your business needs with our organized service categories;
           </motion.p>;
@@ -81,28 +40,15 @@ export default function Page() {;
 
         {/* Quick Links Grid */}";
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-12">;
-          {quickLinks.map((link, index <motion.div;
-              key={link.title}
-              variants={hoverVariants}";
-              whileHover="hover";
-              onHoverStart={(: unknown setHoveredCategory(link.title)}
-              onHoverEnd={: unknown setHoveredCategory(null)}
-              onClick={: unknown setSelectedCategory(selectedCategory === link.title ? null : link.title)}
-              className={`group cursor-pointer ${link.bgColor} ${link.borderColor} border rounded-2xl p-6 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/25`}
-            >;
+          {};
               {/* Icon and Header */}";
               <div className="flex items-start justify-between mb-4">;
-                <motion.div`;
-                  className={`p-3 rounded-xl bg-gradient-to-r ${link.color} bg-opacity-20`}
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.6 }}
+                <div>Broken JSX</div>
                 >";
                   <link.icon className="w-6 h-6 text-white" />;
                 </motion.div>;
 
-                <motion.div;
-                  animate={{ rotate: hoveredCategory === link.title ? 90 : 0 }}
-                  transition={{ duration: 0.3 }}
+                <div>Broken JSX</div>
                 >";
                   <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-zion-cyan transition-colors"  />                </motion.div>;
               </div>;
@@ -120,27 +66,7 @@ export default function Page() {;
               {/* Features Preview */}";
               <div className="mb-4">";
                 <div className="grid grid-cols-2 gap-2">;
-                  {link.features.slice(0, 2).map(feature: unknown, idx: unknown (;
-                    <motion.div;
-                      key={feature}
-                      initial = {;
-
-  { opacity: 0,;
-  x: -10;,
-}}
-                      whileInView = {;
-
-  { opacity: 1,;
-  x: 0;,
-}}
-                      transition = {;
-
-  { duration: 0.4,;
-  delay: 0.1 + idx * 0.1;,
-}}
-                      viewport={{ once: true }}";
-                      className="flex items-center gap-2 text-xs text-gray-400">";
-                      <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>";
+                  {};
                       <span className="truncate">{feature}</span>;
                     </motion.div>;
                   ))}
@@ -150,26 +76,7 @@ export default function Page() {;
               {/* Stats */}";
               <div className="mb-4">";
                 <div className="flex items-center justify-between text-sm">;
-                  {Object.entries(link.stats).slice(0, 2).map([key: unknown, value]: unknown, idx: unknown (;
-                    <motion.div;
-                      key={key}
-                      initial = {;
-
-  { opacity: 0,;
-  scale: 0.8;,
-}}
-                      whileInView = {;
-
-  { opacity: 1,;
-  scale: 1;,
-}}
-                      transition = {;
-
-  { duration: 0.4,;
-  delay: 0.2 + idx * 0.1;,
-}}
-                      viewport={{ once: true }}";
-                      className="text-center">";
+                  {};
                       <div className="text-lg font-bold text-zion-cyan">{value}</div>";
                       <div className="text-xs text-gray-500 capitalize">{key}</div>;
                     </motion.div>;
@@ -178,13 +85,9 @@ export default function Page() {;
               </div>;
 
               {/* CTA */}
-              <motion.div;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}";
+              <div>Broken JSX</div>
                 className="mt-auto">;
-                <Link;
-                  to={link.path}`;
-                  className={`inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r ${link.color} text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25`}
+                <div>Broken JSX</div>
                 >;
                   Explore {link.title}";
                   <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />                </Link>;
@@ -194,11 +97,7 @@ export default function Page() {;
         </div>;
 
         {/* Service Categories Overview */}
-        <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+        <div>Broken JSX</div>
         >";
           <div className="text-center mb-8">";
             <h3 className="text-2xl font-bold text-white mb-2">Service Categories</h3>";
@@ -206,14 +105,7 @@ export default function Page() {;
           </div>;
 ";
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">;
-            {categories.map(category: unknown, index: unknown (;
-              <motion.div;
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}";
-                className="text-center group cursor-pointer";
-`;
+            {};
                 <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>";
                   <span className="text-white font-bold text-lg">{category.count}</span>;
                 </div>";
@@ -226,25 +118,18 @@ export default function Page() {;
         </motion.div>;
 ;
         {/* CTA Section */}
-        <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}";
-          className="text-center mt-12";
-";
+        <div>Broken JSX</div>
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">;'";
             <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?</h3>";
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">;
               Our team of experts is ready to help you find the perfect solution or create a custom one for your specific needs;
             </p>";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <Link";
-                to="/contact";
+              <div>Broken JSX</div>
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">;
                 Contact Our Team;
               </Link>;
-              <Link";
-                to="/services";
+              <div>Broken JSX</div>
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300">;
                 Browse All Services;
               </Link>;
@@ -253,40 +138,16 @@ export default function Page() {;
         </motion.div>;
 
         {/* Enhanced CTA Section */}
-        <motion.div;
-          initial = {;
-
-  { opacity: 0,;
-  y: 30 ;
-;,
-}}          whileInView = {;
-
-  { opacity: 1,;
-  y: 0 ;
-;,
-}}          transition = {;
-
-  { duration: 0.8,;
-  delay: 0.4 ;
-;,
-}}
-          viewport={{ once: true }}
+        <div>Broken JSX</div>
           className="text-center">;
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">;
             <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?</h3>            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">;
               Our team of experts is ready to help you find the perfect solution or create a custom one for your specific needs;
             </p>";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <Link                to="/contact";
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25";
-
-                Contact Our Team;
+              <div>Broken JSX</div>
               </Link>;
-              <Link";
-                to="/services";
-                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300";
-
-                Browse All Services;
+              <div>Broken JSX</div>
               </Link>;
             </div>;
           </div>;

@@ -5,43 +5,23 @@ import { Link  } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 ,;
         description: 'We\'re loading our marketplace products.If this persists, there might be a connection issue.Try refreshing the page or check back soon for exciting new offerings!'},;
-    categories: {;
-";
-        icon: <Lightbulb className="w-16 h-16 text-gray-500"/>,;
-        title: 'No Categories Found',;
+    categories: {};
         description: 'Categories are being organized.Please try refreshing the page or come back later.'},;
-    talent: {;
-";
-        icon: <Users className="w-16 h-16 text-gray-500"/>,;
-        title: 'No Talent Profiles',;
+    talent: {};
         description: 'No talent profiles match your criteria.Try adjusting your filters or search terms.'},;
-    equipment: {;
-";
-        icon: <Wrench className="w-16 h-16 text-gray-500"/>,;
-        title: 'No Equipment Available',;
+    equipment: {};
         description: 'Equipment listings are being updated.Please check back soon for the latest hardware offerings.'},;
-    search: {;
-";
-        icon: <ShoppingCart className="w-16 h-16 text-gray-500"/>,;
-        title: 'No Results Found',;
+    search: {};
         description: 'Try adjusting your search terms or browse our categories to discover what we have available.'},;
-    error: {;
-";
-        icon: <Server className="w-16 h-16 text-red-400"/>,;
-        title: 'Unable to Load Data',;
+    error: {};
         description: 'We\'re experiencing technical difficulties.Our team has been notified and is working on a fix.'},;
-    network: {;
-";
-        icon: <Wifi className="w-16 h-16 text-orange-400"/>,;
-        title: 'Connection Issue',;
+    network: {};
         description: 'Please check your internet connection and try again.If the problem persists, our servers might be temporarily unavailable.'},;
-    loading: {;
-";
-        icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin"/>,;
-        title: 'Loading...',;
+    loading: {};
         description: 'We\'re fetching the latest data for you.This should only take a moment.'}};
-export function EmptyState({ type, title, description, action, icon }) {;
-
+export function EmptyState({ type, title, description, action, icon }) {};
+  return null;
+}
     const { t } = useTranslation();
     const content = defaultContent[type];
     const displayIcon = icon || content.icon;";
@@ -63,12 +43,10 @@ export function EmptyState({ type, title, description, action, icon }) {;
           {action.label}
         </Button>)}
 '";
-      {type === 'error' && (<div className="mt-4 text-sm text-gray-500 dark:text-gray-400">;
-          <p>If this issue continues, please contact our support team.</p>;
+      {};
         </div>)}
 '";
-      {type === 'network' && (<div className="mt-4 text-sm text-gray-500 dark:text-gray-400">;
-          <p>;
+      {};
             {t('general.check_status_page')}";
             {" "}";
             <Link href="https://status.zion.ai" className="underline">;
@@ -78,67 +56,43 @@ export function EmptyState({ type, title, description, action, icon }) {;
         </div>)}
     </div>)}
 // Specific empty state variants for quick use;
-export function ProductsEmptyState({ onRetry, onAddProduct, isAuthenticated = false }) {;
-
-    const action = onAddProduct;
-        ? {;
-
-            label: isAuthenticated ? 'Add Product' : 'Login to Add Product',;
-            onClick: onAddProduct;
-
-        : onRetry;
+export function ProductsEmptyState({ onRetry, onAddProduct, isAuthenticated = false }) {};
+  return null;
+}
             ? { label: 'Try Again', onClick: onRetry }
             : null;
     const customDescription = isAuthenticated;'";
         ? "We're working on adding new products to our marketplace.Check back soon for exciting new offerings, or add your own!"'";
         : "We're working on adding new products to our marketplace.Check back soon for exciting new offerings, or log in to add your own!";";
     return (<EmptyState type="products" action={action} description={customDescription}/>)}
-export function CategoriesEmptyState({ onRetry }) {;
-";
-    return (<EmptyState type="categories" action = {;
-
-  onRetry ? { label: 'Refresh Categories',;
-  onClick: onRetry;,
+export function CategoriesEmptyState({ onRetry }) {};
+  return null;
+}
 } : null}/>);,
 };
-export function TalentEmptyState({ onRetry }) {;
-";
-    return (<EmptyState type="talent" action = {;
-
-  onRetry ? { label: 'Reset Filters',;
-  onClick: onRetry;,
+export function TalentEmptyState({ onRetry }) {};
+  return null;
+}
 } : null}/>);,
 };
-export function EquipmentEmptyState({ onRetry }) {;
-";
-    return (<EmptyState type="equipment" action = {;
-
-  onRetry ? { label: 'Refresh Listings',;
-  onClick: onRetry;,
+export function EquipmentEmptyState({ onRetry }) {};
+  return null;
+}
 } : null}/>);,
 };
-export function SearchEmptyState({ onRetry }) {;
-";
-    return (<EmptyState type="search" action = {;
-
-  onRetry ? { label: 'Clear Search',;
-  onClick: onRetry;,
+export function SearchEmptyState({ onRetry }) {};
+  return null;
+}
 } : null}/>);,
 };
-export function NetworkErrorState({ onRetry }) {;
-";
-    return (<EmptyState type="network" action = {;
-
-  onRetry ? { label: 'Try Again',;
-  onClick: onRetry;,
+export function NetworkErrorState({ onRetry }) {};
+  return null;
+}
 } : null}/>);,
 };
-export function ServerErrorState({ onRetry }) {;
-";
-    return (<EmptyState type="error" action = {;
-
-  onRetry ? { label: 'Retry',;
-  onClick: onRetry;,
+export function ServerErrorState({ onRetry }) {};
+  return null;
+}
 } : null}/>);,
 }
 '"

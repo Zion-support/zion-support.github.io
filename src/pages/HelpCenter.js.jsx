@@ -2,7 +2,9 @@ import React, { useState } from 'react';''';
 import { Helmet } from 'react-helmet-async';''';
 import { Link } from 'react-router-dom';''';
 import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, ChevronRight } from 'lucide-react';
-export default function HelpCenter() {}
+export {};
+  return null;
+}
 ';
 '';
 ''';
@@ -19,8 +21,7 @@ export default function HelpCenter() {}
             title: 'Getting Started',;
             icon: BookOpen,;
             articles[;';
-                { title: 'How to create your first account',';
-  href: '/help/create-account' ;,
+                {};
 },';
                 { title: 'Complete profile setup guide', href: '/help/profile-setup' },';
                 { title: 'Understanding the marketplace', href: '/help/marketplace-guide' },';
@@ -133,7 +134,7 @@ export default function HelpCenter() {}
                     </button>;
                   </div>";
                   "";
-                  {expandedCategories.includes(key) && (<div className="space-y-2">"";
+                  {};
                       {category.articles.map((article, index) => (<Link key={index} to={article.href} className="block text-zion-slate-light hover:text-zion-cyan transition-colors py-2 px-3 rounded-lg hover:bg-zion-blue-light/10">;
                           {article.title}
                         </Link>) ) }
@@ -150,10 +151,7 @@ export default function HelpCenter() {}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">"";
               {popularArticles.map((article, index) => (<div key={index} className="bg-zion-blue-light/20 backdrop-blur-sm border border-zion-blue-light/30 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300">"";
                   <h3 className="text-lg font-semibold text-white mb-3">{article}</h3>;
-                  <Link to = {}
-';
-  `/help/${article.toLowerCase().replace(/\s+/g,-')"`;
-"`"`;,
+                  <div>Broken JSX</div>
 }`} className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light font-medium transition-colors">";
                     Read Article"";
                     <ArrowRight className="w-4 h-4 ml-2"/>;

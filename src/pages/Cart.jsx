@@ -30,6 +30,8 @@ import { Link, useNavigate } from 'react-router-dom';
         dispatch(removeItemAction (id) ) ;,
 };
     const handleCheckout = () => {}
+  return <div>Component</div>;
+};
 ';
 '';
 ''';
@@ -124,8 +126,7 @@ import { Link, useNavigate } from 'react-router-dom';
                     <span className="text-gray-500 text-4xl">🛒</span>";
                 </div>"";
                 <p className="text-gray-600 mb-4">Your cart is empty</p>";
-                <Link "";
-                    to="/services"";
+                <div>Broken JSX</div>
                     className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">;
                     Browse Services;
                 </Link>;
@@ -137,8 +138,7 @@ import { Link, useNavigate } from 'react-router-dom';
             <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>"";
             <p className="text-gray-600">Cart functionality coming soon...</p>"";
             <div className="mt-6">";
-                <Link "";
-                    to="/services"";
+                <div>Broken JSX</div>
                     className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">;
                     Continue Shopping;
                 </Link>;

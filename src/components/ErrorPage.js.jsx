@@ -1,6 +1,6 @@
 import React from 'react';
 ;import { Link } from 'react-router-dom';
-export const ErrorPage = ({}
+export {};
   statusCode = 404,';
   title = 'Page Not Found',';
   message = 'The page you are looking for does not exist.'}) => {}

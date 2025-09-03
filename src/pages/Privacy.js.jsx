@@ -2,13 +2,12 @@ import { Header } from '@/components/Header';''';
 import { Footer } from '@/components/Footer';''';
 import { SEO } from '@/components/SEO';''';
 import { GradientHeading } from '@/components/GradientHeading';
-export default function Privacy() {}
+export {};
+  return null;
+}
   return();
     <>;
-      <SEO;
-        title="Privacy Policy"";
-        description="Learn how Zion Tech Group handles your data and protects your privacy."";
-        canonical="https://ziontechgroup.com/privacy";
+      <div>Broken JSX</div>
       />";
       <Header />"";
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">"";
@@ -36,8 +35,7 @@ export default function Privacy() {}
             <p>';
               If you have questions about our privacy practices, please contact'';
               us at{' '}";
-              <a"";
-                href="mailto:support@ziontechgroup.com"";
+              <div>Broken JSX</div>
                 className="text-zion-cyan hover:underline">;
                 support@ziontechgroup.com;
               </a>;

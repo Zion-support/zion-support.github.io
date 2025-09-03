@@ -5,19 +5,9 @@ import React from 'react';
 ;
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star } from "lucide-react";
-export function ContactInfo() {;
-    return (<section className="py-20 bg-zion-blue-dark">;
-      <div className="container mx-auto px-4">;
-        <div className="text-center mb-16">          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
-            Get In Touch";
-          </h2>"";
-          <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">;
-            Ready to transform your business with cutting-edge technology?;
-            Contact our experts today for a free consultation.";
-          </p>;
-        </div>""";
-""";
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">"""",;
+export function ContactInfo() {};
+  return null;
+}
           {/* comment */}"";
           <div className="space-y-6">"";
             <Card className="bg-zion-blue border-zion-blue-light">""";
@@ -71,10 +61,7 @@ export function ContactInfo() {;
                   </div>""";
                   <div>""";
                     <p className="text-white font-medium">Website</p>""";
-                    <a""";
-                      href="https: // comment;
-                      target="_blank"""";
-                      rel="noopener noreferrer""";
+                    <div>Broken JSX</div>
                       className="text-zion-cyan hover:text-zion-cyan-light transition-colors flex items-center gap-1 ">""";
                       ziontechgroup.com"";
                       <ExternalLink className="h-4 w-4" /">";
@@ -117,8 +104,7 @@ export function ContactInfo() {;
                       <span className="text-zion-cyan font-medium">";
                         24/7 Support;
                       </span>""";
-                      <Badge""";
-                        variant="secondary""";
+                      <div>Broken JSX</div>
                         className="bg-green-500/20 text-green-400 border-green-500/30 ">;
                         Available,;
                       </Badge>;
@@ -147,16 +133,14 @@ export function ContactInfo() {;
                 </Link>""";
 """;
                 <Link to="/comprehensive-services">""";
-                  <Button""";
-                    variant="outline""";
+                  <div>Broken JSX</div>
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10 ">;
                     View All Services";
                   </Button>;
                 </Link>""";
 """;
                 <Link to="/it-onsite-services">""";
-                  <Button""";
-                    variant="outline""";
+                  <div>Broken JSX</div>
                     className="w-full border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light/10 ">;
                     IT Onsite Services";
                   </Button>;
@@ -225,16 +209,13 @@ export function ContactInfo() {;
             </p>""";
             <div className="flex flex-col sm: flex-row gap-4 justify-center">""";
               <Link to="/request-quote">""";
-                <Button""";
-                  size="lg""";
+                <div>Broken JSX</div>
                   className="bg-white text-zion-purple hover:bg-zion-slate-light px-8 py-3 ">";
                   Get Free Consultation;
                 </Button>""";
               </Link>""";
               <a href="tel:+13024640950">""";
-                <Button""";
-                  size="lg"""";
-                  variant="outline""";
+                <div>Broken JSX</div>
                   className="border-white text-white hover:bg-white hover:text-zion-purple px-8 py-3 ">;
                   Call Now: +1 302 464 0950,;
                 </Button>;
@@ -251,4 +232,4 @@ export function ContactInfo() {;
 """""';
 ";
 
-export default Component
+export {};

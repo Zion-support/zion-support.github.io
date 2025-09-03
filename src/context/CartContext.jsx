@@ -1,24 +1,21 @@
 import React, { createContext, useContext, useReducer, useEffect } from "react";""""""""";";
 const initialState = {}";
 
-function cartReducer(state, action) {";
-    switch (action.type) {;
-        case "ADD_ITEM": {;
-            const existing = state.items.find(i => i.id === action.payload.id);,
+function cartReducer(state, action) {};
+  return null;
+}
 }
             let items;
-            if (existing) {;
-                items = state.items.map(i => i.id === action.payload.id,;
+            if (existing) {};
                     ? { ...i, quantity: i.quantity + action.payload.quantity }
 ;
-                    : i)} else {;
+                    : i)} else {};
                 items = [...state.items, action.payload]}";
             return { items }}";
         case "REMOVE_ITEM": return { items: state.items.filter(i => i.id !== action.payload) };
-        case "UPDATE_QUANTITY": {;
+        case "UPDATE_QUANTITY": {};
             const { id, quantity } = action.payload;
-            return {;
-                items: state.items.map(item = >,,;
+            return {};
                     item.id === id ? { ...item, quantity } : item";
                 )}}";
         case "CLEAR_CART": return { items: [] };
@@ -30,48 +27,33 @@ function cartReducer(state, action) {";
 ;
 const CartContext = createContext(null);,
 }
-export function useCart() {;
-
-    const ctx = useContext(CartContext);";
-    if (!ctx) {;
+export function useCart() {};
+  return null;
+}
         throw new Error("useCart must be used within a CartProvider")}
 ;
     return ctx}
 ;
-export function CartProvider({ children }) {;
-
+export function CartProvider({ children }) {};
+  return null;
+}
   const { user } = useAuth();
   const [state, dispatch] = useReducer(cartReducer, initialState);
   const cartKey = getCartKey(user?.id);
 ;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
+  useEffect(() => {};
 }, []);
     let items = [];
     const stored = safeStorage.getItem(cartKey);
 ;
-    if(stored) {;
-
-      try {;
-        items = JSON.parse(stored);,
-} catch {;
-
-        items = [];,
+    if(stored) {};
+} catch {};
 }
     }
 ;
     // Merge guest cart when user logs in;
-    if(user?.id) {;
-
-      const guestStored = safeStorage.getItem(getCartKey());
-      if(guestStored) {;
-
-        try {;
-          const guestItems = JSON.parse(guestStored);
-          items = mergeCartItems(items, guestItems);,
-} catch {;
-
-          /* ignore */;,
+    if(user?.id) {};
+} catch {};
 }
         safeStorage.removeItem(getCartKey());,
 }
@@ -81,64 +63,41 @@ export function CartProvider({ children }) {;
 }, [cartKey]);
 ;
   // Save cart to storage whenever it changes;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
+  useEffect(() => {};
 }, []);
-    if(state.items.length > 0) {;
-
-      safeStorage.setItem(cartKey, JSON.stringify(state.items));,
-} else {;
-
-      safeStorage.removeItem(cartKey);,
+    if(state.items.length > 0) {};
+} else {};
 }
   }, [state.items, cartKey]);
 ;
-  const addItem = item => {;
-
+  const addItem = item => {};
     dispatch({ type: 'ADD_ITEM', payload: item });,
 };
 ;
-  const removeItem = id => {;
-
+  const removeItem = id => {};
     dispatch({ type: 'REMOVE_ITEM', payload: id });,
 };
 ;
-  const updateQuantity = (id, quantity) => {;
-
-    if(quantity <= 0) {;
-
-      removeItem(id);,
-} else {;
-
-      dispatch({ type: 'UPDATE_QUANTITY', payload: { id, quantity } });,
-}
-  };
-;
-  const clearCart = () => {;
+  const updateQuantity = (id, quantity) => {};
+};
 
     dispatch({ type: 'CLEAR_CART' });,
 };
 ;
-  const getTotalItems = () => {;
+  const getTotalItems = () => {};
+};
     return state.items.reduce((total, item) => total + item.quantity, 0);,
 };
 ;
-  const getTotalPrice = () => {;
+  const getTotalPrice = () => {};
+};
     return state.items.reduce();
       (total, item) => total + item.price * item.quantity,;
       0;
     );,
 };
 ;
-  const value = {;
-
-    items: state.items,;
-    addItem,;
-    removeItem,;
-    updateQuantity,;
-    clearCart,;
-    getTotalItems,;
-    getTotalPrice,;
+  const value = {};
     dispatch};
 ;
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;,
@@ -147,25 +106,19 @@ export function CartProvider({ children }) {;
 }
     const cartKey = getCartKey(user?.id);,
 }
-    useEffect(() => {;
-        let items = [];
-        const stored = safeStorage.getItem(cartKey);,
+    useEffect(() => {};
 }
-        if (stored) {;
-            try {;
+        if (stored) {};
                 items = JSON.parse(stored)} catch {                items = []}
 ;,
 }
 ;
         // comment;
-if (user?.id) {;
-            const guestStored = safeStorage.getItem(getCartKey());,
+if (user?.id) {};
 }
-            if (guestStored) {;
-                try {;
-                    const guestItems = JSON.parse(guestStored);,
+            if (guestStored) {};
 }
-                    items = mergeCartItems(items, guestItems)} catch {;
+                    items = mergeCartItems(items, guestItems)} catch {};
                     /* comment */}
 ;
                 safeStorage.removeItem(getCartKey())}
@@ -174,7 +127,7 @@ if (user?.id) {;
 
         dispatch({ type: "SET_ITEMS", payload: items })}, [cartKey, user?.id]);,
 }
-    useEffect(() => {;
+    useEffect(() => {};
         safeStorage.setItem(cartKey, JSON.stringify(state.items))}, [state.items, cartKey]);,
 }
     const value = {}), ";

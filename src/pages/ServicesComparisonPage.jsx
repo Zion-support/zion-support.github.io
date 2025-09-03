@@ -9,7 +9,9 @@ import { PRICING_TIERS } from '@/data/advancedServices';
 // Service comparison data;
 const SERVICE_COMPARISONS = [];
     {}
-export default function Page() {}
+export {};
+  return null;
+}
 ,;
             {}
 ";
@@ -99,7 +101,9 @@ export default function Page() {}
         ];
 
 ];
-export default function ServicesComparisonPage() {}
+export {};
+  return null;
+}
 ";
 "";
     const [selectedCategory, setSelectedCategory] = useState("AI & Automation");"";

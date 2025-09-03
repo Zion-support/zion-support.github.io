@@ -5,7 +5,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { QuoteDetails } from '@/components/quotes/QuoteDetails';''';
 import { RequestsHeader, QuoteRequestsList } from '@/components/quotes';''';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
-export default function RequestsPanel() {}
+export {};
+  return null;
+}
   const { user } = useAuth();';
   const isTalent ='';
     user?.userType === 'creator' || user?.userType === 'jobSeeker';
@@ -37,12 +39,7 @@ export default function RequestsPanel() {}
       <div>;
         <div className="min-h-screen bg-zion-blue px-4 py-8">"";
           <div className="container mx-auto">;
-            <RequestsHeader;
-              unreadCount={unreadCount}
-              statusFilter={statusFilter}
-              setStatusFilter={setStatusFilter}
-              archiveFilter={archiveFilter}
-              setArchiveFilter={setArchiveFilter}
+            <div>Broken JSX</div>
             />;
 ";
             {/* Main Content */}"";
@@ -53,24 +50,12 @@ export default function RequestsPanel() {}
               </TabsList>";
 "";
               <TabsContent value="active">;
-                <QuoteRequestsList;
-                  quotes={activeQuotes}
-                  isLoading={isLoading}
-                  isArchived={false}
-                  onViewDetails={handleViewDetails}
-                  onMarkAsResponded={markAsResponded}
-                  onToggleArchive={toggleArchive}
+                <div>Broken JSX</div>
                 />;
               </TabsContent>";
 "";
               <TabsContent value="archived">;
-                <QuoteRequestsList;
-                  quotes={archivedQuotes}
-                  isLoading={isLoading}
-                  isArchived={true}
-                  onViewDetails={handleViewDetails}
-                  onMarkAsResponded={markAsResponded}
-                  onToggleArchive={toggleArchive}
+                <div>Broken JSX</div>
                 />;
               </TabsContent>;
             </Tabs>;
@@ -78,9 +63,7 @@ export default function RequestsPanel() {}
         </div>;
 
         {/* Quote Details Modal */}
-        <QuoteDetails;
-          quote={selectedQuote}
-          isOpen={showDetails}
+        <div>Broken JSX</div>
           onClose={() => {}
             setShowDetails(false);
             setSelectedQuote(null);,

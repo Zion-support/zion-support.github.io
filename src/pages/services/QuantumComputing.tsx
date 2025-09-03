@@ -1,71 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ;
-  Zap, ;
-  Brain, ;
-  Shield, ;
-  Cloud, ;
-  Cpu, ;
-  Rocket, ;
-  Atom, ;
-  Globe, ;
-  CheckCircle, ;
-  ArrowRight, ;
-  Star, ;
-  TrendingUp, ;
-  Users, ;
-  Lock, ;
-  Database, ;
-  Network, ;
-  Server, ;
-  CircuitBoard, ;
-  Microchip ;,
+import {};
 } from 'lucide-react';
 ;
-const QuantumComputing = () => {;
+const QuantumComputing = () => {};
+};
   const features = [;
-    {;
-      icon: Atom,;
-      title: "Quantum Processing",;
-      description: "Advanced quantum algorithms for complex computational problems";,
+    {};
 },;
-    {;
-      icon: Brain,;
-      title: "AI Integration",;
-      description: "Seamless integration with machine learning and AI systems";,
+    {};
 },;
-    {;
-      icon: Shield,;
-      title: "Quantum Security",;
-      description: "Unbreakable encryption using quantum key distribution";,
+    {};
 },;
-    {;
-      icon: Cloud,;
-      title: "Cloud Quantum",;
-      description: "Access quantum computing power through our cloud platform";,
+    {};
 }
   ];
 ;
   const useCases = [;
-    {;
-      title: "Financial Modeling",;
-      description: "Quantum algorithms for risk assessment and portfolio optimization",;
-      icon: TrendingUp;,
+    {};
 },;
-    {;
-      title: "Drug Discovery",;
-      description: "Molecular simulation and protein folding for pharmaceutical research",;
-      icon: Brain;,
+    {};
 },;
-    {;
-      title: "Cryptography",;
-      description: "Quantum-resistant encryption and secure communications",;
-      icon: Lock;,
+    {};
 },;
-    {;
-      title: "Optimization",;
-      description: "Solving complex logistics and supply chain problems",;
-      icon: Network;,
+    {};
 }
   ];
 ;
@@ -104,14 +62,12 @@ const QuantumComputing = () => {;
               Our quantum computing services integrate cutting-edge AI and provide unprecedented processing capabilities.;
             </p>;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <Link;
-                to="/contact";
+              <div>Broken JSX</div>
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20">;
                 Get Started;
                 <ArrowRight className="w-5 h-5 ml-2" />;
               </Link>;
-              <Link;
-                to="/services";
+              <div>Broken JSX</div>
                 className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200">;
                 Learn More;
               </Link>;
@@ -133,15 +89,7 @@ const QuantumComputing = () => {;
             </p>;
           </div>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {features.map((feature, index) => {;
-              const Icon = feature.icon;
-              return (;
-                <div;
-                  key={index}
-                  className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300">;
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">;
-                    <Icon className="w-8 h-8 text-white" />;
-                  </div>;
+            {};
                   <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>;
                   <p className="text-slate-300 text-sm">{feature.description}</p>;
                 </div>;
@@ -164,15 +112,7 @@ const QuantumComputing = () => {;
             </p>;
           </div>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {useCases.map((useCase, index) => {;
-              const Icon = useCase.icon;
-              return (;
-                <div;
-                  key={index}
-                  className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300">;
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-4">;
-                    <Icon className="w-8 h-8 text-white" />;
-                  </div>;
+            {};
                   <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>;
                   <p className="text-slate-300 text-sm">{useCase.description}</p>;
                 </div>;
@@ -195,12 +135,7 @@ const QuantumComputing = () => {;
             </p>;
           </div>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {technologies.map((technology, index) => (;
-              <div;
-                key={index}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-lg p-4 hover:border-cyan-500/50 transition-all duration-300">;
-                <div className="flex items-center space-x-3">;
-                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />;
+            {};
                   <span className="text-white font-medium">{technology}</span>;
                 </div>;
               </div>;
@@ -265,14 +200,12 @@ const QuantumComputing = () => {;
               Contact us to discuss how we can help you achieve the impossible.;
             </p>;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <Link;
-                to="/contact";
+              <div>Broken JSX</div>
                 className="bg-white text-cyan-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center">;
                 Get Started;
                 <ArrowRight className="ml-2 w-5 h-5" />;
               </Link>;
-              <Link;
-                to="/services";
+              <div>Broken JSX</div>
                 className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors">;
                 View All Services;
               </Link>;

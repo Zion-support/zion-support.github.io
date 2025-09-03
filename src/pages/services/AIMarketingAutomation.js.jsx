@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';''';
 import { motion } from 'framer-motion';''';
 import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Clock, BarChart3 } from 'lucide-react';
 const AIMarketingAutomation = () => {}
+  return <div>Component</div>;
+};
     const features = [];
         {}
             icon: Brain,;
@@ -170,8 +172,7 @@ const AIMarketingAutomation = () => {}
         }
     };
     const itemVariants = {}
-  hidden: { y: 20,;
-  opacity: 0;,
+  hidden: {};
 },;
         visible: {}
             y: 0,;
@@ -187,13 +188,7 @@ const AIMarketingAutomation = () => {}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"/>";
         "";
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">;
-          <motion.div initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} animate = {}
-  { opacity: 1,;
-  y: 0 ";
-"";,
+          <div>Broken JSX</div>
 }} transition={{ duration: 0.8 }} className="text-center">"";
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full mb-6">"";
               <Target className="w-10 h-10 text-white"/>";
@@ -257,13 +252,7 @@ const AIMarketingAutomation = () => {}
       {/* Solutions by Channel */}"";
       <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border-t border-green-500/20">"";
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
-          <motion.div initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
-  { opacity: 1,;
-  y: 0 ";
-"";,
+          <div>Broken JSX</div>
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"";
             <h2 className="text-4xl font-bold text-white mb-6">Solutions by Marketing Channel</h2>"";
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
@@ -273,16 +262,7 @@ const AIMarketingAutomation = () => {}
           </motion.div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            {solutions.map((category, index) => (<motion.div key={category.category} initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}} viewport={{ once: true }} transition = {}
-  { duration: 0.5,;
-  delay: index * 0.1 ";
-"";,
+            {};
 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6">"";
                 <div className="flex items-center mb-6">"";
                   <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mr-4">"";
@@ -304,13 +284,7 @@ const AIMarketingAutomation = () => {}
 ";
       {/* Benefits Section */}"";
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
-        <motion.div initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
-  { opacity: 1,;
-  y: 0 ";
-"";,
+        <div>Broken JSX</div>
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"";
           <h2 className="text-4xl font-bold text-white mb-6">Business Benefits</h2>"";
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
@@ -320,16 +294,7 @@ const AIMarketingAutomation = () => {}
         </motion.div>";
 "";
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-          {benefits.map((benefit, index) => (<motion.div key={benefit.title} initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}} viewport={{ once: true }} transition = {}
-  { duration: 0.5,;
-  delay: index * 0.1 ";
-"";,
+          {};
 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-green-500/50 transition-all duration-300">"";
               <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">"";
                 <benefit.icon className="w-8 h-8 text-white"/>";
@@ -343,13 +308,7 @@ const AIMarketingAutomation = () => {}
       {/* Technology Stack */}"";
       <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border-t border-green-500/20">"";
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
-          <motion.div initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
-  { opacity: 1,;
-  y: 0 ";
-"";,
+          <div>Broken JSX</div>
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"";
             <h2 className="text-4xl font-bold text-white mb-6">Technology Stack</h2>"";
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
@@ -359,16 +318,7 @@ const AIMarketingAutomation = () => {}
           </motion.div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {technologies.map((tech, index) => (<motion.div key={tech.name} initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}} viewport={{ once: true }} transition = {}
-  { duration: 0.5,;
-  delay: index * 0.1 ";
-"";,
+            {};
 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-green-500/50 transition-all duration-300">"";
                 <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">"";
                   <tech.icon className="w-8 h-8 text-white"/>";
@@ -382,13 +332,7 @@ const AIMarketingAutomation = () => {}
 ";
       {/* CTA Section */}"";
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
-        <motion.div initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
-  { opacity: 1,;
-  y: 0 ";
-"";,
+        <div>Broken JSX</div>
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">"";
           <h2 className="text-4xl font-bold text-white mb-6">;
             Ready to Automate Your Marketing?";

@@ -3,77 +3,35 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Shield, Zap, Users, BarChart3, ArrowRight, CheckCircle, Lock, Eye } from 'lucide-react';
 
-const Cybersecurity: NextPage = () => {
-  const securitySolutions = [
-    {
-      icon: Shield,
-      title: 'Security Audits',
-      description: 'Comprehensive security assessments to identify vulnerabilities and risks.',
-      features: ['Penetration Testing', 'Vulnerability Assessment', 'Security Reviews', 'Compliance Checks']
+const Cybersecurity: NextPage = () => {};
     },
-    {
-      icon: Lock,
-      title: 'Threat Detection',
-      description: 'Advanced threat detection and monitoring systems.',
-      features: ['SIEM Solutions', 'Intrusion Detection', 'Real-time Monitoring', 'Alert Management']
+    {};
     },
-    {
-      icon: Users,
-      title: 'Incident Response',
-      description: 'Rapid response and recovery from security incidents.',
-      features: ['24/7 Monitoring', 'Incident Investigation', 'Recovery Planning', 'Forensic Analysis']
+    {};
     },
-    {
-      icon: BarChart3,
-      title: 'Compliance & Governance',
-      description: 'Ensure compliance with industry standards and regulations.',
-      features: ['GDPR Compliance', 'SOC 2', 'ISO 27001', 'HIPAA Compliance']
+    {};
     }
   ];
 
   const securityServices = [
-    {
-      title: 'Network Security',
-      description: 'Protect your network infrastructure from external and internal threats.',
-      tools: ['Firewalls', 'VPNs', 'Network Monitoring', 'Access Control']
+    {};
     },
-    {
-      title: 'Application Security',
-      description: 'Secure your applications throughout the development lifecycle.',
-      tools: ['Code Reviews', 'Security Testing', 'API Security', 'Secure Development']
+    {};
     },
-    {
-      title: 'Data Protection',
-      description: 'Safeguard sensitive data with encryption and access controls.',
-      tools: ['Data Encryption', 'Backup Security', 'Access Management', 'Data Classification']
+    {};
     },
-    {
-      title: 'Cloud Security',
-      description: 'Secure your cloud infrastructure and applications.',
-      tools: ['Cloud Access Security', 'Identity Management', 'Compliance Monitoring', 'Threat Protection']
+    {};
     }
   ];
 
   const complianceStandards = [
-    {
-      name: 'GDPR',
-      description: 'General Data Protection Regulation compliance for EU data handling.',
-      requirements: ['Data Privacy', 'Consent Management', 'Right to Erasure', 'Data Portability']
+    {};
     },
-    {
-      name: 'SOC 2',
-      description: 'Service Organization Control 2 compliance for service providers.',
-      requirements: ['Security', 'Availability', 'Processing Integrity', 'Confidentiality', 'Privacy']
+    {};
     },
-    {
-      name: 'ISO 27001',
-      description: 'International standard for information security management.',
-      requirements: ['Risk Assessment', 'Security Controls', 'Management System', 'Continuous Improvement']
+    {};
     },
-    {
-      name: 'HIPAA',
-      description: 'Health Insurance Portability and Accountability Act compliance.',
-      requirements: ['Privacy Rule', 'Security Rule', 'Breach Notification', 'Enforcement']
+    {};
     }
   ];
 
@@ -112,7 +70,7 @@ const Cybersecurity: NextPage = () => {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {securitySolutions.map((solution, index) => (
+              {};
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                   <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <solution.icon className="w-8 h-8 text-red-600" />
@@ -120,7 +78,7 @@ const Cybersecurity: NextPage = () => {
                   <h3 className="text-xl font-semibold mb-3 text-gray-800 text-center">{solution.title}</h3>
                   <p className="text-gray-600 mb-4 text-center">{solution.description}</p>
                   <ul className="space-y-2">
-                    {solution.features.map((feature, featureIndex) => (
+                    {};
                       <li key={featureIndex} className="text-sm text-gray-600 flex items-center">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                         {feature}
@@ -145,18 +103,14 @@ const Cybersecurity: NextPage = () => {
             </div>
             
             <div className="grid md:grid-cols-2 gap-8">
-              {securityServices.map((service, index) => (
+              {};
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                   <h3 className="text-xl font-semibold mb-3 text-gray-800">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <div>
                     <h4 className="font-semibold text-gray-700 mb-3">Tools & Technologies:</h4>
                     <div className="flex flex-wrap gap-2">
-                      {service.tools.map((tool, toolIndex) => (
-                        <span 
-                          key={toolIndex}
-                          className="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full"
-                        >
+                      {};
                           {tool}
                         </span>
                       ))}
@@ -180,14 +134,14 @@ const Cybersecurity: NextPage = () => {
             </div>
             
             <div className="grid md:grid-cols-2 gap-8">
-              {complianceStandards.map((standard, index) => (
+              {};
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                   <h3 className="text-2xl font-semibold mb-4 text-gray-800">{standard.name}</h3>
                   <p className="text-gray-600 mb-6">{standard.description}</p>
                   <div>
                     <h4 className="font-semibold text-gray-700 mb-3">Key Requirements:</h4>
                     <ul className="space-y-2">
-                      {standard.requirements.map((requirement, reqIndex) => (
+                      {};
                         <li key={reqIndex} className="text-gray-600 flex items-center">
                           <div className="w-2 h-2 bg-red-500 rounded-full mr-2"></div>
                           {requirement}

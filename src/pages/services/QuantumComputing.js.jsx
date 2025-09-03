@@ -1,6 +1,8 @@
 import React from 'react';''';
 import { Link } from 'react-router-dom';
 import { Cpu, Zap, Brain, Target, Shield, Users, Globe, Atom, CircuitBoard const QuantumComputing = () => {}
+  return <div>Component</div>;
+};
     const quantumServices = [];
         {}
             icon: Brain,;

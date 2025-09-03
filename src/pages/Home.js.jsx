@@ -22,14 +22,12 @@ import { TechnologyStackSection } from '@/components/TechnologyStackSection';'''
 import { SecurityComplianceSection } from '@/components/SecurityComplianceSection';''';
 import { AIServicesShowcase } from '@/components/AIServicesShowcase';''';
 import { InteractiveTestimonials } from '@/components/InteractiveTestimonials';
-export default function Home() {}
+export {};
+  return null;
+}
   return();
     <>;
-      <SEO';
-        title="Zion Tech Group - Leading AI & Technology Solutions"'"'";
-        description="Discover cutting-edge AI solutions, expert talent, and innovative technology services. Transform your business with Zion Tech Group's comprehensive tech ecosystem."";
-        canonical="/"";
-        url="https://ziontechgroup.com";
+      <div>Broken JSX</div>
       />;
 
       <HeroSection />;

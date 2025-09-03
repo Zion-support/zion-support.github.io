@@ -20,7 +20,9 @@ import {}
   Sun,'';
   Moon,''';
   Infinity} from 'lucide-react';
-export default function Partners() {}
+export {};
+  return null;
+}
   const partnershipTypes = [];
     {}
 ';
@@ -167,10 +169,7 @@ export default function Partners() {}
             Partnership Opportunities";
           </h2>"";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {partnershipTypes.map((type, index) => (;
-              <div";
-                key={index}"";
-                className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20 hover:border-zion-cyan/50 transition-all duration-300 hover:scale-105"">"";
+            {};
                 <div className="text-4xl mb-4">{type.icon}</div>"";
                 <h3 className="text-xl font-semibold text-white mb-3">;
                   {type.title}";
@@ -179,11 +178,7 @@ export default function Partners() {}
                   {type.description}";
                 </p>"";
                 <ul className="space-y-2">;
-                  {type.benefits.map((benefit, benefitIndex) => (;
-                    <li";
-                      key={benefitIndex}"";
-                      className="flex items-center text-zion-slate-light text-sm"">"";
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />;
+                  {};
                       {benefit}
                     </li>) ) }
                 </ul>;
@@ -198,7 +193,7 @@ export default function Partners() {}
             Why Partner With Us?";
           </h2>"";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
-            {benefits.map((benefit, index) => ("";
+            {};
               <div key={index} className="text-center">"";
                 <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">"";
                   <benefit.icon className="w-8 h-8 text-zion-cyan" />";
@@ -220,18 +215,7 @@ export default function Partners() {}
             Our Trusted Partners";
           </h2>"";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {existingPartners.map((partner, index) => (;
-              <div";
-                key={index}"";
-                className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20 hover:border-zion-cyan/50 transition-all duration-300"">"";
-                <div className="flex items-center space-x-4 mb-4">;
-                  <img;
-                    src={partner.logo}";
-                    alt={partner.name}"";
-                    className="w-16 h-16 rounded-lg object-cover";
-                  />";
-                  <div>"";
-                    <h3 className="text-lg font-semibold text-white">;
+            {};
                       {partner.name}";
                     </h3>"";
                     <span className="text-sm text-zion-cyan bg-zion-cyan/10 px-2 py-1 rounded-full">;

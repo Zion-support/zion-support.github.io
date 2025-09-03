@@ -1,70 +1,37 @@
 import React from 'react';
 let services: unknown[] = [];
 ;
-const ComprehensivePricingGuide2030: React.FC = () => {;
-  const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 5000]);
-  const [selectedCategory, setSelectedCategory] = useState('all');
-;
-  const getFilteredServices = () => {;
+const ComprehensivePricingGuide2030: React.FC = () => {};
+};
     let services: unknown[] = [];
     ;
-    switch (activeTab) {;
-      case 'microsaas':        services = innovativeMicroSaasServices2030;
-        break;';
-      case 'it': unknown;
-        services = comprehensiveITServices2030;
-        break;';
-      case 'ai': unknown;
-        services = comprehensiveAIServices2030;
+    switch (activeTab) {};
         break}
 ;
     // Filter by price range;
-    services = services.filter(service => {;
-      if (activeTab === 'it') {;
-        return service.hourlyRate >= priceRange[0] && service.hourlyRate <= priceRange[1]} else {;
-
-        return service.price >= priceRange[0] && service.price <= priceRange[1]}    });
-;
-    // Filter by category';
-    if(selectedCategory !== 'all') {;
-
+    services = services.filter(service => {};
       services = services.filter(service => service.category === selectedCategory)};
 ;
     return services};
 ;
-  const getCategories = () => {;
+  const getCategories = () => {};
+};
     let services: unknown[] = [];
     ;
-    switch (activeTab) {;
-      case 'microsaas':        services = innovativeMicroSaasServices2030;
-        break;';
-      case 'it': unknown;
-        services = comprehensiveITServices2030;
-        break;';
-      case 'ai': unknown;
-        services = comprehensiveAIServices2030;
+    switch (activeTab) {};
         break}
 ;
     return categories};
 ;
-  const getPriceRange = () => {;
+  const getPriceRange = () => {};
+};
     let services: unknown[] = [];
     ;
-    switch (activeTab) {;
-      case 'microsaas':        services = innovativeMicroSaasServices2030;
-        break;';
-      case 'it': unknown;
-        services = comprehensiveITServices2030;
-        break;';
-      case 'ai': unknown;
-        services = comprehensiveAIServices2030;
+    switch (activeTab) {};
         break}
 ;
-    if(activeTab = == 'it') {;
-      ;
-      return [min, max]} else {;
-
+    if(activeTab = == 'it') {};
+      return [min, max]} else {};
       return [min, max]}
   };
 ;
@@ -92,7 +59,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             <div className="mb-6">";
               <h4 className="font-semibold text-gray-900 mb-3 text-center">Key Benefits</h4>";
               <div className="space-y-2">;
-                {service.benefits.slice(0, 4).map((benefit: string, index: number)  => (";
+                {};
                   <div key={index} className="flex items-center text-sm text-gray-600">";
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>;
                     {benefit}
@@ -129,24 +96,14 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               </div>;
 ";
               <div className="flex flex-col gap-2">;
-                <a;
-                  href={`tel:${service.contactInfo.phone}`}";
-                  className="w-full px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center";
-
-                  Call: {service.contactInfo.phone}
+                <div>Broken JSX</div>
                 </a>;
-                <a`;
-                  href={`mailto:${service.contactInfo.email}`}";
-                  className="w-full px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors text-center";
-
-                  Email: {service.contactInfo.email}
+                <div>Broken JSX</div>
                 </a>;              </div>;
             </div>;
           </div>;
         </div>;
-      )} else if(activeTab = == 'it') {;
-
-      return (";
+      )} else if(activeTab = == 'it') {};
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">";
           <div className="p-6">";
             <div className="text-center mb-6">";
@@ -174,7 +131,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             <div className="mb-6">";
               <h4 className="font-semibold text-gray-900 mb-3 text-center">Key Benefits</h4>";
               <div className="space-y-2">;
-                {service.benefits.slice(0, 4).map((benefit: string, index: number)  => (";
+                {};
                   <div key={index} className="flex items-center text-sm text-gray-600">";
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>;
                     {benefit}
@@ -211,25 +168,15 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               </div>;
 ";
               <div className="flex flex-col gap-2">;
-                <a`;
-                  href={`tel:${service.contactInfo.phone}`}";
-                  className="w-full px-4 py-2 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 text-center";
-
-                  Call: {service.contactInfo.phone}
+                <div>Broken JSX</div>
                 </a>;
-                <a`;
-                  href={`mailto:${service.contactInfo.email}`}";
-                  className="w-full px-4 py-2 border border-green-600 text-green-600 rounded-lg hover:bg-green-50 transition-colors text-center";
-
-                  Email: {service.contactInfo.email}
+                <div>Broken JSX</div>
                 </a>;
               </div>;
             </div>;
           </div>;
         </div>;
-      )} else {;
-
-      return (";
+      )} else {};
         <div key = {service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">";
           <div className="p-6">";
             <div className="text-center mb-6">";
@@ -257,7 +204,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             <div className="mb-6">";
               <h4 className="font-semibold text-gray-900 mb-3 text-center">Key Benefits</h4>";
               <div className="space-y-2">;
-                {service.benefits.slice(0, 4).map((benefit: string, index: number)  => (";
+                {};
                   <div key={index} className="flex items-center text-sm text-gray-600">";
                     <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>;
                     {benefit}
@@ -294,17 +241,9 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               </div>;
 ";
               <div className="flex flex-col gap-2">;
-                <a`;
-                  href={`tel:${service.contactInfo.phone}`}";
-                  className="w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-center";
-
-                  Call: {service.contactInfo.phone}
+                <div>Broken JSX</div>
                 </a>;
-                <a`;
-                  href={`mailto:${service.contactInfo.email}`}";
-                  className="w-full px-4 py-2 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition-colors text-center";
-
-                  Email: {service.contactInfo.email}
+                <div>Broken JSX</div>
                 </a>;
               </div>;
             </div>;
@@ -315,12 +254,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 ;
   return ();
     <>;
-      <SEO";
-        title = "Comprehensive Pricing Guide 2030 - Zion Tech Group";
-        description="Explore our complete pricing guide for micro SAAS, IT infrastructure, and AI services.Compare prices, ROI, and market data to find the perfect solution for your business.";
-        keywords="pricing guide, micro SAAS pricing, IT services pricing, AI services pricing, Zion Tech Group, 2030 pricing";
-        ogImage="https://ziontechgroup.com/images/pricing-guide-2030.jpg";
-        ogUrl="https://ziontechgroup.com/comprehensive-pricing-guide-2030";
+      <div>Broken JSX</div>
       />;
 "      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">;
         {/* Hero Section */}";
@@ -382,29 +316,23 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
           {/* Service Tabs */}";
           <div className="mb-8">";
             <div className="flex flex-wrap gap-2 justify-center">;
-              <button';
+              <div>Broken JSX</div>
                 onClick={() => setActiveTab('microsaas')}`;
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeTab === 'microsaas'';
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'';
-                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'`;,
+                className={};
 }`}
 ;
                 Micro SAAS Services({innovativeMicroSaasServices2030.length});
               </button>;
-              <button';
+              <div>Broken JSX</div>
                 onClick={() => setActiveTab('it')}`;
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeTab === 'it'';
-                    ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white shadow-lg'';
-                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'`;,
+                className={};
 }`}
 ;
                 IT Services({comprehensiveITServices2030.length});
               </button>;
-              <button';
+              <div>Broken JSX</div>
                 onClick={() => setActiveTab('ai')}`;
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeTab === 'ai'';
-                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'';
-                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'`;,
+                className={};
 }`}
 ;
                 AI Services({comprehensiveAIServices2030.length});
@@ -423,24 +351,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                     Price Range: ${priceRange[0]} - ${priceRange[1]}
                   </label>";
                   <div className="flex items-center gap-4">;
-                    <input";
-                      type="range";
-                      min={priceRangeData[0]}
-                      max={priceRangeData[1]}
-                      value={priceRange[1]}
-                      onChange = {;
-
+                    <div>Broken JSX</div>
   (e) => setPriceRange([priceRange[0],;
   parseInt(e.target.value)]);,
 }                      className="flex-1";
                     />;
-                    <input";
-                      type="range";
-                      min={priceRangeData[0]}
-                      max={priceRangeData[1]}
-                      value={priceRange[0]}
-                      onChange = {;
-
+                    <div>Broken JSX</div>
   (e) => setPriceRange([parseInt(e.target.value),;
   priceRange[1]]);,
 }                      className="flex-1";
@@ -456,13 +372,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                   <label className="block text-sm font-medium text-gray-700 mb-2">;
                     Category;
                   </label>;
-                  <select;
-                    value={selectedCategory}
+                  <div>Broken JSX</div>
                     onChange={(e) => setSelectedCategory(e.target.value)}";
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";
 ";
                     <option value="all">All Categories</option>;
-                    {getCategories().map(category: unknown (;
+                    {};
                       <option key={category} value={category}>{category}</option>;
                     ))}
                   </select>;
@@ -470,20 +385,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               </div>;
 ";
               <div className="mt-4 text-center">;
-                <button;
-                  onClick = {;
-
-  () => {;
-                    setPriceRange([priceRangeData[0],;
-  ;
-  ;
-  ;
-  ;
-  ;
-  ;
-  priceRangeData[1]]);
-                    setSelectedCategory('all');
-;,
+                <div>Broken JSX</div>
+  () => {};
 }}
                   className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors">;
                   Reset Filters;
@@ -525,23 +428,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
           </div>;
 
           {/* No Results */}
-          {getFilteredServices().length === 0 && (";
-            <div className="text-center py-12">";
-              <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>;
-              <button;
-                onClick = {;
-
-  () => {;
-                  setPriceRange([priceRangeData[0],;
-  ;
-  ;
-  ;
-  ;
-  ;
-  ;
-  priceRangeData[1]]);
-                  setSelectedCategory('all');
-;,
+          {};
 }}
                 className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">;
                 Clear Filters;
@@ -598,17 +485,9 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             <p className="text-xl text-blue-100 mb-6">;
               Contact our team to discuss your specific needs and get a customized quote for your business.</p>";
             <div className="flex flex-col md:flex-row gap-4 justify-center">;
-              <a";
-                href="tel:+13024640950";
-                className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors";
-
-                Call Now: +1 302 464 0950;
+              <div>Broken JSX</div>
               </a>;
-              <a";
-                href="mailto:kleber@ziontechgroup.com";
-                className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors";
-
-                Email Us;
+              <div>Broken JSX</div>
               </a>;
             </div>;
           </div>;

@@ -4,63 +4,19 @@ import { Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, Tr
 const blockchainServices = [;
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ;
-  Database, ;
-  Link as LinkIcon, ;
-  Zap, ;
-  Shield, ;
-  Globe, ;
-  CheckCircle, ;
-  ArrowRight,;
-  Clock,;
-  Star,;
-  TrendingUp,;
-  Users,;
-  Lock,;
-  BarChart3,;
-  Settings,;
-  Lightbulb,;
-  Rocket,;
-  Coins;,
+import {};
 } from 'lucide-react';
 ;
-const BlockchainServicesPage = () => {;
+const BlockchainServicesPage = () => {};
+};
   const blockchainServices = [;
-    {;
-      id: 'smart-contracts',;
-      title: 'Smart Contracts',;
-      description: 'Develop and deploy secure, audited smart contracts for various use cases',;
-      icon: <Database className="w-8 h-8" />,;
-      features: ['Contract Development', 'Security Auditing', 'Testing & Deployment', 'Maintenance'],;
-      useCases: ['DeFi Applications', 'NFT Platforms', 'Supply Chain', 'Voting Systems'],;
-      pricing: 'Starting from $4,500/month';,
+    {};
 },;
-    {;
-      id: 'defi-solutions',;
-      title: 'DeFi Solutions',;
-      description: 'Build decentralized finance applications and protocols',;
-      icon: <Coins className="w-8 h-8" />,;
-      features: ['DEX Development', 'Lending Protocols', 'Yield Farming', 'Staking Platforms'],;
-      useCases: ['Cryptocurrency Trading', 'Lending & Borrowing', 'Asset Management', 'Insurance'],;
-      pricing: 'Starting from $6,000/month';,
+    {};
 },;
-    {;
-      id: 'nft-platforms',;
-      title: 'NFT Platforms',;
-      description: 'Create and manage non-fungible token marketplaces and applications',;
-      icon: <LinkIcon className="w-8 h-8" />,;
-      features: ['Marketplace Development', 'Minting Services', 'Metadata Management', 'Royalty Systems'],;
-      useCases: ['Digital Art', 'Gaming', 'Collectibles', 'Real Estate'],;
-      pricing: 'Starting from $3,800/month';,
+    {};
 },;
-    {;
-      id: 'enterprise-blockchain',;
-      title: 'Enterprise Blockchain',;
-      description: 'Private and consortium blockchain solutions for enterprise use',;
-      icon: <Globe className="w-8 h-8" />,;
-      features: ['Private Networks', 'Consortium Management', 'Permission Systems', 'Integration'],;
-      useCases: ['Supply Chain', 'Identity Management', 'Asset Tracking', 'Compliance'],;
-      pricing: 'Starting from $8,500/month';,
+    {};
 }
   ];
 ;
@@ -68,23 +24,16 @@ const BlockchainServicesPage = () => {;
     'Ethereum', 'Polygon', 'Solana', 'Cardano', 'Polkadot', 'Hyperledger', 'Corda', 'Quorum';
   ];
 ;
-  const containerVariants = {;
+  const containerVariants = {};
     hidden: { opacity: 0 },;
-    visible: {;
-      opacity: 1,;
-      transition: {;
-        staggerChildren: 0.1;,
+    visible: {};
 }
     }
   };
 ;
-  const itemVariants = {;
+  const itemVariants = {};
     hidden: { opacity: 0, y: 20 },;
-    visible: {;
-      opacity: 1,;
-      y: 0,;
-      transition: {;
-        duration: 0.5;,
+    visible: {};
 }
     }
   };
@@ -93,10 +42,7 @@ const BlockchainServicesPage = () => {;
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-24">;
       <div className="container mx-auto px-4 py-12">;
         {/* Hero Section */}
-        <motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <div>Broken JSX</div>
           className="text-center mb-16">;
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full mb-6">;
             <Database className="w-10 h-10 text-white" />;
@@ -129,16 +75,9 @@ const BlockchainServicesPage = () => {;
         </motion.div>;
 
         {/* Blockchain Services Grid */}
-        <motion.div;
-          variants={containerVariants}
-          initial="hidden";
-          animate="visible";
+        <div>Broken JSX</div>
           className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">;
-          {blockchainServices.map((service, index) => (;
-            <motion.div;
-              key={service.id}
-              variants={itemVariants}
-              className="bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/10">;
+          {};
               {/* Service Header */}
               <div className="flex items-start justify-between mb-4">;
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center text-white mb-4">;
@@ -160,7 +99,7 @@ const BlockchainServicesPage = () => {;
               <div className="mb-6">;
                 <h4 className="text-white font-semibold mb-3">Key Features:</h4>;
                 <ul className="space-y-2">;
-                  {service.features.map((feature, featureIndex) => (;
+                  {};
                     <li key={featureIndex} className="flex items-center text-sm text-zion-slate-light">;
                       <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />;
                       {feature}
@@ -173,10 +112,7 @@ const BlockchainServicesPage = () => {;
               <div className="mb-6">;
                 <h4 className="text-white font-semibold mb-3">Use Cases:</h4>;
                 <div className="flex flex-wrap gap-2">;
-                  {service.useCases.map((useCase, useCaseIndex) => (;
-                    <span;
-                      key={useCaseIndex}
-                      className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/20">;
+                  {};
                       {useCase}
                     </span>;
                   ))}
@@ -184,8 +120,7 @@ const BlockchainServicesPage = () => {;
               </div>;
 
               {/* CTA Button */}
-              <Link;
-                to={`/blockchain-services/${service.id}`}
+              <div>Broken JSX</div>
                 className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300">;
                 Learn More;
                 <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />;
@@ -195,10 +130,7 @@ const BlockchainServicesPage = () => {;
         </motion.div>;
 
         {/* Blockchain Platforms */}
-        <motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+        <div>Broken JSX</div>
           className="mb-16">;
           <div className="text-center mb-8">;
             <h2 className="text-3xl font-bold text-white mb-4">;
@@ -211,13 +143,7 @@ const BlockchainServicesPage = () => {;
           </div>;
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">;
-            {blockchainPlatforms.map((platform, index) => (;
-              <motion.div;
-                key={platform}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-zion-blue-dark/20 border border-zion-cyan/20 rounded-lg p-4 text-center hover:border-zion-cyan/40 transition-all duration-300">;
+            {};
                 <div className="text-zion-cyan font-medium">{platform}</div>;
               </motion.div>;
             ))}
@@ -225,10 +151,7 @@ const BlockchainServicesPage = () => {;
         </motion.div>;
 
         {/* Blockchain Benefits */}
-        <motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+        <div>Broken JSX</div>
           className="mb-16">;
           <div className="text-center mb-8">;
             <h2 className="text-3xl font-bold text-white mb-4">;
@@ -270,10 +193,7 @@ const BlockchainServicesPage = () => {;
         </motion.div>;
 
         {/* Call to Action */}
-        <motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+        <div>Broken JSX</div>
           className="text-center bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8">;
           <h2 className="text-3xl font-bold text-white mb-4">;
             Ready to Build on the Blockchain?;
@@ -283,13 +203,11 @@ const BlockchainServicesPage = () => {;
             applications that transform your business.;
           </p>;
           <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-            <Link;
-              to="/contact";
+            <div>Broken JSX</div>
               className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 hover:scale-105">;
               Start Blockchain Project;
             </Link>;
-            <Link;
-              to="/services/pricing";
+            <div>Broken JSX</div>
               className="px-8 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-all duration-300">;
               View Blockchain Pricing;
             </Link>;
@@ -299,15 +217,8 @@ import React from "react";
 import { SEO } from "@/components/SEO";
 ;,"});,"});,
 }
-export default function BlockchainServicesPage() {return (";
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
-      <SEO title="BlockchainServicesPage - Zion Tech Group" description="Professional BlockchainServicesPage services by Zion Tech Group"  />";
-      <div className="container mx-auto px-4 py-20">";
-        <h1 className="text-4xl font-bold text-white mb-8">BlockchainServicesPage</h1>";
-        <p className="text-gray-300 text-lg">;
-          Professional BlockchainServicesPage services to help your business grow.;
-        </p>;
-      </div>;
-  );,
+export default function BlockchainServicesPage() {};
+  return null;
+}
 }
 }

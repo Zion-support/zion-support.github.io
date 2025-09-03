@@ -1,25 +1,9 @@
 import React from 'react';
-import { ;
-  Cloud, ;
-  Shield, ;
-  Zap, ;
-  Globe, ;
-  Mail, ;
-  Phone, ;
-  MapPin,;
-  CheckCircle,;
-  Star,;
-  ArrowRight,;
-  Users,;
-  Clock,;
-  Target,;
-  TrendingUp,;
-  Server,;
-  Database,;
-  Lock;,
+import {};
 } from 'lucide-react';
 ;
-const CloudMigrationServices = () => {;
+const CloudMigrationServices = () => {};
+};
   const features = [;
     'Zero-downtime migration',;
     'Data security & encryption',;
@@ -43,68 +27,27 @@ const CloudMigrationServices = () => {;
   ];
 ;
   const migrationSteps = [;
-    {;
-      step: '1',;
-      title: 'Assessment & Planning',;
-      description: 'Comprehensive analysis of your current infrastructure and migration requirements',;
-      duration: '1-2 weeks';,
+    {};
 },;
-    {;
-      step: '2',;
-      title: 'Strategy Development',;
-      description: 'Custom migration strategy tailored to your business needs and goals',;
-      duration: '1 week';,
+    {};
 },;
-    {;
-      step: '3',;
-      title: 'Pilot Migration',;
-      description: 'Small-scale migration to test and validate the process',;
-      duration: '2-3 weeks';,
+    {};
 },;
-    {;
-      step: '4',;
-      title: 'Full Migration',;
-      description: 'Complete migration with zero downtime and data integrity',;
-      duration: '2-4 weeks';,
+    {};
 },;
-    {;
-      step: '5',;
-      title: 'Optimization & Support',;
-      description: 'Performance tuning, monitoring setup, and ongoing support',;
-      duration: 'Ongoing';,
+    {};
 }
   ];
 ;
-  const pricing = {;
-    small: {;
-      name: 'Small Business',;
-      price: '$2,999',;
-      description: 'Up to 10 servers, basic migration',;
-      features: ['Assessment & planning', 'Basic migration', '30 days support', 'Documentation'],;
-      marketPrice: '$5,000';,
+  const pricing = {};
 },;
-    medium: {;
-      name: 'Medium Business',;
-      price: '$7,999',;
-      description: 'Up to 50 servers, advanced migration',;
-      features: ['Comprehensive assessment', 'Advanced migration', '90 days support', 'Training', 'Monitoring setup'],;
-      marketPrice: '$12,000',;
-      popular: true;,
+    medium: {};
 },;
-    enterprise: {;
-      name: 'Enterprise',;
-      price: 'Custom',;
-      description: 'Unlimited servers, enterprise-grade migration',;
-      features: ['Full assessment', 'Enterprise migration', '1 year support', 'Dedicated team', 'Custom solutions', 'SLA guarantee'],;
-      marketPrice: '$25,000+';,
+    enterprise: {};
 }
   };
 ;
-  const contactInfo = {;
-    phone: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com';,
+  const contactInfo = {};
 };
 ;
   return (;
@@ -113,39 +56,26 @@ const CloudMigrationServices = () => {;
       <div className="bg-white shadow-lg">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
           <div className="text-center">;
-            <div;
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
+            <div>Broken JSX</div>
               className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 mb-6">;
               <Cloud className="w-10 h-10 text-white" />;
             </div>;
-            <h1 ;
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
+            <div>Broken JSX</div>
               className="text-5xl font-bold text-gray-900 mb-4">;
               Cloud Migration Services;
             </h1>;
-            <p ;
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
+            <div>Broken JSX</div>
               className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">;
               Seamlessly migrate your infrastructure to the cloud with zero downtime, enhanced security, and significant cost savings.;
             </p>;
-            <div ;
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
+            <div>Broken JSX</div>
               className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <a ;
-                href={`tel:${contactInfo.phone}`}
+              <div>Broken JSX</div>
                 className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center text-lg font-semibold">;
                 <Phone className="w-5 h-5 mr-2" />;
                 Call Now: {contactInfo.phone}
               </a>;
-              <a ;
-                href={`mailto:${contactInfo.email}`}
+              <div>Broken JSX</div>
                 className="bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center text-lg font-semibold">;
                 <Mail className="w-5 h-5 mr-2" />;
                 Get Free Assessment;
@@ -163,14 +93,7 @@ const CloudMigrationServices = () => {;
         </div>;
         ;
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
-          {features.map((feature, index) => (;
-            <div;
-              key={feature}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">;
-              <CheckCircle className="w-8 h-8 text-green-500 mb-4" />;
+          {};
               <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature}</h3>;
             </div>;
           ))}
@@ -186,14 +109,7 @@ const CloudMigrationServices = () => {;
           </div>;
           ;
           <div className="space-y-8">;
-            {migrationSteps.map((step, index) => (;
-              <div;
-                key={step.step}
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="flex items-center bg-gray-50 rounded-xl p-6">;
-                <div className="flex-shrink-0 w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-xl font-bold mr-6">;
+            {};
                   {step.step}
                 </div>;
                 <div className="flex-grow">;
@@ -217,16 +133,7 @@ const CloudMigrationServices = () => {;
         </div>;
         ;
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
-          {benefits.map((benefit, index) => (;
-            <div;
-              key={benefit}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="text-center">;
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">;
-                <Star className="w-8 h-8 text-blue-600" />;
-              </div>;
+          {};
               <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit}</h3>;
             </div>;
           ))}
@@ -242,22 +149,7 @@ const CloudMigrationServices = () => {;
           </div>;
           ;
           <div className="grid md:grid-cols-3 gap-8">;
-            {Object.entries(pricing).map(([key, plan], index) => (;
-              <div;
-                key={key}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 relative border-2 ${;
-                  plan.popular ? 'border-blue-500' : 'border-gray-200';,
-}`}
-              >;
-                {plan.popular && (;
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
-                    <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">;
-                      Most Popular;
-                    </span>;
-                  </div>;
+            {};
                 )}
                 ;
                 <div className="text-center mb-6">;
@@ -269,7 +161,7 @@ const CloudMigrationServices = () => {;
                 </div>;
                 ;
                 <ul className="space-y-3 mb-8">;
-                  {plan.features.map((feature, featureIndex) => (;
+                  {};
                     <li key={featureIndex} className="flex items-center text-gray-600">;
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />;
                       {feature}
@@ -277,13 +169,7 @@ const CloudMigrationServices = () => {;
                   ))}
                 </ul>;
                 ;
-                <a;
-                  href={`tel:${contactInfo.phone}`}
-                  className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors ${;
-                    plan.popular;
-                      ? 'bg-blue-600 text-white hover:bg-blue-700';
-                      : 'bg-gray-200 text-gray-900 hover:bg-gray-300';,
-}`}
+                <div>Broken JSX</div>
                 >;
                   Get Started;
                 </a>;

@@ -1,21 +1,17 @@
 import React from 'react';''';
 import { Helmet } from 'react-helmet-async';
 const AIConsumerWillingnessToTry = () => {}
+  return <div>Component</div>;
+};
   return();
     <>;
       <Helmet>;
         <title>AI Consumer Willingness to Try Platform | Zion Tech Group</title>;
-        <meta;
-          name="description"";
-          content="Revolutionary AI consumer willingness to try platform that analyzes customer trial readiness, adoption likelihood, and new product acceptance with advanced AI capabilities.";
+        <div>Broken JSX</div>
         />";
-        <meta"";
-          name="keywords"";
-          content="AI willingness to try, trial readiness, product adoption, AI analysis, customer trials, new product acceptance";
+        <div>Broken JSX</div>
         />";
-        <link"";
-          rel="canonical"";
-          href="https://ziontechgroup.com/ai-consumer-willingness-to-try";
+        <div>Broken JSX</div>
         />;
       </Helmet>";
 "";
@@ -170,12 +166,7 @@ const AIConsumerWillingnessToTry = () => {}
               Trial Factors";
             </h2>"";
             <div className="grid md:grid-cols-4 gap-6">';
-              {['';
-                'Risk Tolerance',Innovation Adoption',Previous Experience',Social Influence',Product Complexity',Cost Sensitivity',Time Availability',Need Urgency';
-              ].map(factor => (;
-                <div";
-                  key={factor}"";
-                  className="bg-white/5 rounded-lg p-4 text-center border border-white/10"">"";
+              {};
                   <span className="text-white font-medium">{factor}</span>;
                 </div>;
               ))}

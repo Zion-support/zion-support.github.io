@@ -194,7 +194,7 @@ const { execSync } = require("child_process")";class PerformanceMonitor {;
   async checkBuildPerformance() {;
     this.log("🔨 Checking build performance...");";    const startTime = Date.now();
     try {;
-      execSync("npm run build", {""cwd": this.projectRoot,);        "stdio": "pipe",""timeout": 300000,,"});
+      execSync("npm run build", {""cwd": this.projectRoot,);        "stdio": "pipe", ""timeout": 300000,,"});
       const buildTime = Date.now() - startTime;
       this.log(`✅ Build completed in ${buildTime}ms`);`;      return { "success": true, buildTime },"} catch (error) {;
       this.log(`❌ Build "failed": ${error.message}`);`;      return { "success": false, "error": error.message },"}
@@ -241,7 +241,7 @@ const { execSync } = require("child_process")";class PerformanceMonitor {;
       // Check for outdated packages;
       let outdatedPackages = [];
       try {;
-        const outdatedOutput = execSync("npm outdated --json", {""cwd": this.projectRoot,);          "encoding": "utf8",""stdio": "pipe","});        outdatedPackages = JSON.parse(outdatedOutput)} catch (error) {;
+        const outdatedOutput = execSync("npm outdated --json", {""cwd": this.projectRoot,);          "encoding": "utf8", ""stdio": "pipe", "});        outdatedPackages = JSON.parse(outdatedOutput)} catch (error) {;
         // npm outdated returns non-zero exit code when packages are outdated;
         if (error.stdout) {;
           outdatedPackages = JSON.parse(error.stdout)}
@@ -257,7 +257,7 @@ const { execSync } = require("child_process")";class PerformanceMonitor {;
 ;
   async checkSecurity() {;
     this.log("🔒 Running security audit...");";    try {;
-      const auditOutput = execSync("npm audit --json", {""cwd": this.projectRoot,);        "encoding": "utf8",""stdio": "pipe","});
+      const auditOutput = execSync("npm audit --json", {""cwd": this.projectRoot,);        "encoding": "utf8", ""stdio": "pipe", "});
       const audit = JSON.parse(auditOutput);
       const vulnerabilities = audit.vulnerabilities || {}
       const vulnerabilityCount = Object.keys(vulnerabilities).length;

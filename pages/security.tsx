@@ -1,28 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 ;
-export default function Security() {;
-  return (;
-    <>;
-      <Head>;
-        <title>Security — Zion Tech Group</title>;
-        <meta name="description" content="Comprehensive security information and practices for Zion Tech Group's autonomous systems and services." />;
-        <meta property="og:title" content="Security — Zion Tech Group" />;
-        <meta property="og:description" content="Comprehensive security information and practices for Zion Tech Group's autonomous systems and services." />;
-      </Head>;
-      ;
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
-        <main className="container mx-auto px-6 py-12">;
-          <section className="text-center mb-16">;
-            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">;
-              Security;
-            </h1>;
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">;
-              Protecting your data and systems with enterprise-grade security measures and autonomous threat detection.;
-            </p>;
-          </section>;
-
-          <div className="max-w-6xl mx-auto">;
+export default function Security() {};
+  return null;
+}
             {/* Security Overview */}
             <section className="mb-16 p-8 bg-gradient-to-r from-green-500/10 to-cyan-500/10 rounded-2xl border border-green-500/20">;
               <h2 className="text-3xl font-bold mb-6 text-green-400">Security Overview</h2>;

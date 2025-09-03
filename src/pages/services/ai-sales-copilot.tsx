@@ -1,22 +1,10 @@
 import React from 'react';
-import { ;
-  Brain, ;
-  TrendingUp, ;
-  Users, ;
-  Target, ;
-  Zap, ;
-  BarChart3, ;
-  MessageCircle, ;
-  CheckCircle,;
-  ArrowRight,;
-  Star,;
-  Shield,;
-  Rocket;,
+import {};
 } from 'lucide-react';
 ;
-export default function AISalesCopilotPage() {;
-  return (;
-    <div className="min-h-screen bg-zion-slate-dark text-white">;
+export default function AISalesCopilotPage() {};
+  return null;
+}
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
         <div className="container mx-auto max-w-7xl">;

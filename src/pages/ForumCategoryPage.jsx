@@ -74,6 +74,8 @@ const iconMap = {}
   "Megaphone": Megaphone;,
 };
 function CategoryContent({ categoryId, category, IconComponent, user}) {}
+  return null;
+}
 ";
 "";
     const [searchQuery, setSearchQuery] = useState("");
@@ -131,12 +133,7 @@ function CategoryContent({ categoryId, category, IconComponent, user}) {}
     const category = categoriesInfo[categoryId];
     const IconComponent = iconMap[category.icon] || MessageSquare;
     return (<>;
-      <SEO title={`${category.name} | Community Forum | Zion AI Marketplace`} description={category.description} keywords = {}
-`;
-``;
-  `community, forum,;
-  ${category.id;
-`;,
+      <div>Broken JSX</div>
 }, discussion, AI marketplace, questions, answers`} canonical={`https://ziontechgroup.com / community / category/${categoryId}`}/>;
 
 `;

@@ -1,6 +1,8 @@
 import React from 'react';''';
 import Link from 'next/link';
 const MicroSAAS = () => {}
+  return <div>Component</div>;
+};
     const microSaasServices = [];
         {}
             title: "AI Content Generator","";

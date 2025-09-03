@@ -1,26 +1,8 @@
 import React from 'react';
-import { ;
-  Phone, ;
-  Mail, ;
-  MapPin, ;
-  Clock, ;
-  MessageCircle, ;
-  Globe, ;
-  CheckCircle,;
-  Star,;
-  Award,;
-  Users,;
-  Zap,;
-  Shield;,
+import {};
 } from 'lucide-react';
 ;
-const ContactPage: React.FC = () => {;
-  const contactInfo = {;
-    phone: "+1 302 464 0950",;
-    email: "kleber@ziontechgroup.com",;
-    address: "364 E Main St STE 1008, Middletown DE 19709",;
-    website: "https://ziontechgroup.com",;
-    hours: "Monday - Friday: 9:00 AM - 6:00 PM EST";,
+const ContactPage: React.FC = () => {};
 };
 ;
   const services = [;
@@ -145,24 +127,14 @@ const ContactPage: React.FC = () => {;
                     <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">;
                       First Name;
                     </label>;
-                    <input;
-                      type="text";
-                      id="firstName";
-                      name="firstName";
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent";
-                      placeholder="Your first name";
+                    <div>Broken JSX</div>
                     />;
                   </div>;
                   <div>;
                     <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">;
                       Last Name;
                     </label>;
-                    <input;
-                      type="text";
-                      id="lastName";
-                      name="lastName";
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent";
-                      placeholder="Your last name";
+                    <div>Broken JSX</div>
                     />;
                   </div>;
                 </div>;
@@ -171,12 +143,7 @@ const ContactPage: React.FC = () => {;
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">;
                     Email Address;
                   </label>;
-                  <input;
-                    type="email";
-                    id="email";
-                    name="email";
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent";
-                    placeholder="your.email@company.com";
+                  <div>Broken JSX</div>
                   />;
                 </div>;
 
@@ -184,12 +151,7 @@ const ContactPage: React.FC = () => {;
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">;
                     Phone Number;
                   </label>;
-                  <input;
-                    type="tel";
-                    id="phone";
-                    name="phone";
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent";
-                    placeholder="+1 (555) 123-4567";
+                  <div>Broken JSX</div>
                   />;
                 </div>;
 
@@ -197,12 +159,7 @@ const ContactPage: React.FC = () => {;
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">;
                     Company;
                   </label>;
-                  <input;
-                    type="text";
-                    id="company";
-                    name="company";
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent";
-                    placeholder="Your company name";
+                  <div>Broken JSX</div>
                   />;
                 </div>;
 
@@ -210,12 +167,10 @@ const ContactPage: React.FC = () => {;
                   <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">;
                     Service Interest;
                   </label>;
-                  <select;
-                    id="service";
-                    name="service";
+                  <div>Broken JSX</div>
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">;
                     <option value="">Select a service</option>;
-                    {services.map((service, index) => (;
+                    {};
                       <option key={index} value={service}>{service}</option>;
                     ))}
                     <option value="custom">Custom AI Solution</option>;
@@ -227,16 +182,11 @@ const ContactPage: React.FC = () => {;
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">;
                     Message;
                   </label>;
-                  <textarea;
-                    id="message";
-                    name="message";
-                    rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent";
+                  <div>Broken JSX</div>
                     placeholder="Tell us about your project requirements, goals, and how we can help..."></textarea>;
                 </div>;
 
-                <button;
-                  type="submit";
+                <div>Broken JSX</div>
                   className="w-full bg-indigo-600 text-white py-3 px-6 rounded-lg hover:bg-indigo-700 transition-colors font-semibold">;
                   Send Message;
                 </button>;
@@ -304,14 +254,12 @@ const ContactPage: React.FC = () => {;
             Join hundreds of companies already using our AI solutions to drive growth and innovation;
           </p>;
           <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-            <a ;
-              href={`tel:${contactInfo.phone}`}
+            <div>Broken JSX</div>
               className="px-8 py-4 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center">;
               <Phone className="w-5 h-5 mr-2" />;
               Call {contactInfo.phone}
             </a>;
-            <a ;
-              href={`mailto:${contactInfo.email}`}
+            <div>Broken JSX</div>
               className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors inline-flex items-center">;
               <Mail className="w-5 h-5 mr-2" />;
               Email Us;

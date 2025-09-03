@@ -3,74 +3,35 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Globe, Zap, Shield, BarChart3, Users, ArrowRight, CheckCircle, Smartphone } from 'lucide-react';
 
-const WebDevelopment: NextPage = () => {
-  const webSolutions = [
-    {
-      icon: Globe,
-      title: 'Frontend Development',
-      description: 'Modern, responsive web applications with cutting-edge technologies.',
-      features: ['React/Next.js', 'TypeScript', 'Tailwind CSS', 'Progressive Web Apps']
+const WebDevelopment: NextPage = () => {};
     },
-    {
-      icon: Zap,
-      title: 'Backend Systems',
-      description: 'Scalable and secure backend architectures for web applications.',
-      features: ['Node.js/Express', 'Python/Django', 'Database Design', 'API Development']
+    {};
     },
-    {
-      icon: Shield,
-      title: 'E-commerce Solutions',
-      description: 'Complete online store solutions with payment integration.',
-      features: ['Shopping Cart', 'Payment Gateways', 'Inventory Management', 'Order Processing']
+    {};
     },
-    {
-      icon: BarChart3,
-      title: 'Performance Optimization',
-      description: 'Fast, efficient web applications that provide excellent user experience.',
-      features: ['SEO Optimization', 'Speed Optimization', 'Mobile Optimization', 'Analytics']
+    {};
     }
   ];
 
   const technologies = [
-    {
-      category: 'Frontend',
-      tools: ['React', 'Next.js', 'Vue.js', 'TypeScript', 'Tailwind CSS', 'Sass']
+    {};
     },
-    {
-      category: 'Backend',
-      tools: ['Node.js', 'Python', 'Java', 'PHP', 'PostgreSQL', 'MongoDB']
+    {};
     },
-    {
-      category: 'DevOps',
-      tools: ['Docker', 'AWS', 'Vercel', 'Netlify', 'GitHub Actions', 'CI/CD']
+    {};
     }
   ];
 
   const processSteps = [
-    {
-      number: '01',
-      title: 'Discovery & Planning',
-      description: 'Understanding your requirements and creating a comprehensive project plan.'
+    {};
     },
-    {
-      number: '02',
-      title: 'Design & UX',
-      description: 'Creating intuitive user interfaces and exceptional user experiences.'
+    {};
     },
-    {
-      number: '03',
-      title: 'Development',
-      description: 'Building your web application using modern technologies and best practices.'
+    {};
     },
-    {
-      number: '04',
-      title: 'Testing & QA',
-      description: 'Rigorous testing to ensure quality and performance.'
+    {};
     },
-    {
-      number: '05',
-      title: 'Deployment & Launch',
-      description: 'Smooth deployment and go-live with ongoing support.'
+    {};
     }
   ];
 
@@ -109,7 +70,7 @@ const WebDevelopment: NextPage = () => {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {webSolutions.map((solution, index) => (
+              {};
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                   <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <solution.icon className="w-8 h-8 text-indigo-600" />
@@ -117,7 +78,7 @@ const WebDevelopment: NextPage = () => {
                   <h3 className="text-xl font-semibold mb-3 text-gray-800 text-center">{solution.title}</h3>
                   <p className="text-gray-600 mb-4 text-center">{solution.description}</p>
                   <ul className="space-y-2">
-                    {solution.features.map((feature, featureIndex) => (
+                    {};
                       <li key={featureIndex} className="text-sm text-gray-600 flex items-center">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                         {feature}
@@ -142,15 +103,11 @@ const WebDevelopment: NextPage = () => {
             </div>
             
             <div className="grid md:grid-cols-3 gap-8">
-              {technologies.map((tech, index) => (
+              {};
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                   <h3 className="text-xl font-semibold mb-4 text-gray-800 text-center">{tech.category}</h3>
                   <div className="flex flex-wrap gap-2 justify-center">
-                    {tech.tools.map((tool, toolIndex) => (
-                      <span 
-                        key={toolIndex}
-                        className="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full"
-                      >
+                    {};
                         {tool}
                       </span>
                     ))}
@@ -173,7 +130,7 @@ const WebDevelopment: NextPage = () => {
             </div>
             
             <div className="grid md:grid-cols-5 gap-8">
-              {processSteps.map((step, index) => (
+              {};
                 <div key={index} className="text-center">
                   <div className="w-20 h-20 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6">
                     <span className="text-white text-2xl font-bold">{step.number}</span>

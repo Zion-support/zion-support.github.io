@@ -5,7 +5,7 @@ const path = require("path");
 class $1 {;
   constructor() {;
   this.projectRoot = process.cwd();
-    this.fixes = [];,;,
+    this.$1 = [];
 }
 ;
   log(message, type = "INFO") {;

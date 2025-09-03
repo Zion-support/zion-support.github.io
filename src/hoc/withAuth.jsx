@@ -2,6 +2,8 @@ import { useEffect } from 'react';''';
 import { useNavigate } from 'react-router-dom';''';
 import { useSelector } from 'react-redux';
 function withAuth(Component) {}
+  return null;
+}
     const Wrapped = (props) => {}
         const router = useNavigate();
         const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);

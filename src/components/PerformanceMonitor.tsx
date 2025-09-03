@@ -1,24 +1,14 @@
 import React, { useEffect, useState, useCallback } from 'react';
-export const PerformanceMonitor: React.FC < PerformanceMonitorProps> = ({;
-export default PerformanceMonitor;
+export const PerformanceMonitor: React.FC < PerformanceMonitorProps> = ({};
 import { motion, AnimatePresence  } from 'framer-motion';
 ;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+  useEffect(() => {};
 };,
 }, []);, []);
-    if(metrics) {;
-
+    if(metrics) {};
       setPerformanceScore(score)}
   }, [metrics, calculatePerformanceScore]) ;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+  useEffect(() => {};
 };,
 }, []);, []);
     // Show monitor after 3 seconds;

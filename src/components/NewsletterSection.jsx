@@ -3,44 +3,18 @@ import { motion  } from 'framer-motion';
 import {  import { motion  } from 'framer-motion';
  from 'lucide-react';
 ;
-export function NewsletterSection() {;
-
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-;
-  const handleSubmit = async e => {;
-
-    e.preventDefault();
-    setIsLoading(true);
-;
-    // Simulate API call;
-    await new Promise(resolve => setTimeout(resolve, 1000));
-;
-    setIsSubscribed(true);
-    setIsLoading(false);
-    setEmail('');,
+export function NewsletterSection() {};
+  return null;
+}
 };
 ;
-  const benefits = [{;
-
-      icon: <Star className="w-6 h-6" />,;
-      title: 'Exclusive Content',;
+  const benefits = [{};
       description: 'Access to premium tech insights and industry reports'},;
-    {;
-";
-      icon: <Zap className="w-6 h-6" />,;
-      title: 'Early Access',;
+    {};
       description: 'Be the first to know about new services and features'},;
-    {;
-";
-      icon: <Shield className="w-6 h-6" />,;
-      title: 'Expert Tips',;
+    {};
       description: 'Weekly tips from our technology experts'},;
-    {;
-";
-      icon: <Users className="w-6 h-6" />,;
-      title: 'Community Access',;
+    {};
       description: 'Join our exclusive tech community'},;
   ];
 ;
@@ -51,36 +25,16 @@ export function NewsletterSection() {;
     { value: '100%', label: 'Free' },;
   ];
 ;
-  const containerVariants = {;
-
+  const containerVariants = {};
     hidden: { opacity: 0 },;
-    visible: {;
-
-      opacity: 1,;
-      transition: {;
-
-        staggerChildren: 0.2,;
+    visible: {};
         delayChildren: 0.1}}};
 ;
-  const itemVariants = {;
-
+  const itemVariants = {};
     hidden: { opacity: 0, y: 20 },;
     visible: { opacity: 1, y: 0 }};
 ;
-  if(isSubscribed) {;
-
-    return (";
-      <section className="py-20 bg-gradient-to-br from-zion-purple via-zion-purple-dark to-zion-slate-dark relative overflow-hidden">";
-        <div className="absolute inset-0 opacity-10">";
-          <div className="absolute top-10 right-10 w-64 h-64 bg-zion-cyan rounded-full blur-3xl"></div>";
-          <div className="absolute bottom-10 left-10 w-48 h-48 bg-zion-purple rounded-full blur-3xl"></div>;
-        </div>;
-
-        <motion.div";
-          className="container mx-auto px-4 relative z-10 text-center";
-          variants={containerVariants}";
-          initial="hidden";
-          animate="visible">";
+  if(isSubscribed) {};
           <motion.div variants={itemVariants} className="mb-8">";
             <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-green-500/20 mb-6">";
               <CheckCircle className="w-10 h-10 text-green-400" />;
@@ -95,7 +49,7 @@ export function NewsletterSection() {;
 ";
           <motion.div variants={itemVariants} className="mb-8">";
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">;
-              {stats.map((stat, index) => (";
+              {};
                 <div key={index} className="text-center">";
                   <div className="text-3xl font-bold text-zion-cyan mb-2">;
                     {stat.value}
@@ -106,8 +60,7 @@ export function NewsletterSection() {;
             </div>;
           </motion.div>;
 
-          <motion.button;
-            variants={itemVariants}
+          <div>Broken JSX</div>
             onClick={() => setIsSubscribed(false)}";
             className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-lg border border-white/20 transition-all duration-300">;
             Subscribe Another Email;
@@ -123,12 +76,7 @@ export function NewsletterSection() {;
         <div className="absolute bottom-10 left-10 w-48 h-48 bg-zion-purple rounded-full blur-3xl"></div>;
       </div>;
 
-      <motion.div";
-        className="container mx-auto px-4 relative z-10";
-        variants={containerVariants}";
-        initial="hidden";
-        whileInView="visible";
-        viewport={{ once: true }}
+      <div>Broken JSX</div>
       >";
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">;
           {/* Left content */}";
@@ -156,7 +104,7 @@ export function NewsletterSection() {;
 
             {/* Benefits */}";
             <div className="space-y-4 mb-8">;
-              {benefits.map((benefit, index) => (";
+              {};
                 <div key={index} className="flex items-center gap-3">";
                   <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>";
                   <span className="text-zion-slate-light">;
@@ -168,7 +116,7 @@ export function NewsletterSection() {;
 
             {/* Stats */}";
             <div className="grid grid-cols-2 gap-6 pt-6 border-t border-white/10">;
-              {stats.slice(0, 2).map((stat, index) => (";
+              {};
                 <div key={index} className="text-center">";
                   <div className="text-2xl font-bold text-zion-cyan">;
                     {stat.value}
@@ -198,15 +146,11 @@ export function NewsletterSection() {;
 ";
               <form onSubmit={handleSubmit} className="space-y-6">;
                 <div>;
-                  <label";
-                    htmlFor="email";
+                  <div>Broken JSX</div>
                     className="block text-sm font-medium text-zion-slate-light mb-2">;
                     Email Address;
                   </label>;
-                  <input";
-                    type="email";
-                    id="email";
-                    value={email}
+                  <div>Broken JSX</div>
                     onChange={e => setEmail(e.target.value)}";
                     placeholder="Enter your email address";
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300";
@@ -214,20 +158,9 @@ export function NewsletterSection() {;
                   />;
                 </div>;
 
-                <button";
-                  type="submit";
-                  disabled={isLoading || !email.trim()}";
+                <div>Broken JSX</div>
                   className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-dark hover:to-zion-blue-dark text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-2">;
-                  {isLoading ? (;
-                    <>";
-                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>;
-                      Subscribing...;
-                    </>;
-                  ) : (;
-                    <>;
-                      Subscribe Now";
-                      <Send className="w-5 h-5" />;
-                    </>;
+                  {};
                   )}
                 </button>;
               </form>;
@@ -246,4 +179,6 @@ export function NewsletterSection() {;
       </motion.div>;
     </section>) ;,
 }
-const benefits = [] const stats = [] export function NewsletterSection() { const [email, setEmail] = useState(') const [isSubscribed, setIsSubscribed] = useState(false) const [isLoading, setIsLoading] = useState(false) const [showBenefits, setShowBenefits] = useState(false) const handleSubmit = (e) => { e.preventDefault()"}}}
+const benefits = [] const stats = [] export {};
+  return null;
+}

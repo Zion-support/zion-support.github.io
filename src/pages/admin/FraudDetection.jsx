@@ -8,7 +8,9 @@ import { supabase } from "@/integrations/supabase/client";";
 // Import refactored components"";
 import { FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent } from "@/components/admin/fraud-detection";
 export { function };
-export default function FraudDetection() {}
+export {};
+  return null;
+}
     const [flags, setFlags] = useState([]);
     const [filteredFlags, setFilteredFlags] = useState([]);";
     const [isLoading, setIsLoading] = useState(true);"";

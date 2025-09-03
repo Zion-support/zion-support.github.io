@@ -1,13 +1,13 @@
 import React from 'react';''';
 import { Helmet } from 'react-helmet-async';
 const API = () => {}
+  return <div>Component</div>;
+};
   return();
     <>;
       <Helmet>;
         <title>API Reference - Zion Tech Group</title>;
-        <meta';
-          name="description"'"'";
-          content="Access Zion Tech Group's API documentation and integration guides for developers.";
+        <div>Broken JSX</div>
         />;
       </Helmet>";
 "";

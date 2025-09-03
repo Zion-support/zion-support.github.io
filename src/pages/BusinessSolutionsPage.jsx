@@ -3,8 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';''';
 import { Badge } from '@/components/ui/badge';''';
 import { Link } from 'react-router-dom';
-import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare, Shield, DollarSign, Search, Lightbulb, Star, Leaf const BusinessSolutions = [;
-;
+import {};
     {}
         title: "Business Strategy Consulting","";
         description: "Strategic planning and business model optimization for growth","";
@@ -201,7 +200,9 @@ const categories = ["";
     { name: "Expansion", value: "expansion", icon: <Globe className="h-4 w-4"/> },"";
     { name: "Sustainability", value: "sustainability", icon: <Leaf className="h-4 w-4"/> }
 ];
-export default function BusinessSolutionsPage() {}
+export {};
+  return null;
+}
 ";
 "";
     const [selectedCategory, setSelectedCategory] = React.useState("all");"";
@@ -236,8 +237,7 @@ export default function BusinessSolutionsPage() {}
       {/* Category Filter */}"";
       <div className="container mx-auto px-4 py-8">"";
         <div className="flex flex-wrap justify-center gap-2 mb-8">"";
-          {categories.map((category) => (<Button key={category.value} variant={selectedCategory === category.value ? "default" : "outline"} onClick={() => setSelectedCategory(category.value)} className={`flex items-center gap-2 ${selectedCategory === category.value""`;
-                ? "bg-zion-blue text-white""`"`;
+          {categories.map((category) => (<Button key={category.value} variant={selectedCategory === category.value ? "default" : "outline"} onClick={() => setSelectedCategory(category.value)} className={};
                 : "border-zion-blue text-zion-blue hover:bg-zion-blue/10"}`}>;
               {category.icon}
               {category.name}
@@ -252,7 +252,7 @@ export default function BusinessSolutionsPage() {}
                   <div className="p-3 rounded-lg bg-zion-blue/10 group-hover:bg-zion-blue/20 transition-colors">;
                     {solution.icon}";
                   </div>"";
-                  {solution.badge && (<Badge variant="secondary" className="bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30">;
+                  {};
                       {solution.badge}
                     </Badge>)}";
                 </div>"";

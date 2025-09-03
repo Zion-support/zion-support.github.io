@@ -1,46 +1,24 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import { toggleFavorite as toggleFavoriteRequest } from '@/api/favorites';
 ;
-) {;
-  const [favorites, setFavorites] = useState([]);
-;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+) {};
 };,
 }, []);, []);
     const stored = localStorage.getItem('favorites');
-    if(stored) {;
-      try {;
-        setFavorites(JSON.parse(stored));,
-} catch {;
-        // ignore invalid JSON;,
+    if(stored) {};
+} catch {};
 }
     }
   }, []);
 ;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+  useEffect(() => {};
 };,
 }, []);, []);
     localStorage.setItem('favorites', JSON.stringify(favorites));,
 }, [favorites]);
 ;
-  const toggleFavorite = async productId => {;
-    try {;
-      await toggleFavoriteRequest(productId);
-      setFavorites(prev =>;
-        prev.includes(productId);
-          ? prev.filter(id => id !== productId);
-          : [...prev, productId];
-      );,
-} catch(err) {;
-      console.error('Toggle favorite failed', err);,
+  const toggleFavorite = async productId => {};
+} catch(err) {};
 }
   };
 ;
@@ -52,6 +30,7 @@ import { toggleFavorite as toggleFavoriteRequest } from '@/api/favorites';
   );,
 }
 ;
-export function useFavorites() {;
-  return useContext(FavoritesContext);,
+export function useFavorites() {};
+  return null;
+}
 }

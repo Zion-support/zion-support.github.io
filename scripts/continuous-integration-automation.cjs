@@ -115,7 +115,7 @@ class ContinuousIntegrationAutomation {;
     try {;
       return await this.runCIStep(;
         'Performance Check',;
-        'npm run perf:monitor',;
+        'npm run perf: monitor',;
         'Check application performance';
       );,
 } catch (error) {;

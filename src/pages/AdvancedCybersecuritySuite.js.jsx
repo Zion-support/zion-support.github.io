@@ -10,17 +10,15 @@ import {}
   AlertTriangle,''';
   Users} from 'lucide-react';
 const AdvancedCybersecuritySuite = () => {}
+  return <div>Component</div>;
+};
   return();
     <>;
       <Helmet>;
         <title>Advanced Cybersecurity Suite - Zion Tech Group</title>;
-        <meta;
-          name="description"";
-          content="Comprehensive cybersecurity solutions with advanced threat detection, prevention, and response capabilities.";
+        <div>Broken JSX</div>
         />";
-        <meta"";
-          name="keywords"";
-          content="cybersecurity, threat detection, security suite, enterprise security, cyber defense";
+        <div>Broken JSX</div>
         />;
       </Helmet>";
 "";
@@ -65,7 +63,7 @@ const AdvancedCybersecuritySuite = () => {}
             </div>";
 "";
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
-              {[];
+              {};
                 {}
                   icon: Eye,';
                   title: 'Advanced Threat Detection',';
@@ -97,8 +95,7 @@ const AdvancedCybersecuritySuite = () => {}
                   description:'';
                     'Machine learning-based analysis to detect insider threats and compromised accounts'}
               ].map((feature, index) => (;
-                <div";
-                  key={index}"";
+                <div>Broken JSX</div>
                   className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-red-500/50 transition-colors"">"";
                   <feature.icon className="w-12 h-12 text-red-400 mb-6" />"";
                   <h3 className="text-xl font-semibold text-white mb-4">;
@@ -127,7 +124,7 @@ const AdvancedCybersecuritySuite = () => {}
             </div>";
 "";
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {[];
+              {};
                 {}
 ';
 '';
@@ -139,21 +136,7 @@ const AdvancedCybersecuritySuite = () => {}
 ';
 '';
 ''';
-                  metric: '<5s',''';
-                  title: 'Response Time',''';
-                  description: 'Average time to threat containment'},;
-                {}
-';
-'';
-''';
-                  metric: 'Zero',''';
-                  title: 'Successful Breaches',''';
-                  description: 'Client environments with our full suite'},;
-                {}
-';
-                  metric: '24/7',';
-                  title: 'Monitoring',';
-                  description: 'Continuous security operations coverage'},";
+                  metric: '<div>Broken JSX</div>
               ].map((metric, index) => ("";
                 <div key={index} className="text-center">"";
                   <div className="bg-gradient-to-r from-red-600 to-orange-600 rounded-2xl p-8 mb-4">"";
@@ -185,13 +168,7 @@ const AdvancedCybersecuritySuite = () => {}
             </div>";
 "";
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">';
-              {['';
-                'SOC 2 Type II',ISO 27001',GDPR Compliant',HIPAA Ready',PCI DSS',NIST Framework',FISMA Compliant',FedRAMP Ready';
-              ].map((cert, index) => (;
-                <div";
-                  key={index}"";
-                  className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center"">"";
-                  <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3" />"";
+              {};
                   <h3 className="text-white font-semibold">{cert}</h3>;
                 </div>;
               ))}

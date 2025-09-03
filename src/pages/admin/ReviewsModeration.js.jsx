@@ -12,6 +12,8 @@ import {}
 import { Star, AlertTriangle } from 'lucide-react';''';
 import { toast } from '@/components/ui/use-toast';
 function ReviewsModerationContent() {}
+  return null;
+}
 ';
 '';
 ''';
@@ -43,13 +45,13 @@ function ReviewsModerationContent() {}
     fetchReviews();,
 }, [activeTab]);
   const handleRefresh = () => {}
+  return <div>Component</div>;
+};
     fetchReviews();,
 };
   return();
     <>";
-      <SEO"";
-        title="Review Moderation | Zion AI Marketplace"";
-        description="Moderate and manage reviews in the Zion AI Marketplace";
+      <div>Broken JSX</div>
       />";
 "";
       <main className="container mx-auto px-4 py-8">"";
@@ -73,9 +75,7 @@ function ReviewsModerationContent() {}
             </CardDescription>;
           </CardHeader>;
           <CardContent>";
-            <Tabs"";
-              defaultValue="pending";
-              value={activeTab}
+            <div>Broken JSX</div>
               onValueChange={setActiveTab}">"";
               <TabsList className="mb-6">"";
                 <TabsTrigger value="pending">Pending Reviews</TabsTrigger>"";
@@ -83,10 +83,7 @@ function ReviewsModerationContent() {}
               </TabsList>";
 "";
               <TabsContent value="pending" className="mt-0">;
-                <ReviewsModerationTable;
-                  reviews={reviews}
-                  isLoading={isLoading}
-                  onRefresh={handleRefresh}
+                <div>Broken JSX</div>
                 />;
               </TabsContent>";
 "";
@@ -107,7 +104,9 @@ function ReviewsModerationContent() {}
     </>;
   );,
 }
-export default function ReviewsModeration() {}
+export {};
+  return null;
+}
   return();
     <ProtectedRoute>;
       <ReviewsModerationContent />;

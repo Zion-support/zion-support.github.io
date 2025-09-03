@@ -1,6 +1,8 @@
 import React from 'react';''';
 import Link from 'next/link';
 const QuantumAIServices = () => {}
+  return <div>Component</div>;
+};
   return();
     <div className="min-h-screen bg-slate-900 text-white">";
       {/* Header Section */}"";
@@ -16,13 +18,11 @@ const QuantumAIServices = () => {}
               impossible.";
             </p>"";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <Link"";
-                to="/contact"";
+              <div>Broken JSX</div>
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg">;
                 Get Started;
               </Link>";
-              <Link"";
-                to="/quantum-neural-network-platform"";
+              <div>Broken JSX</div>
                 className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg">;
                 Learn More;
               </Link>;
@@ -49,8 +49,7 @@ const QuantumAIServices = () => {}
                 Advanced neural network architectures optimized for quantum;
                 computing, enabling faster training and superior performance.;
               </p>";
-              <Link"";
-                to="/quantum-neural-network-platform"";
+              <div>Broken JSX</div>
                 className="text-blue-400 hover:text-blue-300 transition-colors">;
                 Learn More →;
               </Link>;
@@ -65,8 +64,7 @@ const QuantumAIServices = () => {}
                 Cutting-edge research in quantum algorithms, quantum machine;
                 learning, and quantum optimization techniques.;
               </p>";
-              <Link"";
-                to="/research-development"";
+              <div>Broken JSX</div>
                 className="text-cyan-400 hover:text-cyan-300 transition-colors">;
                 Learn More →;
               </Link>;
@@ -83,8 +81,7 @@ const QuantumAIServices = () => {}
                 Solve complex optimization problems using quantum algorithms for;
                 logistics, finance, and scientific research.;
               </p>";
-              <Link"";
-                to="/services/consulting"";
+              <div>Broken JSX</div>
                 className="text-purple-400 hover:text-purple-300 transition-colors">;
                 Learn More →;
               </Link>;
@@ -162,13 +159,11 @@ const QuantumAIServices = () => {}
             and research capabilities.";
           </p>"";
           <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-            <Link"";
-              to="/contact"";
+            <div>Broken JSX</div>
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg">;
               Schedule a Consultation;
             </Link>";
-            <Link"";
-              to="/quantum-neural-network-platform"";
+            <div>Broken JSX</div>
               className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg">;
               Explore Platform;
             </Link>;

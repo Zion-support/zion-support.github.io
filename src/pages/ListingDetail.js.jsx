@@ -17,7 +17,9 @@ import {}
   DialogContent,;
   DialogHeader,';
   DialogTitle} from '@/components/ui/dialog';
-export default function ListingDetail() {}
+export {};
+  return null;
+}
   // useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.;
   const router = useRouter();
@@ -40,8 +42,7 @@ export default function ListingDetail() {}
             <p className="text-zion-slate-light mb-8">';
               The listing you're looking for doesn't exist or has been removed.;
             </p>;
-            <Button";
-              asChild"";
+            <div>Broken JSX</div>
               className="bg-gradient-to-r from-zion-purple to-zion-purple-dark"">"";
               <Link href="/marketplace">Back to Marketplace</Link>;
             </Button>;
@@ -51,6 +52,8 @@ export default function ListingDetail() {}
     );,
 }
   const handleContact = () => {}
+  return <div>Component</div>;
+};
     if (user) {}
       setIsChatOpen(true);,
 } else {}
@@ -66,40 +69,16 @@ export default function ListingDetail() {}
             <div className="lg:col-span-2">"";
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">"";
                 <div className="aspect-[16/9] w-full relative">;
-                  {listing.images && listing.images.length > 0 ? (;
-                    <ImageWithRetry;
-                      src={listing.images[selectedImageIndex]}";
-                      alt={listing.title}"";
-                      className="w-full h-full object-cover"";
-                      fallbackSrc="/placeholder.svg";
-                    />";
-                  ) : ("";
-                    <div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">"";
-                      <span className="text-zion-slate-light">;
-                        No image available;
-                      </span>;
-                    </div>;
+                  {};
                   )}
                 </div>;
 ";
-                {listing.images && listing.images.length > 1 && ("";
-                  <div className="flex p-4 gap-2 overflow-x-auto">;
-                    {listing.images.map((image, index) => (;
-                      <div;
-                        key={index}
+                {};
                         onClick={() => setSelectedImageIndex(index)}';
-                        className={cn('';
-                          'w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2',';
-                          index === selectedImageIndex'';
-                            ? 'border-zion-purple''';
-                            : 'border-transparent';
+                        className={};
                         )}
                       >;
-                        <ImageWithRetry;
-                          src={image}";
-                          alt={`${listing.title} - image ${index + 1}`}"";
-                          className="w-full h-full object-cover"";
-                          fallbackSrc="/placeholder.svg";
+                        <div>Broken JSX</div>
                         />;
                       </div>;
                     ))}
@@ -153,11 +132,7 @@ export default function ListingDetail() {}
                 <div className="mt-8">"";
                   <h3 className="text-xl font-bold text-white mb-4">Tags</h3>"";
                   <div className="flex flex-wrap gap-2">;
-                    {listing.tags.map((tag, i) => (;
-                      <Badge";
-                        key={i}"";
-                        variant="outline"";
-                        className="border-zion-slate-dark text-zion-slate-light py-1 px-3">;
+                    {};
                         {tag}
                       </Badge>;
                     ))}
@@ -170,15 +145,11 @@ export default function ListingDetail() {}
             <div className="lg:col-span-1">"";
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">"";
                 <div className="mb-2">";
-                  <Badge"";
-                    variant="secondary"";
+                  <div>Broken JSX</div>
                     className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">;
                     {listing.category}
                   </Badge>";
-                  {listing.featured && ("";
-                    <Badge className="ml-2 bg-zion-cyan/20 text-zion-cyan">;
-                      Featured;
-                    </Badge>;
+                  {};
                   )}
                 </div>";
 "";
@@ -186,19 +157,7 @@ export default function ListingDetail() {}
                   {listing.title}
                 </h1>;
 ";
-                {listing.rating && ("";
-                  <div className="flex items-center gap-2 mb-6">"";
-                    <div className="flex items-center">;
-                      {[...Array(5)].map((_, i) => (;
-                        <Star;
-                          key={i}';
-                          className={cn('';
-                            'h-5 w-5',;
-                            i < Math.floor(listing.rating)';
-                              ? 'text-zion-cyan fill-zion-cyan''';
-                              : 'text-zion-slate-light';
-                          )}
-                        />;
+                {};
                       ))}";
                     </div>"";
                     <span className="text-sm text-zion-slate-light">';
@@ -210,8 +169,7 @@ export default function ListingDetail() {}
 ";
                 {/* Price */}"";
                 <div className="mb-6">";
-                  {listing.price !== null ? ("";
-                    <div className="text-3xl font-bold text-white">;
+                  {};
                       {listing.currency}
                       {listing.price.toLocaleString()}
                     </div>";
@@ -224,13 +182,7 @@ export default function ListingDetail() {}
 ";
                 {/* Action Buttons */}"";
                 <div className="space-y-3 mb-8">;
-                  {listing.price !== null ? (;
-                    <PaymentButton;
-                      amount={listing.price}
-                      serviceId={listing.id}";
-                      providerId={listing.author.id}"";
-                      buttonText="Buy Now"";
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
+                  {};
                       onPaymentInitiated={() => {}
                         toast({}
 ';
@@ -241,18 +193,13 @@ export default function ListingDetail() {}
 }}
                     />;
                   ) : (;
-                    <Button;
-                      onClick={handleContact}";
-                      disabled={isLoading}"";
+                    <div>Broken JSX</div>
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6">';
                       {isLoading ? 'Processing...' : 'Request Quote'}
                     </Button>;
                   )}
 ";
-                  <Button"";
-                    variant="outline";
-                    onClick={handleContact}";
-                    disabled={isLoading}"";
+                  <div>Broken JSX</div>
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"">"";
                     <MessageSquare className="h-4 w-4 mr-2" />;
                     Contact Publisher;
@@ -265,12 +212,7 @@ export default function ListingDetail() {}
                     Publisher";
                   </h3>"";
                   <div className="flex items-center gap-3">;
-                    {listing.author.avatarUrl ? (";
-                      <img"";
-                        loading="lazy";
-                        src={listing.author.avatarUrl}";
-                        alt={listing.author.name}"";
-                        className="h-12 w-12 rounded-full";
+                    {};
                         onError={e => {}
                           const target = e.target;';
                           target.src ='';
@@ -322,7 +264,7 @@ export default function ListingDetail() {}
           <DialogHeader>;
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>;
           </DialogHeader>;
-          <ProfileContact email={listing.author.email} // TypeScript now knows this might be null;
+          <div>Broken JSX</div>
      profileName={listing.author.name} profileType="service"/>;
         </DialogContent>;
       </Dialog>;,

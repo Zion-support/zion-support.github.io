@@ -19,12 +19,10 @@ import {  import { motion, AnimatePresence  } from 'framer-motion';
   variant?: 'primary' | 'secondary' | 'danger';
   icon?: React.ComponentType < any>}
 ;
-interface SmartNotificationSystemProps {;
-  // Add your props here;,
+interface SmartNotificationSystemProps {};
 };
 ;
-const SmartNotificationSystem: React.FC<SmartNotificationSystemProps> = ({ enabled = true }) => {;
-  if(!enabled) return null;
+const SmartNotificationSystem: React.FC<SmartNotificationSystemProps> = ({ enabled = true }) => {};
   return <div className="hidden" aria-hidden="true" />};
 ;
 export default SmartNotificationSystem;

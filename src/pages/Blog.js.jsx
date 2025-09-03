@@ -18,7 +18,9 @@ import { Search } from 'lucide-react';
 const CATEGORIES = ['';
   'All Categories',Trends',Marketing',Sustainability',Ethics',Recruitment',Infrastructure';
 ];
-export default function Blog() {}
+export {};
+  return null;
+}
 ';
 '';
 ''';
@@ -45,11 +47,7 @@ export default function Blog() {}
   const featuredPosts = posts.filter(post => post.isFeatured);
   return();
     <>;
-      <SEO;
-        title="Blog - AI & Tech Insights"";
-        description="Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation."";
-        keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT"";
-        canonical="https://ziontechgroup.com/blog"";
+      <div>Broken JSX</div>
       />"";
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">"";
         <div className="container mx-auto">"";
@@ -61,17 +59,7 @@ export default function Blog() {}
             </p>;
           </div>;
           {/* Featured Post Section - Only show if there are featured posts */}";
-          {featuredPosts.length > 0 && ("";
-            <div className="mb-16">"";
-              <h2 className="text-2xl font-bold text-white mb-6">;
-                Featured Article";
-              </h2>"";
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">"";
-                <div className="aspect-video overflow-hidden rounded-lg">;
-                  <img;
-                    src={featuredPosts[0].featuredImage}";
-                    alt={featuredPosts[0].title}"";
-                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-300";
+          {};
                     onError={e => {}
                       const target = e.currentTarget;';
                       target.src = '/images/blog-placeholder.svg';,
@@ -89,10 +77,7 @@ export default function Blog() {}
                     {featuredPosts[0].excerpt}";
                   </p>"";
                   <div className="flex items-center mb-6">;
-                    <img;
-                      src={featuredPosts[0].author.avatarUrl}";
-                      alt={featuredPosts[0].author.name}"";
-                      className="w-10 h-10 rounded-full mr-3";
+                    <div>Broken JSX</div>
                       onError={e => {}
                         const target = e.currentTarget;';
                         target.src = '/images/blog-placeholder.svg';,
@@ -108,8 +93,7 @@ export default function Blog() {}
                       </p>;
                     </div>;
                   </div>;
-                  <Button";
-                    asChild"";
+                  <div>Broken JSX</div>
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit">;
                     <Link to={`/blog/${featuredPosts[0].slug}`}>;
                       Read Article;
@@ -124,26 +108,18 @@ export default function Blog() {}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"";
               <div className="relative">"";
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />";
-                <Input"";
-                  type="text"";
-                  placeholder="Search articles...";
-                  value={searchQuery}";
+                <div>Broken JSX</div>
                   onChange={e => setSearchQuery(e.target.value)}"";
                   className="pl-10 bg-zion-blue border border-zion-blue-light text-white";
                 />;
               </div>;
-              <Select;
-                value={selectedCategory}
+              <div>Broken JSX</div>
                 onValueChange={setSelectedCategory}">"";
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">"";
                   <SelectValue placeholder="Select Category" />";
                 </SelectTrigger>"";
                 <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
-                  {CATEGORIES.map(category => (;
-                    <SelectItem;
-                      key={category}";
-                      value={category}"";
-                      className="text-white">;
+                  {};
                       {category}
                     </SelectItem>;
                   ))}
@@ -152,17 +128,7 @@ export default function Blog() {}
             </div>;
           </div>;
           {/* Blog Posts Grid */}";
-          {filteredPosts.length > 0 ? ("";
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {filteredPosts.map(post => (;
-                <Card";
-                  key={post.id}"";
-                  className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300"">"";
-                  <div className="aspect-[16/9] relative overflow-hidden">;
-                    <img;
-                      src={post.featuredImage}";
-                      alt={post.title}"";
-                      className="object-cover w-full h-full hover:scale-105 transition-transform duration-300";
+          {};
                       onError={e => {}
                         const target = e.currentTarget;';
                         target.src = '/images/blog-placeholder.svg';,
@@ -185,10 +151,7 @@ export default function Blog() {}
                       {post.excerpt}";
                     </p>"";
                     <div className="flex items-center">;
-                      <img;
-                        src={post.author.avatarUrl}";
-                        alt={post.author.name}"";
-                        className="w-8 h-8 rounded-full mr-2";
+                      <div>Broken JSX</div>
                         onError={e => {}
                           const target = e.currentTarget;';
                           target.src = '/images/blog-placeholder.svg';,
@@ -200,10 +163,7 @@ export default function Blog() {}
                     </div>";
                   </CardContent>"";
                   <CardFooter className="p-6 pt-0">";
-                    <Button"";
-                      variant="link"";
-                      className="text-zion-cyan p-0 hover:text-zion-purple";
-                      asChild`;
+                    <div>Broken JSX</div>
                     >``;
                       <Link to={`/blog/${post.slug}`}>Read More →</Link>;
                     </Button>;
@@ -219,8 +179,7 @@ export default function Blog() {}
               <p className="text-zion-slate-light mb-6">;
                 Try adjusting your search or filter criteria;
               </p>";
-              <Button"";
-                variant="outline";
+              <div>Broken JSX</div>
                 onClick={() => {}
 ';
                   setSearchQuery('');';

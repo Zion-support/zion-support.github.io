@@ -1,26 +1,9 @@
 import React from 'react';
-import { ;
-  Users, ;
-  Brain, ;
-  BarChart3, ;
-  Mail, ;
-  Phone, ;
-  MapPin,;
-  CheckCircle,;
-  Star,;
-  ArrowRight,;
-  Clock,;
-  Target,;
-  TrendingUp,;
-  Zap,;
-  Globe,;
-  Shield,;
-  Smartphone,;
-  Calendar,;
-  MessageSquare;,
+import {};
 } from 'lucide-react';
 ;
-const SmartCRMPlatform = () => {;
+const SmartCRMPlatform = () => {};
+};
   const features = [;
     'AI-powered lead scoring',;
     'Automated sales forecasting',;
@@ -54,36 +37,15 @@ const SmartCRMPlatform = () => {;
     'Salesforce';
   ];
 ;
-  const pricing = {;
-    starter: {;
-      name: 'Starter',;
-      price: '$79/month',;
-      users: 'Up to 5 users',;
-      features: ['Basic CRM', 'Email integration', 'Mobile app', 'Email support'],;
-      marketPrice: '$99/month';,
+  const pricing = {};
 },;
-    professional: {;
-      name: 'Professional',;
-      price: '$149/month',;
-      users: 'Up to 15 users',;
-      features: ['Advanced CRM', 'AI lead scoring', 'Sales forecasting', 'Priority support', 'Custom fields'],;
-      marketPrice: '$199/month',;
-      popular: true;,
+    professional: {};
 },;
-    enterprise: {;
-      name: 'Enterprise',;
-      price: '$299/month',;
-      users: 'Unlimited users',;
-      features: ['Full CRM suite', 'Custom AI models', 'Advanced analytics', 'Dedicated support', 'API access', 'White-label'],;
-      marketPrice: '$399/month';,
+    enterprise: {};
 }
   };
 ;
-  const contactInfo = {;
-    phone: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com';,
+  const contactInfo = {};
 };
 ;
   return (;
@@ -92,39 +54,26 @@ const SmartCRMPlatform = () => {;
       <div className="bg-white shadow-lg">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
           <div className="text-center">;
-            <div;
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
+            <div>Broken JSX</div>
               className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 mb-6">;
               <Users className="w-10 h-10 text-white" />;
             </div>;
-            <h1 ;
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
+            <div>Broken JSX</div>
               className="text-5xl font-bold text-gray-900 mb-4">;
               Smart CRM Platform;
             </h1>;
-            <p ;
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
+            <div>Broken JSX</div>
               className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">;
               AI-powered customer relationship management that helps you close more deals, nurture better relationships, and grow your business faster.;
             </p>;
-            <div ;
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
+            <div>Broken JSX</div>
               className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <a ;
-                href={`tel:${contactInfo.phone}`}
+              <div>Broken JSX</div>
                 className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center text-lg font-semibold">;
                 <Phone className="w-5 h-5 mr-2" />;
                 Call Now: {contactInfo.phone}
               </a>;
-              <a ;
-                href={`mailto:${contactInfo.email}`}
+              <div>Broken JSX</div>
                 className="bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center text-lg font-semibold">;
                 <Mail className="w-5 h-5 mr-2" />;
                 Get Free Trial;
@@ -142,14 +91,7 @@ const SmartCRMPlatform = () => {;
         </div>;
         ;
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
-          {features.map((feature, index) => (;
-            <div;
-              key={feature}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">;
-              <CheckCircle className="w-8 h-8 text-green-500 mb-4" />;
+          {};
               <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature}</h3>;
             </div>;
           ))}
@@ -165,16 +107,7 @@ const SmartCRMPlatform = () => {;
           </div>;
           ;
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {benefits.map((benefit, index) => (;
-              <div;
-                key={benefit}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="text-center">;
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">;
-                  <Star className="w-8 h-8 text-green-600" />;
-                </div>;
+            {};
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit}</h3>;
               </div>;
             ))}
@@ -190,14 +123,7 @@ const SmartCRMPlatform = () => {;
         </div>;
         ;
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
-          {integrations.map((integration, index) => (;
-            <div;
-              key={integration}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow text-center">;
-              <Zap className="w-8 h-8 text-blue-500 mx-auto mb-4" />;
+          {};
               <h3 className="text-lg font-semibold text-gray-900">{integration}</h3>;
             </div>;
           ))}
@@ -213,22 +139,7 @@ const SmartCRMPlatform = () => {;
           </div>;
           ;
           <div className="grid md:grid-cols-3 gap-8">;
-            {Object.entries(pricing).map(([key, plan], index) => (;
-              <div;
-                key={key}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 relative border-2 ${;
-                  plan.popular ? 'border-green-500' : 'border-gray-200';,
-}`}
-              >;
-                {plan.popular && (;
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
-                    <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">;
-                      Most Popular;
-                    </span>;
-                  </div>;
+            {};
                 )}
                 ;
                 <div className="text-center mb-6">;
@@ -240,7 +151,7 @@ const SmartCRMPlatform = () => {;
                 </div>;
                 ;
                 <ul className="space-y-3 mb-8">;
-                  {plan.features.map((feature, featureIndex) => (;
+                  {};
                     <li key={featureIndex} className="flex items-center text-gray-600">;
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />;
                       {feature}
@@ -248,13 +159,7 @@ const SmartCRMPlatform = () => {;
                   ))}
                 </ul>;
                 ;
-                <a;
-                  href={`tel:${contactInfo.phone}`}
-                  className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors ${;
-                    plan.popular;
-                      ? 'bg-green-600 text-white hover:bg-green-700';
-                      : 'bg-gray-200 text-gray-900 hover:bg-gray-300';,
-}`}
+                <div>Broken JSX</div>
                 >;
                   Get Started;
                 </a>;

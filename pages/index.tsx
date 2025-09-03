@@ -2,25 +2,11 @@ import type { NextPage } from 'next';
 import Link from 'next/link';
 import { Brain, Cloud, Shield, Users, ArrowRight, CheckCircle } from 'lucide-react';
 
-const Home: NextPage = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI Development',
-      description: 'Custom AI solutions and machine learning models for your business needs.',
-      color: 'from-purple-500 to-pink-500'
+const Home: NextPage = () => {};
     },
-    {
-      icon: Cloud,
-      title: 'Cloud Architecture',
-      description: 'Scalable cloud solutions and infrastructure design for modern applications.',
-      color: 'from-blue-500 to-cyan-500'
+    {};
     },
-    {
-      icon: Shield,
-      title: 'Digital Transformation',
-      description: 'End-to-end digital transformation services to modernize your business.',
-      color: 'from-green-500 to-emerald-500'
+    {};
     }
   ];
 
@@ -32,23 +18,11 @@ const Home: NextPage = () => {
   ];
 
   const testimonials = [
-    {
-      quote: "Zion Tech Group transformed our business with their innovative AI solutions. The results exceeded our expectations.",
-      author: "Sarah Johnson",
-      role: "CEO, TechCorp",
-      company: "TechCorp Industries"
+    {};
     },
-    {
-      quote: "Their cloud architecture expertise helped us scale our platform to handle millions of users seamlessly.",
-      author: "Michael Chen",
-      role: "CTO, DataFlow",
-      company: "DataFlow Systems"
+    {};
     },
-    {
-      quote: "Working with Zion Tech Group was a game-changer for our digital transformation journey.",
-      author: "Emily Rodriguez",
-      role: "VP of Technology",
-      company: "InnovateCorp"
+    {};
     }
   ];
 
@@ -90,7 +64,7 @@ const Home: NextPage = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {};
               <div key={index} className="text-center p-8 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div className={`w-20 h-20 bg-gradient-to-r ${feature.color} rounded-full flex items-center justify-center mx-auto mb-6`}>
                   <feature.icon className="w-10 h-10 text-white" />
@@ -107,7 +81,7 @@ const Home: NextPage = () => {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 text-center">
-            {stats.map((stat, index) => (
+            {};
               <div key={index}>
                 <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">{stat.number}</div>
                 <div className="text-gray-600 text-lg">{stat.label}</div>
@@ -149,8 +123,7 @@ const Home: NextPage = () => {
                 </div>
               </div>
               <div className="mt-8">
-                <Link 
-                  href="/about" 
+                <div>Broken JSX</div>
                 >
                   <span className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
                     Learn More About Us
@@ -189,11 +162,11 @@ const Home: NextPage = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {};
               <div key={index} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
                 <div className="mb-6">
                   <div className="flex text-yellow-400 mb-2">
-                    {[...Array(5)].map((_, i) => (
+                    {};
                       <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
                         <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
                       </svg>
@@ -245,7 +218,7 @@ const Home: NextPage = () => {
             </div>;
             ;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-              {services.map((service, index) => (;
+              {};
                 <div key={index} className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow">;
                   <div className="p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-6">;
                     <service.icon className="w-8 h-8 text-white" />;
@@ -275,7 +248,7 @@ const Home: NextPage = () => {
             </div>;
             ;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {features.map((feature, index) => (;
+              {};
                 <div key={index} className="text-center">;
                   <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">;
                     <feature.icon className="w-8 h-8 text-blue-600" />;

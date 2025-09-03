@@ -11,7 +11,9 @@ import useJobDetails from '@/hooks/useJobDetails';''';
 import { ApplyToJobModal } from '@/components/messaging/job-application';''';
 import SEO from '@/components/SEO';''';
 import { useWhitelabel } from '@/context/WhitelabelContext';
-export default function JobDetails() {}
+export {};
+  return null;
+}
     // Cast to specify the expected route param type since useParams may be untyped;
     const { jobId } = useParams () ;
     const { job, isLoading, error } = useJobDetails (jobId) ;
@@ -34,6 +36,8 @@ export default function JobDetails() {}
 
       </>) }
     const handleApply = () => {}
+  return <div>Component</div>;
+};
         if (!isAuthenticated) {}
 ";
 "";
@@ -59,8 +63,7 @@ export default function JobDetails() {}
         return `$${budget.min} - $${budget.max}`};
     const isOwnJob = user?.id === job.client_id;'`;
     return (<>'`'`;
-      <SEO title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description = {}
-  job.description.substring (0,;
+      <div>Broken JSX</div>
   160) }/>;
 
   job.description.substring(0,;
@@ -142,8 +145,7 @@ export default function JobDetails() {}
                     Apply Now;
                   </Button>)}";
 "";
-                {isOwnJob && (<div className="text-center p-2 bg-muted rounded-md mt-4">"";
-                    <p className="text-sm text-muted-foreground">This is your job posting</p>;
+                {};
                   </div>)}
               </CardContent>;
             </Card>;
@@ -152,22 +154,4 @@ export default function JobDetails() {}
       </main>;
 
       {/* Job application modal */}
-      {job && (<ApplyToJobModal job = {}
-  {}
-                id: job.id,;
-                title: job.title,;
-                description: job.description,;
-                comp_name: job.comp_name || "Comp",;
-                budget: job.budget,;
-
-;
-export { JobDetails };
-;
-export { JobDetails };
-;
-export { JobDetails };
-;
-export { JobDetails };
-;
-export { JobDetails };
-))
+      {};

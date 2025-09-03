@@ -54,9 +54,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         setIsAnalyzing(true);
         await new Promise(resolve => setTimeout(resolve, 1500));
         // Mock SEO analysis;
-        const mockSEO = {;
-
-;
+        const mockSEO = {};
 export { WebsiteImprovementDashboard };
 ;
 export { WebsiteImprovementDashboard };

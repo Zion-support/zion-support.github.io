@@ -1,38 +1,14 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
-export default function Page() {;
-,;
-                    {;
-
-                        name: 'ServicesOverview',;
-                        size: 42800,;
-                        gzipSize: 10700,;
-                        type: 'page',;
-                        optimization: 'good';,
+export default function Page() {};
+  return null;
+}
 },;
-                    {;
-
-                        name: 'Pricing',;
-                        size: 51200,;
-                        gzipSize: 11900,;
-                        type: 'page',;
-                        optimization: 'warning';,
+                    {};
 },;
-                    {;
-
-                        name: 'stripe-vendor',;
-                        size: 0,;
-                        gzipSize: 0,;
-                        type: 'vendor',;
-                        optimization: 'critical';,
+                    {};
 },;
-                    {;
-
-                        name: 'pdf-vendor',;
-                        size: 0,;
-                        gzipSize: 0,;
-                        type: 'vendor',;
-                        optimization: 'critical';,
+                    {};
 }
                 ],;
                 recommendations[;
@@ -41,55 +17,24 @@ export default function Page() {;
                 score: 78,;
                 lastUpdated: new Date () };
             setAnalysis(mockAnalysis) }
-        catch(error) {;
-
+        catch(error) {};
             // console.error('Bundle analysis failed:', error)}
-        finally {;
-
+        finally {};
             setIsAnalyzing(false)}
     }, []);
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;,
+    useEffect(() => {};
 }, []);
         analyzeBundle()}, [analyzeBundle]);
-    const formatBytes = (bytes) => {;
-
-        if(bytes === 0);
-            return '0 B';
-        const k = 1024;
-        const sizes = ['B',KB',MB',GB'];
-        const i = Math.floor(Math.log(bytes) / Math.log(k));
+    const formatBytes = (bytes) => {};
         return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]};
-    const getScoreColor = (score) => {;
-
-        if(score >= 80);
-            return 'text-green-500';
-        if(score >= 60);
-            return 'text-yellow-500';
+    const getScoreColor = (score) => {};
         return 'text-red-500'};
-    const getScoreIcon = (score) => {;
-
-        if(score >= 80);
-            return <CheckCircle className="w-5 h-5"/>;
-        if(score >= 60)";
-            return <AlertTriangle className="w-5 h-5"/>;";
+    const getScoreIcon = (score) => {};
         return <AlertTriangle className="w-5 h-5"/>};
-    const getOptimizationColor = (optimization) => {;
-
-        switch(optimization) {;
-
-            case 'good': return 'text-green-500 bg-green-100 dark:bg-green-900/20';
-            case 'warning': return 'text-yellow-500 bg-yellow-100 dark:bg-yellow-900/20';
-            case 'critical': return 'text-red-500 bg-red-100 dark:bg-red-900/20';
+    const getOptimizationColor = (optimization) => {};
             default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20'}
     };
-    const getOptimizationIcon = (optimization) => {;
-
-        switch(optimization) {;
-'";
-            case 'good': return <CheckCircle className="w-4 h-4"/>;'";
-            case 'warning': return <AlertTriangle className="w-4 h-4"/>;'";
-            case 'critical': return <AlertTriangle className="w-4 h-4"/>;";
+    const getOptimizationIcon = (optimization) => {};
             default: return <Info className="w-4 h-4"/>}
     };
     if(!analysis) return null;
@@ -101,23 +46,7 @@ export default function Page() {;
 
       {/* Bundle Analysis Panel */}
       <AnimatePresence>;
-        {isOpen && (<motion.div initial = {;
-
-  { opacity: 0, y: 20,;
-  scale: 0.9 ;,
-}} animate = {;
-
-  { opacity: 1, y: 0,;
-  scale: 1 ;,
-}} exit = {;
-
-  { opacity: 0, y: 20,;
-  scale: 0.9 ;,
-}} transition = {;
-";
-  { type: "spring", damping: 25,;
-  stiffness: 300 ;
-";,
+        {};
 }} className="fixed top-4 right-20 z-50 w-96 bg-white dark:bg-gray-900 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden" role="dialog">;
             {/* Header */}";
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-4 text-white">";
@@ -137,12 +66,11 @@ export default function Page() {;
 
             {/* Tab Navigation */}";
             <div className="flex border-b border-gray-200 dark:border-gray-700">;
-              {[';
+              {};
                 { id: 'overview', label: 'Overview', icon: BarChart3 },;
                 { id: 'chunks', label: 'Chunks', icon: HardDrive },;
                 { id: 'recommendations', label: 'Tips', icon: Target }
-            ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() => setActiveTab(id)} className={`flex-1 flex items-center justify-center gap-2 py-3 px-4 text-sm font-medium transition-colors ${activeTab === id';
-                    ? 'text-purple-600 border-b-2 border-purple-600 bg-purple-50 dark:bg-purple-900/20''"`;
+            ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() => setActiveTab(id)} className={};
                     : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'}`} aria-selected={activeTab === id} role="tab">";
                   <Icon className="w-4 h-4"/>;
                   {label}
@@ -152,7 +80,7 @@ export default function Page() {;
             {/* Tab Content */}";
             <div className="p-4 max-h-96 overflow-y-auto">;
               {/* Overview Tab */}'";
-              {activeTab === 'overview' && (<div className="space-y-4">;
+              {};
                   {/* Bundle Score */}";
                   <div className="text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">";
                     <div className="flex items-center justify-center gap-2 mb-2">;
@@ -163,7 +91,7 @@ export default function Page() {;
                       {analysis.score}/100;
                     </div>";
                     <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">;
-                      {analysis.score >= 80 ? 'Excellent' :';
+                      {};
                     analysis.score >= 60 ? 'Good' : 'Needs Improvement'}
                     </div>;
                   </div>;
@@ -208,8 +136,7 @@ export default function Page() {;
                 </div>) }
 ;
               {/* Chunks Tab */}'";
-              {activeTab === 'chunks' && (<div className="space-y-3">";
-                  <h4 className="font-medium text-gray-900 dark:text-white text-sm mb-3">Bundle Chunks</h4>";
+              {};
                   {analysis.chunks.map((chunk, index) => (<div key={index} className="p-3 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">";
                       <div className="flex items-center justify-between mb-2">";
                         <div className="flex items-center gap-2">";
@@ -230,11 +157,10 @@ export default function Page() {;
                         </div>;
                       </div>;
                       '";
-                      {chunk.optimization !== 'good' && (<div className="flex items-center gap-2 text-xs text-gray-600 dark:text-gray-400">;
+                      {};
                           {getOptimizationIcon(chunk.optimization)}
                           <span>;
-                            {chunk.optimization === 'critical'';
-                            ? 'Empty chunk - consider removing'';
+                            {};
                             : 'Consider optimization'}
                           </span>;
                         </div>) }
@@ -242,8 +168,7 @@ export default function Page() {;
                 </div>) }
 ;
               {/* Recommendations Tab */}'";
-              {activeTab === 'recommendations' && (<div className="space-y-3">";
-                  <h4 className="font-medium text-gray-900 dark:text-white text-sm mb-3">Optimization Tips</h4>";
+              {};
                   {analysis.recommendations.map((recommendation, index) => (<div key={index} className="p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">";
                       <div className="flex items-start gap-2">";
                         <Target className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0"/>";

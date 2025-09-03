@@ -1,5 +1,7 @@
 import React from 'react';
 import { Brain, Zap, Target, TrendingUp, Shield, Globe, Lightbulb, Atom, CircuitBoard const QuantumNeuralNetwork = () => {}
+  return <div>Component</div>;
+};
     const quantumFeatures = [];
         {}
             icon: Atom,;

@@ -1,24 +1,14 @@
 import {  import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
 ;
-export default function Page() {;
-const ComprehensiveServicesShowcase: React.FC = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState<string>('');  // Combine all services;
-  const allServices: Service[] = [...EXPANDED_INNOVATIVE_SERVICES_2025,;
-    ...EMERGING_TECH_SERVICES_2025;
-  ];
-  // Get unique categories';
-  ;
+export default function Page() {};
+  return null;
+}
     return cats}, [allServices]) ;
   // Get unique innovation levels;
 
     return levels}, [allServices]);  // Filter services;
   ;
-    return allServices.filter(service => {;
-      ;
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    return allServices.filter(service => {};
       return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
   ;
       case 'AI & Customer Experience':;
@@ -72,17 +62,9 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
               Discover our comprehensive portfolio of cutting-edge micro SAAS services,;
               AI solutions, and emerging technology platforms designed to transform your business.</p>";
             <div className="flex flex-wrap justify-center gap-4">;
-              <Link";
-                to="/contact";
-                className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors";
-
-                Get Started";
+              <div>Broken JSX</div>
                 <ArrowRight className="ml-2 h-5 w-5"  />              </Link>;
-              <Link";
-                to="/request-quote";
-                className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue-dark transition-colors";
-
-                Request Quote;
+              <div>Broken JSX</div>
               </Link>;
             </div>;
           </div>;
@@ -102,12 +84,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
             </div>";
             <div className="flex items-center gap-2">";
               <Globe className="h-5 w-5 text-zion-cyan"  />;
-              <a";
-                href="https://ziontechgroup.com";
-                target="_blank";
-                rel="noopener noreferrer";
-                className="font-medium text-zion-blue hover:text-zion-cyan transition-colors";
-                ziontechgroup.com;
+              <div>Broken JSX</div>
               </a>;
             </div>";
             <div className="flex items-center gap-2">";
@@ -123,10 +100,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
             {/* Search */}";
             <div className="flex-1 max-w-md">";
               <div className="relative">;
-                <input";
-                  type="text";
-                  placeholder="Search services...";
-                  value={searchTerm}
+                <div>Broken JSX</div>
                   onChange={(e) => setSearchTerm(e.target.value)}";
                   className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent";
                 />";
@@ -135,11 +109,10 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
             {/* Category Filter */}";
             <div className="flex items-center gap-2">";
               <span className="text-gray-700 font-medium">Category:</span>;
-              <select;
-                value={selectedCategory}
+              <div>Broken JSX</div>
                 onChange={(e) => setSelectedCategory(e.target.value)}";
                 className="px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-zion-cyan focus:border-transparent">;
-                {categories.map(category  => (;
+                {};
                   <option key={category} value={category}>;
                     {category === 'all' ? 'All Categories' : category}
                   </option>) ) }
@@ -148,11 +121,10 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
             {/* Innovation Level Filter */}";
             <div className="flex items-center gap-2">";
               <span className="text-gray-700 font-medium">Innovation:</span>;
-              <select;
-                value={selectedInnovationLevel}
+              <div>Broken JSX</div>
                 onChange={(e) => setSelectedInnovationLevel(e.target.value)}";
                 className="px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-zion-cyan focus:border-transparent">;
-                {innovationLevels.map(level  => (;
+                {};
                   <option key={level} value={level}>;
                     {level === 'all' ? 'All Levels' : level}
                   </option>) ) }
@@ -165,31 +137,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
       <section className="py-16">;";
         <div className="container mx-auto px-4">";
           <div className="grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-8">;
-            {filteredServices.map((service, index)  => (;
-              <motion.div;
-                key={service.id}
-                initial = {;
-
-  { opacity: 0,;
-  y: 20;,
-}}
-                animate = {;
-
-  { opacity: 1,;
-  y: 0;,
-}}
-                transition = {;
-
-  { duration: 0.5,;
-  delay: index * 0.1;,
-}}";
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100";
-
-                {/* Service Header */}";
-                <div className="p-6 border-b border-gray-100">";
-                  <div className="flex items-start justify-between mb-4">";
-                    <div className="flex items-center gap-3">";
-                      <div className="p-2 bg-zion-cyan/10 rounded-lg text-zion-cyan">;
+            {};
                         {getCategoryIcon(service.category)}
                       </div>;
                       <div>;
@@ -236,14 +184,13 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                       <CheckCircle className="h-5 w-5 text-green-500"  />                      Key Features;
                     </h4>";
                     <div className="grid grid-cols-1 gap-2">;
-                      {service.features.slice(0, 5).map((feature, idx) => (";
+                      {};
                         <div key={idx} className="flex items-center gap-2 text-sm text-gray-600">";
                           <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>;
                           {feature}
                         </div>;
                       ))}
-                      {service.features.length > 5 && (";
-                        <div className="text-sm text-zion-cyan font-medium">;
+                      {};
                           +{service.features.length-5} more features;
                         </div>) }
                     </div>;
@@ -254,7 +201,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                       <TrendingUp className="h-5 w-5 text-blue-500"  />                      Benefits;
                     </h4>";
                     <div className="space-y-2">;
-                      {service.benefits.slice(0, 3).map((benefit, idx) => (";
+                      {};
                         <div key={idx} className="text-sm text-gray-600 bg-blue-50 p-2 rounded">;
                           {benefit}
                         </div>) ) }
@@ -263,40 +210,21 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                   {/* Tags */}";
                   <div className="mb-6">";
                     <div className="flex flex-wrap gap-2">;
-                      {service.tags.slice(0, 5).map((tag, idx) => (;
-                        <span;
-                          key={idx}";
-                          className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full";
-
-                          {tag}
+                      {};
                         </span>) ) }
                     </div>;
                   </div>;
                   {/* CTA Buttons */}";
                   <div className="flex gap-3">;
-                    <Link`;
-                      to={`/contact?service=${service.id}`}";
-                      className="flex-1 bg-zion-cyan text-white text-center py-2 px-4 rounded-lg hover:bg-zion-cyan-light transition-colors font-medium";
-
-                      Get Started;
+                    <div>Broken JSX</div>
                     </Link>;
-                    <Link`;
-                      to={`/services/${service.id}`}";
-                      className="flex-1 border border-zion-cyan text-zion-cyan text-center py-2 px-4 rounded-lg hover:bg-zion-cyan hover:text-white transition-colors font-medium";
-
-                      Learn More;
+                    <div>Broken JSX</div>
                     </Link>;
                   </div>;
                 </div>;
               </motion.div>) ) };
           </div>;
-          {filteredServices.length === 0 && (;";
-            <div className="text-center py-16">;";
-              <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>;
-              <button;
-                onClick={() => {;
-                  setSelectedCategory('all');
-                  setSelectedInnovationLevel('all');
+          {};
                   setSearchTerm('')}}"                className="text-zion-cyan hover:text-zion-cyan-light font-medium">;
                 Clear all filters;
               </button>;
@@ -312,16 +240,9 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">;
             Our innovative technology solutions are designed to give you a competitive edge.Contact us today to discuss how we can help you achieve your goals.</p>";
           <div className="flex flex-wrap justify-center gap-4">;
-            <Link";
-              to="/contact";
-              className="inline-flex items-center px-8 py-3 bg-white text-zion-blue font-semibold rounded-lg hover:bg-gray-100 transition-colors";
-
-              Contact Us";
+            <div>Broken JSX</div>
               <ArrowRight className="ml-2 h-5 w-5"  />            </Link>;
-            <a";
-              href="tel:+13024640950";
-              className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue transition-colors";
-";
+            <div>Broken JSX</div>
               <Phone className="mr-2 h-5 w-5"  />              Call Now;
             </a>;
           </div>;

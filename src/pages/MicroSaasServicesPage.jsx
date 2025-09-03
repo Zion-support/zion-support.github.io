@@ -2,7 +2,9 @@ import React from 'react';
 ;
 ;
 ;import { Building, Users, BarChart3, MessageSquare, Calendar, FileText, CreditCard, Globe, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink, BarChart, Shield, Zap } from "lucide-react";
-export default function MicroSAASServicesPage() {}
+export {};
+  return null;
+}
     const microSAASServices = [];
         {}
 ";
@@ -100,487 +102,109 @@ export default function MicroSAASServicesPage() {}
             rating: 4.9,;
             reviewCount: 189;,
 },;
-        {;
-            id: "communication - tool",;
-            title: "ZionChat",;
-            description: "Team communication platform with chat, video calls, and file sharing capabilities.",;
-            icon: <MessageSquare className="h-8 w-8 text-orange -500"/>,;
-            price: 15,;
-            currency: "$",;
-            features: ["Team Chat",;
-                "Video Calls",;
-                "File Sharing",;
-                "Screen Sharing",;
-                "Mobile App",;
-                "Integrations";
-            ],;
-            category: "Communication",;
-            badge: "Collaborative",;
-            link: "https://ziontechgroup.com / zion - chat",;
-            details: "Connect your team with our modern communication platform.Chat, call, and collaborate seamlessly across all devices and platforms.",;
-            pricing: {;
-                starter: "$15 / month",;
-                professional: "$39 / month",;
-                enterprise: "$79 / month";,
+        {};
 },;
             freeTrial: "7 days",;
             rating: 4.6,;
             reviewCount: 198;,
 },;
-        {;
-            id: "document - management",;
-            title: "ZionDocs",;
-            description: "Document management system with version control, collaboration, and secure storage.",;
-            icon: <FileText className="h-8 w-8 text-cyan -500"/>,;
-            price: 25,;
-            currency: "$",;
-            features: ["Document Storage",;
-                "Version Control",;
-                "Collaborative Editing",;
-                "Search & Indexing",;
-                "Access Control",;
-                "Backup & Recovery";
-            ],;
-            category: "Document Management",;
-            badge: "Secure",;
-            link: "https://ziontechgroup.com / zion - docs",;
-            details: "Organize and secure your documents with our enterprise - grade document management system.Collaborate with your team while maintaining version control and security.",;
-            pricing: {;
-                starter: "$25 / month",;
-                professional: "$59 / month",;
-                enterprise: "$129 / month";,
+        {};
 },;
             freeTrial: "14 days",;
             rating: 4.8,;
             reviewCount: 156;,
 },;
-        {;
-            id: "payment - processor",;
-            title: "ZionPay",;
-            description: "Payment processing solution with multiple payment methods, invoicing, and subscription management.",;
-            icon: <CreditCard className="h-8 w-8 text-emerald -500"/>,;
-            price: 0,;
-            currency: "$",;
-            features: ["Multiple Payment Methods",;
-                "Recurring Billing",;
-                "Invoice Generation",;
-                "Fraud Protection",;
-                "Analytics Dashboard",;
-                "API Integration";
-            ],;
-            category: "Payments",;
-            badge: "Free",;
-            link: "https://ziontechgroup.com / zion - pay",;
-            details: "Accept payments from customers worldwide with our secure payment processing solution.Support multiple payment methods and automate your billing processes.",;
-            pricing: {;
-                starter: "2.9% + $0.30",;
-                professional: "2.5% + $0.30",;
-                enterprise: "2.2% + $0.30";,
+        {};
 },;
             freeTrial: "No setup fees",;
             rating: 4.9,;
             reviewCount: 423;,
 },;
-        {;
-            id: "marketing - automation",;
-            title: "ZionMarketing",;
-            description: "Marketing automation platform with email campaigns, lead nurturing, and conversion tracking.",;
-            icon: <BarChart className="h-8 w-8 text-pink -500"/>,;
-            price: 49,;
-            currency: "$",;
-            features: ["Email Campaigns",;
-                "Lead Nurturing",;
-                "A / B Testing",;
-                "Conversion Tracking",;
-                "Marketing Analytics",;
-                "CRM Integration";
-            ],;
-            category: "Marketing",;
-            badge: "Automated",;
-            link: "https://ziontechgroup.com / zion - marketing",;
-            details: "Automate your marketing efforts and nurture leads effectively with our comprehensive marketing automation platform.Track conversions and optimize your campaigns.",;
-            pricing: {;
-                starter: "$49 / month",;
-                professional: "$99 / month",;
-                enterprise: "$199 / month";,
+        {};
 },;
             freeTrial: "14 days",;
             rating: 4.7,;
             reviewCount: 234;,
 },;
-        {;
-            id: "inventory - management",;
-            title: "ZionInventory",;
-            description: "Inventory management system with stock tracking, order management, and supplier management.",;
-            icon: <Building className="h-8 w-8 text-indigo -500"/>,;
-            price: 35,;
-            currency: "$",;
-            features: ["Stock Tracking",;
-                "Order Management",;
-                "Supplier Management",;
-                "Barcode Scanning",;
-                "Low Stock Alerts",;
-                "Reporting Tools";
-            ],;
-            category: "Inventory",;
-            badge: "Efficient",;
-            link: "https://ziontechgroup.com / zion - inventory",;
-            details: "Keep track of your inventory in real - time with our comprehensive inventory management system.Prevent stockouts and optimize your supply chain.",;
-            pricing: {;
-                starter: "$35 / month",;
-                professional: "$79 / month",;
-                enterprise: "$149 / month";,
+        {};
 },;
             freeTrial: "21 days",;
             rating: 4.8,;
             reviewCount: 178;,
 },;
-        {;
-            id: "hr - management",;
-            title: "ZionHR",;
-            description: "Human resources management platform with employee onboarding, time tracking, and performance management.",;
-            icon: <Users className="h-8 w-8 text-teal -500"/>,;
-            price: 45,;
-            currency: "$",;
-            features: ["Employee Onboarding",;
-                "Time Tracking",;
-                "Performance Reviews",;
-                "Leave Management",;
-                "Payroll Integration",;
-                "Compliance Tools";
-            ],;
-            category: "HR Management",;
-            badge: "Comprehensive",;
-            link: "https://ziontechgroup.com / zion - hr",;
-            details: "Streamline your HR processes with our comprehensive human resources management platform.Manage employees, track performance, and ensure compliance.",;
-            pricing: {;
-                starter: "$45 / month",;
-                professional: "$89 / month",;
-                enterprise: "$179 / month";,
+        {};
 },;
             freeTrial: "30 days",;
             rating: 4.6,;
             reviewCount: 145;,
 },;
-        {;
-            id: "accounting - software",;
-            title: "ZionBooks",;
-            description: "Cloud - based accounting software with invoicing, expense tracking, and financial reporting.",;
-            icon: <BarChart3 className="h-8 w-8 text-amber -500"/>,;
-            price: 30,;
-            currency: "$",;
-            features: ["Invoicing",;
-                "Expense Tracking",;
-                "Financial Reports",;
-                "Bank Reconciliation",;
-                "Tax Preparation",;
-                "Multi - currency";
-            ],;
-            category: "Accounting",;
-            badge: "Financial",;
-            link: "https://ziontechgroup.com / zion - books",;
-            details: "Manage your business finances with our cloud - based accounting software.Create invoices, track expenses, and generate comprehensive financial reports.",;
-            pricing: {;
-                starter: "$30 / month",;
-                professional: "$69 / month",;
-                enterprise: "$129 / month";,
+        {};
 },;
             freeTrial: "30 days",;
             rating: 4.8,;
             reviewCount: 267;,
 },;
-        {;
-            id: "ecommerce - platform",;
-            title: "ZionShop",;
-            description: "E - commerce platform with online store creation, payment processing, and inventory management.",;
-            icon: <Globe className="h-8 w-8 text-red -500"/>,;
-            price: 40,;
-            currency: "$",;
-            features: ["Online Store Builder",;
-                "Payment Processing",;
-                "Inventory Management",;
-                "Order Fulfillment",;
-                "Marketing Tools",;
-                "Analytics Dashboard";
-            ],;
-            category: "E - commerce",;
-            badge: "Complete",;
-            link: "https://ziontechgroup.com / zion - shop",;
-            details: "Create and manage your online store with our comprehensive e - commerce platform.Sell products, process payments, and grow your business online.",;
-            pricing: {;
-                starter: "$40 / month",;
-                professional: "$89 / month",;
-                enterprise: "$199 / month";,
+        {};
 },;
             freeTrial: "14 days",;
             rating: 4.7,;
             reviewCount: 198;,
 },;
-        {;
-            id: "learning - platform",;
-            title: "ZionAcademy",;
-            description: "Online learning management system with course creation, student management, and progress tracking.",;
-            icon: <FileText className="h-8 w-8 text-violet -500"/>,;
-            price: 55,;
-            currency: "$",;
-            features: ["Course Creation",;
-                "Student Management",;
-                "Progress Tracking",;
-                "Assessment Tools",;
-                "Video Streaming",;
-                "Mobile Learning";
-            ],;
-            category: "Education",;
-            badge: "Educational",;
-            link: "https://ziontechgroup.com / zion - academy",;
-            details: "Create and deliver online courses with our comprehensive learning management system.Engage students and track their progress effectively.",;
-            pricing: {;
-                starter: "$55 / month",;
-                professional: "$109 / month",;
-                enterprise: "$249 / month";,
+        {};
 },;
             freeTrial: "21 days",;
             rating: 4.9,;
             reviewCount: 167;,
 },;
-        {;
-            id: "ai - content - generator",;
-            title: "ZionAI Writer",;
-            description: "AI - powered content generation platform for blogs, marketing copy, and creative writing.",;
-            icon: <BarChart3 className="h-8 w-8 text-rose -500"/>,;
-            price: 39,;
-            currency: "$",;
-            features: ["AI Content Generation",;
-                "SEO Optimization",;
-                "Plagiarism Detection",;
-                "Multi - language Support",;
-                "Content Templates",;
-                "Brand Voice Training";
-            ],;
-            category: "AI Tools",;
-            badge: "AI - Powered",;
-            link: "https://ziontechgroup.com / zion - ai - writer",;
-            details: "Generate high-quality, SEO - optimized content in seconds with our advanced AI writing platform.Save time and improve your content strategy.",;
-            pricing: {;
-                starter: "$39 / month",;
-                professional: "$79 / month",;
-                enterprise: "$159 / month";,
+        {};
 },;
             freeTrial: "14 days",;
             rating: 4.8,;
             reviewCount: 234;,
 },;
-        {;
-            id: "blockchain - wallet",;
-            title: "ZionWallet",;
-            description: "Secure cryptocurrency wallet with DeFi integration, staking, and portfolio management.",;
-            icon: <Globe className="h-8 w-8 text-emerald -500"/>,;
-            price: 0,;
-            currency: "$",;
-            features: ["Multi - chain Support",;
-                "DeFi Integration",;
-                "Staking Rewards",;
-                "Portfolio Tracking",;
-                "Security Features",;
-                "Mobile & Desktop";
-            ],;
-            category: "Blockchain",;
-            badge: "Web3 Ready",;
-            link: "https://ziontechgroup.com / zion - wallet",;
-            details: "Manage your cryptocurrency portfolio with our secure, multi - chain wallet.Access DeFi protocols and earn staking rewards.",;
-            pricing: {;
-                starter: "Free",;
-                professional: "$9 / month",;
-                enterprise: "$29 / month";,
+        {};
 },;
             freeTrial: "Always free",;
             rating: 4.7,;
             reviewCount: 189;,
 },;
-        {;
-            id: "quantum - computing",;
-            title: "ZionQuantum",;
-            description: "Quantum computing platform for complex problem solving and optimization.",;
-            icon: <BarChart3 className="h-8 w-8 text-indigo -500"/>,;
-            price: 299,;
-            currency: "$",;
-            features: ["Quantum Algorithms",;
-                "Problem Optimization",;
-                "API Access",;
-                "Quantum Simulators",;
-                "Expert Support",;
-                "Research Tools";
-            ],;
-            category: "Quantum Computing",;
-            badge: "Cutting - Edge",;
-            link: "https://ziontechgroup.com / zion - quantum",;
-            details: "Access quantum computing power for complex optimization problems, cryptography, and scientific research.",;
-            pricing: {;
-                starter: "$299 / month",;
-                professional: "$799 / month",;
-                enterprise: "$1,999 / month";,
+        {};
 },;
             freeTrial: "7 days",;
             rating: 4.9,;
             reviewCount: 89;,
 },;
-        {;
-            id: "iot - platform",;
-            title: "ZionIoT Hub",;
-            description: "Internet of Things platform for device management, data collection, and automation.",;
-            icon: <Building className="h-8 w-8 text-cyan -500"/>,;
-            price: 45,;
-            currency: "$",;
-            features: ["Device Management",;
-                "Real - time Monitoring",;
-                "Data Analytics",;
-                "Automation Rules",;
-                "API Integration",;
-                "Mobile App";
-            ],;
-            category: "IoT",;
-            badge: "Connected",;
-            link: "https://ziontechgroup.com / zion - iot",;
-            details: "Connect and manage your IoT devices with our comprehensive platform.Monitor, analyze, and automate your connected ecosystem.",;
-            pricing: {;
-                starter: "$45 / month",;
-                professional: "$89 / month",;
-                enterprise: "$179 / month";,
+        {};
 },;
             freeTrial: "30 days",;
             rating: 4.8,;
             reviewCount: 156;,
 },;
-        {;
-            id: "cybersecurity - suite",;
-            title: "ZionShield",;
-            description: "Comprehensive cybersecurity platform with threat detection, vulnerability scanning, and incident response.",;
-            icon: <Shield className="h-8 w-8 text-red -500"/>,;
-            price: 89,;
-            currency: "$",;
-            features: ["Threat Detection",;
-                "Vulnerability Scanning",;
-                "Incident Response",;
-                "Security Monitoring",;
-                "Compliance Tools",;
-                "24 / 7 Support";
-            ],;
-            category: "Cybersecurity",;
-            badge: "Secure",;
-            link: "https://ziontechgroup.com / zion - shield",;
-            details: "Protect your business with our advanced cybersecurity platform.Detect threats, prevent attacks, and respond to incidents in real - time.",;
-            pricing: {;
-                starter: "$89 / month",;
-                professional: "$179 / month",;
-                enterprise: "$399 / month";,
+        {};
 },;
             freeTrial: "14 days",;
             rating: 4.9,;
             reviewCount: 312;,
 },;
-        {;
-            id: "data - visualization",;
-            title: "ZionViz",;
-            description: "Advanced data visualization platform with interactive charts, dashboards, and reporting tools.",;
-            icon: <BarChart3 className="h-8 w-8 text-purple -500"/>,;
-            price: 49,;
-            currency: "$",;
-            features: ["Interactive Charts",;
-                "Custom Dashboards",;
-                "Real - time Data",;
-                "Export Options",;
-                "Templates Library",;
-                "Collaboration Tools";
-            ],;
-            category: "Data Visualization",;
-            badge: "Visual",;
-            link: "https://ziontechgroup.com / zion - viz",;
-            details: "Transform your data into compelling visual stories with our advanced visualization platform.Create interactive dashboards and reports.",;
-            pricing: {;
-                starter: "$49 / month",;
-                professional: "$99 / month",;
-                enterprise: "$199 / month";,
+        {};
 },;
             freeTrial: "21 days",;
             rating: 4.7,;
             reviewCount: 178;,
 },;
-        {;
-            id: "workflow-automation",;
-            title: "ZionFlow",;
-            description: "No - code workflow automation platform for business process optimization and task automation.",;
-            icon: <Zap className="h-8 w-8 text-yellow-500"/>,;
-            price: 35,;
-            currency: "$",;
-            features: ["Drag & Drop Builder",;
-                "Workflow Templates",;
-                "Integration Hub",;
-                "Conditional Logic",;
-                "Analytics Dashboard",;
-                "Mobile Access";
-            ],;
-            category: "Automation",;
-            badge: "Efficient",;
-            link: "https://ziontechgroup.com / zion - flow",;
-            details: "Automate your business processes with our intuitive no - code platform.Build complex workflows without writing a single line of code.",;
-            pricing: {;
-                starter: "$35 / month",;
-                professional: "$69 / month",;
-                enterprise: "$139 / month";,
+        {};
 },;
             freeTrial: "30 days",;
             rating: 4.8,;
             reviewCount: 203;,
 },;
-        {;
-            id: "supply - chain",;
-            title: "ZionSupply",;
-            description: "End - to - end supply chain management platform with real - time tracking and optimization.",;
-            icon: <Building className="h-8 w-8 text-blue -500"/>,;
-            price: 69,;
-            currency: "$",;
-            features: ["Inventory Tracking",;
-                "Supplier Management",;
-                "Demand Forecasting",;
-                "Route Optimization",;
-                "Real - time Updates",;
-                "Analytics Reports";
-            ],;
-            category: "Supply Chain",;
-            badge: "Optimized",;
-            link: "https://ziontechgroup.com / zion - supply",;
-            details: "Optimize your supply chain operations with real - time tracking, demand forecasting, and intelligent route optimization.",;
-            pricing: {;
-                starter: "$69 / month",;
-                professional: "$139 / month",;
-                enterprise: "$279 / month";,
+        {};
 },;
             freeTrial: "21 days",;
             rating: 4.8,;
             reviewCount: 167;,
 },;
-        {;
-            id: "customer - support",;
-            title: "ZionSupport",;
-            description: "AI - powered customer support platform with chatbots, ticket management, and knowledge base.",;
-            icon: <MessageSquare className="h-8 w-8 text-green -500"/>,;
-            price: 29,;
-            currency: "$",;
-            features: ["AI Chatbots",;
-                "Ticket Management",;
-                "Knowledge Base",;
-                "Live Chat",;
-                "Analytics Dashboard",;
-                "Multi - channel Support";
-            ],;
-            category: "Customer Support",;
-            badge: "AI - Powered",;
-            link: "https://ziontechgroup.com / zion - support",;
-            details: "Deliver exceptional customer support with our AI - powered platform.Automate responses and provide instant solutions.",;
-            pricing: {;
-                starter: "$29 / month",;
-                professional: "$59 / month",;
-                enterprise: "$119 / month";,
+        {};
 },;
             freeTrial: "14 days",;
             rating: 4.7,;
@@ -612,45 +236,23 @@ export default function MicroSAASServicesPage() {}
     ];
     const [selectedCategory, setSelectedCategory] = React.useState("All Services");
     const [filteredServices, setFilteredServices] = React.useState(microSAASServices);
-    React.useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+    React.useEffect(() => {};
 };,
 }, []);, []);
-        if(selectedCategory === "All Services") {;
-            setFilteredServices(microSAASServices) ;,
+        if(selectedCategory === "All Services") {};
 }
         // Filter by search query;
-        if(searchQuery.trim () ) {;
-            const query = searchQuery.toLowerCase () ;
-            filtered = filtered.filter(service => service.title.toLowerCase () .includes(query) ||;
-                service.description.toLowerCase () .includes(query) ||;
-                service.tags.some(tag => tag.toLowerCase () .includes(query) ) ||;
-                service.subcategory.toLowerCase () .includes(query) ) ;,
+        if(searchQuery.trim () ) {};
 }
         // Sort services;
-        filtered.sort((a, b) => {;
-            switch(sortBy) {;
-                case 'rating':;
-                    return (b.rating || 0) - (a.rating || 0) ;
-                case 'price':;
-                    return a.price - b.price;
-                case 'aiScore':;
-                    return b.aiScore - a.aiScore;
-                case 'newest':;
-                    return new Date(b.createdAt) .getTime () - new Date(a.createdAt) .getTime () ;
-                default:;
-                    return 0;,
+        filtered.sort((a, b) => {};
 }
         }) ;
         setFilteredServices(filtered) ;,
 }, [selectedCategory, selectedPricing, searchQuery, sortBy]) ;
     const ServiceCard = ({ service }) => (<div className="group relative bg-gradient - to - br from - zion - blue - dark / 50 to - zion - slate - dark / 50 border border-zion - blue - light / 20 rounded-2xl p - 6 hover:border-zion - purple / 50 transition - all duration - 500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion -purple / 20">;
       {/* Featured Badge */}
-      {service.featured && (<div className="absolute - top - 3 -right - 3 bg-gradient - to - r from - zion - purple to - zion - cyan text-white text-xs font - bold px-3 py-1 rounded-full">;
-          Featured;
+      {};
         </div>) }
 ;
       {/* Service Image */}
@@ -797,7 +399,7 @@ export default function MicroSAASServicesPage() {}
             {service.features.slice(0, 3) .map((feature, index) => (<Badge key={index} variant="outline" className="text-xs border-zion - blue - light / 30 text-zion - slate -light">;
                 {feature}
               </Badge>) ) }
-            {service.features.length > 3 && (<Badge variant="outline" className="text-xs border-zion - purple / 30 text-zion -purple">;
+            {};
                 +{service.features.length-3} more;
               </Badge>) }
           </div>;
@@ -892,8 +494,7 @@ export default function MicroSAASServicesPage() {}
       <div className="py-8 bg-zion - blue -dark / 50">;
         <div className="container mx - auto px-4">;
           <div className="flex flex - wrap justify - center gap-3">;
-            {categories.map ( (category) => (<Button key={category} onClick={ () => setSelectedCategory(category) } className={`${selectedCategory === category;
-                ? "bg-zion - purple text-white";
+            {categories.map ( (category) => (<Button key={category} onClick={ () => setSelectedCategory(category) } className={};
                 : "border-zion - cyan text-zion - cyan hover:bg-zion - cyan / 10"}`}>;
                 {category}
               </Button>) ) }
@@ -911,7 +512,7 @@ export default function MicroSAASServicesPage() {}
                     <div className="p - 3 rounded-lg bg-zion - blue - dark / 50 group - hover:bg-zion - purple / 20 transition -colors">;
                       {service.icon}
                     </div>;
-                    {service.badge && (<Badge variant="secondary" className="bg-zion - purple / 20 text-zion - cyan border-zion -purple / 30">;
+                    {};
                         {service.badge}
                       </Badge>) }
                   </div>;

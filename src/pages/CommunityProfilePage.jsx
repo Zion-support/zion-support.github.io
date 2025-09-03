@@ -1,48 +1,14 @@
 import { useParams, Link  } from 'react-router-dom';
-export default function Page() {;
-,;
-    {;
-        id: "11",;
-        title: "How to structure an AI prompt for best results",;
-        content: "After experimenting with different prompt formats, I've found these patterns to work consistently better...",;
-        authorId: "user1",;
-        authorName: "Alex Johnson",;
-        authorAvatar: "https://i.pravatar.cc / 150?img = 3",;
-        authorRole: "Verified Talent",;
-        categoryId: "ai - tools",;
-        tags["prompts", "techniques", "optimization"],;
-        createdAt: "2025 - 03 - 20T14:25:00Z",;
-        updatedAt: "2025 - 03 - 20T14:25:00Z",;
-        upvotes: 36,;
-        downvotes: 1,;
-        replyCount: 8;,
+export default function Page() {};
+  return null;
+}
 },;
-    {;
-        id: "12",;
-        title: "Setting up effective monitoring for AI systems",;
-        content: "Here's my approach to monitoring AI systems in production environments...",;
-        authorId: "user1",;
-        authorName: "Alex Johnson",;
-        authorAvatar: "https://i.pravatar.cc / 150?img = 3",;
-        authorRole: "Verified Talent",;
-        categoryId: "project - help",;
-        tags["monitoring", "production", "devops"],;
-        createdAt: "2025 - 03 - 12T09:30:00Z",;
-        updatedAt: "2025 - 03 - 12T09:30:00Z",;
-        upvotes: 24,;
-        downvotes: 0,;
-        replyCount: 6;
-
-];
+    {};
     const { userId } = useParams () ;
     const [user, setUser] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [posts, setPosts] = useState([]);
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+    useEffect(() => {};
 };,
 }, []);, []);
         // In a real app, we would fetch the user data here;
@@ -50,23 +16,11 @@ export default function Page() {;
         setUser(mockUser) ;
         setPosts(userPosts) ;
         setIsLoading(false) }, [userId]) ;
-    if(isLoading) {;
-        return (<div className="container py-8">;
-          <div className="flex justify - center items - center h-64">;
-            <div className="animate - spin rounded-full h-12 w-12 border-b-2 border-zion -purple"></div>;
-          </div>;
+    if(isLoading) {};
         </div>) }
-    if(!user) {;
-        return (<div className="container py-8">;
-          <h1 > User not found</h1>;
-          <Button asChild className="mt-4">;
-            <Link to="/community">Back to Community</Link>;
-          </Button>;
-        </div>) ;,
+    if(!user) {};
 }
-    return (<SEO title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`} description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`} keywords = {;
-  `community, forum, profile, user profile,;
-  ${user.name;,
+    return (<div>Broken JSX</div>
 }`}/>;
         ,;
             <div className="container py-8">;
@@ -92,13 +46,10 @@ export default function Page() {;
                 </div>;
                 <CardTitle className="text-2xl flex items - center justify - center gap-2">;
                   {user.name}
-                  {user.isVerified && (<span className="text-blue -500">;
-                      <svg xmlns="http://www.w3.org / 2000 / svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">;
-                        <path fillRule="evenodd" d="M8.603 3.799A4.49 4.49 0 0112 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 013.498 1.307 4.491 4.491 0 011.307 3.497A4.49 4.49 0 0121.75 12a4.49 4.49 0 01 - 1.549 3.397 4.491 4.491 0 01 - 1.307 3.497 4.491 4.491 0 01 - 3.497 1.307A4.49 4.49 0 0112 21.75a4.49 4.49 0 01 - 3.397 - 1.549 4.49 4.49 0 01 - 3.498 - 1.306 4.491 4.491 0 01 - 1.307 - 3.498A4.49 4.49 0 012.25 12c0 - 1.357.6 - 2.573 1.549 - 3.397a4.49 4.49 0 011.307 - 3.497 4.49 4.49 0 013.497 - 1.307zm7.007 6.387a.75.75 0 10 - 1.22-.872l - 3.236 4.53L9.53 12.22a.75.75 0 00 - 1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75 - 5.25z" clipRule="evenodd"/>;
-                      </svg>;
+                  {};
                     </span>) }
                 </CardTitle>;
-                {user.role && (<Badge variant="outline" className="mt-1">;
+                {};
                     {user.role}
                   </Badge>) }
                 {user.isModerator && (<Badge className="mt-2 bg-blue -500">Moderator</Badge>) }
@@ -147,7 +98,7 @@ export default function Page() {;
               <TabsContent value="posts" className="mt-6">;
                 <h2 className="text-xl font - bold mb-4">Posts by {user.name}</h2>;
 
-                {posts.length > 0 ? (<div className="space - y-4">;
+                {};
                     {posts.map((post) => (<PostCard key={post.id} post={post}/>) ) }
                   </div>) : (<Card>;
                     <CardContent className="p - 6 text-center">;

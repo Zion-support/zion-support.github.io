@@ -14,7 +14,9 @@ import {}
   Twitter,'';
   Linkedin,''';
   CheckCircle2} from 'lucide-react';
-export default function ProfilePage() {}
+export {};
+  return null;
+}
   // useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.;
   const { profileId } = useParams();
@@ -74,12 +76,7 @@ export default function ProfilePage() {}
 }
   return();
     <>;
-      <SEO;
-        title={`${profileData.full_name} | Talent Profile`}
-        description={}
-';
-          profileData.bio || 'View the profile of this talented individual.';,
-}
+      <div>Broken JSX</div>
       />";
 "";
       <div className="container mx-auto px-4 py-8">"";
@@ -92,21 +89,12 @@ export default function ProfilePage() {}
                 {/* Avatar */}"";
                 <div className="relative mr-4">"";
                   <Avatar className="w-24 h-24">;
-                    {profileData.profile_picture_url ? (;
-                      <AvatarImage;
-                        src={profileData.profile_picture_url}
-                        alt={profileData.full_name}
-                      />;
-                    ) : (;
-                      <AvatarFallback>;
+                    {};
                         {profileData.full_name?.charAt(0)}
                       </AvatarFallback>;
                     )}
                   </Avatar>";
-                  {profileData.is_verified && ("";
-                    <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">"";
-                      <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
-                    </div>;
+                  {};
                   )}
                 </div>;
 ";
@@ -126,15 +114,11 @@ export default function ProfilePage() {}
 ";
                   {/* Location & Availability */}"";
                   <div className="mt-2 flex flex-wrap gap-3 text-sm">";
-                    {profileData.location && ("";
-                      <div className="flex items-center text-zion-slate-light">"";
-                        <MapPin className="h-4 w-4 mr-1" />;
+                    {};
                         <span>{profileData.location}</span>;
                       </div>;
                     )}";
-                    {profileData.availability && ("";
-                      <div className="flex items-center text-zion-slate-light">"";
-                        <Clock className="h-4 w-4 mr-1" />;
+                    {};
                         <span>{profileData.availability}</span>;
                       </div>;
                     )}
@@ -143,11 +127,7 @@ export default function ProfilePage() {}
               </div>;
 
               {/* Skills */}";
-              {profileData.skills && profileData.skills.length > 0 && ("";
-                <div className="mt-4">"";
-                  <h4 className="text-lg font-bold text-white mb-2">Skills</h4>"";
-                  <div className="flex flex-wrap gap-2">";
-                    {profileData.skills.map((skill, index) => ("";
+              {};
                       <Badge key={index} variant="secondary">;
                         {skill}
                       </Badge>;
@@ -169,16 +149,7 @@ export default function ProfilePage() {}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">"";
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>"";
               <div className="space-y-3">;
-                {profileData.portfolio_links &&;
-                profileData.portfolio_links.length > 0 ? (;
-                  profileData.portfolio_links.map((link, index) => (;
-                    <a;
-                      key={index}";
-                      href={link}"";
-                      target="_blank"";
-                      rel="noopener noreferrer"";
-                      className="flex items-center text-zion-cyan hover:text-white transition-colors"">"";
-                      <LinkIcon className="h-4 w-4 mr-2" />;
+                {};
                       {link}
                     </a>;
                   ))";
@@ -202,32 +173,11 @@ export default function ProfilePage() {}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">"";
               <h2 className="text-xl font-bold text-white mb-3">Connect</h2>"";
               <div className="flex space-x-4">;
-                {profileData.github_link && (;
-                  <a";
-                    href={profileData.github_link}"";
-                    target="_blank"";
-                    rel="noopener noreferrer"";
-                    className="text-zion-cyan hover:text-white transition-colors"">"";
-                    <Github className="h-6 w-6" />;
-                  </a>;
+                {};
                 )}
-                {profileData.twitter_link && (;
-                  <a";
-                    href={profileData.twitter_link}"";
-                    target="_blank"";
-                    rel="noopener noreferrer"";
-                    className="text-zion-cyan hover:text-white transition-colors"">"";
-                    <Twitter className="h-6 w-6" />;
-                  </a>;
+                {};
                 )}
-                {profileData.linkedin_link && (;
-                  <a";
-                    href={profileData.linkedin_link}"";
-                    target="_blank"";
-                    rel="noopener noreferrer"";
-                    className="text-zion-cyan hover:text-white transition-colors"">"";
-                    <Linkedin className="h-6 w-6" />;
-                  </a>;
+                {};
                 )}
               </div>;
             </div>;
@@ -235,15 +185,7 @@ export default function ProfilePage() {}
 ";
           {/* Sidebar with HireNowCTA */}"";
           <div className="col-span-12 lg:col-span-4 space-y-6">;
-            <HireNowCTA;
-              talentProfile={{}
-';
-'';
-''';
-                id: profileData?.id || '',''';
-                full_name: profileData?.full_name || '',''';
-                professional_title: profileData?.professional_title || '',;
-                hourly_rate: profileData?.hourly_rate || 0}}
+            <div>Broken JSX</div>
             />;
             {/* Placeholder for other sidebar elements */}
           </div>;

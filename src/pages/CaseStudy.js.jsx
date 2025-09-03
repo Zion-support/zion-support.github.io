@@ -4,7 +4,9 @@ import { CASE_STUDIES } from '@/data/case-studies';''';
 import { SEO } from '@/components/SEO';''';
 import { Button } from '@/components/ui/button';''';
 import { ArrowLeft } from 'lucide-react';
-export default function CaseStudy() {}
+export {};
+  return null;
+}
   const router = useRouter();
   const { slug } = router.query;
   const study = CASE_STUDIES.find(s => s.slug === slug);
@@ -20,25 +22,17 @@ export default function CaseStudy() {}
       <SEO title={study.title} description={study.excerpt} />"";
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">"";
         <div className="container mx-auto max-w-3xl">";
-          <Button"";
-            variant="outline"";
-            className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white";
+          <div>Broken JSX</div>
             asChild">"";
             <Link to="/case-studies">"";
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies;
             </Link>;
           </Button>";
-          <img"";
-            loading="lazy";
-            src={study.compLogo}";
-            alt={`${study.comp} logo`}"";
-            className="h-12 mb-4"";
+          <div>Broken JSX</div>
           />"";
           <h1 className="text-3xl font-bold text-white mb-4">{study.title}</h1>"";
           <p className="text-zion-slate-light mb-8">{study.excerpt}</p>";
-          <div"";
-            className="prose prose-invert";
-            dangerouslySetInnerHTML={{ __html: study.content }}";
+          <div>Broken JSX</div>
           />"";
           <p className="mt-8 text-white font-semibold">;
             — {study.author}, {study.role}

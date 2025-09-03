@@ -1,21 +1,15 @@
-export default function Testimonials() {;
-interface Testimonial {;
-  quote: string;
-  author: string;
-  role: string;
-  company: string;
-  rating: number;
-  avatar: string;,
+export default function Testimonials() {};
+  return null;
+}
 }
 ;
-interface TestimonialsProps {;
-  testimonials: Testimonial[];,
+interface TestimonialsProps {};
 }
 ;
   return (<section className="py-20 bg-gray -800">;
       <div className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-16">;
-          <motion.h2;
+          <div>Broken JSX</div>
             className="text-4xl font - bold text-white mb-4"        <div className="text-center mb-16">;
           <h2 className="text-4xl font-bold text-white mb-4">;
             What Our Clients Say;
@@ -26,12 +20,7 @@ interface TestimonialsProps {;
         </div>;
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-          {testimonials.map((testimonial, index) => (;
-            <div;
-              key={testimonial.author}
-              className="group bg-gray-900 rounded-xl p-8 border border-gray-700 hover:border-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-300 hover:-translate-y-1">;
-              <div className="flex mb-4">;
-                {[...Array(testimonial.rating)].map((_, i) => (;
+          {};
                   <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />;
                 ))}
               </div>;

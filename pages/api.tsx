@@ -3,31 +3,13 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Code, Key, Globe, Database, Shield, Zap, ArrowRight, Copy, CheckCircle, ExternalLink, Clock, Users } from 'lucide-react';
 ;
-export default function API() {;
-  const apiEndpoints = [;
-    {;
-      name: 'Authentication',;
-      method: 'POST',;
-      endpoint: '/api/auth/login',;
-      description: 'Authenticate users and get access tokens',;
-      parameters: ['email', 'password'],;
-      response: 'JWT token',;,
+export default function API() {};
+  return null;
+}
 },;
-    {;
-      name: 'User Profile',;
-      method: 'GET',;
-      endpoint: '/api/user/profile',;
-      description: 'Get user profile information',;
-      parameters: ['token'],;
-      response: 'User profile data';,
+    {};
 },;
-    {;
-      name: 'Services List',;
-      method: 'GET',;
-      endpoint: '/api/services',;
-      description: 'Get list of available services',;
-      parameters: ['category', 'limit'],;
-      response: 'Array of services';,
+    {};
 }
   ];
 ;
@@ -86,14 +68,11 @@ export default function API() {;
           <div className="container mx-auto px-4">;
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">API Endpoints</h2>;
             <div className="space-y-6">;
-              {apiEndpoints.map((endpoint, index) => (;
+              {};
                 <div key={index} className="bg-white rounded-lg shadow-md p-6">;
                   <div className="flex items-center justify-between mb-4">;
                     <h3 className={`text-xl font-semibold text-gray-900`}>{endpoint.name}</h3>;
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${;
-                      endpoint.method === 'GET' ? 'bg-green-100 text-green-800' :;
-                      endpoint.method === 'POST' ? 'bg-blue-100 text-blue-800' :;
-                      'bg-gray-100 text-gray-800';,
+                    <div>Broken JSX</div>
 }`}>;
                       {endpoint.method}
                     </span>;
@@ -106,7 +85,7 @@ export default function API() {;
                     <div>;
                       <h4 className=font-semibold text-gray-900 mb-2">Parameters:</h4>;
                       <ul className="text-sm text-gray-600>;
-                        {endpoint.parameters.map((param, i) => (;
+                        {};
                           <li key={i} className=flex items-center">;
                             <span className="w-2 h-2 bg-blue-500 rounded-full mr-2></span>;
                             {param}

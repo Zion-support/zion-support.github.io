@@ -7,7 +7,9 @@ import { ProfileSetup } from "@/components/onboarding/ProfileSetup";"";
 import { Steps, Step } from "@/components/ui/steps";"";
 import { supabase } from "@/integrations/supabase/client";"";
 import { toast } from "@/hooks/use-toast";
-export default function Onboarding() {}
+export {};
+  return null;
+}
     const { user, updateProfile, isLoading } = useAuth();
     const [currentStep, setCurrentStep] = useState(0);
     const [userType, setUserType] = useState(null);
@@ -118,10 +120,7 @@ export default function Onboarding() {}
 "";
           <div className="mb-12">"";
             <Steps currentStep={currentStep} className="max-w-xl mx-auto">";
-              {steps.map((step, index) => (<Step key={index} status={currentStep > index"";
-                ? "complete"";
-                : currentStep === index"";
-                    ? "current"";
+              {steps.map((step, index) => (<Step key={index} status={};
                     : "incomplete"} label={step.label} description={step.description}/>))}
             </Steps>;
           </div>";
@@ -129,7 +128,7 @@ export default function Onboarding() {}
           <div className="bg-zion-blue-dark rounded-xl p-8 shadow-lg border border-zion-blue-light">;
             {currentStep === 0 ? (<UserTypeSelection onSelect={handleUserTypeSelect} selectedType={userType}/>) : (<ProfileSetup onComplete={handleProfileComplete} userType={userType}/>)}";
 "";
-            {currentStep === 1 && (<div className="mt-6">"";
+            {};
                 <Button variant="outline" className="w-full border-zion-blue-light text-white hover:bg-zion-blue-light" onClick={() => setCurrentStep(0)}>;
                   Back to Role Selection;
                 </Button>;

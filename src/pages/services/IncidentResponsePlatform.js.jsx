@@ -14,6 +14,8 @@ import {}
   ArrowRight,''';
   Activity} from 'lucide-react';
 const IncidentResponsePlatform = () => {}
+  return <div>Component</div>;
+};
   const features = [];
     {}
 ';
@@ -109,25 +111,15 @@ const IncidentResponsePlatform = () => {}
           Intelligent Incident Response Platform — Zion Tech Group | AI-Driven;
           Security;
         </title>";
-        <meta"";
-          name="description"";
-          content="Transform your security operations with our AI-driven incident response platform. Automated threat detection, response workflows, and compliance reporting.";
+        <div>Broken JSX</div>
         />";
-        <meta"";
-          property="og:title"";
-          content="Intelligent Incident Response Platform — Zion Tech Group";
+        <div>Broken JSX</div>
         />";
-        <meta"";
-          property="og:description"";
-          content="AI-powered incident response platform with automated workflows and real-time threat detection.";
+        <div>Broken JSX</div>
         />";
-        <meta"";
-          property="og:url"";
-          content="https://ziontechgroup.com/services/incident-response-platform";
+        <div>Broken JSX</div>
         />";
-        <link"";
-          rel="canonical"";
-          href="https://ziontechgroup.com/services/incident-response-platform";
+        <div>Broken JSX</div>
         />;
       </Helmet>";
 "";
@@ -135,18 +127,11 @@ const IncidentResponsePlatform = () => {}
         {/* Hero Section */}"";
         <section className="py-20 px-4 sm:px-6 lg:px-8">"";
           <div className="max-w-7xl mx-auto text-center">;
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}";
-              transition={{ duration: 0.6 }}"";
+            <div>Broken JSX</div>
               className="text-6xl mb-6">;
               🚨;
             </motion.div>";
-            <motion.h1"";
-              className="text-4xl md:text-6xl font-bold mb-6";
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            <div>Broken JSX</div>
             >";
               Intelligent"";
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-400">';
@@ -154,11 +139,7 @@ const IncidentResponsePlatform = () => {}
                 Incident Response Platform;
               </span>;
             </motion.h1>";
-            <motion.p"";
-              className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto";
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+            <div>Broken JSX</div>
             >;
               Comprehensive incident management platform that uses AI to detect,;
               respond to, and analyze security incidents in real-time, reducing;
@@ -166,13 +147,9 @@ const IncidentResponsePlatform = () => {}
             </motion.p>;
 
             {/* Key Metrics */}";
-            <motion.div"";
-              className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 max-w-4xl mx-auto";
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+            <div>Broken JSX</div>
             >";
-              {benefits.map((benefit, index) => ("";
+              {};
                 <div key={index} className="text-center">"";
                   <div className="text-3xl font-bold text-red-400 mb-2">;
                     {benefit.metric}";
@@ -184,19 +161,13 @@ const IncidentResponsePlatform = () => {}
               ))}
             </motion.div>;
 ";
-            <motion.div"";
-              className="flex flex-col sm:flex-row gap-4 justify-center";
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
+            <div>Broken JSX</div>
             >";
-              <Link"";
-                to="/contact"";
+              <div>Broken JSX</div>
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300">;
                 Start Free Trial;
               </Link>";
-              <Link"";
-                to="/enhanced-services"";
+              <div>Broken JSX</div>
                 className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">;
                 View All Services;
               </Link>;
@@ -207,10 +178,7 @@ const IncidentResponsePlatform = () => {}
         {/* Features Section */}"";
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">"";
           <div className="max-w-7xl mx-auto">";
-            <motion.div"";
-              className="text-center mb-16";
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+            <div>Broken JSX</div>
               transition={{ duration: 0.6 }}">"";
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
                 Advanced Security Features";
@@ -222,12 +190,7 @@ const IncidentResponsePlatform = () => {}
             </motion.div>";
 "";
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-              {features.map((feature, index) => (;
-                <motion.div";
-                  key={index}"";
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300";
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+              {};
                   transition={{ duration: 0.6, delay: index * 0.1 }}">"";
                   <div className="text-red-400 mb-4">{feature.icon}</div>"";
                   <h3 className="text-xl font-semibold text-white mb-4">;
@@ -243,10 +206,7 @@ const IncidentResponsePlatform = () => {}
         {/* Pricing Section */}"";
         <section className="py-20 px-4 sm:px-6 lg:px-8">"";
           <div className="max-w-7xl mx-auto">";
-            <motion.div"";
-              className="text-center mb-16";
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+            <div>Broken JSX</div>
               transition={{ duration: 0.6 }}">"";
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
                 Flexible Security Solutions";
@@ -257,27 +217,7 @@ const IncidentResponsePlatform = () => {}
             </motion.div>";
 "";
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-              {pricingPlans.map((plan, index) => (;
-                <motion.div;
-                  key={index}
-                  className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${}
-';
-'';
-'''`;
-                    plan.popular'''`'`;
-                      ? 'border-red-400 bg-red-900/20'''`'`'`;
-                      : 'border-white/20 hover:border-white/40'````;,
-}`}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                >";
-                  {plan.popular && ("";
-                    <div className="text-center mb-4">"";
-                      <span className="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-medium">;
-                        Most Popular;
-                      </span>;
-                    </div>;
+              {};
                   )}";
 "";
                   <div className="text-center mb-6">"";
@@ -294,7 +234,7 @@ const IncidentResponsePlatform = () => {}
                   </div>";
 "";
                   <ul className="space-y-3 mb-8">";
-                    {plan.features.map((feature, idx) => ("";
+                    {};
                       <li key={idx} className="flex items-center text-gray-300">"";
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />;
                         {feature}
@@ -302,16 +242,7 @@ const IncidentResponsePlatform = () => {}
                     ))}
                   </ul>;
 ";
-                  <Link""`;
-                    to="/contact"``;
-                    className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
-';
-'';
-'''`;
-                      plan.popular'''`'`;
-                        ? 'bg-red-600 hover:bg-red-700 text-white'''`'`'`;
-                        : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'````;,
-}`}
+                  <div>Broken JSX</div>
                   >;
                     Get Started;
                   </Link>;
@@ -326,19 +257,13 @@ const IncidentResponsePlatform = () => {}
           <div className="max-w-7xl mx-auto">"";
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">;
               {/* Integrations */}
-              <motion.div;
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+              <div>Broken JSX</div>
                 transition={{ duration: 0.6 }}">"";
                 <h3 className="text-2xl font-bold text-white mb-6">;
                   Security Integrations";
                 </h3>"";
                 <div className="grid grid-cols-2 gap-4">;
-                  {integrations.map((integration, index) => (;
-                    <div";
-                      key={index}"";
-                      className="flex items-center bg-white/10 rounded-lg p-3"">"";
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />"";
+                  {};
                       <span className="text-gray-300">{integration}</span>;
                     </div>;
                   ))}
@@ -346,19 +271,13 @@ const IncidentResponsePlatform = () => {}
               </motion.div>;
 
               {/* Use Cases */}
-              <motion.div;
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+              <div>Broken JSX</div>
                 transition={{ duration: 0.6 }}">"";
                 <h3 className="text-2xl font-bold text-white mb-6">;
                   Perfect For";
                 </h3>"";
                 <div className="space-y-3">;
-                  {useCases.map((useCase, index) => (;
-                    <div";
-                      key={index}"";
-                      className="flex items-center bg-white/10 rounded-lg p-3"">"";
-                      <Target className="w-5 h-5 text-yellow-400 mr-3" />"";
+                  {};
                       <span className="text-gray-300">{useCase}</span>;
                     </div>;
                   ))}
@@ -371,47 +290,30 @@ const IncidentResponsePlatform = () => {}
         {/* CTA Section */}"";
         <section className="py-20 bg-gradient-to-r from-red-900/50 to-pink-900/50">"";
           <div className="max-w-4xl mx-auto text-center">";
-            <motion.h2"";
-              className="text-3xl md:text-4xl font-bold text-white mb-6";
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+            <div>Broken JSX</div>
             >;
               Ready to Enhance Your Security Posture?;
             </motion.h2>";
-            <motion.p"";
-              className="text-xl text-gray-300 mb-8";
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            <div>Broken JSX</div>
             >;
               Join organizations already using our intelligent incident response;
               platform;
             </motion.p>;
 ";
-            <motion.div"";
-              className="flex flex-col sm:flex-row gap-4 justify-center mb-8";
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+            <div>Broken JSX</div>
             >";
-              <Link"";
-                to="/contact"";
+              <div>Broken JSX</div>
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300">";
                 Start Free Trial"";
                 <ArrowRight className="ml-2 w-5 h-5" />;
               </Link>";
-              <a"";
-                href="tel:+13024640950"";
+              <div>Broken JSX</div>
                 className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">;
                 Call: +1 302 464 0950;
               </a>;
             </motion.div>;
 ";
-            <motion.div"";
-              className="bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto";
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+            <div>Broken JSX</div>
               transition={{ duration: 0.6, delay: 0.6 }}">"";
               <h3 className="text-lg font-semibold text-white mb-4">;
                 Why Choose Our Incident Response Platform?";
@@ -436,18 +338,13 @@ const IncidentResponsePlatform = () => {}
               </div>;
             </motion.div>;
 ";
-            <motion.div"";
-              className="mt-8 text-sm text-gray-400";
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
+            <div>Broken JSX</div>
             >;
               <p>Email: kleber@ziontechgroup.com</p>;
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>;
               <p>';
                 Website:{' '}";
-                <a"";
-                  href="https://ziontechgroup.com"";
+                <div>Broken JSX</div>
                   className="text-red-400 hover:text-red-300">;
                   https://ziontechgroup.com;
                 </a>;

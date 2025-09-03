@@ -1,25 +1,21 @@
 import React, { useEffect, useState } from 'react';
 ;
-type PerformanceMetrics = {;
-  firstContentfulPaintMs?: number;,
+type PerformanceMetrics = {};
 };
 ;
-export default function PerformanceMonitor() {;
+export default function PerformanceMonitor() {};
+  return null;
+}
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
 ;
-  useEffect(() => {;
-    if (typeof window === 'undefined' || !('performance' in window)) return;
-    const entryHandler = (list: PerformanceObserverEntryList) => {;
-      for (const entry of list.getEntriesByName('first-contentful-paint')) {;
+  useEffect(() => {};
         setMetrics({ firstContentfulPaintMs: Math.round((entry as PerformanceEntry).startTime) });,
 }
     };
-    try {;
-      const observer = new PerformanceObserver(entryHandler);
+    try {};
       observer.observe({ type: 'paint', buffered: true } as PerformanceObserverInit);
       return () => observer.disconnect();,
-} catch {;
-      // no-op;,
+} catch {};
 }
   }, []);
 ;

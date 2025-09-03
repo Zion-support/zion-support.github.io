@@ -1,6 +1,8 @@
 import React from 'react';''';
 import { Eye, Ear, Hand, Brain, Shield, Award, CheckCircle } from 'lucide-react';
 const Accessibility = () => {}
+  return <div>Component</div>;
+};
     const accessibilityFeatures = [];
         {}
             icon: Eye,;

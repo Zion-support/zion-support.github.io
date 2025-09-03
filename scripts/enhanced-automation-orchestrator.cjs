@@ -53,7 +53,7 @@ class EnhancedAutomationOrchestrator {;
     this.log("🔍 Running linting checks...", "INFO");
     const lintCommands = [;
       { cmd: "npm run lint", desc: "ESLint Check" },;
-      { cmd: "npm run lint:fix", desc: "ESLint Auto-fix" },;
+      { cmd: "npm run lint: fix", desc: "ESLint Auto-fix" },;
       { cmd: "npm run type-check", desc: "TypeScript Type Check" }
     ];
     for (const { cmd, desc } of lintCommands) {;
@@ -65,7 +65,7 @@ class EnhancedAutomationOrchestrator {;
     this.log("🧪 Running test suite...", "INFO");
     const testCommands = [;
       { cmd: "npm run test", desc: "Unit Tests" },;
-      { cmd: "npm run test:coverage", desc: "Test Coverage" }
+      { cmd: "npm run test: coverage", desc: "Test Coverage" }
     ];
     for (const { cmd, desc } of testCommands) {;
       await this.runCommand(cmd, desc, "testing"),;,
@@ -76,7 +76,7 @@ class EnhancedAutomationOrchestrator {;
     this.log("🏗️ Running build process...", "INFO");
     const buildCommands = [;
       { cmd: "npm run build", desc: "Production Build" },;
-      { cmd: "npm run build:analyze", desc: "Build Analysis" }
+      { cmd: "npm run build: analyze", desc: "Build Analysis" }
     ];
     for (const { cmd, desc } of buildCommands) {;
       await this.runCommand(cmd, desc, "building"),;,
@@ -94,7 +94,7 @@ class EnhancedAutomationOrchestrator {;
 }
 ;
       // Run performance audit if available;
-      await this.runCommand("npm run perf:audit", "Performance Audit", "performance"),;,
+      await this.runCommand("npm run perf: audit", "Performance Audit", "performance"),;,
 } catch (error) {;
       this.log(`Performance check failed: ${error.message}`, "WARN"),;,
 }

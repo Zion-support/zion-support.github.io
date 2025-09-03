@@ -1,21 +1,17 @@
 import React from 'react';''';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousCompliance = () => {}
+  return <div>Component</div>;
+};
   return();
     <>;
       <Helmet>;
         <title>AI Autonomous Compliance Platform | Zion Tech Group</title>;
-        <meta;
-          name="description"";
-          content="Revolutionary AI autonomous compliance platform that continuously monitors regulations, ensures adherence, and maintains compliance with advanced AI capabilities and autonomous operation.";
+        <div>Broken JSX</div>
         />";
-        <meta"";
-          name="keywords"";
-          content="AI compliance, autonomous compliance, regulation monitoring, adherence assurance, autonomous operations, AI compliance platform";
+        <div>Broken JSX</div>
         />";
-        <link"";
-          rel="canonical"";
-          href="https://ziontechgroup.com/ai-autonomous-compliance";
+        <div>Broken JSX</div>
         />;
       </Helmet>";
 "";
@@ -182,12 +178,7 @@ const AIAutonomousCompliance = () => {}
               Compliance Solutions";
             </h2>"";
             <div className="grid md:grid-cols-4 gap-6">';
-              {['';
-                'Regulatory Compliance',Data Compliance',Security Compliance',Financial Compliance',Industry Compliance',Quality Compliance',Environmental Compliance',Ethics Compliance';
-              ].map(type => (;
-                <div";
-                  key={type}"";
-                  className="bg-white/5 rounded-lg p-4 text-center border border-white/10"">"";
+              {};
                   <span className="text-white font-medium">{type}</span>;
                 </div>;
                 <h3 className="text-lg font - semibold text-white mb-2">;

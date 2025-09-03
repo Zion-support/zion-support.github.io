@@ -6,7 +6,9 @@ import { Badge } from '@/components/ui/badge';''';
 import { Check, Phone, Mail, MapPin, Globe, DollarSign, Star, Users, Shield, Zap, Building } from 'lucide-react';''';
 import { COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES } from '@/data/comprehensiveServices';''';
 import SEO from '@/components/SEO';
-export default function ServicesPricingPage() {}
+export {};
+  return null;
+}
     // Group services by category for pricing table;
     const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) => {}
         const categoryServices = COMPREHENSIVE_SERVICES.filter(service => service.category === category);
@@ -177,7 +179,7 @@ export default function ServicesPricingPage() {}
           </div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {[];
+            {};
             {}
 ";
 "";

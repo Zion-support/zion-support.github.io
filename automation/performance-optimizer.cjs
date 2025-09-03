@@ -5,7 +5,7 @@ const { execSync } = require("child_process");
 class $1 {;
   constructor() {;
   this.projectRoot = process.cwd();
-    this.optimizations = [];,;,
+    this.$1 = [];
 }
 ;
   async optimizeImages() {;

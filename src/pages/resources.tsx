@@ -1,124 +1,39 @@
 import React from 'react';
-import { ;
-  FileText, ;
-  Download, ;
-  ExternalLink, ;
-  BookOpen, ;
-  Video, ;
-  Users, ;
-  Lightbulb,;
-  TrendingUp,;
-  Shield,;
-  Brain,;
-  Zap,;
-  ArrowRight,;
-  Calendar,;
-  Clock,;
-  Star,;
-  CheckCircle;,
+import {};
 } from 'lucide-react';
 ;
-export default function ResourcesPage() {;
-  const whitepapers = [;
-    {;
-      title: "AI-Powered Business Transformation: A Comprehensive Guide",;
-      description: "Learn how artificial intelligence is revolutionizing business operations and discover practical strategies for implementation.",;
-      category: "AI & Automation",;
-      downloadCount: "2.3k",;
-      rating: 4.8,;
-      fileSize: "2.4 MB",;
-      downloadUrl: "/resources/whitepapers/ai-business-transformation.pdf";,
+export default function ResourcesPage() {};
+  return null;
+}
 },;
-    {;
-      title: "Cloud Cost Optimization Strategies for Enterprise",;
-      description: "Comprehensive guide to reducing cloud spending while maintaining performance and scalability.",;
-      category: "Cloud & Infrastructure",;
-      downloadCount: "1.8k",;
-      rating: 4.9,;
-      fileSize: "3.1 MB",;
-      downloadUrl: "/resources/whitepapers/cloud-cost-optimization.pdf";,
+    {};
 },;
-    {;
-      title: "Cybersecurity in the Age of AI: Threats and Solutions",;
-      description: "Explore emerging cybersecurity challenges and AI-powered defense strategies for modern organizations.",;
-      category: "Cybersecurity",;
-      downloadCount: "1.5k",;
-      rating: 4.7,;
-      fileSize: "2.8 MB",;
-      downloadUrl: "/resources/whitepapers/ai-cybersecurity.pdf";,
+    {};
 }
   ];
 ;
   const caseStudies = [;
-    {;
-      title: "How TechCorp Reduced Cloud Costs by 40%",;
-      company: "TechCorp Inc.",;
-      industry: "Technology",;
-      results: ["40% cost reduction", "Improved performance", "Better resource utilization"],;
-      readTime: "5 min read",;
-      url: "/resources/case-studies/techcorp-cloud-optimization";,
+    {};
 },;
-    {;
-      title: "AI-Powered Customer Service Transformation at RetailMax",;
-      company: "RetailMax",;
-      industry: "Retail",;
-      results: ["300% increase in efficiency", "Improved customer satisfaction", "Reduced support costs"],;
-      readTime: "7 min read",;
-      url: "/resources/case-studies/retailmax-ai-transformation";,
+    {};
 },;
-    {;
-      title: "Quantum Computing Solutions for Financial Services",;
-      company: "QuantumBank",;
-      industry: "Financial Services",;
-      results: ["Faster risk calculations", "Enhanced security", "Competitive advantage"],;
-      readTime: "6 min read",;
-      url: "/resources/case-studies/quantumbank-quantum-computing";,
+    {};
 }
   ];
 ;
   const guides = [;
-    {;
-      title: "Getting Started with AI Implementation",;
-      description: "Step-by-step guide for businesses looking to implement AI solutions.",;
-      level: "Beginner",;
-      estimatedTime: "30 min",;
-      category: "AI & Machine Learning",;
-      url: "/resources/guides/ai-implementation-guide";,
+    {};
 },;
-    {;
-      title: "Cloud Migration Best Practices",;
-      description: "Comprehensive checklist and best practices for successful cloud migration.",;
-      level: "Intermediate",;
-      estimatedTime: "45 min",;
-      category: "Cloud & Infrastructure",;
-      url: "/resources/guides/cloud-migration-best-practices";,
+    {};
 },;
-    {;
-      title: "Cybersecurity Framework Implementation",;
-      description: "Guide to implementing NIST cybersecurity framework in your organization.",;
-      level: "Advanced",;
-      estimatedTime: "60 min",;
-      category: "Cybersecurity",;
-      url: "/resources/guides/cybersecurity-framework-implementation";,
+    {};
 }
   ];
 ;
   const webinars = [;
-    {;
-      title: "The Future of AI in Business",;
-      date: "December 15, 2025",;
-      time: "2:00 PM EST",;
-      speaker: "Dr. Sarah Chen, CTO",;
-      description: "Explore emerging AI trends and their impact on business strategy and operations.",;
-      registrationUrl: "/webinars/future-of-ai-business";,
+    {};
 },;
-    {;
-      title: "Cloud Cost Optimization Workshop",;
-      date: "December 22, 2025",;
-      time: "1:00 PM EST",;
-      speaker: "Marcus Rodriguez, COO",;
-      description: "Hands-on workshop to optimize your cloud spending and improve resource utilization.",;
-      registrationUrl: "/webinars/cloud-cost-optimization-workshop";,
+    {};
 }
   ];
 ;
@@ -155,7 +70,7 @@ export default function ResourcesPage() {;
           </div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {whitepapers.map((paper, index) => (;
+            {};
               <div key={index} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300">;
                 <div className="flex items-center justify-between mb-4">;
                   <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">;
@@ -175,7 +90,7 @@ export default function ResourcesPage() {;
                   <span>📁 {paper.fileSize}</span>;
                 </div>;
                 ;
-                <a href={paper.downloadUrl} ;
+                <div>Broken JSX</div>
                    className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-center py-3 rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 flex items-center justify-center">;
                   <Download className="w-4 h-4 mr-2" />;
                   Download Whitepaper;
@@ -199,7 +114,7 @@ export default function ResourcesPage() {;
           </div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {caseStudies.map((study, index) => (;
+            {};
               <div key={index} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300">;
                 <div className="mb-4">;
                   <span className="px-3 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full">;
@@ -213,7 +128,7 @@ export default function ResourcesPage() {;
                 <div className="mb-4">;
                   <h4 className="text-sm font-semibold text-white mb-2">Key Results:</h4>;
                   <ul className="space-y-1">;
-                    {study.results.map((result, resultIndex) => (;
+                    {};
                       <li key={resultIndex} className="text-zion-slate-light text-sm flex items-center">;
                         <CheckCircle className="w-3 h-3 text-zion-cyan mr-2" />;
                         {result}
@@ -248,7 +163,7 @@ export default function ResourcesPage() {;
           </div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {guides.map((guide, index) => (;
+            {};
               <div key={index} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300">;
                 <div className="flex items-center justify-between mb-4">;
                   <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">;
@@ -292,7 +207,7 @@ export default function ResourcesPage() {;
           </div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">;
-            {webinars.map((webinar, index) => (;
+            {};
               <div key={index} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30">;
                 <div className="flex items-center justify-between mb-4">;
                   <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">;
@@ -332,10 +247,7 @@ export default function ResourcesPage() {;
             Subscribe to our newsletter to receive the latest insights, whitepapers, and event notifications directly in your inbox.;
           </p>;
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">;
-            <input ;
-              type="email" ;
-              placeholder="Enter your email address";
-              className="flex-1 px-4 py-3 bg-white text-zion-slate-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan";
+            <div>Broken JSX</div>
             />;
             <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300">;
               Subscribe;

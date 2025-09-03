@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 ;
 ;
-const CuttingEdgeServicesShowcase = () => {;
+const CuttingEdgeServicesShowcase = () => {};
+};
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [selectedIndustry, setSelectedIndustry] = useState('All');
     const [searchTerm, setSearchTerm] = useState('');

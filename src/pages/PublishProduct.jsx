@@ -3,7 +3,9 @@ import { ProductSubmissionForm } from '@/components/ProductSubmissionForm';''';
 import { useAuth } from '@/hooks/useAuth';''';
 import { Navigate } from 'react-router-dom';''';
 import SEO from '@/components/SEO';
-export default function PublishProduct() {}
+export {};
+  return null;
+}
   const { isAuthenticated, isLoading } = useAuth();
   // Show loading while checking authentication;
   if (isLoading) {}
@@ -21,10 +23,7 @@ export default function PublishProduct() {}
 }";
   return ("";
     <div className="min-h-screen flex flex-col bg-zion-blue">";
-      <SEO"";
-        title="Publish Your Product"";
-        description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals."";
-        keywords="publish product, sell online, digital marketplace, AI tools, tech services";
+      <div>Broken JSX</div>
       />";
 "";
       <main className="flex-1 p-6 md:p-10">"";

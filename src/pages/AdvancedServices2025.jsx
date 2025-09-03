@@ -1,6 +1,8 @@
 import React from 'react';''';
 import { Link } from 'react-router-dom';
 const AdvancedServices2025 = () => {}
+  return <div>Component</div>;
+};
     const advancedServices = [];
         {}
             category: "Enterprise AI & Machine Learning","";

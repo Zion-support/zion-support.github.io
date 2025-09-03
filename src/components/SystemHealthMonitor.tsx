@@ -1,21 +1,12 @@
 
 import React, { useState, useEffect } from 'react';
 
-export default function SystemHealthMonitor() {;
-  const [health, setHealth] = useState({;
-    status: 'healthy',;
-    uptime: 0,;
-    memoryUsage: 0,;
-    cpuUsage: 0;,
+export default function SystemHealthMonitor() {};
+  return null;
+}
 });
 
-  useEffect(() => {;
-    const interval = setInterval(() => {;
-      setHealth({;
-        status: Math.random() > 0.1 ? 'healthy' : 'warning',;
-        uptime: Date.now() - (Date.now() - Math.random() * 86400000),;
-        memoryUsage: Math.random() * 100,;
-        cpuUsage: Math.random() * 100;,
+  useEffect(() => {};
 });,
 }, 5000);
 

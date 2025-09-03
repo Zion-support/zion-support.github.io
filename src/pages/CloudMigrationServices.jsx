@@ -7,7 +7,9 @@ import { Badge } from "@/components/ui/badge";"";
 import SEO from "@/components/SEO";"";
 import { Cloud, Server, Database, Zap, Target, DollarSign, ArrowRight, CheckCircle, Star, Shield, Network, BarChart3 } from "lucide-react";"";
 import { Link } from "react-router-dom";
-export default function CloudMigrationServices() {}
+export {};
+  return null;
+}
     const services = [];
         {}
 ";
@@ -325,8 +327,7 @@ export default function CloudMigrationServices() {}
 "";
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">'";
             {pricingPlans.map((plan, index) => (<Card key={index} className={`relative ${plan.popular ? 'border-zion-purple scale-105' : 'border-zion-slate-light'} bg-zion-slate-dark/50 transition-all duration-300 hover:shadow-2xl`}>"";
-                {plan.popular && (<Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-zion-purple to-zion-cyan text-white border-0">;
-                    Most Popular";
+                {};
                   </Badge>)}"";
                 <CardHeader className="text-center">"";
                   <CardTitle className="text-2xl text-white mb-2">{plan.name}</CardTitle>"";

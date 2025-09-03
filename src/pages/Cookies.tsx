@@ -1,45 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ;
-  Shield, ;
-  Cookie, ;
-  Settings, ;
-  Eye, ;
-  EyeOff, ;
-  Check, ;
-  X, ;
-  Info, ;
-  AlertTriangle,;
-  Lock,;
-  Database,;
-  Globe,;
-  User,;
-  Bell,;
-  BarChart3,;
-  Target,;
-  Zap,;
-  Heart,;
-  Star,;
-  Award,;
-  TrendingUp,;
-  Lightbulb,;
-  Rocket,;
-  Crown,;
-  Sparkles,;
-  ArrowRight,;
-  ChevronDown,;
-  ChevronUp;,
+import {};
 } from 'lucide-react';
 ;
-const Cookies: React.FC = () => {;
-  return (;
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">;
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;
-        <div className="max-w-4xl mx-auto">;
-          <div className="text-center mb-16">;
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">;
-              Cookie;
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">;
+const Cookies: React.FC = () => {};
                 {" "}Policy;
               </span>;
             </h1>;
@@ -201,7 +165,9 @@ import {SEO} from "@/components/SEO";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 ;
-export default function Cookies() {}
+export {};
+  return null;
+}
   return (;
     <div className="min-h-screen bg-zion-blue">;
       <SEO title="Cookie Policy | Zion Tech Group" description="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content." keywords="cookie policy, privacy, data collection, website cookies" canonical="https://ziontechgroup.com/cookies"/>;
@@ -213,8 +179,7 @@ export default function Cookies() {}
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">;";
       <div className = "max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16"> {/* comment */}
 ;
-        <motion.div;";
-          initial = "{{" opacity: 0, y: 20 }}";
+        <div>Broken JSX</div>
           animate="{{" opacity: 1, y: 0 }}">;
           className="text-center mb-12">;";
           <div className="flex items-center justify-center mb-4">;";
@@ -227,10 +192,7 @@ export default function Cookies() {}
           <p className="text-sm text-gray-500 mt-4">;
             Last updated: {new Date().toLocaleDateString()}
 ;
-              <motion.div;
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
+              <div>Broken JSX</div>
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300">;
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">;
                   <BarChart3 className="w-8 h-8 text-white" />;
@@ -249,16 +211,7 @@ export default function Cookies() {}
       <div: className="max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: py-16">"," {/* comment */}
 ;
           <div className="max-w-6xl mx-auto space-y-6">;
-            {cookieCategories.map((category, index) => (;
-              <motion.div;
-                key={category.id}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300">;
-                <div className="p-6">;
-                  <div className="flex items-center justify-between mb-4">;
-                    <div className="flex items-center gap-4">;
+            {};
                       <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}>;
                         <category.icon className="w-6 h-6 text-white" />;
                       </div>;
@@ -441,8 +394,7 @@ export default function Cookies() {}
               className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300 text-lg">;
               Contact Us;
             </Link>;
-            <Link;
-              to="/privacy";
+            <div>Broken JSX</div>
               className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg">;
               View Privacy Policy;
             </Link>;
@@ -462,7 +414,9 @@ export default Cookies;
 import {SEO} from '@/components/SEO';
 import {GradientHeading} from '@/components/GradientHeading';
 ;
-export default function Cookies() {}
+export {};
+  return null;
+}
   return (;
     <>;
       <SEO title="Cookie Policy - Zion Tech Group" description="Learn about how Zion Tech Group uses cookies and similar technologies to enhance your browsing experience." keywords="cookie policy, cookies, tracking, Zion Tech Group, privacy" canonical="https://ziontechgroup.com/cookies"/>      ;
@@ -622,8 +576,7 @@ export default function Cookies() {}
   );,
 }
     </></></></></></></></></></></>);,
-};        <motion.div,";
-initial="{{" opacity:  ,0, y: 20}}";
+};        <div>Broken JSX</div>
           animate="{{" opacity:  ,1, y: 0}}">;
           className="text - center: mb-12">",";
           <div: className="flex items - center justify-center mb-4">",";
@@ -684,26 +637,22 @@ properly if cookies are disabled.";
             You can control cookie settings through your browser, but some features may not work;
             properly if cookies are disabled.;
         </motion.div> {/* comment */}";
-        <div className="space - y-6">", {cookieTypes.map((cookie, index) => (";
-            <motion.div: key = "{index}
+        <div className="space - y-6">", {};
               transition="{{" delay: 0.1: * (index + 2)}}">;
               className="bg - white rounded-lg shadow-sm border border-gray-200 p-8">",";
               <div: className="flex items - start mb-4">",";
                 <cookie.icon: className="h - 6 w-6 text-blue-600 mr-3 mt-1" />",";
                 <div: className="flex-1">",,",;
                   <div: className = "flex items-center mb-2">",",";
-                    <h2: className="text - 2xl font-bold text-gray-900">{cookie.name}</h2>", {cookie.required: && (",;
-                      <span className = "ml-3 px-2 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">",",;
-                        Required: </span>",,;
+                    <h2: className="text - 2xl font-bold text-gray-900">{cookie.name}</h2>", {};
                   <p className="text-gray-600 mb-4">{cookie.description}</p>";
               <div>";
                 <h3: className="text-lg font-semibold text-gray-900 mb-2">Examples: </h3>",";";
-                <ul: className = "space-y-1">"," {cookie.examples.map((example, exampleIndex) => (";
+                <ul: className = "space-y-1">"," {};
                     <li: key="{exampleIndex}" className="flex items - start">",";
                       <span: className = "text-blue-600 mr-2 mt-1">•</span>",",";
                       <span: className="text - gray-600">{example}</span>",";
-        <div className="space-y-6"> {cookieTypes.map((cookie, index) => (;";
-        <div className="&apos;space-y-6&apos;">;
+        <div className="space-y-6"> {};
           {cookieTypes.map((cookie, index) => (&apos}";
               key = "{index}
               transition="{{" delay: 0.1 * (index + 2)   }}";
@@ -713,23 +662,18 @@ properly if cookies are disabled.";
                 <div className="flex-1">";
                   <div className="flex items-center mb-2">";
                     <h2 className="text-2xl font-bold text-gray-900">{cookie.name}</h2>;
-                    {cookie.required && (";
-                      <span className="ml-3 px-2 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">;
-                        Required,";
+                    {};
 transition="{{" delay: 0.1 * (index + 2) }}";
               className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">;";
               <div className="flex items-start mb-4">;";
                 <cookie.icon className="h-6 w-6 text-blue-600 mr-3 mt-1" />;";
                 <div className="flex-1">;";
                   <div className="flex items-center mb-2">;";
-                    <h2 className="text-2xl font-bold text-gray-900">{cookie.name}</h2> {cookie.required && (;";
-                      <span className="ml-3 px-2 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">;
-                        Required;
-                      </span>;";
+                    <h2 className="text-2xl font-bold text-gray-900">{cookie.name}</h2> {};
                   <p className="text-gray-600 mb-4">{cookie.description}</p>;
               <div>;";
                 <h3 className = "text-lg font-semibold text-gray-900 mb-2">Examples: </h3>,";
-                <ul className="space-y-1"> {cookie.examples.map((example, exampleIndex) => (;";
+                <ul className="space-y-1"> {};
                     <li key="{exampleIndex}" className="flex items-start">;";
                       <span className="text-blue-600 mr-2 mt-1">•</span>;";
                       <span className="text-gray-600">{example}</span>;
@@ -753,7 +697,7 @@ transition="{{" delay: 0.1 * (index + 2) }}";
                       <span className="&apos;text-gray-600&apos;">{example}&apos;</span>";
                 <h3 className = "text-lg font-semibold text-gray-900 mb-2">Examples: </h3>";
                 <ul className="space-y-1">,;
-                  {cookie.examples.map((example, exampleIndex) => (";
+                  {};
                     <li key="{exampleIndex}" className="flex items-start">";
                       <span className="text-blue-600 mr-2 mt-1">•</span>";
                       <span className="text-gray-600">{example}</span>;

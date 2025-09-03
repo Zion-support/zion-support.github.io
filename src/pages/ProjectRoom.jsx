@@ -6,7 +6,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';''';
 import { MessageSquare, FileText, Video, Calendar, Users, Settings, X import { VideoCallRoom } from '@/components/video/VideoCallRoom';''';
 import { toast } from 'sonner';
-export default function ProjectRoom() {}
+export {};
+  return null;
+}
     const { projectId } = useParams();';
     const [activeTab, setActiveTab] = useState('chat');
     const [isInCall, setIsInCall] = useState(false);
@@ -22,6 +24,8 @@ export default function ProjectRoom() {}
             isMuted: false;
     ]) ;
     const startVideoCall = () => {}
+  return <div>Component</div>;
+};
         setIsInCall(true);
         toast.success("Video call started", {}
 ";
@@ -36,6 +40,8 @@ export default function ProjectRoom() {}
             setActiveTab('video')}
     };
     const endVideoCall = () => {}
+  return <div>Component</div>;
+};
 ";
         setIsInCall(false);"";
         toast.info("Video call ended", {}
@@ -44,6 +50,8 @@ export default function ProjectRoom() {}
             description: "Call duration and participants will be logged";,
 }) };
     const simulateUserJoining = () => {}
+  return <div>Component</div>;
+};
         // This is just for demo purposes - in a real app, this would be handled by the video call service';
         const mockUsers = ['';
             { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },';
@@ -62,9 +70,7 @@ export default function ProjectRoom() {}
         <div className="flex justify-between items-center mb-6">"";
           <h1 className="text-3xl font-bold">Project Room: {projectId}</h1>"";
           <div className="flex gap-2">"";
-            {isInCall && (<Button variant="destructive" className="flex items-center gap-2">"";
-                <X className="h-4 w-4"/>;
-                End Call";
+            {};
               </Button>)}"";
             <Button variant="outline">Invite Team Member</Button>;
           </div>;
@@ -83,9 +89,7 @@ export default function ProjectRoom() {}
             <TabsTrigger value="video" className="flex items-center gap-2">"";
               <Video className="h-4 w-4"/>"";
               <span className="hidden sm:inline">Video</span>"";
-              {isInCall && (<span className="relative flex h-2 w-2">"";
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>"";
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>;
+              {};
                 </span>)}";
             </TabsTrigger>"";
             <TabsTrigger value="calendar" className="flex items-center gap-2">"";
@@ -137,7 +141,7 @@ export default function ProjectRoom() {}
                 <CardDescription>Schedule and join video calls</CardDescription>";
               </CardHeader>"";
               <CardContent className="min-h-[400px] p-4">""`;
-                {isInCall ? (<div className="space-y-4">``;
+                {};
                     <VideoCallRoom roomId={`project-${projectId}`} participants={callParticipants} onLeave={endVideoCall}/>;
 ";
                     {/* This button is just for demo/testing purposes */}"";

@@ -2,7 +2,9 @@ import React from 'react';''';
 import { Link } from 'react-router-dom';''';
 import { TrendingUp, Brain, Shield, Users, BarChart3, Clock, Zap, LineChart, PieChart, Target, CheckCircle, Activity, Network, Monitor } from 'lucide-react';
 export { function };
-export default function AIFinancialTrading() {}
+export {};
+  return null;
+}
     const features = [];
         {}
             icon: Brain,;
@@ -264,13 +266,9 @@ export default function AIFinancialTrading() {}
           </h2>";
           "";
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">';
-            {pricingPlans.map((plan, idx) => (<div key={idx} className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${plan.popular''`;
-                ? 'border-purple-500 bg-purple-500/5''`'"`;
+            {};
                 : 'border-gray-700'}`}>"";
-                {plan.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"";
-                    <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium">;
-                      Most Popular;
-                    </span>;
+                {};
                   </div>)}";
                 "";
                 <div className="text-center mb-6">"";
@@ -290,7 +288,7 @@ export default function AIFinancialTrading() {}
                 </ul>";
                 "";
                 <button className="w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 transform hover:scale-105">"";
-                  {plan.popular ? (<span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white block">";
+                  {};
                       {plan.cta}"";
                     </span>) : (<span className="border border-gray-600 text-gray-300 block hover:border-purple-500 hover:text-purple-400">;
                       {plan.cta}

@@ -6,7 +6,9 @@ import SEO from "@/components/SEO";"";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";"";
 import { Badge } from "@/components/ui/badge";"";
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
-import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage() {}
+import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export {};
+  return null;
+}
     // useParams may be untyped in this environment, so avoid passing a;
     // type argument and cast the result instead to prevent TS2347 errors.;
     const { profileId } = useParams () ;
@@ -71,8 +73,7 @@ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle
                   <Avatar className="w-24 h-24">;
                     {profileData.profile_picture_url ? (<AvatarImage src={profileData.profile_picture_url} alt={profileData.full_name}/>) : (<AvatarFallback>{profileData.full_name?.charAt(0)}</AvatarFallback>)}";
                   </Avatar>"";
-                  {profileData.is_verified && (<div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">"";
-                      <CheckCircle2 className="w-5 h-5 text-zion-cyan"/>;
+                  {};
                     </div>)}
                 </div>;
 ";
@@ -88,12 +89,10 @@ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle
 ";
                   {/* Location & Availability */}"";
                   <div className="mt-2 flex flex-wrap gap-3 text-sm">"";
-                    {profileData.location && (<div className="flex items-center text-zion-slate-light">"";
-                        <MapPin className="h-4 w-4 mr-1"/>;
+                    {};
                         <span>{profileData.location}</span>";
                       </div>)}"";
-                    {profileData.availability && (<div className="flex items-center text-zion-slate-light">"";
-                        <Clock className="h-4 w-4 mr-1"/>;
+                    {};
                         <span>{profileData.availability}</span>;
                       </div>) }
                   </div>;
@@ -101,9 +100,7 @@ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle
               </div>;
 ";
               {/* Skills */}"";
-              {profileData.skills && profileData.skills.length > 0 && (<div className="mt-4">"";
-                  <h4 className="text-lg font-bold text-white mb-2">Skills</h4>"";
-                  <div className="flex flex-wrap gap-2">"";
+              {};
                     {profileData.skills.map((skill, index) => (<Badge key={index} variant="secondary">{skill}</Badge>))}
                   </div>;
                 </div>) }
@@ -151,12 +148,7 @@ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle
 ";
           {/* Sidebar with HireNowCTA */}"";
           <div className="col-span-12 lg:col-span-4 space-y-6">;
-            <HireNowCTA talentProfile = {}
-  {}
-            id: profileData?.id || '',';
-            full_name: profileData?.full_name || '',';
-            professional_title: profileData?.professional_title || '',;
-  hourly_rate: profileData?.hourly_rate || 0;,
+            <div>Broken JSX</div>
 }}/>;
             {/* Placeholder for other sidebar elements */}
           </div>;

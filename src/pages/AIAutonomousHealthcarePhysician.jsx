@@ -1,21 +1,17 @@
 import React from 'react';''';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousHealthcarePhysician = () => {}
+  return <div>Component</div>;
+};
   return();
     <>;
       <Helmet>;
         <title>AI Autonomous Healthcare Physician | Zion Tech Group</title>;
-        <meta;
-          name="description"";
-          content="Revolutionary AI autonomous healthcare physician that provides 24/7 medical consultation, diagnosis support, and health monitoring with advanced medical AI capabilities.";
+        <div>Broken JSX</div>
         />";
-        <meta"";
-          name="keywords"";
-          content="AI healthcare, autonomous physician, AI diagnosis, medical AI, healthcare automation, AI medical consultation";
+        <div>Broken JSX</div>
         />";
-        <link"";
-          rel="canonical"";
-          href="https://ziontechgroup.com/ai-autonomous-healthcare-physician";
+        <div>Broken JSX</div>
         />;
       </Helmet>";
 "";
@@ -183,12 +179,7 @@ const AIAutonomousHealthcarePhysician = () => {}
               Medical Specialties";
             </h2>"";
             <div className="grid md:grid-cols-4 gap-6">';
-              {['';
-                'General Medicine',Cardiology',Dermatology',Pediatrics',Mental Health',Nutrition',Emergency Care',Preventive Medicine';
-              ].map(specialty => (;
-                <div";
-                  key={specialty}"";
-                  className="bg-white/5 rounded-lg p-4 text-center border border-white/10"">"";
+              {};
                   <span className="text-white font-medium">{specialty}</span>;
                 </div>;
               ))}

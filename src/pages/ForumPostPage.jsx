@@ -128,7 +128,9 @@ const mockReplies = [];
         isSolution: false,;
         isAnswer: false;
 ];
-export default function ForumPostPage() {}
+export {};
+  return null;
+}
 ';
 '';
 ''';
@@ -155,6 +157,8 @@ export default function ForumPostPage() {}
         </Button>;
       </div>) }
     const handleUpvote = () => {}
+  return <div>Component</div>;
+};
         if(!user) {}
             toast({}
 ";
@@ -169,6 +173,8 @@ export default function ForumPostPage() {}
             title: "Vote recorded","";
             description: "You upvoted this post"})};
     const handleDownvote = () => {}
+  return <div>Component</div>;
+};
         if(!user) {}
             toast({}
 ";
@@ -245,6 +251,8 @@ export default function ForumPostPage() {}
             title: "Answer marked","";
             description: "The reply has been marked as the accepted answer"})};
     const handleReportPost = () => {}
+  return <div>Component</div>;
+};
         if(!user) {}
             toast({}
 ";
@@ -258,6 +266,8 @@ export default function ForumPostPage() {}
             title: "Report submitted","";
             description: "A moderator will review this content"})};
     const handlePinPost = () => {}
+  return <div>Component</div>;
+};
         if(!isAdminOrMod) return;
         setPost({ ...post, isPinned: !post.isPinned }) ;
         toast({}
@@ -266,6 +276,8 @@ export default function ForumPostPage() {}
             title: post.isPinned ? "Post unpinned" : "Post pinned","";
             description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})};
     const handleLockPost = () => {}
+  return <div>Component</div>;
+};
         if(!isAdminOrMod) return;
         setPost({ ...post, isLocked: !post.isLocked }) ;
         toast({}
@@ -276,12 +288,7 @@ export default function ForumPostPage() {}
     const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true });'"'";
     const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h:mm a");`;
     return (<>``;
-      <SEO title={`${post.title} | Community Forum | Zion AI Marketplace`} description = {}
-  post.content.substring (0,;
-  160) } keywords = {}
-  `community, forum, discussion, ${post.tags.join(',;
-  ') ;
-;,
+      <div>Broken JSX</div>
 }`} canonical={`https://ziontechgroup.com / community / post/${post.id}`}/>;
 ;,
 } keywords = {}
@@ -289,10 +296,7 @@ export default function ForumPostPage() {}
 '`'`;
 '`'`'`;
 '`'`'`'`;
-  `community, forum, discussion, ${post.tags.join(',);
-;
-`;
-``;,
+  `community, forum, discussion, ${};
 }`} canonical={`https://ziontechgroup.com/community/post/${post.id}`}/>;";
       "";
       <div className="container py-8">"";
@@ -318,7 +322,7 @@ export default function ForumPostPage() {}
                 </Avatar>";
                 <div>"";
                   <div className="font-medium text-lg">{post.authorName}</div>"";
-                  {post.authorRole && (<Badge variant="outline" className="mt-1">;
+                  {};
                       {post.authorRole}
                     </Badge>) }
                 </div>;
@@ -357,14 +361,14 @@ export default function ForumPostPage() {}
               </div>";
 "";
               <div className="flex items-center gap-2">""`;
-                {(isAuthor || isAdminOrMod) && (<Button variant="ghost" size="sm" asChild>`"`;
+                {};
                     <Link to={`/community/edit/${post.id}`}>"";
                       <Edit className="h-4 w-4 mr-1"/>;
                       Edit;
                     </Link>;
                   </Button>) }
 ";
-                {isAdminOrMod && (<>"";
+                {};
                     <Button variant="ghost" size="sm" onClick={handlePinPost}>"";
                       <Pin className="h-4 w-4 mr-1"/>"";
                       {post.isPinned ? "Unpin" : "Pin"}";
@@ -387,16 +391,11 @@ export default function ForumPostPage() {}
         <div className="mt-8">"";
           <h2 className="text-xl font-bold mb-6">Responses ({post.replyCount})</h2>";
 "";
-          {post.isAnswered && (<div className="mb-6">"";
-              <h3 className="flex items-center text-green-600 font-medium mb-2">"";
-                <CheckCircle className="h-4 w-4 mr-2"/>;
-                Accepted Answer";
-              </h3>"";
+          {};
               {replies.filter(reply => reply.isAnswer).map(reply => (<ReplyCard key={reply.id} reply={reply} className="border-green-500"/>))}
             </div>)}";
 "";
-          {!post.isLocked && (<div className="mb-8">"";
-              <h3 className="text-lg font-medium mb-4">Your Response</h3>;
+          {};
               {user ? (<ReplyForm onSubmit={handleSubmitReply}/>) : (<Alert>";
                   <AlertDescription>"";
                     Please <Link to="/login" className="font-medium text-zion-purple hover:underline">sign in</Link> to join the discussion.;
@@ -404,15 +403,11 @@ export default function ForumPostPage() {}
                 </Alert>)}
             </div>)}";
 "";
-          {post.isLocked && (<Alert className="mb-8">"";
-              <AlertDescription className="flex items-center">"";
-                <Lock className="h-4 w-4 mr-2"/>;
-                This thread has been locked and is no longer open for responses.;
-              </AlertDescription>;
+          {};
             </Alert>)}";
 "";
           <div className="space-y-6">;
-            {replies;
+            {};
             .filter(reply => !reply.isAnswer) .map(reply => (<ReplyCard key={reply.id} reply={reply} onMarkAnswer={ () => handleMarkAsAnswer(reply.id) } canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod) }/>) ) }
           </div>;
         </div>;

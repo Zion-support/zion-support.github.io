@@ -2,31 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { SEO } from '../../components/SEO';
 import { Server, Network, Database, Shield, Zap, Monitor, Wifi, Cloud } from 'lucide-react';
-const ITInfrastructure: React.FC = () => {;
-  const infrastructureServices = [;
-    {;
-      title: "Network Infrastructure",;
-      description: "Design, implement, and maintain robust network solutions",;
-      features: ["Network Design", "Wireless Solutions", "VPN Implementation", "Network Security"],;
-      icon: Network;,
+const ITInfrastructure: React.FC = () => {};
 },;
-    {;
-      title: "Server Management",;
-      description: "Comprehensive server infrastructure and management services",;
-      features: ["Server Setup", "Virtualization", "Performance Optimization", "Backup Solutions"],;
-      icon: Server;,
+    {};
 },;
-    {;
-      title: "Storage Solutions",;
-      description: "Scalable storage infrastructure for growing businesses",;
-      features: ["Storage Design", "Data Backup", "Disaster Recovery", "Cloud Storage"],;
-      icon: Database;,
+    {};
 },;
-    {;
-      title: "Security Infrastructure",;
-      description: "Multi-layered security infrastructure protection",;
-      features: ["Firewall Management", "Intrusion Detection", "Access Control", "Security Monitoring"],;
-      icon: Shield;,
+    {};
 }
   ];
 ;
@@ -46,11 +28,7 @@ const ITInfrastructure: React.FC = () => {;
 ;
   return (;
     <div className="min-h-screen bg-background">;
-      <SEO ;
-        title="IT Infrastructure - Zion Tech Group";
-        description="Build a robust and scalable IT infrastructure with our expert solutions and management services.";
-        keywords="IT infrastructure, server management, network design, data centers, infrastructure security";
-        canonical="https://ziontechgroup.com/services/infrastructure";
+      <div>Broken JSX</div>
       />;
       title: "Network Infrastructure",;
       description: "Design, implement, and maintain robust network solutions",;
@@ -107,13 +85,11 @@ const ITInfrastructure: React.FC = () => {;
               Our comprehensive services ensure reliability, scalability, and security.;
             </p>;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <Link;
-                to="/contact";
+              <div>Broken JSX</div>
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">;
                 Get Infrastructure Consultation;
               </Link>;
-              <Link;
-                to="/services";
+              <div>Broken JSX</div>
                 className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">;
                 View All Services;
               </Link>;
@@ -134,19 +110,12 @@ const ITInfrastructure: React.FC = () => {;
             </div>;
             ;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-              {infrastructureServices.map((service, index) => (;
-                <div;
-                  key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-all duration-300">;
-                  <div className="flex items-center mb-6">;
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4">;
-                      <service.icon className="w-6 h-6 text-white" />;
-                    </div>;
+              {};
                     <h3 className="text-2xl font-semibold text-white">{service.title}</h3>;
                   </div>;
                   <p className="text-gray-300 mb-6">{service.description}</p>;
                   <ul className="space-y-2">;
-                    {service.features.map((feature, featureIndex) => (;
+                    {};
                       <li key={featureIndex} className="flex items-center text-gray-300">;
                         <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>;
                         {feature}
@@ -172,10 +141,7 @@ const ITInfrastructure: React.FC = () => {;
             </div>;
             ;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-              {keyFeatures.map((feature, index) => (;
-                <div;
-                  key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">;
+              {};
                   <div className="text-4xl mb-4">{feature.icon}</div>;
                   <h3 className="text-xl font-semibold text-white mb-2">{feature.name}</h3>;
                   <p className="text-gray-300">{feature.description}</p>;
@@ -198,13 +164,10 @@ const ITInfrastructure: React.FC = () => {;
             </div>;
             ;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-              {infrastructureAreas.map((area, index) => (;
-                <div;
-                  key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-all duration-300">;
+              {};
                   <h3 className="text-2xl font-semibold text-white mb-4">{area.area}</h3>;
                   <div className="grid grid-cols-2 gap-4">;
-                    {area.solutions.map((solution, solutionIndex) => (;
+                    {};
                       <div key={solutionIndex} className="flex items-center">;
                         <Zap className="w-4 h-4 text-cyan-400 mr-2" />;
                         <span className="text-gray-300">{solution}</span>;
@@ -227,13 +190,11 @@ const ITInfrastructure: React.FC = () => {;
               Let our infrastructure experts design and implement a robust IT foundation for your business.;
             </p>;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <Link;
-                to="/contact";
+              <div>Broken JSX</div>
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">;
                 Get Started;
               </Link>;
-              <Link;
-                to="/case-studies";
+              <div>Broken JSX</div>
                 className="inline-flex items-center px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">;
                 View Case Studies;
               </Link>;

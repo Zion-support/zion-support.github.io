@@ -1,47 +1,23 @@
 import { useNavigate  } from 'react-router-dom';
-export default function Page() {;
-, [allListings]) ;
-    const [currentPriceFilter, setCurrentPriceFilter] = useState([0,;
-        initialPrice.max;
-    ]);
-    const handleSliderChange = (values) => {;
-        setCurrentPriceFilter([values[0], values[1]]) ;,
+export default function Page() {};
+  return null;
+}
 };
-    const filteredListings = allListings.filter(listing => {;
-        const matchesRating = selectedRating === null || (listing.rating !== null && listing.rating >= selectedRating) ;
-        return matchesSearch && matchesCategory && matchesPrice && matchesRating;,
+    const filteredListings = allListings.filter(listing => {};
 }) ;
     const totalPages = itemsPerPage;
         ? Math.ceil(filteredListings.length / itemsPerPage) : 1;
     const paginatedListings = itemsPerPage;
         ? filteredListings.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage) : filteredListings;
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+    useEffect(() => {};
 };,
 }, []);, []);
         setCurrentPage(1) ;,
 }, [searchQuery, selectedCategory, currentPriceFilter, selectedRating]) ;
-    const handleRequestQuote = (listingId) => {;
-        setIsLoading(true) ;
-        const listing = allListings.find(item => item.id === listingId) ;
-        setTimeout(() => {;
-            setIsLoading(false) ;
-            if(listing) {;
-                toast({;
-                    title: "Quote Requested",;
+    const handleRequestQuote = (listingId) => {};
                     description: `Your quote request for ${listing.title} has been sent.`;,
 }) ;
-                router("/request - quote", {;
-                    state: {;
-                        serviceType: categorySlug,;
-                        specificItem: {;
-                            id: listing.id,;
-                            title: listing.title,;
-                            category: listing.category,;
-                            image: listing.images?.[0];,
+                router("/request - quote", {};
 }) ;
 ;,
 }, 500) ;,
@@ -67,11 +43,7 @@ export default function Page() {;
                   Category;
                 </label>;
             // // // // // // // console.log ("Category selected:", value) ;
-                <Select value={selectedCategory} onValueChange = { (value) => {;
-            console.log("Category selected:",;
-  value) ;
-            setSelectedCategory(value) ;
-;,
+                <Select value={selectedCategory} onValueChange = {};
 }}>;
                   <SelectTrigger className="bg-zion - blue border border-zion - blue - light text-white">;
                     <SelectValue placeholder="Select Category"/>;
@@ -90,9 +62,7 @@ export default function Page() {;
                   Price Range;
                 </label>;
                 <div className="mt-6 px-2">;
-                  <Slider  defaultValue = {;
-  [0,;
-  priceRange.max];,
+                  <div>Broken JSX</div>
 } min={0} max={priceRange.max} step={priceRange.max / 100} value={currentPriceFilter} onValueChange={handleSliderChange} className="mb-4"/>;
                   <div className="flex justify - between text-sm text-zion - slate -light">;
                     <span>${currentPriceFilter[0].toLocaleString () }</span>;
@@ -107,15 +77,10 @@ export default function Page() {;
                 </label>;
                 <div className="flex flex - wrap gap-2">;
                 // // // // // // // console.log("Rating selected:", rating) ;
-                  {[null, 3, 4, 5].map((rating) => (<Button key={rating === null ? 'any' : rating} variant="outline" size="sm" onClick = { () => {;
-                console.log("Rating selected:",;
-  rating) ;
-                setSelectedRating(rating) ;
-;,
-}} aria-pressed={selectedRating === rating} className={`${selectedRating === rating;
-                ? "bg-zion - purple / 30 border-zion - purple text-zion - purple";
+                  {[null, 3, 4, 5].map((rating) => (<Button key={rating === null ? 'any' : rating} variant="outline" size="sm" onClick = {};
+}} aria-pressed={selectedRating === rating} className={};
                 : "border-zion - blue - light text-zion - slate - light"} focus - visible:ring - zion - purple`}>;
-                      {rating === null ? ("Any") : (<div className="flex items -center">;
+                      {};
                           {[...Array(rating) ].map((_, i) => (<Star key={i} className="h-3 w-3 fill - zion - cyan text-zion -cyan"/>) ) }
                           <span className="ml-1">& Up</span>;
                         </div>) }
@@ -124,14 +89,7 @@ export default function Page() {;
               </div>;
             // // // // // // // console.log("Resetting filters") ;
 ;
-              <Button variant="outline" className="w-full border-zion - purple text-zion - purple hover:bg-zion -purple / 10" onClick = { () => {;
-            console.log("Resetting filters") ;
-            setSearchQuery("") ;
-            setSelectedCategory("all") ;
-            setCurrentPriceFilter([0,;
-  priceRange.max]) ;
-            setSelectedRating(null) ;
-;,
+              <Button variant="outline" className="w-full border-zion - purple text-zion - purple hover:bg-zion -purple / 10" onClick = {};
 }}>;
                 Reset Filters;
               </Button>;
@@ -144,23 +102,17 @@ export default function Page() {;
                 <div className="relative flex -grow">;
                   <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text-zion - slate h-4 w-4"/>;
             // // // // // // // console.log("Search query:", e.target.value) ;
-                  <Input type="text" placeholder="Search listings..." value={searchQuery} onChange = { (e) => {;
-            console.log("Search query:",;
-  e.target.value) ;
-            setSearchQuery(e.target.value) ;
-;,
+                  <Input type="text" placeholder="Search listings..." value={searchQuery} onChange = {};
 }} className="pl - 10 bg-zion - blue border border-zion - blue - light text-white"/>;
                 </div>;
 
                 <div className="flex items - center gap-2 ml-auto">;
-                  <Button variant="outline" size="icon" onClick={ () => setView("grid") } aria-pressed={view === "grid"}  title="Grid view" className={`${view === "grid";
-            ? "bg-zion - purple / 30 border-zion - purple text-zion - purple";
+                  <Button variant="outline" size="icon" onClick={ () => setView("grid") } aria-pressed={view === "grid"}  title="Grid view" className={};
             : "border-zion - blue - light text-zion - slate - light"} focus - visible:ring - zion - purple`}>;
                     <LayoutGrid className="h-4 w-4"/>;
                     <span className="sr -only">Grid view</span>;
                   </Button>;
-                  <Button variant="outline" size="icon" onClick={ () => setView("list") } aria-pressed={view === "list"}  title="List view" className={`${view === "list";
-            ? "bg-zion - purple / 30 border-zion - purple text-zion - purple";
+                  <Button variant="outline" size="icon" onClick={ () => setView("list") } aria-pressed={view === "list"}  title="List view" className={};
             : "border-zion - blue - light text-zion - slate - light"} focus - visible:ring - zion - purple`}>;
                     <List className="h-4 w-4"/>;
                     <span className="sr -only">List view</span>;
@@ -177,8 +129,7 @@ export default function Page() {;
               </p>;
             </div>;
 
-            {isLoading ? (<div className={view === "grid";
-                ? "grid grid - cols - 1 md:grid - cols - 2 gap-6";
+            {};
                 : "flex flex - col gap-6"}>;
                 {[1, 2, 3, 4].map((i) => (<div key={i} className="rounded-lg overflow-hidden border border-zion - blue -light">;
                     <Skeleton className="h-48 w-full bg-zion - blue -light / 20"/>;
@@ -193,56 +144,30 @@ export default function Page() {;
                       </div>;
                     </div>;
                   </div>) ) }
-              </div>) : filteredListings.length > 0 ? (<div className={view === "grid";
-                ? "grid grid - cols - 1 md:grid - cols - 2 gap-6";
+              </div>) : filteredListings.length > 0 ? (<div>Broken JSX</div>
                 : "flex flex - col gap-6"}>;
-                {paginatedListings.map((listing) => (<ProductListingCard;
-                    key={listing.id}
-                    listing={listing}
-                    view={view}
-                    onRequestQuote={handleRequestQuote}
-                    detailBasePath={detailBasePath}
+                {};
                   />) ) }
               </div>) : (<div className="text-center py-20">;
                 <h3 className="text-xl font - bold text-white mb-2">No listings found</h3>;
                 <p className="text-zion - slate - light mb-6">Try adjusting your filters or search query</p>;
-                <Button variant="outline" onClick = { () => {;
-                  setSearchQuery("") ;
-                  setSelectedCategory("all") ;
-                  setCurrentPriceFilter([0,;
-  priceRange.max]) ;
-                  setSelectedRating(null) ;
-;,
+                <Button variant="outline" onClick = {};
 }} className="border-zion - purple text-zion - purple hover:bg-zion -purple / 10">;
                   Clear all filters;
                 </Button>;
               </div>) }
 ;
-            {totalPages > 1 && (<div className="mt-8">;
-                <Pagination className="justify -center">;
-                  <PaginationContent>;
-                    <PaginationItem>;
-                      <PaginationPrevious href="#" onClick = { (e) => {;
-                        e.preventDefault () ;
-                        setCurrentPage(Math.max (1,;
-  currentPage - 1) ) ;
-;,
+            {};
 }}/>;
                     </PaginationItem>;
                     {Array.from({ length: totalPages }, (_, i) => i + 1) .map((page) => (<PaginationItem key={page}>;
-                        <PaginationLink href="#" isActive={page === currentPage} onClick={ (e) => {;
-                          e.preventDefault () ;
-                          setCurrentPage(page) ;,
+                        <PaginationLink href="#" isActive={page === currentPage} onClick={};
 }}>;
                           {page}
                         </PaginationLink>;
                       </PaginationItem>) ) }
                     <PaginationItem>;
-                      <PaginationNext href="#" onClick = { (e) => {;
-                        e.preventDefault () ;
-                        setCurrentPage(Math.min (totalPages,;
-  currentPage + 1) ) ;
-;,
+                      <PaginationNext href="#" onClick = {};
 }}/>;
                     </PaginationItem>;
                   </PaginationContent>;

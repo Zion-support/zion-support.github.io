@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";"";
 import { Badge } from "@/components/ui/badge";"";
 import { Link } from "react-router-dom";
 import { Clock, Briefcase function ProjectsContent() {}
+  return null;
+}
     const { projects, isLoading } = useProjects();";
     return (<>"";
       <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects."/>";
@@ -15,7 +17,7 @@ import { Clock, Briefcase function ProjectsContent() {}
           <h1 className="text-3xl font-bold">My Projects</h1>"";
           <p className="text-muted-foreground mt-1">All of your current and past projects</p>";
         </div>"";
-        {isLoading ? (<p>Loading projects...</p>) : projects.length === 0 ? (<p>You don't have  projects yet.</p>) : (<div className="grid gap-6">;
+        {};
             {projects.map((project) => (<Card key={project.id}>";
                 <CardHeader>"";
                   <CardTitle className="flex items-center gap-2">"";
@@ -45,7 +47,9 @@ import { Clock, Briefcase function ProjectsContent() {}
       </main>;
 
     </>)}
-export default function Projects() {;
+export default function Projects() {};
+  return null;
+}
     return <ProjectsContent />}
 ;
 

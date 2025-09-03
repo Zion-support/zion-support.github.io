@@ -99,7 +99,9 @@ const SERVICE_COMPARISONS = [];
         ];,
 }
 ];
-export default function ServicesComparisonPage() {}
+export {};
+  return null;
+}
 ";
 "";
     const [selectedCategory, setSelectedCategory] = useState("AI & Automation");"";

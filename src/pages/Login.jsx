@@ -38,7 +38,7 @@ import { setLoggedIn } from '@/store/authSlice';
   // Render LoginContent if not authenticated and auth is not loading;
   if (!isAuthenticated && !isLoading) {}
     return();
-      <ErrorBoundary;
+      <div>Broken JSX</div>
         fallback={<div>Something went wrong. Please try again.</div>}
       >;
         <LoginContent />;

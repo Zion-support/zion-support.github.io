@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 // ;
 // ;
-const ComprehensivePricing2026 = () => {;
+const ComprehensivePricing2026 = () => {};
+};
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [billingCycle, setBillingCycle] = useState('monthly');
     // Combine all services;
@@ -16,45 +17,22 @@ const ComprehensivePricing2026 = () => {;
         'Cloud & DevOps',;
         'Specialized Industry';
     ];
-    const getCategoryServices = (category) => {;
-        switch (category) {;
-            case 'AI & Business Solutions':;
-                return allServices.filter(service => ['Business Intelligence', 'Marketing Automation', 'Customer Service', 'Workflow Automation'].includes(service.category));
-            case 'IT Infrastructure':;
-                return allServices.filter(service => ['Data Center Management', 'Storage Management', 'Virtualization', 'IT Asset Management'].includes(service.category));
-            case 'Cybersecurity':;
-                return allServices.filter(service => ['Cybersecurity', 'Network Security'].includes(service.category));
-            case 'Cloud & DevOps':;
-                return allServices.filter(service => ['Cloud Infrastructure', 'DevOps', 'Performance Monitoring'].includes(service.category));
-            case 'Specialized Industry':;
-                return allServices.filter(service => ['Supply Chain Management', 'Financial Technology', 'Healthcare Technology', 'Legal Technology', 'Blockchain Technology', 'Internet of Things', 'Quantum Computing'].includes(service.category));
-            default:;
-                return allServices;,
+    const getCategoryServices = (category) => {};
 }
     };
     const filteredServices = getCategoryServices(selectedCategory);
-    const getAnnualPrice = (monthlyPrice) => {;
-        const price = parseInt(monthlyPrice.replace(/[^0-9]/g, ''));
-        const annualPrice = price * 12 * 0.8; // 20% discount for annual;
+    const getAnnualPrice = (monthlyPrice) => {};
         return `$${annualPrice.toLocaleString()}`;,
 };
-    const containerVariants = {;
+    const containerVariants = {};
         hidden: { opacity: 0 },;
-        visible: {;
-            opacity: 1,;
-            transition: {;
-                staggerChildren: 0.1;,
+        visible: {};
 }
         }
     };
-    const itemVariants = {;
+    const itemVariants = {};
         hidden: { y: 20, opacity: 0 },;
-        visible: {;
-            y: 0,;
-            opacity: 1,;
-            transition: {;
-                duration: 0.5,;
-                ease: "easeOut";,
+        visible: {};
 }
         }
     };
@@ -67,25 +45,16 @@ const ComprehensivePricing2026 = () => {;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">;
               {" "}Pricing 2026            </span>;
           </motion.h1>";
-          <motion.p"";
-            className="text-xl text-gray-300 max-w-4xl mx-auto mb-8";
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+          <div>Broken JSX</div>
           >;
             Transparent pricing for all our innovative services.Choose the plan;
             that fits your business needs with flexible billing options and;
             enterprise - grade support.</motion.p>;
 
           {/* Billing Toggle */}";
-          <motion.div"";
-            className="flex items-center justify-center gap-4 mb-8";
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}'`;
-            transition={{ duration: 0.8, delay: 0.4 }}'`'`;
+          <div>Broken JSX</div>
           >'`'`'`;
-            <span'`'`'`'`;
-              className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}
+            <div>Broken JSX</div>
             >;
               Get Started,;
             </a>;
@@ -94,10 +63,7 @@ const ComprehensivePricing2026 = () => {;
   )}
 ;
           {/* No Results */}
-          {filteredServices.length === 0 && (";
-            <motion.div"";
-              className="text-center py-16";
-              initial={{ opacity: 0 }}
+          {};
               animate={{ opacity: 1 }}">"";
               <div className="text-6xl mb-4">🔍</div>"";
               <h3 className="text-2xl font-bold text-white mb-2">;
@@ -114,10 +80,7 @@ const ComprehensivePricing2026 = () => {;
       {/* Enterprise Plans */}"";
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">"";
         <div className="max-w-7xl mx-auto text-center">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div>Broken JSX</div>
             transition={{ duration: 0.8 }}">"";
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">'";
               Enterprise{' '}"";
@@ -184,10 +147,7 @@ const ComprehensivePricing2026 = () => {;
       {/* CTA Section */}"";
       <section className="py-20 px-4 sm:px-6 lg:px-8">"";
         <div className="max-w-4xl mx-auto text-center">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div>Broken JSX</div>
             transition={{ duration: 0.8 }}">"";
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">'";
               Ready to{' '}"";
@@ -202,24 +162,18 @@ const ComprehensivePricing2026 = () => {;
               for your business.";
             </p>"";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <motion.div;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <div>Broken JSX</div>
               >";
-                <Link"";
-                  to="/contact"";
+                <div>Broken JSX</div>
                   className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold text-lg py-4 px-8 rounded-xl shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 border border-cyan-500/30 hover:border-cyan-500/60"">"";
                   <span className="text-xl">🚀</span>";
                   Get Custom Quote"";
                   <span className="text-xl">→</span>;
                 </Link>;
               </motion.div>;
-              <motion.div;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <div>Broken JSX</div>
               >";
-                <a"";
-                  href="tel:+13024640950"";
+                <div>Broken JSX</div>
                   className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md text-white font-semibold text-lg py-4 px-8 rounded-xl border border-white/30 hover:border-cyan-400/50 hover:bg-white/20 transition-all duration-300 shadow-lg"">"";
                   <span className="text-xl">📞</span>;
                   Call Now;

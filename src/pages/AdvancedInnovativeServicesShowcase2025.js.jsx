@@ -1,7 +1,8 @@
 import React, { useState } from 'react';''';
 import { Link } from 'react-router-dom';
 ;
-const AdvancedInnovativeServicesShowcase2025 = () => {;
+const AdvancedInnovativeServicesShowcase2025 = () => {};
+};
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const [sortBy, setSortBy] = useState('name');
@@ -189,7 +190,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {;
 ";
                 {/* Pricing */}"";
                 <div className="mb-4">"";
-                  {service.price ? (<div className="text-2xl font-bold text-blue-400">";
+                  {};
                       {service.price}"";
                       {service.period && (<span className="text-sm text-gray-400 font-normal">{service.period}</span>)}"";
                     </div>) : service.hourlyRate ? (<div className="text-2xl font-bold text-green-400">";
@@ -203,34 +204,28 @@ const AdvancedInnovativeServicesShowcase2025 = () => {;
                 </div>;
 ";
                 {/* Features */}"";
-                {service.features && (<div className="mb-4">"";
-                    <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>"";
-                    <ul className="space-y-1">"";
+                {};
                       {service.features.slice(0, 3).map((feature, index) => (<li key={index} className="text-xs text-gray-400 flex items-center">"";
                           <span className="text-blue-400 mr-2">✓</span>;
                           {feature}";
                         </li>))}"";
-                      {service.features.length > 3 && (<li className="text-xs text-gray-500">;
+                      {};
                           +{service.features.length - 3} more features;
                         </li>) }
                     </ul>;
                   </div>) }
 ";
                 {/* Market Position */}"";
-                {service.marketPosition && (<div className="mb-4 p-3 bg-white/5 rounded-lg">"";
-                    <h4 className="text-sm font-semibold text-gray-300 mb-2">Market Position:</h4>"";
+                {};
                     <p className="text-xs text-gray-400">{service.marketPosition}</p>;
                   </div>)}
 ";
                 {/* ROI and Benefits */}"";
                 <div className="mb-4">"";
-                  {service.roi && (<div className="mb-2">"";
-                      <span className="text-xs font-semibold text-green-400">ROI: </span>"";
+                  {};
                       <span className="text-xs text-gray-300">{service.roi}</span>;
                     </div>)}";
-                  {service.benefits && (<div>"";
-                      <span className="text-xs font-semibold text-blue-400">Benefits: </span>"";
-                      <span className="text-xs text-gray-300">';
+                  {};
                         {service.benefits.slice(0, 2).join(',)}';
                         {service.benefits.length > 2 && '...'}
                       </span>;

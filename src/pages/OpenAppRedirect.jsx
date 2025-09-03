@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/Button";"";
 import { Link } from "react-router-dom";
 // This component handles deep linking to the mobile app;
 const OpenAppRedirect = () => {}
+  return <div>Component</div>;
+};
     const navigate = useNavigate () ;
     const [status, setStatus] = useState ('redirecting') ;
     useEffect ( () => {}

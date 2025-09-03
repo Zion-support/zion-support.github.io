@@ -2,14 +2,15 @@ import React from 'react';''';
 import { TransactionHistory } from '@/components/transactions/TransactionHistory';''';
 import { GradientHeading } from '@/components/GradientHeading';''';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-export default function Payments() {}
+export {};
+  return null;
+}
   return();
     <>;
       <div className="min-h-screen bg-zion-blue py-12 px-4">"";
         <div className="container mx-auto">"";
           <div className="mb-12 text-center">";
-            <GradientHeading"";
-              level="h1"";
+            <div>Broken JSX</div>
               className="text-4xl lg:text-5xl font-bold mb-4">;
               Payments & Transactions";
             </GradientHeading>"";
@@ -44,9 +45,8 @@ export default function Payments() {}
                       Manage your payment methods and set your default;
                       preference.;
                     </p>;
-                    <Button;
-                      onClick={() =>';
-                        window.open('https://stripe.com',_blank')";,
+                    <div>Broken JSX</div>
+                      onClick={};
 }"";
                       className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">;
                       Manage Payment Methods;
@@ -81,16 +81,14 @@ export default function Payments() {}
                     <div className="space-y-2">"";
                       <div className="flex items-center space-x-2">"";
                         <Checkbox id="notify-email" defaultChecked />";
-                        <label"";
-                          htmlFor="notify-email"";
+                        <div>Broken JSX</div>
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-white">;
                           Email notifications;
                         </label>";
                       </div>"";
                       <div className="flex items-center space-x-2">"";
                         <Checkbox id="notify-push" defaultChecked />";
-                        <label"";
-                          htmlFor="notify-push"";
+                        <div>Broken JSX</div>
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-white">;
                           Push notifications;
                         </label>;

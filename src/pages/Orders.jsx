@@ -4,23 +4,15 @@ import { useGetOrdersQuery } from '@/hooks/useOrders';''';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from '@/components/ui/table';''';
 import { Skeleton } from '@/components/ui/skeleton';''';
 import { EmptyState } from '@/components/ui/empty-state';
-export default function OrdersPage() {}
+export {};
+  return null;
+}
     const { user } = useAuth();
     const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
     const formatDate = (date) => new Date(date).toLocaleDateString();
     return (<div className="container max-w-4xl py-10">"";
       <h1 className="text-3xl font-bold mb-6">Order History</h1>;
-      {isLoading ? (<Table>;
-          <TableHeader>;
-            <TableRow>;
-              <TableHead > Order #</TableHead>;
-              <TableHead > Date</TableHead>;
-              <TableHead > Total</TableHead>;
-              <TableHead > Status</TableHead>;
-              <TableHead > View</TableHead>;
-            </TableRow>;
-          </TableHeader>;
-          <TableBody>";
+      {};
             {Array.from({ length: 3 }).map((_, i) => (<TableRow key={i}>"";
                 <TableCell><Skeleton className="h-4 w-20"/></TableCell>"";
                 <TableCell><Skeleton className="h-4 w-24"/></TableCell>"";

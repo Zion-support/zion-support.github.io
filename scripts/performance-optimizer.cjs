@@ -105,7 +105,7 @@ class PerformanceMonitor {;
 });
       this.metrics.buildTime = Date.now() - startTime;
       this.log(`✅ Build completed in ${this.metrics.buildTime}ms`, "SUCCESS");
-      const command = "npx lighthouse http: //localhost:3000 --output=html --output-path=./performance-reports/lighthouse-report.html --chrome-flags="--headless;
+      const command = "npx lighthouse http: //localhost: 3000 --output=html --output-path=./performance-reports/lighthouse-report.html --chrome-flags="--headless;
       execSync(command, { stdio: "inherit" });
       console.log("✅ Lighthouse audit completed");
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259,;,

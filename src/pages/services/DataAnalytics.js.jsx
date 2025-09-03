@@ -2,7 +2,9 @@ import React from 'react';''';
 import { Link } from 'react-router-dom';''';
 import { Helmet } from 'react-helmet-async';
 import { Check, BarChart3, TrendingUp, Database, Users, Shield, Zap, Target export { function };
-export default function DataAnalyticsServices() {}
+export {};
+  return null;
+}
     const analyticsServices = [];
         {}
             icon: BarChart3,';

@@ -11,7 +11,9 @@ import { AlertTriangle, Check, Globe, Search, Loader2 } from 'lucide-react';''';
 import { useIsMobile } from '@/hooks/use-mobile';''';
 import { useLanguage } from '@/context/LanguageContext';''';
 import { useTranslationService } from '@/hooks/useTranslationService';
-export default function TranslationManager() {}
+export {};
+  return null;
+}
   const { t, i18n } = useTranslation();
   const isMobile = useIsMobile();';
   const { supportedLanguages } = useLanguage();'';
@@ -47,7 +49,7 @@ export default function TranslationManager() {}
 `;
 ``;
               acc[`${pre}${key}`] = obj[key];';,
-} else if (typeof obj[key] === 'object' && Object.keys(obj[key]).length === 0){ // Handle empty objects specifically if needed`;
+} else if (typeof obj[key] === 'object' && Object.keys(obj[key]).length === 0){};
                acc[`${pre}${key}`] = {}; // Or some placeholder like "";,
 }
             return acc;,
@@ -206,9 +208,7 @@ export default function TranslationManager() {}
 };
   return();
     <>';
-      <SEO'';
-        title={t('translation.manager_title')}';
-        description={t('translation.manager_description')}
+      <div>Broken JSX</div>
       />'`;
 '`'`;
       <main className={`container mx-auto px-${isMobile ? '4' : '6'} py-8`}>;
@@ -224,17 +224,11 @@ export default function TranslationManager() {}
               <div className="flex flex-col sm:flex-row gap-4">"";
                 <div className="relative flex-1">"";
                   <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />";
-                  <Input"'";
-                    type="search"''";
-                    placeholder={t('translation.search_placeholder')}"";
-                    className="pl-8";
-                    value={searchQuery}
+                  <div>Broken JSX</div>
                     onChange={e => setSearchQuery(e.target.value)}
                   />;
                 </div>";
-                <Tabs"";
-                  defaultValue="translation";
-                  value={selectedNamespace}";
+                <div>Broken JSX</div>
                   onValueChange={value => setSelectedNamespace(value)}"";
                   className="w-full sm:w-auto">";
                   <TabsList>"";
@@ -256,62 +250,27 @@ export default function TranslationManager() {}
                   </div>;
                 </div>;
 ";
-                {filteredKeys.length === 0 ? ("";
-                  <div className="p-6 text-center text-muted-foreground">';
+                {};
                     {t('translation.no_results')}
                   </div>";
                 ) : ("";
                   <div className="divide-y">;
-                    {filteredKeys.map(key => (;
-                      <div";
-                        key={key}"";
-                        className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto]"">"";
+                    {};
                         <div className="p-3 break-words">{key}</div>";
-                        {editingKey === key ? ("";
-                          <div className="p-3">"";
-                            <div className="space-y-4">;
-                              {supportedLanguages.map(lang => (";
+                        {};
                                 <div key={lang.code}>"";
                                   <div className="flex items-center gap-2 mb-1">;
                                     <span>{lang.flag}</span>';
                                     <span>{lang.name}</span>'';
                                   </div>''';
-                                  {editedTranslations[key][lang.code]?.includes('''';
-                                    '\n';
-                                  ) ||;
-                                  editedTranslations[key][lang.code]?.length >;
-                                    100 ? (;
-                                    <Textarea;
-                                      value={}
-';
-'';
-''';
-                                        editedTranslations[key][lang.code] || '';,
-}
-                                      onChange={e =>;
-                                        handleChange();
-                                          lang.code,;
-                                          key,;
-                                          e.target.value;
-                                        );,
+                                  {};
 }'";
                                       dir={lang.code === 'ar' ? 'rtl' : 'ltr'}"";
                                       className="min-h-20";
                                     />;
                                   ) : (;
-                                    <Input;
-                                      value={}
-';
-'';
-''';
-                                        editedTranslations[key][lang.code] || '';,
-}
-                                      onChange={e =>;
-                                        handleChange();
-                                          lang.code,;
-                                          key,;
-                                          e.target.value;
-                                        );,
+                                    <div>Broken JSX</div>
+                                      onChange={};
 }';
                                       dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
                                     />;
@@ -320,14 +279,11 @@ export default function TranslationManager() {}
                               ))}";
                             </div>"";
                             <div className="flex gap-2 mt-4">";
-                              <Button"";
-                                size="sm";
+                              <div>Broken JSX</div>
                                 onClick={() => handleSave(key)}
                                 disabled={isSaving}
                               >;
-                                {isSaving ? (";
-                                  <>"";
-                                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />';
+                                {};
                                     {t('general.saving')}
                                   </>;
                                 ) : (";
@@ -337,23 +293,15 @@ export default function TranslationManager() {}
                                   </>;
                                 )}
                               </Button>";
-                              <Button"";
-                                size="sm"";
-                                variant="outline";
-                                onClick={handleCancel}
+                              <div>Broken JSX</div>
                               >';
                                 {t('general.cancel')}
                               </Button>";
-                              <Button"";
-                                size="sm"";
-                                variant="secondary";
+                              <div>Broken JSX</div>
                                 onClick={() => handleTranslateKey(key)}
                                 disabled={isTranslating}
                               >";
-                                {isTranslating ? ("";
-                                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />";
-                                ) : ("";
-                                  <Globe className="mr-2 h-4 w-4" />;
+                                {};
                                 )}';
                                 {t('translation.auto_translate')}
                               </Button>;
@@ -362,25 +310,17 @@ export default function TranslationManager() {}
                         ) : ("";
                           <div className="p-3">"";
                             <div className="space-y-2">;
-                              {supportedLanguages.slice(0, 2).map(lang => (;
-                                <div";
-                                  key={lang.code}"";
-                                  className="flex items-start gap-2"">"";
-                                  <span className="mt-0.5 flex-shrink-0">;
+                              {};
                                     {lang.flag}
                                   </span>'`;
-                                  <span'`'`;
-                                    className={`${!translations[lang.code]?.[key] ? 'text-zion-purple italic' : ''}`}';
-                                    dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
+                                  <div>Broken JSX</div>
                                   >';
-                                    {translations[lang.code]?.[key] ||'';
+                                    {};
                                       t('translation.missing')}
                                   </span>;
                                 </div>;
                               ))}";
-                              {getMissingLanguages(key).length > 0 && ("";
-                                <div className="flex items-center gap-2 text-sm text-zion-purple">"";
-                                  <AlertTriangle className="h-4 w-4" />';
+                              {};
                                   {t('translation.missing_languages', {}
                                     count: getMissingLanguages(key).length})}
                                 </div>;
@@ -389,10 +329,7 @@ export default function TranslationManager() {}
                           </div>";
                         )}"";
                         <div className="p-3 flex items-center justify-end">;
-                          {editingKey === key ? null : (";
-                            <Button"";
-                              size="sm"";
-                              variant="outline";
+                          {};
                               onClick={() => handleEdit(key)}
                             >';
                               {t('translation.edit')}

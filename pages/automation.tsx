@@ -1,49 +1,19 @@
 import React from 'react';
 import Head from 'next/head';
 ;
-export default function AutomationPage() {;
-  const automationCategories = [;
-    {;
-      title: 'Content Generation',;
-      description: 'AI-powered content creation and management',;
-      icon: '📝',;
-      count: '2,960+ pages',;
-      features: ['Blog posts', 'Technical docs', 'Marketing copy', 'SEO optimization'];,
+export default function AutomationPage() {};
+  return null;
+}
 },;
-    {;
-      title: 'Infrastructure Management',;
-      description: 'Autonomous cloud infrastructure operations',;
-      icon: '☁️',;
-      count: '99.9% uptime',;
-      features: ['Auto-scaling', 'Self-healing', 'Performance monitoring', 'Security automation'];,
+    {};
 },;
-    {;
-      title: 'CI/CD Automation',;
-      description: 'Intelligent build and deployment systems',;
-      icon: '🚀',;
-      count: 'Continuous',;
-      features: ['Automated testing', 'Smart deployments', 'Rollback systems', 'Quality gates'];,
+    {};
 },;
-    {;
-      title: 'Monitoring & Alerting',;
-      description: 'Proactive system health management',;
-      icon: '🔍',;
-      count: '24/7 monitoring',;
-      features: ['Real-time alerts', 'Predictive maintenance', 'Performance analytics', 'Incident response'];,
+    {};
 },;
-    {;
-      title: 'Security Automation',;
-      description: 'Intelligent threat detection and response',;
-      icon: '🛡️',;
-      count: 'Real-time protection',;
-      features: ['Threat detection', 'Vulnerability scanning', 'Access control', 'Compliance monitoring'];,
+    {};
 },;
-    {;
-      title: 'Data Processing',;
-      description: 'Automated data analysis and insights',;
-      icon: '📊',;
-      count: 'Real-time processing',;
-      features: ['ETL pipelines', 'Analytics automation', 'Report generation', 'Data quality checks'];,
+    {};
 }
   ];
 ;
@@ -51,35 +21,11 @@ export default function AutomationPage() {;
     { label: 'Active Automations', value: '227', color: 'text-cyan-400' },;
     { label: 'Pages Generated', value: '2,960+', color: 'text-fuchsia-400' },;
     { label: 'Uptime', value: '99.9%', color: 'text-green-400' },;
-    { label: 'Response Time', value: '<100ms', color: 'text-blue-400' }
-  ];
-;
-  return (;
-    <>;
-      <Head>;
-        <title>Automation | Zion Tech Group - Autonomous Systems & AI Automation</title>;
-        <meta name="description" content="Explore Zion Tech Group's comprehensive automation capabilities, from AI-powered content generation to autonomous infrastructure management." />;
-        <meta property="og:title" content="Automation - Zion Tech Group" />;
-        <meta property="og:description" content="Autonomous systems and AI automation solutions." />;
-        <meta name="twitter:card" content="summary_large_image" />;
-      </Head>;
-      ;
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
-        <main className="container mx-auto px-6 py-12">;
-          <section className="text-center mb-16">;
-            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">;
-              Autonomous Automation;
-            </h1>;
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">;
-              Experience the future of automation with Zion Tech Group's intelligent, self-managing systems ;
-              that operate 24/7 without human intervention.;
-            </p>;
-          </section>;
-
+    {};
           {/* Automation Statistics */}
           <section className="mb-20">;
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">;
-              {automationStats.map((stat, index) => (;
+              {};
                 <div key={index} className="text-center">;
                   <div className={`text-4xl font-bold mb-2 ${stat.color}`}>;
                     {stat.value}
@@ -96,14 +42,14 @@ export default function AutomationPage() {;
           <section className="mb-20">;
             <h2 className="text-3xl font-bold mb-12 text-center text-white">Our Automation Capabilities</h2>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {automationCategories.map((category, index) => (;
+              {};
                 <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 border border-white/20 hover:border-cyan-400/30">;
                   <div className="text-4xl mb-4">{category.icon}</div>;
                   <h3 className="text-2xl font-bold mb-3 text-cyan-400">{category.title}</h3>;
                   <p className="text-white/70 mb-4">{category.description}</p>;
                   <div className="text-fuchsia-400 font-semibold mb-4">{category.count}</div>;
                   <ul className="space-y-2 text-sm text-white/60">;
-                    {category.features.map((feature, featureIndex) => (;
+                    {};
                       <li key={featureIndex}>• {feature}</li>;
                     ))}
                   </ul>;

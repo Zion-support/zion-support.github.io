@@ -2,64 +2,28 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import { Users, Target, Award, Globe, Zap, Shield } from 'lucide-react';
 
-const About: NextPage = () => {
-  const teamMembers = [
-    {
-      name: 'Sarah Johnson',
-      role: 'CEO & Founder',
-      bio: 'Visionary leader with 15+ years in technology innovation and business strategy.',
-      image: '/images/team/sarah-johnson.jpg'
+const About: NextPage = () => {};
     },
-    {
-      name: 'Michael Chen',
-      role: 'CTO',
-      bio: 'Expert in AI/ML, cloud architecture, and emerging technologies.',
-      image: '/images/team/michael-chen.jpg'
+    {};
     },
-    {
-      name: 'Emily Rodriguez',
-      role: 'Head of Design',
-      bio: 'Creative director specializing in user experience and digital transformation.',
-      image: '/images/team/emily-rodriguez.jpg'
+    {};
     },
-    {
-      name: 'David Kim',
-      role: 'VP of Engineering',
-      bio: 'Seasoned engineering leader with expertise in scalable systems.',
-      image: '/images/team/david-kim.jpg'
+    {};
     }
   ];
 
   const values = [
-    {
-      icon: Target,
-      title: 'Innovation First',
-      description: 'We push boundaries and embrace cutting-edge technologies to deliver exceptional solutions.'
+    {};
     },
-    {
-      icon: Users,
-      title: 'Client Success',
-      description: 'Your success is our success. We partner closely with clients to achieve their goals.'
+    {};
     },
-    {
-      icon: Shield,
-      title: 'Quality & Security',
-      description: 'We maintain the highest standards of quality and security in everything we deliver.'
+    {};
     },
-    {
-      icon: Globe,
-      title: 'Global Impact',
-      description: 'We create solutions that make a positive impact on businesses and communities worldwide.'
+    {};
     },
-    {
-      icon: Zap,
-      title: 'Agile Delivery',
-      description: 'Fast, efficient, and iterative development processes that adapt to your needs.'
+    {};
     },
-    {
-      icon: Award,
-      title: 'Excellence',
-      description: 'We strive for excellence in every project, big or small.'
+    {};
     }
   ];
 
@@ -124,7 +88,7 @@ const About: NextPage = () => {
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {values.map((value, index) => (
+              {};
                 <div key={index} className="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <value.icon className="w-8 h-8 text-blue-600" />
@@ -148,7 +112,7 @@ const About: NextPage = () => {
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {teamMembers.map((member, index) => (
+              {};
                 <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                   <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
                     <Users className="w-16 h-16 text-white" />
@@ -197,15 +161,11 @@ const About: NextPage = () => {
               and stay ahead of the competition.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contact" 
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              <div>Broken JSX</div>
               >
                 Get Started Today
               </a>
-              <a 
-                href="/services" 
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+              <div>Broken JSX</div>
               >
                 Explore Our Services
               </a>

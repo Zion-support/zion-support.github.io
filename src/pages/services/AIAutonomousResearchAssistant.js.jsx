@@ -8,6 +8,8 @@ import {}
   AcademicCapIcon,''';
   GlobeAltIcon} from '@heroicons/react/24/outline';
 const AIAutonomousResearchAssistant = () => {}
+  return <div>Component</div>;
+};
   return();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">";
       {/* Hero Section */}"";
@@ -28,13 +30,11 @@ const AIAutonomousResearchAssistant = () => {}
               and accelerate breakthroughs across all domains.";
             </p>"";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <Link"";
-                to="/contact"";
+              <div>Broken JSX</div>
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg">;
                 Get Started Today;
               </Link>";
-              <Link"";
-                to="/case-studies"";
+              <div>Broken JSX</div>
                 className="border border-gray-600 text-gray-300 px-8 py-4 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg">;
                 View Case Studies;
               </Link>;
@@ -471,13 +471,11 @@ const AIAutonomousResearchAssistant = () => {}
             stay ahead of the competition.";
           </p>"";
           <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-            <Link"";
-              to="/contact"";
+            <div>Broken JSX</div>
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg">;
               Start Your Research Project;
             </Link>";
-            <Link"";
-              to="/pricing"";
+            <div>Broken JSX</div>
               className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg">;
               View Pricing;
             </Link>;

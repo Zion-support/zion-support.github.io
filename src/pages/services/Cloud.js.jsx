@@ -1,6 +1,8 @@
 import React from 'react';''';
 import { Link } from 'react-router-dom';
 const CloudServices = () => {}
+  return <div>Component</div>;
+};
   const cloudServices = [];
     {}
 ';
@@ -57,11 +59,7 @@ const CloudServices = () => {}
             </p>";
           </div>"";
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {cloudServices.map((service, index) => (;
-              <div";
-                key={index}"";
-                className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl border border-gray-200"">"";
-                <h3 className="text-xl font-semibold text-slate-900 mb-4">;
+            {};
                   {service.title}";
                 </h3>"";
                 <p className="text-slate-600 mb-4">{service.description}</p>"";
@@ -69,11 +67,7 @@ const CloudServices = () => {}
                   {service.price}";
                 </p>"";
                 <ul className="space-y-2">;
-                  {service.features.map((feature, featureIndex) => (;
-                    <li";
-                      key={featureIndex}"";
-                      className="flex items-center text-sm text-gray-700"">"";
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>;
+                  {};
                       {feature}
                     </li>;
                   ))}
@@ -93,13 +87,11 @@ const CloudServices = () => {}
             Transform your business with cloud-native solutions";
           </p>"";
           <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-            <Link"";
-              to="/contact"";
+            <div>Broken JSX</div>
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">;
               Get Started;
             </Link>";
-            <Link"";
-              to="/services/devops-cloud"";
+            <div>Broken JSX</div>
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-300">;
               Learn More;
             </Link>;

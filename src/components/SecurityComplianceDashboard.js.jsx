@@ -3,9 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';';
 import { Shield, AlertTriangle, CheckCircle, XCircle, Download, Settings, RefreshCw, Loader2, FileText, BarChart3, Clock, Play, Square } from 'lucide-react';
 ;
 ;
-export const SecurityComplianceDashboard = ({ className = '' }) => {;
-    const { trackEvent } = useAnalytics({        enableTracking: true,;
-        enableUserBehaviorTracking: true;,
+export const SecurityComplianceDashboard = ({ className = '' }) => {};
+    const { trackEvent } = useAnalytics({};
 });';
     const [activeTab, setActiveTab] = useState('overview');
     const [showSettings, setShowSettings] = useState(false);

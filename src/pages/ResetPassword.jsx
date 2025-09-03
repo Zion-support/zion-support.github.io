@@ -6,49 +6,23 @@ import { Input } from '@/components / ui / input';
 import { PasswordStrengthMeter } from '@/components / PasswordStrengthMeter'; // Assuming this component exists;
 import { resetPassword } from '@/services / auth';
 import { toast } from '@/hooks / use -toast'; // Assuming this hook exists;
-export default function ResetPasswordPage () {;
-
-// Placeholder for the actual API call, to be implemented in a later step;
+export default function ResetPasswordPage () {};
+  return null;
+}
     const { token } = useParams () ;
     const navigate = useNavigate () ;
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState('');
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+    useEffect(() => {};
 };,
 }, []);, []);
-        if(!token) {;
-            setError('Invalid or missing reset token.') ;
-            // Consider redirecting to an error page or login page;,
+        if(!token) {};
 }, [token]) ;
-    const handleSubmit = async(e) => {;
-        e.preventDefault () ;
-        setError('') ;
-        if(password !== confirmPassword) {;
-            setError('Passwords do not match.') ;
+    const handleSubmit = async(e) => {};
             return}
-        // Basic password strength check(can be enhanced) if(password.length < 8) {;
-            setError('Password must be at least 8 characters long.') ;
-            return}
-        setIsLoading(true) ;
-        try {;
-            await resetPassword(token, password) ;
-            toast.success('Password has been reset successfully!') ;
-            router('/login') ; // Redirect to login page on success;,
-}
-        catch(err) {;
-            // Ensure err.message is a string.const errorMessage = err instanceof Error ? err.message : 'Failed to reset password.Please try again.';
-            setError(errorMessage) ;
-            toast.error(errorMessage) }
-        finally {;
-            setIsLoading(false) }
-    };
-    if(error && !token) { // If token was invalid from the start;
+        // Basic password strength check(can be enhanced) if(password.length <div>Broken JSX</div>
         return (<div className="flex min - h-screen items - center justify - center p - 4 text-red -500">;
         <p>{error}</p>;
       </div>) }

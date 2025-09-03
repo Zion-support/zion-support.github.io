@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export const EnhancedSearchInput = () => {;
+import {};
+};
   const [isOpen, setIsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeIndex, setActiveIndex] = useState(-1);
@@ -25,116 +26,55 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
     { type: 'service', text: 'Managed IT Services', icon: Building, category: 'Managed Services' }
   ];
 ;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+  useEffect(() => {};
 };,
 }, []);, []);
-    const handleClickOutside = (event) => {;
-
-      if(searchRef.current && !searchRef.current.contains(event.target)) {;
-
-        setIsOpen(false);
+    const handleClickOutside = (event) => {};
         setActiveIndex(-1)}
     };
 ;
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
 ;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+  useEffect(() => {};
 };,
 }, []);, []);
-    if(searchQuery.trim()) {;
-
-      const filtered = allSuggestions.filter(suggestion =>;
-        suggestion.text.toLowerCase().includes(searchQuery.toLowerCase());
-      );
-      setSuggestions(filtered)} else {;
-
+    if(searchQuery.trim()) {};
+      setSuggestions(filtered)} else {};
       setSuggestions([])}
     setActiveIndex(-1)}, [searchQuery]);
 ;
-  const handleInputChange = (e) => {;
-
-    setSearchQuery(e.target.value);
+  const handleInputChange = (e) => {};
     setIsOpen(true)};
 ;
-  const handleKeyDown = (e) => {;
-
-    if(e.key === 'ArrowDown') {;
-
-      e.preventDefault();
-      setActiveIndex(prev =>;
-        prev < suggestions.length-1 ? prev + 1 : prev';
-      )} else if(e.key === 'ArrowUp') {;
-
-      e.preventDefault();
-      setActiveIndex(prev => prev > 0 ? prev - 1 : -1)} else if(e.key === 'Enter') {;
-
-      e.preventDefault();
-      if(activeIndex >= 0 && suggestions[activeIndex]) {;
-
-        handleSuggestionClick(suggestions[activeIndex])} else if(searchQuery.trim()) {;
-
+  const handleKeyDown = (e) => {};
+      setActiveIndex(prev => prev > 0 ? prev - 1 : -1)} else if(e.key === 'Enter') {};
+        handleSuggestionClick(suggestions[activeIndex])} else if(searchQuery.trim()) {};
         handleSearch(searchQuery)}
-    } else if(e.key === 'Escape') {;
-
-      setIsOpen(false);
+    } else if(e.key === 'Escape') {};
       setActiveIndex(-1)}
   };
 ;
-  const handleSuggestionClick = (suggestion) => {;
-
-    setSearchQuery(suggestion.text);
-    setIsOpen(false);
-    setActiveIndex(-1);
+  const handleSuggestionClick = (suggestion) => {};
     handleSearch(suggestion.text)};
 ;
-  const handleSearch = (query) => {;
-
-    if(query.trim()) {;
-
-      // Add to recent searches;
-      const newRecent = [query, ...recentSearches.filter(s => s !== query)].slice(0, 5);
-      setRecentSearches(newRecent);
-;
-      // Store in localStorage';
-      localStorage.setItem('recentSearches', JSON.stringify(newRecent));
-;
-      // Perform search(in a real app, this would navigate to search results);
-      // // // // // // // // console.log('Searching for:', query);
-;
-      // Close search;
-      setIsOpen(false);
+  const handleSearch = (query) => {};
       setActiveIndex(-1)}
   };
 ;
-  const handleRecentSearchClick = (search) => {;
-
-    setSearchQuery(search);
+  const handleRecentSearchClick = (search) => {};
     handleSearch(search)};
 ;
-  const handleTrendingSearchClick = (search) => {;
-
-    setSearchQuery(search);
+  const handleTrendingSearchClick = (search) => {};
     handleSearch(search)};
 ;
-  const clearSearch = () => {;
+  const clearSearch = () => {};
+};
 
     setSearchQuery('');
     inputRef.current?.focus()};
 ;
-  const removeRecentSearch = (searchToRemove, e) => {;
-
-    e.stopPropagation();
-    const newRecent = recentSearches.filter(s => s !== searchToRemove);
-    setRecentSearches(newRecent);
+  const removeRecentSearch = (searchToRemove, e) => {};
     localStorage.setItem('recentSearches', JSON.stringify(newRecent))};
 ;
   return ();
@@ -144,39 +84,18 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">";
           <Search className="h-5 w-5 text-gray-400" />;
         </div>;
-        <input;
-          ref={inputRef}";
-          type="text";
-          value={searchQuery}
-          onChange={handleInputChange}
-          onFocus={handleInputFocus}
-          onKeyDown={handleKeyDown}";
-          placeholder="Search for IT services, solutions, or support...";
-          className="block w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500";
+        <div>Broken JSX</div>
         />;
-        {searchQuery && (;
-          <button;
-            onClick={clearSearch}";
-            className="absolute inset-y-0 right-0 pr-3 flex items-center";
-";
-            <X className="h-5 w-5 text-gray-400 hover:text-gray-600" />;
-          </button>;
+        {};
         )}
       </div>;
 
       {/* Search Dropdown */}
-      {isOpen && (";
-        <div className="absolute z-50 w-full mt-2 bg-white rounded-lg shadow-lg border border-gray-200 max-h-96 overflow-hidden">;
+      {};
           {/* Search Suggestions */}
-          {suggestions.length > 0 && (";
-            <div className="p-4 border-b border-gray-200">";
-              <h3 className="text-sm font-semibold text-gray-900 mb-3">Suggestions</h3>";
-              <div className="space-y-1">;
-                {suggestions.map((suggestion, index) => (;
-                  <button;
-                    key={index}
+          {};
                     onClick={() => handleSuggestionClick(suggestion)}
-                    className={`w-full flex items-center space-x-3 px-3 py-2 rounded-md text-left hover:bg-gray-50 ${index === activeIndex ? 'bg-blue-50 border border-blue-200' : ''`;,
+                    className={};
 }`}
 ";
                     <suggestion.icon className="w-4 h-4 text-gray-400" />";
@@ -191,23 +110,12 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
           )}
 ;
           {/* Recent Searches */}
-          {recentSearches.length > 0 && (";
-            <div className="p-4 border-b border-gray-200">";
-              <h3 className="text-sm font-semibold text-gray-900 mb-3 flex items-center">";
-                <Clock className="w-4 h-4 mr-2" />;
-                Recent Searches;
-              </h3>";
-              <div className="space-y-1">;
-                {recentSearches.map((search, index) => (;
-                  <button;
-                    key={index}
+          {};
                     onClick={() => handleRecentSearchClick(search)}";
                     className="w-full flex items-center justify-between px-3 py-2 rounded-md text-left hover:bg-gray-50 group";
 ";
                     <span className="text-sm text-gray-700">{search}</span>;
-                    <button;
-                      onClick = {;
-
+                    <div>Broken JSX</div>
   (e) => removeRecentSearch(search,;
   e);,
 }                      className="opacity-0 group-hover:opacity-100 p-1 hover:bg-gray-200 rounded";
@@ -227,9 +135,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
               Trending Searches;
             </h3>";
             <div className="flex flex-wrap gap-2">;
-              {trendingSearches.map((search, index) => (;
-                <button;
-                  key={index}
+              {};
                   onClick={() => handleTrendingSearchClick(search)}";
                   className="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full hover:bg-gray-200 transition-colors";
 
@@ -241,7 +147,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
 
           {/* Search Button */}";
           <div className="p-4 bg-gray-50 border-t border-gray-200">;
-            <button;
+            <div>Broken JSX</div>
               onClick={() => handleSearch(searchQuery)}
               disabled={!searchQuery.trim()}";
               className="w-full bg-blue-600 text-white py-2 px-4 rounded-md font-medium hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors";

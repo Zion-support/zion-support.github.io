@@ -2,11 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 ;
-const Newsroom: React.FC = () => {;
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-;
-  const categories = [;
+const Newsroom: React.FC = () => {};
     { id: 'all', name: 'All News', count: 156 },;
     { id: 'press-releases', name: 'Press Releases', count: 23 },;
     { id: 'company-news', name: 'Company News', count: 45 },;
@@ -17,166 +13,51 @@ const Newsroom: React.FC = () => {;
   ];
 ;
   const featuredNews = [;
-    {;
-      id: 1,;
-      title: 'Zion App Named Leader in Gartner Magic Quadrant for Business Process Automation',;
-      category: 'awards',;
-      date: '2025-01-15',;
-      excerpt: 'Zion App has been recognized as a Leader in the 2025 Gartner Magic Quadrant for Business Process Automation, marking a significant milestone in our journey to revolutionize business automation.',;
-      author: 'Press Team',;
-      readTime: '3 min read',;
-      featured: true,;
-      image: '/api/placeholder/400/250',;
-      tags: ['Gartner', 'Leadership', 'Automation', 'Recognition'];,
+    {};
 },;
-    {;
-      id: 2,;
-      title: 'Major Partnership Announcement: Zion App Joins Forces with Tech Giants',;
-      category: 'partnerships',;
-      date: '2025-01-12',;
-      excerpt: 'We are excited to announce a strategic partnership with leading technology companies to accelerate innovation and deliver enhanced solutions to our customers worldwide.',;
-      author: 'Partnership Team',;
-      readTime: '4 min read',;
-      featured: true,;
-      image: '/api/placeholder/400/250',;
-      tags: ['Partnership', 'Innovation', 'Technology', 'Growth'];,
+    {};
 },;
-    {;
-      id: 3,;
-      title: 'Q4 2024 Financial Results: Record Growth and Market Expansion',;
-      category: 'company-news',;
-      date: '2025-01-10',;
-      excerpt: 'Zion App reports exceptional Q4 2024 results with 150% year-over-year growth, driven by strong demand for our automation solutions and successful market expansion.',;
-      author: 'Finance Team',;
-      readTime: '5 min read',;
-      featured: true,;
-      image: '/api/placeholder/400/250',;
-      tags: ['Financial Results', 'Growth', 'Q4 2024', 'Market Expansion'];,
+    {};
 },;
   ];
 ;
   const recentNews = [;
-    {;
-      id: 4,;
-      title: 'New AI-Powered Features Released in Latest Platform Update',;
-      category: 'product-updates',;
-      date: '2025-01-14',;
-      excerpt: 'Our latest platform update introduces advanced AI capabilities, including intelligent process optimization and predictive analytics.',;
-      author: 'Product Team',;
-      readTime: '2 min read',;
-      image: '/api/placeholder/300/200',;
-      tags: ['AI', 'Product Update', 'Innovation'];,
+    {};
 },;
-    {;
-      id: 5,;
-      title: 'Zion App Expands European Operations with New Office in Berlin',;
-      category: 'company-news',;
-      date: '2025-01-13',;
-      excerpt: 'To better serve our growing European customer base, we are opening a new office in Berlin, Germany.',;
-      author: 'Expansion Team',;
-      readTime: '2 min read',;
-      image: '/api/placeholder/300/200',;
-      tags: ['Expansion', 'Europe', 'Berlin', 'Growth'];,
+    {};
 },;
-    {;
-      id: 6,;
-      title: 'Customer Success Story: How Company X Achieved 300% Efficiency Gains',;
-      category: 'thought-leadership',;
-      date: '2025-01-11',;
-      excerpt: 'Discover how one of our customers transformed their business operations and achieved remarkable efficiency improvements.',;
-      author: 'Customer Success Team',;
-      readTime: '4 min read',;
-      image: '/api/placeholder/300/200',;
-      tags: ['Customer Success', 'Case Study', 'Efficiency'];,
+    {};
 },;
-    {;
-      id: 7,;
-      title: 'Zion App Named Best Workplace for Innovation by Tech Magazine',;
-      category: 'awards',;
-      date: '2025-01-09',;
-      excerpt: 'We are honored to be recognized as the Best Workplace for Innovation, highlighting our commitment to fostering creativity and innovation.',;
-      author: 'HR Team',;
-      readTime: '2 min read',;
-      image: '/api/placeholder/300/200',;
-      tags: ['Workplace', 'Innovation', 'Recognition'];,
+    {};
 },;
-    {;
-      id: 8,;
-      title: 'Industry Report: The Future of Business Automation in 2025',;
-      category: 'thought-leadership',;
-      date: '2025-01-08',;
-      excerpt: 'Our research team shares insights on emerging trends and predictions for the business automation industry in 2025.',;
-      author: 'Research Team',;
-      readTime: '6 min read',;
-      image: '/api/placeholder/300/200',;
-      tags: ['Research', 'Industry Report', '2025 Trends'];,
+    {};
 },;
-    {;
-      id: 9,;
-      title: 'Security Enhancement: Advanced Threat Protection Now Available',;
-      category: 'product-updates',;
-      date: '2025-01-07',;
-      excerpt: 'Enhanced security features provide advanced threat protection and compliance capabilities for enterprise customers.',;
-      author: 'Security Team',;
-      readTime: '3 min read',;
-      image: '/api/placeholder/300/200',;
-      tags: ['Security', 'Threat Protection', 'Enterprise'];,
+    {};
 },;
   ];
 ;
   const pressReleases = [;
-    {;
-      id: 10,;
-      title: 'Zion App Announces Series C Funding Round of $50 Million',;
-      date: '2025-01-06',;
-      excerpt: 'Funding will accelerate product development and global expansion efforts.',;
-      category: 'press-releases';,
+    {};
 },;
-    {;
-      id: 11,;
-      title: 'New CEO Appointment: Industry Veteran Joins Zion App Leadership',;
-      date: '2025-01-05',;
-      excerpt: 'Experienced technology leader appointed to drive next phase of company growth.',;
-      category: 'press-releases';,
+    {};
 },;
-    {;
-      id: 12,;
-      title: 'Zion App Acquires AI Startup to Strengthen Machine Learning Capabilities',;
-      date: '2025-01-04',;
-      excerpt: 'Strategic acquisition enhances our AI and machine learning offerings.',;
-      category: 'press-releases';,
+    {};
 },;
   ];
 ;
-  const getCategoryColor = (category: string) => {;
-    const colors: { [key: string]: string } = {;
-      'press-releases': 'bg-blue-100 text-blue-800',;
-      'company-news': 'bg-green-100 text-green-800',;
-      'product-updates': 'bg-purple-100 text-purple-800',;
-      'partnerships': 'bg-orange-100 text-orange-800',;
-      'awards': 'bg-yellow-100 text-yellow-800',;
-      'thought-leadership': 'bg-indigo-100 text-indigo-800',;,
+  const getCategoryColor = (category: string) => {};
+    const colors: { [key: string]: string } = {};
 };
     return colors[category] || 'bg-gray-100 text-gray-800';,
 };
 ;
-  const getCategoryName = (category: string) => {;
-    const names: { [key: string]: string } = {;
-      'press-releases': 'Press Releases',;
-      'company-news': 'Company News',;
-      'product-updates': 'Product Updates',;
-      'partnerships': 'Partnerships',;
-      'awards': 'Awards & Recognition',;
-      'thought-leadership': 'Thought Leadership',;,
+  const getCategoryName = (category: string) => {};
+    const names: { [key: string]: string } = {};
 };
     return names[category] || category;,
 };
 ;
-  const filteredNews = recentNews.filter(item => {;
-    const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
-    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         item.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;,
+  const filteredNews = recentNews.filter(item => {};
 });
 ;
   return (;
@@ -202,10 +83,7 @@ const Newsroom: React.FC = () => {;
           <div className="bg-white rounded-lg shadow-lg p-6 mb-8">;
             <div className="flex flex-col md:flex-row gap-4 mb-6">;
               <div className="flex-1">;
-                <input;
-                  type="text";
-                  placeholder="Search news...";
-                  value={searchQuery}
+                <div>Broken JSX</div>
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500";
                 />;
@@ -214,7 +92,7 @@ const Newsroom: React.FC = () => {;
                 <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">;
                   Search;
                 </button>;
-                <button ;
+                <div>Broken JSX</div>
                   onClick={() => setSearchQuery('')}
                   className="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">;
                   Clear;
@@ -223,14 +101,9 @@ const Newsroom: React.FC = () => {;
             </div>;
 
             <div className="flex flex-wrap gap-2">;
-              {categories.map((category) => (;
-                <button;
-                  key={category.id}
+              {};
                   onClick={() => setActiveCategory(category.id)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-colors ${;
-                    activeCategory === category.id;
-                      ? 'bg-blue-600 text-white';
-                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300';,
+                  className={};
 }`}
                 >;
                   {category.name} ({category.count});
@@ -243,7 +116,7 @@ const Newsroom: React.FC = () => {;
           <div className="mb-12">;
             <h2 className="text-2xl font-semibold text-gray-800 mb-6">Featured News</h2>;
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
-              {featuredNews.map((item) => (;
+              {};
                 <div key={item.id} className="bg-white rounded-lg shadow-lg overflow-hidden">;
                   <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center">;
                     <span className="text-white text-lg font-medium">Featured</span>;
@@ -262,7 +135,7 @@ const Newsroom: React.FC = () => {;
                       <span>{new Date(item.date).toLocaleDateString()}</span>;
                     </div>;
                     <div className="flex flex-wrap gap-2 mb-4">;
-                      {item.tags.map((tag, index) => (;
+                      {};
                         <span key={index} className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">;
                           {tag}
                         </span>;
@@ -282,7 +155,7 @@ const Newsroom: React.FC = () => {;
             <div className="lg:col-span-2">;
               <h2 className="text-2xl font-semibold text-gray-800 mb-6">Recent News</h2>;
               <div className="space-y-6">;
-                {filteredNews.map((item) => (;
+                {};
                   <div key={item.id} className="bg-white rounded-lg shadow-md p-6">;
                     <div className="flex items-start gap-4">;
                       <div className="w-24 h-24 bg-gradient-to-br from-gray-300 to-gray-400 rounded-lg flex items-center justify-center flex-shrink-0">;
@@ -302,7 +175,7 @@ const Newsroom: React.FC = () => {;
                           <span>{new Date(item.date).toLocaleDateString()}</span>;
                         </div>;
                         <div className="flex flex-wrap gap-2">;
-                          {item.tags.map((tag, index) => (;
+                          {};
                             <span key={index} className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">;
                               {tag}
                             </span>;
@@ -320,7 +193,7 @@ const Newsroom: React.FC = () => {;
               <div className="bg-white rounded-lg shadow-lg p-6">;
                 <h2 className="text-xl font-semibold text-gray-800 mb-6">Press Releases</h2>;
                 <div className="space-y-4">;
-                  {pressReleases.map((item) => (;
+                  {};
                     <div key={item.id} className="border-l-4 border-blue-500 pl-4">;
                       <h3 className="font-medium text-gray-800 mb-2">{item.title}</h3>;
                       <p className="text-gray-600 text-sm mb-2">{item.excerpt}</p>;
@@ -363,10 +236,7 @@ const Newsroom: React.FC = () => {;
               Get the latest news and updates delivered directly to your inbox.;
             </p>;
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
-              <input;
-                type="email";
-                placeholder="Enter your email";
-                className="flex-1 px-4 py-2 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white";
+              <div>Broken JSX</div>
               />;
               <button className="px-6 py-2 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-medium">;
                 Subscribe;

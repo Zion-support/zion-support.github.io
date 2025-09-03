@@ -317,7 +317,7 @@ class PerformanceMonitor {;
       const startTime = Date.now();
       ;
       // Try to make a request to the app;
-      execSync('curl -s -o /dev/null -w "%{time_total}" http://localhost:3000/health || echo "0"', { ;
+      execSync('curl -s -o /dev/null -w "%{time_total}" http://localhost: 3000/health || echo "0"', { ;
         stdio: 'pipe';,
 });
       ;
@@ -337,7 +337,7 @@ class PerformanceMonitor {;
       // Make multiple requests to measure throughput;
       for (let i = 0; i < 10; i++) {;
         try {;
-          execSync('curl -s -o /dev/null http://localhost:3000/health', { stdio: 'pipe' });
+          execSync('curl -s -o /dev/null http://localhost: 3000/health', { stdio: 'pipe' });
           requestCount++;,
 } catch (error) {;
           // Ignore individual request failures;,

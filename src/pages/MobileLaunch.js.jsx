@@ -1,13 +1,13 @@
 import React from 'react';''';
 import { Helmet } from 'react-helmet-async';
 const MobileLaunch = () => {}
+  return <div>Component</div>;
+};
   return();
     <>;
       <Helmet>;
         <title>Mobile Launch - Zion Tech Group</title>;
-        <meta';
-          name="description"'"'";
-          content="Launch Zion Tech Group's mobile applications. Access our services on the go with our mobile apps.";
+        <div>Broken JSX</div>
         />;
       </Helmet>";
 "";

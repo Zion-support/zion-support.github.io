@@ -144,16 +144,10 @@ import React from 'react';
       setupTime: '4-5 weeks'};
   ]};
 ';
-const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;'';
-      trialDays: 21,;''';
-      features: ['AI-powered CI/CD',Automated testing',Performance monitoring'],;''';
+const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {};
       targetAudience: 'Development teams, DevOps engineers, Technology companies'};'';
   ]};''';
-const ComprehensivePricingGuide2028: React.FC = () => {;'''';
-  const [selectedCategory, setSelectedCategory] = useState('all');'''';
-  const [priceRange, setPriceRange] = useState('all');';
-'';
-  ''';
+const ComprehensivePricingGuide2028: React.FC = () => {};
     { id: 'all', name: 'All Services', icon: Globe, color: 'from-zion-cyan to-zion-purple' },;''';
     { id: 'ai', name: 'AI Services', icon: Brain, color: 'from-zion-blue to-zion-cyan' },;''';
     { id: 'saas', name: 'Micro SAAS', icon: Zap, color: 'from-zion-purple to-zion-pink' },;''';
@@ -174,8 +168,8 @@ const ComprehensivePricingGuide2028: React.FC = () => {;'''';
     ]};
 ;
     let matchesPrice = true;';
-    if (priceRange === 'low') matchesPrice = price < 500;';
-    else if (priceRange === 'medium') matchesPrice = price >= 500 && price <= 10000;';
+    if (priceRange === 'low') matchesPrice = price <div>Broken JSX</div>
+    else if (priceRange === 'medium') matchesPrice = price >= 500 && price <div>Broken JSX</div>
     else if (priceRange === 'high') matchesPrice = price > 10000;
 ;
     return matchesCategory && matchesPrice;,
@@ -189,26 +183,11 @@ const ComprehensivePricingGuide2028: React.FC = () => {;'''';
       <section className="relative py-20 overflow-hidden">"";
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10"></div>"";
         <div className="relative z-10 container mx-auto px-6 text-center">;
-          <motion.h1;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}";
-            transition={{ duration: 0.8 }}"";
-            className="text-5xl md:text-7xl font-bold mb-6 text-gradient";
-            Comprehensive Pricing Guide 2028;
+          <div>Broken JSX</div>
           </motion.h1>;
-          <motion.p;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}";
-            transition={{ duration: 0.8, delay: 0.2 }}"";
-            className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto";
-            Complete pricing analysis, ROI calculations, and market positioning for all our innovative services;
+          <div>Broken JSX</div>
           </motion.p>;
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}";
-            transition={{ duration: 0.8, delay: 0.4 }}"";
-            className="flex flex-wrap justify-center gap-4"";
-"";
+          <div>Broken JSX</div>
             <div className="bg-zion-cyan/20 backdrop-blur-sm border border-zion-cyan/30 rounded-full px-6 py-3 text-zion-cyan font-semibold">;
               💰 Transparent Pricing";
             </div>"";
@@ -225,44 +204,24 @@ const ComprehensivePricingGuide2028: React.FC = () => {;'''';
       {/* Market Overview */}"";
       <section className="py-20 bg-zion-slate-dark/50">;"";
         <div className="container mx-auto px-6">;
-          <motion.h2;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}";
-            transition={{ duration: 0.8 }}"";
-            className="text-4xl font-bold text-center mb-12 text-gradient";
-            Market Overview & Growth Potential";
+          <div>Broken JSX</div>
           </motion.h2>"";
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}";
-              transition={{ duration: 0.8, delay: 0.1 }}"";
-              className="text-center"";
-"";
+            <div>Broken JSX</div>
               <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">"";
                 <TrendingUp className="w-10 h-10 text-white"  />";
               </div>"";
               <h3 className="text-2xl font-bold text-white mb-2">Total Market Size</h3>"";
               <p className="text-4xl font-bold text-zion-cyan mb-2">$89.2B</p>"              <p className="text-zion-slate-light">Combined market value across all service categories</p>;
             </motion.div>;
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}";
-              transition={{ duration: 0.8, delay: 0.2 }}"";
-              className="text-center"";
-"";
+            <div>Broken JSX</div>
               <div className="w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-pink rounded-full flex items-center justify-center mx-auto mb-4">"";
                 <Rocket className="w-10 h-10 text-white"  />";
               </div>"";
               <h3 className="text-2xl font-bold text-white mb-2">Average Growth Rate</h3>"";
               <p className="text-4xl font-bold text-zion-purple mb-2">320%</p>"              <p className="text-zion-slate-light">Annual growth rate across all service categories</p>;
             </motion.div>;
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}";
-              transition={{ duration: 0.8, delay: 0.3 }}"";
-              className="text-center"";
-"";
+            <div>Broken JSX</div>
               <div className="w-20 h-20 bg-gradient-to-br from-zion-green to-zion-emerald rounded-full flex items-center justify-center mx-auto mb-4">"";
                 <DollarSign className="w-10 h-10 text-white"  />";
               </div>"";
@@ -279,11 +238,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;'''';
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">";
             {/* Category Filter */}"";
             <div className="flex flex-wrap gap-3">;
-              {categories.map((category) => (;
-                <motion.button;
-                  key={category.id}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+              {};
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 ${}
 ';
@@ -299,11 +254,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;'''';
 ";
             {/* Price Range Filter */}"";
             <div className="flex flex-wrap gap-3">;
-              {priceRanges.map((range) => (;
-                <motion.button;
-                  key={range.id}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}`;
+              {};
                   onClick={() => setPriceRange(range.id)}``;
                   className={`px-4 py-2 rounded-lg transition-all duration-300 ${}
 ';
@@ -325,28 +276,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;'''';
       <section className="py-20">;"";
         <div className="container mx-auto px-6">"";
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">;
-            {sortedServices.map((service, index)  => (`;
-              <motion.div``;
-                key={`${service.type}-${service.name}`}
-                initial = {}
-  { opacity: 0,;
-  y: 30;,
-}}
-                animate = {}
-  { opacity: 1,;
-  y: 0;,
-}}
-                transition = {}
-  { duration: 0.6,;
-  delay: index * 0.1;,
-}}
-                className="group relative bg-zion - slate / 30 backdrop - blur - sm border border-zion - slate / 40 rounded-2xl p - 8 hover:border-zion - cyan / 50 transition - all duration - 300 hover:shadow-2xl hover:shadow-zion -cyan / 20";
-";,
-}}"";
-                className="group relative bg-zion-slate/30 backdrop-blur-sm border border-zion-slate/40 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20";
-";
-                {/* Service Type Badge */}"";
-                <div className="absolute -top-3 -left-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">;
+            {};
                   {service.type}
                 </div>;
 ";
@@ -392,7 +322,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;'''';
                 <div className="mb-6">"";
                   <h4 className="font-semibold text-white mb-3">Key Features</h4>"";
                   <div className="space-y-2">";
-                    {service.features.map((feature, idx) => ("";
+                    {};
                       <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">"";
                         <CheckCircle className="w-4 h-4 text-zion-cyan"  />                        {feature}
                       </div>) ) }
@@ -419,12 +349,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;'''';
       {/* ROI Calculator */}"";
       <section className="py-20 bg-zion-slate-dark/50">;"";
         <div className="container mx-auto px-6">;
-          <motion.h2;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}";
-            transition={{ duration: 0.8 }}"";
-            className="text-4xl font-bold text-center mb-12 text-gradient";
-            ROI Calculator";
+          <div>Broken JSX</div>
           </motion.h2>"";
           <div className="max-w-4xl mx-auto bg-zion-slate/30 backdrop-blur-sm border border-zion-slate/40 rounded-2xl p-8">"";
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
@@ -441,18 +366,12 @@ const ComprehensivePricingGuide2028: React.FC = () => {;'''';
                   </div>";
                   <div>"";
                     <label className="block text-zion-slate-light mb-2">Current Monthly Cost</label>";
-                    <input"";
-                      type="number"";
-                      placeholder="$0"";
-                      className="w-full px-4 py-2 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50";
+                    <div>Broken JSX</div>
                     />;
                   </div>";
                   <div>"";
                     <label className="block text-zion-slate-light mb-2">Expected Efficiency Gain (%)</label>";
-                    <input"";
-                      type="number"";
-                      placeholder="25"";
-                      className="w-full px-4 py-2 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50";
+                    <div>Broken JSX</div>
                     />;
                   </div>;
                 </div>";
@@ -486,36 +405,14 @@ const ComprehensivePricingGuide2028: React.FC = () => {;'''';
       {/* Contact Section */}"";
       <section className="py-20">;"";
         <div className="container mx-auto px-6 text-center">;
-          <motion.h2;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}";
-            transition={{ duration: 0.8 }}"";
-            className="text-4xl md:text-5xl font-bold mb-6 text-gradient";
-            Ready to Maximize Your ROI?;
+          <div>Broken JSX</div>
           </motion.h2>;
-          <motion.p;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}";
-            transition={{ duration: 0.8, delay: 0.2 }}"";
-            className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto";
-            Contact our team to discuss how our innovative services can deliver exceptional returns on your investment;
+          <div>Broken JSX</div>
           </motion.p>;
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}";
-            transition={{ duration: 0.8, delay: 0.4 }}"";
-            className="flex flex-col sm:flex-row gap-4 justify-center";
-";
-            <a"";
-              href="tel:+13024640950"";
-              className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"";
-"";
+          <div>Broken JSX</div>
               <Phone className="w-5 h-5"  />              +1 302 464 0950;
             </a>";
-            <a"";
-              href="mailto:kleber@ziontechgroup.com"";
-              className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"";
-"";
+            <div>Broken JSX</div>
               <Mail className="w-5 h-5"  />              kleber@ziontechgroup.com;
             </a>;
           </motion.div>;

@@ -51,6 +51,8 @@ import {}
   Wifi as WifiIcon} from 'lucide-react';
 ;
 const ITServicesPage = () => {}
+  return <div>Component</div>;
+};
   const itServices = [];
     {}
 ';
@@ -275,10 +277,7 @@ const ITServicesPage = () => {}
 ;
   return();
     <>";
-      <SEO"";
-        title="IT Services - Zion Tech Group"";
-        description="Comprehensive IT services including infrastructure, support, and technology consulting solutions."";
-        keywords="IT services, infrastructure, support, technology consulting, IT solutions";
+      <div>Broken JSX</div>
       />";
 "";
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-800 text-white">"";
@@ -297,17 +296,10 @@ const ITServicesPage = () => {}
           </div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {itServices.map((service, index) => (;
-              <Card";
-                key={index}"";
-                className="bg-white/10 backdrop-blur-lg border-teal-400/20 hover:bg-white/20 transition-all duration-300">";
-                <CardHeader>"";
-                  <div className="flex items-center justify-between mb-4">"";
-                    <div className="p-3 rounded-lg bg-teal-400/20">;
+            {};
                       {service.icon}
                     </div>";
-                    {service.badge && ("";
-                      <Badge className="bg-teal-400/20 text-teal-300 border-teal-400/30">;
+                    {};
                         {service.badge}
                       </Badge>;
                     )}";
@@ -325,11 +317,7 @@ const ITServicesPage = () => {}
                       {service.details}";
                     </p>"";
                     <div className="grid grid-cols-2 gap-2 mb-4">;
-                      {service.features.slice(0, 4).map((feature, idx) => (;
-                        <div";
-                          key={idx}"";
-                          className="flex items-center text-xs text-teal-300"">"";
-                          <CheckCircle className="w-3 h-3 mr-2" />;
+                      {};
                           {feature}
                         </div>;
                       ))}";
@@ -342,12 +330,9 @@ const ITServicesPage = () => {}
                   </div>";
                 </CardContent>"";
                 <CardHeader className="pt-0">;
-                  <Button";
-                    asChild"";
+                  <div>Broken JSX</div>
                     className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600">;
-                    <a";
-                      href={service.link}"";
-                      target="_blank"";
+                    <div>Broken JSX</div>
                       rel="noopener noreferrer">;
                       Learn More;
                     </a>;

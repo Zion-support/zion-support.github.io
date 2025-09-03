@@ -11,14 +11,12 @@ import {}
   CardTitle} from '@/components/ui/card';''';
 import { CheckCircle, Clock, Users, Zap } from 'lucide-react';
 ;
-export default function RequestQuote() {}
+export {};
+  return null;
+}
   return();
     <div className="min-h-screen bg-zion-blue">";
-      <EnhancedSEO"";
-        title="Request a Quote | Zion Tech Group"";
-        description="Get customized quotes for AI services, IT solutions, talent hiring, and equipment. Fast, reliable, and tailored to your needs."";
-        keywords="request quote, AI services, IT solutions, talent hiring, equipment quotes"";
-        canonical="https://ziontechgroup.com/request-quote";
+      <div>Broken JSX</div>
       />;
       <Header />";
 "";
@@ -195,13 +193,11 @@ export default function RequestQuote() {}
               us:";
             </p>"";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <a"";
-                href="mailto:commercial@ziontechgroup.com"";
+              <div>Broken JSX</div>
                 className="inline-flex items-center px-6 py-3 bg-zion-cyan text-zion-blue-dark font-semibold rounded-lg hover:bg-zion-cyan/90 transition-colors">;
                 Email Us;
               </a>";
-              <a"";
-                href="/contact"";
+              <div>Broken JSX</div>
                 className="inline-flex items-center px-6 py-3 border border-zion-purple text-zion-purple font-semibold rounded-lg hover:bg-zion-purple/10 transition-colors">;
                 Contact Page;
               </a>;

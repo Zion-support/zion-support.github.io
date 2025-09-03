@@ -5,32 +5,28 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ResumeWizard } from '@/components/resume-builder/ResumeWizard';''';
 import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder';
 function PortfolioBuilderContent() {}
+  return null;
+}
 ';
 '';
 ''';
   const [activeTab, setActiveTab] = useState('resume');
   return();
     <>;
-      <SEO;
-        title="Portfolio Builder | Zion AI Marketplace"";
-        description="Create and customize your resume and portfolio to showcase your skills and experience.";
+      <div>Broken JSX</div>
       />";
 "";
       <main className="container mx-auto px-4 py-8">"";
         <h1 className="text-3xl font-bold mb-8">Resume & Portfolio Builder</h1>;
 
-        <Tabs;
-          value={activeTab}";
-          onValueChange={setActiveTab}"";
+        <div>Broken JSX</div>
           className="space-y-6"">"";
           <TabsList className="bg-muted/60 p-0">";
-            <TabsTrigger"";
-              value="resume"";
+            <div>Broken JSX</div>
               className="data-[state=active]:bg-background">;
               Resume;
             </TabsTrigger>";
-            <TabsTrigger"";
-              value="portfolio"";
+            <div>Broken JSX</div>
               className="data-[state=active]:bg-background">;
               Portfolio;
             </TabsTrigger>;
@@ -48,7 +44,9 @@ function PortfolioBuilderContent() {}
     </>;
   );,
 }
-export default function PortfolioBuilder() {}
+export {};
+  return null;
+}
   return();
     <ProtectedRoute>;
       <PortfolioBuilderContent />;

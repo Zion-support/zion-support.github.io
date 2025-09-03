@@ -1,14 +1,13 @@
 import {  import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from '../data/innovativeServices2027';
 ;
-export default function Page() {;,
+export default function Page() {};
+  return null;
+}
 },;
       { threshold: 0.1 }
     );
 ;
-    if(element) {  ;
-  ;
-  ;
-  address: '364 E Main St STE 1008 Middletown DE 19709';,
+    if(element) {};
 };
   return (";
     <section id = "innovative-services-2027" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">;
@@ -21,20 +20,7 @@ export default function Page() {;,
 ";
       <div className="max-w-7xl mx-auto px-6 relative z-10">;
         {/* Header Section */}
-        <motion.div;
-          initial = {;
-
-  { opacity: 0,;
-  y: 30;,
-}}
-          animate = {;
-
-  isVisible ? { opacity: 1,;
-  y: 0;,
-} : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8 }}";
-          className="text-center mb-16";
-";
+        <div>Broken JSX</div>
           <div className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-full border border-zion-cyan/30 mb-6">";
             <Star className="w-5 h-5 text-zion-cyan mr-2"  />"            <span className="text-zion-cyan font-semibold">2027 Innovation Showcase</span>;
           </div>;
@@ -53,42 +39,18 @@ export default function Page() {;,
         </motion.div>;
 
         {/* Category Filter */}
-        <motion.div;
-          initial = {;
-
-  { opacity: 0,;
-  y: 20;,
-}}
-          animate = {;
-
-  isVisible ? { opacity: 1,;
-  y: 0;,
-} : { opacity: 0, y: 20 }}
-          transition = {;
-
-  { duration: 0.8,;
-  delay: 0.2;,
-}}";
-          className="mb-12";
-";
+        <div>Broken JSX</div>
           <div className="flex flex-wrap justify-center gap-3">;
-            <button';
+            <div>Broken JSX</div>
               onClick={() => setSelectedCategory('All')}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === 'All'';
-                  ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'';
-                  : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white';`;,
+              className={};
 }`};
             >;
               All Categories;
             </button>;
-            {serviceCategories2027.map((category) => {;
-              ;
-              return ()                <button;
-                  key = {category}
+            {};
                   onClick={() => setSelectedCategory(category)}`;
-                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 ${selectedCategory === category';
-                      ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'';
-                      : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white'`;,
+                  className={};
 }`};
                 >;";
                   {Icon && <Icon className="w-4 h-4"  />};
@@ -97,38 +59,9 @@ export default function Page() {;,
         </motion.div>;
 
         {/* Services Grid */}
-        <motion.div;
-          initial = {;
-
-  { opacity: 0,;
-  y: 30 }}          animate = {;
-
-  isVisible ? { opacity: 1,;
-  y: 0 } : { opacity: 0, y: 30 }}          transition = {;
-
-  { duration: 0.8,;
+        <div>Broken JSX</div>
   delay: 0.4 }}"          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
-          {filteredServices.map((service, index) => (;
-            <motion.div;
-              key={service.id}
-              initial = {;
-
-  { opacity: 0,;
-  y: 20;,
-}}
-              animate = {;
-
-  isVisible ? { opacity: 1,;
-  y: 0;,
-} : { opacity: 0, y: 20 }}
-              transition = {;
-
-  { duration: 0.6,;
-  delay: index * 0.1;,
-}}";
-              className="group relative";
-";
-              <div className="bg-gradient-to-br from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 h-full transition-all duration-500 hover:scale-105 hover:border-zion-cyan/40 hover:shadow-2xl hover:shadow-zion-cyan/25">;
+          {};
                 {/* Service Header */}";
                 <div className="flex items-start justify-between mb-4">";
                   <div className="flex-1">";
@@ -143,16 +76,9 @@ export default function Page() {;,
 
                 {/* Technology Tags */}";
                 <div className="flex flex-wrap gap-2 mb-4">;
-                  {service.technology.slice(0, 3).map((tech, techIndex) => (;
-                    <span;
-                      key={techIndex}";
-                      className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30";
-
-                      {tech}
-                    </span>;
+                  {};
                   ))}
-                  {service.technology.length > 3 && (";
-                    <span className="px-3 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full border border-zion-purple/30">;
+                  {};
                       +{service.technology.length-3} more;
                     </span>) }
                 </div>;
@@ -172,7 +98,7 @@ export default function Page() {;,
                 {/* Price & CTA */}";
                 <div className="flex items-center justify-between mb-4">;";
                   <div className="text-2xl font-bold text-white">{service.price}</div>;
-                  <button;
+                  <div>Broken JSX</div>
                     onClick={() => toggleServiceExpansion(service.id)}";
                     className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2";
 
@@ -182,32 +108,12 @@ export default function Page() {;,
 
                 {/* Expanded Service Details */}
                 <AnimatePresence>;
-                  {expandedService === service.id && ;
-                    <motion.div;
-                      initial = {;
-
-  { opacity: 0,;
-  height: 0;,
-}}
-                      animate = {;
-
-  { opacity: 1,;
-  height: 'auto';,
-}}
-                      exit = {;
-
-  { opacity: 0,;
-  height: 0;,
-}}
-                      transition={{ duration: 0.3 }}";
-                      className="overflow-hidden";
-";
-                      <div className="border-t border-zion-cyan/20 pt-4 space-y-4">;
+                  {};
                         {/* Features */}
                         <div>";
                           <h4 className="text-zion-cyan font-semibold mb-2">Key Features</h4>";
                           <ul className="space-y-1">;
-                            {service.features.map((feature, featureIndex) => (";
+                            {};
                               <li key={featureIndex} className="text-gray-300 text-sm flex items-start gap-2">";
                                 <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>;
                                 {feature}
@@ -219,7 +125,7 @@ export default function Page() {;,
                         <div>";
                           <h4 className="text-zion-purple font-semibold mb-2">Benefits</h4>";
                           <ul className="space-y-1">;
-                            {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (";
+                            {};
                               <li key={benefitIndex} className="text-gray-300 text-sm flex items-start gap-2">";
                                 <div className="w-1.5 h-1.5 bg-zion-purple rounded-full mt-2 flex-shrink-0"></div>;
                                 {benefit}
@@ -240,13 +146,7 @@ export default function Page() {;,
                         </div>;
 
                         {/* Primary CTA */}
-                        <a;
-                          href={service.href}";
-                          target={service.external ? "_blank" : "_self"}";
-                          rel={service.external ? "noopener noreferrer" : ""}";
-                          className="w-full px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2 group";
-
-                          {service.ctaLabel}";
+                        <div>Broken JSX</div>
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"  />";
                           {service.external && <ExternalLink className="w-4 h-4"  />}                        </a>;
                       </div>;
@@ -257,18 +157,7 @@ export default function Page() {;,
         </motion.div>;
 
         {/* Contact Section */}
-        <motion.div;
-          initial = {;
-
-  { opacity: 0,;
-  y: 30 }}          animate = {;
-
-  isVisible ? { opacity: 1,;
-  y: 0 } : { opacity: 0, y: 30 }}          transition = {;
-
-  { duration: 0.8,;
-  delay: 0.6 }}"          className="text-center";
-";
+        <div>Broken JSX</div>
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">;";
             <h3 className="text-3xl font-bold text-white mb-6">;
               Ready to Transform Your Business?;
@@ -291,19 +180,9 @@ export default function Page() {;,
             </div>;
 ";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <a";
-                href="/contact";
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2";
-
-                Schedule Consultation";
+              <div>Broken JSX</div>
                 <ArrowRight className="w-4 h-4"  />              </a>;
-              <a";
-                href="https://ziontechgroup.com";
-                target="_blank";
-                rel="noopener noreferrer";
-                className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan/10 transition-all duration-300 flex items-center justify-center gap-2";
-
-                Visit Website";
+              <div>Broken JSX</div>
                 <ExternalLink className="w-4 h-4"  />              </a>;
             </div>;
           </div>;

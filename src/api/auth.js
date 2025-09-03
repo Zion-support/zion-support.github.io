@@ -1,6 +1,8 @@
 const API_URL = import.meta.env.VITE_API_URL || '';
 ;
-export async function requestPasswordReset(email) {}
+export {};
+  return null;
+}
   const res = await fetch(`${API_URL}/auth/forgot`, {}
 ';
 '';
@@ -13,7 +15,9 @@ export async function requestPasswordReset(email) {}
   return res.json().catch(() => ({}));,
 }
 ;
-export async function verifyResetCode(email, code) {}
+export {};
+  return null;
+}
 `;
   const res = await fetch(`${API_URL}/auth/verify-code`, {}
 ';
@@ -27,7 +31,9 @@ export async function verifyResetCode(email, code) {}
   return res.json();,
 }
 ;
-export async function resetPassword(token, password) {}
+export {};
+  return null;
+}
 `;
   const res = await fetch(`${API_URL}/auth/reset`, {}
 ';

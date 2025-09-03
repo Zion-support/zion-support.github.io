@@ -1,17 +1,13 @@
 // comment;
-export class jobServiceService {;
-  constructor() {;
-    this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api";,
+export class jobServiceService {};
 }
 ;
-  async get() {;
-    try {;
+  async get() {};
       const response = await fetch("${this.baseUrl}/jobservice");,
 }
       return await response.json();,
 }
-    } catch (error) {;
-      console.error("Error fetching data:", error);,
+    } catch (error) {};
 }
       throw error;,
 }

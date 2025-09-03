@@ -4,6 +4,8 @@ import { Brain, Cpu, Cloud, Zap, Globe, CheckCircle, Star, Phone, Mail, MapPin, 
 import { SEOHead } from "../components/SEOHead.jsx";
 ;import { SPECIALIZED_IT_SERVICES_2025 } from "../data/specializedITServices2025";
 const InnovativeNewServices2025 = () => {}
+  return <div>Component</div>;
+};
 ';
 '';
 ''';
@@ -23,8 +25,8 @@ const InnovativeNewServices2025 = () => {}
         // All services have a price property;
         const servicePrice = service.price;';
         const priceMatch = selectedPriceRange === 'all' ||'';
-            (selectedPriceRange === '0-2000' && service.price < 2000) ||'';
-            (selectedPriceRange === '2000-5000' && service.price >= 2000 && service.price < 5000) ||'';
+            (selectedPriceRange === '0-2000' && service.price <div>Broken JSX</div>
+            (selectedPriceRange === '2000-5000' && service.price >= 2000 && service.price <div>Broken JSX</div>
             (selectedPriceRange === '5000+' && service.price >= 5000);
         return categoryMatch && priceMatch});
     const getCategoryIcon = (category) => {}
@@ -228,9 +230,7 @@ const InnovativeNewServices2025 = () => {}
                 </div>) }) }
           </div>";
 "";
-          {filteredServices.length === 0 && (<div className="text-center py-20">"";
-              <h3 className="text-2xl font-bold text-gray-400 mb-4">No services found</h3>"";
-              <p className="text-gray-500 mb-6">Try adjusting your filters to see more services</p>;
+          {};
               <button onClick={() => {}
 '";
                 setSelectedCategory('all');'"'";

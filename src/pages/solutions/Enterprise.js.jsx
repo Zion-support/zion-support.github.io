@@ -9,6 +9,8 @@ import {}
   BarChart3,''';
   Lock} from 'lucide-react';
 const EnterpriseSolutions = () => {}
+  return <div>Component</div>;
+};
   const solutions = [];
     {}
 ';
@@ -102,13 +104,11 @@ const EnterpriseSolutions = () => {}
             measurable results across all departments.";
           </p>"";
           <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-            <Link"";
-              to="/contact"";
+            <div>Broken JSX</div>
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">;
               Schedule a Demo;
             </Link>";
-            <Link"";
-              to="/contact"";
+            <div>Broken JSX</div>
               className="px-8 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-all duration-300">;
               Get Enterprise Quote;
             </Link>;
@@ -127,8 +127,7 @@ const EnterpriseSolutions = () => {}
             {solutions.map((solution, index) => {}
               const Icon = solution.icon;
               return();
-                <div";
-                  key={index}"";
+                <div>Broken JSX</div>
                   className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300"">"";
                   <div className="flex items-center mb-6">"";
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4">"";
@@ -140,30 +139,18 @@ const EnterpriseSolutions = () => {}
                   <p className="text-gray-300 mb-6">{solution.description}</p>";
 "";
                   <ul className="space-y-3 mb-6">;
-                    {solution.features.map((feature, featureIndex) => (;
-                      <li";
-                        key={featureIndex}"";
-                        className="flex items-center space-x-3"">"";
-                        <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>"";
+                    {};
                         <span className="text-gray-300">{feature}</span>;
                       </li>;
                     ))}
                   </ul>;
 
-                  <Link";
-                    to={solution.href}"";
+                  <div>Broken JSX</div>
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300">;
                     Learn More";
-                    <svg"";
-                      className="w-4 h-4 ml-2"";
-                      fill="none"";
-                      stroke="currentColor"";
+                    <div>Broken JSX</div>
                       viewBox="0 0 24 24">";
-                      <path"";
-                        strokeLinecap="round"";
-                        strokeLinejoin="round"";
-                        strokeWidth={2}"";
-                        d="M9 5l7 7-7 7";
+                      <div>Broken JSX</div>
                       />;
                     </svg>;
                   </Link>;
@@ -185,8 +172,7 @@ const EnterpriseSolutions = () => {}
             {industries.map((industry, index) => {}
               const Icon = industry.icon;
               return();
-                <div";
-                  key={index}"";
+                <div>Broken JSX</div>
                   className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300"">"";
                   <div className="flex items-center mb-6">"";
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4">"";
@@ -198,10 +184,7 @@ const EnterpriseSolutions = () => {}
                   <p className="text-gray-300 mb-6">{industry.description}</p>";
 "";
                   <div className="grid grid-cols-1 gap-3">;
-                    {industry.solutions.map((solution, solutionIndex) => (;
-                      <div";
-                        key={solutionIndex}"";
-                        className="bg-gray-700/50 rounded-lg p-3"">"";
+                    {};
                         <span className="text-gray-300">{solution}</span>;
                       </div>;
                     ))}
@@ -221,7 +204,7 @@ const EnterpriseSolutions = () => {}
           </h2>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {[];
+            {};
               {}
 ';
 '';
@@ -274,13 +257,11 @@ const EnterpriseSolutions = () => {}
               in your organization.";
             </p>"";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <Link"";
-                to="/contact"";
+              <div>Broken JSX</div>
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">;
                 Schedule Enterprise Demo;
               </Link>";
-              <Link"";
-                to="/contact"";
+              <div>Broken JSX</div>
                 className="px-8 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-all duration-300">;
                 Contact Sales Team;
               </Link>;

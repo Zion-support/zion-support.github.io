@@ -1,9 +1,9 @@
 import React from 'react';
 import { Shield, TrendingUp, Globe, AlertTriangle, BarChart3, Users, CheckCircle, Star, Zap } from 'lucide-react';
 ;
-export default function AISupplyChainRiskManagement() {;
-  return (;
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+export default function AISupplyChainRiskManagement() {};
+  return null;
+}
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto text-center">;
@@ -19,13 +19,11 @@ export default function AISupplyChainRiskManagement() {;
             Proactively identify, assess, and mitigate supply chain risks with intelligent AI algorithms and real-time monitoring.;
           </p>;
           <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-            <a;
-              href="https://ziontechgroup.com/contact";
+            <div>Broken JSX</div>
               className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300">;
               Get Started;
             </a>;
-            <a;
-              href="#demo";
+            <div>Broken JSX</div>
               className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300">;
               Watch Demo;
             </a>;
@@ -139,8 +137,7 @@ export default function AISupplyChainRiskManagement() {;
                   Email support;
                 </li>;
               </ul>;
-              <a;
-                href="https://ziontechgroup.com/contact";
+              <div>Broken JSX</div>
                 className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-300 block text-center">;
                 Get Started;
               </a>;
@@ -182,8 +179,7 @@ export default function AISupplyChainRiskManagement() {;
                   API access;
                 </li>;
               </ul>;
-              <a;
-                href="https://ziontechgroup.com/contact";
+              <div>Broken JSX</div>
                 className="w-full bg-white text-green-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 block text-center">;
                 Get Started;
               </a>;
@@ -222,8 +218,7 @@ export default function AISupplyChainRiskManagement() {;
                   Custom training;
                 </li>;
               </ul>;
-              <a;
-                href="https://ziontechgroup.com/contact";
+              <div>Broken JSX</div>
                 className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-300 block text-center">;
                 Contact Sales;
               </a>;
@@ -358,13 +353,11 @@ export default function AISupplyChainRiskManagement() {;
             Join industry leaders who trust AI-powered risk management to protect their operations and ensure business continuity.;
           </p>;
           <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-            <a;
-              href="https://ziontechgroup.com/contact";
+            <div>Broken JSX</div>
               className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300">;
               Start Free Trial;
             </a>;
-            <a;
-              href="tel:+13024640950";
+            <div>Broken JSX</div>
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-all duration-300">;
               Call +1 302 464 0950;
             </a>;

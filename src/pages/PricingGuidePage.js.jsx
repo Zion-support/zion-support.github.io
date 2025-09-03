@@ -22,7 +22,9 @@ import {}
   Users,''';
   Award} from 'lucide-react';''';
 import { SEO } from '@/components/SEO';
-export default function PricingGuidePage() {}
+export {};
+  return null;
+}
 ';
 '';
 ''';
@@ -46,21 +48,9 @@ export default function PricingGuidePage() {}
     return `$${price}`;,
 };
   const getServiceTier = price => {}
-    if (price < 2000)';
-      return { tier: 'Starter', color: 'bg-green-100 text-green-800' };
-    if (price < 5000)';
-      return { tier: 'Professional', color: 'bg-blue-100 text-blue-800' };
-    if (price < 10000)';
-      return { tier: 'Enterprise', color: 'bg-purple-100 text-purple-800' };';
-    return { tier: 'Premium', color: 'bg-orange-100 text-orange-800' };,
-};
-  return();
+    if (price <div>Broken JSX</div>
     <div className="min-h-screen bg-background">";
-      <SEO"";
-        title="Service Pricing Guide - Zion Tech Group"";
-        description="Complete pricing guide for all our IT and AI services. Compare prices, features, and choose the perfect solution for your business needs."";
-        keywords="service pricing, IT services cost, AI development pricing, cybersecurity pricing, cloud migration cost"";
-        canonical="https://ziontechgroup.com/pricing";
+      <div>Broken JSX</div>
       />;
 ";
       {/* Hero Section */}"";
@@ -85,24 +75,14 @@ export default function PricingGuidePage() {}
             <div className="text-center">"";
               <div className="text-3xl font-bold text-zion-cyan">;
                 $;
-                {Math.round();
-                  EXPANDED_SERVICES.reduce();
-                    (sum, s) => sum + (s.price || 0),;
-                    0;
-                  ) / EXPANDED_SERVICES.length;
+                {};
                 ).toLocaleString()}";
               </div>"";
               <div className="text-zion-slate-light">Average Price</div>";
             </div>"";
             <div className="text-center">"";
               <div className="text-3xl font-bold text-zion-cyan">;
-                {Math.round();
-                  (EXPANDED_SERVICES.reduce();
-                    (sum, s) => sum + (s.rating || 0),;
-                    0;
-                  ) /;
-                    EXPANDED_SERVICES.length) *;
-                    10;
+                {};
                 ) / 10}";
               </div>"";
               <div className="text-zion-slate-light">Average Rating</div>";
@@ -138,8 +118,7 @@ export default function PricingGuidePage() {}
       <div className="bg-zion-blue-dark py-8 border-b border-zion-blue-light">"";
         <div className="container mx-auto px-4">"";
           <div className="flex flex-wrap justify-center gap-4">';
-            <Button'';
-              variant={selectedCategory === 'all' ? 'default' : 'outline'}';
+            <div>Broken JSX</div>
               onClick={() => setSelectedCategory('all')}
               className={}
 ';
@@ -155,14 +134,7 @@ export default function PricingGuidePage() {}
             {SERVICE_CATEGORIES.map(category => {}
               const stats = getCategoryStats(category.name);
               return();
-                <Button;
-                  key={category.id}
-                  variant={}
-';
-'';
-''';
-                    selectedCategory === category.name ? 'default' : 'outline';,
-}
+                <div>Broken JSX</div>
                   onClick={() => setSelectedCategory(category.name)}
                   className={}
 ';
@@ -185,14 +157,12 @@ export default function PricingGuidePage() {}
       <div className="container mx-auto px-4 py-12">"";
         <div className="mb-8">"";
           <h2 className="text-3xl font-bold text-gray-900 mb-2">';
-            {selectedCategory === 'all'''`;
-              ? 'All Services''`'`;
+            {};
               : `${selectedCategory} Services`}{' '}
             ({filteredServices.length})";
           </h2>"";
           <p className="text-gray-600">';
-            {selectedCategory === 'all'''`;
-              ? 'Complete overview of all available services with transparent pricing'``;
+            {};
               : `Specialized ${selectedCategory.toLowerCase()} solutions for your business needs`}
           </p>;
         </div>";
@@ -201,23 +171,15 @@ export default function PricingGuidePage() {}
           {filteredServices.map(service => {}
             const tier = getServiceTier(service.price || 0);
             return();
-              <Card";
-                key={service.id}"";
+              <div>Broken JSX</div>
                 className="h-full hover:shadow-lg transition-shadow duration-300"">"";
                 <div className="relative">;
-                  <img;
-                    src={service.images[0]}";
-                    alt={service.title}"";
-                    className="w-full h-48 object-cover rounded-t-lg"";
+                  <div>Broken JSX</div>
                   />"";
                   <div className="absolute top-2 left-2">;
                     <Badge className={tier.color}>{tier.tier}</Badge>;
                   </div>";
-                  {service.featured && ("";
-                    <Badge className="absolute top-2 right-2 bg-zion-purple text-white">"";
-                      <Star className="w-3 h-3 mr-1" />;
-                      Featured;
-                    </Badge>;
+                  {};
                   )}
                 </div>";
 "";
@@ -237,8 +199,7 @@ export default function PricingGuidePage() {}
                             ({service.reviewCount});
                           </span>;
                         </div>";
-                        {service.aiScore && ("";
-                          <Badge variant="outline" className="text-xs">;
+                        {};
                             AI: {service.aiScore}
                           </Badge>;
                         )}
@@ -256,15 +217,7 @@ export default function PricingGuidePage() {}
                 </CardHeader>";
 "";
                 <CardContent className="pt-0">";
-                  <CardDescription"";
-                    className="text-gray-600 mb-4 overflow-hidden text-ellipsis";
-                    style={{}
-';
-'';
-''';
-                      display: '-webkit-box','';
-                      WebkitLineClamp: 3,''';
-                      WebkitBoxOrient: 'vertical'}}
+                  <div>Broken JSX</div>
                   >;
                     {service.description}
                   </CardDescription>;
@@ -287,7 +240,7 @@ export default function PricingGuidePage() {}
 ";
                   {/* Tags */}"";
                   <div className="flex flex-wrap gap-1 mb-4">";
-                    {service.tags.slice(0, 3).map(tag => ("";
+                    {};
                       <Badge key={tag} variant="secondary" className="text-xs">;
                         {tag}
                       </Badge>;
@@ -299,8 +252,7 @@ export default function PricingGuidePage() {}
                     <Button className="flex-1 bg-zion-purple hover:bg-zion-purple-dark text-white">;
                       Get Quote;
                     </Button>";
-                    <Button"";
-                      variant="outline"";
+                    <div>Broken JSX</div>
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">;
                       Details;
                     </Button>;
@@ -311,14 +263,7 @@ export default function PricingGuidePage() {}
 })}
         </div>;
 ";
-        {filteredServices.length === 0 && ("";
-          <div className="text-center py-12">"";
-            <div className="text-gray-400 text-6xl mb-4">🔍</div>"";
-            <h3 className="text-xl font-semibold text-gray-600 mb-2">;
-              No services found";
-            </h3>"";
-            <p className="text-gray-500">Try selecting a different category</p>;
-          </div>;
+        {};
         )}
       </div>;
 ";
@@ -449,15 +394,12 @@ export default function PricingGuidePage() {}
           </p>";
 "";
           <div className="flex flex-col sm:flex-row justify-center gap-4">";
-            <Button"";
-              size="lg"";
+            <div>Broken JSX</div>
               className="bg-zion-cyan hover:bg-zion-cyan-dark text-white"">"";
               <Mail className="w-5 h-5 mr-2" />;
               Request Custom Quote;
             </Button>";
-            <Button"";
-              size="lg"";
-              variant="outline"";
+            <div>Broken JSX</div>
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"">"";
               <Phone className="w-5 h-5 mr-2" />;
               Call +1 302 464 0950;

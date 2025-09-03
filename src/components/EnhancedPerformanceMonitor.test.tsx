@@ -1,15 +1,11 @@
-  it(displays expected content", () => {;
-    render(<EnhancedPerformanceMonitor  />)";
+  it(displays expected content", () => {};
 import { render, screen } from &apos;@testing - library/react",;
 import EnhancedPerformanceMonitor from &apos;./EnhancedPerformanceMonitor;
-describe(&apos;EnhancedPerformanceMonitor&apos, () => {;
-  it(&apos;renders without crashing&apos, () => {;
-    render();,
+describe(&apos;EnhancedPerformanceMonitor&apos, () => {};
 }
     expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});,
 }
-  it(&apos;displays expected content&apos, () => {;
-    render();,
+  it(&apos;displays expected content&apos, () => {};
 }
     // comment;
     render(<EnhancedPerformanceMonitor / >)";

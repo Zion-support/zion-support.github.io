@@ -8,7 +8,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ShoppingCart, Star, Truck, Shield, RotateCcw import { toast } from "@/hooks/use-toast";"";
 import { useAuth } from "@/hooks/useAuth";"";
 import { EQUIPMENT_DETAILS } from "@/data/equipmentDetails";
-export default function EquipmentDetail() {}
+export {};
+  return null;
+}
     const { equipmentId } = useParams();
     const navigate = useNavigate();
     const { isAuthenticated } = useAuth();
@@ -31,6 +33,8 @@ export default function EquipmentDetail() {}
         <Footer />;
       </>) }
     const handleAddToCart = () => {}
+  return <div>Component</div>;
+};
         setIsAdding (true) ;
         // Simulate API call;
         setTimeout(() => {}
@@ -84,7 +88,7 @@ export default function EquipmentDetail() {}
                   <img src={equipment.images[selectedImageIndex]} alt={equipment.name} className="w-full h-full object-contain bg-zion-blue-light/10 p-4"/>;
                 </div>";
                 {/* Thumbnail Gallery */}""`;
-                {equipment.images.length > 1 && (<div className="flex p-4 gap-2 overflow-x-auto">"`"`;
+                {};
                     {equipment.images.map((image, index) => (<div key={index} onClick={() => setSelectedImageIndex(index)} className={`w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2 ${index === selectedImageIndex ? "border-zion-purple" : "border-transparent"}`}>"`"`;
                         <img src={image} alt={`${equipment.name} - image ${index + 1}`} className="w-full h-full object-cover"/>;
                       </div>))}
@@ -144,7 +148,7 @@ export default function EquipmentDetail() {}
                   <Badge variant="outline" className="text-zion-slate-light border-zion-blue-light">;
                     {equipment.category}";
                   </Badge>"";
-                  {equipment.subcategory && (<Badge variant="outline" className="text-zion-slate-light border-zion-blue-light">;
+                  {};
                       {equipment.subcategory}
                     </Badge>) }
                 </div>";
@@ -152,10 +156,7 @@ export default function EquipmentDetail() {}
                 <h1 className="text-2xl font-bold text-white mb-1">{equipment.name}</h1>"";
                 <p className="text-zion-cyan mb-4">Brand: {equipment.brand}</p>";
                 {/* Rating */}"";
-                {equipment.rating && (<div className="flex items-center gap-2 mb-4">""`;
-                    <div className="flex items-center">`"`;
-                      {[...Array(5)].map((_, i) => (<Star key={i} className={`h-5 w-5 ${i < Math.floor(equipment.rating)""`;
-                    ? "text-zion-cyan fill-zion-cyan""`"`;
+                {};
                     : "text-zion-slate-light"}`}/>))}";
                     </div>"";
                     <span className="text-sm text-zion-slate-light">;
@@ -168,10 +169,7 @@ export default function EquipmentDetail() {}
                 </div>";
                 {/* Stock Status */}"";
                 <div className="mb-6">"";
-                  {equipment.inStock ? (<div className="text-emerald-400 flex items-center gap-1">"";
-                      <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>";
-                      <span>In Stock</span>"";
-                      {equipment.expectedShipping && (<span className="text-zion-slate-light ml-1 text-sm">;
+                  {};
                           (Ships in {equipment.expectedShipping})";
                         </span>)}"";
                     </div>) : (<div className="text-rose-400 flex items-center gap-1">"";
@@ -183,7 +181,7 @@ export default function EquipmentDetail() {}
                 <div className="mb-6">"";
                   <label className="text-sm text-zion-slate-light block mb-2">Quantity</label>"";
                   <div className="flex items-center border border-zion-blue-light rounded-md w-32">"";
-                    <button className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50" onClick = {}
+                    <div>Broken JSX</div>
   () => setQuantity(prev => Math.max(1,;
   prev - 1));,
 } disabled={quantity <= 1 || !equipment.inStock}>;
@@ -216,18 +214,12 @@ export default function EquipmentDetail() {}
                     </div>;
                   </div>";
                   {/* Warranty */}"";
-                  {equipment.warranty && (<div className="flex gap-3 text-zion-slate-light">"";
-                      <Shield className="h-5 w-5 text-zion-cyan flex-shrink-0"/>";
-                      <div>"";
-                        <p className="text-white text-sm font-medium">Warranty</p>"";
+                  {};
                         <p className="text-xs">{equipment.warranty}</p>;
                       </div>;
                     </div>)}";
                   {/* Return Policy */}"";
-                  {equipment.returnPolicy && (<div className="flex gap-3 text-zion-slate-light">"";
-                      <RotateCcw className="h-5 w-5 text-zion-cyan flex-shrink-0"/>";
-                      <div>"";
-                        <p className="text-white text-sm font-medium">Returns</p>"";
+                  {};
                         <p className="text-xs">{equipment.returnPolicy}</p>;
                       </div>;
                     </div>) }

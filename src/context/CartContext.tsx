@@ -3,17 +3,10 @@ interface CartState { items: CartItem[]}
 ;
 const initialState: CartState = { items: [] };
 ;
-function cartReducer(state: CartState, action: CartAction): CartState {;
-  switch(action.type) {;
-    case 'ADD_ITEM': {;
-      ;
-      let items;
-      if(existing) {;
-        items = state.items.map(i =>;
-          i.id === action.payload.id;
+function cartReducer(state: CartState, action: CartAction): CartState {};
             ? { ...i, quantity: i.quantity + action.payload.quantity }
             : i;
-        )} else {;
+        )} else {};
         items = [...state.items, action.payload]}
       return { items }}
     case 'REMOVE_ITEM':;
@@ -26,52 +19,37 @@ function cartReducer(state: CartState, action: CartAction): CartState {;
       return state}
 }
 ;
-export function useCart(): CartContextType {;
-  ;
-  if(!ctx) throw new Error('useCart must be used within a CartProvider');
+export function useCart(): CartContextType {};
   return ctx}
 ;
-export function CartProvider({ children }: { children: React.ReactNode }) {;
-  const [state, dispatch] = useReducer(cartReducer, initialState);
+export function CartProvider({ children }: { children: React.ReactNode }) {};
+  return null;
+}
   const { user } = useAuth();
 ;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
+  useEffect(() => {};
 }, []);
-    if(!user) {;
-      ;
-      if(stored) {;
-        try {;
-          ;
-          if(items.length) {;
+    if(!user) {};
             dispatch({ type: 'SET_ITEMS', payload: items })}
-        } catch {;
-          /* ignore */;,
+        } catch {};
 }
       }
       return}
 ;
-    if(storedGuest) {;
-      try {;
-        ;
-        mergeGuestCart(items).catch(err => console.error('Cart merge failed', err));
+    if(storedGuest) {};
         dispatch({ type: 'SET_ITEMS', payload: items });
-        safeStorage.removeItem(GUEST_CART_KEY)} catch {;
-        /* ignore */;,
+        safeStorage.removeItem(GUEST_CART_KEY)} catch {};
 }
     }
   }, [user]);
 ;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
+  useEffect(() => {};
 }, []);
-    if(!user) {;
+    if(!user) {};
       safeStorage.setItem(GUEST_CART_KEY, JSON.stringify(state.items))}
   }, [state.items, user]);
 ;
-  const value: CartContextType = {;
-    items: state.items,;
-    dispatch,;,
+  const value: CartContextType = {};
 };
 ;
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>}

@@ -9,6 +9,8 @@ import {}
   Shield,''';
   Zap} from 'lucide-react';
 const NotFoundPage = () => {}
+  return <div>Component</div>;
+};
   const popularServices = [];
     {}
 ';
@@ -70,12 +72,7 @@ const NotFoundPage = () => {}
             Quick Navigation";
           </h3>"";
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">;
-            {quickLinks.map(link => (;
-              <Link;
-                key={link.name}";
-                to={link.path}"";
-                className="group p-4 bg-gray-800/50 hover:bg-gray-700/70 rounded-lg border border-gray-700 hover:border-cyan-500 transition-all duration-300"">"";
-                <link.icon className="w-6 h-6 text-cyan-400 mx-auto mb-2 group-hover:text-cyan-300 transition-colors" />"";
+            {};
                 <span className="text-white font-medium">{link.name}</span>;
               </Link>;
             ))}
@@ -88,13 +85,7 @@ const NotFoundPage = () => {}
             Popular Services";
           </h3>"";
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {popularServices.map(service => (;
-              <Link;
-                key={service.name}";
-                to={service.path}"";
-                className="group p-6 bg-gray-800/50 hover:bg-gray-700/70 rounded-lg border border-gray-700 hover:border-purple-500 transition-all duration-300 text-left"">"";
-                <service.icon className="w-8 h-8 text-purple-400 mb-3 group-hover:text-purple-300 transition-colors" />"";
-                <h4 className="text-white font-semibold mb-2 group-hover:text-purple-300 transition-colors">;
+            {};
                   {service.name}";
                 </h4>"";
                 <p className="text-gray-400 text-sm">{service.description}</p>;
@@ -105,8 +96,7 @@ const NotFoundPage = () => {}
 ";
         {/* Call to Action */}"";
         <div className="mb-8">";
-          <Link"";
-            to="/"";
+          <div>Broken JSX</div>
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"">"";
             <ArrowLeft className="w-5 h-5 mr-2" />;
             Back to Home;
@@ -120,13 +110,11 @@ const NotFoundPage = () => {}
             Can't find what you're looking for? Our team is here to help.";
           </p>"";
           <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-            <Link"";
-              to="/contact"";
+            <div>Broken JSX</div>
               className="px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors">;
               Contact Support;
             </Link>";
-            <Link"";
-              to="/help"";
+            <div>Broken JSX</div>
               className="px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-medium rounded-lg transition-colors">;
               Help Center;
             </Link>;
@@ -137,8 +125,7 @@ const NotFoundPage = () => {}
         <div className="mt-8 text-gray-400">"";
           <p className="text-sm">';
             Try searching for what you need or browse our{' '}";
-            <Link"";
-              to="/services"";
+            <div>Broken JSX</div>
               className="text-cyan-400 hover:text-cyan-300 underline">;
               services directory;
             </Link>;

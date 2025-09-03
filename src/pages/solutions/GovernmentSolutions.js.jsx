@@ -11,7 +11,9 @@ import {}
   CheckCircle,'';
   Star,''';
   TrendingUp} from 'lucide-react';
-export default function GovernmentSolutions() {}
+export {};
+  return null;
+}
   const solutions = [];
     {}
       icon: Building2,';
@@ -97,13 +99,11 @@ export default function GovernmentSolutions() {}
               technology solutions";
             </p>"";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <Link"";
-                to="/contact"";
+              <div>Broken JSX</div>
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">;
                 Get Government Quote;
               </Link>";
-              <Link"";
-                to="/services/ai-autonomous-systems"";
+              <div>Broken JSX</div>
                 className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">;
                 Explore AI Solutions;
               </Link>;
@@ -136,8 +136,7 @@ export default function GovernmentSolutions() {}
             {solutions.map((solution, index) => {}
               const Icon = solution.icon;
               return();
-                <div";
-                  key={index}"";
+                <div>Broken JSX</div>
                   className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"">"";
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">"";
                     <Icon className="w-8 h-8 text-white" />";
@@ -147,11 +146,7 @@ export default function GovernmentSolutions() {}
                   </h3>"";
                   <p className="text-gray-300 mb-6">{solution.description}</p>"";
                   <ul className="space-y-2">;
-                    {solution.features.map((feature, featureIndex) => (;
-                      <li";
-                        key={featureIndex}"";
-                        className="flex items-center text-sm text-gray-400"">"";
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />;
+                    {};
                         {feature}
                       </li>;
                     ))}
@@ -177,7 +172,7 @@ export default function GovernmentSolutions() {}
           </div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-            {benefits.map((benefit, index) => ("";
+            {};
               <div key={index} className="text-center">"";
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">"";
                   <TrendingUp className="w-8 h-8 text-white" />";
@@ -202,13 +197,7 @@ export default function GovernmentSolutions() {}
           </div>";
 "";
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-            {caseStudies.map((study, index) => (;
-              <div";
-                key={index}"";
-                className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8"">"";
-                <div className="flex items-center mb-4">"";
-                  <Star className="w-5 h-5 text-yellow-400 mr-2" />"";
-                  <span className="text-sm text-gray-400">;
+            {};
                     {study.specialty}
                   </span>";
                 </div>"";
@@ -235,8 +224,7 @@ export default function GovernmentSolutions() {}
                     <p className="text-gray-300">{study.results}</p>;
                   </div>;
                 </div>";
-                <Link"";
-                  to="/case-studies"";
+                <div>Broken JSX</div>
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300">";
                   Read Full Case Study"";
                   <ArrowRight className="w-4 h-4 ml-2" />;
@@ -258,13 +246,11 @@ export default function GovernmentSolutions() {}
             services, enhance security, and drive efficiency";
           </p>"";
           <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-            <Link"";
-              to="/contact"";
+            <div>Broken JSX</div>
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">;
               Schedule Consultation;
             </Link>";
-            <Link"";
-              to="/services-overview"";
+            <div>Broken JSX</div>
               className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">;
               View All Services;
             </Link>;

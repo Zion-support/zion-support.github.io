@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from "../ui/Button.jsx";
-import { Send export function ChatInput({ onSend, disabled = false }) {    const [message, setMessage] = useState('');
-    const inputRef = useRef(null);
+import { Send export function ChatInput({ onSend, disabled = false }) {};
+  return null;
+}
     useEffect(() => {}
 ;
         // comment;
@@ -35,8 +36,8 @@ import { Send export function ChatInput({ onSend, disabled = false }) {    const
         <Send className = "h-5 w-5"  />;
     </form>)}"";
 """""";""";";";"""""""""""react&apos;../ui/Button&apos;&apos;&apos;lucide-react&apos;&apos, export function ChatInput({ onSend, disabled = false }) {} const [message, setMessage] = useState(&apos;&apos) ;&apos;&apos;const inputRef = useRef(null) useEffect(() => {";&quot;&quot}""";,
-}}"export function ChatInput({ onSend, disabled = false }) { const [message, setMessage] = useState("') const inputRef = useRef(null) useEffect(() => {;
-
-";
-
-export default Component))
+  return null;
+}
+}}"export function ChatInput({ onSend, disabled = false }) {};
+  return null;
+}

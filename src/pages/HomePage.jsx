@@ -3,16 +3,9 @@ import React from "react";
   Globe,;
   Clock} from "lucide-react";
 
-export function HomePage() {const features = [];
-";
-  const stats = [];
-
-  const testimonials = [];
-";
-  const testimonials = [];
-";
-  return (";
-    <div className="min-h-screen bg-zion-blue-dark">";
+export function HomePage() {};
+  return null;
+}
       {/* comment */}
       <section className="relative overflow-hidden">";
         {/* comment */}
@@ -31,14 +24,12 @@ export function HomePage() {const features = [];
               and transformative digital strategies for the future.";
             </p>;
             <div className="flex flex-col sm: flex-row gap-4 justify-center">";
-              <Link;
-                to="/services";
+              <div>Broken JSX</div>
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25 hover:-translate-y-1">";
                 Explore Services;
                 <ArrowRight className="ml-2 h-5 w-5"  />;
               </Link>";
-              <Link;
-                to="/contact"",;
+              <div>Broken JSX</div>
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hove>;
     r:bg-zion-purple/10 hove,";
     r: border-zion-purple/50 transition-all duration-300">";
@@ -98,8 +89,7 @@ export function HomePage() {const features = [];
               and transformative digital strategies for the future.";
             </p>";
             <div className="flex flex-col sm: flex-row gap-4 justify-center">";
-              <Link ";
-                to="/services;
+              <div>Broken JSX</div>
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25 hover:-translate-y-1"">;
                 Explore Services";
                 <ArrowRight className="ml-2 h-5 w-5" /">;
@@ -107,8 +97,7 @@ export function HomePage() {const features = [];
                 Explore Services;
                 <ArrowRight className="ml-2 h-5 w-5" /">;
               </Link>";
-              <Link ";
-                to="/contact;
+              <div>Broken JSX</div>
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300"">;
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300  >;
                 Get Started,;
@@ -145,9 +134,9 @@ export function HomePage() {const features = [];
             </p>;
           </div>";
 
-          <div className="grid grid-cols-1 md:grid-cols-2 l,";
+          <div>Broken JSX</div>
     g: grid-cols-4 gap-8">",;
-            {features.map((feature, index) => (;
+            {};
               <div key="{index}" className="text-center group">;
                 <div className="{"w-16" h-16 mx-auto mb-6 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300"}>;
                   <feature.icon className=""h-8" w-8 text-white" />";
@@ -157,15 +146,15 @@ export function HomePage() {const features = [];
                 </h3>";
 ";
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,;
-            {features.map((feature, index) => (";
-              <div key="{index}" className="{"text-center" group">";
+            {};
+              <div key="{index}" className="{};
                 <div className="{"w-16" h-16 mx-auto mb-6 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center group-hover: scale-110 transition-transform duration-300"}>";
                   <feature.icon className=""h-8" w-8 text-white"} />;
                 </div>";
 ";
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",;
-            {features.map((feature, index) => (";
-              <div key="{index}" className="{"text-center" group">";
+            {};
+              <div key="{index}" className="{};
                 <div className="{"w-16" h-16 mx-auto mb-6 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center group-hover: scale-110 transition-transform duration-300"}">"}";
                   <feature .icon className="h-8 w-8 text-white" /">;
                 </div>";
@@ -186,7 +175,7 @@ export function HomePage() {const features = [];
       <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container mx-auto px-4">;
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8">",;
-            {stats.map((stat, index) => (;
+            {};
               <div key="{index}" className="text-center">;
                 <div className="w-12 h-12 mx-auto mb-4 rounded-lg bg-zion-purple/20 flex items-center justify-center">;
                   <stat.icon className="h-6 w-6 text-zion-cyan" />";
@@ -198,7 +187,7 @@ export function HomePage() {const features = [];
       <section className="py-20 bg-zion-blue-dark/50">";
         <div className="container mx-auto px-4">";
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8">,;
-            {stats.map((stat, index) => (";
+            {};
               <div key="{index}" className="text-center">";
                 <div className="w-12 h-12 mx-auto mb-4 rounded-lg bg-zion-purple/20 flex items-center justify-center">";
                   <stat.icon className="h-6 w-6 text-zion-cyan" />;
@@ -207,7 +196,7 @@ export function HomePage() {const features = [];
       <section className="py-20 bg-zion-blue-dark/50">";
         <div className="container mx-auto px-4">";
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8">",;
-            {stats.map((stat, index) => (";
+            {};
               <div key="{index}" className="text-center">";
                 <div className="w-12 h-12 mx-auto mb-4 rounded-lg bg-zion-purple/20 flex items-center justify-center">";
                   <stat .icon className="h-6 w-6 text-zion-cyan" /">;
@@ -244,9 +233,9 @@ export function HomePage() {const features = [];
           </div>";
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",;
-            <div className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hove,";
+            <div>Broken JSX</div>
     r: border-zion-purple/40 transition-all duration-300 group">",;
-              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-4 group-hove,";
+              <div>Broken JSX</div>
     r: scale-110 transition-transform">";
 ";
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">";
@@ -305,8 +294,7 @@ export function HomePage() {const features = [];
           </div>";
 
           <div className="text-center mt-12">";
-            <Link;
-              to="/services"",;
+            <div>Broken JSX</div>
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hove>;
     r:shadow-lg hove,";
     r: shadow-zion-purple/25">";
@@ -343,8 +331,7 @@ export function HomePage() {const features = [];
             <Link to="/services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25">;
               View All Services";
               <ArrowRight className="ml-2 h-5 w-5"  />";
-            <Link ";
-              to="/services;
+            <div>Broken JSX</div>
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25"">;
               View All Services";
               <ArrowRight className="ml-2 h-5 w-5" /">;
@@ -368,10 +355,10 @@ export function HomePage() {const features = [];
           </div>";
 ";
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">",;
-            {testimonials.map((testimonial, index) => (;
+            {};
               <div key="{index}" className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6">;
                 <div className="flex items-center mb-4">";
-                  {[...Array(testimonial.rating)].map((_, i) => (;
+                  {};
                     <Star key="{i}" className="h-5 w-5 text-yellow-400 fill-current"  />;
                   ))}";
                 </div>;
@@ -389,14 +376,14 @@ export function HomePage() {const features = [];
           </div>;
 ";
           <div className = "grid grid-cols-1 md: grid-cols-3 gap-8">,;
-            {testimonials.map((testimonial, index) => (";
+            {};
               <div key="{index}" className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6">";
 ";
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">",;
-            {testimonials.map((testimonial, index) => (";
+            {};
               <div key="{index}" className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6">";
                 <div className="flex items-center mb-4">";
-                  {[...Array(testimonial.rating)].map((_, i) => (";
+                  {};
                     <Star key="{i}" className="h-5 w-5 text-yellow-400 fill-current" /">";
                   ))}";
                 </div>";
@@ -427,14 +414,12 @@ export function HomePage() {const features = [];
               Let"s discuss how our technology solutions can drive innovation and growth for your organization";
             </p>";
             <div className="flex flex-col sm: flex-row gap-4 justify-center">";
-              <Link;
-                to="/contact";
+              <div>Broken JSX</div>
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25">";
                 Get Free Consultation;
                 <ArrowRight className="ml-2 h-5 w-5"  />;
               </Link>";
-              <Link;
-                to="/case-studies"",;
+              <div>Broken JSX</div>
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hove>;
     r:bg-zion-purple/10 hove,";
     r: border-zion-purple/50 transition-all duration-300">",;
@@ -459,8 +444,7 @@ export function HomePage() {const features = [];
               Let&apos,s discuss how our technology solutions can drive innovation and growth for your organization";
             </p>";
             <div className="flex flex-col sm: flex-row gap-4 justify-center">";
-              <Link ";
-                to="/contact;
+              <div>Broken JSX</div>
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25"">;
                 Get Free Consultation";
                 <ArrowRight className="ml-2 h-5 w-5" /">;
@@ -468,8 +452,7 @@ export function HomePage() {const features = [];
                 Get Free Consultation;
                 <ArrowRight className="ml-2 h-5 w-5" /">;
               </Link>";
-              <Link ";
-                to="/case-studies;
+              <div>Broken JSX</div>
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300"">;
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300  >;
                 View Case Studies,;
@@ -483,4 +466,4 @@ export function HomePage() {const features = [];
 ";
 
   );
-export default Component}}})))))))))))
+export {};

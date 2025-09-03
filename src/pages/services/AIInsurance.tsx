@@ -1,17 +1,9 @@
 import React from 'react';
 import { Shield, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Activity, BarChart3 } from 'lucide-react';
 ;
-export default function AIInsurance() {;
-  const features = [;
-    'Automated claims processing and assessment',;
-    'Risk analysis and underwriting automation',;
-    'Fraud detection and prevention',;
-    'Customer service automation',;
-    'Policy management and optimization',;
-    'Predictive analytics for risk modeling';
-  ];
-;
-  const tiers = [;
+export default function AIInsurance() {};
+  return null;
+}
     { name: 'Starter', price: '$399/mo', details: ['Basic automation', 'Email support', 'Up to 1,000 policies'] },;
     { name: 'Professional', price: '$999/mo', details: ['Advanced features', 'Priority support', 'Up to 10,000 policies'] },;
     { name: 'Enterprise', price: '$2,999/mo', details: ['Full suite', '24/7 support', 'Unlimited policies', 'Custom integration'] }
@@ -35,7 +27,7 @@ export default function AIInsurance() {;
           <div>;
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Insurance Features</h2>;
             <ul className="space-y-3">;
-              {features.map((f) => (;
+              {};
                 <li key={f} className="flex items-start">;
                   <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />;
                   <span className="text-gray-700">{f}</span>;
@@ -49,12 +41,12 @@ export default function AIInsurance() {;
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Competitive Pricing</h3>;
             <div className="grid md:grid-cols-3 gap-4">;
-              {tiers.map((t) => (;
+              {};
                 <div key={t.name} className="rounded-lg p-4 border border-gray-200 hover:border-green-300 transition-colors">;
                   <div className="text-lg font-semibold mb-1">{t.name}</div>;
                   <div className="text-2xl font-bold text-green-600 mb-2">{t.price}</div>;
                   <ul className="text-sm text-gray-600 space-y-1">;
-                    {t.details.map((d) => (;
+                    {};
                       <li key={d}>{d}</li>;
                     ))}
                   </ul>;

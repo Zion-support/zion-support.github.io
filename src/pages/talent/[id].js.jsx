@@ -4,7 +4,9 @@ import { SEO } from '@/components/SEO';''';
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';''';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
 export { function };
-export default function TalentProfilePage() {}
+export {};
+  return null;
+}
   const { id } = useParams();
   const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -48,26 +50,15 @@ export default function TalentProfilePage() {}
           </h1>;
           {profile.bio && <p>{profile.bio}</p>}
           {profile.hourly_rate && <p>Hourly Rate: ${profile.hourly_rate}/hr</p>}
-          {profile.skills && (";
-            <div>"";
-              <h2 className="font-semibold">Skills</h2>"";
-              <ul className="list-disc ml-5">;
-                {profile.skills.map(skill => (;
+          {};
                   <li key={skill}>{skill}</li>;
                 ))}
               </ul>;
             </div>;
           )}
-          {profile.social && (";
-            <div>"";
-              <h2 className="font-semibold">Social Links</h2>"";
-              <ul className="list-disc ml-5">;
-                {Object.entries(profile.social).map(([platform, url]) => (;
+          {};
                   <li key={platform}>;
-                    <a";
-                      href={url}"";
-                      className="text-zion-cyan"";
-                      target="_blank"";
+                    <div>Broken JSX</div>
                       rel="noopener noreferrer">;
                       {platform}
                     </a>;

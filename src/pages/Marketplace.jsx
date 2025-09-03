@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom';''';
 import { Button } from '@/components/ui/button';''';
 import { Grid3X3, ListFilter, Loader2 } from 'lucide-react';
 ;
-export default function Marketplace() {}
+export {};
+  return null;
+}
   const navigate = useNavigate();';
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedProductTypes, setSelectedProductTypes] = useState([]);
@@ -37,6 +39,8 @@ export default function Marketplace() {}
 }, []);
 ;
   const clearAllFilters = () => {}
+  return <div>Component</div>;
+};
 ';
 '';
 ''';
@@ -77,13 +81,7 @@ export default function Marketplace() {}
     ) {}
       return false;,
 }
-    if (selectedRating && listing.rating < selectedRating) {}
-      return false;,
-}
-    return true;,
-}) ;
-;
-  return();
+    if (selectedRating && listing.rating <div>Broken JSX</div>
     <main className="flex-grow container mx-auto px-4 py-8">"";
       <div className="max-w-4xl mx-auto mb-8">"";
         <h1 className="text-3xl font-bold text-white mb-4">;
@@ -100,25 +98,19 @@ export default function Marketplace() {}
       <div className="bg-gray-800 border border-gray-700 rounded-lg p-4 mb-8">"";
         <div className="flex flex-col md:flex-row gap-4">"";
           <div className="relative flex-1">";
-            <input"";
-              type="text";
-              value={searchQuery}";
+            <div>Broken JSX</div>
               onChange={e => setSearchQuery(e.target.value)}"";
               placeholder="Search services..."";
               className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500";
             />";
           </div>"";
           <div className="flex gap-2">";
-            <Button"";
-              variant="ghost"'";
-              size="icon"'';
+            <div>Broken JSX</div>
               onClick={() => setView('grid')}';
               className={view === 'grid' ? 'text-blue-400' : 'text-gray-400'}">"";
               <Grid3X3 className="h-4 w-4" />;
             </Button>";
-            <Button"";
-              variant="ghost"'";
-              size="icon"'';
+            <div>Broken JSX</div>
               onClick={() => setView('list')}';
               className={view === 'list' ? 'text-blue-400' : 'text-gray-400'}">"";
               <ListFilter className="h-4 w-4" />;
@@ -138,27 +130,7 @@ export default function Marketplace() {}
         </div>;
 
         {/* Display marketplace listings */}";
-        {isLoading ? ("";
-          <div className="flex justify-center py-20">"";
-            <Loader2 className="h-8 w-8 animate-spin text-blue-500" />;
-          </div>;
-        ) : (;
-          <div;
-            className={}
-';
-'';
-''';
-              view === 'grid''''';
-                ? 'grid grid-cols-1 md:grid-cols-2 gap-6''''';
-                : 'flex flex-col gap-6';,
-}
-          >;
-            {filteredListings.length > 0 ? (;
-              filteredListings.map(listing => (;
-                <div";
-                  key={listing.id}"";
-                  className="bg-gray-800 border border-gray-700 rounded-lg p-6 hover:border-gray-600 transition-colors"">"";
-                  <h3 className="text-xl font-semibold text-white mb-2">;
+        {};
                     {listing.title}";
                   </h3>"";
                   <p className="text-gray-300 mb-4">{listing.description}</p>"";
@@ -175,7 +147,7 @@ export default function Marketplace() {}
                       <span className="text-yellow-400">★</span>"";
                       <span className="text-white ml-1">{listing.rating}</span>;
                     </div>;
-                    <Button";
+                    <div>Broken JSX</div>
                       onClick={() => handleRequestQuote(listing.id)}"";
                       className="bg-blue-600 hover:bg-blue-700 text-white">;
                       Request Quote;
@@ -192,8 +164,7 @@ export default function Marketplace() {}
                   We couldn't find listings matching your filters. Try adjusting;
                   your search criteria.;
                 </p>;
-                <Button";
-                  onClick={clearAllFilters}"";
+                <div>Broken JSX</div>
                   className="bg-blue-600 hover:bg-blue-700">;
                   Clear Filters;
                 </Button>;

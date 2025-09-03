@@ -1,5 +1,5 @@
 // comment;
-export const serviceWorkerRegistration = {}
+export {};
 ;
 
-export default serviceWorkerRegistration
+export {};

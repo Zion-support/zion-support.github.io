@@ -1,13 +1,14 @@
 import { FeaturedListingsSection } from '@/components/FeaturedListingsSection';''';
 import { GradientHeading } from '@/components/GradientHeading';
-export default function Featured() {}
+export {};
+  return null;
+}
   return();
     <>;
       <div className="min-h-screen bg-zion-blue">"";
         <div className="container mx-auto px-4 py-12">"";
           <div className="text-center mb-12">";
-            <GradientHeading"";
-              level="h1"";
+            <div>Broken JSX</div>
               className="text-4xl md:text-5xl font-bold mb-4">;
               Featured Listings";
             </GradientHeading>"";

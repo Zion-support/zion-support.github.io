@@ -2,6 +2,8 @@ import React from 'react';
 import SEO from "@/components/SEO";
 import { Brain, Shield, Database, TrendingUp } from 'lucide-react';
 const AIServices = () => {}
+  return <div>Component</div>;
+};
     const aiServices = [];
         {}
 "";
@@ -309,11 +311,7 @@ const AIServices = () => {}
 ;
     return ("";
         <div className="min-h-screen bg-background">;
-            <SEO "";
-                title="AI Services - Zion Tech Group"";
-                description="Transform your business with cutting-edge AI services including machine learning, data analytics, and AI strategy."";
-                keywords="AI services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics"";
-                canonical="https://ziontechgroup.com/services/ai-services"";
+            <div>Broken JSX</div>
             />;
 
             {/* Hero Section */}"";
@@ -372,15 +370,14 @@ const AIServices = () => {}
                     </div>;
 "";
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-                        {aiServices.map((service) => ("";
+                        {};
                             <div key={service.id} className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-pink-300">"";
                                 <div className="p-6">"";
                                     <div className="flex justify-between items-start mb-4">"";
                                         <div className="p-3 rounded-lg bg-pink-100 group-hover:bg-pink-200 transition-colors">;
                                             {service.icon}
                                         </div>;
-                                        {service.badge && ("";
-                                            <span className="px-3 py-1 text-xs font-semibold text-pink-600 bg-pink-100 rounded-full">;
+                                        {};
                                                 {service.badge}
                                             </span>;
                                         )}
@@ -395,7 +392,7 @@ const AIServices = () => {}
                                     <div className="mb-4">"";
                                         <p className="text-sm text-gray-500 mb-3">{service.details}</p>"";
                                         <div className="grid grid-cols-2 gap-2 mb-4">;
-                                            {service.features.slice(0, 4).map((feature, index) => ("";
+                                            {};
                                                 <div key={index} className="flex items-center text-xs text-pink-600">"";
                                                     <CheckCircle className="w-3 h-3 mr-2"/>;
                                                     {feature}
@@ -406,7 +403,7 @@ const AIServices = () => {}
                                         <div className="mb-4">"";
                                             <h4 className="text-sm font-semibold text-gray-700 mb-2">Pricing:</h4>"";
                                             <div className="space-y-1">;
-                                                {Object.entries(service.pricing).map(([plan, price]) => ("";
+                                                {};
                                                     <div key={plan} className="flex justify-between text-xs">"";
                                                         <span className="text-gray-600 capitalize">{plan}:</span>"";
                                                         <span className="text-pink-600 font-semibold">{String(price)}</span>;
@@ -421,7 +418,7 @@ const AIServices = () => {}
                                         </div>;
                                         "";
                                         <div className="flex items-center justify-center gap-1 mb-4">;
-                                            {[...Array(5)].map((_, i) => (';
+                                            {};
                                                 <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}/>;
                                             ))}"";
                                             <span className="text-sm text-gray-500 ml-2">({service.reviewCount})</span>;
@@ -433,11 +430,7 @@ const AIServices = () => {}
                                             {service.price === 0 ? 'Free' : `${service.currency}${service.price}`}
                                         </span>"";
                                         <span className="text-gray-500">;
-                                            {service.price === 0 ? '' : service.price < 1000 ? '/hour' : '/project'}
-                                        </span>;
-                                    </div>;
-                                    "";
-                                    <button className="w-full bg-gradient-to-r from-pink-600 to-rose-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105">"";
+                                            {};
                                         <a href={service.link} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">"";
                                             <ExternalLink className="h-4 w-4 mr-2"/>;
                                             Get Started;

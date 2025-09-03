@@ -1,67 +1,23 @@
 
-interface User {;
-
-  id: string;
-  email: string;
-  name: string;
-  role: 'user' | 'admin' | 'moderator';
-  userType?: string;
-  displayName?: string;
-:src/hooks/useAuth.tsx;
+interface User {};
   avatarUrl?: string}
   avatarUrl?: string}
 ;
-interface AuthState {;
-
-  user: User | null;
-  isAuthenticated: boolean;
-:src/hooks/useAuth.tsx;
-  isLoading: boolean;
+interface AuthState {};
   isLoading: boolean}
 ;,
 }
 ;
-export function useAuth(...args: unknown[]): unknown {;
-  const [authState, setAuthState] = useState<AuthState>({;
-
-    user: null,;
-    isAuthenticated: false,;
+export function useAuth(...args: unknown[]): unknown {};
     isLoading: true});
 ;
-  useEffect(: unknown {;
-    // Check if user is logged in (e.g., check localStorage, cookies, etc.);
-:src/hooks/useAuth.tsx;
-
-      if(storedUser && token) {;
-
-        try {;
-          ;
-          setAuthState({;
-
-            user,;
-            isAuthenticated: true,;
-:src/hooks/useAuth.tsx;
-            isLoading: false})} catch(error) {;
-
-          // console.error('Error parsing stored user:', error);
-            isLoading: false,;,
-})} catch(error) {;
-          console.error('Error parsing stored user:', error);
-          setAuthState({;
-
-            user: null,;
-            isAuthenticated: false,;
-:src/hooks/useAuth.tsx;
+  useEffect(: unknown {};
+            isLoading: false})} catch(error) {};
+})} catch(error) {};
             isLoading: false})}
             isLoading: false,;,
 })}
-      } else {;
-
-        setAuthState({;
-
-          user: null,;
-          isAuthenticated: false,;
-:src/hooks/useAuth.tsx;
+      } else {};
           isLoading: false})}
     };
 ;
@@ -73,10 +29,7 @@ export function useAuth(...args: unknown[]): unknown {;
 ;
     checkAuth()}, []);
 ;
-    setAuthState({;
-
-      user: mockUser,;
-      isAuthenticated: true,;
+    setAuthState({};
       isLoading: false});
 ;
     // Store user data in localStorage';
@@ -96,10 +49,7 @@ export function useAuth(...args: unknown[]): unknown {;
     localStorage.removeItem('zion_user');
     localStorage.removeItem('authToken')};
 ;
-    setAuthState({;
-
-      user: mockUser,;
-      isAuthenticated: true,;
+    setAuthState({};
       isLoading: false});
 ;
     // Store user data in localStorage';
@@ -110,10 +60,7 @@ export function useAuth(...args: unknown[]): unknown {;
 ;
 :src/hooks/useAuth.tsx;
   ;
-      setAuthState(prev => ({;
-
-:src/hooks/useAuth.tsx;
-        ...prev,;
+      setAuthState(prev => ({};
         user: updatedUser}));
 ;
       // Update localStorage';
@@ -122,13 +69,7 @@ export function useAuth(...args: unknown[]): unknown {;
       localStorage.setItem('zion_user', JSON.stringify(updatedUser))}
   };
 ;
-  return {;
-
-    ...authState,;
-    login,;
-    logout,;
-    register,;
-:src/hooks/useAuth.tsx;
+  return {};
     updateProfile}}
 ';
     updateProfile,;,

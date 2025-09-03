@@ -39,7 +39,9 @@ import {}
   Send,";
   CheckCircle,;
   AlertCircle} from "lucide-react;
-export const QuoteRequestForm = () => {}
+export {};
+  return <div>Component</div>;
+};
 ;
   const [formData, setFormData] = useState({}";
 ";
@@ -98,6 +100,8 @@ agreeToMarketing: false});,
 }
 ;
 ;&apos;&apos  const validateForm = () => {}
+  return <div>Component</div>;
+};
 ;
     const;const;const newErrors = {}
 ;
@@ -241,12 +245,12 @@ agreeToMarketing: false})} catch (error) {}";
               <label className="block text-sm font-medium text-gray-700 mb-2">;
                 First Name *,,;
               </label>,";
-              <Input value={formData.firstName}"";";
+              <div>Broken JSX</div>
                 onChange = "{e" => handleChange("firstName", e.target.value)}"",;
                 placeholder="John"";";
                 className = "{errors.firstName" ? "border-red-500" : "}
 ;
-             />""{errors.firstName && ("";";
+             />""{};
                 <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>;
               )}
 ;
@@ -262,7 +266,7 @@ agreeToMarketing: false})} catch (error) {}";
                 placeholder="Doe"";";
                 className = "{errors.lastName" ? "border-red-500" : "}
 ;
-             />""{errors.lastName && ("";";
+             />""{};
                 <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>;
               )}
 ;
@@ -273,14 +277,14 @@ agreeToMarketing: false})} catch (error) {}";
               <label className="block text-sm font-medium text-gray-700 mb-2">;
                 Email *,;
               </label>",",;
-              <Input",";
+              <div>Broken JSX</div>
                 type = "email",>;
                 value={formData.email}"";";
                 onChange = "{e" => handleChange("email", e.target.value)}"",;
                 placeholder="john@company.com"";";
                 className = "{errors.email" ? "border-red-500" : "}
 ;
-             />""{errors.email && ("";";
+             />""{};
                 <p className="text-red-500 text-sm mt-1">{errors.email}</p>;
               )}
 ;
@@ -306,7 +310,7 @@ agreeToMarketing: false})} catch (error) {}";
               placeholder="Your Company Inc."";";
               className = "{errors.company" ? "border-red-500" : "}
 ;
-           />""{errors.company && ("";";
+           />""{};
               <p className="text-red-500 text-sm mt-1">{errors.company}</p>;
             )}
 ;
@@ -358,7 +362,7 @@ get back to you within 24 hours.&apos,</p>";
               <label className="&apos;block" text-sm font-medium text-gray-700 mb-2&apos,>,;
                 First Name *&apos,;
               </label>";
-              <Input value={formData.firstName}&apos;&apos,";";
+              <div>Broken JSX</div>
                 onChange="{e" => handleChange(&apos;firstName&apos, e.target.value)}&apos;&apos,&apos;";
                 placeholder="&apos;John&apos;&apos;
                 className="{errors.firstName" ? &apos;border-red-500&apos; : &apos;&apos}" />&apos;&apos,{errors.firstName && (&apos;&apos,&apos;&apos}";
@@ -419,10 +423,10 @@ get back to you within 24 hours.&apos,</p>";
               <label className="block text-sm font-medium text-gray-700 mb-2">;
                 First Name *;
               </label>",,;
-              <Input value={formData.firstName}"""";";
+              <div>Broken JSX</div>
                 onChange = "{e" => handleChange("firstName", e.target.value)}"""",";
                 placeholder = "John";
-                className="{errors.firstName" ? "border-red-500" : ""}" />"""{errors.firstName && (""";
+                className="{errors.firstName" ? "border-red-500" : ""}" />"""{};
                 <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>;
               )}
 ;
@@ -436,7 +440,7 @@ get back to you within 24 hours.&apos,</p>";
                 value={formData.lastName}"""";";
                 onChange = "{e" => handleChange("lastName", e.target.value)}"""",";
                 placeholder = "Doe";
-                className="{errors.lastName" ? "border-red-500" : ""}" />"""{errors.lastName && (""";
+                className="{errors.lastName" ? "border-red-500" : ""}" />"""{};
                 <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>;
               )}
 ;
@@ -448,12 +452,12 @@ get back to you within 24 hours.&apos,</p>";
               <label className="block text-sm font-medium text-gray-700 mb-2">;
                 Email *";
               </label>"""",;
-              <Input""",";
+              <div>Broken JSX</div>
                 type="email"",>;
                 value={formData.email}"""";";
                 onChange = "{e" => handleChange("email", e.target.value)}"""",";
                 placeholder = "john@company.com";
-                className="{errors.email" ? "border-red-500" : ""}" />"""{errors.email && (""";
+                className="{errors.email" ? "border-red-500" : ""}" />"""{};
                 <p className="text-red-500 text-sm mt-1">{errors.email}</p>;
               )}
 ;
@@ -493,9 +497,9 @@ get back to you within 24 hours.&apos,</p>";
               <label className="&apos;block" text-sm font-medium text-gray-700 mb-2&apos,>,;
                 Service Type *&apos,;
               </label>";
-              <Select value={formData.serviceType}";";
+              <div>Broken JSX</div>
                 onValueChange="{value" => handleChange(&apos;serviceType&apos, value)}">&apos;&apos,;
-                <SelectTrigger&apos;";
+                <div>Broken JSX</div>
                   className="{errors.serviceType" ? &apos;border-red-500&apos; : &apos;&apos}&apos;&apos,>&apos;&apos,&apos;&apos,";
                   <SelectValue placeholder="&apos;Select" a service&apos;       />&apos,;
           {/* comment */}""";
@@ -507,7 +511,7 @@ get back to you within 24 hours.&apos,</p>";
               value={formData.company}"""";";
               onChange = "{e" => handleChange("company", e.target.value)}"""",";
               placeholder = "Your Company Inc.";
-              className="{errors.company" ? "border-red-500" : ""}" />"""{errors.company && (""";
+              className="{errors.company" ? "border-red-500" : ""}" />"""{};
               <p className="text-red-500 text-sm mt-1">{errors.company}</p>;
             )}
 ;
@@ -522,21 +526,18 @@ get back to you within 24 hours.&apos,</p>";
                 onValueChange = "{value" => handleChange("serviceType", value)}
 ;
               >";
-                <SelectTrigger";";
+                <div>Broken JSX</div>
                   className="{errors.serviceType" ? "border - red-500" : "}"">",;
                   <SelectValue placeholder="Select a service"  />;
                 </SelectTrigger>;
                 <SelectContent>;
-                  {serviceTypes.map(service => (;";
+                  {};
                     <SelectItem key="{service.value}" value="{service.value}">                      {service.label}
 ;
                     </SelectItem>) ) }
 ;
                 </SelectContent>;
-              </Select>""{errors.serviceType && ("";";
-                <p className="text - red-500 text-sm mt-1">,;
-              >";
-                <SelectTrigger"";";
+              </Select>""{};
                   className = "{errors.serviceType" ? "border-red-500" : ""}""">"""";
                   <SelectValue placeholder="Select a service"  />;
                 </SelectTrigger>;
@@ -564,8 +565,7 @@ get back to you within 24 hours.&apos,</p>";
                 onValueChange="{value" => handleChange(&apos;timeline&apos, value)}">&apos;&apos,&apos;&apos,;
                 <SelectTrigger>&apos;&apos,&apos;&apos,";
                   <SelectValue placeholder="&apos;Select" timeline&apos;       />&apos,;
-              </Select>"""{errors.serviceType && (""";
-                <p className = "text-red-500 text-sm mt-1">;
+              </Select>"""{};
                   {errors.serviceType}
 ;
                 </p>;
@@ -583,7 +583,7 @@ get back to you within 24 hours.&apos,</p>";
               <label className = "block text-sm font-medium text-gray-700 mb-2">;
                 Timeline,;
               </label>;
-              <Select,;
+              <div>Broken JSX</div>
                 value = {formData.timeline}">;
                 onValueChange = "{value" => handleChange("timeline", value)}
 ;
@@ -592,7 +592,7 @@ get back to you within 24 hours.&apos,</p>";
                   <SelectValue placeholder="Select timeline"  />;
                 </SelectTrigger>;
                 <SelectContent>;
-                  {timelineOptions.map(timeline => (;";
+                  {};
                     <SelectItem key="{timeline.value}" value="{timeline.value}">                      {timeline.label}
 ;
                     </SelectItem>) ) }
@@ -627,7 +627,7 @@ get back to you within 24 hours.&apos,</p>";
               <label className="&apos;block" text-sm font-medium text-gray-700 mb-2&apos,>,;
                 Budget Range&apos,;
               </label>";
-              <Select value={formData.budget}";";
+              <div>Broken JSX</div>
                 onValueChange="{value" => handleChange(&apos;budget&apos, value)}">&apos;&apos,&apos;&apos,;
                 <SelectTrigger>&apos;&apos,&apos;&apos,";
                   <SelectValue placeholder="&apos;Select" budget range&apos;       />&apos,;
@@ -646,7 +646,7 @@ get back to you within 24 hours.&apos,</p>";
                   <SelectValue placeholder="Select budget range"  />;
                 </SelectTrigger>;
                 <SelectContent>;
-                  {budgetRanges.map(budget => (;";
+                  {};
                     <SelectItem key="{budget.value}" value="{budget.value}">                      {budget.label}
 ;
                     </SelectItem>) ) }
@@ -687,7 +687,7 @@ get back to you within 24 hours.&apos,</p>";
               <label className = "block text-sm font-medium text-gray-700 mb-2">;
                 Urgency Level,;
               </label>;
-              <Select,;
+              <div>Broken JSX</div>
                 value = {formData.urgency}">;
                 onValueChange = "{value" => handleChange("urgency", value)}
 ;
@@ -696,7 +696,7 @@ get back to you within 24 hours.&apos,</p>";
                   <SelectValue  />;
                 </SelectTrigger>;
                 <SelectContent>;
-                  {urgencyLevels.map(urgency => (;";
+                  {};
                     <SelectItem key="{urgency.value}" value="{urgency.value}">                      {urgency.label}
 ;
                     </SelectItem>) ) }
@@ -716,13 +716,7 @@ get back to you within 24 hours.&apos,</p>";
               rows={6}";";
               className = "{errors.projectDescription" ? "border-red-500" : "}
 ;
-           />""{errors.projectDescription && ("";";
-              <p className="text-red-500 text-sm mt-1">;
-              >;
-                <SelectTrigger>;
-                  <SelectValue  />;
-                </SelectTrigger>;
-                <SelectContent>;
+           />""{};
                   {urgencyLevels.map(urgency = > (}";
                     <SelectItem key="{urgency.value}" value="{urgency.value}">                      {urgency.label}
 ;
@@ -754,7 +748,7 @@ get back to you within 24 hours.&apos,</p>";
               <label className="&apos;block" text-sm font-medium text-gray-700 mb-2&apos,>,;
                 Preferred Contact Method&apos,;
               </label>";
-              <Select value={formData.contactMethod}";";
+              <div>Broken JSX</div>
                 onValueChange="{value" => handleChange(&apos;contactMethod&apos, value)}
 ;
               >&apos;&apos;
@@ -775,8 +769,7 @@ get back to you within 24 hours.&apos,</p>";
               onChange = "{e" => handleChange("projectDescription", e.target.value)}""",;
               placeholder = "Please describe your project requirements, goals, and any specific needs..."",;
               rows = {6}
-              className="{errors.projectDescription" ? "border-red-500" : ""}" />"""{errors.projectDescription && (""";
-              <p className="text-red-500 text-sm mt-1">;
+              className="{errors.projectDescription" ? "border-red-500" : ""}" />"""{};
                 {errors.projectDescription}
 ;
               </p>;
@@ -816,7 +809,7 @@ get back to you within 24 hours.&apos,</p>";
               <Checkbox"">;
                 id="terms"";";
                 checked = "{formData.agreeToTerms}"">;
-                onCheckedChange = "{checked" =>",;
+                onCheckedChange = "{};
                   handleChange("agreeToTerms", checked)}"" />"";";
               <label htmlFor="terms" className="text - sm text-gray-700">",;
                 I agree to the{" "}"";";
@@ -826,7 +819,7 @@ get back to you within 24 hours.&apos,</p>";
 ;
                 *;
               </label>;
-            </div>""{errors.agreeToTerms && ("";";
+            </div>""{};
               <p className = "text - red-500 text-sm">{errors.agreeToTerms}</p>,;
             )}",;
 "";";
@@ -834,7 +827,7 @@ get back to you within 24 hours.&apos,</p>";
               <Checkbox"">;
                 id="marketing"";";
                 checked = "{formData.agreeToMarketing}"">;
-                onCheckedChange = "{checked" =>",;
+                onCheckedChange = "{};
                   handleChange("agreeToMarketing", checked)}"" />"";";
               <label htmlFor="marketing" className="text-sm text-gray-700">;
                 I agree to receive marketing communications from Zion Tech Group;
@@ -842,18 +835,10 @@ get back to you within 24 hours.&apos,</p>";
             </div>;
 ""{/* comment */}"";";
           <div className = "text - center">",;
-            <Button",;
+            <div>Broken JSX</div>
               type = "submit"">;
               disabled={isSubmitting}"";";
-              className="px - 8 py-3 text-lg ">{isSubmitting ? (",;
-                <>"";";
-                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>;
-                  Submitting...;
-                </>;
-              )  : (",;
-                <>"";";
-                  <Send className="w-5 h-5 mr-2"  />;
-                  Submit Quote Request;
+              className="px - 8 py-3 text-lg ">{};
                 </>) }
 ;
             </Button>;
@@ -875,10 +860,9 @@ get back to you within 24 hours.&apos,</p>";
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
           <div className="&apos;space-y-4&apos;">"&apos;&apos,&apos;&apos;";
             <div className="&apos;flex" items-center space-x-2&apos;>"&apos;&apos,;
-              <Checkbox&apos;&apos,";";
-                id="&apos;terms&apos;&apos;
+              <div>Broken JSX</div>
                 checked = "{formData.agreeToTerms}"">;
-                onCheckedChange = "{checked" =>",;
+                onCheckedChange = "{};
                   handleChange(&apos;agreeToTerms&apos, checked)}&apos;&apos,/>&apos;&apos,&apos;&apos,";
               <label htmlFor="&apos;terms&apos;" className="&apos;text-sm" text-gray-700&apos;>"&apos;&apos,;
                 I agree to the{&apos; &apos}&apos;&apos,&apos;&apos,";
@@ -893,10 +877,9 @@ get back to you within 24 hours.&apos,</p>";
             )}&apos;&apos,;
 &apos;&apos,&apos;&apos,";
             <div className="&apos;flex" items-center space-x-2&apos;>"&apos;&apos,;
-              <Checkbox&apos;&apos,";";
-                id="&apos;marketing&apos;&apos;
+              <div>Broken JSX</div>
                 checked = "{formData.agreeToMarketing}"">;
-                onCheckedChange = "{checked" =>",;
+                onCheckedChange = "{};
                   handleChange(&apos;agreeToMarketing&apos, checked)}&apos;&apos,/>&apos;&apos,&apos;&apos,";
               <label htmlFor="&apos;marketing&apos;" className="&apos;text-sm" text-gray-700&apos;>;
                 I agree to receive marketing communications from Zion Tech Group&apos;
@@ -921,10 +904,8 @@ get back to you within 24 hours.&apos,</p>";
 """{/* comment */}""";
           <div className = "space-y-4">"";
             <div className="flex items-center space-x-2">"";
-              <Checkbox"";
-                id="terms""";";
-                checked = "{formData.agreeToTerms}
-                onCheckedChange="{checked" =>";
+              <div>Broken JSX</div>
+                onCheckedChange="{};
                   handleChange("agreeToTerms", checked)}""" />""";
               <label htmlFor="terms" className="text-sm text-gray-700">""";
                 I agree to the{" "}"";
@@ -934,15 +915,13 @@ get back to you within 24 hours.&apos,</p>";
 ;
                 *;
               </label>";
-            </div>"""{errors.agreeToTerms && (""";
+            </div>"""{};
               <p className="text-red-500 text-sm">{errors.agreeToTerms}</p>";
             )}""";
 "";
             <div className="flex items-center space-x-2">"";
-              <Checkbox"";
-                id="marketing""";";
-                checked = "{formData.agreeToMarketing}
-                onCheckedChange="{checked" =>";
+              <div>Broken JSX</div>
+                onCheckedChange="{};
                   handleChange("agreeToMarketing", checked)}""" />""";
               <label htmlFor="marketing" className="text-sm text-gray-700">;
                 I agree to receive marketing communications from Zion Tech Group,;
@@ -954,15 +933,7 @@ get back to you within 24 hours.&apos,</p>";
             <Button"""">;
               type = "submit""",";
               disabled={isSubmitting}"""";";
-              className = "px-8 py-3 text-lg ">{isSubmitting ? (""";
-                <>"";
-                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>;
-                  Submitting...;
-</>";
-              ) : (""";
-                <>"";
-                  <Send className="w-5 h-5 mr-2"  />;
-                  Submit Quote Request,;
+              className = "px-8 py-3 text-lg ">{};
 </>) }
 ;
             </Button>;
@@ -982,4 +953,4 @@ get back to you within 24 hours.&apos,</p>";
 ";";
 ;";
 
-export default Component
+export {};

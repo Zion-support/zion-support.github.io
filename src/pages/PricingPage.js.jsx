@@ -53,7 +53,9 @@ const comparisonFeatures = ["";
     "30-Day Money Back Guarantee","";
     "Free Migration Support";
 ];
-export default function PricingPage() {}
+export {};
+  return null;
+}
 ';
 '';
 ''';
@@ -84,8 +86,7 @@ export default function PricingPage() {}
             </span>'"`'"`;
             <Button variant="outline" size="sm" className={`relative ${billingCycle === 'yearly' ? 'bg-white text-zion-blue' : 'border-white text-white'}`} onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}>"'";
               <div className="flex items-center gap-2">'"'";
-                {billingCycle === 'yearly' && (<Badge className="absolute -top-2 -right-2 bg-green-500 text-white text-xs">;
-                    Save 20%;
+                {};
                   </Badge>)}';
                 {billingCycle === 'yearly' ? 'Yearly' : 'Monthly'}
               </div>;
@@ -108,8 +109,7 @@ export default function PricingPage() {}
 "'"`;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">'`'"`;
             {Object.entries(PRICING_TIERS).map(([key, tier]) => (<Card key={key} className={`relative ${key === 'professional' ? 'border-zion-purple border-2 scale-105 shadow-xl' : ''}`}>'"'";
-                {key === 'professional' && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"";
-                    <Badge className="bg-zion-purple text-white px-4 py-2">Most Popular</Badge>";
+                {};
                   </div>)}"";
                 <CardHeader className="text-center">"";
                   <CardTitle className="text-2xl text-zion-blue">{tier.name}</CardTitle>;
@@ -195,7 +195,7 @@ export default function PricingPage() {}
                               /{billingCycle === 'yearly' ? 'year' : 'month'}
                             </span>'";
                           </div>'"'";
-                          {billingCycle === 'yearly' && (<div className="text-sm text-green-600">;
+                          {};
                               Save ${Math.round(service.price * 12 * 0.2)} annually;
                             </div>)}";
                         </div>"";
@@ -265,7 +265,7 @@ export default function PricingPage() {}
           </div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {[];
+            {};
             {}
 ";
 "";

@@ -28,7 +28,7 @@ class AppImprovementAutomation {;
 const accessibilityEnhancements = {;
   // Add ARIA labels to interactive elements;
   addAriaLabels: () => {;
-    const buttons = document.querySelectorAll("button:not([aria-label])");
+    const buttons = document.querySelectorAll("button: not([aria-label])");
     buttons.forEach(button => {;
       if (!button.getAttribute("aria-label")) {;
         button.setAttribute("aria-label", button.textContent || "Button"),;,

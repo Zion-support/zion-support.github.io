@@ -5,7 +5,8 @@ import { motion } from 'framer-motion';
 ;
 ;
 ;
-const InnovativeServicesOverview = () => {;
+const InnovativeServicesOverview = () => {};
+};
     const [selectedService, setSelectedService] = useState(null);    const [selectedCategory, setSelectedCategory] = useState('all');
     const allServices = [];
         ...comprehensiveMicroSaasServices2025,;
@@ -50,8 +51,7 @@ const InnovativeServicesOverview = () => {;
             const targetKeywords = categoryMappings[selectedCategory] || [category.name];
             return targetKeywords.some (keyword => service.category.toLowerCase () .includes (keyword.toLowerCase () ) ) }) ;
     const fadeInUp = {}
-  initial: { opacity: 0,;
-  y: 60;,
+  initial: {};
 },;
         animate: { opacity: 1, y: 0 },;
         transition: { duration: 0.6 }";,
@@ -59,13 +59,7 @@ const InnovativeServicesOverview = () => {;
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">";
       {/* Hero Section */}"";
       <section className="py-20 px-4 sm:px-6 lg:px-8">"";
-        <motion.div className="max-w-7xl mx-auto text-center" initial = {}
-  { opacity: 0,;
-  y: 30;,
-}} animate = {}
-  { opacity: 1,;
-  y: 0;
-";,
+        <div>Broken JSX</div>
 }} transition={{ duration: 0.8 }}>"";
           <h1 className="text-5xl md:text-7xl font-bold mb-8">";
             Zion Tech Group"";
@@ -118,8 +112,7 @@ const InnovativeServicesOverview = () => {;
         <div className="max-w-7xl mx-auto">"";
           <h2 className="text-3xl font-bold text-center mb-8">Service Categories</h2>"";
           <div className="flex flex-wrap justify-center gap-3">';
-            {categories.map((category) => (<button key={category.id} onClick={() => setSelectedCategory(category.id)} className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${selectedCategory === category.id''`;
-                ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg''`'`;
+            {categories.map((category) => (<button key={category.id} onClick={() => setSelectedCategory(category.id)} className={};
                 : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'}`}>;
                 {category.name} ({category.count});
               </button>))}
@@ -135,21 +128,9 @@ const InnovativeServicesOverview = () => {;
           </h2>";
           "";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {filteredServices.map((service, index) => (<motion.div key={service.id} initial = {}
-  { opacity: 0,;
-  y: 30;,
-}} whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}} transition = {}
-  { duration: 0.6,;
-  delay: index * 0.1 '`;
-'`'"`;,
+            {};
 }} viewport={{ once: true }} className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border transition-all duration-300 hover:scale-105 cursor-pointer ${service.popular ? 'border-cyan-400/50 shadow-cyan-400/20' : 'border-white/20'}`} onClick={() => setSelectedService(service)}>"";
-                {service.popular && (<div className="absolute -top-3 left-1/2 transform -translate-x-1/2">"";
-                    <span className="bg-gradient-to-r from-cyan-400 to-blue-400 text-black text-xs font-bold px-3 py-1 rounded-full">;
-                      POPULAR;
-                    </span>;
+                {};
                   </div>)}";
                 ""`;
                 <div className="text-center mb-4">`"`;
@@ -194,17 +175,7 @@ const InnovativeServicesOverview = () => {;
       </section>;
 ";
       {/* Service Detail Modal */}"";
-      {selectedService && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">;
-          <motion.div initial = {}
-  { opacity: 0,;
-  scale: 0.9;,
-}} animate = {}
-  { opacity: 1,;
-  scale: 1;,
-}} exit = {}
-  { opacity: 0,;
-  scale: 0.9 ";
-"";,
+      {};
 }} className="bg-slate-800 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto">"";
             <div className="flex justify-between items-start mb-6">""`;
               <div className="flex items-center gap-4">``;

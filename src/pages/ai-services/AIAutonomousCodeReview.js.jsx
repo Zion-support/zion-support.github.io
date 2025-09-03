@@ -108,25 +108,20 @@ const testimonials = [];
     rating: 5}
 ];
 export { function };
-export default function AIAutonomousCodeReview() {}
+export {};
+  return null;
+}
 ";
   return ("";
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 relative overflow-hidden">";
-      <SEO"";
-        title="AI Autonomous Code Review - Zion Tech Group"";
-        description="Revolutionize your code review process with AI-powered analysis. Automated security scanning, performance optimization, and quality assurance."";
-        keywords="AI code review, automated code review, code security, code quality, AI development tools, code analysis"";
-        canonical="https://ziontechgroup.com/ai-services/ai-autonomous-code-review/";
+      <div>Broken JSX</div>
       />;
 ";
       {/* Hero Section */}"";
       <section className="relative pt-32 pb-20 overflow-hidden">"";
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 via-purple-900/50 to-cyan-900/50"></div>"";
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}";
-            transition={{ duration: 0.8 }}"";
+          <div>Broken JSX</div>
             className="text-center"">"";
             <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full px-4 py-2 text-cyan-400 text-sm font-medium mb-6">"";
               <Code className="w-4 h-4" />;
@@ -147,15 +142,12 @@ export default function AIAutonomousCodeReview() {}
             </p>";
 "";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <motion.button;
-                whileHover={{ scale: 1.05 }}";
-                whileTap={{ scale: 0.95 }}"";
+              <div>Broken JSX</div>
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-cyan-500/25 transition-all duration-300 flex items-center gap-2 justify-center"">"";
                 <Play className="w-5 h-5" />;
                 Watch Demo;
               </motion.button>";
-              <Link"";
-                to="/contact"";
+              <div>Broken JSX</div>
                 className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center gap-2 justify-center">";
                 Get Started"";
                 <ArrowRight className="w-5 h-5" />;
@@ -168,10 +160,7 @@ export default function AIAutonomousCodeReview() {}
       {/* Features Section */}"";
       <section className="py-20 bg-gray-900/50">"";
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}";
-            transition={{ duration: 0.8 }}"";
+          <div>Broken JSX</div>
             className="text-center mb-16"">"";
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">;
               Intelligent Code Analysis";
@@ -186,13 +175,9 @@ export default function AIAutonomousCodeReview() {}
             {features.map((feature, index) => {}
               const IconComponent = feature.icon;
               return();
-                <motion.div;
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}";
-                  transition={{ duration: 0.6, delay: index * 0.1 }}"";
+                <div>Broken JSX</div>
                   className="bg-gray-800/50 backdrop-blur-md border border-gray-700 rounded-2xl p-8 hover:border-cyan-500/50 hover:bg-gray-800/70 transition-all duration-300">;
-                  <div;
+                  <div>Broken JSX</div>
                     className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl mb-6 flex items-center justify-center text-white`}">"";
                     <IconComponent className="w-8 h-8" />";
                   </div>"";
@@ -212,10 +197,7 @@ export default function AIAutonomousCodeReview() {}
       {/* Benefits Section */}"";
       <section className="py-20">"";
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}";
-            transition={{ duration: 0.8 }}"";
+          <div>Broken JSX</div>
             className="text-center mb-16"">"";
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">;
               Why Choose AI Code Review?";
@@ -227,14 +209,7 @@ export default function AIAutonomousCodeReview() {}
           </motion.div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {benefits.map((benefit, index) => (;
-              <motion.div;
-                key={benefit}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}";
-                transition={{ duration: 0.6, delay: index * 0.1 }}"";
-                className="flex items-start gap-3"">"";
-                <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />"";
+            {};
                 <span className="text-gray-300">{benefit}</span>;
               </motion.div>;
             ))}
@@ -245,10 +220,7 @@ export default function AIAutonomousCodeReview() {}
       {/* Use Cases Section */}"";
       <section className="py-20 bg-gray-900/50">"";
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}";
-            transition={{ duration: 0.8 }}"";
+          <div>Broken JSX</div>
             className="text-center mb-16"">"";
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">;
               Perfect For Every Development Team";
@@ -263,11 +235,7 @@ export default function AIAutonomousCodeReview() {}
             {useCases.map((useCase, index) => {}
               const IconComponent = useCase.icon;
               return();
-                <motion.div;
-                  key={useCase.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}";
-                  transition={{ duration: 0.6, delay: index * 0.1 }}"";
+                <div>Broken JSX</div>
                   className="text-center"">"";
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">"";
                     <IconComponent className="w-8 h-8 text-white" />";
@@ -286,10 +254,7 @@ export default function AIAutonomousCodeReview() {}
       {/* Testimonials Section */}"";
       <section className="py-20">"";
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}";
-            transition={{ duration: 0.8 }}"";
+          <div>Broken JSX</div>
             className="text-center mb-16"">"";
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">;
               What Developers Say";
@@ -301,19 +266,7 @@ export default function AIAutonomousCodeReview() {}
           </motion.div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            {testimonials.map((testimonial, index) => (;
-              <motion.div;
-                key={testimonial.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}";
-                transition={{ duration: 0.6, delay: index * 0.1 }}"";
-                className="bg-gray-800/50 backdrop-blur-md border border-gray-700 rounded-2xl p-8"">"";
-                <div className="flex gap-1 mb-4">;
-                  {[...Array(testimonial.rating)].map((_, i) => (;
-                    <Star";
-                      key={i}"";
-                      className="w-5 h-5 text-cyan-400 fill-current";
-                    />;
+            {};
                   ))}";
                 </div>"";
                 <p className="text-gray-300 mb-6 leading-relaxed italic">"";
@@ -336,9 +289,7 @@ export default function AIAutonomousCodeReview() {}
       {/* CTA Section */}"";
       <section className="py-20 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20">"";
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+          <div>Broken JSX</div>
             transition={{ duration: 0.8 }}">"";
             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">;
               Ready to Transform Your Code Review?";
@@ -348,14 +299,12 @@ export default function AIAutonomousCodeReview() {}
               code review process with AI.";
             </p>"";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <Link"";
-                to="/contact"";
+              <div>Broken JSX</div>
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-cyan-500/25 transition-all duration-300 flex items-center gap-2 justify-center">";
                 Get Started Today"";
                 <ArrowRight className="w-5 h-5" />;
               </Link>";
-              <Link"";
-                to="/pricing"";
+              <div>Broken JSX</div>
                 className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center gap-2 justify-center">";
                 View Pricing"";
                 <ArrowRight className="w-5 h-5" />;

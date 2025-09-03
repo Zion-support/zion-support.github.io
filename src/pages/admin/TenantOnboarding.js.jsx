@@ -21,7 +21,9 @@ import {}
 import { toast } from 'sonner';''';
 import { supabase } from '@/integrations/supabase/client';''';
 import { Switch } from '@/components/ui/switch';
-export default function TenantOnboarding() {}
+export {};
+  return null;
+}
   const { user } = useAuth();';
   const [activeTab, setActiveTab] = useState('comp');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -118,9 +120,7 @@ export default function TenantOnboarding() {}
   };
   return();
     <>";
-      <SEO"";
-        title="Tenant Onboarding - Zion AI Marketplace"";
-        description="Onboard a new white-label tenant to the Zion AI Marketplace platform.";
+      <div>Broken JSX</div>
       />";
 "";
       <main className="flex-1 container max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8">"";
@@ -144,9 +144,7 @@ export default function TenantOnboarding() {}
             </CardHeader>";
             <CardContent>"";
               <form onSubmit={handleSubmit} className="space-y-6">;
-                <Tabs;
-                  value={activeTab}";
-                  onValueChange={setActiveTab}"";
+                <div>Broken JSX</div>
                   className="w-full"">"";
                   <TabsList className="mb-4 grid grid-cols-3 w-full">"";
                     <TabsTrigger value="comp">Comp Info</TabsTrigger>"";
@@ -157,23 +155,14 @@ export default function TenantOnboarding() {}
                   <TabsContent value="comp" className="space-y-4">"";
                     <div className="space-y-2">"";
                       <Label htmlFor="brand_name">Comp Name</Label>";
-                      <Input"";
-                        id="brand_name"";
-                        name="brand_name";
-                        value={formData.brand_name}";
-                        onChange={handleInputChange}"";
-                        placeholder="Acme Corporation";
-                        required;
+                      <div>Broken JSX</div>
                       />;
                     </div>";
 "";
                     <div className="space-y-2">"";
                       <Label htmlFor="industry">Industry</Label>";
-                      <Select"";
-                        name="industry";
-                        value={formData.industry}
-                        onValueChange={value =>';
-                          handleSelectChange('industry', value);,
+                      <div>Broken JSX</div>
+                        onValueChange={};
 }
                       >";
                         <SelectTrigger>"";
@@ -198,11 +187,8 @@ export default function TenantOnboarding() {}
 "";
                     <div className="space-y-2">"";
                       <Label htmlFor="comp_size">Comp Size</Label>";
-                      <Select"";
-                        name="comp_size";
-                        value={formData.comp_size}
-                        onValueChange={value =>';
-                          handleSelectChange('comp_size', value);,
+                      <div>Broken JSX</div>
+                        onValueChange={};
 }
                       >";
                         <SelectTrigger>"";
@@ -229,12 +215,7 @@ export default function TenantOnboarding() {}
                   <TabsContent value="branding" className="space-y-4">"";
                     <div className="space-y-2">"";
                       <Label htmlFor="logo_url">Logo URL</Label>";
-                      <Input"";
-                        id="logo_url"";
-                        name="logo_url";
-                        value={formData.logo_url}";
-                        onChange={handleInputChange}"";
-                        placeholder="https://example.com/logo.png"";
+                      <div>Broken JSX</div>
                       />"";
                       <p className="text-xs text-muted-foreground">;
                         Enter a direct URL to your logo image (SVG or PNG with;
@@ -245,30 +226,17 @@ export default function TenantOnboarding() {}
                     <div className="space-y-2">"";
                       <Label htmlFor="primary_color">Primary Brand Color</Label>"";
                       <div className="flex items-center gap-2">";
-                        <Input"";
-                          id="primary_color"";
-                          name="primary_color"";
-                          type="color";
-                          value={formData.primary_color}";
-                          onChange={handleInputChange}"";
-                          className="w-12 p-1 h-10";
+                        <div>Broken JSX</div>
                         />";
-                        <Input"";
-                          name="primary_color";
-                          value={formData.primary_color}";
-                          onChange={handleInputChange}"";
-                          placeholder="#9b87f5";
+                        <div>Broken JSX</div>
                         />;
                       </div>;
                     </div>";
 "";
                     <div className="space-y-2">"";
                       <Label htmlFor="theme_preset">Theme Preset</Label>";
-                      <Select"";
-                        name="theme_preset";
-                        value={formData.theme_preset}
-                        onValueChange={value =>';
-                          handleSelectChange('theme_preset', value);,
+                      <div>Broken JSX</div>
+                        onValueChange={};
 }
                       >";
                         <SelectTrigger>"";
@@ -291,11 +259,8 @@ export default function TenantOnboarding() {}
                           Show "Powered by Zion AI" in the footer and elsewhere;
                         </p>;
                       </div>";
-                      <Switch"";
-                        id="is_co_branded";
-                        checked={formData.is_co_branded}
-                        onCheckedChange={checked =>';
-                          handleSwitchChange('is_co_branded', checked);,
+                      <div>Broken JSX</div>
+                        onCheckedChange={};
 }
                       />;
                     </div>;
@@ -305,19 +270,7 @@ export default function TenantOnboarding() {}
                     <div className="space-y-2">"";
                       <Label htmlFor="subdomain">Subdomain</Label>"";
                       <div className="flex items-center">";
-                        <Input"";
-                          id="subdomain"";
-                          name="subdomain";
-                          value={formData.subdomain}
-                          onChange={handleInputChange}
-                          placeholder={}
-                            formData.brand_name;
-                              ? formData.brand_name;
-                                  .toLowerCase();
-                                  .replace(/[^a-z0-9]/g,)';
-                              : 'comp'";,
-}"";
-                          className="rounded-r-none"";
+                        <div>Broken JSX</div>
                         />"";
                         <div className="bg-muted px-3 py-2 border border-l-0 border-input rounded-r-md text-muted-foreground">;
                           .ziontechmarketplace.com;
@@ -332,12 +285,7 @@ export default function TenantOnboarding() {}
                       <Label htmlFor="custom_domain">;
                         Custom Domain (Optional);
                       </Label>";
-                      <Input"";
-                        id="custom_domain"";
-                        name="custom_domain";
-                        value={formData.custom_domain}";
-                        onChange={handleInputChange}"";
-                        placeholder="hire.yourcompany.com"";
+                      <div>Broken JSX</div>
                       />"";
                       <p className="text-xs text-muted-foreground">';
                         If you want to use your own domain, enter it here.'';
@@ -348,9 +296,7 @@ export default function TenantOnboarding() {}
                 </Tabs>";
 "";
                 <div className="flex justify-end space-x-2">";
-                  <Button"";
-                    type="button"";
-                    variant="outline";
+                  <div>Broken JSX</div>
                     onClick={() => window.history.back()}
                   >;
                     Cancel";

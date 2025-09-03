@@ -1,5 +1,5 @@
 // comment;
-export const cartUtils = {}
+export {};
 ;
 
-export default cartUtils
+export {};

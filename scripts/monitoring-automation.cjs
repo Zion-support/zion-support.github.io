@@ -143,7 +143,7 @@ class MonitoringAutomation {;
   async checkApplicationHealth() {;
     return new Promise((resolve) => {;
       const startTime = Date.now();
-      const req = http.get("http://localhost:3000/api/health", (res) => {;
+      const req = http.get("http://localhost: 3000/api/health", (res) => {;
         const responseTime = Date.now() - startTime;
         resolve({;
           status: res.statusCode === 200 ? "healthy" : "unhealthy",;

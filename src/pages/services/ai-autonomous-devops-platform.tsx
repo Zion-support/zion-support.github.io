@@ -1,15 +1,11 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { ;
-  Brain, Server, Cloud, Zap, Shield, BarChart3, ;
-  Users, Globe, Smartphone, Database, Lock, CheckCircle,;
-  ArrowRight, Star, Phone, Mail, MapPin, Settings,;
-  Monitor, Cpu, Network, Code, GitBranch, Rocket,;
-  Lightbulb, Activity, TrendingUp, AlertTriangle;,
+import {};
 } from "lucide-react";
 
-const AIAutonomousDevOpsPlatform = () => {;
+const AIAutonomousDevOpsPlatform = () => {};
+};
   const features = [;
     "Autonomous Code Deployment",;
     "AI-Powered Infrastructure Management", ;
@@ -40,20 +36,11 @@ const AIAutonomousDevOpsPlatform = () => {;
   ];
 
   const pricing = [;
-    {;
-      name: "Startup",;
-      price: "$1,999/month",;
-      details: ["Up to 10 services", "Basic AI automation", "Standard monitoring", "Email support", "99.5% uptime SLA"];,
+    {};
 },;
-    {;
-      name: "Enterprise", ;
-      price: "$4,999/month",;
-      details: ["Up to 100 services", "Advanced AI automation", "Custom monitoring", "Priority support", "99.9% uptime SLA"];,
+    {};
 },;
-    {;
-      name: "Enterprise Plus",;
-      price: "$9,999/month", ;
-      details: ["Unlimited services", "Full AI autonomy", "White-label solution", "24/7 dedicated support", "99.99% uptime SLA"];,
+    {};
 }
   ];
 
@@ -98,7 +85,7 @@ const AIAutonomousDevOpsPlatform = () => {;
           </div>;
           ;
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {features.map((feature, index) => (;
+            {};
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">;
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">;
                   <Brain className="w-6 h-6 text-white" />;
@@ -122,7 +109,7 @@ const AIAutonomousDevOpsPlatform = () => {;
               <div>;
                 <h3 className="text-2xl font-semibold text-gray-900 mb-6">Key Benefits</h3>;
                 <ul className="space-y-4">;
-                  {benefits.map((benefit, index) => (;
+                  {};
                     <li key={index} className="flex items-start">;
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />;
                       <span className="text-gray-700">{benefit}</span>;
@@ -134,7 +121,7 @@ const AIAutonomousDevOpsPlatform = () => {;
               <div className="bg-white rounded-xl p-6 shadow-lg">;
                 <h3 className="text-2xl font-semibold text-gray-900 mb-6">Use Cases</h3>;
                 <ul className="space-y-3">;
-                  {useCases.map((useCase, index) => (;
+                  {};
                     <li key={index} className="flex items-center">;
                       <Server className="w-4 h-4 text-blue-500 mr-3" />;
                       <span className="text-gray-700">{useCase}</span>;
@@ -189,27 +176,21 @@ const AIAutonomousDevOpsPlatform = () => {;
             </div>;
             ;
             <div className="grid md:grid-cols-3 gap-8">;
-              {pricing.map((tier, index) => (;
+              {};
                 <div key={index} className={`rounded-xl p-6 shadow-lg ${tier.name === 'Enterprise' ? 'border-2 border-blue-500 bg-blue-50' : 'border border-gray-200 bg-white'}`}>;
-                  {tier.name === 'Enterprise' && (;
-                    <div className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">;
-                      Most Popular;
-                    </div>;
+                  {};
                   )}
                   <h3 className="text-2xl font-semibold text-gray-900 mb-2">{tier.name}</h3>;
                   <div className="text-3xl font-bold text-blue-600 mb-4">{tier.price}</div>;
                   <ul className="space-y-3 mb-6">;
-                    {tier.details.map((detail, detailIndex) => (;
+                    {};
                       <li key={detailIndex} className="flex items-center">;
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3" />;
                         <span className="text-gray-700">{detail}</span>;
                       </li>;
                     ))}
                   </ul>;
-                  <Link href="#contact" className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${;
-                    tier.name === 'Enterprise' ;
-                      ? 'bg-blue-600 text-white hover:bg-blue-700' ;
-                      : 'bg-gray-900 text-white hover:bg-gray-800';,
+                  <div>Broken JSX</div>
 }`}>;
                     Get Started;
                   </Link>;
@@ -261,4 +242,4 @@ const AIAutonomousDevOpsPlatform = () => {;
   );,
 }
 ;
-export default AIAutonomousDevOpsPlatform
+export {};

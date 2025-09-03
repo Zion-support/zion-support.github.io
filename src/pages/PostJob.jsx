@@ -8,7 +8,9 @@ import {}
 import SEO from '@/components/SEO';''';
 import { useAuth } from '@/hooks/useAuth';''';
 import { useIsMobile } from '@/hooks/use-mobile';
-export default function PostJob() {}
+export {};
+  return null;
+}
   const { isAuthenticated, isLoading } = useAuth();
   const isMobile = useIsMobile();
   if (isLoading) {}
@@ -20,12 +22,10 @@ export default function PostJob() {}
 }
   return();
     <>";
-      <SEO"";
-        title="Post a Job | Zion AI Marketplace"";
-        description="Post a job to find the perfect AI talent for your project.";
+      <div>Broken JSX</div>
       />;
 ';
-      <main'';
+      <div>Broken JSX</div>
         className={`container mx-auto px-${isMobile ? '2' : '4'} py-${isMobile ? '6' : '12'} max-w-4xl`}">"";
         <Card className="border shadow-md">'`;
           <CardHeader>'`'`;

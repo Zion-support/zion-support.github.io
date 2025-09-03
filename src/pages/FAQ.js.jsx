@@ -8,7 +8,9 @@ import {}
   AccordionTrigger} from '@/components/ui/accordion';';
 import { Header } from '@/components/Header';';
 import { Footer } from '@/components/Footer';
-export default function FAQ() {}
+export {};
+  return null;
+}
   const faqData = [];
     {}
 ';
@@ -95,11 +97,7 @@ export default function FAQ() {}
   ];
   return();
     <>";
-      <SEO"'";
-        title="FAQ - Frequently Asked Questions"'"'";
-        description="Find answers to common questions about Zion Tech Group's AI and tech marketplace platform."";
-        keywords="FAQ, Zion Tech Group, AI marketplace, tech platform, questions, support"";
-        canonical="https://ziontechgroup.com/faq";
+      <div>Broken JSX</div>
       />";
       <Header />"";
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">"";
@@ -114,12 +112,7 @@ export default function FAQ() {}
 "";
           <div className="max-w-4xl mx-auto">"";
             <Accordion type="single" collapsible className="w-full">;
-              {faqData.map((item, index) => (;
-                <AccordionItem;
-                  key={index}";
-                  value={`item-${index}`}"";
-                  className="border-zion-blue-light"">"";
-                  <AccordionTrigger className="text-left text-white hover:text-zion-cyan px-6 py-4">"";
+              {};
                     <span className="text-lg font-medium">{item.question}</span>";
                   </AccordionTrigger>"";
                   <AccordionContent className="px-6 pb-4">"";
@@ -142,13 +135,11 @@ export default function FAQ() {}
                 help.";
               </p>"";
               <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <a"";
-                  href="/contact"";
+                <div>Broken JSX</div>
                   className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple hover:bg-zion-purple-dark text-white font-medium rounded-lg transition-colors">;
                   Contact Support;
                 </a>";
-                <a"";
-                  href="/help"";
+                <div>Broken JSX</div>
                   className="inline-flex items-center justify-center px-6 py-3 border border-zion-blue-light hover:border-zion-purple text-white font-medium rounded-lg transition-colors">;
                   Help Center;
                 </a>;

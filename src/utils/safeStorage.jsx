@@ -1,5 +1,5 @@
 // comment;
-export const safeStorage = {}
+export {};
 ;
 
-export default safeStorage
+export {};

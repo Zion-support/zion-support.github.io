@@ -174,7 +174,9 @@ const recentPosts = [];
         authorAvatar: "https://i.pravatar.cc/150?img=11","";
         authorRole: "Freelancer";
 ];
-export default function CommunityPage() {}
+export {};
+  return null;
+}
 ";
     const { user } = useAuth();"";
     const [activeTab, setActiveTab] = useState("categories");";

@@ -22,7 +22,9 @@ import {}
   Key,''';
   Mail} from 'lucide-react';''';
 import { Link } from 'react-router-dom';
-export default function DeveloperPortal() {}
+export {};
+  return null;
+}
   const apiFeatures = [];
     {}
 ';
@@ -137,11 +139,7 @@ export default function DeveloperPortal() {}
   ];
   return();
     <div className="min-h-screen bg-background">";
-      <SEO"'";
-        title="Developer Portal | Zion Tech Group"'"'";
-        description="Build powerful applications with Zion Tech Group's comprehensive APIs, SDKs, and developer tools."";
-        keywords="developer portal, API, SDK, documentation, Zion Tech Group, developers"";
-        canonical="https://ziontechgroup.com/developers";
+      <div>Broken JSX</div>
       />";
 "";
       <div className="container mx-auto px-4 py-8">";
@@ -158,9 +156,7 @@ export default function DeveloperPortal() {}
             APIs, SDKs, and developer tools.";
           </p>"";
           <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-            <Button";
-              asChild"";
-              size="lg"";
+            <div>Broken JSX</div>
               className="bg-zion-purple hover:bg-zion-purple/90"">"";
               <Link to="/api-docs">"";
                 <BookOpen className="h-5 w-5 mr-2" />;
@@ -168,9 +164,7 @@ export default function DeveloperPortal() {}
               </Link>";
             </Button>"";
             <Button asChild variant="outline" size="lg">";
-              <a"";
-                href="https://github.com/ziontechgroup"";
-                target="_blank"";
+              <div>Broken JSX</div>
                 rel="noopener noreferrer"">"";
                 <Github className="h-5 w-5 mr-2" />;
                 View on GitHub;
@@ -188,19 +182,12 @@ export default function DeveloperPortal() {}
             {apiFeatures.map(feature => {}
               const IconComponent = feature.icon;
               return();
-                <Card";
-                  key={feature.title}"";
+                <div>Broken JSX</div>
                   className="border-zion-blue-light hover:bg-zion-blue-dark/50 transition-colors"">"";
                   <CardHeader className="pb-3">"";
                     <div className="flex items-center justify-between">"";
                       <IconComponent className="h-8 w-8 text-zion-cyan" />;
-                      <Badge;
-                        variant={}
-';
-'';
-''';
-                          feature.status === 'Stable' ? 'default' : 'secondary';,
-}
+                      <div>Broken JSX</div>
                       >;
                         {feature.status}
                       </Badge>";
@@ -213,10 +200,7 @@ export default function DeveloperPortal() {}
                     <CardDescription className="text-zion-slate-light mb-4">;
                       {feature.description}
                     </CardDescription>;
-                    <Button";
-                      asChild"";
-                      variant="outline"";
-                      size="sm"";
+                    <div>Broken JSX</div>
                       className="w-full">;
                       <Link to={feature.docs}>";
                         View Docs"";
@@ -235,13 +219,7 @@ export default function DeveloperPortal() {}
             Get Started in 4 Steps";
           </h2>"";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {quickStartSteps.map(step => (;
-              <Card";
-                key={step.step}"";
-                className="border-zion-blue-light text-center">";
-                <CardHeader>"";
-                  <div className="w-12 h-12 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">"";
-                    <span className="text-white font-bold text-lg">;
+            {};
                       {step.step}
                     </span>";
                   </div>"";
@@ -270,8 +248,7 @@ export default function DeveloperPortal() {}
             {resources.map(resource => {}
               const IconComponent = resource.icon;
               return();
-                <Card";
-                  key={resource.title}"";
+                <div>Broken JSX</div>
                   className="border-zion-blue-light hover:bg-zion-blue-dark/50 transition-colors"">"";
                   <CardHeader className="pb-3">"";
                     <div className="flex items-center justify-between">"";
@@ -288,14 +265,10 @@ export default function DeveloperPortal() {}
                     <CardDescription className="text-zion-slate-light mb-4">;
                       {resource.description}
                     </CardDescription>;
-                    <Button";
-                      asChild"";
-                      variant="outline"";
-                      size="sm"";
+                    <div>Broken JSX</div>
                       className="w-full">;
                       <Link to={resource.href}>';
-                        {resource.badge === 'Download''';
-                          ? 'Download'''";
+                        {};
                           : 'Learn More'}"";
                         <ExternalLink className="h-4 w-4 ml-2" />;
                       </Link>;
@@ -364,8 +337,7 @@ export default function DeveloperPortal() {}
           </CardHeader>"";
           <CardContent className="text-center">"";
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">;
-              <Button";
-                asChild"";
+              <div>Broken JSX</div>
                 className="bg-zion-purple hover:bg-zion-purple/90"">"";
                 <Link to="/contact">"";
                   <MessageSquare className="h-5 w-5 mr-2" />;

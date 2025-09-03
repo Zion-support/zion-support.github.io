@@ -1,59 +1,37 @@
 // comment;
-export interface offlineshimsdType {;
-  id: string;
-  name: string;
-  createdAt: Date;,
+export interface offlineshimsdType {};
 }
-  interface IntrinsicElements {;
-
-    [elemName: string]: ;
-;,
+  interface IntrinsicElements {};
 }}
 ;
-declare module 'react-dom' {;
-  export function reactDom: ;
-  export default reactDom}
+declare module 'react-dom' {};
+  export {};
 ;
-declare module 'react-router-dom' {;
-  export function useNavigate(): ;
-  export const Link: ;
-  export const Routes: ;
-  export const Navigate: ;
-  const rr: ;
-  export default rr}
+declare module 'react-router-dom' {};
+  export {};
 ;
-declare module 'react-hook-form' {;
-  export function useForm<T = any>(...args: any[]): ;
-  const rhf: ;
-  export default rhf}
+declare module 'react-hook-form' {};
+  export {};
 ;
-declare module '@hookform/resolvers/zod' {;
-  export function zodResolver(...args: any[]): }
+declare module '@hookform/resolvers/zod' {};
+  export {};
 ;
-declare module '@tanstack/react-query' {;
-  export function useMutation<T = any>(...args: any[]): ;
-  const rq: ;
-  export default rq}
+declare module '@tanstack/react-query' {};
+  export {};
 ;
-declare module 'jspdf' {;
-  export class jsPDF {;
-    constructor(...args: any[]);
+declare module 'jspdf' {};
     [key: string]: }
 }
 ;
-declare module 'path' {;
-  const path: ;
-  export default path}
+declare module 'path' {};
+  export {};
 ;
-declare module 'jspdf-autotable' {;
-  const autotable: ;
-  export default autotable}
+declare module 'jspdf-autotable' {};
+  export {};
 ;
-declare module 'zod' {;
-  export type infer<T> = ;
-  const z: ;
+declare module 'zod' {};
   export { z };
-  export default z}
+  export {};
 ;
 export default useEffect;
 export default useRef;

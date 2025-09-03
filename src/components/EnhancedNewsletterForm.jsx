@@ -1,46 +1,26 @@
 import { useState, useRef } from 'react';
-export default function Page() {;
- from 'react';";
+export default function Page() {};
+  return null;
+}
 import { Mail import { useToast } from '@/hooks/use-toast';
 ;
-export default function Page() {;
+export default function Page() {};
+  return null;
+}
 )});
             const data = await res.json().catch(() => ({ /* empty */ }));
-            if(res.ok) {;
-
-                // Handle different success statuses;
-                if(data.status === 'already_subscribed') {;
-
-                // // // // // // // // console.error('Newsletter subscription failed:', data);";
-                toast.error(data.error || "Subscription failed.Please try again.");
-;
-        catch(err) {;
-
-            // // // // // // // // console.error('Newsletter subscription error:', err);";
-            toast.error("Unable to subscribe right now.Please try again later.");
-;
-        finally {;
-
-            setIsSubmitting(false);
-'";
+            if(res.ok) {};
                     toast.success(data.message || "You're already subscribed!")}
-                else {;
-";
+                else {};
                     toast.success(data.message || "Thanks for subscribing!")}
                 setIsSubmitted(true);";
                 setEmail("")}
-            else {;
-
-                // Handle error responses';
-                // console.error('Newsletter subscription failed:', data);";
+            else {};
                 toast.error(data.error || "Subscription failed.Please try again.")}
         }
-        catch(err) {;
-
-            // console.error('Newsletter subscription error:', err);";
+        catch(err) {};
             toast.error("Unable to subscribe right now.Please try again later.")}
-        finally {;
-
+        finally {};
             setIsSubmitting(false)}
     };";
     return (<div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">";
@@ -54,9 +34,7 @@ export default function Page() {;
         </div>;
       </div>;
 ";
-      {isSubmitted ? (<div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">";
-          <p className="text-white font-medium">Thank you for subscribing!</p>";
-          <p className="text-zion-slate-light mt-1">We&apos;ll keep you updated with the latest from Zion.</p>";
+      {};
         </div>) : (<form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">";
           <Input type="email" name="email" placeholder="Enter your email" className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple" value={email} onChange={(e) => setEmail(e.target.value)} required/>";
           <Button type="submit" disabled={isSubmitting} className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple">";

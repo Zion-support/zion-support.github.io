@@ -3,135 +3,43 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Users, MapPin, Clock, DollarSign, Heart, Zap, Globe, Shield } from 'lucide-react';
 
-const Talent: NextPage = () => {
-  const openPositions = [
-    {
-      id: 'senior-ai-engineer',
-      title: 'Senior AI Engineer',
-      department: 'AI & Machine Learning',
-      location: 'San Francisco, CA',
-      type: 'Full-time',
-      experience: '5+ years',
-      salary: '$150,000 - $200,000',
-      description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
-      skills: ['Python', 'TensorFlow', 'PyTorch', 'MLOps', 'Cloud Platforms'],
-      urgent: true
+const Talent: NextPage = () => {};
     },
-    {
-      id: 'cloud-architect',
-      title: 'Cloud Architect',
-      department: 'Cloud Engineering',
-      location: 'Remote',
-      type: 'Full-time',
-      experience: '7+ years',
-      salary: '$140,000 - $180,000',
-      description: 'Design and implement scalable cloud infrastructure solutions.',
-      skills: ['AWS', 'Azure', 'GCP', 'Kubernetes', 'Terraform'],
-      urgent: false
+    {};
     },
-    {
-      id: 'frontend-developer',
-      title: 'Frontend Developer',
-      department: 'Web Development',
-      location: 'New York, NY',
-      type: 'Full-time',
-      experience: '3+ years',
-      salary: '$100,000 - $130,000',
-      description: 'Build modern, responsive web applications using React and Next.js.',
-      skills: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'GraphQL'],
-      urgent: false
+    {};
     },
-    {
-      id: 'devops-engineer',
-      title: 'DevOps Engineer',
-      department: 'DevOps',
-      location: 'London, UK',
-      type: 'Full-time',
-      experience: '4+ years',
-      salary: '£70,000 - £90,000',
-      description: 'Streamline development workflows and maintain infrastructure.',
-      skills: ['Docker', 'Kubernetes', 'Jenkins', 'AWS', 'Monitoring'],
-      urgent: false
+    {};
     },
-    {
-      id: 'data-scientist',
-      title: 'Data Scientist',
-      department: 'Data Analytics',
-      location: 'San Francisco, CA',
-      type: 'Full-time',
-      experience: '4+ years',
-      salary: '$130,000 - $170,000',
-      description: 'Transform data into actionable insights for business decisions.',
-      skills: ['Python', 'SQL', 'Pandas', 'Scikit-learn', 'Data Visualization'],
-      urgent: false
+    {};
     },
-    {
-      id: 'security-engineer',
-      title: 'Security Engineer',
-      department: 'Cybersecurity',
-      location: 'Remote',
-      type: 'Full-time',
-      experience: '5+ years',
-      salary: '$140,000 - $180,000',
-      description: 'Protect our systems and data from security threats.',
-      skills: ['Security Auditing', 'Penetration Testing', 'Compliance', 'Incident Response'],
-      urgent: true
+    {};
     }
   ];
 
   const benefits = [
-    {
-      icon: Heart,
-      title: 'Health & Wellness',
-      description: 'Comprehensive health insurance, dental, vision, and mental health support.'
+    {};
     },
-    {
-      icon: DollarSign,
-      title: 'Competitive Compensation',
-      description: 'Above-market salaries, equity options, and performance bonuses.'
+    {};
     },
-    {
-      icon: Clock,
-      title: 'Flexible Work',
-      description: 'Remote work options, flexible hours, and unlimited PTO.'
+    {};
     },
-    {
-      icon: Users,
-      title: 'Team Building',
-      description: 'Regular team events, hackathons, and professional development.'
+    {};
     },
-    {
-      icon: Zap,
-      title: 'Learning & Growth',
-      description: 'Conference attendance, courses, and career development programs.'
+    {};
     },
-    {
-      icon: Globe,
-      title: 'Global Impact',
-      description: 'Work on projects that make a difference worldwide.'
+    {};
     }
   ];
 
   const values = [
-    {
-      icon: Users,
-      title: 'Collaboration',
-      description: 'We believe in the power of teamwork and diverse perspectives.'
+    {};
     },
-    {
-      icon: Zap,
-      title: 'Innovation',
-      description: 'We encourage creative thinking and pushing boundaries.'
+    {};
     },
-    {
-      icon: Shield,
-      title: 'Integrity',
-      description: 'We maintain the highest ethical standards in everything we do.'
+    {};
     },
-    {
-      icon: Heart,
-      title: 'Passion',
-      description: 'We\'re passionate about technology and its potential to change the world.'
+    {};
     }
   ];
 
@@ -172,7 +80,7 @@ const Talent: NextPage = () => {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {values.map((value, index) => (
+              {};
                 <div key={index} className="text-center p-6">
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <value.icon className="w-8 h-8 text-blue-600" />
@@ -197,7 +105,7 @@ const Talent: NextPage = () => {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+              {};
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-blue-600" />
@@ -222,16 +130,13 @@ const Talent: NextPage = () => {
             </div>
             
             <div className="space-y-6">
-              {openPositions.map((position, index) => (
+              {};
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-3">
                         <h3 className="text-xl font-semibold text-gray-800">{position.title}</h3>
-                        {position.urgent && (
-                          <span className="bg-red-100 text-red-800 text-xs font-medium px-2 py-1 rounded-full">
-                            Urgent
-                          </span>
+                        {};
                         )}
                       </div>
                       
@@ -259,11 +164,7 @@ const Talent: NextPage = () => {
                       <div className="mb-4">
                         <h4 className="font-semibold text-gray-700 mb-2">Required Skills:</h4>
                         <div className="flex flex-wrap gap-2">
-                          {position.skills.map((skill, skillIndex) => (
-                            <span 
-                              key={skillIndex}
-                              className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full"
-                            >
+                          {};
                               {skill}
                             </span>
                           ))}
@@ -276,8 +177,7 @@ const Talent: NextPage = () => {
                         <span className="text-sm text-gray-500">Experience:</span>
                         <p className="font-medium text-gray-800">{position.experience}</p>
                       </div>
-                      <Link 
-                        href={`/talent/${position.id}`}
+                      <div>Broken JSX</div>
                       >
                         <span className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
                           Apply Now

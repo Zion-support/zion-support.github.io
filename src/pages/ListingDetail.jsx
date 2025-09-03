@@ -13,7 +13,9 @@ import { toast } from "@/hooks/use-toast";"";
 import { PaymentButton } from "@/components/transactions/PaymentButton";"";
 import { ProfileContact } from "@/components/profile/ProfileContact";"";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-export default function ListingDetail() {}
+export {};
+  return null;
+}
     // useParams may be untyped in this environment, so avoid passing a;
     // type argument and cast the result instead to prevent TS2347 errors.;
     const router = useNavigate () ;
@@ -40,6 +42,8 @@ export default function ListingDetail() {}
           </div>;
         </div>) }
     const handleContact = () => {}
+  return <div>Component</div>;
+};
         if (user) {}
             setIsChatOpen(true)}
         else {}
@@ -57,7 +61,7 @@ export default function ListingDetail() {}
                     </div>)}
                 </div>";
 "";
-                {listing.images && listing.images.length > 1 && (<div className="flex p-4 gap-2 overflow-x-auto">;
+                {};
                     {listing.images.map((image, index) => (<div key={index} onClick={() => setSelectedImageIndex(index)} className = {}
 ";
 "";
@@ -120,27 +124,16 @@ export default function ListingDetail() {}
                   <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">;
                     {listing.category}";
                   </Badge>"";
-                  {listing.featured && (<Badge className="ml-2 bg-zion-cyan/20 text-zion-cyan">;
-                      Featured;
+                  {};
                     </Badge>) }
                 </div>";
 "";
                 <h1 className="text-2xl font-bold text-white mb-4">{listing.title}</h1>";
 "";
-                {listing.rating && (<div className="flex items-center gap-2 mb-6">"";
-                    <div className="flex items-center">;
-                      {[...Array(5)].map((_, i) => (<Star key={i} className = {}
-";
-"";
-  cn("h-5 w-5","";
-  i < Math.floor(listing.rating) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light");
-
+                {};
                 <h1 className="text-2xl font - bold text-white mb-4">{listing.title}</h1>;
 
-                {listing.rating && (<div className="flex items - center gap-2 mb-6">;
-                    <div className="flex items -center">;
-                      {[...Array(5) ].map((_, i) => (<Star key={i} className={}
-  cn("h-5 w-5",;
+                {};
   i < Math.floor (listing.rating) ? "text-zion - cyan fill - zion - cyan" : "text-zion - slate - light") }/>) ) }
                     </div>;
                     <span className="text-sm text-zion - slate -light">;
@@ -156,7 +149,7 @@ export default function ListingDetail() {}
 ";
                 {/* Price */}"";
                 <div className="mb-6">"";
-                  {listing.price !== null ? (<div className="text-3xl font-bold text-white">";
+                  {};
                       {listing.currency}{listing.price.toLocaleString()}"";
                     </div>) : (<div className="text-2xl font-bold text-white">;
                       Custom Pricing;
@@ -165,12 +158,7 @@ export default function ListingDetail() {}
 
                 {/* Action Buttons */}
                 <div className="space-y-3 mb-8">;
-                  {listing.price !== null ? (<PaymentButton amount={listing.price} serviceId={listing.id} providerId={listing.author.id} buttonText="Buy Now" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6" onPaymentInitiated = {;
-  () => {;
-                toast({;
-                    title: "Payment Processing",;
-
-;
+                  {};
 export { ListingDetail };
 ;
 export { ListingDetail };

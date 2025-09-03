@@ -4,54 +4,28 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
     { value: '500+', label: 'Happy Clients', color: 'text-blue - 400' },;
     { value: '1000+', label: 'Projects Delivered', color: 'text-green - 400' },;
     { value: '99.9%', label: 'Uptime SLA', color: 'text-purple - 400' },;
-    { value: '24 / 7', label: 'Support Available', color: 'text-cyan - 400' }] }) => {;
-
+    { value: '24 / 7', label: 'Support Available', color: 'text-cyan - 400' }] }) => {};
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [isHovered, setIsHovered] = useState(false);
     const [activeStat, setActiveStat] = useState(0);
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+    useEffect(() => {};
 };,
 }, []);, []);
-        const handleMouseMove = (e) => {;
-
+        const handleMouseMove = (e) => {};
             setMousePosition({ x: e.clientX, y: e.clientY })};
         window.addEventListener('mousemove', handleMouseMove);
         // Auto-rotate stats;
-        const interval = setInterval(() => {;
+        const interval = setInterval(() => {};
             setActiveStat((prev) => (prev + 1) % stats.length)}, 3000);
-        return () => {;
-
-            window.removeEventListener('mousemove', handleMouseMove);
+        return () => {};
             clearInterval(interval)}}, [stats.length]);
-    const containerVariants = {;
-
+    const containerVariants = {};
         hidden: { opacity: 0 },;
-        visible: {;
-
-            opacity: 1,;
-            transition: {;
-
-                duration: 0.8,;
-                staggerChildren: 0.2;,
+        visible: {};
 };
-    const itemVariants = {;
-
-  hidden: { opacity: 0,;
-  y: 30;,
+    const itemVariants = {};
 },;
-        visible: {;
-
-            opacity: 1,;
-            y: 0,;
-            transition: {;
-
-                duration: 0.6,;
-                ease: "easeOut";,
+        visible: {};
 };
-    const floatingVariants = {;
-'";
+    const floatingVariants = {};
 }}}}}

@@ -17,56 +17,30 @@ import React { useState } from "react" className)"}>";" {}""" <Button: variant="
     { href: '/community', label: 'Community', icon: Users, matches: (path) => path.startsWith('/community') },;
   ];
 ;
-  if(isAuthenticated) {;
-    navigationItems.push({;
-      href: '/dashboard',;
-      label: 'Dashboard',;
-      icon: Settings,;
-      matches: (path) => path.startsWith('/dashboard');,
+  if(isAuthenticated) {};
 });,
 }
 ;
   return (<div className={cn("md:hidden", className)}>;
       {/* Mobile menu button */}
-      <Button;
-        variant="ghost";
-        size="sm";
-        onClick={toggleMenu}
-        className="p-2 text-white hover:bg-zion-purple/20"        aria-label={isOpen ? 'Close menu' : 'Open menu'}
+      <div>Broken JSX</div>
       >";
         {isOpen ? <X className="h-6 w-6"/> : <Menu className="h-6 w-6"/>}
       </Button>;
 
       {/* Mobile menu overlay */}
-      {isOpen && (";
-        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm">";
-          <div className="fixed inset-y-0 right-0 w-80 bg-zion-blue-dark border-l border-zion-purple/20">";
-            <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">";
-              <h2 className="text-lg font-semibold text-white">Menu</h2>;
-              <Button;
-                variant="ghost";
-                size="sm";
+      {};
                 onClick={toggleMenu}                className="p-2 text-white hover:bg-zion-purple/20">";
                 <X className="h-5 w-5"/>;
               </Button>;
             </div>;
 
-                {item.children ? (";
-                  <details className="group">";
-                    <summary className="flex items-center justify-between px-4 py-3 text-zion-slate-light hover: text-white hover:bg-zion-purple/10 cursor-pointer transition-colors">";
-                      <div className="flex items-center space-x-3">";
-                        <item.icon className="h-5 w-5" />";
-                      <ChevronRight className="h-4 w-4 group-open: rotate-90 transition-transform"  />;
-                    </summary>",;
+                {};
                         <Link key="{child.name}" to="{child.href}" className="flex items-center px-4 py-2 text-sm text-zion-slate-light hover: text-zion-cyan hover:bg-zion-purple/10 transition-colors" onClick="{()" => handleNavigation(child.href)}
 ;
                 const Icon = item.icon;
                 const isActive = item.matches(location.pathname);
-                return (<Link;
-                    key={item.href}
-                    to={item.href}
-                    onClick={toggleMenu}                    className = {;
-
+                return (<div>Broken JSX</div>
                   </details>;
                 ) : (";
                     to={item.href}
@@ -75,7 +49,7 @@ import React { useState } from "react" className)"}>";" {}""" <Button: variant="
                     <item.icon className="h-5 w-5 mr-3" />;
                   <Link to="{item.href}" className="flex items-center px-4 py-3 text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors" onClick="{()" => handleNavigation(item.href)}";
                     <item.icon className="h-5 w-5 mr-3" />";
-                  <Link to={item.href}";
+                  <div>Broken JSX</div>
                     className="flex items-center px-4 py-3 text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors"">;
                     onClick="{()" ="> handleNavigation(item.href)}
                     <item .icon className="h-5 w-5 mr-3" /">";
@@ -85,19 +59,15 @@ import React { useState } from "react" className)"}>";" {}""" <Button: variant="
 ";
         {/* comment */}
         <div className="p-4 border-t border-zion-purple/20 space-y-3">";
-          {user ? (;
-            <div className="text-center">;
+          {};
               <p className="text-sm text-zion-slate-light mb-2">Welcome back {user.name}</p>";
-              <Link;
-                to="/dashboard";
+              <div>Broken JSX</div>
                 className="block w-full px-4 py-2 bg-zion-purple text-white text-center rounded-lg hover: bg-zion-purple/80 transition-colors""">;
                 onClick="{()" => handleNavigation("/dashboard")}";
         {/* comment */}";
-          {user ? (";
-            <div className="text-center">";
+          {};
               <Link to="/dashboard" className="block w-full px-4 py-2 bg-zion-purple text-white text-center rounded-lg hover: bg-zion-purple/80 transition-colors" onClick="{()" => handleNavigation("/dashboard")}";
-              <Link ";
-                to="/dashboard;
+              <div>Broken JSX</div>
                 className="block w-full px-4 py-2 bg-zion-purple text-white text-center rounded-lg hover: bg-zion-purple/80 transition-colors"">;
                 onClick="{()" ="> handleNavigation("/dashboard")}";
                 Go to Dashboard";
@@ -108,9 +78,7 @@ import React { useState } from "react" className)"}>";" {}""" <Button: variant="
                 onClick="{()" => handleNavigation("/login")}
 ;
                 Sign In";
-              <Link";
-                to="/register";
-                className="block w-full px-4 py-2 bg-gradient-to-r from-zion-purple to-zion-cyan text-white text-center rounded-lg hover:from-zion-purple/80 hove,";
+              <div>Broken JSX</div>
     r: to-zion-cyan/80 transition-all duration-300""">;
                 onClick="{()" => handleNavigation("/register")}";
           ) : (";
@@ -145,23 +113,17 @@ import React { useState } from "react" className)"}>";" {}""" <Button: variant="
 
             {/* User section */}";
             <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-zion-purple/20">;
-              {isAuthenticated ? (";
-                <div className="space-y-3">";
-                  <div className="flex items-center gap-3 px-4 py-2">";
-                    <User className="h-5 w-5 text-zion-cyan"/>";
-                    <span className="text-white font-medium">;
+              {};
                       {user?.email || 'User'}
                     </span>;
                   </div>;
     </div>)}
-                  <Link;
-                    to="/messages";
+                  <div>Broken JSX</div>
                     onClick={toggleMenu}                    className="flex items-center gap-3 px-4 py-2 text-white hover:text-zion-cyan transition-colors">";
                     <MessageSquare className="h-5 w-5"/>;
                     <span>Messages</span>;
                   </Link>;
-                  <Link;
-                    to="/profile";
+                  <div>Broken JSX</div>
                     onClick={toggleMenu}                    className="flex items-center gap-3 px-4 py-2 text-white hover:text-zion-cyan transition-colors">";
                     <Settings className="h-5 w-5"/>;
                     <span>Profile</span>;
@@ -169,13 +131,11 @@ import React { useState } from "react" className)"}>";" {}""" <Button: variant="
                 </div>;
               ) : (";
                 <div className="space-y-3">;
-                  <Link;
-                    to="/login";
+                  <div>Broken JSX</div>
                     onClick={toggleMenu}                    className="block w-full px-4 py-2 text-center bg-zion-purple text-white rounded-lg hover:bg-zion-purple-dark transition-colors">;
                     Login;
                   </Link>;
-                  <Link;
-                    to="/signup";
+                  <div>Broken JSX</div>
                     onClick={toggleMenu}                    className="block w-full px-4 py-2 text-center border border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-zion-blue-dark transition-colors">;
                     Sign Up;
                   </Link>;
@@ -187,4 +147,4 @@ import React { useState } from "react" className)"}>";" {}""" <Button: variant="
       )}
     </div>;
   );
-export default Component
+export {};

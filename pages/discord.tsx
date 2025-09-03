@@ -1,49 +1,17 @@
 import React from 'react';
 import Head from 'next/head';
 ;
-const Discord: React.FC = () => {;
-  const channels = [;
-    {;
-      name: 'general',;
-      description: 'General discussion about Zion AI Marketplace',;
-      members: 1250,;
-      online: 89,;
-      icon: '💬',;,
+const Discord: React.FC = () => {};
 },;
-    {;
-      name: 'api-support',;
-      description: 'Get help with API integration and development',;
-      members: 890,;
-      online: 45,;
-      icon: '🔧',;,
+    {};
 },;
-    {;
-      name: 'ai-discussions',;
-      description: 'Discuss AI trends, technologies, and use cases',;
-      members: 2100,;
-      online: 156,;
-      icon: '🤖',;,
+    {};
 },;
-    {;
-      name: 'marketplace',;
-      description: 'Share marketplace experiences and feedback',;
-      members: 750,;
-      online: 32,;
-      icon: '🏪',;,
+    {};
 },;
-    {;
-      name: 'showcase',;
-      description: 'Show off your AI projects and integrations',;
-      members: 680,;
-      online: 28,;
-      icon: '🎨',;,
+    {};
 },;
-    {;
-      name: 'events',;
-      description: 'Stay updated on upcoming events and webinars',;
-      members: 1200,;
-      online: 67,;
-      icon: '📅',;,
+    {};
 },;
   ];
 ;
@@ -116,7 +84,7 @@ const Discord: React.FC = () => {;
         <section className="container mx-auto px-6 py-12">;
           <h2 className="text-3xl font-bold text-blue-400 mb-8">Popular Channels</h2>;
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {channels.map((channel, index) => (;
+            {};
               <div key={index} className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 hover:border-blue-400 transition-colors">;
                 <div className="flex items-center justify-between mb-4">;
                   <div className="text-3xl">{channel.icon}</div>;
@@ -146,7 +114,7 @@ const Discord: React.FC = () => {;
         <section className="container mx-auto px-6 py-12">;
           <h2 className="text-3xl font-bold text-blue-400 mb-8">Community Roles</h2>;
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {roles.map((role, index) => (;
+            {};
               <div key={index} className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30">;
                 <div className={`w-4 h-4 ${role.color} rounded-full mb-4`}></div>;
                 <h3 className="text-lg font-semibold text-white mb-2">{role.name}</h3>;

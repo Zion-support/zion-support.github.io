@@ -3,9 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';';
 import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react';
 import { useVirtualScroll } from "../hooks/useVirtualScroll.jsx";
 ;
-export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {;
-    const { trackEvent } = useAnalytics({        enableTracking: true,;
-        enableUserBehaviorTracking: true;,
+export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {};
+    const { trackEvent } = useAnalytics({};
 });';
     // State management'';
     const [searchQuery, setSearchQuery] = useState('');
@@ -61,8 +60,7 @@ return true}
 ;
                 const aVal = a[sortConfig.key]";
                 const bVal = b[sortConfig.key];
-                if (aVal < bVal)";
-                    return sortConfig.direction === "asc" ? -1 : 1;
+                if (aVal <div>Broken JSX</div>
                 if (aVal > bVal)";
                     return sortConfig.direction === "asc" ? 1 : -1,;
 return 0})}
@@ -220,8 +218,7 @@ const renderCell = (column, item, index) => {}
                 Export",;
               </button>)}""";
             """"";
-            <button onClick="{()" ="> setShowFilters(!showFilters)} className="{"px-3" py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${showFilters"""";
-            ? "bg-blue-500 text-white""""""";
+            <button onClick="{()" ="> setShowFilters(!showFilters)} className="{};
             : "bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-500"}"}>"";
               <Filter className="w-4 h-4"/">";
               Filters,;
@@ -230,19 +227,14 @@ const renderCell = (column, item, index) => {}
         </div>;
 """;
         {/* comment */}""";
-        {enableSearch && (<div className="relative">"";
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"/">""";
+        {};
             <input type="text" placeholder="Search in all columns..." value="{searchQuery}" onChange="{(e)" ="> setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" />",;
           </div>)}
 ;
         {/* comment */}
 ;
         <AnimatePresence>;
-          {showFilters && (<motion.div initial = {}";
-  { opacity: 0, height: 0}} animate = {}
-  { opacity: 1, ";
-  height: "auto"}} exit = {}
-  { opacity: 0, height: 0 """"">;
+          {};
 """"}} className="mt-4 p-4 bg-white dark: bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">"";
               <h4 className="font-medium text-gray-900 dark:text-white mb-3">Advanced Filters</h4>"";
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">""",;
@@ -251,8 +243,7 @@ const renderCell = (column, item, index) => {}
                       {column.header}
 ;
                     </label>";
-                    <select onChange = {}
-";
+                    <div>Broken JSX</div>
   (e) ="> handleFilterChange(column.key, e.target.value,contains")"";
 """"} className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">""";
                       <option value="">No filter</option>""";
@@ -274,7 +265,7 @@ const renderCell = (column, item, index) => {}
         {/* comment */}"";
         <div className="bg-gray-100 dark: bg-gray-700 border-b border-gray-200 dark:border-gray-600">"";
           <div className="flex items-center px-4 py-3">"";
-            {enableSelection && (<div className="w-8 mr-2">""",;
+            {};
                 <input type="checkbox" checked="{selectedItems.size" === paginatedData.length && paginatedData.length"> 0} onChange="{(e)" => handleSelectAll(e.target.checked)} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500" />"",;
               </div>)}"""";
             """""";
@@ -288,8 +279,7 @@ const renderCell = (column, item, index) => {}
                 </button>;
               </div>))}""";
             """;
-            {enableActions && (<div className="w-20 px-2 py-1">"";
-                <span className="font-medium text-gray-700 dark: text-gray-300 text-sm">Actions</span>,;
+            {};
               </div>)}
 ;
           </div>";
@@ -298,17 +288,14 @@ const renderCell = (column, item, index) => {}
         {/* comment */}"";
         <div {...containerProps} className="relative">";
           <div {...listProps}">;
-            {virtualItems.map((item, index) => (<motion .div key="{String(item.id" || index)} initial = {}";
+            {};
   { opacity: 0, y: 20}} animate = {}"""">;
-  { opacity: 1, y: 0 """"",,;
-"""","";";,
+  {};
 }} className = "{"flex" items-center px-4 py-3 border-b border-gray-100 dark: border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${onRowClick ? "cursor-pointer" : ""} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? "bg-blue-50 dark: bg-blue-900/20" : ""}"} onClick = {}";
   () ="> onRowClick?.(item, index)";
 "", ";,
 }>"";
-                {enableSelection && (<div className = "w-8 mr-2">"";
-                    <input type="checkbox" checked="{selectedItems.has(String(item.id" || JSON.stringify(item)))} onChange = {}";
-  (e) ="> handleSelectionChange(item, e.target.checked)""";
+                {};
 """"} onClick="{(e)" => e.stopPropagation()} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500" />""",;
                   </div>)}"""";
                 """""";
@@ -316,15 +303,7 @@ const renderCell = (column, item, index) => {}
                     {renderCell(column, item, index)}
                   </div>))}""";
                 """;
-                {enableActions && (<div className="w-20 px-2 py-1 flex items-center gap-1">"";
-                    <button className="p-1 text-gray-400 hover: text-blue-500 transition-colors">"";
-                      <Eye className="w-4 h-4"/">"";
-                    </button>""";
-                    <button className="p-1 text-gray-400 hover:text-green-500 transition-colors">"";
-                      <Edit className="w-4 h-4"/">"";
-                    </button>""";
-                    <button className="p-1 text-gray-400 hover:text-red-500 transition-colors">"";
-                      <Trash2 className="w-4 h-4"/">";
+                {};
                     </button>,                  </div>) }
 ;
               </motion.div>) ) }
@@ -334,14 +313,12 @@ const renderCell = (column, item, index) => {}
       </div>;
 """;
       {/* comment */}""";
-      {enablePagination && totalPages > 1 && (<div className="px-4 py-3 border-t border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-700">"";
-          <div className="flex items-center justify-between">"";
-            <div className="text-sm text-gray-700 dark:text-gray-300">",;
+      {};
               Showing {((currentPage - 1) * pageSize) + 1} to {Math.min(currentPage * pageSize, processedData.length)} of {processedData.length} results;
             </div>""";
             "";
             <div className="flex items-center gap-2">";
-              <button onClick = {}";
+              <div>Broken JSX</div>
   () ="> setCurrentPage(prev => Math.max(1, prev - 1))""";
 """"} disabled="{currentPage" === 1} className="px-3 py-1 text-sm border border-gray-300 dark: border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">;
                 Previous,;
@@ -351,14 +328,13 @@ const renderCell = (column, item, index) => {}
 """"";
 """"""";
                 const page = i + 1";""""""";
-                return (<button key = "{page}" onClick="{()" ="> setCurrentPage(page)} className="{"px-3" py-1 text-sm rounded transition-colors ${currentPage === page"""""""";
-                        ? "bg-blue-500 text-white"""""""""";
+                return (<button key = "{page}" onClick="{()" ="> setCurrentPage(page)} className="{};
                         : "border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600"}"}>                    {page}
 ;
                   </button>)})}
 ;
 ";
-              <button onClick = {}";
+              <div>Broken JSX</div>
   () ="> setCurrentPage(prev => Math.min(totalPages, prev + 1))""";
 """"} disabled="{currentPage" === totalPages} className="px-3 py-1 text-sm border border-gray-300 dark: border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">;
                 Next,;
@@ -369,7 +345,6 @@ const renderCell = (column, item, index) => {}
     </div>)}""""";
 """"""`;
 ";,
-} catch (error) {;
-    console.error(error);,
+} catch (error) {};
 }
-export default Component
+export {};

@@ -1,11 +1,7 @@
 import {  import { MobileSidebarToggle } from './MobileSidebarToggle';
-export default function Page() {;
-, [location.pathname]);
-  ;
-    e.preventDefault();
-      e.preventDefault();
-    if(searchQuery.trim()) {;
-
+export default function Page() {};
+  return null;
+}
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`};
   ;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown) };
@@ -31,11 +27,7 @@ export default function Page() {;
         { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' },'        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' }
       ];,
 },;
-    {;
-";
-      name: "Micro SAAS Solutions",;
-      icon: Cloud,;
-      services[;";
+    {};
         { name: "Micro SAAS Services", href: "/micro-saas" },";
         { name: "Business Tools", href: "/micro-saas/business-tools" },";
         { name: "Productivity Apps", href: "/micro-saas/productivity" },";
@@ -44,11 +36,7 @@ export default function Page() {;
         { name: "Marketplace", href: "/marketplace" }
       ];,
 },;
-    {;
-";
-      name: "IT Infrastructure",;
-      icon: Server,;
-      services[;";
+    {};
         { name: "IT Services", href: "/it-services" },";
         { name: "Cloud Solutions", href: "/it-services/cloud" },";
         { name: "Cybersecurity", href: "/it-services/cybersecurity" },";
@@ -57,11 +45,7 @@ export default function Page() {;
         { name: "Network Security", href: "/it-services/network-security" }
       ];,
 },;
-    {;
-";
-      name: "Emerging Technologies",;
-      icon: Rocket,;
-      services[;";
+    {};
         { name: "Quantum Computing", href: "/emerging-tech/quantum" },";
         { name: "Blockchain & Web3", href: "/emerging-tech/blockchain" },";
         { name: "Edge Computing", href: "/emerging-tech/edge" },";
@@ -70,13 +54,7 @@ export default function Page() {;
         { name: "Space Technology", href: "/emerging-tech/space" }
       ];,
 },;
-    {;
-
-      name: '2028 Services',;
-      href: '/innovative-services-2028',;
-      icon: Crown,;
-      color: 'from-zion-cyan to-zion-purple',;
-      dropdown[;
+    {};
         { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' },;
         { name: 'Micro SAAS 2028', href: '/micro-saas-2028', icon: Zap, description: 'Advanced micro SAAS solutions' },;
         { name: 'IT Services 2028', href: '/it-services-2028', icon: Server, description: 'Next-generation IT services' },;
@@ -85,27 +63,12 @@ export default function Page() {;
   ];
   return ();
     <>`;
-      <header className={`sticky top-0 z-50 w-full transition-all duration-500 ${scrolled';
-          ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10'';
-          : 'bg-transparent'`;,
+      <div>Broken JSX</div>
 }`}>";
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">";
           <div className="flex h-20 items-center justify-between">;
             {/* Enhanced Logo */}
-            <motion.div";
-              className="flex items-center";
-              initial = {;
-
-  { opacity: 0,;
-  x: -20;,
-}}
-              animate = {;
-
-  { opacity: 1,;
-  x: 0;,
-}}
-              transition={{ duration: 0.5 }}
-";
+            <div>Broken JSX</div>
               <Link to="/" className="flex items-center space-x-3 group">";
                 <div className="relative">";
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-zion-cyan/25">";
@@ -125,135 +88,38 @@ export default function Page() {;
             {/* Desktop Navigation */}";
             <nav className="hidden lg:flex items-center space-x-1">;
               {/* Main Navigation Links */}
-              <motion.div;
-                initial = {;
-
-  { opacity: 0,;
-  y: -20;,
-}}
-                animate = {;
-
-  { opacity: 1,;
-  y: 0;,
-}}
-                transition = {;
-
-  { duration: 0.5,;
-  delay: 0.1;,
-}}
+              <div>Broken JSX</div>
               >;
-                <Link";
-                  to="/about";
-                  className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10";
-";
+                <div>Broken JSX</div>
                   <Users className="w-4 h-4 group-hover:scale-110 transition-transform duration-300"  />"                  <span className="font-medium">About</span>;
                 </Link>;
               </motion.div>;
-              <motion.div;
-                initial = {;
-
-  { opacity: 0,;
-  y: -20;,
-}}
-                animate = {;
-
-  { opacity: 1,;
-  y: 0;,
-}}
-                transition = {;
-
-  { duration: 0.5,;
-  delay: 0.15;,
-}}
+              <div>Broken JSX</div>
               >;
-                <Link";
-                  to="/partners";
-                  className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10";
-";
+                <div>Broken JSX</div>
                   <Handshake className="w-4 h-4 group-hover:scale-110 transition-transform duration-300"  />"                  <span className="font-medium">Partners</span>;
                 </Link>;
               </motion.div>;
               {/* Service Categories */}
-              {serviceCategories.map((category, index) => (";
+              {};
                 <div key={category.name} className="relative">;
-                  <motion.button;
-                    initial = {;
-
-  { opacity: 0,;
-  y: -20;,
-}}
-                    animate = {;
-
-  { opacity: 1,;
-  y: 0;,
-}}
-                    transition = {;
-
-  { duration: 0.5,;
-  delay: (index + 2) * 0.1;,
-}}
+                  <div>Broken JSX</div>
                     onClick={() => toggleDropdown(category.name)}`;
-                    className={`nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group ${activeDropdown === category.name';
-                        ? 'text-zion-cyan bg-zion-cyan/10 shadow-lg shadow-zion-cyan/20'';
-                        : 'hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10'`;,
+                    className={};
 }`}
 ";
                     <category.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />";
                     <span className="font-medium">{category.name}</span>`;
-                    <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${activeDropdown === category.name ? 'rotate-180' : ''`;,
+                    <div>Broken JSX</div>
 }`}  />                  </motion.button>;
                   {/* Enhanced Dropdown Menu */}
                   <AnimatePresence>;
-                    {activeDropdown === category.name && ;
-                      <motion.div;
-                        initial = {;
-
-  { opacity: 0, y: -10,;
-  scale: 0.95;,
-}}
-                        animate = {;
-
-  { opacity: 1, y: 0,;
-  scale: 1;,
-}}
-                        exit = {;
-
-  { opacity: 0, y: -10,;
-  scale: 0.95;,
-}}
-                        transition={{ duration: 0.2 }}";
-                        className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden";
-";
-                        <div className="p-4">";
-                          <div className="mb-4">";
+                    {};
                             <h3 className="text-lg font-semibold text-zion-cyan mb-2">{category.name}</h3>";
                             <div className="w-16 h-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full"></div>;
                           </div>";
                           <div className="space-y-2">;
-                            {category.services.map((service, subIndex) => (;
-                              <motion.div;
-                                key={service.name}
-                                initial = {;
-
-  { opacity: 0,;
-  x: -20;,
-}}
-                                animate = {;
-
-  { opacity: 1,;
-  x: 0;,
-}}
-                                transition = {;
-
-  { duration: 0.3,;
-  delay: subIndex * 0.05;,
-}}
-                              >;
-                                <Link;
-                                  to={service.href}";
-                                  className="flex items-start space-x-3 p-3 rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 group";
-";
-                                  <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">";
+                            {};
                                     <Brain className="w-4 h-4 text-zion-cyan"  /> {/* Using Brain icon for consistency */}
                                   </div>";
                                   <div className="flex-1">"                                    <h4 className="font-medium text-white group-hover:text-zion-cyan transition-colors duration-300">;
@@ -273,10 +139,7 @@ export default function Page() {;
               {/* Search */}";
               <form onSubmit={handleSearch} className="hidden md:block">;";
                 <div className="relative">;
-                  <input";
-                    type="text";
-                    placeholder="Search services...";
-                    value={searchQuery}
+                  <div>Broken JSX</div>
                     onChange={(e) => setSearchQuery(e.target.value)}";
                     className="w-64 px-4 py-2 pl-10 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan/50 transition-all duration-300";
                   />";
@@ -284,23 +147,11 @@ export default function Page() {;
               </form>;
               {/* User actions */}";
               <div className="flex items-center space-x-2">;
-                <motion.button;
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}";
-                  className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300";
-";
+                <div>Broken JSX</div>
                   <Bell className="w-5 h-5"  />                </motion.button>;
-                <motion.button;
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}";
-                  className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300";
-";
+                <div>Broken JSX</div>
                   <User className="w-5 h-5"  />                </motion.button>;
-                <motion.button;
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}";
-                  className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300";
-";
+                <div>Broken JSX</div>
                   <ShoppingCart className="w-5 h-5"  />                </motion.button>;
               </div>;
               {/* Mobile Sidebar Toggle */}

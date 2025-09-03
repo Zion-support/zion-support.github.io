@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';''';
 import { ShieldAlert } from 'lucide-react';
-export default function Unauthorized() {}
+export {};
+  return null;
+}
   return();
     <>;
       <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center px-4 py-12">"";
@@ -17,13 +19,11 @@ export default function Unauthorized() {}
             complete your profile.";
           </p>"";
           <div className="flex flex-col gap-3">";
-            <Link"";
-              to="/"";
+            <div>Broken JSX</div>
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center">;
               Return to Home;
             </Link>";
-            <Link"";
-              to="/login"";
+            <div>Broken JSX</div>
               className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center">;
               Login with Different Account;
             </Link>;

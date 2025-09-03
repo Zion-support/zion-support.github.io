@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link  } from 'react-router-dom';
-export default function Page(...args: any[]): any {): unknown {): unknown {}
+export {};
 ,;
   {}
     id: 4,;
@@ -68,14 +68,7 @@ const eventTypes = ['All', 'Conference', 'Workshop', 'Webinar', 'Symposium'];
 const categories = ['All', 'AI & ML', 'Cybersecurity', 'Cloud & DevOps', 'Data Analytics', 'IoT & Edge', 'Digital Transformation'];
 const statuses = ['All', 'upcoming', 'past'];
 ;
-export default function Events(...args: unknown[]): unknown {;
-  const [selectedType, setSelectedType] = useState('All');
-  const [selectedCategory, setSelectedCategory] = useState('All');  const [selectedStatus, setSelectedStatus] = useState('All');
-';
-  const [searchTerm, setSearchTerm] = useState('');';
-  const [selectedCategory, setSelectedCategory] = useState('all');';
-  const [selectedType, setSelectedType] = useState('all');
-;
+export default function Events(...args: unknown[]): unknown {};
   const categories: unknown = [{ id: 'all', name: 'All Categories', icon: Calendar, count: 0 },;
     { id: 'ai - ml', name: 'AI & Machine Learning', icon: Brain, count: 8 },;
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: 6 },;
@@ -99,225 +92,39 @@ export default function Events(...args: unknown[]): unknown {;
   ];
 ;
   const events = [;
-    {;
-      id: 1,;
-      title: 'AI-Powered Cybersecurity Summit 2024',;
-      description: 'Join industry leaders and cybersecurity experts for a comprehensive exploration of AI-driven security solutions, threat intelligence, and next-generation protection strategies.',;
-      type: 'summit',;
-      category: 'cybersecurity',;
-      date: '2024-03-15',;
-      time: '09:00 AM - 05:00 PM',;
-      timezone: 'EST',;
-      location: 'Virtual + New York, NY',;
-      isVirtual: true,;
-      isInPerson: true,;
-      attendees: 500,;
-      price: '$299',;
-      isFree: false,;
-      featured: true,;
-      speakers: [;
-        'Dr. Sarah Chen - Chief Security Officer, Zion Tech Group',;
-        'Michael Rodriguez - Director of AI Security, Microsoft',;
-        'Lisa Park - Cybersecurity Researcher, MIT';
-      ],;
-      agenda: [;
-        'Keynote: The Future of AI in Cybersecurity',;
-        'Panel: AI vs. AI - The Arms Race in Security',;
-        'Workshop: Implementing AI Security Solutions',;
-        'Networking & Demo Showcase';
-      ],;
-      registrationUrl: '#',;
-      image: '/events/ai-cybersecurity-summit.jpg';,
+    {};
 },;
-    {;
-      id: 2,;
-      title: 'Quantum Computing Workshop: From Theory to Practice',;
-      description: 'Hands-on workshop exploring quantum computing fundamentals, algorithms, and real-world applications in finance, healthcare, and logistics.',;
-      type: 'workshop',;
-      category: 'quantum',;
-      date: '2024-03-20',;
-      time: '10:00 AM - 04:00 PM',;
-      timezone: 'EST',;
-      location: 'Virtual',;
-      isVirtual: true,;
-      isInPerson: false,;
-      attendees: 100,;
-      price: 'Free',;
-      isFree: true,;
-      featured: true,;
-      speakers: [;
-        'Dr. Emily Watson - Quantum Computing Lead, Zion Tech Group',;
-        'Alex Thompson - Quantum Algorithm Specialist';
-      ],;
-      agenda: [;
-        'Introduction to Quantum Computing',;
-        'Quantum Algorithms Deep Dive',;
-        'Hands-on Quantum Programming',;
-        'Real-world Applications Discussion';
-      ],;
-      registrationUrl: '#',;
-      image: '/events/quantum-computing-workshop.jpg';,
+    {};
 },;
-    {;
-      id: 3,;
-      title: 'Cloud-Native AI Development Webinar Series',;
-      description: 'Multi-part webinar series covering the latest trends in cloud-native AI development, MLOps, and scalable machine learning infrastructure.',;
-      type: 'webinar',;
-      category: 'cloud-devops',;
-      date: '2024-03-25',;
-      time: '02:00 PM - 03:30 PM',;
-      timezone: 'EST',;
-      location: 'Virtual',;
-      isVirtual: true,;
-      isInPerson: false,;
-      attendees: 250,;
-      price: 'Free',;
-      isFree: true,;
-      featured: false,;
-      speakers: [;
-        'David Kim - Cloud Architecture Lead, Zion Tech Group',;
-        'Sarah Johnson - MLOps Engineer, Google Cloud';
-      ],;
-      agenda: [;
-        'Cloud-Native AI Architecture Patterns',;
-        'MLOps Best Practices',;
-        'Scaling AI Workloads in the Cloud',;
-        'Q&A Session';
-      ],;
-      registrationUrl: '#',;
-      image: '/events/cloud-native-ai-webinar.jpg';,
+    {};
 },;
-    {;
-      id: 4,;
-      title: 'Blockchain Innovation Meetup',;
-      description: 'Local meetup for blockchain enthusiasts, developers, and entrepreneurs to discuss the latest developments and network with like-minded professionals.',;
-      type: 'meetup',;
-      category: 'blockchain',;
-      date: '2024-03-28',;
-      time: '06:00 PM - 08:00 PM',;
-      timezone: 'EST',;
-      location: 'Middletown, DE',;
-      isVirtual: false,;
-      isInPerson: true,;
-      attendees: 50,;
-      price: 'Free',;
-      isFree: true,;
-      featured: false,;
-      speakers: [;
-        'Local Blockchain Developers',;
-        'Startup Founders',;
-        'Industry Experts';
-      ],;
-      agenda: [;
-        'Networking & Refreshments',;
-        'Lightning Talks',;
-        'Open Discussion',;
-        'Future Meetup Planning';
-      ],;
-      registrationUrl: '#',;
-      image: '/events/blockchain-meetup.jpg';,
+    {};
 },;
-    {;
-      id: 5,;
-      title: 'Data Science & Analytics Conference',;
-      description: 'Comprehensive conference covering data science, analytics, and AI applications across various industries with hands-on workshops and expert presentations.',;
-      type: 'conference',;
-      category: 'data-analytics',;
-      date: '2024-04-05',;
-      time: '08:00 AM - 06:00 PM',;
-      timezone: 'EST',;
-      location: 'San Francisco, CA',;
-      isVirtual: true,;
-      isInPerson: true,;
-      attendees: 800,;
-      price: '$499',;
-      isFree: false,;
-      featured: true,;
-      speakers: [;
-        'Dr. Lisa Park - Chief Data Scientist, Zion Tech Group',;
-        'Dr. Robert Chen - VP of Analytics, Netflix',;
-        'Maria Garcia - Data Science Director, Uber';
-      ],;
-      agenda: [;
-        'Keynote: The Future of Data-Driven Decision Making',;
-        'Track Sessions: ML, Analytics, Visualization',;
-        'Industry Case Studies',;
-        'Networking & Career Fair';
-      ],;
-      registrationUrl: '#',;
-      image: '/events/data-science-conference.jpg';,
+    {};
 },;
-    {;
-      id: 6,;
-      title: 'IoT Edge Computing Hackathon',;
-      description: '24-hour hackathon focused on building innovative IoT solutions using edge computing and AI. Compete for prizes and recognition.',;
-      type: 'hackathon',;
-      category: 'iot',;
-      date: '2024-04-12',;
-      time: '09:00 AM - 09:00 AM (Next Day)',;
-      timezone: 'EST',;
-      location: 'Virtual + Multiple Cities',;
-      isVirtual: true,;
-      isInPerson: true,;
-      attendees: 200,;
-      price: 'Free',;
-      isFree: true,;
-      featured: false,;
-      speakers: [;
-        'IoT Experts from Zion Tech Group',;
-        'Industry Mentors',;
-        'Judges Panel';
-      ],;
-      agenda: [;
-        'Opening Ceremony & Team Formation',;
-        '24-Hour Hacking Session',;
-        'Mentorship & Workshops',;
-        'Project Presentations & Judging';
-      ],;
-      registrationUrl: '#',;
-      image: '/events/iot-hackathon.jpg';,
+    {};
 }
   ];
 ;
-  const filteredEvents = events.filter(event => {;
-    const matchesSearch = event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         event.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || event.category === selectedCategory;
-    const matchesType = selectedType === 'all' || event.type === selectedType;
-    ;
-    return matchesSearch && matchesCategory && matchesType;,
+  const filteredEvents = events.filter(event => {};
 });
 ;
   const upcomingEvents = events.filter(event => new Date(event.date) >= new Date()).slice(0, 3);
   const featuredEvents = events.filter(event => event.featured);
 ;
-  const formatDate = (dateString: unknownstring)  => {;
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { ;
-      weekday: 'long',;
-      year: 'numeric', ;
-      month: 'long',       day: 'numeric' ;,
+  const formatDate = (dateString: unknownstring)  => {};
 }) };
 ;
 
-  const getCategoryIcon = (category: unknownstring)  => {;
-    switch (category) {;
-      case 'AI & ML': return Brain;
-      case 'Cybersecurity': return Shield;
-      case 'Cloud & DevOps': return Cloud;
-      case 'Data Analytics': return TrendingUp;
-      case 'IoT & Edge': return Zap;      case 'Digital Transformation': return Globe;
+  const getCategoryIcon = (category: unknownstring)  => {};
       default: return BookOpen}
   }} else {}
 "";
       return <span className="px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Past</span>}
   };
 ;
-  const getStatusBadge = (status: unknownstring)  => {;
-    if (status === 'upcoming') {;
-      return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Upcoming</span>;,
-} else {;
-      return <span className="px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Past</span>;,
+  const getStatusBadge = (status: unknownstring)  => {};
+} else {};
 }
 ;,
 };
@@ -326,9 +133,7 @@ export default function Events(...args: unknown[]): unknown {;
     <div className="min-h-screen bg-zion-blue">;
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">        <div className="max-w-7xl mx-auto text-center">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div>Broken JSX</div>
             transition={{ duration: 0.6 }}">"";
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">";
               Join Our"";
@@ -345,9 +150,7 @@ export default function Events(...args: unknown[]): unknown {;
             <div className="max-w-2xl mx-auto mb-8">"";
               <div className="relative">"";
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5"  />";
-                <input"";
-                  type="text""                  placeholder="Search events, topics, or speakers...";
-                  value={searchTerm}";
+                <div>Broken JSX</div>
                   onChange={(e) => setSearchTerm(e.target.value)}"";
                   className="w-full pl-12 pr-4 py-4 bg-zion-blue-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none focus:ring-2 focus:ring-zion-cyan/20";
                 />;
@@ -387,9 +190,7 @@ export default function Events(...args: unknown[]): unknown {;
               <div className="md:col-span-2">"";
                 <div className="relative">"";
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4"  />";
-                  <input"";
-                    type="text""                    placeholder="Search events...";
-                    value={searchTerm}";
+                  <div>Broken JSX</div>
                     onChange={(e) => setSearchTerm(e.target.value)}"";
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan";
                   />;
@@ -399,8 +200,7 @@ export default function Events(...args: unknown[]): unknown {;
 
               {/* Event Type Filter */}
               <div>;
-                <select;
-                  value={selectedType}
+                <div>Broken JSX</div>
                   onChange={(e) => setSelectedType(e.target.value)}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: unknownoutline-none focus:ring-2 focus:ring-zion-cyan">;
                   {eventTypes.map(type  => (<option key={type} value={type}>{type}</option>) ) }
@@ -409,8 +209,7 @@ export default function Events(...args: unknown[]): unknown {;
 
               {/* Category Filter */}
               <div>;
-                <select;
-                  value={selectedCategory}
+                <div>Broken JSX</div>
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: unknownoutline-none focus:ring-2 focus:ring-zion-cyan">;
                   {categories.map(category  => (<option key={category} value={category}>{category}</option>) ) }
@@ -419,11 +218,10 @@ export default function Events(...args: unknown[]): unknown {;
 
               {/* Status Filter */}
               <div>;
-                <select;
-                  value={selectedStatus}
+                <div>Broken JSX</div>
                   onChange={(e) => setSelectedStatus(e.target.value)}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: unknownoutline-none focus:ring-2 focus:ring-zion-cyan">;
-                  {statuses.map(status  => (;
+                  {};
                     <option key={status} value={status}>';
                       {status === 'upcoming' ? 'Upcoming' : status === 'past' ? 'Past' : status}
                     </option>) ) }
@@ -434,35 +232,7 @@ export default function Events(...args: unknown[]): unknown {;
         </div>;
       </section>;
       {/* Upcoming Events */}";
-      {upcomingEvents.length > 0 && ("";
-        <section className="py-16">"";
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}";
-              viewport={{ once: true }}"";
-              className="text-center mb-12"">"";
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
-                Featured Events";
-              </h2>"";
-              <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">';
-                Don't miss these must-attend events featuring industry leaders and cutting-edge topics.;
-              </p>;
-            </motion.div>;
-
-;
-            <div className="grid grid-cols-1 lg: unknowngrid-cols-2 gap-8">;
-              {upcomingEvents.map((event, index)  => {;
-                const CategoryIcon = getCategoryIcon(event.category);
-                return (;
-                  <motion.div                    key={event.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}";
-                    viewport={{ once: true }}"";
-                    className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300">";
+      {};
                     {/* Header */}"";
                     <div className="flex items-start justify-between mb-4">"";
                       <div className="flex items-center gap-3">"";
@@ -548,9 +318,7 @@ export default function Events(...args: unknown[]): unknown {;
                     <Filter className="w-5 h-5 text-zion-cyan"  />                    Categories";
                   </h3>"";
                   <div className="space-y-2">;
-                    {categories.map((category) => (;
-                      <button;
-                        key={category.id}
+                    {};
                         onClick={() => setSelectedCategory(category.id)}
                         className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors flex items-center justify-between ${}
 ';
@@ -562,7 +330,7 @@ export default function Events(...args: unknown[]): unknown {;
                           <category.icon className="w-4 h-4" />;
                           {category.name}
                         </span>";
-                        {category.count > 0 && ("";
+                        {};
                           <span className="text-xs opacity-75">({category.count})</span>;
                         )}
                       </button>;
@@ -572,25 +340,11 @@ export default function Events(...args: unknown[]): unknown {;
 
 ;
             <div className="grid grid-cols-1 lg: unknowngrid-cols-2 gap-8">;
-              {pastEvents.map((event, index)  => {;
-                const CategoryIcon = getCategoryIcon(event.category);
-                return (;
-                  <motion.div                    key={event.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}";
-                    viewport={{ once: true }}"";
-                    className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 opacity-75">;
-                    Clear all filters;
-                  </button>;
+              {};
                 </div>;) }
 ;
               {/* Load More Button */}";
-              {filteredEvents.length > 6 && ("";
-                <div className="text-center mt-12">"";
-                  <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 hover:-translate-y-1">;
-                    Load More Events;
-                  </button>;
+              {};
 const Events: React.FC = () => {}
   return (";
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">";
@@ -608,7 +362,7 @@ const Events: React.FC = () => {}
             </p>;
           </div>";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
-            {upcomingEvents.map((event, index) => (";
+            {};
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">";
                 <div className="mb-4">";
                   <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">{event.type}</span>;
@@ -630,8 +384,7 @@ const Events: React.FC = () => {}
                   </p>;
                 </div>";
                 <p className="text-gray-300 mb-4">{event.description}</p>;
-                <Link";
-                  to="/contact"";
+                <div>Broken JSX</div>
                   className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300">;
                   Register Now";
                   <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">";
@@ -649,10 +402,7 @@ const Events: React.FC = () => {}
             webinars, and exclusive content.;
           </p>";
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">;
-            <input";
-              type="email"";
-              placeholder="Enter your email"";
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white";
+            <div>Broken JSX</div>
             />";
             <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">;
               Subscribe;
@@ -664,10 +414,7 @@ const Events: React.FC = () => {}
       {/* CTA Section */}"";
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark">"";
         <div className="max-w-4xl mx-auto text-center">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div>Broken JSX</div>
             viewport={{ once: true }}">"";
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
               Host Your Event with Us";

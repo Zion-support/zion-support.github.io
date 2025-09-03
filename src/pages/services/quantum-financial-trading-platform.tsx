@@ -1,9 +1,9 @@
 import React from 'react';
 import { Zap, Brain, TrendingUp, Shield, BarChart3, Users, CheckCircle, Star, Globe, Cpu } from 'lucide-react';
 ;
-export default function QuantumFinancialTradingPlatform() {;
-  return (;
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-900">;
+export default function QuantumFinancialTradingPlatform() {};
+  return null;
+}
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto text-center">;
@@ -19,13 +19,11 @@ export default function QuantumFinancialTradingPlatform() {;
             Revolutionize your trading strategy with quantum computing power, AI algorithms, and real-time market analysis.;
           </p>;
           <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-            <a;
-              href="https://ziontechgroup.com/contact";
+            <div>Broken JSX</div>
               className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all duration-300">;
               Get Started;
             </a>;
-            <a;
-              href="#demo";
+            <div>Broken JSX</div>
               className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300">;
               Watch Demo;
             </a>;
@@ -139,8 +137,7 @@ export default function QuantumFinancialTradingPlatform() {;
                   Email support;
                 </li>;
               </ul>;
-              <a;
-                href="https://ziontechgroup.com/contact";
+              <div>Broken JSX</div>
                 className="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors duration-300 block text-center">;
                 Get Started;
               </a>;
@@ -182,8 +179,7 @@ export default function QuantumFinancialTradingPlatform() {;
                   API access;
                 </li>;
               </ul>;
-              <a;
-                href="https://ziontechgroup.com/contact";
+              <div>Broken JSX</div>
                 className="w-full bg-white text-purple-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 block text-center">;
                 Get Started;
               </a>;
@@ -222,8 +218,7 @@ export default function QuantumFinancialTradingPlatform() {;
                   Dedicated support;
                 </li>;
               </ul>;
-              <a;
-                href="https://ziontechgroup.com/contact";
+              <div>Broken JSX</div>
                 className="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors duration-300 block text-center">;
                 Contact Sales;
               </a>;
@@ -358,13 +353,11 @@ export default function QuantumFinancialTradingPlatform() {;
             Join the elite group of traders who have already embraced the future of financial technology.;
           </p>;
           <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-            <a;
-              href="https://ziontechgroup.com/contact";
+            <div>Broken JSX</div>
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300">;
               Start Free Trial;
             </a>;
-            <a;
-              href="tel:+13024640950";
+            <div>Broken JSX</div>
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">;
               Call +1 302 464 0950;
             </a>;

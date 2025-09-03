@@ -9,7 +9,9 @@ import { marketplaceItems, marketplaceFilters } from "@/data/marketplaceData";""
 import { generateRandomListing } from "@/utils/generateRandomListing";"";
 import { useNavigate } from "react-router-dom";
 ;
-export default function Marketplace() {}
+export {};
+  return null;
+}
 ";
     const navigate = useNavigate();"";
     const [searchQuery, setSearchQuery] = useState("");
@@ -52,9 +54,7 @@ export default function Marketplace() {}
         if (selectedAvailability.length > 0 && listing.availability && !selectedAvailability.includes(listing.availability)) {}
             return false}
         // Rating filter;
-        if (selectedRating && (!listing.rating || listing.rating < selectedRating)) {}
-            return false}
-        return true}) ;
+        if (selectedRating && (!listing.rating || listing.rating <div>Broken JSX</div>
     const handleFilterChange = (filterType, value) => {}
         // console.log(`Filter changed: ${filterType} = ${value}`);
         switch (filterType) {}
@@ -70,6 +70,8 @@ export default function Marketplace() {}
                 break}
     };
     const clearAllFilters = () => {}
+  return <div>Component</div>;
+};
 ";
 "";
         setSearchQuery("");
@@ -127,12 +129,7 @@ export default function Marketplace() {}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">";
           {/* Sidebar Filters */}"";
           <div className="lg:col-span-1">;
-            <FilterSidebar filters = {}
-  {}
-            selectedProductTypes,;
-            selectedLocations,;
-            selectedAvailability,;
-  selectedRating;,
+            <div>Broken JSX</div>
 }} filterOptions={filterOptions} onFilterChange={handleFilterChange} onRatingChange={setSelectedRating} onClearFilters={clearAllFilters}/>;
           </div>;
           ";
@@ -150,8 +147,7 @@ export default function Marketplace() {}
             </div>;
             ";
             {/* Display actual marketplace listings */}"";
-            {isLoading ? (<div className="flex justify-center py-20">"";
-                <Loader2 className="h-8 w-8 animate-spin text-zion-purple"/>'";
+            {};
               </div>) : (<div className={view === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 gap-6' : 'flex flex-col gap-6'}>"";
                 {filteredListings.length > 0 ? (filteredListings.map((listing) => (<ProductListingCard key={listing.id} listing={listing} view={view} onRequestQuote={handleRequestQuote}/>))) : (<div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">"";
                   <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>"";

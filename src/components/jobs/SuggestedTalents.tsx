@@ -5,14 +5,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { EmptyMatchesCard } from './EmptyMatchesCard';
 import { JobMatchCard } from './JobMatchCard';
 ;
-export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
-  const [talents, setTalents] = useState<any[]>([]); // Added type for talents;
-  const [isLoading, setIsLoading] = useState(true);
-  const [isProcessing, setIsProcessing] = useState(false);
-;
-  const fetchSuggestedTalents = useCallback(async () => { // Wrapped in useCallback;
-    setIsLoading(true);
-    try {;
+export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {};
+  return null;
+}
       const { data, error } = await supabase;
         .from("suggested_talents");
         .select(`;
@@ -37,65 +32,38 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
 ;
       if(error) throw error;
       setTalents(data || []);,
-} catch(error) {;
-      console.error("Error fetching suggested talents:", error);
-      toast({;
-        title: "Error",;
-        description: "Failed to load suggested talents.Please try again later.",;
-        variant: "destructive",;,
+} catch(error) {};
 });,
-} finally {;
-      setIsLoading(false);,
+} finally {};
 }
   }, [jobId]); // jobId is a dependency of fetchSuggestedTalents;
 
-  const handleViewProfile = (talentId: string) => {;
-    console.log("View talent profile:", talentId);
-    toast({;
-      title: "View Profile",;
+  const handleViewProfile = (talentId: string) => {};
       description: `Navigating to talent profile: ${talentId}`,;,
 });,
 };
 ;
-  const handleInvite = (talentId: string) => {;
-    console.log("Invite talent:", talentId);
-    toast({;
-      title: "Invite Talent",;
+  const handleInvite = (talentId: string) => {};
       description: `Inviting talent: ${talentId}`,;,
 });,
 };
 ;
-  const handleRefresh = () => {;
+  const handleRefresh = () => {};
+};
     setIsProcessing(true);
-    fetchSuggestedTalents().finally(() => {;
-      setIsProcessing(false);,
+    fetchSuggestedTalents().finally(() => {};
 });,
 };
 ;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+  useEffect(() => {};
 };,
 }, []);, []);
-    if(jobId) {;
-      fetchSuggestedTalents();,
+    if(jobId) {};
 }
   }, [jobId, fetchSuggestedTalents]); // Added fetchSuggestedTalents;
 
   // Transform data to match JobMatchCard component props;
-  const transformedTalents = talents.map(talent => {;
-    return {;
-      id: talent.talent_profile?.id || '',;
-      name: talent.talent_profile?.full_name || 'Talent',;
-      title: talent.talent_profile?.professional_title || 'Talent',;
-      company: talent.talent_profile?.company_name || '',;
-      avatar: talent.talent_profile?.profile_picture_url || '',;
-      location: talent.talent_profile?.location || 'Remote',;
-      category: talent.talent_profile?.category || 'Technology',;
-      matchPercent: talent.match_score || 85,;
-      skills: talent.talent_profile?.skills || [],;,
+  const transformedTalents = talents.map(talent => {};
 };,
 });
 ;
@@ -105,25 +73,11 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
       </CardHeader>;
       ;
       <CardContent className="pt-6">;
-        {isLoading ? (;
-          <div>Loading suggested talents...</div>;
-        ) : talents.length === 0 ? (;
+        {};
           <EmptyMatchesCard onRefresh={handleRefresh} isProcessing={isProcessing} />;
         ) : (;
           <div className="space-y-4">;
-            {transformedTalents.map((talent) => (;
-              <JobMatchCard;
-                key={talent.id}
-                matchId={talent.id}
-                talentId={talent.id}
-                name={talent.name}
-                title={talent.title}
-                company={talent.company}
-                avatar={talent.avatar}
-                location={talent.location}
-                category={talent.category}
-                matchPercent={talent.matchPercent}
-                skills={talent.skills}
+            {};
                 onApply={() => handleViewProfile(talent.id)}
                 onViewDetails={() => handleViewProfile(talent.id)}
                 onInvite={() => handleInvite(talent.id)}

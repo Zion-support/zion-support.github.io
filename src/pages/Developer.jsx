@@ -1,13 +1,13 @@
 import React from 'react';''';
 import { Helmet } from 'react-helmet-async';
 const Developer = () => {}
+  return <div>Component</div>;
+};
   return();
     <>;
       <Helmet>;
         <title>Developer Portal - Zion Tech Group</title>;
-        <meta';
-          name="description"'"'";
-          content="Access Zion Tech Group's developer portal for tools, SDKs, and integration resources.";
+        <div>Broken JSX</div>
         />;
       </Helmet>";
 "";

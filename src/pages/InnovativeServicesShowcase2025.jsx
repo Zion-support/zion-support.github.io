@@ -1,6 +1,7 @@
 import React from 'react';
 import EnhancedComprehensiveServicesShowcase from "../components/EnhancedComprehensiveServicesShowcase.jsx";
-const InnovativeServicesShowcase2025 = () => {;
+const InnovativeServicesShowcase2025 = () => {};
+};
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">;
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
@@ -41,18 +42,15 @@ const InnovativeServicesShowcase2025 = () => {;
 ";
           {/* CTA Buttons */}"";
           <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-            <a"";
-              href="#services"";
+            <div>Broken JSX</div>
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">;
               Explore Services;
             </a>";
-            <a"";
-              href="/comprehensive-pricing-2025"";
+            <div>Broken JSX</div>
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300">;
               View Pricing;
             </a>";
-            <a"";
-              href="mailto:kleber@ziontechgroup.com"";
+            <div>Broken JSX</div>
               className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">;
               Get Custom Quote;
             </a>;
@@ -328,8 +326,7 @@ const InnovativeServicesShowcase2025 = () => {;
               <p className="text-gray-300 text-sm mb-3">;
                 Get detailed information and custom quotes;
               </p>";
-              <a"";
-                href="mailto:kleber@ziontechgroup.com"";
+              <div>Broken JSX</div>
                 className="text-blue-400 hover:text-blue-300">;
                 kleber@ziontechgroup.com;
               </a>;
@@ -341,8 +338,7 @@ const InnovativeServicesShowcase2025 = () => {;
               <p className="text-gray-300 text-sm mb-3">;
                 Speak directly with our experts;
               </p>";
-              <a"";
-                href="tel:+13024640950"";
+              <div>Broken JSX</div>
                 className="text-blue-400 hover:text-blue-300">;
                 +1 302 464 0950;
               </a>;
@@ -365,13 +361,11 @@ const InnovativeServicesShowcase2025 = () => {;
           </div>";
 "";
           <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-            <a"";
-              href="mailto:kleber@ziontechgroup.com?subject=Innovative Services 2025 Inquiry"";
+            <div>Broken JSX</div>
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">;
               Get Custom Quote;
             </a>";
-            <a"";
-              href="tel:+13024640950"";
+            <div>Broken JSX</div>
               className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">;
               Schedule Consultation;
             </a>;

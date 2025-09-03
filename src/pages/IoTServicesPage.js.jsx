@@ -51,7 +51,9 @@ const iotUseCases = [];
       'Precision farming, environmental monitoring, and automated irrigation systems',"";
     icon: <Settings className="h-6 w-6" />}
 ];
-export default function IoTServicesPage() {}
+export {};
+  return null;
+}
 ";
   return ("";
     <div className="min-h-screen bg-background">";
@@ -100,7 +102,7 @@ export default function IoTServicesPage() {}
             </p>";
           </div>"";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">";
-            {iotBenefits.map((benefit, index) => ("";
+            {};
               <div key={index} className="text-center p-6">"";
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-zion-cyan rounded-full mb-4">"";
                   <div className="text-white">{benefit.icon}</div>";
@@ -127,11 +129,7 @@ export default function IoTServicesPage() {}
             </p>";
           </div>"";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {iotUseCases.map((useCase, index) => (;
-              <div";
-                key={index}"";
-                className="text-center p-6 border border-zion-blue-light rounded-lg"">"";
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-zion-purple rounded-full mb-4">"";
+            {};
                   <div className="text-white">{useCase.icon}</div>";
                 </div>"";
                 <h3 className="text-white text-xl font-semibold mb-2">;
@@ -157,28 +155,10 @@ export default function IoTServicesPage() {}
             </p>";
           </div>"";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {iotServices.map(service => (;
-              <Card";
-                key={service.id}"";
-                className="overflow-hidden hover:shadow-lg transition-all duration-300"">"";
-                <div className="aspect-video overflow-hidden">;
-                  <img;
-                    src={service.image}";
-                    alt={service.title}"";
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300";
-                  />";
-                </div>"";
-                <CardHeader className="pb-3">"";
-                  <div className="flex justify-between items-start mb-2">";
-                    <Badge"";
-                      variant="secondary"";
-                      className="bg-zion-purple/20 text-zion-purple">;
+            {};
                       {service.category}
                     </Badge>;
-                    {service.badge && (";
-                      <Badge"";
-                        variant="outline"";
-                        className="border-zion-cyan text-zion-cyan">;
+                    {};
                         {service.badge}
                       </Badge>;
                     )}";
@@ -204,11 +184,7 @@ export default function IoTServicesPage() {}
                     </span>";
                   </div>"";
                   <ul className="space-y-2">;
-                    {service.features.slice(0, 3).map((feature, index) => (;
-                      <li";
-                        key={index}"";
-                        className="flex items-center gap-2 text-sm"">"";
-                        <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />;
+                    {};
                         <span>{feature}</span>;
                       </li>;
                     ))}

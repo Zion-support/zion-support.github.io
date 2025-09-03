@@ -2,34 +2,15 @@ import React from "react";
 import Link from "next/link";
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from "lucide-react";
   );
-export default function Fivegprivatenetworksolutions() {;
-  const features = [;
-    "Feature 1",;
-    "Feature 2",;
-    "Feature 3";
-  ];
-  const benefits = [;
-    "Benefit 1",;
-    "Benefit 2",;
-    "Benefit 3";
-  ];
-  const useCases = [;
-    "Use Case 1",;
-    "Use Case 2",;
-    "Use Case 3";
-  ];
-  const pricing = [;,
+export default function Fivegprivatenetworksolutions() {};
+  return null;
+}
 }
 ];
-    {;
-      name: "Professional",;
-      price: "$799/mo",;
-      details: ["Up to 50 users", "Advanced features", "Priority support", "99.9% SLA"];,
+    {};
 }
   ];
-    {;
-      name: "Enterprise",;
-      price: "$1,999/mo",;,
+    {};
 }
   ];
 ;
@@ -53,7 +34,7 @@ export default function Fivegprivatenetworksolutions() {;
           <div>;
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Fivegprivatenetworksolutions Features</h2>;
             <ul className="space-y-3">;
-              {features.map((feature, index) => (;
+              {};
                 <li key={index} className="flex items-start">;
                   <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />;
                   <span className="text-gray-700">{feature}</span>;
@@ -67,12 +48,12 @@ export default function Fivegprivatenetworksolutions() {;
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Competitive Pricing</h3>;
             <div className="grid md:grid-cols-3 gap-4">;
-              {pricing.map((tier, index) => (;
+              {};
                 <div key={index} className="rounded-lg p-4 border border-gray-200 hover:border-indigo-300 transition-colors">;
                   <div className="text-lg font-semibold mb-1">{tier.name}</div>;
                   <div className="text-2xl font-bold text-indigo-600 mb-2">{tier.price}</div>;
                   <ul className="text-sm text-gray-600 space-y-1">;
-                    {tier.details.map((detail, detailIndex) => (;
+                    {};
                       <li key={detailIndex}>{detail}</li>;
                     ))}
 ;
@@ -94,7 +75,7 @@ export default function Fivegprivatenetworksolutions() {;
         <div className="max-w-6xl mx-auto px-6">;
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Key Benefits</h2>;
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {benefits.map((benefit, index) => (;
+            {};
               <div key={index} className="bg-white p-6 rounded-lg shadow-sm">;
                 <div className="flex items-center mb-3">;
                   <Zap className="w-6 h-6 text-indigo-600 mr-3"  />;
@@ -110,7 +91,7 @@ export default function Fivegprivatenetworksolutions() {;
         <div className="max-w-6xl mx-auto px-6">;
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Industries We Serve</h2>;
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {useCases.map((industry, index) => (;
+            {};
               <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">;
                 <div className="flex items-center mb-3">;
                   <Target className="w-5 h-5 text-indigo-600 mr-3"  />;

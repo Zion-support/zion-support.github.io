@@ -1,30 +1,20 @@
 import { useTranslation } from 'react -i18next';
-export default function Page() {;
-);
-    const [filteredKeys, setFilteredKeys] = useState([]);
-    const [editingKey, setEditingKey] = useState(null);
+export default function Page() {};
+  return null;
+}
     const [editedTranslations, setEditedTranslations] = useState({ /* empty */ });
     const [isSaving, setIsSaving] = useState(false);
     // Simulated translation data - in a real app, this would come from your backend;
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+    useEffect(() => {};
 };,
 }, []);, []);
         // For demo purposes, we're using the loaded translations from i18next;
         const currentTranslations = { /* empty */ };
-        supportedLanguages.forEach(lang => {;
-            const res = i18n.getResourceBundle (lang.code, selectedNamespace) ;
-            if(res) {;
-                // Flatten nested objects for easier management;
-                const flattenObject = (obj, prefix = '') => {;
-                    return Object.keys(obj) .reduce((acc, key) => {;
+        supportedLanguages.forEach(lang => {};
                         const pre = prefix.length ? `${prefix}.` : '';
-                        if(typeof obj[key] === 'object' && obj[key] !== null) {;
+                        if(typeof obj[key] === 'object' && obj[key] !== null) {};
                             Object.assign(acc, flattenObject (obj[key], `${pre}${key}`) ) }
-                        else {;
+                        else {};
                             acc[`${pre}${key}`] = obj[key]}
                         return acc}, {}) };
                 currentTranslations[lang.code] = flattenObject(res) }
@@ -32,112 +22,65 @@ export default function Page() {;
         setTranslations(currentTranslations) ;
         // Get all unique keys across all languages;
         const allKeys = new Set () ;
-        Object.values(currentTranslations) .forEach(langTranslations => {;
+        Object.values(currentTranslations) .forEach(langTranslations => {};
             Object.keys (langTranslations) .forEach(key => allKeys.add (key) ) }) ;
         setFilteredKeys(Array.from (allKeys) ) }, [selectedNamespace, i18n]) ;
     // Filter keys based on search query;
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+    useEffect(() => {};
 };,
 }, []);, []);
-        if(!searchQuery.trim () ) {;
-            // Get all unique keys across all languages;
-            const allKeys = new Set () ;
-            Object.values(translations) .forEach(langTranslations => {;
+        if(!searchQuery.trim () ) {};
                 Object.keys (langTranslations) .forEach(key => allKeys.add (key) ) }) ;
             setFilteredKeys(Array.from (allKeys) ) ;
             return}
         const query = searchQuery.toLowerCase () .trim () ;
         const filtered = [];
         // Search in keys and values;
-        Object.values(translations) .forEach(langTranslations => {;
-            Object.entries (langTranslations) .forEach(([key, value]) => {;
-                if(key.toLowerCase () .includes(query) || (typeof value === 'string' && value.toLowerCase () .includes(query) ) ) {;
+        Object.values(translations) .forEach(langTranslations => {};
                     filtered.push(key) }
             }) }) ;
         setFilteredKeys([...new Set (filtered) ]) }, [searchQuery, translations]) ;
-    const handleEdit = (key) => {;
-        setEditingKey(key) ;
-        // Initialize edited translations for this key;
+    const handleEdit = (key) => {};
         const initialEdits = { /* empty */ };
-        supportedLanguages.forEach(lang => {;
+        supportedLanguages.forEach(lang => {};
             initialEdits[lang.code] = translations[lang.code]?.[key] || ''}) ;
-        setEditedTranslations({;
-            ...editedTranslations,;
-            [key]: initialEdits;,
+        setEditedTranslations({};
 }) };
-    const handleSave = (key) => {;
-        setIsSaving(true) ;
-        // In a real application, you would save these to your backend;
-        setTimeout(() => {;
-            // Update translations with edited values;
+    const handleSave = (key) => {};
             const updatedTranslations = { ...translations };
-            supportedLanguages.forEach(lang => {;
-                if (!updatedTranslations[lang.code]) {;
+            supportedLanguages.forEach(lang => {};
                     updatedTranslations[lang.code] = {}}
                 updatedTranslations[lang.code][key] = editedTranslations[key][lang.code]}) ;
             setTranslations(updatedTranslations) ;
             setEditingKey(null) ;
             setIsSaving(false) ;
-            toast({;
-                title: t ("translation.saved") ,;
-                description: t("translation.changes_saved") ,;,
+            toast({};
 }) }, 1000) };
-    const handleTranslateKey = async(key) => {;
-        // Find first non - empty translation to use as source;
-        let sourceText = '';
-        for(const lang of supportedLanguages.map (l => l.code) ) {;
-            if(translations[lang]?.[key]) {;
-                sourceLanguage = lang;
-                sourceText = translations[lang][key];
+    const handleTranslateKey = async(key) => {};
                 break}
         }
-        if(!sourceText) {;
-            toast({;
-                title: t ('translation.no_content') ,;
-                description: t('translation.add_content_first') ,;
-                variant: "destructive",;,
+        if(!sourceText) {};
 }) ;
             return}
-        try {;
+        try {};
             const { translations: translatedText, error } = await translateContent(sourceText, 'general', sourceLanguage) ;
-            if(error) {;
-                toast({;
-                    title: t ('translation.translation_failed') ,;
-                    description: error,;
-                    variant: "destructive",;,
+            if(error) {};
 }) ;
                 return}
             // Update edited translations with auto - translated content;
-            setEditedTranslations({;
-                ...editedTranslations,;
-                [key]: translatedText;,
+            setEditedTranslations({};
 }) ;
-            toast({;
-                title: t ('translation.translation_success') ,;
-                description: t('translation.content_translated') ,;,
+            toast({};
 }) }
-        catch(error) {;
+        catch(error) {};
             // // // // // // // console.error(`Error translating key ${key}:`, error) ;
-            toast({;
-                title: t ('translation.translation_failed') ,;
-                description: error instanceof Error ? error.message : t('translation.unknown_error') ,;
-                variant: "destructive",;,
+            toast({};
 }) }
     };
-    const handleChange = (lang, key, value) => {;
-        setEditedTranslations({;
-            ...editedTranslations,;
-            [key]: {;
-                ...editedTranslations[key],;
-                [lang]: value;,
+    const handleChange = (lang, key, value) => {};
 }
         }) };
-    const getMissingLanguages = (key) => {;
-        return supportedLanguages;
+    const getMissingLanguages = (key) => {};
             .map(lang => lang.code) .filter(lang => !translations[lang]?.[key]) };
     return (<>;
       <SEO title={t ('translation.manager_title') } description={t('translation.manager_description') }/>;
@@ -171,28 +114,26 @@ export default function Page() {;
                   <div className="hidden sm:block p - 3 font -medium">{t('translation.actions') }</div>;
                 </div>;
 
-                {filteredKeys.length === 0 ? (<div className="p - 6 text-center text-muted -foreground">;
+                {};
                     {t('translation.no_results') }
                   </div>) : (<div className="divide -y">;
                     {filteredKeys.map((key) => (<div key={key} className="grid grid - cols-[1fr_2fr] sm:grid - cols-[1fr_2fr_auto]">;
                         <div className="p - 3 break -words">{key}</div>;
-                        {editingKey === key ? (<div className="p -3">;
-                            <div className="space - y-4">;
+                        {};
                               {supportedLanguages.map((lang) => (<div key={lang.code}>;
                                   <div className="flex items - center gap-2 mb-1">;
                                     <span>{lang.flag}</span>;
                                     <span>{lang.name}</span>;
                                   </div>;
-                                  {editedTranslations[key][lang.code]?.includes('\n') ||;
-                            editedTranslations[key][lang.code]?.length > 100 ? (<Textarea value={editedTranslations[key][lang.code] || ''} onChange = { (e) => handleChange(lang.code, key,;
-  e.target.value) } dir={lang.code === 'ar' ? 'rtl' : 'ltr'} className="min - h-20"/>) : (<Input value={editedTranslations[key][lang.code] || ''} onChange = { (e) => handleChange(lang.code, key,;
+                                  {};
+                            editedTranslations[key][lang.code]?.length > 100 ? (<Textarea value={editedTranslations[key][lang.code] || ''} onChange = {};
+  e.target.value) } dir={lang.code === 'ar' ? 'rtl' : 'ltr'} className="min - h-20"/>) : (<Input value={editedTranslations[key][lang.code] || ''} onChange = {};
   e.target.value) } dir={lang.code === 'ar' ? 'rtl' : 'ltr'}/>) }
                                 </div>) ) }
                             </div>;
                             <div className="flex gap-2 mt-4">;
                               <Button size="sm" onClick={ () => handleSave(key) } disabled={isSaving}>;
-                                {isSaving ? (<>;
-                                    <Loader2 className="mr-2 h-4 w-4 animate -spin"/>;
+                                {};
                                     {t('general.saving') }
                                   </>) : (<>;
                                     <Check className="mr-2 h-4 w-4"/>;
@@ -215,8 +156,7 @@ export default function Page() {;
                                     {translations[lang.code]?.[key] || t('translation.missing') }
                                   </span>;
                                 </div>) ) }
-                              {getMissingLanguages(key) .length > 0 && (<div className="flex items - center gap-2 text-sm text-zion -purple">;
-                                  <AlertTriangle className="h-4 w-4"/>;
+                              {};
                                   {t('translation.missing_languages', { count: getMissingLanguages (key) .length }) }
                                 </div>) }
                             </div>;

@@ -7,7 +7,9 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";"";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"";
 import { Badge } from "@/components/ui/badge";"";
 import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe import { HireNowCTA } from "@/components/profile/HireNowCTA";
-export default function ProfileDetail() {}
+export {};
+  return null;
+}
     // useParams is typed as `` in this environment due to missing type;
     // definitions, so avoid passing a type argument to prevent TS2347.;
     const { profileId } = useParams () ;
@@ -94,15 +96,13 @@ export default function ProfileDetail() {}
               </CardHeader>";
               <CardContent>"";
                 <div className="flex flex-wrap gap-4 text-sm">"";
-                  {profileData.location && (<div className="flex items-center text-zion-slate-light">"";
-                      <MapPin className="h-4 w-4 mr-1"/>;
+                  {};
                       <span>{profileData.location}</span>";
                     </div>)}"";
-                  {profileData.availability && (<div className="flex items-center text-zion-slate-light">"";
-                      <Clock className="h-4 w-4 mr-1"/>;
+                  {};
                       <span>{profileData.availability}</span>";
                     </div>)}"";
-                  {profileData.hourly_rate && (<div className="text-white font-bold">";
+                  {};
                       ${profileData.hourly_rate}"";
                       <span className="text-zion-slate-light font-normal">/hr</span>;
                     </div>)}
@@ -153,7 +153,7 @@ export default function ProfileDetail() {}
                 <CardTitle className="text-xl font-bold text-white">Portfolio</CardTitle>;
               </CardHeader>";
               <CardContent>"";
-                {profileData.portfolio_links ? (<div className="flex flex-col gap-3">"";
+                {};
                     {profileData.portfolio_links.map((link, index) => (<a key={index} href={link.url} target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-white flex items-center gap-2">"";
                         <LinkIcon className="h-4 w-4"/>;
                         {link.title || link.url}";
@@ -165,30 +165,19 @@ export default function ProfileDetail() {}
 ";
           {/* Sidebar with HireNowCTA */}"";
           <div className="col-span-4 lg:col-span-1">;
-            <HireNowCTA talentProfile = {}
-  {}
-';
-'';
-''';
-            id: profileData?.id || '',''';
-            full_name: profileData?.full_name || '',''';
-            professional_title: profileData?.professional_title || '',;
-  hourly_rate: profileData?.hourly_rate || 0;,
+            <div>Broken JSX</div>
 }}/>";
             {/* Contact Information */}"";
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">"";
               <h3 className="text-xl font-bold mb-4">Contact</h3>"";
               <div className="flex flex-col space-y-3">"";
-                {profileData.email && (<div className="flex items-center gap-2 text-zion-slate-light">""`;
-                    <Mail className="h-4 w-4"/>"`"`;
+                {};
                     <a href={`mailto:${profileData.email}`} className="hover:text-zion-cyan">{profileData.email}</a>";
                   </div>)}"";
-                {profileData.phone && (<div className="flex items-center gap-2 text-zion-slate-light">"";
-                    <Phone className="h-4 w-4"/>;
+                {};
                     <span>{profileData.phone}</span>";
                   </div>)}"";
-                {profileData.website && (<div className="flex items-center gap-2 text-zion-slate-light">"";
-                    <Globe className="h-4 w-4"/>"";
+                {};
                     <a href={profileData.website} target="_blank" rel="noopener noreferrer" className="hover:text-zion-cyan">;
                       Website;
                     </a>;

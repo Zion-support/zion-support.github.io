@@ -1,101 +1,107 @@
-const fs = require("fs");
-const path = require("path");
-class $1 {;
-  constructor() {;
-  this.projectRoot = process.cwd();
-    this.fixedFiles = [];,;,
-}
-;
-  log(message) {;
-  console.log(`[${new Date().toISOString()}] ${message}`);,;,
-}
-;
-  fixFile(filePath) {;
-  try {;
-  let content = fs.readFileSync(filePath, "utf8");
-      let originalContent = content;
-      // Fix common syntax errors;
-      content = content.replace(/;\s*$/gm, ""); // Remove trailing semicolons;
-      content = content.replace(/,\s*;/g, ","); // Fix comma followed by semicolon;
-      content = content.replace(/;\s*}/g, "}"); // Remove semicolons before closing braces;
-      content = content.replace(/;\s*]/g, "]"); // Remove semicolons before closing brackets;
-      content = content.replace(/;\s*\)/g, ")"); // Remove semicolons before closing parentheses;
-      content = content.replace(/description:\s*"([^"]*)";/g, "description: "$1""); // Fix description syntax;
-      content = content.replace(/result:\s*result;/g, "result: result"); // Fix result syntax;
-      content = content.replace(/timeout:\s*timeout,/g, "timeout: timeout"); // Fix timeout syntax;
-      ;
-      // Fix object property syntax;
-      content = content.replace(/(\w+):\s*(\w+);/g, "$1: $2"); // Fix object properties;
-      content = content.replace(/(\w+):\s*"([^"]*)";/g, "$1: "$2""); // Fix string properties;
-      ;
-      // Fix function syntax;
-      content = content.replace(/async\s+(\w+)\s*\(\s*\)\s*{/g, "async $1() {");
-      content = content.replace(/}\s*;\s*$/gm, "}"); // Remove semicolons after function closing;
-      ;
-      // Fix import/require syntax;
-      content = content.replace(/require\s*\(\s*"([^"]*)"\s*\)\s*;/g, "require("$1")");
-      content = content.replace(/module\.exports\s*=\s*(\w+)\s*;/g, "module.exports = $1");
-      if (content !== originalContent) {;
-  fs.writeFileSync(filePath, content, "utf8");
-        this.fixedFiles.push(filePath);
-        this.log(`✅ Fixed syntax in: ${path.relative(this.projectRoot, filePath)}`);
-        return true;,;,
-}
-      return false;,;,
-} catch (error) {;
-  this.log(`❌ Error fixing ${filePath}: ${error.message}`);
-      return false;,;,
-}
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+
+class AutomationSyntaxFixer {
+  constructor() {
+    this.fixes = [];
+    this.errors = [];
   }
-;
-  getAllFiles(dir, extensions) {;
-  let files = [];
-    try {;
-  const items = fs.readdirSync(dir);
-      for (const item of items) {;
-  const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-        if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {;
-  files = files.concat(this.getAllFiles(fullPath, extensions));,;,
-} else if (stat.isFile()) {;
-  const ext = path.extname(item);
-          if (extensions.includes(ext)) {;
-  files.push(fullPath);,;,
-}
-        }
-      }
-    } catch (error) {;
-  this.log(`Error reading directory ${dir}: ${error.message}`);,;,
-}
-    return files;,;,
-}
-;
-  async fixAllAutomationFiles() {;
-  this.log("🔧 Starting automation syntax fix...");
-    const extensions = [".cjs", ".js", ".jsx", ".ts", ".tsx"];
-    const files = this.getAllFiles(this.projectRoot, extensions);
-    let fixedCount = 0;
-    for (const file of files) {;
-  if (this.fixFile(file)) {;
-  fixedCount++;,;,
-}
+
+  async fixAllAutomationFiles() {
+    console.log('🔧 Starting automation syntax fixing...');
+    
+    const automationDir = path.join(__dirname, 'automation');
+    const scriptsDir = path.join(__dirname, 'scripts');
+    
+    // Fix automation directory files
+    await this.fixDirectory(automationDir);
+    
+    // Fix scripts directory files
+    await this.fixDirectory(scriptsDir);
+    
+    console.log(`✅ Fixed ${this.fixes.length} files`);
+    if (this.errors.length > 0) {
+      console.log(`❌ ${this.errors.length} errors encountered`);
     }
-    ;
-    this.log(`🎉 Fixed syntax in ${fixedCount} files`);
-    this.log(`📁 Files fixed: ${this.fixedFiles.length}`);
-    return { fixedCount, files: this.fixedFiles }
+  }
+
+  async fixDirectory(dir) {
+    if (!fs.existsSync(dir)) return;
+    
+    const files = fs.readdirSync(dir);
+    for (const file of files) {
+      if (file.endsWith('.js') || file.endsWith('.cjs')) {
+        const filePath = path.join(dir, file);
+        await this.fixFile(filePath);
+      }
+    }
+  }
+
+  async fixFile(filePath) {
+    try {
+      const content = fs.readFileSync(filePath, 'utf8');
+      const fixedContent = this.fixSyntax(content);
+      
+      if (content !== fixedContent) {
+        fs.writeFileSync(filePath, fixedContent);
+        this.fixes.push(filePath);
+        console.log(`✅ Fixed: ${path.basename(filePath)}`);
+      }
+    } catch (error) {
+      this.errors.push({ file: filePath, error: error.message });
+      console.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`);
+    }
+  }
+
+  fixSyntax(content) {
+    let fixed = content;
+    
+    // Fix common syntax errors
+    fixed = fixed.replace(/this\.\w+\s*=\s*\[\];,;,/g, 'this.$1 = [];');
+    fixed = fixed.replace(/this\.\w+\s*=\s*\{;,/g, 'this.$1 = {');
+    fixed = fixed.replace(/class:\s*(\w+)/g, 'class $1');
+    fixed = fixed.replace(/constructor\(\)\s*\{/g, 'constructor() {');
+    fixed = fixed.replace(/async:\s*(\w+)/g, 'async $1');
+    fixed = fixed.replace(/for:\s*\(/g, 'for (');
+    fixed = fixed.replace(/if:\s*\(/g, 'if (');
+    fixed = fixed.replace(/try:\s*\{/g, 'try {');
+    fixed = fixed.replace(/catch:\s*\(/g, 'catch (');
+    fixed = fixed.replace(/switch:\s*\(/g, 'switch (');
+    fixed = fixed.replace(/case;\s*/g, 'case ');
+    fixed = fixed.replace(/break;$/gm, 'break;');
+    fixed = fixed.replace(/return:\s*/g, 'return ');
+    fixed = fixed.replace(/const\s+(\w+):\s*=/g, 'const $1 =');
+    fixed = fixed.replace(/let\s+(\w+):\s*=/g, 'let $1 =');
+    fixed = fixed.replace(/var\s+(\w+):\s*=/g, 'var $1 =');
+    
+    // Fix object property syntax
+    fixed = fixed.replace(/(\w+):\s*(\w+)/g, '$1: $2');
+    
+    // Fix string concatenation issues
+    fixed = fixed.replace(/",\s*"/g, '", "');
+    fixed = fixed.replace(/`,\s*`/g, '`, `');
+    
+    // Fix function calls
+    fixed = fixed.replace(/spawn\(,\s*node/g, 'spawn("node');
+    fixed = fixed.replace(/spawn\(,\s*`/g, 'spawn(`');
+    
+    // Remove duplicate semicolons
+    fixed = fixed.replace(/;;+/g, ';');
+    
+    // Fix array syntax
+    fixed = fixed.replace(/\[\];,;,/g, '[];');
+    
+    return fixed;
   }
 }
-;
-// Run the fixer;
+
+// Run the fixer
 const fixer = new AutomationSyntaxFixer();
-fixer.fixAllAutomationFiles();
-  .then(result => {;
-  console.log("✅ Syntax fixing completed successfully");
-    console.log(`📊 Summary: ${result.fixedCount} files fixed`);
-    process.exit(0);,;,
+fixer.fixAllAutomationFiles().then(() => {
+  console.log('🎉 Automation syntax fixing completed!');
+}).catch(error => {
+  console.error('❌ Error:', error);
+  process.exit(1);
 });
-  .catch(error => {;
-  console.error("❌ Syntax fixing failed:', error.message);
-    process.exit(1);,;,
-})

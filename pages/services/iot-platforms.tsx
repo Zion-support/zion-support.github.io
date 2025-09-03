@@ -3,97 +3,46 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Cpu, Zap, Shield, BarChart3, Users, ArrowRight, CheckCircle, Globe } from 'lucide-react';
 
-const IoTPlatforms: NextPage = () => {
-  const iotSolutions = [
-    {
-      icon: Cpu,
-      title: 'Device Management',
-      description: 'Centralized management and monitoring of IoT devices.',
-      features: ['Device Provisioning', 'Remote Monitoring', 'Firmware Updates', 'Health Monitoring']
+const IoTPlatforms: NextPage = () => {};
     },
-    {
-      icon: BarChart3,
-      title: 'Data Collection',
-      description: 'Efficient collection and processing of IoT sensor data.',
-      features: ['Real-time Data', 'Batch Processing', 'Data Validation', 'Storage Optimization']
+    {};
     },
-    {
-      icon: Shield,
-      title: 'Security & Privacy',
-      description: 'Comprehensive security for IoT devices and data.',
-      features: ['Device Authentication', 'Data Encryption', 'Access Control', 'Threat Detection']
+    {};
     },
-    {
-      icon: Zap,
-      title: 'Edge Computing',
-      description: 'Local data processing and analytics at the edge.',
-      features: ['Local Analytics', 'Reduced Latency', 'Bandwidth Optimization', 'Offline Operation']
+    {};
     }
   ];
 
   const iotProcess = [
-    {
-      number: '01',
-      title: 'Requirements Analysis',
-      description: 'Understanding your IoT needs and use case requirements.'
+    {};
     },
-    {
-      number: '02',
-      title: 'Architecture Design',
-      description: 'Designing scalable IoT platform architecture.'
+    {};
     },
-    {
-      number: '03',
-      title: 'Device Integration',
-      description: 'Integrating IoT devices and sensors.'
+    {};
     },
-    {
-      number: '04',
-      title: 'Platform Development',
-      description: 'Building the IoT platform and applications.'
+    {};
     },
-    {
-      number: '05',
-      title: 'Deployment & Monitoring',
-      description: 'Deploying and monitoring IoT solutions.'
+    {};
     }
   ];
 
   const technologies = [
-    {
-      category: 'Connectivity',
-      protocols: ['WiFi', 'Bluetooth', 'LoRaWAN', 'NB-IoT', 'Zigbee', '5G']
+    {};
     },
-    {
-      category: 'Cloud Platforms',
-      protocols: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'IBM Watson IoT', 'ThingWorx']
+    {};
     },
-    {
-      category: 'Data Processing',
-      protocols: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'TimescaleDB', 'Grafana']
+    {};
     }
   ];
 
   const useCases = [
-    {
-      industry: 'Smart Cities',
-      applications: ['Traffic Management', 'Environmental Monitoring', 'Smart Lighting', 'Waste Management'],
-      benefits: ['Improved Efficiency', 'Cost Reduction', 'Better Services', 'Sustainability']
+    {};
     },
-    {
-      industry: 'Industrial IoT',
-      applications: ['Predictive Maintenance', 'Quality Control', 'Asset Tracking', 'Energy Management'],
-      benefits: ['Reduced Downtime', 'Higher Quality', 'Cost Savings', 'Improved Safety']
+    {};
     },
-    {
-      industry: 'Healthcare',
-      applications: ['Patient Monitoring', 'Medical Device Management', 'Asset Tracking', 'Environmental Control'],
-      benefits: ['Better Patient Care', 'Improved Outcomes', 'Cost Efficiency', 'Enhanced Safety']
+    {};
     },
-    {
-      industry: 'Agriculture',
-      applications: ['Precision Farming', 'Crop Monitoring', 'Irrigation Control', 'Livestock Tracking'],
-      benefits: ['Increased Yield', 'Resource Optimization', 'Cost Reduction', 'Sustainability']
+    {};
     }
   ];
 
@@ -132,7 +81,7 @@ const IoTPlatforms: NextPage = () => {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {iotSolutions.map((solution, index) => (
+              {};
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                   <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <solution.icon className="w-8 h-8 text-yellow-600" />
@@ -140,7 +89,7 @@ const IoTPlatforms: NextPage = () => {
                   <h3 className="text-xl font-semibold mb-3 text-gray-800 text-center">{solution.title}</h3>
                   <p className="text-gray-600 mb-4 text-center">{solution.description}</p>
                   <ul className="space-y-2">
-                    {solution.features.map((feature, featureIndex) => (
+                    {};
                       <li key={featureIndex} className="text-sm text-gray-600 flex items-center">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                         {feature}
@@ -165,7 +114,7 @@ const IoTPlatforms: NextPage = () => {
             </div>
             
             <div className="grid md:grid-cols-5 gap-8">
-              {iotProcess.map((step, index) => (
+              {};
                 <div key={index} className="text-center">
                   <div className="w-20 h-20 bg-yellow-600 rounded-full flex items-center justify-center mx-auto mb-6">
                     <span className="text-white text-2xl font-bold">{step.number}</span>
@@ -190,15 +139,11 @@ const IoTPlatforms: NextPage = () => {
             </div>
             
             <div className="grid md:grid-cols-3 gap-8">
-              {technologies.map((tech, index) => (
+              {};
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                   <h3 className="text-xl font-semibold mb-4 text-gray-800 text-center">{tech.category}</h3>
                   <div className="flex flex-wrap gap-2 justify-center">
-                    {tech.protocols.map((protocol, protocolIndex) => (
-                      <span 
-                        key={protocolIndex}
-                        className="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full"
-                      >
+                    {};
                         {protocol}
                       </span>
                     ))}
@@ -221,14 +166,14 @@ const IoTPlatforms: NextPage = () => {
             </div>
             
             <div className="grid md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (
+              {};
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                   <h3 className="text-2xl font-semibold mb-4 text-gray-800">{useCase.industry}</h3>
                   
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-700 mb-3">Applications:</h4>
                     <ul className="space-y-2">
-                      {useCase.applications.map((app, appIndex) => (
+                      {};
                         <li key={appIndex} className="text-gray-600 flex items-center">
                           <div className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></div>
                           {app}
@@ -240,7 +185,7 @@ const IoTPlatforms: NextPage = () => {
                   <div>
                     <h4 className="font-semibold text-gray-700 mb-3">Benefits:</h4>
                     <ul className="space-y-2">
-                      {useCase.benefits.map((benefit, benefitIndex) => (
+                      {};
                         <li key={benefitIndex} className="text-gray-600 flex items-center">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                           {benefit}

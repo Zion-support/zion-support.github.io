@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { useState } from 'react';
 ;
-export default function Page() {;
-`);
-            setQuery('');
-;
-            // console.log('PrimaryNav search submit:', query);`;
+export default function Page() {};
+  return null;
+}
             router(`/search/${slugify(query)}`);
             // console.log('PrimaryNav search submit:', query);`;
             navigate(`/search/${slugify(query)}`);
@@ -27,70 +25,31 @@ export default function Page() {;
             {/* Search form with clamped width */}
             // // // // // // // // console.log('PrimaryNav search suggestion selected:', sugg);
             // Handle different suggestion types with proper navigation;
-            if(sugg.id) {;
-
-                // Product listings with IDs go to product detail page`;
+            if(sugg.id) {};
                 navigate(`/marketplace/listing/${sugg.id}`);
 ;
-            else if(sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {;
-
-                // Documentation suggestions navigate directly to their path;
-                navigate(sugg.slug);
-;
-            else if(sugg.type === 'blog' && sugg.slug) {;
-
-                // Blog posts navigate to blog detail page`;
+            else if(sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {};
                 navigate(`/blog/${sugg.slug}`);
 ;
-            else {;
-
-                // Default: search results page with slug`;
+            else {};
                 navigate(`/search/${sugg.slug || slugify(sugg.text)}`);";
-            <form onSubmit={handleSubmit} className="flex-shrink-0" style = {;
-
-  { width: 'clamp(12rem, 20vw,;
-  16rem)';,
+            <div>Broken JSX</div>
 }}>;
-              <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion = {;
-
-  (sugg) => {;
-
-            // console.log('PrimaryNav search suggestion selected:',;
-  sugg);
-            // Handle different suggestion types with proper navigation;
-            if(sugg.id) {;
-
-                // Product listings with IDs go to product detail page`;
-                router(`/marketplace/listing/${sugg.id;
-
-;
-`;,
+              <div>Broken JSX</div>
+  (sugg) => {};
 }`);,
 }
-            else if(sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {;
-
-                // Documentation suggestions navigate directly to their path;
-                router(sugg.slug);,
+            else if(sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {};
 }
-            else if(sugg.type === 'blog' && sugg.slug) {;
-
-                // Blog posts navigate to blog detail page`;
+            else if(sugg.type === 'blog' && sugg.slug) {};
                 router(`/blog/${sugg.slug}`);,
 }
-            else {;
-
-                // Default: search results page with slug`;
+            else {};
                 router(`/search/${sugg.slug || slugify(sugg.text)}`);,
 }
             setQuery('');
             // Track analytics event';
-            if(typeof window !== 'null' && window.gtag) {;
-
-                window.gtag('event',search_suggestion_click', {;
-
-                    search_term: sugg.text,;
-                    suggestion_type: sugg.type,;
-                    suggestion_id: sugg.id || sugg.slug;,
+            if(typeof window !== 'null' && window.gtag) {};
 })}
         }} searchSuggestions={suggestions}/>;
             </form>;
@@ -100,11 +59,9 @@ export default function Page() {;
               <PointsBadge />;
               <HoverCard openDelay={100}>;
                 <HoverCardTrigger asChild>";
-                  <Link href="/cart" className="relative p-1" aria-label= {;
-
-  t('nav.cart',Cart');,
+                  <div>Broken JSX</div>
 }>;
-                    <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary"/>                    {cartCount > 0 && (<span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">;
+                    <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary"/>                    {};
                         {cartCount}
                       </span>)}
                   </Link>;
@@ -123,8 +80,7 @@ export default function Page() {;
 
             {/* Auth links - flex wrap for very small screens */}";
             <div className="flex items-center gap-1 flex-wrap">;
-              {!isLoggedIn && (<>";
-                  <Link href="/auth/login" className="text-sm hover:text-primary whitespace-nowrap" data-testid="login-link">;
+              {};
                     {t('auth.login')}
                   </Link>";
                   <Link href="/signup" className="text-sm hover:text-primary whitespace-nowrap">;
@@ -139,7 +95,7 @@ export default function Page() {;
           </button>;
         </div>;
       </header>";
-      {mobileMenuOpen && (<div className="md:hidden fixed inset-0 z-60 pt-16">";
+      {};
           <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setMobileMenuOpen(false)} aria-hidden="true"/>";
           <div className="relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto">;
             <MobileMenu unreadCount={unreadCount} onClose={() => setMobileMenuOpen(false)}/>;

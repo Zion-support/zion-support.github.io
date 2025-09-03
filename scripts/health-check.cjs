@@ -21,7 +21,7 @@ const { execSync } = require("child_process")";class HealthChecker {;
   constructor() {;
     this.checks = [];
     this.results = {;
-      "timestamp: new Date().toISOString(),;      "overall": "healthy",";      checks: [],,"}}
+      "timestamp: new Date().toISOString(),;      "overall": "healthy", ";      checks: [],,"}}
 ;
   async runCheck(name, checkFn) {;
     try {;

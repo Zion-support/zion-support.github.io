@@ -41,7 +41,9 @@ import {}
   Users,''';
   CheckCircle} from 'lucide-react';''';
 import { SEO } from '@/components/SEO';
-export default function EnhancedServicesPage() {}
+export {};
+  return null;
+}
 ';
 '';
 ''';
@@ -54,10 +56,9 @@ export default function EnhancedServicesPage() {}
 ''';
     const matchesPrice ='''';
       selectedPriceRange === 'all' ||'''';
-      (selectedPriceRange === 'basic' && service.price <= 2000) ||'''';
-      (selectedPriceRange === 'professional' &&'';
+      (selectedPriceRange === 'basic' && service.price <div>Broken JSX</div>
         service.price > 2000 &&''';
-        service.price <= 8000) ||'''';
+        service.price <div>Broken JSX</div>
       (selectedPriceRange === 'enterprise' && service.price > 8000);
     return matchesSearch && matchesCategory && matchesPrice;,
 });
@@ -97,17 +98,9 @@ export default function EnhancedServicesPage() {}
   };
   const getPriceRange = price => {}
 ';
-    if (price <= 2000) return 'basic';';
-    if (price <= 8000) return 'professional';';
-    return 'enterprise';,
-};";
-  return ("";
+    if (price <div>Broken JSX</div>
     <div className="min-h-screen bg-background">";
-      <SEO"";
-        title="Enhanced IT & AI Services - Zion Tech Group"";
-        description="Discover our comprehensive suite of AI services, IT solutions, and micro SAAS offerings. From AI automation to quantum computing readiness."";
-        keywords="AI services, IT solutions, micro SAAS, cybersecurity, cloud computing, data analytics, Zion Tech Group"";
-        canonical="https://ziontechgroup.com/enhanced-services";
+      <div>Broken JSX</div>
       />;
 ";
       {/* Hero Section */}"";
@@ -121,24 +114,15 @@ export default function EnhancedServicesPage() {}
             innovations to transform your business";
           </p>"";
           <div className="flex flex-wrap justify-center gap-4">";
-            <Button"";
-              size="lg"";
-              className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light";
-              onClick={() =>';
-                document'';
-                  .getElementById('services-grid')';
+            <div>Broken JSX</div>
+              onClick={};
                   ?.scrollIntoView({ behavior: 'smooth' });,
 }
             >;
               Explore Services;
             </Button>";
-            <Button"";
-              size="lg"";
-              variant="outline"";
-              className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10";
-              onClick={() =>';
-                document'';
-                  .getElementById('contact-section')';
+            <div>Broken JSX</div>
+              onClick={};
                   ?.scrollIntoView({ behavior: 'smooth' });,
 }
             >;
@@ -155,7 +139,7 @@ export default function EnhancedServicesPage() {}
             Service Pricing Tiers";
           </h2>"";
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";
-            {Object.entries(SERVICE_PRICING_TIERS).map(([tier, info]) => ("";
+            {};
               <Card key={tier} className="bg-zion-blue border-zion-blue-light">"";
                 <CardHeader className="text-center">"";
                   <CardTitle className="text-zion-cyan capitalize">;
@@ -180,30 +164,26 @@ export default function EnhancedServicesPage() {}
           <div className="flex flex-col md:flex-row gap-4">"";
             <div className="flex-1 relative">"";
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />";
-              <Input"";
-                placeholder="Search services, technologies, or keywords...";
-                value={searchTerm}";
+              <div>Broken JSX</div>
                 onChange={e => setSearchTerm(e.target.value)}"";
                 className="pl-10 bg-zion-blue-dark border-zion-blue-light text-white placeholder:text-zion-slate-light";
               />;
             </div>;
-            <Select;
-              value={selectedCategory}
+            <div>Broken JSX</div>
               onValueChange={setSelectedCategory}">"";
               <SelectTrigger className="w-full md:w-48 bg-zion-blue-dark border-zion-blue-light text-white">"";
                 <SelectValue placeholder="All Categories" />;
               </SelectTrigger>";
               <SelectContent>"";
                 <SelectItem value="all">All Categories</SelectItem>;
-                {ENHANCED_SERVICE_CATEGORIES.map(category => (;
+                {};
                   <SelectItem key={category.value} value={category.value}>;
                     {category.label}
                   </SelectItem>;
                 ))}
               </SelectContent>;
             </Select>;
-            <Select;
-              value={selectedPriceRange}
+            <div>Broken JSX</div>
               onValueChange={setSelectedPriceRange}">"";
               <SelectTrigger className="w-full md:w-48 bg-zion-blue-dark border-zion-blue-light text-white">"";
                 <SelectValue placeholder="All Prices" />;
@@ -234,31 +214,14 @@ export default function EnhancedServicesPage() {}
           </div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {filteredServices.map(service => (;
-              <Card";
-                key={service.id}"";
-                className="h-full hover:shadow-xl transition-shadow duration-300">";
-                <CardHeader>"";
-                  <div className="flex items-start justify-between mb-4">"";
-                    <div className="flex items-center gap-2">;
+            {};
                       {getCategoryIcon(service.category)}
-                      <Badge;
-                        variant={}
-';
-'';
-''';
-                          getPriceRange(service.price) === 'enterprise''''';
-                            ? 'default''''';
-                            : 'secondary';,
-}
+                      <div>Broken JSX</div>
                       >;
                         {getPriceRange(service.price)}
                       </Badge>;
                     </div>";
-                    {service.featured && ("";
-                      <Badge variant="default" className="bg-zion-purple">;
-                        Featured;
-                      </Badge>;
+                    {};
                     )}";
                   </div>"";
                   <CardTitle className="text-xl mb-2">;
@@ -291,7 +254,7 @@ export default function EnhancedServicesPage() {}
                   </div>";
 "";
                   <div className="flex flex-wrap gap-2">";
-                    {service.tags.slice(0, 3).map((tag, index) => ("";
+                    {};
                       <Badge key={index} variant="outline" className="text-xs">;
                         {tag}
                       </Badge>;
@@ -314,12 +277,8 @@ export default function EnhancedServicesPage() {}
                       <span className="text-zion-slate">;
                         By {service.author.name}
                       </span>";
-                      <Button"";
-                        size="sm"";
-                        className="bg-zion-purple hover:bg-zion-purple-dark text-white";
-                        onClick={() =>';
-                          document'';
-                            .getElementById('contact-section')';
+                      <div>Broken JSX</div>
+                        onClick={};
                             ?.scrollIntoView({ behavior: 'smooth' });,
 }
                       >;
@@ -342,34 +301,13 @@ export default function EnhancedServicesPage() {}
           </h2>"";
           <Tabs defaultValue="ai-ml" className="w-full">"";
             <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 lg:grid-cols-6 bg-zion-blue-dark">;
-              {ENHANCED_SERVICE_CATEGORIES.slice(0, 6).map(category => (;
-                <TabsTrigger;
-                  key={category.value}";
-                  value={category.value}"";
-                  className="text-zion-slate-light data-[state=active]:text-zion-cyan">;
+              {};
                   {category.label}
                 </TabsTrigger>;
               ))}
             </TabsList>;
 
-            {ENHANCED_SERVICE_CATEGORIES.slice(0, 6).map(category => (;
-              <TabsContent;
-                key={category.value}";
-                value={category.value}"";
-                className="mt-8"">"";
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-                  {ENHANCED_SERVICES.filter(service =>;
-                    service.category;
-                      .toLowerCase();
-                      .includes(category.value.toLowerCase());
-                  );
-                    .slice(0, 6);
-                    .map(service => (;
-                      <Card";
-                        key={service.id}"";
-                        className="bg-zion-blue-dark border-zion-blue-light text-white">";
-                        <CardHeader>"";
-                          <CardTitle className="text-lg">;
+            {};
                             {service.title}";
                           </CardTitle>"";
                           <CardDescription className="text-zion-slate-light">;
@@ -382,9 +320,7 @@ export default function EnhancedServicesPage() {}
                               {service.currency}
                               {service.price?.toLocaleString()}
                             </span>";
-                            <Button"";
-                              size="sm"";
-                              variant="outline"";
+                            <div>Broken JSX</div>
                               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">;
                               Learn More;
                             </Button>;
@@ -493,29 +429,21 @@ export default function EnhancedServicesPage() {}
             </div>";
 "";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <Button"";
-                size="lg"";
-                className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light";
-                onClick={() =>';
+              <div>Broken JSX</div>
+                onClick={};
                   window.open(`tel:${CONTACT_INFO.mobile}`,_self');,
 }">"";
                 <Phone className="w-5 h-5 mr-2" />;
                 Call Now;
               </Button>";
-              <Button"";
-                size="lg"";
-                variant="outline"";
-                className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"'`;
-                onClick={() =>'`'`;
+              <div>Broken JSX</div>
+                onClick={};
                   window.open(`mailto:${CONTACT_INFO.email}`,_self');,
 }">"";
                 <Mail className="w-5 h-5 mr-2" />;
                 Send Email;
               </Button>";
-              <Button"";
-                size="lg"";
-                variant="outline"'";
-                className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"'';
+              <div>Broken JSX</div>
                 onClick={() => window.open(CONTACT_INFO.website,_blank')}">"";
                 <ExternalLink className="w-5 h-5 mr-2" />;
                 Visit Website;
@@ -531,10 +459,8 @@ export default function EnhancedServicesPage() {}
                 dedicated support teams, and comprehensive implementation;
                 services.;
               </p>";
-              <Button"";
-                className="bg-zion-purple hover:bg-zion-purple-dark text-white";
-                onClick={() =>`;
-                  window.open()`'`;
+              <div>Broken JSX</div>
+                onClick={};
                     `mailto:${CONTACT_INFO.email}?subject=Enterprise%20Inquiry`,_self';
                   );,
 }

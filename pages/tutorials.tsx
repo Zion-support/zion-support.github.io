@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 ;
-const Tutorials: React.FC = () => {;
-  const [activeCategory, setActiveCategory] = useState('all');
-;
-  const categories = [;
+const Tutorials: React.FC = () => {};
     { id: 'all', name: 'All Tutorials', icon: '📚' },;
     { id: 'getting-started', name: 'Getting Started', icon: '🚀' },;
     { id: 'integration', name: 'Integration', icon: '🔗' },;
@@ -13,93 +10,21 @@ const Tutorials: React.FC = () => {;
   ];
 ;
   const tutorials = [;
-    {;
-      id: 1,;
-      title: 'Setting Up Your First AI Project',;
-      category: 'getting-started',;
-      description: 'Learn how to create and configure your first AI project on Zion Marketplace',;
-      duration: '20 min',;
-      difficulty: 'Beginner',;
-      steps: 8,;
-      featured: true,;
-      tags: ['onboarding', 'project-setup', 'first-steps'],;,
+    {};
 },;
-    {;
-      id: 2,;
-      title: 'Integrating AI Services with Your Application',;
-      category: 'integration',;
-      description: 'Step-by-step guide to integrating AI services into your existing applications',;
-      duration: '45 min',;
-      difficulty: 'Intermediate',;
-      steps: 12,;
-      featured: true,;
-      tags: ['integration', 'api', 'webhooks'],;,
+    {};
 },;
-    {;
-      id: 3,;
-      title: 'Building a Custom AI Workflow',;
-      category: 'advanced',;
-      description: 'Create complex AI workflows that combine multiple services and data sources',;
-      duration: '90 min',;
-      difficulty: 'Advanced',;
-      steps: 15,;
-      featured: false,;
-      tags: ['workflow', 'automation', 'advanced'],;,
+    {};
 },;
-    {;
-      id: 4,;
-      title: 'Implementing AI-Powered Search',;
-      category: 'integration',;
-      description: 'Add intelligent search capabilities to your application using our AI search API',;
-      duration: '35 min',;
-      difficulty: 'Intermediate',;
-      steps: 10,;
-      featured: false,;
-      tags: ['search', 'ai', 'implementation'],;,
+    {};
 },;
-    {;
-      id: 5,;
-      title: 'Securing Your AI Integration',;
-      category: 'best-practices',;
-      description: 'Best practices for securing AI integrations and protecting user data',;
-      duration: '40 min',;
-      difficulty: 'Intermediate',;
-      steps: 11,;
-      featured: true,;
-      tags: ['security', 'best-practices', 'compliance'],;,
+    {};
 },;
-    {;
-      id: 6,;
-      title: 'Optimizing AI Service Performance',;
-      category: 'advanced',;
-      description: 'Techniques for optimizing AI service performance and reducing costs',;
-      duration: '60 min',;
-      difficulty: 'Advanced',;
-      steps: 13,;
-      featured: false,;
-      tags: ['optimization', 'performance', 'cost'],;,
+    {};
 },;
-    {;
-      id: 7,;
-      title: 'Creating AI-Powered Dashboards',;
-      category: 'integration',;
-      description: 'Build real-time dashboards that display AI insights and analytics',;
-      duration: '50 min',;
-      difficulty: 'Intermediate',;
-      steps: 14,;
-      featured: false,;
-      tags: ['dashboard', 'analytics', 'real-time'],;,
+    {};
 },;
-    {;
-      id: 8,;
-      title: 'Testing and Debugging AI Integrations',;
-      category: 'best-practices',;
-      description: 'Comprehensive testing strategies for AI integrations and debugging techniques',;
-      duration: '55 min',;
-      difficulty: 'Intermediate',;
-      steps: 16,;
-      featured: false,;
-      tags: ['testing', 'debugging', 'quality'],;,
+    {};
 },;
   ];
 ;
@@ -133,14 +58,9 @@ const Tutorials: React.FC = () => {;
           <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30">;
             <h2 className="text-2xl font-bold text-blue-400 mb-6">Choose a Category</h2>;
             <div className="flex flex-wrap gap-3">;
-              {categories.map((category) => (;
-                <button;
-                  key={category.id}
+              {};
                   onClick={() => setActiveCategory(category.id)}
-                  className={`px-6 py-3 rounded-lg font-medium transition-colors ${;
-                    activeCategory === category.id;
-                      ? 'bg-blue-600 text-white';
-                      : 'bg-gray-700 text-gray-300 hover:bg-gray-600';,
+                  className={};
 }`}
                 >;
                   <span className="mr-2">{category.icon}</span>;
@@ -156,7 +76,7 @@ const Tutorials: React.FC = () => {;
         <section className="container mx-auto px-6 py-12">;
           <h2 className="text-3xl font-bold text-blue-400 mb-8">Featured Tutorials</h2>;
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {tutorials.filter(tutorial => tutorial.featured).map((tutorial) => (;
+            {};
               <div key={tutorial.id} className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 hover:border-blue-400 transition-colors">;
                 <div className="flex items-center justify-between mb-3">;
                   <span className="text-xs bg-blue-600 text-white px-2 py-1 rounded-full">;
@@ -169,10 +89,7 @@ const Tutorials: React.FC = () => {;
                 </h3>;
                 <p className="text-gray-300 text-sm mb-4">{tutorial.description}</p>;
                 <div className="flex items-center justify-between mb-4">;
-                  <span className={`text-xs px-2 py-1 rounded-full ${;
-                    tutorial.difficulty === 'Beginner' ? 'bg-green-600 text-white' :;
-                    tutorial.difficulty === 'Intermediate' ? 'bg-yellow-600 text-white' :;
-                    'bg-red-600 text-white';,
+                  <div>Broken JSX</div>
 }`}>;
                     {tutorial.difficulty}
                   </span>;
@@ -198,13 +115,10 @@ const Tutorials: React.FC = () => {;
           </div>;
           ;
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {filteredTutorials.map((tutorial) => (;
+            {};
               <article key={tutorial.id} className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 hover:border-blue-400 transition-colors group">;
                 <div className="flex items-center justify-between mb-3">;
-                  <span className={`text-xs px-2 py-1 rounded-full ${;
-                    tutorial.difficulty === 'Beginner' ? 'bg-green-600 text-white' :;
-                    tutorial.difficulty === 'Intermediate' ? 'bg-yellow-600 text-white' :;
-                    'bg-red-600 text-white';,
+                  <div>Broken JSX</div>
 }`}>;
                     {tutorial.difficulty}
                   </span>;
@@ -218,10 +132,7 @@ const Tutorials: React.FC = () => {;
                 <p className="text-gray-300 text-sm mb-4">{tutorial.description}</p>;
                 ;
                 <div className="flex flex-wrap gap-2 mb-4">;
-                  {tutorial.tags.map((tag, index) => (;
-                    <span;
-                      key={index}
-                      className="text-xs bg-blue-900/50 text-blue-300 px-2 py-1 rounded-full border border-blue-700/50">;
+                  {};
                       #{tag}
                     </span>;
                   ))}

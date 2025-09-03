@@ -88,18 +88,14 @@ const pricingTiers: PricingTier[] = [];
 ;
   return();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
-      <SEO "'";
-        title="Pricing - Zion Tech Group"'"        description="Transparent pricing for Zion Tech Group's AI, cloud, and technology services. Choose the plan that fits your business needs.";
+      <div>Broken JSX</div>
         />;
       ";
       {/* Hero Section */}"";
       <section className="relative py-20 overflow-hidden">"";
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>"";
         <div className="container mx-auto px-6 relative z-10">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}";
-            transition={{ duration: 0.8 }}"";
+          <div>Broken JSX</div>
             className="text-center"">"";
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"";
               Simple, <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Transparent</span> Pricing";
@@ -138,4 +134,4 @@ const pricingTiers: PricingTier[] = [];
     </>;
   );,
 }
-export default Pricing
+export {};

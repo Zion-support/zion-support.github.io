@@ -9,7 +9,9 @@ import {}
   Users,'';
   Globe,''';
   ArrowRight} from 'lucide-react';
-export default function EnterpriseIT() {}
+export {};
+  return null;
+}
   return();
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">";
       {/* Hero Section */}"";
@@ -39,10 +41,7 @@ export default function EnterpriseIT() {}
       <section className="py-20 px-4 sm:px-6 lg:px-8">"";
         <div className="max-w-7xl mx-auto">"";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}";
-              transition={{ duration: 0.5 }}"";
+            <div>Broken JSX</div>
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-6 border border-cyan-500/30"">"";
               <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">"";
                 <Server className="w-6 h-6 text-cyan-400" />";
@@ -56,10 +55,7 @@ export default function EnterpriseIT() {}
               </p>;
             </motion.div>;
 
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}";
-              transition={{ duration: 0.5, delay: 0.1 }}"";
+            <div>Broken JSX</div>
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-6 border border-cyan-500/30"">"";
               <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">"";
                 <Shield className="w-6 h-6 text-cyan-400" />";
@@ -73,10 +69,7 @@ export default function EnterpriseIT() {}
               </p>;
             </motion.div>;
 
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}";
-              transition={{ duration: 0.5, delay: 0.2 }}"";
+            <div>Broken JSX</div>
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-6 border border-cyan-500/30"">"";
               <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">"";
                 <Zap className="w-6 h-6 text-cyan-400" />";
@@ -90,10 +83,7 @@ export default function EnterpriseIT() {}
               </p>;
             </motion.div>;
 
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}";
-              transition={{ duration: 0.5, delay: 0.3 }}"";
+            <div>Broken JSX</div>
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-6 border border-cyan-500/30"">"";
               <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">"";
                 <Users className="w-6 h-6 text-cyan-400" />";
@@ -107,10 +97,7 @@ export default function EnterpriseIT() {}
               </p>;
             </motion.div>;
 
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}";
-              transition={{ duration: 0.5, delay: 0.4 }}"";
+            <div>Broken JSX</div>
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-6 border border-cyan-500/30"">"";
               <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">"";
                 <Globe className="w-6 h-6 text-cyan-400" />";
@@ -124,10 +111,7 @@ export default function EnterpriseIT() {}
               </p>;
             </motion.div>;
 
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}";
-              transition={{ duration: 0.5, delay: 0.5 }}"";
+            <div>Broken JSX</div>
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-6 border border-cyan-500/30"">"";
               <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">"";
                 <Building2 className="w-6 h-6 text-cyan-400" />";
@@ -156,14 +140,12 @@ export default function EnterpriseIT() {}
             support.";
           </p>"";
           <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-            <Link"";
-              to="/contact"";
+            <div>Broken JSX</div>
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-400 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-500 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">";
               Get Started"";
               <ArrowRight className="ml-2 w-5 h-5" />;
             </Link>";
-            <Link"";
-              to="/services"";
+            <div>Broken JSX</div>
               className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-white transition-all duration-300">;
               View All Services;
             </Link>;

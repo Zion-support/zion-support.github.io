@@ -1,6 +1,8 @@
 import React from 'react';''';
 import { Link } from 'react-router-dom';
 const InnovativeServices2025 = () => {}
+  return <div>Component</div>;
+};
   const innovativeServices = [];
     {}
 ';
@@ -278,13 +280,11 @@ const InnovativeServices2025 = () => {}
             competitive advantage";
           </p>"";
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">";
-            <a"";
-              href="tel:+13024640950"";
+            <div>Broken JSX</div>
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">;
               Call Us: +1 302 464 0950;
             </a>";
-            <a"";
-              href="mailto:kleber@ziontechgroup.com"";
+            <div>Broken JSX</div>
               className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">;
               Email Us;
             </a>";
@@ -292,8 +292,7 @@ const InnovativeServices2025 = () => {}
           <div className="text-sm text-gray-400 space-y-1">;
             <p>';
               🌐 Website:{' '}";
-              <a"";
-                href="https://ziontechgroup.com"";
+              <div>Broken JSX</div>
                 className="text-blue-400 hover:text-blue-300">;
                 ziontechgroup.com;
               </a>;
@@ -304,9 +303,7 @@ const InnovativeServices2025 = () => {}
       </section>;
 
       {/* Services Categories */}
-      {innovativeServices.map((category, categoryIndex) => (;
-        <section;
-          key={categoryIndex}';
+      {};
           className={`py-20 px-4 sm:px-6 lg:px-8 ${categoryIndex % 2 === 0 ? 'bg-white/5' : ''}`}">"";
           <div className="max-w-7xl mx-auto">"";
             <div className="text-center mb-16">"";
@@ -319,11 +316,7 @@ const InnovativeServices2025 = () => {}
             </div>";
 "";
             <div className="space-y-12">;
-              {category.services.map((service, serviceIndex) => (;
-                <div";
-                  key={serviceIndex}"";
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300"">"";
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
+              {};
                     {/* Service Details */}";
                     <div>"";
                       <h3 className="text-2xl font-bold text-white mb-4">;
@@ -338,11 +331,7 @@ const InnovativeServices2025 = () => {}
                           Key Features:";
                         </h4>"";
                         <ul className="space-y-2">;
-                          {service.features.map((feature, idx) => (;
-                            <li";
-                              key={idx}"";
-                              className="text-gray-300 flex items-start"">"";
-                              <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>;
+                          {};
                               {feature}
                             </li>) ) }
                         </ul>;
@@ -353,11 +342,7 @@ const InnovativeServices2025 = () => {}
                           Key Benefits:";
                         </h4>"";
                         <ul className="space-y-2">;
-                          {service.benefits.map((benefit, idx) => (;
-                            <li";
-                              key={idx}"";
-                              className="text-gray-300 flex items-start"">"";
-                              <span className="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>;
+                          {};
                               {benefit}
                             </li>) ) }
                         </ul>;
@@ -440,13 +425,11 @@ const InnovativeServices2025 = () => {}
             business for success in 2025 and beyond";
           </p>"";
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">";
-            <Link"";
-              to="/contact"";
+            <div>Broken JSX</div>
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">;
               Start Your Innovation Journey;
             </Link>";
-            <a"";
-              href="tel:+13024640950"";
+            <div>Broken JSX</div>
               className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">;
               Call: +1 302 464 0950;
             </a>";
@@ -454,16 +437,14 @@ const InnovativeServices2025 = () => {}
           <div className="text-sm text-gray-400 space-y-1">;
             <p>';
               📧 Email:{' '}";
-              <a"";
-                href="mailto:kleber@ziontechgroup.com"";
+              <div>Broken JSX</div>
                 className="text-blue-400 hover:text-blue-300">;
                 kleber@ziontechgroup.com;
               </a>;
             </p>;
             <p>';
               🌐 Website:{' '}";
-              <a"";
-                href="https://ziontechgroup.com"";
+              <div>Broken JSX</div>
                 className="text-blue-400 hover:text-blue-300">;
                 ziontechgroup.com;
               </a>;

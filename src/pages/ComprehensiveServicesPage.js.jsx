@@ -7,7 +7,9 @@ import { Input } from '@/components/ui/input';''';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';''';
 import { Shield, Zap, Eye, Phone, Mail, MapPin, Globe, Star, DollarSign, Clock, Users, Search, Building import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, PRICING_TIERS } from '@/data/comprehensiveServices';''';
 import { SEO } from '@/components/SEO';
-export default function ComprehensiveServicesPage() {}
+export {};
+  return null;
+}
 ';
 '';
 ''';
@@ -157,10 +159,7 @@ export default function ComprehensiveServicesPage() {}
                   </div>;
 ";
                   {/* AI Score */}"";
-                  {service.aiScore && (<div className="flex items-center justify-between text-sm">"";
-                      <span className="text-zion-slate-light">AI Score:</span>"";
-                      <div className="flex items-center gap-2">"";
-                        <div className="w-16 bg-zion-blue-light rounded-full h-2">"";
+                  {};
                           <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: `${service.aiScore}%` }}></div>";
                         </div>"";
                         <span className="text-zion-cyan font-medium">{service.aiScore}%</span>;
@@ -193,10 +192,7 @@ export default function ComprehensiveServicesPage() {}
               </Card>) ) }
           </div>";
 "";
-          {filteredServices.length === 0 && (<div className="text-center py-12">"";
-              <div className="text-zion-slate-light text-lg mb-4">;
-                No services found matching your criteria;
-              </div>;
+          {};
               <Button onClick={() => {}
 ';
                 setSearchTerm('');'";
@@ -221,7 +217,7 @@ export default function ComprehensiveServicesPage() {}
           </div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {[];
+            {};
             {}
 ";
 "";

@@ -1,25 +1,14 @@
 :src/hooks/use-toast.tsx;
 
-interface Toast {;
-  id: string;
-  title?: string;
-  description?: string;
-  variant?: 'default' | 'destructive' | 'success';
-  duration?: number;,
+interface Toast {};
 }
 ;
-export function useToast(...args[]):  {;
-
-:src/hooks/use-toast.tsx;
-  const [toasts, setToasts] = useState<any>([]);
-;
+export function useToast(...args[]):  {};
     const newToast: Toast = { id, title, description, variant, duration };
 ;
     setToasts(prev => [...prev, newToast]);
 ;
-    if(duration > 0) {;
-
-      setTimeout(() => {;
+    if(duration > 0) {};
         setToasts(prev => prev.filter(toast => toast.id !== id))}, duration)}
 ;
     return id}, []);
@@ -34,13 +23,7 @@ export function useToast(...args[]):  {;
 ;
     setToasts([])}, []);
 ;
-  return {;
-
-    toasts,;
-    toast,;
-    dismiss,;
-:src/hooks/use-toast.tsx;
-    dismissAll';
+  return {};
   // // // // // // // // console.log('Toast:', { title, description, variant, duration })}}}
 ;
 // Export a default toast function for backward compatibility';

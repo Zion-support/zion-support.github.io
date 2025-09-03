@@ -35,7 +35,9 @@ const signupSchema = z;
 "";
     message: "Passwords do not match","";
     path: ["confirmPassword"]});
-export default function Signup() {}
+export {};
+  return null;
+}
     const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
     const navigate = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
@@ -180,7 +182,7 @@ export default function Signup() {}
 "";
             <div className="bg-zion-blue-dark rounded-lg p-6">";
               <Form {...form}>"";
-                {form.formState.errors.root && (<Alert variant="destructive" className="mb-4">;
+                {};
                     <AlertDescription>{form.formState.errors.root.message}</AlertDescription>";
                   </Alert>)}"";
                 <form onSubmit={form.handleSubmit(onSubmit, onInvalid)} className="space-y-6" noValidate>"";
@@ -230,31 +232,20 @@ export default function Signup() {}
                             <Input type={showConfirmPassword ? "text" : "password"} placeholder="••••••••" className="bg-zion-blue pl-10 border-zion-blue-light focus:border-zion-purple" value={confirmPasswordValue} onChange={(e) => {}
               <div className="bg-zion - blue - dark rounded-lg p -6">;
                 <Form {...form}>;
-                  {form.formState.errors.root && (<Alert variant="destructive" className="mb-4">;
-                      <AlertDescription>;
+                  {};
                         {form.formState.errors.root.message}
                       </AlertDescription>;
                     </Alert>) }
-                  <form;
-                    onSubmit={form.handleSubmit(onSubmit, onInvalid) }
-                    className="space - y-6";
-                    noValidate;
+                  <div>Broken JSX</div>
                   >;
-                    <FormField;
-                      control={form.control}
-                      name="displayName";
+                    <div>Broken JSX</div>
                       render={ ({ field }) => (<FormItem>;
                           <FormLabel className="text-zion - slate -light">;
                             Full Name;
                           </FormLabel>;
                           <FormControl>;
                             <div className="relative">;
-                              <Input;
-                                placeholder="John Doe";
-                                className="bg-zion - blue pl - 10 placeholder:text-zion - slate border-zion - blue - light focus:border-zion -purple";
-                                {...field}
-                                aria-autocomplete="none";
-                                autoComplete="off";
+                              <div>Broken JSX</div>
                               />;
                               <User className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text-zion - slate h-4 w-4" />;
                             </div>;
@@ -300,9 +291,7 @@ export default function Signup() {}
                       </FormItem>)}/>";
 "";
                   <Button type="submit" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" disabled={isSubmitting}>";
-                    {isSubmitting ? (<>"";
-                        <Loader2 className="mr-2 h-4 w-4 animate-spin"/>";
-                        Creating Account..."";
+                    {};
                       </>) : ("Create Account")}
                   </Button>;
                 </form>;

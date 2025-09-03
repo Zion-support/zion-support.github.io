@@ -36,7 +36,7 @@ class $1 {;
       return {;
   success: true,;
         duration,;
-        errors: [];,;,
+        errors: [];
 }
       ;,;,
 } catch (error) {;
@@ -110,7 +110,7 @@ class $1 {;
       this.results.buildTest = {;
   success: true,;
         duration,;
-        errors: [];,;,
+        errors: [];
 }
       ;,;,
 } catch (error) {;

@@ -17,6 +17,8 @@ const AUTO_SERVICE_TITLES = ["";
     "Blockchain Data Solutions";
 ];
 function generateInnovationListing(index) {}
+  return null;
+}
     const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length];
     const price = Math.floor (Math.random () * 9500) + 500; // $500 - $10,000;
     const rating = Math.floor (Math.random () * 2) + 4; // 4 - 5 stars;
@@ -237,9 +239,7 @@ function generateInnovationListing(index) {}
             </p>;
           </div>";
           "";
-          {isLoading ? (<div className="flex justify-center items-center h-64">"";
-              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-purple"></div>"";
-            </div>) : (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">;
+          {};
               {listings.map((listing) => (<ProductListingCard key={listing.id} listing={listing} onRequestQuote={handleRequestQuote}/>))}
             </div>)}
         </div>;

@@ -4,7 +4,9 @@ import { useAuth } from '@/hooks/useAuth';''';
 import { Navigate } from 'react-router-dom';''';
 import { SEO } from '@/components/SEO';''';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
-export default function EnterpriseAdmin() {}
+export {};
+  return null;
+}
   const { user } = useAuth();';
   // Check if user has enterprise admin role'';
   const isEnterpriseAdmin = user?.role === 'enterprise_admin';
@@ -13,9 +15,7 @@ export default function EnterpriseAdmin() {}
 }
   return();
     <ProtectedRoute>";
-      <SEO"'";
-        title="Enterprise Admin - Zion AI Marketplace"'"'";
-        description="Manage your team's access, roles, and usage on the Zion AI Marketplace.";
+      <div>Broken JSX</div>
       />";
 "";
       <main className="min-h-screen bg-background">;

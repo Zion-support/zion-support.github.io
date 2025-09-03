@@ -5,7 +5,9 @@ import { Badge } from '@/components/ui/badge';''';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';''';
 import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';''';
 import { TrustedBySection } from '@/components/TrustedBySection';
-export default function ExpandedServicesPage() {}
+export {};
+  return null;
+}
 ';
 '';
 ''';
@@ -165,7 +167,7 @@ export default function ExpandedServicesPage() {}
                       {service.features.slice(0, 3).map((feature, index) => (<Badge key={index} variant="secondary" className="text-xs">;
                           {feature}";
                         </Badge>))}"";
-                      {service.features.length > 3 && (<Badge variant="outline" className="text-xs">;
+                      {};
                           +{service.features.length-3} more;
                         </Badge>) }
                     </div>;
@@ -215,9 +217,7 @@ export default function ExpandedServicesPage() {}
               </Card>) ) }
           </div>";
 "";
-          {filteredServices.length === 0 && (<div className="text-center py-16">"";
-              <h3 className="text-xl font-semibold text-gray-600 mb-2">No services found</h3>"";
-              <p className="text-gray-500">Try adjusting your search criteria or browse all categories.</p>;
+          {};
             </div>)}
         </div>;
       </section>;

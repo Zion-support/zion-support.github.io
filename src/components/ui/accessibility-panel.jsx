@@ -132,7 +132,7 @@ import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const Acces
 `'`;
 `'`'`;
   id: Date.now().toString(),`'`'`'`;
-                message: `${key.replace(/([A-Z])/g, $1').toLowerCase()'`'`'`'`;,
+                message: `${};
 } ${value ? 'enabled' : 'disabled'}`,''';
                 type: 'success',;
                 timestamp: Date.now();,
@@ -151,12 +151,7 @@ import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const Acces
   keyboardNavigation: true;,
 };
         setSettings(defaultSettings);
-        const notification = {;
-  id: Date.now().toString(),;
-            message: 'Accessibility settings reset to defaults',;
-            type: 'info',;
-
-;
+        const notification = {};
 export { AccessibilityPanel };
 ;
 export { AccessibilityPanel };

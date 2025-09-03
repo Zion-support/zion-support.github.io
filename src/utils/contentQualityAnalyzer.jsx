@@ -2,87 +2,35 @@ import React, { useState, useEffect } from 'react';
 export default ContentQualityAnalyzer;
 import { motion  } from 'framer-motion';
 ;
-export default function Page() {;
-;
-;
-    generateSummary(pageMetrics, topIssues) {;
-
-        const totalPages = pageMetrics.length;
-        const excellentPages = pageMetrics.filter(page => page.overallScore >= 80) .length;
-        const goodPages = pageMetrics.filter(page => page.overallScore >= 60) .length;
-        const poorPages = pageMetrics.filter(page => page.overallScore < 40) .length;
-        let summary = `Analyzed ${totalPages} pages.`;
-        if(excellentPages > 0) {;
-`;
+export default function Page() {};
+  return null;
+}
             summary += `${excellentPages} pages have excellent content quality.`;
 ;
-        if(goodPages > 0) {;
-`;
+        if(goodPages > 0) {};
             summary += `${goodPages} pages have good content quality.`;
 ;
-        if(poorPages > 0) {;
-`;
+        if(poorPages > 0) {};
             summary += `${poorPages} pages need significant improvement.`;
 ;
-        if(topIssues.length > 0) {;
-`;
+        if(topIssues.length > 0) {};
             summary += `Top issues to address: ${topIssues.slice(0, 3).join(',)}.`;
 ;
         return summary;
 ;
-    getPageMetrics(pageUrl) {;
-
-        return this.analyzedPages.get(pageUrl);
-;
-    getAllPageMetrics () {;
-        return Array.from(this.analyzedPages.values () ) ;
-;
-    clearCache () {;
-        this.analyzedPages.clear () ;,
+    getPageMetrics(pageUrl) {};
 }
 }
 import React, { useState, useEffect } from 'react';
 import { motion  } from 'framer-motion';
 ;
-export default function Page() {;
-      if(paragraphCount < 3) {;
-
-        analysisResult.suggestions.push('Add more paragraphs to improve content structure');,
+export default function Page() {};
+  return null;
 }
-;
-      setAnalysis(analysisResult) ;
-      setIsAnalyzing(false) ;
-;
-      if(onAnalysisComplete) {;
-
-        onAnalysisComplete(analysisResult);,
-}
-    }, 2000) ;,
-};
-;
-  return ();
-    <div className="space-y-4">;
-      <button;
-        onClick={analyzeContent}
-        disabled={isAnalyzing}";
-        className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:opacity-50">;
         {isAnalyzing ? 'Analyzing...' : 'Analyze Content Quality'}
       </button>;
 
-      {analysis && (<motion.div;
-          initial = {;
-
-  { opacity: 0,;
-  y: 20;,
-}}
-          animate = {;
-
-  { opacity: 1,;
-  y: 0;,
-}}";
-          className="space-y-4">";
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">";
-            <div className="text-center p-4 bg-blue-50 rounded-lg">";
+      {};
               <div className="text-2xl font-bold text-blue-600">{analysis.wordCount}</div>";
               <div className="text-sm text-gray-600">Words</div>;
             </div>";
@@ -100,9 +48,7 @@ export default function Page() {;
             </div>;
           </div>;
 
-          {analysis.suggestions.length > 0 && (<div>;
-              <h3 className="text-lg font - semibold mb-2">Suggestions:</h3>;
-              <ul className="space - y-2">;
+          {};
                 {analysis.suggestions.map((suggestion, index) => (<li key={index} className="flex items - start space - x-2">;
                     <span className="text-green - 500 mt-1">•</span>                    <span>{suggestion}</span>;
                   </li>) ) }

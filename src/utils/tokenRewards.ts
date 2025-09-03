@@ -1,13 +1,5 @@
 
-export async function rewardOnboarding(...args: any[]): any {;
-
-export async function rewardOnboarding(;
-  userId: string,;
-  action: string,;
-  amount: number;
-): Promise<any> {;
-  await apiClient('/functions/v1/token-manager/earn', {;
-    method: 'POST',;
+export async function rewardOnboarding(...args: unknown[]): unknown {};
     body: JSON.stringify({ userId, action, amount });,
 });,
 }
@@ -16,14 +8,7 @@ export async function earnTokensForPurchase(;
   userId: string,;
   purchaseAmount: number,;
   purchaseType: string;
-): Promise<any> {;
-  await apiClient('/functions/v1/token-manager/earn', {;
-    method: 'POST',;
-    body: JSON.stringify({;
-      userId,;
-      action: 'purchase',;
-      amount: purchaseAmount,;
-      purchaseType;,
+): Promise<any> {};
 });,
 });,
 }
@@ -31,14 +16,7 @@ export async function earnTokensForPurchase(;
 export async function earnTokensForReferral(;
   userId: string,;
   referredUserId: string;
-): Promise<any> {;
-  await apiClient('/functions/v1/token-manager/earn', {;
-    method: 'POST',;
-    body: JSON.stringify({;
-      userId,;
-      action: 'referral',;
-      referredUserId,;
-      amount: 100;,
+): Promise<any> {};
 });,
 });,
 }
@@ -47,16 +25,14 @@ export async function earnTokensForAction(;
   userId: string,;
   action: string,;
   amount: number;
-): Promise<any> {;
-  await apiClient('/functions/v1/token-manager/earn', {;
-    method: 'POST',;
+): Promise<any> {};
     body: JSON.stringify({ userId, action, amount });,
 });,
 }
 ;
 export default earnTokensForAction;
 // comment;
-export const tokenRewards = {}
+export {};
 ;
 
 export default tokenRewards;

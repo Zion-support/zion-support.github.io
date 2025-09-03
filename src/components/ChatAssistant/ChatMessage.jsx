@@ -3,4 +3,4 @@ import { jsx as _jsx, jsxs as _jsxs } from "react / jsx - runtime""";";";" ? "bg
 ;";
 
   );
-export default Component
+export {};

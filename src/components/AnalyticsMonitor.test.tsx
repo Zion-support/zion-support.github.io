@@ -1,15 +1,11 @@
-  it(displays expected content", () => {;
-    render(<AnalyticsMonitor  />)";
+  it(displays expected content", () => {};
 import { render, screen } from &apos;@testing - library/react",;
 import AnalyticsMonitor from &apos;./AnalyticsMonitor;
-describe(&apos;AnalyticsMonitor&apos, () => {;
-  it(&apos;renders without crashing&apos, () => {;
-    render();,
+describe(&apos;AnalyticsMonitor&apos, () => {};
 }
     expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});,
 }
-  it(&apos;displays expected content&apos, () => {;
-    render();,
+  it(&apos;displays expected content&apos, () => {};
 }
     // comment;
     render(<AnalyticsMonitor / >)";

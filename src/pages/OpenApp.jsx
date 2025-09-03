@@ -1,13 +1,13 @@
 import React from 'react';''';
 import { Helmet } from 'react-helmet-async';
 const OpenApp = () => {}
+  return <div>Component</div>;
+};
   return();
     <>;
       <Helmet>;
         <title>Open App - Zion Tech Group</title>;
-        <meta;
-          name="description"";
-          content="Open Zion Tech Group applications. Access our web and mobile apps for seamless service delivery.";
+        <div>Broken JSX</div>
         />;
       </Helmet>";
 "";

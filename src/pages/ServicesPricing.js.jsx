@@ -171,7 +171,9 @@ const benefits = [];
         description: "Regular updates and new features to keep you ahead";,
 }
 ];
-export default function ServicesPricing() {}
+export {};
+  return null;
+}
 '";
     const [selectedTier, setSelectedTier] = useState('professional');"";
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">"";
@@ -240,10 +242,7 @@ export default function ServicesPricing() {}
 "";
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">'";
             {pricingTiers.map((tier, index) => (<Card key={index} className={`relative bg-zion-blue-dark border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 ${tier.popular ? 'ring-2 ring-zion-purple scale-105' : ''}`}>"";
-                {tier.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"";
-                    <Badge className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white px-4 py-2">;
-                      Most Popular;
-                    </Badge>;
+                {};
                   </div>)}";
                 "";
                 <CardHeader className="text-center pb-6">"";
@@ -266,8 +265,7 @@ export default function ServicesPricing() {}
                       </div>))}
                   </div>";
                   "";
-                  {tier.notIncluded.length > 0 && (<div className="space-y-3 pt-4 border-t border-zion-blue-light">"";
-                      <h4 className="text-white font-semibold mb-3">Not Included:</h4>"";
+                  {};
                       {tier.notIncluded.map((feature, featureIndex) => (<div key={featureIndex} className="flex items-center gap-3">"";
                           <X className="w-5 h-5 text-zion-slate-light"/>"";
                           <span className="text-zion-slate-light text-sm">{feature}</span>;

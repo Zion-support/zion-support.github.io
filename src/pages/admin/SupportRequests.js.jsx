@@ -117,7 +117,9 @@ const MOCK_SUPPORT_REQUESTS = [];
     category: 'profile'}
 ];
 export { function };
-export default function SupportRequests() {}
+export {};
+  return null;
+}
 ';
 '';
 ''';
@@ -162,6 +164,8 @@ export default function SupportRequests() {}
   ).length;
   const totalCount = MOCK_SUPPORT_REQUESTS.length;
   const resetFilters = () => {}
+  return <div>Component</div>;
+};
 ';
 '';
 ''';
@@ -172,9 +176,7 @@ export default function SupportRequests() {}
 };
   return();
     (;
-      <SEO;
-        title="Support Requests | Admin Dashboard"";
-        description="Manage and track user support requests and issues";
+      <div>Broken JSX</div>
       />;
     ),";
     ("";
@@ -244,16 +246,13 @@ export default function SupportRequests() {}
             <div className="flex flex-col md:flex-row gap-4 mb-6">"";
               <div className="relative flex-1">"";
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />";
-                <Input"";
-                  placeholder="Search by ID, user or issue...";
-                  value={searchQuery}";
+                <div>Broken JSX</div>
                   onChange={e => setSearchQuery(e.target.value)}"";
                   className="pl-10";
                 />;
               </div>;
 ';
-              <Select'';
-                value={statusFilter || ''}
+              <div>Broken JSX</div>
                 onValueChange={value => setStatusFilter(value || null)}">"";
                 <SelectTrigger className="w-[180px]">"";
                   <SelectValue placeholder="Status" />;
@@ -266,8 +265,7 @@ export default function SupportRequests() {}
                 </SelectContent>;
               </Select>;
 ';
-              <Select'';
-                value={priorityFilter || ''}
+              <div>Broken JSX</div>
                 onValueChange={value => setPriorityFilter(value || null)}">"";
                 <SelectTrigger className="w-[180px]">"";
                   <SelectValue placeholder="Priority" />;
@@ -280,8 +278,7 @@ export default function SupportRequests() {}
                 </SelectContent>;
               </Select>;
 ';
-              <Select'';
-                value={categoryFilter || ''}
+              <div>Broken JSX</div>
                 onValueChange={value => setCategoryFilter(value || null)}">"";
                 <SelectTrigger className="w-[180px]">"";
                   <SelectValue placeholder="Category" />;
@@ -297,9 +294,7 @@ export default function SupportRequests() {}
                 </SelectContent>;
               </Select>;
 ";
-              <Button"";
-                variant="outline"";
-                onClick={resetFilters}"";
+              <div>Broken JSX</div>
                 className="md:w-auto"">"";
                 <Filter className="h-4 w-4 mr-2" /> Reset Filters;
               </Button>;
@@ -323,7 +318,7 @@ export default function SupportRequests() {}
                     </TableRow>;
                   </TableHeader>;
                   <TableBody>;
-                    {filteredRequests.map(request => (";
+                    {};
                       <TableRow key={request.id}>"";
                         <TableCell className="font-medium">;
                           {request.id}
@@ -333,33 +328,13 @@ export default function SupportRequests() {}
                           {request.issue}
                         </TableCell>;
                         <TableCell>;
-                          <Badge;
-                            variant={}
-';
-'';
-''';
-                              request.status === 'open''''';
-                                ? 'default''''';
-                                : request.status === 'in-progress''''';
-                                  ? 'secondary''''';
-                                  : 'outline';,
-}
+                          <div>Broken JSX</div>
                           >;
                             {request.status}
                           </Badge>;
                         </TableCell>;
                         <TableCell>;
-                          <Badge;
-                            variant={}
-';
-'';
-''';
-                              request.priority === 'high''''';
-                                ? 'destructive''''';
-                                : request.priority === 'medium''''';
-                                  ? 'default''''';
-                                  : 'outline';,
-}
+                          <div>Broken JSX</div>
                           >;
                             {request.priority}
                           </Badge>;

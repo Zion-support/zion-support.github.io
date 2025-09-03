@@ -1,7 +1,8 @@
 import React from 'react';
 import SEOHead from '../src/components/SEOHead';
 ;
-const FAQPage = () => {;
+const FAQPage = () => {};
+};
   return (;
     <>;
       <SEOHead title="FAQ - Zion Tech Group" description="Frequently asked questions about Zion Tech Group services and solutions." />;

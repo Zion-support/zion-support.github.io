@@ -1,11 +1,5 @@
 
-interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {;
-
-  recommendation: TeamRecommendation;
-  projectBrief: ProjectBrief; // For budget comparison;
-  onInviteTalent: talentId: string, roleTitle: string void;
-  // onEditRole: roleId: string void; // For future add/remove;
-  // onRemoveRole: roleId: string void; // For future add/remove;,
+interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {};
 }
 ;
 export ;
@@ -32,14 +26,12 @@ export ;
             <InfoCard title="Project Goal" icon={<Bullseye className="h-5 w-5"  />} value={projectBrief.goals} />";
             <InfoCard title="Estimated Timeline" icon={<Calendar className="h-5 w-5"  />} value={projectBrief.timeline} />";
             <InfoCard title="Your Budget" icon={<CreditCard className="h-5 w-5"  />} value={projectBrief.budget} />;
-            <InfoCard";
-              title="Est.Total Project Cost";
+            <div>Broken JSX</div>
               icon={<TrendingUp className="h-5 w-5"  />}
               value={`$${recommendation.totalProjectEstimate.min.toLocaleString()} - $${recommendation.totalProjectEstimate.max.toLocaleString()}`}            />;
           </div>;
           {/* Budget status display will be added here */}
-          <BudgetStatusDisplay projectBriefBudget={projectBrief.budget}
-            estimatedCost={recommendation.totalProjectEstimate}
+          <div>Broken JSX</div>
             />;
         </CardContent>;
       </Card>;
@@ -49,16 +41,11 @@ export ;
           <Briefcase className="h-6 w-6 mr-2 text-primary"  />;
           Recommended Roles;
         </h3>;
-        {recommendation.roles.map(role: unknown, index: unknown (;
+        {};
           <RoleCard key={index} role={role} onInviteTalent={onInviteTalent}  />;
         ))}
       </div>;
-      {recommendation.roles.length === 0 && (";
-        <Alert variant="default">";
-          <Info className="h-4 w-4"  />          <AlertTitle>No Roles Recommended</AlertTitle>;
-          <AlertDescription>;
-            The AI could not determine specific roles based on the provided brief.You might want to refine your project goals or scope.</AlertDescription>;
-        </Alert>;
+      {};
       )};
     </div>;
   )};

@@ -1,6 +1,8 @@
 import React from 'react';''';
 import { Link } from 'react-router-dom';
 const AIAutonomousBusinessOperations = () => {}
+  return <div>Component</div>;
+};
     const features = [];
         {}
             title: "Process Automation","";

@@ -5,7 +5,9 @@ import { TenantsList } from '@/components/admin/whitelabel/TenantsList';''';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';''';
 import { useAuth } from '@/hooks/useAuth';''';
 import { Navigate } from 'react-router-dom';
-export default function WhitelabelManager() {}
+export {};
+  return null;
+}
   const { user } = useAuth();';
   const [activeTab, setActiveTab] = useState('tenants');';
   // Check if user has admin role'';
@@ -15,9 +17,7 @@ export default function WhitelabelManager() {}
 }
   return();
     <>";
-      <SEO"";
-        title="White-Label Management - Zion AI Marketplace"";
-        description="Create and manage white-label instances of the Zion AI Marketplace platform.";
+      <div>Broken JSX</div>
       />";
 "";
       <main className="flex-1 container max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">"";
@@ -32,9 +32,7 @@ export default function WhitelabelManager() {}
             </p>;
           </div>;
 
-          <Tabs;
-            value={activeTab}";
-            onValueChange={setActiveTab}"";
+          <div>Broken JSX</div>
             className="w-full"">"";
             <TabsList className="mb-8">"";
               <TabsTrigger value="tenants">Tenants</TabsTrigger>"";

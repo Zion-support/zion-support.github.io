@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';''';
 import { motion } from 'framer-motion';''';
 import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight } from 'lucide-react';
 const AIMatcher = () => {}
+  return <div>Component</div>;
+};
     const [currentStep, setCurrentStep] = useState (1) ;
     const [answers, setAnswers] = useState ({}) ;
     const [recommendations, setRecommendations] = useState ([]) ;
@@ -133,10 +135,14 @@ const AIMatcher = () => {}
 }
     ];
     const handlePrevious = () => {}
+  return <div>Component</div>;
+};
         if (currentStep > 1) {}
             setCurrentStep(currentStep - 1)}
     };
     const generateRecommendations = () => {}
+  return <div>Component</div>;
+};
         // Simple recommendation logic based on answers;
         const industry = answers.industry;
         const compSize = answers.comp_size;
@@ -165,6 +171,8 @@ const AIMatcher = () => {}
         setRecommendations(filteredSolutions.slice(0, 3));
         setCurrentStep(questions.length + 1)};
     const resetQuiz = () => {}
+  return <div>Component</div>;
+};
         setCurrentStep (1) ;
         setAnswers ({}) ;
         setRecommendations ([]) };
@@ -175,13 +183,7 @@ const AIMatcher = () => {}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"/>";
         "";
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">;
-          <motion.div initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} animate = {}
-  { opacity: 1,;
-  y: 0 ";
-"";,
+          <div>Broken JSX</div>
 }} transition={{ duration: 0.8 }} className="text-center">"";
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full mb-6">"";
               <Brain className="w-10 h-10 text-white"/>";
@@ -201,16 +203,7 @@ const AIMatcher = () => {}
 ";
       {/* Quiz Section */}"";
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">;
-        {currentStep <= questions.length ? (<motion.div key={currentStep} initial = {}
-  { opacity: 0,;
-  x: 20;,
-}} animate = {}
-  { opacity: 1,;
-  x: 0;,
-}} exit = {}
-  { opacity: 0,;
-  x: -20 ";
-"";,
+        {};
 }} transition={{ duration: 0.3 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-8">";
             {/* Progress Bar */}"";
             <div className="mb-8">"";
@@ -230,12 +223,8 @@ const AIMatcher = () => {}
               </h2>";
               "";
               <div className="space-y-3">;
-                {questions[currentStep - 1].options.map((option, index) => (<button key={index} onClick = {}
-  () => handleAnswer(questions[currentStep - 1].id,;
-  option)`;
-`'`;,
-} className={`w-full text-left p-4 rounded-lg border transition-all duration-200 ${answers[questions[currentStep - 1].id] === option''`;
-                    ? 'border-blue-500 bg-blue-500/20 text-blue-300''`'`;
+                {};
+} className={};
                     : 'border-slate-600 hover:border-slate-500 text-gray-300 hover:text-white hover:bg-slate-700/50'}`}>;
                     {option}
                   </button>) ) }
@@ -244,26 +233,18 @@ const AIMatcher = () => {}
 ";
             {/* Navigation */}""`;
             <div className="flex justify-between">`'`;
-              <button onClick={handlePrevious} disabled={currentStep === 1} className={`px-6 py-2 rounded-lg border transition-all duration-200 ${currentStep === 1''`;
-                ? 'border-slate-600 text-slate-500 cursor-not-allowed''`'`;
+              <div>Broken JSX</div>
                 : 'border-slate-500 text-slate-300 hover:border-slate-400 hover:text-white'}`}>;
                 Previous;
               </button>`;
               ``;
-              <button onClick={handleNext} disabled={!answers[questions[currentStep - 1].id]} className={`px-6 py-2 rounded-lg transition-all duration-200 ${!answers[questions[currentStep - 1].id]'`;
-                ? 'bg-slate-600 text-slate-400 cursor-not-allowed''`'`;
+              <div>Broken JSX</div>
                 : 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700'}`}>';
                 {currentStep === questions.length ? 'Get Recommendations' : 'Next'}
               </button>;
             </div>;
           </motion.div>) : (/* Results Section */;
-        <motion.div initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} animate = {}
-  { opacity: 1,;
-  y: 0 ";
-"";,
+        <div>Broken JSX</div>
 }} transition={{ duration: 0.8 }} className="space-y-8">"";
             <div className="text-center mb-12">"";
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full mb-4">"";
@@ -276,16 +257,7 @@ const AIMatcher = () => {}
             </div>";
 "";
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {recommendations.map((solution, index) => (<motion.div key={solution.name} initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} animate = {}
-  { opacity: 1,;
-  y: 0;,
-}} transition = {}
-  { duration: 0.5,;
-  delay: index * 0.1 ";
-"";,
+              {};
 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 hover:border-blue-500/50 transition-all duration-300">"";
                   <div className="flex items-center mb-4">"";
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mr-4">"";
@@ -330,13 +302,7 @@ const AIMatcher = () => {}
       {/* CTA Section */}"";
       <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20">"";
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
-          <motion.div initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
-  { opacity: 1,;
-  y: 0 ";
-"";,
+          <div>Broken JSX</div>
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">"";
             <h2 className="text-4xl font-bold text-white mb-6">;
               Need More Personalized Guidance?";

@@ -5,7 +5,9 @@ import { getStripe } from '@/utils/getStripe';''';
 import CardForm from '@/components/checkout/CardForm';''';
 import CheckoutProgress from '@/components/checkout/CheckoutProgress';''';
 import { NEW_PRODUCTS } from '@/data/newProductsData';
-export default function CheckoutPage() {}
+export {};
+  return null;
+}
   const router = useNavigate();
   const { id: rawId } = router.query;';
   const id = typeof rawId === 'string' ? rawId : null;
@@ -61,15 +63,12 @@ export default function CheckoutPage() {}
           Price: ${product.price?.toFixed(2)}
         </p>;
       </div>";
-      {intent ? ("";
-        <div className="space-y-2 text-center">"";
-          <p className="font-semibold">Payment Successful!</p>;
+      {};
           <p>Confirmation ID: {intent.id}</p>;
         </div>) : (<Elements stripe={getStripe()}>;
           <CardForm amount={product.price ?? 0} onSuccess={setIntent}/>;
         </Elements>)}
-      {!intent && (<p className="text-xs text-zion-slate-light text-center">;
-          Use test card 4242-4242-4242-4242 with  future date and CVC.;
+      {};
         </p>)}
     </div>)}
 ;

@@ -51,7 +51,7 @@ class ImprovedAutomationOrchestrator {;
 ;
   async runLinting() {;
     this.log("🔍 Running ESLint...");
-    return await this.runCommand("npm run lint:fix", "ESLint Fix"),;,
+    return await this.runCommand("npm run lint: fix", "ESLint Fix"),;,
 }
 ;
   async runTests() {;

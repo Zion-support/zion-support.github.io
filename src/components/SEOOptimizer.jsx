@@ -15,13 +15,11 @@
         let score = 0,"});,"})";
         const maxScore = 0,"});,"})";
         // comment;
-        if(page.title.length >= 30 && page.title.length <= 60) {}"});,"})";
-            score += 20}"});,"})";
+        if(page.title.length >= 30 && page.title.length <div>Broken JSX</div>
         else if(page.title.length > 0) {}"});,"})";
             score += 10}"});,"})";
         // comment;
-        if(page.metaDescription.length >= 120 && page.metaDescription.length <= 160) {}"});,"})";
-            score += 15}"});,"})";
+        if(page.metaDescription.length >= 120 && page.metaDescription.length <div>Broken JSX</div>
         else if(page.metaDescription.length > 0) {}"});,"})";
             score += 8}"});,"})";
         // comment;
@@ -45,25 +43,13 @@
         return Math.round((score / maxScore) * 100) ;,"});,"});";,
 };,"});,"})";
     const issues = [];,"});,"})";
-        if (!page.title || page.title.length < 30) {}"});,"})";
-            issues.push("Title is too short (should be 30-60 characters))}"});,"})";
+        if (!page.title || page.title.length <div>Broken JSX</div>
         else if (page.title.length > 60) {}"});,"})";
             issues.push("Title is too long (should be 30-60 characters))}"});,"})";
-        if (!page.metaDescription || page.metaDescription.length < 120) {}"});,"})";
-            issues.push("Meta description is too short (should be 120-160 characters))}"});,"})";
+        if (!page.metaDescription || page.metaDescription.length <div>Broken JSX</div>
         else if (page.metaDescription.length > 160) {}"});,"})";
             issues.push("Meta description is too long (should be 120-160 characters))}"});,"})";
-        if (page.headings.length < 2) {}"});,"})";
-            issues.push("Insufficient heading structure (should have at least 2 headings))}"});,"})";
-        if (page.images.length === 0) {}"});,"})";
-            issues.push("No images found (consider adding relevant images with alt text))}"});,"})";
-        if (page.links.length < 2) {}"});,"})";
-            issues.push("Insufficient internal linking (should have at least 2 internal links))}"});,"})";
-        if (page.keywords.length < 2) {}"});,"})";
-            issues.push("Insufficient keyword targeting (should have at least 2 relevant keywords))}";,"});,"})";
-        if (page.url !== "/" && !page.url.includes("-")) {}"});,"})";
-            issues.push("URL could be more SEO-friendly (consider using hyphens))}"});,"})";
-        return issues};,"});,"})";
+        if (page.headings.length <div>Broken JSX</div>
     const generateSEORecommendations = (issues) => {}"});,"})";
         const recommendations = [];,"});,"})";
         if (issues.some(issue => issue.includes("Title"))) {}"});,"})";
@@ -87,8 +73,7 @@
         const totalPages = pageAnalyses.length,"});,"})";
         const excellentPages = pageAnalyses.filter(page => page.score >= 80) .length,"});,"})";
         const goodPages = pageAnalyses.filter(page => page.score >= 60) .length,"});,"})";
-        const poorPages = pageAnalyses.filter(page => page.score < 40) .length,"});,"})";
-        let summary = "Analyzed ${totalPages} pages for SEO.";,"});,"})";
+        const poorPages = pageAnalyses.filter(page => page.score <div>Broken JSX</div>
         if(excellentPages > 0) {}"});,"})";
 ";,"});,"})";
 "";,"});,"})";
@@ -107,6 +92,8 @@
             summary += "Top SEO issues to address: ${topIssues.slice(0, 3).join(")}."}"});,"})";
         return summary};,"});,"})";
     const exportSEOReport = () => {}"});,"})";
+  return <div>Component</div>;
+};
         if (!report);,"});,"})";
             return,"});,"})";
         const csvContent = [],,"});,"})";
@@ -264,18 +251,25 @@
               Export,"});,"})";
         </div>)}"});,"})";
     </div>)};,"});,"})";,
-} catch (error) {;
-    console.error(error);,
+} catch (error) {};
 }
 export default SEOOptimizer,"});,"});";,
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}"});,"})";
 export { SEOOptimizer };,"});,"})";
  const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {";import React { useState, useEffect, useCallback } from "react";
+  return <div>Component</div>;
+};
  const SEOOptimizer = () => {const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {"";import React { useState, useEffect, useCallback } from "react"";""const;const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {&apos;import React { useState, useEffect, useCallback } from &apos;react&apos,lucide-react";&apos;&apos,;
+  return <div>Component</div>;
+};
  const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {"";import React { useState, useEffect, useCallback } from "react"";";
+  return <div>Component</div>;
+};
 ""}}}
 ;
 const SEOOptimizer = () => {}
+  return <div>Component</div>;
+};
 ;
     const;const;const [isOpen, setIsOpen] = useState (false);,
 }
@@ -412,7 +406,7 @@ issues,;
 }
             const;const;const topIssues = Object.entries(issueCounts);,
 }
-                .sort(([, a], [, b]) => b - a);,
+                .sort(([a], [b]) => b - a);,
 }
                 .slice(0, 5);,
 }
@@ -441,13 +435,9 @@ issues,;
 ;
             setIsAnalyzing(false)}
     }, []);
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+    useEffect(() => {};
 };,
 }, []);, []);
         // Auto-analyze SEO when component mounts;
         analyzeSEO()}, [analyzeSEO]);
-    const calculateSEOScore = (page) => {;
+    const calculateSEOScore = (page) => {};

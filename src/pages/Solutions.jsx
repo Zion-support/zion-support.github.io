@@ -2,13 +2,13 @@ import React from 'react';
 export default Solutions;
 ;
 const Solutions = () => {}
+  return <div>Component</div>;
+};
   return();
     <>;
       <Helmet>;
         <title>Custom Solutions - Zion Tech Group</title>;
-        <meta;
-          name="description"";
-          content="Custom technology solutions tailored to your business needs. Zion Tech Group delivers innovative solutions that drive results.";
+        <div>Broken JSX</div>
         />;
       </Helmet>";
 "";

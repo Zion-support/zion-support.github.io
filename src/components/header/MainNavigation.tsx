@@ -1,57 +1,24 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ;
-  ChevronDown, ;
-  Zap, ;
-  Brain, ;
-  Shield, ;
-  Users, ;
-  HardDrive, ;
-  TrendingUp, ;
-  Building2, ;
-  FileText, ;
-  HelpCircle, ;
-  BarChart3,;
-  Rocket,;
-  Server,;
-  Cloud,;
-  Lock,;
-  Workflow,;
-  Database,;
-  MessageCircle,;
-  CheckCircle,;
-  ArrowRight,;
-  ExternalLink,;
-  Handshake,;
-  Monitor,;
-  GraduationCap,;
-  Lightbulb,;
-  Code,;
-  Activity,;
-  Target;,
+import {};
 } from 'lucide-react';
 ;
-interface MainNavigationProps {;
-  className?: string;,
+interface MainNavigationProps {};
 }
 ;
-export function MainNavigation({ className = '' }: MainNavigationProps) {;
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
-;
-  return (;
+export function MainNavigation({ className = '' }: MainNavigationProps) {};
+  return null;
+}
     <nav className={`flex items-center space-x-8 ${className}`}>;
       {/* Home */}
-      <Link ;
-        to="/" ;
+      <div>Broken JSX</div>
         className="text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors">;
         Home;
       </Link>;
 
       {/* Services Dropdown */}
       <div className="relative group">;
-        <button;
+        <div>Broken JSX</div>
           onMouseEnter={() => setIsServicesOpen(true)}
           onMouseLeave={() => setIsServicesOpen(false)}
           className="flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors">;
@@ -60,8 +27,7 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
           <ChevronDown className="w-3 h-3" />;
         </button>;
         ;
-        {isServicesOpen && (;
-          <div ;
+        {};
             onMouseEnter={() => setIsServicesOpen(true)} ;
             onMouseLeave={() => setIsServicesOpen(false)}
             className="absolute top-full left-0 mt-2 w-96 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">;
@@ -179,8 +145,7 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
               </div>;
               ;
               <div className="mt-4 pt-4 border-t border-zion-purple/20">;
-                <Link ;
-                  to="/services" ;
+                <div>Broken JSX</div>
                   className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">;
                   View All Services;
                   <TrendingUp className="w-4 h-4 ml-2" />;
@@ -193,7 +158,7 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
 
       {/* Solutions Dropdown */}
       <div className="relative group">;
-        <button;
+        <div>Broken JSX</div>
           onMouseEnter={() => setIsSolutionsOpen(true)}
           onMouseLeave={() => setIsSolutionsOpen(false)}
           className="flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors">;
@@ -202,8 +167,7 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
           <ChevronDown className="w-3 h-3" />;
         </button>;
         ;
-        {isSolutionsOpen && (;
-          <div ;
+        {};
             onMouseEnter={() => setIsSolutionsOpen(true)} ;
             onMouseLeave={() => setIsSolutionsOpen(false)}
             className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">;
@@ -270,8 +234,7 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
               </div>;
               ;
               <div className="mt-4 pt-4 border-t border-zion-purple/20">;
-                <Link ;
-                  to="/request-quote" ;
+                <div>Broken JSX</div>
                   className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">;
                   Get Custom Quote;
                   <TrendingUp className="w-4 h-4 ml-2" />;
@@ -284,7 +247,7 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
 
       {/* Company Dropdown */}
       <div className="relative group">;
-        <button;
+        <div>Broken JSX</div>
           onMouseEnter={() => setIsCompanyOpen(true)}
           onMouseLeave={() => setIsCompanyOpen(false)}
           className="flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors">;
@@ -293,8 +256,7 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
           <ChevronDown className="w-3 h-3" />;
         </button>;
         ;
-        {isCompanyOpen && (;
-          <div ;
+        {};
             onMouseEnter={() => setIsCompanyOpen(true)} ;
             onMouseLeave={() => setIsCompanyOpen(false)}
             className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">;
@@ -342,22 +304,19 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
       </div>;
 
       {/* Resources */}
-      <Link ;
-        to="/resources" ;
+      <div>Broken JSX</div>
         className="text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors">;
         Resources;
       </Link>;
 
       {/* Blog */}
-      <Link ;
-        to="/blog" ;
+      <div>Broken JSX</div>
         className="text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors">;
         Blog;
       </Link>;
 
       {/* Contact */}
-      <Link ;
-        to="/contact" ;
+      <div>Broken JSX</div>
         className="text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors">;
         Contact;
       </Link>;

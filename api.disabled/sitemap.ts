@@ -1,0 +1,2 @@
+// Sitemap module
+export {};

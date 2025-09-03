@@ -1,36 +1,26 @@
 import React, { useEffect } from 'react';
 ;
-const SecurityEnhancer: React.FC = () => {;
-  useEffect(() => {;
-    addSecurityHeaders();
-    setupSecurityMonitoring();,
+const SecurityEnhancer: React.FC = () => {};
 }, []);
 ;
-  const addSecurityHeaders = () => {;
+  const addSecurityHeaders = () => {};
+};
     const meta = document.createElement('meta');
     meta.httpEquiv = 'X-Content-Type-Options';
     meta.content = 'nosniff';
     document.head.appendChild(meta);,
 };
 ;
-  const setupSecurityMonitoring = () => {;
+  const setupSecurityMonitoring = () => {};
+};
     let suspiciousActivityCount = 0;
     const maxSuspiciousActivities = 10;
 ;
-    const handleSuspiciousActivity = (event: Event) => {;
-      suspiciousActivityCount++;
-      console.warn('Suspicious activity detected:', event.type);
-      ;
-      if (suspiciousActivityCount > maxSuspiciousActivities) {;
-        console.error('Multiple suspicious activities detected.');,
+    const handleSuspiciousActivity = (event: Event) => {};
 }
     };
 ;
-    document.addEventListener('DOMContentLoaded', () => {;
-      const scripts = document.querySelectorAll('script');
-      scripts.forEach((script) => {;
-        if (script.src && !script.src.startsWith(window.location.origin)) {;
-          handleSuspiciousActivity(new Event('external-script'));,
+    document.addEventListener('DOMContentLoaded', () => {};
 }
       });,
 });,

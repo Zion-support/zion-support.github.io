@@ -1,13 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';';
 import { BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X } from 'lucide-react';
 import ContentQualityAnalyzer from "../utils/contentQualityAnalyzer.jsx";
-const ContentQualityDashboard = ({ className = '' }) => {    const [isOpen, setIsOpen] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);';
-    const [report, setReport] = useState(null);'';
-    const [selectedPage, setSelectedPage] = useState(null);''';
-    const [searchTerm, setSearchTerm] = useState('');''';
-    const [filterStatus, setFilterStatus] = useState('all');
-    const contentAnalyzer = ContentQualityAnalyzer.getInstance();
+const ContentQualityDashboard = ({ className = '' }) => {};
     const analyzeAllPages = useCallback(async () => {}
         setIsLoading(true);
         try {}
@@ -58,77 +52,36 @@ const ContentQualityDashboard = ({ className = '' }) => {    const [isOpen, setI
                     images['/images/about-team.jpg'],;''';
                     links['/services',/team',/contact',/mission'];,
 },;
-                {;
-
-                    url: '/contact',;
-                    title: 'Contact Us - Get in Touch',;
-                    content: 'Contact Zion Tech Group for all your technology needs.Our team is ready to help you transform your business with cutting-edge solutions.',;
-                    metaDescription: 'Contact Zion Tech Group for all your technology needs.Our team is ready to help you transform your business.',;
-                    images['/images/contact-office.jpg'],;
-                    links['/services',/about',/team'];,
+                {};
 }
             ];
-            for(const page of samplePages) {;
-
+            for(const page of samplePages) {};
                 contentAnalyzer.analyzePageContent(page.url, page.title, page.content, page.metaDescription, page.images, page.links)}
             const newReport = contentAnalyzer.generateReport();
             setReport(newReport)}
-        catch(error) {;
-
+        catch(error) {};
             // console.error('Error analyzing pages:', error)}
-        finally {;
-
+        finally {};
             setIsLoading(false)}
     }, [contentAnalyzer]);
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;,
+    useEffect(() => {};
 }, []);
         // Auto-analyze pages when component mounts;
         analyzeAllPages()}, [analyzeAllPages]);
-    const getFilteredPages = () => {;
+    const getFilteredPages = () => {};
+};
         if(!report) return [];
         let filtered = report.pageMetrics;
         // Apply search filter;
-        if(searchTerm) {;
-
-            filtered = filtered.filter(page => page.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+        if(searchTerm) {};
                 page.pageUrl.toLowerCase().includes(searchTerm.toLowerCase()))}
         // Apply status filter';
-        if(filterStatus !== 'all') {;
-
-            filtered = filtered.filter(page => {;
-
-                switch (filterStatus) {;
-
-                    case 'excellent':;
-                        return page.overallScore >= 80;
-                    case 'good':;
-                        return page.overallScore >= 60 && page.overallScore < 80;
-                    case 'poor':;
-                        return page.overallScore < 40;
-                    default:;
-                        return true}
-            }) }
-        return filtered};
-    const getStatusColor = (score) => {;
-
-        if(score >= 80);
-            return 'text-green-600 bg-green-50 border-green-200';
-        if(score >= 60);
-            return 'text-yellow-600 bg-yellow-50 border-yellow-200';
-        if(score >= 40);
-            return 'text-orange-600 bg-orange-50 border-orange-200';
+        if(filterStatus !== 'all') {};
         return 'text-red-600 bg-red-50 border-red-200'};
-    const getStatusText = (score) => {;
-
-        if(score >= 80);
-            return 'Excellent';
-        if(score >= 60);
-            return 'Good';
-        if(score >= 40);
-            return 'Fair';
+    const getStatusText = (score) => {};
         return 'Poor'};
-    const exportReport = () => {;
+    const exportReport = () => {};
+};
         if(!report);
             return;
         const csvContent = [';
@@ -157,7 +110,7 @@ const ContentQualityDashboard = ({ className = '' }) => {    const [isOpen, setI
       </button>;
 
       {/* Dashboard Panel */}";
-      {isOpen && (<div className="absolute bottom-16 left-0 w-[800px] bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">;
+      {};
           {/* Header */}";
           <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white p-4">";
             <div className="flex items-center justify-between">";
@@ -171,8 +124,7 @@ const ContentQualityDashboard = ({ className = '' }) => {    const [isOpen, setI
             </div>;
             ;
             {/* Summary Stats */}";
-            {report && (<div className="grid grid-cols-4 gap-4 mt-3">";
-                <div className="text-center">";
+            {};
                   <div className="text-2xl font-bold">{report.totalPages}</div>";
                   <div className="text-sm text-green-100">Total Pages</div>;
                 </div>";
@@ -277,6 +229,8 @@ const ContentQualityDashboard = ({ className = "" }) => {    const [isOpen, setI
         // comment;
         analyzeAllPages()}, [analyzeAllPages]);,"});,"})";
     const getFilteredPages = () => {}"});,"})";
+  return <div>Component</div>;
+};
         if(!report) return [];,"});,"})";
         let filtered = report.pageMetrics,"});,"})";
         // comment;
@@ -291,13 +245,7 @@ const ContentQualityDashboard = ({ className = "" }) => {    const [isOpen, setI
                     case "excellent": any,"});,"})";
                         return page.overallScore >= 80,"});,"})";
                     case "good": any,"});,"})";
-                        return page.overallScore >= 60 && page.overallScore < 80,"});,"})";
-                    case "poor": any,"});,"})";
-                        return page.overallScore < 40,"});,"})";
-                    default: any,"});,"})";
-                        return true}"});,"});";,
-}) }"});,"})";
-        return filtered};,"});,"})";
+                        return page.overallScore >= 60 && page.overallScore <div>Broken JSX</div>
     const getStatusColor = (score) => {}"});,"})";
         if (score >= 80)";,"});,"})";
             return "text-green-600 bg-green-50 border-green-200";,"});,"})";
@@ -315,6 +263,8 @@ const ContentQualityDashboard = ({ className = "" }) => {    const [isOpen, setI
             return "Fair";,"});,"})";
         return "Poor"};,"});,"})";
     const exportReport = () => {}"});,"})";
+  return <div>Component</div>;
+};
         if (!report);,"});,"})";
             return,"});,"})";
         const csvContent = [],,"});,"})";
@@ -538,8 +488,7 @@ const ContentQualityDashboard = ({ className = "" }) => {    const [isOpen, setI
           </div>;,"});,"})";
         </div>)}"});,"})";
     </div>)};,"});,"})";,
-} catch (error) {;
-    console.error(error);,
+} catch (error) {};
 }
 export default ContentQualityDashboard,"});,"})";
 ;,"});,"})";
@@ -552,15 +501,14 @@ export { ContentQualityDashboard };,"});,"})";
 export { ContentQualityDashboard };,"});,"})";
 ;,"});,"})";
 export { ContentQualityDashboard };,"});,"})";
- const ContentQualityDashboard = ({ className = " }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (")  const [filterStatus, setFilterStatus] = useState ("all")  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {"";";
- const ContentQualityDashboard = ({ className = " }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (")  const [filterStatus, setFilterStatus] = useState ("all")  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {";
-";,
+ const ContentQualityDashboard = ({ className = " }) => {};
+ const ContentQualityDashboard = ({ className = " }) => {};
 }}}';
-const ContentQualityDashboardJs = () => {;
+const ContentQualityDashboardJs = () => {};
+};
   return (";
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
-      <SEO title="ContentQualityDashboardJs - Zion Tech Group;
-        description="Professional ContentQualityDashboardJs services by Zion Tech Group;
+      <div>Broken JSX</div>
         keywords="contentqualitydashboardjs, technology, services"  />";
       <div className="container mx-auto px-4 py-20">";
         <div className="text-center">";
@@ -569,7 +517,7 @@ const ContentQualityDashboardJs = () => {;
             Professional ContentQualityDashboardJs services to help your business grow.;
           </p>";
           <div className="flex justify-center">";
-            <a href="/contact" ";
+            <div>Broken JSX</div>
               className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover: shadow-lg transition-all duration-300">;
               Get Started,;
             </a>;
@@ -577,10 +525,7 @@ const ContentQualityDashboardJs = () => {;
 ";
           {/* Content */}"";
           <div className="p-4 max-h-[600px] overflow-y-auto">"";
-            {isLoading ? (<div className="flex items-center justify-center py-8">"";
-                <RefreshCw className="w-6 h-6 animate-spin text-green-600"/>"";
-                <span className="ml-2 text-gray-600">Analyzing content...</span>"";
-              </div>) : report ? (<div className="space-y-4">";
+            {};
                 {/* Filters and Search */}"";
                 <div className="flex gap-3 items-center">"";
                   <div className="flex-1 relative">"";
@@ -600,12 +545,7 @@ const ContentQualityDashboardJs = () => {;
                 </div>;
 ";
                 {/* Top Issues */}"";
-                {report.topIssues.length > 0 && (<div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg">"";
-                    <h4 className="font-medium text-yellow-800 dark:text-yellow-200 mb-2 flex items-center gap-2">"";
-                      <AlertTriangle className="w-4 h-4"/>;
-                      Top Issues to Address";
-                    </h4>"";
-                    <div className="space-y-1">"";
+                {};
                       {report.topIssues.slice(0, 3).map((issue, index) => (<div key={index} className="text-sm text-yellow-700 dark:text-yellow-300">;
                           • {issue}
                         </div>) ) }
@@ -666,10 +606,7 @@ const ContentQualityDashboardJs = () => {;
                 </div>;
 ";
                 {/* Page Details Modal */}"";
-                {selectedPage && (<div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">"";
-                    <div className="bg-white dark:bg-gray-900 rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto">"";
-                      <div className="flex items-center justify-between mb-4">"";
-                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">;
+                {};
                           Page Analysis: {selectedPage.title}";
                         </h3>"";
                         <button onClick={() => setSelectedPage(null)} className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">"";
@@ -697,9 +634,7 @@ const ContentQualityDashboardJs = () => {;
                           </div>;
                         </div>;
 ";
-                        {selectedPage.issues.length > 0 && (<div>"";
-                            <h4 className="font-medium text-red-600 dark:text-red-400 mb-2">Issues Found</h4>"";
-                            <div className="space-y-2">"";
+                        {};
                               {selectedPage.issues.map((issue, index) => (<div key={index} className="flex items-start gap-2 text-sm text-red-600 dark:text-red-400">"";
                                   <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0"/>;
                                   <span>{issue}</span>;
@@ -707,9 +642,7 @@ const ContentQualityDashboardJs = () => {;
                             </div>;
                           </div>) }
 ";
-                        {selectedPage.recommendations.length > 0 && (<div>"";
-                            <h4 className="font-medium text-green-600 dark:text-green-400 mb-2">Recommendations</h4>"";
-                            <div className="space-y-2">"";
+                        {};
                               {selectedPage.recommendations.map((rec, index) => (<div key={index} className="flex items-start gap-2 text-sm text-green-600 dark:text-green-400">"";
                                   <Zap className="w-4 h-4 mt-0.5 flex-shrink-0"/>;
                                   <span>{rec}</span>;

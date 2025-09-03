@@ -3,7 +3,9 @@ import { GradientHeading } from "@/components/GradientHeading";"";
 import { Button } from "@/components/ui/button";"";
 import { Card, CardContent } from "@/components/ui/card";"";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-export default function Careers() {}
+export {};
+  return null;
+}
     // Sample job listings;
     const jobs = {}
   engineering[;

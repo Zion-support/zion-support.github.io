@@ -67,14 +67,9 @@ const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 const Community = React.lazy(() => import('./pages/Community'));
 const Demo = React.lazy(() => import('./pages/Demo'));
 
-function App() {
-  return (
-    <ErrorBoundary>
-      <Router>
-        <div className="min-h-screen bg-futuristic">
-          <AppHeader />
-          
-          <main className="flex-1">
+function App() {};
+  return null;
+}
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
                 <Route path="/" element={<Home />} />

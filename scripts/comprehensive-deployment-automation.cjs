@@ -118,7 +118,7 @@ class ComprehensiveDeploymentAutomation {;
     ;
     await this.runDeploymentStep(;
       "Generate Manifest",;
-      "npm run netlify:manifest",;
+      "npm run netlify: manifest",;
       "Generate Netlify functions manifest"),;,
 }
 ;
@@ -127,7 +127,7 @@ class ComprehensiveDeploymentAutomation {;
     ;
     await this.runDeploymentStep(;
       "Health Check",;
-      "curl -f http://localhost:3000/api/health || echo "Health check skipped",;
+      "curl -f http://localhost: 3000/api/health || echo "Health check skipped",;
       "Verify deployment health"),;,
 }
 ;

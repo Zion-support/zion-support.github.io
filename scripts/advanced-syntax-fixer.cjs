@@ -166,7 +166,7 @@ function scanAndFixDirectory(;
   let totalFiles = 0;
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")"";// ANSI color codes for better output;
 const colors = {;
-  reset: "\x1b[0m",";  red": "\x1b[31m",""green: "\x1b[32m",";  yellow: "\x1b[33m",";  blue: "\x1b[34m",";  magenta": "\x1b[35m",""cyan: "\x1b[36m","};";function log(message, color = "reset") {";  console.log(`${colors[color]}${message}${colors.reset}`);`}
+  reset: "\x1b[0m", ";  red": "\x1b[31m", ""green: "\x1b[32m", ";  yellow: "\x1b[33m", ";  blue: "\x1b[34m", ";  magenta": "\x1b[35m", ""cyan: "\x1b[36m", "};";function log(message, color = "reset") {";  console.log(`${colors[color]}${message}${colors.reset}`);`}
 ;
 function fixFile(filePath) {;
   try {;
@@ -232,7 +232,7 @@ function scanAndFixDirectory();  dirPath,;
         `red");
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259,;,
 }
-      log(❌ Error processing directory ${currentPath}: ${error.message}",""red""),"}
+      log(❌ Error processing directory ${currentPath}: ${error.message}", ""red""),"}
   }
 ;
   processDirectory(dirPath);
@@ -267,7 +267,7 @@ log(`\n🎯 Summary: `, `cyan`);log(`   Total files processed: ${totalProcessed}
     log(\nℹ️  No syntax issues found that could be automatically fixed.",;
       "blue"),;,
 }
-log(`\n🎯 Summary:`, "cyan");log(`   Total files processed: ${totalProcessed}`, "white");log(`   Files "fixed": ${totalFixed}`, "green");log(`   Files "unchanged": ${totalProcessed - totalFixed}`, "white");";`;  if (totalFixed > 0) {log(`\n✅ Advanced syntax fixing completed!`, "green");log(`   Run "npm run lint" again to check for remaining issues.`, "yellow");"} else {`;    log(\nℹ️  No syntax issues found that could be automatically fixed.",""blue""),"}}
+log(`\n🎯 Summary:`, "cyan");log(`   Total files processed: ${totalProcessed}`, "white");log(`   Files "fixed": ${totalFixed}`, "green");log(`   Files "unchanged": ${totalProcessed - totalFixed}`, "white");";`;  if (totalFixed > 0) {log(`\n✅ Advanced syntax fixing completed!`, "green");log(`   Run "npm run lint" again to check for remaining issues.`, "yellow");"} else {`;    log(\nℹ️  No syntax issues found that could be automatically fixed.", ""blue""),"}}
 ;
 if (require.main === module) {;
   main(),;,

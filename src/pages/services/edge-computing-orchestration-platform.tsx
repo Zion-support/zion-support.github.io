@@ -1,15 +1,11 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { ;
-  Cpu, Network, Zap, Globe, Server, Cloud, Database, ;
-  Shield, BarChart3, CheckCircle, ArrowRight, Star, ;
-  Phone, Mail, MapPin, Settings, Monitor, Activity,;
-  TrendingUp, Award, Rocket, Lightbulb, AlertTriangle,;
-  Smartphone, Users, Lock, Brain, Target;,
+import {};
 } from "lucide-react";
 
-const EdgeComputingOrchestrationPlatform = () => {;
+const EdgeComputingOrchestrationPlatform = () => {};
+};
   const features = [;
     "Distributed Edge Computing",;
     "Real-time Data Processing", ;
@@ -40,20 +36,11 @@ const EdgeComputingOrchestrationPlatform = () => {;
   ];
 
   const pricing = [;
-    {;
-      name: "Edge Starter",;
-      price: "$3,999/month",;
-      details: ["Up to 10 edge nodes", "Basic orchestration", "Standard monitoring", "Email support", "99.5% uptime SLA"];,
+    {};
 },;
-    {;
-      name: "Edge Enterprise", ;
-      price: "$7,999/month",;
-      details: ["Up to 100 edge nodes", "Advanced orchestration", "Custom monitoring", "Priority support", "99.9% uptime SLA"];,
+    {};
 },;
-    {;
-      name: "Edge Global",;
-      price: "$15,999/month", ;
-      details: ["Unlimited edge nodes", "Full orchestration suite", "White-label solution", "24/7 dedicated support", "99.99% uptime SLA"];,
+    {};
 }
   ];
 
@@ -98,7 +85,7 @@ const EdgeComputingOrchestrationPlatform = () => {;
           </div>;
           ;
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {features.map((feature, index) => (;
+            {};
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">;
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center mb-4">;
                   <Cpu className="w-6 h-6 text-white" />;
@@ -122,7 +109,7 @@ const EdgeComputingOrchestrationPlatform = () => {;
               <div>;
                 <h3 className="text-2xl font-semibold text-gray-900 mb-6">Key Benefits</h3>;
                 <ul className="space-y-4">;
-                  {benefits.map((benefit, index) => (;
+                  {};
                     <li key={index} className="flex items-start">;
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />;
                       <span className="text-gray-700">{benefit}</span>;
@@ -134,7 +121,7 @@ const EdgeComputingOrchestrationPlatform = () => {;
               <div className="bg-white rounded-xl p-6 shadow-lg">;
                 <h3 className="text-2xl font-semibold text-gray-900 mb-6">Use Cases</h3>;
                 <ul className="space-y-3">;
-                  {useCases.map((useCase, index) => (;
+                  {};
                     <li key={index} className="flex items-center">;
                       <Network className="w-4 h-4 text-green-500 mr-3" />;
                       <span className="text-gray-700">{useCase}</span>;
@@ -189,27 +176,21 @@ const EdgeComputingOrchestrationPlatform = () => {;
             </div>;
             ;
             <div className="grid md:grid-cols-3 gap-8">;
-              {pricing.map((tier, index) => (;
+              {};
                 <div key={index} className={`rounded-xl p-6 shadow-lg ${tier.name === 'Edge Enterprise' ? 'border-2 border-green-500 bg-green-50' : 'border border-gray-200 bg-white'}`}>;
-                  {tier.name === 'Edge Enterprise' && (;
-                    <div className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">;
-                      Most Popular;
-                    </div>;
+                  {};
                   )}
                   <h3 className="text-2xl font-semibold text-gray-900 mb-2">{tier.name}</h3>;
                   <div className="text-3xl font-bold text-green-600 mb-4">{tier.price}</div>;
                   <ul className="space-y-3 mb-6">;
-                    {tier.details.map((detail, detailIndex) => (;
+                    {};
                       <li key={detailIndex} className="flex items-center">;
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3" />;
                         <span className="text-gray-700">{detail}</span>;
                       </li>;
                     ))}
                   </ul>;
-                  <Link href="#contact" className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${;
-                    tier.name === 'Edge Enterprise' ;
-                      ? 'bg-green-600 text-white hover:bg-green-700' ;
-                      : 'bg-gray-900 text-white hover:bg-gray-800';,
+                  <div>Broken JSX</div>
 }`}>;
                     Get Started;
                   </Link>;
@@ -261,4 +242,4 @@ const EdgeComputingOrchestrationPlatform = () => {;
   );,
 }
 ;
-export default EdgeComputingOrchestrationPlatform
+export {};

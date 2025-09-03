@@ -1,6 +1,7 @@
 import React from 'react';
 import { Brain, TrendingUp, Users, Globe, Cpu, Lightbulb, BarChart3, PieChart, Activity, Search } from 'lucide-react';
-const AIBusinessIntelligence = () => {;
+const AIBusinessIntelligence = () => {};
+};
     const benefits = [;
         "Data-driven decision making across all business areas",;
         "Real-time insights and instant access to critical information",;
@@ -10,38 +11,17 @@ const AIBusinessIntelligence = () => {;
         "Enhanced customer understanding and engagement";
     ];
     const implementation = [;
-        {;
-            phase: "Data Assessment",;
-            description: "Evaluate current data sources and quality",;
-            duration: "2-3 weeks";,
+        {};
 },;
-        {;
-            phase: "BI Strategy",;
-            description: "Define business intelligence goals and requirements",;
-            duration: "3-4 weeks";,
+        {};
 },;
-        {;
-            phase: "Data Integration",;
-            description: "Connect and integrate data sources",;
-            duration: "6-10 weeks";,
+        {};
 },;
-        {;
-            phase: "AI Model Development",;
-            description: "Build and train AI models for analytics",;
-            duration: "8-12 weeks";,
+        {};
 },;
-        {;
-            phase: "Dashboard Development",;
-            description: "Create interactive dashboards and reports",;
-            duration: "6-8 weeks";,
+        {};
 },;
-        {;
-            phase: "Deployment & Training",;
-            description: "Deploy system and train users",;
-            duration: "2-4 weeks";
-
-    ];
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+        {};
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto text-center">;

@@ -12,7 +12,7 @@ const Onboarding = lazy(() => import('../pages/Onboarding'));
 const TalentOnboarding = lazy(() => import('../pages/TalentOnboarding'));
 const ServiceOnboarding = lazy(() => import('../pages/ServiceOnboarding'));
 ;
-const AuthRoutes: React.FC = () => {;
+const AuthRoutes: React.FC = () => {};
   return(<Suspense fallback={<LoadingSpinner />}>;
       <Routes>;
         <Route path="/login" element={<Login />} />;
@@ -22,17 +22,17 @@ const AuthRoutes: React.FC = () => {;
         <Route path="/onboarding" element={<Onboarding />} />;
         <Route path="/talent-onboarding" element={<TalentOnboarding />} />;
         <Route path="/service-onboarding" element={<ServiceOnboarding />} />;
-        <Route path="/profile" element={;
+        <div>Broken JSX</div>
           <ProtectedRoute>;
             <div>Profile Page</div>;
           </ProtectedRoute>;,
 } />;
-        <Route path="/dashboard" element={;
+        <div>Broken JSX</div>
           <ProtectedRoute>;
             <div>Dashboard</div>;
           </ProtectedRoute>;,
 } />;
-        <Route path="/settings" element={;
+        <div>Broken JSX</div>
           <ProtectedRoute>;
             <div>Settings</div>;
           </ProtectedRoute>;,

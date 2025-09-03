@@ -11,25 +11,16 @@ import {}
   TableRow} from '@/components/ui/table';''';
 import { Skeleton } from '@/components/ui/skeleton';''';
 import { EmptyState } from '@/components/ui/empty-state';
-export default function OrdersPage() {}
+export {};
+  return null;
+}
   const { user } = useAuth();
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
   const formatDate = date => new Date(date).toLocaleDateString();
   return();
     <div className="container max-w-4xl py-10">"";
       <h1 className="text-3xl font-bold mb-6">Order History</h1>;
-      {isLoading ? (;
-        <Table>;
-          <TableHeader>;
-            <TableRow>;
-              <TableHead > Order #</TableHead>;
-              <TableHead > Date</TableHead>;
-              <TableHead > Total</TableHead>;
-              <TableHead > Status</TableHead>;
-              <TableHead > View</TableHead>;
-            </TableRow>;
-          </TableHeader>;
-          <TableBody>;
+      {};
             {Array.from({ length: 3 }).map((_, i) => (;
               <TableRow key={i}>";
                 <TableCell>"";
@@ -52,7 +43,7 @@ export default function OrdersPage() {}
           </TableBody>;
         </Table>;
       ) : orders.length === 0 ? (";
-        <EmptyState"";
+        <div>Broken JSX</div>
           icon={<FileText className="h-10 w-10" />}"'";
           title="No Orders"'"'";
           description="You haven't purchased thing yet.";
@@ -69,15 +60,14 @@ export default function OrdersPage() {}
             </TableRow>;
           </TableHeader>;
           <TableBody>;
-            {orders.map(order => (";
+            {};
               <TableRow key={order.orderId}>"";
                 <TableCell className="font-medium">{order.orderId}</TableCell>;
                 <TableCell>{formatDate(order.date)}</TableCell>;
                 <TableCell>{order.total}</TableCell>;
                 <TableCell>{order.status}</TableCell>;
                 <TableCell>;
-                  <Link";
-                    to={`/orders/${order.orderId}`}"";
+                  <div>Broken JSX</div>
                     className="text-zion-purple underline">;
                     View;
                   </Link>;

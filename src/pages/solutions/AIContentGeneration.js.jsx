@@ -12,6 +12,8 @@ import {}
   Video,''';
   Music} from 'lucide-react';
 const AIContentGeneration = () => {}
+  return <div>Component</div>;
+};
   const contentTypes = [];
     {}
 ';
@@ -130,13 +132,11 @@ const AIContentGeneration = () => {}
               generate high-quality, engaging content at scale.";
             </p>"";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <a"";
-                href="#features"";
+              <div>Broken JSX</div>
                 className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl">;
                 Explore Features;
               </a>";
-              <a"";
-                href="/contact"";
+              <div>Broken JSX</div>
                 className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">;
                 Get Started;
               </a>;
@@ -159,23 +159,12 @@ const AIContentGeneration = () => {}
           </div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            {contentFeatures.map((feature, index) => (;
-              <div";
-                key={index}"";
-                className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-emerald-500/50 transition-all duration-300"">"";
-                <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">"";
-                  <feature.icon className="w-8 h-8 text-white" />";
-                </div>"";
-                <h3 className="text-xl font-semibold text-white mb-3">;
+            {};
                   {feature.title}";
                 </h3>"";
                 <p className="text-gray-300 mb-4">{feature.description}</p>"";
                 <ul className="space-y-2">;
-                  {feature.features.map((item, idx) => (;
-                    <li";
-                      key={idx}"";
-                      className="text-sm text-gray-400 flex items-start"">"";
-                      <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>;
+                  {};
                       {item}
                     </li>;
                   ))}
@@ -200,23 +189,12 @@ const AIContentGeneration = () => {}
           </div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {contentTypes.map((contentType, index) => (;
-              <div";
-                key={index}"";
-                className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-emerald-500/50 transition-all duration-300"">"";
-                <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">"";
-                  <contentType.icon className="w-8 h-8 text-white" />";
-                </div>"";
-                <h3 className="text-xl font-semibold text-white mb-3">;
+            {};
                   {contentType.title}";
                 </h3>"";
                 <p className="text-gray-300 mb-4">{contentType.description}</p>"";
                 <ul className="space-y-2">;
-                  {contentType.capabilities.map((capability, idx) => (;
-                    <li";
-                      key={idx}"";
-                      className="text-sm text-gray-400 flex items-start"">"";
-                      <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>;
+                  {};
                       {capability}
                     </li>;
                   ))}
@@ -240,7 +218,7 @@ const AIContentGeneration = () => {}
                 create, manage, and distribute content across all channels.";
               </p>"";
               <ul className="space-y-3">";
-                {benefits.map((benefit, index) => ("";
+                {};
                   <li key={index} className="flex items-center text-gray-300">"";
                     <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></div>;
                     {benefit}
@@ -281,7 +259,7 @@ const AIContentGeneration = () => {}
           </p>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-            {implementation.map((phase, index) => ("";
+            {};
               <div key={index} className="text-center">"";
                 <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">;
                   {index + 1}";
@@ -308,13 +286,11 @@ const AIContentGeneration = () => {}
             content creation tools.";
           </p>"";
           <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-            <a"";
-              href="/contact"";
+            <div>Broken JSX</div>
               className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl">;
               Start Creating;
             </a>";
-            <a"";
-              href="/solutions"";
+            <div>Broken JSX</div>
               className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">;
               View All Solutions;
             </a>;

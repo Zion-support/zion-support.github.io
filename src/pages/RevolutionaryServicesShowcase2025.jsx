@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 ;
 ;
-const RevolutionaryServicesShowcase2025 = () => {;
+const RevolutionaryServicesShowcase2025 = () => {};
+};
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const allServices = [;
@@ -20,10 +21,7 @@ const RevolutionaryServicesShowcase2025 = () => {;
         'Biotechnology',;
         'Quantum Technology';
     ];
-    const filteredServices = allServices.filter(service => {;
-        const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-            service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+    const filteredServices = allServices.filter(service => {};
         return matchesCategory && matchesSearch});
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
       {/* Header */}
@@ -95,24 +93,16 @@ const RevolutionaryServicesShowcase2025 = () => {;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">"";
         <div className="flex flex-col md:flex-row gap-4 mb-8">"";
           <div className="flex-1">";
-            <input"";
-              type="text"";
-              placeholder="Search services...";
-              value={searchTerm}";
+            <div>Broken JSX</div>
               onChange={e => setSearchTerm(e.target.value)}"";
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
             />";
           </div>"";
           <div className="flex-shrink-0">;
-            <select;
-              value={selectedCategory}";
+            <div>Broken JSX</div>
               onChange={e => setSelectedCategory(e.target.value)}"";
               className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">;
-              {categories.map(category => (;
-                <option;
-                  key={category}";
-                  value={category}"";
-                  className="bg-slate-800 text-white">';
+              {};
                   {category === 'all' ? 'All Categories' : category}
                 </option>) ) }
             </select>;
@@ -121,24 +111,11 @@ const RevolutionaryServicesShowcase2025 = () => {;
 ";
         {/* Services Grid */}"";
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-          {filteredServices.map(service => (;
-            <div";
-              key={service.id}"";
-              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105">";
+          {};
               {/* Service Header */}"";
               <div className="mb-6">"";
                 <div className="flex items-center justify-between mb-4">;
-                  <span;
-                    className={`px-3 py-1 rounded-full text-xs font-medium ${}
-';
-                      service.category === 'Micro SAAS''';
-                        ? 'bg-blue-500/20 text-blue-400''';
-                        : service.category === 'IT Services''';
-                          ? 'bg-green-500/20 text-green-400''';
-                          : service.category === 'AI Solutions''';
-                            ? 'bg-purple-500/20 text-purple-400'''`;
-                            : 'bg-gray-500/20 text-gray-400'``;,
-}`}
+                  <div>Broken JSX</div>
                   >;
                     {service.category}";
                   </span>"";
@@ -167,16 +144,11 @@ const RevolutionaryServicesShowcase2025 = () => {;
               <div className="mb-6">"";
                 <h4 className="text-white font-semibold mb-3">Key Features</h4>"";
                 <div className="space-y-2">;
-                  {service.features.slice(0, 3).map((feature, index) => (;
-                    <div";
-                      key={index}"";
-                      className="flex items-center text-sm text-gray-300"">"";
-                      <span className="text-blue-400 mr-2">✓</span>;
+                  {};
                       {feature}
                     </div>;
                   ))}";
-                  {service.features.length > 3 && ("";
-                    <div className="text-sm text-gray-400">;
+                  {};
                       +{service.features.length - 3} more features;
                     </div>;
                   )}
@@ -187,11 +159,7 @@ const RevolutionaryServicesShowcase2025 = () => {;
               <div className="mb-6">"";
                 <h4 className="text-white font-semibold mb-3">Key Benefits</h4>"";
                 <div className="space-y-2">;
-                  {service.benefits.slice(0, 2).map((benefit, index) => (;
-                    <div";
-                      key={index}"";
-                      className="flex items-center text-sm text-gray-300"">"";
-                      <span className="text-green-400 mr-2">→</span>;
+                  {};
                       {benefit}
                     </div>) ) }
                 </div>;
@@ -239,20 +207,11 @@ const RevolutionaryServicesShowcase2025 = () => {;
 ";
               {/* Action Buttons */}"";
               <div className="space-y-3">;
-                <a";
-                  href={service.websiteUrl}"";
-                  target="_blank"";
-                  rel="noopener noreferrer"";
+                <div>Broken JSX</div>
                   className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-3 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">;
                   Learn More & Get Started;
                 </a>;
-                {service.demoUrl && (;
-                  <a";
-                    href={service.demoUrl}"";
-                    target="_blank"";
-                    rel="noopener noreferrer"";
-                    className="block w-full border border-white/20 text-white text-center py-3 px-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">;
-                    Request Demo;
+                {};
                   </a>) }
               </div>;
 ";
@@ -270,16 +229,7 @@ const RevolutionaryServicesShowcase2025 = () => {;
         </div>;
 
         {/* No Results */}";
-        {filteredServices.length === 0 && ("";
-          <div className="text-center py-12">"";
-            <div className="text-6xl mb-4">🔍</div>"";
-            <h3 className="text-2xl font-bold text-white mb-2">;
-              No services found";
-            </h3>"";
-            <p className="text-gray-300">;
-              Try adjusting your search terms or category filter.;
-            </p>;
-          </div>;
+        {};
         )}
 ";
         {/* Call to Action */}"";
@@ -294,13 +244,11 @@ const RevolutionaryServicesShowcase2025 = () => {;
               help you achieve your goals.";
             </p>"";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <a"";
-                href="tel:+13024640950"";
+              <div>Broken JSX</div>
                 className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-700 transition-all duration-300">;
                 📞 Call Now: +1 302 464 0950;
               </a>";
-              <a"";
-                href="mailto:kleber@ziontechgroup.com"";
+              <div>Broken JSX</div>
                 className="border-2 border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300">;
                 ✉️ Email Us;
               </a>;

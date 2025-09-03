@@ -1,6 +1,8 @@
 import React from 'react';''';
 import { Link } from 'react-router-dom';
 const InnovativeServices2025 = () => {}
+  return <div>Component</div>;
+};
     const innovativeServices = [];
         {}
             category: "AI-Powered Micro SAAS Solutions","";

@@ -32,12 +32,11 @@ const particles = []";
   "#96ceb4"]}
 ;
         const selectedColors = colors[theme];
-        // commentfor(let i = 0 i < 100 i++) {}
-;
-            particles.push({}
-;
+        // commentfor(let i = 0 i <div>Broken JSX</div>
                 x: Math.random() * canvas.width, y: Math.random() * canvas.height, vx: (Math.random() - 0.5) * 2, vy: (Math.random() - 0.5) * 2, size: Math.random() * 3 + 1, opacity: Math.random() * 0.5 + 0.3, color: selectedColors[Math.floor(Math.random() * selectedColors.length)]})}>;
         const animate = () => {}
+  return <div>Component</div>;
+};
 ;
             ctx.clearRect();,
 }
@@ -74,21 +73,7 @@ particles.forEach((otherParticle, otherIndex) => {}
 const distance = Math.sqrt(Math.pow(particle.x - otherParticle.x, 2) +;
                         Math.pow(particle.y - otherParticle.y, 2));,
 }
-                    if(distance < 150) {}";
-                        ctx.beginPath()"";
-                        ctx.moveTo(particle.x, particle.y)""";
-                        ctx.lineTo(otherParticle.x, otherParticle.y)"";"""";
-                        ctx.strokeStyle = "${particle.color}${Math.floor((1 - distance / 150) * 0.3 * 255).toString(16).padStart(2, 0")}
-                        ctx.lineWidth = 1,;
-ctx.stroke()}", ";,
-})})";
-            // comment;
-            if (theme = == "quantum") {}";
-                ctx.save()";
-                ctx.globalCompositeOperation = "screen";
-                // comment;
-for(let i = 0 i < 5 i++) {}
-;
+                    if(distance <div>Broken JSX</div>
                     const time = Date.now() * 0.001>;
 const wave = Math.sin(time + i) * 100";
                     ctx.beginPath()";
@@ -120,20 +105,7 @@ ctx.stroke()}";,
                 ctx.globalCompositeOperation = "overlay";
                 // comment;
 const gridSize = 50,;
-for(let x = 0 x < canvas.width x += gridSize) {}
-;
-                    ctx.beginPath()";
-                    ctx.moveTo(x, 0)";
-                    ctx.lineTo(x, canvas.height)";
-                    ctx.strokeStyle = "rgba(255, 255, 255, ${0.1 * intensity})";
-                    ctx.lineWidth = 0.5,ctx.stroke()}
-;
-                for(let y = 0 y < canvas.height y += gridSize) {}
-;
-                    ctx.beginPath()";
-                    ctx.moveTo(0, y)";
-                    ctx.lineTo(canvas.width, y)";
-                    ctx.strokeStyle = "rgba(255, 255, 255, ${0.1 * intensity})";
+for(let x = 0 x <div>Broken JSX</div>
                     ctx.lineWidth = 0.5>ctx.stroke()}
 ;
                 ctx.restore()}
@@ -142,6 +114,8 @@ for(let x = 0 x < canvas.width x += gridSize) {}
 ;
         animate()>;
         const handleResize = () => {}";
+  return <div>Component</div>;
+};
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight}
         window.addEventListener();,
@@ -150,10 +124,7 @@ for(let x = 0 x < canvas.width x += gridSize) {}
             if(animationRef.current) {}
                 cancelAnimationFrame(animationRef.current)}';
             window.removeEventListener('resize', handleResize)}}, [intensity, theme]);
-    return (<canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" style = {}
-  {}
-            opacity: intensity,';
-  filter: theme === 'quantum' ? 'blur(0.5px)' : 'none';,
+    return (<div>Broken JSX</div>
 }}/>)};
 export default UltraFuturisticBackground2034;
 ;

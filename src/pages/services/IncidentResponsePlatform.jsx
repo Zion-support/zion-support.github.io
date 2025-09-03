@@ -2,238 +2,48 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target, ArrowRight, Activity const IncidentResponsePlatform = () => {;
+import {};
+};
     const features = [;
-        {;
-            title: "AI-Powered Threat Detection",;
-            description: "Advanced machine learning algorithms detect threats in real-time with high accuracy and low false positives",;
-            icon: <Eye className="w-6 h-6"/>;,
+        {};
 },;
-        {;
-            title: "Automated Response Workflows",;
-            description: "Intelligent automation handles routine incidents while escalating critical threats to human analysts",;
-            icon: <Zap className="w-6 h-6"/>;,
+        {};
 },;
-        {;
-            title: "Real-time Alerting & Notifications",;
-            description: "Instant notifications across multiple channels with customizable escalation paths and response teams",;
-            icon: <AlertTriangle className="w-6 h-6"/>;,
+        {};
 },;
-        {;
-            title: "Incident Timeline Tracking",;
-            description: "Comprehensive tracking of all incident activities, communications, and resolution steps for audit compliance",;
-            icon: <Clock className="w-6 h-6"/>;
-
-    ];
-    const benefits = [;
-        {;
-            metric: "70%",;
-            description: "Reduction in response time",;
-            icon: <Clock className="w-5 h-5"/>;,
+        {};
 },;
-        {;
-            metric: "45%",;
-            description: "Improvement in resolution quality",;
-            icon: <TrendingUp className="w-5 h-5"/>;,
+        {};
 },;
-        {;
-            metric: "24/7",;
-            description: "Automated monitoring",;
-            icon: <Activity className="w-5 h-5"/>;,
+        {};
 },;
-        {;
-            metric: "90%",;
-            description: "Compliance assurance",;
-            icon: <Shield className="w-5 h-5"/>;
-
-    ];
-    const pricingPlans = [;
-        {;
-            name: "Professional",;
-            price: "$299",;
-            period: "/month",;
-            description: "Perfect for growing security teams",;
-            features: [;
-                "Up to 50 users",;
-                "Basic threat detection",;
-                "Standard response workflows",;
-                "Email & Slack notifications",;
-                "Basic reporting",;
-                "Email support";
-            ],;
-            popular: false;,
+        {};
 },;
-        {;
-            name: "Enterprise",;
-            price: "$599",;
-            period: "/month",;
-            description: "Ideal for large organizations",;
-            features: [;
-                "Unlimited users",;
-                "Advanced AI detection",;
-                "Custom response workflows",;
-                "Multi-channel notifications",;
-                "Advanced analytics",;
-                "Priority support",;
-                "Compliance reporting";
-            ],;
-            popular: true;,
+        {};
 },;
-        {;
-            name: "Custom",;
-            price: "Custom",;
-            period: ",;
-            description: "For complex enterprise needs",;
-            features: [;
-                "Custom integrations",;
-                "Dedicated support team",;
-                "Custom training",;
-                "SLA guarantees",;
-                "On-premise options",;
-                "Custom development";
-            ],;
-            popular: false;
-
-    ];
-    const integrations = [;
-        "SIEM Systems", "EDR Solutions", "Firewall", "IDS/IPS", "Slack", "Teams", "Jira", "ServiceNow";
-    ];
-    const useCases = [;
-        "Security incident management",;
-        "IT operations",;
-        "Compliance management",;
-        "Team collaboration",;
-        "Audit preparation",;
-        "Risk mitigation";
-    ];
-    return (<>;
-      <Helmet>;
-        <title>Intelligent Incident Response Platform — Zion Tech Group | AI-Driven Security</title>;
-        <meta name="description" content="Transform your security operations with our AI-driven incident response platform. Automated threat detection, response workflows, and compliance reporting."/>;
-        <meta property="og:title" content="Intelligent Incident Response Platform — Zion Tech Group"/>;
-        <meta property="og:description" content="AI-powered incident response platform with automated workflows and real-time threat detection."/>;
-        <meta property="og:url" content="https://ziontechgroup.com/services/incident-response-platform"/>;
-        <link rel="canonical" href="https://ziontechgroup.com/services/incident-response-platform"/>;
-      </Helmet>;
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 text-white pt-20">;
+        {};
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto text-center">;
-            <motion.div initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
+            <div>Broken JSX</div>
 }} transition={{ duration: 0.6 }} className="text-6xl mb-6">;
               🚨;
             </motion.div>;
-            <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
-}} transition = {;
-  { duration: 0.6,;
-  delay: 0.2 ;
-
-;
-
-;
-
-;,
+            <div>Broken JSX</div>
 }}>;
               Intelligent;
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-400">;
                 {" "}Incident Response Platform;
               </span>;
             </motion.h1>;
-            <motion.p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
-}} transition = {;
-  { duration: 0.6,;
-  delay: 0.4 ;
-
-;
-
-;
-
-;,
+            <div>Broken JSX</div>
 }}>;
               Comprehensive incident management platform that uses AI to detect, respond to, and analyze ;
               security incidents in real-time, reducing response time and improving resolution quality.;
             </motion.p>;
 
             {/* Key Metrics */}
-            <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 max-w-4xl mx-auto" initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
-}} transition = {;
-  { duration: 0.6,;
-  delay: 0.6 ;
-
-;
-
-;
-
-;,
+            <div>Broken JSX</div>
 }}>;
               {benefits.map((benefit, index) => (<div key={index} className="text-center">;
                   <div className="text-3xl font-bold text-red-400 mb-2">{benefit.metric}</div>;
@@ -241,33 +51,7 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
                 </div>))}
             </motion.div>;
 
-            <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
-}} transition = {;
-  { duration: 0.6,;
-  delay: 0.8 ;
-
-;
-
-;
-
-;,
+            <div>Broken JSX</div>
 }}>;
               <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300">;
                 Start Free Trial;
@@ -282,24 +66,7 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">;
           <div className="max-w-7xl mx-auto">;
-            <motion.div className="text-center mb-16" initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
+            <div>Broken JSX</div>
 }} transition={{ duration: 0.6 }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
                 Advanced Security Features;
@@ -310,33 +77,7 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
             </motion.div>;
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-              {features.map((feature, index) => (<motion.div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300" initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
-}} transition = {;
-  { duration: 0.6,;
-  delay: index * 0.1 ;
-
-;
-
-;
-
-;,
+              {};
 }}>;
                   <div className="text-red-400 mb-4">{feature.icon}</div>;
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>;
@@ -349,24 +90,7 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
-            <motion.div className="text-center mb-16" initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
+            <div>Broken JSX</div>
 }} transition={{ duration: 0.6 }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
                 Flexible Security Solutions;
@@ -377,40 +101,9 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
             </motion.div>;
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-              {pricingPlans.map((plan, index) => (<motion.div key={index} className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${plan.popular;
-                ? 'border-red-400 bg-red-900/20';
-                : 'border-white/20 hover:border-white/40'}`} initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
-}} transition = {;
-  { duration: 0.6,;
-  delay: index * 0.1 ;
-
-;
-
-;
-
-;,
+              {};
 }}>;
-                  {plan.popular && (<div className="text-center mb-4">;
-                      <span className="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-medium">;
-                        Most Popular;
-                      </span>;
+                  {};
                     </div>)}
 ;
                   <div className="text-center mb-6">;
@@ -429,8 +122,7 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
                       </li>))}
                   </ul>;
 
-                  <Link to="/contact" className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${plan.popular;
-                ? 'bg-red-600 hover:bg-red-700 text-white';
+                  <div>Broken JSX</div>
                 : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'}`}>;
                     Get Started;
                   </Link>;
@@ -444,24 +136,7 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
           <div className="max-w-7xl mx-auto">;
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">;
               {/* Integrations */}
-              <motion.div initial = {;
-  { opacity: 0,;
-  x: -20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  x: 0 ;
-
-;
-
-;
-
-;,
+              <div>Broken JSX</div>
 }} transition={{ duration: 0.6 }}>;
                 <h3 className="text-2xl font-bold text-white mb-6">Security Integrations</h3>;
                 <div className="grid grid-cols-2 gap-4">;
@@ -473,24 +148,7 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
               </motion.div>;
 
               {/* Use Cases */}
-              <motion.div initial = {;
-  { opacity: 0,;
-  x: 20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  x: 0 ;
-
-;
-
-;
-
-;,
+              <div>Broken JSX</div>
 }} transition={{ duration: 0.6 }}>;
                 <h3 className="text-2xl font-bold text-white mb-6">Perfect For</h3>;
                 <div className="space-y-3">;
@@ -507,85 +165,16 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-red-900/50 to-pink-900/50">;
           <div className="max-w-4xl mx-auto text-center">;
-            <motion.h2 className="text-3xl md:text-4xl font-bold text-white mb-6" initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
+            <div>Broken JSX</div>
 }} transition={{ duration: 0.6 }}>;
               Ready to Enhance Your Security Posture?;
             </motion.h2>;
-            <motion.p className="text-xl text-gray-300 mb-8" initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
-}} transition = {;
-  { duration: 0.6,;
-  delay: 0.2 ;
-
-;
-
-;
-
-;,
+            <div>Broken JSX</div>
 }}>;
               Join organizations already using our intelligent incident response platform;
             </motion.p>;
             ;
-            <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
-}} transition = {;
-  { duration: 0.6,;
-  delay: 0.4 ;
-
-;
-
-;
-
-;,
+            <div>Broken JSX</div>
 }}>;
               <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300">;
                 Start Free Trial;
@@ -596,33 +185,7 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
               </a>;
             </motion.div>;
 
-            <motion.div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto" initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
-}} transition = {;
-  { duration: 0.6,;
-  delay: 0.6 ;
-
-;
-
-;
-
-;,
+            <div>Broken JSX</div>
 }}>;
               <h3 className="text-lg font-semibold text-white mb-4">Why Choose Our Incident Response Platform?</h3>;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">;
@@ -645,15 +208,7 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
               </div>;
             </motion.div>;
 
-            <motion.div className="mt-8 text-sm text-gray-400" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition = {;
-  { duration: 0.6,;
-  delay: 0.8 ;
-
-;
-
-;
-
-;,
+            <div>Broken JSX</div>
 }}>;
               <p>Email: kleber@ziontechgroup.com</p>;
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>;

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';''';
 import { Link } from 'react-router-dom';
 ;
-const ComprehensivePricingShowcase2025 = () => {;
+const ComprehensivePricingShowcase2025 = () => {};
+};
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [priceRange, setPriceRange] = useState('all');
     const allServices = [;
@@ -45,10 +46,7 @@ const ComprehensivePricingShowcase2025 = () => {;
         if (service.price) {}
             const price = parseFloat(service.price.replace(/[^0-9.]/g,));
             if (range.min && range.max) {}
-                return price >= range.min && price <= range.max}
-            else if (range.max) {}
-                return price <= range.max}
-            else if (range.min) {}
+                return price >= range.min && price <div>Broken JSX</div>
                 return price >= range.min}
         }
         return true});
@@ -226,34 +224,28 @@ const ComprehensivePricingShowcase2025 = () => {;
                 </p>;
 ";
                 {/* Key Features */}"";
-                {service.features && (<div className="mb-4">"";
-                    <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>"";
-                    <ul className="space-y-1">"";
+                {};
                       {service.features.slice(0, 3).map((feature, index) => (<li key={index} className="text-xs text-gray-400 flex items-center">"";
                           <span className="text-blue-400 mr-2">✓</span>;
                           {feature}";
                         </li>))}"";
-                      {service.features.length > 3 && (<li className="text-xs text-gray-500">;
+                      {};
                           +{service.features.length - 3} more features;
                         </li>) }
                     </ul>;
                   </div>) }
 ";
                 {/* Market Position */}"";
-                {service.marketPosition && (<div className="mb-4 p-3 bg-white/5 rounded-lg">"";
-                    <h4 className="text-sm font-semibold text-gray-300 mb-2">Market Position:</h4>"";
+                {};
                     <p className="text-xs text-gray-400">{service.marketPosition}</p>;
                   </div>)}
 ";
                 {/* ROI and Benefits */}"";
                 <div className="mb-4">"";
-                  {service.roi && (<div className="mb-2">"";
-                      <span className="text-xs font-semibold text-green-400">ROI: </span>"";
+                  {};
                       <span className="text-xs text-gray-300">{service.roi}</span>;
                     </div>)}";
-                  {service.benefits && (<div>"";
-                      <span className="text-xs font-semibold text-blue-400">Benefits: </span>"";
-                      <span className="text-xs text-gray-300">';
+                  {};
                         {service.benefits.slice(0, 2).join(',)}';
                         {service.benefits.length > 2 && '...'}
                       </span>;
@@ -263,12 +255,10 @@ const ComprehensivePricingShowcase2025 = () => {;
                 {/* Trial and Setup Info */}"";
                 <div className="mb-4 p-3 bg-white/5 rounded-lg">"";
                   <div className="grid grid-cols-2 gap-4 text-xs">";
-                    {service.trialDays && (<div>"";
-                        <span className="text-gray-400">Trial:</span>"";
+                    {};
                         <p className="text-gray-300">{service.trialDays} days</p>;
                       </div>)}";
-                    {service.setupTime && (<div>"";
-                        <span className="text-gray-400">Setup:</span>"";
+                    {};
                         <p className="text-gray-300">{service.setupTime}</p>;
                       </div>)}
                   </div>;

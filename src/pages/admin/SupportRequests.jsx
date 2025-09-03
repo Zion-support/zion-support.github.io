@@ -102,7 +102,9 @@ const MOCK_SUPPORT_REQUESTS = [];
         category: "profile";
 ];
 export { function };
-export default function SupportRequests() {}
+export {};
+  return null;
+}
 ";
 "";
     const [searchQuery, setSearchQuery] = useState("");
@@ -133,6 +135,8 @@ export default function SupportRequests() {}
     const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
     const totalCount = MOCK_SUPPORT_REQUESTS.length;
     const resetFilters = () => {}
+  return <div>Component</div>;
+};
 ";
 "";
         setSearchQuery("");
@@ -273,19 +277,13 @@ export default function SupportRequests() {}
                         <TableCell>{request.user}</TableCell>"";
                         <TableCell className="max-w-xs truncate">{request.issue}</TableCell>;
                         <TableCell>';
-                          <Badge variant={request.status === 'open''';
-                        ? 'default''';
-                        : request.status === 'in-progress''';
-                            ? 'secondary''';
+                          <div>Broken JSX</div>
                             : 'outline'}>;
                             {request.status}
                           </Badge>';
                         </TableCell>'';
                         <TableCell>''';
-                          <Badge variant={request.priority === 'high''''';
-                        ? 'destructive''''';
-                        : request.priority === 'medium''''';
-                            ? 'default''''';
+                          <div>Broken JSX</div>
                             : 'outline'}>;
                             {request.priority}
                           </Badge>;

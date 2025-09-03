@@ -2,7 +2,9 @@ import React from 'react';''';
 import SEO from '@/components/SEO';''';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';''';
 import { Button } from '@/components/ui/button';
-import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export default function Enterprise() {}
+import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export {};
+  return null;
+}
     const features = [];
         {}
             icon: <Users className="h-8 w-8 text-zion-cyan"/>,"";
@@ -174,8 +176,7 @@ import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export default funct
                         {feature}
                       </li>))}"`;
                   </ul>"`"`;
-                  <Button className={`w-full ${plan.name === "Professional""`;
-                ? "bg-zion-purple hover:bg-zion-purple-light""`"`;
+                  <div>Broken JSX</div>
                 : "bg-zion-blue hover:bg-zion-blue-light"}`}>"";
                     {plan.name === "Enterprise" ? "Contact Sales" : "Get Started"}
                   </Button>;

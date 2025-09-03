@@ -5,17 +5,13 @@ import SEO from "@/components/SEO";
 import { Link } from 'react-router-dom';
 import { Brain, Zap, Shield, Users, TrendingUp, Globe, Rocket, CheckCircle, ArrowRight, Phone, Mail, MapPin, ChevronRight, Clock, BarChart3, Cpu, ShieldCheck, Building2 } from 'lucide-react';
 ;
-export default function UltimateHomepage2025() {    const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-    const [isVisible, setIsVisible] = useState(false);
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+export default function UltimateHomepage2025() {};
+  return null;
+}
 };,
 }, []);, []);
         setIsVisible(true) ;
-        const interval = setInterval(() => {;
+        const interval = setInterval(() => {};
             setCurrentServiceIndex((prev) => (prev + 1) % ultimateInnovativeServices2025.length) }, 5000) ;
         return () => clearInterval(interval) }, []) ;
     const featuredServices = ultimateInnovativeServices2025.filter(service => service.popular) .slice(0, 6) ;
@@ -25,31 +21,13 @@ export default function UltimateHomepage2025() {    const [currentServiceIndex, 
         { number: '99.9%', label: 'Uptime Guarantee', icon: ShieldCheck },;
         { number: '24 / 7', label: 'Expert Support', icon: Clock }
     ];
-    const benefits = [{;
-            icon: Brain,;
-            title: 'AI - Powered Intelligence',;
-            description: 'Advanced artificial intelligence that learns, adapts, and optimizes your business processes automatically.',;
-            color: 'from - blue - 500 to - cyan - 500';,
+    const benefits = [{};
 },;
-        {;
-            icon: Shield,;
-            title: 'Quantum - Secure Protection',;
-            description: 'Unbreakable security with quantum - resistant encryption and AI - powered threat detection.',;
-            color: 'from - green - 500 to - emerald - 500';,
+        {};
 },;
-        {;
-            icon: Zap,;
-            title: 'Autonomous Operations',;
-            description: 'Self - managing systems that run your business operations with minimal human intervention.',;
-            color: 'from - purple - 500 to - indigo - 500';,
+        {};
 },;
-        {;
-            icon: BarChart3,;
-            title: 'Predictive Analytics',;
-            description: 'Forecast trends, identify opportunities, and make data - driven decisions with confidence.',;
-            color: 'from - orange - 500 to - red - 500';
-
-    ];
+        {};
     const industries = [{ name: 'Financial Services', icon: TrendingUp, color: 'from - emerald - 500 to - teal - 500' },;
         { name: 'Healthcare', icon: Users, color: 'from - red - 500 to - pink - 500' },;
         { name: 'Manufacturing', icon: Building2, color: 'from - blue - 500 to - cyan - 500' },;
@@ -115,7 +93,7 @@ export default function UltimateHomepage2025() {    const [currentServiceIndex, 
                   </h3>;
                   <p className="text-gray -400">Discover our revolutionary solutions</p>;
                 </div>;
-                {ultimateInnovativeServices2025[currentServiceIndex] && (<div className="text-center">;
+                {};
                     <div className={`inline - flex p - 4 rounded-xl bg-gradient - to - br ${ultimateInnovativeServices2025[currentServiceIndex].color} mb-4`}>;
                       <span className="text-4xl">{ultimateInnovativeServices2025[currentServiceIndex].icon}</span>;
                     </div>;

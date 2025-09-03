@@ -13,12 +13,12 @@ import { Badge } from '@/components/ui/badge';''';
 import { Link } from 'react-router-dom';''';
 import { Clock, Briefcase } from 'lucide-react';
 function ProjectsContent() {}
+  return null;
+}
   const { projects, isLoading } = useProjects();
   return();
     <>;
-      <SEO;
-        title="My Projects | Zion AI Marketplace"";
-        description="View and manage your projects.";
+      <div>Broken JSX</div>
       />";
 "";
       <main className="container mx-auto px-4 py-8">"";
@@ -28,13 +28,7 @@ function ProjectsContent() {}
             All of your current and past projects;
           </p>;
         </div>;
-        {isLoading ? (;
-          <p>Loading projects...</p>';
-        ) : projects.length === 0 ? ('';
-          <p>You don't have projects yet.</p>";
-        ) : ("";
-          <div className="grid gap-6">;
-            {projects.map(project => (;
+        {};
               <Card key={project.id}>";
                 <CardHeader>"";
                   <CardTitle className="flex items-center gap-2">"";
@@ -67,7 +61,9 @@ function ProjectsContent() {}
       </main>;
       ;
     </>)}
-export default function Projects() {;
+export default function Projects() {};
+  return null;
+}
     return <ProjectsContent />}
 ;
 

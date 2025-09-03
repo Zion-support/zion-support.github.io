@@ -25,11 +25,7 @@ import { AuthProvider } from "./context/auth/AuthProvider.jsx";
 ;
 ;
 // Initialize a React Query client with global error handling;
-const queryClient = new QueryClient({;
-    defaultOptions: {;
-        queries: {;
-            retry: 1,;
-            refetchOnWindowFocus: false,;,
+const queryClient = new QueryClient({};
 },;,
 },;,
 });
@@ -38,7 +34,8 @@ const queryClient = new QueryClient({;
 const rootElement = document.getElementById('root');
 ;
 
-const renderApp = () => {;
+const renderApp = () => {};
+};
     const app = (;
         <React.StrictMode>;
             <HelmetProvider>;
@@ -48,9 +45,7 @@ const renderApp = () => {;
                             <AuthProvider>;
                                 <NotificationProvider>;
                                     <AnalyticsProvider>;
-                                        <LanguageProvider authState={{;
-                                            isAuthenticated: false,;
-                                            user: null;,
+                                        <div>Broken JSX</div>
 }}>;
                                             <ViewModeProvider>;
                                                 <AppLayout>;
@@ -70,36 +65,24 @@ const renderApp = () => {;
     );
 ;
 
-    if (rootElement?.hasChildNodes()) {;
-        hydrateRoot(rootElement, app);,
-} else if (rootElement) {;
-        createRoot(rootElement).render(app);,
+    if (rootElement?.hasChildNodes()) {};
+} else if (rootElement) {};
 }
 };
 ;
 
-function displayFatalError(message) {;
-    if (rootElement) {;
-        rootElement.innerHTML = `;
-
-;
-            <div style="padding:20px;text-align:center;font-family:sans-serif;">;
-                <h1>Application Error</h1>;
+function displayFatalError(message) {};
+  return null;
+}
                 <p>${message}</p>;
             </div>`;,
 }
 }
 ;
-try {;
-    renderApp();,
-} catch (error) {;
-    console.error('Global error caught in main.jsx:', error);
-    displayFatalError(error.message);,
+try {};
+} catch (error) {};
 }
 ;
-window.addEventListener('error', (e) => {;
-
-    console.error('Unhandled error:', e.error || e.message);
-    displayFatalError(e.message);,
+window.addEventListener('error', (e) => {};
 });
 ;

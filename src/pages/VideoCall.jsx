@@ -14,7 +14,9 @@ import {}
   Settings,''';
   MessageCircle} from 'lucide-react';
 ;
-export default function VideoCall() {}
+export {};
+  return null;
+}
   const { roomId } = useParams();
   const navigate = useNavigate();
   const [isJoining, setIsJoining] = useState(false);
@@ -36,6 +38,8 @@ export default function VideoCall() {}
   ]);
 ;
   const handleJoinCall = () => {}
+  return <div>Component</div>;
+};
     setIsJoining(true) ;
     // Simulate connection delay;
     setTimeout(() => {}
@@ -45,6 +49,8 @@ export default function VideoCall() {}
 };
 ;
   const handleLeaveCall = () => {}
+  return <div>Component</div>;
+};
     setHasJoined(false) ;
     // Navigate back after a short delay;
     setTimeout(() => {}
@@ -53,18 +59,26 @@ export default function VideoCall() {}
 };
 ;
   const toggleVideo = () => {}
+  return <div>Component</div>;
+};
     setIsVideoEnabled(!isVideoEnabled) ;,
 };
 ;
   const toggleMute = () => {}
+  return <div>Component</div>;
+};
     setIsMuted(!isMuted) ;,
 };
 ;
   const toggleScreenShare = () => {}
+  return <div>Component</div>;
+};
     setIsScreenSharing(!isScreenSharing) ;,
 };
 ;
   const simulateUserJoining = () => {}
+  return <div>Component</div>;
+};
     // This is just for demo purposes - in a real app, this would be handled by the video call service;
     const mockUsers = [];
       {}
@@ -105,22 +119,13 @@ export default function VideoCall() {}
   };
 ;
   return (<>;
-      <SEO;
-        title={`Video Call - Room ${roomId}`}
-        description="Zion video call";
+      <div>Broken JSX</div>
       />";
 "";
       <main className="container mx-auto py-8 min-h-[calc(100vh-200px)]">";
-        {!hasJoined ? ("";
-          <div className="flex flex-col items-center justify-center h-96 bg-gradient-to-br from-blue-900/30 to-purple-900/30 rounded-lg p-8">"";
-            <h1 className="text-3xl font-bold mb-6 text-white">;
-              Join Video Call";
-            </h1>"";
+        {};
             <p className="text-gray-300 mb-8">Room ID: {roomId}</p>;
-            <Button;
-              onClick={handleJoinCall}";
-              disabled={isJoining}"";
-              size="lg"";
+            <div>Broken JSX</div>
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">';
               {isJoining ? 'Connecting...' : 'Join Call'}
             </Button>;
@@ -130,29 +135,23 @@ export default function VideoCall() {}
             {/* Video Call Interface */}"";
             <div className="bg-gray-900 rounded-lg p-6">"";
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">";
-                {participants.map(participant => ("";
+                {};
                   <div key={participant.id} className="relative">"";
                     <div className="bg-gray-800 rounded-lg p-4 text-center">"";
                       <div className="w-full h-32 bg-gray-700 rounded-lg mb-3 flex items-center justify-center">";
-                        {participant.isVideoEnabled ? ("";
-                          <div className="text-gray-400 text-2xl">📹</div>";
-                        ) : ("";
-                          <div className="text-gray-400 text-2xl">👤</div>;
+                        {};
                         )}";
                       </div>"";
                       <div className="flex items-center justify-center gap-2 mb-2">"";
                         <span className="text-white font-medium">;
                           {participant.name}
                         </span>";
-                        {participant.isMuted && ("";
-                          <MicOff className="w-4 h-4 text-red-400" />;
+                        {};
                         )}";
-                        {participant.isScreenSharing && ("";
-                          <Monitor className="w-4 h-4 text-blue-400" />;
+                        {};
                         )}
                       </div>'";
-                      {participant.id === 'user-1' && ("";
-                        <div className="text-xs text-gray-400">(You)</div>;
+                      {};
                       )}
                     </div>;
                   </div>) ) }
@@ -160,50 +159,29 @@ export default function VideoCall() {}
 ";
               {/* Call Controls */}"";
               <div className="flex items-center justify-center gap-4">;
-                <Button;
-                  onClick={toggleMute}'";
-                  variant={isMuted ? 'destructive' : 'outline'}"";
-                  size="lg"";
+                <div>Broken JSX</div>
                   className="rounded-full w-14 h-14">";
-                  {isMuted ? ("";
-                    <MicOff className="w-6 h-6" />";
-                  ) : ("";
-                    <Mic className="w-6 h-6" />;
+                  {};
                   )}
                 </Button>;
 
-                <Button;
-                  onClick={toggleVideo}'";
-                  variant={!isVideoEnabled ? 'destructive' : 'outline'}"";
-                  size="lg"";
+                <div>Broken JSX</div>
                   className="rounded-full w-14 h-14">";
-                  {isVideoEnabled ? ("";
-                    <Video className="w-6 h-6" />";
-                  ) : ("";
-                    <VideoOff className="w-6 h-6" />;
+                  {};
                   )}
                 </Button>;
 
-                <Button;
-                  onClick={toggleScreenShare}'";
-                  variant={isScreenSharing ? 'default' : 'outline'}"";
-                  size="lg"";
+                <div>Broken JSX</div>
                   className="rounded-full w-14 h-14"">"";
                   <Monitor className="w-6 h-6" />;
                 </Button>;
 
-                                <Button;
-                                    onClick={toggleScreenShare}
-                                    variant={isScreenSharing ? "default" : "outline"}
-                                    size="lg";
+                                <div>Broken JSX</div>
                                     className="rounded-full w-14 h-14">;
                                     <Monitor className="w-6 h-6" />;
                                 </Button>;
 
-                                <Button;
-                                    onClick={handleLeaveCall}
-                                    variant="destructive";
-                                    size="lg";
+                                <div>Broken JSX</div>
                                     className="rounded-full w-14 h-14">;
                                     <PhoneOff className="w-6 h-6" />;
                                 </Button>;
@@ -228,9 +206,7 @@ export default function VideoCall() {}
 
                         {/* Demo Controls */}
                         <div className="flex justify-center">;
-                            <Button ;
-                                variant="outline" ;
-                                onClick={simulateUserJoining} ;
+                            <div>Broken JSX</div>
                                 className="text-sm border-gray-600 text-gray-300 hover:bg-gray-700">;
                                 Simulate user joining (demo only);
                             </Button>;

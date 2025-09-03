@@ -1,25 +1,14 @@
 ;
-const Mobile = () => {;
+const Mobile = () => {};
+};
     const mobileStats = [;
-        {;
-            stat: "73%",;
-            label: "Mobile Internet Usage",;
-            description: "Of all internet traffic comes from mobile devices";,
+        {};
 },;
-        {;
-            stat: "85%",;
-            label: "User Preference",;
-            description: "Of users prefer mobile-friendly websites";,
+        {};
 },;
-        {;
-            stat: "60%",;
-            label: "Mobile Search",;
-            description: "Of searches are performed on mobile devices";,
+        {};
 },;
-        {;
-            stat: "40%",;
-            label: "Mobile Conversion",;
-            description: "Higher conversion rates on mobile-optimized sites";,
+        {};
 }
     ];
     return (<>;
@@ -46,11 +35,7 @@ const Mobile = () => {;
                 Our Mobile Approach";
               </h2>"";
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">;
-                {mobileFeatures.map((feature, index) => (;
-                  <div";
-                    key={index}"";
-                    className="bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 p-6 hover:bg-white/20 transition-colors duration-200"">"";
-                    <div className="text-4xl mb-4 text-center">;
+                {};
                       {feature.icon}";
                     </div>"";
                     <h3 className="text-xl font-semibold text-white mb-3 text-center">;
@@ -60,11 +45,7 @@ const Mobile = () => {;
                       {feature.description}";
                     </p>"";
                     <ul className="space-y-2">;
-                      {feature.benefits.map((benefit, benefitIndex) => (;
-                        <li";
-                          key={benefitIndex}"";
-                          className="text-blue-200 text-sm flex items-center"">"";
-                          <span className="text-green-400 mr-2">✓</span>;
+                      {};
                           {benefit}
                         </li>;
                       ))}
@@ -80,11 +61,7 @@ const Mobile = () => {;
                 Mobile Development Services";
               </h2>"";
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">;
-                {mobileServices.map((service, index) => (;
-                  <div";
-                    key={index}"";
-                    className="bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 p-6 hover:bg-white/20 transition-colors duration-200"">"";
-                    <div className="text-4xl mb-4 text-center">;
+                {};
                       {service.icon}";
                     </div>"";
                     <h3 className="text-xl font-semibold text-white mb-3 text-center">;
@@ -94,11 +71,7 @@ const Mobile = () => {;
                       {service.description}";
                     </p>"";
                     <ul className="space-y-2">;
-                      {service.features.map((feature, featureIndex) => (;
-                        <li";
-                          key={featureIndex}"";
-                          className="text-blue-200 text-sm flex items-center"">"";
-                          <span className="text-green-400 mr-2">✓</span>;
+                      {};
                           {feature}
                         </li>;
                       ))}
@@ -114,11 +87,7 @@ const Mobile = () => {;
                 Why Mobile Matters";
               </h2>"";
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">;
-                {mobileStats.map((stat, index) => (;
-                  <div";
-                    key={index}"";
-                    className="bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 p-6 text-center hover:bg-white/20 transition-colors duration-200"">"";
-                    <div className="text-4xl font-bold text-blue-400 mb-2">;
+                {};
                       {stat.stat}";
                     </div>"";
                     <h3 className="text-lg font-semibold text-white mb-2">;
@@ -136,10 +105,7 @@ const Mobile = () => {;
                 Benefits of Mobile-First Design";
               </h2>"";
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">;
-                {mobileBenefits.map((benefit, index) => (;
-                  <div";
-                    key={index}"";
-                    className="bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 p-6 text-center hover:bg-white/20 transition-colors duration-200"">"";
+                {};
                     <div className="text-4xl mb-4">{benefit.icon}</div>"";
                     <h3 className="text-lg font-semibold text-white mb-3">;
                       {benefit.title}";
@@ -165,13 +131,11 @@ const Mobile = () => {;
                     devices.";
                   </p>"";
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                    <a"";
-                      href="#"";
+                    <div>Broken JSX</div>
                       className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-medium transition-colors duration-200 text-lg">;
                       Download for iOS;
                     </a>";
-                    <a"";
-                      href="#"";
+                    <div>Broken JSX</div>
                       className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-medium transition-colors duration-200 text-lg">;
                       Download for Android;
                     </a>;
@@ -191,13 +155,11 @@ const Mobile = () => {;
                   deliver exceptional experiences across all devices.";
                 </p>"";
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                  <a"";
-                    href="/mobile-launch"";
+                  <div>Broken JSX</div>
                     className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-medium transition-colors duration-200 text-lg">;
                     Start Mobile Development;
                   </a>";
-                  <a"";
-                    href="/contact"";
+                  <div>Broken JSX</div>
                     className="border border-white/30 hover:bg-white/10 text-white px-8 py-4 rounded-lg font-medium transition-colors duration-200 text-lg">;
                     Discuss Mobile Strategy;
                   </a>;

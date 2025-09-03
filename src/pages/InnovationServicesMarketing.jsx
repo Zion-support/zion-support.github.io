@@ -1,7 +1,8 @@
 import React from 'react';
 ;
 ;
-const InnovationServicesMarketing = () => {    const allServices = [...cuttingEdgeInnovations2025, ...specializedIndustrySolutions2025];
+const InnovationServicesMarketing = () => {};
+};
     const categories = Array.from (new Set (allServices.map (service => service.category) ) ) ;
     const industries = Array.from (new Set (specializedIndustrySolutions2025.map (service => service.industry) ) ) ;
     const formatPrice = (price, model) => {}
@@ -132,7 +133,7 @@ const InnovationServicesMarketing = () => {    const allServices = [...cuttingEd
                         </svg>;
                         {service.name}";
                       </div>))}"";
-                    {categoryServices.length > 3 && (<div className="text-gray-400 text-sm">;
+                    {};
                         +{categoryServices.length - 3} more services;
                       </div>) }
                   </div>;

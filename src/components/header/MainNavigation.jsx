@@ -1,32 +1,23 @@
 import React, { useState } from 'react';
 import { Link  } from 'react-router-dom';
 ;
-export default function Page() {      >;
-        <Home className="w-4 h-4 mr-1" />;
-        Home;
-      </NavLink>;,
+export default function Page() {};
+  return null;
+}
 }
 ;
   ];
 
   const handleDropdownToggle = (index) => {setActiveDropdown(activeDropdown === index ? null : index)};";
-    {";
-      name: "Home", ";
-      href: "/",";
-      current: location.pathname = == "/"} {";
-      name: "Services", ";
-      href: "/services",";
-      current: location.pathname.startsWith("/services"), children: ["",;
+    {};
+      current: location.pathname = == "/"} {};
         { name: "AI Services", href: "/services/ai" }, ";
         { name: "Cloud Solutions", href: "/services/cloud" }, ";
         { name: "Cybersecurity", href: "/services/cybersecurity" }, ";
         { name: "IT Infrastructure", href: "/services/infrastructure" }, ";
         { name: "Digital Transformation", href: "/services/transformation" }, ;
         { name: "Consulting", href: "/services/consulting" }";
-      ]} {";
-      name: "Solutions", ";
-      href: "/solutions",";
-      current: location.pathname.startsWith("/solutions"), children: ["",;
+      ]} {};
         { name: "Industry Solutions", href: "/solutions/industry" }, ";
         { name: "Manufacturing", href: "/solutions/manufacturing" }, ";
         { name: "Financial Services", href: "/solutions/financial" }, ";
@@ -40,21 +31,14 @@ export default function Page() {      >;
         { name: "Careers", href: "/careers" }, ;
         { name: "Partners", href: "/partners" }
       name: "Resources", ";
-  {";
-      name: "Home,";
-      href: "/,;
-      current: location.pathname === "/"} {";
-      name: "Services,";
-      href: "/services,";
-      children: [",;
+  {};
+      current: location.pathname === "/"} {};
         { name: "AI Services", href: "/services/ai" },;
         { name: "Cloud Solutions", href: "/services/cloud" },;
         { name: "Cybersecurity", href: "/services/cybersecurity" },;
         { name: "IT Infrastructure", href: "/services/infrastructure" },;
         { name: "Digital Transformation", href: "/services/transformation" },;
-      ]} {";
-      name: "Solutions,";
-      href: "/solutions,;
+      ]} {};
         { name: "Industry Solutions", href: "/solutions/industry" },;
         { name: "Manufacturing", href: "/solutions/manufacturing" },;
         { name: "Financial Services", href: "/solutions/financial" },;
@@ -91,42 +75,29 @@ export default function Page() {      >;
 ";
   return (";
     <nav className="flex space-x-8">";
-      {navigationItems.map((item, index) => (;
+      {};
         <div key="{item.name}" className="relative">";
-          {item.children ? (;
-            <div className="relative">";
+          {};
               <button onClick="{()" => handleDropdownToggle(index)}
-                className="{"flex" items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${;
-                  item.current;
-                    ? "text-zion-cyan bg-zion-purple/10";
-                    : "text-zion-slate-light hover:text-white hove,";
+                className="{};
     r: bg-zion-purple/10""}"}
 ;
               >;
                 <span>{item.name}</span>;
-                <ChevronDown ;
-                  className="{"h-4" w-4 transition-transform ${;
+                <div>Broken JSX</div>
                     activeDropdown === index ? "rotate-180" : """  />;
               </button>;
               {/* comment */}
 ;
-              {activeDropdown === index && (;
-                <div className=""absolute" top-full left-0 mt-2 w-64 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">;
-                  <div className="py-2">;
-                    {item.children.map((child) => (";
-                      <Link key="{child.name}
-                        to={child.href}
-                        className="block px-4 py-3 text-sm text-zion-slate-light hover:text-white hove,";
-    r: bg-zion-purple/10 transition-colors"">;
+              {};
                         onClick="{()" => setActiveDropdown(null)}
 ;
-  const handleDropdownToggle = (index) => {;
+  const handleDropdownToggle = (index) => {};
     setActiveDropdown(activeDropdown === index ? null : index)}
 ;
 ";
   return (";
-      {navigationItems.map((item, index) => (";
-          {item.children ? (";
+      {};
               <button onClick = "{()" => handleDropdownToggle(index)}";
               <button onClick="{()" ="> handleDropdownToggle(index)}
                   item.current";
@@ -134,23 +105,16 @@ export default function Page() {      >;
                     : "text-zion-slate-light hover: text-white hover:bg-zion-purple/10",;
                 <ChevronDown className="{"h-4" w-4 transition-transform ${ activeDropdown === index ? "rotate-180" : "" }"}       />;
               ;
-              {/* comment */} {activeDropdown === index && (";
-                <div className=""absolute" top-full left-0 mt-2 w-64 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">";
+              {/* comment */} {};
                       <Link key="{child.name}" to="{child.href}" className="{"block" px-4 py-3 text-sm text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors" onClick="{()" => setActiveDropdown(null)}";
                     : "text-zion-slate-light hover:text-white hover:bg-zion-purple/10", ";
                 <span>{item.name}</span>;
-                <ChevronDown className="{"h-4" w-4 transition-transform ${;
-                    activeDropdown === index ? "rotate-180" : ",;
+                <div>Broken JSX</div>
                 /">;
-                <ChevronDown className="{"h-4" w-4 transition-transform ${";
-                    activeDropdown === index ? "rotate-180" :  ,;
+                <div>Broken JSX</div>
                 /">;
               ";
-              {activeDropdown === index && (";
-                <div className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">";
-                      <Link key="{child.name}
-                        to="{child.href}""}
-                        className="block px-4 py-3 text-sm text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors"">;
+              {};
                         onClick="{()" ="> setActiveDropdown(null)}";
                         {child.name}
 ;
@@ -162,9 +126,9 @@ export default function Page() {      >;
 ;
           ) : (";
               to="{item.href}";
-              className="{"px-3" py-2 rounded-md text-sm font-medium transition-colors ${";
+              className="{};
             <Link to="{item.href}" className="{"px-3" py-2 rounded-md text-sm font-medium transition-colors ${ item.current ? "text-zion-cyan bg-zion-purple/10" : "text-zion-slate-light hover: text-white hover:bg-zion-purple/10" }"} >";
-            <Link to="{item.href}";,
+            <div>Broken JSX</div>
 }"}">";
               {item.name}
 ;

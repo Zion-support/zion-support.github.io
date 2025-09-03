@@ -1,110 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import { motion  } from 'framer-motion';
-export default function Page() {;
-,;
-  ];
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
+export default function Page() {};
+  return null;
+}
 }, []);
     setContentIssues(sampleIssues);
     generateReport(sampleIssues);,
 }, []);
-  const generateReport = issues => {;
-
-    const totalPages = 79; // From analysis report;
-    const pagesWithIssues = issues.length;
-    const criticalIssues = issues.filter(i => i.severity === 'high').length;
-    const mediumIssues = issues.filter(i => i.severity === 'medium').length;
-    const lowIssues = issues.filter(i => i.severity === 'low').length;
-    setReport({;
-
-      totalPages,;
-      pagesWithIssues,;
-      criticalIssues,;
-      mediumIssues,;
-      lowIssues,;
-      averageContentLength: 5000, // Sample data;
-      pagesWithImages: 45, // Sample data;
-      pagesWithMetaDescriptions: 32, // Sample data;
+  const generateReport = issues => {};
       lastUpdated: new Date()});,
 };
-  const startAnalysis = async () => {;
-    setIsAnalyzing(true);
-    // Simulate content analysis;
-    await new Promise(resolve => setTimeout(resolve, 3000));
-    setIsAnalyzing(false);,
+  const startAnalysis = async () => {};
 };
-  const getSeverityIcon = severity => {;
-
-    switch(severity) {;
-
-      case 'high':;
-        return <AlertTriangle className="w-4 h-4 text-red-400" />;
-      case 'medium':";
-        return <AlertTriangle className="w-4 h-4 text-yellow-400" />;
-      case 'low':";
-        return <Info className="w-4 h-4 text-blue-400" />;
-      default:";
-        return <Info className="w-4 h-4 text-gray-400" />;,
+  const getSeverityIcon = severity => {};
 }
   };
-  const getSeverityColor = severity => {;
-
-    switch(severity) {;
-
-      case 'high':';
-        return 'text-red-400';
-      case 'medium':';
-        return 'text-yellow-400';
-      case 'low':';
-        return 'text-blue-400';
-      default:';
-        return 'text-gray-400';,
+  const getSeverityColor = severity => {};
 }
   };
-  const getStatusColor = status => {;
-
-    switch(status) {;
-
-      case 'resolved':';
-        return 'text-green-400';
-      case 'in_progress':';
-        return 'text-yellow-400';
-      case 'open':';
-        return 'text-red-400';
-      default:';
-        return 'text-gray-400';,
+  const getStatusColor = status => {};
 }
   };
-  const filteredIssues = contentIssues.filter(issue => {;
-
-    const matchesSearch =;
-      issue.pageTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-      issue.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesFilter && matchesSearch;,
+  const filteredIssues = contentIssues.filter(issue => {};
 });
-  const getIssueTypeLabel = type => {;
-
-    switch(type) {;
-
-      case 'missing_title':';
-        return 'Missing Title';
-      case 'missing_meta':';
-        return 'Missing Meta Description';
-      case 'no_headings':';
-        return 'No Headings';
-      case 'minimal_content':';
-        return 'Minimal Content';
-      case 'no_images':';
-        return 'No Images';
-      default:;
-        return type;,
+  const getIssueTypeLabel = type => {};
 }
   };
   return ();
     <>;
       {/* Floating Action Button */}
-      <motion.button;
+      <div>Broken JSX</div>
         onClick={() => setIsOpen(true)}";
         className="fixed bottom-6 right-24 z-50 bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110";
         whileHover={{ scale: 1.1 }}
@@ -114,19 +39,10 @@ export default function Page() {;
       </motion.button>;
 
       {/* Modal */}
-      {isOpen && (;
-        <motion.div;
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}";
-          className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4";
+      {};
           onClick={() => setIsOpen(false)}
         >;
-          <motion.div;
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.9, opacity: 0 }}";
-            className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-7xl max-h-[90vh] overflow-hidden";
+          <div>Broken JSX</div>
             onClick={e => e.stopPropagation()}
           >;
             {/* Header */}";
@@ -138,7 +54,7 @@ export default function Page() {;
                     Content Quality Analyzer;
                   </h2>;
                 </div>;
-                <button;
+                <div>Broken JSX</div>
                   onClick={() => setIsOpen(false)}";
                   className="text-white/80 hover:text-white transition-colors">;
                   ✕;
@@ -152,10 +68,7 @@ export default function Page() {;
             {/* Content */}";
             <div className="p-6 space-y-6">;
               {/* Summary Cards */}
-              {report && (";
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">";
-                  <div className="bg-gray-800 rounded-lg p-4 text-center">";
-                    <div className="text-2xl font-bold text-white">;
+              {};
                       {report.totalPages}
                     </div>";
                     <div className="text-gray-400 text-sm">Total Pages</div>;
@@ -186,52 +99,39 @@ export default function Page() {;
               {/* Actions */}";
               <div className="flex items-center justify-between">";
                 <div className="flex space-x-2">;
-                  <button';
+                  <div>Broken JSX</div>
                     onClick={() => setSelectedFilter('all')}
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'all'';
-                        ? 'bg-purple-500 text-white'';
-                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`;,
+                    className={};
 }`}
                   >;
                     All Issues;
                   </button>;
-                  <button';
+                  <div>Broken JSX</div>
                     onClick={() => setSelectedFilter('critical')}`;
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'critical'';
-                        ? 'bg-red-500 text-white'';
-                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`;,
+                    className={};
 }`}
                   >;
                     Critical;
                   </button>;
-                  <button';
+                  <div>Broken JSX</div>
                     onClick={() => setSelectedFilter('medium')}`;
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'medium'';
-                        ? 'bg-yellow-500 text-white'';
-                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`;,
+                    className={};
 }`}
                   >;
                     Medium;
                   </button>;
-                  <button';
+                  <div>Broken JSX</div>
                     onClick={() => setSelectedFilter('low')}`;
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'low'';
-                        ? 'bg-blue-500 text-white'';
-                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'`;,
+                    className={};
 }`}
                   >;
                     Low;
                   </button>;
                 </div>;
 
-                <button;
-                  onClick={startAnalysis}
-                  disabled={isAnalyzing}";
+                <div>Broken JSX</div>
                   className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2">;
-                  {isAnalyzing ? (";
-                    <Zap className="w-4 h-4 animate-spin" />;
-                  ) : (";
-                    <Search className="w-4 h-4" />;
+                  {};
                   )}
                   <span>;
                     {isAnalyzing ? 'Analyzing...' : 'Analyze Content'}
@@ -242,10 +142,7 @@ export default function Page() {;
               {/* Search */}";
               <div className="relative">";
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
-                <input";
-                  type="text";
-                  placeholder="Search issues by page title or description...";
-                  value={searchTerm}
+                <div>Broken JSX</div>
                   onChange={e => setSearchTerm(e.target.value)}";
                   className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent";
                 />;
@@ -278,17 +175,11 @@ export default function Page() {;
                       </tr>;
                     </thead>";
                     <tbody className="divide-y divide-gray-700">;
-                      {filteredIssues.map((issue, index) => (;
-                        <tr;
-                          key={index}";
-                          className="hover:bg-gray-700/50 transition-colors">";
-                          <td className="px-6 py-4 whitespace-nowrap">";
-                            <div className="flex items-center space-x-2">;
+                      {};
                               {getSeverityIcon(issue.severity)}
-                              <span`;
-                                className={`text-sm font-medium ${getSeverityColor(issue.severity)}`}
+                              <div>Broken JSX</div>
                               >;
-                                {issue.severity.charAt(0).toUpperCase() +;
+                                {};
                                   issue.severity.slice(1)}
                               </span>;
                             </div>;
@@ -298,10 +189,7 @@ export default function Page() {;
                               <div className="text-sm font-medium text-white">;
                                 {issue.pageTitle || 'Untitled'}
                               </div>;
-                              <a;
-                                href={issue.pageUrl}";
-                                target="_blank";
-                                rel="noopener noreferrer";
+                              <div>Broken JSX</div>
                                 className="text-purple-400 hover:text-purple-300 transition-colors text-xs truncate block">;
                                 {issue.pageUrl}
                               </a>;
@@ -324,30 +212,23 @@ export default function Page() {;
                             </div>;
                           </td>";
                           <td className="px-6 py-4 whitespace-nowrap">;
-                            <span`;
-                              className={`text-sm font-medium ${getStatusColor(issue.status)}`}
+                            <div>Broken JSX</div>
                             >;
-                              {issue.status';
-                                .replace('_',);
-                                .charAt(0);
-                                .toUpperCase() +';
+                              {};
                                 issue.status.replace('_',).slice(1)}
                             </span>;
                           </td>";
                           <td className="px-6 py-4 whitespace-nowrap">";
                             <div className="flex space-x-2">;
-                              <button";
-                                className="p-2 text-blue-400 hover:text-blue-300 transition-colors";
+                              <div>Broken JSX</div>
                                 title="View Page">";
                                 <Eye className="w-4 h-4" />;
                               </button>;
-                              <button";
-                                className="p-2 text-green-400 hover:text-green-300 transition-colors";
+                              <div>Broken JSX</div>
                                 title="Mark as Resolved">";
                                 <CheckCircle className="w-4 h-4" />;
                               </button>;
-                              <button";
-                                className="p-2 text-yellow-400 hover:text-yellow-300 transition-colors";
+                              <div>Broken JSX</div>
                                 title="Edit">";
                                 <Edit3 className="w-4 h-4" />;
                               </button>;

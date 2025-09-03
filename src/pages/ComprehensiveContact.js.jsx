@@ -6,7 +6,9 @@ import { Textarea } from '@/components/ui/textarea';''';
 import { Label } from '@/components/ui/label';''';
 import { Phone, Mail, MapPin, Globe, Users, Shield, CheckCircle, ExternalLink, Send, Building, Award, TrendingUp, Star, MessageSquare, Calendar, FileText } from 'lucide-react';''';
 import { SERVICE_CATEGORIES } from '@/data/enhancedServices';
-export default function ComprehensiveContact() {}
+export {};
+  return null;
+}
     const [formData, setFormData] = useState({}
 ';
 '';

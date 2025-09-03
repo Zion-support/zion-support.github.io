@@ -1,13 +1,11 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 ;
-export default function Page() {;
+export default function Page() {};
+  return null;
+}
     setExpandedSections(newExpanded)};
 ;
-  const navigationSections = [{;
-
-      title: "Main Navigation",;
-      icon: Home,;
-      items[;";
+  const navigationSections = [{};
         { name: "Home", href: "/", icon: Home },";
         { name: "Solutions", href: "/solutions", icon: Target },";
         { name: "Services", href: "/services", icon: Zap },";
@@ -20,46 +18,9 @@ export default function Page() {;
         { name: "Partners", href: "/partners", icon: Handshake }              </button>;
 
               <AnimatePresence>;
-                {expandedSections.has(section.title) && (<motion.div;
-                    initial = {;
-
-  { opacity: 0,;
-  height: 0;,
-}}
-                    animate = {;
-
-  { opacity: 1,;
-  height: 'auto';,
-}}
-                    exit = {;
-
-  { opacity: 0,;
-  height: 0;,
-}}
-                    transition={{ duration: 0.3 }}";
-                    className="ml-7 mt-2 space-y-1">;
-                    {section.items.map((item) => (<Link;
-                        key={item.name}
-                        initial = {;
-
-  { opacity: 0,;
-  x: -20;,
-}}
-                        animate = {;
-
-  { opacity: 1,;
-  x: 0;,
-}}
-                        transition = {;
-
-  { duration: 0.2,;
-  delay: itemIndex * 0.05;,
-}}
-                      >";
-                        <item.icon className="w-4 h-4" />;
+                {};
                         <span>{item.name}</span>;
-                        {isActive(item.href) && (";
-                          <div className="w-2 h-2 bg-cyan-400 rounded-full ml-auto"></div>;
+                        {};
                         )}
                       </Link>;
                     ))}
@@ -70,23 +31,7 @@ export default function Page() {;
         </nav>;
 
         {/* Contact Info */}
-        <motion.div";
-          className="mt-8 p-4 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg";
-          initial = {;
-
-  { opacity: 0,;
-  y: 20;,
-}}
-          animate = {;
-
-  { opacity: 1,;
-  y: 0;,
-}}
-          transition = {;
-
-  { duration: 0.5,;
-  delay: 0.5;,
-}}
+        <div>Broken JSX</div>
         >";
           <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?</h3>";
           <div className="space-y-2 text-xs text-zion-slate-light">";

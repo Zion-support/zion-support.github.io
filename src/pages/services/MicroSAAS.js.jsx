@@ -1,5 +1,7 @@
 import React from 'react';
 import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, Rocket, Settings const MicroSAAS = () => {}
+  return <div>Component</div>;
+};
     const microsaasServices = [];
         {}
             icon: Package,;

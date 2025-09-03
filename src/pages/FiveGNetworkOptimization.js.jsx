@@ -10,17 +10,15 @@ import {}
   Globe,''';
   Cpu} from 'lucide-react';
 const FiveGNetworkOptimization = () => {}
+  return <div>Component</div>;
+};
   return();
     <>;
       <Helmet>;
         <title>5G Network Optimization - Zion Tech Group</title>;
-        <meta;
-          name="description"";
-          content="Advanced 5G network optimization solutions for enhanced performance, coverage, and efficiency.";
+        <div>Broken JSX</div>
         />";
-        <meta"";
-          name="keywords"";
-          content="5G optimization, network performance, telecommunications, 5G infrastructure, network efficiency";
+        <div>Broken JSX</div>
         />;
       </Helmet>";
 "";
@@ -65,7 +63,7 @@ const FiveGNetworkOptimization = () => {}
             </div>";
 "";
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
-              {[];
+              {};
                 {}
                   icon: Zap,';
                   title: 'Speed Enhancement',';
@@ -97,8 +95,7 @@ const FiveGNetworkOptimization = () => {}
                   description:'';
                     'Automated quality monitoring and self-healing capabilities for consistent service delivery'}
               ].map((feature, index) => (;
-                <div";
-                  key={index}"";
+                <div>Broken JSX</div>
                   className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-green-500/50 transition-colors"">"";
                   <feature.icon className="w-12 h-12 text-green-400 mb-6" />"";
                   <h3 className="text-xl font-semibold text-white mb-4">;
@@ -126,7 +123,7 @@ const FiveGNetworkOptimization = () => {}
             </div>";
 "";
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {[];
+              {};
                 {}
 ';
 '';
@@ -185,7 +182,7 @@ const FiveGNetworkOptimization = () => {}
             </div>";
 "";
             <div className="grid md:grid-cols-2 gap-8">;
-              {[];
+              {};
                 {}
 ';
 '';
@@ -213,8 +210,7 @@ const FiveGNetworkOptimization = () => {}
                   description:'';
                     'Provide the reliable, low-latency connectivity required for vehicle-to-everything communication.'}
               ].map((useCase, index) => (;
-                <div";
-                  key={index}"";
+                <div>Broken JSX</div>
                   className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10"">"";
                   <h3 className="text-xl font-semibold text-white mb-4">;
                     {useCase.title}";

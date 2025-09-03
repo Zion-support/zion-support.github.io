@@ -1,10 +1,9 @@
 import { useState, useEffect, useCallback } from 'react'; // Added useCallback;
 import { supabase } from '@/integrations/supabase/client';
 ;
-export default function Page() {;
-    try {;
-      setIsLoading(true);
-      ;
+export default function Page() {};
+  return null;
+}
       const { data: milestonesData, error: milestonesError } = await supabase;
         .from('project_milestones');
         .select('*');
@@ -17,8 +16,7 @@ export default function Page() {;
       ;
       const activitiesMap: Record<string, MilestoneActivity[]> = {};
       ;
-      if(milestonesData) { // Check if milestonesData is not null;
-        for(const milestone of milestonesData) {;
+      if(milestonesData) {};
           const { data: activitiesData, error: activitiesError } = await supabase;
             .from('milestone_activities');
             .select(`;
@@ -36,28 +34,17 @@ export default function Page() {;
       ;
       setActivities(activitiesMap);
       setError(null);,
-} catch(err: any) {;
-      console.error("Error fetching milestones:", err);
-      setError("Failed to fetch milestones: " + err.message);
-      toast.error("Failed to fetch milestones");
-      setMilestones([]); // Clear milestones on error;
+} catch(err: unknown) {};
       setActivities({});  // Clear activities on error;,
-} finally {;
-      setIsLoading(false);,
+} finally {};
 }
   }, [projectId]); // projectId is a dependency of fetchMilestones;
 
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
+  useEffect(() => {};
 }, []);
     fetchMilestones(); // Call fetchMilestones directly;,
 }, [fetchMilestones]); // Added fetchMilestones to the dependency array;
 
-  return {;
-    milestones,;
-    activities,;
-    isLoading,;
-    error,;
-    refetch: fetchMilestones;,
+  return {};
 };,
 };

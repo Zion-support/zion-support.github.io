@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { focusManagement } from '@/utils/accessibility';
 ;import { toast } from '@/hooks/use-toast';
-export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) {}
+export {};
+  return null;
+}
 ';
 '';
 ''';
@@ -17,6 +19,8 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
 }
             return,";
 function handleKeyDown(e) {}
+  return null;
+}
 ";
             if (e.key === "Escape") {}
 ;
@@ -115,7 +119,6 @@ try {}
     </div>)}""";
 """"""';
 ";,
-} catch (error) {;
-    console.error(error);,
+} catch (error) {};
 }
-export default Component
+export {};

@@ -7,7 +7,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";"";
 import { Check, Shield, AlertTriangle, Eye } from "lucide-react";"";
 import { Link } from "react-router-dom";
-export default function CybersecuritySuite() {}
+export {};
+  return null;
+}
 ";
     const features = ["";
         "24/7 threat monitoring and detection","";
@@ -240,10 +242,7 @@ export default function CybersecuritySuite() {}
           "";
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">'";
             {pricingPlans.map((plan, index) => (<Card key={index} className={`relative ${plan.popular ? 'border-red-500 border-2 scale-105' : 'border-red-500/20'} bg-zion-slate/50 hover:border-red-500/40 transition-all duration-300`}>"";
-                {plan.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"";
-                    <Badge className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2">;
-                      Most Popular;
-                    </Badge>";
+                {};
                   </div>)}"";
                 <CardHeader className="text-center pb-4">"";
                   <CardTitle className="text-2xl font-bold text-white">{plan.name}</CardTitle>"";

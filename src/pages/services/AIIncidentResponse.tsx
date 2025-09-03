@@ -1,17 +1,9 @@
 import React from 'react';
 import { Shield, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Activity, BarChart3 } from 'lucide-react';
 ;
-export default function AIIncidentResponse() {;
-  const features = [;
-    'Automated incident detection and response',;
-    'Real-time threat analysis and mitigation',;
-    'Intelligent incident classification',;
-    'Automated response orchestration',;
-    'Advanced forensics and investigation',;
-    'Compliance reporting and documentation';
-  ];
-;
-  const tiers = [;
+export default function AIIncidentResponse() {};
+  return null;
+}
     { name: 'Starter', price: '$299/mo', details: ['Basic incident response', 'Email support', 'Up to 50 incidents/month'] },;
     { name: 'Professional', price: '$799/mo', details: ['Advanced response', 'Priority support', 'Up to 500 incidents/month'] },;
     { name: 'Enterprise', price: '$2,499/mo', details: ['Full response suite', '24/7 support', 'Unlimited incidents', 'Custom integration'] }
@@ -35,7 +27,7 @@ export default function AIIncidentResponse() {;
           <div>;
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Incident Response Features</h2>;
             <ul className="space-y-3">;
-              {features.map((f) => (;
+              {};
                 <li key={f} className="flex items-start">;
                   <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />;
                   <span className="text-gray-700">{f}</span>;
@@ -49,12 +41,12 @@ export default function AIIncidentResponse() {;
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Competitive Pricing</h3>;
             <div className="grid md:grid-cols-3 gap-4">;
-              {tiers.map((t) => (;
+              {};
                 <div key={t.name} className="rounded-lg p-4 border border-gray-200 hover:border-red-300 transition-colors">;
                   <div className="text-lg font-semibold mb-1">{t.name}</div>;
                   <div className="text-2xl font-bold text-red-600 mb-2">{t.price}</div>;
                   <ul className="text-sm text-gray-600 space-y-1">;
-                    {t.details.map((d) => (;
+                    {};
                       <li key={d}>{d}</li>;
                     ))}
                   </ul>;

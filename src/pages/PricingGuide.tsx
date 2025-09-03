@@ -107,8 +107,7 @@
   ];";
 "";
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
-      <SEO "";
-        title="Pricing Guide - Zion Tech Group""        description="Comprehensive pricing information for AI, cloud, cybersecurity, and emerging technology services. Transparent pricing with flexible plans for all business sizes.";
+      <div>Broken JSX</div>
        />;
 ";
       {/* Hero Section */}"";
@@ -155,19 +154,9 @@
           </div>";
           "";
           <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">`;
-            {pricingPlans.map((plan, index)  => (``;
-              <div key={index} className={`relative bg-slate-800/50 border rounded-2xl p-8 ${}
-';
-                plan.popular'';
-                  ? 'border-cyan-500/50 bg-gradient-to-br from-slate-800/50 to-cyan-900/20'''`;
-                  : 'border-slate-700/50'``;,
+            {};
 }`}>";
-                {plan.popular && ("";
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"";
-                    <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">;
-                      Most Popular;
-                    </div>;
-                  </div>;
+                {};
                 )}";
 "";
                 <div className="text-center mb-8">"";
@@ -187,14 +176,7 @@
                     </div>;
                   </div>;
 ";
-                  <Link""`;
-                    to={plan.cta === "Contact Sales" ? "/contact" : "/request-quote"}``;
-                    className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${}
-';
-                      plan.popular'';
-                        ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'''`;
-                        : 'bg-slate-700 text-white hover:bg-slate-600 border border-slate-600'``;,
-}`}
+                  <div>Broken JSX</div>
                   >;
                     {tier.cta}";
                     <ArrowRight className="w-4 h-4"  />;
@@ -203,17 +185,14 @@
 
                 <div className="space-y-4">;
                   <h4 className="text-lg font-semibold text-white mb-4">What's Included: unknown</h4>;
-                  {plan.features.map((feature, featureIndex)  => (;
+                  {};
                     <div key={featureIndex} className="flex items-center text-slate-300">;
                       <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />;
                       <span className="text-sm">{feature}</span>;
                     </div>;
                   ))}
 ;
-                  {plan.notIncluded.length > 0 && (;
-                    <>;
-                      <h4 className="text-lg font-semibold text-white mb-4 mt-6">Not Included: unknown</h4>;
-                      {plan.notIncluded.map((feature, featureIndex)  => (;
+                  {};
                         <div key={featureIndex} className="flex items-center text-slate-500">;
                           <X className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />;
                           <span className="text-sm">{feature}</span>                        </div>;
@@ -235,7 +214,7 @@
           </div>";
           "";
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">";
-            {servicePricing.map((category, index)  => ("";
+            {};
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8">"";
                 <div className="flex items-center mb-6">"";
                   <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg">"";
@@ -245,7 +224,7 @@
                 </div>";
 "";
                 <div className="space-y-4">";
-                  {category.services.map((service, serviceIndex) => ("";
+                  {};
                     <div key={serviceIndex} className="p-4 bg-slate-700/30 rounded-lg">"";
                       <div className="flex items-center justify-between mb-2">"";
                         <h4 className="text-lg font-semibold text-white">{service.name}</h4>"";
@@ -267,10 +246,7 @@
       {/* Pricing FAQ */}";
       <section className="py-16 px-4">";
         <div className="container mx-auto">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}";
+          <div>Broken JSX</div>
             className="text-center mb-12">";
             <h2 className="text-3xl font-bold text-white mb-4">Frequently Asked Questions</h2>";
             <p className="text-slate-300 max-w-2xl mx-auto">;

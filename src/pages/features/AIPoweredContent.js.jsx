@@ -7,7 +7,9 @@ import { Button } from '@/components/ui/button';''';
 import Link from 'next/link';''';
 import { useFeatureUsage } from '@/hooks/useFeatureUsage';''';
 import { useAdvancedOnboardingStatus } from '@/hooks/useAdvancedOnboardingStatus';
-export default function AIPoweredContent() {}
+export {};
+  return null;
+}
 ';
 '';
 ''';
@@ -27,16 +29,10 @@ export default function AIPoweredContent() {}
 }, [markAiExplored]);
   return();
     <>;
-      <SEO;
-        title="AI Content Generation"";
-        description="Generate SEO-optimized blog posts, service descriptions and FAQs with ZionGPT."";
-        keywords="AI content generation, ZionGPT, SEO tools"";
-        canonical="https://app.ziontechgroup.com/features/ai-content-generation";
+      <div>Broken JSX</div>
       />;
       {/* Use a normal script tag so JSON-LD is correctly parsed */}";
-      <script"";
-        type="application/ld+json";
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      <div>Broken JSX</div>
       ></script>";
       <Header />"";
       <main className="bg-background text-white py-12">"";
@@ -48,11 +44,7 @@ export default function AIPoweredContent() {}
             ZionGPT helps you craft high quality articles, service descriptions;
             and FAQs in minutes.;
           </p>";
-          <img"";
-            loading="lazy"";
-            src="https://placehold.co/800x400"";
-            alt="Screenshot of ZionGPT content tool"";
-            className="rounded-lg shadow-xl mx-auto mb-12"";
+          <div>Broken JSX</div>
           />"";
           <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>"";
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">;

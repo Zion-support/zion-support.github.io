@@ -1,6 +1,8 @@
 import React from 'react';''';
 import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, Lock, Eye, Target } from 'lucide-react';
 const BlockchainWeb3 = () => {}
+  return <div>Component</div>;
+};
     const blockchainServices = [];
         {}
             icon: LinkIcon,;

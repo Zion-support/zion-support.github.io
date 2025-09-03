@@ -1,6 +1,8 @@
 import React from 'react';''';
 import AdminLayout from '@/components/admin/AdminLayout';
-export default function AdminDashboard() {}
+export {};
+  return null;
+}
   return();
     <AdminLayout>;
       <div className="space-y-4">"";

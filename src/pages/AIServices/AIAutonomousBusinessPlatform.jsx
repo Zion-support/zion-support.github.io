@@ -4,10 +4,7 @@ import { Link } from 'react-router-dom';''';
 import { Brain, TrendingUp, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Cpu, Database } from 'lucide-react';
 ;
 const features = [;
-    {;
-        title: "Unified Business Platform",;
-        description: "Complete business management solution that integrates all aspects of your operations into one intelligent platform.",;
-        icon: Cpu,;
+    {};
         color: "from-purple-500 to-pink-500"    },;
     {}
 ";
@@ -71,7 +68,9 @@ const modules = [];
         icon: TrendingUp;
 ];
 export { function };
-export default function AIAutonomousBusinessPlatform() {}
+export {};
+  return null;
+}
 ";
 "";
     return (<div className="min-h-screen bg-background relative overflow-hidden">"";
@@ -81,14 +80,7 @@ export default function AIAutonomousBusinessPlatform() {}
       <section className="relative pt-32 pb-20 overflow-hidden">"";
         <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue-light to-zion-purple/20"></div>"";
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <motion.div initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} animate = {}
-  { opacity: 1,;
-  y: 0;
-";
-"";,
+          <div>Broken JSX</div>
 }} transition={{ duration: 0.8 }} className="text-center">"";
             <div className="inline-flex items-center gap-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full px-4 py-2 text-zion-cyan text-sm font-medium mb-6">"";
               <Cpu className="w-4 h-4"/>;
@@ -123,14 +115,7 @@ export default function AIAutonomousBusinessPlatform() {}
       {/* Features Section */}"";
       <section className="py-20 bg-zion-blue-light/5">"";
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <motion.div initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
-  { opacity: 1,;
-  y: 0;
-";
-"";,
+          <div>Broken JSX</div>
 }} transition={{ duration: 0.8 }} className="text-center mb-16">"";
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">;
               Platform Features";
@@ -143,17 +128,7 @@ export default function AIAutonomousBusinessPlatform() {}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {features.map((feature, index) => {}
             const IconComponent = feature.icon;
-            return (<motion.div key={feature.title} initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}} transition = {}
-  { duration: 0.6,;
-  delay: index * 0.1;
-";
-"";,
+            return (<div>Broken JSX</div>
 }} className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300">";
                   <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl mb-6 flex items-center justify-center text-white`}>"";
                     <IconComponent className="w-8 h-8"/>";
@@ -168,14 +143,7 @@ export default function AIAutonomousBusinessPlatform() {}
       {/* Benefits Section */}"";
       <section className="py-20">"";
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <motion.div initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
-  { opacity: 1,;
-  y: 0;
-";
-"";,
+          <div>Broken JSX</div>
 }} transition={{ duration: 0.8 }} className="text-center mb-16">"";
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">;
               Why Choose Our Platform?";
@@ -186,17 +154,7 @@ export default function AIAutonomousBusinessPlatform() {}
           </motion.div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {benefits.map((benefit, index) => (<motion.div key={benefit} initial = {}
-  { opacity: 0,;
-  x: index % 2 === 0 ? -20 : 20;,
-}} whileInView = {}
-  { opacity: 1,;
-  x: 0;,
-}} transition = {}
-  { duration: 0.6,;
-  delay: index * 0.1;
-";
-"";,
+            {};
 }} className="flex items-start gap-3">"";
                 <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0"/>"";
                 <span className="text-zion-slate-light">{benefit}</span>;
@@ -208,14 +166,7 @@ export default function AIAutonomousBusinessPlatform() {}
       {/* Modules Section */}"";
       <section className="py-20 bg-zion-blue-light/5">"";
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <motion.div initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
-  { opacity: 1,;
-  y: 0;
-";
-"";,
+          <div>Broken JSX</div>
 }} transition={{ duration: 0.8 }} className="text-center mb-16">"";
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">;
               Integrated Modules";
@@ -228,17 +179,7 @@ export default function AIAutonomousBusinessPlatform() {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {modules.map((module, index) => {}
             const IconComponent = module.icon;
-            return (<motion.div key={module.title} initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}} transition = {}
-  { duration: 0.6,;
-  delay: index * 0.1;
-";
-"";,
+            return (<div>Broken JSX</div>
 }} className="text-center">"";
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mx-auto mb-4 flex items-center justify-center">"";
                     <IconComponent className="w-8 h-8 text-white"/>";
@@ -253,13 +194,7 @@ export default function AIAutonomousBusinessPlatform() {}
       {/* CTA Section */}"";
       <section className="py-20 bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20">"";
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
-          <motion.div initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
-  { opacity: 1,;
-  y: 0;
-";,
+          <div>Broken JSX</div>
 }} transition={{ duration: 0.8 }}>"";
             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">;
               Ready to Unify Your Business?";

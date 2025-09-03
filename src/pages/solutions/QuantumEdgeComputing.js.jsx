@@ -1,5 +1,7 @@
 import React from 'react';
 import { Zap, Target, TrendingUp, Shield, Globe, Cpu, Lightbulb, Atom, Wifi const QuantumEdgeComputing = () => {}
+  return <div>Component</div>;
+};
     const edgeFeatures = [];
         {}
             icon: Wifi,;

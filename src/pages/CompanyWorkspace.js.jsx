@@ -8,7 +8,9 @@ import { SEO } from '@/components/SEO';''';
 import { ProtectedRoute } from '@/components/ProtectedRoute';''';
 import { useCompWorkspace } from '@/hooks/useCompWorkspace';''';
 import { useWhitelabel } from '@/context/WhitelabelContext';
-export default function CompWorkspace() {}
+export {};
+  return null;
+}
   const { compSlug } = useParams();
   const { user } = useAuth();
   const { comp, isLoading, error } = useCompWorkspace(compSlug);
@@ -41,22 +43,11 @@ export default function CompWorkspace() {}
 }';
   return()'';
     <ProtectedRoute>''';
-      <SEO'''';
-        title={`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}'`'`'`'`;
-        description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}
+      <div>Broken JSX</div>
       />;
-      <Header;
-        customLogo={isWhitelabel ? tenant?.logo_url : company.logoUrl}
-        customTheme={effectiveTheme}
+      <div>Broken JSX</div>
       />";
-      <main"";
-        className="min-h-screen";
-        style={{}
-';
-'';
-''';
-          backgroundColor:'''';
-            effectiveTheme?.backgroundColor || 'var(--background)}}
+      <div>Broken JSX</div>
       >;
         <CompDashboard company={comp} />;
       </main>;

@@ -1,6 +1,8 @@
 import React from 'react';''';
 import { Link } from 'react-router-dom';
 const UltimatePricing2025 = () => {}
+  return <div>Component</div>;
+};
     const pricingTiers = [];
         {}
             name: "Micro SAAS Solutions","";

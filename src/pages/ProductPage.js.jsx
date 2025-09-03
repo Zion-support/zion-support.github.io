@@ -4,7 +4,9 @@ import { Button } from '@/components/ui/button';''';
 import { NEW_PRODUCTS } from '@/data/newProductsData';''';
 import { useCart } from '@/context/CartContext';''';
 import { toast } from '@/hooks/use-toast';
-export default function ProductPage() {}
+export {};
+  return null;
+}
   const { id } = useParams();
   const product = NEW_PRODUCTS.find(p => p.id === id);
   const { dispatch } = useCart();
@@ -13,6 +15,8 @@ export default function ProductPage() {}
     return <div className="p-6 text-white">Product not found</div>;,
 }
   const handleAdd = () => {}
+  return <div>Component</div>;
+};
     setAdding(true);
     dispatch({}
 ';

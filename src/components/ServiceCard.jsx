@@ -2,63 +2,25 @@ import React from 'react';
 export default ServiceCard;
 import { motion  } from 'framer-motion';
 ;
-export default function Page() {;
-;
-    const iconVariants = {;
-
-  hidden: { scale: 0.8,;
-  opacity: 0;,
+export default function Page() {};
+  return null;
+}
 },;
-        visible: {;
-
-            scale: 1,;
-            opacity: 1,;
-            transition: {;
-
-                duration: 0.5,";
-                ease: "easeOut";,
+        visible: {};
 },;
-        hover: {;
-
-            scale: 1.2,;
-            rotate[0, -10, 10, 0],;
-            transition: {;
-
-                duration: 0.6,";
-                ease: "easeInOut";,
+        hover: {};
 };
-    const featureVariants = {;
-
-  hover: {;
-
-            x: 5,;
-            transition: {;
-
-                duration: 0.3,";
-  ease: "easeOut";,
+    const featureVariants = {};
 }
         }
     };
-    const badgeVariants = {;
-
-  hidden: { scale: 0,;
-  opacity: 0;,
+    const badgeVariants = {};
 },;
-        visible: {;
-
-            scale: 1,;
-            opacity: 1,;
-            transition: {;
-
-                duration: 0.3,";
-                ease: "backOut";,
+        visible: {};
 };";
     return (<motion.div variants={cardVariants} initial="hidden" whileInView="visible" whileHover="hover" viewport={{ once: true }} className="group relative h-full">;
       {/* Enhanced Popular Badge */}";
-      {isPopular && (<motion.div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10" initial={{ scale: 0 }} animate={{ scale: 1 }} transition = {;
-";
-  { delay: 0.2, type: "spring",;
-  stiffness: 300;,
+      {};
 }}>";
           <div className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg animate-pulse">;
             ⭐ Most Popular;
@@ -66,18 +28,7 @@ export default function Page() {;
         </motion.div>) }
 ;
       {/* Enhanced New Badge */}";
-      {isNew && (<motion.div className="absolute -top-3 right-4 z-10" initial = {;
-
-  { scale: 0,;
-  rotate: -180;,
-}} animate = {;
-
-  { scale: 1,;
-  rotate: 0;,
-}} transition = {;
-";
-  { delay: 0.3, type: "spring",;
-  stiffness: 300;,
+      {};
 }}>";
           <div className="bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg animate-bounce">;
             🆕 New;
@@ -89,13 +40,7 @@ export default function Page() {;
         <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(34,221,210,0.05)_25%,rgba(34,221,210,0.05)_50%,transparent_50%,transparent_75%,rgba(34,221,210,0.05)_75%)] bg-[size:20px_20px] opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:animate-pulse"/>;
 
         {/* Enhanced Icon with Floating Animation */}";
-        <motion.div className="relative z-10 text-6xl mb-6 text-center" variants={iconVariants} whileHover="hover" animate = {;
-
-  { y: [0, -5,;
-  0];,
-}} transition = {;
-  { duration: 3, repeat: Infinity,;
-  ease: "easeInOut";,
+        <div>Broken JSX</div>
 }}>;
           {icon}
         </motion.div>;
@@ -120,8 +65,7 @@ export default function Page() {;
           </p>;
 
           {/* Enhanced Features */}";
-          {features.length > 0 && (<div className="mb-6">";
-              <ul className="space-y-3">";
+          {};
                 {features.slice(0, 3).map((feature, index) => (<motion.li key={index} className="flex items-center gap-3 text-sm text-zion-slate-light group-hover:text-white transition-colors duration-300" variants={featureVariants} whileHover="hover">";
                     <span className="w-2 h-2 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex-shrink-0 group-hover:scale-125 transition-transform duration-300"/>;
                     {feature}
@@ -141,14 +85,7 @@ export default function Page() {;
           <div className="text-center">";
             <Link to={href} className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-zion-cyan/20 via-zion-blue/20 to-zion-purple/20 text-zion-cyan border border-zion-cyan/30 rounded-xl text-sm font-medium hover:from-zion-cyan/30 hover:via-zion-blue/30 hover:to-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 group-hover:shadow-zion-glow hover:scale-105">;
               <span>Learn More</span>";
-              <motion.span className="group-hover:translate-x-2 transition-transform duration-300" animate = {;
-
-  { x: [0, 5,;
-  0];,
-}} transition = {;
-
-  { duration: 2,;
-  repeat: Infinity;,
+              <div>Broken JSX</div>
 }}>;
                 →;
               </motion.span>;

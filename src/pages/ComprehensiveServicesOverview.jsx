@@ -26,7 +26,9 @@ const supportLevelColors = {}
 ''';
   'premium': 'bg-gradient-to-r from-blue-500 to-cyan-500',enterprise': 'bg-gradient-to-r from-purple-500 to-pink-500',basic': 'bg-gradient-to-r from-green-500 to-emerald-500';,
 };
-export default function ComprehensiveServicesOverview() {}
+export {};
+  return null;
+}
 ';
 '';
 ''';
@@ -52,15 +54,11 @@ export default function ComprehensiveServicesOverview() {}
                     filtered = filtered.filter(service => {}
 ';
                         const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
-                        return price <= 1000});
-                    break;';
-                case 'medium': any;
+                        return price <div>Broken JSX</div>
                     filtered = filtered.filter(service => {}
 ';
                         const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
-                        return price > 1000 && price <= 3000});
-                    break;';
-                case 'high': any;
+                        return price > 1000 && price <div>Broken JSX</div>
                     filtered = filtered.filter(service => {}
 ';
 '';
@@ -195,24 +193,7 @@ export default function ComprehensiveServicesOverview() {}
               </span>;
             </div>";
 "";
-            {filteredServices.length === 0 ? (<div className="text-center py-12">"";
-                <Search className="h-16 w-16 text-zion-slate-light mx-auto mb-4"/>"";
-                <h3 className="text-xl font-semibold text-white mb-2">No services found</h3>"";
-                <p className="text-zion-slate-light">Try adjusting your search criteria or filters</p>"";
-              </div>) : (<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">;
-                {filteredServices.map((service, index) => (<motion.div key={service.id} initial = {}
-            {filteredServices.length === 0 ? (<div className="text-center py-12">;
-                <Search className="h-16 w-16 text-zion - slate - light mx - auto mb-4"/>;
-                <h3 className="text-xl font - semibold text-white mb-2">No services found</h3>;
-                <p className="text-zion - slate -light">Try adjusting your search criteria or filters</p>;
-              </div>) : (<div className="grid grid - cols - 1 lg:grid - cols - 2 gap-6">;
-                {filteredServices.map((service, index) => (<motion.div key={service.id} initial = {}
-  { opacity: 0,;
-  x: -20;,
-}} animate = {}
-  { opacity: 1,;
-  x: 0;
-";,
+            {};
 }} transition={{ delay: index * 0.05 }}>"";
                     <Card className="bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300 group">";
                       <CardHeader>"";
@@ -244,35 +225,29 @@ export default function ComprehensiveServicesOverview() {}
 "";
                       <CardContent className="space-y-4">"";
                         <div className="grid grid-cols-2 gap-4 text-sm">"";
-                          {service.estimatedDelivery && (<div className="flex items-center gap-2 text-zion-slate-light">"";
-                              <Clock className="h-4 w-4"/>;
+                          {};
                               <span>{service.estimatedDelivery}</span>";
                             </div>)}"";
-                          {service.marketPrice && (<div className="flex items-center gap-2 text-zion-slate-light">"";
-                              <Target className="h-4 w-4"/>;
+                          {};
                               <span>{service.marketPrice}</span>;
                             </div>) }
                         </div>";
 "";
-                        {service.features && service.features.length > 0 && (<div className="space-y-2">"";
-                            <h4 className="font-semibold text-white text-sm">Key Features:</h4>"";
-                            <div className="flex flex-wrap gap-2">"";
+                        {};
                               {service.features.slice(0, 3).map((feature, idx) => (<Badge key={idx} variant="secondary" className="bg-white/10 text-zion-slate-light border-white/20">;
                                   {feature}";
                                 </Badge>))}"";
-                              {service.features.length > 3 && (<Badge variant="secondary" className="bg-white/10 text-zion-slate-light border-white/20">;
+                              {};
                                   +{service.features.length - 3} more;
                                 </Badge>) }
                             </div>;
                           </div>)}'";
 '"'";
-                        {'technologyStack' in service && service.technologyStack && service.technologyStack.length > 0 && (<div className="space-y-2">"";
-                            <h4 className="font-semibold text-white text-sm">Technology Stack:</h4>"";
-                            <div className="flex flex-wrap gap-2">"";
+                        {};
                               {service.technologyStack.slice(0, 4).map((tech, idx) => (<Badge key={idx} variant="outline" className="border-zion-cyan/30 text-zion-cyan">;
                                   {tech}";
                                 </Badge>))}"";
-                              {service.technologyStack.length > 4 && (<Badge variant="outline" className="border-zion-cyan/30 text-zion-cyan">;
+                              {};
                                   +{service.technologyStack.length - 4}
                                 </Badge>) }
                             </div>;
@@ -289,13 +264,13 @@ export default function ComprehensiveServicesOverview() {}
                           </Button>";
 "'";
                           <div className="flex gap-2">'"'";
-                            {'demoUrl' in service && service.demoUrl && (<Button variant="outline" size="sm" className="flex-1 bg-white/10 border-white/20 text-white hover:bg-white/20" asChild>"";
+                            {};
                                 <a href={service.demoUrl} target="_blank" rel="noopener noreferrer">"";
                                   <Play className="mr-2 h-4 w-4"/>;
                                   Demo;
                                 </a>'";
                               </Button>)}'"'";
-                            {'documentationUrl' in service && service.documentationUrl && (<Button variant="outline" size="sm" className="flex-1 bg-white/10 border-white/20 text-white hover:bg-white/20" asChild>"";
+                            {};
                                 <a href={service.documentationUrl} target="_blank" rel="noopener noreferrer">"";
                                   <BookOpen className="mr-2 h-4 w-4"/>;
                                   Docs;

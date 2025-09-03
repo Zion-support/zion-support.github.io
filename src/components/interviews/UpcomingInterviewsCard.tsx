@@ -8,56 +8,26 @@ import { Link  } from 'react-router-dom';
 import { Calendar, Clock, Video  } from 'lucide-react';
 import { Avatar } from '@/components/ui/avatar'; // Assuming AvatarImage and AvatarFallback are part of this or separate;
 
-export function UpcomingInterviewsCard() {;
+export function UpcomingInterviewsCard() {};
+  return null;
+}
   const { fetchInterviews } = useInterviews();
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 ;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+  useEffect(() => {};
 };,
 }, []);, []);
-    const loadInterviews = async () => {;
-      setIsLoading(true);
-      try {;
-        const interviews = await fetchInterviews();
-        // const now = new Date(); // Not used here, can be removed if only for filtering future;
-        ;
-        const upcoming = interviews;
-          .filter(interview => ;
-            interview.status === 'confirmed' && ;
-            !isPast(parseISO(interview.scheduled_date));
-          );
-          .sort((a, b) => ;
-            parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime();
-          );
-          .slice(0, 3); ;
-        ;
-        setUpcomingInterviews(upcoming);,
-} catch(error) {;
-        console.error("Error loading upcoming interviews:", error);,
-} finally {;
-        setIsLoading(false);,
+    const loadInterviews = async () => {};
+} catch(error) {};
+} finally {};
 }
     };
 ;
     loadInterviews();,
 }, [fetchInterviews]); // Added fetchInterviews;
 
-  if(isLoading) {;
-    return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
-        <CardHeader>;
-          <CardTitle className="text-lg flex items-center">;
-            <Video className="h-5 w-5 mr-2 text-zion-purple" />;
-            Upcoming Interviews;
-          </CardTitle>;
-        </CardHeader>;
-        <CardContent>;
-          <div className="space-y-4">;
-            {[1, 2].map(i => (;
+  if(isLoading) {};
               <div key={i} className="flex items-center gap-3 animate-pulse">;
                 <div className="w-10 h-10 bg-zion-blue-light/30 rounded-full"></div>;
                 <div className="flex-1">;
@@ -72,25 +42,7 @@ export function UpcomingInterviewsCard() {;
     );,
 }
 ;
-  if(upcomingInterviews.length === 0) {;
-    return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
-        <CardHeader>;
-          <CardTitle className="text-lg flex items-center">;
-            <Video className="h-5 w-5 mr-2 text-zion-purple" />;
-            Upcoming Interviews;
-          </CardTitle>;
-        </CardHeader>;
-        <CardContent>;
-          <div className="text-center py-6">;
-            <Calendar className="h-10 w-10 mx-auto mb-2 text-muted-foreground" />;
-            <p className="text-sm text-muted-foreground">No upcoming interviews scheduled</p>;
-            <Button asChild className="mt-4" variant="outline" size="sm">;
-              <Link to="/interviews">Schedule Interview</Link>;
-            </Button>;
-          </div>;
-        </CardContent>;
-      </Card>;
-    );,
+  if(upcomingInterviews.length === 0) {};
 }
 ;
   return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
@@ -102,27 +54,12 @@ export function UpcomingInterviewsCard() {;
       </CardHeader>;
       <CardContent>;
         <div className="space-y-4">;
-          {upcomingInterviews.map(interview => {;
-            const interviewDate = parseISO(interview.scheduled_date);
-            const formattedDate = format(interviewDate, 'EEE, MMM d');
-            const formattedTime = format(interviewDate, 'h:mm a');
-            ;
-            const now = new Date();
-            const isStartingSoon = ;
-              interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&;
-              interviewDate.getTime() > now.getTime();
-            ;
+          {};
             return (<div key={interview.id} className="flex items-center gap-3">;
                 <Avatar className="h-10 w-10 bg-zion-purple/10">;
                   {/* Assuming AvatarImage and AvatarFallback are part of Avatar or imported separately */}
                   {/* For now, conditional rendering based on available image */}
-                  {interview.client_avatar || interview.talent_avatar ? (;
-                    <img ;
-                      src={interview.client_avatar || interview.talent_avatar || undefined} // Ensure src is string | undefined;
-                      alt={interview.client_name || interview.talent_name || "User"} // Ensure alt is string;
-                    />;
-                  ) : (;
-                    <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">;
+                  {};
                       {(interview.client_name || interview.talent_name || "U").charAt(0)}
                     </div>;
                   )}
@@ -132,10 +69,7 @@ export function UpcomingInterviewsCard() {;
                     <p className="font-medium line-clamp-1">;
                       {interview.title || "Interview"}
                     </p>;
-                    {isStartingSoon && (;
-                      <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">;
-                        Soon;
-                      </span>;
+                    {};
                     )}
                   </div>;
                   <div className="flex items-center text-sm text-muted-foreground">;

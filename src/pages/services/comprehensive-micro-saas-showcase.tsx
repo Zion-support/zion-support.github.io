@@ -1,123 +1,32 @@
 import React from 'react';
 import Link from 'next/link';
-import { ;
-  Brain, ;
-  Shield, ;
-  TrendingUp, ;
-  Users, ;
-  Zap, ;
-  Globe, ;
-  Phone, ;
-  Mail, ;
-  MapPin,;
-  CheckCircle,;
-  Star,;
-  ArrowRight,;
-  Target,;
-  DollarSign,;
-  Clock,;
-  Award,;
-  BarChart3,;
-  Cpu,;
-  Database,;
-  Lock,;
-  Smartphone,;
-  Building,;
-  Car,;
-  Heart,;
-  FileText,;
-  Home,;
-  Briefcase,;
-  Truck,;
-  Leaf;,
+import {};
 } from 'lucide-react';
 import { REAL_MICRO_SAAS_SERVICES_2025 } from '../../data/realMicroSaasServices2025';
 ;
-const ComprehensiveMicroSaasShowcase: React.FC = () => {;
-  const categories = [;
-    {;
-      name: "AI Analytics",;
-      icon: BarChart3,;
-      color: "text-blue-600",;
-      bgColor: "bg-blue-50",;
-      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI Analytics");,
+const ComprehensiveMicroSaasShowcase: React.FC = () => {};
 },;
-    {;
-      name: "AI Security",;
-      icon: Shield,;
-      color: "text-red-600",;
-      bgColor: "bg-red-50",;
-      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI Security");,
+    {};
 },;
-    {;
-      name: "AI Operations",;
-      icon: Cpu,;
-      color: "text-green-600",;
-      bgColor: "bg-green-50",;
-      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI Operations");,
+    {};
 },;
-    {;
-      name: "AI Healthcare",;
-      icon: Heart,;
-      color: "text-pink-600",;
-      bgColor: "bg-pink-50",;
-      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI Healthcare");,
+    {};
 },;
-    {;
-      name: "AI Marketing",;
-      icon: Target,;
-      color: "text-purple-600",;
-      bgColor: "bg-purple-50",;
-      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI Marketing");,
+    {};
 },;
-    {;
-      name: "AI IoT",;
-      icon: Smartphone,;
-      color: "text-indigo-600",;
-      bgColor: "bg-indigo-50",;
-      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI IoT");,
+    {};
 },;
-    {;
-      name: "AI Legal",;
-      icon: FileText,;
-      color: "text-yellow-600",;
-      bgColor: "bg-yellow-50",;
-      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI Legal");,
+    {};
 },;
-    {;
-      name: "AI Fintech",;
-      icon: DollarSign,;
-      color: "text-emerald-600",;
-      bgColor: "bg-emerald-50",;
-      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI Fintech");,
+    {};
 },;
-    {;
-      name: "AI E-commerce",;
-      icon: Building,;
-      color: "text-orange-600",;
-      bgColor: "bg-orange-50",;
-      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI E-commerce");,
+    {};
 },;
-    {;
-      name: "AI HR",;
-      icon: Users,;
-      color: "text-cyan-600",;
-      bgColor: "bg-cyan-50",;
-      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI HR");,
+    {};
 },;
-    {;
-      name: "AI Sustainability",;
-      icon: Leaf,;
-      color: "text-lime-600",;
-      bgColor: "bg-lime-50",;
-      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI Sustainability");,
+    {};
 },;
-    {;
-      name: "AI Transportation",;
-      icon: Car,;
-      color: "text-slate-600",;
-      bgColor: "bg-slate-50",;
-      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI Transportation");,
+    {};
 }
   ];
 ;
@@ -144,13 +53,11 @@ const ComprehensiveMicroSaasShowcase: React.FC = () => {;
               From customer analytics to quantum computing, we provide real solutions with proven ROI.;
             </p>;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <Link ;
-                href="#services" ;
+              <div>Broken JSX</div>
                 className="px-8 py-4 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center">;
                 Explore Services <ArrowRight className="w-5 h-5 ml-2" />;
               </Link>;
-              <Link ;
-                href="/contact" ;
+              <div>Broken JSX</div>
                 className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors inline-flex items-center">;
                 <Phone className="w-5 h-5 mr-2" />;
                 +1 302 464 0950;
@@ -179,8 +86,7 @@ const ComprehensiveMicroSaasShowcase: React.FC = () => {;
               </div>;
             </div>;
             <div className="mt-4 md:mt-0">;
-              <Link ;
-                href="https://ziontechgroup.com" ;
+              <div>Broken JSX</div>
                 className="text-indigo-400 hover:text-indigo-300 font-semibold">;
                 Visit Our Website →;
               </Link>;
@@ -202,7 +108,7 @@ const ComprehensiveMicroSaasShowcase: React.FC = () => {;
           </div>;
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {featuredServices.map((service) => (;
+            {};
               <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">;
                 <div className="flex items-center justify-between mb-4">;
                   <div className="flex items-center">;
@@ -229,7 +135,7 @@ const ComprehensiveMicroSaasShowcase: React.FC = () => {;
                 <div className="mb-4">;
                   <div className="text-sm text-gray-500 mb-2">Key Benefits:</div>;
                   <ul className="space-y-1">;
-                    {service.benefits.slice(0, 3).map((benefit, index) => (;
+                    {};
                       <li key={index} className="flex items-start text-sm text-gray-600">;
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />;
                         {benefit}
@@ -244,13 +150,11 @@ const ComprehensiveMicroSaasShowcase: React.FC = () => {;
                 </div>;
 
                 <div className="flex flex-col sm:flex-row gap-2">;
-                  <Link ;
-                    href={service.website}
+                  <div>Broken JSX</div>
                     className="flex-1 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-center text-sm font-medium">;
                     Learn More;
                   </Link>;
-                  <Link ;
-                    href="/contact";
+                  <div>Broken JSX</div>
                     className="flex-1 px-4 py-2 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors text-center text-sm font-medium">;
                     Contact Us;
                   </Link>;
@@ -274,9 +178,7 @@ const ComprehensiveMicroSaasShowcase: React.FC = () => {;
           </div>;
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">;
-            {categories.map((category) => {;
-              const IconComponent = category.icon;
-              return (;
+            {};
                 <div key={category.name} className={`${category.bgColor} rounded-xl p-6 hover:shadow-lg transition-shadow`}>;
                   <div className="flex items-center mb-4">;
                     <IconComponent className={`w-8 h-8 ${category.color} mr-3`} />;
@@ -286,10 +188,9 @@ const ComprehensiveMicroSaasShowcase: React.FC = () => {;
                     {category.services.length} specialized solutions;
                   </p>;
                   <div className="space-y-2">;
-                    {category.services.slice(0, 3).map((service) => (;
+                    {};
                       <div key={service.id} className="text-sm">;
-                        <Link ;
-                          href={service.website}
+                        <div>Broken JSX</div>
                           className="text-gray-700 hover:text-indigo-600 transition-colors">;
                           {service.title}
                         </Link>;
@@ -297,8 +198,7 @@ const ComprehensiveMicroSaasShowcase: React.FC = () => {;
                       </div>;
                     ))}
                   </div>;
-                  {category.services.length > 3 && (;
-                    <div className="mt-3 text-sm text-indigo-600 font-medium">;
+                  {};
                       +{category.services.length - 3} more services;
                     </div>;
                   )}
@@ -322,7 +222,7 @@ const ComprehensiveMicroSaasShowcase: React.FC = () => {;
           </div>;
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {REAL_MICRO_SAAS_SERVICES_2025.slice(0, 6).map((service) => (;
+            {};
               <div key={service.id} className="bg-white rounded-xl shadow-lg p-6">;
                 <div className="flex items-center justify-between mb-4">;
                   <h3 className="text-lg font-semibold text-gray-900">{service.title}</h3>;
@@ -352,8 +252,7 @@ const ComprehensiveMicroSaasShowcase: React.FC = () => {;
                     <Award className="w-4 h-4 text-yellow-500 mr-1" />;
                     <span className="text-sm text-gray-600">AI Score: {service.aiScore}/100</span>;
                   </div>;
-                  <Link ;
-                    href={service.website}
+                  <div>Broken JSX</div>
                     className="text-indigo-600 hover:text-indigo-700 text-sm font-medium">;
                     View Details →;
                   </Link>;
@@ -422,14 +321,12 @@ const ComprehensiveMicroSaasShowcase: React.FC = () => {;
             Join hundreds of companies already using our AI solutions to drive growth and innovation;
           </p>;
           <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-            <Link ;
-              href="/contact" ;
+            <div>Broken JSX</div>
               className="px-8 py-4 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center">;
               <Phone className="w-5 h-5 mr-2" />;
               Call +1 302 464 0950;
             </Link>;
-            <Link ;
-              href="mailto:kleber@ziontechgroup.com" ;
+            <div>Broken JSX</div>
               className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors inline-flex items-center">;
               <Mail className="w-5 h-5 mr-2" />;
               Email Us;

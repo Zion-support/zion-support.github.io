@@ -1,6 +1,7 @@
 import {  import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
-export default function Page() {;
-,;
+export default function Page() {};
+  return null;
+}
     { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' },;
     { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' },;
     { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' };
@@ -17,21 +18,7 @@ export default function Page() {;
     ;
     return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}) ;
 ;
-    switch(sortBy) {;
-      case 'price':;
-        return a.price - b.price;      case 'name':;
-        return a.title.localeCompare(b.title);
-      case 'innovation':;
-        ;
-  ;
-  ;
-';
-  'Advanced': 1, 'Cutting-edge': 2,;  ;
-  ;
-  ;
-  ;
-  'Revolutionary': 3 ;
-;,
+    switch(sortBy) {};
 };
         return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;
                (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);      case 'category':;
@@ -40,17 +27,12 @@ export default function Page() {;
         return 0}) ;
 ;
     hidden: { opacity: 0 },;
-    visible: {;
-      opacity: 1,;
-      transition: {;
-        staggerChildren: 0.1;,
+    visible: {};
 };,
 };,
 };
 ;
-  const itemVariants = {;
-  hidden: { y: 20,;
-  opacity: 0;,
+  const itemVariants = {};
 },                value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}";
                 className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl pl-12 pr-4 py-3 text-white placeholder-zion-slate-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan";
@@ -61,12 +43,11 @@ export default function Page() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">;
               {/* Category Filter */}";
               <div className="relative">;
-                <select;
-                  value={activeCategory}
+                <div>Broken JSX</div>
                   onChange={(e) => setActiveCategory(e.target.value)}";
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none";
 
-                  {categories.map((category) => (;
+                  {};
                     <option key={category.id} value={category.id}>;
                       {category.icon} {category.name} ({category.count});
                     </option>;
@@ -76,12 +57,11 @@ export default function Page() {;
 
               {/* Innovation Level Filter */}";
               <div className="relative">;
-                <select;
-                  value={innovationLevel}
+                <div>Broken JSX</div>
                   onChange={(e) => setInnovationLevel(e.target.value)}";
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none";
 
-                  {innovationLevels.map((level) => (;
+                  {};
                     <option key={level.id} value={level.id}>;
                       {level.icon} {level.name}
                     </option>;
@@ -91,8 +71,7 @@ export default function Page() {;
 
               {/* Sort By */}";
               <div className="relative">;
-                <select;
-                  value={sortBy}
+                <div>Broken JSX</div>
                   onChange={(e) => setSortBy(e.target.value)}";
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none";
 ";
@@ -105,19 +84,15 @@ export default function Page() {;
 
               {/* View Mode Toggle */}";
               <div className="flex bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl p-1">;
-                <button';
+                <div>Broken JSX</div>
                   onClick={() => setViewMode('grid')}
-                  className={`flex-1 px-3 py-2 rounded-lg transition-all ${viewMode === 'grid'';
-                      ? 'bg-zion-cyan text-white'';
-                      : 'text-zion-slate-400 hover:text-white'`;,
+                  className={};
 }`}
 ";
                   <Grid className="w-4 h-4 mx-auto"  />                </button>;
-                <button';
+                <div>Broken JSX</div>
                   onClick={() => setViewMode('list')}`;
-                  className={`flex-1 px-3 py-2 rounded-lg transition-all ${viewMode === 'list'';
-                      ? 'bg-zion-cyan text-white'';
-                      : 'text-zion-slate-400 hover:text-white'`;,
+                  className={};
 }`}
 ";
                   <List className="w-4 h-4 mx-auto"  />                </button>;
@@ -130,25 +105,13 @@ export default function Page() {;
                 Price Range: ${priceRange[0]} - ${priceRange[1]}
               </label>";
               <div className="flex gap-4 items-center">;
-                <input";
-                  type="range";
-                  min="0";
-                  max="10000";
-                  value={priceRange[0]}
-                  onChange = {;
-
+                <div>Broken JSX</div>
   (e) => setPriceRange([parseInt(e.target.value),;
   priceRange[1]]);,
 }";
                   className="flex-1 h-2 bg-zion-slate-600 rounded-lg appearance-none cursor-pointer slider";
                 />;
-                <input";
-                  type="range";
-                  min="0";
-                  max="10000";
-                  value={priceRange[1]}
-                  onChange = {;
-
+                <div>Broken JSX</div>
   (e) => setPriceRange([priceRange[0],;
   parseInt(e.target.value)]);,
 }";
@@ -171,25 +134,11 @@ export default function Page() {;
           </div>;
 
           {/* Services Grid / List */}
-          <motion.div;
-            variants={containerVariants}";
-            initial="hidden";
-            animate="visible"';
-            className={viewMode === 'grid'';
-              ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'';
-              : 'space-y-4';
-
-            {sortedServices.map((service) => (;
-              <motion.div;
-                key={service.id}
-                variants={itemVariants}`;
-                className={`bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-700 rounded-2xl p-6 hover:border-zion-cyan/50 hover:shadow-lg hover:shadow-zion-cyan/20 transition-all duration-300 cursor-pointer group ${viewMode === 'list' ? 'flex items-center gap-6' : ''`;,
-}`}
+          <div>Broken JSX</div>
+            {};
                 onClick={() => handleServiceClick(service)}
 ;
-                {viewMode === 'grid' ? (;
-                  // Grid View;
-                  <>;
+                {};
                     {/* Header */}";
                     <div className="flex items-start justify-between mb-4">";
                       <div className="flex items-center gap-3">;
@@ -211,12 +160,7 @@ export default function Page() {;
 
                     {/* Tags */}";
                     <div className="flex flex-wrap gap-2 mb-4">;
-                      {service.tags.slice(0, 3).map((tag, index) => (;
-                        <span;
-                          key={index}";
-                          className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-lg";
-
-                          {tag}
+                      {};
                         </span>) ) }
                     </div>;
 
@@ -265,12 +209,7 @@ export default function Page() {;
                       </p>;
 ";
                       <div className="flex flex-wrap gap-2">;
-                        {service.tags.slice(0, 5).map((tag, index) => (;
-                          <span;
-                            key={index}";
-                            className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-lg";
-
-                            {tag}
+                        {};
                           </span>) ) }
                       </div>;
                     </div>;
@@ -289,26 +228,7 @@ export default function Page() {;
           </motion.div>;
 
           {/* No Results */}
-          {filteredServices.length === 0 && (<motion.div;
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}";
-              className="text-center py-20";
-";
-              <div className="text-6xl mb-4">🔍</div>";
-              <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>";
-              <p className="text-zion-slate-400 mb-6">;
-                Try adjusting your search criteria or filters;
-              </p>;
-              <button      onClick = {;
-  ;
-  ;
-  ;
-  ;
-  () => {;
-                  setSearchTerm('');
-                  setActiveCategory('all');
-                  setPriceRange([0,;
-  10000]);
+          {};
                   setInnovationLevel('all')}}"                className="bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover:bg-zion-cyan/90 transition-colors">;
                 Clear All Filters;
               </button>;
@@ -318,30 +238,7 @@ export default function Page() {;
 
       {/* Service Detail Modal */}
       <AnimatePresence>;
-        {selectedService && (<motion.div;
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}";
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4";
-            onClick={closeModal}
-;
-            <motion.div;
-              initial = {;
-
-  { scale: 0.9,;
-  opacity: 0;,
-}}
-              animate = {;
-
-  { scale: 1,;
-  opacity: 1;,
-}}
-              exit = {;
-
-  { scale: 0.9,;
-  opacity: 0;,
-}}";
-              className="bg-zion-slate-900 border border-zion-slate-700 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto";
+        {};
               onClick={(e) => e.stopPropagation()}
 ";
               <div className="p-8">;
@@ -359,10 +256,7 @@ export default function Page() {;
                       {selectedService.description}
                     </p>;
                   </div>;
-                  <button;
-                    onClick={closeModal}";
-                    className="text-zion-slate-400 hover:text-white transition-colors";
-";
+                  <div>Broken JSX</div>
                     <X className="w-6 h-6"  />                  </button>;
                 </div>;
 
@@ -395,7 +289,7 @@ export default function Page() {;
                       <CheckCircle className="w-5 h-5 text-zion-green"  />                      Key Features;
                     </h3>";
                     <ul className="space-y-2">;
-                      {selectedService.features.map((feature, index) => (";
+                      {};
                         <li key={index} className="flex items-start gap-2 text-zion-slate-300">";
                           <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mt-2 flex-shrink-0" />;
                           {feature}
@@ -407,7 +301,7 @@ export default function Page() {;
                       <TrendingUp className="w-5 h-5 text-zion-green"  />                      Benefits;
                     </h3>";
                     <ul className="space-y-2">;
-                      {selectedService.benefits.map((benefit, index) => (";
+                      {};
                         <li key={index} className="flex items-start gap-2 text-zion-slate-300">";
                           <div className="w-1.5 h-1.5 bg-zion-purple rounded-full mt-2 flex-shrink-0" />;
                           {benefit}
@@ -423,7 +317,7 @@ export default function Page() {;
                       <Target className="w-5 h-5 text-zion-cyan"  />                      Use Cases;
                     </h3>";
                     <ul className="space-y-2">;
-                      {selectedService.useCases.map((useCase, index) => (";
+                      {};
                         <li key={index} className="flex items-start gap-2 text-zion-slate-300">";
                           <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mt-2 flex-shrink-0" />;
                           {useCase}
@@ -435,7 +329,7 @@ export default function Page() {;
                       <Users className="w-5 h-5 text-zion-purple"  />                      Target Audience;
                     </h3>";
                     <ul className="space-y-2">;
-                      {selectedService.targetAudience.map((audience, index) => (";
+                      {};
                         <li key={index} className="flex items-start gap-2 text-zion-slate-300">";
                           <div className="w-1.5 h-1.5 bg-zion-purple rounded-full mt-2 flex-shrink-0" />;
                           {audience}
@@ -445,16 +339,7 @@ export default function Page() {;
                 </div>;
 
                 {/* Technical Specs */}
-                {selectedService.technicalSpecs && (";
-                  <div className="mb-8">";
-                    <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">";
-                      <Code className="w-5 h-5 text-zion-cyan"  />                      Technical Specifications;
-                    </h3>";
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
-                      <div>";
-                        <h4 className="font-medium text-zion-slate-300 mb-2">Technology Stack</h4>";
-                        <div className="flex flex-wrap gap-2">;
-                          {selectedService.technicalSpecs.technology.map((tech, index) => (";
+                {};
                             <span key={index} className="px-3 py-1 bg-zion-slate-800 text-zion-cyan text-sm rounded-lg">;
                               {tech}
                             </span>) ) }
@@ -463,7 +348,7 @@ export default function Page() {;
                       <div>";
                         <h4 className="font-medium text-zion-slate-300 mb-2">Integrations</h4>";
                         <div className="flex flex-wrap gap-2">;
-                          {selectedService.technicalSpecs.integrations.map((integration, index) => (";
+                          {};
                             <span key={index} className="px-3 py-1 bg-zion-slate-800 text-zion-purple text-sm rounded-lg">;
                               {integration}
                             </span>) ) }

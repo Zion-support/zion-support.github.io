@@ -1,6 +1,8 @@
 import React from 'react';''';
 import { Link } from 'react-router-dom';
 const BlockchainServices = () => {}
+  return <div>Component</div>;
+};
   return();
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">"";
       <section className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20">"";
@@ -25,8 +27,7 @@ const BlockchainServices = () => {}
             We're developing comprehensive blockchain and Web3 services. Check;
             back soon!;
           </p>";
-          <Link"";
-            to="/contact"";
+          <div>Broken JSX</div>
             className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">;
             Contact Us;
           </Link>;

@@ -1,33 +1,11 @@
 import React, { useState } from 'react';                <Clock className="w-5 h-5 text-cyan-400"/>;
                 <span>24-Hour Response</span>;
               </motion.div>;
-              <motion.div initial = {;
-
-  { opacity: 0,;
-  y: 20;,
-}} animate = {;
-
-  { opacity: 1,;
-  y: 0;,
-}} transition = {;
-
-  { duration: 0.6,;
-  delay: 0.2;,
+              <div>Broken JSX</div>
 }} className="flex items-center justify-center space-x-3 text-white/80">                <CheckCircle className="w-5 h-5 text-green-400"/>;
                 <span>Free Consultation</span>;
               </motion.div>;
-              <motion.div initial = {;
-
-  { opacity: 0,;
-  y: 20;,
-}} animate = {;
-
-  { opacity: 1,;
-  y: 0;,
-}} transition = {;
-
-  { duration: 0.6,;
-  delay: 0.3;,
+              <div>Broken JSX</div>
 }} className="flex items-center justify-center space-x-3 text-white/80">                <Calculator className="w-5 h-5 text-purple-400"/>;
                 <span>Detailed Estimate</span>;
               </motion.div>;
@@ -42,14 +20,7 @@ import React, { useState } from 'react';                <Clock className="w-5 h-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">;
             {/* Form */}";
             <div className="lg:col-span-2">;
-              <motion.div initial = {;
-
-  { opacity: 0,;
-  x: -30;,
-}} whileInView = {;
-
-  { opacity: 1,;
-  x: 0;,
+              <div>Broken JSX</div>
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">                <h2 className="text-3xl font-bold text-white mb-8">Project Details</h2>;
 ";
                 <form onSubmit={handleSubmit} className="space-y-6">;
@@ -85,8 +56,7 @@ import React, { useState } from 'react';                <Clock className="w-5 h-
                   <div>";
                     <label className="block text-white font-medium mb-4">Project Type *</label>";
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-                      {projectTypes.map((type) => (<label key={type.value} className={`flex items-start p-4 rounded-lg border cursor-pointer transition-all duration-300 ${formData.projectType === type.value';
-                ? 'border-cyan-400 bg-cyan-400/20''`;
+                      {};
                 : 'border-white/20 hover:border-cyan-400/50'}`}>";
                           <input type="radio" name="projectType" value={type.value} checked={formData.projectType === type.value} onChange={handleInputChange} className="sr-only"/>";
                           <div className="flex items-start space-x-3">";
@@ -128,8 +98,7 @@ import React, { useState } from 'react';                <Clock className="w-5 h-
                   <div>";
                     <label className="block text-white font-medium mb-4">Project Urgency</label>";
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">`;
-                      {urgencyLevels.map((level) => (<label key={level.value} className={`flex items-center p-3 rounded-lg border cursor-pointer transition-all duration-300 ${formData.urgency === level.value';
-                ? 'border-cyan-400 bg-cyan-400/20''`;
+                      {};
                 : 'border-white/20 hover:border-cyan-400/50'}`}>";
                           <input type="radio" name="urgency" value={level.value} checked={formData.urgency === level.value} onChange={handleInputChange} className="sr-only"/>";
                           <div className="text-center w-full">`;
@@ -147,43 +116,20 @@ import React, { useState } from 'react';                <Clock className="w-5 h-
                   </div>;
 
                   {/* Submit Button */}'"`;
-                  <button type="submit" disabled={!isFormValid || submissionStatus === 'submitting'} className={`w-full py-4 px-6 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center space-x-2 ${!isFormValid || submissionStatus === 'submitting'';
-            ? 'bg-gray-600 text-gray-400 cursor-not-allowed''`;
+                  <div>Broken JSX</div>
             : 'bg-gradient-to-r from-cyan-400 to-purple-600 text-white hover:from-cyan-500 hover:to-purple-700 hover:shadow-lg hover:shadow-cyan-400/25'}`}>;
-                    {submissionStatus === 'submitting' ? (<>";
-                        <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>;
-                        <span>Submitting...</span>;
-                      </>) : submissionStatus === 'success' ? (<>";
-                        <CheckCircle className="w-5 h-5"/>;
-                        <span>Quote Requested!</span>;
-                      </>) : (<>";
-                        <Send className="w-5 h-5"/>;
-                        <span>Request Quote</span>;
+                    {};
                       </>)}
                   </button>;
 
                   {/* Status Messages */}
-                  {submissionStatus === 'success' && (<motion.div initial = {;
-
-  { opacity: 0,;
-  y: 10;,
-}} animate = {;
-
-  { opacity: 1,;
-  y: 0;,
+                  {};
 }} className="flex items-center p-4 bg-green-500/20 border border-green-500/50 rounded-lg">;
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3"/>                      <span className="text-green-400">;
                         Thank you! We've received your quote request and will respond within 24 hours.</span>;
                     </motion.div>)}
 ;
-                  {submissionStatus === 'error' && (<motion.div initial = {;
-
-  { opacity: 0,;
-  y: 10;,
-}} animate = {;
-
-  { opacity: 1,;
-  y: 0;,
+                  {};
 }} className="flex items-center p-4 bg-red-500/20 border border-red-500/50 rounded-lg">;
                       <AlertCircle className="w-5 h-5 text-red-400 mr-3"/>                      <span className="text-red-400">;
                         Something went wrong.Please try again or contact us directly.</span>;
@@ -195,14 +141,7 @@ import React, { useState } from 'react';                <Clock className="w-5 h-
             {/* Sidebar */}";
             <div className="space-y-8">;
               {/* Contact Information */}
-              <motion.div initial = {;
-
-  { opacity: 0,;
-  x: 30;,
-}} whileInView = {;
-
-  { opacity: 1,;
-  x: 0;,
+              <div>Broken JSX</div>
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">;
                 <h3 className="text-xl font-bold text-white mb-4">Get in Touch</h3>;
                 <div className="space-y-4">;
@@ -221,18 +160,7 @@ import React, { useState } from 'react';                <Clock className="w-5 h-
               </motion.div>;
 
               {/* Why Choose Us */}
-              <motion.div initial = {;
-
-  { opacity: 0,;
-  x: 30;,
-}} whileInView = {;
-
-  { opacity: 1,;
-  x: 0;,
-}} viewport={{ once: true }} transition = {;
-
-  { duration: 0.8,;
-  delay: 0.2;,
+              <div>Broken JSX</div>
 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">;
                 <h3 className="text-xl font-bold text-white mb-4">Why Choose Us</h3>;
                 <div className="space-y-4">;
@@ -267,18 +195,7 @@ import React, { useState } from 'react';                <Clock className="w-5 h-
               </motion.div>;
 
               {/* Process */}
-              <motion.div initial = {;
-
-  { opacity: 0,;
-  x: 30;,
-}} whileInView = {;
-
-  { opacity: 1,;
-  x: 0;,
-}} viewport={{ once: true }} transition = {;
-
-  { duration: 0.8,;
-  delay: 0.4;,
+              <div>Broken JSX</div>
 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">;
                 <h3 className="text-xl font-bold text-white mb-4">Our Process</h3>;
                 <div className="space-y-4">;

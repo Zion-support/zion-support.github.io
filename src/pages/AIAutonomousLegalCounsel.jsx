@@ -1,21 +1,17 @@
 import React from 'react';''';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousLegalCounsel = () => {}
+  return <div>Component</div>;
+};
   return();
     <>;
       <Helmet>;
         <title>AI Autonomous Legal Counsel | Zion Tech Group</title>;
-        <meta;
-          name="description"";
-          content="Revolutionary AI autonomous legal counsel that provides 24/7 legal consultation, document analysis, and legal guidance with advanced AI capabilities.";
+        <div>Broken JSX</div>
         />";
-        <meta"";
-          name="keywords"";
-          content="AI legal counsel, autonomous legal AI, legal consultation, AI law, legal automation, AI legal assistant";
+        <div>Broken JSX</div>
         />";
-        <link"";
-          rel="canonical"";
-          href="https://ziontechgroup.com/ai-autonomous-legal-counsel";
+        <div>Broken JSX</div>
         />;
       </Helmet>";
 "";
@@ -183,12 +179,7 @@ const AIAutonomousLegalCounsel = () => {}
               Legal Practice Areas";
             </h2>"";
             <div className="grid md:grid-cols-4 gap-6">';
-              {['';
-                'Business Law',Contract Law',Employment Law',Real Estate',Family Law',Criminal Law',Intellectual Property',Tax Law';
-              ].map(area => (;
-                <div";
-                  key={area}"";
-                  className="bg-white/5 rounded-lg p-4 text-center border border-white/10"">"";
+              {};
                   <span className="text-white font-medium">{area}</span>;
                 </div>;
               ))}

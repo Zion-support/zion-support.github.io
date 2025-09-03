@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';''';
 import { Badge } from '@/components/ui/badge';''';
 import { Link } from 'react-router-dom';
-import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Server, Eye, FileText, CheckCircle, Users, Lock, Search const AIServices = [];
+import {};
     {}
         title: "AI Strategy Consulting","";
         description: "Strategic guidance for implementing AI solutions in your business","";
@@ -152,7 +152,9 @@ const categories = ["";
     { name: "Security", value: "security", icon: <Lock className="h-4 w-4"/> },"";
     { name: "Content", value: "content", icon: <FileText className="h-4 w-4"/> }
 ];
-export default function AIServicesPage() {}
+export {};
+  return null;
+}
 ";
 "";
     const [selectedCategory, setSelectedCategory] = React.useState("all");"";
@@ -187,8 +189,7 @@ export default function AIServicesPage() {}
       {/* Category Filter */}"";
       <div className="container mx-auto px-4 py-8">"";
         <div className="flex flex-wrap justify-center gap-2 mb-8">"";
-          {categories.map((category) => (<Button key={category.value} variant={selectedCategory === category.value ? "default" : "outline"} onClick={() => setSelectedCategory(category.value)} className={`flex items-center gap-2 ${selectedCategory === category.value""`;
-                ? "bg-zion-purple text-white""`"`;
+          {categories.map((category) => (<Button key={category.value} variant={selectedCategory === category.value ? "default" : "outline"} onClick={() => setSelectedCategory(category.value)} className={};
                 : "border-zion-purple text-zion-purple hover:bg-zion-purple/10"}`}>;
               {category.icon}
               {category.name}
@@ -203,7 +204,7 @@ export default function AIServicesPage() {}
                   <div className="p-3 rounded-lg bg-zion-purple/10 group-hover:bg-zion-purple/20 transition-colors">;
                     {service.icon}";
                   </div>"";
-                  {service.badge && (<Badge variant="secondary" className="bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30">;
+                  {};
                       {service.badge}
                     </Badge>)}";
                 </div>"";

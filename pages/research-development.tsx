@@ -1,7 +1,8 @@
 import React from 'react';
 import SEOHead from '../src/components/SEOHead';
 ;
-const RDPage = () => {;
+const RDPage = () => {};
+};
   return (;
     <>;
       <SEOHead title="Research & Development - Zion Tech Group" description="Explore our R&D initiatives and innovation programs." />;

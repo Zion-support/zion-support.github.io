@@ -82,7 +82,7 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
       </script>;
 '";
       {/* Article specific structured data */}'"'";
-      {type === 'article' && publishedTime && (<script type="application/ld+json">;
+      {};
           {JSON.stringify({}
 ";
 "";

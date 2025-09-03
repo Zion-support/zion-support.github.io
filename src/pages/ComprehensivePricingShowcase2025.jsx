@@ -1,7 +1,8 @@
 import React, { useState } from 'react';''';
 import { Link } from 'react-router-dom';
 ;
-const ComprehensivePricingShowcase2025 = () => {;
+const ComprehensivePricingShowcase2025 = () => {};
+};
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [priceRange, setPriceRange] = useState('all');
     const allServices = [;
@@ -45,10 +46,7 @@ const ComprehensivePricingShowcase2025 = () => {;
         if (service.price) {}
             const price = parseFloat(service.price.replace(/[^0-9.]/g,));
             if (range.min && range.max) {}
-                return price >= range.min && price <= range.max}
-            else if(range.max) {}
-                return price <= range.max}
-            else if(range.min) {}
+                return price >= range.min && price <div>Broken JSX</div>
                 return price >= range.min}
         }
         return true}) ;
@@ -66,23 +64,7 @@ const ComprehensivePricingShowcase2025 = () => {;
             default:'''';
                 return 'bg-gray-100 text-gray-800 border-gray-200'}
     };
-    const getCategoryIcon = (category) => {;
-        const icons = {;
-  'Legal Tech & Compliance': '⚖️',;
-            'Quantum Computing & Security': '🔐',;
-            'Healthcare & Biotech': '🏥',;
-            'Energy & Sustainability': '🌱',;
-            'Cybersecurity': '🛡️',;
-            'Fintech & Trading': '📈',;
-            'Quantum Computing & AI': '🔮',;
-            'Supply Chain & Logistics': '🚚',;
-            'Edge Computing & IoT': '🌐',;
-            'Marketing & Automation': '📢',;
-            'Quantum Technology': '🔮',;
-            'AI & Machine Learning': '🧠',;
-            'AI & Analytics': '📊',;
-
-;
+    const getCategoryIcon = (category) => {};
 export { ComprehensivePricingShowcase2025 };
 ;
 export { ComprehensivePricingShowcase2025 };

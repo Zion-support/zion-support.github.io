@@ -3,10 +3,12 @@ import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';''';
 import { Button } from '@/components/ui/button';''';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';''';
 import { Badge } from '@/components/ui/badge';''';
-import { Cloud, Users, TrendingUp, Phone, Mail, Globe, ArrowRight, Zap, Clock, Star, Shield, Smartphone, Settings, PieChart, FileText import Target from 'lucide-react/dist/esm/icons/target';''';
+import {};
 import { Link } from 'react-router-dom';''';
 const microSAASServices = COMPREHENSIVE_SERVICES.filter(service => service.category === 'Micro SAAS');
-export default function MicroSAASShowcase() {}
+export {};
+  return null;
+}
     return (<div className="min-h-screen bg-background">";
       {/* Hero Section */}"";
       <section className="bg-gradient-to-br from-zion-blue via-zion-cyan to-zion-blue-dark py-20">"";

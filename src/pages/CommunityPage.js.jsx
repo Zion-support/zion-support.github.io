@@ -176,7 +176,9 @@ const recentPosts = [];
         authorRole: "Freelancer";,
 }
 ];
-export default function CommunityPage() {}
+export {};
+  return null;
+}
 ";
     const { user } = useAuth();"";
     const [activeTab, setActiveTab] = useState("categories");";

@@ -1,21 +1,17 @@
 import React from 'react';''';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousCodeReview = () => {}
+  return <div>Component</div>;
+};
   return();
     <>;
       <Helmet>;
         <title>AI Autonomous Code Review | Zion Tech Group</title>;
-        <meta;
-          name="description"";
-          content="Revolutionary AI-powered autonomous code review system that automatically analyzes, reviews, and improves code quality with intelligent insights and recommendations.";
+        <div>Broken JSX</div>
         />";
-        <meta"";
-          name="keywords"";
-          content="AI code review, autonomous code review, code quality, software development, AI development tools";
+        <div>Broken JSX</div>
         />";
-        <link"";
-          rel="canonical"";
-          href="https://ziontechgroup.com/ai-autonomous-code-review";
+        <div>Broken JSX</div>
         />;
       </Helmet>";
 "";
@@ -185,12 +181,7 @@ const AIAutonomousCodeReview = () => {}
               Supported Languages & Frameworks";
             </h2>"";
             <div className="grid md:grid-cols-4 gap-6">';
-              {['';
-                'JavaScript',TypeScript',Python',Java',C#',Go',Rust',PHP',Ruby',Swift',Kotlin',Scala';
-              ].map(lang => (;
-                <div";
-                  key={lang}"";
-                  className="bg-white/5 rounded-lg p-4 text-center border border-white/10"">"";
+              {};
                   <span className="text-white font-medium">{lang}</span>;
                 </div>;
               ))}

@@ -1,5 +1,5 @@
 // comment;
-export const performance = {}
+export {};
 ;
 
-export default performance
+export {};

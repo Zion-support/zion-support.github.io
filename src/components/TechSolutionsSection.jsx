@@ -1,45 +1,11 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 ;
-export default function Page() {;
-,;
-    {;
-
-        id: 'iot-solutions',;
-        title: 'IoT Solutions',;
-        description: 'Connected devices and smart systems for the modern world',";
-        icon: <Cpu className="w-8 h-8"/>,;
-        color: 'from-zion-cyan to-zion-purple',;
-        bgColor: 'from-zion-cyan/20 to-zion-purple/20',;
-        features = [';
-            'Device connectivity management',Real-time monitoring',Data collection & analysis',Remote control systems',Predictive maintenance';
-        ],;
-        benefits = [';
-            'Monitor assets in real-time',Reduce maintenance costs by 30%',Improve operational efficiency';
-        ],;
-        useCases['Manufacturing',Smart Cities',Agriculture',Healthcare'],;
-        rating: 4.6,;
-        projects: 90,;
-        category: 'Connected Devices';,
+export default function Page() {};
+  return null;
+}
 },;
-    {;
-
-        id: 'mobile-apps',;
-        title: 'Mobile Applications',;
-        description: 'Native and cross-platform mobile solutions for all devices',";
-        icon: <Smartphone className="w-8 h-8"/>,;
-        color: 'from-zion-purple to-zion-cyan',;
-        bgColor: 'from-zion-purple/20 to-zion-cyan/20',;
-        features = [';
-            'iOS & Android development',Cross-platform solutions',UI/UX design',Performance optimization',App store deployment';
-        ],;
-        benefits = [';
-            'Reach customers on all devices',Improve user engagement',Increase brand visibility';
-        ],;
-        useCases['Retail',Entertainment',Education',Healthcare'],;
-        rating: 4.8,;
-        projects: 250,;
-        category: 'Mobile';,
+    {};
 }
 ];
 const industries = ['";
@@ -52,48 +18,21 @@ const industries = ['";
 ];
     const [selectedSolution, setSelectedSolution] = useState(null);
     const [hoveredSolution, setHoveredSolution] = useState(null);
-    const containerVariants = {;
-
+    const containerVariants = {};
         hidden: { opacity: 0 },;
-        visible: {;
-
-            opacity: 1,;
-            transition: {;
-
-                staggerChildren: 0.15,;
-                delayChildren: 0.1;,
+        visible: {};
 }
         }
     };
-    const itemVariants = {;
-
-  hidden: { y: 30,;
-  opacity: 0;,
+    const itemVariants = {};
 },;
-        visible: {;
-
-            y: 0,;
-            opacity: 1,;
-            transition: {;
-
-                duration: 0.6,";
-                ease: "easeOut";,
+        visible: {};
 }
         }
     };
-    const cardVariants = {;
-
-  hidden: { scale: 0.95,;
-  opacity: 0;,
+    const cardVariants = {};
 },;
-        visible: {;
-
-            scale: 1,;
-            opacity: 1,;
-            transition: {;
-
-                duration: 0.4,";
-                ease: "easeOut";,
+        visible: {};
 }
         }
     };";
@@ -106,12 +45,8 @@ const industries = ['";
       </div>;
 ";
 
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {;
-
-  { opacity: 1,;
-  y: 0;,
+  {};
+}} whileInView = {};
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>;
           <h2 className="text-4xl md:text-5xl lg:text-6xl font - bold text-white mb-6">;
             Technology < span className="bg-gradient - to - r from - zion - cyan to - zion - purple bg-clip - text text-transparent">Solutions</span>;
@@ -121,18 +56,7 @@ const industries = ['";
 
           {/* Industry stats */}";
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">;
-            {industries.map((industry, index) => (<motion.div key={industry.name} initial = {;
-
-  { opacity: 0,;
-  scale: 0.8;,
-}} whileInView = {;
-
-  { opacity: 1,;
-  scale: 1;,
-}} viewport={{ once: true }} transition = {;
-
-  { duration: 0.4,;
-  delay: index * 0.1;,
+            {};
 }} className="text-center p - 3 rounded-xl bg-zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue -light / 20">;
                 <div className="text-zion - cyan mb-2 flex justify -center">                  {industry.icon}
                 </div>";
@@ -144,10 +68,7 @@ const industries = ['";
 
         {/* Solutions Grid */}";
         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>;
-          {solutions.map((solution, index) => (<motion.div key={solution.id} variants={itemVariants} whileHover={{ y: -8 }} transition = {;
-";
-  { type: "spring",;
-  stiffness: 300;,
+          {};
 }} className="relative" onHoverStart={ () => setHoveredSolution(solution.id) } onHoverEnd={ () => setHoveredSolution(null) }>;
               <div className="h-full p - 8 rounded-2xl bg-gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue - light / 30 hover:border-zion - cyan / 50 transition - all duration - 300 hover:shadow-2xl hover:shadow-zion - cyan / 20 group cursor -pointer" onClick={ () => setSelectedSolution(selectedSolution === solution.id ? null : solution.id) }>;
                 {/* Header */}
@@ -187,7 +108,7 @@ const industries = ['";
                       <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"/>;
                       <span>{feature}</span>;
                     </div>))}";
-                  {solution.features.length > 3 && (<div className="text-zion-cyan/60 text-xs text-center">;
+                  {};
                       +{solution.features.length-3} more features;
                     </div>) }
                 </div>;
@@ -202,29 +123,11 @@ const industries = ['";
 
                 {/* Expanded details */}
                 <AnimatePresence>";
-                  {selectedSolution === solution.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {;
-
-  { opacity: 0, height: 0,;
-  y: 10;,
-}} animate = {;
-";
-  { opacity: 1, height: "auto",;
-  y: 0;,
-}} exit = {;
-
-  { opacity: 0, height: 0,;
-  y: 10;,
+                  {};
 }} transition={{ duration: 0.3 }}>";
                       <h4 className="text-zion-cyan font-semibold text-sm mb-3">Key Benefits:</h4>";
                       <div className="space-y-2 mb-4">";
-                        {solution.benefits.map((benefit, idx) => (<motion.div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-xs" initial = {;
-
-  { opacity: 0,;
-  x: -10;,
-}} animate = {;
-
-  { opacity: 1,;
-  x: 0;,
+                        {};
 }} transition={{ delay: idx * 0.1 }}>";
                             <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>;
                             <span>{benefit}</span>;
@@ -233,14 +136,7 @@ const industries = ['";
 ";
                       <h4 className="text-zion-cyan font-semibold text-sm mb-3">Use Cases:</h4>";
                       <div className="flex flex-wrap gap-2">";
-                        {solution.useCases.map((useCase, idx) => (<motion.span key={idx} className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30" initial = {;
-
-  { opacity: 0,;
-  scale: 0.8;,
-}} animate = {;
-
-  { opacity: 1,;
-  scale: 1;,
+                        {};
 }} transition={{ delay: idx * 0.1 }}>;
                             {useCase}
                           </motion.span>) ) }
@@ -252,18 +148,7 @@ const industries = ['";
         </motion.div>;
 
         {/* Call to action */}";
-        <motion.div className="text-center" initial = {;
-
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {;
-
-  { opacity: 1,;
-  y: 0;,
-}} viewport={{ once: true }} transition = {;
-
-  { duration: 0.6,;
-  delay: 0.5;,
+        <div>Broken JSX</div>
 }}>";
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">";
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">";

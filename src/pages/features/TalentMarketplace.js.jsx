@@ -6,7 +6,9 @@ import { GradientHeading } from '@/components/GradientHeading';''';
 import { Button } from '@/components/ui/button';''';
 import Link from 'next/link';
 export { function };
-export default function TalentMarketplace() {}
+export {};
+  return null;
+}
   const schema = {}
 ';
 '';
@@ -18,16 +20,10 @@ export default function TalentMarketplace() {}
     url: 'https://app.ziontechgroup.com/features/talent-marketplace'};
   return();
     <>;
-      <SEO;
-        title="Talent Marketplace"";
-        description="Discover and hire top AI specialists through the Zion talent marketplace."";
-        keywords="AI talent marketplace, hire developers, tech freelancers"";
-        canonical="https://app.ziontechgroup.com/features/talent-marketplace";
+      <div>Broken JSX</div>
       />;
       {/* Use a normal script tag so JSON-LD is correctly parsed */}";
-      <script"";
-        type="application/ld+json";
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      <div>Broken JSX</div>
       ></script>";
       <Header />"";
       <main className="bg-background text-white py-12">"";
@@ -39,11 +35,7 @@ export default function TalentMarketplace() {}
             Browse thousands of verified AI engineers, data scientists and other;
             tech professionals.;
           </p>";
-          <img"";
-            loading="lazy"";
-            src="https://placehold.co/800x400"";
-            alt="Screenshot of talent directory"";
-            className="rounded-lg shadow-xl mx-auto mb-12"";
+          <div>Broken JSX</div>
           />"";
           <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>"";
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">;

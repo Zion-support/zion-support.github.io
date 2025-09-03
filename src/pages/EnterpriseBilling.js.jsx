@@ -4,7 +4,9 @@ import { useAuth } from '@/hooks/useAuth';''';
 import { useRouter } from 'next/router';''';
 import { SEO } from '@/components/SEO';''';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
-export default function EnterpriseBilling() {}
+export {};
+  return null;
+}
   const { user } = useAuth();
   const router = useRouter();
   // Check if user has billing permissions';
@@ -23,9 +25,7 @@ export default function EnterpriseBilling() {}
 }
   return();
     <ProtectedRoute>;
-      <SEO;
-        title="Enterprise Billing - Zion AI Marketplace"";
-        description="Manage your subscription, view invoice history, and download billing statements.";
+      <div>Broken JSX</div>
       />";
 "";
       <main className="min-h-screen bg-background">;

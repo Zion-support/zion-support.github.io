@@ -1,6 +1,8 @@
 import React from 'react';''';
 import Link from 'next/link';
 const AutonomousBusinessOperationsPlatform = () => {}
+  return <div>Component</div>;
+};
   return();
     <div className="min-h-screen bg-slate-900 text-white">";
       {/* Header Section */}"";
@@ -16,13 +18,11 @@ const AutonomousBusinessOperationsPlatform = () => {}
               without human intervention.";
             </p>"";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <Link"";
-                to="/contact"";
+              <div>Broken JSX</div>
                 className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 text-lg">;
                 Start Automation;
               </Link>";
-              <Link"";
-                to="/services/ai-automation"";
+              <div>Broken JSX</div>
                 className="border border-green-500 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300 text-lg">;
                 Learn More;
               </Link>;
@@ -194,13 +194,11 @@ const AutonomousBusinessOperationsPlatform = () => {}
             experiencing unprecedented efficiency and growth.";
           </p>"";
           <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-            <Link"";
-              to="/contact"";
+            <div>Broken JSX</div>
               className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 text-lg">;
               Schedule a Demo;
             </Link>";
-            <Link"";
-              to="/services/ai-automation"";
+            <div>Broken JSX</div>
               className="border border-green-500 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300 text-lg">;
               Explore Services;
             </Link>;

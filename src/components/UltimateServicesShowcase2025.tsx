@@ -1,8 +1,7 @@
 import { Link  } from 'react-router-dom';
-export default function Page() {;
-;
-;
-  return (<div  className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light text-white relative overflow-hidden">;
+export default function Page() {};
+  return null;
+}
       {/* Animated Background */}
       <div  className="absolute inset -0">;
         <div  className="absolute inset - 0 bg-[linear - gradient (rgba (34,221,210,0.03) _1px,transparent_1px) ,linear - gradient(90deg,rgba (34,221,210,0.03) _1px,transparent_1px) ] bg-[size:100px_100px] animate -pulse" />;
@@ -12,10 +11,7 @@ export default function Page() {;
       {/* Header Section */}";
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">";
         <div className="max-w-7xl mx-auto text-center">;
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div>Broken JSX</div>
           >";
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">;
               Zion Tech Group";
@@ -29,9 +25,7 @@ export default function Page() {;
           </motion.div>;
 
           {/* Key Statistics */}
-          <motion.div;
-            className="grid grid - cols - 2 md:grid - cols - 4 gap-6 max - w-5xl mx - auto mb-12";
-            variants={containerVariants}            initial="hidden";
+          <div>Broken JSX</div>
             animate="visible">";
             <motion.div variants={itemVariants} className="glass rounded-xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 group">";
               <div className="text-3xl font-bold text-zion-cyan mb-2 group-hover:scale-110 transition-transform duration-300">{allServices.length}+</div>";
@@ -52,16 +46,10 @@ export default function Page() {;
           </motion.div>;
 
           {/* Search and Filter */}
-          <motion.div;
-            className="max - w-4xl mx - auto mb-8"            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+          <div>Broken JSX</div>
           >";
             <div className="relative mb-6">;
-              <input";
-                type="text";
-                placeholder="Search services, features, or technologies...";
-                value={searchTerm}
+              <div>Broken JSX</div>
                 onChange={(e) => setSearchTerm(e.target.value)}";
                 className="w-full px-6 py-4 glass border border-zion-cyan/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 text-lg";
               />";
@@ -71,8 +59,7 @@ export default function Page() {;
             <div className="flex flex-wrap items-center justify-center gap-4">";
               <div className="flex items-center gap-2">";
                 <label className="text-sm text-gray-300">Sort by:</label>;
-                <select;
-                  value={sortBy}
+                <div>Broken JSX</div>
                   onChange={(e) => setSortBy(e.target.value)}";
                   className="glass border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-zion-cyan">";
                   <option value="rating">Rating</option>";
@@ -89,7 +76,7 @@ export default function Page() {;
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">;
                     <path d="M5 3a2 2 0 00 - 2 2v2a2 2 0 002 2h2a2 2 0 002 - 2V5a2 2 0 00 - 2-2H5zM5 11a2 2 0 00 - 2 2v2a2 2 0 002 2h2a2 2 0 002 - 2v - 2a2 2 0 00 - 2-2H5zM11 5a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2h-2a2 2 0 01 - 2-2V5zM11 13a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2h-2a2 2 0 01 - 2-2v - 2z" />                  </svg>;
                 </button>;
-                <button';
+                <div>Broken JSX</div>
                   onClick={() => setViewMode('list')}'`;
                   className={`p-2 rounded-lg transition-colors ${viewMode === 'list' ? 'bg-zion-cyan text-white' : 'glass text-gray-300 hover:text-white'}`}
                 >";
@@ -106,26 +93,16 @@ export default function Page() {;
       {/* Services Grid / List */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
         <div  className="max - w-7xl mx -auto">;
-          <motion.div;
-            className={viewMode === 'grid';
-              ? "grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8";
-              : "space - y-6"            }
-            variants={containerVariants}";
-            initial="hidden";
+          <div>Broken JSX</div>
             animate="visible">;
-            {sortedServices.map((service, index) => (<motion.div;
-                key={service.id}
-                variants={itemVariants}
-                className={viewMode === 'grid';
-                  ? "glass rounded-2xl p - 6 border border-white / 20 hover:border-zion - cyan / 40 transition - all duration - 500 hover:transform hover:scale - 105 cursor - pointer group";
-                  : "glass rounded-2xl p - 6 border border-white / 20 hover:border-zion - cyan / 40 transition - all duration - 500 cursor - pointer group"                }
+            {};
                 onClick={ () => handleServiceClick(service) }
                 whileHover={{ y: -5 }}
               >";
                 <div className="flex items-start justify-between mb-4">";
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>";
                   <div className="flex items-center gap-1 text-yellow-400">;
-                    {[...Array(5)].map((_, i) => ('`;
+                    {};
                       <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'fill-current' : 'fill-gray-600'}`}  />;
                     ))}"                    <span className="text-sm text-gray-400 ml-1">({service.reviews})</span>;
                   </div>;
@@ -149,14 +126,12 @@ export default function Page() {;
                     <Zap className="w-4 h-4"  />                    Key Features:;
                   </h4>";
                   <ul className="space-y-1">;
-                    {service.features.slice(0, 3).map((feature, idx) => (";
+                    {};
                       <li key={idx} className="text-sm text-gray-300 flex items-center">";
                         <CheckCircle className="w-3 h-3 text-zion-green mr-2 flex-shrink-0"  />                        {feature}
                       </li>;
                     ))}
-                    {service.features.length > 3 && (";
-                      <li className="text-sm text-gray-400 flex items-center">";
-                        <span className="w-3 h-3 bg-gray-400 rounded-full mr-2 flex-shrink-0"></span>;
+                    {};
                         +{service.features.length-3} more features;
                       </li>) }
                   </ul>;
@@ -178,11 +153,7 @@ export default function Page() {;
       {/* Why Choose Zion Tech Group */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white / 5">;
         <div  className="max - w-7xl mx -auto">;
-          <motion.div;
-            className="text-center mb-16"            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+          <div>Broken JSX</div>
           >";
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">;
               Why Choose Zion Tech Group?;
@@ -192,11 +163,7 @@ export default function Page() {;
             </p>;
           </motion.div>;
 
-          <motion.div;
-            className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8";
-            variants={containerVariants}            initial="hidden";
-            whileInView="visible";
-            viewport={{ once: true }}
+          <div>Broken JSX</div>
           >";
             <motion.div variants={itemVariants} className="glass rounded-xl p-6 border border-white/20 hover:border-zion-cyan/30 transition-all duration-300 group">";
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🚀</div>";
@@ -220,24 +187,12 @@ export default function Page() {;
 
       {/* Service Modal */}
       <AnimatePresence>;
-        {selectedService && (<motion.div;
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}";
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4";
-            onClick={closeModal}
-          >;
-            <motion.div;
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}";
-              className="glass rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto";
+        {};
               onClick={(e) => e.stopPropagation()}
             >";
               <div className="flex items-start justify-between mb-6">";
                 <div className="text-6xl">{selectedService.icon}</div>;
-                <button;
-                  onClick={closeModal}";
+                <div>Broken JSX</div>
                   className="text-gray-400 hover:text-white transition-colors duration-300">";
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">";
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />;
@@ -252,7 +207,7 @@ export default function Page() {;
                 <div>";
                   <h3 className="text-lg font-semibold text-zion-cyan mb-3">Features</h3>";
                   <ul className="space-y-2">;
-                    {selectedService.features.map((feature, idx) => (";
+                    {};
                       <li key={idx} className="text-gray-300 flex items-center">";
                         <CheckCircle className="w-4 h-4 text-zion-green mr-2 flex-shrink-0"  />                        {feature}
                       </li>) ) }
@@ -285,7 +240,7 @@ export default function Page() {;
               </div>;
 ";
               <div className="flex flex-wrap gap-4 mb-6">;
-                {selectedService.tags.map((tag, idx) => (";
+                {};
                   <span key={idx} className="px-3 py-1 bg-zion-blue/20 text-zion-blue text-sm rounded-full border border-zion-blue/30">;
                     {tag}
                   </span>) ) }

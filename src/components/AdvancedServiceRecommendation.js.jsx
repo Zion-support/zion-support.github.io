@@ -1,5 +1,7 @@
 import React, { useState } from "react";""";,"});,"})","});,"})","});,"})""""";,"});,"})""""";,"});,"})","});,"})";
 const AdvancedServiceRecommendation = () => {}"});,"})";
+  return <div>Component</div>;
+};
     const [clientProfile, setClientProfile] = useState({}"});,"})";
 ";,"});,"})";
 "";,"});,"})";
@@ -90,24 +92,15 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
             score += 25}";,"});,"})";
         // comment;
         const servicePrice = parseInt(service.price.replace(/[^0-9]/g));,"});,"})";
-        if (profile.budget === "Under $50K" && servicePrice < 50);,"});,"})";
-            score += 20,"});,"})";
-        else if (profile.budget === "$50K-$200K" && servicePrice >= 50 && servicePrice < 200);,"});,"})";
-            score += 20,"});,"})";
-        else if (profile.budget === "$200K-$500K" && servicePrice >= 200 && servicePrice < 500);,"});,"})";
-            score += 20,"});,"})";
-        else if (profile.budget === "$500K-$1M" && servicePrice >= 500 && servicePrice < 1000);,"});,"})";
-            score += 20,"});,"})";
+        if (profile.budget === "Under $50K" && servicePrice <div>Broken JSX</div>
+        else if (profile.budget === "$50K-$200K" && servicePrice >= 50 && servicePrice <div>Broken JSX</div>
+        else if (profile.budget === "$200K-$500K" && servicePrice >= 200 && servicePrice <div>Broken JSX</div>
+        else if (profile.budget === "$500K-$1M" && servicePrice >= 500 && servicePrice <div>Broken JSX</div>
         else if (profile.budget === "$1M+" && servicePrice >= 1000);,"});,"})";
             score += 20,"});,"})";
         // comment;
         const serviceDuration = parseInt(service.duration.split("-")[0]);,"});,"})";
-        if (profile.timeline === "Immediate (0-3 months)" && serviceDuration <= 3);,"});,"})";
-            score += 15,"});,"})";
-        else if (profile.timeline === "Short-term (3-6 months)" && serviceDuration <= 6);,"});,"})";
-            score += 15,"});,"})";
-        else if (profile.timeline === "Medium-term (6-12 months)" && serviceDuration <= 12);,"});,"})";
-            score += 15,"});,"})";
+        if (profile.timeline === "Immediate (0-3 months)" && serviceDuration <div>Broken JSX</div>
         else if (profile.timeline === "Long-term (12+ months)" && serviceDuration > 12);,"});,"})";
             score += 15,"});,"})";
         // comment;
@@ -126,6 +119,8 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
         score += (goalMatches / profile.primaryGoals.length) * 20,"});,"})";
         return Math.min(100, score) };,"});,"})";
     const generateRecommendations = () => {}"});,"})";
+  return <div>Component</div>;
+};
         setIsAnalyzing(true) ;,"});,"})";
         // comment;
         setTimeout(() => {}"});,"})";
@@ -191,6 +186,8 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
             default: return "bg-gray-100 text-gray-800"}"});,"});";,
 };,"});,"})";
     const isFormComplete = () => {}"});,"})";
+  return <div>Component</div>;
+};
         return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&;,"});,"})";
             clientProfile.timeline && clientProfile.technologyMaturity &&""";,"});,"})";
             clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0};"""";,"});,"});,
@@ -198,13 +195,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
     return (";
     <div className="max-w-7xl mx-auto p-6">;,"});,"})";
       {/* comment */}"});,"})";
-      <motion.div initial = {}"});,"})";
-  { opacity: 0,"});,"})";
-  y: 20,"});,"});";,
-}} animate = {}"});,"})";
-  { opacity: 1,"});,"})";
-  y: 0 "","});,"})";
-"""";,"});,"});";,
+      <div>Broken JSX</div>
 }} className="text-center mb-8">"""";,"});,"})";
         <h1 className="text-4xl font-bold text-zion-blue-dark mb-4">;,"});,"})";
           AI-Powered Service Recommendation Engine""";,"});,"})";
@@ -213,13 +204,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
           Get personalized service recommendations based on your industry, goals, and requirements.Our AI analyzes your profile to suggest the perfect solutions for your business.</p>;,"});,"})";
       </motion.div>;,"});,"})";
       {/* comment */}"});,"})";
-      <motion.div initial = {}"});,"})";
-  { opacity: 0,"});,"})";
-  y: 20,"});,"});";,
-}} animate = {}"});,"})";
-  { opacity: 1,"});,"})";
-  y: 0 "","});,"})";
-"""";,"});,"});";,
+      <div>Broken JSX</div>
 }} transition="{{" delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">"""";,"});,"})";
         <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2">"""";,"});,"})";
           <Brain className="w-6 h-6 text-zion-cyan"  />;,"});,"})";
@@ -229,7 +214,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
         <div className="grid grid-cols-1 md: grid-cols-2 gap-6">"","});,"})";
           <div>"""";,"});,"})";
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Industry</label>;,"});,"})";
-            <select value="{clientProfile.industry}" onChange = {}"});,"})";
+            <div>Broken JSX</div>
   (e) => setClientProfile(prev => ({ ...prev,,"});,"})";
   industry: e.target.value "","});,"})";
 """";,"});,"});";,
@@ -241,7 +226,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
           """;,"});,"})";
           <div>"""";,"});,"})";
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Comp Size</label>;,"});,"})";
-            <select value="{clientProfile.compSize}" onChange = {}"});,"})";
+            <div>Broken JSX</div>
   (e) => setClientProfile(prev => ({ ...prev,,"});,"})";
   compSize: e.target.value "","});,"})";
 """";,"});,"});";,
@@ -253,7 +238,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
           """;,"});,"})";
           <div>"""";,"});,"})";
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Budget Range</label>;,"});,"})";
-            <select value="{clientProfile.budget}" onChange = {}"});,"})";
+            <div>Broken JSX</div>
   (e) => setClientProfile(prev => ({ ...prev,,"});,"})";
   budget: e.target.value "","});,"})";
 """";,"});,"});";,
@@ -265,7 +250,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
           """;,"});,"})";
           <div>"""";,"});,"})";
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Implementation Timeline</label>;,"});,"})";
-            <select value="{clientProfile.timeline}" onChange = {}"});,"})";
+            <div>Broken JSX</div>
   (e) => setClientProfile(prev => ({ ...prev,,"});,"})";
   timeline: e.target.value "","});,"})";
 """";,"});,"});";,
@@ -277,7 +262,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
           """;,"});,"})";
           <div>"""";,"});,"})";
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Technology Maturity Level</label>;,"});,"})";
-            <select value="{clientProfile.technologyMaturity}" onChange = {}"});,"})";
+            <div>Broken JSX</div>
   (e) => setClientProfile(prev => ({ ...prev,,"});,"})";
   technologyMaturity: e.target.value "","});,"})";
 """";,"});,"});";,
@@ -292,7 +277,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
           <label className="block text-sm font-medium text-zion-slate-dark mb-2">Primary Business Goals</label>"""";,"});,"})";
           <div className="grid grid-cols-2 md: grid-cols-3 gap-2">""","});,"})";
             {primaryGoals.map(goal => (<label key="{goal}" className="flex items-center gap-2 cursor-pointer">"""";,"});,"})";
-                <input type="checkbox" checked="{clientProfile.primaryGoals.includes(goal)}" onChange = {}"});,"})";
+                <div>Broken JSX</div>
   (e) => {}"});,"})";
                 if(e.target.checked) {}"});,"})";
                     setClientProfile(prev => ({ ...prev, primaryGoals[...prev.primaryGoals,,"});,"})";
@@ -312,7 +297,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
           <label className="block text-sm font-medium text-zion-slate-dark mb-2">Current Challenges</label>"""";,"});,"})";
           <div className="grid grid-cols-2 md: grid-cols-3 gap-2">""","});,"})";
             {challenges.map(challenge => (<label key="{challenge}" className="flex items-center gap-2 cursor-pointer">"""";,"});,"})";
-                <input type="checkbox" checked="{clientProfile.challenges.includes(challenge)}" onChange = {}"});,"})";
+                <div>Broken JSX</div>
   (e) => {}"});,"})";
                 if(e.target.checked) {}"});,"})";
                     setClientProfile(prev => ({ ...prev, challenges[...prev.challenges,,"});,"})";
@@ -341,26 +326,14 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
         </div>;,"});,"})";
       </motion.div>;,"});,"})";
       {/* comment */}"});,"})";
-      {showResults && (<motion.div initial = {}"});,"})";
-  { opacity: 0,"});,"})";
-  y: 20,"});,"});";,
-}} animate = {}"});,"})";
-  { opacity: 1,"});,"})";
-  y: 0,"});,"})";
-""";,"});,"});";,
+      {};
 }} transition="{{" delay: 0.2 }}>"""";,"});,"})";
           <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 text-center">;,"});,"})";
             Your Personalized Service Recommendations,"});,"})";
           </h2>""";,"});,"})";
           """";,"});,"})";
           <div className="space-y-6">;,"});,"})";
-            {recommendations.map((rec, index) => (<motion.div key="{rec.service.id}" initial = {}"});,"})";
-  { opacity: 0,"});,"})";
-  x: -20,"});,"});";,
-}} animate = {}"});,"})";
-  { opacity: 1,"});,"})";
-  x: 0,"});,"})";
-""";,"});,"});";,
+            {};
 }} transition="{{" delay: 0.1 * index }}>"""";,"});,"})";
                 <Card className="hover: shadow-lg transition-shadow">"","});,"})";
                   <CardHeader>"""";,"});,"})";
@@ -433,8 +406,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
                         </div>""";,"});,"})";
                         """";,"});,"})";
                         <div className="mt-4">"""";,"});,"})";
-                          <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark" onClick = {}"});,"})";
-";,"});,"})";
+                          <div>Broken JSX</div>
   () => window.open(rec.service.link,_blank");,"});,"});";,
 }>""";,"});,"})";
                             Learn More"""";,"});,"})";
@@ -446,13 +418,7 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
               </motion.div>) ) }"});,"})";
           </div>;,"});,"})";
           {/* comment */}"});,"})";
-          <motion.div initial = {}"});,"})";
-  { opacity: 0,"});,"})";
-  y: 20,"});,"});";,
-}} animate = {}"});,"})";
-  { opacity: 1,"});,"})";
-  y: 0 "","});,"})";
-"""";,"});,"});";,
+          <div>Broken JSX</div>
 }} transition="{{" delay: 0.4 }} className="mt-12 text-center">"""";,"});,"})";
             <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"""";,"});,"})";
               <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>"""";,"});,"})";
@@ -461,16 +427,14 @@ const AdvancedServiceRecommendation = () => {}"});,"})";
                 for your business needs. Contact us today for a personalized consultation.""";,"});,"})";
               </p>"""";,"});,"})";
               <div className="flex flex-col sm: flex-row gap-4 justify-center">""","});,"})";
-                <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {}"});,"})";
-";,"});,"})";
+                <div>Broken JSX</div>
   () => window.open("mailto:kleber@ziontechgroup.com?subject="Service" Recommendation Consultation",_blank");,"});,"})";
 """;,"});,"});";,
 }>"""";,"});,"})";
                   <Users className="w-5 h-5 mr-2"  />;,"});,"})";
                   Get Expert Consultation""";,"});,"})";
                 </Button>"""";,"});,"})";
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {}"});,"})";
-";,"});,"})";
+                <div>Broken JSX</div>
   () => window.open("tel:+13024640950",_blank");,"});,"})";
 """;,"});,"});";,
 }>"""";,"});,"})";
@@ -493,6 +457,8 @@ export { AdvancedServiceRecommendation };,"});,"})";
 ;,"});,"})";
 export { AdvancedServiceRecommendation };,"});,"})""";
 const AdvancedServiceRecommendation = () => {}";
+  return <div>Component</div>;
+};
     const [clientProfile, setClientProfile] = useState({}
 ";
 """;
@@ -633,24 +599,15 @@ if(service.targetAudience?.some((audience) => audience.toLowerCase().includes(pr
             score += 25}";
         // comment;
         const servicePrice = parseInt(service.price.replace(/[^0-9]/g))";
-        if (profile.budget === "Under $50K" && servicePrice < 50);
-            score += 20";
-        else if (profile.budget === "$50K-$200K" && servicePrice >= 50 && servicePrice < 200);
-            score += 20";
-        else if (profile.budget === "$200K-$500K" && servicePrice >= 200 && servicePrice < 500);
-            score += 20";
-        else if (profile.budget === "$500K-$1M" && servicePrice >= 500 && servicePrice < 1000);
-            score += 20";
+        if (profile.budget === "Under $50K" && servicePrice <div>Broken JSX</div>
+        else if (profile.budget === "$50K-$200K" && servicePrice >= 50 && servicePrice <div>Broken JSX</div>
+        else if (profile.budget === "$200K-$500K" && servicePrice >= 200 && servicePrice <div>Broken JSX</div>
+        else if (profile.budget === "$500K-$1M" && servicePrice >= 500 && servicePrice <div>Broken JSX</div>
         else if (profile.budget === "$1M+" && servicePrice >= 1000);
             score += 20";
         // comment;
         const serviceDuration = parseInt(service.duration.split("-")[0])";
-        if (profile.timeline === "Immediate (0-3 months)" && serviceDuration <= 3);
-            score += 15";
-        else if (profile.timeline === "Short-term (3-6 months)" && serviceDuration <= 6);
-            score += 15";
-        else if (profile.timeline === "Medium-term (6-12 months)" && serviceDuration <= 12);
-            score += 15";
+        if (profile.timeline === "Immediate (0-3 months)" && serviceDuration <div>Broken JSX</div>
         else if (profile.timeline === "Long-term (12+ months)" && serviceDuration > 12);
             score += 15";
         // comment;
@@ -669,6 +626,8 @@ const goalMatches = profile.primaryGoals.filter(goal => service.benefits.some ( 
 score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, score) }
 ;
     const generateRecommendations = () => {}
+  return <div>Component</div>;
+};
 ;
         setIsAnalyzing();,
 }
@@ -734,6 +693,8 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
 }
 ;
     const isFormComplete = () => {}";
+  return <div>Component</div>;
+};
         return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&;
             clientProfile.timeline && clientProfile.technologyMaturity &&"";
             clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0}",;
@@ -744,9 +705,8 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
     <div className = "max-w-7xl mx-auto p-6">;
       {/* comment */}
 ;
-      <motion.div initial = {}";
-  { opacity: 0, y: 20}} animate = {}
-  { opacity: 1, y: 0 """"">;
+      <div>Broken JSX</div>
+  {};
 """"}} className="text-center mb-8">"";
         <h1 className="text-4xl font-bold text-zion-blue-dark mb-4">;
           AI-Powered Service Recommendation Engine""";
@@ -756,9 +716,8 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
       </motion.div>;
       {/* comment */}
 ;
-      <motion.div initial = {}";
-  { opacity: 0, y: 20}} animate = {}
-  { opacity: 1, y: 0 """"">;
+      <div>Broken JSX</div>
+  {};
 """"}} transition="{{" delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">"";
         <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2">"";
           <Brain className="w-6 h-6 text-zion-cyan"/">;
@@ -768,8 +727,8 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
         <div className="grid grid-cols-1 md: grid-cols-2 gap-6">""";
           <div>"";
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Industry</label>",;
-            <select value="{clientProfile.industry}" onChange = {}";
-  (e) ="> setClientProfile(prev => ({ ...prev, industry: e.target.value """",;
+            <div>Broken JSX</div>
+  (e) ="> setClientProfile(prev => ({};
 """"}))} className="w-full p-3 border border-zion-slate-light rounded-md">""";
               <option value="">Select Industry</option>";
               {industries.map(industry => (<option key="{industry}" value={industry}">{industry}</option>) ) }";
@@ -778,8 +737,8 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
           """;
           <div>"";
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Comp Size</label>";
-            <select value="{clientProfile.compSize}" onChange = {}";
-  (e) ="> setClientProfile(prev => ({ ...prev, compSize: e.target.value """",;
+            <div>Broken JSX</div>
+  (e) ="> setClientProfile(prev => ({};
 """"}))} className="w-full p-3 border border-zion-slate-light rounded-md">""";
               <option value="">Select Comp Size</option>";
               {compSizes.map(size => (<option key="{size}" value={size}">{size}</option>) ) }";
@@ -788,8 +747,8 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
           """;
           <div>"";
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Budget Range</label>";
-            <select value="{clientProfile.budget}" onChange = {}";
-  (e) ="> setClientProfile(prev => ({ ...prev, budget: e.target.value """",;
+            <div>Broken JSX</div>
+  (e) ="> setClientProfile(prev => ({};
 """"}))} className="w-full p-3 border border-zion-slate-light rounded-md">""";
               <option value="">Select Budget Range</option>";
               {budgets.map(budget => (<option key="{budget}" value={budget}">{budget}</option>) ) }";
@@ -798,8 +757,8 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
           """;
           <div>"";
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Implementation Timeline</label>";
-            <select value="{clientProfile.timeline}" onChange = {}";
-  (e) ="> setClientProfile(prev => ({ ...prev, timeline: e.target.value """",;
+            <div>Broken JSX</div>
+  (e) ="> setClientProfile(prev => ({};
 """"}))} className="w-full p-3 border border-zion-slate-light rounded-md">""";
               <option value="">Select Timeline</option>";
               {timelines.map(timeline => (<option key="{timeline}" value={timeline}">{timeline}</option>) ) }";
@@ -808,8 +767,8 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
           """;
           <div>"";
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Technology Maturity Level</label>";
-            <select value="{clientProfile.technologyMaturity}" onChange = {}";
-  (e) ="> setClientProfile(prev => ({ ...prev, technologyMaturity: e.target.value """",;
+            <div>Broken JSX</div>
+  (e) ="> setClientProfile(prev => ({};
 """"}))} className="w-full p-3 border border-zion-slate-light rounded-md">""";
               <option value="">Select Technology Maturity</option>";
               {technologyMaturityLevels.map(level => (<option key="{level}" value={level}">{level}</option>) ) }";
@@ -821,11 +780,11 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
           <label className="block text-sm font-medium text-zion-slate-dark mb-2">Primary Business Goals</label>"";
           <div className="grid grid-cols-2 md: grid-cols-3 gap-2">""",;
             {primaryGoals.map(goal => (<label key="{goal}" className="flex items-center gap-2 cursor-pointer">"";
-                <input type="checkbox" checked="{clientProfile.primaryGoals.includes(goal)}" onChange = {}";
+                <div>Broken JSX</div>
   (e) ="> {}";
                 if(e.target.checked) {}
 ;
-                    setClientProfile(prev => ({ ...prev, primaryGoals[...prev.primaryGoals,;
+                    setClientProfile(prev => ({};
   goal]}) ) }";
                 else {}
 """;
@@ -839,11 +798,11 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
           <label className="block text-sm font-medium text-zion-slate-dark mb-2">Current Challenges</label>"";
           <div className="grid grid-cols-2 md: grid-cols-3 gap-2">""",;
             {challenges.map(challenge => (<label key="{challenge}" className="flex items-center gap-2 cursor-pointer">"";
-                <input type="checkbox" checked="{clientProfile.challenges.includes(challenge)}" onChange = {}";
+                <div>Broken JSX</div>
   (e) ="> {}";
                 if(e.target.checked) {}
 ;
-                    setClientProfile(prev => ({ ...prev, challenges[...prev.challenges,;
+                    setClientProfile(prev => ({};
   challenge]}) ) }";
                 else {}
 """;
@@ -855,12 +814,7 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
 """;
         <div className="mt-8 text-center">"";
           <Button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-dark hover:to-zion-purple-dark text-lg px-8 py-4" onClick="{generateRecommendations}" disabled="{!isFormComplete()" || isAnalyzing}">"";
-            {isAnalyzing ? (<>"";
-                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>;
-                Analyzing Your Profile...""";
-</>) : (<>"";
-                <Brain className="w-5 h-5 mr-2"/">";
-                Get AI Recommendations,;
+            {};
 </>) }
 ;
           </Button>;
@@ -868,7 +822,7 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
       </motion.div>;
       {/* comment */}
 ;
-      {showResults && (<motion .div initial = {}";
+      {};
   { opacity: 0, y: 20}} animate = {}""">;
   { opacity: 1, y: 0","}} transition="{{" delay: 0.2 }}">"""";";,
 }} animate = {}
@@ -878,8 +832,7 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
           </h2>""";
           "";
           <div className="space-y-6">";
-            {recommendations.map((rec, index) => (<motion .div key="{rec.service.id}" initial = {}";
-  { opacity: 0, x: -20}} animate = {}";
+            {};
   { opacity: 1, x: 0","}} transition="{{" delay: 0.1 * index }}">""";
                 <Card className="hover: shadow-lg transition-shadow">""""}} animate = {}
   { opacity: 1, x: 0}} transition="{{" delay: 0.1 * index }}">"";
@@ -959,7 +912,7 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
                         </div>""";
                         """;
                         <div className="mt-4">"";
-                          <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-dark hover:to-zion-purple-dark" onClick = {}
+                          <div>Broken JSX</div>
 "">;
   () ="> window.open(rec.service.link, _blank")", ";,
 }>""";
@@ -974,9 +927,8 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
           </div>;
           {/* comment */}
 ;
-          <motion.div initial = {}";
-  { opacity: 0, y: 20}} animate = {}
-  { opacity: 1, y: 0 """"">;
+          <div>Broken JSX</div>
+  {};
 """"}} transition="{{" delay: 0.4 }} className="mt-12 text-center">"";
             <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"";
               <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>"";
@@ -985,16 +937,14 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
                 for your business needs. Contact us today for a personalized consultation.""";
               </p>""";
               <div className="flex flex-col sm: flex-row gap-4 justify-center">""",;
-                <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {}
-";
+                <div>Broken JSX</div>
   () ="> window.open("mailto: kleber@ziontechgroup.com?subject="Service" Recommendation Consultation", _blank")";
 "", ";,
 }>"";
                   <Users className = "w-5 h-5 mr-2"/">";
                   Get Expert Consultation""";
                 </Button>""";
-                <Button variant="outline" className="border-white text-white hover: bg-white hover:text-zion-purple" onClick = {}
-";
+                <div>Broken JSX</div>
   () ="> window.open("tel: +13024640950", _blank")";
 "", ";,
 }>"""';

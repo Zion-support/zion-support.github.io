@@ -6,7 +6,9 @@ import { GradientHeading } from '@/components/GradientHeading';''';
 import { Button } from '@/components/ui/button';''';
 import Link from 'next/link';
 export { function };
-export default function Ecommerce() {}
+export {};
+  return null;
+}
   const schema = {}
 ';
 '';
@@ -18,16 +20,10 @@ export default function Ecommerce() {}
     url: 'https://app.ziontechgroup.com/features/e-commerce'};
   return();
     <>;
-      <SEO;
-        title="E-commerce Platform"";
-        description="Buy and sell hardware, software and services in the Zion marketplace."";
-        keywords="tech marketplace, buy IT hardware, sell AI solutions"";
-        canonical="https://app.ziontechgroup.com/features/e-commerce";
+      <div>Broken JSX</div>
       />;
       {/* Use a normal script tag so JSON-LD is correctly parsed */}";
-      <script"";
-        type="application/ld+json";
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      <div>Broken JSX</div>
       ></script>";
       <Header />"";
       <main className="bg-background text-white py-12">"";
@@ -39,11 +35,7 @@ export default function Ecommerce() {}
             Showcase your products with rich media listings and accept payments;
             with Stripe-powered checkout.;
           </p>";
-          <img"";
-            loading="lazy"";
-            src="https://placehold.co/800x400"";
-            alt="Screenshot of marketplace interface"";
-            className="rounded-lg shadow-xl mx-auto mb-12"";
+          <div>Broken JSX</div>
           />"";
           <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>"";
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">;

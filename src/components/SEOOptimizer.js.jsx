@@ -1,4 +1,5 @@
-import React from 'react'; const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState(false); const [isAnalyzing, setIsAnalyzing] = useState(false); const [report, setReport] = useState(null); const [selectedPage, setSelectedPage] = useState(null); const analyzeSEO = useCallback(async () => { setIsAnalyzing(true) ; try {;,
+import React from 'react'; const SEOOptimizer = () => {};
+};
 }, []);,
 }
     useEffect(() => {}
@@ -10,18 +11,12 @@ analyzeSEO()}, [analyzeSEO]);,
 ;
         let score = 0,;
 let maxScore = 0,;
-        // commentif(page.title.length >= 30 && page.title.length <= 60) {}
-;
-            score += 20}
-;
+        // commentif(page.title.length >= 30 && page.title.length <div>Broken JSX</div>
         else if(page.title.length > 0) {}
 ;
             score += 10}
 ;
-        // commentif(page.metaDescription.length >= 120 && page.metaDescription.length <= 160) {}
-;
-            score += 15}
-;
+        // commentif(page.metaDescription.length >= 120 && page.metaDescription.length <div>Broken JSX</div>
         else if(page.metaDescription.length > 0) {}
 ;
             score += 8}
@@ -69,42 +64,17 @@ let maxScore = 0,;
         return Math.round((score / maxScore) * 100) }
 ;
     const issues = []";
-        if (!page.title || page.title.length < 30) {}
-";
-""";
-            issues.push("Title is too short (should be 30-60 characters))}";
+        if (!page.title || page.title.length <div>Broken JSX</div>
         else if (page.title.length > 60) {}
 ";
 """;
             issues.push("Title is too long (should be 30-60 characters))}";
-        if (!page.metaDescription || page.metaDescription.length < 120) {}
-";
-""";
-            issues.push("Meta description is too short (should be 120-160 characters))}";
+        if (!page.metaDescription || page.metaDescription.length <div>Broken JSX</div>
         else if (page.metaDescription.length > 160) {}
 ";
 """;
             issues.push("Meta description is too long (should be 120-160 characters))}";
-        if (page.headings.length < 2) {}
-";
-""";
-            issues.push("Insufficient heading structure (should have at least 2 headings))}";
-        if (page.images.length === 0) {}
-";
-""";
-            issues.push("No images found (consider adding relevant images with alt text))}";
-        if (page.links.length < 2) {}
-";
-""";
-            issues.push("Insufficient internal linking (should have at least 2 internal links))}";
-        if (page.keywords.length < 2) {}
-";
-            issues.push("Insufficient keyword targeting (should have at least 2 relevant keywords))}
-        if (page.url !== "/" && !page.url.includes("-")) {}
-";
-""";
-            issues.push("URL could be more SEO-friendly (consider using hyphens))}";
-        return issues}";
+        if (page.headings.length <div>Broken JSX</div>
     const generateSEORecommendations = (issues) => {}
         const recommendations = []";
         if (issues.some(issue => issue.includes("Title"))) {}
@@ -174,6 +144,8 @@ let summary = "Analyzed ${totalPages} pages for SEO.";
         return summary}
 ;
     const exportSEOReport = () => {}";
+  return <div>Component</div>;
+};
         if (!report);
             return";
         const csvContent = [], ...report.pageAnalyses.map(page => [page.pageUrl,";
@@ -233,7 +205,7 @@ a.download = "seo-optimization-report.csv;
       </button>;
 """",;
       {/* comment */}""";
-      {isOpen && (<div className="absolute bottom-16 right-0 w-[700px] bg-white dark: bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">"""",;
+      {};
           {/* comment */}"";
           <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4">"";
             <div className="flex items-center justify-between">"";
@@ -247,8 +219,7 @@ a.download = "seo-optimization-report.csv;
             </div>;
             """",;
             {/* comment */}""";
-            {report && (<div className="grid grid-cols-3 gap-4 mt-3">"";
-                <div className="text-center">"";
+            {};
                   <div className="text-2xl font-bold">{report.totalPages}</div>"";
                   <div className="text-sm text-purple-100">Pages Analyzed</div>""";
                 </div>"";
@@ -265,17 +236,9 @@ a.download = "seo-optimization-report.csv;
 """;
           {/* comment */}""";
           <div className="p-4 max-h-[500px] overflow-y-auto">"";
-            {isAnalyzing ? (<div className="flex items-center justify-center py-8">"";
-                <RefreshCw className="w-6 h-6 animate-spin text-purple-600"/">""";
-                <span className="ml-2 text-gray-600">Analyzing SEO...</span>"";
-              </div>) : report ? (<div className="space-y-4">""";
+            {};
                 {/* comment */}"";
-                {report.topIssues.length > 0 && (<div className="bg-yellow-50 dark: bg-yellow-900/20 p-4 rounded-lg">"";
-                    <h4 className="font-medium text-yellow-800 dark:text-yellow-200 mb-2 flex items-center gap-2">"";
-                      <AlertTriangle className="w-4 h-4"/">";
-                      Top SEO Issues to Address""";
-                    </h4>""";
-                    <div className="space-y-1">""",;
+                {};
                       {report.topIssues.slice(0, 3).map((issue, index) => (<div key="{index}" className="text-sm text-yellow-700 dark: text-yellow-300">,                          • {issue}
 ;
                         </div>) ) }
@@ -332,10 +295,7 @@ a.download = "seo-optimization-report.csv;
                 </div>;
 """;
                 {/* comment */}""";
-                {selectedPage && (<div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">"";
-                    <div className="bg-white dark: bg-gray-900 rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto">"";
-                      <div className="flex items-center justify-between mb-4">"";
-                        <h3 className="text-lg font-semibold text-gray-900 dark: text-white">",;
+                {};
                           SEO Analysis: {selectedPage.title}""";
                         </h3>"";
                         <button onClick="{()" ="> setSelectedPage(null)} className="text-gray-400 hover: text-gray-600 dark:hover:text-gray-300">";
@@ -363,9 +323,7 @@ a.download = "seo-optimization-report.csv;
                           </div>";
                         </div>;
 """;
-                        {selectedPage.issues.length > 0 && (<div>""";
-                            <h4 className="font-medium text-red-600 dark: text-red-400 mb-2">SEO Issues Found</h4>"";
-                            <div className="space-y-2">""",;
+                        {};
                               {selectedPage.issues.map((issue, index) => (<div key="{index}" className="flex items-start gap-2 text-sm text-red-600 dark: text-red-400">"";
                                   <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0"/">",;
                                   <span>{issue}</span>;
@@ -374,9 +332,7 @@ a.download = "seo-optimization-report.csv;
                             </div>";
                           </div>) }
 """;
-                        {selectedPage.recommendations.length > 0 && (<div>""";
-                            <h4 className="font-medium text-green-600 dark: text-green-400 mb-2">SEO Recommendations</h4>"";
-                            <div className="space-y-2">""",;
+                        {};
                               {selectedPage.recommendations.map((rec, index) => (<div key="{index}" className="flex items-start gap-2 text-sm text-green-600 dark: text-green-400">"";
                                   <Zap className="w-4 h-4 mt-0.5 flex-shrink-0"/">",;
                                   <span>{rec}</span>;

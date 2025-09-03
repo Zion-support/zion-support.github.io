@@ -1,5 +1,5 @@
 // comment;
-export const cache = {}
+export {};
 ;
 
-export default cache
+export {};

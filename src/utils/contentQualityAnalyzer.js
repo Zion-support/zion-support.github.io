@@ -1,10 +1,7 @@
-; export class ContentQualityAnalyzer {;
-  static instance; constructor() {;
-  this.analyzedPages = new Map()} static getInstance() {;
-  if(!ContentQualityAnalyzer.instance) {;
-  ContentQualityAnalyzer.instance = new ContentQualityAnalyzer()} return ContentQualityAnalyzer.instance; }; analyzePageContent(pageUrl, title, content, metaDescription = '', images = [], links = []) {;
-  // comment;
-export const contentQualityAnalyzer = {}
+; export class ContentQualityAnalyzer {};
+  this.analyzedPages = new Map()} static getInstance() {};
+  ContentQualityAnalyzer.instance = new ContentQualityAnalyzer()} return ContentQualityAnalyzer.instance; }; analyzePageContent(pageUrl, title, content, metaDescription = '', images = [], links = []) {};
+export {};
 ;
 
 export default contentQualityAnalyzer;

@@ -3,13 +3,9 @@ import { SEO } from '@/components/SEO';''';
 import { Link } from 'react-router-dom';''';
 import { servicesCatalog } from '@/data/servicesCatalog';''';
 import { Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-export default function Services() {;
-    const contact = {;
-  mobile: '+1 302 464 0950',;
-        email: 'kleber@ziontechgroup.com',;
-        address: '364 E Main St STE 1008 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com';
-    ;,
+export default function Services() {};
+  return null;
+}
 };
     return (<>;
 			<SEO title="Services - Micro SaaS, IT and AI Solutions | Zion Tech Group" description="Explore our micro SaaS products, enterprise IT services, and AI solutions with transparent pricing, clear features, and easy ways to get started." canonical="/services" url="https://ziontechgroup.com/services"/>;

@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';''';
 import { motion } from 'framer-motion';''';
 import { TrendingUp, BarChart3, Activity, Target, Users, Database, Zap, Brain, Globe, Shield, Clock } from 'lucide-react';
 const AIBusinessIntelligence = () => {}
+  return <div>Component</div>;
+};
     const features = [];
         {}
             icon: Brain,;
@@ -140,8 +142,7 @@ const AIBusinessIntelligence = () => {}
         }
     };
     const itemVariants = {}
-  hidden: { y: 20,;
-  opacity: 0;,
+  hidden: {};
 },;
         visible: {}
             y: 0,;
@@ -157,13 +158,7 @@ const AIBusinessIntelligence = () => {}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"/>";
         "";
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">;
-          <motion.div initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} animate = {}
-  { opacity: 1,;
-  y: 0 ";
-"";,
+          <div>Broken JSX</div>
 }} transition={{ duration: 0.8 }} className="text-center">"";
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full mb-6">"";
               <TrendingUp className="w-10 h-10 text-white"/>";
@@ -227,13 +222,7 @@ const AIBusinessIntelligence = () => {}
       {/* Solutions by Industry */}"";
       <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20">"";
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
-          <motion.div initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
-  { opacity: 1,;
-  y: 0 ";
-"";,
+          <div>Broken JSX</div>
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"";
             <h2 className="text-4xl font-bold text-white mb-6">Solutions by Industry</h2>"";
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
@@ -243,16 +232,7 @@ const AIBusinessIntelligence = () => {}
           </motion.div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            {solutions.map((category, index) => (<motion.div key={category.category} initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}} viewport={{ once: true }} transition = {}
-  { duration: 0.5,;
-  delay: index * 0.1 ";
-"";,
+            {};
 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6">"";
                 <div className="flex items-center mb-6">"";
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mr-4">"";
@@ -274,13 +254,7 @@ const AIBusinessIntelligence = () => {}
 ";
       {/* Technology Stack */}"";
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
-        <motion.div initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
-  { opacity: 1,;
-  y: 0 ";
-"";,
+        <div>Broken JSX</div>
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"";
           <h2 className="text-4xl font-bold text-white mb-6">Technology Stack</h2>"";
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
@@ -290,16 +264,7 @@ const AIBusinessIntelligence = () => {}
         </motion.div>";
 "";
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-          {technologies.map((tech, index) => (<motion.div key={tech.name} initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
-  { opacity: 1,;
-  y: 0;,
-}} viewport={{ once: true }} transition = {}
-  { duration: 0.5,;
-  delay: index * 0.1 ";
-"";,
+          {};
 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-blue-500/50 transition-all duration-300">"";
               <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">"";
                 <tech.icon className="w-8 h-8 text-white"/>";
@@ -313,13 +278,7 @@ const AIBusinessIntelligence = () => {}
       {/* CTA Section */}"";
       <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20">"";
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
-          <motion.div initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} whileInView = {}
-  { opacity: 1,;
-  y: 0 ";
-"";,
+          <div>Broken JSX</div>
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">"";
             <h2 className="text-4xl font-bold text-white mb-6">;
               Ready to Transform Your Business Intelligence?";

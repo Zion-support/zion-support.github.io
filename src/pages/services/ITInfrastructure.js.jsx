@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';''';
 import { Helmet } from 'react-helmet-async';
 ;
 const ITInfrastructure = () => {}
+  return <div>Component</div>;
+};
   const features = [];
     {}
 ';
@@ -74,25 +76,15 @@ const ITInfrastructure = () => {}
         <title>;
           IT Infrastructure — Zion Tech Group | Network & System Management;
         </title>;
-        <meta;
-          name="description"";
-          content="Build robust IT infrastructure with Zion Tech Group. Network design, server management, storage solutions, and security infrastructure services.";
+        <div>Broken JSX</div>
         />";
-        <meta"";
-          property="og:title"";
-          content="IT Infrastructure — Zion Tech Group";
+        <div>Broken JSX</div>
         />";
-        <meta"";
-          property="og:description"";
-          content="Leading IT infrastructure services including network design, server management, storage solutions, and security infrastructure.";
+        <div>Broken JSX</div>
         />";
-        <meta"";
-          property="og:url"";
-          content="https://ziontechgroup.com/services/it-infrastructure";
+        <div>Broken JSX</div>
         />";
-        <link"";
-          rel="canonical"";
-          href="https://ziontechgroup.com/services/it-infrastructure";
+        <div>Broken JSX</div>
         />;
       </Helmet>";
 "";
@@ -113,13 +105,11 @@ const ITInfrastructure = () => {}
               scalability, and security.";
             </p>"";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <Link"";
-                to="/contact"";
+              <div>Broken JSX</div>
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">;
                 Get Infrastructure Consultation;
               </Link>";
-              <Link"";
-                to="/services"";
+              <div>Broken JSX</div>
                 className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">;
                 View All Services;
               </Link>;
@@ -140,17 +130,14 @@ const ITInfrastructure = () => {}
             </div>";
 "";
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {features.map((feature, index) => (;
-                <div";
-                  key={index}"";
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"">"";
+              {};
                   <div className="text-4xl mb-4">{feature.icon}</div>"";
                   <h3 className="text-xl font-semibold text-white mb-3">;
                     {feature.title}";
                   </h3>"";
                   <p className="text-gray-300 mb-4">{feature.description}</p>"";
                   <ul className="space-y-2">";
-                    {feature.features.map((item, idx) => ("";
+                    {};
                       <li key={idx} className="text-gray-300 flex items-center">"";
                         <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>;
                         {item}
@@ -176,15 +163,11 @@ const ITInfrastructure = () => {}
             </div>";
 "";
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-              {infrastructureAreas.map((area, index) => (;
-                <div";
-                  key={index}"";
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"">"";
-                  <h3 className="text-xl font-semibold text-white mb-4">;
+              {};
                     {area.area}";
                   </h3>"";
                   <ul className="space-y-2">";
-                    {area.solutions.map((solution, idx) => ("";
+                    {};
                       <li key={idx} className="text-gray-300 flex items-center">"";
                         <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>;
                         {solution}
@@ -213,16 +196,9 @@ const ITInfrastructure = () => {}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"";
               <div className="text-center">"";
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">";
-                  <svg"";
-                    className="w-8 h-8 text-white"";
-                    fill="none"";
-                    stroke="currentColor"";
+                  <div>Broken JSX</div>
                     viewBox="0 0 24 24">";
-                    <path"";
-                      strokeLinecap="round"";
-                      strokeLinejoin="round"";
-                      strokeWidth={2}"";
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z";
+                    <div>Broken JSX</div>
                     />;
                   </svg>";
                 </div>"";
@@ -236,16 +212,9 @@ const ITInfrastructure = () => {}
 "";
               <div className="text-center">"";
                 <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">";
-                  <svg"";
-                    className="w-8 h-8 text-white"";
-                    fill="none"";
-                    stroke="currentColor"";
+                  <div>Broken JSX</div>
                     viewBox="0 0 24 24">";
-                    <path"";
-                      strokeLinecap="round"";
-                      strokeLinejoin="round"";
-                      strokeWidth={2}"";
-                      d="M7 11l5-5m0 0l5 5m-5-5v12";
+                    <div>Broken JSX</div>
                     />;
                   </svg>";
                 </div>"";
@@ -259,16 +228,9 @@ const ITInfrastructure = () => {}
 "";
               <div className="text-center">"";
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">";
-                  <svg"";
-                    className="w-8 h-8 text-white"";
-                    fill="none"";
-                    stroke="currentColor"";
+                  <div>Broken JSX</div>
                     viewBox="0 0 24 24">";
-                    <path"";
-                      strokeLinecap="round"";
-                      strokeLinejoin="round"";
-                      strokeWidth={2}"";
-                      d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z";
+                    <div>Broken JSX</div>
                     />;
                   </svg>";
                 </div>"";
@@ -293,8 +255,7 @@ const ITInfrastructure = () => {}
               Let's discuss how our infrastructure services can support your;
               business growth;
             </p>";
-            <Link"";
-              to="/contact"";
+            <div>Broken JSX</div>
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">;
               Get Infrastructure Consultation;
             </Link>;

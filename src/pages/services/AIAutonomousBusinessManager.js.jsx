@@ -7,6 +7,8 @@ import {}
   RocketLaunchIcon,''';
   UserGroupIcon} from '@heroicons/react/24/outline';
 const AIAutonomousBusinessManager = () => {}
+  return <div>Component</div>;
+};
   return();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">";
       {/* Hero Section */}"";
@@ -27,13 +29,11 @@ const AIAutonomousBusinessManager = () => {}
               processes in real-time.";
             </p>"";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <Link"";
-                to="/contact"";
+              <div>Broken JSX</div>
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg">;
                 Get Started;
               </Link>";
-              <Link"";
-                to="/case-studies"";
+              <div>Broken JSX</div>
                 className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg">;
                 View Case Studies;
               </Link>;
@@ -177,16 +177,9 @@ const AIAutonomousBusinessManager = () => {}
             <div className="space-y-6">"";
               <div className="flex items-start space-x-4">"";
                 <div className="bg-green-600/20 p-2 rounded-lg">";
-                  <svg"";
-                    className="h-6 w-6 text-green-400"";
-                    fill="none"";
-                    viewBox="0 0 24 24"";
+                  <div>Broken JSX</div>
                     stroke="currentColor">";
-                    <path"";
-                      strokeLinecap="round"";
-                      strokeLinejoin="round"";
-                      strokeWidth={2}"";
-                      d="M5 13l4 4L19 7";
+                    <div>Broken JSX</div>
                     />;
                   </svg>;
                 </div>";
@@ -202,16 +195,9 @@ const AIAutonomousBusinessManager = () => {}
               </div>"";
               <div className="flex items-start space-x-4">"";
                 <div className="bg-green-600/20 p-2 rounded-lg">";
-                  <svg"";
-                    className="h-6 w-6 text-green-400"";
-                    fill="none"";
-                    viewBox="0 0 24 24"";
+                  <div>Broken JSX</div>
                     stroke="currentColor">";
-                    <path"";
-                      strokeLinecap="round"";
-                      strokeLinejoin="round"";
-                      strokeWidth={2}"";
-                      d="M5 13l4 4L19 7";
+                    <div>Broken JSX</div>
                     />;
                   </svg>;
                 </div>";
@@ -225,16 +211,9 @@ const AIAutonomousBusinessManager = () => {}
               </div>"";
               <div className="flex items-start space-x-4">"";
                 <div className="bg-green-600/20 p-2 rounded-lg">";
-                  <svg"";
-                    className="h-6 w-6 text-green-400"";
-                    fill="none"";
-                    viewBox="0 0 24 24"";
+                  <div>Broken JSX</div>
                     stroke="currentColor">";
-                    <path"";
-                      strokeLinecap="round"";
-                      strokeLinejoin="round"";
-                      strokeWidth={2}"";
-                      d="M5 13l4 4L19 7";
+                    <div>Broken JSX</div>
                     />;
                   </svg>;
                 </div>";
@@ -250,16 +229,9 @@ const AIAutonomousBusinessManager = () => {}
             <div className="space-y-6">"";
               <div className="flex items-start space-x-4">"";
                 <div className="bg-green-600/20 p-2 rounded-lg">";
-                  <svg"";
-                    className="h-6 w-6 text-green-400"";
-                    fill="none"";
-                    viewBox="0 0 24 24"";
+                  <div>Broken JSX</div>
                     stroke="currentColor">";
-                    <path"";
-                      strokeLinecap="round"";
-                      strokeLinejoin="round"";
-                      strokeWidth={2}"";
-                      d="M5 13l4 4L19 7";
+                    <div>Broken JSX</div>
                     />;
                   </svg>;
                 </div>";
@@ -275,16 +247,9 @@ const AIAutonomousBusinessManager = () => {}
               </div>"";
               <div className="flex items-start space-x-4">"";
                 <div className="bg-green-600/20 p-2 rounded-lg">";
-                  <svg"";
-                    className="h-6 w-6 text-green-400"";
-                    fill="none"";
-                    viewBox="0 0 24 24"";
+                  <div>Broken JSX</div>
                     stroke="currentColor">";
-                    <path"";
-                      strokeLinecap="round"";
-                      strokeLinejoin="round"";
-                      strokeWidth={2}"";
-                      d="M5 13l4 4L19 7";
+                    <div>Broken JSX</div>
                     />;
                   </svg>;
                 </div>";
@@ -298,16 +263,9 @@ const AIAutonomousBusinessManager = () => {}
               </div>"";
               <div className="flex items-start space-x-4">"";
                 <div className="bg-green-600/20 p-2 rounded-lg">";
-                  <svg"";
-                    className="h-6 w-6 text-green-400"";
-                    fill="none"";
-                    viewBox="0 0 24 24"";
+                  <div>Broken JSX</div>
                     stroke="currentColor">";
-                    <path"";
-                      strokeLinecap="round"";
-                      strokeLinejoin="round"";
-                      strokeWidth={2}"";
-                      d="M5 13l4 4L19 7";
+                    <div>Broken JSX</div>
                     />;
                   </svg>;
                 </div>";
@@ -337,13 +295,11 @@ const AIAutonomousBusinessManager = () => {}
             Group's AI solutions.";
           </p>"";
           <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-            <Link"";
-              to="/contact"";
+            <div>Broken JSX</div>
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg">;
               Schedule a Demo;
             </Link>";
-            <Link"";
-              to="/pricing"";
+            <div>Broken JSX</div>
               className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg">;
               View Pricing;
             </Link>;

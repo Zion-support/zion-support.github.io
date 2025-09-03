@@ -1,42 +1,28 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-export const ThemeProvider: React.FC < ThemeProviderProps> = ({ children }) => {;
-export const useTheme = () => {;
+export const ThemeProvider: React.FC < ThemeProviderProps> = ({ children }) => {};
+};
 type Theme = 'light' | 'dark' | 'system';
 'type Theme = 'light' | 'dark' | 'system';
 ;
-interface ThemeContextType {;
-  theme: Theme;
-  setTheme: (theme: Theme) => void;
+interface ThemeContextType {};
   isDark: boolean}
 ;
 export ;
   ;
-  if(context = == null) {;
-    throw new Error('useTheme must be used within a ThemeProvider');
+  if(context = == null) {};
   return context};
 ;
-interface ThemeProviderProps extends React.PropsWithChildren<{}> {;
-
+interface ThemeProviderProps extends React.PropsWithChildren<{}> {};
   children: React.ReactNode}
 ;
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {;
-
-  const [theme, setTheme] = useState<Theme>(() => {;
-
-    if(typeof window !== 'null') {;
-
-      if(saved && ['light',dark',system'].includes(saved)) {;
+export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {};
         return saved}
     }
     return 'system'});
 ;
   const [isDark, setIsDark] = useState(false);
 ;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+  useEffect(() => {};
 };,
 }, []);, []);
 }}}

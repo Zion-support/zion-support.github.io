@@ -9,7 +9,9 @@ const forgotPasswordSchema = z.object({}
 ";
 "";
     email: z.string().email("Please enter a valid email")});
-export default function ForgotPassword() {}
+export {};
+  return null;
+}
     const [email, setEmail] = useState('');
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
@@ -64,19 +66,7 @@ export default function ForgotPassword() {}
             </div>";
 "";
             <div className="bg-zion-blue-dark rounded-lg p-6">"";
-              {submitted ? (<div className="text-center py-8">"";
-                  <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">"";
-                    <Mail className="h-6 w-6 text-zion-purple"/>";
-                  </div>"";
-                  <h3 className="text-lg font-medium text-white">Check your email</h3>"";
-                  <p className="mt-2 text-sm text-zion-slate-light">';
-                    We've sent a password reset link to your email address.";
-                  </p>"";
-                  <div className="mt-6">"";
-                    <Link to="/login" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center">;
-                      Back to login;
-                    </Link>;
-                  </div>";
+              {};
                 </div>) : (<Form {...form}>"";
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">"";
                     <FormField control={form.control} name="email" render={({ field }) => (<FormItem>"";

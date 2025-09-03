@@ -6,7 +6,9 @@ import { GradientHeading } from '@/components/GradientHeading';''';
 import { Button } from '@/components/ui/button';''';
 import Link from 'next/link';
 export { function };
-export default function InstantMessaging() {}
+export {};
+  return null;
+}
   const schema = {}
 ';
 '';
@@ -18,16 +20,10 @@ export default function InstantMessaging() {}
     url: 'https://app.ziontechgroup.com/features/instant-messaging'};
   return();
     <>;
-      <SEO;
-        title="Instant Messaging"";
-        description="Negotiate deals and collaborate instantly with real-time chat."";
-        keywords="real-time messaging, Socket.IO chat, project communication"";
-        canonical="https://app.ziontechgroup.com/features/instant-messaging";
+      <div>Broken JSX</div>
       />;
       {/* Use a normal script tag so JSON-LD is correctly parsed */}";
-      <script"";
-        type="application/ld+json";
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      <div>Broken JSX</div>
       ></script>";
       <Header />"";
       <main className="bg-background text-white py-12">"";
@@ -38,11 +34,7 @@ export default function InstantMessaging() {}
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">;
             Communicate with partners and support staff instantly from device.;
           </p>";
-          <img"";
-            loading="lazy"";
-            src="https://placehold.co/800x400"";
-            alt="Screenshot of chat interface"";
-            className="rounded-lg shadow-xl mx-auto mb-12"";
+          <div>Broken JSX</div>
           />"";
           <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>"";
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">;

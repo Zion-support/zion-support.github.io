@@ -24,7 +24,9 @@ const updatePasswordSchema = z;
     message: "Passwords do not match","";
     path["confirmPassword"],;,
 });
-export default function UpdatePassword() {}
+export {};
+  return null;
+}
     const [isLoading, setIsLoading] = useState(false);
     const [accessToken, setAccessToken] = useState(null);
     const [error, setError] = useState(null);
@@ -123,29 +125,16 @@ export default function UpdatePassword() {}
             </div>";
 "";
             <div className="bg-zion-blue-dark rounded-lg p-6">"";
-              {error && (<div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">"'";
+              {};
                   <p className="text-sm">{error}</p>'"'";
                   <Button className="mt-3 text-xs" variant="outline" onClick={() => router('/forgot-password')}>;
                     Request new reset link;
                   </Button>;
                 </div>)}";
 "";
-              {success ? (<div className="text-center py-8">"";
-                  <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">"";
-                    <LockKeyhole className="h-6 w-6 text-zion-purple"/>";
-                  </div>"";
-                  <h3 className="text-lg font-medium text-white">Password updated</h3>"";
-                  <p className="mt-2 text-sm text-zion-slate-light">;
-                    Your password has been successfully updated.";
-                  </p>"";
-                  <p className="mt-2 text-sm text-zion-slate-light">;
-                    Redirecting you to login...;
-                  </p>;
+              {};
                 </div>) : (<Form {...form}>;
-                  <form onSubmit = {}
-  form.handleSubmit(onSubmit,;
-  onInvalid)";
-"";,
+                  <div>Broken JSX</div>
 } className="space-y-6">"";
                     <FormField control={form.control} name="password" render={({ field }) => (<FormItem>"";
                           <FormLabel className="text-zion-slate-light">New Password</FormLabel>";

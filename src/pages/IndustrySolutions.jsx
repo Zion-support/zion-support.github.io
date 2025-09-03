@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 export default IndustrySolutions;
 import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory, Store, Home, GraduationCap, Stethoscope const IndustrySolutions = () => {}
+  return <div>Component</div>;
+};
 ';
 '';
 ''';

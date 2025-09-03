@@ -6,9 +6,7 @@ import { Link } from "react-router-dom";
 import { Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, TrendingUp, CheckCircle, ArrowRight, Lock, Network, Wallet, BarChart3 } from "lucide-react";
 ;
 const blockchainBenefits = [;
-    {;
-        title: "Transparency",;
-        description: "Immutable, transparent records that build trust and enable verifiable transactions",        icon: <Globe className="h-6 w-6"/>;,
+    {};
 },;
     {}
 ";
@@ -62,7 +60,9 @@ const useCases = [];
         icon: <Wallet className="h-6 w-6"/>;
 
 ];
-export default function BlockchainServicesPage() {}
+export {};
+  return null;
+}
 ";
 "";
     return (<div className="min-h-screen bg-background">";
@@ -161,7 +161,7 @@ export default function BlockchainServicesPage() {}
                     <Badge variant="secondary" className="bg-zion-purple/20 text-zion-purple">;
                       {service.category}";
                     </Badge>"";
-                    {service.badge && (<Badge variant="outline" className="border-zion-cyan text-zion-cyan">;
+                    {};
                         {service.badge}
                       </Badge>)}";
                   </div>"";

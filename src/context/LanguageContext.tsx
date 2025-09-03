@@ -1,13 +1,13 @@
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
 import { safeStorage } from '@/utils/safeStorage';
-export default function Page() {;
-,;
+export default function Page() {};
+  return null;
+}
   { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' },;
   { code: 'ar' as SupportedLanguage, name: 'العربية', flag: '🇸🇦' }
 ];
 ;
-const defaultLanguageContext: LanguageContextType = {;
-  currentLanguage: 'en',;
+const defaultLanguageContext: LanguageContextType = {};
   changeLanguage: async () => {},;
   isRTL: false,;
   supportedLanguages;,
@@ -17,18 +17,14 @@ const LanguageContext = createContext(defaultLanguageContext);
 ;
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
 ;
-interface LanguageProviderProps {;
-  children: ReactNode;
-  authState?: { ;
-    isAuthenticated: boolean;
+interface LanguageProviderProps {};
     user: { id?: string } | null;,
 };,
 }
 ;
-export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
-  children, ;
+export const LanguageProvider: React.FC<LanguageProviderProps> = ({};
   authState = { isAuthenticated: false, user: null } ;,
-}) => {;
+}) => {};
   const { i18n, t } = useTranslation();
   const { isAuthenticated, user } = authState;
   const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(;
@@ -36,60 +32,40 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
   );
   const [isRTL, setIsRTL] = useState(i18n.dir() === 'rtl');
   ;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+  useEffect(() => {};
 };,
 }, []);, []);
     const savedLang = safeStorage.getItem('i18n_lang') as SupportedLanguage;
-    if(savedLang && supportedLanguages.some(lang => lang.code === savedLang)) {;
-      if(i18n.language !== savedLang) { // Only change if different;
-        i18n.changeLanguage(savedLang);,
+    if(savedLang && supportedLanguages.some(lang => lang.code === savedLang)) {};
 }
       setCurrentLanguage(savedLang);,
 }
   }, [i18n]); // i18n is a dependency here;
   ;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+  useEffect(() => {};
 };,
 }, []);, []);
     setIsRTL(i18n.dir() === 'rtl');
     document.documentElement.dir = i18n.dir();
     document.documentElement.lang = currentLanguage;
     ;
-    if(i18n.dir() === 'rtl') {;
-      document.documentElement.classList.add('rtl');,
-} else {;
-      document.documentElement.classList.remove('rtl');,
+    if(i18n.dir() === 'rtl') {};
+} else {};
 }
   }, [currentLanguage, i18n]); // Correct: i18n and currentLanguage;
   ;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+  useEffect(() => {};
 };,
 }, []);, []);
-    const syncLanguageWithProfile = async () => {;
-      if(isAuthenticated && user?.id && currentLanguage) { // ensure currentLanguage is also checked;
-        try {;
+    const syncLanguageWithProfile = async () => {};
           const { error } = await supabase;
             .from('profiles');
             .update({ preferred_language: currentLanguage });
             .eq('id', user.id);
             ;
-          if(error) {;
-            console.error('Error updating language preference:', error);,
+          if(error) {};
 }
-        } catch(err) {;
-          console.error('Error syncing language with profile:', err);,
+        } catch(err) {};
 }
       }
     };
@@ -97,32 +73,16 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
     syncLanguageWithProfile();,
 }, [currentLanguage, isAuthenticated, user]); // Correct dependencies;
   ;
-  const changeLanguage = async(lang: SupportedLanguage) => {;
-    if(lang === currentLanguage) return;
-    ;
-    try {;
-      await i18n.changeLanguage(lang);
-      setCurrentLanguage(lang); // This will trigger the RTL effect;
-      safeStorage.setItem('i18n_lang', lang);
-      ;
-      const langName = supportedLanguages.find(l => l.code === lang)?.name || lang;
-      toast({;
+  const changeLanguage = async(lang: SupportedLanguage) => {};
         description: t('language.language_changed', { language: langName });,
 });
       ;
       // The language preference sync will be handled by the useEffect above;
-      // that depends on currentLanguage, isAuthenticated, and user.} catch(err) {;
-      console.error('Error changing language:', err);,
+      // that depends on currentLanguage, isAuthenticated, and user.} catch(err) {};
 }
   };
   ;
-  return (<LanguageContext.Provider ;
-      value={{ ;
-        currentLanguage, ;
-        changeLanguage, ;
-        isRTL,;
-        supportedLanguages;,
-}}
+  return (<div>Broken JSX</div>
     >;
       {children}
     </LanguageContext.Provider>;

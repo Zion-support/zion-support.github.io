@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 ;
 ;
-const ComprehensivePricing2026 = () => {;
+const ComprehensivePricing2026 = () => {};
+};
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [billingCycle, setBillingCycle] = useState('monthly');
     // Combine all services;
@@ -16,45 +17,21 @@ const ComprehensivePricing2026 = () => {;
         'Cloud & DevOps',;
         'Specialized Industry';
     ];
-    const getCategoryServices = (category) => {;
-        switch (category) {;
-            case 'AI & Business Solutions':;
-                return allServices.filter(service => ['Business Intelligence', 'Marketing Automation', 'Customer Service', 'Workflow Automation'].includes(service.category));
-            case 'IT Infrastructure':;
-                return allServices.filter(service => ['Data Center Management', 'Storage Management', 'Virtualization', 'IT Asset Management'].includes(service.category));
-            case 'Cybersecurity':;
-                return allServices.filter(service => ['Cybersecurity', 'Network Security'].includes(service.category));
-            case 'Cloud & DevOps':;
-                return allServices.filter(service => ['Cloud Infrastructure', 'DevOps', 'Performance Monitoring'].includes(service.category));
-            case 'Specialized Industry':;
-                return allServices.filter(service => ['Supply Chain Management', 'Financial Technology', 'Healthcare Technology', 'Legal Technology', 'Blockchain Technology', 'Internet of Things', 'Quantum Computing'].includes(service.category));
-            default:;
+    const getCategoryServices = (category) => {};
                 return allServices}
     };
     const filteredServices = getCategoryServices(selectedCategory);
-    const getAnnualPrice = (monthlyPrice) => {;
-        const price = parseInt(monthlyPrice.replace(/[^0-9]/g, ''));
-        const annualPrice = price * 12 * 0.8; // 20% discount for annual;
+    const getAnnualPrice = (monthlyPrice) => {};
         return `$${annualPrice.toLocaleString()}`};
-    const containerVariants = {;
+    const containerVariants = {};
         hidden: { opacity: 0 },;
-        visible: {;
-            opacity: 1,;
-            transition: {;
-                staggerChildren: 0.1;,
+        visible: {};
 }
         }
     };
-    const itemVariants = {;
-  hidden: { y: 20,;
-  opacity: 0 ;,
+    const itemVariants = {};
 },;
-        visible: {;
-            y: 0,;
-            opacity: 1,;
-            transition: {;
-                duration: 0.5,;
-                ease: "easeOut";,
+        visible: {};
 }
         }
     };
@@ -62,22 +39,13 @@ const ComprehensivePricing2026 = () => {;
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto text-center">;
-          <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial = {;
-  { opacity: 0,;
-  y: 20 ;,
-}} animate = {;
-  { opacity: 1,;
-  y: 0 ;,
+          <div>Broken JSX</div>
 }} transition={{ duration: 0.8 }}>;
             Comprehensive;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">;
               {" "}Pricing 2026            </span>;
           </motion.h1>";
-          <motion.p"";
-            className="text-xl text-gray-300 max-w-4xl mx-auto mb-8";
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+          <div>Broken JSX</div>
           >;
             Transparent pricing for all our innovative services. Choose the plan;
             that fits your business needs with flexible billing options and;
@@ -85,40 +53,28 @@ const ComprehensivePricing2026 = () => {;
           </motion.p>;
 
           {/* Billing Toggle */}";
-          <motion.div"";
-            className="flex items-center justify-center gap-4 mb-8";
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}'`;
-            transition={{ duration: 0.8, delay: 0.4 }}'`'`;
+          <div>Broken JSX</div>
           >'`'`'`;
-            <span'`'`'`'`;
-              className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}
+            <div>Broken JSX</div>
             >;
               Monthly;
             </span>;
-            <button;
-              onClick={() =>';
-                setBillingCycle('';
-                  billingCycle === 'monthly' ? 'annual' : 'monthly';
-                )'`;,
+            <div>Broken JSX</div>
+              onClick={};
 }'`'`;
               className={`relative w-16 h-8 bg-white/20 rounded-full p-1 transition-all duration-300 ${billingCycle === 'annual' ? 'bg-cyan-500' : ''}`}
             >'`;
-              <div'`'`;
-                className={`w-6 h-6 bg-white rounded-full transition-all duration-300 ${billingCycle === 'annual' ? 'translate-x-8' : ''}`}
+              <div>Broken JSX</div>
               />;
             </button>'`;
-            <span'`'`;
+            <div>Broken JSX</div>
               className={`text-lg ${billingCycle === 'annual' ? 'text-white' : 'text-gray-400'}`}">"";
               Annual <span className="text-cyan-400 text-sm">(Save 20%)</span>;
             </span>;
           </motion.div>;
 
           {/* Contact Information */}";
-          <motion.div"";
-            className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 mb-8 max-w-2xl mx-auto";
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div>Broken JSX</div>
             transition={{ duration: 0.8, delay: 0.6 }}">"";
             <h3 className="text-2xl font-bold mb-4 text-cyan-400">;
               Contact Zion Tech Group";
@@ -136,8 +92,7 @@ const ComprehensivePricing2026 = () => {;
               </div>;
               <div>';
                 <strong>Website:</strong>{' '}";
-                <a"";
-                  href="https://ziontechgroup.com"";
+                <div>Broken JSX</div>
                   className="text-cyan-400 hover:text-cyan-300 underline">;
                   ziontechgroup.com;
                 </a>;
@@ -151,9 +106,7 @@ const ComprehensivePricing2026 = () => {;
       <section className="py-8 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">"";
         <div className="max-w-7xl mx-auto">"";
           <div className="flex flex-wrap justify-center gap-4">;
-            {categories.map(category => (;
-              <button;
-                key={category}`;
+            {};
                 onClick={() => setSelectedCategory(category)}``;
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${}
 ';
@@ -174,26 +127,15 @@ const ComprehensivePricing2026 = () => {;
       {/* Pricing Grid */}"";
       <section className="py-16 px-4 sm:px-6 lg:px-8">"";
         <div className="max-w-7xl mx-auto">";
-          <motion.div"";
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"";
-            variants={containerVariants}"";
-            initial="hidden"";
+          <div>Broken JSX</div>
             animate="visible">;
-            {filteredServices.map((service, index) => (;
-              <motion.div;
-                key={service.id}";
-                variants={itemVariants}"";
-                className="group";
-                whileHover={{ scale: 1.02, y: -5 }}';
+            {};
                 transition={{ type: 'spring', stiffness: 300 }}">"";
                 <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/25 h-full">";
                   {/* Service Header */}"";
                   <div className="flex items-start justify-between mb-4">"";
                     <div className="text-4xl">{service.icon}</div>";
-                    {service.popular && ("";
-                      <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full">;
-                        Popular;
-                      </span>;
+                    {};
                     )}
                   </div>;
 ";
@@ -208,17 +150,13 @@ const ComprehensivePricing2026 = () => {;
                   {/* Pricing */}"";
                   <div className="mb-4">"";
                     <div className="text-3xl font-bold text-cyan-400">';
-                      {billingCycle === 'monthly';
-                        ? service.price;
+                      {};
                         : getAnnualPrice(service.price)}";
                     </div>"";
                     <div className="text-gray-400">';
                       {billingCycle === 'monthly' ? service.period : '/year'}
                     </div>'";
-                    {billingCycle === 'annual' && ("";
-                      <div className="text-sm text-green-400 mt-1">;
-                        Save 20% with annual billing;
-                      </div>;
+                    {};
                     )}
                   </div>;
 ";
@@ -235,7 +173,7 @@ const ComprehensivePricing2026 = () => {;
                       Key Features:";
                     </h4>"";
                     <ul className="text-xs text-gray-300 space-y-1">";
-                      {service.features.slice(0, 4).map((feature, idx) => ("";
+                      {};
                         <li key={idx} className="flex items-center gap-2">"";
                           <span className="text-cyan-400">✓</span>;
                           {feature}
@@ -283,15 +221,11 @@ const ComprehensivePricing2026 = () => {;
 ";
                   {/* Action Buttons */}"";
                   <div className="flex gap-2">;
-                    <a";
-                      href={service.link}"";
-                      target="_blank"";
-                      rel="noopener noreferrer"";
+                    <div>Broken JSX</div>
                       className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-all duration-300 text-center">;
                       Learn More;
                     </a>";
-                    <Link"";
-                      to="/contact"";
+                    <div>Broken JSX</div>
                       className="flex-1 bg-white/10 hover:bg-white/20 text-white text-sm font-semibold py-2 px-4 rounded-lg border border-white/30 hover:border-cyan-400/50 transition-all duration-300 text-center">;
                       Get Quote;
                     </Link>;
@@ -302,10 +236,7 @@ const ComprehensivePricing2026 = () => {;
           </motion.div>;
 
           {/* No Results */}
-          {filteredServices.length === 0 && (";
-            <motion.div"";
-              className="text-center py-16";
-              initial={{ opacity: 0 }}
+          {};
               animate={{ opacity: 1 }}">"";
               <div className="text-6xl mb-4">🔍</div>"";
               <h3 className="text-2xl font-bold text-white mb-2">;
@@ -322,10 +253,7 @@ const ComprehensivePricing2026 = () => {;
       {/* Enterprise Plans */}"";
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">"";
         <div className="max-w-7xl mx-auto text-center">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div>Broken JSX</div>
             transition={{ duration: 0.8 }}">"";
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">'";
               Enterprise{' '}"";
@@ -392,10 +320,7 @@ const ComprehensivePricing2026 = () => {;
       {/* CTA Section */}"";
       <section className="py-20 px-4 sm:px-6 lg:px-8">"";
         <div className="max-w-4xl mx-auto text-center">;
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div>Broken JSX</div>
             transition={{ duration: 0.8 }}">"";
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">'";
               Ready to{' '}"";
@@ -410,24 +335,18 @@ const ComprehensivePricing2026 = () => {;
               for your business.";
             </p>"";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <motion.div;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <div>Broken JSX</div>
               >";
-                <Link"";
-                  to="/contact"";
+                <div>Broken JSX</div>
                   className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold text-lg py-4 px-8 rounded-xl shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 border border-cyan-500/30 hover:border-cyan-500/60"">"";
                   <span className="text-xl">🚀</span>";
                   Get Custom Quote"";
                   <span className="text-xl">→</span>;
                 </Link>;
               </motion.div>;
-              <motion.div;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <div>Broken JSX</div>
               >";
-                <a"";
-                  href="tel:+13024640950"";
+                <div>Broken JSX</div>
                   className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md text-white font-semibold text-lg py-4 px-8 rounded-xl border border-white/30 hover:border-cyan-400/50 hover:bg-white/20 transition-all duration-300 shadow-lg"">"";
                   <span className="text-xl">📞</span>;
                   Call Now;

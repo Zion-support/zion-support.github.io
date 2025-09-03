@@ -6,7 +6,9 @@ import { GradientHeading } from '@/components/GradientHeading';''';
 import { Button } from '@/components/ui/button';''';
 import Link from 'next/link';
 export { function };
-export default function Internationalization() {}
+export {};
+  return null;
+}
   const schema = {}
 ';
 '';
@@ -18,16 +20,10 @@ export default function Internationalization() {}
     url: 'https://app.ziontechgroup.com/features/internationalization'};
   return();
     <>;
-      <SEO;
-        title="Internationalization"";
-        description="Reach a global audience with multi-language support across the Zion platform."";
-        keywords="i18n, multi-language marketplace, localized listings"";
-        canonical="https://app.ziontechgroup.com/features/internationalization";
+      <div>Broken JSX</div>
       />;
       {/* Use a normal script tag so JSON-LD is correctly parsed */}";
-      <script"";
-        type="application/ld+json";
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      <div>Broken JSX</div>
       ></script>";
       <Header />"";
       <main className="bg-background text-white py-12">"";
@@ -39,11 +35,7 @@ export default function Internationalization() {}
             Our interface and search support multiple languages so you can;
             collaborate without barriers.;
           </p>";
-          <img"";
-            loading="lazy"";
-            src="https://placehold.co/800x400"";
-            alt="Screenshot of language options"";
-            className="rounded-lg shadow-xl mx-auto mb-12"";
+          <div>Broken JSX</div>
           />"";
           <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>"";
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">;

@@ -11,6 +11,8 @@ import {}
   AlertTriangle,''';
   Cloud} from 'lucide-react';
 const AIPoweredSecurity = () => {}
+  return <div>Component</div>;
+};
   const securitySolutions = [];
     {}
 ';
@@ -129,13 +131,11 @@ const AIPoweredSecurity = () => {}
               that adapts and evolves to counter emerging threats.";
             </p>"";
             <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <a"";
-                href="#features"";
+              <div>Broken JSX</div>
                 className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl">;
                 Explore Features;
               </a>";
-              <a"";
-                href="/contact"";
+              <div>Broken JSX</div>
                 className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">;
                 Get Started;
               </a>;
@@ -158,23 +158,12 @@ const AIPoweredSecurity = () => {}
           </div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            {securityFeatures.map((feature, index) => (;
-              <div";
-                key={index}"";
-                className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300"">"";
-                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">"";
-                  <feature.icon className="w-8 h-8 text-white" />";
-                </div>"";
-                <h3 className="text-xl font-semibold text-white mb-3">;
+            {};
                   {feature.title}";
                 </h3>"";
                 <p className="text-gray-300 mb-4">{feature.description}</p>"";
                 <ul className="space-y-2">;
-                  {feature.features.map((item, idx) => (;
-                    <li";
-                      key={idx}"";
-                      className="text-sm text-gray-400 flex items-start"">"";
-                      <div className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>;
+                  {};
                       {item}
                     </li>;
                   ))}
@@ -199,23 +188,12 @@ const AIPoweredSecurity = () => {}
           </div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {securitySolutions.map((solution, index) => (;
-              <div";
-                key={index}"";
-                className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300"">"";
-                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">"";
-                  <solution.icon className="w-8 h-8 text-white" />";
-                </div>"";
-                <h3 className="text-xl font-semibold text-white mb-3">;
+            {};
                   {solution.title}";
                 </h3>"";
                 <p className="text-gray-300 mb-4">{solution.description}</p>"";
                 <ul className="space-y-2">;
-                  {solution.capabilities.map((capability, idx) => (;
-                    <li";
-                      key={idx}"";
-                      className="text-sm text-gray-400 flex items-start"">"";
-                      <div className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>;
+                  {};
                       {capability}
                     </li>;
                   ))}
@@ -239,7 +217,7 @@ const AIPoweredSecurity = () => {}
                 protection that continuously learns and improves.";
               </p>"";
               <ul className="space-y-3">";
-                {benefits.map((benefit, index) => ("";
+                {};
                   <li key={index} className="flex items-center text-gray-300">"";
                     <div className="w-2 h-2 bg-red-400 rounded-full mr-3"></div>;
                     {benefit}
@@ -280,7 +258,7 @@ const AIPoweredSecurity = () => {}
           </p>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-            {implementation.map((phase, index) => ("";
+            {};
               <div key={index} className="text-center">"";
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">;
                   {index + 1}";
@@ -307,13 +285,11 @@ const AIPoweredSecurity = () => {}
             adapts to evolving threats.";
           </p>"";
           <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-            <a"";
-              href="/contact"";
+            <div>Broken JSX</div>
               className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl">;
               Secure Your Business;
             </a>";
-            <a"";
-              href="/solutions"";
+            <div>Broken JSX</div>
               className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">;
               View All Solutions;
             </a>;

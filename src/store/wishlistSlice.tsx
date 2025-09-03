@@ -1,46 +1,18 @@
 :src/store/wishlistSlice.tsx;
 
-interface WishlistState {;
-  items: WishlistItem[];
-:src/store/wishlistSlice.tsx;
-  itemCount: number;
-;
+interface WishlistState {};
   itemCount: number}
 ;,
 }
 ;
-const initialState: WishlistState = {;
-
-  items: [],;
-  itemCount: 0,;
-  ;
-  ;
-  ;
-  ;
-  ;
-  ;
-;,
+const initialState: WishlistState = {};
 };
-const wishlistSlice:  createSlice({;  name: anywishlist',;
-const wishlistSlice:  createSlice({;
-  name: anywishlist',;
-  initialState,;
-  reducers: {;
-    addToWishlist: (state, action: PayloadAction<WishlistItem>)  => {;
-      ;
-      if(!existingItem) {;
-
-        state.items.push(action.payload);
+const wishlistSlice:  createSlice({};
         state.itemCount = state.items.length}
     },;
-    removeFromWishlist: any(state, action: PayloadAction<string>)  => {;
-
-      state.items = state.items.filter(item => item.listingId !== action.payload);
+    removeFromWishlist: unknown(state, action: PayloadAction<string>)  => {};
       state.itemCount = state.items.length},;
-    clearWishlist: any(state)  => {;
-
-      state.items = [];
-:src/store/wishlistSlice.tsx;
+    clearWishlist: unknown(state)  => {};
       state.itemCount = 0}}});
       state.itemCount = 0},;,
 },;,

@@ -1,96 +1,26 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight, CheckCircle, CreditCard export default function FinancialSolutions() {;
-    const features = [;
-        {;
-            icon: Brain,;
-            title: "AI-Powered Risk Assessment",;
-            description: "Advanced machine learning models for credit risk and fraud detection";,
+import {};
 },;
-        {;
-            icon: BarChart3,;
-            title: "Predictive Analytics",;
-            description: "Forecast market trends and customer behavior with high accuracy";,
+        {};
 },;
-        {;
-            icon: Shield,;
-            title: "Regulatory Compliance",;
-            description: "Automated compliance monitoring for financial regulations";,
+        {};
 },;
-        {;
-            icon: Zap,;
-            title: "Real-time Processing",;
-            description: "High-speed transaction processing and settlement systems";,
+        {};
 },;
-        {;
-            icon: Lock,;
-            title: "Enterprise Security",;
-            description: "Bank-grade security with multi-layer encryption and authentication";,
+        {};
 },;
-        {;
-            icon: TrendingUp,;
-            title: "Portfolio Optimization",;
-            description: "AI-driven investment strategies and portfolio management";
-
-    ];
-    const benefits = [;
-        "Reduce fraud losses by 60-80%",;
-        "Improve risk assessment accuracy by 40%",;
-        "Lower operational costs by 30-50%",;
-        "Enhance customer experience",;
-        "Faster transaction processing",;
-        "Better regulatory compliance";
-    ];
-    const solutions = [;
-        {;
-            title: "Digital Banking",;
-            description: "Modern digital banking platforms with AI-powered features";,
+        {};
 },;
-        {;
-            title: "Payment Processing",;
-            description: "Secure and efficient payment processing solutions";,
+        {};
 },;
-        {;
-            title: "Risk Management",;
-            description: "Comprehensive risk assessment and mitigation tools";,
+        {};
 },;
-        {;
-            title: "Compliance Automation",;
-            description: "Automated regulatory compliance and reporting";
-
-    ];
-    const industries = [;
-        "Retail Banking",;
-        "Investment Banking",;
-        "Insurance",;
-        "Fintech",;
-        "Credit Unions",;
-        "Wealth Management",;
-        "Payment Processors",;
-        "Regulatory Bodies";
-    ];
-    return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">;
+        {};
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto text-center">;
-          <motion.div initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}} animate = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
+          <div>Broken JSX</div>
 }} transition={{ duration: 0.8 }}>;
             <div className="flex justify-center mb-6">;
               <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center">;
@@ -119,24 +49,7 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
-          <motion.div initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
+          <div>Broken JSX</div>
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">;
             <h2 className="text-3xl md:text-4xl font-bold mb-6">;
               AI-Powered Financial Technology;
@@ -148,33 +61,7 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
           </motion.div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {features.map((feature, index) => (<motion.div key={feature.title} initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
-}} transition = {;
-  { duration: 0.8,;
-  delay: index * 0.1 ;
-
-;
-
-;
-
-;,
+            {};
 }} viewport={{ once: true }} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300">;
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">;
                   <feature.icon className="w-6 h-6 text-white"/>;
@@ -189,24 +76,7 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;
         <div className="max-w-7xl mx-auto">;
-          <motion.div initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
+          <div>Broken JSX</div>
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">;
             <h2 className="text-3xl md:text-4xl font-bold mb-6">;
               Why Choose Our Financial Solutions?;
@@ -217,24 +87,7 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
           </motion.div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            <motion.div initial = {;
-  { opacity: 0,;
-  x: -20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  x: 0 ;
-
-;
-
-;
-
-;,
+            <div>Broken JSX</div>
 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>;
               <h3 className="text-2xl font-semibold mb-6">Key Benefits</h3>;
               <div className="space-y-4">;
@@ -245,24 +98,7 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
               </div>;
             </motion.div>;
 
-            <motion.div initial = {;
-  { opacity: 0,;
-  x: 20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  x: 0 ;
-
-;
-
-;
-
-;,
+            <div>Broken JSX</div>
 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>;
               <h3 className="text-2xl font-semibold mb-6">Solutions</h3>;
               <div className="space-y-4">;
@@ -279,24 +115,7 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
       {/* Industries Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
-          <motion.div initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
+          <div>Broken JSX</div>
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">;
             <h2 className="text-3xl md:text-4xl font-bold mb-6">;
               Industry Solutions;
@@ -308,33 +127,7 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
           </motion.div>;
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">;
-            {industries.map((industry, index) => (<motion.div key={industry} initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
-}} transition = {;
-  { duration: 0.8,;
-  delay: index * 0.1 ;
-
-;
-
-;
-
-;,
+            {};
 }} viewport={{ once: true }} className="bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-cyan-500 transition-all duration-300">;
                 <CreditCard className="w-8 h-8 text-cyan-500 mx-auto mb-3"/>;
                 <h3 className="font-semibold">{industry}</h3>;
@@ -346,24 +139,7 @@ import { DollarSign, TrendingUp, Shield, Brain, BarChart3, Zap, Lock, ArrowRight
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">;
-          <motion.div initial = {;
-  { opacity: 0,;
-  y: 20 ;
-
-;
-
-;
-
-;,
-}} whileInView = {;
-  { opacity: 1,;
-  y: 0 ;
-
-;
-
-;
-
-;,
+          <div>Broken JSX</div>
 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>;
             <h2 className="text-3xl md:text-4xl font-bold mb-6">;
               Ready to Transform Your Financial Services?;

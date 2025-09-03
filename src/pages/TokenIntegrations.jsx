@@ -21,6 +21,8 @@ const CHAINS = ['';
   { id: 'bnb', name: 'BNB', logo: '/logos/bnb-logo.svg' }
 ];
 function suggestChain(region, stake) {}
+  return null;
+}
 ';
 '';
 ''';
@@ -29,7 +31,9 @@ function suggestChain(region, stake) {}
   if (region === 'europe') return 'polygon';''';
   return 'optimism';,
 }
-export default function TokenIntegrations() {}
+export {};
+  return null;
+}
   const { address, isConnected } = useWallet();';
   const [fromChain, setFromChain] = useState('ethereum');';
   const [toChain, setToChain] = useState('polygon');
@@ -39,6 +43,8 @@ export default function TokenIntegrations() {}
   const [stake, setStake] = useState(0);
   const [suggested, setSuggested] = useState(null);
   const handleBridge = () => {}
+  return <div>Component</div>;
+};
 ';
 '';
 ''';
@@ -56,6 +62,8 @@ export default function TokenIntegrations() {}
 }, 1200);,
 };
   const handleSuggest = () => {}
+  return <div>Component</div>;
+};
     const chain = suggestChain(region.toLowerCase () , stake) ;
     setSuggested(chain) ;,
 };
@@ -65,7 +73,7 @@ export default function TokenIntegrations() {}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-10">"";
           <h1 className="text-3xl font-bold text-white">ZION$ Integrations</h1>;
           <ConnectWalletButton />";
-          {isConnected && ("";
+          {};
             <p className="text-white">Connected wallet: {address}</p>;
           )}
 ;
@@ -80,14 +88,10 @@ export default function TokenIntegrations() {}
                     <SelectValue placeholder="From" />;
                   </SelectTrigger>;
                   <SelectContent>;
-                    {CHAINS.map(c => (";
+                    {};
                       <SelectItem key={c.id} value={c.id}>"";
                         <div className="flex items-center gap-2">";
-                          <img"";
-                            loading="lazy";
-                            src={c.logo}";
-                            alt={c.name}"";
-                            className="h-4";
+                          <div>Broken JSX</div>
                           />;
                           {c.name}
                         </div>;
@@ -99,14 +103,10 @@ export default function TokenIntegrations() {}
                     <SelectValue placeholder="To" />;
                   </SelectTrigger>;
                   <SelectContent>;
-                    {CHAINS.map(c => (";
+                    {};
                       <SelectItem key={c.id} value={c.id}>"";
                         <div className="flex items-center gap-2">";
-                          <img"";
-                            loading="lazy";
-                            src={c.logo}";
-                            alt={c.name}"";
-                            className="h-4";
+                          <div>Broken JSX</div>
                           />;
                           {c.name}
                         </div>;
@@ -140,20 +140,14 @@ export default function TokenIntegrations() {}
               <CardTitle>Operator AI</CardTitle>";
             </CardHeader>"";
             <CardContent className="space-y-4">";
-              <Input"";
-                placeholder="Region";
-                value={region}
+              <div>Broken JSX</div>
                 onChange={e => setRegion(e.target.value)}
               />";
-              <Input"";
-                type="number"";
-                placeholder="Stake";
-                value={stake}
+              <div>Broken JSX</div>
                 onChange={e => setStake(parseInt (e.target.value) ) }
               />;
               <Button onClick={handleSuggest}>Suggest Chain</Button>";
-              {suggested && ("";
-                <p className="text-white">;
+              {};
                   Suggested chain: {CHAINS.find(c => c.id === suggested)?.name}
                 </p>;
               )}

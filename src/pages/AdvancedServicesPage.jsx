@@ -28,7 +28,9 @@ import {}
   MapPin,''';
   ExternalLink} from 'lucide-react';''';
 import SEO from '@/components/SEO';
-export default function AdvancedServicesPage() {}
+export {};
+  return null;
+}
 ';
 '';
 ''';
@@ -65,11 +67,7 @@ export default function AdvancedServicesPage() {}
   );
   return();
     <div className="min-h-screen bg-background">";
-      <SEO"";
-        title="Advanced AI & IT Services - Zion Tech Group"";
-        description="Discover cutting-edge AI solutions, cybersecurity services, cloud optimization, and digital transformation services. Expert IT consulting and implementation."";
-        keywords="AI services, IT consulting, cybersecurity, cloud optimization, digital transformation, business automation"";
-        canonical="https://ziontechgroup.com/advanced-services";
+      <div>Broken JSX</div>
       />;
 ";
       {/* Hero Section */}"";
@@ -101,14 +99,11 @@ export default function AdvancedServicesPage() {}
           </div>";
 "";
           <div className="flex flex-wrap justify-center gap-4">";
-            <Button"";
-              size="lg"";
+            <div>Broken JSX</div>
               className="bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue font-semibold">;
               Get Free Consultation;
             </Button>";
-            <Button"";
-              size="lg"";
-              variant="outline"";
+            <div>Broken JSX</div>
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue">;
               View Pricing;
             </Button>;
@@ -122,17 +117,14 @@ export default function AdvancedServicesPage() {}
           <div className="flex flex-col lg:flex-row gap-4 items-center">"";
             <div className="relative flex-1 max-w-md">"";
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />";
-              <Input"";
-                placeholder="Search services, technologies, or solutions...";
-                value={searchQuery}";
+              <div>Broken JSX</div>
                 onChange={e => setSearchQuery(e.target.value)}"";
                 className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light";
               />;
             </div>";
 "";
             <div className="flex gap-2">;
-              <select;
-                value={selectedCategory}";
+              <div>Broken JSX</div>
                 onChange={e => setSelectedCategory(e.target.value)}"";
                 className="px-4 py-2 bg-zion-blue border border-zion-blue-light text-white rounded-md"">"";
                 <option value="all">All Categories</option>;
@@ -141,8 +133,7 @@ export default function AdvancedServicesPage() {}
                   </option>) ) }
               </select>;
 
-              <select;
-                value={sortBy}";
+              <div>Broken JSX</div>
                 onChange={e => setSortBy(e.target.value)}"";
                 className="px-4 py-2 bg-zion-blue border border-zion-blue-light text-white rounded-md"">"";
                 <option value="featured">Featured</option>"";
@@ -169,11 +160,7 @@ export default function AdvancedServicesPage() {}
           </div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {SERVICE_CATEGORIES.map(category => (;
-              <Card";
-                key={category.id}"";
-                className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-cyan transition-all duration-300"">"";
-                <CardHeader className="text-center">"";
+            {};
                   <div className="text-4xl mb-2">{category.icon}</div>"";
                   <CardTitle className="text-xl">{category.name}</CardTitle>"";
                   <CardDescription className="text-zion-slate-light">;
@@ -181,8 +168,7 @@ export default function AdvancedServicesPage() {}
                   </CardDescription>";
                 </CardHeader>"";
                 <CardContent className="text-center">";
-                  <Badge"";
-                    variant="secondary"";
+                  <div>Broken JSX</div>
                     className="bg-zion-cyan text-zion-blue">;
                     {category.count} Services;
                   </Badge>;
@@ -205,7 +191,7 @@ export default function AdvancedServicesPage() {}
           </div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {sortedServices.map(service => (;
+            {};
               <ServiceCard key={service.id} service={service} />;
             ))}
           </div>;
@@ -225,9 +211,7 @@ export default function AdvancedServicesPage() {}
           </div>";
 "";
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">;
-            {PRICING_TIERS.map((tier, index) => (;
-              <Card;
-                key={tier.name}';
+            {};
                 className={`bg-zion-blue-dark border-zion-blue-light text-white ${index === 1 ? 'border-zion-cyan scale-105' : ''}`}">"";
                 <CardHeader className="text-center">"";
                   <CardTitle className="text-2xl">{tier.name}</CardTitle>"";
@@ -240,11 +224,7 @@ export default function AdvancedServicesPage() {}
                 </CardHeader>";
                 <CardContent>"";
                   <ul className="space-y-3">;
-                    {tier.features.map((feature, featureIndex) => (;
-                      <li";
-                        key={featureIndex}"";
-                        className="flex items-center gap-2"">"";
-                        <CheckCircle className="w-5 h-5 text-zion-cyan" />;
+                    {};
                         <span>{feature}</span>;
                       </li>;
                     ))}";
@@ -335,15 +315,12 @@ export default function AdvancedServicesPage() {}
           </p>";
 "";
           <div className="flex flex-wrap justify-center gap-4 mb-8">";
-            <Button"";
-              size="lg"";
+            <div>Broken JSX</div>
               className="bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue font-semibold"">"";
               <Phone className="w-5 h-5 mr-2" />;
               Call +1 302 464 0950;
             </Button>";
-            <Button"";
-              size="lg"";
-              variant="outline"";
+            <div>Broken JSX</div>
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue"">"";
               <Mail className="w-5 h-5 mr-2" />;
               Email kleber@ziontechgroup.com;
@@ -353,10 +330,7 @@ export default function AdvancedServicesPage() {}
           <div className="text-zion-slate-light">";
             <p>Visit us: 364 E Main St STE 1008, Middletown DE 19709</p>"";
             <p className="mt-2">";
-              <a"";
-                href="https://ziontechgroup.com"";
-                target="_blank"";
-                rel="noopener noreferrer"";
+              <div>Broken JSX</div>
                 className="text-zion-cyan hover:text-zion-cyan-dark inline-flex items-center gap-1"">"";
                 ziontechgroup.com <ExternalLink className="w-4 h-4" />;
               </a>;
@@ -368,18 +342,15 @@ export default function AdvancedServicesPage() {}
 }
 // Service Card Component;
 function ServiceCard({ service }) {}
+  return null;
+}
 ";
   return ("";
     <Card className="h-full hover:shadow-lg transition-all duration-300 border-zion-blue-light hover:border-zion-cyan">"";
       <div className="relative">;
-        <img;
-          src={service.images[0]}";
-          alt={service.title}"";
-          className="w-full h-48 object-cover rounded-t-lg";
+        <div>Broken JSX</div>
         />";
-        {service.featured && ("";
-          <Badge className="absolute top-3 right-3 bg-zion-cyan text-zion-blue">;
-            Featured;
+        {};
           </Badge>) }
       </div>;
 ";
@@ -405,11 +376,7 @@ function ServiceCard({ service }) {}
       <CardContent className="space-y-4">";
         {/* Tags */}"";
         <div className="flex flex-wrap gap-2">;
-          {service.tags.slice(0, 3).map((tag, index) => (;
-            <Badge";
-              key={index}"";
-              variant="secondary"";
-              className="bg-zion-blue-light text-zion-blue text-xs">;
+          {};
               {tag}
             </Badge>) ) }
         </div>;
@@ -439,7 +406,7 @@ function ServiceCard({ service }) {}
         {/* Category */}"";
         <div className="text-sm text-zion-slate">;
           <strong>Category:</strong> {service.category}";
-          {service.subcategory && ("";
+          {};
             <span className="ml-2 text-zion-cyan">• {service.subcategory}</span>;
           )}
         </div>;
@@ -449,8 +416,7 @@ function ServiceCard({ service }) {}
           <Button className="flex-1 bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue font-semibold">;
             Get Quote;
           </Button>";
-          <Button"";
-            variant="outline"";
+          <div>Broken JSX</div>
             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue">;
             Learn More;
           </Button>;
