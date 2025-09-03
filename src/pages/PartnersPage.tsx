@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Handshake, 
-  Award, 
   Users, 
+  Award, 
   Globe, 
   TrendingUp, 
   CheckCircle, 
@@ -51,7 +50,7 @@ export function PartnersPage() {
     },
     {
       title: 'Strategic Partners',
-      icon: Handshake,
+      icon: Users,
       description: 'Long-term strategic alliances for joint product development and market expansion.',
       count: 8
     }

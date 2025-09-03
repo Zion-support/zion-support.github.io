@@ -1,6 +1,5 @@
 import React from 'react';
 import { 
-  Handshake, 
   Users, 
   Star, 
   Award, 
@@ -94,7 +93,7 @@ export default function PartnersPage() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-full text-sm font-medium mb-6">
-              <Handshake className="w-4 h-4 mr-2" />
+              <Users className="w-4 h-4 mr-2" />
               Strategic Partnerships
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">

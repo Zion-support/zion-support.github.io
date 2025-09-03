@@ -12,6 +12,12 @@ const AboutPage = lazy(() => import('./pages/about'));
 const ContactPage = lazy(() => import('./pages/contact'));
 const ServicesPage = lazy(() => import('./pages/services'));
 const SolutionsPage = lazy(() => import('./pages/solutions'));
+const ServicesOverview = lazy(() => import('./pages/services-overview'));
+
+// Service pages
+const AIContentGenerationSuite = lazy(() => import('./pages/services/ai-content-generation-suite'));
+const CloudMigrationServices = lazy(() => import('./pages/services/cloud-migration-services'));
+const SmartCRMPlatform = lazy(() => import('./pages/services/smart-crm-platform'));
 
 // Loading component
 const LoadingSpinner = () => (
@@ -34,6 +40,10 @@ const Header = () => (
         <a href="/services" className="mr-4 hover:text-cyan-400">Services</a>
         <a href="/contact" className="hover:text-cyan-400">Contact</a>
       </nav>
+      <div className="mt-2 text-sm text-gray-300">
+        <a href="tel:+13024640950" className="mr-4 hover:text-cyan-400">+1 302 464 0950</a>
+        <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400">kleber@ziontechgroup.com</a>
+      </div>
     </div>
   </header>
 );
@@ -42,7 +52,13 @@ const Header = () => (
 const Footer = () => (
   <footer className="bg-zion-slate-dark text-white p-4 mt-auto">
     <div className="container mx-auto text-center">
-      <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+      <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
+      <div className="mt-2 text-sm text-gray-300">
+        <p>Phone: <a href="tel:+13024640950" className="hover:text-cyan-400">+1 302 464 0950</a></p>
+        <p>Email: <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400">kleber@ziontechgroup.com</a></p>
+        <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>
+        <p>Website: <a href="https://ziontechgroup.com" className="hover:text-cyan-400">https://ziontechgroup.com</a></p>
+      </div>
     </div>
   </footer>
 );
@@ -58,69 +74,18 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services-overview" element={<ServicesOverview />} />
             <Route path="/solutions" element={<SolutionsPage />} />
+            {/* Service pages */}
+            <Route path="/services/ai-content-generation-suite" element={<AIContentGenerationSuite />} />
+            <Route path="/services/cloud-migration-services" element={<CloudMigrationServices />} />
+            <Route path="/services/smart-crm-platform" element={<SmartCRMPlatform />} />
             <Route path="*" element={<HomePage />} />
           </Routes>
         </Suspense>
       </main>
       <Footer />
-    </div>  );
-};
-export default App; // Loading component
-const PageLoader = () => (
-  <div className="flex items-center justify-center min-h-screen bg-gray-900">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></div>
-      <p className="text-gray-400">Loading...</p>
     </div>
-  </div>
-);
-
-function App() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
-  return (
-    <ErrorBoundary fallback={<div>Something went wrong. Please refresh the page.</div>}>
-      <div className="App">
-        <div className="min-h-screen">
-          <Suspense fallback={<PageLoader />}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/services/*" element={<ServicesPage />} />
-              <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
-              <Route path="/pricing" element={<PricingPage />} />
-              <Route path="/solutions" element={<SolutionsPage />} />
-              <Route path="/solutions/*" element={<SolutionsPage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/about/*" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/blog" element={<BlogPage />} />
-              <Route path="/blog/*" element={<BlogPage />} />
-              <Route path="/careers" element={<AboutPage />} />
-              <Route path="/partners" element={<AboutPage />} />
-              <Route path="/press" element={<AboutPage />} />
-              <Route path="/case-studies" element={<BlogPage />} />
-              <Route path="/research-development" element={<BlogPage />} />
-              <Route path="/docs" element={<BlogPage />} />
-              <Route path="/api" element={<BlogPage />} />
-              <Route path="/developer" element={<BlogPage />} />
-              <Route path="/help" element={<Helpdesk />} />
-              <Route path="/training" element={<Training />} />
-              <Route path="/community" element={<BlogPage />} />
-              <Route path="/support" element={<Support />} />
-              <Route path="/sitemap" element={<Sitemap />} />
-              <Route path="/comprehensive-sitemap" element={<ComprehensiveSitemap />} />
-              <Route path="*" element={<NotFoundPage />} />
-            </Routes>
-          </Suspense>                <Route path="*" element={<NotFoundPage />} />
-              </Routes>
-            </Suspense>
-          </main>
-        </div>
-        <Footer />
-      </div>
-    </ErrorBoundary>
   );
 }
 
