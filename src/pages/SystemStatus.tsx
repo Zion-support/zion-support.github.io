@@ -1,47 +1,50 @@
-import { CheckCircle, AlertCircle, XCircle, Server, Database, Cloud } from 'lucide-react';
-const SystemStatus: React.FC = () => {
-  const services = [
-    { name: 'Website', status: 'operational', icon: Server }, { name: 'API Services', status: 'operational', icon: Database },
-    { name: 'Cloud Infrastructure', status: 'operational', icon: Cloud }, { name: 'AI Services', status: 'operational', icon: CheckCircle },
-    { name: 'Support System', status: 'operational', icon: CheckCircle }
-  ];
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'operational': return <CheckCircle className='h-5 w-5 text-green-500' />
-      case 'degraded':
-        return <AlertCircle className='h-5 w-5 text-yellow-500' />
-      case 'outage':
-        return <XCircle className='h-5 w-5 text-red-500' />
-      default:
-        return <CheckCircle className='h-5 w-5 text-green-500' />
-    }
-  }
-
-  return("
-    <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>"
-      <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>"
-        <div className='text-center mb-12'>"
-          <h1 className='text-4xl font-bold text-gray-900 mb-4'>System Status</h1>"
-          <p className='text-xl text-gray-600'>All systems are operational</p>
-        </div>"
-        <div className='bg-white rounded-lg shadow-sm border border-gray-200 p-8'>"
-          <h2 className='text-2xl font-bold text-gray-900 mb-6'>Service Status</h2>"
-          <div className='space-y-4'>
-            {services.map((service, index) => ("
-              <div key={index} className='flex items-center justify-between p-4 border border-gray-200 rounded-lg'>"
-                <div className='flex items-center'>"
-                  <service .icon className='h-6 w-6 text-blue-600 mr-3' /" >"
-                  <span className='text-lg font-medium text-gray-900'>{service.name}</span>
-                </div>"
-                <div className='flex items-center'>
-                  {getStatusIcon(service.status)}"
-                  <span className='ml-2 text-gray-600 capitalize'>{service.status}</span>
-                </div>
+import React from "react"
+import Head from "next/head"
+import Link from "next/link"
+const SystemStatus = () => {
+  return (
+    <>
+      <Head>
+        <title>System Status - Zion Tech Group</title>
+        <meta name="description" content="Professional System Status services"  />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              System Status
+            </h1>
+            <p className="text-xl text-gray-600 mb-12">
+              Professional System Status services and solutions
+            </p>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Professional Solutions</li>
+                  <li>• Expert Implementation</li>
+                  <li>• 24/7 Support</li>
+                  <li>• Custom Development</li>
+                </ul>
               </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  )}
-export default SystemStatus"
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Industry Expertise</li>
+                  <li>• Proven Results</li>
+                  <li>• Scalable Solutions</li>
+                  <li>• Competitive Pricing</li>
+                </ul>
+              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                View Pricing
+              </Link>
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                Contact Us
+              </Link>
+            </div>
+    </>
+  );
+}
+export default SystemStatus

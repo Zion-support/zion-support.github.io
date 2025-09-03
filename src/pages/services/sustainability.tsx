@@ -1,1 +1,141 @@
-export default function Sustainability() { ]  const services = [ { title: 'Green IT Infrastructure' description: 'Energy-efficient data centers and computing systems' icon: Cpu }, { title: 'Sustainable Software' description: 'Eco-friendly application development and optimization' icon: Database }, { title: 'Energy Monitoring' description: 'Real-time tracking and optimization of power usage' icon: BarChart3 }, { title: 'Carbon Footprint Analysis' description: 'Comprehensive environmental impact assessment' icon: Globe} ]} ]  return (""" <div className = "min-h-screen bg-futuristic&quot>"" {}"" <section className="relative pt-32 pb-20 overflow-hidden&quot>"" <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-slate-900 to-slate-900&quot></div>"" <div className="container-responsive relative z-10&quot> <motion.div initial = { { opacity: 0, y: 20 }} animate = { { opacity: 1, y: 0" }}"" transition={{ duration: 0.6 }}"" className="text-center max-w-4xl mx-auto&quot'>"" <div className="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-4 py-2 mb-6&quot>"" <Heart className="w-5 h-5 text-emerald-400&quot />" <span className="text-emerald-400 font-medium&quot>Green IT & Sustainability</span>" </div>"'" <h1 className="text-5xl md: text-6xl font-bold text-white mb-6&quot>" Technology for a&quot' <span className="text-gradient&quot> Sustainable Future</span>" </h1>"'" <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto&quot> Build a greener tomorrow with sustainable technology solutions. Reduce environmental impact while maintaining performance and efficiency." </p>"'" <div className="flex flex-col sm: flex-row gap-4 justify-center&quot>"" <button className="btn-futuristic px-8 py-4 text-lg&quot>" Go Green with Tech&quot' <ArrowRight className="w-5 h-5 ml-2&quot />"" </button>" <button className="btn-outline px-8 py-4 text-lg&quot> Learn More </button> </div> </motion.div> </div> </section>'" {}"" <section className="py-20&quot>"" <div className="container-responsive&quot> <motion.div initial = { { opacity: 0, y: 20 }} whileInView = { { opacity: 1, y: 0 }}" transition={{ duration: 0.6 }}"" viewport={{ once: true }}"" className="text-center mb-16&quot'>"" <h2 className="text-4xl font-bold text-white mb-4&quot>" Why Choose Sustainable Technology?"" </h2>"" <p className="text-xl text-zion-slate-light max-w-2xl mx-auto&quot> Environmental responsibility meets technological innovation </p>" </motion.div>"'" <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8&quot> {features.map((feature, index) => ( <motion.div key={feature.title} initial = { { opacity: 0, y: 20 }} whileInView = { { opacity: 1, y: 0 }} transition = { { duration: 0.6, delay: index * 0.1" }}"" viewport={{ once: true }}"" className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover: border-zion-cyan/40 transition-all duration-300 group&quot'>"" <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-300&quot>"" <feature.icon className="w-8 h-8 text-white&quot />"" </div>"" <h3 className="text-xl font-semibold text-white mb-3&quot>{feature.title}</h3>"" <p className="text-zion-slate-light&quot>{feature.description}</p> </motion.div> ))} </div> </div> </section>'" {}"" <section className="py-20 bg-white/5&quot>"" <div className="container-responsive&quot> <motion.div initial = { { opacity: 0, y: 20 }} whileInView = { { opacity: 1, y: 0 }}" transition={{ duration: 0.6 }}"" viewport={{ once: true }}"" className="text-center mb-16&quot'>"" <h2 className="text-4xl font-bold text-white mb-4&quot>" Our Sustainability Services&quot" </h2>"" <p className="text-xl text-zion-slate-light max-w-2xl mx-auto&quot> Comprehensive green technology solutions for eco-conscious businesses </p>" </motion.div>"'" <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6&quot> {services.map((service, index) => ( <motion.div key={service.title} initial = { { opacity: 0, x: index % 2 === 0 ? -20 : 20 }} whileInView = { { opacity: 1, x: 0 }} transition = { { duration: 0.6, delay: index * 0.1" }}"" viewport={{ once: true }}"" className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover: border-zion-cyan/40 transition-all duration-300 group&quot'>"" <h3 className="text-xl font-semibold text-white mb-3&quot>{service.title}</h3>"" <p className="text-slate-300 mb-4&quot>{service.description}</p>"" <div className="text-2xl font-bold text-emerald-400 mb-4&quot>{service.price}</div>"" <ul className="space-y-2&quot>"" {service.features.map((feature, featureIndex) => ("" <li key={featureIndex} className="flex items-center text-sm text-slate-300&quot>"" <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3&quot></div> {feature} </li> ))} </ul> <motion.button" whileHover={{ scale: 1.05 }}"" whileTap={{ scale: 0.95 }}"" className="w-full mt-6 px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover: from-green-600 hover:to-emerald-600 transition-all duration-300&quot > Get Quote </motion.button> </motion.div> ))} </div> </div> </section>'" {}"" <section className="py-20&quot>"" <div className="container mx-auto px-4&quot> <motion.div initial = { { opacity: 0, y: 20 }} whileInView = { { opacity: 1, y: 0" }}"" transition={{ duration: 0.6 }}"" className="text-center mb-16&quot'>"" <h2 className="text-4xl font-bold text-white mb-4&quot> Sustainability Solutions" <="" </h2>"" <p className="text-xl text-slate-300 max-w-3xl mx-auto&quot> Discover how sustainable technology can transform various aspects of your business > and create positive environmental impact </p>" </motion.div>"'" <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8&quot> {solutions.map((solution, index) => ( <motion.div key={solution.name} initial = { { opacity: 0, scale: 0.8 }} whileInView = { { opacity: 1, scale: 1 }} transition = { { duration: 0.6, delay: index * 0.1'" }}"" className="text-center group&quot'>"" <div className="w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover: bg-slate-700 transition-all duration-300&quot>"" <solution.icon className="w-8 h-8 text-emerald-400&quot /> </div> </motion.div> ))} </div> </div> </section>'" {}"" <section className="py-20&quot>"" <div className="container-responsive&quot> <motion.div initial = { { opacity: 0, y: 20 }} whileInView = { { opacity: 1, y: 0 }}" transition={{ duration: 0.6 }}"" viewport={{ once: true }}"" className="bg-gradient-to-r from-emerald-600 to-emerald-700 rounded-3xl p-12 text-center relative overflow-hidden&quot'>"" <div className="absolute inset-0 bg-black/20&quot></div>"" <div className="relative z-10&quot>"" <h2 className="text-4xl font-bold text-white mb-6&quot>" Ready to Go Green?"" </h2>"" <p className="text-xl text-emerald-100 mb-8 max-w-2xl mx-auto&quot>" Make a positive impact on the environment while advancing your technology capabilities."" </p>"" <div className="flex flex-col sm: flex-row gap-4 justify-center&quot>"" <button className="bg-white text-emerald-600 px-8 py-4 rounded-xl font-semibold hover: bg-gray-100 transition-colors duration-300&quot>" Go Green with Tech&quot" </button>"" <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover: bg-white hover:text-emerald-600 transition-colors duration-300&quot> Contact Green Team </button> </div> </div> </motion.div> </div> </section> </div>" )}"';"';''";'"
+import React from "react"
+import Link from "next/link"
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from "lucide-react"
+  );
+export default function Sustainability() {
+  const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ]
+  const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ]
+  const useCases = [
+    "Use Case 1",
+    "Use Case 2",
+    "Use Case 3"
+  ]
+  const pricing = [
+      }
+];
+    {
+      name: "Professional",
+      price: "$799/mo",
+      details: ["Up to 50 users", "Advanced features", "Priority support", "99.9% SLA"]
+    }
+  ];
+    {
+      name: "Enterprise",
+      price: "$1,999/mo",
+    }
+  ];
+
+  ]
+  return (
+    <div className="min-h-screen bg-white">
+      <section className="bg-gradient-to-br from-indigo-500 via-blue-500 to-cyan-500 py-20 text-center">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
+            <Database className="w-4 h-4 mr-2"  />
+            AI-Powered Sustainability Intelligence
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Sustainability Platform</h1>
+          <p className="text-indigo-100 text-xl">
+            Transform your sustainability operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.
+          </p>
+        </div>
+      </section>
+      <section className="py-16 max-w-6xl mx-auto px-6">
+        <div className="grid md:grid-cols-2 gap-10">
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Sustainability Features</h2>
+            <ul className="space-y-3">
+              {features.map((feature, index) => (
+                <li key={index} className="flex items-start">
+                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />
+                  <span className="text-gray-700">{feature}</span>
+                </li>
+              ))}
+
+            </ul>
+            <div className="mt-6 text-sm text-gray-600">
+              Built with enterprise-grade security, SOC 2 compliance, and 99.9% uptime SLA.
+            </div>
+          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Competitive Pricing</h3>
+            <div className="grid md:grid-cols-3 gap-4">
+              {pricing.map((tier, index) => (
+                <div key={index} className="rounded-lg p-4 border border-gray-200 hover:border-indigo-300 transition-colors">
+                  <div className="text-lg font-semibold mb-1">{tier.name}</div>
+                  <div className="text-2xl font-bold text-indigo-600 mb-2">{tier.price}</div>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    {tier.details.map((detail, detailIndex) => (
+                      <li key={detailIndex}>{detail}</li>
+                    ))}
+
+                  </ul>
+                </div>
+              ))}
+
+            </div>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link href="/pricing" className="px-5 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors inline-flex items-center">
+                View Full Pricing <ArrowRight className="w-4 h-4 ml-2"  />
+              </Link>
+              <Link href="/contact" className="px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors inline-flex items-center">
+                Contact Sales <Phone className="w-4 h-4 ml-2"  />
+              </Link>
+            </div>
+      </section>
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Key Benefits</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
+                <div className="flex items-center mb-3">
+                  <Zap className="w-6 h-6 text-indigo-600 mr-3"  />
+                  <h3 className="text-lg font-semibold text-gray-900">Performance</h3>
+                </div>
+                <p className="text-gray-600">{benefit}</p>
+              </div>
+            ))}
+
+          </div>
+      </section>
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Industries We Serve</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {useCases.map((industry, index) => (
+              <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-3">
+                  <Target className="w-5 h-5 text-indigo-600 mr-3"  />
+                  <h3 className="text-lg font-semibold text-gray-900">{industry}</h3>
+                </div>
+                <p className="text-gray-600">Comprehensive sustainability solutions tailored for {industry.toLowerCase()}.</p>
+              </div>
+            ))}
+
+          </div>
+      </section>
+      <section className="py-16 bg-indigo-600">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Sustainability?</h2>
+          <p className="text-indigo-100 text-xl mb-8">
+            Get started with our AI-powered sustainability platform today.
+          </p>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <Link href="/contact" className="px-8 py-3 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center">
+              Get Started <ArrowRight className="w-4 h-4 ml-2"  />
+            </Link>
+            <Link href="/demo" className="px-8 py-3 border border-white text-white rounded-lg hover:bg-white/10 transition-colors inline-flex items-center">
+              Schedule Demo <Mail className="w-4 h-4 ml-2"  />
+            </Link>
+          </div>
+      </section>
+    </div>
+  ),

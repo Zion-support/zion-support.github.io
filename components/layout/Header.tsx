@@ -1,224 +1,291 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import {
-  Menu,
-  X,
-  Phone,
-  Mail,
-  Brain,
-  Cloud,
-  Code,
-  ChevronDown,
-} from 'lucide-react';
-const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const services = [
-    {
-      name: 'AI Services',
-      href: '/ai-services',
-      icon: Brain,
-      description: 'Artificial Intelligence Solutions',
-    },
-    {
-      name: 'IT Services',
-      href: '/it-services',
-      icon: Cloud,
-      description: 'Information Technology Services',
-    },
-    {
-      name: 'Micro SaaS',
-      href: '/micro-saas',
-      icon: Code,
-      description: 'Custom Software Solutions',
-    },
-    {
-      name: 'All Services',
-      href: '/services',
-      icon: null,
-      description: 'Complete Service Portfolio',
-    },
-  ];
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services', hasDropdown: true },
-    { name: 'Pricing', href: '/pricing-guide' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-  ];
+import React, { useState, useEffect } from "react"
+const Header: React.FC = () => {,,
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+}
+  const [isScrolled, setIsScrolled] = useState(false)
+}
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+}
+  const router = useRouter()
+}
+  const location = {}
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20)
+}
+
+    window.addEventListener("scroll", handleScroll)
+}
+    return () => window.removeEventListener("scroll", handleScroll)
+}
+  }, [])
+}
+  const navigation = []
+    },"
+    { name: "About", href: "/about", icon: Users },
+    { "
+      name: "Resources", "
+      href: "#",
+      icon: BookOpen,
+      dropdown: [",
+        { name: "Blog", href: "/blog", icon: BookOpen, description: "Latest insights and trends" },"
+        { name: "Case Studies", href: "/case-studies", icon: Target, description: "Success stories" },"
+        { name: "White Papers", href: "/white-papers", icon: FileText, description: "Research and insights" },"
+        { name: "Webinars", href: "/webinars", icon: Calendar, description: "Expert-led sessions" },"
+        { name: "Pricing Guide", href: "/pricing-guide", icon: DollarSign, description: "Comprehensive pricing info" }
+
+      ]
+    },"
+    { name: "Team", href: "/team", icon: Award },"
+    { name: "Contact", href: "/contact", icon: Phone }
+
+  ]
+  const quickLinks = []
+  const serviceCategories = []
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-gray-900">
-                Zion Tech Group
-              </span>
-            </Link>
-          </div>
+    <header className = "{"fixed" top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled "
+        ? "bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50" "
+        : "bg-transparent"
+    }"}>"
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
+        <div className="flex items-center justify-between h-16">,
+          {/* comment */}"
+          <Link to="/" className="flex items-center space-x-2">"
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">"
+              <Brain className="w-5 h-5 text-white"  />
+            </div>"
+            <span className="text-xl font-bold text-white">Zion Tech Group</span>
+          </Link>
+          {/* comment */}"
+          <nav className="hidden lg: flex items-center space-x-8">
+            {navigation.map((item) => (",
+              <div key="{item.name}" className="relative">
+                {item.dropdown ? ("
+                  <div className="flex items-center space-x-1 text-gray-300 hover: text-white transition-colors cursor-pointer"">
+                    onMouseEnter="{()" => setActiveDropdown(item.name)}"
+                    onMouseLeave="{()" => setActiveDropdown(null)}
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:block">
-            <div className="ml-10 flex items-baseline space-x-8">
-              {navigation.map(item => (
-                <div key={item.name} className="relative">
-                  {item.hasDropdown ? (
-                    <div
-                      className="relative"
-                      onMouseEnter={() => setIsServicesOpen(true)}
-                      onMouseLeave={() => setIsServicesOpen(false)}
-                    >
-                      <button className="text-gray-900 hover: text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center">
-                        {item.name}
-                        <ChevronDown className="ml-1 h-4 w-4" />
-                      </button>
-                      {isServicesOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                          <div className="px-4 py-2 border-b border-gray-100">
-                            <h3 className="text-sm font-semibold text-gray-900">
-                              Our Services
-                            </h3>
-                          </div>
-                          {services.map(service => (
-                            <Link
-                              key={service.name}
-                              href={service.href}
-                              className="flex items-center px-4 py-3 hover: bg-gray-50 transition-colors"
-                            >
-                              {service.icon && (
-                                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-100 mr-3">
-                                  <service.icon className="h-4 w-4 text-blue-600" />
-                                </div>
-                              )}
-                              <div>
-                                <div className="text-sm font-medium text-gray-900">
-                                  {service.name}
-                                </div>
-                                <div className="text-xs text-gray-500">
-                                  {service.description}
-                                </div>
+                  >"
+                    <item.icon className="w-4 h-4" />
+                    <span>{item.name}</span>"
+                    <ChevronDown className="w-4 h-4"  />
+                  </div>
+                ) : ("
+                  <Link to="{item.href}""
+                    className="{"flex" items-center space-x-1 transition-colors ${
+                      isActive(item.href)"
+                        ? "text-blue-400""
+                        : "text-gray-300 hover: text-white">
+                    }"}
+
+                  >"
+                    <item.icon className="w-4 h-4" />
+                    <span>{item.name}</span>
+                  </Link>
+                )}
+
+                {/* comment */}
+
+                <AnimatePresence>
+                  {activeDropdown === item.name && item.dropdown && (
+                    <motion.div,"
+initial="{{" opacity: 0, y: 10 }}"
+                      animate="{{" opacity: 1, y: 0 }}"
+                      exit="{{" opacity: 0, y: 10 }}"
+                      transition="{{" duration: 0.2 }}"
+                      className="absolute top-full left-0 mt-2 w-80 bg-slate-800 rounded-lg shadow-xl border border-slate-700 overflow-hidden""
+                      onMouseEnter="{()" => setActiveDropdown(item.name)}"
+                      onMouseLeave="{()" => setActiveDropdown(null)}
+
+                    >"
+                      <div className="p-2">
+                        {item.dropdown.map((dropdownItem) => ("
+                          <Link key="{dropdownItem.name}""
+                            to="{dropdownItem.href}""
+                            className="flex items-start space-x-3 p-3 rounded-lg hover: bg-slate-700 transition-colors group"
+                          >"
+                            <dropdownItem.icon className="w-5 h-5 text-blue-400 mt-0.5 group-hover:text-blue-300" />
+                            <div>"
+                              <div className="text-white font-medium group-hover:text-blue-300">,
+                                {dropdownItem.name}
+
+                              </div>"
+                              <div className="text-gray-400 text-sm">
+                                {dropdownItem.description}
+
                               </div>
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    <Link
-                      href={item.href}
-                      className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
-                    >
-                      {item.name}
-                    </Link>
-                  )}
-                </div>
-              ))}
-            </div>
-          </nav>
+                            </div>"
+                            <ArrowRight className="w-4 h-4 text-gray-400 group-hover: text-white ml-auto mt-0.5"  />
+                          </Link>,
+                        ))}
 
-          {/* Contact Info & CTA */}
-          <div className="hidden lg: flex items-center space-x-4">
-            <div className="flex items-center space-x-2 text-sm text-gray-600">
-              <Phone className="h-4 w-4" />
-              <a href="tel:+13024640950" className="hover:text-blue-600">
-                +1 302 464 0950
-              </a>
-            </div>
-            <Link
-              href="/contact"
-              className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
-            >
-              Get Started
-            </Link>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="lg:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-900 hover: text-blue-600 p-2"
-            >
-              {isMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="lg: hidden border-t border-gray-200 py-4">
-            <div className="space-y-2">
-              {navigation.map(item => (
-                <div key={item.name}>
-                  {item.hasDropdown ? (
-                    <div>
-                      <div className="text-gray-900 px-3 py-2 text-sm font-medium">
-                        {item.name}
                       </div>
-                      <div className="ml-4 space-y-1">
-                        {services.map(service => (
-                          <Link
-                            key={service.name}
-                            href={service.href}
-                            className="flex items-center px-3 py-2 text-sm text-gray-600 hover: text-blue-600"
-                            onClick={() => setIsMenuOpen(false)}
-                          >
-                            {service.icon && (
-                              <service.icon className="h-4 w-4 mr-2 text-blue-600" />
-                            )}
-                            {service.name}
+                    </motion.div>
+                  )}
+
+                </AnimatePresence>
+              </div>
+            ))}
+
+          </nav>
+          {/* comment */}"
+          <div className="hidden lg: flex items-center space-x-4">"
+            <Button variant="outline" size="sm">"
+              <Search className="w-4 h-4 mr-2"  />
+              Search,
+            </Button>"
+            <Button size="sm" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+              Get Started,
+            </Button>
+          </div>
+,
+          {/* comment */}"
+          <button onClick="{()" => setIsMenuOpen(!isMenuOpen)}"
+            className="lg: hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
+          >",
+            {isMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
+
+          </button>
+        </div>
+      {/* comment */}
+
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div,"
+initial="{{" opacity: 0, height: 0 }}""
+            animate="{{" opacity: 1, height: "auto" }}"
+            exit="{{" opacity: 0, height: 0 }}"
+            transition="{{" duration: 0.3 }}"
+            className="lg: hidden bg-slate-900 border-t border-slate-700"
+          >"
+            <div className="px-4 py-6 space-y-4">
+              {navigation.map((item) => (",
+                <div key="{item.name}">
+                  {item.dropdown ? (
+                    <div>"
+                      <div className="flex items-center space-x-2 text-gray-300 font-medium mb-2">"
+                        <item.icon className="w-5 h-5" />
+                        <span>{item.name}</span>
+                      </div>"
+                      <div className="ml-7 space-y-2">
+                        {item.dropdown.map((dropdownItem) => ("
+                          <Link key="{dropdownItem.name}""
+                            to="{dropdownItem.href}""
+                            className="flex items-center space-x-2 text-gray-400 hover: text-white transition-colors"">
+                            onClick="{()" => setIsMenuOpen(false)}
+
+                          >"
+                            <dropdownItem.icon className="w-4 h-4" />
+                            <span>{dropdownItem.name}</span>
                           </Link>
                         ))}
+
                       </div>
-                    </div>
-                  ) : (
-                    <Link
-                      href={item.href}
-                      className="block text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {item.name}
+                  ) : ("
+                    <Link key="{category.name}""
+                      href="{category.href}""
+                      className="block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600 transition-colors"
+                    >,
+                      {category.name}
+
+                    </Link>
+                  ))}
+
+                </div>
+              {/* comment */}"
+              <div className="flex items-center space-x-3">"
+                <Link href="/contact""
+                  className="bg-blue-600 hover: bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors hover:scale-105"
+                >
+                  Get Quote,
+                </Link>"
+                <Link href="/contact?type=consultation""
+                  className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-lg font-medium transition-colors hover:scale-105"
+                >
+                  Free Consultation,
+                </Link>
+              </div>
+,
+            {/* comment */}"
+            <button className="lg: hidden p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"">
+              onClick="{()" => setIsMenuOpen(!isMenuOpen)}""
+              aria-label="{isMenuOpen" ? "Close menu" : "Open menu"}"
+              aria-expanded="{isMenuOpen}"
+            >
+              <motion.div,"
+animate="{{" rotate: isMenuOpen ? 180 : 0 }}"
+                transition="{{" duration: 0.3 }}
+
+              >
+                {isMenuOpen ? ("
+                  <X className="w-6 h-6 text-gray-700"  />
+                ) : ("
+                  <Menu className="w-6 h-6 text-gray-700"  />
+                )}
+
+              </motion.div>
+            </button>
+          </div>
+          {/* comment */}
+
+          <AnimatePresence>
+            {isMenuOpen && (
+              <motion.div,"
+className="lg: hidden border-t border-gray-200 py-4"">
+                initial="{{" opacity: 0, height: 0 }}""
+                animate="{{" opacity: 1, height: "auto" }}"
+                exit="{{" opacity: 0, height: 0 }}"
+                transition="{{" duration: 0.3 }}
+
+              >"
+              <div className="flex flex-col space-y-4">
+                {navigation.map((item) => ("
+                  <Link key="{item.name}""
+                    href="{item.href}""
+                    className="text-gray-700 hover: text-blue-600 font-medium transition-colors"">
+                    onClick="{()" => setIsMenuOpen(false)}
+
+                  >
+                    {item.name}
+
+                  </Link>
+                ))}
+
+                {/* comment */}"
+                <div className="border-t border-gray-200 pt-4">"
+                  <div className="text-gray-700 font-medium mb-2">Services</div>
+                  {serviceCategories.map((category) => ("
+                    <Link key="{category.name}""
+                      href="{category.href}""
+                      className="block py-2 text-gray-600 hover: text-blue-600 transition-colors"">
+                      onClick="{()" => setIsMenuOpen(false)}
+
+                    >"
+                      <item.icon className="w-5 h-5" />
+                      <span>{item.name}</span>
                     </Link>
                   )}
+
                 </div>
               ))}
-            </div>
-            <div className="mt-4 pt-4 border-t border-gray-200">
-              <div className="flex items-center space-x-2 text-sm text-gray-600 px-3 py-2">
-                <Phone className="h-4 w-4" />
-                <a href="tel: +13024640950" className="hover:text-blue-600">
-                  +1 302 464 0950
-                </a>
+
+              "
+              <div className="pt-4 border-t border-slate-700 space-y-3">"
+                <Button variant="outline" size="sm" className="w-full">"
+                  <Search className="w-4 h-4 mr-2"  />
+                  Search,
+                </Button>"
+                <Button size="sm" className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+                  Get Started,
+                </Button>
               </div>
-              <div className="flex items-center space-x-2 text-sm text-gray-600 px-3 py-2">
-                <Mail className="h-4 w-4" />
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="hover:text-blue-600"
-                >
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-              <Link
-                href="/contact"
-                className="block bg-blue-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors mt-2 mx-3 text-center"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Get Started
-              </Link>
-            </div>
-          </div>
+          </motion.div>
         )}
-      </div>
+
+      </AnimatePresence>
     </header>
-  );
-};
-export default Header;
+  )
+}
+""export default Header

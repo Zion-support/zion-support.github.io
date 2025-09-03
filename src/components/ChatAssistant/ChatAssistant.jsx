@@ -1,1 +1,36 @@
-import React, { useState, useEffect, useRef, useContext } from 'react' import { AuthContext } from '../../context/auth/AuthContext'';'' import { useDebounce } from '../../hooks/useDebounce'';'' import { useLocalStorage } from '../../hooks/useLocalStorage'';'' import { ChatMessage } from './ChatMessage'';'' import { ChatInput } from './ChatInput'';'' import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'';'' import { Button } from '@/components/ui/button'';'' import { X } from 'lucide-react' import { focusManagement } from '@/utils/accessibility' export function ChatAssistant({ isOpen, onClose, recipient, conversationId, initialMessages = [], onSendMessage, contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated';";"
+            {contextHeader}"});,"})
+}
+          </div>)}})
+}
+  })"
+"";"
+  });,"})"
+        {/* comment */}"";,"})
+}
+  })"
+        <div className="flex-1" overflow-y-auto p-4 space-y-4" aria-live="polite>"";"
+  });,"})"
+          {currentMessages.length === 0 ? (<div className="text-center text-zion-slate py-8>;"
+  });,"})"
+              <p>Start a conversation with {recipient.name}</p>;,"})
+}
+  })"
+            </div>) : (currentMessages.map((msg) => (<ChatMessage key="{msg.id}" role="{msg.role}" message="{msg.message}/">)))}});,"})"
+          <div ref="{messagesEndRef}/">;,"})
+}
+  })
+}
+        </div>;"
+  });,"})"
+";,"});,"})"
+        {/* comment */}""
+  })
+}
+  })"
+        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
+  })
+}
+  })"
+          <ChatInput onSend="{handleSendMessage}/">)
+}
+"export default ComponentName;"

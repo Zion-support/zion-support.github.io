@@ -1,1 +1,50 @@
- import Head from 'next / head' export default React.memo(function About () { return (<> <Head> <title > About - Zion Tech Group</title> <meta name='description' content='Learn about Zion Tech Group' / /> </Head> <main className='min - h-screen bg - white'> <div className='max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 py - 20'> <div className='text - center mb - 16'> <h1 className='text - 4xl font - bold text - gray - 900 mb - 6'> About Zion Tech Group </h1> <p className='text - xl text - gray - 600 max - w-3xl mx - auto'> Leading technology solutions provider. </p> </div> <div className='grid md:grid - cols - 2 gap - 12'> <div> <h2 className='text - 2xl font - semibold text - gray - 900 mb - 4'>Our Mission</h2> <p className='text - gray - 600 mb - 6'> To empower businesses with cutting - edge technology solutions that drive innovation, efficiency, and growth. </p> <h2 className='text - 2xl font - semibold text - gray - 900 mb - 4'>Our Vision</h2> <p className='text - gray - 600'> To be the leading technology partner for businesses seeking to transform their operations through AI, automation, and digital innovation. </p> </div> <div> <h2 className='text - 2xl font - semibold text - gray - 900 mb - 4'>Why Choose Us</h2> <ul className='space - y-3 text - gray - 600'> <li>• Expert team with deep industry knowledge</li> <li>• Proven track record of successful implementations</li> <li>• Cutting - edge technology and innovative solutions</li> <li>• Dedicated support and ongoing maintenance</li> <li>• Competitive pricing and flexible engagement models</li> </ul> </div> </div> </div> </main> </>) }''""
+import React from "react"
+import Head from "next/head"
+import Link from "next/link"
+const about = () => {
+  return (
+    <>
+      <Head>
+        <title>about - Zion Tech Group</title>
+        <meta name="description" content="Professional about services"  />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              about
+            </h1>
+            <p className="text-xl text-gray-600 mb-12">
+              Professional about services and solutions
+            </p>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Professional Solutions</li>
+                  <li>• Expert Implementation</li>
+                  <li>• 24/7 Support</li>
+                  <li>• Custom Development</li>
+                </ul>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Industry Expertise</li>
+                  <li>• Proven Results</li>
+                  <li>• Scalable Solutions</li>
+                  <li>• Competitive Pricing</li>
+                </ul>
+              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                View Pricing
+              </Link>
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                Contact Us
+              </Link>
+            </div>
+    </>
+  );
+}
+export default about

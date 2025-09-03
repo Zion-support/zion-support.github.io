@@ -1,9 +1,19 @@
-import { render, screen } from '@testing-library/react';"
-import PageTransition from './PageTransition';
-describe('PageTransition', () => {
-  it('renders without crashing', () => {
-    render(<PageTransition /" >)"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})"
-  it('displays expected content', () => {
-    render(<PageTransition /" >)
-    // Add specific test assertions based on component content})})"
+  it(displays expected content", () => {
+    render(<PageTransition  />)"
+import { render, screen } from &apos;@testing - library/react",
+import PageTransition from &apos;./PageTransition
+describe(&apos;PageTransition&apos, () => {
+  it(&apos;renders without crashing&apos, () => {
+    render()
+}
+    expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})
+}
+  it(&apos;displays expected content&apos, () => {
+    render()
+}
+    // comment
+    render(<PageTransition / >)"
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
+})"
+"
+}}""

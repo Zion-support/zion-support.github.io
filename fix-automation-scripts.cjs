@@ -1,60 +1,172 @@
-const fs = require('fs');
-const path = require('path');
-
-function fixAutomationScripts() {
-  const automationDir = path.join(process.cwd(), 'automation');
-  const files = fs.readdirSync(automationDir).filter(file => file.endsWith('.js'));
-  
-  let fixedCount = 0;
-  
-  files.forEach(file => {
-    const filePath = path.join(automationDir, file);
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    
-    // Fix common syntax issues
-    content = content.replace(/#!/usr\/bin\/env node;/g, '#!/usr/bin/env node');
-    content = content.replace(/const fs = require\(\s*'fs'\);/g, "const fs = require('fs');");
-    content = content.replace(/const path = require\(\s*'path'\);/g, "const path = require('path');");
-    content = content.replace(/const { execSync } = require\(\s*'child_process'\);/g, "const { execSync } = require('child_process');");
-    content = content.replace(/const { execSync, spawn } = require\(\s*'child_process'\);/g, "const { execSync, spawn } = require('child_process');");
-    content = content.replace(/const cron = require\(\s*'node-cron'\);/g, "const cron = require('node-cron');");
-    
-    // Fix class method syntax
-    content = content.replace(/;\s*async\s+(\w+)\s*\(/g, '  async $1(');
-    content = content.replace(/class\s+(\w+)\s*{\s*constructor\s*\(\s*\)\s*{\s*;/g, 'class $1 {\n  constructor() {');
-    
-    // Fix console.log statements
-    content = content.replace(/\/\/ \/\/ \/\/ \/\/ \/\/ \/\/ \/\/ console\.log\(/g, '    console.log(');
-    content = content.replace(/\/\/ \/\/ \/\/ \/\/ \/\/ \/\/ \/\/ console\.error\(/g, '    console.error(');
-    
-    // Fix method calls
-    content = content.replace(/this\.log\(\s*'([^']+)'\);/g, "    this.log('$1');");
-    content = content.replace(/fs\.appendFileSync\(this\.logFile, logMessage\);/g, '    fs.appendFileSync(this.logFile, logMessage);');
-    
-    // Fix try-catch blocks
-    content = content.replace(/try\s*{;\s*this\.log\(/g, '    try {\n      this.log(');
-    content = content.replace(/}\s*catch\s*\(error\)\s*{/g, '    } catch (error) {');
-    
-    // Fix object properties
-    content = content.replace(/this\.metrics\s*=\s*{;/g, '    this.metrics = {');
-    
-    // Fix log file paths
-    content = content.replace(/this\.logFile\s*=\s*path\.join\(this\.projectRoot,\s*'logs',/g, "    this.logFile = path.join(this.projectRoot, 'logs',");
-    
-    // Remove extra semicolons and fix spacing
-    content = content.replace(/;\s*;/g, ';');
-    content = content.replace(/\s+;/g, ';');
-    content = content.replace(/;\s*\n/g, ';\n');
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${file}`);
-      fixedCount++;
-    }
-  });
-  
-  console.log(`Fixed ${fixedCount} automation script files`);
+#!/usr/bin/env node;
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require(`child_process`);
+class AutomationScriptFixer {;
+  constructor() {;
+    this.projectRoot = process.cwd();
+    this.fixedFiles = [];
+    this.errors = [];,
 }
+;
+  log(message) {;
+    console.log(`[${new Date().toISOString()}] ${message}`);,
+}
+;
+  fixFile(filePath) {;
+    try {;
+      if (!fs.existsSync(filePath)) {;
+        this.log(`⚠️  File not found: ${filePath}`);
+        return false;,
+}
+;
+      let content = fs.readFileSync(filePath, `utf8`);
+      let originalContent = content;
+      let changes = 0;
+      // Fix common syntax errors;
+      const fixes = [;
+        // Fix template literal issues;
+        { pattern: /`([^`]*)\$\{([^}]*)\}([^`]*)`/g, replacement: ``$1${$2}$3`` },;
+        ;
+        // Fix missing quotes in strings;
+        { pattern: /console\.log\(`([^`]*)\$\{([^}]*)\}([^`]*)`\)/g, replacement: `console.log(`$1${$2}$3`)` },;
+        ;
+        // Fix broken template literals;
+        { pattern: /`([^`]*)\$\{([^}]*)\}([^`]*)`/g, replacement: ``$1${$2}$3`` },;
+        ;
+        // Fix missing closing quotes;
+        { pattern: /"([^"]*)\$\{([^}]*)\}([^"]*)`/g, replacement: ``$1${$2}$3`` },;
+        ;
+        // Fix broken regex patterns;
+        { pattern: /\/\s*changes\+\+;\s*$/gm, replacement: `/^\\s*<<<<<<<|^\\s*|^\\s*>>>>>>>/` },;
+        ;
+        // Fix missing closing parentheses;
+        { pattern: /console\.log\(`([^`]*)\$\{([^}]*)\}([^`]*)`\)/g, replacement: `console.log(`$1${$2}$3`)` },;
+        ;
+        // Fix broken string concatenation;
+        { pattern: /`([^"]*)\$\{([^}]*)\}([^"]*)`/g, replacement: ``$1${$2}$3`` },;
+        ;
+        // Fix missing semicolons;
+        { pattern: /(\w+)\s*$/gm, replacement: `$1;" },;
+        ;
+        // Fix broken object properties;
+        { pattern: /automations:\s*\[([^\]]*)\]/g, replacement: "automations: [$1]" },;
+        ;
+        // Fix broken catch blocks;
+        { pattern: /catch\s*\(\s*error\s*\)\s*\{([^}]*)\}/g, replacement: "catch (error) {  $1  }" }
+      ];
 
-fixAutomationScripts();
+      fixes.forEach(fix => {;
+        const newContent = content.replace(fix.pattern, fix.replacement);
+        if (newContent !== content) {;
+          content = newContent;
+          changes++;,
+}
+      });
+      // Additional specific fixes;
+      if (content.includes("❌ Fatal error in orchestrator:")) {;
+        content = content.replace(;
+          /this\.log\(❌ Fatal error in orchestrator: \$\{error\.message\}, "ERROR``\);/g,;
+          `this.log(`❌ Fatal error in orchestrator: ${error.message}`, \`ERROR\`);";
+        );
+        changes++;,
+}
+;
+      if (content.includes("performance-monitor\"\"")) {;
+        content = content.replace(;
+          /"performance-monitor\"\",/g,;
+          ""performance-monitor",";
+        );
+        changes++;,
+}
+;
+      if (content.includes("quality-checks\"\"")) {;
+        content = content.replace(;
+          /"quality-checks\"\",/g,;
+          ""quality-checks",";
+        );
+        changes++;,
+}
+;
+      if (changes > 0) {;
+        fs.writeFileSync(filePath, content, `utf8`);
+        this.fixedFiles.push({ file: filePath, changes });
+        this.log(`✅ Fixed ${changes} issues in ${filePath}`);
+        return true;,
+}
+;
+      return false;,
+} catch (error) { ;
+      this.errors.push({ file: filePath, error: error.message  });
+      this.log(`❌ Error fixing ${filePath}: ${error.message}`);
+      return false;,
+}
+  }
+;
+  async fixAllAutomationScripts() {;
+    this.log(`🔧 Starting automation script fixes...`);
+    const automationDir = path.join(this.projectRoot, "scripts", "automation");
+    const rootDir = this.projectRoot;
+    // Get all automation script files;
+    const filesToFix = [;
+      ...this.getAllFiles(automationDir, [".cjs", ".js"]),;
+      ...this.getAllFiles(rootDir, [".cjs", ".js"]).filter(f => ;
+        f.includes("automation") || f.includes("fix") || f.includes(`merge`);
+      );
+    ];
+
+    this.log(`📁 Found ${filesToFix.length} files to check`);
+    let fixedCount = 0;
+    for (const file of filesToFix) {;
+      if (this.fixFile(file)) {;
+        fixedCount++;,
+}
+    }
+;
+    this.log(`🎉 Fixed ${fixedCount} files with syntax errors`);
+    this.log(`📊 Summary: ${this.fixedFiles.length} files fixed, ${this.errors.length} errors`);
+    if (this.errors.length > 0) {;
+      this.log(`❌ Errors encountered:`);
+      this.errors.forEach(err => {;
+        this.log(`  - ${err.file}: ${err.error}`);,
+});,
+}
+;
+    return { fixed: this.fixedFiles, errors: this.errors }
+  }
+;
+  getAllFiles(dir, extensions) {;
+    const files = [];
+    if (!fs.existsSync(dir)) {;
+      return files;,
+}
+;
+    const items = fs.readdirSync(dir);
+    for (const item of items) {;
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      if (stat.isDirectory()) {;
+        files.push(...this.getAllFiles(fullPath, extensions));,
+} else if (stat.isFile()) {;
+        const ext = path.extname(item);
+        if (extensions.includes(ext)) {;
+          files.push(fullPath);,
+}
+      }
+    }
+    ;
+    return files;,
+}
+}
+;
+// Run the fixer;
+const fixer = new AutomationScriptFixer();
+fixer.fixAllAutomationScripts();
+  .then(result => {;
+    console.log(`\n🎯 Automation script fixing completed!`);
+    process.exit(0);,
+});
+  .catch(error => {;
+    console.error("❌ Fatal error:", error);
+    process.exit(1);,
+})

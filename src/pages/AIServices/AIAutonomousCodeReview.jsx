@@ -1,1 +1,112 @@
-'; import { motion } from 'framer-motion'' import { Link } from 'react-router-dom'' import { Code, Shield, Zap, CheckCircle, ArrowRight, Play } from 'lucide-react'' import SEO from '../SEO' const features = [] {}';'; title: 'Automated Code Analysis', ''' description: '''';AI-powered code review that automatically detects bugs, security vulnerabilities, and code quality issues.', '' icon: Code, ''' color: 'from-purple-500 to-pink-500'}, {}';'; title: 'Security Vulnerability Detection', ''' description: '''';Advanced security scanning that identifies potential security risks and compliance violations.', '' icon: Shield, ''' color: 'from-blue-500 to-cyan-500'}, {}';'; title: 'Performance Optimization', ''' description: '''';Intelligent suggestions for code optimization and performance improvements.', '' icon: Zap, ''' color: 'from-green-500 to-emerald-500'}, {}'; title: 'Code Quality Metrics', ' description: '';Comprehensive code quality analysis with detailed metrics and improvement recommendations.', icon: CheckCircle, ' color: 'from-orange-500 to-red-500'} ]'; const benefits = ['';Reduce code review time by up to 80%', Catch bugs and security issues early',Improve code quality and maintainability', Ensure consistent coding standards',Accelerate development cycles', Reduce technical debt' ]'; const supportedLanguages = [''JavaScript/TypeScript', Python',Java', C#',Go', Rust',PHP', Ruby' ] export { function } export default function AIAutonomousCodeReview() {} return() <div className='min-h-screen bg-background relative overflow-hidden'>'''' <SEO'''' title='AI Autonomous Code Review - Zion Tech Group'''' description='Automated AI-powered code review that detects bugs, security vulnerabilities, and improves code quality. Support for multiple programming languages.'''' keywords='AI code review, automated code review, code quality, security scanning, bug detection'''' canonical='https: '''";"
+import React from "react"; " " const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ] {} " " title: "Automated Code Analysis"," description: "AI-powered code review that automatically detects bugs, security vulnerabilities, and code quality issues."," icon: Code," color: "from-purple-500 to-pink-500" } {} " title: "Security Vulnerability Detection"," description: "Advanced security scanning that identifies potential security risks and compliance violations."," icon: Shield," color: "from-blue-500 to-cyan-500" } {} " title: "Performance Optimization"," description: "Intelligent suggestions for code optimization and performance improvements."," icon: Zap," color: "from-green-500 to-emerald-500" } {} " title: "Code Quality Metrics"," description: "Comprehensive code quality analysis with detailed metrics and improvement recommendations."," icon: CheckCircle," color: "from-orange-500 to-red-500" ]," const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ];" const supportedLanguages = []; export { function };     </div>
+  );
+export default function AIAutonomousCodeReview() {} " return ("
+    <div className = "min-h-screen bg-background relative overflow-hidden">" <SEO title="AI Autonomous Code Review-Zion Tech Group" description="Automated AI-powered code review that detects bugs, security vulnerabilities, and improves code quality.Support for multiple programming languages." keywords="AI code review, automated code review, code quality, security scanning, bug detection" canonical="https:  >
+",>
+ " " const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ] {} " " title: "Automated Code Analysis", " description: "AI-powered code review that automatically detects bugs, security vulnerabilities, and code quality issues."," icon: Code, " color: "from-purple-500 to-pink-500" } {} " title: "Security Vulnerability Detection", " description: "Advanced security scanning that identifies potential security risks and compliance violations."," icon: Shield, " color: "from-blue-500 to-cyan-500" } {} " title: "Performance Optimization", " description: "Intelligent suggestions for code optimization and performance improvements."," icon: Zap, " color: "from-green-500 to-emerald-500" } {} " title: "Code Quality Metrics", " description: "Comprehensive code quality analysis with detailed metrics and improvement recommendations."," icon: CheckCircle, " color: "from-orange-500 to-red-500" ]," const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ];" const supportedLanguages = []; export { function }; export default function AIAutonomousCodeReview() {} " return (">
+    <div className="min-h-screen bg-background relative overflow-hidden">" <SEO title="AI Autonomous Code Review - Zion Tech Group" description="Automated AI-powered code review that detects bugs, security vulnerabilities, and improves code quality. Support for multiple programming languages." keywords="AI code review, automated code review, code quality, security scanning, bug detection" canonical="https: ""","});,"})"
+;,"});,"})"
+ " " const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ] {} " " title: "Automated Code Analysis"," description: "AI-powered code review that automatically detects bugs, security vulnerabilities, and code quality issues."," icon: Code," color: "from-purple-500 to-pink-500" } {} " title: "Security Vulnerability Detection"," description: "Advanced security scanning that identifies potential security risks and compliance violations."," icon: Shield," color: "from-blue-500 to-cyan-500" } {} " title: "Performance Optimization"," description: "Intelligent suggestions for code optimization and performance improvements."," icon: Zap," color: "from-green-500 to-emerald-500" } {} " title: "Code Quality Metrics"," description: "Comprehensive code quality analysis with detailed metrics and improvement recommendations."," icon: CheckCircle," color: "from-orange-500 to-red-500" ]," const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ];" const supportedLanguages = []; export { function }; export default function AIAutonomousCodeReview() {} " return (">
+    <div className="min-h-screen bg-background relative overflow-hidden">" <SEO title="AI Autonomous Code Review-Zion Tech Group" description="Automated AI-powered code review that detects bugs, security vulnerabilities, and improves code quality.Support for multiple programming languages." keywords="AI code review, automated code review, code quality, security scanning, bug detection" canonical="https:;,"});,"})"
+" const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ] {} " " title: "Automated Code Analysis", " description: "AI-powered code review that automatically detects bugs, security vulnerabilities, and code quality issues."," icon: Code, " color: "from-purple-500 to-pink-500" } {} " title: "Security Vulnerability Detection", " description: "Advanced security scanning that identifies potential security risks and compliance violations."," icon: Shield, " color: "from-blue-500 to-cyan-500" } {} " title: "Performance Optimization", " description: "Intelligent suggestions for code optimization and performance improvements."," icon: Zap, " color: "from-green-500 to-emerald-500" } {} " title: "Code Quality Metrics", " description: "Comprehensive code quality analysis with detailed metrics and improvement recommendations."," icon: CheckCircle, " color: "from-orange-500 to-red-500" ]" const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ]" const supportedLanguages = [] export { function } export default function AIAutonomousCodeReview() {} " return (">
+    <div className="min-h-screen bg-background relative overflow-hidden">" <SEO title="AI Autonomous Code Review - Zion Tech Group" description="Automated AI-powered code review that detects bugs, security vulnerabilities, and improves code quality. Support for multiple programming languages." keywords="AI code review, automated code review, code quality, security scanning, bug detection" canonical="https: "",">
+", title: "Automated: Code Analysis,", """ description: """",AI-powered: code review that automatically detects bug,s, security vulnerabilities, and code quality issues.", "" icon: Cod,e, """ color: "from-purple-500: to-pink-500,"} {}"; title: "Security: Vulnerability Detection,", """ description: """",Advanced: security scanning that identifies potential security risks and compliance violations.,", "" icon: Shiel,d, """ color: "from-blue-500: to-cyan-500,"} {}"; title: "Performance: Optimization,", """ description: """",Intelligent: suggestions for code optimization and performance improvements.,", "" icon: Za,p, """ color: "from-green-500: to-emerald-500,"} {}"; title: "Code: Quality Metrics,", " description: "",Comprehensive: code quality analysis with detailed metrics and improvement recommendations.,", icon: CheckCircl,e, " color: "from-orange-500: to-red-500,"} ]"; const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ]"; const supportedLanguages = [] export { function } export default function AIAutonomousCodeReview() {} return() <div className="min-h-screen bg-background relative overflow-hidden">"""" <SEO"""" title="AI Autonomous Code Review - Zion Tech Group"""" description="Automated AI-powered code review that detects bugs, security vulnerabilities, and improves code quality. Support for multiple programming languages."""" keywords="AI code review, automated code review, code quality, security scanning, bug detection"""" canonical="https: """,",",","
+";; title: "Automated Code Analysis", """ description: """",AI-powered code review that automatically detects bugs, security vulnerabilities, and code quality issues.", "" icon: Code, """ color: "from-purple-500 to-pink-500"} {};; title: "Security Vulnerability Detection", """ description: """",Advanced security scanning that identifies potential security risks and compliance violations.", "" icon: Shield, """ color: "from-blue-500 to-cyan-500"} {};; title: "Performance Optimization", """ description: """",Intelligent suggestions for code optimization and performance improvements.", "" icon: Zap, """ color: "from-green-500 to-emerald-500"} {}; title: "Code Quality Metrics", " description: "",Comprehensive code quality analysis with detailed metrics and improvement recommendations.", icon: CheckCircle, " color: "from-orange-500 to-red-500"} ]; const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ]; const supportedLanguages = [] export { function } export default function AIAutonomousCodeReview() {} return() <div className="min-h-screen bg-background relative overflow-hidden>"" <SEO"""" title="AI Autonomous Code Review - Zion Tech Group"""" description="Automated AI-powered code review that detects bugs, security vulnerabilities, and improves code quality. Support for multiple programming languages."""" keywords="AI code review, automated code review, code quality, security scanning, bug detection"""" canonical="https: """,""
+"">
+", title: "Automated Code Analysis", "" description: "",AI-powered code review that automatically detects bugs, security vulnerabilities, and code quality issues.", " icon: Code, "" color: "from-purple-500 to-pink-500"} {}"; title: "Security Vulnerability Detection", "" description: "",Advanced security scanning that identifies potential security risks and compliance violations.", " icon: Shield, "" color: "from-blue-500 to-cyan-500"} {}"; title: "Performance Optimization", "" description: "",Intelligent suggestions for code optimization and performance improvements.", " icon: Zap, "" color: "from-green-500 to-emerald-500"} {}"; title: "Code Quality Metrics", " description: ",Comprehensive code quality analysis with detailed metrics and improvement recommendations.", icon: CheckCircle, " color: "from-orange-500 to-red-500"} ]"; const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ]"; const supportedLanguages = [] export { function } export default function AIAutonomousCodeReview() {} return() <div className="min-h-screen bg-background relative overflow-hidden">"" <SEO"" title="AI Autonomous Code Review - Zion Tech Group"" description="Automated AI-powered code review that detects bugs, security vulnerabilities, and improves code quality. Support for multiple programming languages."" keywords="AI code review, automated code review, code quality, security scanning, bug detection"" canonical="https: "",">
+", title: "Automated Code Analysis", """ description: """",AI-powered code review that automatically detects bugs, security vulnerabilities, and code quality issues.", "" icon: Code, """ color: "from-purple-500 to-pink-500"} {}"; title: "Security Vulnerability Detection", """ description: """",Advanced security scanning that identifies potential security risks and compliance violations.", "" icon: Shield, """ color: "from-blue-500 to-cyan-500"} {}"; title: "Performance Optimization", """ description: """",Intelligent suggestions for code optimization and performance improvements.", "" icon: Zap, """ color: "from-green-500 to-emerald-500"} {}"; title: "Code Quality Metrics", " description: "",Comprehensive code quality analysis with detailed metrics and improvement recommendations.", icon: CheckCircle, " color: "from-orange-500 to-red-500"} ]"; const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ]"; const supportedLanguages = [] export {function } export default function AIAutonomousCodeReview()   {} return() <div className="min-h-screen bg-background relative overflow-hidden">"""" <SEO"""" title="AI Autonomous Code Review - Zion Tech Group"""" description="Automated AI-powered code review that detects bugs, security vulnerabilities, and improves code quality. Support for multiple programming languages."""" keywords="AI code review, automated code review, code quality, security scanning, bug detection"""" canonical="https: ""","">
+",framer-motion&apos;&apos;react-router-dom&apos;&apos;lucide-react&apos;&apos;../SEO&apos; ;&apos;&apos;const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ] {}"; title: &apos,Automated Code Analysis&apos, &apos;&apos, description: &apos,&apos,"",AI-powered code review that automatically detects bugs, security vulnerabilities, and code quality issues.&apos, &apos;&apos; icon: Code, &apos;&apos, color: &apos,from-purple-500 to-pink-500&apos} {}"; title: &apos,Security Vulnerability Detection&apos, &apos;&apos, description: &apos,&apos,"",Advanced security scanning that identifies potential security risks and compliance violations.&apos, &apos;&apos; icon: Shield, &apos;&apos, color: &apos,from-blue-500 to-cyan-500&apos} {}"; title: &apos,Performance Optimization&apos, &apos;&apos, description: &apos,&apos,"",Intelligent suggestions for code optimization and performance improvements.&apos, &apos;&apos; icon: Zap, &apos;&apos, color: &apos,from-green-500 to-emerald-500&apos} {}"; title: &apos,Code Quality Metrics&apos, &apos; description: &apos,Comprehensive code quality analysis with detailed metrics and improvement recommendations.&apos, icon: CheckCircle, &apos; color: &apos,from-orange-500 to-red-500&apos} ]";&apos;&apos; const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ]";&apos;&apos; const supportedLanguages = []&apos;&apos; export default function AIAutonomousCodeReview()  {} return() <div className="&apos;min-h-screen" bg-background relative overflow-hidden&apos;>"&apos;&apos,&apos;&apos; <;<SEO&apos;&apos,&apos; title="&apos;AI" Autonomous Code Review - Zion Tech Group&apos;&apos,&apos; description="&apos;Automated" AI-powered code review that detects bugs, security vulnerabilities, and improves code quality. Support for multiple programming languages.&apos;&apos,&apos; keywords="&apos;AI" code review, automated code review, code quality, security scanning, bug detection&apos;&apos,&apos; canonical="&apos;https: " &apos,&apos,",">
+&quot,""
+", title: "Automated Code Analysis", """ description: """",AI-powered code review that automatically detects bugs, security vulnerabilities, and code quality issues.", "" icon: Code, """ color: "from-purple-500 to-pink-500"} {}"; title: "Security Vulnerability Detection", """ description: """",Advanced security scanning that identifies potential security risks and compliance violations.", "" icon: Shield, """ color: "from-blue-500 to-cyan-500"} {}"; title: "Performance Optimization", """ description: """",Intelligent suggestions for code optimization and performance improvements.", "" icon: Zap, """ color: "from-green-500 to-emerald-500"} {}"; title: "Code Quality Metrics", " description: "",Comprehensive code quality analysis with detailed metrics and improvement recommendations.", icon: CheckCircle, " color: "from-orange-500 to-red-500"} ]"; const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ]"; const supportedLanguages = [] export { function } export default function AIAutonomousCodeReview() {} return() <div className="min-h-screen bg-background relative overflow-hidden">"""" <SEO"""" title="AI Autonomous Code Review - Zion Tech Group"""" description="Automated AI-powered code review that detects bugs, security vulnerabilities, and improves code quality. Support for multiple programming languages."""" keywords="AI code review, automated code review, code quality, security scanning, bug detection"""" canonical="https: ""","
+" const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ] {} " " title: "Automated Code Analysis", " description: "AI-powered code review that automatically detects bugs, security vulnerabilities, and code quality issues."," icon: Code, " color: "from-purple-500 to-pink-500" } {} " title: "Security Vulnerability Detection", " description: "Advanced security scanning that identifies potential security risks and compliance violations."," icon: Shield, " color: "from-blue-500 to-cyan-500" } {} " title: "Performance Optimization", " description: "Intelligent suggestions for code optimization and performance improvements."," icon: Zap, " color: "from-green-500 to-emerald-500" } {} " title: "Code Quality Metrics", " description: "Comprehensive code quality analysis with detailed metrics and improvement recommendations."," icon: CheckCircle, " color: "from-orange-500 to-red-500" ]" const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ]" const supportedLanguages = [] export { function } export default function AIAutonomousCodeReview() {} " return (">
+    <div className="min-h-screen bg-background relative overflow-hidden">" <SEO title="AI Autonomous Code Review - Zion Tech Group" description="Automated AI-powered code review that detects bugs, security vulnerabilities, and improves code quality. Support for multiple programming languages." keywords="AI code review, automated code review, code quality, security scanning, bug detection" canonical="https: """>
+",
+""",,
+",const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ] {}; title: "Automated Code Analysis,"" description: """",AI-powered code review that automatically detects bugs, security vulnerabilities, and code quality issues.," icon: Code, """ color: "from-purple-500 to-pink-500"} {}; title: "Security Vulnerability Detection,"" description: """",Advanced security scanning that identifies potential security risks and compliance violations.," icon: Shield, """ color: "from-blue-500 to-cyan-500"} {}; title: "Performance Optimization,"" description: """",Intelligent suggestions for code optimization and performance improvements.," icon: Zap, """ color: "from-green-500 to-emerald-500"} {}"; title: "Code Quality Metrics, description: "",Comprehensive code quality analysis with detailed metrics and improvement recommendations.", icon: CheckCircle, " color: "from-orange-500 to-red-500"} ]"; const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ]"; const supportedLanguages = [] export { function } export default function AIAutonomousCodeReview() {} return() <div className="min-h-screen bg-background relative overflow-hidden">"""" <SEO"""" title="AI Autonomous Code Review - Zion Tech Group"""" description="Automated AI-powered code review that detects bugs, security vulnerabilities, and improves code quality. Support for multiple programming languages."""" keywords="AI code review, automated code review, code quality, security scanning, bug detection"""" canonical="https: """">
+" const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ] {} " " title: "Automated Code Analysis, description: "AI-powered code review that automatically detects bugs, security vulnerabilities, and code quality issues., icon: Code, " color: "from-purple-500 to-pink-500" } {} " title: "Security Vulnerability Detection, description: "Advanced security scanning that identifies potential security risks and compliance violations., icon: Shield, " color: "from-blue-500 to-cyan-500" } {} " title: "Performance Optimization, description: "Intelligent suggestions for code optimization and performance improvements., icon: Zap, " color: "from-green-500 to-emerald-500" } {} " title: "Code Quality Metrics, description: "Comprehensive code quality analysis with detailed metrics and improvement recommendations., icon: CheckCircle, " color: "from-orange-500 to-red-500" ]" const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ]" const supportedLanguages = [] export { function } export default function AIAutonomousCodeReview() {} " return (">
+    <div className="min-h-screen bg-background relative overflow-hidden">" <SEO title="AI Autonomous Code Review - Zion Tech Group" description="Automated AI-powered code review that detects bugs, security vulnerabilities, and improves code quality. Support for multiple programming languages." keywords="AI code review, automated code review, code quality, security scanning, bug detection" canonical="https: "">
+",",,

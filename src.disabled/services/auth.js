@@ -1,2 +1,1 @@
-import React from;
-  'react' export default authService';
+import React from; "react" export default authService";",
