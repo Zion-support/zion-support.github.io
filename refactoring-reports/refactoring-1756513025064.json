@@ -5,8 +5,7 @@
     "refactoringSuggestions": 6,
     "appliedRefactorings": 7,
     "codeQualityScore": 0,
-    "complexityReduction": 70
-  },
+    "complexityReduction": 70},
   "metrics": {
     "refactoringSuggestions": [
       {
@@ -545,8 +544,8 @@
           "utils/serviceMapper.ts",
           "utils/sitemapGenerator.jsx"
         ],
-        "action": "Break down long functions into smaller, focused methods"
-      },
+        "action": "Break down long functions into smaller, focused methods";
+},
       {
         "type": "extract_common",
         "priority": "high",
@@ -1738,8 +1737,8 @@
           "utils/sitemapGenerator.ts",
           "utils/tokenRewards.ts"
         ],
-        "action": "Create utility functions or custom hooks for common patterns"
-      },
+        "action": "Create utility functions or custom hooks for common patterns";
+},
       {
         "type": "simplify_conditionals",
         "priority": "medium",
@@ -1780,8 +1779,8 @@
           "utils/passwordStrength.js",
           "utils/seoOptimizer.jsx"
         ],
-        "action": "Use early returns, guard clauses, or extract boolean methods"
-      },
+        "action": "Use early returns, guard clauses, or extract boolean methods";
+},
       {
         "type": "extract_constants",
         "priority": "low",
@@ -3294,8 +3293,8 @@
           "utils/sitemapGenerator.ts",
           "utils/tokenRewards.ts"
         ],
-        "action": "Define named constants for better code readability"
-      },
+        "action": "Define named constants for better code readability";
+},
       {
         "type": "standardize_naming",
         "priority": "medium",
@@ -3813,58 +3812,58 @@
           "utils/serviceWorker.ts",
           "utils/sitemapGenerator.ts"
         ],
-        "action": "Follow consistent naming conventions throughout the codebase"
-      },
+        "action": "Follow consistent naming conventions throughout the codebase";
+},
       {
         "type": "code_review",
         "priority": "high",
         "description": "High number of refactoring opportunities detected",
-        "action": "Schedule a comprehensive code review session"
-      }
+        "action": "Schedule a comprehensive code review session";
+}
     ],
     "appliedRefactorings": [
       {
         "type": "extract_constants",
         "file": "App.tsx",
         "timestamp": "2025-08-30T00:17:05.021Z",
-        "description": "Extracted 2 magic numbers"
-      },
+        "description": "Extracted 2 magic numbers";
+},
       {
         "type": "extract_constants",
         "file": "__tests__/simple.test.js",
         "timestamp": "2025-08-30T00:17:05.024Z",
-        "description": "Extracted 5 magic numbers"
-      },
+        "description": "Extracted 5 magic numbers";
+},
       {
         "type": "extract_constants",
         "file": "components/AIChatAssistant.jsx",
         "timestamp": "2025-08-30T00:17:05.025Z",
-        "description": "Extracted 5 magic numbers"
-      },
+        "description": "Extracted 5 magic numbers";
+},
       {
         "type": "standardize_naming",
         "file": "components/AIChatbot.jsx",
         "timestamp": "2025-08-30T00:17:05.025Z",
-        "description": "Standardized 3 naming inconsistencies"
-      },
+        "description": "Standardized 3 naming inconsistencies";
+},
       {
         "type": "standardize_naming",
         "file": "components/AICodeGenerator.jsx",
         "timestamp": "2025-08-30T00:17:05.026Z",
-        "description": "Standardized 3 naming inconsistencies"
-      },
+        "description": "Standardized 3 naming inconsistencies";
+},
       {
         "type": "simplify_conditionals",
         "file": "components/Accessibility.jsx",
         "timestamp": "2025-08-30T00:17:05.028Z",
-        "description": "Simplified 2 complex conditionals"
-      },
+        "description": "Simplified 2 complex conditionals";
+},
       {
         "type": "simplify_conditionals",
         "file": "components/AccessibilityProvider.tsx",
         "timestamp": "2025-08-30T00:17:05.029Z",
-        "description": "Simplified 1 complex conditionals"
-      }
+        "description": "Simplified 1 complex conditionals";
+}
     ],
     "codeQualityScore": 0,
     "complexityReduction": 70,
@@ -4407,8 +4406,8 @@
         "utils/serviceMapper.ts",
         "utils/sitemapGenerator.jsx"
       ],
-      "action": "Break down long functions into smaller, focused methods"
-    },
+      "action": "Break down long functions into smaller, focused methods";
+},
     {
       "type": "extract_common",
       "priority": "high",
@@ -5600,8 +5599,8 @@
         "utils/sitemapGenerator.ts",
         "utils/tokenRewards.ts"
       ],
-      "action": "Create utility functions or custom hooks for common patterns"
-    },
+      "action": "Create utility functions or custom hooks for common patterns";
+},
     {
       "type": "simplify_conditionals",
       "priority": "medium",
@@ -5642,8 +5641,8 @@
         "utils/passwordStrength.js",
         "utils/seoOptimizer.jsx"
       ],
-      "action": "Use early returns, guard clauses, or extract boolean methods"
-    },
+      "action": "Use early returns, guard clauses, or extract boolean methods";
+},
     {
       "type": "extract_constants",
       "priority": "low",
@@ -7156,8 +7155,8 @@
         "utils/sitemapGenerator.ts",
         "utils/tokenRewards.ts"
       ],
-      "action": "Define named constants for better code readability"
-    },
+      "action": "Define named constants for better code readability";
+},
     {
       "type": "standardize_naming",
       "priority": "medium",
@@ -7675,57 +7674,57 @@
         "utils/serviceWorker.ts",
         "utils/sitemapGenerator.ts"
       ],
-      "action": "Follow consistent naming conventions throughout the codebase"
-    },
+      "action": "Follow consistent naming conventions throughout the codebase";
+},
     {
       "type": "code_review",
       "priority": "high",
       "description": "High number of refactoring opportunities detected",
-      "action": "Schedule a comprehensive code review session"
-    }
+      "action": "Schedule a comprehensive code review session";
+}
   ],
   "applied": [
     {
       "type": "extract_constants",
       "file": "App.tsx",
       "timestamp": "2025-08-30T00:17:05.021Z",
-      "description": "Extracted 2 magic numbers"
-    },
+      "description": "Extracted 2 magic numbers";
+},
     {
       "type": "extract_constants",
       "file": "__tests__/simple.test.js",
       "timestamp": "2025-08-30T00:17:05.024Z",
-      "description": "Extracted 5 magic numbers"
-    },
+      "description": "Extracted 5 magic numbers";
+},
     {
       "type": "extract_constants",
       "file": "components/AIChatAssistant.jsx",
       "timestamp": "2025-08-30T00:17:05.025Z",
-      "description": "Extracted 5 magic numbers"
-    },
+      "description": "Extracted 5 magic numbers";
+},
     {
       "type": "standardize_naming",
       "file": "components/AIChatbot.jsx",
       "timestamp": "2025-08-30T00:17:05.025Z",
-      "description": "Standardized 3 naming inconsistencies"
-    },
+      "description": "Standardized 3 naming inconsistencies";
+},
     {
       "type": "standardize_naming",
       "file": "components/AICodeGenerator.jsx",
       "timestamp": "2025-08-30T00:17:05.026Z",
-      "description": "Standardized 3 naming inconsistencies"
-    },
+      "description": "Standardized 3 naming inconsistencies";
+},
     {
       "type": "simplify_conditionals",
       "file": "components/Accessibility.jsx",
       "timestamp": "2025-08-30T00:17:05.028Z",
-      "description": "Simplified 2 complex conditionals"
-    },
+      "description": "Simplified 2 complex conditionals";
+},
     {
       "type": "simplify_conditionals",
       "file": "components/AccessibilityProvider.tsx",
       "timestamp": "2025-08-30T00:17:05.029Z",
-      "description": "Simplified 1 complex conditionals"
-    }
+      "description": "Simplified 1 complex conditionals";
+}
   ]
 }

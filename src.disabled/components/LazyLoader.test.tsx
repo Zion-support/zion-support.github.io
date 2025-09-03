@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 describe("LazyLoader", () => { it("renders without crashing", () => { render(<LazyLoader />) ; expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; it("displays expected content", () => { render(<LazyLoader />) ;
+=======
+describe("LazyLoader () => { it(renders without crashing, () => { render(<LazyLoader />) ; expect(screen.getByRole (main) || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; it(displays expected content", () => { render(<LazyLoader />) 
+>>>>>>> main

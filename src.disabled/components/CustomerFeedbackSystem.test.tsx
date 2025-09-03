@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 describe("CustomerFeedbackSystem", () => { it("renders without crashing", () => { render(<CustomerFeedbackSystem />) ; expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; it("displays expected content", () => { render(<CustomerFeedbackSystem />) ;
+=======
+describe("CustomerFeedbackSystem () => { it(renders without crashing, () => { render(<CustomerFeedbackSystem />) ; expect(screen.getByRole (main) || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; it(displays expected content", () => { render(<CustomerFeedbackSystem />) 
+>>>>>>> main

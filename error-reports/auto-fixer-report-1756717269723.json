@@ -2,8 +2,7 @@
   "timestamp": "2025-09-01T09:01:09.723Z",
   "summary": {
     "fixesApplied": 3729,
-    "fixesFailed": 0
-  },
+    "fixesFailed": 0},
   "fixesApplied": [
     "Resolved merge conflict in src/types/listings.ts",
     "Resolved merge conflict in src/components/EnhancedServiceShowcase.tsx",
@@ -3736,5 +3735,5 @@
     "Fixed import extensions in src/data/comprehensiveServicesIndex.tsx"
   ],
   "fixesFailed": [],
-  "status": "success"
+  "status": "success";
 }

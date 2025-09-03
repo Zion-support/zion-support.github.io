@@ -1,1 +1,145 @@
-import React from 'react'; import { motion    } from 'framer-motion'; import { Helmet  } from 'react-helmet-async'; import { ; Brain,; Zap,; Workflow,; BarChart3,; Users,; Shield,; Clock,; DollarSign,; CheckCircle,; ArrowRight,; Play,; Pause,; Settings,; Monitor,; TrendingUp,; Target,; Rocket,; Star,; Phone,; Mail,; MapPin;    } from 'lucide-react'; ; export default function AIBusinessProcessAutomationPlatform() {; const features = [; "Intelligent Workflow Design & Orchestration",";"AI-Powered Decision Making & Routing",";"Real-time Process Monitoring & Analytics",";"Automated Document Processing & Extraction",";"Smart Form Generation & Validation",";"Multi-department Process Coordination",";"Compliance & Audit Trail Management",";"Integration with 100+ Business Systems",";"Mobile-First Process Execution",";"Predictive Process Optimization";";" ];";" ;"";" const benefits = [";"Reduce manual processing time by 85%",";"Increase process accuracy to 99.5%",";"Cut operational costs by 60%",";"Improve employee productivity by 75%",";"Accelerate decision-making by 90%",";"Ensure 100% compliance adherence"; ];" ;";" const pricing = [;";" {;";"";" name: "Starter",";"";" price: "$299",";"";" period: "/month",";"";" description: "Perfect for small teams and basic automation needs",;"";" features: [";"Up to 10 automated workflows",";"Basic AI decision making",";"Standard integrations",";"Email support",";"Basic analytics dashboard"; ],;" popular: false;";" },;";" {;";"";" name: "Professional",";"";" price: "$799",";"";" period: "/month",";"";" description: "Ideal for growing businesses with complex processes",;"";" features: [";"Up to 50 automated workflows",";"Advanced AI decision making",";"100+ system integrations",";"Priority support",";"Advanced analytics & reporting",";"Custom workflow templates"; ],;" popular: true;";" },;";" {;";"";" name: "Enterprise",";"";" price: "$1,999",";"";" period: "/month",";"";" description: "For large organizations with enterprise-scale automation",;"";" features: [";"Unlimited automated workflows",";"Custom AI model training",";"Unlimited integrations",";"24/7 dedicated support",";"Custom development",";"Advanced security features",";"Multi-tenant architecture"; ],; popular: false; }; ];" ;";" const useCases = [;";" {;";"";" title: "HR Onboarding Automation",";"";" description: "Streamline employee onboarding with automated document processing, task assignments, and compliance checks",;"";" icon: Users,";"";" savings: "Save 15 hours per new hire";";" },;";" {;";"";" title: "Invoice Processing",";"";" description: "Automate invoice capture, approval workflows, and payment processing with AI-powered validation",;"";" icon: DollarSign,";"";" savings: "Reduce processing time by 80%";";" },;";" {;";"";" title: "Customer Service Routing",";"";" description: "Intelligently route customer inquiries to the right agents based on complexity and expertise",;"";" icon: Monitor,";"";" savings: "Improve response time by 70%";";" },;";" {;";"";" title: "Sales Process Management",";"";" description: "Automate lead scoring, follow-up scheduling, and opportunity tracking",;"";" icon: Target,";"";" savings: "Increase conversion rates by 40%"; }; ]; ; const stats = [; { number: '500+', label: 'Companies Automated', icon: Users },; { number: '10,000+', label: 'Workflows Created', icon: Workflow },; { number: '99.5%', label: 'Process Accuracy', icon: CheckCircle },; { number: '85%', label: 'Time Savings', icon: Clock }; ]; ;" return (;";" <>;";" <Helmet>;"";" <title>AI Business Process Automation Platform - Zion Tech Group</title>";"";" <meta name="description" content="Transform your business operations with our AI-powered process automation platform.Reduce costs by 60%, improve accuracy to 99.5%, and accelerate decision-making by 90%." / / / / / />";"";" <meta name="keywords" content="AI automation, business process automation, workflow automation, process optimization, AI decision making" / / / / / />";"";" <link rel="canonical" href="https:
+<<<<<<< HEAD
+import React from 'react'; import { motion  } from 'framer-motion'; import { Helmet  } from 'react-helmet-async'; import { ; Brain,; Zap,; Workflow,; BarChart3,; Users,; Shield,; Clock,; DollarSign,; CheckCircle,; ArrowRight,; Play,; Pause,; Settings,; Monitor,; TrendingUp,; Target,; Rocket,; Star,; Phone,; Mail,; MapPin;  } from 'lucide-react'; ; export default function AIBusinessProcessAutomationPlatform() {; const features = [; "Intelligent Workflow Design & Orchestration",";"AI-Powered Decision Making & Routing",";"Real-time Process Monitoring & Analytics",";"Automated Document Processing & Extraction",";"Smart Form Generation & Validation",";"Multi-department Process Coordination",";"Compliance & Audit Trail Management",";"Integration with 100+ Business Systems",";"Mobile-First Process Execution",";"Predictive Process Optimization";";" ];";" ;"";" const benefits = [";"Reduce manual processing time by 85%",";"Increase process accuracy to 99.5%",";"Cut operational costs by 60%",";"Improve employee productivity by 75%",";"Accelerate decision-making by 90%",";"Ensure 100% compliance adherence"; ];" ;";" const pricing = [;";" {;";"";" name: "Starter",";"";" price: "$299",";"";" period: "/month",";"";" description: "Perfect for small teams and basic automation needs",;"";" features: [";"Up to 10 automated workflows",";"Basic AI decision making",";"Standard integrations",";"Email support",";"Basic analytics dashboard"; ],;" popular: false;";" },;";" {;";"";" name: "Professional",";"";" price: "$799",";"";" period: "/month",";"";" description: "Ideal for growing businesses with complex processes",;"";" features: [";"Up to 50 automated workflows",";"Advanced AI decision making",";"100+ system integrations",";"Priority support",";"Advanced analytics & reporting",";"Custom workflow templates"; ],;" popular: true;";" },;";" {;";"";" name: "Enterprise",";"";" price: "$1,999",";"";" period: "/month",";"";" description: "For large organizations with enterprise-scale automation",;"";" features: [";"Unlimited automated workflows",";"Custom AI model training",";"Unlimited integrations",";"24/7 dedicated support",";"Custom development",";"Advanced security features",";"Multi-tenant architecture"; ],; popular: false; }; ];" ;";" const useCases = [;";" {;";"";" title: "HR Onboarding Automation",";"";" description: "Streamline employee onboarding with automated document processing, task assignments, and compliance checks",;"";" icon: Users,";"";" savings: "Save 15 hours per new hire";";" },;";" {;";"";" title: "Invoice Processing",";"";" description: "Automate invoice capture, approval workflows, and payment processing with AI-powered validation",;"";" icon: DollarSign,";"";" savings: "Reduce processing time by 80%";";" },;";" {;";"";" title: "Customer Service Routing",";"";" description: "Intelligently route customer inquiries to the right agents based on complexity and expertise",;"";" icon: Monitor,";"";" savings: "Improve response time by 70%";";" },;";" {;";"";" title: "Sales Process Management",";"";" description: "Automate lead scoring, follow-up scheduling, and opportunity tracking",;"";" icon: Target,";"";" savings: "Increase conversion rates by 40%"; }; ]; ; const stats = [; { number: '500+', label: 'Companies Automated', icon: Users },; { number: '10,000+', label: 'Workflows Created', icon: Workflow },; { number: '99.5%', label: 'Process Accuracy', icon: CheckCircle },; { number: '85%', label: 'Time Savings', icon: Clock }; ]; ;" return (;";" <>;";" <Helmet>;"";" <title>AI Business Process Automation Platform - Zion Tech Group</title>";"";" <meta name="description" content="Transform your business operations with our AI-powered process automation platform.Reduce costs by 60%, improve accuracy to 99.5%, and accelerate decision-making by 90%." / / / / / />";"";" <meta name="keywords" content="AI automation, business process automation, workflow automation, process optimization, AI decision making" / / / / / />";"";" <link rel="canonical" href="https:
+=======
+import React from "react"
+import Link from "next/link"
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from "lucide-react"
+  );
+export default function AiBusinessProcessAutomationPlatform() {
+  const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ]
+  const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ]
+  const useCases = [
+    "Use Case 1",
+    "Use Case 2",
+    "Use Case 3"
+  ]
+  const pricing = [
+      }
+];
+    {
+      name: "Professional",
+      price: "$799/mo",
+      details: ["Up to 50 users", "Advanced features", "Priority support", "99.9% SLA"]
+    }
+  ];
+    {
+      name: "Enterprise",
+      price: "$1,999/mo",
+    }
+  ];
+
+  ]
+  return (
+    <div className="min-h-screen bg-white">
+      <section className="bg-gradient-to-br from-indigo-500 via-blue-500 to-cyan-500 py-20 text-center">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
+            <Database className="w-4 h-4 mr-2"  />
+            AI-Powered Ai Business Process Automation Platform Intelligence
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Ai Business Process Automation Platform Platform</h1>
+          <p className="text-indigo-100 text-xl">
+            Transform your ai business process automation platform operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.
+          </p>
+        </div>
+      </section>
+      <section className="py-16 max-w-6xl mx-auto px-6">
+        <div className="grid md:grid-cols-2 gap-10">
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Ai Business Process Automation Platform Features</h2>
+            <ul className="space-y-3">
+              {features.map((feature, index) => (
+                <li key={index} className="flex items-start">
+                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />
+                  <span className="text-gray-700">{feature}</span>
+                </li>
+              ))}
+
+            </ul>
+            <div className="mt-6 text-sm text-gray-600">
+              Built with enterprise-grade security, SOC 2 compliance, and 99.9% uptime SLA.
+            </div>
+          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Competitive Pricing</h3>
+            <div className="grid md:grid-cols-3 gap-4">
+              {pricing.map((tier, index) => (
+                <div key={index} className="rounded-lg p-4 border border-gray-200 hover:border-indigo-300 transition-colors">
+                  <div className="text-lg font-semibold mb-1">{tier.name}</div>
+                  <div className="text-2xl font-bold text-indigo-600 mb-2">{tier.price}</div>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    {tier.details.map((detail, detailIndex) => (
+                      <li key={detailIndex}>{detail}</li>
+                    ))}
+
+                  </ul>
+                </div>
+              ))}
+
+            </div>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link href="/pricing" className="px-5 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors inline-flex items-center">
+                View Full Pricing <ArrowRight className="w-4 h-4 ml-2"  />
+              </Link>
+              <Link href="/contact" className="px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors inline-flex items-center">
+                Contact Sales <Phone className="w-4 h-4 ml-2"  />
+              </Link>
+            </div>
+      </section>
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Key Benefits</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
+                <div className="flex items-center mb-3">
+                  <Zap className="w-6 h-6 text-indigo-600 mr-3"  />
+                  <h3 className="text-lg font-semibold text-gray-900">Performance</h3>
+                </div>
+                <p className="text-gray-600">{benefit}</p>
+              </div>
+            ))}
+
+          </div>
+      </section>
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Industries We Serve</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {useCases.map((industry, index) => (
+              <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-3">
+                  <Target className="w-5 h-5 text-indigo-600 mr-3"  />
+                  <h3 className="text-lg font-semibold text-gray-900">{industry}</h3>
+                </div>
+                <p className="text-gray-600">Comprehensive ai business process automation platform solutions tailored for {industry.toLowerCase()}.</p>
+              </div>
+            ))}
+
+          </div>
+      </section>
+      <section className="py-16 bg-indigo-600">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Ai Business Process Automation Platform?</h2>
+          <p className="text-indigo-100 text-xl mb-8">
+            Get started with our AI-powered ai business process automation platform platform today.
+          </p>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <Link href="/contact" className="px-8 py-3 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center">
+              Get Started <ArrowRight className="w-4 h-4 ml-2"  />
+            </Link>
+            <Link href="/demo" className="px-8 py-3 border border-white text-white rounded-lg hover:bg-white/10 transition-colors inline-flex items-center">
+              Schedule Demo <Mail className="w-4 h-4 ml-2"  />
+            </Link>
+          </div>
+      </section>
+    </div>
+  ),
+>>>>>>> main
