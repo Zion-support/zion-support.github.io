@@ -298,6 +298,116 @@ export default function MicroSaaS() {
       category: 'Marketing Analytics'
     },
     {
+      icon: Brain,
+      name: 'AI-Powered Code Review Assistant',
+      description: 'Automated code quality analysis, security scanning, and performance optimization suggestions.',
+      features: [
+        'Automated code quality analysis',
+        'Security vulnerability detection',
+        'Performance optimization recommendations',
+        'Code style and best practices enforcement',
+        'Integration with CI/CD pipelines',
+        'Custom rule configuration and reporting'
+      ],
+      pricing: '$149 – $999/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        '80% reduction in code review time',
+        'Automated security scanning',
+        'Improved code quality standards',
+        'Faster development cycles'
+      ],
+      category: 'Development Tools'
+    },
+    {
+      icon: Video,
+      name: 'AI Video Content Generator',
+      description: 'Automated video creation, editing, and optimization for marketing and training content.',
+      features: [
+        'AI-powered video generation from text',
+        'Automated editing and transitions',
+        'Voice synthesis and narration',
+        'Multi-language support and localization',
+        'Brand template customization',
+        'Performance analytics and optimization'
+      ],
+      pricing: '$299 – $2,499/month',
+      timeline: '2–4 weeks',
+      benefits: [
+        '90% reduction in video production time',
+        'Automated content creation',
+        'Consistent brand messaging',
+        'Scalable video marketing'
+      ],
+      category: 'Content Creation'
+    },
+    {
+      icon: Target,
+      name: 'Dynamic Pricing Intelligence Engine',
+      description: 'Real-time market analysis, competitor tracking, and automated pricing optimization.',
+      features: [
+        'Real-time competitor price monitoring',
+        'Market demand analysis and forecasting',
+        'Automated pricing rule configuration',
+        'Revenue optimization algorithms',
+        'A/B testing for pricing strategies',
+        'Integration with e-commerce platforms'
+      ],
+      pricing: '$399 – $2,999/month',
+      timeline: '3–5 weeks',
+      benefits: [
+        '25% increase in profit margins',
+        'Automated pricing optimization',
+        'Competitive market positioning',
+        'Data-driven pricing decisions'
+      ],
+      category: 'E-commerce Intelligence'
+    },
+    {
+      icon: Package,
+      name: 'Smart Inventory Forecasting System',
+      description: 'AI-powered demand prediction, stock optimization, and automated reorder management.',
+      features: [
+        'Machine learning demand forecasting',
+        'Automated reorder point calculation',
+        'Seasonal trend analysis',
+        'Supplier performance tracking',
+        'Cost optimization recommendations',
+        'Integration with ERP and POS systems'
+      ],
+      pricing: '$499 – $3,499/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '35% reduction in inventory costs',
+        'Automated stock management',
+        'Reduced stockouts and overstock',
+        'Improved cash flow optimization'
+      ],
+      category: 'Supply Chain Management'
+    },
+    {
+      icon: Calendar,
+      name: 'AI Meeting Transcription & Insights',
+      description: 'Real-time meeting transcription, action item extraction, and follow-up automation.',
+      features: [
+        'Real-time speech-to-text transcription',
+        'AI-powered action item extraction',
+        'Meeting summary generation',
+        'Participant engagement analysis',
+        'Integration with calendar and task management',
+        'Multi-language support and translation'
+      ],
+      pricing: '$199 – $1,299/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '95% accuracy in transcription',
+        'Automated meeting documentation',
+        'Improved meeting productivity',
+        'Better follow-up and accountability'
+      ],
+      category: 'Meeting Management'
+    },
+    {
       icon: FileText,
       name: 'Contract Management System',
       description: 'Automated contract lifecycle management with AI-powered risk assessment.',

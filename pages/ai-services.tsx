@@ -298,6 +298,116 @@ export default function AIServices() {
       ]
     },
     {
+      icon: Code,
+      name: 'AI Code Generation & Optimization',
+      description: 'Advanced AI-powered code generation, optimization, and automated testing solutions.',
+      features: [
+        'Natural language to code generation',
+        'Code optimization and refactoring',
+        'Automated test case generation',
+        'Bug detection and fixing suggestions',
+        'Code documentation generation',
+        'Multi-language support and translation'
+      ],
+      pricing: '$5,000 – $25,000 setup',
+      perUnit: '$0.05 – $0.50 per line of code',
+      timeline: '4–8 weeks',
+      benefits: [
+        '70% faster development cycles',
+        'Automated code quality improvement',
+        'Reduced development costs',
+        'Enhanced code maintainability'
+      ]
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Customer Behavior Analytics',
+      description: 'Deep learning models for customer journey analysis, churn prediction, and personalization.',
+      features: [
+        'Customer journey mapping and analysis',
+        'Churn prediction and prevention',
+        'Personalization engine development',
+        'Behavioral pattern recognition',
+        'Real-time customer insights',
+        'Automated intervention triggers'
+      ],
+      pricing: '$6,000 – $30,000 setup',
+      perUnit: '$0.01 – $0.10 per customer interaction',
+      timeline: '6–10 weeks',
+      benefits: [
+        '40% reduction in customer churn',
+        'Improved customer lifetime value',
+        'Enhanced personalization accuracy',
+        'Data-driven customer strategies'
+      ]
+    },
+    {
+      icon: FileText,
+      name: 'AI Legal Document Analysis',
+      description: 'Intelligent legal document processing, contract analysis, and compliance monitoring.',
+      features: [
+        'Contract analysis and risk assessment',
+        'Legal document summarization',
+        'Compliance monitoring and reporting',
+        'Clause extraction and comparison',
+        'Legal research automation',
+        'Regulatory change tracking'
+      ],
+      pricing: '$8,000 – $40,000 setup',
+      perUnit: '$0.10 – $1.00 per document',
+      timeline: '6–12 weeks',
+      benefits: [
+        '90% reduction in document review time',
+        'Automated compliance monitoring',
+        'Improved risk assessment accuracy',
+        'Enhanced legal team productivity'
+      ]
+    },
+    {
+      icon: TrendingUp,
+      name: 'AI Financial Trading Assistant',
+      description: 'Advanced algorithmic trading, market analysis, and portfolio optimization using AI.',
+      features: [
+        'Algorithmic trading strategy development',
+        'Market sentiment analysis',
+        'Portfolio optimization and rebalancing',
+        'Risk management and hedging',
+        'Real-time market data processing',
+        'Backtesting and performance analysis'
+      ],
+      pricing: '$15,000 – $75,000 setup',
+      perUnit: 'Custom pricing based on AUM',
+      timeline: '8–16 weeks',
+      benefits: [
+        '25% improvement in portfolio returns',
+        'Automated trading execution',
+        'Enhanced risk management',
+        'Reduced emotional trading decisions'
+      ]
+    },
+    {
+      icon: Eye,
+      name: 'AI Medical Image Analysis',
+      description: 'Advanced medical imaging analysis, diagnosis assistance, and treatment planning support.',
+      features: [
+        'Medical image classification and detection',
+        'Diagnosis assistance and recommendations',
+        'Treatment planning optimization',
+        'Drug discovery and development support',
+        'Clinical trial data analysis',
+        'Regulatory compliance and reporting'
+      ],
+      pricing: '$20,000 – $100,000 setup',
+      perUnit: '$0.50 – $5.00 per image',
+      timeline: '12–24 weeks',
+      benefits: [
+        '95% accuracy in image analysis',
+        'Faster diagnosis and treatment',
+        'Improved patient outcomes',
+        'Enhanced medical research capabilities'
+      ]
+    },
+    {
       icon: Mic,
       name: 'Conversational AI Platform',
       description: 'Advanced conversational AI with context awareness and multi-modal interaction.',

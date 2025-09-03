@@ -1571,21 +1571,21 @@ export default function Services(): any {
               background: 'rgba(59, 130, 246, 0.1)', padding: '12px 20px', 
               borderRadius: 12, border: '1px solid rgba(59, 130, 246, 0.2)'
             }}>
-              <div style={{ fontSize: 24, fontWeight: 700, color: '#3b82f6' }}>60+</div>
+              <div style={{ fontSize: 24, fontWeight: 700, color: '#3b82f6' }}>150+</div>
               <div style={{ fontSize: 14, opacity: 0.8 }}>Micro SaaS</div>
             </div>
             <div style={{ 
               background: 'rgba(139, 92, 246, 0.1)', padding: '12px 20px', 
               borderRadius: 12, border: '1px solid rgba(139, 92, 246, 0.2)'
             }}>
-              <div style={{ fontSize: 24, fontWeight: 700, color: '#8b5cf6' }}>40+</div>
+              <div style={{ fontSize: 24, fontWeight: 700, color: '#8b5cf6' }}>100+</div>
               <div style={{ fontSize: 14, opacity: 0.8 }}>AI Services</div>
             </div>
             <div style={{ 
               background: 'rgba(34, 197, 94, 0.1)', padding: '12px 20px', 
               borderRadius: 12, border: '1px solid rgba(34, 197, 94, 0.2)'
             }}>
-              <div style={{ fontSize: 24, fontWeight: 700, color: '#22c55e' }}>40+</div>
+              <div style={{ fontSize: 24, fontWeight: 700, color: '#22c55e' }}>100+</div>
               <div style={{ fontSize: 14, opacity: 0.8 }}>IT Solutions</div>
             </div>
           </div>

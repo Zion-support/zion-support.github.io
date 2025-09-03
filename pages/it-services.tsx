@@ -196,6 +196,121 @@ export default function ITServices() {
       category: 'Development'
     },
     {
+      icon: Brain,
+      name: 'AI Infrastructure & MLOps',
+      description: 'Complete AI infrastructure setup, model deployment, and machine learning operations management.',
+      features: [
+        'AI/ML infrastructure design and setup',
+        'Model training and deployment pipelines',
+        'MLOps workflow automation',
+        'Model monitoring and performance tracking',
+        'GPU cluster management and optimization',
+        'AI model versioning and governance'
+      ],
+      pricing: '$150 – $350/hour',
+      projectPricing: '$20,000 – $100,000/project',
+      timeline: '4–16 weeks',
+      benefits: [
+        'Scalable AI infrastructure',
+        'Automated model deployment',
+        'Improved model performance',
+        'Reduced AI operational costs'
+      ],
+      category: 'AI Infrastructure'
+    },
+    {
+      icon: Cpu,
+      name: 'Edge Computing Solutions',
+      description: 'Edge computing infrastructure, IoT device management, and distributed computing solutions.',
+      features: [
+        'Edge computing infrastructure setup',
+        'IoT device management and monitoring',
+        'Distributed computing architecture',
+        'Real-time data processing at the edge',
+        'Edge-to-cloud synchronization',
+        'Edge security and compliance'
+      ],
+      pricing: '$120 – $280/hour',
+      projectPricing: '$15,000 – $75,000/project',
+      timeline: '3–12 weeks',
+      benefits: [
+        'Reduced latency and bandwidth costs',
+        'Improved real-time processing',
+        'Enhanced data privacy and security',
+        'Scalable edge infrastructure'
+      ],
+      category: 'Edge Computing'
+    },
+    {
+      icon: TestTube,
+      name: 'Blockchain & Web3 Development',
+      description: 'Blockchain application development, smart contracts, and Web3 infrastructure solutions.',
+      features: [
+        'Smart contract development and auditing',
+        'DeFi and NFT platform development',
+        'Blockchain infrastructure setup',
+        'Web3 application development',
+        'Cryptocurrency integration',
+        'Blockchain security and compliance'
+      ],
+      pricing: '$150 – $400/hour',
+      projectPricing: '$25,000 – $200,000/project',
+      timeline: '6–24 weeks',
+      benefits: [
+        'Secure blockchain applications',
+        'Decentralized infrastructure',
+        'Enhanced transparency and trust',
+        'Future-proof technology adoption'
+      ],
+      category: 'Blockchain'
+    },
+    {
+      icon: BookOpen,
+      name: 'Quantum Computing Integration',
+      description: 'Quantum computing infrastructure, algorithm development, and hybrid quantum-classical solutions.',
+      features: [
+        'Quantum computing infrastructure setup',
+        'Quantum algorithm development',
+        'Hybrid quantum-classical systems',
+        'Quantum machine learning implementation',
+        'Quantum cryptography and security',
+        'Quantum simulation and optimization'
+      ],
+      pricing: '$200 – $500/hour',
+      projectPricing: '$50,000 – $500,000/project',
+      timeline: '12–52 weeks',
+      benefits: [
+        'Exponential computational power',
+        'Advanced optimization capabilities',
+        'Enhanced security with quantum cryptography',
+        'Competitive advantage in research'
+      ],
+      category: 'Quantum Computing'
+    },
+    {
+      icon: Wrench,
+      name: 'Serverless Architecture Implementation',
+      description: 'Serverless application development, function optimization, and event-driven architecture.',
+      features: [
+        'Serverless function development and optimization',
+        'Event-driven architecture design',
+        'Microservices orchestration',
+        'Auto-scaling and cost optimization',
+        'Serverless monitoring and debugging',
+        'Multi-cloud serverless deployment'
+      ],
+      pricing: '$100 – $250/hour',
+      projectPricing: '$10,000 – $50,000/project',
+      timeline: '2–8 weeks',
+      benefits: [
+        'Reduced infrastructure costs',
+        'Automatic scaling and management',
+        'Improved development velocity',
+        'Enhanced system reliability'
+      ],
+      category: 'Serverless'
+    },
+    {
       icon: Server,
       name: 'IT Infrastructure Management',
       description: 'Complete IT infrastructure management including server administration, network management, and system monitoring.',
