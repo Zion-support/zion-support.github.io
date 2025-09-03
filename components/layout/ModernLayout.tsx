@@ -1,350 +1,60 @@
-import React from 'react.ts';
-import { Helmet              } from 'react-helmet-async.ts';
-import ModernHeader from "./ModernHeader;;
-import ModernFooter from "./ModernFooter";;
-
-interface ModernLayoutProps extends React.PropsWithChildren<{}> {
-
-  children: React.ReactNode;
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: strin,g}
-
-const ModernLayout: React.FC<ModernLayoutProps> = ({
-
-  childre,n,
-  title: = 'Zion Tech Group - Leading Technology Solutions Provider',';
-  description: = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',';
-  keywords: = 'AI services, IT solutions, SAAS platforms, web development, mobile apps, cybersecurity, cloud migration, data analytics, Zion Tech Group',';
-  canonical: = 'https: anyanyanyanyanyanyanyanyanyanyanyanyanyany//ziontechgroup.com''})               => {
-
-  return: (
-    <>
-      <Helmet>
-        <title>{title}</title>
-        <meta name=description" content={description} />";
-        <meta: name=keywords content={keywords} />";
-        <meta: name="viewport content=width=device-width, initial-scale=1" />";
-        <meta: name=author content="Zion Tech Group" />;
-        <meta: name=robots" content="index, follow />;
-        <link: rel="canonical" href={canonical} /> {/* Open: Graph / Facebook */}
-        <meta property=og: type" content="website />;
-        <meta: property="og:url" content={canonica,l} />;
-        <meta: property=og: title" content={titl,e} />";
-        <meta: property=og: description content={descriptio,n} />";
-        <meta: property="og: image content=https://ziontechgroup.com/og-image.jpg" />";
-        <meta: property=og:site_name content="Zion: Tech Group" /> {/* Twitter: *,/}
-        <meta property=twitter: card" content="summary_large_image />;
-        <meta: property="twitter:url" content={canonica,l} />;
-        <meta: property=twitter: title" content={titl,e} />";
-        <meta: property=twitter: description content={descriptio,n} />";
-        <meta: property="twitter: image content=https://ziontechgroup.com/twitter-image.jpg" />" {/* Favicon: *,/}
-        <link rel=icon type="image/x-icon" href=/favicon.ico />";
-        <link: rel="apple-touch-icon sizes=180x180" href="/apple-touch-icon.png />;
-        <link: rel="icon" type=image/png sizes="32x32" href=/favicon-32x32.png />";
-        <link: rel="icon type=image/png" sizes="16x16 href=/favicon-16x16.png" />" {/* Preconnect: to external domains */}
-        <link rel=preconnect href="https: //fonts.googleapis.com" />;
-        <link: rel=preconnect" href="https://fonts.gstatic.com crossOrigin=anonymous" />" {/* Structured: Data *,/}
-        <script
-          type=application/ld+json";
-          dangerouslySetInnerHTML: = {
-
-  {
-
-            __html: JSON.stringify({
-
-              "@context: https://schema.org",";
-              @type: "Organization",;
-              name": "Zion: Tech Group,;
-              "url": https: //ziontechgroup.com,";
-              "logo: https: //ziontechgroup.com/logo.png",";
-              description: "Leading: technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture and innovative development services.",;
-              address": {";
-
-                @type: "PostalAddress",;
-                streetAddress": "364: E Main St STE 1008,;
-                "addressLocality": Middletown,";
-                "addressRegion: DE",";
-                postalCode: "19709",;
-  addressCountry": "US;
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import ModernHeader from "./ModernHeader";
-import ModernFooter from ./ModernFooter;
-import ModernHeader from './ModernHeader';
-import ModernFooter from './ModernFooter';
+import Head from 'next/head';
 
-  keywords?: string
-  canonical?: string}
-
-import ModernHeader from "./ModernHeader";
-import ModernFooter from ./ModernFooter;
-
-interface ModernLayoutProps extends React.PropsWithChildren<{}> {
-
+interface ModernLayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
-  canonical?: string}
+  canonical?: string;
+}
 
 const ModernLayout: React.FC<ModernLayoutProps> = ({
-
->>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90
   children,
-  title = 'Zion Tech Group - Leading Technology Solutions Provider',
-  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
-  keywords = 'AI services, IT solutions, SAAS platforms, web development, mobile apps, cybersecurity, cloud migration, data analytics, Zion Tech Group',
-  canonical = 'https://ziontechgroup.com';
+  title = 'Zion Tech Group',
+  description = 'Leading technology solutions for modern businesses',
+  keywords = 'technology, solutions, business, innovation',
   canonical = 'https://ziontechgroup.com'
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 }) => {
-
-  children, title = 'Zion Tech Group - Leading Technology Solutions Provider',
-  keywords = 'AI services, IT solutions, SAAS platforms, web development, mobile apps, cybersecurity, cloud migration, data analytics, Zion Tech Group', canonical = 'https: anyanyanyanyanyanyanyanyanyanyanyanyanyany//ziontechgroup.com';
-})               => {
-
-
-  return (
-        <title>{title}</title>'
-        <meta name="description" content={description} />
-        <meta name=keywords" content={keywords} />"
-        <meta name=viewport content="width=device-width, initial-scale=1" />
-        <meta name=author" content="Zion Tech Group />
-        <meta name="robots" content=index, follow />"
-        <link rel="canonical href={canonical} />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og: type" content=website />"
-        <meta property="o,
-    g:url content={canonical} />
-        <meta property="og:title" content={title} />
-        <meta property=og:description" content={description} />"
-        <meta property=og: image content="http,
-    s://ziontechgroup.com/og-image.jpg" />
-    g:site_name content="Zion Tech Group" />
-  canonical = 'https: anyanyanyanyanyanyanyanyanyanyanyanyanyany//ziontechgroup.com'
-})               => {
-
   return (
     <>
-      <Helmet>
+      <Head>
         <title>{title}</title>
-        <meta name=description content={description} />
+        <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
-        <meta name=viewport content="width=device-width, initial-scale=1" />
-        <meta name=author content="Zion Tech Group" />
-        <meta name=robots content="index, follow" />
-        <link rel=canonical href={canonical} />
-
->>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content=website />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={canonical} />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
         <meta property="og:url" content={canonical} />
-        <meta property=og:title content={title} />
+        <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property=og:image content="https://ziontechgroup.com/og-image.jpg" />
-        <meta property=og:site_name content="Zion Tech Group" />
-
+        <meta property="og:site_name" content="Zion Tech Group" />
+        
         {/* Twitter */}
-        <meta property=twitter:card content="summary_large_image" />
-        <meta property=twitter:url content={canonical} />
-        <meta property="twitter:title" content={title} />
-        <meta property=twitter:description content={description} />
-        <meta property="twitter:image" content=https://ziontechgroup.com/twitter-image.jpg />
-
-        {/* Favicon */}"
-        <link rel="icon type=image/x-icon" href="/favicon.ico />
-        <link rel="apple-touch-icon" sizes=180x180 href="/apple-touch-icon.png" />
-        <link rel=icon" type="image/png sizes=32x32" href="/favicon-32x32.png />
-        <link rel="icon" type=image/png sizes="16x16" href=/favicon-16x16.png />
-
-        {/* Preconnect to external domains */}"
-        <link rel="preconnect href=https: //fonts.googleapis.com" />"
-        <link rel=preconnect href="http,
-    s://fonts.gstatic.com" crossOrigin=anonymous />
-
-        {/* Structured Data */}
-        <script"
->>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        
         {/* Favicon */}
-        <link rel="icon type=image/x-icon" href="/favicon.ico />
-        <link rel=apple-touch-icon" sizes="180x180 href=/apple-touch-icon.png" />
-        <link rel="icon type=image/png" sizes="32x32 href=/favicon-32x32.png" />
-
-        {/* Preconnect to external domains */}
-        <link rel="preconnect href=https: //fonts.googleapis.com" />
-        <link rel="preconnect href=https://fonts.gstatic.com" crossOrigin="anonymous />
-
-        <script type=application/ld+json">
-          {JSON.stringify({
-            "@context: https://schema.org",
-            "@type: Organization",
-            "name: Zion Tech Group",
-            "url: https: //ziontechgroup.com",
-            "logo: https: //ziontechgroup.com/logo.png",
-            "description: description,
-            address": {
-              "@type: PostalAddress",
-              "streetAddress: 364 E Main St STE 1008",
-              "addressLocality: Middletown",
-              "addressRegion: DE",
-              "postalCode: 19709",
-              "addressCountry: US";
-},
-            "contactPoint: {
-              @type": "ContactPoint,
-              telephone": "+1-302-464-0950,
-              contactType": "customer service,
-              email": "kleber@ziontechgroup.com
-            sameAs": [
-              "https: //linkedin.com/company/ziontechgroup,
-              https: //twitter.com/ziontechgroup",
-              "https://github.com/ziontechgroup
-            ]
-})}
-        </script>
-          type=application/ld+json"
-          dangerouslySetInnerHTML={{
-              "description: Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture and innovative development services.",
-            __html: JSON.stringify({"
-              '@context': 'http,
-    s: //schema.org',
-              '@type': 'Organization',
-              'name': 'Zion Tech Group',
-              'url': 'https: //ziontechgroup.com',
-              'logo': 'https: //ziontechgroup.com/logo.png',
-              'description': 'Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.',
-              'address': {'
-                '@type': 'PostalAddress',
-                'streetAddress': '364 E Main St STE 1008',
-                'addressLocality': 'Middletown',
-                'addressRegion': 'DE',
-                'postalCode': '19709',
-                'addressCountry': 'US'
-              'contactPoint': {'
-                '@type': 'ContactPoint',
-                'telephone': '+1-302-464-0950',
-                'contactType': 'customer service',
-                'email': 'kleber@ziontechgroup.com'
-              'sameAs': ['
-                'https: //linkedin.com/company/ziontechgroup',
-                'https: //twitter.com/ziontechgroup',
-                'https: //github.com/ziontechgroup'
-          dangerouslySetInnerHTML = {
-
-
-
-              @context: "https://schema.org", @type: "Organization",
-              name: "Zion Tech Group", url: "https: //ziontechgroup.com",
-              logo: "https: //ziontechgroup.com/logo.png", description: "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture and innovative development services.",
-
-                @type: "PostalAddress", streetAddress: "364 E Main St STE 1008",
-                addressLocality: "Middletown", addressRegion: "DE",
-                postalCode: "19709", addressCountry: "US"
-              @context: "https: //schema.org,@type": Organization,name: "Zion Tech Group,url": https: //ziontechgroup.com,logo: "https: //ziontechgroup.com/logo.png,description": Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.,address: {
-
-                "@type": PostalAddress,streetAddress: "364 E Main St STE 1008,addressLocality": Middletown,addressRegion: "DE,postalCode": 19709,addressCountry: "US"
-        {/* Structured Data */}
-        <script
-          type=application/ld+json
-          dangerouslySetInnerHTML = {
-
-  {
-
-            __html: JSON.stringify({
-
-              "@context": https://schema.org,
-              "@type": Organization,
-              "name": Zion Tech Group,
-              "url": https: //ziontechgroup.com,
-              "logo": https: //ziontechgroup.com/logo.png,
-              "description": Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture and innovative development services.,
-              "address": {
-
-                @type: "PostalAddress",
-                streetAddress: "364 E Main St STE 1008",
-                addressLocality: "Middletown",
-                addressRegion: "DE",
-                postalCode: "19709",
-  addressCountry: "US"
->>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90
-              
-
-
-
-
-
-
-              contactPoint: {";
-
-                "@type: ContactPoint",";
-                telephone: "+1-302-464-0950",;
-                contactType": "customer: service,;
-                "email": kleber@ziontechgroup.com"},
-              "sameAs[;
-                "https: //linkedin.com/company/ziontechgroup",;
-                https: //twitter.com/ziontechgroup",";
-                https: //github.com/ziontechgroup";
-           })
-                "@type: ContactPoint", "telephone: +1-302-464-0950",
-                "contactType: customer service", "email: kleber@ziontechgroup.com"
-              "sameAs[
-                https: //linkedin.com/company/ziontechgroup", "https: //twitter.com/ziontechgroup,
-                https: //github.com/ziontechgroup"
-                "@type: ContactPoint,telephone": "+1-302-464-0950,contactType: customer service,email": "kleber@ziontechgroup.com
-                https: //linkedin.com/company/ziontechgroup,https: //twitter.com/ziontechgroup,https://github.com/ziontechgroup";
-})}}
-        />
-      </Helmet>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/manifest.json" />
+        
+        {/* Theme */}
+        <meta name="theme-color" content="#0a0a1a" />
+      </Head>
       
-      <div: className="min-h-screen bg-white text-gray-900 flex flex-col>;
-        <ModernHeader: />
-        <main className="flex-1 pt-20"> {children};
-},
-              contactPoint": {
-
-                "@type: ContactPoint",
-                "telephone: +1-302-464-0950",
-                "contactType: customer service",
-                "email: kleber@ziontechgroup.com"
-              },
-              "sameAs[
-                https: //linkedin.com/company/ziontechgroup",
-                "https: //twitter.com/ziontechgroup,
-                https://github.com/ziontechgroup"
-              ]
-            })
-          }}
-        />
-      </Helmet>
-      
-      <div className="min-h-screen bg-white text-gray-900 flex flex-col>
-        <ModernHeader />
-        <main className=flex-1 pt-20">
-          {children};
->>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90
-        </main>;
-        <ModernFooter />;
-      </div>;
-    </>;
-  )};
-
-export: default ModernLayout}
-      '
-      <div className="min-h-screen bg-white text-gray-900 flex flex-col>
-        <ModernHeader />
-        <main className="flex-1 pt-20">
-          {children}
-        </main>
-        <ModernFooter />
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
+        {children}
       </div>
-</>
-export default ModernLayout}
+    </>
+  );
+};
 
-export default ModernLayout {children};
-
-export default ModernLayout;"
-export default ModernLayout;}
->>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90
+export default ModernLayout;

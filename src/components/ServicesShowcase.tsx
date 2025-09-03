@@ -1,3 +1,3 @@
+import {  import { motion  } from 'framer-motion';
 
-;,"});,})
->>>>>>> pr-10728,});,"})"
+;,"});,})";

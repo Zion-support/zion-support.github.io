@@ -1,93 +1,207 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import { ArrowRight, CheckCircle, Star, Users, Award, Globe, Brain, Cloud, Shield, Zap, Database, Cpu, Lock, Heart, TrendingUp, Target, BarChart3, PenTool, Eye, Server, Smartphone, Network, Clock, Sparkles, Phone, Mail, MapPin, FileText, Building2, Car, Share2 } from 'lucide-react';
+import { ArrowRight, CheckCircle, Brain, Zap, Users, Shield, TrendingUp, BarChart3, MessageCircle, Star, Clock, Award } from 'lucide-react';
 
-const AIContentGenerator: NextPage = () => {
+export default function AIContentGeneratorPage() {
   const features = [
-    {
-      title: 'Multi-Language Support', description: 'Generate content in over 50 languages with native-level quality',
-      icon: <Globe className="w-6 h-6" />}, {
-      title: 'SEO Optimization',
-      description: 'AI-powered SEO optimization for better search rankings', icon: <Zap className="w-6 h-6" />},
-    {
-      title: 'Brand Voice Consistency', description: 'Maintain consistent brand voice across all content',
-      icon: <Shield className="w-6 h-6" />}, {
-      title: 'Real-time Collaboration',
-      description: 'Work together with your team in real-time', icon: <Users className="w-6 h-6" />}
-  ]
+    'Multi-language content generation with 50+ languages supported',
+    'SEO-optimized content with keyword research and optimization',
+    'Brand voice customization and tone consistency',
+    'Content scheduling across multiple platforms',
+    'Advanced analytics dashboard with performance metrics',
+    'API integration for seamless workflow automation',
+    'Plagiarism detection and originality scoring',
+    'Extensive content templates library (1000+ templates)'
+  ];
+
+  const benefits = [
+    '10x faster content creation compared to manual writing',
+    'Consistent brand messaging across all content',
+    'Built-in SEO optimization for better search rankings',
+    'Multi-platform publishing with one-click distribution',
+    'Cost-effective content marketing solution',
+    '24/7 content generation capability',
+    'Scalable content production for any business size'
+  ];
+
+  const useCases = [
+    'Blog content creation for content marketing',
+    'Social media management and posting',
+    'Email marketing campaign content',
+    'Product descriptions for e-commerce',
+    'Marketing copywriting and ad content',
+    'Technical documentation and guides',
+    'Press releases and announcements'
+  ];
 
   const pricingPlans = [
     {
-      name: 'Starter', price: '$99',
-      period: '/month', description: 'Perfect for small businesses and individuals',
+      name: 'Starter',
+      price: 29,
+      period: 'month',
+      description: 'Perfect for small businesses and freelancers',
       features: [
-        '10, 000 words per month',
-        '5 languages supported', 'Basic SEO optimization',
-        'Email support', 'Standard templates'
-      ], popular: false},
+        'Up to 10,000 words/month',
+        '5 content templates',
+        'Basic SEO optimization',
+        'Email support',
+        'Standard analytics',
+        '1 user account'
+      ],
+      popular: false
+    },
     {
-      name: 'Professional', price: '$199',
-      period: '/month', description: 'Ideal for growing businesses and content teams',
+      name: 'Professional',
+      price: 79,
+      period: 'month',
+      description: 'Ideal for growing companies and agencies',
       features: [
-        '50, 000 words per month',
-        '25 languages supported', 'Advanced SEO optimization',
-        'Priority support', 'Custom templates',
-        'Team collaboration (up to 5 users)', 'API access'
-      ], popular: true},
+        'Up to 50,000 words/month',
+        'Unlimited content templates',
+        'Advanced SEO optimization',
+        'Priority email support',
+        'Advanced analytics & insights',
+        '5 user accounts',
+        'API access',
+        'Brand voice training'
+      ],
+      popular: true
+    },
     {
-      name: 'Enterprise', price: 'Custom',
-      period: '', description: 'Tailored solutions for large organizations',
+      name: 'Enterprise',
+      price: 199,
+      period: 'month',
+      description: 'For large organizations with high content needs',
       features: [
-        'Unlimited words', 'All languages supported',
-        'Custom AI models', 'Dedicated support',
-        'White-label solution', 'Unlimited team members',
-        'Advanced analytics', 'Custom integrations'
-      ], popular: false}
-  ]
+        'Unlimited words/month',
+        'All premium templates',
+        'Custom SEO strategies',
+        '24/7 phone support',
+        'Custom analytics dashboard',
+        'Unlimited user accounts',
+        'Full API access',
+        'Custom brand voice models',
+        'Dedicated account manager',
+        'White-label options'
+      ],
+      popular: false
+    }
+  ];
 
-  return (
-    <MainLayout
-      title="AI Content Generator - Zion Tech Group"
-      description="Transform your content creation with our AI-powered content generator. Create high-quality, SEO-optimized content in minutes."
-    >
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md: text-6xl font-bold mb-6">
-            AI Content <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Generator</span>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            Transform your content creation process with our advanced AI-powered platform. 
-            Generate high-quality, SEO-optimized content in minutes, not hours.
-          </p>
-          
-          <div className="flex flex-col sm: flex-row justify-center gap-4 mb-12">
-            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              Start Free Trial
-            </Link>
-            <Link href="#demo" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              Watch Demo
-            </Link>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
-export default function AIContentGenerator() {
   return (
     <>
       <Head>
-        <title>AI Content Generator - Zion Tech Group</title>
-        <meta name="description" content="Create high-quality content 10x faster with our AI-powered platform. Generate blogs, social media posts, and more." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>AI Content Generator Pro - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered content generation platform for blogs, social media, and marketing materials with GPT-4 integration. Create high-quality content 10x faster." />
+        <meta name="keywords" content="AI content generator, content creation, blog writing, social media content, marketing copy, SEO content" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-content-generator" />
       </Head>
-      <main className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-6">
-                <Brain className="w-10 h-10 text-blue-600" />
+
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="flex items-center justify-center mb-6">
+              <Brain className="h-12 w-12 text-blue-400 mr-4" />
+              <span className="text-2xl font-bold">AI Content Generator Pro</span>
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              Create High-Quality Content 10x Faster
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
+              Advanced AI-powered content generation platform that creates engaging, SEO-optimized content for blogs, 
+              social media, and marketing materials. Transform your content strategy with cutting-edge AI technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <a href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105 hover:shadow-lg">
+                Start Free Trial
+              </a>
+              <a href="#pricing" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105">
+                View Pricing
+              </a>
+            </div>
+
+            {/* Key Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-400">10x</div>
+                <div className="text-gray-300">Faster Creation</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-400">50+</div>
+                <div className="text-gray-300">Languages</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-400">1000+</div>
+                <div className="text-gray-300">Templates</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-400">99.9%</div>
+                <div className="text-gray-300">Uptime</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Powerful Features</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Everything you need to create, optimize, and distribute high-quality content at scale.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="text-blue-600 mb-4">
+                  <CheckCircle className="w-8 h-8" />
+                </div>
+                <p className="text-gray-700">{feature}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our AI Content Generator?</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transform your content strategy with proven benefits and measurable results.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                <p className="text-gray-700 text-lg">{benefit}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Perfect For</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Whether you're a small business, agency, or enterprise, our AI content generator adapts to your needs.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="text-blue-600 mb-4">
+                  <MessageCircle className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{useCase}</h3>
               </div>
             ))}
           </div>
@@ -95,311 +209,73 @@ export default function AIContentGenerator() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20" id="pricing">
+      <section id="pricing" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the plan that fits your content creation needs.
+              Choose the plan that fits your content needs. All plans include our core AI features.
             </p>
           </div>
-          
-          <div className={`grid md: grid-cols-3 gap-8 max-w-6xl mx-auto`>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`bg-white p-8 rounded-lg shadow-lg relative ${plan.popular ? 'ring-2 ring-blue-500' : ''}`}>
+              <div key={index} className={`bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''}`}>
                 {plan.popular && (
-                  <div className=`absolute -top-4 left-1/2 transform -translate-x-1/2`}>
-                    <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
-                      Most Popular
-                    </span>
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
                   </div>
                 )}
-                
-                <div className="text-center mb-6">
+                <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-blue-600 mb-1">
-                    {plan.price}
-                    <span className="text-lg text-gray-500">{plan.period}</span>
+                  <p className="text-gray-600 mb-4">{plan.description}</p>
+                  <div className="text-4xl font-bold text-blue-600 mb-2">
+                    ${plan.price}
+                    <span className="text-lg text-gray-500">/{plan.period}</span>
                   </div>
-                  <p className="text-gray-600">{plan.description}</p>
                 </div>
-                
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                      <span className="text-gray-600">{feature}</span>
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
-                
-                <Link href={`/contact`
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-                    plan.popular
-                      ? 'bg-blue-600 hover: bg-blue-700 text-white'
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'}`}
-                >
+                <a href="/contact" className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  plan.popular 
+                    ? 'bg-blue-600 hover:bg-blue-700 text-white' 
+                    : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+                }`}>
                   Get Started
-              <h1 className=`text-5xl font-bold text-gray-900 mb-6`}>
-                AI Content Generator
-              </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-                Create high-quality content 10x faster with our AI-powered platform. Generate blogs, social media posts, marketing copy, and more with advanced natural language processing.
-              </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors inline-block text-lg">
-                  Start Free Trial
-                </Link>
-                <Link href="#pricing" className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors inline-block text-lg">
-                  View Pricing
-                </Link>
+                </a>
               </div>
-            </div>
+            ))}
           </div>
-        </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-blue-600">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Content Creation?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses already using our AI Content Generator to create better content faster.
-          </p>
-          <Link href="/contact" className="bg-white text-blue-600 hover: bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-            Start Your Free Trial
-          </Link>
         </div>
       </section>
-    </MainLayout>
-        {/* Features Section */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Powerful AI Content Features</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our AI content generator uses advanced machine learning to create engaging, high-quality content for any industry or use case.
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
-                <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <PenTool className="w-8 h-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold mb-4">Blog Post Generation</h3>
-                <p className="text-gray-600 mb-4">
-                  Create comprehensive blog posts with proper structure, SEO optimization, and engaging content that ranks well in search engines.
-                </p>
-                <ul className="text-sm text-gray-500 space-y-1">
-                  <li>• SEO-optimized content</li>
-                  <li>• Multiple writing styles</li>
-                  <li>• Keyword integration</li>
-                </ul>
-              </div>
 
-              <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
-                <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                  <Share2 className="w-8 h-8 text-green-600" />
-                </div>
-                <h3 className="text-xl font-semibold mb-4">Social Media Content</h3>
-                <p className="text-gray-600 mb-4">
-                  Generate engaging social media posts for all platforms with hashtags, emojis, and platform-specific formatting.
-                </p>
-                <ul className="text-sm text-gray-500 space-y-1">
-                  <li>• Platform-specific formatting</li>
-                  <li>• Trending hashtags</li>
-                  <li>• Engagement optimization</li>
-                </ul>
-              </div>
-
-              <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
-                <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                  <Target className="w-8 h-8 text-purple-600" />
-                </div>
-                <h3 className="text-xl font-semibold mb-4">Marketing Copy</h3>
-                <p className="text-gray-600 mb-4">
-                  Create compelling marketing copy for ads, emails, landing pages, and product descriptions that convert.
-                </p>
-                <ul className="text-sm text-gray-500 space-y-1">
-                  <li>• Conversion-focused copy</li>
-                  <li>• A/B testing variants</li>
-                  <li>• Brand voice consistency</li>
-                </ul>
-              </div>
-
-              <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
-                <div className="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
-                  <FileText className="w-8 h-8 text-yellow-600" />
-                </div>
-                <h3 className="text-xl font-semibold mb-4">Technical Documentation</h3>
-                <p className="text-gray-600 mb-4">
-                  Generate clear, comprehensive technical documentation, user guides, and API documentation.
-                </p>
-                <ul className="text-sm text-gray-500 space-y-1">
-                  <li>• Code examples</li>
-                  <li>• Step-by-step guides</li>
-                  <li>• API documentation</li>
-                </ul>
-              </div>
-
-              <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
-                <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                  <Mail className="w-8 h-8 text-red-600" />
-                </div>
-                <h3 className="text-xl font-semibold mb-4">Email Campaigns</h3>
-                <p className="text-gray-600 mb-4">
-                  Create personalized email campaigns with subject lines, body content, and call-to-action optimization.
-                </p>
-                <ul className="text-sm text-gray-500 space-y-1">
-                  <li>• Personalization</li>
-                  <li>• Subject line optimization</li>
-                  <li>• A/B testing</li>
-                </ul>
-              </div>
-
-              <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
-                <div className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
-                  <BarChart3 className="w-8 h-8 text-indigo-600" />
-                </div>
-                <h3 className="text-xl font-semibold mb-4">Content Analytics</h3>
-                <p className="text-gray-600 mb-4">
-                  Track content performance with detailed analytics and insights to improve your content strategy.
-                </p>
-                <ul className="text-sm text-gray-500 space-y-1">
-                  <li>• Performance metrics</li>
-                  <li>• Engagement tracking</li>
-                  <li>• ROI analysis</li>
-                </ul>
-              </div>
-            </div>
+      {/* Contact Section */}
+      <section className="py-20 bg-blue-900 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Content Strategy?</h2>
+          <p className="text-xl mb-8 text-blue-200">
+            Start creating high-quality content 10x faster with our AI-powered platform. 
+            Contact us today for a free consultation and demo.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105">
+              Get Free Demo
+            </a>
+            <a href="tel:+13024640950" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105">
+              Call: +1 302 464 0950
+            </a>
           </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section id="pricing" className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Choose the plan that fits your content creation needs. All plans include our core AI features.
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white rounded-lg p-8 shadow-lg border border-gray-200">
-                <h3 className="text-2xl font-bold mb-4">Starter</h3>
-                <div className="text-4xl font-bold text-blue-600 mb-6">$29<span className="text-lg text-gray-500">/month</span></div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span>10,000 words/month</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span>5 content templates</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span>Basic analytics</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span>Email support</span>
-                  </li>
-                </ul>
-                <Link href="/contact" className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-block text-center">
-                  Start Free Trial
-                </Link>
-              </div>
-
-              <div className="bg-white rounded-lg p-8 shadow-lg border-2 border-blue-600 relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
-                </div>
-                <h3 className="text-2xl font-bold mb-4">Professional</h3>
-                <div className="text-4xl font-bold text-blue-600 mb-6">$79<span className="text-lg text-gray-500">/month</span></div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span>50,000 words/month</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span>Unlimited templates</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span>Advanced analytics</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span>Priority support</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span>Team collaboration</span>
-                  </li>
-                </ul>
-                <Link href="/contact" className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-block text-center">
-                  Start Free Trial
-                </Link>
-              </div>
-
-              <div className="bg-white rounded-lg p-8 shadow-lg border border-gray-200">
-                <h3 className="text-2xl font-bold mb-4">Enterprise</h3>
-                <div className="text-4xl font-bold text-blue-600 mb-6">$199<span className="text-lg text-gray-500">/month</span></div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span>Unlimited words</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span>Custom templates</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span>Advanced analytics</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span>24/7 phone support</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span>API access</span>
-                  </li>
-                </ul>
-                <Link href="/contact" className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-block text-center">
-                  Contact Sales
-                </Link>
-              </div>
-            </div>
+          <div className="mt-8 text-blue-200">
+            <p>Email: <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:underline">kleber@ziontechgroup.com</a></p>
+            <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gray-900 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
-            <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Content Creation?</h2>
-            <p className="text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
-              Join thousands of content creators and marketers who are already using our AI to create better content faster.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors inline-block text-lg">
-                Start Free Trial
-              </Link>
-              <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors inline-block text-lg">
-                View All Services
-              </Link>
-            </div>
-            <div className="mt-8 text-sm text-gray-400">
-              <p>Questions? Call us at <span className="text-white">+1 302 464 0950</span> or email <span className="text-white">kleber@ziontechgroup.com</span></p>
-            </div>
-          </div>
-        </section>
-      </main>
+        </div>
+      </section>
     </>
-  )}
+  );
+}

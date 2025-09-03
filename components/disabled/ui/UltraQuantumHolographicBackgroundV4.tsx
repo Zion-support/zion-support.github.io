@@ -1,12 +1,10 @@
-import React from 'react';
+import React from "react";
+type Props = { children: React.ReactNode }
 
-type Props = { children: React.ReactNode };
 export default function UltraQuantumHolographicBackgroundV4({
-:components/ui/UltraQuantumHolographicBackgroundV4.tsx
-  children,
-}: Props) {  return <>{children}</>;
-
+:components/ui/UltraQuantumHolographicBackgroundV4.tsx,
+children,
+}: Props) {  return <>{children}</>
   children}: Props) {
-
-  return <>{children}</>
-:components/disabled/ui/UltraQuantumHolographicBackgroundV4.tsx}
+  return <>{children}</>;
+:components/disabled/ui/UltraQuantumHolographicBackgroundV4.tsx}';

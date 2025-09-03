@@ -1,14 +1,98 @@
-import { MarketplaceItem } from '@/src/data/marketplaceData'; const sampleTitles = ['AI-Powered Analytics Platform', 'Cybersecurity Assessment Tool', 'Cloud Migration Service', 'IoT Edge Computing Solution', 'Quantum Computing Hardware', 'Data Science Consulting', 'Blockchain Development Service', 'Machine Learning Platform', 'DevOps Automation Tool', 'Network Security Solution' ]; const sampleDescriptions = ['Advanced analytics platform powered by artificial intelligence for business intelligence and data insights.', 'Comprehensive cybersecurity assessment and monitoring solution for enterprise environments.', 'Professional cloud migration service including planning, execution, and optimization.', 'IoT platform with edge computing capabilities for real-time data processing.', 'State-of-the-art quantum computing components for research and development.', 'Expert data science consulting services for machine learning and analytics projects.', 'Blockchain development and implementation services for decentralized applications.', 'Machine learning platform with pre-trained models and custom training capabilities.', 'DevOps automation tools for continuous integration and deployment pipelines.', 'Network security solution with advanced threat detection and prevention.' ]; const sampleTags = [['AI', 'Analytics', 'Business Intelligence'], ['Security', 'Cybersecurity', 'Monitoring'], ['Cloud', 'Migration', 'Enterprise'], ['IoT', 'Edge Computing', 'Real-time'], ['Quantum', 'Research', 'Hardware'], ['Data Science', 'Machine Learning', 'Consulting'], ['Blockchain', 'Development', 'DApps'], ['Machine Learning', 'AI', 'Platform'], ['DevOps', 'Automation', 'CI/CD'], ['Network', 'Security', 'Threat Detection'] ]; const sampleImages = [ 'https:
+
+
+  'Quantum Computing Hardware',;
+  'Data Science Consulting',;
+  'Blockchain Development Service',;
+  'Machine Learning Platform',;
+  'DevOps Automation Tool',;
+  'Network Security Solution';
+];
+
+  'State-of-the-art quantum computing components for research and development.',;
+  'Expert data science consulting services for machine learning and analytics projects.',;
+  'Blockchain development and implementation services for decentralized applications.',;
+  'Machine learning platform with pre-trained models and custom training capabilities.',;
+  'DevOps automation tools for continuous integration and deployment pipelines.',;
+  'Network security solution with advanced threat detection and prevention.';
+];
+
+  ['Quantum',Research',Hardware'],;
+  ['Data Science',Machine Learning',Consulting'],;
+  ['Blockchain',Development',DApps'],;
+  ['Machine Learning',AI',Platform'],;
+  ['DevOps',Automation',CI/CD'],;
+  ['Network',Security',Threat Detection'];
+];
+'
+const sampleImages: unknown = [;''
+  'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',;''
+  'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;''
+  'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;''
+  'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;''
+  'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;'  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80';
+];
+'
+const categories: Array<any> = [''
+  'products',talent',equipment',services'
+];'
+''
+  'TechCorp Solutions','''
+  'SecureNet Professionals',;'''
+'''
 import { MarketplaceItem } from '@/src/data/marketplaceData'; const sampleTitles = ['AI-Powered Analytics Platform', 'Cybersecurity Assessment Tool', 'Cloud Migration Service', 'IoT Edge Computing Solution', 'Quantum Computing Hardware', 'Data Science Consulting', 'Blockchain Development Service', 'Machine Learning Platform', 'DevOps Automation Tool', 'Network Security Solution' ]; const sampleDescriptions = ['Advanced analytics platform powered by artificial intelligence for business intelligence and data insights.', 'Comprehensive cybersecurity assessment and monitoring solution for enterprise environments.', 'Professional cloud migration service including planning, execution, and optimization.', 'IoT platform with edge computing capabilities for real-time data processing.', 'State-of-the-art quantum computing components for research and development.', 'Expert data science consulting services for machine learning and analytics projects.', 'Blockchain development and implementation services for decentralized applications.', 'Machine learning platform with pre-trained models and custom training capabilities.', 'DevOps automation tools for continuous integration and deployment pipelines.', 'Network security solution with advanced threat detection and prevention.' ]; const sampleTags = [['AI', 'Analytics', 'Business Intelligence'], ['Security', 'Cybersecurity', 'Monitoring'], ['Cloud', 'Migration', 'Enterprise'], ['IoT', 'Edge Computing', 'Real-time'], ['Quantum', 'Research', 'Hardware'], ['Data Science', 'Machine Learning', 'Consulting'], ['Blockchain', 'Development', 'DApps'], ['Machine Learning', 'AI', 'Platform'], ['DevOps', 'Automation', 'CI/CD'], ['Network', 'Security', 'Threat Detection'] ]; const sampleImages = [ 'https:
 
-import { MarketplaceItem } from '@/src / data / marketplaceData'; const sampleTitles = [ 'AI - Powered Analytics Platform', 'Cybersecurity Assessment Tool', 'Cloud Migration Service', 'IoT Edge Computing Solution', 'Quantum Computing Hardware', 'Data Science Consulting', 'Blockchain Development Service', 'Machine Learning Platform', 'DevOps Automation Tool', 'Network Security Solution' ]; const sampleDescriptions = [ 'Advanced analytics platform powered by artificial intelligence for business intelligence and data insights.', 'Comprehensive cybersecurity assessment and monitoring solution for enterprise environments.', 'Professional cloud migration service including planning, execution, and optimization.', 'IoT platform with edge computing capabilities for real - time data processing.', 'State - of - the - art quantum computing components for research and development.', 'Expert data science consulting services for machine learning and analytics projects.', 'Blockchain development and implementation services for decentralized applications.', 'Machine learning platform with pre - trained models and custom training capabilities.', 'DevOps automation tools for continuous integration and deployment pipelines.', 'Network security solution with advanced threat detection and prevention.' ]; const sampleTags = [ ['AI', 'Analytics', 'Business Intelligence'], ['Security', 'Cybersecurity', 'Monitoring'], ['Cloud', 'Migration', 'Enterprise'], ['IoT', 'Edge Computing', 'Real - time'], ['Quantum', 'Research', 'Hardware'], ['Data Science', 'Machine Learning', 'Consulting'], ['Blockchain', 'Development', 'DApps'], ['Machine Learning', 'AI', 'Platform'], ['DevOps', 'Automation', 'CI / CD'], ['Network', 'Security', 'Threat Detection'] ]; const sampleImages = [ 'https: ''',"});,"})
-;,"});,"})
-import { MarketplaceItem } from '@/src/data/marketplaceData'; const sampleTitles = ['AI-Powered Analytics Platform', 'Cybersecurity Assessment Tool', 'Cloud Migration Service', 'IoT Edge Computing Solution', 'Quantum Computing Hardware', 'Data Science Consulting', 'Blockchain Development Service', 'Machine Learning Platform', 'DevOps Automation Tool', 'Network Security Solution' ]; const sampleDescriptions = ['Advanced analytics platform powered by artificial intelligence for business intelligence and data insights.', 'Comprehensive cybersecurity assessment and monitoring solution for enterprise environments.', 'Professional cloud migration service including planning, execution, and optimization.', 'IoT platform with edge computing capabilities for real-time data processing.', 'State-of-the-art quantum computing components for research and development.', 'Expert data science consulting services for machine learning and analytics projects.', 'Blockchain development and implementation services for decentralized applications.', 'Machine learning platform with pre-trained models and custom training capabilities.', 'DevOps automation tools for continuous integration and deployment pipelines.', 'Network security solution with advanced threat detection and prevention.' ]; const sampleTags = [['AI', 'Analytics', 'Business Intelligence'], ['Security', 'Cybersecurity', 'Monitoring'], ['Cloud', 'Migration', 'Enterprise'], ['IoT', 'Edge Computing', 'Real-time'], ['Quantum', 'Research', 'Hardware'], ['Data Science', 'Machine Learning', 'Consulting'], ['Blockchain', 'Development', 'DApps'], ['Machine Learning', 'AI', 'Platform'], ['DevOps', 'Automation', 'CI/CD'], ['Network', 'Security', 'Threat Detection'] ]; const sampleImages = [ 'https:;,"});,"})
-import { MarketplaceItem } from '@/src / data / marketplaceData' const sampleTitles = [ 'AI - Powered Analytics Platform', 'Cybersecurity Assessment Tool', 'Cloud Migration Service', 'IoT Edge Computing Solution', 'Quantum Computing Hardware', 'Data Science Consulting', 'Blockchain Development Service', 'Machine Learning Platform', 'DevOps Automation Tool', 'Network Security Solution' ] const sampleDescriptions = [ 'Advanced analytics platform powered by artificial intelligence for business intelligence and data insights.', 'Comprehensive cybersecurity assessment and monitoring solution for enterprise environments.', 'Professional cloud migration service including planning, execution, and optimization.', 'IoT platform with edge computing capabilities for real - time data processing.', 'State - of - the - art quantum computing components for research and development.', 'Expert data science consulting services for machine learning and analytics projects.', 'Blockchain development and implementation services for decentralized applications.', 'Machine learning platform with pre - trained models and custom training capabilities.', 'DevOps automation tools for continuous integration and deployment pipelines.', 'Network security solution with advanced threat detection and prevention.' ] const sampleTags = [ ['AI', 'Analytics', 'Business Intelligence'], ['Security', 'Cybersecurity', 'Monitoring'], ['Cloud', 'Migration', 'Enterprise'], ['IoT', 'Edge Computing', 'Real - time'], ['Quantum', 'Research', 'Hardware'], ['Data Science', 'Machine Learning', 'Consulting'], ['Blockchain', 'Development', 'DApps'], ['Machine Learning', 'AI', 'Platform'], ['DevOps', 'Automation', 'CI / CD'], ['Network', 'Security', 'Threat Detection'] ] const sampleImages = [ 'https:''';
-import { MarketplaceItem } from '@/src / data / marketplaceData' const sampleTitles = [ 'AI - Powered Analytics Platform', 'Cybersecurity Assessment Tool', 'Cloud Migration Service', 'IoT Edge Computing Solution', 'Quantum Computing Hardware', 'Data Science Consulting', 'Blockchain Development Service', 'Machine Learning Platform', 'DevOps Automation Tool', 'Network Security Solution' ] const sampleDescriptions = [ 'Advanced analytics platform powered by artificial intelligence for business intelligence and data insights.', 'Comprehensive cybersecurity assessment and monitoring solution for enterprise environments.', 'Professional cloud migration service including planning, execution, and optimization.', 'IoT platform with edge computing capabilities for real - time data processing.', 'State - of - the - art quantum computing components for research and development.', 'Expert data science consulting services for machine learning and analytics projects.', 'Blockchain development and implementation services for decentralized applications.', 'Machine learning platform with pre - trained models and custom training capabilities.', 'DevOps automation tools for continuous integration and deployment pipelines.', 'Network security solution with advanced threat detection and prevention.' ] const sampleTags = [ ['AI', 'Analytics', 'Business Intelligence'], ['Security', 'Cybersecurity', 'Monitoring'], ['Cloud', 'Migration', 'Enterprise'], ['IoT', 'Edge Computing', 'Real - time'], ['Quantum', 'Research', 'Hardware'], ['Data Science', 'Machine Learning', 'Consulting'], ['Blockchain', 'Development', 'DApps'], ['Machine Learning', 'AI', 'Platform'], ['DevOps', 'Automation', 'CI / CD'], ['Network', 'Security', 'Threat Detection'] ] const sampleImages = [ 'https:'';
-import {MarketplaceItem } from '@/src / data / marketplaceData' const sampleTitles = ['AI - Powered Analytics Platform', 'Cybersecurity Assessment Tool', 'Cloud Migration Service', 'IoT Edge Computing Solution', 'Quantum Computing Hardware', 'Data Science Consulting', 'Blockchain Development Service', 'Machine Learning Platform', 'DevOps Automation Tool', 'Network Security Solution' ] const sampleDescriptions = ['Advanced analytics platform powered by artificial intelligence for business intelligence and data insights.', 'Comprehensive cybersecurity assessment and monitoring solution for enterprise environments.', 'Professional cloud migration service including planning, execution, and optimization.', 'IoT platform with edge computing capabilities for real - time data processing.', 'State - of - the - art quantum computing components for research and development.', 'Expert data science consulting services for machine learning and analytics projects.', 'Blockchain development and implementation services for decentralized applications.', 'Machine learning platform with pre - trained models and custom training capabilities.', 'DevOps automation tools for continuous integration and deployment pipelines.', 'Network security solution with advanced threat detection and prevention.' ] const sampleTags = [['AI', 'Analytics', 'Business Intelligence'], ['Security', 'Cybersecurity', 'Monitoring'], ['Cloud', 'Migration', 'Enterprise'], ['IoT', 'Edge Computing', 'Real - time'], ['Quantum', 'Research', 'Hardware'], ['Data Science', 'Machine Learning', 'Consulting'], ['Blockchain', 'Development', 'DApps'], ['Machine Learning', 'AI', 'Platform'], ['DevOps', 'Automation', 'CI / CD'], ['Network', 'Security', 'Threat Detection'] ] const sampleImages = [ 'https: ''';
-import { MarketplaceItem } from &apos;@/src / data / marketplaceData&apos;&apos;' const sampleTitles = [ &apos;AI - Powered Analytics Platform&apos, &apos;Cybersecurity Assessment Tool&apos, &apos;Cloud Migration Service&apos, &apos;IoT Edge Computing Solution&apos, &apos;Quantum Computing Hardware&apos, &apos;Data Science Consulting&apos, &apos;Blockchain Development Service&apos, &apos;Machine Learning Platform&apos, &apos;DevOps Automation Tool&apos, &apos;Network Security Solution&apos]&apos; const sampleDescriptions = [ &apos;Advanced analytics platform powered by artificial intelligence for business intelligence and data insights.&apos, &apos;Comprehensive cybersecurity assessment and monitoring solution for enterprise environments.&apos, &apos;Professional cloud migration service including planning, execution, and optimization.&apos, &apos;IoT platform with edge computing capabilities for real - time data processing.&apos, &apos;State - of - the - art quantum computing components for research and development.&apos, &apos;Expert data science consulting services for machine learning and analytics projects.&apos, &apos;Blockchain development and implementation services for decentralized applications.&apos, &apos;Machine learning platform with pre - trained models and custom training capabilities.&apos, &apos;DevOps automation tools for continuous integration and deployment pipelines.&apos, &apos;Network security solution with advanced threat detection and prevention.&apos]&apos; const;const sampleTags = [ [&apos;AI&apos, &apos;Analytics&apos, &apos;Business Intelligence&apos], [&apos;Security&apos, &apos;Cybersecurity&apos, &apos;Monitoring&apos], [&apos;Cloud&apos, &apos;Migration&apos, &apos;Enterprise&apos], [&apos;IoT&apos, &apos;Edge Computing&apos, &apos;Real - time&apos], [&apos;Quantum&apos, &apos;Research&apos, &apos;Hardware&apos], [&apos;Data Science&apos, &apos;Machine Learning&apos, &apos;Consulting&apos], [&apos;Blockchain&apos, &apos;Development&apos, &apos;DApps&apos], [&apos;Machine Learning&apos, &apos;AI&apos, &apos;Platform&apos], [&apos;DevOps&apos, &apos;Automation&apos, &apos;CI / CD&apos], [&apos;Network&apos, &apos;Security&apos, &apos;Threat Detection&apos] ] ;&apos;const sampleImages = [ &apos;https:&apos;&apos;&apos;'
-import { MarketplaceItem } from '@/src / data / marketplaceData' const sampleTitles = [ 'AI - Powered Analytics Platform', 'Cybersecurity Assessment Tool', 'Cloud Migration Service', 'IoT Edge Computing Solution', 'Quantum Computing Hardware', 'Data Science Consulting', 'Blockchain Development Service', 'Machine Learning Platform', 'DevOps Automation Tool', 'Network Security Solution' ] const sampleDescriptions = [ 'Advanced analytics platform powered by artificial intelligence for business intelligence and data insights.', 'Comprehensive cybersecurity assessment and monitoring solution for enterprise environments.', 'Professional cloud migration service including planning, execution, and optimization.', 'IoT platform with edge computing capabilities for real - time data processing.', 'State - of - the - art quantum computing components for research and development.', 'Expert data science consulting services for machine learning and analytics projects.', 'Blockchain development and implementation services for decentralized applications.', 'Machine learning platform with pre - trained models and custom training capabilities.', 'DevOps automation tools for continuous integration and deployment pipelines.', 'Network security solution with advanced threat detection and prevention.' ] const sampleTags = [ ['AI', 'Analytics', 'Business Intelligence'], ['Security', 'Cybersecurity', 'Monitoring'], ['Cloud', 'Migration', 'Enterprise'], ['IoT', 'Edge Computing', 'Real - time'], ['Quantum', 'Research', 'Hardware'], ['Data Science', 'Machine Learning', 'Consulting'], ['Blockchain', 'Development', 'DApps'], ['Machine Learning', 'AI', 'Platform'], ['DevOps', 'Automation', 'CI / CD'], ['Network', 'Security', 'Threat Detection'] ] const sampleImages = [ 'https: ''';
-""
-import { MarketplaceItem }  from '@/src / data / marketplaceData';const sampleTitles = [ 'AI - Powered Analytics Platform,Cybersecurity Assessment Tool,Cloud Migration Service,IoT Edge Computing Solution,Quantum Computing Hardware,Data Science Consulting,Blockchain Development Service,Machine Learning Platform,DevOps Automation Tool,Network Security Solution' ] const sampleDescriptions = [ 'Advanced analytics platform powered by artificial intelligence for business intelligence and data insights.,Comprehensive cybersecurity assessment and monitoring solution for enterprise environments.,Professional cloud migration service including planning, execution, and optimization.,IoT platform with edge computing capabilities for real - time data processing.,State - of - the - art quantum computing components for research and development.,Expert data science consulting services for machine learning and analytics projects.,Blockchain development and implementation services for decentralized applications.,Machine learning platform with pre - trained models and custom training capabilities.,DevOps automation tools for continuous integration and deployment pipelines.,Network security solution with advanced threat detection and prevention.' ] const sampleTags = [ ['AI,Analytics,Business Intelligence'], ['Security,Cybersecurity,Monitoring'], ['Cloud,Migration,Enterprise'], ['IoT,Edge Computing,Real - time'], ['Quantum,Research,Hardware'], ['Data Science,Machine Learning,Consulting'], ['Blockchain,Development,DApps'], ['Machine Learning,AI,Platform'], ['DevOps,Automation,CI / CD'], ['Network,Security,Threat Detection'] ] const sampleImages = [ 'https: ''
-"
+
+  '$500',$1,200',$2,500',$5,000',$8,500',$15,000',$25,000',$50,000';
+];
+
+  'San Francisco, CA',New York, NY',Austin, TX',Seattle, WA',Boston, MA',Remote';
+];
+
+  'QuantumTech Labs',;
+  'CloudMasters Inc',;
+  'IoT Solutions Pro',;
+  'DataGenius Consulting',;
+  'Innovation Labs',;
+  'FutureTech Systems';
+  'TechCorp Solutions','
+  'SecureNet Professionals',;'
+  'QuantumTech Labs',;'
+  'CloudMasters Inc',;'
+  'IoT Solutions Pro',;'
+  'DataGenius Consulting',;'
+  'Innovation Labs',;'  'FutureTech Systems';
+];
+
+export function generateRandomListing(): MarketplaceItem {
+
+  return {
+
+    id: `listing-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+    title: sampleTitles[randomIndex] || 'Default Title',
+    category: category || 'products',
+    description: sampleDescriptions[randomIndex] || 'Default description',
+    price: price || '$1,000',
+    rating: 4.0 + Math.random() * 1.0,
+    reviews: Math.floor(Math.random() * 200) + 10,
+    views: Math.floor(Math.random() * 5000) + 100,
+    likes: Math.floor(Math.random() * 300) + 20,
+    image: image || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib = rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
+    tags: sampleTags[randomIndex] || ['Technology',Solution'],
+    featured: Math.random() > 0.7,
+    seller: {
+
+      name: sellerName || 'Default Seller',
+      rating: 4.0 + Math.random() * 1.0,;
+      verified: Math.random() > 0.3},;
+    location: location || 'Remote',;
+    availability: Math.random() > 0.8 ? 'limited' : 'available',;'`
+    deliveryTime: category === 'talent' ? 'Immediate' : `${Math.floor(Math.random() * 8) + 2}-${Math.floor(Math.random() * 4) + 4} weeks`,;'`
+    warranty: category === 'talent' ? 'N/A' : `${Math.floor(Math.random() * 3) + 1} year${Math.floor(Math.random() * 3) + 1 > 1 ? 's' : ''}`};
+export function generateRandomListings(count: number): MarketplaceItem[] {
+
+  const listings: MarketplaceItem[] = [];
+  for(let i = 0; i < count; i++) {
+
+    listings.push(generateRandomListing());
+
+  return listings}}}'`

@@ -1,5 +1,3 @@
-'';,"});,"})
-';
-&apos;'
-import React from 'react';
-';'"
+"";,"});,"})"
+"
+&apos,"""

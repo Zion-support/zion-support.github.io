@@ -1,0 +1,49 @@
+{
+  "codeAnalysisEnabled": true,
+  "patternRecognitionEnabled": true,
+  "issuePredictionEnabled": true,
+  "performanceMonitoringEnabled": true,
+  "trendAnalysisEnabled": true,
+  "analysisInterval": 600000,
+  "deepAnalysisInterval": 3600000,
+  "maxFileSize": 1048576,
+  "supportedExtensions": [".js", ".jsx", ".ts", ".tsx", ".cjs", ".mjs"],
+  "ignorePatterns": ["node_modules", ".git", "dist", "build", "out", "logs"],
+  "complexityThresholds": {
+    "low": 5,
+    "medium": 10,
+    "high": 15
+  },
+  "patternDetection": {
+    "antiPatterns": {
+      "console_log": true,
+      "var_declaration": true,
+      "anonymous_functions": true,
+      "eval_usage": true
+    },
+    "goodPatterns": {
+      "arrow_functions": true,
+      "async_await": true,
+      "react_hooks": true,
+      "typescript_types": true
+    }
+  },
+  "issueDetection": {
+    "memoryLeaks": true,
+    "unhandledPromises": true,
+    "largeFunctions": true,
+    "typescriptIssues": true
+  },
+  "performanceMonitoring": {
+    "bundleSize": true,
+    "loadTime": true,
+    "memoryUsage": true,
+    "cpuUsage": true
+  },
+  "reporting": {
+    "generateReports": true,
+    "reportInterval": 3600000,
+    "includeMetrics": true,
+    "includeRecommendations": true
+  }
+}

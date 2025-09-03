@@ -1,18 +1,19 @@
-  it(displays expected content', () => {
-    render(<ScrollToTop />)
-import { render, screen } from &apos;@testing-library/react';
-import ScrollToTop from &apos;./ScrollToTop';
-
+  it(displays expected content", () => {
+    render(<ScrollToTop  />)"
+import { render, screen } from &apos;@testing - library/react",
+import ScrollToTop from &apos;./ScrollToTop
 describe(&apos;ScrollToTop&apos, () => {
   it(&apos;renders without crashing&apos, () => {
-    render(&apos}}&apos;<ScrollToTop />)
+    render()
+}
     expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})
+}
   it(&apos;displays expected content&apos, () => {
-    render(&apos}<ScrollToTop />)
-    // Add specific test assertions based on component content})})
-    render(<ScrollToTop / >)
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
-})
-";
-}}
+    render()
+}
+    // comment
+    render(<ScrollToTop / >)"
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
+})"
 "
+}}""

@@ -1,13 +1,17 @@
-import React from 'react'
+import React from 'react';
 import { 
   Users, 
   Award, 
+  Star, 
   Linkedin, 
   Twitter, 
   Mail, 
+  Building2,
   Lightbulb,
-  Rocket,;
-  Shield;
+  Rocket,
+  Shield,
+  Brain,
+  Zap
 } from 'lucide-react';
 
 export default function TeamPage() {
@@ -121,10 +125,10 @@ export default function TeamPage() {
                     </a>
                     <a href={member.twitter} target="_blank" rel="noopener noreferrer" 
                        className="text-zion-slate-light hover:text-zion-cyan transition-colors">
-                      <Twitter className={`w-5 h-5` />
+                      <Twitter className="w-5 h-5" />
                     </a>
                     <a href={`mailto:${member.email}`} 
-                       className=`text-zion-slate-light hover:text-zion-cyan transition-colors`}>
+                       className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                       <Mail className="w-5 h-5" />
                     </a>
                   </div>
@@ -229,7 +233,7 @@ export default function TeamPage() {
       </section>
 
       {/* Join Our Team Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Join Our Growing Team
@@ -249,4 +253,5 @@ export default function TeamPage() {
         </div>
       </section>
     </div>
-  )}"
+  );
+}

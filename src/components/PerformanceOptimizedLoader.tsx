@@ -1,3 +1,7 @@
+import React, { memo } from 'react';
+export const PerformanceOptimizedLoader = memo < LoadingSpinnerProps> ( ({
+import { motion  } from 'framer-motion';
 
-;,"});,})
->>>>>>> pr-10728,});,"})"
+export default function Page() {
+;  const textSizes = {
+'

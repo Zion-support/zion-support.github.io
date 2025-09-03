@@ -1,36 +1,47 @@
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  poweredByHeader: false,
+  swcMinify: true,
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
-  typescript: {
-    ignoreBuildErrors: true,
-    ignoreDuringBuilds: true
-  },
   experimental: {
-    optimizeCss: true,
     scrollRestoration: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
   },
   images: {
-    domains: ['images.unsplash.com', 'via.placeholder.com'],
+    domains: ['ziontechgroup.com', 'images.unsplash.com'],
     formats: ['image/webp', 'image/avif'],
-  },
-  compress: true,
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
   },
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
       config.resolve.alias = {
         ...config.resolve.alias,
-        '@': new URL('./src', import.meta.url).pathname,
-      };
+        "@": path.resolve(__dirname, "./src"),
+      }
     }
-    return config;
+    
+    // Optimize bundle size
+    config.optimization.splitChunks = {
+      chunks: 'all',
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
+    }
+    
+    return config
   },
   async headers() {
     return [
@@ -51,8 +62,22 @@ const nextConfig = {
           },
         ],
       },
-    ];
+    ]
   },
-};
+  async redirects() {
+    return [
+      {
+        source: '/services',
+        destination: '/services-overview',
+        permanent: true,
+      },
+      {
+        source: '/solutions',
+        destination: '/services-overview',
+        permanent: true,
+      },
+    ]
+  },
+}
 
-export default nextConfig;
+export default nextConfig

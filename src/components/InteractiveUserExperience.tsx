@@ -1,3 +1,3 @@
+import {  import { Badge } from './ui / badge';
 
-;,"});,})
->>>>>>> pr-10728,});,"})"
+;,"});,})";

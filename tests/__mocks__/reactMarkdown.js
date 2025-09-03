@@ -1,2 +1,2 @@
-const React = require('react');
-module.exports = ({ children }) => React.createElement('div', {}, children);
+const React = require("react");
+module.exports = ({ children }) => React.createElement("div", {}, children)

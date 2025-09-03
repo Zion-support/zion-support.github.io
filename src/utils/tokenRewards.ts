@@ -1,17 +1,57 @@
-import React from 'react';
-import {SEO } from '@/components/SEO';
 
-;,"});,"})
-export default function tokenRewards() {return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-      <SEO title="tokenRewards - Zion Tech Group" description="Professional tokenRewards services by Zion Tech Group" />
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold text-white mb-8">tokenRewards</h1>
-        <p className="text-gray-300 text-lg">
-          Professional tokenRewards services to help your business grow.
-        </p>
-      </div>
-    </div>
-  );
+export async function rewardOnboarding(...args: any[]): any {
+
+export async function rewardOnboarding(
+  userId: string,
+  action: string,
+  amount: number
+): Promise<any> {
+  await apiClient('/functions/v1/token-manager/earn', {
+    method: 'POST',
+    body: JSON.stringify({ userId, action, amount })
+  });
 }
-"
+
+export async function earnTokensForPurchase(
+  userId: string,
+  purchaseAmount: number,
+  purchaseType: string
+): Promise<any> {
+  await apiClient('/functions/v1/token-manager/earn', {
+    method: 'POST',
+    body: JSON.stringify({
+      userId,
+      action: 'purchase',
+      amount: purchaseAmount,
+      purchaseType
+    })
+  });
+}
+
+export async function earnTokensForReferral(
+  userId: string,
+  referredUserId: string
+): Promise<any> {
+  await apiClient('/functions/v1/token-manager/earn', {
+    method: 'POST',
+    body: JSON.stringify({
+      userId,
+      action: 'referral',
+      referredUserId,
+      amount: 100
+    })
+  });
+}
+
+export async function earnTokensForAction(
+  userId: string,
+  action: string,
+  amount: number
+): Promise<any> {
+  await apiClient('/functions/v1/token-manager/earn', {
+    method: 'POST',
+    body: JSON.stringify({ userId, action, amount })
+  });
+}
+
+export default earnTokensForAction;
