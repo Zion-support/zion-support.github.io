@@ -21,7 +21,7 @@ const PrivacyPolicy: NextPage = () => {;
             <p className="text-sm text-gray-300 mt-4">Last updated: {lastUpdated}</p>;
           </div>;
         </section>;
-
+;
         {/* Content */}
         <section className="py-16">;
           <div className="container mx-auto px-4 max-w-4xl">;
@@ -39,7 +39,7 @@ const PrivacyPolicy: NextPage = () => {;
                   https://ziontechgroup.com or use our services.;
                 </p>;
               </div>;
-
+;
               {/* Information We Collect */}
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">;
@@ -56,7 +56,7 @@ const PrivacyPolicy: NextPage = () => {;
                   <li>Communication preferences</li>;
                   <li>Any other information you voluntarily provide to us</li>;
                 </ul>;
-
+;
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Automatically Collected Information</h3>;
                 <ul className="list-disc list-inside text-gray-700 space-y-2">;
                   <li>IP address and device information</li>;
@@ -66,7 +66,7 @@ const PrivacyPolicy: NextPage = () => {;
                   <li>Cookies and similar tracking technologies</li>;
                 </ul>;
               </div>;
-
+;
               {/* How We Use Information */}
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">;
@@ -84,7 +84,7 @@ const PrivacyPolicy: NextPage = () => {;
                   <li>Protect against fraud and abuse</li>;
                 </ul>;
               </div>;
-
+;
               {/* Information Sharing */}
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">;
@@ -103,7 +103,7 @@ const PrivacyPolicy: NextPage = () => {;
                   <li>In connection with a business transfer or acquisition</li>;
                 </ul>;
               </div>;
-
+;
               {/* Data Security */}
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">;
@@ -116,7 +116,7 @@ const PrivacyPolicy: NextPage = () => {;
                   of transmission over the internet or electronic storage is 100% secure.;
                 </p>;
               </div>;
-
+;
               {/* Your Rights */}
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Your Rights</h2>;
@@ -131,7 +131,7 @@ const PrivacyPolicy: NextPage = () => {;
                   <li>Withdrawal of consent</li>;
                 </ul>;
               </div>;
-
+;
               {/* Cookies */}
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Cookies and Tracking</h2>;
@@ -141,7 +141,7 @@ const PrivacyPolicy: NextPage = () => {;
                   <a href="/cookies" className="text-blue-600 hover:text-blue-700 underline">Cookie Policy</a>.;
                 </p>;
               </div>;
-
+;
               {/* Contact Information */}
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Us</h2>;
@@ -154,7 +154,7 @@ const PrivacyPolicy: NextPage = () => {;
                   <p className="text-gray-700"> </strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>;
                 </div>;
               </div>;
-
+;
               {/* Changes to Policy */}
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Changes to This Policy</h2>;
@@ -169,6 +169,6 @@ const PrivacyPolicy: NextPage = () => {;
         </section>;
       </div>;
     </MainLayout>;
-  );,
+  );,;,
 }
 export default PrivacyPolicy

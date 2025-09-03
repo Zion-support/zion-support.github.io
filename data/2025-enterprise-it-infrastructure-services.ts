@@ -47,7 +47,7 @@ const contact = {;
   ;
   ;
   ;
-  website: "https://ziontechgroup.com";,
+  website: "https://ziontechgroup.com";,;,
 }
 export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureService[] = [;
   // HYBRID CLOUD ORCHESTRATION;
@@ -98,7 +98,7 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     innovationLevel: "Breakthrough",;
     patentStatus: "Patent Pending",;
     aiCapabilities["AI Cost Optimization", "Automated Scaling", "Performance Monitoring", "Resource Allocation"],;
-    marketDisruption: "Revolutionizes multi-cloud management with AI";,
+    marketDisruption: "Revolutionizes multi-cloud management with AI";,;,
 },;
   // EDGE COMPUTING INFRASTRUCTURE;
   {;
@@ -148,7 +148,7 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     innovationLevel: "Revolutionary",;
     patentStatus: "Patent Pending",;
     aiCapabilities["Edge AI Processing", "Real-time Analytics", "IoT Integration", "Automatic Scaling"],;
-    marketDisruption: "Revolutionizes computing with distributed edge processing";,
+    marketDisruption: "Revolutionizes computing with distributed edge processing";,;,
 },;
   // QUANTUM-SAFE CYBERSECURITY;
   {;
@@ -198,7 +198,7 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     innovationLevel: "Revolutionary",;
     patentStatus: "Patent Pending",;
     aiCapabilities["Quantum-resistant Encryption", "Advanced Threat Detection", "Zero-trust Security", "Future-proof Protection"],;
-    marketDisruption: "Revolutionizes cybersecurity with quantum-safe protection";,
+    marketDisruption: "Revolutionizes cybersecurity with quantum-safe protection";,;,
 },;
   // AUTONOMOUS DATA CENTER MANAGEMENT;
   {;
@@ -248,7 +248,7 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     innovationLevel: "Revolutionary",;
     patentStatus: "Patent Pending",;
     aiCapabilities["Autonomous Operation", "Predictive Maintenance", "AI Optimization", "Zero Human Intervention"],;
-    marketDisruption: "Eliminates need for data center staff with autonomous AI";,
+    marketDisruption: "Eliminates need for data center staff with autonomous AI";,;,
 },;
   // 6G NETWORK INFRASTRUCTURE;
   {;
@@ -298,7 +298,7 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     innovationLevel: "Revolutionary",;
     patentStatus: "Patent Pending",;
     aiCapabilities["AI Network Optimization", "Holographic Communications", "Brain-Computer Interfaces", "Future Applications"],;
-    marketDisruption: "Revolutionizes telecommunications with 6G technology";,
+    marketDisruption: "Revolutionizes telecommunications with 6G technology";,;,
 },;
   // QUANTUM INTERNET INFRASTRUCTURE;
   {;
@@ -348,7 +348,7 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     innovationLevel: "Revolutionary",;
     patentStatus: "Patent Pending",;
     aiCapabilities["Quantum Communications", "Unbreakable Encryption", "Instant Global Communication", "Future Technology"],;
-    marketDisruption: "Revolutionizes internet with quantum technology";,
+    marketDisruption: "Revolutionizes internet with quantum technology";,;,
 },;
   // AUTONOMOUS SOFTWARE DEVELOPMENT;
   {;
@@ -398,7 +398,7 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     innovationLevel: "Breakthrough",;
     patentStatus: "Trade Secret",;
     aiCapabilities["AI Code Generation", "Automated Testing", "Bug Detection", "Code Optimization"],;
-    marketDisruption: "Revolutionizes software development with autonomous AI";,
+    marketDisruption: "Revolutionizes software development with autonomous AI";,;,
 },;
   // INTELLIGENT IT SERVICE DESK;
   {;
@@ -448,7 +448,7 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     innovationLevel: "Breakthrough",;
     patentStatus: "Trade Secret",;
     aiCapabilities["AI Issue Resolution", "Predictive Maintenance", "Instant Support", "Knowledge Management"],;
-    marketDisruption: "Revolutionizes IT support with AI automation";,
+    marketDisruption: "Revolutionizes IT support with AI automation";,;,
 },;
   // AUTONOMOUS NETWORK MANAGEMENT;
   {;

@@ -92,7 +92,7 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [;
     contact: {;
       phone: "+1-800-ZION-TECH",;
       email: "ai-quantum@ziontechgroup.com",;
-      address: "Zion Tech Group, Innovation District, Tech City",;,
+      address: "Zion Tech Group, Innovation District, Tech City",;,;,
 },;
     trialDays: 30,;
     setupTime: "2-4 weeks",;
@@ -120,6 +120,6 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [;
     marketPosition: "Market Leader",;
     technology: ["AI", "Quantum Computing", "Machine Learning"],;
     growthRate: "45% YoY",;
-    variant: "premium",;,
+    variant: "premium",;,;,
 },;
 ]

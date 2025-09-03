@@ -2,4 +2,4 @@
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/ComprehensiveServicesOverview2025.tsx;
 :src.pages.disabled/ComprehensiveServicesOverview2025.tsx;
 import: React, { useState, useEffect } from "react";
-"const ComprehensiveServicesOverview2025: React.FC = () => { const [selectedCategory, setSelectedCategory] = useState < string> ("all")  const [searchTerm, setSearchTerm] = useState < string> ("")  const [viewMode, setViewMode] = useState<"grid" | "list"> ("grid")  "
+"const ComprehensiveServicesOverview2025: React.FC = () => { const [selectedCategory, setSelectedCategory] = useState < string> ("all")  const [searchTerm, setSearchTerm] = useState < string> ("")  const [viewMode, setViewMode] = useState<"grid" | "list"> ("grid")  "}

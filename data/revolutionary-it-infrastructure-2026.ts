@@ -44,7 +44,7 @@ const contact = {;
   ;
   ;
   ;
-  website: "https://ziontechgroup.com";,
+  website: "https://ziontechgroup.com";,;,
 }
 export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure2026[] = [;
   {;
@@ -91,7 +91,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     launchDate: "2025-08-15",;
     customers: 23,;
     rating: 4.9,;
-    reviews: 67;,
+    reviews: 67;,;,
 },;
   {;
     id: "edge-computing-orchestration-platform",;
@@ -137,7 +137,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     launchDate: "2025-05-20",;
     customers: 34,;
     rating: 4.8,;
-    reviews: 89;,
+    reviews: 89;,;,
 },;
   {;
     id: "ai-powered-devops-automation",;
@@ -183,7 +183,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     launchDate: "2025-03-10",;
     customers: 67,;
     rating: 4.7,;
-    reviews: 156;,
+    reviews: 156;,;,
 },;
   {;
     id: "blockchain-infrastructure-platform",;
@@ -229,7 +229,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     launchDate: "2025-06-25",;
     customers: 45,;
     rating: 4.6,;
-    reviews: 123;,
+    reviews: 123;,;,
 },;
   {;
     id: "quantum-cloud-hybrid-platform",;

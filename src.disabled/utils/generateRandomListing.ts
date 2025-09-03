@@ -95,4 +95,4 @@ import { MarketplaceItem } from,  @/src/data/marketplaceData" const sampleTitles
   "Machine Learning,AI,Platform"], [;
   "DevOps,Automation,CI/CD"], [;
   "Network,Security,Threat Detection"] ] const sampleImages = [;
-  "https: ""
+  "https: 

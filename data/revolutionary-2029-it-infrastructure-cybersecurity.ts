@@ -92,7 +92,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails:;
@@ -101,7 +101,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       customers: 38,;
       rating: 4.9,;
       reviews: 22,;
-      isPopular: true,;,
+      isPopular: true,;,;,
 },;
     // Cloud FinOps Optimizer;
     {;
@@ -151,7 +151,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails: "AI models, cost analytics, optimization engine",;
@@ -159,7 +159,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       customers: 67,;
       rating: 4.7,;
       reviews: 35,;
-      isPopular: true,;,
+      isPopular: true,;,;,
 },;
     // AI-Powered Compliance Assistant;
     {;
@@ -209,7 +209,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails: "AI models, compliance engine, risk assessment",;
@@ -217,7 +217,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       customers: 42,;
       rating: 4.8,;
       reviews: 24,;
-      isNew: true,;,
+      isNew: true,;,;,
 },;
     // Advanced Threat Intelligence Platform;
     {;
@@ -275,14 +275,14 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails: "AI models, threat feeds, intelligence engine",;
       launchDate: "2025-01-12",;
       customers: 28,;
       rating: 4.9,;
-      reviews: 18,;,
+      reviews: 18,;,;,
 },;
     // Quantum-Ready Infrastructure;
     {;
@@ -341,7 +341,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails:;
@@ -350,7 +350,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       customers: 15,;
       rating: 4.8,;
       reviews: 12,;
-      isNew: true,;,
+      isNew: true,;,;,
 },;
     // Edge Computing Security;
     {;
@@ -400,7 +400,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails:;
@@ -408,7 +408,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       launchDate: "2025-01-18",;
       customers: 31,;
       rating: 4.7,;
-      reviews: 19,;,
+      reviews: 19,;,;,
 },;
     // AI-Powered Network Monitoring;
     {;
@@ -462,14 +462,14 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails: "AI models, network agents, monitoring platform",;
       launchDate: "2025-01-20",;
       customers: 53,;
       rating: 4.6,;
-      reviews: 28,;,
+      reviews: 28,;,;,
 },;
     // DevSecOps Automation Platform;
     {;
@@ -515,7 +515,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails:;
@@ -524,7 +524,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       customers: 39,;
       rating: 4.8,;
       reviews: 21,;
-      isPopular: true,;,
+      isPopular: true,;,;,
 },;
     // Data Privacy & Governance Platform;
     {;
@@ -570,14 +570,14 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails: "AI models, privacy engine, governance platform",;
       launchDate: "2025-01-25",;
       customers: 26,;
       rating: 4.7,;
-      reviews: 16,;,
+      reviews: 16,;,;,
 },;
     // Hybrid Cloud Management;
     {;
@@ -627,7 +627,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails:;
@@ -636,7 +636,7 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
       customers: 34,;
       rating: 4.8,;
       reviews: 20,;
-      isNew: true,;,
+      isNew: true,;,;,
 },;
   ];
 export const getITInfrastructureServicesByCategory = (category: string) => {;
@@ -646,12 +646,12 @@ export const getITInfrastructureServicesByCategory = (category: string) => {;
 export const getPopularITInfrastructureServices = () => {;
   return revolutionaryITInfrastructureServices2029.filter(;
     service => service.isPopular;
-  );,
+  );,;,
 }
 export const getNewITInfrastructureServices = () => {;
   return revolutionaryITInfrastructureServices2029.filter(;
     service => service.isNew;
-  );,
+  );,;,
 }
 export const getITInfrastructureServicesByPriceRange = (;
   minPrice: number,;
@@ -659,5 +659,5 @@ export const getITInfrastructureServicesByPriceRange = (;
 ) => {;
   return revolutionaryITInfrastructureServices2029.filter(service => {;
     const price = parseInt(service.price.replace("$", "").replace(",", ""));
-    return price >= minPrice && price <= maxPrice});,
+    return price >= minPrice && price <= maxPrice});,;,
 }>

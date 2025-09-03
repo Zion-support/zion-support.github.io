@@ -43,7 +43,7 @@ const contact = {;
   ;
   ;
   ;
-  website: "https://ziontechgroup.com";,
+  website: "https://ziontechgroup.com";,;,
 }
 export const realQ4Services2025: RealQ4Service[] = [;
 	{;
@@ -86,7 +86,7 @@ export const realQ4Services2025: RealQ4Service[] = [;
 		launchDate: "2025-10-01",;
 		customers: 120,;
 		rating: 4.7,;
-		reviews: 48;,
+		reviews: 48;,;,
 },;
 	{;
 		id: "podcast-transcription-studio",;
@@ -128,7 +128,7 @@ export const realQ4Services2025: RealQ4Service[] = [;
 		launchDate: "2025-09-15",;
 		customers: 60,;
 		rating: 4.6,;
-		reviews: 22;,
+		reviews: 22;,;,
 },;
 	{;
 		id: "micro-crm-local-business",;
@@ -170,7 +170,7 @@ export const realQ4Services2025: RealQ4Service[] = [;
 		launchDate: "2025-10-20",;
 		customers: 210,;
 		rating: 4.5,;
-		reviews: 77;,
+		reviews: 77;,;,
 },;
 	{;
 		id: "returns-automation-saas",;
@@ -212,7 +212,7 @@ export const realQ4Services2025: RealQ4Service[] = [;
 		launchDate: "2025-10-05",;
 		customers: 95,;
 		rating: 4.6,;
-		reviews: 35;,
+		reviews: 35;,;,
 },;
 	{;
 		id: "it-helpdesk-for-msps",;
@@ -297,7 +297,7 @@ export const real2025Q4Additions = [;
     launchDate: "2025-03-01",;
     customers: 18,;
     rating: 4.8,;
-    reviews: 11;,
+    reviews: 11;,;,
 },;
   {;
     id: "edge-personalization-engine",;
@@ -338,7 +338,7 @@ export const real2025Q4Additions = [;
     launchDate: "2025-03-10",;
     customers: 42,;
     rating: 4.6,;
-    reviews: 23;,
+    reviews: 23;,;,
 },;
   {;
     id: "devx-preview-environments",;
@@ -378,7 +378,7 @@ export const real2025Q4Additions = [;
     launchDate: "2025-03-05",;
     customers: 27,;
     rating: 4.7,;
-    reviews: 16;,
+    reviews: 16;,;,
 },;
   {;
     id: "real-time-log-anomaly-guard",;
@@ -418,7 +418,7 @@ export const real2025Q4Additions = [;
     launchDate: "2025-03-08",;
     customers: 33,;
     rating: 4.5,;
-    reviews: 19;,
+    reviews: 19;,;,
 },;
   {;
     id: "governed-feature-flags",;
@@ -458,7 +458,7 @@ export const real2025Q4Additions = [;
     launchDate: "2025-03-02",;
     customers: 21,;
     rating: 4.6,;
-    reviews: 12;,
+    reviews: 12;,;,
 },;
   {;
     id: "email-sequence-copilot",;
@@ -498,7 +498,7 @@ export const real2025Q4Additions = [;
     launchDate: "2025-03-12",;
     customers: 38,;
     rating: 4.5,;
-    reviews: 20;,
+    reviews: 20;,;,
 },;
   {;
     id: "data-contracts-guardrails",;
@@ -538,7 +538,7 @@ export const real2025Q4Additions = [;
     launchDate: "2025-03-03",;
     customers: 12,;
     rating: 4.6,;
-    reviews: 9;,
+    reviews: 9;,;,
 },;
   {;
     id: "managed-sso-fast-track",;
@@ -577,7 +577,7 @@ export const real2025Q4Additions = [;
     launchDate: "2025-03-06",;
     customers: 9,;
     rating: 4.7,;
-    reviews: 7;,
+    reviews: 7;,;,
 },;
   {;
     id: "ai-sales-pipeline-insights",;
@@ -616,7 +616,7 @@ export const real2025Q4Additions = [;
     launchDate: "2025-03-04",;
     customers: 14,;
     rating: 4.5,;
-    reviews: 10;,
+    reviews: 10;,;,
 },;
   {;
     id: "secure-webhook-relay",;
@@ -656,7 +656,7 @@ export const real2025Q4Additions = [;
     launchDate: "2025-03-09",;
     customers: 31,;
     rating: 4.6,;
-    reviews: 18;,
+    reviews: 18;,;,
 },;
   {;
     id: "managed-postgres-ha-lite",;

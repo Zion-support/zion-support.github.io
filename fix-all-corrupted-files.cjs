@@ -1,11 +1,11 @@
 #!/usr/bin/env node;
-
+;
 const fs = require("fs");
 const path = require("path");
 // Function to check if a file is corrupted;
-function isCorrupted(content) {
+function isCorrupted(content) {;
   // Check for common corruption patterns;
-  const corruptionPatterns = [
+  const corruptionPatterns = [;
   /import.*from.*import/,  // Double imports;
     /export.*function.*export/,  // Double exports;
     /<=.*import/,  // Malformed imports;
@@ -22,40 +22,40 @@ function isCorrupted(content) {
     /function.*is not allowed as a parameter name/,  // Function parameter errors;
   ];
   ;
-  return corruptionPatterns.some(pattern => pattern.test(content));,
+  return corruptionPatterns.some(pattern => pattern.test(content));,;,
 }
 ;
 // Function to create a basic page template;
-function createPageTemplate(filename, isTestFile = false) {
+function createPageTemplate(filename, isTestFile = false) {;
   const pageName = path.basename(filename, path.extname(filename));
     .replace(/[^a-zA-Z0-9]/g, " ");
     .replace(/\s+/g, " ");
     .trim();
-  if (isTestFile) {
+  if (isTestFile) {;
   return `import React from "react";
 import { render, screen  } from "@testing-library/react";
 import "@testing-library/jest-dom";
 // Mock component for testing;
-const MockComponent = () => {
+const MockComponent = () => {;
   return (;
     <div>;
       <h1>Test Component</h1>;
     </div>;
-  );,
+  );,;,
 }
-describe("${pageName}", () => {
-  it("renders without crashing", () => {
+describe("${pageName}", () => {;
+  it("renders without crashing", () => {;
   render(<MockComponent />);
-    expect(screen.getByText("Test Component")).toBeInTheDocument();,
-});,
+    expect(screen.getByText("Test Component")).toBeInTheDocument();,;,
+});,;,
 });
-`;,
+`;,;,
 }
   ;
   return `import React from "react";
 import { motion  } from "framer-motion";
 import { SEO  } from "../components/SEO";
-export default function ${pageName.replace(/\s+/g, "")}() {
+export default function ${pageName.replace(/\s+/g, "")}() {;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO ;
@@ -96,106 +96,106 @@ export default function ${pageName.replace(/\s+/g, "")}() {
         </div>;
       </section>;
     </div>;
-  );,
+  );,;,
 }
-`;,
+`;,;,
 }
 ;
 // Function to create a basic utility/type template;
-function createUtilityTemplate(filename) {
+function createUtilityTemplate(filename) {;
   const utilityName = path.basename(filename, path.extname(filename));
     .replace(/[^a-zA-Z0-9]/g, " ");
     .replace(/\s+/g, " ");
     .trim();
-  if (filename.endsWith(".d.ts") || filename.endsWith(".d.tsx")) {
+  if (filename.endsWith(".d.ts") || filename.endsWith(".d.tsx")) {;
   return `// Type definitions for ${utilityName}
-export interface ${utilityName.replace(/\s+/g, "")}Config {
-  // Add configuration properties here;,
+export interface ${utilityName.replace(/\s+/g, "")}Config {;
+  // Add configuration properties here;,;,
 }
 ;
 export default ${utilityName.replace(/\s+/g, "")}Config;
-`;,
+`;,;,
 }
   ;
   return `// ${utilityName} utility;
-export const ${utilityName.replace(/\s+/g, "").toLowerCase()} = {
-  // Add utility functions here;,
+export const ${utilityName.replace(/\s+/g, "").toLowerCase()} = {;
+  // Add utility functions here;,;,
 }
 export default ${utilityName.replace(/\s+/g, "").toLowerCase()}
-`;,
+`;,;,
 }
 ;
 // Function to fix a single file;
-function fixFile(filePath) {
-  try {
+function fixFile(filePath) {;
+  try {;
   const content = fs.readFileSync(filePath, "utf8");
-    if (isCorrupted(content)) {
+    if (isCorrupted(content)) {;
   console.log(`Fixing corrupted file: ${filePath}`);
       let newContent;
-      if (filePath.includes(".test.") || filePath.endsWith(".test.tsx") || filePath.endsWith(".test.jsx")) {
-  newContent = createPageTemplate(filePath, true);,
-} else if (filePath.includes("/utils/") || filePath.includes("/types/") || filePath.includes("/services/")) {
-  newContent = createUtilityTemplate(filePath);,
-} else {
-  newContent = createPageTemplate(filePath);,
+      if (filePath.includes(".test.") || filePath.endsWith(".test.tsx") || filePath.endsWith(".test.jsx")) {;
+  newContent = createPageTemplate(filePath, true);,;,
+} else if (filePath.includes("/utils/") || filePath.includes("/types/") || filePath.includes("/services/")) {;
+  newContent = createUtilityTemplate(filePath);,;,
+} else {;
+  newContent = createPageTemplate(filePath);,;,
 }
       ;
       fs.writeFileSync(filePath, newContent, "utf8");
-      return true;,
+      return true;,;,
 }
     ;
-    return false;,
-} catch (error) {
+    return false;,;,
+} catch (error) {;
   console.error(`Error processing ${filePath}:`, error.message);
-    return false;,
+    return false;,;,
 }
 }
 ;
 // Function to recursively find all files;
-function findFiles(dir, extensions = [".tsx", ".jsx", ".ts", ".js"]) {
+function findFiles(dir, extensions = [".tsx", ".jsx", ".ts", ".js"]) {;
   let files = [];
-  try {
+  try {;
   const items = fs.readdirSync(dir);
-    for (const item of items) {
+    for (const item of items) {;
   const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      if (stat.isDirectory()) {
+      if (stat.isDirectory()) {;
   // Skip node_modules and other common directories;
-        if (!["node_modules", ".git", ".next", "dist", "build"].includes(item)) {
-  files = files.concat(findFiles(fullPath, extensions));,
+        if (!["node_modules", ".git", ".next", "dist", "build"].includes(item)) {;
+  files = files.concat(findFiles(fullPath, extensions));,;,
 }
-      } else if (extensions.some(ext => item.endsWith(ext))) {
-  files.push(fullPath);,
+      } else if (extensions.some(ext => item.endsWith(ext))) {;
+  files.push(fullPath);,;,
 }
     }
-  } catch (error) {
-  console.error(`Error reading directory ${dir}:`, error.message);,
+  } catch (error) {;
+  console.error(`Error reading directory ${dir}:`, error.message);,;,
 }
   ;
-  return files;,
+  return files;,;,
 }
 ;
 // Main function;
-function $1() {
+function $1() {;
   const srcDir = path.join(__dirname, "src");
-  if (!fs.existsSync(srcDir)) {
+  if (!fs.existsSync(srcDir)) {;
   console.error("src directory not found");
-    return;,
+    return;,;,
 }
   ;
   const files = findFiles(srcDir);
   console.log(`Found ${files.length} files to check`);
   let fixedCount = 0;
-  files.forEach(file => {
-  if (fixFile(file)) {
-  fixedCount++;,
+  files.forEach(file => {;
+  if (fixFile(file)) {;
+  fixedCount++;,;,
 }
   });
-  console.log(`Fixed ${fixedCount} corrupted files`);,
+  console.log(`Fixed ${fixedCount} corrupted files`);,;,
 }
 ;
-if (require.main === module) {
-  main();,
+if (require.main === module) {;
+  main();,;,
 }
 ;
-module.exports = { fixFile, isCorrupted, createPageTemplate, createUtilityTemplate }
+module.exports = { fixFile, isCorrupted, createPageTemplate, createUtilityTemplate })

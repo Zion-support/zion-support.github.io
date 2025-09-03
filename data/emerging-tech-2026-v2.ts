@@ -80,14 +80,14 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced photonic computing platform with cloud access, development tools, and research collaboration features. Includes academic partnerships and hardware integration.",;
     launchDate: "2026-03-20",;
     customers: 100,;
     rating: 4.9,;
-    reviews: 50;,
+    reviews: 50;,;,
 },;
   // Holographic Display Platform;
   {;
@@ -132,14 +132,14 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete holographic platform with projection technology, content creation tools, and collaboration features. Includes mobile apps and hardware integration.",;
     launchDate: "2026-02-25",;
     customers: 300,;
     rating: 4.8,;
-    reviews: 180;,
+    reviews: 180;,;,
 },;
   // Quantum Internet Security Platform;
   {;
@@ -184,14 +184,14 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced quantum internet security platform with comprehensive protection, monitoring tools, and integration capabilities. Includes compliance certifications and 24/7 support.",;
     launchDate: "2026-03-05",;
     customers: 250,;
     rating: 4.9,;
-    reviews: 150;,
+    reviews: 150;,;,
 },;
   // AI Autonomous Business Platform;
   {;
@@ -199,7 +199,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
     name: "AI Autonomous Business Platform 2026",;
     tagline: "Run your business with autonomous AI agents and intelligent automation",;
     price: "Custom pricing",;
-    period: "",;
+    period: ",;
     description: "Revolutionary platform that enables businesses to operate autonomously using AI agents for decision-making, process automation, and strategic planning.",;
     features[;
       "Autonomous business operations",;
@@ -236,14 +236,14 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete autonomous business platform with AI agents, decision-making systems, and comprehensive business automation. Includes enterprise security and compliance.",;
     launchDate: "2026-01-30",;
     customers: 50,;
     rating: 4.9,;
-    reviews: 30;,
+    reviews: 30;,;,
 },;
   // Biotech AI Research Platform;
   {;
@@ -288,14 +288,14 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced biotech AI platform with comprehensive research tools, collaboration features, and regulatory compliance. Includes academic partnerships and research support.",;
     launchDate: "2026-03-25",;
     customers: 120,;
     rating: 4.9,;
-    reviews: 80;,
+    reviews: 80;,;,
 },;
   // Edge Computing Orchestration;
   {;
@@ -303,7 +303,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
     name: "Edge Computing Orchestration 2026",;
     tagline: "Intelligent edge computing management and optimization platform",;
     price: "Custom pricing",;
-    period: "",;
+    period: ",;
     description: "Advanced edge computing orchestration platform that manages distributed computing resources, optimizes performance, and ensures reliability across edge networks.",;
     features[;
       "Distributed edge management",;
@@ -340,14 +340,14 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete edge computing orchestration platform with AI-powered management, monitoring tools, and automation features. Includes enterprise security and compliance.",;
     launchDate: "2026-02-28",;
     customers: 180,;
     rating: 4.8,;
-    reviews: 120;,
+    reviews: 120;,;,
 },;
   // 5G Private Network Solutions;
   {;
@@ -355,7 +355,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
     name: "5G Private Network Solutions 2026",;
     tagline: "Enterprise-grade 5G private networks for industrial applications",;
     price: "Custom pricing",;
-    period: "",;
+    period: ",;
     description: "Advanced 5G private network solutions that enable enterprises to deploy and manage their own high-performance, secure 5G networks for industrial applications.",;
     features[;
       "Private 5G network deployment",;
@@ -392,7 +392,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete 5G private network solution with deployment tools, management platform, and monitoring systems. Includes enterprise security and compliance features.",;

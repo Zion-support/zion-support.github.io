@@ -1,4 +1,4 @@
-export interface UltimateInnovativeService {
+export interface UltimateInnovativeService {;
   id: string;
   title: string;
   description: string;
@@ -17,13 +17,13 @@ export interface UltimateInnovativeService {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-contactInfo: {
+contactInfo: {;
 
     phone: string;
     email: string;
-    website: string
+    website: string;,
 };
-  technicalSpecs?: {
+  technicalSpecs?: {;
 
     technology: string[];
     integrations: string[];
@@ -33,22 +33,23 @@ contactInfo: {
   competitors?: string[];
   caseStudies?: string[]}
 ;
-export 
+export ;
   'IoT & Edge Computing',;
   'Metaverse & AR/VR',;
   'Robotics & Automation',;
   'Biotechnology',;
   'Space Technology',;
   'Green Technology';
-  'AI & Automation','
-  'Quantum Computing','
-  'Blockchain & Web3','
-  'Cybersecurity',;'
-  'IoT & Edge Computing',;'
-  'Metaverse & AR/VR',;'
-  'Robotics & Automation',;'
-  'Biotechnology',;'
+  'AI & Automation',';
+  'Quantum Computing',';
+  'Blockchain & Web3',';
+  'Cybersecurity',;';
+  'IoT & Edge Computing',;';
+  'Metaverse & AR/VR',;';
+  'Robotics & Automation',;';
+  'Biotechnology',;';
   'Space Technology',;'  'Green Technology';
 ];
 ;
-export const SERVICE_SUBCATEGORIES = {
+export const SERVICE_SUBCATEGORIES = {;
+}

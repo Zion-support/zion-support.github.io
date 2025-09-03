@@ -1,75 +1,75 @@
 #!/usr/bin/env node;
 const fs = require("fs");
 const path = require("path");
-class $1 {
-  constructor() {
-  this.testTemplates = {
+class $1 {;
+  constructor() {;
+  this.testTemplates = {;
   component: this.getComponentTestTemplate(),;
       page: this.getPageTestTemplate(),;
-      utility: this.getUtilityTestTemplate(),;,
+      utility: this.getUtilityTestTemplate(),;,;,
 }
   }
 ;
-  getComponentTestTemplate() {
+  getComponentTestTemplate() {;
   return `import React from "react";
 import { render, screen  } from "@testing-library/react";
 import Component from "./Component";
-describe("Component", () => {
-  it("renders without crashing", () => {
+describe("Component", () => {;
+  it("renders without crashing", () => {;
   render(<Component />);
-    expect(screen.getByRole("generic")).toBeInTheDocument();,
+    expect(screen.getByRole("generic")).toBeInTheDocument();,;,
 });
-  it("displays correct content", () => {
+  it("displays correct content", () => {;
   render(<Component />);
-    // Add specific test assertions here;,
-});,
-});`;,
+    // Add specific test assertions here;,;,
+});,;,
+});`;,;,
 }
 ;
-  getPageTestTemplate() {
+  getPageTestTemplate() {;
   return `import React from "react";
 import { render, screen  } from "@testing-library/react";
 import Page from "./Page";
 // Mock Next.js router;
-jest.mock("next/router", () => ({
-  useRouter() {
-  return {
+jest.mock("next/router", () => ({;
+  useRouter() {;
+  return {;
   route: "/",;
       pathname: "/",;
       query: {},;
-      asPath: "/",;,
+      asPath: "/",;,;,
 }
-  },;,
+  },;,;,
 }));
-describe("Page", () => {
-  it("renders without crashing", () => {
+describe("Page", () => {;
+  it("renders without crashing", () => {;
   render(<Page />);
-    expect(screen.getByRole("main")).toBeInTheDocument();,
+    expect(screen.getByRole("main")).toBeInTheDocument();,;,
 });
-  it("displays page title", () => {
+  it("displays page title", () => {;
   render(<Page />);
-    expect(screen.getByRole("heading")).toBeInTheDocument();,
-});,
-});`;,
+    expect(screen.getByRole("heading")).toBeInTheDocument();,;,
+});,;,
+});`;,;,
 }
 ;
-  getUtilityTestTemplate() {
+  getUtilityTestTemplate() {;
   return `import { functionName  } from "./utility";
-describe("utility", () => {
-  describe("functionName", () => {
-  it("should work correctly", () => {
+describe("utility", () => {;
+  describe("functionName", () => {;
+  it("should work correctly", () => {;
   // Add test cases here;
-      expect(functionName()).toBeDefined();,
-});,
-});,
-});`;,
+      expect(functionName()).toBeDefined();,;,
+});,;,
+});,;,
+});`;,;,
 }
 ;
-  generateTest(filePath, type = "component") {
+  generateTest(filePath, type = "component") {;
   const template = this.testTemplates[type];
-    if (!template) {
+    if (!template) {;
   console.error(`Unknown test type:`, type);
-      return;,
+      return;,;,
 }
 ;
     const fileName = path.basename(filePath, path.extname(filePath));
@@ -80,20 +80,20 @@ describe("utility", () => {
       .replace(/Page/g, fileName);
       .replace(/functionName/g, fileName);
     fs.writeFileSync(testPath, testContent);
-    console.log(`✅ Generated test: ${testPath}`);,
+    console.log(`✅ Generated test: ${testPath}`);,;,
 }
 ;
-  generateTestsForDirectory(dir) {
+  generateTestsForDirectory(dir) {;
   if (!fs.existsSync(dir)) return;
     const files = fs.readdirSync(dir);
-    for (const file of files) {
+    for (const file of files) {;
   const filePath = path.join(dir, file);
       const stat = fs.statSync(filePath);
-      if (stat.isDirectory()) {
-  this.generateTestsForDirectory(filePath);,
-} else if (file.endsWith(`.tsx`) || file.endsWith(".ts")) {
+      if (stat.isDirectory()) {;
+  this.generateTestsForDirectory(filePath);,;,
+} else if (file.endsWith(`.tsx`) || file.endsWith(".ts")) {;
   const type = dir.includes("pages") ? "page" : "component";
-        this.generateTest(filePath, type);,
+        this.generateTest(filePath, type);,;,
 }
     }
   }

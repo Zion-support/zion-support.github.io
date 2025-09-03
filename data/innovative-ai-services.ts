@@ -78,14 +78,14 @@ export const innovativeAIServices: InnovativeAIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Fully functional quantum AI content platform with quantum algorithms, human-like creativity, comprehensive analytics, and enterprise collaboration tools.",;
     launchDate: "2024-06-15",;
     customers: 280,;
     rating: 4.9,;
-    reviews: 345;,
+    reviews: 345;,;,
 },;
   {;
     id: "autonomous-ai-research-assistant",;
@@ -129,14 +129,14 @@ export const innovativeAIServices: InnovativeAIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Fully autonomous research platform with quantum AI, 24/7 operation, comprehensive data analysis, and automated insight generation.",;
     launchDate: "2024-05-01",;
     customers: 95,;
     rating: 4.9,;
-    reviews: 123;,
+    reviews: 123;,;,
 },;
   {;
     id: "quantum-ai-video-production",;
@@ -180,14 +180,14 @@ export const innovativeAIServices: InnovativeAIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Fully functional quantum AI video platform with professional quality, autonomous editing, brand customization, and comprehensive analytics.",;
     launchDate: "2024-04-15",;
     customers: 180,;
     rating: 4.8,;
-    reviews: 234;,
+    reviews: 234;,;,
 },;
   {;
     id: "autonomous-ai-customer-service",;
@@ -231,14 +231,14 @@ export const innovativeAIServices: InnovativeAIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Fully autonomous customer service platform with 24/7 operation, quantum AI understanding, emotional intelligence, and comprehensive analytics.",;
     launchDate: "2024-03-01",;
     customers: 320,;
     rating: 4.9,;
-    reviews: 456;,
+    reviews: 456;,;,
 },;
   {;
     id: "quantum-ai-data-analytics",;
@@ -282,14 +282,14 @@ export const innovativeAIServices: InnovativeAIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Fully functional quantum AI analytics platform with quantum processing, predictive modeling, autonomous insights, and comprehensive visualization tools.",;
     launchDate: "2024-02-15",;
     customers: 150,;
     rating: 4.9,;
-    reviews: 234;,
+    reviews: 234;,;,
 },;
   {;
     id: "autonomous-ai-marketing-orchestrator",;
@@ -333,7 +333,7 @@ export const innovativeAIServices: InnovativeAIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Fully autonomous marketing platform with 24/7 operation, quantum AI optimization, multi-channel orchestration, and comprehensive analytics.",;

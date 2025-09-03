@@ -15,6 +15,6 @@ export const added2026Q2Services: Added2026Q2Service[] = [;
       "2026 Q2 features",;
       "Advanced capabilities",;
       "Enhanced performance",;
-    ],;,
+    ],;,;,
 },;
 ]

@@ -43,7 +43,7 @@ const contact = {;
   ;
   ;
   ;
-  website: "https://ziontechgroup.com";,
+  website: "https://ziontechgroup.com";,;,
 }
 export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [;
   {;
@@ -89,7 +89,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     launchDate: "2025-01-20",;
     customers: 89,;
     rating: 4.8,;
-    reviews: 67;,
+    reviews: 67;,;,
 },;
   {;
     id: "ai-predictive-maintenance-platform",;
@@ -134,7 +134,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     launchDate: "2025-02-15",;
     customers: 45,;
     rating: 4.7,;
-    reviews: 32;,
+    reviews: 32;,;,
 },;
   {;
     id: "ai-autonomous-marketing-optimization",;
@@ -179,7 +179,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     launchDate: "2025-01-25",;
     customers: 156,;
     rating: 4.9,;
-    reviews: 98;,
+    reviews: 98;,;,
 },;
   {;
     id: "ai-autonomous-financial-advisory",;
@@ -224,7 +224,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     launchDate: "2025-02-10",;
     customers: 234,;
     rating: 4.8,;
-    reviews: 145;,
+    reviews: 145;,;,
 },;
   {;
     id: "ai-autonomous-supply-chain-optimization",;

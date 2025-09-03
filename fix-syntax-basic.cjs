@@ -1,9 +1,9 @@
 #!/usr/bin/env node;
-
+;
 const fs = require("fs");
 const path = require("path");
 console.log("🔧 Fixing critical syntax errors...");
-const files = [
+const files = [;
   "pages/api.tsx",;
   "pages/careers.tsx", ;
   "pages/case-studies.tsx",;
@@ -11,10 +11,10 @@ const files = [
   "pages/press.tsx";
 ];
 let fixedCount = 0;
-files.forEach(file => {
+files.forEach(file => {;
   const filePath = path.join(process.cwd(), file);
-  if (fs.existsSync(filePath)) {
-  try {
+  if (fs.existsSync(filePath)) {;
+  try {;
   let content = fs.readFileSync(filePath, "utf8");
       let fixed = content;
       // Fix the specific patterns;
@@ -23,13 +23,13 @@ files.forEach(file => {
       fixed = fixed.replace(/}"\`,\s*author:/g, "}\"`,\n      author:");
       fixed = fixed.replace(/}"\`,\s*category:/g, "}\"`,\n      category:");
       fixed = fixed.replace(/}"\`,\s*answer:/g, "}\"`,\n      answer:");
-      if (content !== fixed) {
+      if (content !== fixed) {;
   fs.writeFileSync(filePath, fixed);
         console.log(`✅ Fixed ${file}`);
-        fixedCount++;,
+        fixedCount++;,;,
 }
-    } catch (error) {
-  console.log(`❌ Error fixing ${file}: ${error.message}`);,
+    } catch (error) {;
+  console.log(`❌ Error fixing ${file}: ${error.message}`);,;,
 }
   }
 });

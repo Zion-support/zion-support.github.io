@@ -80,14 +80,14 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced quantum neural network platform with consciousness simulation algorithms, ethical frameworks, and research collaboration tools. Includes real-time consciousness mapping and evolution tracking.",;
     launchDate: "2029-01-15",;
     customers: 45,;
     rating: 4.9,;
-    reviews: 89;,
+    reviews: 89;,;,
 },;
   {;
     id: "autonomous-ai-corporation-platform",;
@@ -131,14 +131,14 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Comprehensive autonomous AI platform with corporate management capabilities, decision-making algorithms, and operational automation. Includes real-time monitoring and human oversight options.",;
     launchDate: "2029-02-01",;
     customers: 12,;
     rating: 4.8,;
-    reviews: 34;,
+    reviews: 34;,;,
 },;
   {;
     id: "ai-reality-augmentation-platform",;
@@ -182,14 +182,14 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced reality augmentation platform with AI-powered perception modification, neural interface integration, and real-time enhancement capabilities. Includes safety protocols and ethical guidelines.",;
     launchDate: "2029-01-30",;
     customers: 78,;
     rating: 4.7,;
-    reviews: 156;,
+    reviews: 156;,;,
 },;
   // Quantum & Neuroscience Services;
   {;
@@ -234,14 +234,14 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced quantum BCI platform with neural communication capabilities, quantum encryption, and real-time brain-computer synchronization. Includes safety protocols and research tools.",;
     launchDate: "2029-02-15",;
     customers: 23,;
     rating: 4.9,;
-    reviews: 67;,
+    reviews: 67;,;,
 },;
   {;
     id: "quantum-time-manipulation-platform",;
@@ -285,7 +285,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced quantum temporal manipulation platform with time perception modification, temporal analysis, and quantum temporal effects. Includes research tools and safety protocols.",;

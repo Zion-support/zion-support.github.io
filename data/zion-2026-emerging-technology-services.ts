@@ -45,7 +45,7 @@ const contact = {;
   ;
   ;
   ;
-  website: "https://ziontechgroup.com";,
+  website: "https://ziontechgroup.com";,;,
 }
 export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyService[] = [;
   // Quantum-Enhanced Blockchain and Web3 Platform;
@@ -93,7 +93,7 @@ export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyServi
     launchDate: "2026-01-15",;
     customers: 1100,;
     rating: 4.9,;
-    reviews: 580;,
+    reviews: 580;,;,
 },;
   // AI-Powered Autonomous Metaverse Development Platform;
   {;
@@ -140,7 +140,7 @@ export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyServi
     launchDate: "2026-01-20",;
     customers: 950,;
     rating: 4.9,;
-    reviews: 480;,
+    reviews: 480;,;,
 },;
   // Quantum-Enhanced Internet of Things (IoT) Platform;
   {;
@@ -187,7 +187,7 @@ export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyServi
     launchDate: "2026-01-25",;
     customers: 2100,;
     rating: 4.8,;
-    reviews: 1050;,
+    reviews: 1050;,;,
 },;
   // AI-Powered Autonomous Space Technology Platform;
   {;
@@ -234,7 +234,7 @@ export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyServi
     launchDate: "2026-02-01",;
     customers: 650,;
     rating: 4.9,;
-    reviews: 320;,
+    reviews: 320;,;,
 },;
   // Quantum-Enhanced Neural Network and Brain-Computer Interface Platform;
   {;
@@ -281,7 +281,7 @@ export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyServi
     launchDate: "2026-02-15",;
     customers: 450,;
     rating: 4.9,;
-    reviews: 220;,
+    reviews: 220;,;,
 },;
   // AI-Powered Autonomous Biotechnology and Synthetic Biology Platform;
   {;
@@ -328,7 +328,7 @@ export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyServi
     launchDate: "2026-01-30",;
     customers: 780,;
     rating: 4.9,;
-    reviews: 390;,
+    reviews: 390;,;,
 },;
   // Quantum-Enhanced Climate and Environmental Technology Platform;
   {;
@@ -375,7 +375,7 @@ export const zion2026EmergingTechnologyServices: Zion2026EmergingTechnologyServi
     launchDate: "2026-02-05",;
     customers: 1200,;
     rating: 4.9,;
-    reviews: 600;,
+    reviews: 600;,;,
 },;
   // AI-Powered Autonomous Robotics and Automation Platform;
   {;

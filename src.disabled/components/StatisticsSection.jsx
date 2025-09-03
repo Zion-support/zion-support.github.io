@@ -1,1 +1,1 @@
-export function StatisticsSection () {'""
+export function StatisticsSection () {'}

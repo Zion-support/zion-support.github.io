@@ -1,5 +1,5 @@
 
-interface User {
+interface User {;
 
   id: string;
   email: string;
@@ -7,129 +7,129 @@ interface User {
   role: 'user' | 'admin' | 'moderator';
   userType?: string;
   displayName?: string;
-:src/hooks/useAuth.tsx
+:src/hooks/useAuth.tsx;
   avatarUrl?: string}
   avatarUrl?: string}
-
-interface AuthState {
+;
+interface AuthState {;
 
   user: User | null;
   isAuthenticated: boolean;
-:src/hooks/useAuth.tsx
+:src/hooks/useAuth.tsx;
   isLoading: boolean;
   isLoading: boolean}
-
+;,
 }
 ;
-export function useAuth(...args: unknown[]): unknown {
-  const [authState, setAuthState] = useState<AuthState>({
+export function useAuth(...args: unknown[]): unknown {;
+  const [authState, setAuthState] = useState<AuthState>({;
 
-    user: null,
-    isAuthenticated: false,
+    user: null,;
+    isAuthenticated: false,;
     isLoading: true});
+;
+  useEffect(: unknown {;
+    // Check if user is logged in (e.g., check localStorage, cookies, etc.);
+:src/hooks/useAuth.tsx;
 
-  useEffect(: unknown {
-    // Check if user is logged in (e.g., check localStorage, cookies, etc.)
-:src/hooks/useAuth.tsx
+      if(storedUser && token) {;
 
-      if(storedUser && token) {
+        try {;
+          ;
+          setAuthState({;
 
-        try {
-          
-          setAuthState({
-
-            user,
-            isAuthenticated: true,
-:src/hooks/useAuth.tsx
-            isLoading: false})} catch(error) {
+            user,;
+            isAuthenticated: true,;
+:src/hooks/useAuth.tsx;
+            isLoading: false})} catch(error) {;
 
           // console.error('Error parsing stored user:', error);
-            isLoading: false,
-          })} catch(error) {
+            isLoading: false,;,
+})} catch(error) {;
           console.error('Error parsing stored user:', error);
-          setAuthState({
+          setAuthState({;
 
-            user: null,
-            isAuthenticated: false,
-:src/hooks/useAuth.tsx
+            user: null,;
+            isAuthenticated: false,;
+:src/hooks/useAuth.tsx;
             isLoading: false})}
-            isLoading: false,
-          })}
-      } else {
+            isLoading: false,;,
+})}
+      } else {;
 
-        setAuthState({
+        setAuthState({;
 
-          user: null,
-          isAuthenticated: false,
-:src/hooks/useAuth.tsx
+          user: null,;
+          isAuthenticated: false,;
+:src/hooks/useAuth.tsx;
           isLoading: false})}
     };
-
+;
     checkAuth()}, []);
-
-          isLoading: false,
-        })}
+;
+          isLoading: false,;,
+})}
     };
-
+;
     checkAuth()}, []);
+;
+    setAuthState({;
 
-    setAuthState({
-
-      user: mockUser,
-      isAuthenticated: true,
+      user: mockUser,;
+      isAuthenticated: true,;
       isLoading: false});
-
-    // Store user data in localStorage'
+;
+    // Store user data in localStorage';
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
     localStorage.setItem('authToken',mock-jwt-token');
-
-:src/hooks/useAuth.tsx
+;
+:src/hooks/useAuth.tsx;
     return { success: true, user: mockUser }};
-
-    // Clear localStorage'
+;
+    // Clear localStorage';
     localStorage.removeItem('zion_user');
     localStorage.removeItem('authToken')};
-
+;
     return { success: true, user: mockUser }};
-
-    // Clear localStorage
+;
+    // Clear localStorage;
     localStorage.removeItem('zion_user');
     localStorage.removeItem('authToken')};
+;
+    setAuthState({;
 
-    setAuthState({
-
-      user: mockUser,
-      isAuthenticated: true,
+      user: mockUser,;
+      isAuthenticated: true,;
       isLoading: false});
-
-    // Store user data in localStorage'
+;
+    // Store user data in localStorage';
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
     localStorage.setItem('authToken',mock-jwt-token');
-
+;
     return { success: true, user: mockUser }};
+;
+:src/hooks/useAuth.tsx;
+  ;
+      setAuthState(prev => ({;
 
-:src/hooks/useAuth.tsx
-  
-      setAuthState(prev => ({
-
-:src/hooks/useAuth.tsx
-        ...prev,
+:src/hooks/useAuth.tsx;
+        ...prev,;
         user: updatedUser}));
-
-      // Update localStorage'
+;
+      // Update localStorage';
       localStorage.setItem('zion_user', JSON.stringify(updatedUser))}
-      // Update localStorage
+      // Update localStorage;
       localStorage.setItem('zion_user', JSON.stringify(updatedUser))}
   };
+;
+  return {;
 
-  return {
-
-    ...authState,
-    login,
-    logout,
-    register,
-:src/hooks/useAuth.tsx
+    ...authState,;
+    login,;
+    logout,;
+    register,;
+:src/hooks/useAuth.tsx;
     updateProfile}}
-'
-    updateProfile,
-  }}
+';
+    updateProfile,;,
+}}

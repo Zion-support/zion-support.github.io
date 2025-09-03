@@ -1,14 +1,14 @@
 
 const { execSync } = require("child_process");
 const fs = require("fs");
-class $1 {
-  constructor() {
-  this.projectRoot = process.cwd();,
+class $1 {;
+  constructor() {;
+  this.projectRoot = process.cwd();,;,
 }
 ;
-  async deploy() {
+  async deploy() {;
   console.log("🚀 Starting auto deployment...");
-    try {
+    try {;
   // Build the project;
       console.log("🏗️ Building project...");
       execSync("npm run build", { stdio: "inherit" });
@@ -18,10 +18,10 @@ class $1 {
       // Deploy to production;
       console.log("🌐 Deploying to production...");
       execSync("npm run deploy", { stdio: "inherit" });
-      console.log("✅ Deployment completed successfully!");,
-} catch (error) {
+      console.log("✅ Deployment completed successfully!");,;,
+} catch (error) {;
   console.error("❌ Deployment failed:", error.message);
-      process.exit(1);,
+      process.exit(1);,;,
 }
   }
 }

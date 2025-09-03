@@ -44,7 +44,7 @@ const contact = {;
   ;
   ;
   ;
-  website: "https://ziontechgroup.com";,
+  website: "https://ziontechgroup.com";,;,
 }
 export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [;
   {;
@@ -91,7 +91,7 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [;
     launchDate: "2025-04-15",;
     customers: 89,;
     rating: 4.7,;
-    reviews: 234;,
+    reviews: 234;,;,
 },;
   {;
     id: "virtual-reality-meeting-platform",;
@@ -137,7 +137,7 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [;
     launchDate: "2025-05-10",;
     customers: 45,;
     rating: 4.8,;
-    reviews: 123;,
+    reviews: 123;,;,
 },;
   {;
     id: "ai-powered-inventory-optimization",;
@@ -183,7 +183,7 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [;
     launchDate: "2025-03-20",;
     customers: 67,;
     rating: 4.6,;
-    reviews: 189;,
+    reviews: 189;,;,
 },;
   {;
     id: "blockchain-supply-chain-tracker",;
@@ -229,7 +229,7 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [;
     launchDate: "2025-06-15",;
     customers: 34,;
     rating: 4.7,;
-    reviews: 98;,
+    reviews: 98;,;,
 },;
   {;
     id: "ai-powered-social-media-scheduler",;

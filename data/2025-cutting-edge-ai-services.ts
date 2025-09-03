@@ -15,14 +15,14 @@ export const cuttingEdgeAIServices2025 = [;
       "Advanced empathy and understanding capabilities",;
       "Consciousness level assessment and progression tracking";
     ],;
-    pricing: {;,
+    pricing: {;,;,
 },;
     category: "AI Consciousness",;
     tags["AI", "Consciousness", "Emotional Intelligence", "Self-Awareness", "Human-AI Collaboration"],;
     website: "https://ziontechgroup.com/ai-consciousness-evolution-pro",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$52.8B",;
     targetAudience: "Research institutions, AI development companies, psychology departments, consciousness researchers",;
@@ -35,7 +35,7 @@ export const cuttingEdgeAIServices2025 = [;
       "Consciousness level assessment and training";
     ],;
     integrations["Research platforms", "Psychology databases", "AI development tools", "Neuroscience equipment", "Academic databases"],;
-    compliance["GDPR", "CCPA", "SOC2", "ISO 27001", "Research ethics standards"];,
+    compliance["GDPR", "CCPA", "SOC2", "ISO 27001", "Research ethics standards"];,;,
 },;
   {;
     id: "quantum-ai-fusion-platform",;
@@ -53,14 +53,14 @@ export const cuttingEdgeAIServices2025 = [;
       "Quantum-AI model training and optimization tools",;
       "API access for quantum computing resources and services";
     ],;
-    pricing: {;,
+    pricing: {;,;,
 },;
     category: "Quantum AI",;
     tags["Quantum Computing", "AI", "Machine Learning", "Pattern Recognition", "Hybrid Computing"],;
     website: "https://ziontechgroup.com/quantum-ai-fusion-platform",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$78.5B",;
     targetAudience: "Research institutions, technology companies, financial institutions, pharmaceutical companies",;
@@ -73,7 +73,7 @@ export const cuttingEdgeAIServices2025 = [;
       "Climate modeling and prediction";
     ],;
     integrations["Quantum computing platforms", "AI frameworks", "Cloud services", "Research tools", "Enterprise systems"],;
-    compliance["SOC2", "ISO 27001", "FedRAMP", "GDPR", "CCPA"];,
+    compliance["SOC2", "ISO 27001", "FedRAMP", "GDPR", "CCPA"];,;,
 },;
   {;
     id: "ai-autonomous-ecosystem",;
@@ -91,14 +91,14 @@ export const cuttingEdgeAIServices2025 = [;
       "Self-scaling infrastructure and resource management",;
       "Intelligent integration and API management";
     ],;
-    pricing: {;,
+    pricing: {;,;,
 },;
     category: "AI Autonomy",;
     tags["AI", "Autonomous Systems", "Self-Management", "Machine Learning", "Automation"],;
     website: "https://ziontechgroup.com/ai-autonomous-ecosystem",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$45.2B",;
     targetAudience: "Enterprises, technology companies, research institutions, government agencies",;
@@ -111,7 +111,7 @@ export const cuttingEdgeAIServices2025 = [;
       "Intelligent system orchestration";
     ],;
     integrations["Enterprise systems", "Cloud platforms", "IoT devices", "AI frameworks", "Monitoring tools"],;
-    compliance["SOC2", "ISO 27001", "FedRAMP", "GDPR", "CCPA"];,
+    compliance["SOC2", "ISO 27001", "FedRAMP", "GDPR", "CCPA"];,;,
 },;
   {;
     id: "ai-ethics-governance-platform",;
@@ -129,14 +129,14 @@ export const cuttingEdgeAIServices2025 = [;
       "Audit trails and accountability systems",;
       "Integration with regulatory frameworks and standards";
     ],;
-    pricing: {;,
+    pricing: {;,;,
 },;
     category: "AI Ethics",;
     tags["AI Ethics", "Governance", "Bias Detection", "Fairness", "Compliance"],;
     website: "https://ziontechgroup.com/ai-ethics-governance-platform",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$28.7B",;
     targetAudience: "Enterprises, government agencies, research institutions, AI development companies",;
@@ -149,7 +149,7 @@ export const cuttingEdgeAIServices2025 = [;
       "Ethical AI training and certification";
     ],;
     integrations["AI platforms", "Compliance tools", "Monitoring systems", "Reporting tools", "Training platforms"],;
-    compliance["SOC2", "ISO 27001", "GDPR", "CCPA", "AI ethics standards"];,
+    compliance["SOC2", "ISO 27001", "GDPR", "CCPA", "AI ethics standards"];,;,
 },;
   {;
     id: "ai-creativity-studio-pro",;
@@ -167,14 +167,14 @@ export const cuttingEdgeAIServices2025 = [;
       "Custom creative model training and development",;
       "Real-time creative collaboration and feedback";
     ],;
-    pricing: {;,
+    pricing: {;,;,
 },;
     category: "AI Creativity",;
     tags["AI", "Creativity", "Content Generation", "Design", "Innovation"],;
     website: "https://ziontechgroup.com/ai-creativity-studio-pro",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$35.4B",;
     targetAudience: "Creative agencies, design firms, marketing companies, content creators",;
@@ -184,4 +184,4 @@ export const cuttingEdgeAIServices2025 = [;
       "Marketing and advertising creative",;
       "Product design and innovation",;
       "Artistic expression and creation",;
-]
+]}

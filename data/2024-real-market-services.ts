@@ -80,14 +80,14 @@ export const realMarketServices: RealMarketService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Production-ready SaaS platform with real-time data processing, machine learning models, and comprehensive analytics dashboard. Includes data connectors for major business tools.",;
     launchDate: "2024-03-01",;
     customers: 1800,;
     rating: 4.7,;
-    reviews: 950;,
+    reviews: 950;,;,
 },;
   // Customer Success Automation Platform;
   {;
@@ -132,14 +132,14 @@ export const realMarketServices: RealMarketService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Fully functional customer success platform with automated workflows, health scoring algorithms, and comprehensive reporting. Includes mobile app for field teams.",;
     launchDate: "2024-02-15",;
     customers: 1200,;
     rating: 4.8,;
-    reviews: 680;,
+    reviews: 680;,;,
 },;
   // API Security & Monitoring Suite;
   {;
@@ -184,14 +184,14 @@ export const realMarketServices: RealMarketService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Production-ready API security platform with real-time threat detection, comprehensive monitoring, and automated security testing. Includes Kubernetes deployment support.",;
     launchDate: "2024-01-20",;
     customers: 950,;
     rating: 4.6,;
-    reviews: 520;,
+    reviews: 520;,;,
 },;
   // E-commerce Automation Platform;
   {;
@@ -236,14 +236,14 @@ export const realMarketServices: RealMarketService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Comprehensive e-commerce automation platform with real-time inventory tracking, automated order processing, and intelligent marketing automation. Includes mobile apps for customers and staff.",;
     launchDate: "2024-02-01",;
     customers: 2100,;
     rating: 4.7,;
-    reviews: 1100;,
+    reviews: 1100;,;,
 },;
   // HR Automation Suite;
   {;
@@ -288,14 +288,14 @@ export const realMarketServices: RealMarketService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Full-featured HR automation platform with AI-powered recruitment, comprehensive employee management, and automated compliance reporting. Includes mobile apps and integration capabilities.",;
     launchDate: "2024-01-10",;
     customers: 1600,;
     rating: 4.8,;
-    reviews: 890;,
+    reviews: 890;,;,
 },;
   // Financial Analytics Platform;
   {;
@@ -340,14 +340,14 @@ export const realMarketServices: RealMarketService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Production-ready financial analytics platform with real-time data processing, AI-powered forecasting models, and comprehensive reporting. Includes mobile apps and API access.",;
     launchDate: "2024-02-20",;
     customers: 1400,;
     rating: 4.7,;
-    reviews: 780;,
+    reviews: 780;,;,
 },;
   // Project Management AI Platform;
   {;
@@ -392,14 +392,14 @@ export const realMarketServices: RealMarketService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Full-featured project management platform with AI-powered insights, comprehensive collaboration tools, and automated workflow optimization. Includes mobile apps and extensive integrations.",;
     launchDate: "2024-01-25",;
     customers: 1900,;
     rating: 4.8,;
-    reviews: 1050;,
+    reviews: 1050;,;,
 },;
   // Marketing Automation Suite;
   {;
@@ -444,14 +444,14 @@ export const realMarketServices: RealMarketService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Comprehensive marketing automation platform with AI-powered personalization, comprehensive analytics, and automated campaign management. Includes mobile apps and extensive integrations.",;
     launchDate: "2024-02-10",;
     customers: 2300,;
     rating: 4.7,;
-    reviews: 1250;,
+    reviews: 1250;,;,
 },;
   // Legal Document Automation;
   {;
@@ -496,7 +496,7 @@ export const realMarketServices: RealMarketService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Production-ready legal automation platform with AI-powered document generation, comprehensive workflow management, and compliance checking. Includes mobile apps and extensive integrations.",;

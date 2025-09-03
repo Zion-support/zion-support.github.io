@@ -42,7 +42,7 @@ const contact = {;
   ;
   ;
   ;
-  website: "https://ziontechgroup.com";,
+  website: "https://ziontechgroup.com";,;,
 }
 export const cuttingEdgeMicroSAASServices2026: CuttingEdgeMicroSAASService[] = [;
   {;
@@ -88,7 +88,7 @@ export const cuttingEdgeMicroSAASServices2026: CuttingEdgeMicroSAASService[] = [
     launchDate: "2026-01-15",;
     customers: 47,;
     rating: 4.8,;
-    reviews: 156;,
+    reviews: 156;,;,
 },;
   {;
     id: "quantum-secure-communication-platform",;
@@ -133,7 +133,7 @@ export const cuttingEdgeMicroSAASServices2026: CuttingEdgeMicroSAASService[] = [
     launchDate: "2026-02-01",;
     customers: 23,;
     rating: 4.9,;
-    reviews: 89;,
+    reviews: 89;,;,
 },;
   {;
     id: "ai-powered-legal-document-automation",;
@@ -178,7 +178,7 @@ export const cuttingEdgeMicroSAASServices2026: CuttingEdgeMicroSAASService[] = [
     launchDate: "2026-01-20",;
     customers: 89,;
     rating: 4.7,;
-    reviews: 234;,
+    reviews: 234;,;,
 },;
   {;
     id: "blockchain-supply-chain-tracking",;
@@ -223,7 +223,7 @@ export const cuttingEdgeMicroSAASServices2026: CuttingEdgeMicroSAASService[] = [
     launchDate: "2026-02-15",;
     customers: 34,;
     rating: 4.6,;
-    reviews: 78;,
+    reviews: 78;,;,
 },;
   {;
     id: "ai-powered-hr-recruitment-platform",;
@@ -268,7 +268,7 @@ export const cuttingEdgeMicroSAASServices2026: CuttingEdgeMicroSAASService[] = [
     launchDate: "2026-01-10",;
     customers: 156,;
     rating: 4.8,;
-    reviews: 445;,
+    reviews: 445;,;,
 },;
   {;
     id: "iot-energy-management-platform",;
@@ -313,7 +313,7 @@ export const cuttingEdgeMicroSAASServices2026: CuttingEdgeMicroSAASService[] = [
     launchDate: "2026-02-20",;
     customers: 67,;
     rating: 4.7,;
-    reviews: 123;,
+    reviews: 123;,;,
 },;
   {;
     id: "ai-powered-financial-advisory-platform",;
@@ -358,7 +358,7 @@ export const cuttingEdgeMicroSAASServices2026: CuttingEdgeMicroSAASService[] = [
     launchDate: "2026-01-05",;
     customers: 234,;
     rating: 4.9,;
-    reviews: 678;,
+    reviews: 678;,;,
 },;
   {;
     id: "quantum-computing-simulation-platform",;

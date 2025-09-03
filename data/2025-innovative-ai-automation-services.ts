@@ -15,14 +15,14 @@ export const innovativeAIAutomationServices2025 = [;
       "Stakeholder relationship management",;
       "Performance analytics and continuous improvement";
     ],;
-    pricing: {;,
+    pricing: {;,;,
 },;
     category: "AI & Automation",;
     tags["AI", "Autonomous Systems", "Business Intelligence", "Process Automation", "Strategic Planning"],;
     website: "https://ziontechgroup.com/ai-autonomous-business-manager",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$25.8B",;
     targetAudience: "Enterprise businesses, startups, consulting firms, business consultants",;
@@ -35,7 +35,7 @@ export const innovativeAIAutomationServices2025 = [;
       "Performance monitoring and improvement";
     ],;
     integrations["ERP systems", "CRM platforms", "Accounting software", "Project management tools", "Communication platforms"],;
-    compliance["GDPR", "CCPA", "SOC2", "ISO 27001", "SOX"];,
+    compliance["GDPR", "CCPA", "SOC2", "ISO 27001", "SOX"];,;,
 },;
   {;
     id: "ai-emotional-intelligence-platform",;
@@ -53,14 +53,14 @@ export const innovativeAIAutomationServices2025 = [;
       "Privacy-preserving emotion processing",;
       "Custom emotional intelligence models";
     ],;
-    pricing: {;,
+    pricing: {;,;,
 },;
     category: "AI & Consciousness",;
     tags["AI", "Emotional Intelligence", "Human-AI Collaboration", "Customer Experience", "Mental Health"],;
     website: "https://ziontechgroup.com/ai-emotional-intelligence-platform",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$18.4B",;
     targetAudience: "Healthcare providers, customer service companies, HR departments, mental health professionals",;
@@ -73,7 +73,7 @@ export const innovativeAIAutomationServices2025 = [;
       "Therapeutic applications";
     ],;
     integrations["CRM systems", "Healthcare platforms", "HR software", "Communication tools", "Analytics platforms"],;
-    compliance["HIPAA", "GDPR", "CCPA", "SOC2", "ISO 27001"];,
+    compliance["HIPAA", "GDPR", "CCPA", "SOC2", "ISO 27001"];,;,
 },;
   {;
     id: "ai-quantum-creativity-studio",;
@@ -91,14 +91,14 @@ export const innovativeAIAutomationServices2025 = [;
       "Custom artistic style training",;
       "API access for creative applications";
     ],;
-    pricing: {;,
+    pricing: {;,;,
 },;
     category: "AI & Creativity",;
     tags["AI", "Quantum Computing", "Creative Content", "Artistic Intelligence", "Design Automation"],;
     website: "https://ziontechgroup.com/ai-quantum-creativity-studio",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$32.1B",;
     targetAudience: "Creative agencies, marketing teams, content creators, designers, artists",;
@@ -111,7 +111,7 @@ export const innovativeAIAutomationServices2025 = [;
       "Educational materials";
     ],;
     integrations["Design tools", "Marketing platforms", "Content management systems", "Social media platforms", "E-commerce platforms"],;
-    compliance["Copyright protection", "Intellectual property rights", "Creative commons licensing", "Commercial usage rights"];,
+    compliance["Copyright protection", "Intellectual property rights", "Creative commons licensing", "Commercial usage rights"];,;,
 },;
   {;
     id: "ai-predictive-healthcare-diagnostics",;
@@ -129,14 +129,14 @@ export const innovativeAIAutomationServices2025 = [;
       "Telemedicine integration",;
       "HIPAA-compliant data security";
     ],;
-    pricing: {;,
+    pricing: {;,;,
 },;
     category: "AI & Healthcare",;
     tags["AI", "Healthcare", "Predictive Analytics", "Medical Diagnostics", "Preventive Medicine"],;
     website: "https://ziontechgroup.com/ai-predictive-healthcare-diagnostics",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$45.7B",;
     targetAudience: "Hospitals, clinics, healthcare providers, insurance companies, pharmaceutical companies",;
@@ -149,7 +149,7 @@ export const innovativeAIAutomationServices2025 = [;
       "Healthcare cost optimization";
     ],;
     integrations["Electronic Health Records", "Medical imaging systems", "Laboratory systems", "Pharmacy systems", "Insurance platforms"],;
-    compliance["HIPAA", "FDA", "SOC2", "ISO 27001", "HITECH"];,
+    compliance["HIPAA", "FDA", "SOC2", "ISO 27001", "HITECH"];,;,
 },;
   {;
     id: "ai-autonomous-financial-advisor",;
@@ -167,14 +167,14 @@ export const innovativeAIAutomationServices2025 = [;
       "ESG and sustainable investing options",;
       "24/7 autonomous operation";
     ],;
-    pricing: {;,
+    pricing: {;,;,
 },;
     category: "AI & Finance",;
     tags["AI", "Financial Planning", "Investment Management", "Wealth Management", "Portfolio Optimization"],;
     website: "https://ziontechgroup.com/ai-autonomous-financial-advisor",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$38.9B",;
     targetAudience: "Individual investors, financial advisors, wealth management firms, banks, insurance companies",;
@@ -184,4 +184,4 @@ export const innovativeAIAutomationServices2025 = [;
       "Investment portfolio management",;
       "Retirement planning",;
       "Tax optimization',;
-]
+]}

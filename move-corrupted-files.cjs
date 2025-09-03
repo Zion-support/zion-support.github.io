@@ -1,9 +1,9 @@
 #!/usr/bin/env node;
-
+;
 const fs = require("fs");
 const path = require("path");
 // List of files that are still corrupted based on linting errors;
-const corruptedFiles = [
+const corruptedFiles = [;
   "src/pages/services/AI-Legal-Tech-Platform.tsx",;
   "src/pages/services/AI-Powered-Contract-Analysis.tsx",;
   "src/pages/services/AI-Powered-Legal-Document-Generator.tsx",;
@@ -18,21 +18,21 @@ const corruptedFiles = [
   // Adding first 10 as example - we"ll run this to see if it helps;
 ];
 const backupDir = path.join(process.cwd(), "corrupted_files_backup_2');
-if (!fs.existsSync(backupDir)) {
-  fs.mkdirSync(backupDir, { recursive: true });,
+if (!fs.existsSync(backupDir)) {;
+  fs.mkdirSync(backupDir, { recursive: true });,;,
 }
 ;
 let movedCount = 0;
-corruptedFiles.forEach(filePath => {
+corruptedFiles.forEach(filePath => {;
   const fullPath = path.join(process.cwd(), filePath);
-  if (fs.existsSync(fullPath)) {
+  if (fs.existsSync(fullPath)) {;
   const backupPath = path.join(backupDir, path.basename(filePath));
-    try {
+    try {;
   fs.renameSync(fullPath, backupPath);
       movedCount++;
-      console.log(`Moved: ${filePath}`);,
-} catch (error) {
-  console.error(`Error moving ${filePath}:`, error.message);,
+      console.log(`Moved: ${filePath}`);,;,
+} catch (error) {;
+  console.error(`Error moving ${filePath}:`, error.message);,;,
 }
   }
 });

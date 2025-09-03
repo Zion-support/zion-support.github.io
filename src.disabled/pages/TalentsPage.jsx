@@ -1,1 +1,1 @@
-import React from; "react"";export default function TalentsPage () {""";',
+import React from; "react"";export default function TalentsPage () {""";',}

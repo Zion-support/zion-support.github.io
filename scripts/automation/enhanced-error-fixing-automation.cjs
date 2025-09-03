@@ -1,37 +1,37 @@
 #!/usr/bin/env node;
 #!/"usr/bin/env" node;
 #!/usr/bin/env node;
-
+;
 const fs = require("fs");
 const path = require("path");
-
+;
 console.log(`"🚀 Starting Enhanced Error Fixing Automation System...");
-
+;
 // Configuration;
-const CONFIG = {
+const CONFIG = {;
   AUTOMATION_INTERVAL: parseInt(process.env.AUTOMATION_INTERVAL) || 900000, // 15 minutes;
   MAX_RETRIES: 3,;
   LOG_LEVEL: process.env.LOG_LEVEL || "info",;
   ENABLE_AUTO_FIX: process.env.ENABLE_AUTO_FIX !== "false",;
   ENABLE_TYPE_CHECK: process.env.ENABLE_TYPE_CHECK !== "false",;
-  ENABLE_LINT_FIX: process.env.ENABLE_LINT_FIX !== "false",;,
+  ENABLE_LINT_FIX: process.env.ENABLE_LINT_FIX !== "false",;,;,
 }
 ;
-class $1 {
-  constructor() {
+class $1 {;
+  constructor() {;
   this.fixesApplied = 0;
     this.errorsFixed = [];
-    this.startTime = new Date();,
+    this.startTime = new Date();,;,
 }
 ;
-  async run() {
-  try {
+  async run() {;
+  try {;
   console.log(`🔄 Starting error fixing cycle at ${this.startTime.toISOString()}";
       );
-
+;
       // Create logs directory if it doesn"t exist;
       this.ensureLogsDirectory();
-
+;
       // Run all error fixing operations;
       await this.fixTypeScriptErrors();
       await this.fixESLintErrors();
@@ -43,181 +43,181 @@ class $1 {
       await this.fixTypeAnnotations();
       await this.fixInterfaceErrors();
       await this.fixBuildErrors();
-
+;
       // Run final checks;
       await this.runFinalChecks();
-
+;
       // Generate report;
       await this.generateReport();
-
+;
       console.log(`✅ Enhanced error fixing completed successfully! Applied ${this.fixesApplied} fixes.";
-      );,
-} catch (error) {
+      );,;,
+} catch (error) {;
   console.error("❌ Enhanced error fixing failed: ", error.message);
-      await this.generateErrorReport(error);,
+      await this.generateErrorReport(error);,;,
 }
   }
 ;
-  ensureLogsDirectory() {
+  ensureLogsDirectory() {;
   const logsDir = path.join(process.cwd(), "automation", "logs");
-    if (!fs.existsSync(logsDir)) {
-  fs.mkdirSync(logsDir, { recursive: true });,
+    if (!fs.existsSync(logsDir)) {;
+  fs.mkdirSync(logsDir, { recursive: true });,;,
 }
   }
 ;
-  async fixTypeScriptErrors() {
+  async fixTypeScriptErrors() {;
   console.log("🔧 Fixing TypeScript errors...");
-
-    try {
+;
+    try {;
   // Run TypeScript compiler to get error list;
-      const result = execSync("npx tsc --noEmit --pretty false", {
+      const result = execSync("npx tsc --noEmit --pretty false", {;
   encoding: "utf8",;
-        stdio: "pipe",;,
+        stdio: "pipe",;,;,
 });
-
+;
       // Parse errors and fix them;
       const errors = this.parseTypeScriptErrors(result);
-      for (const error of errors) {
-  await this.fixTypeScriptError(error);,
+      for (const error of errors) {;
+  await this.fixTypeScriptError(error);,;,
 }
-    } catch (error) {
+    } catch (error) {;
   // TypeScript compilation failed, which is expected;
       const errorOutput = error.stdout || error.stderr || ";
       const errors = this.parseTypeScriptErrors(errorOutput);
-
-      for (const error of errors) {
-  await this.fixTypeScriptError(error);,
+;
+      for (const error of errors) {;
+  await this.fixTypeScriptError(error);,;,
 }
     }
   }
 ;
-  parseTypeScriptErrors(output) {
+  parseTypeScriptErrors(output) {;
   const errors = [];
     const lines = output.split("\n");
-
-    for (const line of lines) {
+;
+    for (const line of lines) {;
   const match = line.match(/([^(]+)\((\d+),(\d+)\):\s*(.+)/);
-      if (match) {
-  errors.push({
+      if (match) {;
+  errors.push({;
   file: match[1].trim(),;
           line: parseInt(match[2]),;
           column: parseInt(match[3]),;
-          message: match[4].trim(),;,
-});,
+          message: match[4].trim(),;,;,
+});,;,
 }
     }
 ;
-    return errors;,
+    return errors;,;,
 }
 ;
-  async fixTypeScriptError(error) {
+  async fixTypeScriptError(error) {;
   if (!fs.existsSync(error.file)) return;
-
-    try {
+;
+    try {;
   let content = fs.readFileSync(error.file, "utf8");
       const lines = content.split("\n");
-
+;
       // Apply fixes based on error message;
-      if (error.message.includes("Cannot find module")) {
-  content = this.fixModuleImport(content, error);,
+      if (error.message.includes("Cannot find module")) {;
+  content = this.fixModuleImport(content, error);,;,
 } else if (;
         error.message.includes("Property") &&;
         error.message.includes("does not exist");
-      ) {
-  content = this.fixPropertyError(content, error);,
+      ) {;
+  content = this.fixPropertyError(content, error);,;,
 } else if (;
         error.message.includes("Type") &&;
         error.message.includes("is not assignable");
-      ) {
-  content = this.fixTypeError(content, error);,
+      ) {;
+  content = this.fixTypeError(content, error);,;,
 } else if (;
         error.message.includes("Parameter") &&;
         error.message.includes("implicitly has an");
-      ) {
-  content = this.fixParameterError(content, error);,
+      ) {;
+  content = this.fixParameterError(content, error);,;,
 }
 ;
-      if (content !== fs.readFileSync(error.file, "utf8")) {
+      if (content !== fs.readFileSync(error.file, "utf8")) {;
   fs.writeFileSync(error.file, content);
         this.fixesApplied++;
-        this.errorsFixed.push({
+        this.errorsFixed.push({;
   file: error.file,;
           error: error.message,;
-          fix: "TypeScript error fix",;,
-});,
+          fix: "TypeScript error fix",;,;,
+});,;,
 }
-    } catch (err) {
+    } catch (err) {;
   console.warn(⚠️  Could not fix TypeScript error in ${error.file}:",;
         err.message;
-      );,
+      );,;,
 }
   }
 ;
-  fixModuleImport(content, error) {
+  fixModuleImport(content, error) {;
   // Fix common import issues;
     const moduleName = error.message.match(/Cannot find module "([^"]+)"/)?.[1];
-    if (moduleName) {
+    if (moduleName) {;
   // Try to fix common import patterns;
       content = content.replace(;
         new RegExp(import.*from\\s+[""]${moduleName}[""], "g"),import {   } from "${moduleName}";
       );
 const { execSync, spawn } = require("child_process");
 const glob = require(`glob`);
-class EnhancedErrorFixingAutomation {
-  constructor() {
+class EnhancedErrorFixingAutomation {;
+  constructor() {;
   this.projectRoot = process.cwd();
     this.errorReports = [];
     this.fixesApplied = [];
     this.startTime = Date.now();
     this.logFile = path.join(this.projectRoot, `error-reports`, `error-fixer-report-${Date.now()}.json`);
     // Ensure error-reports directory exists;
-    if (!fs.existsSync(path.join(this.projectRoot, `error-reports`))) {
-  fs.mkdirSync(path.join(this.projectRoot, `error-reports`), { recursive: true });,
+    if (!fs.existsSync(path.join(this.projectRoot, `error-reports`))) {;
+  fs.mkdirSync(path.join(this.projectRoot, `error-reports`), { recursive: true });,;,
 }
   }
 ;
-  log(message, type = `info`) {
+  log(message, type = `info`) {;
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
     console.log(logMessage);
     // Also write to log file;
-    fs.appendFileSync(this.logFile.replace(`.json`, `.log`), logMessage + "\n");,
+    fs.appendFileSync(this.logFile.replace(`.json`, `.log`), logMessage + "\n");,;,
 }
 ;
-  async runCommand(command, options = {}) {
-  try {
-  const result = execSync(command, {
+  async runCommand(command, options = {}) {;
+  try {;
+  const result = execSync(command, {;
   cwd: this.projectRoot,;
         encoding: "utf8",;
         stdio: options.silent ? "pipe" : "inherit",;
-        ...options;,
+        ...options;,;,
 });
       return { success: true, output: result }
-    } catch (error) {
+    } catch (error) {;
   return { success: false, error: error.message, output: error.stdout || error.stderr   }
     }
   }
 ;
-  async fixESLintConfiguration() {
+  async fixESLintConfiguration() {;
   this.log("Fixing ESLint configuration...");
     // Remove old ESLint config files;
     const oldConfigs = [".eslintrc.js", `.eslintrc.cjs`, `.eslintrc.json`];
-    for (const config of oldConfigs) {
+    for (const config of oldConfigs) {;
   const configPath = path.join(this.projectRoot, config);
-      if (fs.existsSync(configPath)) {
+      if (fs.existsSync(configPath)) {;
   fs.unlinkSync(configPath);
         this.log(`Removed old ESLint config: ${config}`);
-        this.fixesApplied.push({
+        this.fixesApplied.push({;
   type: `eslint_config`,;
           file: config,;
-          description: `Removed old ESLint configuration file`;,
-});,
+          description: `Removed old ESLint configuration file`;,;,
+});,;,
 }
     }
 ;
     // Ensure flat config is properly configured;
     const flatConfigPath = path.join(this.projectRoot, "eslint.config.js");
-    if (!fs.existsSync(flatConfigPath)) {
+    if (!fs.existsSync(flatConfigPath)) {;
   this.log("Creating ESLint flat config...");
       const flatConfig = `import js from "@eslint/js";
 import globals from "globals";
@@ -226,14 +226,14 @@ import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "@typescript-eslint/eslint-plugin";
 import tsparser from "@typescript-eslint/parser";
-export default [
+export default [;
   js.configs.recommended,;
-  {
+  {;
   files: ["**/*.{js,jsx,ts,tsx}"],;
-    languageOptions: {
+    languageOptions: {;
   ecmaVersion: 2021,;
       sourceType: "module",;
-      globals: {
+      globals: {;
   ...globals.browser,;
         ...globals.node,;
         React: "readonly",;
@@ -254,16 +254,16 @@ export default [
         expect: "readonly",;
         vi: "readonly"},;
       parser: tsparser,;
-      parserOptions: {
-  ecmaFeatures: {
+      parserOptions: {;
+  ecmaFeatures: {;
   jsx: true},;
         project: "./tsconfig.json"}},;
-    plugins: {
+    plugins: {;
   react,;
       "react-hooks": reactHooks,;
       "react-refresh": reactRefresh,;
       "@typescript-eslint": tseslint},;
-    rules: {
+    rules: {;
   "react/jsx-uses-react": "error",;
       "react/jsx-uses-vars": "error",;
       "react-hooks/rules-of-hooks": "error",;
@@ -277,49 +277,49 @@ export default [
       "no-debugger": "error",;
       "prefer-const": "error",;
       "no-var": "error"}},;
-  {
+  {;
   files: ["**/*.{ts,tsx}"],;
-    languageOptions: {
+    languageOptions: {;
   parser: tsparser,;
-      parserOptions: {
+      parserOptions: {;
   project: "./tsconfig.json"}},;
-    rules: {
+    rules: {;
   "@typescript-eslint/no-unused-vars": "error",;
       "@typescript-eslint/no-explicit-any": "warn"}}];`;
       fs.writeFileSync(flatConfigPath, flatConfig);
-      this.fixesApplied.push({
+      this.fixesApplied.push({;
   type: "eslint_config",;
         file: "eslint.config.js",;
-        description: "Created ESLint flat configuration";,
-});,
+        description: "Created ESLint flat configuration";,;,
+});,;,
 }
     }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,;,
 }
 ;
-  async fixTypeScriptErrors() {
+  async fixTypeScriptErrors() {;
   this.log("Fixing TypeScript errors...");
     // Get TypeScript errors;
     const tsResult = await this.runCommand("npx tsc --noEmit --pretty false", { silent: true });
-    if (!tsResult.success) {
+    if (!tsResult.success) {;
   const errors = tsResult.output.split("\n").filter(line => line.includes("error TS"));
       for (const error of errors.slice(0, 50)) { // Limit to first 50 errors;
         const match = error.match(/(.+)\((\d+),(\d+)\): error TS(\d+): (.+)/);
-        if (match) {
+        if (match) {;
   const [, filePath, line, column, errorCode, message] = match;
-          await this.fixTypeScriptError(filePath, parseInt(line), parseInt(column), errorCode, message);,
+          await this.fixTypeScriptError(filePath, parseInt(line), parseInt(column), errorCode, message);,;,
 }
       }
     }
   }
 ;
-  async fixTypeScriptError(filePath, line, column, errorCode, message) {
-  try {
+  async fixTypeScriptError(filePath, line, column, errorCode, message) {;
+  try {;
   if (!fs.existsSync(filePath)) return;
       const content = fs.readFileSync(filePath, "utf8");
       const lines = content.split("\n");
       // Common TypeScript error fixes;
-      switch (errorCode) {
+      switch (errorCode) {;
   case "2307": // Cannot find module;
           await this.fixModuleImport(lines, line - 1, message);
           break;
@@ -336,417 +336,417 @@ export default [
           await this.fixImplicitAny(lines, line - 1, message);
           break;
         default: // Generic fix: add type annotations where missing;
-          await this.addTypeAnnotations(lines, line - 1, message);,
+          await this.addTypeAnnotations(lines, line - 1, message);,;,
 }
       ;
       fs.writeFileSync(filePath, lines.join(`\n`));
-      this.fixesApplied.push({
+      this.fixesApplied.push({;
   type: `typescript_error`,;
         file: filePath,;
         line,;
         errorCode,;
-        description: `Fixed TypeScript error: ${message}`;,
+        description: `Fixed TypeScript error: ${message}`;,;,
 });
-      ;,
-} catch (error) {
-  this.log(`Failed to fix TypeScript error in ${filePath  }: ${error.message}`, `error`);,
+      ;,;,
+} catch (error) {;
+  this.log(`Failed to fix TypeScript error in ${filePath  }: ${error.message}`, `error`);,;,
 }
   }
 ;
-  async fixModuleImport(lines, lineIndex, message) {
+  async fixModuleImport(lines, lineIndex, message) {;
   const line = lines[lineIndex];
-    if (line.includes(`import`) && message.includes("Cannot find module")) {
+    if (line.includes(`import`) && message.includes("Cannot find module")) {;
   // Try to fix common import issues;
       const moduleMatch = message.match(/Cannot find module "(.+)"/);
-      if (moduleMatch) {
+      if (moduleMatch) {;
   const moduleName = moduleMatch[1];
         // Common module name fixes;
-        const moduleFixes = {
+        const moduleFixes = {;
   "react": "react",;
           "react-dom": "react-dom",;
           "next": "next",;
           "@types/react": "@types/react",;
-          "@types/node": "@types/node";,
+          "@types/node": "@types/node";,;,
 }
-        if (moduleFixes[moduleName]) {
-  lines[lineIndex] = line.replace(moduleName, moduleFixes[moduleName]);,
+        if (moduleFixes[moduleName]) {;
+  lines[lineIndex] = line.replace(moduleName, moduleFixes[moduleName]);,;,
 }
       }
     }
   }
 ;
-  fixPropertyError(content, error) {
+  fixPropertyError(content, error) {;
   // Fix property access errors;
     const propertyName = error.message.match(;
       /Property "([^"]+)" does not exist/;
     )?.[1];
-    if (propertyName) {
+    if (propertyName) {;
   // Add optional chaining or type assertion;
       content = content.replace(new RegExp(\\.${propertyName}`, "g"`),?.${propertyName}";
       );
-  async fixPropertyAccess(lines, lineIndex, message) {
+  async fixPropertyAccess(lines, lineIndex, message) {;
   const line = lines[lineIndex];
-    if (message.includes("Property") && message.includes(`does not exist`)) {
+    if (message.includes("Property") && message.includes(`does not exist`)) {;
   // Add optional chaining or type assertion;
       const propertyMatch = message.match(/Property `(.+)` does not exist/);
-      if (propertyMatch) {
+      if (propertyMatch) {;
   const property = propertyMatch[1];
         // Add optional chaining;
-        lines[lineIndex] = line.replace(new RegExp(`\\.${property}\\b`), `?.${property}`);,
+        lines[lineIndex] = line.replace(new RegExp(`\\.${property}\\b`), `?.${property}`);,;,
 }
     }
   }
 ;
-  fixTypeError(content, error) {
+  fixTypeError(content, error) {;
   // Fix type assignment errors;
     content = content.replace(/:\s*"any/g", ": any");
     content = content.replace(/:\s*"string/g", ": string");
     content = content.replace(/:\s*"number/g", ": number");
     content = content.replace(/:\s*"boolean/g", ": boolean");
-    return content;,
+    return content;,;,
 }
 ;
-  fixParameterError(content, error) {
+  fixParameterError(content, error) {;
   // Fix parameter type errors;
     content = content.replace(/\(\s*([^)]+)\s*\)\s*=>/g, "($1: any) =>");
-    return content;,
+    return content;,;,
 }
 ;
-  async fixESLintErrors() {
+  async fixESLintErrors() {;
   if (!CONFIG.ENABLE_LINT_FIX) return;
-
+;
     console.log(`"🔧 Fixing ESLint errors...");
-
-    try {
+;
+    try {;
   // Run ESLint with auto-fix;
-      execSync("npx eslint . --fix --ext .js,.jsx,.ts,.tsx", {
-  stdio: "pipe",;,
+      execSync("npx eslint . --fix --ext .js,.jsx,.ts,.tsx", {;
+  stdio: "pipe",;,;,
 });
       console.log(`"✅ ESLint auto-fix completed");
-      this.fixesApplied += 10; // Estimate;,
-} catch (error) {
-  console.warn("⚠️  ESLint auto-fix had issues: ", error.message);,
+      this.fixesApplied += 10; // Estimate;,;,
+} catch (error) {;
+  console.warn("⚠️  ESLint auto-fix had issues: ", error.message);,;,
 }
   }
 ;
-  async fixImportExportErrors() {
+  async fixImportExportErrors() {;
   console.log(`"🔧 Fixing "import/export" errors...");
-
+;
     const files = this.getTypeScriptFiles();
-    for (const file of files) {
-  try {
+    for (const file of files) {;
+  try {;
   let content = fs.readFileSync(file, "utf8");
         let originalContent = content;
-
+;
         // Fix common import issues;
         content = this.fixImportStatements(content);
         content = this.fixExportStatements(content);
-
-        if (content !== originalContent) {
+;
+        if (content !== originalContent) {;
   fs.writeFileSync(file, content);
           this.fixesApplied++;
-  async fixTypeMismatch(lines, lineIndex, message) {
+  async fixTypeMismatch(lines, lineIndex, message) {;
   const line = lines[lineIndex];
-    if (message.includes(`Argument of type`)) {
+    if (message.includes(`Argument of type`)) {;
   // Add type assertion;
       const typeMatch = message.match(/Argument of type `(.+)` is not assignable to parameter of type `(.+)`/);
-      if (typeMatch) {
+      if (typeMatch) {;
   const [, fromType, toType] = typeMatch;
         // Add type assertion;
-        lines[lineIndex] = line.replace(/(\w+)/, `$1 as ${toType}`);,
+        lines[lineIndex] = line.replace(/(\w+)/, `$1 as ${toType}`);,;,
 }
     }
   }
 ;
-  async fixUnusedVariable(lines, lineIndex, message) {
+  async fixUnusedVariable(lines, lineIndex, message) {;
   const line = lines[lineIndex];
-    if (message.includes(`declared but never used`)) {
+    if (message.includes(`declared but never used`)) {;
   const varMatch = message.match(/Variable `(.+)` is declared but never used/);
-      if (varMatch) {
+      if (varMatch) {;
   const varName = varMatch[1];
         // Prefix with underscore to indicate intentionally unused;
-        lines[lineIndex] = line.replace(new RegExp(`\\b${varName}\\b`), `_${varName}`);,
+        lines[lineIndex] = line.replace(new RegExp(`\\b${varName}\\b`), `_${varName}`);,;,
 }
     }
   }
 ;
-  async fixImplicitAny(lines, lineIndex, message) {
+  async fixImplicitAny(lines, lineIndex, message) {;
   const line = lines[lineIndex];
-    if (message.includes(`implicitly has an \`any\` type`)) {
+    if (message.includes(`implicitly has an \`any\` type`)) {;
   const paramMatch = message.match(/Parameter `(.+)` implicitly has an `any` type/);
-      if (paramMatch) {
+      if (paramMatch) {;
   const paramName = paramMatch[1];
         // Add explicit any type;
-        lines[lineIndex] = line.replace(new RegExp(`\\b${paramName}\\b`), `${paramName}: any`);,
+        lines[lineIndex] = line.replace(new RegExp(`\\b${paramName}\\b`), `${paramName}: any`);,;,
 }
     }
   }
 ;
-  async addTypeAnnotations(lines, lineIndex, message) {
+  async addTypeAnnotations(lines, lineIndex, message) {;
   const line = lines[lineIndex];
     // Add basic type annotations for common patterns;
-    if (line.includes(`const`) && !line.includes(`:`)) {
-  if (line.includes("= []")) {
-  lines[lineIndex] = line.replace("= []", ": any[] = []");,
-} else if (line.includes("= {}")) {
-  lines[lineIndex] = line.replace("= {}", ": any = {}");,
-} else if (line.includes("= null")) {
-  lines[lineIndex] = line.replace("= null", ": any = null");,
+    if (line.includes(`const`) && !line.includes(`:`)) {;
+  if (line.includes("= []")) {;
+  lines[lineIndex] = line.replace("= []", ": any[] = []");,;,
+} else if (line.includes("= {}")) {;
+  lines[lineIndex] = line.replace("= {}", ": any = {}");,;,
+} else if (line.includes("= null")) {;
+  lines[lineIndex] = line.replace("= null", ": any = null");,;,
 }
     }
   }
 ;
-  async fixMergeConflicts() {
+  async fixMergeConflicts() {;
   this.log("Fixing merge conflicts...");
-    const files = glob.sync("**/*.{js,jsx,ts,tsx,json,md}", {
-  ignore: ["node_modules/**", "dist/**", "build/**", ".git/**"];,
+    const files = glob.sync("**/*.{js,jsx,ts,tsx,json,md}", {;
+  ignore: ["node_modules/**", "dist/**", "build/**", ".git/**"];,;,
 });
-    for (const file of files) {
-  try {
+    for (const file of files) {;
+  try {;
   const content = fs.readFileSync(file, "utf8");
-        if (content.includes("<<<<<<<") || content.includes("") || content.includes(">>>>>>>")) {
+        if (content.includes("<<<<<<<") || content.includes("") || content.includes(">>>>>>>")) {;
   const fixedContent = this.resolveMergeConflicts(content);
           fs.writeFileSync(file, fixedContent);
-          this.fixesApplied.push({
+          this.fixesApplied.push({;
   type: `merge_conflict`,;
             file,;
-            description: `Resolved merge conflict markers`;,
+            description: `Resolved merge conflict markers`;,;,
 });
-          this.log(`Fixed merge conflicts in ${file}`);,
+          this.log(`Fixed merge conflicts in ${file}`);,;,
 }
-      } catch (error) {
-  this.log(`Failed to process ${file  }: ${error.message}`, `error`);,
+      } catch (error) {;
+  this.log(`Failed to process ${file  }: ${error.message}`, `error`);,;,
 }
     }
   }
 ;
-  resolveMergeConflicts(content) {
+  resolveMergeConflicts(content) {;
   // Simple merge conflict resolution - keep the first version;
     return content;
       .replace(/\n([\s\S]*?)\n\n[\s\S]*?\n      .replace(/;
-  async fixESLintErrors() {
+  async fixESLintErrors() {;
   this.log("Fixing ESLint errors...");
     // Try to run ESLint with auto-fix;
     const eslintResult = await this.runCommand("npx eslint . --fix", { silent: true });
-    if (eslintResult.success) {
-  this.fixesApplied.push({
+    if (eslintResult.success) {;
+  this.fixesApplied.push({;
   type: "eslint_auto_fix",;
-        description: "Applied ESLint auto-fixes";,
+        description: "Applied ESLint auto-fixes";,;,
 });
-      this.log("ESLint auto-fixes applied successfully");,
-} else {
+      this.log("ESLint auto-fixes applied successfully");,;,
+} else {;
   this.log("ESLint auto-fix failed, attempting manual fixes...", "warn");
-      await this.fixESLintErrorsManually();,
+      await this.fixESLintErrorsManually();,;,
 }
   }
 ;
-  async fixESLintErrorsManually() {
+  async fixESLintErrorsManually() {;
   // Get ESLint errors;
     const eslintResult = await this.runCommand("npx eslint . --format=compact", { silent: true });
-    if (!eslintResult.success) {
+    if (!eslintResult.success) {;
   const errors = eslintResult.output.split("\n").filter(line => line.includes("error"));
       for (const error of errors.slice(0, 20)) { // Limit to first 20 errors;
         const match = error.match(/(.+) line (\d+), col (\d+), (.+)/);
-        if (match) {
+        if (match) {;
   const [, filePath, line, column, message] = match;
-          await this.fixESLintError(filePath, parseInt(line), parseInt(column), message);,
+          await this.fixESLintError(filePath, parseInt(line), parseInt(column), message);,;,
 }
         }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,;,
 }
     }
   }
 ;
-  fixImportStatements(content) {
+  fixImportStatements(content) {;
   // Fix duplicate imports;
     const imports = new Set();
     const lines = content.split("\n");
     const newLines = [];
-
-    for (const line of lines) {
-  if (line.trim().startsWith("import ")) {
+;
+    for (const line of lines) {;
+  if (line.trim().startsWith("import ")) {;
   const importKey = line.trim();
-        if (!imports.has(importKey)) {
+        if (!imports.has(importKey)) {;
   imports.add(importKey);
-          newLines.push(line);,
+          newLines.push(line);,;,
 }
-      } else {
-  newLines.push(line);,
+      } else {;
+  newLines.push(line);,;,
 }
     }
 ;
-    return newLines.join("\n");,
+    return newLines.join("\n");,;,
 }
 ;
-  fixExportStatements(content) {
+  fixExportStatements(content) {;
   // Fix export syntax;
     content = content.replace(;
       /export\s+default\s+"function/g",export default function";
     );
     content = content.replace(/export\s+"function/g", "export function");
     content = content.replace(/export\s+"const/g", "export const");
-    return content;,
+    return content;,;,
 }
 ;
-  async fixUnusedVariables() {
+  async fixUnusedVariables() {;
   console.log("🔧 Fixing unused variables...");
-
+;
     const files = this.getTypeScriptFiles();
-    for (const file of files) {
-  try {
+    for (const file of files) {;
+  try {;
   let content = fs.readFileSync(file, "utf8");
         let originalContent = content;
-
+;
         // Remove unused imports;
         content = this.removeUnusedImports(content);
-
+;
         // Fix unused variables;
         content = content.replace(;
           /const\s+([a-zA-Z_][a-zA-Z0-9_]*)\s*=\s*[^]+;\s*(?=\n)/g,;
           ";
         );
-
-        if (content !== originalContent) {
+;
+        if (content !== originalContent) {;
   fs.writeFileSync(file, content);
-          this.fixesApplied++;,
+          this.fixesApplied++;,;,
 }
-      } catch (error) {
+      } catch (error) {;
   console.warn(⚠️  Could not fix unused variables in ${file}:",;
           error.message;
-        );,
+        );,;,
 }
     }
   }
 ;
-  removeUnusedImports(content) {
+  removeUnusedImports(content) {;
   // Remove unused import statements;
     const lines = content.split("\n");
     const newLines = [];
-
-    for (const line of lines) {
-  if (line.trim().startsWith("import ")) {
+;
+    for (const line of lines) {;
+  if (line.trim().startsWith("import ")) {;
   // Check if the import is actually used;
         const importMatch = line.match(/import\s+\{?\s*([^}]+)\s*\}?\s+from/);
-        if (importMatch) {
+        if (importMatch) {;
   const importedItems = importMatch[1];
             .split(",");
             .map(item => item.trim());
-          const isUsed = importedItems.some(item => {
+          const isUsed = importedItems.some(item => {;
   const itemName = item.replace(/\s+as\s+.*/, ");
-            return content.includes(itemName) && !line.includes(itemName);,
+            return content.includes(itemName) && !line.includes(itemName);,;,
 });
-
-          if (isUsed) {
-  newLines.push(line);,
+;
+          if (isUsed) {;
+  newLines.push(line);,;,
 }
-        } else {
-  newLines.push(line);,
+        } else {;
+  newLines.push(line);,;,
 }
-      } else {
-  newLines.push(line);,
+      } else {;
+  newLines.push(line);,;,
 }
     }
 ;
-    return newLines.join("\n");,
+    return newLines.join("\n");,;,
 }
 ;
-  async fixConsoleStatements() {
+  async fixConsoleStatements() {;
   console.log("🔧 Fixing console statements..."`);
-
+;
     const files = this.getTypeScriptFiles();
-    for (const file of files) {
-  try {
+    for (const file of files) {;
+  try {;
   let content = fs.readFileSync(file, "utf8");
         let originalContent = content;
-
+;
         // Comment out console statements in production;
-        if (process.env.NODE_ENV === "production") {
+        if (process.env.NODE_ENV === "production") {;
   content = content.replace(;
             /console\.(log|warn|error|info|debug)\(/g,// console.$1(";
-          );,
+          );,;,
 }
 ;
-        if (content !== originalContent) {
+        if (content !== originalContent) {;
   fs.writeFileSync(file, content);
-          this.fixesApplied++;,
+          this.fixesApplied++;,;,
 }
-      } catch (error) {
+      } catch (error) {;
   console.warn( ⚠️  Could not fix console statements in ${file}:,;
           error.message;
-        );,
+        );,;,
 }
     }
   }
 ;
-  async fixReactHooksErrors() {
+  async fixReactHooksErrors() {;
   console.log(`"🔧 Fixing React hooks errors...");
-
+;
     const files = this.getTypeScriptFiles();
-    for (const file of files) {
-  try {
+    for (const file of files) {;
+  try {;
   let content = fs.readFileSync(file, "utf8");
         let originalContent = content;
-
+;
         // Fix useEffect dependencies;
         content = content.replace(;
           /useEffect\(\s*\(\)\s*=>\s*\{/g,useEffect(() => {";
         );
-
+;
         // Fix useState type annotations;
         content = content.replace(/useState\s*<\s*any\s*>/g, "useState<any>");
-
-        if (content !== originalContent) {
+;
+        if (content !== originalContent) {;
   fs.writeFileSync(file, content);
-          this.fixesApplied++;,
+          this.fixesApplied++;,;,
 }
-      } catch (error) {
+      } catch (error) {;
   console.warn(⚠️  Could not fix React hooks in ${file}:",;
           error.message;
-        );,
+        );,;,
 }
     }
   }
 ;
-  async fixJSXErrors() {
+  async fixJSXErrors() {;
   console.log("🔧 Fixing JSX errors..."`);
-
+;
     const files = this.getTypeScriptFiles();
-    for (const file of files) {
-  try {
+    for (const file of files) {;
+  try {;
   let content = fs.readFileSync(file, "utf8");
         let originalContent = content;
-
+;
         // Fix JSX syntax;
         content = content.replace(;
           /<([A-Z][a-zA-Z]*)\s+([^>]*)\/>/g,<$1 $2 />";
         );
         content = content.replace(/className=/g, "className=");
         content = content.replace(/onClick=/g, "onClick=");
-
-        if (content !== originalContent) {
+;
+        if (content !== originalContent) {;
   fs.writeFileSync(file, content);
-          this.fixesApplied++;,
+          this.fixesApplied++;,;,
 }
-      } catch (error) {console.warn(⚠️  Could not fix JSX in ${file}:, error.message);,
+      } catch (error) {console.warn(⚠️  Could not fix JSX in ${file}:, error.message);,;,
 }
     }
   }
 ;
-  async fixTypeAnnotations() {
+  async fixTypeAnnotations() {;
   console.log(`"🔧 Fixing type annotations...");
-
+;
     const files = this.getTypeScriptFiles();
-    for (const file of files) {
-  try {
+    for (const file of files) {;
+  try {;
   let content = fs.readFileSync(file, "utf8");
         let originalContent = content;
-
+;
         // Fix common type annotation issues;
         content = content.replace(/:\s*any"/g, ": any");
         content = content.replace(/:\s*string"/g, ": string");
         content = content.replace(/:\s*number"/g, ": number");
         content = content.replace(/:\s*boolean"/g, ": boolean");
-
+;
         // Fix function parameter types;
         content = content.replace(;
           /\(\s*([^)]+)\s*\)\s*:\s*"void/g",($1: any): void";
@@ -755,170 +755,170 @@ export default [
           /\(\s*([^)]+)\s*\)\s*:\s*"Promise/g",;
           "($1: any): Promise";
         );
-
-        if (content !== originalContent) {
+;
+        if (content !== originalContent) {;
   fs.writeFileSync(file, content);
-          this.fixesApplied++;,
+          this.fixesApplied++;,;,
 }
-      } catch (error) {
+      } catch (error) {;
   console.warn(⚠️  Could not fix type annotations in ${file}:",;
           error.message;
-        );,
+        );,;,
 }
     }
   }
 ;
-  async fixInterfaceErrors() {
+  async fixInterfaceErrors() {;
   console.log("🔧 Fixing interface errors..."`);
-
+;
     const files = this.getTypeScriptFiles();
-    for (const file of files) {
-  try {
+    for (const file of files) {;
+  try {;
   let content = fs.readFileSync(file, "utf8");
         let originalContent = content;
-
+;
         // Fix interface syntax;
         content = content.replace(;
           /interface\s+([^{]+)\s*{\s*;/g,interface $1 {";
         );
         content = content.replace(/:\s*{\s*;/g, ": {");
         content = content.replace(/;\s*}/g, "}");
-
-        if (content !== originalContent) {
+;
+        if (content !== originalContent) {;
   fs.writeFileSync(file, content);
-          this.fixesApplied++;,
+          this.fixesApplied++;,;,
 }
-      } catch (error) {console.warn(⚠️  Could not fix interfaces in ${file}:, error.message);,
+      } catch (error) {console.warn(⚠️  Could not fix interfaces in ${file}:, error.message);,;,
 }
     }
   }
 ;
-  async fixBuildErrors() {
+  async fixBuildErrors() {;
   console.log(`"🔧 Fixing build errors...");
-
-    try {
+;
+    try {;
   // Try to build the project;
       execSync("npm run build", { stdio: "pipe" });
-      console.log("✅ Build successful"`);,
-} catch (error) {
-  console.warn("⚠️  Build failed, but continuing with other fixes");,
+      console.log("✅ Build successful"`);,;,
+} catch (error) {;
+  console.warn("⚠️  Build failed, but continuing with other fixes");,;,
 }
   }
 ;
-  async runFinalChecks() {
+  async runFinalChecks() {;
   console.log("🔍 Running final checks...");
-
-    if (CONFIG.ENABLE_TYPE_CHECK) {
-  try {
+;
+    if (CONFIG.ENABLE_TYPE_CHECK) {;
+  try {;
   execSync("npm run type-check", { stdio: "pipe" });
-        console.log("✅ TypeScript check passed");,
-} catch (error) {
-  console.warn("⚠️  TypeScript check still has issues");,
+        console.log("✅ TypeScript check passed");,;,
+} catch (error) {;
+  console.warn("⚠️  TypeScript check still has issues");,;,
 }
     }
 ;
-    if (CONFIG.ENABLE_LINT_FIX) {
-  try {
+    if (CONFIG.ENABLE_LINT_FIX) {;
+  try {;
   execSync("npm run lint", { stdio: "pipe" });
-        console.log("✅ ESLint check passed");,
-} catch (error) {
-  console.warn("⚠️  ESLint check still has issues");,
+        console.log("✅ ESLint check passed");,;,
+} catch (error) {;
+  console.warn("⚠️  ESLint check still has issues");,;,
 }
     }
   }
 ;
-  getTypeScriptFiles() {
+  getTypeScriptFiles() {;
   const files = [];
     const srcDir = path.join(process.cwd(), "src");
-
-    function walkDir(dir) {
+;
+    function walkDir(dir) {;
   const items = fs.readdirSync(dir);
-      for (const item of items) {
+      for (const item of items) {;
   const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
-
-        if (stat.isDirectory()) {
-  walkDir(fullPath);,
-} else if (item.endsWith(".ts") || item.endsWith(".tsx")) {
+;
+        if (stat.isDirectory()) {;
+  walkDir(fullPath);,;,
+} else if (item.endsWith(".ts") || item.endsWith(".tsx")) {;
   files.push(fullPath);
-  async fixESLintError(filePath, line, column, message) {
-  try {
+  async fixESLintError(filePath, line, column, message) {;
+  try {;
   if (!fs.existsSync(filePath)) return;
       const content = fs.readFileSync(filePath, "utf8");
       const lines = content.split("\n");
-      if (message.includes(`no-unused-vars`)) {
+      if (message.includes(`no-unused-vars`)) {;
   // Fix unused variables;
         const varMatch = message.match(/`(.+)` is defined but never used/);
-        if (varMatch) {
+        if (varMatch) {;
   const varName = varMatch[1];
-          lines[line - 1] = lines[line - 1].replace(new RegExp(`\\b${varName}\\b`), `_${varName}`);,
+          lines[line - 1] = lines[line - 1].replace(new RegExp(`\\b${varName}\\b`), `_${varName}`);,;,
 }
-      } else if (message.includes(`no-console`)) {
+      } else if (message.includes(`no-console`)) {;
   // Remove console statements;
-        lines[line - 1] = lines[line - 1].replace(/console\.(log|warn|error|info)\([^)]*\);?/g, ``);,
-} else if (message.includes("prefer-const")) {
+        lines[line - 1] = lines[line - 1].replace(/console\.(log|warn|error|info)\([^)]*\);?/g, ``);,;,
+} else if (message.includes("prefer-const")) {;
   // Change let to const;
-        lines[line - 1] = lines[line - 1].replace(/\blet\b/g, "const");,
+        lines[line - 1] = lines[line - 1].replace(/\blet\b/g, "const");,;,
 }
       ;
       fs.writeFileSync(filePath, lines.join(`\n`));
-      this.fixesApplied.push({
+      this.fixesApplied.push({;
   type: `eslint_error`,;
         file: filePath,;
         line,;
-        description: `Fixed ESLint error: ${message}`;,
+        description: `Fixed ESLint error: ${message}`;,;,
 });
-      ;,
-} catch (error) {
-  this.log(`Failed to fix ESLint error in ${filePath  }: ${error.message}`, `error`);,
+      ;,;,
+} catch (error) {;
+  this.log(`Failed to fix ESLint error in ${filePath  }: ${error.message}`, `error`);,;,
 }
   }
 ;
-  async fixDependencyIssues() {
+  async fixDependencyIssues() {;
   this.log(`Fixing dependency issues...`);
     // Check for missing dependencies;
     const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8"));
     const missingDeps = [];
     // Check for common missing dependencies;
-    const commonDeps = [
+    const commonDeps = [;
   "@types/react", "@types/react-dom", "@types/node",;
       "eslint", "@eslint/js", "globals", "eslint-plugin-react",;
       "eslint-plugin-react-hooks", "eslint-plugin-react-refresh",;
       `@typescript-eslint/eslint-plugin`, `@typescript-eslint/parser`;
     ];
     ;
-    for (const dep of commonDeps) {
-  if (!packageJson.dependencies?.[dep] && !packageJson.devDependencies?.[dep]) {
-  missingDeps.push(dep);,
+    for (const dep of commonDeps) {;
+  if (!packageJson.dependencies?.[dep] && !packageJson.devDependencies?.[dep]) {;
+  missingDeps.push(dep);,;,
 }
     }
 ;
-    if (fs.existsSync(srcDir)) {
-  walkDir(srcDir);,
+    if (fs.existsSync(srcDir)) {;
+  walkDir(srcDir);,;,
 }
 ;
-    return files;,
+    return files;,;,
 }
 ;
-  async generateReport() {
-  const report = {
+  async generateReport() {;
+  const report = {;
   timestamp: new Date().toISOString(),;
       duration: new Date() - this.startTime,;
       fixesApplied: this.fixesApplied,;
       errorsFixed: this.errorsFixed,;
       summary: "Enhanced error fixing automation completed",;
       status: "completed",;
-      config: CONFIG,;,
+      config: CONFIG,;,;,
 }
 ;
     const reportPath = path.join(;
       process.cwd(),enhanced-error-fixing-report.json";
     );
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(📊 Report saved to ${reportPath});,
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(📊 Report saved to ${reportPath});,;,
 }
 ;
-  async generateErrorReport(error) {
-  const report = {
+  async generateErrorReport(error) {;
+  const report = {;
   timestamp: new Date().toISOString(),;
       duration: new Date() - this.startTime,;
       fixesApplied: this.fixesApplied,;
@@ -927,60 +927,60 @@ export default [
       stack: error.stack,;
       summary: "Enhanced error fixing automation failed",;
       status: "failed",;
-      config: CONFIG,;,
+      config: CONFIG,;,;,
 }
 ;
     const reportPath = path.join(;
       process.cwd(),enhanced-error-fixing-error-report.json";
     );
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(📊 Error report saved to ${reportPath}``);,
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(📊 Error report saved to ${reportPath}``);,;,
 }
 }
 ;
 // Main execution;
-async function $1() {
+async function $1() {;
   const automation = new EnhancedErrorFixingAutomation();
-  await automation.run();,
+  await automation.run();,;,
 }
 ;
 // Run if called directly;
-if (require.main === module) {
-  main().catch(console.error);,
+if (require.main === module) {;
+  main().catch(console.error);,;,
 }
 ;
 module.exports = EnhancedErrorFixingAutomation;
-    if (missingDeps.length > 0) {
+    if (missingDeps.length > 0) {;
   this.log(`Installing missing dependencies: ${missingDeps.join(", ")}`);
       await this.runCommand(`npm install --save-dev ${missingDeps.join(` `)}`);
-      this.fixesApplied.push({
+      this.fixesApplied.push({;
   type: `dependency_install`,;
-        description: `Installed missing dependencies: ${missingDeps.join(`, `)}`;,
-});,
+        description: `Installed missing dependencies: ${missingDeps.join(`, `)}`;,;,
+});,;,
 }
   }
 ;
-  async generateReport() {
+  async generateReport() {;
   const duration = Date.now() - this.startTime;
-    const report = {
+    const report = {;
   timestamp: new Date().toISOString(),;
       duration: `${duration}ms`,;
       fixesApplied: this.fixesApplied,;
-      summary: {
+      summary: {;
   totalFixes: this.fixesApplied.length,;
         typescriptFixes: this.fixesApplied.filter(f => f.type === `typescript_error`).length,;
         eslintFixes: this.fixesApplied.filter(f => f.type === `eslint_error` || f.type === "eslint_auto_fix").length,;
         mergeConflictFixes: this.fixesApplied.filter(f => f.type === "merge_conflict').length,;
-        dependencyFixes: this.fixesApplied.filter(f => f.type === `dependency_install`).length;,
+        dependencyFixes: this.fixesApplied.filter(f => f.type === `dependency_install`).length;,;,
 }
     }
     fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2));
     this.log(`Error fixing report saved to: ${this.logFile}`);
-    return report;,
+    return report;,;,
 }
 ;
-  async run() {
+  async run() {;
   this.log(`Starting Enhanced Error Fixing Automation...`);
-    try {
+    try {;
   // Run all fix operations;
       await this.fixESLintConfiguration();
       await this.fixDependencyIssues();
@@ -992,18 +992,18 @@ module.exports = EnhancedErrorFixingAutomation;
       this.log(`Error fixing completed! Applied ${report.summary.totalFixes} fixes.`);
       this.log(`Report: ${report.summary.typescriptFixes} TypeScript, ${report.summary.eslintFixes} ESLint, ${report.summary.mergeConflictFixes} merge conflicts, ${report.summary.dependencyFixes} dependencies`);
       return report;
-      ;,
-} catch (error) {
+      ;,;,
+} catch (error) {;
   this.log(`Error fixing automation failed: ${error.message  }`, `error`);
-      throw error;,
+      throw error;,;,
 }
   }
 }
 ;
 // Run the automation if called directly;
-if (require.main === module) {
+if (require.main === module) {;
   const automation = new EnhancedErrorFixingAutomation();
-  automation.run().catch(console.error);,
+  automation.run().catch(console.error);,;,
 }
 ;
-module.exports = EnhancedErrorFixingAutomation
+module.exports = EnhancedErrorFixingAutomation}}}}}}}}}}}}}})))

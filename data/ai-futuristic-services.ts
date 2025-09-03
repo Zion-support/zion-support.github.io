@@ -79,14 +79,14 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced quantum AI blockchain analytics platform with real-time monitoring, fraud detection, and predictive insights. Includes comprehensive analytics tools and compliance features.",;
     launchDate: "2024-12-15",;
     customers: 180,;
     rating: 4.8,;
-    reviews: 95;,
+    reviews: 95;,;,
 },;
   // AI-Powered Quantum Code Review Copilot;
   {;
@@ -131,14 +131,14 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced quantum AI code review platform with real-time analysis, bug detection, and security scanning. Includes IDE integration and team collaboration features.",;
     launchDate: "2024-11-01",;
     customers: 420,;
     rating: 4.7,;
-    reviews: 198;,
+    reviews: 198;,;,
 },;
   // AI-Powered Quantum Data Analytics;
   {;
@@ -183,14 +183,14 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced quantum AI data analytics platform with real-time processing, predictive modeling, and automated insights. Includes comprehensive visualization and reporting tools.",;
     launchDate: "2024-10-15",;
     customers: 280,;
     rating: 4.8,;
-    reviews: 145;,
+    reviews: 145;,;,
 },;
   // AI-Powered Quantum Evaluations;
   {;
@@ -235,14 +235,14 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced quantum AI evaluation platform with real-time assessment, personalized feedback, and skill gap analysis. Includes comprehensive analytics and reporting tools.",;
     launchDate: "2024-09-15",;
     customers: 195,;
     rating: 4.8,;
-    reviews: 102;,
+    reviews: 102;,;,
 },;
   // AI-Powered Quantum Guardrails;
   {;
@@ -287,14 +287,14 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced quantum AI safety platform with real-time monitoring, ethical governance, and risk assessment. Includes comprehensive safety features and compliance tools.",;
     launchDate: "2024-08-01",;
     customers: 85,;
     rating: 4.9,;
-    reviews: 48;,
+    reviews: 48;,;,
 },;
   // AI-Powered Quantum HR Recruitment;
   {;
@@ -339,14 +339,14 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced quantum AI recruitment platform with automated screening, skill assessment, and performance prediction. Includes comprehensive HR features and compliance tools.",;
     launchDate: "2024-07-15",;
     customers: 320,;
     rating: 4.7,;
-    reviews: 167;,
+    reviews: 167;,;,
 },;
   // AI-Powered Quantum IoT Platform;
   {;
@@ -391,14 +391,14 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced quantum AI IoT platform with real-time management, predictive maintenance, and security monitoring. Includes comprehensive IoT features and analytics tools.",;
     launchDate: "2024-06-01",;
     customers: 450,;
     rating: 4.8,;
-    reviews: 234;,
+    reviews: 234;,;,
 },;
   // AI-Powered Quantum Legal Contract Analyzer;
   {;
@@ -443,14 +443,14 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced quantum AI legal platform with automated contract review, risk assessment, and compliance checking. Includes comprehensive legal features and collaboration tools.",;
     launchDate: "2024-05-15",;
     customers: 165,;
     rating: 4.8,;
-    reviews: 89;,
+    reviews: 89;,;,
 },;
   // AI-Powered Quantum Market Research;
   {;
@@ -495,14 +495,14 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced quantum AI market research platform with real-time analysis, trend prediction, and consumer insights. Includes comprehensive research tools and analytics.",;
     launchDate: "2024-04-01",;
     customers: 280,;
     rating: 4.7,;
-    reviews: 145;,
+    reviews: 145;,;,
 },;
   // AI-Powered Quantum Phone Agent;
   {;
@@ -547,7 +547,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced quantum AI phone agent platform with natural language processing and human-like conversations. Includes comprehensive phone features and analytics tools.",;

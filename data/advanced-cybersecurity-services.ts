@@ -79,14 +79,14 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced threat intelligence platform with AI-powered detection, predictive analytics, and automated response capabilities. Includes comprehensive threat hunting and risk assessment tools.",;
     launchDate: "2024-12-01",;
     customers: 180,;
     rating: 4.8,;
-    reviews: 95;,
+    reviews: 95;,;,
 },;
   // Zero Trust Security Architecture;
   {;
@@ -131,14 +131,14 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Comprehensive zero trust architecture with identity verification, device trust scoring, and continuous monitoring. Includes compliance frameworks and security automation.",;
     launchDate: "2024-11-15",;
     customers: 95,;
     rating: 4.9,;
-    reviews: 58;,
+    reviews: 58;,;,
 },;
   // AI-Powered Security Operations Center;
   {;
@@ -183,14 +183,14 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced AI-powered SOC with 24/7 monitoring, automated response, and comprehensive security tools. Includes compliance reporting and security consulting.",;
     launchDate: "2024-10-01",;
     customers: 120,;
     rating: 4.8,;
-    reviews: 75;,
+    reviews: 75;,;,
 },;
   // Quantum-Resistant Cryptography;
   {;
@@ -235,14 +235,14 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced quantum-resistant cryptography platform with post-quantum algorithms, key management, and comprehensive security tools. Includes compliance frameworks and performance optimization.",;
     launchDate: "2024-09-15",;
     customers: 85,;
     rating: 4.7,;
-    reviews: 52;,
+    reviews: 52;,;,
 },;
   // AI-Powered Vulnerability Management;
   {;
@@ -287,14 +287,14 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced vulnerability management platform with AI-powered assessment, intelligent prioritization, and automated remediation. Includes compliance reporting and performance monitoring.",;
     launchDate: "2024-08-01",;
     customers: 150,;
     rating: 4.6,;
-    reviews: 88;,
+    reviews: 88;,;,
 },;
   // Cloud Security Posture Management;
   {;
@@ -339,14 +339,14 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced cloud security platform with multi-cloud monitoring, compliance management, and risk assessment. Includes security automation and incident response.",;
     launchDate: "2024-07-15",;
     customers: 110,;
     rating: 4.7,;
-    reviews: 65;,
+    reviews: 65;,;,
 },;
   // AI-Powered Penetration Testing;
   {;
@@ -391,14 +391,14 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced penetration testing platform with AI-powered testing, automated vulnerability discovery, and intelligent attack simulation. Includes compliance reporting and security consulting.",;
     launchDate: "2024-06-01",;
     customers: 95,;
     rating: 4.8,;
-    reviews: 58;,
+    reviews: 58;,;,
 },;
   // Blockchain Security Platform;
   {;
@@ -443,14 +443,14 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced blockchain security platform with smart contract auditing, security monitoring, and compliance management. Includes security automation and incident response.",;
     launchDate: "2024-05-15",;
     customers: 75,;
     rating: 4.7,;
-    reviews: 45;,
+    reviews: 45;,;,
 },;
   // IoT Security Platform;
   {;
@@ -495,7 +495,7 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced IoT security platform with device discovery, security monitoring, and threat detection. Includes device management and compliance management.",;

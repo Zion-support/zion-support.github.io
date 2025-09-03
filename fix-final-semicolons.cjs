@@ -2,12 +2,12 @@
 const fs = require("fs");
 const path = require("path");
 // Function to fix all remaining semicolons in JSX;
-function fixFinalSemicolons(filePath) {
-  try {
+function fixFinalSemicolons(filePath) {;
+  try {;
   let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
     // More specific fixes for remaining semicolons;
-    const fixes = [
+    const fixes = [;
   // Fix JSX attribute semicolons;
       { pattern: /(\w+)="([^"]*);"/g, replacement: "$1="$2"" },;
       { pattern: /(\w+)="([^"]*);"/g, replacement: "$1="$2"" },;
@@ -28,28 +28,28 @@ function fixFinalSemicolons(filePath) {
       // Fix import statements that got corrupted;
       { pattern: /}\s*import\s+/g, replacement: "}\n\nimport " },;
     ];
-
-    fixes.forEach(fix => {
+;
+    fixes.forEach(fix => {;
   const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
+      if (newContent !== content) {;
   content = newContent;
-        modified = true;,
+        modified = true;,;,
 }
     });
-    if (modified) {
+    if (modified) {;
   fs.writeFileSync(filePath, content, `utf8`);
       console.log(`Fixed final semicolons in: ${filePath}`);
-      return true;,
+      return true;,;,
 }
-    return false;,
-} catch (error) {
+    return false;,;,
+} catch (error) {;
   console.error(`Error fixing ${filePath }:`, error.message);
-    return false;,
+    return false;,;,
 }
 }
 ;
 // Specific files that need fixing;
-const filesToFix = [
+const filesToFix = [;
   `components/SEO.tsx`,;
   "components/ui/Badge.tsx",;
   "pages/NotFound.tsx",;
@@ -58,10 +58,10 @@ const filesToFix = [
 ];
 console.log("🔧 Fixing final semicolons...");
 let fixedCount = 0;
-filesToFix.forEach(file => {
-  if (fs.existsSync(file)) {
-  if (fixFinalSemicolons(file)) {
-  fixedCount++;,
+filesToFix.forEach(file => {;
+  if (fs.existsSync(file)) {;
+  if (fixFinalSemicolons(file)) {;
+  fixedCount++;,;,
 }
   }
 });

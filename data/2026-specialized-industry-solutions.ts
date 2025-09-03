@@ -42,7 +42,7 @@ const contact = {;
   ;
   ;
   ;
-  website: "https://ziontechgroup.com";,
+  website: "https://ziontechgroup.com";,;,
 }
 export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [;
   {;
@@ -88,7 +88,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     launchDate: "2024-06-15",;
     customers: 28,;
     rating: 4.9,;
-    reviews: 22;,
+    reviews: 22;,;,
 },;
   {;
     id: "fintech-blockchain-platform",;
@@ -133,7 +133,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     launchDate: "2024-05-01",;
     customers: 35,;
     rating: 4.8,;
-    reviews: 31;,
+    reviews: 31;,;,
 },;
   {;
     id: "manufacturing-iot-platform",;
@@ -178,7 +178,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     launchDate: "2024-04-15",;
     customers: 42,;
     rating: 4.7,;
-    reviews: 38;,
+    reviews: 38;,;,
 },;
   {;
     id: "retail-ai-optimization-platform",;
@@ -223,7 +223,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     launchDate: "2024-03-01",;
     customers: 55,;
     rating: 4.8,;
-    reviews: 47;,
+    reviews: 47;,;,
 },;
   {;
     id: "logistics-supply-chain-ai",;
@@ -244,3 +244,4 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
       "Multi-carrier integration",;
       "Mobile app for drivers";
     ],;
+}}

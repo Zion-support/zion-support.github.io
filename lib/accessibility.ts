@@ -13,20 +13,20 @@ export const accessibilityConfig = {;
     loading: "Loading",;
     error: "Error",;
     success: "Success",;
-    warning: "Warning";,
+    warning: "Warning";,;,
 },;
   ;
   // Focus management;
   focusManagement: {;
     skipToContent: true,;
     focusTrap: true,;
-    focusVisible: true;,
+    focusVisible: true;,;,
 },;
   ;
   // Color contrast;
   colorContrast: {;
     minimumRatio: 4.5,;
-    enhancedRatio: 7.0;,
+    enhancedRatio: 7.0;,;,
 },;
   ;
   // Keyboard navigation;
@@ -35,7 +35,7 @@ export const accessibilityConfig = {;
     arrowKeys: true,;
     escapeKey: true,;
     enterKey: true,;
-    spaceKey: true;,
+    spaceKey: true;,;,
 }
 }
 // Accessibility utilities;
@@ -57,7 +57,7 @@ export const accessibilityUtils = {;
     announcement.textContent = message;
     document.body.appendChild(announcement);
     setTimeout(() => {;
-      document.body.removeChild(announcement);,
-}, 1000);,
+      document.body.removeChild(announcement);,;,
+}, 1000);,;,
 }
 }

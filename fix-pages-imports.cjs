@@ -1,9 +1,9 @@
 #!/usr/bin/env node;
-
+;
 const fs = require("fs");
 const path = require("path");
-function fixFile(filePath) {
-  try {
+function fixFile(filePath) {;
+  try {;
   const content = fs.readFileSync(filePath, "utf8");
     let fixedContent = content;
     // Fix corrupted import statements;
@@ -14,37 +14,37 @@ function fixFile(filePath) {
     fixedContent = fixedContent.replace(/;";";/g, ";");
     fixedContent = fixedContent.replace(/";";/g, ";");
     // Fix semicolons in the middle of statements;
-    fixedContent = fixedContent.replace(/\) \{
+    fixedContent = fixedContent.replace(/\) \{;
   /g, ") {");
     fixedContent = fixedContent.replace(/\(;/g, "(");
     fixedContent = fixedContent.replace(/>;";";"/g, ">");
-    if (fixedContent !== content) {
+    if (fixedContent !== content) {;
   fs.writeFileSync(filePath, fixedContent, "utf8");
       console.log(`Fixed: ${filePath}`);
-      return true;,
+      return true;,;,
 }
-  } catch (error) {
-  console.error(`Error fixing ${filePath}:`, error.message);,
+  } catch (error) {;
+  console.error(`Error fixing ${filePath}:`, error.message);,;,
 }
-  return false;,
+  return false;,;,
 }
 ;
-function processDirectory(dirPath) {
+function processDirectory(dirPath) {;
   const items = fs.readdirSync(dirPath);
   let fixedCount = 0;
-  for (const item of items) {
+  for (const item of items) {;
   const fullPath = path.join(dirPath, item);
     const stat = fs.statSync(fullPath);
-    if (stat.isFile() && (item.endsWith(".tsx") || item.endsWith(".ts") || item.endsWith(".jsx") || item.endsWith(".js"))) {
-  if (fixFile(fullPath)) {
-  fixedCount++;,
+    if (stat.isFile() && (item.endsWith(".tsx") || item.endsWith(".ts") || item.endsWith(".jsx") || item.endsWith(".js"))) {;
+  if (fixFile(fullPath)) {;
+  fixedCount++;,;,
 }
     }
   }
   ;
-  return fixedCount;,
+  return fixedCount;,;,
 }
 ;
 const pagesDir = path.join(process.cwd(), "pages");
 const fixedCount = processDirectory(pagesDir);
-console.log(`Fixed ${fixedCount} files in pages directory.`)
+console.log(`Fixed ${fixedCount} files in pages directory.`)}}

@@ -1,21 +1,21 @@
 import React from 'react';
-
-  return()
-    <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
+;
+  return();
+    <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>;
       {children}
-    </div>
-  );
+    </div>;
+  );,
 };
+;
+export { Badge };
+;
 
 export { Badge };
-
-
+;
 export { Badge };
-
+;
 export { Badge };
-
+;
 export { Badge };
-
-export { Badge };
-
+;
 export { Badge };

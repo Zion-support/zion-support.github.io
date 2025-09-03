@@ -80,14 +80,14 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade quantum computing platform with access to multiple quantum processors and comprehensive development tools.",;
     launchDate: "2024-10-15",;
     customers: 23,;
     rating: 4.9,;
-    reviews: 18;,
+    reviews: 18;,;,
 },;
   // Blockchain Infrastructure Platform;
   {;
@@ -132,14 +132,14 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade blockchain infrastructure platform with multi-chain support and comprehensive development tools.",;
     launchDate: "2024-11-01",;
     customers: 89,;
     rating: 4.8,;
-    reviews: 67;,
+    reviews: 67;,;,
 },;
   // Edge Computing Orchestration Platform;
   {;
@@ -184,14 +184,14 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Comprehensive edge computing orchestration platform with intelligent resource management and real-time processing capabilities.",;
     launchDate: "2024-11-20",;
     customers: 156,;
     rating: 4.7,;
-    reviews: 98;,
+    reviews: 98;,;,
 },;
   // Metaverse Development Platform;
   {;
@@ -236,14 +236,14 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Comprehensive metaverse development platform with integrated tools for creating immersive virtual experiences.",;
     launchDate: "2024-12-01",;
     customers: 67,;
     rating: 4.8,;
-    reviews: 45;,
+    reviews: 45;,;,
 },;
   // Space Technology Platform;
   {;
@@ -288,7 +288,7 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade space technology platform with comprehensive satellite management and space data analytics capabilities.",;

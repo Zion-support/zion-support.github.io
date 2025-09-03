@@ -23,7 +23,7 @@ export const added2025Services: AddedService[] = [;
     icon: "🤖",;
     link: "https://ziontechgroup.com/ai-assistant",;
     rating: 4.8,;
-    customerCount: 320;,
+    customerCount: 320;,;,
 },;
   {;
     id: "agentic-rag-platform",;
@@ -37,7 +37,7 @@ export const added2025Services: AddedService[] = [;
     icon: "🔗",;
     link: "https://ziontechgroup.com/agentic-rag",;
     rating: 4.7,;
-    customerCount: 210;,
+    customerCount: 210;,;,
 },;
   {;
     id: "ai-evals-observability",;
@@ -51,7 +51,7 @@ export const added2025Services: AddedService[] = [;
     icon: "🧪",;
     link: "https://ziontechgroup.com/ai-evals",;
     rating: 4.6,;
-    customerCount: 180;,
+    customerCount: 180;,;,
 },;
   {;
     id: "ai-guardrails-suite",;
@@ -65,7 +65,7 @@ export const added2025Services: AddedService[] = [;
     icon: "🛡️",;
     link: "https://ziontechgroup.com/ai-guardrails",;
     rating: 4.7,;
-    customerCount: 140;,
+    customerCount: 140;,;,
 },;
   {;
     id: "api-security-scanner",;
@@ -79,7 +79,7 @@ export const added2025Services: AddedService[] = [;
     icon: "🔐",;
     link: "https://ziontechgroup.com/api-security-scanner",;
     rating: 4.6,;
-    customerCount: 500;,
+    customerCount: 500;,;,
 },;
   {;
     id: "api-observability",;
@@ -93,7 +93,7 @@ export const added2025Services: AddedService[] = [;
     icon: "📈",;
     link: "https://ziontechgroup.com/api-observability",;
     rating: 4.5,;
-    customerCount: 460;,
+    customerCount: 460;,;,
 },;
   {;
     id: "database-performance-monitor",;
@@ -107,7 +107,7 @@ export const added2025Services: AddedService[] = [;
     icon: "🗄️",;
     link: "https://ziontechgroup.com/database-performance-monitor",;
     rating: 4.6,;
-    customerCount: 380;,
+    customerCount: 380;,;,
 },;
   {;
     id: "cloud-cost-optimizer",;
@@ -121,7 +121,7 @@ export const added2025Services: AddedService[] = [;
     icon: "💸",;
     link: "https://ziontechgroup.com/cloud-cost-optimizer",;
     rating: 4.8,;
-    customerCount: 520;,
+    customerCount: 520;,;,
 },;
   {;
     id: "ai-website-personalization",;
@@ -135,7 +135,7 @@ export const added2025Services: AddedService[] = [;
     icon: "🎯",;
     link: "https://ziontechgroup.com/ai-website-personalization",;
     rating: 4.5,;
-    customerCount: 260;,
+    customerCount: 260;,;,
 },;
   {;
     id: "serverless-cron-manager",;
@@ -149,7 +149,7 @@ export const added2025Services: AddedService[] = [;
     icon: "⏰",;
     link: "https://ziontechgroup.com/serverless-cron-manager",;
     rating: 4.4,;
-    customerCount: 800;,
+    customerCount: 800;,;,
 },;
   {;
     id: "webhook-relay-replay",;

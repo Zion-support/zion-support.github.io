@@ -42,7 +42,7 @@ const contact = {;
   ;
   ;
   ;
-  website: "https://ziontechgroup.com";,
+  website: "https://ziontechgroup.com";,;,
 }
 export const emergingTechnologyServices2025: EmergingTechnologyService[] = [;
   {;
@@ -88,7 +88,7 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [;
     launchDate: "2025-03-15",;
     customers: 34,;
     rating: 4.8,;
-    reviews: 23;,
+    reviews: 23;,;,
 },;
   {;
     id: "quantum-machine-learning-platform",;
@@ -133,7 +133,7 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [;
     launchDate: "2025-04-01",;
     customers: 12,;
     rating: 4.9,;
-    reviews: 8;,
+    reviews: 8;,;,
 },;
   {;
     id: "autonomous-robotics-platform",;
@@ -178,7 +178,7 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [;
     launchDate: "2025-03-20",;
     customers: 45,;
     rating: 4.7,;
-    reviews: 32;,
+    reviews: 32;,;,
 },;
   {;
     id: "brain-computer-interface-platform",;
@@ -223,7 +223,7 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [;
     launchDate: "2025-04-15",;
     customers: 8,;
     rating: 4.9,;
-    reviews: 6;,
+    reviews: 6;,;,
 },;
   {;
     id: "space-technology-platform",;

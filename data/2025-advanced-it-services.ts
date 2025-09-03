@@ -23,11 +23,11 @@ export const advancedITServices2025 = [;
     website: "https://ziontechgroup.com/quantum-cloud-infrastructure",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$178.9B",;
     targetAudience: "Enterprise businesses, cloud providers, research institutions, government agencies",;
-    competitiveAdvantage: "Industry-first quantum-enhanced cloud infrastructure, advanced security with quantum encryption, and global edge computing network";,
+    competitiveAdvantage: "Industry-first quantum-enhanced cloud infrastructure, advanced security with quantum encryption, and global edge computing network";,;,
 },;
   {;
     id: "intelligent-edge-computing-orchestrator",;
@@ -53,11 +53,11 @@ export const advancedITServices2025 = [;
     website: "https://ziontechgroup.com/edge-computing-ai",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$43.4B",;
     targetAudience: "IoT companies, telecommunications, manufacturing, smart cities",;
-    competitiveAdvantage: "Advanced AI-powered edge orchestration, comprehensive distributed computing optimization, and extensive IoT device integration";,
+    competitiveAdvantage: "Advanced AI-powered edge orchestration, comprehensive distributed computing optimization, and extensive IoT device integration";,;,
 },;
   {;
     id: "zero-trust-security-platform",;
@@ -83,11 +83,11 @@ export const advancedITServices2025 = [;
     website: "https://ziontechgroup.com/zero-trust-security-pro",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$173.5B",;
     targetAudience: "IT security teams, cybersecurity firms, enterprise businesses, government agencies",;
-    competitiveAdvantage: "Comprehensive zero-trust implementation, advanced threat detection, and extensive security tool integration";,
+    competitiveAdvantage: "Comprehensive zero-trust implementation, advanced threat detection, and extensive security tool integration";,;,
 },;
   {;
     id: "blockchain-enterprise-platform",;
@@ -113,11 +113,11 @@ export const advancedITServices2025 = [;
     website: "https://ziontechgroup.com/enterprise-blockchain-pro",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$19.9B",;
     targetAudience: "Financial institutions, supply chain companies, healthcare providers, government agencies",;
-    competitiveAdvantage: "Enterprise-grade blockchain infrastructure, comprehensive compliance tools, and seamless business system integration";,
+    competitiveAdvantage: "Enterprise-grade blockchain infrastructure, comprehensive compliance tools, and seamless business system integration";,;,
 },;
   {;
     id: "ai-powered-devops-platform",;
@@ -143,11 +143,11 @@ export const advancedITServices2025 = [;
     website: "https://ziontechgroup.com/devops-ai-pro",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$8.2B",;
     targetAudience: "Development teams, DevOps engineers, software companies, enterprise businesses",;
-    competitiveAdvantage: "Advanced AI-powered DevOps automation, comprehensive workflow optimization, and extensive development tool integration";,
+    competitiveAdvantage: "Advanced AI-powered DevOps automation, comprehensive workflow optimization, and extensive development tool integration";,;,
 },;
   {;
     id: "quantum-networking-platform",;
@@ -173,11 +173,11 @@ export const advancedITServices2025 = [;
     website: "https://ziontechgroup.com/quantum-net-pro",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$12.8B",;
     targetAudience: "Telecommunications, financial institutions, government agencies, research institutions",;
-    competitiveAdvantage: "Industry-first quantum networking platform, ultra-secure quantum encryption, and advanced routing algorithms";,
+    competitiveAdvantage: "Industry-first quantum networking platform, ultra-secure quantum encryption, and advanced routing algorithms";,;,
 },;
   {;
     id: "autonomous-it-operations-platform",;
@@ -203,11 +203,11 @@ export const advancedITServices2025 = [;
     website: "https://ziontechgroup.com/autonomous-it-pro",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$28.7B",;
     targetAudience: "IT operations teams, system administrators, enterprise businesses, managed service providers",;
-    competitiveAdvantage: "Advanced autonomous IT operations, comprehensive issue prediction, and extensive IT tool integration";,
+    competitiveAdvantage: "Advanced autonomous IT operations, comprehensive issue prediction, and extensive IT tool integration";,;,
 },;
   {;
     id: "quantum-data-center-platform",;
@@ -233,11 +233,11 @@ export const advancedITServices2025 = [;
     website: "https://ziontechgroup.com/quantum-data-center-pro",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$89.3B",;
     targetAudience: "Data center operators, cloud providers, enterprise businesses, government agencies",;
-    competitiveAdvantage: "Industry-first quantum-enhanced data center, advanced energy efficiency, and comprehensive quantum computing integration";,
+    competitiveAdvantage: "Industry-first quantum-enhanced data center, advanced energy efficiency, and comprehensive quantum computing integration";,;,
 },;
   {;
     id: "quantum-cybersecurity-platform",;
@@ -263,11 +263,11 @@ export const advancedITServices2025 = [;
     website: "https://ziontechgroup.com/quantum-cyber-pro",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$173.5B",;
     targetAudience: "IT security teams, cybersecurity firms, government agencies, financial institutions",;
-    competitiveAdvantage: "Industry-first quantum cybersecurity platform, unbreakable quantum encryption, and advanced threat detection";,
+    competitiveAdvantage: "Industry-first quantum cybersecurity platform, unbreakable quantum encryption, and advanced threat detection";,;,
 },;
   {;
     id: "quantum-cloud-migration-platform",;
@@ -292,3 +292,4 @@ export const advancedITServices2025 = [;
     tags["Quantum Computing", "Cloud Migration", "AI", "Zero Downtime"],;
     website: "https://ziontechgroup.com/quantum-migration-pro",;
     contact: {;
+}}

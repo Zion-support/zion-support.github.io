@@ -46,7 +46,7 @@ const contact = {;
   ;
   ;
   ;
-  website: "https://ziontechgroup.com";,
+  website: "https://ziontechgroup.com";,;,
 }
 export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [;
   // AI-POWERED SOCIAL MEDIA MANAGEMENT;
@@ -97,7 +97,7 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     innovationLevel: "Breakthrough",;
     patentStatus: "Trade Secret",;
     aiCapabilities["AI Content Creation", "Engagement Optimization", "Trend Prediction", "Automated Scheduling"],;
-    marketDisruption: "Revolutionizes social media management with AI automation";,
+    marketDisruption: "Revolutionizes social media management with AI automation";,;,
 },;
   // INTELLIGENT EMAIL MARKETING;
   {;
@@ -147,7 +147,7 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     innovationLevel: "Breakthrough",;
     patentStatus: "Trade Secret",;
     aiCapabilities["AI Personalization", "Send Time Optimization", "Subject Line Optimization", "Behavioral Targeting"],;
-    marketDisruption: "Revolutionizes email marketing with AI personalization";,
+    marketDisruption: "Revolutionizes email marketing with AI personalization";,;,
 },;
   // SMART INVENTORY MANAGEMENT;
   {;
@@ -197,7 +197,7 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     innovationLevel: "Breakthrough",;
     patentStatus: "Trade Secret",;
     aiCapabilities["AI Demand Prediction", "Stock Level Optimization", "Automated Reordering", "Cost Optimization"],;
-    marketDisruption: "Revolutionizes inventory management with AI prediction";,
+    marketDisruption: "Revolutionizes inventory management with AI prediction";,;,
 },;
   // INTELLIGENT CUSTOMER SUPPORT;
   {;
@@ -247,7 +247,7 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     innovationLevel: "Breakthrough",;
     patentStatus: "Trade Secret",;
     aiCapabilities["AI Issue Resolution", "Instant Responses", "Multi-language Support", "Performance Analytics"],;
-    marketDisruption: "Revolutionizes customer support with AI automation";,
+    marketDisruption: "Revolutionizes customer support with AI automation";,;,
 },;
   // SMART FINANCIAL MANAGEMENT;
   {;
@@ -297,7 +297,7 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     innovationLevel: "Breakthrough",;
     patentStatus: "Trade Secret",;
     aiCapabilities["AI Bookkeeping", "Cash Flow Prediction", "Financial Insights", "Expense Tracking"],;
-    marketDisruption: "Revolutionizes financial management with AI automation";,
+    marketDisruption: "Revolutionizes financial management with AI automation";,;,
 },;
   // INTELLIGENT PROJECT MANAGEMENT;
   {;
@@ -347,7 +347,7 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     innovationLevel: "Breakthrough",;
     patentStatus: "Trade Secret",;
     aiCapabilities["AI Task Assignment", "Delay Prediction", "Productivity Optimization", "Risk Assessment"],;
-    marketDisruption: "Revolutionizes project management with AI automation";,
+    marketDisruption: "Revolutionizes project management with AI automation";,;,
 },;
   // SMART HR MANAGEMENT;
   {;
@@ -397,7 +397,7 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     innovationLevel: "Breakthrough",;
     patentStatus: "Trade Secret",;
     aiCapabilities["AI Recruitment", "Turnover Prediction", "Workforce Planning", "Performance Analytics"],;
-    marketDisruption: "Revolutionizes HR management with AI automation";,
+    marketDisruption: "Revolutionizes HR management with AI automation";,;,
 },;
   // INTELLIGENT SALES AUTOMATION;
   {;
@@ -447,7 +447,7 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     innovationLevel: "Breakthrough",;
     patentStatus: "Trade Secret",;
     aiCapabilities["AI Lead Scoring", "Customer Prediction", "Sales Automation", "Pipeline Optimization"],;
-    marketDisruption: "Revolutionizes sales with AI automation";,
+    marketDisruption: "Revolutionizes sales with AI automation";,;,
 },;
   // SMART MARKETING AUTOMATION;
   {;

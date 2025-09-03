@@ -2,4 +2,4 @@
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/ComprehensivePricing2025.tsx;
 :src.pages.disabled/ComprehensivePricing2025.tsx;
 import: React, { useState, useMemo } from "react";
-"const ComprehensivePricing2025: React.FC = () => { const [selectedCategory, setSelectedCategory] = useState < string> ("all")  const [billingCycle, setBillingCycle] = useState<"monthly" | "annual"> ("monthly") "
+"const ComprehensivePricing2025: React.FC = () => { const [selectedCategory, setSelectedCategory] = useState < string> ("all")  const [billingCycle, setBillingCycle] = useState<"monthly" | "annual"> ("monthly") "}}}

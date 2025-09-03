@@ -49,7 +49,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [;
       starter: "$899/month",;
       professional: "$1,999/month",;
       enterprise: "$4,999/month",;
-      custom: "Contact for pricing";,
+      custom: "Contact for pricing";,;,
 },;
     features[;
       "Quantum-resistant encryption algorithms",;
@@ -90,7 +90,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [;
     mobile: "+1 302 464 0950",;
     address: "364 E Main St STE 1008 Middletown DE 19709",;
     website: "https://ziontechgroup.com",;
-    slug: "/quantum-safe-cloud-infrastructure-platform";,
+    slug: "/quantum-safe-cloud-infrastructure-platform";,;,
 },;
   // Autonomous Edge Computing Network;
   {;
@@ -104,7 +104,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [;
       starter: "$599/month",;
       professional: "$1,299/month",;
       enterprise: "$2,999/month",;
-      custom: "Contact for pricing";,
+      custom: "Contact for pricing";,;,
 },;
     features[;
       "AI-powered edge resource management",;
@@ -145,7 +145,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [;
     mobile: "+1 302 464 0950",;
     address: "364 E Main St STE 1008 Middletown DE 19709",;
     website: "https://ziontechgroup.com",;
-    slug: "/autonomous-edge-computing-network";,
+    slug: "/autonomous-edge-computing-network";,;,
 },;
   // Neuromorphic Computing Infrastructure;
   {;
@@ -159,7 +159,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [;
       starter: "$2,999/month",;
       professional: "$6,999/month",;
       enterprise: "$14,999/month",;
-      custom: "Contact for pricing";,
+      custom: "Contact for pricing";,;,
 },;
     features[;
       "Neuromorphic chip architecture",;
@@ -200,7 +200,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [;
     mobile: "+1 302 464 0950",;
     address: "364 E Main St STE 1008 Middletown DE 19709",;
     website: "https://ziontechgroup.com",;
-    slug: "/neuromorphic-computing-infrastructure";,
+    slug: "/neuromorphic-computing-infrastructure";,;,
 },;
   // Autonomous Data Center Management Platform;
   {;
@@ -214,7 +214,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [;
       starter: "$1,499/month",;
       professional: "$3,499/month",;
       enterprise: "$7,999/month",;
-      custom: "Contact for pricing";,
+      custom: "Contact for pricing";,;,
 },;
     features[;
       "Autonomous power management",;
@@ -250,3 +250,4 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [;
     ],;
     marketSize: "$16.4B by 2025",;
     targetAudience: "Data center operators, cloud providers, enterprises with large IT infrastructure',;
+}}

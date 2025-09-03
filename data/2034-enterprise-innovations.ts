@@ -79,7 +79,7 @@ export const enterprise2034Services: EnterpriseService2034[] = [;
     scalability: "Unlimited enterprise protection",;
     uptime: "99.999% security platform availability",;
     contact: "+1 302 464 0950",;
-    website: "https://ziontechgroup.com/quantum-zero-trust-architecture";,
+    website: "https://ziontechgroup.com/quantum-zero-trust-architecture";,;,
 },;
   {;
     id: "ai-autonomous-devops-platform",;
@@ -136,7 +136,7 @@ export const enterprise2034Services: EnterpriseService2034[] = [;
     scalability: "Unlimited DevOps automation",;
     uptime: "99.99% DevOps platform availability",;
     contact: "+1 302 464 0950",;
-    website: "https://ziontechgroup.com/ai-autonomous-devops-platform";,
+    website: "https://ziontechgroup.com/ai-autonomous-devops-platform";,;,
 },;
   {;
     id: "quantum-edge-computing-orchestrator",;
@@ -193,7 +193,7 @@ export const enterprise2034Services: EnterpriseService2034[] = [;
     scalability: "Unlimited edge orchestration",;
     uptime: "99.99% edge platform availability",;
     contact: "+1 302 464 0950",;
-    website: "https://ziontechgroup.com/quantum-edge-computing-orchestrator";,
+    website: "https://ziontechgroup.com/quantum-edge-computing-orchestrator";,;,
 },;
   {;
     id: "ai-powered-it-operations-center",;
@@ -250,7 +250,7 @@ export const enterprise2034Services: EnterpriseService2034[] = [;
     scalability: "Unlimited IT operations",;
     uptime: "99.99% operations platform availability",;
     contact: "+1 302 464 0950",;
-    website: "https://ziontechgroup.com/ai-powered-it-operations-center";,
+    website: "https://ziontechgroup.com/ai-powered-it-operations-center";,;,
 },;
   {;
     id: "quantum-blockchain-infrastructure",;
@@ -307,7 +307,7 @@ export const enterprise2034Services: EnterpriseService2034[] = [;
     scalability: "Unlimited blockchain transactions",;
     uptime: "99.99% blockchain platform availability",;
     contact: "+1 302 464 0950",;
-    website: "https://ziontechgroup.com/quantum-blockchain-infrastructure";,
+    website: "https://ziontechgroup.com/quantum-blockchain-infrastructure";,;,
 },;
   {;
     id: "ai-autonomous-data-center",;

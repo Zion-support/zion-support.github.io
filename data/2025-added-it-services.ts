@@ -3,7 +3,7 @@ const contact = {;
   mobile: "+1 302 464 0950",;
   email: "kleber@ziontechgroup.com",;
   address: "364 E Main St STE 1008 Middletown DE 19709",;
-  website: "https://ziontechgroup.com";,
+  website: "https://ziontechgroup.com";,;,
 }
 export const addedITServices2025: AdvancedITService[] = [;
   {;
@@ -46,7 +46,7 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-03-18",;
     customers: 28,;
     rating: 4.9,;
-    reviews: 21;,
+    reviews: 21;,;,
 },;
   {;
     id: "zero-trust-access-service",;
@@ -87,7 +87,7 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-01-29",;
     customers: 52,;
     rating: 4.8,;
-    reviews: 44;,
+    reviews: 44;,;,
 },;
   {;
     id: "sre-oncall-as-a-service",;
@@ -128,7 +128,7 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-05-30",;
     customers: 14,;
     rating: 4.9,;
-    reviews: 11;,
+    reviews: 11;,;,
 },;
   {;
     id: "data-platform-accelerator",;
@@ -169,7 +169,7 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-06-02",;
     customers: 9,;
     rating: 4.8,;
-    reviews: 7;,
+    reviews: 7;,;,
 },;
   {;
     id: "managed-kubernetes-platform",;
@@ -210,7 +210,7 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-06-09",;
     customers: 7,;
     rating: 4.8,;
-    reviews: 5;,
+    reviews: 5;,;,
 },;
   {;
     id: "secure-data-mesh",;
@@ -251,7 +251,7 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-06-07",;
     customers: 5,;
     rating: 4.7,;
-    reviews: 4;,
+    reviews: 4;,;,
 },;
   {;
     id: "enterprise-sso-and-iam-hardening",;
@@ -292,7 +292,7 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-06-06",;
     customers: 12,;
     rating: 4.8,;
-    reviews: 8;,
+    reviews: 8;,;,
 },;
   {;
     id: "managed-vulnerability-management",;
@@ -333,7 +333,7 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-06-15",;
     customers: 18,;
     rating: 4.7,;
-    reviews: 13;,
+    reviews: 13;,;,
 },;
   {;
     id: "managed-sase-lite",;
@@ -374,7 +374,7 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-06-18",;
     customers: 10,;
     rating: 4.6,;
-    reviews: 7;,
+    reviews: 7;,;,
 },;
   {;
     id: "data-quality-observability-service",;
@@ -415,7 +415,7 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-06-11",;
     customers: 12,;
     rating: 4.7,;
-    reviews: 9;,
+    reviews: 9;,;,
 },;
   {;
     id: "cost-aware-kubernetes-hardening",;
@@ -456,7 +456,7 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-06-14",;
     customers: 8,;
     rating: 4.8,;
-    reviews: 6;,
+    reviews: 6;,;,
 },;
   {;
     id: "data-platform-modernization",;
@@ -497,7 +497,7 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-05-10",;
     customers: 17,;
     rating: 4.8,;
-    reviews: 12;,
+    reviews: 12;,;,
 },;
   {;
     id: "sre-and-reliability-ops",;
@@ -538,7 +538,7 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-05-20",;
     customers: 24,;
     rating: 4.9,;
-    reviews: 19;,
+    reviews: 19;,;,
 },;
   {;
     id: "zero-trust-email-and-endpoint",;
@@ -579,7 +579,7 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-06-05",;
     customers: 13,;
     rating: 4.7,;
-    reviews: 10;,
+    reviews: 10;,;,
 },;
   {;
     id: "managed-observability-platform",;
@@ -620,7 +620,7 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-06-21",;
     customers: 6,;
     rating: 4.8,;
-    reviews: 4;,
+    reviews: 4;,;,
 },;
   {;
     id: "network-modernization-accelerator",;
@@ -661,7 +661,7 @@ export const addedITServices2025: AdvancedITService[] = [;
     launchDate: "2025-06-22",;
     customers: 4,;
     rating: 4.7,;
-    reviews: 3;,
+    reviews: 3;,;,
 },;
   {;
     id: "data-governance-foundation",;

@@ -1,1 +1,2 @@
 export: const PerformanceMonitor = () => { const [metrics, setMetrics] = useState ({;
+}})

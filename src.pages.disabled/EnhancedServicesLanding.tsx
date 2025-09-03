@@ -3,4 +3,4 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/EnhancedServicesLa
 :src.pages.disabled/EnhancedServicesLanding.tsx;
 import: React, { useState } from "react";
 import: React, { useState } from "react";
-;export default function EnhancedServicesLanding() { const [activeCategory, setActiveCategory] = useState("all") const [searchTerm, setSearchTerm] = useState("") const [sortBy, setSortBy] = useState("rating") ;export default React.memo(function EnhancedServicesLanding () { const [activeCategory, setActiveCategory] = useState ("all")  const [searchTerm, setSearchTerm] = useState ("")  const [sortBy, setSortBy] = useState ("rating")  '
+;export default function EnhancedServicesLanding() { const [activeCategory, setActiveCategory] = useState("all") const [searchTerm, setSearchTerm] = useState("") const [sortBy, setSortBy] = useState("rating") ;export default React.memo(function EnhancedServicesLanding () { const [activeCategory, setActiveCategory] = useState ("all")  const [searchTerm, setSearchTerm] = useState ("")  const [sortBy, setSortBy] = useState ("rating")  '}}))

@@ -80,14 +80,14 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced neural interface platform with real-time signal processing, AI-powered analysis, and comprehensive development tools.",;
     launchDate: "2026-04-01",;
     customers: 45,;
     rating: 4.9,;
-    reviews: 23;,
+    reviews: 23;,;,
 },;
   // Quantum Consciousness Simulation;
   {;
@@ -132,14 +132,14 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced quantum consciousness simulation platform with research-grade algorithms and comprehensive collaboration tools.",;
     launchDate: "2026-04-15",;
     customers: 25,;
     rating: 5.0,;
-    reviews: 18;,
+    reviews: 18;,;,
 },;
   // Holographic Metaverse Platform;
   {;
@@ -184,14 +184,14 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Full-featured holographic metaverse platform with AI-powered world generation and comprehensive collaboration tools.",;
     launchDate: "2026-05-01",;
     customers: 180,;
     rating: 4.8,;
-    reviews: 95;,
+    reviews: 95;,;,
 },;
   // Autonomous Manufacturing AI;
   {;
@@ -236,14 +236,14 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Production autonomous manufacturing platform with comprehensive AI capabilities and equipment integration.",;
     launchDate: "2026-05-15",;
     customers: 120,;
     rating: 4.9,;
-    reviews: 78;,
+    reviews: 78;,;,
 },;
   // Space Technology AI Platform;
   {;
@@ -288,14 +288,14 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced space technology platform with AI-powered satellite management and comprehensive space operations tools.",;
     launchDate: "2026-06-01",;
     customers: 65,;
     rating: 4.9,;
-    reviews: 42;,
+    reviews: 42;,;,
 },;
   // Quantum Energy Management;
   {;
@@ -340,14 +340,14 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Production quantum energy management platform with advanced optimization algorithms and comprehensive utility integration.",;
     launchDate: "2026-06-15",;
     customers: 95,;
     rating: 4.8,;
-    reviews: 67;,
+    reviews: 67;,;,
 },;
   // AI-Powered Robotics Platform;
   {;
@@ -392,14 +392,14 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Full-featured AI robotics platform with comprehensive robot programming and coordination tools.",;
     launchDate: "2026-07-01",;
     customers: 150,;
     rating: 4.8,;
-    reviews: 98;,
+    reviews: 98;,;,
 },;
   // Quantum Logistics Platform;
   {;
@@ -444,14 +444,14 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Production quantum logistics platform with advanced optimization algorithms and comprehensive supply chain integration.",;
     launchDate: "2026-07-15",;
     customers: 180,;
     rating: 4.8,;
-    reviews: 112;,
+    reviews: 112;,;,
 },;
   // AI-Powered Virtual Events Platform;
   {;
@@ -496,7 +496,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Full-featured virtual events platform with AI-powered engagement and comprehensive event management tools.",;

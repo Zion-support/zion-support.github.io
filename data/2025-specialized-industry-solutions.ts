@@ -79,14 +79,14 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "System integration, IoT deployment, AI model training, and team training",;
     launchDate: "2025-01-20",;
     customers: 28,;
     rating: 4.8,;
-    reviews: 67;,
+    reviews: 67;,;,
 },;
   // HEALTHCARE & MEDICAL SOLUTIONS;
   {;
@@ -131,14 +131,14 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "EHR integration, AI model training, regulatory compliance, and clinical validation",;
     launchDate: "2025-01-25",;
     customers: 34,;
     rating: 4.9,;
-    reviews: 89;,
+    reviews: 89;,;,
 },;
   // FINANCIAL SERVICES SOLUTIONS;
   {;
@@ -183,14 +183,14 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "System integration, AI model deployment, regulatory compliance, and team training",;
     launchDate: "2025-02-01",;
     customers: 19,;
     rating: 4.8,;
-    reviews: 45;,
+    reviews: 45;,;,
 },;
   // RETAIL & E-COMMERCE SOLUTIONS;
   {;
@@ -235,14 +235,14 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "System integration, AI model training, data migration, and team training",;
     launchDate: "2025-01-30",;
     customers: 56,;
     rating: 4.7,;
-    reviews: 134;,
+    reviews: 134;,;,
 },;
   // EDUCATION & LEARNING SOLUTIONS;
   {;
@@ -287,14 +287,14 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "LMS integration, AI model training, content migration, and educator training",;
     launchDate: "2025-02-05",;
     customers: 23,;
     rating: 4.6,;
-    reviews: 56;,
+    reviews: 56;,;,
 },;
   // TRANSPORTATION & LOGISTICS SOLUTIONS;
   {;
@@ -339,14 +339,14 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "System integration, IoT deployment, AI model training, and team training",;
     launchDate: "2025-02-10",;
     customers: 31,;
     rating: 4.7,;
-    reviews: 78;,
+    reviews: 78;,;,
 },;
   // ENERGY & UTILITIES SOLUTIONS;
   {;
@@ -391,7 +391,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "System integration, IoT deployment, AI model training, and team training",;
@@ -409,4 +409,4 @@ export const industryCategories2025: string[] = Array.from(;
 ).sort();
 export const getSolutionsByIndustry = (industry: string) => {;
   if (!industry || industry === "All") return specializedIndustrySolutions2025;
-    .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+    .sort((a, b) => (b.rating || 0) - (a.rating || 0))}}}

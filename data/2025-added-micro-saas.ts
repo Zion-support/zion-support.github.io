@@ -10,7 +10,7 @@
     launchDate: "2025-02-20",;
     customers: 41,;
     rating: 4.7,;
-    reviews: 29;,
+    reviews: 29;,;,
 },;
   {;
     id: "local-seo-insights-engine",;
@@ -50,7 +50,7 @@
     launchDate: "2025-05-12",;
     customers: 211,;
     rating: 4.8,;
-    reviews: 77;,
+    reviews: 77;,;,
 },;
   {;
     id: "gdpr-cookie-consent-manager",;
@@ -90,7 +90,7 @@
     launchDate: "2025-06-01",;
     customers: 318,;
     rating: 4.7,;
-    reviews: 96;,
+    reviews: 96;,;,
 },;
   {;
     id: "churn-prediction-insights",;
@@ -130,7 +130,7 @@
     launchDate: "2025-05-28",;
     customers: 122,;
     rating: 4.6,;
-    reviews: 41;,
+    reviews: 41;,;,
 },;
   {;
     id: "docs-to-knowledge-bot",;
@@ -170,7 +170,7 @@
     launchDate: "2025-05-15",;
     customers: 187,;
     rating: 4.8,;
-    reviews: 68;,
+    reviews: 68;,;,
 },;
   {;
     id: "soc2-evidence-collector",;
@@ -210,7 +210,7 @@
     launchDate: "2025-06-14",;
     customers: 57,;
     rating: 4.7,;
-    reviews: 24;,
+    reviews: 24;,;,
 },;
   {;
     id: "smart-invoice-extractor",;
@@ -250,7 +250,7 @@
     launchDate: "2025-06-10",;
     customers: 133,;
     rating: 4.6,;
-    reviews: 52;,
+    reviews: 52;,;,
 },;
   {;
     id: "partner-portal-builder",;
@@ -290,7 +290,7 @@
     launchDate: "2025-06-12",;
     customers: 48,;
     rating: 4.7,;
-    reviews: 19;,
+    reviews: 19;,;,
 },;
   {;
     id: "ai-procurement-bid-analyzer",;
@@ -330,7 +330,7 @@
     launchDate: "2025-06-20",;
     customers: 33,;
     rating: 4.6,;
-    reviews: 14;,
+    reviews: 14;,;,
 },;
   {;
     id: "smart-terms-policy-generator",;
@@ -370,7 +370,7 @@
     launchDate: "2025-06-18",;
     customers: 122,;
     rating: 4.7,;
-    reviews: 39;,
+    reviews: 39;,;,
 },;
   {;
     id: "vendor-security-review-assistant",;
@@ -410,7 +410,7 @@
     launchDate: "2025-06-22",;
     customers: 58,;
     rating: 4.6,;
-    reviews: 21;,
+    reviews: 21;,;,
 },;
   {;
     id: "smart-release-notes-broadcaster",;
@@ -450,7 +450,7 @@
     launchDate: "2025-06-21",;
     customers: 74,;
     rating: 4.7,;
-    reviews: 26;,
+    reviews: 26;,;,
 },;
   {;
     id: "contract-redline-copilot",;
@@ -490,7 +490,7 @@
     launchDate: "2025-06-19",;
     customers: 61,;
     rating: 4.7,;
-    reviews: 28;,
+    reviews: 28;,;,
 },;
   {;
     id: "vendor-security-questionnaire-automation",;
@@ -530,7 +530,7 @@
     launchDate: "2025-05-12",;
     customers: 57,;
     rating: 4.7,;
-    reviews: 33;,
+    reviews: 33;,;,
 },;
   {;
     id: "contract-clause-analyzer",;
@@ -570,7 +570,7 @@
     launchDate: "2025-06-01",;
     customers: 39,;
     rating: 4.6,;
-    reviews: 22;,
+    reviews: 22;,;,
 },;
   {;
     id: "marketing-attribution-insights",;
@@ -610,7 +610,7 @@
     launchDate: "2025-05-25",;
     customers: 102,;
     rating: 4.8,;
-    reviews: 61;,
+    reviews: 61;,;,
 },;
   {;
     id: "ai-compliance-policy-watcher",;
@@ -650,7 +650,7 @@
     launchDate: "2025-06-24",;
     customers: 27,;
     rating: 4.6,;
-    reviews: 12;,
+    reviews: 12;,;,
 },;
   {;
     id: "smart-churn-winback-campaigns",;
@@ -690,7 +690,7 @@
     launchDate: "2025-06-23",;
     customers: 44,;
     rating: 4.7,;
-    reviews: 20;,
+    reviews: 20;,;,
 },;
   {;
     id: "ai-sla-uptime-reporter",;
@@ -731,5 +731,5 @@
     customers: 31,;
     rating: 4.6,;
     reviews: 14;
-
+;
 ]}}

@@ -80,14 +80,14 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Full-stack SaaS platform with real-time data processing, AI model training pipeline, and scalable cloud infrastructure. Includes enterprise-grade security and compliance features.",;
     launchDate: "2024-03-01",;
     customers: 1800,;
     rating: 4.9,;
-    reviews: 950;,
+    reviews: 950;,;,
 },;
   // Quantum-Safe Cybersecurity Platform;
   {;
@@ -132,14 +132,14 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade security platform with quantum-resistant cryptography, AI-powered threat detection, and automated compliance management. Deployed on secure cloud infrastructure with 99.99% uptime.",;
     launchDate: "2024-02-15",;
     customers: 1200,;
     rating: 4.8,;
-    reviews: 680;,
+    reviews: 680;,;,
 },;
   // AI-Powered Customer Experience Platform;
   {;
@@ -184,14 +184,14 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Scalable SaaS platform with real-time data processing, AI model training, and comprehensive analytics dashboard. Includes mobile app and API for seamless integration.",;
     launchDate: "2024-01-20",;
     customers: 2200,;
     rating: 4.7,;
-    reviews: 1100;,
+    reviews: 1100;,;,
 },;
   // Blockchain Supply Chain Transparency;
   {;
@@ -236,14 +236,14 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Enterprise blockchain platform with permissioned networks, smart contract automation, and comprehensive supply chain management tools. Deployed on secure cloud infrastructure.",;
     launchDate: "2024-02-01",;
     customers: 800,;
     rating: 4.6,;
-    reviews: 420;,
+    reviews: 420;,;,
 },;
   // AI-Powered HR Automation Suite;
   {;
@@ -288,14 +288,14 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Full-featured HR platform with AI-powered automation, comprehensive employee management tools, and seamless third-party integrations. Includes mobile app and API access.",;
     launchDate: "2024-01-10",;
     customers: 1600,;
     rating: 4.8,;
-    reviews: 820;,
+    reviews: 820;,;,
 },;
   // Quantum Machine Learning Platform;
   {;
@@ -340,14 +340,14 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced quantum computing platform with hybrid classical-quantum algorithms, comprehensive development tools, and cloud-based quantum simulators. Includes educational resources and community support.",;
     launchDate: "2024-03-15",;
     customers: 400,;
     rating: 4.9,;
-    reviews: 280;,
+    reviews: 280;,;,
 },;
   // Edge Computing Orchestration Platform;
   {;
@@ -392,7 +392,7 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade edge computing platform with Kubernetes-based orchestration, comprehensive monitoring tools, and seamless cloud integration. Deployed on secure infrastructure with global edge locations.",;

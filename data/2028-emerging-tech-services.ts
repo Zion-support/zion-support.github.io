@@ -80,14 +80,14 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete biometric authentication platform with multi-modal verification, liveness detection, and compliance tools. Includes mobile SDKs and web APIs.",;
     launchDate: "2028-01-20",;
     customers: 180,;
     rating: 4.8,;
-    reviews: 134;,
+    reviews: 134;,;,
 },;
   // Edge Computing Orchestration Platform;
   {;
@@ -132,14 +132,14 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete edge computing orchestration platform with intelligent workload distribution, resource optimization, and comprehensive monitoring. Includes mobile management and analytics.",;
     launchDate: "2028-02-01",;
     customers: 95,;
     rating: 4.7,;
-    reviews: 68;,
+    reviews: 68;,;,
 },;
   // 5G Network Optimization Platform;
   {;
@@ -184,14 +184,14 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete 5G network optimization platform with AI-powered monitoring, optimization, and analytics. Includes mobile management and comprehensive reporting.",;
     launchDate: "2028-01-15",;
     customers: 65,;
     rating: 4.9,;
-    reviews: 48;,
+    reviews: 48;,;,
 },;
   // Blockchain Supply Chain Platform;
   {;
@@ -236,14 +236,14 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete blockchain supply chain platform with end-to-end tracking, smart contracts, and comprehensive analytics. Includes mobile apps and API access.",;
     launchDate: "2028-02-01",;
     customers: 140,;
     rating: 4.8,;
-    reviews: 98;,
+    reviews: 98;,;,
 },;
   // AI-Powered Content Creation Suite;
   {;
@@ -288,14 +288,14 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete AI content creation suite with text, video, and image generation capabilities. Includes social media automation and analytics tools.",;
     launchDate: "2028-01-25",;
     customers: 250,;
     rating: 4.7,;
-    reviews: 189;,
+    reviews: 189;,;,
 },;
   // Quantum Machine Learning Platform;
   {;
@@ -340,14 +340,14 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete quantum machine learning platform with quantum algorithms, neural networks, and classical ML integration. Includes comprehensive documentation and expert support.",;
     launchDate: "2028-01-30",;
     customers: 45,;
     rating: 4.9,;
-    reviews: 32;,
+    reviews: 32;,;,
 },;
   // Autonomous Vehicle Fleet Management;
   {;
@@ -392,14 +392,14 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete autonomous vehicle fleet management platform with AI optimization, safety monitoring, and comprehensive analytics. Includes mobile management and API access.",;
     launchDate: "2028-02-15",;
     customers: 85,;
     rating: 4.8,;
-    reviews: 67;,
+    reviews: 67;,;,
 },;
   // Digital Twin Platform;
   {;
@@ -444,7 +444,7 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete digital twin platform with 3D modeling, real-time monitoring, and predictive analytics. Includes mobile monitoring and comprehensive reporting.",;

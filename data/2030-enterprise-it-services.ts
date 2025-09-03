@@ -80,14 +80,14 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced autonomous DevOps platform with self-optimizing, self-healing, and self-improving operations.",;
     launchDate: "2030-01-01",;
     customers: 23,;
     rating: 4.9,;
-    reviews: 15;,
+    reviews: 15;,;,
 },;
   // Zero Trust Network Architecture 2030;
   {;
@@ -132,14 +132,14 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced zero trust network architecture platform with continuous verification and comprehensive security.",;
     launchDate: "2030-01-15",;
     customers: 18,;
     rating: 5.0,;
-    reviews: 12;,
+    reviews: 12;,;,
 },;
   // Edge Computing Orchestration 2030;
   {;
@@ -184,14 +184,14 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced edge computing orchestration platform with intelligent distributed computing and real-time processing.",;
     launchDate: "2030-02-01",;
     customers: 31,;
     rating: 4.8,;
-    reviews: 20;,
+    reviews: 20;,;,
 },;
   // AI-Powered IT Operations Center 2030;
   {;
@@ -236,14 +236,14 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced AI-powered IT operations platform with intelligent monitoring, automation, and optimization.",;
     launchDate: "2030-02-15",;
     customers: 27,;
     rating: 4.9,;
-    reviews: 18;,
+    reviews: 18;,;,
 },;
   // Quantum-Secure Infrastructure 2030;
   {;
@@ -288,7 +288,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced quantum-secure infrastructure platform with quantum-proof security and comprehensive protection.",;

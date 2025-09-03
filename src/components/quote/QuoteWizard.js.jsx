@@ -6,27 +6,26 @@ import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
  from '@/hooks/use-toast';
-) {
+) {;
 
   const progress = (step / WIZARD_STEPS.length) * 100;
-  return ()
-    <div className="space-y-1">
-      <div"
-        data-testid="step-indicator"
-        className="text-sm text-muted-foreground"
-      >
+  return ();
+    <div className="space-y-1">;
+      <div";
+        data-testid="step-indicator";
+        className="text-sm text-muted-foreground">;
         {step}/{WIZARD_STEPS.length}
-      </div>"
-      <div className="h-1 bg-zion-blue-light rounded">
-        <div"
-          className="h-1 bg-zion-purple rounded"
+      </div>";
+      <div className="h-1 bg-zion-blue-light rounded">;
+        <div";
+          className="h-1 bg-zion-purple rounded";
           style={{ width: `${progress}%` }}
-        />
-      </div>
-    </div>
-  );
+        />;
+      </div>;
+    </div>;
+  );,
 }
-export function QuoteWizard({ category }) {
+export function QuoteWizard({ category }) {;
 
   const [step, setStep] = useState(1);
   const [selectedItemId, setSelectedItemId] = useState(null);
@@ -35,249 +34,243 @@ export function QuoteWizard({ category }) {
   const { data, error, mutate, isLoading } = useQuoteWizard(category);
   const delayedError = useDelayedError(error);
   const { toast } = useToast();
-  useEffect(() => {
-  // TODO: Add dependencies if needed
+  useEffect(() => {;
+  // TODO: Add dependencies if needed;
 
-  return () => {
-    // Cleanup function
-  };
+  return () => {;
+    // Cleanup function;,
+};,
 }, []);, []);
-    if(delayedError) {
+    if(delayedError) {;
 
-      toast({
+      toast({;
 
-        title: 'Unable to load services',
-        variant: 'destructive'});
-    }
+        title: 'Unable to load services',;
+        variant: 'destructive'});,
+}
   }, [delayedError, toast]);
-  // Use isLoading from SWR for a more direct loading state
+  // Use isLoading from SWR for a more direct loading state;
   const loading = isLoading;
-  const selectedItem = useMemo(() => {
+  const selectedItem = useMemo(() => {;
     if(!data || !selectedItemId) return null;
-    return data.find(item => item.id === selectedItemId);
-  }, [data, selectedItemId]);
-  const handleSelect = id => {
+    return data.find(item => item.id === selectedItemId);,
+}, [data, selectedItemId]);
+  const handleSelect = id => {;
 
     setSelectedItemId(id);
-    setStep(2);
-  };
-  const handleContinue = () => {
-    if(!selectedItemId) {
+    setStep(2);,
+};
+  const handleContinue = () => {;
+    if(!selectedItemId) {;
 
-      setSelectionError()`
-        `Please choose a ${category === 'services''
-            ? 'service''
-            : category === 'talent''
-              ? 'talent''
-              : 'item'`
-        } to continue.`
+      setSelectionError()`;
+        `Please choose a ${category === 'services'';
+            ? 'service'';
+            : category === 'talent'';
+              ? 'talent'';
+              : 'item'`;,
+} to continue.`;
       );
-      return;
-    }
+      return;,
+}
     setSelectionError('');
-    setStep(2);
-  };
-  const handleSubmit = async () => {
+    setStep(2);,
+};
+  const handleSubmit = async () => {;
     if(!selectedItemId) return;
     let endpoint = '/api/quotes';
     const payload = { user_message: message };
-    switch(category) {
+    switch(category) {;
 
-      case 'services':'
+      case 'services':';
         endpoint = '/api/services/quotes';
         payload.service_id = selectedItemId;
         break;
-      case 'talent':'
+      case 'talent':';
         endpoint = '/api/talent/quotes';
         payload.talent_id = selectedItemId;
         break;
-      case 'equipment':'
+      case 'equipment':';
         endpoint = '/api/equipment/quotes';
         payload.item_id = selectedItemId;
         break;
-      default:
+      default:;
         payload.item_id = selectedItemId;
-        payload.category = category;
-    }
-    await fetch(endpoint, {
+        payload.category = category;,
+}
+    await fetch(endpoint, {;
 
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/json' },;
       body: JSON.stringify(payload)});
-    setStep(3);
-  };
-  if(step === 1) {
+    setStep(3);,
+};
+  if(step === 1) {;
 
-    return ("
-      <div className="space-y-6">
-        <StepIndicator step={step} />
-        {loading && !delayedError && (
-          <div"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
-            data-testid="loading-indicator"
-          >
-            {Array.from({ length: 6 }).map((_, i) => ("
-              <Skeleton key={i} className="h-[120px] w-full" />
+    return (";
+      <div className="space-y-6">;
+        <StepIndicator step={step} />;
+        {loading && !delayedError && (;
+          <div";
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4";
+            data-testid="loading-indicator">;
+            {Array.from({ length: 6 }).map((_, i) => (";
+              <Skeleton key={i} className="h-[120px] w-full" />;
             ))}
-          </div>
+          </div>;
         )}
-
-        {delayedError && ("
-          <div className="space-y-2" data-testid="fetch-error-alert">"
-            <Alert variant="destructive">
-              <AlertTitle>Error Fetching {category}</AlertTitle>
-              <AlertDescription>
-                There was a problem fetching the {category}.Please check your
-                internet connection and try again.</AlertDescription>
-            </Alert>
-            <Button"
-              size="sm"
-              onClick={() => mutate()}"
-              data-testid="retry-button"
-            >
-              Retry
-            </Button>
-          </div>
+;
+        {delayedError && (";
+          <div className="space-y-2" data-testid="fetch-error-alert">";
+            <Alert variant="destructive">;
+              <AlertTitle>Error Fetching {category}</AlertTitle>;
+              <AlertDescription>;
+                There was a problem fetching the {category}.Please check your;
+                internet connection and try again.</AlertDescription>;
+            </Alert>;
+            <Button";
+              size="sm";
+              onClick={() => mutate()}";
+              data-testid="retry-button">;
+              Retry;
+            </Button>;
+          </div>;
         )}
-
-        {!loading && !delayedError && data && data.length === 0 && ("
-          <div className="text-center text-muted-foreground py-12">
-            No {category} found.</div>
+;
+        {!loading && !delayedError && data && data.length === 0 && (";
+          <div className="text-center text-muted-foreground py-12">;
+            No {category} found.</div>;
         )}
-
-        {!loading && !delayedError && data && data.length > 0 && ("
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {data.map(item => (
-              <Card`
+;
+        {!loading && !delayedError && data && data.length > 0 && (";
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">;
+            {data.map(item => (;
+              <Card`;
                 data-testid={`item-card-${item.id}`}
-                key={item.id}'`
+                key={item.id}'`;
                 className={`p-4 space-y-2 cursor-pointer border-2 transition-colors rounded-lg shadow-sm ${selectedItemId === item.id ? 'border-zion-purple ring-2 ring-zion-purple' : 'hover:border-zion-purple/70'} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple`}
                 onClick={() => setSelectedItemId(item.id)}
                 tabIndex={0}
-                onKeyDown={e => {
+                onKeyDown={e => {;
 
-                  if(e.key === 'Enter' || e.key === ' ') {
+                  if(e.key === 'Enter' || e.key === ' ') {;
 
                     e.preventDefault();
-                    setSelectedItemId(item.id);
-                  }
+                    setSelectedItemId(item.id);,
+}
                 }}
-              >"
-                <div className="font-semibold text-lg">{item.name}</div>
+              >";
+                <div className="font-semibold text-lg">{item.name}</div>;
                 {/* Display other relevant info like price if available */}
-                {item.price !== null && ("
-                  <div className="text-sm text-muted-foreground">
+                {item.price !== null && (";
+                  <div className="text-sm text-muted-foreground">;
                     Price: ${item.price.toFixed(2)}
-                  </div>
+                  </div>;
                 )}
                 {/* item.slug might not be directly displayable but useful for links if needed later */}
-                <Button"
-                  size="sm"
-                  variant="outline"`
+                <Button";
+                  size="sm";
+                  variant="outline"`;
                   data-testid={`select-item-${item.id}`}
-                  onClick={e => {
+                  onClick={e => {;
 
                     e.stopPropagation();
-                    handleSelect(item.id);
-                  }}"
-                  className="w-full mt-2"
-                >
+                    handleSelect(item.id);,
+}}";
+                  className="w-full mt-2">;
                   Select this{' '}
-                  {category === 'services''
-                    ? 'Service''
-                    : category === 'talent''
-                      ? 'Talent''
+                  {category === 'services'';
+                    ? 'Service'';
+                    : category === 'talent'';
+                      ? 'Talent'';
                       : 'Item'}
-                </Button>
-              </Card>
+                </Button>;
+              </Card>;
             ))}
-          </div>
+          </div>;
         )}
-
-        {selectionError && (
-          <p"
-            className="text-red-500 text-sm mt-2"
-            data-testid="selection-error"
-          >
+;
+        {selectionError && (;
+          <p";
+            className="text-red-500 text-sm mt-2";
+            data-testid="selection-error">;
             {selectionError}
-          </p>
+          </p>;
         )}
-        <Button
+        <Button;
           onClick={handleContinue}
-          disabled={loading || !!delayedError || !selectedItemId}"
-          className="mt-6"
-        >
-          Continue
-        </Button>
-      </div>
-    );
-  }
-  if(step === 2) {
+          disabled={loading || !!delayedError || !selectedItemId}";
+          className="mt-6">;
+          Continue;
+        </Button>;
+      </div>;
+    );,
+}
+  if(step === 2) {;
 
-    return ("
-      <div data-testid="details-step" className="space-y-4">
-        <StepIndicator step={step} />
-        {selectedItem && (
-          <div"
-            data-testid="selected-item-name"
-            className="text-lg font-semibold text-zion-slate-dark"
-          >
+    return (";
+      <div data-testid="details-step" className="space-y-4">;
+        <StepIndicator step={step} />;
+        {selectedItem && (;
+          <div";
+            data-testid="selected-item-name";
+            className="text-lg font-semibold text-zion-slate-dark">;
             Selected{' '}
-            {category === 'services''
-              ? 'Service''
-              : category === 'talent''
-                ? 'Talent''
+            {category === 'services'';
+              ? 'Service'';
+              : category === 'talent'';
+                ? 'Talent'';
                 : 'Item'}
             : {selectedItem.name}
-          </div>
+          </div>;
         )}
-        {selectedItem && selectedItem.price !== null && ("
-          <div className="text-md text-muted-foreground">
+        {selectedItem && selectedItem.price !== null && (";
+          <div className="text-md text-muted-foreground">;
             Price: ${selectedItem.price.toFixed(2)}
-          </div>
+          </div>;
         )}
-        <Textarea
+        <Textarea;
           value={message}
-          onChange={e => setMessage(e.target.value)}"
-          data-testid="message-input"'`
+          onChange={e => setMessage(e.target.value)}";
+          data-testid="message-input"'`;
           placeholder={`Any specific details about your request for ${selectedItem?.name || 'the selected item'}?`}
           rows={4}
-        />"
-        <div className="flex justify-between items-center">"
-          <Button variant="outline" onClick={() => setStep(1)}>
-            Back
-          </Button>
-          <Button onClick={handleSubmit} disabled={!selectedItemId}>
-            Submit Quote
-          </Button>
-        </div>
-      </div>
-    );
-  }
-  if(step === 3) {
+        />";
+        <div className="flex justify-between items-center">";
+          <Button variant="outline" onClick={() => setStep(1)}>;
+            Back;
+          </Button>;
+          <Button onClick={handleSubmit} disabled={!selectedItemId}>;
+            Submit Quote;
+          </Button>;
+        </div>;
+      </div>;
+    );,
+}
+  if(step === 3) {;
 
-    return ("
-      <div data-testid="success-step" className="space-y-4 text-center py-12">
-        <StepIndicator step={step} />"
-        <div className="text-2xl font-semibold text-green-600">
-          Quote Submitted Successfully!
-        </div>"
-        <p className="text-muted-foreground">
+    return (";
+      <div data-testid="success-step" className="space-y-4 text-center py-12">;
+        <StepIndicator step={step} />";
+        <div className="text-2xl font-semibold text-green-600">;
+          Quote Submitted Successfully!;
+        </div>";
+        <p className="text-muted-foreground">;
           Thank you for your request regarding{' '}
-          {selectedItem?.name || 'the selected item'}.We will get back to you
-          shortly.</p>
-        <Button
-          onClick={() => {
+          {selectedItem?.name || 'the selected item'}.We will get back to you;
+          shortly.</p>;
+        <Button;
+          onClick={() => {;
             setStep(1);
             setSelectedItemId(null);
-            setMessage('');
-          }}
-        >
-          Request Another Quote
-        </Button>
-      </div>
-    );
-  }
-  return null;
+            setMessage('');,
+}}
+        >;
+          Request Another Quote;
+        </Button>;
+      </div>;
+    );,
+}
+  return null;,
 }
 '"`

@@ -1,120 +1,120 @@
 #!/usr/bin/env node;
-
+;
 const fs = require("fs");
 const path = require("path");
-class $1 {
-  constructor() {
+class $1 {;
+  constructor() {;
   this.projectRoot = process.cwd();
-    this.fixes = [];,
+    this.fixes = [];,;,
 }
 ;
-  log(message, type = "INFO") {
+  log(message, type = "INFO") {;
   const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${type}] ${message}`);,
+    console.log(`[${timestamp}] [${type}] ${message}`);,;,
 }
 ;
-  async fixCorruptedImports() {
+  async fixCorruptedImports() {;
   this.log("🔧 Fixing corrupted import statements...");
-    const filesToFix = [
+    const filesToFix = [;
   "pages",;
       "components",;
       "utils",;
       "hooks";
     ];
     ;
-    for (const dir of filesToFix) {
+    for (const dir of filesToFix) {;
   const dirPath = path.join(this.projectRoot, dir);
-      if (fs.existsSync(dirPath)) {
-  this.fixFilesInDirectory(dirPath);,
+      if (fs.existsSync(dirPath)) {;
+  this.fixFilesInDirectory(dirPath);,;,
 }
     }
   }
 ;
-  fixFilesInDirectory(dirPath) {
+  fixFilesInDirectory(dirPath) {;
   const items = fs.readdirSync(dirPath);
-    for (const item of items) {
+    for (const item of items) {;
   const fullPath = path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
-      if (stat.isDirectory()) {
-  this.fixFilesInDirectory(fullPath);,
-} else if (item.endsWith(".ts") || item.endsWith(".tsx")) {
-  this.fixCorruptedFile(fullPath);,
+      if (stat.isDirectory()) {;
+  this.fixFilesInDirectory(fullPath);,;,
+} else if (item.endsWith(".ts") || item.endsWith(".tsx")) {;
+  this.fixCorruptedFile(fullPath);,;,
 }
     }
   }
 ;
-  fixCorruptedFile(filePath) {
-  try {
+  fixCorruptedFile(filePath) {;
+  try {;
   let content = fs.readFileSync(filePath, "utf8");
       let modified = false;
       // Fix corrupted import statements with \\n;
-      if (content.includes("import React from \"react\";\\nimport type { NextPage }")) {
+      if (content.includes("import React from \"react\";\\nimport type { NextPage }")) {;
   content = content.replace(;
           /import React from "react";\\nimport type { NextPage }/g,;
           "import React from \"react\";\nimport type { NextPage }";
         );
-        modified = true;,
+        modified = true;,;,
 }
       ;
       // Fix other corrupted patterns;
-      if (content.includes("\\n")) {
+      if (content.includes("\\n")) {;
   content = content.replace(/\\n/g, "\n");
-        modified = true;,
+        modified = true;,;,
 }
       ;
       // Fix specific corrupted files;
-      if (filePath.includes("messageChannelHandler.ts")) {
+      if (filePath.includes("messageChannelHandler.ts")) {;
   content = `// Message channel handler utility;
-export const messageChannelHandler = {
-  receiveMessage: (callback: (message: any) => void) => {
-  // Implementation for receiving messages;,
+export const messageChannelHandler = {;
+  receiveMessage: (callback: (message: any) => void) => {;
+  // Implementation for receiving messages;,;,
 },;
-  sendMessage: (message: any) => {
-  // Implementation for sending messages;,
+  sendMessage: (message: any) => {;
+  // Implementation for sending messages;,;,
 }
 };`;
-        modified = true;,
+        modified = true;,;,
 }
       ;
-      if (filePath.includes("sanitizeHtml.ts")) {
+      if (filePath.includes("sanitizeHtml.ts")) {;
   content = `// HTML sanitization utility to prevent CSP violations;
 import DOMPurify from "isomorphic-dompurify";
-export const sanitizeHtml = (html: string): string => {
-  return DOMPurify.sanitize(html);,
+export const sanitizeHtml = (html: string): string => {;
+  return DOMPurify.sanitize(html);,;,
 };`;
-        modified = true;,
+        modified = true;,;,
 }
       ;
-      if (modified) {
+      if (modified) {;
   fs.writeFileSync(filePath, content);
-        this.fixes.push(`Fixed corrupted file: ${path.relative(this.projectRoot, filePath)}`);,
+        this.fixes.push(`Fixed corrupted file: ${path.relative(this.projectRoot, filePath)}`);,;,
 }
-      ;,
-} catch (error) {
-  this.log(`⚠️  Could not fix file ${filePath}: ${error.message}`, "WARN");,
+      ;,;,
+} catch (error) {;
+  this.log(`⚠️  Could not fix file ${filePath}: ${error.message}`, "WARN");,;,
 }
   }
 ;
-  async run() {
+  async run() {;
   this.log("🚀 Starting Final TypeScript Fixing Process...");
     this.log("==");
-    try {
+    try {;
   await this.fixCorruptedImports();
       this.log("\\n📊 FINAL TYPESCRIPT FIXING REPORT");
       this.log("======");
       this.log(`Fixes Applied: ${this.fixes.length}`);
-      if (this.fixes.length > 0) {
+      if (this.fixes.length > 0) {;
   this.log("\\n✅ Fixes Applied:");
-        this.fixes.forEach((fix, index) => {
-  this.log(`  ${index + 1}. ${fix}`);,
-});,
+        this.fixes.forEach((fix, index) => {;
+  this.log(`  ${index + 1}. ${fix}`);,;,
+});,;,
 }
       ;
       this.log("\\n🎉 Final TypeScript fixing completed!");
-      ;,
-} catch (error) {
+      ;,;,
+} catch (error) {;
   this.log(`💥 Fatal error: ${error.message}`, "ERROR");
-      process.exit(1);,
+      process.exit(1);,;,
 }
   }
 }

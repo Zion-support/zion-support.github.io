@@ -92,7 +92,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails: "AI models, healthcare APIs, compliance framework",;
@@ -100,7 +100,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       customers: 23,;
       rating: 4.9,;
       reviews: 18,;
-      isPopular: true,;,
+      isPopular: true,;,;,
 },;
     // Fintech Innovation Platform;
     {;
@@ -155,7 +155,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails:;
@@ -164,7 +164,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       customers: 41,;
       rating: 4.8,;
       reviews: 25,;
-      isNew: true,;,
+      isNew: true,;,;,
 },;
     // Smart Manufacturing Solutions;
     {;
@@ -214,14 +214,14 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails: "AI models, IoT platform, automation engine",;
       launchDate: "2025-01-10",;
       customers: 28,;
       rating: 4.7,;
-      reviews: 19,;,
+      reviews: 19,;,;,
 },;
     // Retail Technology Platform;
     {;
@@ -275,7 +275,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails:;
@@ -284,7 +284,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       customers: 35,;
       rating: 4.8,;
       reviews: 22,;
-      isPopular: true,;,
+      isPopular: true,;,;,
 },;
     // Education Technology Platform;
     {;
@@ -334,7 +334,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails:;
@@ -342,7 +342,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       launchDate: "2025-01-15",;
       customers: 47,;
       rating: 4.6,;
-      reviews: 31,;,
+      reviews: 31,;,;,
 },;
     // Legal Technology Platform;
     {;
@@ -392,7 +392,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails:;
@@ -401,7 +401,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       customers: 32,;
       rating: 4.7,;
       reviews: 24,;
-      isNew: true,;,
+      isNew: true,;,;,
 },;
     // Real Estate Technology Platform;
     {;
@@ -455,7 +455,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails:;
@@ -463,7 +463,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       launchDate: "2025-01-20",;
       customers: 29,;
       rating: 4.8,;
-      reviews: 20,;,
+      reviews: 20,;,;,
 },;
     // Transportation & Logistics Platform;
     {;
@@ -521,7 +521,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails:;
@@ -530,7 +530,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       customers: 26,;
       rating: 4.7,;
       reviews: 18,;
-      isPopular: true,;,
+      isPopular: true,;,;,
 },;
     // Energy & Utilities Platform;
     {;
@@ -580,7 +580,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails:;
@@ -588,7 +588,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       launchDate: "2025-01-25",;
       customers: 19,;
       rating: 4.8,;
-      reviews: 15,;,
+      reviews: 15,;,;,
 },;
     // Agriculture Technology Platform;
     {;
@@ -642,7 +642,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails:;
@@ -651,7 +651,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
       customers: 24,;
       rating: 4.7,;
       reviews: 17,;
-      isNew: true,;,
+      isNew: true,;,;,
 },;
   ];
 export const getSpecializedIndustryServicesByCategory = (category: string) => {;
@@ -661,12 +661,12 @@ export const getSpecializedIndustryServicesByCategory = (category: string) => {;
 export const getPopularSpecializedIndustryServices = () => {;
   return revolutionarySpecializedIndustryServices2029.filter(;
     service => service.isPopular;
-  );,
+  );,;,
 }
 export const getNewSpecializedIndustryServices = () => {;
   return revolutionarySpecializedIndustryServices2029.filter(;
     service => service.isNew;
-  );,
+  );,;,
 }
 export const getSpecializedIndustryServicesByPriceRange = (;
   minPrice: number,;
@@ -674,5 +674,5 @@ export const getSpecializedIndustryServicesByPriceRange = (;
 ) => {;
   return revolutionarySpecializedIndustryServices2029.filter(service => {;
     const price = parseInt(service.price.replace("$", "").replace(",", ""));
-    return price >= minPrice && price <= maxPrice});,
+    return price >= minPrice && price <= maxPrice});,;,
 }>

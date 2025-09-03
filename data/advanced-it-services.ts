@@ -78,14 +78,14 @@ export const advancedITServices: AdvancedITService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete quantum cloud platform with quantum computers, algorithm libraries, and hybrid workflow capabilities.",;
     launchDate: "2024-12-01",;
     customers: 8,;
     rating: 4.9,;
-    reviews: 4;,
+    reviews: 4;,;,
 },;
   {;
     id: "edge-computing-orchestrator",;
@@ -129,14 +129,14 @@ export const advancedITServices: AdvancedITService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete edge computing orchestration platform with intelligent resource management and real-time optimization.",;
     launchDate: "2024-10-01",;
     customers: 156,;
     rating: 4.7,;
-    reviews: 89;,
+    reviews: 89;,;,
 },;
   {;
     id: "zero-trust-security-platform",;
@@ -180,14 +180,14 @@ export const advancedITServices: AdvancedITService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete zero trust security platform with continuous verification and advanced threat detection capabilities.",;
     launchDate: "2024-09-01",;
     customers: 89,;
     rating: 4.8,;
-    reviews: 45;,
+    reviews: 45;,;,
 },;
   {;
     id: "ai-powered-devops-platform",;
@@ -231,14 +231,14 @@ export const advancedITServices: AdvancedITService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "AI-powered DevOps platform with intelligent automation, testing, and monitoring capabilities.",;
     launchDate: "2024-08-01",;
     customers: 234,;
     rating: 4.6,;
-    reviews: 123;,
+    reviews: 123;,;,
 },;
   {;
     id: "blockchain-enterprise-platform",;
@@ -282,14 +282,14 @@ export const advancedITServices: AdvancedITService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete enterprise blockchain platform with smart contracts, token management, and compliance features.",;
     launchDate: "2024-07-01",;
     customers: 67,;
     rating: 4.7,;
-    reviews: 34;,
+    reviews: 34;,;,
 },;
   {;
     id: "quantum-data-center",;
@@ -333,14 +333,14 @@ export const advancedITServices: AdvancedITService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Quantum-enhanced data center with quantum computing integration and AI optimization capabilities.",;
     launchDate: "2024-11-01",;
     customers: 12,;
     rating: 4.9,;
-    reviews: 6;,
+    reviews: 6;,;,
 },;
   {;
     id: "ai-powered-network-security",;
@@ -384,14 +384,14 @@ export const advancedITServices: AdvancedITService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "AI-powered network security platform with real-time threat detection and automated response capabilities.",;
     launchDate: "2024-09-15",;
     customers: 178,;
     rating: 4.7,;
-    reviews: 89;,
+    reviews: 89;,;,
 },;
   {;
     id: "quantum-iot-platform",;
@@ -435,14 +435,14 @@ export const advancedITServices: AdvancedITService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Quantum-enhanced IoT platform with quantum encryption and AI-powered analytics capabilities.",;
     launchDate: "2024-08-15",;
     customers: 234,;
     rating: 4.6,;
-    reviews: 123;,
+    reviews: 123;,;,
 },;
   {;
     id: "ai-powered-cloud-migration",;
@@ -486,7 +486,7 @@ export const advancedITServices: AdvancedITService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "AI-powered cloud migration platform with intelligent planning and automated execution capabilities.",;

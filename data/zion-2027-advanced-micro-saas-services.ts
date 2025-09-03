@@ -42,7 +42,7 @@ const contact = {;
   mobile: "+1 302 464 0950",;
   email: "kleber@ziontechgroup.com",;
   address: "364 E Main St STE 1008 Middletown DE 19709",;
-  website: "https://ziontechgroup.com",;,
+  website: "https://ziontechgroup.com",;,;,
 }
 export const zion2027AdvancedMicroSaasServices: Zion2027AdvancedMicroSaasService[] =;
   [;
@@ -132,9 +132,9 @@ export const zion2027AdvancedMicroSaasServices: Zion2027AdvancedMicroSaasService
       launchDate: "2027-01-15",;
       customers: 450,;
       rating: 4.9,;
-      reviews: 280,;,
+      reviews: 280,;,;,
 },;
-
+;
     // Quantum-Enhanced Healthcare AI Platform;
     {;
       id: "quantum-enhanced-healthcare-ai-platform-2027",;
@@ -220,9 +220,9 @@ export const zion2027AdvancedMicroSaasServices: Zion2027AdvancedMicroSaasService
       launchDate: "2027-02-01",;
       customers: 320,;
       rating: 4.9,;
-      reviews: 190,;,
+      reviews: 190,;,;,
 },;
-
+;
     // Autonomous IoT Edge Computing Platform;
     {;
       id: "autonomous-iot-edge-computing-platform-2027",;
@@ -307,9 +307,9 @@ export const zion2027AdvancedMicroSaasServices: Zion2027AdvancedMicroSaasService
       launchDate: "2027-01-20",;
       customers: 1800,;
       rating: 4.8,;
-      reviews: 950,;,
+      reviews: 950,;,;,
 },;
-
+;
     // AI-Powered Autonomous Legal Research Platform;
     {;
       id: "ai-autonomous-legal-research-platform-2027",;
@@ -393,9 +393,9 @@ export const zion2027AdvancedMicroSaasServices: Zion2027AdvancedMicroSaasService
       launchDate: "2027-02-15",;
       customers: 750,;
       rating: 4.8,;
-      reviews: 420,;,
+      reviews: 420,;,;,
 },;
-
+;
     // Quantum-Enhanced Supply Chain Optimization Platform;
     {;
       id: "quantum-enhanced-supply-chain-optimization-2027",;
@@ -479,9 +479,9 @@ export const zion2027AdvancedMicroSaasServices: Zion2027AdvancedMicroSaasService
       launchDate: "2027-03-01",;
       customers: 680,;
       rating: 4.9,;
-      reviews: 380,;,
+      reviews: 380,;,;,
 },;
-
+;
     // AI-Powered Autonomous Marketing Platform;
     {;
       id: "ai-autonomous-marketing-platform-2027",;
@@ -565,9 +565,9 @@ export const zion2027AdvancedMicroSaasServices: Zion2027AdvancedMicroSaasService
       launchDate: "2027-01-25",;
       customers: 3200,;
       rating: 4.8,;
-      reviews: 1650,;,
+      reviews: 1650,;,;,
 },;
-
+;
     // Quantum-Enhanced Cybersecurity for Critical Infrastructure;
     {;
       id: "quantum-enhanced-cybersecurity-critical-infrastructure-2027",;
@@ -646,9 +646,9 @@ export const zion2027AdvancedMicroSaasServices: Zion2027AdvancedMicroSaasService
       launchDate: "2027-02-20",;
       customers: 180,;
       rating: 4.9,;
-      reviews: 95,;,
+      reviews: 95,;,;,
 },;
-
+;
     // AI-Powered Autonomous Human Resources Platform;
     {;
       id: "ai-autonomous-human-resources-platform-2027",;
@@ -727,9 +727,9 @@ export const zion2027AdvancedMicroSaasServices: Zion2027AdvancedMicroSaasService
       launchDate: "2027-03-15",;
       customers: 1400,;
       rating: 4.7,;
-      reviews: 780,;,
+      reviews: 780,;,;,
 },;
-
+;
     // Quantum-Enhanced Space Technology Platform;
     {;
       id: "quantum-enhanced-space-technology-platform-2027",;
@@ -813,9 +813,9 @@ export const zion2027AdvancedMicroSaasServices: Zion2027AdvancedMicroSaasService
       launchDate: "2027-04-01",;
       customers: 85,;
       rating: 4.9,;
-      reviews: 45,;,
+      reviews: 45,;,;,
 },;
-
+;
     // AI-Powered Autonomous Education Platform;
     {;
       id: "ai-autonomous-education-platform-2027",;
@@ -898,6 +898,6 @@ export const zion2027AdvancedMicroSaasServices: Zion2027AdvancedMicroSaasService
       launchDate: "2027-02-25",;
       customers: 2800,;
       rating: 4.8,;
-      reviews: 1450,;,
+      reviews: 1450,;,;,
 },;
   ]

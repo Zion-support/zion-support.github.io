@@ -79,14 +79,14 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Full quantum cloud infrastructure with advanced computing, security, and monitoring capabilities.",;
     launchDate: "2026-02-01",;
     customers: 200,;
     rating: 4.8,;
-    reviews: 100;,
+    reviews: 100;,;,
 },;
   {;
     id: "neuromorphic-computing-platform",;
@@ -130,14 +130,14 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Full neuromorphic computing platform with brain-inspired architecture and advanced AI capabilities.",;
     launchDate: "2026-01-25",;
     customers: 150,;
     rating: 4.7,;
-    reviews: 75;,
+    reviews: 75;,;,
 },;
   {;
     id: "photonic-computing-infrastructure",;
@@ -181,14 +181,14 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Full photonic computing infrastructure with light-speed processing and advanced optical capabilities.",;
     launchDate: "2026-02-10",;
     customers: 180,;
     rating: 4.8,;
-    reviews: 90;,
+    reviews: 90;,;,
 },;
   {;
     id: "dna-computing-platform",;
@@ -232,14 +232,14 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced DNA computing platform with molecular processing and biological algorithms.",;
     launchDate: "2026-03-01",;
     customers: 80,;
     rating: 4.9,;
-    reviews: 40;,
+    reviews: 40;,;,
 },;
   {;
     id: "holographic-computing-infrastructure",;
@@ -283,14 +283,14 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Full holographic computing infrastructure with 3D processing and immersive capabilities.",;
     launchDate: "2026-01-30",;
     customers: 250,;
     rating: 4.7,;
-    reviews: 125;,
+    reviews: 125;,;,
 },;
   {;
     id: "quantum-internet-infrastructure",;
@@ -334,14 +334,14 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Full quantum internet infrastructure with ultra-secure communication and advanced networking capabilities.",;
     launchDate: "2026-02-20",;
     customers: 120,;
     rating: 4.8,;
-    reviews: 60;,
+    reviews: 60;,;,
 },;
   {;
     id: "edge-quantum-computing",;
@@ -385,14 +385,14 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced edge quantum computing platform with real-time processing and mobile optimization.",;
     launchDate: "2026-02-15",;
     customers: 300,;
     rating: 4.7,;
-    reviews: 150;,
+    reviews: 150;,;,
 },;
   {;
     id: "quantum-robotics-infrastructure",;
@@ -436,7 +436,7 @@ export const revolutionary2026ITInfrastructureServices: Revolutionary2026ITInfra
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Full quantum robotics infrastructure with advanced automation and real-time control capabilities.",;

@@ -2,4 +2,4 @@
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/EnhancedServicesShowcase2030.tsx;
 :src.pages.disabled/EnhancedServicesShowcase2030.tsx;
 import: React, { useState } from "react";
-"const EnhancedServicesShowcase2030: React.FC = () => { const [activeCategory, setActiveCategory] = useState ("all")  const [searchTerm, setSearchTerm] = useState ("")  const [sortBy, setSortBy] = useState ("rating")  const [viewMode, setViewMode] = useState<"grid" | "list"> ("grid")  const [selectedService, setSelectedService] = useState < any> (null)  const [showModal, setShowModal] = useState (false)  "
+"const EnhancedServicesShowcase2030: React.FC = () => { const [activeCategory, setActiveCategory] = useState ("all")  const [searchTerm, setSearchTerm] = useState ("")  const [sortBy, setSortBy] = useState ("rating")  const [viewMode, setViewMode] = useState<"grid" | "list"> ("grid")  const [selectedService, setSelectedService] = useState < any> (null)  const [showModal, setShowModal] = useState (false)  "}

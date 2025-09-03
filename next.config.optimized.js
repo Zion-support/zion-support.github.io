@@ -1,49 +1,49 @@
 
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true",;,
+const withBundleAnalyzer = require("@next/bundle-analyzer")({;
+  enabled: process.env.ANALYZE === "true",;,;,
 });
-module.exports = withBundleAnalyzer({
+module.exports = withBundleAnalyzer({;
   compress: true,;
   poweredByHeader: false,;
   generateEtags: false,;
-  httpAgentOptions: {
-  keepAlive: true,;,
+  httpAgentOptions: {;
+  keepAlive: true,;,;,
 },;
-  images: {
+  images: {;
   formats: ["image/webp", "image/avif"],;
-    minimumCacheTTL: 60,;,
+    minimumCacheTTL: 60,;,;,
 },;
-  experimental: {
+  experimental: {;
   optimizeCss: true,;
-    optimizePackageImports: ["@radix-ui/react-icons", "lucide-react"],;,
+    optimizePackageImports: ["@radix-ui/react-icons", "lucide-react"],;,;,
 },;
-  webpack: (config, { isServer }) => {
-  if (!isServer) {
-  config.resolve.fallback = {
+  webpack: (config, { isServer }) => {;
+  if (!isServer) {;
+  config.resolve.fallback = {;
   ...config.resolve.fallback,;
         fs: false,;
         net: false,;
-        tls: false,;,
+        tls: false,;,;,
 }
     }
     ;
     // Optimize bundle splitting;
-    config.optimization.splitChunks = {
+    config.optimization.splitChunks = {;
   chunks: "all",;
-      cacheGroups: {
-  vendor: {
+      cacheGroups: {;
+  vendor: {;
   test: /[\\/]node_modules[\\/]/,;
           name: "vendors",;
-          chunks: "all",;,
+          chunks: "all",;,;,
 },;
-        common: {
+        common: {;
   name: "common",;
           minChunks: 2,;
           chunks: "all",;
-          enforce: true,;,
-},;,
-},;,
+          enforce: true,;,;,
+},;,;,
+},;,;,
 }
-    return config;,
-},;,
+    return config;,;,
+},;,;,
 })

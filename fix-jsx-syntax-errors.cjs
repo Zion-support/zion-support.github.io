@@ -1,12 +1,12 @@
 #!/usr/bin/env node;
 const fs = require("fs");
 // Function to fix JSX syntax errors;
-function fixJSXSyntaxErrors(filePath) {
-  try {
+function fixJSXSyntaxErrors(filePath) {;
+  try {;
   let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
     // Fix JSX attribute semicolons;
-    const fixes = [
+    const fixes = [;
   // Fix title attribute semicolons;
       { pattern: /title="([^"]*);"/g, replacement: "title="$1"" },;
       { pattern: /title="([^"]*);"/g, replacement: "title="$1"" },;
@@ -28,28 +28,28 @@ function fixJSXSyntaxErrors(filePath) {
       { pattern: /"([^"]*);",/g, replacement: ""$1"," },;
       { pattern: /"([^"]*);",/g, replacement: ""$1"," },;
     ];
-
-    fixes.forEach(fix => {
+;
+    fixes.forEach(fix => {;
   const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
+      if (newContent !== content) {;
   content = newContent;
-        modified = true;,
+        modified = true;,;,
 }
     });
-    if (modified) {
+    if (modified) {;
   fs.writeFileSync(filePath, content, `utf8`);
       console.log(`Fixed JSX syntax errors in: ${filePath}`);
-      return true;,
+      return true;,;,
 }
-    return false;,
-} catch (error) {
+    return false;,;,
+} catch (error) {;
   console.error(`Error fixing ${filePath }:`, error.message);
-    return false;,
+    return false;,;,
 }
 }
 ;
 // Files that need JSX syntax fixes;
-const filesToFix = [
+const filesToFix = [;
   `pages/NotFound.tsx`,;
   "pages/enhanced-home.tsx",;
   "pages/index.p.tsx",;
@@ -58,10 +58,10 @@ const filesToFix = [
 ];
 console.log("🔧 Fixing JSX syntax errors...');
 let fixedCount = 0;
-filesToFix.forEach(file => {
-  if (fs.existsSync(file)) {
-  if (fixJSXSyntaxErrors(file)) {
-  fixedCount++;,
+filesToFix.forEach(file => {;
+  if (fs.existsSync(file)) {;
+  if (fixJSXSyntaxErrors(file)) {;
+  fixedCount++;,;,
 }
   }
 });

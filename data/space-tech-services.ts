@@ -78,14 +78,14 @@ export const spaceTechServices: SpaceTechService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete space mission platform with orbital calculations, satellite tracking, and mission management. Includes real-time monitoring and regulatory compliance.",;
     launchDate: "2024-01-15",;
     customers: 25,;
     rating: 5.0,;
-    reviews: 12;,
+    reviews: 12;,;,
 },;
   {;
     id: "satellite-constellation-management",;
@@ -129,14 +129,14 @@ export const spaceTechServices: SpaceTechService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete constellation management system with AI optimization, real-time monitoring, and comprehensive analytics. Includes mobile app and API access.",;
     launchDate: "2024-02-01",;
     customers: 40,;
     rating: 4.9,;
-    reviews: 20;,
+    reviews: 20;,;,
 },;
   {;
     id: "space-debris-monitoring-system",;
@@ -180,14 +180,14 @@ export const spaceTechServices: SpaceTechService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete debris monitoring system with AI risk assessment, real-time tracking, and avoidance planning. Includes mobile app and satellite integration.",;
     launchDate: "2024-02-10",;
     customers: 60,;
     rating: 4.9,;
-    reviews: 30;,
+    reviews: 30;,;,
 },;
   {;
     id: "space-weather-forecasting",;
@@ -231,14 +231,14 @@ export const spaceTechServices: SpaceTechService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete space weather system with AI forecasting, real-time monitoring, and impact assessment. Includes mobile app and comprehensive analytics.",;
     launchDate: "2024-02-15",;
     customers: 80,;
     rating: 4.8,;
-    reviews: 40;,
+    reviews: 40;,;,
 },;
   {;
     id: "orbital-launch-coordination",;
@@ -282,14 +282,14 @@ export const spaceTechServices: SpaceTechService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete launch coordination platform with precision timing, trajectory planning, and mission tracking. Includes mobile app and comprehensive analytics.",;
     launchDate: "2024-02-20",;
     customers: 35,;
     rating: 4.9,;
-    reviews: 18;,
+    reviews: 18;,;,
 },;
   {;
     id: "ground-station-network-management",;
@@ -333,14 +333,14 @@ export const spaceTechServices: SpaceTechService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete ground station management system with global coordination, network optimization, and real-time monitoring. Includes mobile app and comprehensive analytics.",;
     launchDate: "2024-02-25",;
     customers: 50,;
     rating: 4.8,;
-    reviews: 25;,
+    reviews: 25;,;,
 },;
   {;
     id: "space-research-data-platform",;
@@ -384,14 +384,14 @@ export const spaceTechServices: SpaceTechService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete research data platform with comprehensive access, AI analysis, and collaboration tools. Includes mobile app and API access.",;
     launchDate: "2024-03-01",;
     customers: 200,;
     rating: 4.9,;
-    reviews: 100;,
+    reviews: 100;,;,
 },;
   {;
     id: "space-commerce-platform",;
@@ -435,14 +435,14 @@ export const spaceTechServices: SpaceTechService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete space commerce platform with secure trading, smart contracts, and comprehensive analytics. Includes mobile app and trading tools.",;
     launchDate: "2024-03-05",;
     customers: 30,;
     rating: 5.0,;
-    reviews: 15;,
+    reviews: 15;,;,
 },;
   {;
     id: "space-education-platform",;
@@ -486,7 +486,7 @@ export const spaceTechServices: SpaceTechService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.",;

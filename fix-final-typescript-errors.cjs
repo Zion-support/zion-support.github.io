@@ -1,8 +1,8 @@
 #!/usr/bin/env node;
 const fs = require("fs");
 const path = require("path");
-function fixFile(filePath) {
-  try {
+function fixFile(filePath) {;
+  try {;
   let content = fs.readFileSync(filePath, "utf8");
     let originalContent = content;
     // Fix missing types in interface definitions;
@@ -29,11 +29,11 @@ function fixFile(filePath) {
     content = content.replace(/useState<>\(null\)/g, "useState(null)");
     content = content.replace(/useState<>\(null\)/g, "useState(null)");
     // Fix malformed type annotations;
-    content = content.replace(/:\s*{
+    content = content.replace(/:\s*{;
   /g, ": {");
     content = content.replace(/:\s*};/g, ": };");
     // Fix malformed object properties;
-    content = content.replace(/(\w+)\s*:\s*{
+    content = content.replace(/(\w+)\s*:\s*{;
   /g, "$1: {");
     content = content.replace(/(\w+)\s*:\s*string\s*;/g, "$1: string");
     content = content.replace(/(\w+)\s*:\s*number\s*;/g, "$1: number");
@@ -62,11 +62,11 @@ function fixFile(filePath) {
     );
     content = content.replace(/:\s*{(\w+)\s*,\s*(\w+)\s*}/g, ": { $1, $2 }");
     // Fix malformed interface declarations;
-    content = content.replace(/interface\s+(\w+)\s*{
+    content = content.replace(/interface\s+(\w+)\s*{;
   /g, "interface $1 {");
     content = content.replace(/interface\s+(\w+)\s*{/g, "interface $1 {");
     // Fix malformed type declarations;
-    content = content.replace(/type\s+(\w+)\s*=\s*{
+    content = content.replace(/type\s+(\w+)\s*=\s*{;
   /g, "type $1 = {");
     content = content.replace(/type\s+(\w+)\s*=\s*{/g, "type $1 = {");
     // Fix malformed function declarations;
@@ -80,7 +80,7 @@ function fixFile(filePath) {
     );
     // Fix malformed const declarations;
     content = content.replace(;
-      /const\s+(\w+)\s*:\s*(\w+)\s*=\s*{
+      /const\s+(\w+)\s*:\s*(\w+)\s*=\s*{;
   /g,;
       "const $1: $2 = {";
     );
@@ -116,47 +116,48 @@ function fixFile(filePath) {
     content = content.replace(/React\.FC<>\s*=/g, "React.FC =");
     content = content.replace(/React\.FC<>\s*=/g, `React.FC =`);
     // Write back if changed;
-    if (content !== originalContent) {
+    if (content !== originalContent) {;
   fs.writeFileSync(filePath, content);
       console.log(`Fixed: ${filePath}`);
-      return true;,
+      return true;,;,
 }
 ;
-    return false;,
-} catch (error) {
+    return false;,;,
+} catch (error) {;
   console.error(`Error fixing ${filePath }:`, error.message);
-    return false;,
+    return false;,;,
 }
 }
 ;
-function getAllFiles(dir) {
+function getAllFiles(dir) {;
   const files = [];
   const items = fs.readdirSync(dir);
-  for (const item of items) {
+  for (const item of items) {;
   const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
-    if (stat.isDirectory()) {
-  files.push(...getAllFiles(fullPath));,
-} else if (item.endsWith(`.tsx`) || item.endsWith(".ts")) {
-  files.push(fullPath);,
+    if (stat.isDirectory()) {;
+  files.push(...getAllFiles(fullPath));,;,
+} else if (item.endsWith(`.tsx`) || item.endsWith(".ts")) {;
+  files.push(fullPath);,;,
 }
   }
 ;
-  return files;,
+  return files;,;,
 }
 ;
 // Main execution;
 const srcDir = path.join(process.cwd(), `src`);
-if (fs.existsSync(srcDir)) {
+if (fs.existsSync(srcDir)) {;
   const files = getAllFiles(srcDir);
   let fixedCount = 0;
-  for (const file of files) {
-  if (fixFile(file)) {
-  fixedCount++;,
+  for (const file of files) {;
+  if (fixFile(file)) {;
+  fixedCount++;,;,
 }
   }
 ;
-  console.log(`\nFixed ${fixedCount} files.`);,
-} else {
-  console.log(`src directory not found`);,
+  console.log(`\nFixed ${fixedCount} files.`);,;,
+} else {;
+  console.log(`src directory not found`);,;,
 }
+}}}}}}}}}}}}}}}}}}}}}}))))))))))))))))

@@ -1,45 +1,45 @@
 #!/usr/bin/env node;
-
+;
 const fs = require("fs");
 const path = require("path");
 const glob = require("glob");
-class $1 {
-  constructor() {
-  this.projectRoot = process.cwd();,
+class $1 {;
+  constructor() {;
+  this.projectRoot = process.cwd();,;,
 }
 ;
-  async fixRemainingSyntaxIssues() {
+  async fixRemainingSyntaxIssues() {;
   console.log("🔧 Fixing remaining test syntax issues...");
-    const testFiles = [
+    const testFiles = [;
   ...glob.sync("**/*.test.js", { cwd: this.projectRoot }),;
       ...glob.sync("**/*.test.tsx", { cwd: this.projectRoot }),;
       ...glob.sync("**/*.test.ts", { cwd: this.projectRoot }),;
     ];
     ;
-    for (const testFile of testFiles) {
+    for (const testFile of testFiles) {;
   const filePath = path.join(this.projectRoot, testFile);
-      await this.fixTestFile(filePath);,
+      await this.fixTestFile(filePath);,;,
 }
     ;
-    console.log("✅ Test syntax fixes completed");,
+    console.log("✅ Test syntax fixes completed");,;,
 }
 ;
-  async fixTestFile(filePath) {
-  try {
+  async fixTestFile(filePath) {;
+  try {;
   let content = fs.readFileSync(filePath, "utf8");
       const originalContent = content;
       // Fix common syntax issues;
       content = this.fixSyntaxIssues(content);
-      if (content !== originalContent) {
+      if (content !== originalContent) {;
   fs.writeFileSync(filePath, content);
-        console.log(`✅ Fixed: ${path.relative(this.projectRoot, filePath)}`);,
+        console.log(`✅ Fixed: ${path.relative(this.projectRoot, filePath)}`);,;,
 }
-    } catch (error) {
-  console.error(`❌ Failed to fix ${filePath}:`, error.message);,
+    } catch (error) {;
+  console.error(`❌ Failed to fix ${filePath}:`, error.message);,;,
 }
   }
 ;
-  fixSyntaxIssues(content) {
+  fixSyntaxIssues(content) {;
   // Fix broken import statements;
     content = content.replace(/import React from,\s*react";/g, "import React from "react";");
     content = content.replace(/import React from,\s*"react";/g, "import React from "react";");
@@ -62,7 +62,7 @@ class $1 {
       "describe("$1", () => {");
     content = content.replace(/it\(\s*"([^"]*)",\s*\(\)\s*=>\s*\{/g, ;
       "it("$1", () => {");
-    return content;,
+    return content;,;,
 }
 }
 ;

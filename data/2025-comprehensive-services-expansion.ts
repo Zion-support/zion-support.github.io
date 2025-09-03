@@ -44,7 +44,7 @@ const contact = {;
   ;
   ;
   ;
-  website: "https://ziontechgroup.com";,
+  website: "https://ziontechgroup.com";,;,
 }
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
   {;
@@ -90,7 +90,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-01-15",;
     customers: 156,;
     rating: 4.8,;
-    reviews: 89;,
+    reviews: 89;,;,
 },;
   {;
     id: "intelligent-incident-response-platform",;
@@ -135,7 +135,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-02-01",;
     customers: 89,;
     rating: 4.7,;
-    reviews: 67;,
+    reviews: 67;,;,
 },;
   {;
     id: "quantum-resistant-cryptography-suite",;
@@ -180,7 +180,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-01-20",;
     customers: 23,;
     rating: 4.9,;
-    reviews: 18;,
+    reviews: 18;,;,
 },;
   {;
     id: "autonomous-devops-orchestrator",;
@@ -225,7 +225,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-02-10",;
     customers: 134,;
     rating: 4.8,;
-    reviews: 92;,
+    reviews: 92;,;,
 },;
   {;
     id: "edge-ai-inference-platform",;
@@ -270,7 +270,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-01-25",;
     customers: 67,;
     rating: 4.6,;
-    reviews: 41;,
+    reviews: 41;,;,
 },;
   {;
     id: "blockchain-governance-automation",;
@@ -315,7 +315,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-02-05",;
     customers: 45,;
     rating: 4.7,;
-    reviews: 33;,
+    reviews: 33;,;,
 },;
   {;
     id: "ai-powered-customer-success-platform",;
@@ -360,7 +360,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-01-30",;
     customers: 178,;
     rating: 4.8,;
-    reviews: 124;,
+    reviews: 124;,;,
 },;
   {;
     id: "quantum-machine-learning-platform",;
@@ -405,7 +405,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-02-15",;
     customers: 28,;
     rating: 4.9,;
-    reviews: 22;,
+    reviews: 22;,;,
 },;
   {;
     id: "intelligent-supply-chain-optimizer",;
@@ -450,7 +450,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-02-20",;
     customers: 89,;
     rating: 4.7,;
-    reviews: 67;,
+    reviews: 67;,;,
 },;
   {;
     id: "cybersecurity-threat-intelligence-hub",;
@@ -495,7 +495,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-02-25",;
     customers: 156,;
     rating: 4.8,;
-    reviews: 118;,
+    reviews: 118;,;,
 },;
   {;
     id: "ai-powered-content-creation-suite",;
@@ -540,7 +540,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-03-01",;
     customers: 234,;
     rating: 4.7,;
-    reviews: 167;,
+    reviews: 167;,;,
 },;
   {;
     id: "intelligent-data-governance-platform",;
@@ -585,7 +585,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-03-05",;
     customers: 78,;
     rating: 4.6,;
-    reviews: 56;,
+    reviews: 56;,;,
 },;
   {;
     id: "quantum-financial-trading-engine",;
@@ -630,7 +630,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-03-10",;
     customers: 34,;
     rating: 4.9,;
-    reviews: 28;,
+    reviews: 28;,;,
 },;
   {;
     id: "ai-powered-hr-automation-suite",;
@@ -675,7 +675,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-03-15",;
     customers: 189,;
     rating: 4.7,;
-    reviews: 134;,
+    reviews: 134;,;,
 },;
   {;
     id: "intelligent-iot-platform",;
@@ -720,7 +720,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-03-20",;
     customers: 67,;
     rating: 4.6,;
-    reviews: 45;,
+    reviews: 45;,;,
 },;
   {;
     id: "quantum-cybersecurity-platform",;
@@ -765,7 +765,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     launchDate: "2025-03-25",;
     customers: 19,;
     rating: 4.9,;
-    reviews: 15;,
+    reviews: 15;,;,
 },;
   {;
     id: "ai-powered-sales-intelligence-platform",;

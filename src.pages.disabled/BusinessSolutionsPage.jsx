@@ -1,1 +1,1 @@
-import React from "react" export default function BusinessSolutionsPage () {
+import React from "react" export default function BusinessSolutionsPage () {}

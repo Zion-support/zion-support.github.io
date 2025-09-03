@@ -80,14 +80,14 @@ export const futuristic2028Services: Futuristic2028Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Full AI climate prediction system with real-time data processing, machine learning models, and comprehensive reporting tools. Includes mobile apps and API access.",;
     launchDate: "2028-01-15",;
     customers: 150,;
     rating: 4.8,;
-    reviews: 89;,
+    reviews: 89;,;,
 },;
   // Quantum Cybersecurity Firewall;
   {;
@@ -132,14 +132,14 @@ export const futuristic2028Services: Futuristic2028Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete quantum cybersecurity platform with quantum key distribution, post-quantum cryptography, and AI-powered threat detection. Includes enterprise integration and compliance tools.",;
     launchDate: "2028-02-01",;
     customers: 75,;
     rating: 4.9,;
-    reviews: 52;,
+    reviews: 52;,;,
 },;
   // Autonomous Drone Delivery Network;
   {;
@@ -184,14 +184,14 @@ export const futuristic2028Services: Futuristic2028Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete autonomous drone delivery system with AI navigation, computer vision, and fleet management. Includes customer apps and business analytics.",;
     launchDate: "2028-01-20",;
     customers: 200,;
     rating: 4.7,;
-    reviews: 156;,
+    reviews: 156;,;,
 },;
   // AI-Powered Healthcare Diagnosis;
   {;
@@ -236,14 +236,14 @@ export const futuristic2028Services: Futuristic2028Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete AI healthcare diagnosis platform with medical image analysis, symptom assessment, and treatment recommendations. Includes compliance tools and analytics.",;
     launchDate: "2028-01-10",;
     customers: 120,;
     rating: 4.9,;
-    reviews: 78;,
+    reviews: 78;,;,
 },;
   // Smart City Infrastructure Management;
   {;
@@ -288,14 +288,14 @@ export const futuristic2028Services: Futuristic2028Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete smart city platform with IoT sensors, AI analytics, and real-time monitoring. Includes citizen engagement tools and predictive maintenance.",;
     launchDate: "2028-02-15",;
     customers: 45,;
     rating: 4.8,;
-    reviews: 32;,
+    reviews: 32;,;,
 },;
   // Quantum Financial Trading Platform;
   {;
@@ -340,14 +340,14 @@ export const futuristic2028Services: Futuristic2028Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete quantum trading platform with quantum market analysis, real-time predictions, and high-frequency trading capabilities. Includes risk management and compliance tools.",;
     launchDate: "2028-01-25",;
     customers: 85,;
     rating: 4.9,;
-    reviews: 67;,
+    reviews: 67;,;,
 },;
   // AI-Powered Education Platform;
   {;
@@ -392,14 +392,14 @@ export const futuristic2028Services: Futuristic2028Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete AI education platform with personalized learning, AI tutoring, and adaptive assessments. Includes analytics and mobile apps.",;
     launchDate: "2028-02-01",;
     customers: 300,;
     rating: 4.8,;
-    reviews: 245;,
+    reviews: 245;,;,
 },;
   // Autonomous Manufacturing AI;
   {;
@@ -444,14 +444,14 @@ export const futuristic2028Services: Futuristic2028Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete autonomous manufacturing platform with AI optimization, predictive maintenance, and quality control. Includes analytics and mobile management.",;
     launchDate: "2028-01-30",;
     customers: 95,;
     rating: 4.8,;
-    reviews: 73;,
+    reviews: 73;,;,
 },;
   // Quantum Internet Security Gateway;
   {;
@@ -496,7 +496,7 @@ export const futuristic2028Services: Futuristic2028Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete quantum internet security platform with quantum encryption, threat detection, and secure communications. Includes compliance tools and analytics.",;

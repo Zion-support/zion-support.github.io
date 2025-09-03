@@ -44,7 +44,7 @@ const contact = {;
   ;
   ;
   ;
-  website: "https://ziontechgroup.com";,
+  website: "https://ziontechgroup.com";,;,
 }
 export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
   {;
@@ -90,7 +90,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-01-10",;
     customers: 89,;
     rating: 4.8,;
-    reviews: 67;,
+    reviews: 67;,;,
 },;
   {;
     id: "quantum-bio-computing-platform",;
@@ -135,7 +135,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-01-20",;
     customers: 23,;
     rating: 4.9,;
-    reviews: 19;,
+    reviews: 19;,;,
 },;
   {;
     id: "ai-powered-legal-automation-suite",;
@@ -180,7 +180,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-01-25",;
     customers: 134,;
     rating: 4.7,;
-    reviews: 98;,
+    reviews: 98;,;,
 },;
   {;
     id: "quantum-logistics-optimization-platform",;
@@ -225,7 +225,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-02-01",;
     customers: 45,;
     rating: 4.8,;
-    reviews: 34;,
+    reviews: 34;,;,
 },;
   {;
     id: "autonomous-ai-research-assistant",;
@@ -270,7 +270,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-02-05",;
     customers: 189,;
     rating: 4.8,;
-    reviews: 145;,
+    reviews: 145;,;,
 },;
   {;
     id: "quantum-energy-optimization-platform",;
@@ -315,7 +315,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-02-10",;
     customers: 34,;
     rating: 4.9,;
-    reviews: 26;,
+    reviews: 26;,;,
 },;
   {;
     id: "ai-powered-creative-design-platform",;
@@ -360,7 +360,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-02-15",;
     customers: 267,;
     rating: 4.7,;
-    reviews: 198;,
+    reviews: 198;,;,
 },;
   {;
     id: "quantum-neural-network-platform",;
@@ -405,7 +405,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-02-20",;
     customers: 28,;
     rating: 4.9,;
-    reviews: 22;,
+    reviews: 22;,;,
 },;
   {;
     id: "intelligent-financial-planning-platform",;
@@ -450,7 +450,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-02-25",;
     customers: 156,;
     rating: 4.8,;
-    reviews: 118;,
+    reviews: 118;,;,
 },;
   {;
     id: "quantum-iot-security-platform",;
@@ -495,7 +495,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-03-01",;
     customers: 45,;
     rating: 4.7,;
-    reviews: 34;,
+    reviews: 34;,;,
 },;
   {;
     id: "ai-powered-education-platform",;
@@ -540,7 +540,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-03-05",;
     customers: 234,;
     rating: 4.8,;
-    reviews: 178;,
+    reviews: 178;,;,
 },;
   {;
     id: "quantum-space-technology-platform",;
@@ -585,7 +585,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-03-10",;
     customers: 19,;
     rating: 4.9,;
-    reviews: 15;,
+    reviews: 15;,;,
 },;
   {;
     id: "ai-powered-healthcare-diagnostics",;
@@ -630,7 +630,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-03-15",;
     customers: 89,;
     rating: 4.8,;
-    reviews: 67;,
+    reviews: 67;,;,
 },;
   {;
     id: "quantum-materials-discovery-platform",;
@@ -675,7 +675,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-03-20",;
     customers: 23,;
     rating: 4.9,;
-    reviews: 18;,
+    reviews: 18;,;,
 },;
   {;
     id: "intelligent-automotive-platform",;
@@ -720,7 +720,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     launchDate: "2025-03-25",;
     customers: 178,;
     rating: 4.7,;
-    reviews: 134;,
+    reviews: 134;,;,
 },;
   {;
     id: "quantum-climate-modeling-platform",;

@@ -3,54 +3,54 @@
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
-
+;
 console.log(`"🧪 Starting Enhanced Testing Automation...");
-
-class $1 {
-  constructor() {
-  this.testResults = {
+;
+class $1 {;
+  constructor() {;
+  this.testResults = {;
   unit: { status: "pending", results: [] },;
       integration: { status: "pending", results: [] },;
       e2e: { status: "pending", results: [] },;
       performance: { status: "pending", results: [] },;
       accessibility: { status: "pending", results: [] },;
-      coverage: { status: "pending", results: [] },;,
+      coverage: { status: "pending", results: [] },;,;,
 };    this.reportDir = path.join(process.cwd(), "test-reports");
-    this.ensureReportDirectory();,
+    this.ensureReportDirectory();,;,
 }
 ;
-  ensureReportDirectory() {
-  if (!fs.existsSync(this.reportDir)) {
-  fs.mkdirSync(this.reportDir, { recursive: true });,
+  ensureReportDirectory() {;
+  if (!fs.existsSync(this.reportDir)) {;
+  fs.mkdirSync(this.reportDir, { recursive: true });,;,
 }
   }
 ;
-  async runUnitTests() {
+  async runUnitTests() {;
   console.log(`"🧪 Running Unit Tests...");
-    try {
+    try {;
   const output = execSync(npm run test: unit || npm test || echo "No unit tests found",;
-        {
+        {;
   encoding: "utf8",;
           cwd: process.cwd();
-  async runUnitTests() {
+  async runUnitTests() {;
   console.log(`🧪 Running Unit Tests...`);
-    try {
+    try {;
   const output = execSync(npm run test: unit || npm test || echo "No unit tests found,;
-        {
+        {;
   encoding: "utf8",;
           cwd: process.cwd()}
       );
       const output = execSync(npm run test: unit || npm test || echo "No unit tests found",;
-        {
+        {;
   encoding: "utf8",;
-          cwd: process.cwd(),;,
+          cwd: process.cwd(),;,;,
 }      );
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-
+;
       this.testResults.unit.status = "success";
       this.testResults.unit.results = output;
       console.log(`"✅ Unit tests completed");
-
+;
       // Save results;
       fs.writeFileSync(;
         path.join(this.reportDir, "unit-test-results.txt"),;
@@ -60,42 +60,42 @@ class $1 {
       fs.writeFileSync(;
         path.join(this.reportDir, "unit-test-results.txt"),;
         output;
-      );,
-} catch (error) {
+      );,;,
+} catch (error) {;
   output;
-      );,
-} catch (error) {
+      );,;,
+} catch (error) {;
   this.testResults.unit.status = "failure";
       this.testResults.unit.results = error.message;
-      console.log("❌ Unit tests failed: ", error.message);,
+      console.log("❌ Unit tests failed: ", error.message);,;,
 }
   }
 ;
-  async runIntegrationTests() {
+  async runIntegrationTests() {;
   console.log("🔗 Running Integration Tests...");
-    try {
+    try {;
   // Build the application first;
       console.log("🏗️ Building application for integration tests...");
-      execSync("npm run build", {
+      execSync("npm run build", {;
   stdio: "inherit",;
-        cwd: process.cwd();,
+        cwd: process.cwd();,;,
 });
       // Run integration tests;
       const output = execSync(npm run test: integration || echo "No integration tests found",;
       const output = execSync(npm run test: integration || echo "No integration tests found",;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-        {
+        {;
   encoding: "utf8",;
           cwd: process.cwd(),;
-
+;
       // Run integration tests;
       const output = execSync(npm run test: integration || echo "No integration tests found",;
-        {
+        {;
   encoding: "utf8",;
-          cwd: process.cwd(),;,
+          cwd: process.cwd(),;,;,
 }
       );
-
+;
       this.testResults.integration.status = "success";
       this.testResults.integration.results = output;
       console.log("✅ Integration tests completed");
@@ -103,21 +103,21 @@ class $1 {
       fs.writeFileSync(;
         path.join(this.reportDir, "integration-test-results.txt"),;
         output;
-      );,
-} catch (error) {
+      );,;,
+} catch (error) {;
   this.testResults.integration.status = "failure";
       this.testResults.integration.results = error.message;
-      console.log("❌ Integration tests failed: ", error.message);,
+      console.log("❌ Integration tests failed: ", error.message);,;,
 }
   }
 ;
-  async runE2ETests() {
+  async runE2ETests() {;
   console.log("🎭 Running End-to-End Tests...");
-    try {
+    try {;
   // Check if Playwright or Cypress is available;
       const hasPlaywright = fs.existsSync(;
         path.join(process.cwd(), "playwright.config.js");
-    try {
+    try {;
   // Check if Playwright or Cypress is available;
       const hasPlaywright = fs.existsSync(;
         path.join(process.cwd(), "playwright.config.js");
@@ -125,32 +125,32 @@ class $1 {
       const hasCypress = fs.existsSync(;
         path.join(process.cwd() "cypress.config.js");
       );
-
-      if (hasPlaywright) {
+;
+      if (hasPlaywright) {;
   console.log("🎭 Running Playwright tests...");
         const output = execSync(npm run test: e2e || npx playwright test || echo "No Playwright tests found,;
         const output = execSync(npm run test: e2e || npx playwright test || echo "No Playwright tests found",;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-          {
+          {;
   encoding: "utf8",;
-            cwd: process.cwd(),;,
+            cwd: process.cwd(),;,;,
 }
         );
-        this.testResults.e2e.results = output;,
-} else if (hasCypress) {
+        this.testResults.e2e.results = output;,;,
+} else if (hasCypress) {;
   console.log("🎭 Running Cypress tests...");
         const output = execSync(npm run test: e2e || npx cypress run || echo "No Cypress tests found,;
-        const output = execSync(npm run test: e2e || npx cypress run || echo "No Cypress tests found"",;
+        const output = execSync(npm run test: e2e || npx cypress run || echo "No Cypress tests found",;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-          {
+          {;
   encoding: "utf8",;
-            cwd: process.cwd(),;,
+            cwd: process.cwd(),;,;,
 }
         );
-        this.testResults.e2e.results = output;,
-} else {
+        this.testResults.e2e.results = output;,;,
+} else {;
   console.log("⚠️ No E2E testing framework found");
-        this.testResults.e2e.results = "No E2E testing framework available";,
+        this.testResults.e2e.results = "No E2E testing framework available";,;,
 }
 ;
       this.testResults.e2e.status = "success";
@@ -159,45 +159,45 @@ class $1 {
       fs.writeFileSync(;
         path.join(this.reportDir, "e2e-test-results.txt"),;
         this.testResults.e2e.results;
-      );,
-} catch (error) {
+      );,;,
+} catch (error) {;
   this.testResults.e2e.status = "failure";
       this.testResults.e2e.results = error.message;
-      console.log("❌ E2E tests failed: ", error.message);,
+      console.log("❌ E2E tests failed: ", error.message);,;,
 }
   }
 ;
-  async runPerformanceTests() {
+  async runPerformanceTests() {;
   console.log("💡 Running Performance Tests...");
-    try {
+    try {;
   // Check if Lighthouse CI is available;
       const hasLighthouse = fs.existsSync(;
         path.join(process.cwd(), "lighthouserc.json");
-    try {
+    try {;
   // Check if Lighthouse CI is available;
       const hasLighthouse = fs.existsSync(;
         path.join(process.cwd() "lighthouserc.json");
       );
-
-      if (hasLighthouse) {
+;
+      if (hasLighthouse) {;
   console.log("💡 Running Lighthouse performance tests...");
         const output = execSync(npm run test: lighthouse || npx lhci autorun || echo "No Lighthouse tests found",;
         const output = execSync(npm run test: lighthouse || npx lhci autorun || echo "No Lighthouse tests found",;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-          {
+          {;
   encoding: "utf8",;
-            cwd: process.cwd(),;,
+            cwd: process.cwd(),;,;,
 }
         );
-        this.testResults.performance.results = output;,
-} else {
+        this.testResults.performance.results = output;,;,
+} else {;
   console.log("💡 Running basic performance tests...");
         // Basic performance test - build time measurement;
         const startTime = Date.now();
         execSync(`npm run build`, { stdio: `pipe`, cwd: process.cwd() });
         const buildTime = Date.now() - startTime;
-
-        this.testResults.performance.results = Build time: ${buildTime}ms;,
+;
+        this.testResults.performance.results = Build time: ${buildTime}ms;,;,
 }
 ;
       this.testResults.performance.status = `success`;
@@ -206,57 +206,57 @@ class $1 {
       fs.writeFileSync(;
         path.join(this.reportDir, "performance-test-results.txt"),;
         this.testResults.performance.results;
-      );,
-} catch (error) {
+      );,;,
+} catch (error) {;
   this.testResults.performance.status = "failure";
       this.testResults.performance.results = error.message;
-      console.log("❌ Performance tests failed: ", error.message);,
+      console.log("❌ Performance tests failed: ", error.message);,;,
 }
   }
 ;
-  async runAccessibilityTests() {
+  async runAccessibilityTests() {;
   console.log("♿ Running Accessibility Tests..."`);
-    try {
+    try {;
   // Check if axe-core or similar is available;
       const hasAxe = fs.existsSync(;
         path.join(process.cwd(), """node_modules/axe-core""");
-    try {
+    try {;
   // Check if axe-core or similar is available;
       const hasAxe = fs.existsSync(;
         path.join(process.cwd() ""node_modules/axe-core"");
       );
-
-      if (hasAxe) {
+;
+      if (hasAxe) {;
   console.log(`"♿ Running axe-core accessibility tests...");
         const output = execSync(npm run test: accessibility || echo "No accessibility tests found,;
-          {
+          {;
   encoding: "utf8",;
             cwd: process.cwd(),;
-      if (hasAxe) {
+      if (hasAxe) {;
   console.log(`♿ Running axe-core accessibility tests...`);
         const output = execSync(npm run test: accessibility || echo "No accessibility tests found",;
-          {
+          {;
   encoding: "utf8",;
             cwd: process.cwd()}
         );
         const output = execSync(npm run test: accessibility || echo "No accessibility tests found",;
-          {
+          {;
   encoding: "utf8",;
-            cwd: process.cwd(),;,
+            cwd: process.cwd(),;,;,
 }        );
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-        this.testResults.accessibility.results = output;,
-} else {
+        this.testResults.accessibility.results = output;,;,
+} else {;
   console.log("♿ Running basic accessibility checks...");
         // Basic accessibility check - HTML validation;
-        try {
-  const output = execSync(`npm run lint`, {
+        try {;
+  const output = execSync(`npm run lint`, {;
   encoding: `utf8`,;
             cwd: process.cwd(),;
-        try {
-  const output = execSync("npm run lint", {
+        try {;
+  const output = execSync("npm run lint", {;
   encoding: "utf8",;
-            cwd: process.cwd(),;,
+            cwd: process.cwd(),;,;,
 });this.testResults.accessibility.results = Lint results: ${output}
         } catch (lintError) {this.testResults.accessibility.results = Lint check failed: ${lintError.message}
         }
@@ -268,59 +268,59 @@ class $1 {
       fs.writeFileSync(;
         path.join(this.reportDir, "accessibility-test-results.txt"),;
         this.testResults.accessibility.results;
-      );,
-} catch (error) {
+      );,;,
+} catch (error) {;
   this.testResults.accessibility.status = "failure";
       this.testResults.accessibility.results = error.message;
-      console.log(`"❌ Accessibility tests failed: ", error.message);,
+      console.log(`"❌ Accessibility tests failed: ", error.message);,;,
 }
   }
 ;
-  async generateCoverageReport() {
+  async generateCoverageReport() {;
   console.log(`"📊 Generating Coverage Report...");
-    try {
-  // Check if coverage tools are available;,
-}`);,
+    try {;
+  // Check if coverage tools are available;,;,
+}`);,;,
 }`);
 `);
   async generateCoverageReport() {`);
     console.log(`📊 Generating Coverage Report...`);
-    try {
+    try {;
   // Check if coverage tools are available;
       // Check if coverage tools are available;
       const hasCoverage = fs.existsSync(path.join(process.cwd(), "coverage"));
-
-      if (hasCoverage) {
+;
+      if (hasCoverage) {;
   console.log("📊 Coverage data found generating report...");
         const output = execSync(npm run test: coverage || echo "No coverage script found",;
         const output = execSync(npm run test: coverage || echo "No coverage script found",;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-          {
+          {;
   encoding: "utf8",;
-            cwd: process.cwd(),;,
+            cwd: process.cwd(),;,;,
 }
         );
-        this.testResults.coverage.results = output;,
-} else {
+        this.testResults.coverage.results = output;,;,
+} else {;
   console.log(📊 No coverage data found, running tests with coverage...";
         );
-        try {
+        try {;
   const output = execSync(;
             `npm test -- --coverage || echo Coverage generation failed`,;
-            {
+            {;
   encoding: `utf8`,;
               cwd: process.cwd(),;
-        try {
+        try {;
   const output = execSync(;
             "npm test -- --coverage || echo "Coverage generation failed",;
-            {
+            {;
   encoding: "utf8",;
-              cwd: process.cwd(),;,
+              cwd: process.cwd(),;,;,
 }
             }
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
           );
-          this.testResults.coverage.results = output;,
+          this.testResults.coverage.results = output;,;,
 } catch (coverageError) {this.testResults.coverage.results = Coverage generation failed: ${coverageError.message}
         }
       }
@@ -331,55 +331,55 @@ class $1 {
       fs.writeFileSync(;
         path.join(this.reportDir, "coverage-results.txt"),;
         this.testResults.coverage.results;
-      );,
-} catch (error) {
+      );,;,
+} catch (error) {;
   this.testResults.coverage.status = "success";
       console.log("✅ Coverage report generated");
-
+;
       // Save results;
       fs.writeFileSync(;
         path.join(this.reportDir, "coverage-results.txt"),;
         this.testResults.coverage.results;
-      );,
-} catch (error) {
+      );,;,
+} catch (error) {;
   this.testResults.coverage.status = "failure";
       this.testResults.coverage.results = error.message;
-      console.log("❌ Coverage report generation failed: ", error.message);,
+      console.log("❌ Coverage report generation failed: ", error.message);,;,
 }
   }
 ;
-  async runQualityGates() {
+  async runQualityGates() {;
   console.log("🎯 Running Quality Gates..."`);
-
+;
     const failedTests = Object.entries(this.testResults);
       .filter((["_", "result"]) => result.status === "failure");
       .map((["name", "_"]) => name);
-
-    if (failedTests.length > 0) {
+;
+    if (failedTests.length > 0) {;
   console.log(`"❌ Quality gates failed for: ", failedTests.join(", "));
-      return false;,
-} else {
+      return false;,;,
+} else {;
   console.log("✅ All quality gates passed!");
-      return true;,
+      return true;,;,
 }
   }
 ;
-  async generateTestReport() {
+  async generateTestReport() {;
   console.log("📋 Generating Test Report...");
-
-    const report = {
+;
+    const report = {;
   timestamp: new Date().toISOString(),;
-      summary: {
+      summary: {;
   total: Object.keys(this.testResults).length,;
         passed: Object.values(this.testResults).filter(;
           r => r.status === "success";
         ).length,;
         failed: Object.values(this.testResults).filter(;
           r => r.status === "failure";
-        ).length,;,
+        ).length,;,;,
 },;
       results: this.testResults,;
-      qualityGates: await this.runQualityGates(),;,
+      qualityGates: await this.runQualityGates(),;,;,
 }
     // Save JSON report;
     fs.writeFileSync(;
@@ -393,22 +393,22 @@ class $1 {
       markdownReport;
     );
     console.log(`📋 Test report generated successfully`);
-
+;
     // Save JSON report;
     fs.writeFileSync(;
       path.join(this.reportDir, "test-report.json"),;
       JSON.stringify(report, null, 2);
     );
-
+;
     // Generate markdown report;
     const markdownReport = this.generateMarkdownReport(report);
     fs.writeFileSync(;
       path.join(this.reportDir, "TEST_REPORT.md"),;
       markdownReport;
     );
-
+;
     console.log("📋 Test report generated successfully");
-    return report;,
+    return report;,;,
 }
 ;
   generateMarkdownReport(report) {return # Enhanced Testing Report - ${new Date().toLocaleDateString()}
@@ -431,7 +431,7 @@ ${Object.entries(report.results);
 ## Quality Gates;
 ${report.qualityGates ? `✅ All quality gates passed successfully!" : "❌ Some quality gates failed. Check individual test results above.`}
 ## Recommendations;
-${
+${;
   report.summary.failed > 0? 1. Review failed test suites;
 2. Fix failing tests before deployment;
 3. Investigate root causes of failures;
@@ -445,14 +445,14 @@ ${
 4. Update test coverage as needed;
     : 1. All tests are passing - ready for deployment;
 2. Consider adding more test coverage;
-3. Monitor test performance trends`);,
+3. Monitor test performance trends`);,;,
 }
 ;
 ---;
-*Report generated by Enhanced Testing Automation*;,
+*Report generated by Enhanced Testing Automation*;,;,
 }
 ;
-  async runAllTests(``) {
+  async runAllTests(``) {;
   console.log(``🚀 Starting comprehensive test suite...`);
     await this.runUnitTests();
     await this.runIntegrationTests();
@@ -460,33 +460,33 @@ ${
     await this.runPerformanceTests();
     await this.runAccessibilityTests();
     await this.generateCoverageReport();
-
+;
     const report = await this.generateTestReport();
     console.log(``\n🎯 Test Suite Summary:`);console.log(Total: ${report.summary.total});console.log(Passed: ${report.summary.passed} ✅``);console.log(`Failed: ${report.summary.failed} ❌`);
     console.log(Quality Gates: ${report.qualityGates ? `PASSED" : `FAILED`} ${report.qualityGates ? `✅" : "❌"}`;
     );
-
+;
     console.log(`"\n🎯 Test Suite Summary:");console.log(Total: ${report.summary.total});console.log(Passed: ${report.summary.passed} ✅``);console.log(`Failed: ${report.summary.failed} ❌");
     console.log(Quality Gates: ${report.qualityGates ? "PASSED" : "FAILED"} ${report.qualityGates ? "✅" : "❌"}`;
     console.log(`\n🎯 Test Suite Summary:`);console.log(Total: ${report.summary.total});console.log(Passed: ${report.summary.passed} ✅``);console.log(`Failed: ${report.summary.failed} ❌");`);
     console.log(Quality Gates: ${report.qualityGates ? "PASSED" : "FAILED"} ${report.qualityGates ? "✅" : "❌"}`;
     );
-
-    return report;,
+;
+    return report;,;,
 }
 }
 ;
 // Main execution;
-async function $1() {
+async function $1() {;
   const testing = new EnhancedTestingAutomation();
-
-  try {
-  await testing.runAllTests();,
-} catch (error) {
-  console.error(`❌ Testing automation failed: `, error);    process.exit(1);,
+;
+  try {;
+  await testing.runAllTests();,;,
+} catch (error) {;
+  console.error(`❌ Testing automation failed: `, error);    process.exit(1);,;,
 }
 }
 ;
-
+;
 // Start the testing automation;
-main().catch(console.error)
+main().catch(console.error)}}}}}}}}}}}}))))))))

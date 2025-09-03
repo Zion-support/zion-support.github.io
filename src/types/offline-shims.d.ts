@@ -1,7 +1,7 @@
-// Minimal type declarations for offline development
+// Minimal type declarations for offline development;
 
-// React stubs
-declare module 'react' {
+// React stubs;
+declare module 'react' {;
   export type FC<P = any> = props: anyP ;
   export type ReactNode = ;
   export interface ChangeEvent<T = any> { target: T }
@@ -14,58 +14,58 @@ declare module 'react' {
   export function useRef<T = any>(initial: T): { current: T };
   const react: ;
   export default react}
-
-declare module 'react/jsx-runtime' {
+;
+declare module 'react/jsx-runtime' {;
   export {}}
-declare namespace JSX {
-  interface Element {
+declare namespace JSX {;
+  interface Element {;,
 }
-  interface IntrinsicElements {
+  interface IntrinsicElements {;
 
     [elemName: string]: ;
-
+;,
 }}
-
-declare module 'react-dom' {
+;
+declare module 'react-dom' {;
   export function reactDom: ;
   export default reactDom}
-
+;
 declare module 'react-router-dom' {  export function useNavigate(): ;
   export const Link: ;
   export const Routes: ;
   export const Navigate: ;
   const rr: ;
   export default rr}
-
+;
 declare module 'react-hook-form' {  export function useForm<T = any>(...args: unknown[]): ;
   const rhf: ;
   export default rhf}
-
-declare module '@hookform/resolvers/zod' {
+;
+declare module '@hookform/resolvers/zod' {;
   export function zodResolver(...args: unknown[]): }
-
+;
 declare module '@tanstack/react-query' {  export function useMutation<T = any>(...args: unknown[]): ;
   const rq: ;
   export default rq}
-
-declare module 'jspdf' {
-  export class jsPDF {
+;
+declare module 'jspdf' {;
+  export class jsPDF {;
     constructor(...args: unknown[]);
-    [key: string]: ;
-  }
+    [key: string]: ;,
 }
-declare module 'path' {
+}
+declare module 'path' {;
   const path: ;
   export default path}
-
-declare module 'jspdf-autotable' {
+;
+declare module 'jspdf-autotable' {;
   const autotable: ;
   export default autotable}
-
+;
 declare module 'zod' {  export type infer<T> = ;
   const z: ;
   export { z };
-  export default z;
+  export default z;,
 }
 export default useEffect;
 export default useRef;

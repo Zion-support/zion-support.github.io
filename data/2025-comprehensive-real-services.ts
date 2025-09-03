@@ -63,7 +63,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     contact: {;
       phone: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
     trialDays: 14,;
     setupTime: "5 minutes",;
@@ -72,7 +72,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     launchDate: "2024-01-15",;
     customers: 2500,;
     rating: 4.8,;
-    reviews: 1250;,
+    reviews: 1250;,;,
 },;
   // Customer Success & Support;
   {;
@@ -111,7 +111,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     contact: {;
       phone: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
     trialDays: 21,;
     setupTime: "1-2 days",;
@@ -120,7 +120,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     launchDate: "2024-02-20",;
     customers: 1800,;
     rating: 4.9,;
-    reviews: 950;,
+    reviews: 950;,;,
 },;
   // Financial Technology;
   {;
@@ -159,7 +159,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     contact: {;
       phone: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
     trialDays: 30,;
     setupTime: "2-4 weeks",;
@@ -168,7 +168,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     launchDate: "2024-03-10",;
     customers: 1200,;
     rating: 4.7,;
-    reviews: 680;,
+    reviews: 680;,;,
 },;
   // Healthcare & Biotech;
   {;
@@ -207,7 +207,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     contact: {;
       phone: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
     trialDays: 60,;
     setupTime: "4-6 weeks",;
@@ -216,7 +216,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     launchDate: "2024-01-30",;
     customers: 850,;
     rating: 4.9,;
-    reviews: 420;,
+    reviews: 420;,;,
 },;
   // E-commerce & Retail;
   {;
@@ -255,7 +255,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     contact: {;
       phone: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
     trialDays: 14,;
     setupTime: "1-2 days",;
@@ -264,7 +264,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     launchDate: "2024-02-15",;
     customers: 3200,;
     rating: 4.8,;
-    reviews: 1680;,
+    reviews: 1680;,;,
 },;
   // Cybersecurity & Compliance;
   {;
@@ -303,7 +303,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     contact: {;
       phone: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
     trialDays: 30,;
     setupTime: "1-2 weeks",;
@@ -312,7 +312,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     launchDate: "2024-03-01",;
     customers: 2100,;
     rating: 4.9,;
-    reviews: 1100;,
+    reviews: 1100;,;,
 },;
   // Data & Analytics;
   {;
@@ -351,7 +351,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     contact: {;
       phone: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
     trialDays: 21,;
     setupTime: "1-2 weeks",;
@@ -360,7 +360,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     launchDate: "2024-02-01",;
     customers: 2800,;
     rating: 4.8,;
-    reviews: 1450;,
+    reviews: 1450;,;,
 },;
   // Human Resources;
   {;
@@ -399,7 +399,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     contact: {;
       phone: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
     trialDays: 14,;
     setupTime: "1-2 days",;
@@ -408,7 +408,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     launchDate: "2024-01-20",;
     customers: 1900,;
     rating: 4.7,;
-    reviews: 890;,
+    reviews: 890;,;,
 },;
   // Legal & Compliance;
   {;
@@ -447,7 +447,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     contact: {;
       phone: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
     trialDays: 30,;
     setupTime: "1-2 weeks",;
@@ -456,7 +456,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     launchDate: "2024-02-10",;
     customers: 1100,;
     rating: 4.8,;
-    reviews: 580;,
+    reviews: 580;,;,
 },;
   // Manufacturing & IoT;
   {;
@@ -495,7 +495,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     contact: {;
       phone: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
     trialDays: 60,;
     setupTime: "4-6 weeks",;

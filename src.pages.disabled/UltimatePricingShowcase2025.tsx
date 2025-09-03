@@ -2,4 +2,4 @@
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/UltimatePricingShowcase2025.tsx;
 :src.pages.disabled/UltimatePricingShowcase2025.tsx;
 import: React, { useState, useMemo } from "react";
-"const UltimatePricingShowcase2025: React.FC = () => { const [activeCategory, setActiveCategory] = useState ("all")  const [searchTerm, setSearchTerm] = useState ("")  const [sortBy, setSortBy] = useState ("price")  const [viewMode, setViewMode] = useState<"cards" | "table"> ("cards")  "
+"const UltimatePricingShowcase2025: React.FC = () => { const [activeCategory, setActiveCategory] = useState ("all")  const [searchTerm, setSearchTerm] = useState ("")  const [sortBy, setSortBy] = useState ("price")  const [viewMode, setViewMode] = useState<"cards" | "table"> ("cards")  "}

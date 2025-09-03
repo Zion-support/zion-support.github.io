@@ -42,7 +42,7 @@ const contact = {;
   ;
   ;
   ;
-  website: "https://ziontechgroup.com";,
+  website: "https://ziontechgroup.com";,;,
 }
 export const specializedITInfrastructureServices2025: SpecializedITInfrastructureService[] = [;
   {;
@@ -88,7 +88,7 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     launchDate: "2025-02-25",;
     customers: 78,;
     rating: 4.7,;
-    reviews: 56;,
+    reviews: 56;,;,
 },;
   {;
     id: "quantum-ready-network-infrastructure",;
@@ -133,7 +133,7 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     launchDate: "2025-03-01",;
     customers: 23,;
     rating: 4.9,;
-    reviews: 18;,
+    reviews: 18;,;,
 },;
   {;
     id: "autonomous-devops-automation-platform",;
@@ -178,7 +178,7 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     launchDate: "2025-02-28",;
     customers: 134,;
     rating: 4.8,;
-    reviews: 89;,
+    reviews: 89;,;,
 },;
   {;
     id: "zero-trust-security-framework",;
@@ -223,7 +223,7 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     launchDate: "2025-03-05",;
     customers: 89,;
     rating: 4.9,;
-    reviews: 67;,
+    reviews: 67;,;,
 },;
   {;
     id: "intelligent-data-center-management",;

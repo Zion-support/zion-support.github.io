@@ -86,7 +86,7 @@ export interface RevolutionaryService2029 {;
     customers: 45,;
     rating: 4.9,;
     reviews: 127,;
-    popular: true;,
+    popular: true;,;,
 },;
   {;
     id: "quantum-ai-hybrid-platform",;
@@ -137,7 +137,7 @@ export interface RevolutionaryService2029 {;
     customers: 12,;
     rating: 4.8,;
     reviews: 34,;
-    popular: true;,
+    popular: true;,;,
 },;
   {;
     id: "ai-cybersecurity-platform",;
@@ -188,7 +188,7 @@ export interface RevolutionaryService2029 {;
     customers: 89,;
     rating: 4.9,;
     reviews: 156,;
-    popular: true;,
+    popular: true;,;,
 },;
   {;
     id: "ai-content-marketing-suite",;
@@ -237,4 +237,4 @@ export interface RevolutionaryService2029 {;
     implementationDetails: "Brand voice training, content strategy, integration setup.",;
     launchDate: "2029-01-10",;
     customers: 234,;
-    rating: 4.8,
+    rating: 4.8,}}

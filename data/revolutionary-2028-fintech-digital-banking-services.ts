@@ -80,14 +80,14 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "AI-powered digital banking platform with personalized services, automated investment, and comprehensive financial management.",;
     launchDate: "2028-01-25",;
     customers: 320,;
     rating: 4.9,;
-    reviews: 240;,
+    reviews: 240;,;,
 },;
   // AI-Powered Investment Management Platform;
   {;
@@ -132,14 +132,14 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "AI-powered investment management platform with automated trading, portfolio optimization, and comprehensive risk management.",;
     launchDate: "2028-03-10",;
     customers: 680,;
     rating: 4.8,;
-    reviews: 520;,
+    reviews: 520;,;,
 },;
   // Blockchain-Based Payment Platform;
   {;
@@ -181,7 +181,7 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "DeFi lending and borrowing platform with AI risk management, smart contracts, and comprehensive DeFi solutions.",;
@@ -189,5 +189,5 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
     customers: 850,;
     rating: 4.8,;
     reviews: 620;
-
+;
 ]}}

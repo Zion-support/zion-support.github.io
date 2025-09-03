@@ -80,14 +80,14 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced emotional intelligence platform with real-time emotion detection, AI-powered responses, and comprehensive emotional analytics. Includes multi-modal recognition and empathy simulation.",;
     launchDate: "2029-01-20",;
     customers: 156,;
     rating: 4.8,;
-    reviews: 289;,
+    reviews: 289;,;,
 },;
   {;
     id: "ai-multimodal-fusion-platform",;
@@ -131,14 +131,14 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced multimodal AI platform with unified processing capabilities, cross-modal understanding, and seamless data integration. Includes comprehensive API access and real-time processing.",;
     launchDate: "2029-02-01",;
     customers: 89,;
     rating: 4.7,;
-    reviews: 167;,
+    reviews: 167;,;,
 },;
   // Blockchain & Web3 Services;
   {;
@@ -183,14 +183,14 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced quantum blockchain platform with quantum-resistant cryptography, enhanced security, and high-performance capabilities. Includes smart contract automation and cross-chain interoperability.",;
     launchDate: "2029-02-15",;
     customers: 45,;
     rating: 4.9,;
-    reviews: 89;,
+    reviews: 89;,;,
 },;
   // Healthcare & Biotech Services;
   {;
@@ -235,14 +235,14 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced personalized medicine platform with AI-powered treatment planning, genetic analysis, drug discovery acceleration, and comprehensive clinical tools. Includes research collaboration features.",;
     launchDate: "2029-01-30",;
     customers: 67,;
     rating: 4.8,;
-    reviews: 134;,
+    reviews: 134;,;,
 },;
   // Smart City & Infrastructure Services;
   {;
@@ -287,7 +287,7 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced smart city orchestrator with comprehensive infrastructure management, AI optimization, and real-time monitoring. Includes predictive maintenance and emergency response coordination.",;

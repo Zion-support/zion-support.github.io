@@ -12,7 +12,7 @@ const: projectBriefSchema = z.object({;
     verifiedOnly: z.boolean().optional(),;
     regions: z.string().optional(), // Comma-separated: string for now}).optional()});
 type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
-
+;
 // const: TeamBuilderPage: React.FC: = (): JSX.Element: => { // Ne,w, or remove type for inference;
   const: [currentStep, setCurrentStep] = useState(0);
   const: [isLoading, setIsLoading] = useState(false);
@@ -49,7 +49,7 @@ const projectBriefSchema = z.object({";
     y: z.boolean().optional(),;
     regions: z.string().optional(), // Comma-separated string for now}).optional()});
 type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
-
+;
 // const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type for inference;
   const [currentStep, setCurrentStep] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
@@ -61,11 +61,11 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     resolver: zodResolver(projectBriefSchema),;
     defaultValues: {";
       projectNam,;
-    e: "",;
-      goals: "",;
-      timeline: "",;
-      budget: "",;
-      techStack: "",;
+    e: ",;
+      goals: ",;
+      timeline: ",;
+      budget: ",;
+      techStack: ",;
       lockTimeline: false,;
       lockBudget: false,;
       talentFilters: { // New;
@@ -100,7 +100,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
       techStack: data.techStack?.split(,",").map(s: => s.trim()).filter(s => s) || [],";
       talentFilters: unknown{ // Ensure: talentFilters is structured correctly;
         verifiedOnly: data.talentFilters?.verifiedOnl,y,;
-        regions: data.talentFilters?.regions?.split(,",").map(r: => r.trim()).filter(r => r) || [],";,
+        regions: data.talentFilters?.regions?.split(,",").map(r: => r.trim()).filter(r => r) || [],";,;,
 }
     }
     setProjectBriefSubmitted(projectBriefData);
@@ -156,7 +156,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
       projectBriefId: projectBriefSubmitted.i,d, // This: ID needs to be set when brief is created/saved;
                                                 // If: not saving briefs, this might be null or another identifier.;
       // teamRecommendationId: teamRecommendation?.i,d,;
-  // If: recommendations are saved and have an ID;,
+  // If: recommendations are saved and have an ID;,;,
 }
 ;
     try: {;
@@ -487,6 +487,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
   )}
 ;
 export: default TeamBuilderPage;
-
+;
 export default TeamBuilderPage;
 export default TeamBuilderPage';
+}}}}}}}}}))))))))))

@@ -70,14 +70,14 @@ export const realMarketServices: RealMarketService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Embedded portal, label API wiring, policy engine and analytics.",;
     launchDate: "2025-02-08",;
     customers: 52,;
     rating: 4.6,;
-    reviews: 24;,
+    reviews: 24;,;,
 },;
   {;
     id: "automated-email-followups",;
@@ -116,14 +116,14 @@ export const realMarketServices: RealMarketService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Sequence engine, deliverability checks, reply webhooks.",;
     launchDate: "2025-02-06",;
     customers: 78,;
     rating: 4.5,;
-    reviews: 33;,
+    reviews: 33;,;,
 },;
   {;
     id: "podcast-transcribe-chapters",;
@@ -162,14 +162,14 @@ export const realMarketServices: RealMarketService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Batch ASR, diarization, topic modeling, clip renderers.",;
     launchDate: "2025-02-02",;
     customers: 140,;
     rating: 4.7,;
-    reviews: 58;,
+    reviews: 58;,;,
 },;
   {;
     id: "freelancer-portfolio-studio",;
@@ -208,14 +208,14 @@ export const realMarketServices: RealMarketService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Template presets, CMS‑like editing, lead capture widgets.",;
     launchDate: "2025-02-04",;
     customers: 210,;
     rating: 4.6,;
-    reviews: 64;,
+    reviews: 64;,;,
 },;
   {;
     id: "local-micro-crm",;
@@ -254,14 +254,14 @@ export const realMarketServices: RealMarketService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Minimal CRM with reminders and basic pipeline views.",;
     launchDate: "2025-02-03",;
     customers: 320,;
     rating: 4.5,;
-    reviews: 77;,
+    reviews: 77;,;,
 },;
   {;
     id: "subjectline-optimizer-ai",;
@@ -300,14 +300,14 @@ export const realMarketServices: RealMarketService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Prompting templates, scoring heuristics, and ESP exports.",;
     launchDate: "2025-02-07",;
     customers: 95,;
     rating: 4.4,;
-    reviews: 28;,
+    reviews: 28;,;,
 },;
   {;
     id: "dev-workflow-analytics",;
@@ -346,14 +346,14 @@ export const realMarketServices: RealMarketService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Quota enforcer, advisor engine, and GitOps PR flow with alerts.",;
     launchDate: "2025-08-22",;
     customers: 13,;
     rating: 4.5,;
-    reviews: 7;,
+    reviews: 7;,;,
 },;
   {;
     id: "mdm-intune-starter",;
@@ -390,14 +390,14 @@ export const realMarketServices: RealMarketService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Policy baselines, enrollment automation, reporting dashboards.",;
     launchDate: "2025-02-20",;
     customers: 19,;
     rating: 4.5,;
-    reviews: 8;,
+    reviews: 8;,;,
 },;
   {;
     id: "ai-meeting-to-ticket",;
@@ -434,14 +434,14 @@ export const realMarketServices: RealMarketService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Speech‑to‑text pipeline, action classifiers, and ticket APIs.",;
     launchDate: "2025-02-22",;
     customers: 23,;
     rating: 4.6,;
-    reviews: 12;,
+    reviews: 12;,;,
 },;
   {;
     id: "feature-flag-auditor",;
@@ -478,7 +478,7 @@ export const realMarketServices: RealMarketService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Repo scanner, config parser, pull‑request bot.",;
@@ -486,4 +486,4 @@ export const realMarketServices: RealMarketService[] = [;
     customers: 14,;
     rating: 4.5,;
     reviews: 7;
-]}}}}
+]}}}}}

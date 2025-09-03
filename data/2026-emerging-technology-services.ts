@@ -42,7 +42,7 @@ const contact = {;
   ;
   ;
   ;
-  website: "https://ziontechgroup.com";,
+  website: "https://ziontechgroup.com";,;,
 }
 export const emergingTechnologyServices2026: EmergingTechnologyService[] = [;
   {;
@@ -88,7 +88,7 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [;
     launchDate: "2026-01-20",;
     customers: 28,;
     rating: 4.9,;
-    reviews: 67;,
+    reviews: 67;,;,
 },;
   {;
     id: "quantum-machine-learning-platform",;
@@ -133,7 +133,7 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [;
     launchDate: "2026-02-10",;
     customers: 34,;
     rating: 4.8,;
-    reviews: 78;,
+    reviews: 78;,;,
 },;
   {;
     id: "blockchain-decentralized-finance-platform",;
@@ -178,7 +178,7 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [;
     launchDate: "2026-01-25",;
     customers: 89,;
     rating: 4.7,;
-    reviews: 234;,
+    reviews: 234;,;,
 },;
   {;
     id: "ai-powered-healthcare-diagnostics-platform",;
@@ -223,7 +223,7 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [;
     launchDate: "2026-02-05",;
     customers: 67,;
     rating: 4.9,;
-    reviews: 189;,
+    reviews: 189;,;,
 },;
   {;
     id: "iot-smart-city-platform",;
@@ -268,7 +268,7 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [;
     launchDate: "2026-03-01",;
     customers: 23,;
     rating: 4.6,;
-    reviews: 56;,
+    reviews: 56;,;,
 },;
   {;
     id: "ai-powered-cybersecurity-threat-intelligence",;
@@ -313,7 +313,7 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [;
     launchDate: "2026-01-30",;
     customers: 145,;
     rating: 4.8,;
-    reviews: 378;,
+    reviews: 378;,;,
 },;
   {;
     id: "quantum-cryptography-platform",;
@@ -358,7 +358,7 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [;
     launchDate: "2026-02-25",;
     customers: 18,;
     rating: 4.9,;
-    reviews: 34;,
+    reviews: 34;,;,
 },;
   {;
     id: "ai-powered-robotics-automation-platform",;

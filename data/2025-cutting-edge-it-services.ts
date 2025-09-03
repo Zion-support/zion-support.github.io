@@ -15,14 +15,14 @@ export const cuttingEdgeITServices2025 = [;
       "Quantum-enhanced data processing",;
       "Automated infrastructure management";
     ],;
-    pricing: {;,
+    pricing: {;,;,
 },;
     category: "Quantum IT",;
     tags["Quantum Computing", "Cloud Infrastructure", "Security", "Performance", "Scalability"],;
     website: "https://ziontechgroup.com/quantum-cloud-infrastructure-platform",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$22.1B",;
     targetAudience: "Cloud providers, enterprises, financial institutions, government agencies, research institutions",;
@@ -35,7 +35,7 @@ export const cuttingEdgeITServices2025 = [;
       "Enterprise cloud migration";
     ],;
     integrations["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Terraform"],;
-    compliance["SOC2", "ISO 27001", "FedRAMP", "Quantum Security Standards"];,
+    compliance["SOC2", "ISO 27001", "FedRAMP", "Quantum Security Standards"];,;,
 },;
   {;
     id: "edge-computing-orchestration-platform",;
@@ -53,14 +53,14 @@ export const cuttingEdgeITServices2025 = [;
       "Edge-to-cloud synchronization",;
       "Performance optimization algorithms";
     ],;
-    pricing: {;,
+    pricing: {;,;,
 },;
     category: "Edge Computing",;
     tags["Edge Computing", "Orchestration", "Real-time Processing", "AI Deployment", "Low Latency"],;
     website: "https://ziontechgroup.com/edge-computing-orchestration-platform",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$18.7B",;
     targetAudience: "IoT companies, telecommunications providers, manufacturing companies, smart city developers",;
@@ -73,7 +73,7 @@ export const cuttingEdgeITServices2025 = [;
       "Real-time analytics platforms";
     ],;
     integrations["Kubernetes", "Docker", "IoT Platforms", "AI Frameworks", "Cloud Platforms"],;
-    compliance["IoT Security Standards", "Edge Computing Protocols", "Data Privacy Regulations"];,
+    compliance["IoT Security Standards", "Edge Computing Protocols", "Data Privacy Regulations"];,;,
 },;
   {;
     id: "zero-trust-security-platform",;
@@ -91,14 +91,14 @@ export const cuttingEdgeITServices2025 = [;
       "Automated security responses",;
       "Comprehensive audit logging";
     ],;
-    pricing: {;,
+    pricing: {;,;,
 },;
     category: "Cybersecurity",;
     tags["Zero Trust", "Security", "Authentication", "IAM", "Threat Detection"],;
     website: "https://ziontechgroup.com/zero-trust-security-platform",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$31.2B",;
     targetAudience: "Enterprises, government agencies, financial institutions, healthcare organizations, educational institutions",;
@@ -111,7 +111,7 @@ export const cuttingEdgeITServices2025 = [;
       "Remote workforce security";
     ],;
     integrations["Active Directory", "LDAP", "SAML", "OAuth", "SIEM Systems", "Security Tools"],;
-    compliance["SOC2", "ISO 27001", "FedRAMP", "HIPAA", "PCI DSS"];,
+    compliance["SOC2", "ISO 27001", "FedRAMP", "HIPAA", "PCI DSS"];,;,
 },;
   {;
     id: "blockchain-enterprise-platform",;
@@ -129,14 +129,14 @@ export const cuttingEdgeITServices2025 = [;
       "Multi-party workflow automation",;
       "Comprehensive reporting and analytics";
     ],;
-    pricing: {;,
+    pricing: {;,;,
 },;
     category: "Blockchain",;
     tags["Blockchain", "Smart Contracts", "Distributed Ledger", "Enterprise", "Automation"],;
     website: "https://ziontechgroup.com/blockchain-enterprise-platform",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$19.9B",;
     targetAudience: "Financial institutions, supply chain companies, healthcare organizations, government agencies, manufacturing companies",;
@@ -149,7 +149,7 @@ export const cuttingEdgeITServices2025 = [;
       "Manufacturing process tracking";
     ],;
     integrations["ERP Systems", "CRM Platforms", "Financial Systems", "Supply Chain Tools", "Legacy Systems"],;
-    compliance["Blockchain Standards", "Financial Regulations", "Data Privacy Laws"];,
+    compliance["Blockchain Standards", "Financial Regulations", "Data Privacy Laws"];,;,
 },;
   {;
     id: "ai-powered-devops-platform",;
@@ -167,14 +167,14 @@ export const cuttingEdgeITServices2025 = [;
       "Automated security scanning",;
       "Comprehensive analytics and reporting";
     ],;
-    pricing: {;,
+    pricing: {;,;,
 },;
     category: "DevOps",;
     tags["AI DevOps", "Automation", "CI/CD", "Monitoring", "Performance"],;
     website: "https://ziontechgroup.com/ai-powered-devops-platform",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$25.6B",;
     targetAudience: "Software development companies, enterprises, DevOps teams, IT operations teams, development agencies",;
@@ -184,4 +184,4 @@ export const cuttingEdgeITServices2025 = [;
       "Continuous deployment pipelines",;
       "Performance monitoring and optimization",;
       "Incident response automation",;
-]
+]}

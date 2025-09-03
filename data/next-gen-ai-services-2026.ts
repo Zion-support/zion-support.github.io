@@ -43,7 +43,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     name: "AI Creative Studio Platform",;
     tagline: "Unlimited AI-powered creativity for content creators",;
     price: "Custom pricing",;
-    period: "",;
+    period: ",;
     description: "Revolutionary AI platform that generates unlimited creative content including images, videos, music, and text. Perfect for marketing agencies, content creators, and businesses.",;
     features[;
       "AI image generation (unlimited)",;
@@ -80,14 +80,14 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete AI creative platform with multiple AI models, content management, collaboration tools, and enterprise features. Includes mobile apps and API access.",;
     launchDate: "2026-01-25",;
     customers: 1800,;
     rating: 4.9,;
-    reviews: 950;,
+    reviews: 950;,;,
 },;
   // AI Autonomous Business Platform 2026;
   {;
@@ -95,7 +95,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
     name: "AI Autonomous Business Platform 2026",;
     tagline: "Run your business with autonomous AI systems",;
     price: "Custom pricing",;
-    period: "",;
+    period: ",;
     description: "Transform your business operations with autonomous AI systems that handle customer service, sales, marketing, operations, and decision-making without human intervention.",;
     features[;
       "Autonomous customer service",;
@@ -132,14 +132,14 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete autonomous business platform with AI-powered systems for all business functions. Includes enterprise features, custom AI training, and comprehensive integration.",;
     launchDate: "2026-02-10",;
     customers: 450,;
     rating: 4.8,;
-    reviews: 280;,
+    reviews: 280;,;,
 },;
   // AI Emotional Intelligence Platform;
   {;
@@ -184,14 +184,14 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete emotional intelligence platform with real-time emotion analysis, response generation, and analytics. Includes privacy protection and compliance features.",;
     launchDate: "2026-03-01",;
     customers: 650,;
     rating: 4.7,;
-    reviews: 320;,
+    reviews: 320;,;,
 },;
   // AI Multimodal Fusion Platform;
   {;
@@ -236,14 +236,14 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete multimodal AI platform with unified processing across all data types. Includes custom model training, API access, and enterprise features.",;
     launchDate: "2026-02-20",;
     customers: 280,;
     rating: 4.8,;
-    reviews: 150;,
+    reviews: 150;,;,
 },;
   // AI Quantum Hybrid Computing;
   {;
@@ -288,7 +288,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete AI-quantum hybrid platform with access to multiple quantum computers, custom algorithm development, and comprehensive support services.",;

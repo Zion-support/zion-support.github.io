@@ -1,1 +1,1 @@
-import React from; "react" export const safeStorage = { export default safeStorage";",
+import React from; "react" export const safeStorage = { export default safeStorage";",}

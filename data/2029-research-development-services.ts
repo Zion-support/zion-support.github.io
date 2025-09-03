@@ -98,7 +98,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       website: "https://ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
   {;
     id: "quantum-research-platform",;
@@ -161,7 +161,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       website: "https://ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
   {;
     id: "ai-research-assistant",;
@@ -224,7 +224,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       website: "https://ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
   {;
     id: "biotech-research-suite",;
@@ -288,4 +288,4 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       email: "kleber@ziontechgroup.com",;
       website: "https://ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709";
-]}}}}}}
+]}}}}}}}

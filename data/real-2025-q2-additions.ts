@@ -14,7 +14,7 @@ export const real2025Q2Additions: Real2025Q2Addition[] = [;
       "Decision and action item extraction",;
       "Email and Slack follow‑ups",;
       "Workspace search";
-    ];,
+    ];,;,
 },;
   {;
     id: "uptime-sla-reporter",;
@@ -27,5 +27,5 @@ export const real2025Q2Additions: Real2025Q2Addition[] = [;
       "Incident timelines and labels",;
       "Hosted status pages";
     ];
-];,
+];,;,
 }}

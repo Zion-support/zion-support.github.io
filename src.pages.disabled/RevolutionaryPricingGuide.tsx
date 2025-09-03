@@ -3,4 +3,4 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/RevolutionaryPrici
 :src.pages.disabled/RevolutionaryPricingGuide.tsx;
 import: React, { useState } from "react";
 import: React, { useState } from "react";
-;export default function RevolutionaryPricingGuide() { const [activeCategory, setActiveCategory] = useState("all") const [searchTerm, setSearchTerm] = useState("") const [priceRange, setPriceRange] = useState("all") ;export default React.memo(function RevolutionaryPricingGuide () { const [activeCategory, setActiveCategory] = useState ("all")  const [searchTerm, setSearchTerm] = useState ("")  const [priceRange, setPriceRange] = useState ("all")  '
+;export default function RevolutionaryPricingGuide() { const [activeCategory, setActiveCategory] = useState("all") const [searchTerm, setSearchTerm] = useState("") const [priceRange, setPriceRange] = useState("all") ;export default React.memo(function RevolutionaryPricingGuide () { const [activeCategory, setActiveCategory] = useState ("all")  const [searchTerm, setSearchTerm] = useState ("")  const [priceRange, setPriceRange] = useState ("all")  '}}))

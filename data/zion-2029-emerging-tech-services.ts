@@ -79,7 +79,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,
+      website: "https://ziontechgroup.com",;,;,
 },;
     realImplementation: true,;
     technology: [;
@@ -112,7 +112,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     launchDate: "2024-01-10",;
     customers: 23,;
     rating: 4.9,;
-    reviews: 45,;,
+    reviews: 45,;,;,
 },;
   // Renewable Energy AI Platform;
   {;
@@ -149,7 +149,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,
+      website: "https://ziontechgroup.com",;,;,
 },;
     realImplementation: true,;
     technology: [;
@@ -179,7 +179,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     launchDate: "2023-12-15",;
     customers: 89,;
     rating: 4.8,;
-    reviews: 67,;,
+    reviews: 67,;,;,
 },;
   // Autonomous Vehicle Technology;
   {;
@@ -216,7 +216,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,
+      website: "https://ziontechgroup.com",;,;,
 },;
     realImplementation: true,;
     technology: [;
@@ -245,7 +245,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     launchDate: "2024-02-20",;
     customers: 45,;
     rating: 4.7,;
-    reviews: 78,;,
+    reviews: 78,;,;,
 },;
   // Biotechnology AI Platform;
   {;
@@ -282,7 +282,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,
+      website: "https://ziontechgroup.com",;,;,
 },;
     realImplementation: true,;
     technology: [;
@@ -316,7 +316,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     launchDate: "2023-11-25",;
     customers: 34,;
     rating: 4.9,;
-    reviews: 56,;,
+    reviews: 56,;,;,
 },;
   // Advanced Robotics Platform;
   {;
@@ -353,7 +353,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,
+      website: "https://ziontechgroup.com",;,;,
 },;
     realImplementation: true,;
     technology: [;
@@ -382,7 +382,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     launchDate: "2024-01-30",;
     customers: 78,;
     rating: 4.8,;
-    reviews: 89,;,
+    reviews: 89,;,;,
 },;
   // Augmented Reality Enterprise Platform;
   {;
@@ -419,7 +419,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,
+      website: "https://ziontechgroup.com",;,;,
 },;
     realImplementation: true,;
     technology: [;
@@ -455,7 +455,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     launchDate: "2023-12-05",;
     customers: 156,;
     rating: 4.7,;
-    reviews: 123,;,
+    reviews: 123,;,;,
 },;
   // Quantum Computing as a Service;
   {;
@@ -492,7 +492,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,
+      website: "https://ziontechgroup.com",;,;,
 },;
     realImplementation: true,;
     technology: [;
@@ -527,7 +527,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     launchDate: "2024-02-15",;
     customers: 23,;
     rating: 4.9,;
-    reviews: 34,;,
+    reviews: 34,;,;,
 },;
   // Nanotechnology Manufacturing Platform;
   {;
@@ -564,7 +564,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,
+      website: "https://ziontechgroup.com",;,;,
 },;
     realImplementation: true,;
     technology: [;
@@ -598,7 +598,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     launchDate: "2024-01-25",;
     customers: 12,;
     rating: 4.8,;
-    reviews: 23,;,
+    reviews: 23,;,;,
 },;
   // Smart Cities Infrastructure Platform;
   {;
@@ -635,7 +635,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,
+      website: "https://ziontechgroup.com",;,;,
 },;
     realImplementation: true,;
     technology: [;
@@ -671,7 +671,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     launchDate: "2023-11-15",;
     customers: 45,;
     rating: 4.8,;
-    reviews: 78,;,
+    reviews: 78,;,;,
 },;
   // Digital Twin Technology Platform;
   {;
@@ -708,7 +708,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,
+      website: "https://ziontechgroup.com",;,;,
 },;
     realImplementation: true,;
     technology: [;
@@ -744,7 +744,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     launchDate: "2024-01-20",;
     customers: 89,;
     rating: 4.7,;
-    reviews: 67,;,
+    reviews: 67,;,;,
 },;
   // Metaverse Development Platform;
   {;
@@ -781,7 +781,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,
+      website: "https://ziontechgroup.com",;,;,
 },;
     realImplementation: true,;
     technology: [;
@@ -816,7 +816,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [;
     launchDate: "2024-02-10",;
     customers: 234,;
     rating: 4.6,;
-    reviews: 156,;,
+    reviews: 156,;,;,
 },;
 ];
 export const getServicesByCategory = (;
@@ -826,8 +826,8 @@ export const getServicesByCategory = (;
     service => service.category === category;
   )}
 export const getPopularServices = () => {;
-  return zionEmergingTechServices2029.filter(service => service.isPopular);,
+  return zionEmergingTechServices2029.filter(service => service.isPopular);,;,
 }
 export const getNewServices = () => {;
-  return zionEmergingTechServices2029.filter(service => service.isNew);,
+  return zionEmergingTechServices2029.filter(service => service.isNew);,;,
 }

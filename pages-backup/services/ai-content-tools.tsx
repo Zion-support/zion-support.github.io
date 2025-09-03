@@ -1,4 +1,4 @@
-import React from "react"
-			</section>,
-		</PageTransition>",,
+import React from "react";
+			</section>,;
+		</PageTransition>",,;
 	)}

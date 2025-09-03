@@ -2,38 +2,38 @@ const fs = require("fs");
 const path = require("path");
 const https = require("https");
 const axios = require("axios");
-async function $1() {
+async function $1() {;
   const sitemapPath = path.join(__dirname, "..", "public", "sitemap.xml");
   let xml = "";
-  try {
-  xml = fs.readFileSync(sitemapPath, "utf8");,
-} catch (e) {
-  return [];,
+  try {;
+  xml = fs.readFileSync(sitemapPath, "utf8");,;,
+} catch (e) {;
+  return [];,;,
 }
   const urlRegex = /<loc>(.*?)<\/loc>/g;
   const urls = [];
   let match;
-  while ((match = urlRegex.exec(xml)) !== null) {
-  urls.push(match[1]);,
+  while ((match = urlRegex.exec(xml)) !== null) {;
+  urls.push(match[1]);,;,
 }
-  return urls;,
+  return urls;,;,
 }
 ;
-async function fetchUrl(url) {
+async function fetchUrl(url) {;
   const start = Date.now();
-  try {
-  const res = await axios.get(url, {
+  try {;
+  const res = await axios.get(url, {;
   timeout: 15000,;
       httpsAgent: new https.Agent({ rejectUnauthorized: false }),;
       headers: { "User-Agent": "ZionCacheWarmer/1.0 (+https://zion.app)" },;
       validateStatus: () => true});
-    return {
+    return {;
   url,;
       status: res.status,;
       durationMs: Date.now() - start,;
       ok: res.status >= 200 && res.status < 400}
-  } catch (e) {
-  return {
+  } catch (e) {;
+  return {;
   url,;
       status: 0,;
       durationMs: Date.now() - start,;
@@ -42,10 +42,10 @@ async function fetchUrl(url) {
   }
 }
 ;
-async function warmCache() {
+async function warmCache() {;
   const urls = await readSitemapUrls();
   if (!urls.length) return { ok: false, reason: "no_sitemap" }
-  const preferred = [
+  const preferred = [;
   "https: //zion.app/",;
     "https: //zion.app/automation",;
     "https: //zion.app/main/front",;
@@ -55,18 +55,18 @@ async function warmCache() {
   const results = [];
   const concurrency = 6;
   let index = 0;
-  async function runBatch() {
+  async function runBatch() {;
   const batch = unique.slice(index, index + concurrency);
     index += concurrency;
     const out = await Promise.all(batch.map(fetchUrl));
-    results.push(...out);,
+    results.push(...out);,;,
 }
-  while (index < unique.length) {
+  while (index < unique.length) {;
   // eslint-disable-next-line no-await-in-loop;
-    await runBatch();,
+    await runBatch();,;,
 }
 ;
-  const summary = {
+  const summary = {;
   generatedAt: new Date().toISOString(),;
     total: results.length,;
     ok: results.filter(r => r.ok).length,;
@@ -89,17 +89,17 @@ async function warmCache() {
   return { ok: true, summary }
 }
 ;
-function percentile(values, p) {
+function percentile(values, p) {;
   if (!values.length) return 0;
   const sorted = [...values].sort((a, b) => a - b);
   const idx = Math.floor((p / 100) * (sorted.length - 1));
-  return sorted[idx];,
+  return sorted[idx];,;,
 }
 ;
-if (require.main === module) {
-  warmCache().then(res => {
-  console.log(JSON.stringify(res, null, 2));,
-});,
+if (require.main === module) {;
+  warmCache().then(res => {;
+  console.log(JSON.stringify(res, null, 2));,;,
+});,;,
 }
 ;
 module.exports = { warmCache }

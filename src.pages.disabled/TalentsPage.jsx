@@ -1,1 +1,1 @@
-:src.pages.disabled/TalentsPage.jsx "export default function TalentsPage () { export default function TalentsPage () {""""
+:src.pages.disabled/TalentsPage.jsx "export default function TalentsPage () { export default function TalentsPage () {""}}

@@ -79,7 +79,7 @@ export const innovativeMicroSaas2034Services: MicroSaasService2034[] = [;
     scalability: "Unlimited sales automation",;
     uptime: "99.99% sales platform availability",;
     contact: "+1 302 464 0950",;
-    website: "https://ziontechgroup.com/ai-quantum-sales-automation";,
+    website: "https://ziontechgroup.com/ai-quantum-sales-automation";,;,
 },;
   {;
     id: "quantum-content-generation-studio",;
@@ -136,7 +136,7 @@ export const innovativeMicroSaas2034Services: MicroSaasService2034[] = [;
     scalability: "Unlimited content generation",;
     uptime: "99.99% content platform availability",;
     contact: "+1 302 464 0950",;
-    website: "https://ziontechgroup.com/quantum-content-generation-studio";,
+    website: "https://ziontechgroup.com/quantum-content-generation-studio";,;,
 },;
   {;
     id: "ai-quantum-customer-success",;
@@ -193,7 +193,7 @@ export const innovativeMicroSaas2034Services: MicroSaasService2034[] = [;
     scalability: "Unlimited customer success",;
     uptime: "99.99% success platform availability",;
     contact: "+1 302 464 0950",;
-    website: "https://ziontechgroup.com/ai-quantum-customer-success";,
+    website: "https://ziontechgroup.com/ai-quantum-customer-success";,;,
 },;
   {;
     id: "quantum-supply-chain-transparency",;
@@ -250,7 +250,7 @@ export const innovativeMicroSaas2034Services: MicroSaasService2034[] = [;
     scalability: "Unlimited supply chain tracking",;
     uptime: "99.99% supply chain platform availability",;
     contact: "+1 302 464 0950",;
-    website: "https://ziontechgroup.com/quantum-supply-chain-transparency";,
+    website: "https://ziontechgroup.com/quantum-supply-chain-transparency";,;,
 },;
   {;
     id: "ai-quantum-meeting-transcriber",;
@@ -307,7 +307,7 @@ export const innovativeMicroSaas2034Services: MicroSaasService2034[] = [;
     scalability: "Unlimited meeting transcription",;
     uptime: "99.99% transcription platform availability",;
     contact: "+1 302 464 0950",;
-    website: "https://ziontechgroup.com/ai-quantum-meeting-transcriber";,
+    website: "https://ziontechgroup.com/ai-quantum-meeting-transcriber";,;,
 },;
   {;
     id: "quantum-iot-edge-orchestration",;

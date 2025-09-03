@@ -1,18 +1,18 @@
 const fs = require("fs");
 const path = require("path");
 ;
-class $1 {
-  constructor() {
+class $1 {;
+  constructor() {;
   this.projectRoot = process.cwd();
-    this.fixedFiles = [];,
+    this.fixedFiles = [];,;,
 }
 ;
-  log(message) {
-  console.log(`[${new Date().toISOString()}] ${message}`);,
+  log(message) {;
+  console.log(`[${new Date().toISOString()}] ${message}`);,;,
 }
 ;
-  fixFile(filePath) {
-  try {
+  fixFile(filePath) {;
+  try {;
   let content = fs.readFileSync(filePath, "utf8");
       let originalContent = content;
       ;
@@ -34,8 +34,8 @@ class $1 {
       content = content.replace(/<meta name="viewport content="([^"]*)" \/>/g, "<meta name="viewport" content="$1" />");
       ;
       // Fix import statements;
-      if (content.includes("import React") && content.includes("React.Fragment")) {
-  content = content.replace(/import React from "react"/g, "import React from "react"");,
+      if (content.includes("import React") && content.includes("React.Fragment")) {;
+  content = content.replace(/import React from "react"/g, "import React from "react"");,;,
 }
       ;
       // Fix function syntax;
@@ -45,35 +45,35 @@ class $1 {
       content = content.replace(/<\/>\s*\)\s*,/g, "</>\n  )");
       ;
       // Fix missing imports;
-      if (content.includes("<Head>") && !content.includes("import Head")) {
-  content = content.replace(/import React from "react"/, "import React from "react"\nimport Head from "next/head"");,
+      if (content.includes("<Head>") && !content.includes("import Head")) {;
+  content = content.replace(/import React from "react"/, "import React from "react"\nimport Head from "next/head"");,;,
 }
       ;
-      if (content.includes("<Link") && !content.includes("import Link")) {
-  content = content.replace(/import React from "react"/, "import React from "react"\nimport Link from "next/link"");,
+      if (content.includes("<Link") && !content.includes("import Link")) {;
+  content = content.replace(/import React from "react"/, "import React from "react"\nimport Link from "next/link"");,;,
 }
       ;
       // Fix malformed JSX;
       content = content.replace(/<Head>\s*<title>([^<]*)<\/title>\s*<meta name="description" content="([^"]*)" \/>\s*<\/Head>/g, ;
         "<Head>\n        <title>$1</title>\n        <meta name="description" content="$2" />\n      </Head>");
       ;
-      if (content !== originalContent) {
+      if (content !== originalContent) {;
   fs.writeFileSync(filePath, content, "utf8");
         this.fixedFiles.push(filePath);
         this.log(`✅ Fixed syntax in: ${path.relative(this.projectRoot, filePath)}`);
-        return true;,
+        return true;,;,
 }
-      return false;,
-} catch (error) {
+      return false;,;,
+} catch (error) {;
   this.log(`❌ Error fixing ${filePath}: ${error.message}`);
-      return false;,
+      return false;,;,
 }
   }
 ;
-  async fixAllFiles() {
+  async fixAllFiles() {;
   this.log("🔧 Starting comprehensive syntax fix...");
     ;
-    const filesToFix = [
+    const filesToFix = [;
   "components/Layout.tsx",;
       "pages/NotFound.tsx",;
       "pages/_document.tsx",;
@@ -82,31 +82,31 @@ class $1 {
     ];
     ;
     let fixedCount = 0;
-    for (const file of filesToFix) {
+    for (const file of filesToFix) {;
   const filePath = path.join(this.projectRoot, file);
-      if (fs.existsSync(filePath)) {
-  if (this.fixFile(filePath)) {
-  fixedCount++;,
+      if (fs.existsSync(filePath)) {;
+  if (this.fixFile(filePath)) {;
+  fixedCount++;,;,
 }
-      } else {
-  this.log(`⚠️ File not found: ${file}`);,
+      } else {;
+  this.log(`⚠️ File not found: ${file}`);,;,
 }
     }
     ;
     this.log(`🎉 Fixed syntax in ${fixedCount} files`);
-    return { fixedCount, files: this.fixedFiles };,
+    return { fixedCount, files: this.fixedFiles };,;,
 }
 }
 ;
 // Run the fixer;
 const fixer = new ComprehensiveSyntaxFixer();
 fixer.fixAllFiles();
-  .then(result => {
+  .then(result => {;
   console.log("✅ Comprehensive syntax fixing completed successfully");
     console.log(`📊 Summary: ${result.fixedCount} files fixed`);
-    process.exit(0);,
+    process.exit(0);,;,
 });
-  .catch(error => {
+  .catch(error => {;
   console.error("❌ Comprehensive syntax fixing failed:", error.message);
-    process.exit(1);,
-});
+    process.exit(1);,;,
+});}}

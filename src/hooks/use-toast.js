@@ -1,34 +1,34 @@
-import React, { useState, useCallback } from "react"
+import React, { useState, useCallback } from "react";
 
-// comment
-export const toast = ({ title, description, variant = "default" }) => {  // comment
-  console.log(""Toast [${variant}]: ${title} -, ${description}"")
+// comment;
+export const toast = ({ title, description, variant = "default" }) => {  // comment;
+  console.log(""Toast [${variant}]: ${title} -, ${description}"");,
 }
-  // comment
+  // comment;
 return Date.now()}
-
-export const useToast = () => {
-  const [toasts, setToasts] = useState([])
+;
+export const useToast = () => {;
+  const [toasts, setToasts] = useState([]);,
 }
-""
-  const toast = useCallback(({ title, description, variant = "default' }) => {    const id = Date.now()
+;
+  const toast = useCallback(({ title, description, variant = "default' }) => {    const id = Date.now();,
 }
     const newToast = {}
-
-    setToasts(prev => [...prev, newToast])
+;
+    setToasts(prev => [...prev, newToast]);,
 }
-    // comment
-setTimeout(() => {
-      setToasts(prev => prev.filter(t => t.id !== id))
+    // comment;
+setTimeout(() => {;
+      setToasts(prev => prev.filter(t => t.id !== id));,
 }
-  }, 5000)
+  }, 5000);,
 }
-    return id}, [])
+    return id}, []);,
 }
-  const dismiss = useCallback((id) => {
-    setToasts(prev => prev.filter(t => t.id !== id))
+  const dismiss = useCallback((id) => {;
+    setToasts(prev => prev.filter(t => t.id !== id));,
 }
-  }, [])
+  }, []);,
 }
-  return {
-    toast, dismiss,    toasts}};"`""
+  return {;
+    toast, dismiss,    toasts}};"`

@@ -80,14 +80,14 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Comprehensive zero-trust network architecture platform with continuous verification and micro-segmentation.",;
     launchDate: "2026-03-01",;
     customers: 60,;
     rating: 4.8,;
-    reviews: 48;,
+    reviews: 48;,;,
 },;
   // AI-Powered IT Operations Center;
   {;
@@ -132,14 +132,14 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "AI-powered IT operations center with intelligent automation and predictive capabilities.",;
     launchDate: "2026-02-15",;
     customers: 120,;
     rating: 4.7,;
-    reviews: 95;,
+    reviews: 95;,;,
 },;
   // Quantum-Resistant Cryptography Platform;
   {;
@@ -184,14 +184,14 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced quantum-resistant cryptography platform with post-quantum algorithms and hybrid encryption.",;
     launchDate: "2026-04-01",;
     customers: 35,;
     rating: 4.9,;
-    reviews: 28;,
+    reviews: 28;,;,
 },;
   // Autonomous Cloud Migration Platform;
   {;
@@ -236,14 +236,14 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Autonomous cloud migration platform with AI automation and zero-downtime capabilities.",;
     launchDate: "2026-03-15",;
     customers: 85,;
     rating: 4.8,;
-    reviews: 72;,
+    reviews: 72;,;,
 },;
   // Edge Computing Orchestration Platform;
   {;
@@ -288,14 +288,14 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced edge computing orchestration platform with global scale and real-time processing.",;
     launchDate: "2026-04-15",;
     customers: 45,;
     rating: 4.7,;
-    reviews: 38;,
+    reviews: 38;,;,
 },;
   // AI-Powered Data Governance Platform;
   {;
@@ -340,14 +340,14 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "AI-powered data governance platform with intelligent automation and comprehensive compliance.",;
     launchDate: "2026-03-01",;
     customers: 95,;
     rating: 4.8,;
-    reviews: 78;,
+    reviews: 78;,;,
 },;
   // Autonomous DevOps Platform;
   {;
@@ -392,14 +392,14 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Fully autonomous DevOps platform with AI-powered automation and zero human intervention.",;
     launchDate: "2026-02-20",;
     customers: 150,;
     rating: 4.7,;
-    reviews: 125;,
+    reviews: 125;,;,
 },;
   // Quantum-Safe Cloud Storage Platform;
   {;
@@ -444,7 +444,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Quantum-safe cloud storage platform with quantum-resistant encryption and distributed storage.",;

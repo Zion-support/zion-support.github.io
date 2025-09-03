@@ -80,14 +80,14 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete space technology platform with AI-powered operations, satellite management, and space data analysis. Includes mission planning tools and expert consultation.",;
     launchDate: "2026-01-15",;
     customers: 120,;
     rating: 4.9,;
-    reviews: 80;,
+    reviews: 80;,;,
 },;
   // Quantum Space Mining Platform;
   {;
@@ -132,14 +132,14 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete space mining platform with quantum computing analysis, resource assessment, and mission planning. Includes investment analysis and regulatory compliance tools.",;
     launchDate: "2026-02-01",;
     customers: 85,;
     rating: 4.8,;
-    reviews: 45;,
+    reviews: 45;,;,
 },;
   // Satellite Operations AI;
   {;
@@ -184,14 +184,14 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete satellite operations platform with AI automation, monitoring, and management tools. Includes predictive maintenance and performance analytics.",;
     launchDate: "2026-01-25",;
     customers: 180,;
     rating: 4.8,;
-    reviews: 95;,
+    reviews: 95;,;,
 },;
   // Space Debris Tracking System;
   {;
@@ -236,14 +236,14 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete space debris tracking system with real-time monitoring, collision prediction, and avoidance recommendations. Includes mobile apps and API access.",;
     launchDate: "2026-02-15",;
     customers: 95,;
     rating: 4.7,;
-    reviews: 55;,
+    reviews: 55;,;,
 },;
   // Space Weather Monitoring Platform;
   {;
@@ -288,7 +288,7 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete space weather monitoring platform with real-time tracking, prediction algorithms, and protection recommendations. Includes mobile apps and API access.",;

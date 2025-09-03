@@ -15,13 +15,13 @@ export const augmentedServicesBatch3: RealAugmentedService2025Batch3[] = [;
       "Enhanced capabilities",;
       "Better performance",;
       "Advanced features",;
-    ],;,
+    ],;,;,
 },;
   {;
     id: "batch3-service-2",;
     name: "Batch 3 Service 2",;
     tagline: "Advanced batch 3 solutions",;
     price: "$699",;
-    features: ["Premium features", "Enterprise support", "Custom integrations"],;,
+    features: ["Premium features", "Enterprise support", "Custom integrations"],;,;,
 },;
 ]

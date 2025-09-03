@@ -43,7 +43,7 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [;
     name: "Blockchain Infrastructure Platform 2026",;
     tagline: "Enterprise-grade blockchain infrastructure for modern businesses",;
     price: "Custom pricing",;
-    period: "",;
+    period: ",;
     description: "Complete blockchain infrastructure platform that enables businesses to build, deploy, and manage enterprise blockchain applications with advanced security and scalability.",;
     features[;
       "Multi-chain support (Ethereum, Polygon, Solana)",;
@@ -80,14 +80,14 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete blockchain infrastructure platform with multi-chain support, development tools, monitoring, and enterprise features. Includes custom blockchain networks and comprehensive support.",;
     launchDate: "2026-01-20",;
     customers: 850,;
     rating: 4.8,;
-    reviews: 420;,
+    reviews: 420;,;,
 },;
   // DeFi Yield Optimization Platform;
   {;
@@ -132,14 +132,14 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete DeFi platform with AI-powered optimization, multi-protocol support, risk management, and comprehensive analytics. Includes mobile apps and API access.",;
     launchDate: "2026-02-01",;
     customers: 3200,;
     rating: 4.9,;
-    reviews: 1800;,
+    reviews: 1800;,;,
 },;
   // NFT Marketplace & Creation Platform;
   {;
@@ -184,14 +184,14 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete NFT platform with marketplace builder, creation tools, management system, and analytics. Includes white-label solutions and enterprise features.",;
     launchDate: "2026-01-30",;
     customers: 1800,;
     rating: 4.8,;
-    reviews: 950;,
+    reviews: 950;,;,
 },;
   // Web3 Identity & Authentication Platform;
   {;
@@ -236,14 +236,14 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete Web3 identity platform with DID support, zero-knowledge proofs, and privacy-preserving features. Includes SDKs, APIs, and enterprise tools.",;
     launchDate: "2026-02-15",;
     customers: 650,;
     rating: 4.7,;
-    reviews: 320;,
+    reviews: 320;,;,
 },;
   // Blockchain Supply Chain Platform;
   {;
@@ -288,7 +288,7 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete blockchain supply chain platform with traceability, automation, monitoring, and analytics. Includes IoT integration and enterprise features.",;

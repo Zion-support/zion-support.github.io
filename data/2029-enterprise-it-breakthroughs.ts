@@ -49,7 +49,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     contactInfo: {;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
     category: "Business Intelligence",;
     technology["AI/ML", "Data Analytics", "Predictive Modeling", "Real-time Processing"],;
@@ -70,7 +70,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       "Predictive insights",;
       "Real-time monitoring",;
       "Decision support";
-    ];,
+    ];,;,
 },;
   {;
     id: "smart-supply-chain-optimization",;
@@ -99,7 +99,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     contactInfo: {;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
     category: "Supply Chain Management",;
     technology["AI/ML", "Predictive Analytics", "IoT", "Blockchain"],;
@@ -120,7 +120,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       "Inventory optimization",;
       "Logistics management",;
       "Risk mitigation";
-    ];,
+    ];,;,
 },;
   {;
     id: "intelligent-hr-management-system",;
@@ -149,7 +149,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     contactInfo: {;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
     category: "HR Management",;
     technology["AI/ML", "People Analytics", "Predictive Modeling", "Machine Learning"],;
@@ -170,7 +170,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       "Performance analytics",;
       "Employee engagement",;
       "Talent management";
-    ];,
+    ];,;,
 },;
   {;
     id: "smart-financial-management-platform",;
@@ -199,7 +199,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     contactInfo: {;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
     category: "Financial Management",;
     technology["AI/ML", "Financial Analytics", "Risk Modeling", "Predictive Analytics"],;
@@ -220,7 +220,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       "Risk management",;
       "Investment optimization",;
       "Performance monitoring";
-    ];,
+    ];,;,
 },;
   {;
     id: "intelligent-cybersecurity-platform",;
@@ -249,7 +249,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     contactInfo: {;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
     category: "Cybersecurity",;
     technology["AI/ML", "Threat Detection", "Behavioral Analytics", "Security Automation"],;

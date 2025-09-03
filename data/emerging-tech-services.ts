@@ -80,14 +80,14 @@ export const emergingTechServices: EmergingTechService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Full quantum security platform with QKD hardware, post-quantum algorithms, comprehensive monitoring, and government compliance.",;
     launchDate: "2024-01-01",;
     customers: 12,;
     rating: 5.0,;
-    reviews: 8;,
+    reviews: 8;,;,
 },;
   // Neural Interface Development Platform;
   {;
@@ -132,14 +132,14 @@ export const emergingTechServices: EmergingTechService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Full development platform with EEG processing, ML algorithms, comprehensive APIs, and medical device compliance.",;
     launchDate: "2024-02-15",;
     customers: 34,;
     rating: 4.9,;
-    reviews: 28;,
+    reviews: 28;,;,
 },;
   // Autonomous Vehicle AI Platform;
   {;
@@ -184,14 +184,14 @@ export const emergingTechServices: EmergingTechService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Full autonomous vehicle platform with advanced AI, computer vision, safety systems, and comprehensive testing tools.",;
     launchDate: "2024-01-15",;
     customers: 18,;
     rating: 4.9,;
-    reviews: 15;,
+    reviews: 15;,;,
 },;
   // Space Technology Development Platform;
   {;
@@ -236,14 +236,14 @@ export const emergingTechServices: EmergingTechService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Full space technology platform with AI algorithms, materials science, mission planning, and comprehensive development tools.",;
     launchDate: "2024-01-01",;
     customers: 8,;
     rating: 5.0,;
-    reviews: 6;,
+    reviews: 6;,;,
 },;
   // Biotech AI Development Platform;
   {;
@@ -288,7 +288,7 @@ export const emergingTechServices: EmergingTechService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Full biotech AI platform with advanced algorithms, computational biology tools, research collaboration, and regulatory compliance.",;

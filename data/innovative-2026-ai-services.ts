@@ -80,14 +80,14 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Full-stack BI platform with real-time data processing, advanced ML models, interactive dashboards, and enterprise-grade security. Includes API access and custom integrations.",;
     launchDate: "2025-03-15",;
     customers: 1800,;
     rating: 4.9,;
-    reviews: 950;,
+    reviews: 950;,;,
 },;
   // AI-Powered Customer Experience Platform;
   {;
@@ -132,14 +132,14 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade CX platform with real-time personalization, advanced ML algorithms, comprehensive analytics, and seamless integrations. Includes mobile SDK and API access.",;
     launchDate: "2025-04-20",;
     customers: 2200,;
     rating: 4.8,;
-    reviews: 1100;,
+    reviews: 1100;,;,
 },;
   // AI-Powered Cybersecurity Suite;
   {;
@@ -184,14 +184,14 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade cybersecurity platform with advanced AI algorithms, real-time monitoring, automated response capabilities, and comprehensive reporting. Includes SOC services and 24/7 support.",;
     launchDate: "2025-02-10",;
     customers: 1500,;
     rating: 4.9,;
-    reviews: 800;,
+    reviews: 800;,;,
 },;
   // AI-Powered Marketing Automation;
   {;
@@ -236,14 +236,14 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Comprehensive marketing automation platform with AI-powered optimization, multi-channel capabilities, advanced analytics, and seamless integrations. Includes mobile app and API access.",;
     launchDate: "2025-05-15",;
     customers: 2800,;
     rating: 4.7,;
-    reviews: 1400;,
+    reviews: 1400;,;,
 },;
   // AI-Powered Sales Intelligence;
   {;
@@ -288,7 +288,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.",;
@@ -300,4 +300,4 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
   )}
 export const getAIServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
   return innovative2026AIServices.filter(service => {;
-    const price = parseInt(service.price.replace("$", "").replace(",", ""))
+    const price = parseInt(service.price.replace("$", "").replace(",", ""))}}}

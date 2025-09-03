@@ -2,4 +2,4 @@
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/ComprehensiveServicesLanding2027.tsx;
 :src.pages.disabled/ComprehensiveServicesLanding2027.tsx;
 import: React, { useState } from "react";
-"export default React.memo(function ComprehensiveServicesLanding2027 () { const [activeCategory, setActiveCategory] = useState ("all")  const [expandedService, setExpandedService] = useState < string | null> (null)  const [searchQuery, setSearchQuery] = useState ("")  "
+"export default React.memo(function ComprehensiveServicesLanding2027 () { const [activeCategory, setActiveCategory] = useState ("all")  const [expandedService, setExpandedService] = useState < string | null> (null)  const [searchQuery, setSearchQuery] = useState ("")  "}))

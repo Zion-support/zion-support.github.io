@@ -88,7 +88,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails:;
@@ -97,7 +97,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       customers: 67,;
       rating: 4.8,;
       reviews: 34,;
-      isPopular: true,;,
+      isPopular: true,;,;,
 },;
     // AI-Powered Content Creation Suite;
     {;
@@ -143,7 +143,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails:;
@@ -152,7 +152,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       customers: 89,;
       rating: 4.7,;
       reviews: 45,;
-      isPopular: true,;,
+      isPopular: true,;,;,
 },;
     // AI-Powered Project Management;
     {;
@@ -202,7 +202,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails: "AI models, project analytics, automation engine",;
@@ -210,7 +210,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       customers: 52,;
       rating: 4.8,;
       reviews: 28,;
-      isNew: true,;,
+      isNew: true,;,;,
 },;
     // AI-Powered SEO Optimization;
     {;
@@ -261,14 +261,14 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails: "AI models, SEO analytics, optimization engine",;
       launchDate: "2025-01-18",;
       customers: 73,;
       rating: 4.6,;
-      reviews: 38,;,
+      reviews: 38,;,;,
 },;
     // AI-Powered Marketing Automation;
     {;
@@ -325,14 +325,14 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails: "AI models, automation engine, analytics platform",;
       launchDate: "2025-01-20",;
       customers: 61,;
       rating: 4.7,;
-      reviews: 32,;,
+      reviews: 32,;,;,
 },;
     // AI-Powered Customer Support;
     {;
@@ -384,7 +384,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails: "AI models, chatbot platform, analytics dashboard",;
@@ -392,7 +392,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       customers: 48,;
       rating: 4.8,;
       reviews: 26,;
-      isPopular: true,;,
+      isPopular: true,;,;,
 },;
     // AI-Powered Financial Analytics;
     {;
@@ -448,7 +448,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails:;
@@ -457,7 +457,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       customers: 35,;
       rating: 4.9,;
       reviews: 19,;
-      isNew: true,;,
+      isNew: true,;,;,
 },;
     // AI-Powered Legal Document Automation;
     {;
@@ -504,7 +504,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails:;
@@ -512,7 +512,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       launchDate: "2025-01-28",;
       customers: 22,;
       rating: 4.7,;
-      reviews: 15,;,
+      reviews: 15,;,;,
 },;
     // AI-Powered Interview Assessment;
     {;
@@ -562,14 +562,14 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
       contactInfo: {;
         mobile: "+1 302 464 0950",;
         email: "kleber@ziontechgroup.com",;
-        address: "364 E Main St STE 1008 Middletown DE 19709",;,
+        address: "364 E Main St STE 1008 Middletown DE 19709",;,;,
 },;
       realImplementation: true,;
       implementationDetails: "AI models, video analysis, assessment engine",;
       launchDate: "2025-01-30",;
       customers: 41,;
       rating: 4.6,;
-      reviews: 23,;,
+      reviews: 23,;,;,
 },;
   ];
 export const getAIServicesByCategory = (category: string) => {;
@@ -579,10 +579,10 @@ export const getAIServicesByCategory = (category: string) => {;
 export const getPopularAIServices = () => {;
   return revolutionaryAIInnovationServices2029.filter(;
     service => service.isPopular;
-  );,
+  );,;,
 }
 export const getNewAIServices = () => {;
-  return revolutionaryAIInnovationServices2029.filter(service => service.isNew);,
+  return revolutionaryAIInnovationServices2029.filter(service => service.isNew);,;,
 }
 export const getAIServicesByPriceRange = (;
   minPrice: number,;
@@ -590,5 +590,5 @@ export const getAIServicesByPriceRange = (;
 ) => {;
   return revolutionaryAIInnovationServices2029.filter(service => {;
     const price = parseInt(service.price.replace("$", "").replace(",", ""));
-    return price >= minPrice && price <= maxPrice});,
+    return price >= minPrice && price <= maxPrice});,;,
 }>

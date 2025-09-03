@@ -80,14 +80,14 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Quantum-secure cloud infrastructure with post-quantum cryptography and quantum key distribution.",;
     launchDate: "2025-01-15",;
     customers: 12,;
     rating: 4.9,;
-    reviews: 8;,
+    reviews: 8;,;,
 },;
   // Edge Computing Orchestration Platform;
   {;
@@ -132,14 +132,14 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Edge computing orchestration platform with intelligent workload distribution and edge-to-cloud synchronization.",;
     launchDate: "2025-01-20",;
     customers: 45,;
     rating: 4.8,;
-    reviews: 32;,
+    reviews: 32;,;,
 },;
   // Neuromorphic Computing Infrastructure;
   {;
@@ -184,14 +184,14 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Neuromorphic computing infrastructure with brain-inspired neural architecture and ultra-efficient AI processing.",;
     launchDate: "2025-02-01",;
     customers: 8,;
     rating: 4.9,;
-    reviews: 6;,
+    reviews: 6;,;,
 },;
   // Hybrid Quantum-Classical Infrastructure;
   {;
@@ -236,14 +236,14 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Hybrid quantum-classical infrastructure with seamless resource orchestration and hybrid algorithm optimization.",;
     launchDate: "2025-01-25",;
     customers: 15,;
     rating: 4.8,;
-    reviews: 12;,
+    reviews: 12;,;,
 },;
   // Autonomous Data Center Management;
   {;
@@ -288,7 +288,7 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Autonomous data center management platform with AI-powered optimization and zero human intervention.",;

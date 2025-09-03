@@ -78,14 +78,14 @@ export const specializedAIServices: SpecializedAIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete legal AI platform with contract analysis, risk assessment, and compliance checking capabilities.",;
     launchDate: "2024-09-01",;
     customers: 156,;
     rating: 4.7,;
-    reviews: 89;,
+    reviews: 89;,;,
 },;
   {;
     id: "ai-powered-hr-recruitment-platform",;
@@ -129,14 +129,14 @@ export const specializedAIServices: SpecializedAIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete HR AI platform with recruitment automation, predictive analytics, and performance optimization.",;
     launchDate: "2024-08-01",;
     customers: 234,;
     rating: 4.6,;
-    reviews: 123;,
+    reviews: 123;,;,
 },;
   {;
     id: "ai-powered-market-research-platform",;
@@ -180,14 +180,14 @@ export const specializedAIServices: SpecializedAIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete market research AI platform with real-time monitoring, competitive intelligence, and predictive analytics.",;
     launchDate: "2024-07-01",;
     customers: 189,;
     rating: 4.7,;
-    reviews: 98;,
+    reviews: 98;,;,
 },;
   {;
     id: "ai-powered-sales-automation-platform",;
@@ -231,14 +231,14 @@ export const specializedAIServices: SpecializedAIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete sales AI platform with lead scoring, predictive analytics, and process automation capabilities.",;
     launchDate: "2024-08-15",;
     customers: 312,;
     rating: 4.8,;
-    reviews: 167;,
+    reviews: 167;,;,
 },;
   {;
     id: "ai-powered-video-editing-platform",;
@@ -282,14 +282,14 @@ export const specializedAIServices: SpecializedAIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete video AI platform with automated editing, content creation, and optimization capabilities.",;
     launchDate: "2024-07-15",;
     customers: 456,;
     rating: 4.6,;
-    reviews: 234;,
+    reviews: 234;,;,
 },;
   {;
     id: "ai-powered-website-personalization",;
@@ -333,14 +333,14 @@ export const specializedAIServices: SpecializedAIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete personalization AI platform with real-time optimization, A/B testing, and conversion optimization capabilities.",;
     launchDate: "2024-09-15",;
     customers: 234,;
     rating: 4.7,;
-    reviews: 123;,
+    reviews: 123;,;,
 },;
   {;
     id: "ai-powered-customer-service-platform",;
@@ -384,14 +384,14 @@ export const specializedAIServices: SpecializedAIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete customer service AI platform with chatbot automation, intelligent routing, and satisfaction optimization.",;
     launchDate: "2024-08-01",;
     customers: 345,;
     rating: 4.7,;
-    reviews: 178;,
+    reviews: 178;,;,
 },;
   {;
     id: "ai-powered-data-analytics-platform",;
@@ -435,14 +435,14 @@ export const specializedAIServices: SpecializedAIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete analytics AI platform with predictive modeling, automated reporting, and intelligent insights.",;
     launchDate: "2024-07-01",;
     customers: 189,;
     rating: 4.8,;
-    reviews: 98;,
+    reviews: 98;,;,
 },;
   {;
     id: "ai-powered-seo-optimization-platform",;
@@ -486,7 +486,7 @@ export const specializedAIServices: SpecializedAIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete SEO AI platform with content optimization, search analysis, and performance tracking capabilities.",;

@@ -7,7 +7,7 @@ const contact = {;
   ;
   ;
   ;
-  website: "https://ziontechgroup.com";,
+  website: "https://ziontechgroup.com";,;,
 }
 export const emergingTechServices2025: MicroSaasService[] = [;
   // Quantum Computing Services;
@@ -55,7 +55,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     launchDate: "2025-01-10",;
     customers: 8,;
     rating: 4.9,;
-    reviews: 6;,
+    reviews: 6;,;,
 },;
   // Blockchain & Web3 Services;
   {;
@@ -102,7 +102,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     launchDate: "2025-01-15",;
     customers: 15,;
     rating: 4.8,;
-    reviews: 12;,
+    reviews: 12;,;,
 },;
   // Space Technology Services;
   {;
@@ -149,7 +149,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     launchDate: "2025-01-20",;
     customers: 12,;
     rating: 4.9,;
-    reviews: 9;,
+    reviews: 9;,;,
 },;
   // Internet of Things (IoT) Services;
   {;
@@ -196,7 +196,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     launchDate: "2025-01-25",;
     customers: 28,;
     rating: 4.7,;
-    reviews: 22;,
+    reviews: 22;,;,
 },;
   // Augmented Reality & Virtual Reality Services;
   {;
@@ -243,7 +243,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     launchDate: "2025-02-01",;
     customers: 19,;
     rating: 4.8,;
-    reviews: 15;,
+    reviews: 15;,;,
 },;
   // Autonomous Systems & Robotics Services;
   {;
@@ -290,7 +290,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     launchDate: "2025-02-05",;
     customers: 11,;
     rating: 4.9,;
-    reviews: 8;,
+    reviews: 8;,;,
 },;
   // Biotechnology & Synthetic Biology Services;
   {;
@@ -337,7 +337,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     launchDate: "2025-02-10",;
     customers: 7,;
     rating: 4.9,;
-    reviews: 5;,
+    reviews: 5;,;,
 },;
   // Energy & Sustainability Services;
   {;
@@ -384,7 +384,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     launchDate: "2025-02-15",;
     customers: 16,;
     rating: 4.8,;
-    reviews: 13;,
+    reviews: 13;,;,
 },;
   // Transportation & Mobility Services;
   {;
@@ -431,7 +431,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     launchDate: "2025-02-20",;
     customers: 14,;
     rating: 4.8,;
-    reviews: 11;,
+    reviews: 11;,;,
 },;
   // Cybersecurity & Privacy Services;
   {;
@@ -479,4 +479,4 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     customers: 9,;
     rating: 4.9,;
     reviews: 7;
-]
+]}

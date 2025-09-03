@@ -17,9 +17,9 @@ const { promisify } = require("util");
 const writeFile = promisify(fs.writeFile);
 const readFile = promisify(fs.readFile);
 const appendFile = promisify(fs.appendFile);
-
-class $1 {
-  constructor() {
+;
+class $1 {;
+  constructor() {;
   this.projectRoot = process.cwd();
     this.logDir = path.join(this.projectRoot, """automation/logs"");
     this.reportsDir = path.join(this.projectRoot, ""automation/reports"``);
@@ -29,293 +29,293 @@ class $1 {
     // Ensure directories exist;
     this.ensureDirectories();
     console.log(``🚀 Master Error Detector & Fixer Started`);
-    console.log(`📁 Project Root: ${this.projectRoot});console.log(📊 Log Directory: ${this.logDir}``);,
+    console.log(`📁 Project Root: ${this.projectRoot});console.log(📊 Log Directory: ${this.logDir}``);,;,
 }
 ;
-  ensureDirectories() {
-  [`this.logDir`, `this.reportsDir`].forEach(dir => {
-  if (!fs.existsSync(dir)) {
-  console.log(`📁 Project Root: ${this.projectRoot});console.log(📊 Log Directory: ${this.logDir}``);,
+  ensureDirectories() {;
+  [`this.logDir`, `this.reportsDir`].forEach(dir => {;
+  if (!fs.existsSync(dir)) {;
+  console.log(`📁 Project Root: ${this.projectRoot});console.log(📊 Log Directory: ${this.logDir}``);,;,
 }
 ;
-  ensureDirectories() {
-  ["this.logDir", "this.reportsDir"].forEach(dir => {
-  if (!fs.existsSync(dir)) {
-  fs.mkdirSync(dir, { recursive: true });,
+  ensureDirectories() {;
+  ["this.logDir", "this.reportsDir"].forEach(dir => {;
+  if (!fs.existsSync(dir)) {;
+  fs.mkdirSync(dir, { recursive: true });,;,
 }
-    });,
+    });,;,
 }
 ;
-  async log(message, type = `INFO`) {
+  async log(message, type = `INFO`) {;
   const timestamp = new Date().toISOString();const logMessage = `[${timestamp}] [${type}] ${message}`;
     console.log(`logMessage);
     const logFile = path.join(this.logDir, `master-error-detector.log`);
-    await appendFile(logFile, logMessage + `\n`);,
+    await appendFile(logFile, logMessage + `\n`);,;,
 }
 ;
-  async executeCommand(command, options = {}) {
-  try {
-  const result = execSync(command, {
+  async executeCommand(command, options = {}) {;
+  try {;
+  const result = execSync(command, {;
   cwd: this.projectRoot,;
         encoding: "utf8",;
         stdio: options.silent ? "pipe" : "inherit",;
-        ...options;,
+        ...options;,;,
 });
       return { success: true, output: result }
-    } catch (error) {
-  return {
+    } catch (error) {;
+  return {;
   success: false, ;
         error: error.message, ;
-        output: error.stdout || error.stderr || "";,
+        output: error.stdout || error.stderr || "";,;,
 }
 ;
-  async log(message, type = "INFO") {
+  async log(message, type = "INFO") {;
   const timestamp = new Date().toISOString();const logMessage = `[${timestamp}] [${type}] ${message}`;
     console.log(`logMessage);
     ;
     const logFile = path.join(this.logDir, "master-error-detector.log");
-    await appendFile(logFile, logMessage + "\n");,
+    await appendFile(logFile, logMessage + "\n");,;,
 }
 ;
-  async executeCommand(command, options = {}) {
-  try {
-  const result = execSync(command, {
+  async executeCommand(command, options = {}) {;
+  try {;
+  const result = execSync(command, {;
   cwd: this.projectRoot,;
         encoding: "utf8",;
         stdio: options.silent ? "pipe" : "inherit",;
-        ...options;,
+        ...options;,;,
 });
       return { success: true, output: result }
-    } catch (error) {
-  return {
+    } catch (error) {;
+  return {;
   success: false, ;
         error: error.message, ;
-        output: error.stdout || error.stderr || ";,
-} catch (error) {
-  return {
+        output: error.stdout || error.stderr || ";,;,
+} catch (error) {;
+  return {;
   success: false, `);
         error: error.message, `);
-        output: error.stdout || error.stderr || "`);,
+        output: error.stdout || error.stderr || "`);,;,
 }
     }
   }
 ;
-  async detectTypeScriptErrors() {
+  async detectTypeScriptErrors() {;
   await this.log("🔍 Detecting TypeScript errors...");
     ;
     const result = await this.executeCommand("npm run type-check", { silent: true });
     ;
-    if (!result.success) {
+    if (!result.success) {;
   const errors = this.parseTypeScriptErrors(result.output);
-      this.errors.push({
+      this.errors.push({;
   type: "typescript",;
         count: errors.length,;
         details: errors,;
-        severity: "high";,
+        severity: "high";,;,
 });
-      this.errors.push({
+      this.errors.push({;
   type: `typescript`,;
         count: errors.length,;
         details: errors,;
-        severity: `high`;,
+        severity: `high`;,;,
 });
       await this.log(❌ Found ${errors.length} TypeScript errors, `ERROR``);
-      return errors;,
+      return errors;,;,
 }
     ;
     await this.log(`✅ No TypeScript errors found`);
-        severity: "high"`);,
+        severity: "high"`);,;,
 });`);
       await this.log(❌ Found ${errors.length} TypeScript errors, "ERROR"`);
       await this.log(❌ Found ${errors.length} TypeScript errors, "ERROR"`);
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-      return errors;,
+      return errors;,;,
 }
     ;
     await this.log("✅ No TypeScript errors found");
-    return [];,
+    return [];,;,
 }
 ;
-  parseTypeScriptErrors(output) {
+  parseTypeScriptErrors(output) {;
   const lines = output.split("\n");
     const errors = [];
     let currentError = null;
     ;
-    for (const line of lines) {
-  if (line.includes("error TS")) {
-  if (currentError) {
-  errors.push(currentError);,
+    for (const line of lines) {;
+  if (line.includes("error TS")) {;
+  if (currentError) {;
+  errors.push(currentError);,;,
 }
-        currentError = {
+        currentError = {;
   file: ",;
           line: ",;
-          message: line.trim();,
+          message: line.trim();,;,
 }
-      } else if (currentError && line.includes("src/")) {
+      } else if (currentError && line.includes("src/")) {;
   const match = line.match(/(\d+):(\d+)/);
-        if (match) {
+        if (match) {;
   currentError.file = line.split(":")[0];
-          currentError.line = match[1];,
+          currentError.line = match[1];,;,
 }
       }
     }
     ;
-    if (currentError) {
-  errors.push(currentError);,
+    if (currentError) {;
+  errors.push(currentError);,;,
 }
     ;
-    return errors;,
+    return errors;,;,
 }
 ;
-  async detectLintingErrors() {
+  async detectLintingErrors() {;
   await this.log("🔍 Detecting ESLint errors...");
     ;
     const result = await this.executeCommand("npm run lint", { silent: true });
     ;
-    if (!result.success) {
+    if (!result.success) {;
   const errors = this.parseLintingErrors(result.output);
-      this.errors.push({
+      this.errors.push({;
   type: `eslint`,;
         count: errors.length,;
         details: errors,;
         severity: `medium`;
-      this.errors.push({
+      this.errors.push({;
   type: "eslint",;
         count: errors.length,;
         details: errors,;
-        severity: "medium";,
+        severity: "medium";,;,
 });
       await this.log(`❌ Found ${errors.length} ESLint errors`, `ERROR`);
-      return errors;,
+      return errors;,;,
 }
     ;
     await this.log(`✅ No ESLint errors found`);
-    return [];,
+    return [];,;,
 }
 ;
-  parseLintingErrors(output) {
+  parseLintingErrors(output) {;
   const lines = output.split("\n");
     const errors = [];
     ;
-    for (const line of lines) {
-  if (line.includes("error") && line.includes("src/")) {
+    for (const line of lines) {;
+  if (line.includes("error") && line.includes("src/")) {;
   const parts = line.split(":");
-        if (parts.length >= 4) {
-  errors.push({
+        if (parts.length >= 4) {;
+  errors.push({;
   file: parts[0],;
             line: parts[1],;
             column: parts[2],;
-            message: parts.slice(3).join(":").trim();,
-});,
+            message: parts.slice(3).join(":").trim();,;,
+});,;,
 }
       }
     }
     ;
-    return errors;,
+    return errors;,;,
 }
 ;
-  async detectBuildErrors() {
+  async detectBuildErrors() {;
   await this.log("🔍 Detecting build errors...");
     ;
     const result = await this.executeCommand("npm run build", { silent: true });
     ;
-    if (!result.success) {
+    if (!result.success) {;
   const errors = this.parseBuildErrors(result.output);
-      this.errors.push({
+      this.errors.push({;
   type: `build`,;
         count: errors.length,;
         details: errors,;
         severity: `critical`;
-      this.errors.push({
+      this.errors.push({;
   type: "build",;
         count: errors.length,;
         details: errors,;
-        severity: "critical";,
+        severity: "critical";,;,
 });
       await this.log(`❌ Found ${errors.length} build errors`, `ERROR`);
-      return errors;,
+      return errors;,;,
 }
     ;
     await this.log(`✅ No build errors found`);
-    return [];,
+    return [];,;,
 }
 ;
-  parseBuildErrors(output) {
+  parseBuildErrors(output) {;
   const lines = output.split("\n");
     const errors = [];
     ;
-    for (const line of lines) {
-  if (line.includes("Type error: ") || line.includes("Failed to compile")) {
-  errors.push({
+    for (const line of lines) {;
+  if (line.includes("Type error: ") || line.includes("Failed to compile")) {;
+  errors.push({;
   type: "build",;
-          message: line.trim();,
-});,
+          message: line.trim();,;,
+});,;,
 }
     }
     ;
-    return errors;,
+    return errors;,;,
 }
 ;
-  async detectDependencyIssues() {
+  async detectDependencyIssues() {;
   await this.log("🔍 Detecting dependency issues...");
     ;
     const result = await this.executeCommand("npm audit --json", { silent: true });
     ;
-    if (result.success) {
-  try {
+    if (result.success) {;
+  try {;
   const audit = JSON.parse(result.output);
         const vulnerabilities = audit.metadata?.vulnerabilities || {}
         const totalVulnerabilities = Object.values(vulnerabilities).reduce((sum, count) => sum + count, 0);
-        if (totalVulnerabilities > 0) {
-  this.errors.push({
+        if (totalVulnerabilities > 0) {;
+  this.errors.push({;
   type: `security`,;
             count: totalVulnerabilities,;
             details: audit,;
             severity: `high`;
         ;
-        if (totalVulnerabilities > 0) {
-  this.errors.push({
+        if (totalVulnerabilities > 0) {;
+  this.errors.push({;
   type: "security",;
             count: totalVulnerabilities,;
             details: audit,;
-            severity: "high";,
+            severity: "high";,;,
 });
           await this.log(`⚠️ Found ${totalVulnerabilities} security vulnerabilities`, `WARN`);
-          return audit;,
+          return audit;,;,
 }
-      } catch (e) {
-  // Ignore JSON parse errors;,
+      } catch (e) {;
+  // Ignore JSON parse errors;,;,
 }
     }
     ;
     await this.log(`✅ No dependency issues found`);
-    return null;,
+    return null;,;,
 }
 ;
-  async fixTypeScriptErrors() {
+  async fixTypeScriptErrors() {;
   await this.log(`🔧 Fixing TypeScript errors...`);
     const typescriptErrors = this.errors.find(e => e.type === `typescript`);
     if (!typescriptErrors) return;
     ;
-    for (const error of typescriptErrors.details) {
-  try {
-  await this.fixTypeScriptError(error);,
-} catch (e) {await this.log(`Failed to fix TypeScript error in ${error.file}: ${e.message}`, `ERROR`);,
+    for (const error of typescriptErrors.details) {;
+  try {;
+  await this.fixTypeScriptError(error);,;,
+} catch (e) {await this.log(`Failed to fix TypeScript error in ${error.file}: ${e.message}`, `ERROR`);,;,
 }
     }
   }
 ;
-  async fixTypeScriptError(error) {
+  async fixTypeScriptError(error) {;
   if (!error.file || !fs.existsSync(error.file)) return;
     const content = await readFile(error.file, `utf8`);
     const lines = content.split("\n");
     // Common TypeScript fixes;
-    if (error.message.includes("Property") && error.message.includes("does not exist")) {
+    if (error.message.includes("Property") && error.message.includes("does not exist")) {;
   // Fix missing property errors;
       const lineIndex = parseInt(error.line) - 1;
-      if (lines[lineIndex]) {
+      if (lines[lineIndex]) {;
   // Add proper type annotation or fix import;
-        if (lines[lineIndex].includes("import")) {
+        if (lines[lineIndex].includes("import")) {;
   // Fix import statement;
           lines[lineIndex] = lines[lineIndex].replace(/from [`"]\.\/pages\/([^`]+)[`]/, (match, pageName) => {return `from `./pages/${pageName}.tsx``;
     ;
@@ -323,58 +323,58 @@ class $1 {
     const lines = content.split("\n");
     ;
     // Common TypeScript fixes;
-    if (error.message.includes("Property") && error.message.includes("does not exist")) {
+    if (error.message.includes("Property") && error.message.includes("does not exist")) {;
   // Fix missing property errors;
       const lineIndex = parseInt(error.line) - 1;
-      if (lines[lineIndex]) {
+      if (lines[lineIndex]) {;
   // Add proper type annotation or fix import;
-        if (lines[lineIndex].includes("import")) {
+        if (lines[lineIndex].includes("import")) {;
   // Fix import statement;
-          lines[lineIndex] = lines[lineIndex].replace(/from [""]\.\/pages\/([^""]+)[""]/, (match, pageName) => {return `from "./pages/${pageName}.tsx"`;,
-});,
+          lines[lineIndex] = lines[lineIndex].replace(/from [""]\.\/pages\/([^""]+)[""]/, (match, pageName) => {return `from "./pages/${pageName}.tsx"`;,;,
+});,;,
 }
       }
     }
     ;
-    await writeFile(error.file, lines.join(`\n`));await this.log(`Fixed TypeScript error in ${error.file}`);,
+    await writeFile(error.file, lines.join(`\n`));await this.log(`Fixed TypeScript error in ${error.file}`);,;,
 }
 ;
-  async fixLintingErrors() {
+  async fixLintingErrors() {;
   await this.log(`🔧 Fixing ESLint errors...`);
     // Try to auto-fix ESLint errors;
     const result = await this.executeCommand(`npm run lint -- --fix", { silent: true });
-    if (result.success) {
-  await this.log("✅ ESLint errors auto-fixed");,
-} else {
-  await this.log("⚠️ Some ESLint errors could not be auto-fixed", "WARN");,
+    if (result.success) {;
+  await this.log("✅ ESLint errors auto-fixed");,;,
+} else {;
+  await this.log("⚠️ Some ESLint errors could not be auto-fixed", "WARN");,;,
 }
   }
 ;
-  async fixBuildErrors() {
+  async fixBuildErrors() {;
   await this.log("🔧 Fixing build errors...");
     ;
     const buildErrors = this.errors.find(e => e.type === "build");
     if (!buildErrors) return;
     ;
-    for (const error of buildErrors.details) {
-  if (error.message.includes("ServicesPage")) {
-  await this.fixServicesPageError();,
+    for (const error of buildErrors.details) {;
+  if (error.message.includes("ServicesPage")) {;
+  await this.fixServicesPageError();,;,
 }
     }
   }
 ;
-  async fixServicesPageError() {
+  async fixServicesPageError() {;
   // Fix the ServicesPage import error;
     const appFile = path.join(this.projectRoot, ""src/App.tsx"");
-    if (fs.existsSync(appFile)) {
+    if (fs.existsSync(appFile)) {;
   let content = await readFile(appFile, "utf8");
       // Fix the ServicesPage import;
       content = content.replace(/const ServicesPage = lazy\(\(\) => import\("\.\/pages\/ServicesPage"\)\.then\(module => \(\{ default: module\.ServicesPage \}\)\)\);/,const ServicesPage = lazy(() => import("./""pages/ServicesPage""").then(module => ({ default: module.default })));`;
-
-  async fixServicesPageError() {
+;
+  async fixServicesPageError() {;
   // Fix the ServicesPage import error;
     const appFile = path.join(this.projectRoot, "src/App.tsx");
-    if (fs.existsSync(appFile)) {
+    if (fs.existsSync(appFile)) {;
   let content = await readFile(appFile, "utf8");
       ;
       // Fix the ServicesPage import;
@@ -382,69 +382,69 @@ class $1 {
       );
       ;
       await writeFile(appFile, content);
-      await this.log("Fixed ServicesPage import in App.tsx");,
+      await this.log("Fixed ServicesPage import in App.tsx");,;,
 }
   }
 ;
-  async fixDependencyIssues() {
+  async fixDependencyIssues() {;
   await this.log("🔧 Fixing dependency issues...");
     // Try to fix security vulnerabilities;
     const result = await this.executeCommand("npm audit fix", { silent: true });
     ;
-    if (result.success) {
-  await this.log("✅ Dependency issues fixed");,
-} else {
-  await this.log("⚠️ Some dependency issues could not be auto-fixed", "WARN");,
+    if (result.success) {;
+  await this.log("✅ Dependency issues fixed");,;,
+} else {;
+  await this.log("⚠️ Some dependency issues could not be auto-fixed", "WARN");,;,
 }
   }
 ;
-  async generateReport() {
-  const report = {
+  async generateReport() {;
+  const report = {;
   timestamp: this.startTime.toISOString(),;
       duration: Date.now() - this.startTime.getTime(),;
       totalErrors: this.errors.reduce((sum, e) => sum + e.count, 0),;
-      errorsByType: this.errors.reduce((acc, e) => {
+      errorsByType: this.errors.reduce((acc, e) => {;
   acc[e.type] = e.count;
-        return acc;,
+        return acc;,;,
 }, {}),;
       errors: this.errors,;
       fixes: this.fixes,;
-      summary: {
+      summary: {;
   typescript: this.errors.find(e => e.type === "typescript")?.count || 0,;
         eslint: this.errors.find(e => e.type === "eslint")?.count || 0,;
         build: this.errors.find(e => e.type === "build`)?.count || 0,;
-        security: this.errors.find(e => e.type === `security`)?.count || 0;,
+        security: this.errors.find(e => e.type === `security`)?.count || 0;,;,
 }
     }
     const reportFile = path.join(this.reportsDir, ``error-report-${Date.now()}.json`);
     await writeFile(reportFile`, JSON.stringify(report, null, 2));
     await this.log(`📊 Report generated: ${reportFile}`);
-    return report;,
+    return report;,;,
 }
 ;
-  async run() {
-  try {
+  async run() {;
+  try {;
   await this.log(`🚀 Starting comprehensive error detection and fixing...`);
-      ;,
+      ;,;,
 }, {}),;
       errors: this.errors,;
       fixes: this.fixes,;
-      summary: {
+      summary: {;
   typescript: this.errors.find(e => e.type === "typescript")?.count || 0,;
         eslint: this.errors.find(e => e.type === "eslint")?.count || 0,;
         build: this.errors.find(e => e.type === "build")?.count || 0,;
-        security: this.errors.find(e => e.type === "security")?.count || 0;,
+        security: this.errors.find(e => e.type === "security")?.count || 0;,;,
 }
     }
     ;
     const reportFile = path.join(this.reportsDir, "`error-report-${Date.now()}.json`);
     await writeFile(reportFile", JSON.stringify(report, null, 2));
     await this.log(`📊 Report generated: ${reportFile}`);
-    return report;,
+    return report;,;,
 }
 ;
-  async run() {
-  try {
+  async run() {;
+  try {;
   await this.log("🚀 Starting comprehensive error detection and fixing...");
       ;
       // Detect all types of errors;
@@ -463,49 +463,49 @@ class $1 {
       await this.log(`✅ Error detection and fixing completed!`);await this.log(`📊 Total errors found: ${report.totalErrors}`);await this.log(`🔧 Errors fixed: ${this.fixes.length}`);
       ;
       return report;
-      ;,
+      ;,;,
 } catch (error) {  await this.log(`❌ Error in master error detector: ${error.message  }`, `ERROR`);
-      ;,
+      ;,;,
 } catch (error) {await this.log(`❌ Error in master error detector: ${error.message}`, "ERROR");
-      throw error;,
+      throw error;,;,
 } catch (error) {  await this.log(`❌ Error in master error detector: ${error.message  }`, `ERROR`);
       throw error;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,;,
 }
   }
 ;
   async runContinuous(interval = 300000) { // 5 minutes defaultawait this.log(`🔄 Starting continuous error detection (interval: ${interval}ms)`);
     ;
-    while (true) {
-  try {
+    while (true) {;
+  try {;
   await this.run();await this.log(`⏰ Waiting ${interval}ms before next check...`);
-        await new Promise(resolve => setTimeout(resolve, interval));,
-} catch (error) {  await this.log(`❌ Error in continuous run: ${error.message  }`, `ERROR`);,
+        await new Promise(resolve => setTimeout(resolve, interval));,;,
+} catch (error) {  await this.log(`❌ Error in continuous run: ${error.message  }`, `ERROR`);,;,
 } catch (error) {await this.log(`❌ Error in continuous run: ${error.message}`, "ERROR");
-        await new Promise(resolve => setTimeout(resolve, 60000)); // Wait 1 minute on error;,
+        await new Promise(resolve => setTimeout(resolve, 60000)); // Wait 1 minute on error;,;,
 }
     }
   }
 }
 ;
 // Main execution;
-if (require.main === module) {
+if (require.main === module) {;
   const detector = new MasterErrorDetectorFixer();
   ;
   const args = process.argv.slice(2);
   const continuous = args.includes(`--continuous") || args.includes("-c");
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")[1]) || 300000;
   ;
-  if (continuous) {
-  detector.runContinuous(interval);,
-} else {
-  detector.run().then(() => {
-  process.exit(0);,
-}).catch((error) => {
+  if (continuous) {;
+  detector.runContinuous(interval);,;,
+} else {;
+  detector.run().then(() => {;
+  process.exit(0);,;,
+}).catch((error) => {;
   console.error("Error: ", error);
-      process.exit(1);,
-});,
+      process.exit(1);,;,
+});,;,
 }
 }
 ;
-module.exports = MasterErrorDetectorFixer
+module.exports = MasterErrorDetectorFixer}}}}}}}}}}}}

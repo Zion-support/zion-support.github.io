@@ -79,14 +79,14 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete enterprise AI platform with process automation, business intelligence, and system integration capabilities.",;
     launchDate: "2024-02-01",;
     customers: 8,;
     rating: 4.9,;
-    reviews: 12;,
+    reviews: 12;,;,
 },;
   // AI-Powered Supply Chain Optimization;
   {;
@@ -131,14 +131,14 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete AI supply chain platform with predictive analytics, optimization algorithms, and real-time monitoring.",;
     launchDate: "2024-01-15",;
     customers: 28,;
     rating: 4.7,;
-    reviews: 35;,
+    reviews: 35;,;,
 },;
   // AI-Powered Customer Experience Platform;
   {;
@@ -183,14 +183,14 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete AI customer experience platform with personalization, automation, and analytics capabilities.",;
     launchDate: "2024-01-01",;
     customers: 42,;
     rating: 4.8,;
-    reviews: 38;,
+    reviews: 38;,;,
 },;
   // AI-Powered Financial Risk Management;
   {;
@@ -235,14 +235,14 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete AI financial risk platform with real-time assessment, fraud detection, and compliance monitoring.",;
     launchDate: "2023-12-01",;
     customers: 15,;
     rating: 4.9,;
-    reviews: 22;,
+    reviews: 22;,;,
 },;
   // AI-Powered Healthcare Analytics;
   {;
@@ -287,14 +287,14 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete AI healthcare analytics platform with predictive diagnostics, treatment optimization, and population health management.",;
     launchDate: "2023-11-01",;
     customers: 32,;
     rating: 4.8,;
-    reviews: 28;,
+    reviews: 28;,;,
 },;
   // AI-Powered Manufacturing Intelligence;
   {;
@@ -339,14 +339,14 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete AI manufacturing platform with predictive maintenance, quality control, and production optimization.",;
     launchDate: "2023-10-01",;
     customers: 25,;
     rating: 4.7,;
-    reviews: 31;,
+    reviews: 31;,;,
 },;
   // AI-Powered Energy Management;
   {;
@@ -391,14 +391,14 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete AI energy management platform with optimization, renewable integration, and predictive analytics.",;
     launchDate: "2023-09-01",;
     customers: 38,;
     rating: 4.6,;
-    reviews: 42;,
+    reviews: 42;,;,
 },;
   // AI-Powered Education Platform;
   {;
@@ -443,14 +443,14 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete AI education platform with personalized learning, intelligent tutoring, and educational analytics.",;
     launchDate: "2023-08-01",;
     customers: 55,;
     rating: 4.7,;
-    reviews: 48;,
+    reviews: 48;,;,
 },;
   // AI-Powered Real Estate Platform;
   {;
@@ -495,7 +495,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Complete AI real estate platform with property valuation, market analysis, and investment recommendations.",;

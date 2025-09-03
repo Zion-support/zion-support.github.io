@@ -80,14 +80,14 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Full-stack quantum space mining platform with satellite integration, real-time monitoring, and comprehensive mining optimization. Includes custom mining strategy development and regulatory compliance.",;
     launchDate: "2025-01-30",;
     customers: 25,;
     rating: 4.9,;
-    reviews: 18;,
+    reviews: 18;,;,
 },;
   {;
     id: "quantum-space-communication-network",;
@@ -131,14 +131,14 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade quantum space communication network with satellite integration, ground station support, and comprehensive security. Includes custom communication protocols and mission support.",;
     launchDate: "2025-02-05",;
     customers: 45,;
     rating: 4.8,;
-    reviews: 32;,
+    reviews: 32;,;,
 },;
   // Advanced Space Technology;
   {;
@@ -183,14 +183,14 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Comprehensive space colony automation platform with life support integration, robotic systems, and environmental controls. Includes custom automation development and colony planning services.",;
     launchDate: "2025-02-15",;
     customers: 15,;
     rating: 4.7,;
-    reviews: 12;,
+    reviews: 12;,;,
 },;
   // Emerging Space Technologies;
   {;
@@ -235,14 +235,14 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced quantum space propulsion system with spacecraft integration, mission planning, and comprehensive monitoring. Includes custom propulsion design and mission optimization services.",;
     launchDate: "2025-02-20",;
     customers: 8,;
     rating: 4.9,;
-    reviews: 6;,
+    reviews: 6;,;,
 },;
   // Space Research & Development;
   {;
@@ -287,7 +287,7 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Comprehensive space research automation platform with data collection, analysis, and collaboration tools. Includes custom research workflow development and integration services.",;

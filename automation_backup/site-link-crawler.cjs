@@ -6,62 +6,62 @@ const fs = require("fs");
 const path = require("path");
 const START_URL = process.env.CANONICAL_URL || "https://ziontechgroup.com";
 const MAX_PAGES = parseInt(process.env.CRAWL_MAX_PAGES || "100", 10);
-function isInternal(href, baseHost) {
+function isInternal(href, baseHost) {;
   if (!href) return false;
   if (href.startsWith("#")) return false;
-  try {
+  try {;
   const u = new URL(href, START_URL);
-    return u.host === baseHost;,
-} catch {
-  return false;,
+    return u.host === baseHost;,;,
+} catch {;
+  return false;,;,
 }
 }
 ;
-async function fetchPage(url) {
-  try {
-  const res = await axios.get(url, {
+async function fetchPage(url) {;
+  try {;
+  const res = await axios.get(url, {;
   timeout: 15000,;
-      validateStatus: () => true,;,
+      validateStatus: () => true,;,;,
 });
     return { status: res.status, html: res.data }
-  } catch (e) {
+  } catch (e) {;
   return { status: 0, html: "" }
   }
 }
 ;
-(async () => {
+(async () => {;
   const visited = new Set();
   const queue = [];
   const broken = [];
   const start = new URL(START_URL);
   visited.add(start.href);
   queue.push(start.href);
-  while (queue.length && visited.size < MAX_PAGES) {
+  while (queue.length && visited.size < MAX_PAGES) {;
   const current = queue.shift();
     const { status, html } = await fetchPage(current);
-    if (status !== 200) {
+    if (status !== 200) {;
   broken.push({ url: current, status });
-      continue;,
+      continue;,;,
 }
     const $ = cheerio.load(html);
-    $("a[href]").each((_i, el) => {
+    $("a[href]").each((_i, el) => {;
   const href = $(el).attr("href");
-      try {
+      try {;
   const abs = new URL(href, current).href;
-        if (isInternal(abs, start.host) && !visited.has(abs)) {
+        if (isInternal(abs, start.host) && !visited.has(abs)) {;
   visited.add(abs);
-          if (visited.size < MAX_PAGES) queue.push(abs);,
+          if (visited.size < MAX_PAGES) queue.push(abs);,;,
 }
       } catch {}
-    });,
+    });,;,
 }
 ;
   // Verify collected URLs;
   const statuses = [];
-  for (const url of Array.from(visited)) {
+  for (const url of Array.from(visited)) {;
   const { status } = await fetchPage(url);
     if (status !== 200) broken.push({ url, status });
-    statuses.push({ url, status });,
+    statuses.push({ url, status });,;,
 }
 ;
   const outDir = path.join(process.cwd(), "data", "reports");
@@ -77,5 +77,5 @@ async function fetchPage(url) {
   );
   console.log(;
     `Crawl complete. URLs: ${visited.size}, broken: ${broken.length}. Report: ${outPath}`;
-  );,
+  );,;,
 })()

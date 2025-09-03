@@ -80,14 +80,14 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "AI-powered smart city platform with IoT sensors, edge computing, and comprehensive urban optimization.",;
     launchDate: "2028-01-10",;
     customers: 45,;
     rating: 4.9,;
-    reviews: 35;,
+    reviews: 35;,;,
 },;
   // Industrial IoT Edge Computing Platform;
   {;
@@ -132,14 +132,14 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Industrial IoT edge computing platform with real-time processing, predictive maintenance, and comprehensive optimization.",;
     launchDate: "2028-03-25",;
     customers: 280,;
     rating: 4.8,;
-    reviews: 210;,
+    reviews: 210;,;,
 },;
   // AI-Powered Healthcare IoT Platform;
   {;
@@ -184,14 +184,14 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "AI-powered healthcare IoT platform with remote monitoring, predictive analytics, and comprehensive healthcare optimization.",;
     launchDate: "2028-02-15",;
     customers: 180,;
     rating: 4.9,;
-    reviews: 140;,
+    reviews: 140;,;,
 },;
   // Smart Agriculture IoT Platform;
   {;
@@ -236,14 +236,14 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Smart agriculture IoT platform with soil monitoring, precision irrigation, and comprehensive crop management.",;
     launchDate: "2028-05-20",;
     customers: 520,;
     rating: 4.7,;
-    reviews: 380;,
+    reviews: 380;,;,
 },;
   // Edge AI Computing Infrastructure;
   {;
@@ -288,7 +288,7 @@ export const revolutionary2028IoTEdgeComputingServices: Revolutionary2028IoTEdge
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Edge AI computing infrastructure with distributed computing, AI optimization, and comprehensive edge capabilities.",;

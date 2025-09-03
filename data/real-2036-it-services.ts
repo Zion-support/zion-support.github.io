@@ -29,7 +29,7 @@ export const real2036ITServices = [;
       "Financial modeling",;
       "Drug discovery",;
       "Climate simulation";
-    ];,
+    ];,;,
 },;
   {;
     id: "ai-powered-devops-platform",;
@@ -61,7 +61,7 @@ export const real2036ITServices = [;
       "Infrastructure automation",;
       "Testing automation",;
       "Monitoring and alerting";
-    ];,
+    ];,;,
 },;
   {;
     id: "quantum-cybersecurity-platform",;
@@ -93,7 +93,7 @@ export const real2036ITServices = [;
       "Financial institutions",;
       "Healthcare data protection",;
       "Critical infrastructure";
-    ];,
+    ];,;,
 },;
   {;
     id: "edge-computing-orchestration-platform",;
@@ -125,7 +125,7 @@ export const real2036ITServices = [;
       "Real-time analytics",;
       "Edge AI processing",;
       "Distributed computing";
-    ];,
+    ];,;,
 },;
   {;
     id: "quantum-database-platform",;
@@ -157,7 +157,7 @@ export const real2036ITServices = [;
       "Real-time search",;
       "Data warehousing",;
       "Business intelligence";
-    ];,
+    ];,;,
 },;
   {;
     id: "ai-powered-network-security",;
@@ -189,7 +189,7 @@ export const real2036ITServices = [;
       "Cloud security",;
       "IoT security",;
       "Remote work security";
-    ];,
+    ];,;,
 },;
   {;
     id: "quantum-internet-protocols",;
@@ -221,7 +221,7 @@ export const real2036ITServices = [;
       "Financial networks",;
       "Research networks",;
       "Quantum internet backbone";
-    ];,
+    ];,;,
 },;
   {;
     id: "ai-powered-infrastructure-monitoring",;
@@ -253,7 +253,7 @@ export const real2036ITServices = [;
       "Network monitoring",;
       "Application monitoring",;
       "Cloud infrastructure";
-    ];,
+    ];,;,
 },;
   {;
     id: "quantum-storage-platform",;
@@ -285,7 +285,7 @@ export const real2036ITServices = [;
       "Data archiving",;
       "Cloud storage",;
       "Data backup";
-    ];,
+    ];,;,
 },;
   {;
     id: "ai-powered-disaster-recovery",;
@@ -312,3 +312,4 @@ export const real2036ITServices = [;
       "Predictive recovery planning",;
       "Reduced recovery time";
     ],;
+}

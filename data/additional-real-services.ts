@@ -31,7 +31,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     contactInfo: {;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
   {;
     id: "ai-sales-outreach-agent",;
@@ -71,7 +71,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-07-20",;
     customers: 33,;
     rating: 4.7,;
-    reviews: 19;,
+    reviews: 19;,;,
 },;
   {;
     id: "soc2-continuous-compliance",;
@@ -111,7 +111,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-07-05",;
     customers: 16,;
     rating: 4.6,;
-    reviews: 9;,
+    reviews: 9;,;,
 },;
   {;
     id: "finops-cost-optimizer",;
@@ -151,7 +151,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-07-10",;
     customers: 20,;
     rating: 4.5,;
-    reviews: 10;,
+    reviews: 10;,;,
 },;
   {;
     id: "cloud-migration-factory",;
@@ -191,7 +191,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-07-18",;
     customers: 9,;
     rating: 4.8,;
-    reviews: 5;,
+    reviews: 5;,;,
 },;
   {;
     id: "data-quality-monitor",;
@@ -231,7 +231,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-07-08",;
     customers: 14,;
     rating: 4.4,;
-    reviews: 7;,
+    reviews: 7;,;,
 },;
   {;
     id: "confluence-rag-knowledge-base",;
@@ -271,7 +271,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-07-06",;
     customers: 27,;
     rating: 4.6,;
-    reviews: 13;,
+    reviews: 13;,;,
 },;
   {;
     id: "e2e-test-recorder",;
@@ -311,7 +311,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-07-11",;
     customers: 11,;
     rating: 4.3,;
-    reviews: 6;,
+    reviews: 6;,;,
 },;
   {;
     id: "ai-meeting-notes",;
@@ -351,7 +351,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-07-09",;
     customers: 42,;
     rating: 4.6,;
-    reviews: 22;,
+    reviews: 22;,;,
 },;
   {;
     id: "vendor-security-questionnaire-ai",;
@@ -391,7 +391,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-07-07",;
     customers: 13,;
     rating: 4.5,;
-    reviews: 8;,
+    reviews: 8;,;,
 },;
   {;
     id: "accessibility-remediation-assistant",;
@@ -431,7 +431,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-07-03",;
     customers: 10,;
     rating: 4.4,;
-    reviews: 6;,
+    reviews: 6;,;,
 },;
   {;
     id: "managed-kubernetes-platformops",;
@@ -471,7 +471,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-07-01",;
     customers: 6,;
     rating: 4.8,;
-    reviews: 4;,
+    reviews: 4;,;,
 },;
   {;
     id: "zero-trust-access-rollout",;
@@ -550,7 +550,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-06-01",;
     customers: 40,;
     rating: 4.6,;
-    reviews: 21;,
+    reviews: 21;,;,
 },;
   {;
     id: "mobile-first-survey",;
@@ -590,7 +590,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-05-15",;
     customers: 55,;
     rating: 4.5,;
-    reviews: 18;,
+    reviews: 18;,;,
 },;
   {;
     id: "event-management-dashboard",;
@@ -630,7 +630,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-04-10",;
     customers: 35,;
     rating: 4.6,;
-    reviews: 24;,
+    reviews: 24;,;,
 },;
   {;
     id: "churn-risk-alerts",;
@@ -670,7 +670,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-03-01",;
     customers: 28,;
     rating: 4.5,;
-    reviews: 15;,
+    reviews: 15;,;,
 },;
   {;
     id: "subscription-revenue-analytics",;
@@ -710,7 +710,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-07-01",;
     customers: 22,;
     rating: 4.6,;
-    reviews: 12;,
+    reviews: 12;,;,
 },;
   {;
     id: "iso-27001-evidence-kit",;
@@ -750,7 +750,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
       launchDate: "2025-06-15",;
       customers: 18,;
       rating: 4.5,;
-      reviews: 10;,
+      reviews: 10;,;,
 },;
   {;
     id: "api-changelog-notifier",;
@@ -790,7 +790,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-05-01",;
     customers: 30,;
     rating: 4.6,;
-    reviews: 14;,
+    reviews: 14;,;,
 },;
   {;
     id: "runbook-generator",;
@@ -830,7 +830,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
       launchDate: "2025-02-20",;
       customers: 26,;
       rating: 4.5,;
-      reviews: 11;,
+      reviews: 11;,;,
 },;
   {;
     id: "incident-timeline-composer",;
@@ -870,7 +870,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-03-15",;
     customers: 19,;
     rating: 4.5,;
-    reviews: 9;,
+    reviews: 9;,;,
 },;
   {;
     id: "ad-creative-generator",;
@@ -910,7 +910,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-07-15",;
     customers: 33,;
     rating: 4.6,;
-    reviews: 13;,
+    reviews: 13;,;,
 },;
   {;
     id: "cloud-cost-optimizer-pro",;
@@ -933,7 +933,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-01-15",;
     customers: 90,;
     rating: 4.6,;
-    reviews: 54;,
+    reviews: 54;,;,
 },;
   {;
     id: "database-performance-monitor",;
@@ -973,7 +973,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2024-12-12",;
     customers: 60,;
     rating: 4.6,;
-    reviews: 38;,
+    reviews: 38;,;,
 },;
   {;
     id: "api-documentation-generator",;
@@ -1013,7 +1013,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2024-10-05",;
     customers: 110,;
     rating: 4.7,;
-    reviews: 81;,
+    reviews: 81;,;,
 },;
   {;
     id: "email-deliverability-monitor",;
@@ -1053,7 +1053,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-01-01",;
     customers: 45,;
     rating: 4.5,;
-    reviews: 22;,
+    reviews: 22;,;,
 },;
   {;
     id: "gdpr-dsar-automation",;
@@ -1093,7 +1093,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2024-09-20",;
     customers: 33,;
     rating: 4.6,;
-    reviews: 19;,
+    reviews: 19;,;,
 },;
   {;
     id: "api-security-scanner",;
@@ -1133,7 +1133,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-02-10",;
     customers: 52,;
     rating: 4.5,;
-    reviews: 28;,
+    reviews: 28;,;,
 },;
   {;
     id: "api-observability-starter",;
@@ -1175,7 +1175,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-02-01",;
     customers: 33,;
     rating: 4.5,;
-    reviews: 11;,
+    reviews: 11;,;,
 },;
   {;
     id: "status-pages-slo",;
@@ -1215,7 +1215,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2024-07-22",;
     customers: 75,;
     rating: 4.6,;
-    reviews: 35;,
+    reviews: 35;,;,
 },;
   {;
     id: "uptime-slo-monitor",;
@@ -1255,7 +1255,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2024-11-10",;
     customers: 130,;
     rating: 4.7,;
-    reviews: 64;,
+    reviews: 64;,;,
 },;
   {;
     id: "webhook-relay-replay",;
@@ -1295,7 +1295,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2024-06-30",;
     customers: 58,;
     rating: 4.6,;
-    reviews: 27;,
+    reviews: 27;,;,
 },;
   {;
     id: "feature-flags-edge",;
@@ -1335,7 +1335,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2024-09-01",;
     customers: 42,;
     rating: 4.5,;
-    reviews: 23;,
+    reviews: 23;,;,
 },;
   {;
     id: "sso-in-a-box",;
@@ -1375,7 +1375,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2024-10-30",;
     customers: 150,;
     rating: 4.8,;
-    reviews: 96;,
+    reviews: 96;,;,
 },;
   {;
     id: "vector-search-starter",;
@@ -1415,7 +1415,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2024-08-15",;
     customers: 70,;
     rating: 4.6,;
-    reviews: 33;,
+    reviews: 33;,;,
 },;
   {;
     id: "data-quality-monitor",;
@@ -1455,7 +1455,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2024-09-05",;
     customers: 39,;
     rating: 4.5,;
-    reviews: 20;,
+    reviews: 20;,;,
 },;
   {;
     id: "data-pipeline-observability",;
@@ -1495,7 +1495,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2024-10-10",;
     customers: 44,;
     rating: 4.6,;
-    reviews: 26;,
+    reviews: 26;,;,
 },;
   {;
     id: "ai-guardrails-suite",;
@@ -1535,7 +1535,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2024-12-01",;
     customers: 36,;
     rating: 4.5,;
-    reviews: 18;,
+    reviews: 18;,;,
 },;
   {;
     id: "ai-sales-automation",;
@@ -1575,7 +1575,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2024-08-28",;
     customers: 66,;
     rating: 4.5,;
-    reviews: 31;,
+    reviews: 31;,;,
 },;
   {;
     id: "synthetic-data-generator",;
@@ -1615,7 +1615,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-02-01",;
     customers: 25,;
     rating: 4.6,;
-    reviews: 12;,
+    reviews: 12;,;,
 },;
   {;
     id: "email-parsing-routing-api",;
@@ -1655,7 +1655,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-02-10",;
     customers: 18,;
     rating: 4.5,;
-    reviews: 9;,
+    reviews: 9;,;,
 },;
   {;
     id: "kubernetes-cost-analyzer",;
@@ -1695,7 +1695,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-02-05",;
     customers: 22,;
     rating: 4.6,;
-    reviews: 11;,
+    reviews: 11;,;,
 },;
   {;
     id: "cloud-landing-zone",;
@@ -1735,7 +1735,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-01-22",;
     customers: 14,;
     rating: 4.7,;
-    reviews: 8;,
+    reviews: 8;,;,
 },;
   {;
     id: "security-headers-scanner",;
@@ -1775,7 +1775,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-02-12",;
     customers: 10,;
     rating: 4.5,;
-    reviews: 6;,
+    reviews: 6;,;,
 },;
   {;
     id: "frontend-bundle-analyzer-ci",;
@@ -1815,7 +1815,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-01-30",;
     customers: 12,;
     rating: 4.5,;
-    reviews: 7;,
+    reviews: 7;,;,
 },;
   {;
     id: "s3-to-snowflake-ingestion",;
@@ -1855,7 +1855,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-02-08",;
     customers: 9,;
     rating: 4.4,;
-    reviews: 5;,
+    reviews: 5;,;,
 },;
   {;
     id: "visual-regression-monitor",;
@@ -1895,7 +1895,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-02-03",;
     customers: 15,;
     rating: 4.5,;
-    reviews: 7;,
+    reviews: 7;,;,
 },;
   {;
     id: "data-masking-proxy",;
@@ -1935,7 +1935,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-02-06",;
     customers: 13,;
     rating: 4.6,;
-    reviews: 6;,
+    reviews: 6;,;,
 },;
   {;
     id: "ai-meeting-notes-agent",;
@@ -1975,7 +1975,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-02-04",;
     customers: 28,;
     rating: 4.6,;
-    reviews: 13;,
+    reviews: 13;,;,
 },;
   {;
     id: "compliance-policy-as-code",;
@@ -2015,7 +2015,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-02-07",;
     customers: 17,;
     rating: 4.6,;
-    reviews: 8;,
+    reviews: 8;,;,
 },;
   {;
     id: "pdf-render-api",;
@@ -2057,7 +2057,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-02-01",;
     customers: 75,;
     rating: 4.7,;
-    reviews: 28;,
+    reviews: 28;,;,
 },;
   {;
     id: "invoice-ocr-extraction-api",;
@@ -2099,7 +2099,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-02-15",;
     customers: 29,;
     rating: 4.6,;
-    reviews: 9;,
+    reviews: 9;,;,
 },;
   {;
     id: "log-archive-search",;
@@ -2141,7 +2141,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-02-20",;
     customers: 21,;
     rating: 4.5,;
-    reviews: 7;,
+    reviews: 7;,;,
 },;
   {;
     id: "gdpr-privacyops-suite",;
@@ -2182,7 +2182,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-03-01",;
     customers: 18,;
     rating: 4.6,;
-    reviews: 11;,
+    reviews: 11;,;,
 },;
   {;
     id: "ai-code-review-copilot",;
@@ -2223,7 +2223,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-02-15",;
     customers: 42,;
     rating: 4.5,;
-    reviews: 29;,
+    reviews: 29;,;,
 },;
   {;
     id: "m365-security-hardening-kit",;
@@ -2263,7 +2263,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-03-10",;
     customers: 15,;
     rating: 4.4,;
-    reviews: 8;,
+    reviews: 8;,;,
 },;
   {;
     id: "ai-customer-qa-benchmark",;
@@ -2303,7 +2303,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-01-30",;
     customers: 22,;
     rating: 4.3,;
-    reviews: 13;,
+    reviews: 13;,;,
 },;
   {;
     id: "quantum-ai-fusion-platform",;
@@ -2344,7 +2344,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-08-01",;
     customers: 15,;
     rating: 4.8,;
-    reviews: 8;,
+    reviews: 8;,;,
 },;
   {;
     id: "ai-cybersecurity-sentinel",;
@@ -2385,7 +2385,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-07-15",;
     customers: 45,;
     rating: 4.7,;
-    reviews: 32;,
+    reviews: 32;,;,
 },;
   {;
     id: "autonomous-devops-orchestrator",;
@@ -2426,7 +2426,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-06-20",;
     customers: 28,;
     rating: 4.6,;
-    reviews: 19;,
+    reviews: 19;,;,
 },;
   {;
     id: "blockchain-enterprise-platform",;
@@ -2467,7 +2467,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-05-10",;
     customers: 22,;
     rating: 4.5,;
-    reviews: 15;,
+    reviews: 15;,;,
 },;
   {;
     id: "ai-content-intelligence-suite",;
@@ -2508,7 +2508,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-04-25",;
     customers: 67,;
     rating: 4.4,;
-    reviews: 41;,
+    reviews: 41;,;,
 },;
   {;
     id: "iot-enterprise-platform",;
@@ -2549,7 +2549,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-03-15",;
     customers: 38,;
     rating: 4.6,;
-    reviews: 25;,
+    reviews: 25;,;,
 },;
   {;
     id: "ai-customer-success-platform",;
@@ -2590,7 +2590,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-02-20",;
     customers: 52,;
     rating: 4.7,;
-    reviews: 38;,
+    reviews: 38;,;,
 },;
   {;
     id: "quantum-cryptography-suite",;
@@ -2631,7 +2631,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-01-15",;
     customers: 18,;
     rating: 4.8,;
-    reviews: 12;,
+    reviews: 12;,;,
 },;
   {;
     id: "ai-supply-chain-optimizer",;
@@ -2672,7 +2672,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2024-12-01",;
     customers: 41,;
     rating: 4.6,;
-    reviews: 28;,
+    reviews: 28;,;,
 },;
   {;
     id: "autonomous-financial-advisor",;
@@ -2713,7 +2713,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2024-11-15",;
     customers: 35,;
     rating: 4.7,;
-    reviews: 22;,
+    reviews: 22;,;,
 },;
   {;
     id: "ai-consciousness-evolution-platform",;
@@ -2754,7 +2754,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-09-01",;
     customers: 8,;
     rating: 4.9,;
-    reviews: 5;,
+    reviews: 5;,;,
 },;
   {;
     id: "quantum-space-technology-suite",;
@@ -2795,7 +2795,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-10-01",;
     customers: 12,;
     rating: 4.7,;
-    reviews: 8;,
+    reviews: 8;,;,
 },;
   {;
     id: "autonomous-manufacturing-ai",;
@@ -2836,7 +2836,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-08-15",;
     customers: 31,;
     rating: 4.6,;
-    reviews: 24;,
+    reviews: 24;,;,
 },;
   {;
     id: "biotech-ai-research-platform",;
@@ -2877,7 +2877,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-07-20",;
     customers: 19,;
     rating: 4.8,;
-    reviews: 15;,
+    reviews: 15;,;,
 },;
   {;
     id: "metaverse-enterprise-platform",;
@@ -2918,7 +2918,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-06-25",;
     customers: 26,;
     rating: 4.5,;
-    reviews: 18;,
+    reviews: 18;,;,
 },;
   {;
     id: "quantum-financial-trading-platform",;
@@ -2959,7 +2959,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-09-15",;
     customers: 15,;
     rating: 4.9,;
-    reviews: 12;,
+    reviews: 12;,;,
 },;
   {;
     id: "ai-autonomous-vehicle-platform",;
@@ -3000,7 +3000,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-07-30",;
     customers: 22,;
     rating: 4.6,;
-    reviews: 16;,
+    reviews: 16;,;,
 },;
   {;
     id: "quantum-cybersecurity-suite",;
@@ -3041,7 +3041,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-08-25",;
     customers: 28,;
     rating: 4.7,;
-    reviews: 20;,
+    reviews: 20;,;,
 },;
   {;
     id: "enterprise-data-governance-platform",;
@@ -3082,7 +3082,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-05-20",;
     customers: 34,;
     rating: 4.5,;
-    reviews: 22;,
+    reviews: 22;,;,
 },;
   {;
     id: "ai-powered-hr-analytics-suite",;
@@ -3123,7 +3123,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-04-15",;
     customers: 47,;
     rating: 4.6,;
-    reviews: 31;,
+    reviews: 31;,;,
 },;
   {;
     id: "cloud-migration-automation-platform",;
@@ -3164,7 +3164,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-03-25",;
     customers: 29,;
     rating: 4.7,;
-    reviews: 19;,
+    reviews: 19;,;,
 },;
   {;
     id: "digital-transformation-consulting",;
@@ -3205,7 +3205,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-02-10",;
     customers: 12,;
     rating: 4.9,;
-    reviews: 8;,
+    reviews: 8;,;,
 },;
   {;
     id: "ai-ethics-compliance-framework",;
@@ -3246,7 +3246,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-01-20",;
     customers: 18,;
     rating: 4.8,;
-    reviews: 12;,
+    reviews: 12;,;,
 },;
   {;
     id: "edge-computing-optimization-platform",;
@@ -3287,7 +3287,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2024-12-15",;
     customers: 25,;
     rating: 4.5,;
-    reviews: 17;,
+    reviews: 17;,;,
 },;
   {;
     id: "zero-trust-security-implementation",;
@@ -3328,7 +3328,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2024-11-25",;
     customers: 36,;
     rating: 4.7,;
-    reviews: 25;,
+    reviews: 25;,;,
 },;
   {;
     id: "ai-powered-customer-experience-platform",;
@@ -3369,7 +3369,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2024-10-30",;
     customers: 53,;
     rating: 4.6,;
-    reviews: 38;,
+    reviews: 38;,;,
 },;
   {;
     id: "ai-sales-agent-suite",;
@@ -3406,14 +3406,14 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     contactInfo: {;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Sequencer with policy engine, identity warm-up, and deliverability checks.",;
     launchDate: "2025-07-01",;
     customers: 22,;
     rating: 4.6,;
-    reviews: 14;,
+    reviews: 14;,;,
 },;
   {;
     id: "enterprise-rag-knowledge-hub",;
@@ -3450,14 +3450,14 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     contactInfo: {;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Chunking, hybrid search, entitlements, and audit trails.",;
     launchDate: "2025-06-15",;
     customers: 31,;
     rating: 4.7,;
-    reviews: 19;,
+    reviews: 19;,;,
 },;
   {;
     id: "mlops-observability-suite",;
@@ -3494,14 +3494,14 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     contactInfo: {;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
     realImplementation: true,;
     implementationDetails: "SDKs for logging, exporters, dashboards, and policies.",;
     launchDate: "2025-05-28",;
     customers: 17,;
     rating: 4.5,;
-    reviews: 11;,
+    reviews: 11;,;,
 },;
   {;
     id: "cloud-finops-optimizer",;
@@ -3538,14 +3538,14 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     contactInfo: {;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Ingestion jobs, tagging guardrails, anomaly models, and action playbooks.",;
     launchDate: "2025-06-05",;
     customers: 41,;
     rating: 4.7,;
-    reviews: 26;,
+    reviews: 26;,;,
 },;
   {;
     id: "kubernetes-sre-assurance",;
@@ -3582,14 +3582,14 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     contactInfo: {;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Admission controls, SLO agent, and action runners.",;
     launchDate: "2025-05-10",;
     customers: 19,;
     rating: 4.5,;
-    reviews: 12;,
+    reviews: 12;,;,
 },;
   {;
     id: "privacy-compliance-scanner",;
@@ -3626,14 +3626,14 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     contactInfo: {;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Connectors, scanners, policy engine, and dashboards.",;
     launchDate: "2025-04-20",;
     customers: 27,;
     rating: 4.6,;
-    reviews: 16;,
+    reviews: 16;,;,
 },;
   {;
     id: "agentic-rpa-studio",;
@@ -3670,14 +3670,14 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     contactInfo: {;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Hybrid recorder, vector memory, fallbacks, and approvals.",;
     launchDate: "2025-06-22",;
     customers: 13,;
     rating: 4.4,;
-    reviews: 9;,
+    reviews: 9;,;,
 },;
   {;
     id: "synthetic-data-generator",;
@@ -3714,14 +3714,14 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     contactInfo: {;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Schema inference, model training, evaluators, and export.",;
     launchDate: "2025-05-02",;
     customers: 11,;
     rating: 4.5,;
-    reviews: 8;,
+    reviews: 8;,;,
 },;
   {;
     id: "edge-iot-fleet-manager",;
@@ -3758,14 +3758,14 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     contactInfo: {;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Provisioning service, OTA pipelines, telemetry storage, and rules.",;
     launchDate: "2025-06-30",;
     customers: 9,;
     rating: 4.4,;
-    reviews: 6;,
+    reviews: 6;,;,
 },;
   {;
     id: "data-quality-governance",;
@@ -3802,14 +3802,14 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     contactInfo: {;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Declarative contracts, test runners, lineage graph, and UI.",;
     launchDate: "2025-05-18",;
     customers: 15,;
     rating: 4.5,;
-    reviews: 10;,
+    reviews: 10;,;,
 },;
   {;
     id: "full-stack-observability",;
@@ -3846,14 +3846,14 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     contactInfo: {;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Unified collector, correlation engine, and dashboards.",;
     launchDate: "2025-05-08",;
     customers: 24,;
     rating: 4.6,;
-    reviews: 13;,
+    reviews: 13;,;,
 },;
   {;
     id: "dr-backup-as-a-service",;
@@ -3890,7 +3890,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     contactInfo: {;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Policy engine, storage backends, orchestration, and testing.",;
@@ -3933,7 +3933,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     variant: "compliance-real",;
     contactInfo: { mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com", address: "364 E Main St STE 1008 Middletown DE 19709" },;
     realImplementation: true,;
-    implementationDetails: "Secure intake portal, identity checks, data connectors.";,
+    implementationDetails: "Secure intake portal, identity checks, data connectors.";,;,
 },;
   {;
     id: "soc2-evidence-collector",;
@@ -3969,7 +3969,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     variant: "security-real",;
     contactInfo: { mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com", address: "364 E Main St STE 1008 Middletown DE 19709" },;
     realImplementation: true,;
-    implementationDetails: "Evidence jobs, artifact store, export packs.";,
+    implementationDetails: "Evidence jobs, artifact store, export packs.";,;,
 },;
   {;
     id: "seo-change-monitor",;
@@ -4005,7 +4005,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     variant: "growth-real",;
     contactInfo: { mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com", address: "364 E Main St STE 1008 Middletown DE 19709" },;
     realImplementation: true,;
-    implementationDetails: "Scheduled headless audits, CWV collectors.";,
+    implementationDetails: "Scheduled headless audits, CWV collectors.";,;,
 },;
   {;
     id: "cicd-flaky-test-detector",;
@@ -4041,7 +4041,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     variant: "devex-real",;
     contactInfo: { mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com", address: "364 E Main St STE 1008 Middletown DE 19709" },;
     realImplementation: true,;
-    implementationDetails: "Collectors, heuristics, annotations.";,
+    implementationDetails: "Collectors, heuristics, annotations.";,;,
 },;
   {;
     id: "cloud-cost-anomaly-guard",;
@@ -4077,7 +4077,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     variant: "finops-real",;
     contactInfo: { mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com", address: "364 E Main St STE 1008 Middletown DE 19709" },;
     realImplementation: true,;
-    implementationDetails: "Billing data loaders, anomaly engine.";,
+    implementationDetails: "Billing data loaders, anomaly engine.";,;,
 },;
   {;
     id: "llm-prompt-injection-scanner",;
@@ -4113,7 +4113,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     variant: "ai-safety-real",;
     contactInfo: { mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com", address: "364 E Main St STE 1008 Middletown DE 19709" },;
     realImplementation: true,;
-    implementationDetails: "Synthetic probes, scoring, reports.";,
+    implementationDetails: "Synthetic probes, scoring, reports.";,;,
 },;
   {;
     id: "data-pipeline-sla-tracker",;
@@ -4149,7 +4149,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     variant: "data-real",;
     contactInfo: { mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com", address: "364 E Main St STE 1008 Middletown DE 19709" },;
     realImplementation: true,;
-    implementationDetails: "Connectors, checks, alerting.";,
+    implementationDetails: "Connectors, checks, alerting.";,;,
 },;
   {;
     id: "edge-image-optimizer",;
@@ -4185,7 +4185,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     variant: "perf-real",;
     contactInfo: { mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com", address: "364 E Main St STE 1008 Middletown DE 19709" },;
     realImplementation: true,;
-    implementationDetails: "Edge functions, cache, signed URLs.";,
+    implementationDetails: "Edge functions, cache, signed URLs.";,;,
 },;
   {;
     id: "managed-kubernetes-sre",;
@@ -4221,7 +4221,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     variant: "it-real",;
     contactInfo: { mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com", address: "364 E Main St STE 1008 Middletown DE 19709" },;
     realImplementation: true,;
-    implementationDetails: "SRE playbooks, IaC modules, on‑call.";,
+    implementationDetails: "SRE playbooks, IaC modules, on‑call.";,;,
 },;
   {;
     id: "zero-trust-rollout-coaching",;
@@ -4257,7 +4257,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     variant: "consulting-real",;
     contactInfo: { mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com", address: "364 E Main St STE 1008 Middletown DE 19709" },;
     realImplementation: true,;
-    implementationDetails: "Workshops, templates, control packs.";,
+    implementationDetails: "Workshops, templates, control packs.";,;,
 },;
   {;
     id: "vendor-risk-ai-assistant",;
@@ -4297,7 +4297,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-07-01",;
     customers: 18,;
     rating: 4.7,;
-    reviews: 12;,
+    reviews: 12;,;,
 },;
   {;
     id: "gdpr-dsar-portal",;
@@ -4337,7 +4337,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-06-15",;
     customers: 22,;
     rating: 4.6,;
-    reviews: 14;,
+    reviews: 14;,;,
 },;
   {;
     id: "oncall-copilot",;
@@ -4377,7 +4377,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-07-10",;
     customers: 15,;
     rating: 4.8,;
-    reviews: 9;,
+    reviews: 9;,;,
 },;
   {;
     id: "ml-eval-harness",;
@@ -4417,7 +4417,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-06-30",;
     customers: 10,;
     rating: 4.5,;
-    reviews: 7;,
+    reviews: 7;,;,
 },;
   {;
     id: "finops-cost-anomaly-guard",;
@@ -4457,7 +4457,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-07-05",;
     customers: 28,;
     rating: 4.7,;
-    reviews: 16;,
+    reviews: 16;,;,
 },;
   {;
     id: "ai-rag-site-search",;
@@ -4497,7 +4497,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-06-20",;
     customers: 34,;
     rating: 4.6,;
-    reviews: 19;,
+    reviews: 19;,;,
 },;
   {;
     id: "agentic-workflow-studio",;
@@ -4537,7 +4537,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-07-08",;
     customers: 11,;
     rating: 4.5,;
-    reviews: 8;,
+    reviews: 8;,;,
 },;
   {;
     id: "edge-rate-limiter-saas",;
@@ -4577,7 +4577,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-06-25",;
     customers: 20,;
     rating: 4.4,;
-    reviews: 13;,
+    reviews: 13;,;,
 },;
   {;
     id: "email-deliverability-optimizer",;
@@ -4617,7 +4617,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-07-02",;
     customers: 26,;
     rating: 4.5,;
-    reviews: 17;,
+    reviews: 17;,;,
 },;
   {;
     id: "data-contracts-hub",;
@@ -4657,7 +4657,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     launchDate: "2025-06-28",;
     customers: 12,;
     rating: 4.4,;
-    reviews: 10;,
+    reviews: 10;,;,
 },;
   {;
     id: "security-chaos-gamedays",;
@@ -4698,4 +4698,4 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     customers: 7,;
     rating: 4.9,;
     reviews: 6;
-]}}}}}
+]}}}}}}

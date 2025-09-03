@@ -31,7 +31,7 @@ export const extraServices: ExtraService[] = [;
     contactInfo: {;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
   {;
     id: "cybersecurity-audit",;
@@ -53,4 +53,4 @@ export const extraServices: ExtraService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709";
-]}}}}
+]}}}}}

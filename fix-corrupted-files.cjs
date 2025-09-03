@@ -1,11 +1,11 @@
 #!/usr/bin/env node;
-
+;
 const fs = require("fs");
 const path = require("path");
 // Function to check if a file is corrupted;
-function isCorrupted(content) {
+function isCorrupted(content) {;
   // Check for common corruption patterns;
-  const corruptionPatterns = [
+  const corruptionPatterns = [;
   /import.*from.*import/,  // Double imports;
     /export.*function.*export/,  // Double exports;
     /<=.*import/,  // Malformed imports;
@@ -18,11 +18,11 @@ function isCorrupted(content) {
     /Declaration or statement expected/,  // Declaration errors;
   ];
   ;
-  return corruptionPatterns.some(pattern => pattern.test(content));,
+  return corruptionPatterns.some(pattern => pattern.test(content));,;,
 }
 ;
 // Function to create a basic service template;
-function createServiceTemplate(filename) {
+function createServiceTemplate(filename) {;
   const serviceName = path.basename(filename, path.extname(filename));
     .replace(/[^a-zA-Z0-9]/g, " ");
     .replace(/\s+/g, " ");
@@ -30,7 +30,7 @@ function createServiceTemplate(filename) {
   return `import React from "react";
 import { motion  } from "framer-motion";
 import { SEO  } from "../../components/SEO";
-export default function ${serviceName.replace(/\s+/g, "")}() {
+export default function ${serviceName.replace(/\s+/g, "")}() {;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO ;
@@ -99,35 +99,35 @@ export default function ${serviceName.replace(/\s+/g, "")}() {
         </div>;
       </section>;
     </div>;
-  );,
+  );,;,
 }
-`;,
+`;,;,
 }
 ;
 // Function to fix a single file;
-function fixFile(filePath) {
-  try {
+function fixFile(filePath) {;
+  try {;
   const content = fs.readFileSync(filePath, "utf8");
-    if (isCorrupted(content)) {
+    if (isCorrupted(content)) {;
   console.log(`Fixing corrupted file: ${filePath}`);
       const newContent = createServiceTemplate(filePath);
       fs.writeFileSync(filePath, newContent, "utf8");
-      return true;,
+      return true;,;,
 }
     ;
-    return false;,
-} catch (error) {
+    return false;,;,
+} catch (error) {;
   console.error(`Error processing ${filePath}:`, error.message);
-    return false;,
+    return false;,;,
 }
 }
 ;
 // Main function;
-function $1() {
+function $1() {;
   const servicesDir = path.join(__dirname, "src", "pages", "services");
-  if (!fs.existsSync(servicesDir)) {
+  if (!fs.existsSync(servicesDir)) {;
   console.error("Services directory not found");
-    return;,
+    return;,;,
 }
   ;
   const files = fs.readdirSync(servicesDir);
@@ -135,16 +135,16 @@ function $1() {
     .map(file => path.join(servicesDir, file));
   console.log(`Found ${files.length} service files`);
   let fixedCount = 0;
-  files.forEach(file => {
-  if (fixFile(file)) {
-  fixedCount++;,
+  files.forEach(file => {;
+  if (fixFile(file)) {;
+  fixedCount++;,;,
 }
   });
-  console.log(`Fixed ${fixedCount} corrupted files`);,
+  console.log(`Fixed ${fixedCount} corrupted files`);,;,
 }
 ;
-if (require.main === module) {
-  main();,
+if (require.main === module) {;
+  main();,;,
 }
 ;
-module.exports = { fixFile, isCorrupted, createServiceTemplate }
+module.exports = { fixFile, isCorrupted, createServiceTemplate })

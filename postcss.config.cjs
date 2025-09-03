@@ -1,13 +1,5 @@
-module.exports = {
-  plugins: {
-    tailwindcss: {},
-<<<<<<< HEAD
-    autoprefixer: {},
-  },
-}
-=======
-    autoprefixer: {}
-  }
-};
+module.exports = {;
+  plugins: {;
+    tailwindcss: {},;
 
->>>>>>> origin/main
+}}

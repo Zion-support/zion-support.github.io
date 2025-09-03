@@ -80,14 +80,14 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "AI-powered autonomous fleet management platform with real-time coordination, safety protocols, and comprehensive analytics.",;
     launchDate: "2025-02-25",;
     customers: 85,;
     rating: 4.8,;
-    reviews: 52;,
+    reviews: 52;,;,
 },;
   {;
     id: "quantum-bioinformatics-platform",;
@@ -131,14 +131,14 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Quantum-powered bioinformatics platform with DNA analysis, protein folding simulation, and drug discovery acceleration.",;
     launchDate: "2025-01-30",;
     customers: 65,;
     rating: 4.9,;
-    reviews: 38;,
+    reviews: 38;,;,
 },;
   // Next-Gen Cybersecurity & Privacy;
   {;
@@ -183,14 +183,14 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Quantum-powered privacy-preserving AI platform with federated learning, homomorphic encryption, and comprehensive privacy tools.",;
     launchDate: "2025-02-15",;
     customers: 110,;
     rating: 4.9,;
-    reviews: 78;,
+    reviews: 78;,;,
 },;
   // Next-Gen Energy & Sustainability;
   {;
@@ -235,14 +235,14 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Quantum-powered energy optimization platform with grid optimization, renewable integration, and comprehensive sustainability tools.",;
     launchDate: "2025-03-05",;
     customers: 95,;
     rating: 4.8,;
-    reviews: 67;,
+    reviews: 67;,;,
 },;
   // Next-Gen Manufacturing & Industry 4.0;
   {;
@@ -287,14 +287,14 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "AI-powered industrial automation platform with predictive maintenance, quality control, and comprehensive manufacturing optimization.",;
     launchDate: "2025-02-20",;
     customers: 75,;
     rating: 4.9,;
-    reviews: 56;,
+    reviews: 56;,;,
 },;
   // Next-Gen Education & Training;
   {;
@@ -339,14 +339,14 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "AI-powered quantum education platform with personalized learning, interactive simulations, and comprehensive curriculum.",;
     launchDate: "2025-01-25",;
     customers: 280,;
     rating: 4.8,;
-    reviews: 234;,
+    reviews: 234;,;,
 },;
   // Next-Gen Entertainment & Media;
   {;
@@ -391,7 +391,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "AI-powered content creation platform with video generation, audio synthesis, and comprehensive creative tools.",;

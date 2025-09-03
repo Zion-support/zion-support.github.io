@@ -57,7 +57,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,
+      website: "https://ziontechgroup.com",;,;,
 },;
     realImplementation: true,;
     implementationDetails:;
@@ -65,7 +65,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [;
     launchDate: "2024-01-15",;
     customers: 950,;
     rating: 4.8,;
-    reviews: 520,;,
+    reviews: 520,;,;,
 },;
   // Zero Trust Network Architecture;
   {;
@@ -119,7 +119,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,
+      website: "https://ziontechgroup.com",;,;,
 },;
     realImplementation: true,;
     implementationDetails:;
@@ -127,7 +127,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [;
     launchDate: "2024-02-01",;
     customers: 650,;
     rating: 4.9,;
-    reviews: 380,;,
+    reviews: 380,;,;,
 },;
   // Edge Computing Orchestration;
   {;
@@ -181,7 +181,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,
+      website: "https://ziontechgroup.com",;,;,
 },;
     realImplementation: true,;
     implementationDetails:;
@@ -189,7 +189,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [;
     launchDate: "2024-01-20",;
     customers: 750,;
     rating: 4.7,;
-    reviews: 420,;,
+    reviews: 420,;,;,
 },;
   // AI-Powered IT Operations Center;
   {;
@@ -243,7 +243,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,
+      website: "https://ziontechgroup.com",;,;,
 },;
     realImplementation: true,;
     implementationDetails:;
@@ -251,7 +251,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [;
     launchDate: "2024-02-10",;
     customers: 850,;
     rating: 4.8,;
-    reviews: 480,;,
+    reviews: 480,;,;,
 },;
   // Quantum-Secure Database Platform;
   {;
@@ -307,7 +307,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,
+      website: "https://ziontechgroup.com",;,;,
 },;
     realImplementation: true,;
     implementationDetails:;
@@ -315,7 +315,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [;
     launchDate: "2024-01-05",;
     customers: 450,;
     rating: 4.9,;
-    reviews: 280,;,
+    reviews: 280,;,;,
 },;
   // AI-Powered API Management;
   {;
@@ -371,7 +371,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,
+      website: "https://ziontechgroup.com",;,;,
 },;
     realImplementation: true,;
     implementationDetails:;
@@ -379,7 +379,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [;
     launchDate: "2024-02-15",;
     customers: 1100,;
     rating: 4.7,;
-    reviews: 620,;,
+    reviews: 620,;,;,
 },;
   // Intelligent Cloud Cost Optimization;
   {;
@@ -435,7 +435,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,
+      website: "https://ziontechgroup.com",;,;,
 },;
     realImplementation: true,;
     implementationDetails:;
@@ -443,7 +443,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [;
     launchDate: "2024-01-25",;
     customers: 1800,;
     rating: 4.8,;
-    reviews: 950,;,
+    reviews: 950,;,;,
 },;
   // AI-Powered Network Security;
   {;
@@ -499,7 +499,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com",;,
+      website: "https://ziontechgroup.com",;,;,
 },;
     realImplementation: true,;
     implementationDetails:;
@@ -507,6 +507,6 @@ export const innovativeITServices2024: InnovativeITService2024[] = [;
     launchDate: "2024-02-01",;
     customers: 720,;
     rating: 4.8,;
-    reviews: 410,;,
+    reviews: 410,;,;,
 },;
 ]

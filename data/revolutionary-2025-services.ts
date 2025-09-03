@@ -80,14 +80,14 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced AI consciousness simulation platform with real-time monitoring, ethical testing frameworks, and comprehensive safety protocols.",;
     launchDate: "2025-01-15",;
     customers: 25,;
     rating: 4.9,;
-    reviews: 18;,
+    reviews: 18;,;,
 },;
   {;
     id: "quantum-emotion-processor",;
@@ -131,14 +131,14 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Quantum-powered emotion processing platform with real-time analysis, therapeutic response systems, and comprehensive mental health monitoring.",;
     launchDate: "2025-02-01",;
     customers: 150,;
     rating: 4.8,;
-    reviews: 89;,
+    reviews: 89;,;,
 },;
   {;
     id: "neural-interface-developer",;
@@ -182,14 +182,14 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Comprehensive neural interface development platform with AI assistance, hardware integration, and regulatory compliance tools.",;
     launchDate: "2025-01-20",;
     customers: 75,;
     rating: 4.9,;
-    reviews: 42;,
+    reviews: 42;,;,
 },;
   // Revolutionary IT Services 2025;
   {;
@@ -234,14 +234,14 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Quantum-powered cloud orchestration platform with multi-cloud management, cost optimization, and performance prediction.",;
     launchDate: "2025-02-15",;
     customers: 200,;
     rating: 4.8,;
-    reviews: 156;,
+    reviews: 156;,;,
 },;
   {;
     id: "ai-cybersecurity-sentinel",;
@@ -285,14 +285,14 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "AI-powered cybersecurity platform with quantum threat detection, behavioral analysis, and automated response capabilities.",;
     launchDate: "2025-01-30",;
     customers: 300,;
     rating: 4.9,;
-    reviews: 234;,
+    reviews: 234;,;,
 },;
   // Revolutionary Emerging Technology Services 2025;
   {;
@@ -337,14 +337,14 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "AI-powered metaverse development platform with VR integration, blockchain support, and comprehensive content generation tools.",;
     launchDate: "2025-03-01",;
     customers: 120,;
     rating: 4.8,;
-    reviews: 89;,
+    reviews: 89;,;,
 },;
   {;
     id: "quantum-iot-network",;
@@ -388,14 +388,14 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Quantum-encrypted IoT network platform with AI security, scalable connectivity, and comprehensive device management.",;
     launchDate: "2025-02-20",;
     customers: 180,;
     rating: 4.9,;
-    reviews: 134;,
+    reviews: 134;,;,
 },;
   // Revolutionary Business Services 2025;
   {;
@@ -440,14 +440,14 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "AI-powered business strategy platform with predictive analytics, market intelligence, and strategic recommendations.",;
     launchDate: "2025-01-25",;
     customers: 250,;
     rating: 4.8,;
-    reviews: 189;,
+    reviews: 189;,;,
 },;
   {;
     id: "quantum-financial-optimizer",;
@@ -491,7 +491,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Quantum-powered financial optimization platform with portfolio optimization, risk assessment, and algorithmic trading capabilities.",;

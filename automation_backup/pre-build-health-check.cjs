@@ -4,10 +4,10 @@
 const fs = require("fs");
 const path = require("path");
 const requiredDirs = ["dist", "public"];
-for (const dir of requiredDirs) {
+for (const dir of requiredDirs) {;
   const full = path.resolve(process.cwd(), dir);
-  try {
-  fs.mkdirSync(full, { recursive: true });,
+  try {;
+  fs.mkdirSync(full, { recursive: true });,;,
 } catch {}
 }
 ;

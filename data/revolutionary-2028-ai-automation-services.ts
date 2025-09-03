@@ -80,14 +80,14 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "AI-powered autonomous manufacturing platform with computer vision, predictive maintenance, and full production line automation.",;
     launchDate: "2028-01-15",;
     customers: 180,;
     rating: 4.9,;
-    reviews: 120;,
+    reviews: 120;,;,
 },;
   // AI-Powered Autonomous Agriculture;
   {;
@@ -132,14 +132,14 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "AI-powered autonomous agriculture platform with crop monitoring, automated irrigation, and comprehensive farm management.",;
     launchDate: "2028-03-20",;
     customers: 320,;
     rating: 4.8,;
-    reviews: 240;,
+    reviews: 240;,;,
 },;
   // AI-Powered Autonomous Healthcare;
   {;
@@ -184,14 +184,14 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "AI-powered autonomous healthcare platform with patient monitoring, diagnosis assistance, and comprehensive medical automation.",;
     launchDate: "2028-02-10",;
     customers: 95,;
     rating: 4.9,;
-    reviews: 75;,
+    reviews: 75;,;,
 },;
   // AI-Powered Autonomous Logistics;
   {;
@@ -236,14 +236,14 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "AI-powered autonomous logistics platform with warehouse automation, route optimization, and comprehensive supply chain management.",;
     launchDate: "2028-04-15",;
     customers: 280,;
     rating: 4.7,;
-    reviews: 210;,
+    reviews: 210;,;,
 },;
   // AI-Powered Autonomous Energy Management;
   {;
@@ -288,7 +288,7 @@ export const revolutionary2028AIAutomationServices: Revolutionary2028AIAutomatio
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "AI-powered autonomous energy management platform with power optimization, grid management, and comprehensive sustainability tracking.",;

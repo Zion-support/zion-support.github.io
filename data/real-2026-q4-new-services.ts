@@ -14,6 +14,6 @@ export const real2026Q4NewServices: Real2026Q4NewService[] = [;
       "Q4 2026 new features",;
       "Brand new innovations",;
       "Cutting-edge solutions",;
-    ],;,
+    ],;,;,
 },;
 ]

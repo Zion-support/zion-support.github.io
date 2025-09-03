@@ -10,7 +10,7 @@ export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [;
     name: "Market Augmentation Service 1",;
     tagline: "Enhance your market presence",;
     price: "$299",;
-    features: ["Market analysis", "Strategy development", "Implementation support"];,
+    features: ["Market analysis", "Strategy development", "Implementation support"];,;,
 }
 export interface RealMarketAugmentation2025 {;
   id: string;
@@ -24,7 +24,7 @@ export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [;
     name: "Market Augmentation Service 1",;
     tagline: "Enhance your market presence",;
     price: "$299",;
-    features: ["Market analysis", "Strategy development", "Implementation support"];,
+    features: ["Market analysis", "Strategy development", "Implementation support"];,;,
 }
 ];
 ]

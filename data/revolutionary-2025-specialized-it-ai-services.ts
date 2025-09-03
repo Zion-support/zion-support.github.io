@@ -44,7 +44,7 @@ const contact = {;
   ;
   ;
   ;
-  website: "https://ziontechgroup.com";,
+  website: "https://ziontechgroup.com";,;,
 }
 export const revolutionary2025SpecializedITAIServices: Revolutionary2025SpecializedITAIService[] = [;
   // AI-Powered Autonomous Network Security Platform;
@@ -92,7 +92,7 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     launchDate: "2025-01-15",;
     customers: 520,;
     rating: 4.8,;
-    reviews: 298;,
+    reviews: 298;,;,
 },;
   // Quantum-Enhanced Data Analytics Platform;
   {;
@@ -139,7 +139,7 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     launchDate: "2025-02-01",;
     customers: 680,;
     rating: 4.9,;
-    reviews: 345;,
+    reviews: 345;,;,
 },;
   // AI-Powered Autonomous Cloud Migration Platform;
   {;
@@ -186,7 +186,7 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     launchDate: "2025-01-20",;
     customers: 420,;
     rating: 4.7,;
-    reviews: 234;,
+    reviews: 234;,;,
 },;
   // Quantum-Enhanced IoT Security Platform;
   {;
@@ -233,7 +233,7 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     launchDate: "2025-02-10",;
     customers: 380,;
     rating: 4.8,;
-    reviews: 198;,
+    reviews: 198;,;,
 },;
   // AI-Powered Autonomous Database Management Platform;
   {;
@@ -280,7 +280,7 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     launchDate: "2025-01-25",;
     customers: 580,;
     rating: 4.7,;
-    reviews: 312;,
+    reviews: 312;,;,
 },;
   // Quantum-Enhanced API Security Platform;
   {;
@@ -327,7 +327,7 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     launchDate: "2025-02-05",;
     customers: 320,;
     rating: 4.8,;
-    reviews: 178;,
+    reviews: 178;,;,
 },;
   // AI-Powered Autonomous Content Management Platform;
   {;
@@ -374,7 +374,7 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     launchDate: "2025-01-30",;
     customers: 750,;
     rating: 4.7,;
-    reviews: 398;,
+    reviews: 398;,;,
 },;
   // Quantum-Enhanced Machine Learning Platform;
   {;
@@ -421,7 +421,7 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     launchDate: "2025-02-15",;
     customers: 280,;
     rating: 4.9,;
-    reviews: 156;,
+    reviews: 156;,;,
 },;
   // AI-Powered Autonomous Testing Platform;
   {;

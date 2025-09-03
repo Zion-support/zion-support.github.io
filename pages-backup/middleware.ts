@@ -10,13 +10,13 @@ export: function middleware(request: NextRequest) {;
   response.headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
   // Content: Security Policy;
   const csp = [;
-    "default-src "self"",";
-    "script-src: "self" "unsafe-eval" "unsafe-inline"",";
-    "style-src: "self" "unsafe-inline"",";
+    "default-src "self",";
+    "script-src: "self" "unsafe-eval" "unsafe-inline",";
+    "style-src: "self" "unsafe-inline",";
     "img-src: "self" data: https:,",";
-    "font-src: "self"",";
-    "connect-src: "self"",";
-    "frame-ancestors: "none"",";
+    "font-src: "self",";
+    "connect-src: "self",";
+    "frame-ancestors: "none",";
   ].join("; ");
   response.headers.set("Content-Security-Policy", csp);
 export function middleware(_request: NextRequest) {;
@@ -32,12 +32,12 @@ export function middleware(_request: NextRequest) {;
   response.headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
   // Content Security Policy;
   const csp = [;
-    "default-src "self"",;
-    "script-src "self" "unsafe-eval" "unsafe-inline"",;
-    "style-src "self" "unsafe-inline"",;
+    "default-src "self",;
+    "script-src "self" "unsafe-eval" "unsafe-inline",;
+    "style-src "self" "unsafe-inline",;
     "img-src "self" data: https:",;
-    "font-src "self"",;
-    "connect-src "self"",;
+    "font-src "self",;
+    "connect-src "self",;
     "frame-ancestors "none"";
   ].join("; ");
   response.headers.set("Content-Security-Policy", csp);
@@ -47,12 +47,12 @@ export function middleware(_request: NextRequest) {;
   const { pathname } = request.nextUrl;
   // Redirect old routes to new ones;
   if (pathname.startsWith("/old-")) {;
-    return NextResponse.redirect(new URL(pathname.replace("/old-", "/"), request.url));,
+    return NextResponse.redirect(new URL(pathname.replace("/old-", "/"), request.url));,;,
 }
 ;
   // Block suspicious requests;
   if (pathname.includes("..") || pathname.includes("//")) {;
-    return new NextResponse("Forbidden", { status: 403 });,
+    return new NextResponse("Forbidden", { status: 403 });,;,
 }
 ;
   // Add response time header;
@@ -65,4 +65,4 @@ export const config = {";
 export const config = {;
   matcher: [;
     "/((?!api|_next/static|_next/image|favicon.ico).*),",';
-  ]}
+  ]}}

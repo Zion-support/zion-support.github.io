@@ -45,7 +45,7 @@ const contact = {;
   ;
   ;
   ;
-  website: "https://ziontechgroup.com";,
+  website: "https://ziontechgroup.com";,;,
 }
 export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationService[] = [;
   // AI-Powered Autonomous Customer Success Platform;
@@ -93,7 +93,7 @@ export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationS
     launchDate: "2026-01-10",;
     customers: 1800,;
     rating: 4.9,;
-    reviews: 920;,
+    reviews: 920;,;,
 },;
   // AI-Powered Autonomous HR and Recruitment Platform;
   {;
@@ -140,7 +140,7 @@ export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationS
     launchDate: "2026-01-15",;
     customers: 2200,;
     rating: 4.8,;
-    reviews: 1100;,
+    reviews: 1100;,;,
 },;
   // AI-Powered Autonomous Sales Intelligence Platform;
   {;
@@ -187,7 +187,7 @@ export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationS
     launchDate: "2026-01-20",;
     customers: 1950,;
     rating: 4.9,;
-    reviews: 980;,
+    reviews: 980;,;,
 },;
   // AI-Powered Autonomous Research and Development Platform;
   {;
@@ -234,7 +234,7 @@ export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationS
     launchDate: "2026-02-01",;
     customers: 850,;
     rating: 4.9,;
-    reviews: 420;,
+    reviews: 420;,;,
 },;
   // AI-Powered Autonomous Quality Assurance Platform;
   {;
@@ -281,7 +281,7 @@ export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationS
     launchDate: "2026-01-25",;
     customers: 2800,;
     rating: 4.8,;
-    reviews: 1400;,
+    reviews: 1400;,;,
 },;
   // AI-Powered Autonomous Compliance and Governance Platform;
   {;
@@ -328,7 +328,7 @@ export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationS
     launchDate: "2026-02-05",;
     customers: 1200,;
     rating: 4.9,;
-    reviews: 580;,
+    reviews: 580;,;,
 },;
   // AI-Powered Autonomous Energy Management Platform;
   {;
@@ -375,7 +375,7 @@ export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationS
     launchDate: "2026-01-30",;
     customers: 1650,;
     rating: 4.8,;
-    reviews: 820;,
+    reviews: 820;,;,
 },;
   // AI-Powered Autonomous Transportation and Logistics Platform;
   {;

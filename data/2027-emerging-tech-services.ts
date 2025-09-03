@@ -54,7 +54,7 @@ export const emergingTech2027Services: Service[] = [;
     implementationTime: "6-8 weeks",;
     roi: "1200% within 18 months",;
     link: "https://ziontechgroup.com/services/quantum-machine-learning",;
-    tags["Quantum Computing", "Machine Learning", "AI", "Research", "Optimization"];,
+    tags["Quantum Computing", "Machine Learning", "AI", "Research", "Optimization"];,;,
 },;
   {;
     id: "neuromorphic-computing",;
@@ -96,7 +96,7 @@ export const emergingTech2027Services: Service[] = [;
     implementationTime: "4-6 weeks",;
     roi: "800% within 12 months",;
     link: "https://ziontechgroup.com/services/neuromorphic-computing",;
-    tags["Neuromorphic Computing", "AI", "Edge Computing", "IoT", "Robotics"];,
+    tags["Neuromorphic Computing", "AI", "Edge Computing", "IoT", "Robotics"];,;,
 },;
   {;
     id: "synthetic-biology-platform",;
@@ -138,7 +138,7 @@ export const emergingTech2027Services: Service[] = [;
     implementationTime: "8-12 weeks",;
     roi: "1500% within 24 months",;
     link: "https://ziontechgroup.com/services/synthetic-biology-platform",;
-    tags["Synthetic Biology", "Biotechnology", "AI", "Genetic Engineering", "Research"];,
+    tags["Synthetic Biology", "Biotechnology", "AI", "Genetic Engineering", "Research"];,;,
 },;
   {;
     id: "quantum-sensors-network",;
@@ -180,7 +180,7 @@ export const emergingTech2027Services: Service[] = [;
     implementationTime: "6-8 weeks",;
     roi: "900% within 15 months",;
     link: "https://ziontechgroup.com/services/quantum-sensors-network",;
-    tags["Quantum Technology", "Sensors", "Medical Imaging", "Environmental", "Navigation"];,
+    tags["Quantum Technology", "Sensors", "Medical Imaging", "Environmental", "Navigation"];,;,
 },;
   {;
     id: "brain-computer-interface",;
@@ -222,7 +222,7 @@ export const emergingTech2027Services: Service[] = [;
     implementationTime: "10-12 weeks",;
     roi: "2000% within 30 months",;
     link: "https://ziontechgroup.com/services/brain-computer-interface",;
-    tags["Brain-Computer Interface", "Neural Technology", "Medical", "Assistive Technology", "Research"];,
+    tags["Brain-Computer Interface", "Neural Technology", "Medical", "Assistive Technology", "Research"];,;,
 },;
   {;
     id: "quantum-internet-security",;
@@ -264,7 +264,7 @@ export const emergingTech2027Services: Service[] = [;
     implementationTime: "4-6 weeks",;
     roi: "1000% within 18 months",;
     link: "https://ziontechgroup.com/services/quantum-internet-security",;
-    tags["Quantum Security", "Cybersecurity", "Encryption", "Government", "Financial"];,
+    tags["Quantum Security", "Cybersecurity", "Encryption", "Government", "Financial"];,;,
 },;
   {;
     id: "autonomous-robotics-platform",;
@@ -306,7 +306,7 @@ export const emergingTech2027Services: Service[] = [;
     implementationTime: "5-7 weeks",;
     roi: "700% within 12 months",;
     link: "https://ziontechgroup.com/services/autonomous-robotics-platform",;
-    tags["Robotics", "AI", "Automation", "Manufacturing", "Logistics"];,
+    tags["Robotics", "AI", "Automation", "Manufacturing", "Logistics"];,;,
 },;
   {;
     id: "quantum-materials-discovery",;
@@ -348,7 +348,7 @@ export const emergingTech2027Services: Service[] = [;
     implementationTime: "8-10 weeks",;
     roi: "1100% within 20 months",;
     link: "https://ziontechgroup.com/services/quantum-materials-discovery",;
-    tags["Materials Science", "Quantum Computing", "AI", "Discovery", "Innovation"];,
+    tags["Materials Science", "Quantum Computing", "AI", "Discovery", "Innovation"];,;,
 },;
   {;
     id: "quantum-financial-modeling",;
@@ -390,7 +390,7 @@ export const emergingTech2027Services: Service[] = [;
     implementationTime: "6-8 weeks",;
     roi: "900% within 16 months",;
     link: "https://ziontechgroup.com/services/quantum-financial-modeling",;
-    tags["Financial Technology", "Quantum Computing", "Risk Management", "Portfolio", "Modeling"];,
+    tags["Financial Technology", "Quantum Computing", "Risk Management", "Portfolio", "Modeling"];,;,
 },;
   {;
     id: "quantum-climate-modeling",;
@@ -432,3 +432,4 @@ export const emergingTech2027Services: Service[] = [;
     implementationTime: "7-9 weeks",;
     roi: "800% within 18 months",;
     link: "https://ziontechgroup.com/services/quantum-climate-modeling',;
+}}

@@ -15,14 +15,14 @@ export const enterpriseITBreakthroughServices2025 = [;
       "Enterprise-grade reliability and availability",;
       "Custom infrastructure solutions and development";
     ],;
-    pricing: {;,
+    pricing: {;,;,
 },;
     category: "Cloud Infrastructure",;
     tags["Quantum Computing", "Cloud Infrastructure", "Security", "Scalability", "Enterprise"],;
     website: "https://ziontechgroup.com/quantum-cloud-infrastructure-pro",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$178.6B",;
     targetAudience: "Enterprises, cloud providers, government agencies, research institutions",;
@@ -35,7 +35,7 @@ export const enterpriseITBreakthroughServices2025 = [;
       "Quantum computing research";
     ],;
     integrations["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Terraform"],;
-    compliance["SOC2", "ISO 27001", "FedRAMP", "GDPR", "CCPA"];,
+    compliance["SOC2", "ISO 27001", "FedRAMP", "GDPR", "CCPA"];,;,
 },;
   {;
     id: "edge-computing-orchestrator-pro",;
@@ -53,14 +53,14 @@ export const enterpriseITBreakthroughServices2025 = [;
       "Advanced edge analytics and insights",;
       "Enterprise edge solutions and customization";
     ],;
-    pricing: {;,
+    pricing: {;,;,
 },;
     category: "Edge Computing",;
     tags["Edge Computing", "IoT", "Real-time Processing", "Performance Optimization", "Enterprise"],;
     website: "https://ziontechgroup.com/edge-computing-orchestrator-pro",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$43.4B",;
     targetAudience: "IoT companies, manufacturing, smart cities, autonomous systems, edge computing providers",;
@@ -73,7 +73,7 @@ export const enterpriseITBreakthroughServices2025 = [;
       "Edge security and monitoring";
     ],;
     integrations["IoT platforms", "Cloud services", "Analytics tools", "Security systems", "Monitoring platforms"],;
-    compliance["SOC2", "ISO 27001", "IoT security standards", "GDPR", "CCPA"];,
+    compliance["SOC2", "ISO 27001", "IoT security standards", "GDPR", "CCPA"];,;,
 },;
   {;
     id: "zero-trust-security-platform",;
@@ -91,14 +91,14 @@ export const enterpriseITBreakthroughServices2025 = [;
       "Compliance monitoring and reporting",;
       "API for security automation and integration";
     ],;
-    pricing: {;,
+    pricing: {;,;,
 },;
     category: "Cybersecurity",;
     tags["Zero Trust", "Cybersecurity", "Identity Management", "Access Control", "Enterprise Security"],;
     website: "https://ziontechgroup.com/zero-trust-security-platform",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$45.2B",;
     targetAudience: "Enterprises, government agencies, financial institutions, healthcare providers",;
@@ -111,7 +111,7 @@ export const enterpriseITBreakthroughServices2025 = [;
       "Critical infrastructure protection";
     ],;
     integrations["Identity providers", "Security tools", "Monitoring systems", "Compliance platforms", "Enterprise systems"],;
-    compliance["SOC2", "ISO 27001", "FedRAMP", "GDPR", "CCPA", "NIST standards"];,
+    compliance["SOC2", "ISO 27001", "FedRAMP", "GDPR", "CCPA", "NIST standards"];,;,
 },;
   {;
     id: "ai-powered-devops-platform",;
@@ -129,14 +129,14 @@ export const enterpriseITBreakthroughServices2025 = [;
       "API for automation and integration",;
       "Enterprise-grade reliability and support";
     ],;
-    pricing: {;,
+    pricing: {;,;,
 },;
     category: "DevOps & Automation",;
     tags["AI", "DevOps", "Automation", "CI/CD", "Enterprise"],;
     website: "https://ziontechgroup.com/ai-powered-devops-platform",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$67.8B",;
     targetAudience: "Enterprises, technology companies, development teams, DevOps engineers",;
@@ -149,7 +149,7 @@ export const enterpriseITBreakthroughServices2025 = [;
       "Security and compliance automation";
     ],;
     integrations["CI/CD tools", "Cloud platforms", "Monitoring systems", "Security tools", "Development platforms"],;
-    compliance["SOC2", "ISO 27001", "DevOps best practices", "Security standards", "Enterprise requirements"];,
+    compliance["SOC2", "ISO 27001", "DevOps best practices", "Security standards", "Enterprise requirements"];,;,
 },;
   {;
     id: "quantum-data-center-platform",;
@@ -167,14 +167,14 @@ export const enterpriseITBreakthroughServices2025 = [;
       "API for automation and integration",;
       "Enterprise-grade reliability and support";
     ],;
-    pricing: {;,
+    pricing: {;,;,
 },;
     category: "Data Center",;
     tags["Quantum Computing", "Data Center", "Data Management", "Enterprise", "Performance"],;
     website: "https://ziontechgroup.com/quantum-data-center-platform",;
     contact: {;
       phone: "+1 302 464 0950",;
-      email: "kleber@ziontechgroup.com";,
+      email: "kleber@ziontechgroup.com";,;,
 },;
     marketSize: "$89.2B",;
     targetAudience: "Enterprises, data center providers, technology companies, research institutions",;
@@ -184,4 +184,4 @@ export const enterpriseITBreakthroughServices2025 = [;
       "High-performance computing",;
       "Data center optimization",;
       "Quantum computing research",;
-]
+]}

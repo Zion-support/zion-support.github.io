@@ -42,7 +42,7 @@ const contact = {;
   ;
   ;
   ;
-  website: "https://ziontechgroup.com";,
+  website: "https://ziontechgroup.com";,;,
 }
 export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] = [;
   {;
@@ -88,7 +88,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     launchDate: "2025-01-15",;
     customers: 127,;
     rating: 4.9,;
-    reviews: 89;,
+    reviews: 89;,;,
 },;
   // AI Content Generation Platform;
   {;
@@ -134,7 +134,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     launchDate: "2025-02-01",;
     customers: 203,;
     rating: 4.8,;
-    reviews: 156;,
+    reviews: 156;,;,
 },;
   // Quantum-Secure Communication Platform;
   {;
@@ -180,7 +180,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     launchDate: "2025-01-20",;
     customers: 89,;
     rating: 4.7,;
-    reviews: 67;,
+    reviews: 67;,;,
 },;
   {;
     id: "ai-legal-contract-analyzer",;
@@ -225,7 +225,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     launchDate: "2025-02-15",;
     customers: 45,;
     rating: 4.9,;
-    reviews: 34;,
+    reviews: 34;,;,
 },;
   {;
     id: "ai-financial-intelligence",;
@@ -270,7 +270,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     launchDate: "2025-01-10",;
     customers: 78,;
     rating: 4.8,;
-    reviews: 62;,
+    reviews: 62;,;,
 },;
   {;
     id: "ai-healthcare-diagnostics",;
@@ -315,7 +315,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     launchDate: "2025-03-01",;
     customers: 23,;
     rating: 4.9,;
-    reviews: 18;,
+    reviews: 18;,;,
 },;
   {;
     id: "ai-sustainability-platform",;
@@ -360,7 +360,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     launchDate: "2025-02-20",;
     customers: 34,;
     rating: 4.7,;
-    reviews: 28;,
+    reviews: 28;,;,
 },;
   {;
     id: "ai-education-platform",;
@@ -403,14 +403,14 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Quantum-enhanced trading platform with AI algorithms and real-time market analysis.",;
     launchDate: "2024-06-01",;
     customers: 12,;
     rating: 4.9,;
-    reviews: 15;,
+    reviews: 15;,;,
 },;
   // Space Technology AI Platform;
   {;
@@ -454,14 +454,14 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "AI-powered space technology platform with satellite management and mission optimization tools.",;
     launchDate: "2024-05-01",;
     customers: 8,;
     rating: 4.9,;
-    reviews: 12;,
+    reviews: 12;,;,
 },;
   // Brain-Computer Interface Development Kit;
   {;
@@ -505,14 +505,14 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "AI-powered BCI development platform with advanced signal processing and neuroscience algorithms.",;
     launchDate: "2024-04-01",;
     customers: 5,;
     rating: 4.9,;
-    reviews: 8;,
+    reviews: 8;,;,
 },;
   // Autonomous Vehicle Fleet Management;
   {;
@@ -556,14 +556,14 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "AI-powered autonomous vehicle fleet management platform with real-time monitoring and optimization.",;
     launchDate: "2024-03-01",;
     customers: 18,;
     rating: 4.7,;
-    reviews: 22;,
+    reviews: 22;,;,
 },;
   // Quantum Internet Security Platform;
   {;
@@ -607,14 +607,14 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Quantum-secure internet platform with post-quantum cryptography and zero-trust architecture.",;
     launchDate: "2024-02-01",;
     customers: 15,;
     rating: 4.8,;
-    reviews: 19;,
+    reviews: 19;,;,
 },;
   // AI-Powered Healthcare Diagnostics;
   {;
@@ -658,14 +658,14 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "AI-powered healthcare diagnostics platform with advanced medical imaging analysis and clinical decision support.",;
     launchDate: "2024-01-01",;
     customers: 22,;
     rating: 4.9,;
-    reviews: 31;,
+    reviews: 31;,;,
 },;
   // AI-Powered Customer Success Platform;
   {;
@@ -709,14 +709,14 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Full-stack AI platform with real-time analytics, automated workflows, and comprehensive integration capabilities.",;
     launchDate: "2025-01-15",;
     customers: 45,;
     rating: 4.8,;
-    reviews: 23;,
+    reviews: 23;,;,
 },;
   // Intelligent Supply Chain Optimization Platform;
   {;
@@ -760,14 +760,14 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade supply chain optimization platform with advanced AI algorithms, real-time data processing, and comprehensive analytics.",;
     launchDate: "2025-01-20",;
     customers: 38,;
     rating: 4.9,;
-    reviews: 31;,
+    reviews: 31;,;,
 },;
   // AI Financial Planning Platform;
   {;
@@ -811,14 +811,14 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Comprehensive financial planning platform with AI-powered analytics, automated reporting, and enterprise-grade security.",;
     launchDate: "2025-02-01",;
     customers: 52,;
     rating: 4.7,;
-    reviews: 28;,
+    reviews: 28;,;,
 },;
   // Intelligent HR Analytics Platform;
   {;
@@ -862,14 +862,14 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade HR analytics platform with AI-powered insights, comprehensive reporting, and seamless HRIS integration.",;
     launchDate: "2025-02-10",;
     customers: 41,;
     rating: 4.8,;
-    reviews: 26;,
+    reviews: 26;,;,
 },;
   // AI Sales Intelligence Platform;
   {;
@@ -913,14 +913,14 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Comprehensive sales intelligence platform with AI-powered analytics, real-time insights, and seamless CRM integration.",;
     launchDate: "2025-02-15",;
     customers: 67,;
     rating: 4.9,;
-    reviews: 42;,
+    reviews: 42;,;,
 },;
   // AI Decision Engine;
   {;
@@ -964,14 +964,14 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade AI decision engine with advanced algorithms, comprehensive analytics, and seamless business system integration.",;
     launchDate: "2025-03-01",;
     customers: 28,;
     rating: 5.0,;
-    reviews: 18;,
+    reviews: 18;,;,
 },;
   // Intelligent Content Automation Platform;
   {;
@@ -1015,14 +1015,14 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Comprehensive content automation platform with AI-powered generation, multi-channel distribution, and advanced analytics.",;
     launchDate: "2025-03-10",;
     customers: 89,;
     rating: 4.7,;
-    reviews: 51;,
+    reviews: 51;,;,
 },;
   // Smart CRM Intelligence Suite;
   {;
@@ -1066,7 +1066,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade AI-enhanced CRM with intelligent automation, predictive analytics, and comprehensive business tool integration.",;

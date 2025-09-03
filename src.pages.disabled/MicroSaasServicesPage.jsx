@@ -1,1 +1,1 @@
-:src.pages.disabled/MicroSaasServicesPage.jsx export default function MicroSAASServicesPage () {
+:src.pages.disabled/MicroSaasServicesPage.jsx export default function MicroSAASServicesPage () {}

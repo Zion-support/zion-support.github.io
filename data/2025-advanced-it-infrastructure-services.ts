@@ -80,14 +80,14 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Hybrid quantum-classical cloud infrastructure with quantum processing capabilities and classical cloud services.",;
     launchDate: "2024-11-01",;
     customers: 23,;
     rating: 4.9,;
-    reviews: 15;,
+    reviews: 15;,;,
 },;
   // Autonomous Edge Computing Network;
   {;
@@ -132,14 +132,14 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Autonomous edge computing network with intelligent optimization and real-time processing capabilities.",;
     launchDate: "2024-10-15",;
     customers: 45,;
     rating: 4.8,;
-    reviews: 45;,
+    reviews: 45;,;,
 },;
   // Zero-Trust Network Security Platform;
   {;
@@ -184,14 +184,14 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Zero-trust network security platform implementing comprehensive security architecture with continuous authentication.",;
     launchDate: "2025-02-01",;
     customers: 34,;
     rating: 4.8,;
-    reviews: 28;,
+    reviews: 28;,;,
 },;
   // AI-Powered DevOps Automation Platform;
   {;
@@ -236,14 +236,14 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "AI-powered DevOps automation platform with intelligent CI/CD optimization and comprehensive automation capabilities.",;
     launchDate: "2025-01-15",;
     customers: 89,;
     rating: 4.7,;
-    reviews: 67;,
+    reviews: 67;,;,
 },;
   // Quantum-Resistant Data Storage Platform;
   {;
@@ -288,14 +288,14 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Quantum-resistant data storage platform implementing advanced encryption for future-proof data protection.",;
     launchDate: "2025-02-05",;
     customers: 23,;
     rating: 4.8,;
-    reviews: 18;,
+    reviews: 18;,;,
 },;
   // Intelligent Data Center Management Platform;
   {;
@@ -340,14 +340,14 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Intelligent data center management platform with AI-powered optimization and comprehensive monitoring capabilities.",;
     launchDate: "2025-01-25",;
     customers: 45,;
     rating: 4.7,;
-    reviews: 34;,
+    reviews: 34;,;,
 },;
   // Federated Learning Infrastructure Platform;
   {;
@@ -392,14 +392,14 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Federated learning infrastructure platform enabling privacy-preserving AI training across distributed data sources.",;
     launchDate: "2025-02-10",;
     customers: 18,;
     rating: 4.9,;
-    reviews: 12;,
+    reviews: 12;,;,
 },;
   // New Advanced IT Infrastructure Services for 2025;
   {;
@@ -444,14 +444,14 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced quantum cloud infrastructure platform with hybrid quantum-classical computing, quantum-secured services, and comprehensive cloud management capabilities.",;
     launchDate: "2025-01-30",;
     customers: 5,;
     rating: 5.0,;
-    reviews: 3;,
+    reviews: 3;,;,
 },;
   // Edge Computing Orchestration Platform;
   {;
@@ -496,14 +496,14 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Comprehensive edge computing orchestration platform with intelligent resource management, real-time optimization, and seamless cloud platform integration.",;
     launchDate: "2025-02-20",;
     customers: 28,;
     rating: 4.9,;
-    reviews: 19;,
+    reviews: 19;,;,
 },;
   // Zero Trust Security Architecture Platform;
   {;
@@ -548,14 +548,14 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade zero trust security architecture platform with comprehensive security implementation, continuous verification, and advanced threat protection capabilities.",;
     launchDate: "2025-03-10",;
     customers: 18,;
     rating: 5.0,;
-    reviews: 12;,
+    reviews: 12;,;,
 },;
   // Autonomous Data Center Platform;
   {;
@@ -600,14 +600,14 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced autonomous data center platform with AI-powered management, comprehensive optimization, and seamless infrastructure automation capabilities.",;
     launchDate: "2025-04-05",;
     customers: 8,;
     rating: 5.0,;
-    reviews: 5;,
+    reviews: 5;,;,
 },;
   // Quantum Networking Infrastructure;
   {;
@@ -652,14 +652,14 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade quantum networking infrastructure with quantum key distribution, advanced security protocols, and comprehensive network management capabilities.",;
     launchDate: "2024-07-20",;
     customers: 19,;
     rating: 4.9,;
-    reviews: 12;,
+    reviews: 12;,;,
 },;
   // New Advanced IT Infrastructure Services for 2025;
   {;
@@ -704,14 +704,14 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced quantum cloud infrastructure platform with hybrid quantum-classical computing, quantum-secured services, and comprehensive cloud management capabilities.",;
     launchDate: "2025-01-30",;
     customers: 5,;
     rating: 5.0,;
-    reviews: 3;,
+    reviews: 3;,;,
 },;
   // Edge Computing Orchestration Platform;
   {;
@@ -756,14 +756,14 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Comprehensive edge computing orchestration platform with intelligent resource management, real-time optimization, and seamless cloud platform integration.",;
     launchDate: "2025-02-20",;
     customers: 28,;
     rating: 4.9,;
-    reviews: 19;,
+    reviews: 19;,;,
 },;
   // Zero Trust Security Architecture Platform;
   {;
@@ -808,14 +808,14 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade zero trust security architecture platform with comprehensive security implementation, continuous verification, and advanced threat protection capabilities.",;
     launchDate: "2025-03-10",;
     customers: 18,;
     rating: 5.0,;
-    reviews: 12;,
+    reviews: 12;,;,
 },;
   // Autonomous Data Center Platform;
   {;
@@ -860,14 +860,14 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced autonomous data center platform with AI-powered management, comprehensive optimization, and seamless infrastructure automation capabilities.",;
     launchDate: "2025-04-05",;
     customers: 8,;
     rating: 5.0,;
-    reviews: 5;,
+    reviews: 5;,;,
 },;
   // Quantum Networking Infrastructure;
   {;
@@ -912,14 +912,14 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Enterprise-grade quantum networking infrastructure with quantum key distribution, advanced security protocols, and comprehensive network management capabilities.",;
     launchDate: "2025-05-01",;
     customers: 3,;
     rating: 5.0,;
-    reviews: 2;,
+    reviews: 2;,;,
 },;
   // AI-Powered Infrastructure Management;
   {;
@@ -964,14 +964,14 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Comprehensive AI-powered infrastructure management platform with intelligent monitoring, optimization, and seamless infrastructure tool integration.",;
     launchDate: "2025-05-15",;
     customers: 25,;
     rating: 4.8,;
-    reviews: 18;,
+    reviews: 18;,;,
 },;
   // Hybrid Cloud Orchestration Platform;
   {;
@@ -1016,7 +1016,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Comprehensive hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud platform integration.",;

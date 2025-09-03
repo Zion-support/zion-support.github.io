@@ -42,7 +42,7 @@ const contact = {;
   mobile: "+1 302 464 0950",;
   email: "kleber@ziontechgroup.com",;
   address: "364 E Main St STE 1008 Middletown DE 19709",;
-  website: "https://ziontechgroup.com",;,
+  website: "https://ziontechgroup.com",;,;,
 }
 export const zion2027EmergingTechnologyServices: Zion2027EmergingTechnologyService[] =;
   [;
@@ -123,9 +123,9 @@ export const zion2027EmergingTechnologyServices: Zion2027EmergingTechnologyServi
       launchDate: "2027-01-20",;
       customers: 890,;
       rating: 4.8,;
-      reviews: 520,;,
+      reviews: 520,;,;,
 },;
-
+;
     // Metaverse Development and Management Platform;
     {;
       id: "metaverse-development-management-platform-2027",;
@@ -210,9 +210,9 @@ export const zion2027EmergingTechnologyServices: Zion2027EmergingTechnologyServi
       launchDate: "2027-02-01",;
       customers: 2100,;
       rating: 4.8,;
-      reviews: 1150,;,
+      reviews: 1150,;,;,
 },;
-
+;
     // AI-Powered Autonomous Manufacturing Platform;
     {;
       id: "ai-autonomous-manufacturing-platform-2027",;
@@ -297,9 +297,9 @@ export const zion2027EmergingTechnologyServices: Zion2027EmergingTechnologyServi
       launchDate: "2027-02-15",;
       customers: 450,;
       rating: 4.9,;
-      reviews: 280,;,
+      reviews: 280,;,;,
 },;
-
+;
     // Quantum-Enhanced Energy Management Platform;
     {;
       id: "quantum-enhanced-energy-management-platform-2027",;
@@ -383,9 +383,9 @@ export const zion2027EmergingTechnologyServices: Zion2027EmergingTechnologyServi
       launchDate: "2027-03-01",;
       customers: 280,;
       rating: 4.9,;
-      reviews: 160,;,
+      reviews: 160,;,;,
 },;
-
+;
     // AI-Powered Autonomous Transportation Platform;
     {;
       id: "ai-autonomous-transportation-platform-2027",;
@@ -470,9 +470,9 @@ export const zion2027EmergingTechnologyServices: Zion2027EmergingTechnologyServi
       launchDate: "2027-02-20",;
       customers: 1200,;
       rating: 4.8,;
-      reviews: 680,;,
+      reviews: 680,;,;,
 },;
-
+;
     // Quantum-Enhanced Financial Services Platform;
     {;
       id: "quantum-enhanced-financial-services-platform-2027",;
@@ -556,9 +556,9 @@ export const zion2027EmergingTechnologyServices: Zion2027EmergingTechnologyServi
       launchDate: "2027-03-15",;
       customers: 420,;
       rating: 4.9,;
-      reviews: 250,;,
+      reviews: 250,;,;,
 },;
-
+;
     // AI-Powered Autonomous Retail Platform;
     {;
       id: "ai-autonomous-retail-platform-2027",;
@@ -642,9 +642,9 @@ export const zion2027EmergingTechnologyServices: Zion2027EmergingTechnologyServi
       launchDate: "2027-02-25",;
       customers: 2800,;
       rating: 4.8,;
-      reviews: 1450,;,
+      reviews: 1450,;,;,
 },;
-
+;
     // Quantum-Enhanced Telecommunications Platform;
     {;
       id: "quantum-enhanced-telecommunications-platform-2027",;
@@ -722,9 +722,9 @@ export const zion2027EmergingTechnologyServices: Zion2027EmergingTechnologyServi
       launchDate: "2027-04-01",;
       customers: 180,;
       rating: 4.9,;
-      reviews: 95,;,
+      reviews: 95,;,;,
 },;
-
+;
     // AI-Powered Autonomous Agriculture Platform;
     {;
       id: "ai-autonomous-agriculture-platform-2027",;
@@ -802,6 +802,6 @@ export const zion2027EmergingTechnologyServices: Zion2027EmergingTechnologyServi
       launchDate: "2027-03-20",;
       customers: 1600,;
       rating: 4.8,;
-      reviews: 890,;,
+      reviews: 890,;,;,
 },;
   ]

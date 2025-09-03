@@ -98,7 +98,7 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       website: "https://ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
   {;
     id: "metaverse-digital-reality-platform",;
@@ -161,7 +161,7 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       website: "https://ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
   {;
     id: "ai-predictive-health-analytics",;
@@ -224,7 +224,7 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       website: "https://ziontechgroup.com",;
-      address: "364 E Main St STE 1008 Middletown DE 19709";,
+      address: "364 E Main St STE 1008 Middletown DE 19709";,;,
 },;
   {;
     id: "ai-autonomous-business-manager",;
@@ -288,4 +288,4 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [;
       email: "kleber@ziontechgroup.com",;
       website: "https://ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709";
-]}}}}}}
+]}}}}}}}

@@ -80,14 +80,14 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Full enterprise blockchain platform with high performance, security, compliance, and comprehensive development tools.",;
     launchDate: "2024-01-15",;
     customers: 89,;
     rating: 4.8,;
-    reviews: 67;,
+    reviews: 67;,;,
 },;
   // DeFi Platform for Enterprises;
   {;
@@ -132,14 +132,14 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Full enterprise DeFi platform with institutional security, compliance tools, and comprehensive risk management.",;
     launchDate: "2024-02-01",;
     customers: 45,;
     rating: 4.9,;
-    reviews: 38;,
+    reviews: 38;,;,
 },;
   // NFT Enterprise Platform;
   {;
@@ -184,14 +184,14 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Full enterprise NFT platform with multi-chain support, advanced features, and comprehensive management tools.",;
     launchDate: "2024-01-20",;
     customers: 156,;
     rating: 4.7,;
-    reviews: 134;,
+    reviews: 134;,;,
 },;
   // Blockchain Supply Chain Platform;
   {;
@@ -236,14 +236,14 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Full blockchain supply chain platform with traceability, automation, and comprehensive management tools.",;
     launchDate: "2024-02-15",;
     customers: 78,;
     rating: 4.8,;
-    reviews: 62;,
+    reviews: 62;,;,
 },;
   // Blockchain Identity Management;
   {;
@@ -288,7 +288,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Full blockchain identity platform with self-sovereign identity, zero-knowledge proofs, and comprehensive security features.",;

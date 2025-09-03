@@ -80,14 +80,14 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced zero trust architecture with continuous monitoring, adaptive access control, and comprehensive security capabilities.",;
     launchDate: "2026-01-20",;
     customers: 180,;
     rating: 4.9,;
-    reviews: 112;,
+    reviews: 112;,;,
 },;
   // Edge Computing Orchestration Platform;
   {;
@@ -132,14 +132,14 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced edge computing orchestration platform with AI-powered management, real-time optimization, and comprehensive monitoring capabilities.",;
     launchDate: "2026-02-01",;
     customers: 250,;
     rating: 4.8,;
-    reviews: 156;,
+    reviews: 156;,;,
 },;
   // 5G Private Network Solutions;
   {;
@@ -184,14 +184,14 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced 5G private network solution with custom configurations, advanced security, and comprehensive monitoring capabilities.",;
     launchDate: "2026-02-15",;
     customers: 95,;
     rating: 4.9,;
-    reviews: 67;,
+    reviews: 67;,;,
 },;
   // Blockchain Infrastructure Platform;
   {;
@@ -236,14 +236,14 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced blockchain infrastructure platform with custom networks, smart contracts, and comprehensive security capabilities.",;
     launchDate: "2026-02-20",;
     customers: 320,;
     rating: 4.8,;
-    reviews: 198;,
+    reviews: 198;,;,
 },;
   // AI-Powered IT Operations Center;
   {;
@@ -288,7 +288,7 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [;
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Advanced AI-powered IT operations center with intelligent automation, predictive maintenance, and comprehensive monitoring capabilities.",;

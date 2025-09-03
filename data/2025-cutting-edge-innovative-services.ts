@@ -77,14 +77,14 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Custom AI model training, system integration, and continuous optimization",;
     launchDate: "2025-01-15",;
     customers: 15,;
     rating: 4.9,;
-    reviews: 28;,
+    reviews: 28;,;,
 },;
   // QUANTUM COMPUTING SERVICES;
   {;
@@ -128,14 +128,14 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Quantum hardware integration, custom algorithm development, and research collaboration setup",;
     launchDate: "2025-02-01",;
     customers: 8,;
     rating: 4.8,;
-    reviews: 15;,
+    reviews: 15;,;,
 },;
   // BLOCKCHAIN & WEB3 INNOVATIONS;
   {;
@@ -179,14 +179,14 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Smart contract deployment, AI model training, and multi-chain integration",;
     launchDate: "2025-01-20",;
     customers: 45,;
     rating: 4.7,;
-    reviews: 89;,
+    reviews: 89;,;,
 },;
   // CYBERSECURITY INNOVATIONS;
   {;
@@ -230,14 +230,14 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "AI model deployment, system integration, and security team training",;
     launchDate: "2025-01-10",;
     customers: 67,;
     rating: 4.9,;
-    reviews: 156;,
+    reviews: 156;,;,
 },;
   // IOT & EDGE COMPUTING;
   {;
@@ -281,14 +281,14 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "IoT device integration, edge computing setup, and AI model deployment",;
     launchDate: "2025-02-05",;
     customers: 23,;
     rating: 4.6,;
-    reviews: 34;,
+    reviews: 34;,;,
 },;
   // HEALTHCARE AI INNOVATIONS;
   {;
@@ -332,14 +332,14 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Medical system integration, AI model training, and regulatory compliance setup",;
     launchDate: "2025-01-25",;
     customers: 12,;
     rating: 4.9,;
-    reviews: 45;,
+    reviews: 45;,;,
 },;
   // FINANCIAL TECHNOLOGY INNOVATIONS;
   {;
@@ -383,14 +383,14 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Quantum hardware integration, trading algorithm development, and regulatory compliance",;
     launchDate: "2025-02-10",;
     customers: 8,;
     rating: 4.8,;
-    reviews: 23;,
+    reviews: 23;,;,
 },;
   // SPACE TECHNOLOGY INNOVATIONS;
   {;
@@ -434,14 +434,14 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "Satellite system integration, AI model deployment, and mission control setup",;
     launchDate: "2025-01-30",;
     customers: 5,;
     rating: 4.9,;
-    reviews: 12;,
+    reviews: 12;,;,
 },;
   // GREEN TECHNOLOGY INNOVATIONS;
   {;
@@ -485,7 +485,7 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
       mobile: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709",;
-      website: "https://ziontechgroup.com";,
+      website: "https://ziontechgroup.com";,;,
 },;
     realImplementation: true,;
     implementationDetails: "System integration, AI model deployment, and environmental monitoring setup",;
@@ -502,4 +502,4 @@ export const serviceCategories2025: string[] = Array.from(;
   );
 ).sort();
 export const getServicesByCategory2025 = (category: string) => {;
-  if (!category || category === "All") return cuttingEdgeInnovativeServices2025
+  if (!category || category === "All") return cuttingEdgeInnovativeServices2025}}}

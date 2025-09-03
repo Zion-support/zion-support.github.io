@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
-function fixImportsInFile(filePath) {
-  try {
+function fixImportsInFile(filePath) {;
+  try {;
   let content = fs.readFileSync(filePath, "utf8");
     // Fix concatenated imports;
     content = content.replace(;
@@ -29,11 +29,11 @@ function fixImportsInFile(filePath) {
     content = content.replace(/";"class/g, ";\n\nclass");
     // Fix specific syntax errors in cva calls;
     content = content.replace(/cva\(;/g, "cva(");
-    content = content.replace(/variants:\s*{
+    content = content.replace(/variants:\s*{;
   /g, "variants: {");
-    content = content.replace(/variant:\s*{
+    content = content.replace(/variant:\s*{;
   /g, "variant: {");
-    content = content.replace(/defaultVariants:\s*{
+    content = content.replace(/defaultVariants:\s*{;
   /g, "defaultVariants: {");
     // Fix missing quotes and commas;
     content = content.replace(;
@@ -45,25 +45,25 @@ function fixImportsInFile(filePath) {
       "$1: "$2"\n      $3";
     );
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);,
-} catch (error) {
-  console.error(`Error fixing ${filePath}:`, error.message);,
+    console.log(`Fixed: ${filePath}`);,;,
+} catch (error) {;
+  console.error(`Error fixing ${filePath}:`, error.message);,;,
 }
 }
 ;
-function walkDirectory(dir) {
+function walkDirectory(dir) {;
   const files = fs.readdirSync(dir);
-  for (const file of files) {
+  for (const file of files) {;
   const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-    if (stat.isDirectory()) {
-  walkDirectory(filePath);,
-} else if (file.endsWith(".tsx") || file.endsWith(".ts")) {
-  fixImportsInFile(filePath);,
+    if (stat.isDirectory()) {;
+  walkDirectory(filePath);,;,
+} else if (file.endsWith(".tsx") || file.endsWith(".ts")) {;
+  fixImportsInFile(filePath);,;,
 }
   }
 }
 ;
 // Fix components directory;
 walkDirectory("./components");
-console.log("Import fixing completed!")
+console.log("Import fixing completed!")}}}}}))

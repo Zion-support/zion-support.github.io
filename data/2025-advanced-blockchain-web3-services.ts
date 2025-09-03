@@ -43,7 +43,7 @@ const contact = {;
   ;
   ;
   ;
-  website: "https://ziontechgroup.com";,
+  website: "https://ziontechgroup.com";,;,
 }
 export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[] = [;
   {;
@@ -89,7 +89,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     launchDate: "2024-12-01",;
     customers: 15,;
     rating: 4.8,;
-    reviews: 28;,
+    reviews: 28;,;,
 },;
   {;
     id: "quantum-resistant-blockchain",;
@@ -134,7 +134,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     launchDate: "2024-11-15",;
     customers: 8,;
     rating: 4.9,;
-    reviews: 15;,
+    reviews: 15;,;,
 },;
   {;
     id: "web3-identity-platform",;
@@ -179,7 +179,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     launchDate: "2024-10-20",;
     customers: 32,;
     rating: 4.7,;
-    reviews: 58;,
+    reviews: 58;,;,
 },;
   {;
     id: "ai-nft-marketplace",;
@@ -224,7 +224,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     launchDate: "2024-09-25",;
     customers: 45,;
     rating: 4.6,;
-    reviews: 89;,
+    reviews: 89;,;,
 },;
   {;
     id: "blockchain-supply-chain-orchestrator",;
@@ -269,7 +269,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     launchDate: "2024-08-30",;
     customers: 28,;
     rating: 4.8,;
-    reviews: 52;,
+    reviews: 52;,;,
 },;
   {;
     id: "metaverse-development-platform",;

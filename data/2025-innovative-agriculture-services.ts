@@ -44,7 +44,7 @@ const contact = {;
   ;
   ;
   ;
-  website: "https://ziontechgroup.com";,
+  website: "https://ziontechgroup.com";,;,
 }
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
   {;
@@ -90,7 +90,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     launchDate: "2025-01-09",;
     customers: 234,;
     rating: 4.8,;
-    reviews: 178;,
+    reviews: 178;,;,
 },;
   {;
     id: "quantum-agriculture-optimization",;
@@ -135,7 +135,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     launchDate: "2025-01-15",;
     customers: 34,;
     rating: 4.6,;
-    reviews: 26;,
+    reviews: 26;,;,
 },;
   {;
     id: "ai-powered-food-safety-monitoring",;
@@ -180,7 +180,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     launchDate: "2025-01-20",;
     customers: 189,;
     rating: 4.7,;
-    reviews: 145;,
+    reviews: 145;,;,
 },;
   {;
     id: "blockchain-food-traceability",;
@@ -225,7 +225,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     launchDate: "2025-01-26",;
     customers: 89,;
     rating: 4.5,;
-    reviews: 67;,
+    reviews: 67;,;,
 },;
   {;
     id: "ai-powered-vertical-farming",;

@@ -3,4 +3,4 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/InnovativeServices
 :src.pages.disabled/InnovativeServicesOverview.tsx;
 import: React, { useState } from "react";
 import: React, { useState } from "react";
-;export default function InnovativeServicesOverview() { const [activeCategory, setActiveCategory] = useState("all") const [searchTerm, setSearchTerm] = useState("") const [sortBy, setSortBy] = useState("rating") ;export default React.memo(function InnovativeServicesOverview () { const [activeCategory, setActiveCategory] = useState ("all")  const [searchTerm, setSearchTerm] = useState ("")  const [sortBy, setSortBy] = useState ("rating")  '
+;export default function InnovativeServicesOverview() { const [activeCategory, setActiveCategory] = useState("all") const [searchTerm, setSearchTerm] = useState("") const [sortBy, setSortBy] = useState("rating") ;export default React.memo(function InnovativeServicesOverview () { const [activeCategory, setActiveCategory] = useState ("all")  const [searchTerm, setSearchTerm] = useState ("")  const [sortBy, setSortBy] = useState ("rating")  '}}))

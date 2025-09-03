@@ -1,17 +1,17 @@
 #!/usr/bin/env node;
-
+;
 const fs = require("fs");
 const path = require("path");
-class $1 {
-  constructor() {
-  this.projectRoot = process.cwd();,
+class $1 {;
+  constructor() {;
+  this.projectRoot = process.cwd();,;,
 }
 ;
-  log(message) {
-  console.log(`[${new Date().toISOString()}] ${message}`);,
+  log(message) {;
+  console.log(`[${new Date().toISOString()}] ${message}`);,;,
 }
 ;
-  fixPricingGuidePage() {
+  fixPricingGuidePage() {;
   const filePath = path.join(this.projectRoot, "pages/pricing-guide.tsx");
     if (!fs.existsSync(filePath)) return false;
     let content = fs.readFileSync(filePath, "utf8");
@@ -27,10 +27,10 @@ class $1 {
     );
     fs.writeFileSync(filePath, content, "utf8");
     this.log("✅ Fixed pricing-guide.tsx");
-    return true;,
+    return true;,;,
 }
 ;
-  fixSitemapPage() {
+  fixSitemapPage() {;
   const filePath = path.join(this.projectRoot, "pages/sitemap.tsx");
     if (!fs.existsSync(filePath)) return false;
     let content = fs.readFileSync(filePath, "utf8");
@@ -43,22 +43,22 @@ class $1 {
     );
     fs.writeFileSync(filePath, content, "utf8");
     this.log("✅ Fixed sitemap.tsx");
-    return true;,
+    return true;,;,
 }
 ;
-  fixScriptSyntaxErrors() {
-  const scripts = [
+  fixScriptSyntaxErrors() {;
+  const scripts = [;
   "scripts/performance-monitor.js",;
       "scripts/health-checker.js",;
       "scripts/link-checker.js",;
       "scripts/seo-optimizer.js",;
     ];
-
+;
     let fixedCount = 0;
-    for (const script of scripts) {
+    for (const script of scripts) {;
   const scriptPath = path.join(this.projectRoot, script);
-      if (fs.existsSync(scriptPath)) {
-  try {
+      if (fs.existsSync(scriptPath)) {;
+  try {;
   let content = fs.readFileSync(scriptPath, "utf8");
           let originalContent = content;
           // Fix common syntax errors;
@@ -66,21 +66,21 @@ class $1 {
           content = content.replace(/import fs from,/g, "import fs from "fs";");
           content = content.replace(/\?\?/g, "||");
           content = content.replace(/\?\./g, ".");
-          if (content !== originalContent) {
+          if (content !== originalContent) {;
   fs.writeFileSync(scriptPath, content, "utf8");
             this.log(`✅ Fixed syntax in: ${script}`);
-            fixedCount++;,
+            fixedCount++;,;,
 }
-        } catch (error) {
-  this.log(`❌ Error fixing ${script}: ${error.message}`);,
+        } catch (error) {;
+  this.log(`❌ Error fixing ${script}: ${error.message}`);,;,
 }
       }
     }
 ;
-    return fixedCount;,
+    return fixedCount;,;,
 }
 ;
-  async fixAllIssues() {
+  async fixAllIssues() {;
   this.log("🔧 Fixing all remaining issues...");
     let fixedCount = 0;
     // Fix page syntax errors;
@@ -90,7 +90,7 @@ class $1 {
     const scriptFixes = this.fixScriptSyntaxErrors();
     fixedCount += scriptFixes;
     this.log(`🎉 Fixed ${fixedCount} issues!`);
-    return fixedCount > 0;,
+    return fixedCount > 0;,;,
 }
 }
 ;
@@ -98,16 +98,16 @@ class $1 {
 const fixer = new AllIssuesFixer();
 fixer;
   .fixAllIssues();
-  .then(success => {
-  if (success) {
+  .then(success => {;
+  if (success) {;
   console.log("✅ All remaining issues fixed successfully!");
-      process.exit(0);,
-} else {
+      process.exit(0);,;,
+} else {;
   console.log("❌ No issues found to fix.");
-      process.exit(0);,
+      process.exit(0);,;,
 }
   });
-  .catch(error => {
+  .catch(error => {;
   console.error("❌ Fatal error:", error);
-    process.exit(1);,
-})
+    process.exit(1);,;,
+})}}
