@@ -2,152 +2,153 @@ import React from "react"
 import Head from "next/head"
 import Link from "next/link"
 import { 
-  ArrowRight, 
-  Award, 
-  CheckCircle, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Bot, 
-  Eye, 
-  MessageSquare, 
-  BarChart3,
-  Globe,
-  Lock,
-  Cpu,
-  Smartphone,
-  Code,
-  Target,
-  TrendingUp,
-  Users,
-  Clock,
-  DollarSign,
-  Star,
-  Phone,
-  Mail
+  ArrowRight;
+  Award;
+  CheckCircle;
+  Zap;
+  Shield;
+  Brain;
+  Bot;
+  Eye;
+  MessageSquare;
+  BarChart3;
+  Globe;
+  Lock;
+  Cpu;
+  Smartphone;
+  Code;
+  Target;
+  TrendingUp;
+  Users;
+  Clock;
+  DollarSign;
+  Star;
+  Phone;
+  Mail;
 } from "lucide-react"
 
 export default function EnhancedServices() {
+
   const serviceCategories = [
     {
-      id: 1,
-      name: "AI-Powered Solutions",
-      description: "Cutting-edge artificial intelligence services that automate and optimize business processes",
-      icon: Brain,
+      id: 1;
+      name: "AI-Powered Solutions"
+      description: "Cutting-edge artificial intelligence services that automate and optimize business processes"
+      icon: Brain;
       services: [
         {
-          name: "AI Business Intelligence Platform",
-          description: "Advanced analytics and insights platform powered by machine learning",
-          features: ["Real-time analytics", "Predictive modeling", "Custom dashboards", "Data visualization"],
-          pricing: "$499 - $2,999/month",
-          delivery: "4-6 weeks",
-          benefits: "Increase decision-making speed by 300% and reduce manual analysis by 80%",
+          name: "AI Business Intelligence Platform"
+          description: "Advanced analytics and insights platform powered by machine learning"
+          features: ["Real-time analytics", "Predictive modeling", "Custom dashboards", "Data visualization"]
+          pricing: "$499 - $2,999/month"
+          delivery: "4-6 weeks"
+          benefits: "Increase decision-making speed by 300% and reduce manual analysis by 80%"
           roi: "Expected ROI: 400-600% within 6 months"
-        },
+        }
         {
-          name: "AI Customer Experience Analytics",
-          description: "Comprehensive customer journey analysis and optimization platform",
-          features: ["Customer journey mapping", "Sentiment analysis", "Behavioral insights", "Personalization engine"],
-          pricing: "$299 - $1,999/month",
-          delivery: "3-5 weeks",
-          benefits: "Improve customer satisfaction by 250% and increase retention by 40%",
+          name: "AI Customer Experience Analytics"
+          description: "Comprehensive customer journey analysis and optimization platform"
+          features: ["Customer journey mapping", "Sentiment analysis", "Behavioral insights", "Personalization engine"]
+          pricing: "$299 - $1,999/month"
+          delivery: "3-5 weeks"
+          benefits: "Improve customer satisfaction by 250% and increase retention by 40%"
           roi: "Expected ROI: 350-500% within 4 months"
-        },
+        }
         {
-          name: "AI DevOps Automation Platform",
-          description: "Intelligent DevOps pipeline with automated testing, deployment, and monitoring",
-          features: ["Automated testing", "CI/CD optimization", "Performance monitoring", "Incident response"],
-          pricing: "$399 - $2,499/month",
-          delivery: "5-8 weeks",
-          benefits: "Reduce deployment time by 70% and eliminate 90% of manual errors",
+          name: "AI DevOps Automation Platform"
+          description: "Intelligent DevOps pipeline with automated testing, deployment, and monitoring"
+          features: ["Automated testing", "CI/CD optimization", "Performance monitoring", "Incident response"]
+          pricing: "$399 - $2,499/month"
+          delivery: "5-8 weeks"
+          benefits: "Reduce deployment time by 70% and eliminate 90% of manual errors"
           roi: "Expected ROI: 300-450% within 5 months"
         }
       ]
-    },
+    }
     {
-      id: 2,
-      name: "Cloud & Infrastructure",
-      description: "Scalable cloud solutions and infrastructure management services",
-      icon: Globe,
+      id: 2;
+      name: "Cloud & Infrastructure"
+      description: "Scalable cloud solutions and infrastructure management services"
+      icon: Globe;
       services: [
         {
-          name: "Cloud FinOps Optimizer",
-          description: "Intelligent cloud cost optimization and financial operations management",
-          features: ["Cost optimization", "Resource monitoring", "Budget forecasting", "Automated scaling"],
-          pricing: "$199 - $1,299/month",
-          delivery: "2-4 weeks",
-          benefits: "Reduce cloud costs by 35% and improve resource utilization by 60%",
+          name: "Cloud FinOps Optimizer"
+          description: "Intelligent cloud cost optimization and financial operations management"
+          features: ["Cost optimization", "Resource monitoring", "Budget forecasting", "Automated scaling"]
+          pricing: "$199 - $1,299/month"
+          delivery: "2-4 weeks"
+          benefits: "Reduce cloud costs by 35% and improve resource utilization by 60%"
           roi: "Expected ROI: 250-400% within 3 months"
-        },
+        }
         {
-          name: "Cybersecurity Suite",
-          description: "Comprehensive security platform with threat detection and response",
-          features: ["Threat detection", "Vulnerability scanning", "Incident response", "Compliance monitoring"],
-          pricing: "$599 - $3,999/month",
-          delivery: "6-10 weeks",
-          benefits: "Reduce security incidents by 95% and ensure compliance with industry standards",
+          name: "Cybersecurity Suite"
+          description: "Comprehensive security platform with threat detection and response"
+          features: ["Threat detection", "Vulnerability scanning", "Incident response", "Compliance monitoring"]
+          pricing: "$599 - $3,999/month"
+          delivery: "6-10 weeks"
+          benefits: "Reduce security incidents by 95% and ensure compliance with industry standards"
           roi: "Expected ROI: 200-350% within 6 months"
-        },
+        }
         {
-          name: "Platform Engineering Solutions",
-          description: "Modern platform engineering with microservices and containerization",
-          features: ["Microservices architecture", "Container orchestration", "API management", "Service mesh"],
-          pricing: "$799 - $4,999/month",
-          delivery: "8-12 weeks",
-          benefits: "Improve system reliability by 80% and reduce development time by 50%",
+          name: "Platform Engineering Solutions"
+          description: "Modern platform engineering with microservices and containerization"
+          features: ["Microservices architecture", "Container orchestration", "API management", "Service mesh"]
+          pricing: "$799 - $4,999/month"
+          delivery: "8-12 weeks"
+          benefits: "Improve system reliability by 80% and reduce development time by 50%"
           roi: "Expected ROI: 300-500% within 8 months"
         }
       ]
-    },
+    }
     {
-      id: 3,
-      name: "Micro SaaS Solutions",
-      description: "Specialized software-as-a-service solutions for specific business needs",
-      icon: Zap,
+      id: 3;
+      name: "Micro SaaS Solutions"
+      description: "Specialized software-as-a-service solutions for specific business needs"
+      icon: Zap;
       services: [
         {
-          name: "AI Quality Assurance Platform",
-          description: "Automated testing and quality assurance with AI-powered test generation",
-          features: ["Automated test generation", "Performance testing", "Security testing", "Regression testing"],
-          pricing: "$249 - $1,499/month",
-          delivery: "3-5 weeks",
-          benefits: "Reduce testing time by 75% and increase test coverage by 200%",
+          name: "AI Quality Assurance Platform"
+          description: "Automated testing and quality assurance with AI-powered test generation"
+          features: ["Automated test generation", "Performance testing", "Security testing", "Regression testing"]
+          pricing: "$249 - $1,499/month"
+          delivery: "3-5 weeks"
+          benefits: "Reduce testing time by 75% and increase test coverage by 200%"
           roi: "Expected ROI: 280-420% within 4 months"
-        },
+        }
         {
-          name: "AI SEO Auditor",
-          description: "Intelligent SEO analysis and optimization platform",
-          features: ["Technical SEO audit", "Content optimization", "Keyword research", "Competitor analysis"],
-          pricing: "$149 - $899/month",
-          delivery: "2-3 weeks",
-          benefits: "Improve search rankings by 150% and increase organic traffic by 300%",
+          name: "AI SEO Auditor"
+          description: "Intelligent SEO analysis and optimization platform"
+          features: ["Technical SEO audit", "Content optimization", "Keyword research", "Competitor analysis"]
+          pricing: "$149 - $899/month"
+          delivery: "2-3 weeks"
+          benefits: "Improve search rankings by 150% and increase organic traffic by 300%"
           roi: "Expected ROI: 400-600% within 3 months"
-        },
+        }
         {
-          name: "Smart Contract AI",
-          description: "AI-powered smart contract development and auditing platform",
-          features: ["Contract generation", "Security auditing", "Deployment automation", "Monitoring"],
-          pricing: "$399 - $2,499/month",
-          delivery: "4-6 weeks",
-          benefits: "Reduce development time by 80% and eliminate security vulnerabilities",
+          name: "Smart Contract AI"
+          description: "AI-powered smart contract development and auditing platform"
+          features: ["Contract generation", "Security auditing", "Deployment automation", "Monitoring"]
+          pricing: "$399 - $2,499/month"
+          delivery: "4-6 weeks"
+          benefits: "Reduce development time by 80% and eliminate security vulnerabilities"
           roi: "Expected ROI: 350-550% within 5 months"
-        },
+        }
         {
-          name: "AI Lead Enrichment",
-          description: "Intelligent lead data enrichment and qualification platform",
-          features: ["Data enrichment", "Lead scoring", "Contact discovery", "CRM integration"],
-          pricing: "$199 - $1,299/month",
-          delivery: "2-4 weeks",
-          benefits: "Increase lead quality by 200% and improve conversion rates by 150%",
+          name: "AI Lead Enrichment"
+          description: "Intelligent lead data enrichment and qualification platform"
+          features: ["Data enrichment", "Lead scoring", "Contact discovery", "CRM integration"]
+          pricing: "$199 - $1,299/month"
+          delivery: "2-4 weeks"
+          benefits: "Increase lead quality by 200% and improve conversion rates by 150%"
           roi: "Expected ROI: 300-450% within 3 months"
-        },
+        }
         {
-          name: "Smart Churn Predictor",
-          description: "AI-powered customer churn prediction and retention platform",
-          features: ["Churn prediction", "Retention campaigns", "Customer segmentation", "Risk scoring"],
-          pricing: "$299 - $1,999/month",
-          delivery: "3-5 weeks",
-          benefits: "Reduce churn by 40% and increase customer lifetime value by 60%",
+          name: "Smart Churn Predictor"
+          description: "AI-powered customer churn prediction and retention platform"
+          features: ["Churn prediction", "Retention campaigns", "Customer segmentation", "Risk scoring"]
+          pricing: "$299 - $1,999/month"
+          delivery: "3-5 weeks"
+          benefits: "Reduce churn by 40% and increase customer lifetime value by 60%"
           roi: "Expected ROI: 250-400% within 4 months"
         }
       ]
@@ -155,9 +156,9 @@ export default function EnhancedServices() {
   ]
 
   const stats = [
-    { label: "Projects Completed", value: "500+", icon: Award },
-    { label: "Client Satisfaction", value: "99.9%", icon: Star },
-    { label: "Uptime Guarantee", value: "99.9%", icon: Shield },
+    { label: "Projects Completed", value: "500+", icon: Award }
+    { label: "Client Satisfaction", value: "99.9%", icon: Star }
+    { label: "Uptime Guarantee", value: "99.9%", icon: Shield }
     { label: "Expert Team", value: "50+", icon: Users }
   ]
 
@@ -174,10 +175,10 @@ export default function EnhancedServices() {
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              Enhanced Technology Services
+              Enhanced Technology Services;
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to accelerate your business growth, 
+              Comprehensive technology solutions designed to accelerate your business growth;
               enhance security, and drive innovation across all digital touchpoints.
             </p>
             <div className="flex justify-center space-x-4">
@@ -201,7 +202,7 @@ export default function EnhancedServices() {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8">
               {stats.map((stat, index) => {
-                const IconComponent = stat.icon
+                const IconComponent = stat.icon;
                 return (
                   <div key={index} className="text-center">
                     <IconComponent className="w-12 h-12 text-blue-600 mx-auto mb-4" />
@@ -220,7 +221,7 @@ export default function EnhancedServices() {
             <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Our Service Categories</h2>
             <div className="space-y-16">
               {serviceCategories.map((category) => {
-                const IconComponent = category.icon
+                const IconComponent = category.icon;
                 return (
                   <div key={category.id} className="bg-white rounded-lg shadow-lg p-8">
                     <div className="flex items-center mb-8">

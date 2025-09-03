@@ -1,134 +1,134 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Linkedin, 
-  Twitter, 
-  Mail, 
-  Users, 
-  Award, 
-  Heart, 
-  Lightbulb, 
-  Target,
-  Globe,
-  Shield,
-  Zap,
-  Star
+  Linkedin;
+  Twitter;
+  Mail;
+  Users;
+  Award;
+  Heart;
+  Lightbulb;
+  Target;
+  Globe;
+  Shield;
+  Zap;
+  Star;
 } from 'lucide-react';
 
 const AboutTeam = () => {
   const leadershipTeam = [
     {
-      name: 'Dr. Sarah Chen',
-      position: 'Chief Executive Officer',
-      bio: 'Former AI researcher at Stanford with 15+ years in enterprise technology. Led three successful tech startups to acquisition.',
-      image: '/images/team/sarah-chen.jpg',
-      linkedin: 'https://linkedin.com/in/sarah-chen',
-      twitter: 'https://twitter.com/sarahchen',
-      email: 'sarah.chen@ziontechgroup.com',
-      expertise: ['AI Strategy', 'Enterprise Technology', 'Strategic Leadership'],
+      name: 'Dr. Sarah Chen'
+      position: 'Chief Executive Officer'
+      bio: 'Former AI researcher at Stanford with 15+ years in enterprise technology. Led three successful tech startups to acquisition.'
+      image: '/images/team/sarah-chen.jpg'
+      linkedin: 'https://linkedin.com/in/sarah-chen'
+      twitter: 'https://twitter.com/sarahchen'
+      email: 'sarah.chen@ziontechgroup.com'
+      expertise: ['AI Strategy', 'Enterprise Technology', 'Strategic Leadership']
       achievements: ['Forbes 30 Under 30', 'MIT Technology Review Innovator', '500+ Team Members Led']
-    },
+    }
     {
-      name: 'Marcus Rodriguez',
-      position: 'Chief Technology Officer',
-      bio: 'Ex-Google engineer specializing in scalable cloud infrastructure and AI systems. Built systems serving 100M+ users.',
-      image: '/images/team/marcus-rodriguez.jpg',
-      linkedin: 'https://linkedin.com/in/marcus-rodriguez',
-      twitter: 'https://twitter.com/marcusrodriguez',
-      email: 'marcus.rodriguez@ziontechgroup.com',
-      expertise: ['Cloud Architecture', 'AI Systems', 'Scalable Infrastructure'],
+      name: 'Marcus Rodriguez'
+      position: 'Chief Technology Officer'
+      bio: 'Ex-Google engineer specializing in scalable cloud infrastructure and AI systems. Built systems serving 100M+ users.'
+      image: '/images/team/marcus-rodriguez.jpg'
+      linkedin: 'https://linkedin.com/in/marcus-rodriguez'
+      twitter: 'https://twitter.com/marcusrodriguez'
+      email: 'marcus.rodriguez@ziontechgroup.com'
+      expertise: ['Cloud Architecture', 'AI Systems', 'Scalable Infrastructure']
       achievements: ['Google Cloud MVP', '15+ Patents', 'Led 50+ Engineering Teams']
-    },
+    }
     {
-      name: 'Dr. Emily Watson',
-      position: 'Chief AI Officer',
-      bio: 'Leading researcher in machine learning and natural language processing. Published 50+ papers in top AI conferences.',
-      image: '/images/team/emily-watson.jpg',
-      linkedin: 'https://linkedin.com/in/emily-watson',
-      twitter: 'https://twitter.com/emilywatson',
-      email: 'emily.watson@ziontechgroup.com',
-      expertise: ['Machine Learning', 'NLP', 'AI Ethics'],
+      name: 'Dr. Emily Watson'
+      position: 'Chief AI Officer'
+      bio: 'Leading researcher in machine learning and natural language processing. Published 50+ papers in top AI conferences.'
+      image: '/images/team/emily-watson.jpg'
+      linkedin: 'https://linkedin.com/in/emily-watson'
+      twitter: 'https://twitter.com/emilywatson'
+      email: 'emily.watson@ziontechgroup.com'
+      expertise: ['Machine Learning', 'NLP', 'AI Ethics']
       achievements: ['NeurIPS Best Paper', 'MIT CSAIL Alumni', 'AI Ethics Committee Chair']
-    },
+    }
     {
-      name: 'David Kim',
-      position: 'Chief Financial Officer',
-      bio: 'Former investment banker with deep expertise in tech financing and strategic partnerships. Raised $500M+ in funding.',
-      image: '/images/team/david-kim.jpg',
-      linkedin: 'https://linkedin.com/in/david-kim',
-      twitter: 'https://twitter.com/davidkim',
-      email: 'david.kim@ziontechgroup.com',
-      expertise: ['Financial Strategy', 'Strategic Partnerships', 'Growth Financing'],
+      name: 'David Kim'
+      position: 'Chief Financial Officer'
+      bio: 'Former investment banker with deep expertise in tech financing and strategic partnerships. Raised $500M+ in funding.'
+      image: '/images/team/david-kim.jpg'
+      linkedin: 'https://linkedin.com/in/david-kim'
+      twitter: 'https://twitter.com/davidkim'
+      email: 'david.kim@ziontechgroup.com'
+      expertise: ['Financial Strategy', 'Strategic Partnerships', 'Growth Financing']
       achievements: ['Goldman Sachs Alumni', '500M+ Funding Raised', '15+ Strategic Partnerships']
     }
   ];
 
   const companyValues = [
     {
-      icon: Heart,
-      title: 'Human-Centered AI',
-      description: 'We believe AI should augment human capabilities, not replace them. Every solution we build puts people first.',
+      icon: Heart;
+      title: 'Human-Centered AI'
+      description: 'We believe AI should augment human capabilities, not replace them. Every solution we build puts people first.'
       color: 'from-red-500 to-pink-500'
-    },
+    }
     {
-      icon: Shield,
-      title: 'Trust & Security',
-      description: 'Security and privacy are foundational to everything we do. We build with enterprise-grade security standards.',
+      icon: Shield;
+      title: 'Trust & Security'
+      description: 'Security and privacy are foundational to everything we do. We build with enterprise-grade security standards.'
       color: 'from-blue-500 to-cyan-500'
-    },
+    }
     {
-      icon: Lightbulb,
-      title: 'Innovation First',
-      description: 'We constantly push the boundaries of what\'s possible, exploring cutting-edge technologies to solve real problems.',
+      icon: Lightbulb;
+      title: 'Innovation First'
+      description: 'We constantly push the boundaries of what\'s possible, exploring cutting-edge technologies to solve real problems.'
       color: 'from-yellow-500 to-orange-500'
-    },
+    }
     {
-      icon: Target,
-      title: 'Results-Driven',
-      description: 'We measure success by the tangible impact we create for our clients, not just the technology we build.',
+      icon: Target;
+      title: 'Results-Driven'
+      description: 'We measure success by the tangible impact we create for our clients, not just the technology we build.'
       color: 'from-green-500 to-emerald-500'
-    },
+    }
     {
-      icon: Globe,
-      title: 'Global Impact',
-      description: 'Our solutions serve clients worldwide, and we\'re committed to making technology accessible across all regions.',
+      icon: Globe;
+      title: 'Global Impact'
+      description: 'Our solutions serve clients worldwide, and we\'re committed to making technology accessible across all regions.'
       color: 'from-purple-500 to-indigo-500'
-    },
+    }
     {
-      icon: Zap,
-      title: 'Speed & Agility',
-      description: 'We move fast, adapt quickly, and deliver solutions that keep pace with our clients\' evolving needs.',
+      icon: Zap;
+      title: 'Speed & Agility'
+      description: 'We move fast, adapt quickly, and deliver solutions that keep pace with our clients\' evolving needs.'
       color: 'from-amber-500 to-yellow-500'
     }
   ];
 
   const teamStats = [
-    { number: '500+', label: 'Team Members', icon: Users },
-    { number: '50+', label: 'Countries Served', icon: Globe },
-    { number: '1000+', label: 'Projects Delivered', icon: Award },
+    { number: '500+', label: 'Team Members', icon: Users }
+    { number: '50+', label: 'Countries Served', icon: Globe }
+    { number: '1000+', label: 'Projects Delivered', icon: Award }
     { number: '99.9%', label: 'Uptime SLA', icon: Star }
   ];
 
   const cultureHighlights = [
     {
-      title: 'Remote-First Culture',
-      description: 'Our team spans 25+ countries, working together seamlessly through cutting-edge collaboration tools.',
-      icon: Globe
-    },
+      title: 'Remote-First Culture'
+      description: 'Our team spans 25+ countries, working together seamlessly through cutting-edge collaboration tools.'
+      icon: Globe;
+    }
     {
-      title: 'Continuous Learning',
-      description: 'We invest heavily in our team\'s growth with unlimited learning budgets and dedicated development time.',
-      icon: Lightbulb
-    },
+      title: 'Continuous Learning'
+      description: 'We invest heavily in our team\'s growth with unlimited learning budgets and dedicated development time.'
+      icon: Lightbulb;
+    }
     {
-      title: 'Diversity & Inclusion',
-      description: 'We celebrate diverse perspectives and create an inclusive environment where everyone can thrive.',
-      icon: Users
-    },
+      title: 'Diversity & Inclusion'
+      description: 'We celebrate diverse perspectives and create an inclusive environment where everyone can thrive.'
+      icon: Users;
+    }
     {
-      title: 'Work-Life Balance',
-      description: 'We believe in sustainable productivity and support our team\'s well-being with flexible schedules.',
-      icon: Heart
+      title: 'Work-Life Balance'
+      description: 'We believe in sustainable productivity and support our team\'s well-being with flexible schedules.'
+      icon: Heart;
     }
   ];
 
@@ -137,30 +137,30 @@ const AboutTeam = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="container mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Meet Our
+              Meet Our;
               <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Leadership Team
+                Leadership Team;
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Driven by innovation, guided by expertise, and united by a shared vision 
+              Driven by innovation, guided by expertise, and united by a shared vision;
               to transform the future of technology.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="px-6 py-3 bg-cyan-500/20 border border-cyan-500/30 rounded-lg text-cyan-400">
-                <span className="font-semibold">500+</span> Team Members
+                <span className="font-semibold">500+</span> Team Members;
               </div>
               <div className="px-6 py-3 bg-purple-500/20 border border-purple-500/30 rounded-lg text-purple-400">
-                <span className="font-semibold">25+</span> Countries
+                <span className="font-semibold">25+</span> Countries;
               </div>
               <div className="px-6 py-3 bg-blue-500/20 border border-blue-500/30 rounded-lg text-blue-400">
-                <span className="font-semibold">15+</span> Years Experience
+                <span className="font-semibold">15+</span> Years Experience;
               </div>
             </div>
           </motion.div>
@@ -170,7 +170,7 @@ const AboutTeam = () => {
       {/* Leadership Team */}
       <section className="py-20 px-6">
         <div className="container mx-auto">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -185,7 +185,7 @@ const AboutTeam = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {leadershipTeam.map((member, index) => (
-              <motion.div
+              <motion.div;
                 key={member.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -229,7 +229,7 @@ const AboutTeam = () => {
                   </div>
 
                   <div className="flex items-center gap-4">
-                    <a
+                    <a;
                       href={member.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -237,7 +237,7 @@ const AboutTeam = () => {
                     >
                       <Linkedin className="w-5 h-5" />
                     </a>
-                    <a
+                    <a;
                       href={member.twitter}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -245,7 +245,7 @@ const AboutTeam = () => {
                     >
                       <Twitter className="w-5 h-5" />
                     </a>
-                    <a
+                    <a;
                       href={`mailto:${member.email}`}
                       className="p-2 bg-slate-700/50 text-gray-300 hover:text-cyan-400 hover:bg-slate-700 rounded-lg transition-all duration-300"
                     >
@@ -262,7 +262,7 @@ const AboutTeam = () => {
       {/* Company Values */}
       <section className="py-20 px-6 bg-slate-800/20">
         <div className="container mx-auto">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -277,7 +277,7 @@ const AboutTeam = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {companyValues.map((value, index) => (
-              <motion.div
+              <motion.div;
                 key={value.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -301,7 +301,7 @@ const AboutTeam = () => {
         <div className="container mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {teamStats.map((stat, index) => (
-              <motion.div
+              <motion.div;
                 key={stat.label}
                 initial={{ opacity: 0, scale: 0.5 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -323,7 +323,7 @@ const AboutTeam = () => {
       {/* Culture Highlights */}
       <section className="py-20 px-6 bg-slate-800/20">
         <div className="container mx-auto">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -332,14 +332,14 @@ const AboutTeam = () => {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Our Culture</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              We're building more than a company - we're building a community of innovators, 
+              We're building more than a company - we're building a community of innovators;
               problem-solvers, and lifelong learners.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {cultureHighlights.map((highlight, index) => (
-              <motion.div
+              <motion.div;
                 key={highlight.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -363,7 +363,7 @@ const AboutTeam = () => {
       {/* Join Our Team CTA */}
       <section className="py-20 px-6">
         <div className="container mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -371,24 +371,24 @@ const AboutTeam = () => {
             className="bg-gradient-to-r from-slate-800 to-slate-700 rounded-2xl p-12 border border-slate-600/50"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Join Our Growing Team
+              Join Our Growing Team;
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Ready to shape the future of technology? We're always looking for passionate, 
+              Ready to shape the future of technology? We're always looking for passionate;
               innovative minds to join our mission.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a
+              <a;
                 href="/careers"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 hover:scale-105"
               >
-                View Open Positions
+                View Open Positions;
               </a>
-              <a
+              <a;
                 href="/contact"
                 className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
               >
-                Get in Touch
+                Get in Touch;
               </a>
             </div>
           </motion.div>
@@ -396,6 +396,6 @@ const AboutTeam = () => {
       </section>
     </div>
   );
-};
+}
 
 export default AboutTeam;

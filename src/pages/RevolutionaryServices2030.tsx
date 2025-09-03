@@ -2,52 +2,52 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
-  Brain,
-  Rocket,
-  Zap,
-  Cpu,
-  Heart,
-  Globe,
-  Shield,
-  Lock,
-  TrendingUp,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  ChevronDown,
-  ChevronUp,
-  Phone,
-  Mail,
-  Globe,
-  MapPin,
-  DollarSign,
-  TrendingUp,
-  Users,
-  Clock,
-  Award,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Eye,
-  Sparkles,
-  Atom,
-  Leaf,
-  Satellite,
-  Microscope,
-  BarChart3,
-  Workflow,
-  Globe2,
-  Bot,
-  Code,
-  Server,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Zap as ZapIcon,
-  Star as StarIcon,
-  Target as TargetIcon,
-  TrendingUp as TrendingUpIcon
+  Brain;
+  Rocket;
+  Zap;
+  Cpu;
+  Heart;
+  Globe;
+  Shield;
+  Lock;
+  TrendingUp;
+  Star;
+  CheckCircle;
+  ArrowRight;
+  ChevronDown;
+  ChevronUp;
+  Phone;
+  Mail;
+  Globe;
+  MapPin;
+  DollarSign;
+  TrendingUp;
+  Users;
+  Clock;
+  Award;
+  Cpu;
+  Database;
+  Network;
+  Lock;
+  Eye;
+  Sparkles;
+  Atom;
+  Leaf;
+  Satellite;
+  Microscope;
+  BarChart3;
+  Workflow;
+  Globe2;
+  Bot;
+  Code;
+  Server;
+  Chip;
+  Wifi;
+  ShieldCheck;
+  Zap as ZapIcon;
+  Star as StarIcon;
+  Target as TargetIcon;
+  TrendingUp as TrendingUpIcon;
 } from 'lucide-react';
 import { allRevolutionaryServices2030 } from '../data/revolutionaryServices2030';
 
@@ -56,34 +56,34 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');  const [sortBy, setSortBy] = useState('featured');
 
   '
-    { id: 'all', name: 'All Revolutionary Services', icon: Rocket, color: 'from-zion-purple to-zion-orange' },;'
-    { id: 'AI Services', name: 'AI Services', icon: Brain, color: 'from-zion-cyan to-zion-purple' },;'
-    { id: 'Blockchain Services', name: 'Blockchain Services', icon: Lock, color: 'from-zion-purple to-zion-blue' },;'
-    { id: 'Cybersecurity Services', name: 'Cybersecurity Services', icon: Shield, color: 'from-zion-purple to-zion-red' },;'
-    { id: 'Emerging Tech', name: 'Emerging Technology', icon: Cpu, color: 'from-zion-orange to-zion-green' };
+    { id: 'all', name: 'All Revolutionary Services', icon: Rocket, color: 'from-zion-purple to-zion-orange' },'
+    { id: 'AI Services', name: 'AI Services', icon: Brain, color: 'from-zion-cyan to-zion-purple' },'
+    { id: 'Blockchain Services', name: 'Blockchain Services', icon: Lock, color: 'from-zion-purple to-zion-blue' },'
+    { id: 'Cybersecurity Services', name: 'Cybersecurity Services', icon: Shield, color: 'from-zion-purple to-zion-red' },'
+    { id: 'Emerging Tech', name: 'Emerging Technology', icon: Cpu, color: 'from-zion-orange to-zion-green' }
   ];
 
   '
-    { id: 'all', name: 'All Prices', range: 'All' },;'
-    { id: 'budget', name: 'Budget', range: '$1,000 - $10,000' },;'
-    { id: 'mid-range', name: 'Mid-Range', range: '$10,000 - $25,000' },;'
-    { id: 'enterprise', name: 'Enterprise', range: '$25,000+' };
+    { id: 'all', name: 'All Prices', range: 'All' },'
+    { id: 'budget', name: 'Budget', range: '$1,000 - $10,000' },'
+    { id: 'mid-range', name: 'Mid-Range', range: '$10,000 - $25,000' },'
+    { id: 'enterprise', name: 'Enterprise', range: '$25,000+' }
   ];
 '
   const sortOptions: unknown = [;''
-    { id: 'featured', name: 'Featured' },;''
-    { id: 'price-low', name: 'Price: Low to High' },;''
-    { id: 'price-high', name: 'Price: High to Low' },;''
-    { id: 'innovation', name: 'Innovation Level' },;'    { id: 'market-size', name: 'Market Size' };
+    { id: 'featured', name: 'Featured' },''
+    { id: 'price-low', name: 'Price: Low to High' },''
+    { id: 'price-high', name: 'Price: High to Low' },''
+    { id: 'innovation', name: 'Innovation Level' },'    { id: 'market-size', name: 'Market Size' }
   ];
 
   // Combine all revolutionary services;
   const allServices: unknown = [;
-    ...REVOLUTIONARY_SERVICES_2030,;
+    ...REVOLUTIONARY_SERVICES_2030;
     ...EMERGING_TECH_SERVICES_2030;
   ];
 
-  // Filter and sort services
+  // Filter and sort services;
   const filteredServices = allServices.filter(service => {;
     const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;
     const priceMatch = selectedPriceRange === 'all' ||
@@ -94,7 +94,7 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
     return categoryMatch && priceMatch;
   });
 
-// Service Card Component
+// Service Card Component;
 const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 'itService' | 'aiService' }) => {  const [isExpanded, setIsExpanded] = useState(false);
 
   '
@@ -107,7 +107,7 @@ const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 
     if (category.includes('Ethics')) return Eye;'
     if (category.includes('Multimodal')) return Cpu;'
     if (category.includes('Autonomous')) return Bot;
-    return Zap};
+    return Zap}
 
   const IconComponent: unknown = getIcon(service.category) ;
 
@@ -252,9 +252,9 @@ const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 
         </div>
       </div>
     </motion.div>) ;
-};
+}
 
-// Main Component
+// Main Component;
 export default function RevolutionaryServices2030(...args: unknown[]): unknown {  const [activeTab, setActiveTab] = useState<'all' | 'microSaas' | 'itServices' | 'aiServices'>('all');
 
   '
@@ -267,7 +267,7 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
           ...allRevolutionaryServices2030.itServices.map(service => ({ service, type: 'itService' as const })),'
           ...allRevolutionaryServices2030.aiServices.map(service => ({ service, type: 'aiService' as const }))
         ]}
-  };
+  }
 """
   return (""""
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"""
@@ -334,7 +334,7 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
                 }`}
               >
 ;"""
-          {/* Services Grid */};""""
+          {/* Services Grid */}""""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <AnimatePresence>;
               {sortedServices.map((service, index) => {;
@@ -344,19 +344,19 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
                 return (<motion.div;
                     key = {service.id}
                     initial = {}
-  { opacity: 0,
+  { opacity: 0;
   y: 20;
 }}
                     animate = {}
-  { opacity: 1,
+  { opacity: 1;
   y: 0;
 }}
                     exit = {}
-  { opacity: 0,
+  { opacity: 0;
   y: -20;
 }}
                     transition = {}
-  { duration: 0.5,
+  { duration: 0.5;
   delay: index * 0.1;
 """
 }}""""
@@ -371,10 +371,10 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
               </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                View Pricing
+                View Pricing;
               </Link>
               <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
-                Contact Us
+                Contact Us;
               </Link>
             </div>
           </motion.div>
@@ -385,12 +385,12 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
 }
 
 
-export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
+export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent }
 
-export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
+export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent }
 
-export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
+export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent }
 
-export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
+export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent }
 
-export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
+export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent }

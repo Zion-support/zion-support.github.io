@@ -32,12 +32,12 @@ export function middleware(_request: NextRequest) {;
   response.headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
   // Content Security Policy;
   const csp = [;
-    "default-src "self"",;
-    "script-src "self" "unsafe-eval" "unsafe-inline"",;
-    "style-src "self" "unsafe-inline"",;
-    "img-src "self" data: https:",;
-    "font-src "self"",;
-    "connect-src "self"",;
+    "default-src "self""
+    "script-src "self" "unsafe-eval" "unsafe-inline""
+    "style-src "self" "unsafe-inline""
+    "img-src "self" data: https:"
+    "font-src "self""
+    "connect-src "self""
     "frame-ancestors "none"";
   ].join("; ");
   response.headers.set("Content-Security-Policy", csp);
@@ -47,18 +47,15 @@ export function middleware(_request: NextRequest) {;
   const { pathname } = request.nextUrl;
   // Redirect old routes to new ones;
   if (pathname.startsWith("/old-")) {;
-    return NextResponse.redirect(new URL(pathname.replace("/old-", "/"), request.url));,
+    return NextResponse.redirect(new URL(pathname.replace("/old-", "/"), request.url));
 }
-;
   // Block suspicious requests;
   if (pathname.includes("..") || pathname.includes("//")) {;
-    return new NextResponse("Forbidden", { status: 403 });,
+    return new NextResponse("Forbidden", { status: 403 });
 }
-;
   // Add response time header;
   response.headers.set("X-Response-Time", `${Date.now() - startTime}ms`);
   return response}
-;
 export const config = {";
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)]}
 ";

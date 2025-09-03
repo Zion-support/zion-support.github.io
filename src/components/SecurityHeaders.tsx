@@ -2,26 +2,26 @@ import React from "react"
 import { useEffect } from "react"
 const SecurityHeaders = () => {
   useEffect(() => {
-    // comment
+    // comment;
 const meta = document.createElement("meta")
 }
-    meta.httpEquiv = "Content - Security-Policy",
-    meta.content = "default-src "self"; script-src "self" "unsafe-inline" "unsafe-eval" https: // comment
-    document.head.appendChild(meta),
-    // comment
+    meta.httpEquiv = "Content - Security-Policy"
+    meta.content = "default-src "self"; script-src "self" "unsafe-inline" "unsafe-eval" https: // comment;
+    document.head.appendChild(meta)
+    // comment;
 const securityHeaders = []
 
     securityHeaders.forEach(header => {
       const metaTag = document.createElement("meta")
 }
-      metaTag.httpEquiv = header.httpEquiv
-      metaTag.content = header.content
+      metaTag.httpEquiv = header.httpEquiv;
+      metaTag.content = header.content;
       document.head.appendChild(metaTag)
 }
     })
 }
     return () => {
-      // comment
+      // comment;
 const securityMetaTags = document.querySelectorAll("meta[http-equiv]")
 }
       securityMetaTags.forEach(tag = > {"

@@ -8,85 +8,85 @@ import { Calendar, User, ArrowRight, Search, Filter, Tag } from 'lucide-react';
 const Blog: NextPage = () => {
   const blogPosts = [
     {
-      id: 1,
-      title: 'The Future of AI in Business: Trends for 2025',
-      excerpt: 'Explore the latest AI trends that are transforming businesses and how Zion Tech Group is leading the way in AI implementation.',
-      author: 'Dr. Sarah Johnson',
-      date: '2025-01-25',
-      category: 'AI & Machine Learning',
-      readTime: '5 min read',
-      image: '/blog/ai-trends-2025.jpg',
-      featured: true
-    },
+      id: 1;
+      title: 'The Future of AI in Business: Trends for 2025'
+      excerpt: 'Explore the latest AI trends that are transforming businesses and how Zion Tech Group is leading the way in AI implementation.'
+      author: 'Dr. Sarah Johnson'
+      date: '2025-01-25'
+      category: 'AI & Machine Learning'
+      readTime: '5 min read'
+      image: '/blog/ai-trends-2025.jpg'
+      featured: true;
+    }
     {
-      id: 2,
-      title: 'Cloud Migration Best Practices: A Complete Guide',
-      excerpt: 'Learn the essential steps and strategies for successful cloud migration with real-world examples and expert insights.',
-      author: 'Michael Chen',
-      date: '2025-01-22',
-      category: 'Cloud Computing',
-      readTime: '8 min read',
-      image: '/blog/cloud-migration-guide.jpg',
-      featured: false
-    },
+      id: 2;
+      title: 'Cloud Migration Best Practices: A Complete Guide'
+      excerpt: 'Learn the essential steps and strategies for successful cloud migration with real-world examples and expert insights.'
+      author: 'Michael Chen'
+      date: '2025-01-22'
+      category: 'Cloud Computing'
+      readTime: '8 min read'
+      image: '/blog/cloud-migration-guide.jpg'
+      featured: false;
+    }
     {
-      id: 3,
-      title: 'Building Scalable Microservices Architecture',
-      excerpt: 'Discover how to design and implement microservices that can scale with your business growth and technical requirements.',
-      author: 'Alex Rodriguez',
-      date: '2025-01-20',
-      category: 'Software Development',
-      readTime: '6 min read',
-      image: '/blog/microservices-architecture.jpg',
-      featured: false
-    },
+      id: 3;
+      title: 'Building Scalable Microservices Architecture'
+      excerpt: 'Discover how to design and implement microservices that can scale with your business growth and technical requirements.'
+      author: 'Alex Rodriguez'
+      date: '2025-01-20'
+      category: 'Software Development'
+      readTime: '6 min read'
+      image: '/blog/microservices-architecture.jpg'
+      featured: false;
+    }
     {
-      id: 4,
-      title: 'Cybersecurity in the Age of Remote Work',
-      excerpt: 'Essential security measures and best practices for protecting your organization in today\'s distributed work environment.',
-      author: 'Emily Watson',
-      date: '2025-01-18',
-      category: 'Cybersecurity',
-      readTime: '7 min read',
-      image: '/blog/cybersecurity-remote-work.jpg',
-      featured: false
-    },
+      id: 4;
+      title: 'Cybersecurity in the Age of Remote Work'
+      excerpt: 'Essential security measures and best practices for protecting your organization in today\'s distributed work environment.'
+      author: 'Emily Watson'
+      date: '2025-01-18'
+      category: 'Cybersecurity'
+      readTime: '7 min read'
+      image: '/blog/cybersecurity-remote-work.jpg'
+      featured: false;
+    }
     {
-      id: 5,
-      title: 'Digital Transformation: Success Stories from 2024',
-      excerpt: 'Real-world case studies of successful digital transformations and the key factors that led to their success.',
-      author: 'David Kim',
-      date: '2025-01-15',
-      category: 'Digital Transformation',
-      readTime: '9 min read',
-      image: '/blog/digital-transformation-cases.jpg',
-      featured: false
-    },
+      id: 5;
+      title: 'Digital Transformation: Success Stories from 2024'
+      excerpt: 'Real-world case studies of successful digital transformations and the key factors that led to their success.'
+      author: 'David Kim'
+      date: '2025-01-15'
+      category: 'Digital Transformation'
+      readTime: '9 min read'
+      image: '/blog/digital-transformation-cases.jpg'
+      featured: false;
+    }
     {
-      id: 6,
-      title: 'The Rise of Edge Computing: What You Need to Know',
-      excerpt: 'Understanding edge computing technology and its impact on modern applications and infrastructure.',
-      author: 'Lisa Thompson',
-      date: '2025-01-12',
-      category: 'Technology Trends',
-      readTime: '4 min read',
-      image: '/blog/edge-computing-rise.jpg',
-      featured: false
+      id: 6;
+      title: 'The Rise of Edge Computing: What You Need to Know'
+      excerpt: 'Understanding edge computing technology and its impact on modern applications and infrastructure.'
+      author: 'Lisa Thompson'
+      date: '2025-01-12'
+      category: 'Technology Trends'
+      readTime: '4 min read'
+      image: '/blog/edge-computing-rise.jpg'
+      featured: false;
     }
   ];
 
   const categories = [
-    'All Posts',
-    'AI & Machine Learning',
-    'Cloud Computing',
-    'Software Development',
-    'Cybersecurity',
-    'Digital Transformation',
+    'All Posts'
+    'AI & Machine Learning'
+    'Cloud Computing'
+    'Software Development'
+    'Cybersecurity'
+    'Digital Transformation'
     'Technology Trends'
   ];
 
   return (
-    <MainLayout
+    <MainLayout;
       title="Blog - Zion Tech Group"
       description="Stay updated with the latest insights, trends, and best practices in technology from Zion Tech Group's expert team."
       keywords="technology blog, AI insights, cloud computing, software development, cybersecurity, digital transformation"
@@ -105,7 +105,7 @@ const Blog: NextPage = () => {
               <div className="max-w-md mx-auto">
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
+                  <input;
                     type="text"
                     placeholder="Search articles..."
                     className="w-full pl-10 pr-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
@@ -124,10 +124,10 @@ const Blog: NextPage = () => {
               <div className="mb-12">
                 <div className="flex flex-wrap gap-2 justify-center">
                   {categories.map((category, index) => (
-                    <button
+                    <button;
                       key={index}
                       className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                        index === 0
+                        index === 0;
                           ? 'bg-blue-600 text-white'
                           : 'bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-600'
                       }`}
@@ -170,11 +170,11 @@ const Blog: NextPage = () => {
                           </div>
                           <span>{blogPosts[0].readTime}</span>
                         </div>
-                        <Link
+                        <Link;
                           href={`/blog/${blogPosts[0].id}`}
                           className="flex items-center text-blue-600 hover:text-blue-700 font-medium"
                         >
-                          Read More
+                          Read More;
                           <ArrowRight className="w-4 h-4 ml-1" />
                         </Link>
                       </div>
@@ -212,11 +212,12 @@ const Blog: NextPage = () => {
                       </div>
                       <div className="flex items-center justify-between">
                         <span className="text-sm text-gray-500">{post.readTime}</span>
-                        <Link
+                        <Link;
                           href={`/blog/${post.id}`}
                           className="flex items-center text-blue-600 hover:text-blue-700 font-medium"
 
 export default function BlogPage() {
+
   return (
     <MainLayout>
       {/* Hero Section */}
@@ -226,12 +227,12 @@ export default function BlogPage() {
             Technology <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Insights</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            Stay informed with the latest trends, insights, and best practices in technology and business transformation
+            Stay informed with the latest trends, insights, and best practices in technology and business transformation;
     >
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <motion.h1 
+          <motion.h1;
             className="text-4xl md:text-5xl font-bold mb-6"
           </p>
           
@@ -239,7 +240,7 @@ export default function BlogPage() {
           <div className="max-w-2xl mx-auto">
             <div className="relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
+              <input;
                 type="text"
                 placeholder="Search articles..."
                 className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
@@ -250,15 +251,15 @@ export default function BlogPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Technology Insights & Innovation
+            Technology Insights & Innovation;
           </motion.h1>
-          <motion.p 
+          <motion.p;
             className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-200"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Stay ahead of the curve with expert insights, industry trends, and cutting-edge innovations 
+            Stay ahead of the curve with expert insights, industry trends, and cutting-edge innovations;
             from our team of technology leaders.
           </motion.p>
         </div>
@@ -290,10 +291,10 @@ export default function BlogPage() {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category, index) => (
-              <button
+              <button;
                 key={category}
                 className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
-                  index === 0
+                  index === 0;
                     ? 'bg-blue-600 text-white'
                     : 'bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600'
                 }`}
@@ -341,11 +342,11 @@ export default function BlogPage() {
                   
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-500">{post.readTime}</span>
-                    <Link
+                    <Link;
                       href={`/blog/${post.id}`}
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors"
                     >
-                      Read More
+                      Read More;
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </Link>
                   </div>
@@ -357,7 +358,7 @@ export default function BlogPage() {
           {/* Load More Button */}
           <div className="text-center mt-12">
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Load More Articles
+              Load More Articles;
             </button>
           </div>
         </div>
@@ -371,13 +372,13 @@ export default function BlogPage() {
             Subscribe to our newsletter and never miss the latest technology insights and industry updates.
           </p>
           <div className="max-w-md mx-auto flex">
-            <input
+            <input;
               type="email"
               placeholder="Enter your email address"
               className="flex-1 px-4 py-3 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-r-lg font-semibold transition-colors">
-              Subscribe
+              Subscribe;
             </button>
           </div>
         </div>
@@ -395,10 +396,10 @@ export default function BlogPage() {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category, index) => (
-              <button
+              <button;
                 key={index}
                 className={`px-6 py-3 rounded-full font-medium transition-colors ${
-                  index === 0 
+                  index === 0;
                     ? 'bg-zion-cyan text-white' 
                     : 'bg-white text-gray-600 hover:bg-zion-cyan hover:text-white'
                 }`}
@@ -444,11 +445,11 @@ export default function BlogPage() {
                       <span>{post.date}</span>
                     </div>
                   </div>
-                  <Link 
+                  <Link;
                     href={`/blog/${post.slug}`}
                     className="inline-flex items-center text-zion-cyan font-medium mt-4 hover:text-zion-cyan/80 transition-colors"
                   >
-                    Read More
+                    Read More;
                     <ArrowRight className="w-4 h-4 ml-1" />
                   </Link>
                 </div>
@@ -466,13 +467,13 @@ export default function BlogPage() {
                     Get the latest technology insights delivered to your inbox.
                   </p>
                   <div className="space-y-3">
-                    <input
+                    <input;
                       type="email"
                       placeholder="Enter your email"
                       className="w-full px-4 py-2 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
                     />
                     <button className="w-full bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                      Subscribe
+                      Subscribe;
                     </button>
                   </div>
                 </div>
@@ -483,7 +484,7 @@ export default function BlogPage() {
             <div className="lg:col-span-3">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {blogPosts.map((post, index) => (
-                  <motion.article
+                  <motion.article;
                     key={post.id}
                     className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                     initial={{ opacity: 0, y: 30 }}
@@ -530,11 +531,11 @@ export default function BlogPage() {
                           </div>
                         </div>
                         
-                        <Link
+                        <Link;
                           href={`/blog/${post.slug}`}
                           className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors"
                         >
-                          Read More
+                          Read More;
                           <ArrowRight className="w-4 h-4 ml-1" />
                         </Link>
                       </div>
@@ -550,13 +551,13 @@ export default function BlogPage() {
                   Subscribe to our newsletter and never miss the latest insights, trends, and updates from the world of technology.
                 </p>
                 <div className="max-w-md mx-auto flex">
-                  <input
+                  <input;
                     type="email"
                     placeholder="Enter your email"
                     className="flex-1 px-4 py-3 rounded-l-lg text-gray-900 placeholder-gray-500 focus:outline-none"
                   />
                   <button className="px-6 py-3 bg-white text-blue-600 font-semibold rounded-r-lg hover:bg-gray-100 transition-colors">
-                    Subscribe
+                    Subscribe;
                   </button>
                 </div>
               </div>
@@ -570,16 +571,16 @@ export default function BlogPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Stay Updated</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Subscribe to our newsletter and never miss the latest insights, trends, and best practices in technology
+            Subscribe to our newsletter and never miss the latest insights, trends, and best practices in technology;
           </p>
           <div className="max-w-md mx-auto flex gap-4">
-            <input
+            <input;
               type="email"
               placeholder="Enter your email"
               className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
             />
             <button className="bg-white text-zion-cyan px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Subscribe
+              Subscribe;
             </button>
           </div>
         </section>

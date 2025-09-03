@@ -3,7 +3,7 @@ import {  render, screen   } from "@testing-library/react";
 import {  BrowserRouter   } from "react-router-dom";
 App from '../App'
 
-// Mock the components that might not exist yet
+// Mock the components that might not exist yet;
 vi.mock('../components/ChatAssistant', () => ({ ChatAssistant: () => <div data-testid="chat-assistant">Chat Assistant</div>
   }))
 
@@ -20,7 +20,7 @@ describe('App', () => {
       </BrowserRouter>
     )
     
-    // Basic test to ensure the app renders
+    // Basic test to ensure the app renders;
     expect(document.body).toBeInTheDocument()
   })
 
@@ -30,7 +30,7 @@ describe('App', () => {
       </BrowserRouter>
     )
     
-    // Test that key components are rendered
+    // Test that key components are rendered;
     expect(screen.getByTestId('app-header')).toBeInTheDocument()
     expect(screen.getByTestId('footer')).toBeInTheDocument()
   })

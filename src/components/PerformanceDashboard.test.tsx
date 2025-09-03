@@ -1,7 +1,7 @@
   it(displays expected content", () => {
     render(<PerformanceDashboard  />)"
-import { render, screen } from &apos;@testing - library/react",
-import PerformanceDashboard from &apos;./PerformanceDashboard
+import { render, screen } from &apos;@testing - library/react"
+import PerformanceDashboard from &apos;./PerformanceDashboard;
 describe(&apos;PerformanceDashboard&apos, () => {
   it(&apos;renders without crashing&apos, () => {
     render()
@@ -11,7 +11,7 @@ describe(&apos;PerformanceDashboard&apos, () => {
   it(&apos;displays expected content&apos, () => {
     render()
 }
-    // comment
+    // comment;
     render(<PerformanceDashboard / >)"
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"

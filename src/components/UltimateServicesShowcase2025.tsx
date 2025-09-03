@@ -1,5 +1,6 @@
 import { Link  } from 'react-router-dom';
 export default function Page() {
+
 ;
 
   return (<div  className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light text-white relative overflow-hidden">
@@ -12,7 +13,7 @@ export default function Page() {
       {/* Header Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -20,16 +21,16 @@ export default function Page() {
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
               Zion Tech Group"
               <span className="block text-4xl md:text-5xl mt-2">
-                Ultimate Services 2025
+                Ultimate Services 2025;
               </span>
             </h1>"
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed">
-              Discover our revolutionary portfolio of cutting-edge micro SAAS solutions, AI-powered innovations, and quantum computing services designed to transform your business and drive competitive advantage in the digital age
+              Discover our revolutionary portfolio of cutting-edge micro SAAS solutions, AI-powered innovations, and quantum computing services designed to transform your business and drive competitive advantage in the digital age;
             </p>
           </motion.div>
 
           {/* Key Statistics */}
-          <motion.div
+          <motion.div;
             className="grid grid - cols - 2 md:grid - cols - 4 gap-6 max - w-5xl mx - auto mb-12"
             variants={containerVariants}            initial="hidden"
             animate="visible"
@@ -53,7 +54,7 @@ export default function Page() {
           </motion.div>
 
           {/* Search and Filter */}
-          <motion.div
+          <motion.div;
             className="max - w-4xl mx - auto mb-8"            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -72,7 +73,7 @@ export default function Page() {
             <div className="flex flex-wrap items-center justify-center gap-4">"
               <div className="flex items-center gap-2">"
                 <label className="text-sm text-gray-300">Sort by:</label>
-                <select
+                <select;
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}"
                   className="glass border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-zion-cyan"
@@ -108,7 +109,7 @@ export default function Page() {
       {/* Services Grid / List */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
         <div  className="max - w-7xl mx -auto">
-          <motion.div
+          <motion.div;
             className={viewMode === 'grid'
               ? "grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8"
               : "space - y-6"            }
@@ -116,7 +117,7 @@ export default function Page() {
             initial="hidden"
             animate="visible"
           >
-            {sortedServices.map((service, index) => (<motion.div
+            {sortedServices.map((service, index) => (<motion.div;
                 key={service.id}
                 variants={itemVariants}
                 className={viewMode === 'grid'
@@ -160,7 +161,7 @@ export default function Page() {
                     {service.features.length > 3 && ("
                       <li className="text-sm text-gray-400 flex items-center">"
                         <span className="w-3 h-3 bg-gray-400 rounded-full mr-2 flex-shrink-0"></span>
-                        +{service.features.length-3} more features
+                        +{service.features.length-3} more features;
                       </li>) }
                   </ul>
                 </div>
@@ -181,7 +182,7 @@ export default function Page() {
       {/* Why Choose Zion Tech Group */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white / 5">;
         <div  className="max - w-7xl mx -auto">
-          <motion.div
+          <motion.div;
             className="text-center mb-16"            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -191,11 +192,11 @@ export default function Page() {
               Why Choose Zion Tech Group?
             </h2>"
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              We combine cutting-edge technology with proven business expertise to deliver solutions that drive real results and competitive advantage
+              We combine cutting-edge technology with proven business expertise to deliver solutions that drive real results and competitive advantage;
             </p>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8"
             variants={containerVariants}            initial="hidden"
             whileInView="visible"
@@ -223,14 +224,14 @@ export default function Page() {
 
       {/* Service Modal */}
       <AnimatePresence>
-        {selectedService && (<motion.div
+        {selectedService && (<motion.div;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}"
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={closeModal}
           >
-            <motion.div
+            <motion.div;
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}"
@@ -239,7 +240,7 @@ export default function Page() {
             >"
               <div className="flex items-start justify-between mb-6">"
                 <div className="text-6xl">{selectedService.icon}</div>
-                <button
+                <button;
                   onClick={closeModal}"
                   className="text-gray-400 hover:text-white transition-colors duration-300"
                 >"
@@ -297,14 +298,14 @@ export default function Page() {
 "
               <div className="flex flex-col sm:flex-row gap-4">"
                 <button className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-6 py-3 rounded-lg font-semibold hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300">
-                  Get Started
+                  Get Started;
                 </button>"
                 <button className="flex-1 glass border border-zion-cyan/30 text-zion-cyan px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan/10 transition-all duration-300">
-                  Contact Sales
+                  Contact Sales;
                 </button>
               </div>
             </motion.div>
           </motion.div>) }
       </AnimatePresence>
-    </div>) };
+    </div>) }
 export default UltimateServicesShowcase2025;'"`

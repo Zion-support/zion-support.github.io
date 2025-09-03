@@ -1,33 +1,36 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
 class SecurityAuditor {
   constructor() {
+
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'security-reports');
     this.ensureDirectories();
   }
 
   ensureDirectories() {
+
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { recursive: true });
     }
   }
 
-  log(message) {
+  log() {
+
     console.log(`[${new Date().toISOString()}] ${message}`);
   }
 
   runNpmAudit() {
+
     this.log('🔍 Running npm audit...');
     
     try {
       const result = execSync('npm audit --json', { 
-        stdio: 'pipe',
-        cwd: this.projectRoot,
+        stdio: 'pipe'
+        cwd: this.projectRoot;
         encoding: 'utf8'
       });
       
@@ -36,46 +39,49 @@ class SecurityAuditor {
       this.log(`✅ NPM audit completed`);
       
       return {
-        success: true,
-        vulnerabilities: auditData.vulnerabilities || {},
-        metadata: auditData.metadata || {},
+        success: true;
+        vulnerabilities: auditData.vulnerabilities || {}
+        metadata: auditData.metadata || {}
         timestamp: new Date().toISOString()
-      };
-    } catch (error) {
+      }
+    } catch() {
+
       this.log(`❌ NPM audit failed: ${error.message}`);
       return {
-        success: false,
-        error: error.message,
+        success: false;
+        error: error.message;
         timestamp: new Date().toISOString()
-      };
+      }
     }
   }
 
   checkSecurityHeaders() {
+
     this.log('🛡️ Checking security headers...');
     
     const securityChecks = {
-      hasCSP: false,
-      hasHSTS: false,
-      hasXFrameOptions: false,
-      hasXContentTypeOptions: false,
-      hasReferrerPolicy: false
-    };
+      hasCSP: false;
+      hasHSTS: false;
+      hasXFrameOptions: false;
+      hasXContentTypeOptions: false;
+      hasReferrerPolicy: false;
+    }
     
     try {
-      // Check for security-related files
+      // Check for security-related files;
       const securityFiles = [
-        'security.config.js',
-        'security.config.ts',
-        'middleware.js',
-        'middleware.ts',
-        'next.config.js',
-        'next.config.ts',
-        'vite.config.js',
+        'security.config.js'
+        'security.config.ts'
+        'middleware.js'
+        'middleware.ts'
+        'next.config.js'
+        'next.config.ts'
+        'vite.config.js'
         'vite.config.ts'
       ];
       
-      for (const file of securityFiles) {
+      for() {
+
         const filePath = path.join(this.projectRoot, file);
         if (fs.existsSync(filePath)) {
           const content = fs.readFileSync(filePath, 'utf8').toLowerCase();
@@ -101,21 +107,23 @@ class SecurityAuditor {
       this.log(`✅ Security headers check completed`);
       
       return {
-        success: true,
-        checks: securityChecks,
+        success: true;
+        checks: securityChecks;
         timestamp: new Date().toISOString()
-      };
-    } catch (error) {
+      }
+    } catch() {
+
       this.log(`❌ Security headers check failed: ${error.message}`);
       return {
-        success: false,
-        error: error.message,
+        success: false;
+        error: error.message;
         timestamp: new Date().toISOString()
-      };
+      }
     }
   }
 
   checkEnvironmentVariables() {
+
     this.log('🔐 Checking environment variables...');
     
     try {
@@ -123,7 +131,8 @@ class SecurityAuditor {
       const foundEnvFiles = [];
       const potentialSecrets = [];
       
-      for (const envFile of envFiles) {
+      for() {
+
         const envPath = path.join(this.projectRoot, envFile);
         if (fs.existsSync(envPath)) {
           foundEnvFiles.push(envFile);
@@ -131,7 +140,8 @@ class SecurityAuditor {
           
           // Check for potential secrets (basic check)
           const lines = content.split('\n');
-          for (const line of lines) {
+          for() {
+
             if (line.includes('SECRET') || line.includes('KEY') || line.includes('TOKEN') || line.includes('PASSWORD')) {
               potentialSecrets.push(line.split('=')[0]);
             }
@@ -142,22 +152,24 @@ class SecurityAuditor {
       this.log(`✅ Environment variables check completed`);
       
       return {
-        success: true,
-        foundEnvFiles,
-        potentialSecrets,
+        success: true;
+        foundEnvFiles;
+        potentialSecrets;
         timestamp: new Date().toISOString()
-      };
-    } catch (error) {
+      }
+    } catch() {
+
       this.log(`❌ Environment variables check failed: ${error.message}`);
       return {
-        success: false,
-        error: error.message,
+        success: false;
+        error: error.message;
         timestamp: new Date().toISOString()
-      };
+      }
     }
   }
 
   checkDependencies() {
+
     this.log('📦 Checking dependencies for security issues...');
     
     try {
@@ -165,15 +177,15 @@ class SecurityAuditor {
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
       
       const allDeps = {
-        ...packageJson.dependencies,
-        ...packageJson.devDependencies
-      };
+        ...packageJson.dependencies;
+        ...packageJson.devDependencies;
+      }
       
       const knownVulnerablePackages = [
-        'lodash',
-        'moment',
-        'jquery',
-        'express',
+        'lodash'
+        'moment'
+        'jquery'
+        'express'
         'request'
       ];
       
@@ -188,22 +200,24 @@ class SecurityAuditor {
       this.log(`✅ Dependencies security check completed`);
       
       return {
-        success: true,
-        totalDependencies: Object.keys(allDeps).length,
-        foundVulnerablePackages,
+        success: true;
+        totalDependencies: Object.keys(allDeps).length;
+        foundVulnerablePackages;
         timestamp: new Date().toISOString()
-      };
-    } catch (error) {
+      }
+    } catch() {
+
       this.log(`❌ Dependencies security check failed: ${error.message}`);
       return {
-        success: false,
-        error: error.message,
+        success: false;
+        error: error.message;
         timestamp: new Date().toISOString()
-      };
+      }
     }
   }
 
   generateReport() {
+
     this.log('📊 Generating security audit report...');
     
     const npmAudit = this.runNpmAudit();
@@ -212,25 +226,25 @@ class SecurityAuditor {
     const dependencies = this.checkDependencies();
     
     const report = {
-      timestamp: new Date().toISOString(),
-      npmAudit,
-      securityHeaders,
-      environmentVariables,
-      dependencies,
+      timestamp: new Date().toISOString()
+      npmAudit;
+      securityHeaders;
+      environmentVariables;
+      dependencies;
       summary: {
-        npmAuditSuccessful: npmAudit.success,
-        securityHeadersConfigured: securityHeaders.success ? Object.values(securityHeaders.checks).filter(Boolean).length : 0,
-        environmentFilesFound: environmentVariables.success ? environmentVariables.foundEnvFiles.length : 0,
-        vulnerablePackagesFound: dependencies.success ? dependencies.foundVulnerablePackages.length : 0
+        npmAuditSuccessful: npmAudit.success;
+        securityHeadersConfigured: securityHeaders.success ? Object.values(securityHeaders.checks).filter(Boolean).length : 0;
+        environmentFilesFound: environmentVariables.success ? environmentVariables.foundEnvFiles.length : 0;
+        vulnerablePackagesFound: dependencies.success ? dependencies.foundVulnerablePackages.length : 0;
       }
-    };
+    }
     
     const reportFile = path.join(this.reportsDir, `security-audit-${Date.now()}.json`);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
     this.log(`📄 Report saved to: ${reportFile}`);
     
-    // Print summary
+    // Print summary;
     console.log('\n🛡️ SECURITY AUDIT SUMMARY');
     console.log('=' * 50);
     console.log(`NPM Audit: ${npmAudit.success ? '✅ Completed' : '❌ Failed'}`);
@@ -243,6 +257,7 @@ class SecurityAuditor {
   }
 
   async run() {
+
     try {
       this.log('🚀 Starting Security Audit');
       
@@ -251,15 +266,17 @@ class SecurityAuditor {
       this.log('✅ Security audit completed');
       
       return report;
-    } catch (error) {
+    } catch() {
+
       this.log(`💥 Security audit error: ${error.message}`);
       throw error;
     }
   }
 }
 
-// Run the security auditor
-if (require.main === module) {
+// Run the security auditor;
+if() {
+
   const auditor = new SecurityAuditor();
   auditor.run().catch(console.error);
 }

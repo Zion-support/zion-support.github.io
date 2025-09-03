@@ -10,12 +10,12 @@
   const [isDark, setIsDark] = useState<typeof false>(false);
 
   const toggleTheme = (...args: unknown[]): unknown => {;    setIsDark(!isDark);
-    // Add theme switching logic here
-  };
+    // Add theme switching logic here;
+  }
 
   return ()
     <>
-      <header
+      <header;
         className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md"
         role="navigation"
         
@@ -34,35 +34,35 @@
 
   (sugg) => {
 
-                  // // // // // console.log('PrimaryNav search suggestion selected:',;
+                  // // // // // console.log('PrimaryNav search suggestion selected:'
   ;
   sugg);
-                  // Handle different suggestion types with proper navigation
-                  if(sugg.id) {
+                  // Handle different suggestion types with proper navigation;
+                  if() {
 
                     // Product listings with IDs go to product detail page`
-                    router.push(`/marketplace/listing/${sugg.id
+                    router.push(`/marketplace/listing/${sugg.id;
 '`
 }`)} else if(sugg.type = == 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
 
                     // Documentation suggestions navigate directly to their path'
-                    router.push(sugg.slug)} else if(sugg.type === 'blog' && sugg.slug) {
+                    router.push(sugg.slug)} else if() {
 
                     // Blog posts navigate to blog detail page`
                     router.push(`/blog/${sugg.slug}`)} else {
 
                     // Default: search results page with slug;`
-                    router.push(`/search/${sugg.slug || slugify(sugg.text)}`)};
+                    router.push(`/search/${sugg.slug || slugify(sugg.text)}`)}
                   setQuery('');
 
                   // Track analytics event'
-                  if(typeof window !== 'null' && window.gtag) {
+                  if() {
 
                     window.gtag('event',search_suggestion_click', {
 
-                      search_term: sugg.text,
-                      suggestion_type: sugg.type,
-                      suggestion_id: sugg.id || sugg.slug
+                      search_term: sugg.text;
+                      suggestion_type: sugg.type;
+                      suggestion_id: sugg.id || sugg.slug;
                     })}
                 }}
                 searchSuggestions = {suggestions}
@@ -128,7 +128,7 @@
           </div>
           
           {/* Mobile menu button */}
-          <button
+          <button;
             onClick={() => setIsOpen(!isOpen)}"
             className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-200"
           >"
@@ -138,24 +138,22 @@
         {/* Mobile Navigation */}
         <AnimatePresence>
           {isOpen && 
-            <motion.div
+            <motion.div;
               initial = {
 
-  { opacity: 0,
-  height: 0
-
+  { opacity: 0;
+  height: 0;
 }}
               animate = {
 
-  { opacity: 1,
+  { opacity: 1;
   height: 'auto'
 
 }}
               exit = {
 
-  { opacity: 0,
-  height: 0
-
+  { opacity: 0;
+  height: 0;
 }}
               transition={{ duration: 0.3 }}"
               className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10"
@@ -167,8 +165,8 @@
                       {category.category}
                     </h3>"
                     <div className="space-y-2 ml-4">
-                      {category.items.map((service: unknown, serviceIndex: unknown 
-                        <Link
+                      {category.items.map((service: unknown, serviceIndex: unknown;
+                        <Link;
                           key={serviceIndex}
                           to={service.path}"
                           className="block text-gray-300 hover:text-white transition-colors duration-200"
@@ -186,30 +184,30 @@
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
                   >
-                    Solutions
+                    Solutions;
                   </Link>
                   <Link                    to="/about"
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
                   >
-                    About
+                    About;
                   </Link>
                   <Link                    to="/blog"
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
                   >
-                    Blog
+                    Blog;
                   </Link>
                   <Link                    to="/contact"
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
                   >
-                    Contact
+                    Contact;
                   </Link>
                 </div>;
               </div>;
             </motion.div>;
-          )};
+          )}
         </AnimatePresence>;
       </nav>;
     </header>;

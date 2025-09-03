@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 
 export default function Security() {
+
   return (
     <>
       <Head>
@@ -15,7 +16,7 @@ export default function Security() {
         <main className="container mx-auto px-6 py-12">
           <section className="text-center mb-16">
             <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-              Security
+              Security;
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
               Protecting your data and systems with enterprise-grade security measures and autonomous threat detection.
@@ -27,8 +28,8 @@ export default function Security() {
             <section className="mb-16 p-8 bg-gradient-to-r from-green-500/10 to-cyan-500/10 rounded-2xl border border-green-500/20">
               <h2 className="text-3xl font-bold mb-6 text-green-400">Security Overview</h2>
               <p className="text-white/80 mb-6">
-                At Zion Tech Group, security is at the core of everything we do. Our autonomous systems are built with 
-                security-first principles, implementing multiple layers of protection to ensure your data and infrastructure 
+                At Zion Tech Group, security is at the core of everything we do. Our autonomous systems are built with;
+                security-first principles, implementing multiple layers of protection to ensure your data and infrastructure;
                 remain secure at all times.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -61,7 +62,7 @@ export default function Security() {
                   <ul className="space-y-3 text-white/80">
                     <li className="flex items-start">
                       <span className="text-green-400 mr-2">✓</span>
-                      Multi-factor authentication (MFA) support
+                      Multi-factor authentication (MFA) support;
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-400 mr-2">✓</span>
@@ -69,15 +70,15 @@ export default function Security() {
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-400 mr-2">✓</span>
-                      Single sign-on (SSO) integration
+                      Single sign-on (SSO) integration;
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-400 mr-2">✓</span>
-                      Session management and timeout controls
+                      Session management and timeout controls;
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-400 mr-2">✓</span>
-                      API key management and rotation
+                      API key management and rotation;
                     </li>
                   </ul>
                 </div>
@@ -88,23 +89,23 @@ export default function Security() {
                   <ul className="space-y-3 text-white/80">
                     <li className="flex items-start">
                       <span className="text-green-400 mr-2">✓</span>
-                      AES-256 encryption for data at rest
+                      AES-256 encryption for data at rest;
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-400 mr-2">✓</span>
-                      TLS 1.3 for data in transit
+                      TLS 1.3 for data in transit;
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-400 mr-2">✓</span>
-                      Automatic data backup and recovery
+                      Automatic data backup and recovery;
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-400 mr-2">✓</span>
-                      Data anonymization and pseudonymization
+                      Data anonymization and pseudonymization;
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-400 mr-2">✓</span>
-                      Secure data deletion and retention policies
+                      Secure data deletion and retention policies;
                     </li>
                   </ul>
                 </div>
@@ -115,7 +116,7 @@ export default function Security() {
                   <ul className="space-y-3 text-white/80">
                     <li className="flex items-start">
                       <span className="text-green-400 mr-2">✓</span>
-                      DDoS protection and mitigation
+                      DDoS protection and mitigation;
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-400 mr-2">✓</span>
@@ -123,15 +124,15 @@ export default function Security() {
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-400 mr-2">✓</span>
-                      Intrusion detection and prevention
+                      Intrusion detection and prevention;
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-400 mr-2">✓</span>
-                      Network segmentation and isolation
+                      Network segmentation and isolation;
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-400 mr-2">✓</span>
-                      VPN and secure remote access
+                      VPN and secure remote access;
                     </li>
                   </ul>
                 </div>
@@ -142,23 +143,23 @@ export default function Security() {
                   <ul className="space-y-3 text-white/80">
                     <li className="flex items-start">
                       <span className="text-green-400 mr-2">✓</span>
-                      24/7 autonomous security monitoring
+                      24/7 autonomous security monitoring;
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-400 mr-2">✓</span>
-                      Real-time threat intelligence feeds
+                      Real-time threat intelligence feeds;
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-400 mr-2">✓</span>
-                      Automated incident response workflows
+                      Automated incident response workflows;
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-400 mr-2">✓</span>
-                      Security event logging and analysis
+                      Security event logging and analysis;
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-400 mr-2">✓</span>
-                      Incident escalation and notification
+                      Incident escalation and notification;
                     </li>
                   </ul>
                 </div>
@@ -169,7 +170,7 @@ export default function Security() {
             <section className="mb-16 p-8 bg-white/5 rounded-2xl border border-white/10">
               <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Compliance & Certifications</h2>
               <p className="text-white/80 mb-6">
-                Our security practices align with industry standards and regulatory requirements to ensure your data 
+                Our security practices align with industry standards and regulatory requirements to ensure your data;
                 protection needs are met across various compliance frameworks.
               </p>
               
@@ -345,13 +346,13 @@ export default function Security() {
               
               <div className="flex flex-wrap gap-4">
                 <a href="/contact" className="px-6 py-3 bg-red-500 hover:bg-red-600 text-white rounded-lg transition-colors">
-                  Report Security Issue
+                  Report Security Issue;
                 </a>
                 <a href="mailto:security@zion.tech" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-colors">
-                  Email Security Team
+                  Email Security Team;
                 </a>
                 <a href="/reports" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-colors">
-                  View Security Status
+                  View Security Status;
                 </a>
               </div>
               

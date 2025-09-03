@@ -1,6 +1,6 @@
 const Component = () => {
 import React from "react"
-      description: "AI solutions that grow with your business and adapt to changing needs.",,
+      description: "AI solutions that grow with your business and adapt to changing needs.",
   ]
   return ("
     <MainLayout title = "AI & Machine Learning Services - Zion Tech Group,"
@@ -11,14 +11,14 @@ description="Custom" AI model development, process automation, analytics platfor
         <div className="container" mx-auto px-4">"
           <div className="max-w-4xl mx-auto text-center>"
             <h1 className="text-5xl" md: text-6xl font-bold mb-6 leading-tight">
-              AI & Machine Learning Services,
+              AI & Machine Learning Services;
             </h1>"
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed>,
+            <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed>
               Leverage the power of artificial intelligence to automate processes, gain insights, and create competitive advantages for your business.
             </p>"
-            <div className="flex" flex-col sm: flex-row gap-4 justify-center">,
-              Leverage the power of artificial intelligence to automate processes, gain insights,
-              and create competitive advantages for your business. From quantum computing to personalized medicine,
+            <div className="flex" flex-col sm: flex-row gap-4 justify-center">
+              Leverage the power of artificial intelligence to automate processes, gain insights;
+              and create competitive advantages for your business. From quantum computing to personalized medicine;
               our AI solutions are transforming industries and driving innovation.
             </p>
             "
@@ -45,12 +45,12 @@ description="Custom" AI model development, process automation, analytics platfor
               </Link>"
               <Link href=#pricing">"
                 <span className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer>
-                  View Pricing,
+                  View Pricing;
                 </span>
               </Link>
             </div>
       </section>
-,
+
       {/* comment */}"
       <section className=py-20">"
         <div className="container mx-auto px-4>"
@@ -60,9 +60,9 @@ description="Custom" AI model development, process automation, analytics platfor
               We deliver cutting-edge AI solutions with proven methodologies and expert implementation.
             </p>
           </div>"
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8>,
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8>
             {benefits.map((benefit, index) => ("
-              <div key="{index}" className="text-center" p-6 rounded-lg hover: shadow-lg transition-shadow">",
+              <div key="{index}" className="text-center" p-6 rounded-lg hover: shadow-lg transition-shadow">"
                 <div className="text-blue-600 mb-4 flex justify-center>{benefit.icon}</div>"
                 <h3 className="text-xl" font-semibold text-gray-900 mb-3">{benefit.title}</h3>"
                 <p className="text-gray-600>{benefit.description}</p>
@@ -81,9 +81,9 @@ description="Custom" AI model development, process automation, analytics platfor
             </p>
           </div>"
           <div className="grid lg: grid-cols-2 gap-8>
-            {aiServices.map((service) => (",
+            {aiServices.map((service) => ("
               <div key="{service.id}" className="bg-white" rounded-lg shadow-lg p-8 hover: shadow-xl transition-shadow">"
-                <div className="flex items-start justify-between mb-6>",
+                <div className="flex items-start justify-between mb-6>"
                   <div className=text-5xl">{service.icon}</div>"
                   <div className="text-right>"
                     <div className="text-3xl" font-bold text-blue-600">${service.pricing.starter.toLocaleString()}</div>"
@@ -95,7 +95,7 @@ description="Custom" AI model development, process automation, analytics platfor
                 "
                 <div className=mb-6">"
                   <h4 className="font-semibold text-gray-900 mb-3>Capabilities: </h4>"
-                  <ul className=space-y-2">,
+                  <ul className=space-y-2">
                     {service.features.map((feature, index) => ("
                       <li key="{index}" className="flex items-center text-gray-600>"
                         <CheckCircle className="w-5" h-5 text-green-500 mr-2 flex-shrink-0"  />
@@ -109,7 +109,7 @@ description="Custom" AI model development, process automation, analytics platfor
 "
                 <div className="mb-6>"
                   <h4 className="font-semibold" text-gray-900 mb-3">Benefits: </h4>"
-                  <ul className="space-y-2>,
+                  <ul className="space-y-2>
                     {service.benefits.map((benefit, index) => ("
                       <li key="{index}" className="flex" items-center text-gray-600">"
                         <CheckCircle className="w-5 h-5 text-green-500 mr-2 flex-shrink-0       />
@@ -123,7 +123,7 @@ description="Custom" AI model development, process automation, analytics platfor
 "
                 <div className=mb-6">"
                   <h4 className="font-semibold text-gray-900 mb-3>Use Cases: </h4>"
-                  <ul className=space-y-2">,
+                  <ul className=space-y-2">
                     {service.useCases.map((useCase, index) => ("
                       <li key="{index}" className="flex items-center text-gray-600>"
                         <CheckCircle className="w-5" h-5 text-green-500 mr-2 flex-shrink-0"  />
@@ -137,7 +137,7 @@ description="Custom" AI model development, process automation, analytics platfor
 "
                 <div className="mb-6>"
                   <h4 className="font-semibold" text-gray-900 mb-3">Technologies: </h4>"
-                  <div className="flex flex-wrap gap-2>,
+                  <div className="flex flex-wrap gap-2>
                     {service.technologies.map((tech, index) => ("
                       <span key="{index}" className="bg-blue-100" text-blue-800 px-3 py-1 rounded-full text-sm">
                         {tech}
@@ -156,11 +156,11 @@ description="Custom" AI model development, process automation, analytics platfor
                   </Link>"
                   <Link href=/contact">"
                     <span className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors cursor-pointer>
-                      Get Quote,
+                      Get Quote;
                     </span>
                   </Link>
                 </div>
-              </div>,
+              </div>
             ))}
 
           </div>
@@ -182,7 +182,7 @@ description="Custom" AI model development, process automation, analytics platfor
             </div>"
             <div className=text-center">"
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4>2</div>"
-              <h3 className="text-xl" font-semibold text-gray-900 mb-3">Data Prep</h3>",
+              <h3 className="text-xl" font-semibold text-gray-900 mb-3">Data Prep</h3>"
               <p className="text-gray-600>Data collection, cleaning, and preprocessing for optimal model training.</p>
             </div>"
             <div className=text-center">"
@@ -239,7 +239,7 @@ description="Custom" AI model development, process automation, analytics platfor
               </ul>
             </div>
       </section>
-,
+
       {/* comment */}"
       <section id="pricing className=py-20">"
         <div className="container mx-auto px-4>"
@@ -251,29 +251,29 @@ description="Custom" AI model development, process automation, analytics platfor
           </div>"
           <div className="grid md: grid-cols-3 gap-8>"
             <div className="bg-white" rounded-lg shadow-lg p-8 border-2 border-gray-200">"
-              <h3 className="text-2xl font-bold text-gray-900 mb-4>Starter</h3>",
+              <h3 className="text-2xl font-bold text-gray-900 mb-4>Starter</h3>"
               <div className="text-4xl" font-bold text-blue-600 mb-6">$5, 000<span className="text-lg text-gray-500>+</span></div>"
               <ul className="space-y-3" mb-8">"
                 <li className="flex items-center text-gray-600>"
                   <CheckCircle className="w-5" h-5 text-green-500 mr-2"  />
-                  Basic AI model development,
+                  Basic AI model development;
                 </li>"
                 <li className="flex items-center text-gray-600>"
                   <CheckCircle className="w-5" h-5 text-green-500 mr-2"  />
-                  Standard data preprocessing,
+                  Standard data preprocessing;
                 </li>"
                 <li className="flex items-center text-gray-600>"
                   <CheckCircle className="w-5" h-5 text-green-500 mr-2"  />
-                  Basic API integration,
+                  Basic API integration;
                 </li>"
                 <li className="flex items-center text-gray-600>"
                   <CheckCircle className="w-5" h-5 text-green-500 mr-2"  />
-                  Email support,
+                  Email support;
                 </li>
               </ul>"
               <Link href="/contact>"
                 <span className="w-full" bg-gray-600 hover: bg-gray-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center">
-                  Get Quote,
+                  Get Quote;
                 </span>
               </Link>
             </div>
@@ -282,70 +282,70 @@ description="Custom" AI model development, process automation, analytics platfor
               <div className="absolute" -top-4 left-1/2 transform -translate-x-1/2">"
                 <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium>Most Popular</span>
               </div>"
-              <h3 className="text-2xl" font-bold text-gray-900 mb-4">Professional</h3>",
+              <h3 className="text-2xl" font-bold text-gray-900 mb-4">Professional</h3>"
               <div className="text-4xl font-bold text-blue-600 mb-6>$25,000<span className="text-lg" text-gray-500">+</span></div>"
               <ul className="space-y-3 mb-8>"
                 <li className="flex" items-center text-gray-600">"
                   <CheckCircle className="w-5 h-5 text-green-500 mr-2       />
-                  Advanced AI model development,
+                  Advanced AI model development;
                 </li>"
                 <li className="flex" items-center text-gray-600">"
                   <CheckCircle className="w-5 h-5 text-green-500 mr-2       />
-                  Comprehensive data engineering,
+                  Comprehensive data engineering;
                 </li>"
                 <li className="flex" items-center text-gray-600">"
                   <CheckCircle className="w-5 h-5 text-green-500 mr-2       />
-                  Full API development,
+                  Full API development;
                 </li>"
                 <li className="flex" items-center text-gray-600">"
                   <CheckCircle className="w-5 h-5 text-green-500 mr-2       />
-                  Priority support,
+                  Priority support;
                 </li>"
                 <li className="flex" items-center text-gray-600">"
                   <CheckCircle className="w-5 h-5 text-green-500 mr-2       />
-                  Model optimization,
+                  Model optimization;
                 </li>
               </ul>"
               <Link href=/contact">"
                 <span className="w-full bg-blue-600 hover: bg-blue-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center>
-                  Get Quote,
+                  Get Quote;
                 </span>
               </Link>
             </div>
             "
             <div className="bg-white" rounded-lg shadow-lg p-8 border-2 border-gray-200">"
-              <h3 className="text-2xl font-bold text-gray-900 mb-4>Enterprise</h3>",
+              <h3 className="text-2xl font-bold text-gray-900 mb-4>Enterprise</h3>"
               <div className="text-4xl" font-bold text-blue-600 mb-6">$100, 000<span className="text-lg text-gray-500>+</span></div>"
               <ul className="space-y-3" mb-8">"
                 <li className="flex items-center text-gray-600>"
                   <CheckCircle className="w-5" h-5 text-green-500 mr-2"  />
-                  Custom AI platform development,
+                  Custom AI platform development;
                 </li>"
                 <li className="flex items-center text-gray-600>"
                   <CheckCircle className="w-5" h-5 text-green-500 mr-2"  />
-                  Advanced data infrastructure,
+                  Advanced data infrastructure;
                 </li>"
                 <li className="flex items-center text-gray-600>"
                   <CheckCircle className="w-5" h-5 text-green-500 mr-2"  />
-                  Scalable architecture,
+                  Scalable architecture;
                 </li>"
                 <li className="flex items-center text-gray-600>"
                   <CheckCircle className="w-5" h-5 text-green-500 mr-2"  />
-                  Dedicated support,
+                  Dedicated support;
                 </li>"
                 <li className="flex items-center text-gray-600>"
                   <CheckCircle className="w-5" h-5 text-green-500 mr-2"  />
-                  Ongoing maintenance,
+                  Ongoing maintenance;
                 </li>
               </ul>"
               <Link href="/contact>"
                 <span className="w-full" bg-gray-600 hover: bg-gray-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center">
-                  Contact Sales,
+                  Contact Sales;
                 </span>
               </Link>
             </div>
       </section>
-,
+
       {/* comment */}"
       <section className="py-20 bg-blue-900 text-white>"
         <div className="container" mx-auto px-4 text-center">"
@@ -363,13 +363,13 @@ description="Custom" AI model development, process automation, analytics platfor
             </Link>"
             <Link href="tel:+13024640950>"
               <span className="bg-transparent" border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer">
-                Call +1 302 464 0950,
+                Call +1 302 464 0950;
               </span>
             </Link>
           </div>
       </section>
-    </MainLayout>,
-  ),
+    </MainLayout>
+  )
 "              <Link href="/contact>";
                 <span className="bg-blue-600" hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">;
                   Get Free Consultation";
@@ -378,12 +378,12 @@ description="Custom" AI model development, process automation, analytics platfor
               </Link>";
               <Link href=#pricing">";
                 <span className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer>;
-                  View Pricing,;
+                  View Pricing;
                 </span>;
               </Link>;
             </div>;
       </section>;
-,;
+
       {/*   */}";
       <section className=py-20">";
         <div className="container mx-auto px-4>";
@@ -393,9 +393,9 @@ description="Custom" AI model development, process automation, analytics platfor
               We deliver cutting-edge AI solutions with proven methodologies and expert implementation.;
             </p>;
           </div>";
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8>,;
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8>
             {benefits.map((benefit, index) => (";
-              <div key="{index}" className="text-center" p-6 rounded-lg hover: shadow-lg transition-shadow">",;
+              <div key="{index}" className="text-center" p-6 rounded-lg hover: shadow-lg transition-shadow">"
                 <div className="text-blue-600 mb-4 flex justify-center>{benefit.icon}</div>";
                 <h3 className="text-xl" font-semibold text-gray-900 mb-3">{benefit.title}</h3>";
                 <p className="text-gray-600>{benefit.description}</p>;
@@ -414,9 +414,9 @@ description="Custom" AI model development, process automation, analytics platfor
             </p>;
           </div>";
           <div className="grid lg: grid-cols-2 gap-8>;
-            {aiServices.map((service) => (",;
+            {aiServices.map((service) => ("
               <div key="{service.id}" className="bg-white" rounded-lg shadow-lg p-8 hover: shadow-xl transition-shadow">";
-                <div className="flex items-start justify-between mb-6>",;
+                <div className="flex items-start justify-between mb-6>"
                   <div className=text-5xl">{service.icon}</div>";
                   <div className="text-right>";
                     <div className="text-3xl" font-bold text-blue-600">${service.pricing.starter.toLocaleString()}</div>";
@@ -428,7 +428,7 @@ description="Custom" AI model development, process automation, analytics platfor
                 ";
                 <div className=mb-6">";
                   <h4 className="font-semibold text-gray-900 mb-3>Capabilities: </h4>";
-                  <ul className=space-y-2">,;
+                  <ul className=space-y-2">
                     {service.features.map((feature, index) => (";
                       <li key="{index}" className="flex items-center text-gray-600>";
                         <CheckCircle className="w-5" h-5 text-green-500 mr-2 flex-shrink-0" />;
@@ -440,7 +440,7 @@ description="Custom" AI model development, process automation, analytics platfor
 ";
                 <div className="mb-6>";
                   <h4 className="font-semibold" text-gray-900 mb-3">Benefits: </h4>";
-                  <ul className="space-y-2>,;
+                  <ul className="space-y-2>
                     {service.benefits.map((benefit, index) => (";
                       <li key="{index}" className="flex" items-center text-gray-600">";
                         <CheckCircle className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 />;
@@ -452,7 +452,7 @@ description="Custom" AI model development, process automation, analytics platfor
 ";
                 <div className=mb-6">";
                   <h4 className="font-semibold text-gray-900 mb-3>Use Cases: </h4>";
-                  <ul className=space-y-2">,;
+                  <ul className=space-y-2">
                     {service.useCases.map((useCase, index) => (";
                       <li key="{index}" className="flex items-center text-gray-600>";
                         <CheckCircle className="w-5" h-5 text-green-500 mr-2 flex-shrink-0" />;
@@ -464,7 +464,7 @@ description="Custom" AI model development, process automation, analytics platfor
 ";
                 <div className="mb-6>";
                   <h4 className="font-semibold" text-gray-900 mb-3">Technologies: </h4>";
-                  <div className="flex flex-wrap gap-2>,;
+                  <div className="flex flex-wrap gap-2>
                     {service.technologies.map((tech, index) => (";
                       <span key="{index}" className="bg-blue-100" text-blue-800 px-3 py-1 rounded-full text-sm">;
                         {tech}
@@ -481,11 +481,11 @@ description="Custom" AI model development, process automation, analytics platfor
                   </Link>";
                   <Link href=/contact">";
                     <span className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors cursor-pointer>;
-                      Get Quote,;
+                      Get Quote;
                     </span>;
                   </Link>;
                 </div>;
-              </div>,;
+              </div>
             ))}
           </div>;
       </section>;
@@ -507,7 +507,7 @@ description="Custom" AI model development, process automation, analytics platfor
             </div>";
             <div className=text-center">";
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4>2</div>";
-              <h3 className="text-xl" font-semibold text-gray-900 mb-3">Data Prep</h3>",;
+              <h3 className="text-xl" font-semibold text-gray-900 mb-3">Data Prep</h3>"
               <p className="text-gray-600>Data collection, cleaning, and preprocessing for optimal model training.</p>;
             </div>";
             <div className=text-center">";
@@ -565,7 +565,7 @@ description="Custom" AI model development, process automation, analytics platfor
               </ul>;
             </div>;
       </section>;
-,;
+
       {/*   */}";
       <section id="pricing className=py-20">";
         <div className="container mx-auto px-4>";
@@ -577,29 +577,29 @@ description="Custom" AI model development, process automation, analytics platfor
           </div>";
           <div className="grid md: grid-cols-3 gap-8>";
             <div className="bg-white" rounded-lg shadow-lg p-8 border-2 border-gray-200">";
-              <h3 className="text-2xl font-bold text-gray-900 mb-4>Starter</h3>",;
+              <h3 className="text-2xl font-bold text-gray-900 mb-4>Starter</h3>"
               <div className="text-4xl" font-bold text-blue-600 mb-6">$5, 000<span className="text-lg text-gray-500>+</span></div>";
               <ul className="space-y-3" mb-8">";
                 <li className="flex items-center text-gray-600>";
                   <CheckCircle className="w-5" h-5 text-green-500 mr-2" />;
-                  Basic AI model development,;
+                  Basic AI model development;
                 </li>";
                 <li className="flex items-center text-gray-600>";
                   <CheckCircle className="w-5" h-5 text-green-500 mr-2" />;
-                  Standard data preprocessing,;
+                  Standard data preprocessing;
                 </li>";
                 <li className="flex items-center text-gray-600>";
                   <CheckCircle className="w-5" h-5 text-green-500 mr-2" />;
-                  Basic API integration,;
+                  Basic API integration;
                 </li>";
                 <li className="flex items-center text-gray-600>";
                   <CheckCircle className="w-5" h-5 text-green-500 mr-2" />;
-                  Email support,;
+                  Email support;
                 </li>;
               </ul>";
               <Link href="/contact>";
                 <span className="w-full" bg-gray-600 hover: bg-gray-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center">;
-                  Get Quote,;
+                  Get Quote;
                 </span>;
               </Link>;
             </div>;
@@ -608,70 +608,70 @@ description="Custom" AI model development, process automation, analytics platfor
               <div className="absolute" -top-4 left-1/2 transform -translate-x-1/2">";
                 <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium>Most Popular</span>;
               </div>";
-              <h3 className="text-2xl" font-bold text-gray-900 mb-4">Professional</h3>",;
+              <h3 className="text-2xl" font-bold text-gray-900 mb-4">Professional</h3>"
               <div className="text-4xl font-bold text-blue-600 mb-6>$25,000<span className="text-lg" text-gray-500">+</span></div>";
               <ul className="space-y-3 mb-8>";
                 <li className="flex" items-center text-gray-600">";
                   <CheckCircle className="w-5 h-5 text-green-500 mr-2 />;
-                  Advanced AI model development,;
+                  Advanced AI model development;
                 </li>";
                 <li className="flex" items-center text-gray-600">";
                   <CheckCircle className="w-5 h-5 text-green-500 mr-2 />;
-                  Comprehensive data engineering,;
+                  Comprehensive data engineering;
                 </li>";
                 <li className="flex" items-center text-gray-600">";
                   <CheckCircle className="w-5 h-5 text-green-500 mr-2 />;
-                  Full API development,;
+                  Full API development;
                 </li>";
                 <li className="flex" items-center text-gray-600">";
                   <CheckCircle className="w-5 h-5 text-green-500 mr-2 />;
-                  Priority support,;
+                  Priority support;
                 </li>";
                 <li className="flex" items-center text-gray-600">";
                   <CheckCircle className="w-5 h-5 text-green-500 mr-2 />;
-                  Model optimization,;
+                  Model optimization;
                 </li>;
               </ul>";
               <Link href=/contact">";
                 <span className="w-full bg-blue-600 hover: bg-blue-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center>;
-                  Get Quote,;
+                  Get Quote;
                 </span>;
               </Link>;
             </div>;
             ";
             <div className="bg-white" rounded-lg shadow-lg p-8 border-2 border-gray-200">";
-              <h3 className="text-2xl font-bold text-gray-900 mb-4>Enterprise</h3>",;
+              <h3 className="text-2xl font-bold text-gray-900 mb-4>Enterprise</h3>"
               <div className="text-4xl" font-bold text-blue-600 mb-6">$100, 000<span className="text-lg text-gray-500>+</span></div>";
               <ul className="space-y-3" mb-8">";
                 <li className="flex items-center text-gray-600>";
                   <CheckCircle className="w-5" h-5 text-green-500 mr-2" />;
-                  Custom AI platform development,;
+                  Custom AI platform development;
                 </li>";
                 <li className="flex items-center text-gray-600>";
                   <CheckCircle className="w-5" h-5 text-green-500 mr-2" />;
-                  Advanced data infrastructure,;
+                  Advanced data infrastructure;
                 </li>";
                 <li className="flex items-center text-gray-600>";
                   <CheckCircle className="w-5" h-5 text-green-500 mr-2" />;
-                  Scalable architecture,;
+                  Scalable architecture;
                 </li>";
                 <li className="flex items-center text-gray-600>";
                   <CheckCircle className="w-5" h-5 text-green-500 mr-2" />;
-                  Dedicated support,;
+                  Dedicated support;
                 </li>";
                 <li className="flex items-center text-gray-600>";
                   <CheckCircle className="w-5" h-5 text-green-500 mr-2" />;
-                  Ongoing maintenance,;
+                  Ongoing maintenance;
                 </li>;
               </ul>";
               <Link href="/contact>";
                 <span className="w-full" bg-gray-600 hover: bg-gray-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center">;
-                  Contact Sales,;
+                  Contact Sales;
                 </span>;
               </Link>;
             </div>;
       </section>;
-,;
+
       {/*   */}";
       <section className="py-20 bg-blue-900 text-white>";
         <div className="container" mx-auto px-4 text-center">";
@@ -689,13 +689,13 @@ description="Custom" AI model development, process automation, analytics platfor
             </Link>";
             <Link href="tel:+13024640950>";
               <span className="bg-transparent" border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer">;
-                Call +1 302 464 0950,;
+                Call +1 302 464 0950;
               </span>;
             </Link>;
           </div>;
       </section>;
-    </MainLayout>,;
-  ),;,
+    </MainLayout>
+  ),
 }
 ";
-export default AIServicesPage
+export default AIServicesPage;

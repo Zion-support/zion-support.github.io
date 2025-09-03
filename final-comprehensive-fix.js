@@ -8,160 +8,161 @@ const __dirname = path.dirname(__filename);
 // List of all corrupted files that need to be completely rewritten;
 const corruptedFiles = [
   // Main pages directory;
-  "src/pages/InnovativeServicesShowcase2025.tsx",;
-  "src/pages/InnovativeServicesShowcase2026.tsx",;
-  "src/pages/InnovativeServicesShowcase2028.tsx",;
-  "src/pages/InnovativeServicesShowcase2029.tsx",;
-  "src/pages/InnovativeServicesShowcase2030.tsx",;
-  "src/pages/InnovativeServicesShowcase2032.tsx",;
-  "src/pages/InnovativeServicesShowcase2034.tsx",;
-  "src/pages/InterviewAssessmentAI.tsx",;
-  "src/pages/Interviews.tsx",;
-  "src/pages/InvestorRelations.tsx",;
-  "src/pages/Investors.tsx",;
-  "src/pages/IoTEdgeComputing.tsx",;
-  "src/pages/Leadership.tsx",;
-  "src/pages/Legal.tsx",;
-  "src/pages/Login.tsx",;
-  "src/pages/MarketPricing.tsx",;
-  "src/pages/Marketplace.tsx",;
-  "src/pages/Match.tsx",;
-  "src/pages/MicroSAAS.tsx",;
-  "src/pages/MicroSAASInnovationHub2029.tsx",;
-  "src/pages/MicroSAASPage.tsx",;
-  "src/pages/MicroSAASServices2028.tsx",;
-  "src/pages/MicroSAASSolutions.tsx",;
-  "src/pages/MicroSaasServices.tsx",;
-  "src/pages/MobileLaunch.tsx",;
-  "src/pages/NewInnovativeServices2025.tsx",;
-  "src/pages/NewInnovativeServicesShowcase.tsx",;
-  "src/pages/NewInnovativeServicesShowcase2025.tsx",;
-  "src/pages/NewMicroSaasServicesShowcase2025.tsx",;
-  "src/pages/NewServicesLanding2025.tsx",;
-  "src/pages/NewServicesShowcase2025.tsx",;
-  "src/pages/News.tsx",;
-  "src/pages/NotFoundPage.tsx",;
-  "src/pages/OnsiteSupport.tsx",;
-  "src/pages/Partners.tsx",;
-  "src/pages/Partnerships.tsx",;
-  "src/pages/Performance.tsx",;
-  "src/pages/Press.tsx",;
-  "src/pages/Pricing.tsx",;
-  "src/pages/PricingComparison.tsx",;
-  "src/pages/PricingGuide.tsx",;
-  "src/pages/PricingPage.tsx",;
-  "src/pages/Privacy.tsx",;
-  "src/pages/PrivacyPolicy.tsx",;
-  "src/pages/Products.tsx",;
-  "src/pages/Profile.tsx",;
-  "src/pages/ProjectDetails.tsx",;
-  "src/pages/QuantumComputing.tsx",;
-  "src/pages/QuantumTechnology.tsx",;
-  "src/pages/RequestQuote.tsx",;
-  "src/pages/Research.tsx",;
-  "src/pages/Resources.tsx",;
-  "src/pages/Revolutionary2025ServicesShowcase.tsx",;
-  "src/pages/RevolutionaryServices2029.tsx",;
-  "src/pages/RevolutionaryServices2030.tsx",;
-  "src/pages/RevolutionaryServicesLanding2025.tsx",;
-  "src/pages/RevolutionaryServicesPage.tsx",;
-  "src/pages/RevolutionaryServicesShowcase2025.tsx",;
-  "src/pages/RevolutionaryServicesShowcase2029.tsx",;
-  "src/pages/RevolutionaryServicesShowcase2030.tsx",;
-  "src/pages/RevolutionaryServicesShowcase2034.tsx",;
-  "src/pages/ScheduleDemo.tsx",;
-  "src/pages/Search.tsx",;
-  "src/pages/SearchPage.tsx",;
-  "src/pages/Security.tsx",;
-  "src/pages/Services.tsx",;
-  "src/pages/Services2026.tsx",;
-  "src/pages/Services2027.tsx",;
-  "src/pages/Services2028.tsx",;
-  "src/pages/Services2030.tsx",;
-  "src/pages/ServicesAdvertising.tsx",;
-  "src/pages/ServicesCatalog.tsx",;
-  "src/pages/ServicesComparison2025.tsx",;
-  "src/pages/ServicesComparisonMatrix2025.tsx",;
-  "src/pages/ServicesOverview.tsx",;
-  "src/pages/ServicesPage.tsx",;
-  "src/pages/ServicesPricingPage.tsx",;
-  "src/pages/ServicesShowcasePage.tsx",;
-  "src/pages/ServicesSitemap.tsx",;
-  "src/pages/SettingsPage.tsx",;
-  "src/pages/Signup.tsx",;
-  "src/pages/SimplePage.tsx",;
-  "src/pages/SimpleServicesPage.tsx",;
-  "src/pages/Sitemap.tsx",;
-  "src/pages/Solutions.tsx",;
-  "src/pages/SolutionsPage.tsx",;
-  "src/pages/SpaceTech.tsx",;
-  "src/pages/Status.tsx",;
-  "src/pages/Support.tsx",;
-  "src/pages/SystemStatus.tsx",;
-  "src/pages/Talent.tsx",;
-  "src/pages/Team.tsx",;
-  "src/pages/Terms.tsx",;
-  "src/pages/TermsOfService.tsx",;
-  "src/pages/Training.tsx",;
-  "src/pages/TransformationServices.tsx",;
-  "src/pages/Tutorials.tsx",;
-  "src/pages/UltimateInnovativeServices2026.tsx",;
-  "src/pages/UltimateInnovativeServicesShowcase2025.tsx",;
-  "src/pages/UltimateServicesShowcase2025.tsx",;
-  "src/pages/UltimateServicesShowcase2026.tsx",;
-  "src/pages/UltimateServicesShowcase2028.tsx",;
-  "src/pages/UltimateZionServicesLanding.tsx",;
-  "src/pages/UltimateZionServicesShowcase2026.tsx",;
-  "src/pages/Wallet.tsx",;
-  "src/pages/Webinars.tsx",;
-  "src/pages/WhitePapers.tsx",;
-  "src/pages/Wishlist.tsx",;
-  "src/pages/Zion2026AIMarketplaceShowcase.tsx",;
-  "src/pages/ZionCuttingEdgeServices2031.tsx",;
-  "src/pages/ZionTechGroup2025ComprehensiveShowcase.tsx",;
-  "src/pages/about.tsx",;
-  "src/pages/accessibility-auditor.tsx",;
-  "src/pages/blog.tsx",;
-  "src/pages/careers.tsx",;
-  "src/pages/comprehensive-services-showcase.tsx",;
-  "src/pages/contact.tsx",;
-  "src/pages/documentation.tsx",;
-  "src/pages/emerging-tech.tsx",;
-  "src/pages/events.tsx",;
-  "src/pages/financial-solutions.tsx",;
-  "src/pages/home.tsx",;
-  "src/pages/index.tsx",;
-  "src/pages/industry-solutions.tsx",;
-  "src/pages/it-services.tsx",;
-  "src/pages/manufacturing-solutions.tsx",;
-  "src/pages/micro-saas.tsx",;
-  "src/pages/news.tsx",;
-  "src/pages/partners.tsx",;
-  "src/pages/resources.tsx",;
-  "src/pages/ai-services.tsx",;
-  "src/pages/ai-solutions.tsx",;
+  "src/pages/InnovativeServicesShowcase2025.tsx"
+  "src/pages/InnovativeServicesShowcase2026.tsx"
+  "src/pages/InnovativeServicesShowcase2028.tsx"
+  "src/pages/InnovativeServicesShowcase2029.tsx"
+  "src/pages/InnovativeServicesShowcase2030.tsx"
+  "src/pages/InnovativeServicesShowcase2032.tsx"
+  "src/pages/InnovativeServicesShowcase2034.tsx"
+  "src/pages/InterviewAssessmentAI.tsx"
+  "src/pages/Interviews.tsx"
+  "src/pages/InvestorRelations.tsx"
+  "src/pages/Investors.tsx"
+  "src/pages/IoTEdgeComputing.tsx"
+  "src/pages/Leadership.tsx"
+  "src/pages/Legal.tsx"
+  "src/pages/Login.tsx"
+  "src/pages/MarketPricing.tsx"
+  "src/pages/Marketplace.tsx"
+  "src/pages/Match.tsx"
+  "src/pages/MicroSAAS.tsx"
+  "src/pages/MicroSAASInnovationHub2029.tsx"
+  "src/pages/MicroSAASPage.tsx"
+  "src/pages/MicroSAASServices2028.tsx"
+  "src/pages/MicroSAASSolutions.tsx"
+  "src/pages/MicroSaasServices.tsx"
+  "src/pages/MobileLaunch.tsx"
+  "src/pages/NewInnovativeServices2025.tsx"
+  "src/pages/NewInnovativeServicesShowcase.tsx"
+  "src/pages/NewInnovativeServicesShowcase2025.tsx"
+  "src/pages/NewMicroSaasServicesShowcase2025.tsx"
+  "src/pages/NewServicesLanding2025.tsx"
+  "src/pages/NewServicesShowcase2025.tsx"
+  "src/pages/News.tsx"
+  "src/pages/NotFoundPage.tsx"
+  "src/pages/OnsiteSupport.tsx"
+  "src/pages/Partners.tsx"
+  "src/pages/Partnerships.tsx"
+  "src/pages/Performance.tsx"
+  "src/pages/Press.tsx"
+  "src/pages/Pricing.tsx"
+  "src/pages/PricingComparison.tsx"
+  "src/pages/PricingGuide.tsx"
+  "src/pages/PricingPage.tsx"
+  "src/pages/Privacy.tsx"
+  "src/pages/PrivacyPolicy.tsx"
+  "src/pages/Products.tsx"
+  "src/pages/Profile.tsx"
+  "src/pages/ProjectDetails.tsx"
+  "src/pages/QuantumComputing.tsx"
+  "src/pages/QuantumTechnology.tsx"
+  "src/pages/RequestQuote.tsx"
+  "src/pages/Research.tsx"
+  "src/pages/Resources.tsx"
+  "src/pages/Revolutionary2025ServicesShowcase.tsx"
+  "src/pages/RevolutionaryServices2029.tsx"
+  "src/pages/RevolutionaryServices2030.tsx"
+  "src/pages/RevolutionaryServicesLanding2025.tsx"
+  "src/pages/RevolutionaryServicesPage.tsx"
+  "src/pages/RevolutionaryServicesShowcase2025.tsx"
+  "src/pages/RevolutionaryServicesShowcase2029.tsx"
+  "src/pages/RevolutionaryServicesShowcase2030.tsx"
+  "src/pages/RevolutionaryServicesShowcase2034.tsx"
+  "src/pages/ScheduleDemo.tsx"
+  "src/pages/Search.tsx"
+  "src/pages/SearchPage.tsx"
+  "src/pages/Security.tsx"
+  "src/pages/Services.tsx"
+  "src/pages/Services2026.tsx"
+  "src/pages/Services2027.tsx"
+  "src/pages/Services2028.tsx"
+  "src/pages/Services2030.tsx"
+  "src/pages/ServicesAdvertising.tsx"
+  "src/pages/ServicesCatalog.tsx"
+  "src/pages/ServicesComparison2025.tsx"
+  "src/pages/ServicesComparisonMatrix2025.tsx"
+  "src/pages/ServicesOverview.tsx"
+  "src/pages/ServicesPage.tsx"
+  "src/pages/ServicesPricingPage.tsx"
+  "src/pages/ServicesShowcasePage.tsx"
+  "src/pages/ServicesSitemap.tsx"
+  "src/pages/SettingsPage.tsx"
+  "src/pages/Signup.tsx"
+  "src/pages/SimplePage.tsx"
+  "src/pages/SimpleServicesPage.tsx"
+  "src/pages/Sitemap.tsx"
+  "src/pages/Solutions.tsx"
+  "src/pages/SolutionsPage.tsx"
+  "src/pages/SpaceTech.tsx"
+  "src/pages/Status.tsx"
+  "src/pages/Support.tsx"
+  "src/pages/SystemStatus.tsx"
+  "src/pages/Talent.tsx"
+  "src/pages/Team.tsx"
+  "src/pages/Terms.tsx"
+  "src/pages/TermsOfService.tsx"
+  "src/pages/Training.tsx"
+  "src/pages/TransformationServices.tsx"
+  "src/pages/Tutorials.tsx"
+  "src/pages/UltimateInnovativeServices2026.tsx"
+  "src/pages/UltimateInnovativeServicesShowcase2025.tsx"
+  "src/pages/UltimateServicesShowcase2025.tsx"
+  "src/pages/UltimateServicesShowcase2026.tsx"
+  "src/pages/UltimateServicesShowcase2028.tsx"
+  "src/pages/UltimateZionServicesLanding.tsx"
+  "src/pages/UltimateZionServicesShowcase2026.tsx"
+  "src/pages/Wallet.tsx"
+  "src/pages/Webinars.tsx"
+  "src/pages/WhitePapers.tsx"
+  "src/pages/Wishlist.tsx"
+  "src/pages/Zion2026AIMarketplaceShowcase.tsx"
+  "src/pages/ZionCuttingEdgeServices2031.tsx"
+  "src/pages/ZionTechGroup2025ComprehensiveShowcase.tsx"
+  "src/pages/about.tsx"
+  "src/pages/accessibility-auditor.tsx"
+  "src/pages/blog.tsx"
+  "src/pages/careers.tsx"
+  "src/pages/comprehensive-services-showcase.tsx"
+  "src/pages/contact.tsx"
+  "src/pages/documentation.tsx"
+  "src/pages/emerging-tech.tsx"
+  "src/pages/events.tsx"
+  "src/pages/financial-solutions.tsx"
+  "src/pages/home.tsx"
+  "src/pages/index.tsx"
+  "src/pages/industry-solutions.tsx"
+  "src/pages/it-services.tsx"
+  "src/pages/manufacturing-solutions.tsx"
+  "src/pages/micro-saas.tsx"
+  "src/pages/news.tsx"
+  "src/pages/partners.tsx"
+  "src/pages/resources.tsx"
+  "src/pages/ai-services.tsx"
+  "src/pages/ai-solutions.tsx"
   ;
   // Service files that still have issues;
-  "src/pages/services/AI-Autonomous-Research-Assistant.tsx",;
-  "src/pages/services/AI-Carbon-Footprint-Management-Platform.tsx",;
-  "src/pages/services/AI-Consciousness-Simulation-Platform.tsx",;
-  "src/pages/services/AI-Customer-Experience-Analytics-Platform.tsx",;
-  "src/pages/services/AI-Cybersecurity-Threat-Intelligence.tsx",;
-  "src/pages/services/AI-Data-Privacy-Compliance-Platform.tsx",;
-  "src/pages/services/AI-Financial-Fraud-Detection-Platform.tsx",;
-  "src/pages/services/AI-Financial-Trading-Platform.tsx",;
-  "src/pages/services/AI-Healthcare-Diagnostics-Platform.tsx",;
-  "src/pages/services/AI-Healthcare-Diagnostics.tsx",;
-  "src/pages/services/AI-Healthcare-Platform.tsx",;
-  "src/pages/services/AI-Intelligent-Contract-Management-Platform.tsx",;
-  "src/pages/services/AI-Legal-Tech-Platform.tsx",;
-  "src/pages/services/AI-Powered-Contract-Analysis.tsx",;
-  "src/pages/services/AI-Powered-Legal-Document-Generator.tsx",;
-  "src/pages/services/AI-Supply-Chain-Optimization-Platform.tsx",;
+  "src/pages/services/AI-Autonomous-Research-Assistant.tsx"
+  "src/pages/services/AI-Carbon-Footprint-Management-Platform.tsx"
+  "src/pages/services/AI-Consciousness-Simulation-Platform.tsx"
+  "src/pages/services/AI-Customer-Experience-Analytics-Platform.tsx"
+  "src/pages/services/AI-Cybersecurity-Threat-Intelligence.tsx"
+  "src/pages/services/AI-Data-Privacy-Compliance-Platform.tsx"
+  "src/pages/services/AI-Financial-Fraud-Detection-Platform.tsx"
+  "src/pages/services/AI-Financial-Trading-Platform.tsx"
+  "src/pages/services/AI-Healthcare-Diagnostics-Platform.tsx"
+  "src/pages/services/AI-Healthcare-Diagnostics.tsx"
+  "src/pages/services/AI-Healthcare-Platform.tsx"
+  "src/pages/services/AI-Intelligent-Contract-Management-Platform.tsx"
+  "src/pages/services/AI-Legal-Tech-Platform.tsx"
+  "src/pages/services/AI-Powered-Contract-Analysis.tsx"
+  "src/pages/services/AI-Powered-Legal-Document-Generator.tsx"
+  "src/pages/services/AI-Supply-Chain-Optimization-Platform.tsx"
   "src/pages/services/AI-Supply-Chain-Optimization.tsx";
 ];
 // Function to create a proper React component;
-function createPageComponent(fileName) {
+function createPageComponent() {
+
   const componentName = fileName.replace(/[^a-zA-Z0-9]/g, "");
   const displayName = fileName.replace(/\.tsx|\.jsx/g, "").replace(/([A-Z])/g, " $1").trim();
   return `import React from "react";
@@ -219,16 +220,16 @@ const ${componentName} = () => {
         </div>;
       </div>;
     </>;
-  );,
+  );
 }
-export default ${componentName};`;,
+export default ${componentName}`;
 }
-;
 // Function to fix Redux files properly;
 function $1() {
+
   const reduxFiles = [
-  "src/store/hooks.ts",;
-    "src/store/index.ts",;
+  "src/store/hooks.ts"
+    "src/store/index.ts"
     "src/store/wishlistSlice.ts";
   ];
   reduxFiles.forEach(filePath => {
@@ -236,25 +237,26 @@ function $1() {
   if (fs.existsSync(filePath)) {
   let content = fs.readFileSync(filePath, "utf8");
         // Fix common TypeScript syntax errors;
-        content = content.replace(/import\s*{([^}]*)\s*}\s*from\s*[""]react-redux[""];/, ;
+        content = content.replace(/import\s*{([^}]*)\s*}\s*from\s*[""]react-redux[""];/
           "import { $1  } from "react-redux";");
         // Fix generic type syntax;
         content = content.replace(/useSelector<([^>]*)>/g, "useSelector<$1>");
         content = content.replace(/useDispatch<([^>]*)>/g, "useDispatch<$1>");
         // Fix common parsing errors;
-        content = content.replace(/import\s*{([^}]*)\s*}\s*from\s*[""]@reduxjs\/toolkit[""];/, ;
+        content = content.replace(/import\s*{([^}]*)\s*}\s*from\s*[""]@reduxjs\/toolkit[""];/
           "import { $1  } from "@reduxjs/toolkit";");
         fs.writeFileSync(filePath, content);
-        console.log(`Fixed Redux file: ${filePath}`);,
+        console.log(`Fixed Redux file: ${filePath}`);
 }
-    } catch (error) {
-  console.error(`Error fixing Redux file ${filePath}:`, error.message);,
+    } catch() {
+
+  console.error(`Error fixing Redux file ${filePath}:`, error.message);
 }
-  });,
+  });
 }
-;
 // Function to fix test files;
 function fixTestFiles() {
+
   const testFiles = [
   "src/test/App.test.tsx";
   ];
@@ -263,35 +265,36 @@ function fixTestFiles() {
   if (fs.existsSync(filePath)) {
   let content = fs.readFileSync(filePath, "utf8");
         // Fix common test syntax errors;
-        content = content.replace(/import\s*{([^}]*)\s*}\s*from\s*[""]@testing-library\/react[""];/, ;
+        content = content.replace(/import\s*{([^}]*)\s*}\s*from\s*[""]@testing-library\/react[""];/
           "import { $1  } from "@testing-library/react";");
         fs.writeFileSync(filePath, content);
-        console.log(`Fixed test file: ${filePath}`);,
+        console.log(`Fixed test file: ${filePath}`);
 }
-    } catch (error) {
-  console.error(`Error fixing test file ${filePath}:`, error.message);,
+    } catch() {
+
+  console.error(`Error fixing test file ${filePath}:`, error.message);
 }
-  });,
+  });
 }
-;
 // Function to remove problematic files;
 function removeProblematicFiles() {
+
   const problematicFiles = [
-  "src/pages/EnterpriseIT.js.jsx",;
+  "src/pages/EnterpriseIT.js.jsx"
     "src/pages/launch/index.js.jsx";
   ];
   problematicFiles.forEach(filePath => {
   try {
   if (fs.existsSync(filePath)) {
   fs.unlinkSync(filePath);
-        console.log(`Removed problematic file: ${filePath}`);,
+        console.log(`Removed problematic file: ${filePath}`);
 }
-    } catch (error) {
-  console.error(`Error removing ${filePath}:`, error.message);,
+    } catch() {
+
+  console.error(`Error removing ${filePath}:`, error.message);
 }
-  });,
+  });
 }
-;
 // Main execution;
 console.log("Starting final comprehensive fix...");
 // 1. Fix corrupted files by rewriting them;
@@ -301,9 +304,10 @@ corruptedFiles.forEach(filePath => {
   const fileName = path.basename(filePath, path.extname(filePath));
     const newContent = createPageComponent(fileName);
     fs.writeFileSync(filePath, newContent);
-    console.log(`Rewrote corrupted file: ${filePath}`);,
-} catch (error) {
-  console.error(`Error rewriting ${filePath}:`, error.message);,
+    console.log(`Rewrote corrupted file: ${filePath}`);
+} catch() {
+
+  console.error(`Error rewriting ${filePath}:`, error.message);
 }
 });
 // 2. Fix Redux files;

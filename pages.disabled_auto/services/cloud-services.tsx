@@ -5,7 +5,7 @@ import { CheckCircle, Cloud, Shield, Zap, BarChart, Users, Award } from 'lucide-
 
 const CloudServices: NextPage = () => {
   return (
-    <Layout
+    <Layout;
       title="Cloud Services - Zion Tech Group"
       description="Scalable cloud solutions and infrastructure design for modern applications. Cloud migration, DevOps, and infrastructure management services."
     >
@@ -13,7 +13,7 @@ const CloudServices: NextPage = () => {
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Cloud
+            Cloud;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Services</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
@@ -23,10 +23,10 @@ const CloudServices: NextPage = () => {
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              Get Cloud Consultation
+              Get Cloud Consultation;
             </Link>
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              View All Services
+              View All Services;
             </Link>
           </div>
         </div>
@@ -38,7 +38,7 @@ const CloudServices: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Cloud Services</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive cloud solutions designed to optimize your infrastructure, 
+              Comprehensive cloud solutions designed to optimize your infrastructure;
               reduce costs, and improve scalability and performance.
             </p>
           </div>
@@ -55,15 +55,15 @@ const CloudServices: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  AWS Migration
+                  AWS Migration;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Azure Migration
+                  Azure Migration;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Google Cloud Migration
+                  Google Cloud Migration;
                 </li>
               </ul>
             </div>
@@ -79,15 +79,15 @@ const CloudServices: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Identity & Access Management
+                  Identity & Access Management;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Data Encryption
+                  Data Encryption;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Security Monitoring
+                  Security Monitoring;
                 </li>
               </ul>
             </div>
@@ -103,15 +103,15 @@ const CloudServices: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Continuous Integration
+                  Continuous Integration;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Continuous Deployment
+                  Continuous Deployment;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Infrastructure as Code
+                  Infrastructure as Code;
                 </li>
               </ul>
             </div>
@@ -127,15 +127,15 @@ const CloudServices: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Cost Optimization
+                  Cost Optimization;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Performance Tuning
+                  Performance Tuning;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Resource Management
+                  Resource Management;
                 </li>
               </ul>
             </div>
@@ -151,15 +151,15 @@ const CloudServices: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  24/7 Monitoring
+                  24/7 Monitoring;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Backup & Recovery
+                  Backup & Recovery;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Support & Maintenance
+                  Support & Maintenance;
                 </li>
               </ul>
             </div>
@@ -175,15 +175,15 @@ const CloudServices: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Cloud Strategy
+                  Cloud Strategy;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Architecture Design
+                  Architecture Design;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Technology Selection
+                  Technology Selection;
                 </li>
               </ul>
             </div>
@@ -213,19 +213,19 @@ const CloudServices: NextPage = () => {
               <ul className="text-left space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  EC2 & ECS
+                  EC2 & ECS;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  S3 & CloudFront
+                  S3 & CloudFront;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  RDS & DynamoDB
+                  RDS & DynamoDB;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Lambda & API Gateway
+                  Lambda & API Gateway;
                 </li>
               </ul>
             </div>
@@ -241,19 +241,19 @@ const CloudServices: NextPage = () => {
               <ul className="text-left space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  App Service & Functions
+                  App Service & Functions;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  SQL Database
+                  SQL Database;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Cognitive Services
+                  Cognitive Services;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  DevOps & CI/CD
+                  DevOps & CI/CD;
                 </li>
               </ul>
             </div>
@@ -269,19 +269,19 @@ const CloudServices: NextPage = () => {
               <ul className="text-left space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Compute Engine
+                  Compute Engine;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  BigQuery & Dataflow
+                  BigQuery & Dataflow;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  AI Platform
+                  AI Platform;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Kubernetes Engine
+                  Kubernetes Engine;
                 </li>
               </ul>
             </div>
@@ -298,16 +298,16 @@ const CloudServices: NextPage = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              Get Cloud Consultation
+              Get Cloud Consultation;
             </Link>
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              View All Services
+              View All Services;
             </Link>
           </div>
         </div>
       </section>
     </Layout>
   );
-};
+}
 
 export default CloudServices;

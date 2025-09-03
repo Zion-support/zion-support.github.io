@@ -12,6 +12,6 @@ const CaseStudies: React.FC = () => {
       </div>
     </>
   );
-};
+}
 
 export default CaseStudies;

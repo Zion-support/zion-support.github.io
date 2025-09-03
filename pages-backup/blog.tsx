@@ -17,9 +17,9 @@ const Blog: NextPage = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">"
             <div className="max-w-4xl mx-auto text-center">"
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                Technology Insights & Innovation,
+                Technology Insights & Innovation;
               </h1>"
-              <p className="text-lg sm:text-xl text-gray-200 leading-relaxed">,
+              <p className="text-lg sm:text-xl text-gray-200 leading-relaxed">
                 Stay ahead with the latest trends in AI, cloud technology, micro SaaS, and digital transformation.
               </p>
             </div>
@@ -29,17 +29,17 @@ const Blog: NextPage = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">"
             <div className="max-w-6xl mx-auto">"
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {blogPosts.map((post) => (",
+                {blogPosts.map((post) => ("
                   <article key="{post.id}" className="bg-white rounded-lg shadow-lg overflow-hidden hover: shadow-xl transition-shadow duration-300">"
                     <div className="p-6 md:p-8">"
                       <div className="flex items-center gap-2 mb-4">"
-                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">,
+                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
                           {post.category}
 
                         </span>
                       </div>
                       "
-                      <h2 className="text-xl md: text-2xl font-bold text-gray-900 mb-4 leading-tight">,
+                      <h2 className="text-xl md: text-2xl font-bold text-gray-900 mb-4 leading-tight">
                         {post.title}
 
                       </h2>
@@ -64,7 +64,7 @@ const Blog: NextPage = () => {
                         <ArrowRight className="ml-1 w-4 h-4"  />
                       </Link>
                     </div>
-                  </article>,
+                  </article>
                 ))}
 
               </div>
@@ -84,11 +84,11 @@ const Blog: NextPage = () => {
                 <ArrowRight className="ml-2 w-5 h-5"  />
               </Link>"
               <Link href="/services" className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center">
-                Explore Services,
+                Explore Services;
               </Link>
             </div>
         </section>
       </div>
-    </MainLayout>;,
-  ),
-"export default Blog
+    </MainLayout>;
+  )
+"export default Blog;

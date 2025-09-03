@@ -1,242 +1,242 @@
 import React, { useState } from 'react';
 import { Link, useLocation  } from 'react-router-dom';
 export default function Page() {
-,
-        { name: 'Services', href: '/services', icon: Briefcase },
-        { name: 'Solutions', href: '/solutions', icon: Target },
-        { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
-        { name: 'Case Studies', href: '/case-studies', icon: FileText },
-        { name: 'Research', href: '/research-development', icon: TestTube },
-        { name: 'Events', href: '/events', icon: Video },
-        { name: 'News', href: '/news', icon: Newspaper },
-        { name: 'Contact', href: '/contact', icon: Mail },
-        { name: 'Blog', href: '/blog', icon: FileText },
+
+        { name: 'Services', href: '/services', icon: Briefcase }
+        { name: 'Solutions', href: '/solutions', icon: Target }
+        { name: 'AI Solutions', href: '/ai-solutions', icon: Brain }
+        { name: 'Case Studies', href: '/case-studies', icon: FileText }
+        { name: 'Research', href: '/research-development', icon: TestTube }
+        { name: 'Events', href: '/events', icon: Video }
+        { name: 'News', href: '/news', icon: Newspaper }
+        { name: 'Contact', href: '/contact', icon: Mail }
+        { name: 'Blog', href: '/blog', icon: FileText }
       ]
-    },;
+    }
     {
 
-      name: 'Core Services',
-      href: '#',
-      icon: Target,
+      name: 'Core Services'
+      href: '#'
+      icon: Target;
       children: [{
 
-          name: 'Cloud & DevOps',
-          href: '/services/cloud-devops',
-          icon: Cloud,
+          name: 'Cloud & DevOps'
+          href: '/services/cloud-devops'
+          icon: Cloud;
           description: 'Infrastructure & Automation'
-        },
+        }
         {
 
-          name: 'Digital Twin',
-          href: '/services/digital-twin',
-          icon: Globe,
+          name: 'Digital Twin'
+          href: '/services/digital-twin'
+          icon: Globe;
           description: 'Simulation & Monitoring'
-        },
+        }
         {
 
-          name: 'Data Analytics',
-          href: '/services/data-analytics',
-          icon: BarChart3,
+          name: 'Data Analytics'
+          href: '/services/data-analytics'
+          icon: BarChart3;
           description: 'Business Intelligence'
-        },
+        }
         {
 
-          name: 'IT Infrastructure',
-          href: '/services/it-infrastructure',
-          icon: Server,
+          name: 'IT Infrastructure'
+          href: '/services/it-infrastructure'
+          icon: Server;
           description: 'Hardware & Network'
         }
       ]
-    },
+    }
     {
 
-      name: 'AI Products',
-      href: '#',
-      icon: Brain,
+      name: 'AI Products'
+      href: '#'
+      icon: Brain;
       children: [{
 
-          name: 'AI Sales Copilot',
-          href: '/services/ai-sales-copilot',
-          icon: Users,
+          name: 'AI Sales Copilot'
+          href: '/services/ai-sales-copilot'
+          icon: Users;
           description: 'Sales Intelligence'
-        },
+        }
         {
 
-          name: 'AI Compliance Assistant',
-          href: '/services/ai-compliance-assistant',
-          icon: Shield,
+          name: 'AI Compliance Assistant'
+          href: '/services/ai-compliance-assistant'
+          icon: Shield;
           description: 'Regulatory Compliance'
-        },
+        }
         {
 
-          name: 'AI Auto Email Responder',
-          href: '/services/ai-auto-email-responder',
-          icon: MessageCircle,
+          name: 'AI Auto Email Responder'
+          href: '/services/ai-auto-email-responder'
+          icon: MessageCircle;
           description: 'Email Automation'
-        },
+        }
         {
 
-          name: 'LLM Content Studio',
-          href: '/services/llm-content-studio',
-          icon: PenTool,
+          name: 'LLM Content Studio'
+          href: '/services/llm-content-studio'
+          icon: PenTool;
           description: 'Content Creation'
         }
       ]
-    },
+    }
     {
 
-      name: 'Emerging Tech',
-      href: '#',
-      icon: Rocket,
+      name: 'Emerging Tech'
+      href: '#'
+      icon: Rocket;
       children: [{
 
-          name: 'Quantum Computing',
-          href: '/services/quantum-computing',
-          icon: Atom,
+          name: 'Quantum Computing'
+          href: '/services/quantum-computing'
+          icon: Atom;
           description: 'Next-gen Computing'
-        },
+        }
         {
 
-          name: 'AI Cybersecurity',
-          href: '/services/ai-cybersecurity',
-          icon: Lock,
+          name: 'AI Cybersecurity'
+          href: '/services/ai-cybersecurity'
+          icon: Lock;
           description: 'Intelligent Security'
-        },
+        }
         {
 
-          name: 'IoT Edge Computing',
-          href: '/services/iot-edge-computing',
-          icon: Smartphone,
+          name: 'IoT Edge Computing'
+          href: '/services/iot-edge-computing'
+          icon: Smartphone;
           description: 'Connected Ecosystems'
-        },
+        }
         {
 
-          name: 'AI Content Creation',
-          href: '/services/ai-content-creation',
-          icon: Video,
+          name: 'AI Content Creation'
+          href: '/services/ai-content-creation'
+          icon: Video;
           description: 'Creative AI'
         }
       ]
-    },
+    }
     {
 
-      name: 'Business Solutions',
-      href: '#',
-      icon: Briefcase,
+      name: 'Business Solutions'
+      href: '#'
+      icon: Briefcase;
       children: [{
 
-          name: 'Marketplace',
-          href: '/marketplace',
-          icon: ShoppingCart,
+          name: 'Marketplace'
+          href: '/marketplace'
+          icon: ShoppingCart;
           description: 'Product & Service Hub'
-        },
+        }
         {
 
-          name: 'Talent Solutions',
-          href: '/talent',
-          icon: Users,
+          name: 'Talent Solutions'
+          href: '/talent'
+          icon: Users;
           description: 'HR & Recruitment'
-        },
+        }
         {
 
-          name: 'Equipment Services',
-          href: '/equipment',
-          icon: Server,
+          name: 'Equipment Services'
+          href: '/equipment'
+          icon: Server;
           description: 'Hardware Solutions'
-        },
+        }
         {
 
-          name: 'Request Quote',
-          href: '/request-quote',
-          icon: MessageCircle,
+          name: 'Request Quote'
+          href: '/request-quote'
+          icon: MessageCircle;
           description: 'Get Pricing'
         }
       ]
-    },
+    }
     {
 
-      name: 'Company',
-      href: '#',
-      icon: Info,
+      name: 'Company'
+      href: '#'
+      icon: Info;
       children: [{
 
-          name: 'About Us',
-          href: '/about',
-          icon: Info,
+          name: 'About Us'
+          href: '/about'
+          icon: Info;
           description: 'Our Story'
-        },
+        }
         {
 
-          name: 'Team',
-          href: '/team',
-          icon: Users,
+          name: 'Team'
+          href: '/team'
+          icon: Users;
           description: 'Meet Our Team'
-        },
+        }
         {
 
-          name: 'Careers',
-          href: '/careers',
-          icon: Briefcase,
+          name: 'Careers'
+          href: '/careers'
+          icon: Briefcase;
           description: 'Join Us'
-        },
+        }
         {
 
-          name: 'Partners',
-          href: '/partners',
-          icon: Users,
+          name: 'Partners'
+          href: '/partners'
+          icon: Users;
           description: 'Partnerships'
         }
       ]
-    },
+    }
     {
 
-      name: 'Resources',
-      href: '#',
-      icon: BookOpen,
+      name: 'Resources'
+      href: '#'
+      icon: BookOpen;
       children: [{
 
-          name: 'Blog',
-          href: '/blog',
-          icon: FileText,
+          name: 'Blog'
+          href: '/blog'
+          icon: FileText;
           description: 'Latest Insights'
-        },
+        }
         {
 
-          name: 'FAQ',
-          href: '/faq',
-          icon: HelpCircle,
+          name: 'FAQ'
+          href: '/faq'
+          icon: HelpCircle;
           description: 'Common Questions'
-        },
+        }
         {
 
-          name: 'Help Center',
-          href: '/help',
-          icon: MessageCircle,
+          name: 'Help Center'
+          href: '/help'
+          icon: MessageCircle;
           description: 'Support Resources'
-        },
+        }
         {
 
-          name: 'Documentation',
-          href: '/docs',
-          icon: BookOpen,
+          name: 'Documentation'
+          href: '/docs'
+          icon: BookOpen;
           description: 'Technical Docs'
         }
       ]
-    },
+    }
     {
 
-      name: 'Contact',
-      href: '/contact',
-      icon: Phone
+      name: 'Contact'
+      href: '/contact'
+      icon: Phone;
     }
   ];
 
     return ()      <div key={item.name} className="mb-1">
         {hasChildren ? (
           <div>
-            <button
+            <button;
               onClick={(: unknown toggleSection(item.name.toLowerCase())}
-              className={`w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${                level === 0
+              className={`w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${                level === 0;
                   ? 'text-slate-300 hover:text-white hover:bg-slate-700/50'
                   : 'text-slate-400 hover:text-slate-300'              }`}
             >"
@@ -259,7 +259,7 @@ export default function Page() {
             )}
           </div>
         ) : 
-          <Link
+          <Link;
             to={item.href}`
             className={`flex items-center space-x-3 px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${isActive'
                 ? 'text-cyan-400 bg-cyan-400/10 border border-cyan-400/20'
@@ -276,12 +276,12 @@ export default function Page() {
           </Link>
         )}
       </div>
-    )};
+    )}
 
   return ()
     <>
       {/* Mobile menu button */}
-      <button
+      <button;
         onClick={() => setIsOpen(!isOpen)}"
         className="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
       >"
@@ -289,7 +289,7 @@ export default function Page() {
 
       {/* Sidebar */}`
       <div className={`
-        fixed inset-y-0 left-0 z-50 w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl
+        fixed inset-y-0 left-0 z-50 w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl;
         transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0'
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}`
       `}>"
@@ -297,7 +297,7 @@ export default function Page() {
           {/* Header */}"
           <div className="flex items-center justify-between p-4 border-b border-slate-700/50">"
             <h2 className="text-lg font-semibold text-white">Navigation</h2>
-            <button
+            <button;
               onClick={() => setIsOpen(false)}"
               className="lg:hidden p-1 rounded text-slate-400 hover:text-white hover:bg-slate-800"
             >"
@@ -336,7 +336,7 @@ export default function Page() {
         />
       )}
     </>
-  )};
+  )}
             </div>;
           </div>;
         </div>;

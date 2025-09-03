@@ -1,49 +1,49 @@
 
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true",;,
+  enabled: process.env.ANALYZE === "true",
 });
 module.exports = withBundleAnalyzer({
-  compress: true,;
-  poweredByHeader: false,;
-  generateEtags: false,;
+  compress: true;
+  poweredByHeader: false;
+  generateEtags: false;
   httpAgentOptions: {
-  keepAlive: true,;,
-},;
+  keepAlive: true,
+}
   images: {
-  formats: ["image/webp", "image/avif"],;
-    minimumCacheTTL: 60,;,
-},;
+  formats: ["image/webp", "image/avif"]
+    minimumCacheTTL: 60,
+}
   experimental: {
-  optimizeCss: true,;
-    optimizePackageImports: ["@radix-ui/react-icons", "lucide-react"],;,
-},;
+  optimizeCss: true;
+    optimizePackageImports: ["@radix-ui/react-icons", "lucide-react"],
+}
   webpack: (config, { isServer }) => {
-  if (!isServer) {
+  if() {
+
   config.resolve.fallback = {
-  ...config.resolve.fallback,;
-        fs: false,;
-        net: false,;
-        tls: false,;,
+  ...config.resolve.fallback;
+        fs: false;
+        net: false;
+        tls: false,
 }
     }
-    ;
     // Optimize bundle splitting;
     config.optimization.splitChunks = {
-  chunks: "all",;
+  chunks: "all"
       cacheGroups: {
   vendor: {
-  test: /[\\/]node_modules[\\/]/,;
-          name: "vendors",;
-          chunks: "all",;,
-},;
-        common: {
-  name: "common",;
-          minChunks: 2,;
-          chunks: "all",;
-          enforce: true,;,
-},;,
-},;,
+  test: /[\\/]node_modules[\\/]/
+          name: "vendors"
+          chunks: "all",
 }
-    return config;,
-},;,
+        common: {
+  name: "common"
+          minChunks: 2;
+          chunks: "all"
+          enforce: true,
+},
+},
+}
+    return config;
+},
 })

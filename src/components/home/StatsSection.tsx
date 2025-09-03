@@ -4,7 +4,7 @@ interface Stat {
   label: string;
   description: string;
   avatar: string;
-icon: React.ComponentType<{ className?: string
+icon: React.ComponentType<{ className?: string;
 }>;
   color: string}
 
@@ -17,21 +17,20 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   const [counts, setCounts] = useState<any>({});
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // TODO: Add dependencies if needed;
 }, []);
-    if(isInView) {
+    if() {
 
           let current = 0;
           
-          const countTimer = setInterval(: unknown {
-            current += increment;            if (current >= targetNumber) {
+          const countTimer = setInterval() {
 
               current = targetNumber;
               clearInterval(countTimer)}
 
             setCounts(prev => ({
 
-              ...prev,
+              ...prev;
               [stat.label]: Math.floor(current)
             }))}, 50)})}, 500);
 
@@ -45,15 +44,13 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
           className="text-center mb-16"
           initial = {
 
-  { opacity: 0,
-  y: 30
-
+  { opacity: 0;
+  y: 30;
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -62,39 +59,35 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
             Trusted by <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Industry Leaders</span>
           </h2>"
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Our track record speaks for itself - delivering exceptional results across diverse industries
+            Our track record speaks for itself - delivering exceptional results across diverse industries;
           </p>
         </motion.div>
 "
         <div ref={ref} className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index (
-            <motion.div
+            <motion.div;
               key={stat.label}"
               className="group relative text-center p-6 bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl hover:border-zion-cyan/40 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/20 overflow-hidden"
               initial = {
 
-  { opacity: 0,
-  y: 30
-
+  { opacity: 0;
+  y: 30;
 }}
               whileInView = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
               transition = {
 
-  { duration: 0.6,
-  delay: index * 0.1
-
+  { duration: 0.6;
+  delay: index * 0.1;
 }}
               viewport={{ once: true }}
               whileHover={{
 
-                y: -8,
-  transition: { duration: 0.3
-
+                y: -8;
+  transition: { duration: 0.3;
 }
               }}
 
@@ -115,9 +108,8 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
                 whileInView={{ scale: 1 }}
                 transition = {
 
-  { duration: 0.5,
-  delay: index * 0.1 + 0.5
-
+  { duration: 0.5;
+  delay: index * 0.1 + 0.5;
 }}
                 viewport={{ once: true }}
 
@@ -136,10 +128,10 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
               {/* Hover indicator */}"
               <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full group-hover:w-1/2 transition-all duration-500" />
             </motion.div>;
-          ))};
+          ))}
         </div>;
       </div>;
     </section>;
-  )};
+  )}
 
 export default StatsSection}}}}}'"`

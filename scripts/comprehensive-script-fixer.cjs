@@ -1,82 +1,87 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 
 class ComprehensiveScriptFixer {
   constructor() {
+
     this.projectRoot = process.cwd()
     this.scriptsDir = path.join(this.projectRoot, 'scripts')
-    this.fixedCount = 0
+    this.fixedCount = 0;
     this.errors = []
   }
 
-  log(message, level = 'info') {
+  log() {
+
     const timestamp = new Date().toISOString()
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`
     console.log(logMessage)
   }
 
-  fixSyntaxErrors(content) {
-    let fixed = content
-    
-    // Fix common syntax issues
-    fixed = fixed.replace(/;\s*,/g, ',') // Remove semicolons before commas
-    fixed = fixed.replace(/{\s*;/g, '{') // Remove semicolons after opening braces
-    fixed = fixed.replace(/;\s*}/g, '}') // Remove semicolons before closing braces
-    fixed = fixed.replace(/;\s*\)/g, ')') // Remove semicolons before closing parentheses
-    fixed = fixed.replace(/;\s*\]/g, ']') // Remove semicolons before closing brackets
-    fixed = fixed.replace(/;\s*$/gm, '') // Remove trailing semicolons at end of lines
-    
-    // Fix malformed object literals
+  fixSyntaxErrors() {
+
+    let fixed = content;
+    // Fix common syntax issues;
+    fixed = fixed.replace(/;\s*,/g, ',') // Remove semicolons before commas;
+    fixed = fixed.replace(/{\s*;/g, '{') // Remove semicolons after opening braces;
+    fixed = fixed.replace(/;\s*}/g, '}') // Remove semicolons before closing braces;
+    fixed = fixed.replace(/;\s*\)/g, ')') // Remove semicolons before closing parentheses;
+    fixed = fixed.replace(/;\s*\]/g, ']') // Remove semicolons before closing brackets;
+    fixed = fixed.replace(/;\s*$/gm, '') // Remove trailing semicolons at end of lines;
+    // Fix malformed object literals;
     fixed = fixed.replace(/{\s*;\s*/g, '{')
     fixed = fixed.replace(/;\s*}/g, '}')
     
-    // Fix malformed array literals
+    // Fix malformed array literals;
     fixed = fixed.replace(/\[\s*;\s*/g, '[')
     fixed = fixed.replace(/;\s*\]/g, ']')
     
-    // Fix malformed function calls
+    // Fix malformed function calls;
     fixed = fixed.replace(/\(\s*;\s*/g, '(')
     fixed = fixed.replace(/;\s*\)/g, ')')
     
-    // Fix malformed strings
+    // Fix malformed strings;
     fixed = fixed.replace(/['"]\s*;\s*['"]/g, '""')
     fixed = fixed.replace(/['"]\s*;\s*$/gm, '"')
     
-    // Fix malformed imports
+    // Fix malformed imports;
     fixed = fixed.replace(/require\s*\(\s*['"]\s*;\s*['"]\s*\)/g, 'require("")')
     
-    // Fix malformed class definitions
+    // Fix malformed class definitions;
     fixed = fixed.replace(/class\s+\w+\s*{\s*;/g, (match) => match.replace('{', '{'))
     
-    // Fix malformed constructor calls
+    // Fix malformed constructor calls;
     fixed = fixed.replace(/new\s+\w+\s*\(\s*;\s*\)/g, (match) => match.replace('(', '('))
     
-    return fixed
+    return fixed;
   }
 
-  async fixScriptFile(filePath) {
+  async fixScriptFile() {
+
     try {
       const content = fs.readFileSync(filePath, 'utf8')
       const fixedContent = this.fixSyntaxErrors(content)
       
-      if (fixedContent !== content) {
+      if() {
+
         fs.writeFileSync(filePath, fixedContent)
         this.log(`✅ Fixed: ${path.basename(filePath)}`)
         this.fixedCount++
-        return true
+        return true;
       } else {
         this.log(`✅ No fixes needed: ${path.basename(filePath)}`)
-        return false
+        return false;
       }
-    } catch (error) {
+    } catch() {
+
       this.log(`❌ Failed to fix ${path.basename(filePath)}: ${error.message}`, 'error')
       this.errors.push({ file: filePath, error: error.message })
-      return false
+      return false;
     }
   }
 
   async fixAllScripts() {
+
     this.log('🔧 Starting comprehensive script fixing...')
     
     const files = fs.readdirSync(this.scriptsDir)
@@ -89,14 +94,16 @@ class ComprehensiveScriptFixer {
     
     this.log(`Found ${scriptFiles.length} script files to check`)
     
-    for (const file of scriptFiles) {
+    for() {
+
       const filePath = path.join(this.scriptsDir, file)
       await this.fixScriptFile(filePath)
     }
     
     this.log(`🔧 Script fixing completed. Fixed ${this.fixedCount} files.`)
     
-    if (this.errors.length > 0) {
+    if() {
+
       this.log(`⚠️ ${this.errors.length} files had errors:`, 'warning')
       this.errors.forEach(error => {
         this.log(`  - ${path.basename(error.file)}: ${error.error}`, 'warning')
@@ -107,6 +114,7 @@ class ComprehensiveScriptFixer {
   }
 
   displaySummary() {
+
     console.log('\n' + '='.repeat(60))
     console.log('🔧 COMPREHENSIVE SCRIPT FIXER SUMMARY')
     console.log('='.repeat(60))
@@ -116,12 +124,14 @@ class ComprehensiveScriptFixer {
   }
 
   async run() {
+
     try {
       await this.fixAllScripts()
       this.displaySummary()
       this.log('🎉 Comprehensive script fixing completed successfully')
       return { success: true, fixedCount: this.fixedCount, errors: this.errors }
-    } catch (error) {
+    } catch() {
+
       this.log(`💥 Script fixing failed: ${error.message}`, 'error')
       this.displaySummary()
       return { success: false, error: error.message }
@@ -129,12 +139,13 @@ class ComprehensiveScriptFixer {
   }
 }
 
-// Run the script fixer
-if (require.main === module) {
+// Run the script fixer;
+if() {
+
   const fixer = new ComprehensiveScriptFixer()
   fixer.run().then(result => {
     process.exit(result.success ? 0 : 1)
   })
 }
 
-module.exports = ComprehensiveScriptFixer
+module.exports = ComprehensiveScriptFixer;

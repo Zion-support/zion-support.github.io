@@ -3,6 +3,7 @@ import Head from "next/head"
 import Link from "next/link"
 
 export default function NotFound() {
+
   return (
     <>
       <Head>
@@ -19,11 +20,11 @@ export default function NotFound() {
             </p>
           </div>
           <div className="space-y-4">
-            <Link 
+            <Link;
               href="/"
               className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
             >
-              Go Home
+              Go Home;
             </Link>
           </div>
         </div>

@@ -7,9 +7,9 @@ import { Link  } from 'react-router-dom';
 
 export function EnhancedFuturisticFooter() {
 
-        { name: 'Press & Media', href: '/press', featured: false },;
-        { name: 'Legal & Privacy', href: '/legal', featured: false };
-      ]};
+        { name: 'Press & Media', href: '/press', featured: false }
+        { name: 'Legal & Privacy', href: '/legal', featured: false }
+      ]}
   ];
 
   return ()    <footer className="relative bg-slate-950 border-t border-cyan-400/20 overflow-hidden">
@@ -27,15 +27,14 @@ export function EnhancedFuturisticFooter() {
         </div>
       </div>
 
-    { name: 'Terms of Service', href: '/terms', description: 'Service terms' },;
-    { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },;
-    { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },;
-    { name: 'Security', href: '/security', description: 'Security practices' },;
-    { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' };  ];
+    { name: 'Terms of Service', href: '/terms', description: 'Service terms' }
+    { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' }
+    { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' }
+    { name: 'Security', href: '/security', description: 'Security practices' }
+    { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' }  ];
 
-  // Create missing pages for broken links
-  
-      </Link>;) };
+  // Create missing pages for broken links;
+      </Link>;) }
   return ("
           <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
         {/* Background Pattern */}"
@@ -47,14 +46,14 @@ export function EnhancedFuturisticFooter() {
         {/* Main Footer Content */}
         <div  className="container - responsive py-16">
           {/* Stats Section */}
-          <motion.div
+          <motion.div;
             className="grid grid - cols - 2 md:grid - cols - 4 gap-8 mb-16"            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, staggerChildren: 0.1 }}
           >
             {stats.map((stat, index) => (
-              <motion.div
+              <motion.div;
                 key={stat.label}"
                 className="text-center"
                 initial={{ opacity: 0, y: 20 }}
@@ -100,13 +99,13 @@ export function EnhancedFuturisticFooter() {
                 <div className="flex items-center space-x-3 text-slate-300">"
                   <Phone className="w-4 h-4 text-cyan-400"  />"
                   <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
-                    +1 302 464 0950
+                    +1 302 464 0950;
                   </a>
                 </div>"
                 <div className="flex items-center space-x-3 text-slate-300">"
                   <Mail className="w-4 h-4 text-cyan-400"  />"
                   <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
-                    kleber@ziontechgroup.com
+                    kleber@ziontechgroup.com;
                   </a>
                 </div>"
                 <div className="flex items-center space-x-3 text-slate-300">"
@@ -118,7 +117,7 @@ export function EnhancedFuturisticFooter() {
               {/* Social Links */}"
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
-                  <a
+                  <a;
                     key={social.name}
                     href={social.href}"
                     target="_blank"
@@ -145,7 +144,7 @@ export function EnhancedFuturisticFooter() {
                 <ul className="space-y-3">
                   {section.links.map((link) => (
                     <li key={link.name}>
-                      <Link
+                      <Link;
                         to={link.href}"
                         className="flex items-center text-slate-400 hover:text-cyan-400 transition-colors duration-200 group"
                       >"
@@ -165,7 +164,7 @@ export function EnhancedFuturisticFooter() {
               <ul className="space-y-3">
                 {companyInfo.map((link) => (
                   <li key={link.name}>
-                    <Link
+                    <Link;
                       to={link.href}"
                       className="text-slate-400 hover:text-cyan-400 transition-colors duration-200"
                     >
@@ -181,7 +180,7 @@ export function EnhancedFuturisticFooter() {
               <ul className="space-y-3">
                 {supportResources.map((link) => (
                   <li key={link.name}>
-                    <Link
+                    <Link;
                       to={link.href}"
                       className="text-slate-400 hover:text-cyan-400 transition-colors duration-200"
                     >
@@ -197,7 +196,7 @@ export function EnhancedFuturisticFooter() {
               <ul className="space-y-3">
                 {legalLinks.map((link) => (
                   <li key={link.name}>
-                    <Link
+                    <Link;
                       to={link.href}"
                       className="text-slate-400 hover:text-cyan-400 transition-colors duration-200"
                     >
@@ -212,7 +211,7 @@ export function EnhancedFuturisticFooter() {
               <h4 className="text-lg font-semibold text-white mb-4">Connect</h4>"
               <div className="flex space-x-4 mb-6">
                 {socialLinks.map((social) => (
-                  <a
+                  <a;
                     key={social.name}
                     href={social.href}"
                     target="_blank"
@@ -246,109 +245,109 @@ export function EnhancedFuturisticFooter() {
               <div className="flex items-center space-x-6 text-sm text-slate-400">"
                 <span className="flex items-center">"
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2"  />
-                  SOC 2 Compliant
+                  SOC 2 Compliant;
                 </span>"
                 <span className="flex items-center">"
                   <Shield className="w-4 h-4 text-blue-400 mr-2"  />
-                  ISO 27001 Certified
+                  ISO 27001 Certified;
                 </span>"
                 <span className="flex items-center">"
                   <Award className="w-4 h-4 text-yellow-400 mr-2"  />
-                  AWS Partner
-                </span>      title: 'Pricing & Plans',
-      icon: DollarSign,
-      color: 'from-emerald-600 to-teal-600',
+                  AWS Partner;
+                </span>      title: 'Pricing & Plans'
+      icon: DollarSign;
+      color: 'from-emerald-600 to-teal-600'
       links: ['
-        { name: 'Pricing Overview', href: '/pricing' },;
-        { name: 'Pricing Guide', href: '/pricing-guide' },;
-        { name: 'Comprehensive Pricing 2026', href: '/comprehensive-pricing-guide-2026' },;
-        { name: 'Request Quote', href: '/request-quote' },;
-        { name: 'Schedule Demo', href: '/schedule-demo' },;
+        { name: 'Pricing Overview', href: '/pricing' }
+        { name: 'Pricing Guide', href: '/pricing-guide' }
+        { name: 'Comprehensive Pricing 2026', href: '/comprehensive-pricing-guide-2026' }
+        { name: 'Request Quote', href: '/request-quote' }
+        { name: 'Schedule Demo', href: '/schedule-demo' }
         { name: 'Contact Sales', href: '/contact' }
       ]
-    },
+    }
     {
 
-      title: 'Company',;
-      icon: Building,
-      color: 'from-green-600 to-emerald-600',
+      title: 'Company'
+      icon: Building;
+      color: 'from-green-600 to-emerald-600'
       links: ['
-        { name: 'About Us', href: '/about' },;
-        { name: 'Our Team', href: '/team' },;
-        { name: 'Careers', href: '/careers' },;
-        { name: 'Partners', href: '/partners' },;
-        { name: 'News & Press', href: '/news' },;
-        { name: 'Events', href: '/events' },;
-        { name: 'Case Studies', href: '/case-studies' },;
+        { name: 'About Us', href: '/about' }
+        { name: 'Our Team', href: '/team' }
+        { name: 'Careers', href: '/careers' }
+        { name: 'Partners', href: '/partners' }
+        { name: 'News & Press', href: '/news' }
+        { name: 'Events', href: '/events' }
+        { name: 'Case Studies', href: '/case-studies' }
         { name: 'Marketplace', href: '/marketplace' }
       ]
-    },
+    }
     {
 
-      title: 'Resources & Learning',;
-      icon: BookOpen,
-      color: 'from-orange-600 to-red-600',
+      title: 'Resources & Learning'
+      icon: BookOpen;
+      color: 'from-orange-600 to-red-600'
       links: ['
-        { name: 'Help Center', href: '/help' },;
-        { name: 'Documentation', href: '/documentation' },;
-        { name: 'Training', href: '/training' },;
-        { name: 'Blog', href: '/blog' },;
-        { name: 'Webinars', href: '/webinars' },;
-        { name: 'White Papers', href: '/white-papers' },;
-        { name: 'FAQ', href: '/faq' },;
-        { name: 'Support Center', href: '/support' },;
+        { name: 'Help Center', href: '/help' }
+        { name: 'Documentation', href: '/documentation' }
+        { name: 'Training', href: '/training' }
+        { name: 'Blog', href: '/blog' }
+        { name: 'Webinars', href: '/webinars' }
+        { name: 'White Papers', href: '/white-papers' }
+        { name: 'FAQ', href: '/faq' }
+        { name: 'Support Center', href: '/support' }
         { name: 'Community', href: '/community' }
       ]
-    },
+    }
     {
 
-      title: 'Platform & Tools',;
-      icon: Settings,
-      color: 'from-slate-600 to-gray-600',
+      title: 'Platform & Tools'
+      icon: Settings;
+      color: 'from-slate-600 to-gray-600'
       links: ['
-        { name: 'Dashboard', href: '/dashboard' },;
-        { name: 'Login', href: '/login' },;
-        { name: 'Sign Up', href: '/signup' },;
-        { name: 'System Status', href: '/status' },;
-        { name: 'API Documentation', href: '/documentation' },;
+        { name: 'Dashboard', href: '/dashboard' }
+        { name: 'Login', href: '/login' }
+        { name: 'Sign Up', href: '/signup' }
+        { name: 'System Status', href: '/status' }
+        { name: 'API Documentation', href: '/documentation' }
         { name: 'Developer Tools', href: '/documentation' }
       ]
-    },
+    }
     {
 
-      title: 'Legal & Compliance',;
-      icon: Shield,
-      color: 'from-gray-600 to-slate-600',
+      title: 'Legal & Compliance'
+      icon: Shield;
+      color: 'from-gray-600 to-slate-600'
       links: ['
-        { name: 'Privacy Policy', href: '/privacy' },;
-        { name: 'Terms of Service', href: '/terms' },;
-        { name: 'Cookie Policy', href: '/cookies' },;
-        { name: 'Security', href: '/security' },;
-        { name: 'Compliance', href: '/compliance' },;
-        { name: 'Accessibility', href: '/accessibility' },;
+        { name: 'Privacy Policy', href: '/privacy' }
+        { name: 'Terms of Service', href: '/terms' }
+        { name: 'Cookie Policy', href: '/cookies' }
+        { name: 'Security', href: '/security' }
+        { name: 'Compliance', href: '/compliance' }
+        { name: 'Accessibility', href: '/accessibility' }
         { name: 'Sitemap', href: '/sitemap' }
       ]
     }
   ];
 
-    { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar },;
-    { name: 'Contact Support', href: '/support', icon: MessageCircle },;
+    { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar }
+    { name: 'Contact Support', href: '/support', icon: MessageCircle }
     { name: 'View Status', href: '/status', icon: Gauge }
   ];
 
-    { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' },;
-    { name: 'Facebook', href: '#', icon: Facebook, color: 'hover:text-blue-600' },;
-    { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-400' },;
-    { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-400' },;
+    { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' }
+    { name: 'Facebook', href: '#', icon: Facebook, color: 'hover:text-blue-600' }
+    { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-400' }
+    { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-400' }
     { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-400' }
   ];
 
-    email: 'info@ziontechgroup.com',
+    email: 'info@ziontechgroup.com'
     address: '123 Innovation Drive, Tech City, TC 12345'
 '
-    phone: '+1(555) 123-4567',;'
+    phone: '+1(555) 123-4567','
     email: 'info@ziontechgroup.com','    address: '123 Innovation Drive, Tech City, TC 12345'
-  };
+  }
 
   return ("
     <footer className="bg-slate-900 text-white relative overflow-hidden">
@@ -370,7 +369,7 @@ export function EnhancedFuturisticFooter() {
                   <Crown className="w-7 h-7 text-white"  />                </div>
                 <div>"
                   <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                    Zion Tech Group
+                    Zion Tech Group;
                   </h3>"
                   <p className="text-sm text-slate-400">Innovating Tomorrow, Today</p>
                 </div>
@@ -379,7 +378,7 @@ export function EnhancedFuturisticFooter() {
                 Leading provider of innovative technology solutions, helping businesses transform and thrive in the digital age.</p>"
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
-                  <a
+                  <a;
                     key={social.name}
                     href={social.href}`
                     className={`w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center text-slate-400 transition-colors ${social.color}`}
@@ -415,7 +414,7 @@ export function EnhancedFuturisticFooter() {
           </div>
 
           {/* Bottom Section */}
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1 }}"
@@ -465,7 +464,7 @@ export function EnhancedFuturisticFooter() {
         </section>
       </div>;
 ;
-      {/* Bottom Footer */};"
+      {/* Bottom Footer */}"
       <div className="border-t border-slate-700/50">;"
         <div className="container-responsive py-6">;"
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">;"
@@ -486,5 +485,5 @@ export function EnhancedFuturisticFooter() {
           </div>;
         </div>;
       </div>;
-    </footer>;) };
+    </footer>;) }
 '"`

@@ -1,11 +1,12 @@
-import { useState, useEffect, useCallback } from 'react'; // Added useCallback
+import { useState, useEffect, useCallback } from 'react'; // Added useCallback;
 import { supabase } from '@/integrations/supabase/client';
 
 export default function Page() {
+
     try {
       setIsLoading(true);
       
-      const { data: milestonesData, error: milestonesError } = await supabase
+      const { data: milestonesData, error: milestonesError } = await supabase;
         .from('project_milestones')
         .select('*')
         .eq('project_id', projectId)
@@ -13,16 +14,16 @@ export default function Page() {
       
       if(milestonesError) throw milestonesError;
       
-      setMilestones(milestonesData || []); // Ensure milestonesData is not null
+      setMilestones(milestonesData || []); // Ensure milestonesData is not null;
+      const activitiesMap: Record<string, MilestoneActivity[]> = {}
       
-      const activitiesMap: Record<string, MilestoneActivity[]> = {};
-      
-      if(milestonesData) { // Check if milestonesData is not null
-        for(const milestone of milestonesData) {
-          const { data: activitiesData, error: activitiesError } = await supabase
+      if(milestonesData) { // Check if milestonesData is not null;
+        for() {
+
+          const { data: activitiesData, error: activitiesError } = await supabase;
             .from('milestone_activities')
             .select(`
-              *,
+              *
               created_by_profile:profiles!user_id(display_name, avatar_url)
             `)
             .eq('milestone_id', milestone.id)
@@ -36,28 +37,27 @@ export default function Page() {
       
       setActivities(activitiesMap);
       setError(null);
-    } catch(err: any) {
+    } catch() {
+
       console.error("Error fetching milestones:", err);
       setError("Failed to fetch milestones: " + err.message);
       toast.error("Failed to fetch milestones");
-      setMilestones([]); // Clear milestones on error
-      setActivities({});  // Clear activities on error
+      setMilestones([]); // Clear milestones on error;
+      setActivities({});  // Clear activities on error;
     } finally {
       setIsLoading(false);
     }
-  }, [projectId]); // projectId is a dependency of fetchMilestones
-
+  }, [projectId]); // projectId is a dependency of fetchMilestones;
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // TODO: Add dependencies if needed;
 }, []);
-    fetchMilestones(); // Call fetchMilestones directly
-  }, [fetchMilestones]); // Added fetchMilestones to the dependency array
-
+    fetchMilestones(); // Call fetchMilestones directly;
+  }, [fetchMilestones]); // Added fetchMilestones to the dependency array;
   return {
-    milestones,
-    activities,
-    isLoading,
-    error,
-    refetch: fetchMilestones
-  };
-};
+    milestones;
+    activities;
+    isLoading;
+    error;
+    refetch: fetchMilestones;
+  }
+}

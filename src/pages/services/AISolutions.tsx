@@ -1,136 +1,136 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Brain, 
-  Zap, 
-  Cpu, 
-  Database, 
-  Network, 
-  Smartphone, 
-  Lock, 
-  Code, 
-  Server, 
-  Chip, 
-  Wifi, 
-  ShieldCheck, 
-  Bot, 
-  Workflow, 
-  Eye, 
-  Sparkles, 
-  Atom, 
-  Leaf, 
-  Gamepad2, 
-  Coins, 
-  Satellite, 
-  Activity, 
-  MessageCircle, 
-  BarChart, 
-  Users2, 
-  Settings, 
-  Palette, 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Target,
-  Rocket,
-  TrendingUp,
-  Globe,
-  Building2,
-  ShoppingCart
+  Brain;
+  Zap;
+  Cpu;
+  Database;
+  Network;
+  Smartphone;
+  Lock;
+  Code;
+  Server;
+  Chip;
+  Wifi;
+  ShieldCheck;
+  Bot;
+  Workflow;
+  Eye;
+  Sparkles;
+  Atom;
+  Leaf;
+  Gamepad2;
+  Coins;
+  Satellite;
+  Activity;
+  MessageCircle;
+  BarChart;
+  Users2;
+  Settings;
+  Palette;
+  ArrowRight;
+  CheckCircle;
+  Star;
+  Target;
+  Rocket;
+  TrendingUp;
+  Globe;
+  Building2;
+  ShoppingCart;
 } from 'lucide-react';
 
 const AISolutions: React.FC = () => {
   const solutions = [
     {
-      icon: Brain,
-      title: 'Machine Learning & AI',
-      description: 'Advanced machine learning algorithms and AI models for predictive analytics and automation',
+      icon: Brain;
+      title: 'Machine Learning & AI'
+      description: 'Advanced machine learning algorithms and AI models for predictive analytics and automation'
       features: ['Predictive modeling', 'Natural language processing', 'Computer vision', 'Deep learning']
-    },
+    }
     {
-      icon: Workflow,
-      title: 'AI Workflow Automation',
-      description: 'Streamline business processes with intelligent automation and workflow optimization',
+      icon: Workflow;
+      title: 'AI Workflow Automation'
+      description: 'Streamline business processes with intelligent automation and workflow optimization'
       features: ['Process automation', 'Decision intelligence', 'Smart routing', 'Performance analytics']
-    },
+    }
     {
-      icon: Database,
-      title: 'Data Analytics & Insights',
-      description: 'Transform raw data into actionable insights with AI-powered analytics',
+      icon: Database;
+      title: 'Data Analytics & Insights'
+      description: 'Transform raw data into actionable insights with AI-powered analytics'
       features: ['Real-time analytics', 'Predictive insights', 'Data visualization', 'Business intelligence']
-    },
+    }
     {
-      icon: Bot,
-      title: 'Intelligent Chatbots',
-      description: 'AI-powered conversational agents for customer service and support',
+      icon: Bot;
+      title: 'Intelligent Chatbots'
+      description: 'AI-powered conversational agents for customer service and support'
       features: ['Natural conversations', 'Multi-language support', 'Integration capabilities', 'Learning algorithms']
-    },
+    }
     {
-      icon: Eye,
-      title: 'Computer Vision',
-      description: 'Advanced image and video analysis for various industry applications',
+      icon: Eye;
+      title: 'Computer Vision'
+      description: 'Advanced image and video analysis for various industry applications'
       features: ['Object detection', 'Facial recognition', 'Quality inspection', 'Video analytics']
-    },
+    }
     {
-      icon: Network,
-      title: 'AI Infrastructure',
-      description: 'Scalable AI infrastructure and cloud solutions for enterprise deployment',
+      icon: Network;
+      title: 'AI Infrastructure'
+      description: 'Scalable AI infrastructure and cloud solutions for enterprise deployment'
       features: ['Cloud AI platforms', 'Edge computing', 'GPU optimization', 'Scalable architecture']
     }
   ];
 
   const industries = [
     {
-      name: 'Healthcare',
-      icon: Activity,
+      name: 'Healthcare'
+      icon: Activity;
       description: 'AI-powered diagnostics, patient care, and medical research'
-    },
+    }
     {
-      name: 'Finance',
-      icon: Coins,
+      name: 'Finance'
+      icon: Coins;
       description: 'Risk assessment, fraud detection, and algorithmic trading'
-    },
+    }
     {
-      name: 'Manufacturing',
-      icon: Building2,
+      name: 'Manufacturing'
+      icon: Building2;
       description: 'Predictive maintenance, quality control, and supply chain optimization'
-    },
+    }
     {
-      name: 'Retail',
-      icon: ShoppingCart,
+      name: 'Retail'
+      icon: ShoppingCart;
       description: 'Customer analytics, inventory management, and personalized experiences'
-    },
+    }
     {
-      name: 'Transportation',
-      icon: Globe,
+      name: 'Transportation'
+      icon: Globe;
       description: 'Autonomous vehicles, route optimization, and traffic management'
-    },
+    }
     {
-      name: 'Energy',
-      icon: Zap,
+      name: 'Energy'
+      icon: Zap;
       description: 'Smart grid management, predictive maintenance, and energy optimization'
     }
   ];
 
   const benefits = [
     {
-      icon: TrendingUp,
-      title: 'Increased Efficiency',
+      icon: TrendingUp;
+      title: 'Increased Efficiency'
       description: 'Automate repetitive tasks and optimize business processes'
-    },
+    }
     {
-      icon: Target,
-      title: 'Better Decision Making',
+      icon: Target;
+      title: 'Better Decision Making'
       description: 'Data-driven insights for informed strategic decisions'
-    },
+    }
     {
-      icon: Users2,
-      title: 'Enhanced Customer Experience',
+      icon: Users2;
+      title: 'Enhanced Customer Experience'
       description: 'Personalized interactions and improved service delivery'
-    },
+    }
     {
-      icon: Rocket,
-      title: 'Competitive Advantage',
+      icon: Rocket;
+      title: 'Competitive Advantage'
       description: 'Stay ahead with cutting-edge AI technology'
     }
   ];
@@ -147,24 +147,24 @@ const AISolutions: React.FC = () => {
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI Solutions
+              AI Solutions;
             </h1>
             <p className="text-xl md:text-2xl text-purple-100 mb-8 max-w-3xl mx-auto">
               Transform your business with cutting-edge artificial intelligence solutions that drive innovation, efficiency, and growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center"
               >
-                Start AI Journey
+                Start AI Journey;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="border border-white text-white hover:bg-white hover:text-purple-900 px-8 py-3 rounded-lg font-semibold transition-colors"
               >
-                View All Services
+                View All Services;
               </Link>
             </div>
           </div>
@@ -176,7 +176,7 @@ const AISolutions: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Comprehensive AI Solutions
+              Comprehensive AI Solutions;
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               From machine learning to workflow automation, we provide end-to-end AI solutions tailored to your business needs.
@@ -187,7 +187,7 @@ const AISolutions: React.FC = () => {
             {solutions.map((solution, index) => {
               const Icon = solution.icon;
               return (
-                <div
+                <div;
                   key={index}
                   className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
                 >
@@ -220,7 +220,7 @@ const AISolutions: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              AI Solutions Across Industries
+              AI Solutions Across Industries;
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our AI solutions are designed to address the unique challenges and opportunities in various industry sectors.
@@ -231,7 +231,7 @@ const AISolutions: React.FC = () => {
             {industries.map((industry, index) => {
               const Icon = industry.icon;
               return (
-                <div
+                <div;
                   key={index}
                   className="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors"
                 >
@@ -294,24 +294,24 @@ const AISolutions: React.FC = () => {
             Transform your business with intelligent AI solutions. Get in touch with our experts today to start your AI journey.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <Link;
               to="/contact"
               className="bg-white text-purple-900 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center"
             >
-              Get AI Consultation
+              Get AI Consultation;
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
-            <Link
+            <Link;
               to="/services"
               className="border border-white text-white hover:bg-white hover:text-purple-900 px-8 py-3 rounded-lg font-semibold transition-colors"
             >
-              Explore All Services
+              Explore All Services;
             </Link>
           </div>
         </div>
       </section>
     </div>
   );
-};
+}
 
 export default AISolutions;

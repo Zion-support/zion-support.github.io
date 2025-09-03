@@ -1,7 +1,8 @@
 import {  import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from '../data/innovativeServices2027';
 
 export default function Page() {
-      },
+
+      }
       { threshold: 0.1 }
     );
 
@@ -9,7 +10,7 @@ export default function Page() {
   ;
   ;
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  };
+  }
   return ("
     <section id = "innovative-services-2027" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
       {/* Animated Background Elements */}"
@@ -21,18 +22,16 @@ export default function Page() {
 "
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header Section */}
-        <motion.div
+        <motion.div;
           initial = {
 
-  { opacity: 0,
-  y: 30
-
+  { opacity: 0;
+  y: 30;
 }}
           animate = {
 
-  isVisible ? { opacity: 1,
-  y: 0
-
+  isVisible ? { opacity: 1;
+  y: 0;
 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}"
           className="text-center mb-16"
@@ -43,7 +42,7 @@ export default function Page() {
 "
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">"
             <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
-              Revolutionary
+              Revolutionary;
             </span>
             <br />"
             <span className="text-white">Technology Services</span>
@@ -55,24 +54,21 @@ export default function Page() {
         </motion.div>
 
         {/* Category Filter */}
-        <motion.div
+        <motion.div;
           initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           animate = {
 
-  isVisible ? { opacity: 1,
-  y: 0
-
+  isVisible ? { opacity: 1;
+  y: 0;
 } : { opacity: 0, y: 20 }}
           transition = {
 
-  { duration: 0.8,
-  delay: 0.2
-
+  { duration: 0.8;
+  delay: 0.2;
 }}"
           className="mb-12"
 "
@@ -82,58 +78,55 @@ export default function Page() {
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === 'All''
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25''
                   : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white';`
-              }`};
+              }`}
             >;
               All Categories;
             </button>;
             {serviceCategories2027.map((category) => {;
               
-              return ()                <button
+              return ()                <button;
                   key = {category}
                   onClick={() => setSelectedCategory(category)}`
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 ${selectedCategory === category'
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25''
                       : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white'`
-                  }`};
+                  }`}
                 >;"
-                  {Icon && <Icon className="w-4 h-4"  />};
-                  {category};
+                  {Icon && <Icon className="w-4 h-4"  />}
+                  {category}
                 </button>;) }) }          </div>
         </motion.div>
 
         {/* Services Grid */}
-        <motion.div
+        <motion.div;
           initial = {
 
-  { opacity: 0,
+  { opacity: 0;
   y: 30 }}          animate = {
 
-  isVisible ? { opacity: 1,;
+  isVisible ? { opacity: 1;
   y: 0 } : { opacity: 0, y: 30 }}          transition = {
 
-  { duration: 0.8,
+  { duration: 0.8;
   delay: 0.4 }}"          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
           {filteredServices.map((service, index) => (;
-            <motion.div
+            <motion.div;
               key={service.id}
               initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
               animate = {
 
-  isVisible ? { opacity: 1,
-  y: 0
-
+  isVisible ? { opacity: 1;
+  y: 0;
 } : { opacity: 0, y: 20 }}
               transition = {
 
-  { duration: 0.6,
-  delay: index * 0.1
-
+  { duration: 0.6;
+  delay: index * 0.1;
 }}"
               className="group relative"
 "
@@ -153,7 +146,7 @@ export default function Page() {
                 {/* Technology Tags */}"
                 <div className="flex flex-wrap gap-2 mb-4">
                   {service.technology.slice(0, 3).map((tech, techIndex) => (
-                    <span
+                    <span;
                       key={techIndex}"
                       className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30"
 
@@ -162,7 +155,7 @@ export default function Page() {
                   ))}
                   {service.technology.length > 3 && ("
                     <span className="px-3 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full border border-zion-purple/30">
-                      +{service.technology.length-3} more
+                      +{service.technology.length-3} more;
                     </span>) }
                 </div>
 
@@ -181,7 +174,7 @@ export default function Page() {
                 {/* Price & CTA */}"
                 <div className="flex items-center justify-between mb-4">;"
                   <div className="text-2xl font-bold text-white">{service.price}</div>
-                  <button
+                  <button;
                     onClick={() => toggleServiceExpansion(service.id)}"
                     className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2"
 
@@ -192,24 +185,22 @@ export default function Page() {
                 {/* Expanded Service Details */}
                 <AnimatePresence>
                   {expandedService === service.id && ;
-                    <motion.div
+                    <motion.div;
                       initial = {
 
-  { opacity: 0,
-  height: 0
-
+  { opacity: 0;
+  height: 0;
 }}
                       animate = {
 
-  { opacity: 1,
+  { opacity: 1;
   height: 'auto'
 
 }}
                       exit = {
 
-  { opacity: 0,
-  height: 0
-
+  { opacity: 0;
+  height: 0;
 }}
                       transition={{ duration: 0.3 }}"
                       className="overflow-hidden"
@@ -252,7 +243,7 @@ export default function Page() {
                         </div>
 
                         {/* Primary CTA */}
-                        <a
+                        <a;
                           href={service.href}"
                           target={service.external ? "_blank" : "_self"}"
                           rel={service.external ? "noopener noreferrer" : ""}"
@@ -269,16 +260,16 @@ export default function Page() {
         </motion.div>
 
         {/* Contact Section */}
-        <motion.div
+        <motion.div;
           initial = {
 
-  { opacity: 0,
+  { opacity: 0;
   y: 30 }}          animate = {
 
-  isVisible ? { opacity: 1,;
+  isVisible ? { opacity: 1;
   y: 0 } : { opacity: 0, y: 30 }}          transition = {
 
-  { duration: 0.8,
+  { duration: 0.8;
   delay: 0.6 }}"          className="text-center"
 "
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">;"
@@ -321,5 +312,5 @@ export default function Page() {
           </div>;
         </motion.div>;
       </div>;
-    </section>;) };
+    </section>;) }
 '"`

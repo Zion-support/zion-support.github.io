@@ -1,80 +1,80 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 
-// Get all service files with syntax errors
+// Get all service files with syntax errors;
 const serviceFiles = [
-  'src/pages/services/AIIncidentResponse.tsx',
-  'src/pages/services/AIInsurance.tsx',
-  'src/pages/services/AIInternetOfThings.tsx',
-  'src/pages/services/AIKafka.tsx',
-  'src/pages/services/AIKubernetes.tsx',
-  'src/pages/services/AILegalDocumentAutomation.tsx',
-  'src/pages/services/AILegalTech.tsx',
-  'src/pages/services/AIManufacturing.tsx',
-  'src/pages/services/AIManufacturingQualityControl.tsx',
-  'src/pages/services/AIMarketingAutomation.tsx',
-  'src/pages/services/AIMentalHealthSupportPlatform.tsx',
-  'src/pages/services/AIMetaverse.tsx',
-  'src/pages/services/AIMicroservices.tsx',
-  'src/pages/services/AIMongoDB.tsx',
-  'src/pages/services/AIMySQL.tsx',
-  'src/pages/services/AINetworkSecurity.tsx',
-  'src/pages/services/AIPenetrationTesting.tsx',
-  'src/pages/services/AIPostgreSQL.tsx',
-  'src/pages/services/AIPoweredSEO.tsx',
-  'src/pages/services/AIPredictiveAnalytics.tsx',
-  'src/pages/services/AIPredictiveAnalyticsPlatform.tsx',
-  'src/pages/services/AIPredictiveMaintenance.tsx',
-  'src/pages/services/AIProductivitySuite.tsx',
-  'src/pages/services/AIProjectManagement.tsx',
-  'src/pages/services/AIProjectManagementAssistant.tsx',
-  'src/pages/services/AIPrometheus.tsx',
-  'src/pages/services/AIQuantumComputing.tsx',
-  'src/pages/services/AIQuantumComputingSolutions.tsx',
-  'src/pages/services/AIQuantumMachineLearning.tsx',
-  'src/pages/services/AIRealEstate.tsx',
-  'src/pages/services/AIRealTimeBusinessIntelligence.tsx',
-  'src/pages/services/AIRedis.tsx',
-  'src/pages/services/AIRetail.tsx',
-  'src/pages/services/AISEOOptimizer.tsx',
-  'src/pages/services/AISecurityAnalytics.tsx',
-  'src/pages/services/AISecurityAssessment.tsx',
-  'src/pages/services/AISecurityAuditing.tsx',
-  'src/pages/services/AISecurityAutomation.tsx',
-  'src/pages/services/AISecurityAwareness.tsx',
-  'src/pages/services/AISecurityCompliance.tsx',
-  'src/pages/services/AISecurityConsulting.tsx',
-  'src/pages/services/AISecurityForensics.tsx',
-  'src/pages/services/AISecurityGovernance.tsx',
-  'src/pages/services/AISecurityImplementation.tsx',
-  'src/pages/services/AISecurityIntelligence.tsx',
-  'src/pages/services/AISecurityMaintenance.tsx',
-  'src/pages/services/AISecurityMonitoring.tsx',
-  'src/pages/services/AISecurityOperations.tsx',
-  'src/pages/services/AISecurityOrchestration.tsx',
-  'src/pages/services/AISecurityRiskManagement.tsx',
-  'src/pages/services/AISecuritySupport.tsx',
-  'src/pages/services/AISecurityTesting.tsx',
-  'src/pages/services/AISecurityTraining.tsx',
-  'src/pages/services/AIServerless.tsx',
-  'src/pages/services/AIServices.tsx',
-  'src/pages/services/AISmartCityInfrastructure.tsx',
-  'src/pages/services/AISmartCityPlatform.tsx',
-  'src/pages/services/AISports.tsx',
-  'src/pages/services/AISupplyChainOptimizationPlatform.tsx',
-  'src/pages/services/AISustainableTechnology.tsx',
-  'src/pages/services/AITerraform.tsx',
-  'src/pages/services/AITransportation.tsx',
-  'src/pages/services/AITravel.tsx',
-  'src/pages/services/AIVideoAnalytics.tsx',
-  'src/pages/services/AIVirtualReality.tsx',
+  'src/pages/services/AIIncidentResponse.tsx'
+  'src/pages/services/AIInsurance.tsx'
+  'src/pages/services/AIInternetOfThings.tsx'
+  'src/pages/services/AIKafka.tsx'
+  'src/pages/services/AIKubernetes.tsx'
+  'src/pages/services/AILegalDocumentAutomation.tsx'
+  'src/pages/services/AILegalTech.tsx'
+  'src/pages/services/AIManufacturing.tsx'
+  'src/pages/services/AIManufacturingQualityControl.tsx'
+  'src/pages/services/AIMarketingAutomation.tsx'
+  'src/pages/services/AIMentalHealthSupportPlatform.tsx'
+  'src/pages/services/AIMetaverse.tsx'
+  'src/pages/services/AIMicroservices.tsx'
+  'src/pages/services/AIMongoDB.tsx'
+  'src/pages/services/AIMySQL.tsx'
+  'src/pages/services/AINetworkSecurity.tsx'
+  'src/pages/services/AIPenetrationTesting.tsx'
+  'src/pages/services/AIPostgreSQL.tsx'
+  'src/pages/services/AIPoweredSEO.tsx'
+  'src/pages/services/AIPredictiveAnalytics.tsx'
+  'src/pages/services/AIPredictiveAnalyticsPlatform.tsx'
+  'src/pages/services/AIPredictiveMaintenance.tsx'
+  'src/pages/services/AIProductivitySuite.tsx'
+  'src/pages/services/AIProjectManagement.tsx'
+  'src/pages/services/AIProjectManagementAssistant.tsx'
+  'src/pages/services/AIPrometheus.tsx'
+  'src/pages/services/AIQuantumComputing.tsx'
+  'src/pages/services/AIQuantumComputingSolutions.tsx'
+  'src/pages/services/AIQuantumMachineLearning.tsx'
+  'src/pages/services/AIRealEstate.tsx'
+  'src/pages/services/AIRealTimeBusinessIntelligence.tsx'
+  'src/pages/services/AIRedis.tsx'
+  'src/pages/services/AIRetail.tsx'
+  'src/pages/services/AISEOOptimizer.tsx'
+  'src/pages/services/AISecurityAnalytics.tsx'
+  'src/pages/services/AISecurityAssessment.tsx'
+  'src/pages/services/AISecurityAuditing.tsx'
+  'src/pages/services/AISecurityAutomation.tsx'
+  'src/pages/services/AISecurityAwareness.tsx'
+  'src/pages/services/AISecurityCompliance.tsx'
+  'src/pages/services/AISecurityConsulting.tsx'
+  'src/pages/services/AISecurityForensics.tsx'
+  'src/pages/services/AISecurityGovernance.tsx'
+  'src/pages/services/AISecurityImplementation.tsx'
+  'src/pages/services/AISecurityIntelligence.tsx'
+  'src/pages/services/AISecurityMaintenance.tsx'
+  'src/pages/services/AISecurityMonitoring.tsx'
+  'src/pages/services/AISecurityOperations.tsx'
+  'src/pages/services/AISecurityOrchestration.tsx'
+  'src/pages/services/AISecurityRiskManagement.tsx'
+  'src/pages/services/AISecuritySupport.tsx'
+  'src/pages/services/AISecurityTesting.tsx'
+  'src/pages/services/AISecurityTraining.tsx'
+  'src/pages/services/AIServerless.tsx'
+  'src/pages/services/AIServices.tsx'
+  'src/pages/services/AISmartCityInfrastructure.tsx'
+  'src/pages/services/AISmartCityPlatform.tsx'
+  'src/pages/services/AISports.tsx'
+  'src/pages/services/AISupplyChainOptimizationPlatform.tsx'
+  'src/pages/services/AISustainableTechnology.tsx'
+  'src/pages/services/AITerraform.tsx'
+  'src/pages/services/AITransportation.tsx'
+  'src/pages/services/AITravel.tsx'
+  'src/pages/services/AIVideoAnalytics.tsx'
+  'src/pages/services/AIVirtualReality.tsx'
   'src/pages/services/AIVulnerabilityManagement.tsx'
 ];
 
-// Template for a basic service page
-function createServiceTemplate(serviceName, icon = 'Brain') {
+// Template for a basic service page;
+function createServiceTemplate() {
+
   const componentName = serviceName.replace(/[^a-zA-Z0-9]/g, '');
   const displayName = serviceName.replace(/AI|ai/, '').replace(/([A-Z])/g, ' $1').trim();
   
@@ -83,17 +83,17 @@ import { ${icon}, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shi
 
 export default function ${componentName}() {
   const features = [
-    'Advanced AI-powered automation',
-    'Real-time analytics and insights',
-    'Scalable cloud infrastructure',
-    'Enterprise-grade security',
-    '24/7 monitoring and support',
+    'Advanced AI-powered automation'
+    'Real-time analytics and insights'
+    'Scalable cloud infrastructure'
+    'Enterprise-grade security'
+    '24/7 monitoring and support'
     'Custom integration capabilities'
   ];
 
   const tiers = [
-    { name: 'Starter', price: '$199/mo', details: ['Basic features', 'Email support', 'Up to 100 users'] },
-    { name: 'Professional', price: '$599/mo', details: ['Advanced features', 'Priority support', 'Up to 1,000 users'] },
+    { name: 'Starter', price: '$199/mo', details: ['Basic features', 'Email support', 'Up to 100 users'] }
+    { name: 'Professional', price: '$599/mo', details: ['Advanced features', 'Priority support', 'Up to 1,000 users'] }
     { name: 'Enterprise', price: '$1,999/mo', details: ['All features', '24/7 support', 'Unlimited users', 'Custom integration'] }
   ];
 
@@ -103,7 +103,7 @@ export default function ${componentName}() {
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
             <${icon} className="w-4 h-4 mr-2" />
-            AI-Powered ${displayName} Intelligence
+            AI-Powered ${displayName} Intelligence;
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">${displayName} Platform</h1>
           <p className="text-blue-100 text-xl">Transform your operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
@@ -157,9 +157,10 @@ export default function ${componentName}() {
 }`;
 }
 
-// Fix all service files
+// Fix all service files;
 let fixedCount = 0;
-for (const filePath of serviceFiles) {
+for() {
+
   try {
     if (fs.existsSync(filePath)) {
       const serviceName = path.basename(filePath, '.tsx');
@@ -168,7 +169,8 @@ for (const filePath of serviceFiles) {
       console.log(`Fixed: ${filePath}`);
       fixedCount++;
     }
-  } catch (error) {
+  } catch() {
+
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }

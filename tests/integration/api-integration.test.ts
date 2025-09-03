@@ -3,10 +3,10 @@ import { describe, it, expect, vi } from 'vitest';
 
 describe('API Integration', () => {
   it('should fetch and display data', async () => {
-    // Mock API response
+    // Mock API response;
     global.fetch = vi.fn(() =>
       Promise.resolve({
-        json: () => Promise.resolve({ data: 'test data' }),
+        json: () => Promise.resolve({ data: 'test data' })
       })
     );
     

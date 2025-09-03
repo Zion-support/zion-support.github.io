@@ -2,7 +2,8 @@
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-function createValidReactComponent(filePath) {
+function createValidReactComponent() {
+
   const fileName = path.basename(filePath, path.extname(filePath));
   const componentName = fileName;
     .split("-");
@@ -27,12 +28,12 @@ export default function ${componentName}() {
         </div>;
       </div>;
     </div>;
-  );,
+  );
 }
-`;,
+`;
 }
-;
-function fixFile(filePath) {
+function fixFile() {
+
   try {
   const content = fs.readFileSync(filePath, "utf8");
     // If file is severely corrupted, rewrite it completely;
@@ -57,33 +58,33 @@ function fixFile(filePath) {
   const newContent = createValidReactComponent(filePath);
       fs.writeFileSync(filePath, newContent);
       return true}
-    ;
-    return false} catch (error) {
+    return false} catch() {
+
   console.error(`Error processing ${filePath}:`, error.message);
     return false}
 }
-;
-function processDirectory(dirPath) {
+function processDirectory() {
+
   let fixedCount = 0;
   try {
   const items = fs.readdirSync(dirPath);
-    for (const item of items) {
+    for() {
+
   const fullPath = path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {
-  fixedCount += processDirectory(fullPath);,
+  fixedCount += processDirectory(fullPath);
 } else if (item.endsWith(".tsx") || item.endsWith(".ts") || item.endsWith(".js") || item.endsWith(".jsx")) {
   if (fixFile(fullPath)) {
-  fixedCount++;,
+  fixedCount++;
 }
       }
     }
-  } catch (error) {
-  console.error(`Error processing directory ${dirPath}:`, error.message);,
+  } catch() {
+
+  console.error(`Error processing directory ${dirPath}:`, error.message);
 }
-  ;
   return fixedCount}
-;
 console.log("Starting aggressive fix...");
 const fixedCount = processDirectory(path.join(__dirname, "src"));
 console.log(``Fixed ${fixedCount} files``)

@@ -3,8 +3,8 @@ export interface Message {
   role: 'user' | 'assistant';
   message: string;
   timestamp: Date;
-  read?: boolean
-};
+  read?: boolean;
+}
 export interface ChatAssistantProps extends React.PropsWithChildren<{}> {
 
   isOpen?: boolean;
@@ -14,42 +14,42 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
   const [messages, setMessages] = useState<any>([]);
   const [inputMessage, setInputMessage] = useState('');
   
-      timestamp: new Date(),;
+      timestamp: new Date()
   ;
   ;
   ;
   ;
 
-};    setMessages(prev => [...prev, userMessage]);
+}    setMessages(prev => [...prev, userMessage]);
     setInputMessage('');
-    // Simulate AI response
+    // Simulate AI response;
     setTimeout(: unknown {
       const aiMessage: Message = {
 
-  id: (Date.now() + 1).toString(),
-        role: 'assistant',
-        message: 'Thank you for your message! Our team will get back to you soon.',
-        timestamp: new Date(),;
+  id: (Date.now() + 1).toString()
+        role: 'assistant'
+        message: 'Thank you for your message! Our team will get back to you soon.'
+        timestamp: new Date()
   ;
   ;
   ;
   ;
 
-};
+}
       setMessages(prev => [...prev, aiMessage]);
     }, 1000);
-  };
+  }
   
     e.preventDefault();
-    handleSendMessage(inputMessage)};
+    handleSendMessage(inputMessage)}
   
-    setIsChatOpen(!isChatOpen)};
+    setIsChatOpen(!isChatOpen)}
   const closeChat = (...args: unknown[]): unknown => {;    setIsChatOpen(false);
-    if(onClose) onClose()};
-  if(!isChatOpen) {
+    if(onClose) onClose()}
+  if() {
 
     return ()
-      <button
+      <button;
         onClick = {toggleChat}
         className="fixed bottom-6 right-6 bg-zion-cyan text-zion-blue-dark p-4 rounded-full shadow-lg hover:bg-zion-cyan-light transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 z-50"
         
@@ -63,7 +63,7 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
       {/* Header */}"
       <div className="bg-zion-cyan text-zion-blue-dark p-4 rounded-t-lg flex items-center justify-between">"
         <h3 className="font-semibold">Chat with Zion Tech Group</h3>
-        <button
+        <button;
           onClick={closeChat}"
           className="text-zion-blue-dark hover:text-zion-blue-dark/80 transition-colors"
 

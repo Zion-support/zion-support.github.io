@@ -21,7 +21,7 @@ const FAQPage = () => {
       </main>
     </>
   );
-};
+}
 
 export default FAQPage;
 

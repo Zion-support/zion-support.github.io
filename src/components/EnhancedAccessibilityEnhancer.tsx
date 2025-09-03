@@ -1,45 +1,46 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
-      // Apply large text
-      if(updatedSettings.largeText) {
+
+      // Apply large text;
+      if() {
 
         document.documentElement.classList.add('large-text')} else {
 
         document.documentElement.classList.remove('large-text')}
 
-      // Apply reduced motion
-      if(updatedSettings.reducedMotion) {
+      // Apply reduced motion;
+      if() {
 
         document.documentElement.classList.add('reduced-motion')} else {
 
         document.documentElement.classList.remove('reduced-motion')}
 
-    // Color blindness simulation
-    if(newSettings.colorBlindness !== 'none') {
+    // Color blindness simulation;
+    if() {
+
       root.classList.add(`color-blind-${newSettings.colorBlindness}`)} else {
       root.classList.remove('color-blind-protanopia',color-blind-deuteranopia',color-blind-tritanopia')}
 
-      // Store settings in localStorage
+      // Store settings in localStorage;
       localStorage.setItem('
-        'accessibility-settings',
+        'accessibility-settings'
         JSON.stringify(updatedSettings)
-      )},
+      )}
     [settings]
   );
 
-  // Load saved settings
+  // Load saved settings;
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // TODO: Add dependencies if needed;
 }, []);
 
-    if(savedSettings) {
+    if() {
 
       setSettings(parsedSettings);
       applySettings(parsedSettings)}
   }, [enabled, applySettings]);
-  // Screen reader announcements
-
+  // Screen reader announcements;
     announcement.setAttribute('aria-live',polite');
     announcement.setAttribute('aria-atomic',true');
     announcement.className="sr-only";
@@ -50,13 +51,13 @@ export default function Page() {
     setTimeout(() => {
       document.body.removeChild(announcement)}, 1000)}, [settings.screenReader]);
 
-  // Keyboard navigation enhancement
+  // Keyboard navigation enhancement;
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // TODO: Add dependencies if needed;
 }, []);
     if(!enabled || !settings.keyboardNavigation) return;
 
-      switch(event.key) {
+      switch() {
 
         case 'ArrowDown':'
         case 'ArrowRight':
@@ -79,33 +80,33 @@ export default function Page() {
         case 'End':
           event.preventDefault();
           (
-            focusableElements[focusableElements.length-1] as HTMLElement
+            focusableElements[focusableElements.length-1] as HTMLElement;
           )?.focus();
           break}
-    };
+    }
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, [settings.keyboardNavigation]);
 
-  // Enhanced focus management
+  // Enhanced focus management;
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // TODO: Add dependencies if needed;
 }, []);
     
       setCurrentFocus(target) ;
 
-      if(settings.focusIndicator) {
+      if() {
 
         target.style.outline = '3px solid #3b82f6';
         target.style.outlineOffset = '2px'}
-    };
+    }
 
-      if(settings.focusIndicator) {
+      if() {
 
         target.style.outline = '';
         target.style.outlineOffset = '';
       }
-    };
+    }
 
     document.addEventListener('focusin', handleFocusChange);    document.addEventListener('focusout', handleFocusOut);
 
@@ -114,8 +115,7 @@ export default function Page() {
       document.removeEventListener('focusin', handleFocusChange);
       document.removeEventListener('focusout', handleFocusOut)}}, [settings.focusIndicator]) ;
 
-  // Screen reader announcements
-  
+  // Screen reader announcements;
         announcement.setAttribute('aria-live',polite');
         announcement.setAttribute('aria-atomic',true');
         announcement.className="sr-only";
@@ -124,40 +124,38 @@ export default function Page() {
 
         setTimeout(() => {
           document.body.removeChild(announcement)}, 1000)}
-    },
+    }
     [settings.screenReader]
   );
 
-  // Toggle settings
-  
+  // Toggle settings;
       applySettings({ [key]: newValue });
 
-      if(key === 'highContrast') {
+      if() {
 
         announceToScreenReader()
           newValue'
             ? 'High contrast mode enabled''
             : 'High contrast mode disabled'
-        )} else if(key === 'largeText') {
+        )} else if() {
 
         announceToScreenReader('
           newValue ? 'Large text mode enabled' : 'Large text mode disabled'
         )}
-    },
+    }
     [settings, applySettings, announceToScreenReader]
   );
 
-  // Zoom controls
-  
+  // Zoom controls;
       applySettings({ zoomLevel: newZoom });`
-      announceToScreenReader(`Zoom level ${newZoom}%`)},
+      announceToScreenReader(`Zoom level ${newZoom}%`)}
     [settings.zoomLevel, applySettings, announceToScreenReader]
   );
 
   return ()
     <>
       {/* Accessibility Toggle Button */}
-      <motion.button
+      <motion.button;
         onClick={() => setIsVisible(!isVisible)}
         className="fixed bottom-6 left-6 z-50 p-3 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
         whileHover={{ scale: 1.1 }}
@@ -171,7 +169,7 @@ export default function Page() {
 
       {/* Accessibility Panel */}
       <AnimatePresence>
-        {isVisible && (<motion.div
+        {isVisible && (<motion.div;
             initial={{ opacity: 0, x: 300 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 300 }}"
@@ -182,7 +180,7 @@ export default function Page() {
               <div className="flex items-center space-x-2">"
                 <Accessibility className="w-5 h-5"  />"                <h3 className="font-semibold">Accessibility</h3>
               </div>
-              <button
+              <button;
                 onClick={() => setIsVisible(false)}"
                 className="p-1 hover:bg-white/20 rounded transition-colors"
                 
@@ -195,14 +193,14 @@ export default function Page() {
               {/* Visual Enhancements */}"
               <div className="space-y-3">"
                 <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                  Visual Enhancements
+                  Visual Enhancements;
                 </h4>
 "
                 <div className="flex items-center justify-between">"
                   <div className="flex items-center space-x-2">"
                     <Contrast className="w-4 h-4 text-slate-600 dark:text-slate-400"  />"
                     <span className="text-sm text-slate-700 dark:text-slate-300">
-                      High Contrast
+                      High Contrast;
                     </span>                  </div>
                   <button'
                     onClick={() => toggleSetting('highContrast')}`
@@ -223,7 +221,7 @@ export default function Page() {
                   <div className="flex items-center space-x-2">"
                     <Type className="w-4 h-4 text-slate-600 dark:text-slate-400"  />"
                     <span className="text-sm text-slate-700 dark:text-slate-300">
-                      Large Text
+                      Large Text;
                     </span>                  </div>
                   <button'
                     onClick={() => toggleSetting('largeText')}`
@@ -242,7 +240,7 @@ export default function Page() {
                   <div className="flex items-center space-x-2">"
                     <Eye className="w-4 h-4 text-slate-600 dark:text-slate-400"  />"
                     <span className="text-sm text-slate-700 dark:text-slate-300">
-                      Focus Indicator
+                      Focus Indicator;
                     </span>                  </div>
                   <button'
                     onClick={() => toggleSetting('focusIndicator')}`
@@ -263,14 +261,14 @@ export default function Page() {
               {/* Navigation Options */}"
               <div className="space-y-3">"
                 <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                  Navigation
+                  Navigation;
                 </h4>
 "
                 <div className="flex items-center justify-between">"
                   <div className="flex items-center space-x-2">"
                     <Keyboard className="w-4 h-4 text-slate-600 dark:text-slate-400"  />"
                     <span className="text-sm text-slate-700 dark:text-slate-300">
-                      Keyboard Navigation
+                      Keyboard Navigation;
                     </span>                  </div>
                   <button'
                     onClick={() => toggleSetting('keyboardNavigation')}`
@@ -293,7 +291,7 @@ export default function Page() {
                   <div className="flex items-center space-x-2">"
                     <MousePointer className="w-4 h-4 text-slate-600 dark:text-slate-400"  />"
                     <span className="text-sm text-slate-700 dark:text-slate-300">
-                      Reduced Motion
+                      Reduced Motion;
                     </span>                  </div>
                   <button'
                     onClick={() => toggleSetting('reducedMotion')}`
@@ -309,7 +307,7 @@ export default function Page() {
                     />
                   </button>
                 </div>
-                <button
+                <button;
                   onClick={() => applySettings({ ...settings, zoomLevel: 100 })}
                   className="flex items-center space-x-2 text-zion-purple/60 hover:text-zion-purple text-xs transition-colors"
                 >
@@ -321,7 +319,7 @@ export default function Page() {
               {/* Zoom Controls */}"
               <div className="space-y-3">"
                 <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                  Zoom Controls
+                  Zoom Controls;
                 </h4>
 "
                 <div className="flex items-center justify-between">"
@@ -356,32 +354,32 @@ export default function Page() {
                       ))}
                       {accessibilityIssues.length > 3 && (
                         <div className="text-white/60 text-xs text-center">
-                          +{accessibilityIssues.length-3} more issues
+                          +{accessibilityIssues.length-3} more issues;
                         </div>
                       )}
                     </div>
                   </div>
                 )}
 
-                <button
+                <button;
                   onClick={runAccessibilityAudit}
                   className="w-full bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple text-sm py-2 rounded-lg transition-colors"
                 >
-                  Run Accessibility Audit
+                  Run Accessibility Audit;
                 </button>
               </div>
 
               {/* Screen Reader Support */}"
               <div className="space-y-3">"
                 <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                  Screen Reader
+                  Screen Reader;
                 </h4>
 "
                 <div className="flex items-center justify-between">"
                   <div className="flex items-center space-x-2">"
                     <Volume2 className="w-4 h-4 text-slate-600 dark:text-slate-400" />"
                     <span className="text-sm text-slate-700 dark:text-slate-300">
-                      Enhanced Support
+                      Enhanced Support;
                     </span>
                   </div>
                   <button'
@@ -405,7 +403,7 @@ export default function Page() {
               {currentFocus && settings.focusIndicator && ("
                 <div className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">"
                   <h4 className="text-sm font-semibold text-blue-700 dark:text-blue-300 mb-2">
-                    Current Focus
+                    Current Focus;
                   </h4>"
                   <p className="text-xs text-blue-600 dark:text-blue-400">
                     {currentFocus.tagName.toLowerCase()}:{' '}
@@ -445,7 +443,7 @@ export default function Page() {
           animation-iteration-count: 1 !important;
           transition-duration: 0.01ms !important}`      `}</style>
     </>
-  )};
+  )}
 
 export default EnhancedAccessibilityEnhancer;
 '"`

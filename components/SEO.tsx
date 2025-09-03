@@ -11,11 +11,11 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title,
-  description,
-  keywords = "AI solutions, cloud services, technology consulting, digital transformation, IT services, Zion Tech Group",
-  image = "https://ziontechgroup.com/og-image.png",
-  url = "https://ziontechgroup.com",
+  title;
+  description;
+  keywords = "AI solutions, cloud services, technology consulting, digital transformation, IT services, Zion Tech Group"
+  image = "https://ziontechgroup.com/og-image.png"
+  url = "https://ziontechgroup.com"
   type = "website"
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
@@ -60,26 +60,26 @@ const SEO: React.FC<SEOProps> = ({
       <link rel="manifest" href="/site.webmanifest" />
       
       {/* Structured Data */}
-      <script
+      <script;
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Zion Tech Group",
-            "url": "https://ziontechgroup.com",
-            "logo": "https://ziontechgroup.com/logo.png",
-            "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",
+            "@context": "https://schema.org"
+            "@type": "Organization"
+            "name": "Zion Tech Group"
+            "url": "https://ziontechgroup.com"
+            "logo": "https://ziontechgroup.com/logo.png"
+            "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services."
             "address": {
-              "@type": "PostalAddress",
-              "addressCountry": "BR",
+              "@type": "PostalAddress"
+              "addressCountry": "BR"
               "addressLocality": "São Paulo"
-            },
+            }
             "contactPoint": {
-              "@type": "ContactPoint",
-              "contactType": "customer service",
+              "@type": "ContactPoint"
+              "contactType": "customer service"
               "availableLanguage": ["English", "Portuguese"]
-            },
+            }
             "sameAs": [
               "https://www.linkedin.com/company/zion-technologies"
             ]
@@ -88,6 +88,6 @@ const SEO: React.FC<SEOProps> = ({
       />
     </Head>
   );
-};
+}
 
 export default SEO;

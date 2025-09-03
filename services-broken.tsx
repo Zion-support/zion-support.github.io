@@ -1,4 +1,4 @@
-import React from "react";,
+import React from "react";
 } from "lucide-react";
 export default function Services() {;
 	const title = "Services — Zion Tech Group";
@@ -290,5 +290,5 @@ export default function Services() {;
 				</div>;
 			</section>;
 		</>;
-	);,
+	);
 }

@@ -1,5 +1,6 @@
 
 export default function Page() {
+
 > {
 
   showHeader?: boolean;
@@ -7,9 +8,9 @@ export default function Page() {
   maxMessages?: number;
   autoScroll?: boolean}
 
-showHeader:  true,;
-  showSettings = true,;
-  maxMessages = 50,;
+showHeader:  true;
+  showSettings = true;
+  maxMessages = 50;
   autoScroll = true;
 }) => {;
   const [messages, setMessages] = useState < ChatMessage[]> ([]) ;
@@ -18,119 +19,119 @@ showHeader:  true,;
   const [isOpen, setIsOpen] = useState(false);
   const [showSettingsPanel, setShowSettingsPanel] = useState(false);
   const [settings, setSettings] = useState({
-    voiceEnabled: false,
-    autoResponse: true,
-    language: 'en',
-    theme: 'dark',
+    voiceEnabled: false;
+    autoResponse: true;
+    language: 'en'
+    theme: 'dark'
     responseSpeed: 'normal'
   });
   const [isListening, setIsListening] = useState(false);
   const [chatHistory, setChatHistory] = useState < any> ([]) ;
   const messagesEndRef = useRef < HTMLDivElement> (null) ;
 
-  // Sample welcome message
+  // Sample welcome message;
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
-    if(isOpen && messages.length = == 0) {
+    if() {
+
       const welcomeMessage: ChatMessage = {
-  id: 'welcome',
-        content: "Hello ! I'm Zion AI, your intelligent assistant.I can help you with:\n\n• Information about our services\n• Technical support and guidance\n• Project inquiries and quotes\n• General questions about Zion Tech Group\n\nHow can I assist you today?",
-        sender: 'bot',
-        timestamp: new Date () ,
-        type: 'text',
-        status: 'sent',
+  id: 'welcome'
+        content: "Hello ! I'm Zion AI, your intelligent assistant.I can help you with:\n\n• Information about our services\n• Technical support and guidance\n• Project inquiries and quotes\n• General questions about Zion Tech Group\n\nHow can I assist you today?"
+        sender: 'bot'
+        timestamp: new Date () 
+        type: 'text'
+        status: 'sent'
         metadata: {
-          confidence: 0.95,
-          suggestions: ['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],;
-          relatedServices: ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],;
+          confidence: 0.95;
+          suggestions: ['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information']
+          relatedServices: ['AI Consulting', 'Cloud Solutions', 'Digital Transformation']
   estimatedResponseTime: 2;
         ;
 ;
 
-};
-      };
+}
+      }
       setMessages([welcomeMessage]) }
   }, [isOpen, messages.length]) ;
 
-  // Auto - scroll to bottom
+  // Auto - scroll to bottom;
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
-    if(autoScroll && messagesEndRef.current) {
+    if() {
+
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' }) }
   }, [messages, autoScroll]) ;
 
-  // Simulate AI response
-        suggestions['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],
+  // Simulate AI response;
+        suggestions['Strategy development', 'Implementation process', 'Change management', 'ROI examples']
         relatedServices['Digital Transformation', 'Process Optimization', 'Change Management']
-      };
+      }
       {;
-        content: "Digital transformation is our specialty ! We help businesses modernize their technology stack, improve processes, and enhance customer experiences.Our approach includes strategy development, implementation, and change management.",;
-        suggestions: ['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],;
+        content: "Digital transformation is our specialty ! We help businesses modernize their technology stack, improve processes, and enhance customer experiences.Our approach includes strategy development, implementation, and change management."
+        suggestions: ['Strategy development', 'Implementation process', 'Change management', 'ROI examples']
         relatedServices: ['Digital Transformation', 'Process Optimization', 'Change Management'];
-      };
+      }
     ];
 
     const randomResponse = responses[Math.floor(Math.random () * responses.length) ];
 
     const botMessage: ChatMessage = {
-  id: Date.now () .toString () ,
-      content: randomResponse.content,
-      sender: 'bot',
-      timestamp: new Date () ,
-      type: 'text',
-      status: 'sent',
+  id: Date.now () .toString () 
+      content: randomResponse.content;
+      sender: 'bot'
+      timestamp: new Date () 
+      type: 'text'
+      status: 'sent'
       metadata: {
-        confidence: 0.85 + Math.random () * 0.1,
-        suggestions: randomResponse.suggestions,
-        relatedServices: randomResponse.relatedServices,;
+        confidence: 0.85 + Math.random () * 0.1;
+        suggestions: randomResponse.suggestions;
+        relatedServices: randomResponse.relatedServices;
   ;
   ;
   estimatedResponseTime: 1 + Math.random () * 2;
       ;
 ;
 
-};
-    };
+}
+    }
 
     setMessages(prev => [...prev, botMessage]) ;
     setIsTyping(false) ;
-  };
+  }
 
-  // Handle message submission
-      setMessages(prev = > [...prev, fileMessage]) };
-  };
+  // Handle message submission;
+      setMessages(prev = > [...prev, fileMessage]) }
+  }
 
-  // Handle suggestion click
+  // Handle suggestion click;
   const handleSuggestionClick = useCallback((suggestion: string) => {;
     setInputValue(suggestion) ;
-  };
+  }
 
-  // Rate response
+  // Rate response;
   const rateResponse = (messageId: string, rating: 'positive' | 'negative') => {
     setMessages(prev => prev.map (msg =>
-      msg.id === messageId
+      msg.id === messageId;
         ? { ...msg, metadata: { ...msg.metadata, userRating: rating } }
         : msg) ) ;
-  };
+  }
 
-  // Clear chat
+  // Clear chat;
   const clearChat = () => {;
     setMessages([]) ;
-    setChatHistory([]) };
+    setChatHistory([]) }
 
   return (<>
       {/* Chat Toggle Button */}
-      <motion.button
+      <motion.button;
         onClick = { () => setIsOpen(!isOpen) }
         className="fixed bottom - 4 right - 4 z - 50 p - 4 bg-zion - cyan text-white rounded-full shadow-lg hover:shadow-xl transition - all duration - 300 focus:outline - none focus:ring - 2 focus:ring - zion - cyan focus:ring - offset - 2 focus:ring - offset - zinc -900"
         whileHover={{ scale: 1.1 }}
@@ -141,24 +142,21 @@ showHeader:  true,;
 
       {/* Chat Window */}
       <AnimatePresence>
-        {isOpen && (<motion.div
+        {isOpen && (<motion.div;
             initial = {
-  { opacity: 0, scale: 0.9,
-  y: 20
-
+  { opacity: 0, scale: 0.9;
+  y: 20;
 }}
             animate = {
-  { opacity: 1, scale: 1,
-  y: 0
-
+  { opacity: 1, scale: 1;
+  y: 0;
 }}
             exit = {
-  { opacity: 0, scale: 0.9,
-  y: 20
-
+  { opacity: 0, scale: 0.9;
+  y: 20;
 }}
             transition = {
-  { duration: 0.3,
+  { duration: 0.3;
   ease: 'easeOut'
 
 }}
@@ -175,7 +173,7 @@ showHeader:  true,;
                     <div>
                       <h3 className="font - semibold text-white">Zion AI Assistant</h3>
                       <div  className="flex items - center gap-2 text-xs text-zinc -400">
-                        <div  className="w-2 h-2 bg-green - 400 rounded-full animate -pulse"></div > Online
+                        <div  className="w-2 h-2 bg-green - 400 rounded-full animate -pulse"></div > Online;
                       </div>
                     </div>
                   </div>
@@ -197,21 +195,18 @@ showHeader:  true,;
 
             {/* Settings Panel */}
             <AnimatePresence>
-              {showSettingsPanel && (<motion.div
+              {showSettingsPanel && (<motion.div;
                   initial = {
-  { height: 0,
-  opacity: 0
-
+  { height: 0;
+  opacity: 0;
 }}
                   animate = {
-  { height: 'auto',
-  opacity: 1
-
+  { height: 'auto'
+  opacity: 1;
 }}
                   exit = {
-  { height: 0,
-  opacity: 0
-
+  { height: 0;
+  opacity: 0;
 }}
                   transition={{ duration: 0.3 }}
                   className="border-b border-zinc - 700 / 50 overflow-hidden"
@@ -219,11 +214,10 @@ showHeader:  true,;
                   <div  className="p - 4 space - y-3">
                     <div  className="flex items - center justify -between">
                       <span className="text-sm text-zinc -300">Voice Input</span>
-                      <button     onClick = { () => setSettings(prev => ({ ...prev,
-  voiceEnabled: !prev.voiceEnabled
-
+                      <button     onClick = { () => setSettings(prev => ({ ...prev;
+  voiceEnabled: !prev.voiceEnabled;
 }) ) }
-                        className={`p - 2 rounded-lg transition - colors ${settings.voiceEnabled
+                        className={`p - 2 rounded-lg transition - colors ${settings.voiceEnabled;
                             ? 'bg-zion - cyan text-white'
                             : 'bg-zinc - 700 text-zinc - 400 hover:bg-zinc - 600'
                         }`}
@@ -234,11 +228,10 @@ showHeader:  true,;
 
                     <div  className="flex items - center justify -between">
                       <span className="text-sm text-zinc -300">Auto Response</span>
-                      <button     onClick = { () => setSettings(prev => ({ ...prev,
-  autoResponse: !prev.autoResponse
-
+                      <button     onClick = { () => setSettings(prev => ({ ...prev;
+  autoResponse: !prev.autoResponse;
 }) ) }
-                        className={`p - 2 rounded-lg transition - colors ${settings.autoResponse
+                        className={`p - 2 rounded-lg transition - colors ${settings.autoResponse;
                             ? 'bg-zion - cyan text-white'
                             : 'bg-zinc - 700 text-zinc - 400 hover:bg-zinc - 600'
                         }`}
@@ -253,17 +246,15 @@ showHeader:  true,;
             {/* Messages */}
             <div  className="flex - 1 overflow-y-auto p - 4 space - y-4 max - h-96">;
               {messages.map((message) => (;
-                <motion.div
+                <motion.div;
                   key={message.id}
                   initial = {
-  { opacity: 0,
-  y: 10
-
+  { opacity: 0;
+  y: 10;
 }}
                   animate = {
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
                   className={`flex ${message.sender === 'user' ? 'justify - end' : 'justify - start'}`}
 
@@ -290,7 +281,7 @@ showHeader:  true,;
                             </div>) }
 
                           {message.metadata.relatedServices && (<div  className="flex flex - wrap gap-1">
-                              {message.metadata.relatedServices.map((service, index) => (<span
+                              {message.metadata.relatedServices.map((service, index) => (<span;
                                   key={index}
                                   className="px-2 py-1 bg-zion - cyan / 20 text-zion - cyan text-xs rounded-full"
 
@@ -307,13 +298,13 @@ showHeader:  true,;
                       </span>
 
                       {message.sender === 'bot' && (<div  className="flex items - center gap-1">
-                          <button     onClick = { () => rateResponse(message.id,
+                          <button     onClick = { () => rateResponse(message.id;
   'positive') }
                             className="p - 1 text-zinc - 400 hover:text-green - 400 transition -colors"
 
                             <ThumbsUp className="w-3 h-3" />
                           </button>
-                          <button     onClick = { () => rateResponse(message.id,
+                          <button     onClick = { () => rateResponse(message.id;
   'negative') }
                             className="p - 1 text-zinc - 400 hover:text-red - 400 transition -colors"
 
@@ -336,7 +327,7 @@ showHeader:  true,;
                 </motion.div>) ) }
 
               {/* Typing Indicator */}
-              {isTyping && (<motion.div
+              {isTyping && (<motion.div;
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   className="flex justify -start"
@@ -358,7 +349,7 @@ showHeader:  true,;
             <div  className="p - 4 border-t border-zinc -700 / 50">;
               <form onSubmit={handleSubmit} className="flex items - center gap-2">
                 <div  className="flex -1 relative">
-                  <input
+                  <input;
                     type="text"
                     value={inputValue}
                     onChange={ (e) => setInputValue(e.target.value) }
@@ -369,7 +360,7 @@ showHeader:  true,;
 
                   {/* File Upload */}
                   <label className="absolute right - 3 top - 1/2 transform - translate - y-1 / 2 cursor -pointer">
-                    <input
+                    <input;
                       type="file"
                       onChange={handleFileUpload}
                       className="hidden"
@@ -382,7 +373,7 @@ showHeader:  true,;
                 {/* Voice Input */}
                 {settings.voiceEnabled && (<button     type="button"
                     onClick={toggleVoiceInput}
-                    className={`p - 3 rounded-lg transition - colors ${isListening
+                    className={`p - 3 rounded-lg transition - colors ${isListening;
                         ? 'bg-red - 500 text-white'
                         : 'bg-zinc - 700 text-zinc - 400 hover:bg-zinc - 600'
                     }`}
@@ -411,7 +402,7 @@ showHeader:  true,;
                 </div>
               </div>
             </div>;
-          </motion.div>;) };
+          </motion.div>;) }
       </AnimatePresence>;
     </>;) ;
-};
+}

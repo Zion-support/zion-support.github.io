@@ -1,50 +1,48 @@
 import {  import { motion  } from 'framer-motion';
 export default function Page() {
-,
+
       {
 
-        name: 'Error Rate',
-        value: Math.random() * 2,
-        unit: '%',
-        trend: Math.random() > 0.5 ? 'up' : 'down',
-        status: Math.random() > 0.8 ? 'good' : Math.random() > 0.5 ? 'warning' : 'critical',
-        icon: AlertTriangle
-      },
+        name: 'Error Rate'
+        value: Math.random() * 2;
+        unit: '%'
+        trend: Math.random() > 0.5 ? 'up' : 'down'
+        status: Math.random() > 0.8 ? 'good' : Math.random() > 0.5 ? 'warning' : 'critical'
+        icon: AlertTriangle;
+      }
       {
 
-        name: 'Response Time',
-        value: Math.random() * 500 + 100,
-        unit: 'ms',
-        trend: Math.random() > 0.5 ? 'up' : 'down',
-        status: Math.random() > 0.7 ? 'good' : 'warning',
-        icon: Zap
-
+        name: 'Response Time'
+        value: Math.random() * 500 + 100;
+        unit: 'ms'
+        trend: Math.random() > 0.5 ? 'up' : 'down'
+        status: Math.random() > 0.7 ? 'good' : 'warning'
+        icon: Zap;
     ];
 
-      'High memory usage detected on server-01',;
-      'Network latency increased by 15%',;
+      'High memory usage detected on server-01'
+      'Network latency increased by 15%'
       'Error rate spike detected in last 5 minutes';
     ];
 
     
-      'Consider implementing lazy loading for images',;
-      'Optimize database queries for better performance',;
+      'Consider implementing lazy loading for images'
+      'Optimize database queries for better performance'
       'Enable CDN for static assets delivery';    ];
 
     return {
 
-      timestamp: now,
-      metrics,
-      alerts,
-      recommendations
+      timestamp: now;
+      metrics;
+      alerts;
+      recommendations;
     }}, []) ;
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // TODO: Add dependencies if needed;
 }, []);
-    if(isMonitoring) {
+    if() {
 
-        setPerformanceData(generateMockData())}, 5000); // Update every 5 seconds
-
+        setPerformanceData(generateMockData())}, 5000); // Update every 5 seconds;
       return () => clearInterval(interval) }
   }, [isMonitoring, generateMockData]) ;
 
@@ -52,69 +50,65 @@ export default function Page() {
       case 'good': return 'text-green-400';
       case 'warning': return 'text-yellow-400';
       case 'critical': return 'text-red-400';
-      default: return 'text-gray-400'};
+      default: return 'text-gray-400'}
 
     switch(status) {;
       case 'good': return 'bg-green-500/20';
       case 'warning': return 'bg-yellow-500/20';
       case 'critical': return 'bg-red-500/20';
-      default: return 'bg-gray-500/20'};
+      default: return 'bg-gray-500/20'}
 
     switch(trend) {;
       case 'up': return <TrendingUp className="w-4 h-4 text-red-400"  />;'"
       case 'down': return <TrendingDown className="w-4 h-4 text-green-400"  />;"
-      default: return <Activity className="w-4 h-4 text-blue-400"  />};
+      default: return <Activity className="w-4 h-4 text-blue-400"  />}
 
     setIsMonitoring(true) ;
-    setPerformanceData(generateMockData () ) };
+    setPerformanceData(generateMockData () ) }
 
-    setIsMonitoring(false) };
+    setIsMonitoring(false) }
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 p-6">"
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <motion.div
+        <motion.div;
           initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}"
           className="text-center mb-12"
         >"
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-            Performance Analytics
+            Performance Analytics;
           </h1>"
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Real-time monitoring and analytics for optimal application performance
+            Real-time monitoring and analytics for optimal application performance;
           </p>
         </motion.div>
 
         {/* Controls */}
-        <motion.div
+        <motion.div;
           initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           transition={{ delay: 0.2 }}"
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
         >"
           <div className="flex gap-2">
-            <button
+            <button;
               onClick={startMonitoring}
               disabled={isMonitoring}
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${isMonitoring'
@@ -122,9 +116,9 @@ export default function Page() {
                   : 'bg-green-600 hover:bg-green-700 text-white'`
               }`}
             >"
-              <Activity className="w-5 h-5"  />              Start Monitoring
+              <Activity className="w-5 h-5"  />              Start Monitoring;
             </button>
-            <button
+            <button;
               onClick={stopMonitoring}
               disabled={!isMonitoring}`
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${!isMonitoring'
@@ -132,11 +126,11 @@ export default function Page() {
                   : 'bg-red-600 hover:bg-red-700 text-white'`
               }`}
             >"
-              <Monitor className="w-5 h-5"  />              Stop Monitoring
+              <Monitor className="w-5 h-5"  />              Stop Monitoring;
             </button>
           </div>
 
-          <select
+          <select;
             value={selectedTimeframe}
             onChange={(e) => setSelectedTimeframe(e.target.value as '1h' | '24h' | '7d' | '30d')}"
             className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -149,35 +143,31 @@ export default function Page() {
         </motion.div>
 
         {/* Performance Metrics Grid */}
-        {performanceData && (<motion.div
+        {performanceData && (<motion.div;
             initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
             animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
             transition={{ delay: 0.3 }}"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
           >
-            {performanceData.metrics.map((metric, index) => (<motion.div
+            {performanceData.metrics.map((metric, index) => (<motion.div;
                 key={metric.name}
                 initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
                 animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
                 transition={{ delay: 0.4 + index * 0.1 }}"
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
@@ -205,18 +195,16 @@ export default function Page() {
           </motion.div>) }
 
         {/* Alerts and Recommendations */}
-        {performanceData && (<motion.div
+        {performanceData && (<motion.div;
             initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
             animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
             transition={{ delay: 0.5 }}"
             className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12"
@@ -253,18 +241,16 @@ export default function Page() {
           </motion.div>) }
 
         {/* Performance Chart Placeholder */}
-        <motion.div
+        <motion.div;
           initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           transition={{ delay: 0.6 }}
           className="bg-white / 5 backdrop - blur - sm border border-white / 10 rounded-xl p - 8 text-center"
@@ -272,29 +258,27 @@ export default function Page() {
           <BarChart3 className="w-16 h-16 text-gray - 400 mx - auto mb-4" />
           <h3 className="text-xl font - semibold text-white mb-2">Performance Trends</h3>
           <p className="text-gray -400">
-            {isMonitoring
+            {isMonitoring;
               ? 'Real - time performance data is being collected and analyzed...'              : 'Start monitoring to view performance trends and historical data'
             }
           </p>
           {isMonitoring && ("
             <div className="mt-4 text-sm text-green-400">"
-              <Activity className="w-4 h-4 inline mr-2 animate-pulse"  />              Monitoring Active
+              <Activity className="w-4 h-4 inline mr-2 animate-pulse"  />              Monitoring Active;
             </div>) }
         </motion.div>
 
         {/* Status Summary */}
-        {performanceData && (<motion.div
+        {performanceData && (<motion.div;
             initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
             animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
             transition={{ delay: 0.7 }}"
             className="mt-8 text-center"
@@ -302,12 +286,12 @@ export default function Page() {
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full">"
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>"
               <span className="text-sm text-gray-300">
-                Last updated: {new Date(performanceData.timestamp).toLocaleTimeString()};
+                Last updated: {new Date(performanceData.timestamp).toLocaleTimeString()}
               </span>;
             </div>;
-          </motion.div>;) };
+          </motion.div>;) }
       </div>;
     </div>;) ;
-</div>};
+</div>}
 
 export default PerformanceAnalytics}}}}}}}}'"`

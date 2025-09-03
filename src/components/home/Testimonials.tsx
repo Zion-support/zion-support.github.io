@@ -5,15 +5,13 @@
           className="text-center mb-16"
           initial = {
 
-  { opacity: 0,
-  y: 30
-
+  { opacity: 0;
+  y: 30;
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -33,25 +31,22 @@
         {/* Testimonial Carousel */}"
         <div className="relative max-w-4xl mx-auto">"
           <AnimatePresence mode="wait">
-            <motion.div
+            <motion.div;
               key={currentIndex}
               initial = {
 
-  { opacity: 0,
-  x: 100
-
+  { opacity: 0;
+  x: 100;
 }}
               animate = {
 
-  { opacity: 1,
-  x: 0
-
+  { opacity: 1;
+  x: 0;
 }}
               exit = {
 
-  { opacity: 0,
-  x: -100
-
+  { opacity: 0;
+  x: -100;
 }}
               transition={{ duration: 0.5 }}"
               className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden"
@@ -93,14 +88,14 @@
           </AnimatePresence>
 
           {/* Navigation Arrows */}
-          <button
+          <button;
             onClick={prevTestimonial}"
             className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
             
 "
             <ChevronLeft className="w-6 h-6"  />          </button>
 
-          <button
+          <button;
             onClick={nextTestimonial}"
             className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
             
@@ -111,7 +106,7 @@
         {/* Dots Indicator */}"
         <div className="flex justify-center mt-8 space-x-2">;
           {testimonials.map(_: unknown, index: unknown ;
-            <button
+            <button;
               key={index}
               onClick={(: unknown goToTestimonial(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex'
@@ -128,17 +123,17 @@
           className="mt-16 text-center"
           initial = {
 
-  { opacity: 0,
+  { opacity: 0;
   y: 20 ;
 
 }}          whileInView = {
 
-  { opacity: 1,
+  { opacity: 1;
   y: 0 ;
 
 }}          transition = {
 
-  { duration: 0.8,
+  { duration: 0.8;
   delay: 0.4 ;
 
 }}          viewport={{ once: true }}
@@ -165,6 +160,6 @@
         </motion.div>;
       </div>;
     </section>;
-  )};
+  )}
 
 export default Testimonials}}}'"`

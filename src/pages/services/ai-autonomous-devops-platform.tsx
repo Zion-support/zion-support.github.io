@@ -2,57 +2,57 @@ import React from "react"
 import Head from "next/head"
 import Link from "next/link"
 import { 
-  Brain, Server, Cloud, Zap, Shield, BarChart3, 
-  Users, Globe, Smartphone, Database, Lock, CheckCircle,
-  ArrowRight, Star, Phone, Mail, MapPin, Settings,
-  Monitor, Cpu, Network, Code, GitBranch, Rocket,
-  Lightbulb, Activity, TrendingUp, AlertTriangle
+  Brain, Server, Cloud, Zap, Shield, BarChart3;
+  Users, Globe, Smartphone, Database, Lock, CheckCircle;
+  ArrowRight, Star, Phone, Mail, MapPin, Settings;
+  Monitor, Cpu, Network, Code, GitBranch, Rocket;
+  Lightbulb, Activity, TrendingUp, AlertTriangle;
 } from "lucide-react"
 
 const AIAutonomousDevOpsPlatform = () => {
   const features = [
-    "Autonomous Code Deployment",
-    "AI-Powered Infrastructure Management", 
-    "Intelligent Monitoring & Alerting",
-    "Automated Security Scanning",
-    "Self-Healing Infrastructure",
-    "Predictive Scaling",
-    "Zero-Downtime Deployments",
+    "Autonomous Code Deployment"
+    "AI-Powered Infrastructure Management"
+    "Intelligent Monitoring & Alerting"
+    "Automated Security Scanning"
+    "Self-Healing Infrastructure"
+    "Predictive Scaling"
+    "Zero-Downtime Deployments"
     "Cost Optimization Engine"
   ]
 
   const benefits = [
-    "Reduce deployment time by 80%",
-    "Eliminate 95% of manual DevOps tasks",
-    "Improve system reliability by 99.9%",
-    "Reduce infrastructure costs by 40%",
-    "Accelerate development cycles by 3x",
+    "Reduce deployment time by 80%"
+    "Eliminate 95% of manual DevOps tasks"
+    "Improve system reliability by 99.9%"
+    "Reduce infrastructure costs by 40%"
+    "Accelerate development cycles by 3x"
     "Minimize security vulnerabilities by 90%"
   ]
 
   const useCases = [
-    "Enterprise Application Deployment",
-    "Microservices Architecture Management",
-    "Cloud Infrastructure Automation",
-    "CI/CD Pipeline Optimization",
-    "Multi-Cloud Operations",
+    "Enterprise Application Deployment"
+    "Microservices Architecture Management"
+    "Cloud Infrastructure Automation"
+    "CI/CD Pipeline Optimization"
+    "Multi-Cloud Operations"
     "Legacy System Modernization"
   ]
 
   const pricing = [
     {
-      name: "Startup",
-      price: "$1,999/month",
+      name: "Startup"
+      price: "$1,999/month"
       details: ["Up to 10 services", "Basic AI automation", "Standard monitoring", "Email support", "99.5% uptime SLA"]
-    },
+    }
     {
-      name: "Enterprise", 
-      price: "$4,999/month",
+      name: "Enterprise"
+      price: "$4,999/month"
       details: ["Up to 100 services", "Advanced AI automation", "Custom monitoring", "Priority support", "99.9% uptime SLA"]
-    },
+    }
     {
-      name: "Enterprise Plus",
-      price: "$9,999/month", 
+      name: "Enterprise Plus"
+      price: "$9,999/month"
       details: ["Unlimited services", "Full AI autonomy", "White-label solution", "24/7 dedicated support", "99.99% uptime SLA"]
     }
   ]
@@ -71,20 +71,20 @@ const AIAutonomousDevOpsPlatform = () => {
           <div className="max-w-6xl mx-auto px-6">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
               <Server className="w-4 h-4 mr-2" />
-              AI-Powered DevOps Automation
+              AI-Powered DevOps Automation;
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-              AI Autonomous DevOps Platform
+              AI Autonomous DevOps Platform;
             </h1>
             <p className="text-blue-100 text-xl max-w-3xl mx-auto">
               Transform your DevOps operations with AI-powered automation that eliminates 95% of manual tasks, reduces deployment time by 80%, and ensures 99.9% system reliability.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="#contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-                Start Free Trial
+                Start Free Trial;
               </Link>
               <Link href="#demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                Watch Demo
+                Watch Demo;
               </Link>
             </div>
           </div>
@@ -193,7 +193,7 @@ const AIAutonomousDevOpsPlatform = () => {
                 <div key={index} className={`rounded-xl p-6 shadow-lg ${tier.name === 'Enterprise' ? 'border-2 border-blue-500 bg-blue-50' : 'border border-gray-200 bg-white'}`}>
                   {tier.name === 'Enterprise' && (
                     <div className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
-                      Most Popular
+                      Most Popular;
                     </div>
                   )}
                   <h3 className="text-2xl font-semibold text-gray-900 mb-2">{tier.name}</h3>
@@ -211,7 +211,7 @@ const AIAutonomousDevOpsPlatform = () => {
                       ? 'bg-blue-600 text-white hover:bg-blue-700' 
                       : 'bg-gray-900 text-white hover:bg-gray-800'
                   }`}>
-                    Get Started
+                    Get Started;
                   </Link>
                 </div>
               ))}
@@ -250,7 +250,7 @@ const AIAutonomousDevOpsPlatform = () => {
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">Start Your Free Trial</h3>
                 <p className="text-gray-600 mb-4">Experience autonomous DevOps automation with our 14-day free trial</p>
                 <Link href="https://ziontechgroup.com/contact" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block">
-                  Start Free Trial
+                  Start Free Trial;
                 </Link>
               </div>
             </div>
@@ -261,4 +261,4 @@ const AIAutonomousDevOpsPlatform = () => {
   )
 }
 
-export default AIAutonomousDevOpsPlatform
+export default AIAutonomousDevOpsPlatform;

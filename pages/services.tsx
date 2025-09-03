@@ -3,43 +3,44 @@ import React from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import {
-  ArrowRight,
-  Brain,
-  Cloud,
-  Shield,
-  Zap,
-  Database,
-  Server,
-  Lock,
-  BarChart3,
-  Users,
-  Globe,
-  Code,
-  CheckCircle,
-  Star,
-  TrendingUp,
-  Clock,
-  Award,
-  Mail,
-  Calendar,
-  Settings,
-  Eye,
-  MessageSquare,
-  Palette,
-  Bot,
-  Cpu,
-  Link2,
-  Wifi,
-  HardDrive,
-  Monitor,
-  Activity,
-  Terminal,
-  CreditCard,
-  Smartphone
+  ArrowRight;
+  Brain;
+  Cloud;
+  Shield;
+  Zap;
+  Database;
+  Server;
+  Lock;
+  BarChart3;
+  Users;
+  Globe;
+  Code;
+  CheckCircle;
+  Star;
+  TrendingUp;
+  Clock;
+  Award;
+  Mail;
+  Calendar;
+  Settings;
+  Eye;
+  MessageSquare;
+  Palette;
+  Bot;
+  Cpu;
+  Link2;
+  Wifi;
+  HardDrive;
+  Monitor;
+  Activity;
+  Terminal;
+  CreditCard;
+  Smartphone;
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
 export default function Services() {
+
 	const title = 'Services — Zion Tech Group';
 	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
 
@@ -55,7 +56,7 @@ export default function Services() {
 							<span className='text-base font-semibold leading-7 text-blue-600'>Our Services</span>
 						</div>
 						<h1 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
-							Our Services
+							Our Services;
 						</h1>
 						<p className='mt-6 text-lg leading-8 text-gray-600'>
 							From strategy to production, we deliver outcomes fast. Our comprehensive suite of services covers everything you need to transform your business.
@@ -104,12 +105,12 @@ export default function Services() {
 									<Clock className='h-4 w-4' />
 									<span>2-4 weeks delivery</span>
 								</div>
-								<Link
+								<Link;
 									href='/contact'
 									className='inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors group'
 									aria-label='Get started with AI services'
 								>
-									Get started with AI
+									Get started with AI;
 									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />
 								</Link>
 							</div>
@@ -151,12 +152,12 @@ export default function Services() {
 									<Clock className='h-4 w-4' />
 									<span>4-8 weeks delivery</span>
 								</div>
-								<Link
+								<Link;
 									href='/contact'
 									className='inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors group'
 									aria-label='Get started with cloud services'
 								>
-									Get started with Cloud
+									Get started with Cloud;
 									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />
 								</Link>
 							</div>
@@ -198,12 +199,12 @@ export default function Services() {
 									<Clock className='h-4 w-4' />
 									<span>3-6 weeks delivery</span>
 								</div>
-								<Link
+								<Link;
 									href='/contact'
 									className='inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-500 transition-colors group'
 									aria-label='Get started with cybersecurity services'
 								>
-									Get started with Security
+									Get started with Security;
 									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />
 								</Link>
 							</div>
@@ -245,12 +246,12 @@ export default function Services() {
 									<Clock className='h-4 w-4' />
 									<span>6-12 weeks delivery</span>
 								</div>
-								<Link
+								<Link;
 									href='/contact'
 									className='inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group'
 									aria-label='Get started with custom software services'
 								>
-									Get started with SaaS
+									Get started with SaaS;
 									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />
 								</Link>
 							</div>
@@ -858,7 +859,7 @@ export default function Services() {
 						<a href='mailto:kleber@ziontechgroup.com' className='text-blue-600 hover:text-blue-500'>kleber@ziontechgroup.com</a>{' '}
 						| Phone{' '}
 						<a href='tel:+13024640950' className='text-blue-600 hover:text-blue-500'>+1 302 464 0950</a>{' '}
-						| Address: 364 E Main St STE 1008, Middletown DE 19709
+						| Address: 364 E Main St STE 1008, Middletown DE 19709;
 					</div>
 				</div>
 			</section>
@@ -987,20 +988,20 @@ export default function Services() {
 							All services include 30-day free trial, setup assistance, and 24/7 support.
 						</p>
 						<div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
-							<Link
+							<Link;
 								href='/contact'
 								className='inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors'
 							>
-								Get Started Today
+								Get Started Today;
 								<ArrowRight className='ml-2 h-4 w-4' />
 							</Link>
-							<Link
+							<Link;
 								href='https://ziontechgroup.com'
 								target='_blank'
 								rel='noreferrer'
 								className='inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors'
 							>
-								Visit Live Demo
+								Visit Live Demo;
 								<Globe className='ml-2 h-4 w-4' />
 							</Link>
 						</div>
@@ -1132,20 +1133,20 @@ export default function Services() {
 							All IT services include 24/7 monitoring, regular maintenance, and expert support.
 						</p>
 						<div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
-							<Link
+							<Link;
 								href='/contact'
 								className='inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 transition-colors'
 							>
-								Get IT Consultation
+								Get IT Consultation;
 								<ArrowRight className='ml-2 h-4 w-4' />
 							</Link>
-							<Link
+							<Link;
 								href='https://ziontechgroup.com'
 								target='_blank'
 								rel='noreferrer'
 								className='inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors'
 							>
-								View Case Studies
+								View Case Studies;
 								<Globe className='ml-2 h-4 w-4' />
 							</Link>
 						</div>
@@ -1277,20 +1278,20 @@ export default function Services() {
 							All Micro SaaS solutions include free setup, training, and 30-day money-back guarantee.
 						</p>
 						<div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
-							<Link
+							<Link;
 								href='/contact'
 								className='inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 transition-colors'
 							>
-								Get Custom Solution
+								Get Custom Solution;
 								<ArrowRight className='ml-2 h-4 w-4' />
 							</Link>
-							<Link
+							<Link;
 								href='https://ziontechgroup.com'
 								target='_blank'
 								rel='noreferrer'
 								className='inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors'
 							>
-								View Live Demos
+								View Live Demos;
 								<Globe className='ml-2 h-4 w-4' />
 							</Link>
 						</div>
@@ -1302,7 +1303,7 @@ export default function Services() {
 				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
 					<div className='mx-auto max-w-2xl lg:text-center mb-16'>
 						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
-							Our Delivery Process
+							Our Delivery Process;
 						</h2>
 						<p className='mt-6 text-lg leading-8 text-gray-600'>
 							We follow a proven methodology that ensures quality, speed, and successful outcomes.
@@ -1345,7 +1346,7 @@ export default function Services() {
 				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
 					<div className='mx-auto max-w-2xl text-center mb-16'>
 						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
-							Competitive Pricing & Market Leadership
+							Competitive Pricing & Market Leadership;
 						</h2>
 						<p className='mt-6 text-lg leading-8 text-gray-600'>
 							Our pricing reflects the true value of cutting-edge technology solutions, with transparent costs and exceptional ROI.
@@ -1367,15 +1368,15 @@ export default function Services() {
 								</li>
 								<li className='flex items-center text-sm text-gray-600'>
 									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
-									Industry-specific solutions
+									Industry-specific solutions;
 								</li>
 								<li className='flex items-center text-sm text-gray-600'>
 									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
-									AI-powered automation
+									AI-powered automation;
 								</li>
 								<li className='flex items-center text-sm text-gray-600'>
 									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
-									Scalable architecture
+									Scalable architecture;
 								</li>
 							</ul>
 							<div className='text-center'>
@@ -1387,7 +1388,7 @@ export default function Services() {
 						<div className='bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition-all duration-300 ring-2 ring-blue-500'>
 							<div className='text-center mb-6'>
 								<div className='inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 mb-2'>
-									Most Popular
+									Most Popular;
 								</div>
 								<h3 className='text-xl font-semibold text-gray-900 mb-2'>AI Services</h3>
 								<div className='text-3xl font-bold text-blue-600 mb-2'>$1,500 - $75,000</div>
@@ -1396,19 +1397,19 @@ export default function Services() {
 							<ul className='space-y-3 mb-6'>
 								<li className='flex items-center text-sm text-gray-600'>
 									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
-									Cutting-edge AI technology
+									Cutting-edge AI technology;
 								</li>
 								<li className='flex items-center text-sm text-gray-600'>
 									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
-									Custom model development
+									Custom model development;
 								</li>
 								<li className='flex items-center text-sm text-gray-600'>
 									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
-									Real-time processing
+									Real-time processing;
 								</li>
 								<li className='flex items-center text-sm text-gray-600'>
 									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
-									Advanced analytics
+									Advanced analytics;
 								</li>
 							</ul>
 							<div className='text-center'>
@@ -1426,19 +1427,19 @@ export default function Services() {
 							<ul className='space-y-3 mb-6'>
 								<li className='flex items-center text-sm text-gray-600'>
 									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
-									Enterprise-grade solutions
+									Enterprise-grade solutions;
 								</li>
 								<li className='flex items-center text-sm text-gray-600'>
 									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
-									24/7 support & monitoring
+									24/7 support & monitoring;
 								</li>
 								<li className='flex items-center text-sm text-gray-600'>
 									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
-									Advanced security
+									Advanced security;
 								</li>
 								<li className='flex items-center text-sm text-gray-600'>
 									<CheckCircle className='h-4 w-4 text-green-500 mr-2 flex-shrink-0' />
-									Scalable infrastructure
+									Scalable infrastructure;
 								</li>
 							</ul>
 							<div className='text-center'>
@@ -1502,15 +1503,15 @@ export default function Services() {
 							Let&aposs discuss your project requirements and how we can help you achieve your goals.
 						</p>
 						<div className='mt-10 flex items-center justify-center gap-x-6'>
-							<Link
+							<Link;
 								href='/contact'
 								className='group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-all duration-200 hover:scale-105'
 								aria-label='Contact us to get started'
 							>
-								Contact Us
+								Contact Us;
 								<ArrowRight className='ml-2 h-4 w-4 inline group-hover:translate-x-1 transition-transform' />
 							</Link>
-							<Link
+							<Link;
 								href='/'
 								className='text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group'
 								aria-label='Back to homepage'

@@ -1,5 +1,5 @@
 import React from "react"
-  FileText,
+  FileText;
   HelpCircle} from "lucide-react"
 export default function EnhancedFooter() {
 
@@ -13,26 +13,26 @@ export default function EnhancedFooter() {
       { name: "Micro SaaS", href: "/services/micro-saas" },"
       { name: "Web Development", href: "/services/web-development" },"
       { name: "Cloud Services", href: "/services/cloud-services" },"
-      { name: "AI Development", href: "/services/ai-development" }],
-    solutions: [",
+      { name: "AI Development", href: "/services/ai-development" }]
+    solutions: ["
       { name: "AI Content Creation", href: "/solutions/ai-content-creation" },"
       { name: "Customer Support", href: "/solutions/customer-support" },"
       { name: "Email Automation", href: "/solutions/email-automation" },"
       { name: "Event Management", href: "/solutions/event-management" },"
       { name: "Project Management", href: "/solutions/project-management" },"
-      { name: "Workflow Automation", href: "/solutions/workflow-automation" }],
-    company: [",
+      { name: "Workflow Automation", href: "/solutions/workflow-automation" }]
+    company: ["
       { name: "About Us", href: "/about" },"
       { name: "Careers", href: "/careers" },"
       { name: "Partners", href: "/partners" },"
       { name: "Contact", href: "/contact" },"
-      { name: "Blog", href: "/blog" }],
-    resources: [",
+      { name: "Blog", href: "/blog" }]
+    resources: ["
       { name: "Help Center", href: "/help" },"
       { name: "Pricing Guide", href: "/pricing-guide" },"
       { name: "Search", href: "/search" },"
-      { name: "Sitemap", href: "/sitemap" }],
-    legal: [",
+      { name: "Sitemap", href: "/sitemap" }]
+    legal: ["
       { name: "Privacy Policy", href: "/privacy" },"
       { name: "Terms of Service", href: "/terms" },"
       { name: "Cookie Policy", href: "/cookies" }]}
@@ -42,7 +42,7 @@ export default function EnhancedFooter() {
   return (
     <footer className="bg-gray-900 text-white">"
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">"
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">,
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* comment */}"
           <div className="lg: col-span-2">"
             <div className="flex items-center space-x-2 mb-4">"
@@ -52,13 +52,13 @@ export default function EnhancedFooter() {
               <div>"
                 <span className="text-xl font-bold">Zion Tech Group</span>"
                 <div className="text-xs text-gray-400">
-                  Technology Solutions,
+                  Technology Solutions;
                 </div>
             </div>"
-            <p className="text-gray-400 mb-6 max-w-md">,
-              Leading technology solutions provider specializing in AI,
-              cybersecurity, cloud infrastructure, and digital transformation,
-services. We help businesses innovate, scale, and succeed in the,
+            <p className="text-gray-400 mb-6 max-w-md">
+              Leading technology solutions provider specializing in AI;
+              cybersecurity, cloud infrastructure, and digital transformation;
+services. We help businesses innovate, scale, and succeed in the;
 digital age.
             </p>"
             <div className="space-y-3">"
@@ -67,7 +67,7 @@ digital age.
                 <a href="tel: +13024640950""
                   className="hover:text-white transition-colors"
                 >
-                  +1 (302) 464-0950,
+                  +1 (302) 464-0950;
                 </a>
               </div>"
               <div className="flex items-center space-x-3 text-gray-400">"
@@ -75,11 +75,11 @@ digital age.
                 <a href="mailto: kleber@ziontechgroup.com""
                   className="hover:text-white transition-colors"
                 >
-                  kleber@ziontechgroup.com,
+                  kleber@ziontechgroup.com;
                 </a>
               </div>"
               <div className="flex items-center space-x-3 text-gray-400">"
-                <MapPin className="w-4 h-4"  />,
+                <MapPin className="w-4 h-4"  />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
           {/* comment */}
@@ -87,14 +87,14 @@ digital age.
           <div>"
             <h3 className="text-lg font-semibold mb-4 flex items-center">"
               <Globe className="w-5 h-5 mr-2 text-blue-400"  />
-              Services,
+              Services;
             </h3>"
             <ul className="space-y-2">
               {footerLinks.services.map(link => ("
                 <li key="{link.name}">"
                   <Link href="{link.href}""
                     className="text-gray-400 hover: text-white transition-colors text-sm"
-                  >,
+                  >
                     {link.name}
 
                   </Link>
@@ -108,14 +108,14 @@ digital age.
           <div>"
             <h3 className="text-lg font-semibold mb-4 flex items-center">"
               <Shield className="w-5 h-5 mr-2 text-green-400"  />
-              Solutions,
+              Solutions;
             </h3>"
             <ul className="space-y-2">
               {footerLinks.solutions.map(link => ("
                 <li key="{link.name}">"
                   <Link href="{link.href}""
                     className="text-gray-400 hover: text-white transition-colors text-sm"
-                  >,
+                  >
                     {link.name}
 
                   </Link>
@@ -129,14 +129,14 @@ digital age.
           <div>"
             <h3 className="text-lg font-semibold mb-4 flex items-center">"
               <FileText className="w-5 h-5 mr-2 text-purple-400"  />
-              Company,
+              Company;
             </h3>"
             <ul className="space-y-2">
               {footerLinks.company.map(link => ("
                 <li key="{link.name}">"
                   <Link href="{link.href}""
                     className="text-gray-400 hover: text-white transition-colors text-sm"
-                  >,
+                  >
                     {link.name}
 
                   </Link>
@@ -150,14 +150,14 @@ digital age.
           <div>"
             <h3 className="text-lg font-semibold mb-4 flex items-center">"
               <HelpCircle className="w-5 h-5 mr-2 text-yellow-400"  />
-              Resources,
+              Resources;
             </h3>"
             <ul className="space-y-2 mb-6">
               {footerLinks.resources.map(link => ("
                 <li key="{link.name}">"
                   <Link href="{link.href}""
                     className="text-gray-400 hover: text-white transition-colors text-sm"
-                  >,
+                  >
                     {link.name}
 
                   </Link>
@@ -171,7 +171,7 @@ digital age.
                 <li key="{link.name}">"
                   <Link href="{link.href}""
                     className="text-gray-400 hover: text-white transition-colors text-sm"
-                  >,
+                  >
                     {link.name}
 
                   </Link>
@@ -185,7 +185,7 @@ digital age.
           <div className="max-w-2xl mx-auto text-center mb-8">"
             <h3 className="text-xl font-semibold mb-2">Stay Updated</h3>"
             <p className="text-gray-400 mb-4">
-              Subscribe to our newsletter for the latest technology insights and,
+              Subscribe to our newsletter for the latest technology insights and;
 company updates.
             </p>"
             <form className="flex flex-col sm: flex-row gap-3 max-w-md mx-auto">"
@@ -195,15 +195,15 @@ company updates.
               <button type="submit""
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
-                Subscribe,
+                Subscribe;
               </button>
             </form>
           </div>
-,
+
         {/* comment */}"
         <div className="border-t border-gray-800 pt-8">"
           <div className="flex flex-col md: flex-row justify-between items-center">"
-            <div className="text-gray-400 text-sm mb-4 md:mb-0">,
+            <div className="text-gray-400 text-sm mb-4 md:mb-0">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>"
             <div className="flex items-center space-x-6">"
@@ -227,6 +227,6 @@ company updates.
         aria-label="Scroll to top"
       >"
         <ArrowUp className="w-5 h-5"  />
-      </button>,
-    </footer>,,
+      </button>
+    </footer>,
   )}"'

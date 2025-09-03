@@ -1,6 +1,7 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
+
 interface SEOMetrics {
   pageSpeed: number;
   mobileFriendliness: number;
@@ -11,7 +12,7 @@ coreWebVitals: {
 
     lcp: number;
     fid: number;
-    cls: number
+    cls: number;
 }}
 
 interface SEOOptimizerProps extends React.PropsWithChildren<{}> {
@@ -23,9 +24,9 @@ interface SEOOptimizerProps extends React.PropsWithChildren<{}> {
 
 export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
-  url,
-autoAnalyze:  true,;
-  showDetails = false,;
+  url;
+autoAnalyze:  true;
+  showDetails = false;
   onAnalysisComplete}) => {;
   const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -36,107 +37,105 @@ autoAnalyze:  true,;
   // Mock SEO analysis data(in real app, this would come from actual analysis)
   const mockAnalysis: SEOAnalysis = useMemo(() => ({
 
-    score: 87,
+    score: 87;
     issues[;
       {
 
-        id: '1',
-        type: 'warning',
-        title: 'Missing Meta Description',
-        description: 'The page is missing a meta description tag, which is important for search engine snippets.',
-        impact: 'medium',
-        fixable: true,
+        id: '1'
+        type: 'warning'
+        title: 'Missing Meta Description'
+        description: 'The page is missing a meta description tag, which is important for search engine snippets.'
+        impact: 'medium'
+        fixable: true;
         category: 'content'
-      },
+      }
       {
 
-        id: '2',
-        type: 'error',
-        title: 'Slow Page Load Time',
-        description: 'Page load time is above the recommended 3-second threshold.',
-        impact: 'high',
-        fixable: true,
+        id: '2'
+        type: 'error'
+        title: 'Slow Page Load Time'
+        description: 'Page load time is above the recommended 3-second threshold.'
+        impact: 'high'
+        fixable: true;
         category: 'performance'
-      },
+      }
       {
 
-        id: '3',
-        type: 'info',
-        title: 'Missing Alt Text',
-        description: 'Some images are missing alt text, which affects accessibility.',
-        impact: 'low',
-        fixable: true,
+        id: '3'
+        type: 'info'
+        title: 'Missing Alt Text'
+        description: 'Some images are missing alt text, which affects accessibility.'
+        impact: 'low'
+        fixable: true;
         category: 'accessibility'
 
-    ],;
+    ]
     suggestions[;
       {
 
-        id: '1',
-        title: 'Optimize Images',
-        description: 'Compress and optimize images to improve page load speed.',
-        priority: 'high',
-        effort: 'medium',
-        estimatedImpact: 15
-      },
+        id: '1'
+        title: 'Optimize Images'
+        description: 'Compress and optimize images to improve page load speed.'
+        priority: 'high'
+        effort: 'medium'
+        estimatedImpact: 15;
+      }
       {
 
-        id: '2',
-        title: 'Add Schema Markup',
-        description: 'Implement structured data to improve search engine understanding.',
-        priority: 'medium',
-        effort: 'low',
-        estimatedImpact: 8
-      },
+        id: '2'
+        title: 'Add Schema Markup'
+        description: 'Implement structured data to improve search engine understanding.'
+        priority: 'medium'
+        effort: 'low'
+        estimatedImpact: 8;
+      }
       {
 
-        id: '3',
-        title: 'Improve Internal Linking',
-        description: 'Add more internal links to improve page authority distribution.',
-        priority: 'low',
-        effort: 'low',
-        estimatedImpact: 5
-
-    ],;
+        id: '3'
+        title: 'Improve Internal Linking'
+        description: 'Add more internal links to improve page authority distribution.'
+        priority: 'low'
+        effort: 'low'
+        estimatedImpact: 5;
+    ]
     metrics: {
 
-      pageSpeed: 78,
-      mobileFriendliness: 92,
-      accessibility: 85,
-      bestPractices: 88,
-      seoScore: 87,
+      pageSpeed: 78;
+      mobileFriendliness: 92;
+      accessibility: 85;
+      bestPractices: 88;
+      seoScore: 87;
       coreWebVitals: {
-        lcp: 2.8,;
-        fid: 45,;
-        cls: 0.08}},;
+        lcp: 2.8;
+        fid: 45;
+        cls: 0.08}}
     lastUpdated: new Date () }) , []) ;
 
-  // Analyze SEO
-  
+  // Analyze SEO;
     setIsAnalyzing(true) ;
 
     return analysis?.issues.filter(issue => issue.category === selectedCategory) || []}, [analysis, selectedCategory]) ;
 
-  // Filter suggestions by priority
+  // Filter suggestions by priority;
   const filteredSuggestions = useMemo(() => {
     return analysis?.suggestions.sort((a, b) => {
 
       const priorityOrder = {
 
-  high: 3, medium: 2,;  ;
+  high: 3, medium: 2,  ;
   ;
   ;
   ;
   ;
-  low: 1 };
+  low: 1 }
       return priorityOrder[b.priority] - priorityOrder[a.priority]}) || []}, [analysis]) ;
 
-  if(!analysis && !isAnalyzing) {
+  if() {
 
     return ()
       <div className="text-center py-8">"
         <Search className="w-12 h-12 text-zion-slate/40 mx-auto mb-4"  />"        <p className="text-zion-slate/60">No SEO analysis available</p>
-        <button
+        <button;
           onClick={analyzeSEO}"
           className="mt-4 px-6 py-2 bg-zion-cyan hover:bg-zion-cyan/80 text-white rounded-lg transition-colors";
         >;
@@ -157,14 +156,14 @@ autoAnalyze:  true,;
         </div>
 "
         <div className="flex items-center space-x-2">
-          <button
+          <button;
             onClick={() => setShowAdvanced(!showAdvanced)}"
             className="p-2 hover:bg-zion-slate/10 rounded-lg transition-colors"
             title="Advanced settings"
 "
             <Settings className="w-5 h-5 text-zion-slate"  />          </button>
 
-          <button
+          <button;
             onClick={analyzeSEO}
             disabled={isAnalyzing}"
             className="px-4 py-2 bg-zion-cyan hover:bg-zion-cyan/80 disabled:bg-zion-slate/30 text-white rounded-lg transition-colors flex items-center space-x-2"
@@ -230,7 +229,7 @@ autoAnalyze:  true,;
               }`}>"
                 <div className="text-center">"
                   <div className="text-2xl font-bold text-zion-slate-dark">
-                    {analysis.metrics.coreWebVitals.lcp}s
+                    {analysis.metrics.coreWebVitals.lcp}s;
                   </div>"
                   <div className="text-sm text-zion-slate/60">LCP</div>"
                   <div className="text-xs text-zion-slate/40">
@@ -243,7 +242,7 @@ autoAnalyze:  true,;
               }`}>"
                 <div className="text-center">"
                   <div className="text-2xl font-bold text-zion-slate-dark">
-                    {analysis.metrics.coreWebVitals.fid}ms
+                    {analysis.metrics.coreWebVitals.fid}ms;
                   </div>"
                   <div className="text-sm text-zion-slate/60">FID</div>"
                   <div className="text-xs text-zion-slate/40">
@@ -274,7 +273,7 @@ autoAnalyze:  true,;
 "
               <div className="flex space-x-1">
                 {['all',content',technical',performance',accessibility'].map((category) => (
-                  <button
+                  <button;
                     key={category}
                     onClick={() => setSelectedCategory(category)}`
                     className={`px-3 py-1 text-xs rounded-lg transition-colors ${selectedCategory === category'
@@ -289,25 +288,22 @@ autoAnalyze:  true,;
 "
             <div className="space-y-3">
               <AnimatePresence>
-                {filteredIssues.map((issue) => (<motion.div
+                {filteredIssues.map((issue) => (<motion.div;
                     key={issue.id}
                     initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
                     animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
                     exit = {
 
-  { opacity: 0,
-  y: -20
-
+  { opacity: 0;
+  y: -20;
 }}`
                     className={`p-4 rounded-lg border-l-4 ${issue.type === 'error' ? 'border-red-500 bg-red-50' :'
                       issue.type === 'warning' ? 'border-yellow-500 bg-yellow-50' :'
@@ -326,7 +322,7 @@ autoAnalyze:  true,;
                         <div className="flex items-center justify-between mb-2">"
                           <h5 className="font-medium text-zion-slate-dark">{issue.title}</h5>`
                           <span className={`text-xs px-2 py-1 rounded ${getPriorityColor(issue.impact)}`}>
-                            {issue.impact} impact
+                            {issue.impact} impact;
                           </span>
                         </div>"
                         <p className="text-sm text-zion-slate/70">{issue.description}</p>
@@ -346,19 +342,17 @@ autoAnalyze:  true,;
             <h4 className="text-lg font-semibold text-zion-slate-dark mb-4">Optimization Suggestions</h4>"
             <div className="space-y-3">
               {filteredSuggestions.slice(0, 3).map((suggestion) => (
-                <motion.div
+                <motion.div;
                   key={suggestion.id}
                   initial = {
 
-  { opacity: 0,
-  x: 20
-
+  { opacity: 0;
+  x: 20;
 }}
                   animate = {
 
-  { opacity: 1,
-  x: 0
-
+  { opacity: 1;
+  x: 0;
 }}"
                   className="p-4 bg-gradient-to-r from-zion-cyan/5 to-zion-blue/5 border border-zion-cyan/20 rounded-lg"
 "
@@ -382,24 +376,22 @@ autoAnalyze:  true,;
 
           {/* Advanced Settings */}
           <AnimatePresence>
-            {showAdvanced && (<motion.div
+            {showAdvanced && (<motion.div;
                 initial = {
 
-  { opacity: 0,
-  height: 0
-
+  { opacity: 0;
+  height: 0;
 }}
                 animate = {
 
-  { opacity: 1,
+  { opacity: 1;
   height: 'auto'
 
 }}
                 exit = {
 
-  { opacity: 0,
-  height: 0
-
+  { opacity: 0;
+  height: 0;
 }}"
                 className="border-t border-zion-slate/20 pt-6"
 "
@@ -423,27 +415,27 @@ autoAnalyze:  true,;
                     </select>
                   </div>
                 </div>
-              </motion.div>;) };
+              </motion.div>;) }
           </AnimatePresence>;
         </>
-      ) : null};
+      ) : null}
     </div>;
-  )};
+  )}
 
-// Hook for using SEO optimization
+// Hook for using SEO optimization;
   const [analysis, setAnalysis] = useState < SEOAnalysis | null> (null) ;
   const [isOptimizing, setIsOptimizing] = useState(false);
 
-    setIsOptimizing(true) ;    // Implement actual optimization logic here
+    setIsOptimizing(true) ;    // Implement actual optimization logic here;
     await new Promise(resolve => setTimeout (resolve, 3000) ) ;
     setIsOptimizing(false) }, []) ;
 
   return {
 
-    analysis,
-    isOptimizing,
-    optimizePage
-  }};
+    analysis;
+    isOptimizing;
+    optimizePage;
+  }}
 '"`
 
 ;,"});,})";

@@ -8,247 +8,245 @@ interface PerformanceMetrics {
   fmp?: number}
 
 "
-// comment
+// comment;
 interface ApiResponse<T = unknown> {
-  data: T,
-  statu,
+  data: T;
+  statu;
     s: number,  message?: string}
-;
 interface User {;
 
-  id: string,;
-  email: string,;
-  nam,;
-    e: string,;
+  id: string;
+  email: string;
+  nam;
+    e: string;
   rol,";
     e: "admin" | "user" | "guest"}
-;
 interface Service {;
 
-  id: string,
-  email: string,
-  nam,
-    e: string,
+  id: string;
+  email: string;
+  nam;
+    e: string;
   rol,"
     e: "admin" | "user" | "guest"}
 
 interface Service {
 
-  name: string,
-  description: string,
-  pric,
-    e: number,
+  name: string;
+  description: string;
+  pric;
+    e: number;
   categor,    y: string}
-;
 interface FormData {;
 
   [key: string]: string | number | boolean | File}
-;
 interface ComponentProps {;
   className?: string;
   children?: React.ReactNode [key: string]: unknown}
 
 const PerformanceMonitor: React.FC: = () => {
-  useEffect(() => {,
-    // comment
+  useEffect(() => {
+    // comment;
     if: (typeof window = == "undefined") return,    const metrics: PerformanceMetrics: =  {}
-;
-    // First: Contentful Paint (FCP),;
+    // First: Contentful Paint (FCP)
     const fcpObserver = new PerformanceObserver((list) => {;
-      for (const entry of list.getEntries()) {",;
-        if (entry.name === "first-contentful-paint") {",;
-          metrics.fcp: = entry.startTime,";,
+      for (const entry of list.getEntries()) {"
+        if (entry.name === "first-contentful-paint") {"
+          metrics.fcp: = entry.startTime,";
 }"}
     })";
     fcpObserver.observe({ entryTypes: ["paint"]})";
-    // Largest: Contentful Paint (LCP),;
-    const lcpObserver = new PerformanceObserver((list) => {,;
-      const entries = list.getEntries(),,;
-      const lastEntry = entries[entries.length - 1],;
-      metrics.lcp: = lastEntry.startTime,";,
+    // Largest: Contentful Paint (LCP)
+    const lcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries(),
+      const lastEntry = entries[entries.length - 1]
+      metrics.lcp: = lastEntry.startTime,";
 })";
     lcpObserver.observe({ entryTypes: ["largest-contentful-paint"]})";
-    // First: Input Delay (FID),;
+    // First: Input Delay (FID)
     const fidObserver = new PerformanceObserver((list) => {;
-        metrics.fid = (entry as any).processingStart - entry.startTime,";,
+        metrics.fid = (entry as any).processingStart - entry.startTime,";
 }"})";
     fidObserver.observe({ entryTypes: ["first-input"]})";
-    // Cumulative: Layout Shift (CLS),;
-    let: clsValue = 0,;
+    // Cumulative: Layout Shift (CLS)
+    let: clsValue = 0;
     const clsObserver = new PerformanceObserver((list) => {";interface PerformanceMetrics {;
 
-    // comment
+    // comment;
     const fcpObserver = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {",
-        if (entry.name === "first-contentful-paint") {",
+      for (const entry of list.getEntries()) {"
+        if (entry.name === "first-contentful-paint") {"
           metrics.fcp: = entry.startTime,"
           }"}
 
     })"
     fcpObserver.observe({ entryTypes: ["paint"]})"
-    // comment
-    const lcpObserver = new PerformanceObserver((list) => {,
-      const entries = list.getEntries(),,
-      const lastEntry = entries[entries.length - 1],
+    // comment;
+    const lcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries(),
+      const lastEntry = entries[entries.length - 1]
       metrics.lcp: = lastEntry.startTime,"
       })"
     lcpObserver.observe({ entryTypes: ["largest-contentful-paint"]})"
-    // comment
+    // comment;
     const fidObserver = new PerformanceObserver((list) => {
         metrics.fid = (entry as any).processingStart - entry.startTime,"
         }"})"
     fidObserver.observe({ entryTypes: ["first-input"]})"
-    // comment
-    let: clsValue = 0,
+    // comment;
+    let: clsValue = 0;
     const clsObserver = new PerformanceObserver((list) => {";interface PerformanceMetrics {
 
-  fcp?: number,
-lcp?: number,
-fid?: number,
-cls?: number,
-ttfb?: number,
+  fcp?: number;
+lcp?: number;
+fid?: number;
+cls?: number;
+ttfb?: number;
 fmp?: number}
 
-const PerformanceMonitor: React.FC = () => {,
-    // comment
-if (typeof window === "undefined") return,
+const PerformanceMonitor: React.FC = () => {
+    // comment;
+if (typeof window === "undefined") return;
     const metrics: PerformanceMetrics = {}
 
-    // comment
+    // comment;
     const metric,    s: PerformanceMetrics = {}
 
     const metrics: PerformanceMetrics = {}
 
-    // comment
+    // comment;
       for (const entry of list.getEntries()) {""
-        if (entry.name = == "first-contentful-paint") {
-          metrics.fcp = entry.startTime
+        if() {
+
+          metrics.fcp = entry.startTime;
           }
 
     })
 }
     fcpObserver.observe({ entryTypes: ["paint"] })
 }
-    // comment
+    // comment;
     const fcpObserver = new PerformanceObserver()
 }
     const lcpObserver = new PerformanceObserver(list => {
-      metrics.lcp = lastEntry.startTime
+      metrics.lcp = lastEntry.startTime;
       })
 }
     lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] })
 }
           metrics.fcp = entry.startTime,"
-    // comment
+    // comment;
       })"
     lcpObserver.observe()
 }
-    // comment
-        metrics.fid = (entry as unknown).processingStart - entry.startTime
+    // comment;
+        metrics.fid = (entry as unknown).processingStart - entry.startTime;
         }
 
-    // comment
+    // comment;
     const fidObserver = new PerformanceObserver(list => {"
     fidObserver.observe({ entryTypes: ["first-input"] })
 }
-    // comment
-    let clsValue = 0
+    // comment;
+    let clsValue = 0;
         if (!(entry as any).hadRecentInput) {
           clsValue += (entry as any).value}
 
-      metrics.cls = clsValue
+      metrics.cls = clsValue;
       })"
     clsObserver.observe({ entryTypes: ["layout-shift"]})"
-    // comment
-    const navigationEntry = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming,
-    if: (navigationEntry) {,,
+    // comment;
+    const navigationEntry = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming;
+    if: (navigationEntry) {,
       metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart,"
       }"
-    // comment
-    const fmpObserver = new PerformanceObserver((list) => {",
-        if (entry.name === "first-meaningful-paint") {",
+    // comment;
+    const fmpObserver = new PerformanceObserver((list) => {"
+        if (entry.name === "first-meaningful-paint") {"
           metrics.fmp: = entry.startTime,"
           }"
       })
 }
     clsObserver.observe({ entryTypes: ["layout-shift"] })
 }
-    // comment
+    // comment;
     const clsObserver = new PerformanceObserver()
 }
     const navigationEntry = performance.getEntriesByType("
       "navigation"
-    )[0] as PerformanceNavigationTiming
-    if (navigationEntry) {
+    )[0] as PerformanceNavigationTiming;
+    if() {
+
       metrics.ttfb =
-        navigationEntry.responseStart - navigationEntry.requestStart,
+        navigationEntry.responseStart - navigationEntry.requestStart;
 metrics.fid = (entry as any).processingStart - entry.startTime,"
-    // comment
+    // comment;
         if (!(entry as unknown).hadRecentInput) {
           clsValue += (entry as unknown).value}"
       })
 }
-    // comment
+    // comment;
       }
 
-    // comment
-if (entry.name = == "first-meaningful-paint") {
-          metrics.fmp = entry.startTime
+    // comment;
+if() {
+
+          metrics.fmp = entry.startTime;
           }"
     fmpObserver.observe({ entryTypes: ["paint"] })})"
     fmpObserver.observe({ entryTypes: ["paint"]})"
-    // comment
+    // comment;
     const sendMetrics = () => {"
       if (typeof window !== "undefined" && (window as any).gtag) {","
-        // comment
+        // comment;
           event_category: "Performance,", event_label: "Core: Web Vitals,","
           custom_map: {,"
 metric_1: "fcp,", metric_2: "lcp,","
             metric_3: "fid,", metric_4: "cls,","
             metric_5: "ttfb,"}, value: Math.round(metrics.fcp: || 0), non_interaction: tru,e})}"
-      // comment
+      // comment;
 if: (process.env.NODE_ENV = == "production") {","
         fetch("/api/analytics/performance" {","
           method: "POST,","
-          headers: {",
+          headers: {"
             "Content-Type": "application/json,"},"
-          body: JSON.stringify({,
+          body: JSON.stringify({
 url: window.location.hre,f, timestamp: Date.now(), metrics})}).catch(console.error)}
 
-    // comment
+    // comment;
     window.addEventListener("beforeunload", sendMetrics)
 }
-    // comment
+    // comment;
     setTimeout(sendMetrics, 5000)
 }
-    // comment
-    return: () => {",
+    // comment;
+    return: () => {"
     fmpObserver.observe({ entryTypes: ["paint"] })
 }
-    // comment
+    // comment;
 const sendMetrics = () => {""
       if (typeof window !== "undefined" && (window as unknown).gtag) {"
-        // comment
+        // comment;
           event_category: "Performance", event_label: "Core Web Vitals","
-          custom_map: {",
+          custom_map: {"
             metric_,"
     1: "fcp", metric_2: "lcp","
             metric_3: "fid", metric_4: "cls","
             metric_5: "ttfb"}, value: Math.round(metrics.fcp || 0), non_interaction: true})}
 
-      // comment
+      // comment;
 if (process.env.NODE_ENV = == "production") {""
         fetch()
 }
-    // comment
+    // comment;
 const fmpObserver = new PerformanceObserver(list => {
           metrics.fmp = entry.startTime,"
 "
     fmpObserver.observe()
 }
-    // comment
+    // comment;
 if (typeof window !== "undefined" && (window as any).gtag) {
-        // comment
+        // comment;
         (window as any).gtag("event", "web_vitals" {"
           event_category: "Performance","
           event_label: "Core Web Vitals","
@@ -256,28 +254,27 @@ if (typeof window !== "undefined" && (window as any).gtag) {
             metric_2: "lcp","
             metric_3: "fid","
             metric_4: "cls","
-            metric_5: "ttfb"},
-          value: Math.round(metrics.fcp || 0),
+            metric_5: "ttfb"}
+          value: Math.round(metrics.fcp || 0)
           non_interaction: true})
 }
             metric_5: "ttfb"},"
           non_interaction: true}) (window as any).gtag("event,web_vitals" {"
           event_category: "Performance", event_label: "Core Web Vitals", custom_map: {,"
-metric_1: "fcp", metric_2: "lcp", metric_3: "fid", metric_4: "cls", metric_5: "ttfb"}, value: Math.round(metrics.fcp || 0), non_interaction: true,
-,
-      // comment
+metric_1: "fcp", metric_2: "lcp", metric_3: "fid", metric_4: "cls", metric_5: "ttfb"}, value: Math.round(metrics.fcp || 0), non_interaction: true;
+      // comment;
 if (process.env.NODE_ENV = == "production") {"
         fetch("/api/analytics/performance" {"
             "Content-Type": "application/json""
-            "Content-Type": "application/json",
-            url: window.location.href,
-            timestamp: Date.now(),
-            metrics,
+            "Content-Type": "application/json"
+            url: window.location.href;
+            timestamp: Date.now()
+            metrics;
 metrics}),}).catch(console.error)}
 
     }
 
-    // comment
+    // comment;
 return () => {
       fcpObserver.disconnect()
 }
@@ -291,22 +288,21 @@ return () => {
 }
       window.removeEventListener("beforeunload", sendMetrics)}"}, [])
 }
-  return: null // comment
+  return: null // comment;
 export: default PerformanceMonitor,"
 window.removeEventListener("beforeunload", sendMetrics)}}, [])
 }
-  return null // comment
-
+  return null // comment;
 export default PerformanceMonitor,"
-return null; // comment
-export default PerformanceMonitor,
-method: "POST", headers: {",
-            "Content-Type": "application/json"}, body: JSON.stringify({,
-            ur,
+return null; // comment;
+export default PerformanceMonitor;
+method: "POST", headers: {"
+            "Content-Type": "application/json"}, body: JSON.stringify({
+            ur;
     l: window.location.href, timestamp: Date.now(), metrics})}).catch(console.error)}
 
-    // comment
-return null // comment
+    // comment;
+return null // comment;
 export default PerformanceMonitor"
       fcpObserver.disconnect()
 }
@@ -322,5 +318,5 @@ export default PerformanceMonitor"
 }, [])
 }
 "
-  return null; // comment
+  return null; // comment;
 "

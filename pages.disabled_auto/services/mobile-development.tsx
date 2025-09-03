@@ -5,7 +5,7 @@ import { CheckCircle, Smartphone, Zap, Shield, BarChart, Users, Award } from 'lu
 
 const MobileDevelopment: NextPage = () => {
   return (
-    <Layout
+    <Layout;
       title="Mobile Development Services - Zion Tech Group"
       description="Native and cross-platform mobile applications for iOS and Android. React Native, Flutter, and custom mobile solutions."
     >
@@ -13,7 +13,7 @@ const MobileDevelopment: NextPage = () => {
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Mobile
+            Mobile;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Development</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
@@ -23,10 +23,10 @@ const MobileDevelopment: NextPage = () => {
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              Start Your Mobile Project
+              Start Your Mobile Project;
             </Link>
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              View All Services
+              View All Services;
             </Link>
           </div>
         </div>
@@ -38,7 +38,7 @@ const MobileDevelopment: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Mobile Development Services</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We create mobile applications that deliver exceptional user experiences 
+              We create mobile applications that deliver exceptional user experiences;
               and drive engagement across iOS and Android platforms.
             </p>
           </div>
@@ -55,15 +55,15 @@ const MobileDevelopment: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Swift & SwiftUI
+                  Swift & SwiftUI;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  UIKit Development
+                  UIKit Development;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  App Store Optimization
+                  App Store Optimization;
                 </li>
               </ul>
             </div>
@@ -79,15 +79,15 @@ const MobileDevelopment: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Kotlin & Jetpack Compose
+                  Kotlin & Jetpack Compose;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Java Development
+                  Java Development;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Google Play Optimization
+                  Google Play Optimization;
                 </li>
               </ul>
             </div>
@@ -103,15 +103,15 @@ const MobileDevelopment: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  React Native
+                  React Native;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Flutter
+                  Flutter;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Xamarin
+                  Xamarin;
                 </li>
               </ul>
             </div>
@@ -127,15 +127,15 @@ const MobileDevelopment: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Data Encryption
+                  Data Encryption;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Secure Authentication
+                  Secure Authentication;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  API Security
+                  API Security;
                 </li>
               </ul>
             </div>
@@ -151,15 +151,15 @@ const MobileDevelopment: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  User Analytics
+                  User Analytics;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Performance Monitoring
+                  Performance Monitoring;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Crash Reporting
+                  Crash Reporting;
                 </li>
               </ul>
             </div>
@@ -175,15 +175,15 @@ const MobileDevelopment: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Keyword Optimization
+                  Keyword Optimization;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  App Store Listing
+                  App Store Listing;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  User Reviews Management
+                  User Reviews Management;
                 </li>
               </ul>
             </div>
@@ -213,15 +213,15 @@ const MobileDevelopment: NextPage = () => {
               <ul className="text-left space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Employee Management
+                  Employee Management;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  CRM Solutions
+                  CRM Solutions;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Project Management
+                  Project Management;
                 </li>
               </ul>
             </div>
@@ -237,15 +237,15 @@ const MobileDevelopment: NextPage = () => {
               <ul className="text-left space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Product Catalogs
+                  Product Catalogs;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Payment Integration
+                  Payment Integration;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Order Tracking
+                  Order Tracking;
                 </li>
               </ul>
             </div>
@@ -261,15 +261,15 @@ const MobileDevelopment: NextPage = () => {
               <ul className="text-left space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Real-time Messaging
+                  Real-time Messaging;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Media Sharing
+                  Media Sharing;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  User Profiles
+                  User Profiles;
                 </li>
               </ul>
             </div>
@@ -286,16 +286,16 @@ const MobileDevelopment: NextPage = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              Start Your Mobile Project
+              Start Your Mobile Project;
             </Link>
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              View All Services
+              View All Services;
             </Link>
           </div>
         </div>
       </section>
     </Layout>
   );
-};
+}
 
 export default MobileDevelopment;

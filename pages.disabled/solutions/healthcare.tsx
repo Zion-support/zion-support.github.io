@@ -5,7 +5,7 @@ import { Heart, Shield, Database, Users, CheckCircle, Zap, Globe, Lock } from 'l
 
 const HealthcareSolutions: NextPage = () => {
   return (
-    <Layout
+    <Layout;
       title="Healthcare Solutions - Zion Tech Group"
       description="Transform healthcare delivery with secure, compliant, and innovative technology solutions. Expert healthcare IT consulting from Zion Tech Group."
     >
@@ -13,7 +13,7 @@ const HealthcareSolutions: NextPage = () => {
       <section className="bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Healthcare
+            Healthcare;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400"> Solutions</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
@@ -24,12 +24,12 @@ const HealthcareSolutions: NextPage = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact">
               <a className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-                Transform Healthcare
+                Transform Healthcare;
               </a>
             </Link>
             <Link href="/solutions">
               <a className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-                View All Solutions
+                View All Solutions;
               </a>
             </Link>
           </div>
@@ -58,15 +58,15 @@ const HealthcareSolutions: NextPage = () => {
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  HIPAA-compliant data management
+                  HIPAA-compliant data management;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Interoperability standards
+                  Interoperability standards;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Real-time patient data access
+                  Real-time patient data access;
                 </li>
               </ul>
             </div>
@@ -82,15 +82,15 @@ const HealthcareSolutions: NextPage = () => {
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  HIPAA compliance automation
+                  HIPAA compliance automation;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Advanced threat protection
+                  Advanced threat protection;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Data encryption & backup
+                  Data encryption & backup;
                 </li>
               </ul>
             </div>
@@ -106,15 +106,15 @@ const HealthcareSolutions: NextPage = () => {
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Predictive analytics
+                  Predictive analytics;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Population health management
+                  Population health management;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Clinical decision support
+                  Clinical decision support;
                 </li>
               </ul>
             </div>
@@ -130,15 +130,15 @@ const HealthcareSolutions: NextPage = () => {
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Video consultation systems
+                  Video consultation systems;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Remote monitoring tools
+                  Remote monitoring tools;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Mobile health applications
+                  Mobile health applications;
                 </li>
               </ul>
             </div>
@@ -154,15 +154,15 @@ const HealthcareSolutions: NextPage = () => {
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Medical image analysis
+                  Medical image analysis;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Predictive modeling
+                  Predictive modeling;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Treatment optimization
+                  Treatment optimization;
                 </li>
               </ul>
             </div>
@@ -178,15 +178,15 @@ const HealthcareSolutions: NextPage = () => {
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  HL7 FHIR compliance
+                  HL7 FHIR compliance;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  API development
+                  API development;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  System interoperability
+                  System interoperability;
                 </li>
               </ul>
             </div>
@@ -275,12 +275,12 @@ const HealthcareSolutions: NextPage = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact">
               <a className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-                Get Started Today
+                Get Started Today;
               </a>
             </Link>
             <Link href="/solutions">
               <a className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-                View All Solutions
+                View All Solutions;
               </a>
             </Link>
           </div>
@@ -288,6 +288,6 @@ const HealthcareSolutions: NextPage = () => {
       </section>
     </Layout>
   );
-};
+}
 
 export default HealthcareSolutions;

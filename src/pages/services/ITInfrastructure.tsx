@@ -5,79 +5,79 @@ import { Server, Network, Database, Shield, Zap, Monitor, Wifi, Cloud } from 'lu
 const ITInfrastructure: React.FC = () => {
   const infrastructureServices = [
     {
-      title: "Network Infrastructure",
-      description: "Design, implement, and maintain robust network solutions",
-      features: ["Network Design", "Wireless Solutions", "VPN Implementation", "Network Security"],
-      icon: Network
-    },
+      title: "Network Infrastructure"
+      description: "Design, implement, and maintain robust network solutions"
+      features: ["Network Design", "Wireless Solutions", "VPN Implementation", "Network Security"]
+      icon: Network;
+    }
     {
-      title: "Server Management",
-      description: "Comprehensive server infrastructure and management services",
-      features: ["Server Setup", "Virtualization", "Performance Optimization", "Backup Solutions"],
-      icon: Server
-    },
+      title: "Server Management"
+      description: "Comprehensive server infrastructure and management services"
+      features: ["Server Setup", "Virtualization", "Performance Optimization", "Backup Solutions"]
+      icon: Server;
+    }
     {
-      title: "Storage Solutions",
-      description: "Scalable storage infrastructure for growing businesses",
-      features: ["Storage Design", "Data Backup", "Disaster Recovery", "Cloud Storage"],
-      icon: Database
-    },
+      title: "Storage Solutions"
+      description: "Scalable storage infrastructure for growing businesses"
+      features: ["Storage Design", "Data Backup", "Disaster Recovery", "Cloud Storage"]
+      icon: Database;
+    }
     {
-      title: "Security Infrastructure",
-      description: "Multi-layered security infrastructure protection",
-      features: ["Firewall Management", "Intrusion Detection", "Access Control", "Security Monitoring"],
-      icon: Shield
+      title: "Security Infrastructure"
+      description: "Multi-layered security infrastructure protection"
+      features: ["Firewall Management", "Intrusion Detection", "Access Control", "Security Monitoring"]
+      icon: Shield;
     }
   ];
 
   const infrastructureAreas = [
-    { area: "Hardware Infrastructure", solutions: ["Servers", "Storage systems", "Network equipment", "Workstations"] },
-    { area: "Software Infrastructure", solutions: ["Operating systems", "Virtualization platforms", "Database systems", "Management tools"] },
-    { area: "Network Infrastructure", solutions: ["LAN/WAN setup", "Wireless networks", "VPN solutions", "Network security"] },
+    { area: "Hardware Infrastructure", solutions: ["Servers", "Storage systems", "Network equipment", "Workstations"] }
+    { area: "Software Infrastructure", solutions: ["Operating systems", "Virtualization platforms", "Database systems", "Management tools"] }
+    { area: "Network Infrastructure", solutions: ["LAN/WAN setup", "Wireless networks", "VPN solutions", "Network security"] }
     { area: "Storage Infrastructure", solutions: ["Storage arrays", "Backup systems", "Cloud storage", "Data protection"] }
   ];
 
   const keyFeatures = [
-    { name: "High Availability", icon: "🔄", description: "99.9% uptime guarantee with redundancy" },
-    { name: "Scalable Solutions", icon: "📈", description: "Infrastructure that grows with your business" },
-    { name: "Proactive Monitoring", icon: "👁️", description: "24/7 monitoring and alerting" },
+    { name: "High Availability", icon: "🔄", description: "99.9% uptime guarantee with redundancy" }
+    { name: "Scalable Solutions", icon: "📈", description: "Infrastructure that grows with your business" }
+    { name: "Proactive Monitoring", icon: "👁️", description: "24/7 monitoring and alerting" }
     { name: "Expert Support", icon: "👨‍💻", description: "Certified engineers and technicians" }
   ];
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEO;
         title="IT Infrastructure - Zion Tech Group"
         description="Build a robust and scalable IT infrastructure with our expert solutions and management services."
         keywords="IT infrastructure, server management, network design, data centers, infrastructure security"
         canonical="https://ziontechgroup.com/services/infrastructure"
       />
-      title: "Network Infrastructure",
-      description: "Design, implement, and maintain robust network solutions",
-      features: ["Network Design", "Wireless Solutions", "VPN Implementation", "Network Security"],
+      title: "Network Infrastructure"
+      description: "Design, implement, and maintain robust network solutions"
+      features: ["Network Design", "Wireless Solutions", "VPN Implementation", "Network Security"]
       icon: "🌐"
-    },
-    {title}: "Server Management",
-      description: "Comprehensive server infrastructure and management services",
-      features: ["Server Setup", "Virtualization", "Performance Optimization", "Backup Solutions"],
+    }
+    {title}: "Server Management"
+      description: "Comprehensive server infrastructure and management services"
+      features: ["Server Setup", "Virtualization", "Performance Optimization", "Backup Solutions"]
       icon: "🖥️"
-    },
-    {title}: "Storage Solutions",
-      description: "Scalable storage infrastructure for growing businesses",
-      features: ["Storage Design", "Data Backup", "Disaster Recovery", "Cloud Storage"],
+    }
+    {title}: "Storage Solutions"
+      description: "Scalable storage infrastructure for growing businesses"
+      features: ["Storage Design", "Data Backup", "Disaster Recovery", "Cloud Storage"]
       icon: "💾"
-    },
-    {title}: "Security Infrastructure",
-      description: "Multi-layered security infrastructure protection",
-      features: ["Firewall Management", "Intrusion Detection", "Access Control", "Security Monitoring"],
+    }
+    {title}: "Security Infrastructure"
+      description: "Multi-layered security infrastructure protection"
+      features: ["Firewall Management", "Intrusion Detection", "Access Control", "Security Monitoring"]
       icon: "🔒"
     }
   ];
 
   const infrastructureAreas = [
-    {area}: "Hardware Infrastructure", solutions: ["Servers", "Storage systems", "Network equipment", "Workstations"] },
-    {area}: "Software Infrastructure", solutions: ["Operating systems", "Virtualization platforms", "Database systems", "Management tools"] },
-    {area}: "Network Infrastructure", solutions: ["LAN/WAN setup", "Wireless networks", "VPN solutions", "Network security"] },
+    {area}: "Hardware Infrastructure", solutions: ["Servers", "Storage systems", "Network equipment", "Workstations"] }
+    {area}: "Software Infrastructure", solutions: ["Operating systems", "Virtualization platforms", "Database systems", "Management tools"] }
+    {area}: "Network Infrastructure", solutions: ["LAN/WAN setup", "Wireless networks", "VPN solutions", "Network security"] }
     {area}: "Storage Infrastructure", solutions: ["Storage arrays", "Backup systems", "Cloud storage", "Data protection"] }
   ];
 
@@ -97,9 +97,9 @@ const ITInfrastructure: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              IT
+              IT;
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}Infrastructure
+                {" "}Infrastructure;
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -107,17 +107,17 @@ const ITInfrastructure: React.FC = () => {
               Our comprehensive services ensure reliability, scalability, and security.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
               >
-                Get Infrastructure Consultation
+                Get Infrastructure Consultation;
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
               >
-                View All Services
+                View All Services;
               </Link>
             </div>
           </div>
@@ -128,16 +128,16 @@ const ITInfrastructure: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Infrastructure Services
+                Our Infrastructure Services;
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Comprehensive solutions to build and maintain your IT foundation
+                Comprehensive solutions to build and maintain your IT foundation;
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {infrastructureServices.map((service, index) => (
-                <div
+                <div;
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-all duration-300"
                 >
@@ -167,16 +167,16 @@ const ITInfrastructure: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Our Infrastructure
+                Why Choose Our Infrastructure;
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Enterprise-grade solutions with unmatched reliability and support
+                Enterprise-grade solutions with unmatched reliability and support;
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {keyFeatures.map((feature, index) => (
-                <div
+                <div;
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300"
                 >
@@ -194,16 +194,16 @@ const ITInfrastructure: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Infrastructure Solutions
+                Infrastructure Solutions;
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Comprehensive coverage across all infrastructure domains
+                Comprehensive coverage across all infrastructure domains;
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {infrastructureAreas.map((area, index) => (
-                <div
+                <div;
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-all duration-300"
                 >
@@ -232,17 +232,17 @@ const ITInfrastructure: React.FC = () => {
               Let our infrastructure experts design and implement a robust IT foundation for your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
               >
-                Get Started
+                Get Started;
               </Link>
-              <Link
+              <Link;
                 to="/case-studies"
                 className="inline-flex items-center px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
               >
-                View Case Studies
+                View Case Studies;
               </Link>
             </div>
           </div>
@@ -250,6 +250,6 @@ const ITInfrastructure: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 
 export default ITInfrastructure;

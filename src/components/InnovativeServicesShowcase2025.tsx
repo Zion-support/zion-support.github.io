@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { INNOVATIVE_SERVICES_2025, INNOVATIVE_SERVICE_CATEGORIES_2025, INNOVATIVE_SERVICE_SUBCATEGORIES_2025, INNOVATIVE_PRICING_TIERS_2025, INNOVATIVE_CONTACT_INFO_2025, INNOVATIVE_SERVICE_GUARANTEES_2025 } from '@/data / innovativeServices2025';
 
 export default function Page() {
-    if(sortOrder === 'asc') {
+
+    if() {
 
       return aValue > bValue ? 1 : -1} else {
 
@@ -14,15 +15,15 @@ export default function Page() {
     return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.icon ?
       <span className="text-2xl">{INNOVATIVE_SERVICE_CATEGORIES_2025[category].icon}</span> :
       <Rocket className="w-6 h-6" />;
-  };
-    return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.color || 'from-gray-500 to-slate-500'};
+  }
+    return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.color || 'from-gray-500 to-slate-500'}
 
-    setShowModal(true)};
+    setShowModal(true)}
 
   const closeModal = () => {
     setShowModal(false) ;
     setSelectedService(null) ;
-  };
+  }
 
   return (<div  className="min - h-screen futuristic -bg">
       {/* Matrix Rain Background Effect */}
@@ -32,38 +33,38 @@ export default function Page() {
       <div  className="relative overflow-hidden">
         <div  className="absolute inset - 0 bg-gradient - to - r from - blue - 600 / 20 to - purple -600 / 20"></div>
         <div  className="relative max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-24">
-          <motion.div
+          <motion.div;
             className="text-center"            initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >"
             <h1 className="futuristic-heading text-5xl md:text-7xl mb-8">"
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Innovative Services
+                Innovative Services;
               </span>
               <br />"
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                2025
+                2025;
               </span>
             </h1>"
             <p className="futuristic-subheading text-xl md:text-2xl mb-12 max-w-4xl mx-auto">
               Revolutionary AI-powered, quantum-secure, and autonomous business solutions that transform industries and drive unprecedented growth.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
+              <motion.button;
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="futuristic-btn inline-flex items-center px-8 py-4"'
                 onClick={() => document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' })}
               >"
-                <Rocket className="w-5 h-5 mr-2"  />                Explore Services
+                <Rocket className="w-5 h-5 mr-2"  />                Explore Services;
               </motion.button>
-              <motion.a
+              <motion.a;
                 href={`tel:${INNOVATIVE_CONTACT_INFO_2025.phone}`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >"
-                <Phone className="w-5 h-5 mr-2"  />                Call Now
+                <Phone className="w-5 h-5 mr-2"  />                Call Now;
               </motion.a>
             </div>
           </motion.div>
@@ -117,7 +118,7 @@ export default function Page() {
             {/* Category Filter */}"
             <div className="flex gap-2">
               {categories.map((category) => (
-                <motion.button
+                <motion.button;
                   key={category}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -173,7 +174,7 @@ export default function Page() {
         {/* Services Grid/List */}
         <div className={viewMode === 'grid' ? 'futuristic-grid' : 'space-y-4'}>
           <AnimatePresence>
-            {sortedServices.map((service, index) => (<motion.div
+            {sortedServices.map((service, index) => (<motion.div;
                 key={service.id}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -231,13 +232,13 @@ export default function Page() {
                       <div className="text-2xl font-bold text-cyan-400">
                         {service.currency}{service.price.toLocaleString()}
                       </div>
-                      <motion.button
+                      <motion.button;
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={() => openServiceModal(service)}"
                         className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
                       >
-                        Learn More
+                        Learn More;
                       </motion.button>
                     </div>
                   </div>
@@ -267,13 +268,13 @@ export default function Page() {
                     <div  className="text-right">
                       <div  className="text-2xl font - bold text-cyan - 400 mb-3">
                         {service.currency}{service.price.toLocaleString () }                      </div>
-                      <motion.button
+                      <motion.button;
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={() => openServiceModal(service)}"
                         className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
                       >
-                        Learn More
+                        Learn More;
                       </motion.button>
                     </div>
                   </div>) }
@@ -293,14 +294,14 @@ export default function Page() {
 
       {/* Service Details Modal */}
       <AnimatePresence>
-        {showModal && selectedService && (<motion.div
+        {showModal && selectedService && (<motion.div;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}"
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={closeModal}
           >
-            <motion.div
+            <motion.div;
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}"
@@ -327,7 +328,7 @@ export default function Page() {
                       </div>
                     </div>
                   </div>
-                  <button
+                  <button;
                     onClick={closeModal}"
                     className="text-gray-400 hover:text-white transition-colors"
                   >"
@@ -370,7 +371,7 @@ export default function Page() {
                       <h4 className="text-lg font-semibold text-white mb-3">Tags</h4>"
                       <div className="flex flex-wrap gap-2">
                         {selectedService.tags.map((tag: anystring)  => (
-                          <span
+                          <span;
                             key={tag}"
                             className="px-3 py-1 bg-gray-800/50 border border-gray-600 rounded-full text-sm text-gray-300"
                           >
@@ -387,22 +388,22 @@ export default function Page() {
                       </h3>
                       <p className="text-gray - 400 mb-4">One - time setup fee</p>
 
-                      <div  className="space - y-3">                        <motion.button
+                      <div  className="space - y-3">                        <motion.button;
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}"
                           className="w-full futuristic-btn py-3"'`
                           onClick={() => window.open(`mailto:${INNOVATIVE_CONTACT_INFO_2025.email}?subject=Inquiry about ${selectedService.title}`,_blank')}
                         >
-                          Get Started
+                          Get Started;
                         </motion.button>
 
-                        <motion.button
+                        <motion.button;
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}"
                           className="w-full px-6 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"'`
                           onClick={() => window.open(`tel:${INNOVATIVE_CONTACT_INFO_2025.phone}`,_blank')}
                         >
-                          Call for Quote
+                          Call for Quote;
                         </motion.button>
                       </div>
                     </div>
@@ -477,7 +478,7 @@ export default function Page() {
               whileTap={{ scale: 0.95 }}"
               className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
             >"
-              <Mail className="w-5 h-5 mr-2"  />              Email Us
+              <Mail className="w-5 h-5 mr-2"  />              Email Us;
             </motion.a>
           </div>
 

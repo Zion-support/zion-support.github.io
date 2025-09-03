@@ -13,27 +13,32 @@ interface State {
 }
 
 class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+  constructor() {
+
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false }
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { hasError: true, error }
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch() {
+
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     this.setState({ error, errorInfo });
   }
 
   handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
+  }
 
   render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
+
+    if() {
+
+      if() {
+
         return this.props.fallback;
       }
 
@@ -45,7 +50,7 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
             
             <h1 className="text-2xl font-bold text-white mb-4">
-              Something went wrong
+              Something went wrong;
             </h1>
             
             <p className="text-gray-300 mb-6">
@@ -65,7 +70,7 @@ class ErrorBoundary extends Component<Props, State> {
             )}
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button
+              <button;
                 onClick={this.handleRetry}
                 className="flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
               >
@@ -73,11 +78,11 @@ class ErrorBoundary extends Component<Props, State> {
                 <span>Try Again</span>
               </button>
               
-              <button
+              <button;
                 onClick={() => window.location.reload()}
                 className="bg-transparent border border-white/20 text-white hover:bg-white/10 px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
               >
-                Refresh Page
+                Refresh Page;
               </button>
             </div>
           </div>

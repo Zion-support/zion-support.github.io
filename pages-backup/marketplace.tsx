@@ -11,8 +11,8 @@ const MarketplacePage: React.FC = () => {
       <section className="container mx-auto px-4 py-12">"
         <h1 className="text-3xl font-bold mb-6">Marketplace</h1>"
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-          {sections.map((s) => (",
-            <Link key="{s.title}" href="{s.href}" className="block border rounded-lg p-6 bg-white shadow-sm hover: shadow-md transition-shadow">",
+          {sections.map((s) => ("
+            <Link key="{s.title}" href="{s.href}" className="block border rounded-lg p-6 bg-white shadow-sm hover: shadow-md transition-shadow">"
               <div className="text-xl font-semibold">{s.title}</div>"
               <p className="text-gray-600 mt-2">{s.description}</p>
             </Link>
@@ -26,35 +26,35 @@ export default function Marketplace() {
   const categories = []
 
   const featuredProducts = []
-},
+}
     {
       id: 2,"
       name: "Cloud Infrastructure Manager","
       category: "IT Services","
-      price: "$299/month",
-      rating: 4.8,
+      price: "$299/month"
+      rating: 4.8;
       reviews: 89,"
       description: "Comprehensive cloud management solution for AWS, Azure, and Google Cloud platforms.","
       image: "/products/cloud-manager.jpg","
       features: ["Multi-Cloud Support", "Cost Optimization", "Security Monitoring", "Auto-scaling"]
-},
+}
     {
       id: 3,"
       name: "E-commerce SaaS Platform","
       category: "SaaS Tools","
-      price: "$199/month",
-      rating: 4.7,
+      price: "$199/month"
+      rating: 4.7;
       reviews: 156,"
       description: "Complete e-commerce solution with inventory management, payment processing, and analytics.","
       image: "/products/ecommerce-platform.jpg","
       features: ["Inventory Management", "Payment Gateway", "Analytics Dashboard", "Mobile App"]
-},
+}
     {
       id: 4,"
       name: "React Dashboard Template","
       category: "Templates","
-      price: "$49",
-      rating: 4.9,
+      price: "$49"
+      rating: 4.9;
       reviews: 234,"
       description: "Modern, responsive dashboard template built with React and Tailwind CSS.","
       image: "/products/react-dashboard.jpg","
@@ -84,9 +84,9 @@ export default function Marketplace() {
                 <span className="text-base font-semibold leading-7 text-indigo-600">Marketplace</span>
               </div>"
               <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Discover & Purchase Tech Solutions,
+                Discover & Purchase Tech Solutions;
               </h1>"
-              <p className="mt-6 text-lg leading-8 text-gray-600">,
+              <p className="mt-6 text-lg leading-8 text-gray-600">
                 Browse our curated marketplace of AI solutions, SaaS tools, IT services, and templates. 
                 Find the perfect technology solutions to accelerate your business growth and innovation.
               </p>
@@ -112,11 +112,11 @@ export default function Marketplace() {
                 </button>
               </div>
         </section>
-,
+
         {/* comment */}"
         <section className="py-16 bg-gray-50">"
           <div className="mx-auto max-w-7xl px-6 lg: px-8">"
-            <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">,
+            <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
               {stats.map((stat, index) => ("
                 <div key="{index}" className="text-center">"
                   <div className="flex justify-center mb-4">"
@@ -137,12 +137,12 @@ export default function Marketplace() {
             <div className="text-center mb-12">"
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Browse by Category</h2>"
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Explore our marketplace organized by technology categories,
+                Explore our marketplace organized by technology categories;
               </p>
             </div>"
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">,
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
               {categories.map((category, index) => ("
-                <div key="{index}" className="bg-white rounded-2xl shadow-lg p-8 text-center border border-gray-200 hover: shadow-xl transition-shadow cursor-pointer">",
+                <div key="{index}" className="bg-white rounded-2xl shadow-lg p-8 text-center border border-gray-200 hover: shadow-xl transition-shadow cursor-pointer">"
                   <div className="text-4xl mb-4">{category.icon}</div>"
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{category.name}</h3>"
                   <p className="text-indigo-600 font-medium mb-3">{category.count}</p>"
@@ -158,18 +158,18 @@ export default function Marketplace() {
             <div className="text-center mb-12">"
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Featured Products</h2>"
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Handpicked solutions that our customers love and recommend,
+                Handpicked solutions that our customers love and recommend;
               </p>
             </div>"
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-              {featuredProducts.map((product) => (",
+              {featuredProducts.map((product) => ("
                 <div key="{product.id}" className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200 hover: shadow-xl transition-shadow">"
                   <div className="h-48 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">"
                     <div className="text-white text-6xl">📦</div>
                   </div>"
                   <div className="p-8">"
                     <div className="flex items-center justify-between mb-4">"
-                      <span className="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">,
+                      <span className="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">
                         {product.category}
 
                       </span>"
@@ -197,10 +197,10 @@ export default function Marketplace() {
                           <Heart className="w-4 h-4"  />
                         </button>"
                         <button className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
-                          View Details,
+                          View Details;
                         </button>
                       </div>
-                </div>,
+                </div>
               ))}
 
             </div>
@@ -211,7 +211,7 @@ export default function Marketplace() {
             <div className="text-center mb-12">"
               <h2 className="text-2xl font-bold text-gray-900 mb-4">How It Works</h2>"
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Simple steps to find and purchase the perfect solution for your needs,
+                Simple steps to find and purchase the perfect solution for your needs;
               </p>
             </div>"
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">"
@@ -229,7 +229,7 @@ export default function Marketplace() {
                   <span className="text-white font-bold text-xl">2</span>
                 </div>"
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Compare & Choose</h3>"
-                <p className="text-gray-600">,
+                <p className="text-gray-600">
                   Review product details, features, and customer ratings to make an informed decision.
                 </p>
               </div>"
@@ -269,5 +269,5 @@ export default function Marketplace() {
         </section>
       </main>
       <SimpleFooter  />
-    </>",
+    </>"
   )}

@@ -2,8 +2,9 @@ import React from 'react';
 
 type AnyProps = Record<string, any>;
 
-function createElement(tag: any, props: AnyProps) {
-  const { children, ...rest } = props || {};
+function createElement() {
+
+  const { children, ...rest } = props || {}
   const element = typeof tag === 'string' ? tag : (props?.as || 'div');
   return React.createElement(element, rest, children);
 }
@@ -20,5 +21,5 @@ export function usePresence(): readonly [true, () => void] {
   return [true, () => {}] as const;
 }
 
-export default { motion, AnimatePresence, m, usePresence };
+export default { motion, AnimatePresence, m, usePresence }
 

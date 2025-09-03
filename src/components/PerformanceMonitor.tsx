@@ -4,25 +4,22 @@ export default PerformanceMonitor;
 import { motion, AnimatePresence  } from 'framer-motion';
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
-    if(metrics) {
+    if() {
 
       setPerformanceScore(score)}
   }, [metrics, calculatePerformanceScore]) ;
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
-    // Show monitor after 3 seconds
-    
+    // Show monitor after 3 seconds;
     return () => clearTimeout(timer) }, []) ;
   if(!isVisible || !showDetails) return null;
 

@@ -2,24 +2,22 @@ import React from 'react'
 import { Phone, Mail, MapPin, Globe } from 'lucide-react'
 
 interface ContactInfoProps {
-  className?: string
-  showTitle?: boolean
+  className?: string;
+  showTitle?: boolean;
   variant?: 'default' | 'compact' | 'detailed'
 }
 
-export default function ContactInfo({ 
-  className = '', 
-  showTitle = true, 
-  variant = 'default' 
-}: ContactInfoProps) {
+export default function ContactInfo() {
+
   const contactDetails = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown DE 19709',
+    phone: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008, Middletown DE 19709'
     website: 'https://ziontechgroup.com'
   }
 
-  if (variant === 'compact') {
+  if() {
+
     return (
       <div className={`flex flex-wrap gap-4 text-sm ${className}`}>
         <div className="flex items-center">
@@ -34,7 +32,8 @@ export default function ContactInfo({
     )
   }
 
-  if (variant === 'detailed') {
+  if() {
+
     return (
       <div className={`space-y-4 ${className}`}>
         {showTitle && (
@@ -82,7 +81,7 @@ export default function ContactInfo({
     )
   }
 
-  // Default variant
+  // Default variant;
   return (
     <div className={`space-y-4 ${className}`}>
       {showTitle && (

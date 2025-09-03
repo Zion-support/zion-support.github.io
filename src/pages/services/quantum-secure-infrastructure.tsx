@@ -2,57 +2,57 @@ import React from "react"
 import Head from "next/head"
 import Link from "next/link"
 import { 
-  Shield, Cpu, Lock, Zap, Server, Cloud, Database, 
-  Network, Brain, CheckCircle, ArrowRight, Star, 
-  Phone, Mail, MapPin, Settings, Monitor, Activity,
-  TrendingUp, Award, Rocket, Lightbulb, AlertTriangle,
-  Globe, Smartphone, Users, BarChart3
+  Shield, Cpu, Lock, Zap, Server, Cloud, Database;
+  Network, Brain, CheckCircle, ArrowRight, Star;
+  Phone, Mail, MapPin, Settings, Monitor, Activity;
+  TrendingUp, Award, Rocket, Lightbulb, AlertTriangle;
+  Globe, Smartphone, Users, BarChart3;
 } from "lucide-react"
 
 const QuantumSecureInfrastructure = () => {
   const features = [
-    "Quantum-Resistant Encryption",
-    "Post-Quantum Cryptography Implementation", 
-    "Quantum Key Distribution (QKD)",
-    "Zero-Trust Architecture",
-    "Advanced Threat Detection",
-    "Quantum-Safe Communication Protocols",
-    "Immutable Security Logging",
+    "Quantum-Resistant Encryption"
+    "Post-Quantum Cryptography Implementation"
+    "Quantum Key Distribution (QKD)"
+    "Zero-Trust Architecture"
+    "Advanced Threat Detection"
+    "Quantum-Safe Communication Protocols"
+    "Immutable Security Logging"
     "Quantum-Enhanced Authentication"
   ]
 
   const benefits = [
-    "Protect against quantum computing threats",
-    "Future-proof your security infrastructure",
-    "Reduce security vulnerabilities by 99.9%",
-    "Ensure compliance with quantum-safe standards",
-    "Implement zero-trust security model",
+    "Protect against quantum computing threats"
+    "Future-proof your security infrastructure"
+    "Reduce security vulnerabilities by 99.9%"
+    "Ensure compliance with quantum-safe standards"
+    "Implement zero-trust security model"
     "Achieve military-grade security standards"
   ]
 
   const useCases = [
-    "Financial Services Security",
-    "Government Infrastructure Protection",
-    "Healthcare Data Security",
-    "Critical Infrastructure Defense",
-    "Military and Defense Systems",
+    "Financial Services Security"
+    "Government Infrastructure Protection"
+    "Healthcare Data Security"
+    "Critical Infrastructure Defense"
+    "Military and Defense Systems"
     "Enterprise Data Protection"
   ]
 
   const pricing = [
     {
-      name: "Standard",
-      price: "$15,000",
+      name: "Standard"
+      price: "$15,000"
       details: ["Quantum-resistant encryption", "Basic QKD implementation", "Standard monitoring", "Email support", "99.9% uptime SLA"]
-    },
+    }
     {
-      name: "Enterprise", 
-      price: "$35,000",
+      name: "Enterprise"
+      price: "$35,000"
       details: ["Full quantum-safe infrastructure", "Advanced QKD network", "Custom monitoring", "Priority support", "99.99% uptime SLA"]
-    },
+    }
     {
-      name: "Government",
-      price: "$75,000", 
+      name: "Government"
+      price: "$75,000"
       details: ["Military-grade quantum security", "Custom QKD solutions", "White-label implementation", "24/7 dedicated support", "99.999% uptime SLA"]
     }
   ]
@@ -71,20 +71,20 @@ const QuantumSecureInfrastructure = () => {
           <div className="max-w-6xl mx-auto px-6">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
               <Shield className="w-4 h-4 mr-2" />
-              Quantum-Safe Security Infrastructure
+              Quantum-Safe Security Infrastructure;
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-              Quantum Secure Infrastructure
+              Quantum Secure Infrastructure;
             </h1>
             <p className="text-indigo-100 text-xl max-w-3xl mx-auto">
               Future-proof your organization with quantum-secure infrastructure that protects against quantum computing threats using post-quantum cryptography and military-grade security standards.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="#contact" className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors">
-                Get Security Assessment
+                Get Security Assessment;
               </Link>
               <Link href="#demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                Request Demo
+                Request Demo;
               </Link>
             </div>
           </div>
@@ -193,7 +193,7 @@ const QuantumSecureInfrastructure = () => {
                 <div key={index} className={`rounded-xl p-6 shadow-lg ${tier.name === 'Enterprise' ? 'border-2 border-indigo-500 bg-indigo-50' : 'border border-gray-200 bg-white'}`}>
                   {tier.name === 'Enterprise' && (
                     <div className="bg-indigo-500 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
-                      Most Popular
+                      Most Popular;
                     </div>
                   )}
                   <h3 className="text-2xl font-semibold text-gray-900 mb-2">{tier.name}</h3>
@@ -211,7 +211,7 @@ const QuantumSecureInfrastructure = () => {
                       ? 'bg-indigo-600 text-white hover:bg-indigo-700' 
                       : 'bg-gray-900 text-white hover:bg-gray-800'
                   }`}>
-                    Get Started
+                    Get Started;
                   </Link>
                 </div>
               ))}
@@ -250,7 +250,7 @@ const QuantumSecureInfrastructure = () => {
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">Schedule Security Assessment</h3>
                 <p className="text-gray-600 mb-4">Get a comprehensive quantum security assessment for your organization</p>
                 <Link href="https://ziontechgroup.com/contact" className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors inline-block">
-                  Schedule Assessment
+                  Schedule Assessment;
                 </Link>
               </div>
             </div>
@@ -261,4 +261,4 @@ const QuantumSecureInfrastructure = () => {
   )
 }
 
-export default QuantumSecureInfrastructure
+export default QuantumSecureInfrastructure;

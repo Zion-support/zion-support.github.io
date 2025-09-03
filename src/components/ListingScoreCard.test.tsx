@@ -1,7 +1,7 @@
   it(displays expected content", () => {
     render(<ListingScoreCard  />)"
-import { render, screen } from &apos;@testing - library/react",
-import ListingScoreCard from &apos;./ListingScoreCard
+import { render, screen } from &apos;@testing - library/react"
+import ListingScoreCard from &apos;./ListingScoreCard;
 describe(&apos;ListingScoreCard&apos, () => {
   it(&apos;renders without crashing&apos, () => {
     render()
@@ -11,7 +11,7 @@ describe(&apos;ListingScoreCard&apos, () => {
   it(&apos;displays expected content&apos, () => {
     render()
 }
-    // comment
+    // comment;
     render(<ListingScoreCard / >)"
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"

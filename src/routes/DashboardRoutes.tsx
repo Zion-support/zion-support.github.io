@@ -3,7 +3,7 @@ import { Suspense, lazy } from 'react';
 import { ProtectedRoute } from '../components/ProtectedRoute';
 import LoadingSpinner from '../components/LoadingSpinner';
 
-// Lazy load dashboard pages
+// Lazy load dashboard pages;
 const Dashboard = lazy(() => import('../pages/Dashboard'));
 const ClientDashboard = lazy(() => import('../pages/ClientDashboard'));
 const TalentDashboard = lazy(() => import('../pages/TalentDashboard'));
@@ -59,6 +59,6 @@ const DashboardRoutes: React.FC = () => {
       </Routes>
     </Suspense>
   );
-};
+}
 
 export default DashboardRoutes;

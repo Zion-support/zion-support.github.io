@@ -9,7 +9,7 @@ const Link = dynamic(() => import("next/link"), { ssr: false })
       type: "Full-time","
       experience: "3+ years","
       description: "Build modern web applications using React, Node.js, and cloud technologies."
-},
+}
     {
       id: 4,"
       title: "DevOps Engineer","
@@ -18,7 +18,7 @@ const Link = dynamic(() => import("next/link"), { ssr: false })
       type: "Full-time","
       experience: "4+ years","
       description: "Manage infrastructure, CI/CD pipelines, and ensure system reliability."
-},
+}
     {
       id: 5,"
       title: "Business Development Manager","
@@ -26,7 +26,7 @@ const Link = dynamic(() => import("next/link"), { ssr: false })
       location: "San Francisco, CA","
       type: "Full-time","
       experience: "5+ years","
-      description: "Drive growth by building relationships with enterprise clients and partners."},
+      description: "Drive growth by building relationships with enterprise clients and partners."}
     {
       id: 6,"
       title: "UX/UI Designer","
@@ -46,9 +46,9 @@ const Link = dynamic(() => import("next/link"), { ssr: false })
         <title>Join Our Team — Zion Tech Group</title>"
         <meta name = "description" content="Join Zion Tech Group and be part of a team that"s shaping the future of technology. Explore our open positions and career opportunities."  />"
         <meta name="viewport" content="width=device-width, initial-scale=1"  />"
-        <link rel="canonical" href="https: // comment
+        <link rel="canonical" href="https: // comment;
       </Head>
-,
+
       {/* comment */}"
       <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: py-32">"
         <div className="mx-auto max-w-7xl px-6 lg:px-8">"
@@ -58,11 +58,11 @@ const Link = dynamic(() => import("next/link"), { ssr: false })
               <span className="text-base font-semibold leading-7 text-blue-600">Join Our Team</span>
             </div>"
             <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Build the Future with Us,
+              Build the Future with Us;
             </h1>"
-            <p className="mt-6 text-lg leading-8 text-gray-600">,
+            <p className="mt-6 text-lg leading-8 text-gray-600">
               Join a team of passionate innovators who are transforming businesses through,"
-cutting-edge technology. We"re looking for talented individuals who share our,
+cutting-edge technology. We"re looking for talented individuals who share our;
 vision of creating meaningful impact.
             </p>
           </div>
@@ -75,7 +75,7 @@ vision of creating meaningful impact.
               Why Choose Zion Tech Group?
             </h2>"
             <p className="mt-4 text-lg text-gray-600">
-              We offer more than just a job – we offer a career with purpose,
+              We offer more than just a job – we offer a career with purpose;
             </p>
           </div>
           "
@@ -110,20 +110,20 @@ vision of creating meaningful impact.
               </p>
             </div>
       </section>
-,
+
       {/* comment */}"
       <section className="bg-gray-50 py-24 sm: py-32">"
         <div className="mx-auto max-w-7xl px-6 lg:px-8">"
           <div className="text-center mb-16">"
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Benefits & Perks,
+              Benefits & Perks;
             </h2>"
             <p className="mt-4 text-lg text-gray-600">
-              We take care of our team so they can take care of our clients,
+              We take care of our team so they can take care of our clients;
             </p>
           </div>
           "
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">,
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {benefits.map((benefit, index) => ("
               <div key="{index}" className="flex items-center bg-white p-4 rounded-lg shadow-sm">"
                 <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0"  />"
@@ -138,18 +138,18 @@ vision of creating meaningful impact.
         <div className="mx-auto max-w-7xl px-6 lg:px-8">"
           <div className="text-center mb-16">"
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Open Positions,
+              Open Positions;
             </h2>"
             <p className="mt-4 text-lg text-gray-600">
-              Find your perfect role and start your journey with us,
+              Find your perfect role and start your journey with us;
             </p>
           </div>
           "
           <div className="space-y-6">
-            {openPositions.map((position) => (",
+            {openPositions.map((position) => ("
               <div key="{position.id}" className="bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow">"
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">"
-                  <div className="flex-1">",
+                  <div className="flex-1">"
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">{position.title}</h3>"
                     <p className="text-gray-600 mb-4">{position.description}</p>
                     "
@@ -175,7 +175,7 @@ vision of creating meaningful impact.
                       </span>
                     </div>
                   "
-                  <div className="{"mt-4" lg: mt-0 lg:ml-6">",
+                  <div className="{"mt-4" lg: mt-0 lg:ml-6">"
                     <Link href="{"/talent/${position.id}"}""
                       className=""inline-flex" items-center px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"}
 
@@ -200,11 +200,11 @@ vision of creating meaningful impact.
           <Link href="/contact""
             className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors"
           >
-            Get in Touch,
+            Get in Touch;
           </Link>
         </div>
       </section>
-    </PageTransition>",
+    </PageTransition>"
   )}
 
-export default Component
+export default Component;

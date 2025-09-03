@@ -2,37 +2,29 @@ import React from "react"
 import { cn } from "@/lib/utils"
 interface SkeletonProps {
   className?: string  lines?: number}
-;
   );
 export default function Skeleton() {;
 
   if (lines === 1) {;
-    return (";
-    <div className={cn(";
-          "animate-pulse bg-gray-200 rounded", className;
+    return() {
 
-  if (lines === 1) {
-    return ("
-    <div className={cn("
-          "animate-pulse bg-gray-200 rounded", className
+    return() {
 
-export default function Skeleton({ className, lines = 1 }: SkeletonProps) {
-  if (lines === 1) {
+  if() {
+
     return (
-    <div
+    <div;
         className="{cn(;"
           "animate-pulse bg-gray-200 rounded",>
           className)}
 
      />    )}
-;
   return (";
     <div className="space-y-2">;
       {Array.from({ length: lines }).map((_, i) => (;
         <div>;
 interface SkeletonProps {className?: string>;
   lines?: number}
-;
 export default function Skeleton(  {className, lines = 1 }: SkeletonProps) {if (lines === 1) {;
     return (";
     <div className="{cn(" "animate-pulse bg-gray-200 rounded", className )} /" >;
@@ -44,7 +36,8 @@ export default function Skeleton(  {className, lines = 1 }: SkeletonProps) {if (
         <div key="{i}" className="{cn(" "animate-pulse bg-gray-200 rounded h-4", i === lines - 1 ? "w-3/4" : "w-full" )} /" >;@/lib/utils;
 interface SkeletonProps {;
 
-export default function Skeleton(  {className, lines = 1 }: SkeletonProps) {if (lines === 1) {
+export default function Skeleton(  {className, lines = 1 }: SkeletonProps) {if() {
+
     return ("
     <div className="{cn(" "animate-pulse bg-gray-200 rounded", className )} /" >
     )}"
@@ -52,12 +45,12 @@ export default function Skeleton(  {className, lines = 1 }: SkeletonProps) {if (
   return ("""
     <div className="space-y-2">
       {Array.from({ length: lines }).map((_, i) => ("
-        <div key="{i}" className="{cn(" "animate-pulse bg-gray-200 rounded h-4", i === lines - 1 ? "w-3/4" : "w-full" )} /" >;@/lib/utils
+        <div key="{i}" className="{cn(" "animate-pulse bg-gray-200 rounded h-4", i === lines - 1 ? "w-3/4" : "w-full" )} /" >;@/lib/utils;
 interface SkeletonProps {
   if (lines === 1) {;
     return (}}";
       <div className=";{cn(";
-          &apos;animate-pulse bg-gray-200 rounded&apos,;
+          &apos;animate-pulse bg-gray-200 rounded&apos;
           className>;
         )}
 
@@ -74,11 +67,11 @@ interface SkeletonProps {
           className={cn("
             "animate-pulse bg-gray-200 rounded h-4", i === lines - 1 ? "w-3/4" : "w-full"
           className="{cn(">
-            &apos;animate-pulse bg-gray-200 rounded h-4&apos,
+            &apos;animate-pulse bg-gray-200 rounded h-4&apos;
             i === lines - 1 ? &apos;w-3/4&apos; : &apos;w-full&apos)}
 
        />
-      ))}&apos
+      ))}&apos;
     </div>
   )}
 
@@ -101,7 +94,7 @@ interface SkeletonProps {
     </div>"""
   )}"""
       <div className="{cn("
-          "animate-pulse bg-gray-200 rounded",
+          "animate-pulse bg-gray-200 rounded"
           className>
         )}
 

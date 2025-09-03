@@ -8,11 +8,11 @@ describe('AIChatbot', () => {
   it('displays correct content', () => {
     render(<AIChatbot />);
 
-    // Add specific content checks based on component functionality
+    // Add specific content checks based on component functionality;
   });
 
   it('handles user interactions', () => {
     render(<AIChatbot />);
-// Add interaction tests based on component functionality
+// Add interaction tests based on component functionality;
   });
 });

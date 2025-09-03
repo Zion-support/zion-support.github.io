@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 
@@ -7,181 +7,188 @@ console.log('======================')
 
 class FinalSyntaxCleanup {
   constructor() {
+
     this.fixedFiles = []
     this.errors = []
   }
 
-  async fixFile(filePath) {
+  async fixFile() {
+
     try {
       const content = fs.readFileSync(filePath, 'utf8')
-      let fixedContent = content
-      let hasChanges = false
-
-      // Fix specific patterns that are still causing issues
+      let fixedContent = content;
+      let hasChanges = false;
+      // Fix specific patterns that are still causing issues;
       const patterns = [
-        // Fix corrupted meta descriptions
+        // Fix corrupted meta descriptions;
         {
-          pattern: /content="The page you"re looking for doesn"t exist."/g,
+          pattern: /content="The page you"re looking for doesn"t exist."/g;
           replacement: 'content="The page you\'re looking for doesn\'t exist."'
-        },
-        // Fix extra closing braces
+        }
+        // Fix extra closing braces;
         {
-          pattern: /\n}\s*$/gm,
+          pattern: /\n}\s*$/gm;
           replacement: '\n}'
-        },
-        // Fix corrupted JSX attributes
+        }
+        // Fix corrupted JSX attributes;
         {
-          pattern: /<(\w+)\s+([^>]*)\s*\/>/g,
+          pattern: /<(\w+)\s+([^>]*)\s*\/>/g;
           replacement: '<$1 $2 />'
-        },
-        // Fix corrupted string literals
+        }
+        // Fix corrupted string literals;
         {
-          pattern: /content="([^"]*)"\s*\/>/g,
+          pattern: /content="([^"]*)"\s*\/>/g;
           replacement: 'content="$1" />'
-        },
-        // Fix corrupted quotes
+        }
+        // Fix corrupted quotes;
         {
-          pattern: /"([^"]*)"\s*\/>/g,
+          pattern: /"([^"]*)"\s*\/>/g;
           replacement: '"$1" />'
-        },
-        // Fix corrupted closing tags
+        }
+        // Fix corrupted closing tags;
         {
-          pattern: /<\/(\w+)>\s*$/gm,
+          pattern: /<\/(\w+)>\s*$/gm;
           replacement: '</$1>'
-        },
-        // Fix corrupted self-closing tags
+        }
+        // Fix corrupted self-closing tags;
         {
-          pattern: /<(\w+)\s+([^>]*)\s*\/>/g,
+          pattern: /<(\w+)\s+([^>]*)\s*\/>/g;
           replacement: '<$1 $2 />'
-        },
-        // Fix corrupted comments
+        }
+        // Fix corrupted comments;
         {
-          pattern: /\/\*([^*]|\*[^/])*\*\//g,
+          pattern: /\/\*([^*]|\*[^/])*\*\//g;
           replacement: '/* comment */'
-        },
-        // Fix corrupted semicolons
+        }
+        // Fix corrupted semicolons;
         {
-          pattern: /;\s*$/gm,
+          pattern: /;\s*$/gm;
           replacement: ';'
-        },
-        // Fix corrupted commas
+        }
+        // Fix corrupted commas;
         {
-          pattern: /,\s*$/gm,
+          pattern: /,\s*$/gm;
           replacement: ','
-        },
-        // Fix corrupted parentheses
+        }
+        // Fix corrupted parentheses;
         {
-          pattern: /\(\s*\)/g,
+          pattern: /\(\s*\)/g;
           replacement: '()'
-        },
-        // Fix corrupted brackets
+        }
+        // Fix corrupted brackets;
         {
-          pattern: /\[\s*\]/g,
+          pattern: /\[\s*\]/g;
           replacement: '[]'
-        },
-        // Fix corrupted braces
+        }
+        // Fix corrupted braces;
         {
-          pattern: /\{\s*\}/g,
+          pattern: /\{\s*\}/g;
           replacement: '{}'
-        },
-        // Fix corrupted quotes
+        }
+        // Fix corrupted quotes;
         {
-          pattern: /'([^']*)'/g,
+          pattern: /'([^']*)'/g;
           replacement: '"$1"'
-        },
-        // Fix corrupted double quotes
+        }
+        // Fix corrupted double quotes;
         {
-          pattern: /"([^"]*)"/g,
+          pattern: /"([^"]*)"/g;
           replacement: '"$1"'
-        },
-        // Fix corrupted backticks
+        }
+        // Fix corrupted backticks;
         {
-          pattern: /`([^`]*)`/g,
+          pattern: /`([^`]*)`/g;
           replacement: '"$1"'
-        },
-        // Fix corrupted escape sequences
+        }
+        // Fix corrupted escape sequences;
         {
-          pattern: /\\n/g,
+          pattern: /\\n/g;
           replacement: '\n'
-        },
+        }
         {
-          pattern: /\\t/g,
+          pattern: /\\t/g;
           replacement: '\t'
-        },
+        }
         {
-          pattern: /\\r/g,
+          pattern: /\\r/g;
           replacement: '\r'
-        },
+        }
         {
-          pattern: /\\"/g,
+          pattern: /\\"/g;
           replacement: '"'
-        },
+        }
         {
-          pattern: /\\'/g,
+          pattern: /\\'/g;
           replacement: "'"
-        },
+        }
         {
-          pattern: /\\\\/g,
+          pattern: /\\\\/g;
           replacement: '\\'
         }
       ]
 
-      for (const { pattern, replacement } of patterns) {
-        const before = fixedContent
+      for() {
+
+        const before = fixedContent;
         fixedContent = fixedContent.replace(pattern, replacement)
-        if (before !== fixedContent) {
-          hasChanges = true
+        if() {
+
+          hasChanges = true;
         }
 
-      // Additional specific fixes
+      // Additional specific fixes;
       fixedContent = this.applySpecificFixes(fixedContent, filePath)
 
-      if (hasChanges) {
+      if() {
+
         fs.writeFileSync(filePath, fixedContent, 'utf8')
         this.fixedFiles.push(filePath)
         console.log(`✅ Fixed: ${filePath}`)
-        return true
+        return true;
       }
-      return false
-    } catch (error) {
+      return false;
+    } catch() {
+
       this.errors.push({ file: filePath, error: error.message })
       console.log(`❌ Error fixing ${filePath}: ${error.message}`)
-      return false
+      return false;
     }
 
-  applySpecificFixes(content, filePath) {
-    let fixedContent = content
+  applySpecificFixes() {
 
-    // Fix specific file types
+    let fixedContent = content;
+    // Fix specific file types;
     if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) {
-      // Fix React component structure
+      // Fix React component structure;
       if (!fixedContent.includes('import React') && fixedContent.includes('return (')) {
-        fixedContent = 'import React from "react"\n' + fixedContent
+        fixedContent = 'import React from "react"\n' + fixedContent;
       }
       
-      // Fix missing export default
+      // Fix missing export default;
       if (fixedContent.includes('return (') && !fixedContent.includes('export default')) {
         fixedContent += '\n\nexport default Component'
       }
       
-      // Fix missing function declaration
+      // Fix missing function declaration;
       if (fixedContent.includes('return (') && !fixedContent.includes('const ') && !fixedContent.includes('function ')) {
-        fixedContent = 'const Component = () => {\n' + fixedContent
+        fixedContent = 'const Component = () => {\n' + fixedContent;
       }
 
     if (filePath.endsWith('.ts') || filePath.endsWith('.js')) {
-      // Fix missing imports
+      // Fix missing imports;
       if (fixedContent.includes('React.') && !fixedContent.includes('import React')) {
-        fixedContent = 'import React from "react"\n' + fixedContent
+        fixedContent = 'import React from "react"\n' + fixedContent;
       }
 
-    return fixedContent
+    return fixedContent;
   }
 
-  async fixDirectory(dirPath) {
+  async fixDirectory() {
+
     const files = fs.readdirSync(dirPath, { withFileTypes: true })
     
-    for (const file of files) {
+    for() {
+
       const fullPath = path.join(dirPath, file.name)
       
       if (file.isDirectory()) {
@@ -190,7 +197,8 @@ class FinalSyntaxCleanup {
         await this.fixFile(fullPath)      }
     }
 
-  shouldFixFile(filePath) {
+  shouldFixFile() {
+
     const ext = path.extname(filePath)
     return ['.tsx', '.jsx', '.ts', '.js'].includes(ext) && 
            !filePath.includes('node_modules') &&
@@ -199,15 +207,17 @@ class FinalSyntaxCleanup {
   }
 
   async run() {
+
     console.log('🔍 Starting final syntax cleanup...')
     
     const directories = [
-      'pages',
-      'components',
+      'pages'
+      'components'
       'src'
     ]
 
-    for (const dir of directories) {
+    for() {
+
       if (fs.existsSync(dir)) {
         console.log(`📁 Processing directory: ${dir}`)
         await this.fixDirectory(dir)
@@ -217,30 +227,32 @@ class FinalSyntaxCleanup {
     console.log(`✅ Files fixed: ${this.fixedFiles.length}`)
     console.log(`❌ Errors: ${this.errors.length}`)
     
-    if (this.fixedFiles.length > 0) {
+    if() {
+
       console.log('\n📝 Fixed files:')
       this.fixedFiles.forEach(file => console.log(`  - ${file}`))
     }
     
-    if (this.errors.length > 0) {
+    if() {
+
       console.log('\n🚨 Errors:')
       this.errors.forEach(({ file, error }) => console.log(`  - ${file}: ${error}`))
     }
 
-    // Save report
+    // Save report;
     const report = {
-      timestamp: new Date().toISOString(),
-      fixedFiles: this.fixedFiles,
-      errors: this.errors,
+      timestamp: new Date().toISOString()
+      fixedFiles: this.fixedFiles;
+      errors: this.errors;
       summary: {
-        totalFixed: this.fixedFiles.length,
-        totalErrors: this.errors.length
+        totalFixed: this.fixedFiles.length;
+        totalErrors: this.errors.length;
       }
 
     fs.writeFileSync('final-syntax-cleanup-report.json', JSON.stringify(report, null, 2))
     console.log('\n📄 Report saved to: final-syntax-cleanup-report.json')
   }
 
-// Run the cleanup
+// Run the cleanup;
 const cleanup = new FinalSyntaxCleanup()
 cleanup.run().catch(console.error)

@@ -6,7 +6,7 @@
             Enhanced < span className="bg-gradient - to - r from - cyan - 400 to - blue - 500 bg-clip - text text-transparent">Innovative Services</span>
           </h2>
           <p className="text-xl text-gray - 300 max - w-3xl mx -auto">
-            Discover our next - generation technology solutions designed for the future
+            Discover our next - generation technology solutions designed for the future;
           </p>
         </div>
 
@@ -38,5 +38,5 @@
             </Link>;          </div>;
         </div>;
       </div>;
-    </section>;) };
+    </section>;) }
 export default EnhancedInnovativeServicesShowcase;'"

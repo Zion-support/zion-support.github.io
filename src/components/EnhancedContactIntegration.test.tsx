@@ -1,7 +1,7 @@
   it(displays expected content", () => {
     render(<EnhancedContactIntegration  />)"
-import { render, screen } from &apos;@testing - library/react",
-import EnhancedContactIntegration from &apos;./EnhancedContactIntegration
+import { render, screen } from &apos;@testing - library/react"
+import EnhancedContactIntegration from &apos;./EnhancedContactIntegration;
 describe(&apos;EnhancedContactIntegration&apos, () => {
   it(&apos;renders without crashing&apos, () => {
     render()
@@ -11,7 +11,7 @@ describe(&apos;EnhancedContactIntegration&apos, () => {
   it(&apos;displays expected content&apos, () => {
     render()
 }
-    // comment
+    // comment;
     render(<EnhancedContactIntegration / >)"
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"

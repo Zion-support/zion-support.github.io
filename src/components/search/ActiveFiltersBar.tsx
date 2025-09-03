@@ -2,7 +2,7 @@
 interface Filter {
   key: string;
   value: string;
-  label: string
+  label: string;
 }
 
 interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {

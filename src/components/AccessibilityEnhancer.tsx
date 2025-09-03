@@ -14,21 +14,23 @@ interface AccessibilityEnhancerProps {
   showSettings?: boolean;
 }
 
-export function AccessibilityEnhancer({ enabled = true, showSettings = true }: AccessibilityEnhancerProps) {
+export function AccessibilityEnhancer() {
+
   const [settings, setSettings] = useState<AccessibilitySettings>({
-    fontSize: 16,
-    highContrast: false,
-    reducedMotion: false,
-    keyboardNavigation: true
+    fontSize: 16;
+    highContrast: false;
+    reducedMotion: false;
+    keyboardNavigation: true;
   });
 
   const [isVisible, setIsVisible] = useState(false);
 
-  // Apply accessibility styles
+  // Apply accessibility styles;
   const applyAccessibilityStyles = useCallback((highContrast: boolean, fontSize: string, reducedMotion: boolean) => {
     const root = document.documentElement;
     
-    if (highContrast) {
+    if() {
+
       root.style.setProperty('--bg-primary', '#000000');
       root.style.setProperty('--text-primary', '#ffffff');
     } else {
@@ -38,25 +40,26 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
     
     root.style.setProperty('--font-size-base', fontSize);
     
-    if (reducedMotion) {
+    if() {
+
       root.style.setProperty('--animation-duration', '0s');
     } else {
       root.style.removeProperty('--animation-duration');
     }
   }, []);
 
-  // Apply settings when they change
+  // Apply settings when they change;
   useEffect(() => {
     applyAccessibilityStyles(
-      settings.highContrast,
-      `${settings.fontSize}px`,
-      settings.reducedMotion
+      settings.highContrast;
+      `${settings.fontSize}px`
+      settings.reducedMotion;
     );
   }, [settings, applyAccessibilityStyles]);
 
   const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
     setSettings(prev => ({ ...prev, [key]: value }));
-  };
+  }
 
   if (!enabled) return null;
 
@@ -64,7 +67,7 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
     <div className="accessibility-enhancer">
       <AnimatePresence>
         {isVisible && (
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
@@ -72,9 +75,9 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
           >
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                Accessibility Settings
+                Accessibility Settings;
               </h3>
-              <button
+              <button;
                 onClick={() => setIsVisible(false)}
                 className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
                 aria-label="Close accessibility settings"
@@ -86,9 +89,9 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
             <div className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Font Size: {settings.fontSize}px
+                  Font Size: {settings.fontSize}px;
                 </label>
-                <input
+                <input;
                   type="range"
                   min="12"
                   max="24"
@@ -99,7 +102,7 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
               </div>
 
               <div className="flex items-center space-x-2">
-                <input
+                <input;
                   type="checkbox"
                   id="highContrast"
                   checked={settings.highContrast}
@@ -107,12 +110,12 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
                   className="rounded"
                 />
                 <label htmlFor="highContrast" className="text-sm text-gray-700 dark:text-gray-300">
-                  High Contrast
+                  High Contrast;
                 </label>
               </div>
 
               <div className="flex items-center space-x-2">
-                <input
+                <input;
                   type="checkbox"
                   id="reducedMotion"
                   checked={settings.reducedMotion}
@@ -120,7 +123,7 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
                   className="rounded"
                 />
                 <label htmlFor="reducedMotion" className="text-sm text-gray-700 dark:text-gray-300">
-                  Reduce Motion
+                  Reduce Motion;
                 </label>
               </div>
             </div>
@@ -129,7 +132,7 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
       </AnimatePresence>
 
       {showSettings && (
-        <button
+        <button;
           onClick={() => setIsVisible(!isVisible)}
           className="fixed bottom-4 right-4 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors z-40"
           aria-label="Open accessibility settings"

@@ -4,55 +4,55 @@ import Head from 'next/head';
 const Discord: React.FC = () => {
   const channels = [
     {
-      name: 'general',
-      description: 'General discussion about Zion AI Marketplace',
-      members: 1250,
-      online: 89,
-      icon: '💬',
-    },
+      name: 'general'
+      description: 'General discussion about Zion AI Marketplace'
+      members: 1250;
+      online: 89;
+      icon: '💬'
+    }
     {
-      name: 'api-support',
-      description: 'Get help with API integration and development',
-      members: 890,
-      online: 45,
-      icon: '🔧',
-    },
+      name: 'api-support'
+      description: 'Get help with API integration and development'
+      members: 890;
+      online: 45;
+      icon: '🔧'
+    }
     {
-      name: 'ai-discussions',
-      description: 'Discuss AI trends, technologies, and use cases',
-      members: 2100,
-      online: 156,
-      icon: '🤖',
-    },
+      name: 'ai-discussions'
+      description: 'Discuss AI trends, technologies, and use cases'
+      members: 2100;
+      online: 156;
+      icon: '🤖'
+    }
     {
-      name: 'marketplace',
-      description: 'Share marketplace experiences and feedback',
-      members: 750,
-      online: 32,
-      icon: '🏪',
-    },
+      name: 'marketplace'
+      description: 'Share marketplace experiences and feedback'
+      members: 750;
+      online: 32;
+      icon: '🏪'
+    }
     {
-      name: 'showcase',
-      description: 'Show off your AI projects and integrations',
-      members: 680,
-      online: 28,
-      icon: '🎨',
-    },
+      name: 'showcase'
+      description: 'Show off your AI projects and integrations'
+      members: 680;
+      online: 28;
+      icon: '🎨'
+    }
     {
-      name: 'events',
-      description: 'Stay updated on upcoming events and webinars',
-      members: 1200,
-      online: 67,
-      icon: '📅',
-    },
+      name: 'events'
+      description: 'Stay updated on upcoming events and webinars'
+      members: 1200;
+      online: 67;
+      icon: '📅'
+    }
   ];
 
   const roles = [
-    { name: 'Community Member', color: 'bg-gray-600', description: 'Basic access to community channels' },
-    { name: 'Developer', color: 'bg-blue-600', description: 'Access to technical channels and resources' },
-    { name: 'AI Expert', color: 'bg-purple-600', description: 'Access to advanced AI discussions' },
-    { name: 'Marketplace Partner', color: 'bg-green-600', description: 'Special access for marketplace partners' },
-    { name: 'Moderator', color: 'bg-yellow-600', description: 'Community moderation and support' },
+    { name: 'Community Member', color: 'bg-gray-600', description: 'Basic access to community channels' }
+    { name: 'Developer', color: 'bg-blue-600', description: 'Access to technical channels and resources' }
+    { name: 'AI Expert', color: 'bg-purple-600', description: 'Access to advanced AI discussions' }
+    { name: 'Marketplace Partner', color: 'bg-green-600', description: 'Special access for marketplace partners' }
+    { name: 'Moderator', color: 'bg-yellow-600', description: 'Community moderation and support' }
   ];
 
   return (
@@ -70,17 +70,17 @@ const Discord: React.FC = () => {
             <div className="flex items-center justify-between">
               <div>
                 <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Discord Community
+                  Discord Community;
                 </h1>
                 <p className="text-xl text-gray-300 mt-4">
-                  Join thousands of AI enthusiasts, developers, and professionals
+                  Join thousands of AI enthusiasts, developers, and professionals;
                 </p>
               </div>
               
               <div className="text-right">
                 <div className="text-6xl mb-4">🎮</div>
                 <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                  Join Discord
+                  Join Discord;
                 </button>
               </div>
             </div>
@@ -131,7 +131,7 @@ const Discord: React.FC = () => {
                 
                 <div className="flex items-center justify-between">
                   <span className="text-xs bg-green-600 text-white px-2 py-1 rounded-full">
-                    Active
+                    Active;
                   </span>
                   <button className="text-blue-400 hover:text-blue-300 text-sm font-medium">
                     Join Channel →
@@ -195,14 +195,14 @@ const Discord: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Join Discord Server
+                Join Discord Server;
               </button>
               <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
-                View Rules
+                View Rules;
               </button>
             </div>
             <p className="text-indigo-200 text-sm mt-4">
-              Free to join • No registration required • Instant access
+              Free to join • No registration required • Instant access;
             </p>
           </div>
         </section>
@@ -249,6 +249,6 @@ const Discord: React.FC = () => {
       </div>
     </>
   );
-};
+}
 
 export default Discord;

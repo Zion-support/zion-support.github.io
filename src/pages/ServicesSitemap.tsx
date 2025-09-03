@@ -8,7 +8,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           url: "/services/ai-code-review-security",""""
           description: "Advanced vulnerability detection with 85% accuracy improvement",""""
           pricing: "$49 - $799/month",""""
-          features["85% vulnerability reduction", "50+ programming languages", "SAST, DAST, SCA, IAST", "Git integration"]},;
+          features["85% vulnerability reduction", "50+ programming languages", "SAST, DAST, SCA, IAST", "Git integration"]}
         {}
 """
 """"
@@ -16,7 +16,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           url: "/services/ai-customer-experience-analytics",""""
           description: "Transform customer insights into actionable intelligence",""""
           pricing: "$299 - $1,999/month",""""
-          features["Real-time sentiment analysis", "Customer journey tracking", "Predictive analytics", "Omnichannel insights"]},;
+          features["Real-time sentiment analysis", "Customer journey tracking", "Predictive analytics", "Omnichannel insights"]}
         {}
 """
 """"
@@ -24,7 +24,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           url: "/services/ai-devops-automation-platform",""""
           description: "Revolutionize DevOps workflow with AI-powered automation",""""
           pricing: "$199 - $1,499/month",""""
-          features["AI pipeline optimization", "Intelligent deployment", "GitOps workflows", "Multi-cloud orchestration"]},;
+          features["AI pipeline optimization", "Intelligent deployment", "GitOps workflows", "Multi-cloud orchestration"]}
         {}
 """
 """"
@@ -33,12 +33,12 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           description: "Revolutionize IoT with AI-powered edge computing",""""
           pricing: "$299 - $2,499/month",""""
           features["Sub-millisecond processing", "Edge AI intelligence", "Distributed computing", "Hybrid cloud integration"]}      ]
-    },;
+    }
     {}
 """
 """"
       category: "Cloud & Infrastructure Services",""""
-      description: "Scalable cloud solutions and enterprise infrastructure",
+      description: "Scalable cloud solutions and enterprise infrastructure"
       services[;
         {}
 """
@@ -47,7 +47,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           url: "/services/cloud-devops",""""
           description: "Streamlined cloud deployment and management",""""
           pricing: "Custom pricing",""""
-          features["Multi-cloud deployment", "Infrastructure as Code", "Automated scaling", "Cost optimization"]},;
+          features["Multi-cloud deployment", "Infrastructure as Code", "Automated scaling", "Cost optimization"]}
         {}
 """
 """"
@@ -55,7 +55,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           url: "/services/it-infrastructure",""""
           description: "Enterprise-grade infrastructure solutions",""""
           pricing: "Custom pricing",""""
-          features["Network design", "Server management", "Storage solutions", "Backup & recovery"]},;
+          features["Network design", "Server management", "Storage solutions", "Backup & recovery"]}
         {}
 """
 """"
@@ -64,12 +64,12 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           description: "Virtual representation of physical systems",""""
           pricing: "Custom pricing",""""
           features["Real-time monitoring", "Predictive maintenance", "Performance optimization", "Simulation modeling"]}      ]
-    },;
+    }
     {}
 """
 """"
       category: "Data & Analytics Services",""""
-      description: "Transform data into actionable business intelligence",
+      description: "Transform data into actionable business intelligence"
       services[;
         {}
 """
@@ -78,7 +78,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           url: "/services/data-analytics",""""
           description: "Comprehensive data analysis and visualization",""""
           pricing: "Custom pricing",""""
-          features["Data visualization", "Statistical analysis", "Trend identification", "Reporting dashboards"]},;
+          features["Data visualization", "Statistical analysis", "Trend identification", "Reporting dashboards"]}
         {}
 """
 """"
@@ -86,7 +86,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           url: "/services/ai-business-intelligence",""""
           description: "AI-powered business insights and reporting",""""
           pricing: "Custom pricing",""""
-          features["Predictive analytics", "Natural language queries", "Automated insights", "Real-time reporting"]},;
+          features["Predictive analytics", "Natural language queries", "Automated insights", "Real-time reporting"]}
         {}
 """
 """"
@@ -95,12 +95,12 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           description: "Real-time edge data processing",""""
           pricing: "Custom pricing",""""
           features["Edge processing", "Real-time analytics", "Data filtering", "Local decision making"]}      ]
-    },;
+    }
     {}
 """
 """"
       category: "Security & Compliance Services",""""
-      description: "Enterprise-grade security and regulatory compliance",
+      description: "Enterprise-grade security and regulatory compliance"
       services[;
         {}
 """
@@ -109,7 +109,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           url: "/services/zero-trust-network-architecture",""""
           description: "Modern security framework for enterprise",""""
           pricing: "Custom pricing",""""
-          features["Identity verification", "Micro-segmentation", "Continuous monitoring", "Least privilege access"]},;
+          features["Identity verification", "Micro-segmentation", "Continuous monitoring", "Least privilege access"]}
         {}
 """
 """"
@@ -117,7 +117,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           url: "/services/ai-cybersecurity-suite",""""
           description: "Comprehensive security solutions",""""
           pricing: "Custom pricing",""""
-          features["Threat detection", "Vulnerability assessment", "Incident response", "Security automation"]},;
+          features["Threat detection", "Vulnerability assessment", "Incident response", "Security automation"]}
         {}
 """
 """"
@@ -126,12 +126,12 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           description: "AI-powered compliance management",""""
           pricing: "Custom pricing",""""
           features["Regulatory monitoring", "Compliance reporting", "Risk assessment", "Audit preparation"]}      ]
-    },;
+    }
     {}
 """
 """"
       category: "Additional Specialized Services",""""
-      description: "Industry-specific and specialized solutions",
+      description: "Industry-specific and specialized solutions"
       services[;
         {}
 """
@@ -140,7 +140,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           url: "/services/healthcare-tech",""""
           description: "Technology solutions for healthcare industry",""""
           pricing: "Custom pricing",""""
-          features["HIPAA compliance", "Patient data management", "Telemedicine platforms", "Healthcare analytics"]},;
+          features["HIPAA compliance", "Patient data management", "Telemedicine platforms", "Healthcare analytics"]}
         {}
 """
 """"
@@ -148,7 +148,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           url: "/services/blockchain-enterprise-solutions",""""
           description: "Enterprise blockchain implementation",""""
           pricing: "Custom pricing",""""
-          features["Smart contracts", "Supply chain tracking", "Digital identity", "Decentralized applications"]},;
+          features["Smart contracts", "Supply chain tracking", "Digital identity", "Decentralized applications"]}
         {}
 """
 """"
@@ -157,14 +157,14 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           description: "Green technology solutions",""""
           pricing: "Custom pricing",""""
           features["Carbon tracking", "Energy optimization", "Waste reduction", "Environmental monitoring"]}
-      ]};
+      ]}
   ];
 """
   const quickAccessLinks: unknown = [""""
     { title: "AI Services Showcase", url: "/ai-services-showcase", description: "Explore our AI solutions" },""""
     { title: "Comprehensive Services", url: "/comprehensive-services", description: "View all services" },""""
     { title: "Pricing Guide", url: "/pricing", description: "Transparent pricing information" },""""
-    { title: "Contact Sales", url: "/contact", description: "Get expert consultation" },;"    { title: "Request Quote", url: "/request-quote", description: "Get custom pricing" };
+    { title: "Contact Sales", url: "/contact", description: "Get expert consultation" },"    { title: "Request Quote", url: "/request-quote", description: "Get custom pricing" }
   ];
 
   return()
@@ -181,11 +181,11 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           <div className="max-w-7xl mx-auto text-center">
             <motion.div;
               initial = {}
-  { opacity: 0,
+  { opacity: 0;
   y: 20;
 }}
               animate = {}
-  { opacity: 1,
+  { opacity: 1;
   y: 0;
 }}
               transition={{ duration: 0.8 }}"""
@@ -194,7 +194,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
                 Complete Services Directory"""
               </h1>""""
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Discover our comprehensive portfolio of AI-powered micro SAAS, cloud infrastructure, 
+                Discover our comprehensive portfolio of AI-powered micro SAAS, cloud infrastructure;
                 data analytics, security, and specialized business solutions."""
               </p>""""
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
@@ -220,11 +220,11 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial = {}
-  { opacity: 0,
+  { opacity: 0;
   y: 20;
 }}
               whileInView = {}
-  { opacity: 1,
+  { opacity: 1;
   y: 0;
 }}
               transition={{ duration: 0.8 }}"""
@@ -243,15 +243,15 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
                 <motion.div;
                   key={link.title}
                   initial = {}
-  { opacity: 0,
+  { opacity: 0;
   y: 20;
 }}
                   whileInView = {}
-  { opacity: 1,
+  { opacity: 1;
   y: 0;
 }}
                   transition = {}
-  { duration: 0.6,
+  { duration: 0.6;
   delay: index * 0.1;
 }}
                   viewport={{ once: true }}
@@ -277,11 +277,11 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial = {}
-  { opacity: 0,
+  { opacity: 0;
   y: 20;
 }}
               whileInView = {}
-  { opacity: 1,
+  { opacity: 1;
   y: 0;
 }}
               transition={{ duration: 0.8 }}"""
@@ -301,15 +301,15 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
                 <motion.div;
                   key={category.category}
                   initial = {}
-  { opacity: 0,
+  { opacity: 0;
   y: 20;
 }}
                   whileInView = {}
-  { opacity: 1,
+  { opacity: 1;
   y: 0;
 }}
                   transition = {}
-  { duration: 0.6,
+  { duration: 0.6;
   delay: categoryIndex * 0.1;
 }}"""
                   viewport={{ once: true }}""""
@@ -328,15 +328,15 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
                       <motion.div;
                         key={service.title}
                         initial = {}
-  { opacity: 0,
+  { opacity: 0;
   scale: 0.9;
 }}
                         whileInView = {}
-  { opacity: 1,
+  { opacity: 1;
   scale: 1;
 }}
                         transition = {}
-  { duration: 0.5,
+  { duration: 0.5;
   delay: serviceIndex * 0.1;
 }}"""
                         viewport={{ once: true }}""""
@@ -384,11 +384,11 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           <div className="max-w-4xl mx-auto text-center">
             <motion.div;
               initial = {}
-  { opacity: 0,
+  { opacity: 0;
   y: 20;
 }}
               whileInView = {}
-  { opacity: 1,
+  { opacity: 1;
   y: 0;
 }}
               transition={{ duration: 0.8 }}
@@ -432,23 +432,23 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
               </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                View Pricing
+                View Pricing;
               </Link>
               <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
-                Contact Us
+                Contact Us;
               </Link>
             </div>
     </>
-  )};
+  )}
 
 export default ServicesSitemap;
 
-export { ServicesSitemap };
+export { ServicesSitemap }
 
-export { ServicesSitemap };
+export { ServicesSitemap }
 
-export { ServicesSitemap };
+export { ServicesSitemap }
 
-export { ServicesSitemap };
+export { ServicesSitemap }
 
-export { ServicesSitemap };
+export { ServicesSitemap }

@@ -2,162 +2,162 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { 
-  Brain, 
-  Heart, 
-  Stethoscope, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  Clock,
-  Users,
-  Database,
-  Network,
-  Cpu,
-  TrendingUp,
-  AlertTriangle,
-  Activity,
-  Microscope,
-  FileText,
-  Eye,
-  Brain as BrainIcon
+  Brain;
+  Heart;
+  Stethoscope;
+  Shield;
+  Zap;
+  CheckCircle;
+  ArrowRight;
+  Phone;
+  Mail;
+  MapPin;
+  Clock;
+  Users;
+  Database;
+  Network;
+  Cpu;
+  TrendingUp;
+  AlertTriangle;
+  Activity;
+  Microscope;
+  FileText;
+  Eye;
+  Brain as BrainIcon;
 } from 'lucide-react';
 
 const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
   const features = [
     {
-      title: "AI-Powered Disease Detection",
-      description: "Advanced machine learning algorithms that detect diseases with 99.7% accuracy",
-      icon: Brain,
+      title: "AI-Powered Disease Detection"
+      description: "Advanced machine learning algorithms that detect diseases with 99.7% accuracy"
+      icon: Brain;
       benefits: ["99.7% detection accuracy", "Early disease identification", "Multi-modal analysis"]
-    },
+    }
     {
-      title: "Autonomous Medical Imaging Analysis",
-      description: "Real-time analysis of X-rays, MRIs, CT scans, and ultrasound images",
-      icon: Eye,
+      title: "Autonomous Medical Imaging Analysis"
+      description: "Real-time analysis of X-rays, MRIs, CT scans, and ultrasound images"
+      icon: Eye;
       benefits: ["Instant image analysis", "Radiologist assistance", "Automated reporting"]
-    },
+    }
     {
-      title: "Predictive Health Analytics",
-      description: "Predictive models that forecast health risks and recommend preventive measures",
-      icon: TrendingUp,
+      title: "Predictive Health Analytics"
+      description: "Predictive models that forecast health risks and recommend preventive measures"
+      icon: TrendingUp;
       benefits: ["Risk prediction models", "Preventive care recommendations", "Population health insights"]
-    },
+    }
     {
-      title: "HIPAA-Compliant Security",
-      description: "Enterprise-grade security with full HIPAA compliance and data protection",
-      icon: Shield,
+      title: "HIPAA-Compliant Security"
+      description: "Enterprise-grade security with full HIPAA compliance and data protection"
+      icon: Shield;
       benefits: ["HIPAA compliant", "End-to-end encryption", "Audit trails"]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Clinic",
-      price: "$399",
-      period: "/month",
-      description: "Perfect for small medical clinics",
+      name: "Clinic"
+      price: "$399"
+      period: "/month"
+      description: "Perfect for small medical clinics"
       features: [
-        "Basic AI diagnostics",
-        "Medical image analysis",
-        "Patient reports",
+        "Basic AI diagnostics"
+        "Medical image analysis"
+        "Patient reports"
         "Email support"
-      ],
-      popular: false
-    },
+      ]
+      popular: false;
+    }
     {
-      name: "Hospital",
-      price: "$1,299",
-      period: "/month",
-      description: "Ideal for hospitals and medical centers",
+      name: "Hospital"
+      price: "$1,299"
+      period: "/month"
+      description: "Ideal for hospitals and medical centers"
       features: [
-        "Advanced AI algorithms",
-        "Real-time diagnostics",
-        "Custom dashboards",
-        "Priority support",
+        "Advanced AI algorithms"
+        "Real-time diagnostics"
+        "Custom dashboards"
+        "Priority support"
         "API integration"
-      ],
-      popular: true
-    },
+      ]
+      popular: true;
+    }
     {
-      name: "Enterprise",
-      price: "$3,999",
-      period: "/month",
-      description: "For large healthcare systems",
+      name: "Enterprise"
+      price: "$3,999"
+      period: "/month"
+      description: "For large healthcare systems"
       features: [
-        "Full autonomous operations",
-        "Custom AI model training",
-        "Dedicated account manager",
-        "24/7 phone support",
+        "Full autonomous operations"
+        "Custom AI model training"
+        "Dedicated account manager"
+        "24/7 phone support"
         "White-label solutions"
-      ],
-      popular: false
+      ]
+      popular: false;
     }
   ];
 
   const useCases = [
     {
-      title: "Radiology Departments",
-      description: "Automate X-ray, MRI, and CT scan analysis for faster diagnosis and treatment",
-      icon: Eye
-    },
+      title: "Radiology Departments"
+      description: "Automate X-ray, MRI, and CT scan analysis for faster diagnosis and treatment"
+      icon: Eye;
+    }
     {
-      title: "Primary Care",
-      description: "AI-assisted diagnosis and treatment recommendations for common conditions",
-      icon: Stethoscope
-    },
+      title: "Primary Care"
+      description: "AI-assisted diagnosis and treatment recommendations for common conditions"
+      icon: Stethoscope;
+    }
     {
-      title: "Emergency Medicine",
-      description: "Rapid diagnosis in emergency situations for critical patient care",
-      icon: Activity
-    },
+      title: "Emergency Medicine"
+      description: "Rapid diagnosis in emergency situations for critical patient care"
+      icon: Activity;
+    }
     {
-      title: "Research & Development",
-      description: "Advanced analytics for medical research and clinical trials",
-      icon: Microscope
+      title: "Research & Development"
+      description: "Advanced analytics for medical research and clinical trials"
+      icon: Microscope;
     }
   ];
 
   const benefits = [
     {
-      metric: "99.7%",
-      description: "Accuracy Rate",
+      metric: "99.7%"
+      description: "Accuracy Rate"
       detail: "Disease detection accuracy across all diagnostic categories"
-    },
+    }
     {
-      metric: "60%",
-      description: "Faster Diagnosis",
+      metric: "60%"
+      description: "Faster Diagnosis"
       detail: "Reduced time from imaging to diagnosis"
-    },
+    }
     {
-      metric: "24/7",
-      description: "Availability",
+      metric: "24/7"
+      description: "Availability"
       detail: "Continuous diagnostic support and monitoring"
-    },
+    }
     {
-      metric: "40%",
-      description: "Cost Reduction",
+      metric: "40%"
+      description: "Cost Reduction"
       detail: "Average reduction in diagnostic costs"
     }
   ];
 
   const specialties = [
-    "Cardiology",
-    "Neurology",
-    "Oncology",
-    "Radiology",
-    "Pathology",
-    "Dermatology",
-    "Ophthalmology",
+    "Cardiology"
+    "Neurology"
+    "Oncology"
+    "Radiology"
+    "Pathology"
+    "Dermatology"
+    "Ophthalmology"
     "Orthopedics"
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI Autonomous Healthcare Diagnostics Platform - Zion Tech Group"
         description="Revolutionary AI-powered healthcare platform that autonomously analyzes medical images, detects diseases, and provides diagnostic insights with 99.7% accuracy."
         keywords="AI healthcare, medical diagnostics, medical imaging, disease detection, healthcare technology, medical AI"
@@ -167,7 +167,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -182,7 +182,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Autonomous Healthcare Diagnostics Platform
+              AI Autonomous Healthcare Diagnostics Platform;
             </h1>
             
             <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8 leading-relaxed">
@@ -190,19 +190,19 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
               >
-                Get Started Today
+                Get Started Today;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <a
+              <a;
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-slate-700 text-white font-semibold rounded-xl hover:bg-slate-600 transition-all duration-300"
               >
                 <Phone className="mr-2 w-5 h-5" />
-                +1 302 464 0950
+                +1 302 464 0950;
               </a>
             </div>
           </motion.div>
@@ -212,7 +212,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -220,16 +220,16 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Proven Results
+              Proven Results;
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our platform delivers measurable improvements across all healthcare diagnostic operations
+              Our platform delivers measurable improvements across all healthcare diagnostic operations;
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <motion.div
+              <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -249,7 +249,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -257,16 +257,16 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Revolutionary Features
+              Revolutionary Features;
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Experience the future of healthcare with cutting-edge AI diagnostic capabilities
+              Experience the future of healthcare with cutting-edge AI diagnostic capabilities;
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -298,7 +298,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
       {/* Medical Specialties Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -306,16 +306,16 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Medical Specialties Supported
+              Medical Specialties Supported;
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our AI platform covers a comprehensive range of medical specialties
+              Our AI platform covers a comprehensive range of medical specialties;
             </p>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {specialties.map((specialty, index) => (
-              <motion.div
+              <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -333,7 +333,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -341,23 +341,23 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Transparent Pricing
+              Transparent Pricing;
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Choose the plan that fits your healthcare facility's needs and scale as you grow
+              Choose the plan that fits your healthcare facility's needs and scale as you grow;
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <motion.div
+              <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border-2 ${
-                  plan.popular 
+                  plan.popular;
                     ? 'border-blue-500 shadow-lg shadow-blue-500/25' 
                     : 'border-slate-700/50'
                 }`}
@@ -365,7 +365,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -389,15 +389,15 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
                   ))}
                 </ul>
 
-                <a
+                <a;
                   href="https://ziontechgroup.com/contact"
                   className={`w-full block text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
-                    plan.popular
+                    plan.popular;
                       ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700'
                       : 'bg-slate-700 text-white hover:bg-slate-600'
                   }`}
                 >
-                  Get Started
+                  Get Started;
                 </a>
               </motion.div>
             ))}
@@ -408,7 +408,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -416,16 +416,16 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Healthcare Applications
+              Healthcare Applications;
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Discover how leading healthcare facilities are leveraging our platform
+              Discover how leading healthcare facilities are leveraging our platform;
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
-              <motion.div
+              <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -448,7 +448,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/20 to-cyan-900/20">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -464,18 +464,18 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
               >
-                Schedule Demo
+                Schedule Demo;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <a
+              <a;
                 href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 bg-slate-700 text-white font-semibold rounded-xl hover:bg-slate-600 transition-all duration-300"
               >
-                Contact Sales
+                Contact Sales;
               </a>
             </div>
             
@@ -488,6 +488,6 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
       </section>
     </div>
   );
-};
+}
 
 export default AIAutonomousHealthcareDiagnosticsPlatform;

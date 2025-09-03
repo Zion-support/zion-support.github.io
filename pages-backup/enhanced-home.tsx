@@ -2,29 +2,29 @@ import Head from "next/head"
 import React from "react"
 import dynamic from "next/dynamic"
 const Component = () => {
-  Award,
+  Award;
 } from "lucide-react"
 
 const EnhancedHome: NextPage = () => {
   const features = []
 
   const services = []
-},
+}
     {"
       title: "Cloud Services","
-      description: "Comprehensive cloud infrastructure and management",
+      description: "Comprehensive cloud infrastructure and management"
       icon: Cloud,"
       features: ["AWS/Azure/GCP", "DevOps", "Microservices", "Containerization"]
-},
+}
     {"
       title: "Web Development","
-      description: "Modern, responsive web applications",
+      description: "Modern, responsive web applications"
       icon: Code,"
       features: ["React/Next.js", "Node.js", "TypeScript", "Progressive Web Apps"]
-},
+}
     {"
       title: "Mobile Development","
-      description: "Native and cross-platform mobile solutions",
+      description: "Native and cross-platform mobile solutions"
       icon: Globe,"
       features: ["iOS/Android", "React Native", "Flutter", "App Store Optimization"]
 
@@ -52,11 +52,11 @@ const EnhancedHome: NextPage = () => {
             <motion.div,"
 className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl""
               animate="{{"
-                x: [0, 100, 0],
+                x: [0, 100, 0]
                 y: [0, -100, 0],>
 }}"
               transition = "{{"
-                duration: 20,
+                duration: 20;
                 repeat: Infinity,"
                 ease: "linear"}}
 
@@ -64,11 +64,11 @@ className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3x
             <motion.div,"
 className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl""
               animate="{{"
-                x: [0, -100, 0],
+                x: [0, -100, 0]
                 y: [0, 100, 0],>
 }}"
               transition = "{{"
-                duration: 25,
+                duration: 25;
                 repeat: Infinity,"
                 ease: "linear"}}
 
@@ -84,13 +84,13 @@ initial="{{" opacity: 0, y: 30 }}"
             >"
               <h1 className="text-6xl md: text-8xl font-bold mb-6">"
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-                  Zion Tech Group,
+                  Zion Tech Group;
                 </span>
               </h1>"
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">,
-                Transform your business with cutting-edge AI, cloud solutions, and innovative technology services,
+              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+                Transform your business with cutting-edge AI, cloud solutions, and innovative technology services;
               </p>"
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">,
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <motion.button,"
 whileHover="{{" scale: 1.05 }}"
                   whileTap="{{" scale: 0.95 }}"
@@ -98,29 +98,29 @@ whileHover="{{" scale: 1.05 }}"
                 >
                   Get Started"
                   <ArrowRight className="ml-2 w-5 h-5"  />
-                </motion.button>,
+                </motion.button>
                 <motion.button,"
 whileHover="{{" scale: 1.05 }}"
                   whileTap="{{" scale: 0.95 }}"
                   className="inline-flex items-center px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover: bg-white/10 transition-all duration-300"
                 >
-                  Learn More,
+                  Learn More;
                 </motion.button>
               </div>
             </motion.div>
           </div>
         </section>
-,
+
         {/* comment */}"
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">"
             <div className="text-center mb-16">"
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>"
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                We deliver exceptional results through innovation, expertise, and cutting-edge technology,
+                We deliver exceptional results through innovation, expertise, and cutting-edge technology;
               </p>
             </div>"
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
+            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <motion.div,"
 key="{index}""
@@ -146,10 +146,10 @@ key="{index}""
             <div className="text-center mb-16">"
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>"
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Comprehensive technology solutions to drive your business forward,
+                Comprehensive technology solutions to drive your business forward;
               </p>
             </div>"
-            <div className="grid md: grid-cols-2 gap-8">,
+            <div className="grid md: grid-cols-2 gap-8">
               {services.map((service, index) => (
                 <motion.div,"
 key="{index}""
@@ -163,7 +163,7 @@ key="{index}""
                     <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">"
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
-                    <div>",
+                    <div>"
                       <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>"
                       <p className="text-gray-600">{service.description}</p>
                     </div>
@@ -189,10 +189,10 @@ key="{index}""
             <div className="text-center mb-16">"
               <h2 className="text-4xl font-bold mb-4">Our Impact</h2>"
               <p className="text-xl text-gray-200 max-w-2xl mx-auto">
-                Numbers that speak to our success and commitment to excellence,
+                Numbers that speak to our success and commitment to excellence;
               </p>
             </div>"
-            <div className="grid md: grid-cols-4 gap-8">,
+            <div className="grid md: grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <motion.div,"
 key="{index}""
@@ -221,9 +221,9 @@ initial="{{" opacity: 0, y: 30 }}"
             >"
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Transform Your Business?</h2>"
               <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">"
-                Let's work together to build innovative solutions that drive your success,
+                Let's work together to build innovative solutions that drive your success;
               </p>"
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">,
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <motion.button,"
 whileHover="{{" scale: 1.05 }}"
                   whileTap="{{" scale: 0.95 }}"
@@ -231,13 +231,13 @@ whileHover="{{" scale: 1.05 }}"
                 >
                   Start Your Project"
                   <ArrowRight className="ml-2 w-5 h-5"  />
-                </motion.button>,
+                </motion.button>
                 <motion.button,"
 whileHover="{{" scale: 1.05 }}"
                   whileTap="{{" scale: 0.95 }}"
                   className="inline-flex items-center px-8 py-4 border border-gray-300 text-gray-700 font-semibold rounded-lg hover: bg-gray-50 transition-all duration-300"
                 >
-                  View Portfolio,
+                  View Portfolio;
                 </motion.button>
               </div>
             </motion.div>
@@ -247,4 +247,4 @@ whileHover="{{" scale: 1.05 }}"
     </>
   )}
 
-"export default EnhancedHome
+"export default EnhancedHome;

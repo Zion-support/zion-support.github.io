@@ -3,10 +3,11 @@ const { execSync } = require("child_process");
 const fs = require("fs");
 class $1 {
   constructor() {
-  this.projectRoot = process.cwd();,
+
+  this.projectRoot = process.cwd();
 }
-;
   async updateDependencies() {
+
   console.log("📦 Updating dependencies...");
     try {
   // Check for outdated packages;
@@ -21,12 +22,12 @@ class $1 {
       // Fix security issues;
       console.log("🛠️ Fixing security issues...");
       execSync("npm audit fix", { stdio: "inherit" });
-      console.log("✅ Dependencies updated successfully!");,
-} catch (error) {
-  console.error("❌ Dependency update failed:", error.message);,
+      console.log("✅ Dependencies updated successfully!");
+} catch() {
+
+  console.error("❌ Dependency update failed:", error.message);
 }
   }
 }
-;
 const updater = new DependencyUpdater();
 updater.updateDependencies()

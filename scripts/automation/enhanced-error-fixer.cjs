@@ -13,12 +13,14 @@ console.log(`"🔧 Starting enhanced error fixer automation...");
 // Get automation interval from environment variable (default: 10 minutes);
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 600000; // 10 minutes;
 async function $1() {
+
   try {
   console.log(`🔧 Running enhanced error fixer at ${new Date().toISOString()}";
 console.log(`🔧 Starting enhanced error fixer automation...`);
 // Get automation interval from environment variable (default: 10 minutes);
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 600000; // 10 minutes;
 async function runEnhancedErrorFixer() {
+
   try {
   console.log(`🔧 Running enhanced error fixer at ${new Date().toISOString()}`;
     );
@@ -87,39 +89,41 @@ async function runEnhancedErrorFixer() {
     await runFinalChecks();
     // Generate comprehensive report;
     const report = {
-  timestamp: new Date().toISOString(),;
-      errorsFixed: totalErrorsFixed,;
-      warningsFixed: totalWarningsFixed,;
-      summary: Enhanced error fixer completed - Fixed ${totalErrorsFixed} errors and ${totalWarningsFixed} warnings,;
-      status: `completed`,;
+  timestamp: new Date().toISOString()
+      errorsFixed: totalErrorsFixed;
+      warningsFixed: totalWarningsFixed;
+      summary: Enhanced error fixer completed - Fixed ${totalErrorsFixed} errors and ${totalWarningsFixed} warnings;
+      status: `completed`
       details: {
-  typescriptErrors: tsErrorsFixed,;
-        eslintErrors: eslintErrorsFixed,;
-        unusedImports: unusedFixed,;
-        unescapedEntities: entitiesFixed,;
-        jsxErrors: jsxFixed,;
-        duplicateKeys: duplicateFixed,;
-        unnecessaryEscapes: escapeFixed,;
-        anyTypes: anyTypesFixed,;
-        functionRedeclarations: redeclarationFixed,;
+  typescriptErrors: tsErrorsFixed;
+        eslintErrors: eslintErrorsFixed;
+        unusedImports: unusedFixed;
+        unescapedEntities: entitiesFixed;
+        jsxErrors: jsxFixed;
+        duplicateKeys: duplicateFixed;
+        unnecessaryEscapes: escapeFixed;
+        anyTypes: anyTypesFixed;
+        functionRedeclarations: redeclarationFixed;
         prototypeAccess: prototypeFixed}}
     const reportPath = path.join(;
       process.cwd(),enhanced-error-fixer-report.json`;
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(✅ Enhanced error fixer report saved to ${reportPath}`);
     console.log(✅ Enhanced error fixer completed successfully - Fixed ${totalErrorsFixed} errors and ${totalWarningsFixed} warnings`;
-    `);,
-} catch (error) {
-  console.error(`❌ Enhanced error fixer failed: ", error.message);,
+    `);
+} catch() {
+
+  console.error(`❌ Enhanced error fixer failed: ", error.message);
 }
 }
-;
 async function fixTypeScriptErrors() {
+
   let fixed = 0;
   try {
   // Fix common TypeScript syntax errors;
     const filesToFix = ["""src/components/EnhancedAccessibilityPanel.tsx"""", """src/components/EnhancedContact.tsx""", """src/components/EnhancedHeroSection.tsx"""", """src/components/EnhancedNewsletter.tsx""", """src/components/EnhancedStatsSection.tsx"""", """src/components/InteractiveUserExperience.tsx""", """src/components/ModernUIEnhancer.tsx"""", """src/components/ProjectManagementTimeline.tsx""", """src/components/ResourceManagementSystem.tsx"""", """src/components/SecurityEnhancer.tsx""", """src/components/ServicesOverview.tsx"""", """src/components/UltimateServicesShowcase.tsx""", """src/components/home/HeroFeatures.tsx"""", """src/components/search/ActiveFiltersBar.tsx""", """src/components/search/FilterSidebar.tsx"""", """src/components/ui/EnhancedNotificationSystem.tsx""", """src/components/ui/form.tsx"""", """src/context/auth/useAuthEventHandlers.ts""", """src/data/advancedAIServices2025.ts"""", """src/data/comprehensivePricingGuide2026.ts""", """src/data/emergingTechServices2025.ts"""", """src/data/expandedInnovativeServices2025.ts""", ""];
-    for (const file of filesToFix) {
+    for() {
+
   if (fs.existsSync(file)) {
   try {
   let content = fs.readFileSync(file, "utf8");
@@ -129,7 +133,8 @@ async function fixTypeScriptErrors() {
   // Fix common TypeScript syntax errors;
     const filesToFix = [""src/components/EnhancedAccessibilityPanel.tsx"", ""src/components/EnhancedContact.tsx"", ""src/components/EnhancedHeroSection.tsx"", ""src/components/EnhancedNewsletter.tsx"", ""src/components/EnhancedStatsSection.tsx"", ""src/components/InteractiveUserExperience.tsx"", ""src/components/ModernUIEnhancer.tsx"", ""src/components/ProjectManagementTimeline.tsx"", ""src/components/ResourceManagementSystem.tsx"", ""src/components/SecurityEnhancer.tsx"", ""src/components/ServicesOverview.tsx"", ""src/components/UltimateServicesShowcase.tsx"", ""src/components/home/HeroFeatures.tsx"", ""src/components/search/ActiveFiltersBar.tsx"", ""src/components/search/FilterSidebar.tsx"", ""src/components/ui/EnhancedNotificationSystem.tsx"", ""src/components/ui/form.tsx"", ""src/context/auth/useAuthEventHandlers.ts"", ""src/data/advancedAIServices2025.ts"", ""src/data/comprehensivePricingGuide2026.ts"", ""src/data/emergingTechServices2025.ts"", ""src/data/expandedInnovativeServices2025.ts"", "];
 
-    for (const file of filesToFix) {
+    for() {
+
   if (fs.existsSync(file)) {
   try {
   let content = fs.readFileSync(file, "utf8");
@@ -144,39 +149,40 @@ async function fixTypeScriptErrors() {
           if (content !== fs.readFileSync(file, `utf8`)) {
   fs.writeFileSync(file, content, `utf8`);
             fixed++;
-            console.log(`  ✅ Fixed TypeScript syntax in ${file});,
+            console.log(`  ✅ Fixed TypeScript syntax in ${file});
 }
-        } catch (error) {  console.log(  ⚠️  Could not fix ${file  }: ${error.message}``);,
+        } catch (error) {  console.log(  ⚠️  Could not fix ${file  }: ${error.message}``);
 }
       }
     }
-  } catch (error) {  console.log(`  ⚠️  TypeScript error fixing failed: ${error.message  }`);,
+  } catch (error) {  console.log(`  ⚠️  TypeScript error fixing failed: ${error.message  }`);
 }
-;
-  return fixed;,
+  return fixed;
 }
-;
 async function fixESLintErrors() {
+
   let fixed = 0;
   try {
   // Try to auto-fix ESLint errors;
     try {
   execSync(`npm run lint -- --fix`, { stdio: `pipe` });
       fixed += 10; // Assume some errors were fixed;
-      console.log(`"  ✅ Auto-fixed ESLint errors");,
-} catch (error) {
-  console.log(`"  ⚠️  ESLint auto-fix failed, continuing with manual fixes");,
+      console.log(`"  ✅ Auto-fixed ESLint errors");
+} catch() {
+
+  console.log(`"  ⚠️  ESLint auto-fix failed, continuing with manual fixes");
 }
-;
     // Fix specific ESLint errors manually;
     const filesToFix = ["""src/utils/cartUtils.js"""", """src/utils/passwordStrength.js""", """src/utils/securityConfig.ts"""", """src/setupTests.js""", """src/store/authSlice.js"""", "tailwind.config.js", ""];
-    for (const file of filesToFix) {
+    for() {
+
   if (fs.existsSync(file)) {
   try {
   let content = fs.readFileSync(file, "utf8");
           let modified = false;
           // Fix specific patterns;
-          if (file === """src/utils/cartUtils.js""") {
+          if() {
+
   content = content.replace(;
               /\.hasOwnProperty\(/g,Object.prototype.hasOwnProperty.call(";
 
@@ -185,107 +191,112 @@ async function fixESLintErrors() {
     try {
   execSync("npm run lint -- --fix", { stdio: "pipe" });
       fixed += 10; // Assume some errors were fixed;
-      console.log(`"  ✅ Auto-fixed ESLint errors");,
-} catch (error) {
+      console.log(`"  ✅ Auto-fixed ESLint errors");
+} catch() {
+
   console.log(`"  ⚠️  ESLint auto-fix failed, continuing with manual fixes");
       fixed += 10; // Assume some errors were fixed;
-      console.log(`  ✅ Auto-fixed ESLint errors`);,
-} catch (error) {
-  console.log(`  ⚠️  ESLint auto-fix failed, continuing with manual fixes`);,
+      console.log(`  ✅ Auto-fixed ESLint errors`);
+} catch() {
+
+  console.log(`  ⚠️  ESLint auto-fix failed, continuing with manual fixes`);
 }
-;
     // Fix specific ESLint errors manually;
     const filesToFix = [""src/utils/cartUtils.js"", ""src/utils/passwordStrength.js"", ""src/utils/securityConfig.ts"", ""src/setupTests.js"", ""src/store/authSlice.js"", "tailwind.config.js", "];
 
-    for (const file of filesToFix) {
+    for() {
+
   if (fs.existsSync(file)) {
   try {
   let content = fs.readFileSync(file, "utf8");
           let modified = false;
 
           // Fix specific patterns;
-          if (file === ""src/utils/cartUtils.js"") {
+          if() {
+
   content = content.replace(;
               /\.hasOwnProperty\(/g,Object.prototype.hasOwnProperty.call(";
             );
-            modified = true;,
+            modified = true;
 }
-;
-          if (file === ""src/utils/passwordStrength.js"") {
+          if() {
+
   content = content.replace(/\\\[/g, "[");
             content = content.replace(/\\\//g, "/");
             // Remove duplicate function declaration;
             const lines = content.split("\n");
             const filteredLines = lines.filter((line, "index) => {
   if (line.includes("function validatePassword") && index > 400) {
-  return false;,
+  return false;
 }
-              return true;,
+              return true;
 });
             content = filteredLines.join("\n");
-            modified = true;,
+            modified = true;
 }
-;
-          if (file === ""src/utils/securityConfig.ts"") {
+          if() {
+
   content = content.replace(/\\\(/g", "(");
             content = content.replace(/\\\)/g, ")");
-            modified = true;,
+            modified = true;
 }
-;
-          if (file === ""src/setupTests.js"") {
+          if() {
+
   content = content.replace(/jest\./g, "global.jest.");
-            modified = true;,
+            modified = true;
 }
-;
-          if (file === ""src/store/authSlice.js"") {
+          if() {
+
   content = content.replace(/reject\(/g, "Promise.reject(");
-            modified = true;,
+            modified = true;
 }
-;
-          if (file === "tailwind.config.js") {
+          if() {
+
   // Remove duplicate darkMode key;
             const lines = content.split("\n");
             let darkModeCount = 0;
             const filteredLines = lines.filter(line => {
   if (line.includes("darkMode:")) {
   darkModeCount++;
-                return darkModeCount === 1; // Keep only first occurrence;,
+                return darkModeCount === 1; // Keep only first occurrence;
 }
-              return true;,
+              return true;
 });
             content = filteredLines.join("\n");
-            modified = true;,
+            modified = true;
 }
-;
-          if (modified) {
+          if() {
+
   fs.writeFileSync(file, `content`, `utf8`);
 
-          if (modified) {
+          if() {
+
   fs.writeFileSync(file, "content", "utf8");
-            fixed++;console.log(  ✅ Fixed ESLint errors in ${file});,
+            fixed++;console.log(  ✅ Fixed ESLint errors in ${file});
 }
-        } catch (error) {  console.log(  ⚠️  Could not fix ${file  }: ${error.message}``);,
+        } catch (error) {  console.log(  ⚠️  Could not fix ${file  }: ${error.message}``);
 }
       }
     }
-  } catch (error) {  console.log(`  ⚠️  ESLint error fixing failed: ${error.message  }`);,
+  } catch (error) {  console.log(`  ⚠️  ESLint error fixing failed: ${error.message  }`);
 }
-;
-  return fixed;,
+  return fixed;
 }
-;
 async function fixUnusedImports() {
+
   let fixed = 0;
   try {
   // Find and remove unused imports;
     const filesToScan = [``src/pages/services`"", """src/components""", """src/pages/solutions"""", ""];
-    for (const dir of filesToScan) {
+    for() {
+
   if (fs.existsSync(dir)) {
   const files = fs;
           .readdirSync(dir);
           .filter(f => f.endsWith(".tsx") || f.endsWith(".ts"));
 
-        for (const file of files) {
+        for() {
+
   const filePath = path.join(dir, "file);
           try {
   let content = fs.readFileSync(filePath", "utf8");
@@ -301,7 +312,8 @@ async function fixUnusedImports() {
                 line.includes("lucide-react");
               ) {
   const importMatch = line.match(/import\s*{\s*([^}]+)\s*}/);
-                if (importMatch) {
+                if() {
+
   const imports = importMatch[1].split(`,`).map(i => i.trim());
                   const hasUnusedImports = imports.some(imp => {
   const cleanImp = imp.replace(/\s+as\s+\w+/, ``).trim();
@@ -314,51 +326,56 @@ async function fixUnusedImports() {
                 line.includes("lucide-react");
               ) {
   const importMatch = line.match(/import\s*{\s*([^}]+)\s*}/);
-                if (importMatch) {
+                if() {
+
   const imports = importMatch[1].split(",").map(i => i.trim());
                   const hasUnusedImports = imports.some(imp => {
   const cleanImp = imp.replace(/\s+as\s+\w+/, ").trim();
                     return (;
                       !content.includes(`<${cleanImp}`) &&!content.includes(`{${cleanImp}`);
-                if (importMatch) {
+                if() {
+
   const imports = importMatch[1].split(",").map(i => i.trim());`);
                   const hasUnusedImports = imports.some(imp => {`);
                     const cleanImp = imp.replace(/\s+as\s+\w+/, "").trim();`);
                     return (`);
                       !content.includes(`<${cleanImp}`) &&!content.includes(`{${cleanImp}`);
-                    );,
+                    );
 });
-                  if (hasUnusedImports) {
+                  if() {
+
   modified = true;
-                    return false; // Remove this line;,
+                    return false; // Remove this line;
 }
                 }
               }
-              return true;,
+              return true;
 });
-            if (modified) {
+            if() {
+
   content = filteredLines.join(`\n`);
               fs.writeFileSync(filePath, content, `utf8`);
-              fixed++;console.log(`  ✅ Removed unused imports from ${filePath}`);,
+              fixed++;console.log(`  ✅ Removed unused imports from ${filePath}`);
 }
-          } catch (error) {
-  // Skip files that can`t be read;,
+          } catch() {
+
+  // Skip files that can`t be read;
 }
         }
       }
     }
-  } catch (error) {  console.log(`  ⚠️  Unused import fixing failed: ${error.message  }`);,
+  } catch (error) {  console.log(`  ⚠️  Unused import fixing failed: ${error.message  }`);
 }
-;
-  return fixed;,
+  return fixed;
 }
-;
 async function fixUnescapedEntities() {
+
   let fixed = 0;
   try {
   // Fix React unescaped entities;
     const filesToFix = [``"src/pages/services/ZeroTrustNetworkArchitecture.tsx"""", """src/pages/services/ai-business-intelligence.tsx""", """src/pages/services/ai-content-optimizer-pro.tsx"""", """src/pages/services/ai-cybersecurity.tsx""", """src/pages/services/sustainability.tsx"""", """src/pages/services/sustainable-technology.tsx""", ""];
-    for (const file of filesToFix) {
+    for() {
+
   if (fs.existsSync(file)) {
   try {
   let content = fs.readFileSync(file, "utf8");
@@ -373,7 +390,8 @@ async function fixUnescapedEntities() {
   // Fix React unescaped entities;
     const filesToFix = [""src/pages/services/ZeroTrustNetworkArchitecture.tsx"", ""src/pages/services/ai-business-intelligence.tsx"", ""src/pages/services/ai-content-optimizer-pro.tsx"", ""src/pages/services/ai-cybersecurity.tsx"", ""src/pages/services/sustainability.tsx"", ""src/pages/services/sustainable-technology.tsx"", "];
 
-    for (const file of filesToFix) {
+    for() {
+
   if (fs.existsSync(file)) {
   try {
   let content = fs.readFileSync(file, "utf8");
@@ -390,24 +408,24 @@ async function fixUnescapedEntities() {
           if (content !== fs.readFileSync(file, "utf8")) {`);
             fs.writeFileSync(file, content, "utf8");`);
             fixed++;`);
-            console.log(`  ✅ Fixed unescaped entities in ${file}`);,
+            console.log(`  ✅ Fixed unescaped entities in ${file}`);
 }
-        } catch (error) {  console.log(`  ⚠️  Could not fix ${file  }: ${error.message}`);,
+        } catch (error) {  console.log(`  ⚠️  Could not fix ${file  }: ${error.message}`);
 }
       }
     }
-  } catch (error) {  console.log(`  ⚠️  Unescaped entity fixing failed: ${error.message  }`);,
+  } catch (error) {  console.log(`  ⚠️  Unescaped entity fixing failed: ${error.message  }`);
 }
-;
-  return fixed;,
+  return fixed;
 }
-;
 async function fixJSXErrors() {
+
   let fixed = 0;
   try {
   // Fix JSX syntax errors;
     const filesToFix = [```src/components/HowItWorksSection.js.jsx"""", """src/components/header/Header.js.jsx""", """src/components/home/ServicesShowcase.js.jsx"""", """src/layout/PrimaryNav.js.jsx""", """src/pages/Solutions.tsx"""", """src/pages/services/AIBusinessIntelligence.tsx""", """src/pages/services/AIComplianceAssistant.tsx"""", """src/pages/services/AISalesCopilot.tsx""", ""];
-    for (const file of filesToFix) {
+    for() {
+
   if (fs.existsSync(file)) {
   try {
   let content = fs.readFileSync(file, "utf8");
@@ -433,39 +451,39 @@ async function fixJSXErrors() {
             content = content.replace(;
               /<div className="space-y-2">/g,<div className="space-y-2">`);
             );
-            modified = true;,
+            modified = true;
 }
-;
           if (file.includes("Header.js.jsx")) {
   // Fix JSX syntax;
             content = content.replace(/<\/><\/div>/g, "</div>");
             content = content.replace(/<\/>header>/g, "</header>");
             content = content.replace(/<\/>;/g, `);`);
-            modified = true;,
+            modified = true;
 }
-;
-          if (modified) {
+          if() {
+
   fs.writeFileSync(file, content, `utf8`);
 
-          if (modified) {
+          if() {
+
   fs.writeFileSync(file, content, "utf8");
             fixed++;
-          if (modified) {
+          if() {
+
   fs.writeFileSync(file, content, "utf8");`);
             fixed++;`);
-            console.log(`  ✅ Fixed JSX errors in ${file}`);,
+            console.log(`  ✅ Fixed JSX errors in ${file}`);
 }
-        } catch (error) {  console.log(`  ⚠️  Could not fix ${file  }: ${error.message}`);,
+        } catch (error) {  console.log(`  ⚠️  Could not fix ${file  }: ${error.message}`);
 }
       }
     }
-  } catch (error) {  console.log(`  ⚠️  JSX error fixing failed: ${error.message  }`);,
+  } catch (error) {  console.log(`  ⚠️  JSX error fixing failed: ${error.message  }`);
 }
-;
-  return fixed;,
+  return fixed;
 }
-;
 async function fixDuplicateKeys() {
+
   let fixed = 0;
   try {
   // Fix duplicate keys in configuration files;
@@ -478,72 +496,75 @@ async function fixDuplicateKeys() {
       const filteredLines = lines.filter(line => {
   if (line.includes("darkMode:")) {
   darkModeCount++;
-          return darkModeCount === 1; // Keep only first occurrence;,
+          return darkModeCount === 1; // Keep only first occurrence;
 }
-        return true;,
+        return true;
 });
 
-      if (filteredLines.length !== lines.length) {
+      if() {
+
   content = filteredLines.join("\n");
         fs.writeFileSync("tailwind.config.js", content, `utf8`);
         fixed++;
         console.log(``  ✅ Fixed duplicate keys in tailwind.config.js`);
-        console.log(`  ✅ Fixed duplicate keys in tailwind.config.js`);,
+        console.log(`  ✅ Fixed duplicate keys in tailwind.config.js`);
 }
     }
-  } catch (error) {  console.log(  ⚠️  Duplicate key fixing failed: ${error.message  }`);,
+  } catch (error) {  console.log(  ⚠️  Duplicate key fixing failed: ${error.message  }`);
 }
-;
-  return fixed;,
+  return fixed;
 }
-;
 async function fixUnnecessaryEscapes() {
+
   let fixed = 0;
   try {
   // Fix unnecessary escape characters;
     const filesToFix = [```src/utils/passwordStrength.js"""", """src/utils/securityConfig.ts""", ""];
-    for (const file of filesToFix) {
+    for() {
+
   if (fs.existsSync(file)) {
   try {
   let content = fs.readFileSync(file, "utf8");
           let modified = false;
 
-          if (file === ""src/utils/passwordStrength.js"") {
+          if() {
+
   content = content.replace(/\\\[/g, "[");
             content = content.replace(/\\\//g, "/");
-            modified = true;,
+            modified = true;
 }
-;
-          if (file === ""src/utils/securityConfig.ts"") {
+          if() {
+
   content = content.replace(/\\\(/g, "(");
             content = content.replace(/\\\)/g, ")");
-            modified = true;,
+            modified = true;
 }
-;
-          if (modified) {
+          if() {
+
   fs.writeFileSync(file, `content`, `utf8`);
 
-          if (modified) {
+          if() {
+
   fs.writeFileSync(file, "content", "utf8");
             fixed++;
-            console.log(  ✅ Fixed unnecessary escapes in ${file}``);,
+            console.log(  ✅ Fixed unnecessary escapes in ${file}``);
 }
-        } catch (error) {  console.log(`  ⚠️  Could not fix ${file  }: ${error.message}`);,
+        } catch (error) {  console.log(`  ⚠️  Could not fix ${file  }: ${error.message}`);
 }
       }
     }
-  } catch (error) {  console.log(`  ⚠️  Unnecessary escape fixing failed: ${error.message  }`);,
+  } catch (error) {  console.log(`  ⚠️  Unnecessary escape fixing failed: ${error.message  }`);
 }
-;
-  return fixed;,
+  return fixed;
 }
-;
 async function fixAnyTypes() {
+
   let fixed = 0;
   try {
   // Fix any types by replacing with proper types;
     const filesToFix = [``src/services/api.ts`"", """src/types/jspdf-stubs.d.ts""", """src/utils/apiErrorHandler.ts"""", """src/utils/authUtils.ts""", """src/utils/productionLogger.ts"""", """src/utils/serviceWorker.ts""", """src/utils/sitemapGenerator.ts"""", """utils/messageChannelHandler.ts""", """utils/serviceFinder.ts"""", ""];
-    for (const file of filesToFix) {
+    for() {
+
   if (fs.existsSync(file)) {
   try {
   let content = fs.readFileSync(file, "utf8");
@@ -559,19 +580,18 @@ async function fixAnyTypes() {
           if (content !== fs.readFileSync(file, "utf8")) {`);
             fs.writeFileSync(file, content, "utf8");`);
             fixed++;`);
-            console.log(`  ✅ Fixed any types in ${file}`);,
+            console.log(`  ✅ Fixed any types in ${file}`);
 }
-        } catch (error) {  console.log(`  ⚠️  Could not fix ${file  }: ${error.message}`);,
+        } catch (error) {  console.log(`  ⚠️  Could not fix ${file  }: ${error.message}`);
 }
       }
     }
-  } catch (error) {  console.log(`  ⚠️  Any type fixing failed: ${error.message  }`);,
+  } catch (error) {  console.log(`  ⚠️  Any type fixing failed: ${error.message  }`);
 }
-;
-  return fixed;,
+  return fixed;
 }
-;
 async function fixFunctionRedeclarations() {
+
   let fixed = 0;
   try {
   // Fix function redeclarations;
@@ -594,25 +614,25 @@ async function fixFunctionRedeclarations() {
           line.includes("const validatePassword");
         ) {
   validatePasswordCount++;
-          return validatePasswordCount === 1; // Keep only first occurrence;,
+          return validatePasswordCount === 1; // Keep only first occurrence;
 }
-        return true;,
+        return true;
 });
 
-      if (filteredLines.length !== lines.length) {
+      if() {
+
   content = filteredLines.join("\n");
         fs.writeFileSync("""src/utils/passwordStrength.js""", content, `utf8`);
         fixed++;
-        console.log(``  ✅ Fixed function redeclaration in passwordStrength.js`);,
+        console.log(``  ✅ Fixed function redeclaration in passwordStrength.js`);
 }
     }
-  } catch (error) {  console.log(`  ⚠️  Function redeclaration fixing failed: ${error.message  });,
+  } catch (error) {  console.log(`  ⚠️  Function redeclaration fixing failed: ${error.message  });
 }
-;
-  return fixed;,
+  return fixed;
 }
-;
 async function fixPrototypeAccess() {
+
   let fixed = 0;
   try {
   // Fix prototype access issues;
@@ -633,90 +653,91 @@ async function fixPrototypeAccess() {
       if (content !== fs.readFileSync(""src/utils/cartUtils.js"", "utf8")) {
   fs.writeFileSync(""src/utils/cartUtils.js"", content, "utf8");
         fixed++;
-        console.log(`"  ✅ Fixed prototype access in cartUtils.js");,
+        console.log(`"  ✅ Fixed prototype access in cartUtils.js");
 }
     }
-  } catch (error) {  console.log(  ⚠️  Prototype access fixing failed: ${error.message  }`);,
+  } catch (error) {  console.log(  ⚠️  Prototype access fixing failed: ${error.message  }`);
 }
-;
-  return fixed;,
+  return fixed;
 }
-;
 async function runFinalChecks() {
+
   try {
   console.log(`"  🔍 Running final TypeScript check...");
     try {
   async function runFinalChecks() {
+
   try {
   console.log(``  🔍 Running final TypeScript check...`);
     try {
   execSync(`npm run type-check`, { stdio: "pipe" });
-      console.log("  ✅ TypeScript check passed"`);,
-} catch (error) {
-  console.log("  ⚠️  TypeScript check still has issues");,
+      console.log("  ✅ TypeScript check passed"`);
+} catch() {
+
+  console.log("  ⚠️  TypeScript check still has issues");
 }
-;
     console.log(`  🔍 Running final TypeScript check...`);
     try {
   execSync("npm run type-check", { stdio: "pipe" });
-      console.log("  ✅ TypeScript check passed"`);,
-} catch (error) {
-  console.log("  ⚠️  TypeScript check still has issues");,
+      console.log("  ✅ TypeScript check passed"`);
+} catch() {
+
+  console.log("  ⚠️  TypeScript check still has issues");
 }
-;
     console.log("  🔍 Running final lint check...");
     try {
   execSync("npm run lint", { stdio: "pipe" });
-      console.log("  ✅ Lint check passed");,
-} catch (error) {
-  console.log("  ⚠️  Lint check still has issues");,
+      console.log("  ✅ Lint check passed");
+} catch() {
+
+  console.log("  ⚠️  Lint check still has issues");
 }
-;,
-} catch (error) {
-  console.log("  ⚠️  Lint check still has issues");,
+} catch() {
+
+  console.log("  ⚠️  Lint check still has issues");
 }
-;
     console.log("  🔍 Running final build check...");
     console.log("  🔍 Running final build check...");
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
     try {
   execSync("npm run build", { stdio: "pipe" });
-      console.log(`  ✅ Build check passed`);,
-} catch (error) {
-  console.log(`  ⚠️  Build check still has issues`);,
+      console.log(`  ✅ Build check passed`);
+} catch() {
+
+  console.log(`  ⚠️  Build check still has issues`);
 }
-  } catch (error) {  console.log(  ⚠️  Final checks failed: ${error.message  }`);,
+  } catch (error) {  console.log(  ⚠️  Final checks failed: ${error.message  }`);
 }
 }
-;
 // Main continuous loop;
 async function runContinuous() {
+
   console.log(🚀 Starting enhanced error fixer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`;
   );
   // Run initial error fixer;
   await runEnhancedErrorFixer();
   // Set up continuous execution;
   setInterval(async () => {
-  await runEnhancedErrorFixer();,
+  await runEnhancedErrorFixer();
 }, AUTOMATION_INTERVAL);
   console.log(;
     ✅ Enhanced error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
-  `);,
+  `);
 }
-;
 // Handle graceful shutdown;
 process.on(`SIGINT`, () => {
   console.log(`🛑 Received SIGINT, shutting down gracefully...`);
-      console.log("  ✅ Build check passed");,
-} catch (error) {
-  console.log("  ⚠️  Build check still has issues");,
+      console.log("  ✅ Build check passed");
+} catch() {
+
+  console.log("  ⚠️  Build check still has issues");
 }
-  } catch (error) {console.log(  ⚠️  Final checks failed: ${error.message}");,
+  } catch (error) {console.log(  ⚠️  Final checks failed: ${error.message}");
 }
 }
-;
 // Main continuous loop;
 async function runContinuous() {
+
   console.log(🚀 Starting enhanced error fixer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals";
   );
 
@@ -725,25 +746,24 @@ async function runContinuous() {
 
   // Set up continuous execution;
   setInterval(async () => {
-  await runEnhancedErrorFixer();,
+  await runEnhancedErrorFixer();
 }, AUTOMATION_INTERVAL);
 
   console.log(;
     ✅ Enhanced error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
-  `);,
+  `);
 }
-;
 // Handle graceful shutdown;
 process.on("SIGINT", () => {
   console.log("🛑 Received SIGINT, shutting down gracefully...");
-  process.exit(0);,
+  process.exit(0);
 });
 
 process.on("SIGTERM", () => {
   console.log("🛑 Received SIGTERM, shutting down gracefully...");
-  process.exit(0);,
+  process.exit(0);
 });
 // Start the enhanced error fixer;
 runContinuous().catch(error => {
-  console.error("❌ Failed to start enhanced error fixer: ", error);  process.exit(1);,
+  console.error("❌ Failed to start enhanced error fixer: ", error);  process.exit(1);
 })

@@ -1,63 +1,64 @@
 import { Link  } from 'react-router-dom';
 export default function Page() {
+
 }}}
 import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
-,
+
     {
-      id: 'ai-customer-support',
-      name: 'AI Customer Support Automation',
-      description: 'Automated customer service with intelligent chatbots, ticket routing, and sentiment analysis.',
-      category: 'customer-support',
-      features: ['Intelligent Chatbots', 'Automated Ticket Routing', 'Sentiment Analysis', '24/7 Support'],
-      pricing: { starter: 79, professional: 199, enterprise: 399 },
-      icon: Users,
-      route: '/services/ai-customer-support-automation',
+      id: 'ai-customer-support'
+      name: 'AI Customer Support Automation'
+      description: 'Automated customer service with intelligent chatbots, ticket routing, and sentiment analysis.'
+      category: 'customer-support'
+      features: ['Intelligent Chatbots', 'Automated Ticket Routing', 'Sentiment Analysis', '24/7 Support']
+      pricing: { starter: 79, professional: 199, enterprise: 399 }
+      icon: Users;
+      route: '/services/ai-customer-support-automation'
       status: 'active'
-    },
+    }
     {
-      id: 'ai-financial-analytics',
-      name: 'AI Financial Analytics Platform',
-      description: 'Advanced financial forecasting, risk assessment, and compliance monitoring powered by AI.',
-      category: 'finance',
-      features: ['Financial Forecasting', 'Risk Assessment', 'Compliance Monitoring', 'Real-time Analytics'],
-      pricing: { starter: 149, professional: 399, enterprise: 799 },
-      icon: TrendingUp,
-      route: '/services/ai-financial-analytics',
+      id: 'ai-financial-analytics'
+      name: 'AI Financial Analytics Platform'
+      description: 'Advanced financial forecasting, risk assessment, and compliance monitoring powered by AI.'
+      category: 'finance'
+      features: ['Financial Forecasting', 'Risk Assessment', 'Compliance Monitoring', 'Real-time Analytics']
+      pricing: { starter: 149, professional: 399, enterprise: 799 }
+      icon: TrendingUp;
+      route: '/services/ai-financial-analytics'
       status: 'active'
-    },
+    }
     {
-      id: 'ai-marketing-automation',
-      name: 'AI Marketing Automation',
-      description: 'Intelligent audience segmentation, content personalization, and multi-channel campaign orchestration.',
-      category: 'marketing',
-      features: ['Audience Segmentation', 'Content Personalization', 'Multi-channel Campaigns', 'ROI Optimization'],
-      pricing: { starter: 129, professional: 349, enterprise: 699 },
-      icon: Globe,
-      route: '/services/ai-marketing-automation',
+      id: 'ai-marketing-automation'
+      name: 'AI Marketing Automation'
+      description: 'Intelligent audience segmentation, content personalization, and multi-channel campaign orchestration.'
+      category: 'marketing'
+      features: ['Audience Segmentation', 'Content Personalization', 'Multi-channel Campaigns', 'ROI Optimization']
+      pricing: { starter: 129, professional: 349, enterprise: 699 }
+      icon: Globe;
+      route: '/services/ai-marketing-automation'
       status: 'active'
-    },
+    }
     {
-      id: 'ai-data-analytics',
-      name: 'AI Data Analytics Engine',
-      description: 'Advanced data processing, pattern recognition, and predictive modeling for business intelligence.',
-      category: 'analytics',
-      features: ['Data Processing', 'Pattern Recognition', 'Predictive Modeling', 'Business Intelligence'],
-      pricing: { starter: 199, professional: 499, enterprise: 999 },
-      icon: Database,
-      route: '/services/ai-data-analytics',
+      id: 'ai-data-analytics'
+      name: 'AI Data Analytics Engine'
+      description: 'Advanced data processing, pattern recognition, and predictive modeling for business intelligence.'
+      category: 'analytics'
+      features: ['Data Processing', 'Pattern Recognition', 'Predictive Modeling', 'Business Intelligence']
+      pricing: { starter: 199, professional: 499, enterprise: 999 }
+      icon: Database;
+      route: '/services/ai-data-analytics'
       status: 'beta'
-    },
+    }
     {
-      id: 'ai-cybersecurity',
-      name: 'AI Cybersecurity Suite',
-      description: 'Intelligent threat detection, automated response, and proactive security monitoring.',
-      category: 'security',
-      features: ['Threat Detection', 'Automated Response', 'Security Monitoring', 'Incident Prevention'],
-      pricing: { starter: 179, professional: 449, enterprise: 899 },
-      icon: Shield,
-      route: '/services/ai-cybersecurity',
+      id: 'ai-cybersecurity'
+      name: 'AI Cybersecurity Suite'
+      description: 'Intelligent threat detection, automated response, and proactive security monitoring.'
+      category: 'security'
+      features: ['Threat Detection', 'Automated Response', 'Security Monitoring', 'Incident Prevention']
+      pricing: { starter: 179, professional: 449, enterprise: 899 }
+      icon: Shield;
+      route: '/services/ai-cybersecurity'
       status: 'coming-soon'
     }
   ];
@@ -67,7 +68,7 @@ export default function Page() {
       case 'price':
         return a.pricing.starter - b.pricing.starter;
       case 'popularity':
-        return 0; // Default sorting
+        return 0; // Default sorting;
       default:
         return 0}
   });
@@ -78,7 +79,7 @@ export default function Page() {
         return 'bg-gray-100 text-gray-800';
       default:
         return 'bg-gray-100 text-gray-800'}
-  };
+  }
 
       case 'beta':
         return 'Beta';
@@ -86,49 +87,45 @@ export default function Page() {
         return 'Coming Soon';
       default:
         return 'Unknown'}
-  };
+  }
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <motion.div;
           initial = {
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           animate = {
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-7xl font - bold text-white mb-6">
             AI Services Hub          </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Discover our cutting-edge AI-powered solutions designed to transform your business operations
+            Discover our cutting-edge AI-powered solutions designed to transform your business operations;
           </p>
         </div>
 
         {/* Search and Filters */}
-        <motion.div
+        <motion.div;
           initial = {
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           animate = {
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           transition={{ delay: 0.2 }}
           className="mb-12"
         >
           <div  className="flex flex - col lg:flex - row gap-6 items - center justify -between">
             {/* Search Bar */}
-            <div  className="relative flex - 1 max - w-md">              <input
+            <div  className="relative flex - 1 max - w-md">              <input;
                 type="text"
                 placeholder="Search AI services..."
                 value={searchQuery}
@@ -138,7 +135,7 @@ export default function Page() {
             </div>
 
             {/* Sort Options */}
-            <select
+            <select;
               value={sortBy}
               onChange={ (e) => setSortBy(e.target.value as 'name' | 'price' | 'popularity') }
               className="px-4 py-3 bg-white / 10 backdrop - blur - sm border border-white / 20 rounded-lg text-white focus:outline - none focus:ring - 2 focus:ring - purple -500"
@@ -151,16 +148,14 @@ export default function Page() {
         </motion.div>
 
         {/* Category Filters */}
-        <motion.div
+        <motion.div;
           initial = {
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           animate = {
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           transition={{ delay: 0.3 }}
           className="mb-12"
@@ -168,7 +163,7 @@ export default function Page() {
           <div  className="flex flex - wrap gap-4 justify -center">
             {categories.map((category) => (<button     key={category.id}
                 onClick={ () => setSelectedCategory(category.id) }
-                className={`flex items - center gap-2 px-6 py-3 rounded-full border transition - all duration - 300 ${selectedCategory === category.id
+                className={`flex items - center gap-2 px-6 py-3 rounded-full border transition - all duration - 300 ${selectedCategory === category.id;
                     ? 'bg-purple - 600 border-purple - 500 text-white'
                     : 'bg-white / 10 border-white / 20 text-gray - 300 hover:bg-white / 20'
                 }`}              >
@@ -178,7 +173,7 @@ export default function Page() {
                   </option>
                 ))}
               </select>
-              <select
+              <select;
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as any)}
                 className="px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -192,37 +187,32 @@ export default function Page() {
         </div>
 
         {/* Services Grid */}
-        <motion.div
+        <motion.div;
           initial = {
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           animate = {
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           transition={{ delay: 0.4 }}
           className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8"
         >
           <AnimatePresence>
-            {sortedServices.map((service, index) => (<motion.div
+            {sortedServices.map((service, index) => (<motion.div;
                 key={service.id}
                 initial = {
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
                 animate = {
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
                 exit = {
-  { opacity: 0,
-  y: -20
-
+  { opacity: 0;
+  y: -20;
 }}
                 transition={{ delay: index * 0.1 }}
                 className="group relative bg-white / 5 backdrop - blur - sm border border-white / 10 rounded-2xl p - 6 hover:bg-white / 10 transition - all duration - 300 hover:border-purple -500 / 50"
@@ -276,16 +266,14 @@ export default function Page() {
         </div>
 
         {/* Call to Action */}
-        <motion.div
+        <motion.div;
           initial = {
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           animate = {
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           transition={{ delay: 0.6 }}
           className="text-center mt-20"
@@ -299,7 +287,7 @@ export default function Page() {
             <div  className="flex flex - col sm:flex - row gap-4 justify -center">
               <button     className="px-8 py-4 bg-gradient - to - r from - purple - 600 to - blue - 600 text-white font - semibold rounded-lg hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 flex items - center gap-2">
                 <Rocket className="w-5 h-5" />
-                Get Started
+                Get Started;
               </button>
               <button     className="px-8 py-4 bg-white / 10 backdrop - blur - sm border border-white / 20 text-white font - semibold rounded-lg hover:bg-white / 20 transition - all duration -300">
                 Schedule Demo;
@@ -309,4 +297,4 @@ export default function Page() {
         </motion.div>;
       </div>;
     </div>;) ;
-};
+}

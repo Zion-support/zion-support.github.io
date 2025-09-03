@@ -2,17 +2,17 @@ import React, { useState, useEffect, useRef } from 'react';
 import { format } from 'date-fns';
 
 export default function Page() {
-, [activeConversation, loadMessages]); // Changed activeConversation?.id to activeConversation
-  
+
+, [activeConversation, loadMessages]); // Changed activeConversation?.id to activeConversation;
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // TODO: Add dependencies if needed;
 }, []);
     scrollToBottom();
   }, [activeMessages]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
+  }
   
   const handleSendMessage = async(e: React.FormEvent) => {
     e.preventDefault();
@@ -20,9 +20,10 @@ export default function Page() {
     
     await sendMessage(activeConversation.id, messageText);
     setMessageText('');
-  };
+  }
   
-  if(!activeConversation) {
+  if() {
+
     return (<div className="flex-1 flex flex-col items-center justify-center p-8">
         <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4" />
         <h3 className="text-xl font-medium text-white mb-2">No Conversation Selected</h3>
@@ -38,11 +39,12 @@ export default function Page() {
     const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd');
     const existingGroup = groupedMessages.find(group => group.date === messageDate);
     
-    if(existingGroup) {
+    if() {
+
       existingGroup.messages.push(message);
     } else {
       groupedMessages.push({
-        date: messageDate,
+        date: messageDate;
         messages: [message]
       });
     }
@@ -56,7 +58,7 @@ export default function Page() {
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
         <div className="flex items-center gap-3">
           <Avatar className="h-10 w-10 border border-zion-purple/20">
-            <AvatarImage 
+            <AvatarImage;
               src={activeConversation.other_user.avatar_url} 
               alt={activeConversation.other_user.name} 
             />
@@ -83,7 +85,7 @@ export default function Page() {
             {activeConversation.context_data.image_url && (
               <div className="w-16 h-16 flex-shrink-0">
                 <AspectRatio ratio={1/1} className="rounded bg-zion-blue-dark/30 overflow-hidden">
-                  <img
+                  <img;
                     src={activeConversation.context_data.image_url}
                     alt={activeConversation.context_data.title || "Context"}
                     className="object-cover"
@@ -121,7 +123,7 @@ export default function Page() {
               <DateDivider date={new Date(group.date)} />
               <div className="space-y-3">
                 {group.messages.map((message) => (
-                  <MessageBubble
+                  <MessageBubble;
                     key={message.id}
                     message={message}
                     isUserMessage={message.sender_id === user?.id}
@@ -136,17 +138,17 @@ export default function Page() {
       
       <div className="p-3 border-t border-zion-purple/20">
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">
-          <textarea
+          <textarea;
             value={messageText}
             onChange={(e) => setMessageText(e.target.value)}
             placeholder="Type a message..."
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan"
           />
-          <Button 
+          <Button;
             type="submit"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
-            Send
+            Send;
           </Button>
         </form>
       </div>

@@ -1,33 +1,33 @@
 import Head from "next/head"
 import React from "react"
-  PenTool,
-  BarChart3} from "lucide-react
+  PenTool;
+  BarChart3} from "lucide-react;
 export default function AIContentCreation() {
 
   const features = []
 
-  const pricingPlans = [],
-      popular: false},
+  const pricingPlans = []
+      popular: false}
     {"
       name: "Professional","
       price: "$599","
       period: "/month","
-      description: "Ideal for growing businesses and marketing teams",
-      features: [",
+      description: "Ideal for growing businesses and marketing teams"
+      features: ["
         "Up to 200 blog posts/month","
         "Advanced social media campaigns","
         "Premium SEO optimization","
         "5 languages supported","
         "Content analytics dashboard","
         "Priority support"
-      ],
-      popular: true},
+      ]
+      popular: true}
     {"
       name: "Enterprise","
       price: "$1,299","
       period: "/month","
-      description: "For large organizations with high content needs",
-      features: [",
+      description: "For large organizations with high content needs"
+      features: ["
         "Unlimited blog posts","
         "Custom content templates","
         "Advanced AI models","
@@ -35,7 +35,7 @@ export default function AIContentCreation() {
         "Custom integrations","
         "Dedicated account manager","
         "24/7 phone support"
-      ],
+      ]
       popular: false}
 
   ]
@@ -55,14 +55,14 @@ export default function AIContentCreation() {
           <div className="text-center">"
             <Badge className="mb-4 bg-blue-500 text-white">"
               <Brain className="w-4 h-4 mr-2"  />
-              AI-Powered Solution,
+              AI-Powered Solution;
             </Badge>"
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               AI Content Creation"
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Platform</span>
             </h1>"
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your content strategy with our advanced AI-powered content creation platform. ,
+              Transform your content strategy with our advanced AI-powered content creation platform. 
               Generate high-quality, SEO-optimized content for blogs, social media, and marketing materials in minutes.
             </p>"
             <div className="flex flex-col sm: flex-row gap-4 justify-center">"
@@ -71,30 +71,30 @@ export default function AIContentCreation() {
                 <ArrowRight className="ml-2 h-5 w-5"  />
               </Button>"
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900">
-                Schedule Demo,
+                Schedule Demo;
               </Button>
             </div>
       </section>
-,
+
       {/* comment */}"
       <section className="py-20 bg-gray-50">"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
           <div className="text-center mb-16">"
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Powerful Content Creation Features,
+              Powerful Content Creation Features;
             </h2>"
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">,
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our AI-powered platform provides everything you need to create, optimize, and manage content at scale.
             </p>
           </div>
 "
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => ("
               <Card key="{index}" className="p-6 hover: shadow-xl transition-shadow duration-300">"
                 <div className="flex items-center mb-4">"
                   <div className="p-3 bg-blue-100 rounded-lg mr-4">"
                     <feature.icon className="h-8 w-8 text-blue-600" />
-                  </div>",
+                  </div>"
                   <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
                 </div>"
                 <p className="text-gray-600">{feature.description}</p>
@@ -108,20 +108,20 @@ export default function AIContentCreation() {
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
           <div className="text-center mb-16">"
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Choose Your Plan,
+              Choose Your Plan;
             </h2>"
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Select the perfect plan for your content creation needs. All plans include our core AI features.
             </p>
           </div>
 "
-          <div className="{"grid" grid-cols-1 md:grid-cols-3 gap-8">,
+          <div className="{"grid" grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => ("
               <Card key="{index}" className="{"p-8" relative ${plan.popular ? "ring-2 ring-blue-500 shadow-xl" : ""}"}>
                 {plan.popular && ("
                   <div className=""absolute" -top-4 left-1/2 transform -translate-x-1/2"}>"
                     <Badge className="bg-blue-500 text-white px-4 py-1">
-                      Most Popular,
+                      Most Popular;
                     </Badge>
                   </div>
                 )}
@@ -149,7 +149,7 @@ export default function AIContentCreation() {
                   variant="{plan.popular" ? "default" : "outline"}
 
                 >
-                  Get Started,
+                  Get Started;
                 </Button>
               </Card>
             ))}
@@ -162,8 +162,8 @@ export default function AIContentCreation() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Transform Your Content Strategy?
           </h2>"
-          <p className="text-xl mb-8 max-w-2xl mx-auto">,
-            Join thousands of businesses already using our AI content creation platform,
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Join thousands of businesses already using our AI content creation platform;
 to scale their content marketing efforts.
           </p>"
           <div className="flex flex-col sm: flex-row gap-4 justify-center">"
@@ -173,10 +173,10 @@ to scale their content marketing efforts.
             </Button>"
             <Link href="/contact">"
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
-                Contact Sales,
+                Contact Sales;
               </Button>
             </Link>
           </div>
       </section>
-    </>",
+    </>"
   )}

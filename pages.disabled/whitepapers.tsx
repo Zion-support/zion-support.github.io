@@ -8,103 +8,103 @@ import { motion } from 'framer-motion';
 const Whitepapers: NextPage = () => {
   const whitepapers = [
     {
-      id: 1,
-      title: 'The Future of Quantum Computing in Enterprise Applications',
-      description: 'A comprehensive analysis of quantum computing technologies and their potential impact on enterprise software development, including practical implementation strategies and ROI considerations.',
-      author: 'Dr. Sarah Chen',
-      date: '2025-01-15',
-      category: 'Quantum Computing',
-      pages: 45,
-      downloadCount: 1250,
-      fileSize: '2.3 MB',
-      image: '/whitepapers/quantum-computing-enterprise.jpg',
-      slug: 'quantum-computing-enterprise-applications',
+      id: 1;
+      title: 'The Future of Quantum Computing in Enterprise Applications'
+      description: 'A comprehensive analysis of quantum computing technologies and their potential impact on enterprise software development, including practical implementation strategies and ROI considerations.'
+      author: 'Dr. Sarah Chen'
+      date: '2025-01-15'
+      category: 'Quantum Computing'
+      pages: 45;
+      downloadCount: 1250;
+      fileSize: '2.3 MB'
+      image: '/whitepapers/quantum-computing-enterprise.jpg'
+      slug: 'quantum-computing-enterprise-applications'
       tags: ['Quantum Computing', 'Enterprise Software', 'Future Technology']
-    },
+    }
     {
-      id: 2,
-      title: 'AI-Powered Micro SaaS: Building Profitable Niche Applications',
-      description: 'An in-depth guide to developing and scaling micro SaaS applications using artificial intelligence, including market analysis, technical architecture, and monetization strategies.',
-      author: 'Michael Rodriguez',
-      date: '2025-01-12',
-      category: 'Micro SaaS',
-      pages: 38,
-      downloadCount: 2100,
-      fileSize: '1.8 MB',
-      image: '/whitepapers/ai-micro-saas.jpg',
-      slug: 'ai-powered-micro-saas-guide',
+      id: 2;
+      title: 'AI-Powered Micro SaaS: Building Profitable Niche Applications'
+      description: 'An in-depth guide to developing and scaling micro SaaS applications using artificial intelligence, including market analysis, technical architecture, and monetization strategies.'
+      author: 'Michael Rodriguez'
+      date: '2025-01-12'
+      category: 'Micro SaaS'
+      pages: 38;
+      downloadCount: 2100;
+      fileSize: '1.8 MB'
+      image: '/whitepapers/ai-micro-saas.jpg'
+      slug: 'ai-powered-micro-saas-guide'
       tags: ['Micro SaaS', 'Artificial Intelligence', 'Business Strategy']
-    },
+    }
     {
-      id: 3,
-      title: 'Blockchain Infrastructure for Modern Enterprises',
-      description: 'A technical deep-dive into blockchain infrastructure design, implementation best practices, and integration strategies for enterprise environments.',
-      author: 'Alex Thompson',
-      date: '2025-01-10',
-      category: 'Blockchain',
-      pages: 52,
-      downloadCount: 1800,
-      fileSize: '2.7 MB',
-      image: '/whitepapers/blockchain-infrastructure.jpg',
-      slug: 'blockchain-infrastructure-enterprises',
+      id: 3;
+      title: 'Blockchain Infrastructure for Modern Enterprises'
+      description: 'A technical deep-dive into blockchain infrastructure design, implementation best practices, and integration strategies for enterprise environments.'
+      author: 'Alex Thompson'
+      date: '2025-01-10'
+      category: 'Blockchain'
+      pages: 52;
+      downloadCount: 1800;
+      fileSize: '2.7 MB'
+      image: '/whitepapers/blockchain-infrastructure.jpg'
+      slug: 'blockchain-infrastructure-enterprises'
       tags: ['Blockchain', 'Infrastructure', 'Enterprise Architecture']
-    },
+    }
     {
-      id: 4,
-      title: 'Cloud Migration Strategies: A Complete Implementation Guide',
-      description: 'Comprehensive guide covering cloud migration planning, execution strategies, cost optimization, and best practices for successful digital transformation.',
-      author: 'David Kim',
-      date: '2025-01-08',
-      category: 'Cloud Computing',
-      pages: 41,
-      downloadCount: 3200,
-      fileSize: '2.1 MB',
-      image: '/whitepapers/cloud-migration-strategies.jpg',
-      slug: 'cloud-migration-implementation-guide',
+      id: 4;
+      title: 'Cloud Migration Strategies: A Complete Implementation Guide'
+      description: 'Comprehensive guide covering cloud migration planning, execution strategies, cost optimization, and best practices for successful digital transformation.'
+      author: 'David Kim'
+      date: '2025-01-08'
+      category: 'Cloud Computing'
+      pages: 41;
+      downloadCount: 3200;
+      fileSize: '2.1 MB'
+      image: '/whitepapers/cloud-migration-strategies.jpg'
+      slug: 'cloud-migration-implementation-guide'
       tags: ['Cloud Computing', 'Digital Transformation', 'Migration Strategy']
-    },
+    }
     {
-      id: 5,
-      title: 'Cybersecurity in the Age of AI: Threats and Defenses',
-      description: 'Analysis of emerging cybersecurity threats in AI-driven environments and comprehensive defense strategies for modern organizations.',
-      author: 'Lisa Park',
-      date: '2025-01-05',
-      category: 'Cybersecurity',
-      pages: 36,
-      downloadCount: 2800,
-      fileSize: '1.9 MB',
-      image: '/whitepapers/ai-cybersecurity-threats.jpg',
-      slug: 'cybersecurity-age-ai-threats-defenses',
+      id: 5;
+      title: 'Cybersecurity in the Age of AI: Threats and Defenses'
+      description: 'Analysis of emerging cybersecurity threats in AI-driven environments and comprehensive defense strategies for modern organizations.'
+      author: 'Lisa Park'
+      date: '2025-01-05'
+      category: 'Cybersecurity'
+      pages: 36;
+      downloadCount: 2800;
+      fileSize: '1.9 MB'
+      image: '/whitepapers/ai-cybersecurity-threats.jpg'
+      slug: 'cybersecurity-age-ai-threats-defenses'
       tags: ['Cybersecurity', 'Artificial Intelligence', 'Threat Analysis']
-    },
+    }
     {
-      id: 6,
-      title: 'Edge Computing: Transforming Data Processing at the Source',
-      description: 'Exploration of edge computing technologies, use cases, and implementation strategies for reducing latency and improving performance in distributed systems.',
-      author: 'Emily Watson',
-      date: '2025-01-03',
-      category: 'Edge Computing',
-      pages: 33,
-      downloadCount: 1600,
-      fileSize: '1.7 MB',
-      image: '/whitepapers/edge-computing-transformation.jpg',
-      slug: 'edge-computing-data-processing',
+      id: 6;
+      title: 'Edge Computing: Transforming Data Processing at the Source'
+      description: 'Exploration of edge computing technologies, use cases, and implementation strategies for reducing latency and improving performance in distributed systems.'
+      author: 'Emily Watson'
+      date: '2025-01-03'
+      category: 'Edge Computing'
+      pages: 33;
+      downloadCount: 1600;
+      fileSize: '1.7 MB'
+      image: '/whitepapers/edge-computing-transformation.jpg'
+      slug: 'edge-computing-data-processing'
       tags: ['Edge Computing', 'Data Processing', 'Performance Optimization']
     }
   ];
 
   const categories = [
-    'All Papers',
-    'Quantum Computing',
-    'Micro SaaS',
-    'Blockchain',
-    'Cloud Computing',
-    'Cybersecurity',
+    'All Papers'
+    'Quantum Computing'
+    'Micro SaaS'
+    'Blockchain'
+    'Cloud Computing'
+    'Cybersecurity'
     'Edge Computing'
   ];
 
   return (
-    <MainLayout
+    <MainLayout;
       title="Whitepapers - Zion Tech Group"
       description="Access our comprehensive whitepapers covering the latest trends and technologies in AI, quantum computing, blockchain, and more."
       keywords="whitepapers, technology research, AI insights, quantum computing, blockchain, cloud computing, cybersecurity"
@@ -112,21 +112,21 @@ const Whitepapers: NextPage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <motion.h1 
+          <motion.h1;
             className="text-4xl md:text-5xl font-bold mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Technology Whitepapers & Research
+            Technology Whitepapers & Research;
           </motion.h1>
-          <motion.p 
+          <motion.p;
             className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-200"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Access in-depth research and analysis on cutting-edge technologies, 
+            Access in-depth research and analysis on cutting-edge technologies;
             industry trends, and implementation strategies from our expert team.
           </motion.p>
         </div>
@@ -178,7 +178,7 @@ const Whitepapers: NextPage = () => {
             <div className="lg:col-span-3">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {whitepapers.map((paper, index) => (
-                  <motion.article
+                  <motion.article;
                     key={paper.id}
                     className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                     initial={{ opacity: 0, y: 30 }}
@@ -217,7 +217,7 @@ const Whitepapers: NextPage = () => {
                       <div className="mb-4">
                         <div className="flex flex-wrap gap-1">
                           {paper.tags.map((tag) => (
-                            <span
+                            <span;
                               key={tag}
                               className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-gray-100 text-gray-700"
                             >
@@ -242,20 +242,20 @@ const Whitepapers: NextPage = () => {
                         </div>
                         
                         <div className="text-sm text-gray-500">
-                          {paper.downloadCount.toLocaleString()} downloads
+                          {paper.downloadCount.toLocaleString()} downloads;
                         </div>
                       </div>
                       
                       <div className="flex space-x-3">
                         <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center justify-center">
                           <Download className="w-4 h-4 mr-2" />
-                          Download PDF
+                          Download PDF;
                         </button>
-                        <Link
+                        <Link;
                           href={`/whitepapers/${paper.slug}`}
                           className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors px-4 py-2"
                         >
-                          Preview
+                          Preview;
                           <ArrowRight className="w-4 h-4 ml-1" />
                         </Link>
                       </div>
@@ -270,26 +270,26 @@ const Whitepapers: NextPage = () => {
       {/* Newsletter Signup */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             className="max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl font-bold mb-4 text-gray-800">
-              Stay Updated with Latest Research
+              Stay Updated with Latest Research;
             </h2>
             <p className="text-xl text-gray-600 mb-8">
               Get notified when we publish new whitepapers and research insights.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
+              <input;
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-                Subscribe
+                Subscribe;
               </button>
             </div>
           </motion.div>
@@ -297,6 +297,6 @@ const Whitepapers: NextPage = () => {
       </section>
     </MainLayout>
   );
-};
+}
 
 export default Whitepapers;

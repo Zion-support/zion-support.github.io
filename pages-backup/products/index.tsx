@@ -1,8 +1,8 @@
 import React from "react"
-      green: "bg-green-100 text-green-600",
-      purple: "bg-purple-100 text-purple-600",
-      red: "bg-red-100 text-red-600"},
-    return colorMap[color] || 'bg-gray-100 text-gray-600
+      green: "bg-green-100 text-green-600"
+      purple: "bg-purple-100 text-purple-600"
+      red: "bg-red-100 text-red-600"}
+    return colorMap[color] || 'bg-gray-100 text-gray-600;
   }
 
   return (
@@ -19,16 +19,16 @@ import React from "react"
             </p>
           </div>
       </section>
-,
+
       {/* comment */}"
       <section className="py-20">"
         <div className="container mx-auto px-4">"
-          <div className="grid lg: grid-cols-2 gap-12">,,
+          <div className="grid lg: grid-cols-2 gap-12">,
             {products.map((product, index) => {
-              const IconComponent = product.icon
+              const IconComponent = product.icon;
               return ("
                 <div key = "{index}" className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl transition-shadow">"
-                  <div className="{"flex" items-start mb-6">",
+                  <div className="{"flex" items-start mb-6">"
                     <div className="{"w-16" h-16 rounded-lg flex items-center justify-center mr-6 ${getColorClasses(product.color)}"}>"
                       <IconComponent className=""h-8" w-8"}       />
                     </div>"
@@ -39,7 +39,7 @@ import React from "react"
                   "
                   <div className="mb-6">"
                     <h4 className="text-lg font-semibold text-gray-900 mb-3">Key Features: </h4>"
-                    <ul className="space-y-2">,
+                    <ul className="space-y-2">
                       {product.features.map((feature, featureIndex) => ("
                         <li key="{featureIndex}" className="flex items-center text-gray-600">"
                           <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0"  />
@@ -57,10 +57,10 @@ import React from "react"
                       <ArrowRight className="ml-2 h-4 w-4"  />
                     </button>"
                     <button className="border border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-semibold transition-colors">
-                      Request Demo,
+                      Request Demo;
                     </button>
                   </div>
-                </div>,
+                </div>
               )})}
 
           </div>
@@ -80,7 +80,7 @@ import React from "react"
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">"
                 <Zap className="h-8 w-8 text-blue-600"  />
               </div>"
-              <h3 className="text-lg font-semibold mb-2">AI & Machine Learning</h3>",
+              <h3 className="text-lg font-semibold mb-2">AI & Machine Learning</h3>"
               <p className="text-gray-600">TensorFlow, PyTorch, Scikit-learn</p>
             </div>
             "
@@ -121,11 +121,11 @@ import React from "react"
               <ArrowRight className="ml-2 h-5 w-5"  />
             </Link>"
             <Link href="/services" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors">
-              View Services,
+              View Services;
             </Link>
           </div>
       </section>
-    </MainLayout>;,
+    </MainLayout>;
   )}
 
-"export default ProductsIndex
+"export default ProductsIndex;

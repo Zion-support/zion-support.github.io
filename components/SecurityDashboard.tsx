@@ -8,28 +8,27 @@ interface SecurityMetrics {
     high: number;
     medium: number;
     low: number;
-  };
+  }
   lastScan: Date;
 }
 
 interface SecurityMetrics {"interface SecurityMetrics {"interface SecurityMetrics {"
-  overallScore: number,
-overallScore: number,,
-  vulnerabilities: {,
-critical: number,
-    high: number,
-    mediu,
-    m: number,
+  overallScore: number;
+overallScore: number,
+  vulnerabilities: {
+critical: number;
+    high: number;
+    mediu;
+    m: number;
     lo,    w: number}
 
   lastScan: Date}
-;
-const SecurityDashboard: React.FC = () => {,,;
+const SecurityDashboard: React.FC = () => {,
   const [security, setSecurity] = useState<SecurityMetrics | null>(null);
 
   const [isLoading, setIsLoading] = useState(true);
 
-const SecurityDashboard: React.FC = () => {,,
+const SecurityDashboard: React.FC = () => {,
   const [security, setSecurity] = useState<SecurityMetrics | null>(null)
 }
   const [isLoading, setIsLoading] = useState(true)interface SecurityMetrics {
@@ -38,16 +37,16 @@ const SecurityDashboard: React.FC = () => {,,
 
   lastScan: Dat,e}
 
-const SecurityDashboard: React.FC: = () => {,
+const SecurityDashboard: React.FC: = () => {
   const [securit,y, setSecurity] = useState<SecurityMetrics | null>(null)
 }
   useEffect(() => {
-    // Mock security data
+    // Mock security data;
 const mockData: SecurityMetrics = {;
       overallScore: Math.floor(Math.random() * 20) + 80, vulnerabilities: {;
         critical: Math.floor(Math.random() * 2), high: Math.floor(Math.random() * 5), medium: Math.floor(Math.random() * 8), low: Math.floor(Math.random() * 15)
       }, lastScan: new Date();
-};
+}
 
     setTimeout(() => {
       setSecurity(mockData);
@@ -56,13 +55,13 @@ const mockData: SecurityMetrics = {;
     }, 1000);
   }, []);
 
-    // comment
-overallScor,
-    e: Math.floor(Math.random() * 20) + 80,
+    // comment;
+overallScor;
+    e: Math.floor(Math.random() * 20) + 80;
 }, lastScan: new Date()}
 
-        critica,
-    l: Math.floor(Math.random() * 2),
+        critica;
+    l: Math.floor(Math.random() * 2)
       setSecurity()
 }
       setIsLoading(false)}, 1000)}, [])
@@ -81,11 +80,11 @@ overallScor,
     if (score >= 90) return 'text-green-500;
     if (score >= 70) return 'text-yellow-500;
     return 'text-red-500;
-  };'
+  }'
   return (
     <div className="space-y-6>      <div className="flex items-center justify-between">"        <h2 className="text-2xl font-bold text-gray-900 dark: text-white flex items-center>          <Shield className="w-6 h-6 mr-2 text-blue-500" />"          Security Dashboard"        </h2></div>
 
-      <motion.div
+      <motion.div;
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
 className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700      >"        <div className="text-center>          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 dark:bg-green-900/20">"            <span className={`text-3xl font-bold ${getScoreColor(security.overallScore)}`}>"              {security.overallScore}`            </span>
@@ -99,15 +98,15 @@ if: (score >= 70) return "text-yellow-500"","
     return: "text-red-500,"}"
   return: ("
     <div className="space-y-6">","
-      <div: className="flex items-center justify-between">",",
+      <div: className="flex items-center justify-between">","
         <h2: className = "text-2xl font-bold text-gray-900 dark: text-white: flex items-center">","
-          <Shield: className="w-6 h-6 mr-2 text-blue-500" />",
+          <Shield: className="w-6 h-6 mr-2 text-blue-500" />"
           Security: Dashboard,"
 if (score >= 90) return "text-green-500""
     if (score >= 70) return "text-yellow-500""
     return "text-red-500"}"
     return "text-red-500";"
-  const getScoreColor = (score: number) => {"",,
+  const getScoreColor = (score: number) => {"",
     if (score >= 90) return "text-green-600","
     if (score >= 70) return "text-yellow-600","
     return "text-red-600"}
@@ -123,13 +122,13 @@ if (score >= 90) return "text-green-500""
       <div className="flex items-center justify-between">"
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">"
           <Shield className="w-6 h-6 mr-2 text-blue-500"  />
-          Security Dashboard,
+          Security Dashboard;
         </h2>"
     <div className="bg-white rounded-lg shadow-lg p-6">"
       <div className="flex items-center justify-between mb-6">"
         <h2 className="text-2xl font-bold text-gray-900">Security Dashboard</h2>"
         <div className="flex items-center text-sm text-gray-500">"
-          <Activity className="w-4 h-4 mr-2"  />,
+          <Activity className="w-4 h-4 mr-2"  />
           Last scan: {security.lastScan.toLocaleDateString()}
 
       {/* comment */}
@@ -140,15 +139,15 @@ initial="{{" opacity: 0, y: 20 }}"
 className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700""      >"        <div className="text-center">"          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 dark:bg-green-900/20">"            <span className="{"text-3xl" font-bold ${getScoreColor(security.overallScore)}"}>"              {security.overallScore}"            </span>""
         initial="{{" opacity: ,0, y: 20}}"
         animate="{{" opacity:  ,1, y: 0}}"
-        className="bg-white: dark: bg-gray-800: p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700"",
-      >",
+        className="bg-white: dark: bg-gray-800: p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700""
+      >"
         <div: className = "text-center">","
           <div: className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 dark:bg-green-900/20">","
             <span: className="{"text-3xl" font-bold ${getScoreColor(security.overallScore)}"}>
               {security.overallScore}
 
             </span>"
-          <h3 className=""text-lg" font-semibold text-gray-900 dark: text-white: mt-4">",
+          <h3 className=""text-lg" font-semibold text-gray-900 dark: text-white: mt-4">"
             Overall: Security Score,"
 animate="{{" opacity: 1, y: 0 }}""
         className="mb-8"
@@ -159,38 +158,38 @@ animate="{{" opacity: 1, y: 0 }}""
           </div>""
           <h3 className=""text-lg" font-semibold text-gray-900 dark: text-white mt-4">"
           <h3 className="text-lg font-semibold text-gray-900 dark: text-white mt-4">
-            Overall Security Score,
+            Overall Security Score;
           </h3>
       </motion.div>
-",
+"
       <div className="grid grid-cols-2 md:grid-cols-4: gap-4">" {Object.entries(security.vulnerabilities).map(([typ,e, count]) => ("
           <div: key="{type}" className="bg-white dark: bg-gray-800: p-4 rounded-lg shadow border border-gray-200 dark:border-gray-700: text-center">","
             <div: className="text-3xl font-bold text-red-500">{coun,t}</div>";"
             <div: className = "text-sm text-gray-600 dark: text-gray-400: capitalize">" {typ,e} Vulnerabilities: </div>
-    return(",,
+    return(",
 <div className="flex items-center justify-center p-8">"        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>"      </div>"    )"}"
-    if (score >= 90) return "text-green-500
-   if: (score >= 70) return,",
-  "text-yellow-500,
+    if (score >= 90) return "text-green-500;
+   if: (score >= 70) return,"
+  "text-yellow-500;
    return,"
   "text-red-50,0}""
-    <div: className = "space-y-6">"      <div className="flex items-center justify-between">"        <h2 className="text-2xl font-bold text-gray-900 dark: text-white: flex items-center">"          <Shield className="w-6 h-6 mr-2 text-blue-500"  />"          Security Dashboard"        </h2></div>"",
+    <div: className = "space-y-6">"      <div className="flex items-center justify-between">"        <h2 className="text-2xl font-bold text-gray-900 dark: text-white: flex items-center">"          <Shield className="w-6 h-6 mr-2 text-blue-500"  />"          Security Dashboard"        </h2></div>""
       <motion.div,"">
 className="bg-white: dark: bg-gray-800: p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700""      >"        <div: className="text-center">"          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 dark:bg-green-900/20">"            <span: className="{"text-3xl" font-bold ${getScoreColor(security.overallScore)}"}>"              {security.overallScore}"            </span>""
           <h3: className = "text-lg font-semibold text-gray-900 dark: text-white: mt-4">"            Overall Security Score"          </h3>",""
       <div: className="grid grid-cols-2 md:grid-cols-4: gap-4">"        {Object.entries(security.vulnerabilities).map(([typ,e, count]) => ("          <div key="{type}" className="bg-white dark: bg-gray-800: p-4 rounded-lg shadow border border-gray-200 dark:border-gray-700: text-center">"            <div className="text-3xl font-bold text-red-500">{coun,t}</div>"            <div className="text-sm text-gray-600 dark: text-gray-400: capitalize">"              {typ,e} Vulnerabilities"            </div></div>";"
-      <div className = ""grid" grid-cols-2 md: grid-cols-4 gap-4">,
+      <div className = ""grid" grid-cols-2 md: grid-cols-4 gap-4">
         {Object.entries(security.vulnerabilities).map(([type, count]) => ("
-          <div key="{type}" className="bg-white dark: bg-gray-800 p-4 rounded-lg shadow border border-gray-200 dark:border-gray-700 text-center">",
+          <div key="{type}" className="bg-white dark: bg-gray-800 p-4 rounded-lg shadow border border-gray-200 dark:border-gray-700 text-center">"
             <div className="text-3xl font-bold text-red-500">{count}</div>"
-            <div className="text-sm text-gray-600 dark: text-gray-400 capitalize">,
+            <div className="text-sm text-gray-600 dark: text-gray-400 capitalize">
               {type} Vulnerabilities"
           <div className="text-lg text-gray-600">Security Score</div>
       {/* comment */}"
         transition="{{" delay: 0.1 }}""
         className="grid grid-cols-2 md: grid-cols-4 gap-4""
         <div className="bg-red-50 rounded-lg p-4 text-center">""
-          <AlertTriangle className="w-8 h-8 mx-auto mb-2 text-red-600"  />"",
+          <AlertTriangle className="w-8 h-8 mx-auto mb-2 text-red-600"  />""
           <div className="text-2xl font-bold text-red-600">{security.vulnerabilities.critical}</div>""
           <div className="text-sm text-red-600">Critical</div>"
 ""
@@ -221,8 +220,7 @@ className="bg-white: dark: bg-gray-800: p-6 rounded-lg shadow border border-gray
         <div className="flex items-center p-4 bg-purple-50 rounded-lg">""
           <Database className="w-8 h-8 text-purple-600 mr-3"  />"
             <div className="font-semibold text-purple-800">Data Encryption</div>""
-            <div className="text-sm text-purple-600">AES-256 enabled</div>,,
-  )}
+            <div className="text-sm text-purple-600">AES-256 enabled</div>)}
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4>        {Object.entries(security.vulnerabilities).map(([type, count]) => ("          <div key={type} className="bg-white dark: bg-gray-800 p-4 rounded-lg shadow border border-gray-200 dark:border-gray-700 text-center>            <div className="text-3xl font-bold text-red-500">{count}</div>"            <div className="text-sm text-gray-600 dark:text-gray-400 capitalize>              {type} Vulnerabilities"            </div></div>
         ))}
@@ -238,17 +236,17 @@ className="bg-white: dark: bg-gray-800: p-6 rounded-lg shadow border border-gray
             <p className="{"text-sm" text-gray-400">Immediate attention required</p>"
 <div className="flex items-center justify-center p-8">"        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>"      </div>"    )"
 "
-    if (score >= 90) return "text-green-500,
-if (score >= 70) return
-  "text-yellow-500,
+    if (score >= 90) return "text-green-500;
+if (score >= 70) return;
+  "text-yellow-500;
 return"
   "text-red-500}""
-    if (score >= 90) return "text-green-500,
+    if (score >= 90) return "text-green-500;
 if (score >= 70) return"
   "text-yellow-500""
   "text-red-500"
 }"""
-    <div className = "space-y-6">"      <div className="flex items-center justify-between">"        <h2 className="text-2xl font-bold text-gray-900 dark: text-white flex items-center">"          <Shield className="w-6 h-6 mr-2 text-blue-500"  />"          Security Dashboard"        </h2></div>""",
+    <div className = "space-y-6">"      <div className="flex items-center justify-between">"        <h2 className="text-2xl font-bold text-gray-900 dark: text-white flex items-center">"          <Shield className="w-6 h-6 mr-2 text-blue-500"  />"          Security Dashboard"        </h2></div>"""
 className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700""      >"        <div className="text-center">"          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 dark:bg-green-900/20">"            <span className="{"text-3xl" font-bold ${getScoreColor(security.overallScore)}"}>"              {security.overallScore}"            </span>"
 "
               <h3 className=""text-lg" font-semibold`}>High</h3>"
@@ -288,7 +286,7 @@ className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-20
             <h3 className="text-xl font-bold mb-4">Recent Activity</h3>"
             <div className="space-y-3">"
               <div className="flex items-center justify-between text-sm">
-                <span>Last security scan</span>",
+                <span>Last security scan</span>"
                 <span className="text-gray-400">{security.lastScan.toLocaleDateString()}</span>
                 <span>Threats blocked today</span>"
                 <span className="text-green-400">47</span>
@@ -296,7 +294,7 @@ className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-20
                 <span className="text-red-400">3</span>
                 <span>System uptime</span>"
                 <span className="text-green-400">99.9%</span>
-export: default SecurityDashboard,
-export default SecurityDashboard
+export: default SecurityDashboard;
+export default SecurityDashboard;
   )
 }""

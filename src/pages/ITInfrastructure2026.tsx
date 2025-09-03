@@ -23,9 +23,9 @@ const ITInfrastructure2026: React.FC = () => {
             <a href="/contact" "
               className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover: shadow-lg transition-all duration-300"
             >
-              Get Started,
+              Get Started;
             </a>
-          </div>;,
+          </div>;
   )}
 
 );

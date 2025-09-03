@@ -1,25 +1,25 @@
 import {  import { MobileSidebarToggle } from './MobileSidebarToggle';
 export default function Page() {
+
 , [location.pathname]);
   
     e.preventDefault();
       e.preventDefault();
     if(searchQuery.trim()) {
 
-      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`};
+      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`}
   
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown) };
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown) }
   
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown) };
-  // Enhanced service categories with better organization
-  
-        { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSign, description: 'AI-powered financial trading platform' },
-        { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Quantum AI consciousness research' },
-        { name: 'AI Business Operations', href: '/ai-services/business-operations', icon: Building, description: 'Autonomous business management' },
-        { name: 'AI Healthcare Diagnosis', href: '/ai-services/healthcare-diagnosis', icon: Heart, description: 'AI-powered medical diagnosis' },
-        { name: 'AI Content Creation', href: '/ai-services/content-creation', icon: FileText, description: 'Autonomous content generation' },
-        { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truck, description: 'AI-powered supply chain optimization' },
-        { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' },
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown) }
+  // Enhanced service categories with better organization;
+        { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSign, description: 'AI-powered financial trading platform' }
+        { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Quantum AI consciousness research' }
+        { name: 'AI Business Operations', href: '/ai-services/business-operations', icon: Building, description: 'Autonomous business management' }
+        { name: 'AI Healthcare Diagnosis', href: '/ai-services/healthcare-diagnosis', icon: Heart, description: 'AI-powered medical diagnosis' }
+        { name: 'AI Content Creation', href: '/ai-services/content-creation', icon: FileText, description: 'Autonomous content generation' }
+        { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truck, description: 'AI-powered supply chain optimization' }
+        { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' }
         { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' }
       dropdown[;'
         { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSign, description: 'AI-powered financial trading platform' },'
@@ -30,11 +30,11 @@ export default function Page() {
         { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truck, description: 'AI-powered supply chain optimization' },'
         { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' },'        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' }
       ]
-    },;
+    }
     {
 "
-      name: "Micro SAAS Solutions",
-      icon: Cloud,
+      name: "Micro SAAS Solutions"
+      icon: Cloud;
       services[;"
         { name: "Micro SAAS Services", href: "/micro-saas" },"
         { name: "Business Tools", href: "/micro-saas/business-tools" },"
@@ -43,11 +43,11 @@ export default function Page() {
         { name: "Custom Development", href: "/micro-saas/custom" },"
         { name: "Marketplace", href: "/marketplace" }
       ]
-    },;
+    }
     {
 "
-      name: "IT Infrastructure",
-      icon: Server,
+      name: "IT Infrastructure"
+      icon: Server;
       services[;"
         { name: "IT Services", href: "/it-services" },"
         { name: "Cloud Solutions", href: "/it-services/cloud" },"
@@ -56,11 +56,11 @@ export default function Page() {
         { name: "Data Management", href: "/it-services/data" },"
         { name: "Network Security", href: "/it-services/network-security" }
       ]
-    },;
+    }
     {
 "
-      name: "Emerging Technologies",
-      icon: Rocket,
+      name: "Emerging Technologies"
+      icon: Rocket;
       services[;"
         { name: "Quantum Computing", href: "/emerging-tech/quantum" },"
         { name: "Blockchain & Web3", href: "/emerging-tech/blockchain" },"
@@ -69,19 +69,19 @@ export default function Page() {
         { name: "Green Technology", href: "/green-it" },"
         { name: "Space Technology", href: "/emerging-tech/space" }
       ]
-    },;
+    }
     {
 
-      name: '2028 Services',
-      href: '/innovative-services-2028',
-      icon: Crown,
-      color: 'from-zion-cyan to-zion-purple',
+      name: '2028 Services'
+      href: '/innovative-services-2028'
+      icon: Crown;
+      color: 'from-zion-cyan to-zion-purple'
       dropdown[;
-        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' },;
-        { name: 'Micro SAAS 2028', href: '/micro-saas-2028', icon: Zap, description: 'Advanced micro SAAS solutions' },;
-        { name: 'IT Services 2028', href: '/it-services-2028', icon: Server, description: 'Next-generation IT services' },;
-        { name: 'Pricing Guide 2028', href: '/comprehensive-pricing-guide-2028', icon: Calculator, description: 'Complete pricing and ROI analysis' };
-      ]};
+        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' }
+        { name: 'Micro SAAS 2028', href: '/micro-saas-2028', icon: Zap, description: 'Advanced micro SAAS solutions' }
+        { name: 'IT Services 2028', href: '/it-services-2028', icon: Server, description: 'Next-generation IT services' }
+        { name: 'Pricing Guide 2028', href: '/comprehensive-pricing-guide-2028', icon: Calculator, description: 'Complete pricing and ROI analysis' }
+      ]}
   ];
   return ()
     <>`
@@ -96,15 +96,13 @@ export default function Page() {
               className="flex items-center"
               initial = {
 
-  { opacity: 0,
-  x: -20
-
+  { opacity: 0;
+  x: -20;
 }}
               animate = {
 
-  { opacity: 1,
-  x: 0
-
+  { opacity: 1;
+  x: 0;
 }}
               transition={{ duration: 0.5 }}
 "
@@ -118,7 +116,7 @@ export default function Page() {
                 </div>"
                 <div className="hidden sm:block">"
                   <h1 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
-                    ZION TECH GROUP
+                    ZION TECH GROUP;
                   </h1>"
                   <p className="text-xs text-zion-slate-light font-medium">Innovation • Intelligence • Impact</p>
                 </div>
@@ -127,24 +125,21 @@ export default function Page() {
             {/* Desktop Navigation */}"
             <nav className="hidden lg:flex items-center space-x-1">
               {/* Main Navigation Links */}
-              <motion.div
+              <motion.div;
                 initial = {
 
-  { opacity: 0,
-  y: -20
-
+  { opacity: 0;
+  y: -20;
 }}
                 animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
                 transition = {
 
-  { duration: 0.5,
-  delay: 0.1
-
+  { duration: 0.5;
+  delay: 0.1;
 }}
               >
                 <Link"
@@ -154,24 +149,21 @@ export default function Page() {
                   <Users className="w-4 h-4 group-hover:scale-110 transition-transform duration-300"  />"                  <span className="font-medium">About</span>
                 </Link>
               </motion.div>
-              <motion.div
+              <motion.div;
                 initial = {
 
-  { opacity: 0,
-  y: -20
-
+  { opacity: 0;
+  y: -20;
 }}
                 animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
                 transition = {
 
-  { duration: 0.5,
-  delay: 0.15
-
+  { duration: 0.5;
+  delay: 0.15;
 }}
               >
                 <Link"
@@ -184,24 +176,21 @@ export default function Page() {
               {/* Service Categories */}
               {serviceCategories.map((category, index) => ("
                 <div key={category.name} className="relative">
-                  <motion.button
+                  <motion.button;
                     initial = {
 
-  { opacity: 0,
-  y: -20
-
+  { opacity: 0;
+  y: -20;
 }}
                     animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
                     transition = {
 
-  { duration: 0.5,
-  delay: (index + 2) * 0.1
-
+  { duration: 0.5;
+  delay: (index + 2) * 0.1;
 }}
                     onClick={() => toggleDropdown(category.name)}`
                     className={`nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group ${activeDropdown === category.name'
@@ -216,24 +205,21 @@ export default function Page() {
                   {/* Enhanced Dropdown Menu */}
                   <AnimatePresence>
                     {activeDropdown === category.name && ;
-                      <motion.div
+                      <motion.div;
                         initial = {
 
-  { opacity: 0, y: -10,
-  scale: 0.95
-
+  { opacity: 0, y: -10;
+  scale: 0.95;
 }}
                         animate = {
 
-  { opacity: 1, y: 0,
-  scale: 1
-
+  { opacity: 1, y: 0;
+  scale: 1;
 }}
                         exit = {
 
-  { opacity: 0, y: -10,
-  scale: 0.95
-
+  { opacity: 0, y: -10;
+  scale: 0.95;
 }}
                         transition={{ duration: 0.2 }}"
                         className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden"
@@ -245,28 +231,25 @@ export default function Page() {
                           </div>"
                           <div className="space-y-2">
                             {category.services.map((service, subIndex) => (
-                              <motion.div
+                              <motion.div;
                                 key={service.name}
                                 initial = {
 
-  { opacity: 0,
-  x: -20
-
+  { opacity: 0;
+  x: -20;
 }}
                                 animate = {
 
-  { opacity: 1,
-  x: 0
-
+  { opacity: 1;
+  x: 0;
 }}
                                 transition = {
 
-  { duration: 0.3,
-  delay: subIndex * 0.05
-
+  { duration: 0.3;
+  delay: subIndex * 0.05;
 }}
                               >
-                                <Link
+                                <Link;
                                   to={service.href}"
                                   className="flex items-start space-x-3 p-3 rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 group"
 "
@@ -301,19 +284,19 @@ export default function Page() {
               </form>
               {/* User actions */}"
               <div className="flex items-center space-x-2">;
-                <motion.button
+                <motion.button;
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}"
                   className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
 "
                   <Bell className="w-5 h-5"  />                </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}"
                   className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
 "
                   <User className="w-5 h-5"  />                </motion.button>
-                <motion.button
+                <motion.button;
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}"
                   className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
@@ -327,7 +310,7 @@ export default function Page() {
         </div>;
       </header>;
     </>
-  )};
+  )}
 '"`
 
 ;,"});,})";

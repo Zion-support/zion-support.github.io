@@ -4,96 +4,96 @@ const Match: React.FC = () => {;''''
   const [searchQuery, setSearchQuery] = useState('');'
 ''
   '''
-    { id: 'all', name: 'All Categories', icon: Sparkles, count: 150 },;'''
-    { id: 'ai', name: 'AI Services', icon: Brain, count: 45 },;'''
-    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 32 },;'''
-    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 28 },;'''
-    { id: 'data', name: 'Data & Analytics', icon: Database, count: 25 },;'''
-    { id: 'iot', name: 'IoT & Edge', icon: Cpu, count: 20 };
+    { id: 'all', name: 'All Categories', icon: Sparkles, count: 150 },'''
+    { id: 'ai', name: 'AI Services', icon: Brain, count: 45 },'''
+    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 32 },'''
+    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 28 },'''
+    { id: 'data', name: 'Data & Analytics', icon: Database, count: 25 },'''
+    { id: 'iot', name: 'IoT & Edge', icon: Cpu, count: 20 }
   ];
 
   const matchedServices: unknown = [{}
-      id: 1,
+      id: 1;
       name: "AI Business Intelligence",""""
       category: "ai",""""
-      description: "Transform raw data into actionable insights with our advanced AI-powered analytics platform.",
+      description: "Transform raw data into actionable insights with our advanced AI-powered analytics platform."
       rating: 4.9,"""
       reviews: 127,""""
       price: "$2,999/mo",""""
-      features: ["Predictive Analytics", "Real-time Dashboards", "Custom AI Models", "Data Visualization"],
-      matchScore: 98,
-      icon: Brain,
+      features: ["Predictive Analytics", "Real-time Dashboards", "Custom AI Models", "Data Visualization"]
+      matchScore: 98;
+      icon: Brain;
       featured: true;
-    },
+    }
     {}
 """
       id: 2,""""
       name: "Cloud DevOps Automation",""""
       category: "cloud",""""
-      description: "Streamline your development and operations with intelligent automation and CI/CD pipelines.",
+      description: "Streamline your development and operations with intelligent automation and CI/CD pipelines."
       rating: 4.8,"""
       reviews: 89,""""
       price: "$1,999/mo",""""
-      features: ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto-scaling"],
-      matchScore: 95,
-      icon: Cloud,
+      features: ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto-scaling"]
+      matchScore: 95;
+      icon: Cloud;
       featured: false;
-    },
+    }
     {}
 """
       id: 3,""""
       name: "AI Cybersecurity Platform",""""
       category: "security",""""
-      description: "Protect your digital assets with AI-powered threat detection and response systems.",
+      description: "Protect your digital assets with AI-powered threat detection and response systems."
       rating: 4.9,"""
       reviews: 156,""""
       price: "$3,499/mo",""""
-      features: ["Threat Detection", "Behavioral Analysis", "Incident Response", "Risk Assessment"],
-      matchScore: 92,
-      icon: Shield,
+      features: ["Threat Detection", "Behavioral Analysis", "Incident Response", "Risk Assessment"]
+      matchScore: 92;
+      icon: Shield;
       featured: true;
-    },
+    }
     {}
 """
       id: 4,""""
       name: "Data Analytics Suite",""""
       category: "data",""""
-      description: "Unlock the full potential of your data with advanced analytics and business intelligence.",
+      description: "Unlock the full potential of your data with advanced analytics and business intelligence."
       rating: 4.7,"""
       reviews: 73,""""
       price: "$1,799/mo",""""
-      features: ["Data Mining", "Pattern Recognition", "Custom Reports", "Real-time Insights"],
-      matchScore: 90,
-      icon: Database,
+      features: ["Data Mining", "Pattern Recognition", "Custom Reports", "Real-time Insights"]
+      matchScore: 90;
+      icon: Database;
       featured: false;
-    },
+    }
     {}
 """
       id: 5,""""
       name: "IoT Edge Computing",""""
       category: "iot",""""
-      description: "Build and deploy intelligent IoT solutions with edge computing capabilities.",
+      description: "Build and deploy intelligent IoT solutions with edge computing capabilities."
       rating: 4.8,"""
       reviews: 94,""""
       price: "$2,499/mo",""""
-      features: ["Edge Processing", "Real-time Analytics", "Device Management", "Security"],
-      matchScore: 88,
-      icon: Cpu,
+      features: ["Edge Processing", "Real-time Analytics", "Device Management", "Security"]
+      matchScore: 88;
+      icon: Cpu;
       featured: false;
-    },
+    }
     {}
 """
       id: 6,""""
       name: "AI Workflow Automation",""""
       category: "ai",""""
-      description: "Automate complex business processes with intelligent AI workflows and decision engines.",
+      description: "Automate complex business processes with intelligent AI workflows and decision engines."
       rating: 4.9,"""
-      reviews: 112,;""""
-      price: "$2,799/mo",;"      features: ["Process Automation", "Smart Routing", "Exception Handling", "Performance Analytics"],;
-      matchScore: 87,;
-      icon: Zap,;
+      reviews: 112,""""
+      price: "$2,799/mo","      features: ["Process Automation", "Smart Routing", "Exception Handling", "Performance Analytics"]
+      matchScore: 87;
+      icon: Zap;
       featured: true;
-    };
+    }
   ];
 
                          service.description.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
@@ -111,11 +111,11 @@ const Match: React.FC = () => {;''''
         <div className="relative z-10 container mx-auto px-4">
           <motion.div;
             initial = {}
-  { opacity: 0,
+  { opacity: 0;
   y: 30;
 }}
             animate = {}
-  { opacity: 1,
+  { opacity: 1;
   y: 0;
 }}"""
             transition={{ duration: 0.8 }}""""
@@ -200,11 +200,11 @@ const Match: React.FC = () => {;''''
         <div className="container mx-auto px-4">
           <motion.div;
             initial = {}
-  { opacity: 0,
+  { opacity: 0;
   y: 30;
 }}
             whileInView = {}
-  { opacity: 1,
+  { opacity: 1;
   y: 0;
 }}"""
             transition={{ duration: 0.8 }}""""
@@ -224,15 +224,15 @@ const Match: React.FC = () => {;''''
               <motion.div;
                 key={service.id}
                 initial = {}
-  { opacity: 0,
+  { opacity: 0;
   y: 30;
 }}
                 whileInView = {}
-  { opacity: 1,
+  { opacity: 1;
   y: 0;
 }}
                 transition = {}
-  { duration: 0.6,
+  { duration: 0.6;
   delay: index * 0.1;
 `
 }}``
@@ -340,11 +340,11 @@ const Match: React.FC = () => {;''''
         <div className="container mx-auto px-4">
           <motion.div;
             initial = {}
-  { opacity: 0,
+  { opacity: 0;
   y: 30;
 }}
             whileInView = {}
-  { opacity: 1,
+  { opacity: 1;
   y: 0;
 }}"""
             transition={{ duration: 0.8 }}""""
@@ -366,37 +366,37 @@ const Match: React.FC = () => {;''''
 """"
                 step: "01",""""
                 title: "Analyze Your Needs",""""
-                description: "Our AI analyzes your business profile, industry, and specific requirements.",
+                description: "Our AI analyzes your business profile, industry, and specific requirements."
                 icon: Brain;
-              },
+              }
               {}
 """
 """"
                 step: "02",""""
                 title: "Match with Services",""""
-                description: "We match you with services that best fit your needs and budget.",
+                description: "We match you with services that best fit your needs and budget."
                 icon: Target;
-              },
+              }
               {}
 """
 """"
                 step: "03",""""
                 title: "Get Recommendations",""""
-                description: "Receive personalized recommendations with match scores and detailed analysis.",
+                description: "Receive personalized recommendations with match scores and detailed analysis."
                 icon: Sparkles;
             ].map((step, index) => (;
               <motion.div;
                 key={index}
                 initial = {}
-  { opacity: 0,
+  { opacity: 0;
   y: 30;
 }}
                 whileInView = {}
-  { opacity: 1,
+  { opacity: 1;
   y: 0;
 }}
                 transition = {}
-  { duration: 0.6,
+  { duration: 0.6;
   delay: index * 0.1;
 """
 }}""""
@@ -419,11 +419,11 @@ const Match: React.FC = () => {;''''
         <div className="container mx-auto px-4 text-center">
           <motion.div;
             initial = {}
-  { opacity: 0,
+  { opacity: 0;
   y: 30;
 }}
             whileInView = {}
-  { opacity: 1,
+  { opacity: 1;
   y: 0;
 }}
             transition={{ duration: 0.8 }}"""
@@ -455,16 +455,16 @@ const Match: React.FC = () => {;''''
       </section>;
     </div>;
   );
-};
+}
 
 export default Match;}}}
 
-export { Match };
+export { Match }
 
-export { Match };
+export { Match }
 
-export { Match };
+export { Match }
 
-export { Match };
+export { Match }
 
-export { Match };
+export { Match }

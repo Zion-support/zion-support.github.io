@@ -1,8 +1,7 @@
 export const ModernUIEnhancer: React.FC < ModernUIEnhancerProps> = ({
 
 interface ModernUIEnhancerProps {
-  // Add your props here
-
+  // Add your props here;
   enabled?: boolean;
 
 export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
@@ -18,8 +17,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
     fontLink.as = 'style';    document.head.appendChild(fontLink) ;
 
-    // Apply modern typography
-    
+    // Apply modern typography;
     root.style.setProperty('--font-family', "'Inter', -apple-system, BlinkMacSystemFont,Segoe UI', Roboto, sans-serif");
     root.style.setProperty('--font-weight-light',300');
     root.style.setProperty('--font-weight-normal',400');
@@ -27,12 +25,11 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     root.style.setProperty('--font-weight-semibold',600');
     root.style.setProperty('--font-weight-bold',700')}, [enabled]);
 
-    // Modern color palette
-    
-    // Apply CSS custom properties
+    // Modern color palette;
+    // Apply CSS custom properties;
     Object.entries(colors).forEach(([key, value]) => {
 
-      if(typeof value === 'string') {
+      if() {
 
         root.style.setProperty(`--color-${key}`, value)} else {
 
@@ -51,25 +48,22 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
 `
       root.style.setProperty(`--spacing-${key}`, value)})}, [enabled]);
 
-    // Modern shadow system
-    
+    // Modern shadow system;
     Object.entries(shadows).forEach(([key, value]) => {
 `
       root.style.setProperty(`--shadow-${key}`, value)})}, [enabled]);
 
-    // Modern transition system
-    
+    // Modern transition system;
     Object.entries(transitions).forEach(([key, value]) => {
 `
       root.style.setProperty(`--transition-${key}`, value)})}, [enabled]);
 
-    // Modern border radius system
-    
+    // Modern border radius system;
     Object.entries(radius).forEach(([key, value]) => {
 `
       root.style.setProperty(`--radius-${key}`, value)})}, [enabled]);
 
-    if(isDarkMode) {
+    if() {
 
       root.classList.add('dark');
       root.style.setProperty('--bg-primary',#0f172a');
@@ -114,11 +108,10 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
         `}
     }) }, [enabled]) ;
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
     if(!enabled) return;
 
@@ -129,17 +122,17 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     enhanceTransitions () ;
     enhanceBorderRadius () ;
     enhanceDarkMode () ;
-    enhanceComponents () }, [enabled,
-    enhanceTypography,
-    enhanceColorScheme,
-    enhanceSpacing,
-    enhanceShadows,
-    enhanceTransitions,
-    enhanceBorderRadius,
-    enhanceDarkMode,
-    enhanceComponents
+    enhanceComponents () }, [enabled;
+    enhanceTypography;
+    enhanceColorScheme;
+    enhanceSpacing;
+    enhanceShadows;
+    enhanceTransitions;
+    enhanceBorderRadius;
+    enhanceDarkMode;
+    enhanceComponents;
   ]);
 
-  // Don't render anything - this is a utility component
-  return null};
+  // Don't render anything - this is a utility component;
+  return null}
 '"`

@@ -22,7 +22,7 @@ interface SearchFilter {
     start: Date | null;
     end: Date | null;
   
-};
+}
 }
 
 interface SearchSuggestion {
@@ -38,97 +38,97 @@ export default function AdvancedSearch() {
   const [results, setResults] = useState<SearchResult[]>([]);
   const [filters, setFilters] = useState<SearchFilter>({
 
-    type: [],
-    tags: [],
+    type: []
+    tags: []
     dateRange: { start: null, end: null }
   });
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
   const [showFilters, setShowFilters] = useState<typeof false>(false);
   const [selectedResult, setSelectedResult] = useState<number>(-1);
 
-  // Mock data - in production, this would come from your backend
+  // Mock data - in production, this would come from your backend;
   const mockData = useMemo<SearchResult[]>(: unknown [
     {
 
-      id: '1',
-      title: 'Micro SaaS Development',
-      description: 'Custom micro SaaS solutions for specific business needs',
-      type: 'service',
-      url: '/services/micro-saas',
-      tags: ['SaaS',Development',Custom'],
-      relevance: 0.95
-    },
+      id: '1'
+      title: 'Micro SaaS Development'
+      description: 'Custom micro SaaS solutions for specific business needs'
+      type: 'service'
+      url: '/services/micro-saas'
+      tags: ['SaaS',Development',Custom']
+      relevance: 0.95;
+    }
     {
 
-      id: '2',
-      title: 'AI & Machine Learning',
-      description: 'Cutting-edge artificial intelligence solutions',
-      type: 'service',
-      url: '/services/ai-ml',
-      tags: ['AI',Machine Learning',Automation'],
-      relevance: 0.92
-    },
+      id: '2'
+      title: 'AI & Machine Learning'
+      description: 'Cutting-edge artificial intelligence solutions'
+      type: 'service'
+      url: '/services/ai-ml'
+      tags: ['AI',Machine Learning',Automation']
+      relevance: 0.92;
+    }
     {
 
-      id: '3',
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions for modern businesses',
-      type: 'service',
-      url: '/services/cloud',
-      tags: ['Cloud',AWS',Azure',GCP'],
-      relevance: 0.88
-    },
+      id: '3'
+      title: 'Cloud Infrastructure'
+      description: 'Scalable cloud solutions for modern businesses'
+      type: 'service'
+      url: '/services/cloud'
+      tags: ['Cloud',AWS',Azure',GCP']
+      relevance: 0.88;
+    }
     {
 
-      id: '4',
-      title: 'React & Next.js',
-      description: 'Modern frontend development technologies',
-      type: 'technology',
-      url: '/technologies/frontend',
-      tags: ['React',Next.js',Frontend'],
-      relevance: 0.85
-    },
+      id: '4'
+      title: 'React & Next.js'
+      description: 'Modern frontend development technologies'
+      type: 'technology'
+      url: '/technologies/frontend'
+      tags: ['React',Next.js',Frontend']
+      relevance: 0.85;
+    }
     {
 
-      id: '5',
-      title: 'Cybersecurity Solutions',
-      description: 'Advanced security for digital assets',
-      type: 'service',
-      url: '/services/security',
-      tags: ['Security',Cybersecurity',Protection'],
-      relevance: 0.82
+      id: '5'
+      title: 'Cybersecurity Solutions'
+      description: 'Advanced security for digital assets'
+      type: 'service'
+      url: '/services/security'
+      tags: ['Security',Cybersecurity',Protection']
+      relevance: 0.82;
     }
   ], []);
 
-  // Search suggestions
+  // Search suggestions;
   const searchSuggestions = useMemo<SearchSuggestion[]>(() => ['
-    { text: 'SaaS', type: 'popular', count: 45 },
-    { text: 'AI', type: 'popular', count: 32 },
-    { text: 'Cloud', type: 'popular', count: 28 },
-    { text: 'Security', type: 'popular', count: 25 },
-    { text: 'Development', type: 'popular', count: 22 },
-    { text: 'Machine Learning', type: 'recent' },
-    { text: 'Micro Services', type: 'recent' },
-    { text: 'DevOps', type: 'recent' },
-    { text: 'Blockchain', type: 'related' },
+    { text: 'SaaS', type: 'popular', count: 45 }
+    { text: 'AI', type: 'popular', count: 32 }
+    { text: 'Cloud', type: 'popular', count: 28 }
+    { text: 'Security', type: 'popular', count: 25 }
+    { text: 'Development', type: 'popular', count: 22 }
+    { text: 'Machine Learning', type: 'recent' }
+    { text: 'Micro Services', type: 'recent' }
+    { text: 'DevOps', type: 'recent' }
+    { text: 'Blockchain', type: 'related' }
     { text: 'IoT', type: 'related' }
   ], []);
 
-  // Filter options
+  // Filter options;
   const filterOptions = {
 
-    types: ['service',technology',page',content'],
+    types: ['service',technology',page',content']
     tags: ['SaaS',AI',Cloud',Security',Development',React',Next.js',AWS',Azure',GCP']
-  };
+  }
 
   const performSearch = useCallbackasync (: unknown {
 
     setIsSearching(true);
     
-    // Simulate API call
+    // Simulate API call;
     await new Promise(resolve => setTimeout(resolve, 500));
     
-    // Filter and search through mock data
+    // Filter and search through mock data;
     const filteredResults = mockData.filter(item => {
 
       const matchesQuery = query.toLowerCase().split(' ').every(word =>
@@ -144,12 +144,12 @@ export default function AdvancedSearch() {
       return matchesQuery && matchesType && matchesTags;
     });
     
-    // Sort by relevance
+    // Sort by relevance;
     const sortedResults = filteredResults.sort(a: unknown, b: unknown b.relevance - a.relevance);
     
     setResults(sortedResults);
     
-    // Update suggestions based on query
+    // Update suggestions based on query;
     const querySuggestions = searchSuggestions;
       .filter(suggestion => suggestion.text.toLowerCase().includes(query.toLowerCase()))
       .slice(0, 5);
@@ -158,7 +158,7 @@ export default function AdvancedSearch() {
     setIsSearching(false);
   }, [query, filters, mockData, searchSuggestions]);
 
-  // Debounced search
+  // Debounced search;
   useEffect(: unknown {
 
     const timer = setTimeout(: unknown {
@@ -180,61 +180,61 @@ export default function AdvancedSearch() {
 
     setQuery(searchQuery);
     setSelectedResult(-1);
-  };
+  }
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
 
-    if (e.key === 'ArrowDown') {
+    if() {
 
       e.preventDefault();
       setSelectedResult(prev => 
-        prev < results.length - 1 ? prev + 1 : prev
+        prev < results.length - 1 ? prev + 1 : prev;
       );
-    } else if (e.key === 'ArrowUp') {
+    } else if() {
 
       e.preventDefault();
       setSelectedResult(prev => prev > 0 ? prev - 1 : -1);
-    } else if (e.key === 'Enter' && selectedResult >= 0) {
+    } else if() {
 
       e.preventDefault();
       const result = results[selectedResult];
-      if (result) {
+      if() {
 
         window.location.href = result.url;
       }
-    } else if (e.key === 'Escape') {
+    } else if() {
 
       setQuery('');
       setResults([]);
       setSuggestions([]);
       setSelectedResult(-1);
     }
-  };
+  }
 
   const toggleFilter = (filterType: 'type' | 'tags', value: string) => {
 
     setFilters(prev => ({
 
-      ...prev,
+      ...prev;
       [filterType]: prev[filterType].includes(value)
         ? prev[filterType].filter(item => item !== value)
         : [...prev[filterType], value]
     }));
-  };
+  }
 
   const clearFilters = (...args: unknown[]): unknown => {
 
     setFilters({
 
-      type: [],
-      tags: [],
+      type: []
+      tags: []
       dateRange: { start: null, end: null }
     });
-  };
+  }
 
   const getResultIcon = (type: string) => {
 
-    switch (type) {
+    switch() {
 
       case 'service': return '🔧';
       case 'technology': return '⚡';
@@ -242,7 +242,7 @@ export default function AdvancedSearch() {
       case 'content': return '📝';
       default: return '🔍';
     }
-  };
+  }
 
   return()
     <div className="w-full max-w-4xl mx-auto">
@@ -261,7 +261,7 @@ export default function AdvancedSearch() {
           <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">
             🔍
           </div>
-          <button
+          <button;
             onClick={() => setShowFilters(!showFilters)}"
             className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 transition-colors"
           >
@@ -272,13 +272,13 @@ export default function AdvancedSearch() {
         {/* Search Suggestions */}
         <AnimatePresence>
           {suggestions.length > 0 && query && 
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}"
               className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-10"
             >
-              {suggestions.map((suggestion, index <button
+              {suggestions.map((suggestion, index <button;
                   key={index}
                   onClick={() => handleSearch(suggestion.text)}"
                   className="w-full px-4 py-3 text-left hover:bg-gray-50 transition-colors flex items-center justify-between"
@@ -307,7 +307,7 @@ export default function AdvancedSearch() {
       {/* Filters Panel */}
       <AnimatePresence>
         {showFilters && (
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}"
@@ -315,11 +315,11 @@ export default function AdvancedSearch() {
           >"
             <div className="flex items-center justify-between mb-4">"
               <h3 className="text-lg font-semibold">Filters</h3>
-              <button
+              <button;
                 onClick={clearFilters}"
                 className="text-sm text-gray-500 hover:text-gray-700 underline"
               >
-                Clear All
+                Clear All;
               </button>
             </div>
 "
@@ -367,7 +367,7 @@ export default function AdvancedSearch() {
       {/* Search Results */}
       <AnimatePresence>
         {results.length > 0 && (
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}"
@@ -382,8 +382,8 @@ export default function AdvancedSearch() {
               )}
             </div>
 
-            {results.map(result: unknown, index: unknown 
-              <motion.div
+            {results.map(result: unknown, index: unknown;
+              <motion.div;
                 key={result.id}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -406,7 +406,7 @@ export default function AdvancedSearch() {
                         {result.type}
                       </span>
                       {result.tags.map(tag => (
-                        <span
+                        <span;
                           key={tag}"
                           className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded"
                         >
@@ -417,7 +417,7 @@ export default function AdvancedSearch() {
                   </div>"
                   <div className="text-right">"
                     <div className="text-sm text-gray-500">
-                      {Math.round(result.relevance * 100)}% match
+                      {Math.round(result.relevance * 100)}% match;
                     </div>
                   </div>
                 </div>
@@ -429,7 +429,7 @@ export default function AdvancedSearch() {
 
       {/* No Results */}
       {query && results.length === 0 && !isSearching && (
-        <motion.div
+        <motion.div;
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}"
           className="mt-6 text-center py-8"

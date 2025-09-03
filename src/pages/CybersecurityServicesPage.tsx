@@ -4,90 +4,91 @@ import { SEOHead } from '../components/seo/SEOHead';import { Card, CardContent, 
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { 
-  Shield, 
-  Lock, 
-  Eye, 
-  AlertTriangle, 
-  Users, 
-  Globe, 
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Zap,
-  Brain,
-  Network,
-  Server,
-  Database,
-  Key,
-  Monitor,
-  TrendingUp
+  Shield;
+  Lock;
+  Eye;
+  AlertTriangle;
+  Users;
+  Globe;
+  Phone;
+  Mail;
+  MapPin;
+  Star;
+  CheckCircle;
+  ArrowRight;
+  Zap;
+  Brain;
+  Network;
+  Server;
+  Database;
+  Key;
+  Monitor;
+  TrendingUp;
 } from 'lucide-react';
 
 export default function CybersecurityServicesPage() {
+
   const services = [
     {
-      title: "Zero Trust Security Framework",
-      description: "Implement enterprise-grade security with our comprehensive zero trust architecture",
-      features: ["Identity verification", "Continuous monitoring", "Threat detection", "Compliance reporting"],
-      price: "From $3,000/month",
-      icon: Shield
-    },
+      title: "Zero Trust Security Framework"
+      description: "Implement enterprise-grade security with our comprehensive zero trust architecture"
+      features: ["Identity verification", "Continuous monitoring", "Threat detection", "Compliance reporting"]
+      price: "From $3,000/month"
+      icon: Shield;
+    }
     {
-      title: "Advanced Threat Detection",
-      description: "AI-powered security monitoring and real-time threat response",
-      features: ["24/7 monitoring", "AI threat analysis", "Automated response", "Incident management"],
-      price: "From $2,500/month",
-      icon: Eye
-    },
+      title: "Advanced Threat Detection"
+      description: "AI-powered security monitoring and real-time threat response"
+      features: ["24/7 monitoring", "AI threat analysis", "Automated response", "Incident management"]
+      price: "From $2,500/month"
+      icon: Eye;
+    }
     {
-      title: "Security Compliance & Auditing",
-      description: "Ensure your organization meets industry security standards and regulations",
-      features: ["SOC2 compliance", "GDPR compliance", "Regular audits", "Risk assessment"],
-      price: "From $4,000/month",
-      icon: CheckCircle
+      title: "Security Compliance & Auditing"
+      description: "Ensure your organization meets industry security standards and regulations"
+      features: ["SOC2 compliance", "GDPR compliance", "Regular audits", "Risk assessment"]
+      price: "From $4,000/month"
+      icon: CheckCircle;
     }
   ];
 
   const features = [
     {
-      icon: Shield,
-      title: "Enterprise Security",
+      icon: Shield;
+      title: "Enterprise Security"
       description: "Bank-level security with SOC2 compliance and 24/7 monitoring"
-    },
+    }
     {
-      icon: Brain,
-      title: "AI-Powered Protection",
+      icon: Brain;
+      title: "AI-Powered Protection"
       description: "Advanced threat detection using machine learning algorithms"
-    },
+    }
     {
-      icon: Network,
-      title: "Network Security",
+      icon: Network;
+      title: "Network Security"
       description: "Comprehensive network protection and firewall management"
-    },
+    }
     {
-      icon: Users,
-      title: "Access Control",
+      icon: Users;
+      title: "Access Control"
       description: "Secure user authentication and role-based permissions"
     }
   ];
 
   return (
     <>
-      <SEOHead 
+      <SEOHead;
         title="Cybersecurity Services - Zion Tech Group"
         description="Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business."
         keywords={['cybersecurity', 'security services', 'threat detection', 'compliance', 'zero trust']}
         structuredData={{
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "Cybersecurity Services",
-          "description": "Comprehensive cybersecurity solutions",
-          "url": "https://ziontechgroup.com/services/cybersecurity",
+          "@context": "https://schema.org"
+          "@type": "Service"
+          "name": "Cybersecurity Services"
+          "description": "Comprehensive cybersecurity solutions"
+          "url": "https://ziontechgroup.com/services/cybersecurity"
           "provider": {
-            "@type": "Organization",
+            "@type": "Organization"
             "name": "Zion Tech Group"
           }
         }}      />
@@ -105,30 +106,30 @@ export default function CybersecurityServicesPage() {
           <div className="relative z-10 max-w-6xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-red-500 via-orange-500 to-red-600 bg-clip-text text-transparent">
-                Cybersecurity
+                Cybersecurity;
               </span>
               <br />
               <span className="text-white">That Never Sleeps</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-              Protect your business with enterprise-grade cybersecurity solutions. Our AI-powered security 
+              Protect your business with enterprise-grade cybersecurity solutions. Our AI-powered security;
               platform provides 24/7 protection against evolving cyber threats.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
               >
-                Get Security Assessment
+                Get Security Assessment;
                 <ArrowRight className="inline ml-2 h-5 w-5" />
               </Link>
-              <Link
+              <Link;
                 to="/case-studies"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
-                View Case Studies
+                View Case Studies;
               </Link>
             </div>
           </div>
@@ -142,7 +143,7 @@ export default function CybersecurityServicesPage() {
                 Why Choose Our Security?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We combine advanced technology with proven expertise to deliver security that exceeds expectations
+                We combine advanced technology with proven expertise to deliver security that exceeds expectations;
               </p>
             </div>
             
@@ -169,10 +170,10 @@ export default function CybersecurityServicesPage() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Our Security Services
+                Our Security Services;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive cybersecurity solutions designed to protect your business from all angles
+                Comprehensive cybersecurity solutions designed to protect your business from all angles;
               </p>
             </div>
             
@@ -203,7 +204,7 @@ export default function CybersecurityServicesPage() {
                       {service.price}
                     </div>
                     <Button className="w-full bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600">
-                      Get Started
+                      Get Started;
                     </Button>
                   </CardContent>
                 </Card>
@@ -222,18 +223,18 @@ export default function CybersecurityServicesPage() {
               Don't wait until it's too late. Get a comprehensive security assessment and protect your business today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
               >
-                Schedule Security Assessment
+                Schedule Security Assessment;
                 <ArrowRight className="inline ml-2 h-5 w-5" />
               </Link>
-              <Link
+              <Link;
                 to="/case-studies"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
-                View Security Case Studies
+                View Security Case Studies;
               </Link>
             </div>
           </div>

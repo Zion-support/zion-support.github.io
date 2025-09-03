@@ -6,96 +6,96 @@ import Link from 'next/link';
 const AISolutionsPage: NextPage = () => {
   const aiServices = [
     {
-      icon: <Brain className="w-8 h-8" />,
-      title: 'Machine Learning Solutions',
-      description: 'Custom ML models and algorithms tailored to your business needs',
+      icon: <Brain className="w-8 h-8" />
+      title: 'Machine Learning Solutions'
+      description: 'Custom ML models and algorithms tailored to your business needs'
       features: ['Predictive Analytics', 'Pattern Recognition', 'Automated Decision Making', 'Real-time Processing']
-    },
+    }
     {
-      icon: <MessageSquare className="w-8 h-8" />,
-      title: 'Natural Language Processing',
-      description: 'Advanced NLP solutions for text analysis, chatbots, and language understanding',
+      icon: <MessageSquare className="w-8 h-8" />
+      title: 'Natural Language Processing'
+      description: 'Advanced NLP solutions for text analysis, chatbots, and language understanding'
       features: ['Chatbots & Virtual Assistants', 'Sentiment Analysis', 'Text Classification', 'Language Translation']
-    },
+    }
     {
-      icon: <Eye className="w-8 h-8" />,
-      title: 'Computer Vision',
-      description: 'Image and video analysis solutions for automation and insights',
+      icon: <Eye className="w-8 h-8" />
+      title: 'Computer Vision'
+      description: 'Image and video analysis solutions for automation and insights'
       features: ['Object Detection', 'Facial Recognition', 'Quality Control', 'Medical Imaging']
-    },
+    }
     {
-      icon: <Cpu className="w-8 h-8" />,
-      title: 'AI Automation',
-      description: 'Intelligent automation solutions to streamline business processes',
+      icon: <Cpu className="w-8 h-8" />
+      title: 'AI Automation'
+      description: 'Intelligent automation solutions to streamline business processes'
       features: ['Process Automation', 'Workflow Optimization', 'Intelligent Routing', 'Smart Scheduling']
     }
   ];
 
   const industries = [
     {
-      title: 'Healthcare',
-      description: 'AI-powered diagnostic tools, patient monitoring, and treatment optimization',
+      title: 'Healthcare'
+      description: 'AI-powered diagnostic tools, patient monitoring, and treatment optimization'
       icon: <Shield className="w-6 h-6" />
-    },
+    }
     {
-      title: 'Finance',
-      description: 'Fraud detection, risk assessment, and algorithmic trading solutions',
+      title: 'Finance'
+      description: 'Fraud detection, risk assessment, and algorithmic trading solutions'
       icon: <TrendingUp className="w-6 h-6" />
-    },
+    }
     {
-      title: 'Manufacturing',
-      description: 'Predictive maintenance, quality control, and supply chain optimization',
+      title: 'Manufacturing'
+      description: 'Predictive maintenance, quality control, and supply chain optimization'
       icon: <Target className="w-6 h-6" />
-    },
+    }
     {
-      title: 'Retail',
-      description: 'Personalized recommendations, inventory management, and customer insights',
+      title: 'Retail'
+      description: 'Personalized recommendations, inventory management, and customer insights'
       icon: <Users className="w-6 h-6" />
     }
   ];
 
   const process = [
     {
-      step: '01',
-      title: 'Discovery & Analysis',
+      step: '01'
+      title: 'Discovery & Analysis'
       description: 'We analyze your business needs and identify AI opportunities for maximum impact.'
-    },
+    }
     {
-      step: '02',
-      title: 'Solution Design',
+      step: '02'
+      title: 'Solution Design'
       description: 'Our experts design custom AI solutions tailored to your specific requirements.'
-    },
+    }
     {
-      step: '03',
-      title: 'Development & Training',
+      step: '03'
+      title: 'Development & Training'
       description: 'We develop and train AI models using your data and industry best practices.'
-    },
+    }
     {
-      step: '04',
-      title: 'Deployment & Optimization',
+      step: '04'
+      title: 'Deployment & Optimization'
       description: 'We deploy your AI solution and continuously optimize for better performance.'
     }
   ];
 
   const benefits = [
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: 'Increased Efficiency',
+      icon: <Zap className="w-8 h-8" />
+      title: 'Increased Efficiency'
       description: 'Automate repetitive tasks and processes to boost productivity by up to 40%'
-    },
+    }
     {
-      icon: <Target className="w-8 h-8" />,
-      title: 'Better Decision Making',
+      icon: <Target className="w-8 h-8" />
+      title: 'Better Decision Making'
       description: 'Leverage data-driven insights for more accurate and timely business decisions'
-    },
+    }
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: 'Cost Reduction',
+      icon: <TrendingUp className="w-8 h-8" />
+      title: 'Cost Reduction'
       description: 'Reduce operational costs through intelligent automation and optimization'
-    },
+    }
     {
-      icon: <Users className="w-8 h-8" />,
-      title: 'Enhanced Customer Experience',
+      icon: <Users className="w-8 h-8" />
+      title: 'Enhanced Customer Experience'
       description: 'Deliver personalized experiences and faster response times to your customers'
     }
   ];
@@ -109,14 +109,14 @@ const AISolutionsPage: NextPage = () => {
             AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            Transform your business with cutting-edge artificial intelligence solutions that drive innovation, efficiency, and growth
+            Transform your business with cutting-edge artificial intelligence solutions that drive innovation, efficiency, and growth;
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-zion-cyan text-white px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan/90 transition-colors">
-              Get AI Consultation
+              Get AI Consultation;
             </Link>
             <Link href="/case-studies" className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              View Case Studies
+              View Case Studies;
             </Link>
           </div>
         </div>
@@ -128,7 +128,7 @@ const AISolutionsPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Our AI Services</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive AI solutions designed to address your unique business challenges and opportunities
+              Comprehensive AI solutions designed to address your unique business challenges and opportunities;
             </p>
           </div>
           
@@ -160,7 +160,7 @@ const AISolutionsPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Industries We Serve</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our AI solutions are transforming businesses across various industries
+              Our AI solutions are transforming businesses across various industries;
             </p>
           </div>
           
@@ -184,7 +184,7 @@ const AISolutionsPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Our AI Development Process</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A proven methodology for delivering successful AI solutions
+              A proven methodology for delivering successful AI solutions;
             </p>
           </div>
           
@@ -208,7 +208,7 @@ const AISolutionsPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Why Choose Our AI Solutions</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience the transformative power of AI with our comprehensive solutions
+              Experience the transformative power of AI with our comprehensive solutions;
             </p>
           </div>
           
@@ -231,21 +231,21 @@ const AISolutionsPage: NextPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business with AI?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let our AI experts help you identify opportunities and implement solutions that drive real business value
+            Let our AI experts help you identify opportunities and implement solutions that drive real business value;
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-white text-zion-cyan px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
-              Start Your AI Journey
+              Start Your AI Journey;
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link href="/pricing" className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              View Pricing
+              View Pricing;
             </Link>
           </div>
         </div>
       </section>
     </MainLayout>
   );
-};
+}
 
 export default AISolutionsPage;

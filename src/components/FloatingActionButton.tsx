@@ -1,23 +1,23 @@
 
-  Plus,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin,  ArrowUp,
-  X,
-  Settings,
-  HelpCircle,
-  Star,
-  Share2,
-  Bookmark,
-  Download,
+  Plus;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin,  ArrowUp;
+  X;
+  Settings;
+  HelpCircle;
+  Star;
+  Share2;
+  Bookmark;
+  Download;
   Printer'
 } from 'lucide-react';
 
 interface FloatingAction {
 
   id: string;
-  icon: React.ComponentType<{ size?: number; className?: string 
+  icon: React.ComponentType<{ size?: number; className?: string;
 }>;
   label: string;
   action: () => void;
@@ -34,29 +34,28 @@ interface FloatingActionButtonProps {
 
 const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 
-  actions = [],
-  position = 'bottom-right',
-  theme = 'auto',
-  showScrollToTop = true,
-  showContactActions = true,
+  actions = []
+  position = 'bottom-right'
+  theme = 'auto'
+  showScrollToTop = true;
+  showContactActions = true;
   showUtilityActions = true}) => {
 
   const [isExpanded, setIsExpanded] = useState(false);
   const [showScrollButton, setShowScrollButton] = useState(false);
   const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light');
 
-  // Detect theme
+  // Detect theme;
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
 
-    if(theme === 'auto') {
+    if() {
 
-      setCurrentTheme(mediaQuery.matches ? 'dark' : 'light')};
+      setCurrentTheme(mediaQuery.matches ? 'dark' : 'light')}
       '
       mediaQuery.addEventListener('change', handleChange);
       return () => mediaQuery.removeEventListener('change', handleChange)} else {
@@ -64,124 +63,120 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
       setCurrentTheme(theme)}
   }, [theme]) ;
 
-  // Show scroll to top button when scrolled down
+  // Show scroll to top button when scrolled down;
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
     
-    };
+    }
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
 
-  // Default actions
-  const defaultActions: FloatingAction[] = [// Contact actions
+  // Default actions;
+  const defaultActions: FloatingAction[] = [// Contact actions;
     ...(showContactActions ? [
       {
 
-        id: 'contact',
-        icon: MessageCircle,
-        label: 'Contact Us',
+        id: 'contact'
+        icon: MessageCircle;
+        label: 'Contact Us'
         action: () => {
 
-          if(contactSection) {
+          if() {
 
             contactSection.scrollIntoView({ behavior: 'smooth' })}
-        },
-        color: 'bg-blue-500 hover:bg-blue-600',
-        priority: 'high' as const
-      },
-      {
-
-        id: 'phone',
-        icon: Phone,
-        label: 'Call Now',
-        action: () => {
-
-          window.location.href = 'tel:+1234567890'},
-        color: 'bg-green-500 hover:bg-green-600',
-        priority: 'high' as const
-      },
-      {
-
-        id: 'email',
-        icon: Mail,
-        label: 'Send Email',
-        action: () => {
-
-          window.location.href = 'mailto:info@ziontechgroup.com'},
-        color: 'bg-purple-500 hover:bg-purple-600',
-        priority: 'medium' as const
-      },
-      {
-
-        id: 'location',
-        icon: MapPin,
-        label: 'Get Directions',
-        action: () => {
-
-          window.open('https://maps.google.com/?q=Zion+Tech+Group',_blank')},
-        color: 'bg-red-500 hover:bg-red-600',
-        priority: 'medium' as const
+        }
+        color: 'bg-blue-500 hover:bg-blue-600'
+        priority: 'high' as const;
       }
-    ] : []),
-    
-    // Utility actions
+      {
+
+        id: 'phone'
+        icon: Phone;
+        label: 'Call Now'
+        action: () => {
+
+          window.location.href = 'tel:+1234567890'}
+        color: 'bg-green-500 hover:bg-green-600'
+        priority: 'high' as const;
+      }
+      {
+
+        id: 'email'
+        icon: Mail;
+        label: 'Send Email'
+        action: () => {
+
+          window.location.href = 'mailto:info@ziontechgroup.com'}
+        color: 'bg-purple-500 hover:bg-purple-600'
+        priority: 'medium' as const;
+      }
+      {
+
+        id: 'location'
+        icon: MapPin;
+        label: 'Get Directions'
+        action: () => {
+
+          window.open('https://maps.google.com/?q=Zion+Tech+Group',_blank')}
+        color: 'bg-red-500 hover:bg-red-600'
+        priority: 'medium' as const;
+      }
+    ] : [])
+    // Utility actions;
     ...(showUtilityActions ? [{
 
-        id: 'bookmark',
-        icon: Bookmark,
-        label: 'Bookmark Page',
+        id: 'bookmark'
+        icon: Bookmark;
+        label: 'Bookmark Page'
         action: () => {
-          if(navigator.share) {
+          if() {
 
             navigator.share({
 
-              title: document.title,
-              url: window.location.href
+              title: document.title;
+              url: window.location.href;
             })} else {
 
-            // Fallback for browsers without share API
-            
+            // Fallback for browsers without share API;
             navigator.clipboard.writeText(url).then(() => {
               // Show success message'
               showNotification('Page URL copied to clipboard!')})}
-        },
-        color: 'bg-yellow-500 hover:bg-yellow-600',
-        priority: 'low' as const
-      },
+        }
+        color: 'bg-yellow-500 hover:bg-yellow-600'
+        priority: 'low' as const;
+      }
       {
 
-        id: 'share',
-        icon: Share2,
-        label: 'Share Page',
+        id: 'share'
+        icon: Share2;
+        label: 'Share Page'
         action: () => {
-          if(navigator.share) {
+          if() {
 
             navigator.share({
 
-              title: document.title,
-              url: window.location.href
+              title: document.title;
+              url: window.location.href;
             })} else {
 
-            // Fallback for browsers without share API
-            
+            // Fallback for browsers without share API;
             navigator.clipboard.writeText(url).then(() => {
 
               showNotification('Page URL copied to clipboard!')})}
-        },
-        color: 'bg-indigo-500 hover:bg-indigo-600',
-        priority: 'low' as const
-      },
+        }
+        color: 'bg-indigo-500 hover:bg-indigo-600'
+        priority: 'low' as const;
+      }
       {
 
-        id: 'download',
-        icon: Download,
-        label: 'Download Brochure',
+        id: 'download'
+        icon: Download;
+        label: 'Download Brochure'
         action: () => {
           // Create a temporary link to trigger download'
           
@@ -189,73 +184,66 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           link.download = 'Zion-Tech-Group-Brochure.pdf';
           document.body.appendChild(link);
           link.click();
-          document.body.removeChild(link)},
-        color: 'bg-teal-500 hover:bg-teal-600',
-        priority: 'low' as const
-      },
+          document.body.removeChild(link)}
+        color: 'bg-teal-500 hover:bg-teal-600'
+        priority: 'low' as const;
+      }
       {
 
-        id: 'print',
-        icon: Printer,
-        label: 'Print Page',
+        id: 'print'
+        icon: Printer;
+        label: 'Print Page'
         action: () => {
-          window.print()},
-        color: 'bg-gray-500 hover:bg-gray-600',
-        priority: 'low' as const
+          window.print()}
+        color: 'bg-gray-500 hover:bg-gray-600'
+        priority: 'low' as const;
       }
-    ] : []),
-    
-    // Custom actions
-    ...actions,
+    ] : [])
+    // Custom actions;
+    ...actions;
   ];
 
-  // Sort actions by priority
-  
+  // Sort actions by priority;
     return priorityOrder[b.priority] - priorityOrder[a.priority]}) ;
 
-  // Toggle expansion
-  
+  // Toggle expansion;
   }, []) ;
 
-  // Scroll to top
-  
+  // Scroll to top;
   }, []);
 
-  // Show notification
-  
+  // Show notification;
     notification.className="
-      fixed top-4 right-4 z-50 px-4 py-2 bg-green-500 text-white rounded-lg shadow-lg
+      fixed top-4 right-4 z-50 px-4 py-2 bg-green-500 text-white rounded-lg shadow-lg;
       transform translate-x-full transition-transform duration-300 ease-in-out"
     `;
     notification.textContent = message;
 
     document.body.appendChild(notification) ;
 
-    // Animate in
+    // Animate in;
     setTimeout(() => {
 
       notification.classList.remove('translate-x-full')}, 100);
     
-    // Remove after 3 seconds
+    // Remove after 3 seconds;
     setTimeout(() => {
 
       notification.classList.add('translate-x-full');
       setTimeout(() => {
         document.body.removeChild(notification)}, 300)}, 3000)}, []);
 
-  // Get position classes
-  
+  // Get position classes;
       case 'top-right':'
         return 'top-6 right-6';
       case 'top-left':'
         return 'top-6 left-6';
       default:'
         return 'bottom-6 right-6'}
-  };
+  }
 
-  // Get theme classes
-  
-  };
+  // Get theme classes;
+  }
 
   return ()
     <>
@@ -266,16 +254,16 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           {isExpanded && (
             <div className="absolute bottom-full mb-4 space-y-3">
               {sortedActions.map((action, index) => (
-                <div
+                <div;
                   key={action.id}`
                   className={`
-                    flex items-center space-x-3 p-3 rounded-lg shadow-lg transition-all duration-300
-                    ${action.color} text-white transform opacity-0 scale-75
+                    flex items-center space-x-3 p-3 rounded-lg shadow-lg transition-all duration-300;
+                    ${action.color} text-white transform opacity-0 scale-75;
                     hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50`
                   `}
                   style={{
 `
-                    animationDelay: `${index * 100}ms`,
+                    animationDelay: `${index * 100}ms`
                     animation: 'slideInUp 0.3s ease-out forwards'
                   }}
                 >
@@ -287,11 +275,11 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
             </div>) }
 
           {/* Main Button */}
-          <button
+          <button;
             onClick={toggleExpansion}`
             className={`
-              p-4 rounded-full shadow-lg transition-all duration-300
-              ${getThemeClasses()} border-2
+              p-4 rounded-full shadow-lg transition-all duration-300;
+              ${getThemeClasses()} border-2;
               hover:scale-110 focus:outline-none focus:ring-4 focus:ring-zion-cyan/30'
               ${isExpanded ? 'rotate-45' : ''}`
             `}
@@ -305,12 +293,12 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 
       {/* Scroll to Top Button */}
       {showScrollToTop && showScrollButton && (
-        <button
+        <button;
           onClick={scrollToTop}`
           className={`
-            fixed bottom-6 right-6 z-40 p-4 rounded-full shadow-lg transition-all duration-300
-            ${getThemeClasses()} border-2
-            hover:scale-110 focus:outline-none focus:ring-4 focus:ring-zion-cyan/30
+            fixed bottom-6 right-6 z-40 p-4 rounded-full shadow-lg transition-all duration-300;
+            ${getThemeClasses()} border-2;
+            hover:scale-110 focus:outline-none focus:ring-4 focus:ring-zion-cyan/30;
             animate-bounce`
           `}"
           
@@ -355,12 +343,12 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     </>) ;
 type FloatingActionButtonProps = {
   enabled?: boolean;
-};
+}
 
 const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ enabled = true }) => {
   const [open, setOpen] = useState(false);
   if(!enabled) return null;
-  return (<button
+  return (<button;
       onClick={() => setOpen(!open)}
       aria-expanded={open}
       
@@ -368,6 +356,6 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ enabled = t
     >
       <Plus size={24}  />
     </button>
-  )};
+  )}
 
 export default FloatingActionButton;

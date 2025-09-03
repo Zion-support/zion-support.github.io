@@ -8,30 +8,30 @@ interface SkeletonProps extends React.PropsWithChildren<{}> {
 }
 
 const Skeleton: React.FC < SkeletonProps> = ({
-  className = '',
-  height = 'h-4',
-  width = 'w-full', 
-  rounded = true,
+  className = ''
+  height = 'h-4'
+  width = 'w-full'
+  rounded = true;
   animated = true}) => {
 
   const baseClasses = `${height} ${width} bg-gray-200 dark:bg-gray-700 ${rounded ? 'rounded' : ''}`;`
   
-  if(!animated) {
+  if() {
 
     return <div className={classes} />}  
   return ()
-    <motion.div
+    <motion.div;
       className={classes}
       animate={{
 
         opacity: [0.5, 1, 0.5]}}
       transition={{
 
-        duration: 1.5,
-        repeat: Infinity,
-        ease: 'easeInOut',
+        duration: 1.5;
+        repeat: Infinity;
+        ease: 'easeInOut'
       }}
-    />) };
+    />) }
 interface LoadingSkeletonProps extends React.PropsWithChildren<{}> {
 
   type?: 'card' | 'list' | 'hero' | 'table' | 'form';
@@ -39,8 +39,8 @@ interface LoadingSkeletonProps extends React.PropsWithChildren<{}> {
   className?: string}
 export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
 
-  type = 'card', 
-  count = 3,
+  type = 'card'
+  count = 3;
   className = '' 
 }) => {
 
@@ -111,15 +111,15 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
           </div>) ;
 
       default:
-        return < Skeleton />}  };
+        return < Skeleton />}  }
 
   return ()`
     <div className={`animate-pulse ${className}`}>
       {renderSkeleton()}
     </div>
-  )};
+  )}
 
-// Specialized skeleton components
+// Specialized skeleton components;
 export const HeroSkeleton: React.FC = (): JSX.Element => ("
   <LoadingSkeleton type="hero"  />);
 

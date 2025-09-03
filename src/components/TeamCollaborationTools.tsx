@@ -1,6 +1,7 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
+
 interface Comment {
   id: string;
   author: string;
@@ -31,7 +32,7 @@ interface FileItem {
   tags: string[];
   sharedWith: string[];
   permissions: 'view' | 'edit' | 'admin';
-  version: string
+  version: string;
 }
 
 interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {
@@ -44,10 +45,10 @@ interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {
 
 export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
-  showTeamMembers = true,
-showProjects:  true,;
-  showCommunication = true,;
-  showFileSharing = true,;
+  showTeamMembers = true;
+showProjects:  true;
+  showCommunication = true;
+  showFileSharing = true;
   maxItems = 20}) => {;
   const [activeTab, setActiveTab] = useState<'team' | 'projects' | 'communication' | 'files'>('team');
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
@@ -61,54 +62,53 @@ showProjects:  true,;
   const [selectedDepartment, setSelectedDepartment] = useState<any>('all');
   const [selectedStatus, setSelectedStatus] = useState<any>('all');
 
-  // Sample data
+  // Sample data;
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
     const sampleFiles: FileItem[] = [{
 
-        id: '1',
-        name: 'AI_Platform_Architecture.pdf',
-        type: 'document',
-        size: 2.5,
-        uploadedBy: 'Sarah Johnson',
-        uploadDate: '2024-01-15',
-        lastModified: '2024-01-15',
-        tags['Architecture',AI',Documentation'],;
-        sharedWith['Michael Chen',Alex Wong'],;
-        permissions: 'edit',
+        id: '1'
+        name: 'AI_Platform_Architecture.pdf'
+        type: 'document'
+        size: 2.5;
+        uploadedBy: 'Sarah Johnson'
+        uploadDate: '2024-01-15'
+        lastModified: '2024-01-15'
+        tags['Architecture',AI',Documentation']
+        sharedWith['Michael Chen',Alex Wong']
+        permissions: 'edit'
         version: '1.2'
-      },
+      }
       {
 
-        id: '2',
-        name: 'Cloud_Migration_Plan.xlsx',
-        type: 'document',
-        size: 1.8,
-        uploadedBy: 'Michael Chen',
-        uploadDate: '2024-01-14',
-        lastModified: '2024-01-14',
-        tags['Migration',Cloud',Planning'],;
-        sharedWith['Sarah Johnson',David Kim'],;
-        permissions: 'view',
+        id: '2'
+        name: 'Cloud_Migration_Plan.xlsx'
+        type: 'document'
+        size: 1.8;
+        uploadedBy: 'Michael Chen'
+        uploadDate: '2024-01-14'
+        lastModified: '2024-01-14'
+        tags['Migration',Cloud',Planning']
+        sharedWith['Sarah Johnson',David Kim']
+        permissions: 'view'
         version: '2.1'
-      },
+      }
       {
 
-        id: '3',
-        name: 'Security_Audit_Report.docx',
-        type: 'document',
-        size: 3.2,
-        uploadedBy: 'David Kim',
-        uploadDate: '2024-01-13',
-        lastModified: '2024-01-13',
-        tags['Security',Audit',Report'],;
-        sharedWith['Lisa Thompson'],;
-        permissions: 'view',
+        id: '3'
+        name: 'Security_Audit_Report.docx'
+        type: 'document'
+        size: 3.2;
+        uploadedBy: 'David Kim'
+        uploadDate: '2024-01-13'
+        lastModified: '2024-01-13'
+        tags['Security',Audit',Report']
+        sharedWith['Lisa Thompson']
+        permissions: 'view'
         version: '1.0'
 
     ];
@@ -119,23 +119,23 @@ showProjects:  true,;
     setFiles(sampleFiles) }, []) ;
 
   // Get status color and icon'
-      default: return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> }}};
+      default: return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> }}}
   // Get project status color'
       default: return 'text-zinc-400 bg-zinc-400/20'}
-  };
+  }
 
   // Get priority color'
       default: return 'text-zinc-400 bg-zinc-400/20'}
-  };
+  }
 
   // Get file type icon"
-      default: return <File className="w-5 h-5"  />}};
-  // Format file size
+      default: return <File className="w-5 h-5"  />}}
+  // Format file size;
           existingReaction.count += 1} else {
 
           msg.reactions.push({ type: reactionType, count: 1 })}
       }
-      return msg}) ) };
+      return msg}) ) }
 
   return ("
     <div className="w-full max-w-7xl mx-auto p-6">
@@ -153,7 +153,7 @@ showProjects:  true,;
             { id: 'projects', label: 'Projects', icon: <Target className="w-4 h-4"  /> },"
             { id: 'communication', label: 'Communication', icon: <MessageCircle className="w-4 h-4"  /> },"
             { id: 'files', label: 'File Sharing', icon: <FileText className="w-4 h-4"  /> }
-          ].map((tab) => (            <button
+          ].map((tab) => (            <button;
               key={tab.id}
               onClick={() => setActiveTab(tab.id as )}
               className={`flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${activeTab === tab.id'
@@ -169,35 +169,31 @@ showProjects:  true,;
 
       {/* Team Members Tab */}
       {activeTab === 'team' && showTeamMembers && (
-        <motion.div
+        <motion.div;
           initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}"
           className="space-y-6"
 
           {/* Team Stats */}"
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-            <motion.div
+            <motion.div;
               initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
               animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
 "
@@ -205,18 +201,16 @@ showProjects:  true,;
               <div className="text-zinc-400">Total Members</div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
               animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
               transition={{ delay: 0.1 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
@@ -227,18 +221,16 @@ showProjects:  true,;
               <div className="text-zinc-400">Online Now</div>
             </motion.div>;
 
-            <motion.div
+            <motion.div;
               initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
               animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
               transition={{ delay: 0.2 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
@@ -249,18 +241,16 @@ showProjects:  true,;
               <div className="text-zinc-400">Available</div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
               animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
               transition={{ delay: 0.3 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
@@ -275,19 +265,17 @@ showProjects:  true,;
           {/* Team Members Grid */}"
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">;
             {teamMembers.map((member, index)  => (;
-              <motion.div
+              <motion.div;
                 key={member.id}
                 initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
                 animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
                 transition={{ delay: index * 0.1 }}"
                 className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
@@ -327,7 +315,7 @@ showProjects:  true,;
                   <h4 className="text-sm font-medium text-zinc-300 mb-2">Skills</h4>"
                   <div className="flex flex-wrap gap-2">
                     {member.skills.slice(0, 3).map((skill) => (
-                      <span
+                      <span;
                         key={skill}"
                         className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
 
@@ -336,7 +324,7 @@ showProjects:  true,;
                     ))}
                     {member.skills.length > 3 && ("
                       <span className="px-2 py-1 bg-zinc-800/50 text-zinc-400 text-xs rounded-full">
-                        +{member.skills.length-3} more
+                        +{member.skills.length-3} more;
                       </span>) }
                   </div>
                 </div>
@@ -374,35 +362,31 @@ showProjects:  true,;
 
       {/* Projects Tab */}
       {activeTab === 'projects' && showProjects && (
-        <motion.div
+        <motion.div;
           initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}"
           className="space-y-6"
 
           {/* Project Stats */}"
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-            <motion.div
+            <motion.div;
               initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
               animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
 "
@@ -410,18 +394,16 @@ showProjects:  true,;
               <div className="text-zinc-400">Total Projects</div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
               animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
               transition={{ delay: 0.1 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
@@ -432,18 +414,16 @@ showProjects:  true,;
               <div className="text-zinc-400">Active</div>
             </motion.div>;
 
-            <motion.div
+            <motion.div;
               initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
               animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
               transition={{ delay: 0.2 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
@@ -454,24 +434,22 @@ showProjects:  true,;
               <div className="text-zinc-400">Completed</div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
               animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
               transition={{ delay: 0.3 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
 "
               <div className="text-3xl font-bold text-zion-cyan mb-2">
-                ${(projects.reduce((sum, p) => sum + p.budget, 0) / 1000000).toFixed(1)}M
+                ${(projects.reduce((sum, p) => sum + p.budget, 0) / 1000000).toFixed(1)}M;
               </div>"
               <div className="text-zinc-400">Total Budget</div>
             </motion.div>
@@ -480,19 +458,17 @@ showProjects:  true,;
           {/* Projects List */}"
           <div className="space-y-6">;
             {projects.map((project, index) => (;
-              <motion.div
+              <motion.div;
                 key={project.id}
                 initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
                 animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
                 transition={{ delay: index * 0.1 }}"
                 className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300 cursor-pointer"
@@ -536,14 +512,13 @@ showProjects:  true,;
                     <span className="text-sm font-medium text-zion-cyan">{project.progress}%</span>
                   </div>"
                   <div className="w-full bg-zinc-700 rounded-full h-2">
-                    <motion.div
+                    <motion.div;
                       initial={{ width: 0 }}`
                       animate={{ width: `${project.progress}%` }}
                       transition = {
 
-  { duration: 1,
-  delay: index * 0.1
-
+  { duration: 1;
+  delay: index * 0.1;
 }}"
                       className="h-2 bg-zion-cyan rounded-full"
                     />
@@ -573,7 +548,7 @@ showProjects:  true,;
                 {/* Tags */}"
                 <div className="flex flex-wrap gap-2">;
                   {project.tags.map((tag) => (;
-                    <span
+                    <span;
                       key={tag}"
                       className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
 
@@ -585,46 +560,42 @@ showProjects:  true,;
 
           {/* Add Project Button */}"
           <div className="text-center">;
-            <button
+            <button;
               onClick={() => setShowProjectForm(true)}"
               className="px-8 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2 mx-auto"
 "
-              <Plus className="w-5 h-5"  />              Add New Project
+              <Plus className="w-5 h-5"  />              Add New Project;
             </button>
           </div>
         </motion.div>) }
 
       {/* Communication Tab */}
       {activeTab === 'communication' && showCommunication && (
-        <motion.div
+        <motion.div;
           initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}"
           className="space-y-6"
 
           {/* Communication Stats */}"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <motion.div
+            <motion.div;
               initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
               animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
 "
@@ -632,18 +603,16 @@ showProjects:  true,;
               <div className="text-zinc-400">Total Messages</div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
               animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
               transition={{ delay: 0.1 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
@@ -654,18 +623,16 @@ showProjects:  true,;
               <div className="text-zinc-400">Read</div>
             </motion.div>;
 
-            <motion.div
+            <motion.div;
               initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
               animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
               transition={{ delay: 0.2 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
@@ -680,19 +647,17 @@ showProjects:  true,;
           {/* Messages */}"
           <div className="space-y-4">;
             {messages.map((message, index) => (;
-              <motion.div
+              <motion.div;
                 key={message.id}
                 initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
                 animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
                 transition={{ delay: index * 0.1 }}`
                 className={`p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300 ${!message.isRead ? 'border-zion-cyan/50 bg-zion-cyan/5' : ''`
@@ -709,7 +674,7 @@ showProjects:  true,;
                       <span className="text-xs text-zinc-500">{message.timestamp}</span>
                       {!message.isRead && ("
                         <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
-                          New
+                          New;
                         </span>) }
                     </div>
 "
@@ -718,11 +683,11 @@ showProjects:  true,;
                     {/* Reactions */}"
                     <div className="flex items-center gap-2">
                       {message.reactions.map((reaction, idx) => (
-                        <button
+                        <button;
                           key={idx}
                           onClick = {
 
-  () => handleMessageReaction(message.id,
+  () => handleMessageReaction(message.id;
   reaction.type)
 
 }"
@@ -765,7 +730,7 @@ showProjects:  true,;
               </button>
 "
               <button className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2">"
-                <Send className="w-4 h-4"  />                Send
+                <Send className="w-4 h-4"  />                Send;
               </button>
             </div>
           </div>
@@ -773,35 +738,31 @@ showProjects:  true,;
 
       {/* File Sharing Tab */}
       {activeTab === 'files' && showFileSharing && (
-        <motion.div
+        <motion.div;
           initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}"
           className="space-y-6"
 
           {/* File Stats */}"
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-            <motion.div
+            <motion.div;
               initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
               animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
 "
@@ -809,18 +770,16 @@ showProjects:  true,;
               <div className="text-zinc-400">Total Files</div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
               animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
               transition={{ delay: 0.1 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
@@ -831,18 +790,16 @@ showProjects:  true,;
               <div className="text-zinc-400">Documents</div>
             </motion.div>;
 
-            <motion.div
+            <motion.div;
               initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
               animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
               transition={{ delay: 0.2 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
@@ -853,18 +810,16 @@ showProjects:  true,;
               <div className="text-zinc-400">Images</div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
               animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
               transition={{ delay: 0.3 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
@@ -879,19 +834,17 @@ showProjects:  true,;
           {/* Files List */}"
           <div className="space-y-4">;
             {files.map((file, index) => (;
-              <motion.div
+              <motion.div;
                 key={file.id}
                 initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
                 animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
                 transition={{ delay: index * 0.1 }}"
                 className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
@@ -913,7 +866,7 @@ showProjects:  true,;
                     {/* Tags */}"
                     <div className="flex flex-wrap gap-2 mt-2">
                       {file.tags.map((tag) => (
-                        <span
+                        <span;
                           key={tag}"
                           className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
 
@@ -942,10 +895,10 @@ showProjects:  true,;
               <FileText className="w-16 h-16 text-zinc-600 mx-auto mb-4"  />"
               <h3 className="text-lg font-medium text-zinc-300 mb-2">Upload Files</h3>"
               <p className="text-zinc-400 mb-4">Drag and drop files here or click to browse</p>"              <button className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">
-                Choose Files
+                Choose Files;
               </button>
             </div>;
           </div>;
-        </motion.div>;) };
-    </div>;) };
+        </motion.div>;) }
+    </div>;) }
 '"`

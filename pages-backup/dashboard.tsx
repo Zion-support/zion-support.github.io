@@ -2,7 +2,7 @@ import Head from "next/head"
 import React, { useState } from "react"
 const Head = dynamic(() => import("next/head"), { ssr: false })
 }
-  Code,
+  Code;
   Cloud} from "lucide-react"
 
 export default function Dashboard() {"
@@ -11,19 +11,19 @@ export default function Dashboard() {"
   const stats = []
 
   const recentProjects = []
-},
+}
     {
       id: 2,"
       name: "Cloud Migration","
-      status: "Planning",
+      status: "Planning"
       progress: 25,"
       dueDate: "2024-03-01","
       team: ["Sarah Wilson", "David Brown"]
-},
+}
     {
       id: 3,"
       name: "Mobile App Development","
-      status: "Completed",
+      status: "Completed"
       progress: 100,"
       dueDate: "2024-01-30","
       team: ["Alex Chen", "Lisa Garcia"]
@@ -72,9 +72,9 @@ export default function Dashboard() {"
               </div>
         </header>
 "
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">,
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {/* comment */}"
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-8">,
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {stats.map((stat, index) => (
               <motion.div,"
 key="{index}""
@@ -97,9 +97,9 @@ key="{index}""
 
           </div>
 "
-          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">,
+          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
             {/* comment */}"
-            <div className="lg: col-span-2 space-y-8">,
+            <div className="lg: col-span-2 space-y-8">
               {/* comment */}
 
               <motion.div,"
@@ -108,12 +108,12 @@ initial="{{" opacity: 0, y: 20 }}"
                 className="bg-white rounded-xl shadow-sm p-6"
               >"
                 <h2 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h2>"
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-4">,
+                <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
                   {quickActions.map((action, index) => ("
                     <a key="{index}""
                       href="{action.href}""
                       className="{"flex" items-center p-4 border border-gray-200 rounded-lg hover: border-gray-300 transition-colors"
-                    >",
+                    >"
                       <div className="{"w-10" h-10 bg-gradient-to-r ${action.color} rounded-lg flex items-center justify-center mr-4"}>"
                         <action.icon className=""w-5" h-5 text-white"} />
                       </div>
@@ -138,12 +138,12 @@ initial="{{" opacity: 0, y: 20 }}"
                 <div className="flex items-center justify-between mb-4">"
                   <h2 className="text-lg font-semibold text-gray-900">Recent Projects</h2>"
                   <a href="/projects" className="text-blue-600 hover: text-blue-500 text-sm font-medium">
-                    View all,
+                    View all;
                   </a>
                 </div>
                 "
                 <div className="space-y-4">
-                  {recentProjects.map((project) => (",
+                  {recentProjects.map((project) => ("
                     <div key="{project.id}" className="border border-gray-200 rounded-lg p-4">"
                       <div className="flex items-center justify-between mb-2">"
                         <h3 className="{"font-medium" text-gray-900">{project.name}</h3>"
@@ -187,12 +187,12 @@ initial="{{" opacity: 0, y: 20 }}"
                 className="bg-white rounded-xl shadow-sm p-6"
               >"
                 <h2 className="text-lg font-semibold text-gray-900 mb-4">Our Services</h2>"
-                <div className="grid grid-cols-1 md: grid-cols-3 gap-4">,
+                <div className="grid grid-cols-1 md: grid-cols-3 gap-4">
                   {services.map((service, index) => ("
                     <a key="{index}""
                       href="{service.href}""
                       className="{"flex" flex-col items-center p-4 border border-gray-200 rounded-lg hover: border-gray-300 transition-colors text-center"
-                    >",
+                    >"
                       <div className="{"w-12" h-12 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-3"}>"
                         <service.icon className=""w-6" h-6 text-white"} />
                       </div>"
@@ -232,10 +232,10 @@ initial="{{" opacity: 0, x: 20 }}"
 
                 </div>"
                 <a href="/notifications" className="block text-center text-blue-600 hover: text-blue-500 text-sm font-medium mt-4">
-                  View all notifications,
+                  View all notifications;
                 </a>
               </motion.div>
-,
+
               {/* comment */}
 
               <motion.div,"
@@ -260,7 +260,7 @@ initial="{{" opacity: 0, x: 20 }}"
                       <Calendar className="w-4 h-4 text-green-600"  />
                     </div>
                     <div>"
-                      <h4 className="text-sm font-medium text-gray-900">Project Review</h4>",
+                      <h4 className="text-sm font-medium text-gray-900">Project Review</h4>"
                       <p className="text-xs text-gray-600">Tomorrow, 10: 00 AM</p>
                     </div>
                   "
@@ -269,14 +269,14 @@ initial="{{" opacity: 0, x: 20 }}"
                       <Calendar className="w-4 h-4 text-purple-600"  />
                     </div>
                     <div>"
-                      <h4 className="text-sm font-medium text-gray-900">Client Presentation</h4>",
+                      <h4 className="text-sm font-medium text-gray-900">Client Presentation</h4>"
                       <p className="text-xs text-gray-600">Friday, 3: 00 PM</p>
                     </div>
                 </div>"
                 <a href="/calendar" className="block text-center text-blue-600 hover:text-blue-500 text-sm font-medium mt-4">
-                  View calendar,
+                  View calendar;
                 </a>
               </motion.div>
             </div>
-    </>",
+    </>"
   )}

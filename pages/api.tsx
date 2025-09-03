@@ -4,29 +4,30 @@ import Link from 'next/link';
 import { Code, Key, Globe, Database, Shield, Zap, ArrowRight, Copy, CheckCircle, ExternalLink, Clock, Users } from 'lucide-react';
 
 export default function API() {
+
   const apiEndpoints = [
     {
-      name: 'Authentication',
-      method: 'POST',
-      endpoint: '/api/auth/login',
-      description: 'Authenticate users and get access tokens',
-      parameters: ['email', 'password'],
-      response: 'JWT token',
-},
+      name: 'Authentication'
+      method: 'POST'
+      endpoint: '/api/auth/login'
+      description: 'Authenticate users and get access tokens'
+      parameters: ['email', 'password']
+      response: 'JWT token'
+}
     {
-      name: 'User Profile',
-      method: 'GET',
-      endpoint: '/api/user/profile',
-      description: 'Get user profile information',
-      parameters: ['token'],
+      name: 'User Profile'
+      method: 'GET'
+      endpoint: '/api/user/profile'
+      description: 'Get user profile information'
+      parameters: ['token']
       response: 'User profile data'
-    },
+    }
     {
-      name: 'Services List',
-      method: 'GET',
-      endpoint: '/api/services',
-      description: 'Get list of available services',
-      parameters: ['category', 'limit'],
+      name: 'Services List'
+      method: 'GET'
+      endpoint: '/api/services'
+      description: 'Get list of available services'
+      parameters: ['category', 'limit']
       response: 'Array of services'
     }
   ];
@@ -47,7 +48,7 @@ export default function API() {
               API <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400>Documentation</span>
             </h1>
             <p className=text-xl text-gray-200 max-w-2xl mx-auto">
-              Comprehensive API documentation for integrating with Zion Tech Group services
+              Comprehensive API documentation for integrating with Zion Tech Group services;
             </p>
           </div>
         </div>
@@ -134,10 +135,10 @@ export default function API() {
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center>
                 <Link href=/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300>
-                  Get API Key
+                  Get API Key;
                   <ArrowRight className=ml-2 w-5 h-5" />
                 </Link>
-                <Link href="/docs className=inline-flex items-center px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300">                  View Full Documentation
+                <Link href="/docs className=inline-flex items-center px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300">                  View Full Documentation;
                   <ExternalLink className="ml-2 w-5 h-5" />
                 </Link>
               </div>

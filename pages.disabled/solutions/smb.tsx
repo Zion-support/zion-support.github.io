@@ -6,73 +6,73 @@ import Link from 'next/link';
 const SMBPage: NextPage = () => {
   const smbServices = [
     {
-      icon: <Store className="w-8 h-8" />,
-      title: 'Business Management',
-      description: 'Streamline operations with integrated business management solutions',
+      icon: <Store className="w-8 h-8" />
+      title: 'Business Management'
+      description: 'Streamline operations with integrated business management solutions'
       features: ['CRM Systems', 'Inventory Management', 'Financial Tracking', 'Customer Support']
-    },
+    }
     {
-      icon: <Globe className="w-8 h-8" />,
-      title: 'Digital Presence',
-      description: 'Build a strong online presence with professional websites and marketing',
+      icon: <Globe className="w-8 h-8" />
+      title: 'Digital Presence'
+      description: 'Build a strong online presence with professional websites and marketing'
       features: ['Website Development', 'SEO Optimization', 'Social Media', 'Online Marketing']
-    },
+    }
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: 'IT Security',
-      description: 'Protect your business with affordable cybersecurity solutions',
+      icon: <Shield className="w-8 h-8" />
+      title: 'IT Security'
+      description: 'Protect your business with affordable cybersecurity solutions'
       features: ['Data Backup', 'Security Monitoring', 'Employee Training', 'Compliance']
-    },
+    }
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: 'Automation',
-      description: 'Automate routine tasks to focus on growing your business',
+      icon: <Zap className="w-8 h-8" />
+      title: 'Automation'
+      description: 'Automate routine tasks to focus on growing your business'
       features: ['Workflow Automation', 'Email Marketing', 'Scheduling', 'Reporting']
     }
   ];
 
   const benefits = [
     {
-      icon: <DollarSign className="w-8 h-8" />,
-      title: 'Cost-Effective',
+      icon: <DollarSign className="w-8 h-8" />
+      title: 'Cost-Effective'
       description: 'Affordable solutions designed specifically for small and medium businesses'
-    },
+    }
     {
-      icon: <Users className="w-8 h-8" />,
-      title: 'Personalized Support',
+      icon: <Users className="w-8 h-8" />
+      title: 'Personalized Support'
       description: 'Dedicated support team that understands your business needs'
-    },
+    }
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: 'Scalable Growth',
+      icon: <TrendingUp className="w-8 h-8" />
+      title: 'Scalable Growth'
       description: 'Solutions that grow with your business as you expand'
-    },
+    }
     {
-      icon: <Target className="w-8 h-8" />,
-      title: 'Quick Implementation',
+      icon: <Target className="w-8 h-8" />
+      title: 'Quick Implementation'
       description: 'Fast deployment to get you up and running quickly'
     }
   ];
 
   const industries = [
     {
-      title: 'Retail',
-      description: 'Point-of-sale systems, inventory management, and customer analytics',
+      title: 'Retail'
+      description: 'Point-of-sale systems, inventory management, and customer analytics'
       icon: <Store className="w-6 h-6" />
-    },
+    }
     {
-      title: 'Professional Services',
-      description: 'Client management, project tracking, and billing automation',
+      title: 'Professional Services'
+      description: 'Client management, project tracking, and billing automation'
       icon: <Users className="w-6 h-6" />
-    },
+    }
     {
-      title: 'Healthcare',
-      description: 'Patient management, appointment scheduling, and compliance',
+      title: 'Healthcare'
+      description: 'Patient management, appointment scheduling, and compliance'
       icon: <Shield className="w-6 h-6" />
-    },
+    }
     {
-      title: 'Manufacturing',
-      description: 'Production tracking, quality control, and supply chain management',
+      title: 'Manufacturing'
+      description: 'Production tracking, quality control, and supply chain management'
       icon: <Target className="w-6 h-6" />
     }
   ];
@@ -83,17 +83,17 @@ const SMBPage: NextPage = () => {
       <section className="bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">SMB</span> Solutions
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">SMB</span> Solutions;
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            Technology solutions designed specifically for small and medium businesses to drive growth and efficiency
+            Technology solutions designed specifically for small and medium businesses to drive growth and efficiency;
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-zion-cyan text-white px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan/90 transition-colors">
-              Get SMB Consultation
+              Get SMB Consultation;
             </Link>
             <Link href="/pricing" className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              View Pricing
+              View Pricing;
             </Link>
           </div>
         </div>
@@ -105,7 +105,7 @@ const SMBPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">SMB-Focused Services</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Affordable technology solutions tailored for small and medium businesses
+              Affordable technology solutions tailored for small and medium businesses;
             </p>
           </div>
           
@@ -137,7 +137,7 @@ const SMBPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Industries We Serve</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Specialized solutions for various SMB industries
+              Specialized solutions for various SMB industries;
             </p>
           </div>
           
@@ -161,7 +161,7 @@ const SMBPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Why Choose Our SMB Solutions</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Designed specifically for small and medium businesses
+              Designed specifically for small and medium businesses;
             </p>
           </div>
           
@@ -184,21 +184,21 @@ const SMBPage: NextPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Grow Your SMB?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let our experts help you implement the right technology solutions for your business
+            Let our experts help you implement the right technology solutions for your business;
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
-              Get Started Today
+              Get Started Today;
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link href="/pricing" className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              View Pricing
+              View Pricing;
             </Link>
           </div>
         </div>
       </section>
     </MainLayout>
   );
-};
+}
 
 export default SMBPage;

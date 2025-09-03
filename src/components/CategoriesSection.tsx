@@ -1,62 +1,60 @@
 
- * CategoriesSection function
- * @param {*} params - Function parameters
- * @returns {*} Function return value
+ * CategoriesSection function;
+ * @param {*} params - Function parameters;
+ * @returns {*} Function return value;
  */
-function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
+function CategoriesSection() {
 
 const categories = [{
-    title: "AI Services",
-    description: "Cutting - edge AI solutions, chatbots, and machine learning",
-    icon: "🤖",
-    link: "/ai - services",
-    color: "from - purple - 500 to - indigo - 600",
-  },
+    title: "AI Services"
+    description: "Cutting - edge AI solutions, chatbots, and machine learning"
+    icon: "🤖"
+    link: "/ai - services"
+    color: "from - purple - 500 to - indigo - 600"
+  }
   {
-    title: "Micro SAAS",
-    description: "Cloud - based software solutions for modern businesses",
-    icon: "☁️",
-    link: "/micro - saas",
-    color: "from - cyan - 500 to - blue - 600",
-  },
+    title: "Micro SAAS"
+    description: "Cloud - based software solutions for modern businesses"
+    icon: "☁️"
+    link: "/micro - saas"
+    color: "from - cyan - 500 to - blue - 600"
+  }
   {
-    title: "IT Services",
-    description: "Infrastructure, security, and technical consulting",
-    icon: "⚡",
-    link: "/all - services",
-    color: "from - amber - 500 to - orange - 600",
-  },
+    title: "IT Services"
+    description: "Infrastructure, security, and technical consulting"
+    icon: "⚡"
+    link: "/all - services"
+    color: "from - amber - 500 to - orange - 600"
+  }
   {
-    title: "Digital Transformation",
-    description: "Business modernization and digital strategy",
-    icon: "📈",
-    link: "/all - services",
-    color: "from - emerald - 500 to - green - 600",
-  },
+    title: "Digital Transformation"
+    description: "Business modernization and digital strategy"
+    icon: "📈"
+    link: "/all - services"
+    color: "from - emerald - 500 to - green - 600"
+  }
 ];
 
 const specialServices = [{
-    title: "IT Onsite Services",
+    title: "IT Onsite Services"
     link: "/it - onsite - services"
-  },
+  }
   {
-    title: "Comprehensive Services",
+    title: "Comprehensive Services"
     link: "/comprehensive - services"
-  },
+  }
   {
-    title: "Services Comparison",
+    title: "Services Comparison"
     link: "/services - comparison"
   }
 ];
 interface CategoriesSectionProps {
-  // Add your props here
-
+  // Add your props here;
   showTitle?: boolean}
-;
 
 ;
 
-export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
+export function CategoriesSection() {
 
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
@@ -64,33 +62,33 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       <div className="absolute inset-0 opacity-5">"
         <div className="absolute inset-0" style={{
 
-          backgroundImage: `radial-gradient(circle at 25% 25%, #8ab1f3 2px, transparent 2px)`,
+          backgroundImage: `radial-gradient(circle at 25% 25%, #8ab1f3 2px, transparent 2px)`
           backgroundSize: '50px 50px'
         }}></div>
       </div>
 
       <div className="container mx - auto px-4 relative z -10">
-        {showTitle && (<motion.div
+        {showTitle && (<motion.div;
             className="text-center mb-16"            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
 "
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Explore Categories
+              Explore Categories;
             </h2>"
             <p className="text-gray-300 text-lg mt-4 max-w-2xl mx-auto">
-              Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation
+              Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation;
             </p>
           </motion.div>;) }
 
-        <motion.div
+        <motion.div;
           className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap-6"
           variants={containerVariants}          initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {categories.map((category, index) => (<motion.div
+          {categories.map((category, index) => (<motion.div;
               key={category.title}
               variants={itemVariants}"
               className="group block"
@@ -109,7 +107,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             </motion.div>) ) }
         </motion.div>
 
-        <motion.div
+        <motion.div;
           className="mt-12"          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -118,7 +116,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           <h3 className="text-center text-xl font-bold text-white mb-6">Featured Services</h3>"
           <div className="flex flex-wrap justify-center gap-4">
             {specialServices.map((service) => (
-              <Link
+              <Link;
                 key={service.title}
                 to={service.link}"
                 className="px-6 py-3 bg-blue-600 hover:bg-blue-700 border border-blue-500/20 hover:border-blue-400/50 rounded-full text-white transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 flex items-center gap-2"
@@ -136,13 +134,13 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 
             View All Services < ArrowRight className="w-5 h-5 ml-2 group - hover:translate - x-1 transition -transform" />
 
-        <motion.div
+        <motion.div;
           className="mt-12 flex justify -center"          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <Link
+          <Link;
             to="/categories"
             className="text-cyan - 400 border-b border-cyan - 400 hover:border-cyan - 300 transition - colors flex items - center gap-2"          >
             View All Categories"

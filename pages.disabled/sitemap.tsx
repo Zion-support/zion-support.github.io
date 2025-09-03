@@ -7,69 +7,69 @@ import { Map, ExternalLink, Download } from 'lucide-react';
 const Sitemap: NextPage = () => {
   const siteStructure = [
     {
-      title: 'Main Pages',
+      title: 'Main Pages'
       pages: [
-        { name: 'Home', url: '/', description: 'Main homepage' },
-        { name: 'About Us', url: '/about', description: 'Learn about Zion Tech Group' },
-        { name: 'Contact', url: '/contact', description: 'Get in touch with us' },
+        { name: 'Home', url: '/', description: 'Main homepage' }
+        { name: 'About Us', url: '/about', description: 'Learn about Zion Tech Group' }
+        { name: 'Contact', url: '/contact', description: 'Get in touch with us' }
         { name: 'Careers', url: '/careers', description: 'Join our team' }
       ]
-    },
+    }
     {
-      title: 'Services',
+      title: 'Services'
       pages: [
-        { name: 'All Services', url: '/services', description: 'Overview of all our services' },
-        { name: 'Micro SaaS', url: '/services/micro-saas', description: 'Micro SaaS solutions' },
-        { name: 'IT Services', url: '/services/it-services', description: 'IT consulting and services' },
+        { name: 'All Services', url: '/services', description: 'Overview of all our services' }
+        { name: 'Micro SaaS', url: '/services/micro-saas', description: 'Micro SaaS solutions' }
+        { name: 'IT Services', url: '/services/it-services', description: 'IT consulting and services' }
         { name: 'AI Services', url: '/services/ai-services', description: 'Artificial Intelligence solutions' }
       ]
-    },
+    }
     {
-      title: 'Solutions',
+      title: 'Solutions'
       pages: [
-        { name: 'All Solutions', url: '/solutions', description: 'Overview of all our solutions' },
+        { name: 'All Solutions', url: '/solutions', description: 'Overview of all our solutions' }
         { name: 'Enterprise Solutions', url: '/solutions/enterprise', description: 'Enterprise-grade solutions' }
       ]
-    },
+    }
     {
-      title: 'Resources',
+      title: 'Resources'
       pages: [
-        { name: 'Blog', url: '/blog', description: 'Technology insights and news' },
-        { name: 'Case Studies', url: '/case-studies', description: 'Success stories and case studies' },
-        { name: 'Webinars', url: '/webinars', description: 'Expert-led webinars and training' },
-        { name: 'Documentation', url: '/documentation', description: 'Technical documentation and guides' },
-        { name: 'API Reference', url: '/api', description: 'Complete API documentation' },
-        { name: 'Help Center', url: '/help', description: 'Support and help resources' },
+        { name: 'Blog', url: '/blog', description: 'Technology insights and news' }
+        { name: 'Case Studies', url: '/case-studies', description: 'Success stories and case studies' }
+        { name: 'Webinars', url: '/webinars', description: 'Expert-led webinars and training' }
+        { name: 'Documentation', url: '/documentation', description: 'Technical documentation and guides' }
+        { name: 'API Reference', url: '/api', description: 'Complete API documentation' }
+        { name: 'Help Center', url: '/help', description: 'Support and help resources' }
         { name: 'FAQ', url: '/faq', description: 'Frequently asked questions' }
       ]
-    },
+    }
     {
-      title: 'Company',
+      title: 'Company'
       pages: [
-        { name: 'Partners', url: '/partners', description: 'Our strategic partners' },
+        { name: 'Partners', url: '/partners', description: 'Our strategic partners' }
         { name: 'System Status', url: '/status', description: 'Real-time system status' }
       ]
-    },
+    }
     {
-      title: 'Legal & Privacy',
+      title: 'Legal & Privacy'
       pages: [
-        { name: 'Privacy Policy', url: '/privacy', description: 'How we protect your privacy' },
-        { name: 'Terms of Service', url: '/terms', description: 'Terms and conditions' },
-        { name: 'Cookie Policy', url: '/cookies', description: 'How we use cookies' },
-        { name: 'Data Protection', url: '/data-protection', description: 'Data protection measures' },
+        { name: 'Privacy Policy', url: '/privacy', description: 'How we protect your privacy' }
+        { name: 'Terms of Service', url: '/terms', description: 'Terms and conditions' }
+        { name: 'Cookie Policy', url: '/cookies', description: 'How we use cookies' }
+        { name: 'Data Protection', url: '/data-protection', description: 'Data protection measures' }
         { name: 'Accessibility', url: '/accessibility', description: 'Digital accessibility commitment' }
       ]
     }
   ];
 
   const quickLinks = [
-    { name: 'XML Sitemap', url: '/sitemap.xml', type: 'xml' },
-    { name: 'RSS Feed', url: '/rss.xml', type: 'rss' },
+    { name: 'XML Sitemap', url: '/sitemap.xml', type: 'xml' }
+    { name: 'RSS Feed', url: '/rss.xml', type: 'rss' }
     { name: 'Robots.txt', url: '/robots.txt', type: 'txt' }
   ];
 
   return (
-    <MainLayout
+    <MainLayout;
       title="Sitemap - Zion Tech Group"
       description="Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category."
       keywords="sitemap, website structure, navigation, pages, services, resources"
@@ -96,7 +96,7 @@ const Sitemap: NextPage = () => {
               <h2 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h2>
               <div className="flex flex-wrap gap-4">
                 {quickLinks.map((link, index) => (
-                  <a
+                  <a;
                     key={index}
                     href={link.url}
                     className="flex items-center space-x-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
@@ -125,7 +125,7 @@ const Sitemap: NextPage = () => {
                     <ul className="space-y-3">
                       {section.pages.map((page, pageIndex) => (
                         <li key={pageIndex}>
-                          <Link
+                          <Link;
                             href={page.url}
                             className="block p-3 rounded-lg hover:bg-gray-50 transition-colors group"
                           >
@@ -196,17 +196,17 @@ const Sitemap: NextPage = () => {
                 If you can't find what you're looking for, our team is here to help.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
+                <Link;
                   href="/contact"
                   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Contact Support
+                  Contact Support;
                 </Link>
-                <Link
+                <Link;
                   href="/help"
                   className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
-                  Help Center
+                  Help Center;
                 </Link>
               </div>
             </div>
@@ -228,7 +228,7 @@ const Sitemap: NextPage = () => {
           >
             <div className="relative w-full max-w-md">
               <Search className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
-              <input
+              <input;
                 type="text"
                 placeholder="Search pages..."
                 className="w-full pl-10 pr-4 py-3 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -252,7 +252,7 @@ const Sitemap: NextPage = () => {
             className="space-y-16"
           >
             {categories.map((category, categoryIndex) => (
-              <motion.div
+              <motion.div;
                 key={category.name}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -264,7 +264,7 @@ const Sitemap: NextPage = () => {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {category.pages.map((page, pageIndex) => (
-                    <motion.div
+                    <motion.div;
                       key={page.url}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -282,7 +282,7 @@ const Sitemap: NextPage = () => {
                         </div>
                         <div className="flex items-center justify-between">
                           <a href={page.url} className="text-blue-400 hover:text-blue-300 text-sm font-medium flex items-center">
-                            Visit Page
+                            Visit Page;
                             <ArrowRight className="w-4 h-4 ml-1" />
                           </a>
                           <Badge variant="secondary" className="text-xs">{page.url}</Badge>
@@ -321,7 +321,7 @@ const Sitemap: NextPage = () => {
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -334,7 +334,7 @@ const Sitemap: NextPage = () => {
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -347,7 +347,7 @@ const Sitemap: NextPage = () => {
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -375,11 +375,11 @@ const Sitemap: NextPage = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity">
                 <Phone className="w-5 h-5 mr-2" />
-                Contact Support
+                Contact Support;
               </a>
               <a href="/services" className="inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors">
                 <Briefcase className="w-5 h-5 mr-2" />
-                Browse Services
+                Browse Services;
               </a>
             </div>
           </motion.div>
@@ -387,6 +387,6 @@ const Sitemap: NextPage = () => {
       </section>
     </div>
   );
-};
+}
 
 export default SitemapPage;

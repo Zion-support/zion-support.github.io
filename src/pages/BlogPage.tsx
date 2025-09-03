@@ -15,7 +15,7 @@ const BlogPage: React.FC = () => {
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Coming Soon</h2>
             <p className="text-gray-600">
-              We're working on bringing you valuable content about technology trends, 
+              We're working on bringing you valuable content about technology trends;
               best practices, and industry insights. Check back soon!
             </p>
           </div>
@@ -23,6 +23,6 @@ const BlogPage: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 
 export default BlogPage;

@@ -5,7 +5,8 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../src/components/PerformanceMonitor';
 import '../styles/globals.css';
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App() {
+
   return (
     <ErrorBoundary>
       <Head>

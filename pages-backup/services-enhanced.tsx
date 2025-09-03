@@ -4,45 +4,45 @@ const Component = () => {
   const description = "Comprehensive AI, IT, and Micro SaaS solutions for modern businesses.
   const mainServices = [],"
       deliveryTime: "2-4 weeks","
-      href: "/ai-services"},
+      href: "/ai-services"}
     {"
       id: "cloud","
       title: "Cloud Platforms","
-      subtitle: "Scalable Infrastructure",
+      subtitle: "Scalable Infrastructure"
       icon: Cloud,"
       color: "green","
-      description: "Build scalable, resilient cloud infrastructure that grows with your business.",
-      features: [",
+      description: "Build scalable, resilient cloud infrastructure that grows with your business."
+      features: ["
         "Serverless and Kubernetes","
         "Data pipelines and ML ops","
         "FinOps and SRE practices","
         "Multi-cloud architecture"
       ],"
       deliveryTime: "4-8 weeks","
-      href: "/cloud-services"},
+      href: "/cloud-services"}
     {"
       id: "cybersecurity","
       title: "Cybersecurity","
-      subtitle: "Zero-Trust Security",
+      subtitle: "Zero-Trust Security"
       icon: Shield,"
       color: "purple","
-      description: "Protect your business with enterprise-grade security frameworks and compliance automation.",
-      features: [",
+      description: "Protect your business with enterprise-grade security frameworks and compliance automation."
+      features: ["
         "Zero-trust architecture","
         "Compliance automation","
         "Incident response","
         "Security audits"
       ],"
       deliveryTime: "3-6 weeks","
-      href: "/cybersecurity"},
+      href: "/cybersecurity"}
     {"
       id: "saas","
       title: "Micro SaaS","
-      subtitle: "Custom Solutions",
+      subtitle: "Custom Solutions"
       icon: Code,"
       color: "orange","
-      description: "Custom software solutions tailored to your specific business needs and workflows.",
-      features: [",
+      description: "Custom software solutions tailored to your specific business needs and workflows."
+      features: ["
         "Custom web applications","
         "API development","
         "Integration services","
@@ -54,42 +54,42 @@ const Component = () => {
   ]
 
   const newServices = [],"
-      href: "/services/ai-email-responder"},
+      href: "/services/ai-email-responder"}
     {"
       title: "Mobile Survey Tool","
-      description: "Create engaging, mobile-optimized surveys that adapt based on user responses. Increase completion rates by 65%.",
+      description: "Create engaging, mobile-optimized surveys that adapt based on user responses. Increase completion rates by 65%."
       icon: Smartphone,"
       color: "green","
       price: "From $20/month","
       features: ["Mobile-first design", "Adaptive question flow", "Offline data collection", "Real-time analytics"],"
-      href: "/services/mobile-survey-tool"},
+      href: "/services/mobile-survey-tool"}
     {"
       title: "AI Content Creation Tools","
-      description: "Accelerate content production with AI-powered writing, image generation, and video creation tools.",
+      description: "Accelerate content production with AI-powered writing, image generation, and video creation tools."
       icon: PenTool,"
       color: "purple","
       price: "From $25/month","
       features: ["AI writing assistant", "Image generation", "Video creation", "Content optimization"],"
-      href: "/services/ai-content-creation-tools"},
+      href: "/services/ai-content-creation-tools"}
     {"
       title: "AI Customer Support Platform","
-      description: "Transform customer support with AI-powered chatbots, multi-channel support, and intelligent ticket routing.",
+      description: "Transform customer support with AI-powered chatbots, multi-channel support, and intelligent ticket routing."
       icon: Headphones,"
       color: "cyan","
       price: "From $40/month","
       features: ["AI-powered chatbots", "Multi-channel support", "Smart ticket routing", "24/7 availability"],"
-      href: "/services/ai-customer-support-platform"},
+      href: "/services/ai-customer-support-platform"}
     {"
       title: "Website Analytics for Small Business","
-      description: "Intuitive dashboard providing key website metrics without requiring technical expertise.",
+      description: "Intuitive dashboard providing key website metrics without requiring technical expertise."
       icon: BarChart3,"
       color: "indigo","
       price: "From $10/month","
       features: ["Simple data analysis", "Actionable insights", "Business growth strategies", "No technical skills required"],"
-      href: "/services/website-analytics"},
+      href: "/services/website-analytics"}
     {"
       title: "IT Helpdesk Software","
-      description: "Custom ticketing system for managed IT service providers with client portals and knowledge bases.",
+      description: "Custom ticketing system for managed IT service providers with client portals and knowledge bases."
       icon: Server,"
       color: "gray","
       price: "From $30/month","
@@ -99,37 +99,37 @@ const Component = () => {
   ]
 
   const getColorClasses = (color: string) => {
-    const colors = {},
+    const colors = {}
       green: {,"
 bg: "bg-green-600","
         hover: "hover:bg-green-700","
         text: "text-green-600","
         hoverText: "hover:text-green-500","
-        border: "hover:border-green-300"},
+        border: "hover:border-green-300"}
       purple: {,"
 bg: "bg-purple-600","
         hover: "hover:bg-purple-700","
         text: "text-purple-600","
         hoverText: "hover:text-purple-500","
-        border: "hover:border-purple-300"},
+        border: "hover:border-purple-300"}
       orange: {,"
 bg: "bg-orange-600","
         hover: "hover:bg-orange-700","
         text: "text-orange-600","
         hoverText: "hover:text-orange-500","
-        border: "hover:border-orange-300"},
+        border: "hover:border-orange-300"}
       cyan: {,"
 bg: "bg-cyan-600","
         hover: "hover:bg-cyan-700","
         text: "text-cyan-600","
         hoverText: "hover:text-cyan-500","
-        border: "hover:border-cyan-300"},
+        border: "hover:border-cyan-300"}
       indigo: {,"
 bg: "bg-indigo-600","
         hover: "hover:bg-indigo-700","
         text: "text-indigo-600","
         hoverText: "hover:text-indigo-500","
-        border: "hover:border-indigo-300"},
+        border: "hover:border-indigo-300"}
       gray: {,"
 bg: "bg-gray-600","
         hover: "hover:bg-gray-700","
@@ -149,14 +149,14 @@ bg: "bg-gray-600","
             <div className="flex items-center justify-center mb-4">"
               <Award className="h-6 w-6 text-blue-600 mr-2"  />"
               <span className="text-base font-semibold leading-7 text-blue-600">
-                Our Services,
+                Our Services;
               </span>
             </div>"
             <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Comprehensive Technology Solutions,
+              Comprehensive Technology Solutions;
             </h1>"
-            <p className="mt-6 text-lg leading-8 text-gray-600">,
-              From AI-powered automation to custom software development, we deliver cutting-edge solutions,
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              From AI-powered automation to custom software development, we deliver cutting-edge solutions;
 that transform your business operations and drive growth.
             </p>
           </div>
@@ -170,8 +170,8 @@ that transform your business operations and drive growth.
           </div>
           "
           <div className="{"grid" gap-8 lg:grid-cols-2">
-            {mainServices.map((service) => {,
-              const colors = getColorClasses(service.color),
+            {mainServices.map((service) => {
+              const colors = getColorClasses(service.color)
               return ("
                 <div key="{service.id}""
                   className="{"group" relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 ${colors.border}"}
@@ -231,9 +231,9 @@ that transform your business operations and drive growth.
           <div className="text-center mb-16">"
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Innovative Micro SaaS Solutions</h2>"
             <p className="text-xl text-gray-600">Cutting-edge tools and platforms for modern businesses</p>
-          </div>,
-",
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,,
+          </div>
+"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
             {newServices.map((service, index) => {
               const colors = getColorClasses(service.color)
 }
@@ -241,7 +241,7 @@ that transform your business operations and drive growth.
                 <div key = "{index}""
                   className="group relative rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-gray-300"
                 >"
-                  <div className="{"flex" items-center gap-x-3 mb-4">",
+                  <div className="{"flex" items-center gap-x-3 mb-4">"
                     <div className="{"flex" h-10 w-10 items-center justify-center rounded-lg ${colors.bg} ${colors.hover} transition-colors"}>"
                       <service.icon className=""h-5" w-5 text-white"} />
                     </div>
@@ -305,7 +305,7 @@ that transform your business operations and drive growth.
               <a href="tel:+13024640950""
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
               >
-                Call +1 302 464 0950,
+                Call +1 302 464 0950;
               </a>
             </div>"
             <div className="mt-8 text-blue-100">
@@ -313,7 +313,7 @@ that transform your business operations and drive growth.
               <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>
             </div>
       </section>
-    </PageTransition>",,
+    </PageTransition>",
   )}
 
-export default Component
+export default Component;

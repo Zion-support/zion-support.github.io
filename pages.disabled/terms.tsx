@@ -8,64 +8,64 @@ const Terms: NextPage = () => {
 
   const termsSections = [
     {
-      icon: CheckCircle,
-      title: 'Acceptance of Terms',
+      icon: CheckCircle;
+      title: 'Acceptance of Terms'
       content: [
-        'By accessing and using Zion Tech Group services, you accept and agree to be bound by these terms',
-        'If you do not agree to these terms, you may not use our services',
-        'These terms apply to all users of our website and services',
+        'By accessing and using Zion Tech Group services, you accept and agree to be bound by these terms'
+        'If you do not agree to these terms, you may not use our services'
+        'These terms apply to all users of our website and services'
         'We reserve the right to modify these terms at any time'
       ]
-    },
+    }
     {
-      icon: Scale,
-      title: 'Service Description',
+      icon: Scale;
+      title: 'Service Description'
       content: [
-        'Zion Tech Group provides technology solutions including AI development, cloud services, and digital transformation',
-        'Services are provided on an "as is" basis with no warranties',
-        'We reserve the right to modify or discontinue services at any time',
+        'Zion Tech Group provides technology solutions including AI development, cloud services, and digital transformation'
+        'Services are provided on an "as is" basis with no warranties'
+        'We reserve the right to modify or discontinue services at any time'
         'Service availability may vary based on technical requirements and maintenance'
       ]
-    },
+    }
     {
-      icon: AlertTriangle,
-      title: 'User Responsibilities',
+      icon: AlertTriangle;
+      title: 'User Responsibilities'
       content: [
-        'Provide accurate and complete information when using our services',
-        'Maintain the confidentiality of your account credentials',
-        'Use our services in compliance with applicable laws and regulations',
+        'Provide accurate and complete information when using our services'
+        'Maintain the confidentiality of your account credentials'
+        'Use our services in compliance with applicable laws and regulations'
         'Not engage in any activities that could harm our systems or other users'
       ]
-    },
+    }
     {
-      icon: XCircle,
-      title: 'Prohibited Uses',
+      icon: XCircle;
+      title: 'Prohibited Uses'
       content: [
-        'Violating any applicable laws or regulations',
-        'Transmitting malicious code or harmful content',
-        'Attempting to gain unauthorized access to our systems',
+        'Violating any applicable laws or regulations'
+        'Transmitting malicious code or harmful content'
+        'Attempting to gain unauthorized access to our systems'
         'Using our services for any illegal or unauthorized purpose'
       ]
-    },
+    }
     {
-      icon: Scale,
-      title: 'Legal Compliance',
+      icon: Scale;
+      title: 'Legal Compliance'
       description: 'Our commitment to legal compliance and adherence to applicable laws and regulations.'
-    },
+    }
     {
-      icon: Shield,
-      title: 'Intellectual Property',
+      icon: Shield;
+      title: 'Intellectual Property'
       description: 'Protection of intellectual property rights and proper usage of our proprietary technologies.'
-    },
+    }
     {
-      icon: AlertTriangle,
-      title: 'Limitations',
+      icon: AlertTriangle;
+      title: 'Limitations'
       description: 'Important limitations and disclaimers regarding our services and liability.'
     }
   ];
 
   return (
-    <MainLayout
+    <MainLayout;
       title="Terms of Service - Zion Tech Group"
       description="Read Zion Tech Group's Terms of Service to understand the rules and regulations for using our technology services and website."
       keywords="terms of service, user agreement, service terms, legal terms, conditions"
@@ -126,13 +126,13 @@ const Terms: NextPage = () => {
               <div className="bg-white rounded-lg shadow-lg p-8 mt-8">
                 <h2 className="text-2xl font-bold mb-4 text-gray-900">Limitation of Liability</h2>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  In no event shall Zion Tech Group, nor its directors, employees, partners, agents, suppliers, 
-                  or affiliates, be liable for any indirect, incidental, special, consequential, or punitive 
-                  damages, including without limitation, loss of profits, data, use, goodwill, or other 
+                  In no event shall Zion Tech Group, nor its directors, employees, partners, agents, suppliers;
+                  or affiliates, be liable for any indirect, incidental, special, consequential, or punitive;
+                  damages, including without limitation, loss of profits, data, use, goodwill, or other;
                   intangible losses, resulting from your use of our services.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  Our total liability to you for all damages shall not exceed the amount you paid us for 
+                  Our total liability to you for all damages shall not exceed the amount you paid us for;
                   the services in the twelve (12) months preceding the claim.
                 </p>
               </div>
@@ -141,8 +141,8 @@ const Terms: NextPage = () => {
               <div className="bg-white rounded-lg shadow-lg p-8 mt-8">
                 <h2 className="text-2xl font-bold mb-4 text-gray-900">Governing Law</h2>
                 <p className="text-gray-600 leading-relaxed">
-                  These Terms shall be interpreted and governed by the laws of the State of Delaware, 
-                  United States, without regard to its conflict of law provisions. Any disputes arising 
+                  These Terms shall be interpreted and governed by the laws of the State of Delaware;
+                  United States, without regard to its conflict of law provisions. Any disputes arising;
                   from these Terms shall be subject to the exclusive jurisdiction of the courts in Delaware.
                 </p>
               </div>
@@ -157,7 +157,7 @@ const Terms: NextPage = () => {
                   <p className="text-gray-700"><strong>Email:</strong> legal@ziontechgroup.com</p>
                   <p className="text-gray-700"><strong>Phone:</strong> +1 302 464 0950</p>
                   <p className="text-gray-700">
-                    <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709
+                    <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709;
             ))}
           </div>
         </div>
@@ -167,7 +167,7 @@ const Terms: NextPage = () => {
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="prose prose-lg max-w-none">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -332,7 +332,7 @@ const Terms: NextPage = () => {
                     <strong>Address:</strong><br />
                     Zion Tech Group<br />
                     364 E Main St STE 1008<br />
-                    Middletown, DE 19709
+                    Middletown, DE 19709;
                   </div>
                 </div>
               </div>
@@ -349,8 +349,9 @@ const Terms: NextPage = () => {
       </div>
 
 export default function TermsPage() {
+
   return (
-    <MainLayout
+    <MainLayout;
       title="Terms of Service - Zion Tech Group"
       description="Read Zion Tech Group's Terms of Service. Our comprehensive terms outline the rules and regulations for using our website and services."
       keywords="terms of service, terms and conditions, legal terms, Zion Tech Group"
@@ -366,7 +367,7 @@ export default function TermsPage() {
             </div>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Terms of Service</h1>
             <p className="text-xl text-gray-600 mb-2">
-              Please read these terms carefully before using our services
+              Please read these terms carefully before using our services;
             </p>
             <p className="text-sm text-gray-500">
               Last updated: {lastUpdated}
@@ -380,11 +381,11 @@ export default function TermsPage() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center">
                 <FileText className="w-6 h-6 text-blue-600 mr-3" />
-                Introduction
+                Introduction;
               </h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Welcome to Zion Tech Group. These Terms of Service ("Terms") govern your use of our website 
-                ziontechgroup.com and our services. By accessing or using our services, you agree to be bound 
+                Welcome to Zion Tech Group. These Terms of Service ("Terms") govern your use of our website;
+                ziontechgroup.com and our services. By accessing or using our services, you agree to be bound;
                 by these Terms.
               </p>
               <p className="text-gray-700 leading-relaxed">
@@ -396,11 +397,11 @@ export default function TermsPage() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center">
                 <Users className="w-6 h-6 text-blue-600 mr-3" />
-                Acceptance of Terms
+                Acceptance of Terms;
               </h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                By accessing and using our website and services, you accept and agree to be bound by the terms 
-                and provision of this agreement. Additionally, when using our services, you shall be subject to 
+                By accessing and using our website and services, you accept and agree to be bound by the terms;
+                and provision of this agreement. Additionally, when using our services, you shall be subject to;
                 any posted guidelines or rules applicable to such services.
               </p>
             </section>
@@ -427,7 +428,7 @@ export default function TermsPage() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center">
                 <Shield className="w-6 h-6 text-blue-600 mr-3" />
-                User Responsibilities
+                User Responsibilities;
               </h2>
               <p className="text-gray-700 leading-relaxed mb-4">
                 As a user of our services, you agree to:
@@ -447,7 +448,7 @@ export default function TermsPage() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center">
                 <AlertTriangle className="w-6 h-6 text-red-600 mr-3" />
-                Prohibited Uses
+                Prohibited Uses;
               </h2>
               <p className="text-gray-700 leading-relaxed mb-4">
                 You may not use our services for any unlawful purpose or to solicit others to perform unlawful acts. 
@@ -469,12 +470,12 @@ export default function TermsPage() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">Intellectual Property Rights</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                The service and its original content, features, and functionality are and will remain the exclusive 
-                property of Zion Tech Group and its licensors. The service is protected by copyright, trademark, 
+                The service and its original content, features, and functionality are and will remain the exclusive;
+                property of Zion Tech Group and its licensors. The service is protected by copyright, trademark;
                 and other laws.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Our trademarks and trade dress may not be used in connection with any product or service without 
+                Our trademarks and trade dress may not be used in connection with any product or service without;
                 our prior written consent.
               </p>
             </section>
@@ -507,12 +508,12 @@ export default function TermsPage() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center">
                 <Gavel className="w-6 h-6 text-blue-600 mr-3" />
-                Limitation of Liability
+                Limitation of Liability;
               </h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                In no event shall Zion Tech Group, nor its directors, employees, partners, agents, suppliers, 
-                or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, 
-                including without limitation, loss of profits, data, use, goodwill, or other intangible losses, 
+                In no event shall Zion Tech Group, nor its directors, employees, partners, agents, suppliers;
+                or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages;
+                including without limitation, loss of profits, data, use, goodwill, or other intangible losses;
                 resulting from your use of our services.
               </p>
             </section>
@@ -521,8 +522,8 @@ export default function TermsPage() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">Disclaimer</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                The information on this website is provided on an "as is" basis. To the fullest extent permitted 
-                by law, Zion Tech Group excludes all representations, warranties, conditions and terms relating 
+                The information on this website is provided on an "as is" basis. To the fullest extent permitted;
+                by law, Zion Tech Group excludes all representations, warranties, conditions and terms relating;
                 to our website and the use of this website.
               </p>
             </section>
@@ -531,7 +532,7 @@ export default function TermsPage() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">Termination</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                We may terminate or suspend your access immediately, without prior notice or liability, for any 
+                We may terminate or suspend your access immediately, without prior notice or liability, for any;
                 reason whatsoever, including without limitation if you breach the Terms.
               </p>
             </section>
@@ -540,7 +541,7 @@ export default function TermsPage() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">Governing Law</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                These Terms shall be interpreted and governed by the laws of the State of Delaware, United States, 
+                These Terms shall be interpreted and governed by the laws of the State of Delaware, United States;
                 without regard to its conflict of law provisions.
               </p>
             </section>
@@ -550,7 +551,7 @@ export default function TermsPage() {
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">Changes to Terms</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
                 We reserve the right, at our sole discretion, to modify or replace these Terms at any time. 
-                If a revision is material, we will try to provide at least 30 days notice prior to any new 
+                If a revision is material, we will try to provide at least 30 days notice prior to any new;
                 terms taking effect.
               </p>
             </section>
@@ -572,7 +573,7 @@ export default function TermsPage() {
       </section>
     </MainLayout>
   );
-};
+}
   );
 }
 

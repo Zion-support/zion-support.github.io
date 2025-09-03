@@ -105,7 +105,7 @@ const TermsOfService: NextPage = () => {;
                 </h2>;
                 <p className="text-gray-700 mb-4">;
                   The service and its original content, features, and functionality are and will remain the exclusive ;
-                  property of Zion Tech Group and its licensors. The service is protected by copyright, trademark, ;
+                  property of Zion Tech Group and its licensors. The service is protected by copyright, trademark;
                   and other laws. Our trademarks and trade dress may not be used in connection with any product or ;
                   service without our prior written consent.;
                 </p>;
@@ -135,8 +135,8 @@ const TermsOfService: NextPage = () => {;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Limitation of Liability</h2>;
                 <p className="text-gray-700 leading-relaxed">;
                   In no event shall Zion Tech Group, nor its directors, employees, partners, agents, suppliers, or ;
-                  affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, ;
-                  including without limitation, loss of profits, data, use, goodwill, or other intangible losses, ;
+                  affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages;
+                  including without limitation, loss of profits, data, use, goodwill, or other intangible losses;
                   resulting from your use of the service.;
                 </p>;
               </div>;
@@ -165,7 +165,7 @@ const TermsOfService: NextPage = () => {;
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Governing Law</h2>;
                 <p className="text-gray-700 leading-relaxed">;
-                  These Terms shall be interpreted and governed by the laws of the State of Delaware, United States, ;
+                  These Terms shall be interpreted and governed by the laws of the State of Delaware, United States;
                   without regard to its conflict of law provisions. Our failure to enforce any right or provision of ;
                   these Terms will not be considered a waiver of those rights.;
                 </p>;
@@ -198,6 +198,6 @@ const TermsOfService: NextPage = () => {;
         </section>;
       </div>;
     </MainLayout>;
-  );,
+  );
 }
-export default TermsOfService
+export default TermsOfService;

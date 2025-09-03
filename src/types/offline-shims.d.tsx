@@ -1,8 +1,8 @@
-// comment
+// comment;
 export interface offlineshimsdType {
-  id: string
-  name: string
-  createdAt: Date
+  id: string;
+  name: string;
+  createdAt: Date;
 }
   interface IntrinsicElements {
 
@@ -52,7 +52,7 @@ declare module 'jspdf-autotable' {
 declare module 'zod' {
   export type infer<T> = ;
   const z: ;
-  export { z };
+  export { z }
   export default z}
 
 export default useEffect;

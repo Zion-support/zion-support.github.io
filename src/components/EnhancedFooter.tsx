@@ -7,7 +7,7 @@ export const EnhancedFooter: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
             <p className="text-gray-400">
-              Leading technology solutions provider specializing in AI, cybersecurity, 
+              Leading technology solutions provider specializing in AI, cybersecurity;
               cloud infrastructure, and digital transformation services.</p>
           </div>
           <div>
@@ -43,4 +43,4 @@ export const EnhancedFooter: React.FC = () => {
       </div>
     </footer>
   );
-};
+}

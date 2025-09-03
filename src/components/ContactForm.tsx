@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
 import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Send, 
-  CheckCircle, 
-  AlertCircle 
+  Mail;
+  Phone;
+  MapPin;
+  Send;
+  CheckCircle;
+  AlertCircle;
 } from 'lucide-react';
 
 export const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: '',
-    budget: '',
+    firstName: ''
+    lastName: ''
+    email: ''
+    company: ''
+    phone: ''
+    service: ''
+    message: ''
+    budget: ''
     timeline: ''
   });
 
@@ -27,65 +27,67 @@ export const ContactForm: React.FC = () => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
-      ...prev,
-      [name]: value
+      ...prev;
+      [name]: value;
     }));
-  };
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
     try {
-      // Simulate API call
+      // Simulate API call;
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
       setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: '',
-        budget: '',
+        firstName: ''
+        lastName: ''
+        email: ''
+        company: ''
+        phone: ''
+        service: ''
+        message: ''
+        budget: ''
         timeline: ''
       });
-    } catch (error) {
+    } catch() {
+
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
     }
-  };
+  }
 
   const services = [
-    'AI Solutions',
-    'Quantum Computing',
-    'Cybersecurity',
-    'Digital Transformation',
-    'Cloud Services',
-    'DevOps',
-    'Machine Learning',
+    'AI Solutions'
+    'Quantum Computing'
+    'Cybersecurity'
+    'Digital Transformation'
+    'Cloud Services'
+    'DevOps'
+    'Machine Learning'
     'Space Technology'
   ];
 
   const budgets = [
-    'Under $10,000',
-    '$10,000 - $50,000',
-    '$50,000 - $100,000',
-    '$100,000 - $500,000',
+    'Under $10,000'
+    '$10,000 - $50,000'
+    '$50,000 - $100,000'
+    '$100,000 - $500,000'
     'Over $500,000'
   ];
 
   const timelines = [
-    'ASAP',
-    '1-3 months',
-    '3-6 months',
-    '6-12 months',
+    'ASAP'
+    '1-3 months'
+    '3-6 months'
+    '6-12 months'
     '12+ months'
   ];
 
-  if (submitStatus === 'success') {
+  if() {
+
     return (
       <div className="text-center py-12">
         <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -95,11 +97,11 @@ export const ContactForm: React.FC = () => {
         <p className="text-gray-300 mb-6">
           Your message has been sent successfully. We&apos;ll get back to you within 24 hours.
         </p>
-        <button 
+        <button;
           onClick={() => setSubmitStatus('idle')}
           className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
         >
-          Send Another Message
+          Send Another Message;
         </button>
       </div>
     );
@@ -160,13 +162,13 @@ export const ContactForm: React.FC = () => {
               <label htmlFor="firstName" className="block text-sm font-medium text-white mb-2">
                 First Name *
               </label>
-              <input
+              <input;
                 type="text"
                 id="firstName"
                 name="firstName"
                 value={formData.firstName}
                 onChange={handleInputChange}
-                required
+                required;
                 className="w-full px-4 py-3 bg-white/10 border border-purple-200 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors"
                 placeholder="Enter your first name"
               />
@@ -175,13 +177,13 @@ export const ContactForm: React.FC = () => {
               <label htmlFor="lastName" className="block text-sm font-medium text-white mb-2">
                 Last Name *
               </label>
-              <input
+              <input;
                 type="text"
                 id="lastName"
                 name="lastName"
                 value={formData.lastName}
                 onChange={handleInputChange}
-                required
+                required;
                 className="w-full px-4 py-3 bg-white/10 border border-purple-200 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors"
                 placeholder="Enter your last name"
               />
@@ -193,22 +195,22 @@ export const ContactForm: React.FC = () => {
               <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                 Email *
               </label>
-              <input
+              <input;
                 type="email"
                 id="email"
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                required
+                required;
                 className="w-full px-4 py-3 bg-white/10 border border-purple-200 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors"
                 placeholder="Enter your email"
               />
             </div>
             <div>
               <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
-                Phone
+                Phone;
               </label>
-              <input
+              <input;
                 type="tel"
                 id="phone"
                 name="phone"
@@ -222,9 +224,9 @@ export const ContactForm: React.FC = () => {
 
           <div>
             <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
-              Company
+              Company;
             </label>
-            <input
+            <input;
               type="text"
               id="company"
               name="company"
@@ -240,12 +242,12 @@ export const ContactForm: React.FC = () => {
               <label htmlFor="service" className="block text-sm font-medium text-white mb-2">
                 Service Interest *
               </label>
-              <select
+              <select;
                 id="service"
                 name="service"
                 value={formData.service}
                 onChange={handleInputChange}
-                required
+                required;
                 className="w-full px-4 py-3 bg-white/10 border border-purple-200 rounded-lg text-white focus:outline-none focus:border-blue-400 transition-colors"
               >
                 <option value="">Select a service</option>
@@ -256,9 +258,9 @@ export const ContactForm: React.FC = () => {
             </div>
             <div>
               <label htmlFor="budget" className="block text-sm font-medium text-white mb-2">
-                Budget Range
+                Budget Range;
               </label>
-              <select
+              <select;
                 id="budget"
                 name="budget"
                 value={formData.budget}
@@ -275,9 +277,9 @@ export const ContactForm: React.FC = () => {
 
           <div>
             <label htmlFor="timeline" className="block text-sm font-medium text-white mb-2">
-              Project Timeline
+              Project Timeline;
             </label>
-            <select
+            <select;
               id="timeline"
               name="timeline"
               value={formData.timeline}
@@ -295,12 +297,12 @@ export const ContactForm: React.FC = () => {
             <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
               Message *
             </label>
-            <textarea
+            <textarea;
               id="message"
               name="message"
               value={formData.message}
               onChange={handleInputChange}
-              required
+              required;
               rows={4}
               className="w-full px-4 py-3 bg-white/10 border border-purple-200 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors resize-none"
               placeholder="Tell us about your project and how we can help..."
@@ -314,7 +316,7 @@ export const ContactForm: React.FC = () => {
             </div>
           )}
 
-          <button
+          <button;
             type="submit"
             disabled={isSubmitting}
             className="w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
@@ -327,7 +329,7 @@ export const ContactForm: React.FC = () => {
             ) : (
               <>
                 <Send className="w-5 h-5" />
-                Send Message
+                Send Message;
               </>
             )}
           </button>
@@ -335,6 +337,6 @@ export const ContactForm: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 
 export default ContactForm;

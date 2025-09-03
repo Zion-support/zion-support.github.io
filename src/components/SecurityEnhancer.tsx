@@ -11,7 +11,7 @@ const SecurityEnhancer: React.FC = () => {
     meta.httpEquiv = 'X-Content-Type-Options';
     meta.content = 'nosniff';
     document.head.appendChild(meta);
-  };
+  }
 
   const setupSecurityMonitoring = () => {
     let suspiciousActivityCount = 0;
@@ -21,10 +21,11 @@ const SecurityEnhancer: React.FC = () => {
       suspiciousActivityCount++;
       console.warn('Suspicious activity detected:', event.type);
       
-      if (suspiciousActivityCount > maxSuspiciousActivities) {
+      if() {
+
         console.error('Multiple suspicious activities detected.');
       }
-    };
+    }
 
     document.addEventListener('DOMContentLoaded', () => {
       const scripts = document.querySelectorAll('script');
@@ -34,9 +35,9 @@ const SecurityEnhancer: React.FC = () => {
         }
       });
     });
-  };
+  }
 
   return null;
-};
+}
 
 export default SecurityEnhancer;

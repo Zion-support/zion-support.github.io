@@ -1,19 +1,19 @@
-],;
+]
       notIncluded[;""""
         "Advanced Analytics",""""
         "Custom AI Models",""""
         "Priority Support",""""
         "API Access""""
-      ],;""""
-      cta: "Get Started",
+      ],""""
+      cta: "Get Started"
       popular: false;
-    },
+    }
     {}
 """
 """"
       name: "Professional","""
       icon: Brain,""""
-      description: "Ideal for growing companies with advanced needs",
+      description: "Ideal for growing companies with advanced needs"
       price: { monthly: 799, yearly: 7990 },"""
       features[;""""
         "Everything in Starter",""""
@@ -24,21 +24,21 @@
         "API Access",""""
         "10 User Licenses",""""
         "Quarterly Strategy Sessions"""
-      ],;"""
+      ],"""
       notIncluded[;""""
         "Enterprise Security",""""
         "Custom Development",""""
         "Dedicated Account Manager""""
-      ],;""""
-      cta: "Start Free Trial",
+      ],""""
+      cta: "Start Free Trial"
       popular: true;
-    },
+    }
     {}
 """
 """"
       name: "Enterprise","""
       icon: Rocket,""""
-      description: "Full-scale solutions for large organizations",
+      description: "Full-scale solutions for large organizations"
       price: { monthly: 2499, yearly: 24990 },"""
       features[;""""
         "Everything in Professional",""""
@@ -51,59 +51,59 @@
         "Monthly Strategy Sessions",""""
         "Custom Integration",""""
         "SLA Guarantees"""
-    };
-      ],;"""
-      notIncluded: [],;""""
-      cta: "Contact Sales",;
+    }
+      ],"""
+      notIncluded: [],""""
+      cta: "Contact Sales"
       popular: false;
-    };
+    }
   ];
 
   const servicePricing: unknown = []
     {}
 """
 """"
-      category: "AI & Machine Learning",
+      category: "AI & Machine Learning"
       icon: Brain,"""
       services[;""""
         { name: "AI Business Intelligence", price: "From $299/month", description: "Advanced analytics and insights" },""""
         { name: "AI Sales Copilot", price: "From $199/month", description: "Intelligent sales automation" },""""
         { name: "AI Compliance Assistant", price: "From $399/month", description: "Automated compliance management" },"        { name: "LLM Content Studio", price: "From $149/month", description: "AI-powered content creation" }
       ]
-    },;
+    }
     {}
 """
 """"
-      category: "Cloud & DevOps",
+      category: "Cloud & DevOps"
       icon: Cloud,"""
       services[;""""
         { name: "Cloud DevOps", price: "From $599/month", description: "End-to-end cloud solutions" },""""
         { name: "Cloud FinOps Optimizer", price: "From $299/month", description: "Cost optimization strategies" },""""
         { name: "FinOps Advisor", price: "From $499/month", description: "Financial operations consulting" }
       ]
-    },;
+    }
     {}
 """
 """"
-      category: "Cybersecurity",
+      category: "Cybersecurity"
       icon: Shield,"""
       services[;""""
         { name: "AI Compliance Copilot", price: "From $399/month", description: "AI-powered security compliance" },""""
         { name: "Zero Trust Architecture", price: "From $799/month", description: "Modern security framework" },""""
         { name: "Incident Response Platform", price: "From $599/month", description: "Rapid threat response" }
       ]
-    },;
+    }
     {}
 """
 """"
-      category: "IT Infrastructure",
+      category: "IT Infrastructure"
       icon: Cpu,"""
       services[;""""
-        { name: "IT Infrastructure Management", price: "From $699/month", description: "Enterprise infrastructure management" },;""""
-        { name: "Digital Twin", price: "From $899/month", description: "Virtual infrastructure modeling" },;""""
-        { name: "IT Consulting", price: "From $299/hour", description: "Strategic IT guidance" },;""""
-        { name: "Onsite Support", price: "From $199/hour", description: "Local technical assistance" };
-      ]};
+        { name: "IT Infrastructure Management", price: "From $699/month", description: "Enterprise infrastructure management" },""""
+        { name: "Digital Twin", price: "From $899/month", description: "Virtual infrastructure modeling" },""""
+        { name: "IT Consulting", price: "From $299/hour", description: "Strategic IT guidance" },""""
+        { name: "Onsite Support", price: "From $199/hour", description: "Local technical assistance" }
+      ]}
   ];"""
 """"
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"""
@@ -287,7 +287,7 @@
               </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                View Pricing
+                View Pricing;
               </Link>
             </div>;
           </div>;
@@ -298,10 +298,10 @@
 }
 
 
-export { PricingGuide };
+export { PricingGuide }
 
-export { PricingGuide };
+export { PricingGuide }
 
-export { PricingGuide };
+export { PricingGuide }
 
-export { PricingGuide };
+export { PricingGuide }

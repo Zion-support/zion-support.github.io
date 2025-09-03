@@ -23,19 +23,19 @@ export type ServiceItem = {}
   features: string[];
   ctaLabel: string;
   href: string; // internal path or external URL;
-  external?: boolean};
+  external?: boolean}
 ;
 export type ServiceCategory = {}
   name: string;
   slug: string;
-  items: ServiceItem[]};
+  items: ServiceItem[]}
 ;export const servicesCatalog: ServiceCategory[] = []
   {}
 '
 ''
 '''
     name: 'Micro SaaS','''
-    slug: 'micro-saas',
+    slug: 'micro-saas'
     items: []
       {}
 '
@@ -50,7 +50,7 @@ export type ServiceCategory = {}
           'Real-time vulnerability detection',Automated security scoring',Compliance reporting',Integration with major blockchains',24/7 monitoring dashboard'
         ],'
         ctaLabel: 'Start Free Trial','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'ai-content-optimizer','
@@ -65,13 +65,13 @@ export type ServiceCategory = {}
         ],'
         ctaLabel: 'Get Started','
         href: 'https://ziontechgroup.com/contact'}
-    ]},
+    ]}
   {}
 '
 ''
 '''
     name: 'AI Solutions','''
-    slug: 'ai-solutions',
+    slug: 'ai-solutions'
     items: []
       {}
 '
@@ -86,7 +86,7 @@ export type ServiceCategory = {}
           'Autonomous decision making',Predictive business modeling',Resource optimization',Risk assessment',Continuous learning'
         ],'
         ctaLabel: 'Request Demo','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'consciousness-simulation-platform','
@@ -100,7 +100,7 @@ export type ServiceCategory = {}
           'Neural network simulation',Consciousness modeling',Research tools',Data visualization',Collaborative workspace'
         ],'
         ctaLabel: 'Research Access','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'quantum-neural-network','
@@ -114,7 +114,7 @@ export type ServiceCategory = {}
           'Quantum neural processing',Hybrid classical-quantum',Advanced training algorithms',Quantum advantage',Research collaboration'
         ],'
         ctaLabel: 'Quantum Access','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'ai-autonomous-vehicles','
@@ -128,7 +128,7 @@ export type ServiceCategory = {}
           'Autonomous navigation',Safety monitoring',Fleet management',Predictive maintenance',Regulatory compliance'
         ],'
         ctaLabel: 'Vehicle Integration','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'enterprise-rag-search','
@@ -142,7 +142,7 @@ export type ServiceCategory = {}
           'Hybrid vector + keyword search',PII redaction and access control',Grounding citations',Plugins: Confluence, Google Drive, SharePoint',On-prem or VPC deployment'
         ],'
         ctaLabel: 'Launch Secure Chat','
-        href: 'https://ziontechgroup.com/services'},
+        href: 'https://ziontechgroup.com/services'}
       {}
 '
         id: 'agentic-copilot-suite','
@@ -156,7 +156,7 @@ export type ServiceCategory = {}
           'Guardrailed tool use',Human-in-the-loop approvals',Observability and audit trails',Connectors: Salesforce, Zendesk, GitHub, AWS',Okta and SSO ready'
         ],'
         ctaLabel: 'Deploy Copilots','
-        href: 'https://ziontechgroup.com/services'},
+        href: 'https://ziontechgroup.com/services'}
       {}
 '
         id: 'quantum-consciousness-simulation-2030','
@@ -170,7 +170,7 @@ export type ServiceCategory = {}
           'Quantum neural network simulation',Consciousness modeling algorithms',Real-time cognitive state analysis',Multi-dimensional consciousness mapping',Quantum memory and learning systems',Consciousness transfer protocols',Advanced research tools and APIs',Collaborative research workspace',Real-time visualization and analytics',Quantum-classical hybrid processing'
         ],'
         ctaLabel: 'Research Access','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'autonomous-healthcare-diagnostics-2026','
@@ -184,7 +184,7 @@ export type ServiceCategory = {}
           'AI-powered medical imaging analysis',Real-time disease detection and classification',Predictive health analytics',Automated radiology reporting',Treatment recommendation engine',Patient risk assessment',Clinical decision support',HIPAA-compliant data handling',FDA-approved algorithms',Multi-modality imaging support'
         ],'
         ctaLabel: 'Healthcare Integration','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'quantum-creative-ai-studio-2026','
@@ -198,7 +198,7 @@ export type ServiceCategory = {}
           'Quantum-powered content generation',AI-driven design creation',Multi-format content generation',Brand consistency automation',Creative asset optimization',Real-time collaboration tools',Version control and management',Performance analytics',Mobile app for creators',API integration capabilities'
         ],'
         ctaLabel: 'Creative Access','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'synthetic-data-generator','
@@ -212,7 +212,7 @@ export type ServiceCategory = {}
           'DP and PII masking',Tabular/time-series/text modes',Utility and drift reports',SDKs and REST API',Warehouse integrations'
         ],'
         ctaLabel: 'Generate Data','
-        href: 'https://ziontechgroup.com/services/synthetic-data-generator'},
+        href: 'https://ziontechgroup.com/services/synthetic-data-generator'}
       {}
 '
         id: 'ai-meeting-notes-agent','
@@ -227,13 +227,13 @@ export type ServiceCategory = {}
         ],'
         ctaLabel: 'Start Recording','
         href: 'https://ziontechgroup.com/services/ai-meeting-notes-agent'}
-    ]},
+    ]}
   {}
 '
 ''
 '''
     name: 'IT Services','''
-    slug: 'it-services',
+    slug: 'it-services'
     items: []
       {}
 '
@@ -248,7 +248,7 @@ export type ServiceCategory = {}
           'Identity verification',Micro-segmentation',Continuous monitoring',Threat detection',Compliance reporting'
         ],'
         ctaLabel: 'Security Assessment','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'five-g-enterprise-network','
@@ -262,7 +262,7 @@ export type ServiceCategory = {}
           'Private 5G networks',Network slicing',Edge computing',IoT integration',Performance optimization'
         ],'
         ctaLabel: 'Network Design','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'quantum-edge-computing','
@@ -276,7 +276,7 @@ export type ServiceCategory = {}
           'Quantum edge processing',Real-time analytics',Distributed computing',Energy optimization',Scalable architecture'
         ],'
         ctaLabel: 'Edge Deployment','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'platform-engineering-kubernetes','
@@ -290,7 +290,7 @@ export type ServiceCategory = {}
           'Backstage developer portal',GitOps with Argo CD or Flux',Policy-as-code (OPA/Gatekeeper),Multi-cluster and multi-cloud',SRE playbooks and training'
         ],'
         ctaLabel: 'Build Your IDP','
-        href: 'https://ziontechgroup.com/services'},
+        href: 'https://ziontechgroup.com/services'}
       {}
 '
         id: 'finops-cloud-cost-optimization','
@@ -304,7 +304,7 @@ export type ServiceCategory = {}
           'Cost anomaly detection',RI/Savings Plan strategy',Workload rightsizing',Kubernetes cost allocation',Executive reporting'
         ],'
         ctaLabel: 'Cut Cloud Costs','
-        href: 'https://ziontechgroup.com/services'},
+        href: 'https://ziontechgroup.com/services'}
       {}
 '
         id: 'managed-kubernetes-sre','
@@ -318,7 +318,7 @@ export type ServiceCategory = {}
           '24/7 on-call rotation',Golden paths and GitOps',SLOs and error budgets',DR and backup testing',Cost and performance tuning'
         ],'
         ctaLabel: 'Stabilize Clusters','
-        href: 'https://ziontechgroup.com/services/managed-kubernetes-sre'},
+        href: 'https://ziontechgroup.com/services/managed-kubernetes-sre'}
       {}
 '
         id: 'zero-trust-rollout-coaching','
@@ -333,13 +333,13 @@ export type ServiceCategory = {}
         ],'
         ctaLabel: 'Plan Zero Trust','
         href: 'https://ziontechgroup.com/services/zero-trust-rollout-coaching'}
-    ]},
+    ]}
   {}
 '
 ''
 '''
     name: 'Cybersecurity','''
-    slug: 'cybersecurity',
+    slug: 'cybersecurity'
     items: []
       {}
 '
@@ -354,7 +354,7 @@ export type ServiceCategory = {}
           'AI threat detection',Behavioral analysis',Automated response',Threat hunting',Incident management'
         ],'
         ctaLabel: 'Security Demo','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'quantum-cryptography','
@@ -368,7 +368,7 @@ export type ServiceCategory = {}
           'Quantum key distribution',Post-quantum crypto',Secure communication',Key management',Compliance ready'
         ],'
         ctaLabel: 'Quantum Security','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'managed-detection-response','
@@ -382,7 +382,7 @@ export type ServiceCategory = {}
           'SIEM setup and tuning',Playbooks and automation',Phishing and EDR integration',Compliance-ready reporting',Incident response retainers'
         ],'
         ctaLabel: 'Activate MDR','
-        href: 'https://ziontechgroup.com/services'},
+        href: 'https://ziontechgroup.com/services'}
       {}
 '
         id: 'sase-rollout','
@@ -396,7 +396,7 @@ export type ServiceCategory = {}
           'Architecture and vendor selection',Pilot and phased migration',Policy baselines',User experience optimization',Runbooks and training'
         ],'
         ctaLabel: 'Deploy SASE','
-        href: 'https://ziontechgroup.com/services'},
+        href: 'https://ziontechgroup.com/services'}
       {}
 '
         id: 'gdpr-dsar-portal','
@@ -410,7 +410,7 @@ export type ServiceCategory = {}
           'Identity verification',Data discovery connectors',Audit logs and exports',Self-service portal and SLA tracking',Webhook automation'
         ],'
         ctaLabel: 'Launch Portal','
-        href: 'https://ziontechgroup.com/services/gdpr-dsar-portal'},
+        href: 'https://ziontechgroup.com/services/gdpr-dsar-portal'}
       {}
 '
         id: 'email-deliverability-monitor-saas','
@@ -424,7 +424,7 @@ export type ServiceCategory = {}
           'DMARC/SPF/DKIM verification',Inbox placement and blocklist tracking',Recommendations and weekly reports',Integrations: SES, SendGrid, Mailgun',Alerts to Slack/Email'
         ],'
         ctaLabel: 'Improve Inbox Rate','
-        href: 'https://ziontechgroup.com/services/email-deliverability-monitor'},
+        href: 'https://ziontechgroup.com/services/email-deliverability-monitor'}
       {}
 '
         id: 'pdf-render-api-saas','
@@ -439,13 +439,13 @@ export type ServiceCategory = {}
         ],'
         ctaLabel: 'Generate PDFs','
         href: 'https://ziontechgroup.com/services/pdf-render-api'}
-    ]},
+    ]}
   {}
 '
 ''
 '''
     name: 'Data & Analytics','''
-    slug: 'data-analytics',
+    slug: 'data-analytics'
     items: []
       {}
 '
@@ -460,7 +460,7 @@ export type ServiceCategory = {}
           'Quantum pattern recognition',Complex data modeling',Real-time insights',Predictive analytics',Visualization tools'
         ],'
         ctaLabel: 'Analytics Demo','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'ai-business-intelligence','
@@ -474,7 +474,7 @@ export type ServiceCategory = {}
           'Automated insights',Natural language queries',Predictive modeling',Custom dashboards',Data integration'
         ],'
         ctaLabel: 'BI Assessment','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'data-quality-observability','
@@ -488,7 +488,7 @@ export type ServiceCategory = {}
           'Column-level lineage',Great Expectations policies',Alerting and incident Mgmt',Connectors: Snowflake, BigQuery, Databricks',Root-cause analysis'
         ],'
         ctaLabel: 'Improve Data Trust','
-        href: 'https://ziontechgroup.com/services'},
+        href: 'https://ziontechgroup.com/services'}
       {}
 '
         id: 'modern-etl-migration','
@@ -503,13 +503,13 @@ export type ServiceCategory = {}
         ],'
         ctaLabel: 'Migrate Workloads','
         href: 'https://ziontechgroup.com/services'}
-    ]},
+    ]}
   {}
 '
 ''
 '''
     name: 'Cloud & DevOps','''
-    slug: 'cloud-devops',
+    slug: 'cloud-devops'
     items: []
       {}
 '
@@ -524,7 +524,7 @@ export type ServiceCategory = {}
           'Automated deployments',Self-healing infrastructure',Performance optimization',Cost management',Continuous monitoring'
         ],'
         ctaLabel: 'DevOps Demo','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'quantum-cloud-infrastructure','
@@ -538,7 +538,7 @@ export type ServiceCategory = {}
           'Quantum cloud services',Hybrid infrastructure',Quantum optimization',Scalable architecture',Enterprise support'
         ],'
         ctaLabel: 'Cloud Migration','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'serverless-application-factory','
@@ -552,7 +552,7 @@ export type ServiceCategory = {}
           'Patterns: EventBridge, Step Functions',IaC with CDK/Terraform',Observability baked-in',SECaaS and guardrails',Cost-efficiency targets'
         ],'
         ctaLabel: 'Build Serverless','
-        href: 'https://ziontechgroup.com/services'},
+        href: 'https://ziontechgroup.com/services'}
       {}
 '
         id: 'disaster-recovery-blueprints','
@@ -566,7 +566,7 @@ export type ServiceCategory = {}
           'Multi-region architectures',Automated chaos tests',Backup and restore pipelines',Compliance documentation',Executive tabletop exercises'
         ],'
         ctaLabel: 'Harden Resilience','
-        href: 'https://ziontechgroup.com/services'},
+        href: 'https://ziontechgroup.com/services'}
       {}
 '
         id: 'data-contracts-platform','
@@ -581,13 +581,13 @@ export type ServiceCategory = {}
         ],'
         ctaLabel: 'Enforce Contracts','
         href: 'https://ziontechgroup.com/services/data-contracts-platform'}
-    ]},
+    ]}
   {}
 '
 ''
 '''
     name: 'Quantum Computing','''
-    slug: 'quantum-computing',
+    slug: 'quantum-computing'
     items: []
       {}
 '
@@ -602,7 +602,7 @@ export type ServiceCategory = {}
           'Quantum-resistant encryption algorithms',Quantum key distribution (QKD),AI-powered threat detection with 99.99% accuracy',Zero-trust architecture implementation',Real-time threat intelligence feeds',Automated incident response',Compliance automation (SOC 2, ISO 27001, NIST),Quantum-safe certificate management',Advanced behavioral analytics',Cloud-native security architecture'
         ],'
         ctaLabel: 'Quantum Security','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'quantum-financial-trading-platform-2026','
@@ -616,7 +616,7 @@ export type ServiceCategory = {}
           'Quantum-powered market analysis',Ultra-fast trading execution (<1ms latency),AI-driven risk assessment',Portfolio optimization algorithms',Real-time market sentiment analysis',Automated trading strategies',Regulatory compliance automation',Multi-asset class support',Advanced risk management',Performance analytics dashboard'
         ],'
         ctaLabel: 'Quantum Trading','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'quantum-logistics-optimization-2026','
@@ -630,7 +630,7 @@ export type ServiceCategory = {}
           'Quantum route optimization algorithms',Real-time traffic and weather integration',Multi-modal transportation optimization',Dynamic pricing optimization',Fleet management automation',Predictive maintenance scheduling',Sustainability optimization',Real-time tracking and visibility',Automated dispatching',Performance analytics dashboard'
         ],'
         ctaLabel: 'Quantum Logistics','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'quantum-biological-computing-2030','
@@ -645,13 +645,13 @@ export type ServiceCategory = {}
         ],'
         ctaLabel: 'Quantum Biology','
         href: 'https://ziontechgroup.com/contact'}
-    ]},
+    ]}
   {}
 '
 ''
 '''
     name: 'Blockchain & Web3','''
-    slug: 'blockchain-web3',
+    slug: 'blockchain-web3'
     items: []
       {}
 '
@@ -666,7 +666,7 @@ export type ServiceCategory = {}
           'AI model marketplace',Decentralized governance',Smart contracts',Token economics',Community-driven'
         ],'
         ctaLabel: 'Marketplace Access','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'quantum-blockchain-platform','
@@ -681,13 +681,13 @@ export type ServiceCategory = {}
         ],'
         ctaLabel: 'Blockchain Demo','
         href: 'https://ziontechgroup.com/contact'}
-    ]},
+    ]}
   {}
 '
 ''
 '''
     name: 'IoT & Edge','''
-    slug: 'iot-edge',
+    slug: 'iot-edge'
     items: []
       {}
 '
@@ -702,7 +702,7 @@ export type ServiceCategory = {}
           'Quantum edge processing',Device optimization',Intelligent routing',Energy efficiency',Scalable deployment'
         ],'
         ctaLabel: 'IoT Demo','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'autonomous-edge-ai','
@@ -716,7 +716,7 @@ export type ServiceCategory = {}
           'Autonomous optimization',Edge AI processing',Network intelligence',Resource management',Performance monitoring'
         ],'
         ctaLabel: 'Edge AI Demo','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'predictive-maintenance-iot','
@@ -730,7 +730,7 @@ export type ServiceCategory = {}
           'Edge telemetry ingestion',ML failure prediction',Work order integration (EAM/CMMS),Kitting and rollout playbooks',Dashboards and alerts'
         ],'
         ctaLabel: 'Reduce Downtime','
-        href: 'https://ziontechgroup.com/services'},
+        href: 'https://ziontechgroup.com/services'}
       {}
 '
         id: 'digital-twin-starter','
@@ -745,13 +745,13 @@ export type ServiceCategory = {}
         ],'
         ctaLabel: 'Build a Twin','
         href: 'https://ziontechgroup.com/services'}
-    ]},
+    ]}
   {}
 '
 ''
 '''
     name: 'Green Tech','''
-    slug: 'green-tech',
+    slug: 'green-tech'
     items: []
       {}
 '
@@ -766,7 +766,7 @@ export type ServiceCategory = {}
           'Quantum energy modeling',Renewable optimization',Grid management',Carbon tracking',Sustainability reporting'
         ],'
         ctaLabel: 'Energy Assessment','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'ai-climate-prediction','
@@ -780,7 +780,7 @@ export type ServiceCategory = {}
           'AI climate modeling',Quantum simulations',Real-time predictions',Risk assessment',Policy recommendations'
         ],'
         ctaLabel: 'Climate Demo','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'carbon-accounting-saas','
@@ -795,13 +795,13 @@ export type ServiceCategory = {}
         ],'
         ctaLabel: 'Start ESG Tracking','
         href: 'https://ziontechgroup.com/services'}
-    ]},
+    ]}
   {}
 '
 ''
 '''
     name: 'Space Tech','''
-    slug: 'space-tech',
+    slug: 'space-tech'
     items: []
       {}
 '
@@ -816,7 +816,7 @@ export type ServiceCategory = {}
           'Autonomous orbital optimization',AI-powered data analysis',Real-time monitoring',Collision avoidance',Global coverage'
         ],'
         ctaLabel: 'Launch Satellites','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'quantum-space-communications','
@@ -830,7 +830,7 @@ export type ServiceCategory = {}
           'Quantum entanglement',Unhackable encryption',Light-speed transmission',Deep space coverage',Interplanetary network'
         ],'
         ctaLabel: 'Connect Space','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'satellite-imagery-analytics','
@@ -845,13 +845,13 @@ export type ServiceCategory = {}
         ],'
         ctaLabel: 'Analyze Imagery','
         href: 'https://ziontechgroup.com/services'}
-    ]},
+    ]}
   {}
 '
 ''
 '''
     name: 'BioTech & Health','''
-    slug: 'biotech-health',
+    slug: 'biotech-health'
     items: []
       {}
 '
@@ -866,7 +866,7 @@ export type ServiceCategory = {}
           'AI molecular modeling',Quantum simulations',Clinical trial optimization',Drug repurposing',Regulatory compliance'
         ],'
         ctaLabel: 'Discover Drugs','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'quantum-genome-analyzer','
@@ -880,7 +880,7 @@ export type ServiceCategory = {}
           'Quantum DNA sequencing',Personalized medicine',Disease prediction',Genetic counseling',Research collaboration'
         ],'
         ctaLabel: 'Analyze Genome','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'telemedicine-ai-triage','
@@ -895,13 +895,13 @@ export type ServiceCategory = {}
         ],'
         ctaLabel: 'Enable Triage','
         href: 'https://ziontechgroup.com/services'}
-    ]},
+    ]}
   {}
 '
 ''
 '''
     name: 'FinTech & DeFi','''
-    slug: 'fintech-defi',
+    slug: 'fintech-defi'
     items: []
       {}
 '
@@ -916,7 +916,7 @@ export type ServiceCategory = {}
           'Quantum market analysis',Microsecond trading',Risk management',Portfolio optimization',Regulatory compliance'
         ],'
         ctaLabel: 'Start Trading','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'autonomous-defi-protocol','
@@ -930,7 +930,7 @@ export type ServiceCategory = {}
           'Autonomous yield farming',Risk management',Strategy optimization',Cross-chain integration',Smart contract security'
         ],'
         ctaLabel: 'Deploy Protocol','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'kyc-aml-transaction-monitoring','
@@ -945,13 +945,13 @@ export type ServiceCategory = {}
         ],'
         ctaLabel: 'Strengthen Compliance','
         href: 'https://ziontechgroup.com/services'}
-    ]},
+    ]}
   {}
 '
 ''
 '''
     name: 'Metaverse & AR/VR','''
-    slug: 'metaverse-ar-vr',
+    slug: 'metaverse-ar-vr'
     items: []
       {}
 '
@@ -966,7 +966,7 @@ export type ServiceCategory = {}
           'Quantum rendering',Infinite scalability',Realistic physics',Cross-platform support',AI-powered NPCs'
         ],'
         ctaLabel: 'Enter Metaverse','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'autonomous-ar-navigation','
@@ -980,7 +980,7 @@ export type ServiceCategory = {}
           'Real-time AR overlays',Autonomous navigation',Smart city integration',Traffic optimization',Safety monitoring'
         ],'
         ctaLabel: 'Navigate AR','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'vr-training-simulators','
@@ -995,13 +995,13 @@ export type ServiceCategory = {}
         ],'
         ctaLabel: 'Build Simulator','
         href: 'https://ziontechgroup.com/services'}
-    ]},
+    ]}
   {}
 '
 ''
 '''
     name: 'Autonomous Systems','''
-    slug: 'autonomous-systems',
+    slug: 'autonomous-systems'
     items: []
       {}
 '
@@ -1016,7 +1016,7 @@ export type ServiceCategory = {}
           'Quantum decision making',Autonomous learning',System optimization',Predictive maintenance',Multi-system coordination'
         ],'
         ctaLabel: 'Control Systems','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'autonomous-robotics-platform','
@@ -1030,7 +1030,7 @@ export type ServiceCategory = {}
           'Autonomous navigation',Task learning',Safety protocols',Multi-robot coordination',Performance analytics'
         ],'
         ctaLabel: 'Deploy Robots','
-        href: 'https://ziontechgroup.com/contact'},
+        href: 'https://ziontechgroup.com/contact'}
       {}
 '
         id: 'warehouse-robotics-orchestration','
@@ -1045,15 +1045,14 @@ export type ServiceCategory = {}
         ],'
         ctaLabel: 'Orchestrate Robots','
         href: 'https://ziontechgroup.com/services'}
-    ]},
-
+    ]}
   // New Service Categories Added;
   {}
 '
 ''
 '''
     name: 'Supply Chain & Logistics','''
-    slug: 'supply-chain-logistics',
+    slug: 'supply-chain-logistics'
     items: []
       {}
 '
@@ -1069,14 +1068,13 @@ export type ServiceCategory = {}
         ],'
         ctaLabel: 'Supply Chain','
         href: 'https://ziontechgroup.com/contact'}
-    ]},
-
+    ]}
   {}
 '
 ''
 '''
     name: 'Energy Management','''
-    slug: 'energy-management',
+    slug: 'energy-management'
     items: []
       {}
 '
@@ -1092,14 +1090,13 @@ export type ServiceCategory = {}
         ],'
         ctaLabel: 'Energy Management','
         href: 'https://ziontechgroup.com/contact'}
-    ]},
-
+    ]}
   {}
 '
 ''
 '''
     name: 'Manufacturing Intelligence','''
-    slug: 'manufacturing-intelligence',
+    slug: 'manufacturing-intelligence'
     items: []
       {}
 '
@@ -1115,14 +1112,13 @@ export type ServiceCategory = {}
         ],'
         ctaLabel: 'Manufacturing','
         href: 'https://ziontechgroup.com/contact'}
-    ]},
-
+    ]}
   {}
 '
 ''
 '''
     name: 'Data Center Management','''
-    slug: 'data-center-management',
+    slug: 'data-center-management'
     items: []
       {}
 '

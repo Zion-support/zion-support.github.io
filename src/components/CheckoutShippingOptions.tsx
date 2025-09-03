@@ -18,32 +18,34 @@ interface Props {
   toAddress: Address | null;
   onSelect?: (rate: ShippingRate) => void}
 
-export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
+export function CheckoutShippingOptions() {
+
   const [rates, setRates] = useState<ShippingRate[]>([]);
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string>('');
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
     if(!toAddress) return;
     
       try {
 
-        if(res.ok) {
+        if() {
+
           setRates(data.rates || [])} else {
           console.error('Rates error', data)}
-      } catch(err) {
+      } catch() {
+
         console.error('Rates error', err)} finally {
         setLoading(false)}
-    };
+    }
     fetchRates()}, [toAddress]);
 
-    if(rate && onSelect) onSelect(rate)};
+    if(rate && onSelect) onSelect(rate)}
 
   if(!toAddress) return null;
 
@@ -64,4 +66,4 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
     </div>
   )}
 
-export type { ShippingRate };
+export type { ShippingRate }

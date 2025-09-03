@@ -4,94 +4,100 @@ const { execSync } = require("child_process")
 
 class DeploymentAutomation {
   constructor() {
+
     this.projectRoot = process.cwd()
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
-    this.ensureDirectories(),
+    this.ensureDirectories()
 }
 
   ensureDirectories() {
+
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true }),
+      fs.mkdirSync(this.reportsDir, { recursive: true })
 }
   }
 
-  log(message) {
+  log() {
+
     const timestamp = new Date().toISOString()
-    console.log(`[${timestamp}] ${message}`),
+    console.log(`[${timestamp}] ${message}`)
 }
 
   async runPreDeploymentChecks() {
+
     this.log("🔍 Running pre-deployment checks...")
     
     const checks = []
     
     try {
-      // Check if package.json exists
+      // Check if package.json exists;
       if (fs.existsSync(path.join(this.projectRoot, "package.json"))) {
-        checks.push({ name: "Package.json exists", status: "passed" }),
+        checks.push({ name: "Package.json exists", status: "passed" })
 } else {
-        checks.push({ name: "Package.json exists", status: "failed" }),
+        checks.push({ name: "Package.json exists", status: "failed" })
 }
 
-      // Check if dependencies are installed
+      // Check if dependencies are installed;
       if (fs.existsSync(path.join(this.projectRoot, "node_modules"))) {
-        checks.push({ name: "Dependencies installed", status: "passed" }),
+        checks.push({ name: "Dependencies installed", status: "passed" })
 } else {
-        checks.push({ name: "Dependencies installed", status: "failed" }),
+        checks.push({ name: "Dependencies installed", status: "failed" })
 }
 
       // Check if .env file exists (optional)
       if (fs.existsSync(path.join(this.projectRoot, ".env"))) {
-        checks.push({ name: "Environment file exists", status: "passed" }),
+        checks.push({ name: "Environment file exists", status: "passed" })
 } else {
-        checks.push({ name: "Environment file exists", status: "warning" }),
+        checks.push({ name: "Environment file exists", status: "warning" })
 }
 
-      // Check if public directory exists
+      // Check if public directory exists;
       if (fs.existsSync(path.join(this.projectRoot, "public"))) {
-        checks.push({ name: "Public directory exists", status: "passed" }),
+        checks.push({ name: "Public directory exists", status: "passed" })
 } else {
-        checks.push({ name: "Public directory exists", status: "failed" }),
+        checks.push({ name: "Public directory exists", status: "failed" })
 }
 
       this.log("✅ Pre-deployment checks completed")
-      return { success: true, checks },
-} catch (error) {
+      return { success: true, checks }
+} catch() {
+
       this.log(`❌ Pre-deployment checks failed: ${error.message}`)
-      return { success: false, error: error.message },
+      return { success: false, error: error.message }
 }
   }
 
   async createDeploymentScripts() {
+
     this.log("📝 Creating deployment scripts...")
     
     const scripts = []
 
-    // Create Netlify deployment script
-    const netlifyScript = `#!/bin/bash
-# Netlify deployment script for Zion Tech Group
+    // Create Netlify deployment script;
+    const netlifyScript = `#!/bin/bash;
+# Netlify deployment script for Zion Tech Group;
 echo "🚀 Starting Netlify deployment..."
-# Install dependencies
-npm install
-# Build the application
-npm run build
-# Deploy to Netlify
-if [ -f "netlify.toml" ]; then
+# Install dependencies;
+npm install;
+# Build the application;
+npm run build;
+# Deploy to Netlify;
+if [ -f "netlify.toml" ]; then;
     echo "📄 Found netlify.toml, deploying..."
-    netlify deploy --prod
-else
+    netlify deploy --prod;
+else;
     echo "⚠️ No netlify.toml found, creating basic configuration..."
-    cat > netlify.toml << EOF
+    cat > netlify.toml << EOF;
 [build]
   publish = ".next"
   command = "npm run build"
 [[redirects]]
   from = "/*"
   to = "/index.html"
-  status = 200
-EOF
-    netlify deploy --prod
-fi
+  status = 200;
+EOF;
+    netlify deploy --prod;
+fi;
 echo "✅ Netlify deployment completed"
 `
 
@@ -99,14 +105,14 @@ echo "✅ Netlify deployment completed"
     fs.chmodSync(path.join(this.projectRoot, "deploy-netlify.sh"), "755")
     scripts.push({ name: "Netlify deployment script", file: "deploy-netlify.sh" })
 
-    // Create Vercel deployment script
-    const vercelScript = `#!/bin/bash
-# Vercel deployment script for Zion Tech Group
+    // Create Vercel deployment script;
+    const vercelScript = `#!/bin/bash;
+# Vercel deployment script for Zion Tech Group;
 echo "🚀 Starting Vercel deployment..."
-# Install dependencies
-npm install
-# Deploy to Vercel
-vercel --prod
+# Install dependencies;
+npm install;
+# Deploy to Vercel;
+vercel --prod;
 echo "✅ Vercel deployment completed"
 `
 
@@ -114,14 +120,14 @@ echo "✅ Vercel deployment completed"
     fs.chmodSync(path.join(this.projectRoot, "deploy-vercel.sh"), "755")
     scripts.push({ name: "Vercel deployment script", file: "deploy-vercel.sh" })
 
-    // Create Docker deployment script
-    const dockerScript = `#!/bin/bash
-# Docker deployment script for Zion Tech Group
+    // Create Docker deployment script;
+    const dockerScript = `#!/bin/bash;
+# Docker deployment script for Zion Tech Group;
 echo "🚀 Starting Docker deployment..."
-# Build Docker image
+# Build Docker image;
 docker build -t ziontechgroup .
-# Run Docker container
-docker run -p 3000:3000 -d ziontechgroup
+# Run Docker container;
+docker run -p 3000:3000 -d ziontechgroup;
 echo "✅ Docker deployment completed"
 echo "🌐 Application available at http://localhost:3000"
 `
@@ -131,39 +137,41 @@ echo "🌐 Application available at http://localhost:3000"
     scripts.push({ name: "Docker deployment script", file: "deploy-docker.sh" })
 
     this.log("✅ Deployment scripts created")
-    return { success: true, scripts },
+    return { success: true, scripts }
 }
 
   async createDockerfile() {
+
     this.log("🐳 Creating Dockerfile...")
     
-    const dockerfile = `# Dockerfile for Zion Tech Group
-FROM node:18-alpine
-# Set working directory
-WORKDIR /app
-# Copy package files
+    const dockerfile = `# Dockerfile for Zion Tech Group;
+FROM node:18-alpine;
+# Set working directory;
+WORKDIR /app;
+# Copy package files;
 COPY package*.json ./
-# Install dependencies
-RUN npm ci --only=production
-# Copy source code
+# Install dependencies;
+RUN npm ci --only=production;
+# Copy source code;
 COPY . .
-# Build the application
-RUN npm run build
-# Expose port
-EXPOSE 3000
-# Start the application
+# Build the application;
+RUN npm run build;
+# Expose port;
+EXPOSE 3000;
+# Start the application;
 CMD ["npm", "start"]
 `
 
     fs.writeFileSync(path.join(this.projectRoot, "Dockerfile"), dockerfile)
     this.log("✅ Dockerfile created")
-    return { success: true, file: "Dockerfile" },
+    return { success: true, file: "Dockerfile" }
 }
 
   async createNetlifyConfig() {
+
     this.log("🌐 Creating Netlify configuration...")
     
-    const netlifyConfig = `# Netlify configuration for Zion Tech Group
+    const netlifyConfig = `# Netlify configuration for Zion Tech Group;
 [build]
   publish = ".next"
   command = "npm run build"
@@ -172,7 +180,7 @@ CMD ["npm", "start"]
 [[redirects]]
   from = "/*"
   to = "/index.html"
-  status = 200
+  status = 200;
 [[headers]]
   for = "/*"
   [headers.values]
@@ -188,74 +196,79 @@ CMD ["npm", "start"]
 
     fs.writeFileSync(path.join(this.projectRoot, "netlify.toml"), netlifyConfig)
     this.log("✅ Netlify configuration created")
-    return { success: true, file: "netlify.toml" },
+    return { success: true, file: "netlify.toml" }
 }
 
   async createVercelConfig() {
+
     this.log("▲ Creating Vercel configuration...")
     
     const vercelConfig = {
-      "version": 2,
+      "version": 2;
       "builds": [
         {
-          "src": "package.json",
-          "use": "@vercel/next",
+          "src": "package.json"
+          "use": "@vercel/next"
 }
-      ],
+      ]
       "routes": [
         {
-          "src": "/(.*)",
-          "dest": "/$1",
+          "src": "/(.*)"
+          "dest": "/$1"
 }
-      ],
+      ]
 }
 
     fs.writeFileSync(path.join(this.projectRoot, "vercel.json"), JSON.stringify(vercelConfig, null, 2))
     this.log("✅ Vercel configuration created")
-    return { success: true, file: "vercel.json" },
+    return { success: true, file: "vercel.json" }
 }
 
   async createHealthCheck() {
+
     this.log("🏥 Creating health check endpoint...")
     
-    const healthCheckScript = `// Health check endpoint for Zion Tech Group
-export default function handler(req, res) {
+    const healthCheckScript = `// Health check endpoint for Zion Tech Group;
+export default function handler() {
+
   const healthCheck = {
-    uptime: process.uptime(),
-    message: "OK",
-    timestamp: Date.now(),
-    environment: process.env.NODE_ENV || "development",
+    uptime: process.uptime()
+    message: "OK"
+    timestamp: Date.now()
+    environment: process.env.NODE_ENV || "development"
 }
 
   try {
-    res.status(200).json(healthCheck),
-} catch (error) {
+    res.status(200).json(healthCheck)
+} catch() {
+
     healthCheck.message = "ERROR"
-    res.status(503).json(healthCheck),
+    res.status(503).json(healthCheck)
 }
 }
 `
 
     const apiDir = path.join(this.projectRoot, "pages", "api")
     if (!fs.existsSync(apiDir)) {
-      fs.mkdirSync(apiDir, { recursive: true }),
+      fs.mkdirSync(apiDir, { recursive: true })
 }
 
     fs.writeFileSync(path.join(apiDir, "health.js"), healthCheckScript)
     this.log("✅ Health check endpoint created")
-    return { success: true, file: "pages/api/health.js" },
+    return { success: true, file: "pages/api/health.js" }
 }
 
-  async generateReport(results) {
+  async generateReport() {
+
     this.log("📊 Generating deployment report...")
     
     const report = {
-      timestamp: new Date().toISOString(),
-      deployment: results,
+      timestamp: new Date().toISOString()
+      deployment: results;
       summary: {
-        totalTasks: results.length,
-        successful: results.filter(r => r.success).length,
-        failed: results.filter(r => !r.success).length,
+        totalTasks: results.length;
+        successful: results.filter(r => r.success).length;
+        failed: results.filter(r => !r.success).length;
 }
     }
 
@@ -263,48 +276,50 @@ export default function handler(req, res) {
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))
     
     this.log(`📊 Report generated: ${reportFile}`)
-    return report,
+    return report;
 }
 
   async run() {
+
     this.log("🚀 Starting Deployment Automation")
     
     try {
       const results = []
       
-      // Run pre-deployment checks
+      // Run pre-deployment checks;
       results.push(await this.runPreDeploymentChecks())
       
-      // Create deployment configurations
+      // Create deployment configurations;
       results.push(await this.createDeploymentScripts())
       results.push(await this.createDockerfile())
       results.push(await this.createNetlifyConfig())
       results.push(await this.createVercelConfig())
       results.push(await this.createHealthCheck())
       
-      // Generate report
+      // Generate report;
       const report = await this.generateReport(results)
       
       this.log("🎉 Deployment Automation completed successfully")
       this.log(`📊 Summary: ${report.summary.successful}/${report.summary.totalTasks} tasks completed`)
       
-      return report,
-} catch (error) {
+      return report;
+} catch() {
+
       this.log(`❌ Deployment Automation failed: ${error.message}`)
-      throw error,
+      throw error;
 }
   }
 }
 
-// Run the automation
+// Run the automation;
 const automation = new DeploymentAutomation()
 automation.run()
   .then(report => {
     console.log("✅ Deployment automation completed successfully")
     console.log("📊 Report:", JSON.stringify(report.summary, null, 2))
-    process.exit(0),
+    process.exit(0)
 })
   .catch(error => {
     console.error("❌ Deployment automation failed:", error.message)
-    process.exit(1),
+    process.exit(1)
 })

@@ -20,13 +20,13 @@ export: default function Sitemap() {;
   "react-router-dom";
 export default function Sitemap() {;
   const routes = [";
-  "/",;
-  "/about",;
-  "/contact",;
-  "/services",;
-  "/blog",;
-  "/pricing",;
-  "/privacy",;
+  "/"
+  "/about"
+  "/contact"
+  "/services"
+  "/blog"
+  "/pricing"
+  "/privacy"
   "/terms"];
   return(";
     <div className="max-w-5xl mx-auto px-4 py-12 text-white>;

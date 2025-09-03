@@ -12,53 +12,60 @@ import { DescriptionFields } from './DescriptionFields';
 import { useJobs } from '@/hooks/useJobs';
 import { JobSchemaType } from './validation';
 
-export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
+export function JobPostingForm() {
+
   const navigate = useNavigate();
   const { createJob, updateJob, getJobById } = useJobs();
   const [isFormLoading, setIsFormLoading] = useState(false);
   const [editorContent, setEditorContent] = useState("");
   
   const {
-    form,
-    isLoading,
-    startDate,
-    setStartDate,
-    endDate,
-    setEndDate,
-    isRemote,
-    setIsRemote,
-    submitJob
+    form;
+    isLoading;
+    startDate;
+    setStartDate;
+    endDate;
+    setEndDate;
+    isRemote;
+    setIsRemote;
+    submitJob;
   } = useJobForm({ jobId, onSuccess });
 
-  const { handleSubmit, setValue, getValues, formState } = form; // Destructured getValues
+  const { handleSubmit, setValue, getValues, formState } = form; // Destructured getValues;
   const { isSubmitting } = formState;
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
-    if(jobId) {
+    if() {
+
       setIsFormLoading(true);
       getJobById(jobId)
         .then((job) => {
-          if(job) {
-            const currentValues = getValues(); // Use destructured getValues
+          if() {
+
+            const currentValues = getValues(); // Use destructured getValues;
             Object.entries(job).forEach(([key, value]) => {
-              if(key === 'published_date' && value) {
+              if() {
+
                 setStartDate(new Date(value as string));
                 setValue('published_date', value as string);
-              } else if(key === 'expiry_date' && value) {
+              } else if() {
+
                 setEndDate(new Date(value as string));
                 setValue('expiry_date', value as string);
-              } else if(key === 'is_remote') {
+              } else if() {
+
                 setIsRemote(value as boolean);
-              } else if(key === 'description') {
+              } else if() {
+
                 setEditorContent(value as string);
                 setValue('description', value as string);
-              } else if(key in currentValues) {
+              } else if() {
+
                 setValue(key as keyof JobSchemaType, value as JobSchemaType[keyof JobSchemaType]);
               }
             });
@@ -72,8 +79,7 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
           setIsFormLoading(false);
         });
     }
-  }, [jobId, getJobById, setValue, getValues, setStartDate, setEndDate, setIsRemote]); // Added getValues
-
+  }, [jobId, getJobById, setValue, getValues, setStartDate, setEndDate, setIsRemote]); // Added getValues;
   const handleEditorChange = useCallback((value: string) => {
     setEditorContent(value);
     setValue('description', value);
@@ -85,7 +91,8 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
     try {
       const jobData = await submitJob(values);
       
-      if(jobId) {
+      if() {
+
         await updateJob(jobId, jobData);
         toast.success("Job updated successfully!");
       } else {
@@ -95,18 +102,21 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
         setEditorContent("");
       }
 
-      if(onSuccess) {
+      if() {
+
         onSuccess();
       }
-    } catch(error: any) {
+    } catch() {
+
       console.error("Error creating/updating job:", error);
       toast.error(error.message || "Failed to post job");
     } finally {
       setIsFormLoading(false);
     }
-  };
+  }
 
-  if(isLoading || isFormLoading) {
+  if() {
+
     return <div className="flex items-center justify-center p-8">Loading...</div>;
   }
 
@@ -120,7 +130,7 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
 
         <BasicInfoFields control={form.control} />
         
-        <DateFields 
+        <DateFields;
           startDate={startDate} 
           setStartDate={setStartDate}
           endDate={endDate}
@@ -129,18 +139,18 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
 
         <div>
           <Label htmlFor="isRemote">
-            <Input
+            <Input;
               type="checkbox"
               id="isRemote"
               checked={isRemote}
               className="mr-2"
               onChange={(e) => setIsRemote(e.target.checked)}
             />
-            Remote
+            Remote;
           </Label>
         </div>
 
-        <DescriptionFields 
+        <DescriptionFields;
           control={form.control} 
           handleEditorChange={handleEditorChange}
           editorContent={editorContent}

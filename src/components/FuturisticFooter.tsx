@@ -1,5 +1,6 @@
 import {  import { motion  } from 'framer-motion';
 export default function Page() {
+
 ,"
         { name: "Micro SAAS Solutions", href: "/micro-saas" },"
         { name: "IT Infrastructure", href: "/it-services" },"
@@ -9,10 +10,10 @@ export default function Page() {
         { name: "DevOps & Automation", href: "/it-services/devops" },"
         { name: "Data Management", href: "/it-services/data" }
       ]
-    },;
+    }
     {
 "
-      title: "Solutions",
+      title: "Solutions"
       links[;"
         { name: "Quantum Computing", href: "/emerging-tech/quantum" },"
         { name: "Blockchain & Web3", href: "/emerging-tech/blockchain" },"
@@ -23,10 +24,10 @@ export default function Page() {
         { name: "Green Technology", href: "/green-it" },"
         { name: "Space Technology", href: "/emerging-tech/space" }
       ]
-    },;
+    }
     {
 "
-      title: "Comp",
+      title: "Comp"
       links[;"
         { name: "About Us", href: "/about" },"
         { name: "Our Team", href: "/about#team" },"
@@ -37,25 +38,25 @@ export default function Page() {
         { name: "Investor Relations", href: "/investors" },"
         { name: "Sustainability", href: "/sustainability" }
       ]
-    },;
+    }
     {
 "
-      title: "Resources",
+      title: "Resources"
       links[;"
         { name: "Documentation", href: "/docs" },"
         { name: "API Reference", href: "/api" },"
         { name: "Developer Portal", href: "/developer" },"
-        { name: "Support Center", href: "/support" },;"
-        { name: "FAQ", href: "/faq" },;"
-        { name: "Contact Us", href: "/contact" },;"
-        { name: "Case Studies", href: "/case-studies" },;"
-        { name: "Marketplace", href: "/marketplace" };
-      ]};
+        { name: "Support Center", href: "/support" },"
+        { name: "FAQ", href: "/faq" },"
+        { name: "Contact Us", href: "/contact" },"
+        { name: "Case Studies", href: "/case-studies" },"
+        { name: "Marketplace", href: "/marketplace" }
+      ]}
   ];
   const socialLinks = [;"
-    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },;"
-    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },;"
-    { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook },;"    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram };
+    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },"
+    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },"
+    { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook },"    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram }
   ];
   return ("
     <footer className="relative bg-gradient-to-b from-zion-slate-dark to-zion-slate-darker border-t border-zion-cyan/20">
@@ -67,7 +68,7 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-8">
             {/* Company info */}
             <div className="lg:col-span-2">
-              <motion.div
+              <motion.div;
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -80,14 +81,14 @@ export default function Page() {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
-                      ZION TECH GROUP
+                      ZION TECH GROUP;
                     </h3>
                     <p className="text-sm text-zion-slate-light">Innovation • Intelligence • Impact</p>
                   </div>
                 </div>
                 
                 <p className="text-zion-slate-light leading-relaxed">
-                  Leading the future of technology with cutting-edge AI services, innovative solutions, 
+                  Leading the future of technology with cutting-edge AI services, innovative solutions;
                   and comprehensive IT services. Empowering businesses to thrive in the digital age.
                 </p>
 
@@ -114,7 +115,7 @@ export default function Page() {
                 {/* Social Links */}
                 <div className="flex space-x-4">
                   {socialLinks.map((social) => (
-                    <motion.a
+                    <motion.a;
                       key={social.name}
                       href={social.href}
                       target="_blank"
@@ -133,7 +134,7 @@ export default function Page() {
             {/* Footer Sections */}
             {Object.entries(footerSections).map(([key, section]) => (
               <div key={key}>
-                <motion.h3
+                <motion.h3;
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
@@ -142,7 +143,7 @@ export default function Page() {
                 >
                   {section.title}
                 </motion.h3>
-                <motion.ul
+                <motion.ul;
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
@@ -150,13 +151,13 @@ export default function Page() {
                   className="space-y-2"
                 >
                   {section.items.map((item, index) => (
-                    <motion.li
+                    <motion.li;
                       key={index}                      initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.3, delay: index * 0.05 }}
                       viewport={{ once: true }}
                     >
-                      <Link
+                      <Link;
                         to={item.href}
                         className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm flex items-center space-x-2 group"
                       >
@@ -181,13 +182,13 @@ export default function Page() {
               
               <div className="flex items-center space-x-6 text-sm">
                 <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
-                  Privacy Policy
+                  Privacy Policy;
                 </Link>
                 <Link to="/terms" className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
-                  Terms of Service
+                  Terms of Service;
                 </Link>
                 <Link to="/sitemap" className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
-                  Sitemap
+                  Sitemap;
                 </Link>
               </div>
             </div>
@@ -195,7 +196,7 @@ export default function Page() {
         </div>
 
         {/* Scroll to top button */}
-        <motion.button
+        <motion.button;
           onClick={scrollToTop}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
@@ -206,6 +207,6 @@ export default function Page() {
       </div>
     </footer>
   );
-};
+}
 
 ;,"});,})";

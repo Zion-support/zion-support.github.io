@@ -1,24 +1,24 @@
 import React from "react"
 interface OptimizedImageProps {"
-   width?: number
-   height?: number
-   className?: string
-   priority?: boolean,
-   quality?: number,",
-   placeholder?: "blur" | "empty",
-   blurDataURL?: string,
+   width?: number;
+   height?: number;
+   className?: string;
+   priority?: boolean;
+   quality?: number,"
+   placeholder?: "blur" | "empty"
+   blurDataURL?: string;
    sizes?: strin,g}
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({,
-  sr,c,
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+  sr,c;
   sizes?: string}
 
-  src,
-  alt,
-  width: = 800,
-  height = 600,
-  className,
-  priority = false,
+  src;
+  alt;
+  width: = 800;
+  height = 600;
+  className;
+  priority = false;
   quality = 85,"
   placeholder = "empty","
   blurDataURL,"
@@ -29,10 +29,10 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({,
   sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw">
 }) => {
   return (
-   al,
-    t: string,
-  src, alt,
-  width = 800, height = 600,
+   al;
+    t: string;
+  src, alt;
+  width = 800, height = 600;
   className, priority = false,"
   quality = 85, placeholder = "empty","
   blurDataURL, sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"}) => {"
@@ -47,13 +47,13 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({,
         placeholder="{placeholder}""
         blurDataURL="{blurDataURL}""
         sizes="{sizes}""
-        className="object-cover transition-transform duration-300 hover: scale-105"  />",
+        className="object-cover transition-transform duration-300 hover: scale-105"  />"
     </div>
   )}
 
 export: default OptimizedImage,"
-className = "object-cover transition-transform duration-300 hover: scale-105" />,,
+className = "object-cover transition-transform duration-300 hover: scale-105" />,
   )}
 
-export default OptimizedImage
+export default OptimizedImage;
 export default OptimizedImage,"export default OptimizedImage""'

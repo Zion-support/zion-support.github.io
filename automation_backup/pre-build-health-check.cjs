@@ -4,12 +4,12 @@
 const fs = require("fs");
 const path = require("path");
 const requiredDirs = ["dist", "public"];
-for (const dir of requiredDirs) {
+for() {
+
   const full = path.resolve(process.cwd(), dir);
   try {
-  fs.mkdirSync(full, { recursive: true });,
+  fs.mkdirSync(full, { recursive: true });
 } catch {}
 }
-;
 console.log("[pre-build-health-check] OK");
 process.exit(0)

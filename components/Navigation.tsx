@@ -10,41 +10,41 @@ const Navigation: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-    };
+    }
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navigationItems = [
-    { name: 'Home', href: '/' },
+    { name: 'Home', href: '/' }
     { 
-      name: 'Services', 
-      href: '/services',
+      name: 'Services'
+      href: '/services'
       dropdown: [
-        { name: 'AI Development', href: '/services/ai-development' },
-        { name: 'Cloud Architecture', href: '/services/cloud-architecture' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'Data Analytics', href: '/services/data-analytics' },
-        { name: 'DevOps', href: '/services/devops' },
+        { name: 'AI Development', href: '/services/ai-development' }
+        { name: 'Cloud Architecture', href: '/services/cloud-architecture' }
+        { name: 'Cybersecurity', href: '/services/cybersecurity' }
+        { name: 'Data Analytics', href: '/services/data-analytics' }
+        { name: 'DevOps', href: '/services/devops' }
       ]
-    },
+    }
     { 
-      name: 'Solutions', 
-      href: '/solutions',
+      name: 'Solutions'
+      href: '/solutions'
       dropdown: [
-        { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
-        { name: 'IoT Platforms', href: '/iot-platforms' },
-        { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
+        { name: 'Blockchain Solutions', href: '/blockchain-solutions' }
+        { name: 'IoT Platforms', href: '/iot-platforms' }
+        { name: 'Digital Transformation', href: '/solutions/digital-transformation' }
       ]
-    },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+    }
+    { name: 'About', href: '/about' }
+    { name: 'Contact', href: '/contact' }
   ];
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
+      isScrolled;
         ? 'bg-black/90 backdrop-blur-md border-b border-white/10' 
         : 'bg-transparent'
     }`}>
@@ -62,7 +62,7 @@ const Navigation: React.FC = () => {
           <div className="hidden md:flex items-center space-x-8">
             {navigationItems.map((item) => (
               <div key={item.name} className="relative group">
-                <Link
+                <Link;
                   href={item.href}
                   className="text-white hover:text-blue-400 transition-colors duration-200 flex items-center space-x-1"
                   onMouseEnter={() => setActiveDropdown(item.name)}
@@ -76,7 +76,7 @@ const Navigation: React.FC = () => {
                 {item.dropdown && activeDropdown === item.name && (
                   <div className="absolute top-full left-0 mt-2 w-64 bg-black/95 backdrop-blur-md border border-white/10 rounded-lg shadow-xl py-2">
                     {item.dropdown.map((dropdownItem) => (
-                      <Link
+                      <Link;
                         key={dropdownItem.name}
                         href={dropdownItem.href}
                         className="block px-4 py-2 text-white hover:bg-white/10 transition-colors duration-200"
@@ -92,16 +92,16 @@ const Navigation: React.FC = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link
+            <Link;
               href="/contact"
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
-              Get Started
+              Get Started;
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
+          <button;
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden text-white p-2"
             aria-label="Toggle menu"
@@ -116,7 +116,7 @@ const Navigation: React.FC = () => {
             <div className="px-4 py-4 space-y-4">
               {navigationItems.map((item) => (
                 <div key={item.name}>
-                  <Link
+                  <Link;
                     href={item.href}
                     className="block text-white hover:text-blue-400 transition-colors duration-200 py-2"
                     onClick={() => setIsOpen(false)}
@@ -126,7 +126,7 @@ const Navigation: React.FC = () => {
                   {item.dropdown && (
                     <div className="ml-4 space-y-2">
                       {item.dropdown.map((dropdownItem) => (
-                        <Link
+                        <Link;
                           key={dropdownItem.name}
                           href={dropdownItem.href}
                           className="block text-gray-300 hover:text-blue-400 transition-colors duration-200 py-1"
@@ -140,12 +140,12 @@ const Navigation: React.FC = () => {
                 </div>
               ))}
               <div className="pt-4 border-t border-white/10">
-                <Link
+                <Link;
                   href="/contact"
                   className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
                   onClick={() => setIsOpen(false)}
                 >
-                  Get Started
+                  Get Started;
                 </Link>
               </div>
             </div>
@@ -154,6 +154,6 @@ const Navigation: React.FC = () => {
       </div>
     </nav>
   );
-};
+}
 
 export default Navigation;

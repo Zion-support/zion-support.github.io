@@ -7,71 +7,71 @@ import Link from 'next/link';
 const AIDevelopment: NextPage = () => {
   const services = [
     {
-      icon: Brain,
-      title: "Machine Learning Models",
-      description: "Custom ML models tailored to your business needs, from predictive analytics to recommendation systems.",
+      icon: Brain;
+      title: "Machine Learning Models"
+      description: "Custom ML models tailored to your business needs, from predictive analytics to recommendation systems."
       features: ["Custom algorithm development", "Model training and optimization", "Performance monitoring", "Continuous learning systems"]
-    },
+    }
     {
-      icon: Eye,
-      title: "Computer Vision",
-      description: "Advanced image and video analysis solutions for automation, quality control, and security applications.",
+      icon: Eye;
+      title: "Computer Vision"
+      description: "Advanced image and video analysis solutions for automation, quality control, and security applications."
       features: ["Object detection and recognition", "Facial recognition systems", "Medical image analysis", "Autonomous vehicle vision"]
-    },
+    }
     {
-      icon: Database,
-      title: "Natural Language Processing",
-      description: "Intelligent text analysis, language understanding, and automated content generation solutions.",
+      icon: Database;
+      title: "Natural Language Processing"
+      description: "Intelligent text analysis, language understanding, and automated content generation solutions."
       features: ["Chatbot development", "Sentiment analysis", "Language translation", "Content generation"]
-    },
+    }
     {
-      icon: Cpu,
-      title: "AI Automation",
-      description: "Intelligent process automation to streamline operations and reduce manual workload.",
+      icon: Cpu;
+      title: "AI Automation"
+      description: "Intelligent process automation to streamline operations and reduce manual workload."
       features: ["Workflow automation", "Document processing", "Data extraction", "Decision support systems"]
     }
   ];
 
   const technologies = [
-    "TensorFlow", "PyTorch", "Scikit-learn", "OpenCV", "NLTK", "SpaCy", 
+    "TensorFlow", "PyTorch", "Scikit-learn", "OpenCV", "NLTK", "SpaCy"
     "Hugging Face", "AWS SageMaker", "Google AI Platform", "Azure ML"
   ];
 
   const process = [
     {
-      step: "01",
-      title: "Discovery & Analysis",
+      step: "01"
+      title: "Discovery & Analysis"
       description: "We analyze your business requirements and identify AI opportunities that can drive real value."
-    },
+    }
     {
-      step: "02", 
-      title: "Data Assessment",
+      step: "02"
+      title: "Data Assessment"
       description: "We evaluate your data quality, availability, and structure to determine the best AI approach."
-    },
+    }
     {
-      step: "03",
-      title: "Model Development",
+      step: "03"
+      title: "Model Development"
       description: "Our team develops and trains custom AI models using cutting-edge algorithms and frameworks."
-    },
+    }
     {
-      step: "04",
-      title: "Testing & Validation",
+      step: "04"
+      title: "Testing & Validation"
       description: "Rigorous testing ensures your AI solution meets performance requirements and business objectives."
-    },
+    }
     {
-      step: "05",
-      title: "Deployment & Integration",
+      step: "05"
+      title: "Deployment & Integration"
       description: "Seamless integration with your existing systems and infrastructure for immediate impact."
-    },
+    }
     {
-      step: "06",
-      title: "Monitoring & Optimization",
+      step: "06"
+      title: "Monitoring & Optimization"
       description: "Continuous monitoring and optimization to ensure peak performance and ongoing improvement."
     }
   ];
 
   return (
-    <MainLayout
+    <MainLayout;
       title="AI Development Services - Zion Tech Group"
       description="Transform your business with cutting-edge AI development services. Custom machine learning models, computer vision, NLP, and automation solutions."
       keywords="AI development, machine learning, artificial intelligence, computer vision, NLP, automation"
@@ -86,25 +86,25 @@ const AIDevelopment: NextPage = () => {
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              AI Development Services
+              AI Development Services;
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
               Transform your business with cutting-edge artificial intelligence solutions. 
               From machine learning models to computer vision, we build AI systems that drive real results.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link
+              <Link;
                 href="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors inline-flex items-center"
               >
-                Get AI Consultation
+                Get AI Consultation;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link
+              <Link;
                 href="/case-studies"
                 className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors"
               >
-                View Case Studies
+                View Case Studies;
               </Link>
             </div>
           </div>
@@ -116,7 +116,7 @@ const AIDevelopment: NextPage = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Our AI Development Services</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We specialize in developing custom AI solutions that solve real business problems 
+                We specialize in developing custom AI solutions that solve real business problems;
                 and drive measurable results across industries.
               </p>
             </div>
@@ -151,7 +151,7 @@ const AIDevelopment: NextPage = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Technologies We Use</h2>
               <p className="text-xl text-gray-600">
-                We leverage the latest AI frameworks and tools to build robust, scalable solutions
+                We leverage the latest AI frameworks and tools to build robust, scalable solutions;
               </p>
             </div>
 
@@ -171,7 +171,7 @@ const AIDevelopment: NextPage = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Our AI Development Process</h2>
               <p className="text-xl text-gray-600">
-                A systematic approach to delivering AI solutions that work
+                A systematic approach to delivering AI solutions that work;
               </p>
             </div>
 
@@ -200,18 +200,18 @@ const AIDevelopment: NextPage = () => {
               Our experts are ready to help you get started.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link
+              <Link;
                 href="/contact"
                 className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors inline-flex items-center"
               >
-                Start Your AI Project
+                Start Your AI Project;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link
+              <Link;
                 href="/pricing"
                 className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors"
               >
-                View Pricing
+                View Pricing;
               </Link>
             </div>
           </div>
@@ -219,11 +219,12 @@ const AIDevelopment: NextPage = () => {
       </div>
     </MainLayout>
   );
-};
+}
 
 export default AIDevelopment;
 
 export default function AIDevelopment() {
+
   return (
     <main className="max-w-4xl mx-auto px-4 py-16">
       <h1 className="text-3xl font-bold mb-4">AI Development</h1>

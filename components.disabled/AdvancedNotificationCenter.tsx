@@ -2,23 +2,23 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
-  Bell,
-  X,
-  CheckCircle,
-  AlertTriangle,
-  Info,
-  XCircle,
-  Settings,
-  Filter,
-  Search,
-  Archive,
-  Trash2,
-  Eye,
-  EyeOff,
-  Clock,
-  Star,
-  MessageSquare,
-  Volume2,
+  Bell;
+  X;
+  CheckCircle;
+  AlertTriangle;
+  Info;
+  XCircle;
+  Settings;
+  Filter;
+  Search;
+  Archive;
+  Trash2;
+  Eye;
+  EyeOff;
+  Clock;
+  Star;
+  MessageSquare;
+  Volume2;
   VolumeX} from 'lucide-react';
 
 interface Notification {
@@ -39,9 +39,7 @@ interface Notification {
 
 interface AdvancedNotificationCenterProps {
 
-  // Add your props here
-
-
+  // Add your props here;
   maxNotifications?: number;
   autoDismiss?: boolean;
   dismissDelay?: number;
@@ -51,11 +49,11 @@ interface AdvancedNotificationCenterProps {
 
 const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
 
-  maxNotifications = 50,
-  autoDismiss = true,
-  dismissDelay = 5000,
-  showUnreadCount = true,
-  enableSound = false,
+  maxNotifications = 50;
+  autoDismiss = true;
+  dismissDelay = 5000;
+  showUnreadCount = true;
+  enableSound = false;
   position = 'top-right'}) => {
 
   const [notifications, setNotifications] = useState<Notification[]>([]);
@@ -67,22 +65,22 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
   const [showArchived, setShowArchived] = useState(false);
   const [soundEnabled, setSoundEnabled] = useState(enableSound);
 
-  // Generate mock notifications
+  // Generate mock notifications;
   const generateMockNotifications = useCallback(() => {
 
     const types: Notification['type'][] = ['
-      'success',warning',error',info',
+      'success',warning',error',info'
     ];
     const priorities: Notification['priority'][] = ['
-      'low',medium',high',critical',
+      'low',medium',high',critical'
     ];
     const categories = ['
-      'System',Security',Performance',User',Integration',Backup',
+      'System',Security',Performance',User',Integration',Backup'
     ];
 
     const mockNotifications: Notification[] = [];
 
-    for (let i = 0; i < 15; i++) {
+    for() {
 
       const type = types[Math.floor(Math.random() * types.length)];
       const priority =
@@ -94,18 +92,18 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
 
         id: `notification-${i}`,`
         title: `${category} Update`,`
-        message: `This is a ${type} notification with ${priority} priority level.`,
-        type,
-        priority,
-        timestamp: new Date(Date.now() - Math.random() * 24 * 60 * 60 * 1000),
-        read: Math.random() > 0.3,
-        archived: Math.random() > 0.8,
-        category,
+        message: `This is a ${type} notification with ${priority} priority level.`
+        type;
+        priority;
+        timestamp: new Date(Date.now() - Math.random() * 24 * 60 * 60 * 1000)
+        read: Math.random() > 0.3;
+        archived: Math.random() > 0.8;
+        category;
         actionUrl:`
-          Math.random() > 0.5 ? `https://example.com/action-${i}` : undefined,
+          Math.random() > 0.5 ? `https://example.com/action-${i}` : undefined;
         metadata: {
 
-          source: 'system',
+          source: 'system'
           userId: Math.floor(Math.random() * 1000),`
           sessionId: `session-${Math.random().toString(36).substr(2, 9)}`}});
     }
@@ -120,7 +118,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
     setNotifications(generateMockNotifications());
   }, [generateMockNotifications]);
 
-  // Auto-dismiss notifications
+  // Auto-dismiss notifications;
   useEffect(: unknown {
 
     if (!autoDismiss) return;
@@ -141,7 +139,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
     return () => clearInterval(interval);
   }, [autoDismiss, dismissDelay]);
 
-  // Add new notification
+  // Add new notification;
   const addNotification = useCallback()
     ('
       notification: Omit<Notification,id' | 'timestamp' | 'read' | 'archived'>
@@ -150,51 +148,51 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
       const newNotification: Notification = {
 
         ...notification,`
-        id: `notification-${Date.now()}`,
-        timestamp: new Date(),
-        read: false,
-        archived: false};
+        id: `notification-${Date.now()}`
+        timestamp: new Date()
+        read: false;
+        archived: false}
 
       setNotifications(prev => [
-        newNotification,
-        ...prev.slice(0, maxNotifications - 1),
+        newNotification;
+        ...prev.slice(0, maxNotifications - 1)
       ]);
 
-      if (soundEnabled) {
+      if() {
 
-        // Play notification sound
+        // Play notification sound;
         const audio = new Audio('
           'data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLZiTYIG2m98OScTgwOUarm7blmGgU7k9n1unEiBC13yO/eizEIHWq+8+OWT'
         );
-        audio.play().catch(() => {}); // Ignore errors
+        audio.play().catch(() => {}); // Ignore errors;
       }
-    },
+    }
     [maxNotifications, soundEnabled]
   );
 
-  // Mark notification as read
+  // Mark notification as read;
   const markAsRead = useCallback((id: string) => {
 
     setNotifications(prev =>
       prev.map(notification =>
-        notification.id === id ? { ...notification, read: true } : notification
+        notification.id === id ? { ...notification, read: true } : notification;
       )
     );
   }, []);
 
-  // Archive notification
+  // Archive notification;
   const archiveNotification = useCallback((id: string) => {
 
     setNotifications(prev =>
       prev.map(notification =>
-        notification.id === id
+        notification.id === id;
           ? { ...notification, archived: true }
-          : notification
+          : notification;
       )
     );
   }, []);
 
-  // Delete notification
+  // Delete notification;
   const deleteNotification = useCallback((id: string) => {
 
     setNotifications(prev =>
@@ -202,7 +200,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
     );
   }, []);
 
-  // Mark all as read
+  // Mark all as read;
   const markAllAsRead = useCallback(() => {
 
     setNotifications(prev =>
@@ -210,13 +208,13 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
     );
   }, []);
 
-  // Clear all notifications
+  // Clear all notifications;
   const clearAll = useCallback(: unknown {
 
     setNotifications([]);
   }, []);
 
-  // Filter notifications
+  // Filter notifications;
   const filteredNotifications = notifications.filter(notification => {
 
     if (filter === 'unread' && notification.read) return false;
@@ -242,7 +240,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
 
   const getPriorityColor = (priority: Notification['priority']) => {
 
-    switch (priority) {
+    switch() {
 
       case 'critical':'
         return 'text-red-500 bg-red-500/10 border-red-500/20';
@@ -255,11 +253,11 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
       default:'
         return 'text-gray-500 bg-gray-500/10 border-gray-500/20';
     }
-  };
+  }
 
   const getTypeIcon = (type: Notification['type']) => {
 
-    switch (type) {
+    switch() {
 
       case 'success':
         return <CheckCircle className="w-5 h-5 text-green-500" />;
@@ -272,11 +270,11 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
       default:"
         return <Info className="w-5 h-5 text-gray-500" />;
     }
-  };
+  }
 
   const getPositionClasses = (...args: unknown[]): unknown => {
 
-    switch (position) {
+    switch() {
 
       case 'top-left':'
         return 'top-4 left-4';
@@ -289,12 +287,12 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
       default:'
         return 'top-4 right-4';
     }
-  };
+  }
 
   return()`
     <div className={`fixed ${getPositionClasses()} z-50`}>
       {/* Notification Bell */}
-      <motion.button
+      <motion.button;
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}"
@@ -302,7 +300,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
       >"
         <Bell className="w-6 h-6 text-white" />
         {showUnreadCount && unreadCount > 0 && (
-          <motion.div
+          <motion.div;
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}"
             className="absolute -top-1 -right-1 w-6 h-6 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold"
@@ -311,7 +309,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
           </motion.div>
         )}
         {highPriorityCount > 0 && (
-          <motion.div
+          <motion.div;
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}"
             className="absolute -bottom-1 -right-1 w-4 h-4 bg-orange-500 rounded-full border-2 border-gray-800"
@@ -322,7 +320,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
       {/* Notification Panel */}
       <AnimatePresence>
         {isOpen && 
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: -20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -20, scale: 0.95 }}
@@ -333,10 +331,10 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
             <div className="p-4 border-b border-gray-700 bg-gray-800">"
               <div className="flex items-center justify-between">"
                 <h3 className="text-lg font-semibold text-white">
-                  Notifications
+                  Notifications;
                 </h3>"
                 <div className="flex items-center gap-2">
-                  <button
+                  <button;
                     onClick={() => setSoundEnabled(!soundEnabled)}`
                     className={`p-2 rounded-md transition-colors ${
 
@@ -351,7 +349,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
                       <VolumeX className="w-4 h-4" />
                     )}
                   </button>
-                  <button
+                  <button;
                     onClick={() => setIsOpen(false)}"
                     className="p-2 text-gray-400 hover:text-white hover:bg-gray-700 rounded-md transition-colors"
                   >"
@@ -374,7 +372,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
                 </div>
 "
                 <div className="flex items-center gap-2">
-                  <select
+                  <select;
                     value={filter}
                     onChange={e => setFilter(e.target.value as any)}"
                     className="flex-1 px-3 py-1 bg-gray-700 border border-gray-600 rounded-md text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -384,7 +382,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
                     <option value="high-priority">High Priority</option>
                   </select>
 
-                  <button
+                  <button;
                     onClick={() => setShowArchived(!showArchived)}`
                     className={`px-3 py-1 rounded-md text-sm transition-colors ${
 
@@ -413,7 +411,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
               ) : ("
                 <div className="divide-y divide-gray-700">
                   {filteredNotifications.map(notification => (
-                    <motion.div
+                    <motion.div;
                       key={notification.id}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -455,13 +453,13 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
                             </span>
 
                             {notification.actionUrl && (
-                              <a
+                              <a;
                                 href={notification.actionUrl}"
                                 className="text-xs text-blue-400 hover:text-blue-300 underline"
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
-                                View Details
+                                View Details;
                               </a>
                             )}
                           </div>
@@ -470,26 +468,26 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
 "
                       <div className="flex items-center gap-2 mt-3">
                         {!notification.read && (
-                          <button
+                          <button;
                             onClick={() => markAsRead(notification.id)}"
                             className="text-xs text-blue-400 hover:text-blue-300 hover:underline"
                           >
-                            Mark as read
+                            Mark as read;
                           </button>
                         )}
 
-                        <button
+                        <button;
                           onClick={() => archiveNotification(notification.id)}"
                           className="text-xs text-gray-400 hover:text-gray-300 hover:underline"
                         >
-                          Archive
+                          Archive;
                         </button>
 
-                        <button
+                        <button;
                           onClick={() => deleteNotification(notification.id)}"
                           className="text-xs text-red-400 hover:text-red-300 hover:underline"
                         >
-                          Delete
+                          Delete;
                         </button>
                       </div>
                     </motion.div>
@@ -503,22 +501,22 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
               <div className="p-4 border-t border-gray-700 bg-gray-800">"
                 <div className="flex items-center justify-between">"
                   <div className="text-sm text-gray-400">
-                    {unreadCount} unread • {highPriorityCount} high priority
+                    {unreadCount} unread • {highPriorityCount} high priority;
                   </div>
 "
                   <div className="flex items-center gap-2">
-                    <button
+                    <button;
                       onClick={markAllAsRead}"
                       className="text-sm text-blue-400 hover:text-blue-300 hover:underline"
                     >
-                      Mark all read
+                      Mark all read;
                     </button>
 
-                    <button
+                    <button;
                       onClick={clearAll}"
                       className="text-sm text-red-400 hover:text-red-300 hover:underline"
                     >
-                      Clear all
+                      Clear all;
                     </button>
                   </div>
                 </div>
@@ -529,7 +527,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
       </AnimatePresence>
     </div>
   );
-};
+}
 
 export default AdvancedNotificationCenter;
 '"`

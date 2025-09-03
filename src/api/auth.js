@@ -34,7 +34,7 @@ export async function resetPassword(token, password) {}
 ''
 '''
     method: 'PUT','''
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'application/json' }
     body: JSON.stringify({ token, password })'
   });''
   const data = await res.json().catch(() => ({}));'''
@@ -44,4 +44,4 @@ export async function resetPassword(token, password) {}
 '`
 
 
-export { API_URL };
+export { API_URL }

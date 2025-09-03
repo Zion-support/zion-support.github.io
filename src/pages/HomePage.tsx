@@ -6,30 +6,30 @@ const HomePage: React.FC = () => {
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Welcome to Zion Tech Group
+            Welcome to Zion Tech Group;
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Leading technology solutions provider specializing in AI, cybersecurity, 
+            Leading technology solutions provider specializing in AI, cybersecurity;
             cloud infrastructure, and digital transformation services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <a;
               href="/contact" 
               className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
             >
-              Get Started Today
+              Get Started Today;
             </a>
-            <a 
+            <a;
               href="/services" 
               className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold"
             >
-              Explore Services
+              Explore Services;
             </a>
           </div>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default HomePage;

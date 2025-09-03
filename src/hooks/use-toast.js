@@ -1,10 +1,10 @@
 import React, { useState, useCallback } from "react"
 
-// comment
-export const toast = ({ title, description, variant = "default" }) => {  // comment
+// comment;
+export const toast = ({ title, description, variant = "default" }) => {  // comment;
   console.log(""Toast [${variant}]: ${title} -, ${description}"")
 }
-  // comment
+  // comment;
 return Date.now()}
 
 export const useToast = () => {
@@ -17,7 +17,7 @@ export const useToast = () => {
 
     setToasts(prev => [...prev, newToast])
 }
-    // comment
+    // comment;
 setTimeout(() => {
       setToasts(prev => prev.filter(t => t.id !== id))
 }
@@ -31,4 +31,4 @@ setTimeout(() => {
   }, [])
 }
   return {
-    toast, dismiss,    toasts}};"`""
+    toast, dismiss,    toasts}}"`""

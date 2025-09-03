@@ -6,94 +6,94 @@ import Link from 'next/link';
 const CloudServicesPage: NextPage = () => {
   const cloudServices = [
     {
-      icon: <Cloud className="w-8 h-8" />,
-      title: 'Cloud Migration',
-      description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency',
+      icon: <Cloud className="w-8 h-8" />
+      title: 'Cloud Migration'
+      description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency'
       features: ['Assessment & Planning', 'Data Migration', 'Application Modernization', 'Post-Migration Support']
-    },
+    }
     {
-      icon: <Server className="w-8 h-8" />,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud infrastructure designed for your business needs',
+      icon: <Server className="w-8 h-8" />
+      title: 'Cloud Infrastructure'
+      description: 'Scalable and secure cloud infrastructure designed for your business needs'
       features: ['Auto-scaling', 'Load Balancing', 'High Availability', 'Disaster Recovery']
-    },
+    }
     {
-      icon: <Settings className="w-8 h-8" />,
-      title: 'DevOps & Automation',
-      description: 'Streamline your development and deployment processes with DevOps best practices',
+      icon: <Settings className="w-8 h-8" />
+      title: 'DevOps & Automation'
+      description: 'Streamline your development and deployment processes with DevOps best practices'
       features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring & Logging', 'Automated Testing']
-    },
+    }
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: 'Cloud Security',
-      description: 'Comprehensive security solutions to protect your cloud infrastructure and data',
+      icon: <Shield className="w-8 h-8" />
+      title: 'Cloud Security'
+      description: 'Comprehensive security solutions to protect your cloud infrastructure and data'
       features: ['Identity & Access Management', 'Data Encryption', 'Security Monitoring', 'Compliance']
     }
   ];
 
   const platforms = [
     {
-      name: 'Amazon Web Services',
-      logo: '/platforms/aws.png',
-      description: 'Comprehensive cloud computing platform with extensive services',
+      name: 'Amazon Web Services'
+      logo: '/platforms/aws.png'
+      description: 'Comprehensive cloud computing platform with extensive services'
       features: ['EC2', 'S3', 'Lambda', 'RDS', 'CloudFront']
-    },
+    }
     {
-      name: 'Microsoft Azure',
-      logo: '/platforms/azure.png',
-      description: 'Enterprise-grade cloud platform with hybrid capabilities',
+      name: 'Microsoft Azure'
+      logo: '/platforms/azure.png'
+      description: 'Enterprise-grade cloud platform with hybrid capabilities'
       features: ['Virtual Machines', 'Azure SQL', 'Functions', 'Storage', 'CDN']
-    },
+    }
     {
-      name: 'Google Cloud Platform',
-      logo: '/platforms/gcp.png',
-      description: 'Advanced cloud platform with AI and machine learning capabilities',
+      name: 'Google Cloud Platform'
+      logo: '/platforms/gcp.png'
+      description: 'Advanced cloud platform with AI and machine learning capabilities'
       features: ['Compute Engine', 'Cloud Storage', 'BigQuery', 'Kubernetes', 'AI Platform']
     }
   ];
 
   const benefits = [
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: 'Scalability',
+      icon: <Zap className="w-8 h-8" />
+      title: 'Scalability'
       description: 'Scale your infrastructure up or down based on demand, paying only for what you use'
-    },
+    }
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: 'Security',
+      icon: <Shield className="w-8 h-8" />
+      title: 'Security'
       description: 'Enterprise-grade security with advanced threat protection and compliance'
-    },
+    }
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: 'Cost Optimization',
+      icon: <TrendingUp className="w-8 h-8" />
+      title: 'Cost Optimization'
       description: 'Reduce infrastructure costs by up to 40% with optimized cloud solutions'
-    },
+    }
     {
-      icon: <Globe className="w-8 h-8" />,
-      title: 'Global Reach',
+      icon: <Globe className="w-8 h-8" />
+      title: 'Global Reach'
       description: 'Deploy applications globally with low latency and high availability'
     }
   ];
 
   const process = [
     {
-      step: '01',
-      title: 'Assessment',
+      step: '01'
+      title: 'Assessment'
       description: 'Evaluate your current infrastructure and identify migration opportunities'
-    },
+    }
     {
-      step: '02',
-      title: 'Strategy',
+      step: '02'
+      title: 'Strategy'
       description: 'Develop a comprehensive cloud strategy tailored to your business goals'
-    },
+    }
     {
-      step: '03',
-      title: 'Migration',
+      step: '03'
+      title: 'Migration'
       description: 'Execute the migration with minimal disruption to your operations'
-    },
+    }
     {
-      step: '04',
-      title: 'Optimization',
+      step: '04'
+      title: 'Optimization'
       description: 'Continuously optimize your cloud infrastructure for performance and cost'
     }
   ];
@@ -107,14 +107,14 @@ const CloudServicesPage: NextPage = () => {
             Cloud & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">DevOps</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            Transform your infrastructure with scalable cloud solutions and streamlined DevOps practices
+            Transform your infrastructure with scalable cloud solutions and streamlined DevOps practices;
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-zion-cyan text-white px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan/90 transition-colors">
-              Get Cloud Consultation
+              Get Cloud Consultation;
             </Link>
             <Link href="/case-studies" className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              View Case Studies
+              View Case Studies;
             </Link>
           </div>
         </div>
@@ -126,7 +126,7 @@ const CloudServicesPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Our Cloud Services</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive cloud solutions designed to modernize your infrastructure and accelerate your business
+              Comprehensive cloud solutions designed to modernize your infrastructure and accelerate your business;
             </p>
           </div>
           
@@ -158,7 +158,7 @@ const CloudServicesPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Cloud Platforms We Support</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We work with leading cloud providers to deliver the best solutions for your needs
+              We work with leading cloud providers to deliver the best solutions for your needs;
             </p>
           </div>
           
@@ -192,7 +192,7 @@ const CloudServicesPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Why Choose Cloud Solutions</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience the benefits of modern cloud infrastructure and DevOps practices
+              Experience the benefits of modern cloud infrastructure and DevOps practices;
             </p>
           </div>
           
@@ -216,7 +216,7 @@ const CloudServicesPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Our Cloud Migration Process</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A proven methodology for successful cloud transformation
+              A proven methodology for successful cloud transformation;
             </p>
           </div>
           
@@ -239,21 +239,21 @@ const CloudServicesPage: NextPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Move to the Cloud?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let our cloud experts help you modernize your infrastructure and accelerate your digital transformation
+            Let our cloud experts help you modernize your infrastructure and accelerate your digital transformation;
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-white text-zion-cyan px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
-              Start Your Cloud Journey
+              Start Your Cloud Journey;
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link href="/pricing" className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              View Pricing
+              View Pricing;
             </Link>
           </div>
         </div>
       </section>
     </MainLayout>
   );
-};
+}
 
 export default CloudServicesPage;

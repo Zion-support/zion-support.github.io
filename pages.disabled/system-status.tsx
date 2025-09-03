@@ -6,81 +6,82 @@ import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database,
 const SystemStatus: NextPage = () => {
   const services = [
     {
-      name: 'Website',
-      status: 'operational',
-      uptime: '99.9%',
-      responseTime: '120ms',
+      name: 'Website'
+      status: 'operational'
+      uptime: '99.9%'
+      responseTime: '120ms'
       lastIncident: '2025-01-15'
-    },
+    }
     {
-      name: 'API Services',
-      status: 'operational',
-      uptime: '99.8%',
-      responseTime: '85ms',
+      name: 'API Services'
+      status: 'operational'
+      uptime: '99.8%'
+      responseTime: '85ms'
       lastIncident: '2025-01-10'
-    },
+    }
     {
-      name: 'Database',
-      status: 'operational',
-      uptime: '99.95%',
-      responseTime: '45ms',
+      name: 'Database'
+      status: 'operational'
+      uptime: '99.95%'
+      responseTime: '45ms'
       lastIncident: '2025-01-05'
-    },
+    }
     {
-      name: 'CDN',
-      status: 'operational',
-      uptime: '99.9%',
-      responseTime: '25ms',
+      name: 'CDN'
+      status: 'operational'
+      uptime: '99.9%'
+      responseTime: '25ms'
       lastIncident: '2024-12-28'
-    },
+    }
     {
-      name: 'Email Services',
-      status: 'operational',
-      uptime: '99.7%',
-      responseTime: '200ms',
+      name: 'Email Services'
+      status: 'operational'
+      uptime: '99.7%'
+      responseTime: '200ms'
       lastIncident: '2024-12-20'
-    },
+    }
     {
-      name: 'Monitoring',
-      status: 'operational',
-      uptime: '99.9%',
-      responseTime: '50ms',
+      name: 'Monitoring'
+      status: 'operational'
+      uptime: '99.9%'
+      responseTime: '50ms'
       lastIncident: '2024-12-15'
     }
   ];
 
   const incidents = [
     {
-      id: 1,
-      title: 'Scheduled Maintenance - API Services',
-      status: 'resolved',
-      severity: 'minor',
-      startTime: '2025-01-15T02:00:00Z',
-      endTime: '2025-01-15T04:00:00Z',
+      id: 1;
+      title: 'Scheduled Maintenance - API Services'
+      status: 'resolved'
+      severity: 'minor'
+      startTime: '2025-01-15T02:00:00Z'
+      endTime: '2025-01-15T04:00:00Z'
       description: 'Scheduled maintenance window for API service updates and security patches.'
-    },
+    }
     {
-      id: 2,
-      title: 'Database Performance Issue',
-      status: 'resolved',
-      severity: 'major',
-      startTime: '2025-01-10T14:30:00Z',
-      endTime: '2025-01-10T16:45:00Z',
+      id: 2;
+      title: 'Database Performance Issue'
+      status: 'resolved'
+      severity: 'major'
+      startTime: '2025-01-10T14:30:00Z'
+      endTime: '2025-01-10T16:45:00Z'
       description: 'Temporary performance degradation in database queries affecting API response times.'
-    },
+    }
     {
-      id: 3,
-      title: 'CDN Edge Server Outage',
-      status: 'resolved',
-      severity: 'minor',
-      startTime: '2024-12-28T08:15:00Z',
-      endTime: '2024-12-28T09:30:00Z',
+      id: 3;
+      title: 'CDN Edge Server Outage'
+      status: 'resolved'
+      severity: 'minor'
+      startTime: '2024-12-28T08:15:00Z'
+      endTime: '2024-12-28T09:30:00Z'
       description: 'Brief outage affecting content delivery in the Asia-Pacific region.'
     }
   ];
 
   const getStatusIcon = (status: string) => {
-    switch (status) {
+    switch() {
+
       case 'operational':
         return <CheckCircle className="w-5 h-5 text-green-500" />;
       case 'degraded':
@@ -90,10 +91,11 @@ const SystemStatus: NextPage = () => {
       default:
         return <Clock className="w-5 h-5 text-gray-500" />;
     }
-  };
+  }
 
   const getStatusColor = (status: string) => {
-    switch (status) {
+    switch() {
+
       case 'operational':
         return 'text-green-600 bg-green-100';
       case 'degraded':
@@ -103,10 +105,11 @@ const SystemStatus: NextPage = () => {
       default:
         return 'text-gray-600 bg-gray-100';
     }
-  };
+  }
 
   const getSeverityColor = (severity: string) => {
-    switch (severity) {
+    switch() {
+
       case 'critical':
         return 'text-red-600 bg-red-100';
       case 'major':
@@ -116,10 +119,10 @@ const SystemStatus: NextPage = () => {
       default:
         return 'text-gray-600 bg-gray-100';
     }
-  };
+  }
 
   return (
-    <MainLayout
+    <MainLayout;
       title="System Status - Zion Tech Group"
       description="Real-time status of Zion Tech Group's services and systems. Check uptime, performance, and incident reports."
       keywords="system status, uptime, service status, incidents, monitoring, Zion Tech Group"
@@ -132,7 +135,7 @@ const SystemStatus: NextPage = () => {
               <Activity className="w-8 h-8 text-green-300" />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              System Status
+              System Status;
             </h1>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Real-time status of all Zion Tech Group services and systems. 
@@ -268,13 +271,13 @@ const SystemStatus: NextPage = () => {
                 Subscribe to status updates to be notified of any service incidents or maintenance windows.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-                <input
+                <input;
                   type="email"
                   placeholder="Enter your email"
                   className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
                 />
                 <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Subscribe
+                  Subscribe;
                 </button>
               </div>
             </div>
@@ -283,6 +286,6 @@ const SystemStatus: NextPage = () => {
       </div>
     </MainLayout>
   );
-};
+}
 
 export default SystemStatus;

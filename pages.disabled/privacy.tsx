@@ -8,71 +8,71 @@ const Privacy: NextPage = () => {
 
   const privacySections = [
     {
-      icon: Database,
-      title: 'Information We Collect',
+      icon: Database;
+      title: 'Information We Collect'
       content: [
-        'Personal information you provide directly (name, email, phone number)',
-        'Usage data and analytics from our website and services',
-        'Technical information such as IP address, browser type, and device information',
+        'Personal information you provide directly (name, email, phone number)'
+        'Usage data and analytics from our website and services'
+        'Technical information such as IP address, browser type, and device information'
         'Communication records when you contact us for support or inquiries'
       ]
-    },
+    }
     {
-      icon: Eye,
-      title: 'How We Use Your Information',
+      icon: Eye;
+      title: 'How We Use Your Information'
       content: [
-        'To provide and improve our technology services',
-        'To communicate with you about our services and updates',
-        'To process transactions and manage your account',
+        'To provide and improve our technology services'
+        'To communicate with you about our services and updates'
+        'To process transactions and manage your account'
         'To comply with legal obligations and protect our rights'
       ]
-    },
+    }
     {
-      icon: Lock,
-      title: 'Data Security',
+      icon: Lock;
+      title: 'Data Security'
       content: [
-        'We implement industry-standard security measures to protect your data',
-        'All data transmission is encrypted using SSL/TLS protocols',
-        'Access to personal information is restricted to authorized personnel only',
+        'We implement industry-standard security measures to protect your data'
+        'All data transmission is encrypted using SSL/TLS protocols'
+        'Access to personal information is restricted to authorized personnel only'
         'Regular security audits and updates to maintain data protection'
       ]
-    },
+    }
     {
-      icon: UserCheck,
-      title: 'Your Rights',
+      icon: UserCheck;
+      title: 'Your Rights'
       content: [
-        'Right to access your personal information',
-        'Right to correct inaccurate or incomplete data',
-        'Right to request deletion of your personal information',
+        'Right to access your personal information'
+        'Right to correct inaccurate or incomplete data'
+        'Right to request deletion of your personal information'
         'Right to opt-out of marketing communications'
       ]
 
 const Privacy: NextPage = () => {
   const privacyPrinciples = [
     {
-      icon: Shield,
-      title: 'Data Protection',
+      icon: Shield;
+      title: 'Data Protection'
       description: 'We implement industry-standard security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.'
-    },
+    }
     {
-      icon: Eye,
-      title: 'Transparency',
+      icon: Eye;
+      title: 'Transparency'
       description: 'We are transparent about what data we collect, how we use it, and with whom we share it. You have the right to know and control your data.'
-    },
+    }
     {
-      icon: Lock,
-      title: 'Data Minimization',
+      icon: Lock;
+      title: 'Data Minimization'
       description: 'We only collect the minimum amount of personal data necessary to provide our services and improve your experience.'
-    },
+    }
     {
-      icon: Database,
-      title: 'Secure Storage',
+      icon: Database;
+      title: 'Secure Storage'
       description: 'Your data is stored securely using encryption and other security measures, and we regularly review and update our security practices.'
     }
   ];
 
   return (
-    <MainLayout
+    <MainLayout;
       title="Privacy Policy - Zion Tech Group"
       description="Learn how Zion Tech Group protects your privacy and handles your personal information. Our comprehensive privacy policy outlines our data practices and your rights."
       keywords="privacy policy, data protection, personal information, GDPR compliance, privacy rights"
@@ -101,11 +101,11 @@ const Privacy: NextPage = () => {
                 <h2 className="text-2xl font-bold mb-4 text-gray-900">Introduction</h2>
                 <p className="text-gray-600 leading-relaxed mb-4">
                   Zion Tech Group ("we," "our," or "us") is committed to protecting your privacy and personal information. 
-                  This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you 
+                  This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you;
                   visit our website or use our services.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  By using our website or services, you agree to the collection and use of information in accordance 
+                  By using our website or services, you agree to the collection and use of information in accordance;
                   with this policy. If you do not agree with our policies and practices, please do not use our services.
                 </p>
               </div>
@@ -140,7 +140,7 @@ const Privacy: NextPage = () => {
                   <p className="text-gray-700"><strong>Email:</strong> privacy@ziontechgroup.com</p>
                   <p className="text-gray-700"><strong>Phone:</strong> +1 302 464 0950</p>
                   <p className="text-gray-700">
-                    <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709
+                    <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709;
                   </p>
                 </div>
               </div>
@@ -149,8 +149,8 @@ const Privacy: NextPage = () => {
               <div className="bg-white rounded-lg shadow-lg p-8 mt-8">
                 <h2 className="text-2xl font-bold mb-4 text-gray-900">Policy Updates</h2>
                 <p className="text-gray-600 leading-relaxed">
-                  We may update this Privacy Policy from time to time. We will notify you of any changes by posting 
-                  the new Privacy Policy on this page and updating the "Last updated" date. You are advised to review 
+                  We may update this Privacy Policy from time to time. We will notify you of any changes by posting;
+                  the new Privacy Policy on this page and updating the "Last updated" date. You are advised to review;
                   this Privacy Policy periodically for any changes.
                 </p>
               </div>
@@ -162,30 +162,30 @@ const Privacy: NextPage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <motion.h1 
+          <motion.h1;
             className="text-4xl md:text-5xl font-bold mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Privacy Policy
+            Privacy Policy;
           </motion.h1>
-          <motion.p 
+          <motion.p;
             className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-200"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Your privacy is important to us. This policy explains how we collect, 
+            Your privacy is important to us. This policy explains how we collect;
             use, and protect your personal information.
           </motion.p>
-          <motion.div
+          <motion.div;
             className="text-sm text-gray-300"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Last updated: January 15, 2025
+            Last updated: January 15, 2025;
           </motion.div>
         </div>
       </section>
@@ -195,7 +195,7 @@ const Privacy: NextPage = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {privacyPrinciples.map((principle, index) => (
-              <motion.div
+              <motion.div;
                 key={principle.title}
                 className="bg-white rounded-lg shadow-lg p-6 text-center"
                 initial={{ opacity: 0, y: 30 }}
@@ -217,7 +217,7 @@ const Privacy: NextPage = () => {
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="prose prose-lg max-w-none">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -350,7 +350,7 @@ const Privacy: NextPage = () => {
                     <strong>Address:</strong><br />
                     Zion Tech Group<br />
                     364 E Main St STE 1008<br />
-                    Middletown, DE 19709
+                    Middletown, DE 19709;
                   </div>
                 </div>
               </div>
@@ -364,7 +364,7 @@ const Privacy: NextPage = () => {
       </section>
     </MainLayout>
   );
-};
+}
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Shield, Eye, Lock, Database, UserCheck, FileText } from 'lucide-react';

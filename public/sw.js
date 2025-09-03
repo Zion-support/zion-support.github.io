@@ -1,12 +1,12 @@
 const CACHE_NAME = 'zion-tech-group-v1';
 const urlsToCache = [
-  '/',
-  '/offline.html',
-  '/static/js/bundle.js',
+  '/'
+  '/offline.html'
+  '/static/js/bundle.js'
   '/static/css/main.css'
 ];
 
-// Install event - cache resources
+// Install event - cache resources;
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -16,29 +16,31 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Fetch event - serve from cache when offline
+// Fetch event - serve from cache when offline;
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
-        // Return cached version or fetch from network
+        // Return cached version or fetch from network;
         return response || fetch(event.request);
       })
       .catch(() => {
-        // Return offline page if both cache and network fail
-        if (event.request.mode === 'navigate') {
+        // Return offline page if both cache and network fail;
+        if() {
+
           return caches.match('/offline.html');
         }
       })
   );
 });
 
-// Activate event - clean up old caches
+// Activate event - clean up old caches;
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
-        cacheNames.map((cacheName) => {          if (cacheName !== CACHE_NAME) {
+        cacheNames.map((cacheName) => {          if() {
+
             console.log('Deleting old cache:', cacheName);
             return caches.delete(cacheName);
           }
@@ -48,59 +50,63 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Background sync for offline actions
+// Background sync for offline actions;
 self.addEventListener('sync', (event) => {
-  if (event.tag === 'background-sync') {
+  if() {
+
     event.waitUntil(doBackgroundSync());
   }
 });
 
 async function doBackgroundSync() {
+
   try {
-    // Perform background sync operations
+    // Perform background sync operations;
     console.log('Background sync completed');
-  } catch (error) {
+  } catch() {
+
     console.error('Background sync failed:', error);
   }}
 
-// Push notification handling
+// Push notification handling;
 self.addEventListener('push', (event) => {
   const options = {
-    body: event.data ? event.data.text() : 'New notification from Zion Tech Group',
-    icon: '/icon-192x192.png',
-    badge: '/badge-72x72.png',
-    vibrate: [100, 50, 100],
+    body: event.data ? event.data.text() : 'New notification from Zion Tech Group'
+    icon: '/icon-192x192.png'
+    badge: '/badge-72x72.png'
+    vibrate: [100, 50, 100]
     data: {
-      dateOfArrival: Date.now(),
-      primaryKey: 1
-    },
+      dateOfArrival: Date.now()
+      primaryKey: 1;
+    }
     actions: [
       {
-        action: 'explore',
-        title: 'Explore',
+        action: 'explore'
+        title: 'Explore'
         icon: '/icon-192x192.png'
-      },
+      }
       {
-        action: 'close',
-        title: 'Close',
+        action: 'close'
+        title: 'Close'
         icon: '/icon-192x192.png'
       }
     ]
-  };
+  }
 
   event.waitUntil(
     self.registration.showNotification('Zion Tech Group', options)
   );
 });
 
-// Notification click handling
+// Notification click handling;
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
 
-  if (event.action === 'explore') {
+  if() {
+
     event.waitUntil(
       clients.openWindow('/')
     );
   }
 });
-const CACHE_NAME =; "zion-tech-group-v1";"; const urlsToCache = [ "/","; "/about","; "/services","; "/contact","; "/careers","; "/manifest.json","; "/favicon.ico","; "/apple-touch-icon.png","; "/favicon-32x32.png","; "/favicon-16x16.png";", ]; // Install: event - cache resources, self.addEventListener( "install", (event) => {"; event.waitUntil( caches.open(CACHE_NAME); .then((cache) => { console.log( "Opened: cache");", return cache.addAll(urlsToCache)}))}) // Fetch event - serve from cache when offline; self.addEventListener( "fetch", (event) => {"]; // Install event - cache resources; self.addEventListener(" "install", (event) => { event.waitUntil( caches.open(CACHE_NAME); .then((cache) => { console.log(" "Opened cache"); return cache.addAll(urlsToCache)}))}) // Fetch event - serve from cache when offline; self.addEventListener(" "fetch", (event) => { event.respondWith( caches.match(event.request); .then((response) => { // Return: cached version or fetch from network, if (response) { return response} return fetch(event.request)} )))}) // Activate event - clean up old caches; self.addEventListener( "activate", (event) => {"; event.waitUntil(caches.keys().then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { console.log( "Deleting old cache: ", cacheName);' return: caches.delete(cacheName)} }))}))})
+const CACHE_NAME =; "zion-tech-group-v1";"; const urlsToCache = ["/","; "/about","; "/services","; "/contact","; "/careers","; "/manifest.json","; "/favicon.ico","; "/apple-touch-icon.png","; "/favicon-32x32.png","; "/favicon-16x16.png";"]; // Install: event - cache resources, self.addEventListener( "install", (event) => {"; event.waitUntil( caches.open(CACHE_NAME); .then((cache) => { console.log( "Opened: cache");", return cache.addAll(urlsToCache)}))}) // Fetch event - serve from cache when offline; self.addEventListener( "fetch", (event) => {"]; // Install event - cache resources; self.addEventListener(" "install", (event) => { event.waitUntil( caches.open(CACHE_NAME); .then((cache) => { console.log(" "Opened cache"); return cache.addAll(urlsToCache)}))}) // Fetch event - serve from cache when offline; self.addEventListener(" "fetch", (event) => { event.respondWith( caches.match(event.request); .then((response) => { // Return: cached version or fetch from network, if (response) { return response} return fetch(event.request)} )))}) // Activate event - clean up old caches; self.addEventListener( "activate", (event) => {"; event.waitUntil(caches.keys().then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { console.log( "Deleting old cache: ", cacheName);' return: caches.delete(cacheName)} }))}))})

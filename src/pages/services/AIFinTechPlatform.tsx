@@ -8,7 +8,7 @@ import { CheckCircle, Brain, TrendingUp, DollarSign, Shield, Zap, Globe, Clock, 
 const AIFinTechPlatform: React.FC = (): JSX.Element => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI FinTech Platform - Zion Tech Group"
         description="Revolutionary AI-powered financial technology platform that provides intelligent banking, fraud detection, and financial analytics with 99.9% accuracy and real-time processing."
       />
@@ -19,23 +19,23 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
           <div className="mb-8">
             <Badge variant="secondary" className="mb-4">
               <Brain className="w-4 h-4 mr-2" />
-              AI-Powered FinTech
+              AI-Powered FinTech;
             </Badge>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-400 bg-clip-text text-transparent">
-              AI FinTech Platform
+              AI FinTech Platform;
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Transform financial services with AI that detects fraud in real-time, provides intelligent banking insights, 
+              Transform financial services with AI that detects fraud in real-time, provides intelligent banking insights;
               and delivers 99.9% accuracy with automated financial operations.
             </p>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button size="lg" className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700">
-              Start Free Trial
+              Start Free Trial;
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900">
-              Schedule Demo
+              Schedule Demo;
             </Button>
           </div>
         </div>
@@ -88,7 +88,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Advanced Financial Features
+            Advanced Financial Features;
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -167,7 +167,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Comprehensive Financial Solutions
+            Comprehensive Financial Solutions;
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -226,7 +226,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Competitive Pricing
+            Competitive Pricing;
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -242,23 +242,23 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
               <ul className="space-y-3 mb-8 text-left">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Up to 10,000 transactions/month
+                  Up to 10,000 transactions/month;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Basic AI fraud detection
+                  Basic AI fraud detection;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Standard reporting
+                  Standard reporting;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Email support
+                  Email support;
                 </li>
               </ul>
               <Button className="w-full bg-emerald-600 hover:bg-emerald-700">
-                Start Free Trial
+                Start Free Trial;
               </Button>
             </Card>
             
@@ -274,27 +274,27 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
               <ul className="space-y-3 mb-8 text-left">
                 <li className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  Up to 100,000 transactions/month
+                  Up to 100,000 transactions/month;
                 </li>
                 <li className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  Advanced AI features
+                  Advanced AI features;
                 </li>
                 <li className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  Custom dashboards
+                  Custom dashboards;
                 </li>
                 <li className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  Priority support
+                  Priority support;
                 </li>
                 <li className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  API access
+                  API access;
                 </li>
               </ul>
               <Button className="w-full bg-white text-emerald-600 hover:bg-gray-100">
-                Get Started
+                Get Started;
               </Button>
             </Card>
             
@@ -310,27 +310,27 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
               <ul className="space-y-3 mb-8 text-left">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Unlimited transactions
+                  Unlimited transactions;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Full AI capabilities
+                  Full AI capabilities;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Custom integrations
+                  Custom integrations;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  24/7 dedicated support
+                  24/7 dedicated support;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  White-label options
+                  White-label options;
                 </li>
               </ul>
               <Button className="w-full bg-teal-600 hover:bg-teal-700">
-                Contact Sales
+                Contact Sales;
               </Button>
             </Card>
           </div>
@@ -341,7 +341,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Market Analysis & ROI
+            Market Analysis & ROI;
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -392,29 +392,29 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700">
-              Start Free Trial
+              Start Free Trial;
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900">
-              Schedule Demo
+              Schedule Demo;
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900">
-              Download FinTech Report
+              Download FinTech Report;
             </Button>
           </div>
         </div>
       </section>
     </div>
   );
-};
+}
 
 export default AIFinTechPlatform;
 
-export { AIFinTechPlatform };
+export { AIFinTechPlatform }
 
-export { AIFinTechPlatform };
+export { AIFinTechPlatform }
 
-export { AIFinTechPlatform };
+export { AIFinTechPlatform }
 
-export { AIFinTechPlatform };
+export { AIFinTechPlatform }
 
-export { AIFinTechPlatform };
+export { AIFinTechPlatform }

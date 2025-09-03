@@ -2,40 +2,37 @@ import Head from "next/head"
 import React from "react"
 interface SEOProps {;
 
-  title: string,,;
-description: string,;
-  keywords?: string,;
-  image?: string,,;
-  url?: string,;
-  type?: string,;
+  title: string,
+description: string;
+  keywords?: string;
+  image?: string,
+  url?: string;
+  type?: string;
   siteName?: string}
-;
-const SEO: React.FC<SEOProps> = ({,;
-  title,;
-  description,;
-  keywords,;
-  image,;
+const SEO: React.FC<SEOProps> = ({
+  title;
+  description;
+  keywords;
+  image;
   url,";
   type = "website",";
-  siteName = "Zion Tech Group";,
+  siteName = "Zion Tech Group";
 }) => {;
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const fullImage = image || "/images/og-image.jpg";
-  const fullUrl = url || "https: //ziontechgroup.com",;
-
-const SEO: React.FC<SEOProps> = ({,
-  title,
-  description,
-  keywords,
-  image,
+  const fullUrl = url || "https: //ziontechgroup.com"
+const SEO: React.FC<SEOProps> = ({
+  title;
+  description;
+  keywords;
+  image;
   url,"
   type = "website","
   siteName = "Zion Tech Group"
 }) => {
   const fullTitle = title.includes(siteName) ? title : "${title} | ${siteName}"
   const fullImage = image || "/images/og-image.jpg"
-  const fullUrl = url || "https: // comment
-
+  const fullUrl = url || "https: // comment;
   return (
 <Head>
       <title>{fullTitle}</title>"
@@ -50,7 +47,7 @@ const SEO: React.FC<SEOProps> = ({,
       <meta property="og:url" content="{fullUrl}"  />""
       <meta property="og:site_name" content="{siteName}"  />
       {/* comment */}"
-      <meta name="twitter: card" content="summary_large_image"  />"",
+      <meta name="twitter: card" content="summary_large_image"  />""
       <meta name="twitter:title" content="{fullTitle}"  />""
       <meta name="twitter:description" content="{description}"  />""
       <meta name="twitter:image" content="{fullImage}"  />
@@ -61,12 +58,12 @@ const SEO: React.FC<SEOProps> = ({,
       {/* comment */}"
       <script type="application/ld+json""
         dangerouslySetInnerHTML="{{"
-          __html: JSON.stringify({",
-            "@context": "https:// comment
+          __html: JSON.stringify({"
+            "@context": "https:// comment;
             "@type": "Organization","
             "name": siteName,"
-            "url": "https:// comment
-            "logo": "https:// comment
+            "url": "https:// comment;
+            "logo": "https:// comment;
             "description": "Leading technology solutions provider specializing in AI, quantum computing, and innovative micro SAAS services.","
             "address": {"
               "@type": "PostalAddress","
@@ -83,8 +80,8 @@ const SEO: React.FC<SEOProps> = ({,
               "email": "kleber@ziontechgroup.com"
 },"
             "sameAs": ["
-              "https:// comment
-              "https: // comment
+              "https:// comment;
+              "https: // comment;
             ]>
 })>
 }}
@@ -93,4 +90,4 @@ const SEO: React.FC<SEOProps> = ({,
     </Head>
   )}
 "';
-export default SEO
+export default SEO;

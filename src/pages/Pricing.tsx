@@ -1,22 +1,22 @@
 import {}
-  Check, 
-  Star, 
-  Zap, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Rocket, 
-  ArrowRight,
-  Users,
-  Clock,
-  MessageSquare,
-  Phone,
-  Mail,
+  Check;
+  Star;
+  Zap;
+  Brain;
+  Cloud;
+  Shield;
+  Rocket;
+  ArrowRight;
+  Users;
+  Clock;
+  MessageSquare;
+  Phone;
+  Mail;
   Calendar''''
 } from 'lucide-react';
 '
       popular: false,''
-      icon: Rocket,;'''
+      icon: Rocket,'''
       color: 'from-orange-500 to-red-500'}
   ];
 
@@ -33,7 +33,6 @@ import {}
   icon: unknown;
   cta: string;
   ctaLink: string}
-;
 const pricingTiers: PricingTier[] = []
   {}
 '
@@ -50,7 +49,7 @@ const pricingTiers: PricingTier[] = []
     icon: Zap,'''
     cta: 'Get Started','''
     ctaLink: '/contact'
-  },
+  }
   {}
 '
 ''
@@ -67,7 +66,7 @@ const pricingTiers: PricingTier[] = []
     icon: Brain,'''
     cta: 'Start Free Trial','''
     ctaLink: '/contact'
-  },
+  }
   {}
 '
 ''
@@ -130,13 +129,13 @@ const pricingTiers: PricingTier[] = []
               </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                View Pricing
+                View Pricing;
               </Link>
               <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
-                Contact Us
+                Contact Us;
               </Link>
             </div>
     </>
   );
 }
-export default Pricing
+export default Pricing;

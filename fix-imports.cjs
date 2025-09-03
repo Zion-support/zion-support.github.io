@@ -1,24 +1,25 @@
 const fs = require("fs");
 const path = require("path");
-function fixImportsInFile(filePath) {
+function fixImportsInFile() {
+
   try {
   let content = fs.readFileSync(filePath, "utf8");
     // Fix concatenated imports;
     content = content.replace(;
-      /import\s+([^]+);"import/g,;
+      /import\s+([^]+);"import/g;
       "import $1;\nimport";
     );
     content = content.replace(/import\s+([^]+);""/g, "import $1;\n");
     content = content.replace(;
-      /import\s+([^]+);"interface/g,;
+      /import\s+([^]+);"interface/g;
       "import $1;\n\ninterface";
     );
     content = content.replace(;
-      /import\s+([^]+);"const/g,;
+      /import\s+([^]+);"const/g;
       "import $1;\n\nconst";
     );
     content = content.replace(;
-      /import\s+([^]+);"export/g,;
+      /import\s+([^]+);"export/g;
       "import $1;\n\nexport";
     );
     // Fix other common concatenation issues;
@@ -37,33 +38,34 @@ function fixImportsInFile(filePath) {
   /g, "defaultVariants: {");
     // Fix missing quotes and commas;
     content = content.replace(;
-      /(\w+):\s*"([^"]*)"(\w+):/g,;
+      /(\w+):\s*"([^"]*)"(\w+):/g;
       "$1: "$2",\n        $3:";
     );
     content = content.replace(;
-      /(\w+):\s*"([^"]*)"(\s*})/g,;
+      /(\w+):\s*"([^"]*)"(\s*})/g;
       "$1: "$2"\n      $3";
     );
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);,
-} catch (error) {
-  console.error(`Error fixing ${filePath}:`, error.message);,
+    console.log(`Fixed: ${filePath}`);
+} catch() {
+
+  console.error(`Error fixing ${filePath}:`, error.message);
 }
 }
-;
-function walkDirectory(dir) {
+function walkDirectory() {
+
   const files = fs.readdirSync(dir);
-  for (const file of files) {
+  for() {
+
   const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     if (stat.isDirectory()) {
-  walkDirectory(filePath);,
+  walkDirectory(filePath);
 } else if (file.endsWith(".tsx") || file.endsWith(".ts")) {
-  fixImportsInFile(filePath);,
+  fixImportsInFile(filePath);
 }
   }
 }
-;
 // Fix components directory;
 walkDirectory("./components");
 console.log("Import fixing completed!")

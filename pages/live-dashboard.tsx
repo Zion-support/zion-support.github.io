@@ -9,7 +9,7 @@ const LiveDashboard: React.FC = () => {
   const [responseTime, setResponseTime] = useState(45);
   const [uptime, setUptime] = useState(99.97);
 
-  // Simulate real-time updates
+  // Simulate real-time updates;
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTime(new Date());
@@ -22,99 +22,101 @@ const LiveDashboard: React.FC = () => {
 
   const metrics = [
     {
-      title: 'Active Users',
-      value: activeUsers.toLocaleString(),
-      change: '+12%',
-      changeType: 'positive',
+      title: 'Active Users'
+      value: activeUsers.toLocaleString()
+      change: '+12%'
+      changeType: 'positive'
       icon: '👥'
-    },
+    }
     {
-      title: 'Response Time',
-      value: `${responseTime}ms`,
-      change: '-8%',
-      changeType: 'positive',
+      title: 'Response Time'
+      value: `${responseTime}ms`
+      change: '-8%'
+      changeType: 'positive'
       icon: '⚡'
-    },
+    }
     {
-      title: 'System Uptime',
-      value: `${uptime}%`,
-      change: '+0.02%',
-      changeType: 'positive',
+      title: 'System Uptime'
+      value: `${uptime}%`
+      change: '+0.02%'
+      changeType: 'positive'
       icon: '🟢'
-    },
+    }
     {
-      title: 'API Calls/min',
-      value: '2,847',
-      change: '+15%',
-      changeType: 'positive',
+      title: 'API Calls/min'
+      value: '2,847'
+      change: '+15%'
+      changeType: 'positive'
       icon: '📡'
     }
   ];
 
   const recentEvents = [
     {
-      id: 1,
-      type: 'info',
-      message: 'System backup completed successfully',
-      timestamp: '2 minutes ago',
+      id: 1;
+      type: 'info'
+      message: 'System backup completed successfully'
+      timestamp: '2 minutes ago'
       icon: '💾'
-    },
+    }
     {
-      id: 2,
-      type: 'success',
-      message: 'New user registration milestone: 10,000 users',
-      timestamp: '5 minutes ago',
+      id: 2;
+      type: 'success'
+      message: 'New user registration milestone: 10,000 users'
+      timestamp: '5 minutes ago'
       icon: '🎉'
-    },
+    }
     {
-      id: 3,
-      type: 'warning',
-      message: 'High memory usage detected on server-03',
-      timestamp: '8 minutes ago',
+      id: 3;
+      type: 'warning'
+      message: 'High memory usage detected on server-03'
+      timestamp: '8 minutes ago'
       icon: '⚠️'
-    },
+    }
     {
-      id: 4,
-      type: 'info',
-      message: 'Scheduled maintenance completed',
-      timestamp: '15 minutes ago',
+      id: 4;
+      type: 'info'
+      message: 'Scheduled maintenance completed'
+      timestamp: '15 minutes ago'
       icon: '🔧'
-    },
+    }
     {
-      id: 5,
-      type: 'success',
-      message: 'Performance optimization deployed',
-      timestamp: '1 hour ago',
+      id: 5;
+      type: 'success'
+      message: 'Performance optimization deployed'
+      timestamp: '1 hour ago'
       icon: '🚀'
     }
   ];
 
   const systemHealth = [
-    { service: 'Web Server', status: 'healthy', uptime: '99.99%', response: '12ms' },
-    { service: 'Database', status: 'healthy', uptime: '99.97%', response: '45ms' },
-    { service: 'Cache Layer', status: 'healthy', uptime: '99.98%', response: '3ms' },
-    { service: 'API Gateway', status: 'healthy', uptime: '99.96%', response: '28ms' },
+    { service: 'Web Server', status: 'healthy', uptime: '99.99%', response: '12ms' }
+    { service: 'Database', status: 'healthy', uptime: '99.97%', response: '45ms' }
+    { service: 'Cache Layer', status: 'healthy', uptime: '99.98%', response: '3ms' }
+    { service: 'API Gateway', status: 'healthy', uptime: '99.96%', response: '28ms' }
     { service: 'File Storage', status: 'healthy', uptime: '99.95%', response: '67ms' }
   ];
 
   const getStatusColor = (status: string) => {
-    switch (status) {
+    switch() {
+
       case 'healthy': return 'text-green-600 bg-green-100';
       case 'warning': return 'text-yellow-600 bg-yellow-100';
       case 'critical': return 'text-red-600 bg-red-100';
       default: return 'text-gray-600 bg-gray-100';
     }
-  };
+  }
 
   const getEventTypeColor = (type: string) => {
-    switch (type) {
+    switch() {
+
       case 'success': return 'text-green-600 bg-green-100';
       case 'warning': return 'text-yellow-600 bg-yellow-100';
       case 'error': return 'text-red-600 bg-red-100';
       case 'info': return 'text-blue-600 bg-blue-100';
       default: return 'text-gray-600 bg-gray-100';
     }
-  };
+  }
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -131,7 +133,7 @@ const LiveDashboard: React.FC = () => {
             <div>
               <h1 className="text-4xl font-bold mb-2">Live Dashboard</h1>
               <p className="text-gray-400">
-                Real-time monitoring and system performance metrics
+                Real-time monitoring and system performance metrics;
               </p>
             </div>
             <div className="mt-4 md:mt-0 text-right">
@@ -225,7 +227,7 @@ const LiveDashboard: React.FC = () => {
                 </div>
                 <div className="mt-6 text-center">
                   <button className="text-blue-400 hover:text-blue-300 text-sm">
-                    View All Events
+                    View All Events;
                   </button>
                 </div>
               </div>
@@ -272,10 +274,10 @@ const LiveDashboard: React.FC = () => {
             <p>Dashboard updates every 5 seconds • Last updated: {currentTime.toLocaleTimeString()}</p>
             <div className="mt-4">
               <Link href="/contact" className="text-blue-400 hover:text-blue-300 mr-4">
-                Support
+                Support;
               </Link>
               <Link href="/documentation" className="text-blue-400 hover:text-blue-300">
-                Documentation
+                Documentation;
               </Link>
             </div>
           </div>
@@ -283,6 +285,6 @@ const LiveDashboard: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 
 export default LiveDashboard;

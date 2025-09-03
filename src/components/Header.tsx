@@ -12,11 +12,11 @@ const Header: React.FC<HeaderProps> = ({ sidebarOpen, setSidebarOpen }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Home', href: '/' }
+    { name: 'Services', href: '/services' }
+    { name: 'Solutions', href: '/solutions' }
+    { name: 'About', href: '/about' }
+    { name: 'Contact', href: '/contact' }
   ];
 
   return (
@@ -36,7 +36,7 @@ const Header: React.FC<HeaderProps> = ({ sidebarOpen, setSidebarOpen }) => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {navigation.map((item) => (
-              <Link
+              <Link;
                 key={item.name}
                 href={item.href}
                 className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
@@ -48,17 +48,17 @@ const Header: React.FC<HeaderProps> = ({ sidebarOpen, setSidebarOpen }) => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link
+            <Link;
               href="/contact"
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-medium"
             >
-              Get Started
+              Get Started;
             </Link>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button
+            <button;
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
             >
@@ -72,7 +72,7 @@ const Header: React.FC<HeaderProps> = ({ sidebarOpen, setSidebarOpen }) => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
               {navigation.map((item) => (
-                <Link
+                <Link;
                   key={item.name}
                   href={item.href}
                   className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium transition-colors duration-200"
@@ -81,12 +81,12 @@ const Header: React.FC<HeaderProps> = ({ sidebarOpen, setSidebarOpen }) => {
                   {item.name}
                 </Link>
               ))}
-              <Link
+              <Link;
                 href="/contact"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white block px-3 py-2 rounded-lg text-base font-medium mt-4"
                 onClick={() => setIsOpen(false)}
               >
-                Get Started
+                Get Started;
               </Link>
             </div>
           </div>
@@ -94,6 +94,6 @@ const Header: React.FC<HeaderProps> = ({ sidebarOpen, setSidebarOpen }) => {
       </div>
     </header>
   );
-};
+}
 
 export default Header;

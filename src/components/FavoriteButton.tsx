@@ -2,9 +2,9 @@ import { Heart  } from 'lucide-react';
  from 'react';
 export /**
 
- * FavoriteButton function
- * @param {*} params - Function parameters
- * @returns {*} Function return value
+ * FavoriteButton function;
+ * @param {*} params - Function parameters;
+ * @returns {*} Function return value;
  */
 function FavoriteButton({ itemId, itemType, className = '' }: FavoriteButtonProps) {;
 interface FavoriteButtonProps extends React.PropsWithChildren<{}> {
@@ -19,10 +19,10 @@ export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteBut
     e.stopPropagation () ;
     setIsFavorited(!isFavorited) ;
 
-    // Here you would typically make an API call to save / remove from favorites
-    if(isFavorited) {
+    // Here you would typically make an API call to save / remove from favorites;
+    if() {
 
-      // Remove from favorites
+      // Remove from favorites;
       // // // // // // // // console.log(`Removed ${itemType} ${itemId} from favorites`)} else {
 
       // Add to favorites`
@@ -30,10 +30,10 @@ export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteBut
       // console.log(`Removed ${itemType} ${itemId} from favorites`)} else {
 
       // Add to favorites`
-      // console.log(`Added ${itemType} ${itemId} to favorites`)}  };
+      // console.log(`Added ${itemType} ${itemId} to favorites`)}  }
 
   return ()
-    <button
+    <button;
       onClick = {handleToggleFavorite}`
       className={`absolute top-2 right-2 p-2 rounded-full transition-all duration-300 ${isFavorited'
           ? 'bg-red-500 hover:bg-red-600 text-white''
@@ -46,10 +46,10 @@ export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteBut
           isFavorited ? 'fill-current' : ''`
         }`}
       />    </button>
-  )};`
+  )}`
 className: {`w-4 h-4 transition-all duration-300 ${;
           isFavorited ? 'fill-current' : '';`
-        }`} ;
+        }`}
       />;
     </button>;) }
 '`

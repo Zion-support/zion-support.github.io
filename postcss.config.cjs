@@ -1,13 +1,13 @@
 module.exports = {
   plugins: {
-    tailwindcss: {},
-<<<<<<< HEAD
-    autoprefixer: {},
-  },
+    tailwindcss: {}
+<<<<<<< HEAD;
+    autoprefixer: {}
+  }
 }
 =======
     autoprefixer: {}
   }
-};
+}
 
->>>>>>> origin/main
+>>>>>>> origin/main;

@@ -3,24 +3,24 @@ import { useState, useEffect } from 'react';
 export /**
 import { motion, AnimatePresence  } from 'framer-motion';
 
- params - Function parameters
- * @returns {*} Function return value
+ params - Function parameters;
+ * @returns {*} Function return value;
  */
-function Accessibility () {
+function Accessibility() {
 
-  Accessibility as AccessibilityIcon,
-  Type,
-  Eye,
-  Volume2,
-  Keyboard,
+  Accessibility as AccessibilityIcon;
+  Type;
+  Eye;
+  Volume2;
+  Keyboard;
               {/* Header */}
   Keyboard,              {/* Header */}
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-lg font-semibold text-white flex items-center gap-2">
                   <AccessibilityIcon className="w-5 h-5 text-cyan-400"  />
-                  Accessibility
+                  Accessibility;
                 </h2>
-                <button
+                <button;
                   onClick={() => setIsOpen(false)}
                   className="text-gray-400 hover:text-white transition-colors"
                   
@@ -33,10 +33,10 @@ function Accessibility () {
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-300 mb-3 flex items-center gap-2">
                   <Type className="w-4 h-4"  />
-                  Font Size
+                  Font Size;
                 </label>
                 <div className="flex items-center gap-3">
-                  <button
+                  <button;
                     onClick={decreaseFontSize}
                     disabled={settings.fontSize <= 12}
                     className="p-2 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed rounded-md transition-colors"
@@ -45,9 +45,9 @@ function Accessibility () {
                     <Minus className="w-4 h-4 text-white"  />
                   </button>
                   <span className="text-white font-mono min-w-[3rem] text-center">
-                    {settings.fontSize}px
+                    {settings.fontSize}px;
                   </span>
-                  <button
+                  <button;
                     onClick={increaseFontSize}
                     disabled={settings.fontSize >= 24}
                     className="p-2 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed rounded-md transition-colors"
@@ -63,9 +63,9 @@ function Accessibility () {
                 <label className="flex items-center justify-between cursor-pointer">
                   <span className="text-sm font-medium text-gray-300 flex items-center gap-2">
                     <Contrast className="w-4 h-4"  />
-                    High Contrast
+                    High Contrast;
                   </span>
-                  <input
+                  <input;
                     type="checkbox"
                     checked={settings.highContrast}
                     onChange={(e) => updateSetting('highContrast', e.target.checked)}
@@ -84,9 +84,9 @@ function Accessibility () {
                 <label className="flex items-center justify-between cursor-pointer">
                   <span className="text-sm font-medium text-gray-300 flex items-center gap-2">
                     <Eye className="w-4 h-4"  />
-                    Reduced Motion
+                    Reduced Motion;
                   </span>
-                  <input
+                  <input;
                     type="checkbox"
                     checked={settings.reducedMotion}
                     onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
@@ -104,14 +104,14 @@ function Accessibility () {
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-300 mb-3 flex items-center gap-2">
                   <Settings className="w-4 h-4"  />
-                  Theme
+                  Theme;
                 </label>
                 <div className="grid grid-cols-3 gap-2">
                   {(['auto', 'light', 'dark'] as const).map((theme) => (
-                    <button
+                    <button;
                       key={theme}
                       onClick={() => updateSetting('theme', theme)}
-                      className={`p-2 rounded-md text-xs font-medium transition-colors ${settings.theme === theme
+                      className={`p-2 rounded-md text-xs font-medium transition-colors ${settings.theme === theme;
                           ? 'bg-cyan-500 text-white'
                           : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
                       }`}
@@ -129,9 +129,9 @@ function Accessibility () {
                 <label className="flex items-center justify-between cursor-pointer">
                   <span className="text-sm font-medium text-gray-300 flex items-center gap-2">
                     <Volume2 className="w-4 h-4" />
-                    Sound Effects
+                    Sound Effects;
                   </span>
-                  <input
+                  <input;
                     type="checkbox"
                     checked={settings.soundEnabled}
                     onChange={(e) => updateSetting('soundEnabled', e.target.checked)}
@@ -149,7 +149,7 @@ function Accessibility () {
               <div className="mb-6 p-4 bg-slate-800/50 rounded-lg">
                 <h3 className="text-sm font-medium text-white mb-3 flex items-center gap-2">
                   <Keyboard className="w-4 h-4"  />
-                  Keyboard Shortcuts
+                  Keyboard Shortcuts;
                 </h3>
                 <div className="space-y-2 text-xs text-gray-300">
                   <div className="flex justify-between">
@@ -168,17 +168,15 @@ function Accessibility () {
               </div>
 
               {/* Reset Button */}
-              <button
+              <button;
                 onClick={resetSettings}
                 className="w-full px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-md transition-colors text-sm font-medium"
               >
-                Reset to Defaults
+                Reset to Defaults;
               </button>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
     </>
-  )}
-
-;,"});,})";
+  )},"});,})";

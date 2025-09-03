@@ -10,142 +10,143 @@ const Webinars: NextPage = () => {
 
   const webinars = [
     {
-      id: 1,
-      title: 'AI-Powered Business Transformation: Real-World Success Stories',
-      description: 'Learn how leading companies are leveraging AI to drive innovation and growth. Join us for insights from industry experts and real-world case studies.',
-      speaker: 'Dr. Sarah Johnson',
-      speakerTitle: 'Chief AI Officer, TechCorp',
-      date: '2025-02-15',
-      time: '2:00 PM EST',
-      duration: '60 minutes',
-      category: 'AI & Machine Learning',
-      type: 'upcoming',
-      attendees: 0,
-      maxAttendees: 500,
+      id: 1;
+      title: 'AI-Powered Business Transformation: Real-World Success Stories'
+      description: 'Learn how leading companies are leveraging AI to drive innovation and growth. Join us for insights from industry experts and real-world case studies.'
+      speaker: 'Dr. Sarah Johnson'
+      speakerTitle: 'Chief AI Officer, TechCorp'
+      date: '2025-02-15'
+      time: '2:00 PM EST'
+      duration: '60 minutes'
+      category: 'AI & Machine Learning'
+      type: 'upcoming'
+      attendees: 0;
+      maxAttendees: 500;
       image: '/webinars/ai-transformation.jpg'
-    },
+    }
     {
-      id: 2,
-      title: 'Cloud Migration Best Practices: A Complete Guide',
-      description: 'Comprehensive guide to successful cloud migration strategies, common pitfalls to avoid, and best practices for seamless transitions.',
-      speaker: 'Michael Chen',
-      speakerTitle: 'Senior Cloud Architect, CloudTech Solutions',
-      date: '2025-02-20',
-      time: '3:00 PM EST',
-      duration: '45 minutes',
-      category: 'Cloud Computing',
-      type: 'upcoming',
-      attendees: 0,
-      maxAttendees: 300,
+      id: 2;
+      title: 'Cloud Migration Best Practices: A Complete Guide'
+      description: 'Comprehensive guide to successful cloud migration strategies, common pitfalls to avoid, and best practices for seamless transitions.'
+      speaker: 'Michael Chen'
+      speakerTitle: 'Senior Cloud Architect, CloudTech Solutions'
+      date: '2025-02-20'
+      time: '3:00 PM EST'
+      duration: '45 minutes'
+      category: 'Cloud Computing'
+      type: 'upcoming'
+      attendees: 0;
+      maxAttendees: 300;
       image: '/webinars/cloud-migration.jpg'
-    },
+    }
     {
-      id: 3,
-      title: 'Cybersecurity in the Age of Remote Work',
-      description: 'Essential security measures and best practices for protecting your organization in today\'s distributed work environment.',
-      speaker: 'Emily Watson',
-      speakerTitle: 'Cybersecurity Expert, SecureNet',
-      date: '2025-02-25',
-      time: '1:00 PM EST',
-      duration: '50 minutes',
-      category: 'Cybersecurity',
-      type: 'upcoming',
-      attendees: 0,
-      maxAttendees: 400,
+      id: 3;
+      title: 'Cybersecurity in the Age of Remote Work'
+      description: 'Essential security measures and best practices for protecting your organization in today\'s distributed work environment.'
+      speaker: 'Emily Watson'
+      speakerTitle: 'Cybersecurity Expert, SecureNet'
+      date: '2025-02-25'
+      time: '1:00 PM EST'
+      duration: '50 minutes'
+      category: 'Cybersecurity'
+      type: 'upcoming'
+      attendees: 0;
+      maxAttendees: 400;
       image: '/webinars/cybersecurity-remote.jpg'
-    },
+    }
     {
-      id: 4,
-      title: 'Building Scalable Microservices Architecture',
-      description: 'Learn how to design and implement microservices that can scale with your business growth and technical requirements.',
-      speaker: 'Alex Rodriguez',
-      speakerTitle: 'Principal Software Engineer, MicroTech',
-      date: '2025-01-30',
-      time: '2:30 PM EST',
-      duration: '55 minutes',
-      category: 'Development',
-      type: 'upcoming',
-      attendees: 0,
-      maxAttendees: 350,
+      id: 4;
+      title: 'Building Scalable Microservices Architecture'
+      description: 'Learn how to design and implement microservices that can scale with your business growth and technical requirements.'
+      speaker: 'Alex Rodriguez'
+      speakerTitle: 'Principal Software Engineer, MicroTech'
+      date: '2025-01-30'
+      time: '2:30 PM EST'
+      duration: '55 minutes'
+      category: 'Development'
+      type: 'upcoming'
+      attendees: 0;
+      maxAttendees: 350;
       image: '/webinars/microservices.jpg'
-    },
+    }
     {
-      id: 5,
-      title: 'Digital Transformation: Success Stories from 2024',
-      description: 'Real-world case studies of successful digital transformations and the key factors that led to their success.',
-      speaker: 'David Kim',
-      speakerTitle: 'Digital Transformation Consultant',
-      date: '2025-01-25',
-      time: '2:00 PM EST',
-      duration: '60 minutes',
-      category: 'Digital Transformation',
-      type: 'upcoming',
-      attendees: 0,
-      maxAttendees: 500,
+      id: 5;
+      title: 'Digital Transformation: Success Stories from 2024'
+      description: 'Real-world case studies of successful digital transformations and the key factors that led to their success.'
+      speaker: 'David Kim'
+      speakerTitle: 'Digital Transformation Consultant'
+      date: '2025-01-25'
+      time: '2:00 PM EST'
+      duration: '60 minutes'
+      category: 'Digital Transformation'
+      type: 'upcoming'
+      attendees: 0;
+      maxAttendees: 500;
       image: '/webinars/digital-transformation.jpg'
-    },
+    }
     {
-      id: 6,
-      title: 'The Future of AI in Business: Trends for 2025',
-      description: 'Explore the latest AI trends that are transforming businesses and how to prepare your organization for the AI revolution.',
-      speaker: 'Dr. Lisa Thompson',
-      speakerTitle: 'AI Research Director, FutureTech',
-      date: '2025-01-20',
-      time: '3:00 PM EST',
-      duration: '45 minutes',
-      category: 'AI & Machine Learning',
-      type: 'upcoming',
-      attendees: 0,
-      maxAttendees: 600,
+      id: 6;
+      title: 'The Future of AI in Business: Trends for 2025'
+      description: 'Explore the latest AI trends that are transforming businesses and how to prepare your organization for the AI revolution.'
+      speaker: 'Dr. Lisa Thompson'
+      speakerTitle: 'AI Research Director, FutureTech'
+      date: '2025-01-20'
+      time: '3:00 PM EST'
+      duration: '45 minutes'
+      category: 'AI & Machine Learning'
+      type: 'upcoming'
+      attendees: 0;
+      maxAttendees: 600;
       image: '/webinars/ai-future.jpg'
     }
   ];
 
   const pastWebinars = [
     {
-      id: 7,
-      title: 'Introduction to Machine Learning for Business Leaders',
-      description: 'A comprehensive introduction to machine learning concepts and their practical applications in business.',
-      speaker: 'Dr. John Smith',
-      speakerTitle: 'ML Research Scientist',
-      date: '2025-01-15',
-      time: '2:00 PM EST',
-      duration: '60 minutes',
-      category: 'AI & Machine Learning',
-      type: 'past',
-      attendees: 450,
-      maxAttendees: 500,
-      recordingUrl: '/recordings/ml-intro-2025-01-15',
+      id: 7;
+      title: 'Introduction to Machine Learning for Business Leaders'
+      description: 'A comprehensive introduction to machine learning concepts and their practical applications in business.'
+      speaker: 'Dr. John Smith'
+      speakerTitle: 'ML Research Scientist'
+      date: '2025-01-15'
+      time: '2:00 PM EST'
+      duration: '60 minutes'
+      category: 'AI & Machine Learning'
+      type: 'past'
+      attendees: 450;
+      maxAttendees: 500;
+      recordingUrl: '/recordings/ml-intro-2025-01-15'
       image: '/webinars/ml-intro.jpg'
-    },
+    }
     {
-      id: 8,
-      title: 'Cloud Security Best Practices',
-      description: 'Essential security measures for cloud environments and how to implement them effectively.',
-      speaker: 'Sarah Wilson',
-      speakerTitle: 'Cloud Security Architect',
-      date: '2025-01-10',
-      time: '1:30 PM EST',
-      duration: '50 minutes',
-      category: 'Cloud Computing',
-      type: 'past',
-      attendees: 320,
-      maxAttendees: 400,
-      recordingUrl: '/recordings/cloud-security-2025-01-10',
+      id: 8;
+      title: 'Cloud Security Best Practices'
+      description: 'Essential security measures for cloud environments and how to implement them effectively.'
+      speaker: 'Sarah Wilson'
+      speakerTitle: 'Cloud Security Architect'
+      date: '2025-01-10'
+      time: '1:30 PM EST'
+      duration: '50 minutes'
+      category: 'Cloud Computing'
+      type: 'past'
+      attendees: 320;
+      maxAttendees: 400;
+      recordingUrl: '/recordings/cloud-security-2025-01-10'
       image: '/webinars/cloud-security.jpg'
     }
   ];
 
   const filteredWebinars = webinars.filter(webinar => 
-    selectedCategory === 'All' || webinar.category === selectedCategory
+    selectedCategory === 'All' || webinar.category === selectedCategory;
   );
 
   const filteredPastWebinars = pastWebinars.filter(webinar => 
-    selectedCategory === 'All' || webinar.category === selectedCategory
+    selectedCategory === 'All' || webinar.category === selectedCategory;
   );
 
   const getCategoryColor = (category: string) => {
-    switch (category) {
+    switch() {
+
       case 'AI & Machine Learning':
         return 'bg-purple-100 text-purple-800';
       case 'Cloud Computing':
@@ -159,10 +160,10 @@ const Webinars: NextPage = () => {
       default:
         return 'bg-gray-100 text-gray-800';
     }
-  };
+  }
 
   return (
-    <MainLayout
+    <MainLayout;
       title="Webinars - Zion Tech Group"
       description="Join our expert-led webinars on technology trends, best practices, and industry insights. Learn from leading professionals in AI, cloud computing, and more."
       keywords="webinars, technology training, AI webinars, cloud computing, cybersecurity, digital transformation, online learning"
@@ -181,17 +182,17 @@ const Webinars: NextPage = () => {
   ];
 
   const categories = [
-    'All Webinars',
-    'Artificial Intelligence',
-    'Quantum Computing',
-    'Micro SaaS',
-    'Blockchain',
-    'Cloud Computing',
+    'All Webinars'
+    'Artificial Intelligence'
+    'Quantum Computing'
+    'Micro SaaS'
+    'Blockchain'
+    'Cloud Computing'
     'Cybersecurity'
   ];
 
   return (
-    <MainLayout
+    <MainLayout;
       title="Webinars - Zion Tech Group"
       description="Join our expert-led webinars covering the latest trends and technologies in AI, quantum computing, blockchain, and more."
       keywords="webinars, technology education, AI training, quantum computing, blockchain, cloud computing, cybersecurity"
@@ -199,21 +200,21 @@ const Webinars: NextPage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <motion.h1 
+          <motion.h1;
             className="text-4xl md:text-5xl font-bold mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Expert-Led Technology Webinars
+            Expert-Led Technology Webinars;
           </motion.h1>
-          <motion.p 
+          <motion.p;
             className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-200"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Learn from industry experts through interactive webinars covering cutting-edge technologies, 
+            Learn from industry experts through interactive webinars covering cutting-edge technologies;
             best practices, and real-world implementation strategies.
           </motion.p>
         </div>
@@ -249,11 +250,11 @@ const Webinars: NextPage = () => {
               </div>
               <div className="flex flex-wrap gap-2">
                 {categories.map((category) => (
-                  <button
+                  <button;
                     key={category}
                     onClick={() => setSelectedCategory(category)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                      selectedCategory === category
+                      selectedCategory === category;
                         ? 'bg-blue-600 text-white'
                         : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                     }`}
@@ -280,7 +281,7 @@ const Webinars: NextPage = () => {
                           {webinar.category}
                         </span>
                         <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">
-                          Upcoming
+                          Upcoming;
                         </span>
                       </div>
                       
@@ -308,12 +309,12 @@ const Webinars: NextPage = () => {
                         </div>
                         <div className="flex items-center text-sm text-gray-600">
                           <Users className="w-4 h-4 mr-2" />
-                          {webinar.attendees}/{webinar.maxAttendees} registered
+                          {webinar.attendees}/{webinar.maxAttendees} registered;
                         </div>
                       </div>
                       
                       <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-                        Register Now
+                        Register Now;
                       </button>
                     </div>
                   </div>
@@ -337,7 +338,7 @@ const Webinars: NextPage = () => {
                           {webinar.category}
                         </span>
                         <span className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium">
-                          Past Event
+                          Past Event;
                         </span>
                       </div>
                       
@@ -361,13 +362,13 @@ const Webinars: NextPage = () => {
                         </div>
                         <div className="flex items-center text-sm text-gray-600">
                           <Users className="w-4 h-4 mr-2" />
-                          {webinar.attendees} attendees
+                          {webinar.attendees} attendees;
                         </div>
                       </div>
                       
                       <button className="w-full bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center">
                         <Play className="w-4 h-4 mr-2" />
-                        Watch Recording
+                        Watch Recording;
                       </button>
                     </div>
                   </div>
@@ -386,13 +387,13 @@ const Webinars: NextPage = () => {
                 Subscribe to our newsletter and never miss an upcoming webinar or important technology update.
               </p>
               <div className="max-w-md mx-auto flex">
-                <input
+                <input;
                   type="email"
                   placeholder="Enter your email"
                   className="flex-1 px-4 py-3 rounded-l-lg text-gray-900 placeholder-gray-500 focus:outline-none"
                 />
                 <button className="px-6 py-3 bg-white text-blue-600 font-semibold rounded-r-lg hover:bg-gray-100 transition-colors">
-                  Subscribe
+                  Subscribe;
                 </button>
               </div>
             </div>
@@ -436,7 +437,7 @@ const Webinars: NextPage = () => {
                 <h2 className="text-3xl font-bold mb-8 text-gray-800">Upcoming Webinars</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {upcomingWebinars.map((webinar, index) => (
-                    <motion.article
+                    <motion.article;
                       key={webinar.id}
                       className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                       initial={{ opacity: 0, y: 30 }}
@@ -471,7 +472,7 @@ const Webinars: NextPage = () => {
                         <div className="mb-4">
                           <div className="flex flex-wrap gap-1">
                             {webinar.tags.map((tag) => (
-                              <span
+                              <span;
                                 key={tag}
                                 className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-gray-100 text-gray-700"
                               >
@@ -503,7 +504,7 @@ const Webinars: NextPage = () => {
                             <span>Max: {webinar.maxAttendees}</span>
                           </div>
                           <div className="w-full bg-gray-200 rounded-full h-2">
-                            <div 
+                            <div;
                               className="bg-blue-600 h-2 rounded-full" 
                               style={{ width: `${(webinar.attendees / webinar.maxAttendees) * 100}%` }}
                             ></div>
@@ -512,7 +513,7 @@ const Webinars: NextPage = () => {
                         
                         <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center justify-center">
                           <Calendar className="w-4 h-4 mr-2" />
-                          Register Now
+                          Register Now;
                         </button>
                       </div>
                     </motion.article>
@@ -525,7 +526,7 @@ const Webinars: NextPage = () => {
                 <h2 className="text-3xl font-bold mb-8 text-gray-800">Past Webinars</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {pastWebinars.map((webinar, index) => (
-                    <motion.article
+                    <motion.article;
                       key={webinar.id}
                       className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                       initial={{ opacity: 0, y: 30 }}
@@ -560,7 +561,7 @@ const Webinars: NextPage = () => {
                         <div className="mb-4">
                           <div className="flex flex-wrap gap-1">
                             {webinar.tags.map((tag) => (
-                              <span
+                              <span;
                                 key={tag}
                                 className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-gray-100 text-gray-700"
                               >
@@ -593,11 +594,11 @@ const Webinars: NextPage = () => {
                         <div className="flex space-x-3">
                           <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center justify-center">
                             <Play className="w-4 h-4 mr-2" />
-                            Watch Recording
+                            Watch Recording;
                           </button>
                           <button className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors px-4 py-2">
                             <ExternalLink className="w-4 h-4 mr-1" />
-                            Share
+                            Share;
                           </button>
                         </div>
                       </div>
@@ -613,26 +614,26 @@ const Webinars: NextPage = () => {
       {/* Newsletter Signup */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             className="max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl font-bold mb-4 text-gray-800">
-              Never Miss a Webinar
+              Never Miss a Webinar;
             </h2>
             <p className="text-xl text-gray-600 mb-8">
               Subscribe to get notified about upcoming webinars and access to exclusive content.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
+              <input;
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-                Subscribe
+                Subscribe;
               </button>
             </div>
           </motion.div>
@@ -640,6 +641,6 @@ const Webinars: NextPage = () => {
       </section>
     </MainLayout>
   );
-};
+}
 
 export default Webinars;

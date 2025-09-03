@@ -7,61 +7,61 @@ import Link from 'next/link';
 const ProjectManagementSuite: NextPage = () => {
   const features = [
     {
-      icon: Calendar,
-      title: 'Task Management',
+      icon: Calendar;
+      title: 'Task Management'
       description: 'Create, assign, and track tasks with deadlines, priorities, and dependencies.'
-    },
+    }
     {
-      icon: Users,
-      title: 'Team Collaboration',
+      icon: Users;
+      title: 'Team Collaboration'
       description: 'Real-time collaboration with team members, comments, and file sharing.'
-    },
+    }
     {
-      icon: BarChart3,
-      title: 'Progress Tracking',
+      icon: BarChart3;
+      title: 'Progress Tracking'
       description: 'Visual dashboards and reports to monitor project progress and team performance.'
-    },
+    }
     {
-      icon: MessageSquare,
-      title: 'Communication Hub',
+      icon: MessageSquare;
+      title: 'Communication Hub'
       description: 'Integrated messaging, video calls, and discussion threads for seamless communication.'
     }
   ];
 
   const modules = [
     {
-      title: 'Project Planning',
-      description: 'Comprehensive project planning tools with Gantt charts, resource allocation, and timeline management.',
+      title: 'Project Planning'
+      description: 'Comprehensive project planning tools with Gantt charts, resource allocation, and timeline management.'
       features: ['Gantt Charts', 'Resource Planning', 'Timeline Management', 'Milestone Tracking']
-    },
+    }
     {
-      title: 'Task Management',
-      description: 'Advanced task management with kanban boards, custom workflows, and automation rules.',
+      title: 'Task Management'
+      description: 'Advanced task management with kanban boards, custom workflows, and automation rules.'
       features: ['Kanban Boards', 'Custom Workflows', 'Task Automation', 'Priority Management']
-    },
+    }
     {
-      title: 'Team Collaboration',
-      description: 'Built-in collaboration tools for seamless team communication and file sharing.',
+      title: 'Team Collaboration'
+      description: 'Built-in collaboration tools for seamless team communication and file sharing.'
       features: ['Real-time Chat', 'File Sharing', 'Video Conferencing', 'Comment System']
-    },
+    }
     {
-      title: 'Reporting & Analytics',
-      description: 'Comprehensive reporting and analytics to track performance and make data-driven decisions.',
+      title: 'Reporting & Analytics'
+      description: 'Comprehensive reporting and analytics to track performance and make data-driven decisions.'
       features: ['Custom Reports', 'Performance Analytics', 'Time Tracking', 'Resource Utilization']
     }
   ];
 
   const integrations = [
-    { name: 'Slack', description: 'Integrate with Slack for notifications and updates' },
-    { name: 'Microsoft Teams', description: 'Seamless integration with Microsoft Teams' },
-    { name: 'Google Workspace', description: 'Connect with Google Drive, Calendar, and Gmail' },
-    { name: 'Jira', description: 'Sync with Jira for development project management' },
-    { name: 'Trello', description: 'Import projects from Trello boards' },
+    { name: 'Slack', description: 'Integrate with Slack for notifications and updates' }
+    { name: 'Microsoft Teams', description: 'Seamless integration with Microsoft Teams' }
+    { name: 'Google Workspace', description: 'Connect with Google Drive, Calendar, and Gmail' }
+    { name: 'Jira', description: 'Sync with Jira for development project management' }
+    { name: 'Trello', description: 'Import projects from Trello boards' }
     { name: 'Asana', description: 'Migrate from Asana with full data preservation' }
   ];
 
   return (
-    <MainLayout
+    <MainLayout;
       title="Project Management Suite - Zion Tech Group"
       description="Comprehensive project management solution with task tracking, team collaboration, and advanced reporting. Streamline your workflow and boost productivity."
     >
@@ -78,10 +78,10 @@ const ProjectManagementSuite: NextPage = () => {
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              Start Free Trial
+              Start Free Trial;
             </Link>
             <Link href="#demo" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              Watch Demo
+              Watch Demo;
             </Link>
           </div>
 
@@ -239,16 +239,16 @@ const ProjectManagementSuite: NextPage = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              Start Free Trial
+              Start Free Trial;
             </Link>
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              View All Services
+              View All Services;
             </Link>
           </div>
         </div>
       </section>
     </MainLayout>
   );
-};
+}
 
 export default ProjectManagementSuite;

@@ -1,90 +1,90 @@
 import React from 'react';
 import { 
-  Users, 
-  Brain, 
-  BarChart3, 
-  Mail, 
-  Phone, 
-  MapPin,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Clock,
-  Target,
-  TrendingUp,
-  Zap,
-  Globe,
-  Shield,
-  Smartphone,
-  Calendar,
-  MessageSquare
+  Users;
+  Brain;
+  BarChart3;
+  Mail;
+  Phone;
+  MapPin;
+  CheckCircle;
+  Star;
+  ArrowRight;
+  Clock;
+  Target;
+  TrendingUp;
+  Zap;
+  Globe;
+  Shield;
+  Smartphone;
+  Calendar;
+  MessageSquare;
 } from 'lucide-react';
 
 const SmartCRMPlatform = () => {
   const features = [
-    'AI-powered lead scoring',
-    'Automated sales forecasting',
-    'Email marketing automation',
-    'Mobile app access',
-    'Real-time analytics',
-    'Custom pipeline management',
-    'Integration with 500+ apps',
+    'AI-powered lead scoring'
+    'Automated sales forecasting'
+    'Email marketing automation'
+    'Mobile app access'
+    'Real-time analytics'
+    'Custom pipeline management'
+    'Integration with 500+ apps'
     '24/7 customer support'
   ];
 
   const benefits = [
-    'Increase sales by 25%',
-    'Improve customer retention',
-    'Streamline sales processes',
-    'Real-time insights & analytics',
-    'Reduce manual data entry',
-    'Better lead qualification',
-    'Automated follow-ups',
+    'Increase sales by 25%'
+    'Improve customer retention'
+    'Streamline sales processes'
+    'Real-time insights & analytics'
+    'Reduce manual data entry'
+    'Better lead qualification'
+    'Automated follow-ups'
     'Team collaboration tools'
   ];
 
   const integrations = [
-    'Gmail & Outlook',
-    'Slack & Teams',
-    'QuickBooks & Xero',
-    'Mailchimp & HubSpot',
-    'Zapier & Make',
-    'Google Workspace',
-    'Microsoft 365',
+    'Gmail & Outlook'
+    'Slack & Teams'
+    'QuickBooks & Xero'
+    'Mailchimp & HubSpot'
+    'Zapier & Make'
+    'Google Workspace'
+    'Microsoft 365'
     'Salesforce'
   ];
 
   const pricing = {
     starter: {
-      name: 'Starter',
-      price: '$79/month',
-      users: 'Up to 5 users',
-      features: ['Basic CRM', 'Email integration', 'Mobile app', 'Email support'],
+      name: 'Starter'
+      price: '$79/month'
+      users: 'Up to 5 users'
+      features: ['Basic CRM', 'Email integration', 'Mobile app', 'Email support']
       marketPrice: '$99/month'
-    },
+    }
     professional: {
-      name: 'Professional',
-      price: '$149/month',
-      users: 'Up to 15 users',
-      features: ['Advanced CRM', 'AI lead scoring', 'Sales forecasting', 'Priority support', 'Custom fields'],
-      marketPrice: '$199/month',
-      popular: true
-    },
+      name: 'Professional'
+      price: '$149/month'
+      users: 'Up to 15 users'
+      features: ['Advanced CRM', 'AI lead scoring', 'Sales forecasting', 'Priority support', 'Custom fields']
+      marketPrice: '$199/month'
+      popular: true;
+    }
     enterprise: {
-      name: 'Enterprise',
-      price: '$299/month',
-      users: 'Unlimited users',
-      features: ['Full CRM suite', 'Custom AI models', 'Advanced analytics', 'Dedicated support', 'API access', 'White-label'],
+      name: 'Enterprise'
+      price: '$299/month'
+      users: 'Unlimited users'
+      features: ['Full CRM suite', 'Custom AI models', 'Advanced analytics', 'Dedicated support', 'API access', 'White-label']
       marketPrice: '$399/month'
     }
-  };
+  }
 
   const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    phone: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com'
-  };
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
@@ -92,22 +92,22 @@ const SmartCRMPlatform = () => {
       <div className="bg-white shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
-            <div
+            <div;
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 mb-6"
             >
               <Users className="w-10 h-10 text-white" />
             </div>
-            <h1 
+            <h1;
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               className="text-5xl font-bold text-gray-900 mb-4"
             >
-              Smart CRM Platform
+              Smart CRM Platform;
             </h1>
-            <p 
+            <p;
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -115,25 +115,25 @@ const SmartCRMPlatform = () => {
             >
               AI-powered customer relationship management that helps you close more deals, nurture better relationships, and grow your business faster.
             </p>
-            <div 
+            <div;
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
-              <a 
+              <a;
                 href={`tel:${contactInfo.phone}`}
                 className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center text-lg font-semibold"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now: {contactInfo.phone}
               </a>
-              <a 
+              <a;
                 href={`mailto:${contactInfo.email}`}
                 className="bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center text-lg font-semibold"
               >
                 <Mail className="w-5 h-5 mr-2" />
-                Get Free Trial
+                Get Free Trial;
               </a>
             </div>
           </div>
@@ -149,7 +149,7 @@ const SmartCRMPlatform = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <div
+            <div;
               key={feature}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -173,7 +173,7 @@ const SmartCRMPlatform = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <div
+              <div;
                 key={benefit}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -199,7 +199,7 @@ const SmartCRMPlatform = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {integrations.map((integration, index) => (
-            <div
+            <div;
               key={integration}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -223,7 +223,7 @@ const SmartCRMPlatform = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             {Object.entries(pricing).map(([key, plan], index) => (
-              <div
+              <div;
                 key={key}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -235,7 +235,7 @@ const SmartCRMPlatform = () => {
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -257,15 +257,15 @@ const SmartCRMPlatform = () => {
                   ))}
                 </ul>
                 
-                <a
+                <a;
                   href={`tel:${contactInfo.phone}`}
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors ${
-                    plan.popular
+                    plan.popular;
                       ? 'bg-green-600 text-white hover:bg-green-700'
                       : 'bg-gray-200 text-gray-900 hover:bg-gray-300'
                   }`}
                 >
-                  Get Started
+                  Get Started;
                 </a>
               </div>
             ))}
@@ -317,12 +317,12 @@ const SmartCRMPlatform = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
           <p className="text-gray-400 mt-2">
-            Professional CRM solutions
+            Professional CRM solutions;
           </p>
         </div>
       </footer>
     </div>
   );
-};
+}
 
 export default SmartCRMPlatform;

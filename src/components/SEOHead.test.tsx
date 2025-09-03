@@ -1,7 +1,7 @@
   it(displays expected content", () => {
     render(<SEOHead  />)"
-import { render, screen } from &apos;@testing - library/react",
-import SEOHead from &apos;./SEOHead
+import { render, screen } from &apos;@testing - library/react"
+import SEOHead from &apos;./SEOHead;
 describe(&apos;SEOHead&apos, () => {
   it(&apos;renders without crashing&apos, () => {
     render()
@@ -11,7 +11,7 @@ describe(&apos;SEOHead&apos, () => {
   it(&apos;displays expected content&apos, () => {
     render()
 }
-    // comment
+    // comment;
     render(<SEOHead / >)"
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"

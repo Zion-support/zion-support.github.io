@@ -5,6 +5,7 @@ export const useAccessibility = () => {;
 import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
+
 > {
   children: ReactNode}
 
@@ -15,13 +16,12 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   const [showSkipLinks, setShowSkipLinks] = useState(false);
   const [voiceNavigation, setVoiceNavigation] = useState(false);
 
-  // Load accessibility preferences from localStorage
+  // Load accessibility preferences from localStorage;
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
 
     setHighContrast(savedHighContrast);
@@ -29,122 +29,122 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     setFontSize(savedFontSize ? parseInt(savedFontSize) : 16);
     setVoiceNavigation(savedVoiceNavigation)}, []);
 
-  // Apply accessibility settings to document
+  // Apply accessibility settings to document;
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
     
-    // Apply high contrast
-    if(highContrast) {
+    // Apply high contrast;
+    if() {
+
       root.classList.add('high-contrast')} else {
       root.classList.remove('high-contrast')}
 
-    // Apply reduced motion
-    if(reducedMotion) {
+    // Apply reduced motion;
+    if() {
+
       root.classList.add('reduce-motion')} else {
       root.classList.remove('reduce-motion')}
 
-    // Apply font size
+    // Apply font size;
     root.style.fontSize = `${fontSize}px`}, [highContrast, reducedMotion, fontSize]);
 
-  // Keyboard navigation support
+  // Keyboard navigation support;
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
     
         setTimeout(() => setShowSkipLinks(false), 5000)}
 
       // High contrast toggle(Alt + H)
-      if(event.altKey && event.key === 'h') {
+      if() {
+
         event.preventDefault();
         toggleHighContrast()}
 
       // Font size controls(Alt + Plus/Minus)
-      if(event.altKey && event.key === '+') {
+      if() {
+
         event.preventDefault();
         increaseFontSize()}
-      if(event.altKey && event.key === '-') {
+      if() {
+
         event.preventDefault();
         decreaseFontSize()}
-    };
+    }
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, []);
 
     setHighContrast(newValue);
-    localStorage.setItem('zion-high-contrast', newValue.toString())};
+    localStorage.setItem('zion-high-contrast', newValue.toString())}
 
     setReducedMotion(newValue);
-    localStorage.setItem('zion-reduced-motion', newValue.toString())};
+    localStorage.setItem('zion-reduced-motion', newValue.toString())}
 
     setFontSize(newSize);
-    localStorage.setItem('zion-font-size', newSize.toString())};
+    localStorage.setItem('zion-font-size', newSize.toString())}
 
     setFontSize(newSize);
-    localStorage.setItem('zion-font-size', newSize.toString())};
+    localStorage.setItem('zion-font-size', newSize.toString())}
 
-    localStorage.setItem('zion-font-size', '16')};
+    localStorage.setItem('zion-font-size', '16')}
 
     setVoiceNavigation(newValue);
-    localStorage.setItem('zion-voice-navigation', newValue.toString())};
+    localStorage.setItem('zion-voice-navigation', newValue.toString())}
 
   const contextValue: AccessibilityContextType = {
-    highContrast,
-    toggleHighContrast,
-    reducedMotion,
-    toggleReducedMotion,
-    fontSize,
-    increaseFontSize,
-    decreaseFontSize,
-    resetFontSize,
-    showSkipLinks,
-    setShowSkipLinks,
-    voiceNavigation,
-    toggleVoiceNavigation,
-  };
+    highContrast;
+    toggleHighContrast;
+    reducedMotion;
+    toggleReducedMotion;
+    fontSize;
+    increaseFontSize;
+    decreaseFontSize;
+    resetFontSize;
+    showSkipLinks;
+    setShowSkipLinks;
+    voiceNavigation;
+    toggleVoiceNavigation;
+  }
 
   return (<AccessibilityContext.Provider value={contextValue}>
       {children}
       
       {/* Skip Links */}
       <AnimatePresence>
-        {showSkipLinks && (<motion.div
+        {showSkipLinks && (<motion.div;
             initial = {
-  { opacity: 0,
-  y: -20
-
+  { opacity: 0;
+  y: -20;
 }}
             animate = {
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
             exit = {
-  { opacity: 0,
-  y: -20
-
+  { opacity: 0;
+  y: -20;
 }}
             className="fixed top - 0 left - 0 right - 0 z - 50 bg-zion - cyan text-black p - 4 text-center"
 
             <div  className="max - w-4xl mx - auto flex flex - wrap justify - center gap-4">
-              <a
+              <a;
                 href="#main - content"
                 className="px-4 py-2 bg-white rounded-lg font - semibold hover:bg-gray - 100 focus:outline - none focus:ring - 2 focus:ring -black"
-                Skip to main content
+                Skip to main content;
               </a>
               <a href="#navigation" className="hover:underline focus:outline-none focus:ring-2 focus:ring-white rounded px-2 py-1">
-                Skip to navigation
+                Skip to navigation;
               </a>
               <a href="#footer" className="hover:underline focus:outline-none focus:ring-2 focus:ring-white rounded px-2 py-1">
-                Skip to footer
+                Skip to footer;
               </a>
             </div>
           </motion.div>
@@ -153,16 +153,15 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
       {/* Accessibility Controls */}
       <div  className="fixed bottom - 4 left - 4 z -40">;
-        <motion.div
+        <motion.div;
           initial = {
-  { opacity: 0,
-  x: -20
-
+  { opacity: 0;
+  x: -20;
 }}
           animate = {
-  { opacity: 1,
-  x: 0
-        <motion.button
+  { opacity: 1;
+  x: 0;
+        <motion.button;
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           onClick={toggleVoiceNavigation}
@@ -175,7 +174,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
         <div className="bg-white rounded-lg shadow-lg p-2">
           <div className="flex items-center space-x-2">
-            <button
+            <button;
               onClick={decreaseFontSize}
               className="p-1 rounded hover:bg-gray-100"
               title="Decrease font size"
@@ -183,7 +182,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
               <span className="text-sm font-bold">A-</span>
             </button>
             <span className="text-xs text-gray-600 min-w-[2rem] text-center">{fontSize}px</span>
-            <button
+            <button;
               onClick={increaseFontSize}
               className="p-1 rounded hover:bg-gray-100"
               title="Increase font size"
@@ -191,14 +190,14 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
               <span className="text-sm font-bold">A+</span>
             </button>
           </div>
-          <button
+          <button;
             onClick={resetFontSize}
             className="w-full mt-1 text-xs text-gray-500 hover:text-gray-700"
             title="Reset font size"
           >
-            Reset
+            Reset;
           </button>
         </div>
       </div>
     </AccessibilityContext.Provider>
-  )};
+  )}

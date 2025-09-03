@@ -3,4 +3,5 @@ export const LazyPricing = lazy(() => import('../pages / Pricing') ) ;
 import { LoadingSpinner } from './ui / LoadingSpinner';
 
 export default function Page() {
-export 
+
+export;

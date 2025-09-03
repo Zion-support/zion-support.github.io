@@ -5,7 +5,7 @@ import { ErrorBoundary } from 'react-error-boundary';
 import Layout from './components/layout/Layout';
 import LoadingSpinner from './components/ui/loading-spinner';
 
-// Lazy load pages for better performance
+// Lazy load pages for better performance;
 const HomePage = lazy(() => import('./pages/index'));
 const AboutPage = lazy(() => import('./pages/about'));
 const ContactPage = lazy(() => import('./pages/contact'));
@@ -13,12 +13,12 @@ const ServicesPage = lazy(() => import('./pages/services'));
 const SolutionsPage = lazy(() => import('./pages/solutions'));
 const ServicesOverview = lazy(() => import('./pages/services-overview'));
 
-// Service pages
+// Service pages;
 const AIContentGenerationSuite = lazy(() => import('./pages/services/ai-content-generation-suite'));
 const CloudMigrationServices = lazy(() => import('./pages/services/cloud-migration-services'));
 const SmartCRMPlatform = lazy(() => import('./pages/services/smart-crm-platform'));
 
-// Simple Header component
+// Simple Header component;
 const Header = () => (
   <header className="bg-zion-slate-dark text-white p-4 shadow-lg">
     <div className="container mx-auto">
@@ -37,7 +37,7 @@ const Header = () => (
   </header>
 );
 
-// Simple Footer component
+// Simple Footer component;
 const Footer = () => (
   <footer className="bg-zion-slate-dark text-white p-4 mt-auto">
     <div className="container mx-auto text-center">
@@ -53,6 +53,7 @@ const Footer = () => (
 );
 
 function App() {
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <Header />

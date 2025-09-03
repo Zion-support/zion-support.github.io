@@ -1,7 +1,7 @@
   it(displays expected content", () => {
     render(<ServiceShowcase  />)"
-import { render, screen } from &apos;@testing - library/react",
-import ServiceShowcase from &apos;./ServiceShowcase
+import { render, screen } from &apos;@testing - library/react"
+import ServiceShowcase from &apos;./ServiceShowcase;
 describe(&apos;ServiceShowcase&apos, () => {
   it(&apos;renders without crashing&apos, () => {
     render()
@@ -11,7 +11,7 @@ describe(&apos;ServiceShowcase&apos, () => {
   it(&apos;displays expected content&apos, () => {
     render()
 }
-    // comment
+    // comment;
     render(<ServiceShowcase / >)"
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"

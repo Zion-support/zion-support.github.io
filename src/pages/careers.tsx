@@ -12,6 +12,6 @@ const Careers: React.FC = () => {
       </div>
     </>
   );
-};
+}
 
 export default Careers;

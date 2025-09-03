@@ -1,7 +1,7 @@
   it(displays expected content", () => {
     render(<MobileNavigation  />)"
-import { render, screen } from &apos;@testing - library/react",
-import MobileNavigation from &apos;./MobileNavigation
+import { render, screen } from &apos;@testing - library/react"
+import MobileNavigation from &apos;./MobileNavigation;
 describe(&apos;MobileNavigation&apos, () => {
   it(&apos;renders without crashing&apos, () => {
     render()
@@ -11,7 +11,7 @@ describe(&apos;MobileNavigation&apos, () => {
   it(&apos;displays expected content&apos, () => {
     render()
 }
-    // comment
+    // comment;
     render(<MobileNavigation / >)"
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"

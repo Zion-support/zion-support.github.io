@@ -7,31 +7,31 @@ const Head = dynamic(() => import("next/head"), { ssr: false })
 export default function EmergingTech() {
 
   const technologies = []
-},
+}
     {
       icon: Lock,"
       title: "Blockchain & Web3","
       description: "Decentralized applications, smart contracts, and blockchain solutions for secure, transparent operations.","
       features: ["Smart Contracts", "DeFi Solutions", "NFT Platforms", "Cryptocurrency Integration"]
-},
+}
     {
       icon: Globe,"
       title: "Internet of Things (IoT)","
       description: "Connected devices and IoT ecosystems for smart homes, cities, and industrial automation.","
       features: ["Device Management", "Data Analytics", "Remote Monitoring", "Automation Systems"]
-},
+}
     {
       icon: Eye,"
       title: "Augmented & Virtual Reality","
       description: "Immersive AR/VR experiences for training, entertainment, and business applications.","
       features: ["AR Applications", "VR Experiences", "Mixed Reality", "3D Visualization"]
-},
+}
     {
       icon: Zap,"
       title: "Edge Computing","
       description: "Distributed computing solutions that bring processing power closer to data sources.","
       features: ["Real-time Processing", "Reduced Latency", "Bandwidth Optimization", "Offline Capabilities"]
-},
+}
     {
       icon: Database,"
       title: "Quantum Computing","
@@ -44,15 +44,15 @@ export default function EmergingTech() {
   const benefits = []
 
   const applications = [],"
-      description: "Revolutionary healthcare solutions improving patient outcomes and operational efficiency."},
+      description: "Revolutionary healthcare solutions improving patient outcomes and operational efficiency."}
     {"
       industry: "Finance","
       technologies: ["Blockchain Payments", "AI Fraud Detection", "Quantum Security", "IoT Banking"],"
-      description: "Next-generation financial services with enhanced security and user experience."},
+      description: "Next-generation financial services with enhanced security and user experience."}
     {"
       industry: "Manufacturing","
       technologies: ["IoT Sensors", "AI Quality Control", "AR Training", "Edge Computing"],"
-      description: "Smart manufacturing solutions for increased productivity and quality control."},
+      description: "Smart manufacturing solutions for increased productivity and quality control."}
     {"
       industry: "Retail","
       technologies: ["AR Shopping", "AI Personalization", "IoT Inventory", "Blockchain Supply Chain"],"
@@ -79,11 +79,11 @@ export default function EmergingTech() {
                 <span className="text-base font-semibold leading-7 text-orange-600">Emerging Technologies</span>
               </div>"
               <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Shape the Future with Emerging Tech,
+                Shape the Future with Emerging Tech;
               </h1>"
-              <p className="mt-6 text-lg leading-8 text-gray-600">,
+              <p className="mt-6 text-lg leading-8 text-gray-600">
                 Explore the cutting edge of technology with our emerging tech solutions. From AI and blockchain,"
-to IoT and quantum computing, we help you leverage tomorrow"s technologies today to create,
+to IoT and quantum computing, we help you leverage tomorrow"s technologies today to create;
 innovative solutions and gain competitive advantages.
               </p>
             </div>
@@ -94,16 +94,16 @@ innovative solutions and gain competitive advantages.
             <div className="text-center mb-12">"
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Emerging Technologies We Work With</h2>"
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Cutting-edge technologies that are shaping the future of business and society,
+                Cutting-edge technologies that are shaping the future of business and society;
               </p>
             </div>"
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">,
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
               {technologies.map((tech, index) => ("
                 <div key="{index}" className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200 hover: shadow-xl transition-shadow">"
                   <div className="flex items-center space-x-4 mb-6">"
                     <div className="p-3 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg">"
                       <tech.icon className="w-8 h-8 text-white" />
-                    </div>",
+                    </div>"
                     <h3 className="text-xl font-bold text-gray-900">{tech.title}</h3>
                   </div>"
                   <p className="text-gray-600 mb-6">{tech.description}</p>"
@@ -127,10 +127,10 @@ innovative solutions and gain competitive advantages.
             <div className="text-center mb-12">"
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Invest in Emerging Technologies?</h2>"
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Strategic advantages of early adoption and innovation leadership,
+                Strategic advantages of early adoption and innovation leadership;
               </p>
             </div>"
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">,
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
               {benefits.map((benefit, index) => ("
                 <div key="{index}" className="bg-white rounded-2xl shadow-lg p-8 text-center border border-gray-200">"
                   <div className="flex justify-center mb-6">"
@@ -151,10 +151,10 @@ innovative solutions and gain competitive advantages.
             <div className="text-center mb-12">"
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Industry Applications</h2>"
               <p className="text-gray-600 max-w-2xl mx-auto">
-                How emerging technologies are transforming different industries,
+                How emerging technologies are transforming different industries;
               </p>
             </div>"
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">,
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
               {applications.map((app, index) => ("
                 <div key="{index}" className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">"
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{app.industry}</h3>"
@@ -178,7 +178,7 @@ innovative solutions and gain competitive advantages.
             <div className="text-center mb-12">"
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Technology Trends 2024-2025</h2>"
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Key emerging technology trends that will shape the future,
+                Key emerging technology trends that will shape the future;
               </p>
             </div>"
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">"
@@ -189,7 +189,7 @@ innovative solutions and gain competitive advantages.
                   </div>"
                   <h3 className="text-xl font-bold text-gray-900">Generative AI</h3>
                 </div>"
-                <p className="text-gray-600 mb-4">,
+                <p className="text-gray-600 mb-4">
                   AI systems that can create content, code, and solutions autonomously, revolutionizing creativity and problem-solving.
                 </p>"
                 <ul className="space-y-2">"
@@ -280,11 +280,11 @@ innovative solutions and gain competitive advantages.
                 <a href="/services""
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-orange-600 transition-colors"
                 >
-                  View All Services,
+                  View All Services;
                 </a>
               </div>
         </section>
       </main>
       <SimpleFooter  />
-    </>",
+    </>"
   )}

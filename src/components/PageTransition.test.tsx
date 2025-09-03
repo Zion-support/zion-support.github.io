@@ -1,7 +1,7 @@
   it(displays expected content", () => {
     render(<PageTransition  />)"
-import { render, screen } from &apos;@testing - library/react",
-import PageTransition from &apos;./PageTransition
+import { render, screen } from &apos;@testing - library/react"
+import PageTransition from &apos;./PageTransition;
 describe(&apos;PageTransition&apos, () => {
   it(&apos;renders without crashing&apos, () => {
     render()
@@ -11,7 +11,7 @@ describe(&apos;PageTransition&apos, () => {
   it(&apos;displays expected content&apos, () => {
     render()
 }
-    // comment
+    // comment;
     render(<PageTransition / >)"
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"

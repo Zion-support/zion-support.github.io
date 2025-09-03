@@ -1,7 +1,6 @@
 import React from "react";
   text?: string;
   fullScreen?: boolean}
-;
 export default function Loading() {;
 
 export default function Loading() {
@@ -18,7 +17,8 @@ export default function Loading() {
     </div>
   )
 }
-  if (fullScreen) {
+  if() {
+
     return ("
     <div className = "min-h-screen flex items-center justify-center bg-white">
         {content}
@@ -34,7 +34,7 @@ export default function Loading() {
     </div>
   )
 }
-// comment
+// comment;
 export function SkeletonCard() {
 
   return ("
@@ -49,7 +49,7 @@ export function SkeletonText() {
 
   return ("
     <div className="animate-pulse space-y-2">
-      {Array.from({ length: lines,
+      {Array.from({ length: lines;
   }).map((_, i) => ("
         <div key="{i}""
           className="{"h-3" bg-gray-200 rounded ${

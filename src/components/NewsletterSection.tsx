@@ -1,28 +1,26 @@
 
       description: "Get exclusive access to tech trends and analysis";
-    },;    {;
-      icon: Zap,;"
-      title: "Early Access",;"
-      description: "Be the first to know about beta programs and launches"};
+    },    {;
+      icon: Zap,"
+      title: "Early Access","
+      description: "Be the first to know about beta programs and launches"}
   ];
 
-  if(isSubscribed) {
+  if() {
 
     return ("
       <section className="py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">"
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <motion.div
+          <motion.div;
             initial = {
 
-  { opacity: 0,
-  scale: 0.8
-
+  { opacity: 0;
+  scale: 0.8;
 }}
             animate = {
 
-  { opacity: 1,
-  scale: 1
-
+  { opacity: 1;
+  scale: 1;
 }}
             transition={{ duration: 0.5 }}"
             className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-3xl p-12 border border-green-500/20"
@@ -33,7 +31,7 @@
             <h2 className="text-3xl font-bold text-white mb-4">Welcome to the Zion Tech Group Community!</h2>"
             <p className="text-gray-300 text-lg mb-6">
               You're now subscribed to our newsletter.We'll keep you updated with the latest technology insights,              service announcements, and exclusive content.</p>
-            <button
+            <button;
               onClick={() => setIsSubscribed(false)}"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
             >
@@ -47,48 +45,43 @@
       <div className="max-w-7xl mx-auto px-6">"
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
-          <motion.div
+          <motion.div;
             initial = {
 
-  { opacity: 0,
-  x: -30
-
+  { opacity: 0;
+  x: -30;
 }}
             whileInView = {
 
-  { opacity: 1,
-  x: 0
-
+  { opacity: 1;
+  x: 0;
 }}
             transition={{ duration: 0.6 }}
 "
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Stay Ahead with Zion Tech Group
+              Stay Ahead with Zion Tech Group;
             </h2>"
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Get exclusive access to the latest technology insights, service updates, and industry trends.Join thousands of professionals who trust us to keep them informed.</p>
 "
             <div className="space-y-4 mb-8">
               {benefits.map((benefit, index) => (
-                <motion.div
+                <motion.div;
                   key={index}
                   initial = {
 
-  { opacity: 0,
-  x: -20
-
+  { opacity: 0;
+  x: -20;
 }}
                   whileInView = {
 
-  { opacity: 1,
-  x: 0
-
+  { opacity: 1;
+  x: 0;
 }}
                   transition = {
 
-  { duration: 0.5,
-  delay: index * 0.1
-
+  { duration: 0.5;
+  delay: index * 0.1;
 }}"
                   className="flex items-start"
 "
@@ -108,24 +101,21 @@
           </motion.div>
 
           {/* Right Column - Newsletter Form */}
-          <motion.div
+          <motion.div;
             initial = {
 
-  { opacity: 0,
-  x: 30
-
+  { opacity: 0;
+  x: 30;
 }}
             whileInView = {
 
-  { opacity: 1,
-  x: 0
-
+  { opacity: 1;
+  x: 0;
 }}
             transition = {
 
-  { duration: 0.6,
-  delay: 0.2
-
+  { duration: 0.6;
+  delay: 0.2;
 }}
           >"
             <div className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-3xl p-8 border border-slate-500">"
@@ -139,7 +129,7 @@
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>"
                   <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                    Email Address
+                    Email Address;
                   </label>
                   <input"
                     type="email"
@@ -148,7 +138,7 @@
                     onChange={(e) => setEmail(e.target.value)}"
                     placeholder="Enter your email address"
                     className="w-full px-4 py-3 bg-slate-800 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300"
-                    required
+                    required;
                   />
                 </div>
 
@@ -178,7 +168,7 @@
                   </a>{' '}
                   and{' '}"
                   <a href="/terms" className="text-cyan-400 hover:text-cyan-300 underline">
-                    Terms of Service
+                    Terms of Service;
                   </a>
                 </p>
               </div>
@@ -186,6 +176,6 @@
           </motion.div>;
         </div>;
       </div>;
-    </section>;) };
+    </section>;) }
 
 export default NewsletterSection}}}'"

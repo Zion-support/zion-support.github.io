@@ -3,30 +3,29 @@
 const analyticsEnhancements = {
   // Track page views;
   trackPageView: (page) => {
-  if (typeof gtag !== "undefined") {
-  gtag("config", "GA_MEASUREMENT_ID", {
-  page_title: document.title,;
-        page_location: window.location.href,;
-        page_path: page;,
-});,
-}
-  },;
+  if() {
 
+  gtag("config", "GA_MEASUREMENT_ID", {
+  page_title: document.title;
+        page_location: window.location.href;
+        page_path: page;
+});
+}
+  }
   // Track user interactions;
   trackInteraction: (action, category, label) => {
-  if (typeof gtag !== "undefined") {
-  gtag("event", action, {
-  event_category: category,;
-        event_label: label;,
-});,
-}
-  },;
+  if() {
 
+  gtag("event", action, {
+  event_category: category;
+        event_label: label;
+});
+}
+  }
   // Track form submissions;
   trackFormSubmission: (formName) => {
-  this.trackInteraction("form_submit", "engagement", formName);,
-},;
-
+  this.trackInteraction("form_submit", "engagement", formName);
+}
   // Initialize analytics;
   init: () => {
   // Track initial page view;
@@ -36,15 +35,16 @@ const analyticsEnhancements = {
     const forms = document.querySelectorAll("form");
     forms.forEach(form => {
   form.addEventListener("submit", () => {
-  this.trackFormSubmission(form.name || "unnamed_form");,
-});,
-});,
+  this.trackFormSubmission(form.name || "unnamed_form");
+});
+});
 }
-};
+}
 ;
 // Auto-initialize when DOM is ready;
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", analyticsEnhancements.init);,
+if() {
+
+  document.addEventListener("DOMContentLoaded", analyticsEnhancements.init);
 } else {
-  analyticsEnhancements.init();,
+  analyticsEnhancements.init();
 }

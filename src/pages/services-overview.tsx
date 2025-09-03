@@ -2,44 +2,44 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Server, 
-  Building2,
-  FileText, 
-  BarChart3, 
-  Workflow,
-  Mic,
-  Users,
-  Calendar,
-  PieChart,
-  Package,
-  Mail,
-  Phone,
-  MapPin,
-  Globe,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Sparkles,
-  Cpu,
-  Eye,
-  Factory,
-  Heart,
-  ShoppingCart,
-  DollarSign,
-  Wifi,
-  Link as LinkIcon
+  Brain;
+  Shield;
+  Cloud;
+  Server;
+  Building2;
+  FileText;
+  BarChart3;
+  Workflow;
+  Mic;
+  Users;
+  Calendar;
+  PieChart;
+  Package;
+  Mail;
+  Phone;
+  MapPin;
+  Globe;
+  Star;
+  CheckCircle;
+  ArrowRight;
+  Sparkles;
+  Cpu;
+  Eye;
+  Factory;
+  Heart;
+  ShoppingCart;
+  DollarSign;
+  Wifi;
+  Link as LinkIcon;
 } from 'lucide-react';
 
 const ServicesOverview = () => {
   const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    phone: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com'
-  };
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
@@ -47,40 +47,40 @@ const ServicesOverview = () => {
       <div className="bg-white shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center">
-            <h1 
+            <h1;
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               className="text-5xl font-bold text-gray-900 mb-4"
             >
-              Zion Tech Group Services
+              Zion Tech Group Services;
             </h1>
-            <p 
+            <p;
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               className="text-xl text-gray-600 mb-8"
             >
-              Comprehensive Technology Solutions & Micro SaaS Services
+              Comprehensive Technology Solutions & Micro SaaS Services;
             </p>
-            <div 
+            <div;
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
-              <a 
+              <a;
                 href={`tel:${contactInfo.phone}`}
                 className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now: {contactInfo.phone}
               </a>
-              <a 
+              <a;
                 href={`mailto:${contactInfo.email}`}
                 className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center"
               >
                 <Mail className="w-5 h-5 mr-2" />
-                Email Us
+                Email Us;
               </a>
             </div>
           </div>
@@ -96,7 +96,7 @@ const ServicesOverview = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* AI Services */}
-          <div
+          <div;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
@@ -118,47 +118,47 @@ const ServicesOverview = () => {
                 <ul className="space-y-1">
                   <li className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                    AI Content Generation
+                    AI Content Generation;
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                    Customer Analytics
+                    Customer Analytics;
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                    Workflow Automation
+                    Workflow Automation;
                   </li>
                 </ul>
               </div>
               <div className="mb-4 p-3 bg-gray-50 rounded-lg">
                 <p className="text-sm text-gray-600">
-                  <span className="font-semibold">Market Price:</span> $299-1299/month
+                  <span className="font-semibold">Market Price:</span> $299-1299/month;
                 </p>
                 <p className="text-sm text-green-600 font-semibold">
-                  Save up to 40% with Zion Tech Group
+                  Save up to 40% with Zion Tech Group;
                 </p>
               </div>
               <div className="flex flex-col gap-2">
-                <Link
+                <Link;
                   to="/services/ai-content-generation-suite"
                   className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center flex items-center justify-center"
                 >
-                  Learn More
+                  Learn More;
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
-                <a
+                <a;
                   href={`tel:${contactInfo.phone}`}
                   className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors text-center flex items-center justify-center"
                 >
                   <Phone className="w-4 h-4 mr-2" />
-                  Call Now
+                  Call Now;
                 </a>
               </div>
             </div>
           </div>
 
           {/* IT Services */}
-          <div
+          <div;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
@@ -181,47 +181,47 @@ const ServicesOverview = () => {
                 <ul className="space-y-1">
                   <li className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                    Cloud Migration
+                    Cloud Migration;
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                    DevOps Automation
+                    DevOps Automation;
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                    Cybersecurity
+                    Cybersecurity;
                   </li>
                 </ul>
               </div>
               <div className="mb-4 p-3 bg-gray-50 rounded-lg">
                 <p className="text-sm text-gray-600">
-                  <span className="font-semibold">Market Price:</span> $299-3999/month
+                  <span className="font-semibold">Market Price:</span> $299-3999/month;
                 </p>
                 <p className="text-sm text-green-600 font-semibold">
-                  Save up to 40% with Zion Tech Group
+                  Save up to 40% with Zion Tech Group;
                 </p>
               </div>
               <div className="flex flex-col gap-2">
-                <Link
+                <Link;
                   to="/services/cloud-migration-services"
                   className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center flex items-center justify-center"
                 >
-                  Learn More
+                  Learn More;
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
-                <a
+                <a;
                   href={`tel:${contactInfo.phone}`}
                   className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors text-center flex items-center justify-center"
                 >
                   <Phone className="w-4 h-4 mr-2" />
-                  Call Now
+                  Call Now;
                 </a>
               </div>
             </div>
           </div>
 
           {/* Business SaaS */}
-          <div
+          <div;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -244,40 +244,40 @@ const ServicesOverview = () => {
                 <ul className="space-y-1">
                   <li className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                    Smart CRM Platform
+                    Smart CRM Platform;
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                    Project Management
+                    Project Management;
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                    Financial Analytics
+                    Financial Analytics;
                   </li>
                 </ul>
               </div>
               <div className="mb-4 p-3 bg-gray-50 rounded-lg">
                 <p className="text-sm text-gray-600">
-                  <span className="font-semibold">Market Price:</span> $79-499/month
+                  <span className="font-semibold">Market Price:</span> $79-499/month;
                 </p>
                 <p className="text-sm text-green-600 font-semibold">
-                  Save up to 25% with Zion Tech Group
+                  Save up to 25% with Zion Tech Group;
                 </p>
               </div>
               <div className="flex flex-col gap-2">
-                <Link
+                <Link;
                   to="/services/smart-crm-platform"
                   className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center flex items-center justify-center"
                 >
-                  Learn More
+                  Learn More;
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
-                <a
+                <a;
                   href={`tel:${contactInfo.phone}`}
                   className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors text-center flex items-center justify-center"
                 >
                   <Phone className="w-4 h-4 mr-2" />
-                  Call Now
+                  Call Now;
                 </a>
               </div>
             </div>
@@ -329,12 +329,12 @@ const ServicesOverview = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
           <p className="text-gray-400 mt-2">
-            Professional technology solutions and micro SaaS services
+            Professional technology solutions and micro SaaS services;
           </p>
         </div>
       </footer>
     </div>
   );
-};
+}
 
 export default ServicesOverview;

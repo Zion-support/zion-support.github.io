@@ -1,20 +1,20 @@
 import React from 'react';
 import Link from 'next/link';
 import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Linkedin, 
-  Twitter, 
-  Github, 
-  Facebook,
-  ArrowUp
+  Mail;
+  Phone;
+  MapPin;
+  Linkedin;
+  Twitter;
+  Github;
+  Facebook;
+  ArrowUp;
 } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  }
 
   const currentYear = new Date().getFullYear();
 
@@ -32,11 +32,11 @@ const Footer: React.FC = () => {
               <span className="text-white font-bold text-2xl">Zion Tech</span>
             </Link>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Leading technology solutions provider helping businesses transform their digital presence 
+              Leading technology solutions provider helping businesses transform their digital presence;
               with cutting-edge AI, cloud architecture, and innovative development services.
             </p>
             <div className="flex space-x-4">
-              <a
+              <a;
                 href="https://linkedin.com/company/ziontechgroup"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
               >
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a
+              <a;
                 href="https://twitter.com/ziontechgroup"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
               >
                 <Twitter className="w-5 h-5" />
               </a>
-              <a
+              <a;
                 href="https://github.com/ziontechgroup"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
               >
                 <Github className="w-5 h-5" />
               </a>
-              <a
+              <a;
                 href="https://facebook.com/ziontechgroup"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -81,27 +81,27 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li>
                 <Link href="/services/ai-development" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  AI Development
+                  AI Development;
                 </Link>
               </li>
               <li>
                 <Link href="/services/cloud-architecture" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Cloud Architecture
+                  Cloud Architecture;
                 </Link>
               </li>
               <li>
                 <Link href="/services/cybersecurity" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Cybersecurity
+                  Cybersecurity;
                 </Link>
               </li>
               <li>
                 <Link href="/services/data-analytics" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Data Analytics
+                  Data Analytics;
                 </Link>
               </li>
               <li>
                 <Link href="/services/devops" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  DevOps
+                  DevOps;
                 </Link>
               </li>
             </ul>
@@ -113,22 +113,22 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li>
                 <Link href="/blockchain-solutions" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Blockchain Solutions
+                  Blockchain Solutions;
                 </Link>
               </li>
               <li>
                 <Link href="/iot-platforms" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  IoT Platforms
+                  IoT Platforms;
                 </Link>
               </li>
               <li>
                 <Link href="/solutions/digital-transformation" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Digital Transformation
+                  Digital Transformation;
                 </Link>
               </li>
               <li>
                 <Link href="/solutions/enterprise-solutions" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Enterprise Solutions
+                  Enterprise Solutions;
                 </Link>
               </li>
             </ul>
@@ -143,7 +143,7 @@ const Footer: React.FC = () => {
                 <div>
                   <p className="text-gray-400">Email</p>
                   <a href="mailto:info@ziontechgroup.com" className="text-white hover:text-blue-400 transition-colors duration-200">
-                    info@ziontechgroup.com
+                    info@ziontechgroup.com;
                   </a>
                 </div>
               </div>
@@ -152,7 +152,7 @@ const Footer: React.FC = () => {
                 <div>
                   <p className="text-gray-400">Phone</p>
                   <a href="tel:+1-555-0123" className="text-white hover:text-blue-400 transition-colors duration-200">
-                    +1 (555) 012-3456
+                    +1 (555) 012-3456;
                   </a>
                 </div>
               </div>
@@ -162,7 +162,7 @@ const Footer: React.FC = () => {
                   <p className="text-gray-400">Address</p>
                   <p className="text-white">
                     123 Tech Street<br />
-                    San Francisco, CA 94105
+                    San Francisco, CA 94105;
                   </p>
                 </div>
               </div>
@@ -177,20 +177,20 @@ const Footer: React.FC = () => {
           </div>
           <div className="flex space-x-6 text-sm">
             <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">
-              Privacy Policy
+              Privacy Policy;
             </Link>
             <Link href="/terms" className="text-gray-400 hover:text-white transition-colors duration-200">
-              Terms of Service
+              Terms of Service;
             </Link>
             <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors duration-200">
-              Cookie Policy
+              Cookie Policy;
             </Link>
           </div>
         </div>
       </div>
 
       {/* Scroll to Top Button */}
-      <button
+      <button;
         onClick={scrollToTop}
         className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center z-50"
         aria-label="Scroll to top"
@@ -199,6 +199,6 @@ const Footer: React.FC = () => {
       </button>
     </footer>
   );
-};
+}
 
 export default Footer;

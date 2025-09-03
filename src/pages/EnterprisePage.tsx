@@ -1,153 +1,154 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Building2, 
-  Shield, 
-  Zap, 
-  Users, 
-  TrendingUp, 
-  CheckCircle, 
-  ArrowRight,
-  Globe,
-  Lock,
-  Database,
-  Cloud,
-  Brain,
-  Target,
-  Award,
-  Headphones,
-  BarChart3,
-  Settings,
-  Cpu,
-  Network,
-  Server
+  Building2;
+  Shield;
+  Zap;
+  Users;
+  TrendingUp;
+  CheckCircle;
+  ArrowRight;
+  Globe;
+  Lock;
+  Database;
+  Cloud;
+  Brain;
+  Target;
+  Award;
+  Headphones;
+  BarChart3;
+  Settings;
+  Cpu;
+  Network;
+  Server;
 } from 'lucide-react';
 
 export function EnterprisePage() {
+
   const enterpriseSolutions = [
     {
-      title: 'AI-Powered Business Intelligence',
-      icon: Brain,
-      description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
-      features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards', 'Automated Reporting'],
+      title: 'AI-Powered Business Intelligence'
+      icon: Brain;
+      description: 'Transform your data into actionable insights with our advanced AI analytics platform.'
+      features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards', 'Automated Reporting']
       industries: ['Finance', 'Healthcare', 'Retail', 'Manufacturing']
-    },
+    }
     {
-      title: 'Enterprise Security Suite',
-      icon: Shield,
-      description: 'Comprehensive cybersecurity solutions to protect your organization from evolving threats.',
-      features: ['Zero Trust Architecture', 'Threat Detection', 'Compliance Management', 'Incident Response'],
+      title: 'Enterprise Security Suite'
+      icon: Shield;
+      description: 'Comprehensive cybersecurity solutions to protect your organization from evolving threats.'
+      features: ['Zero Trust Architecture', 'Threat Detection', 'Compliance Management', 'Incident Response']
       industries: ['Government', 'Finance', 'Healthcare', 'Technology']
-    },
+    }
     {
-      title: 'Cloud Infrastructure Management',
-      icon: Cloud,
-      description: 'Optimize your cloud operations with our advanced infrastructure management platform.',
-      features: ['Multi-Cloud Support', 'Cost Optimization', 'Auto-Scaling', 'Disaster Recovery'],
+      title: 'Cloud Infrastructure Management'
+      icon: Cloud;
+      description: 'Optimize your cloud operations with our advanced infrastructure management platform.'
+      features: ['Multi-Cloud Support', 'Cost Optimization', 'Auto-Scaling', 'Disaster Recovery']
       industries: ['Technology', 'Finance', 'E-commerce', 'Media']
-    },
+    }
     {
-      title: 'Digital Transformation Platform',
-      icon: Zap,
-      description: 'Accelerate your digital transformation journey with our comprehensive platform.',
-      features: ['Process Automation', 'Legacy Modernization', 'API Management', 'Microservices'],
+      title: 'Digital Transformation Platform'
+      icon: Zap;
+      description: 'Accelerate your digital transformation journey with our comprehensive platform.'
+      features: ['Process Automation', 'Legacy Modernization', 'API Management', 'Microservices']
       industries: ['Manufacturing', 'Retail', 'Banking', 'Insurance']
     }
   ];
 
   const enterpriseFeatures = [
     {
-      icon: Lock,
-      title: 'Enterprise Security',
+      icon: Lock;
+      title: 'Enterprise Security'
       description: 'Bank-grade security with SOC 2 compliance, encryption, and advanced threat protection.'
-    },
+    }
     {
-      icon: Users,
-      title: 'Dedicated Support',
+      icon: Users;
+      title: 'Dedicated Support'
       description: '24/7 dedicated support team with enterprise SLA guarantees and priority response.'
-    },
+    }
     {
-      icon: Settings,
-      title: 'Custom Integration',
+      icon: Settings;
+      title: 'Custom Integration'
       description: 'Seamless integration with your existing systems and custom development capabilities.'
-    },
+    }
     {
-      icon: BarChart3,
-      title: 'Advanced Analytics',
+      icon: BarChart3;
+      title: 'Advanced Analytics'
       description: 'Comprehensive reporting and analytics to track performance and ROI across all solutions.'
-    },
+    }
     {
-      icon: Globe,
-      title: 'Global Deployment',
+      icon: Globe;
+      title: 'Global Deployment'
       description: 'Worldwide deployment capabilities with local data residency and compliance support.'
-    },
+    }
     {
-      icon: Award,
-      title: 'Proven Results',
+      icon: Award;
+      title: 'Proven Results'
       description: 'Track record of successful enterprise implementations with measurable business outcomes.'
     }
   ];
 
   const industries = [
     {
-      name: 'Financial Services',
-      icon: TrendingUp,
-      description: 'Secure, compliant solutions for banking, insurance, and fintech companies.',
+      name: 'Financial Services'
+      icon: TrendingUp;
+      description: 'Secure, compliant solutions for banking, insurance, and fintech companies.'
       solutions: ['Risk Management', 'Fraud Detection', 'Regulatory Compliance', 'Customer Analytics']
-    },
+    }
     {
-      name: 'Healthcare',
-      icon: Shield,
-      description: 'HIPAA-compliant solutions for hospitals, clinics, and healthcare providers.',
+      name: 'Healthcare'
+      icon: Shield;
+      description: 'HIPAA-compliant solutions for hospitals, clinics, and healthcare providers.'
       solutions: ['Patient Data Management', 'Telemedicine', 'Clinical Analytics', 'Supply Chain']
-    },
+    }
     {
-      name: 'Manufacturing',
-      icon: Cpu,
-      description: 'IoT and AI solutions for smart manufacturing and industrial automation.',
+      name: 'Manufacturing'
+      icon: Cpu;
+      description: 'IoT and AI solutions for smart manufacturing and industrial automation.'
       solutions: ['Predictive Maintenance', 'Quality Control', 'Supply Chain Optimization', 'Energy Management']
-    },
+    }
     {
-      name: 'Government',
-      icon: Building2,
-      description: 'Secure, scalable solutions for federal, state, and local government agencies.',
+      name: 'Government'
+      icon: Building2;
+      description: 'Secure, scalable solutions for federal, state, and local government agencies.'
       solutions: ['Citizen Services', 'Data Analytics', 'Cybersecurity', 'Digital Transformation']
-    },
+    }
     {
-      name: 'Retail & E-commerce',
-      icon: Target,
-      description: 'Customer-centric solutions for retail chains and online marketplaces.',
+      name: 'Retail & E-commerce'
+      icon: Target;
+      description: 'Customer-centric solutions for retail chains and online marketplaces.'
       solutions: ['Personalization', 'Inventory Management', 'Customer Analytics', 'Omnichannel']
-    },
+    }
     {
-      name: 'Technology',
-      icon: Network,
-      description: 'Cutting-edge solutions for tech companies and software providers.',
+      name: 'Technology'
+      icon: Network;
+      description: 'Cutting-edge solutions for tech companies and software providers.'
       solutions: ['DevOps Automation', 'API Management', 'Microservices', 'Cloud Migration']
     }
   ];
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      title: 'CTO, Global Finance Corp',
-      company: 'Global Finance Corp',
-      content: 'Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving security and compliance.',
-      rating: 5
-    },
+      name: 'Sarah Johnson'
+      title: 'CTO, Global Finance Corp'
+      company: 'Global Finance Corp'
+      content: 'Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving security and compliance.'
+      rating: 5;
+    }
     {
-      name: 'Michael Chen',
-      title: 'VP of Technology, HealthTech Solutions',
-      company: 'HealthTech Solutions',
-      content: 'The healthcare-specific solutions provided by Zion Tech Group have been instrumental in our digital transformation. Their expertise in compliance and security is unmatched.',
-      rating: 5
-    },
+      name: 'Michael Chen'
+      title: 'VP of Technology, HealthTech Solutions'
+      company: 'HealthTech Solutions'
+      content: 'The healthcare-specific solutions provided by Zion Tech Group have been instrumental in our digital transformation. Their expertise in compliance and security is unmatched.'
+      rating: 5;
+    }
     {
-      name: 'Emily Rodriguez',
-      title: 'Director of IT, Manufacturing Plus',
-      company: 'Manufacturing Plus',
-      content: 'Their IoT and AI solutions revolutionized our manufacturing processes. We saw a 60% improvement in efficiency and a 35% reduction in downtime.',
-      rating: 5
+      name: 'Emily Rodriguez'
+      title: 'Director of IT, Manufacturing Plus'
+      company: 'Manufacturing Plus'
+      content: 'Their IoT and AI solutions revolutionized our manufacturing processes. We saw a 60% improvement in efficiency and a 35% reduction in downtime.'
+      rating: 5;
     }
   ];
 
@@ -158,7 +159,7 @@ export function EnterprisePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Enterprise Solutions
+              Enterprise Solutions;
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Transform your organization with our comprehensive enterprise-grade technology solutions. 
@@ -166,17 +167,17 @@ export function EnterprisePage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link
+              <Link;
                 to="/request-quote"
                 className="bg-zion-cyan text-white px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors"
               >
-                Get Enterprise Quote
+                Get Enterprise Quote;
               </Link>
-              <Link
+              <Link;
                 to="/contact"
                 className="border-2 border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-colors"
               >
-                Schedule Demo
+                Schedule Demo;
               </Link>
             </div>
 
@@ -208,10 +209,10 @@ export function EnterprisePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Enterprise Solutions
+              Comprehensive Enterprise Solutions;
             </h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto">
-              End-to-end technology solutions designed for enterprise-scale operations
+              End-to-end technology solutions designed for enterprise-scale operations;
             </p>
           </div>
 
@@ -250,11 +251,11 @@ export function EnterprisePage() {
                   </div>
                 </div>
 
-                <Link
+                <Link;
                   to="/contact"
                   className="text-zion-cyan hover:text-zion-cyan-light transition-colors flex items-center"
                 >
-                  Learn More
+                  Learn More;
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
@@ -271,7 +272,7 @@ export function EnterprisePage() {
               Why Choose Zion Tech Group for Enterprise?
             </h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto">
-              Enterprise-grade features and capabilities designed for large-scale operations
+              Enterprise-grade features and capabilities designed for large-scale operations;
             </p>
           </div>
 
@@ -296,10 +297,10 @@ export function EnterprisePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry-Specific Solutions
+              Industry-Specific Solutions;
             </h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto">
-              Tailored solutions for your industry's unique challenges and requirements
+              Tailored solutions for your industry's unique challenges and requirements;
             </p>
           </div>
 
@@ -336,10 +337,10 @@ export function EnterprisePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              What Enterprise Leaders Say
+              What Enterprise Leaders Say;
             </h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto">
-              Trusted by industry leaders across various sectors
+              Trusted by industry leaders across various sectors;
             </p>
           </div>
 
@@ -377,17 +378,17 @@ export function EnterprisePage() {
             Let our enterprise experts help you design and implement the perfect solution for your organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <Link;
               to="/request-quote"
               className="bg-white text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-slate-light transition-colors"
             >
-              Get Enterprise Quote
+              Get Enterprise Quote;
             </Link>
-            <Link
+            <Link;
               to="/contact"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-zion-cyan transition-colors"
             >
-              Schedule Consultation
+              Schedule Consultation;
             </Link>
           </div>
         </div>

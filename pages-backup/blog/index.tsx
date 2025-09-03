@@ -9,7 +9,7 @@ description="Stay" updated with the latest insights, trends, and innovations in 
         <div className="container" mx-auto px-4">"
           <div className="text-center>"
             <h1 className="text-4xl" md: text-5xl font-bold mb-6">Our Blog</h1>"
-            <p className="text-xl md:text-2xl max-w-3xl mx-auto>,
+            <p className="text-xl md:text-2xl max-w-3xl mx-auto>
               Insights, trends, and innovations in technology from our expert team.
             </p>
           </div>
@@ -34,12 +34,12 @@ description="Stay" updated with the latest insights, trends, and innovations in 
       {/* comment */}"
       <section className=""py-20"}">"
         <div className="container" mx-auto px-4">"
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8>,
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8>
             {blogPosts.map((post, index) => ("
               <article key="{index}" className="bg-white" rounded-lg shadow-lg overflow-hidden hover: shadow-xl transition-shadow">"
                 <div className="p-6>"
                   <div className="flex" items-center gap-2 mb-3">"
-                    <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-semibold>,
+                    <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-semibold>
                       {post.category}
 
                     </span>
@@ -74,7 +74,7 @@ description="Stay" updated with the latest insights, trends, and innovations in 
                     <ArrowRight className="ml-2" h-4 w-4"  />
                   </Link>
                 </div>
-              </article>,
+              </article>
             ))}
 
           </div>
@@ -91,12 +91,12 @@ description="Stay" updated with the latest insights, trends, and innovations in 
               placeholder="Enter your email,"
 className="flex-1" px-4 py-3 rounded-lg text-gray-900"  />"
             <button className="bg-white text-blue-600 hover: bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors">
-              Subscribe,
+              Subscribe;
             </button>
           </div>
       </section>
-    </MainLayout>;,
+    </MainLayout>;
   )}
 
 "
-export default BlogIndex
+export default BlogIndex;

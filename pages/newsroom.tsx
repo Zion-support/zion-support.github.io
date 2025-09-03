@@ -7,170 +7,170 @@ const Newsroom: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
   const categories = [
-    { id: 'all', name: 'All News', count: 156 },
-    { id: 'press-releases', name: 'Press Releases', count: 23 },
-    { id: 'company-news', name: 'Company News', count: 45 },
-    { id: 'product-updates', name: 'Product Updates', count: 34 },
-    { id: 'partnerships', name: 'Partnerships', count: 18 },
-    { id: 'awards', name: 'Awards & Recognition', count: 12 },
-    { id: 'thought-leadership', name: 'Thought Leadership', count: 24 },
+    { id: 'all', name: 'All News', count: 156 }
+    { id: 'press-releases', name: 'Press Releases', count: 23 }
+    { id: 'company-news', name: 'Company News', count: 45 }
+    { id: 'product-updates', name: 'Product Updates', count: 34 }
+    { id: 'partnerships', name: 'Partnerships', count: 18 }
+    { id: 'awards', name: 'Awards & Recognition', count: 12 }
+    { id: 'thought-leadership', name: 'Thought Leadership', count: 24 }
   ];
 
   const featuredNews = [
     {
-      id: 1,
-      title: 'Zion App Named Leader in Gartner Magic Quadrant for Business Process Automation',
-      category: 'awards',
-      date: '2025-01-15',
-      excerpt: 'Zion App has been recognized as a Leader in the 2025 Gartner Magic Quadrant for Business Process Automation, marking a significant milestone in our journey to revolutionize business automation.',
-      author: 'Press Team',
-      readTime: '3 min read',
-      featured: true,
-      image: '/api/placeholder/400/250',
+      id: 1;
+      title: 'Zion App Named Leader in Gartner Magic Quadrant for Business Process Automation'
+      category: 'awards'
+      date: '2025-01-15'
+      excerpt: 'Zion App has been recognized as a Leader in the 2025 Gartner Magic Quadrant for Business Process Automation, marking a significant milestone in our journey to revolutionize business automation.'
+      author: 'Press Team'
+      readTime: '3 min read'
+      featured: true;
+      image: '/api/placeholder/400/250'
       tags: ['Gartner', 'Leadership', 'Automation', 'Recognition']
-    },
+    }
     {
-      id: 2,
-      title: 'Major Partnership Announcement: Zion App Joins Forces with Tech Giants',
-      category: 'partnerships',
-      date: '2025-01-12',
-      excerpt: 'We are excited to announce a strategic partnership with leading technology companies to accelerate innovation and deliver enhanced solutions to our customers worldwide.',
-      author: 'Partnership Team',
-      readTime: '4 min read',
-      featured: true,
-      image: '/api/placeholder/400/250',
+      id: 2;
+      title: 'Major Partnership Announcement: Zion App Joins Forces with Tech Giants'
+      category: 'partnerships'
+      date: '2025-01-12'
+      excerpt: 'We are excited to announce a strategic partnership with leading technology companies to accelerate innovation and deliver enhanced solutions to our customers worldwide.'
+      author: 'Partnership Team'
+      readTime: '4 min read'
+      featured: true;
+      image: '/api/placeholder/400/250'
       tags: ['Partnership', 'Innovation', 'Technology', 'Growth']
-    },
+    }
     {
-      id: 3,
-      title: 'Q4 2024 Financial Results: Record Growth and Market Expansion',
-      category: 'company-news',
-      date: '2025-01-10',
-      excerpt: 'Zion App reports exceptional Q4 2024 results with 150% year-over-year growth, driven by strong demand for our automation solutions and successful market expansion.',
-      author: 'Finance Team',
-      readTime: '5 min read',
-      featured: true,
-      image: '/api/placeholder/400/250',
+      id: 3;
+      title: 'Q4 2024 Financial Results: Record Growth and Market Expansion'
+      category: 'company-news'
+      date: '2025-01-10'
+      excerpt: 'Zion App reports exceptional Q4 2024 results with 150% year-over-year growth, driven by strong demand for our automation solutions and successful market expansion.'
+      author: 'Finance Team'
+      readTime: '5 min read'
+      featured: true;
+      image: '/api/placeholder/400/250'
       tags: ['Financial Results', 'Growth', 'Q4 2024', 'Market Expansion']
-    },
+    }
   ];
 
   const recentNews = [
     {
-      id: 4,
-      title: 'New AI-Powered Features Released in Latest Platform Update',
-      category: 'product-updates',
-      date: '2025-01-14',
-      excerpt: 'Our latest platform update introduces advanced AI capabilities, including intelligent process optimization and predictive analytics.',
-      author: 'Product Team',
-      readTime: '2 min read',
-      image: '/api/placeholder/300/200',
+      id: 4;
+      title: 'New AI-Powered Features Released in Latest Platform Update'
+      category: 'product-updates'
+      date: '2025-01-14'
+      excerpt: 'Our latest platform update introduces advanced AI capabilities, including intelligent process optimization and predictive analytics.'
+      author: 'Product Team'
+      readTime: '2 min read'
+      image: '/api/placeholder/300/200'
       tags: ['AI', 'Product Update', 'Innovation']
-    },
+    }
     {
-      id: 5,
-      title: 'Zion App Expands European Operations with New Office in Berlin',
-      category: 'company-news',
-      date: '2025-01-13',
-      excerpt: 'To better serve our growing European customer base, we are opening a new office in Berlin, Germany.',
-      author: 'Expansion Team',
-      readTime: '2 min read',
-      image: '/api/placeholder/300/200',
+      id: 5;
+      title: 'Zion App Expands European Operations with New Office in Berlin'
+      category: 'company-news'
+      date: '2025-01-13'
+      excerpt: 'To better serve our growing European customer base, we are opening a new office in Berlin, Germany.'
+      author: 'Expansion Team'
+      readTime: '2 min read'
+      image: '/api/placeholder/300/200'
       tags: ['Expansion', 'Europe', 'Berlin', 'Growth']
-    },
+    }
     {
-      id: 6,
-      title: 'Customer Success Story: How Company X Achieved 300% Efficiency Gains',
-      category: 'thought-leadership',
-      date: '2025-01-11',
-      excerpt: 'Discover how one of our customers transformed their business operations and achieved remarkable efficiency improvements.',
-      author: 'Customer Success Team',
-      readTime: '4 min read',
-      image: '/api/placeholder/300/200',
+      id: 6;
+      title: 'Customer Success Story: How Company X Achieved 300% Efficiency Gains'
+      category: 'thought-leadership'
+      date: '2025-01-11'
+      excerpt: 'Discover how one of our customers transformed their business operations and achieved remarkable efficiency improvements.'
+      author: 'Customer Success Team'
+      readTime: '4 min read'
+      image: '/api/placeholder/300/200'
       tags: ['Customer Success', 'Case Study', 'Efficiency']
-    },
+    }
     {
-      id: 7,
-      title: 'Zion App Named Best Workplace for Innovation by Tech Magazine',
-      category: 'awards',
-      date: '2025-01-09',
-      excerpt: 'We are honored to be recognized as the Best Workplace for Innovation, highlighting our commitment to fostering creativity and innovation.',
-      author: 'HR Team',
-      readTime: '2 min read',
-      image: '/api/placeholder/300/200',
+      id: 7;
+      title: 'Zion App Named Best Workplace for Innovation by Tech Magazine'
+      category: 'awards'
+      date: '2025-01-09'
+      excerpt: 'We are honored to be recognized as the Best Workplace for Innovation, highlighting our commitment to fostering creativity and innovation.'
+      author: 'HR Team'
+      readTime: '2 min read'
+      image: '/api/placeholder/300/200'
       tags: ['Workplace', 'Innovation', 'Recognition']
-    },
+    }
     {
-      id: 8,
-      title: 'Industry Report: The Future of Business Automation in 2025',
-      category: 'thought-leadership',
-      date: '2025-01-08',
-      excerpt: 'Our research team shares insights on emerging trends and predictions for the business automation industry in 2025.',
-      author: 'Research Team',
-      readTime: '6 min read',
-      image: '/api/placeholder/300/200',
+      id: 8;
+      title: 'Industry Report: The Future of Business Automation in 2025'
+      category: 'thought-leadership'
+      date: '2025-01-08'
+      excerpt: 'Our research team shares insights on emerging trends and predictions for the business automation industry in 2025.'
+      author: 'Research Team'
+      readTime: '6 min read'
+      image: '/api/placeholder/300/200'
       tags: ['Research', 'Industry Report', '2025 Trends']
-    },
+    }
     {
-      id: 9,
-      title: 'Security Enhancement: Advanced Threat Protection Now Available',
-      category: 'product-updates',
-      date: '2025-01-07',
-      excerpt: 'Enhanced security features provide advanced threat protection and compliance capabilities for enterprise customers.',
-      author: 'Security Team',
-      readTime: '3 min read',
-      image: '/api/placeholder/300/200',
+      id: 9;
+      title: 'Security Enhancement: Advanced Threat Protection Now Available'
+      category: 'product-updates'
+      date: '2025-01-07'
+      excerpt: 'Enhanced security features provide advanced threat protection and compliance capabilities for enterprise customers.'
+      author: 'Security Team'
+      readTime: '3 min read'
+      image: '/api/placeholder/300/200'
       tags: ['Security', 'Threat Protection', 'Enterprise']
-    },
+    }
   ];
 
   const pressReleases = [
     {
-      id: 10,
-      title: 'Zion App Announces Series C Funding Round of $50 Million',
-      date: '2025-01-06',
-      excerpt: 'Funding will accelerate product development and global expansion efforts.',
+      id: 10;
+      title: 'Zion App Announces Series C Funding Round of $50 Million'
+      date: '2025-01-06'
+      excerpt: 'Funding will accelerate product development and global expansion efforts.'
       category: 'press-releases'
-    },
+    }
     {
-      id: 11,
-      title: 'New CEO Appointment: Industry Veteran Joins Zion App Leadership',
-      date: '2025-01-05',
-      excerpt: 'Experienced technology leader appointed to drive next phase of company growth.',
+      id: 11;
+      title: 'New CEO Appointment: Industry Veteran Joins Zion App Leadership'
+      date: '2025-01-05'
+      excerpt: 'Experienced technology leader appointed to drive next phase of company growth.'
       category: 'press-releases'
-    },
+    }
     {
-      id: 12,
-      title: 'Zion App Acquires AI Startup to Strengthen Machine Learning Capabilities',
-      date: '2025-01-04',
-      excerpt: 'Strategic acquisition enhances our AI and machine learning offerings.',
+      id: 12;
+      title: 'Zion App Acquires AI Startup to Strengthen Machine Learning Capabilities'
+      date: '2025-01-04'
+      excerpt: 'Strategic acquisition enhances our AI and machine learning offerings.'
       category: 'press-releases'
-    },
+    }
   ];
 
   const getCategoryColor = (category: string) => {
     const colors: { [key: string]: string } = {
-      'press-releases': 'bg-blue-100 text-blue-800',
-      'company-news': 'bg-green-100 text-green-800',
-      'product-updates': 'bg-purple-100 text-purple-800',
-      'partnerships': 'bg-orange-100 text-orange-800',
-      'awards': 'bg-yellow-100 text-yellow-800',
-      'thought-leadership': 'bg-indigo-100 text-indigo-800',
-    };
+      'press-releases': 'bg-blue-100 text-blue-800'
+      'company-news': 'bg-green-100 text-green-800'
+      'product-updates': 'bg-purple-100 text-purple-800'
+      'partnerships': 'bg-orange-100 text-orange-800'
+      'awards': 'bg-yellow-100 text-yellow-800'
+      'thought-leadership': 'bg-indigo-100 text-indigo-800'
+    }
     return colors[category] || 'bg-gray-100 text-gray-800';
-  };
+  }
 
   const getCategoryName = (category: string) => {
     const names: { [key: string]: string } = {
-      'press-releases': 'Press Releases',
-      'company-news': 'Company News',
-      'product-updates': 'Product Updates',
-      'partnerships': 'Partnerships',
-      'awards': 'Awards & Recognition',
-      'thought-leadership': 'Thought Leadership',
-    };
+      'press-releases': 'Press Releases'
+      'company-news': 'Company News'
+      'product-updates': 'Product Updates'
+      'partnerships': 'Partnerships'
+      'awards': 'Awards & Recognition'
+      'thought-leadership': 'Thought Leadership'
+    }
     return names[category] || category;
-  };
+  }
 
   const filteredNews = recentNews.filter(item => {
     const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
@@ -191,10 +191,10 @@ const Newsroom: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Newsroom
+              Newsroom;
             </h1>
             <p className="text-xl text-gray-600">
-              Stay updated with the latest news, announcements, and insights from Zion App
+              Stay updated with the latest news, announcements, and insights from Zion App;
             </p>
           </div>
 
@@ -202,7 +202,7 @@ const Newsroom: React.FC = () => {
           <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
             <div className="flex flex-col md:flex-row gap-4 mb-6">
               <div className="flex-1">
-                <input
+                <input;
                   type="text"
                   placeholder="Search news..."
                   value={searchQuery}
@@ -212,24 +212,24 @@ const Newsroom: React.FC = () => {
               </div>
               <div className="flex gap-2">
                 <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                  Search
+                  Search;
                 </button>
-                <button 
+                <button;
                   onClick={() => setSearchQuery('')}
                   className="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
                 >
-                  Clear
+                  Clear;
                 </button>
               </div>
             </div>
 
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
-                <button
+                <button;
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                    activeCategory === category.id
+                    activeCategory === category.id;
                       ? 'bg-blue-600 text-white'
                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                   }`}
@@ -270,7 +270,7 @@ const Newsroom: React.FC = () => {
                       ))}
                     </div>
                     <button className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                      Read More
+                      Read More;
                     </button>
                   </div>
                 </div>
@@ -331,7 +331,7 @@ const Newsroom: React.FC = () => {
                 </div>
                 <div className="mt-6 text-center">
                   <button className="text-blue-600 hover:text-blue-700 text-sm font-medium">
-                    View All Press Releases
+                    View All Press Releases;
                   </button>
                 </div>
               </div>
@@ -364,13 +364,13 @@ const Newsroom: React.FC = () => {
               Get the latest news and updates delivered directly to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
+              <input;
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-2 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
               />
               <button className="px-6 py-2 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-medium">
-                Subscribe
+                Subscribe;
               </button>
             </div>
           </div>
@@ -383,10 +383,10 @@ const Newsroom: React.FC = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                Contact PR Team
+                Contact PR Team;
               </Link>
               <a href="mailto:press@zion.app" className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors">
-                press@zion.app
+                press@zion.app;
               </a>
             </div>
           </div>
@@ -394,6 +394,6 @@ const Newsroom: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Newsroom;

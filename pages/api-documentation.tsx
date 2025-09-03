@@ -15,10 +15,10 @@ const APIDocumentation: React.FC = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              API Documentation
+              API Documentation;
             </h1>
             <p className="text-xl text-gray-600">
-              Comprehensive guide to integrating with Zion App services
+              Comprehensive guide to integrating with Zion App services;
             </p>
           </div>
 
@@ -31,7 +31,7 @@ const APIDocumentation: React.FC = () => {
                   All API requests require authentication using API keys. Include your API key in the Authorization header:
                 </p>
                 <code className="bg-gray-200 px-2 py-1 rounded text-sm">
-                  Authorization: Bearer YOUR_API_KEY
+                  Authorization: Bearer YOUR_API_KEY;
                 </code>
               </div>
 
@@ -41,7 +41,7 @@ const APIDocumentation: React.FC = () => {
                   All API endpoints are relative to our base URL:
                 </p>
                 <code className="bg-gray-200 px-2 py-1 rounded text-sm">
-                  https://api.zion.app/v1
+                  https://api.zion.app/v1;
                 </code>
               </div>
 
@@ -97,39 +97,39 @@ const APIDocumentation: React.FC = () => {
 {`const axios = require('axios');
 
 const api = axios.create({
-  baseURL: 'https://api.zion.app/v1',
+  baseURL: 'https://api.zion.app/v1'
   headers: {
-    'Authorization': 'Bearer YOUR_API_KEY',
+    'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
   }
 });
 
-// Get content
+// Get content;
 const getContent = async () => {
   try {
     const response = await api.get('/content');
     console.log(response.data);
-  } catch (error) {
+  } catch() {
+
     console.error('Error:', error.response.data);
   }
-};`}
+}`}
                 </pre>
               </div>
 
               <div>
                 <h3 className="text-lg font-medium text-gray-800 mb-3">Python</h3>
                 <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm">
-{`import requests
-
+{`import requests;
 api_key = 'YOUR_API_KEY'
 base_url = 'https://api.zion.app/v1'
 
 headers = {
-    'Authorization': f'Bearer {api_key}',
+    'Authorization': f'Bearer {api_key}'
     'Content-Type': 'application/json'
 }
 
-# Get content
+# Get content;
 response = requests.get(f'{base_url}/content', headers=headers)
 if response.status_code == 200:
     print(response.json())
@@ -171,13 +171,13 @@ else:
               Our developer support team is here to help you integrate successfully.
             </p>
             <Link href="/contact" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-              Contact Support
+              Contact Support;
             </Link>
           </div>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default APIDocumentation;

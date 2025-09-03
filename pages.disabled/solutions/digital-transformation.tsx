@@ -8,80 +8,80 @@ import { motion } from 'framer-motion';
 const DigitalTransformation: NextPage = () => {
   const transformationAreas = [
     {
-      icon: TrendingUp,
-      title: 'Business Process Automation',
-      description: 'Streamline operations and eliminate manual processes with intelligent automation solutions.',
+      icon: TrendingUp;
+      title: 'Business Process Automation'
+      description: 'Streamline operations and eliminate manual processes with intelligent automation solutions.'
       benefits: ['Reduced operational costs', 'Improved efficiency', 'Error reduction', 'Scalable processes']
-    },
+    }
     {
-      icon: Users,
-      title: 'Customer Experience Enhancement',
-      description: 'Transform customer interactions with digital-first experiences and personalized engagement.',
+      icon: Users;
+      title: 'Customer Experience Enhancement'
+      description: 'Transform customer interactions with digital-first experiences and personalized engagement.'
       benefits: ['Higher customer satisfaction', 'Increased retention', 'Better insights', 'Omnichannel experience']
-    },
+    }
     {
-      icon: Zap,
-      title: 'Data-Driven Decision Making',
-      description: 'Leverage advanced analytics and AI to make informed business decisions in real-time.',
+      icon: Zap;
+      title: 'Data-Driven Decision Making'
+      description: 'Leverage advanced analytics and AI to make informed business decisions in real-time.'
       benefits: ['Real-time insights', 'Predictive analytics', 'Better forecasting', 'Competitive advantage']
-    },
+    }
     {
-      icon: Shield,
-      title: 'Cloud Migration & Modernization',
-      description: 'Modernize your infrastructure with secure, scalable cloud solutions and microservices architecture.',
+      icon: Shield;
+      title: 'Cloud Migration & Modernization'
+      description: 'Modernize your infrastructure with secure, scalable cloud solutions and microservices architecture.'
       benefits: ['Improved scalability', 'Enhanced security', 'Cost optimization', 'Future-ready infrastructure']
     }
   ];
 
   const transformationPhases = [
     {
-      phase: 'Assessment',
-      title: 'Current State Analysis',
-      description: 'Comprehensive evaluation of existing systems, processes, and digital maturity.',
-      duration: '2-4 weeks',
+      phase: 'Assessment'
+      title: 'Current State Analysis'
+      description: 'Comprehensive evaluation of existing systems, processes, and digital maturity.'
+      duration: '2-4 weeks'
       deliverables: ['Digital maturity assessment', 'Gap analysis', 'ROI projections', 'Strategic roadmap']
-    },
+    }
     {
-      phase: 'Strategy',
-      title: 'Transformation Strategy',
-      description: 'Develop a comprehensive digital transformation strategy aligned with business objectives.',
-      duration: '3-6 weeks',
+      phase: 'Strategy'
+      title: 'Transformation Strategy'
+      description: 'Develop a comprehensive digital transformation strategy aligned with business objectives.'
+      duration: '3-6 weeks'
       deliverables: ['Digital strategy document', 'Technology roadmap', 'Change management plan', 'Success metrics']
-    },
+    }
     {
-      phase: 'Implementation',
-      title: 'Solution Implementation',
-      description: 'Execute the transformation plan with agile methodologies and continuous monitoring.',
-      duration: '3-12 months',
+      phase: 'Implementation'
+      title: 'Solution Implementation'
+      description: 'Execute the transformation plan with agile methodologies and continuous monitoring.'
+      duration: '3-12 months'
       deliverables: ['Deployed solutions', 'Process improvements', 'Staff training', 'Performance monitoring']
-    },
+    }
     {
-      phase: 'Optimization',
-      title: 'Continuous Improvement',
-      description: 'Monitor performance, gather feedback, and continuously optimize digital solutions.',
-      duration: 'Ongoing',
+      phase: 'Optimization'
+      title: 'Continuous Improvement'
+      description: 'Monitor performance, gather feedback, and continuously optimize digital solutions.'
+      duration: 'Ongoing'
       deliverables: ['Performance reports', 'Optimization recommendations', 'Future enhancements', 'Support services']
     }
   ];
 
   const successMetrics = [
-    { metric: '85%', description: 'Average cost reduction in operational processes', icon: TrendingUp },
-    { metric: '60%', description: 'Improvement in customer satisfaction scores', icon: Users },
-    { metric: '3x', description: 'Faster decision-making with real-time analytics', icon: Zap },
+    { metric: '85%', description: 'Average cost reduction in operational processes', icon: TrendingUp }
+    { metric: '60%', description: 'Improvement in customer satisfaction scores', icon: Users }
+    { metric: '3x', description: 'Faster decision-making with real-time analytics', icon: Zap }
     { metric: '99.9%', description: 'System uptime and reliability improvement', icon: Shield }
   ];
 
   const technologies = [
-    { name: 'AI & Machine Learning', description: 'Intelligent automation and predictive analytics' },
-    { name: 'Cloud Computing', description: 'Scalable infrastructure and platform services' },
-    { name: 'IoT Integration', description: 'Connected devices and real-time data collection' },
-    { name: 'Blockchain', description: 'Secure transactions and data integrity' },
-    { name: 'Advanced Analytics', description: 'Business intelligence and data visualization' },
+    { name: 'AI & Machine Learning', description: 'Intelligent automation and predictive analytics' }
+    { name: 'Cloud Computing', description: 'Scalable infrastructure and platform services' }
+    { name: 'IoT Integration', description: 'Connected devices and real-time data collection' }
+    { name: 'Blockchain', description: 'Secure transactions and data integrity' }
+    { name: 'Advanced Analytics', description: 'Business intelligence and data visualization' }
     { name: 'API Integration', description: 'Seamless system connectivity and data flow' }
   ];
 
   return (
-    <MainLayout
+    <MainLayout;
       title="Digital Transformation Solutions - Zion Tech Group"
       description="Transform your business with comprehensive digital transformation solutions. Modernize operations, enhance customer experience, and drive growth with cutting-edge technology."
       keywords="digital transformation, business modernization, process automation, cloud migration, AI implementation, digital strategy"
@@ -89,41 +89,41 @@ const DigitalTransformation: NextPage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <motion.h1 
+          <motion.h1;
             className="text-4xl md:text-5xl font-bold mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Digital Transformation Solutions
+            Digital Transformation Solutions;
           </motion.h1>
-          <motion.p 
+          <motion.p;
             className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-200"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Transform your business for the digital age with comprehensive solutions that modernize operations, 
+            Transform your business for the digital age with comprehensive solutions that modernize operations;
             enhance customer experiences, and drive sustainable growth.
           </motion.p>
-          <motion.div
+          <motion.div;
             className="flex flex-col sm:flex-row gap-4 justify-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <Link
+            <Link;
               href="/contact"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center"
             >
-              Start Your Transformation
+              Start Your Transformation;
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link
+            <Link;
               href="/case-studies"
               className="border border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors"
             >
-              View Success Stories
+              View Success Stories;
             </Link>
           </motion.div>
         </div>
@@ -132,7 +132,7 @@ const DigitalTransformation: NextPage = () => {
       {/* Transformation Areas */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="text-center mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -146,7 +146,7 @@ const DigitalTransformation: NextPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {transformationAreas.map((area, index) => (
-              <motion.div
+              <motion.div;
                 key={area.title}
                 className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
                 initial={{ opacity: 0, y: 30 }}
@@ -175,7 +175,7 @@ const DigitalTransformation: NextPage = () => {
       {/* Success Metrics */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="text-center mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -189,7 +189,7 @@ const DigitalTransformation: NextPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {successMetrics.map((metric, index) => (
-              <motion.div
+              <motion.div;
                 key={metric.metric}
                 className="bg-white rounded-lg shadow-lg p-8 text-center"
                 initial={{ opacity: 0, y: 30 }}
@@ -210,7 +210,7 @@ const DigitalTransformation: NextPage = () => {
       {/* Transformation Process */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="text-center mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -225,7 +225,7 @@ const DigitalTransformation: NextPage = () => {
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
               {transformationPhases.map((phase, index) => (
-                <motion.div
+                <motion.div;
                   key={phase.phase}
                   className="bg-white rounded-lg shadow-lg p-8"
                   initial={{ opacity: 0, y: 30 }}
@@ -269,7 +269,7 @@ const DigitalTransformation: NextPage = () => {
       {/* Technologies */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="text-center mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -283,7 +283,7 @@ const DigitalTransformation: NextPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {technologies.map((tech, index) => (
-              <motion.div
+              <motion.div;
                 key={tech.name}
                 className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
                 initial={{ opacity: 0, y: 30 }}
@@ -301,7 +301,7 @@ const DigitalTransformation: NextPage = () => {
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <motion.h2 
+          <motion.h2;
             className="text-3xl md:text-4xl font-bold mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -309,7 +309,7 @@ const DigitalTransformation: NextPage = () => {
           >
             Ready to Transform Your Business?
           </motion.h2>
-          <motion.p 
+          <motion.p;
             className="text-xl mb-8 max-w-2xl mx-auto text-blue-100"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -317,16 +317,16 @@ const DigitalTransformation: NextPage = () => {
           >
             Let's discuss your digital transformation goals and create a roadmap for success.
           </motion.p>
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <Link
+            <Link;
               href="/contact"
               className="inline-flex items-center bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              Start Your Journey
+              Start Your Journey;
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </motion.div>
@@ -334,6 +334,6 @@ const DigitalTransformation: NextPage = () => {
       </section>
     </MainLayout>
   );
-};
+}
 
 export default DigitalTransformation;

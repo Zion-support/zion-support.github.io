@@ -2,26 +2,27 @@ import { useEffect } from "react"
 export function usePerformanceMonitoring() {;
   useEffect(() => {
     const sendToAnalytics = (metric) => {
-      // comment
+      // comment;
       "
-      // comment
+      // comment;
       if (typeof gtag != = "undefined") {,"
-        gtag("event", metric.name, {,
-          event_category: "Web Vitals",
+        gtag("event", metric.name, {
+          event_category: "Web Vitals"
 event_label: metric.id,"
-value: Math.round(metric.name = == "CLS' ? metric.value * 1000 : metric.value),
-non_interaction: true,
+value: Math.round(metric.name = == "CLS' ? metric.value * 1000 : metric.value)
+non_interaction: true;
 export function usePerformanceMonitoring() {
 
   useEffect(() => {}}
 
     const sendToAnalytics = (metric) => {
-      // comment
+      // comment;
 console.log(&apos;Performance metric: &apos, metric)
 }
-      if (performance.memory) {
+      if() {
+
         setMetrics({
-          loadTime, renderTime: endTime - startTime,
+          loadTime, renderTime: endTime - startTime;
           memoryUsage: performance.memory.usedJSHeapSize / 1024 / 1024})
 }
 
@@ -46,6 +47,5 @@ console.log(&apos;Performance metric: &apos, metric)
 }
     getLCP(sendToAnalytics)
 }    getTTFB(sendToAnalytics)}, [])}
-;
 export function reportWebVitals(metric) {;
 "

@@ -6,73 +6,73 @@ import Link from 'next/link';
 const StartupPage: NextPage = () => {
   const startupServices = [
     {
-      icon: <Rocket className="w-8 h-8" />,
-      title: 'MVP Development',
-      description: 'Build and launch your minimum viable product quickly and cost-effectively',
+      icon: <Rocket className="w-8 h-8" />
+      title: 'MVP Development'
+      description: 'Build and launch your minimum viable product quickly and cost-effectively'
       features: ['Rapid Prototyping', 'Agile Development', 'User Testing', 'Iterative Improvement']
-    },
+    }
     {
-      icon: <Globe className="w-8 h-8" />,
-      title: 'Scalable Architecture',
-      description: 'Build for scale from day one with cloud-native, scalable solutions',
+      icon: <Globe className="w-8 h-8" />
+      title: 'Scalable Architecture'
+      description: 'Build for scale from day one with cloud-native, scalable solutions'
       features: ['Microservices', 'Cloud Infrastructure', 'Auto-scaling', 'Performance Optimization']
-    },
+    }
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: 'Technical Co-Founding',
-      description: 'Partner with experienced technical leaders to accelerate your startup',
+      icon: <Zap className="w-8 h-8" />
+      title: 'Technical Co-Founding'
+      description: 'Partner with experienced technical leaders to accelerate your startup'
       features: ['Technical Strategy', 'Team Building', 'Architecture Design', 'Mentorship']
-    },
+    }
     {
-      icon: <Target className="w-8 h-8" />,
-      title: 'Growth Acceleration',
-      description: 'Scale your technology as your startup grows and evolves',
+      icon: <Target className="w-8 h-8" />
+      title: 'Growth Acceleration'
+      description: 'Scale your technology as your startup grows and evolves'
       features: ['Performance Monitoring', 'Feature Development', 'Infrastructure Scaling', 'Team Expansion']
     }
   ];
 
   const benefits = [
     {
-      icon: <DollarSign className="w-8 h-8" />,
-      title: 'Cost-Effective',
+      icon: <DollarSign className="w-8 h-8" />
+      title: 'Cost-Effective'
       description: 'Startup-friendly pricing and flexible payment options'
-    },
+    }
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: 'Fast Time-to-Market',
+      icon: <Zap className="w-8 h-8" />
+      title: 'Fast Time-to-Market'
       description: 'Launch your product quickly with our rapid development approach'
-    },
+    }
     {
-      icon: <Users className="w-8 h-8" />,
-      title: 'Expert Guidance',
+      icon: <Users className="w-8 h-8" />
+      title: 'Expert Guidance'
       description: 'Access to experienced entrepreneurs and technical advisors'
-    },
+    }
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: 'Scalable Solutions',
+      icon: <TrendingUp className="w-8 h-8" />
+      title: 'Scalable Solutions'
       description: 'Technology that grows with your startup from MVP to IPO'
     }
   ];
 
   const stages = [
     {
-      title: 'Idea Validation',
-      description: 'Validate your concept with market research and technical feasibility analysis',
+      title: 'Idea Validation'
+      description: 'Validate your concept with market research and technical feasibility analysis'
       icon: <Target className="w-6 h-6" />
-    },
+    }
     {
-      title: 'MVP Development',
-      description: 'Build and launch your minimum viable product to test market fit',
+      title: 'MVP Development'
+      description: 'Build and launch your minimum viable product to test market fit'
       icon: <Rocket className="w-6 h-6" />
-    },
+    }
     {
-      title: 'Product-Market Fit',
-      description: 'Iterate and improve based on user feedback and market response',
+      title: 'Product-Market Fit'
+      description: 'Iterate and improve based on user feedback and market response'
       icon: <Users className="w-6 h-6" />
-    },
+    }
     {
-      title: 'Scale & Growth',
-      description: 'Scale your technology and team to support rapid growth',
+      title: 'Scale & Growth'
+      description: 'Scale your technology and team to support rapid growth'
       icon: <TrendingUp className="w-6 h-6" />
     }
   ];
@@ -83,17 +83,17 @@ const StartupPage: NextPage = () => {
       <section className="bg-gradient-to-br from-orange-900 via-red-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">Startup</span> Solutions
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">Startup</span> Solutions;
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            Accelerate your startup's success with technology solutions designed for rapid growth and innovation
+            Accelerate your startup's success with technology solutions designed for rapid growth and innovation;
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-zion-cyan text-white px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan/90 transition-colors">
-              Start Your Journey
+              Start Your Journey;
             </Link>
             <Link href="/case-studies" className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              View Success Stories
+              View Success Stories;
             </Link>
           </div>
         </div>
@@ -105,7 +105,7 @@ const StartupPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Startup-Focused Services</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Technology solutions designed to accelerate startup success from idea to scale
+              Technology solutions designed to accelerate startup success from idea to scale;
             </p>
           </div>
           
@@ -137,7 +137,7 @@ const StartupPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Startup Journey Stages</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We support startups at every stage of their journey
+              We support startups at every stage of their journey;
             </p>
           </div>
           
@@ -164,7 +164,7 @@ const StartupPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Why Choose Our Startup Solutions</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Designed specifically for startup success and rapid growth
+              Designed specifically for startup success and rapid growth;
             </p>
           </div>
           
@@ -187,21 +187,21 @@ const StartupPage: NextPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Launch Your Startup?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let our startup experts help you build the technology foundation for your success
+            Let our startup experts help you build the technology foundation for your success;
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
-              Start Building Today
+              Start Building Today;
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link href="/pricing" className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              View Pricing
+              View Pricing;
             </Link>
           </div>
         </div>
       </section>
     </MainLayout>
   );
-};
+}
 
 export default StartupPage;

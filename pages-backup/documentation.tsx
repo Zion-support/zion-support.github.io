@@ -10,17 +10,17 @@ const Component = () => {
               <Link href="/help""
                 className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Contact Support,
+                Contact Support;
               </Link>"
               <Link href="/faq""
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors"
               >
-                View FAQ,
+                View FAQ;
               </Link>
             </div>
         </section>
       </div>
-    </MainLayout>;,
+    </MainLayout>;
   )}
 
-"export default Documentation
+"export default Documentation;

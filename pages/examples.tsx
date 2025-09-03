@@ -5,56 +5,56 @@ const Examples: React.FC = () => {
   const [activeLanguage, setActiveLanguage] = useState('javascript');
 
   const languages = [
-    { id: 'javascript', name: 'JavaScript', icon: '🟨' },
-    { id: 'python', name: 'Python', icon: '🐍' },
-    { id: 'curl', name: 'cURL', icon: '📡' },
-    { id: 'php', name: 'PHP', icon: '🐘' },
-    { id: 'java', name: 'Java', icon: '☕' },
+    { id: 'javascript', name: 'JavaScript', icon: '🟨' }
+    { id: 'python', name: 'Python', icon: '🐍' }
+    { id: 'curl', name: 'cURL', icon: '📡' }
+    { id: 'php', name: 'PHP', icon: '🐘' }
+    { id: 'java', name: 'Java', icon: '☕' }
   ];
 
   const examples = {
     javascript: [
       {
-        title: 'Get All Services',
-        description: 'Retrieve all available AI services',
+        title: 'Get All Services'
+        description: 'Retrieve all available AI services'
         code: `const response = await fetch('https://api.zion.ai/services', {
   headers: {
-    'Authorization': 'Bearer YOUR_API_KEY',
+    'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
   }
 });
 
 const services = await response.json();
 console.log(services);`
-      },
+      }
       {
-        title: 'Create a New Project',
-        description: 'Create a new AI project',
+        title: 'Create a New Project'
+        description: 'Create a new AI project'
         code: `const projectData = {
-  name: 'AI Chatbot Integration',
-  description: 'Integrate AI chatbot into our website',
-  budget: 5000,
+  name: 'AI Chatbot Integration'
+  description: 'Integrate AI chatbot into our website'
+  budget: 5000;
   timeline: '2 weeks'
-};
+}
 
 const response = await fetch('https://api.zion.ai/projects', {
-  method: 'POST',
+  method: 'POST'
   headers: {
-    'Authorization': 'Bearer YOUR_API_KEY',
+    'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
-  },
+  }
   body: JSON.stringify(projectData)
 });
 
 const project = await response.json();
 console.log('Project created:', project);`
-      },
+      }
       {
-        title: 'Search for Talents',
-        description: 'Find AI talents by skills',
+        title: 'Search for Talents'
+        description: 'Find AI talents by skills'
         code: `const searchParams = new URLSearchParams({
-  skills: 'machine-learning,python,tensorflow',
-  experience: '3-5',
+  skills: 'machine-learning,python,tensorflow'
+  experience: '3-5'
   location: 'remote'
 });
 
@@ -67,56 +67,53 @@ const response = await fetch(\`https://api.zion.ai/talents?\${searchParams}\`, {
 const talents = await response.json();
 console.log('Found talents:', talents);`
       }
-    ],
+    ]
     python: [
       {
-        title: 'Get All Services',
-        description: 'Retrieve all available AI services',
-        code: `import requests
-
+        title: 'Get All Services'
+        description: 'Retrieve all available AI services'
+        code: `import requests;
 headers = {
-    'Authorization': 'Bearer YOUR_API_KEY',
+    'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
 }
 
 response = requests.get('https://api.zion.ai/services', headers=headers)
 services = response.json()
 print(services)`
-      },
+      }
       {
-        title: 'Create a New Project',
-        description: 'Create a new AI project',
-        code: `import requests
-
+        title: 'Create a New Project'
+        description: 'Create a new AI project'
+        code: `import requests;
 project_data = {
-    'name': 'AI Chatbot Integration',
-    'description': 'Integrate AI chatbot into our website',
-    'budget': 5000,
+    'name': 'AI Chatbot Integration'
+    'description': 'Integrate AI chatbot into our website'
+    'budget': 5000;
     'timeline': '2 weeks'
 }
 
 headers = {
-    'Authorization': 'Bearer YOUR_API_KEY',
+    'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
 }
 
 response = requests.post(
-    'https://api.zion.ai/projects',
-    json=project_data,
-    headers=headers
+    'https://api.zion.ai/projects'
+    json=project_data;
+    headers=headers;
 )
 
 project = response.json()
 print('Project created:', project)`
-      },
+      }
       {
-        title: 'Search for Talents',
-        description: 'Find AI talents by skills',
-        code: `import requests
-
+        title: 'Search for Talents'
+        description: 'Find AI talents by skills'
+        code: `import requests;
 params = {
-    'skills': 'machine-learning,python,tensorflow',
-    'experience': '3-5',
+    'skills': 'machine-learning,python,tensorflow'
+    'experience': '3-5'
     'location': 'remote'
 }
 
@@ -125,50 +122,50 @@ headers = {
 }
 
 response = requests.get(
-    'https://api.zion.ai/talents',
-    params=params,
-    headers=headers
+    'https://api.zion.ai/talents'
+    params=params;
+    headers=headers;
 )
 
 talents = response.json()
 print('Found talents:', talents)`
       }
-    ],
+    ]
     curl: [
       {
-        title: 'Get All Services',
-        description: 'Retrieve all available AI services',
+        title: 'Get All Services'
+        description: 'Retrieve all available AI services'
         code: `curl -X GET "https://api.zion.ai/services" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`
-      },
+      }
       {
-        title: 'Create a New Project',
-        description: 'Create a new AI project',
+        title: 'Create a New Project'
+        description: 'Create a new AI project'
         code: `curl -X POST "https://api.zion.ai/projects" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{
-    "name": "AI Chatbot Integration",
-    "description": "Integrate AI chatbot into our website",
-    "budget": 5000,
+    "name": "AI Chatbot Integration"
+    "description": "Integrate AI chatbot into our website"
+    "budget": 5000;
     "timeline": "2 weeks"
   }'`
-      },
+      }
       {
-        title: 'Search for Talents',
-        description: 'Find AI talents by skills',
+        title: 'Search for Talents'
+        description: 'Find AI talents by skills'
         code: `curl -X GET "https://api.zion.ai/talents?skills=machine-learning,python,tensorflow&experience=3-5&location=remote" \\
   -H "Authorization: Bearer YOUR_API_KEY"`
       }
-    ],
+    ]
     php: [
       {
-        title: 'Get All Services',
-        description: 'Retrieve all available AI services',
-        code: `<?php
+        title: 'Get All Services'
+        description: 'Retrieve all available AI services'
+        code: `<?php;
 $headers = [
-    'Authorization: Bearer YOUR_API_KEY',
+    'Authorization: Bearer YOUR_API_KEY'
     'Content-Type: application/json'
 ];
 
@@ -183,15 +180,15 @@ curl_close($ch);
 $services = json_decode($response, true);
 print_r($services);
 ?>`
-      },
+      }
       {
-        title: 'Create a New Project',
-        description: 'Create a new AI project',
-        code: `<?php
+        title: 'Create a New Project'
+        description: 'Create a new AI project'
+        code: `<?php;
 $projectData = [
-    'name' => 'AI Chatbot Integration',
-    'description' => 'Integrate AI chatbot into our website',
-    'budget' => 5000,
+    'name' => 'AI Chatbot Integration'
+    'description' => 'Integrate AI chatbot into our website'
+    'budget' => 5000;
     'timeline' => '2 weeks'
 ];
 
@@ -200,7 +197,7 @@ curl_setopt($ch, CURLOPT_URL, 'https://api.zion.ai/projects');
 curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($projectData));
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
-    'Authorization: Bearer YOUR_API_KEY',
+    'Authorization: Bearer YOUR_API_KEY'
     'Content-Type: application/json'
 ]);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -212,11 +209,11 @@ $project = json_decode($response, true);
 echo 'Project created: ' . print_r($project, true);
 ?>`
       }
-    ],
+    ]
     java: [
       {
-        title: 'Get All Services',
-        description: 'Retrieve all available AI services',
+        title: 'Get All Services'
+        description: 'Retrieve all available AI services'
         code: `import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
@@ -230,13 +227,13 @@ HttpRequest request = HttpRequest.newBuilder()
     .GET()
     .build();
 
-HttpResponse<String> response = client.send(request, 
+HttpResponse<String> response = client.send(request;
     HttpResponse.BodyHandlers.ofString());
 System.out.println(response.body());`
-      },
+      }
       {
-        title: 'Create a New Project',
-        description: 'Create a new AI project',
+        title: 'Create a New Project'
+        description: 'Create a new AI project'
         code: `import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
@@ -252,12 +249,12 @@ HttpRequest request = HttpRequest.newBuilder()
     .POST(HttpRequest.BodyPublishers.ofString(projectData))
     .build();
 
-HttpResponse<String> response = client.send(request, 
+HttpResponse<String> response = client.send(request;
     HttpResponse.BodyHandlers.ofString());
 System.out.println("Project created: " + response.body());`
       }
     ]
-  };
+  }
 
   return (
     <>
@@ -272,10 +269,10 @@ System.out.println("Project created: " + response.body());`
         <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30">
           <div className="container mx-auto px-6 py-8">
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Code Examples
+              Code Examples;
             </h1>
             <p className="text-xl text-gray-300 mt-4">
-              Ready-to-use code examples for integrating with Zion AI Marketplace
+              Ready-to-use code examples for integrating with Zion AI Marketplace;
             </p>
           </div>
         </header>
@@ -286,11 +283,11 @@ System.out.println("Project created: " + response.body());`
             <h2 className="text-2xl font-bold text-blue-400 mb-6">Choose Your Language</h2>
             <div className="flex flex-wrap gap-3">
               {languages.map((language) => (
-                <button
+                <button;
                   key={language.id}
                   onClick={() => setActiveLanguage(language.id)}
                   className={`px-6 py-3 rounded-lg font-medium transition-colors ${
-                    activeLanguage === language.id
+                    activeLanguage === language.id;
                       ? 'bg-blue-600 text-white'
                       : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
                   }`}
@@ -306,7 +303,7 @@ System.out.println("Project created: " + response.body());`
         {/* Examples */}
         <main className="container mx-auto px-6 py-12">
           <h2 className="text-3xl font-bold text-blue-400 mb-8">
-            {languages.find(l => l.id === activeLanguage)?.name} Examples
+            {languages.find(l => l.id === activeLanguage)?.name} Examples;
           </h2>
           
           <div className="space-y-8">
@@ -323,10 +320,10 @@ System.out.println("Project created: " + response.body());`
                 
                 <div className="mt-4 flex gap-3">
                   <button className="text-blue-400 hover:text-blue-300 text-sm font-medium">
-                    Copy Code
+                    Copy Code;
                   </button>
                   <button className="text-blue-400 hover:text-blue-300 text-sm font-medium">
-                    Run Example
+                    Run Example;
                   </button>
                 </div>
               </div>
@@ -344,10 +341,10 @@ System.out.println("Project created: " + response.body());`
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Get API Key
+                Get API Key;
               </button>
               <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                View Documentation
+                View Documentation;
               </button>
             </div>
           </div>
@@ -361,7 +358,7 @@ System.out.println("Project created: " + response.body());`
               <div className="text-4xl mb-4">📚</div>
               <h3 className="text-xl font-semibold text-white mb-4">Full Documentation</h3>
               <p className="text-gray-300 text-sm mb-4">
-                Complete API reference with all endpoints and parameters
+                Complete API reference with all endpoints and parameters;
               </p>
               <a href="/api-documentation" className="text-blue-400 hover:text-blue-300 text-sm font-medium">
                 View Docs →
@@ -372,7 +369,7 @@ System.out.println("Project created: " + response.body());`
               <div className="text-4xl mb-4">🎓</div>
               <h3 className="text-xl font-semibold text-white mb-4">Tutorials</h3>
               <p className="text-gray-300 text-sm mb-4">
-                Step-by-step guides for common integration scenarios
+                Step-by-step guides for common integration scenarios;
               </p>
               <a href="/guides" className="text-blue-400 hover:text-blue-300 text-sm font-medium">
                 View Tutorials →
@@ -383,7 +380,7 @@ System.out.println("Project created: " + response.body());`
               <div className="text-4xl mb-4">💬</div>
               <h3 className="text-xl font-semibold text-white mb-4">Support</h3>
               <p className="text-gray-300 text-sm mb-4">
-                Get help from our developer support team
+                Get help from our developer support team;
               </p>
               <a href="/contact" className="text-blue-400 hover:text-blue-300 text-sm font-medium">
                 Contact Support →
@@ -408,6 +405,6 @@ System.out.println("Project created: " + response.body());`
       </div>
     </>
   );
-};
+}
 
 export default Examples;

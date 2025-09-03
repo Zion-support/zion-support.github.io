@@ -26,8 +26,8 @@ interface AdvancedDataVisualizationProps {
 }
 
 const AdvancedDataVisualization: React.FC<AdvancedDataVisualizationProps> = ({
-  data,
-  title = "Advanced Data Visualization",
+  data;
+  title = "Advanced Data Visualization"
   description = "Interactive data visualization with real-time updates"
 }) => {
   return (
@@ -69,6 +69,6 @@ const AdvancedDataVisualization: React.FC<AdvancedDataVisualizationProps> = ({
       </div>
     </div>
   );
-};
+}
 
 export default AdvancedDataVisualization;

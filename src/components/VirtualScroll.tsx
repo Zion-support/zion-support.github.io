@@ -4,77 +4,69 @@ export default function ServiceVirtualScroll() {
 export function VirtualScroll < T> ({
 import { motion, AnimatePresence  } from 'framer-motion';
 
-  items,
-  height,
-  itemHeight,
-  renderItem,
-  overscan = 5,;
-  className = '',;
+  items;
+  height;
+  itemHeight;
+  renderItem;
+  overscan = 5;
+  className = ''
   onScroll}: VirtualScrollProps < T>) {;
   const [scrollTop, setScrollTop] = useState(0);
   
-  // Calculate visible range
+  // Calculate visible range;
   const visibleRange = useMemo(() => {;
     const start = Math.floor(scrollTop / itemHeight) ;
     const visibleCount = Math.ceil(height / itemHeight) ;
     const end = start + visibleCount + overscan;
     return {
 
-      start: Math.max(0, start - overscan),
+      start: Math.max(0, start - overscan)
       end: Math.min(items.length, end)
     }}, [scrollTop, itemHeight, height, overscan, items.length]);
 
-  // Calculate total height and transform
-  
-  // Handle scroll
-
+  // Calculate total height and transform;
+  // Handle scroll;
     setScrollTop(newScrollTop) ;
     onScroll?.(newScrollTop) }, [onScroll]) ;
 
-  // Scroll to specific item
-  
+  // Scroll to specific item;
       containerRef.current.scrollTop = scrollTop}
   }, [itemHeight]) ;
 
-  // Scroll to top
-  
+  // Scroll to top;
     scrollToItem(0) }, [scrollToItem]) ;
-  // Auto - scroll to specific item on mount if needed
+  // Auto - scroll to specific item on mount if needed;
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
-    if(items.length > 0 && containerRef.current) {
+    if() {
 
-      // You can add logic here to scroll to a specific item on mount
-      // For example, scroll to the last viewed item
+      // You can add logic here to scroll to a specific item on mount;
+      // For example, scroll to the last viewed item;
     }
   }, [items.length]) ;
 
   return ()`
     <div className = {`relative ${className}`}>
       {/* Scroll to top button */}
-      {scrollTop > 200 && (<motion.button
+      {scrollTop > 200 && (<motion.button;
           initial = {
 
-  { opacity: 0,
-  scale: 0.8
-
+  { opacity: 0;
+  scale: 0.8;
 }}
           animate = {
 
-  { opacity: 1,
-  scale: 1
-
+  { opacity: 1;
+  scale: 1;
 }}
           exit = {
 
-  { opacity: 0,
-  scale: 0.8
-
+  { opacity: 0;
+  scale: 0.8;
 }}
           onClick={scrollToTop}
           className="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors"
@@ -86,7 +78,7 @@ import { motion, AnimatePresence  } from 'framer-motion';
         </motion.button>) }
 
       {/* Virtual scroll container */}
-      <div
+      <div;
         ref={containerRef}"
         className="overflow-auto"
         style={{ height }}
@@ -94,31 +86,28 @@ import { motion, AnimatePresence  } from 'framer-motion';
       >
         <div style = {
 
-  { height: totalHeight,
+  { height: totalHeight;
   position: 'relative'
 
 }}>
           <div  style={{ transform }}>
             <AnimatePresence>
-              {items.slice(visibleRange.start, visibleRange.end) .map((item, index) => (<motion.div
+              {items.slice(visibleRange.start, visibleRange.end) .map((item, index) => (<motion.div;
                   key={visibleRange.start + index}
                   initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
                   animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
                   exit = {
 
-  { opacity: 0,
-  y: -20
-
+  { opacity: 0;
+  y: -20;
 }}
                   transition={{ duration: 0.2 }}
                   style={{ height: itemHeight }}
@@ -130,12 +119,12 @@ import { motion, AnimatePresence  } from 'framer-motion';
         </div>
       </div>;
 ;
-      {/* Scroll position indicator */};"
+      {/* Scroll position indicator */}"
       <div className="absolute top-2 right-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">;
         {Math.round((scrollTop / (totalHeight - height)) * 100)}%;
       </div>;
     </div>;) }
-// Specialized virtual scroll for service cards
+// Specialized virtual scroll for service cards;
 interface ServiceCard {
   id: anystring;
   name: string;
@@ -153,7 +142,7 @@ export default function ServiceVirtualScroll() {
 
   const renderServiceCard = useCallback((service: anyServiceCard, index: number)  => ("
     <div className="p-4">
-      <motion.div
+      <motion.div;
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}"
         className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 cursor-pointer hover:shadow-md transition-shadow"
@@ -172,7 +161,7 @@ export default function ServiceVirtualScroll() {
             <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
               {service.description}
             </p>"
-            <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded-full">;              {service.category};
+            <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded-full">;              {service.category}
             </span>;
           </div>;
         </div>;
@@ -180,10 +169,10 @@ export default function ServiceVirtualScroll() {
     </div>;) , [onServiceClick]) ;
 
   return ()
-    <VirtualScroll items = {services};      height={height};
-      itemHeight={120};
-      renderItem={renderServiceCard};
-      overscan={3};
-      className={className};
+    <VirtualScroll items = {services}      height={height}
+      itemHeight={120}
+      renderItem={renderServiceCard}
+      overscan={3}
+      className={className}
      />;
   )}'"`

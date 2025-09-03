@@ -7,42 +7,40 @@
     if(location.trim()) {
 
       setIsSubmitting(true);
-      // Simulate API call
+      // Simulate API call;
       setTimeout(: unknown {
         setIsSubmitting(false);
-        router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}}}}}};
+        router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}}}}}}
 
   const containerVariants = {
-  hidden: { opacity: 0,
-  y: 20
-
-},
+  hidden: { opacity: 0;
+  y: 20;
+}
     visible: {
-      opacity: 1,
-      y: 0,
+      opacity: 1;
+      y: 0;
       transition: {
-        duration: 0.6,
-        staggerChildren: 0.2
-      };
-    };
-  };
+        duration: 0.6;
+        staggerChildren: 0.2;
+      }
+    }
+  }
 
   const itemVariants = {
-  hidden: { opacity: 0,
-  y: 20
-
-},
+  hidden: { opacity: 0;
+  y: 20;
+}
     visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 };
-    };
-  };
+      opacity: 1;
+      y: 0;
+      transition: { duration: 0.5 }
+    }
+  }
 
-  const features = [{ icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },
-    { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },
-    { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },;
-    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
+  const features = [{ icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" }
+    { icon: Globe, text: "Global Coverage", color: "text-zion-purple" }
+    { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" }
+    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" }
   ];
 
 import React, { useState } from 'react';
@@ -51,11 +49,12 @@ import { Link  } from 'react-router-dom';
 
 ,"
     { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },"
-    { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },;"
-    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
+    { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },"
+    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" }
   ];
 
 export function ITServiceRequestHero() {
+
   return ("
     <section className="py-20 bg-gradient-to-br from-blue-900 via-slate-900 to-purple-900 relative overflow-hidden">
       {/* Background Elements */}"
@@ -78,12 +77,12 @@ export function ITServiceRequestHero() {
               <div className="p-2 bg-zion-cyan/20 rounded-lg">"
                 <Zap className="w-6 h-6 text-zion-cyan"  />
               </div>"              <span className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">
-                Global IT Services
+                Global IT Services;
               </span>
             </div>
 "
             <GradientHeading className="mb-6 text-4xl md:text-5xl lg:text-6xl leading-tight">
-              24/7 Global IT Onsite Services
+              24/7 Global IT Onsite Services;
             </GradientHeading>
 "
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl leading-relaxed">
@@ -122,35 +121,32 @@ export function ITServiceRequestHero() {
                 variant="outline"
                 className="border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300"
 
-                Learn More
+                Learn More;
               </Link>
             </div>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             initial = {
 
-  { opacity: 0,
-  x: 30
-
+  { opacity: 0;
+  x: 30;
 }}
             whileInView = {
 
-  { opacity: 1,
-  x: 0
-
+  { opacity: 1;
+  x: 0;
 }}
             viewport={{ once: true }}
             transition = {
 
-  { duration: 0.8,
-  delay: 0.2
-
+  { duration: 0.8;
+  delay: 0.2;
 }}"
             className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8"
           >"
             <h3 className="text-2xl font-bold text-white mb-6 text-center">
-              Contact Information
+              Contact Information;
             </h3>
 
             <div className="space-y-6">
@@ -193,7 +189,7 @@ export function ITServiceRequestHero() {
 "
             <div className="mt-8 text-center">"
               <p className="text-gray-400 text-sm mb-4">
-                Available 24/7 for emergency support
+                Available 24/7 for emergency support;
               </p>"
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-600/20 border border-green-500/30 rounded-full">"
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>"

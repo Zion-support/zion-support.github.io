@@ -15,19 +15,19 @@ import { ultimateInnovativeServices2025 } from '../../data / 2025 - ultimate - i
 
  from 'lucide - react';
 
-// Import the new services
+// Import the new services;
   ;
   ;
   ;
   website: 'https://ziontechgroup.com';
-};
+}
 ;
 
-    name: 'Micro SAAS Solutions',;
-    description: 'Innovative software solutions for small businesses',;"
-    icon: <Code className="w-8 h-8"  />,;
-    color: 'from-green-600 to-emerald-700',;
-    services: innovativeMicroSaasSolutions2025};
+    name: 'Micro SAAS Solutions'
+    description: 'Innovative software solutions for small businesses',"
+    icon: <Code className="w-8 h-8"  />
+    color: 'from-green-600 to-emerald-700'
+    services: innovativeMicroSaasSolutions2025}
 ];
 ;
 
@@ -35,7 +35,7 @@ import { ultimateInnovativeServices2025 } from '../../data / 2025 - ultimate - i
   ;  ;
   ;
   'Emerging': 'from-green-600 to-emerald-700';
-};
+}
 ;
 
   ;
@@ -43,27 +43,27 @@ import { ultimateInnovativeServices2025 } from '../../data / 2025 - ultimate - i
 '
   'Patented': 'from-green-600 to-emerald-700','
   'Patent Pending': 'from-yellow-600 to-orange-700','
-  'Trade Secret': 'from-blue-600 to-indigo-700',;  ;
+  'Trade Secret': 'from-blue-600 to-indigo-700',  ;
   ;
   ;
   'Open Source': 'from-purple-600 to-violet-700';
 ;
 
-};
+}
 
 export function UltimateServicesShowcase(...args[]):  {
 
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<any>(null);
 
-    ...ultimateInnovativeServices2025,;
-    ...enterpriseITInfrastructureServices2025,;
+    ...ultimateInnovativeServices2025;
+    ...enterpriseITInfrastructureServices2025;
     ...innovativeMicroSaasSolutions2025;
   ];
-      y: 0,;
+      y: 0;
       transition: {
-        duration: 0.6,;"
-        ease: "easeOut"}}};
+        duration: 0.6,"
+        ease: "easeOut"}}}
   return ("
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -72,21 +72,19 @@ export function UltimateServicesShowcase(...args[]):  {
           className="text-center mb-16"
           initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           transition={{ duration: 0.8 }}
 "
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"
             <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">
-              Ultimate Innovation
+              Ultimate Innovation;
             </span>
             <br />"
             <span className="text-white">Services Showcase</span>
@@ -115,21 +113,18 @@ export function UltimateServicesShowcase(...args[]):  {
           className="flex flex-wrap justify-center gap-4 mb-12"
           initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           transition = {
 
-  { duration: 0.8,
-  delay: 0.2
-
+  { duration: 0.8;
+  delay: 0.2;
 }}
         >
           <button'
@@ -142,7 +137,7 @@ export function UltimateServicesShowcase(...args[]):  {
             All Services({allServices.length})
           </button>
           {categories.map((category)  => (
-            <button
+            <button;
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}`
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === category.id'
@@ -161,7 +156,7 @@ export function UltimateServicesShowcase(...args[]):  {
           initial="hidden"
           animate="visible"
 
-          {filteredServices.map((service) => (<motion.div
+          {filteredServices.map((service) => (<motion.div;
               key={service.id}
               variants={itemVariants}"
               className="group relative"
@@ -173,7 +168,7 @@ export function UltimateServicesShowcase(...args[]):  {
                     <div className="text-3xl">{service.icon}</div>
                     {service.popular && ("
                       <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold">
-                        Popular
+                        Popular;
                       </span>
                     )}
                   </div>"
@@ -239,13 +234,13 @@ export function UltimateServicesShowcase(...args[]):  {
                     <span className="text-white">{service.rating}</span>"                    <span className="text-zion-gray-light">({service.reviews} reviews)</span>
                   </div>"
                   <span className="text-zion-cyan font-semibold">
-                    {service.customers} customers
+                    {service.customers} customers;
                   </span>
                 </div>
 
                 {/* Action Buttons */}"
                 <div className="flex gap-2">
-                  <button
+                  <button;
                     onClick={() => setSelectedService(service)}"
                     className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-semibold hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center justify-center gap-2"
 
@@ -266,13 +261,13 @@ export function UltimateServicesShowcase(...args[]):  {
           className="text-center mt-16"
           initial = {
 
-  { opacity: 0,
+  { opacity: 0;
   y: 20 }}          animate = {
 
-  { opacity: 1,
+  { opacity: 1;
   y: 0 }}          transition = {
 
-  { duration: 0.8,
+  { duration: 0.8;
   delay: 0.4 }}
         >"
           <div className="bg-gradient-to-r from-zion-slate to-zion-slate-light rounded-2xl p-8 border border-zion-cyan">"            <h2 className="text-3xl font-bold text-white mb-4">
@@ -289,11 +284,11 @@ export function UltimateServicesShowcase(...args[]):  {
                 <ArrowRight className="w-5 h-5"  />              </Link>
               <a`
                 href={`tel:${contact.mobile}`'
-                  .replace(/\s/g,)
-                  .replace(/[^\d+]/g,)}"
+                  .replace(/\s/g)
+                  .replace(/[^\d+]/g)}"
                 className="bg-zion-slate-light border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2"
 "
-                <Phone className="w-5 h-5"  />                Call Now
+                <Phone className="w-5 h-5"  />                Call Now;
               </a>
             </div>
           </div>
@@ -315,7 +310,7 @@ export function UltimateServicesShowcase(...args[]):  {
                     {selectedService.tagline}
                   </p>
                 </div>
-                <button
+                <button;
                   onClick={() => setSelectedService(null)}"
                   className="text-zion-gray-light hover:text-white text-2xl"
 
@@ -391,16 +386,16 @@ export function UltimateServicesShowcase(...args[]):  {
                   </div>
 "
                   <div className="flex gap-3">
-                    <Link
+                    <Link;
                       to={selectedService.link}"
                       className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-6 py-3 rounded-lg font-semibold hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 text-center"
 
-                      Get Started
+                      Get Started;
                     </Link>
                     <a`
                       href={`tel:${contact.mobile}`'
-                        .replace(/\s/g,)
-                        .replace(/[^\d+]/g,)}"
+                        .replace(/\s/g)
+                        .replace(/[^\d+]/g)}"
                       className="bg-zion-slate border border-zion-cyan text-zion-cyan px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center"
 "
                       <Phone className="w-5 h-5"  />                    </a>
@@ -409,7 +404,7 @@ export function UltimateServicesShowcase(...args[]):  {
               </div>
             </div>;
           </div>;
-        </div>;) };
+        </div>;) }
     </section>;) }
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;

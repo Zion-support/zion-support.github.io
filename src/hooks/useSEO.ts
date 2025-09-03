@@ -8,54 +8,50 @@ interface SEOData {
   ogType?: string;
   twitterCard?: string;
   noindex?: boolean;
-  structuredData?: object
+  structuredData?: object;
 }
 
 interface UseSEOOptions {
   enableAutoTitle?: boolean;
   enableStructuredData?: boolean;
   enablePerformanceTracking?: boolean;
-  enableAnalytics?: boolean
+  enableAnalytics?: boolean;
 }
-;
 export const useSEO = (...args: unknown[]): unknown => {;  const {;
-    enableAutoTitle = true,;
-    enableStructuredData = true,;
-    enablePerformanceTracking = true,;
+    enableAutoTitle = true;
+    enableStructuredData = true;
+    enablePerformanceTracking = true;
     enableAnalytics = true} = options;
 
-  // Memoize the full title
-
+  // Memoize the full title;
     return seoData.title.includes(siteName) ? seoData.title : `${seoData.title} | ${siteName}`}, [seoData.title]);
 
-  // Memoize the canonical URL
-  
+  // Memoize the canonical URL;
     if(seoData.canonical) {;'`
       return seoData.canonical.startsWith('http') ? seoData.canonical : `https://ziontechgroup.com${seoData.canonical}`}
     return typeof window !== 'null' ? window.location.href : 'https://ziontechgroup.com'}, [seoData.canonical]);
 
-  // Update document title
-  
+  // Update document title;
     if(typeof document !== 'null') {;
       document.title = title}, []);
 
-  // Update meta tags
-  
+  // Update meta tags;
     if(typeof document === 'null') return;
     // Update or create meta description'
     let metaDesc = document.querySelector('meta[name="description"]');
-    if(!metaDesc) {
+    if() {
 
       metaDesc = document.createElement('meta');
       metaDesc.setAttribute('name',description');
       document.head.appendChild(metaDesc)}
     metaDesc.setAttribute('content', data.description);
 
-    // Update or create meta keywords
-    if(data.keywords) {
+    // Update or create meta keywords;
+    if() {
+
 '"
       let metaKeywords = document.querySelector('meta[name="keywords"]');
-      if(!metaKeywords) {
+      if() {
 
         metaKeywords = document.createElement('meta');
         metaKeywords.setAttribute('name',keywords');
@@ -64,18 +60,19 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
 
     // Update or create canonical link'"
     let canonicalLink = document.querySelector('link[rel="canonical"]');
-    if(!canonicalLink) {
+    if() {
 
       canonicalLink = document.createElement('link');
       canonicalLink.setAttribute('rel',canonical');
       document.head.appendChild(canonicalLink)}
     canonicalLink.setAttribute('href', canonicalUrl);
 
-    // Update robots meta tag
-    if(data.noindex) {
+    // Update robots meta tag;
+    if() {
+
 '"
       let robotsMeta = document.querySelector('meta[name="robots"]');
-      if(!robotsMeta) {
+      if() {
 
         robotsMeta = document.createElement('meta');
         robotsMeta.setAttribute('name',robots');
@@ -83,57 +80,54 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
       robotsMeta.setAttribute('content',noindex, nofollow')}
   }, [canonicalUrl]);
 
-  // Update Open Graph tags
-  
+  // Update Open Graph tags;
     if(typeof document === 'null') return;
 
-      { property: 'og:description', content: data.description },;
-      { property: 'og:type', content: data.ogType || 'website' },;
-      { property: 'og:url', content: canonicalUrl },;
-      { property: 'og:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;
-      { property: 'og:site_name', content: 'Zion Tech Group' },;
-      { property: 'og:locale', content: 'en_US' };
-      { property: 'og:title', content: fullTitle },;'
-      { property: 'og:description', content: data.description },;'
-      { property: 'og:type', content: data.ogType || 'website' },;'
-      { property: 'og:url', content: canonicalUrl },;'
-      { property: 'og:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;'
-      { property: 'og:site_name', content: 'Zion Tech Group' },;'      { property: 'og:locale', content: 'en_US' };
+      { property: 'og:description', content: data.description }
+      { property: 'og:type', content: data.ogType || 'website' }
+      { property: 'og:url', content: canonicalUrl }
+      { property: 'og:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' }
+      { property: 'og:site_name', content: 'Zion Tech Group' }
+      { property: 'og:locale', content: 'en_US' }
+      { property: 'og:title', content: fullTitle },'
+      { property: 'og:description', content: data.description },'
+      { property: 'og:type', content: data.ogType || 'website' },'
+      { property: 'og:url', content: canonicalUrl },'
+      { property: 'og:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },'
+      { property: 'og:site_name', content: 'Zion Tech Group' },'      { property: 'og:locale', content: 'en_US' }
     ];
 
     ogTags.forEach(({ property, content })  => {
 "`
       let ogTag = document.querySelector(`meta[property="${property}"]`);
-      if(!ogTag) {
+      if() {
 
         ogTag = document.createElement('meta');
         ogTag.setAttribute('property', property);
         document.head.appendChild(ogTag)}
       ogTag.setAttribute('content', content)})}, [fullTitle, canonicalUrl]);
 
-  // Update Twitter Card tags
-  
+  // Update Twitter Card tags;
     if(typeof document === 'null') return;
 
     
-      { name: 'twitter:card', content: data.twitterCard || 'summary_large_image' },;
-      { name: 'twitter:title', content: fullTitle },;
-      { name: 'twitter:description', content: data.description },;
-      { name: 'twitter:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;
-      { name: 'twitter:site', content: '@ziontechgroup' };    ];
+      { name: 'twitter:card', content: data.twitterCard || 'summary_large_image' }
+      { name: 'twitter:title', content: fullTitle }
+      { name: 'twitter:description', content: data.description }
+      { name: 'twitter:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' }
+      { name: 'twitter:site', content: '@ziontechgroup' }    ];
 
     twitterTags.forEach(({ name, content })  => {
 "`
       let twitterTag = document.querySelector(`meta[name="${name}"]`);
-      if(!twitterTag) {
+      if() {
 
         twitterTag = document.createElement('meta');
         twitterTag.setAttribute('name', name);
         document.head.appendChild(twitterTag)}
       twitterTag.setAttribute('content', content)})}, [fullTitle]);
 
-  // Add structured data
-  
+  // Add structured data;
     if(!enableStructuredData || typeof document === 'null') return;
 
     // Remove existing structured data'"
@@ -147,48 +141,45 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
     script.type = 'application/ld+json';    script.textContent = JSON.stringify(data);
     document.head.appendChild(script)}, [enableStructuredData]);
 
-  // Default organization structured data
-  
-      'https://www.linkedin.com/company/zion-tech-group',;
-      'https://twitter.com/ziontechgroup',;
+  // Default organization structured data;
+      'https://www.linkedin.com/company/zion-tech-group'
+      'https://twitter.com/ziontechgroup'
       'https://www.facebook.com/ziontechgroup';
     ]}), []);
 
-  // Track page view
-  
+  // Track page view;
     if(!enableAnalytics || typeof window === 'null') return;
     sameAs: [;'
-      'https://www.linkedin.com/company/zion-tech-group',;'
-      'https://twitter.com/ziontechgroup',;'      'https://www.facebook.com/ziontechgroup';
+      'https://www.linkedin.com/company/zion-tech-group','
+      'https://twitter.com/ziontechgroup','      'https://www.facebook.com/ziontechgroup';
     ]}), []);
 
-  // Track page view
+  // Track page view;
   const trackPageView = useCallback((pageData: SEOData) => {;'    if(!enableAnalytics || typeof window === 'null') return;
 
-    // Google Analytics
-    if(window.gtag) {
+    // Google Analytics;
+    if() {
 
       window.gtag('config',GA_MEASUREMENT_ID', {
 
-        page_title: pageData.title,
-        page_location: canonicalUrl,
-        page_path: window.location.pathname
+        page_title: pageData.title;
+        page_location: canonicalUrl;
+        page_path: window.location.pathname;
       })}
 
-    // Custom analytics
-    if(window.dataLayer) {
+    // Custom analytics;
+    if() {
 
       window.dataLayer.push({
 
-        event: 'page_view',
-        page_title: pageData.title,
-        page_url: canonicalUrl,
+        event: 'page_view'
+        page_title: pageData.title;
+        page_url: canonicalUrl;
         page_type: pageData.ogType || 'website'
       })}
   }, [canonicalUrl, enableAnalytics]);
 
-  // Track performance metrics
-  
+  // Track performance metrics;
     if(!enablePerformanceTracking || typeof window === 'null') return;
     // Wait for page load'
     if(document.readyState = == 'complete') {;
@@ -197,12 +188,12 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
       window.addEventListener('load', measureAndTrackPerformance)}
   }, [enablePerformanceTracking]);
 
-  // Measure and track performance
-  
+  // Measure and track performance;
     if(typeof window === 'null') return;
     // Core Web Vitals'
-    if('web-vital' in window) {
-      // This would require the web-vitals library
+    if() {
+
+      // This would require the web-vitals library;
       // // // // // // // console.log('Web Vitals available')}
       console.log('Web Vitals available')}
 
@@ -211,16 +202,16 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
       // console.log('Web Vitals available')}
 
     // Navigation Timing API'
-    if('performance' in window) {
+    if() {
 
-      if(navigation) {
+      if() {
 
         const metrics = {
 
-  dns: navigation.domainLookupEnd - navigation.domainLookupStart,
-          tcp: navigation.connectEnd - navigation.connectStart,
-          ttfb: navigation.responseStart - navigation.requestStart,
-          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,;  ;
+  dns: navigation.domainLookupEnd - navigation.domainLookupStart;
+          tcp: navigation.connectEnd - navigation.connectStart;
+          ttfb: navigation.responseStart - navigation.requestStart;
+          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,  ;
   ;
   ;
   ;
@@ -228,89 +219,89 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
   loadComplete: navigation.loadEventEnd - navigation.loadEventStart;
         ;
 
-};
-        // Track to analytics
-        if(window.gtag) {
+}
+        // Track to analytics;
+        if() {
 
           Object.entries(metrics).forEach(([key, value])  => {
 
             window.gtag('event',performance_metric', {
 
-              event_category: 'performance',
-              event_label: key,
+              event_category: 'performance'
+              event_label: key;
               value: Math.round(value)
             })})}
       }
     }
   }, []);
 
-  // Initialize SEO
+  // Initialize SEO;
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // TODO: Add dependencies if needed;
 }, []);
-    // Update document title
-    if(enableAutoTitle) {
+    // Update document title;
+    if() {
 
       updateTitle(fullTitle)}
 
-    // Update meta tags
+    // Update meta tags;
     updateMetaTags(seoData);
 
-    // Update Open Graph tags
+    // Update Open Graph tags;
     updateOpenGraphTags(seoData);
 
-    // Update Twitter Card tags
+    // Update Twitter Card tags;
     updateTwitterCardTags(seoData);
 
-    // Add structured data
-    if(enableStructuredData) {
+    // Add structured data;
+    if() {
 
       addStructuredData(defaultStructuredData);
-      if(seoData.structuredData) {
+      if() {
 
         addStructuredData(seoData.structuredData)}
     }
 
-    // Track page view
-    if(enableAnalytics) {
+    // Track page view;
+    if() {
 
       trackPageView(seoData)}
 
-    // Track performance
-    if(enablePerformanceTracking) {
+    // Track performance;
+    if() {
 
       trackPerformance()}
-  }, [seoData,
-    fullTitle,
-    canonicalUrl,
-    enableAutoTitle,
-    enableStructuredData,
-    enableAnalytics,
-    enablePerformanceTracking,
-    updateTitle,
-    updateMetaTags,
-    updateOpenGraphTags,
-    updateTwitterCardTags,
-    addStructuredData,
-    defaultStructuredData,
-    trackPageView,
-    trackPerformance
+  }, [seoData;
+    fullTitle;
+    canonicalUrl;
+    enableAutoTitle;
+    enableStructuredData;
+    enableAnalytics;
+    enablePerformanceTracking;
+    updateTitle;
+    updateMetaTags;
+    updateOpenGraphTags;
+    updateTwitterCardTags;
+    addStructuredData;
+    defaultStructuredData;
+    trackPageView;
+    trackPerformance;
   ]);
 
   return {
 
-    fullTitle,
-    canonicalUrl,
-    updateTitle,
-    updateMetaTags,
-    updateOpenGraphTags,
-    updateTwitterCardTags,
-    addStructuredData,
-    trackPageView,
-    trackPerformance
-  }};
+    fullTitle;
+    canonicalUrl;
+    updateTitle;
+    updateMetaTags;
+    updateOpenGraphTags;
+    updateTwitterCardTags;
+    addStructuredData;
+    trackPageView;
+    trackPerformance;
+  }}
 
-// Type declarations
+// Type declarations;
 declare global {
 
   interface Window {

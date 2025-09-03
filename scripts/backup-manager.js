@@ -1,8 +1,7 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 /**
- * Backup Manager - PM2 Automation Script
- * Manages automated backups and recovery
+ * Backup Manager - PM2 Automation Script;
+ * Manages automated backups and recovery;
  */
 
 const fs = require('fs');
@@ -11,24 +10,26 @@ const { execSync } = require('child_process');
 
 class BackupManager {
   constructor() {
+
     this.projectRoot = process.cwd();
     this.logsDir = path.join(this.projectRoot, 'logs');
     this.errorReportsDir = path.join(this.projectRoot, 'error-reports');
     this.backupDir = path.join(this.projectRoot, 'backups');
     
     this.backupStats = {
-      totalBackups: 0,
-      lastBackup: null,
-      backupSize: 0,
-      compressionRatio: 0,
-      failedBackups: 0
-    };
+      totalBackups: 0;
+      lastBackup: null;
+      backupSize: 0;
+      compressionRatio: 0;
+      failedBackups: 0;
+    }
     
     this.setupDirectories();
     this.setupLogging();
   }
 
   setupDirectories() {
+
     [this.logsDir, this.errorReportsDir, this.backupDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
@@ -37,11 +38,13 @@ class BackupManager {
   }
 
   setupLogging() {
+
     this.logFile = path.join(this.logsDir, 'backup-manager.log');
     this.log('Backup Manager started', 'INFO');
   }
 
-  log(message, level = 'INFO') {
+  log() {
+
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     
@@ -50,6 +53,7 @@ class BackupManager {
   }
 
   async createBackup() {
+
     this.log('Creating backup...', 'INFO');
     
     try {
@@ -57,31 +61,31 @@ class BackupManager {
       const backupName = `backup-${timestamp}`;
       const backupPath = path.join(this.backupDir, backupName);
       
-      // Create backup directory
+      // Create backup directory;
       fs.mkdirSync(backupPath, { recursive: true });
       
-      // Backup source code
+      // Backup source code;
       await this.backupSourceCode(backupPath);
       
-      // Backup configuration files
+      // Backup configuration files;
       await this.backupConfigFiles(backupPath);
       
-      // Backup dependencies
+      // Backup dependencies;
       await this.backupDependencies(backupPath);
       
-      // Backup logs and reports
+      // Backup logs and reports;
       await this.backupLogsAndReports(backupPath);
       
-      // Create backup manifest
+      // Create backup manifest;
       const manifest = await this.createBackupManifest(backupPath);
       
-      // Compress backup
+      // Compress backup;
       const compressedPath = await this.compressBackup(backupPath);
       
-      // Clean up uncompressed backup
+      // Clean up uncompressed backup;
       fs.rmSync(backupPath, { recursive: true, force: true });
       
-      // Update backup statistics
+      // Update backup statistics;
       this.backupStats.totalBackups++;
       this.backupStats.lastBackup = new Date().toISOString();
       
@@ -92,19 +96,21 @@ class BackupManager {
       this.log(`Backup size: ${this.formatBytes(stats.size)}`, 'INFO');
       
       return {
-        path: compressedPath,
-        size: stats.size,
-        manifest
-      };
+        path: compressedPath;
+        size: stats.size;
+        manifest;
+      }
       
-    } catch (error) {
+    } catch() {
+
       this.log(`Error creating backup: ${error.message}`, 'ERROR');
       this.backupStats.failedBackups++;
       throw error;
     }
   }
 
-  async backupSourceCode(backupPath) {
+  async backupSourceCode() {
+
     this.log('Backing up source code...', 'INFO');
     
     try {
@@ -123,26 +129,28 @@ class BackupManager {
       
       this.log('Source code backup completed', 'INFO');
       
-    } catch (error) {
+    } catch() {
+
       this.log(`Error backing up source code: ${error.message}`, 'ERROR');
       throw error;
     }
   }
 
-  async backupConfigFiles(backupPath) {
+  async backupConfigFiles() {
+
     this.log('Backing up configuration files...', 'INFO');
     
     try {
       const configFiles = [
-        'package.json',
-        'package-lock.json',
-        'tsconfig.json',
-        'vite.config.ts',
-        'tailwind.config.js',
-        'next.config.js',
-        'ecosystem.config.cjs',
-        '.env',
-        '.env.local',
+        'package.json'
+        'package-lock.json'
+        'tsconfig.json'
+        'vite.config.ts'
+        'tailwind.config.js'
+        'next.config.js'
+        'ecosystem.config.cjs'
+        '.env'
+        '.env.local'
         '.gitignore'
       ];
       
@@ -159,20 +167,22 @@ class BackupManager {
       
       this.log('Configuration files backup completed', 'INFO');
       
-    } catch (error) {
+    } catch() {
+
       this.log(`Error backing up configuration files: ${error.message}`, 'ERROR');
       throw error;
     }
   }
 
-  async backupDependencies(backupPath) {
+  async backupDependencies() {
+
     this.log('Backing up dependencies...', 'INFO');
     
     try {
       const depsPath = path.join(backupPath, 'dependencies');
       fs.mkdirSync(depsPath, { recursive: true });
       
-      // Backup package.json and package-lock.json
+      // Backup package.json and package-lock.json;
       const packageJsonPath = path.join(this.projectRoot, 'package.json');
       const packageLockPath = path.join(this.projectRoot, 'package-lock.json');
       
@@ -184,32 +194,34 @@ class BackupManager {
         fs.copyFileSync(packageLockPath, path.join(depsPath, 'package-lock.json'));
       }
       
-      // Create dependency list
+      // Create dependency list;
       const dependencyList = await this.generateDependencyList();
       const depsListPath = path.join(depsPath, 'dependency-list.txt');
       fs.writeFileSync(depsListPath, dependencyList);
       
       this.log('Dependencies backup completed', 'INFO');
       
-    } catch (error) {
+    } catch() {
+
       this.log(`Error backing up dependencies: ${error.message}`, 'ERROR');
       throw error;
     }
   }
 
-  async backupLogsAndReports(backupPath) {
+  async backupLogsAndReports() {
+
     this.log('Backing up logs and reports...', 'INFO');
     
     try {
       const logsPath = path.join(backupPath, 'logs');
       fs.mkdirSync(logsPath, { recursive: true });
       
-      // Backup logs directory
+      // Backup logs directory;
       if (fs.existsSync(this.logsDir)) {
         this.copyDirectory(this.logsDir, logsPath);
       }
       
-      // Backup error reports
+      // Backup error reports;
       if (fs.existsSync(this.errorReportsDir)) {
         const reportsPath = path.join(backupPath, 'reports');
         fs.mkdirSync(reportsPath, { recursive: true });
@@ -218,29 +230,31 @@ class BackupManager {
       
       this.log('Logs and reports backup completed', 'INFO');
       
-    } catch (error) {
+    } catch() {
+
       this.log(`Error backing up logs and reports: ${error.message}`, 'ERROR');
       throw error;
     }
   }
 
-  async createBackupManifest(backupPath) {
+  async createBackupManifest() {
+
     try {
       const manifest = {
-        timestamp: new Date().toISOString(),
-        projectRoot: this.projectRoot,
-        backupPath: backupPath,
-        files: [],
-        directories: [],
+        timestamp: new Date().toISOString()
+        projectRoot: this.projectRoot;
+        backupPath: backupPath;
+        files: []
+        directories: []
         metadata: {
-          nodeVersion: process.version,
-          platform: process.platform,
-          arch: process.arch,
+          nodeVersion: process.version;
+          platform: process.platform;
+          arch: process.arch;
           user: process.env.USER || 'unknown'
         }
-      };
+      }
       
-      // Scan backup directory
+      // Scan backup directory;
       this.scanDirectory(backupPath, manifest.files, manifest.directories);
       
       const manifestPath = path.join(backupPath, 'manifest.json');
@@ -248,25 +262,27 @@ class BackupManager {
       
       return manifest;
       
-    } catch (error) {
+    } catch() {
+
       this.log(`Error creating backup manifest: ${error.message}`, 'ERROR');
       return null;
     }
   }
 
-  async compressBackup(backupPath) {
+  async compressBackup() {
+
     this.log('Compressing backup...', 'INFO');
     
     try {
       const backupName = path.basename(backupPath);
       const compressedPath = `${backupPath}.tar.gz`;
       
-      // Create tar.gz archive
+      // Create tar.gz archive;
       execSync(`tar -czf "${compressedPath}" -C "${path.dirname(backupPath)}" "${backupName}"`, {
         stdio: 'pipe'
       });
       
-      // Calculate compression ratio
+      // Calculate compression ratio;
       const originalSize = this.getDirectorySize(backupPath);
       const compressedSize = fs.statSync(compressedPath).size;
       this.backupStats.compressionRatio = originalSize > 0 ? (1 - compressedSize / originalSize) * 100 : 0;
@@ -275,13 +291,15 @@ class BackupManager {
       
       return compressedPath;
       
-    } catch (error) {
+    } catch() {
+
       this.log(`Error compressing backup: ${error.message}`, 'ERROR');
       throw error;
     }
   }
 
-  async restoreBackup(backupPath) {
+  async restoreBackup() {
+
     this.log(`Restoring backup from: ${backupPath}`, 'INFO');
     
     try {
@@ -289,18 +307,18 @@ class BackupManager {
         throw new Error('Backup file not found');
       }
       
-      // Create temporary directory for extraction
+      // Create temporary directory for extraction;
       const tempDir = path.join(this.backupDir, 'temp-restore-' + Date.now());
       fs.mkdirSync(tempDir, { recursive: true });
       
-      // Extract backup
+      // Extract backup;
       execSync(`tar -xzf "${backupPath}" -C "${tempDir}"`, { stdio: 'pipe' });
       
-      // Find extracted backup directory
+      // Find extracted backup directory;
       const extractedDir = fs.readdirSync(tempDir)[0];
       const extractedPath = path.join(tempDir, extractedDir);
       
-      // Read manifest
+      // Read manifest;
       const manifestPath = path.join(extractedPath, 'manifest.json');
       if (!fs.existsSync(manifestPath)) {
         throw new Error('Backup manifest not found');
@@ -308,39 +326,41 @@ class BackupManager {
       
       const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
       
-      // Restore files
+      // Restore files;
       await this.restoreFiles(extractedPath, manifest);
       
-      // Clean up temporary directory
+      // Clean up temporary directory;
       fs.rmSync(tempDir, { recursive: true, force: true });
       
       this.log('Backup restoration completed successfully', 'INFO');
       
       return manifest;
       
-    } catch (error) {
+    } catch() {
+
       this.log(`Error restoring backup: ${error.message}`, 'ERROR');
       throw error;
     }
   }
 
-  async restoreFiles(extractedPath, manifest) {
+  async restoreFiles() {
+
     this.log('Restoring files...', 'INFO');
     
     try {
-      // Restore source code
+      // Restore source code;
       const sourcePath = path.join(extractedPath, 'source');
       if (fs.existsSync(sourcePath)) {
         this.restoreDirectory(sourcePath, this.projectRoot);
       }
       
-      // Restore configuration files
+      // Restore configuration files;
       const configPath = path.join(extractedPath, 'config');
       if (fs.existsSync(configPath)) {
         this.restoreDirectory(configPath, this.projectRoot);
       }
       
-      // Restore dependencies
+      // Restore dependencies;
       const depsPath = path.join(extractedPath, 'dependencies');
       if (fs.existsSync(depsPath)) {
         const packageJsonPath = path.join(depsPath, 'package.json');
@@ -356,13 +376,15 @@ class BackupManager {
       
       this.log('Files restored successfully', 'INFO');
       
-    } catch (error) {
+    } catch() {
+
       this.log(`Error restoring files: ${error.message}`, 'ERROR');
       throw error;
     }
   }
 
   async listBackups() {
+
     this.log('Listing available backups...', 'INFO');
     
     try {
@@ -377,10 +399,10 @@ class BackupManager {
             const stats = fs.statSync(fullPath);
             
             backups.push({
-              name: item,
-              path: fullPath,
-              size: stats.size,
-              created: stats.mtime,
+              name: item;
+              path: fullPath;
+              size: stats.size;
+              created: stats.mtime;
               age: Date.now() - stats.mtime.getTime()
             });
           }
@@ -394,13 +416,14 @@ class BackupManager {
       
       return backups;
       
-    } catch (error) {
+    } catch() {
+
       this.log(`Error listing backups: ${error.message}`, 'ERROR');
       return [];
     }
   }
 
-  async cleanupOldBackups(maxAge = 30 * 24 * 60 * 60 * 1000) { // 30 days
+  async cleanupOldBackups(maxAge = 30 * 24 * 60 * 60 * 1000) { // 30 days;
     this.log('Cleaning up old backups...', 'INFO');
     
     try {
@@ -410,8 +433,8 @@ class BackupManager {
       let cleanedCount = 0;
       let spaceFreed = 0;
       
-      backups.forEach(backup => {
-        if (backup.age > maxAge) {
+      backups.forEach() {
+
           try {
             const size = backup.size;
             fs.unlinkSync(backup.path);
@@ -420,7 +443,8 @@ class BackupManager {
             spaceFreed += size;
             
             this.log(`Cleaned old backup: ${backup.name} (${this.formatBytes(size)})`, 'INFO');
-          } catch (error) {
+          } catch() {
+
             this.log(`Error cleaning backup ${backup.name}: ${error.message}`, 'ERROR');
           }
         }
@@ -428,29 +452,33 @@ class BackupManager {
       
       this.log(`Cleaned ${cleanedCount} old backups, freed ${this.formatBytes(spaceFreed)}`, 'INFO');
       
-      return { cleanedCount, spaceFreed };
+      return { cleanedCount, spaceFreed }
       
-    } catch (error) {
+    } catch() {
+
       this.log(`Error cleaning up old backups: ${error.message}`, 'ERROR');
-      return { cleanedCount: 0, spaceFreed: 0 };
+      return { cleanedCount: 0, spaceFreed: 0 }
     }
   }
 
   async generateDependencyList() {
+
     try {
       const result = execSync('npm list --depth=0', { 
-        cwd: this.projectRoot,
-        encoding: 'utf8',
+        cwd: this.projectRoot;
+        encoding: 'utf8'
         stdio: 'pipe'
       });
       
       return result;
-    } catch (error) {
+    } catch() {
+
       return 'Error generating dependency list: ' + error.message;
     }
   }
 
-  copyDirectory(source, destination) {
+  copyDirectory() {
+
     if (!fs.existsSync(destination)) {
       fs.mkdirSync(destination, { recursive: true });
     }
@@ -470,7 +498,8 @@ class BackupManager {
     });
   }
 
-  restoreDirectory(source, destination) {
+  restoreDirectory() {
+
     if (!fs.existsSync(destination)) {
       fs.mkdirSync(destination, { recursive: true });
     }
@@ -490,7 +519,8 @@ class BackupManager {
     });
   }
 
-  scanDirectory(dirPath, files, directories) {
+  scanDirectory() {
+
     const items = fs.readdirSync(dirPath);
     
     items.forEach(item => {
@@ -502,18 +532,20 @@ class BackupManager {
         this.scanDirectory(fullPath, files, directories);
       } else {
         files.push({
-          path: fullPath,
-          size: stat.size,
-          modified: stat.mtime
+          path: fullPath;
+          size: stat.size;
+          modified: stat.mtime;
         });
       }
     });
   }
 
-  getDirectorySize(dirPath) {
+  getDirectorySize() {
+
     let totalSize = 0;
     
-    function calculateSize(dir) {
+    function calculateSize() {
+
       const items = fs.readdirSync(dir);
       
       items.forEach(item => {
@@ -535,7 +567,8 @@ class BackupManager {
     return totalSize;
   }
 
-  formatBytes(bytes) {
+  formatBytes() {
+
     if (bytes === 0) return '0 Bytes';
     
     const k = 1024;
@@ -546,11 +579,12 @@ class BackupManager {
   }
 
   generateReport() {
+
     const report = {
-      timestamp: new Date().toISOString(),
-      backupStats: this.backupStats,
+      timestamp: new Date().toISOString()
+      backupStats: this.backupStats;
       recommendations: this.generateRecommendations()
-    };
+    }
     
     const reportFile = path.join(this.errorReportsDir, `backup-manager-report-${Date.now()}.json`);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -560,26 +594,32 @@ class BackupManager {
   }
 
   generateRecommendations() {
+
     const recommendations = [];
     
-    if (this.backupStats.totalBackups === 0) {
+    if() {
+
       recommendations.push('Create initial backup of the project');
     }
     
-    if (this.backupStats.lastBackup) {
+    if() {
+
       const lastBackupTime = new Date(this.backupStats.lastBackup);
       const daysSinceBackup = (Date.now() - lastBackupTime.getTime()) / (1000 * 60 * 60 * 24);
       
-      if (daysSinceBackup > 7) {
+      if() {
+
         recommendations.push('Create new backup - last backup is over a week old');
       }
     }
     
-    if (this.backupStats.failedBackups > 0) {
+    if() {
+
       recommendations.push('Investigate failed backup attempts');
     }
     
-    if (this.backupStats.compressionRatio < 50) {
+    if() {
+
       recommendations.push('Consider optimizing backup compression');
     }
     
@@ -591,19 +631,20 @@ class BackupManager {
   }
 
   async run() {
+
     try {
       this.log('Starting backup management automation...', 'INFO');
       
-      // List existing backups
+      // List existing backups;
       const existingBackups = await this.listBackups();
       
-      // Create new backup
+      // Create new backup;
       const newBackup = await this.createBackup();
       
-      // Clean up old backups
+      // Clean up old backups;
       await this.cleanupOldBackups();
       
-      // Update backup statistics
+      // Update backup statistics;
       this.backupStats.totalBackups = existingBackups.length + 1;
       
       const report = this.generateReport();
@@ -612,15 +653,17 @@ class BackupManager {
       this.log(`Summary: ${this.backupStats.totalBackups} total backups, ${this.formatBytes(this.backupStats.backupSize)} latest backup`, 'INFO');
       
       return report;
-    } catch (error) {
+    } catch() {
+
       this.log(`Fatal error in backup manager: ${error.message}`, 'ERROR');
       throw error;
     }
   }
 }
 
-// Run the backup manager if called directly
-if (require.main === module) {
+// Run the backup manager if called directly;
+if() {
+
   const manager = new BackupManager();
   
   manager.run()

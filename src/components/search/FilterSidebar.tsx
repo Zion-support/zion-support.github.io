@@ -2,7 +2,7 @@
 interface FilterOption {
   value: string;
   label: string;
-  count?: number
+  count?: number;
 }
 
 interface FilterGroup {
@@ -20,21 +20,13 @@ interface FilterSidebarProps extends React.PropsWithChildren<{}> {
   isOpen: boolean;
   onClose: ()  => void}
 
-export function FilterSidebar({
-
-  filters,
-  selectedFilters,
-  onFilterChange,
-  onClearFilters,
-  isOpen,
-  onClose
-}: FilterSidebarProps) {
+export function FilterSidebar() {
 
   return ()
     <>
       {/* Mobile overlay */}
       {isOpen && (
-        <div
+        <div;
           className="fixed inset-0 bg-black/50 z-40 lg: hidden"
           onClick={onClose}
         />
@@ -54,7 +46,7 @@ export function FilterSidebar({
                           <span className="ml-2 text-zion-slate-light/60">
                             ({option.count});
                           </span>;
-                        )};
+                        )}
                       </span>;
                     </label>;
                   )})}

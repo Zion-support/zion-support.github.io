@@ -3,7 +3,7 @@ import { Suspense, lazy } from 'react';
 import { ProtectedRoute } from '../components/ProtectedRoute';
 import LoadingSpinner from '../components/LoadingSpinner';
 
-// Lazy load auth pages
+// Lazy load auth pages;
 const Login = lazy(() => import('../pages/Login'));
 const Signup = lazy(() => import('../pages/Signup'));
 const ForgotPassword = lazy(() => import('../pages/ForgotPassword'));
@@ -40,6 +40,6 @@ const AuthRoutes: React.FC = () => {
       </Routes>
     </Suspense>
   );
-};
+}
 
 export default AuthRoutes;

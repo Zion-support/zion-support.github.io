@@ -1,99 +1,96 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
+
 []}
-;
 const heroSlides: HeroSlide[] = [  {
 
-    id: 'ai-solutions',
-    title: 'AI-Powered Business Solutions',
+    id: 'ai-solutions'
+    title: 'AI-Powered Business Solutions'
     subtitle:'
-      'Transform your business with cutting-edge artificial intelligence',
+      'Transform your business with cutting-edge artificial intelligence'
     description:'
-      'Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization.Our solutions are designed to scale with your business needs.',
-    image: '/images/hero-ai-solutions.jpg',
-    cta: 'Explore AI Solutions',
-    path: '/services/ai-business-intelligence',
+      'Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization.Our solutions are designed to scale with your business needs.'
+    image: '/images/hero-ai-solutions.jpg'
+    cta: 'Explore AI Solutions'
+    path: '/services/ai-business-intelligence'
     features: ['
-      'Machine Learning',Predictive Analytics',Process Automation',Real-time Insights',
-    ],
-    gradient: 'from-zion-cyan via-zion-purple to-zion-blue',
-    icon: Brain,
+      'Machine Learning',Predictive Analytics',Process Automation',Real-time Insights'
+    ]
+    gradient: 'from-zion-cyan via-zion-purple to-zion-blue'
+    icon: Brain;
     stats: ['
-      { label: 'Accuracy Rate', value: '95%+', icon: Target },
-      { label: 'ROI Increase', value: '450%', icon: TrendingUp },
-      { label: 'Market Growth', value: '280%', icon: Rocket },
-    ]},
+      { label: 'Accuracy Rate', value: '95%+', icon: Target }
+      { label: 'ROI Increase', value: '450%', icon: TrendingUp }
+      { label: 'Market Growth', value: '280%', icon: Rocket }
+    ]}
   {
 
-    id: 'it-services',
-    title: 'Comprehensive IT Services',
-    subtitle: 'End-to-end technology solutions for modern businesses',
+    id: 'it-services'
+    title: 'Comprehensive IT Services'
+    subtitle: 'End-to-end technology solutions for modern businesses'
     description:'
-      "From infrastructure management to digital transformation, we provide the expertise you need to succeed in today's competitive landscape.",
-    image: '/images/hero-it-services.jpg',
-    cta: 'View Our Services',
-    path: '/services',
+      "From infrastructure management to digital transformation, we provide the expertise you need to succeed in today's competitive landscape."
+    image: '/images/hero-it-services.jpg'
+    cta: 'View Our Services'
+    path: '/services'
     features: ['
-      'Cloud Infrastructure',Cybersecurity',DevOps Automation',24/7 Support',
-    ],
-    gradient: 'from-zion-blue via-zion-cyan to-zion-purple',
-    icon: Shield,
+      'Cloud Infrastructure',Cybersecurity',DevOps Automation',24/7 Support'
+    ]
+    gradient: 'from-zion-blue via-zion-cyan to-zion-purple'
+    icon: Shield;
     stats: ['
-      { label: 'Uptime', value: '99.99%', icon: Target },
-      { label: 'Cost Savings', value: '700%', icon: TrendingUp },
-      { label: 'Response Time', value: '<5min', icon: Rocket },
-    ]},
+      { label: 'Uptime', value: '99.99%', icon: Target }
+      { label: 'Cost Savings', value: '700%', icon: TrendingUp }
+      { label: 'Response Time', value: '<5min', icon: Rocket }
+    ]}
   {
 
-    id: 'green-it',
-    title: 'Green IT Solutions',
-    subtitle: 'Sustainable technology for a better future',
+    id: 'green-it'
+    title: 'Green IT Solutions'
+    subtitle: 'Sustainable technology for a better future'
     description:'
-      'Implement eco-friendly IT solutions that reduce your carbon footprint while maintaining performance and driving business value.',
-    image: '/images/hero-green-it.jpg',
-    cta: 'Learn More',
-    path: '/green-it',
+      'Implement eco-friendly IT solutions that reduce your carbon footprint while maintaining performance and driving business value.'
+    image: '/images/hero-green-it.jpg'
+    cta: 'Learn More'
+    path: '/green-it'
     features: ['
-      'Energy Efficiency',Carbon Reduction',Sustainable Practices',Cost Savings',
-    ],
-    gradient: 'from-zion-cyan via-zion-blue to-zion-purple',
-    icon: Globe,
+      'Energy Efficiency',Carbon Reduction',Sustainable Practices',Cost Savings'
+    ]
+    gradient: 'from-zion-cyan via-zion-blue to-zion-purple'
+    icon: Globe;
     stats: ['
-      { label: 'Energy Savings', value: '60%', icon: Target },
-      { label: 'Carbon Reduction', value: '75%', icon: TrendingUp },
-      { label: 'Cost Reduction', value: '40%', icon: Rocket },
-    ]},
+      { label: 'Energy Savings', value: '60%', icon: Target }
+      { label: 'Carbon Reduction', value: '75%', icon: TrendingUp }
+      { label: 'Cost Reduction', value: '40%', icon: Rocket }
+    ]}
 ];
-};
+}
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [direction, setDirection] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Memoize slides to prevent unnecessary re - renders
-  
-  // Optimized slide navigation with useCallback
-  
+  // Memoize slides to prevent unnecessary re - renders;
+  // Optimized slide navigation with useCallback;
     setCurrentSlide(prev => (prev + 1) % memoizedSlides.length);
     setIsAutoPlaying(false)}, [memoizedSlides.length]);
 
     setCurrentSlide()
-      prev => (prev - 1 + memoizedSlides.length) % memoizedSlides.length
+      prev => (prev - 1 + memoizedSlides.length) % memoizedSlides.length;
     );
     setIsAutoPlaying(false)}, [memoizedSlides.length]);
 
       setCurrentSlide(index);
-      setIsAutoPlaying(false)},
+      setIsAutoPlaying(false)}
     [currentSlide]
   );
-  // Auto-play functionality with pause on hover
+  // Auto-play functionality with pause on hover;
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
     if(!isAutoPlaying) return;
 
@@ -101,31 +98,30 @@ const heroSlides: HeroSlide[] = [  {
 
     return () => clearInterval(interval) }, [isAutoPlaying, memoizedSlides.length]) ;
 
-  // Handle keyboard navigation
+  // Handle keyboard navigation;
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
     
       if(e.key === 'ArrowRight') nextSlide();
-      if(e.key === ' ') {
+      if() {
+
         e.preventDefault();
         setIsAutoPlaying(!isAutoPlaying)}
-    };
+    }
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown)}, [prevSlide, nextSlide, isAutoPlaying]);
 
-  // Handle image loading
+  // Handle image loading;
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
     
           img.onload = resolve;
@@ -133,11 +129,11 @@ const heroSlides: HeroSlide[] = [  {
           img.src = slide.image}) }) ;
 
       await Promise.all(imagePromises) ;
-      setIsLoading(false) };
+      setIsLoading(false) }
 
     preloadImages () }, [memoizedSlides]) ;
 
-  if(isLoading) {
+  if() {
 
     return ("
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">"
@@ -160,23 +156,23 @@ const heroSlides: HeroSlide[] = [  {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">"
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Text Content */}
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}"
             className="space-y-8"
           >"
             <div className="space-y-4">
-              <motion.div
+              <motion.div;
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}"
                 className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 text-cyan-300 text-sm font-medium"
               >"
-                <Star className="w-4 h-4 mr-2 text-yellow-400"  />                Leading Technology Solutions
+                <Star className="w-4 h-4 mr-2 text-yellow-400"  />                Leading Technology Solutions;
               </motion.div>
 
-              <motion.h1
+              <motion.h1;
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}"
@@ -187,7 +183,7 @@ const heroSlides: HeroSlide[] = [  {
                 </span>
               </motion.h1>
 
-              <motion.p
+              <motion.p;
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}"
@@ -196,7 +192,7 @@ const heroSlides: HeroSlide[] = [  {
                 {currentSlideData.subtitle}
               </motion.p>
 
-              <motion.p
+              <motion.p;
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.0 }}"
@@ -207,7 +203,7 @@ const heroSlides: HeroSlide[] = [  {
             </div>
 
             {/* Features */}
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.2 }}"
@@ -221,20 +217,20 @@ const heroSlides: HeroSlide[] = [  {
             </motion.div>
 
             {/* CTA Button */}
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.4 }}"
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Link
+              <Link;
                 to={currentSlideData.path}"
                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
               >
                 {currentSlideData.cta}"
                 <ArrowRight className="w-5 h-5 ml-2"  />              </Link>
 
-              <button
+              <button;
                 onClick={() => setIsAutoPlaying(!isAutoPlaying)}"
                 className="inline-flex items-center justify-center px-6 py-4 border border-slate-600 hover:border-cyan-400 text-slate-300 hover:text-cyan-400 font-medium rounded-lg transition-all duration-300"
                 aria-label={
@@ -250,7 +246,7 @@ const heroSlides: HeroSlide[] = [  {
             </motion.div>
 
             {/* Stats */}
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.6 }}"
@@ -268,14 +264,14 @@ const heroSlides: HeroSlide[] = [  {
           </motion.div>
 
           {/* Visual Content */}
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}"
             className="relative"
           >"
             <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 p-8">
-              <div
+              <div;
                 className={`w-24 h-24 bg-gradient-to-br ${currentSlideData.gradient} rounded-2xl flex items-center justify-center mb-6 mx-auto`}
               >"
                 <currentSlideData.icon className="w-12 h-12 text-white" />
@@ -296,7 +292,7 @@ const heroSlides: HeroSlide[] = [  {
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">"
         <div className="flex space-x-2">
           {memoizedSlides.map((_, index) => (
-            <button
+            <button;
               key={index}
               onClick={() => goToSlide(index)}`
               className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide'
@@ -310,14 +306,14 @@ const heroSlides: HeroSlide[] = [  {
       </div>
 
       {/* Arrow Navigation */}
-      <button
+      <button;
         onClick={prevSlide}"
         className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-slate-800/50 hover:bg-slate-700/70 text-slate-300 hover:text-white transition-all duration-300 backdrop-blur-sm"
         
       >"
         <ChevronLeft className="w-6 h-6"  />      </button>
 
-      <button
+      <button;
         onClick={nextSlide}"
         className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-slate-800/50 hover:bg-slate-700/70 text-slate-300 hover:text-white transition-all duration-300 backdrop-blur-sm"
         
@@ -325,5 +321,5 @@ const heroSlides: HeroSlide[] = [  {
         <ChevronRight className="w-6 h-6"  />
       </button>
     </section>) }
-export { HeroSection };
+export { HeroSection }
 '"`

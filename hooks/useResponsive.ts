@@ -11,12 +11,12 @@ interface ResponsiveState {
 
 const useResponsive = (): ResponsiveState => {
   const [state, setState] = useState<ResponsiveState>({
-    screenWidth: 1920,
-    screenHeight: 1080,
-    orientation: "landscape",
-    isMobile: false,
-    isTablet: false,
-    isDesktop: true,
+    screenWidth: 1920;
+    screenHeight: 1080;
+    orientation: "landscape"
+    isMobile: false;
+    isTablet: false;
+    isDesktop: true;
   });
 
   useEffect(() => {
@@ -25,14 +25,14 @@ const useResponsive = (): ResponsiveState => {
       const height = window.innerHeight;
       
       setState({
-        screenWidth: width,
-        screenHeight: height,
-        orientation: width > height ? "landscape" : "portrait",
-        isMobile: width < 768,
-        isTablet: width >= 768 && width < 1024,
-        isDesktop: width >= 1024,
+        screenWidth: width;
+        screenHeight: height;
+        orientation: width > height ? "landscape" : "portrait"
+        isMobile: width < 768;
+        isTablet: width >= 768 && width < 1024;
+        isDesktop: width >= 1024;
       });
-    };
+    }
 
     updateState();
     window.addEventListener('resize', updateState);
@@ -41,6 +41,6 @@ const useResponsive = (): ResponsiveState => {
   }, []);
 
   return state;
-};
+}
 
 export default useResponsive;

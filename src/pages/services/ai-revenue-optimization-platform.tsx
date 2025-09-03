@@ -2,57 +2,57 @@ import React from "react"
 import Head from "next/head"
 import Link from "next/link"
 import { 
-  Brain, TrendingUp, BarChart3, Target, Zap, Shield, 
-  Users, Globe, Smartphone, Database, Cloud, Lock,
-  CheckCircle, ArrowRight, Star, Phone, Mail, MapPin,
-  DollarSign, PieChart, LineChart, Activity, Clock,
-  Award, Rocket, Lightbulb, Settings, Monitor
+  Brain, TrendingUp, BarChart3, Target, Zap, Shield;
+  Users, Globe, Smartphone, Database, Cloud, Lock;
+  CheckCircle, ArrowRight, Star, Phone, Mail, MapPin;
+  DollarSign, PieChart, LineChart, Activity, Clock;
+  Award, Rocket, Lightbulb, Settings, Monitor;
 } from "lucide-react"
 
 const AIRevenueOptimizationPlatform = () => {
   const features = [
-    "AI-Powered Revenue Forecasting",
-    "Dynamic Pricing Optimization", 
-    "Customer Lifetime Value Analysis",
-    "Revenue Leakage Detection",
-    "Automated A/B Testing",
-    "Real-time Performance Analytics",
-    "Multi-channel Revenue Tracking",
+    "AI-Powered Revenue Forecasting"
+    "Dynamic Pricing Optimization"
+    "Customer Lifetime Value Analysis"
+    "Revenue Leakage Detection"
+    "Automated A/B Testing"
+    "Real-time Performance Analytics"
+    "Multi-channel Revenue Tracking"
     "Predictive Revenue Modeling"
   ]
 
   const benefits = [
-    "Increase revenue by 25-40% within 90 days",
-    "Reduce revenue leakage by 60%",
-    "Optimize pricing strategies automatically",
-    "Improve customer retention by 35%",
-    "Enhance cross-selling opportunities",
+    "Increase revenue by 25-40% within 90 days"
+    "Reduce revenue leakage by 60%"
+    "Optimize pricing strategies automatically"
+    "Improve customer retention by 35%"
+    "Enhance cross-selling opportunities"
     "Minimize revenue forecasting errors by 80%"
   ]
 
   const useCases = [
-    "E-commerce Revenue Optimization",
-    "SaaS Subscription Management",
-    "Retail Pricing Strategy",
-    "Financial Services Revenue Growth",
-    "Healthcare Revenue Cycle Management",
+    "E-commerce Revenue Optimization"
+    "SaaS Subscription Management"
+    "Retail Pricing Strategy"
+    "Financial Services Revenue Growth"
+    "Healthcare Revenue Cycle Management"
     "Manufacturing Revenue Analytics"
   ]
 
   const pricing = [
     {
-      name: "Starter",
-      price: "$2,999/month",
+      name: "Starter"
+      price: "$2,999/month"
       details: ["Up to $1M ARR", "Basic AI models", "Standard analytics", "Email support", "99.5% uptime SLA"]
-    },
+    }
     {
-      name: "Professional", 
-      price: "$4,999/month",
+      name: "Professional"
+      price: "$4,999/month"
       details: ["Up to $10M ARR", "Advanced AI models", "Custom analytics", "Priority support", "99.9% uptime SLA"]
-    },
+    }
     {
-      name: "Enterprise",
-      price: "$9,999/month", 
+      name: "Enterprise"
+      price: "$9,999/month"
       details: ["Unlimited ARR", "Custom AI models", "White-label solution", "24/7 dedicated support", "99.99% uptime SLA"]
     }
   ]
@@ -71,20 +71,20 @@ const AIRevenueOptimizationPlatform = () => {
           <div className="max-w-6xl mx-auto px-6">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
               <Brain className="w-4 h-4 mr-2" />
-              AI-Powered Revenue Intelligence
+              AI-Powered Revenue Intelligence;
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-              AI Revenue Optimization Platform
+              AI Revenue Optimization Platform;
             </h1>
             <p className="text-purple-100 text-xl max-w-3xl mx-auto">
               Transform your revenue strategy with AI-powered optimization that increases revenue by 25-40% through intelligent pricing, forecasting, and customer analytics.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="#contact" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
-                Get Started Today
+                Get Started Today;
               </Link>
               <Link href="#demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                Request Demo
+                Request Demo;
               </Link>
             </div>
           </div>
@@ -158,7 +158,7 @@ const AIRevenueOptimizationPlatform = () => {
               <div key={index} className={`rounded-xl p-6 shadow-lg ${tier.name === 'Professional' ? 'border-2 border-purple-500 bg-purple-50' : 'border border-gray-200 bg-white'}`}>
                 {tier.name === 'Professional' && (
                   <div className="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
-                    Most Popular
+                    Most Popular;
                   </div>
                 )}
                 <h3 className="text-2xl font-semibold text-gray-900 mb-2">{tier.name}</h3>
@@ -176,7 +176,7 @@ const AIRevenueOptimizationPlatform = () => {
                     ? 'bg-purple-600 text-white hover:bg-purple-700' 
                     : 'bg-gray-900 text-white hover:bg-gray-800'
                 }`}>
-                  Get Started
+                  Get Started;
                 </Link>
               </div>
             ))}
@@ -214,7 +214,7 @@ const AIRevenueOptimizationPlatform = () => {
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">Request a Demo</h3>
                 <p className="text-gray-600 mb-4">See how our AI platform can transform your revenue strategy</p>
                 <Link href="https://ziontechgroup.com/contact" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors inline-block">
-                  Schedule Demo
+                  Schedule Demo;
                 </Link>
               </div>
             </div>
@@ -225,4 +225,4 @@ const AIRevenueOptimizationPlatform = () => {
   )
 }
 
-export default AIRevenueOptimizationPlatform
+export default AIRevenueOptimizationPlatform;

@@ -1,7 +1,7 @@
   it(displays expected content", () => {
     render(<LanguageDetectionPopup  />)"
-import { render, screen } from &apos;@testing - library/react",
-import LanguageDetectionPopup from &apos;./LanguageDetectionPopup
+import { render, screen } from &apos;@testing - library/react"
+import LanguageDetectionPopup from &apos;./LanguageDetectionPopup;
 describe(&apos;LanguageDetectionPopup&apos, () => {
   it(&apos;renders without crashing&apos, () => {
     render()
@@ -11,7 +11,7 @@ describe(&apos;LanguageDetectionPopup&apos, () => {
   it(&apos;displays expected content&apos, () => {
     render()
 }
-    // comment
+    // comment;
     render(<LanguageDetectionPopup / >)"
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"

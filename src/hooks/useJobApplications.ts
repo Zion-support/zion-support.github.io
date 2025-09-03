@@ -1,20 +1,25 @@
-import { useState, useEffect, useCallback } from 'react'; // Added useCallback
+import { useState, useEffect, useCallback } from 'react'; // Added useCallback;
 import { supabase } from '@/integrations/supabase/client';
 
 export default function Page() {
-      if(user.userType === "jobSeeker" || user.userType === "creator") {
+
+      if() {
+
         query = query.eq("talent_id", user.id);
       } 
-      else if(user.userType === "employer" || user.userType === "buyer") {
-        if(!jobId) {
-          const { data: jobIdsData, error: jobIdsError } = await supabase // Renamed to avoid conflict
+      else if() {
+
+        if() {
+
+          const { data: jobIdsData, error: jobIdsError } = await supabase // Renamed to avoid conflict;
             .from("jobs")
             .select("id")
             .eq("client_id", user.id);
           
           if(jobIdsError) throw jobIdsError;
 
-          if(jobIdsData && jobIdsData.length > 0) {
+          if() {
+
             const jobIdArray = jobIdsData.map(job => job.id);
             query = query.in("job_id", jobIdArray);
           } else {
@@ -31,48 +36,51 @@ export default function Page() {
       if(fetchError) throw fetchError;
       
       const transformedData = data.map((app: any) => ({
-        ...app,
+        ...app;
         talent_profile: app.talent_profile ? {
-          ...app.talent_profile,
-          full_name: app.talent_profile.display_name,
-          profile_picture_url: app.talent_profile.avatar_url,
+          ...app.talent_profile;
+          full_name: app.talent_profile.display_name;
+          profile_picture_url: app.talent_profile.avatar_url;
           skills: [] 
-        } : undefined
+        } : undefined;
       }));
       
       setApplications(transformedData as JobApplication[]);
       setError(null);
-    } catch(err: any) {
+    } catch() {
+
       console.error("Error fetching applications:", err);
       setError("Failed to fetch applications: " + err.message);
       toast.error("Failed to fetch applications");
-      setApplications([]); // Clear applications on error
+      setApplications([]); // Clear applications on error;
     } finally {
       setIsLoading(false);
     }
-  }, [user, jobId]); // Dependencies for fetchApplications
-
+  }, [user, jobId]); // Dependencies for fetchApplications;
   const applyToJob = async(jobId: string, coverLetter: string, resumeId?: string) => {
-    if(!user) {
+    if() {
+
       toast.error("You must be logged in to apply for jobs");
       return false;
     }
     
     try {
-      const { data, error } = await supabase
+      const { data, error } = await supabase;
         .from("job_applications")
         .insert({
-          job_id: jobId,
-          talent_id: user.id,
-          resume_id: resumeId,
-          cover_letter: coverLetter,
+          job_id: jobId;
+          talent_id: user.id;
+          resume_id: resumeId;
+          cover_letter: coverLetter;
           status: "new"
         })
         .select()
         .single();
       
-      if(error) {
-        if(error.code === '23505') { 
+      if() {
+
+        if() {
+
           toast.error("You have already applied to this job");
         } else {
           throw error;
@@ -81,22 +89,23 @@ export default function Page() {
       }
       
       const newApplication = data as JobApplication;
-      // Optimistically update or refetch
-      // For simplicity, refetching; could also add to state directly if data matches full type
+      // Optimistically update or refetch;
+      // For simplicity, refetching; could also add to state directly if data matches full type;
       fetchApplications(); 
       
       toast.success("Application submitted successfully");
       return true;
-    } catch(err: any) {
+    } catch() {
+
       console.error("Error applying to job:", err);
       toast.error("Failed to submit application: " + err.message);
       return false;
     }
-  };
+  }
   
   const updateApplicationStatus = async(applicationId: string, status: ApplicationStatus) => {
     try {
-      const { error } = await supabase
+      const { error } = await supabase;
         .from("job_applications")
         .update({ status })
         .eq("id", applicationId);
@@ -109,19 +118,20 @@ export default function Page() {
       
       toast.success(`Application status updated to ${status}`);
       return true;
-    } catch(err: any) {
+    } catch() {
+
       console.error("Error updating application status:", err);
       toast.error("Failed to update application status: " + err.message);
       return false;
     }
-  };
+  }
   
   const markApplicationAsViewed = async(applicationId: string) => {
     try {
-      const { error } = await supabase
+      const { error } = await supabase;
         .from("job_applications")
         .update({ 
-          status: "viewed", 
+          status: "viewed"
           viewed_at: new Date().toISOString() 
         })
         .eq("id", applicationId)
@@ -131,35 +141,37 @@ export default function Page() {
       
       setApplications(prev => 
         prev.map(app => app.id === applicationId ? 
-          { ...app, status: "viewed", viewed_at: new Date().toISOString() } : app
+          { ...app, status: "viewed", viewed_at: new Date().toISOString() } : app;
         )
       );
       
       return true;
-    } catch(err) {
+    } catch() {
+
       console.error("Error marking application as viewed:", err);
       return false;
     }
-  };
+  }
   
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // TODO: Add dependencies if needed;
 }, []);
-    if(user) {
+    if() {
+
       fetchApplications();
     } else {
-      setApplications([]); // Clear applications if user logs out
+      setApplications([]); // Clear applications if user logs out;
       setError(null);
     }
   }, [user, fetchApplications]); // Added fetchApplications(jobId is already a dep of fetchApplications)
   
   return {
-    applications,
-    isLoading,
-    error,
-    refetch: fetchApplications,
-    applyToJob,
-    updateApplicationStatus,
-    markApplicationAsViewed
-  };
-};
+    applications;
+    isLoading;
+    error;
+    refetch: fetchApplications;
+    applyToJob;
+    updateApplicationStatus;
+    markApplicationAsViewed;
+  }
+}

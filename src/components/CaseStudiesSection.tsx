@@ -1,10 +1,12 @@
 import {  import { motion  } from 'framer-motion';
 
- params - Function parameters
- * @returns {*} Function return value
+ params - Function parameters;
+ * @returns {*} Function return value;
  */
-function CaseStudiesSection () {
+function CaseStudiesSection() {
+
 export function CaseStudiesSection() {
+
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
@@ -12,50 +14,45 @@ export function CaseStudiesSection() {
           className="text-center mb-16"
           initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >"
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Success Stories
+            Success Stories;
           </h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover how we've helped businesses across industries achieve
+            Discover how we've helped businesses across industries achieve;
             remarkable results through innovative technology solutions.</p>
         </motion.div>
 "
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {caseStudies.map((study, index) => (
-            <motion.div
+            <motion.div;
               key={study.id}"
               className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
               initial = {
 
-  { opacity: 0,
-  y: 30
-
+  { opacity: 0;
+  y: 30;
 }}
               whileInView = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
               viewport={{ once: true }}
               transition = {
 
-  { duration: 0.6,
-  delay: index * 0.1
-
+  { duration: 0.6;
+  delay: index * 0.1;
 }}
             >"
               <div className="flex items-center mb-6">
@@ -98,25 +95,22 @@ export function CaseStudiesSection() {
             </motion.div>) ) }
         </div>
 
-        <motion.div
+        <motion.div;
           className="mt-16 text-center"          initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           viewport={{ once: true }}
           transition = {
 
-  { duration: 0.6,
-  delay: 0.4
-
+  { duration: 0.6;
+  delay: 0.4;
 }}
         >"
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">"
@@ -124,7 +118,7 @@ export function CaseStudiesSection() {
               Ready to Write Your Success Story?
             </h3>"
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Join hundreds of satisfied clients who have transformed their
+              Join hundreds of satisfied clients who have transformed their;
               businesses with our innovative technology solutions.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
@@ -144,7 +138,7 @@ export function CaseStudiesSection() {
           </div>
         </motion.div>;
       </div>;
-    </section>;) };
+    </section>;) }
 
 export default CaseStudiesSection;"
             <span className="text-2xl">→</span>;

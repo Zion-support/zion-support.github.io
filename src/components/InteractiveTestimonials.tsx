@@ -1,9 +1,10 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
- params - Function parameters
- * @returns {*} Function return value
+ params - Function parameters;
+ * @returns {*} Function return value;
  */
 function InteractiveTestimonials () {export function InteractiveTestimonials() {
+
 "
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedTestimonial, setSelectedTestimonial] = useState(0);
@@ -12,35 +13,33 @@ function InteractiveTestimonials () {export function InteractiveTestimonials() {
     : testimonials.filter(t => t.category === selectedCategory) ;
 
     setSelectedTestimonial((prev) => ;
-      prev === filteredTestimonials.length-1 ? 0 : prev + 1;) };
+      prev === filteredTestimonials.length-1 ? 0 : prev + 1;) }
 
     setSelectedTestimonial((prev) => ;
       prev === 0 ? filteredTestimonials.length-1 : prev - 1;) ;
-  };
+  }
 
   return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <div  className="max - w-7xl mx - auto px-6">
-        <motion.div
+        <motion.div;
           className="text-center mb-16"          initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >"
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Client Success Stories
+            Client Success Stories;
           </h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Real stories from real clients.Discover how we've transformed businesses
+            Real stories from real clients.Discover how we've transformed businesses;
             across industries with our innovative technology solutions.</p>
         </motion.div>
 
@@ -109,12 +108,12 @@ function InteractiveTestimonials () {export function InteractiveTestimonials() {
           </AnimatePresence>
 
           {/* Navigation Arrows */}
-          <button
+          <button;
             onClick={previousTestimonial}"
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
           >"
             <ChevronLeft className="h-6 w-6 text-gray-600"  />          </button>
-          <button
+          <button;
             onClick={nextTestimonial}"
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
           >"
@@ -125,7 +124,7 @@ function InteractiveTestimonials () {export function InteractiveTestimonials() {
         <div className="flex justify-center mb-8">;"
           <div className="flex space-x-2">
             {testimonials.map((_, index) => (
-              <button
+              <button;
                 key={index}
                 onClick={() => goToTestimonial(index)}`
                 className={`w-3 h-3 rounded-full transition-all duration-200 ${index === currentIndex ? 'bg-blue-600 w-8' : 'bg-gray-300'`
@@ -136,45 +135,43 @@ function InteractiveTestimonials () {export function InteractiveTestimonials() {
 
         {/* Play/Pause Controls */}"
         <div className="flex justify-center mb-8">;
-          <button
+          <button;
             onClick={togglePlayPause}"
             className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
           >
             {isPlaying ? (
               <>"
                 <Pause className="h-4 w-4 mr-2"  />
-                Pause
+                Pause;
               </>
             ) : (
               <>"
-                <Play className="h-4 w-4 mr-2"  />                Play
+                <Play className="h-4 w-4 mr-2"  />                Play;
               </>) }
           </button>
         </div>
 
         {/* CTA Section */}
-        <motion.div
+        <motion.div;
           initial = {
 
-  { opacity: 0,
+  { opacity: 0;
   y: 20 }}
           whileInView = {
 
-  { opacity: 1,
+  { opacity: 1;
   y: 0 }}
         {/* Category Filter */}
-        <motion.div
+        <motion.div;
           className="flex flex - wrap justify - center gap-3 mb-12"          initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -184,7 +181,7 @@ function InteractiveTestimonials () {export function InteractiveTestimonials() {
               Ready to Join Our Success Stories?
             </h3>"
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Let's discuss how we can transform your business with innovative
+              Let's discuss how we can transform your business with innovative;
               technology solutions tailored to your specific needs.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
@@ -198,7 +195,7 @@ function InteractiveTestimonials () {export function InteractiveTestimonials() {
           </div>
         </motion.div>
       </div>;
-    </section>;) };
+    </section>;) }
 
 export default InteractiveTestimonials;"
             <span className="text-2xl">→</span>;

@@ -1,5 +1,4 @@
-// Global types for the Zion Tech Group application
-
+// Global types for the Zion Tech Group application;
 export interface Service {
   id: string;
   name: string;
@@ -12,7 +11,7 @@ export interface Service {
     min: number;
     max: number;
     currency: string;
-  };
+  }
   features: string[];
   technologies: string[];
   deliveryTime: string;
@@ -129,7 +128,7 @@ export interface PaginatedResponse<T> {
     pages: number;
     hasNext: boolean;
     hasPrev: boolean;
-  };
+  }
 }
 
 export interface SEOProps {
@@ -143,11 +142,11 @@ export interface SEOProps {
 }
 
 export interface PerformanceMetrics {
-  fcp?: number; // First Contentful Paint
-  lcp?: number; // Largest Contentful Paint
-  fid?: number; // First Input Delay
-  cls?: number; // Cumulative Layout Shift
-  ttfb?: number; // Time to First Byte
+  fcp?: number; // First Contentful Paint;
+  lcp?: number; // Largest Contentful Paint;
+  fid?: number; // First Input Delay;
+  cls?: number; // Cumulative Layout Shift;
+  ttfb?: number; // Time to First Byte;
 }
 
 export interface AccessibilitySettings {
@@ -168,7 +167,7 @@ export interface UserPreferences {
     email: boolean;
     browser: boolean;
     marketing: boolean;
-  };
+  }
 }
 
 export interface NavigationItem {
@@ -199,12 +198,12 @@ export interface CompanyInfo {
     state: string;
     zip: string;
     country: string;
-  };
+  }
   contact: {
     phone: string;
     email: string;
     website: string;
-  };
+  }
   certifications: string[];
 }
 
@@ -242,7 +241,7 @@ export interface FormField {
     max?: number;
     pattern?: string;
     message?: string;
-  };
+  }
 }
 
 export interface Project {
@@ -257,17 +256,17 @@ export interface Project {
     allocated: number;
     spent: number;
     currency: string;
-  };
+  }
   team: {
     lead: string;
     members: string[];
     external: string[];
-  };
+  }
   client: {
     name: string;
     contact: string;
     industry: string;
-  };
+  }
   deliverables: {
     name: string;
     description: string;
@@ -311,7 +310,7 @@ export interface User {
     experience: number;
     location: string;
     timezone: string;
-  };
+  }
   preferences: {
     theme: 'light' | 'dark' | 'auto';
     language: string;
@@ -319,21 +318,21 @@ export interface User {
       email: boolean;
       push: boolean;
       sms: boolean;
-    };
-  };
+    }
+  }
   activity: {
     lastLogin: Date;
     loginCount: number;
     projects: string[];
     tasks: string[];
-  };
+  }
   subscription: {
     plan: 'free' | 'basic' | 'premium' | 'enterprise';
     status: 'active' | 'inactive' | 'cancelled' | 'expired';
     startDate: Date;
     endDate: Date;
     features: string[];
-  };
+  }
 }
 
 export interface Notification {
@@ -367,15 +366,14 @@ export interface InputProps extends BaseComponentProps {
   required?: boolean;
 }
 
-// API types
-
+// API types;
   message: string;
   timestamp: Date;
   read: boolean;
   action?: {
     label: string;
     url: string;
-  };
+  }
   category: 'system' | 'project' | 'team' | 'client' | 'billing';
   priority: 'low' | 'medium' | 'high';
   expires?: Date;
@@ -394,8 +392,7 @@ export interface ApiRequest {
   headers?: Record<string, string>;
 }
 
-// Environment types
-
+// Environment types;
 export interface Environment {
   NODE_ENV:
   'development' |

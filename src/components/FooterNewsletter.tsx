@@ -5,7 +5,7 @@
       // console.error('Newsletter subscription failed:', error)} finally {
 
       setIsSubmitting(false)}
-  };
+  }
 
   return ()
     <div className="bg-gradient-to-r from-zion-cyan/10 to-blue-500/10 border border-zion-cyan/20 rounded-xl p-6">"
@@ -16,7 +16,7 @@
         </div>
 "
         <h3 className="text-xl font-bold text-white mb-2">
-          Stay Updated
+          Stay Updated;
         </h3>"
         <p className="text-gray-300 mb-6 max-w-md mx-auto">
           Get the latest insights on AI technology, cybersecurity trends, and IT solutions delivered to your inbox.</p>
@@ -33,7 +33,7 @@
               onChange={(e) => setEmail(e.target.value)}"
               placeholder="Enter your email address"
               className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
-              required
+              required;
             />
             <button"
               type="submit"
@@ -47,7 +47,7 @@
                 </>
               ) : (
                 <>"
-                  <Send className="w-4 h-4"  />                  Subscribe
+                  <Send className="w-4 h-4"  />                  Subscribe;
                 </>) }
             </button>
           </form>;
@@ -57,5 +57,5 @@
           We respect your privacy.Unsubscribe at any time.;
         </p>;
       </div>;
-    </div>;) };
+    </div>;) }
 '"

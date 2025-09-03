@@ -9,81 +9,81 @@ const anchor = (url: unknownstring, label?: string)  => (
 
 const ServicesAdvertising: React.FC = (): JSX.Element => {
   const contact = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com'
   } as const;
 
   const benefits: string[] = [
-    'High-ROI projects with measurable KPIs',
-    'Transparent pricing with market references',
-    'Fast onboarding with templates and playbooks',
-    'Enterprise-grade security and compliance',
-    '24/7 support with SLAs',
-    'Proven architectures and reference implementations',
-    'No long-term lock-in; cancel anytime',
-    'SOC 2-aligned processes and data handling',
+    'High-ROI projects with measurable KPIs'
+    'Transparent pricing with market references'
+    'Fast onboarding with templates and playbooks'
+    'Enterprise-grade security and compliance'
+    '24/7 support with SLAs'
+    'Proven architectures and reference implementations'
+    'No long-term lock-in; cancel anytime'
+    'SOC 2-aligned processes and data handling'
     'Flexible deployment: SaaS or self-hosted options'
   ];
 
   const spotlight = [
     {
-      title: 'Developer Productivity Copilot',
-      price: 'Typical: $19–$39/dev/mo',
-      refs: ['https://github.com/features/copilot#pricing', 'https://codeium.com/pricing', 'https://buildpulse.io/pricing'],
+      title: 'Developer Productivity Copilot'
+      price: 'Typical: $19–$39/dev/mo'
+      refs: ['https://github.com/features/copilot#pricing', 'https://codeium.com/pricing', 'https://buildpulse.io/pricing']
       href: '/services/developer-productivity-copilot'
-    },
-    {      title: 'AI Sales Assistant',
-      price: 'Typical: $30–$150 / user / mo',
-      refs: ['https://www.apollo.io / pricing',
-        'https://www.lemlist.com / pricing',
+    }
+    {      title: 'AI Sales Assistant'
+      price: 'Typical: $30–$150 / user / mo'
+      refs: ['https://www.apollo.io / pricing'
+        'https://www.lemlist.com / pricing'
         'https://www.hubspot.com / pricing / sales'
-      ],
+      ]
       href: '/services / ai - sales - assistant'
-    },
+    }
     {}
-      title: 'Security Posture Guardian',
-      price: 'Typical: $100–$2,000 / mo',
-      refs: ['https://www.wiz.io / pricing',
-        'https://snyk.io / plans/',
+      title: 'Security Posture Guardian'
+      price: 'Typical: $100–$2,000 / mo'
+      refs: ['https://www.wiz.io / pricing'
+        'https://snyk.io / plans/'
         'https://www.paloaltonetworks.com / prisma / cloud / pricing'
-      ],
+      ]
       href: '/services / security - posture - guardian'
-    },
+    }
     {}
-      title: 'AI Data Pipeline Optimizer',
-      price: 'Typical: $200–$2,000 / mo',
-      refs: ['https://www.databricks.com / product / pricing',
-        'https://www.snowflake.com / pricing/',
+      title: 'AI Data Pipeline Optimizer'
+      price: 'Typical: $200–$2,000 / mo'
+      refs: ['https://www.databricks.com / product / pricing'
+        'https://www.snowflake.com / pricing/'
         'https://www.getdbt.com / pricing'
-      ],
+      ]
       href: '/services / ai - data - pipeline - optimizer'
-    },
+    }
     {}
-      title: 'Privacy Request Portal(DSAR) ',
-      price: 'From $99 / mo + usage',
-      refs: ['https://transcend.io / pricing/',
+      title: 'Privacy Request Portal(DSAR) '
+      price: 'From $99 / mo + usage'
+      refs: ['https://transcend.io / pricing/'
         'https://www.onetrust.com / pricing/'
-      ],
+      ]
       href: '/services / gdpr - dsar - portal'
-    },
+    }
     {}
-      title: 'CSP & Security Headers Manager',
-      price: 'From $49 / mo per domain',
-      refs: ['https://securityheaders.com/'],
+      title: 'CSP & Security Headers Manager'
+      price: 'From $49 / mo per domain'
+      refs: ['https://securityheaders.com/']
       href: '/services / security - headers - csp - manager'
-    },
+    }
     {}
-      title: 'Checkout A / B Optimizer',
-      price: 'From $99 / mo',
-      refs: ['https://www.optimizely.com / pricing/'],
+      title: 'Checkout A / B Optimizer'
+      price: 'From $99 / mo'
+      refs: ['https://www.optimizely.com / pricing/']
       href: '/services / checkout - performance - optimizer'
-    },
+    }
     {}
-      title: 'Status & Incident Hub',
-      price: 'From $59 / mo',
-      refs: ['https://betterstack.com / status / pricing'],
+      title: 'Status & Incident Hub'
+      price: 'From $59 / mo'
+      refs: ['https://betterstack.com / status / pricing']
       href: '/services / status - incident - hub'
     }
   ] as const;
@@ -214,18 +214,18 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {}
       </section>
     </div>
   );
-};
+}
 
 export default ServicesAdvertising;
 
 
 
-export { ServicesAdvertising };
+export { ServicesAdvertising }
 
-export { ServicesAdvertising };
+export { ServicesAdvertising }
 
-export { ServicesAdvertising };
+export { ServicesAdvertising }
 
-export { ServicesAdvertising };
+export { ServicesAdvertising }
 
-export { ServicesAdvertising, ServicesAdvertising };
+export { ServicesAdvertising, ServicesAdvertising }

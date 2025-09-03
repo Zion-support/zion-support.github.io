@@ -2,14 +2,12 @@
 interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {
 
   recommendation: TeamRecommendation;
-  projectBrief: ProjectBrief; // For budget comparison
+  projectBrief: ProjectBrief; // For budget comparison;
   onInviteTalent: talentId: string, roleTitle: string void;
-  // onEditRole: roleId: string void; // For future add/remove
-  // onRemoveRole: roleId: string void; // For future add/remove
-
+  // onEditRole: roleId: string void; // For future add/remove;
+  // onRemoveRole: roleId: string void; // For future add/remove;
 }
-;
-export 
+export;
   if(!recommendation) return null;
 
   return ("
@@ -48,7 +46,7 @@ export
       <div>"
         <h3 className="text-xl font-semibold mb-4 flex items-center">"
           <Briefcase className="h-6 w-6 mr-2 text-primary"  />
-          Recommended Roles
+          Recommended Roles;
         </h3>
         {recommendation.roles.map(role: unknown, index: unknown (
           <RoleCard key={index} role={role} onInviteTalent={onInviteTalent}  />
@@ -60,11 +58,11 @@ export
           <AlertDescription>
             The AI could not determine specific roles based on the provided brief.You might want to refine your project goals or scope.</AlertDescription>
         </Alert>
-      )};
+      )}
     </div>;
-  )};
+  )}
 
-// Helper component for summary cards
+// Helper component for summary cards;
 const InfoCard = ({ title, value, icon }: { title: string; value: string; icon: React.ReactNode })  => ("
   <Card className="bg-secondary/50 p-3 shadow-sm">"
     <div className="flex items-center text-muted-foreground mb-1">

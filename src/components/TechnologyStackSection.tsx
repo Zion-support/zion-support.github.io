@@ -1,9 +1,10 @@
 import {  import { motion  } from 'framer-motion';
 
- params - Function parameters
- * @returns {*} Function return value
+ params - Function parameters;
+ * @returns {*} Function return value;
  */
 function TechnologyStackSection () {export function TechnologyStackSection() {
+
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
@@ -11,21 +12,19 @@ function TechnologyStackSection () {export function TechnologyStackSection() {
           className="text-center mb-16"
           initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >"
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Technology Stack
+            Technology Stack;
           </h2>"
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Built with cutting-edge technologies and industry best practices.Our comprehensive tech stack ensures scalability, security, and performance.</p>
@@ -34,7 +33,7 @@ function TechnologyStackSection () {export function TechnologyStackSection() {
         {/* Technology Categories */}"
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {technologyCategories.map((category, index) => (
-            <motion.div
+            <motion.div;
               key={category.category}"
               className="bg-slate-800 border border-slate-700 rounded-xl p-6"
               initial={{ opacity: 0, y: 30 }}
@@ -58,15 +57,14 @@ function TechnologyStackSection () {export function TechnologyStackSection() {
 
                     <div className="flex items - center gap-2">
                       <div className="w-20 bg-slate - 700 rounded-full h-2">
-                        <motion.div
+                        <motion.div;
                           className={`h-2 bg-gradient - to - r ${category.color} rounded-full`}
                           initial={{ width: 0 }}                          whileInView={{ width: `${tech.proficiency}%` }}
                           viewport={{ once: true }}
                           transition = {
 
-  { duration: 1,
-  delay: 0.8 + techIndex * 0.1
-
+  { duration: 1;
+  delay: 0.8 + techIndex * 0.1;
 }}
                         />
                       </div>"
@@ -80,33 +78,30 @@ function TechnologyStackSection () {export function TechnologyStackSection() {
         </div>
 
         {/* Emerging Technologies */}
-        <motion.div
+        <motion.div;
           className="mb-16"          initial = {
 
-  { opacity: 0,
-  y: 30
-
+  { opacity: 0;
+  y: 30;
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           viewport={{ once: true }}
           transition = {
 
-  { duration: 0.6,
-  delay: 0.4
-
+  { duration: 0.6;
+  delay: 0.4;
 }}
         >"
           <h3 className="text-3xl font-bold text-white text-center mb-8">
-            Emerging Technologies
+            Emerging Technologies;
           </h3>
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-6">
-            {emergingTech.map((tech, index) => (<motion.div
+            {emergingTech.map((tech, index) => (<motion.div;
                 key={tech.name}
                 className="bg-slate - 800 border border-slate - 700 rounded-xl p - 6 text-center hover:border-blue - 500 / 50 transition - all duration - 300 hover:shadow-lg hover:shadow-blue -500 / 25"                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -121,30 +116,27 @@ function TechnologyStackSection () {export function TechnologyStackSection() {
         </motion.div>;
 
         {/* Technology Philosophy */}
-        <motion.div
+        <motion.div;
           className="mb-12"          initial = {
 
-  { opacity: 0,
-  y: 30
-
+  { opacity: 0;
+  y: 30;
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           viewport={{ once: true }}
           transition = {
 
-  { duration: 0.6,
-  delay: 0.8
-
+  { duration: 0.6;
+  delay: 0.8;
 }}
         >"
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">"
             <h3 className="text-2xl font-bold text-white text-center mb-6">
-              Our Technology Philosophy
+              Our Technology Philosophy;
             </h3>
 
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap-6">
@@ -174,25 +166,22 @@ function TechnologyStackSection () {export function TechnologyStackSection() {
           </div>
         </motion.div>
 
-        <motion.div
+        <motion.div;
           className="text-center"          initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           viewport={{ once: true }}
           transition = {
 
-  { duration: 0.6,
-  delay: 1.0
-
+  { duration: 0.6;
+  delay: 1.0;
 }}
         >"
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8">"
@@ -200,7 +189,7 @@ function TechnologyStackSection () {export function TechnologyStackSection() {
               Ready to Build with Modern Tech?
             </h3>"
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Our expert team is ready to help you leverage the latest technologies
+              Our expert team is ready to help you leverage the latest technologies;
               to build scalable, secure, and innovative solutions.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
@@ -214,7 +203,7 @@ function TechnologyStackSection () {export function TechnologyStackSection() {
           </div>
         </motion.div>
       </div>;
-    </section>;) };
+    </section>;) }
 
 export default TechnologyStackSection;"
             <span className="text-2xl">→</span>;

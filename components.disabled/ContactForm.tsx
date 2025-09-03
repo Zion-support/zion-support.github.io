@@ -10,16 +10,16 @@ interface FormData {
   message: string;
 }
 
-  name: string,,
-  email: string,,
-company: string,
-  service: string,
+  name: string,
+  email: string,
+company: string;
+  service: string;
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    company: '',
-    service: '',
+    name: ''
+    email: ''
+    company: ''
+    service: ''
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -27,18 +27,18 @@ const ContactForm: React.FC = () => {
   const [errors, setErrors] = useState<Partial<FormData>>({});
 
   const services = [
-    'AI & Machine Learning',
-    'Cloud & DevOps',
-    'Cybersecurity',
-    'Web Development',
-    'Mobile Development',
-    'Data Analytics',
-    'Digital Transformation',
-    'Other',
+    'AI & Machine Learning'
+    'Cloud & DevOps'
+    'Cybersecurity'
+    'Web Development'
+    'Mobile Development'
+    'Data Analytics'
+    'Digital Transformation'
+    'Other'
   ];
 
   const validateForm = (): boolean => {
-    const newErrors: Partial<FormData> = {};
+    const newErrors: Partial<FormData> = {}
 
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required';
@@ -56,7 +56,7 @@ const ContactForm: React.FC = () => {
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
-  };
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -67,42 +67,44 @@ const ContactForm: React.FC = () => {
 
     setIsSubmitting(true);
 
-    // Simulate API call
+    // Simulate API call;
     await new Promise(resolve => setTimeout(resolve, 2000));
 
     setIsSubmitting(false);
     setIsSubmitted(true);
 
-    // Reset form after 3 seconds
+    // Reset form after 3 seconds;
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        service: '',
+        name: ''
+        email: ''
+        company: ''
+        service: ''
         message: ''
       });
     }, 3000);
-  };
+  }
 
   const handleChange = (
     e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
     >
   ) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
 
-    // Clear error when user starts typing
-    if (errors[name as keyof FormData]) {
+    // Clear error when user starts typing;
+    if() {
+
       setErrors(prev => ({ ...prev, [name]: undefined }));
     }
-  };
+  }
 
-  if (isSubmitted) {
+  if() {
+
     return (
-      <motion.div
+      <motion.div;
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         className="bg-green-50 border border-green-200 rounded-xl p-8 text-center"
@@ -123,7 +125,7 @@ const ContactForm: React.FC = () => {
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Ready to transform your business? Let's discuss how our technology
+          Ready to transform your business? Let's discuss how our technology;
           solutions can drive your success.
         </p>
       </div>
@@ -131,7 +133,7 @@ const ContactForm: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
         <div>
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Contact Information
+            Contact Information;
           </h3>
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
@@ -153,9 +155,9 @@ const ContactForm: React.FC = () => {
               <div>
                 <p className="font-medium text-gray-900">Address</p>
                 <p className="text-gray-600">
-                  364 E Main St STE 1008
+                  364 E Main St STE 1008;
                   <br />
-                  Middletown, DE 19709
+                  Middletown, DE 19709;
                 </p>
               </div>
             </div>
@@ -165,13 +167,13 @@ const ContactForm: React.FC = () => {
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label
+              <label;
                 htmlFor="name"
                 className="block text-sm font-medium text-gray-700 mb-2"
               >
                 Full Name *
               </label>
-              <input
+              <input;
                 type="text"
                 id="name"
                 name="name"
@@ -188,13 +190,13 @@ const ContactForm: React.FC = () => {
             </div>
 
             <div>
-              <label
+              <label;
                 htmlFor="email"
                 className="block text-sm font-medium text-gray-700 mb-2"
               >
                 Email Address *
               </label>
-              <input
+              <input;
                 type="email"
                 id="email"
                 name="email"
@@ -213,13 +215,13 @@ const ContactForm: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label
+              <label;
                 htmlFor="company"
                 className="block text-sm font-medium text-gray-700 mb-2"
               >
-                Company
+                Company;
               </label>
-              <input
+              <input;
                 type="text"
                 id="company"
                 name="company"
@@ -231,13 +233,13 @@ const ContactForm: React.FC = () => {
             </div>
 
             <div>
-              <label
+              <label;
                 htmlFor="service"
                 className="block text-sm font-medium text-gray-700 mb-2"
               >
-                Service Interest
+                Service Interest;
               </label>
-              <select
+              <select;
                 id="service"
                 name="service"
                 value={formData.service}
@@ -254,13 +256,13 @@ const ContactForm: React.FC = () => {
           </div>
 
           <div>
-            <label
+            <label;
               htmlFor="message"
               className="block text-sm font-medium text-gray-700 mb-2"
             >
               Message *
             </label>
-            <textarea
+            <textarea;
               id="message"
               name="message"
               value={formData.message}
@@ -276,7 +278,7 @@ const ContactForm: React.FC = () => {
             )}
           </div>
 
-          <motion.button
+          <motion.button;
             type="submit"
             disabled={isSubmitting}
             whileHover={{ scale: 1.02 }}
@@ -301,6 +303,6 @@ const ContactForm: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 
 export default ContactForm;

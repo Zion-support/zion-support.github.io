@@ -2,97 +2,98 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  Rocket, 
-  Satellite, 
-  Globe, 
-  Brain, 
-  CheckCircle, 
-  Star, 
-  ArrowRight, 
-  Mail, 
-  Phone, 
-  MapPin,
-  Orbit,
-  Circle,
-  Eye,
-  Signal,
-  Navigation,
-  Shield,
-  Zap,
-  Target,
-  Users,
-  Clock,
-  Award,
-  SatelliteDish
+  Rocket;
+  Satellite;
+  Globe;
+  Brain;
+  CheckCircle;
+  Star;
+  ArrowRight;
+  Mail;
+  Phone;
+  MapPin;
+  Orbit;
+  Circle;
+  Eye;
+  Signal;
+  Navigation;
+  Shield;
+  Zap;
+  Target;
+  Users;
+  Clock;
+  Award;
+  SatelliteDish;
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 export default function AISpaceTechnology() {
+
   const features = [
-    "AI-powered satellite navigation systems",
-    "Space debris tracking and collision avoidance",
-    "Autonomous spacecraft operations",
-    "Earth observation and climate monitoring",
-    "Space weather forecasting",
-    "Satellite constellation management",
-    "Deep space exploration AI",
+    "AI-powered satellite navigation systems"
+    "Space debris tracking and collision avoidance"
+    "Autonomous spacecraft operations"
+    "Earth observation and climate monitoring"
+    "Space weather forecasting"
+    "Satellite constellation management"
+    "Deep space exploration AI"
     "Space mining and resource detection"
   ];
 
   const benefits = [
-    "Enhanced satellite communication reliability",
-    "Improved space mission success rates",
-    "Real-time space debris monitoring",
-    "Advanced climate change analysis",
-    "Autonomous space exploration capabilities",
-    "Cost-effective satellite operations",
-    "Enhanced GPS and navigation accuracy",
+    "Enhanced satellite communication reliability"
+    "Improved space mission success rates"
+    "Real-time space debris monitoring"
+    "Advanced climate change analysis"
+    "Autonomous space exploration capabilities"
+    "Cost-effective satellite operations"
+    "Enhanced GPS and navigation accuracy"
     "Revolutionary space resource discovery"
   ];
 
   const pricingTiers = [
     {
-      name: "Space Starter",
-      price: 1999,
-      period: "month",
-      description: "Basic space technology solutions for research and development",
+      name: "Space Starter"
+      price: 1999;
+      period: "month"
+      description: "Basic space technology solutions for research and development"
       features: [
-        "Satellite tracking and monitoring",
-        "Basic space weather data",
-        "Email support",
-        "Standard API access",
+        "Satellite tracking and monitoring"
+        "Basic space weather data"
+        "Email support"
+        "Standard API access"
         "Basic analytics dashboard"
       ]
-    },
+    }
     {
-      name: "Space Professional",
-      price: 5999,
-      period: "month",
-      description: "Advanced space technology solutions for enterprises and agencies",
+      name: "Space Professional"
+      price: 5999;
+      period: "month"
+      description: "Advanced space technology solutions for enterprises and agencies"
       features: [
-        "AI-powered satellite operations",
-        "Advanced space debris tracking",
-        "Priority support",
-        "Custom AI algorithms",
-        "Real-time monitoring",
-        "Space consulting hours",
+        "AI-powered satellite operations"
+        "Advanced space debris tracking"
+        "Priority support"
+        "Custom AI algorithms"
+        "Real-time monitoring"
+        "Space consulting hours"
         "Performance optimization"
-      ],
-      popular: true
-    },
+      ]
+      popular: true;
+    }
     {
-      name: "Space Enterprise",
-      price: 14999,
-      period: "month",
-      description: "Full-scale space technology infrastructure and operations",
+      name: "Space Enterprise"
+      price: 14999;
+      period: "month"
+      description: "Full-scale space technology infrastructure and operations"
       features: [
-        "Dedicated space operations center",
-        "Custom space AI solutions",
-        "24/7 dedicated support",
-        "White-label space platform",
-        "Space strategy consulting",
-        "SLA guarantees",
-        "Dedicated space engineer",
+        "Dedicated space operations center"
+        "Custom space AI solutions"
+        "24/7 dedicated support"
+        "White-label space platform"
+        "Space strategy consulting"
+        "SLA guarantees"
+        "Dedicated space engineer"
         "Mission control integration"
       ]
     }
@@ -100,53 +101,53 @@ export default function AISpaceTechnology() {
 
   const useCases = [
     {
-      title: "Satellite Communications",
-      description: "AI-powered satellite networks for global connectivity and communication services",
-      icon: Satellite
-    },
+      title: "Satellite Communications"
+      description: "AI-powered satellite networks for global connectivity and communication services"
+      icon: Satellite;
+    }
     {
-      title: "Earth Observation",
-      description: "Climate monitoring, disaster response, and environmental analysis using space data",
-      icon: Globe
-    },
+      title: "Earth Observation"
+      description: "Climate monitoring, disaster response, and environmental analysis using space data"
+      icon: Globe;
+    }
     {
-      title: "Space Exploration",
-      description: "Autonomous spacecraft navigation and deep space mission planning",
-      icon: Rocket
-    },
+      title: "Space Exploration"
+      description: "Autonomous spacecraft navigation and deep space mission planning"
+      icon: Rocket;
+    }
     {
-      title: "Space Mining",
-      description: "AI-driven resource detection and extraction from asteroids and celestial bodies",
-      icon: Circle
+      title: "Space Mining"
+      description: "AI-driven resource detection and extraction from asteroids and celestial bodies"
+      icon: Circle;
     }
   ];
 
   const technologies = [
     {
-      name: "Machine Learning",
-      description: "Advanced AI algorithms for space data analysis and prediction",
-      icon: Brain
-    },
+      name: "Machine Learning"
+      description: "Advanced AI algorithms for space data analysis and prediction"
+      icon: Brain;
+    }
     {
-      name: "Computer Vision",
-      description: "AI-powered image recognition for satellite imagery and space objects",
-      icon: Eye
-    },
+      name: "Computer Vision"
+      description: "AI-powered image recognition for satellite imagery and space objects"
+      icon: Eye;
+    }
     {
-      name: "Autonomous Systems",
-      description: "Self-governing spacecraft and satellite operations",
-      icon: Navigation
-    },
+      name: "Autonomous Systems"
+      description: "Self-governing spacecraft and satellite operations"
+      icon: Navigation;
+    }
     {
-      name: "Predictive Analytics",
-      description: "Forecasting space weather and orbital events",
-      icon: Signal
+      name: "Predictive Analytics"
+      description: "Forecasting space weather and orbital events"
+      icon: Signal;
     }
   ];
 
   return (
     <>
-      <SEO 
+      <SEO;
         title="AI Space Technology Services - Zion Tech Group"
         description="Revolutionary AI-powered space technology solutions. From satellite operations to space exploration, discover the future of space technology."
         canonical="/services/ai-space-technology"
@@ -157,7 +158,7 @@ export default function AISpaceTechnology() {
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 bg-[url('/images/space-pattern.svg')] bg-center opacity-10"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-6">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -165,26 +166,26 @@ export default function AISpaceTechnology() {
             >
               <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-full text-blue-300 text-sm font-medium mb-6">
                 <Rocket className="w-4 h-4 mr-2" />
-                Space Technology
+                Space Technology;
               </div>
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-500 to-indigo-400 bg-clip-text text-transparent">
-                AI Space Technology
+                AI Space Technology;
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Explore the final frontier with our AI-powered space technology solutions. From satellite operations to deep space exploration, we're pushing the boundaries of what's possible.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <Link;
                   to="/contact" 
                   className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
                 >
-                  Launch Space Mission
+                  Launch Space Mission;
                 </Link>
-                <Link 
+                <Link;
                   to="#pricing" 
                   className="px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300"
                 >
-                  View Pricing
+                  View Pricing;
                 </Link>
               </div>
             </motion.div>
@@ -194,14 +195,14 @@ export default function AISpaceTechnology() {
         {/* Features Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Space Technology Features
+                Space Technology Features;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our AI space technology platform combines cutting-edge artificial intelligence with advanced space systems to revolutionize space operations.
@@ -210,7 +211,7 @@ export default function AISpaceTechnology() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <motion.div
+                <motion.div;
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -230,14 +231,14 @@ export default function AISpaceTechnology() {
         {/* Benefits Section */}
         <section className="py-20 bg-black/20">
           <div className="max-w-7xl mx-auto px-6">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Space Technology Benefits
+                Space Technology Benefits;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Transform space operations with AI-powered intelligence and automation.
@@ -246,7 +247,7 @@ export default function AISpaceTechnology() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {benefits.map((benefit, index) => (
-                <motion.div
+                <motion.div;
                   key={index}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -266,14 +267,14 @@ export default function AISpaceTechnology() {
         {/* Technologies Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Core Technologies
+                Core Technologies;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Discover the cutting-edge technologies powering our space solutions.
@@ -282,7 +283,7 @@ export default function AISpaceTechnology() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {technologies.map((tech, index) => (
-                <motion.div
+                <motion.div;
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -305,14 +306,14 @@ export default function AISpaceTechnology() {
         {/* Use Cases Section */}
         <section className="py-20 bg-black/20">
           <div className="max-w-7xl mx-auto px-6">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Space Technology Use Cases
+                Space Technology Use Cases;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore how AI space technology is revolutionizing industries and exploration.
@@ -321,7 +322,7 @@ export default function AISpaceTechnology() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {useCases.map((useCase, index) => (
-                <motion.div
+                <motion.div;
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -344,14 +345,14 @@ export default function AISpaceTechnology() {
         {/* Pricing Section */}
         <section id="pricing" className="py-20">
           <div className="max-w-7xl mx-auto px-6">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Space Technology Pricing
+                Space Technology Pricing;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the space technology plan that fits your mission requirements.
@@ -360,13 +361,13 @@ export default function AISpaceTechnology() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
-                <motion.div
+                <motion.div;
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className={`relative bg-gradient-to-br from-blue-900/50 to-cyan-900/50 border rounded-xl p-8 ${
-                    tier.popular 
+                    tier.popular;
                       ? 'border-blue-400 scale-105' 
                       : 'border-blue-500/30'
                   }`}
@@ -374,7 +375,7 @@ export default function AISpaceTechnology() {
                   {tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
+                        Most Popular;
                       </span>
                     </div>
                   )}
@@ -397,15 +398,15 @@ export default function AISpaceTechnology() {
                     ))}
                   </ul>
 
-                  <Link 
+                  <Link;
                     to="/contact" 
                     className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                      tier.popular
+                      tier.popular;
                         ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white'
                         : 'border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
                     }`}
                   >
-                    Launch Mission
+                    Launch Mission;
                   </Link>
                 </motion.div>
               ))}
@@ -416,7 +417,7 @@ export default function AISpaceTechnology() {
         {/* CTA Section */}
         <section className="py-20 bg-black/20">
           <div className="max-w-4xl mx-auto px-6 text-center">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -428,17 +429,17 @@ export default function AISpaceTechnology() {
                 Join the space revolution and discover the infinite possibilities of AI-powered space technology.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <Link;
                   to="/contact" 
                   className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
                 >
-                  Start Space Mission
+                  Start Space Mission;
                 </Link>
-                <Link 
+                <Link;
                   to="/services" 
                   className="px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300"
                 >
-                  Explore All Services
+                  Explore All Services;
                 </Link>
               </div>
             </motion.div>
@@ -448,7 +449,7 @@ export default function AISpaceTechnology() {
         {/* Contact Information */}
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-6 text-center">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}

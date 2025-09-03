@@ -1,13 +1,14 @@
 export default function AIQACopilot() {
+
   return (
-    <Article
+    <Article;
       title="AI QA Copilot"
       subtitle="Autogenerates tests from user flows and PR diffs"
       price="from $99/mo"
       bullets={[
-        'Watches PRs and generates Playwright/Cypress tests automatically',
-        'Finds flaky tests; groups by root cause and suggests fixes',
-        'CI integrations for GitHub Actions, GitLab, CircleCI',
+        'Watches PRs and generates Playwright/Cypress tests automatically'
+        'Finds flaky tests; groups by root cause and suggests fixes'
+        'CI integrations for GitHub Actions, GitLab, CircleCI'
         'Tracks coverage and critical-path user flows'
       ]}
       links={{ website: 'https://ziontechgroup.com', contact: 'mailto:kleber@ziontechgroup.com' }}
@@ -15,7 +16,8 @@ export default function AIQACopilot() {
   )
 }
 
-function Article({ title, subtitle, price, bullets, links }: { title: string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {
+function Article() {
+
   return (
     <main style={{ fontFamily: 'system-ui, sans-serif', padding: 32, maxWidth: 920, margin: '0 auto' }}>
       <h1 style={{ marginTop: 0 }}>{title}</h1>

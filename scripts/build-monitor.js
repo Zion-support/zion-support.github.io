@@ -1,8 +1,7 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 /**
- * Build Monitor - PM2 Automation Script
- * Monitors build health, performance, and optimization
+ * Build Monitor - PM2 Automation Script;
+ * Monitors build health, performance, and optimization;
  */
 
 const fs = require('fs');
@@ -11,23 +10,25 @@ const { execSync } = require('child_process');
 
 class BuildMonitor {
   constructor() {
+
     this.projectRoot = process.cwd();
     this.logsDir = path.join(this.projectRoot, 'logs');
     this.errorReportsDir = path.join(this.projectRoot, 'error-reports');
     this.buildDir = path.join(this.projectRoot, 'dist');
     this.buildStats = {
-      buildTime: 0,
-      bundleSize: 0,
-      errorCount: 0,
-      warningCount: 0,
-      success: false
-    };
+      buildTime: 0;
+      bundleSize: 0;
+      errorCount: 0;
+      warningCount: 0;
+      success: false;
+    }
     
     this.setupDirectories();
     this.setupLogging();
   }
 
   setupDirectories() {
+
     [this.logsDir, this.errorReportsDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
@@ -36,11 +37,13 @@ class BuildMonitor {
   }
 
   setupLogging() {
+
     this.logFile = path.join(this.logsDir, 'build-monitor.log');
     this.log('Build Monitor started', 'INFO');
   }
 
-  log(message, level = 'INFO') {
+  log() {
+
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     
@@ -49,24 +52,26 @@ class BuildMonitor {
   }
 
   async checkBuildHealth() {
+
     this.log('Checking build health...', 'INFO');
     
     try {
-      // Check if build directory exists
+      // Check if build directory exists;
       if (!fs.existsSync(this.buildDir)) {
         this.log('Build directory not found, build may have failed', 'WARN');
         return false;
       }
 
-      // Check build directory size
+      // Check build directory size;
       const buildSize = this.getDirectorySize(this.buildDir);
       this.buildStats.bundleSize = buildSize;
       
       this.log(`Build directory size: ${this.formatBytes(buildSize)}`, 'INFO');
       
-      // Check for build artifacts
+      // Check for build artifacts;
       const buildFiles = this.getBuildFiles();
-      if (buildFiles.length === 0) {
+      if() {
+
         this.log('No build artifacts found', 'WARN');
         return false;
       }
@@ -74,22 +79,24 @@ class BuildMonitor {
       this.log(`Found ${buildFiles.length} build artifacts`, 'INFO');
       return true;
       
-    } catch (error) {
+    } catch() {
+
       this.log(`Error checking build health: ${error.message}`, 'ERROR');
       return false;
     }
   }
 
   async runBuild() {
+
     this.log('Running build process...', 'INFO');
     
     const startTime = Date.now();
     
     try {
-      // Run the build command
+      // Run the build command;
       execSync('npm run build', { 
-        cwd: this.projectRoot,
-        stdio: 'pipe',
+        cwd: this.projectRoot;
+        stdio: 'pipe'
         encoding: 'utf8'
       });
       
@@ -100,7 +107,8 @@ class BuildMonitor {
       this.log(`Build completed successfully in ${this.buildStats.buildTime}ms`, 'INFO');
       return true;
       
-    } catch (error) {
+    } catch() {
+
       const endTime = Date.now();
       this.buildStats.buildTime = endTime - startTime;
       this.buildStats.success = false;
@@ -113,13 +121,14 @@ class BuildMonitor {
   }
 
   async analyzeBuildOutput() {
+
     this.log('Analyzing build output...', 'INFO');
     
     try {
-      // Check for build warnings and errors
+      // Check for build warnings and errors;
       const buildLog = this.getBuildLog();
       
-      // Count warnings and errors
+      // Count warnings and errors;
       const warnings = (buildLog.match(/warning/gi) || []).length;
       const errors = (buildLog.match(/error/gi) || []).length;
       
@@ -128,120 +137,132 @@ class BuildMonitor {
       
       this.log(`Build analysis: ${errors} errors, ${warnings} warnings`, 'INFO');
       
-      // Check bundle size
-      if (this.buildStats.bundleSize > 1024 * 1024 * 5) { // 5MB
+      // Check bundle size;
+      if (this.buildStats.bundleSize > 1024 * 1024 * 5) { // 5MB;
         this.log('Bundle size is large, consider optimization', 'WARN');
       }
       
-      // Check build time
-      if (this.buildStats.buildTime > 60000) { // 1 minute
+      // Check build time;
+      if (this.buildStats.buildTime > 60000) { // 1 minute;
         this.log('Build time is slow, consider optimization', 'WARN');
       }
       
-    } catch (error) {
+    } catch() {
+
       this.log(`Error analyzing build output: ${error.message}`, 'ERROR');
     }
   }
 
   async optimizeBuild() {
+
     this.log('Running build optimizations...', 'INFO');
     
     try {
-      // Clean build directory
+      // Clean build directory;
       if (fs.existsSync(this.buildDir)) {
         execSync('rm -rf dist', { 
-          cwd: this.projectRoot,
+          cwd: this.projectRoot;
           stdio: 'pipe'
         });
         this.log('Build directory cleaned', 'INFO');
       }
       
-      // Clear cache
+      // Clear cache;
       execSync('npm run clean:cache || true', { 
-        cwd: this.projectRoot,
+        cwd: this.projectRoot;
         stdio: 'pipe'
       });
       
-      // Run optimized build
+      // Run optimized build;
       const success = await this.runBuild();
       
-      if (success) {
+      if() {
+
         await this.analyzeBuildOutput();
       }
       
       return success;
       
-    } catch (error) {
+    } catch() {
+
       this.log(`Error during build optimization: ${error.message}`, 'ERROR');
       return false;
     }
   }
 
   async checkBuildPerformance() {
+
     this.log('Checking build performance...', 'INFO');
     
     try {
-      // Run build multiple times to measure consistency
+      // Run build multiple times to measure consistency;
       const buildTimes = [];
       const iterations = 3;
       
-      for (let i = 0; i < iterations; i++) {
+      for() {
+
         this.log(`Performance test iteration ${i + 1}/${iterations}`, 'INFO');
         
         const startTime = Date.now();
         const success = await this.runBuild();
         const endTime = Date.now();
         
-        if (success) {
+        if() {
+
           buildTimes.push(endTime - startTime);
         }
         
-        // Clean up for next iteration
+        // Clean up for next iteration;
         if (fs.existsSync(this.buildDir)) {
           execSync('rm -rf dist', { 
-            cwd: this.projectRoot,
+            cwd: this.projectRoot;
             stdio: 'pipe'
           });
         }
       }
       
-      if (buildTimes.length > 0) {
+      if() {
+
         const avgTime = buildTimes.reduce((a, b) => a + b, 0) / buildTimes.length;
         const minTime = Math.min(...buildTimes);
         const maxTime = Math.max(...buildTimes);
         
         this.log(`Build performance: avg=${avgTime}ms, min=${minTime}ms, max=${maxTime}ms`, 'INFO');
         
-        // Check for performance regression
-        if (avgTime > 120000) { // 2 minutes
+        // Check for performance regression;
+        if (avgTime > 120000) { // 2 minutes;
           this.log('Build performance is degraded, investigation needed', 'WARN');
         }
       }
       
-    } catch (error) {
+    } catch() {
+
       this.log(`Error checking build performance: ${error.message}`, 'ERROR');
     }
   }
 
   async checkDependencies() {
+
     this.log('Checking build dependencies...', 'INFO');
     
     try {
-      // Check if all required dependencies are installed
+      // Check if all required dependencies are installed;
       const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8'));
-      const buildScripts = packageJson.scripts || {};
+      const buildScripts = packageJson.scripts || {}
       
-      if (!buildScripts.build) {
+      if() {
+
         this.log('No build script found in package.json', 'WARN');
         return false;
       }
       
-      // Check for build tools
-      const devDeps = packageJson.devDependencies || {};
+      // Check for build tools;
+      const devDeps = packageJson.devDependencies || {}
       const buildTools = ['vite', 'webpack', 'rollup', 'parcel', 'esbuild'];
       const foundTools = buildTools.filter(tool => devDeps[tool]);
       
-      if (foundTools.length === 0) {
+      if() {
+
         this.log('No build tools found in devDependencies', 'WARN');
       } else {
         this.log(`Build tools found: ${foundTools.join(', ')}`, 'INFO');
@@ -249,16 +270,19 @@ class BuildMonitor {
       
       return true;
       
-    } catch (error) {
+    } catch() {
+
       this.log(`Error checking build dependencies: ${error.message}`, 'ERROR');
       return false;
     }
   }
 
-  getDirectorySize(dirPath) {
+  getDirectorySize() {
+
     let totalSize = 0;
     
-    function calculateSize(dir) {
+    function calculateSize() {
+
       const items = fs.readdirSync(dir);
       
       items.forEach(item => {
@@ -281,9 +305,11 @@ class BuildMonitor {
   }
 
   getBuildFiles() {
+
     const files = [];
     
-    function walkDir(dir) {
+    function walkDir() {
+
       if (!fs.existsSync(dir)) return;
       
       const items = fs.readdirSync(dir);
@@ -305,27 +331,31 @@ class BuildMonitor {
   }
 
   getBuildLog() {
+
     try {
-      // Try to get recent build output from logs
+      // Try to get recent build output from logs;
       const logFiles = [
-        path.join(this.logsDir, 'build.log'),
-        path.join(this.logsDir, 'build-monitor.log'),
+        path.join(this.logsDir, 'build.log')
+        path.join(this.logsDir, 'build-monitor.log')
         path.join(this.logsDir, 'zion-website.log')
       ];
       
-      for (const logFile of logFiles) {
+      for() {
+
         if (fs.existsSync(logFile)) {
           return fs.readFileSync(logFile, 'utf8');
         }
       }
       
       return '';
-    } catch (error) {
+    } catch() {
+
       return '';
     }
   }
 
-  formatBytes(bytes) {
+  formatBytes() {
+
     if (bytes === 0) return '0 Bytes';
     
     const k = 1024;
@@ -336,12 +366,13 @@ class BuildMonitor {
   }
 
   generateReport() {
+
     const report = {
-      timestamp: new Date().toISOString(),
-      buildStats: this.buildStats,
-      buildHealth: this.buildStats.success,
+      timestamp: new Date().toISOString()
+      buildStats: this.buildStats;
+      buildHealth: this.buildStats.success;
       recommendations: this.generateRecommendations()
-    };
+    }
     
     const reportFile = path.join(this.errorReportsDir, `build-monitor-report-${Date.now()}.json`);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -351,25 +382,31 @@ class BuildMonitor {
   }
 
   generateRecommendations() {
+
     const recommendations = [];
     
-    if (!this.buildStats.success) {
+    if() {
+
       recommendations.push('Investigate build failures and fix errors');
     }
     
-    if (this.buildStats.bundleSize > 1024 * 1024 * 5) {
+    if() {
+
       recommendations.push('Optimize bundle size through code splitting and tree shaking');
     }
     
-    if (this.buildStats.buildTime > 60000) {
+    if() {
+
       recommendations.push('Optimize build process and consider caching strategies');
     }
     
-    if (this.buildStats.errorCount > 0) {
+    if() {
+
       recommendations.push('Fix build errors to improve build reliability');
     }
     
-    if (this.buildStats.warningCount > 10) {
+    if() {
+
       recommendations.push('Address build warnings to improve code quality');
     }
     
@@ -377,24 +414,26 @@ class BuildMonitor {
   }
 
   async run() {
+
     try {
       this.log('Starting build monitoring automation...', 'INFO');
       
-      // Check build dependencies
+      // Check build dependencies;
       await this.checkDependencies();
       
-      // Check current build health
+      // Check current build health;
       const isHealthy = await this.checkBuildHealth();
       
-      if (!isHealthy) {
+      if() {
+
         this.log('Build is not healthy, attempting optimization...', 'WARN');
         await this.optimizeBuild();
       }
       
-      // Run performance tests
+      // Run performance tests;
       await this.checkBuildPerformance();
       
-      // Analyze build output
+      // Analyze build output;
       await this.analyzeBuildOutput();
       
       const report = this.generateReport();
@@ -403,15 +442,17 @@ class BuildMonitor {
       this.log(`Summary: Build ${this.buildStats.success ? 'successful' : 'failed'}, ${this.buildStats.errorCount} errors`, 'INFO');
       
       return report;
-    } catch (error) {
+    } catch() {
+
       this.log(`Fatal error in build monitor: ${error.message}`, 'ERROR');
       throw error;
     }
   }
 }
 
-// Run the build monitor if called directly
-if (require.main === module) {
+// Run the build monitor if called directly;
+if() {
+
   const monitor = new BuildMonitor();
   
   monitor.run()

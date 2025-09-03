@@ -7,99 +7,99 @@ import { Download, ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, Tre
 
 const Brochure = () => {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Product Brochure - Zion Tech Group",
-    "url": "https://ziontechgroup.com/brochure",
-    "description": "Download our comprehensive product brochure featuring AI services, IT solutions, and micro SaaS platforms",
+    "@context": "https://schema.org"
+    "@type": "WebPage"
+    "name": "Product Brochure - Zion Tech Group"
+    "url": "https://ziontechgroup.com/brochure"
+    "description": "Download our comprehensive product brochure featuring AI services, IT solutions, and micro SaaS platforms"
     "publisher": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
+      "@type": "Organization"
+      "name": "Zion Tech Group"
       "url": "https://ziontechgroup.com"
     }
-  };
+  }
 
   const brochures = [
     {
-      title: 'AI Services Brochure',
-      description: 'Comprehensive guide to our AI solutions and capabilities',
-      pages: 24,
-      size: '2.4 MB',
-      format: 'PDF',
-      category: 'AI Services',
+      title: 'AI Services Brochure'
+      description: 'Comprehensive guide to our AI solutions and capabilities'
+      pages: 24;
+      size: '2.4 MB'
+      format: 'PDF'
+      category: 'AI Services'
       features: [
-        'Natural Language Processing',
-        'Computer Vision',
-        'Predictive Analytics',
-        'Machine Learning Models',
+        'Natural Language Processing'
+        'Computer Vision'
+        'Predictive Analytics'
+        'Machine Learning Models'
         'AI Integration Services'
-      ],
-      downloadUrl: '#',
+      ]
+      downloadUrl: '#'
       previewUrl: '#'
-    },
+    }
     {
-      title: 'IT Solutions Brochure',
-      description: 'Complete overview of our IT services and infrastructure solutions',
-      pages: 32,
-      size: '3.1 MB',
-      format: 'PDF',
-      category: 'IT Services',
+      title: 'IT Solutions Brochure'
+      description: 'Complete overview of our IT services and infrastructure solutions'
+      pages: 32;
+      size: '3.1 MB'
+      format: 'PDF'
+      category: 'IT Services'
       features: [
-        'Cloud Migration',
-        'DevOps Automation',
-        'Security Services',
-        'Network Management',
+        'Cloud Migration'
+        'DevOps Automation'
+        'Security Services'
+        'Network Management'
         'Data Management'
-      ],
-      downloadUrl: '#',
+      ]
+      downloadUrl: '#'
       previewUrl: '#'
-    },
+    }
     {
-      title: 'Micro SaaS Platform',
-      description: 'Detailed information about our SaaS development and platform services',
-      pages: 28,
-      size: '2.8 MB',
-      format: 'PDF',
-      category: 'Micro SaaS',
+      title: 'Micro SaaS Platform'
+      description: 'Detailed information about our SaaS development and platform services'
+      pages: 28;
+      size: '2.8 MB'
+      format: 'PDF'
+      category: 'Micro SaaS'
       features: [
-        'SaaS Development',
-        'Platform Architecture',
-        'API Management',
-        'User Management',
+        'SaaS Development'
+        'Platform Architecture'
+        'API Management'
+        'User Management'
         'Analytics & Reporting'
-      ],
-      downloadUrl: '#',
+      ]
+      downloadUrl: '#'
       previewUrl: '#'
-    },
+    }
     {
-      title: 'Complete Solutions Guide',
-      description: 'All-in-one brochure covering all our services and solutions',
-      pages: 48,
-      size: '4.2 MB',
-      format: 'PDF',
-      category: 'Complete Guide',
+      title: 'Complete Solutions Guide'
+      description: 'All-in-one brochure covering all our services and solutions'
+      pages: 48;
+      size: '4.2 MB'
+      format: 'PDF'
+      category: 'Complete Guide'
       features: [
-        'All AI Services',
-        'Complete IT Solutions',
-        'SaaS Development',
-        'Case Studies',
+        'All AI Services'
+        'Complete IT Solutions'
+        'SaaS Development'
+        'Case Studies'
         'Pricing Information'
-      ],
-      downloadUrl: '#',
+      ]
+      downloadUrl: '#'
       previewUrl: '#'
     }
   ];
 
   const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '500+', label: 'Projects Completed' }
+    { number: '50+', label: 'Happy Clients' }
+    { number: '99.9%', label: 'Uptime Guarantee' }
     { number: '24/7', label: 'Support Available' }
   ];
 
   return (
     <>
-      <SEOHead 
+      <SEOHead;
         title="Product Brochure - Zion Tech Group"
         description="Download our comprehensive product brochures featuring AI services, IT solutions, and micro SaaS platforms. Get detailed information about our capabilities."
         keywords="brochure, product brochure, AI services brochure, IT solutions brochure, micro SaaS brochure, download"
@@ -113,25 +113,25 @@ const Brochure = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Product
+                Product;
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500"> Brochures</span>
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Download our comprehensive brochures to learn more about our AI services, 
+                Download our comprehensive brochures to learn more about our AI services;
                 IT solutions, and micro SaaS platforms. Get detailed information about our capabilities and success stories.
               </p>
               <div className="flex items-center justify-center space-x-4 text-sm text-gray-400">
                 <div className="flex items-center">
                   <Download className="w-4 h-4 text-cyan-400 mr-2" />
-                  Free downloads
+                  Free downloads;
                 </div>
                 <div className="flex items-center">
                   <FileText className="w-4 h-4 text-cyan-400 mr-2" />
-                  Detailed information
+                  Detailed information;
                 </div>
                 <div className="flex items-center">
                   <Eye className="w-4 h-4 text-cyan-400 mr-2" />
-                  Preview available
+                  Preview available;
                 </div>
               </div>
             </div>
@@ -158,7 +158,7 @@ const Brochure = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Available Brochures</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Choose the brochure that best matches your interests and download it instantly
+                Choose the brochure that best matches your interests and download it instantly;
               </p>
             </div>
 
@@ -193,19 +193,19 @@ const Brochure = () => {
                   </div>
 
                   <div className="flex space-x-4">
-                    <a
+                    <a;
                       href={brochure.downloadUrl}
                       className="flex-1 bg-gradient-to-r from-cyan-400 to-blue-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download
+                      Download;
                     </a>
-                    <a
+                    <a;
                       href={brochure.previewUrl}
                       className="flex-1 border border-gray-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-gray-600 transition-colors flex items-center justify-center"
                     >
                       <Eye className="w-5 h-5 mr-2" />
-                      Preview
+                      Preview;
                     </a>
                   </div>
                 </div>
@@ -220,7 +220,7 @@ const Brochure = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Additional Resources</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Explore more resources to learn about our solutions and services
+                Explore more resources to learn about our solutions and services;
               </p>
             </div>
 
@@ -231,13 +231,13 @@ const Brochure = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Case Studies</h3>
                 <p className="text-gray-300 mb-4">
-                  Read about successful implementations and client success stories
+                  Read about successful implementations and client success stories;
                 </p>
-                <Link
+                <Link;
                   href="/case-studies"
                   className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center justify-center"
                 >
-                  View Case Studies
+                  View Case Studies;
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
@@ -248,13 +248,13 @@ const Brochure = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Team & Expertise</h3>
                 <p className="text-gray-300 mb-4">
-                  Meet our expert team and learn about our technical capabilities
+                  Meet our expert team and learn about our technical capabilities;
                 </p>
-                <Link
+                <Link;
                   href="/team"
                   className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center justify-center"
                 >
-                  Meet Our Team
+                  Meet Our Team;
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
@@ -265,13 +265,13 @@ const Brochure = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Contact Us</h3>
                 <p className="text-gray-300 mb-4">
-                  Get in touch with our experts for personalized consultation
+                  Get in touch with our experts for personalized consultation;
                 </p>
-                <Link
+                <Link;
                   href="/contact"
                   className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center justify-center"
                 >
-                  Contact Sales
+                  Contact Sales;
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
@@ -284,20 +284,20 @@ const Brochure = () => {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">Need More Information?</h2>
             <p className="text-xl mb-8 text-cyan-100">
-              Our team is ready to provide personalized consultation and answer any questions
+              Our team is ready to provide personalized consultation and answer any questions;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 href="/contact"
                 className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Contact Sales
+                Contact Sales;
               </Link>
-              <Link
+              <Link;
                 href="/demo"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
               >
-                Schedule Demo
+                Schedule Demo;
               </Link>
             </div>
           </div>
@@ -307,6 +307,6 @@ const Brochure = () => {
       <Footer />
     </>
   );
-};
+}
 
 export default Brochure;

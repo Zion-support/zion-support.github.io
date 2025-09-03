@@ -54,7 +54,7 @@ const Sitemap: React.FC = () => {,"});,"})"
     </div>;,"});,"})"
 ;,"});,"})"
   );,"});,"});"
-};,"});,"})"
+},"});,"})"
 ;,"});,"})"
 export default SitemapPage,"});,"})"
 import React from "react"
@@ -64,8 +64,8 @@ const Head = dynamic(() => import("next/head"), { ssr: false })
 }
 const Link = dynamic(() => import("next/link"), { ssr: false })
 }
-  Mail,
-  MapPin} from "lucide-react
+  Mail;
+  MapPin} from "lucide-react;
 export default function Sitemap() {
 
   const currentYear = new Date().getFullYear()"
@@ -85,13 +85,13 @@ export default function Sitemap() {
         keywords="sitemap, navigation, pages, services, Zion Tech Group"  />
       "
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">"
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
           <motion.div,"
 initial="{{" opacity: 0, y: 20 }}
 
-  Database, Network,
+  Database, Network;
   Zap, Target,>
-  CheckCircle} from "lucide - react","const Sitemap: React.FC = () => {",
+  CheckCircle} from "lucide - react","const Sitemap: React.FC = () => {"
   const lastUpdated = new Date().toISOString().split("T")[0],""  const mainPages = []"
   const servicePages = []""
   const contentPages = []""
@@ -105,13 +105,13 @@ initial="{{" opacity: 0, y: 20 }}
             className="text-center mb-12"
           >"
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Site Navigation,
+              Site Navigation;
             </h1>"
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
               Explore all our pages and services. Find exactly what you"re looking for with our comprehensive site map.
             </p>"
             <Badge variant="secondary" className="mb-4">"              <Map className="w-4 h-4 mr-2"  />"              Site Navigation"            </Badge>""
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">"              Sitemap"            </h1>",
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">"              Sitemap"            </h1>"
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"              Find all pages and content on our website. Navigate through our services, resources, and information easily."            </p>"
             <div className="flex items-center justify-center text-gray-400">"              <Calendar className="w-4 h-4 mr-2"  />"              Last updated: {new Date(lastUpdated).toLocaleDateString()}"            </div></motion.div>"
         </div>
@@ -126,7 +126,7 @@ initial="{{" opacity: 0, y: 20 }}
               <Badge variant="outline" className="cursor-pointer hover:bg-blue-500 hover:text-white transition-colors">"                Resources"              </Badge></div>
           </motion.div>
 "
-          <div className="grid gap-8">,
+          <div className="grid gap-8">
             {categories.map((category, categoryIndex) => {
               const categoryPages = pages.filter(page => page.category === category)
 }
@@ -144,7 +144,7 @@ key = "{category}""
 
                   </h2>
                   "
-                  <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">,
+                  <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">
                     {categoryPages.map((page, pageIndex) => (
                       <motion.div,"
 key="{page.url}""
@@ -160,7 +160,7 @@ key="{page.url}""
                                 <div className="p-2 bg-blue-100 rounded-lg mr-3">"
                                   <page.icon className="w-5 h-5 text-blue-600" />
                                 </div>"
-                                <h3 className="text-lg font-semibold text-gray-900">,
+                                <h3 className="text-lg font-semibold text-gray-900">
                                   {page.title}
 
                                 </h3>
@@ -184,7 +184,7 @@ key="{page.url}""
                             </a>
                           </div>
                         </Card>
-                      </motion.div>,
+                      </motion.div>
                     ))}
 
                   </div>
@@ -208,112 +208,112 @@ initial = "{{" opacity: 0, y: 20 }}"
             <div className="grid gap-6 md: grid-cols-3 text-center">"
               <div className="flex flex-col items-center">"
                 <div className="p-3 bg-blue-100 rounded-full mb-3">"
-                  <Phone className="w-6 h-6 text-blue-600"  />,
+                  <Phone className="w-6 h-6 text-blue-600"  />
       {/* comment */}"
 <section className="py-20 px-4 sm:px-6 lg:px-8">"        <div className="max-w-7xl mx-auto">"          <motion.div"            initial="{{" opacity: 0, y: 20 }}"
-  Database, Zap,
+  Database, Zap;
   Lock, Code>
   Smartphone, Monitor,>
   Server, Network"
 } from "lucide-react"
 
 const SitemapPage: React.FC = () => {
-  const siteStructure = []},
+  const siteStructure = []}
     {"
-      title: "Services",
-      links: [,
+      title: "Services"
+      links: [
         {,"
 name: "All Services","
           href: "/services","
-          description: "Overview of all services"},
+          description: "Overview of all services"}
         {"
           name: "AI Services","
           href: "/ai-services","
-          description: "Artificial Intelligence solutions"},
+          description: "Artificial Intelligence solutions"}
         {"
           name: "IT Services","
           href: "/it-services","
-          description: "Information Technology services"},
+          description: "Information Technology services"}
         {"
           name: "Micro SaaS","
           href: "/micro-saas","
-          description: "Micro Software as a Service"},
+          description: "Micro Software as a Service"}
         {"
           name: "AI Development","
           href: "/services/ai-development","
-          description: "Custom AI development"},
+          description: "Custom AI development"}
         {"
           name: "Cloud Services","
           href: "/services/cloud-services","
-          description: "Cloud computing solutions"},
+          description: "Cloud computing solutions"}
         {"
           name: "Web Development","
           href: "/services/web-development","
-          description: "Web application development"}]},
+          description: "Web application development"}]}
     {"
-      title: "Solutions",
-      links: [,
+      title: "Solutions"
+      links: [
         {,"
 name: "All Solutions","
           href: "/solutions","
-          description: "Overview of all solutions"},
+          description: "Overview of all solutions"}
         {"
           name: "AI Content Creation","
           href: "/solutions/ai-content-creation","
-          description: "Automated content generation"},
+          description: "Automated content generation"}
         {"
           name: "Email Automation","
           href: "/solutions/email-automation","
-          description: "Email marketing automation"},
+          description: "Email marketing automation"}
         {"
           name: "Customer Support","
           href: "/solutions/customer-support","
-          description: "AI-powered support platform"},
+          description: "AI-powered support platform"}
         {"
           name: "Event Management","
           href: "/solutions/event-management","
-          description: "Event planning and management"},
+          description: "Event planning and management"}
         {"
           name: "Project Management","
           href: "/solutions/project-management","
-          description: "Project collaboration tools"},
+          description: "Project collaboration tools"}
         {"
           name: "Workflow Automation","
           href: "/solutions/workflow-automation","
-          description: "Business process automation"}]},
+          description: "Business process automation"}]}
     {"
-      title: "Business",
-      links: [,
+      title: "Business"
+      links: [
         {,"
 name: "Pricing","
           href: "/pricing","
-          description: "Service pricing and plans"},
+          description: "Service pricing and plans"}
         {"
           name: "Partners","
           href: "/partners","
-          description: "Partnership opportunities"},
+          description: "Partnership opportunities"}
         {"
           name: "Careers","
           href: "/careers","
-          description: "Job opportunities and culture"}]},
+          description: "Job opportunities and culture"}]}
     {"
-      title: "Legal & Policies",
-      links: [,
+      title: "Legal & Policies"
+      links: [
         {,"
 name: "Privacy Policy","
           href: "/privacy","
-          description: "Privacy and data protection"},
+          description: "Privacy and data protection"}
         {"
           name: "Terms of Service","
           href: "/terms","
-          description: "Terms and conditions"},
+          description: "Terms and conditions"}
         {"
           name: "Cookie Policy","
           href: "/cookies","
           description: "Cookie usage and preferences"}]},"
-      category: "Main Pages",
+      category: "Main Pages"
       icon: Home,"
-      pages: [",
+      pages: ["
         { nam,"
     e: "Home", path: "/", description: "Main landing page" },"
         { name: "About", path: "/about", description: "About Zion Tech Group" },"
@@ -324,9 +324,9 @@ name: "Privacy Policy","
       ]
 },"
     {""
-      category: "Services",
+      category: "Services"
       icon: Briefcase,"
-      pages: [",
+      pages: ["
         { nam,"
     e: "AI Services", path: "/ai-services", description: "Artificial Intelligence solutions" },"
         { name: "IT Services", path: "/it-services", description: "Information Technology services" },"
@@ -338,9 +338,9 @@ name: "Privacy Policy","
       ]
 },"
     {""
-      category: "Resources",
+      category: "Resources"
       icon: BookOpen,"
-      pages: [",
+      pages: ["
         { nam,"
     e: "Case Studies", path: "/case-studies", description: "Success stories and case studies" },"
         { name: "White Papers", path: "/white-papers", description: "Technical white papers" },"
@@ -351,9 +351,9 @@ name: "Privacy Policy","
       ]
 },"
     {""
-      category: "Company",
+      category: "Company"
       icon: Users,"
-      pages: [",
+      pages: ["
         { nam,"
     e: "Team", path: "/team", description: "Meet our team" },"
         { name: "Partners", path: "/partners", description: "Our partners" },"
@@ -363,9 +363,9 @@ name: "Privacy Policy","
       ]
 },"
     {""
-      category: "Legal",
+      category: "Legal"
       icon: Shield,"
-      pages: [",
+      pages: ["
         { nam,"
     e: "Privacy Policy", path: "/privacy", description: "Privacy policy and data protection" },"
         { name: "Terms of Service", path: "/terms", description: "Terms and conditions" },"
@@ -382,11 +382,11 @@ name: "Privacy Policy","
         <title>Sitemap - Zion Tech Group</title>"
         <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our pages, services, and resources in one place."  />
         <meta name="viewport" content="width=device-width, initial-scale=1"  />"
-        <link rel="canonical" href="https: // comment
+        <link rel="canonical" href="https: // comment;
       </Head>
       <ModernHeader  />
       "
-      <main className="min-h-screen bg-white">,
+      <main className="min-h-screen bg-white">
         {/* comment */}"
         <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
@@ -394,10 +394,10 @@ name: "Privacy Policy","
               <div className="flex items-center justify-center mb-6">"
                 <Globe className="h-12 w-12 text-blue-600 mr-4"  />"
                 <h1 className="text-4xl sm:text-5xl font-bold text-gray-900">
-                  Site Map,
+                  Site Map;
                 </h1>
               </div>"
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">,
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Navigate our website easily. Find all our pages, services, and resources organized by category.
               </p>
             </div>
@@ -405,7 +405,7 @@ name: "Privacy Policy","
         {/* comment */}"
         <section className="py-20 bg-white">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
-            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">,
+            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
               {siteStructure.map((section, sectionIndex) => ("
                 <div key="{sectionIndex}" className="bg-gray-50 rounded-xl p-6">"
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">{section.category}</h2>"
@@ -417,7 +417,7 @@ name: "Privacy Policy","
                         >"
                           <ExternalLink className="h-5 w-5 text-gray-400 group-hover:text-blue-600 transition-colors mt-0.5 flex-shrink-0"  />
                           <div>"
-                            <div className="font-medium text-gray-900 group-hover:text-blue-600 transition-colors">,
+                            <div className="font-medium text-gray-900 group-hover:text-blue-600 transition-colors">
                               {page.name}
 
                             </div>"
@@ -444,7 +444,7 @@ name: "Privacy Policy","
           content="Complete sitemap of Zion Tech Group website. Find all pages, services, and resources."  />"
         <meta name="keywords""
           content="sitemap, navigation, pages, services, solutions, Zion Tech Group"  />"
-        <link rel="canonical" href="https: // comment
+        <link rel="canonical" href="https: // comment;
       </Head>
       <Navigation  />
 "
@@ -453,33 +453,33 @@ name: "Privacy Policy","
       </Head>
 "
       <div className="min-h-screen bg-gray-50 py-12">"
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           {/* comment */}"
           <div className="mb-8">"
             <Link href="/""
               className="inline-flex items-center text-blue-600 hover: text-blue-800 mb-4"
             >"
               <ArrowLeft className="h-4 w-4 mr-2"  />
-              Back to Home,
+              Back to Home;
             </Link>"
             <div className="flex items-center mb-4">"
               <Sitemap className="h-8 w-8 text-blue-600 mr-3"  />"
               <h1 className="text-3xl font-bold text-gray-900">Sitemap</h1>
             </div>"
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Site Map,
+              Site Map;
             </h1>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">,
-              Navigate through all pages and resources available on the Zion,
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Navigate through all pages and resources available on the Zion;
 Tech Group website"
             <p className="text-gray-600">
-              Complete overview of all pages and sections on the Zion Tech Group,
+              Complete overview of all pages and sections on the Zion Tech Group;
 website."
         title="Sitemap""
         description="Complete sitemap of Zion Tech Group website. Find all pages, services, and resources in one place.""
         keywords="sitemap, website navigation, pages, services, resources" />"
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">"
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
           <motion.div,"
 initial="{{" opacit>
     y: 0, y: 20 }}"
@@ -503,7 +503,7 @@ key="{category.name}""
               Find exactly what you are looking for with our comprehensive site structure.
             </p>"
           </motion.div>""
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">,
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
             {siteStructure.map((section, index) => ("
               <Card key="{index}" className="p-6">"
                 <h2 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">"
@@ -518,7 +518,7 @@ key="{category.name}""
                         className="group flex items-start justify-between text-blue-600 hover: text-blue-800 transition-colors"
                       >"
                         <div className="flex-1">"
-                          <span className="font-medium group-hover:underline">,
+                          <span className="font-medium group-hover:underline">
                             {link.name}
 
                           </span>"
@@ -529,7 +529,7 @@ key="{category.name}""
                         </div>"
                         <ExternalLink className="h-4 w-4 ml-2 flex-shrink-0 opacity-0 group-hover: opacity-100 transition-opacity"  />
                       </Link>
-                    </li>,
+                    </li>
                   ))}
 
                 </ul>
@@ -540,41 +540,41 @@ key="{category.name}""
           {/* comment */}"
           <Card className="mt-8 p-6">"
             <h2 className="text-xl font-semibold text-gray-900 mb-4">
-              About This Sitemap,
+              About This Sitemap;
             </h2>"
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-6">,
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
               {contactInfo.map((contact, index) => ("
                 <div key="{index}" className="flex items-center space-x-3">"
                   <contact.icon className="w-5 h-5 text-cyan-400" />"
                   <a href="{contact.href}""
                     className="text-gray-300 hover: text-cyan-400 transition-colors""
             <div className="prose text-gray-600">
-              <p>,
-                This sitemap provides a comprehensive overview of all pages and,
+              <p>
+                This sitemap provides a comprehensive overview of all pages and;
 sections available on the Zion Tech Group website. Our site is,"
 organized into several main categories:{" "}
 
               </p>
               <ul>
                 <li>
-                  <strong>Main Pages:</strong> Core pages including home, about,
-                  contact, and blog,
+                  <strong>Main Pages:</strong> Core pages including home, about;
+                  contact, and blog;
                 </li>
                 <li>
-                  <strong>Services: </strong> Detailed information about our,
-technology services and solutions,
+                  <strong>Services: </strong> Detailed information about our;
+technology services and solutions;
                 </li>
                 <li>
-                  <strong>Solutions:</strong> Specific product offerings and,
-platforms we provide,
+                  <strong>Solutions:</strong> Specific product offerings and;
+platforms we provide;
                 </li>
                 <li>
-                  <strong>Business:</strong> Information about pricing,
-                  partnerships, and career opportunities,
+                  <strong>Business:</strong> Information about pricing;
+                  partnerships, and career opportunities;
                 </li>
                 <li>
-                  <strong>Legal & Policies: </strong> Important legal documents,
-and privacy information,
+                  <strong>Legal & Policies: </strong> Important legal documents;
+and privacy information;
                 </li>
               </ul>
               <p>
@@ -583,7 +583,7 @@ don&apos;t hesitate to{" "}"
                 <Link href = "/contact""
                   className="text-blue-600 hover: underline"
                 >
-                  contact us",
+                  contact us"
                 </Link>{" "}"
                 for assistance."
               </p>
@@ -605,7 +605,7 @@ key="{section.category}""
                     >"
 <Card className="p-6 h-full hover:shadow-lg transition-shadow">"                        <div className="flex items-start mb-4">"                          <div className="{"p-3" rounded-lg bg-gradient-to-r ${category.color} mr-4"}>"                            <page.icon className="w-6 h-6 text-white" />"                          </div>"                          <div className="flex-1">"                            <h3 className="text-xl font-bold text-white mb-2">{page.name}</h3>"                            <p className="text-gray-300 text-sm mb-4">{page.description}</p>"                          </div>"                        </div>`                        ""
                         <div className="flex items-center justify-between">"                          <a"                            href="{page.url}""
-                            className="text-blue-400 hover: text-blue-300 text-sm font-medium flex items-center""                          >"                            Visit Page",
+                            className="text-blue-400 hover: text-blue-300 text-sm font-medium flex items-center""                          >"                            Visit Page"
                             <ArrowRight className="w-4 h-4 ml-1"  />"                          </a>"                          <Badge variant="secondary" className="text-xs">"                            {page.url}"                          </Badge></div>
                       </Card>
                     </motion.div>
@@ -629,7 +629,7 @@ key="{section.category}""
                 <h3 className="font-semibold text-gray-900 mb-1">Visit Us</h3>"
                 <p className="text-gray-600">
                   364 E Main St STE 1008<br  />
-                  Middletown DE 19709,
+                  Middletown DE 19709;
                 </p>
               </div>
           </motion.div>
@@ -637,7 +637,7 @@ key="{section.category}""
     </>
   )
 }
-export default SitemapPage
+export default SitemapPage;
       </section>
       {/* comment */}"
 <section className = "py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">"        <div className="max-w-7xl mx-auto">"          <motion.div"            initial="{{" opacity: 0, y: 20 }}""
@@ -671,7 +671,7 @@ className="text-center""            >"              <div className="p-6 rounded-
             <h2 className="text-4xl font-bold text-white mb-6">"              Need Help Finding Something?"            </h2>"
             <p className="text-xl text-gray-300 mb-8">"              Can&apos;t find what you&apos;re looking for? Our team is here to help you navigate our website and find the information you need."            </p>"
             <div className = "flex flex-col sm: flex-row gap-4 justify-center">"              <a"                href="/contact""                className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity""              >"                <Phone className="w-5 h-5 mr-2"  />"                Contact Support"              </a>""
-              <a href="/services""                className="inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors""              >"                <Briefcase className="w-5 h-5 mr-2"  />"                Browse Services"              </a></div>"",
+              <a href="/services""                className="inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors""              >"                <Briefcase className="w-5 h-5 mr-2"  />"                Browse Services"              </a></div>""
                 transition="{{" duration: 0.6, delay: index * 0.1 }}"
               >""
                 <Card className="h-full">"
@@ -691,10 +691,10 @@ key="{page.path}""
                           transition="{{" duration: 0.4, delay: (index * 0.1) + (pageIndex * 0.05) }}"
                           className="flex items-center justify-between p-3 rounded-lg hover: bg-gray-50 transition-colors""
                         >""
-                          <div className="flex-1">",
+                          <div className="flex-1">"
                             <a href="{page.path}"
                               className="text-blue-600 hover: text-blue-800 font-medium flex items-center"
-                            >,
+                            >
                               {page.name}"
                               <ExternalLink className="h-4 w-4 ml-2"  />"
                             </a>""
@@ -743,7 +743,7 @@ initial="{{" opacity: 0, y: 20 }}"
                     className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center"
                   >"
                     <Phone className="h-4 w-4 mr-2"  />
-                    Contact Us,
+                    Contact Us;
                   </a>"
                   <a""
                     href="/help""">
@@ -751,12 +751,12 @@ initial="{{" opacity: 0, y: 20 }}"
     r: bg-blue-50 transition-colors flex items-center justify-center""
                   >""
                     <Search className="h-4 w-4 mr-2"  />
-                    Get Help,
+                    Get Help;
                   </a>
                 </div>
               </CardContent>
             </Card>
-          </motion.div>,
+          </motion.div>
               ))}
 
             </div>
@@ -765,16 +765,16 @@ initial="{{" opacity: 0, y: 20 }}"
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">"
               <h2 className="text-2xl font-bold text-white mb-6 flex items-center">"
                 <FileText className="w-6 h-6 mr-3 text-cyan-400"  />
-                Main Pages,
+                Main Pages;
               </h2>"
-              <div className="space-y-4">,
+              <div className="space-y-4">
                 {mainPages.map((page, index) => ("
                   <div key="{index}" className="group">"
                     <Link href="{page.href}""
                       className="flex items-center justify-between p-4 bg-white/5 rounded-lg hover: bg-white/10 transition-all duration-300"
                     >
                       <div>"
-                        <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">,
+                        <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
                           {page.name}
 
                         </h3>"
@@ -785,7 +785,7 @@ initial="{{" opacity: 0, y: 20 }}"
                       </div>"
                       <ArrowRight className="w-5 h-5 text-gray-400 group-hover: text-cyan-400 transition-colors"  />
                     </Link>
-                  </div>,
+                  </div>
                 ))}
 
               </div>
@@ -793,7 +793,7 @@ initial="{{" opacity: 0, y: 20 }}"
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">"
               <h2 className="text-2xl font-bold text-white mb-6 flex items-center">"
                 <Briefcase className="w-6 h-6 mr-3 text-cyan-400"  />
-                Services,
+                Services;
               </h2>"
               <div className="space-y-4">
                 {services.map((service, index) => ("
@@ -802,7 +802,7 @@ initial="{{" opacity: 0, y: 20 }}"
                       className="flex items-center justify-between p-4 bg-white/5 rounded-lg hover: bg-white/10 transition-all duration-300"
                     >
                       <div>"
-                        <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">,
+                        <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
                           {service.name}
 
                         </h3>"
@@ -813,7 +813,7 @@ initial="{{" opacity: 0, y: 20 }}"
                       </div>"
                       <ArrowRight className="w-5 h-5 text-gray-400 group-hover: text-cyan-400 transition-colors"  />
                     </Link>
-                  </div>,
+                  </div>
                 ))}
 
               </div>
@@ -822,16 +822,16 @@ initial="{{" opacity: 0, y: 20 }}"
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">"
               <h2 className="text-2xl font-bold text-white mb-6 flex items-center">"
                 <Users className="w-6 h-6 mr-3 text-cyan-400"  />
-                Solutions,
+                Solutions;
               </h2>"
-              <div className="space-y-4">,
+              <div className="space-y-4">
                 {solutions.map((solution, index) => ("
                   <div key="{index}" className="group">"
                     <Link href="{solution.href}""
                       className="flex items-center justify-between p-4 bg-white/5 rounded-lg hover: bg-white/10 transition-all duration-300"
                     >
                       <div>"
-                        <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">,
+                        <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
                           {solution.name}
 
                         </h3>"
@@ -842,7 +842,7 @@ initial="{{" opacity: 0, y: 20 }}"
                       </div>"
                       <ArrowRight className="w-5 h-5 text-gray-400 group-hover: text-cyan-400 transition-colors"  />
                     </Link>
-                  </div>,
+                  </div>
                 ))}
 
               </div>
@@ -850,7 +850,7 @@ initial="{{" opacity: 0, y: 20 }}"
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">"
               <h2 className="text-2xl font-bold text-white mb-6 flex items-center">"
                 <FileText className="w-6 h-6 mr-3 text-cyan-400"  />
-                Resources,
+                Resources;
               </h2>"
               <div className="space-y-4">
                 {resources.map((resource, index) => ("
@@ -859,7 +859,7 @@ initial="{{" opacity: 0, y: 20 }}"
                       className="flex items-center justify-between p-4 bg-white/5 rounded-lg hover: bg-white/10 transition-all duration-300"
                     >
                       <div>"
-                        <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">,
+                        <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
                           {resource.name}
 
                         </h3>"
@@ -870,7 +870,7 @@ initial="{{" opacity: 0, y: 20 }}"
                       </div>"
                       <ArrowRight className="w-5 h-5 text-gray-400 group-hover: text-cyan-400 transition-colors"  />
                     </Link>
-                  </div>,
+                  </div>
                 ))}
 
               </div>
@@ -878,16 +878,16 @@ initial="{{" opacity: 0, y: 20 }}"
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">"
             <h2 className="text-2xl font-bold text-white mb-6 flex items-center">"
               <FileText className="w-6 h-6 mr-3 text-cyan-400"  />
-              Legal & Policies,
+              Legal & Policies;
             </h2>"
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-6">,
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
               {legal.map((legalPage, index) => ("
                 <div key="{index}" className="group">"
                   <Link href="{legalPage.href}""
                     className="flex items-center justify-between p-4 bg-white/5 rounded-lg hover: bg-white/10 transition-all duration-300"
                   >
                     <div>"
-                      <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">,
+                      <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
                         {legalPage.name}
 
                       </h3>"
@@ -898,7 +898,7 @@ initial="{{" opacity: 0, y: 20 }}"
                     </div>"
                     <ArrowRight className="w-5 h-5 text-gray-400 group-hover: text-cyan-400 transition-colors"  />
                   </Link>
-                </div>,
+                </div>
               ))}
 
             </div>
@@ -948,7 +948,6 @@ initial="{{" opacity: 0, y: 20 }}"
       </main>
       <SimpleFooter  />
     </>  )}
-;
           {/*   */}";
           <div className="text-center mt-12">";
             <p className="text-gray-400 text-sm">";
@@ -989,7 +988,7 @@ const Sitemap: React.FC = () => {
       <h1 className="text-3xl font-bold mb-6">Sitemap</h1>"
       <p className="text-gray-600 mb-8">Quick links to primary pages and sections.</p>"
       <ul className="grid grid-cols-1 sm: grid-cols-2 gap-3">
-        {links.map((l) => (",
+        {links.map((l) => ("
           <li key="{l.url}">"
             <a className="text-blue-600 hover:underline" href="{l.url}">
               {l.name}
@@ -1001,7 +1000,7 @@ const Sitemap: React.FC = () => {
       </ul>
     </div>
   )}
-  );,
+  );
 }
 export default SitemapPage}
 

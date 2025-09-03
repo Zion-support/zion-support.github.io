@@ -1,5 +1,6 @@
 import { Link  } from 'react-router-dom';
 export default function Page() {
+
  from 'lucide-react';
 
 const FloatingCTA: React.FC = () : JSX.Element => {;
@@ -7,24 +8,22 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
-    // Show CTA after 5 seconds
-    
+    // Show CTA after 5 seconds;
       setIsVisible(true) }, 5000) ;
 
-    return () => clearTimeout(timer) }, []) };
+    return () => clearTimeout(timer) }, []) }
   ];
 
   const quickServices = ["
     { name: "AI Solutions", icon: Brain, link: "/ai-services" },"
     { name: "Cybersecurity", icon: Shield, link: "/cybersecurity" },"
-    { name: "Cloud Services", icon: Cloud, link: "/cloud-solutions" },;"
-    { name: "Digital Transformation", icon: Zap, link: "/digital-transformation" };
+    { name: "Cloud Services", icon: Cloud, link: "/cloud-solutions" },"
+    { name: "Digital Transformation", icon: Zap, link: "/digital-transformation" }
   ];
 
   if(!isVisible) return null;
@@ -52,7 +51,7 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
 
                   <div  className="border-t border-slate - 600 pt -3">
                     <div  className="text-center text-sm text-gray - 400 mb-2">
-                      Available 24 / 7
+                      Available 24 / 7;
                     </div>
                     <div  className="flex items - center justify - center gap-2">
                       <div  className="w-2 h-2 bg-green - 400 rounded-full animate -pulse"></div>
@@ -76,10 +75,10 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
           />) }
       </AnimatePresence>;
     </>
-  )};
+  )}
 
-            onClick={ () => setIsExpanded(false) };
-          />;) };
+            onClick={ () => setIsExpanded(false) }
+          />;) }
       </AnimatePresence>;
     </>
   )}

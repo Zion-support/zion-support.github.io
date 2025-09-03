@@ -1,7 +1,7 @@
 
 interface Service {
   category: string;
-icon: React.ComponentType<{ className?: string
+icon: React.ComponentType<{ className?: string;
 }>;
   color: string;
   items: string[];
@@ -20,15 +20,13 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
           className="text-center mb-16"
           initial = {
 
-  { opacity: 0,
-  y: 30
-
+  { opacity: 0;
+  y: 30;
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -43,39 +41,35 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
           </h2>
 "
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
-            Comprehensive technology solutions designed to drive innovation and growth across all industries
+            Comprehensive technology solutions designed to drive innovation and growth across all industries;
           </p>
         </motion.div>
 "
         <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 lg:gap-12">
           {services.map((service, index (
-            <motion.div
+            <motion.div;
               key={service.category}"
               className="group relative bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/20 overflow-hidden"
               initial = {
 
-  { opacity: 0,
-  x: index % 2 === 0 ? -30 : 30
-
+  { opacity: 0;
+  x: index % 2 === 0 ? -30 : 30;
 }}
               whileInView = {
 
-  { opacity: 1,
-  x: 0
-
+  { opacity: 1;
+  x: 0;
 }}
               transition = {
 
-  { duration: 0.8,
-  delay: index * 0.1
-
+  { duration: 0.8;
+  delay: index * 0.1;
 }}
               viewport={{ once: true }}
               whileHover={{
 
-                y: -5,
-  transition: { duration: 0.3
-
+                y: -5;
+  transition: { duration: 0.3;
 }
               }}
 
@@ -101,26 +95,23 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
 "
               <ul className="relative space-y-3 mb-6">
                 {service.items.map(item: unknown, itemIndex: unknown (
-                  <motion.li
+                  <motion.li;
                     key={itemIndex}"
                     className="flex items-center text-zion-slate-light group-hover:text-zion-slate-light/90 transition-colors duration-300"
                     initial = {
 
-  { opacity: 0,
-  x: -20
-
+  { opacity: 0;
+  x: -20;
 }}
                     whileInView = {
 
-  { opacity: 1,
-  x: 0
-
+  { opacity: 1;
+  x: 0;
 }}
                     transition = {
 
-  { duration: 0.5,
-  delay: itemIndex * 0.1
-
+  { duration: 0.5;
+  delay: itemIndex * 0.1;
 }}
                     viewport={{ once: true }}
 "
@@ -140,10 +131,10 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
               {/* Hover indicator */}"
               <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue group-hover:w-full transition-all duration-700" />;
             </motion.div>;
-          ))};
+          ))}
         </div>;
       </div>;
     </section>;
-  )};
+  )}
 
 export default ServicesOverview}}}'"`

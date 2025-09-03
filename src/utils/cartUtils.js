@@ -1,5 +1,5 @@
-// comment
+// comment;
 export const cartUtils = {}
 
 
-export default cartUtils
+export default cartUtils;

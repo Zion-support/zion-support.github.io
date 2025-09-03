@@ -13,19 +13,19 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ data }) => {
 }
 export const OrganizationSchema = () => {"
   const organizationData = {},"
-    contactPoint: {"",
+    contactPoint: {""
       "@type": "ContactPoint","
       contactType: "customer service","
       url: "http,"
-    s:// comment
-    sameAs: ["",
+    s:// comment;
+    sameAs: [""
       "http,"
-    s:// comment
-      "https:// comment
-    sameAs: [",
-      "https:// comment
-      "https: // comment
-      "https:// comment
+    s:// comment;
+      "https:// comment;
+    sameAs: ["
+      "https:// comment;
+      "https: // comment;
+      "https:// comment;
     "foundingDate": "2020","
     "numberOfEmployees": "50-100","
     "industry": "Technology Services"
@@ -44,22 +44,21 @@ export const WebSiteSchema = () => {"
 
 
   }"
-    "@context": "https:// comment
+    "@context": "https:// comment;
     "@type": "WebSite","
-    "@context": "https:// comment
+    "@context": "https:// comment;
     name: "Zion Tech Group","
     url: "http,"
-    s:// comment
-    description: "",
+    s:// comment;
+    description: ""
       "Leading provider of revolutionary technology solutions, AI services, and cutting-edge innovations.","
-    potentialAction: {"",
+    potentialAction: {""
       "@type": "SearchAction","
       target: "http,"
-    s:// comment
-      target: "https:// comment
+    s:// comment;
+      target: "https:// comment;
       "query-input": "required name=search_term_string","
-      target: "https:// comment
-
+      target: "https:// comment;
 "
   return <StructuredData data="{websiteData}"  />
 
@@ -68,25 +67,25 @@ export const ServiceSchema = () => {"
   const serviceData = {},"
     serviceType: "Artificial Intelligence","
     areaServed: "Worldwide","
-    hasOfferCatalog: {"",
+    hasOfferCatalog: {""
       "@type": "OfferCatalog","
-      name: "AI Services",
+      name: "AI Services"
       itemListElement: ["
-        {"",
+        {""
           "@type": "Offer","
-          itemOffered: {"",
+          itemOffered: {""
             "@type": "Service","
             name: "Content Creation"}},"
         {""
           "@type": "Offer","
-          itemOffered: {"",
+          itemOffered: {""
             "@type": "Service","
             name: "Email Automation"}},"
         {""
           "@type": "Offer","
-          itemOffered: {"",
+          itemOffered: {""
             "@type": "Service","
-            name: "Customer Support"}},
+            name: "Customer Support"}}
         {"
           "@type": "Offer","
           "itemOffered": {"
@@ -106,7 +105,7 @@ export const ServiceSchema = () => {"
 }"
         {""
           "@type": "Offer","
-          itemOffered: {"",
+          itemOffered: {""
             "@type": "Service","
             name: "Business Intelligence"}}]}}
 
@@ -116,4 +115,4 @@ export const ServiceSchema = () => {"
 
 """
 
-export default Component
+export default Component;

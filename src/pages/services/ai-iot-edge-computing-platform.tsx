@@ -5,7 +5,7 @@ import { motion   } from 'framer-motion.ts';
 const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
   return (
     <>
-      <SEO
+      <SEO;
         title="AI-Powered IoT Edge Computing Platform | Zion Tech Group"
         description="Advanced AI-driven IoT edge computing platform. Reduce latency by 90%, lower bandwidth costs by 70%, and process data at the edge with sub-millisecond response times."
         keywords="AI IoT, edge computing, real-time processing, distributed computing, hybrid cloud, edge intelligence, IoT analytics, edge AI"
@@ -16,31 +16,29 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <motion.div
+            <motion.div;
               initial = {
-  { opacity: 0,
-  y: 20 
-
+  { opacity: 0;
+  y: 20;
 }}
               animate = {
-  { opacity: 1,
-  y: 0 
-
+  { opacity: 1;
+  y: 0;
 }}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI-Powered IoT Edge Computing Platform
+                AI-Powered IoT Edge Computing Platform;
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Revolutionize IoT with AI-powered edge computing. Process data at the edge with sub-millisecond latency, reduce bandwidth costs by 70%, and enable real-time intelligent decision making.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Start Free Trial
+                  Start Free Trial;
                 </button>
                 <button className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300">
-                  Schedule Demo
+                  Schedule Demo;
                 </button>
               </div>
             </motion.div>
@@ -50,23 +48,21 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <motion.div;
               initial = {
-  { opacity: 0,
-  y: 20 
-
+  { opacity: 0;
+  y: 20;
 }}
               whileInView = {
-  { opacity: 1,
-  y: 0 
-
+  { opacity: 1;
+  y: 0;
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced AI-Powered Features
+                Advanced AI-Powered Features;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our platform combines cutting-edge AI with distributed edge computing to deliver unprecedented IoT performance and intelligence.
@@ -76,52 +72,49 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
             <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  title: "AI-Powered Edge Intelligence",
-                  description: "Machine learning models deployed at the edge for real-time decision making and intelligent data processing.",
+                  title: "AI-Powered Edge Intelligence"
+                  description: "Machine learning models deployed at the edge for real-time decision making and intelligent data processing."
                   icon: "🧠"
-                },
+                }
                 {
-                  title: "Real-Time Data Processing",
-                  description: "Sub-millisecond response times with local data processing and intelligent filtering at the edge.",
+                  title: "Real-Time Data Processing"
+                  description: "Sub-millisecond response times with local data processing and intelligent filtering at the edge."
                   icon: "⚡"
-                },
+                }
                 {
-                  title: "Distributed Edge Computing",
-                  description: "Scalable edge computing infrastructure with intelligent load balancing and resource optimization.",
+                  title: "Distributed Edge Computing"
+                  description: "Scalable edge computing infrastructure with intelligent load balancing and resource optimization."
                   icon: "🌐"
-                },
+                }
                 {
-                  title: "Edge-to-Cloud Orchestration",
-                  description: "Seamless integration between edge devices and cloud infrastructure with intelligent data routing.",
+                  title: "Edge-to-Cloud Orchestration"
+                  description: "Seamless integration between edge devices and cloud infrastructure with intelligent data routing."
                   icon: "☁️"
-                },
+                }
                 {
-                  title: "Hybrid Cloud Integration",
-                  description: "Support for multi-cloud environments with intelligent workload distribution and data synchronization.",
+                  title: "Hybrid Cloud Integration"
+                  description: "Support for multi-cloud environments with intelligent workload distribution and data synchronization."
                   icon: "🔗"
-                },
+                }
                 {
-                  title: "Edge Security & Privacy",
-                  description: "Built-in security features with local data processing and privacy-preserving AI algorithms.",
+                  title: "Edge Security & Privacy"
+                  description: "Built-in security features with local data processing and privacy-preserving AI algorithms."
                   icon: "🔒"
                 }
               ].map((feature, index)   => (
-                <motion.div
+                <motion.div;
                   key={index}
                   initial = {
-  { opacity: 0,
-  y: 20 
-
+  { opacity: 0;
+  y: 20;
 }}
                   whileInView = {
-  { opacity: 1,
-  y: 0 
-
+  { opacity: 1;
+  y: 0;
 }}
                   transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
+  { duration: 0.6;
+  delay: index * 0.1;
 }}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
@@ -138,23 +131,21 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <motion.div;
               initial = {
-  { opacity: 0,
-  y: 20 
-
+  { opacity: 0;
+  y: 20;
 }}
               whileInView = {
-  { opacity: 1,
-  y: 0 
-
+  { opacity: 1;
+  y: 0;
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Measurable Business Impact
+                Measurable Business Impact;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our platform delivers quantifiable results that directly impact your IoT performance and operational efficiency.
@@ -163,29 +154,26 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
 
             <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                { metric: "90%", description: "Reduction in latency" },
-                { metric: "70%", description: "Lower bandwidth costs" },
-                { metric: "85%", description: "Faster decision making" },
-                { metric: "80%", description: "Reduction in cloud costs" },
-                { metric: "95%", description: "Data processing accuracy" },
+                { metric: "90%", description: "Reduction in latency" }
+                { metric: "70%", description: "Lower bandwidth costs" }
+                { metric: "85%", description: "Faster decision making" }
+                { metric: "80%", description: "Reduction in cloud costs" }
+                { metric: "95%", description: "Data processing accuracy" }
                 { metric: "60%", description: "Improvement in reliability" }
               ].map((benefit, index)   => (
-                <motion.div
+                <motion.div;
                   key={index}
                   initial = {
-  { opacity: 0,
-  scale: 0.9 
-
+  { opacity: 0;
+  scale: 0.9;
 }}
                   whileInView = {
-  { opacity: 1,
-  scale: 1 
-
+  { opacity: 1;
+  scale: 1;
 }}
                   transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
+  { duration: 0.6;
+  delay: index * 0.1;
 }}
                   viewport={{ once: true }}
                   className="text-center bg-gradient-to-br from-orange-600/20 to-red-600/20 rounded-xl p-8 border border-orange-500/30"
@@ -201,23 +189,21 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <motion.div;
               initial = {
-  { opacity: 0,
-  y: 20 
-
+  { opacity: 0;
+  y: 20;
 }}
               whileInView = {
-  { opacity: 1,
-  y: 0 
-
+  { opacity: 1;
+  y: 0;
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Industry-Specific Use Cases
+                Industry-Specific Use Cases;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our platform is designed to address the unique IoT challenges across various industries.
@@ -227,42 +213,39 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
             <div className="grid grid-cols-1 md: unknowngrid-cols-2 gap-8">
               {[
                 {
-                  industry: "Manufacturing",
-                  description: "Real-time monitoring and predictive maintenance for industrial IoT with edge AI processing.",
+                  industry: "Manufacturing"
+                  description: "Real-time monitoring and predictive maintenance for industrial IoT with edge AI processing."
                   features: ["Predictive maintenance", "Quality control", "Production optimization"]
-                },
+                }
                 {
-                  industry: "Healthcare",
-                  description: "Patient monitoring and medical device management with privacy-preserving edge computing.",
+                  industry: "Healthcare"
+                  description: "Patient monitoring and medical device management with privacy-preserving edge computing."
                   features: ["Patient monitoring", "Medical device management", "Privacy protection"]
-                },
+                }
                 {
-                  industry: "Smart Cities",
-                  description: "Intelligent traffic management and environmental monitoring with distributed edge computing.",
+                  industry: "Smart Cities"
+                  description: "Intelligent traffic management and environmental monitoring with distributed edge computing."
                   features: ["Traffic optimization", "Environmental monitoring", "Public safety"]
-                },
+                }
                 {
-                  industry: "Agriculture",
-                  description: "Precision farming and crop monitoring with AI-powered edge analytics.",
+                  industry: "Agriculture"
+                  description: "Precision farming and crop monitoring with AI-powered edge analytics."
                   features: ["Crop monitoring", "Soil analysis", "Irrigation optimization"]
                 }
               ].map((useCase, index)   => (
-                <motion.div
+                <motion.div;
                   key={index}
                   initial = {
-  { opacity: 0,
-  y: 20 
-
+  { opacity: 0;
+  y: 20;
 }}
                   whileInView = {
-  { opacity: 1,
-  y: 0 
-
+  { opacity: 1;
+  y: 0;
 }}
                   transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
+  { duration: 0.6;
+  delay: index * 0.1;
 }}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
@@ -286,23 +269,21 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
         {/* Technologies Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <motion.div;
               initial = {
-  { opacity: 0,
-  y: 20 
-
+  { opacity: 0;
+  y: 20;
 }}
               whileInView = {
-  { opacity: 1,
-  y: 0 
-
+  { opacity: 1;
+  y: 0;
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Technology Stack & Integrations
+                Technology Stack & Integrations;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Built on industry-leading technologies and seamlessly integrates with your existing IoT infrastructure.
@@ -311,25 +292,22 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
 
             <div className="grid grid-cols-2 md: unknowngrid-cols-4 gap-6">
               {[
-                "TensorFlow Lite", "ONNX Runtime", "Apache Kafka", "MQTT", "Kubernetes Edge", "Docker Edge", "AWS IoT", "Azure IoT",
+                "TensorFlow Lite", "ONNX Runtime", "Apache Kafka", "MQTT", "Kubernetes Edge", "Docker Edge", "AWS IoT", "Azure IoT"
                 "Google Cloud IoT", "Node-RED", "Grafana", "Prometheus", "InfluxDB", "Redis", "PostgreSQL", "MongoDB"
               ].map((tech, index)   => (
-                <motion.div
+                <motion.div;
                   key={index}
                   initial = {
-  { opacity: 0,
-  scale: 0.8 
-
+  { opacity: 0;
+  scale: 0.8;
 }}
                   whileInView = {
-  { opacity: 1,
-  scale: 1 
-
+  { opacity: 1;
+  scale: 1;
 }}
                   transition = {
-  { duration: 0.4,
-  delay: index * 0.05 
-
+  { duration: 0.4;
+  delay: index * 0.05;
 }}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20 hover:border-white/40 transition-all duration-300"
@@ -344,23 +322,21 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <motion.div;
               initial = {
-  { opacity: 0,
-  y: 20 
-
+  { opacity: 0;
+  y: 20;
 }}
               whileInView = {
-  { opacity: 1,
-  y: 0 
-
+  { opacity: 1;
+  y: 0;
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Transparent Pricing Plans
+                Transparent Pricing Plans;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the plan that best fits your IoT deployment size and edge computing requirements.
@@ -370,75 +346,72 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
             <div className="grid grid-cols-1 md: unknowngrid-cols-3 gap-8">
               {[
                 {
-                  name: "Starter",
-                  price: "$299",
-                  period: "/month",
-                  description: "Perfect for small IoT deployments starting with edge computing",
+                  name: "Starter"
+                  price: "$299"
+                  period: "/month"
+                  description: "Perfect for small IoT deployments starting with edge computing"
                   features: [
-                    "Up to 100 IoT devices",
-                    "Basic edge AI processing",
-                    "MQTT support",
-                    "Email support",
-                    "Standard templates",
+                    "Up to 100 IoT devices"
+                    "Basic edge AI processing"
+                    "MQTT support"
+                    "Email support"
+                    "Standard templates"
                     "Monthly reports"
-                  ],
-                  popular: false
-                },
+                  ]
+                  popular: false;
+                }
                 {
-                  name: "Professional",
-                  price: "$899",
-                  period: "/month",
-                  description: "Ideal for growing IoT deployments with advanced edge computing needs",
+                  name: "Professional"
+                  price: "$899"
+                  period: "/month"
+                  description: "Ideal for growing IoT deployments with advanced edge computing needs"
                   features: [
-                    "Up to 1,000 IoT devices",
-                    "Advanced edge AI processing",
-                    "Multi-protocol support",
-                    "Priority support",
-                    "Custom integrations",
-                    "Real-time monitoring",
-                    "Advanced analytics",
+                    "Up to 1,000 IoT devices"
+                    "Advanced edge AI processing"
+                    "Multi-protocol support"
+                    "Priority support"
+                    "Custom integrations"
+                    "Real-time monitoring"
+                    "Advanced analytics"
                     "Team collaboration tools"
-                  ],
-                  popular: true
-                },
+                  ]
+                  popular: true;
+                }
                 {
-                  name: "Enterprise",
-                  price: "$2,499",
-                  period: "/month",
-                  description: "Comprehensive solution for large IoT deployments",
+                  name: "Enterprise"
+                  price: "$2,499"
+                  period: "/month"
+                  description: "Comprehensive solution for large IoT deployments"
                   features: [
-                    "Unlimited IoT devices",
-                    "Full edge AI suite",
-                    "Custom AI models",
-                    "24/7 dedicated support",
-                    "White-label solutions",
-                    "Advanced compliance",
-                    "Custom integrations",
+                    "Unlimited IoT devices"
+                    "Full edge AI suite"
+                    "Custom AI models"
+                    "24/7 dedicated support"
+                    "White-label solutions"
+                    "Advanced compliance"
+                    "Custom integrations"
                     "Dedicated IoT consultant"
-                  ],
-                  popular: false
+                  ]
+                  popular: false;
                 }
               ].map((plan, index)   => (
-                <motion.div
+                <motion.div;
                   key={index}
                   initial = {
-  { opacity: 0,
-  y: 20 
-
+  { opacity: 0;
+  y: 20;
 }}
                   whileInView = {
-  { opacity: 1,
-  y: 0 
-
+  { opacity: 1;
+  y: 0;
 }}
                   transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
+  { duration: 0.6;
+  delay: index * 0.1;
 }}
                   viewport={{ once: true }}
                   className={`relative rounded-xl p-8 ${
-                    plan.popular 
+                    plan.popular;
                       ? 'bg-gradient-to-br from-orange-600 to-red-600 border-2 border-orange-400' 
                       : 'bg-white/10 backdrop-blur-sm border border-white/20'
                   }`}
@@ -446,7 +419,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
+                        Most Popular;
                       </span>
                     </div>
                   )}
@@ -470,31 +443,28 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
                   </ul>
                   
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
+                    plan.popular;
                       ? 'bg-white text-orange-600 hover:bg-gray-100'
                       : 'bg-orange-600 text-white hover:bg-orange-700'
                   }`}>
-                    Get Started
+                    Get Started;
                   </button>
                 </motion.div>
               ))}
             </div>
             
-            <motion.div
+            <motion.div;
               initial = {
-  { opacity: 0,
-  y: 20 
-
+  { opacity: 0;
+  y: 20;
 }}
               whileInView = {
-  { opacity: 1,
-  y: 0 
-
+  { opacity: 1;
+  y: 0;
 }}
               transition = {
-  { duration: 0.8,
-  delay: 0.4 
-
+  { duration: 0.8;
+  delay: 0.4;
 }}
               viewport={{ once: true }}
               className="text-center mt-12"
@@ -512,16 +482,14 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
         {/* Contact Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
+            <motion.div;
               initial = {
-  { opacity: 0,
-  y: 20 
-
+  { opacity: 0;
+  y: 20;
 }}
               whileInView = {
-  { opacity: 1,
-  y: 0 
-
+  { opacity: 1;
+  y: 0;
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -547,13 +515,13 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
                   <h3 className="text-xl font-semibold text-white mb-3">Quick Actions</h3>
                   <div className="space-y-3">
                     <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
-                      Schedule Demo
+                      Schedule Demo;
                     </button>
                     <button className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
-                      Start Free Trial
+                      Start Free Trial;
                     </button>
                     <button className="w-full bg-orange-600 hover:bg-orange-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
-                      Download Case Study
+                      Download Case Study;
                     </button>
                   </div>
                 </div>
@@ -568,16 +536,16 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
       </div>;
     </>;
   );
-};
+}
 
 export default AIIoTEdgeComputingPlatform;
 
-export { AIIoTEdgeComputingPlatform };
+export { AIIoTEdgeComputingPlatform }
 
-export { AIIoTEdgeComputingPlatform };
+export { AIIoTEdgeComputingPlatform }
 
-export { AIIoTEdgeComputingPlatform };
+export { AIIoTEdgeComputingPlatform }
 
-export { AIIoTEdgeComputingPlatform };
+export { AIIoTEdgeComputingPlatform }
 
-export { AIIoTEdgeComputingPlatform };
+export { AIIoTEdgeComputingPlatform }

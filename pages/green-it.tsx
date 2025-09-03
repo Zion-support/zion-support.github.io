@@ -11,7 +11,7 @@ const GreenITPage = () => {
       </main>
     </>
   );
-};
+}
 
 export default GreenITPage;
 

@@ -7,7 +7,7 @@ const ModernHeader: React.FC = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-  };
+  }
 
   return (
     <header className="bg-white shadow-lg">
@@ -16,42 +16,42 @@ const ModernHeader: React.FC = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="text-2xl font-bold text-gray-900">
-              Zion Tech Group
+              Zion Tech Group;
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors">
-              Home
+              Home;
             </Link>
             <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">
-              Services
+              Services;
             </Link>
             <Link href="/solutions" className="text-gray-700 hover:text-blue-600 transition-colors">
-              Solutions
+              Solutions;
             </Link>
             <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
-              About
+              About;
             </Link>
             <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">
-              Contact
+              Contact;
             </Link>
           </nav>
 
           {/* CTA Button */}
           <div className="hidden md:flex">
-            <Link 
+            <Link;
               href="/contact" 
               className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
             >
-              Get Started
+              Get Started;
             </Link>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button
+            <button;
               onClick={toggleMenu}
               className="text-gray-700 hover:text-blue-600 focus:outline-none"
             >
@@ -64,47 +64,47 @@ const ModernHeader: React.FC = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
-              <Link 
+              <Link;
                 href="/" 
                 className="block px-3 py-2 text-gray-700 hover:text-blue-600"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Home
+                Home;
               </Link>
-              <Link 
+              <Link;
                 href="/services" 
                 className="block px-3 py-2 text-gray-700 hover:text-blue-600"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Services
+                Services;
               </Link>
-              <Link 
+              <Link;
                 href="/solutions" 
                 className="block px-3 py-2 text-gray-700 hover:text-blue-600"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Solutions
+                Solutions;
               </Link>
-              <Link 
+              <Link;
                 href="/about" 
                 className="block px-3 py-2 text-gray-700 hover:text-blue-600"
                 onClick={() => setIsMenuOpen(false)}
               >
-                About
+                About;
               </Link>
-              <Link 
+              <Link;
                 href="/contact" 
                 className="block px-3 py-2 text-gray-700 hover:text-blue-600"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Contact
+                Contact;
               </Link>
-              <Link 
+              <Link;
                 href="/contact" 
                 className="block px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Get Started
+                Get Started;
               </Link>
             </div>
           </div>
@@ -112,6 +112,6 @@ const ModernHeader: React.FC = () => {
       </div>
     </header>
   );
-};
+}
 
 export default ModernHeader;

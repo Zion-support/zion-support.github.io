@@ -2,19 +2,20 @@ import React, { useState } from 'react';
 export default ComprehensiveNewServicesShowcase2025;
 import { comprehensiveNewServices2025 } from '../data/comprehensiveNewServices2025';
 export default function Page() {
+
 ;
   return ()
     <div className="min-h-screen py-8 bg-gray-900">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}"
         <div className="text-center mb-16">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >"
             <h1 className="text-5xl font-bold text-white mb-6">
-              Revolutionary New Services 2025
+              Revolutionary New Services 2025;
             </h1>"
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Discover our cutting-edge micro SAAS services, IT solutions, and AI-powered platforms.Each service is designed to transform your business with innovative technology and proven ROI.</p>
@@ -38,7 +39,7 @@ export default function Page() {
             {/* Category Filter */}"
             <div className="flex gap-2 overflow-x-auto pb-2">
               {categories.map((category) => (
-                <button
+                <button;
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center space-x-2 px-4 py-2 rounded-lg whitespace-nowrap transition-all duration-200 ${selectedCategory === category.id'
@@ -52,7 +53,7 @@ export default function Page() {
             </div>
 
             {/* Sort */}
-            <select
+            <select;
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}"
               className="px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
@@ -67,7 +68,7 @@ export default function Page() {
         {/* Services Grid */}"
         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service, index)  => (
-            <motion.div
+            <motion.div;
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -127,7 +128,7 @@ export default function Page() {
                   ))}
                   {service.features.length > 3 && ("
                     <div className="text-xs text-gray-500">
-                      +{service.features.length-3} more features
+                      +{service.features.length-3} more features;
                     </div>) }
                 </div>
               </div>
@@ -175,7 +176,7 @@ export default function Page() {
 
               {/* CTA Buttons */}"
               <div className="space-y-2">
-                <a
+                <a;
                   href={service.link}"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -187,14 +188,14 @@ export default function Page() {
                   href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`}"
                   className="block w-full text-center bg-transparent text-cyan-400 px-4 py-2 rounded-lg font-semibold border border-cyan-400 hover:bg-cyan-400 hover:text-white transition-all duration-200"
                 >
-                  Contact Sales
+                  Contact Sales;
                 </a>
               </div>
             </motion.div>) ) }
         </div>
 
         {/* Contact Information Section */}
-        <motion.div
+        <motion.div;
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}"
@@ -251,7 +252,7 @@ export default function Page() {
         {/* Stats Section */}"
         <div className="mt-20">"
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}"
@@ -265,7 +266,7 @@ export default function Page() {
               <div className="text-gray-400">New Services</div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}"
@@ -279,7 +280,7 @@ export default function Page() {
               <div className="text-gray-400">AI-Powered</div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}"
@@ -293,7 +294,7 @@ export default function Page() {
               <div className="text-gray-400">Uptime</div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}"

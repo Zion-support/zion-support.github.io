@@ -8,9 +8,10 @@ type EnhancedMarketplaceCardProps = {
   description: string;
   price?: string;
   image?: string;
-};
+}
 
-export default function EnhancedMarketplaceCard({ title, description, price, image }: EnhancedMarketplaceCardProps) {
+export default function EnhancedMarketplaceCard() {
+
   return (
     <Card className="flex flex-col h-full">
       <div className="relative w-full h-40 mb-3 overflow-hidden rounded-md bg-gray-100">

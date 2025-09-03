@@ -35,18 +35,12 @@ interface ComplianceStatus {
     nonCompliant: number;
     pending: number}}
 interface SecurityMonitoringSystemProps {
-  // Add your props here
-
+  // Add your props here;
   enabled?: boolean;
   showRealTime?: boolean;
   autoScan?: boolean;
   onThreatDetected?: threat: SecurityThreat void;
-export function SecurityMonitoringSystem({
-
-  enabled = true,
-  showRealTime = true,
-  autoScan = true,
-  onThreatDetected}: SecurityMonitoringSystemProps) {
+export function SecurityMonitoringSystem() {
 
   const [isOpen, setIsOpen] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -66,45 +60,43 @@ export function SecurityMonitoringSystem({
   const [securityScore, setSecurityScore] = useState(0);
   const [targetScore, setTargetScore] = useState(95);
 
-  // Generate sample security threats
-
+  // Generate sample security threats;
     const newThreats: SecurityThreat[] = threatTypes.map((type, index) => ({
 
-      id: `threat-${index}`,
-      type: type as any,
+      id: `threat-${index}`
+      type: type as any;
       severity: Math.floor(Math.random() * 100) + 1,`
-      description: `Security ${type} threat detected from ${threatSources[Math.floor(Math.random() * threatSources.length)]}`,
-      source: threatSources[Math.floor(Math.random() * threatSources.length)],
-      timestamp: new Date(Date.now() - Math.random() * 86400000),
+      description: `Security ${type} threat detected from ${threatSources[Math.floor(Math.random() * threatSources.length)]}`
+      source: threatSources[Math.floor(Math.random() * threatSources.length)]
+      timestamp: new Date(Date.now() - Math.random() * 86400000)
       status:
         Math.random() > 0.7'
           ? 'resolved'
           : Math.random() > 0.5'
             ? 'investigating''
-            : 'active',
-      affectedSystems: systems.slice(0, Math.floor(Math.random() * 3) + 1),
+            : 'active'
+      affectedSystems: systems.slice(0, Math.floor(Math.random() * 3) + 1)
       recommendations: ['
-        'Implement additional authentication layers',Update security policies',Conduct security training',Review access controls',
+        'Implement additional authentication layers',Update security policies',Conduct security training',Review access controls'
       ]}));
 
     setThreats(newThreats)}, []);
 
-  // Generate vulnerability assessments
-
+  // Generate vulnerability assessments;
     const newVulnerabilities: VulnerabilityAssessment[] = categories.map()
       (category, index) => ({
 `
-        id: `vuln-${index}`,
-        category: category as any,
-        risk: risks[Math.floor(Math.random() * risks.length)] as any,
+        id: `vuln-${index}`
+        category: category as any;
+        risk: risks[Math.floor(Math.random() * risks.length)] as any;
         score: Math.floor(Math.random() * 10) + 1,`
         description: `${category} vulnerability detected in ${components[Math.floor(Math.random() * components.length)]}`,`
         cveId: `CVE-2025-${Math.floor(Math.random() * 9999)
           .toString()'`
-          .padStart(4,0')}`,
+          .padStart(4,0')}`
         affectedComponents: components.slice()
-          0,
-          Math.floor(Math.random() * 2) + 1
+          0;
+          Math.floor(Math.random() * 2) + 1;
         ),`
         remediation: `Update ${category} security configurations and apply latest patches`,`
         estimatedTime: `${Math.floor(Math.random() * 4) + 1} hours`})
@@ -112,37 +104,35 @@ export function SecurityMonitoringSystem({
 
     setVulnerabilities(newVulnerabilities)}, []);
 
-  // Generate compliance status
-  
+  // Generate compliance status;
     const newCompliance: ComplianceStatus[] = frameworks.map()
       (framework, index) => {
 
         return {
 
-          framework,
+          framework;
           status:
             score >= 95'
               ? 'compliant'
               : score >= 80'
                 ? 'partial''
-                : 'non-compliant',
-          score,
-          lastAudit: new Date(Date.now() - Math.random() * 2592000000),
-          nextAudit: new Date(Date.now() + Math.random() * 2592000000),
+                : 'non-compliant'
+          score;
+          lastAudit: new Date(Date.now() - Math.random() * 2592000000)
+          nextAudit: new Date(Date.now() + Math.random() * 2592000000)
           requirements: {
 
-            total,
-            compliant,
-            nonCompliant: total - compliant,
+            total;
+            compliant;
+            nonCompliant: total - compliant;
             pending: Math.floor(Math.random() * 10)}}}
     );
 
     setComplianceStatus(newCompliance)}, []);
-  // Start security scan
-  
+  // Start security scan;
     setScanComplete(false);
 
-    // Simulate scan process
+    // Simulate scan process;
     setTimeout(() => {
       generateSecurityThreats();
       generateVulnerabilities();
@@ -150,78 +140,72 @@ export function SecurityMonitoringSystem({
       setIsScanning(false);
       setScanComplete(true);
 
-      // Calculate overall security score
-
-      setSecurityScore(overallScore)}, 3000)}, [generateSecurityThreats,
-    generateVulnerabilities,
-    generateComplianceStatus,
-    complianceStatus,
-    threats,
-    vulnerabilities,
+      // Calculate overall security score;
+      setSecurityScore(overallScore)}, 3000)}, [generateSecurityThreats;
+    generateVulnerabilities;
+    generateComplianceStatus;
+    complianceStatus;
+    threats;
+    vulnerabilities;
   ]);
-  // Auto-scan when component opens
+  // Auto-scan when component opens;
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
-    if(autoScan && isOpen && !scanComplete) {
+    if() {
 
       startSecurityScan()}
   }, [autoScan, isOpen, scanComplete, startSecurityScan]) ;
-  // Setup real - time updates
+  // Setup real - time updates;
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
-    if(showRealTime && isOpen && scanComplete) {
+    if() {
 
       scanIntervalRef.current = setInterval(() => {
         generateSecurityThreats();
         generateVulnerabilities();
-        generateComplianceStatus()}, 60000); // Update every minute
-
+        generateComplianceStatus()}, 60000); // Update every minute;
       return () => {
-        if(scanIntervalRef.current) {
+        if() {
 
           clearInterval(scanIntervalRef.current)}
       }}
-  }, [showRealTime,
-    isOpen,
-    scanComplete,
-    generateSecurityThreats,
-    generateVulnerabilities,
-    generateComplianceStatus,
+  }, [showRealTime;
+    isOpen;
+    scanComplete;
+    generateSecurityThreats;
+    generateVulnerabilities;
+    generateComplianceStatus;
   ]);
 
-  // Get threat color
-  
-    return colors[type as keyof typeof colors] || colors.low};
+  // Get threat color;
+    return colors[type as keyof typeof colors] || colors.low}
 
-  // Get status icon
+  // Get status icon;
   const getStatusIcon = (status: string) => {
 
     const icons = {
 
       active: <AlertTriangle className="w-4 h-4 text-red-500"  />,"
       investigating: <Eye className="w-4 h-4 text-yellow-500"  />,"
-      resolved: <CheckCircle className="w-4 h-4 text-green-500"  />};"
-    return icons[status as keyof typeof icons] || <Info className="w-4 h-4"  />};
+      resolved: <CheckCircle className="w-4 h-4 text-green-500"  />}"
+    return icons[status as keyof typeof icons] || <Info className="w-4 h-4"  />}
 
-  // Get compliance color
-  
-    return colors[status as keyof typeof colors] || colors.partial};
+  // Get compliance color;
+    return colors[status as keyof typeof colors] || colors.partial}
   if(!enabled) return null;
 
   return ()
     <>
       {/* Floating Security Monitoring Button */}
-      <motion.button
+      <motion.button;
         onClick={() => setIsOpen(true)}"
         className="fixed bottom-6 right-48 z-50 bg-gradient-to-r from-red-600 to-orange-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
         whileHover={{ scale: 1.1 }}
@@ -255,17 +239,17 @@ export function SecurityMonitoringSystem({
                 <div className="flex items-center space-x-3">"
                   <Shield className="w-8 h-8 text-red-600"  />
                   <div>"                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                      Security Monitoring System
+                      Security Monitoring System;
                     </h2>"
                     <p className="text-gray-600 dark:text-gray-400">
-                      Real-time threat detection and security compliance
-                      monitoring
+                      Real-time threat detection and security compliance;
+                      monitoring;
                     </p>
                   </div>
                 </div>
 "
                 <div className="flex items-center space-x-2">
-                  <button
+                  <button;
                     onClick={startSecurityScan}
                     disabled={isScanning}"
                     className="p-2 text-gray-600 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400 transition-colors"
@@ -274,7 +258,7 @@ export function SecurityMonitoringSystem({
                       className={`w-5 h-5 ${isScanning ? 'animate-spin' : ''}`}
                     />                  </button>
 
-                  <button
+                  <button;
                     onClick={() => setIsFullscreen(!isFullscreen)}"
                     className="p-2 text-gray-600 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400 transition-colors"
                   >
@@ -285,7 +269,7 @@ export function SecurityMonitoringSystem({
                     )}
                   </button>
 
-                  <button
+                  <button;
                     onClick={() => setIsOpen(false)}"
                     className="p-2 text-gray-600 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400 transition-colors"
                   >"
@@ -302,7 +286,7 @@ export function SecurityMonitoringSystem({
                       Security scan in progress...
                     </h3>"
                     <p className="text-gray-600 dark:text-gray-400">
-                      Analyzing systems for threats and vulnerabilities
+                      Analyzing systems for threats and vulnerabilities;
                     </p>
                   </div>
                 ) : scanComplete ? ("
@@ -311,7 +295,7 @@ export function SecurityMonitoringSystem({
                     <div className="bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 rounded-xl p-6 border border-red-200 dark:border-red-700">"
                       <div className="flex items-center justify-between mb-4">"
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                          Overall Security Score
+                          Overall Security Score;
                         </h3>"
                         <Shield className="w-6 h-6 text-red-600"  />                      </div>
 "
@@ -325,10 +309,10 @@ export function SecurityMonitoringSystem({
                                   : 'text-red-600'`
                             }`}
                           >
-                            {securityScore}/100
+                            {securityScore}/100;
                           </div>"
                           <div className="text-sm text-gray-600 dark:text-gray-400">
-                            Security Score
+                            Security Score;
                           </div>
                         </div>
 "
@@ -360,24 +344,24 @@ export function SecurityMonitoringSystem({
                     <div className="flex space-x-1 bg-gray-100 dark:bg-gray-800 rounded-lg p-1">
                       {[{
 
-                          key: 'threats',
-                          label: 'Threats',
-                          icon: AlertTriangle,
-                          count: threats.length},
+                          key: 'threats'
+                          label: 'Threats'
+                          icon: AlertTriangle;
+                          count: threats.length}
                         {
 
-                          key: 'vulnerabilities',
-                          label: 'Vulnerabilities',
-                          icon: Zap,
-                          count: vulnerabilities.length},
+                          key: 'vulnerabilities'
+                          label: 'Vulnerabilities'
+                          icon: Zap;
+                          count: vulnerabilities.length}
                         {
 
-                          key: 'compliance',
-                          label: 'Compliance',
-                          icon: CheckCircle,
-                          count: complianceStatus.length},
+                          key: 'compliance'
+                          label: 'Compliance'
+                          icon: CheckCircle;
+                          count: complianceStatus.length}
                       ].map(({ key, label, icon: Icon, count }) => (
-                        <button
+                        <button;
                           key={key}
                           onClick={() => setSelectedView(key as any)}`
                           className={`flex items-center space-x-2 px-4 py-2 rounded-md transition-colors ${selectedView === key'
@@ -397,19 +381,19 @@ export function SecurityMonitoringSystem({
                       <div className="space-y-4">"
                         <div className="flex items-center justify-between">"
                           <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                            Active Security Threats
+                            Active Security Threats;
                           </h3>
-                          <button
+                          <button;
                             onClick={() => setShowAdvanced(!showAdvanced)}"
                             className="px-3 py-1 text-sm bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors"
                           >
-                            {showAdvanced ? 'Hide' : 'Show'} Advanced
+                            {showAdvanced ? 'Hide' : 'Show'} Advanced;
                           </button>
                         </div>
 "
                         <div className="grid gap-4">
                           {threats.map((threat, index) => (
-                            <motion.div
+                            <motion.div;
                               key={threat.id}"
                               className="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300"
                               whileHover={{ y: -2 }}
@@ -442,7 +426,7 @@ export function SecurityMonitoringSystem({
                                     <span>Severity: {threat.severity}/100</span>
                                     <span>
                                       Affected: {threat.affectedSystems.length}{' '}
-                                      systems
+                                      systems;
                                     </span>
                                   </div>
 
@@ -454,7 +438,7 @@ export function SecurityMonitoringSystem({
                                       <ul className="space-y-1">
                                         {threat.recommendations.map()
                                           (rec, idx) => (
-                                            <li
+                                            <li;
                                               key={idx}"
                                               className="text-sm text-gray-600 dark:text-gray-400 flex items-center space-x-2"
                                             >"
@@ -483,12 +467,12 @@ export function SecurityMonitoringSystem({
                     {selectedView === 'vulnerabilities' && ("
                       <div className="space-y-4">"
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                          Vulnerability Assessment
+                          Vulnerability Assessment;
                         </h3>
 "
                         <div className="grid gap-4">
                           {vulnerabilities.map((vuln, index) => (
-                            <motion.div
+                            <motion.div;
                               key={vuln.id}"
                               className="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300"
                               whileHover={{ y: -2 }}
@@ -505,7 +489,7 @@ export function SecurityMonitoringSystem({
                                       {vuln.risk.toUpperCase()}
                                     </div>"
                                     <div className="text-sm text-gray-500 dark:text-gray-400">
-                                      CVSS: {vuln.score}/10
+                                      CVSS: {vuln.score}/10;
                                     </div>
                                   </div>
 "
@@ -539,12 +523,12 @@ export function SecurityMonitoringSystem({
                     {selectedView === 'compliance' && ("
                       <div className="space-y-4">"
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                          Compliance Status
+                          Compliance Status;
                         </h3>
 "
                         <div className="grid gap-4">
                           {complianceStatus.map((compliance, index) => (
-                            <motion.div
+                            <motion.div;
                               key={compliance.framework}"
                               className="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300"
                               whileHover={{ y: -2 }}
@@ -559,7 +543,7 @@ export function SecurityMonitoringSystem({
                                 <div`
                                   className={`px-3 py-1 rounded-full text-sm font-medium ${getComplianceColor(compliance.status)}`}
                                 >
-                                  {compliance.status.replace('-',)}
+                                  {compliance.status.replace('-')}
                                 </div>
                               </div>
 "
@@ -569,7 +553,7 @@ export function SecurityMonitoringSystem({
                                     {compliance.score}%
                                   </div>"
                                   <div className="text-sm text-gray-500 dark:text-gray-400">
-                                    Compliance Score
+                                    Compliance Score;
                                   </div>
                                 </div>
 "
@@ -579,7 +563,7 @@ export function SecurityMonitoringSystem({
                                     {compliance.requirements.total}
                                   </div>"
                                   <div className="text-sm text-gray-500 dark:text-gray-400">
-                                    Requirements Met
+                                    Requirements Met;
                                   </div>
                                 </div>
                               </div>
@@ -629,13 +613,13 @@ export function SecurityMonitoringSystem({
                       Ready to monitor security?
                     </h3>"
                     <p className="text-gray-600 dark:text-gray-400 mb-6">
-                      Click the scan button to start security monitoring
+                      Click the scan button to start security monitoring;
                     </p>
-                    <button
+                    <button;
                       onClick={startSecurityScan}"
                       className="px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
                     >
-                      Start Security Scan
+                      Start Security Scan;
                     </button>
                   </div>) }
               </div>

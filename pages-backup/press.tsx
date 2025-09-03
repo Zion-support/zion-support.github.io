@@ -20,9 +20,9 @@ const Link = dynamic(() => import("next/link"), { ssr: false })
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32">"
             <div className="text-center">"
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-                Press & Media,
+                Press & Media;
               </h1>"
-              <p className="text-xl sm:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">,
+              <p className="text-xl sm:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">
                 Stay updated with the latest news, announcements, and achievements from Zion Tech Group.
               </p>"
               <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">"
@@ -33,30 +33,30 @@ const Link = dynamic(() => import("next/link"), { ssr: false })
                   </button>
                 </Link>"
                 <a href="mailto:press@ziontechgroup.com" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg font-semibold rounded-lg transition-colors">
-                  press@ziontechgroup.com,
+                  press@ziontechgroup.com;
                 </a>
               </div>
         </section>
-,
+
         {/* comment */}"
         <section className="py-20 sm: py-32">"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
             <div className="text-center mb-16">"
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                Latest Press Releases,
+                Latest Press Releases;
               </h2>"
               <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-                Official announcements and company news,
+                Official announcements and company news;
               </p>
             </div>
             "
-            <div className="space-y-8">,
+            <div className="space-y-8">
               {pressReleases.map((release, index) => ("
                 <div key="{index}" className="bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow">"
                   <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">"
                     <div className="flex-1">"
                       <div className="flex items-center space-x-4 mb-3">"
-                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">,
+                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
                           {release.category}
 
                         </span>"
@@ -87,7 +87,7 @@ const Link = dynamic(() => import("next/link"), { ssr: false })
                         </svg>
                       </button>
                     </div>
-                </div>,
+                </div>
               ))}
 
             </div>
@@ -97,18 +97,18 @@ const Link = dynamic(() => import("next/link"), { ssr: false })
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">"
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                Media Coverage,
+                Media Coverage;
               </h2>"
               <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-                What the media is saying about us,
+                What the media is saying about us;
               </p>
             </div>
             "
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">,
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {mediaCoverage.map((coverage, index) => ("
                 <div key="{index}" className="bg-gray-50 rounded-xl p-6 hover: shadow-lg transition-shadow">"
                   <div className="flex items-center justify-between mb-4">"
-                    <span className="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-semibold">,
+                    <span className="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-semibold">
                       {coverage.type}
 
                     </span>"
@@ -124,7 +124,7 @@ const Link = dynamic(() => import("next/link"), { ssr: false })
                     Read Article"
                     <ExternalLink className="w-4 h-4 ml-1"  />
                   </a>
-                </div>,
+                </div>
               ))}
 
             </div>
@@ -134,19 +134,19 @@ const Link = dynamic(() => import("next/link"), { ssr: false })
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">"
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                Awards & Recognition,
+                Awards & Recognition;
               </h2>"
               <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-                Industry recognition for our innovation and impact,
+                Industry recognition for our innovation and impact;
               </p>
             </div>
             "
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {awards.map((award, index) => ("
                 <div key="{index}" className="bg-white rounded-xl shadow-lg p-6 text-center hover: shadow-xl transition-shadow">"
                   <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">"
                     <Award className="w-8 h-8 text-white"  />
-                  </div>",
+                  </div>"
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{award.title}</h3>"
                   <p className="text-blue-600 font-semibold mb-2">{award.organization}</p>"
                   <p className="text-gray-600 text-sm mb-3">{award.description}</p>"
@@ -164,14 +164,14 @@ const Link = dynamic(() => import("next/link"), { ssr: false })
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">"
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                Leadership Insights,
+                Leadership Insights;
               </h2>"
               <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-                Perspectives from our leadership team,
+                Perspectives from our leadership team;
               </p>
             </div>
             "
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">,
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {teamQuotes.map((member, index) => ("
                 <div key="{index}" className="bg-gray-50 rounded-xl p-8">"
                   <div className="flex items-start space-x-4">"
@@ -194,9 +194,9 @@ const Link = dynamic(() => import("next/link"), { ssr: false })
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-              Media Kit,
+              Media Kit;
             </h2>"
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">,
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               Download our media kit for logos, images, and company information.
             </p>"
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">"
@@ -205,12 +205,12 @@ const Link = dynamic(() => import("next/link"), { ssr: false })
                 <ArrowRight className="w-5 h-5 ml-2 inline"  />
               </button>"
               <a href="mailto:press@ziontechgroup.com" className="text-white hover:text-blue-200 transition-colors">
-                press@ziontechgroup.com,
+                press@ziontechgroup.com;
               </a>
             </div>
         </section>
       </main>
-</>",
+</>"
   )}
 
-export default Component
+export default Component;

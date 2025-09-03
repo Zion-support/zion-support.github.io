@@ -6,75 +6,75 @@ import Link from 'next/link';
 const TeamPage: NextPage = () => {
   const teamMembers = [
     {
-      name: 'Kleber Silva',
-      role: 'Founder & CEO',
-      bio: 'Technology visionary with over 15 years of experience in software development and business transformation. Passionate about helping businesses leverage technology for growth.',
-      image: '/team/kleber.jpg',
-      linkedin: 'https://linkedin.com/in/klebersilva',
-      email: 'kleber@ziontechgroup.com',
+      name: 'Kleber Silva'
+      role: 'Founder & CEO'
+      bio: 'Technology visionary with over 15 years of experience in software development and business transformation. Passionate about helping businesses leverage technology for growth.'
+      image: '/team/kleber.jpg'
+      linkedin: 'https://linkedin.com/in/klebersilva'
+      email: 'kleber@ziontechgroup.com'
       expertise: ['Strategic Leadership', 'Technology Innovation', 'Business Development']
-    },
+    }
     {
-      name: 'Sarah Johnson',
-      role: 'Chief Technology Officer',
-      bio: 'Expert in cloud architecture and AI/ML solutions with a passion for scalable, innovative technology. Leads our technical strategy and innovation initiatives.',
-      image: '/team/sarah.jpg',
-      linkedin: 'https://linkedin.com/in/sarahjohnson',
-      email: 'sarah@ziontechgroup.com',
+      name: 'Sarah Johnson'
+      role: 'Chief Technology Officer'
+      bio: 'Expert in cloud architecture and AI/ML solutions with a passion for scalable, innovative technology. Leads our technical strategy and innovation initiatives.'
+      image: '/team/sarah.jpg'
+      linkedin: 'https://linkedin.com/in/sarahjohnson'
+      email: 'sarah@ziontechgroup.com'
       expertise: ['Cloud Architecture', 'AI/ML', 'System Design']
-    },
+    }
     {
-      name: 'Michael Chen',
-      role: 'Head of Security',
-      bio: 'Cybersecurity expert with extensive experience in enterprise security, compliance, and threat management. Ensures our clients\' data and systems remain secure.',
-      image: '/team/michael.jpg',
-      linkedin: 'https://linkedin.com/in/michaelchen',
-      email: 'michael@ziontechgroup.com',
+      name: 'Michael Chen'
+      role: 'Head of Security'
+      bio: 'Cybersecurity expert with extensive experience in enterprise security, compliance, and threat management. Ensures our clients\' data and systems remain secure.'
+      image: '/team/michael.jpg'
+      linkedin: 'https://linkedin.com/in/michaelchen'
+      email: 'michael@ziontechgroup.com'
       expertise: ['Cybersecurity', 'Compliance', 'Risk Management']
-    },
+    }
     {
-      name: 'Emily Rodriguez',
-      role: 'Lead Developer',
-      bio: 'Full-stack developer with expertise in modern web technologies and microservices architecture. Passionate about building scalable, maintainable solutions.',
-      image: '/team/emily.jpg',
-      linkedin: 'https://linkedin.com/in/emilyrodriguez',
-      email: 'emily@ziontechgroup.com',
+      name: 'Emily Rodriguez'
+      role: 'Lead Developer'
+      bio: 'Full-stack developer with expertise in modern web technologies and microservices architecture. Passionate about building scalable, maintainable solutions.'
+      image: '/team/emily.jpg'
+      linkedin: 'https://linkedin.com/in/emilyrodriguez'
+      email: 'emily@ziontechgroup.com'
       expertise: ['Full-Stack Development', 'Microservices', 'DevOps']
-    },
+    }
     {
-      name: 'David Kim',
-      role: 'Data Science Lead',
-      bio: 'Data scientist and machine learning engineer with expertise in predictive analytics and business intelligence. Helps clients unlock insights from their data.',
-      image: '/team/david.jpg',
-      linkedin: 'https://linkedin.com/in/davidkim',
-      email: 'david@ziontechgroup.com',
+      name: 'David Kim'
+      role: 'Data Science Lead'
+      bio: 'Data scientist and machine learning engineer with expertise in predictive analytics and business intelligence. Helps clients unlock insights from their data.'
+      image: '/team/david.jpg'
+      linkedin: 'https://linkedin.com/in/davidkim'
+      email: 'david@ziontechgroup.com'
       expertise: ['Data Science', 'Machine Learning', 'Analytics']
-    },
+    }
     {
-      name: 'Lisa Wang',
-      role: 'UX/UI Designer',
-      bio: 'Creative designer focused on user experience and interface design. Ensures our solutions are not only functional but also intuitive and engaging.',
-      image: '/team/lisa.jpg',
-      linkedin: 'https://linkedin.com/in/lisawang',
-      email: 'lisa@ziontechgroup.com',
+      name: 'Lisa Wang'
+      role: 'UX/UI Designer'
+      bio: 'Creative designer focused on user experience and interface design. Ensures our solutions are not only functional but also intuitive and engaging.'
+      image: '/team/lisa.jpg'
+      linkedin: 'https://linkedin.com/in/lisawang'
+      email: 'lisa@ziontechgroup.com'
       expertise: ['UX Design', 'UI Design', 'User Research']
     }
   ];
 
   const values = [
     {
-      title: 'Innovation',
-      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions.',
+      title: 'Innovation'
+      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions.'
       icon: <Award className="w-8 h-8" />
-    },
+    }
     {
-      title: 'Collaboration',
-      description: 'We work closely with our clients as partners in their success.',
+      title: 'Collaboration'
+      description: 'We work closely with our clients as partners in their success.'
       icon: <Users className="w-8 h-8" />
-    },
+    }
     {
-      title: 'Excellence',
-      description: 'We maintain the highest standards of quality in everything we do.',
+      title: 'Excellence'
+      description: 'We maintain the highest standards of quality in everything we do.'
       icon: <Globe className="w-8 h-8" />
     }
   ];
@@ -88,7 +88,7 @@ const TeamPage: NextPage = () => {
             Meet Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Team</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            The passionate experts behind Zion Tech Group's success
+            The passionate experts behind Zion Tech Group's success;
           </p>
         </div>
       </section>
@@ -99,7 +99,7 @@ const TeamPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Our Leadership Team</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experienced professionals dedicated to delivering exceptional technology solutions
+              Experienced professionals dedicated to delivering exceptional technology solutions;
             </p>
           </div>
           
@@ -146,7 +146,7 @@ const TeamPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Our Values</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The principles that guide everything we do
+              The principles that guide everything we do;
             </p>
           </div>
           
@@ -169,20 +169,20 @@ const TeamPage: NextPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Join Our Team</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            We're always looking for talented individuals who share our passion for technology and innovation
+            We're always looking for talented individuals who share our passion for technology and innovation;
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/careers" className="bg-white text-zion-cyan px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              View Open Positions
+              View Open Positions;
             </Link>
             <Link href="/contact" className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              Contact Us
+              Contact Us;
             </Link>
           </div>
         </div>
       </section>
     </MainLayout>
   );
-};
+}
 
 export default TeamPage;

@@ -5,7 +5,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
   const serviceCategories: unknown = []
     {}
       name: "AI-Powered Micro SAAS Services",""""
-      description: "Cutting-edge AI solutions that transform business operations",
+      description: "Cutting-edge AI solutions that transform business operations"
       services[;        {}
 """
 """"
@@ -14,7 +14,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           url: "/services/ai-code-review-security",""""
           pricing: "From $49/month",""""
           icon: "🔒"""
-        },
+        }
         {}
 """
 """"
@@ -23,7 +23,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           url: "/services/ai-customer-experience-analytics",""""
           pricing: "From $299/month",""""
           icon: "📊"""
-        },
+        }
         {}
 """
 """"
@@ -32,7 +32,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           url: "/services/ai-devops-automation-platform",""""
           pricing: "From $199/month",""""
           icon: "🚀"""
-        },
+        }
         {}
 """
 """"
@@ -43,12 +43,12 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           icon: "🌐"""
         }
       ]
-    },;
+    }
     {}
 """
 """"
       name: "Cloud & Infrastructure",""""
-      description: "Scalable cloud solutions and enterprise infrastructure",
+      description: "Scalable cloud solutions and enterprise infrastructure"
       services[;
         {}
 """
@@ -58,7 +58,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           url: "/services/cloud-devops",""""
           pricing: "Custom pricing",""""
           icon: "☁️"""
-        },
+        }
         {}
 """
 """"
@@ -67,7 +67,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           url: "/services/it-infrastructure",""""
           pricing: "Custom pricing",""""
           icon: "🏗️"""
-        },
+        }
         {}
 """
 """"
@@ -78,12 +78,12 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           icon: "🔄"""
         }
       ]
-    },;
+    }
     {}
 """
 """"
       name: "Data & Analytics",""""
-      description: "Transform data into actionable business intelligence",
+      description: "Transform data into actionable business intelligence"
       services[;
         {}
 """
@@ -93,7 +93,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           url: "/services/data-analytics",""""
           pricing: "Custom pricing",""""
           icon: "📈"""
-        },
+        }
         {}
 """
 """"
@@ -102,7 +102,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           url: "/services/ai-business-intelligence",""""
           pricing: "Custom pricing",""""
           icon: "🧠"""
-        },
+        }
         {}
 """
 """"
@@ -113,12 +113,12 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           icon: "⚡"""
         }
       ]
-    },;
+    }
     {}
 """
 """"
       name: "Security & Compliance",""""
-      description: "Enterprise-grade security and regulatory compliance",
+      description: "Enterprise-grade security and regulatory compliance"
       services[;
         {}
 """
@@ -128,7 +128,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           url: "/services/zero-trust-network-architecture",""""
           pricing: "Custom pricing",""""
           icon: "🛡️"""
-        },
+        }
         {}
 """
 """"
@@ -137,7 +137,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           url: "/services/ai-cybersecurity-suite",""""
           pricing: "Custom pricing",""""
           icon: "🔐"""
-        },
+        }
         {}
 """
 """"
@@ -148,7 +148,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           icon: "📋"""
         }
       ];
-    };
+    }
   ];
 
   return()
@@ -165,11 +165,11 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           <div className="max-w-7xl mx-auto text-center">
             <motion.div;
               initial = {}
-  { opacity: 0,
+  { opacity: 0;
   y: 20;
 }}
               animate = {}
-  { opacity: 1,
+  { opacity: 1;
   y: 0;
 }}
               transition={{ duration: 0.8 }}"""
@@ -204,11 +204,11 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial = {}
-  { opacity: 0,
+  { opacity: 0;
   y: 20;
 }}
               whileInView = {}
-  { opacity: 1,
+  { opacity: 1;
   y: 0;
 }}
               transition={{ duration: 0.8 }}"""
@@ -228,15 +228,15 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
                 <motion.div;
                   key={category.name}
                   initial = {}
-  { opacity: 0,
+  { opacity: 0;
   y: 20;
 }}
                   whileInView = {}
-  { opacity: 1,
+  { opacity: 1;
   y: 0;
 }}
                   transition = {}
-  { duration: 0.6,
+  { duration: 0.6;
   delay: categoryIndex * 0.1;
 }}
                   viewport={{ once: true }}"""
@@ -254,15 +254,15 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
                       <motion.div;
                         key={service.title}
                         initial = {}
-  { opacity: 0,
+  { opacity: 0;
   scale: 0.9;
 }}
                         whileInView = {}
-  { opacity: 1,
+  { opacity: 1;
   scale: 1;
 }}
                         transition = {}
-  { duration: 0.5,
+  { duration: 0.5;
   delay: serviceIndex * 0.1;
 }}"""
                         viewport={{ once: true }}""""
@@ -296,11 +296,11 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial = {}
-  { opacity: 0,
+  { opacity: 0;
   y: 20;
 }}
               whileInView = {}
-  { opacity: 1,
+  { opacity: 1;
   y: 0;
 }}
               transition={{ duration: 0.8 }}"""
@@ -318,18 +318,18 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
             <div className="grid grid-cols-1 lg: unknowngrid-cols-2 gap-8">
               {[
                 {
-                  title: "AI-Powered Code Review & Security Analysis",
-                  description: "Detect vulnerabilities with 85% accuracy improvement. Support for 50+ programming languages with comprehensive security testing.",
-                  benefits["85% vulnerability reduction", "50+ programming languages", "Real-time analysis", "Git integration"],;
-                  pricing: "$49 - $799/month",
-                  url: "/services/ai-code-review-security",
-                  cta: "Secure Your Code"                },
+                  title: "AI-Powered Code Review & Security Analysis"
+                  description: "Detect vulnerabilities with 85% accuracy improvement. Support for 50+ programming languages with comprehensive security testing."
+                  benefits["85% vulnerability reduction", "50+ programming languages", "Real-time analysis", "Git integration"]
+                  pricing: "$49 - $799/month"
+                  url: "/services/ai-code-review-security"
+                  cta: "Secure Your Code"                }
                 {}
 """
 """"
                   title: "AI-Powered Customer Experience Analytics",""""
                   description: "Transform customer insights into actionable intelligence. Boost satisfaction by 35% and reduce churn by 25%.",""""
-                  benefits["35% satisfaction increase", "25% churn reduction", "Real-time insights", "Predictive analytics"],;""""
+                  benefits["35% satisfaction increase", "25% churn reduction", "Real-time insights", "Predictive analytics"],""""
                   pricing: "$299 - $1,999/month",""""
                   url: "/services/ai-customer-experience-analytics",""""
                   cta: "Analyze Customer Data"""
@@ -337,15 +337,15 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
               ].map((service, index) => (<motion.div;
                   key={service.title}
                   initial = {}
-  { opacity: 0,
+  { opacity: 0;
   x: index % 2 === 0 ? -20 : 20;
 }}
                   whileInView = {}
-  { opacity: 1,
+  { opacity: 1;
   x: 0;
 }}
                   transition = {}
-  { duration: 0.6,
+  { duration: 0.6;
   delay: index * 0.1;
 }}"""
                   viewport={{ once: true }}""""
@@ -394,11 +394,11 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           <div className="max-w-4xl mx-auto text-center">
             <motion.div;
               initial = {}
-  { opacity: 0,
+  { opacity: 0;
   y: 20;
 }}
               whileInView = {}
-  { opacity: 1,
+  { opacity: 1;
   y: 0;
 }}
               transition={{ duration: 0.8 }}
@@ -445,16 +445,16 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
         </section>
       </div>;
     </>
-  )};
+  )}
 
 export default ComprehensiveServicesLanding;
 
-export { ComprehensiveServicesLanding };
+export { ComprehensiveServicesLanding }
 
-export { ComprehensiveServicesLanding };
+export { ComprehensiveServicesLanding }
 
-export { ComprehensiveServicesLanding };
+export { ComprehensiveServicesLanding }
 
-export { ComprehensiveServicesLanding };
+export { ComprehensiveServicesLanding }
 
-export { ComprehensiveServicesLanding };
+export { ComprehensiveServicesLanding }

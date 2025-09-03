@@ -14,7 +14,7 @@ const AccessibilityManager: React.FC = () => {
     fontSize: "normal",
     reducedMotion: false,
     focusVisible: false,
-    screenReader: false
+    screenReader: false,
   });
 
   useEffect(() => {
@@ -30,13 +30,13 @@ const AccessibilityManager: React.FC = () => {
   }, []);
 
   const updateSetting = (key: keyof AccessibilitySettings, value: boolean | string) => {
-    const newSettings = { ...settings, [key]: value };
+    const newSettings = { ...settings, [key]: value }
     setSettings(newSettings);
     localStorage.setItem('accessibilitySettings', JSON.stringify(newSettings));
     
-    // Apply accessibility styles
+    // Apply accessibility styles;
     applyAccessibilityStyles(newSettings);
-  };
+  }
 
   const applyAccessibilityStyles = (settings: AccessibilitySettings) => {
     const root = document.documentElement;
@@ -48,7 +48,7 @@ const AccessibilityManager: React.FC = () => {
       root.classList.remove('high-contrast');
     }
     
-    // Font size
+    // Font size;
     root.classList.remove('font-small', 'font-normal', 'font-large', 'font-xlarge');
     root.classList.add(`font-${settings.fontSize}`);
     
@@ -65,7 +65,7 @@ const AccessibilityManager: React.FC = () => {
     } else {
       root.classList.remove('focus-visible');
     }
-  };
+  }
 
   return (
     <div className="accessibility-manager">
@@ -131,6 +131,6 @@ const AccessibilityManager: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 
 export default AccessibilityManager;

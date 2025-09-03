@@ -3,9 +3,10 @@ import React from 'react';
 type SidebarProps = {
   isOpen: boolean;
   onClose: () => void;
-};
+}
 
-export default function Sidebar({ isOpen, onClose }: SidebarProps) {
+export default function Sidebar() {
+
   if (!isOpen) return null;
   return (
     <div className="fixed inset-0 z-50" role="dialog" aria-modal="true">

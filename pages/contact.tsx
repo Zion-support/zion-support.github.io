@@ -33,7 +33,7 @@ const Contact: NextPage = () => {
                 <form className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-white mb-2">Name</label>
-                    <input
+                    <input;
                       type="text"
                       id="name"
                       name="name"
@@ -44,7 +44,7 @@ const Contact: NextPage = () => {
                   
                   <div>
                     <label htmlFor="email" className="block text-white mb-2">Email</label>
-                    <input
+                    <input;
                       type="email"
                       id="email"
                       name="email"
@@ -55,7 +55,7 @@ const Contact: NextPage = () => {
                   
                   <div>
                     <label htmlFor="company" className="block text-white mb-2">Company</label>
-                    <input
+                    <input;
                       type="text"
                       id="company"
                       name="company"
@@ -66,7 +66,7 @@ const Contact: NextPage = () => {
                   
                   <div>
                     <label htmlFor="message" className="block text-white mb-2">Message</label>
-                    <textarea
+                    <textarea;
                       id="message"
                       name="message"
                       rows={5}
@@ -75,11 +75,11 @@ const Contact: NextPage = () => {
                     ></textarea>
                   </div>
                   
-                  <button
+                  <button;
                     type="submit"
                     className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
                   >
-                    Send Message
+                    Send Message;
                   </button>
                 </form>
               </div>
@@ -115,7 +115,7 @@ const Contact: NextPage = () => {
                         <p className="text-gray-300">
                           123 Tech Street<br />
                           San Francisco, CA 94105<br />
-                          United States
+                          United States;
                         </p>
                       </div>
                     </div>
@@ -140,6 +140,6 @@ const Contact: NextPage = () => {
       <Footer />
     </>
   );
-};
+}
 
 export default Contact;

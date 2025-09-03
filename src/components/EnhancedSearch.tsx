@@ -11,9 +11,9 @@ import { motion, AnimatePresence  } from 'framer-motion';
 
 export function EnhancedSearch({
 
-  className = '',;
-  placeholder = 'Search for AI services, quantum solutions...',;
-  onSearch,;
+  className = ''
+  placeholder = 'Search for AI services, quantum solutions...'
+  onSearch;
   variant = 'default'}: EnhancedSearchProps) {;
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState('');  const [results, setResults] = useState<SearchResult[]>([]);
@@ -22,28 +22,22 @@ export function EnhancedSearch({
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [filters, setFilters] = useState<SearchFilter>({
 
-    type: [],
-    category: [],
+    type: []
+    category: []
     tags: []
   }) ;
   const [showFilters, setShowFilters] = useState(false);
   const [recentSearches, setRecentSearches] = useState < string[]> ([]) ;
 
-// Mock suggestions
+// Mock suggestions;
 const mockSuggestions: SearchSuggestion[] = ['
-  { text: 'AI compliance assistant', type: 'recent' },
-  { text: 'Quantum machine learning', type: 'trending' },
-  { text: 'Digital transformation consulting', type: 'ai' },
+  { text: 'AI compliance assistant', type: 'recent' }
+  { text: 'Quantum machine learning', type: 'trending' }
+  { text: 'Digital transformation consulting', type: 'ai' }
   { text: 'Cloud DevOps automation', type: 'trending' }
 ];
 
-export function EnhancedSearch({
-
-  className = '',
-  placeholder = 'Search for AI services, quantum solutions...',
-  onSearch,
-  variant = 'default'
-}: EnhancedSearchProps) {
+export function EnhancedSearch() {
 
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState('');
@@ -53,8 +47,8 @@ export function EnhancedSearch({
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [filters, setFilters] = useState<SearchFilter>({
 
-    type: [],
-    category: [],
+    type: []
+    category: []
     tags: []
   }) ;
 
@@ -62,51 +56,54 @@ export function EnhancedSearch({
   const inputRef = useRef < HTMLInputElement> (null) ;
   const navigate = useNavigate () ;
 
-  // Handle keyboard navigation
+  // Handle keyboard navigation;
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
     const handleKeyDown = (event: anyKeyboardEvent) => {
-      if(event.key === 'Escape') {
+      if() {
+
         setIsOpen(false) ;
         setSelectedIndex(-1) ;
-      } else if(event.key === 'ArrowDown') {
+      } else if() {
+
         event.preventDefault () ;
         setSelectedIndex(prev =>
           prev < results.length-1 ? prev + 1 : prev) ;
-      } else if(event.key === 'ArrowUp') {
+      } else if() {
+
         event.preventDefault () ;
         setSelectedIndex(prev => prev > 0 ? prev - 1 : -1) ;
-      } else if(event.key === 'Enter' && selectedIndex >= 0) {
+      } else if() {
+
         event.preventDefault () ;
-        if(results[selectedIndex]) {
-        event.preventDefault () ;        if(results[selectedIndex]) {
+        if() {
+
+        event.preventDefault () ;        if() {
 
           handleResultClick(results[selectedIndex])}      }
-    };
+    }
 
-    if(isOpen) {
+    if() {
 
       document.addEventListener('keydown', handleKeyDown)}
     return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, results, selectedIndex]);
-  // Search functionality
+  // Search functionality;
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
     if(debouncedQuery.trim().length < 2) {
 
       setResults([]);
       return}
 
-    const searchResults = searchData
+    const searchResults = searchData;
       .filter(item => {
         const matchesQuery = item.title.toLowerCase () .includes(debouncedQuery.toLowerCase () ) ||;
                            item.description.toLowerCase () .includes(debouncedQuery.toLowerCase () ) ||;
@@ -119,47 +116,44 @@ export function EnhancedSearch({
 
     setResults(searchResults) }, [debouncedQuery, filters]) ;
 
-  // Handle click outside
+  // Handle click outside;
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
     
-        setRecentSearches(JSON.parse (saved) ) } catch(error) {
+        setRecentSearches(JSON.parse (saved) ) } catch() {
 
         // console.error('Failed to parse recent searches:', error)}    }
   }, []) ;
 
-  // Handle click outside
+  // Handle click outside;
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
     
       if(searchRef.current && !searchRef.current.contains (event.target as Node) ) {;
         setIsOpen(false) ;
         setSelectedIndex(-1) ;
       }
-    };
+    }
 
     document.addEventListener('mousedown', handleClickOutside);    return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
 
-  // Handle keyboard navigation
+  // Handle keyboard navigation;
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
         inputRef.current?.focus () }
-    };
+    }
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, []);
@@ -168,7 +162,7 @@ export function EnhancedSearch({
       
       setRecentSearches(updated);
       localStorage.setItem('zion-recent-searches', JSON.stringify(updated));
-      // Navigate to search results or close search
+      // Navigate to search results or close search;
       setIsOpen(false);
       setQuery('')}
   }, [recentSearches]);
@@ -177,7 +171,7 @@ export function EnhancedSearch({
     router(result.url) ;
     const handleKeyDown = (event: KeyboardEvent) => {;      if(!isOpen) return;
 
-      switch(event.key) {
+      switch() {
 
         case 'ArrowDown':
           event.preventDefault();
@@ -191,7 +185,7 @@ export function EnhancedSearch({
           break;
         case 'Enter':;
           event.preventDefault () ;
-          if(selectedIndex >= 0 && results[selectedIndex]) {
+          if() {
 
             handleResultClick(results[selectedIndex])} else if(query.trim()) {
 
@@ -201,7 +195,7 @@ export function EnhancedSearch({
           setIsOpen(false) ;
           setSelectedIndex(-1) ;
           break}
-    };
+    }
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, results, selectedIndex, query]);
@@ -209,11 +203,10 @@ export function EnhancedSearch({
     if(!query.trim () ) return;
     setIsLoading(true) ;
 
-    // Simulate API call delay
+    // Simulate API call delay;
     await new Promise(resolve => setTimeout (resolve, 300) ) ;
 
-    // Filter search results based on query and filters
-
+    // Filter search results based on query and filters;
                           result.description.toLowerCase () .includes(query.toLowerCase () ) ||;
                           result.tags.some(tag => tag.toLowerCase () .includes(query.toLowerCase () ) ) ;
 
@@ -222,44 +215,44 @@ export function EnhancedSearch({
       return matchesQuery && matchesFilters}) ;
 
     setIsOpen(false);
-    setQuery('')};
+    setQuery('')}
 
-    onSearch?.(suggestion.text)};
+    onSearch?.(suggestion.text)}
 
-    setFilters({ type[], category[], tags[] }) };
+    setFilters({ type[], category[], tags[] }) }
 
 setFilters(prev: > ({;
-      ...prev,;
+      ...prev;
       [filterType]: prev[filterType].includes (value) ;
         ? prev[filterType].filter(v => v !== value) ;
-        : [...prev[filterType], value]}) ) };
+        : [...prev[filterType], value]}) ) }
 
-    setFilters({ type: [], category: [], tags: [] }) };
+    setFilters({ type: [], category: [], tags: [] }) }
 
     switch(type) {;
       case 'service': return <Code className="h-4 w-4"  />;'"
       case 'page': return <Globe className="h-4 w-4"  />;'"
       case 'blog': return <TrendingUp className="h-4 w-4"  />;'"
       case 'case-study': return <Building className="h-4 w-4"  />}
-  };
+  }
 
     setResults([]);
 '
     setQuery('');    setResults([]);
     setIsOpen(false);
-    setSelectedIndex(-1)};
+    setSelectedIndex(-1)}
 
       case 'minimal':'
         return 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700';
       default:'
         return 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg'}
-  };
+  }
 
   return ()
     <div ref = {searchRef} className={`relative ${className}`}>`
       <div className={`relative rounded-xl ${getVariantStyles()}`}>"
         <div className="flex items-center px-4 py-3">"
-          <Search className="w-5 h-5 text-gray-400 mr-3"  />          <input
+          <Search className="w-5 h-5 text-gray-400 mr-3"  />          <input;
             ref={inputRef}"
             type="text"
             value={query}
@@ -269,7 +262,7 @@ setFilters(prev: > ({;
             className="flex-1 bg-transparent text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none"
           />
           {query && (
-            <button
+            <button;
               onClick={clearSearch}"
               className="ml-2 p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
             >"
@@ -277,7 +270,7 @@ setFilters(prev: > ({;
             </button>
           )}
         </div>;"
-      default: return <Search className="h-4 w-4"  />};
+      default: return <Search className="h-4 w-4"  />}
 
     switch(variant) {;
       case 'futuristic':;
@@ -285,13 +278,13 @@ setFilters(prev: > ({;
       case 'minimal':'
         return 'bg-gray-100 border border-gray-200 hover:border-gray-300 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20';
       default:'
-        return 'bg-white border border-gray-300 hover:border-gray-400 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20'}  };
+        return 'bg-white border border-gray-300 hover:border-gray-400 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20'}  }
 
   return ()`
     <div ref = {searchRef} className={`relative ${className}`}>
       {/* Search Input */}`
       <div className={`relative flex items-center rounded-xl transition-all duration-300 ${getVariantClasses()}`}>"
-        <Search className="absolute left-4 h-5 w-5 text-gray-400"  />        <input
+        <Search className="absolute left-4 h-5 w-5 text-gray-400"  />        <input;
           ref={inputRef}"
           type="text"
           value={query}
@@ -310,64 +303,58 @@ setFilters(prev: > ({;
       </div>
 
       <AnimatePresence>
-        {isOpen && (<motion.div
+        {isOpen && (<motion.div;
             initial = {
 
-  { opacity: 0,
-  y: -10
-
+  { opacity: 0;
+  y: -10;
 }}
             animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
             exit = {
 
-  { opacity: 0,
-  y: -10
-
+  { opacity: 0;
+  y: -10;
 }}"
             className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-xl shadow-xl z-50 max-h-96 overflow-hidden"
           >
             {/* Filters Toggle */}"
             <div className="flex items-center justify-between p-4 border-b border-gray-200">
-              <button
+              <button;
                 onClick={() => setShowFilters(!showFilters)}"
                 className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
               >"
-                <Filter className="h-4 w-4"  />                Filters
+                <Filter className="h-4 w-4"  />                Filters;
               </button>
               {(filters.type.length > 0 || filters.category.length > 0 || filters.tags.length > 0) && (
-                <button
+                <button;
                   onClick={clearFilters}"
                   className="text-sm text-red-500 hover:text-red-600 transition-colors"
                 >
-                  Clear all
+                  Clear all;
                 </button>) }
             </div>
 
             {/* Filters Panel */}
             <AnimatePresence>
-              {showFilters && (<motion.div
+              {showFilters && (<motion.div;
                   initial = {
 
-  { height: 0,
-  opacity: 0
-
+  { height: 0;
+  opacity: 0;
 }}
                   animate = {
 
-  { height: 'auto',
-  opacity: 1
-
+  { height: 'auto'
+  opacity: 1;
 }}
                   exit = {
 
-  { height: 0,
-  opacity: 0
-
+  { height: 0;
+  opacity: 0;
 }}"
                   className="border-b border-gray-200 overflow-hidden"
                 >"
@@ -377,11 +364,11 @@ setFilters(prev: > ({;
                       <h4 className="text-sm font-medium text-gray-900 mb-2">Type</h4>"
                       <div className="flex flex-wrap gap-2">
                         {['service',page',blog',case-study'].map(type => (
-                          <button
+                          <button;
                             key={type}
                             onClick = {
 
-  () => toggleFilter('type',
+  () => toggleFilter('type'
   type)
 
 }`
@@ -400,11 +387,11 @@ setFilters(prev: > ({;
                       <h4 className="text-sm font-medium text-gray-900 mb-2">Category</h4>"
                       <div className="flex flex-wrap gap-2">
                         {categories.map(category => (
-                          <button
+                          <button;
                             key={category.id}
                             onClick = {
 
-  () => toggleFilter('category',
+  () => toggleFilter('category'
   category.name)
 
 }`
@@ -434,7 +421,7 @@ setFilters(prev: > ({;
                       <div className="space-y-2">;
                         {recentSearches.map((search, index) => (;
                           <button;
-                            key={index};
+                            key={index}
                             onClick={() => {;
                               setQuery(search);
                               handleSearch()}}"                            className="w-full text-left p-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg transition-colors"
@@ -452,7 +439,7 @@ setFilters(prev: > ({;
                     <div className="flex flex-wrap gap-2">;
                       {popularSearches.map((search, index) => (;
                         <button;
-                          key={index};
+                          key={index}
                           onClick={() => {;
                             setQuery(search);
                             handleSearch()}}"                          className="px-3 py-1 text-sm bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200 transition-colors"
@@ -470,7 +457,7 @@ setFilters(prev: > ({;
               ) : results.length > 0 ? ("
                 <div className="p-4 space-y-2">
                   {results.map((result, index) => (
-                    <button
+                    <button;
                       key={result.id}
                       onClick={() => handleResultClick(result)}`
                       className={`w-full text-left p-3 hover:bg-gray-50 rounded-lg transition-colors group ${index === selectedIndex ? 'bg-blue-50' : ''`
@@ -503,14 +490,14 @@ setFilters(prev: > ({;
               ) : ("
                 <div className="p-8 text-center">"
                   <Search className="h-12 w-12 text-gray-400 mx-auto mb-4"  />"                  <h3 className="text-lg font-medium text-gray-900 mb-2">
-                    No results found
+                    No results found;
                   </h3>"
                   <p className="text-gray-600">
-                    Try adjusting your search terms or filters
+                    Try adjusting your search terms or filters;
                   </p>
                 </div>) }
             </div>;
-          </motion.div>;) };
+          </motion.div>;) }
       </AnimatePresence>;
     </div>;) }
 '"`

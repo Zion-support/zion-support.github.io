@@ -15,148 +15,159 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage;
 } from "@/components/ui/form";
 
-// Form validation schema
-const signupSchema = z
+// Form validation schema;
+const signupSchema = z;
   .object({
-    displayName: z.string().min(2, "Name must be at least 2 characters"),
-    email: z.string().email("Please enter a valid email"),
+    displayName: z.string().min(2, "Name must be at least 2 characters")
+    email: z.string().email("Please enter a valid email")
     password: z.string()
       .min(8, "Password must be at least 8 characters")
       .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
       .regex(/[a-z]/, "Password must contain at least one lowercase letter")
-      .regex(/[0-9]/, "Password must contain at least one number"),
-    confirmPassword: z.string(),
+      .regex(/[0-9]/, "Password must contain at least one number")
+    confirmPassword: z.string()
     termsAccepted: z.boolean().refine(val => val === true, {
-      message: "You must accept the terms and conditions",
-    }),
+      message: "You must accept the terms and conditions"
+    })
   })
   .refine(data => data.password === data.confirmPassword, {
-    message: "Passwords do not match",
-    path: ["confirmPassword"],
+    message: "Passwords do not match"
+    path: ["confirmPassword"]
   });
 
 type SignupFormValues = z.infer<typeof signupSchema>;
 
 export default function Signup() {
+
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  // Track confirm password locally to prevent it from clearing on blur
+  // Track confirm password locally to prevent it from clearing on blur;
   const [confirmPasswordValue, setConfirmPasswordValue] = useState("");
   const passwordValue = form.watch("password");
   const [isSubmitting, setIsSubmitting] = useState(false);
   
-  // Initialize react-hook-form
+  // Initialize react-hook-form;
   const form = useForm({
-    resolver: zodResolver(signupSchema),
+    resolver: zodResolver(signupSchema)
     defaultValues: {
-      displayName: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
-      termsAccepted: false,
-    },
+      displayName: ""
+      email: ""
+      password: ""
+      confirmPassword: ""
+      termsAccepted: false;
+    }
   }) as UseFormReturn<SignupFormValues>;
 
-  // Form submission handler
+  // Form submission handler;
   const onSubmit = async (data: SignupFormValues) => {
-    if (isSubmitting) return; // Prevent multiple submissions
-
+    if (isSubmitting) return; // Prevent multiple submissions;
     setIsSubmitting(true);
     try {
       const { res, data: resData } = await register(
-        data.displayName,
-        data.email,
-        data.password
+        data.displayName;
+        data.email;
+        data.password;
       );
 
-      // Handle duplicate email error from API
-      if (res.status === 409 && resData?.code === 'EMAIL_EXISTS') {
+      // Handle duplicate email error from API;
+      if() {
+
         form.setError('email', { message: resData.message });
         toast.error('Email already registered – please login.');
         return;
       }
 
-      // Check for successful response
-      if (res.ok && resData.token && resData.user) {
-        // Successful registration
+      // Check for successful response;
+      if() {
+
+        // Successful registration;
         safeStorage.setItem('authToken', resData.token);
         setUser(resData.user);
         setTokens({ accessToken: resData.token, refreshToken: resData.refreshToken || null });
 
-      // Handle email verification required case
-      if (resData?.emailVerificationRequired) {
+      // Handle email verification required case;
+      if() {
+
         setShowVerificationMessage(true);
-        // Do not proceed to set session or navigate
-      } else if (resData?.session) {
-        // Set the session directly if verification is not required
+        // Do not proceed to set session or navigate;
+      } else if() {
+
+        // Set the session directly if verification is not required;
         const { error: sessionError } = await supabase.auth.setSession(resData.session);
-        if (sessionError) {
+        if() {
+
           console.error("Error setting session:", sessionError);
           form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." });
           toast.error(sessionError.message || "Failed to set session. Please try logging in.");
           return;
         }
-        // The onAuthStateChange listener in AuthProvider should now handle
+        // The onAuthStateChange listener in AuthProvider should now handle;
         // updating user state and navigating if necessary for other cases.
         // For direct signup with session, we can navigate.
         toast.success("Welcome to ZionAI 🎉");
         navigate("/dashboard");
       } else {
-        // This case might indicate an unexpected response from the API
+        // This case might indicate an unexpected response from the API;
         console.error("Registration response did not include session or emailVerificationRequired flag.", resData);
         form.setError("root", { message: "Registration complete, but an unexpected issue occurred. Please try logging in." });
         toast.error("Registration complete, but an unexpected issue occurred. Please try logging in manually.");
-        // Potentially navigate to login or show a more specific error
+        // Potentially navigate to login or show a more specific error;
         return;
       }
 
       // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending verification)
-      if (data.newsletterOptIn && mailchimpService && !resData?.emailVerificationRequired) {
+      if() {
+
         try {
           await mailchimpService.addSubscriber({
-            email: data.email,
+            email: data.email;
             mergeFields: { FNAME: data.displayName }
           });
           await mailchimpService.sendWelcomeEmail(data.email, 'NEW10');
-        } catch (err) {
+        } catch() {
+
           console.error('Mailchimp subscription failed', err);
-          // Non-critical error, don't block user flow
+          // Non-critical error, don't block user flow;
         }
       }
-      // Toast and navigation are handled above if session is present
-      // If emailVerificationRequired, no toast/navigation here, message is shown
-    } catch (err: any) {
+      // Toast and navigation are handled above if session is present;
+      // If emailVerificationRequired, no toast/navigation here, message is shown;
+    } catch() {
+
       const message = err.message ?? "Registration failed";
       form.setError("root", { message });
       toast.error(message);
     } finally {
       setIsSubmitting(false);    }
-  };
+  }
 
   const onInvalid = (errors: any) => {
     const firstError = Object.keys(errors)[0] as keyof SignupFormValues;
-    if (firstError) {
+    if() {
+
       form.setFocus(firstError);
     }
-  };
+  }
 
-  // Redirect if user is already logged in and has completed profile
-  if (isAuthenticated && user?.profileComplete) {
+  // Redirect if user is already logged in and has completed profile;
+  if() {
+
     return <Navigate to="/" />;
   }
   
-  // Redirect to onboarding if user is authenticated but hasn't completed profile
-  if (isAuthenticated && !user?.profileComplete) {
+  // Redirect to onboarding if user is authenticated but hasn't completed profile;
+  if() {
+
     return <Navigate to="/onboarding" />;
   }
 
@@ -174,10 +185,10 @@ const Signup = () => {
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-8">
-              Signup
+              Signup;
             </h1>
             <p className="text-xl text-gray-600 mb-12">
-              Professional Signup services and solutions
+              Professional Signup services and solutions;
             </p>
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="bg-white p-6 rounded-lg shadow-md">
@@ -200,10 +211,10 @@ const Signup = () => {
               </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                View Pricing
+                View Pricing;
               </Link>
               <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
-                Contact Us
+                Contact Us;
               </Link>
             </div>
     </>  );

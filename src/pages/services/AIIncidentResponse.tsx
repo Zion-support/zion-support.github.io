@@ -2,18 +2,19 @@ import React from 'react';
 import { Shield, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Activity, BarChart3 } from 'lucide-react';
 
 export default function AIIncidentResponse() {
+
   const features = [
-    'Automated incident detection and response',
-    'Real-time threat analysis and mitigation',
-    'Intelligent incident classification',
-    'Automated response orchestration',
-    'Advanced forensics and investigation',
+    'Automated incident detection and response'
+    'Real-time threat analysis and mitigation'
+    'Intelligent incident classification'
+    'Automated response orchestration'
+    'Advanced forensics and investigation'
     'Compliance reporting and documentation'
   ];
 
   const tiers = [
-    { name: 'Starter', price: '$299/mo', details: ['Basic incident response', 'Email support', 'Up to 50 incidents/month'] },
-    { name: 'Professional', price: '$799/mo', details: ['Advanced response', 'Priority support', 'Up to 500 incidents/month'] },
+    { name: 'Starter', price: '$299/mo', details: ['Basic incident response', 'Email support', 'Up to 50 incidents/month'] }
+    { name: 'Professional', price: '$799/mo', details: ['Advanced response', 'Priority support', 'Up to 500 incidents/month'] }
     { name: 'Enterprise', price: '$2,499/mo', details: ['Full response suite', '24/7 support', 'Unlimited incidents', 'Custom integration'] }
   ];
 
@@ -23,7 +24,7 @@ export default function AIIncidentResponse() {
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
             <Shield className="w-4 h-4 mr-2" />
-            AI-Powered Incident Response Intelligence
+            AI-Powered Incident Response Intelligence;
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Incident Response Platform</h1>
           <p className="text-red-100 text-xl">Transform your security operations with AI-powered incident response that detects, analyzes, and mitigates threats in real-time.</p>

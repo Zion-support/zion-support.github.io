@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { api, ApiResponse } from '@/services / api';
 export default function Page() {
+
 }}}
 interface User {
   id: number;
@@ -15,35 +16,34 @@ const ApiDemo: React.FC = (): JSX.Element => {;
 const [newUser, setNewUser] = useState({ name: '', email: ''});
   const [healthStatus, setHealthStatus] = useState<any>('Checking...');
 
-  // Check API health on component mount
+  // Check API health on component mount;
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
     checkHealth () ;
     fetchUsers () }, []) ;
 
     try {;
       
-      setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch(err) {
+      setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch() {
 
-      setHealthStatus('❌ API Unhealthy')};
+      setHealthStatus('❌ API Unhealthy')}
 
     setLoading(true) ;
     setError(null) ;
 
     try {
       
-      if(response.success && response.data) {
+      if() {
 
-        setUsers(response.data)} catch(err) {
+        setUsers(response.data)} catch() {
 
       setError(err instanceof Error ? err.message : 'Failed to fetch users')} finally {
 
-      setLoading(false)};
+      setLoading(false)}
 
     e.preventDefault () ;
 
@@ -57,19 +57,19 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
 
     try {
       
-      if(response.success && response.data) {
+      if() {
 
         setUsers(prev => [...prev, response.data!]);
-        setNewUser({ name: '', email: '' })} catch(err) {
+        setNewUser({ name: '', email: '' })} catch() {
 
       setError(err instanceof Error ? err.message : 'Failed to create user')} finally {
 
-      setLoading(false)};
+      setLoading(false)}
   return ()
     <div className="max-w-4xl mx-auto p-6 space-y-6">"
       <div className="bg-white rounded-lg shadow-md p-6">"
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
-          🚀 Vite + Node.js Hybrid App Demo
+          🚀 Vite + Node.js Hybrid App Demo;
         </h2>
 
         {/* API Health Status */}"
@@ -87,21 +87,21 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
                 type="text"
                 placeholder="Name"
                 value={newUser.name}
-                onChange = { (e) => setNewUser(prev => ({ ...prev,
-  name: e.target.value
+                onChange = { (e) => setNewUser(prev => ({ ...prev;
+  name: e.target.value;
 }))}"
                 className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
+                required;
               />
               <input"
                 type="email"
                 placeholder="Email"
                 value={newUser.email}
-                onChange = { (e) => setNewUser(prev => ({ ...prev,
-  email: e.target.value
+                onChange = { (e) => setNewUser(prev => ({ ...prev;
+  email: e.target.value;
 }))}"
                 className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
+                required;
               />
             </div>
             <button"
@@ -125,7 +125,7 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
         <div className="p-4 bg-gray-50 rounded-lg">"
           <div className="flex justify-between items-center mb-4">"
             <h3 className="text-lg font-semibold text-gray-700">Users({users.length})</h3>
-            <button
+            <button;
               onClick={fetchUsers}
               disabled={loading}"
               className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover:bg-gray-700 disabled:opacity-50"
@@ -172,6 +172,6 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
           </div>;
         </div>;
       </div>;
-    </div>;) };
+    </div>;) }
 
 export default ApiDemo}}}}}}}'"`

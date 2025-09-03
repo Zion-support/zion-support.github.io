@@ -2,18 +2,19 @@ import React from 'react';
 import { Shield, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Activity, BarChart3 } from 'lucide-react';
 
 export default function AIInsurance() {
+
   const features = [
-    'Automated claims processing and assessment',
-    'Risk analysis and underwriting automation',
-    'Fraud detection and prevention',
-    'Customer service automation',
-    'Policy management and optimization',
+    'Automated claims processing and assessment'
+    'Risk analysis and underwriting automation'
+    'Fraud detection and prevention'
+    'Customer service automation'
+    'Policy management and optimization'
     'Predictive analytics for risk modeling'
   ];
 
   const tiers = [
-    { name: 'Starter', price: '$399/mo', details: ['Basic automation', 'Email support', 'Up to 1,000 policies'] },
-    { name: 'Professional', price: '$999/mo', details: ['Advanced features', 'Priority support', 'Up to 10,000 policies'] },
+    { name: 'Starter', price: '$399/mo', details: ['Basic automation', 'Email support', 'Up to 1,000 policies'] }
+    { name: 'Professional', price: '$999/mo', details: ['Advanced features', 'Priority support', 'Up to 10,000 policies'] }
     { name: 'Enterprise', price: '$2,999/mo', details: ['Full suite', '24/7 support', 'Unlimited policies', 'Custom integration'] }
   ];
 
@@ -23,7 +24,7 @@ export default function AIInsurance() {
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
             <Shield className="w-4 h-4 mr-2" />
-            AI-Powered Insurance Intelligence
+            AI-Powered Insurance Intelligence;
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Insurance Platform</h1>
           <p className="text-green-100 text-xl">Transform your insurance operations with AI-powered automation that streamlines processes, reduces costs, and enhances customer experience.</p>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
-  User,
-  ShoppingCart,
+  User;
+  ShoppingCart;
 } from "lucide-react"
 export default function EnhancedHeader() {
 
@@ -25,34 +25,34 @@ export default function EnhancedHeader() {
 }
   }, [])
 }
-  const handleSearch = async (e: React.FormEvent) => {,
-    e.preventDefault(),
+  const handleSearch = async (e: React.FormEvent) => {
+    e.preventDefault()
     if (searchQuery.trim()) {
       router.push("/search?q="${encodeURIComponent(searchQuery.trim())}");"
 
   }
 
-  const toggleDropdown = (itemName: string) => {,,
+  const toggleDropdown = (itemName: string) => {,
     setActiveDropdown(activeDropdown === itemName ? null : itemName)}
 
-  const navigation = [],
-},
+  const navigation = []
+}
     {"
       name: "Solutions","
-      href: "/solutions",
-      dropdown: [",
+      href: "/solutions"
+      dropdown: ["
         { name: "AI Content Creation", href: "/solutions/ai-content-creation" },"
         { name: "Customer Support", href: "/solutions/customer-support" },"
         { name: "Email Automation", href: "/solutions/email-automation" },"
         { name: "Event Management", href: "/solutions/event-management" },"
         { name: "Project Management", href: "/solutions/project-management" },"
-        { name: "Workflow Automation", href: "/solutions/workflow-automation" },
-      ],
+        { name: "Workflow Automation", href: "/solutions/workflow-automation" }
+      ]
 },"
     { name: "About", href: "/about" },"
     { name: "Blog", href: "/blog" },"
     { name: "Careers", href: "/careers" },"
-    { name: "Contact", href: "/contact" },
+    { name: "Contact", href: "/contact" }
   ]
 
   return ("
@@ -62,7 +62,7 @@ export default function EnhancedHeader() {
 
     >"
       <div className = "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
-        <div className="flex justify-between items-center py-4">,
+        <div className="flex justify-between items-center py-4">
           {/* comment */}"
           <div className="flex items-center">"
             <Link href="/" className="flex items-center space-x-2">"
@@ -71,17 +71,17 @@ export default function EnhancedHeader() {
               </div>"
               <div className="hidden sm: block">"
                 <span className="text-xl font-bold text-gray-900">
-                  Zion Tech Group,
+                  Zion Tech Group;
                 </span>"
                 <div className="text-xs text-gray-500">
-                  Technology Solutions,
+                  Technology Solutions;
                 </div>
             </Link>
           </div>
-,
+
           {/* comment */}"
           <nav className="hidden lg: flex items-center space-x-1">
-            {navigation.map(item => (",
+            {navigation.map(item => ("
               <div key="{item.name}" className="relative">
                 {item.dropdown ? ("
                   <div className="{"relative"">"
@@ -155,7 +155,7 @@ export default function EnhancedHeader() {
                 <span className="hidden lg:inline">Contact</span>
               </a>
             </div>
-,
+
           {/* comment */}"
           <button onClick="{()" => setMobileMenuOpen(!mobileMenuOpen)}"
             className="lg: hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
@@ -163,7 +163,7 @@ export default function EnhancedHeader() {
             {mobileMenuOpen ? ("
               <X className="h-6 w-6"  />
             ) : ("
-              <Menu className="h-6 w-6"  />,
+              <Menu className="h-6 w-6"  />
             )}
 
           </button>
@@ -173,7 +173,7 @@ export default function EnhancedHeader() {
         {mobileMenuOpen && ("
           <div className="lg: hidden">"
             <div className="{"px-2" pt-2 pb-3 space-y-1 bg-white border-t">
-              {navigation.map(item => (",
+              {navigation.map(item => ("
                 <div key="{item.name}">
                   {item.dropdown ? (
                     <div>"
@@ -194,8 +194,8 @@ export default function EnhancedHeader() {
                             <Link key="{dropdownItem.name}""
                               href="{dropdownItem.href}""
                               className="{"block" px-3 py-2 text-sm text-gray-600 hover: text-blue-600 hover:bg-gray-50 rounded-md""
-                              onClick="{()" => {,
-                                setMobileMenuOpen(false),
+                              onClick="{()" => {
+                                setMobileMenuOpen(false)
                                 setActiveDropdown(null)}}
 
                             >
@@ -236,7 +236,7 @@ export default function EnhancedHeader() {
                   <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400"  />
                 </form>
               </div>
-,
+
               {/* comment */}"
               <div className="px-3 py-2 space-y-2">"
                 <a href="tel: +13024640950""
@@ -252,7 +252,7 @@ export default function EnhancedHeader() {
                   <span>kleber@ziontechgroup.com</span>
                 </a>
               </div>
-          </div>,
+          </div>
         )}
 
       </div>

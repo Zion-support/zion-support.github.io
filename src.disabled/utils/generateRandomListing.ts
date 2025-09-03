@@ -50,37 +50,37 @@ import { MarketplaceItem } from,  @/src/data/marketplaceData" const sampleTitles
   "Security",";
   "Threat: Detection"] ] const sampleImages = [;
   "https: "";
-  "DevOps automation tools for continuous integration and deployment pipelines.",;
+  "DevOps automation tools for continuous integration and deployment pipelines."
   "Network security solution with advanced threat detection and prevention." ] const sampleTags = [ [;
-  "AI",;
-  "Analytics",;
+  "AI"
+  "Analytics"
   "Business Intelligence"], [;
-  "Security",;
-  "Cybersecurity",;
+  "Security"
+  "Cybersecurity"
   "Monitoring"], [;
-  "Cloud",;
-  "Migration",;
+  "Cloud"
+  "Migration"
   "Enterprise"], [;
-  "IoT",;
-  "Edge Computing",;
+  "IoT"
+  "Edge Computing"
   "Real-time"], [;
-  "Quantum",;
-  "Research",;
+  "Quantum"
+  "Research"
   "Hardware"], [;
-  "Data Science",;
-  "Machine Learning",;
+  "Data Science"
+  "Machine Learning"
   "Consulting"], [;
-  "Blockchain",;
-  "Development",;
+  "Blockchain"
+  "Development"
   "DApps"], [;
-  "Machine Learning",;
-  "AI",;
+  "Machine Learning"
+  "AI"
   "Platform"], [;
-  "DevOps",;
-  "Automation",;
+  "DevOps"
+  "Automation"
   "CI/CD"], [;
-  "Network",;
-  "Security",;
+  "Network"
+  "Security"
   "Threat Detection"] ] const sampleImages = [;
   @/src/data/marketplaceData" const sampleTitles = [;
   "AI-Powered Analytics Platform,Cybersecurity Assessment Tool,Cloud Migration Service,IoT Edge Computing Solution,Quantum Computing Hardware,Data Science Consulting,Blockchain Development Service,Machine Learning Platform,DevOps Automation Tool,Network Security Solution" ] const sampleDescriptions = [;

@@ -1,21 +1,22 @@
 import { Link  } from 'react-router-dom';
 export default function Page() {
+
 ;
 ];
 
 const categories = [;
-  { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" />, count: MICRO_SAAS_SERVICES.length },;
-  { id: 'Business Tools', name: 'Business Tools', icon: <Briefcase className="w-4 h-4" />, count: 1 },;
-  { id: 'Customer Support', name: 'Customer Support', icon: <MessageCircle className="w-4 h-4" />, count: 1 },;
-  { id: 'Analytics', name: 'Analytics', icon: <BarChart3 className="w-4 h-4" />, count: 1 };
+  { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" />, count: MICRO_SAAS_SERVICES.length }
+  { id: 'Business Tools', name: 'Business Tools', icon: <Briefcase className="w-4 h-4" />, count: 1 }
+  { id: 'Customer Support', name: 'Customer Support', icon: <MessageCircle className="w-4 h-4" />, count: 1 }
+  { id: 'Analytics', name: 'Analytics', icon: <BarChart3 className="w-4 h-4" />, count: 1 }
 ];
 
 const pricingModels = [;
-  { id: 'all', name: 'All Pricing' },;
-  { id: 'monthly', name: 'Monthly' },;
-  { id: 'yearly', name: 'Yearly' },;
-  { id: 'one - time', name: 'One - time' },;
-  { id: 'usage - based', name: 'Usage - based' };
+  { id: 'all', name: 'All Pricing' }
+  { id: 'monthly', name: 'Monthly' }
+  { id: 'yearly', name: 'Yearly' }
+  { id: 'one - time', name: 'One - time' }
+  { id: 'usage - based', name: 'Usage - based' }
 ];
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricing, setSelectedPricing] = useState('all');
@@ -25,17 +26,18 @@ const pricingModels = [;
   const [viewMode, setViewMode] = useState < any> ('grid') ;
   const [expandedService, setExpandedService] = useState < any> (null) ;
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
     let filtered = MICRO_SAAS_SERVICES;
-    if(selectedCategory !== 'all') {
+    if() {
+
       filtered = filtered.filter(service => service.category === selectedCategory) }
-    if(selectedPricing !== 'all') {
-      filtered = filtered.filter(service => service.pricingModel === selectedPricing) };
+    if() {
+
+      filtered = filtered.filter(service => service.pricingModel === selectedPricing) }
     if(searchQuery.trim () ) {;
       const query = searchQuery.toLowerCase () ;
       filtered = filtered.filter(service =>;
@@ -45,7 +47,8 @@ const pricingModels = [;
         service.subcategory?.toLowerCase () .includes(query) ;) ;
     }
     filtered.sort((a, b) => {
-      switch(sortBy) {
+      switch() {
+
         case 'rating':
           return (b.rating || 0) - (a.rating || 0) ;
         case 'price':
@@ -58,25 +61,23 @@ const pricingModels = [;
           return 0}
     }) ;
     setFilteredServices(filtered) }, [selectedCategory, selectedPricing, searchQuery, sortBy]) ;
-  const ServiceCard = ({ service }: { service}) => (<motion.div
+  const ServiceCard = ({ service }: { service}) => (<motion.div;
       initial = {
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
       animate = {
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
       transition={{ duration: 0.5 }}
       className="group relative bg-gradient - to - br from - zion - blue - dark / 50 to - zion - slate - dark / 50 border border-zion - blue - light / 20 rounded-2xl p - 6 hover:border-zion - purple / 50 transition - all duration - 500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion -purple / 20"
     >
       {service.featured && (<div  className="absolute - top - 3 -right - 3 bg-gradient - to - r from - zion - purple to - zion - cyan text-white text-xs font - bold px-3 py-1 rounded-full">
-          Featured
+          Featured;
         </div>) }
       <div  className="relative mb-6 overflow-hidden rounded-xl">
-        <img
+        <img;
           src={service.images[0]}
           alt={service.title}
           className="w-full h-48 object - cover group - hover:scale - 110 transition - transform duration -500"
@@ -127,7 +128,7 @@ const pricingModels = [;
         <div  className="space - y-3">
           <div  className="flex items - center justify -between">
             <span className="text-zion - slate - light text-sm">Key Benefits:</span>
-            <Button
+            <Button;
               variant="ghost"
               size="sm"
               onClick={ () => setExpandedService(expandedService === service.id ? null : service.id) }
@@ -136,21 +137,19 @@ const pricingModels = [;
               {expandedService === service.id ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
             </Button>
           </div>
-          {expandedService === service.id && (<motion.div
+          {expandedService === service.id && (<motion.div;
               initial = {
-  { opacity: 0,
-  height: 0
-
+  { opacity: 0;
+  height: 0;
 }}
               animate = {
-  { opacity: 1,
+  { opacity: 1;
   height: 'auto'
 
 }}
               exit = {
-  { opacity: 0,
-  height: 0
-
+  { opacity: 0;
+  height: 0;
 }}
               className="space - y-2"
             >
@@ -162,14 +161,14 @@ const pricingModels = [;
         </div>
         <div  className="pt - 4 border-t border-zion - blue -light / 20">
           <div  className="flex items - center justify -between">
-            <Link
+            <Link;
               to={service.website}
               className="inline - flex items - center space - x-2 text-zion - cyan hover:text-zion - cyan - light transition -colors"
             >
               <span className="text-sm font -medium">Learn More</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
-            <Link
+            <Link;
               to={`mailto:${service.contactEmail}`}
               className="inline - flex items - center space - x-2 text-zion - purple hover:text-zion - purple - light transition -colors"
             >
@@ -178,8 +177,8 @@ const pricingModels = [;
             </Link>
           </div>
         </div>
-        <Button
-          asChild
+        <Button;
+          asChild;
           className="w-full bg-gradient - to - r from - zion - cyan to - zion - blue hover:from - zion - cyan - light hover:to - zion - blue -light"
         >
           <Link to={service.href}>;
@@ -191,7 +190,7 @@ const pricingModels = [;
     </motion.div>;) ;
 
   return (<div  className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate -light">
-      <SEO
+      <SEO;
         title="Comprehensive Services Overview 2027 - Zion Tech Group"
         description="Explore our comprehensive portfolio of innovative AI, IT, and business solutions.From AI - powered chatbots to quantum computing services, discover cutting - edge technology solutions."
         keywords="AI services, IT solutions, business automation, cybersecurity, blockchain, quantum computing, Zion Tech Group"
@@ -200,31 +199,28 @@ const pricingModels = [;
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div  className="absolute inset - 0 bg-gradient - to - r from - zion - blue - dark / 20 to - zion -purple / 20" />
         <div  className="relative max - w-7xl mx - auto text-center">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-6xl font - bold text-white mb-6"
           >
             Comprehensive Services Overview < span className="block text-transparent bg-clip - text bg-gradient - to - r from - zion - cyan to - zion -purple">
-              2027 Edition
+              2027 Edition;
             </span>
           </motion.h1>
-          <motion.p
+          <motion.p;
             initial = {
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
             animate = {
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
             transition = {
-  { duration: 0.6,
-  delay: 0.2
-
+  { duration: 0.6;
+  delay: 0.2;
 }}
             className="text-xl text-zion - slate - light max - w-3xl mx -auto"
           >
@@ -237,7 +233,7 @@ const pricingModels = [;
             <div  className="flex items - center gap-4">
               <div  className="relative">
                 <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text-zion - slate - light w-4 h-4" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search services..."
                   value={searchQuery}
@@ -246,7 +242,7 @@ const pricingModels = [;
                 />
               </div>
               <div  className="flex items - center gap-2">
-                <Button
+                <Button;
                   variant={viewMode === 'grid' ? 'default' : 'outline'}
                   size="sm"
                   onClick={ () => setViewMode('grid') }
@@ -254,7 +250,7 @@ const pricingModels = [;
                 >
                   <Grid className="w-4 h-4" />
                 </Button>
-                <Button
+                <Button;
                   variant={viewMode === 'list' ? 'default' : 'outline'}
                   size="sm"
                   onClick={ () => setViewMode('list') }
@@ -263,7 +259,7 @@ const pricingModels = [;
                   <List className="w-4 h-4" />
                 </Button>
               </div>
-              <select
+              <select;
                 value={sortBy}
                 onChange={ (e) => setSortBy(e.target.value as) }
                 className="bg-zion - slate - dark / 50 border border-zion - blue - light / 20 text-white rounded-lg px-3 py-2"
@@ -286,7 +282,7 @@ const pricingModels = [;
               <div  className="flex - 1 max - w-md">
                 <div  className="relative">
                   <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text-zion - slate - light w-5 h-5" />
-                  <Input
+                  <Input;
                     placeholder="Search services..."
                     value={searchQuery}
                     onChange={ (e) => setSearchQuery(e.target.value) }
@@ -296,7 +292,7 @@ const pricingModels = [;
               </div>
               <div  className="flex items - center space - x-4">
                 <div  className="flex items - center space - x-2">
-                  <Button
+                  <Button;
                     variant={viewMode === 'grid' ? 'default' : 'outline'}
                     size="sm"
                     onClick={ () => setViewMode('grid') }
@@ -304,7 +300,7 @@ const pricingModels = [;
 
                     <Grid className="w-4 h-4" />
                   </Button>
-                  <Button
+                  <Button;
                     variant={viewMode === 'list' ? 'default' : 'outline'}
                     size="sm"
                     onClick={ () => setViewMode('list') }
@@ -313,7 +309,7 @@ const pricingModels = [;
                     <List className="w-4 h-4" />
                   </Button>
                 </div>
-                <select
+                <select;
                   value={sortBy}
                   onChange={ (e) => setSortBy(e.target.value as any) }
                   className="bg-zion - slate - dark / 50 border border-zion - blue - light / 20 text-white rounded-lg px-3 py-2"
@@ -326,7 +322,7 @@ const pricingModels = [;
               </div>
             </div>
             <div  className="flex flex - wrap gap-4">
-              {categories.map((category) => (<Button
+              {categories.map((category) => (<Button;
                   key={category.id}
                   variant={selectedCategory === category.id ? 'default' : 'outline'}
                   onClick={ () => setSelectedCategory(category.id) }
@@ -340,7 +336,7 @@ const pricingModels = [;
                 </Button>;) ) }
             </div>
             <div  className="flex flex - wrap gap-4">
-              {pricingModels.map((pricing) => (<Button
+              {pricingModels.map((pricing) => (<Button;
                   key={pricing.id}
                   variant={selectedPricing === pricing.id ? 'default' : 'outline'}
                   onClick={ () => setSelectedPricing(pricing.id) }
@@ -376,7 +372,7 @@ const pricingModels = [;
             : 'grid - cols - 1'
         }`}>
           {filteredServices.map((service) => (;
-            <ServiceCard key={service.id} service={service} />) ) };
+            <ServiceCard key={service.id} service={service} />) ) }
         </div>;
         {filteredServices.length === 0 && (;
           <div  className="text-center py-16">;
@@ -389,7 +385,7 @@ const pricingModels = [;
               }}
               className="bg-zion - cyan hover:bg-zion - cyan -light"
             >
-              Clear Filters
+              Clear Filters;
             </Button>
           </div>) }
       </div>
@@ -409,7 +405,7 @@ const pricingModels = [;
             </Button>
             <Button asChild variant="outline" size="lg" className="border-zion - purple text-zion - purple hover:bg-zion - purple hover:text-white">
               <a href="tel:+13024640950">
-                Call Now: +1 302 464 0950
+                Call Now: +1 302 464 0950;
               </a>
             </Button>;
           </div>;

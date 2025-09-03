@@ -5,7 +5,7 @@ import { CheckCircle, Brain, Zap, Target, BarChart, Users, Award } from 'lucide-
 
 const AIDevelopment: NextPage = () => {
   return (
-    <Layout
+    <Layout;
       title="AI Development Services - Zion Tech Group"
       description="Custom AI solutions and machine learning models tailored to your business needs. From chatbots to predictive analytics, we build intelligent systems."
     >
@@ -13,7 +13,7 @@ const AIDevelopment: NextPage = () => {
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            AI
+            AI;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Development</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
@@ -23,10 +23,10 @@ const AIDevelopment: NextPage = () => {
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              Start Your AI Project
+              Start Your AI Project;
             </Link>
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              View All Services
+              View All Services;
             </Link>
           </div>
         </div>
@@ -38,7 +38,7 @@ const AIDevelopment: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our AI Development Services</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We specialize in creating custom AI solutions that solve real business problems 
+              We specialize in creating custom AI solutions that solve real business problems;
               and drive measurable results across various industries.
             </p>
           </div>
@@ -55,15 +55,15 @@ const AIDevelopment: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Predictive Analytics
+                  Predictive Analytics;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Classification Systems
+                  Classification Systems;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Recommendation Engines
+                  Recommendation Engines;
                 </li>
               </ul>
             </div>
@@ -79,15 +79,15 @@ const AIDevelopment: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Chatbots & Virtual Assistants
+                  Chatbots & Virtual Assistants;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Sentiment Analysis
+                  Sentiment Analysis;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Text Summarization
+                  Text Summarization;
                 </li>
               </ul>
             </div>
@@ -103,15 +103,15 @@ const AIDevelopment: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Object Detection
+                  Object Detection;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Facial Recognition
+                  Facial Recognition;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Image Classification
+                  Image Classification;
                 </li>
               </ul>
             </div>
@@ -127,15 +127,15 @@ const AIDevelopment: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Business Intelligence
+                  Business Intelligence;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Real-time Analytics
+                  Real-time Analytics;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Data Visualization
+                  Data Visualization;
                 </li>
               </ul>
             </div>
@@ -151,15 +151,15 @@ const AIDevelopment: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Process Automation
+                  Process Automation;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Workflow Optimization
+                  Workflow Optimization;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Intelligent Document Processing
+                  Intelligent Document Processing;
                 </li>
               </ul>
             </div>
@@ -175,15 +175,15 @@ const AIDevelopment: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Bespoke AI Development
+                  Bespoke AI Development;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  AI Strategy Consulting
+                  AI Strategy Consulting;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  AI Integration Services
+                  AI Integration Services;
                 </li>
               </ul>
             </div>
@@ -254,16 +254,16 @@ const AIDevelopment: NextPage = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              Start Your AI Project
+              Start Your AI Project;
             </Link>
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              View All Services
+              View All Services;
             </Link>
           </div>
         </div>
       </section>
     </Layout>
   );
-};
+}
 
 export default AIDevelopment;

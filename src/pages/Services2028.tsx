@@ -15,12 +15,12 @@ export default function Services2028(...args: unknown[]): unknown {
       {/* Futuristic Background */}""""
       <div className="futuristic-bg">
         {[...Array(15)].map((_, i) => (
-          <div
+          <div;
             key={i}
             className="matrix-rain"
             style={{
-              left: unknown`${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 20}s`,
+              left: unknown`${Math.random() * 100}%`
+              animationDelay: `${Math.random() * 20}s`
               animationDuration: `${15 + Math.random() * 10}s`
             }}          >
             {String.fromCharCode(0x30a0 + Math.random() * 96)}
@@ -115,7 +115,7 @@ export default function Services2028(...args: unknown[]): unknown {
 
               {/* Category Filter */}
               <div>
-                <select
+                <select;
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="w-full px-4 py-3 bg-cyber-black/70 border border-neon-blue/30 rounded-lg text-white focus: unknownborder-neon-blue focus:outline-none focus:ring-2 focus:ring-neon-blue/20 transition-all duration-300"                >
@@ -370,12 +370,12 @@ export default function Services2028(...args: unknown[]): unknown {
   );
 }
 
-export { Services2028 };
+export { Services2028 }
 
-export { Services2028 };
+export { Services2028 }
 
-export { Services2028 };
+export { Services2028 }
 
-export { Services2028 };
+export { Services2028 }
 
-export { Services2028 };
+export { Services2028 }

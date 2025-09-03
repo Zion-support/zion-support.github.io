@@ -1,10 +1,12 @@
 import {  import { motion  } from 'framer-motion';
 
- params - Function parameters
- * @returns {*} Function return value
+ params - Function parameters;
+ * @returns {*} Function return value;
  */
-function TechSolutionsSection () {
+function TechSolutionsSection() {
+
 export function TechSolutionsSection() {
+
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
@@ -12,50 +14,45 @@ export function TechSolutionsSection() {
           className="text-center mb-16"
           initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >"
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Technology Solutions
+            Technology Solutions;
           </h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive technology solutions designed to drive innovation,
+            Comprehensive technology solutions designed to drive innovation;
             enhance security, and accelerate your digital transformation journey.</p>
         </motion.div>
 "
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {techSolutions.map((solution, index) => (
-            <motion.div
+            <motion.div;
               key={solution.title}"
               className="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
               initial = {
 
-  { opacity: 0,
-  y: 30
-
+  { opacity: 0;
+  y: 30;
 }}
               whileInView = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
               viewport={{ once: true }}
               transition = {
 
-  { duration: 0.6,
-  delay: index * 0.1
-
+  { duration: 0.6;
+  delay: index * 0.1;
 }}
             >
               <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>"
@@ -102,25 +99,22 @@ export function TechSolutionsSection() {
               </motion.div>) }) }
         </div>
 
-        <motion.div
+        <motion.div;
           className="mt-16 text-center"          initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           viewport={{ once: true }}
           transition = {
 
-  { duration: 0.6,
-  delay: 0.4
-
+  { duration: 0.6;
+  delay: 0.4;
 }}
         >"
           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">"
@@ -128,7 +122,7 @@ export function TechSolutionsSection() {
               Ready to Transform Your Business?
             </h3>"
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Let's discuss how our technology solutions can help you achieve
+              Let's discuss how our technology solutions can help you achieve;
               your business goals and stay ahead of the competition.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
@@ -148,7 +142,7 @@ export function TechSolutionsSection() {
           </div>
         </motion.div>;
       </div>;
-    </section>;) };
+    </section>;) }
 
 export default TechSolutionsSection;"
             <span className="text-2xl">→</span>;

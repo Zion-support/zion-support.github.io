@@ -1,6 +1,5 @@
 ursor/automate-test-fix-improve-and-merge-code-99d1: src/pages/services/micro-saas.tsx;
   )}
-;
         <li>Micro CRM with AI Scoring</li>;
         <li>Interview Assessment AI</li>;
       </ul>    </div>";
@@ -27,8 +26,7 @@ const MicroSaaS: React.FC = () => {;
         <li>Interview Assessment AI</li>;
       </ul>;
     </div>;
-  );,
+  );
 }
-;
 export default MicroSaaS;
 ""

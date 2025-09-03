@@ -1,7 +1,7 @@
   it(displays expected content", () => {
     render(<NotFound  />)"
-import { render, screen } from &apos;@testing - library/react",
-import NotFound from &apos;./NotFound
+import { render, screen } from &apos;@testing - library/react"
+import NotFound from &apos;./NotFound;
 describe(&apos;NotFound&apos, () => {
   it(&apos;renders without crashing&apos, () => {
     render()
@@ -11,7 +11,7 @@ describe(&apos;NotFound&apos, () => {
   it(&apos;displays expected content&apos, () => {
     render()
 }
-    // comment
+    // comment;
     render(<NotFound / >)"
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"

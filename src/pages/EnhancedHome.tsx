@@ -1,5 +1,6 @@
 import { Link  } from 'react-router-dom';
 export default function Page() {
+
 ) ) , []) ;
 
   return (<div  className="fixed inset - 0 overflow-hidden pointer - events -none" aria-hidden="true">
@@ -7,24 +8,24 @@ export default function Page() {
       <div  className="absolute inset - 0 bg-[linear - gradient (rgba (6,182,212,0.15) _1px,transparent_1px) ,linear - gradient(90deg,rgba (6,182,212,0.15) _1px,transparent_1px) ] bg-[size:50px_50px] animate -pulse"></div>
 
       {/* Optimized floating particles */}
-      {particles.map((particle) => (<motion.div
+      {particles.map((particle) => (<motion.div;
           key={particle.id}
           className="absolute w-1 h-1 bg-cyan - 400 rounded-full opacity - 80 shadow-lg shadow-cyan -400 / 50"
           animate={{
-            x: [0, 200, 0],
-            y: [0, -200, 0],
-            opacity: [0.4, 1, 0.4],
-            scale: [0.5, 1.2, 0.5],
+            x: [0, 200, 0]
+            y: [0, -200, 0]
+            opacity: [0.4, 1, 0.4]
+            scale: [0.5, 1.2, 0.5]
           }}
           transition={{
-            duration: particle.duration,
-            repeat: Infinity,
-            delay: particle.delay,
+            duration: particle.duration;
+            repeat: Infinity;
+            delay: particle.delay;
             ease: "easeInOut"
           }}
           style={{
-            left: particle.left,
-            top: particle.top,
+            left: particle.left;
+            top: particle.top;
           }}
         />) ) }
     </div>) ;
@@ -32,32 +33,32 @@ export default function Page() {
 
 FuturisticBackground.displayName = 'FuturisticBackground';
 
-// Enhanced hero section component
+// Enhanced hero section component;
 const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const heroSlides = useMemo(() => [{
-      title: "AI - Powered Solutions",
-      description: "Transform your business with cutting - edge artificial intelligence",
-      icon: Brain,
+      title: "AI - Powered Solutions"
+      description: "Transform your business with cutting - edge artificial intelligence"
+      icon: Brain;
       features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]
-    },
+    }
     {
-      title: "Quantum Computing",
-      description: "Next - generation computing power for complex problem solving",
-      icon: Atom,
+      title: "Quantum Computing"
+      description: "Next - generation computing power for complex problem solving"
+      icon: Atom;
       features: ["Quantum Algorithms", "Optimization", "Cryptography", "Simulation"]
-    },
+    }
     {
-      title: "Micro SAAS Services",
-      description: "Scalable software solutions tailored to your needs",
-      icon: Zap,
+      title: "Micro SAAS Services"
+      description: "Scalable software solutions tailored to your needs"
+      icon: Zap;
       features: ["Cloud - Native", "API - First", "Scalable Architecture", "Real - time Analytics"]
-    },
+    }
     {
-      title: "Digital Transformation",
-      description: "Modernize your infrastructure for the future",
-      icon: Rocket,
+      title: "Digital Transformation"
+      description: "Modernize your infrastructure for the future"
+      icon: Rocket;
       features: ["Cloud Migration", "DevOps", "Security", "Compliance"]
     }
   ], []) ;
@@ -71,11 +72,10 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
   }, [heroSlides.length]) ;
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
     const interval = setInterval(nextSlide, 5000) ;
     return () => clearInterval(interval) ;
@@ -84,7 +84,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
   return (<section className="relative min - h-screen flex items - center justify - center px-4 sm:px-6 lg:px-8 pt -20">
       <div  className="max - w-7xl mx - auto text-center">
         {/* Hero Content */}
-        <motion.div
+        <motion.div;
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -96,15 +96,15 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
           </div>
 
           <h1 className="text-5xl md:text-7xl font - bold mb-6 bg-gradient - to - r from - cyan - 400 via - blue - 400 to - purple - 400 bg-clip - text text-transparent">
-            Zion Tech Group
+            Zion Tech Group;
           </h1>
           <p className="text-xl md:text-2xl text-gray - 300 max - w-4xl mx - auto leading - relaxed mb-8">
-            Leading the future of technology with cutting - edge AI solutions, quantum computing,
+            Leading the future of technology with cutting - edge AI solutions, quantum computing;
             and innovative micro SAAS services that transform businesses worldwide.</p>
 
           {/* CTA Buttons */}
           <div  className="flex flex - col sm:flex - row gap-4 justify - center items -center">
-            <Link
+            <Link;
               to="/services"
               className="px-8 py-4 bg-gradient - to - r from - cyan - 500 to - blue - 500 hover:from - cyan - 600 hover:to - blue - 600 text-white font - bold rounded-xl transition - all duration - 300 transform hover:scale - 105 shadow-lg hover:shadow-cyan - 500 / 25 flex items - center space - x-2 focus:outline - none focus:ring - 2 focus:ring - cyan - 400 focus:ring - offset - 2 focus:ring - offset - zion - slate -dark"
               
@@ -123,7 +123,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
         </motion.div>
 
         {/* Hero Slides */}
-        <motion.div
+        <motion.div;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -131,7 +131,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
         >
           <div  className="relative">
             <AnimatePresence mode="wait">
-              <motion.div
+              <motion.div;
                 key={currentSlide}
                 initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -149,7 +149,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
                   {heroSlides[currentSlide].description}
                 </p>
                 <div  className="flex flex - wrap justify - center gap-3">
-                  {heroSlides[currentSlide].features.map ( (feature, index) => (<span
+                  {heroSlides[currentSlide].features.map ( (feature, index) => (<span;
                       key={index}
                       className="px-3 py-1 bg-white / 10 backdrop - blur - sm rounded-full text-sm text-cyan - 300 border border-cyan -400 / 30"
                     >
@@ -190,37 +190,37 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
 
 HeroSection.displayName = 'HeroSection';
 
-// Enhanced features section
+// Enhanced features section;
 const FeaturesSection = React.memo(() => {
   const features = useMemo(() => [{
-      icon: Brain,
-      title: "AI & Machine Learning",
-      description: "Advanced artificial intelligence solutions for business automation and insights",
+      icon: Brain;
+      title: "AI & Machine Learning"
+      description: "Advanced artificial intelligence solutions for business automation and insights"
       color: "from - purple - 500 to - cyan - 500"
-    },
+    }
     {
-      icon: Cloud,
-      title: "Cloud & Infrastructure",
-      description: "Scalable cloud solutions and modern infrastructure management",
+      icon: Cloud;
+      title: "Cloud & Infrastructure"
+      description: "Scalable cloud solutions and modern infrastructure management"
       color: "from - blue - 500 to - cyan - 500"
-    },
+    }
     {
-      icon: Shield,
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions for modern digital threats",
+      icon: Shield;
+      title: "Cybersecurity"
+      description: "Comprehensive security solutions for modern digital threats"
       color: "from - red - 500 to - orange - 500"
-    },
+    }
     {
-      icon: Zap,
-      title: "Micro SAAS",
-      description: "Custom software solutions designed for your specific needs",
+      icon: Zap;
+      title: "Micro SAAS"
+      description: "Custom software solutions designed for your specific needs"
       color: "from - yellow-500 to - orange - 500"
     }
   ], []) ;
 
   return (<section className="py-20 px-4 sm:px-6 lg:px-8">
       <div  className="max - w-7xl mx -auto">
-        <motion.div
+        <motion.div;
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -235,7 +235,7 @@ const FeaturesSection = React.memo(() => {
         </motion.div>
 
         <div  className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap-8">
-          {features.map ( (feature, index) => (<motion.div
+          {features.map ( (feature, index) => (<motion.div;
               key={feature.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -258,18 +258,18 @@ const FeaturesSection = React.memo(() => {
 
 FeaturesSection.displayName = 'FeaturesSection';
 
-// Enhanced stats section
+// Enhanced stats section;
 const StatsSection = React.memo(() => {
-  const stats = useMemo(() => [{ number: "500+", label: "Projects Completed", icon: CheckCircle },
-    { number: "50+", label: "Expert Team Members", icon: Users },
-    { number: "99.9%", label: "Uptime Guarantee", icon: ShieldCheck },
+  const stats = useMemo(() => [{ number: "500+", label: "Projects Completed", icon: CheckCircle }
+    { number: "50+", label: "Expert Team Members", icon: Users }
+    { number: "99.9%", label: "Uptime Guarantee", icon: ShieldCheck }
     { number: "24 / 7", label: "Support Available", icon: Clock }
   ], []) ;
 
   return (<section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient - to - r from - zion - slate - dark to - zion -slate">
       <div  className="max - w-7xl mx -auto">
         <div  className="grid grid - cols - 2 md:grid - cols - 4 gap-8">
-          {stats.map ( (stat, index) => (<motion.div
+          {stats.map ( (stat, index) => (<motion.div;
               key={stat.label}
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -290,11 +290,11 @@ const StatsSection = React.memo(() => {
 
 StatsSection.displayName = 'StatsSection';
 
-// Enhanced CTA section
+// Enhanced CTA section;
 const CTASection = React.memo(() => {
   return (<section className="py-20 px-4 sm:px-6 lg:px-8">
       <div  className="max - w-4xl mx - auto text-center">
-        <motion.div
+        <motion.div;
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -306,14 +306,14 @@ const CTASection = React.memo(() => {
           <p className="text-xl text-gray - 300 mb-8">
             Let's discuss how our innovative solutions can help you achieve your goals.</p>
           <div  className="flex flex - col sm:flex - row gap-4 justify -center">
-            <Link
+            <Link;
               to="/contact"
               className="px-8 py-4 bg-gradient - to - r from - cyan - 500 to - blue - 500 hover:from - cyan - 600 hover:to - blue - 600 text-white font - bold rounded-xl transition - all duration - 300 transform hover:scale - 105 shadow-lg hover:shadow-cyan - 500 / 25 flex items - center justify - center space - x-2"
             >
               <span > Get Started Today</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
-            <Link
+            <Link;
               to="/schedule - demo"
               className="px-8 py-4 bg-white / 10 backdrop - blur - sm border border-cyan - 400 / 30 hover:bg-white / 20 text-white font - bold rounded-xl transition - all duration - 300 hover:border-cyan - 400 / 50 flex items - center justify - center space - x-2"
             >
@@ -328,36 +328,37 @@ const CTASection = React.memo(() => {
 
 CTASection.displayName = 'CTASection';
 
-// Main EnhancedHome component
+// Main EnhancedHome component;
 const EnhancedHome: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
     setIsLoaded(true) ;
   }, []) ;
 
   const handleGetStarted = useCallback(() => {
-    // Scroll to services section or navigate
+    // Scroll to services section or navigate;
     const servicesSection = document.getElementById('services') ;
-    if(servicesSection) {
+    if() {
+
       servicesSection.scrollIntoView({ behavior: 'smooth' }) ;
     }
   }, []) ;
 
-  if(!isLoaded) {
+  if() {
+
     return (<div  className="min - h-screen bg-zion - slate - dark flex items - center justify -center">
         <div  className="animate - spin rounded-full h-32 w-32 border-b-2 border-cyan -400"></div>
       </div>) ;
   }
 
   return (<>
-      <EnhancedSEO
+      <EnhancedSEO;
         title="Zion Tech Group - Leading AI Solutions & Technology Services"
         description="Transform your business with cutting - edge AI solutions, quantum computing, and innovative micro SAAS services.Expert technology consulting and digital transformation."
         keywords="AI solutions, quantum computing, micro SAAS, digital transformation, technology consulting, machine learning, cybersecurity, cloud services"
@@ -382,4 +383,4 @@ const EnhancedHome: React.FC = () => {
         </LazyLoadWrapper>
       </div>
     </>) ;
-};
+}

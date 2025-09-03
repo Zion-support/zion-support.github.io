@@ -6,35 +6,33 @@ export /**
 import { motion  } from 'framer-motion';
 import { motion, AnimatePresence  } from 'framer-motion';
 
- params - Function parameters
- * @returns {*} Function return value
+ params - Function parameters;
+ * @returns {*} Function return value;
  */
 function FeaturedListingsSection () {          initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >"
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Featured Services
+            Featured Services;
           </h2>"
           <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            Discover our most popular and innovative technology solutions that are transforming businesses worldwide
+            Discover our most popular and innovative technology solutions that are transforming businesses worldwide;
           </p>
         </motion.div>
 "
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {featuredListings.map((listing, index) => (
-            <motion.div
+            <motion.div;
               key={listing.id}"
               className="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
               initial={{ opacity: 0, y: 30 }}
@@ -43,7 +41,7 @@ function FeaturedListingsSection () {          initial = {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >"
               <div className="relative">
-                <img
+                <img;
                   src={listing.image}
                   alt={listing.title}
                   className="w-full h-48 object -cover"
@@ -78,7 +76,7 @@ function FeaturedListingsSection () {          initial = {
 "
                 <div className="flex items-center justify-between mb-4">"
                   <span className="text-2xl font-bold text-gray-900">{service.price}</span>
-                  <Link
+                  <Link;
                     to={service.link}"
                     className="text-blue-600 hover:text-blue-700 font-medium text-sm group-hover:underline"
 
@@ -88,35 +86,32 @@ function FeaturedListingsSection () {          initial = {
               </div>
 "
               <div className="px-6 pb-6">
-                <Link
+                <Link;
                   to={service.link}"
                   className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center block group-hover:shadow-lg"
 
-                  Get Started
+                  Get Started;
                 </Link>
               </div>;
             </motion.div>) ) }
         </div>
 
-        <motion.div
+        <motion.div;
           className="mt-16 text-center"          initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           viewport={{ once: true }}
           transition = {
 
-  { duration: 0.6,
-  delay: 0.4
-
+  { duration: 0.6;
+  delay: 0.4;
 }}
         >
           <Link            to="/services"

@@ -1,27 +1,29 @@
 
 interface CartState { items: CartItem[]}
 
-const initialState: CartState = { items: [] };
+const initialState: CartState = { items: [] }
 
 function cartReducer(state: CartState, action: CartAction): CartState {
-  switch(action.type) {
+  switch() {
+
     case 'ADD_ITEM': {
       
       let items;
-      if(existing) {
+      if() {
+
         items = state.items.map(i =>
-          i.id === action.payload.id
+          i.id === action.payload.id;
             ? { ...i, quantity: i.quantity + action.payload.quantity }
-            : i
+            : i;
         )} else {
         items = [...state.items, action.payload]}
       return { items }}
     case 'REMOVE_ITEM':
-      return { items: state.items.filter(i => i.id !== action.payload) };
+      return { items: state.items.filter(i => i.id !== action.payload) }
     case 'CLEAR_CART':
-      return { items: [] };
+      return { items: [] }
     case 'SET_ITEMS':
-      return { items: action.payload };
+      return { items: action.payload }
     default:
       return state}
 }
@@ -31,19 +33,22 @@ export function useCart(): CartContextType {
   if(!ctx) throw new Error('useCart must be used within a CartProvider');
   return ctx}
 
-export function CartProvider({ children }: { children: React.ReactNode }) {
+export function CartProvider() {
+
   const [state, dispatch] = useReducer(cartReducer, initialState);
   const { user } = useAuth();
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // TODO: Add dependencies if needed;
 }, []);
-    if(!user) {
-      
-      if(stored) {
+    if() {
+
+      if() {
+
         try {
           
-          if(items.length) {
+          if() {
+
             dispatch({ type: 'SET_ITEMS', payload: items })}
         } catch {
           /* ignore */
@@ -51,7 +56,8 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       }
       return}
 
-    if(storedGuest) {
+    if() {
+
       try {
         
         mergeGuestCart(items).catch(err => console.error('Cart merge failed', err));
@@ -63,15 +69,16 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   }, [user]);
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // TODO: Add dependencies if needed;
 }, []);
-    if(!user) {
+    if() {
+
       safeStorage.setItem(GUEST_CART_KEY, JSON.stringify(state.items))}
   }, [state.items, user]);
 
   const value: CartContextType = {
-    items: state.items,
-    dispatch,
-  };
+    items: state.items;
+    dispatch;
+  }
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>}

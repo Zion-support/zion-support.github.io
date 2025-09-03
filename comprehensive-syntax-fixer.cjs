@@ -4,43 +4,46 @@ const path = require("path");
 const { execSync } = require("child_process");
 class $1 {
   constructor() {
+
   this.projectRoot = process.cwd();
-    this.fixedFiles = 0;    this.errors = [];,
+    this.fixedFiles = 0;    this.errors = [];
 }
-;
-  log(message) {
+  log() {
+
   const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);,
+    console.log(`[${timestamp}] ${message}`);
 }
-;
   async findProblematicFiles() {
+
   this.log("🔍 Finding files with syntax issues...");
     const problematicFiles = [];
     const extensions = [".tsx", ".ts", ".jsx", ".js"];
     const walkDir = (dir) => {
   const files = fs.readdirSync(dir);
-      for (const file of files) {
+      for() {
+
   const filePath = path.join(dir, file);
         const stat = fs.statSync(filePath);
         if (stat.isDirectory() && !file.startsWith(".") && file !== "node_modules") {
-  walkDir(filePath);,
+  walkDir(filePath);
 } else if (stat.isFile() && extensions.some(ext => file.endsWith(ext))) {
   try {
   const content = fs.readFileSync(filePath, "utf8");
             if (this.hasSyntaxIssues(content)) {
-  problematicFiles.push(filePath);,
+  problematicFiles.push(filePath);
 }
-          } catch (error) {
-  // File might be binary or have encoding issues;,
+          } catch() {
+
+  // File might be binary or have encoding issues;
 }
         }
       }
     }
     walkDir(this.projectRoot);
-    return problematicFiles;,
+    return problematicFiles;
 }
-;
-  hasSyntaxIssues(content) {
+  hasSyntaxIssues() {
+
   // Check for common syntax issues;
     const issues = [
   /import \s*[^]+;/g,  // Malformed imports;
@@ -52,10 +55,10 @@ class $1 {
       /,+/g,               // Multiple commas;
       /:\s*[^=,}]+:/g,      // Malformed type annotations;
     ];
-    return issues.some(issue => issue.test(content));,
+    return issues.some(issue => issue.test(content));
 }
-;
-  fixSyntax(content) {
+  fixSyntax() {
+
   let fixed = content;
     // Fix malformed imports;
     fixed = fixed.replace(/import \s*([^]+);/g, "import $1;");
@@ -108,10 +111,10 @@ class $1 {
     fixed = fixed.replace(/;\s*;/g, ";");
     fixed = fixed.replace(/,\s*,/g, ",");
     fixed = fixed.replace(/\s+/g, " ");
-    return fixed;,
+    return fixed;
 }
-;
-  async fixFile(filePath) {
+  async fixFile() {
+
   this.log(`🔧 Fixing syntax in: ${filePath}`);
     try {
   const content = fs.readFileSync(filePath, "utf8");
@@ -121,317 +124,312 @@ class $1 {
       const fixes = [
   // Fix missing semicolons after import statements;
         {
-  pattern: /^import\s+.*from\s+[""][^""]+["]\s*$/gm,;
-          replacement: (match) => match.endsWith(";") ? match : match + ";";,
-},;
+  pattern: /^import\s+.*from\s+[""][^""]+["]\s*$/gm;
+          replacement: (match) => match.endsWith(";") ? match : match + ";";
+}
         // Fix unterminated string literals;
         {
-  pattern: /(["])([^""]*?)(\n|$)/g,;
+  pattern: /(["])([^""]*?)(\n|$)/g;
           replacement: (match, quote, content, newline) => {
   if (content.includes("\\" + quote)) return match;
-            return quote + content + quote + ";" + newline;,
+            return quote + content + quote + ";" + newline;
 }
-        },;
+        }
         // Fix missing commas in object literals;
         {
-  pattern: /(\w+):\s*([^}\n]+)(\n\s*[^}])/g,;
-          replacement: "$1: $2,$3";,
-},;
+  pattern: /(\w+):\s*([^}\n]+)(\n\s*[^}])/g;
+          replacement: "$1: $2,$3";
+}
         // Fix missing semicolons after variable declarations;
         {
-  pattern: /(const|let|var)\s+\w+\s*=\s*[^]+$/gm,;
-          replacement: (match) => match.endsWith(";") ? match : match + ";";,
-},;
+  pattern: /(const|let|var)\s+\w+\s*=\s*[^]+$/gm;
+          replacement: (match) => match.endsWith(";") ? match : match + ";";
+}
         // Fix JSX syntax issues;
         {
-  pattern: /<(\w+)([^>]*?)>/g,;
+  pattern: /<(\w+)([^>]*?)>/g;
           replacement: (match, tag, attrs) => {
   if (attrs.includes("=") && !attrs.trim().endsWith("/")) {
-  return match;,
+  return match;
 }
-            return match;,
+            return match;
 }
         }
       ];
 
-      for (const fix of fixes) {
+      for() {
+
   const newContent = fixedContent.replace(fix.pattern, fix.replacement);
-        if (newContent !== fixedContent) {
+        if() {
+
   fixedContent = newContent;
-          hasChanges = true;,
+          hasChanges = true;
 }
       }
-;
-      if (hasChanges) {
-  fs.writeFileSync(filePath, fixedContent);,
+      if() {
+
+  fs.writeFileSync(filePath, fixedContent);
 }
-;
-  log(message) {
-  console.log(`[${new Date().toISOString()}] ${message}`);,
+  log() {
+
+  console.log(`[${new Date().toISOString()}] ${message}`);
 }
-;
-  getAllFiles(dir, extensions = [".js", ".cjs", ".mjs"]) {
+  getAllFiles() {
+
   let files = [];
     const items = fs.readdirSync(dir);
-    for (const item of items) {
+    for() {
+
   const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {
-  files = files.concat(this.getAllFiles(fullPath, extensions));,
+  files = files.concat(this.getAllFiles(fullPath, extensions));
 } else if (extensions.some(ext => item.endsWith(ext))) {
-  files.push(fullPath);,
+  files.push(fullPath);
 }
     }
-;
-    return files;,
+    return files;
 }
-;
-  fixStringLiterals(content) {
+  fixStringLiterals() {
+
   // Fix malformed string literals with missing quotes;
     content = content.replace(;
-      /console\.log\(`"([^"]*)"\);/g,;
+      /console\.log\(`"([^"]*)"\);/g;
       "console.log(`$1`);";
     );
     content = content.replace(;
-      /console\.log\(`"([^"]*)"$/gm,;
+      /console\.log\(`"([^"]*)"$/gm;
       "console.log(`$1`);";
     );
     content = content.replace(;
-      /console\.log\(`"([^"]*)"$/gm,;
+      /console\.log\(`"([^"]*)"$/gm;
       "console.log(`$1`);";
     );
     // Fix incomplete template literals;
     content = content.replace(;
-      /console\.log\(`([^`]*)\n/gm,;
+      /console\.log\(`([^`]*)\n/gm;
       "console.log(`$1`);\n";
     );
     content = content.replace(;
-      /console\.log\(`([^`]*)\n/gm,;
+      /console\.log\(`([^`]*)\n/gm;
       "console.log(`$1`);\n";
     );
     // Fix missing closing parentheses in console.log;
     content = content.replace(;
-      /console\.log\(`([^`]*)"$/gm,;
+      /console\.log\(`([^`]*)"$/gm;
       "console.log(`$1`);";
     );
     content = content.replace(;
-      /console\.log\(`([^`]*)"$/gm,;
+      /console\.log\(`([^`]*)"$/gm;
       "console.log(`$1`);";
     );
     // Fix specific patterns;
     content = content.replace(;
-      /console\.log\(`"🔒 Starting continuous security audit automation\.\.\."\);/g,;
+      /console\.log\(`"🔒 Starting continuous security audit automation\.\.\."\);/g;
       "console.log(`🔒 Starting continuous security audit automation...`);";
     );
     content = content.replace(;
-      /console\.log\(`"🔍 Starting continuous quality checks automation\.\.\."\);/g,;
+      /console\.log\(`"🔍 Starting continuous quality checks automation\.\.\."\);/g;
       "console.log(`🔍 Starting continuous quality checks automation...`);";
     );
     content = content.replace(;
-      /console\.log\(`📊 Running performance monitoring at \$\{new Date\(\)\.toISOString\(\)\}"/g,;
+      /console\.log\(`📊 Running performance monitoring at \$\{new Date\(\)\.toISOString\(\)\}"/g;
       "console.log(`📊 Running performance monitoring at ${new Date().toISOString()}`);";
     );
-    return content;,
+    return content;
 }
-;
-  fixImportStatements(content) {
+  fixImportStatements() {
+
   // Fix incomplete import statements;
     const importFixes = [
-  { pattern: /import fs from;/g, replacement: "import fs from "fs;" },;
+  { pattern: /import fs from;/g, replacement: "import fs from "fs;" }
       {
-  pattern: /import path from;/g,;
-        replacement: "import path from path";"},;
+  pattern: /import path from;/g;
+        replacement: "import path from path";"}
       {
-  pattern: /import { execSync } from;/g,;
-        replacement: "import { execSync  } from "child_process;";},;
+  pattern: /import { execSync } from;/g;
+        replacement: "import { execSync  } from "child_process;";}
       {
-  pattern: /import axios from;/g,;
-        replacement: "import axios from axios";"},;
+  pattern: /import axios from;/g;
+        replacement: "import axios from axios";"}
       {
-  pattern: /import http from;/g,;
-        replacement: "import http from "http;"},;
+  pattern: /import http from;/g;
+        replacement: "import http from "http;"}
       {
-  pattern: /import https from;/g,;
-        replacement: "import https from https";"},;
+  pattern: /import https from;/g;
+        replacement: "import https from https";"}
       {
-  pattern: /import { fileURLToPath } from;/g,;
-        replacement: "import { fileURLToPath  } from "url;";},;
+  pattern: /import { fileURLToPath } from;/g;
+        replacement: "import { fileURLToPath  } from "url;";}
       {
-  pattern: /import { dirname } from;/g,;
-        replacement: "import { dirname } from path";"},;
-      { pattern: /import os from;/g, replacement: "import os from "os;" },;
+  pattern: /import { dirname } from;/g;
+        replacement: "import { dirname } from path";"}
+      { pattern: /import os from;/g, replacement: "import os from "os;" }
       {
-  pattern: /import crypto from;/g,;
-        replacement: "import crypto from crypto";"},;
-      { pattern: /import url from;/g, replacement: "import url from "url;" },;
+  pattern: /import crypto from;/g;
+        replacement: "import crypto from crypto";"}
+      { pattern: /import url from;/g, replacement: "import url from "url;" }
       {
-  pattern: /import util from;/g,;
-        replacement: "import util from util";"},;
+  pattern: /import util from;/g;
+        replacement: "import util from util";"}
       {
-  pattern: /import stream from;/g,;
-        replacement: "import stream from "stream;"},;
+  pattern: /import stream from;/g;
+        replacement: "import stream from "stream;"}
       {
-  pattern: /import zlib from;/g,;
-        replacement: "import zlib from zlib";"},;
+  pattern: /import zlib from;/g;
+        replacement: "import zlib from zlib";"}
       {
-  pattern: /import cluster from;/g,;
-        replacement: "import cluster from "cluster;"},;
+  pattern: /import cluster from;/g;
+        replacement: "import cluster from "cluster;"}
       {
-  pattern: /import worker_threads from;/g,;
-        replacement: "import worker_threads from worker_threads";"},;
+  pattern: /import worker_threads from;/g;
+        replacement: "import worker_threads from worker_threads";"}
       {
-  pattern: /import perf_hooks from;/g,;
-        replacement: "import perf_hooks from "perf_hooks;"},;
-      { pattern: /import v8 from;/g, replacement: "import v8 from v8";" },;
-      { pattern: /import vm from;/g, replacement: "import vm from "vm;" },;
+  pattern: /import perf_hooks from;/g;
+        replacement: "import perf_hooks from "perf_hooks;"}
+      { pattern: /import v8 from;/g, replacement: "import v8 from v8";" }
+      { pattern: /import vm from;/g, replacement: "import vm from "vm;" }
       {
-  pattern: /import readline from;/g,;
-        replacement: "import readline from readline";"},;
+  pattern: /import readline from;/g;
+        replacement: "import readline from readline";"}
       {
-  pattern: /import repl from;/g,;
-        replacement: "import repl from "repl;"},;
-      { pattern: /import tls from;/g, replacement: "import tls from tls";" },;
-      { pattern: /import net from;/g, replacement: "import net from "net;" },;
+  pattern: /import repl from;/g;
+        replacement: "import repl from "repl;"}
+      { pattern: /import tls from;/g, replacement: "import tls from tls";" }
+      { pattern: /import net from;/g, replacement: "import net from "net;" }
       {
-  pattern: /import dgram from;/g,;
-        replacement: "import dgram from dgram";"},;
-      { pattern: /import dns from;/g, replacement: "import dns from "dns;" },;
+  pattern: /import dgram from;/g;
+        replacement: "import dgram from dgram";"}
+      { pattern: /import dns from;/g, replacement: "import dns from "dns;" }
       {
-  pattern: /import querystring from;/g,;
-        replacement: "import querystring from querystring";"},;
+  pattern: /import querystring from;/g;
+        replacement: "import querystring from querystring";"}
       {
-  pattern: /import punycode from;/g,;
-        replacement: "import punycode from "punycode;"},;
+  pattern: /import punycode from;/g;
+        replacement: "import punycode from "punycode;"}
       {
-  pattern: /import string_decoder from;/g,;
-        replacement: "import string_decoder from string_decoder";"},;
+  pattern: /import string_decoder from;/g;
+        replacement: "import string_decoder from string_decoder";"}
       {
-  pattern: /import timers from;/g,;
-        replacement: "import timers from "timers;"},;
+  pattern: /import timers from;/g;
+        replacement: "import timers from "timers;"}
       {
-  pattern: /import events from;/g,;
-        replacement: "import events from events";"},;
+  pattern: /import events from;/g;
+        replacement: "import events from events";"}
       {
-  pattern: /import assert from;/g,;
-        replacement: "import assert from "assert;"},;
+  pattern: /import assert from;/g;
+        replacement: "import assert from "assert;"}
       {
-  pattern: /import buffer from;/g,;
-        replacement: "import buffer from buffer";"},;
+  pattern: /import buffer from;/g;
+        replacement: "import buffer from buffer";"}
       {
-  pattern: /import console from;/g,;
-        replacement: "import console from "console;"},;
+  pattern: /import console from;/g;
+        replacement: "import console from "console;"}
       {
-  pattern: /import process from;/g,;
-        replacement: "import process from process";"},;
+  pattern: /import process from;/g;
+        replacement: "import process from process";"}
       {
-  pattern: /import global from;/g,;
-        replacement: "import global from "global;"},;
+  pattern: /import global from;/g;
+        replacement: "import global from "global;"}
       {
-  pattern: /import Buffer from;/g,;
-        replacement: "import { Buffer } from buffer";"},;
+  pattern: /import Buffer from;/g;
+        replacement: "import { Buffer } from buffer";"}
       {
-  pattern: /import setTimeout from;/g,;
-        replacement: "import { setTimeout  } from "timers;";},;
+  pattern: /import setTimeout from;/g;
+        replacement: "import { setTimeout  } from "timers;";}
       {
-  pattern: /import setInterval from;/g,;
-        replacement: "import { setInterval } from timers";"},;
+  pattern: /import setInterval from;/g;
+        replacement: "import { setInterval } from timers";"}
       {
-  pattern: /import clearTimeout from;/g,;
-        replacement: "import { clearTimeout  } from "timers;";},;
+  pattern: /import clearTimeout from;/g;
+        replacement: "import { clearTimeout  } from "timers;";}
       {
-  pattern: /import clearInterval from;/g,;
-        replacement: "import { clearInterval } from timers";"},;
+  pattern: /import clearInterval from;/g;
+        replacement: "import { clearInterval } from timers";"}
       {
-  pattern: /import setImmediate from;/g,;
-        replacement: "import { setImmediate  } from "timers;";},;
+  pattern: /import setImmediate from;/g;
+        replacement: "import { setImmediate  } from "timers;";}
       {
-  pattern: /import clearImmediate from;/g,;
+  pattern: /import clearImmediate from;/g;
         replacement: "import { clearImmediate } from timers";"}];
-    for (const fix of importFixes) {
-  content = content.replace(fix.pattern, fix.replacement);,
+    for() {
+
+  content = content.replace(fix.pattern, fix.replacement);
 }
-;
-    return content;,
+    return content;
 }
-;
-  fixOptionalChaining(content) {
+  fixOptionalChaining() {
+
   // Fix optional chaining syntax issues;
     content = content.replace(/\?\?/g, "?.");
     content = content.replace(/\.\?\?/g, "?.");
     // Fix specific optional chaining patterns;
     content = content.replace(;
-      /this\.metrics\.system\.process\?\?\.uptime/g,;
+      /this\.metrics\.system\.process\?\?\.uptime/g;
       "this.metrics.system.process?.uptime";
     );
     content = content.replace(;
-      /this\.metrics\.system\.process\?\?\.memory/g,;
+      /this\.metrics\.system\.process\?\?\.memory/g;
       "this.metrics.system.process?.memory";
     );
     content = content.replace(;
-      /this\.metrics\.system\.process\?\?\.cpu/g,;
+      /this\.metrics\.system\.process\?\?\.cpu/g;
       "this.metrics.system.process?.cpu";
     );
-    return content;,
+    return content;
 }
-;
-  fixStringLiteralsAdvanced(content) {
+  fixStringLiteralsAdvanced() {
+
   // Fix malformed string literals;
     const stringFixes = [
   {
-  pattern: /this\.projectRoot,logs"/g,;
-        replacement: "this.projectRoot, "logs"},;
+  pattern: /this\.projectRoot,logs"/g;
+        replacement: "this.projectRoot, "logs"}
       {
-  pattern: /this\.projectRoot,reports"/g,;
-        replacement: this.projectRoot, "reports""},;
+  pattern: /this\.projectRoot,reports"/g;
+        replacement: this.projectRoot, "reports""}
       {
-  pattern: /this\.projectRoot,automation"/g,;
-        replacement: "this.projectRoot, "automation"},;
+  pattern: /this\.projectRoot,automation"/g;
+        replacement: "this.projectRoot, "automation"}
       {
-  pattern: /this\.projectRoot,dir\)/g,;
-        replacement: "this.projectRoot, dir)"},;
+  pattern: /this\.projectRoot,dir\)/g;
+        replacement: "this.projectRoot, dir)"}
       {
-  pattern: /path\.join\(this\.projectRoot,logs"/g,;
-        replacement: path.join(this.projectRoot, "logs""},;
-      {
-  pattern: /path\.join\(this\.projectRoot,reports"/g,;
-        replacement: "path.join(this.projectRoot, "reports"},;
-      {
-  pattern: /path\.join\(this\.projectRoot,automation"/g,;
-        replacement: path.join(this.projectRoot, "automation""}];
-    for (const fix of stringFixes) {
-  content = content.replace(fix.pattern, fix.replacement);,
+  pattern: /path\.join\(this\.projectRoot,logs"/g;
+        replacement: path.join() {
+
+  content = content.replace(fix.pattern, fix.replacement);
 }
-;
-    return content;,
+    return content;
 }
-;
-  fixBracketIssues(content) {
+  fixBracketIssues() {
+
   // Fix missing brackets and parentheses;
     content = content.replace(;
-      /fs\.mkdirSync\(dirPath", \{ recursive: true \}\);/g,;
+      /fs\.mkdirSync\(dirPath", \{ recursive: true \}\);/g;
       "fs.mkdirSync(dirPath, { recursive: true });";
     );
-    return content;,
+    return content;
 }
-;
-  fixFunctionSyntax(content) {
+  fixFunctionSyntax() {
+
   // Fix async function syntax issues;
     content = content.replace(;
-      /async initializeAutomationSystems\(\) \{/g,;
+      /async initializeAutomationSystems\(\) \{/g;
       "async initializeAutomationSystems() {";
     );
     content = content.replace(;
-      /async runAutomation\(\) \{/g,;
+      /async runAutomation\(\) \{/g;
       "async runAutomation() {";
     );
     content = content.replace(;
-      /async startMonitoring\(\) \{/g,;
+      /async startMonitoring\(\) \{/g;
       "async startMonitoring() {";
     );
-    return content;,
+    return content;
 }
-;
-  fixFile(filePath) {
+  fixFile() {
+
   try {
   let content = fs.readFileSync(filePath, "utf8");
       const originalContent = content;
@@ -442,26 +440,28 @@ class $1 {
       content = this.fixStringLiteralsAdvanced(content);
       content = this.fixBracketIssues(content);
       content = this.fixFunctionSyntax(content);
-      if (content !== originalContent) {
+      if() {
+
   fs.writeFileSync(filePath, content, "utf8");
         this.fixedFiles.push(filePath);
         this.log(`✅ Fixed: ${filePath}`);
-        return true;,
+        return true;
 }
-;
-      return false;,
-} catch (error) {
+      return false;
+} catch() {
+
   this.errors.push({ file: filePath, error: error.message });
       this.log(`❌ Error fixing ${filePath}: ${error.message}`);
-      return false;,
+      return false;
 }
   }
-;
-  getAllFiles(dir, extensions = [".js", ".jsx", ".ts", ".tsx"]) {
+  getAllFiles() {
+
   const files = [];
     if (!fs.existsSync(dir)) return files;
     const items = fs.readdirSync(dir);
-    for (const item of items) {
+    for() {
+
   const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
       // Create backup;
@@ -470,7 +470,8 @@ class $1 {
       // Fix syntax;
       const fixedContent = this.fixSyntax(content);
       // Only write if content changed;
-      if (fixedContent !== content) {
+      if() {
+
   fs.writeFileSync(filePath, fixedContent);
         this.log(`✅ Fixed syntax in: ${filePath}`);
         return { fixed: true, backup: backupPath }
@@ -479,127 +480,131 @@ class $1 {
         fs.unlinkSync(backupPath);
         return { fixed: false, reason: "No changes needed" }
       }
-      ;,
-} catch (error) {
+} catch() {
+
   this.log(`❌ Error fixing ${filePath}: ${error.message}`);
       this.errors.push({ file: filePath, error: error.message });
       return { fixed: false, error: error.message }
     }
   }
-;
   async fixAllFiles() {
+
   this.log("🚀 Starting comprehensive syntax fixing...");
     const problematicFiles = await this.findProblematicFiles();
     const allFiles = [
-  ...this.getAllFiles(srcDir),;
+  ...this.getAllFiles(srcDir)
       ...this.getAllFiles(pagesDir);
     ];
 
     this.log(`📁 Found ${allFiles.length} files to check`);
-    for (const file of allFiles) {
+    for() {
+
   await this.fixFile(file);
-    if (problematicFiles.length === 0) {
+    if() {
+
   this.log("✅ No files with syntax issues found");
       return { fixed: 0, errors: [] }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
 }
-;
     this.log(`📋 Found ${problematicFiles.length} files with syntax issues`);
-    for (const file of problematicFiles) {
+    for() {
+
   const result = await this.fixFile(file);
-      if (result.fixed) {
-  this.fixedFiles++;,
+      if() {
+
+  this.fixedFiles++;
 }
     }
-;
     this.log(`🎉 Fixed syntax in ${this.fixedFiles} files`);
-    if (this.errors.length > 0) {
+    if() {
+
   this.log(`⚠️  ${this.errors.length} errors occurred:`);
       this.errors.forEach(error => {
-  this.log(`   - ${error.file}: ${error.error}`);,
-});,
+  this.log(`   - ${error.file}: ${error.error}`);
+});
 }
-;
     return {
-  totalFiles: allFiles.length,;
-      fixedFiles: this.fixedFiles.length,;
-      errors: this.errors.length,;
-      fixedFileList: this.fixedFiles,;
-      errorList: this.errors;,
+  totalFiles: allFiles.length;
+      fixedFiles: this.fixedFiles.length;
+      errors: this.errors.length;
+      fixedFileList: this.fixedFiles;
+      errorList: this.errors;
 }
   }
-;
-  generateReport(results) {
+  generateReport() {
+
   const report = {
-  timestamp: new Date().toISOString(),;
-      summary: results,;
-      fixedFiles: this.fixedFiles,;
-      errors: this.errors;,
+  timestamp: new Date().toISOString()
+      summary: results;
+      fixedFiles: this.fixedFiles;
+      errors: this.errors;
 }
-      fixed: this.fixedFiles,;
-      errors: this.errors,;
-      totalFiles: problematicFiles.length;,
+      fixed: this.fixedFiles;
+      errors: this.errors;
+      totalFiles: problematicFiles.length;
 }
   }
-;
   async createCleanESLintConfig() {
+
   this.log("🔧 Creating clean ESLint configuration...");
     const eslintConfig = `module.exports = {
   extends: [
-  "next/core-web-vitals",;
-    "eslint: recommended",;
+  "next/core-web-vitals"
+    "eslint: recommended"
     "@typescript-eslint/recommended";
-  ],;
-  parser: "@typescript-eslint/parser",;
-  plugins: ["@typescript-eslint"],;
+  ]
+  parser: "@typescript-eslint/parser"
+  plugins: ["@typescript-eslint"]
   rules: {
-  "@typescript-eslint/no-unused-vars": "warn",;
-    "@typescript-eslint/no-explicit-any": "warn",;
-    "react-hooks/exhaustive-deps": "warn";,
-},;
-  ignorePatterns: ["node_modules/", ".next/", "out/"];,
-};`;
+  "@typescript-eslint/no-unused-vars": "warn"
+    "@typescript-eslint/no-explicit-any": "warn"
+    "react-hooks/exhaustive-deps": "warn";
+}
+  ignorePatterns: ["node_modules/", ".next/", "out/"];
+}`;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
 
     try {
   fs.writeFileSync(".eslintrc.js", eslintConfig);
-      this.log("✅ Created clean ESLint configuration");,
-} catch (error) {
-  this.log(`❌ Error creating ESLint config: ${error.message}`);,
+      this.log("✅ Created clean ESLint configuration");
+} catch() {
+
+  this.log(`❌ Error creating ESLint config: ${error.message}`);
 }
   }
-;
   async run() {
+
   try {
   // Fix syntax issues;
       const fixResult = await this.fixAllFiles();
       // Create clean ESLint config;
       await this.createCleanESLintConfig();
       this.log("🎉 Comprehensive syntax fixing completed successfully");
-      return fixResult;,
-} catch (error) {
+      return fixResult;
+} catch() {
+
   this.log(`💥 Syntax fixing failed: ${error.message}`);
-      throw error;,
+      throw error;
 }
   }
 }
-;
 // Run the syntax fixer if this file is executed directly;
-if (require.main === module) {
+if() {
+
   const fixer = new ComprehensiveSyntaxFixer();
   fixer.run();
     .then((result) => {
   console.log("✅ Syntax fixing completed");
       console.log(`📊 Fixed ${result.fixed} files`);
-      if (result.errors.length > 0) {
-  console.log(`⚠️  ${result.errors.length} errors occurred`);,
+      if() {
+
+  console.log(`⚠️  ${result.errors.length} errors occurred`);
 }
-      process.exit(0);,
+      process.exit(0);
 });
     .catch((error) => {
   console.error("❌ Syntax fixing failed: ", error.message);
-      process.exit(1);,
-});,
+      process.exit(1);
+});
 }
-;
-module.exports = ComprehensiveSyntaxFixer
+module.exports = ComprehensiveSyntaxFixer;

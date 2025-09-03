@@ -9,97 +9,98 @@ const Status: NextPage = () => {
 
   const services = [
     {
-      name: 'API Services',
-      status: 'operational',
-      uptime: '99.9%',
-      responseTime: '45ms',
+      name: 'API Services'
+      status: 'operational'
+      uptime: '99.9%'
+      responseTime: '45ms'
       description: 'Core API endpoints and authentication services'
-      responseTime: '45ms',
-      icon: Database,
+      responseTime: '45ms'
+      icon: Database;
       description: 'Primary database and data storage'
-    },
+    }
     {
-      name: 'Web Application',
-      status: 'operational',
-      uptime: '99.8%',
-      responseTime: '120ms',
+      name: 'Web Application'
+      status: 'operational'
+      uptime: '99.8%'
+      responseTime: '120ms'
       description: 'Main website and user interface'
-    },
+    }
     {
-      name: 'Database',
-      status: 'operational',
-      uptime: '99.95%',
-      responseTime: '8ms',
+      name: 'Database'
+      status: 'operational'
+      uptime: '99.95%'
+      responseTime: '8ms'
       description: 'Primary database and data storage'
-    },
+    }
     {
-      name: 'AI Services',
-      status: 'operational',
-      uptime: '99.7%',
-      responseTime: '350ms',
-      icon: Activity,
+      name: 'AI Services'
+      status: 'operational'
+      uptime: '99.7%'
+      responseTime: '350ms'
+      icon: Activity;
       description: 'AI and machine learning services'
-    },
+    }
     {
-      name: 'Authentication',
-      status: 'operational',
-      uptime: '99.9%',
-      responseTime: '25ms',
+      name: 'Authentication'
+      status: 'operational'
+      uptime: '99.9%'
+      responseTime: '25ms'
       description: 'Content delivery network and static assets'
-    },
+    }
     {
-      name: 'Email Services',
-      status: 'operational',
-      uptime: '99.7%',
-      responseTime: '200ms',
+      name: 'Email Services'
+      status: 'operational'
+      uptime: '99.7%'
+      responseTime: '200ms'
       description: 'Email delivery and notification services'
-    },
+    }
     {
-      name: 'File Storage',
-      status: 'operational',
-      uptime: '99.9%',
-      responseTime: '85ms',
+      name: 'File Storage'
+      status: 'operational'
+      uptime: '99.9%'
+      responseTime: '85ms'
       description: 'File upload and storage services'
-    },
+    }
     {
-      name: 'Analytics',
-      status: 'operational',
-      uptime: '99.8%',
-      responseTime: '150ms',
+      name: 'Analytics'
+      status: 'operational'
+      uptime: '99.8%'
+      responseTime: '150ms'
       description: 'Analytics and reporting services'
-    },
+    }
     {
-      name: 'Authentication',
-      status: 'operational',
-      uptime: '99.9%',
-      responseTime: '30ms',
+      name: 'Authentication'
+      status: 'operational'
+      uptime: '99.9%'
+      responseTime: '30ms'
       description: 'System monitoring and alerting'
     }
   ];
 
   const incidents = [
     {
-      id: 1,
-      title: 'Scheduled Maintenance - API Services',
-      status: 'resolved',
-      severity: 'minor',
-      startTime: '2025-01-25T02:00:00Z',
-      endTime: '2025-01-25T04:00:00Z',
+      id: 1;
+      title: 'Scheduled Maintenance - API Services'
+      status: 'resolved'
+      severity: 'minor'
+      startTime: '2025-01-25T02:00:00Z'
+      endTime: '2025-01-25T04:00:00Z'
       description: 'Scheduled maintenance window for API infrastructure updates. All services restored successfully.'
-    },
+    }
     {
-      id: 2,
-      title: 'Database Performance Issue',
-      status: 'resolved',
-      severity: 'major',
-      startTime: '2025-01-20T14:30:00Z',
-      endTime: '2025-01-20T16:45:00Z',
+      id: 2;
+      title: 'Database Performance Issue'
+      status: 'resolved'
+      severity: 'major'
+      startTime: '2025-01-20T14:30:00Z'
+      endTime: '2025-01-20T16:45:00Z'
       description: 'Temporary performance degradation in database queries. Issue resolved with query optimization.'
     }
   ];
 
   const getStatusIcon = (status: string) => {
-    switch (status) {
+    switch() {
+
       case 'operational':
         return <CheckCircle className="w-5 h-5 text-green-500" />;
       case 'degraded':
@@ -109,10 +110,11 @@ const Status: NextPage = () => {
       default:
         return <Clock className="w-5 h-5 text-gray-500" />;
     }
-  };
+  }
 
   const getStatusColor = (status: string) => {
-    switch (status) {
+    switch() {
+
       case 'operational':
         return 'bg-green-100 text-green-800';
       case 'degraded':
@@ -122,10 +124,11 @@ const Status: NextPage = () => {
       default:
         return 'bg-gray-100 text-gray-800';
     }
-  };
+  }
 
   const getSeverityColor = (severity: string) => {
-    switch (severity) {
+    switch() {
+
       case 'critical':
         return 'bg-red-100 text-red-800';
       case 'major':
@@ -135,26 +138,25 @@ const Status: NextPage = () => {
       default:
         return 'bg-gray-100 text-gray-800';
     }
-  };
+  }
 
   const refreshStatus = async () => {
     setIsRefreshing(true);
-    // Simulate API call
+    // Simulate API call;
     await new Promise(resolve => setTimeout(resolve, 1000));
     setLastUpdated(new Date());
     setIsRefreshing(false);
-  };
+  }
 
   useEffect(() => {
     const interval = setInterval(() => {
       setLastUpdated(new Date());
-    }, 60000); // Update every minute
-
+    }, 60000); // Update every minute;
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <MainLayout
+    <MainLayout;
       title="System Status - Zion Tech Group"
       description="Real-time status of Zion Tech Group's services and infrastructure. Monitor uptime, performance, and incidents."
       keywords="system status, uptime, service status, monitoring, incidents, performance"
@@ -167,11 +169,11 @@ const Status: NextPage = () => {
               <Activity className="w-16 h-16 mx-auto mb-6 text-blue-400" />
               <h1 className="text-4xl md:text-5xl font-bold mb-6">System Status</h1>
               <p className="text-xl text-gray-200 mb-8">
-                Real-time status of our services and infrastructure
+                Real-time status of our services and infrastructure;
               </p>
               <div className="flex items-center justify-center space-x-4 text-sm text-gray-300">
                 <span>Last updated: {lastUpdated.toLocaleString()}</span>
-                <button
+                <button;
                   onClick={refreshStatus}
                   disabled={isRefreshing}
                   className="flex items-center space-x-2 hover:text-white transition-colors disabled:opacity-50"
@@ -220,10 +222,10 @@ const Status: NextPage = () => {
                     <div className="mt-4">
                       <span className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(service.status)}`}>
     }
-  };
+  }
 
   return (
-    <MainLayout
+    <MainLayout;
       title="System Status - Zion Tech Group"
       description="Real-time system status and uptime information for Zion Tech Group services. Monitor service availability and performance."
       keywords="system status, uptime, service status, monitoring, availability, performance"
@@ -231,15 +233,15 @@ const Status: NextPage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <motion.h1 
+          <motion.h1;
             className="text-4xl md:text-5xl font-bold mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            System Status
+            System Status;
           </motion.h1>
-          <motion.p 
+          <motion.p;
             className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-200"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -248,7 +250,7 @@ const Status: NextPage = () => {
             Real-time monitoring of our services and infrastructure. 
             All systems are currently operational.
           </motion.p>
-          <motion.div
+          <motion.div;
             className="flex flex-col sm:flex-row gap-4 justify-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -271,7 +273,7 @@ const Status: NextPage = () => {
       {/* System Status Overview */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="text-center mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -287,7 +289,7 @@ const Status: NextPage = () => {
             {systemStatus.map((service, index) => {
               const StatusIcon = getStatusIcon(service.status);
               return (
-                <motion.div
+                <motion.div;
                   key={service.name}
                   className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
                   initial={{ opacity: 0, y: 30 }}
@@ -337,7 +339,7 @@ const Status: NextPage = () => {
       {/* Recent Incidents */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="text-center mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -352,7 +354,7 @@ const Status: NextPage = () => {
           <div className="max-w-4xl mx-auto">
             <div className="space-y-6">
               {recentIncidents.map((incident, index) => (
-                <motion.div
+                <motion.div;
                   key={incident.id}
                   className="bg-white rounded-lg shadow-lg p-6"
                   initial={{ opacity: 0, y: 30 }}
@@ -388,7 +390,7 @@ const Status: NextPage = () => {
       {/* Status History */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="text-center mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -402,7 +404,7 @@ const Status: NextPage = () => {
 
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <motion.div
+              <motion.div;
                 className="bg-white rounded-lg shadow-lg p-6 text-center"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -411,7 +413,7 @@ const Status: NextPage = () => {
                 <div className="text-3xl font-bold text-green-600 mb-2">99.9%</div>
                 <div className="text-gray-600">30-Day Uptime</div>
               </motion.div>
-              <motion.div
+              <motion.div;
                 className="bg-white rounded-lg shadow-lg p-6 text-center"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -420,7 +422,7 @@ const Status: NextPage = () => {
                 <div className="text-3xl font-bold text-green-600 mb-2">99.8%</div>
                 <div className="text-gray-600">90-Day Uptime</div>
               </motion.div>
-              <motion.div
+              <motion.div;
                 className="bg-white rounded-lg shadow-lg p-6 text-center"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -437,26 +439,26 @@ const Status: NextPage = () => {
       {/* Subscribe to Updates */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             className="max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl font-bold mb-4 text-gray-800">
-              Stay Updated
+              Stay Updated;
             </h2>
             <p className="text-xl text-gray-600 mb-8">
               Subscribe to status updates and get notified about incidents and maintenance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
+              <input;
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-                Subscribe
+                Subscribe;
               </button>
             </div>
           </motion.div>
@@ -464,6 +466,6 @@ const Status: NextPage = () => {
       </section>
     </MainLayout>
   );
-};
+}
 
 export default Status;

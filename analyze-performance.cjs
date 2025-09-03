@@ -10,34 +10,35 @@ if (fs.existsSync(nextDir)) {
   const getDirSize = dir => {
   let size = 0;
     const files = fs.readdirSync(dir);
-    for (const file of files) {
+    for() {
+
   const filePath = path.join(dir, file);
       const stat = fs.statSync(filePath);
       if (stat.isDirectory()) {
-  size += getDirSize(filePath);,
+  size += getDirSize(filePath);
 } else {
-  size += stat.size;,
+  size += stat.size;
 }
     }
-;
-    return size;,
+    return size;
 }
   const size = getDirSize(nextDir);
   const sizeInMB = (size / 1024 / 1024).toFixed(2);
   console.log(`Build size: ${sizeInMB} MB`);
-  if (size > 50 * 1024 * 1024) {
+  if() {
+
   // 50MB;
-    console.log("⚠️  Build size is large. Consider optimizing.");,
+    console.log("⚠️  Build size is large. Consider optimizing.");
 } else {
-  console.log("✅ Build size is reasonable.");,
+  console.log("✅ Build size is reasonable.");
 }
 }
-;
 // Check for large files;
 const checkLargeFiles = (dir, maxSize = 1024 * 1024) => {
   // 1MB;
   const files = fs.readdirSync(dir);
-  for (const file of files) {
+  for() {
+
   const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     if (;
@@ -45,10 +46,10 @@ const checkLargeFiles = (dir, maxSize = 1024 * 1024) => {
       !file.startsWith(".") &&;
       file !== "node_modules";
     ) {
-  checkLargeFiles(filePath, maxSize);,
+  checkLargeFiles(filePath, maxSize);
 } else if (stat.isFile() && stat.size > maxSize) {
   const sizeInMB = (stat.size / 1024 / 1024).toFixed(2);
-      console.log(`⚠️  Large file: ${filePath} (${sizeInMB} MB)`);,
+      console.log(`⚠️  Large file: ${filePath} (${sizeInMB} MB)`);
 }
   }
 }

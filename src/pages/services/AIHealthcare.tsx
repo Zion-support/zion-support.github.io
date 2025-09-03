@@ -3,36 +3,37 @@ import { Heart, Check, ArrowRight } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
 export default function AIHealthcare() {
+
   const features = [
-    'Automated medical record processing and coding',
-    'Predictive analytics for patient outcomes',
-    'Drug interaction and adverse event monitoring',
-    'Telemedicine and remote patient monitoring',
-    'Integration with major EHR and healthcare systems',
+    'Automated medical record processing and coding'
+    'Predictive analytics for patient outcomes'
+    'Drug interaction and adverse event monitoring'
+    'Telemedicine and remote patient monitoring'
+    'Integration with major EHR and healthcare systems'
     'Custom AI models for specialized medical domains'
   ];
 
   const tiers = [
     {
-      name: 'Starter',
-      price: '$299/mo',
+      name: 'Starter'
+      price: '$299/mo'
       details: ['Basic features', 'Standard support', 'Up to 100 patients']
-    },
+    }
     {
-      name: 'Professional',
-      price: '$999/mo',
+      name: 'Professional'
+      price: '$999/mo'
       details: ['Advanced features', 'Priority support', 'Up to 1000 patients']
-    },
+    }
     {
-      name: 'Enterprise',
-      price: '$2,999/mo',
+      name: 'Enterprise'
+      price: '$2,999/mo'
       details: ['All features', 'Dedicated support', 'Unlimited patients']
     }
   ];
 
   return (
     <>
-      <SEO 
+      <SEO;
         title="AI Healthcare - AI Solutions | Zion Tech Group"
         description="Transform healthcare delivery with our AI healthcare solutions. Enterprise-grade technology for modern healthcare providers."
         keywords="AI healthcare, medical AI, healthcare technology, medical automation"
@@ -42,10 +43,10 @@ export default function AIHealthcare() {
           <div className="max-w-5xl mx-auto px-6">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
               <Heart className="w-4 h-4 mr-2" />
-              AI-Powered Healthcare Intelligence
+              AI-Powered Healthcare Intelligence;
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-              AI Healthcare Platform
+              AI Healthcare Platform;
             </h1>
             <p className="text-pink-100 text-xl">
               Transform healthcare delivery with AI-powered tools that enhance diagnosis, optimize treatment, and improve patient outcomes.
@@ -57,7 +58,7 @@ export default function AIHealthcare() {
           <div className="grid md:grid-cols-2 gap-10">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Advanced Healthcare Features
+                Advanced Healthcare Features;
               </h2>
               <ul className="space-y-3">
                 {features.map((feature, index) => (
@@ -74,7 +75,7 @@ export default function AIHealthcare() {
             
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                Competitive Pricing
+                Competitive Pricing;
               </h3>
               <div className="grid md:grid-cols-3 gap-4">
                 {tiers.map((tier, index) => (
@@ -90,18 +91,18 @@ export default function AIHealthcare() {
                 ))}
               </div>
               <div className="mt-6 flex flex-wrap gap-3">
-                <a 
+                <a;
                   href="/pricing" 
                   className="px-5 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors inline-flex items-center"
                 >
-                  View Full Pricing 
+                  View Full Pricing;
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
-                <a 
+                <a;
                   href="/contact" 
                   className="px-5 py-3 border border-red-600 text-red-600 rounded-lg hover:bg-red-50 transition-colors"
                 >
-                  Contact Sales
+                  Contact Sales;
                 </a>
               </div>
             </div>

@@ -13,17 +13,17 @@ interface ErrorFallbackProps extends React.PropsWithChildren<{}> {
         <h1 className="text-2xl font - bold text-gray - 900 mb-4">Something went wrong</h1>
         <p className="text-gray - 600 mb-6">          We're sorry, but something unexpected happened.Please try refreshing the page.</p>"
         <div className="space-y-3">
-          <button
+          <button;
             onClick={resetErrorBoundary}"
             className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
           >
-            Try Again
+            Try Again;
           </button>
           <button'
             onClick={() => window.location.href = '/'}"
             className="w-full bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors"
           >
-            Go Home
+            Go Home;
           </button>
         </div>
         {process.env.NODE_ENV === 'development' && ("
@@ -32,10 +32,10 @@ interface ErrorFallbackProps extends React.PropsWithChildren<{}> {
               Error Details(Development)
             </summary>"
             <pre className="mt-2 text-xs text-red-600 bg-red-50 p-3 rounded overflow-auto">
-              {error.message};
-              {error.stack};
+              {error.message}
+              {error.stack}
             </pre>;
-          </details>;) };
+          </details>;) }
       </div>;
-    </div>;) };
+    </div>;) }
 '"

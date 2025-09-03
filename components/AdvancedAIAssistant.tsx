@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import { 
-  Brain, 
-  TrendingUp, 
-  Zap, 
-  MessageCircle, 
-  Users, 
+import {
+  Brain,
+  TrendingUp,
+  Zap,
+  MessageCircle,
+  Users,
   Shield,
   CheckCircle,
   AlertCircle,
   Clock,
   Activity,
-  Bot
+  Bot,
 } from "lucide-react";
 
 interface AIConversation {
@@ -57,7 +57,7 @@ const AdvancedAIAssistant: React.FC = () => {
       icon: <Brain className="w-6 h-6" />,
       status: "active",
       usage: 95,
-      accuracy: 94
+      accuracy: 94,
     },
     {
       id: "2",
@@ -66,7 +66,7 @@ const AdvancedAIAssistant: React.FC = () => {
       icon: <TrendingUp className="w-6 h-6" />,
       status: "active",
       usage: 87,
-      accuracy: 89
+      accuracy: 89,
     },
     {
       id: "3",
@@ -75,72 +75,73 @@ const AdvancedAIAssistant: React.FC = () => {
       icon: <Zap className="w-6 h-6" />,
       status: "active",
       usage: 92,
-      accuracy: 91
+      accuracy: 91,
     },
     {
-      id: "4",
-      name: "Sentiment Analysis",
-      description: "Real-time analysis of client and team sentiment",
-      icon: <MessageCircle className="w-6 h-6" />,
-      status: "beta",
-      usage: 73,
-      accuracy: 87
-    },
+      id: "4"
+      name: "Sentiment Analysis"
+      description: "Real-time analysis of client and team sentiment"
+      icon: <MessageCircle className="w-6 h-6" />
+      status: "beta"
+      usage: 73;
+      accuracy: 87;
+    }
     {
-      id: "5",
-      name: "Resource Optimization",
-      description: "AI-driven resource allocation and optimization",
-      icon: <Users className="w-6 h-6" />,
-      status: "active",
-      usage: 89,
-      accuracy: 93
-    },
+      id: "5"
+      name: "Resource Optimization"
+      description: "AI-driven resource allocation and optimization"
+      icon: <Users className="w-6 h-6" />
+      status: "active"
+      usage: 89;
+      accuracy: 93;
+    }
     {
-      id: "6",
-      name: "Risk Assessment",
-      description: "Intelligent risk identification and mitigation strategies",
-      icon: <Shield className="w-6 h-6" />,
-      status: "beta",
-      usage: 68,
-      accuracy: 85
+      id: "6"
+      name: "Risk Assessment"
+      description: "Intelligent risk identification and mitigation strategies"
+      icon: <Shield className="w-6 h-6" />
+      status: "beta"
+      usage: 68;
+      accuracy: 85;
     }
   ];
 
   const aiInsights: AIInsight[] = [
     {
-      id: "1",
-      title: "Project Timeline Optimization",
-      description: "AI analysis suggests 15% timeline compression is possible for the E-commerce project through parallel development and resource optimization.",
-      type: "positive",
-      impact: "high",
-      confidence: 0.91,
-      data: { compression: 15, savings: "2 weeks", risk: "low" },
+      id: "1"
+      title: "Project Timeline Optimization"
+      description: "AI analysis suggests 15% timeline compression is possible for the E-commerce project through parallel development and resource optimization."
+      type: "positive"
+      impact: "high"
+      confidence: 0.91;
+      data: { compression: 15, savings: "2 weeks", risk: "low" }
       createdAt: "2025-01-27 16:00"
-    },
+    }
     {
-      id: "2",
-      title: "Resource Allocation Warning",
-      description: "Current resource allocation shows 23% underutilization in the Mobile App project, indicating potential efficiency improvements.",
-      type: "warning",
-      impact: "medium",
-      confidence: 0.87,
-      data: { underutilization: 23, potentialSavings: "$8,500", timeframe: "2 weeks" },
+      id: "2"
+      title: "Resource Allocation Warning"
+      description: "Current resource allocation shows 23% underutilization in the Mobile App project, indicating potential efficiency improvements."
+      type: "warning"
+      impact: "medium"
+      confidence: 0.87;
+      data: { underutilization: 23, potentialSavings: "$8,500", timeframe: "2 weeks" }
       createdAt: "2025-01-27 15:45"
-    },
+    }
     {
-      id: "3",
-      title: "Client Satisfaction Trend",
-      description: "Client satisfaction scores have increased by 12% over the last quarter, with AI-powered communication contributing to 8% of this improvement.",
-      type: "positive",
-      impact: "high",
-      confidence: 0.94,
-      data: { improvement: 12, aiContribution: 8, trend: "positive" },
+      id: "3"
+      title: "Client Satisfaction Trend"
+      description: "Client satisfaction scores have increased by 12% over the last quarter, with AI-powered communication contributing to 8% of this improvement."
+      type: "positive"
+      impact: "high"
+      confidence: 0.94;
+      data: { improvement: 12, aiContribution: 8, trend: "positive" }
       createdAt: "2025-01-27 15:30"
     }
   ];
 
   const getInsightIcon = (type: string) => {
-    switch (type) {
+    switch() {
+
       case "positive":
         return <CheckCircle className="w-6 h-6 text-green-400" />;
       case "warning":
@@ -150,17 +151,17 @@ const AdvancedAIAssistant: React.FC = () => {
       default:
         return <Activity className="w-6 h-6 text-blue-400" />;
     }
-  };
+  }
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
-            Advanced AI Assistant
+            Advanced AI Assistant;
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Leverage cutting-edge AI technology to optimize your business operations, 
+            Leverage cutting-edge AI technology to optimize your business operations;
             predict outcomes, and automate complex workflows.
           </p>
         </div>
@@ -168,16 +169,16 @@ const AdvancedAIAssistant: React.FC = () => {
         {/* Navigation Tabs */}
         <div className="flex flex-wrap justify-center mb-8">
           {[
-            { id: "overview", label: "Overview" },
-            { id: "conversations", label: "Conversations" },
-            { id: "insights", label: "Insights" },
+            { id: "overview", label: "Overview" }
+            { id: "conversations", label: "Conversations" }
+            { id: "insights", label: "Insights" }
             { id: "features", label: "Features" }
           ].map((tab) => (
-            <button
+            <button;
               key={tab.id}
               onClick={() => setSelectedView(tab.id as any)}
               className={`px-6 py-3 mx-2 mb-2 rounded-lg font-medium transition-colors ${
-                selectedView === tab.id
+                selectedView === tab.id;
                   ? "bg-blue-600 text-white"
                   : "bg-gray-800 text-gray-300 hover:bg-gray-700"
               }`}
@@ -189,7 +190,7 @@ const AdvancedAIAssistant: React.FC = () => {
 
         {/* Search Bar */}
         <div className="max-w-md mx-auto mb-8">
-          <input
+          <input;
             type="text"
             placeholder="Search AI features and insights..."
             value={searchQuery}
@@ -250,7 +251,7 @@ const AdvancedAIAssistant: React.FC = () => {
                             ? "bg-yellow-900 text-yellow-300"
                             : "bg-green-900 text-green-300"
                         }`}>
-                          {insight.impact} impact
+                          {insight.impact} impact;
                         </span>
                         <span className="text-sm text-gray-400">
                           Confidence: {Math.round(insight.confidence * 100)}%
@@ -284,7 +285,7 @@ const AdvancedAIAssistant: React.FC = () => {
                     <span className="text-white">{feature.usage}%</span>
                   </div>
                   <div className="w-full bg-gray-700 rounded-full h-2">
-                    <div 
+                    <div;
                       className="bg-blue-600 h-2 rounded-full" 
                       style={{ width: `${feature.usage}%` }}
                     ></div>
@@ -294,7 +295,7 @@ const AdvancedAIAssistant: React.FC = () => {
                     <span className="text-white">{feature.accuracy}%</span>
                   </div>
                   <div className="w-full bg-gray-700 rounded-full h-2">
-                    <div 
+                    <div;
                       className="bg-green-600 h-2 rounded-full" 
                       style={{ width: `${feature.accuracy}%` }}
                     ></div>
@@ -307,6 +308,6 @@ const AdvancedAIAssistant: React.FC = () => {
       </div>
     </section>
   );
-};
+}
 
 export default AdvancedAIAssistant;

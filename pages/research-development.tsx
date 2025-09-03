@@ -11,7 +11,7 @@ const RDPage = () => {
       </main>
     </>
   );
-};
+}
 
 export default RDPage;
 

@@ -63,20 +63,20 @@ const ServicesPage: NextPage = () => {
           <p><strong>Website:</strong> <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer">https://ziontechgroup.com</a></p>
           <div style={{ marginTop: '16px' }}>
             <Link href="/contact" style={{ 
-              backgroundColor: '#007bff', 
-              color: 'white', 
-              padding: '12px 24px', 
-              borderRadius: '6px', 
-              textDecoration: 'none',
+              backgroundColor: '#007bff'
+              color: 'white'
+              padding: '12px 24px'
+              borderRadius: '6px'
+              textDecoration: 'none'
               display: 'inline-block'
             }}>
-              Request a Quote
+              Request a Quote;
             </Link>
           </div>
         </div>
       </main>
     </div>
   );
-};
+}
 
 export default ServicesPage;

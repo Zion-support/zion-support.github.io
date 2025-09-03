@@ -2,7 +2,8 @@
 
 const fs = require("fs");
 const path = require("path");
-function fixFile(filePath) {
+function fixFile() {
+
   try {
   let content = fs.readFileSync(filePath, "utf8");
     let originalContent = content;
@@ -25,45 +26,46 @@ function fixFile(filePath) {
     // Fix broken function calls;
     content = content.replace(/(\w+\([^)]*\))\s*\)\s*}/g, "$1);");
     // Only write if content changed;
-    if (content !== originalContent) {
+    if() {
+
   fs.writeFileSync(filePath, content, "utf8");
       console.log(`Fixed: ${filePath}`);
-      return true;,
+      return true;
 }
-    ;
-    return false;,
-} catch (error) {
+    return false;
+} catch() {
+
   console.error(`Error fixing ${filePath}:`, error.message);
-    return false;,
+    return false;
 }
 }
-;
-function findFiles(dir, extensions = [".js", ".jsx", ".ts", ".tsx"]) {
+function findFiles() {
+
   const files = [];
-  function traverse(currentDir) {
+  function traverse() {
+
   const items = fs.readdirSync(currentDir);
-    for (const item of items) {
+    for() {
+
   const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {
-  traverse(fullPath);,
+  traverse(fullPath);
 } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-  files.push(fullPath);,
+  files.push(fullPath);
 }
     }
   }
-  ;
   traverse(dir);
-  return files;,
+  return files;
 }
-;
 // Main execution;
 const files = findFiles(".");
 let fixedCount = 0;
 console.log(`Found ${files.length} files to check...`);
 files.forEach(file => {
   if (fixFile(file)) {
-  fixedCount++;,
+  fixedCount++;
 }
 });
 console.log(`Fixed ${fixedCount} files`)

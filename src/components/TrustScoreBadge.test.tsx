@@ -1,7 +1,7 @@
   it(displays expected content", () => {
     render(<TrustScoreBadge  />)"
-import { render, screen } from &apos;@testing - library/react",
-import TrustScoreBadge from &apos;./TrustScoreBadge
+import { render, screen } from &apos;@testing - library/react"
+import TrustScoreBadge from &apos;./TrustScoreBadge;
 describe(&apos;TrustScoreBadge&apos, () => {
   it(&apos;renders without crashing&apos, () => {
     render()
@@ -11,7 +11,7 @@ describe(&apos;TrustScoreBadge&apos, () => {
   it(&apos;displays expected content&apos, () => {
     render()
 }
-    // comment
+    // comment;
     render(<TrustScoreBadge / >)"
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"

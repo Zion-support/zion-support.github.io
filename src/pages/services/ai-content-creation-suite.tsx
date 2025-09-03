@@ -2,140 +2,140 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  FileText, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  TrendingUp, 
-  Zap,
-  ArrowLeft,
-  Phone,
-  Mail,
-  Globe,
-  Clock,
-  Shield,
-  Brain,
-  Search,
-  Palette,
-  Target,
-  BarChart3,
-  MessageSquare,
-  Calendar,
-  Award
+  FileText;
+  CheckCircle;
+  Star;
+  Users;
+  TrendingUp;
+  Zap;
+  ArrowLeft;
+  Phone;
+  Mail;
+  Globe;
+  Clock;
+  Shield;
+  Brain;
+  Search;
+  Palette;
+  Target;
+  BarChart3;
+  MessageSquare;
+  Calendar;
+  Award;
 } from 'lucide-react';
 
 const AIContentCreationSuite = () => {
   const contactInfo = {
-    phone: "+1 302 464 0950",
-    email: "kleber@ziontechgroup.com",
-    address: "364 E Main St STE 1008, Middletown DE 19709",
+    phone: "+1 302 464 0950"
+    email: "kleber@ziontechgroup.com"
+    address: "364 E Main St STE 1008, Middletown DE 19709"
     website: "https://ziontechgroup.com"
-  };
+  }
 
   const features = [
     {
-      title: "Multi-Language Support",
-      description: "Generate content in 50+ languages with native fluency and cultural context",
-      icon: Globe
-    },
+      title: "Multi-Language Support"
+      description: "Generate content in 50+ languages with native fluency and cultural context"
+      icon: Globe;
+    }
     {
-      title: "SEO Optimization",
-      description: "AI-powered SEO recommendations and keyword optimization for better search rankings",
-      icon: Search
-    },
+      title: "SEO Optimization"
+      description: "AI-powered SEO recommendations and keyword optimization for better search rankings"
+      icon: Search;
+    }
     {
-      title: "Brand Voice Consistency",
-      description: "Maintain consistent brand voice across all content with AI style matching",
-      icon: Palette
-    },
+      title: "Brand Voice Consistency"
+      description: "Maintain consistent brand voice across all content with AI style matching"
+      icon: Palette;
+    }
     {
-      title: "Plagiarism Detection",
-      description: "Advanced plagiarism checking with 99.9% accuracy and content originality scoring",
-      icon: Shield
-    },
+      title: "Plagiarism Detection"
+      description: "Advanced plagiarism checking with 99.9% accuracy and content originality scoring"
+      icon: Shield;
+    }
     {
-      title: "Content Analytics",
-      description: "Track content performance with detailed analytics and engagement metrics",
-      icon: BarChart3
-    },
+      title: "Content Analytics"
+      description: "Track content performance with detailed analytics and engagement metrics"
+      icon: BarChart3;
+    }
     {
-      title: "Collaborative Workflow",
-      description: "Team collaboration tools with real-time editing and approval workflows",
-      icon: Users
+      title: "Collaborative Workflow"
+      description: "Team collaboration tools with real-time editing and approval workflows"
+      icon: Users;
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$299",
-      period: "/month",
-      description: "Perfect for small businesses and startups",
+      name: "Starter"
+      price: "$299"
+      period: "/month"
+      description: "Perfect for small businesses and startups"
       features: [
-        "Up to 50 articles per month",
-        "5 languages supported",
-        "Basic SEO optimization",
-        "Email support",
+        "Up to 50 articles per month"
+        "5 languages supported"
+        "Basic SEO optimization"
+        "Email support"
         "Content analytics dashboard"
-      ],
-      popular: false
-    },
+      ]
+      popular: false;
+    }
     {
-      name: "Professional",
-      price: "$599",
-      period: "/month",
-      description: "Ideal for growing businesses and marketing teams",
+      name: "Professional"
+      price: "$599"
+      period: "/month"
+      description: "Ideal for growing businesses and marketing teams"
       features: [
-        "Up to 200 articles per month",
-        "25 languages supported",
-        "Advanced SEO optimization",
-        "Brand voice training",
-        "Priority support",
-        "Team collaboration tools",
+        "Up to 200 articles per month"
+        "25 languages supported"
+        "Advanced SEO optimization"
+        "Brand voice training"
+        "Priority support"
+        "Team collaboration tools"
         "API access"
-      ],
-      popular: true
-    },
+      ]
+      popular: true;
+    }
     {
-      name: "Enterprise",
-      price: "$1,299",
-      period: "/month",
-      description: "For large organizations with high-volume content needs",
+      name: "Enterprise"
+      price: "$1,299"
+      period: "/month"
+      description: "For large organizations with high-volume content needs"
       features: [
-        "Unlimited articles",
-        "All 50+ languages",
-        "Custom AI model training",
-        "Dedicated account manager",
-        "24/7 phone support",
-        "Advanced analytics",
-        "Custom integrations",
+        "Unlimited articles"
+        "All 50+ languages"
+        "Custom AI model training"
+        "Dedicated account manager"
+        "24/7 phone support"
+        "Advanced analytics"
+        "Custom integrations"
         "White-label options"
-      ],
-      popular: false
+      ]
+      popular: false;
     }
   ];
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "Marketing Director",
-      company: "TechFlow Solutions",
-      content: "The AI Content Creation Suite has transformed our content marketing. We've seen a 300% increase in organic traffic and our content production time has been reduced by 70%.",
-      rating: 5
-    },
+      name: "Sarah Johnson"
+      role: "Marketing Director"
+      company: "TechFlow Solutions"
+      content: "The AI Content Creation Suite has transformed our content marketing. We've seen a 300% increase in organic traffic and our content production time has been reduced by 70%."
+      rating: 5;
+    }
     {
-      name: "Michael Chen",
-      role: "CEO",
-      company: "StartupXYZ",
-      content: "As a startup, we needed to scale our content quickly. This platform has been a game-changer for our growth strategy.",
-      rating: 5
-    },
+      name: "Michael Chen"
+      role: "CEO"
+      company: "StartupXYZ"
+      content: "As a startup, we needed to scale our content quickly. This platform has been a game-changer for our growth strategy."
+      rating: 5;
+    }
     {
-      name: "Emily Rodriguez",
-      role: "Content Manager",
-      company: "Global Enterprises Inc",
-      content: "The multi-language support and brand voice consistency features are incredible. Our international content strategy has never been stronger.",
-      rating: 5
+      name: "Emily Rodriguez"
+      role: "Content Manager"
+      company: "Global Enterprises Inc"
+      content: "The multi-language support and brand voice consistency features are incredible. Our international content strategy has never been stronger."
+      rating: 5;
     }
   ];
 
@@ -144,24 +144,24 @@ const AIContentCreationSuite = () => {
       {/* Header */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <Link 
+            <Link;
               to="/services" 
               className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors mb-8"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Services
+              Back to Services;
             </Link>
             
             <div className="text-center mb-12">
               <div className="flex items-center justify-center mb-6">
                 <FileText className="w-16 h-16 text-cyan-400 mr-4" />
                 <h1 className="text-5xl md:text-6xl font-bold text-white">
-                  AI Content Creation Suite
+                  AI Content Creation Suite;
                 </h1>
               </div>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -185,19 +185,19 @@ const AIContentCreationSuite = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <a;
                   href={`tel:${contactInfo.phone}`}
                   className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
                 >
                   <Phone className="w-5 h-5 mr-2" />
-                  Get Started Today
+                  Get Started Today;
                 </a>
-                <a
+                <a;
                   href={`mailto:${contactInfo.email}`}
                   className="bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
                 >
                   <Mail className="w-5 h-5 mr-2" />
-                  Request Demo
+                  Request Demo;
                 </a>
               </div>
             </div>
@@ -208,7 +208,7 @@ const AIContentCreationSuite = () => {
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -222,7 +222,7 @@ const AIContentCreationSuite = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <motion.div;
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -243,7 +243,7 @@ const AIContentCreationSuite = () => {
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/20 to-purple-900/20">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -257,13 +257,13 @@ const AIContentCreationSuite = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <motion.div
+              <motion.div;
                 key={plan.name}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 * index }}
                 className={`bg-gray-800/50 border rounded-xl p-8 relative ${
-                  plan.popular 
+                  plan.popular;
                     ? 'border-cyan-500 shadow-lg shadow-cyan-500/20' 
                     : 'border-gray-700'
                 }`}
@@ -271,7 +271,7 @@ const AIContentCreationSuite = () => {
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -294,15 +294,15 @@ const AIContentCreationSuite = () => {
                   ))}
                 </ul>
 
-                <a
+                <a;
                   href={`tel:${contactInfo.phone}`}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center ${
-                    plan.popular
+                    plan.popular;
                       ? 'bg-cyan-500 hover:bg-cyan-600 text-white'
                       : 'bg-gray-700 hover:bg-gray-600 text-white'
                   }`}
                 >
-                  Get Started
+                  Get Started;
                 </a>
               </motion.div>
             ))}
@@ -313,7 +313,7 @@ const AIContentCreationSuite = () => {
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -327,7 +327,7 @@ const AIContentCreationSuite = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <motion.div
+              <motion.div;
                 key={testimonial.name}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -354,7 +354,7 @@ const AIContentCreationSuite = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/20 to-purple-900/20">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.h2 
+          <motion.h2;
             className="text-4xl font-bold text-white mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -362,7 +362,7 @@ const AIContentCreationSuite = () => {
           >
             Ready to Transform Your Content Strategy?
           </motion.h2>
-          <motion.p 
+          <motion.p;
             className="text-xl text-gray-300 mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -370,31 +370,31 @@ const AIContentCreationSuite = () => {
           >
             Start creating high-quality, SEO-optimized content at scale today.
           </motion.p>
-          <motion.div 
+          <motion.div;
             className="flex flex-col sm:flex-row gap-4 justify-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <a
+            <a;
               href={`tel:${contactInfo.phone}`}
               className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call Now
+              Call Now;
             </a>
-            <a
+            <a;
               href={`mailto:${contactInfo.email}`}
               className="bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
             >
               <Mail className="w-5 h-5 mr-2" />
-              Email Us
+              Email Us;
             </a>
           </motion.div>
         </div>
       </section>
     </div>
   );
-};
+}
 
 export default AIContentCreationSuite;

@@ -5,7 +5,7 @@ import { DollarSign, Shield, Database, Users, CheckCircle, Zap, Globe, Lock, Tre
 
 const FinanceSolutions: NextPage = () => {
   return (
-    <Layout
+    <Layout;
       title="Financial Services Solutions - Zion Tech Group"
       description="Transform financial services with secure, compliant, and innovative technology solutions. Expert fintech consulting from Zion Tech Group."
     >
@@ -13,7 +13,7 @@ const FinanceSolutions: NextPage = () => {
       <section className="bg-gradient-to-br from-blue-900 via-green-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Financial Services
+            Financial Services;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-400"> Solutions</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
@@ -24,12 +24,12 @@ const FinanceSolutions: NextPage = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact">
               <a className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-                Transform Finance
+                Transform Finance;
               </a>
             </Link>
             <Link href="/solutions">
               <a className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-                View All Solutions
+                View All Solutions;
               </a>
             </Link>
           </div>
@@ -58,15 +58,15 @@ const FinanceSolutions: NextPage = () => {
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Mobile banking applications
+                  Mobile banking applications;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Online account management
+                  Online account management;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Digital payment solutions
+                  Digital payment solutions;
                 </li>
               </ul>
             </div>
@@ -82,15 +82,15 @@ const FinanceSolutions: NextPage = () => {
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Fraud detection systems
+                  Fraud detection systems;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Identity verification
+                  Identity verification;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Risk management tools
+                  Risk management tools;
                 </li>
               </ul>
             </div>
@@ -106,15 +106,15 @@ const FinanceSolutions: NextPage = () => {
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Real-time reporting
+                  Real-time reporting;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Predictive analytics
+                  Predictive analytics;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Customer behavior analysis
+                  Customer behavior analysis;
                 </li>
               </ul>
             </div>
@@ -130,15 +130,15 @@ const FinanceSolutions: NextPage = () => {
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  CRM integration
+                  CRM integration;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Customer onboarding
+                  Customer onboarding;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Support automation
+                  Support automation;
                 </li>
               </ul>
             </div>
@@ -154,15 +154,15 @@ const FinanceSolutions: NextPage = () => {
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Algorithmic trading systems
+                  Algorithmic trading systems;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Portfolio optimization
+                  Portfolio optimization;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Market analysis tools
+                  Market analysis tools;
                 </li>
               </ul>
             </div>
@@ -178,15 +178,15 @@ const FinanceSolutions: NextPage = () => {
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Multi-channel payments
+                  Multi-channel payments;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Cryptocurrency support
+                  Cryptocurrency support;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Real-time settlement
+                  Real-time settlement;
                 </li>
               </ul>
             </div>
@@ -313,12 +313,12 @@ const FinanceSolutions: NextPage = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact">
               <a className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-                Get Started Today
+                Get Started Today;
               </a>
             </Link>
             <Link href="/solutions">
               <a className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-                View All Solutions
+                View All Solutions;
               </a>
             </Link>
           </div>
@@ -326,6 +326,6 @@ const FinanceSolutions: NextPage = () => {
       </section>
     </Layout>
   );
-};
+}
 
 export default FinanceSolutions;

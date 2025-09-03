@@ -10,22 +10,23 @@ const errorLines = lintOutput.split("\n").filter(line => line.includes("Error: P
 const errorFiles = new Set();
 errorLines.forEach(line => {
   const match = line.match(/^\.\/(.+?):\d+:\d+\s+Error:/);
-  if (match) {
-  errorFiles.add(match[1]);,
+  if() {
+
+  errorFiles.add(match[1]);
 }
 });
 console.log(`Found ${errorFiles.size} files with lint errors`);
 // Function to fix common syntax errors;
-function fixFile(filePath) {
+function fixFile() {
+
   try {
   let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
     // Fix 1: Add missing semicolons after import statements;
     if (content.includes("import {") && !content.includes("import {") + ";" && !content.includes("from "")) {
   content = content.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""]([^""]+)[""]\s*([^])/g, "import { $1 } from \"$2\"; $3");
-      modified = true;,
+      modified = true;
 }
-;
     // Fix 2: Fix malformed import statements;
     content = content.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""]([^""]+)[""]\s*([^])/g, "import { $1 } from \"$2\"; $3");
     // Fix 3: Fix missing semicolons after variable declarations;
@@ -49,24 +50,24 @@ function fixFile(filePath) {
     // Fix 10: Fix malformed array/object syntax;
     content = content.replace(/\[\s*"([^"]*)"\s*\]/g, "[\"$1\"]");
     content = content.replace(/{\s*"([^"]*)"\s*}/g, "{\"$1\"}");
-    if (modified) {
+    if() {
+
   fs.writeFileSync(filePath, content);
       console.log(`Fixed: ${filePath}`);
-      return true;,
+      return true;
 }
-    ;
-    return false;,
-} catch (error) {
+    return false;
+} catch() {
+
   console.error(`Error fixing ${filePath}:`, error.message);
-    return false;,
+    return false;
 }
 }
-;
 // Fix each file;
 let fixedCount = 0;
 errorFiles.forEach(filePath => {
   if (fixFile(filePath)) {
-  fixedCount++;,
+  fixedCount++;
 }
 });
 console.log(`Fixed ${fixedCount} files`);
@@ -74,7 +75,8 @@ console.log(`Fixed ${fixedCount} files`);
 console.log("\nRunning lint again to check remaining errors...");
 try {
   execSync("npm run lint", { stdio: "inherit" });
-  console.log("All lint errors fixed!");,
-} catch (error) {
-  console.log("Some lint errors remain. Manual review may be needed.');,
+  console.log("All lint errors fixed!");
+} catch() {
+
+  console.log("Some lint errors remain. Manual review may be needed.');
 }

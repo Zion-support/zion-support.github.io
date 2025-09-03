@@ -11,32 +11,36 @@ interface SEOEnhancerProps {
 }
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title = "Zion Tech Group - AI Services, IT Solutions & Micro SaaS",
-  description = "Leading provider of AI services, IT solutions, and micro SaaS applications. Transform your business with cutting-edge technology and innovative solutions.",
-  keywords = ["AI services", "IT solutions", "micro SaaS", "artificial intelligence", "cloud computing", "digital transformation"],
-  canonical,
-  ogImage = "/og-image.jpg",
-  structuredData
+  title = "Zion Tech Group - AI Services, IT Solutions & Micro SaaS"
+  description = "Leading provider of AI services, IT solutions, and micro SaaS applications. Transform your business with cutting-edge technology and innovative solutions."
+  keywords = ["AI services", "IT solutions", "micro SaaS", "artificial intelligence", "cloud computing", "digital transformation"]
+  canonical;
+  ogImage = "/og-image.jpg"
+  structuredData;
 }) => {
   useEffect(() => {
-    // Add structured data
-    if (structuredData) {
+    // Add structured data;
+    if() {
+
       const script = document.createElement('script');
       script.type = 'application/ld+json';
       script.text = JSON.stringify(structuredData);
       document.head.appendChild(script);
     }
 
-    // Optimize meta tags
+    // Optimize meta tags;
     const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
+    if() {
+
       metaDescription.setAttribute('content', description);
     }
 
-    // Add canonical URL
-    if (canonical) {
+    // Add canonical URL;
+    if() {
+
       let canonicalLink = document.querySelector('link[rel="canonical"]');
-      if (!canonicalLink) {
+      if() {
+
         canonicalLink = document.createElement('link');
         canonicalLink.setAttribute('rel', 'canonical');
         document.head.appendChild(canonicalLink);
@@ -46,26 +50,26 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   }, [description, canonical, structuredData]);
 
   const defaultStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "description": description,
+    "@context": "https://schema.org"
+    "@type": "Organization"
+    "name": "Zion Tech Group"
+    "url": "https://ziontechgroup.com"
+    "logo": "https://ziontechgroup.com/logo.png"
+    "description": description;
     "address": {
-      "@type": "PostalAddress",
+      "@type": "PostalAddress"
       "addressCountry": "US"
-    },
+    }
     "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-555-0123",
+      "@type": "ContactPoint"
+      "telephone": "+1-555-0123"
       "contactType": "customer service"
-    },
+    }
     "sameAs": [
-      "https://linkedin.com/company/zion-tech-group",
+      "https://linkedin.com/company/zion-tech-group"
       "https://twitter.com/ziontechgroup"
     ]
-  };
+  }
 
   return (
     <Head>
@@ -96,7 +100,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       
       {/* Structured Data */}
-      <script
+      <script;
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(structuredData || defaultStructuredData)
@@ -104,6 +108,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       />
     </Head>
   );
-};
+}
 
 export default SEOEnhancer;

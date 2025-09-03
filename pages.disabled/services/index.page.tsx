@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 export default function Services() {
+
   return (
     <main style={{ fontFamily: 'system-ui, sans-serif', lineHeight: 1.5, padding: '32px', maxWidth: 1120, margin: '0 auto' }}>
       <h1 style={{ marginTop: 0 }}>Services</h1>
@@ -32,7 +33,7 @@ export default function Services() {
       <h2 id="contact">Contact</h2>
       <p>
         Mobile: +1 302 464 0950 · Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a><br/>
-        Address: 364 E Main St STE 1008 Middletown DE 19709
+        Address: 364 E Main St STE 1008 Middletown DE 19709;
       </p>
       <p>
         Visit our website: <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer">ziontechgroup.com</a>
@@ -79,7 +80,7 @@ const ServicesIndex: NextPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((s) => (
             <div key={s.id} className="flex flex-col">
-              <EnhancedMarketplaceCard
+              <EnhancedMarketplaceCard;
                 title={s.title}
                 description={`${s.description} Provider: ${s.provider.name}. Rating: ${s.provider.rating}/5.`}
                 price={`${s.pricing.currency} ${s.pricing.from} / ${s.pricing.type}`}
@@ -101,6 +102,6 @@ const ServicesIndex: NextPage = () => {
       </main>
     </div>
   );
-};
+}
 
 export default ServicesIndex;

@@ -8,18 +8,18 @@ interface ServiceWorkerState {
 
 }
 
-  const [swState, setSwState] = useState < any> ({    isInstalled: anyfalse,
-    isOnline: navigator.onLine,
-    hasUpdate: false,
-    isInstalling: false
+  const [swState, setSwState] = useState < any> ({    isInstalled: anyfalse;
+    isOnline: navigator.onLine;
+    hasUpdate: false;
+    isInstalling: false;
   }) ;
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // TODO: Add dependencies if needed;
 }, []);
-    // Check if service worker is supported'    if('serviceWorker' in navigator) {
+    // Check if service worker is supported'    if() {
 
-      // Register service worker
+      // Register service worker;
       navigator.serviceWorker'
         .register('/sw.js')
         .then((registration) => {
@@ -29,23 +29,24 @@ interface ServiceWorkerState {
 
           // Check for updates'
           registration.addEventListener('updatefound', () => {
-            const newWorker = registration.installing;            if(newWorker) {
+            const newWorker = registration.installing;            if() {
 
               setSwState(prev => ({ ...prev, isInstalling: anytrue }));
               '
               newWorker.addEventListener('statechange', () => {
 
-          // Check for updates
+          // Check for updates;
           registration.addEventListener('updatefound', () => {
             const newWorker = registration.installing;
-            if(newWorker) {
+            if() {
+
               setSwState(prev => ({ ...prev, isInstalling: anytrue }) ) ;
 
               newWorker.addEventListener('statechange', () => {
                 if(newWorker.state = == 'installed') {;
 setSwState(prev: > ({ ;
-                    ...prev, ;
-                    isInstalling: anyfalse,;
+                    ...prev;
+                    isInstalling: anyfalse;
                     hasUpdate: true }) ) }
               }) }
           }) ;
@@ -57,8 +58,7 @@ setSwState(prev: > ({ ;
 
           // console.log('SW registration failed: ', registrationError)})}
 
-    // Online/offline detection
-    
+    // Online/offline detection;
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
 
@@ -69,31 +69,28 @@ setSwState(prev: > ({ ;
 
     if('serviceWorker' in navigator) {;
       navigator.serviceWorker.ready.then((registration) => {;
-        registration.waiting?.postMessage({ type: 'SKIP_WAITING' })})}  };
+        registration.waiting?.postMessage({ type: 'SKIP_WAITING' })})}  }
 
   if(!swState.isInstalled) return null;
 
   return ()
     <AnimatePresence>
       {swState.hasUpdate && (
-        <motion.div
+        <motion.div;
           initial = {
 
-  { opacity: 0,
-  y: -50
-
+  { opacity: 0;
+  y: -50;
 }}
           animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           exit = {
 
-  { opacity: 0,
-  y: -50
-
+  { opacity: 0;
+  y: -50;
 }}
           className="fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4 max-w-sm"
         >"
@@ -113,14 +110,14 @@ setSwState(prev: > ({ ;
               </p>
             </div>
             {swState.hasUpdate && (
-              <button
+              <button;
                 onClick={handleUpdate}"
                 className="flex-shrink-0 bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors"
               >
                 Update;
-              </button>;) };
+              </button>;) }
           </div>;
         </motion.div>;
-      )};
+      )}
     </AnimatePresence>;
   )}'"

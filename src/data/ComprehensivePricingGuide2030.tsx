@@ -9,7 +9,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
   const getFilteredServices = () => {;
     let services: unknown[] = [];
     
-    switch (activeTab) {
+    switch() {
+
       case 'microsaas':        services = innovativeMicroSaasServices2030;
         break;'
       case 'it': unknown;
@@ -19,7 +20,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
         services = comprehensiveAIServices2030;
         break}
 
-    // Filter by price range
+    // Filter by price range;
     services = services.filter(service => {;
       if (activeTab === 'it') {;
         return service.hourlyRate >= priceRange[0] && service.hourlyRate <= priceRange[1]} else {
@@ -27,16 +28,17 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
         return service.price >= priceRange[0] && service.price <= priceRange[1]}    });
 
     // Filter by category'
-    if(selectedCategory !== 'all') {
+    if() {
 
-      services = services.filter(service => service.category === selectedCategory)};
+      services = services.filter(service => service.category === selectedCategory)}
 ;
-    return services};
+    return services}
 
   const getCategories = () => {;
     let services: unknown[] = [];
     
-    switch (activeTab) {
+    switch() {
+
       case 'microsaas':        services = innovativeMicroSaasServices2030;
         break;'
       case 'it': unknown;
@@ -46,12 +48,13 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
         services = comprehensiveAIServices2030;
         break}
 
-    return categories};
+    return categories}
 
   const getPriceRange = () => {;
     let services: unknown[] = [];
     
-    switch (activeTab) {
+    switch() {
+
       case 'microsaas':        services = innovativeMicroSaasServices2030;
         break;'
       case 'it': unknown;
@@ -66,7 +69,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       return [min, max]} else {
 
       return [min, max]}
-  };
+  }
 
   const renderPricingCard: unknown = (service)  => {}
 '
@@ -129,7 +132,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               </div>
 "
               <div className="flex flex-col gap-2">
-                <a
+                <a;
                   href={`tel:${service.contactInfo.phone}`}"
                   className="w-full px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center"
 
@@ -144,7 +147,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             </div>;
           </div>;
         </div>;
-      )} else if(activeTab = == 'it') {
+      )} else if() {
 
       return ("
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">"
@@ -311,7 +314,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
           </div>;
         </div>;
       )}
-  };
+  }
 
   return ()
     <>
@@ -328,7 +331,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
           <div className="container mx-auto px-4 py-20">"
             <div className="text-center max-w-4xl mx-auto">"
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Comprehensive Pricing Guide 2030
+                Comprehensive Pricing Guide 2030;
               </h1>"
               <p className="text-xl md:text-2xl text-gray-200 mb-8">
                 Transparent pricing for all our micro SAAS, IT infrastructure, and AI services.Compare costs, ROI, and market data to make informed decisions for your business.</p>"
@@ -430,7 +433,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                       value={priceRange[1]}
                       onChange = {
 
-  (e) => setPriceRange([priceRange[0],
+  (e) => setPriceRange([priceRange[0]
   parseInt(e.target.value)])
 
 }                      className="flex-1"
@@ -442,7 +445,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                       value={priceRange[0]}
                       onChange = {
 
-  (e) => setPriceRange([parseInt(e.target.value),
+  (e) => setPriceRange([parseInt(e.target.value)
   priceRange[1]])
 
 }                      className="flex-1"
@@ -456,9 +459,9 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
                 <div>"
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Category
+                    Category;
                   </label>
-                  <select
+                  <select;
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}"
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -472,11 +475,11 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               </div>
 "
               <div className="mt-4 text-center">
-                <button
+                <button;
                   onClick = {
 
   () => {
-                    setPriceRange([priceRangeData[0],;
+                    setPriceRange([priceRangeData[0]
   ;
   ;
   ;
@@ -488,7 +491,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 }}
                   className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"                >
-                  Reset Filters
+                  Reset Filters;
                 </button>
               </div>
             </div>
@@ -530,11 +533,11 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
           {getFilteredServices().length === 0 && ("
             <div className="text-center py-12">"
               <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>
-              <button
+              <button;
                 onClick = {
 
   () => {
-                  setPriceRange([priceRangeData[0],;
+                  setPriceRange([priceRangeData[0]
   ;
   ;
   ;
@@ -546,7 +549,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 }}
                 className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"              >
-                Clear Filters
+                Clear Filters;
               </button>
             </div>;
           )}
@@ -604,13 +607,13 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                 href="tel:+13024640950"
                 className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
 
-                Call Now: +1 302 464 0950
+                Call Now: +1 302 464 0950;
               </a>
               <a"
                 href="mailto:kleber@ziontechgroup.com"
                 className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
 
-                Email Us
+                Email Us;
               </a>
             </div>;
           </div>;
@@ -618,16 +621,16 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       </div>;
     </>;
   );
-};
+}
 
 export default ComprehensivePricingGuide2030;}}}}}}}
 
-export { ComprehensivePricingGuide2030 };
+export { ComprehensivePricingGuide2030 }
 
-export { ComprehensivePricingGuide2030 };
+export { ComprehensivePricingGuide2030 }
 
-export { ComprehensivePricingGuide2030 };
+export { ComprehensivePricingGuide2030 }
 
-export { ComprehensivePricingGuide2030 };
+export { ComprehensivePricingGuide2030 }
 
-export { ComprehensivePricingGuide2030 };
+export { ComprehensivePricingGuide2030 }

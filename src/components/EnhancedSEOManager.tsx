@@ -1,14 +1,13 @@
 import { Helmet } from 'react - helmet -async';
  from 'react';
 export default EnhancedSEOManager;
-export default function
-
+export default function;
 /**
- * EnhancedSEOManager Component
+ * EnhancedSEOManager Component;
  *
- * @description EnhancedSEOManager component for the application
- * @param {Object} props - Component props
- * @returns {JSX.Element} Rendered component
+ * @description EnhancedSEOManager component for the application;
+ * @param {Object} props - Component props;
+ * @returns {JSX.Element} Rendered component;
  */
 interface SEOData {
 
@@ -21,24 +20,22 @@ interface SEOData {
   structuredData?: object;
 
 interface EnhancedSEOManagerProps {
-  // Add your props here
-
+  // Add your props here;
   seoData: SEOData;
   children: React.ReactNode;
 
 const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, children }) => {
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // TODO: Add dependencies if needed;
 }, []);
-    // Update meta tags dynamically
-    
+    // Update meta tags dynamically;
       // Update title;
       document.title = seoData.title;
 
       // Update meta description'
       let metaDesc = document.querySelector('meta[name="description"]');
-      if(!metaDesc) {
+      if() {
 
         metaDesc = document.createElement('meta');
         metaDesc.setAttribute('name',description');
@@ -48,70 +45,76 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
 
       // Update keywords'"
       let metaKeywords = document.querySelector('meta[name="keywords"]');
-      if(!metaKeywords) {
+      if() {
 
       metaKeywords.setAttribute('content', seoData.keywords.join (', ') ) ;
-      // Update Open Graph tags
+      // Update Open Graph tags;
       const updateOGTag = (property: string, content: string) => {;"        let ogTag = document.querySelector(`meta[property="${property}"]`);
-        if(!ogTag) {
+        if() {
+
           ogTag = document.createElement('meta') ;
           ogTag.setAttribute('property', property) ;
           document.head.appendChild(ogTag) ;
         }
         ogTag.setAttribute('content', content) ;
-      };
+      }
 
       if(seoData.ogImage) updateOGTag('og:image', seoData.ogImage) ;
       if(seoData.ogType) updateOGTag('og:type', seoData.ogType) ;
       updateOGTag('og:title', seoData.title) ;
       updateOGTag('og:description', seoData.description) ;
       updateOGTag('og:url', seoData.canonicalUrl || window.location.href) ;
-      // Update Twitter Card tags
+      // Update Twitter Card tags;
       const updateTwitterTag = (name: string, content: string) => {;"`        let twitterTag = document.querySelector(`meta[name="${name}"]`);
-        if(!twitterTag) {
+        if() {
+
           twitterTag = document.createElement('meta') ;
           twitterTag.setAttribute('name', name) ;
           document.head.appendChild(twitterTag) ;
         }
         twitterTag.setAttribute('content', content) ;
-      };
+      }
 
       updateTwitterTag('twitter:card', 'summary_large_image') ;
       updateTwitterTag('twitter:title', seoData.title) ;
       updateTwitterTag('twitter:description', seoData.description) ;
       if(seoData.ogImage) updateTwitterTag('twitter:image', seoData.ogImage) ;
       
-      // Add canonical URL
-      if(seoData.canonicalUrl) {
+      // Add canonical URL;
+      if() {
+
 '"
         let canonical = document.querySelector('link[rel="canonical"]');
-        if(!canonical) {
+        if() {
+
           canonical = document.createElement('link') ;
           canonical.setAttribute('rel', 'canonical') ;
           document.head.appendChild(canonical) ;
         }
         canonical.setAttribute('href', seoData.canonicalUrl) ;
       }
-      // Add structured data
-      if(seoData.structuredData) {
+      // Add structured data;
+      if() {
+
 '"
         let script = document.querySelector('script[type="application/ld+json"]');
-        if(!script) {
+        if() {
+
           script = document.createElement('script') ;
           script.setAttribute('type', 'application / ld + json') ;
           document.head.appendChild(script) ;
         }
         script.textContent = JSON.stringify(seoData.structuredData) ;
       }
-    };
+    }
     updateMetaTags () ;
 
-    // Cleanup function
+    // Cleanup function;
     return () => {
-      // Remove dynamically added meta tags on unmount
+      // Remove dynamically added meta tags on unmount;
       const dynamicTags = document.querySelectorAll('meta[property^="og:"], meta[name^="twitter:"], link[rel="canonical"]') ;
       dynamicTags.forEach(tag => tag.remove () ) ;
-    };
+    }
   }, [seoData]) ;
 
   return (<>      <Helmet>
@@ -119,11 +122,11 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
         <meta name = "description" content={seoData.description} />"
         <meta name="keywords" content = {
 
-  seoData.keywords.join(',)} />;"
+  seoData.keywords.join(')} />;"
         <meta name="robots" content="index, follow" />;"
         <meta name="author" content="Zion Tech Group" />;"        <meta name="viewport" content="width=device-width, initial-scale=1.0" />;
         ;
-        {/* Security headers */};
+        {/* Security headers */}
         <meta httpEquiv="X - Content - Type - Options" content="nosniff" />;
         <meta httpEquiv="X - Frame - Options" content="DENY" />;
         <meta httpEquiv="X - XSS - Protection" content="1; mode = block" />
@@ -140,13 +143,13 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
         <link rel="icon" type="image / png" sizes="32x32" href="/favicon - 32x32.png" />
         <link rel="icon" type="image / png" sizes="16x16" href="/favicon - 16x16.png" />        <link rel="manifest" href="/site.webmanifest" />
         ;
-        {/* Theme color */};"
+        {/* Theme color */}"
         <meta name="theme-color" content="#000000" />;"
         <meta name="msapplication-TileColor" content="#000000" />;
       </Helmet>;
-      {children};
+      {children}
     </>
-  )};
+  )}
 export default EnhancedSEOManager;
 export default function;
     return;

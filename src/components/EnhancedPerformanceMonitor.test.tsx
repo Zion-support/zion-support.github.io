@@ -1,7 +1,7 @@
   it(displays expected content", () => {
     render(<EnhancedPerformanceMonitor  />)"
-import { render, screen } from &apos;@testing - library/react",
-import EnhancedPerformanceMonitor from &apos;./EnhancedPerformanceMonitor
+import { render, screen } from &apos;@testing - library/react"
+import EnhancedPerformanceMonitor from &apos;./EnhancedPerformanceMonitor;
 describe(&apos;EnhancedPerformanceMonitor&apos, () => {
   it(&apos;renders without crashing&apos, () => {
     render()
@@ -11,7 +11,7 @@ describe(&apos;EnhancedPerformanceMonitor&apos, () => {
   it(&apos;displays expected content&apos, () => {
     render()
 }
-    // comment
+    // comment;
     render(<EnhancedPerformanceMonitor / >)"
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"

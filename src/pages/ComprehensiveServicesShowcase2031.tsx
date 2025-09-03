@@ -1,234 +1,234 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Brain, 
-  Shield, 
-  Atom, 
-  Search, 
-  TrendingUp, 
-  Users, 
-  Globe, 
-  Cpu,
-  Database,
-  Lock,
-  BarChart3,
-  Rocket,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  DollarSign,
-  Clock,
-  Award,
-  Target,
-  Workflow,
-  Zap,
-  Eye,
-  Code,
-  GitFork,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin,
-  Activity,
-  Fingerprint,
-  Key,
-  Server,
-  ShoppingCart,
-  Heart,
-  Factory,
-  BookOpen,
-  FileText,
-  Calendar,
-  Settings,
-  Network,
-  Cloud,
-  Leaf,
-  Building,
-  Car,
-  Home,
-  City,
-  CheckCircle2,
-  ArrowUpRight,
-  Play,
-  MailIcon,
-  User,
-  Handshake,
-  Briefcase,
-  FileText as FileTextIcon,
-  Users as UsersIcon,
-  Code as CodeIcon,
-  HelpCircle,
-  DollarSign as DollarSignIcon,
-  Users as UsersIcon2,
-  Calendar as CalendarIcon,
-  Shield as ShieldIcon,
-  BookOpen as BookOpenIcon,
-  Factory as FactoryIcon,
-  ShoppingCart as ShoppingCartIcon,
-  Heart as HeartIcon,
-  TrendingUp as TrendingUpIcon,
-  Building as BuildingIcon,
-  Rocket as RocketIcon,
-  Atom as AtomIcon,
-  Cloud as CloudIcon,
-  Shield as ShieldIcon2,
-  ShoppingCart as ShoppingCartIcon2,
-  Users as UsersIcon3,
-  BookOpen as BookOpenIcon2,
-  FileText as FileTextIcon2,
-  Users as UsersIcon4,
-  Code as CodeIcon2,
-  HelpCircle as HelpCircleIcon2,
-  DollarSign as DollarSignIcon2
+  Brain;
+  Shield;
+  Atom;
+  Search;
+  TrendingUp;
+  Users;
+  Globe;
+  Cpu;
+  Database;
+  Lock;
+  BarChart3;
+  Rocket;
+  Star;
+  CheckCircle;
+  ArrowRight;
+  DollarSign;
+  Clock;
+  Award;
+  Target;
+  Workflow;
+  Zap;
+  Eye;
+  Code;
+  GitFork;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  Activity;
+  Fingerprint;
+  Key;
+  Server;
+  ShoppingCart;
+  Heart;
+  Factory;
+  BookOpen;
+  FileText;
+  Calendar;
+  Settings;
+  Network;
+  Cloud;
+  Leaf;
+  Building;
+  Car;
+  Home;
+  City;
+  CheckCircle2;
+  ArrowUpRight;
+  Play;
+  MailIcon;
+  User;
+  Handshake;
+  Briefcase;
+  FileText as FileTextIcon;
+  Users as UsersIcon;
+  Code as CodeIcon;
+  HelpCircle;
+  DollarSign as DollarSignIcon;
+  Users as UsersIcon2;
+  Calendar as CalendarIcon;
+  Shield as ShieldIcon;
+  BookOpen as BookOpenIcon;
+  Factory as FactoryIcon;
+  ShoppingCart as ShoppingCartIcon;
+  Heart as HeartIcon;
+  TrendingUp as TrendingUpIcon;
+  Building as BuildingIcon;
+  Rocket as RocketIcon;
+  Atom as AtomIcon;
+  Cloud as CloudIcon;
+  Shield as ShieldIcon2;
+  ShoppingCart as ShoppingCartIcon2;
+  Users as UsersIcon3;
+  BookOpen as BookOpenIcon2;
+  FileText as FileTextIcon2;
+  Users as UsersIcon4;
+  Code as CodeIcon2;
+  HelpCircle as HelpCircleIcon2;
+  DollarSign as DollarSignIcon2;
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function ComprehensiveServicesShowcase2031(...args: unknown[]): unknown {
   const featuredServices = [
     {
-      id: "ai-quantum-hybrid-platform",
-      name: "AI Quantum Hybrid Platform",
-      description: "Revolutionary AI-Quantum hybrid computing platform combining quantum computing with artificial intelligence",
-      icon: Atom,
-      color: "from-purple-500 to-cyan-500",
-      price: "$2,999/month",
-      features: ["Quantum-Classical Hybrid Processing", "AI-Quantum Algorithm Optimization", "Real-time Quantum Error Correction"],
-      href: "/services/ai-quantum-hybrid-platform",
-      category: "AI & Quantum Computing",
-      featured: true
-    },
+      id: "ai-quantum-hybrid-platform"
+      name: "AI Quantum Hybrid Platform"
+      description: "Revolutionary AI-Quantum hybrid computing platform combining quantum computing with artificial intelligence"
+      icon: Atom;
+      color: "from-purple-500 to-cyan-500"
+      price: "$2,999/month"
+      features: ["Quantum-Classical Hybrid Processing", "AI-Quantum Algorithm Optimization", "Real-time Quantum Error Correction"]
+      href: "/services/ai-quantum-hybrid-platform"
+      category: "AI & Quantum Computing"
+      featured: true;
+    }
     {
-      id: "ai-autonomous-research-assistant",
-      name: "AI Autonomous Research Assistant",
-      description: "AI-powered research automation platform that discovers, analyzes, and synthesizes research autonomously",
-      icon: Search,
-      color: "from-blue-500 to-cyan-500",
-      price: "$299/month",
-      features: ["Autonomous Research Discovery", "Intelligent Literature Review", "Research Paper Generation"],
-      href: "/services/ai-autonomous-research-assistant",
-      category: "AI & Research",
-      featured: true
-    },
+      id: "ai-autonomous-research-assistant"
+      name: "AI Autonomous Research Assistant"
+      description: "AI-powered research automation platform that discovers, analyzes, and synthesizes research autonomously"
+      icon: Search;
+      color: "from-blue-500 to-cyan-500"
+      price: "$299/month"
+      features: ["Autonomous Research Discovery", "Intelligent Literature Review", "Research Paper Generation"]
+      href: "/services/ai-autonomous-research-assistant"
+      category: "AI & Research"
+      featured: true;
+    }
     {
-      id: "ai-cybersecurity-threat-intelligence",
-      name: "AI Cybersecurity Threat Intelligence",
-      description: "Revolutionary AI-powered cybersecurity platform that detects, analyzes, and responds to cyber threats in real-time",
-      icon: Shield,
-      color: "from-red-500 to-orange-500",
-      price: "$599/month",
-      features: ["AI-Powered Threat Detection", "24/7 Threat Monitoring", "Predictive Threat Intelligence"],
-      href: "/services/ai-cybersecurity-threat-intelligence",
-      category: "AI & Cybersecurity",
-      featured: true
-    },
+      id: "ai-cybersecurity-threat-intelligence"
+      name: "AI Cybersecurity Threat Intelligence"
+      description: "Revolutionary AI-powered cybersecurity platform that detects, analyzes, and responds to cyber threats in real-time"
+      icon: Shield;
+      color: "from-red-500 to-orange-500"
+      price: "$599/month"
+      features: ["AI-Powered Threat Detection", "24/7 Threat Monitoring", "Predictive Threat Intelligence"]
+      href: "/services/ai-cybersecurity-threat-intelligence"
+      category: "AI & Cybersecurity"
+      featured: true;
+    }
     {
-      id: "ai-business-intelligence",
-      name: "AI Business Intelligence",
-      description: "Advanced AI-powered business intelligence and analytics platform for data-driven decision making",      icon: Brain,
-      color: 'from - green - 500 to - emerald - 500',
-      price: '$799 / month',
-      features: ['Predictive Analytics',
-        'Real - time Dashboards',
+      id: "ai-business-intelligence"
+      name: "AI Business Intelligence"
+      description: "Advanced AI-powered business intelligence and analytics platform for data-driven decision making",      icon: Brain;
+      color: 'from - green - 500 to - emerald - 500'
+      price: '$799 / month'
+      features: ['Predictive Analytics'
+        'Real - time Dashboards'
         'Automated Reporting'
-      ],
-      href: '/services / ai - business - intelligence',
-      category: 'AI & Analytics',
+      ]
+      href: '/services / ai - business - intelligence'
+      category: 'AI & Analytics'
       featured: true;
-    },
+    }
     {}
-      id: 'ai - financial - analytics',
-      name: 'AI Financial Analytics',
+      id: 'ai - financial - analytics'
+      name: 'AI Financial Analytics'
       description: unknown;
-        'Intelligent financial analysis and forecasting platform powered by advanced AI algorithms',
-      icon: TrendingUp,
-      color: 'from - yellow-500 to - orange - 500',
-      price: '$999 / month',
-      features: ['Financial Forecasting',
-        'Risk Assessment',
+        'Intelligent financial analysis and forecasting platform powered by advanced AI algorithms'
+      icon: TrendingUp;
+      color: 'from - yellow-500 to - orange - 500'
+      price: '$999 / month'
+      features: ['Financial Forecasting'
+        'Risk Assessment'
         'Portfolio Optimization'
-      ],
-      href: '/services / ai - financial - analytics',
-      category: 'AI & Finance',
+      ]
+      href: '/services / ai - financial - analytics'
+      category: 'AI & Finance'
       featured: true;
-    },
+    }
     {}
-      id: 'ai - marketing - automation',
-      name: 'AI Marketing Automation',
+      id: 'ai - marketing - automation'
+      name: 'AI Marketing Automation'
       description: unknown;
-        'Intelligent marketing automation platform that personalizes campaigns and optimizes ROI',
-      icon: Target,
-      color: 'from - pink - 500 to - purple - 500',
-      price: '$699 / month',
-      features: ['Personalized Campaigns',
-        'ROI Optimization',
+        'Intelligent marketing automation platform that personalizes campaigns and optimizes ROI'
+      icon: Target;
+      color: 'from - pink - 500 to - purple - 500'
+      price: '$699 / month'
+      features: ['Personalized Campaigns'
+        'ROI Optimization'
         'Customer Segmentation'
-      ],
-      href: '/services / ai - marketing - automation',
-      category: 'AI & Marketing',
+      ]
+      href: '/services / ai - marketing - automation'
+      category: 'AI & Marketing'
       featured: true;
     }
   ];
 
   const serviceCategories: unknown = [{}
-      title: 'AI & Machine Learning',
-      icon: Brain,
-      color: 'from - purple - 500 to - cyan - 500',
+      title: 'AI & Machine Learning'
+      icon: Brain;
+      color: 'from - purple - 500 to - cyan - 500'
       services: []
-        'AI Business Intelligence',
-        'AI Financial Analytics',
-        'AI Marketing Automation',
-        'AI Customer Support',
-        'AI Content Creation',
+        'AI Business Intelligence'
+        'AI Financial Analytics'
+        'AI Marketing Automation'
+        'AI Customer Support'
+        'AI Content Creation'
         'AI HR Platform'
       ]
-    },
+    }
     {}
-      title: 'Quantum Computing',
-      icon: Atom,
-      color: 'from - indigo - 500 to - purple - 500',
-      services: ['AI Quantum Hybrid Platform',
-        'Quantum Computing Solutions',
-        'Quantum Machine Learning',
+      title: 'Quantum Computing'
+      icon: Atom;
+      color: 'from - indigo - 500 to - purple - 500'
+      services: ['AI Quantum Hybrid Platform'
+        'Quantum Computing Solutions'
+        'Quantum Machine Learning'
         'Quantum Cryptography'
       ]
-    },
+    }
     {}
-      title: 'Cybersecurity',
-      icon: Shield,
-      color: 'from - red - 500 to - orange - 500',
-      services: ['AI Cybersecurity Threat Intelligence',
-        'Zero Trust Network Access',
-        'Security Headers & CSP',
+      title: 'Cybersecurity'
+      icon: Shield;
+      color: 'from - red - 500 to - orange - 500'
+      services: ['AI Cybersecurity Threat Intelligence'
+        'Zero Trust Network Access'
+        'Security Headers & CSP'
         'DSR Privacy Portal'
       ]
-    },
+    }
     {}
-      title: 'Research & Analytics',
-      icon: Search,
-      color: 'from - blue - 500 to - cyan - 500',
-      services: ['AI Autonomous Research Assistant',
-        'Data Analytics Platform',
-        'Business Intelligence',
+      title: 'Research & Analytics'
+      icon: Search;
+      color: 'from - blue - 500 to - cyan - 500'
+      services: ['AI Autonomous Research Assistant'
+        'Data Analytics Platform'
+        'Business Intelligence'
         'Predictive Analytics'
       ]
-    },
+    }
     {}
-      title: 'Cloud & Infrastructure',
-      icon: Cloud,
-      color: 'from - cyan - 500 to - blue - 500',
-      services: ['Cloud DevOps',
-        'IT Infrastructure',
-        'Digital Twin Platform',
+      title: 'Cloud & Infrastructure'
+      icon: Cloud;
+      color: 'from - cyan - 500 to - blue - 500'
+      services: ['Cloud DevOps'
+        'IT Infrastructure'
+        'Digital Twin Platform'
         'IoT Edge Computing'
       ]
-    },
+    }
     {}
-      title: 'Micro SaaS Solutions',
-      icon: ShoppingCart,
-      color: 'from - orange - 500 to - red - 500',
-      services: ['Micro CRM',
-        'Helpdesk Platform',
-        'Website Analytics',
+      title: 'Micro SaaS Solutions'
+      icon: ShoppingCart;
+      color: 'from - orange - 500 to - red - 500'
+      services: ['Micro CRM'
+        'Helpdesk Platform'
+        'Website Analytics'
         'Affiliate Tracking'
       ]
     }
@@ -593,12 +593,12 @@ export default function ComprehensiveServicesShowcase2031(...args: unknown[]): u
   );
 }
 
-export { ComprehensiveServicesShowcase2031 };
+export { ComprehensiveServicesShowcase2031 }
 
-export { ComprehensiveServicesShowcase2031 };
+export { ComprehensiveServicesShowcase2031 }
 
-export { ComprehensiveServicesShowcase2031 };
+export { ComprehensiveServicesShowcase2031 }
 
-export { ComprehensiveServicesShowcase2031 };
+export { ComprehensiveServicesShowcase2031 }
 
-export { ComprehensiveServicesShowcase2031 };
+export { ComprehensiveServicesShowcase2031 }

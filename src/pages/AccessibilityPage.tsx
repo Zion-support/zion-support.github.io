@@ -1,90 +1,91 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Accessibility, 
-  Eye, 
-  Ear, 
-  Hand, 
-  Brain, 
-  CheckCircle, 
-  ArrowRight,
-  Shield,
-  Globe,
-  Users,
-  Settings,
-  Monitor,
-  Smartphone,
-  Volume2,
-  Type,
-  Contrast,
-  ZoomIn,
-  Keyboard,
-  Mouse,
-  Touchpad,
-  Headphones,
-  Braille,
-  FileText,
-  Mail,
-  Phone,
-  Award,
-  Star,
-  Heart,
-  Lightbulb,
-  Target,
-  Zap
+  Accessibility;
+  Eye;
+  Ear;
+  Hand;
+  Brain;
+  CheckCircle;
+  ArrowRight;
+  Shield;
+  Globe;
+  Users;
+  Settings;
+  Monitor;
+  Smartphone;
+  Volume2;
+  Type;
+  Contrast;
+  ZoomIn;
+  Keyboard;
+  Mouse;
+  Touchpad;
+  Headphones;
+  Braille;
+  FileText;
+  Mail;
+  Phone;
+  Award;
+  Star;
+  Heart;
+  Lightbulb;
+  Target;
+  Zap;
 } from 'lucide-react';
 
 export function AccessibilityPage() {
+
   const accessibilityFeatures = [
     {
-      icon: Eye,
-      title: 'Visual Accessibility',
-      description: 'Support for users with visual impairments including screen readers, high contrast modes, and text scaling.',
+      icon: Eye;
+      title: 'Visual Accessibility'
+      description: 'Support for users with visual impairments including screen readers, high contrast modes, and text scaling.'
       features: [
-        'Screen reader compatibility',
-        'High contrast color schemes',
-        'Text scaling up to 200%',
-        'Alternative text for images',
-        'Keyboard navigation support',
+        'Screen reader compatibility'
+        'High contrast color schemes'
+        'Text scaling up to 200%'
+        'Alternative text for images'
+        'Keyboard navigation support'
         'Focus indicators'
       ]
-    },
+    }
     {
-      icon: Ear,
-      title: 'Auditory Accessibility',
-      description: 'Features for users with hearing impairments including captions, transcripts, and visual indicators.',
+      icon: Ear;
+      title: 'Auditory Accessibility'
+      description: 'Features for users with hearing impairments including captions, transcripts, and visual indicators.'
       features: [
-        'Video captions and transcripts',
-        'Visual audio indicators',
-        'Text-based alternatives',
-        'Sign language support',
-        'Audio descriptions',
+        'Video captions and transcripts'
+        'Visual audio indicators'
+        'Text-based alternatives'
+        'Sign language support'
+        'Audio descriptions'
         'Volume controls'
       ]
-    },
+    }
     {
-      icon: Hand,
-      title: 'Motor Accessibility',
-      description: 'Support for users with motor impairments including keyboard navigation, voice control, and assistive technologies.',
+      icon: Hand;
+      title: 'Motor Accessibility'
+      description: 'Support for users with motor impairments including keyboard navigation, voice control, and assistive technologies.'
       features: [
-        'Full keyboard navigation',
-        'Voice control support',
-        'Switch navigation',
-        'Large click targets',
-        'Customizable timing',
+        'Full keyboard navigation'
+        'Voice control support'
+        'Switch navigation'
+        'Large click targets'
+        'Customizable timing'
         'Assistive device support'
       ]
-    },
+    }
     {
-      icon: Brain,
-      title: 'Cognitive Accessibility',
-      description: 'Features to support users with cognitive disabilities including clear navigation, consistent design, and simplified content.',
+      icon: Brain;
+      title: 'Cognitive Accessibility'
+      description: 'Features to support users with cognitive disabilities including clear navigation, consistent design, and simplified content.'
       features: [
-        'Clear and simple language',
-        'Consistent navigation',
-        'Error prevention',
-        'Help and support',
-        'Progress indicators',
+        'Clear and simple language'
+        'Consistent navigation'
+        'Error prevention'
+        'Help and support'
+        'Progress indicators'
         'Memory aids'
       ]
     }
@@ -92,97 +93,97 @@ export function AccessibilityPage() {
 
   const standards = [
     {
-      name: 'WCAG 2.1 AA',
-      description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',
-      status: 'Compliant',
-      icon: CheckCircle,
+      name: 'WCAG 2.1 AA'
+      description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance'
+      status: 'Compliant'
+      icon: CheckCircle;
       details: 'Our website meets all WCAG 2.1 AA success criteria for accessibility.'
-    },
+    }
     {
-      name: 'Section 508',
-      description: 'US Federal accessibility standards compliance',
-      status: 'Compliant',
-      icon: CheckCircle,
+      name: 'Section 508'
+      description: 'US Federal accessibility standards compliance'
+      status: 'Compliant'
+      icon: CheckCircle;
       details: 'Full compliance with Section 508 of the Rehabilitation Act.'
-    },
+    }
     {
-      name: 'ADA Compliance',
-      description: 'Americans with Disabilities Act compliance',
-      status: 'Compliant',
-      icon: CheckCircle,
+      name: 'ADA Compliance'
+      description: 'Americans with Disabilities Act compliance'
+      status: 'Compliant'
+      icon: CheckCircle;
       details: 'Our digital properties meet ADA accessibility requirements.'
-    },
+    }
     {
-      name: 'EN 301 549',
-      description: 'European accessibility standard compliance',
-      status: 'Compliant',
-      icon: CheckCircle,
+      name: 'EN 301 549'
+      description: 'European accessibility standard compliance'
+      status: 'Compliant'
+      icon: CheckCircle;
       details: 'Compliance with European accessibility standards.'
     }
   ];
 
   const assistiveTechnologies = [
     {
-      name: 'Screen Readers',
-      icon: Eye,
-      description: 'Compatible with popular screen readers including NVDA, JAWS, and VoiceOver.',
+      name: 'Screen Readers'
+      icon: Eye;
+      description: 'Compatible with popular screen readers including NVDA, JAWS, and VoiceOver.'
       supported: ['NVDA', 'JAWS', 'VoiceOver', 'TalkBack', 'Orca']
-    },
+    }
     {
-      name: 'Voice Control',
-      icon: Volume2,
-      description: 'Full support for voice control software and voice commands.',
+      name: 'Voice Control'
+      icon: Volume2;
+      description: 'Full support for voice control software and voice commands.'
       supported: ['Dragon NaturallySpeaking', 'Voice Control (macOS)', 'Voice Access (Android)']
-    },
+    }
     {
-      name: 'Switch Navigation',
-      icon: Touchpad,
-      description: 'Support for switch-based navigation devices and assistive switches.',
+      name: 'Switch Navigation'
+      icon: Touchpad;
+      description: 'Support for switch-based navigation devices and assistive switches.'
       supported: ['Switch Access', 'Assistive Switches', 'Eye Tracking']
-    },
+    }
     {
-      name: 'Magnification',
-      icon: ZoomIn,
-      description: 'Compatible with screen magnification software and browser zoom.',
+      name: 'Magnification'
+      icon: ZoomIn;
+      description: 'Compatible with screen magnification software and browser zoom.'
       supported: ['ZoomText', 'MAGic', 'Browser Zoom', 'System Magnification']
     }
   ];
 
   const accessibilityTools = [
     {
-      name: 'High Contrast Mode',
-      icon: Contrast,
-      description: 'Toggle high contrast mode for better visibility.',
+      name: 'High Contrast Mode'
+      icon: Contrast;
+      description: 'Toggle high contrast mode for better visibility.'
       action: 'Enable High Contrast'
-    },
+    }
     {
-      name: 'Text Size',
-      icon: Type,
-      description: 'Increase or decrease text size for better readability.',
+      name: 'Text Size'
+      icon: Type;
+      description: 'Increase or decrease text size for better readability.'
       action: 'Adjust Text Size'
-    },
+    }
     {
-      name: 'Keyboard Navigation',
-      icon: Keyboard,
-      description: 'Navigate the entire website using only the keyboard.',
+      name: 'Keyboard Navigation'
+      icon: Keyboard;
+      description: 'Navigate the entire website using only the keyboard.'
       action: 'Learn Keyboard Shortcuts'
-    },
+    }
     {
-      name: 'Screen Reader',
-      icon: Eye,
-      description: 'Optimized for screen reader compatibility.',
+      name: 'Screen Reader'
+      icon: Eye;
+      description: 'Optimized for screen reader compatibility.'
       action: 'Screen Reader Guide'
     }
   ];
 
   const keyboardShortcuts = [
-    { key: 'Tab', description: 'Navigate to next interactive element' },
-    { key: 'Shift + Tab', description: 'Navigate to previous interactive element' },
-    { key: 'Enter', description: 'Activate buttons and links' },
-    { key: 'Space', description: 'Activate buttons and checkboxes' },
-    { key: 'Escape', description: 'Close modals and menus' },
-    { key: 'Arrow Keys', description: 'Navigate within menus and lists' },
-    { key: 'Home', description: 'Go to beginning of page' },
+    { key: 'Tab', description: 'Navigate to next interactive element' }
+    { key: 'Shift + Tab', description: 'Navigate to previous interactive element' }
+    { key: 'Enter', description: 'Activate buttons and links' }
+    { key: 'Space', description: 'Activate buttons and checkboxes' }
+    { key: 'Escape', description: 'Close modals and menus' }
+    { key: 'Arrow Keys', description: 'Navigate within menus and lists' }
+    { key: 'Home', description: 'Go to beginning of page' }
     { key: 'End', description: 'Go to end of page' }
   ];
 
@@ -193,7 +194,7 @@ export function AccessibilityPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Accessibility Statement
+              Accessibility Statement;
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Zion Tech Group is committed to ensuring digital accessibility for all users. 
@@ -201,17 +202,17 @@ export function AccessibilityPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="bg-zion-cyan text-white px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors"
               >
-                Report Accessibility Issue
+                Report Accessibility Issue;
               </Link>
-              <Link
+              <Link;
                 to="/accessibility-test"
                 className="border-2 border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-colors"
               >
-                Test Accessibility
+                Test Accessibility;
               </Link>
             </div>
           </div>
@@ -223,10 +224,10 @@ export function AccessibilityPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Accessibility Features
+              Accessibility Features;
             </h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto">
-              Our website includes comprehensive accessibility features to support users with diverse needs
+              Our website includes comprehensive accessibility features to support users with diverse needs;
             </p>
           </div>
 
@@ -261,10 +262,10 @@ export function AccessibilityPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Accessibility Standards
+              Accessibility Standards;
             </h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto">
-              We comply with international accessibility standards and guidelines
+              We comply with international accessibility standards and guidelines;
             </p>
           </div>
 
@@ -289,10 +290,10 @@ export function AccessibilityPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Assistive Technology Support
+              Assistive Technology Support;
             </h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto">
-              Our website is compatible with a wide range of assistive technologies
+              Our website is compatible with a wide range of assistive technologies;
             </p>
           </div>
 
@@ -328,10 +329,10 @@ export function AccessibilityPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Accessibility Tools
+              Accessibility Tools;
             </h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto">
-              Use these built-in tools to customize your browsing experience
+              Use these built-in tools to customize your browsing experience;
             </p>
           </div>
 
@@ -358,10 +359,10 @@ export function AccessibilityPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Keyboard Navigation
+                Keyboard Navigation;
               </h2>
               <p className="text-zion-slate-light mb-6 leading-relaxed">
-                Our website can be fully navigated using only the keyboard. Use these keyboard shortcuts 
+                Our website can be fully navigated using only the keyboard. Use these keyboard shortcuts;
                 to navigate efficiently through our content.
               </p>
               
@@ -408,11 +409,11 @@ export function AccessibilityPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Report Accessibility Issues
+                Report Accessibility Issues;
               </h2>
               <p className="text-zion-slate-light mb-6 leading-relaxed">
                 We are committed to continuously improving the accessibility of our website. 
-                If you encounter any accessibility barriers or have suggestions for improvement, 
+                If you encounter any accessibility barriers or have suggestions for improvement;
                 please contact us.
               </p>
               
@@ -439,12 +440,12 @@ export function AccessibilityPage() {
               </p>
               
               <div className="space-y-4">
-                <input
+                <input;
                   type="text"
                   placeholder="Your Name"
                   className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                 />
-                <input
+                <input;
                   type="email"
                   placeholder="Email Address"
                   className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
@@ -457,13 +458,13 @@ export function AccessibilityPage() {
                   <option>Assistive Technology</option>
                   <option>Other</option>
                 </select>
-                <textarea
+                <textarea;
                   placeholder="Describe the accessibility issue or suggestion"
                   rows={4}
                   className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                 ></textarea>
                 <button className="w-full bg-zion-cyan text-white py-3 rounded-lg hover:bg-zion-cyan-light transition-colors">
-                  Submit Feedback
+                  Submit Feedback;
                 </button>
               </div>
             </div>
@@ -475,24 +476,24 @@ export function AccessibilityPage() {
       <section className="py-16 bg-gradient-to-r from-zion-cyan to-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Committed to Digital Inclusion
+            Committed to Digital Inclusion;
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             At Zion Tech Group, we believe that technology should be accessible to everyone. 
             We're continuously working to improve our digital accessibility and welcome your feedback.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <Link;
               to="/contact"
               className="bg-white text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-slate-light transition-colors"
             >
-              Contact Accessibility Team
+              Contact Accessibility Team;
             </Link>
-            <Link
+            <Link;
               to="/accessibility-test"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-zion-cyan transition-colors"
             >
-              Test Our Accessibility
+              Test Our Accessibility;
             </Link>
           </div>
         </div>

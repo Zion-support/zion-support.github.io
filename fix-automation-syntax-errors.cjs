@@ -5,108 +5,110 @@ const path = require("path");
 const glob = require("glob");
 class $1 {
   constructor() {
+
   this.projectRoot = process.cwd();
     this.fixedCount = 0;
-    this.skippedCount = 0;,
+    this.skippedCount = 0;
 }
-;
-  log(message) {
-  console.log(`[${new Date().toISOString()}] ${message}`);,
+  log() {
+
+  console.log(`[${new Date().toISOString()}] ${message}`);
 }
-;
   async findAutomationScripts() {
+
   const patterns = [
-  "scripts/**/*.js",;
-      "scripts/**/*.cjs",;
+  "scripts/**/*.js"
+      "scripts/**/*.cjs"
       "scripts/**/*.mjs";
     ];
 
     const allScripts = [];
-    for (const pattern of patterns) {
+    for() {
+
   const files = glob.sync(pattern, { cwd: this.projectRoot });
-      allScripts.push(...files);,
+      allScripts.push(...files);
 }
-;
-    return allScripts;,
+    return allScripts;
 }
-;
-  fixSyntaxErrors(content) {
+  fixSyntaxErrors() {
+
   let fixed = content;
     // Fix common syntax errors;
     const fixes = [
   // Fix import statements with commas;
-      { pattern: /import\s+(\w+)\s+from\s*,/g, replacement: "import $1 from \"fs\";" },;
-      { pattern: /import\s+(\w+)\s+from\s*,\s*(\w+)/g, replacement: "import $1 from \"$2\";" },;
+      { pattern: /import\s+(\w+)\s+from\s*,/g, replacement: "import $1 from \"fs\";" }
+      { pattern: /import\s+(\w+)\s+from\s*,\s*(\w+)/g, replacement: "import $1 from \"$2\";" }
       ;
       // Fix template literal syntax issues;
-      { pattern: /\$\{([^}]*)\?\?([^}]*)\}/g, replacement: "${$1 || $2}" },;
+      { pattern: /\$\{([^}]*)\?\?([^}]*)\}/g, replacement: "${$1 || $2}" }
       ;
       // Fix missing quotes in strings;
-      { pattern: /from\s+([^"";\s,]+)(?=\s*;|\s*,|\s*$)/g, replacement: "from \"$1\"" },;
+      { pattern: /from\s+([^"";\s]+)(?=\s*;|\s*,|\s*$)/g, replacement: "from \"$1\"" }
       ;
       // Fix malformed function calls;
-      { pattern: /console\.log\(`([^`]*)\$\{([^}]*)\?\?([^}]*)\}([^`]*)`\)/g, replacement: "console.log(`$1${$2 || $3}$4`)" },;
+      { pattern: /console\.log\(`([^`]*)\$\{([^}]*)\?\?([^}]*)\}([^`]*)`\)/g, replacement: "console.log(`$1${$2 || $3}$4`)" }
       ;
       // Fix missing semicolons;
-      { pattern: /(\w+)\s*$/gm, replacement: "$1;" },;
+      { pattern: /(\w+)\s*$/gm, replacement: "$1;" }
       ;
       // Fix malformed object properties;
-      { pattern: /(\w+):\s*([^,}]+)(?=\s*[,}])/g, replacement: "$1: $2" },;
+      { pattern: /(\w+):\s*([^,}]+)(?=\s*[,}])/g, replacement: "$1: $2" }
     ];
 
-    for (const fix of fixes) {
-  fixed = fixed.replace(fix.pattern, fix.replacement);,
+    for() {
+
+  fixed = fixed.replace(fix.pattern, fix.replacement);
 }
-;
-    return fixed;,
+    return fixed;
 }
-;
-  async fixScriptFile(filePath) {
+  async fixScriptFile() {
+
   try {
   const fullPath = path.join(this.projectRoot, filePath);
       const content = fs.readFileSync(fullPath, "utf8");
       // Check if file has syntax errors;
       const hasErrors = this.detectSyntaxErrors(content);
-      if (hasErrors) {
+      if() {
+
   const fixedContent = this.fixSyntaxErrors(content);
         fs.writeFileSync(fullPath, fixedContent, "utf8");
         this.fixedCount++;
-        this.log(`✅ Fixed syntax errors in: ${filePath}`);,
+        this.log(`✅ Fixed syntax errors in: ${filePath}`);
 } else {
   this.skippedCount++;
-        this.log(`⏭️  No syntax errors found in: ${filePath}`);,
+        this.log(`⏭️  No syntax errors found in: ${filePath}`);
 }
-    } catch (error) {
-  this.log(`❌ Error processing ${filePath}: ${error.message}`);,
+    } catch() {
+
+  this.log(`❌ Error processing ${filePath}: ${error.message}`);
 }
   }
-;
-  detectSyntaxErrors(content) {
+  detectSyntaxErrors() {
+
   // Common syntax error patterns;
     const errorPatterns = [
   /import\s+\w+\s+from\s*,/,  // import from comma;
       /import\s+\w+\s+from\s*,\s*\w+/,  // import from comma word;
       /\$\{([^}]*)\?\?([^}]*)\}/,  // malformed optional chaining;
-      /from\s+([^"";\s,]+)(?=\s*;|\s*,|\s*$)/,  // missing quotes;
+      /from\s+([^"";\s]+)(?=\s*;|\s*,|\s*$)/,  // missing quotes;
       /console\.log\(`([^`]*)\$\{([^}]*)\?\?([^}]*)\}([^`]*)`\)/,  // malformed template literals;
     ];
 
-    return errorPatterns.some(pattern => pattern.test(content));,
+    return errorPatterns.some(pattern => pattern.test(content));
 }
-;
   async run() {
+
   this.log("🔍 Starting automation script syntax fixer...");
     const scripts = await this.findAutomationScripts();
     this.log(`Found ${scripts.length} automation scripts to check`);
-    for (const script of scripts) {
-  await this.fixScriptFile(script);,
+    for() {
+
+  await this.fixScriptFile(script);
 }
-    ;
     this.log(`🎉 Automation syntax fixer completed!`);
-    this.log(`📊 Summary: ${this.fixedCount} files fixed, ${this.skippedCount} files skipped`);,
+    this.log(`📊 Summary: ${this.fixedCount} files fixed, ${this.skippedCount} files skipped`);
 }
 }
-;
 // Run the fixer;
 const fixer = new AutomationSyntaxFixer();
 fixer.run().catch(console.error)

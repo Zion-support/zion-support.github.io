@@ -8,38 +8,38 @@ const API: NextPage = () => {
 
   const apiEndpoints = [
     {
-      method: 'GET',
-      endpoint: '/api/v1/users',
-      description: 'Retrieve user information',
+      method: 'GET'
+      endpoint: '/api/v1/users'
+      description: 'Retrieve user information'
       parameters: [
-        { name: 'id', type: 'string', required: true, description: 'User ID' },
+        { name: 'id', type: 'string', required: true, description: 'User ID' }
         { name: 'include', type: 'string', required: false, description: 'Additional data to include' }
       ]
-    },
+    }
     {
-      method: 'POST',
-      endpoint: '/api/v1/users',
-      description: 'Create a new user',
+      method: 'POST'
+      endpoint: '/api/v1/users'
+      description: 'Create a new user'
       parameters: [
-        { name: 'name', type: 'string', required: true, description: 'User name' },
-        { name: 'email', type: 'string', required: true, description: 'User email' },
+        { name: 'name', type: 'string', required: true, description: 'User name' }
+        { name: 'email', type: 'string', required: true, description: 'User email' }
         { name: 'role', type: 'string', required: false, description: 'User role' }
       ]
-    },
+    }
     {
-      method: 'PUT',
-      endpoint: '/api/v1/users/{id}',
-      description: 'Update user information',
+      method: 'PUT'
+      endpoint: '/api/v1/users/{id}'
+      description: 'Update user information'
       parameters: [
-        { name: 'id', type: 'string', required: true, description: 'User ID' },
-        { name: 'name', type: 'string', required: false, description: 'Updated name' },
+        { name: 'id', type: 'string', required: true, description: 'User ID' }
+        { name: 'name', type: 'string', required: false, description: 'Updated name' }
         { name: 'email', type: 'string', required: false, description: 'Updated email' }
       ]
-    },
+    }
     {
-      method: 'DELETE',
-      endpoint: '/api/v1/users/{id}',
-      description: 'Delete a user',
+      method: 'DELETE'
+      endpoint: '/api/v1/users/{id}'
+      description: 'Delete a user'
       parameters: [
         { name: 'id', type: 'string', required: true, description: 'User ID' }
       ]
@@ -48,33 +48,32 @@ const API: NextPage = () => {
 
   const codeExamples = [
     {
-      language: 'JavaScript',
+      language: 'JavaScript'
       code: `const response = await fetch('https://api.ziontechgroup.com/v1/users', {
-  method: 'GET',
+  method: 'GET'
   headers: {
-    'Authorization': 'Bearer YOUR_API_KEY',
+    'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
   }
 });
 
 const data = await response.json();
 console.log(data);`
-    },
+    }
     {
-      language: 'Python',
-      code: `import requests
-
+      language: 'Python'
+      code: `import requests;
 headers = {
-    'Authorization': 'Bearer YOUR_API_KEY',
+    'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
 }
 
 response = requests.get('https://api.ziontechgroup.com/v1/users', headers=headers)
 data = response.json()
 print(data)`
-    },
+    }
     {
-      language: 'cURL',
+      language: 'cURL'
       code: `curl -X GET "https://api.ziontechgroup.com/v1/users" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`
@@ -86,13 +85,15 @@ print(data)`
       await navigator.clipboard.writeText(code);
       setCopiedCode(language);
       setTimeout(() => setCopiedCode(null), 2000);
-    } catch (err) {
+    } catch() {
+
       console.error('Failed to copy code:', err);
     }
-  };
+  }
 
   const getMethodColor = (method: string) => {
-    switch (method) {
+    switch() {
+
       case 'GET':
         return 'bg-green-100 text-green-800';
       case 'POST':
@@ -104,10 +105,10 @@ print(data)`
       default:
         return 'bg-gray-100 text-gray-800';
     }
-  };
+  }
 
   return (
-    <MainLayout
+    <MainLayout;
       title="API Reference - Zion Tech Group"
       description="Complete API reference for Zion Tech Group's services. Documentation, examples, and integration guides."
       keywords="API reference, REST API, developer documentation, integration, endpoints, authentication"
@@ -225,7 +226,7 @@ print(data)`
                   <div key={index} className="bg-gray-900 rounded-lg overflow-hidden">
                     <div className="flex items-center justify-between px-6 py-3 bg-gray-800">
                       <span className="text-white font-medium">{example.language}</span>
-                      <button
+                      <button;
                         onClick={() => copyToClipboard(example.code, example.language)}
                         className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors"
                       >
@@ -263,7 +264,7 @@ print(data)`
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">SDK Downloads</h3>
                   <p className="text-gray-600 mb-4">Client libraries for popular programming languages</p>
                   <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
-                    Download SDKs
+                    Download SDKs;
                   </button>
                 </div>
                 <div className="bg-white rounded-lg shadow-lg p-6 text-center">
@@ -271,7 +272,7 @@ print(data)`
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">Full Documentation</h3>
                   <p className="text-gray-600 mb-4">Comprehensive API documentation and guides</p>
                   <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
-                    View Docs
+                    View Docs;
                   </button>
                 </div>
                 <div className="bg-white rounded-lg shadow-lg p-6 text-center">
@@ -279,7 +280,7 @@ print(data)`
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">API Playground</h3>
                   <p className="text-gray-600 mb-4">Test API endpoints directly in your browser</p>
                   <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
-                    Try API
+                    Try API;
                   </button>
                 </div>
               </div>
@@ -296,17 +297,17 @@ print(data)`
                 Our developer support team is here to help you integrate our API successfully.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <a;
                   href="/help"
                   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Contact Support
+                  Contact Support;
                 </a>
-                <a
+                <a;
                   href="/documentation"
                   className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
-                  View Documentation
+                  View Documentation;
                 </a>
               </div>
             </div>
@@ -315,6 +316,6 @@ print(data)`
       </div>
     </MainLayout>
   );
-};
+}
 
 export default API;

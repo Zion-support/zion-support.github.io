@@ -1,7 +1,7 @@
   it(displays expected content", () => {
     render(<SimpleNavigation  />)"
-import { render, screen } from &apos;@testing - library/react",
-import SimpleNavigation from &apos;./SimpleNavigation
+import { render, screen } from &apos;@testing - library/react"
+import SimpleNavigation from &apos;./SimpleNavigation;
 describe(&apos;SimpleNavigation&apos, () => {
   it(&apos;renders without crashing&apos, () => {
     render()
@@ -11,7 +11,7 @@ describe(&apos;SimpleNavigation&apos, () => {
   it(&apos;displays expected content&apos, () => {
     render()
 }
-    // comment
+    // comment;
     render(<SimpleNavigation / >)"
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"

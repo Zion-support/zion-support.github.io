@@ -3,88 +3,89 @@ import Head from 'next/head';
 import { ArrowRight, CheckCircle, Brain, Zap, Users, Shield, TrendingUp, BarChart3, MessageCircle, Star, Clock, Award } from 'lucide-react';
 
 export default function AIContentGeneratorPage() {
+
   const features = [
-    'Multi-language content generation with 50+ languages supported',
-    'SEO-optimized content with keyword research and optimization',
-    'Brand voice customization and tone consistency',
-    'Content scheduling across multiple platforms',
-    'Advanced analytics dashboard with performance metrics',
-    'API integration for seamless workflow automation',
-    'Plagiarism detection and originality scoring',
+    'Multi-language content generation with 50+ languages supported'
+    'SEO-optimized content with keyword research and optimization'
+    'Brand voice customization and tone consistency'
+    'Content scheduling across multiple platforms'
+    'Advanced analytics dashboard with performance metrics'
+    'API integration for seamless workflow automation'
+    'Plagiarism detection and originality scoring'
     'Extensive content templates library (1000+ templates)'
   ];
 
   const benefits = [
-    '10x faster content creation compared to manual writing',
-    'Consistent brand messaging across all content',
-    'Built-in SEO optimization for better search rankings',
-    'Multi-platform publishing with one-click distribution',
-    'Cost-effective content marketing solution',
-    '24/7 content generation capability',
+    '10x faster content creation compared to manual writing'
+    'Consistent brand messaging across all content'
+    'Built-in SEO optimization for better search rankings'
+    'Multi-platform publishing with one-click distribution'
+    'Cost-effective content marketing solution'
+    '24/7 content generation capability'
     'Scalable content production for any business size'
   ];
 
   const useCases = [
-    'Blog content creation for content marketing',
-    'Social media management and posting',
-    'Email marketing campaign content',
-    'Product descriptions for e-commerce',
-    'Marketing copywriting and ad content',
-    'Technical documentation and guides',
+    'Blog content creation for content marketing'
+    'Social media management and posting'
+    'Email marketing campaign content'
+    'Product descriptions for e-commerce'
+    'Marketing copywriting and ad content'
+    'Technical documentation and guides'
     'Press releases and announcements'
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: 29,
-      period: 'month',
-      description: 'Perfect for small businesses and freelancers',
+      name: 'Starter'
+      price: 29;
+      period: 'month'
+      description: 'Perfect for small businesses and freelancers'
       features: [
-        'Up to 10,000 words/month',
-        '5 content templates',
-        'Basic SEO optimization',
-        'Email support',
-        'Standard analytics',
+        'Up to 10,000 words/month'
+        '5 content templates'
+        'Basic SEO optimization'
+        'Email support'
+        'Standard analytics'
         '1 user account'
-      ],
-      popular: false
-    },
+      ]
+      popular: false;
+    }
     {
-      name: 'Professional',
-      price: 79,
-      period: 'month',
-      description: 'Ideal for growing companies and agencies',
+      name: 'Professional'
+      price: 79;
+      period: 'month'
+      description: 'Ideal for growing companies and agencies'
       features: [
-        'Up to 50,000 words/month',
-        'Unlimited content templates',
-        'Advanced SEO optimization',
-        'Priority email support',
-        'Advanced analytics & insights',
-        '5 user accounts',
-        'API access',
+        'Up to 50,000 words/month'
+        'Unlimited content templates'
+        'Advanced SEO optimization'
+        'Priority email support'
+        'Advanced analytics & insights'
+        '5 user accounts'
+        'API access'
         'Brand voice training'
-      ],
-      popular: true
-    },
+      ]
+      popular: true;
+    }
     {
-      name: 'Enterprise',
-      price: 199,
-      period: 'month',
-      description: 'For large organizations with high content needs',
+      name: 'Enterprise'
+      price: 199;
+      period: 'month'
+      description: 'For large organizations with high content needs'
       features: [
-        'Unlimited words/month',
-        'All premium templates',
-        'Custom SEO strategies',
-        '24/7 phone support',
-        'Custom analytics dashboard',
-        'Unlimited user accounts',
-        'Full API access',
-        'Custom brand voice models',
-        'Dedicated account manager',
+        'Unlimited words/month'
+        'All premium templates'
+        'Custom SEO strategies'
+        '24/7 phone support'
+        'Custom analytics dashboard'
+        'Unlimited user accounts'
+        'Full API access'
+        'Custom brand voice models'
+        'Dedicated account manager'
         'White-label options'
-      ],
-      popular: false
+      ]
+      popular: false;
     }
   ];
 
@@ -106,18 +107,18 @@ export default function AIContentGeneratorPage() {
               <span className="text-2xl font-bold">AI Content Generator Pro</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Create High-Quality Content 10x Faster
+              Create High-Quality Content 10x Faster;
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
-              Advanced AI-powered content generation platform that creates engaging, SEO-optimized content for blogs, 
+              Advanced AI-powered content generation platform that creates engaging, SEO-optimized content for blogs;
               social media, and marketing materials. Transform your content strategy with cutting-edge AI technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105 hover:shadow-lg">
-                Start Free Trial
+                Start Free Trial;
               </a>
               <a href="#pricing" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105">
-                View Pricing
+                View Pricing;
               </a>
             </div>
 
@@ -242,11 +243,11 @@ export default function AIContentGeneratorPage() {
                   ))}
                 </ul>
                 <a href="/contact" className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular 
+                  plan.popular;
                     ? 'bg-blue-600 hover:bg-blue-700 text-white' 
                     : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
                 }`}>
-                  Get Started
+                  Get Started;
                 </a>
               </div>
             ))}
@@ -264,10 +265,10 @@ export default function AIContentGeneratorPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/contact" className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105">
-              Get Free Demo
+              Get Free Demo;
             </a>
             <a href="tel:+13024640950" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105">
-              Call: +1 302 464 0950
+              Call: +1 302 464 0950;
             </a>
           </div>
           <div className="mt-8 text-blue-200">

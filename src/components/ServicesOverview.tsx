@@ -3,10 +3,10 @@ import {  import { motion  } from 'framer-motion';
 
 export function ServicesOverview(...args[]):  {
 
-      icon: Heart,;
-      color: 'from-zion-pink to-zion-purple',;
-      description: 'Healthcare artificial intelligence solutions',;
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Healthcare'))};
+      icon: Heart;
+      color: 'from-zion-pink to-zion-purple'
+      description: 'Healthcare artificial intelligence solutions'
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Healthcare'))}
   ];
 
   return ()
@@ -22,15 +22,13 @@ export function ServicesOverview(...args[]):  {
           className="text-center mb-16"
           initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           transition={{ duration: 0.6 }}
 "
@@ -40,33 +38,30 @@ export function ServicesOverview(...args[]):  {
             <span className="text-white">Services Portfolio</span>
           </h1>"
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
-            Discover our complete range of innovative micro SAAS services, IT solutions, and AI platforms.From cutting - edge quantum computing to practical business applications, we provide the technology
+            Discover our complete range of innovative micro SAAS services, IT solutions, and AI platforms.From cutting - edge quantum computing to practical business applications, we provide the technology;
             solutions your business needs to thrive in the digital age.</p>
         </motion.div>
 
         {/* Service Categories Grid */}"
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
           {serviceCategories.map((category, index)  => (
-            <motion.div
+            <motion.div;
               key={category.id}"
               className="group"
               initial = {
 
-  { opacity: 0,
-  y: 30
-
+  { opacity: 0;
+  y: 30;
 }}
               whileInView = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
               transition = {
 
-  { duration: 0.6,
-  delay: index * 0.1
-
+  { duration: 0.6;
+  delay: index * 0.1;
 }}
               whileHover={{ y: -10 }}
 "
@@ -92,7 +87,7 @@ export function ServicesOverview(...args[]):  {
                       {category.services.length}
                     </div>"
                     <div className="text-xs text-zion-slate-light">
-                      Services Available
+                      Services Available;
                     </div>
                   </div>
 
@@ -109,15 +104,13 @@ export function ServicesOverview(...args[]):  {
           className="mb-16"
           initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           transition={{ duration: 0.6 }}
 "
@@ -127,26 +120,23 @@ export function ServicesOverview(...args[]):  {
 "
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {INNOVATIVE_MICRO_SAAS_SERVICES_2025.slice(0, 6).map((service, index) => (
-              <motion.div
+              <motion.div;
                 key={service.id}"
                 className="card-futuristic group"
                 initial = {
 
-  { opacity: 0,
-  x: index % 2 === 0 ? -30 : 30
-
+  { opacity: 0;
+  x: index % 2 === 0 ? -30 : 30;
 }}
                 whileInView = {
 
-  { opacity: 1,
-  x: 0
-
+  { opacity: 1;
+  x: 0;
 }}
                 transition = {
 
-  { duration: 0.6,
-  delay: index * 0.1
-
+  { duration: 0.6;
+  delay: index * 0.1;
 }}
                 whileHover={{ y: -5 }}
 "
@@ -213,10 +203,10 @@ export function ServicesOverview(...args[]):  {
           className="text-center"
           initial = {
 
-  { opacity: 0,
+  { opacity: 0;
   y: 30 }}          whileInView = {
 
-  { opacity: 1,
+  { opacity: 1;
   y: 0 }}          transition={{ duration: 0.8 }}
 "
           <div className="bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10 rounded-2xl p-12 border border-zion-cyan/20">"
@@ -224,7 +214,7 @@ export function ServicesOverview(...args[]):  {
               Ready to Transform Your Business?
             </h2>"
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Get in touch with our technology experts to discuss your specific needs and discover
+              Get in touch with our technology experts to discuss your specific needs and discover;
               how our innovative solutions can drive your business forward.</p>
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -232,14 +222,14 @@ export function ServicesOverview(...args[]):  {
                 to="/contact"
                 className="btn-futuristic px-8 py-4 text-lg"
 "
-                <MessageCircle className="w-5 h-5 mr-2"  />                Get Free Consultation
+                <MessageCircle className="w-5 h-5 mr-2"  />                Get Free Consultation;
               </Link>
 
               <a"
                 href="tel:+13024640950"
                 className="btn-neon px-8 py-4 text-lg"
 "
-                <Phone className="w-5 h-5 mr-2"  />                Call Now: +1 302 464 0950
+                <Phone className="w-5 h-5 mr-2"  />                Call Now: +1 302 464 0950;
               </a>
             </div>
 
@@ -255,14 +245,14 @@ export function ServicesOverview(...args[]):  {
               <div className="text-center p-4 rounded-xl bg-zion-slate-light/5 border border-zion-purple/20">"
                 <Mail className="w-8 h-8 text-zion-purple mx-auto mb-2"  />"
                 <p className="font-medium text-white mb-1">Email</p>"                <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:text-zion-purple transition-colors duration-300 text-sm">
-                  kleber@ziontechgroup.com
+                  kleber@ziontechgroup.com;
                 </a>
               </div>
 "
               <div className="text-center p-4 rounded-xl bg-zion-slate-light/5 border border-zion-blue/20">"
                 <Globe className="w-8 h-8 text-zion-blue mx-auto mb-2"  />"
                 <p className="font-medium text-white mb-1">Website</p>"                <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-zion-blue transition-colors duration-300 text-sm">
-                  ziontechgroup.com
+                  ziontechgroup.com;
                 </a>
               </div>
             </div>;

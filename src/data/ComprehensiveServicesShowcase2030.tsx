@@ -6,7 +6,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
 
   const getFilteredServices = () => {;
     let services: any[] = [];
-    switch(activeTab) {
+    switch() {
 
       case 'microsaas':
         services = innovativeMicroSaasServices2030;
@@ -18,7 +18,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
         services = comprehensiveAIServices2030;
         break}
 
-    if(searchTerm) {
+    if() {
 
       services = services.filter(service => ;
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -26,14 +26,15 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
         service.tags.some(tag: string tag.toLowerCase().includes(searchTerm.toLowerCase()));
       )}
 
-    if(selectedCategory !== 'all') {
-      services = services.filter(service => service.category === selectedCategory)};
+    if() {
+
+      services = services.filter(service => service.category === selectedCategory)}
 ;
-    return services};
+    return services}
 
   const getCategories = () => {;
     let services: any[] = [];
-    switch(activeTab) {
+    switch() {
 
       case 'microsaas':
         services = innovativeMicroSaasServices2030;
@@ -45,11 +46,11 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
         services = comprehensiveAIServices2030;
         break}
 
-    return categories};
+    return categories}
 
   const renderServiceCard = (service)  => {
 
-    if(activeTab === 'microsaas') {
+    if() {
 
       return ("
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">"
@@ -142,18 +143,18 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                     {service.contactInfo.email}
                   </a>
                 </div>
-                <a
+                <a;
                   href={service.contactInfo.website}"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
 
-                  Learn More
+                  Learn More;
                 </a>;              </div>;
             </div>;
           </div>;
         </div>;
-      )} else if(activeTab = == 'it') {
+      )} else if() {
 
       return ("
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">"
@@ -242,13 +243,13 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                     {service.contactInfo.email}
                   </a>
                 </div>
-                <a
+                <a;
                   href={service.contactInfo.website}"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300"
 
-                  Learn More
+                  Learn More;
                 </a>;
               </div>;
             </div>;
@@ -355,20 +356,20 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                     {service.contactInfo.email}
                   </a>
                 </div>
-                <a
+                <a;
                   href={service.contactInfo.website}"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
 
-                  Learn More
+                  Learn More;
                 </a>;
               </div>;
             </div>;
           </div>;
         </div>;
       )}
-  };
+  }
 
   return ()
     <>
@@ -385,7 +386,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
           <div className="container mx-auto px-4 py-20">"
             <div className="text-center max-w-4xl mx-auto">"
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Comprehensive Services Showcase 2030
+                Comprehensive Services Showcase 2030;
               </h1>"
               <p className="text-xl md:text-2xl text-gray-200 mb-8">
                 Discover Zion Tech Group's cutting-edge micro SAAS, IT infrastructure, and AI services.Real solutions with proven ROI, competitive pricing, and market-leading innovation.</p>"
@@ -448,7 +449,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
-              <select
+              <select;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}"
                 className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -499,7 +500,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
             {getFilteredServices().map(renderServiceCard)}
           </div>
 ;
-          {/* No Results */};
+          {/* No Results */}
           {getFilteredServices().length === 0 && (;"
             <div className="text-center py-12">;"
               <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>;
@@ -508,7 +509,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                   setSearchTerm('');
                   setSelectedCategory('all')}}"                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
-                Clear Filters
+                Clear Filters;
               </button>
             </div>
           )}
@@ -523,19 +524,19 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                 href="tel:+13024640950"
                 className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
 
-                Call Now: +1 302 464 0950
+                Call Now: +1 302 464 0950;
               </a>
               <a"
                 href="mailto:kleber@ziontechgroup.com"
                 className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
 
-                Email Us
+                Email Us;
               </a>
             </div>;
           </div>;
         </div>;
       </div>;
     </>
-  )};
+  )}
 
 export default ComprehensiveServicesShowcase2030}}}}}'"`

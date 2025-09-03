@@ -4,7 +4,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
       url: '/services/ai-code-review-security','
       icon: '🔒','
       category: 'Security & Development','
-      benefits['Reduce security incidents by 60%',Faster code review process',Compliance ready']},;
+      benefits['Reduce security incidents by 60%',Faster code review process',Compliance ready']}
     {}
 '
 ''
@@ -12,12 +12,12 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
       id: 'ai-customer-experience-analytics','''
       title: 'AI-Powered Customer Experience Analytics Platform','''
       description: 'Transform customer insights into actionable intelligence with AI-driven analytics that boost satisfaction by 35% and reduce churn by 25%.','''
-      features['Real-time sentiment analysis',Customer journey tracking',Predictive analytics',Omnichannel insights'],;'''
+      features['Real-time sentiment analysis',Customer journey tracking',Predictive analytics',Omnichannel insights'],'''
       pricing: '$299 - $1,999/month','''
       url: '/services/ai-customer-experience-analytics','''
       icon: '📊','''
       category: 'Analytics & Customer Success','''
-      benefits['Increase customer satisfaction by 35%',Reduce churn by 25%',Real-time insights']},;
+      benefits['Increase customer satisfaction by 35%',Reduce churn by 25%',Real-time insights']}
     {}
 '
 ''
@@ -25,12 +25,12 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
       id: 'ai-devops-automation-platform','''
       title: 'AI-Powered DevOps Automation Platform','''
       description: 'Revolutionize DevOps workflow with AI-powered automation that reduces deployment time by 80% and decreases failures by 90%.','''
-      features['AI pipeline optimization',Intelligent deployment',GitOps workflows',Multi-cloud orchestration'],;'''
+      features['AI pipeline optimization',Intelligent deployment',GitOps workflows',Multi-cloud orchestration'],'''
       pricing: '$199 - $1,499/month','''
       url: '/services/ai-devops-automation-platform','''
       icon: '🚀','''
       category: 'DevOps & Infrastructure','''
-      benefits['Reduce deployment time by 80%',Decrease failures by 90%',Faster time to market']},;
+      benefits['Reduce deployment time by 80%',Decrease failures by 90%',Faster time to market']}
     {}
 '
 ''
@@ -38,12 +38,12 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
       id: 'ai-iot-edge-computing-platform','''
       title: 'AI-Powered IoT Edge Computing Platform','''
       description: 'Revolutionize IoT with AI-powered edge computing that processes data at the edge with sub-millisecond latency and reduces bandwidth costs by 70%.','''
-      features['Sub-millisecond processing',Edge AI intelligence',Distributed computing',Hybrid cloud integration'],;'''
+      features['Sub-millisecond processing',Edge AI intelligence',Distributed computing',Hybrid cloud integration'],'''
       pricing: '$299 - $2,499/month','''
       url: '/services/ai-iot-edge-computing-platform','''
       icon: '🌐','''
       category: 'IoT & Edge Computing','''
-      benefits['Reduce latency by 90%',Lower bandwidth costs by 70%',Real-time decision making']};
+      benefits['Reduce latency by 90%',Lower bandwidth costs by 70%',Real-time decision making']}
   ];
 
   return()
@@ -59,11 +59,11 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
           <div className="max-w-7xl mx-auto text-center">
             <motion.div;
               initial = {}
-  { opacity: 0,
+  { opacity: 0;
   y: 20;
 }}
               animate = {}
-  { opacity: 1,
+  { opacity: 1;
   y: 0;
 }}
               transition={{ duration: 0.8 }}"""
@@ -98,11 +98,11 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial = {}
-  { opacity: 0,
+  { opacity: 0;
   y: 20;
 }}
               whileInView = {}
-  { opacity: 1,
+  { opacity: 1;
   y: 0;
 }}
               transition={{ duration: 0.8 }}"""
@@ -121,15 +121,15 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
                 <motion.div;
                   key={service.id}
                   initial = {}
-  { opacity: 0,
+  { opacity: 0;
   y: 20;
 }}
                   whileInView = {}
-  { opacity: 1,
+  { opacity: 1;
   y: 0;
 }}
                   transition = {}
-  { duration: 0.6,
+  { duration: 0.6;
   delay: index * 0.1;
 }}"""
                   viewport={{ once: true }}""""
@@ -201,11 +201,11 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial = {}
-  { opacity: 0,
+  { opacity: 0;
   y: 20;
 }}
               whileInView = {}
-  { opacity: 1,
+  { opacity: 1;
   y: 0;
 }}
               transition={{ duration: 0.8 }}"""
@@ -223,37 +223,37 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
             <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  title: "AI-First Approach",
-                  description: "All our services leverage the latest AI/ML technology for maximum effectiveness and automation.",
-                  icon: "🧠"                },
+                  title: "AI-First Approach"
+                  description: "All our services leverage the latest AI/ML technology for maximum effectiveness and automation."
+                  icon: "🧠"                }
                 {}
 """
 """"
                   title: "Proven Results",""""
                   description: "Measurable outcomes with quantifiable business impact across all our solutions.",""""
                   icon: "📈"""
-                },
+                }
                 {}
 """
 """"
                   title: "Industry Expertise",""""
                   description: "Deep understanding of various industries with specialized solutions for specific sectors.",""""
                   icon: "🏢"""
-                },
+                }
                 {}
 """
 """"
                   title: "Scalable Architecture",""""
                   description: "Solutions that grow with your business, from startup to enterprise scale.",""""
                   icon: "⚡"""
-                },
+                }
                 {}
 """
 """"
                   title: "Compliance Ready",""""
                   description: "Built-in security and compliance features for regulated industries.",""""
                   icon: "🔒"""
-                },
+                }
                 {}
 """
 """"
@@ -264,15 +264,15 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
               ].map ( (feature, index) => (<motion.div;
                   key={index}
                   initial = {}
-  { opacity: 0,
+  { opacity: 0;
   y: 20;
 }}
                   whileInView = {}
-  { opacity: 1,
+  { opacity: 1;
   y: 0;
 }}
                   transition = {}
-  { duration: 0.6,
+  { duration: 0.6;
   delay: index * 0.1;
 }}"""
                   viewport={{ once: true }}""""
@@ -292,11 +292,11 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
           <div className="max-w-4xl mx-auto text-center">
             <motion.div;
               initial = {}
-  { opacity: 0,
+  { opacity: 0;
   y: 20;
 }}
               whileInView = {}
-  { opacity: 1,
+  { opacity: 1;
   y: 0;
 }}
               transition={{ duration: 0.8 }}
@@ -343,16 +343,16 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {}
         </section>
       </div>;
     </>
-  )};
+  )}
 
 export default AIServicesShowcase;
 
-export { AIServicesShowcase };
+export { AIServicesShowcase }
 
-export { AIServicesShowcase };
+export { AIServicesShowcase }
 
-export { AIServicesShowcase };
+export { AIServicesShowcase }
 
-export { AIServicesShowcase };
+export { AIServicesShowcase }
 
-export { AIServicesShowcase };
+export { AIServicesShowcase }

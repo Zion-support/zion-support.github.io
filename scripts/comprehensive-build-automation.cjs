@@ -1,331 +1,360 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 const fs = require("$1");
 const path = require("$1");
 const { execSync, spawn } = require("child_process")
 class ComprehensiveBuildAutomation {
   constructor() {
+
     this.projectRoot = process.cwd()
     this.logDir = path.join(this.projectRoot, "logs")
     this.reportsDir = path.join(this.projectRoot, "reports")
     this.buildResults = {
-      timestamp: new Date().toISOString(),
-      steps: [],
-      errors: [],
-      warnings: [],
-      metrics: {},
-      overallStatus: "pending",
+      timestamp: new Date().toISOString()
+      steps: []
+      errors: []
+      warnings: []
+      metrics: {}
+      overallStatus: "pending"
 }
-    // Ensure directories exist
+    // Ensure directories exist;
     [this.logDir, this.reportsDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true }),
+        fs.mkdirSync(dir, { recursive: true })
 }
-    }),
+    })
 }
 
-  log(message, level = "INFO") {
+  log() {
+
     const timestamp = new Date().toISOString()
     const logMessage = `[${timestamp}] [${level}] ${message}`
     console.log(logMessage)
-    // Write to log file
+    // Write to log file;
     const logFile = path.join(this.logDir, "build-automation.log")
-    fs.appendFileSync(logFile, logMessage + "\n"),
+    fs.appendFileSync(logFile, logMessage + "\n")
 }
 
-  async runStep(name, command, options = {}) {
+  async runStep() {
+
     this.log(`Starting step: ${name}`)
     const startTime = Date.now()
     try {
       const result = execSync(command, {
-        cwd: this.projectRoot,
-        encoding: "utf8",
-        stdio: options.silent ? "pipe" : "inherit",
-        ...options,
+        cwd: this.projectRoot;
+        encoding: "utf8"
+        stdio: options.silent ? "pipe" : "inherit"
+        ...options;
 })
-      const duration = Date.now() - startTime
+      const duration = Date.now() - startTime;
       this.buildResults.steps.push({
-        name,
-        status: "success",
-        duration,
-        command,
-        output: options.silent ? result : "See console output",
+        name;
+        status: "success"
+        duration;
+        command;
+        output: options.silent ? result : "See console output"
 })
       this.log(`Completed step: ${name} (${duration}ms)`)
-      return result,
-} catch (error) {
-      const duration = Date.now() - startTime
+      return result;
+} catch() {
+
+      const duration = Date.now() - startTime;
       const errorMessage = error.message || error.toString()
       this.buildResults.steps.push({
-        name,
-        status: "failed",
-        duration,
-        command,
-        error: errorMessage,
+        name;
+        status: "failed"
+        duration;
+        command;
+        error: errorMessage;
 })
       this.buildResults.errors.push({
-        step: name,
-        error: errorMessage,
-        timestamp: new Date().toISOString(),
+        step: name;
+        error: errorMessage;
+        timestamp: new Date().toISOString()
 })
       this.log(`Failed step: ${name} - ${errorMessage}`, "ERROR")
-      if (!options.continueOnError) {
-        throw error,
+      if() {
+
+        throw error;
 }
       
-      return null,
+      return null;
 }
   }
 
   async checkDependencies() {
+
     this.log("Checking dependencies...")
     try {
-      // Check Node.js version
+      // Check Node.js version;
       const nodeVersion = await this.runStep(
-        "Check Node.js version",
-        "node --version",
+        "Check Node.js version"
+        "node --version"
         { silent: true }
       )
       this.buildResults.metrics.nodeVersion = nodeVersion.trim()
-      // Check npm version
+      // Check npm version;
       const npmVersion = await this.runStep(
-        "Check npm version",
-        "npm --version",
+        "Check npm version"
+        "npm --version"
         { silent: true }
       )
       this.buildResults.metrics.npmVersion = npmVersion.trim()
-      // Check yarn version
+      // Check yarn version;
       try {
         const yarnVersion = await this.runStep(
-          "Check yarn version",
-          "yarn --version",
+          "Check yarn version"
+          "yarn --version"
           { silent: true, continueOnError: true }
         )
-        this.buildResults.metrics.yarnVersion = yarnVersion ? yarnVersion.trim() : "Not installed",
-} catch (error) {
-        this.buildResults.metrics.yarnVersion = "Not installed",
+        this.buildResults.metrics.yarnVersion = yarnVersion ? yarnVersion.trim() : "Not installed"
+} catch() {
+
+        this.buildResults.metrics.yarnVersion = "Not installed"
 }
       
-      return true,
-} catch (error) {
+      return true;
+} catch() {
+
       this.log(`Dependency check failed: ${error.message}`, "ERROR")
-      return false,
+      return false;
 }
   }
 
   async installDependencies() {
+
     this.log("Installing dependencies...")
     try {
-      // First try yarn if available
+      // First try yarn if available;
       if (fs.existsSync(path.join(this.projectRoot, "yarn.lock"))) {
-        await this.runStep("Install dependencies with yarn", "yarn install --frozen-lockfile"),
+        await this.runStep("Install dependencies with yarn", "yarn install --frozen-lockfile")
 } else {
-        await this.runStep("Install dependencies with npm", "npm ci"),
+        await this.runStep("Install dependencies with npm", "npm ci")
 }
       
-      return true,
-} catch (error) {
+      return true;
+} catch() {
+
       this.log(`Dependency installation failed: ${error.message}`, "ERROR")
-      return false,
+      return false;
 }
   }
 
   async runLinting() {
+
     this.log("Running linting...")
     try {
       await this.runStep(
-        "ESLint check",
-        "npm run lint",
+        "ESLint check"
+        "npm run lint"
         { continueOnError: true }
       )
-      return true,
-} catch (error) {
+      return true;
+} catch() {
+
       this.buildResults.warnings.push({
-        type: "linting",
-        message: "Linting issues found",
-        details: error.message,
+        type: "linting"
+        message: "Linting issues found"
+        details: error.message;
 })
-      return false,
+      return false;
 }
   }
 
   async runTypeChecking() {
+
     this.log("Running type checking...")
     try {
       await this.runStep(
-        "TypeScript type check",
-        "npx tsc --noEmit",
+        "TypeScript type check"
+        "npx tsc --noEmit"
         { continueOnError: true }
       )
-      return true,
-} catch (error) {
+      return true;
+} catch() {
+
       this.buildResults.warnings.push({
-        type: "typescript",
-        message: "Type checking issues found",
-        details: error.message,
+        type: "typescript"
+        message: "Type checking issues found"
+        details: error.message;
 })
-      return false,
+      return false;
 }
   }
 
   async runTests() {
+
     this.log("Running tests...")
     try {
       const testResult = await this.runStep(
-        "Run tests",
-        "npm test -- --watchAll=false --coverage",
+        "Run tests"
+        "npm test -- --watchAll=false --coverage"
         { continueOnError: true }
       )
-      // Try to parse test results if available
+      // Try to parse test results if available;
       const coverageFile = path.join(this.projectRoot, "coverage", "coverage-summary.json")
       if (fs.existsSync(coverageFile)) {
         const coverage = JSON.parse(fs.readFileSync(coverageFile, "utf8"))
-        this.buildResults.metrics.testCoverage = coverage.total,
+        this.buildResults.metrics.testCoverage = coverage.total;
 }
       
-      return true,
-} catch (error) {
+      return true;
+} catch() {
+
       this.buildResults.warnings.push({
-        type: "testing",
-        message: "Test failures or issues found",
-        details: error.message,
+        type: "testing"
+        message: "Test failures or issues found"
+        details: error.message;
 })
-      return false,
+      return false;
 }
   }
 
   async runBuild() {
+
     this.log("Running build...")
     try {
       const buildStart = Date.now()
       await this.runStep("Build application", "npm run build")
-      const buildDuration = Date.now() - buildStart
-      this.buildResults.metrics.buildDuration = buildDuration
-      // Check build output size
+      const buildDuration = Date.now() - buildStart;
+      this.buildResults.metrics.buildDuration = buildDuration;
+      // Check build output size;
       const buildDir = path.join(this.projectRoot, ".next")
       if (fs.existsSync(buildDir)) {
         const buildSize = this.calculateDirectorySize(buildDir)
-        this.buildResults.metrics.buildSize = buildSize,
+        this.buildResults.metrics.buildSize = buildSize;
 }
       
-      return true,
-} catch (error) {
+      return true;
+} catch() {
+
       this.log(`Build failed: ${error.message}`, "ERROR")
-      return false,
+      return false;
 }
   }
 
-  calculateDirectorySize(dirPath) {
-    let totalSize = 0
+  calculateDirectorySize() {
+
+    let totalSize = 0;
     const calculateSize = (currentPath) => {
       const stats = fs.statSync(currentPath)
       if (stats.isFile()) {
-        totalSize += stats.size,
+        totalSize += stats.size;
 } else if (stats.isDirectory()) {
         const files = fs.readdirSync(currentPath)
         files.forEach(file => {
-          calculateSize(path.join(currentPath, file)),
-}),
+          calculateSize(path.join(currentPath, file))
+})
 }
     }
     try {
       calculateSize(dirPath)
-      return Math.round(totalSize / 1024 / 1024 * 100) / 100; // MB,
-} catch (error) {
-      return 0,
+      return Math.round(totalSize / 1024 / 1024 * 100) / 100; // MB;
+} catch() {
+
+      return 0;
 }
   }
 
   async runSecurityAudit() {
+
     this.log("Running security audit...")
     try {
       await this.runStep(
-        "Security audit",
-        "npm audit --audit-level=moderate",
+        "Security audit"
+        "npm audit --audit-level=moderate"
         { continueOnError: true }
       )
-      return true,
-} catch (error) {
+      return true;
+} catch() {
+
       this.buildResults.warnings.push({
-        type: "security",
-        message: "Security vulnerabilities found",
-        details: error.message,
+        type: "security"
+        message: "Security vulnerabilities found"
+        details: error.message;
 })
-      return false,
+      return false;
 }
   }
 
   async generateReport() {
+
     this.log("Generating build report...")
-    // Calculate overall status
-    const hasErrors = this.buildResults.errors.length > 0
-    const hasWarnings = this.buildResults.warnings.length > 0
-    if (hasErrors) {
-      this.buildResults.overallStatus = "failed",
-} else if (hasWarnings) {
-      this.buildResults.overallStatus = "warning",
+    // Calculate overall status;
+    const hasErrors = this.buildResults.errors.length > 0;
+    const hasWarnings = this.buildResults.warnings.length > 0;
+    if() {
+
+      this.buildResults.overallStatus = "failed"
+} else if() {
+
+      this.buildResults.overallStatus = "warning"
 } else {
-      this.buildResults.overallStatus = "success",
+      this.buildResults.overallStatus = "success"
 }
     
-    // Add summary metrics
+    // Add summary metrics;
     this.buildResults.summary = {
-      totalSteps: this.buildResults.steps.length,
-      successfulSteps: this.buildResults.steps.filter(s => s.status === "success").length,
-      failedSteps: this.buildResults.steps.filter(s => s.status === "failed").length,
-      totalDuration: this.buildResults.steps.reduce((sum, step) => sum + step.duration, 0),
-      errorCount: this.buildResults.errors.length,
-      warningCount: this.buildResults.warnings.length,
+      totalSteps: this.buildResults.steps.length;
+      successfulSteps: this.buildResults.steps.filter(s => s.status === "success").length;
+      failedSteps: this.buildResults.steps.filter(s => s.status === "failed").length;
+      totalDuration: this.buildResults.steps.reduce((sum, step) => sum + step.duration, 0)
+      errorCount: this.buildResults.errors.length;
+      warningCount: this.buildResults.warnings.length;
 }
-    // Save report
+    // Save report;
     const reportFile = path.join(this.reportsDir, `build-report-${Date.now()}.json`)
     fs.writeFileSync(reportFile, JSON.stringify(this.buildResults, null, 2))
-    // Save latest report
+    // Save latest report;
     const latestReportFile = path.join(this.reportsDir, "latest-build-report.json")
     fs.writeFileSync(latestReportFile, JSON.stringify(this.buildResults, null, 2))
     this.log(`Build report saved to: ${reportFile}`)
-    return reportFile,
+    return reportFile;
 }
 
   async run() {
+
     this.log("🚀 Starting Comprehensive Build Automation...")
     try {
-      // Step 1: Check dependencies
+      // Step 1: Check dependencies;
       const depsOk = await this.checkDependencies()
-      if (!depsOk) {
-        throw new Error("Dependency check failed"),
+      if() {
+
+        throw new Error("Dependency check failed")
 }
       
-      // Step 2: Install dependencies
+      // Step 2: Install dependencies;
       const installOk = await this.installDependencies()
-      if (!installOk) {
-        throw new Error("Dependency installation failed"),
+      if() {
+
+        throw new Error("Dependency installation failed")
 }
       
-      // Step 3: Run automated fixes
+      // Step 3: Run automated fixes;
       this.log("Running automated fixes...")
       try {
         await this.runStep(
-          "Auto-fix issues",
-          "node scripts/auto-fixer.cjs",
+          "Auto-fix issues"
+          "node scripts/auto-fixer.cjs"
           { continueOnError: true }
-        ),
-} catch (error) {
-        this.log("Auto-fix had issues, continuing...", "WARN"),
+        )
+} catch() {
+
+        this.log("Auto-fix had issues, continuing...", "WARN")
 }
       
-      // Step 4: Run linting
+      // Step 4: Run linting;
       await this.runLinting()
-      // Step 5: Run type checking
+      // Step 5: Run type checking;
       await this.runTypeChecking()
-      // Step 6: Run tests
+      // Step 6: Run tests;
       await this.runTests()
-      // Step 7: Run security audit
+      // Step 7: Run security audit;
       await this.runSecurityAudit()
-      // Step 8: Build application
+      // Step 8: Build application;
       const buildOk = await this.runBuild()
-      // Step 9: Generate report
+      // Step 9: Generate report;
       const reportFile = await this.generateReport()
-      // Final summary
+      // Final summary;
       this.log("=== Build Automation Summary ===")
       this.log(`Overall Status: ${this.buildResults.overallStatus.toUpperCase()}`)
       this.log(`Total Steps: ${this.buildResults.summary.totalSteps}`)
@@ -335,29 +364,30 @@ class ComprehensiveBuildAutomation {
       this.log(`Warnings: ${this.buildResults.summary.warningCount}`)
       this.log(`Total Duration: ${Math.round(this.buildResults.summary.totalDuration / 1000)}s`)
       this.log(`Report: ${reportFile}`)
-      return this.buildResults
-      ,
-} catch (error) {
+      return this.buildResults;
+} catch() {
+
       this.log(`Build automation failed: ${error.message}`, "ERROR")
       this.buildResults.overallStatus = "failed"
       await this.generateReport()
-      throw error,
+      throw error;
 }
   }
 }
 
-// Run if this script is executed directly
-if (require.main === module) {
+// Run if this script is executed directly;
+if() {
+
   const automation = new ComprehensiveBuildAutomation()
   automation.run()
     .then(results => {
       console.log("\n✅ Build automation completed")
-      process.exit(results.overallStatus === "success" ? 0 : 1),
+      process.exit(results.overallStatus === "success" ? 0 : 1)
 })
     .catch(error => {
       console.error("\n❌ Build automation failed:", error.message)
-      process.exit(1),
-}),
+      process.exit(1)
+})
 }
 
-module.exports = ComprehensiveBuildAutomation
+module.exports = ComprehensiveBuildAutomation;

@@ -1,76 +1,76 @@
 import {}
-  Zap, 
-  Brain, 
-  Shield, 
-  Users, 
-  HardDrive, 
-  TrendingUp, 
-  Building2, 
-  FileText, 
-  HelpCircle, 
-  BarChart3,
-  Globe,
-  Cpu,
-  Database,
-  Lock,
-  Cloud,
-  Rocket,
-  Code,
-  Server,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Bot,
-  Workflow,
-  Eye,
-  Sparkles,
-  Atom,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  Activity,
-  MessageCircle,
-  Search,
-  BarChart,
-  Users2,
-  Settings,
-  Palette,
-  Target,
-  Handshake,
-  Lightbulb,
-  Network,
-  Smartphone,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Play,
-  ChevronLeft,
-  ChevronRight,
-  Phone,
-  Mail,
-  MapPin,
-  Clock,
-  DollarSign,
-  Award,
-  Heart,
-  Briefcase,
-  Newspaper,
-  Video,
-  TestTube,
-  Truck,
-  BookOpen,
-  ShoppingCart,
-  Link as LinkIcon,
-  Heart as HeartIcon,
-  Atom as AtomIcon,
-  Rocket as RocketIcon,
-  Leaf as LeafIcon,
-  Shield as ShieldIcon,
-  Zap as ZapIcon,
-  Cpu as CpuIcon,
-  Database as DatabaseIcon,
-  Users as UsersIcon,
+  Zap;
+  Brain;
+  Shield;
+  Users;
+  HardDrive;
+  TrendingUp;
+  Building2;
+  FileText;
+  HelpCircle;
+  BarChart3;
+  Globe;
+  Cpu;
+  Database;
+  Lock;
+  Cloud;
+  Rocket;
+  Code;
+  Server;
+  Chip;
+  Wifi;
+  ShieldCheck;
+  Bot;
+  Workflow;
+  Eye;
+  Sparkles;
+  Atom;
+  Leaf;
+  Gamepad2;
+  Coins;
+  Satellite;
+  Activity;
+  MessageCircle;
+  Search;
+  BarChart;
+  Users2;
+  Settings;
+  Palette;
+  Target;
+  Handshake;
+  Lightbulb;
+  Network;
+  Smartphone;
+  Star;
+  CheckCircle;
+  ArrowRight;
+  Play;
+  ChevronLeft;
+  ChevronRight;
+  Phone;
+  Mail;
+  MapPin;
+  Clock;
+  DollarSign;
+  Award;
+  Heart;
+  Briefcase;
+  Newspaper;
+  Video;
+  TestTube;
+  Truck;
+  BookOpen;
+  ShoppingCart;
+  Link as LinkIcon;
+  Heart as HeartIcon;
+  Atom as AtomIcon;
+  Rocket as RocketIcon;
+  Leaf as LeafIcon;
+  Shield as ShieldIcon;
+  Zap as ZapIcon;
+  Cpu as CpuIcon;
+  Database as DatabaseIcon;
+  Users as UsersIcon;
   X''''
 } from 'lucide-react';
 interface Service {}
@@ -83,12 +83,11 @@ interface Service {}
   pricing: {}
     starter: string;
     professional: string;
-    enterprise: string};
+    enterprise: string}
   benefits: string[];'
   useCases: string[];''
   link: string;'''
-  status: 'available' | 'coming-soon' | 'beta'}
-;const services: Service[] = []
+  status: 'available' | 'coming-soon' | 'beta'}const services: Service[] = []
   // AI Services;
   {}
 '
@@ -101,7 +100,7 @@ interface Service {}
     icon: Brain,'''
     features: [''''
       'Autonomous research execution',Multi-source data analysis',Intelligent insight generation',Real-time collaboration tools',Custom research workflows',Advanced analytics dashboard'
-    ],
+    ]
     pricing: {}
 '
 ''
@@ -118,7 +117,7 @@ interface Service {}
     ],'''
     link: '/services/ai-autonomous-research-assistant','''
     status: 'available'
-  },
+  }
   {}
 '
 ''
@@ -130,7 +129,7 @@ interface Service {}
     icon: Shield,'''
     features: [''''
       'AI-powered threat detection',Automated incident response',Predictive security analytics',Zero-day vulnerability detection',Behavioral analysis',Security orchestration'
-    ],
+    ]
     pricing: {}
 '
 ''
@@ -147,7 +146,7 @@ interface Service {}
     ],'''
     link: '/services/ai-cybersecurity-platform','''
     status: 'available'
-  },
+  }
   {}
 '
 ''
@@ -159,7 +158,7 @@ interface Service {}
     icon: Heart,'''
     features: [''''
       'AI diagnostic assistance',Patient monitoring systems',Predictive health analytics',Medical image analysis',Drug interaction checking',Healthcare workflow automation'
-    ],
+    ]
     pricing: {}
 '
 ''
@@ -176,7 +175,7 @@ interface Service {}
     ],'''
     link: '/services/ai-healthcare-platform','''
     status: 'available'
-  },
+  }
   {}
 '
 ''
@@ -188,7 +187,7 @@ interface Service {}
     icon: Workflow,'''
     features: [''''
       'Demand forecasting',Inventory optimization',Route optimization',Risk assessment',Supplier management',Real-time monitoring'
-    ],
+    ]
     pricing: {}
 '
 ''
@@ -205,7 +204,7 @@ interface Service {}
     ],'''
     link: '/services/ai-supply-chain-optimization','''
     status: 'available'
-  },
+  }
   {}
 '
 ''
@@ -217,7 +216,7 @@ interface Service {}
     icon: Atom,'''
     features: [''''
       'Quantum-AI hybrid algorithms',Complex optimization solving',Advanced simulations',Quantum machine learning',Hybrid computing workflows',Performance benchmarking'
-    ],
+    ]
     pricing: {}
 '
 ''
@@ -234,7 +233,7 @@ interface Service {}
     ],'''
     link: '/services/ai-quantum-hybrid-platform','''
     status: 'beta'
-  },
+  }
   // IT Services;
   {}
 '
@@ -247,7 +246,7 @@ interface Service {}
     icon: Cloud,'''
     features: [''''
       'Automated CI/CD pipelines',Infrastructure as Code',Multi-cloud management',Monitoring and alerting',Security automation',Cost optimization'
-    ],
+    ]
     pricing: {}
 '
 ''
@@ -264,7 +263,7 @@ interface Service {}
     ],'''
     link: '/services/cloud-devops-automation','''
     status: 'available'
-  },
+  }
   {}
 '
 ''
@@ -276,7 +275,7 @@ interface Service {}
     icon: Server,'''
     features: [''''
       'Infrastructure monitoring',Automated provisioning',Performance optimization',Security management',Backup and recovery',Capacity planning'
-    ],
+    ]
     pricing: {}
 '
 ''
@@ -293,7 +292,7 @@ interface Service {}
     ],'''
     link: '/services/it-infrastructure','''
     status: 'available'
-  },
+  }
   // Micro SAAS Services;
   {}
 '
@@ -306,7 +305,7 @@ interface Service {}
     icon: Users,'''
     features: [''''
       'Contact management',Lead tracking',Sales pipeline',Email integration',Reporting and analytics',Mobile app access'
-    ],
+    ]
     pricing: {}
 '
 ''
@@ -323,7 +322,7 @@ interface Service {}
     ],'''
     link: '/services/micro-crm','''
     status: 'available'
-  },
+  }
   {}
 '
 ''
@@ -335,7 +334,7 @@ interface Service {}
     icon: BarChart3,'''
     features: [''''
       'AI-powered analytics',Predictive modeling',Interactive dashboards',Data visualization',Automated reporting',Real-time insights'
-    ],
+    ]
     pricing: {}
 '
 ''
@@ -356,11 +355,11 @@ interface Service {}
 ];
 
 const categories = [
-  { id: 'all', name: 'All Services', icon: Globe, count: services.length },
-  { id: 'ai', name: 'AI Services', icon: Brain, count: services.filter(s => s.category.includes('AI')).length },
-  { id: 'it', name: 'IT Services', icon: Cpu, count: services.filter(s => s.category.includes('IT')).length },
-  { id: 'micro-saas', name: 'Micro SAAS', icon: Zap, count: services.filter(s => s.category.includes('Micro SAAS')).length },
-  { id: 'security', name: 'Security', icon: Shield, count: services.filter(s => s.category.includes('Security')).length },
+  { id: 'all', name: 'All Services', icon: Globe, count: services.length }
+  { id: 'ai', name: 'AI Services', icon: Brain, count: services.filter(s => s.category.includes('AI')).length }
+  { id: 'it', name: 'IT Services', icon: Cpu, count: services.filter(s => s.category.includes('IT')).length }
+  { id: 'micro-saas', name: 'Micro SAAS', icon: Zap, count: services.filter(s => s.category.includes('Micro SAAS')).length }
+  { id: 'security', name: 'Security', icon: Shield, count: services.filter(s => s.category.includes('Security')).length }
   { id: 'healthcare', name: 'Healthcare', icon: Heart, count: services.filter(s => s.category.includes('Healthcare')).length }
 ];
 
@@ -379,15 +378,15 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
 
   const handleServiceClick = (service: Service) => {
     setSelectedService(service);
-  };
+  }
 
   const closeModal = () => {
     setSelectedService(null);
-  };
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="Comprehensive Services Showcase 2025 | Zion Tech Group"
         description="Explore our comprehensive portfolio of AI, IT, and Micro SAAS services. Discover innovative solutions designed to transform your business in 2025 and beyond."
         keywords="AI services, IT services, Micro SAAS, cybersecurity, healthcare AI, quantum computing, cloud DevOps, business intelligence"
@@ -797,12 +796,12 @@ export default function ComprehensiveServicesShowcase2025(...args: unknown[]): u
 }
 
 
-export { ComprehensiveServicesShowcase2025 };
+export { ComprehensiveServicesShowcase2025 }
 
-export { ComprehensiveServicesShowcase2025 };
+export { ComprehensiveServicesShowcase2025 }
 
-export { ComprehensiveServicesShowcase2025 };
+export { ComprehensiveServicesShowcase2025 }
 
-export { ComprehensiveServicesShowcase2025 };
+export { ComprehensiveServicesShowcase2025 }
 
-export { ComprehensiveServicesShowcase2025 };
+export { ComprehensiveServicesShowcase2025 }

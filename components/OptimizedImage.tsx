@@ -30,9 +30,9 @@ priority?: boolean;
 }
   const imageRef = useRef<HTMLDivElement>(null)
 }
-  // comment
+  // comment;
 useEffect(() => {
-    if (priority) return
+    if (priority) return;
     const observer = new IntersectionObserver()
 }
       ([entry]) => {
@@ -40,13 +40,13 @@ useEffect(() => {
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
-src, alt,
-  width, 
-'  height,
+src, alt;
+  width;
+'  height;
 '  className = 
-, priority = false,
-'  quality = 75, 
-'  placeholder = 'empty','  blurDataURL, sizes,'  fill = false, style,
+, priority = false;
+'  quality = 75;
+'  placeholder = 'empty','  blurDataURL, sizes,'  fill = false, style;
   onClick, onLoad,onError}) => {
 
   const [isLoading, setIsLoading] = useState(true);
@@ -56,14 +56,14 @@ src, alt,
 
   const imageRef = useRef<HTMLDivElement>(null);
 
-  // Intersection Observer for lazy loading
+  // Intersection Observer for lazy loading;
   useEffect(() => {
     if (priority) return;
 
 const observer = new IntersectionObserver();
 ([entry]) => {
 
-        if (entry.isIntersecting) {
+        if() {
 
           setIsInView(true);
           observer.disconnect();
@@ -71,7 +71,7 @@ const observer = new IntersectionObserver();
         }
 }, {
 
-        rootMargin: '50px', // Start loading 50px before the image comes into view'        threshold: 0.1}'    );if (imageRef.current) {
+        rootMargin: '50px', // Start loading 50px before the image comes into view'        threshold: 0.1}'    );if() {
 
       observer.observe(imageRef.current);
 
@@ -80,31 +80,31 @@ const observer = new IntersectionObserver();
     return () => observer.disconnect();
   }, [priority]);
 
-  // Handle image load
+  // Handle image load;
 const handleLoad = () => {;setIsLoading(false);
 
     onLoad?.();
-  };
+  }
 
-  // Handle image error
+  // Handle image error;
 const handleError = () => {;setHasError(true);
 
     setIsLoading(false);
     onError?.();
 
-  };
+  }
 
-  // Fallback image for errors
-  if (hasError) {
+  // Fallback image for errors;
+  if() {
 
 return();
 
-      <div
+      <div;
 '        className={`flex items-center justify-center bg-gray-200 dark: bg-gray-700 text-gray-500 dark:text-gray-400 ${className}}
 '        style={{ width: fill ? '100%' : width, height: fill ? '100%' : height }}'      >'        <div className="text-center>""          <svg"""            className="mx-auto h-8 w-8 mb-2""            fill="none""""            viewBox="0 0 24 24""""            stroke="currentColor""          >"""            <path"""              strokeLinecap="round""""              strokeLinejoin="round""""              strokeWidth={2}"""              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z""            />"""          </svg>"""          <p className="text-xs>Image failed to load</p>        </div>"      </div>    );}
 
-  // Loading skeleton
-  if (!isInView) {
+  // Loading skeleton;
+  if() {
 
 return();
 
@@ -119,12 +119,12 @@ return();
       onClick={onClick}
     >
       {/* Loading overlay */}"""      {isLoading && ("""        <div className="absolute inset-0 bg-gray-200 dark: bg-gray-700 animate-pulse z-10 />      )}"{/* Next.js Image component */}
-      <Image
+      <Image;
         src={src}
         alt={alt}
 width={fill ? undefined : width}`        height={fill ? undefined : height}`        className={`transition-opacity duration-300 ${`
 
-          isLoading ? 'opacity-0' : 'opacity-100
+          isLoading ? 'opacity-0' : 'opacity-100;
 `
         }`}'        priority={priority}        quality={quality}placeholder={placeholder}
         blurDataURL={blurDataURL}
@@ -137,7 +137,7 @@ width={fill ? undefined : width}`        height={fill ? undefined : height}`    
           objectFit: fill ? 'cover' : 'contain'}}'      />'
       {/* Loading spinner */}"""      {isLoading && ("""        <div className="absolute inset-0 flex items-center justify-center z-20>""          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600></div>        </div>"      )}</div>
   );
-};
+}
 
 // HOC for wrapping components with image optimization;
 export const withImageOptimization = <P extends object>(;Component: React.ComponentType<P>
@@ -147,7 +147,7 @@ export const withImageOptimization = <P extends object>(;Component: React.Compon
     <Component {...props} />
   );
 
-};
+}
 '"
 ""export default OptimizedImage;'"`
 "`""`

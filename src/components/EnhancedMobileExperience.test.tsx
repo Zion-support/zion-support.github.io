@@ -1,7 +1,7 @@
   it(displays expected content", () => {
     render(<EnhancedMobileExperience  />)"
-import { render, screen } from &apos;@testing - library/react",
-import EnhancedMobileExperience from &apos;./EnhancedMobileExperience
+import { render, screen } from &apos;@testing - library/react"
+import EnhancedMobileExperience from &apos;./EnhancedMobileExperience;
 describe(&apos;EnhancedMobileExperience&apos, () => {
   it(&apos;renders without crashing&apos, () => {
     render()
@@ -11,7 +11,7 @@ describe(&apos;EnhancedMobileExperience&apos, () => {
   it(&apos;displays expected content&apos, () => {
     render()
 }
-    // comment
+    // comment;
     render(<EnhancedMobileExperience / >)"
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"

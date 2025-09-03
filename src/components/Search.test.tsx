@@ -1,7 +1,7 @@
     expect(screen.getByRole(main") || screen.getByText(/.*/)).toBeInTheDocument()
 }
-import { render, screen } from &apos;@testing - library/react",
-import Search from &apos;./Search
+import { render, screen } from &apos;@testing - library/react"
+import Search from &apos;./Search;
 describe(&apos;Search&apos, () => {
   it(&apos;renders without crashing&apos, () => {
     render()
@@ -11,7 +11,7 @@ describe(&apos;Search&apos, () => {
   it(&apos;displays expected content&apos, () => {
     render()
 }
-    // comment
+    // comment;
     render(<Search / >)"
     expect(screen.getByRole("main') || screen.getByText(/.*/)).toBeInTheDocument();""
 })"

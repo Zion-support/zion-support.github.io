@@ -17,13 +17,13 @@ const Blueprint20250818123450: React.FC = () => {
             <div className="flex items-center justify-between">
               <div>
                 <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Strategic Blueprint
+                  Strategic Blueprint;
                 </h1>
                 <p className="text-xl text-gray-300 mt-4">
-                  Zion AI Marketplace Development Roadmap
+                  Zion AI Marketplace Development Roadmap;
                 </p>
                 <p className="text-sm text-gray-400 mt-2">
-                  Generated: 2025 08 18 123450
+                  Generated: 2025 08 18 123450;
                 </p>
               </div>
               
@@ -44,7 +44,7 @@ const Blueprint20250818123450: React.FC = () => {
               This is an automatically generated blueprint page for blueprint-2025-08-18-123450.
             </p>
             <p className="text-gray-400">
-              Generated on 2025 08 18 123450
+              Generated on 2025 08 18 123450;
             </p>
           </div>
         </main>
@@ -65,6 +65,6 @@ const Blueprint20250818123450: React.FC = () => {
       </div>
     </>
   );
-};
+}
 
 export default Blueprint20250818123450;

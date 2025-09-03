@@ -12,13 +12,13 @@ import React from "react"
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">"
 					<div className="mx-auto max-w-2xl lg:text-center mb-16">"
 						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-							Advanced NLP Capabilities,
+							Advanced NLP Capabilities;
 						</h2>"
 						<p className="mt-6 text-lg leading-8 text-gray-600">
 							Cutting-edge language processing technology for understanding and generating human language.
 						</p>
 					</div>"
-					<div className="grid gap-8 lg:grid-cols-3">,
+					<div className="grid gap-8 lg:grid-cols-3">
 						{/* comment */}"
 						<div className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300">"
 							<div className="flex items-center gap-x-3 mb-6">"
@@ -53,7 +53,7 @@ import React from "react"
 								</li>
 							</ul>
 						</div>
-,
+
 						{/* comment */}"
 						<div className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300">"
 							<div className="flex items-center gap-x-3 mb-6">"
@@ -88,7 +88,7 @@ import React from "react"
 								</li>
 							</ul>
 						</div>
-,
+
 						{/* comment */}"
 						<div className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300">"
 							<div className="flex items-center gap-x-3 mb-6">"
@@ -124,13 +124,13 @@ import React from "react"
 							</ul>
 						</div>
 			</section>
-,
+
 			{/* comment */}"
 			<section className="py-24 sm: py-32 bg-gray-50">"
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">"
 					<div className="mx-auto max-w-2xl lg:text-center mb-16">"
 						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-							Advanced NLP Features,
+							Advanced NLP Features;
 						</h2>"
 						<p className="mt-6 text-lg leading-8 text-gray-600">
 							Powerful language processing capabilities for complex business needs.
@@ -143,7 +143,7 @@ import React from "react"
 									<MessageSquare className="h-6 w-6 text-violet-600"  />
 								</div>
 								<div>"
-									<h3 className="text-lg font-semibold text-gray-900">Named Entity Recognition</h3>",
+									<h3 className="text-lg font-semibold text-gray-900">Named Entity Recognition</h3>"
 									<p className="mt-2 text-gray-600">Extract people, organizations, locations, and custom entities from text with high accuracy.</p>
 								</div>
 							</div>"
@@ -198,13 +198,13 @@ import React from "react"
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">"
 					<div className="mx-auto max-w-2xl lg:text-center mb-16">"
 						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-							Industry Applications,
+							Industry Applications;
 						</h2>"
 						<p className="mt-6 text-lg leading-8 text-gray-600">
 							NLP solutions tailored for specific industry needs and use cases.
 						</p>
 					</div>"
-					<div className="grid gap-6 lg:grid-cols-4">,
+					<div className="grid gap-6 lg:grid-cols-4">
 						{/* comment */}"
 						<div className="text-center p-6 bg-white rounded-xl shadow-sm">"
 							<div className="mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-violet-100 mb-4">"
@@ -243,13 +243,13 @@ import React from "react"
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">"
 					<div className="mx-auto max-w-2xl lg:text-center mb-16">"
 						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-							Flexible Pricing Plans,
+							Flexible Pricing Plans;
 						</h2>"
 						<p className="mt-6 text-lg leading-8 text-gray-600">
 							Choose the plan that fits your NLP processing needs.
 						</p>
 					</div>"
-					<div className="grid gap-8 lg:grid-cols-3">,
+					<div className="grid gap-8 lg:grid-cols-3">
 						{/* comment */}"
 						<div className="relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">"
 							<div className="text-center mb-8">"
@@ -356,7 +356,7 @@ import React from "react"
 						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
 							Why Choose Our NLP Solutions?
 						</h2>"
-						<p className="mt-6 text-lg leading-8 text-gray-600">,
+						<p className="mt-6 text-lg leading-8 text-gray-600">
 							Built for accuracy, performance, and scalability.
 						</p>
 					</div>"
@@ -417,7 +417,7 @@ import React from "react"
 									<p className="mt-2 text-gray-600">Process text in 100+ languages with native-level accuracy and cultural awareness.</p>
 								</div>
 			</section>
-,
+
 			{/* comment */}"
 			<section className="bg-gradient-to-r from-violet-600 to-purple-600 py-24 sm: py-32">"
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">"
@@ -444,5 +444,5 @@ import React from "react"
 							</a>
 						</div>
 			</section>
-		</PageTransition>",
+		</PageTransition>"
 	)}

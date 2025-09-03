@@ -1,7 +1,7 @@
   it(displays expected content", () => {
     render(<EnhancedSecurity  />)"
-import { render, screen } from &apos;@testing - library/react",
-import EnhancedSecurity from &apos;./EnhancedSecurity
+import { render, screen } from &apos;@testing - library/react"
+import EnhancedSecurity from &apos;./EnhancedSecurity;
 describe(&apos;EnhancedSecurity&apos, () => {
   it(&apos;renders without crashing&apos, () => {
     render()
@@ -11,7 +11,7 @@ describe(&apos;EnhancedSecurity&apos, () => {
   it(&apos;displays expected content&apos, () => {
     render()
 }
-    // comment
+    // comment;
     render(<EnhancedSecurity / >)"
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"

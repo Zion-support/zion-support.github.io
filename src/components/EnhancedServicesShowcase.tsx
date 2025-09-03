@@ -2,116 +2,117 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
-  Brain,
-  Shield,
-  Cloud,
-  Database,
-  Globe,
-  Zap,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Users,
-  Clock,
-  CheckCircle,
-  Search
+  Brain;
+  Shield;
+  Cloud;
+  Database;
+  Globe;
+  Zap;
+  ArrowRight;
+  Star;
+  TrendingUp;
+  Users;
+  Clock;
+  CheckCircle;
+  Search;
  } from 'lucide-react';
 
 export const EnhancedServicesShowcase: React.FC = () => {
   const services = [
     {
-      title: 'AI Workflow Automation',
-      description: 'Transform business operations with intelligent automation that learns and scales',
-      price: 'From $299/month',
-      path: '/services/ai-workflow-automation',
-              icon: GitFork,
-      category: 'AI & Automation',
-      features: ['Process optimization', 'AI-powered workflows', 'Real-time analytics', 'Scalable automation'],
-      benefits: ['Reduce manual work by 70-85%', 'Improve efficiency by 60%', 'Cut operational costs by 40-50%'],
-      color: 'from-cyan-500 to-blue-600',
+      title: 'AI Workflow Automation'
+      description: 'Transform business operations with intelligent automation that learns and scales'
+      price: 'From $299/month'
+      path: '/services/ai-workflow-automation'
+              icon: GitFork;
+      category: 'AI & Automation'
+      features: ['Process optimization', 'AI-powered workflows', 'Real-time analytics', 'Scalable automation']
+      benefits: ['Reduce manual work by 70-85%', 'Improve efficiency by 60%', 'Cut operational costs by 40-50%']
+      color: 'from-cyan-500 to-blue-600'
       glowColor: 'cyan'
-    },
+    }
     {
-      title: 'AI Cybersecurity',
-      description: 'Protect your business with AI-powered threat detection and prevention',
-      price: 'From $499/month',
-      path: '/services/ai-cybersecurity',
-      icon: Shield,
-      category: 'Security',
-      features: ['Threat detection', 'Behavioral analytics', 'Automated response', 'Compliance monitoring'],
-      benefits: ['Detect threats 10x faster', 'Reduce false positives by 85%', 'Prevent 99.9% of attacks'],
-      color: 'from-purple-500 to-indigo-600',
+      title: 'AI Cybersecurity'
+      description: 'Protect your business with AI-powered threat detection and prevention'
+      price: 'From $499/month'
+      path: '/services/ai-cybersecurity'
+      icon: Shield;
+      category: 'Security'
+      features: ['Threat detection', 'Behavioral analytics', 'Automated response', 'Compliance monitoring']
+      benefits: ['Detect threats 10x faster', 'Reduce false positives by 85%', 'Prevent 99.9% of attacks']
+      color: 'from-purple-500 to-indigo-600'
       glowColor: 'purple'
-    },
+    }
     {
-      title: 'Quantum Computing',
-      description: 'Solve complex problems 1000x faster with quantum computing solutions',
-      price: 'From $2,999/month',
-      path: '/services/quantum-computing-solutions',
-      icon: Atom,
-      category: 'Quantum Tech',
-      features: ['Quantum algorithms', 'ML acceleration', 'Financial modeling', 'Drug discovery'],
-      benefits: ['1000x faster computation', 'Breakthrough discoveries', 'Unbreakable encryption'],
-      color: 'from-green-500 to-emerald-600',
+      title: 'Quantum Computing'
+      description: 'Solve complex problems 1000x faster with quantum computing solutions'
+      price: 'From $2,999/month'
+      path: '/services/quantum-computing-solutions'
+      icon: Atom;
+      category: 'Quantum Tech'
+      features: ['Quantum algorithms', 'ML acceleration', 'Financial modeling', 'Drug discovery']
+      benefits: ['1000x faster computation', 'Breakthrough discoveries', 'Unbreakable encryption']
+      color: 'from-green-500 to-emerald-600'
       glowColor: 'green'
-    },
+    }
     {
-      title: 'IoT Edge Computing',
-      description: 'Process data at the edge and reduce latency by 90%',
-      price: 'From $399/month',
-      path: '/services/iot-edge-computing',
-      icon: Cpu,
-      category: 'IoT & Edge',
-      features: ['Edge processing', 'Device management', 'Real-time analytics', 'AI at the edge'],
-      benefits: ['Reduce latency by 90%', 'Cut bandwidth costs by 60-80%', 'Scale to millions of devices'],
-      color: 'from-orange-500 to-red-600',
+      title: 'IoT Edge Computing'
+      description: 'Process data at the edge and reduce latency by 90%'
+      price: 'From $399/month'
+      path: '/services/iot-edge-computing'
+      icon: Cpu;
+      category: 'IoT & Edge'
+      features: ['Edge processing', 'Device management', 'Real-time analytics', 'AI at the edge']
+      benefits: ['Reduce latency by 90%', 'Cut bandwidth costs by 60-80%', 'Scale to millions of devices']
+      color: 'from-orange-500 to-red-600'
       glowColor: 'orange'
-    },
+    }
     {
-      title: 'Cloud & DevOps',
-      description: 'Build, deploy, and scale with enterprise-grade cloud infrastructure',
-      price: 'From $799/month',
-      path: '/services/cloud-devops',
-      icon: Cloud,
-      category: 'Infrastructure',
-      features: ['Cloud migration', 'CI/CD pipelines', 'Infrastructure as code', 'Monitoring & alerting'],
-      benefits: ['Faster deployments', 'Improved reliability', 'Cost optimization', 'Scalability'],
-      color: 'from-blue-500 to-cyan-600',
+      title: 'Cloud & DevOps'
+      description: 'Build, deploy, and scale with enterprise-grade cloud infrastructure'
+      price: 'From $799/month'
+      path: '/services/cloud-devops'
+      icon: Cloud;
+      category: 'Infrastructure'
+      features: ['Cloud migration', 'CI/CD pipelines', 'Infrastructure as code', 'Monitoring & alerting']
+      benefits: ['Faster deployments', 'Improved reliability', 'Cost optimization', 'Scalability']
+      color: 'from-blue-500 to-cyan-600'
       glowColor: 'blue'
-    },
+    }
     {
-      title: 'AI Sales Copilot',
-      description: 'Automate sales processes and boost conversion rates with AI',
-      price: 'From $1,500/month',
-      path: '/services/ai-sales-copilot',
-      icon: Brain,;
-      category: 'Sales AI',;
-      features: ['Lead scoring', 'CRM automation', 'Sales analytics', 'Predictive insights'],;
-      benefits: ['Reduce admin time by 40-60%', 'Improve conversion rates', 'Shorten sales cycles'],;
-      color: 'from-pink-500 to-rose-600',;
+      title: 'AI Sales Copilot'
+      description: 'Automate sales processes and boost conversion rates with AI'
+      price: 'From $1,500/month'
+      path: '/services/ai-sales-copilot'
+      icon: Brain;
+      category: 'Sales AI'
+      features: ['Lead scoring', 'CRM automation', 'Sales analytics', 'Predictive insights']
+      benefits: ['Reduce admin time by 40-60%', 'Improve conversion rates', 'Shorten sales cycles']
+      color: 'from-pink-500 to-rose-600'
       glowColor: 'pink';
-    };
+    }
   ];
 
   const containerVariants = {
-    hidden: { opacity: 0 },;
+    hidden: { opacity: 0 }
     visible: {;
-      opacity: 1,;
+      opacity: 1;
       transition: {;
         staggerChildren: 0.1;
-      };
-    };
-  };
+      }
+    }
+  }
 
 const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity', 'Cloud & DevOps', 'Data & Analytics', 'Blockchain & Web3'];
 
 export default function EnhancedServicesShowcase(...args: unknown[]): unknown {  const [selectedCategory, setSelectedCategory] = useState('All');
   const [hoveredService, setHoveredService] = useState<string | null>(null);
 
- params - Function parameters
- * @returns {*} Function return value
+ params - Function parameters;
+ * @returns {*} Function return value;
  */
 function EnhancedServicesShowcase () {export default function EnhancedServicesShowcase() {
+
 import React from "react"
 ;,"});,"})"
 ,"});,"})","});,"})","});,"})","});,"})"
@@ -195,7 +196,7 @@ export const EnhancedServicesShowcase: React.FC = () => {,"});,"})"
       benefits: ["Reduce admin time by 40-60%", "Improve conversion rates", "Shorten sales cycles"],,"});,"})"
       color: "from-pink-500 to-rose-600","});,"})"
       glowColor: "pink","});,"});"
-};,"});,"})"
+},"});,"})"
   ],"});,"})"
 ;,"});,"})"
   const containerVariants = {});,"})"
@@ -204,8 +205,8 @@ export const EnhancedServicesShowcase: React.FC = () => {,"});,"})"
       opacity: 1,"});,"})"
       transition: {,"});,"})"
         staggerChildren: 0.1,"});,"});"
-};,"});,"});"
-};,"});,"})"
+},"});,"});"
+},"});,"})"
 ;,"});,"})"
 const categories = [];,"});,"})"
 ;,"});,"})"
@@ -226,84 +227,84 @@ export default function EnhancedServicesShowcase() {return ("
   )
 }
 }""
-  Brain,
-  Shield,
-  Cloud,
-  Database,
-  Globe,
-  Zap,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Users,
-  Clock,
-  CheckCircle,
+  Brain;
+  Shield;
+  Cloud;
+  Database;
+  Globe;
+  Zap;
+  ArrowRight;
+  Star;
+  TrendingUp;
+  Users;
+  Clock;
+  CheckCircle;
   Search} from "lucide-react"
-export const EnhancedServicesShowcase: React.FC = () => {,
-  const services = [],,
-      benefits: ["Reduce manual work by 70 - 85%", "Improve efficiency by 60%", "Cut operational costs by 40-50%"],,
+export const EnhancedServicesShowcase: React.FC = () => {
+  const services = [],
+      benefits: ["Reduce manual work by 70 - 85%", "Improve efficiency by 60%", "Cut operational costs by 40-50%"],
       color: "from-cyan-500 to-blue-600","
-glowColor: "cyan"},
+glowColor: "cyan"}
     {
       title: "AI Cybersecurity""
       description: "Protect your business with AI - powered threat detection and prevention""
-      price: "From $499 / month"",
-      path: "/services/ai-cybersecurity",
+      price: "From $499 / month""
+      path: "/services/ai-cybersecurity"
 icon: Shield,"
 category: "Security","
-features: ["Threat detection", "Behavioral analytics", "Automated response", "Compliance monitoring"],,
-      benefits: ["Detect threats 10x faster", "Reduce false positives by 85%", "Prevent 99.9% of attacks"],,
+features: ["Threat detection", "Behavioral analytics", "Automated response", "Compliance monitoring"],
+      benefits: ["Detect threats 10x faster", "Reduce false positives by 85%", "Prevent 99.9% of attacks"],
       color: "from-purple-500 to-indigo-600","
-glowColor: "purple"},
+glowColor: "purple"}
     {
-      title: "Quantum Computing"",
+      title: "Quantum Computing""
       description: "Solve complex problems 1000x faster with quantum computing solutions","
-price: "From $2,999 / month",,
-      path: "/services / quantum - computing-solutions",
+price: "From $2,999 / month",
+      path: "/services / quantum - computing-solutions"
 icon: Atom,"
 category: "Quantum Tech","
-features: ["Quantum algorithms", "ML acceleration", "Financial modeling", "Drug discovery"],,
-      benefits: ["1000x faster computation", "Breakthrough discoveries", "Unbreakable encryption"],,
+features: ["Quantum algorithms", "ML acceleration", "Financial modeling", "Drug discovery"],
+      benefits: ["1000x faster computation", "Breakthrough discoveries", "Unbreakable encryption"],
       color: "from-green-500 to-emerald-600","
-glowColor: "green"},
+glowColor: "green"}
     {
       title: "IoT Edge Computing""
       description: "Process data at the edge and reduce latency by 90%""
-      price: "From $399/month"",
-      path: "/services/iot - edge-computing",
+      price: "From $399/month""
+      path: "/services/iot - edge-computing"
 icon: Cpu,"
 category: "IoT & Edge","
-features: ["Edge processing", "Device management", "Real-time analytics", "AI at the edge"],,
-      benefits: ["Reduce latency by 90%", "Cut bandwidth costs by 60 - 80%", "Scale to millions of devices"],,
+features: ["Edge processing", "Device management", "Real-time analytics", "AI at the edge"],
+      benefits: ["Reduce latency by 90%", "Cut bandwidth costs by 60 - 80%", "Scale to millions of devices"],
       color: "from-orange-500 to-red-600","
-glowColor: "orange"},
+glowColor: "orange"}
     {
       title: "Cloud & DevOps","
-description: "Build, deploy, and scale with enterprise - grade cloud infrastructure",,
-      price: "From $799 / month"",
-      path: "/services/cloud - devops",
+description: "Build, deploy, and scale with enterprise - grade cloud infrastructure",
+      price: "From $799 / month""
+      path: "/services/cloud - devops"
 icon: Cloud,"
 category: "Infrastructure","
-features: ["Cloud migration", "CI/CD pipelines", "Infrastructure as code", "Monitoring & alerting"],,
-      benefits: ["Faster deployments", "Improved reliability", "Cost optimization", "Scalability"],,
+features: ["Cloud migration", "CI/CD pipelines", "Infrastructure as code", "Monitoring & alerting"],
+      benefits: ["Faster deployments", "Improved reliability", "Cost optimization", "Scalability"],
       color: "from-blue-500 to-cyan-600","
-glowColor: "blue"},
+glowColor: "blue"}
     {
-      title: "AI Sales Copilot"",
+      title: "AI Sales Copilot""
       description: "Automate sales processes and boost conversion rates with AI","
-price: "From $1,500 / month",,
-      path: "/services/ai - sales-copilot",
+price: "From $1,500 / month",
+      path: "/services/ai - sales-copilot"
 icon: Brain,"
 category: "Sales AI","
-features: ["Lead scoring", "CRM automation", "Sales analytics", "Predictive insights"],,
-      benefits: ["Reduce admin time by 40 - 60%", "Improve conversion rates", "Shorten sales cycles"],,
+features: ["Lead scoring", "CRM automation", "Sales analytics", "Predictive insights"],
+      benefits: ["Reduce admin time by 40 - 60%", "Improve conversion rates", "Shorten sales cycles"],
       color: "from-pink-500 to-rose-600","
 glowColor: "pink"}
 
   ]
-  const containerVariants = {},
-    visible: {,
-      opacity: 1,
+  const containerVariants = {}
+    visible: {
+      opacity: 1;
 transition: {,        staggerChildren: 0.1}
 
     }
@@ -315,75 +316,75 @@ export default function EnhancedServicesShowcase(...args: unknown[]): unknown { 
 }
   const [hoveredService, setHoveredService] = useState<string | null>(null)
 }
-  const [hoveredService, setHoveredService] = useState<string | null>(null)"framer - motion",react-router-dom
-  CheckCircle,
-  Search} from &apos;lucide-react";&apos;&apos
+  const [hoveredService, setHoveredService] = useState<string | null>(null)"framer - motion",react-router-dom;
+  CheckCircle;
+  Search} from &apos;lucide-react";&apos;&apos;
 export const EnhancedServicesShowcase: React.FC = () => {}
 
-  const;const;const services = [],
-      benefits: [&apos,Reduce manual work by 70-85%&apos, &apos;Improve efficiency by 60%&apos, &apos;Cut operational costs by 40-50%&apos],
-      color: &apos,from-cyan-500 to-blue-600&apos,
-      glowColor: &apos,cyan&apos},
+  const;const;const services = []
+      benefits: [&apos,Reduce manual work by 70-85%&apos, &apos;Improve efficiency by 60%&apos, &apos;Cut operational costs by 40-50%&apos]
+      color: &apos,from-cyan-500 to-blue-600&apos;
+      glowColor: &apos,cyan&apos}
     {
-      title: &apos,AI Cybersecurity&apos,
-      description: &apos,Protect your business with AI-powered threat detection and prevention&apos,
-      price: &apos,From $499/month&apos,
-      path: &apos,/services/ai-cybersecurity&apos,
-      icon: Shield,
-      category: &apos,Security&apos,
-      features: [&apos,Threat detection&apos, &apos;Behavioral analytics&apos, &apos;Automated response&apos, &apos;Compliance monitoring&apos],
-      benefits: [&apos,Detect threats 10x faster&apos, &apos;Reduce false positives by 85%&apos, &apos;Prevent 99.9% of attacks&apos],
-      color: &apos,from-purple-500 to-indigo-600&apos,
-      glowColor: &apos,purple&apos},
+      title: &apos,AI Cybersecurity&apos;
+      description: &apos,Protect your business with AI-powered threat detection and prevention&apos;
+      price: &apos,From $499/month&apos;
+      path: &apos,/services/ai-cybersecurity&apos;
+      icon: Shield;
+      category: &apos,Security&apos;
+      features: [&apos,Threat detection&apos, &apos;Behavioral analytics&apos, &apos;Automated response&apos, &apos;Compliance monitoring&apos]
+      benefits: [&apos,Detect threats 10x faster&apos, &apos;Reduce false positives by 85%&apos, &apos;Prevent 99.9% of attacks&apos]
+      color: &apos,from-purple-500 to-indigo-600&apos;
+      glowColor: &apos,purple&apos}
     {
-      title: &apos,Quantum Computing&apos,
-      description: &apos,Solve complex problems 1000x faster with quantum computing solutions&apos,
-      price: &apos,From $2,999/month&apos,
-      path: &apos,/services/quantum-computing-solutions&apos,
-      icon: Atom,
-      category: &apos,Quantum Tech&apos,
-      features: [&apos,Quantum algorithms&apos, &apos;ML acceleration&apos, &apos;Financial modeling&apos, &apos;Drug discovery&apos],
-      benefits: [&apos,1000x faster computation&apos, &apos;Breakthrough discoveries&apos, &apos;Unbreakable encryption&apos],
-      color: &apos,from-green-500 to-emerald-600&apos,
-      glowColor: &apos,green&apos},
+      title: &apos,Quantum Computing&apos;
+      description: &apos,Solve complex problems 1000x faster with quantum computing solutions&apos;
+      price: &apos,From $2,999/month&apos;
+      path: &apos,/services/quantum-computing-solutions&apos;
+      icon: Atom;
+      category: &apos,Quantum Tech&apos;
+      features: [&apos,Quantum algorithms&apos, &apos;ML acceleration&apos, &apos;Financial modeling&apos, &apos;Drug discovery&apos]
+      benefits: [&apos,1000x faster computation&apos, &apos;Breakthrough discoveries&apos, &apos;Unbreakable encryption&apos]
+      color: &apos,from-green-500 to-emerald-600&apos;
+      glowColor: &apos,green&apos}
     {
-      title: &apos,IoT Edge Computing&apos,
-      description: &apos,Process data at the edge and reduce latency by 90%&apos,
-      price: &apos,From $399/month&apos,
-      path: &apos,/services/iot-edge-computing&apos,
-      icon: Cpu,
-      category: &apos,IoT & Edge&apos,
-      features: [&apos,Edge processing&apos, &apos;Device management&apos, &apos;Real-time analytics&apos, &apos;AI at the edge&apos],
-      benefits: [&apos,Reduce latency by 90%&apos, &apos;Cut bandwidth costs by 60-80%&apos, &apos;Scale to millions of devices&apos],
-      color: &apos,from-orange-500 to-red-600&apos,
-      glowColor: &apos,orange&apos},
+      title: &apos,IoT Edge Computing&apos;
+      description: &apos,Process data at the edge and reduce latency by 90%&apos;
+      price: &apos,From $399/month&apos;
+      path: &apos,/services/iot-edge-computing&apos;
+      icon: Cpu;
+      category: &apos,IoT & Edge&apos;
+      features: [&apos,Edge processing&apos, &apos;Device management&apos, &apos;Real-time analytics&apos, &apos;AI at the edge&apos]
+      benefits: [&apos,Reduce latency by 90%&apos, &apos;Cut bandwidth costs by 60-80%&apos, &apos;Scale to millions of devices&apos]
+      color: &apos,from-orange-500 to-red-600&apos;
+      glowColor: &apos,orange&apos}
     {
-      title: &apos,Cloud & DevOps&apos,
-      description: &apos,Build, deploy, and scale with enterprise-grade cloud infrastructure&apos,
-      price: &apos,From $799/month&apos,
-      path: &apos,/services/cloud-devops&apos,
-      icon: Cloud,
-      category: &apos,Infrastructure&apos,
-      features: [&apos,Cloud migration&apos, &apos;CI/CD pipelines&apos, &apos;Infrastructure as code&apos, &apos;Monitoring & alerting&apos],
-      benefits: [&apos,Faster deployments&apos, &apos;Improved reliability&apos, &apos;Cost optimization&apos, &apos;Scalability&apos],
-      color: &apos,from-blue-500 to-cyan-600&apos,
-      glowColor: &apos,blue&apos},
+      title: &apos,Cloud & DevOps&apos;
+      description: &apos,Build, deploy, and scale with enterprise-grade cloud infrastructure&apos;
+      price: &apos,From $799/month&apos;
+      path: &apos,/services/cloud-devops&apos;
+      icon: Cloud;
+      category: &apos,Infrastructure&apos;
+      features: [&apos,Cloud migration&apos, &apos;CI/CD pipelines&apos, &apos;Infrastructure as code&apos, &apos;Monitoring & alerting&apos]
+      benefits: [&apos,Faster deployments&apos, &apos;Improved reliability&apos, &apos;Cost optimization&apos, &apos;Scalability&apos]
+      color: &apos,from-blue-500 to-cyan-600&apos;
+      glowColor: &apos,blue&apos}
     {
-      title: &apos,AI Sales Copilot&apos,
-      description: &apos,Automate sales processes and boost conversion rates with AI&apos,
-      price: &apos,From $1,500/month&apos,
-      path: &apos,/services/ai-sales-copilot&apos,
-      icon: Brain,
-      category: &apos,Sales AI&apos,
-      features: [&apos,Lead scoring&apos, &apos;CRM automation&apos, &apos;Sales analytics&apos, &apos;Predictive insights&apos],
-      benefits: [&apos,Reduce admin time by 40-60%&apos, &apos;Improve conversion rates&apos, &apos;Shorten sales cycles&apos],
-      color: &apos,from-pink-500 to-rose-600&apos,
+      title: &apos,AI Sales Copilot&apos;
+      description: &apos,Automate sales processes and boost conversion rates with AI&apos;
+      price: &apos,From $1,500/month&apos;
+      path: &apos,/services/ai-sales-copilot&apos;
+      icon: Brain;
+      category: &apos,Sales AI&apos;
+      features: [&apos,Lead scoring&apos, &apos;CRM automation&apos, &apos;Sales analytics&apos, &apos;Predictive insights&apos]
+      benefits: [&apos,Reduce admin time by 40-60%&apos, &apos;Improve conversion rates&apos, &apos;Shorten sales cycles&apos]
+      color: &apos,from-pink-500 to-rose-600&apos;
       glowColor: &apos,pink&apos}
 
-  ]&apos
-  const containerVariants = {},
-    visible: {,
-      opacit,y: 1,
+  ]&apos;
+  const containerVariants = {}
+    visible: {
+      opacit,y: 1;
       transition: {,        staggerChildre,n: 0.1}
 
     }
@@ -391,8 +392,8 @@ export const EnhancedServicesShowcase: React.FC = () => {}
   }
 
 const categories = []
-;&apos,
-export default function EnhancedServicesShowcase(...args: unknown[]): unknown ,{}  const [selectedCategory, setSelectedCategory] = useState(&apos;All&apos)&apos,
+;&apos;
+export default function EnhancedServicesShowcase(...args: unknown[]): unknown ,{}  const [selectedCategory, setSelectedCategory] = useState(&apos;All&apos)&apos;
   const [hoveredService, setHoveredService] = useState<;<string | null>(null);"""
   TrendingUp, Users,"
   Clock, CheckCircle,""
@@ -407,9 +408,9 @@ export const EnhancedServicesShowcase: React.FC = () => {
       title: "Cloud & DevOps", description: "Build, deploy, and scale with enterprise-grade cloud infrastructure", price: "From $799/month", path: "/services/cloud-devops", icon: Cloud, category: "Infrastructure", features: ["Cloud migration", "CI/CD pipelines", "Infrastructure as code", "Monitoring & alerting"], benefits: ["Faster deployments", "Improved reliability", "Cost optimization", "Scalability"], color: "from-blue-500 to-cyan-600", glowColor: "blue"}, {""
       title: "AI Sales Copilot", description: "Automate sales processes and boost conversion rates with AI", price: "From $1, 500/month", path: "/services/ai-sales-copilot", icon: Brain, category: "Sales AI", features: ["Lead scoring", "CRM automation", "Sales analytics", "Predictive insights"], benefits: ["Reduce admin time by 40-60%", "Improve conversion rates", "Shorten sales cycles"], color: "from-pink-500 to-rose-600", glowColor: "pink"}
 
-  Clock, CheckCircle,
+  Clock, CheckCircle;
   Search} from "lucide-react"
-export const EnhancedServicesShowcase: React.FC = () => {",
+export const EnhancedServicesShowcase: React.FC = () => {"
   const services = [], benefits: ["Reduce manual work by 70-85%", "Improve efficiency by 60%", "Cut operational costs by 40-50%"], color: "from-cyan-500 to-blue-600","
       glowColor: "cyan"}, { title: "AI Cybersecurity","
       description: "Protect your business with AI-powered threat detection and prevention", price: "From $499/month","
@@ -434,36 +435,35 @@ export const EnhancedServicesShowcase: React.FC = () => {",
       glowColor: "pink"}
 
   ]
-  const containerVariants = {}, visible: { opacity: 1,
+  const containerVariants = {}, visible: { opacity: 1;
       transition: { staggerChildren: 0.1  }
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}"
           className="text-center mb-16"
         >"
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Cutting-Edge Technology Solutions
+            Cutting-Edge Technology Solutions;
           </h2>"
           <p className="text-xl text-zion-cyan max-w-3xl mx-auto">
-            Transform your business with our innovative AI-powered services designed for the future
+            Transform your business with our innovative AI-powered services designed for the future;
           </p>
         </motion.div>
 
-        <motion.div
+        <motion.div;
           className="grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport = {
-  { once: true,
+  { once: true;
   margin: "-100px"
 }}
         >
-          {services.map((service, index) => (<motion.div
+          {services.map((service, index) => (<motion.div;
               key={index}
               variants={itemVariants}"
               className="group relative"
@@ -478,7 +478,7 @@ export const EnhancedServicesShowcase: React.FC = () => {
 
   ]
 
-  const containerVariants = {}, visible: {,
+  const containerVariants = {}, visible: {
 opacity: 1, transition: {,staggerChildren: 0.1}
 
     }
@@ -500,9 +500,9 @@ const categories = []
         {/* Services Grid */}"
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">;"
           <AnimatePresence mode="wait">
-            {filteredServices.map((service, index) => (<motion.div
+            {filteredServices.map((service, index) => (<motion.div;
                 key={service.id}
-                layout
+                layout;
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -30 }}
@@ -515,8 +515,8 @@ const categories = []
                   className="relative bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8 h-full overflow-hidden"
                   whileHover={{
 
-                    y: -10,
-                    scale: 1.02,
+                    y: -10;
+                    scale: 1.02;
                     borderColor: 'rgba(34, 221, 210, 0.5)
                   }}
                   transition={{ duration: 0.3 }}
@@ -551,7 +551,7 @@ const categories = []
                   {/* Features */}"
                   <div className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => (
-                      <motion.div
+                      <motion.div;
                         key={feature}"
                         className="flex items-center text-sm text-gray-300"
                         initial={{ opacity: 0, x: -20 }}
@@ -583,7 +583,7 @@ const categories = []
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <Link
+                    <Link;
                       to={service.path}"
                       className="inline-flex items-center w-full justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 border border-zion-cyan/30"
                     >
@@ -608,23 +608,23 @@ const categories = []
           className="text-center mt-16"
           initial = {
 
-  { opacity: 0,
+  { opacity: 0;
   y: 20 }}          whileInView = {
 
-  { opacity: 1,
+  { opacity: 1;
   y: 0 ;
 
         {/* CTA Section */}
-        <motion.div 
+        <motion.div;
           className="text-center mt-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}          viewport={{ once: true }}
           transition = {
 
-  { duration: 0.6,
+  { duration: 0.6;
   delay: 0.3 }}        >
           {categories.map((category, index) => (;
-            <motion.button
+            <motion.button;
               key={category}
               onClick={() => setSelectedCategory(category)}`
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${selectedCategory === category'
@@ -635,22 +635,19 @@ const categories = []
               whileTap={{ scale: 0.95 }}
               initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
               whileInView = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
               viewport={{ once: true }}
               transition = {
 
-  { duration: 0.6,
-  delay: index * 0.1
-
+  { duration: 0.6;
+  delay: index * 0.1;
 }}
             >
               View All Services"
@@ -667,7 +664,7 @@ const categories = []
           </div>;
         </motion.div>;
       </div>;
-    </section>;) };
+    </section>;) }
             >
               View All Services;
               <ArrowRight className="ml-2 w-5 h-5" />;
@@ -675,7 +672,7 @@ const categories = []
             <a              href="tel:+13024640950"
               className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
             >
-              Call + 1 302 464 0950
+              Call + 1 302 464 0950;
             </a>
           </div>"
           <div className="mt-6 text-zion-slate-light">"
@@ -686,9 +683,9 @@ const categories = []
         {/* Results Count */}
         {filteredServices.length > 0 && (
           <div className="text-center mt-8 text-slate-400">
-            Showing {filteredServices.length} of {allServices.length} services
+            Showing {filteredServices.length} of {allServices.length} services;
           </div>
         )}
       </div>
-    </section>) };
+    </section>) }
 '"`

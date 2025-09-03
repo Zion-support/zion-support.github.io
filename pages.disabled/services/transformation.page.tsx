@@ -6,96 +6,96 @@ import Link from 'next/link';
 const DigitalTransformationPage: NextPage = () => {
   const transformationServices = [
     {
-      icon: <Rocket className="w-8 h-8" />,
-      title: 'Digital Strategy',
-      description: 'Comprehensive digital transformation roadmap aligned with your business goals',
+      icon: <Rocket className="w-8 h-8" />
+      title: 'Digital Strategy'
+      description: 'Comprehensive digital transformation roadmap aligned with your business goals'
       features: ['Digital Assessment', 'Strategy Development', 'Technology Roadmap', 'Change Management']
-    },
+    }
     {
-      icon: <Brain className="w-8 h-8" />,
-      title: 'Process Automation',
-      description: 'Streamline operations with intelligent automation and workflow optimization',
+      icon: <Brain className="w-8 h-8" />
+      title: 'Process Automation'
+      description: 'Streamline operations with intelligent automation and workflow optimization'
       features: ['Workflow Analysis', 'RPA Implementation', 'Process Optimization', 'Performance Monitoring']
-    },
+    }
     {
-      icon: <Globe className="w-8 h-8" />,
-      title: 'Cloud Migration',
-      description: 'Modernize your infrastructure with secure and scalable cloud solutions',
+      icon: <Globe className="w-8 h-8" />
+      title: 'Cloud Migration'
+      description: 'Modernize your infrastructure with secure and scalable cloud solutions'
       features: ['Infrastructure Assessment', 'Migration Planning', 'Cloud Deployment', 'Optimization']
-    },
+    }
     {
-      icon: <Users className="w-8 h-8" />,
-      title: 'Change Management',
-      description: 'Guide your team through digital transformation with expert change management',
+      icon: <Users className="w-8 h-8" />
+      title: 'Change Management'
+      description: 'Guide your team through digital transformation with expert change management'
       features: ['Training Programs', 'Communication Strategy', 'Adoption Support', 'Performance Tracking']
     }
   ];
 
   const transformationAreas = [
     {
-      title: 'Customer Experience',
-      description: 'Enhance customer interactions with digital-first solutions',
+      title: 'Customer Experience'
+      description: 'Enhance customer interactions with digital-first solutions'
       icon: <Users className="w-6 h-6" />
-    },
+    }
     {
-      title: 'Operations',
-      description: 'Optimize business processes with automation and analytics',
+      title: 'Operations'
+      description: 'Optimize business processes with automation and analytics'
       icon: <Target className="w-6 h-6" />
-    },
+    }
     {
-      title: 'Technology',
-      description: 'Modernize your technology stack for better performance',
+      title: 'Technology'
+      description: 'Modernize your technology stack for better performance'
       icon: <Zap className="w-6 h-6" />
-    },
+    }
     {
-      title: 'Data & Analytics',
-      description: 'Leverage data for better decision-making and insights',
+      title: 'Data & Analytics'
+      description: 'Leverage data for better decision-making and insights'
       icon: <TrendingUp className="w-6 h-6" />
     }
   ];
 
   const benefits = [
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: 'Increased Efficiency',
+      icon: <Zap className="w-8 h-8" />
+      title: 'Increased Efficiency'
       description: 'Streamline operations and reduce manual processes by up to 60%'
-    },
+    }
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: 'Revenue Growth',
+      icon: <TrendingUp className="w-8 h-8" />
+      title: 'Revenue Growth'
       description: 'Drive new revenue streams and improve customer acquisition'
-    },
+    }
     {
-      icon: <Users className="w-8 h-8" />,
-      title: 'Better Customer Experience',
+      icon: <Users className="w-8 h-8" />
+      title: 'Better Customer Experience'
       description: 'Deliver seamless, personalized experiences across all touchpoints'
-    },
+    }
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: 'Competitive Advantage',
+      icon: <Shield className="w-8 h-8" />
+      title: 'Competitive Advantage'
       description: 'Stay ahead of the competition with cutting-edge digital capabilities'
     }
   ];
 
   const process = [
     {
-      step: '01',
-      title: 'Assessment',
+      step: '01'
+      title: 'Assessment'
       description: 'Evaluate current state and identify transformation opportunities'
-    },
+    }
     {
-      step: '02',
-      title: 'Strategy',
+      step: '02'
+      title: 'Strategy'
       description: 'Develop comprehensive digital transformation strategy'
-    },
+    }
     {
-      step: '03',
-      title: 'Implementation',
+      step: '03'
+      title: 'Implementation'
       description: 'Execute transformation initiatives with minimal disruption'
-    },
+    }
     {
-      step: '04',
-      title: 'Optimization',
+      step: '04'
+      title: 'Optimization'
       description: 'Continuously optimize and scale digital capabilities'
     }
   ];
@@ -109,14 +109,14 @@ const DigitalTransformationPage: NextPage = () => {
             Digital <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">Transformation</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            Transform your business for the digital age with comprehensive solutions that drive innovation and growth
+            Transform your business for the digital age with comprehensive solutions that drive innovation and growth;
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-zion-cyan text-white px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan/90 transition-colors">
-              Start Transformation
+              Start Transformation;
             </Link>
             <Link href="/case-studies" className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              View Case Studies
+              View Case Studies;
             </Link>
           </div>
         </div>
@@ -128,7 +128,7 @@ const DigitalTransformationPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Our Transformation Services</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive digital transformation solutions designed to modernize your business
+              Comprehensive digital transformation solutions designed to modernize your business;
             </p>
           </div>
           
@@ -160,7 +160,7 @@ const DigitalTransformationPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Transformation Areas</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We help transform every aspect of your business for the digital age
+              We help transform every aspect of your business for the digital age;
             </p>
           </div>
           
@@ -184,7 +184,7 @@ const DigitalTransformationPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Our Transformation Process</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A proven methodology for successful digital transformation
+              A proven methodology for successful digital transformation;
             </p>
           </div>
           
@@ -208,7 +208,7 @@ const DigitalTransformationPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Why Choose Digital Transformation</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Transform your business and stay competitive in the digital economy
+              Transform your business and stay competitive in the digital economy;
             </p>
           </div>
           
@@ -231,21 +231,21 @@ const DigitalTransformationPage: NextPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let our digital transformation experts help you modernize your business and achieve sustainable growth
+            Let our digital transformation experts help you modernize your business and achieve sustainable growth;
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
-              Start Your Transformation
+              Start Your Transformation;
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link href="/pricing" className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              View Pricing
+              View Pricing;
             </Link>
           </div>
         </div>
       </section>
     </MainLayout>
   );
-};
+}
 
 export default DigitalTransformationPage;

@@ -7,85 +7,85 @@ import { ArrowRight, CheckCircle, Brain, Zap, Shield, Cloud, Users, Star, Trendi
 const ComprehensiveServicesOverviewPage: NextPage = () => {
   const serviceCategories = [
     {
-      title: "AI & Machine Learning Services",
-      description: "Cutting-edge AI solutions to automate and optimize your business processes",
-      icon: <Brain className="w-8 h-8" />,
+      title: "AI & Machine Learning Services"
+      description: "Cutting-edge AI solutions to automate and optimize your business processes"
+      icon: <Brain className="w-8 h-8" />
       services: [
         {
-          name: "AI Customer Sentiment Analyzer Pro",
-          description: "Monitor customer feedback across all channels in real-time with AI-powered sentiment analysis",
-          price: "From $199/month",
-          link: "/services/ai-customer-sentiment-analyzer",
+          name: "AI Customer Sentiment Analyzer Pro"
+          description: "Monitor customer feedback across all channels in real-time with AI-powered sentiment analysis"
+          price: "From $199/month"
+          link: "/services/ai-customer-sentiment-analyzer"
           features: ["Real-time monitoring", "Multi-channel integration", "Predictive insights"]
-        },
+        }
         {
-          name: "AI SEO Content Optimizer",
-          description: "Advanced AI-powered SEO optimization platform with real-time suggestions and competitive analysis",
-          price: "From $79/month",
-          link: "/services/ai-seo-content-optimizer",
+          name: "AI SEO Content Optimizer"
+          description: "Advanced AI-powered SEO optimization platform with real-time suggestions and competitive analysis"
+          price: "From $79/month"
+          link: "/services/ai-seo-content-optimizer"
           features: ["Real-time SEO scoring", "Keyword research", "Content optimization"]
-        },
+        }
         {
-          name: "AI Customer Support Automation",
-          description: "Comprehensive AI-powered customer support platform with intelligent chatbots and automated resolution",
-          price: "From $299/month",
-          link: "/services/ai-customer-support-automation",
+          name: "AI Customer Support Automation"
+          description: "Comprehensive AI-powered customer support platform with intelligent chatbots and automated resolution"
+          price: "From $299/month"
+          link: "/services/ai-customer-support-automation"
           features: ["Intelligent chatbots", "Automated routing", "Multi-language support"]
         }
       ]
-    },
+    }
     {
-      title: "Micro SaaS Solutions",
-      description: "Powerful, affordable SaaS applications designed to solve specific business challenges",
-      icon: <Zap className="w-8 h-8" />,
+      title: "Micro SaaS Solutions"
+      description: "Powerful, affordable SaaS applications designed to solve specific business challenges"
+      icon: <Zap className="w-8 h-8" />
       services: [
         {
-          name: "AI Automated Email Follow-up System",
-          description: "Intelligent email automation platform with personalized sequences and optimal timing predictions",
-          price: "From $49/month",
-          link: "/services/ai-automated-email-followup",
+          name: "AI Automated Email Follow-up System"
+          description: "Intelligent email automation platform with personalized sequences and optimal timing predictions"
+          price: "From $49/month"
+          link: "/services/ai-automated-email-followup"
           features: ["Behavior-triggered sequences", "AI personalization", "A/B testing"]
-        },
+        }
         {
-          name: "AI Affiliate Marketing Tracker",
-          description: "Advanced affiliate marketing platform with AI-powered fraud detection and performance optimization",
-          price: "From $99/month",
-          link: "/services/ai-affiliate-marketing-tracker",
+          name: "AI Affiliate Marketing Tracker"
+          description: "Advanced affiliate marketing platform with AI-powered fraud detection and performance optimization"
+          price: "From $99/month"
+          link: "/services/ai-affiliate-marketing-tracker"
           features: ["Real-time tracking", "Fraud detection", "Automated payments"]
-        },
+        }
         {
-          name: "AI Project Management Assistant",
-          description: "Intelligent project management platform with AI-powered task prioritization and resource allocation",
-          price: "From $29/month",
-          link: "/services/ai-project-management-assistant",
+          name: "AI Project Management Assistant"
+          description: "Intelligent project management platform with AI-powered task prioritization and resource allocation"
+          price: "From $29/month"
+          link: "/services/ai-project-management-assistant"
           features: ["Task prioritization", "Resource allocation", "Risk prediction"]
         }
       ]
-    },
+    }
     {
-      title: "IT Services & Infrastructure",
-      description: "Enterprise-grade IT solutions to modernize and secure your infrastructure",
-      icon: <Shield className="w-8 h-8" />,
+      title: "IT Services & Infrastructure"
+      description: "Enterprise-grade IT solutions to modernize and secure your infrastructure"
+      icon: <Shield className="w-8 h-8" />
       services: [
         {
-          name: "Cloud Cost Optimization Suite",
-          description: "Comprehensive cloud cost management platform with AI-powered optimization across AWS, Azure, and GCP",
-          price: "From $500/month",
-          link: "/services/cloud-cost-optimization-suite",
+          name: "Cloud Cost Optimization Suite"
+          description: "Comprehensive cloud cost management platform with AI-powered optimization across AWS, Azure, and GCP"
+          price: "From $500/month"
+          link: "/services/cloud-cost-optimization-suite"
           features: ["Multi-cloud optimization", "AI-powered analysis", "Cost forecasting"]
-        },
+        }
         {
-          name: "Zero Trust Security Platform",
-          description: "Comprehensive zero trust security solution with identity verification and network segmentation",
-          price: "From $2,000/month",
-          link: "/services/zero-trust-security-platform",
+          name: "Zero Trust Security Platform"
+          description: "Comprehensive zero trust security solution with identity verification and network segmentation"
+          price: "From $2,000/month"
+          link: "/services/zero-trust-security-platform"
           features: ["Identity management", "Network segmentation", "Continuous monitoring"]
-        },
+        }
         {
-          name: "AI DevOps Automation Platform",
-          description: "Intelligent DevOps platform that automates CI/CD pipelines and infrastructure provisioning",
-          price: "From $1,000/month",
-          link: "/services/ai-devops-automation-platform",
+          name: "AI DevOps Automation Platform"
+          description: "Intelligent DevOps platform that automates CI/CD pipelines and infrastructure provisioning"
+          price: "From $1,000/month"
+          link: "/services/ai-devops-automation-platform"
           features: ["CI/CD automation", "Infrastructure provisioning", "Performance monitoring"]
         }
       ]
@@ -94,31 +94,31 @@ const ComprehensiveServicesOverviewPage: NextPage = () => {
 
   const benefits = [
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Proven Results",
+      icon: <TrendingUp className="w-8 h-8" />
+      title: "Proven Results"
       description: "Our clients see average improvements of 40-60% in key performance metrics"
-    },
+    }
     {
-      icon: <Users className="w-8 h-8" />,
-      title: "Expert Team",
+      icon: <Users className="w-8 h-8" />
+      title: "Expert Team"
       description: "AI specialists, cloud architects, and security experts with decades of experience"
-    },
+    }
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Enterprise Security",
+      icon: <Shield className="w-8 h-8" />
+      title: "Enterprise Security"
       description: "Bank-level security with SOC 2 compliance and industry-standard encryption"
-    },
+    }
     {
-      icon: <Settings className="w-8 h-8" />,
-      title: "24/7 Support",
+      icon: <Settings className="w-8 h-8" />
+      title: "24/7 Support"
       description: "Round-the-clock support and monitoring to ensure your systems run smoothly"
     }
   ];
 
   const stats = [
-    { number: "500+", label: "Happy Clients" },
-    { number: "99.9%", label: "Uptime SLA" },
-    { number: "40%", label: "Average Cost Reduction" },
+    { number: "500+", label: "Happy Clients" }
+    { number: "99.9%", label: "Uptime SLA" }
+    { number: "40%", label: "Average Cost Reduction" }
     { number: "24/7", label: "Expert Support" }
   ];
 
@@ -136,22 +136,22 @@ const ComprehensiveServicesOverviewPage: NextPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Comprehensive Technology Solutions
+              Comprehensive Technology Solutions;
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
-              Transform your business with our complete suite of AI services, micro SaaS solutions, 
+              Transform your business with our complete suite of AI services, micro SaaS solutions;
               and enterprise-grade IT infrastructure. We deliver measurable results through cutting-edge technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
                 <span className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
-                  Get Free Consultation
+                  Get Free Consultation;
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </span>
               </Link>
               <Link href="#services">
                 <span className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer">
-                  Explore Services
+                  Explore Services;
                 </span>
               </Link>
             </div>
@@ -209,7 +209,7 @@ const ComprehensiveServicesOverviewPage: NextPage = () => {
                     </ul>
                     <Link href={service.link}>
                       <span className="text-blue-600 hover:text-blue-700 font-medium text-sm cursor-pointer inline-flex items-center">
-                        Learn More
+                        Learn More;
                         <ArrowRight className="ml-1 w-4 h-4" />
                       </span>
                     </Link>
@@ -252,13 +252,13 @@ const ComprehensiveServicesOverviewPage: NextPage = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
               <span className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
-                Get Started Today
+                Get Started Today;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </span>
             </Link>
             <Link href="tel:+13024640950">
               <span className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer">
-                Call +1 302 464 0950
+                Call +1 302 464 0950;
               </span>
             </Link>
           </div>
@@ -266,6 +266,6 @@ const ComprehensiveServicesOverviewPage: NextPage = () => {
       </section>
     </>
   );
-};
+}
 
 export default ComprehensiveServicesOverviewPage;

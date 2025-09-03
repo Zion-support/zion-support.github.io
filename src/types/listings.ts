@@ -14,7 +14,7 @@ seller: {
     rating: number;
     reviews: number;
 
-};
+}
   location: string;  createdAt: string;
   updatedAt: string;
   status: 'active' | 'inactive' | 'sold' | 'pending';

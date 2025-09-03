@@ -7,61 +7,62 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // List of all corrupted files that need to be completely rewritten;
 const corruptedFiles = [
-  "src/pages/services/AI-Talent-Acquisition-Platform.tsx",;
-  "src/pages/services/AI5GNetwork.tsx",;
-  "src/pages/services/AIAnsible.tsx",;
-  "src/pages/services/AIApplicationSecurity.tsx",;
-  "src/pages/services/AIAugmentedReality.tsx",;
-  "src/pages/services/AIAutonomousBusinessOperationsPlatform.tsx",;
-  "src/pages/services/AIAutonomousCodeGenerator.tsx",;
-  "src/pages/services/AIBlockchain.tsx",;
-  "src/pages/services/AIBlockchainIntegrationPlatform.tsx",;
-  "src/pages/services/AIBusinessIntelligenceDashboard.tsx",;
-  "src/pages/services/AIBusinessIntelligenceElite.tsx",;
-  "src/pages/services/AIBusinessProcessAutomation.tsx",;
-  "src/pages/services/AICarbonFootprintManagementPlatform.tsx",;
-  "src/pages/services/AICassandra.tsx",;
-  "src/pages/services/AICloudNative.tsx",;
-  "src/pages/services/AIComplianceAssistant.tsx",;
-  "src/pages/services/AIComplianceMonitoring.tsx",;
-  "src/pages/services/AIContentCreation.tsx",;
-  "src/pages/services/AIContentCreationSuite.tsx",;
-  "src/pages/services/AIContentMarketingSuite.tsx",;
-  "src/pages/services/AIContentPerformanceAnalytics.tsx",;
-  "src/pages/services/AICustomerServiceAutomation.jsx",;
-  "src/pages/services/AICustomerServiceAutomation.tsx",;
-  "src/pages/services/AICustomerSupportAutomation.tsx",;
-  "src/pages/services/AICybersecurityElite.tsx",;
-  "src/pages/services/AICybersecurityThreatDetection.tsx",;
-  "src/pages/services/AICybersecurityThreatIntelligencePlatform.tsx",;
-  "src/pages/services/AIDataAnalytics.tsx",;
-  "src/pages/services/AIDataSecurity.tsx",;
-  "src/pages/services/AIDevOps.tsx",;
-  "src/pages/services/AIDocker.tsx",;
-  "src/pages/services/AIDocumentIntelligence.tsx",;
-  "src/pages/services/AIEdgeComputing.tsx",;
-  "src/pages/services/AIEducation.tsx",;
-  "src/pages/services/AIElasticsearch.tsx",;
-  "src/pages/services/AIEnergyManagement.tsx",;
-  "src/pages/services/AIEnergyOptimization.tsx",;
-  "src/pages/services/AIEntertainment.tsx",;
-  "src/pages/services/AIFinancialPlanning.tsx",;
-  "src/pages/services/AIFinancialPlanningAssistant.tsx",;
-  "src/pages/services/AIFinancialRiskManagement.tsx",;
-  "src/pages/services/AIFinancialRiskManagementPlatform.tsx",;
-  "src/pages/services/AIFinancialTrading.tsx",;
-  "src/pages/services/AIFinancialTradingAlgorithm.tsx",;
-  "src/pages/services/AIGaming.tsx",;
-  "src/pages/services/AIGrafana.tsx",;
-  "src/pages/services/AIHRManagement.tsx",;
-  "src/pages/services/AIHRPlatform.tsx",;
-  "src/pages/services/AIHRRecruitment.tsx",;
-  "src/pages/services/AIHRRecruitmentSuite.tsx",;
-  "src/pages/services/AIHRTalentAcquisition.tsx",;
+  "src/pages/services/AI-Talent-Acquisition-Platform.tsx"
+  "src/pages/services/AI5GNetwork.tsx"
+  "src/pages/services/AIAnsible.tsx"
+  "src/pages/services/AIApplicationSecurity.tsx"
+  "src/pages/services/AIAugmentedReality.tsx"
+  "src/pages/services/AIAutonomousBusinessOperationsPlatform.tsx"
+  "src/pages/services/AIAutonomousCodeGenerator.tsx"
+  "src/pages/services/AIBlockchain.tsx"
+  "src/pages/services/AIBlockchainIntegrationPlatform.tsx"
+  "src/pages/services/AIBusinessIntelligenceDashboard.tsx"
+  "src/pages/services/AIBusinessIntelligenceElite.tsx"
+  "src/pages/services/AIBusinessProcessAutomation.tsx"
+  "src/pages/services/AICarbonFootprintManagementPlatform.tsx"
+  "src/pages/services/AICassandra.tsx"
+  "src/pages/services/AICloudNative.tsx"
+  "src/pages/services/AIComplianceAssistant.tsx"
+  "src/pages/services/AIComplianceMonitoring.tsx"
+  "src/pages/services/AIContentCreation.tsx"
+  "src/pages/services/AIContentCreationSuite.tsx"
+  "src/pages/services/AIContentMarketingSuite.tsx"
+  "src/pages/services/AIContentPerformanceAnalytics.tsx"
+  "src/pages/services/AICustomerServiceAutomation.jsx"
+  "src/pages/services/AICustomerServiceAutomation.tsx"
+  "src/pages/services/AICustomerSupportAutomation.tsx"
+  "src/pages/services/AICybersecurityElite.tsx"
+  "src/pages/services/AICybersecurityThreatDetection.tsx"
+  "src/pages/services/AICybersecurityThreatIntelligencePlatform.tsx"
+  "src/pages/services/AIDataAnalytics.tsx"
+  "src/pages/services/AIDataSecurity.tsx"
+  "src/pages/services/AIDevOps.tsx"
+  "src/pages/services/AIDocker.tsx"
+  "src/pages/services/AIDocumentIntelligence.tsx"
+  "src/pages/services/AIEdgeComputing.tsx"
+  "src/pages/services/AIEducation.tsx"
+  "src/pages/services/AIElasticsearch.tsx"
+  "src/pages/services/AIEnergyManagement.tsx"
+  "src/pages/services/AIEnergyOptimization.tsx"
+  "src/pages/services/AIEntertainment.tsx"
+  "src/pages/services/AIFinancialPlanning.tsx"
+  "src/pages/services/AIFinancialPlanningAssistant.tsx"
+  "src/pages/services/AIFinancialRiskManagement.tsx"
+  "src/pages/services/AIFinancialRiskManagementPlatform.tsx"
+  "src/pages/services/AIFinancialTrading.tsx"
+  "src/pages/services/AIFinancialTradingAlgorithm.tsx"
+  "src/pages/services/AIGaming.tsx"
+  "src/pages/services/AIGrafana.tsx"
+  "src/pages/services/AIHRManagement.tsx"
+  "src/pages/services/AIHRPlatform.tsx"
+  "src/pages/services/AIHRRecruitment.tsx"
+  "src/pages/services/AIHRRecruitmentSuite.tsx"
+  "src/pages/services/AIHRTalentAcquisition.tsx"
   "src/pages/services/AIHealthcare.tsx";
 ];
 // Function to create a proper React component;
-function createServiceComponent(serviceName) {
+function createServiceComponent() {
+
   const componentName = serviceName.replace(/[^a-zA-Z0-9]/g, "");
   const displayName = serviceName.replace(/AI|\.tsx|\.jsx/g, "").replace(/([A-Z])/g, " $1").trim();
   return `import React from "react";
@@ -119,43 +120,43 @@ const ${componentName} = () => {
         </div>;
       </div>;
     </>;
-  );,
+  );
 }
-export default ${componentName};`;,
+export default ${componentName}`;
 }
-;
 // Function to fix Next.js Link issues;
-function fixNextLinks(filePath) {
+function fixNextLinks() {
+
   try {
   let content = fs.readFileSync(filePath, "utf8");
     // Add Link import if not present and file has href attributes;
     if (content.includes("href="/") && !content.includes("import Link")) {
   content = content.replace(;
-        /import React from "react";/,;
+        /import React from "react";/
         `import React from "react";
 import Link from "next/link";`;
-      );,
+      );
 }
-    ;
     // Replace <a href="/..."> with <Link href="/...">;
     content = content.replace(;
-      /<a href="(\/[^"]*)"([^>]*)>/g,;
+      /<a href="(\/[^"]*)"([^>]*)>/g;
       "<Link href="$1"$2>";
     );
     // Replace </a> with </Link>;
     content = content.replace(/<\/a>/g, "</Link>");
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed Next.js links in: ${filePath}`);,
-} catch (error) {
-  console.error(`Error fixing links in ${filePath}:`, error.message);,
+    console.log(`Fixed Next.js links in: ${filePath}`);
+} catch() {
+
+  console.error(`Error fixing links in ${filePath}:`, error.message);
 }
 }
-;
 // Function to fix Redux/TypeScript files;
 function $1() {
+
   const reduxFiles = [
-  "src/store/hooks.ts",;
-    "src/store/index.ts",;
+  "src/store/hooks.ts"
+    "src/store/index.ts"
     "src/store/wishlistSlice.ts";
   ];
   reduxFiles.forEach(filePath => {
@@ -163,22 +164,23 @@ function $1() {
   if (fs.existsSync(filePath)) {
   let content = fs.readFileSync(filePath, "utf8");
         // Fix common TypeScript syntax errors;
-        content = content.replace(/import\s*{([^}]*)\s*}\s*from\s*[""]react-redux[""];/, ;
+        content = content.replace(/import\s*{([^}]*)\s*}\s*from\s*[""]react-redux[""];/
           "import { $1  } from "react-redux";");
         // Fix generic type syntax;
         content = content.replace(/useSelector<([^>]*)>/g, "useSelector<$1>");
         content = content.replace(/useDispatch<([^>]*)>/g, "useDispatch<$1>");
         fs.writeFileSync(filePath, content);
-        console.log(`Fixed Redux file: ${filePath}`);,
+        console.log(`Fixed Redux file: ${filePath}`);
 }
-    } catch (error) {
-  console.error(`Error fixing Redux file ${filePath}:`, error.message);,
+    } catch() {
+
+  console.error(`Error fixing Redux file ${filePath}:`, error.message);
 }
-  });,
+  });
 }
-;
 // Function to fix test files;
 function fixTestFiles() {
+
   const testFiles = [
   "src/test/App.test.tsx";
   ];
@@ -187,17 +189,17 @@ function fixTestFiles() {
   if (fs.existsSync(filePath)) {
   let content = fs.readFileSync(filePath, "utf8");
         // Fix common test syntax errors;
-        content = content.replace(/import\s*{([^}]*)\s*}\s*from\s*[""]@testing-library\/react[""];/, ;
+        content = content.replace(/import\s*{([^}]*)\s*}\s*from\s*[""]@testing-library\/react[""];/
           "import { $1  } from "@testing-library/react";");
         fs.writeFileSync(filePath, content);
-        console.log(`Fixed test file: ${filePath}`);,
+        console.log(`Fixed test file: ${filePath}`);
 }
-    } catch (error) {
-  console.error(`Error fixing test file ${filePath}:`, error.message);,
+    } catch() {
+
+  console.error(`Error fixing test file ${filePath}:`, error.message);
 }
-  });,
+  });
 }
-;
 // Main execution;
 console.log("Starting comprehensive fix...");
 // 1. Fix corrupted files by rewriting them;
@@ -207,9 +209,10 @@ corruptedFiles.forEach(filePath => {
   const serviceName = path.basename(filePath, path.extname(filePath));
     const newContent = createServiceComponent(serviceName);
     fs.writeFileSync(filePath, newContent);
-    console.log(`Rewrote corrupted file: ${filePath}`);,
-} catch (error) {
-  console.error(`Error rewriting ${filePath}:`, error.message);,
+    console.log(`Rewrote corrupted file: ${filePath}`);
+} catch() {
+
+  console.error(`Error rewriting ${filePath}:`, error.message);
 }
 });
 // 2. Fix Next.js Link issues in all service files;
@@ -220,11 +223,10 @@ if (fs.existsSync(serviceDir)) {
   files.forEach(file => {
   if (file.endsWith(".tsx") || file.endsWith(".jsx")) {
   const filePath = path.join(serviceDir, file);
-      fixNextLinks(filePath);,
+      fixNextLinks(filePath);
 }
-  });,
+  });
 }
-;
 // 3. Fix Redux files;
 console.log("Fixing Redux files...");
 fixReduxFiles();
@@ -234,17 +236,18 @@ fixTestFiles();
 // 5. Remove problematic .js.jsx files;
 console.log("Removing problematic .js.jsx files...");
 const problematicFiles = [
-  "src/pages/services/AICustomerServiceAutomation.js.jsx",;
+  "src/pages/services/AICustomerServiceAutomation.js.jsx"
   "src/pages/services/EnterpriseIT.js.jsx";
 ];
 problematicFiles.forEach(filePath => {
   try {
   if (fs.existsSync(filePath)) {
   fs.unlinkSync(filePath);
-      console.log(`Removed problematic file: ${filePath}`);,
+      console.log(`Removed problematic file: ${filePath}`);
 }
-  } catch (error) {
-  console.error(`Error removing ${filePath}:`, error.message);,
+  } catch() {
+
+  console.error(`Error removing ${filePath}:`, error.message);
 }
 });
 console.log("Comprehensive fix completed!")

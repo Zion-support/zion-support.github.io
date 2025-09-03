@@ -11,73 +11,73 @@ const ServicesOverviewPage: NextPage = () => {
   const aiServices = getServicesByCategory('ai-services');
 
   const stats = [
-    { number: '100+', label: 'Services Available', icon: Globe },
-    { number: '500+', label: 'Projects Completed', icon: TrendingUp },
-    { number: '50+', label: 'Happy Clients', icon: Users },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: Award },
-    { number: '24/7', label: 'Support Available', icon: Clock },
-    { number: '30-60%', label: 'Cost Savings', icon: Shield },
+    { number: '100+', label: 'Services Available', icon: Globe }
+    { number: '500+', label: 'Projects Completed', icon: TrendingUp }
+    { number: '50+', label: 'Happy Clients', icon: Users }
+    { number: '99.9%', label: 'Uptime Guarantee', icon: Award }
+    { number: '24/7', label: 'Support Available', icon: Clock }
+    { number: '30-60%', label: 'Cost Savings', icon: Shield }
   ];
 
   const benefits = [
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: 'Cutting-Edge Technology',
+      icon: <Zap className="w-8 h-8" />
+      title: 'Cutting-Edge Technology'
       description: 'We use the latest technologies and frameworks to deliver innovative solutions that give you a competitive edge.'
-    },
+    }
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: 'Enterprise Security',
+      icon: <Shield className="w-8 h-8" />
+      title: 'Enterprise Security'
       description: 'Bank-level security with SOC 2 compliance, regular security audits, and advanced threat protection.'
-    },
+    }
     {
-      icon: <Users className="w-8 h-8" />,
-      title: 'Expert Team',
+      icon: <Users className="w-8 h-8" />
+      title: 'Expert Team'
       description: 'Our team consists of certified professionals with deep expertise in AI, cloud architecture, and modern development practices.'
-    },
+    }
     {
-      icon: <Clock className="w-8 h-8" />,
-      title: 'Fast Implementation',
+      icon: <Clock className="w-8 h-8" />
+      title: 'Fast Implementation'
       description: 'Quick setup and deployment to get you up and running in days, not months, with our proven methodologies.'
-    },
+    }
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: 'Proven Results',
+      icon: <TrendingUp className="w-8 h-8" />
+      title: 'Proven Results'
       description: 'Track record of successful implementations with measurable ROI improvements and client satisfaction.'
-    },
+    }
     {
-      icon: <Award className="w-8 h-8" />,
-      title: 'Quality Assurance',
+      icon: <Award className="w-8 h-8" />
+      title: 'Quality Assurance'
       description: 'Comprehensive testing, code reviews, and quality assurance processes ensure reliable and maintainable solutions.'
     }
   ];
 
   const pricingComparison = [
     {
-      category: 'Micro SaaS',
-      ourPrice: '$12 - $1,299/month',
-      marketPrice: '$25 - $2,500/month',
-      savings: '30-50%',
+      category: 'Micro SaaS'
+      ourPrice: '$12 - $1,299/month'
+      marketPrice: '$25 - $2,500/month'
+      savings: '30-50%'
       features: ['AI-powered automation', 'Real-time analytics', '24/7 support', 'Custom integrations']
-    },
+    }
     {
-      category: 'IT Services',
-      ourPrice: '$2,000 - $120,000',
-      marketPrice: '$5,000 - $200,000',
-      savings: '25-40%',
+      category: 'IT Services'
+      ourPrice: '$2,000 - $120,000'
+      marketPrice: '$5,000 - $200,000'
+      savings: '25-40%'
       features: ['Cloud migration', 'Security implementation', 'DevOps automation', 'Infrastructure optimization']
-    },
+    }
     {
-      category: 'AI Services',
-      ourPrice: '$5,000 - $400,000',
-      marketPrice: '$15,000 - $800,000',
-      savings: '40-60%',
+      category: 'AI Services'
+      ourPrice: '$5,000 - $400,000'
+      marketPrice: '$15,000 - $800,000'
+      savings: '40-60%'
       features: ['Custom AI models', 'Machine learning', 'Computer vision', 'Natural language processing']
     }
   ];
 
   return (
-    <MainLayout
+    <MainLayout;
       title="Complete Services Overview - Zion Tech Group"
       description="Comprehensive overview of all our technology services including micro SaaS, IT services, and AI solutions. Competitive pricing and proven results."
     >
@@ -85,34 +85,34 @@ const ServicesOverviewPage: NextPage = () => {
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.h1 
+            <motion.h1;
               className="text-5xl md:text-6xl font-bold mb-6 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              Complete Technology Solutions Portfolio
+              Complete Technology Solutions Portfolio;
             </motion.h1>
-            <motion.p 
+            <motion.p;
               className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              From innovative micro SaaS applications to enterprise-grade AI platforms, 
+              From innovative micro SaaS applications to enterprise-grade AI platforms;
               we provide comprehensive technology solutions that drive business growth and digital transformation.
             </motion.p>
-            <motion.div 
+            <motion.div;
               className="flex flex-col sm:flex-row justify-center gap-4"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
-                Get Free Consultation
+                Get Free Consultation;
               </Link>
               <Link href="/services" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
-                View All Services
+                View All Services;
               </Link>
             </motion.div>
           </div>
@@ -124,7 +124,7 @@ const ServicesOverviewPage: NextPage = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {stats.map((stat, index) => (
-              <motion.div 
+              <motion.div;
                 key={index}
                 className="text-center"
                 initial={{ opacity: 0, y: 30 }}
@@ -154,7 +154,7 @@ const ServicesOverviewPage: NextPage = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Micro SaaS */}
-            <motion.div 
+            <motion.div;
               className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -180,13 +180,13 @@ const ServicesOverviewPage: NextPage = () => {
                 </div>
               </div>
               <Link href="/services/micro-saas" className="text-blue-600 hover:text-blue-700 font-semibold flex items-center">
-                View All Micro SaaS Services
+                View All Micro SaaS Services;
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </motion.div>
 
             {/* IT Services */}
-            <motion.div 
+            <motion.div;
               className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -212,13 +212,13 @@ const ServicesOverviewPage: NextPage = () => {
                 </div>
               </div>
               <Link href="/services/it-services" className="text-green-600 hover:text-green-700 font-semibold flex items-center">
-                View All IT Services
+                View All IT Services;
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </motion.div>
 
             {/* AI Services */}
-            <motion.div 
+            <motion.div;
               className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -244,7 +244,7 @@ const ServicesOverviewPage: NextPage = () => {
                 </div>
               </div>
               <Link href="/services/ai-services" className="text-purple-600 hover:text-purple-700 font-semibold flex items-center">
-                View All AI Services
+                View All AI Services;
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </motion.div>
@@ -264,7 +264,7 @@ const ServicesOverviewPage: NextPage = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {pricingComparison.map((category, index) => (
-              <motion.div 
+              <motion.div;
                 key={index}
                 className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-lg shadow-lg border-2 border-gray-100"
                 initial={{ opacity: 0, y: 30 }}
@@ -315,7 +315,7 @@ const ServicesOverviewPage: NextPage = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <motion.div 
+              <motion.div;
                 key={index}
                 className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
                 initial={{ opacity: 0, y: 30 }}
@@ -344,7 +344,7 @@ const ServicesOverviewPage: NextPage = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Featured Micro SaaS */}
             {microSaasServices.slice(0, 3).map((service, index) => (
-              <motion.div 
+              <motion.div;
                 key={service.id}
                 className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-lg shadow-lg border border-blue-100"
                 initial={{ opacity: 0, y: 30 }}
@@ -358,11 +358,11 @@ const ServicesOverviewPage: NextPage = () => {
                   <span className="text-2xl font-bold text-blue-600">${service.pricing.starter}</span>
                   <span className="text-sm text-gray-500">/month starting</span>
                 </div>
-                <Link 
+                <Link;
                   href={service.link}
                   className="text-blue-600 hover:text-blue-700 font-semibold flex items-center text-sm"
                 >
-                  Learn More
+                  Learn More;
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </motion.div>
@@ -370,7 +370,7 @@ const ServicesOverviewPage: NextPage = () => {
 
             {/* Featured IT Services */}
             {itServices.slice(0, 3).map((service, index) => (
-              <motion.div 
+              <motion.div;
                 key={service.id}
                 className="bg-gradient-to-br from-green-50 to-white p-6 rounded-lg shadow-lg border border-green-100"
                 initial={{ opacity: 0, y: 30 }}
@@ -384,11 +384,11 @@ const ServicesOverviewPage: NextPage = () => {
                   <span className="text-2xl font-bold text-green-600">${service.pricing.starter.toLocaleString()}</span>
                   <span className="text-sm text-gray-500">starting</span>
                 </div>
-                <Link 
+                <Link;
                   href={service.link}
                   className="text-green-600 hover:text-green-700 font-semibold flex items-center text-sm"
                 >
-                  Learn More
+                  Learn More;
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </motion.div>
@@ -396,7 +396,7 @@ const ServicesOverviewPage: NextPage = () => {
 
             {/* Featured AI Services */}
             {aiServices.slice(0, 3).map((service, index) => (
-              <motion.div 
+              <motion.div;
                 key={service.id}
                 className="bg-gradient-to-br from-purple-50 to-white p-6 rounded-lg shadow-lg border border-purple-100"
                 initial={{ opacity: 0, y: 30 }}
@@ -410,11 +410,11 @@ const ServicesOverviewPage: NextPage = () => {
                   <span className="text-2xl font-bold text-purple-600">${service.pricing.starter.toLocaleString()}</span>
                   <span className="text-sm text-gray-500">starting</span>
                 </div>
-                <Link 
+                <Link;
                   href={service.link}
                   className="text-purple-600 hover:text-purple-700 font-semibold flex items-center text-sm"
                 >
-                  Learn More
+                  Learn More;
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </motion.div>
@@ -431,23 +431,23 @@ const ServicesOverviewPage: NextPage = () => {
             Join hundreds of satisfied clients who have transformed their businesses with our cutting-edge technology solutions.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link 
+            <Link;
               href="/contact" 
               className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
             >
-              Get Free Consultation
+              Get Free Consultation;
             </Link>
-            <Link 
+            <Link;
               href="/services" 
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
             >
-              Explore All Services
+              Explore All Services;
             </Link>
           </div>
         </div>
       </section>
     </MainLayout>
   );
-};
+}
 
 export default ServicesOverviewPage;

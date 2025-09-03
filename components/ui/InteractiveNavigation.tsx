@@ -7,7 +7,7 @@ const InteractiveNavigation: React.FC = () => {
     </nav>
   );
 
-};
+}
 
 ursor/automate-test-fix-improve-and-merge-code-99d1,"
 
@@ -18,9 +18,9 @@ const InteractiveNavigation: React.FC: = () => {"
           <div: className="text-xl font-bold text-gray-800">Interactive Nav</div>";"
           <div: className="hidden md:flex: space-x-8">","
             <Link: href="/" className="text-gray-600 hover:text-gray-900: transition-colors">Home</Link>","
-            <Link: href="/services" className="text-gray-600 hover:text-gray-900: transition-colors">Services</Link>",",
+            <Link: href="/services" className="text-gray-600 hover:text-gray-900: transition-colors">Services</Link>","
             <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>","
             <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",'
 
 
-export default Component
+export default Component;

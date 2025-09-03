@@ -7,21 +7,21 @@ const FloatingContactWidget: React.FC = () => {
 
   const contactOptions = [
     {
-      icon: <Phone className="w-5 h-5" />,
-      label: 'Call Now',
-      action: 'tel:+13024640950',
+      icon: <Phone className="w-5 h-5" />
+      label: 'Call Now'
+      action: 'tel:+13024640950'
       description: '+1 302 464 0950'
-    },
+    }
     {
-      icon: <Mail className="w-5 h-5" />,
-      label: 'Email Us',
-      action: 'mailto:kleber@ziontechgroup.com',
+      icon: <Mail className="w-5 h-5" />
+      label: 'Email Us'
+      action: 'mailto:kleber@ziontechgroup.com'
       description: 'kleber@ziontechgroup.com'
-    },
+    }
     {
-      icon: <MessageCircle className="w-5 h-5" />,
-      label: 'Get Quote',
-      action: '/contact',
+      icon: <MessageCircle className="w-5 h-5" />
+      label: 'Get Quote'
+      action: '/contact'
       description: 'Free consultation'
     }
   ];
@@ -29,7 +29,7 @@ const FloatingContactWidget: React.FC = () => {
   return (
     <>
       {/* Floating Contact Button */}
-      <motion.button
+      <motion.button;
         className="fixed bottom-6 right-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50"
         onClick={() => setIsOpen(!isOpen)}
         whileHover={{ scale: 1.1 }}
@@ -40,7 +40,7 @@ const FloatingContactWidget: React.FC = () => {
       >
         <AnimatePresence mode="wait">
           {isOpen ? (
-            <motion.div
+            <motion.div;
               key="close"
               initial={{ rotate: -90, opacity: 0 }}
               animate={{ rotate: 0, opacity: 1 }}
@@ -50,7 +50,7 @@ const FloatingContactWidget: React.FC = () => {
               <X className="w-6 h-6" />
             </motion.div>
           ) : (
-            <motion.div
+            <motion.div;
               key="contact"
               initial={{ rotate: 90, opacity: 0 }}
               animate={{ rotate: 0, opacity: 1 }}
@@ -66,7 +66,7 @@ const FloatingContactWidget: React.FC = () => {
       {/* Contact Options Panel */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <motion.div;
             className="fixed bottom-24 right-6 bg-white rounded-2xl shadow-2xl p-6 z-50 min-w-[280px]"
             initial={{ opacity: 0, y: 20, scale: 0.8 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -80,7 +80,7 @@ const FloatingContactWidget: React.FC = () => {
             
             <div className="space-y-3">
               {contactOptions.map((option, index) => (
-                <motion.a
+                <motion.a;
                   key={option.label}
                   href={option.action}
                   className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors group"
@@ -113,7 +113,7 @@ const FloatingContactWidget: React.FC = () => {
       {/* Backdrop */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <motion.div;
             className="fixed inset-0 bg-black bg-opacity-20 z-40"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -124,6 +124,6 @@ const FloatingContactWidget: React.FC = () => {
       </AnimatePresence>
     </>
   );
-};
+}
 
 export default FloatingContactWidget;

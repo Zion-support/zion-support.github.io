@@ -1,12 +1,12 @@
 
       newExpanded.delete(section) } else {
       newExpanded.add(section) }
-    setExpandedSections(newExpanded) };
+    setExpandedSections(newExpanded) }
 
   const navigationSections = [{
 
-      title: "Main",
-      icon: Home,
+      title: "Main"
+      icon: Home;
       items[;"
         { name: "Home", href: "/", icon: Home },"
         { name: "About Us", href: "/about", icon: Users },"
@@ -14,50 +14,50 @@
         { name: "Partners", href: "/partners", icon: Users },"
         { name: "Careers", href: "/careers", icon: Briefcase }
       ]
-    },;
+    }
     {
 "
-      title: "Services",
-      icon: Zap,
+      title: "Services"
+      icon: Zap;
       items[;"
         { name: "AI & Machine Learning", href: "/ai-services", icon: Brain },"
         { name: "Micro SAAS Solutions", href: "/micro-saas", icon: Cloud },"
         { name: "IT Infrastructure", href: "/it-services", icon: Server },"
         { name: "Emerging Technologies", href: "/emerging-tech", icon: Rocket }
       ]
-    },;
+    }
     {
 "
-      title: "Solutions",
-      icon: Target,
+      title: "Solutions"
+      icon: Target;
       items[;"
         { name: "Quantum Computing", href: "/emerging-tech/quantum", icon: Rocket },"
         { name: "Blockchain & Web3", href: "/emerging-tech/blockchain", icon: Cloud },"
         { name: "Edge Computing", href: "/emerging-tech/edge", icon: Server },"
         { name: "IoT Solutions", href: "/emerging-tech/iot", icon: Brain }
       ]
-    },;
+    }
     {
 "
-      title: "Resources",
-      icon: BookOpen,
+      title: "Resources"
+      icon: BookOpen;
       items[;"
-        { name: "Documentation", href: "/docs", icon: FileText },;"
-        { name: "API Reference", href: "/api", icon: FileText },;"
-        { name: "Developer Portal", href: "/developer", icon: Server },;"
-        { name: "Support Center", href: "/support", icon: HelpCircle };
-      ]};
+        { name: "Documentation", href: "/docs", icon: FileText },"
+        { name: "API Reference", href: "/api", icon: FileText },"
+        { name: "Developer Portal", href: "/developer", icon: Server },"
+        { name: "Support Center", href: "/support", icon: HelpCircle }
+      ]}
   ];
 
   const quickActions = [;"
-    { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },;"
-    { name: "Book Demo", href: "/demo", icon: Users, variant: "secondary" },;"    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" };
+    { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },"
+    { name: "Book Demo", href: "/demo", icon: Users, variant: "secondary" },"    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" }
   ];
 
   return ()
     <>
       {/* Mobile Menu Button */}
-      <motion.button
+      <motion.button;
         whileHover = {{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}"
@@ -69,7 +69,7 @@
       <AnimatePresence>
         {isOpen && (<>
             {/* Backdrop */}
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -85,7 +85,7 @@
               exit={{ x: '-100%' }}
               transition = {
 
-  { duration: 0.3,
+  { duration: 0.3;
   ease: 'easeOut'
 
 }}"
@@ -100,12 +100,12 @@
                     </div>
                     <div>"
                       <h2 className="text-lg font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
-                        ZION TECH GROUP
+                        ZION TECH GROUP;
                       </h2>"
                       <p className="text-xs text-zion-slate-light">Mobile Navigation</p>
                     </div>
                   </div>
-                  <button
+                  <button;
                     onClick={() => setIsOpen(false)}"
                     className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
 "
@@ -117,28 +117,25 @@
                   <h3 className="text-sm font-semibold text-zion-slate-light mb-3 uppercase tracking-wide">Quick Actions</h3>"
                   <div className="space-y-2">
                     {quickActions.map((action, index) => (
-                      <motion.div
+                      <motion.div;
                         key={action.name}
                         initial = {
 
-  { opacity: 0,
-  x: -20
-
+  { opacity: 0;
+  x: -20;
 }}
                         animate = {
 
-  { opacity: 1,
-  x: 0
-
+  { opacity: 1;
+  x: 0;
 }}
                         transition = {
 
-  { duration: 0.3,
-  delay: index * 0.1
-
+  { duration: 0.3;
+  delay: index * 0.1;
 }}
                       >
-                        <Link
+                        <Link;
                           to={action.href}
                           onClick={() => setIsOpen(false)}
                           className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 group ${action.variant === 'primary''
@@ -156,28 +153,25 @@
                 {/* Navigation Sections */}"
                 <div className="space-y-6">;
                   {navigationSections.map((section, sectionIndex) => (;
-                    <motion.div
+                    <motion.div;
                       key={section.title}
                       initial = {
 
-  { opacity: 0,
-  y: -20
-
+  { opacity: 0;
+  y: -20;
 }}
                       animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
                       transition = {
 
-  { duration: 0.5,
-  delay: sectionIndex * 0.1
-
+  { duration: 0.5;
+  delay: sectionIndex * 0.1;
 }}
                     >
-                      <button
+                      <button;
                         onClick={() => toggleSection(section.title)}"
                         className="flex items-center justify-between w-full p-3 text-left text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 rounded-lg transition-all duration-300 group"
 "
@@ -192,51 +186,46 @@
                       </button>
 
                       <AnimatePresence>
-                        {expandedSections.has(section.title) && (<motion.div
+                        {expandedSections.has(section.title) && (<motion.div;
                             initial = {
 
-  { opacity: 0,
-  height: 0
-
+  { opacity: 0;
+  height: 0;
 }}
                             animate = {
 
-  { opacity: 1,
+  { opacity: 1;
   height: 'auto'
 
 }}
                             exit = {
 
-  { opacity: 0,
-  height: 0
-
+  { opacity: 0;
+  height: 0;
 }}
                             transition={{ duration: 0.3 }}"
                             className="ml-7 mt-2 space-y-1"
 
                             {section.items.map((item, itemIndex) => (;
-                              <motion.div
+                              <motion.div;
                                 key={item.name}
                                 initial = {
 
-  { opacity: 0,
-  x: -20
-
+  { opacity: 0;
+  x: -20;
 }}
                                 animate = {
 
-  { opacity: 1,
-  x: 0
-
+  { opacity: 1;
+  x: 0;
 }}
                                 transition = {
 
-  { duration: 0.2,
-  delay: itemIndex * 0.05
-
+  { duration: 0.2;
+  delay: itemIndex * 0.05;
 }}
                               >
-                                <Link
+                                <Link;
                                   to={item.href}
                                   onClick={() => setIsOpen(false)}`
                                   className={`flex items-center space-x-3 p-2 rounded-lg transition-all duration-300 group ${isActive(item.href)
@@ -271,8 +260,8 @@
               </div>
             </motion.div>;
           </>
-        )};
+        )}
       </AnimatePresence>;
     </>
-  )};
+  )}
 '"`

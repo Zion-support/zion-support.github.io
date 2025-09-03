@@ -8,64 +8,64 @@ const Cookies: NextPage = () => {
 
   const cookieTypes = [
     {
-      icon: Settings,
-      title: 'Essential Cookies',
-      description: 'These cookies are necessary for the website to function properly.',
+      icon: Settings;
+      title: 'Essential Cookies'
+      description: 'These cookies are necessary for the website to function properly.'
       examples: [
-        'Authentication and login status',
-        'Shopping cart functionality',
-        'Security and fraud prevention',
+        'Authentication and login status'
+        'Shopping cart functionality'
+        'Security and fraud prevention'
         'Load balancing and performance'
-      ],
-      required: true
-    },
+      ]
+      required: true;
+    }
     {
-      icon: Eye,
-      title: 'Analytics Cookies',
-      description: 'These cookies help us understand how visitors interact with our website.',
+      icon: Eye;
+      title: 'Analytics Cookies'
+      description: 'These cookies help us understand how visitors interact with our website.'
       examples: [
-        'Page views and user behavior',
-        'Traffic sources and referrals',
-        'Popular content and features',
+        'Page views and user behavior'
+        'Traffic sources and referrals'
+        'Popular content and features'
         'Performance metrics and errors'
-      ],
-      required: false
-    },
+      ]
+      required: false;
+    }
     {
-      icon: Database,
-      title: 'Functional Cookies',
-      description: 'These cookies enable enhanced functionality and personalization.',
+      icon: Database;
+      title: 'Functional Cookies'
+      description: 'These cookies enable enhanced functionality and personalization.'
       examples: [
-        'Language preferences',
-        'User interface customization',
-        'Remembered form data',
+        'Language preferences'
+        'User interface customization'
+        'Remembered form data'
         'Location-based features'
-      ],
-      required: false
-    },
+      ]
+      required: false;
+    }
     {
-      icon: Shield,
-      title: 'Marketing Cookies',
-      description: 'These cookies are used to deliver relevant advertisements.',
+      icon: Shield;
+      title: 'Marketing Cookies'
+      description: 'These cookies are used to deliver relevant advertisements.'
       examples: [
-        'Ad targeting and personalization',
-        'Campaign performance tracking',
-        'Social media integration',
+        'Ad targeting and personalization'
+        'Campaign performance tracking'
+        'Social media integration'
         'Retargeting and remarketing'
-      ],
-      required: false
-    },
+      ]
+      required: false;
+    }
     {
-      icon: Database,
-      title: 'Marketing Cookies',
-      description: 'These cookies are used to track visitors across websites to display relevant and engaging advertisements.',
-      examples: ['Ad targeting', 'Campaign tracking', 'Conversion tracking'],
-      required: false
+      icon: Database;
+      title: 'Marketing Cookies'
+      description: 'These cookies are used to track visitors across websites to display relevant and engaging advertisements.'
+      examples: ['Ad targeting', 'Campaign tracking', 'Conversion tracking']
+      required: false;
     }
   ];
 
   return (
-    <MainLayout
+    <MainLayout;
       title="Cookie Policy - Zion Tech Group"
       description="Learn about how Zion Tech Group uses cookies to enhance your browsing experience and provide personalized services."
       keywords="cookie policy, cookies, tracking, privacy, website analytics, user preferences"
@@ -94,11 +94,11 @@ const Cookies: NextPage = () => {
                 <h2 className="text-2xl font-bold mb-4 text-gray-900">What Are Cookies?</h2>
                 <p className="text-gray-600 leading-relaxed mb-4">
                   Cookies are small text files that are stored on your device when you visit our website. 
-                  They help us provide you with a better experience by remembering your preferences and 
+                  They help us provide you with a better experience by remembering your preferences and;
                   understanding how you use our site.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  We use cookies to enhance functionality, analyze site usage, and provide personalized 
+                  We use cookies to enhance functionality, analyze site usage, and provide personalized;
                   content. You can control cookie settings through your browser preferences.
                 </p>
               </div>
@@ -114,7 +114,7 @@ const Cookies: NextPage = () => {
                         <div className="flex items-center mb-2">
                           <h3 className="text-2xl font-bold text-gray-900 mr-4">{cookie.title}</h3>
                           <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                            cookie.required 
+                            cookie.required;
                               ? 'bg-red-100 text-red-800' 
                               : 'bg-green-100 text-green-800'
                           }`}>
@@ -171,8 +171,8 @@ const Cookies: NextPage = () => {
                   <div>
                     <h3 className="text-lg font-semibold mb-2 text-gray-900">Cookie Consent</h3>
                     <p className="text-gray-600">
-                      When you first visit our website, you'll see a cookie consent banner. You can choose 
-                      which types of cookies to accept. You can change your preferences at any time by 
+                      When you first visit our website, you'll see a cookie consent banner. You can choose;
+                      which types of cookies to accept. You can change your preferences at any time by;
                       clicking the cookie settings link in our footer.
                     </p>
                   </div>
@@ -215,7 +215,7 @@ const Cookies: NextPage = () => {
                   <p className="text-gray-700"><strong>Email:</strong> privacy@ziontechgroup.com</p>
                   <p className="text-gray-700"><strong>Phone:</strong> +1 302 464 0950</p>
                   <p className="text-gray-700">
-                    <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709
+                    <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709;
                   </ul>
                 </div>
               </div>
@@ -301,7 +301,7 @@ const Cookies: NextPage = () => {
 
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Updates to This Policy</h2>
             <p className="text-gray-600 mb-6">
-              We may update this Cookie Policy from time to time to reflect changes in our practices or for other operational, 
+              We may update this Cookie Policy from time to time to reflect changes in our practices or for other operational;
               legal, or regulatory reasons. We will notify you of any material changes by posting the updated policy on our website.
             </p>
 
@@ -313,7 +313,7 @@ const Cookies: NextPage = () => {
               <p className="text-gray-600 mb-2"><strong>Email:</strong> privacy@ziontechgroup.com</p>
               <p className="text-gray-600 mb-2"><strong>Phone:</strong> +1 302 464 0950</p>
               <p className="text-gray-600">
-                <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709
+                <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709;
               </p>
             </div>
 
@@ -353,11 +353,11 @@ const Cookies: NextPage = () => {
                 <div className="bg-blue-50 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold mb-4 text-gray-900">Cookie Consent</h3>
                   <p className="text-gray-700 mb-4">
-                    When you first visit our website, you'll see a cookie consent banner where you can 
+                    When you first visit our website, you'll see a cookie consent banner where you can;
                     choose which types of cookies to accept.
                   </p>
                   <p className="text-gray-700">
-                    You can change your preferences at any time by clicking the cookie settings link 
+                    You can change your preferences at any time by clicking the cookie settings link;
                     in our website footer.
                   </p>
                 </div>
@@ -381,6 +381,6 @@ const Cookies: NextPage = () => {
       </section>
     </MainLayout>
   );
-};
+}
 
 export default Cookies;

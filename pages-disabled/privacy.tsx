@@ -169,6 +169,6 @@ const PrivacyPolicy: NextPage = () => {;
         </section>;
       </div>;
     </MainLayout>;
-  );,
+  );
 }
-export default PrivacyPolicy
+export default PrivacyPolicy;

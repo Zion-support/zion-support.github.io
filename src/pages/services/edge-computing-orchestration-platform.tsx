@@ -2,57 +2,57 @@ import React from "react"
 import Head from "next/head"
 import Link from "next/link"
 import { 
-  Cpu, Network, Zap, Globe, Server, Cloud, Database, 
-  Shield, BarChart3, CheckCircle, ArrowRight, Star, 
-  Phone, Mail, MapPin, Settings, Monitor, Activity,
-  TrendingUp, Award, Rocket, Lightbulb, AlertTriangle,
-  Smartphone, Users, Lock, Brain, Target
+  Cpu, Network, Zap, Globe, Server, Cloud, Database;
+  Shield, BarChart3, CheckCircle, ArrowRight, Star;
+  Phone, Mail, MapPin, Settings, Monitor, Activity;
+  TrendingUp, Award, Rocket, Lightbulb, AlertTriangle;
+  Smartphone, Users, Lock, Brain, Target;
 } from "lucide-react"
 
 const EdgeComputingOrchestrationPlatform = () => {
   const features = [
-    "Distributed Edge Computing",
-    "Real-time Data Processing", 
-    "Intelligent Load Balancing",
-    "Edge-to-Cloud Synchronization",
-    "Autonomous Edge Management",
-    "Low-Latency Computing",
-    "Edge AI Inference",
+    "Distributed Edge Computing"
+    "Real-time Data Processing"
+    "Intelligent Load Balancing"
+    "Edge-to-Cloud Synchronization"
+    "Autonomous Edge Management"
+    "Low-Latency Computing"
+    "Edge AI Inference"
     "Dynamic Resource Allocation"
   ]
 
   const benefits = [
-    "Reduce latency by 90%",
-    "Improve application performance by 70%",
-    "Lower bandwidth costs by 60%",
-    "Enable real-time decision making",
-    "Scale computing resources dynamically",
+    "Reduce latency by 90%"
+    "Improve application performance by 70%"
+    "Lower bandwidth costs by 60%"
+    "Enable real-time decision making"
+    "Scale computing resources dynamically"
     "Ensure 99.9% uptime across edge locations"
   ]
 
   const useCases = [
-    "IoT Data Processing",
-    "Real-time Video Analytics",
-    "Autonomous Vehicle Computing",
-    "Smart City Infrastructure",
-    "Industrial IoT Monitoring",
+    "IoT Data Processing"
+    "Real-time Video Analytics"
+    "Autonomous Vehicle Computing"
+    "Smart City Infrastructure"
+    "Industrial IoT Monitoring"
     "Edge AI Applications"
   ]
 
   const pricing = [
     {
-      name: "Edge Starter",
-      price: "$3,999/month",
+      name: "Edge Starter"
+      price: "$3,999/month"
       details: ["Up to 10 edge nodes", "Basic orchestration", "Standard monitoring", "Email support", "99.5% uptime SLA"]
-    },
+    }
     {
-      name: "Edge Enterprise", 
-      price: "$7,999/month",
+      name: "Edge Enterprise"
+      price: "$7,999/month"
       details: ["Up to 100 edge nodes", "Advanced orchestration", "Custom monitoring", "Priority support", "99.9% uptime SLA"]
-    },
+    }
     {
-      name: "Edge Global",
-      price: "$15,999/month", 
+      name: "Edge Global"
+      price: "$15,999/month"
       details: ["Unlimited edge nodes", "Full orchestration suite", "White-label solution", "24/7 dedicated support", "99.99% uptime SLA"]
     }
   ]
@@ -71,20 +71,20 @@ const EdgeComputingOrchestrationPlatform = () => {
           <div className="max-w-6xl mx-auto px-6">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
               <Cpu className="w-4 h-4 mr-2" />
-              Edge Computing Orchestration
+              Edge Computing Orchestration;
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-              Edge Computing Orchestration Platform
+              Edge Computing Orchestration Platform;
             </h1>
             <p className="text-green-100 text-xl max-w-3xl mx-auto">
               Revolutionize your computing infrastructure with intelligent edge orchestration that reduces latency by 90%, improves performance by 70%, and enables real-time processing across distributed locations.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="#contact" className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">
-                Start Free Trial
+                Start Free Trial;
               </Link>
               <Link href="#demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                Watch Demo
+                Watch Demo;
               </Link>
             </div>
           </div>
@@ -193,7 +193,7 @@ const EdgeComputingOrchestrationPlatform = () => {
                 <div key={index} className={`rounded-xl p-6 shadow-lg ${tier.name === 'Edge Enterprise' ? 'border-2 border-green-500 bg-green-50' : 'border border-gray-200 bg-white'}`}>
                   {tier.name === 'Edge Enterprise' && (
                     <div className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
-                      Most Popular
+                      Most Popular;
                     </div>
                   )}
                   <h3 className="text-2xl font-semibold text-gray-900 mb-2">{tier.name}</h3>
@@ -211,7 +211,7 @@ const EdgeComputingOrchestrationPlatform = () => {
                       ? 'bg-green-600 text-white hover:bg-green-700' 
                       : 'bg-gray-900 text-white hover:bg-gray-800'
                   }`}>
-                    Get Started
+                    Get Started;
                   </Link>
                 </div>
               ))}
@@ -250,7 +250,7 @@ const EdgeComputingOrchestrationPlatform = () => {
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">Start Your Free Trial</h3>
                 <p className="text-gray-600 mb-4">Experience edge computing orchestration with our 14-day free trial</p>
                 <Link href="https://ziontechgroup.com/contact" className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors inline-block">
-                  Start Free Trial
+                  Start Free Trial;
                 </Link>
               </div>
             </div>
@@ -261,4 +261,4 @@ const EdgeComputingOrchestrationPlatform = () => {
   )
 }
 
-export default EdgeComputingOrchestrationPlatform
+export default EdgeComputingOrchestrationPlatform;

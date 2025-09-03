@@ -7,7 +7,7 @@ const AboutPage: React.FC = () => {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">About Zion Tech Group</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            With over 26 years in the market, we provide comprehensive technology solutions 
+            With over 26 years in the market, we provide comprehensive technology solutions;
             to help businesses thrive in the digital age.
           </p>
         </div>
@@ -44,6 +44,6 @@ const AboutPage: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 
 export default AboutPage;

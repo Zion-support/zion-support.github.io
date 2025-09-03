@@ -1,7 +1,7 @@
   it(displays expected content", () => {
     render(<EnhancedSEOAccessibility  />)"
-import { render, screen } from &apos;@testing - library/react",
-import EnhancedSEOAccessibility from &apos;./EnhancedSEOAccessibility
+import { render, screen } from &apos;@testing - library/react"
+import EnhancedSEOAccessibility from &apos;./EnhancedSEOAccessibility;
 describe(&apos;EnhancedSEOAccessibility&apos, () => {
   it(&apos;renders without crashing&apos, () => {
     render()
@@ -11,7 +11,7 @@ describe(&apos;EnhancedSEOAccessibility&apos, () => {
   it(&apos;displays expected content&apos, () => {
     render()
 }
-    // comment
+    // comment;
     render(<EnhancedSEOAccessibility / >)"
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"

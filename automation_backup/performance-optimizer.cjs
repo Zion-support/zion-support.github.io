@@ -4,10 +4,11 @@ const path = require("path");
 const { execSync } = require("child_process");
 class $1 {
   constructor() {
-  this.optimizations = [];,
+
+  this.optimizations = [];
 }
-;
   async optimizeBundle() {
+
   try {
   // Analyze bundle size;
       const bundleAnalysis = execSync("npm run build", { encoding: "utf8" });
@@ -16,21 +17,21 @@ class $1 {
       // Optimize CSS;
       this.optimizeCSS();
       console.log("Performance optimization completed");
-      return this.optimizations;,
-} catch (error) {
+      return this.optimizations;
+} catch() {
+
   console.error("Performance optimization failed:", error.message);
-      return null;,
+      return null;
 }
   }
-;
   optimizeImages() {
-  this.optimizations.push("Image optimization applied");,
+
+  this.optimizations.push("Image optimization applied");
 }
-;
   optimizeCSS() {
-  this.optimizations.push("CSS optimization applied");,
+
+  this.optimizations.push("CSS optimization applied");
 }
 }
-;
 const optimizer = new PerformanceOptimizer();
 optimizer.optimizeBundle()

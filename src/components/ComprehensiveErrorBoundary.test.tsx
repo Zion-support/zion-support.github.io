@@ -1,7 +1,7 @@
   it(displays expected content", () => {
     render(<ComprehensiveErrorBoundary  />)"
-import { render, screen } from &apos;@testing - library/react",
-import ComprehensiveErrorBoundary from &apos;./ComprehensiveErrorBoundary
+import { render, screen } from &apos;@testing - library/react"
+import ComprehensiveErrorBoundary from &apos;./ComprehensiveErrorBoundary;
 describe(&apos;ComprehensiveErrorBoundary&apos, () => {
   it(&apos;renders without crashing&apos, () => {
     render()
@@ -11,7 +11,7 @@ describe(&apos;ComprehensiveErrorBoundary&apos, () => {
   it(&apos;displays expected content&apos, () => {
     render()
 }
-    // comment
+    // comment;
     render(<ComprehensiveErrorBoundary / >)"
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"

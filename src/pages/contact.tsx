@@ -1,45 +1,45 @@
 import React from 'react';
 import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  MessageCircle, 
-  Globe, 
-  CheckCircle,
-  Star,
-  Award,
-  Users,
-  Zap,
-  Shield
+  Phone;
+  Mail;
+  MapPin;
+  Clock;
+  MessageCircle;
+  Globe;
+  CheckCircle;
+  Star;
+  Award;
+  Users;
+  Zap;
+  Shield;
 } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
   const contactInfo = {
-    phone: "+1 302 464 0950",
-    email: "kleber@ziontechgroup.com",
-    address: "364 E Main St STE 1008, Middletown DE 19709",
-    website: "https://ziontechgroup.com",
+    phone: "+1 302 464 0950"
+    email: "kleber@ziontechgroup.com"
+    address: "364 E Main St STE 1008, Middletown DE 19709"
+    website: "https://ziontechgroup.com"
     hours: "Monday - Friday: 9:00 AM - 6:00 PM EST"
-  };
+  }
 
   const services = [
-    "AI Customer Churn Prediction",
-    "AI Financial Fraud Detection", 
-    "AI Supply Chain Optimization",
-    "AI Healthcare Diagnostics",
-    "AI Content Creation Studio",
-    "AI Predictive Maintenance",
-    "AI Legal Document Analysis",
-    "AI Real Estate Analytics",
-    "AI Cybersecurity Threat Intelligence",
-    "AI Personal Finance Advisor",
-    "AI E-commerce Personalization",
-    "AI HR Recruitment Platform",
-    "AI Energy Management System",
-    "AI Autonomous Vehicle Management",
-    "AI Blockchain Supply Chain",
-    "AI Smart City Infrastructure",
+    "AI Customer Churn Prediction"
+    "AI Financial Fraud Detection"
+    "AI Supply Chain Optimization"
+    "AI Healthcare Diagnostics"
+    "AI Content Creation Studio"
+    "AI Predictive Maintenance"
+    "AI Legal Document Analysis"
+    "AI Real Estate Analytics"
+    "AI Cybersecurity Threat Intelligence"
+    "AI Personal Finance Advisor"
+    "AI E-commerce Personalization"
+    "AI HR Recruitment Platform"
+    "AI Energy Management System"
+    "AI Autonomous Vehicle Management"
+    "AI Blockchain Supply Chain"
+    "AI Smart City Infrastructure"
     "AI Quantum Financial Trading"
   ];
 
@@ -50,14 +50,14 @@ const ContactPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              Get in Touch with
+              Get in Touch with;
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
-                Zion Tech Group
+                Zion Tech Group;
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-indigo-100 mb-8 max-w-4xl mx-auto">
               Ready to transform your business with cutting-edge AI solutions? 
-              Contact our expert team for a personalized consultation and discover how our 
+              Contact our expert team for a personalized consultation and discover how our;
               20+ micro SAAS services can drive your success.
             </p>
           </div>
@@ -143,9 +143,9 @@ const ContactPage: React.FC = () => {
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
-                      First Name
+                      First Name;
                     </label>
-                    <input
+                    <input;
                       type="text"
                       id="firstName"
                       name="firstName"
@@ -155,9 +155,9 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
-                      Last Name
+                      Last Name;
                     </label>
-                    <input
+                    <input;
                       type="text"
                       id="lastName"
                       name="lastName"
@@ -169,9 +169,9 @@ const ContactPage: React.FC = () => {
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address
+                    Email Address;
                   </label>
-                  <input
+                  <input;
                     type="email"
                     id="email"
                     name="email"
@@ -182,9 +182,9 @@ const ContactPage: React.FC = () => {
 
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Phone Number
+                    Phone Number;
                   </label>
-                  <input
+                  <input;
                     type="tel"
                     id="phone"
                     name="phone"
@@ -195,9 +195,9 @@ const ContactPage: React.FC = () => {
 
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                    Company
+                    Company;
                   </label>
-                  <input
+                  <input;
                     type="text"
                     id="company"
                     name="company"
@@ -208,9 +208,9 @@ const ContactPage: React.FC = () => {
 
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                    Service Interest
+                    Service Interest;
                   </label>
-                  <select
+                  <select;
                     id="service"
                     name="service"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
@@ -226,9 +226,9 @@ const ContactPage: React.FC = () => {
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message
+                    Message;
                   </label>
-                  <textarea
+                  <textarea;
                     id="message"
                     name="message"
                     rows={4}
@@ -237,11 +237,11 @@ const ContactPage: React.FC = () => {
                   ></textarea>
                 </div>
 
-                <button
+                <button;
                   type="submit"
                   className="w-full bg-indigo-600 text-white py-3 px-6 rounded-lg hover:bg-indigo-700 transition-colors font-semibold"
                 >
-                  Send Message
+                  Send Message;
                 </button>
               </form>
             </div>
@@ -257,7 +257,7 @@ const ContactPage: React.FC = () => {
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We deliver cutting-edge AI solutions with proven results and exceptional support
+              We deliver cutting-edge AI solutions with proven results and exceptional support;
             </p>
           </div>
 
@@ -304,22 +304,22 @@ const ContactPage: React.FC = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-indigo-100 mb-8">
-            Join hundreds of companies already using our AI solutions to drive growth and innovation
+            Join hundreds of companies already using our AI solutions to drive growth and innovation;
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <a;
               href={`tel:${contactInfo.phone}`}
               className="px-8 py-4 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
             >
               <Phone className="w-5 h-5 mr-2" />
               Call {contactInfo.phone}
             </a>
-            <a 
+            <a;
               href={`mailto:${contactInfo.email}`}
               className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors inline-flex items-center"
             >
               <Mail className="w-5 h-5 mr-2" />
-              Email Us
+              Email Us;
             </a>
           </div>
           <div className="mt-8 text-indigo-200">
@@ -330,6 +330,6 @@ const ContactPage: React.FC = () => {
       </section>
     </div>
   );
-};
+}
 
 export default ContactPage;

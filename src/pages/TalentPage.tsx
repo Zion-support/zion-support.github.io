@@ -1,109 +1,110 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Users, 
-  Search, 
-  Filter, 
-  MapPin, 
-  Clock, 
-  Star, 
-  Award, 
-  TrendingUp,
-  CheckCircle,
-  ArrowRight,
-  Briefcase,
-  GraduationCap,
-  Code,
-  Database,
-  Shield,
-  Cloud,
-  Brain,
-  Zap
+  Users;
+  Search;
+  Filter;
+  MapPin;
+  Clock;
+  Star;
+  Award;
+  TrendingUp;
+  CheckCircle;
+  ArrowRight;
+  Briefcase;
+  GraduationCap;
+  Code;
+  Database;
+  Shield;
+  Cloud;
+  Brain;
+  Zap;
 } from 'lucide-react';
 
 export function TalentPage() {
+
   const talentCategories = [
     {
-      title: 'AI & Machine Learning',
-      icon: Brain,
-      count: 45,
+      title: 'AI & Machine Learning'
+      icon: Brain;
+      count: 45;
       skills: ['TensorFlow', 'PyTorch', 'Computer Vision', 'NLP', 'Deep Learning']
-    },
+    }
     {
-      title: 'Cloud & DevOps',
-      icon: Cloud,
-      count: 32,
+      title: 'Cloud & DevOps'
+      icon: Cloud;
+      count: 32;
       skills: ['AWS', 'Azure', 'Kubernetes', 'Docker', 'Terraform']
-    },
+    }
     {
-      title: 'Cybersecurity',
-      icon: Shield,
-      count: 28,
+      title: 'Cybersecurity'
+      icon: Shield;
+      count: 28;
       skills: ['Penetration Testing', 'SOC', 'Compliance', 'Risk Assessment', 'Incident Response']
-    },
+    }
     {
-      title: 'Full Stack Development',
-      icon: Code,
-      count: 67,
+      title: 'Full Stack Development'
+      icon: Code;
+      count: 67;
       skills: ['React', 'Node.js', 'Python', 'TypeScript', 'PostgreSQL']
-    },
+    }
     {
-      title: 'Data Science',
-      icon: Database,
-      count: 23,
+      title: 'Data Science'
+      icon: Database;
+      count: 23;
       skills: ['Python', 'R', 'SQL', 'Tableau', 'Machine Learning']
-    },
+    }
     {
-      title: 'Blockchain',
-      icon: Zap,
-      count: 15,
+      title: 'Blockchain'
+      icon: Zap;
+      count: 15;
       skills: ['Solidity', 'Web3', 'DeFi', 'Smart Contracts', 'Ethereum']
     }
   ];
 
   const featuredProfessionals = [
     {
-      name: 'Sarah Chen',
-      title: 'Senior AI Engineer',
-      location: 'San Francisco, CA',
-      rating: 4.9,
-      projects: 47,
-      skills: ['Machine Learning', 'Python', 'TensorFlow', 'Computer Vision'],
-      availability: 'Available',
-      hourlyRate: '$120-150',
+      name: 'Sarah Chen'
+      title: 'Senior AI Engineer'
+      location: 'San Francisco, CA'
+      rating: 4.9;
+      projects: 47;
+      skills: ['Machine Learning', 'Python', 'TensorFlow', 'Computer Vision']
+      availability: 'Available'
+      hourlyRate: '$120-150'
       avatar: '👩‍💻'
-    },
+    }
     {
-      name: 'Marcus Rodriguez',
-      title: 'Cloud Solutions Architect',
-      location: 'Austin, TX',
-      rating: 4.8,
-      projects: 32,
-      skills: ['AWS', 'Kubernetes', 'Terraform', 'DevOps'],
-      availability: 'Available',
-      hourlyRate: '$100-130',
+      name: 'Marcus Rodriguez'
+      title: 'Cloud Solutions Architect'
+      location: 'Austin, TX'
+      rating: 4.8;
+      projects: 32;
+      skills: ['AWS', 'Kubernetes', 'Terraform', 'DevOps']
+      availability: 'Available'
+      hourlyRate: '$100-130'
       avatar: '👨‍💻'
-    },
+    }
     {
-      name: 'Dr. Emily Watson',
-      title: 'Cybersecurity Expert',
-      location: 'New York, NY',
-      rating: 5.0,
-      projects: 28,
-      skills: ['Penetration Testing', 'SOC', 'Compliance', 'Risk Assessment'],
-      availability: 'Available',
-      hourlyRate: '$150-200',
+      name: 'Dr. Emily Watson'
+      title: 'Cybersecurity Expert'
+      location: 'New York, NY'
+      rating: 5.0;
+      projects: 28;
+      skills: ['Penetration Testing', 'SOC', 'Compliance', 'Risk Assessment']
+      availability: 'Available'
+      hourlyRate: '$150-200'
       avatar: '👩‍🔬'
-    },
+    }
     {
-      name: 'Alex Kim',
-      title: 'Full Stack Developer',
-      location: 'Seattle, WA',
-      rating: 4.9,
-      projects: 56,
-      skills: ['React', 'Node.js', 'TypeScript', 'PostgreSQL'],
-      availability: 'Available',
-      hourlyRate: '$80-120',
+      name: 'Alex Kim'
+      title: 'Full Stack Developer'
+      location: 'Seattle, WA'
+      rating: 4.9;
+      projects: 56;
+      skills: ['React', 'Node.js', 'TypeScript', 'PostgreSQL']
+      availability: 'Available'
+      hourlyRate: '$80-120'
       avatar: '👨‍💻'
     }
   ];
@@ -115,10 +116,10 @@ export function TalentPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Find Top Tech Talent
+              Find Top Tech Talent;
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Connect with vetted professionals, AI experts, and technology specialists 
+              Connect with vetted professionals, AI experts, and technology specialists;
               ready to accelerate your projects and drive innovation.
             </p>
             
@@ -126,13 +127,13 @@ export function TalentPage() {
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search by skills, location, or expertise..."
                   className="w-full pl-12 pr-4 py-4 bg-zion-slate-darker border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                 />
                 <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-zion-cyan text-white px-6 py-2 rounded-lg hover:bg-zion-cyan-light transition-colors">
-                  Search
+                  Search;
                 </button>
               </div>
             </div>
@@ -165,10 +166,10 @@ export function TalentPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Browse by Expertise
+              Browse by Expertise;
             </h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto">
-              Find professionals across all major technology domains and specializations
+              Find professionals across all major technology domains and specializations;
             </p>
           </div>
 
@@ -181,7 +182,7 @@ export function TalentPage() {
                     <h3 className="text-xl font-semibold text-white">{category.title}</h3>
                   </div>
                   <span className="text-sm text-zion-slate-light bg-zion-purple/20 px-2 py-1 rounded">
-                    {category.count} available
+                    {category.count} available;
                   </span>
                 </div>
                 
@@ -193,11 +194,11 @@ export function TalentPage() {
                   ))}
                 </div>
                 
-                <Link
+                <Link;
                   to={`/talent?category=${category.title.toLowerCase().replace(/\s+/g, '-')}`}
                   className="text-zion-cyan hover:text-zion-cyan-light transition-colors flex items-center group-hover:translate-x-1 transform duration-300"
                 >
-                  View Professionals
+                  View Professionals;
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
@@ -211,10 +212,10 @@ export function TalentPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Featured Professionals
+              Featured Professionals;
             </h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto">
-              Top-rated experts ready to join your next project
+              Top-rated experts ready to join your next project;
             </p>
           </div>
 
@@ -269,7 +270,7 @@ export function TalentPage() {
                 </div>
 
                 <button className="w-full bg-zion-cyan text-white py-2 rounded-lg hover:bg-zion-cyan-light transition-colors">
-                  View Profile
+                  View Profile;
                 </button>
               </div>
             ))}
@@ -282,10 +283,10 @@ export function TalentPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              How It Works
+              How It Works;
             </h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto">
-              Simple steps to find and hire the perfect talent for your project
+              Simple steps to find and hire the perfect talent for your project;
             </p>
           </div>
 
@@ -333,17 +334,17 @@ export function TalentPage() {
             Join thousands of companies that trust Zion Tech Group to connect them with top talent.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <Link;
               to="/request-quote"
               className="bg-white text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-slate-light transition-colors"
             >
-              Post a Job
+              Post a Job;
             </Link>
-            <Link
+            <Link;
               to="/contact"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-zion-cyan transition-colors"
             >
-              Contact Us
+              Contact Us;
             </Link>
           </div>
         </div>

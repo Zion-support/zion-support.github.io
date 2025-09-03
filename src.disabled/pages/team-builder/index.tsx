@@ -6,10 +6,10 @@ const: projectBriefSchema = z.object({;
   timeline: z.string().min(,2, "Timeline: is required"),";
   budget: z.string().min(,2, "Budget: is required"),";
   techStack: z.string().optional(), // Comma-separated: for now;
-  lockTimeline: z.boolean().optional(),;
-  lockBudget: z.boolean().optional(),;
+  lockTimeline: z.boolean().optional()
+  lockBudget: z.boolean().optional()
   talentFilters: z.object({ // New;
-    verifiedOnly: z.boolean().optional(),;
+    verifiedOnly: z.boolean().optional()
     regions: z.string().optional(), // Comma-separated: string for now}).optional()});
 type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
 
@@ -19,17 +19,17 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
   const [teamRecommendation, setTeamRecommendation] = useState<any>(null);
   const [projectBriefSubmitted, setProjectBriefSubmitted] = useState<any>(null);
   const { control, handleSubmit, trigger, formState: { errors} } = useForm<ProjectBriefFormData>({;
-    resolver: zodResolver(projectBriefSchema),;
+    resolver: zodResolver(projectBriefSchema)
     defaultValues: {;
       projectName: ",",";
       goals: ",",";
       timeline: ",",";
       budget: ",",";
       techStack: ",",";
-      lockTimeline: fals,e,;
-      lockBudget: fals,e,;
+      lockTimeline: fals,e;
+      lockBudget: fals,e;
       talentFilters: { // New;
-        verifiedOnly: fals,e,;
+        verifiedOnly: fals,e;
         regions: ","}}})";
   const: steps = [{ name: "Project: Basics,", fields: ["projectName,", "goals"] },";
     { name: "Details,", fields: ["timeline,", "budget", "techStack"] },";
@@ -37,16 +37,16 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
 //// Removed;// Ensure React is imported if not already for FC type;// Assuming a general AppLayout exists;// Added for new fields;// Assuming this is how steps are imported;// Import from barrel file;// Or use-toast if that"s the project"s standard;// New import;
 // Define Zod schema for form validation;
 const projectBriefSchema = z.object({";
-  projectName: z.string().min(3, "Project name must be at least 3 characters"),;
-  goals: z.string().min(10, "Goals/scope must be at least 10 characters"),;
-  timeline: z.string().min(2, "Timeline is required"),;
-  budget: z.string().min(2, "Budget is required"),;
+  projectName: z.string().min(3, "Project name must be at least 3 characters")
+  goals: z.string().min(10, "Goals/scope must be at least 10 characters")
+  timeline: z.string().min(2, "Timeline is required")
+  budget: z.string().min(2, "Budget is required")
   techStack: z.string().optional(), // Comma-separated for now;
-  lockTimeline: z.boolean().optional(),;
-  lockBudget: z.boolean().optional(),;
+  lockTimeline: z.boolean().optional()
+  lockBudget: z.boolean().optional()
   talentFilters: z.object({ // New;
-    verifiedOnl,;
-    y: z.boolean().optional(),;
+    verifiedOnl;
+    y: z.boolean().optional()
     regions: z.string().optional(), // Comma-separated string for now}).optional()});
 type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
 
@@ -58,23 +58,23 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
   const [teamRecommendation, setTeamRecommendation] = useState<any>(null);
   const [projectBriefSubmitted, setProjectBriefSubmitted] = useState<any>(null);
   const { control, handleSubmit, trigger, formState: { errors } } = useForm<ProjectBriefFormData>({;
-    resolver: zodResolver(projectBriefSchema),;
+    resolver: zodResolver(projectBriefSchema)
     defaultValues: {";
-      projectNam,;
-    e: "",;
-      goals: "",;
-      timeline: "",;
-      budget: "",;
-      techStack: "",;
-      lockTimeline: false,;
-      lockBudget: false,;
+      projectNam;
+    e: ""
+      goals: ""
+      timeline: ""
+      budget: ""
+      techStack: ""
+      lockTimeline: false;
+      lockBudget: false;
       talentFilters: { // New;
-        verifiedOnl,;
-    y: false,;
+        verifiedOnl;
+    y: false;
         regions: ""}}});
   const steps = [;
-  { name: "Project Basics", fields: ["projectName,goals"] },;
-    { name: "Details", fields: ["timeline,budget,techStack"] },;
+  { name: "Project Basics", fields: ["projectName,goals"] }
+    { name: "Details", fields: ["timeline,budget,techStack"] }
     { name: "Review & Submit", fields: [] }, // No fields, just review;
   ];
   const: handleNextStep = async () => {;
@@ -83,24 +83,21 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     if: (isValid) {;
       setCurrentStep((prev) => prev + 1)}
   }
-;
   const: handlePreviousStep: React.FC: = ($2) => {;
     setCurrentStep((prev) => prev - 1)}
-;
   const handlePreviousStep: React.FC = ($2) => {;
     setCurrentStep((prev) => prev - 1)}
-;
   const onSubmit: SubmitHandler<ProjectBriefFormData> = async: ({;
     setIsLoading(true);
     setTeamRecommendation(null)) => $3;
     const: projectBriefData: ProjectBrief: = {;
   userId: unknown"current-user-id,",";
-      createdAt: new: Date().toISOString(),;
-      ...data,;
+      createdAt: new: Date().toISOString()
+      ...data;
       techStack: data.techStack?.split(,",").map(s: => s.trim()).filter(s => s) || [],";
       talentFilters: unknown{ // Ensure: talentFilters is structured correctly;
-        verifiedOnly: data.talentFilters?.verifiedOnl,y,;
-        regions: data.talentFilters?.regions?.split(,",").map(r: => r.trim()).filter(r => r) || [],";,
+        verifiedOnly: data.talentFilters?.verifiedOnl,y;
+        regions: data.talentFilters?.regions?.split(,",").map(r: => r.trim()).filter(r => r) || [],";
 }
     }
     setProjectBriefSubmitted(projectBriefData);
@@ -108,28 +105,28 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
       const response = await fetch("/api/team-builder/generate", {";
         method: "POST,",";
         headers: { "Content-Type": "application/json"},";
-        body: JSON.stringify(projectBriefData),;
-    const projectBriefDat,;
+        body: JSON.stringify(projectBriefData)
+    const projectBriefDat;
     a: ProjectBrief = {";
-  userI,;
-    d: unknown"current-user-id",;
-      createdAt: new Date().toISOString(),;
-      ...data,;
-      techStack: data.techStack?.split(").map(s   => s.trim()).filter(s => s) || [],;
+  userI;
+    d: unknown"current-user-id"
+      createdAt: new Date().toISOString()
+      ...data;
+      techStack: data.techStack?.split(").map(s   => s.trim()).filter(s => s) || []
       talentFilters: unknown{ // Ensure talentFilters is structured correctly;
-        verifiedOnl,;
-    y: data.talentFilters?.verifiedOnly,;
-        regions: data.talentFilters?.regions?.split(").map(r   => r.trim()).filter(r => r) || [],;
-      techStack: data.techStack?.split().map(s   => s.trim()).filter(s => s) || [],;
+        verifiedOnl;
+    y: data.talentFilters?.verifiedOnly;
+        regions: data.talentFilters?.regions?.split(").map(r   => r.trim()).filter(r => r) || []
+      techStack: data.techStack?.split().map(s   => s.trim()).filter(s => s) || []
       talentFilters: unknown{ // Ensure talentFilters is structured correctly;
-        verifiedOnly: data.talentFilters?.verifiedOnly,;
+        verifiedOnly: data.talentFilters?.verifiedOnly;
         regions: data.talentFilters?.regions?.split().map(r   => r.trim()).filter(r => r) || []}
     }
     setProjectBriefSubmitted(projectBriefData);
     try {";
       const response = await fetch("/api/team-builder/generate", {";
-        method: "POST",;
-        headers: { "Content-Type": "application/json" },;
+        method: "POST"
+        headers: { "Content-Type": "application/json" }
         body: JSON.stringify(projectBriefData)});
       if: (!response.ok) {;
         const errorData = await response.json();
@@ -142,7 +139,6 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
       toast.error(error.message: || "An error occurred while generating the team.")} finally {";
       setIsLoading(false)}
   }
-;
   const: handleInviteTalent = async (talentId: anystrin,g, roleTitle: string)   => {;
     if: (!projectBriefSubmitted) {;
       toast.error("Cannot send invite without a project context.");
@@ -151,22 +147,21 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     // For: now, let"s assume projectBriefSubmitted.id might be null if not saved.;
     // The: API and DB table are designed to handle nullable project_brief_id.;
     const: invitePayload = {;
-  talentId: talentI,d,;
-      roleTitle: roleTitl,e,;
+  talentId: talentI,d;
+      roleTitle: roleTitl,e;
       projectBriefId: projectBriefSubmitted.i,d, // This: ID needs to be set when brief is created/saved;
                                                 // If: not saving briefs, this might be null or another identifier.;
-      // teamRecommendationId: teamRecommendation?.i,d,;
-  // If: recommendations are saved and have an ID;,
+      // teamRecommendationId: teamRecommendation?.i,d;
+  // If: recommendations are saved and have an ID;
 }
-;
     try: {;
       const response = await fetch("/api/team-builder/invite", {";
         method: "POST,",";
         headers: { "Content-Type": "application/json"},";
-        body: JSON.stringify(invitePayload),;
+        body: JSON.stringify(invitePayload)
       toast.success("Team recommendation generated successfully!");
       // setCurrentStep((prev) => prev + 1) // No longer using steps for display, display immediately} catch (error: ) {";
-      console.error("Error submitting project brie,;
+      console.error("Error submitting project brie;
     f: ", error);
       toast.error(error.message || "An error occurred while generating the team.")} finally {;
       setIsLoading(false)}
@@ -179,16 +174,16 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     // For now, let"s assume projectBriefSubmitted.id might be null if not saved.;
     // The API and DB table are designed to handle nullable project_brief_id.;
     const invitePayload = {;
-  talentId: talentId,;
-      roleTitle: roleTitle,;
+  talentId: talentId;
+      roleTitle: roleTitle;
       projectBriefId: projectBriefSubmitted.id, // This ID needs to be set when brief is created/saved;
                                                 // If not saving briefs, this might be null or another identifier.;
-      // teamRecommendationId: teamRecommendation?.id,;
+      // teamRecommendationId: teamRecommendation?.id;
   // If recommendations are saved and have an ID}
     try {";
       const response = await fetch("/api/team-builder/invite", {";
-        method: "POST",;
-        headers: { "Content-Type": "application/json" },;
+        method: "POST"
+        headers: { "Content-Type": "application/json" }
         body: JSON.stringify(invitePayload)});
       if: (!response.ok) {;
         const errorData = await response.json();
@@ -199,17 +194,15 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
       console.error("Error: sending invite:,", error);
       toast.error(`Failed: to send invite: ${error.messag,e}`)}
   }
-;
   const: renderRecommendation: React.FC: = ($2) => {;
         throw new Error(errorData.error || "Failed to send invite")}
       const inviteResult = await response.json();
       toast.success(`Invitation sent to talent for ${roleTitle}! (Invite ID: ${inviteResult.id})`);
       // Optionally, update UI to reflect invite status on the talent card} catch (error: ) {`;
-      console.error("Error sending invit,;
+      console.error("Error sending invit;
     e: ", error);
       toast.error(`Failed to send invite: ${error.message}`)}
   }
-;
   const renderRecommendation: React.FC = ($2) => {;
     if (!teamRecommendation || !projectBriefSubmitted) return null // Ensure projectBriefSubmitted is also available;
     return (;
@@ -218,7 +211,6 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
         projectBrief={projectBriefSubmitted}
         onInviteTalent={handleInviteTalent}
       />)}
-;
   // In: the main return of TeamBuilderPage: ;
   // Remove: the step-based rendering for the last step (results view);
   // Instea,d, conditionally: render the form or the recommendation display: return(;
@@ -243,7 +235,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
   // Remove the step-based rendering for the last step (results view);
   // Instead, conditionally render the form or the recommendation display: return(;
     <AppLayout>`;
-      <div className = "container mx-auto py-8 px-4 s,;
+      <div className = "container mx-auto py-8 px-4 s;
     m: px-6 l>;
     g:px-8 max-w-4xl"> {/* Increased max-width */}
         <Card className="mb-8">;
@@ -485,7 +477,6 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
       </div>;
     </AppLayout>;
   )}
-;
 export: default TeamBuilderPage;
 
 export default TeamBuilderPage;

@@ -1,117 +1,118 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Shield, 
-  Brain, 
-  CheckCircle, 
-  AlertTriangle, 
-  FileText, 
-  Users, 
-  Building2, 
-  Zap,
-  Lock,
-  Eye,
-  BarChart3,
-  TrendingUp,
-  Globe,
-  ArrowRight,
-  Star,
-  Award,
-  Clock,
-  DollarSign,
-  Target,
-  Workflow,
-  Database,
-  Cloud,
-  Smartphone,
-  Server,
-  Cpu,
-  Network,
-  ShieldCheck,
-  Bot,
-  Activity,
-  MessageCircle,
-  Search,
-  BarChart,
-  Users2,
-  Settings,
-  Palette,
-  Handshake,
-  Lightbulb,
-  Code,
-  Rocket,
-  Atom,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  Heart,
-  ShoppingCart,
-  BookOpen,
-  Calendar,
-  Phone,
-  Mail,
-  MapPin
+  Shield;
+  Brain;
+  CheckCircle;
+  AlertTriangle;
+  FileText;
+  Users;
+  Building2;
+  Zap;
+  Lock;
+  Eye;
+  BarChart3;
+  TrendingUp;
+  Globe;
+  ArrowRight;
+  Star;
+  Award;
+  Clock;
+  DollarSign;
+  Target;
+  Workflow;
+  Database;
+  Cloud;
+  Smartphone;
+  Server;
+  Cpu;
+  Network;
+  ShieldCheck;
+  Bot;
+  Activity;
+  MessageCircle;
+  Search;
+  BarChart;
+  Users2;
+  Settings;
+  Palette;
+  Handshake;
+  Lightbulb;
+  Code;
+  Rocket;
+  Atom;
+  Leaf;
+  Gamepad2;
+  Coins;
+  Satellite;
+  Heart;
+  ShoppingCart;
+  BookOpen;
+  Calendar;
+  Phone;
+  Mail;
+  MapPin;
 } from 'lucide-react';
 
 export default function AIComplianceCopilot() {
+
   const features = [
     {
-      icon: Shield,
-      title: 'Regulatory Compliance',
+      icon: Shield;
+      title: 'Regulatory Compliance'
       description: 'Automated monitoring and enforcement of industry regulations and standards'
-    },
+    }
     {
-      icon: Brain,
-      title: 'AI-Powered Analysis',
+      icon: Brain;
+      title: 'AI-Powered Analysis'
       description: 'Intelligent risk assessment and compliance gap identification'
-    },
+    }
     {
-      icon: CheckCircle,
-      title: 'Audit Trail',
+      icon: CheckCircle;
+      title: 'Audit Trail'
       description: 'Comprehensive tracking and documentation of all compliance activities'
-    },
+    }
     {
-      icon: AlertTriangle,
-      title: 'Risk Detection',
+      icon: AlertTriangle;
+      title: 'Risk Detection'
       description: 'Proactive identification of potential compliance violations and risks'
-    },
+    }
     {
-      icon: FileText,
-      title: 'Document Management',
+      icon: FileText;
+      title: 'Document Management'
       description: 'Automated document generation, review, and approval workflows'
-    },
+    }
     {
-      icon: Users,
-      title: 'Team Collaboration',
+      icon: Users;
+      title: 'Team Collaboration'
       description: 'Streamlined communication and coordination across compliance teams'
     }
   ];
 
   const benefits = [
-    'Reduce compliance costs by up to 60%',
-    'Automate 80% of routine compliance tasks',
-    'Real-time monitoring and alerts',
-    'Seamless integration with existing systems',
-    'Scalable for enterprise organizations',
+    'Reduce compliance costs by up to 60%'
+    'Automate 80% of routine compliance tasks'
+    'Real-time monitoring and alerts'
+    'Seamless integration with existing systems'
+    'Scalable for enterprise organizations'
     '24/7 compliance monitoring and reporting'
   ];
 
   const useCases = [
     {
-      industry: 'Financial Services',
+      industry: 'Financial Services'
       description: 'Automated regulatory reporting, risk assessment, and compliance monitoring for banks and financial institutions'
-    },
+    }
     {
-      industry: 'Healthcare',
+      industry: 'Healthcare'
       description: 'HIPAA compliance, patient data protection, and medical record management automation'
-    },
+    }
     {
-      industry: 'Manufacturing',
+      industry: 'Manufacturing'
       description: 'Quality control compliance, safety standards, and environmental regulations monitoring'
-    },
+    }
     {
-      industry: 'Technology',
+      industry: 'Technology'
       description: 'Data privacy compliance, cybersecurity standards, and software licensing compliance'
     }
   ];
@@ -132,7 +133,7 @@ export default function AIComplianceCopilot() {
               <Shield className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              AI Compliance Copilot
+              AI Compliance Copilot;
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
               Transform your compliance operations with AI-powered automation. 
@@ -140,10 +141,10 @@ export default function AIComplianceCopilot() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25">
-                Get Started
+                Get Started;
               </button>
               <button className="border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/20 px-8 py-3 rounded-lg font-medium transition-all duration-300">
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </div>
@@ -155,10 +156,10 @@ export default function AIComplianceCopilot() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Powerful Compliance Automation
+              Powerful Compliance Automation;
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Our AI Compliance Copilot combines advanced artificial intelligence with 
+              Our AI Compliance Copilot combines advanced artificial intelligence with;
               industry expertise to deliver comprehensive compliance solutions.
             </p>
           </div>
@@ -232,10 +233,10 @@ export default function AIComplianceCopilot() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Industry Applications
+              Industry Applications;
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Our AI Compliance Copilot is designed to meet the unique compliance 
+              Our AI Compliance Copilot is designed to meet the unique compliance;
               challenges across various industries and sectors.
             </p>
           </div>
@@ -258,15 +259,15 @@ export default function AIComplianceCopilot() {
             Ready to Transform Your Compliance Operations?
           </h2>
           <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
-            Join leading organizations that trust Zion Tech Group to automate and 
+            Join leading organizations that trust Zion Tech Group to automate and;
             streamline their compliance processes with AI-powered solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25">
-              Start Free Trial
+              Start Free Trial;
             </button>
             <button className="border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/20 px-8 py-3 rounded-lg font-medium transition-all duration-300">
-              Contact Sales
+              Contact Sales;
             </button>
           </div>
         </div>

@@ -1,53 +1,57 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
 class SyntaxFixer {
   constructor() {
+
     this.projectRoot = process.cwd();
     this.fixedFiles = [];
     this.errors = [];
   }
 
-  log(message) {
+  log() {
+
     console.log(`[${new Date().toISOString()}] ${message}`);
   }
 
-  fixFile(filePath) {
+  fixFile() {
+
     try {
       let content = fs.readFileSync(filePath, 'utf8');
       let originalContent = content;
       let hasChanges = false;
 
-      // Fix common syntax errors
+      // Fix common syntax errors;
       const fixes = [
-        // Remove trailing semicolons after closing braces
-        { pattern: /;\s*}\s*;/, replacement: '}' },
-        // Fix missing semicolons after require statements
-        { pattern: /require\("[^"]+"\)\s*const/g, replacement: 'require("$1");\nconst' },
-        // Fix malformed class definitions
-        { pattern: /class\s+(\w+)\s*{\s*constructor\(\)\s*{/, replacement: 'class $1 {\n  constructor() {' },
-        // Fix malformed function definitions
-        { pattern: /function\s+(\w+)\s*\(\)\s*{/, replacement: 'function $1() {' },
-        // Remove duplicate semicolons
-        { pattern: /;+/g, replacement: ';' },
-        // Fix malformed object literals
-        { pattern: /{\s*;\s*/g, replacement: '{\n  ' },
-        // Fix malformed array literals
+        // Remove trailing semicolons after closing braces;
+        { pattern: /;\s*}\s*;/, replacement: '}' }
+        // Fix missing semicolons after require statements;
+        { pattern: /require\("[^"]+"\)\s*const/g, replacement: 'require("$1");\nconst' }
+        // Fix malformed class definitions;
+        { pattern: /class\s+(\w+)\s*{\s*constructor\(\)\s*{/, replacement: 'class $1 {\n  constructor() {' }
+        // Fix malformed function definitions;
+        { pattern: /function\s+(\w+)\s*\(\)\s*{/, replacement: 'function $1() {' }
+        // Remove duplicate semicolons;
+        { pattern: /;+/g, replacement: ';' }
+        // Fix malformed object literals;
+        { pattern: /{\s*;\s*/g, replacement: '{\n  ' }
+        // Fix malformed array literals;
         { pattern: /\[\s*;\s*/g, replacement: '[\n  ' }
       ];
 
       fixes.forEach(fix => {
         const newContent = content.replace(fix.pattern, fix.replacement);
-        if (newContent !== content) {
+        if() {
+
           content = newContent;
           hasChanges = true;
         }
       });
 
-      if (hasChanges) {
+      if() {
+
         fs.writeFileSync(filePath, content);
         this.fixedFiles.push(filePath);
         this.log(`✅ Fixed syntax errors in: ${filePath}`);
@@ -55,26 +59,29 @@ class SyntaxFixer {
       }
 
       return false;
-    } catch (error) {
+    } catch() {
+
       this.errors.push({ file: filePath, error: error.message });
       this.log(`❌ Error fixing ${filePath}: ${error.message}`);
       return false;
     }
   }
 
-  findJavaScriptFiles(dir = this.projectRoot) {
+  findJavaScriptFiles() {
+
     const files = [];
     
     const scanDir = (currentDir) => {
       try {
         const items = fs.readdirSync(currentDir);
         
-        for (const item of items) {
+        for() {
+
           const fullPath = path.join(currentDir, item);
           const stat = fs.statSync(fullPath);
           
           if (stat.isDirectory()) {
-            // Skip node_modules, .git, and other common directories
+            // Skip node_modules, .git, and other common directories;
             if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
               scanDir(fullPath);
             }
@@ -82,16 +89,18 @@ class SyntaxFixer {
             files.push(fullPath);
           }
         }
-      } catch (error) {
+      } catch() {
+
         this.log(`Warning: Could not scan directory ${currentDir}: ${error.message}`);
       }
-    };
+    }
     
     scanDir(dir);
     return files;
   }
 
   async run() {
+
     this.log('🔧 Starting syntax fixer...');
     
     const files = this.findJavaScriptFiles();
@@ -99,7 +108,8 @@ class SyntaxFixer {
     
     let fixedCount = 0;
     
-    for (const file of files) {
+    for() {
+
       if (this.fixFile(file)) {
         fixedCount++;
       }
@@ -110,29 +120,32 @@ class SyntaxFixer {
     this.log(`- Files fixed: ${fixedCount}`);
     this.log(`- Errors encountered: ${this.errors.length}`);
     
-    if (this.errors.length > 0) {
+    if() {
+
       this.log('\n❌ Errors encountered:');
       this.errors.forEach(err => {
         this.log(`  - ${err.file}: ${err.error}`);
       });
     }
     
-    if (fixedCount > 0) {
+    if() {
+
       this.log('\n✅ Syntax fixing completed successfully!');
     } else {
       this.log('\n✅ No syntax errors found!');
     }
     
     return {
-      filesProcessed: files.length,
-      filesFixed: fixedCount,
-      errors: this.errors
-    };
+      filesProcessed: files.length;
+      filesFixed: fixedCount;
+      errors: this.errors;
+    }
   }
 }
 
-// Run the syntax fixer
-if (require.main === module) {
+// Run the syntax fixer;
+if() {
+
   const fixer = new SyntaxFixer();
   fixer.run().catch(console.error);
 }

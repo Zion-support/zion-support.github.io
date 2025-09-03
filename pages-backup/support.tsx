@@ -7,35 +7,35 @@ const Head = dynamic(() => import("next/head"), { ssr: false })
 const Link = dynamic(() => import("next/link"), { ssr: false })
 }
           answer: "You can create an account by visiting our sign-up page and providing your email address and basic information. We"ll send you a verification email to complete the process."}, {
-          question: "What services do you offer?",
+          question: "What services do you offer?"
           answer: "We offer AI services, cloud solutions, cybersecurity, and micro SaaS development. Visit our services page for detailed information about each offering.
-},
+}
         {"
           question: "How do I get my API key?", answer: "Once you"ve created an account, you can find your API key in the dashboard under the "API Keys" section. You can generate new keys or revoke existing ones as needed.
 
       ]
 }, {"
-      title: "Billing & Pricing",
-      questions: [,
+      title: "Billing & Pricing"
+      questions: [
         {,"
 question: "What payment methods do you accept?", answer: "We accept all major credit cards, PayPal, and bank transfers. Enterprise customers can also arrange for invoicing and payment terms.
-},
+}
         {"
           question: "Can I change my plan anytime?", answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we"ll prorate any billing differences.
-},
+}
         {"
           question: "Do you offer refunds?", answer: "We offer a 30-day money-back guarantee for all our services. If you"re not satisfied, contact our support team for a full refund.
 
 
       ]
 }, {"
-      title: "Technical Support",
-      questions: [,
+      title: "Technical Support"
+      questions: [
         {,"
-question: "How do I integrate your API?", answer: "We provide comprehensive documentation and SDKs for popular programming languages. Check our API documentation for detailed integration guides."},
+question: "How do I integrate your API?", answer: "We provide comprehensive documentation and SDKs for popular programming languages. Check our API documentation for detailed integration guides."}
         {"
           question: "What are your API rate limits?", answer: "Rate limits vary by plan. Free plans have 1,000 requests per month, Professional plans have 100,000 requests per month, and Enterprise plans have unlimited requests.
-},
+}
         {"
           question: "How do I report a bug?", answer: "You can report bugs through our support portal, email support@ziontechgroup.com, or use the feedback form in your dashboard.
 
@@ -45,43 +45,43 @@ question: "How do I integrate your API?", answer: "We provide comprehensive docu
 
   ]
 
-  const supportTiers = [], price: "Free"},
+  const supportTiers = [], price: "Free"}
     {"
       name: "Standard Support", description: "Professional support for business users","
-      responseTime: "4-8 hours", features: [",
+      responseTime: "4-8 hours", features: ["
         "Priority email support","
         "Live chat support", "Phone support","
         "Advanced documentation", "API support""
-      ], price: "Included with Professional Plan"},
+      ], price: "Included with Professional Plan"}
     {"
       name: "Premium Support", description: "Dedicated support for enterprise customers","
-      responseTime: "1-2 hours", features: [",
+      responseTime: "1-2 hours", features: ["
         "Dedicated support manager","
         "24/7 phone support", "Priority ticket handling","
         "Custom integrations", "SLA guarantees","
         "On-site support""
-      ], price: "Custom Pricing",
+      ], price: "Custom Pricing"
   {,"
 name: "Community Support","
       description: "Free support through our community forums and knowledge base","
-      responseTime: "24-48 hours",
-      features: [",
+      responseTime: "24-48 hours"
+      features: ["
         "Community forums,Knowledge base access,Basic documentation,Email support"
       ],"
-      price: "Free"},
+      price: "Free"}
     {"
       name: "Standard Support","
       description: "Professional support for business users","
-      responseTime: "4-8 hours",
-      features: [",
+      responseTime: "4-8 hours"
+      features: ["
         "Priority email support,Live chat support,Phone support,Advanced documentation,API support"
       ],"
-      price: "Included with Professional Plan"},
+      price: "Included with Professional Plan"}
     {"
       name: "Premium Support","
       description: "Dedicated support for enterprise customers","
-      responseTime: "1-2 hours",
-      features: [",
+      responseTime: "1-2 hours"
+      features: ["
         "Dedicated support manager,24/7 phone support,Priority ticket handling,Custom integrations,SLA guarantees,On-site support"
       ],"
       price: "Custom Pricing"}
@@ -104,9 +104,9 @@ name: "Community Support","
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32">"
             <div className="text-center">"
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-                Support Center,
+                Support Center;
               </h1>"
-              <p className="text-xl sm:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">",
+              <p className="text-xl sm:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">"
                 We&apos,re here to help you succeed. Get the support you need, when you need it."
               </p>"
               <div className="max-w-2xl mx-auto">"
@@ -117,7 +117,7 @@ name: "Community Support","
                     className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus: outline-none focus:ring-2 focus:ring-blue-500"  />
                 </div>
         </section>
-,
+
         {/* comment */}"
         <section className="py-20 sm: py-32">"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
@@ -126,16 +126,16 @@ name: "Community Support","
                 How Can We Help?
               </h2>"
               <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-                Choose the support option that works best for you,
+                Choose the support option that works best for you;
               </p>
             </div>
             "
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">,
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {supportOptions.map((option, index) => ("
                 <div key="{index}" className="bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow">"
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">"
                     <option.icon className="w-8 h-8 text-white" />
-                  </div>",
+                  </div>"
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{option.title}</h3>"
                   <p className="text-gray-600 mb-6 text-center">{option.description}</p>"
                   <ul className="space-y-3 mb-6">
@@ -153,7 +153,7 @@ name: "Community Support","
                       <ArrowRight className="w-4 h-4 ml-2 inline"  />
                     </button>
                   </Link>
-                </div>,
+                </div>
               ))}
 
             </div>
@@ -163,14 +163,14 @@ name: "Community Support","
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">"
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                Frequently Asked Questions,
+                Frequently Asked Questions;
               </h2>"
               <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-                Find quick answers to common questions,
+                Find quick answers to common questions;
               </p>
             </div>
             "
-            <div className="space-y-12">,
+            <div className="space-y-12">
               {faqCategories.map((category, index) => ("
                 <div key="{index}" className="bg-gray-50 rounded-xl p-8">"
                   <h3 className="text-2xl font-bold text-gray-900 mb-6">{category.title}</h3>"
@@ -192,14 +192,14 @@ name: "Community Support","
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">"
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                Support Tiers,
+                Support Tiers;
               </h2>"
               <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-                Choose the support level that matches your needs,
+                Choose the support level that matches your needs;
               </p>
             </div>
             "
-            <div className="{"grid" grid-cols-1 md:grid-cols-3 gap-8">,
+            <div className="{"grid" grid-cols-1 md:grid-cols-3 gap-8">
               {supportTiers.map((tier, index) => ("
                 <div key="{index}" className="{"bg-white" rounded-xl shadow-lg p-8 ${
                   tier.name === "Standard Support" ? "ring-2 ring-blue-500 transform scale-105" : ">
@@ -207,7 +207,7 @@ name: "Community Support","
                   {tier.name = == "Standard Support" && ("
                     <div className=""text-center" mb-4"}>"
                       <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular,
+                        Most Popular;
                       </span>
                     </div>
                   )}"
@@ -247,14 +247,14 @@ name: "Community Support","
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
             <div className="text-center mb-16">"
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                Contact Information,
+                Contact Information;
               </h2>"
               <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-                Get in touch with the right team for your needs,
+                Get in touch with the right team for your needs;
               </p>
             </div>
             "
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {contactMethods.map((method, index) => ("
                 <div key="{index}" className="bg-gray-50 rounded-xl p-8 text-center">"
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{method.title}</h3>"
@@ -287,7 +287,7 @@ name: "Community Support","
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Still Need Help?
             </h2>"
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">,
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               Can&apos,t find what you&apos,re looking for? Our support team is ready to help you succeed.
             </p>"
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">"
@@ -299,13 +299,13 @@ name: "Community Support","
               </Link>"
               <a href="mailto:support@ziontechgroup.com">"
                 <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
-                  Email Us,
+                  Email Us;
                 </button>
               </a>
             </div>
         </section>
       </main>
-</>",
+</>"
   )}
 
-export default Component
+export default Component;

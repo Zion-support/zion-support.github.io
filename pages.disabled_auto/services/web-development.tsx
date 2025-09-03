@@ -5,7 +5,7 @@ import { CheckCircle, Code, Globe, Smartphone, Zap, Shield, Award } from 'lucide
 
 const WebDevelopment: NextPage = () => {
   return (
-    <Layout
+    <Layout;
       title="Web Development Services - Zion Tech Group"
       description="Modern, responsive web applications built with cutting-edge technologies. Full-stack development, e-commerce, and custom web solutions."
     >
@@ -13,7 +13,7 @@ const WebDevelopment: NextPage = () => {
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Web
+            Web;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Development</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
@@ -23,10 +23,10 @@ const WebDevelopment: NextPage = () => {
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              Start Your Web Project
+              Start Your Web Project;
             </Link>
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              View All Services
+              View All Services;
             </Link>
           </div>
         </div>
@@ -38,7 +38,7 @@ const WebDevelopment: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Web Development Services</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We create modern, scalable web applications that deliver exceptional user experiences 
+              We create modern, scalable web applications that deliver exceptional user experiences;
               and drive business growth across all industries.
             </p>
           </div>
@@ -55,15 +55,15 @@ const WebDevelopment: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  React & Next.js
+                  React & Next.js;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Vue.js & Nuxt.js
+                  Vue.js & Nuxt.js;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Angular & TypeScript
+                  Angular & TypeScript;
                 </li>
               </ul>
             </div>
@@ -79,15 +79,15 @@ const WebDevelopment: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Node.js & Express
+                  Node.js & Express;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Python & Django
+                  Python & Django;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  RESTful APIs
+                  RESTful APIs;
                 </li>
               </ul>
             </div>
@@ -103,15 +103,15 @@ const WebDevelopment: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Mobile-First Design
+                  Mobile-First Design;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Cross-Browser Compatibility
+                  Cross-Browser Compatibility;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Progressive Web Apps
+                  Progressive Web Apps;
                 </li>
               </ul>
             </div>
@@ -127,15 +127,15 @@ const WebDevelopment: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Custom E-commerce
+                  Custom E-commerce;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Payment Integration
+                  Payment Integration;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Inventory Management
+                  Inventory Management;
                 </li>
               </ul>
             </div>
@@ -151,15 +151,15 @@ const WebDevelopment: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  SSL/TLS Certificates
+                  SSL/TLS Certificates;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Authentication & Authorization
+                  Authentication & Authorization;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Security Audits
+                  Security Audits;
                 </li>
               </ul>
             </div>
@@ -175,15 +175,15 @@ const WebDevelopment: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Speed Optimization
+                  Speed Optimization;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  SEO Optimization
+                  SEO Optimization;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Core Web Vitals
+                  Core Web Vitals;
                 </li>
               </ul>
             </div>
@@ -258,16 +258,16 @@ const WebDevelopment: NextPage = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              Start Your Web Project
+              Start Your Web Project;
             </Link>
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              View All Services
+              View All Services;
             </Link>
           </div>
         </div>
       </section>
     </Layout>
   );
-};
+}
 
 export default WebDevelopment;

@@ -1,22 +1,22 @@
 import React, { useState, useRef, useEffect } from "react"
 interface LazyImageProps {;
-  src: string,,
-alt: string,
+  src: string,
+alt: string;
   width?: number"
-  height?: number,
-  className?: string,,
+  height?: number;
+  className?: string,
   priority?: boolean,"
-  placeholder?: "blur" | "empty",
+  placeholder?: "blur" | "empty"
   blurDataURL?: string}
 
-const LazyImage: React.FC<LazyImageProps> = ({,
-  src,
-  alt,
-  width,
+const LazyImage: React.FC<LazyImageProps> = ({
+  src;
+  alt;
+  width;
   height,"
-  className = "",
+  className = ""
   priority = false,"
-  placeholder = "empty",
+  placeholder = "empty"
   blurDataURL}) => {
   const [isLoaded, setIsLoaded] = useState(false)
 }
@@ -25,21 +25,23 @@ const LazyImage: React.FC<LazyImageProps> = ({,
   const imgRef = useRef<HTMLDivElement>(null)
 }
   useEffect(() => {
-    if (priority) return
+    if (priority) return;
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if() {
+
           setIsInView(true)
 }
           observer.disconnect()
 }
 
-      },
+      }
       { threshold: 0.1 }
 
     )
 }
-    if (imgRef.current) {
+    if() {
+
       observer.observe(imgRef.current)
 }
 
@@ -71,14 +73,13 @@ const LazyImage: React.FC<LazyImageProps> = ({,
 
     </div>
   )}
-      },;
+      }
       { threshold: 0.1 }
     );
     if (imgRef.current) {;
-      observer.observe(imgRef.current);,
+      observer.observe(imgRef.current);
 }
-;
-    return () => observer.disconnect();,
+    return () => observer.disconnect();
 }, [priority]);
   return (;
     <div ref = "{imgRef}" className="{`relative" ${className}`}>;
@@ -87,14 +88,13 @@ const LazyImage: React.FC<LazyImageProps> = ({,
           <LoadingSpinner size="sm" text="" />;
         </div>;
       )}
-      ;
       {isInView && (";
         <Image src="{src}"";
           alt="{alt}"";
           width="{width}"";
           height="{height}"";
           className="{`transition-opacity" duration-300 ${>;
-            isLoaded ? "opacity-100" : 'opacity-0>;,
+            isLoaded ? "opacity-100" : 'opacity-0>;
 }`}";
           onLoad = "{()" => setIsLoaded(true)}";
           priority="{priority}"";
@@ -103,7 +103,7 @@ const LazyImage: React.FC<LazyImageProps> = ({,
         />;
       )}
     </div>;
-  );,
+  );
 }
 ";
 export default LazyImage;"

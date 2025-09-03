@@ -1,5 +1,6 @@
 
 export default function Page() {
+
 interface ChatAssistantProps {
   children?: React.ReactNode;
   enabled?: boolean;
@@ -13,20 +14,20 @@ interface ChatAssistantProps {
 }
 
 export const ChatAssistant: React.FC<ChatAssistantProps> = ({
-  enabled = true,
-  position = 'bottom-right',
-  theme = 'dark',
-  language = 'en',
-  maxMessages = 100,
-  enableVoice = true,
-  enableFileUpload = true,
-  enableSuggestions = true
+  enabled = true;
+  position = 'bottom-right'
+  theme = 'dark'
+  language = 'en'
+  maxMessages = 100;
+  enableVoice = true;
+  enableFileUpload = true;
+  enableSuggestions = true;
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([{
-      id: '1',
-      text: 'Hello! I\'m your AI assistant.How can I help you today?',
-      sender: 'assistant',
+      id: '1'
+      text: 'Hello! I\'m your AI assistant.How can I help you today?'
+      sender: 'assistant'
       timestamp: new Date()
     }
   ]);
@@ -38,14 +39,13 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
+  }
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
     scrollToBottom();
   }, [messages]);
@@ -54,62 +54,63 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
     if(!inputValue.trim()) return;
 
     const userMessage: Message = {
-      id: Date.now().toString(),
-      text: inputValue,
-      sender: 'user',
+      id: Date.now().toString()
+      text: inputValue;
+      sender: 'user'
       timestamp: new Date()
-    };
+    }
 
     setMessages(prev => [...prev, userMessage]);
     setInputValue('');
     setIsTyping(true);
 
-    // Simulate AI response
+    // Simulate AI response;
     setTimeout(() => {
       const aiResponse: Message = {
-        id: (Date.now() + 1).toString(),
-        text: getAIResponse(inputValue),
-        sender: 'assistant',
-        timestamp: new Date(),
+        id: (Date.now() + 1).toString()
+        text: getAIResponse(inputValue)
+        sender: 'assistant'
+        timestamp: new Date()
         metadata: {
-          confidence: 0.95,
+          confidence: 0.95;
           suggestions: ['Learn more about our services', 'Schedule a consultation', 'View pricing']
         }
-      };
+      }
       
       setMessages(prev => [...prev, aiResponse]);
       setIsTyping(false);
     }, 1500);
-  };
+  }
 
   const getAIResponse = (input: string): string => {
-    const responses = ["I'd be happy to help you with that! Can you provide more details about your specific needs?",
-      "That's a great question! Our team specializes in AI, cybersecurity, and cloud solutions.Which area interests you most?",
-      "Thank you for reaching out! I can connect you with one of our experts to discuss your requirements in detail.",
-      "Based on your query, I recommend exploring our comprehensive service offerings.Would you like me to guide you through them?",
+    const responses = ["I'd be happy to help you with that! Can you provide more details about your specific needs?"
+      "That's a great question! Our team specializes in AI, cybersecurity, and cloud solutions.Which area interests you most?"
+      "Thank you for reaching out! I can connect you with one of our experts to discuss your requirements in detail."
+      "Based on your query, I recommend exploring our comprehensive service offerings.Would you like me to guide you through them?"
       "Excellent! We have extensive experience in that area.Let me provide you with some relevant information and next steps."
     ];
     return responses[Math.floor(Math.random() * responses.length)];
-  };
+  }
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
-    if(e.key === 'Enter' && !e.shiftKey) {
+    if() {
+
       e.preventDefault();
       handleSendMessage();
     }
-  };
+  }
 
   const toggleVoice = () => {
     setIsListening(!isListening);
-    // Voice functionality would be implemented here
-  };
+    // Voice functionality would be implemented here;
+  }
 
   const positionClasses = {
-    'bottom-right': 'bottom-4 right-4',
-    'bottom-left': 'bottom-4 left-4',
-    'top-right': 'top-4 right-4',
+    'bottom-right': 'bottom-4 right-4'
+    'bottom-left': 'bottom-4 left-4'
+    'top-right': 'top-4 right-4'
     'top-left': 'top-4 left-4'
-  };
+  }
 
   if(!enabled) return null;
 
@@ -117,7 +118,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       {/* Chat Window */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
@@ -136,13 +137,13 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                 </div>
               </div>
               <div className="flex items-center gap-2">
-                <button 
+                <button;
                   className="text-gray-400 hover:text-white transition-colors p-1"
                   onClick={() => setIsOpen(false)}
                 >
                   <Settings className="w-4 h-4" />
                 </button>
-                <button 
+                <button;
                   className="text-gray-400 hover:text-white transition-colors p-1"
                   onClick={() => setIsOpen(false)}
                 >
@@ -154,7 +155,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
             {/* Messages */}
             <div className="flex-1 overflow-y-auto p-4 space-y-3">
               {messages.map((message) => (
-                <div 
+                <div;
                   key={message.id}
                   className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
@@ -189,7 +190,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
             <div className="p-4 border-t border-white/10">
               <div className="flex items-center gap-2">
                 <div className="flex-1 relative">
-                  <input
+                  <input;
                     ref={inputRef}
                     type="text"
                     value={inputValue}
@@ -207,7 +208,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                 )}
                 
                 {enableVoice && (
-                  <button 
+                  <button;
                     onClick={toggleVoice}
                     className={`transition-colors p-2 ${isListening ? 'text-red-400' : 'text-gray-400 hover:text-white'
                     }`}
@@ -216,7 +217,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                   </button>
                 )}
                 
-                <button 
+                <button;
                   onClick={handleSendMessage}
                   disabled={!inputValue.trim()}
                   className="bg-cyan-500 hover:bg-cyan-600 disabled:opacity-50 disabled:cursor-not-allowed text-white p-2 rounded-lg transition-colors"
@@ -230,7 +231,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       </AnimatePresence>
 
       {/* Toggle Button */}
-      <motion.button
+      <motion.button;
         onClick={() => setIsOpen(!isOpen)}
         className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-lg flex items-center justify-center text-white hover:shadow-xl transition-shadow"
         whileHover={{ scale: 1.05 }}
@@ -240,6 +241,6 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       </motion.button>
     </div>
   );
-};
+}
 
 export default ChatAssistant;

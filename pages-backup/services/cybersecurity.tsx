@@ -8,11 +8,11 @@ import React from "react"
         <title>Cybersecurity Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive cybersecurity services including security assessment, network protection, data security, and incident response. Protect your business from cyber threats."  />
         <meta name="viewport" content="width=device-width, initial-scale=1"  />"
-        <link rel="canonical" href="https: // comment
+        <link rel="canonical" href="https: // comment;
       </Head>
       <Navigation  />
       "
-      <main className="min-h-screen bg-white">,
+      <main className="min-h-screen bg-white">
         {/* comment */}"
         <section className="bg-gradient-to-br from-red-50 to-orange-100 py-20">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
@@ -23,7 +23,7 @@ import React from "react"
                 </div>
               </div>"
               <h1 className="text-5xl font-bold text-gray-900 mb-6">"
-                Comprehensive <span className="text-red-600">Cybersecurity</span> Services,
+                Comprehensive <span className="text-red-600">Cybersecurity</span> Services;
               </h1>"
               <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
                 Protect your business from cyber threats with our advanced security solutions. 
@@ -31,18 +31,18 @@ import React from "react"
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <Link href="/contact" className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors">
-                  Get Security Assessment,
+                  Get Security Assessment;
                 </Link>"
                 <Link href="/solutions" className="border-2 border-red-600 text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-600 hover:text-white transition-colors">
-                  View Solutions,
+                  View Solutions;
                 </Link>
               </div>
         </section>
-,
+
         {/* comment */}"
         <section className="py-20 bg-white">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">,
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => ("
                 <div key="{index}" className="text-center">"
                   <div className="text-4xl font-bold text-red-600 mb-2">{stat.number}</div>"
@@ -59,18 +59,18 @@ import React from "react"
             <div className="text-center mb-16">"
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Cybersecurity Services</h2>"
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Comprehensive security solutions designed to protect your business from evolving cyber threats,
+                Comprehensive security solutions designed to protect your business from evolving cyber threats;
               </p>
             </div>
             "
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">,
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {services.map((service, index) => ("
                 <div key="{index}" className="bg-white rounded-lg p-8 shadow-sm hover: shadow-md transition-shadow">"
                   <div className="flex items-center mb-6">"
                     <div className="p-3 bg-red-100 rounded-lg mr-4">"
                       <service.icon className="w-8 h-8 text-red-600" />
                     </div>
-                    <div>",
+                    <div>"
                       <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>"
                       <p className="text-gray-600">{service.description}</p>
                     </div>
@@ -95,11 +95,11 @@ import React from "react"
             <div className="text-center mb-16">"
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Compliance & Standards</h2>"
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                We help you meet industry standards and regulatory requirements,
+                We help you meet industry standards and regulatory requirements;
               </p>
             </div>
             "
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {compliance.map((item, index) => ("
                 <div key="{index}" className="text-center">"
                   <div className="bg-red-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">"
@@ -118,7 +118,7 @@ import React from "react"
             <div className="text-center mb-16">"
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Security Process</h2>"
               <p className="text-lg text-gray-600">
-                A systematic approach to securing your business,
+                A systematic approach to securing your business;
               </p>
             </div>
             "
@@ -144,22 +144,22 @@ import React from "react"
                 <p className="text-gray-600">Continuous monitoring and maintenance of security systems</p>
               </div>
         </section>
-,
+
         {/* comment */}"
         <section className="py-20 bg-gradient-to-r from-red-600 to-orange-600">"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
             <h2 className="text-3xl font-bold text-white mb-6">
-              Secure Your Business Today,
+              Secure Your Business Today;
             </h2>"
             <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">"
               Don"t wait for a security breach. Get professional cybersecurity protection for your business.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link href="/contact" className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Get Security Assessment,
+                Get Security Assessment;
               </Link>"
               <Link href="/case-studies" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors">
-                View Case Studies,
+                View Case Studies;
               </Link>
             </div>
         </section>
@@ -168,4 +168,4 @@ import React from "react"
     </>
   )}
 
-"export default Cybersecurity
+"export default Cybersecurity;

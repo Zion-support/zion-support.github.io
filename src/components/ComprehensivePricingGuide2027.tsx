@@ -1,35 +1,34 @@
 import {  import { innovativeServices2027 } from '../data/innovativeServices2027';
 
 export default function Page() {
+
     );
 
-    if(element) {
+    if() {
+
       observer.observe(element)}
 
     return () => observer.disconnect () }, []) ;
 
-  // Combine all services
-  
-      source: 'innovative',;
-      category: service.category,;
-      features: service.features || [],;
-      ctaLabel: service.ctaLabel || 'Get Started',;
+  // Combine all services;
+      source: 'innovative'
+      category: service.category;
+      features: service.features || []
+      ctaLabel: service.ctaLabel || 'Get Started'
       href: service.href || '/contact'}) ) ;  ];
 
-  // Filter services based on search and category
-
+  // Filter services based on search and category;
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchQuery.toLowerCase());
 
     return matchesSearch && matchesCategory && matchesPrice}) ;
 
-  // Sort services
-  
+  // Sort services;
     switch(sortBy) {;
       case 'name':;
         return a.title.localeCompare(b.title);
       case 'price':;
-        return parseFloat(a.price.replace(/[^0-9.]/g,)) - parseFloat(b.price.replace(/[^0-9.]/g,));      case 'category':;
+        return parseFloat(a.price.replace(/[^0-9.]/g)) - parseFloat(b.price.replace(/[^0-9.]/g));      case 'category':;
         return a.category.localeCompare(b.category) ;
       default:;
         return 0}
@@ -38,28 +37,28 @@ export default function Page() {
   ;
 '
   phone: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com',;  ;
+    email: 'kleber@ziontechgroup.com',  ;
   ;
   ;
   ;
   address: '364 E Main St STE 1008 Middletown DE 19709';
   ;
 
-};
+}
 
 
     if(numPrice < 100) return 'Low';
     if(numPrice < 1000) return 'Medium';
-    return 'High'};
+    return 'High'}
       default: return 'text-white'}
-  };
+  }
 
-      'Robotics & Automation': Cpu,;
-      'AR/VR Solutions': Eye,;
-      'Biotech Solutions': Dna,;
-      'LegalTech Solutions': Scale,;
-      'Real Estate Tech': Home,;
-      'Supply Chain Solutions': Truck};    return iconMap[category] || Target};
+      'Robotics & Automation': Cpu;
+      'AR/VR Solutions': Eye;
+      'Biotech Solutions': Dna;
+      'LegalTech Solutions': Scale;
+      'Real Estate Tech': Home;
+      'Supply Chain Solutions': Truck}    return iconMap[category] || Target}
 
   return ("
     <section id = "comprehensive-pricing-guide" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
@@ -71,18 +70,16 @@ export default function Page() {
 "
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header */}
-        <motion.div
+        <motion.div;
           initial = {
 
-  { opacity: 0,
-  y: 30
-
+  { opacity: 0;
+  y: 30;
 }}
           animate = {
 
-  isVisible ? { opacity: 1,
-  y: 0
-
+  isVisible ? { opacity: 1;
+  y: 0;
 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}"
           className="text-center mb-16"
@@ -93,36 +90,33 @@ export default function Page() {
 "
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">"
             <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
-              Comprehensive
+              Comprehensive;
             </span>
             <br />"
             <span className="text-white">Pricing & ROI Guide</span>
           </h2>
 "
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Explore our complete portfolio of innovative services with transparent pricing,
+            Explore our complete portfolio of innovative services with transparent pricing;
             detailed ROI analysis, and market insights to help you make informed decisions.</p>
         </motion.div>
 
         {/* Search and Filters */}
-        <motion.div
+        <motion.div;
           initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           animate = {
 
-  isVisible ? { opacity: 1,
-  y: 0
-
+  isVisible ? { opacity: 1;
+  y: 0;
 } : { opacity: 0, y: 20 }}
           transition = {
 
-  { duration: 0.8,
-  delay: 0.2
-
+  { duration: 0.8;
+  delay: 0.2;
 }}"
           className="mb-12"
 "
@@ -140,7 +134,7 @@ export default function Page() {
               </div>
 
               {/* Category Filter */}
-              <select
+              <select;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}"
                 className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
@@ -152,7 +146,7 @@ export default function Page() {
               </select>
 
               {/* Price Range Filter */}
-              <select
+              <select;
                 value={priceRange}
                 onChange={(e) => setPriceRange(e.target.value)}"
                 className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
@@ -164,7 +158,7 @@ export default function Page() {
               </select>
 
               {/* Sort By */}
-              <select
+              <select;
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}"
                 className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
@@ -178,7 +172,7 @@ export default function Page() {
             {/* Results Count */}"
             <div className="mt-4 text-center">"
               <span className="text-zion-cyan font-semibold">
-                {filteredServices.length} services found
+                {filteredServices.length} services found;
               </span>
               {searchQuery && ("
                 <span className="text-gray-400 ml-2">"
@@ -189,38 +183,35 @@ export default function Page() {
         </motion.div>;
 
         {/* Services Grid */}
-        <motion.div
+        <motion.div;
           initial = {
 
-  { opacity: 0,
+  { opacity: 0;
   y: 30 }}          animate = {
 
-  isVisible ? { opacity: 1,;
+  isVisible ? { opacity: 1;
   y: 0 } : { opacity: 0, y: 30 }}          transition = {
 
-  { duration: 0.8,
+  { duration: 0.8;
   delay: 0.4 }}"          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
           {sortedServices.map((service, index) => (;
-            <motion.div
+            <motion.div;
               key={`${service.source}-${service.id}`}
               initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
               animate = {
 
-  isVisible ? { opacity: 1,
-  y: 0
-
+  isVisible ? { opacity: 1;
+  y: 0;
 } : { opacity: 0, y: 20 }}
               transition = {
 
-  { duration: 0.6,
-  delay: index * 0.05
-
+  { duration: 0.6;
+  delay: index * 0.05;
 }}"
               className="group relative"
 "
@@ -246,7 +237,7 @@ export default function Page() {
                   <div className="mb-4">"
                     <div className="flex flex-wrap gap-2">
                       {service.features.slice(0, 3).map((feature, featureIndex) => (
-                        <span
+                        <span;
                           key={featureIndex}"
                           className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30"
 
@@ -289,7 +280,7 @@ export default function Page() {
                   </div>) }
 
                 {/* CTA Button */}
-                <a
+                <a;
                   href={service.href}"
                   target={service.external ? "_blank" : "_self"}"
                   rel={service.external ? "noopener noreferrer" : ""}"
@@ -303,16 +294,16 @@ export default function Page() {
         </motion.div>
 
         {/* Contact Section */}
-        <motion.div
+        <motion.div;
           initial = {
 
-  { opacity: 0,
+  { opacity: 0;
   y: 30 }}          animate = {
 
-  isVisible ? { opacity: 1,;
+  isVisible ? { opacity: 1;
   y: 0 } : { opacity: 0, y: 30 }}          transition = {
 
-  { duration: 0.8,
+  { duration: 0.8;
   delay: 0.6 }}"          className="text-center"
 "
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">;"
@@ -320,7 +311,7 @@ export default function Page() {
               Need Custom Pricing or Have Questions?
             </h3>"
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Our team of experts is ready to provide personalized quotes and answer any questions
+              Our team of experts is ready to provide personalized quotes and answer any questions;
               about our services.Get in touch for a detailed consultation.</p>
 "
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">"
@@ -356,5 +347,5 @@ export default function Page() {
           </div>;
         </motion.div>;
       </div>;
-    </section>;) };
+    </section>;) }
 '"`

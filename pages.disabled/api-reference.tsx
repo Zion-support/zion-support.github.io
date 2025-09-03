@@ -4,7 +4,7 @@ import MainLayout from '../components/layout/MainLayout';
 
 const APIReference: NextPage = () => {
   return (
-    <MainLayout
+    <MainLayout;
       title="API Reference - Zion Tech Group"
       description="Complete API reference for Zion Tech Group services"
       keywords="API reference, REST API, SDK, authentication"
@@ -17,6 +17,6 @@ const APIReference: NextPage = () => {
       </div>
     </MainLayout>
   );
-};
+}
 
 export default APIReference;

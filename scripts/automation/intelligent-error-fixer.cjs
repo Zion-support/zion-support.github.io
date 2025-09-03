@@ -11,6 +11,7 @@ const path = require("path");
 console.log(`"🤖 Starting intelligent error fixer...");
 
 async function $1() {
+
   let totalFixes = 0;
 
   try {
@@ -21,6 +22,7 @@ async function $1() {
     console.log(`"🔧 Fixing missing dependencies...");
 console.log(`🤖 Starting intelligent error fixer...`);
 async function fixAllErrors() {
+
   let totalFixes = 0;
   try {
   console.log(`🤖 Running intelligent error fixer at ${new Date().toISOString()}`;
@@ -45,9 +47,9 @@ async function fixAllErrors() {
     totalFixes += await runAutoFixCommands();
     // Generate report;
     const report = {
-  timestamp: new Date().toISOString(),;
-      totalFixes: totalFixes,;
-      status: `completed`,;
+  timestamp: new Date().toISOString()
+      totalFixes: totalFixes;
+      status: `completed`
       summary: Intelligent error fixer completed with ${totalFixes} fixes applied`}
     const reportPath = path.join(;
       process.cwd(),intelligent-error-fixer-report.json`;
@@ -75,12 +77,11 @@ async function fixAllErrors() {
 
     // Generate report;
     const report = {
-  timestamp: new Date().toISOString(),;
-      totalFixes: totalFixes,;
-      status: "completed",;
-      summary: Intelligent error fixer completed with ${totalFixes} fixes applied",;,
+  timestamp: new Date().toISOString()
+      totalFixes: totalFixes;
+      status: "completed"
+      summary: Intelligent error fixer completed with ${totalFixes} fixes applied",
 }
-;
     const reportPath = path.join(;
       process.cwd(),intelligent-error-fixer-report.json";
     );
@@ -89,33 +90,35 @@ async function fixAllErrors() {
     console.log( ✅ Intelligent error fixer completed. Applied ${totalFixes} fixes.;
     );console.log(📊 Report saved to: ${reportPath}``);
 
-    return totalFixes;,
-} catch (error) {
-  console.error(`❌ Intelligent error fixer failed: `, error.message);    return totalFixes;,
+    return totalFixes;
+} catch() {
+
+  console.error(`❌ Intelligent error fixer failed: `, error.message);    return totalFixes;
 }
 }
-;
 async function fixMissingDependencies() {
+
   let fixes = 0;
   // Common missing dependencies;
   const missingDeps = [`react-error-boundary`", "@""types/react-error-boundary""", "react-helmet-async"", "@""types/react-helmet-async"``, ``];
-  for (const dep of missingDeps) {
+  for() {
+
   try {console.log(`📦 Installing ${dep}...`);execSync(`npm install ${dep}`, { stdio: `pipe` });
 
   // Common missing dependencies;
   const missingDeps = ["react-error-boundary", "@"types/react-error-boundary"", "react-helmet-async", "@"types/react-helmet-async"", "];
 
-  for (const dep of missingDeps) {
+  for() {
+
   try {console.log(`📦 Installing ${dep}...`);execSync(`npm install ${dep}`, { stdio: "pipe" });
-      fixes++;console.log(`✅ Installed ${dep}`);,
-} catch (error) {  console.log(`⚠️  Could not install ${dep  }: ${error.message}`);,
+      fixes++;console.log(`✅ Installed ${dep}`);
+} catch (error) {  console.log(`⚠️  Could not install ${dep  }: ${error.message}`);
 }
   }
-;
-  return fixes;,
+  return fixes;
 }
-;
 async function fixTypeScriptErrors() {
+
   let fixes = 0;
   // Common TypeScript fixes;
   const commonFixes = [
@@ -126,31 +129,32 @@ async function fixTypeScriptErrors() {
   pattern: /const\s+(\w+)\s*:\s*any\s*=/g", "replacement: "const $1: unknown ="", "description: "Fix any type annotations"", "}", "{
   pattern: /function\s+(\w+)\s*\(\s*\)\s*:\s*any\s*{/g", "replacement: "function $1(): unknown {"", "description: "Fix function return types"", "}", ""];
   const files = getAllSourceFiles();
-  for (const file of files) {
+  for() {
+
   if (file.endsWith(".tsx") || file.endsWith(`.ts`)) {
   try {
   let content = fs.readFileSync(file, `utf8`);
         let originalContent = content;
 
-        for (const fix of commonFixes) {
+        for() {
+
   if (fix.pattern.test(content)) {
   content = content.replace(fix.pattern, fix.replacement);console.log(`🔧 Applied fix in ${file}: ${fix.description}`);
-            fixes++;,
+            fixes++;
 }
         }
-;
-        if (content !== originalContent) {
-  fs.writeFileSync(file, content);,
+        if() {
+
+  fs.writeFileSync(file, content);
 }
-      } catch (error) {  console.log(`⚠️  Could not fix ${file  }: ${error.message}`);,
+      } catch (error) {  console.log(`⚠️  Could not fix ${file  }: ${error.message}`);
 }
     }
   }
-;
-  return fixes;,
+  return fixes;
 }
-;
 async function fixLintingErrors() {
+
   let fixes = 0;
   // Common linting fixes;
   const lintingFixes = [`{
@@ -159,7 +163,8 @@ async function fixLintingErrors() {
   pattern: /console\.warn\(/g", "replacement: "// console.warn("", "description: "Comment out console.warn statements"", "}", "{
   pattern: /\/\*\s*eslint-disable\s*\*\//g", "replacement: "/* eslint-disable */"", "description: "Fix eslint-disable comments"", "}", ``];
   const files = getAllSourceFiles();
-  for (const file of files) {
+  for() {
+
   try {
   let content = fs.readFileSync(file, `utf8`);
 
@@ -172,34 +177,35 @@ async function fixLintingErrors() {
 
   const files = getAllSourceFiles();
 
-  for (const file of files) {
+  for() {
+
   try {
   let content = fs.readFileSync(file, "utf8");
       let originalContent = content;
 
-      for (const fix of lintingFixes) {
+      for() {
+
   if (fix.pattern.test(content)) {
   let originalContent = content;`);
 `);
       for (const fix of lintingFixes) {`);
         if (fix.pattern.test(content)) {`);
           content = content.replace(fix.pattern, fix.replacement);console.log(`🔧 Applied linting fix in ${file}: ${fix.description});
-          fixes++;,
+          fixes++;
 }
       }
-;
-      if (content !== originalContent) {
-  fs.writeFileSync(file, content);,
+      if() {
+
+  fs.writeFileSync(file, content);
 }
-    } catch (error) {  console.log(⚠️  Could not fix ${file  }: ${error.message}``);,
-} catch (error) {console.log(⚠️  Could not fix ${file}: ${error.message}``);,
+    } catch (error) {  console.log(⚠️  Could not fix ${file  }: ${error.message}``);
+} catch (error) {console.log(⚠️  Could not fix ${file}: ${error.message}``);
 }
   }
-;
-  return fixes;,
+  return fixes;
 }
-;
 async function fixBuildErrors() {
+
   let fixes = 0;
 
   // Fix common build errors;
@@ -208,8 +214,9 @@ async function fixBuildErrors() {
   try {
   execSync("npm install react-error-boundary", "{ stdio: "pipe" });
           console.log(`"✅ Installed react-error-boundary");
-          return 1;,
-} catch (error) {
+          return 1;
+} catch() {
+
   console.log(`"⚠️  Could not install react-error-boundary");
   // Fix common build errors;
   const buildFixes = [`{
@@ -217,66 +224,74 @@ async function fixBuildErrors() {
   try {
   execSync("npm install react-error-boundary"", "{ stdio: "pipe" });
           console.log(`✅ Installed react-error-boundary`);
-          return 1;,
-} catch (error) {
+          return 1;
+} catch() {
+
   console.log(`"⚠️  Could not install react-error-boundary");
-          return 0;,
+          return 0;
 }
       }", "description: "Install missing react-error-boundary"", "}", "{
   pattern: /Cannot find module "react-helmet-async"/g", "action: async () => {
   try {
   execSync("npm install react-helmet-async"", "{ stdio: "pipe" });
           console.log("✅ Installed react-helmet-async");
-          return 1;,
-} catch (error) {
+          return 1;
+} catch() {
+
   console.log("⚠️  Could not install react-helmet-async");
-          return 0;,
+          return 0;
 }
       }", "description: "Install missing react-helmet-async"", "}", ""];
   // Check for build errors by running build;
   try {
-  execSync("npm run build", { stdio: `pipe` });,
-} catch (error) {
+  execSync("npm run build", { stdio: `pipe` });
+} catch() {
+
   const buildOutput = error.stdout || error.stderr || ``;
-    for (const fix of buildFixes) {
-  if (fix.pattern.test(buildOutput)) {console.log(🔧 Applying build fix: ${fix.description  });,
-} catch (error) {
+    for() {
+
+  if (fix.pattern.test(buildOutput)) {console.log(🔧 Applying build fix: ${fix.description  });
+} catch() {
+
   console.log(`⚠️  Could not install react-error-boundary`);
-          return 0;,
+          return 0;
 }
       }", "description: "Install missing react-error-boundary", "}", "{
   pattern: /Cannot find module "react-helmet-async"/g", "action: async () => {
   try {
   execSync("npm install react-helmet-async", "{ stdio: "pipe" });
           console.log("✅ Installed react-helmet-async");
-          return 1;,
-} catch (error) {
+          return 1;
+} catch() {
+
   console.log("⚠️  Could not install react-helmet-async");
-          return 0;,
+          return 0;
 }
       }", "description: "Install missing react-helmet-async", "}", "];
 
   // Check for build errors by running build;
   try {
-  execSync("npm run build", { stdio: "pipe" });,
-} catch (error) {
+  execSync("npm run build", { stdio: "pipe" });
+} catch() {
+
   const buildOutput = error.stdout || error.stderr || ";
 
-    for (const fix of buildFixes) {
+    for() {
+
   if (fix.pattern.test(buildOutput)) {console.log(🔧 Applying build fix: ${fix.description});
-        fixes += await fix.action();,
+        fixes += await fix.action();
 }
     }
   }
-;
-  return fixes;,
+  return fixes;
 }
-;
 async function fixSyntaxErrors() {
+
   let fixes = 0;
 
   const files = getAllSourceFiles();
-  for (const file of files) {
+  for() {
+
   try {
   let content = fs.readFileSync(file, `utf8`);
       let originalContent = content;
@@ -291,32 +306,34 @@ async function fixSyntaxErrors() {
   pattern: /{\s*$/gm", "replacement: "{\n"", "condition: () => true", "}", "// Fix trailing commas;
         {
   pattern: /", "\s*}/g", "replacement: "}"", "condition: () => true", `}`, ``];
-      for (const fix of syntaxFixes) {
+      for() {
+
   if (fix.pattern.test(content)) {
   content = content.replace(fix.pattern, fix.replacement);console.log(🔧 Applied syntax fix in ${file}``);
-          fixes++;,
+          fixes++;
 }
       }
-;
-      if (content !== originalContent) {
-  fs.writeFileSync(file, content);,
+      if() {
+
+  fs.writeFileSync(file, content);
 }
-    } catch (error) {  console.log(`⚠️  Could not fix ${file  }: ${error.message}`);,
+    } catch (error) {  console.log(`⚠️  Could not fix ${file  }: ${error.message}`);
 }
   }
-;
-  return fixes;,
+  return fixes;
 }
-;
 async function runAutoFixCommands() {
+
   let fixes = 0;
 
   const autoFixCommands = ["npm run lint -- --fix", "npx prettier --write .", "npm run format", "];
 
-  for (const command of autoFixCommands) {
+  for() {
+
   try {
   const autoFixCommands = [`npm run lint -- --fix``, "npx prettier --write .", "npm run format``, ``];
-  for (const command of autoFixCommands) {
+  for() {
+
   try {
   const autoFixCommands = ["npm run lint -- --fix"", "npx prettier --write .", "npm run format"", ""];`);
 `);
@@ -324,50 +341,50 @@ async function runAutoFixCommands() {
     try {`);
       console.log(`🔧 Running: ${command}`);
       execSync(command, { stdio: `pipe` });console.log(`✅ Completed: ${command}`);
-      fixes++;,
-} catch (error) {  console.log(`⚠️  Command failed: ${command  } - ${error.message}`);,
+      fixes++;
+} catch (error) {  console.log(`⚠️  Command failed: ${command  } - ${error.message}`);
 }
   }
-;
-  return fixes;,
+  return fixes;
 }
-;
 function getAllSourceFiles() {
+
   const files = [];
   const sourceDirs = [`src`, `components`, "pages", 'utils`, `hooks`];
-  for (const dir of sourceDirs) {
+  for() {
+
   if (fs.existsSync(dir)) {
-  function traverse(currentDir) {
+  function traverse() {
+
   const items = fs.readdirSync(currentDir);
-        for (const item of items) {
+        for() {
+
   const fullPath = path.join(currentDir, item);
           const stat = fs.statSync(fullPath);
 
           if (stat.isDirectory()) {
-  traverse(fullPath);,
+  traverse(fullPath);
 } else if (fullPath.match(/\.(tsx?|jsx?)$/)) {
-  files.push(fullPath);,
+  files.push(fullPath);
 }
         }
       }
-      traverse(dir);,
+      traverse(dir);
 }
   }
-;
-  return files;,
+  return files;
 }
-;
 // Run the intelligent error fixer;
-if (require.main === module) {
+if() {
+
   fixAllErrors();
     .then(fixes => {
   console.log(🎉 Intelligent error fixer completed with ${fixes} fixes applied`;
       );
-      process.exit(0);,
+      process.exit(0);
 });
     .catch(error => {
-  console.error(`❌ Intelligent error fixer failed: `, error);      process.exit(1);,
-});,
+  console.error(`❌ Intelligent error fixer failed: `, error);      process.exit(1);
+});
 }
-;
 module.exports = { fixAllErrors }

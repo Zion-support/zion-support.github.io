@@ -8,87 +8,87 @@ import { motion } from 'framer-motion';
 const SupportPage: NextPage = () => {
   const supportOptions = [
     {
-      icon: Phone,
-      title: 'Phone Support',
-      description: 'Speak directly with our technical experts',
-      availability: '24/7 for Enterprise clients',
-      contact: '+1 302 464 0950',
+      icon: Phone;
+      title: 'Phone Support'
+      description: 'Speak directly with our technical experts'
+      availability: '24/7 for Enterprise clients'
+      contact: '+1 302 464 0950'
       color: 'blue'
-    },
+    }
     {
-      icon: Mail,
-      title: 'Email Support',
-      description: 'Get detailed responses to your technical questions',
-      availability: 'Response within 2 hours',
-      contact: 'kleber@ziontechgroup.com',
+      icon: Mail;
+      title: 'Email Support'
+      description: 'Get detailed responses to your technical questions'
+      availability: 'Response within 2 hours'
+      contact: 'kleber@ziontechgroup.com'
       color: 'green'
-    },
+    }
     {
-      icon: MessageCircle,
-      title: 'Live Chat',
-      description: 'Instant support through our website chat',
-      availability: 'Monday - Friday, 9 AM - 6 PM EST',
-      contact: 'Available on website',
+      icon: MessageCircle;
+      title: 'Live Chat'
+      description: 'Instant support through our website chat'
+      availability: 'Monday - Friday, 9 AM - 6 PM EST'
+      contact: 'Available on website'
       color: 'purple'
-    },
+    }
     {
-      icon: Book,
-      title: 'Knowledge Base',
-      description: 'Comprehensive documentation and guides',
-      availability: 'Always available',
-      contact: 'Self-service resources',
+      icon: Book;
+      title: 'Knowledge Base'
+      description: 'Comprehensive documentation and guides'
+      availability: 'Always available'
+      contact: 'Self-service resources'
       color: 'orange'
     }
   ];
 
   const faqCategories = [
     {
-      category: 'General',
+      category: 'General'
       questions: [
         {
-          question: 'What services does Zion Tech Group offer?',
+          question: 'What services does Zion Tech Group offer?'
           answer: 'We offer comprehensive technology solutions including AI services, IT services, and micro SaaS applications. Our services range from custom AI model development to cloud migration and cybersecurity solutions.'
-        },
+        }
         {
-          question: 'How do I get started with your services?',
+          question: 'How do I get started with your services?'
           answer: 'You can get started by contacting us through our contact form, calling us at +1 302 464 0950, or emailing kleber@ziontechgroup.com. We offer free consultations to understand your needs.'
-        },
+        }
         {
-          question: 'Do you offer custom development services?',
+          question: 'Do you offer custom development services?'
           answer: 'Yes, we specialize in custom development solutions tailored to your specific business requirements. Our team can build custom applications, integrate existing systems, and develop unique solutions.'
         }
       ]
-    },
+    }
     {
-      category: 'Technical',
+      category: 'Technical'
       questions: [
         {
-          question: 'What technologies do you work with?',
+          question: 'What technologies do you work with?'
           answer: 'We work with a wide range of technologies including React, Node.js, Python, AI/ML frameworks, cloud platforms (AWS, Azure, GCP), and modern development tools and practices.'
-        },
+        }
         {
-          question: 'Do you provide ongoing maintenance and support?',
+          question: 'Do you provide ongoing maintenance and support?'
           answer: 'Yes, we offer comprehensive maintenance and support packages including 24/7 monitoring, regular updates, security patches, and technical support for all our solutions.'
-        },
+        }
         {
-          question: 'How do you ensure data security and compliance?',
+          question: 'How do you ensure data security and compliance?'
           answer: 'We implement industry-standard security measures including encryption, secure coding practices, regular security audits, and compliance with regulations like GDPR, HIPAA, and SOC 2.'
         }
       ]
-    },
+    }
     {
-      category: 'Billing',
+      category: 'Billing'
       questions: [
         {
-          question: 'What are your pricing models?',
+          question: 'What are your pricing models?'
           answer: 'We offer flexible pricing models including project-based pricing, monthly subscriptions for SaaS solutions, and enterprise packages. Contact us for a custom quote based on your specific needs.'
-        },
+        }
         {
-          question: 'Do you offer payment plans?',
+          question: 'Do you offer payment plans?'
           answer: 'Yes, we offer flexible payment plans for larger projects. We can discuss payment terms that work best for your business during our consultation.'
-        },
+        }
         {
-          question: 'What is included in your support packages?',
+          question: 'What is included in your support packages?'
           answer: 'Our support packages include technical support, regular updates, security monitoring, performance optimization, and access to our knowledge base and documentation.'
         }
       ]
@@ -97,48 +97,48 @@ const SupportPage: NextPage = () => {
 
   const resources = [
     {
-      icon: FileText,
-      title: 'Documentation',
-      description: 'Comprehensive guides and API documentation',
+      icon: FileText;
+      title: 'Documentation'
+      description: 'Comprehensive guides and API documentation'
       link: '/documentation'
-    },
+    }
     {
-      icon: Users,
-      title: 'Community Forum',
-      description: 'Connect with other users and get help from the community',
+      icon: Users;
+      title: 'Community Forum'
+      description: 'Connect with other users and get help from the community'
       link: '/community'
-    },
+    }
     {
-      icon: Book,
-      title: 'Tutorials',
-      description: 'Step-by-step tutorials and best practices',
+      icon: Book;
+      title: 'Tutorials'
+      description: 'Step-by-step tutorials and best practices'
       link: '/tutorials'
-    },
+    }
     {
-      icon: MessageCircle,
-      title: 'Status Page',
-      description: 'Real-time system status and incident updates',
+      icon: MessageCircle;
+      title: 'Status Page'
+      description: 'Real-time system status and incident updates'
       link: '/status'
     }
   ];
 
   return (
-    <MainLayout
+    <MainLayout;
       title="Support - Zion Tech Group"
       description="Get help and support for all your technology needs. 24/7 support available for enterprise clients."
     >
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <motion.h1 
+          <motion.h1;
             className="text-4xl md:text-5xl font-bold mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            We're Here to Help
+            We're Here to Help;
           </motion.h1>
-          <motion.p 
+          <motion.p;
             className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-200"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -152,7 +152,7 @@ const SupportPage: NextPage = () => {
       {/* Support Options */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div;
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -161,7 +161,7 @@ const SupportPage: NextPage = () => {
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get Support</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the support option that works best for you
+              Choose the support option that works best for you;
             </p>
           </motion.div>
 
@@ -169,7 +169,7 @@ const SupportPage: NextPage = () => {
             {supportOptions.map((option, index) => {
               const IconComponent = option.icon;
               return (
-                <motion.div
+                <motion.div;
                   key={option.title}
                   className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300"
                   initial={{ opacity: 0, y: 30 }}
@@ -200,7 +200,7 @@ const SupportPage: NextPage = () => {
       {/* FAQ Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div;
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -209,13 +209,13 @@ const SupportPage: NextPage = () => {
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Find answers to common questions about our services and support
+              Find answers to common questions about our services and support;
             </p>
           </motion.div>
 
           <div className="max-w-4xl mx-auto">
             {faqCategories.map((category, categoryIndex) => (
-              <motion.div
+              <motion.div;
                 key={category.category}
                 className="mb-12"
                 initial={{ opacity: 0, y: 30 }}
@@ -241,7 +241,7 @@ const SupportPage: NextPage = () => {
       {/* Resources Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div;
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -250,7 +250,7 @@ const SupportPage: NextPage = () => {
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Helpful Resources</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Access our comprehensive library of resources and documentation
+              Access our comprehensive library of resources and documentation;
             </p>
           </motion.div>
 
@@ -258,7 +258,7 @@ const SupportPage: NextPage = () => {
             {resources.map((resource, index) => {
               const IconComponent = resource.icon;
               return (
-                <motion.div
+                <motion.div;
                   key={resource.title}
                   className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow duration-300"
                   initial={{ opacity: 0, y: 30 }}
@@ -285,7 +285,7 @@ const SupportPage: NextPage = () => {
       {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -298,12 +298,12 @@ const SupportPage: NextPage = () => {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/contact" className="group">
                 <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105">
-                  Contact Support
+                  Contact Support;
                 </button>
               </Link>
               <a href="tel:+13024640950" className="group">
                 <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105">
-                  Call Now: +1 302 464 0950
+                  Call Now: +1 302 464 0950;
                 </button>
               </a>
             </div>
@@ -312,6 +312,6 @@ const SupportPage: NextPage = () => {
       </section>
     </MainLayout>
   );
-};
+}
 
 export default SupportPage;

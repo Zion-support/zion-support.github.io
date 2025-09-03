@@ -1,6 +1,7 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
+
 > {
 
   showStats?: boolean;
@@ -9,165 +10,160 @@ export default function Page() {
 
 export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
 
-showStats:  true,;
-  showFilters = true,;
+showStats:  true;
+  showFilters = true;
   maxFeedback = 10}) => {;
   const [feedback, setFeedback] = useState<Feedback[]>([]);
   const [filteredFeedback, setFilteredFeedback] = useState<Feedback[]>([]);
   const [stats, setStats] = useState<FeedbackStats>({
 
-    totalFeedback: 0,
-    averageRating: 0,
-    positivePercentage: 0,
-    responseRate: 0,
+    totalFeedback: 0;
+    averageRating: 0;
+    positivePercentage: 0;
+    responseRate: 0;
     topCategories[]});
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [selectedRating, setSelectedRating] = useState<any>(0);  const [searchQuery, setSearchQuery] = useState('');
   const [showFeedbackForm, setShowFeedbackForm] = useState(false);
   const [newFeedback, setNewFeedback] = useState({
 
-    rating: 0,
-    comment: '',
+    rating: 0;
+    comment: ''
     category: 'overall' as Feedback['category']
   });
 
-  // Sample feedback data
+  // Sample feedback data;
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
     const sampleFeedback: Feedback[] = [{
 
-        id: '1',
-        customerName: 'Sarah Johnson',
-        rating: 5,
-        comment: 'Exceptional AI consulting services! The team at Zion Tech Group delivered beyond our expectations.Their expertise in machine learning helped us optimize our processes significantly.',
-        category: 'service',
-        sentiment: 'positive',
-        date: '2024-01-15',
-        helpful: 24,
-        unhelpful: 1,
-        tags['AI',Consulting',Machine Learning'],;
-        verified: true
-      },
+        id: '1'
+        customerName: 'Sarah Johnson'
+        rating: 5;
+        comment: 'Exceptional AI consulting services! The team at Zion Tech Group delivered beyond our expectations.Their expertise in machine learning helped us optimize our processes significantly.'
+        category: 'service'
+        sentiment: 'positive'
+        date: '2024-01-15'
+        helpful: 24;
+        unhelpful: 1;
+        tags['AI',Consulting',Machine Learning']
+        verified: true;
+      }
       {
 
-        id: '2',
-        customerName: 'Michael Chen',
-        rating: 4,
-        comment: 'Great cloud migration support.The team was professional and helped us transition smoothly to the cloud.Minor delays but overall excellent experience.',
-        category: 'support',
-        sentiment: 'positive',
-        date: '2024-01-12',
-        helpful: 18,
-        unhelpful: 2,
-        tags['Cloud',Migration',Support'],;
-        verified: true
-      },
+        id: '2'
+        customerName: 'Michael Chen'
+        rating: 4;
+        comment: 'Great cloud migration support.The team was professional and helped us transition smoothly to the cloud.Minor delays but overall excellent experience.'
+        category: 'support'
+        sentiment: 'positive'
+        date: '2024-01-12'
+        helpful: 18;
+        unhelpful: 2;
+        tags['Cloud',Migration',Support']
+        verified: true;
+      }
       {
 
-        id: '3',
-        customerName: 'Emily Rodriguez',
-        rating: 5,
-        comment: 'Outstanding digital transformation project! Zion Tech Group helped us modernize our entire infrastructure.ROI was achieved within 6 months.',
-        category: 'product',
-        sentiment: 'positive',
-        date: '2024-01-10',
-        helpful: 31,
-        unhelpful: 0,
-        tags['Digital Transformation',Infrastructure',ROI'],;
-        verified: true
-      },
+        id: '3'
+        customerName: 'Emily Rodriguez'
+        rating: 5;
+        comment: 'Outstanding digital transformation project! Zion Tech Group helped us modernize our entire infrastructure.ROI was achieved within 6 months.'
+        category: 'product'
+        sentiment: 'positive'
+        date: '2024-01-10'
+        helpful: 31;
+        unhelpful: 0;
+        tags['Digital Transformation',Infrastructure',ROI']
+        verified: true;
+      }
       {
 
-        id: '4',
-        customerName: 'David Kim',
-        rating: 3,
-        comment: 'Good security services but communication could be improved.The technical work was solid but project updates were infrequent.',
-        category: 'service',
-        sentiment: 'neutral',
-        date: '2024-01-08',
-        helpful: 12,
-        unhelpful: 5,
-        tags['Security',Communication',Project Management'],;
-        verified: true
-      },
+        id: '4'
+        customerName: 'David Kim'
+        rating: 3;
+        comment: 'Good security services but communication could be improved.The technical work was solid but project updates were infrequent.'
+        category: 'service'
+        sentiment: 'neutral'
+        date: '2024-01-08'
+        helpful: 12;
+        unhelpful: 5;
+        tags['Security',Communication',Project Management']
+        verified: true;
+      }
       {
 
-        id: '5',
-        customerName: 'Lisa Thompson',
-        rating: 5,
-        comment: 'Amazing team! They helped us implement AI solutions that increased our efficiency by 40%.Highly recommend their services.',
-        category: 'overall',
-        sentiment: 'positive',
-        date: '2024-01-05',
-        helpful: 28,
-        unhelpful: 1,
-        tags['AI',Efficiency',Implementation'],;
-        verified: true
-
+        id: '5'
+        customerName: 'Lisa Thompson'
+        rating: 5;
+        comment: 'Amazing team! They helped us implement AI solutions that increased our efficiency by 40%.Highly recommend their services.'
+        category: 'overall'
+        sentiment: 'positive'
+        date: '2024-01-05'
+        helpful: 28;
+        unhelpful: 1;
+        tags['AI',Efficiency',Implementation']
+        verified: true;
     ];
 
     setFeedback(sampleFeedback) ;
     setFilteredFeedback(sampleFeedback) }, []) ;
 
-  // Calculate stats
+  // Calculate stats;
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
-    if(feedback.length > 0) {
+    if() {
 
-      const responseRate = 95; // Simulated response rate
-
+      const responseRate = 95; // Simulated response rate;
       const categoryCounts = feedback.reduce((acc, f) => {;        acc[f.category] = (acc[f.category] || 0) + 1;
         return acc}, {} as Record < string, any>) ;
 
-          count,;
+          count;
           percentage: (count / totalFeedback) * 100}) ) ;
         .sort((a, b) => b.count - a.count) ;
         .slice(0, 4) ;
       setStats({
 
-        totalFeedback,
-        averageRating,
-        positivePercentage,
-        responseRate,
-        topCategories
+        totalFeedback;
+        averageRating;
+        positivePercentage;
+        responseRate;
+        topCategories;
       }) }
   }, [feedback]) ;
 
-  // Filter feedback
+  // Filter feedback;
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
     let filtered = feedback;
 
-    if(selectedCategory !== 'all') {
+    if() {
 
       filtered = filtered.filter(f => f.category === selectedCategory)}
 
-    if(selectedRating > 0) {
+    if() {
 
       filtered = filtered.filter(f => f.rating === selectedRating)}
 
-    if(searchQuery) {
+    if() {
 
       filtered = filtered.filter(f =>
         f.comment.toLowerCase().includes(searchQuery.toLowerCase()) ||
         f.customerName.toLowerCase().includes(searchQuery.toLowerCase()) ||
         f.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      )};
+      )}
       filtered = filtered.filter(f => ;
         f.comment.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         f.customerName.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -176,57 +172,54 @@ showStats:  true,;
 
     setFilteredFeedback(filtered.slice (0, maxFeedback) ) }, [feedback, selectedCategory, selectedRating, searchQuery, maxFeedback]) ;
 
-  // Handle feedback submission
-  
+  // Handle feedback submission;
     if(newFeedback.rating === 0 || !newFeedback.comment.trim () ) return;
     const feedback: Feedback = {
 
-  id: Date.now().toString(),
-      customerName: 'Anonymous Customer',
-      rating: newFeedback.rating,
-      comment: newFeedback.comment,
-      category: newFeedback.category,
-      sentiment: newFeedback.rating >= 4 ? 'positive' : newFeedback.rating >= 3 ? 'neutral' : 'negative',
-      date: new Date().toISOString().split('T')[0],
-      helpful: 0,
-      unhelpful: 0,
-      tags: [],;
+  id: Date.now().toString()
+      customerName: 'Anonymous Customer'
+      rating: newFeedback.rating;
+      comment: newFeedback.comment;
+      category: newFeedback.category;
+      sentiment: newFeedback.rating >= 4 ? 'positive' : newFeedback.rating >= 3 ? 'neutral' : 'negative'
+      date: new Date().toISOString().split('T')[0]
+      helpful: 0;
+      unhelpful: 0;
+      tags: []
   ;
   ;
   verified: false;
-    };
+    }
 
     setFeedback(prev  => [feedback, ...prev]);    setNewFeedback({ rating: 0, comment: '', category: 'overall' });
-    setShowFeedbackForm(false)};
+    setShowFeedbackForm(false)}
 
   // Handle helpful/unhelpful votes'
   
         return {;
-          ...f,;
-          helpful: type === 'helpful' ? f.helpful + 1 : f.helpful,;
-          unhelpful: type === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful};
+          ...f;
+          helpful: type === 'helpful' ? f.helpful + 1 : f.helpful;
+          unhelpful: type === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful}
 
-      return f}) ) };
+      return f}) ) }
 
-  // Get sentiment color
-  
+  // Get sentiment color;
     switch(sentiment) {;
       case 'positive': return 'text-green-400 bg-green-400/20';
       case 'negative': return 'text-red-400 bg-red-400/20';
-      default: return 'text-yellow-400 bg-yellow-400/20'}  };
+      default: return 'text-yellow-400 bg-yellow-400/20'}  }
 
-  // Get category color
-  
+  // Get category color;
   ;
   ;
 '
   'service': 'text-blue-400 bg-blue-400/20','
       'product': 'text-green-400 bg-green-400/20','
-      'support': 'text-purple-400 bg-purple-400/20',;  ;
+      'support': 'text-purple-400 bg-purple-400/20',  ;
   ;'
   'overall': 'text-zion-cyan bg-zion-cyan/20';
-    };
-    return colors[category as keyof typeof colors] || 'text-zinc-400 bg-zinc-400/20'};
+    }
+    return colors[category as keyof typeof colors] || 'text-zinc-400 bg-zinc-400/20'}
   return ()
     <div className="w-full max-w-6xl mx-auto p-6">
       {/* Header */}"
@@ -238,18 +231,16 @@ showStats:  true,;
       {/* Stats Section */}
       {showStats && ("
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          <motion.div
+          <motion.div;
             initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
             animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}"
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
 "
@@ -257,18 +248,16 @@ showStats:  true,;
             <div className="text-zinc-400">Total Reviews</div>
           </motion.div>
 
-          <motion.div
+          <motion.div;
             initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
             animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
             transition={{ delay: 0.1 }}"
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
@@ -285,18 +274,16 @@ showStats:  true,;
             <div className="text-zinc-400">Average Rating</div>
           </motion.div>;
 
-          <motion.div
+          <motion.div;
             initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
             animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
             transition={{ delay: 0.2 }}"
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
@@ -305,18 +292,16 @@ showStats:  true,;
             <div className="text-zinc-400">Positive Feedback</div>
           </motion.div>;
 
-          <motion.div
+          <motion.div;
             initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
             animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
             transition={{ delay: 0.3 }}"
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
@@ -332,19 +317,17 @@ showStats:  true,;
           <h3 className="text-xl font-semibold text-white mb-4">Top Categories</h3>"
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">
             {stats.topCategories.map((category, index)  => (
-              <motion.div
+              <motion.div;
                 key={category.category}
                 initial = {
 
-  { opacity: 0,
-  scale: 0.9
-
+  { opacity: 0;
+  scale: 0.9;
 }}
                 animate = {
 
-  { opacity: 1,
-  scale: 1
-
+  { opacity: 1;
+  scale: 1;
 }}
                 transition={{ delay: index * 0.1 }}"
                 className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-lg text-center"
@@ -361,7 +344,7 @@ showStats:  true,;
       {showFilters && ("
         <div className="flex flex-wrap items-center gap-4 mb-6">
           {/* Category Filter */}
-          <select
+          <select;
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}"
             className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
@@ -374,7 +357,7 @@ showStats:  true,;
           </select>
 
           {/* Rating Filter */}
-          <select
+          <select;
             value={selectedRating}
             onChange={(e) => setSelectedRating(Number(e.target.value))}"
             className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
@@ -399,7 +382,7 @@ showStats:  true,;
           </div>
 
           {/* Add Feedback Button */}
-          <button
+          <button;
             onClick={() => setShowFeedbackForm(!showFeedbackForm)}"
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2"
 "
@@ -409,24 +392,21 @@ showStats:  true,;
 
       {/* Feedback Form */}
       <AnimatePresence>
-        {showFeedbackForm && (<motion.div
+        {showFeedbackForm && (<motion.div;
             initial = {
 
-  { height: 0,
-  opacity: 0
-
+  { height: 0;
+  opacity: 0;
 }}
             animate = {
 
-  { height: 'auto',
-  opacity: 1
-
+  { height: 'auto'
+  opacity: 1;
 }}
             exit = {
 
-  { height: 0,
-  opacity: 0
-
+  { height: 0;
+  opacity: 0;
 }}
             transition={{ duration: 0.3 }}"
             className="mb-6 overflow-hidden"
@@ -440,8 +420,8 @@ showStats:  true,;
                   <label className="block text-sm font - medium text-zinc - 300 mb-2">Rating</label>
                   <div  className="flex gap-2">
                     {[1, 2, 3, 4, 5].map((star) => (<button     key={star}
-                        onClick = { () => setNewFeedback(prev => ({ ...prev,
-  rating: star
+                        onClick = { () => setNewFeedback(prev => ({ ...prev;
+  rating: star;
 }))}"
                         className="p-2 hover:scale-110 transition-transform"
 
@@ -455,9 +435,9 @@ showStats:  true,;
                 {/* Category */}
                 <div>"
                   <label className="block text-sm font-medium text-zinc-300 mb-2">Category</label>
-                  <select
+                  <select;
                     value={newFeedback.category}
-                    onChange = { (e) => setNewFeedback(prev => ({ ...prev,
+                    onChange = { (e) => setNewFeedback(prev => ({ ...prev;
   category: e.target.value as Feedback['category']
 }))}"
                     className="w-full px-3 py-2 bg-zinc-800 border border-zinc-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
@@ -472,10 +452,10 @@ showStats:  true,;
                 {/* Comment */}
                 <div>"
                   <label className="block text-sm font-medium text-zinc-300 mb-2">Your Feedback</label>
-                  <textarea
+                  <textarea;
                     value={newFeedback.comment}
-                    onChange = { (e) => setNewFeedback(prev => ({ ...prev,
-  comment: e.target.value
+                    onChange = { (e) => setNewFeedback(prev => ({ ...prev;
+  comment: e.target.value;
 }))}"
                     placeholder="Share your experience with Zion Tech Group..."
                     rows={4}"
@@ -485,18 +465,18 @@ showStats:  true,;
 
                 {/* Submit Button */}"
                 <div className="flex gap-3">
-                  <button
+                  <button;
                     onClick={handleSubmitFeedback}
                     disabled={newFeedback.rating === 0 || !newFeedback.comment.trim()}"
                     className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
 "
-                    <Send className="w-4 h-4"  />                    Submit Feedback
+                    <Send className="w-4 h-4"  />                    Submit Feedback;
                   </button>
-                  <button
+                  <button;
                     onClick={() => setShowFeedbackForm(false)}"
                     className="px-6 py-2 bg-zinc-700 text-white rounded-lg hover:bg-zinc-600 transition-colors"
 
-                    Cancel
+                    Cancel;
                   </button>
                 </div>
               </div>
@@ -507,19 +487,17 @@ showStats:  true,;
       {/* Feedback List */}"
       <div className="space-y-4">;
         {filteredFeedback.map((item, index) => (;
-          <motion.div
+          <motion.div;
             key={item.id}
             initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
             animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
             transition={{ delay: index * 0.1 }}"
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
@@ -556,7 +534,7 @@ showStats:  true,;
             {/* Rating */}"
             <div className="flex items-center gap-2 mb-3">;
               {[1, 2, 3, 4, 5].map((star) => (;
-                <Star
+                <Star;
                   key={star}`
                   className={`w-5 h-5 ${                  key={star}`                  className={`w-5 h-5 ${'
                     star <= item.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`
@@ -572,7 +550,7 @@ showStats:  true,;
             {item.tags.length > 0 && (;"
               <div className="flex flex-wrap gap-2 mb-4">
                 {item.tags.map((tag) => (
-                  <span
+                  <span;
                     key={tag}"
                     className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
 
@@ -583,7 +561,7 @@ showStats:  true,;
             {/* Actions */}"
             <div className="flex items-center justify-between pt-4 border-t border-zinc-700/50">"
               <div className="flex items-center gap-4">
-                <button
+                <button;
                   onClick = {
 
   () => handleVote(item.id,helpful')
@@ -593,7 +571,7 @@ showStats:  true,;
 "
                   <ThumbsUp className="w-4 h-4"  />"                  <span className="text-sm">{item.helpful}</span>
                 </button>
-                <button
+                <button;
                   onClick = {
 
   () => handleVote(item.id,unhelpful')
@@ -616,7 +594,7 @@ showStats:  true,;
       </div>
 
       {/* No Results */}
-      {filteredFeedback.length === 0 && (<motion.div
+      {filteredFeedback.length === 0 && (<motion.div;
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}"
           className="text-center py-12"
@@ -625,12 +603,12 @@ showStats:  true,;
           <h3 className="text-xl font-medium text-zinc-300 mb-2">No feedback found</h3>"          <p className="text-zinc-400 mb-4">
             Try adjusting your filters or be the first to share your experience!
           </p>
-          <button
+          <button;
             onClick={() => setShowFeedbackForm(true)}"
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors"
           >
             Add Feedback;
           </button>;
-        </motion.div>;) };
-    </div>;) };
+        </motion.div>;) }
+    </div>;) }
 '"`

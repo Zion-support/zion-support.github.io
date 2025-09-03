@@ -13,14 +13,15 @@ const PerformanceOptimizer: React.FC = () => {
   const [isOptimized, setIsOptimized] = useState(false);
 
   useEffect(() => {
-    // Monitor Core Web Vitals
+    // Monitor Core Web Vitals;
     const observer = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        if (entry.entryType === 'largest-contentful-paint') {
+        if() {
+
           setMetrics(prev => ({
-            ...prev,
-            largestContentfulPaint: entry.startTime
+            ...prev;
+            largestContentfulPaint: entry.startTime;
           } as PerformanceMetrics));
         }
       });
@@ -28,22 +29,22 @@ const PerformanceOptimizer: React.FC = () => {
 
     observer.observe({ entryTypes: ['largest-contentful-paint'] });
 
-    // Get page load time
+    // Get page load time;
     window.addEventListener('load', () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       setMetrics({
-        loadTime: navigation.loadEventEnd - navigation.fetchStart,
-        firstContentfulPaint: 0,
-        largestContentfulPaint: 0,
-        cumulativeLayoutShift: 0,
-        firstInputDelay: 0
+        loadTime: navigation.loadEventEnd - navigation.fetchStart;
+        firstContentfulPaint: 0;
+        largestContentfulPaint: 0;
+        cumulativeLayoutShift: 0;
+        firstInputDelay: 0;
       });
     });
 
-    // Optimize images
+    // Optimize images;
     optimizeImages();
     
-    // Preload critical resources
+    // Preload critical resources;
     preloadCriticalResources();
 
     return () => observer.disconnect();
@@ -52,14 +53,16 @@ const PerformanceOptimizer: React.FC = () => {
   const optimizeImages = () => {
     const images = document.querySelectorAll('img');
     images.forEach((img) => {
-      if (!img.loading) {
+      if() {
+
         img.loading = 'lazy';
       }
-      if (!img.decoding) {
+      if() {
+
         img.decoding = 'async';
       }
     });
-  };
+  }
 
   const preloadCriticalResources = () => {
     const criticalFonts = [
@@ -73,19 +76,20 @@ const PerformanceOptimizer: React.FC = () => {
       link.href = font;
       document.head.appendChild(link);
     });
-  };
+  }
 
   const enableOptimizations = () => {
-    // Enable service worker for caching
-    if ('serviceWorker' in navigator) {
+    // Enable service worker for caching;
+    if() {
+
       navigator.serviceWorker.register('/sw.js');
     }
 
-    // Enable compression
+    // Enable compression;
     document.documentElement.style.setProperty('--compression-enabled', 'true');
     
     setIsOptimized(true);
-  };
+  }
 
   return (
     <div className="performance-optimizer">
@@ -97,17 +101,17 @@ const PerformanceOptimizer: React.FC = () => {
             <div>LCP: {metrics.largestContentfulPaint.toFixed(0)}ms</div>
           </div>
           {!isOptimized && (
-            <button
+            <button;
               onClick={enableOptimizations}
               className="mt-3 w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
             >
-              Enable Optimizations
+              Enable Optimizations;
             </button>
           )}
         </div>
       )}
     </div>
   );
-};
+}
 
 export default PerformanceOptimizer;

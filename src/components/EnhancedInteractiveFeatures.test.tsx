@@ -1,7 +1,7 @@
   it(displays expected content", () => {
     render(<EnhancedInteractiveFeatures  />)"
-import { render, screen } from &apos;@testing - library/react",
-import EnhancedInteractiveFeatures from &apos;./EnhancedInteractiveFeatures
+import { render, screen } from &apos;@testing - library/react"
+import EnhancedInteractiveFeatures from &apos;./EnhancedInteractiveFeatures;
 describe(&apos;EnhancedInteractiveFeatures&apos, () => {
   it(&apos;renders without crashing&apos, () => {
     render()
@@ -11,7 +11,7 @@ describe(&apos;EnhancedInteractiveFeatures&apos, () => {
   it(&apos;displays expected content&apos, () => {
     render()
 }
-    // comment
+    // comment;
     render(<EnhancedInteractiveFeatures / >)"
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"

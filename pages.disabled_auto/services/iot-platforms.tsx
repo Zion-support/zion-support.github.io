@@ -5,7 +5,7 @@ import { CheckCircle, Cpu, Zap, Shield, BarChart, Users, Award } from 'lucide-re
 
 const IoTPlatforms: NextPage = () => {
   return (
-    <Layout
+    <Layout;
       title="IoT Platforms - Zion Tech Group"
       description="Connected device solutions and IoT infrastructure for smart business operations. IoT device development, data analytics, and edge computing."
     >
@@ -13,7 +13,7 @@ const IoTPlatforms: NextPage = () => {
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            IoT
+            IoT;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Platforms</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
@@ -23,10 +23,10 @@ const IoTPlatforms: NextPage = () => {
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              Start Your IoT Project
+              Start Your IoT Project;
             </Link>
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              View All Services
+              View All Services;
             </Link>
           </div>
         </div>
@@ -38,7 +38,7 @@ const IoTPlatforms: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our IoT Solutions</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We develop comprehensive IoT solutions that connect devices, collect data, 
+              We develop comprehensive IoT solutions that connect devices, collect data;
               and provide actionable insights to optimize your business operations.
             </p>
           </div>
@@ -55,15 +55,15 @@ const IoTPlatforms: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Sensor Integration
+                  Sensor Integration;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Hardware Design
+                  Hardware Design;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Firmware Development
+                  Firmware Development;
                 </li>
               </ul>
             </div>
@@ -79,15 +79,15 @@ const IoTPlatforms: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Local Data Processing
+                  Local Data Processing;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Real-time Analytics
+                  Real-time Analytics;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Reduced Latency
+                  Reduced Latency;
                 </li>
               </ul>
             </div>
@@ -103,15 +103,15 @@ const IoTPlatforms: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Predictive Analytics
+                  Predictive Analytics;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Real-time Dashboards
+                  Real-time Dashboards;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Anomaly Detection
+                  Anomaly Detection;
                 </li>
               </ul>
             </div>
@@ -127,15 +127,15 @@ const IoTPlatforms: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Device Authentication
+                  Device Authentication;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Data Encryption
+                  Data Encryption;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Network Security
+                  Network Security;
                 </li>
               </ul>
             </div>
@@ -151,15 +151,15 @@ const IoTPlatforms: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Smart Buildings
+                  Smart Buildings;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Connected Transportation
+                  Connected Transportation;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Smart Utilities
+                  Smart Utilities;
                 </li>
               </ul>
             </div>
@@ -175,15 +175,15 @@ const IoTPlatforms: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  IoT Strategy
+                  IoT Strategy;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Technology Selection
+                  Technology Selection;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Implementation Planning
+                  Implementation Planning;
                 </li>
               </ul>
             </div>
@@ -197,7 +197,7 @@ const IoTPlatforms: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">IoT Applications We Build</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We develop IoT solutions for various industries and use cases to help businesses 
+              We develop IoT solutions for various industries and use cases to help businesses;
               optimize operations and improve efficiency.
             </p>
           </div>
@@ -214,15 +214,15 @@ const IoTPlatforms: NextPage = () => {
               <ul className="text-left space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Predictive Maintenance
+                  Predictive Maintenance;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Asset Tracking
+                  Asset Tracking;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Quality Control
+                  Quality Control;
                 </li>
               </ul>
             </div>
@@ -238,15 +238,15 @@ const IoTPlatforms: NextPage = () => {
               <ul className="text-left space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Soil Monitoring
+                  Soil Monitoring;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Crop Management
+                  Crop Management;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Weather Monitoring
+                  Weather Monitoring;
                 </li>
               </ul>
             </div>
@@ -262,15 +262,15 @@ const IoTPlatforms: NextPage = () => {
               <ul className="text-left space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Patient Monitoring
+                  Patient Monitoring;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Medical Device Integration
+                  Medical Device Integration;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Remote Diagnostics
+                  Remote Diagnostics;
                 </li>
               </ul>
             </div>
@@ -287,16 +287,16 @@ const IoTPlatforms: NextPage = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              Start Your IoT Project
+              Start Your IoT Project;
             </Link>
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              View All Services
+              View All Services;
             </Link>
           </div>
         </div>
       </section>
     </Layout>
   );
-};
+}
 
 export default IoTPlatforms;

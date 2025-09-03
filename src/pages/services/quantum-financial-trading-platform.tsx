@@ -2,6 +2,7 @@ import React from 'react';
 import { Zap, Brain, TrendingUp, Shield, BarChart3, Users, CheckCircle, Star, Globe, Cpu } from 'lucide-react';
 
 export default function QuantumFinancialTradingPlatform() {
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-900">
       {/* Hero Section */}
@@ -13,23 +14,23 @@ export default function QuantumFinancialTradingPlatform() {
             </div>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Quantum Financial Trading Platform
+            Quantum Financial Trading Platform;
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Revolutionize your trading strategy with quantum computing power, AI algorithms, and real-time market analysis.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <a;
               href="https://ziontechgroup.com/contact"
               className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all duration-300"
             >
-              Get Started
+              Get Started;
             </a>
-            <a
+            <a;
               href="#demo"
               className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300"
             >
-              Watch Demo
+              Watch Demo;
             </a>
           </div>
         </div>
@@ -39,7 +40,7 @@ export default function QuantumFinancialTradingPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
-            Quantum-Powered Trading Features
+            Quantum-Powered Trading Features;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-indigo-800/50 p-6 rounded-xl border border-indigo-700 hover:border-purple-500 transition-all duration-300">
@@ -109,7 +110,7 @@ export default function QuantumFinancialTradingPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-indigo-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
-            Premium Trading Plans
+            Premium Trading Plans;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Starter Plan */}
@@ -122,30 +123,30 @@ export default function QuantumFinancialTradingPlatform() {
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Basic quantum algorithms
+                  Basic quantum algorithms;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Real-time market data
+                  Real-time market data;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Basic risk management
+                  Basic risk management;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Standard analytics
+                  Standard analytics;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Email support
+                  Email support;
                 </li>
               </ul>
-              <a
+              <a;
                 href="https://ziontechgroup.com/contact"
                 className="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors duration-300 block text-center"
               >
-                Get Started
+                Get Started;
               </a>
             </div>
 
@@ -153,7 +154,7 @@ export default function QuantumFinancialTradingPlatform() {
             <div className="bg-gradient-to-br from-purple-600 to-indigo-600 p-8 rounded-xl border-2 border-purple-500 transform scale-105">
               <div className="text-center mb-6">
                 <div className="bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full mb-3 inline-block">
-                  MOST POPULAR
+                  MOST POPULAR;
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">Institutional</h3>
                 <div className="text-4xl font-bold text-white mb-2">$999<span className="text-lg text-purple-100">/month</span></div>
@@ -162,34 +163,34 @@ export default function QuantumFinancialTradingPlatform() {
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-yellow-300 mr-3" />
-                  Advanced quantum algorithms
+                  Advanced quantum algorithms;
                 </li>
                 <li className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-yellow-300 mr-3" />
-                  High-frequency trading
+                  High-frequency trading;
                 </li>
                 <li className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-yellow-300 mr-3" />
-                  Custom risk models
+                  Custom risk models;
                 </li>
                 <li className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-yellow-300 mr-3" />
-                  Multi-market access
+                  Multi-market access;
                 </li>
                 <li className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-yellow-300 mr-3" />
-                  Priority support
+                  Priority support;
                 </li>
                 <li className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-yellow-300 mr-3" />
-                  API access
+                  API access;
                 </li>
               </ul>
-              <a
+              <a;
                 href="https://ziontechgroup.com/contact"
                 className="w-full bg-white text-purple-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 block text-center"
               >
-                Get Started
+                Get Started;
               </a>
             </div>
 
@@ -203,34 +204,34 @@ export default function QuantumFinancialTradingPlatform() {
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Custom quantum models
+                  Custom quantum models;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  On-premise deployment
+                  On-premise deployment;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Dedicated infrastructure
+                  Dedicated infrastructure;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Custom integrations
+                  Custom integrations;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  SLA guarantees
+                  SLA guarantees;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Dedicated support
+                  Dedicated support;
                 </li>
               </ul>
-              <a
+              <a;
                 href="https://ziontechgroup.com/contact"
                 className="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors duration-300 block text-center"
               >
-                Contact Sales
+                Contact Sales;
               </a>
             </div>
           </div>
@@ -310,7 +311,7 @@ export default function QuantumFinancialTradingPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-indigo-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
-            Cutting-Edge Technology Stack
+            Cutting-Edge Technology Stack;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-indigo-800/50 p-6 rounded-xl border border-indigo-700 text-center">
@@ -363,17 +364,17 @@ export default function QuantumFinancialTradingPlatform() {
             Join the elite group of traders who have already embraced the future of financial technology.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <a;
               href="https://ziontechgroup.com/contact"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
             >
-              Start Free Trial
+              Start Free Trial;
             </a>
-            <a
+            <a;
               href="tel:+13024640950"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
             >
-              Call +1 302 464 0950
+              Call +1 302 464 0950;
             </a>
           </div>
           <p className="text-purple-100 mt-6">

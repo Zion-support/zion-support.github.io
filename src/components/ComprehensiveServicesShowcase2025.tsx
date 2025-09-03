@@ -1,15 +1,15 @@
 import {  import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 export default function Page() {
-,;
-    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' },;
-    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' },;
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' };
+
+    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' }
+    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' }
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' }
   ];
 
-    { id: 'all', name: 'All Levels', icon: '🌟' },;
-    { id: 'Advanced', name: 'Advanced', icon: '🚀' },;
-    { id: 'Cutting-edge', name: 'Cutting-edge', icon: '⚡' },;
-    { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' };
+    { id: 'all', name: 'All Levels', icon: '🌟' }
+    { id: 'Advanced', name: 'Advanced', icon: '🚀' }
+    { id: 'Cutting-edge', name: 'Cutting-edge', icon: '⚡' }
+    { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' }
   ];
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -26,32 +26,31 @@ export default function Page() {
   ;
   ;
 '
-  'Advanced': 1, 'Cutting-edge': 2,;  ;
+  'Advanced': 1, 'Cutting-edge': 2,  ;
   ;
   ;
   ;
   'Revolutionary': 3 ;
 
-};
+}
         return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;
                (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);      case 'category':;
         return a.category.localeCompare(b.category) ;
       default:;
         return 0}) ;
 
-    hidden: { opacity: 0 },;
+    hidden: { opacity: 0 }
     visible: {;
-      opacity: 1,;
+      opacity: 1;
       transition: {;
         staggerChildren: 0.1;
-      };
-    };
-  };
+      }
+    }
+  }
 
   const itemVariants = {
-  hidden: { y: 20,
-  opacity: 0
-
+  hidden: { y: 20;
+  opacity: 0;
 },                value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl pl-12 pr-4 py-3 text-white placeholder-zion-slate-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan"
@@ -62,7 +61,7 @@ export default function Page() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {/* Category Filter */}"
               <div className="relative">
-                <select
+                <select;
                   value={activeCategory}
                   onChange={(e) => setActiveCategory(e.target.value)}"
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
@@ -77,7 +76,7 @@ export default function Page() {
 
               {/* Innovation Level Filter */}"
               <div className="relative">
-                <select
+                <select;
                   value={innovationLevel}
                   onChange={(e) => setInnovationLevel(e.target.value)}"
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
@@ -92,7 +91,7 @@ export default function Page() {
 
               {/* Sort By */}"
               <div className="relative">
-                <select
+                <select;
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}"
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
@@ -138,7 +137,7 @@ export default function Page() {
                   value={priceRange[0]}
                   onChange = {
 
-  (e) => setPriceRange([parseInt(e.target.value),
+  (e) => setPriceRange([parseInt(e.target.value)
   priceRange[1]])
 
 }"
@@ -151,7 +150,7 @@ export default function Page() {
                   value={priceRange[1]}
                   onChange = {
 
-  (e) => setPriceRange([priceRange[0],
+  (e) => setPriceRange([priceRange[0]
   parseInt(e.target.value)])
 
 }"
@@ -169,12 +168,12 @@ export default function Page() {
           {/* Results Count */}"
           <div className="mb-8">"
             <p className="text-zion-slate-300">
-              Showing {filteredServices.length} of {allServices.length} services
+              Showing {filteredServices.length} of {allServices.length} services;
             </p>
           </div>
 
           {/* Services Grid / List */}
-          <motion.div
+          <motion.div;
             variants={containerVariants}"
             initial="hidden"
             animate="visible"'
@@ -183,7 +182,7 @@ export default function Page() {
               : 'space-y-4'
 
             {sortedServices.map((service) => (;
-              <motion.div
+              <motion.div;
                 key={service.id}
                 variants={itemVariants}`
                 className={`bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-700 rounded-2xl p-6 hover:border-zion-cyan/50 hover:shadow-lg hover:shadow-zion-cyan/20 transition-all duration-300 cursor-pointer group ${viewMode === 'list' ? 'flex items-center gap-6' : ''`
@@ -191,7 +190,7 @@ export default function Page() {
                 onClick={() => handleServiceClick(service)}
 
                 {viewMode === 'grid' ? (;
-                  // Grid View
+                  // Grid View;
                   <>
                     {/* Header */}"
                     <div className="flex items-start justify-between mb-4">"
@@ -215,7 +214,7 @@ export default function Page() {
                     {/* Tags */}"
                     <div className="flex flex-wrap gap-2 mb-4">
                       {service.tags.slice(0, 3).map((tag, index) => (
-                        <span
+                        <span;
                           key={index}"
                           className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-lg"
 
@@ -247,7 +246,7 @@ export default function Page() {
                       Learn More"
                       <ArrowRight className="w-4 h-4"  />                    </button>
                   </>) : (;
-                  // List View
+                  // List View;
                   <>"
                     <div className="flex-1">"
                       <div className="flex items-start justify-between mb-2">"
@@ -269,7 +268,7 @@ export default function Page() {
 "
                       <div className="flex flex-wrap gap-2">
                         {service.tags.slice(0, 5).map((tag, index) => (
-                          <span
+                          <span;
                             key={index}"
                             className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-lg"
 
@@ -292,7 +291,7 @@ export default function Page() {
           </motion.div>
 
           {/* No Results */}
-          {filteredServices.length === 0 && (<motion.div
+          {filteredServices.length === 0 && (<motion.div;
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}"
               className="text-center py-20"
@@ -300,7 +299,7 @@ export default function Page() {
               <div className="text-6xl mb-4">🔍</div>"
               <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>"
               <p className="text-zion-slate-400 mb-6">
-                Try adjusting your search criteria or filters
+                Try adjusting your search criteria or filters;
               </p>
               <button      onClick = {;
   ;
@@ -310,7 +309,7 @@ export default function Page() {
   () => {;
                   setSearchTerm('');
                   setActiveCategory('all');
-                  setPriceRange([0,
+                  setPriceRange([0;
   10000]);
                   setInnovationLevel('all')}}"                className="bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover:bg-zion-cyan/90 transition-colors"
               >
@@ -322,31 +321,28 @@ export default function Page() {
 
       {/* Service Detail Modal */}
       <AnimatePresence>
-        {selectedService && (<motion.div
+        {selectedService && (<motion.div;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}"
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={closeModal}
 
-            <motion.div
+            <motion.div;
               initial = {
 
-  { scale: 0.9,
-  opacity: 0
-
+  { scale: 0.9;
+  opacity: 0;
 }}
               animate = {
 
-  { scale: 1,
-  opacity: 1
-
+  { scale: 1;
+  opacity: 1;
 }}
               exit = {
 
-  { scale: 0.9,
-  opacity: 0
-
+  { scale: 0.9;
+  opacity: 0;
 }}"
               className="bg-zion-slate-900 border border-zion-slate-700 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
@@ -366,7 +362,7 @@ export default function Page() {
                       {selectedService.description}
                     </p>
                   </div>
-                  <button
+                  <button;
                     onClick={closeModal}"
                     className="text-zion-slate-400 hover:text-white transition-colors"
 "
@@ -399,7 +395,7 @@ export default function Page() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                   <div>"
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"
-                      <CheckCircle className="w-5 h-5 text-zion-green"  />                      Key Features
+                      <CheckCircle className="w-5 h-5 text-zion-green"  />                      Key Features;
                     </h3>"
                     <ul className="space-y-2">
                       {selectedService.features.map((feature, index) => ("
@@ -411,7 +407,7 @@ export default function Page() {
                   </div>
                   <div>"
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"
-                      <TrendingUp className="w-5 h-5 text-zion-green"  />                      Benefits
+                      <TrendingUp className="w-5 h-5 text-zion-green"  />                      Benefits;
                     </h3>"
                     <ul className="space-y-2">
                       {selectedService.benefits.map((benefit, index) => ("
@@ -427,7 +423,7 @@ export default function Page() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                   <div>"
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"
-                      <Target className="w-5 h-5 text-zion-cyan"  />                      Use Cases
+                      <Target className="w-5 h-5 text-zion-cyan"  />                      Use Cases;
                     </h3>"
                     <ul className="space-y-2">
                       {selectedService.useCases.map((useCase, index) => ("
@@ -439,7 +435,7 @@ export default function Page() {
                   </div>
                   <div>"
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"
-                      <Users className="w-5 h-5 text-zion-purple"  />                      Target Audience
+                      <Users className="w-5 h-5 text-zion-purple"  />                      Target Audience;
                     </h3>"
                     <ul className="space-y-2">
                       {selectedService.targetAudience.map((audience, index) => ("
@@ -455,7 +451,7 @@ export default function Page() {
                 {selectedService.technicalSpecs && ("
                   <div className="mb-8">"
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"
-                      <Code className="w-5 h-5 text-zion-cyan"  />                      Technical Specifications
+                      <Code className="w-5 h-5 text-zion-cyan"  />                      Technical Specifications;
                     </h3>"
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>"
@@ -491,19 +487,19 @@ export default function Page() {
                     </div>"
                     <div className="flex gap-3">"
                       <button className="bg-zion-slate-700 text-white px-6 py-3 rounded-xl font-medium hover:bg-zion-slate-600 transition-colors">
-                        Request Demo
+                        Request Demo;
                       </button>"
                       <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-6 py-3 rounded-xl font-medium hover:from-zion-cyan/90 hover:to-zion-purple/90 transition-colors">
-                        Get Started
+                        Get Started;
                       </button>
                     </div>
                   </div>
                 </div>;
               </div>;
             </motion.div>;
-          </motion.div>;) };
+          </motion.div>;) }
       </AnimatePresence>;
     </div>;) ;
-</div></div></div></div></div></div></div>};
+</div></div></div></div></div></div></div>}
 
 export default ComprehensiveServicesShowcase2025}}}}}}}}}}'"`

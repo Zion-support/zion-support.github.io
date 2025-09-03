@@ -2,55 +2,56 @@ import React from 'react';
 import Head from 'next/head';
 
 export default function AutomationPage() {
+
   const automationCategories = [
     {
-      title: 'Content Generation',
-      description: 'AI-powered content creation and management',
-      icon: '📝',
-      count: '2,960+ pages',
+      title: 'Content Generation'
+      description: 'AI-powered content creation and management'
+      icon: '📝'
+      count: '2,960+ pages'
       features: ['Blog posts', 'Technical docs', 'Marketing copy', 'SEO optimization']
-    },
+    }
     {
-      title: 'Infrastructure Management',
-      description: 'Autonomous cloud infrastructure operations',
-      icon: '☁️',
-      count: '99.9% uptime',
+      title: 'Infrastructure Management'
+      description: 'Autonomous cloud infrastructure operations'
+      icon: '☁️'
+      count: '99.9% uptime'
       features: ['Auto-scaling', 'Self-healing', 'Performance monitoring', 'Security automation']
-    },
+    }
     {
-      title: 'CI/CD Automation',
-      description: 'Intelligent build and deployment systems',
-      icon: '🚀',
-      count: 'Continuous',
+      title: 'CI/CD Automation'
+      description: 'Intelligent build and deployment systems'
+      icon: '🚀'
+      count: 'Continuous'
       features: ['Automated testing', 'Smart deployments', 'Rollback systems', 'Quality gates']
-    },
+    }
     {
-      title: 'Monitoring & Alerting',
-      description: 'Proactive system health management',
-      icon: '🔍',
-      count: '24/7 monitoring',
+      title: 'Monitoring & Alerting'
+      description: 'Proactive system health management'
+      icon: '🔍'
+      count: '24/7 monitoring'
       features: ['Real-time alerts', 'Predictive maintenance', 'Performance analytics', 'Incident response']
-    },
+    }
     {
-      title: 'Security Automation',
-      description: 'Intelligent threat detection and response',
-      icon: '🛡️',
-      count: 'Real-time protection',
+      title: 'Security Automation'
+      description: 'Intelligent threat detection and response'
+      icon: '🛡️'
+      count: 'Real-time protection'
       features: ['Threat detection', 'Vulnerability scanning', 'Access control', 'Compliance monitoring']
-    },
+    }
     {
-      title: 'Data Processing',
-      description: 'Automated data analysis and insights',
-      icon: '📊',
-      count: 'Real-time processing',
+      title: 'Data Processing'
+      description: 'Automated data analysis and insights'
+      icon: '📊'
+      count: 'Real-time processing'
       features: ['ETL pipelines', 'Analytics automation', 'Report generation', 'Data quality checks']
     }
   ];
 
   const automationStats = [
-    { label: 'Active Automations', value: '227', color: 'text-cyan-400' },
-    { label: 'Pages Generated', value: '2,960+', color: 'text-fuchsia-400' },
-    { label: 'Uptime', value: '99.9%', color: 'text-green-400' },
+    { label: 'Active Automations', value: '227', color: 'text-cyan-400' }
+    { label: 'Pages Generated', value: '2,960+', color: 'text-fuchsia-400' }
+    { label: 'Uptime', value: '99.9%', color: 'text-green-400' }
     { label: 'Response Time', value: '<100ms', color: 'text-blue-400' }
   ];
 
@@ -68,10 +69,10 @@ export default function AutomationPage() {
         <main className="container mx-auto px-6 py-12">
           <section className="text-center mb-16">
             <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-              Autonomous Automation
+              Autonomous Automation;
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Experience the future of automation with Zion Tech Group's intelligent, self-managing systems 
+              Experience the future of automation with Zion Tech Group's intelligent, self-managing systems;
               that operate 24/7 without human intervention.
             </p>
           </section>
@@ -123,7 +124,7 @@ export default function AutomationPage() {
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-cyan-400">Intelligent Analysis</h3>
                   <p className="text-white/70">
-                    Our AI systems continuously analyze data, identify patterns, and make intelligent 
+                    Our AI systems continuously analyze data, identify patterns, and make intelligent;
                     decisions about when and how to automate processes.
                   </p>
                 </div>
@@ -134,7 +135,7 @@ export default function AutomationPage() {
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-fuchsia-400">Autonomous Execution</h3>
                   <p className="text-white/70">
-                    Once decisions are made, systems automatically execute actions, monitor results, 
+                    Once decisions are made, systems automatically execute actions, monitor results;
                     and adjust strategies in real-time.
                   </p>
                 </div>
@@ -145,7 +146,7 @@ export default function AutomationPage() {
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-green-400">Continuous Learning</h3>
                   <p className="text-white/70">
-                    Systems learn from every action, continuously improving performance and adapting 
+                    Systems learn from every action, continuously improving performance and adapting;
                     to changing conditions and requirements.
                   </p>
                 </div>
@@ -206,15 +207,15 @@ export default function AutomationPage() {
             <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-12 border border-cyan-500/20">
               <h2 className="text-3xl font-bold mb-6 text-white">Ready to Automate Your Future?</h2>
               <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-                Join the automation revolution and discover how Zion Tech Group's autonomous systems 
+                Join the automation revolution and discover how Zion Tech Group's autonomous systems;
                 can transform your operations and drive unprecedented growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="/contact" className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300">
-                  Get Started Today
+                  Get Started Today;
                 </a>
                 <a href="/blog" className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300">
-                  Learn More
+                  Learn More;
                 </a>
               </div>
             </div>

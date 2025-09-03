@@ -1,7 +1,7 @@
   it(displays expected content", () => {
     render(<ServiceComparisonTool  />)"
-import { render, screen } from &apos;@testing - library/react",
-import ServiceComparisonTool from &apos;./ServiceComparisonTool
+import { render, screen } from &apos;@testing - library/react"
+import ServiceComparisonTool from &apos;./ServiceComparisonTool;
 describe(&apos;ServiceComparisonTool&apos, () => {
   it(&apos;renders without crashing&apos, () => {
     render()
@@ -11,7 +11,7 @@ describe(&apos;ServiceComparisonTool&apos, () => {
   it(&apos;displays expected content&apos, () => {
     render()
 }
-    // comment
+    // comment;
     render(<ServiceComparisonTool / >)"
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"

@@ -5,36 +5,38 @@ const path = require("path");
 const glob = require("glob");
 class $1 {
   constructor() {
+
   this.projectRoot = process.cwd();
-    this.testDir = path.join(this.projectRoot, "__tests__");,
+    this.testDir = path.join(this.projectRoot, "__tests__");
 }
-;
   async fixAllTestFiles() {
+
   console.log("🔧 Starting test syntax fixes...");
     const testFiles = glob.sync("**/*.test.js", { cwd: this.testDir });
-    for (const testFile of testFiles) {
+    for() {
+
   const filePath = path.join(this.testDir, testFile);
-      await this.fixTestFile(filePath);,
+      await this.fixTestFile(filePath);
 }
-    ;
-    console.log("✅ Test syntax fixes completed");,
+    console.log("✅ Test syntax fixes completed");
 }
-;
-  async fixTestFile(filePath) {
+  async fixTestFile() {
+
   try {
   let content = fs.readFileSync(filePath, "utf8");
       // Fix common syntax issues;
       content = this.fixSyntaxIssues(content);
       fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed: ${path.relative(this.projectRoot, filePath)}`);,
-} catch (error) {
-  console.error(`❌ Failed to fix ${filePath}:`, error.message);,
+      console.log(`✅ Fixed: ${path.relative(this.projectRoot, filePath)}`);
+} catch() {
+
+  console.error(`❌ Failed to fix ${filePath}:`, error.message);
 }
   }
-;
-  fixSyntaxIssues(content) {
+  fixSyntaxIssues() {
+
   // Fix missing semicolons after expect statements;
-    content = content.replace(/expect\([^)]+\)\.toBeInTheDocument\(\)\s*\)\s*}/g, ;
+    content = content.replace(/expect\([^)]+\)\.toBeInTheDocument\(\)\s*\)\s*}/g;
       (match) => match.replace(/\)\s*}/, ");\n  }"));
     // Fix missing semicolons after test blocks;
     content = content.replace(/}\s*\)\s*}/g, "});\n}");
@@ -47,14 +49,13 @@ class $1 {
     // Fix missing semicolons after comments;
     content = content.replace(/\/\/ [^}]+}\s*$/gm, (match) => {
   if (!match.endsWith(";")) {
-  return match.replace(/}\s*$/, ";\n  }");,
+  return match.replace(/}\s*$/, ";\n  }");
 }
-      return match;,
+      return match;
 });
-    return content;,
+    return content;
 }
 }
-;
 // Run the fixer;
 const fixer = new TestSyntaxFixer();
 fixer.fixAllTestFiles().catch(console.error)

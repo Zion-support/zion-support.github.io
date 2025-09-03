@@ -3,38 +3,38 @@ export const TestimonialsSection: React.FC = () => {
 import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
-,
+
   {
 
     id: 4,"
     name: "James Thompson","
     position: "CEO","
     company: "FinTech Innovations","
-    avatar: "/images/testimonials/james-thompson.jpg",
+    avatar: "/images/testimonials/james-thompson.jpg"
     rating: 5,"
     content: "The AI financial analytics platform has given us unprecedented insights into market trends.Our investment decisions are now data-driven and we've outperformed the market by 25%.","
     industry: "Finance","
-    results: ["25% market outperformance", "Real-time analytics", "Risk reduction"],
-    verified: true
-  },
+    results: ["25% market outperformance", "Real-time analytics", "Risk reduction"]
+    verified: true;
+  }
   {
 
     id: 5,"
     name: "Lisa Park","
     position: "Head of Marketing","
     company: "E-commerce Dynamics","
-    avatar: "/images/testimonials/lisa-park.jpg",
+    avatar: "/images/testimonials/lisa-park.jpg"
     rating: 5,"
     content: "Zion's AI marketing automation tools have revolutionized our customer acquisition.We've seen a 150% increase in conversion rates and 80% reduction in marketing costs.","
     industry: "E-commerce","
-    results: ["150% conversion increase", "80% cost reduction", "Personalized campaigns"],
-    verified: true
+    results: ["150% conversion increase", "80% cost reduction", "Personalized campaigns"]
+    verified: true;
   }"
-    company: "Healthcare Innovations",;"
-    content: "The cloud infrastructure solution provided by Zion Tech Group has dramatically improved our system reliability and scalability.",;
-    rating: 5,;"
-    industry: "Healthcare",;"
-    project: "Cloud Migration & Optimization"};
+    company: "Healthcare Innovations","
+    content: "The cloud infrastructure solution provided by Zion Tech Group has dramatically improved our system reliability and scalability."
+    rating: 5,"
+    industry: "Healthcare","
+    project: "Cloud Migration & Optimization"}
 ];
 
 ;
@@ -43,15 +43,14 @@ export const TestimonialsSection: React.FC = props {
   const [isAutoPlaying, setIsAutoPlaying] = useState<typeof true>(true);
 
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true) }}};
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true) }}}
 
-  // Auto - play functionality
+  // Auto - play functionality;
   React.useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
     if(!isAutoPlaying) return}, 5000) ;
 
@@ -61,15 +60,15 @@ export const TestimonialsSection: React.FC = props {
     <section className="py-20 bg-zion-blue-dark">"
       <div className="container mx-auto px-4">"
         <div className="text-center mb-16">"          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            What Our Users Say
+            What Our Users Say;
           </h2>"
           <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-            Join thousands of satisfied professionals who trust Zion for their technology needs
+            Join thousands of satisfied professionals who trust Zion for their technology needs;
           </p>
         </div>"
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <div
+            <div;
               key={index}"
               className="bg-zion-blue border border-zion-blue-light rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105 group"
 
@@ -126,10 +125,10 @@ export const TestimonialsSection: React.FC = props {
           transition={{ duration: 0.8 }}
         >"
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Trusted by Industry Leaders
+            Trusted by Industry Leaders;
           </h2>"
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            See how Zion Tech Group is transforming businesses across industries with our cutting-edge AI solutions
+            See how Zion Tech Group is transforming businesses across industries with our cutting-edge AI solutions;
           </p>
         </motion.div>
 
@@ -156,7 +155,7 @@ export const TestimonialsSection: React.FC = props {
         {/* Testimonials Carousel */}"
         <div className="relative">"
           <AnimatePresence mode="wait">
-            <motion.div
+            <motion.div;
               key={currentTestimonial}
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -217,7 +216,7 @@ export const TestimonialsSection: React.FC = props {
 
           {/* Navigation Controls */}"
           <div className="flex items-center justify-center mt-8 gap-4">
-            <button
+            <button;
               onClick={prevTestimonial}"
               className="p-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-white transition-all duration-300 hover:scale-110"
               
@@ -227,7 +226,7 @@ export const TestimonialsSection: React.FC = props {
             {/* Dots */}"
             <div className="flex gap-2">
               {testimonials.map((_, index) => (
-                <button
+                <button;
                   key={index}
                   onClick={() => goToTestimonial(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial'
@@ -239,7 +238,7 @@ export const TestimonialsSection: React.FC = props {
               ))}
             </div>
 
-            <button
+            <button;
               onClick={nextTestimonial}"
               className="p-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-white transition-all duration-300 hover:scale-110"
               
@@ -249,14 +248,14 @@ export const TestimonialsSection: React.FC = props {
 
           {/* Auto-play Toggle */}"
           <div className="flex justify-center mt-4">
-            <button
+            <button;
               onClick={() => setIsAutoPlaying(!isAutoPlaying)}`
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${isAutoPlaying'
                   ? 'bg-cyan-500 text-white''
                   : 'bg-white/10 text-gray-300 hover:bg-white/20'`
               }`}
             >
-              {isAutoPlaying ? 'Pause' : 'Play'} Auto-rotation
+              {isAutoPlaying ? 'Pause' : 'Play'} Auto-rotation;
             </button>
           </div>
         </div>
@@ -280,10 +279,10 @@ export const TestimonialsSection: React.FC = props {
         </motion.div>
       </div>
     </section>
-  )};"
+  )}"
             <div className="text-zion-slate-light">Support Available</div>;
           </div>;
         </motion.div>;
       </div>;
-    </section>;) };
+    </section>;) }
 '"`

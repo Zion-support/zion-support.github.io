@@ -1,93 +1,94 @@
-<<<<<<< HEAD
+<<<<<<< HEAD;
 import React from "react"
 import Link from "next/link"
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Users, Globe, Star, Award, Rocket, Lightbulb } from "lucide-react"
 
 export default function Services() {
+
   const serviceCategories = [
     {
-      name: "AI-Powered Solutions",
-      description: "Revolutionary AI services that transform business operations",
-      icon: Brain,
-      count: 25,
-      color: "from-purple-400 to-pink-500",
-      href: "/ai-services",
+      name: "AI-Powered Solutions"
+      description: "Revolutionary AI services that transform business operations"
+      icon: Brain;
+      count: 25;
+      color: "from-purple-400 to-pink-500"
+      href: "/ai-services"
       services: ["AI Revenue Optimization", "AI Customer Experience", "AI Autonomous DevOps", "AI Business Intelligence"]
-    },
+    }
     {
-      name: "Micro SAAS Platforms",
-      description: "Innovative software solutions for modern businesses",
-      icon: Database,
-      count: 35,
-      color: "from-blue-400 to-cyan-500",
-      href: "/micro-saas",
+      name: "Micro SAAS Platforms"
+      description: "Innovative software solutions for modern businesses"
+      icon: Database;
+      count: 35;
+      color: "from-blue-400 to-cyan-500"
+      href: "/micro-saas"
       services: ["Content Creation Studio", "Project Management", "Customer Support", "Sales Analytics"]
-    },
+    }
     {
-      name: "IT Infrastructure",
-      description: "Enterprise-grade technology solutions and services",
-      icon: Shield,
-      count: 20,
-      color: "from-green-400 to-emerald-500",
-      href: "/it-services",
+      name: "IT Infrastructure"
+      description: "Enterprise-grade technology solutions and services"
+      icon: Shield;
+      count: 20;
+      color: "from-green-400 to-emerald-500"
+      href: "/it-services"
       services: ["Quantum Secure Infrastructure", "Edge Computing", "Cloud Migration", "Cybersecurity"]
     }
   ]
 
   const featuredServices = [
     {
-      title: "AI Revenue Optimization Platform",
-      description: "Increase revenue by 25-40% with AI-powered optimization that intelligently manages pricing, forecasting, and customer analytics.",
-      price: "From $2,999/month",
-      features: ["AI-Powered Revenue Forecasting", "Dynamic Pricing Optimization", "Customer Lifetime Value Analysis", "Revenue Leakage Detection"],
-      href: "/services/ai-revenue-optimization-platform",
-      color: "from-purple-400 to-pink-500",
-      popular: true,
+      title: "AI Revenue Optimization Platform"
+      description: "Increase revenue by 25-40% with AI-powered optimization that intelligently manages pricing, forecasting, and customer analytics."
+      price: "From $2,999/month"
+      features: ["AI-Powered Revenue Forecasting", "Dynamic Pricing Optimization", "Customer Lifetime Value Analysis", "Revenue Leakage Detection"]
+      href: "/services/ai-revenue-optimization-platform"
+      color: "from-purple-400 to-pink-500"
+      popular: true;
       benefits: ["Increase revenue by 25-40%", "Reduce revenue leakage by 60%", "Optimize pricing strategies", "Improve customer retention"]
-    },
+    }
     {
-      title: "AI Autonomous DevOps Platform",
-      description: "Eliminate 95% of manual DevOps tasks and reduce deployment time by 80% with intelligent automation.",
-      price: "From $1,999/month",
-      features: ["Autonomous Code Deployment", "AI-Powered Infrastructure Management", "Intelligent Monitoring", "Self-Healing Infrastructure"],
-      href: "/services/ai-autonomous-devops-platform",
-      color: "from-blue-400 to-cyan-500",
+      title: "AI Autonomous DevOps Platform"
+      description: "Eliminate 95% of manual DevOps tasks and reduce deployment time by 80% with intelligent automation."
+      price: "From $1,999/month"
+      features: ["Autonomous Code Deployment", "AI-Powered Infrastructure Management", "Intelligent Monitoring", "Self-Healing Infrastructure"]
+      href: "/services/ai-autonomous-devops-platform"
+      color: "from-blue-400 to-cyan-500"
       benefits: ["Reduce deployment time by 80%", "Eliminate 95% of manual tasks", "Improve reliability by 99.9%", "Reduce costs by 40%"]
-    },
+    }
     {
-      title: "Quantum Secure Infrastructure",
-      description: "Future-proof your organization with quantum-secure infrastructure that protects against quantum computing threats.",
-      price: "From $15,000",
-      features: ["Quantum-Resistant Encryption", "Post-Quantum Cryptography", "Quantum Key Distribution", "Zero-Trust Architecture"],
-      href: "/services/quantum-secure-infrastructure",
-      color: "from-indigo-400 to-purple-500",
+      title: "Quantum Secure Infrastructure"
+      description: "Future-proof your organization with quantum-secure infrastructure that protects against quantum computing threats."
+      price: "From $15,000"
+      features: ["Quantum-Resistant Encryption", "Post-Quantum Cryptography", "Quantum Key Distribution", "Zero-Trust Architecture"]
+      href: "/services/quantum-secure-infrastructure"
+      color: "from-indigo-400 to-purple-500"
       benefits: ["Protect against quantum threats", "Future-proof security", "Reduce vulnerabilities by 99.9%", "Military-grade standards"]
-    },
+    }
     {
-      title: "Edge Computing Orchestration",
-      description: "Reduce latency by 90% and improve performance by 70% with intelligent edge computing orchestration.",
-      price: "From $3,999/month",
-      features: ["Distributed Edge Computing", "Real-time Data Processing", "Intelligent Load Balancing", "Edge AI Inference"],
-      href: "/services/edge-computing-orchestration-platform",
-      color: "from-green-400 to-teal-500",
+      title: "Edge Computing Orchestration"
+      description: "Reduce latency by 90% and improve performance by 70% with intelligent edge computing orchestration."
+      price: "From $3,999/month"
+      features: ["Distributed Edge Computing", "Real-time Data Processing", "Intelligent Load Balancing", "Edge AI Inference"]
+      href: "/services/edge-computing-orchestration-platform"
+      color: "from-green-400 to-teal-500"
       benefits: ["Reduce latency by 90%", "Improve performance by 70%", "Lower bandwidth costs by 60%", "Enable real-time decisions"]
     }
   ]
 
   const pricing = [
     {
-      name: "Starter",
-      price: "$1,999/month",
+      name: "Starter"
+      price: "$1,999/month"
       details: ["Basic AI features", "Standard support", "Up to 10 users", "99.5% uptime SLA"]
-    },
+    }
     {
-      name: "Professional",
-      price: "$4,999/month",
+      name: "Professional"
+      price: "$4,999/month"
       details: ["Advanced AI features", "Priority support", "Up to 100 users", "99.9% uptime SLA"]
-    },
+    }
     {
-      name: "Enterprise",
-      price: "$9,999/month",
+      name: "Enterprise"
+      price: "$9,999/month"
       details: ["Full AI suite", "24/7 dedicated support", "Unlimited users", "99.99% uptime SLA"]
     }
   ]
@@ -99,7 +100,7 @@ export default function Services() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
             <Database className="w-4 h-4 mr-2" />
-            Comprehensive Technology Solutions
+            Comprehensive Technology Solutions;
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Zion Tech Group Services</h1>
           <p className="text-indigo-100 text-xl max-w-3xl mx-auto">
@@ -107,10 +108,10 @@ export default function Services() {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="#contact" className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors">
-              Get Started Today
+              Get Started Today;
             </Link>
             <Link href="#services" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              Explore Services
+              Explore Services;
             </Link>
           </div>
         </div>
@@ -169,7 +170,7 @@ export default function Services() {
                 <div className={`bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 ${service.popular ? 'ring-2 ring-indigo-500' : ''}`}>
                   {service.popular && (
                     <div className="bg-indigo-500 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
-                      Most Popular
+                      Most Popular;
                     </div>
                   )}
                   <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-4`}>
@@ -208,7 +209,7 @@ export default function Services() {
             <div key={index} className={`rounded-xl p-6 shadow-lg ${tier.name === 'Professional' ? 'border-2 border-indigo-500 bg-indigo-50' : 'border border-gray-200 bg-white'}`}>
               {tier.name === 'Professional' && (
                 <div className="bg-indigo-500 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
-                  Most Popular
+                  Most Popular;
                 </div>
               )}
               <h3 className="text-2xl font-semibold text-gray-900 mb-2">{tier.name}</h3>
@@ -226,7 +227,7 @@ export default function Services() {
                   ? 'bg-indigo-600 text-white hover:bg-indigo-700' 
                   : 'bg-gray-900 text-white hover:bg-gray-800'
               }`}>
-                Get Started
+                Get Started;
               </Link>
             </div>
           ))}
@@ -268,7 +269,7 @@ export default function Services() {
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Schedule a Consultation</h3>
               <p className="text-gray-600 mb-4">Get a personalized consultation to discuss your technology needs</p>
               <Link href="https://ziontechgroup.com/contact" className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors inline-block">
-                Schedule Consultation
+                Schedule Consultation;
               </Link>
             </div>
           </div>
@@ -278,4 +279,4 @@ export default function Services() {
   )
 }
 
-export default Services
+export default Services;

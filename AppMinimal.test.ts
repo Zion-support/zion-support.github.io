@@ -10,11 +10,11 @@ describe('UnknownComponent', () => {
 
   it('displays correct content', () => {
     render(<UnknownComponent />);
-    // Add specific content checks based on component functionality
+    // Add specific content checks based on component functionality;
   });
 
   it('handles user interactions', () => {
     render(<UnknownComponent />);
-    // Add interaction tests based on component functionality
+    // Add interaction tests based on component functionality;
   });
 });

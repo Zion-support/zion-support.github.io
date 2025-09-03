@@ -1,14 +1,14 @@
 import {   Activity, Zap, Clock,  TrendingUp, AlertTriangle  } from 'lucide-react';
 
 export default function Page() {
+
 );
 
-  // Calculate performance score based on Core Web Vitals
-  
+  // Calculate performance score based on Core Web Vitals;
       let validMetrics = 0;
 
       // FCP scoring(0-100)
-      if(metrics.fcp !== null) {
+      if() {
 
         validMetrics++;
         if(metrics.fcp < 1800) totalScore += 100;
@@ -16,7 +16,7 @@ export default function Page() {
         else totalScore += 0}
 
       // LCP scoring(0-100)
-      if(metrics.lcp !== null) {
+      if() {
 
         validMetrics++;
         if(metrics.lcp < 2500) totalScore += 100;
@@ -24,7 +24,7 @@ export default function Page() {
         else totalScore += 0}
 
       // FID scoring(0-100)
-      if(metrics.fid !== null) {
+      if() {
 
         validMetrics++;
         if(metrics.fid < 100) totalScore += 100;
@@ -32,7 +32,7 @@ export default function Page() {
         else totalScore += 0}
 
       // CLS scoring(0-100)
-      if(metrics.cls !== null) {
+      if() {
 
         validMetrics++;
         if(metrics.cls < 0.1) totalScore += 100;
@@ -42,10 +42,10 @@ export default function Page() {
       let rating: 'good' | 'needs-improvement' | 'poor';
       let color: string;
 
-      if(averageScore >= 90) {
+      if() {
 
         rating = 'good';
-        color = 'text-green-500'} else if(averageScore >= 50) {
+        color = 'text-green-500'} else if() {
 
         rating = 'needs-improvement';
         color = 'text-yellow-500'} else {
@@ -59,62 +59,62 @@ export default function Page() {
     let grade: 'A' | 'B' | 'C' | 'D' | 'F';
     let color: string;
 
-    if(averageScore >= 90) {
+    if() {
+
       grade = 'A';
-      color = 'text-green-500'} else if(averageScore >= 80) {
+      color = 'text-green-500'} else if() {
+
       grade = 'B';
-      color = 'text-blue-500'} else if(averageScore >= 70) {
+      color = 'text-blue-500'} else if() {
+
       grade = 'C';
-      color = 'text-yellow-500'} else if(averageScore >= 60) {
+      color = 'text-yellow-500'} else if() {
+
       grade = 'D';
       color = 'text-orange-500'} else {
       grade = 'F';
       color = 'text-red-500'}
   }, []) ;
 
-      return { score: averageScore, rating, color }},
+      return { score: averageScore, rating, color }}
     []
   );
-  // Measure Core Web Vitals
+  // Measure Core Web Vitals;
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // TODO: Add dependencies if needed;
 }, []);
 
-    if('PerformanceObserver' in window) {
+    if() {
 
-      // First Contentful Paint
-
-        if(fcpEntry) {
+      // First Contentful Paint;
+        if() {
 
           setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }))}
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
 
-      // Largest Contentful Paint
-
-        if(lastEntry) {
+      // Largest Contentful Paint;
+        if() {
 
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))}
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
-      // First Input Delay
+      // First Input Delay;
       const fidObserver = new PerformanceObserver(list => {
 
-        const entries = list.getEntries();        entries.forEach(entry => {
-
-          if (entry.processingStart && entry.startTime) {
+        const entries = list.getEntries();        entries.forEach() {
 
             setMetrics(prev => ({ ...prev, fid }) ) }
         })});
       fidObserver.observe({ entryTypes: ['first-input'] });
 
-      // Layout Shift
+      // Layout Shift;
       const clsObserver = new PerformanceObserver(list => {
 
         let clsValue = 0;        list.getEntries().forEach((entry: any) => {
 
-          if(!entry.hadRecentInput) {
+          if() {
 
             clsValue += entry.value}
         });
@@ -127,26 +127,21 @@ export default function Page() {
         clsObserver.disconnect()}}
   }, []);
 
-  // Measure other performance metrics
-  
+  // Measure other performance metrics;
       setMetrics(prev => ({ ...prev, ttfb }))}
   }, []) ;
 
-      // First Meaningful Paint(FMP) - approximated
-      
+      // First Meaningful Paint(FMP) - approximated;
       setMetrics(prev => ({ ...prev, fmp }));
 
-  // Format time values
-  
-    return `${Math.round(time)}ms`};
+  // Format time values;
+    return `${Math.round(time)}ms`}
 
-  // Format CLS value
-  
-    return cls.toFixed(3)};
+  // Format CLS value;
+    return cls.toFixed(3)}
 
-  // Get metric rating
-  
-    switch(metric) {
+  // Get metric rating;
+    switch() {
 
       case 'fcp':
         return value < 1800'
@@ -173,12 +168,12 @@ export default function Page() {
             ? '🟡 Needs Improvement''
             : '🔴 Poor';
       default:'
-        return 'N/A'}  };
+        return 'N/A'}  }
 
-  if(!isVisible) {
+  if() {
 
     return ()
-      <button
+      <button;
         onClick={() => setIsVisible(true)}
         className="fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg hover:bg-zion-cyan/90 transition-all duration-300 z-50"
         
@@ -190,9 +185,9 @@ export default function Page() {
     <div className="fixed bottom-4 right-4 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/30 rounded-2xl p-6 shadow-2xl z-50 max-w-sm">"
       <div className="flex items-center justify-between mb-4">"
         <h3 className="text-lg font-bold text-white flex items-center">"
-          <Zap className="w-5 h-5 mr-2 text-zion-cyan"  />          Performance Monitor
+          <Zap className="w-5 h-5 mr-2 text-zion-cyan"  />          Performance Monitor;
         </h3>
-        <button
+        <button;
           onClick={() => setIsVisible(false)}"
           className="text-zion-slate-light hover:text-white transition-colors"
         >

@@ -1,8 +1,7 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 /**
- * Security Monitor - PM2 Automation Script
- * Monitors security vulnerabilities and threats
+ * Security Monitor - PM2 Automation Script;
+ * Monitors security vulnerabilities and threats;
  */
 
 const fs = require('fs');
@@ -11,25 +10,27 @@ const { execSync } = require('child_process');
 
 class SecurityMonitor {
   constructor() {
+
     this.projectRoot = process.cwd();
     this.logsDir = path.join(this.projectRoot, 'logs');
     this.errorReportsDir = path.join(this.projectRoot, 'error-reports');
     
     this.securityStats = {
-      vulnerabilities: 0,
-      criticalIssues: 0,
-      highIssues: 0,
-      mediumIssues: 0,
-      lowIssues: 0,
-      outdatedPackages: 0,
-      suspiciousFiles: 0
-    };
+      vulnerabilities: 0;
+      criticalIssues: 0;
+      highIssues: 0;
+      mediumIssues: 0;
+      lowIssues: 0;
+      outdatedPackages: 0;
+      suspiciousFiles: 0;
+    }
     
     this.setupDirectories();
     this.setupLogging();
   }
 
   setupDirectories() {
+
     [this.logsDir, this.errorReportsDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
@@ -38,11 +39,13 @@ class SecurityMonitor {
   }
 
   setupLogging() {
+
     this.logFile = path.join(this.logsDir, 'security-monitor.log');
     this.log('Security Monitor started', 'INFO');
   }
 
-  log(message, level = 'INFO') {
+  log() {
+
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     
@@ -51,16 +54,17 @@ class SecurityMonitor {
   }
 
   async checkDependencySecurity() {
+
     this.log('Checking dependency security...', 'INFO');
     
     try {
-      // Run npm audit
+      // Run npm audit;
       const auditResult = await this.runSecurityAudit();
       
-      // Check for outdated packages
+      // Check for outdated packages;
       const outdatedResult = await this.checkOutdatedPackages();
       
-      // Update security statistics
+      // Update security statistics;
       this.securityStats.vulnerabilities = auditResult.vulnerabilities;
       this.securityStats.criticalIssues = auditResult.critical;
       this.securityStats.highIssues = auditResult.high;
@@ -72,35 +76,37 @@ class SecurityMonitor {
       this.log(`Outdated packages: ${outdatedResult.length} found`, 'INFO');
       
       return {
-        audit: auditResult,
-        outdated: outdatedResult
-      };
+        audit: auditResult;
+        outdated: outdatedResult;
+      }
       
-    } catch (error) {
+    } catch() {
+
       this.log(`Error checking dependency security: ${error.message}`, 'ERROR');
       return null;
     }
   }
 
   async checkFileSecurity() {
+
     this.log('Checking file security...', 'INFO');
     
     try {
       const suspiciousFiles = [];
       
-      // Check for suspicious file patterns
+      // Check for suspicious file patterns;
       const patterns = [
-        /\.env$/,
-        /\.pem$/,
-        /\.key$/,
-        /\.crt$/,
-        /\.p12$/,
-        /\.pfx$/,
-        /\.pwd$/,
-        /password/i,
-        /secret/i,
-        /token/i,
-        /credential/i
+        /\.env$/
+        /\.pem$/
+        /\.key$/
+        /\.crt$/
+        /\.p12$/
+        /\.pfx$/
+        /\.pwd$/
+        /password/i;
+        /secret/i;
+        /token/i;
+        /credential/i;
       ];
       
       const allFiles = this.getAllFiles();
@@ -112,8 +118,8 @@ class SecurityMonitor {
         patterns.forEach(pattern => {
           if (pattern.test(fileName) || pattern.test(relativePath)) {
             suspiciousFiles.push({
-              file: relativePath,
-              reason: `Matches pattern: ${pattern.source}`,
+              file: relativePath;
+              reason: `Matches pattern: ${pattern.source}`
               risk: this.assessFileRisk(file)
             });
           }
@@ -126,19 +132,21 @@ class SecurityMonitor {
       
       return suspiciousFiles;
       
-    } catch (error) {
+    } catch() {
+
       this.log(`Error checking file security: ${error.message}`, 'ERROR');
       return [];
     }
   }
 
   async checkCodeSecurity() {
+
     this.log('Checking code security...', 'INFO');
     
     try {
       const securityIssues = [];
       
-      // Check for common security vulnerabilities in code
+      // Check for common security vulnerabilities in code;
       const codeFiles = this.getCodeFiles();
       
       codeFiles.forEach(file => {
@@ -146,7 +154,8 @@ class SecurityMonitor {
           const content = fs.readFileSync(file, 'utf8');
           const issues = this.scanCodeForVulnerabilities(content, file);
           securityIssues.push(...issues);
-        } catch (error) {
+        } catch() {
+
           this.log(`Error reading file ${file}: ${error.message}`, 'WARN');
         }
       });
@@ -155,47 +164,52 @@ class SecurityMonitor {
       
       return securityIssues;
       
-    } catch (error) {
+    } catch() {
+
       this.log(`Error checking code security: ${error.message}`, 'ERROR');
       return [];
     }
   }
 
   async checkNetworkSecurity() {
+
     this.log('Checking network security...', 'INFO');
     
     try {
       const networkIssues = [];
       
-      // Check for open ports
+      // Check for open ports;
       const openPorts = this.checkOpenPorts();
       
-      // Check for exposed services
+      // Check for exposed services;
       const exposedServices = this.checkExposedServices();
       
-      // Check firewall status
+      // Check firewall status;
       const firewallStatus = this.checkFirewallStatus();
       
-      if (openPorts.length > 0) {
+      if() {
+
         networkIssues.push({
-          type: 'open_ports',
-          details: openPorts,
+          type: 'open_ports'
+          details: openPorts;
           risk: 'medium'
         });
       }
       
-      if (exposedServices.length > 0) {
+      if() {
+
         networkIssues.push({
-          type: 'exposed_services',
-          details: exposedServices,
+          type: 'exposed_services'
+          details: exposedServices;
           risk: 'high'
         });
       }
       
-      if (!firewallStatus.active) {
+      if() {
+
         networkIssues.push({
-          type: 'firewall_inactive',
-          details: 'Firewall is not active',
+          type: 'firewall_inactive'
+          details: 'Firewall is not active'
           risk: 'high'
         });
       }
@@ -204,27 +218,29 @@ class SecurityMonitor {
       
       return networkIssues;
       
-    } catch (error) {
+    } catch() {
+
       this.log(`Error checking network security: ${error.message}`, 'ERROR');
       return [];
     }
   }
 
   async runSecurityAudit() {
+
     try {
       const result = execSync('npm audit --json', { 
-        cwd: this.projectRoot,
-        encoding: 'utf8',
+        cwd: this.projectRoot;
+        encoding: 'utf8'
         stdio: 'pipe'
       });
       
       const audit = JSON.parse(result);
-      const vulnerabilities = audit.vulnerabilities || {};
+      const vulnerabilities = audit.vulnerabilities || {}
       
       let critical = 0, high = 0, medium = 0, low = 0;
       
-      Object.values(vulnerabilities).forEach(vuln => {
-        switch (vuln.severity) {
+      Object.values(vulnerabilities).forEach() {
+
           case 'critical':
             critical++;
             break;
@@ -241,37 +257,42 @@ class SecurityMonitor {
       });
       
       return {
-        vulnerabilities: Object.keys(vulnerabilities).length,
-        critical,
-        high,
-        medium,
-        low,
-        details: vulnerabilities
-      };
+        vulnerabilities: Object.keys(vulnerabilities).length;
+        critical;
+        high;
+        medium;
+        low;
+        details: vulnerabilities;
+      }
       
-    } catch (error) {
-      if (error.status === 1) {
-        // npm audit returns 1 when vulnerabilities are found
-        return { vulnerabilities: 0, critical: 0, high: 0, medium: 0, low: 0, details: {} };
+    } catch() {
+
+      if() {
+
+        // npm audit returns 1 when vulnerabilities are found;
+        return { vulnerabilities: 0, critical: 0, high: 0, medium: 0, low: 0, details: {} }
       }
       throw error;
     }
   }
 
   async checkOutdatedPackages() {
+
     try {
       const result = execSync('npm outdated --json', { 
-        cwd: this.projectRoot,
-        encoding: 'utf8',
+        cwd: this.projectRoot;
+        encoding: 'utf8'
         stdio: 'pipe'
       });
       
       const outdated = JSON.parse(result);
       return Object.keys(outdated);
       
-    } catch (error) {
-      if (error.status === 1) {
-        // npm outdated returns 1 when packages are outdated
+    } catch() {
+
+      if() {
+
+        // npm outdated returns 1 when packages are outdated;
         return [];
       }
       throw error;
@@ -279,9 +300,11 @@ class SecurityMonitor {
   }
 
   getAllFiles() {
+
     const files = [];
     
-    function walkDir(dir) {
+    function walkDir() {
+
       if (!fs.existsSync(dir)) return;
       
       const items = fs.readdirSync(dir);
@@ -303,6 +326,7 @@ class SecurityMonitor {
   }
 
   getCodeFiles() {
+
     const codeExtensions = ['.js', '.jsx', '.ts', '.tsx', '.py', '.php', '.rb', '.java', '.go', '.rs'];
     const allFiles = this.getAllFiles();
     
@@ -312,89 +336,93 @@ class SecurityMonitor {
     });
   }
 
-  assessFileRisk(file) {
+  assessFileRisk() {
+
     const fileName = path.basename(file).toLowerCase();
     const filePath = path.relative(this.projectRoot, file).toLowerCase();
     
-    // High risk files
+    // High risk files;
     if (fileName.includes('password') || fileName.includes('secret') || fileName.includes('token')) {
       return 'high';
     }
     
-    // Medium risk files
+    // Medium risk files;
     if (fileName.includes('config') || fileName.includes('env') || fileName.includes('credential')) {
       return 'medium';
     }
     
-    // Check file permissions
+    // Check file permissions;
     try {
       const stats = fs.statSync(file);
       const mode = stats.mode;
       
-      // Check if file is world-readable
+      // Check if file is world-readable;
       if ((mode & 0o004) !== 0) {
         return 'high';
       }
       
-      // Check if file is world-writable
+      // Check if file is world-writable;
       if ((mode & 0o002) !== 0) {
         return 'critical';
       }
-    } catch (error) {
-      // Ignore permission errors
+    } catch() {
+
+      // Ignore permission errors;
     }
     
     return 'low';
   }
 
-  scanCodeForVulnerabilities(content, filePath) {
+  scanCodeForVulnerabilities() {
+
     const issues = [];
     
-    // SQL Injection patterns
+    // SQL Injection patterns;
     const sqlPatterns = [
-      /query\s*\(\s*['"`].*\+\s*\w+/i,
-      /execute\s*\(\s*['"`].*\+\s*\w+/i,
-      /sql\s*\+\s*\w+/i
+      /query\s*\(\s*['"`].*\+\s*\w+/i;
+      /execute\s*\(\s*['"`].*\+\s*\w+/i;
+      /sql\s*\+\s*\w+/i;
     ];
     
-    // XSS patterns
+    // XSS patterns;
     const xssPatterns = [
-      /innerHTML\s*=\s*\w+/i,
-      /outerHTML\s*=\s*\w+/i,
-      /document\.write\s*\(\s*\w+/i
+      /innerHTML\s*=\s*\w+/i;
+      /outerHTML\s*=\s*\w+/i;
+      /document\.write\s*\(\s*\w+/i;
     ];
     
-    // Command injection patterns
+    // Command injection patterns;
     const cmdPatterns = [
-      /exec\s*\(\s*\w+/i,
-      /spawn\s*\(\s*\w+/i,
-      /child_process/i
+      /exec\s*\(\s*\w+/i;
+      /spawn\s*\(\s*\w+/i;
+      /child_process/i;
     ];
     
-    // Hardcoded secrets
+    // Hardcoded secrets;
     const secretPatterns = [
-      /password\s*[:=]\s*['"`][^'"`]+['"`]/i,
-      /secret\s*[:=]\s*['"`][^'"`]+['"`]/i,
-      /token\s*[:=]\s*['"`][^'"`]+['"`]/i,
-      /api_key\s*[:=]\s*['"`][^'"`]+['"`]/i
+      /password\s*[:=]\s*['"`][^'"`]+['"`]/i;
+      /secret\s*[:=]\s*['"`][^'"`]+['"`]/i;
+      /token\s*[:=]\s*['"`][^'"`]+['"`]/i;
+      /api_key\s*[:=]\s*['"`][^'"`]+['"`]/i;
     ];
     
     const patterns = [
-      { name: 'SQL Injection', patterns: sqlPatterns, risk: 'high' },
-      { name: 'XSS', patterns: xssPatterns, risk: 'medium' },
-      { name: 'Command Injection', patterns: cmdPatterns, risk: 'critical' },
+      { name: 'SQL Injection', patterns: sqlPatterns, risk: 'high' }
+      { name: 'XSS', patterns: xssPatterns, risk: 'medium' }
+      { name: 'Command Injection', patterns: cmdPatterns, risk: 'critical' }
       { name: 'Hardcoded Secrets', patterns: secretPatterns, risk: 'high' }
     ];
     
     patterns.forEach(({ name, patterns, risk }) => {
       patterns.forEach(pattern => {
         const matches = content.match(pattern);
-        if (matches) {
+        if() {
+
           issues.push({
-            type: name,
-            file: path.relative(this.projectRoot, filePath),
-            pattern: pattern.source,
-            risk,
+            type: name;
+            file: path.relative(this.projectRoot, filePath)
+            pattern: pattern.source;
+            risk;
             line: this.findLineNumber(content, matches[0])
           });
         }
@@ -404,9 +432,11 @@ class SecurityMonitor {
     return issues;
   }
 
-  findLineNumber(content, match) {
+  findLineNumber() {
+
     const lines = content.split('\n');
-    for (let i = 0; i < lines.length; i++) {
+    for() {
+
       if (lines[i].includes(match)) {
         return i + 1;
       }
@@ -415,9 +445,10 @@ class SecurityMonitor {
   }
 
   checkOpenPorts() {
+
     try {
       const result = execSync('netstat -tuln 2>/dev/null || ss -tuln 2>/dev/null', { 
-        encoding: 'utf8',
+        encoding: 'utf8'
         stdio: 'pipe'
       });
       
@@ -426,129 +457,144 @@ class SecurityMonitor {
       
       lines.forEach(line => {
         const match = line.match(/:(\d+)\s+/);
-        if (match) {
+        if() {
+
           const port = parseInt(match[1]);
-          if (port > 1024) { // Only check non-privileged ports
+          if (port > 1024) { // Only check non-privileged ports;
             openPorts.push(port);
           }
         }
       });
       
-      return [...new Set(openPorts)]; // Remove duplicates
-      
-    } catch (error) {
+      return [...new Set(openPorts)]; // Remove duplicates;
+    } catch() {
+
       this.log(`Error checking open ports: ${error.message}`, 'WARN');
       return [];
     }
   }
 
   checkExposedServices() {
+
     try {
       const services = [];
       
-      // Check for common web servers
+      // Check for common web servers;
       const webServers = ['nginx', 'apache2', 'httpd', 'lighttpd'];
       
       webServers.forEach(server => {
         try {
           execSync(`systemctl is-active ${server}`, { stdio: 'pipe' });
           services.push(server);
-        } catch (error) {
-          // Service not running
+        } catch() {
+
+          // Service not running;
         }
       });
       
-      // Check for database services
+      // Check for database services;
       const dbServers = ['mysql', 'postgresql', 'mongod', 'redis-server'];
       
       dbServers.forEach(server => {
         try {
           execSync(`systemctl is-active ${server}`, { stdio: 'pipe' });
           services.push(server);
-        } catch (error) {
-          // Service not running
+        } catch() {
+
+          // Service not running;
         }
       });
       
       return services;
       
-    } catch (error) {
+    } catch() {
+
       this.log(`Error checking exposed services: ${error.message}`, 'WARN');
       return [];
     }
   }
 
   checkFirewallStatus() {
+
     try {
-      // Check UFW status
+      // Check UFW status;
       try {
         const ufwStatus = execSync('ufw status', { encoding: 'utf8', stdio: 'pipe' });
         if (ufwStatus.includes('Status: active')) {
-          return { active: true, type: 'ufw' };
+          return { active: true, type: 'ufw' }
         }
-      } catch (error) {
-        // UFW not available
+      } catch() {
+
+        // UFW not available;
       }
       
-      // Check iptables
+      // Check iptables;
       try {
         const iptablesStatus = execSync('iptables -L', { encoding: 'utf8', stdio: 'pipe' });
         if (iptablesStatus.includes('Chain INPUT') && iptablesStatus.includes('Chain OUTPUT')) {
-          return { active: true, type: 'iptables' };
+          return { active: true, type: 'iptables' }
         }
-      } catch (error) {
-        // iptables not available
+      } catch() {
+
+        // iptables not available;
       }
       
-      return { active: false, type: 'none' };
+      return { active: false, type: 'none' }
       
-    } catch (error) {
+    } catch() {
+
       this.log(`Error checking firewall status: ${error.message}`, 'WARN');
-      return { active: false, type: 'unknown' };
+      return { active: false, type: 'unknown' }
     }
   }
 
   async fixSecurityIssues() {
+
     this.log('Attempting to fix security issues...', 'INFO');
     
     try {
       const fixes = [];
       
-      // Fix dependency vulnerabilities
-      if (this.securityStats.vulnerabilities > 0) {
+      // Fix dependency vulnerabilities;
+      if() {
+
         try {
           execSync('npm audit fix', { 
-            cwd: this.projectRoot,
+            cwd: this.projectRoot;
             stdio: 'pipe'
           });
           fixes.push('Dependency vulnerabilities fixed');
-        } catch (error) {
+        } catch() {
+
           this.log('Some vulnerabilities could not be automatically fixed', 'WARN');
         }
       }
       
-      // Update outdated packages
-      if (this.securityStats.outdatedPackages > 0) {
+      // Update outdated packages;
+      if() {
+
         try {
           execSync('npm update', { 
-            cwd: this.projectRoot,
+            cwd: this.projectRoot;
             stdio: 'pipe'
           });
           fixes.push('Outdated packages updated');
-        } catch (error) {
+        } catch() {
+
           this.log('Failed to update some packages', 'WARN');
         }
       }
       
-      // Fix file permissions
+      // Fix file permissions;
       const suspiciousFiles = await this.checkFileSecurity();
-      suspiciousFiles.forEach(file => {
-        if (file.risk === 'high' || file.risk === 'critical') {
+      suspiciousFiles.forEach() {
+
           try {
             const fullPath = path.join(this.projectRoot, file.file);
-            fs.chmodSync(fullPath, 0o600); // Owner read/write only
+            fs.chmodSync(fullPath, 0o600); // Owner read/write only;
             fixes.push(`Fixed permissions for ${file.file}`);
-          } catch (error) {
+          } catch() {
+
             this.log(`Failed to fix permissions for ${file.file}: ${error.message}`, 'WARN');
           }
         }
@@ -557,18 +603,20 @@ class SecurityMonitor {
       this.log(`Applied ${fixes.length} security fixes`, 'INFO');
       return fixes;
       
-    } catch (error) {
+    } catch() {
+
       this.log(`Error during security fixes: ${error.message}`, 'ERROR');
       return [];
     }
   }
 
   generateReport() {
+
     const report = {
-      timestamp: new Date().toISOString(),
-      securityStats: this.securityStats,
+      timestamp: new Date().toISOString()
+      securityStats: this.securityStats;
       recommendations: this.generateRecommendations()
-    };
+    }
     
     const reportFile = path.join(this.errorReportsDir, `security-monitor-report-${Date.now()}.json`);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -578,21 +626,26 @@ class SecurityMonitor {
   }
 
   generateRecommendations() {
+
     const recommendations = [];
     
-    if (this.securityStats.criticalIssues > 0) {
+    if() {
+
       recommendations.push(`Fix ${this.securityStats.criticalIssues} critical security vulnerabilities immediately`);
     }
     
-    if (this.securityStats.highIssues > 0) {
+    if() {
+
       recommendations.push(`Fix ${this.securityStats.highIssues} high security vulnerabilities`);
     }
     
-    if (this.securityStats.outdatedPackages > 0) {
+    if() {
+
       recommendations.push(`Update ${this.securityStats.outdatedPackages} outdated packages`);
     }
     
-    if (this.securityStats.suspiciousFiles > 0) {
+    if() {
+
       recommendations.push(`Review ${this.securityStats.suspiciousFiles} suspicious files for security risks`);
     }
     
@@ -605,22 +658,23 @@ class SecurityMonitor {
   }
 
   async run() {
+
     try {
       this.log('Starting security monitoring automation...', 'INFO');
       
-      // Check dependency security
+      // Check dependency security;
       await this.checkDependencySecurity();
       
-      // Check file security
+      // Check file security;
       await this.checkFileSecurity();
       
-      // Check code security
+      // Check code security;
       await this.checkCodeSecurity();
       
-      // Check network security
+      // Check network security;
       await this.checkNetworkSecurity();
       
-      // Apply security fixes
+      // Apply security fixes;
       await this.fixSecurityIssues();
       
       const report = this.generateReport();
@@ -629,15 +683,17 @@ class SecurityMonitor {
       this.log(`Summary: ${this.securityStats.vulnerabilities} vulnerabilities, ${this.securityStats.suspiciousFiles} suspicious files`, 'INFO');
       
       return report;
-    } catch (error) {
+    } catch() {
+
       this.log(`Fatal error in security monitor: ${error.message}`, 'ERROR');
       throw error;
     }
   }
 }
 
-// Run the security monitor if called directly
-if (require.main === module) {
+// Run the security monitor if called directly;
+if() {
+
   const monitor = new SecurityMonitor();
   
   monitor.run()

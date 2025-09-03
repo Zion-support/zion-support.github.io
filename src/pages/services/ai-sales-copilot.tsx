@@ -1,20 +1,21 @@
 import React from 'react';
 import { 
-  Brain, 
-  TrendingUp, 
-  Users, 
-  Target, 
-  Zap, 
-  BarChart3, 
-  MessageCircle, 
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Shield,
-  Rocket
+  Brain;
+  TrendingUp;
+  Users;
+  Target;
+  Zap;
+  BarChart3;
+  MessageCircle;
+  CheckCircle;
+  ArrowRight;
+  Star;
+  Shield;
+  Rocket;
 } from 'lucide-react';
 
 export default function AISalesCopilotPage() {
+
   return (
     <div className="min-h-screen bg-zion-slate-dark text-white">
       {/* Hero Section */}
@@ -23,20 +24,20 @@ export default function AISalesCopilotPage() {
           <div className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-full text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
-              AI-Powered Sales Solution
+              AI-Powered Sales Solution;
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Sales Copilot
+              AI Sales Copilot;
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
               Transform your sales process with intelligent automation, predictive analytics, and personalized customer engagement powered by cutting-edge AI technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105">
-                Start Free Trial
+                Start Free Trial;
               </button>
               <button className="px-8 py-4 border border-zion-purple text-zion-purple font-semibold rounded-lg hover:bg-zion-purple hover:text-white transition-all duration-300">
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </div>
@@ -48,7 +49,7 @@ export default function AISalesCopilotPage() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Features That Drive Results
+              Powerful Features That Drive Results;
             </h2>
             <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
               Our AI Sales Copilot combines advanced machine learning with proven sales methodologies to deliver exceptional results.
@@ -202,10 +203,10 @@ export default function AISalesCopilotPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105">
-              Get Started Today
+              Get Started Today;
             </button>
             <button className="px-8 py-4 border border-zion-purple text-zion-purple font-semibold rounded-lg hover:bg-zion-purple hover:text-white transition-all duration-300">
-              Watch Demo
+              Watch Demo;
             </button>
           </div>
         </div>

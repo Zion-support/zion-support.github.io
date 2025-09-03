@@ -1,30 +1,31 @@
 import React from "react";
 interface ButtonProps {;
 
-  children: React.ReactNode,
-  variant?: "default" | "outline" | "ghost" | "link",
-  size?: "sm" | "md" | "lg" | "icon
-  asChild?: boolean
-  className?: string,,
+  children: React.ReactNode;
+  variant?: "default" | "outline" | "ghost" | "link"
+  size?: "sm" | "md" | "lg" | "icon;
+  asChild?: boolean;
+  className?: string,
   onClick?: () => void,"
-  type?: "button" | "submit" | "reset",
+  type?: "button" | "submit" | "reset"
   disabled?: boolean}
 
 export const Button: React.FC<ButtonProps> = ({ children,"
   variant = "default","
-  size = "md",
+  size = "md"
   asChild = false,"
-  className = "",
+  className = ""
   onClick,"
-  type = "button",
+  type = "button"
   disabled = false}) => {"
-  const baseClasses = "inline-flex items-center justify-center font-medium rounded-md transition-colors focus: outline-none focus:ring-2 focus:ring-offset-2',
+  const baseClasses = "inline-flex items-center justify-center font-medium rounded-md transition-colors focus: outline-none focus:ring-2 focus:ring-offset-2'
   const variantClasses = {}
 
   const sizeClasses = {}
 
   const classes = "${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}"
-  if (asChild) {
+  if() {
+
     return <span className="{classes}">{children}</span>
   }
 
@@ -38,7 +39,6 @@ export const Button: React.FC<ButtonProps> = ({ children,"
 
     </button>
   )}
-;
   return (";
     <button type = "{type}"";
       className="{classes}"";
@@ -47,7 +47,7 @@ export const Button: React.FC<ButtonProps> = ({ children,"
     >;
       {children}
     </button>;
-  );,
+  );
 }
 ";
 export default Button;"

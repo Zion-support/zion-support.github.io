@@ -25,7 +25,7 @@ const HeroSection: React.FC = () => {
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              AI-Powered
+              AI-Powered;
             </span>
             <br />
             <span className="text-white">Technology Solutions</span>
@@ -39,14 +39,14 @@ const HeroSection: React.FC = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Link
+            <Link;
               href="/services"
               className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center justify-center space-x-2"
             >
               <span>Explore Services</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link
+            <Link;
               href="/contact"
               className="group bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-900 transition-all duration-300 flex items-center justify-center space-x-2"
             >
@@ -85,6 +85,6 @@ const HeroSection: React.FC = () => {
       </section>
     </>
   );
-};
+}
 
 export default HeroSection;

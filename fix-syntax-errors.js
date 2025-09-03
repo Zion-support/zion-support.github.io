@@ -1,85 +1,85 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 
-// List of files with syntax errors from the lint output
+// List of files with syntax errors from the lint output;
 const filesToFix = [
-  'src/pages/services/AIHealthcare.tsx',
-  'src/pages/services/AIHealthcareRevenueCycle.tsx',
-  'src/pages/services/AIIdentityManagement.tsx',
-  'src/pages/services/AIIncidentResponse.tsx',
-  'src/pages/services/AIInsurance.tsx',
-  'src/pages/services/AIInternetOfThings.tsx',
-  'src/pages/services/AIKafka.tsx',
-  'src/pages/services/AIKubernetes.tsx',
-  'src/pages/services/AILegalDocumentAutomation.tsx',
-  'src/pages/services/AILegalTech.tsx',
-  'src/pages/services/AIManufacturing.tsx',
-  'src/pages/services/AIManufacturingQualityControl.tsx',
-  'src/pages/services/AIMarketingAutomation.tsx',
-  'src/pages/services/AIMentalHealthSupportPlatform.tsx',
-  'src/pages/services/AIMetaverse.tsx',
-  'src/pages/services/AIMicroservices.tsx',
-  'src/pages/services/AIMongoDB.tsx',
-  'src/pages/services/AIMySQL.tsx',
-  'src/pages/services/AINetworkSecurity.tsx',
-  'src/pages/services/AIPenetrationTesting.tsx',
-  'src/pages/services/AIPostgreSQL.tsx',
-  'src/pages/services/AIPoweredSEO.tsx',
-  'src/pages/services/AIPredictiveAnalytics.tsx',
-  'src/pages/services/AIPredictiveAnalyticsPlatform.tsx',
-  'src/pages/services/AIPredictiveMaintenance.tsx',
-  'src/pages/services/AIProductivitySuite.tsx',
-  'src/pages/services/AIProjectManagement.tsx',
-  'src/pages/services/AIProjectManagementAssistant.tsx',
-  'src/pages/services/AIPrometheus.tsx',
-  'src/pages/services/AIQuantumComputing.tsx',
-  'src/pages/services/AIQuantumComputingSolutions.tsx',
-  'src/pages/services/AIQuantumMachineLearning.tsx',
-  'src/pages/services/AIRealEstate.tsx',
-  'src/pages/services/AIRealTimeBusinessIntelligence.tsx',
-  'src/pages/services/AIRedis.tsx',
-  'src/pages/services/AIRetail.tsx',
-  'src/pages/services/AISEOOptimizer.tsx',
-  'src/pages/services/AISecurityAnalytics.tsx',
-  'src/pages/services/AISecurityAssessment.tsx',
-  'src/pages/services/AISecurityAuditing.tsx',
-  'src/pages/services/AISecurityAutomation.tsx',
-  'src/pages/services/AISecurityAwareness.tsx',
-  'src/pages/services/AISecurityCompliance.tsx',
-  'src/pages/services/AISecurityConsulting.tsx',
-  'src/pages/services/AISecurityForensics.tsx',
-  'src/pages/services/AISecurityGovernance.tsx',
-  'src/pages/services/AISecurityImplementation.tsx',
-  'src/pages/services/AISecurityIntelligence.tsx',
-  'src/pages/services/AISecurityMaintenance.tsx',
-  'src/pages/services/AISecurityMonitoring.tsx',
-  'src/pages/services/AISecurityOperations.tsx',
-  'src/pages/services/AISecurityOrchestration.tsx',
-  'src/pages/services/AISecurityRiskManagement.tsx',
-  'src/pages/services/AISecuritySupport.tsx',
-  'src/pages/services/AISecurityTesting.tsx',
-  'src/pages/services/AISecurityTraining.tsx',
-  'src/pages/services/AIServerless.tsx',
-  'src/pages/services/AIServices.tsx',
-  'src/pages/services/AISmartCityInfrastructure.tsx',
-  'src/pages/services/AISmartCityPlatform.tsx',
-  'src/pages/services/AISports.tsx',
-  'src/pages/services/AISupplyChainOptimizationPlatform.tsx',
-  'src/pages/services/AISustainableTechnology.tsx',
-  'src/pages/services/AITerraform.tsx',
-  'src/pages/services/AITransportation.tsx',
-  'src/pages/services/AITravel.tsx',
-  'src/pages/services/AIVideoAnalytics.tsx',
-  'src/pages/services/AIVirtualReality.tsx',
-  'src/pages/services/AIVulnerabilityManagement.tsx',
-  'src/pages/services/AIWorkflowAutomation.jsx',
+  'src/pages/services/AIHealthcare.tsx'
+  'src/pages/services/AIHealthcareRevenueCycle.tsx'
+  'src/pages/services/AIIdentityManagement.tsx'
+  'src/pages/services/AIIncidentResponse.tsx'
+  'src/pages/services/AIInsurance.tsx'
+  'src/pages/services/AIInternetOfThings.tsx'
+  'src/pages/services/AIKafka.tsx'
+  'src/pages/services/AIKubernetes.tsx'
+  'src/pages/services/AILegalDocumentAutomation.tsx'
+  'src/pages/services/AILegalTech.tsx'
+  'src/pages/services/AIManufacturing.tsx'
+  'src/pages/services/AIManufacturingQualityControl.tsx'
+  'src/pages/services/AIMarketingAutomation.tsx'
+  'src/pages/services/AIMentalHealthSupportPlatform.tsx'
+  'src/pages/services/AIMetaverse.tsx'
+  'src/pages/services/AIMicroservices.tsx'
+  'src/pages/services/AIMongoDB.tsx'
+  'src/pages/services/AIMySQL.tsx'
+  'src/pages/services/AINetworkSecurity.tsx'
+  'src/pages/services/AIPenetrationTesting.tsx'
+  'src/pages/services/AIPostgreSQL.tsx'
+  'src/pages/services/AIPoweredSEO.tsx'
+  'src/pages/services/AIPredictiveAnalytics.tsx'
+  'src/pages/services/AIPredictiveAnalyticsPlatform.tsx'
+  'src/pages/services/AIPredictiveMaintenance.tsx'
+  'src/pages/services/AIProductivitySuite.tsx'
+  'src/pages/services/AIProjectManagement.tsx'
+  'src/pages/services/AIProjectManagementAssistant.tsx'
+  'src/pages/services/AIPrometheus.tsx'
+  'src/pages/services/AIQuantumComputing.tsx'
+  'src/pages/services/AIQuantumComputingSolutions.tsx'
+  'src/pages/services/AIQuantumMachineLearning.tsx'
+  'src/pages/services/AIRealEstate.tsx'
+  'src/pages/services/AIRealTimeBusinessIntelligence.tsx'
+  'src/pages/services/AIRedis.tsx'
+  'src/pages/services/AIRetail.tsx'
+  'src/pages/services/AISEOOptimizer.tsx'
+  'src/pages/services/AISecurityAnalytics.tsx'
+  'src/pages/services/AISecurityAssessment.tsx'
+  'src/pages/services/AISecurityAuditing.tsx'
+  'src/pages/services/AISecurityAutomation.tsx'
+  'src/pages/services/AISecurityAwareness.tsx'
+  'src/pages/services/AISecurityCompliance.tsx'
+  'src/pages/services/AISecurityConsulting.tsx'
+  'src/pages/services/AISecurityForensics.tsx'
+  'src/pages/services/AISecurityGovernance.tsx'
+  'src/pages/services/AISecurityImplementation.tsx'
+  'src/pages/services/AISecurityIntelligence.tsx'
+  'src/pages/services/AISecurityMaintenance.tsx'
+  'src/pages/services/AISecurityMonitoring.tsx'
+  'src/pages/services/AISecurityOperations.tsx'
+  'src/pages/services/AISecurityOrchestration.tsx'
+  'src/pages/services/AISecurityRiskManagement.tsx'
+  'src/pages/services/AISecuritySupport.tsx'
+  'src/pages/services/AISecurityTesting.tsx'
+  'src/pages/services/AISecurityTraining.tsx'
+  'src/pages/services/AIServerless.tsx'
+  'src/pages/services/AIServices.tsx'
+  'src/pages/services/AISmartCityInfrastructure.tsx'
+  'src/pages/services/AISmartCityPlatform.tsx'
+  'src/pages/services/AISports.tsx'
+  'src/pages/services/AISupplyChainOptimizationPlatform.tsx'
+  'src/pages/services/AISustainableTechnology.tsx'
+  'src/pages/services/AITerraform.tsx'
+  'src/pages/services/AITransportation.tsx'
+  'src/pages/services/AITravel.tsx'
+  'src/pages/services/AIVideoAnalytics.tsx'
+  'src/pages/services/AIVirtualReality.tsx'
+  'src/pages/services/AIVulnerabilityManagement.tsx'
+  'src/pages/services/AIWorkflowAutomation.jsx'
   'src/pages/services/AIWorkflowAutomation.tsx'
 ];
 
-// Template for a basic service page
-function generateServicePage(serviceName, icon = 'Brain') {
+// Template for a basic service page;
+function generateServicePage() {
+
   const componentName = serviceName.replace(/[^a-zA-Z0-9]/g, '');
   const displayName = serviceName.replace(/AI|ai-|ai_/g, '').replace(/([A-Z])/g, ' $1').trim();
   
@@ -89,35 +89,35 @@ import { SEO } from '../../components/SEO';
 
 export default function ${componentName}() {
   const features = [
-    'Advanced AI-powered solutions',
-    'Enterprise-grade security',
-    'Scalable infrastructure',
-    '24/7 support and monitoring',
-    'Custom integrations',
+    'Advanced AI-powered solutions'
+    'Enterprise-grade security'
+    'Scalable infrastructure'
+    '24/7 support and monitoring'
+    'Custom integrations'
     'Performance optimization'
   ];
 
   const tiers = [
     {
-      name: 'Starter',
-      price: '$299/mo',
+      name: 'Starter'
+      price: '$299/mo'
       details: ['Basic features', 'Standard support', 'Up to 100 users']
-    },
+    }
     {
-      name: 'Professional',
-      price: '$999/mo',
+      name: 'Professional'
+      price: '$999/mo'
       details: ['Advanced features', 'Priority support', 'Up to 1000 users']
-    },
+    }
     {
-      name: 'Enterprise',
-      price: '$2,999/mo',
+      name: 'Enterprise'
+      price: '$2,999/mo'
       details: ['All features', 'Dedicated support', 'Unlimited users']
     }
   ];
 
   return (
     <>
-      <SEO 
+      <SEO;
         title="${displayName} - AI Solutions | Zion Tech Group"
         description="Transform your business with our ${displayName.toLowerCase()} AI solutions. Enterprise-grade technology for modern businesses."
         keywords="${displayName.toLowerCase()}, AI solutions, enterprise technology"
@@ -127,10 +127,10 @@ export default function ${componentName}() {
           <div className="max-w-5xl mx-auto px-6">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
               <${icon} className="w-4 h-4 mr-2" />
-              AI-Powered ${displayName} Intelligence
+              AI-Powered ${displayName} Intelligence;
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-              ${displayName} Platform
+              ${displayName} Platform;
             </h1>
             <p className="text-blue-100 text-xl">
               Transform your business operations with AI-powered tools that enhance efficiency, optimize performance, and drive growth.
@@ -142,7 +142,7 @@ export default function ${componentName}() {
           <div className="grid md:grid-cols-2 gap-10">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Advanced ${displayName} Features
+                Advanced ${displayName} Features;
               </h2>
               <ul className="space-y-3">
                 {features.map((feature, index) => (
@@ -159,7 +159,7 @@ export default function ${componentName}() {
             
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                Competitive Pricing
+                Competitive Pricing;
               </h3>
               <div className="grid md:grid-cols-3 gap-4">
                 {tiers.map((tier, index) => (
@@ -175,18 +175,18 @@ export default function ${componentName}() {
                 ))}
               </div>
               <div className="mt-6 flex flex-wrap gap-3">
-                <a 
+                <a;
                   href="/pricing" 
                   className="px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center"
                 >
-                  View Full Pricing 
+                  View Full Pricing;
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
-                <a 
+                <a;
                   href="/contact" 
                   className="px-5 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
                 >
-                  Contact Sales
+                  Contact Sales;
                 </a>
               </div>
             </div>
@@ -198,7 +198,7 @@ export default function ${componentName}() {
 }`;
 }
 
-// Fix files
+// Fix files;
 console.log('Starting syntax error fixes...');
 
 filesToFix.forEach(filePath => {
@@ -206,7 +206,7 @@ filesToFix.forEach(filePath => {
     const fullPath = path.join(process.cwd(), filePath);
     const serviceName = path.basename(filePath, path.extname(filePath));
     
-    // Determine icon based on service name
+    // Determine icon based on service name;
     let icon = 'Brain';
     if (serviceName.includes('Healthcare') || serviceName.includes('Medical')) icon = 'Heart';
     else if (serviceName.includes('Security') || serviceName.includes('Cybersecurity')) icon = 'Shield';
@@ -218,7 +218,7 @@ filesToFix.forEach(filePath => {
     
     const newContent = generateServicePage(serviceName, icon);
     
-    // Ensure directory exists
+    // Ensure directory exists;
     const dir = path.dirname(fullPath);
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
@@ -226,7 +226,8 @@ filesToFix.forEach(filePath => {
     
     fs.writeFileSync(fullPath, newContent);
     console.log(`Fixed: ${filePath}`);
-  } catch (error) {
+  } catch() {
+
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 });

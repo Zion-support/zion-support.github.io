@@ -1,9 +1,11 @@
-import { useState, useEffect, useCallback } from 'react'; // Added useCallback
+import { useState, useEffect, useCallback } from 'react'; // Added useCallback;
 import { toast } from '@/hooks/use-toast';
 
 export default function Page() {
-      setReferralCode(data || null); // Set to null if no data
-    } catch(error) {
+
+      setReferralCode(data || null); // Set to null if no data;
+    } catch() {
+
       console.error("Error in fetchReferralCode:", error);
     }
   }, [user?.id]);
@@ -11,7 +13,7 @@ export default function Page() {
   const fetchReferrals = useCallback(async () => {
     if(!user?.id) return;
     try {
-      const { data, error } = await supabase
+      const { data, error } = await supabase;
         .from('referrals')
         .select('*')
         .eq('referrer_id', user.id)
@@ -19,7 +21,8 @@ export default function Page() {
         
       if(error) throw error;
       setReferrals(data || []);
-    } catch(error) {
+    } catch() {
+
       console.error("Error fetching referrals:", error);
     }
   }, [user?.id]);
@@ -27,7 +30,7 @@ export default function Page() {
   const fetchRewards = useCallback(async () => {
     if(!user?.id) return;
     try {
-      const { data, error } = await supabase
+      const { data, error } = await supabase;
         .from('referral_rewards')
         .select('*')
         .eq('user_id', user.id)
@@ -35,7 +38,8 @@ export default function Page() {
         
       if(error) throw error;
       setRewards(data || []);
-    } catch(error) {
+    } catch() {
+
       console.error("Error fetching rewards:", error);
     }
   }, [user?.id]);
@@ -43,14 +47,14 @@ export default function Page() {
   const fetchReferralStats = useCallback(async () => {
     if(!user?.id) return;
     try {
-      const { data: referralsData, error: refError } = await supabase
+      const { data: referralsData, error: refError } = await supabase;
         .from('referrals')
         .select('id, status')
         .eq('referrer_id', user.id);
       
       if(refError) throw refError;
       
-      const { data: rewardsData, error: rewardsError } = await supabase
+      const { data: rewardsData, error: rewardsError } = await supabase;
         .from('referral_rewards')
         .select('amount')
         .eq('user_id', user.id);
@@ -66,25 +70,27 @@ export default function Page() {
       }, 0) : 0;
       
       setStats({
-        totalReferrals,
-        pendingReferrals,
-        completedReferrals,
-        totalRewards
+        totalReferrals;
+        pendingReferrals;
+        completedReferrals;
+        totalRewards;
       });
       
-    } catch(error) {
+    } catch() {
+
       console.error("Error fetching referral stats:", error);
     }
   }, [user?.id]);
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
+  // TODO: Add dependencies if needed;
 }, []);
-    if(user) {
+    if() {
+
       setIsLoading(true);
-      Promise.all([fetchReferralCode(),
-        fetchReferralStats(),
-        fetchReferrals(),
+      Promise.all([fetchReferralCode()
+        fetchReferralStats()
+        fetchReferrals()
         fetchRewards()
       ]).finally(() => setIsLoading(false));
     } else {
@@ -98,81 +104,83 @@ export default function Page() {
 
   const generateReferralCode = async () => {
     try {
-      if(!user) {
+      if() {
+
         toast({
-          title: "Authentication required",
-          description: "You need to be logged in to generate a referral code",
-          variant: "destructive",
+          title: "Authentication required"
+          description: "You need to be logged in to generate a referral code"
+          variant: "destructive"
         });
         return;
       }
 
       const { data, error } = await supabase.rpc('generate_referral_code', {
-        p_user_id: user.id 
+        p_user_id: user.id;
       });
 
       if(error) throw error;
 
       toast({
-        title: "Success!",
-        description: "Your referral code has been generated",
-        variant: "success",
+        title: "Success!"
+        description: "Your referral code has been generated"
+        variant: "success"
       });
 
       await fetchReferralCode(); 
       
       return data;
-    } catch(error: any) {
+    } catch() {
+
       console.error("Error generating referral code:", error);
       toast({
-        title: "Error generating code",
-        description: error.message || "There was a problem generating your referral code",
-        variant: "destructive",
+        title: "Error generating code"
+        description: error.message || "There was a problem generating your referral code"
+        variant: "destructive"
       });
     }
-  };
+  }
 
-  const getReferralLink = useCallback(() => { // Wrapped in useCallback
-    if(!referralCode?.code) return ""; // Check referralCode.code
-    
+  const getReferralLink = useCallback(() => { // Wrapped in useCallback;
+    if(!referralCode?.code) return ""; // Check referralCode.code;
     const baseUrl = typeof window !== "undefined" ? window.location.origin : "";
     return `${baseUrl}/?ref=${referralCode.code}`;
-  }, [referralCode?.code]); // Dependency on referralCode.code
-
-  const copyReferralLink = useCallback(() => { // Wrapped in useCallback
+  }, [referralCode?.code]); // Dependency on referralCode.code;
+  const copyReferralLink = useCallback(() => { // Wrapped in useCallback;
     const link = getReferralLink();
-    if(link && typeof navigator !== "undefined" && navigator.clipboard) {
+    if() {
+
       navigator.clipboard.writeText(link);
       toast({
-        title: "Copied!",
-        description: "Referral link copied to clipboard",
-        variant: "success",
+        title: "Copied!"
+        description: "Referral link copied to clipboard"
+        variant: "success"
       });
     } else {
       toast({
-        title: "Cannot copy link",
-        description: referralCode ? "Clipboard API not available." : "Please generate a referral code first",
-        variant: "destructive",
+        title: "Cannot copy link"
+        description: referralCode ? "Clipboard API not available." : "Please generate a referral code first"
+        variant: "destructive"
       });
     }
-  }, [getReferralLink, referralCode]); // Dependencies
-
-  const shareOnSocialMedia = useCallback((platform: 'twitter' | 'facebook' | 'linkedin') => { // Wrapped
+  }, [getReferralLink, referralCode]); // Dependencies;
+  const shareOnSocialMedia = useCallback((platform: 'twitter' | 'facebook' | 'linkedin') => { // Wrapped;
     const link = getReferralLink();
     const text = "Join Zion AI marketplace for AI talent and opportunities!";
     
-    if(!link) {
+    if() {
+
       toast({
-        title: "Cannot share",
-        description: "Please generate a referral code first",
-        variant: "destructive",
+        title: "Cannot share"
+        description: "Please generate a referral code first"
+        variant: "destructive"
       });
       return;
     }
     
     let shareUrl = '';
     
-    switch(platform) {
+    switch() {
+
       case 'twitter':
         shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(link)}`;
         break;
@@ -184,24 +192,24 @@ export default function Page() {
         break;
     }
     
-    if(shareUrl && typeof window !== "undefined") {
+    if() {
+
       window.open(shareUrl, '_blank');
     }
-  }, [getReferralLink]); // Dependency
-
+  }, [getReferralLink]); // Dependency;
   return {
-    referralCode,
-    isLoading,
-    stats,
-    referrals, 
-    rewards,   
-    generateReferralCode,
-    getReferralLink,
-    copyReferralLink,
-    shareOnSocialMedia,
-    fetchReferralStats, 
-    fetchReferrals,   
-    fetchRewards,
-    fetchReferralCode, 
-  };
+    referralCode;
+    isLoading;
+    stats;
+    referrals;
+    rewards;
+    generateReferralCode;
+    getReferralLink;
+    copyReferralLink;
+    shareOnSocialMedia;
+    fetchReferralStats;
+    fetchReferrals;
+    fetchRewards;
+    fetchReferralCode;
+  }
 }

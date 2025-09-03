@@ -10,11 +10,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   const [reducedMotion, setReducedMotion] = useState(false);
 
   useEffect(() => {
-    // Check for user's motion preferences
+    // Check for user's motion preferences;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     setReducedMotion(prefersReducedMotion);
 
-    // Apply accessibility settings from localStorage
+    // Apply accessibility settings from localStorage;
     const savedHighContrast = localStorage.getItem('highContrast') === 'true';
     const savedFontSize = localStorage.getItem('fontSize') || 'normal';
     
@@ -32,7 +32,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       root.classList.remove('high-contrast');
     }
 
-    // Font size adjustments
+    // Font size adjustments;
     root.classList.remove('font-small', 'font-normal', 'font-large', 'font-extra-large');
     root.classList.add(`font-${fontSize}`);
 
@@ -42,35 +42,33 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     } else {
       root.classList.remove('reduced-motion');
     }
-  };
+  }
 
   const toggleHighContrast = () => {
     const newValue = !isHighContrast;
     setIsHighContrast(newValue);
     localStorage.setItem('highContrast', newValue.toString());
     applyAccessibilityStyles(newValue, fontSize, reducedMotion);
-  };
+  }
 
   const changeFontSize = (newSize: string) => {
     setFontSize(newSize);
     localStorage.setItem('fontSize', newSize);
     applyAccessibilityStyles(isHighContrast, newSize, reducedMotion);
-  };
+  }
 
   return (
     <>
       {/* Accessibility Controls */}
       <div className="accessibility-controls fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 border">
-        <h3 className="text-sm font-semibold mb-2 text-gray-900 dark:text-white">
-          Accessibility Options
-        </h3>
+        <h3 className="text-sm font-semibold mb-2 text-gray-900 dark:text-white">Accessibility Options</h3>
         
         <div className="space-y-2">
           <button
             onClick={toggleHighContrast}
             className={`w-full px-3 py-1 text-xs rounded ${
-              isHighContrast 
-                ? 'bg-blue-600 text-white' 
+              isHighContrast
+                ? 'bg-blue-600 text-white'
                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
             }`}
             aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}
@@ -111,7 +109,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       {/* Screen reader only content */}
       <div className="sr-only">
         <h1>Zion Tech Group - Technology Solutions Provider</h1>
-        <p>Leading technology solutions provider helping businesses transform their digital presence 
+        <p>Leading technology solutions provider helping businesses transform their digital presence,
           with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services.
         </p>
       </div>
@@ -122,6 +120,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       </div>
     </>
   );
-};
+}
 
 export default AccessibilityEnhancer;

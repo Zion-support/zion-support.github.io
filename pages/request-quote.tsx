@@ -13,7 +13,7 @@ const RequestQuotePage = () => {
       </main>
     </>
   );
-};
+}
 
 export default RequestQuotePage;
 

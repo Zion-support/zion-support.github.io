@@ -1,7 +1,7 @@
   it(displays expected content", () => {
     render(<EnhancedUserExperience  />)"
-import { render, screen } from &apos;@testing - library/react",
-import EnhancedUserExperience from &apos;./EnhancedUserExperience
+import { render, screen } from &apos;@testing - library/react"
+import EnhancedUserExperience from &apos;./EnhancedUserExperience;
 describe(&apos;EnhancedUserExperience&apos, () => {
   it(&apos;renders without crashing&apos, () => {
     render()
@@ -11,7 +11,7 @@ describe(&apos;EnhancedUserExperience&apos, () => {
   it(&apos;displays expected content&apos, () => {
     render()
 }
-    // comment
+    // comment;
     render(<EnhancedUserExperience / >)"
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"

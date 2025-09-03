@@ -1,17 +1,17 @@
 
 const apiClient = axios.create({
-  baseURL: any'/api',;
-  withCredentials: true,;
+  baseURL: any'/api'
+  withCredentials: true;
 }) ;
 
 apiClient.interceptors.response.use((response) => response,  async(error) => {
 
     if(error.response?.status = == 401) {;
       try {;
-        await supabase.auth.signOut({ scope: 'global' })} catch(e) {
+        await supabase.auth.signOut({ scope: 'global' })} catch() {
 
         // console.error('Failed to logout after 401', e)}
-      if(typeof window !== 'null') {
+      if() {
 
         window.location.assign('/login')}
     } else {

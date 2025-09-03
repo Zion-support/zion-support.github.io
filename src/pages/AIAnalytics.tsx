@@ -1,92 +1,93 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Brain, 
-  BarChart3, 
-  TrendingUp, 
-  Database, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Play,
-  Code,
-  Globe,
-  Cpu,
-  Target,
-  Lightbulb
+  Brain;
+  BarChart3;
+  TrendingUp;
+  Database;
+  Zap;
+  Shield;
+  Cloud;
+  Users;
+  CheckCircle;
+  ArrowRight;
+  Play;
+  Code;
+  Globe;
+  Cpu;
+  Target;
+  Lightbulb;
 } from 'lucide-react';
 
 const features = [
   {
-    icon: Brain,
-    title: 'Predictive Analytics',
-    description: 'Advanced machine learning models that forecast trends and identify opportunities before they happen.',
+    icon: Brain;
+    title: 'Predictive Analytics'
+    description: 'Advanced machine learning models that forecast trends and identify opportunities before they happen.'
     benefits: ['Revenue optimization', 'Risk mitigation', 'Strategic planning', 'Market insights']
-  },
+  }
   {
-    icon: BarChart3,
-    title: 'Real-time Dashboards',
-    description: 'Interactive visualizations that provide instant insights into your business performance.',
+    icon: BarChart3;
+    title: 'Real-time Dashboards'
+    description: 'Interactive visualizations that provide instant insights into your business performance.'
     benefits: ['Live monitoring', 'Custom metrics', 'Mobile access', 'Real-time alerts']
-  },
+  }
   {
-    icon: TrendingUp,
-    title: 'Performance Optimization',
-    description: 'AI-driven recommendations to improve efficiency and maximize ROI across all operations.',
+    icon: TrendingUp;
+    title: 'Performance Optimization'
+    description: 'AI-driven recommendations to improve efficiency and maximize ROI across all operations.'
     benefits: ['Cost reduction', 'Efficiency gains', 'Resource optimization', 'Process improvement']
-  },
+  }
   {
-    icon: Database,
-    title: 'Data Intelligence',
-    description: 'Transform raw data into actionable intelligence with advanced analytics and pattern recognition.',
+    icon: Database;
+    title: 'Data Intelligence'
+    description: 'Transform raw data into actionable intelligence with advanced analytics and pattern recognition.'
     benefits: ['Pattern discovery', 'Anomaly detection', 'Data quality', 'Insight generation']
   }
 ];
 
 const useCases = [
   {
-    industry: 'E-commerce',
-    title: 'Customer Behavior Analysis',
-    description: 'Predict customer preferences and optimize product recommendations for increased sales.',
-    icon: Users,
+    industry: 'E-commerce'
+    title: 'Customer Behavior Analysis'
+    description: 'Predict customer preferences and optimize product recommendations for increased sales.'
+    icon: Users;
     metrics: ['25% increase in conversion', '30% higher customer lifetime value', '40% reduction in cart abandonment']
-  },
+  }
   {
-    industry: 'Finance',
-    title: 'Risk Assessment & Fraud Detection',
-    description: 'AI-powered systems that identify potential risks and fraudulent activities in real-time.',
-    icon: Shield,
+    industry: 'Finance'
+    title: 'Risk Assessment & Fraud Detection'
+    description: 'AI-powered systems that identify potential risks and fraudulent activities in real-time.'
+    icon: Shield;
     metrics: ['99.9% fraud detection accuracy', '60% faster risk assessment', '80% reduction in false positives']
-  },
+  }
   {
-    industry: 'Healthcare',
-    title: 'Patient Outcome Prediction',
-    description: 'Machine learning models that predict patient outcomes and optimize treatment plans.',
-    icon: Target,
+    industry: 'Healthcare'
+    title: 'Patient Outcome Prediction'
+    description: 'Machine learning models that predict patient outcomes and optimize treatment plans.'
+    icon: Target;
     metrics: ['90% prediction accuracy', '35% improvement in treatment outcomes', '50% reduction in readmissions']
-  },
+  }
   {
-    industry: 'Manufacturing',
-    title: 'Predictive Maintenance',
-    description: 'AI systems that predict equipment failures and optimize maintenance schedules.',
-    icon: Cpu,
+    industry: 'Manufacturing'
+    title: 'Predictive Maintenance'
+    description: 'AI systems that predict equipment failures and optimize maintenance schedules.'
+    icon: Cpu;
     metrics: ['70% reduction in downtime', '45% lower maintenance costs', '95% equipment reliability']
   }
 ];
 
 const technologies = [
-  { name: 'TensorFlow', description: 'Advanced deep learning framework', icon: Code },
-  { name: 'PyTorch', description: 'Flexible machine learning library', icon: Brain },
-  { name: 'Apache Spark', description: 'Big data processing engine', icon: Database },
-  { name: 'Kubernetes', description: 'Scalable deployment platform', icon: Cloud },
-  { name: 'AWS SageMaker', description: 'Cloud-based ML platform', icon: Cloud },
+  { name: 'TensorFlow', description: 'Advanced deep learning framework', icon: Code }
+  { name: 'PyTorch', description: 'Flexible machine learning library', icon: Brain }
+  { name: 'Apache Spark', description: 'Big data processing engine', icon: Database }
+  { name: 'Kubernetes', description: 'Scalable deployment platform', icon: Cloud }
+  { name: 'AWS SageMaker', description: 'Cloud-based ML platform', icon: Cloud }
   { name: 'Google Cloud AI', description: 'Enterprise AI services', icon: Globe }
 ];
 
 export default function AIAnalytics() {
+
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -98,7 +99,7 @@ export default function AIAnalytics() {
         </div>
         
         <div className="container-responsive relative z-10">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -109,7 +110,7 @@ export default function AIAnalytics() {
                 <Brain className="w-8 h-8 text-white" />
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-gradient">
-                AI Analytics
+                AI Analytics;
               </h1>
             </div>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
@@ -117,17 +118,17 @@ export default function AIAnalytics() {
               Unlock hidden insights, predict future trends, and make data-driven decisions that drive growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="/contact"
                 className="btn-futuristic px-8 py-3 text-lg"
               >
-                Get Started
+                Get Started;
               </a>
-              <a
+              <a;
                 href="#demo"
                 className="btn-neon px-8 py-3 text-lg"
               >
-                Watch Demo
+                Watch Demo;
               </a>
             </div>
           </motion.div>
@@ -137,7 +138,7 @@ export default function AIAnalytics() {
       {/* Features Section */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -145,14 +146,14 @@ export default function AIAnalytics() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Powerful AI Analytics Features</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our AI analytics platform combines advanced machine learning with intuitive interfaces 
+              Our AI analytics platform combines advanced machine learning with intuitive interfaces;
               to deliver actionable insights that transform your business.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <motion.div;
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -181,7 +182,7 @@ export default function AIAnalytics() {
       {/* Use Cases Section */}
       <section className="py-20">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -189,14 +190,14 @@ export default function AIAnalytics() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Industry Solutions</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Discover how AI analytics is transforming businesses across different industries 
+              Discover how AI analytics is transforming businesses across different industries;
               with measurable results and proven ROI.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
-              <motion.div
+              <motion.div;
                 key={useCase.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -230,7 +231,7 @@ export default function AIAnalytics() {
       {/* Technologies Section */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -238,14 +239,14 @@ export default function AIAnalytics() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Cutting-Edge Technologies</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Built on the latest AI and machine learning technologies to ensure scalability, 
+              Built on the latest AI and machine learning technologies to ensure scalability;
               performance, and accuracy in all our analytics solutions.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {technologies.map((tech, index) => (
-              <motion.div
+              <motion.div;
                 key={tech.name}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -266,7 +267,7 @@ export default function AIAnalytics() {
       {/* CTA Section */}
       <section className="py-20">
         <div className="container-responsive">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -274,21 +275,21 @@ export default function AIAnalytics() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join hundreds of companies already using AI analytics to drive growth, 
+              Join hundreds of companies already using AI analytics to drive growth;
               optimize operations, and gain competitive advantages.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <a;
                 href="/contact"
                 className="btn-futuristic px-8 py-3 text-lg"
               >
-                Start Your Free Trial
+                Start Your Free Trial;
               </a>
-              <a
+              <a;
                 href="/request-quote"
                 className="btn-neon px-8 py-3 text-lg"
               >
-                Get Custom Quote
+                Get Custom Quote;
               </a>
             </div>
           </motion.div>

@@ -2,21 +2,21 @@
   children: ReactNode;
   title?: string;
   description?: string;
-  keywords?: string,;
-  ogImage?: string,;
-  canonical?: string,,;
-  noindex?: boolean,;
-  showPerformanceMetrics?: boolean,;
+  keywords?: string;
+  ogImage?: string;
+  canonical?: string,
+  noindex?: boolean;
+  showPerformanceMetrics?: boolean;
   showSEOAnalysis?: boolean}
 
 export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
   title = "Zion Tech Group - Leading Technology Solutions Provider","
   description = "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.","
   keywords = "AI development, cloud architecture, digital transformation, technology solutions, machine learning, software development","
-  ogImage = "https:// comment
-  canonical,
-  noindex = false,
-  showPerformanceMetrics = false,
+  ogImage = "https:// comment;
+  canonical;
+  noindex = false;
+  showPerformanceMetrics = false;
   showSEOAnalysis = false}) => {
   const fullTitle = title.includes("Zion Tech Group") ? title : "${title} | Zion Tech Group"
   const canonicalUrl = canonical || (typeof window !== "undefined" ? window.location.href : "")
@@ -50,15 +50,15 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
           <meta property="og: type" content="website"  />"
           <meta property="og:site_name" content="Zion Tech Group"  />"
           <meta property="og:locale" content="en_US"  />
-          ,
+          
           {/* comment */}"
-          <meta name="twitter: card" content="summary_large_image"  />",
+          <meta name="twitter: card" content="summary_large_image"  />"
           <meta name="twitter:title" content="{fullTitle}"  />"
           <meta name="twitter:description" content="{description}"  />"
           <meta name="twitter:image" content="{ogImage}"  />"
           <meta name="twitter: site" content="@ziontechgroup"  />"
           <meta name="twitter:creator" content="@ziontechgroup"  />
-          ,
+          
           {/* comment */}"
           <meta name="author" content="Zion Tech Group"  />"
           <meta name="publisher" content="Zion Tech Group"  />"
@@ -88,12 +88,10 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
           <meta name="apple-mobile-web-app-title" content="Zion Tech Group"  />
           
           {/* comment */}"
-          <link rel="preconnect" href="https: // comment
-          <link rel="preconnect" href="https:// comment
-          ,
+          <link rel="preconnect" href="https: // comment;
+          <link rel="preconnect" href="https:// comment;
           {/* comment */}"
-          <link rel="dns-prefetch" href="// comment
-          
+          <link rel="dns-prefetch" href="// comment;
           {/* comment */}"
           <link rel="preload" "
             href="/fonts/inter-var.woff2" "
@@ -114,12 +112,12 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
           {/* comment */}"
           <script type="application/ld+json""
             dangerouslySetInnerHTML="{{"
-              __html: JSON.stringify({",
-                "@context": "https:// comment
+              __html: JSON.stringify({"
+                "@context": "https:// comment;
                 "@type": "Organization","
                 "name": "Zion Tech Group","
-                "url": "https:// comment
-                "logo": "https:// comment
+                "url": "https:// comment;
+                "logo": "https:// comment;
                 "description": description,"
                 "address": {"
                   "@type": "PostalAddress","
@@ -136,15 +134,15 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
                   "email": "kleber@ziontechgroup.com"
 },"
                 "sameAs": ["
-                  "https:// comment
-                  "https: // comment
+                  "https:// comment;
+                  "https: // comment;
                 ],"
                 "service": [
                   {"
                     "@type": "Service","
                     "name": "AI Development","
                     "description": "Custom AI solutions and machine learning models"
-},
+}
                   {"
                     "@type": "Service","
                     "name": "Cloud Architecture","
@@ -168,7 +166,7 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
         </main>
       </div>;
       ;
-      {/* Footer */};
+      {/* Footer */}
       <FuturisticFooter  />;
-    </div>;) };
+    </div>;) }
 '"`

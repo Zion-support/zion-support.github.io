@@ -1,11 +1,11 @@
 ;
 const CTASection: React.FC = (): JSX.Element => {
 
-    },;
+    }
     {;
-      icon: Star,;"
-      title: "Proven Results",;"
-      description: "Trusted by industry leaders worldwide"};  ];
+      icon: Star,"
+      title: "Proven Results","
+      description: "Trusted by industry leaders worldwide"}  ];
 
   return ("
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/90 to-zion-slate-dark relative overflow-hidden" role="region" aria-labelledby="cta-heading">
@@ -18,18 +18,16 @@ const CTASection: React.FC = (): JSX.Element => {
 "
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">"
         <div className="text-center mb-16">
-          <motion.div
+          <motion.div;
             initial = {
 
-  { opacity: 0,
-  y: 30
-
+  { opacity: 0;
+  y: 30;
 }}
             whileInView = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -44,21 +42,18 @@ const CTASection: React.FC = (): JSX.Element => {
             id="cta-heading"
             initial = {
 
-  { opacity: 0,
-  y: 30
-
+  { opacity: 0;
+  y: 30;
 }}
             whileInView = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
             transition = {
 
-  { duration: 0.8,
-  delay: 0.2
-
+  { duration: 0.8;
+  delay: 0.2;
 }}
             viewport={{ once: true }}"
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
@@ -66,24 +61,21 @@ const CTASection: React.FC = (): JSX.Element => {
             Ready to <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">Transform</span> Your Business?
           </motion.h2>
 
-          <motion.p
+          <motion.p;
             initial = {
 
-  { opacity: 0,
-  y: 30
-
+  { opacity: 0;
+  y: 30;
 }}
             whileInView = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
             transition = {
 
-  { duration: 0.8,
-  delay: 0.4
-
+  { duration: 0.8;
+  delay: 0.4;
 }}
             viewport={{ once: true }}"
             className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed mb-8"
@@ -96,42 +88,39 @@ const CTASection: React.FC = (): JSX.Element => {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
           initial = {
 
-  { opacity: 0,
+  { opacity: 0;
   y: 30 ;
 
 }}          whileInView = {
 
-  { opacity: 1,
+  { opacity: 1;
   y: 0 ;
 
 }}          transition = {
 
-  { duration: 0.8,
+  { duration: 0.8;
   delay: 0.6 ;
 
 }}          viewport={{ once: true }}
         >
           {features.map((feature, index (;
-            <motion.div
+            <motion.div;
               key={feature.title}"
               className="text-center p-6 bg-zion-slate-dark/30 backdrop-blur-xl border border-zion-cyan/20 rounded-xl hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20"
               initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
               whileInView = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
               transition = {
 
-  { duration: 0.6,
-  delay: 0.6 + index * 0.1
-
+  { duration: 0.6;
+  delay: 0.6 + index * 0.1;
 }}
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
@@ -150,17 +139,17 @@ const CTASection: React.FC = (): JSX.Element => {
           className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           initial = {
 
-  { opacity: 0,
+  { opacity: 0;
   y: 30 ;
 
 }}          whileInView = {
 
-  { opacity: 1,
+  { opacity: 1;
   y: 0 ;
 
 }}          transition = {
 
-  { duration: 0.8,
+  { duration: 0.8;
   delay: 0.8 ;
 
 }}          viewport={{ once: true }}
@@ -188,7 +177,7 @@ const CTASection: React.FC = (): JSX.Element => {
           whileInView={{ opacity: 1 }}
           transition = {
 
-  { duration: 1,
+  { duration: 1;
   delay: 1 ;
 
 }}          viewport={{ once: true }}
@@ -203,6 +192,6 @@ const CTASection: React.FC = (): JSX.Element => {
         </motion.div>;
       </div>;
     </section>;
-  )};
+  )}
 
 export default CTASection}}'"

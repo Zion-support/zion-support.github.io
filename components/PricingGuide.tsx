@@ -31,207 +31,207 @@ const PricingGuide: React.FC = () => {
 
   const pricingTiers: PricingTier[] = [
     {
-      name: 'Starter',
-      price: 29,
-      period: 'month',
-      description: 'Perfect for small businesses and startups',
+      name: 'Starter'
+      price: 29;
+      period: 'month'
+      description: 'Perfect for small businesses and startups'
       features: [
-        'Basic features and functionality',
-        'Email support',
-        'Standard integrations',
-        'Basic analytics',
-        'Up to 5 users',
+        'Basic features and functionality'
+        'Email support'
+        'Standard integrations'
+        'Basic analytics'
+        'Up to 5 users'
         '99.9% uptime guarantee'
-      ],
-      icon: <Users className="w-8 h-8" />,
+      ]
+      icon: <Users className="w-8 h-8" />
       color: 'blue'
-    },
+    }
     {
-      name: 'Professional',
-      price: 79,
-      period: 'month',
-      description: 'Ideal for growing businesses',
+      name: 'Professional'
+      price: 79;
+      period: 'month'
+      description: 'Ideal for growing businesses'
       features: [
-        'All Starter features',
-        'Priority support',
-        'Advanced integrations',
-        'Custom branding',
-        'Advanced analytics',
-        'Up to 25 users',
-        'API access',
+        'All Starter features'
+        'Priority support'
+        'Advanced integrations'
+        'Custom branding'
+        'Advanced analytics'
+        'Up to 25 users'
+        'API access'
         'Mobile apps'
-      ],
-      popular: true,
-      icon: <TrendingUp className="w-8 h-8" />,
+      ]
+      popular: true;
+      icon: <TrendingUp className="w-8 h-8" />
       color: 'purple'
-    },
+    }
     {
-      name: 'Enterprise',
-      price: 199,
-      period: 'month',
-      description: 'For large organizations',
+      name: 'Enterprise'
+      price: 199;
+      period: 'month'
+      description: 'For large organizations'
       features: [
-        'All Professional features',
-        'Dedicated support',
-        'Custom development',
-        'SLA guarantee',
-        'White-label options',
-        'Unlimited users',
-        'Advanced security',
+        'All Professional features'
+        'Dedicated support'
+        'Custom development'
+        'SLA guarantee'
+        'White-label options'
+        'Unlimited users'
+        'Advanced security'
         '24/7 phone support'
-      ],
-      icon: <Shield className="w-8 h-8" />,
+      ]
+      icon: <Shield className="w-8 h-8" />
       color: 'green'
     }
   ];
 
   const servicePricing: ServicePricing[] = [
     {
-      category: 'micro-saas',
+      category: 'micro-saas'
       services: [
         {
-          name: 'AI Content Generator Pro',
-          starter: 29,
-          professional: 79,
-          enterprise: 199,
-          marketAverage: 89,
-          savings: 11,
+          name: 'AI Content Generator Pro'
+          starter: 29;
+          professional: 79;
+          enterprise: 199;
+          marketAverage: 89;
+          savings: 11;
           features: ['GPT-4 integration', 'Multi-language support', 'SEO optimization', 'Brand voice customization']
-        },
+        }
         {
-          name: 'Social Media Scheduler Pro',
-          starter: 19,
-          professional: 49,
-          enterprise: 129,
-          marketAverage: 65,
-          savings: 25,
+          name: 'Social Media Scheduler Pro'
+          starter: 19;
+          professional: 49;
+          enterprise: 129;
+          marketAverage: 65;
+          savings: 25;
           features: ['Multi-platform scheduling', 'AI optimization', 'Analytics dashboard', 'Team collaboration']
-        },
+        }
         {
-          name: 'Email Marketing Automation',
-          starter: 25,
-          professional: 65,
-          enterprise: 179,
-          marketAverage: 95,
-          savings: 32,
+          name: 'Email Marketing Automation'
+          starter: 25;
+          professional: 65;
+          enterprise: 179;
+          marketAverage: 95;
+          savings: 32;
           features: ['Drag-and-drop builder', 'AI personalization', 'A/B testing', 'Advanced segmentation']
-        },
+        }
         {
-          name: 'Smart Invoice Management',
-          starter: 15,
-          professional: 39,
-          enterprise: 99,
-          marketAverage: 55,
-          savings: 29,
+          name: 'Smart Invoice Management'
+          starter: 15;
+          professional: 39;
+          enterprise: 99;
+          marketAverage: 55;
+          savings: 29;
           features: ['Automated billing', 'Payment tracking', 'Multi-currency', 'Tax calculations']
-        },
+        }
         {
-          name: 'Time Tracking & Productivity',
-          starter: 12,
-          professional: 29,
-          enterprise: 79,
-          marketAverage: 45,
-          savings: 36,
+          name: 'Time Tracking & Productivity'
+          starter: 12;
+          professional: 29;
+          enterprise: 79;
+          marketAverage: 45;
+          savings: 36;
           features: ['Automatic tracking', 'Project management', 'Productivity analytics', 'Team collaboration']
         }
       ]
-    },
+    }
     {
-      category: 'ai-services',
+      category: 'ai-services'
       services: [
         {
-          name: 'Custom AI Model Development',
-          starter: 10000,
-          professional: 30000,
-          enterprise: 100000,
-          marketAverage: 45000,
-          savings: 33,
+          name: 'Custom AI Model Development'
+          starter: 10000;
+          professional: 30000;
+          enterprise: 100000;
+          marketAverage: 45000;
+          savings: 33;
           features: ['Custom model training', 'Data preprocessing', 'API development', 'Ongoing maintenance']
-        },
+        }
         {
-          name: 'Computer Vision Solutions',
-          starter: 8000,
-          professional: 25000,
-          enterprise: 75000,
-          marketAverage: 35000,
-          savings: 29,
+          name: 'Computer Vision Solutions'
+          starter: 8000;
+          professional: 25000;
+          enterprise: 75000;
+          marketAverage: 35000;
+          savings: 29;
           features: ['Object detection', 'Facial recognition', 'OCR & text extraction', 'Real-time processing']
-        },
+        }
         {
-          name: 'Natural Language Processing',
-          starter: 7000,
-          professional: 22000,
-          enterprise: 65000,
-          marketAverage: 30000,
-          savings: 27,
+          name: 'Natural Language Processing'
+          starter: 7000;
+          professional: 22000;
+          enterprise: 65000;
+          marketAverage: 30000;
+          savings: 27;
           features: ['Text analysis', 'Sentiment analysis', 'Language translation', 'Chatbot development']
-        },
+        }
         {
-          name: 'Predictive Analytics Platform',
-          starter: 9000,
-          professional: 28000,
-          enterprise: 85000,
-          marketAverage: 40000,
-          savings: 30,
+          name: 'Predictive Analytics Platform'
+          starter: 9000;
+          professional: 28000;
+          enterprise: 85000;
+          marketAverage: 40000;
+          savings: 30;
           features: ['Time series forecasting', 'Demand prediction', 'Risk assessment', 'Real-time predictions']
-        },
+        }
         {
-          name: 'AI Recommendation Engine',
-          starter: 6000,
-          professional: 18000,
-          enterprise: 55000,
-          marketAverage: 25000,
-          savings: 28,
+          name: 'AI Recommendation Engine'
+          starter: 6000;
+          professional: 18000;
+          enterprise: 55000;
+          marketAverage: 25000;
+          savings: 28;
           features: ['Collaborative filtering', 'Content-based filtering', 'Real-time recommendations', 'A/B testing']
         }
       ]
-    },
+    }
     {
-      category: 'it-services',
+      category: 'it-services'
       services: [
         {
-          name: 'Cloud Migration & Architecture',
-          starter: 15000,
-          professional: 45000,
-          enterprise: 120000,
-          marketAverage: 60000,
-          savings: 25,
+          name: 'Cloud Migration & Architecture'
+          starter: 15000;
+          professional: 45000;
+          enterprise: 120000;
+          marketAverage: 60000;
+          savings: 25;
           features: ['Infrastructure assessment', 'Migration planning', 'Security implementation', 'Ongoing support']
-        },
+        }
         {
-          name: 'Edge Computing Infrastructure',
-          starter: 25000,
-          professional: 75000,
-          enterprise: 200000,
-          marketAverage: 100000,
-          savings: 25,
+          name: 'Edge Computing Infrastructure'
+          starter: 25000;
+          professional: 75000;
+          enterprise: 200000;
+          marketAverage: 100000;
+          savings: 25;
           features: ['Edge node deployment', 'Distributed computing', 'Low-latency optimization', 'Security implementation']
-        },
+        }
         {
-          name: 'Zero Trust Security Architecture',
-          starter: 30000,
-          professional: 90000,
-          enterprise: 250000,
-          marketAverage: 120000,
-          savings: 25,
+          name: 'Zero Trust Security Architecture'
+          starter: 30000;
+          professional: 90000;
+          enterprise: 250000;
+          marketAverage: 120000;
+          savings: 25;
           features: ['Identity verification', 'Device trust assessment', 'Network micro-segmentation', 'Continuous monitoring']
-        },
+        }
         {
-          name: 'AIOps Platform Implementation',
-          starter: 20000,
-          professional: 60000,
-          enterprise: 180000,
-          marketAverage: 85000,
-          savings: 29,
+          name: 'AIOps Platform Implementation'
+          starter: 20000;
+          professional: 60000;
+          enterprise: 180000;
+          marketAverage: 85000;
+          savings: 29;
           features: ['Intelligent monitoring', 'Anomaly detection', 'Automated remediation', 'Predictive analytics']
-        },
+        }
         {
-          name: '5G Network Implementation',
-          starter: 100000,
-          professional: 300000,
-          enterprise: 1000000,
-          marketAverage: 500000,
-          savings: 40,
+          name: '5G Network Implementation'
+          starter: 100000;
+          professional: 300000;
+          enterprise: 1000000;
+          marketAverage: 500000;
+          savings: 40;
           features: ['Network architecture design', '5G core implementation', 'Edge computing integration', 'Performance optimization']
         }
       ]
@@ -241,8 +241,8 @@ const PricingGuide: React.FC = () => {
   const currentServices = servicePricing.find(cat => cat.category === selectedCategory)?.services || [];
 
   const categories = [
-    { id: 'micro-saas', name: 'Micro SaaS', icon: <Zap className="w-5 h-5" /> },
-    { id: 'ai-services', name: 'AI Services', icon: <Star className="w-5 h-5" /> },
+    { id: 'micro-saas', name: 'Micro SaaS', icon: <Zap className="w-5 h-5" /> }
+    { id: 'ai-services', name: 'AI Services', icon: <Star className="w-5 h-5" /> }
     { id: 'it-services', name: 'IT Services', icon: <Shield className="w-5 h-5" /> }
   ];
 
@@ -251,23 +251,23 @@ const PricingGuide: React.FC = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <motion.h2 
+          <motion.h2;
             className="text-4xl font-bold text-gray-900 mb-4"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            Transparent, Competitive Pricing
+            Transparent, Competitive Pricing;
           </motion.h2>
-          <motion.p 
+          <motion.p;
             className="text-xl text-gray-600 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Get enterprise-grade solutions at market-beating prices. Our transparent pricing 
+            Get enterprise-grade solutions at market-beating prices. Our transparent pricing;
             saves you an average of 25-40% compared to competitors.
           </motion.p>
         </div>
@@ -275,11 +275,11 @@ const PricingGuide: React.FC = () => {
         {/* Category Tabs */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) => (
-            <button
+            <button;
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
               className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                selectedCategory === category.id
+                selectedCategory === category.id;
                   ? 'bg-blue-600 text-white shadow-lg'
                   : 'bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600'
               }`}
@@ -293,7 +293,7 @@ const PricingGuide: React.FC = () => {
         {/* Pricing Tiers */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {pricingTiers.map((tier, index) => (
-            <motion.div
+            <motion.div;
               key={tier.name}
               className={`bg-white rounded-lg shadow-lg p-8 relative ${
                 tier.popular ? 'border-2 border-blue-600 transform scale-105' : 'border border-gray-200'
@@ -307,7 +307,7 @@ const PricingGuide: React.FC = () => {
               {tier.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">
-                    Most Popular
+                    Most Popular;
                   </span>
                 </div>
               )}
@@ -338,11 +338,11 @@ const PricingGuide: React.FC = () => {
               </ul>
 
               <button className={`w-full py-3 rounded-lg font-medium transition-colors ${
-                tier.popular
+                tier.popular;
                   ? 'bg-blue-600 hover:bg-blue-700 text-white'
                   : 'bg-gray-600 hover:bg-gray-700 text-white'
               }`}>
-                Get Started
+                Get Started;
               </button>
             </motion.div>
           ))}
@@ -351,7 +351,7 @@ const PricingGuide: React.FC = () => {
         {/* Service-Specific Pricing */}
         <div className="bg-white rounded-lg shadow-lg p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-            {categories.find(cat => cat.id === selectedCategory)?.name} Pricing
+            {categories.find(cat => cat.id === selectedCategory)?.name} Pricing;
           </h3>
           
           <div className="overflow-x-auto">
@@ -433,6 +433,6 @@ const PricingGuide: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 
 export default PricingGuide;

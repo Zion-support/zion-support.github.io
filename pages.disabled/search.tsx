@@ -11,52 +11,52 @@ const SearchPage: NextPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
-    { id: 'all', name: 'All Content' },
-    { id: 'services', name: 'Services' },
-    { id: 'solutions', name: 'Solutions' },
-    { id: 'blog', name: 'Blog Posts' },
+    { id: 'all', name: 'All Content' }
+    { id: 'services', name: 'Services' }
+    { id: 'solutions', name: 'Solutions' }
+    { id: 'blog', name: 'Blog Posts' }
     { id: 'pages', name: 'Pages' }
   ];
 
   const mockResults = [
     {
-      id: 1,
-      title: 'AI Services - Custom AI Development',
-      description: 'Comprehensive AI services including custom model development, machine learning solutions, and AI integration.',
-      url: '/services/ai-services',
-      category: 'services',
+      id: 1;
+      title: 'AI Services - Custom AI Development'
+      description: 'Comprehensive AI services including custom model development, machine learning solutions, and AI integration.'
+      url: '/services/ai-services'
+      category: 'services'
       type: 'Service Page'
-    },
+    }
     {
-      id: 2,
-      title: 'Micro SaaS Solutions',
-      description: 'Innovative micro SaaS applications designed to solve specific business problems with minimal overhead.',
-      url: '/services/micro-saas',
-      category: 'services',
+      id: 2;
+      title: 'Micro SaaS Solutions'
+      description: 'Innovative micro SaaS applications designed to solve specific business problems with minimal overhead.'
+      url: '/services/micro-saas'
+      category: 'services'
       type: 'Service Page'
-    },
+    }
     {
-      id: 3,
-      title: 'The Future of AI in Business',
-      description: 'Explore the latest AI trends that are transforming businesses and how companies can leverage these technologies.',
-      url: '/blog/1',
-      category: 'blog',
+      id: 3;
+      title: 'The Future of AI in Business'
+      description: 'Explore the latest AI trends that are transforming businesses and how companies can leverage these technologies.'
+      url: '/blog/1'
+      category: 'blog'
       type: 'Blog Post'
-    },
+    }
     {
-      id: 4,
-      title: 'Enterprise Solutions',
-      description: 'Comprehensive enterprise-grade solutions designed for large organizations and complex business requirements.',
-      url: '/solutions/enterprise',
-      category: 'solutions',
+      id: 4;
+      title: 'Enterprise Solutions'
+      description: 'Comprehensive enterprise-grade solutions designed for large organizations and complex business requirements.'
+      url: '/solutions/enterprise'
+      category: 'solutions'
       type: 'Solution Page'
-    },
+    }
     {
-      id: 5,
-      title: 'About Zion Tech Group',
-      description: 'Learn about our company, mission, values, and the team behind our innovative technology solutions.',
-      url: '/about',
-      category: 'pages',
+      id: 5;
+      title: 'About Zion Tech Group'
+      description: 'Learn about our company, mission, values, and the team behind our innovative technology solutions.'
+      url: '/about'
+      category: 'pages'
       type: 'Company Page'
     }
   ];
@@ -69,10 +69,10 @@ const SearchPage: NextPage = () => {
 
     setIsSearching(true);
     
-    // Simulate search delay
+    // Simulate search delay;
     await new Promise(resolve => setTimeout(resolve, 500));
     
-    // Filter results based on query and category
+    // Filter results based on query and category;
     const filtered = mockResults.filter(result => {
       const matchesQuery = result.title.toLowerCase().includes(query.toLowerCase()) ||
                           result.description.toLowerCase().includes(query.toLowerCase());
@@ -82,10 +82,11 @@ const SearchPage: NextPage = () => {
     
     setSearchResults(filtered);
     setIsSearching(false);
-  };
+  }
 
   useEffect(() => {
-    if (searchQuery) {
+    if() {
+
       const timeoutId = setTimeout(() => {
         handleSearch(searchQuery);
       }, 300);
@@ -96,7 +97,7 @@ const SearchPage: NextPage = () => {
   }, [searchQuery, selectedCategory]);
 
   return (
-    <MainLayout
+    <MainLayout;
       title="Search - Zion Tech Group"
       description="Search through Zion Tech Group's website to find the information you need."
     >
@@ -123,7 +124,7 @@ const SearchPage: NextPage = () => {
               <div className="flex flex-col md:flex-row gap-4 mb-6">
                 <div className="flex-1 relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
+                  <input;
                     type="text"
                     placeholder="Search for services, solutions, articles, or any content..."
                     value={searchQuery}
@@ -133,7 +134,7 @@ const SearchPage: NextPage = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <Filter className="w-5 h-5 text-gray-400" />
-                  <select
+                  <select;
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
                     className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -187,7 +188,7 @@ const SearchPage: NextPage = () => {
                               </span>
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-2">
-                              <Link 
+                              <Link;
                                 href={result.url}
                                 className="hover:text-blue-600 transition-colors"
                               >
@@ -195,11 +196,11 @@ const SearchPage: NextPage = () => {
                               </Link>
                             </h3>
                             <p className="text-gray-600 mb-4">{result.description}</p>
-                            <Link 
+                            <Link;
                               href={result.url}
                               className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
                             >
-                              Read More
+                              Read More;
                               <ArrowRight className="w-4 h-4 ml-1" />
                             </Link>
                           </div>
@@ -216,13 +217,13 @@ const SearchPage: NextPage = () => {
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
                       <Link href="/services" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                        Browse Services
+                        Browse Services;
                       </Link>
                       <Link href="/solutions" className="bg-gray-600 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition-colors">
-                        Browse Solutions
+                        Browse Solutions;
                       </Link>
                       <Link href="/blog" className="bg-gray-600 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition-colors">
-                        Browse Blog
+                        Browse Blog;
                       </Link>
                     </div>
                   </div>
@@ -272,6 +273,6 @@ const SearchPage: NextPage = () => {
       </section>
     </MainLayout>
   );
-};
+}
 
 export default SearchPage;

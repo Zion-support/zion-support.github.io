@@ -9,11 +9,10 @@ interface ThemeContextType {
   setTheme: (theme: Theme) => void;
   isDark: boolean}
 
-export 
-  
+export;
   if(context = == null) {;
     throw new Error('useTheme must be used within a ThemeProvider');
-  return context};
+  return context}
 
 interface ThemeProviderProps extends React.PropsWithChildren<{}> {
 
@@ -23,7 +22,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 
   const [theme, setTheme] = useState<Theme>(() => {
 
-    if(typeof window !== 'null') {
+    if() {
 
       if(saved && ['light',dark',system'].includes(saved)) {
         return saved}
@@ -33,9 +32,8 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);

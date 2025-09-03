@@ -3,33 +3,34 @@ import Link from "next/link"
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from "lucide-react"
   );
 export default function AiMarketingAutomation() {
+
   const features = [
-    "Feature 1",
-    "Feature 2",
+    "Feature 1"
+    "Feature 2"
     "Feature 3"
   ]
   const benefits = [
-    "Benefit 1",
-    "Benefit 2",
+    "Benefit 1"
+    "Benefit 2"
     "Benefit 3"
   ]
   const useCases = [
-    "Use Case 1",
-    "Use Case 2",
+    "Use Case 1"
+    "Use Case 2"
     "Use Case 3"
   ]
   const pricing = [
       }
 ];
     {
-      name: "Professional",
-      price: "$799/mo",
+      name: "Professional"
+      price: "$799/mo"
       details: ["Up to 50 users", "Advanced features", "Priority support", "99.9% SLA"]
     }
   ];
     {
-      name: "Enterprise",
-      price: "$1,999/mo",
+      name: "Enterprise"
+      price: "$1,999/mo"
     }
   ];
 
@@ -40,7 +41,7 @@ export default function AiMarketingAutomation() {
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
             <Database className="w-4 h-4 mr-2"  />
-            AI-Powered Ai Marketing Automation Intelligence
+            AI-Powered Ai Marketing Automation Intelligence;
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Ai Marketing Automation Platform</h1>
           <p className="text-indigo-100 text-xl">
@@ -138,4 +139,4 @@ export default function AiMarketingAutomation() {
           </div>
       </section>
     </div>
-  ),
+  )

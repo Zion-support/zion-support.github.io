@@ -22,10 +22,10 @@ interface AdvancedNotificationCenterProps {
 }
 
 const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
-  notifications,
-  onMarkAsRead,
-  onArchive,
-  onDelete
+  notifications;
+  onMarkAsRead;
+  onArchive;
+  onDelete;
 }) => {
   const [filter, setFilter] = useState<"all" | "unread" | "archived">("all");
   const [typeFilter, setTypeFilter] = useState<string>("all");
@@ -41,7 +41,8 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
   });
 
   const getTypeIcon = (type: string) => {
-    switch (type) {
+    switch() {
+
       case "success":
         return "✅";
       case "warning":
@@ -53,10 +54,11 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
       default:
         return "📢";
     }
-  };
+  }
 
   const getTypeColor = (type: string) => {
-    switch (type) {
+    switch() {
+
       case "success":
         return "border-green-500 bg-green-50";
       case "warning":
@@ -68,14 +70,14 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
       default:
         return "border-gray-500 bg-gray-50";
     }
-  };
+  }
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-bold text-gray-900">Notifications</h2>
         <div className="flex space-x-2">
-          <select
+          <select;
             value={filter}
             onChange={(e) => setFilter(e.target.value as any)}
             className="px-3 py-2 border border-gray-300 rounded-md text-sm"
@@ -84,7 +86,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
             <option value="unread">Unread</option>
             <option value="archived">Archived</option>
           </select>
-          <select
+          <select;
             value={typeFilter}
             onChange={(e) => setTypeFilter(e.target.value)}
             className="px-3 py-2 border border-gray-300 rounded-md text-sm"
@@ -101,11 +103,11 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
       <div className="space-y-4">
         {filteredNotifications.length === 0 ? (
           <div className="text-center py-8 text-gray-500">
-            No notifications found
+            No notifications found;
           </div>
         ) : (
           filteredNotifications.map((notification) => (
-            <div
+            <div;
               key={notification.id}
               className={`border-l-4 p-4 rounded-r-lg ${getTypeColor(notification.type)} ${
                 !notification.read ? "opacity-100" : "opacity-75"
@@ -138,27 +140,27 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
                 </div>
                 <div className="flex space-x-2">
                   {!notification.read && onMarkAsRead && (
-                    <button
+                    <button;
                       onClick={() => onMarkAsRead(notification.id)}
                       className="text-blue-600 hover:text-blue-800 text-sm"
                     >
-                      Mark as read
+                      Mark as read;
                     </button>
                   )}
                   {onArchive && (
-                    <button
+                    <button;
                       onClick={() => onArchive(notification.id)}
                       className="text-gray-600 hover:text-gray-800 text-sm"
                     >
-                      Archive
+                      Archive;
                     </button>
                   )}
                   {onDelete && (
-                    <button
+                    <button;
                       onClick={() => onDelete(notification.id)}
                       className="text-red-600 hover:text-red-800 text-sm"
                     >
-                      Delete
+                      Delete;
                     </button>
                   )}
                 </div>
@@ -169,6 +171,6 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
       </div>
     </div>
   );
-};
+}
 
 export default AdvancedNotificationCenter;

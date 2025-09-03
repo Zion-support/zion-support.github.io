@@ -1,12 +1,12 @@
 
-// Comprehensive Services Index 2030 - Zion Tech Group
-// This file combines all services for easy access and management
+// Comprehensive Services Index 2030 - Zion Tech Group;
+// This file combines all services for easy access and management;
 ;
-export const COMPREHENSIVE_SERVICES_INDEX_2030: ProductListing[] = [...REVOLUTIONARY_SERVICES_2030
+export const COMPREHENSIVE_SERVICES_INDEX_2030: ProductListing[] = [...REVOLUTIONARY_SERVICES_2030;
 ];
 
-// Service Categories for easy filtering
-:src/data/comprehensiveServicesIndex2030.tsx
+// Service Categories for easy filtering;
+:src/data/comprehensiveServicesIndex2030.tsx;
 export const SERVICE_CATEGORIES_2030 = ["
   "AI & Business Intelligence","
   "AI & Marketing","
@@ -30,53 +30,53 @@ export const SERVICE_CATEGORIES_2030 = ["
   "Cybersecurity","
   "Cloud & DevOps","
   "Quantum Computing","
-  "IoT & Edge Computing",;"
-  "Blockchain & Web3",;"
-  "Digital Twin",;"
-  "Space Technology",;"
-  "Sustainable Technology",;"
-  "IT Infrastructure",;"
+  "IoT & Edge Computing","
+  "Blockchain & Web3","
+  "Digital Twin","
+  "Space Technology","
+  "Sustainable Technology","
+  "IT Infrastructure","
   "Emerging Technology";
 ];
 
 // Service Statistics;
-export 
+export;
   emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => ;'
-export 
-  "Blockchain & Web3",;
-  "Digital Twin",;
-  "Space Technology",;
-  "Sustainable Technology",;
-  "IT Infrastructure",;
+export;
+  "Blockchain & Web3"
+  "Digital Twin"
+  "Space Technology"
+  "Sustainable Technology"
+  "IT Infrastructure"
   "Emerging Technology";
 ];
 
-// Service Statistics
+// Service Statistics;
 export const SERVICE_STATISTICS_2030 = {
-  totalServices: COMPREHENSIVE_SERVICES_INDEX_2030.length,
-  totalCategories: SERVICE_CATEGORIES_2030.length,
+  totalServices: COMPREHENSIVE_SERVICES_INDEX_2030.length;
+  totalCategories: SERVICE_CATEGORIES_2030.length;
   averagePrice: Math.round(
     COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)  => sum + service.price, 0) /
-    COMPREHENSIVE_SERVICES_INDEX_2030.length
-  ),
+    COMPREHENSIVE_SERVICES_INDEX_2030.length;
+  )
   averageRating: Math.round((COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service)  => sum + service.rating, 0) /
-    COMPREHENSIVE_SERVICES_INDEX_2030.length) * 10
-  ) / 10,
-  featuredServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => service.featured).length,
+    COMPREHENSIVE_SERVICES_INDEX_2030.length) * 10;
+  ) / 10;
+  featuredServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => service.featured).length;
   aiServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  =>
-    service.category.includes('AI') || service.aiScore > 90
+    service.category.includes('AI') || service.aiScore > 90;
   emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service  => ;    service.category === 'Emerging Technology'
-  ).length
-  ).length,;
+  ).length;
+  ).length;
   ;
   ;
   emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => ;
     service.category === 'Emerging Technology';
-  ).length};
+  ).length}
 
-};
+}
 
-// Featured Services
+// Featured Services;
 export const FEATURED_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => service.featured);
 
 // High-ROI Services(ROI > 500%)
@@ -87,23 +87,20 @@ export const HIGH_ROI_SERVICES_2030 = COMPREHENSIVE_SERVICES_INDEX_2030.filter(s
   return false});
 
 // Quick Setup Services(< 8 weeks);
-export 
-  
+export;
   if(typeof setupTime = == 'string') {;
     
-// Featured Services
-export 
+// Featured Services;
+export;
 // High-ROI Services(ROI > 500%)
-export 
-  
+export;
   if(typeof roi = == 'string') {;
     
     return roiNumber > 500}
   return false});
 
 // Quick Setup Services(< 8 weeks)
-export 
-  
+export;
   if(typeof setupTime = == 'string') {;
     
     return weeks < 8}
@@ -112,6 +109,6 @@ export
 // Export individual service arrays for specific use cases;
 export {
 
-  REVOLUTIONARY_SERVICES_2030
-};
+  REVOLUTIONARY_SERVICES_2030;
+}
 '"

@@ -35,7 +35,7 @@ const ContactPage: React.FC = () => {
             <form className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
-                <input 
+                <input;
                   type="text" 
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Your name"
@@ -43,7 +43,7 @@ const ContactPage: React.FC = () => {
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                <input 
+                <input;
                   type="email" 
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="your@email.com"
@@ -51,17 +51,17 @@ const ContactPage: React.FC = () => {
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                <textarea 
+                <textarea;
                   rows={4}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Your message"
                 ></textarea>
               </div>
-              <button 
+              <button;
                 type="submit"
                 className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
               >
-                Send Message
+                Send Message;
               </button>
             </form>
           </div>
@@ -69,6 +69,6 @@ const ContactPage: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 
 export default ContactPage;

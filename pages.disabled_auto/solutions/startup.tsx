@@ -6,60 +6,60 @@ import Link from 'next/link';
 const StartupSolutionsPage: NextPage = () => {
   const solutions = [
     {
-      icon: <Rocket className="w-8 h-8" />,
-      title: 'MVP Development',
-      description: 'Fast-track your startup with our rapid MVP development services using cutting-edge technologies.',
-      features: ['2-4 week delivery', 'Scalable architecture', 'Modern tech stack', 'User feedback integration'],
+      icon: <Rocket className="w-8 h-8" />
+      title: 'MVP Development'
+      description: 'Fast-track your startup with our rapid MVP development services using cutting-edge technologies.'
+      features: ['2-4 week delivery', 'Scalable architecture', 'Modern tech stack', 'User feedback integration']
       price: 'Starting at $5,000'
-    },
+    }
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: 'AI-Powered Automation',
-      description: 'Leverage AI to automate processes and reduce operational costs from day one.',
-      features: ['Process automation', 'Cost reduction', 'Scalable AI solutions', 'Quick implementation'],
+      icon: <Zap className="w-8 h-8" />
+      title: 'AI-Powered Automation'
+      description: 'Leverage AI to automate processes and reduce operational costs from day one.'
+      features: ['Process automation', 'Cost reduction', 'Scalable AI solutions', 'Quick implementation']
       price: 'Starting at $2,500'
-    },
+    }
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: 'Security-First Architecture',
-      description: 'Build secure foundations with enterprise-grade security from the start.',
-      features: ['Security by design', 'Compliance ready', 'Data protection', 'Audit trails'],
+      icon: <Shield className="w-8 h-8" />
+      title: 'Security-First Architecture'
+      description: 'Build secure foundations with enterprise-grade security from the start.'
+      features: ['Security by design', 'Compliance ready', 'Data protection', 'Audit trails']
       price: 'Starting at $3,000'
-    },
+    }
     {
-      icon: <Users className="w-8 h-8" />,
-      title: 'Team Scaling Solutions',
-      description: 'Scale your development team with our flexible staffing and consulting services.',
-      features: ['Flexible staffing', 'Expert consultants', 'Remote teams', 'Quick onboarding'],
+      icon: <Users className="w-8 h-8" />
+      title: 'Team Scaling Solutions'
+      description: 'Scale your development team with our flexible staffing and consulting services.'
+      features: ['Flexible staffing', 'Expert consultants', 'Remote teams', 'Quick onboarding']
       price: 'Starting at $150/hour'
     }
   ];
 
   const benefits = [
     {
-      icon: <DollarSign className="w-8 h-8" />,
-      title: 'Cost-Effective Solutions',
+      icon: <DollarSign className="w-8 h-8" />
+      title: 'Cost-Effective Solutions'
       description: 'Get enterprise-grade solutions at startup-friendly prices with flexible payment options.'
-    },
+    }
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: 'Rapid Deployment',
+      icon: <Zap className="w-8 h-8" />
+      title: 'Rapid Deployment'
       description: 'Launch faster with our proven methodologies and pre-built components.'
-    },
+    }
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: 'Future-Proof Technology',
+      icon: <Shield className="w-8 h-8" />
+      title: 'Future-Proof Technology'
       description: 'Build on scalable, modern architectures that grow with your business.'
-    },
+    }
     {
-      icon: <Star className="w-8 h-8" />,
-      title: 'Expert Guidance',
+      icon: <Star className="w-8 h-8" />
+      title: 'Expert Guidance'
       description: 'Get mentorship and guidance from experienced entrepreneurs and technologists.'
     }
   ];
 
   return (
-    <MainLayout
+    <MainLayout;
       title="Startup Solutions - Zion Tech Group"
       description="Accelerate your startup's growth with our comprehensive technology solutions designed for early-stage companies."
     >
@@ -68,18 +68,18 @@ const StartupSolutionsPage: NextPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Startup Solutions
+              Startup Solutions;
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
-              Accelerate your startup's growth with our comprehensive technology solutions 
+              Accelerate your startup's growth with our comprehensive technology solutions;
               designed specifically for early-stage companies and entrepreneurs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-                Get Started Today
+                Get Started Today;
               </Link>
               <Link href="/solutions/enterprise" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-                Enterprise Solutions
+                Enterprise Solutions;
               </Link>
             </div>
           </div>
@@ -92,7 +92,7 @@ const StartupSolutionsPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Startup-Focused Solutions</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We understand the unique challenges startups face. Our solutions are designed to help you 
+              We understand the unique challenges startups face. Our solutions are designed to help you;
               move fast, scale efficiently, and build products that users love.
             </p>
           </div>
@@ -161,7 +161,7 @@ const StartupSolutionsPage: NextPage = () => {
               <div className="text-4xl mb-4">🚀</div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">TechStart Inc.</h3>
               <p className="text-gray-600 mb-4">
-                "Zion Tech Group helped us build our MVP in just 3 weeks. Their expertise in AI integration 
+                "Zion Tech Group helped us build our MVP in just 3 weeks. Their expertise in AI integration;
                 gave us a competitive edge from day one."
               </p>
               <div className="text-green-600 font-semibold">- Sarah Johnson, CEO</div>
@@ -171,7 +171,7 @@ const StartupSolutionsPage: NextPage = () => {
               <div className="text-4xl mb-4">💡</div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">InnovateLab</h3>
               <p className="text-gray-600 mb-4">
-                "Their security-first approach saved us from potential breaches. We could focus on growth 
+                "Their security-first approach saved us from potential breaches. We could focus on growth;
                 knowing our infrastructure was bulletproof."
               </p>
               <div className="text-green-600 font-semibold">- Michael Chen, CTO</div>
@@ -181,7 +181,7 @@ const StartupSolutionsPage: NextPage = () => {
               <div className="text-4xl mb-4">📈</div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">ScaleUp Solutions</h3>
               <p className="text-gray-600 mb-4">
-                "From 0 to 100K users in 6 months. Their scalable architecture and expert guidance 
+                "From 0 to 100K users in 6 months. Their scalable architecture and expert guidance;
                 made our rapid growth possible."
               </p>
               <div className="text-green-600 font-semibold">- Emily Rodriguez, Founder</div>
@@ -201,16 +201,16 @@ const StartupSolutionsPage: NextPage = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              Get Started Today
+              Get Started Today;
             </Link>
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              View All Services
+              View All Services;
             </Link>
           </div>
         </div>
       </section>
     </MainLayout>
   );
-};
+}
 
 export default StartupSolutionsPage;

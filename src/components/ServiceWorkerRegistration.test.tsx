@@ -1,7 +1,7 @@
   it(displays expected content", () => {
     render(<ServiceWorkerRegistration  />)"
-import { render, screen } from &apos;@testing - library/react",
-import ServiceWorkerRegistration from &apos;./ServiceWorkerRegistration
+import { render, screen } from &apos;@testing - library/react"
+import ServiceWorkerRegistration from &apos;./ServiceWorkerRegistration;
 describe(&apos;ServiceWorkerRegistration&apos, () => {
   it(&apos;renders without crashing&apos, () => {
     render()
@@ -11,7 +11,7 @@ describe(&apos;ServiceWorkerRegistration&apos, () => {
   it(&apos;displays expected content&apos, () => {
     render()
 }
-    // comment
+    // comment;
     render(<ServiceWorkerRegistration / >)"
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"

@@ -3,48 +3,48 @@ export default InnovativeServicesOverview2025;''
 import { motion  } from 'framer-motion';
 
 export default function Page(...args: any[]): any {): unknown {): unknown {}
-,
+
     {}
-      id: 'ai - healthcare - analytics',
-      title: 'AI Healthcare Analytics Platform',
-      icon: Heart,
-      color: 'from - pink - 500 to - red - 600',
-      description: 'Transform healthcare with AI - powered patient analytics',
-      price: 'From $2,800 / month',
-      features: ['Patient analytics',
-        'Clinical decision support',
+      id: 'ai - healthcare - analytics'
+      title: 'AI Healthcare Analytics Platform'
+      icon: Heart;
+      color: 'from - pink - 500 to - red - 600'
+      description: 'Transform healthcare with AI - powered patient analytics'
+      price: 'From $2,800 / month'
+      features: ['Patient analytics'
+        'Clinical decision support'
         'HIPAA compliance'
-      ],
-      path: '/services / ai - healthcare - analytics - platform',
-      benefits: ['Improve outcomes by 35%',
-        'Reduce readmissions by 40%',
+      ]
+      path: '/services / ai - healthcare - analytics - platform'
+      benefits: ['Improve outcomes by 35%'
+        'Reduce readmissions by 40%'
         'Lower costs by 30%'
       ]
     }
   ];
 
   const additionalServices: unknown = [{}
-      name: 'AI - Powered SEO Platform',
-      description: 'Advanced SEO optimization with machine learning',
-      price: '$1,500 / month',
+      name: 'AI - Powered SEO Platform'
+      description: 'Advanced SEO optimization with machine learning'
+      price: '$1,500 / month'
       path: '/services / ai - powered - seo'
-    },
+    }
     {}
-      name: 'AI Interview Assessment',
-      description: 'Intelligent candidate evaluation and screening',
-      price: '$800 / month',
+      name: 'AI Interview Assessment'
+      description: 'Intelligent candidate evaluation and screening'
+      price: '$800 / month'
       path: '/services / interview-assessment - ai'
-    },
+    }
     {}
-      name: 'Zero Trust Network Access',
-      description: 'Enterprise - grade security with zero trust principles',
-      price: '$2,000 / month',
+      name: 'Zero Trust Network Access'
+      description: 'Enterprise - grade security with zero trust principles'
+      price: '$2,000 / month'
       path: '/services / zero - trust - network - access'
-    },
+    }
     {}
-      name: 'AI Workflow Orchestrator',
-      description: 'Intelligent business process automation',
-      price: '$1,800 / month',
+      name: 'AI Workflow Orchestrator'
+      description: 'Intelligent business process automation'
+      price: '$1,800 / month'
       path: '/services / ai - workflow-orchestrator'
     }
   ];
@@ -277,16 +277,16 @@ export default function Page(...args: any[]): any {): unknown {): unknown {}
       </section>
     </div>
   );
-};
+}
 
 export default InnovativeServicesOverview2025;
 
-export { InnovativeServicesOverview2025 };
+export { InnovativeServicesOverview2025 }
 
-export { InnovativeServicesOverview2025 };
+export { InnovativeServicesOverview2025 }
 
-export { InnovativeServicesOverview2025 };
+export { InnovativeServicesOverview2025 }
 
-export { InnovativeServicesOverview2025 };
+export { InnovativeServicesOverview2025 }
 
-export { Page };
+export { Page }

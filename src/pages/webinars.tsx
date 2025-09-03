@@ -3,6 +3,7 @@ import Link from "next/link"
 import { ArrowRight, Phone, Mail } from "lucide-react"
   );
 export default function Webinars() {
+
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-4xl mx-auto px-6 py-16">
@@ -18,4 +19,4 @@ export default function Webinars() {
             Go Home <Phone className="w-4 h-4 ml-2"  />
           </Link>
         </div>
-  ),
+  )

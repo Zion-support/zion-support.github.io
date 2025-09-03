@@ -5,7 +5,7 @@ import { CheckCircle, Shield, Zap, BarChart, Users, Award, Globe } from 'lucide-
 
 const BlockchainSolutions: NextPage = () => {
   return (
-    <Layout
+    <Layout;
       title="Blockchain Solutions - Zion Tech Group"
       description="Innovative blockchain technology for secure, transparent business processes. Smart contracts, DeFi applications, and custom blockchain solutions."
     >
@@ -13,7 +13,7 @@ const BlockchainSolutions: NextPage = () => {
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Blockchain
+            Blockchain;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Solutions</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
@@ -23,10 +23,10 @@ const BlockchainSolutions: NextPage = () => {
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              Start Your Blockchain Project
+              Start Your Blockchain Project;
             </Link>
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              View All Services
+              View All Services;
             </Link>
           </div>
         </div>
@@ -38,7 +38,7 @@ const BlockchainSolutions: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Blockchain Solutions</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We develop cutting-edge blockchain solutions that provide security, transparency, 
+              We develop cutting-edge blockchain solutions that provide security, transparency;
               and efficiency for your business processes and applications.
             </p>
           </div>
@@ -55,15 +55,15 @@ const BlockchainSolutions: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Ethereum Smart Contracts
+                  Ethereum Smart Contracts;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Solidity Development
+                  Solidity Development;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Contract Auditing
+                  Contract Auditing;
                 </li>
               </ul>
             </div>
@@ -79,15 +79,15 @@ const BlockchainSolutions: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  DEX Development
+                  DEX Development;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Lending Platforms
+                  Lending Platforms;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Yield Farming
+                  Yield Farming;
                 </li>
               </ul>
             </div>
@@ -103,15 +103,15 @@ const BlockchainSolutions: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  NFT Marketplace
+                  NFT Marketplace;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Minting Platforms
+                  Minting Platforms;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Gaming NFTs
+                  Gaming NFTs;
                 </li>
               </ul>
             </div>
@@ -127,15 +127,15 @@ const BlockchainSolutions: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  ERC-20 Tokens
+                  ERC-20 Tokens;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  BEP-20 Tokens
+                  BEP-20 Tokens;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Custom Tokenomics
+                  Custom Tokenomics;
                 </li>
               </ul>
             </div>
@@ -151,15 +151,15 @@ const BlockchainSolutions: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Hyperledger Fabric
+                  Hyperledger Fabric;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Supply Chain Solutions
+                  Supply Chain Solutions;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Identity Management
+                  Identity Management;
                 </li>
               </ul>
             </div>
@@ -175,15 +175,15 @@ const BlockchainSolutions: NextPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Technology Assessment
+                  Technology Assessment;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Architecture Design
+                  Architecture Design;
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                  Implementation Strategy
+                  Implementation Strategy;
                 </li>
               </ul>
             </div>
@@ -254,16 +254,16 @@ const BlockchainSolutions: NextPage = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              Start Your Blockchain Project
+              Start Your Blockchain Project;
             </Link>
             <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              View All Services
+              View All Services;
             </Link>
           </div>
         </div>
       </section>
     </Layout>
   );
-};
+}
 
 export default BlockchainSolutions;

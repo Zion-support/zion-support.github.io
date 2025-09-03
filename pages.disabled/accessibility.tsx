@@ -6,54 +6,54 @@ import { Accessibility, Eye, Volume2, MousePointer, Keyboard, Monitor, CheckCirc
 const AccessibilityPage: NextPage = () => {
   const accessibilityFeatures = [
     {
-      icon: Eye,
-      title: 'Visual Accessibility',
-      description: 'Features to support users with visual impairments',
+      icon: Eye;
+      title: 'Visual Accessibility'
+      description: 'Features to support users with visual impairments'
       features: [
-        'High contrast mode for better visibility',
-        'Text size adjustment options',
-        'Screen reader compatibility',
-        'Alternative text for all images',
-        'Color-blind friendly color schemes',
+        'High contrast mode for better visibility'
+        'Text size adjustment options'
+        'Screen reader compatibility'
+        'Alternative text for all images'
+        'Color-blind friendly color schemes'
         'Focus indicators for keyboard navigation'
       ]
-    },
+    }
     {
-      icon: Volume2,
-      title: 'Audio Accessibility',
-      description: 'Support for users with hearing impairments',
+      icon: Volume2;
+      title: 'Audio Accessibility'
+      description: 'Support for users with hearing impairments'
       features: [
-        'Closed captions for video content',
-        'Transcripts for audio content',
-        'Visual alerts for important notifications',
-        'Sign language interpretation available',
-        'Audio descriptions for visual content',
+        'Closed captions for video content'
+        'Transcripts for audio content'
+        'Visual alerts for important notifications'
+        'Sign language interpretation available'
+        'Audio descriptions for visual content'
         'Volume control options'
       ]
-    },
+    }
     {
-      icon: Keyboard,
-      title: 'Motor Accessibility',
-      description: 'Support for users with motor impairments',
+      icon: Keyboard;
+      title: 'Motor Accessibility'
+      description: 'Support for users with motor impairments'
       features: [
-        'Full keyboard navigation support',
-        'Large click targets for easier interaction',
-        'Voice control compatibility',
-        'Customizable keyboard shortcuts',
-        'Switch navigation support',
+        'Full keyboard navigation support'
+        'Large click targets for easier interaction'
+        'Voice control compatibility'
+        'Customizable keyboard shortcuts'
+        'Switch navigation support'
         'Touch-friendly interface design'
       ]
-    },
+    }
     {
-      icon: Monitor,
-      title: 'Cognitive Accessibility',
-      description: 'Features to support users with cognitive differences',
+      icon: Monitor;
+      title: 'Cognitive Accessibility'
+      description: 'Features to support users with cognitive differences'
       features: [
-        'Clear and simple language',
-        'Consistent navigation patterns',
-        'Progress indicators for multi-step processes',
-        'Error prevention and clear error messages',
-        'Help and support documentation',
+        'Clear and simple language'
+        'Consistent navigation patterns'
+        'Progress indicators for multi-step processes'
+        'Error prevention and clear error messages'
+        'Help and support documentation'
         'Customizable interface complexity'
       ]
     }
@@ -61,50 +61,50 @@ const AccessibilityPage: NextPage = () => {
 
   const standards = [
     {
-      name: 'WCAG 2.1 AA',
-      description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',
-      status: 'Compliant',
+      name: 'WCAG 2.1 AA'
+      description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance'
+      status: 'Compliant'
       details: 'Our website meets or exceeds WCAG 2.1 AA standards for web accessibility.'
-    },
+    }
     {
-      name: 'Section 508',
-      description: 'U.S. federal accessibility standards for electronic and information technology',
-      status: 'Compliant',
+      name: 'Section 508'
+      description: 'U.S. federal accessibility standards for electronic and information technology'
+      status: 'Compliant'
       details: 'We comply with Section 508 requirements for federal accessibility standards.'
-    },
+    }
     {
-      name: 'ADA Compliance',
-      description: 'Americans with Disabilities Act compliance for digital accessibility',
-      status: 'Compliant',
+      name: 'ADA Compliance'
+      description: 'Americans with Disabilities Act compliance for digital accessibility'
+      status: 'Compliant'
       details: 'Our digital services are designed to be accessible under ADA guidelines.'
     }
   ];
 
   const assistiveTechnologies = [
     {
-      name: 'Screen Readers',
-      description: 'Compatible with popular screen reading software',
+      name: 'Screen Readers'
+      description: 'Compatible with popular screen reading software'
       technologies: ['NVDA', 'JAWS', 'VoiceOver', 'TalkBack']
-    },
+    }
     {
-      name: 'Voice Control',
-      description: 'Support for voice control software',
+      name: 'Voice Control'
+      description: 'Support for voice control software'
       technologies: ['Dragon NaturallySpeaking', 'Voice Control (macOS)', 'Voice Access (Android)']
-    },
+    }
     {
-      name: 'Switch Navigation',
-      description: 'Compatible with switch navigation devices',
+      name: 'Switch Navigation'
+      description: 'Compatible with switch navigation devices'
       technologies: ['Switch Control (iOS)', 'Switch Access (Android)', 'External switch devices']
-    },
+    }
     {
-      name: 'Magnification',
-      description: 'Works with screen magnification software',
+      name: 'Magnification'
+      description: 'Works with screen magnification software'
       technologies: ['ZoomText', 'MAGic', 'Built-in browser zoom', 'OS magnification tools']
     }
   ];
 
   return (
-    <MainLayout
+    <MainLayout;
       title="Accessibility - Zion Tech Group"
       description="Learn about Zion Tech Group's commitment to digital accessibility and the features we provide to ensure our services are accessible to everyone."
       keywords="accessibility, digital accessibility, WCAG compliance, ADA compliance, inclusive design, assistive technology"
@@ -117,7 +117,7 @@ const AccessibilityPage: NextPage = () => {
               <Accessibility className="w-16 h-16 mx-auto mb-6 text-blue-400" />
               <h1 className="text-4xl md:text-5xl font-bold mb-6">Digital Accessibility</h1>
               <p className="text-xl text-gray-200 mb-8">
-                We are committed to making our digital services accessible to everyone, 
+                We are committed to making our digital services accessible to everyone;
                 regardless of ability or the technology they use.
               </p>
             </div>
@@ -207,16 +207,16 @@ const AccessibilityPage: NextPage = () => {
               <div className="prose prose-lg max-w-none">
                 <p className="text-gray-600 leading-relaxed mb-6">
                   Zion Tech Group is committed to ensuring digital accessibility for people with disabilities. 
-                  We continually improve the user experience for everyone and apply the relevant accessibility 
+                  We continually improve the user experience for everyone and apply the relevant accessibility;
                   standards to ensure we provide equal access to our services.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-6">
                   We believe that accessibility is not just a legal requirement but a moral imperative. 
-                  Our team includes accessibility experts who work to ensure our digital products are 
+                  Our team includes accessibility experts who work to ensure our digital products are;
                   usable by the widest possible audience.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  We regularly test our website and applications with assistive technologies and 
+                  We regularly test our website and applications with assistive technologies and;
                   conduct accessibility audits to identify and address any barriers to access.
                 </p>
               </div>
@@ -234,17 +234,17 @@ const AccessibilityPage: NextPage = () => {
                 If you encounter any accessibility barriers, please let us know.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <a;
                   href="mailto:accessibility@ziontechgroup.com"
                   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Report Accessibility Issue
+                  Report Accessibility Issue;
                 </a>
-                <a
+                <a;
                   href="/contact"
                   className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
-                  Contact Us
+                  Contact Us;
                 </a>
               </div>
             </div>
@@ -253,6 +253,6 @@ const AccessibilityPage: NextPage = () => {
       </div>
     </MainLayout>
   );
-};
+}
 
 export default AccessibilityPage;

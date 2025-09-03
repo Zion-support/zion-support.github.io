@@ -1,20 +1,22 @@
 export default function ManagedCybersecurity() {
+
   return (
-    <Article
+    <Article;
       title="Managed Cybersecurity"
       subtitle="Threat detection, incident response, and compliance automation"
       price="from $6k/mo"
       bullets={[
-        '24/7 monitoring with SIEM/SOAR integrations',
-        'Identity hardening and zero-trust access policies',
-        'Vulnerability scanning and prioritized patching',
+        '24/7 monitoring with SIEM/SOAR integrations'
+        'Identity hardening and zero-trust access policies'
+        'Vulnerability scanning and prioritized patching'
         'Compliance packs: SOC2, ISO 27001, HIPAA'
       ]}
     />
   )
 }
 
-function Article({ title, subtitle, price, bullets }: { title: string; subtitle: string; price: string; bullets: string[] }) {
+function Article() {
+
   return (
     <main style={{ fontFamily: 'system-ui, sans-serif', padding: 32, maxWidth: 920, margin: '0 auto' }}>
       <h1 style={{ marginTop: 0 }}>{title}</h1>
@@ -31,6 +33,7 @@ function Article({ title, subtitle, price, bullets }: { title: string; subtitle:
 }
 
 function ContactFooter() {
+
   return (
     <p>
       Mobile: +1 302 464 0950 · Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · Site: <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer">ziontechgroup.com</a>

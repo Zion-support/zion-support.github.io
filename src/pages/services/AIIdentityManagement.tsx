@@ -3,36 +3,37 @@ import { Database, Check, ArrowRight } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
 export default function AIIdentityManagement() {
+
   const features = [
-    'Automated identity verification and validation',
-    'Predictive analytics for identity threats',
-    'Smart compliance and governance monitoring',
-    'AI-driven identity automation and orchestration',
-    'Real-time identity analytics and insights',
+    'Automated identity verification and validation'
+    'Predictive analytics for identity threats'
+    'Smart compliance and governance monitoring'
+    'AI-driven identity automation and orchestration'
+    'Real-time identity analytics and insights'
     'Custom AI models for identity applications'
   ];
 
   const tiers = [
     {
-      name: 'Starter',
-      price: '$299/mo',
+      name: 'Starter'
+      price: '$299/mo'
       details: ['Basic identity features', 'Standard support', 'Up to 100 users']
-    },
+    }
     {
-      name: 'Professional',
-      price: '$999/mo',
+      name: 'Professional'
+      price: '$999/mo'
       details: ['Advanced identity features', 'Priority support', 'Up to 1000 users']
-    },
+    }
     {
-      name: 'Enterprise',
-      price: '$1,999/mo',
+      name: 'Enterprise'
+      price: '$1,999/mo'
       details: ['All identity features', 'Dedicated support', 'Unlimited users']
     }
   ];
 
   return (
     <>
-      <SEO 
+      <SEO;
         title="AI Identity Management - AI Solutions | Zion Tech Group"
         description="Secure and manage identities with our AI-powered identity management solutions. Enterprise-grade security for modern businesses."
         keywords="AI identity management, identity verification, access control, security automation"
@@ -42,10 +43,10 @@ export default function AIIdentityManagement() {
           <div className="max-w-5xl mx-auto px-6">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
               <Database className="w-4 h-4 mr-2" />
-              AI-Powered Identity Management Intelligence
+              AI-Powered Identity Management Intelligence;
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-              AI Identity Management Platform
+              AI Identity Management Platform;
             </h1>
             <p className="text-indigo-100 text-xl">
               Transform your identity management operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.
@@ -57,7 +58,7 @@ export default function AIIdentityManagement() {
           <div className="grid md:grid-cols-2 gap-10">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Advanced Identity Management Features
+                Advanced Identity Management Features;
               </h2>
               <ul className="space-y-3">
                 {features.map((feature, index) => (
@@ -74,7 +75,7 @@ export default function AIIdentityManagement() {
             
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                Competitive Pricing
+                Competitive Pricing;
               </h3>
               <div className="grid md:grid-cols-3 gap-4">
                 {tiers.map((tier, index) => (
@@ -90,18 +91,18 @@ export default function AIIdentityManagement() {
                 ))}
               </div>
               <div className="mt-6 flex flex-wrap gap-3">
-                <a 
+                <a;
                   href="/pricing" 
                   className="px-5 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors inline-flex items-center"
                 >
-                  View Full Pricing 
+                  View Full Pricing;
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
-                <a 
+                <a;
                   href="/contact" 
                   className="px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors"
                 >
-                  Contact Sales
+                  Contact Sales;
                 </a>
               </div>
             </div>

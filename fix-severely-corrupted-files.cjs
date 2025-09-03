@@ -1,7 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 // Function to create a minimal valid React component;
-function createMinimalComponent(filePath) {
+function createMinimalComponent() {
+
   const fileName = path.basename(filePath, path.extname(filePath));
   const componentName = fileName;
     .replace(/[-_]/g, "");
@@ -37,66 +38,65 @@ const ${componentName}${typeAnnotation} = () => {
         </div>;
       </div>;
     </div>;
-  );,
+  );
 }
-export default ${componentName};`;,
+export default ${componentName}`;
 }
-;
 // Function to check if a file is severely corrupted;
-function isSeverelyCorrupted(content) {
+function isSeverelyCorrupted() {
+
   const corruptionIndicators = [
-  "Parsing error",;
-    "Unterminated string literal",;
-    "Expression expected",;
-    "Declaration or statement expected",;
-    "Property assignment expected",;
-    "Identifier expected",;
-    "Type expected",;
+  "Parsing error"
+    "Unterminated string literal"
+    "Expression expected"
+    "Declaration or statement expected"
+    "Property assignment expected"
+    "Identifier expected"
+    "Type expected"
     "An identifier or keyword cannot immediately follow a numeric literal";
   ];
   ;
   return corruptionIndicators.some(indicator => content.includes(indicator)) ||;
          content.length < 200 ||;
          content.includes("return()") ||;
-         content.includes("const") && !content.includes("export");,
+         content.includes("const") && !content.includes("export");
 }
-;
 // Function to fix severely corrupted files;
-function fixCorruptedFile(filePath) {
+function fixCorruptedFile() {
+
   try {
   const content = fs.readFileSync(filePath, "utf8");
     if (isSeverelyCorrupted(content)) {
   const newContent = createMinimalComponent(filePath);
       fs.writeFileSync(filePath, newContent, "utf8");
       console.log(`Replaced corrupted file: ${filePath}`);
-      return true;,
+      return true;
 }
-    ;
-    return false;,
-} catch (error) {
+    return false;
+} catch() {
+
   console.error(`Error processing ${filePath}:`, error.message);
-    return false;,
+    return false;
 }
 }
-;
 // Function to recursively find and fix corrupted files;
-function fixCorruptedFilesInDirectory(dirPath) {
+function fixCorruptedFilesInDirectory() {
+
   const files = fs.readdirSync(dirPath);
   let fixedCount = 0;
   files.forEach(file => {
   const filePath = path.join(dirPath, file);
     const stat = fs.statSync(filePath);
     if (stat.isDirectory() && !file.startsWith(".") && file !== "node_modules") {
-  fixedCount += fixCorruptedFilesInDirectory(filePath);,
+  fixedCount += fixCorruptedFilesInDirectory(filePath);
 } else if (file.endsWith(".tsx") || file.endsWith(".jsx") || file.endsWith(".ts") || file.endsWith(".js")) {
   if (fixCorruptedFile(filePath)) {
-  fixedCount++;,
+  fixedCount++;
 }
     }
   });
-  return fixedCount;,
+  return fixedCount;
 }
-;
 // Main execution;
 console.log("Starting to fix severely corrupted files...");
 const fixedCount = fixCorruptedFilesInDirectory("./src");

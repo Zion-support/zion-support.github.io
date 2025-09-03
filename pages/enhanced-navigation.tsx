@@ -7,78 +7,78 @@ const EnhancedNavigation: React.FC = () => {
 
   const navigationFeatures = [
     {
-      title: 'Smart Search',
-      description: 'Intelligent search with autocomplete, filters, and recent searches',
-      icon: '🔍',
+      title: 'Smart Search'
+      description: 'Intelligent search with autocomplete, filters, and recent searches'
+      icon: '🔍'
       benefits: ['Faster content discovery', 'Relevant results', 'Search history']
-    },
+    }
     {
-      title: 'Breadcrumb Navigation',
-      description: 'Clear path indicators showing user location within the site',
-      icon: '🍞',
+      title: 'Breadcrumb Navigation'
+      description: 'Clear path indicators showing user location within the site'
+      icon: '🍞'
       benefits: ['Easy navigation back', 'Context awareness', 'SEO friendly']
-    },
+    }
     {
-      title: 'Mega Menus',
-      description: 'Rich dropdown menus with categorized content and quick actions',
-      icon: '📋',
+      title: 'Mega Menus'
+      description: 'Rich dropdown menus with categorized content and quick actions'
+      icon: '📋'
       benefits: ['Reduced clicks', 'Better organization', 'Visual hierarchy']
-    },
+    }
     {
-      title: 'Mobile-First Design',
-      description: 'Responsive navigation that works seamlessly across all devices',
-      icon: '📱',
+      title: 'Mobile-First Design'
+      description: 'Responsive navigation that works seamlessly across all devices'
+      icon: '📱'
       benefits: ['Touch-friendly', 'Adaptive layouts', 'Consistent experience']
-    },
+    }
     {
-      title: 'Keyboard Navigation',
-      description: 'Full keyboard support for accessibility and power users',
-      icon: '⌨️',
+      title: 'Keyboard Navigation'
+      description: 'Full keyboard support for accessibility and power users'
+      icon: '⌨️'
       benefits: ['Accessibility compliance', 'Faster navigation', 'No mouse required']
-    },
+    }
     {
-      title: 'Analytics Integration',
-      description: 'Track navigation patterns to continuously improve user experience',
-      icon: '📊',
+      title: 'Analytics Integration'
+      description: 'Track navigation patterns to continuously improve user experience'
+      icon: '📊'
       benefits: ['Data-driven decisions', 'User behavior insights', 'Performance metrics']
     }
   ];
 
   const implementationSteps = [
     {
-      step: 1,
-      title: 'Audit Current Navigation',
-      description: 'Analyze existing navigation structure and identify pain points',
+      step: 1;
+      title: 'Audit Current Navigation'
+      description: 'Analyze existing navigation structure and identify pain points'
       duration: '1-2 days'
-    },
+    }
     {
-      step: 2,
-      title: 'Design New Structure',
-      description: 'Create wireframes and user flows for improved navigation',
+      step: 2;
+      title: 'Design New Structure'
+      description: 'Create wireframes and user flows for improved navigation'
       duration: '3-5 days'
-    },
+    }
     {
-      step: 3,
-      title: 'Implement Core Features',
-      description: 'Build the main navigation components and functionality',
+      step: 3;
+      title: 'Implement Core Features'
+      description: 'Build the main navigation components and functionality'
       duration: '1-2 weeks'
-    },
+    }
     {
-      step: 4,
-      title: 'Add Advanced Features',
-      description: 'Implement search, filters, and interactive elements',
+      step: 4;
+      title: 'Add Advanced Features'
+      description: 'Implement search, filters, and interactive elements'
       duration: '1-2 weeks'
-    },
+    }
     {
-      step: 5,
-      title: 'Testing & Optimization',
-      description: 'User testing, performance optimization, and accessibility checks',
+      step: 5;
+      title: 'Testing & Optimization'
+      description: 'User testing, performance optimization, and accessibility checks'
       duration: '3-5 days'
     }
   ];
 
   const codeExamples = {
-    search: `// Smart search component
+    search: `// Smart search component;
 const SmartSearch = () => {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
@@ -86,11 +86,11 @@ const SmartSearch = () => {
   const handleSearch = async (searchTerm) => {
     const searchResults = await searchAPI(searchTerm);
     setResults(searchResults);
-  };
+  }
   
   return (
     <div className="search-container">
-      <input
+      <input;
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
@@ -106,9 +106,8 @@ const SmartSearch = () => {
       )}
     </div>
   );
-};`,
-    
-    breadcrumbs: `// Breadcrumb navigation
+}`
+    breadcrumbs: `// Breadcrumb navigation;
 const Breadcrumbs = ({ path }) => {
   const breadcrumbItems = path.split('/').filter(Boolean);
   
@@ -130,9 +129,8 @@ const Breadcrumbs = ({ path }) => {
       </ol>
     </nav>
   );
-};`,
-    
-    megaMenu: `// Mega menu component
+}`
+    megaMenu: `// Mega menu component;
 const MegaMenu = ({ isOpen, onClose }) => {
   return (
     <div className={\`mega-menu \${isOpen ? 'open' : ''}\`}>
@@ -156,8 +154,8 @@ const MegaMenu = ({ isOpen, onClose }) => {
       </div>
     </div>
   );
-};`
-  };
+}`
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
@@ -171,10 +169,10 @@ const MegaMenu = ({ isOpen, onClose }) => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Enhanced Navigation
+              Enhanced Navigation;
             </h1>
             <p className="text-xl text-gray-600">
-              Transform your website's navigation into an intuitive, user-friendly experience
+              Transform your website's navigation into an intuitive, user-friendly experience;
             </p>
           </div>
 
@@ -182,11 +180,11 @@ const MegaMenu = ({ isOpen, onClose }) => {
           <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
             <div className="flex flex-wrap gap-2 mb-6">
               {['overview', 'features', 'implementation', 'code', 'benefits'].map((tab) => (
-                <button
+                <button;
                   key={tab}
                   onClick={() => setActiveSection(tab)}
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                    activeSection === tab
+                    activeSection === tab;
                       ? 'bg-blue-600 text-white'
                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                   }`}
@@ -210,7 +208,7 @@ const MegaMenu = ({ isOpen, onClose }) => {
                   <div className="bg-green-50 p-6 rounded-lg">
                     <h3 className="text-lg font-semibold text-green-800 mb-3">The Solution</h3>
                     <p className="text-green-700">
-                      Enhanced navigation combines intelligent search, clear visual hierarchy, and 
+                      Enhanced navigation combines intelligent search, clear visual hierarchy, and;
                       intuitive user flows to create seamless browsing experiences.
                     </p>
                   </div>
@@ -353,10 +351,10 @@ const MegaMenu = ({ isOpen, onClose }) => {
                   </p>
                   <div className="flex flex-wrap justify-center gap-4">
                     <Link href="/contact" className="bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium">
-                      Get Started
+                      Get Started;
                     </Link>
                     <Link href="/services" className="border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium">
-                      View Services
+                      View Services;
                     </Link>
                   </div>
                 </div>
@@ -367,6 +365,6 @@ const MegaMenu = ({ isOpen, onClose }) => {
       </div>
     </div>
   );
-};
+}
 
 export default EnhancedNavigation;

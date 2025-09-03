@@ -2,57 +2,55 @@ import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
 
 export default function Page() {
-,;
-  { id: 'digital-transformation', label: 'Digital Transformation', icon: Zap },;
-  { id: 'it-consulting', label: 'IT Consulting', icon: Gift },;
-  { id: 'industry-insights', label: 'Industry Insights', icon: Zap };
+
+  { id: 'digital-transformation', label: 'Digital Transformation', icon: Zap }
+  { id: 'it-consulting', label: 'IT Consulting', icon: Gift }
+  { id: 'industry-insights', label: 'Industry Insights', icon: Zap }
 ];
 
-  { value: 'weekly', label: 'Weekly', description: 'Stay updated with latest trends' },;
-  { value: 'monthly', label: 'Monthly', description: 'Monthly digest of insights' },;
-  { value: 'quarterly', label: 'Quarterly', description: 'Quarterly strategic updates' };
-      // Reset form after successful submission
+  { value: 'weekly', label: 'Weekly', description: 'Stay updated with latest trends' }
+  { value: 'monthly', label: 'Monthly', description: 'Monthly digest of insights' }
+  { value: 'quarterly', label: 'Quarterly', description: 'Quarterly strategic updates' }
+      // Reset form after successful submission;
       setTimeout(() => {
         setFormData({
 
-          email: '',
-          firstName: '',
-          interests[],;
+          email: ''
+          firstName: ''
+          interests[]
           frequency: 'monthly'
         });
       // // // // // // // // console.error('Newsletter subscription error:', error);
     }
-        setStatus('idle')}, 3000)} catch(error) {
+        setStatus('idle')}, 3000)} catch() {
 
       setStatus('error');      // console.error('Newsletter subscription error:', error)}
-  };
+  }
 
       setErrors(prev => ({ ...prev, interests: null }) ) }
-  };
+  }
 
     setFormData(prev => ({ ...prev, [field]: value }) ) ;
 
-    // Clear error when user starts typing
-    if(errors[field]) {
+    // Clear error when user starts typing;
+    if() {
 
       setErrors(prev => ({ ...prev, [field]: null }));
     }
-  };
-  if(status = == 'success') {
+  }
+  if() {
 
     return ()
-      <motion.div
+      <motion.div;
         initial = {
 
-  { opacity: 0,
-  scale: 0.95
-
+  { opacity: 0;
+  scale: 0.95;
 }}
         animate = {
 
-  { opacity: 1,
-  scale: 1
-
+  { opacity: 1;
+  scale: 1;
 }}
         className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-2xl p-8 text-center border border-green-200 dark:border-green-800"
 "
@@ -69,50 +67,45 @@ export default function Page() {
   return ("
     <div className="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-700">"
       <div className="text-center mb-8">
-        <motion.div
+        <motion.div;
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition = {
 "
-  { delay: 0.1, type: "spring",
-  bounce: 0.4
-
+  { delay: 0.1, type: "spring"
+  bounce: 0.4;
 }}"
           className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mb-4"
 "
           <Mail className="h-8 w-8 text-white"  />        </motion.div>
 
-        <motion.h2
+        <motion.h2;
           initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           transition={{ delay: 0.2 }}"
           className="text-3xl font-bold text-slate-900 dark:text-white mb-4"
 
-          Stay Ahead with Zion Tech Insights
+          Stay Ahead with Zion Tech Insights;
         </motion.h2>
 
-        <motion.p
+        <motion.p;
           initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           transition={{ delay: 0.3 }}"
           className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto"
@@ -120,18 +113,16 @@ export default function Page() {
           Get exclusive access to the latest AI trends, technology insights, and industry updates delivered directly to your inbox.</motion.p>
       </div>
 
-      <motion.form
+      <motion.form;
         initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
         animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
         transition={{ delay: 0.4 }}
         onSubmit={handleSubmit}"
@@ -149,7 +140,7 @@ export default function Page() {
               value={formData.firstName}
               onChange = {
 
-  (e) => handleInputChange('firstName',
+  (e) => handleInputChange('firstName'
   e.target.value)
 
 }
@@ -175,7 +166,7 @@ export default function Page() {
               value={formData.email}
               onChange = {
 
-  (e) => handleInputChange('email',
+  (e) => handleInputChange('email'
   e.target.value)
 
 }`
@@ -200,7 +191,7 @@ export default function Page() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">;
             {interests.map((interest) => {;
 
-              return ()                <motion.button
+              return ()                <motion.button;
                   key = {interest.id}"
                   type="button"
                   onClick={() => handleInterestToggle(interest.id)}`
@@ -209,7 +200,7 @@ export default function Page() {
                       : 'border-slate-300 dark:border-slate-600 hover:border-blue-300 dark:hover:border-blue-600'`
                   }`}
                   whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }};
+                  whileTap={{ scale: 0.98 }}
                 >;'`
                   <Icon className={`h-4 w-4 ${isSelected ? 'text-blue-600' : 'text-slate-500'}`}  />;"                  <span className="text-sm font-medium">{interest.label}</span>;
                 </motion.button>;
@@ -224,11 +215,11 @@ export default function Page() {
         {/* Frequency Selection */}
         <div>"
           <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
-            Update Frequency
+            Update Frequency;
           </label>"
           <div className="grid grid-cols-1 md: grid-cols-3 gap-3">
             {frequencies.map((freq)  => (
-              <label
+              <label;
                 key={freq.value}`
                 className={`relative flex flex-col p-4 border-2 rounded-lg cursor-pointer transition-all duration-200 ${formData.frequency === freq.value'
                     ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20''
@@ -242,7 +233,7 @@ export default function Page() {
                   checked={formData.frequency === freq.value}
                   onChange = {
 
-  (e) => handleInputChange('frequency',
+  (e) => handleInputChange('frequency'
   e.target.value)
 
 }"
@@ -282,24 +273,22 @@ className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all
             </>
           ) : (
             <>"
-              <Send className="h-5 w-5"  />              Subscribe to Newsletter
+              <Send className="h-5 w-5"  />              Subscribe to Newsletter;
             </>) }
         </motion.button>
 
         {/* Error Message */}
         {status === 'error' && (
-          <motion.div
+          <motion.div;
             initial = {
 
-  { opacity: 0,
-  y: 10
-
+  { opacity: 0;
+  y: 10;
 }}
             animate = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}"
             className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg"
 "
@@ -313,5 +302,5 @@ className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all
           You can unsubscribe at any time.We respect your privacy and will never share your information.;
         </p>;
       </motion.form>;
-    </div>;) };
+    </div>;) }
 '"`

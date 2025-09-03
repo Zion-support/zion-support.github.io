@@ -12,10 +12,10 @@ const Revolutionary2025ServicesShowcase = () => {
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-8">
-              Revolutionary2025 Services Showcase
+              Revolutionary2025 Services Showcase;
             </h1>
             <p className="text-xl text-gray-600 mb-12">
-              Professional Revolutionary2025 Services Showcase services and solutions
+              Professional Revolutionary2025 Services Showcase services and solutions;
             </p>
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="bg-white p-6 rounded-lg shadow-md">
@@ -38,13 +38,13 @@ const Revolutionary2025ServicesShowcase = () => {
               </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                View Pricing
+                View Pricing;
               </Link>
               <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
-                Contact Us
+                Contact Us;
               </Link>
             </div>
     </>
   );
 }
-export default Revolutionary2025ServicesShowcase
+export default Revolutionary2025ServicesShowcase;

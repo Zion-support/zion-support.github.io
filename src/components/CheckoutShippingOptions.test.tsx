@@ -1,7 +1,7 @@
   it(displays expected content", () => {
     render(<CheckoutShippingOptions  />)"
-import { render, screen } from &apos;@testing - library/react",
-import CheckoutShippingOptions from &apos;./CheckoutShippingOptions
+import { render, screen } from &apos;@testing - library/react"
+import CheckoutShippingOptions from &apos;./CheckoutShippingOptions;
 describe(&apos;CheckoutShippingOptions&apos, () => {
   it(&apos;renders without crashing&apos, () => {
     render()
@@ -11,7 +11,7 @@ describe(&apos;CheckoutShippingOptions&apos, () => {
   it(&apos;displays expected content&apos, () => {
     render()
 }
-    // comment
+    // comment;
     render(<CheckoutShippingOptions / >)"
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
 })"

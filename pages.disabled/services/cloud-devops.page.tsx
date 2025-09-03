@@ -7,147 +7,147 @@ import { Cloud, Server, Zap, CheckCircle, ArrowRight, Phone, Mail, Users, Globe,
 
 const CloudDevOps = () => {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Cloud & DevOps Services - Zion Tech Group",
-    "url": "https://ziontechgroup.com/services/cloud-devops",
-    "description": "Comprehensive cloud migration, DevOps automation, and infrastructure management services",
+    "@context": "https://schema.org"
+    "@type": "WebPage"
+    "name": "Cloud & DevOps Services - Zion Tech Group"
+    "url": "https://ziontechgroup.com/services/cloud-devops"
+    "description": "Comprehensive cloud migration, DevOps automation, and infrastructure management services"
     "publisher": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
+      "@type": "Organization"
+      "name": "Zion Tech Group"
       "url": "https://ziontechgroup.com"
     }
-  };
+  }
 
   const services = [
     {
-      title: 'Cloud Migration',
-      description: 'Seamless migration to cloud platforms with zero downtime',
-      icon: Cloud,
+      title: 'Cloud Migration'
+      description: 'Seamless migration to cloud platforms with zero downtime'
+      icon: Cloud;
       features: [
-        'AWS, Azure, GCP Migration',
-        'Zero Downtime Migration',
-        'Data Migration Services',
-        'Application Modernization',
+        'AWS, Azure, GCP Migration'
+        'Zero Downtime Migration'
+        'Data Migration Services'
+        'Application Modernization'
         'Cost Optimization'
-      ],
+      ]
       pricing: 'Starting at $15,000/project'
-    },
+    }
     {
-      title: 'DevOps Automation',
-      description: 'Automate your development and deployment processes',
-      icon: Zap,
+      title: 'DevOps Automation'
+      description: 'Automate your development and deployment processes'
+      icon: Zap;
       features: [
-        'CI/CD Pipeline Setup',
-        'Infrastructure as Code',
-        'Automated Testing',
-        'Deployment Automation',
+        'CI/CD Pipeline Setup'
+        'Infrastructure as Code'
+        'Automated Testing'
+        'Deployment Automation'
         'Monitoring & Alerting'
-      ],
+      ]
       pricing: 'Starting at $8,000/month'
-    },
+    }
     {
-      title: 'Container Orchestration',
-      description: 'Kubernetes and Docker container management',
-      icon: Server,
+      title: 'Container Orchestration'
+      description: 'Kubernetes and Docker container management'
+      icon: Server;
       features: [
-        'Kubernetes Setup & Management',
-        'Docker Containerization',
-        'Microservices Architecture',
-        'Service Mesh Implementation',
+        'Kubernetes Setup & Management'
+        'Docker Containerization'
+        'Microservices Architecture'
+        'Service Mesh Implementation'
         'Auto-scaling Configuration'
-      ],
+      ]
       pricing: 'Starting at $12,000/project'
-    },
+    }
     {
-      title: 'Infrastructure Management',
-      description: 'Complete infrastructure monitoring and management',
-      icon: Monitor,
+      title: 'Infrastructure Management'
+      description: 'Complete infrastructure monitoring and management'
+      icon: Monitor;
       features: [
-        '24/7 Infrastructure Monitoring',
-        'Performance Optimization',
-        'Capacity Planning',
-        'Disaster Recovery',
+        '24/7 Infrastructure Monitoring'
+        'Performance Optimization'
+        'Capacity Planning'
+        'Disaster Recovery'
         'Backup & Restore'
-      ],
+      ]
       pricing: 'Starting at $5,000/month'
-    },
+    }
     {
-      title: 'Security & Compliance',
-      description: 'Secure cloud infrastructure and compliance management',
-      icon: Shield,
+      title: 'Security & Compliance'
+      description: 'Secure cloud infrastructure and compliance management'
+      icon: Shield;
       features: [
-        'Cloud Security Assessment',
-        'Identity & Access Management',
-        'Compliance Automation',
-        'Security Monitoring',
+        'Cloud Security Assessment'
+        'Identity & Access Management'
+        'Compliance Automation'
+        'Security Monitoring'
         'Vulnerability Management'
-      ],
+      ]
       pricing: 'Starting at $7,500/month'
-    },
+    }
     {
-      title: 'Monitoring & Analytics',
-      description: 'Advanced monitoring and analytics solutions',
-      icon: BarChart3,
+      title: 'Monitoring & Analytics'
+      description: 'Advanced monitoring and analytics solutions'
+      icon: BarChart3;
       features: [
-        'Application Performance Monitoring',
-        'Log Management & Analysis',
-        'Real-time Dashboards',
-        'Predictive Analytics',
+        'Application Performance Monitoring'
+        'Log Management & Analysis'
+        'Real-time Dashboards'
+        'Predictive Analytics'
         'Cost Monitoring'
-      ],
+      ]
       pricing: 'Starting at $3,000/month'
     }
   ];
 
   const technologies = [
-    { name: 'AWS', icon: Cloud },
-    { name: 'Azure', icon: Cloud },
-    { name: 'Google Cloud', icon: Cloud },
-    { name: 'Kubernetes', icon: Server },
-    { name: 'Docker', icon: Server },
-    { name: 'Terraform', icon: Code },
-    { name: 'Ansible', icon: Settings },
-    { name: 'Jenkins', icon: GitBranch },
-    { name: 'GitLab CI', icon: GitBranch },
-    { name: 'Prometheus', icon: Monitor },
-    { name: 'Grafana', icon: BarChart3 },
+    { name: 'AWS', icon: Cloud }
+    { name: 'Azure', icon: Cloud }
+    { name: 'Google Cloud', icon: Cloud }
+    { name: 'Kubernetes', icon: Server }
+    { name: 'Docker', icon: Server }
+    { name: 'Terraform', icon: Code }
+    { name: 'Ansible', icon: Settings }
+    { name: 'Jenkins', icon: GitBranch }
+    { name: 'GitLab CI', icon: GitBranch }
+    { name: 'Prometheus', icon: Monitor }
+    { name: 'Grafana', icon: BarChart3 }
     { name: 'ELK Stack', icon: Database }
   ];
 
   const stats = [
-    { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '50%', label: 'Cost Reduction' },
-    { number: '10x', label: 'Faster Deployments' },
+    { number: '99.9%', label: 'Uptime Guarantee' }
+    { number: '50%', label: 'Cost Reduction' }
+    { number: '10x', label: 'Faster Deployments' }
     { number: '24/7', label: 'Monitoring' }
   ];
 
   const process = [
     {
-      step: 'Assessment',
-      title: 'Infrastructure Assessment',
+      step: 'Assessment'
+      title: 'Infrastructure Assessment'
       description: 'Analyze current infrastructure and identify optimization opportunities'
-    },
+    }
     {
-      step: 'Strategy',
-      title: 'Migration Strategy',
+      step: 'Strategy'
+      title: 'Migration Strategy'
       description: 'Develop comprehensive migration and automation strategy'
-    },
+    }
     {
-      step: 'Implementation',
-      title: 'Implementation',
+      step: 'Implementation'
+      title: 'Implementation'
       description: 'Execute migration and set up DevOps pipelines'
-    },
+    }
     {
-      step: 'Optimization',
-      title: 'Optimization',
+      step: 'Optimization'
+      title: 'Optimization'
       description: 'Continuous optimization and performance tuning'
     }
   ];
 
   return (
     <>
-      <SEOHead 
+      <SEOHead;
         title="Cloud & DevOps Services - Zion Tech Group"
         description="Comprehensive cloud migration, DevOps automation, and infrastructure management services. Scale your infrastructure with expert guidance."
         keywords="cloud migration, DevOps, infrastructure management, Kubernetes, Docker, AWS, Azure, GCP, CI/CD, automation"
@@ -171,15 +171,15 @@ const CloudDevOps = () => {
               <div className="flex items-center justify-center space-x-4 text-sm text-gray-400">
                 <div className="flex items-center">
                   <Cloud className="w-4 h-4 text-cyan-400 mr-2" />
-                  Multi-Cloud Solutions
+                  Multi-Cloud Solutions;
                 </div>
                 <div className="flex items-center">
                   <Zap className="w-4 h-4 text-cyan-400 mr-2" />
-                  DevOps Automation
+                  DevOps Automation;
                 </div>
                 <div className="flex items-center">
                   <Server className="w-4 h-4 text-cyan-400 mr-2" />
-                  Container Orchestration
+                  Container Orchestration;
                 </div>
               </div>
             </div>
@@ -206,7 +206,7 @@ const CloudDevOps = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Our Cloud & DevOps Services</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Comprehensive solutions to modernize your infrastructure and accelerate development
+                Comprehensive solutions to modernize your infrastructure and accelerate development;
               </p>
             </div>
 
@@ -231,11 +231,11 @@ const CloudDevOps = () => {
                   
                   <div className="text-cyan-400 font-semibold mb-4">{service.pricing}</div>
                   
-                  <Link
+                  <Link;
                     href="/contact"
                     className="w-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 flex items-center justify-center"
                   >
-                    Get Started
+                    Get Started;
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </div>
@@ -250,7 +250,7 @@ const CloudDevOps = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Technologies We Work With</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                We work with the latest cloud and DevOps technologies to deliver cutting-edge solutions
+                We work with the latest cloud and DevOps technologies to deliver cutting-edge solutions;
               </p>
             </div>
 
@@ -273,7 +273,7 @@ const CloudDevOps = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Our Process</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                A systematic approach to cloud migration and DevOps implementation
+                A systematic approach to cloud migration and DevOps implementation;
               </p>
             </div>
 
@@ -305,7 +305,7 @@ const CloudDevOps = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Faster Time to Market</h3>
                 <p className="text-gray-300">
-                  Accelerate your development cycles with automated CI/CD pipelines and cloud-native solutions
+                  Accelerate your development cycles with automated CI/CD pipelines and cloud-native solutions;
                 </p>
               </div>
 
@@ -315,7 +315,7 @@ const CloudDevOps = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Cost Optimization</h3>
                 <p className="text-gray-300">
-                  Reduce infrastructure costs by up to 50% with optimized cloud resources and automation
+                  Reduce infrastructure costs by up to 50% with optimized cloud resources and automation;
                 </p>
               </div>
 
@@ -325,7 +325,7 @@ const CloudDevOps = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Enhanced Security</h3>
                 <p className="text-gray-300">
-                  Implement security best practices and compliance standards from day one
+                  Implement security best practices and compliance standards from day one;
                 </p>
               </div>
             </div>
@@ -337,20 +337,20 @@ const CloudDevOps = () => {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Scale Your Infrastructure?</h2>
             <p className="text-xl mb-8 text-cyan-100">
-              Let us help you modernize your infrastructure and accelerate your development process
+              Let us help you modernize your infrastructure and accelerate your development process;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 href="/contact"
                 className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Get Free Assessment
+                Get Free Assessment;
               </Link>
-              <Link
+              <Link;
                 href="/contact"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
               >
-                Contact DevOps Expert
+                Contact DevOps Expert;
               </Link>
             </div>
           </div>
@@ -360,6 +360,6 @@ const CloudDevOps = () => {
       <Footer />
     </>
   );
-};
+}
 
 export default CloudDevOps;

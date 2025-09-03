@@ -6,51 +6,51 @@ import Link from 'next/link';
 const DocsPage: NextPage = () => {
   const docCategories = [
     {
-      title: 'Getting Started',
-      description: 'Quick start guides and setup instructions',
-      icon: <BookOpen className="w-6 h-6" />,
+      title: 'Getting Started'
+      description: 'Quick start guides and setup instructions'
+      icon: <BookOpen className="w-6 h-6" />
       docs: [
-        { title: 'Installation Guide', description: 'Step-by-step installation instructions', type: 'Guide' },
-        { title: 'Quick Start Tutorial', description: 'Get up and running in 5 minutes', type: 'Tutorial' },
+        { title: 'Installation Guide', description: 'Step-by-step installation instructions', type: 'Guide' }
+        { title: 'Quick Start Tutorial', description: 'Get up and running in 5 minutes', type: 'Tutorial' }
         { title: 'Configuration', description: 'Basic configuration options', type: 'Reference' }
       ]
-    },
+    }
     {
-      title: 'API Reference',
-      description: 'Complete API documentation and examples',
-      icon: <Code className="w-6 h-6" />,
+      title: 'API Reference'
+      description: 'Complete API documentation and examples'
+      icon: <Code className="w-6 h-6" />
       docs: [
-        { title: 'REST API', description: 'Complete REST API documentation', type: 'API' },
-        { title: 'GraphQL API', description: 'GraphQL schema and queries', type: 'API' },
+        { title: 'REST API', description: 'Complete REST API documentation', type: 'API' }
+        { title: 'GraphQL API', description: 'GraphQL schema and queries', type: 'API' }
         { title: 'Webhooks', description: 'Webhook configuration and events', type: 'Reference' }
       ]
-    },
+    }
     {
-      title: 'SDKs & Libraries',
-      description: 'Client libraries and SDKs for various languages',
-      icon: <FileText className="w-6 h-6" />,
+      title: 'SDKs & Libraries'
+      description: 'Client libraries and SDKs for various languages'
+      icon: <FileText className="w-6 h-6" />
       docs: [
-        { title: 'JavaScript SDK', description: 'Node.js and browser SDK', type: 'SDK' },
-        { title: 'Python SDK', description: 'Python client library', type: 'SDK' },
+        { title: 'JavaScript SDK', description: 'Node.js and browser SDK', type: 'SDK' }
+        { title: 'Python SDK', description: 'Python client library', type: 'SDK' }
         { title: 'React Components', description: 'Ready-to-use React components', type: 'Library' }
       ]
-    },
+    }
     {
-      title: 'Guides & Tutorials',
-      description: 'In-depth guides and best practices',
-      icon: <BookOpen className="w-6 h-6" />,
+      title: 'Guides & Tutorials'
+      description: 'In-depth guides and best practices'
+      icon: <BookOpen className="w-6 h-6" />
       docs: [
-        { title: 'Authentication', description: 'User authentication and authorization', type: 'Guide' },
-        { title: 'Data Management', description: 'Working with data and databases', type: 'Tutorial' },
+        { title: 'Authentication', description: 'User authentication and authorization', type: 'Guide' }
+        { title: 'Data Management', description: 'Working with data and databases', type: 'Tutorial' }
         { title: 'Deployment', description: 'Deployment strategies and best practices', type: 'Guide' }
       ]
     }
   ];
 
   const popularDocs = [
-    { title: 'API Authentication', views: '12.5k', updated: '2 days ago' },
-    { title: 'Getting Started Guide', views: '8.9k', updated: '1 week ago' },
-    { title: 'Error Handling', views: '6.7k', updated: '3 days ago' },
+    { title: 'API Authentication', views: '12.5k', updated: '2 days ago' }
+    { title: 'Getting Started Guide', views: '8.9k', updated: '1 week ago' }
+    { title: 'Error Handling', views: '6.7k', updated: '3 days ago' }
     { title: 'Rate Limiting', views: '5.2k', updated: '1 week ago' }
   ];
 
@@ -63,14 +63,14 @@ const DocsPage: NextPage = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Documentation</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            Comprehensive guides, API references, and resources to help you build with our platform
+            Comprehensive guides, API references, and resources to help you build with our platform;
           </p>
           
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto">
             <div className="relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
+              <input;
                 type="text"
                 placeholder="Search documentation..."
                 className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
@@ -86,7 +86,7 @@ const DocsPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Popular Documentation</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Most viewed and recently updated documentation
+              Most viewed and recently updated documentation;
             </p>
           </div>
           
@@ -98,11 +98,11 @@ const DocsPage: NextPage = () => {
                   <span>{doc.views} views</span>
                   <span>{doc.updated}</span>
                 </div>
-                <Link 
+                <Link;
                   href={`/docs/${doc.title.toLowerCase().replace(/\s+/g, '-')}`}
                   className="inline-flex items-center text-zion-cyan font-medium hover:text-zion-cyan/80 transition-colors"
                 >
-                  Read More
+                  Read More;
                   <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
@@ -117,7 +117,7 @@ const DocsPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Browse by Category</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Find the documentation you need organized by topic
+              Find the documentation you need organized by topic;
             </p>
           </div>
           
@@ -145,7 +145,7 @@ const DocsPage: NextPage = () => {
                         <span className="bg-zion-cyan/10 text-zion-cyan px-2 py-1 rounded text-xs font-medium">
                           {doc.type}
                         </span>
-                        <Link 
+                        <Link;
                           href={`/docs/${doc.title.toLowerCase().replace(/\s+/g, '-')}`}
                           className="text-zion-cyan hover:text-zion-cyan/80 transition-colors"
                         >
@@ -167,7 +167,7 @@ const DocsPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Additional Resources</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Tools and resources to help you succeed
+              Tools and resources to help you succeed;
             </p>
           </div>
           
@@ -177,7 +177,7 @@ const DocsPage: NextPage = () => {
               <h3 className="text-xl font-semibold mb-3">Download SDKs</h3>
               <p className="text-gray-600 mb-4">Get the latest SDKs and client libraries</p>
               <Link href="/downloads" className="text-zion-cyan font-medium hover:text-zion-cyan/80 transition-colors">
-                Browse Downloads
+                Browse Downloads;
               </Link>
             </div>
             
@@ -186,7 +186,7 @@ const DocsPage: NextPage = () => {
               <h3 className="text-xl font-semibold mb-3">Code Examples</h3>
               <p className="text-gray-600 mb-4">Real-world examples and code snippets</p>
               <Link href="/examples" className="text-zion-cyan font-medium hover:text-zion-cyan/80 transition-colors">
-                View Examples
+                View Examples;
               </Link>
             </div>
             
@@ -195,7 +195,7 @@ const DocsPage: NextPage = () => {
               <h3 className="text-xl font-semibold mb-3">API Changelog</h3>
               <p className="text-gray-600 mb-4">Track API changes and updates</p>
               <Link href="/changelog" className="text-zion-cyan font-medium hover:text-zion-cyan/80 transition-colors">
-                View Changelog
+                View Changelog;
               </Link>
             </div>
           </div>
@@ -211,17 +211,17 @@ const DocsPage: NextPage = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-white text-zion-cyan px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
-              Contact Support
+              Contact Support;
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link href="/help" className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              Help Center
+              Help Center;
             </Link>
           </div>
         </div>
       </section>
     </MainLayout>
   );
-};
+}
 
 export default DocsPage;

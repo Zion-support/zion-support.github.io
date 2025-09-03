@@ -2,29 +2,29 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
-  Shield, 
-  AlertTriangle, 
-  CheckCircle, 
-  XCircle, 
-  Eye, 
-  Lock, 
-  Key, 
-  Server,
-  Network,
-  Database,
-  Globe,
-  Smartphone,
-  Monitor,
-  Activity,
-  TrendingUp,
-  TrendingDown,
-  Clock,
-  Users,
-  Zap,
-  Target,
-  BarChart3,
-  Bug,
-  Mail,
+  Shield;
+  AlertTriangle;
+  CheckCircle;
+  XCircle;
+  Eye;
+  Lock;
+  Key;
+  Server;
+  Network;
+  Database;
+  Globe;
+  Smartphone;
+  Monitor;
+  Activity;
+  TrendingUp;
+  TrendingDown;
+  Clock;
+  Users;
+  Zap;
+  Target;
+  BarChart3;
+  Bug;
+  Mail;
   Code'
 } from 'lucide-react';
 
@@ -57,9 +57,7 @@ interface SecurityMetric {
 
 interface EnhancedSecurityDashboardProps {
 
-  // Add your props here
-
-
+  // Add your props here;
   title?: string;
   subtitle?: string;
   showThreats?: boolean;
@@ -68,46 +66,46 @@ interface EnhancedSecurityDashboardProps {
 const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
 
   title = "Enhanced Security Dashboard","
-  subtitle = "Real-time threat monitoring and security analytics for comprehensive protection",
-  showThreats = true,
+  subtitle = "Real-time threat monitoring and security analytics for comprehensive protection"
+  showThreats = true;
   autoRefresh = true;
 }) => {
 
   const [threats, setThreats] = useState<SecurityThreat[]>([
     {
 
-      id: '1',
-      type: 'ddos',
-      severity: 'high',
-      source: '192.168.1.100',
-      target: 'Web Server',
-      timestamp: '2024-01-15 14:30:00',
-      status: 'blocked',
-      description: 'Distributed Denial of Service attack detected',
+      id: '1'
+      type: 'ddos'
+      severity: 'high'
+      source: '192.168.1.100'
+      target: 'Web Server'
+      timestamp: '2024-01-15 14:30:00'
+      status: 'blocked'
+      description: 'Distributed Denial of Service attack detected'
       impact: 'High traffic volume from multiple sources'
-    },
+    }
     {
 
-      id: '2',
-      type: 'phishing',
-      severity: 'medium',
-      source: 'suspicious-email@domain.com',
-      target: 'User Accounts',
-      timestamp: '2024-01-15 13:45:00',
-      status: 'investigating',
-      description: 'Phishing attempt targeting user credentials',
+      id: '2'
+      type: 'phishing'
+      severity: 'medium'
+      source: 'suspicious-email@domain.com'
+      target: 'User Accounts'
+      timestamp: '2024-01-15 13:45:00'
+      status: 'investigating'
+      description: 'Phishing attempt targeting user credentials'
       impact: 'Potential credential compromise'
-    },
+    }
     {
 
-      id: '3',
-      type: 'brute-force',
-      severity: 'low',
-      source: '203.45.67.89',
-      target: 'SSH Service',
-      timestamp: '2024-01-15 12:20:00',
-      status: 'blocked',
-      description: 'Multiple failed login attempts detected',
+      id: '3'
+      type: 'brute-force'
+      severity: 'low'
+      source: '203.45.67.89'
+      target: 'SSH Service'
+      timestamp: '2024-01-15 12:20:00'
+      status: 'blocked'
+      description: 'Multiple failed login attempts detected'
       impact: 'Account lockout protection activated'
     }
   ]);
@@ -115,47 +113,47 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
   const [metrics, setMetrics] = useState<SecurityMetric[]>([
     {
 
-      id: 'threats-blocked',
-      name: 'Threats Blocked',
-      value: 127,
-      unit: '',
-      change: -15.2,
-      changeType: 'decrease',
-      status: 'secure',
-      icon: Shield
-    },
+      id: 'threats-blocked'
+      name: 'Threats Blocked'
+      value: 127;
+      unit: ''
+      change: -15.2;
+      changeType: 'decrease'
+      status: 'secure'
+      icon: Shield;
+    }
     {
 
-      id: 'response-time',
-      name: 'Response Time',
-      value: 45,
-      unit: 'ms',
-      change: -8.5,
-      changeType: 'decrease',
-      status: 'secure',
-      icon: Zap
-    },
+      id: 'response-time'
+      name: 'Response Time'
+      value: 45;
+      unit: 'ms'
+      change: -8.5;
+      changeType: 'decrease'
+      status: 'secure'
+      icon: Zap;
+    }
     {
 
-      id: 'vulnerabilities',
-      name: 'Vulnerabilities',
-      value: 3,
-      unit: '',
-      change: -25.0,
-      changeType: 'decrease',
-      status: 'warning',
-      icon: AlertTriangle
-    },
+      id: 'vulnerabilities'
+      name: 'Vulnerabilities'
+      value: 3;
+      unit: ''
+      change: -25.0;
+      changeType: 'decrease'
+      status: 'warning'
+      icon: AlertTriangle;
+    }
     {
 
-      id: 'security-score',
-      name: 'Security Score',
-      value: 94,
-      unit: '/100',
-      change: 2.1,
-      changeType: 'increase',
-      status: 'secure',
-      icon: CheckCircle
+      id: 'security-score'
+      name: 'Security Score'
+      value: 94;
+      unit: '/100'
+      change: 2.1;
+      changeType: 'increase'
+      status: 'secure'
+      icon: CheckCircle;
     }
   ]);
 
@@ -168,7 +166,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
 
     const interval = setInterval(: unknown {
 
-      // Simulate new threats
+      // Simulate new threats;
       if (Math.random() > 0.7) {
 
         const threatTypes = ['malware',phishing',ddos',brute-force'] as const;
@@ -177,16 +175,16 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
         
         const newThreat: SecurityThreat = {
 
-          id: Date.now().toString(),
-          type: threatTypes[Math.floor(Math.random() * threatTypes.length)] || 'malware',
-          severity: severityLevels[Math.floor(Math.random() * severityLevels.length)] || 'medium',
-          source: `${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}`,
-          target: targetSystems[Math.floor(Math.random() * targetSystems.length)] || 'Web Server',
-          timestamp: new Date().toISOString().replace('T',).substring(0, 19),
-          status: 'active',
-          description: 'New security threat detected',
+          id: Date.now().toString()
+          type: threatTypes[Math.floor(Math.random() * threatTypes.length)] || 'malware'
+          severity: severityLevels[Math.floor(Math.random() * severityLevels.length)] || 'medium'
+          source: `${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}`
+          target: targetSystems[Math.floor(Math.random() * targetSystems.length)] || 'Web Server'
+          timestamp: new Date().toISOString().replace('T').substring(0, 19)
+          status: 'active'
+          description: 'New security threat detected'
           impact: 'Under investigation'
-        };
+        }
         setThreats(prev => [newThreat, ...prev.slice(0, 9)]);
       }
     }, 10000);
@@ -196,7 +194,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
 
   const getThreatTypeIcon = (type: string) => {
 
-    switch (type) {
+    switch() {
 
 '"
       case 'malware': return <Bug className="w-5 h-5" />;'"
@@ -207,11 +205,11 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
       case 'xss': return <Code className="w-5 h-5" />;"
       default: return <AlertTriangle className="w-5 h-5" />;
     }
-  };
+  }
 
   const getSeverityColor = (severity: string) => {
 
-    switch (severity) {
+    switch() {
 
       case 'critical': return 'text-red-600 bg-red-100 border-red-200';
       case 'high': return 'text-orange-600 bg-orange-100 border-orange-200';
@@ -219,11 +217,11 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
       case 'low': return 'text-blue-600 bg-blue-100 border-blue-200';
       default: return 'text-gray-600 bg-gray-100 border-gray-200';
     }
-  };
+  }
 
   const getStatusColor = (status: string) => {
 
-    switch (status) {
+    switch() {
 
       case 'active': return 'text-red-600 bg-red-100';
       case 'blocked': return 'text-green-600 bg-green-100';
@@ -231,46 +229,46 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
       case 'resolved': return 'text-blue-600 bg-blue-100';
       default: return 'text-gray-600 bg-gray-100';
     }
-  };
+  }
 
   const getMetricStatusColor = (status: string) => {
 
-    switch (status) {
+    switch() {
 
       case 'secure': return 'text-green-600 bg-green-100';
       case 'warning': return 'text-yellow-600 bg-yellow-100';
       case 'critical': return 'text-red-600 bg-red-100';
       default: return 'text-gray-600 bg-gray-100';
     }
-  };
+  }
 
   const containerVariants = {
 
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
 
-      opacity: 1,
+      opacity: 1;
       transition: {
 
-        staggerChildren: 0.1,
-        delayChildren: 0.2}}};
+        staggerChildren: 0.1;
+        delayChildren: 0.2}}}
 
   const itemVariants = {
 
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0 }
     visible: {
 
-      y: 0,
-      opacity: 1,
+      y: 0;
+      opacity: 1;
       transition: {
 
         duration: 0.5,"
-        ease: "easeOut"}}};
+        ease: "easeOut"}}}
 
   return ("
     <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">"
       <div className="container mx-auto px-4">
-        <motion.div
+        <motion.div;
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -286,7 +284,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
         </motion.div>
 
         {/* Security Metrics Overview */}
-        <motion.div
+        <motion.div;
           variants={containerVariants}"
           initial="hidden"
           whileInView="visible"
@@ -298,7 +296,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
             const IconComponent = metric.icon;
             
             return()
-              <motion.div
+              <motion.div;
                 key={metric.id}
                 variants={itemVariants}
                 whileHover={{ scale: 1.02, y: -5 }}"
@@ -346,7 +344,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
         </motion.div>
 
         {/* Time Range Selector */}
-        <motion.div
+        <motion.div;
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -355,7 +353,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
         >"
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-2 border border-gray-700/50">
             {(['1h',6h',24h',7d'] as const).map((range) => (
-              <button
+              <button;
                 key={range}
                 onClick={() => setTimeRange(range)}`
                 className={`px-6 py-3 rounded-xl font-medium transition-all duration-200 ${
@@ -373,7 +371,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
 
         {/* Security Threats */}
         {showThreats && 
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -391,8 +389,8 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
             </div>
 "
             <div className="space-y-4">
-              {threats.map((threat 
-                <motion.div
+              {threats.map((threat;
+                <motion.div;
                   key={threat.id}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -409,7 +407,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
                       <div className="flex-1">"
                         <div className="flex items-center gap-3 mb-2">"
                           <h4 className="text-lg font-semibold text-white capitalize">
-                            {threat.type.replace('-',)} Attack
+                            {threat.type.replace('-')} Attack;
                           </h4>`
                           <div className={`px-3 py-1 rounded-full text-xs font-medium border ${getSeverityColor(threat.severity)}`}>
                             {threat.severity}
@@ -446,7 +444,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
                   {/* Expanded Threat Details */}
                   <AnimatePresence>
                     {selectedThreat === threat.id && (
-                      <motion.div
+                      <motion.div;
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
@@ -459,15 +457,15 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
                             <ul className="space-y-2 text-sm text-gray-300">"
                               <li className="flex items-center gap-2">"
                                 <CheckCircle className="w-4 h-4 text-green-400" />
-                                Block source IP address
+                                Block source IP address;
                               </li>"
                               <li className="flex items-center gap-2">"
                                 <CheckCircle className="w-4 h-4 text-green-400" />
-                                Update firewall rules
+                                Update firewall rules;
                               </li>"
                               <li className="flex items-center gap-2">"
                                 <CheckCircle className="w-4 h-4 text-green-400" />
-                                Monitor for similar patterns
+                                Monitor for similar patterns;
                               </li>
                             </ul>
                           </div>
@@ -499,7 +497,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
         )}
 
         {/* Security Summary */}
-        <motion.div
+        <motion.div;
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
@@ -507,7 +505,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
           className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl border border-blue-500/30 p-8 text-center"
         >"
           <h3 className="text-2xl font-bold mb-6">
-            Security Status Overview
+            Security Status Overview;
           </h3>"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>"
@@ -533,6 +531,6 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
       </div>
     </section>
   );
-};
+}
 
 export default EnhancedSecurityDashboard;'"`

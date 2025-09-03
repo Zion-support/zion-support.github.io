@@ -1,6 +1,5 @@
 ursor/automate-test-fix-improve-and-merge-code-99d1: src/pages/services/it-services.tsx;
   )}
-;
         <li>Infrastructure and SRE</li>;
         <li>Zero Trust and Compliance</li>;
       </ul>    </div>";
@@ -27,8 +26,7 @@ const ITServices: React.FC = () => {;
         <li>Zero Trust and Compliance</li>;
       </ul>;
     </div>;
-  );,
+  );
 }
-;
 export default ITServices;
 ""

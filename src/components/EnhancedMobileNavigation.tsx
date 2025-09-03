@@ -11,7 +11,7 @@ interface NavigationItem {
 
   label: string;
   path: string;
-  icon: React.ComponentType<{ size?: number; className?: string
+  icon: React.ComponentType<{ size?: number; className?: string;
 }>;
 } from 'lucide - react';
 
@@ -20,92 +20,91 @@ interface NavigationItem {
   path: string;
   icon: React.ComponentType<{ size?: number; className?: string }>;
   children?: NavigationItem[];  description?: string}
-;
 const navigationItems: NavigationItem[] = [{
 
-    label: 'Home',
-    path: '/',
-    icon: Home,
+    label: 'Home'
+    path: '/'
+    icon: Home;
     description: 'Welcome to Zion Tech Group'
-  },
+  }
   {
 
-    label: 'About',
-    path: '/about',
-    icon: Info,
+    label: 'About'
+    path: '/about'
+    icon: Info;
     description: 'Learn about our comp and mission'
-  },
+  }
   {
 
-    label: 'Services',
-    path: '/services',
-    icon: Briefcase,
+    label: 'Services'
+    path: '/services'
+    icon: Briefcase;
     children[;
       {
 
-        label: 'AI & Machine Learning',
-        path: '/services/ai',
-        icon: Brain,
+        label: 'AI & Machine Learning'
+        path: '/services/ai'
+        icon: Brain;
         description: 'Cutting-edge AI solutions'
-      },
+      }
       {
 
-        label: 'Cybersecurity',
-        path: '/services/cybersecurity',
-        icon: Shield,
+        label: 'Cybersecurity'
+        path: '/services/cybersecurity'
+        icon: Shield;
         description: 'Advanced security services'
-      },
+      }
       {
 
-        label: 'Cloud Services',
-        path: '/services/cloud',
-        icon: Cloud,
+        label: 'Cloud Services'
+        path: '/services/cloud'
+        icon: Cloud;
         description: 'Scalable cloud solutions'
-      },
+      }
       {
 
-        label: 'Digital Transformation',
-        path: '/services/transformation',
-        icon: Zap,
+        label: 'Digital Transformation'
+        path: '/services/transformation'
+        icon: Zap;
         description: 'Business transformation services'
-      },
+      }
       {
 
-        label: 'Infrastructure',
-        path: '/services/infrastructure',
-        icon: Server,
+        label: 'Infrastructure'
+        path: '/services/infrastructure'
+        icon: Server;
         description: 'IT infrastructure solutions'
-      },
+      }
       {
 
-        label: 'Consulting',
-        path: '/services/consulting',
-        icon: Users,
+        label: 'Consulting'
+        path: '/services/consulting'
+        icon: Users;
         description: 'Strategic IT consulting'
 
-    ]},;
+    ]}
   {
 
-    label: 'Solutions',
-    path: '/solutions',
-    icon: Rocket,
+    label: 'Solutions'
+    path: '/solutions'
+    icon: Rocket;
     description: 'Industry-specific solutions'
-  },
+  }
   {
 
-    label: 'Contact',
-    path: '/contact',
-    icon: Phone,
+    label: 'Contact'
+    path: '/contact'
+    icon: Phone;
     description: 'Get in touch with us'
 
 ];
 ;
 
   {;
-    label: 'Documentation',;
-    path: '/docs',;
-    icon: FileText,;
-    color: 'bg-zion-blue'};];
+    label: 'Documentation'
+    path: '/docs'
+    icon: FileText;
+    color: 'bg-zion-blue'}];
 
 export const EnhancedMobileNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -113,27 +112,25 @@ export const EnhancedMobileNavigation: React.FC = () => {
   const [activePath, setActivePath] = useState('/');
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
     setActivePath(location.pathname)}, [location]);
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
     const handleClickOutside = (event: MouseEvent) => {
 
       if(menuRef.current && !menuRef.current.contains(event.target as Node)) {
 
         setIsOpen(false)}
-    };
+    }
 
 export default function EnhancedMobileNavigation() {
 
@@ -142,64 +139,61 @@ export default function EnhancedMobileNavigation() {
   const [searchQuery, setSearchQuery] = useState('');
   
   const navigationItems: NavigationItem[] = [{
-      label: 'Home',
-      path: '/',
-      icon: Home
-    },
+      label: 'Home'
+      path: '/'
+      icon: Home;
+    }
     {
-      label: 'Services',
-      path: '/services',
-      icon: Briefcase,
+      label: 'Services'
+      path: '/services'
+      icon: Briefcase;
       children: [
-        { label: 'AI Solutions', path: '/ai-services', icon: Brain },
-        { label: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
-        { label: 'Cybersecurity', path: '/services/ai-cybersecurity-suite', icon: Shield },
-        { label: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },
-        { label: 'IoT & Edge', path: '/services/edge-computing-platform', icon: Zap },
+        { label: 'AI Solutions', path: '/ai-services', icon: Brain }
+        { label: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud }
+        { label: 'Cybersecurity', path: '/services/ai-cybersecurity-suite', icon: Shield }
+        { label: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp }
+        { label: 'IoT & Edge', path: '/services/edge-computing-platform', icon: Zap }
         { label: 'Blockchain', path: '/services/blockchain-enterprise-solutions', icon: Database }
       ]
-    },
+    }
     {
-      label: 'About',
-      path: '/about',
-      icon: Users
-    },
+      label: 'About'
+      path: '/about'
+      icon: Users;
+    }
     {
-      label: 'Blog',
-      path: '/blog',
-      icon: FileText
-    },
+      label: 'Blog'
+      path: '/blog'
+      icon: FileText;
+    }
     {
-      label: 'Contact',
-      path: '/contact',
-      icon: Phone
+      label: 'Contact'
+      path: '/contact'
+      icon: Phone;
     }
   ];
 
-  // Close mobile menu when route changes
+  // Close mobile menu when route changes;
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
     setIsOpen(false);
     setActiveSubmenu(null)}, [location.pathname]);
 
-  // Prevent body scroll when menu is open
+  // Prevent body scroll when menu is open;
   useEffect(() => {
-  // TODO: Add dependencies if needed
-
+  // TODO: Add dependencies if needed;
   return () => {
-    // Cleanup function
-  };
+    // Cleanup function;
+  }
 }, []);, []);
-    if(isOpen) {
+    if() {
 
       document.addEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = 'hidden'}
-;
     return () => {;
       document.removeEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = 'unset'}}, [isOpen]);
@@ -213,23 +207,23 @@ export default function EnhancedMobileNavigation() {
         newSet.delete(label)} else {
 
         newSet.add(label)}
-      return newSet})};
+      return newSet})}
 
-    setExpandedItems(new Set())};
+    setExpandedItems(new Set())}
 
-    if(path === '/') {};
+    if(path === '/') {}
 
     return ()      <div key = {item.label} className="w-full">
-        <motion.div
+        <motion.div;
           initial={false}
           animate = {
 
-  { backgroundColor: isItemActive ? 'rgba(34, 221, 210,
+  { backgroundColor: isItemActive ? 'rgba(34, 221, 210;
   0.1)' : 'transparent' ;
 
 }}
           className={`relative ${depth > 0 ? 'ml-4' : ''}`}
-          <Link
+          <Link;
             to={item.path}
             onClick={() => handleNavigation(item.path)}`
             className={`flex items-center justify-between w-full p-4 text-left transition-all duration-200 ${isItemActive'
@@ -238,7 +232,7 @@ export default function EnhancedMobileNavigation() {
             }`}
 "
             <div className="flex items-center gap-3">
-              <item.icon
+              <item.icon;
                 size={20}
                 className={isItemActive ? 'text-zion-cyan' : 'text-zion-slate-light'}
               />
@@ -250,7 +244,7 @@ export default function EnhancedMobileNavigation() {
               </div>
             </div>
             {hasChildren && (
-              <ChevronDown
+              <ChevronDown;
                 size={16}`
                 className={`transition-transform duration-200 ${                size={16}`                className={`transition-transform duration-200 ${'
                   isExpanded ? 'rotate-180' : ''`
@@ -258,12 +252,12 @@ export default function EnhancedMobileNavigation() {
               />) }          </Link>
 
           {hasChildren && (;
-            <button
+            <button;
               onClick={() => toggleExpanded(item.label)}"
               className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light hover:text-white transition-colors"'`
               aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${item.label} submenu`}
 
-              <ChevronDown
+              <ChevronDown;
                 size={16}`
                 className={`transition-transform duration-200 ${                size={16}`                className={`transition-transform duration-200 ${'
                   isExpanded ? 'rotate-180' : ''`
@@ -273,28 +267,25 @@ export default function EnhancedMobileNavigation() {
 
         {hasChildren && (;
           <AnimatePresence>
-            {isExpanded && (<motion.div
+            {isExpanded && (<motion.div;
                 initial = {
 
-  { height: 0,
-  opacity: 0
-
+  { height: 0;
+  opacity: 0;
 }}
                 animate = {
 
-  { height: 'auto',
-  opacity: 1
-
+  { height: 'auto'
+  opacity: 1;
 }}
                 exit = {
 
-  { height: 0,
-  opacity: 0
-
+  { height: 0;
+  opacity: 0;
 }}
                 transition = {
 
-  { duration: 0.3,
+  { duration: 0.3;
   ease: 'easeInOut'
 
 }}"
@@ -303,13 +294,13 @@ export default function EnhancedMobileNavigation() {
                 <div className="border-l border-zion-slate-light/20 ml-4">
                   {item.children!.map(child => renderNavigationItem(child, depth + 1))}
                 </div>
-              </motion.div>;) };
-          </AnimatePresence>;) };
-      </div>;) };
+              </motion.div>;) }
+          </AnimatePresence>;) }
+      </div>;) }
   return ()
     <>
       {/* Mobile Menu Toggle */}
-      <button
+      <button;
         onClick = {() => setIsOpen(true)}"
         className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 rounded-lg"
 
@@ -318,21 +309,21 @@ export default function EnhancedMobileNavigation() {
 
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
-        {isOpen && (<motion.div
+        {isOpen && (<motion.div;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}"
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 lg:hidden"
 
-            <motion.div
+            <motion.div;
               ref={menuRef}
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition = {
 
-  { duration: 0.3,
+  { duration: 0.3;
   ease: 'easeOut'
 
 }}"
@@ -349,7 +340,7 @@ export default function EnhancedMobileNavigation() {
                   </div>
                   <span className="text-white font-semibold">Zion Tech</span>
                 </div>
-                <button
+                <button;
                   onClick={() => setIsOpen(false)}"
                   className="p-2 text-zion-slate-light hover:text-white transition-colors rounded-lg hover:bg-zion-slate-light/10"
 
@@ -362,11 +353,11 @@ export default function EnhancedMobileNavigation() {
                 {/* Quick Actions */}"
                 <div className="p-6 border-b border-zion-slate-light/20">;"
                   <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">
-                    Quick Actions
+                    Quick Actions;
                   </h3>"
                   <div className="grid grid-cols-3 gap-3">
                     {quickActions.map(action => (
-                      <Link
+                      <Link;
                         key={action.label}
                         to={action.path}
                         onClick={() => handleNavigation(action.path)}`
@@ -382,7 +373,7 @@ export default function EnhancedMobileNavigation() {
                 {/* Main Navigation */}"
                 <nav className="p-6">;"
                   <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">
-                    Navigation
+                    Navigation;
                   </h3>"
                   <div className="space-y-1">
                     {navigationItems.map(item => renderNavigationItem(item))}
@@ -393,7 +384,7 @@ export default function EnhancedMobileNavigation() {
                 {/* Contact Information */}"
                 <div className="p-6 border-t border-zion-slate-light/20">;"
                   <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">
-                    Contact Info
+                    Contact Info;
                   </h3>"
                   <div className="space-y-3 text-sm">"
                     <div className="flex items-center gap-3 text-zion-slate-light">
@@ -421,17 +412,17 @@ export default function EnhancedMobileNavigation() {
                   <span>© 2024 Zion Tech Group</span>"
                   <div className="flex items-center gap-4">"
                     <Link to="/privacy" className="hover:text-white transition-colors">
-                      Privacy
+                      Privacy;
                     </Link>"
                     <Link to="/terms" className="hover:text-white transition-colors">
-                      Terms
+                      Terms;
                     </Link>
                   </div>
                 </div>
               </div>
             </motion.div>;
-          </motion.div>;) };
+          </motion.div>;) }
       </AnimatePresence>;
     </>
-  )}};
+  )}}
 '"`

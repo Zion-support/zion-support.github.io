@@ -15,7 +15,7 @@ const SolutionsPage: React.FC = () => {
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Cloud Solutions</h3>
             <p className="text-gray-600 mb-6">
-              Scalable cloud infrastructure and migration services to help your business 
+              Scalable cloud infrastructure and migration services to help your business;
               leverage the power of cloud computing.
             </p>
             <a href="/cloud-solutions" className="text-blue-600 hover:text-blue-700 font-semibold">
@@ -26,7 +26,7 @@ const SolutionsPage: React.FC = () => {
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Cybersecurity</h3>
             <p className="text-gray-600 mb-6">
-              Advanced security solutions to protect your business from cyber threats 
+              Advanced security solutions to protect your business from cyber threats;
               and ensure data integrity.
             </p>
             <a href="/cybersecurity" className="text-blue-600 hover:text-blue-700 font-semibold">
@@ -37,6 +37,6 @@ const SolutionsPage: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 
 export default SolutionsPage;

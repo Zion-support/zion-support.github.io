@@ -2,96 +2,97 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  Dna, 
-  Microscope, 
-  Beaker, 
-  Brain, 
-  CheckCircle, 
-  Star, 
-  ArrowRight, 
-  Mail, 
-  Phone, 
-  MapPin,
-  TestTube,
-  Syringe,
-  Heart,
-  Leaf,
-  Shield,
-  Zap,
-  Target,
-  Users,
-  Clock,
-  Award,
-  Pill
+  Dna;
+  Microscope;
+  Beaker;
+  Brain;
+  CheckCircle;
+  Star;
+  ArrowRight;
+  Mail;
+  Phone;
+  MapPin;
+  TestTube;
+  Syringe;
+  Heart;
+  Leaf;
+  Shield;
+  Zap;
+  Target;
+  Users;
+  Clock;
+  Award;
+  Pill;
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 export default function AIBiotechnology() {
+
   const features = [
-    "AI-powered drug discovery and design",
-    "Genomic sequencing and analysis",
-    "Protein structure prediction",
-    "CRISPR gene editing optimization",
-    "Biomarker discovery and validation",
-    "Personalized medicine algorithms",
-    "Drug repurposing AI",
+    "AI-powered drug discovery and design"
+    "Genomic sequencing and analysis"
+    "Protein structure prediction"
+    "CRISPR gene editing optimization"
+    "Biomarker discovery and validation"
+    "Personalized medicine algorithms"
+    "Drug repurposing AI"
     "Clinical trial optimization"
   ];
 
   const benefits = [
-    "Accelerated drug development timeline",
-    "Improved drug efficacy and safety",
-    "Personalized treatment plans",
-    "Reduced clinical trial costs",
-    "Enhanced diagnostic accuracy",
-    "Faster regulatory approval process",
-    "Innovative therapeutic approaches",
+    "Accelerated drug development timeline"
+    "Improved drug efficacy and safety"
+    "Personalized treatment plans"
+    "Reduced clinical trial costs"
+    "Enhanced diagnostic accuracy"
+    "Faster regulatory approval process"
+    "Innovative therapeutic approaches"
     "Precision medicine capabilities"
   ];
 
   const pricingTiers = [
     {
-      name: "Bio Starter",
-      price: 3999,
-      period: "month",
-      description: "Basic biotechnology solutions for research institutions",
+      name: "Bio Starter"
+      price: 3999;
+      period: "month"
+      description: "Basic biotechnology solutions for research institutions"
       features: [
-        "AI drug discovery platform access",
-        "Basic genomic analysis tools",
-        "Email support",
-        "Standard API access",
+        "AI drug discovery platform access"
+        "Basic genomic analysis tools"
+        "Email support"
+        "Standard API access"
         "Basic analytics dashboard"
       ]
-    },
+    }
     {
-      name: "Bio Professional",
-      price: 9999,
-      period: "month",
-      description: "Advanced biotechnology solutions for pharmaceutical companies",
+      name: "Bio Professional"
+      price: 9999;
+      period: "month"
+      description: "Advanced biotechnology solutions for pharmaceutical companies"
       features: [
-        "Full AI drug discovery suite",
-        "Advanced genomic analysis",
-        "Priority support",
-        "Custom AI algorithms",
-        "Clinical trial optimization",
-        "Bio consulting hours",
+        "Full AI drug discovery suite"
+        "Advanced genomic analysis"
+        "Priority support"
+        "Custom AI algorithms"
+        "Clinical trial optimization"
+        "Bio consulting hours"
         "Performance optimization"
-      ],
-      popular: true
-    },
+      ]
+      popular: true;
+    }
     {
-      name: "Bio Enterprise",
-      price: 24999,
-      period: "month",
-      description: "Full-scale biotechnology infrastructure and research facilities",
+      name: "Bio Enterprise"
+      price: 24999;
+      period: "month"
+      description: "Full-scale biotechnology infrastructure and research facilities"
       features: [
-        "Dedicated bio research center",
-        "Custom bio AI solutions",
-        "24/7 dedicated support",
-        "White-label bio platform",
-        "Bio strategy consulting",
-        "SLA guarantees",
-        "Dedicated bio scientist",
+        "Dedicated bio research center"
+        "Custom bio AI solutions"
+        "24/7 dedicated support"
+        "White-label bio platform"
+        "Bio strategy consulting"
+        "SLA guarantees"
+        "Dedicated bio scientist"
         "Regulatory compliance support"
       ]
     }
@@ -99,76 +100,76 @@ export default function AIBiotechnology() {
 
   const useCases = [
     {
-      title: "Pharmaceutical Development",
-      description: "AI-powered drug discovery, optimization, and clinical trial management",
-      icon: Pill
-    },
+      title: "Pharmaceutical Development"
+      description: "AI-powered drug discovery, optimization, and clinical trial management"
+      icon: Pill;
+    }
     {
-      title: "Personalized Medicine",
-      description: "Genomic analysis and treatment customization based on individual genetic profiles",
-      icon: Heart
-    },
+      title: "Personalized Medicine"
+      description: "Genomic analysis and treatment customization based on individual genetic profiles"
+      icon: Heart;
+    }
     {
-      title: "Agricultural Biotechnology",
-      description: "Crop improvement, disease resistance, and sustainable farming solutions",
-      icon: Leaf
-    },
+      title: "Agricultural Biotechnology"
+      description: "Crop improvement, disease resistance, and sustainable farming solutions"
+      icon: Leaf;
+    }
     {
-      title: "Medical Diagnostics",
-      description: "AI-enhanced diagnostic tools and biomarker discovery for early disease detection",
-      icon: Microscope
+      title: "Medical Diagnostics"
+      description: "AI-enhanced diagnostic tools and biomarker discovery for early disease detection"
+      icon: Microscope;
     }
   ];
 
   const technologies = [
     {
-      name: "Machine Learning",
-      description: "Advanced AI algorithms for biological data analysis and prediction",
-      icon: Brain
-    },
+      name: "Machine Learning"
+      description: "Advanced AI algorithms for biological data analysis and prediction"
+      icon: Brain;
+    }
     {
-      name: "Computer Vision",
-      description: "AI-powered image analysis for cellular and molecular imaging",
-      icon: Microscope
-    },
+      name: "Computer Vision"
+      description: "AI-powered image analysis for cellular and molecular imaging"
+      icon: Microscope;
+    }
     {
-      name: "Natural Language Processing",
-      description: "AI-driven analysis of scientific literature and research papers",
-      icon: Beaker
-    },
+      name: "Natural Language Processing"
+      description: "AI-driven analysis of scientific literature and research papers"
+      icon: Beaker;
+    }
     {
-      name: "Predictive Analytics",
-      description: "Forecasting drug interactions and treatment outcomes",
-      icon: Target
+      name: "Predictive Analytics"
+      description: "Forecasting drug interactions and treatment outcomes"
+      icon: Target;
     }
   ];
 
   const industries = [
     {
-      name: "Pharmaceutical",
-      description: "Drug discovery, development, and clinical trials",
-      icon: Pill
-    },
+      name: "Pharmaceutical"
+      description: "Drug discovery, development, and clinical trials"
+      icon: Pill;
+    }
     {
-      name: "Healthcare",
-      description: "Personalized medicine and diagnostic tools",
-      icon: Heart
-    },
+      name: "Healthcare"
+      description: "Personalized medicine and diagnostic tools"
+      icon: Heart;
+    }
     {
-      name: "Agriculture",
-      description: "Crop improvement and sustainable farming",
-      icon: Leaf
-    },
+      name: "Agriculture"
+      description: "Crop improvement and sustainable farming"
+      icon: Leaf;
+    }
     {
-      name: "Research",
-      description: "Academic and industrial research institutions",
-      icon: Microscope
+      name: "Research"
+      description: "Academic and industrial research institutions"
+      icon: Microscope;
     }
   ];
 
   return (
     <>
-      <SEO 
+      <SEO;
         title="AI Biotechnology Services - Zion Tech Group"
         description="Revolutionary AI-powered biotechnology solutions. From drug discovery to personalized medicine, discover the future of biotechnology."
         canonical="/services/ai-biotechnology"
@@ -179,7 +180,7 @@ export default function AIBiotechnology() {
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 bg-[url('/images/bio-pattern.svg')] bg-center opacity-10"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-6">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -187,26 +188,26 @@ export default function AIBiotechnology() {
             >
               <div className="inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full text-green-300 text-sm font-medium mb-6">
                 <Dna className="w-4 h-4 mr-2" />
-                Biotechnology
+                Biotechnology;
               </div>
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-green-400 via-emerald-500 to-teal-400 bg-clip-text text-transparent">
-                AI Biotechnology
+                AI Biotechnology;
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Revolutionize healthcare and life sciences with our AI-powered biotechnology solutions. From drug discovery to personalized medicine, we're transforming the future of biology.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <Link;
                   to="/contact" 
                   className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105"
                 >
-                  Start Bio Research
+                  Start Bio Research;
                 </Link>
-                <Link 
+                <Link;
                   to="#pricing" 
                   className="px-8 py-4 border-2 border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300"
                 >
-                  View Pricing
+                  View Pricing;
                 </Link>
               </div>
             </motion.div>
@@ -216,14 +217,14 @@ export default function AIBiotechnology() {
         {/* Features Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Biotechnology Features
+                Biotechnology Features;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our AI biotechnology platform combines cutting-edge artificial intelligence with advanced biological research to accelerate discoveries and improve human health.
@@ -232,7 +233,7 @@ export default function AIBiotechnology() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <motion.div
+                <motion.div;
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -252,14 +253,14 @@ export default function AIBiotechnology() {
         {/* Benefits Section */}
         <section className="py-20 bg-black/20">
           <div className="max-w-7xl mx-auto px-6">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Biotechnology Benefits
+                Biotechnology Benefits;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Transform healthcare and life sciences with AI-powered intelligence and automation.
@@ -268,7 +269,7 @@ export default function AIBiotechnology() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {benefits.map((benefit, index) => (
-                <motion.div
+                <motion.div;
                   key={index}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -288,14 +289,14 @@ export default function AIBiotechnology() {
         {/* Technologies Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Core Technologies
+                Core Technologies;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Discover the cutting-edge technologies powering our biotechnology solutions.
@@ -304,7 +305,7 @@ export default function AIBiotechnology() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {technologies.map((tech, index) => (
-                <motion.div
+                <motion.div;
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -327,14 +328,14 @@ export default function AIBiotechnology() {
         {/* Industries Section */}
         <section className="py-20 bg-black/20">
           <div className="max-w-7xl mx-auto px-6">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Target Industries
+                Target Industries;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our biotechnology solutions serve diverse industries across healthcare and life sciences.
@@ -343,7 +344,7 @@ export default function AIBiotechnology() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {industries.map((industry, index) => (
-                <motion.div
+                <motion.div;
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -366,14 +367,14 @@ export default function AIBiotechnology() {
         {/* Use Cases Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Biotechnology Use Cases
+                Biotechnology Use Cases;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore how AI biotechnology is revolutionizing healthcare and life sciences.
@@ -382,7 +383,7 @@ export default function AIBiotechnology() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {useCases.map((useCase, index) => (
-                <motion.div
+                <motion.div;
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -405,14 +406,14 @@ export default function AIBiotechnology() {
         {/* Pricing Section */}
         <section id="pricing" className="py-20 bg-black/20">
           <div className="max-w-7xl mx-auto px-6">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Biotechnology Pricing
+                Biotechnology Pricing;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the biotechnology plan that fits your research and development needs.
@@ -421,13 +422,13 @@ export default function AIBiotechnology() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
-                <motion.div
+                <motion.div;
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className={`relative bg-gradient-to-br from-green-900/50 to-emerald-900/50 border rounded-xl p-8 ${
-                    tier.popular 
+                    tier.popular;
                       ? 'border-green-400 scale-105' 
                       : 'border-green-500/30'
                   }`}
@@ -435,7 +436,7 @@ export default function AIBiotechnology() {
                   {tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
+                        Most Popular;
                       </span>
                     </div>
                   )}
@@ -458,15 +459,15 @@ export default function AIBiotechnology() {
                     ))}
                   </ul>
 
-                  <Link 
+                  <Link;
                     to="/contact" 
                     className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                      tier.popular
+                      tier.popular;
                         ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white'
                         : 'border border-green-500 text-green-400 hover:bg-green-500 hover:text-white'
                     }`}
                   >
-                    Start Research
+                    Start Research;
                   </Link>
                 </motion.div>
               ))}
@@ -477,7 +478,7 @@ export default function AIBiotechnology() {
         {/* CTA Section */}
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-6 text-center">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -489,17 +490,17 @@ export default function AIBiotechnology() {
                 Join the biotechnology revolution and discover the infinite possibilities of AI-powered life sciences.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <Link;
                   to="/contact" 
                   className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105"
                 >
-                  Start Bio Research
+                  Start Bio Research;
                 </Link>
-                <Link 
+                <Link;
                   to="/services" 
                   className="px-8 py-4 border-2 border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300"
                 >
-                  Explore All Services
+                  Explore All Services;
                 </Link>
               </div>
             </motion.div>
@@ -509,7 +510,7 @@ export default function AIBiotechnology() {
         {/* Contact Information */}
         <section className="py-20 bg-black/20">
           <div className="max-w-4xl mx-auto px-6 text-center">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}

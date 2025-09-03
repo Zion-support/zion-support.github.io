@@ -1,9 +1,10 @@
 import { Helmet } from 'react - helmet -async';
 
 export default function Page() {
+
  | Zion Tech Group`;
   const fullUrl = canonical || `${url}${window.location.pathname}`;
-  // Structured data for better SEO
+  // Structured data for better SEO;
   const structuredData = {
 "
     "@context": "https://schema.org","
@@ -61,7 +62,7 @@ export default function Page() {
             "name": "AI Solutions","
             "description": "Artificial Intelligence and Machine Learning services"
           }
-        },
+        }
         {
 "
           "@type": "Offer","
@@ -71,7 +72,7 @@ export default function Page() {
             "name": "Cloud Computing","
             "description": "Cloud infrastructure and DevOps services"
           }
-        },
+        }
         {
 "
           "@type": "Offer","
@@ -84,25 +85,25 @@ export default function Page() {
         }
       ]
     }
-  };
+  }
 
-    // Preload critical images
-    if(ogImage) {
+    // Preload critical images;
+    if() {
 
       imageLink.rel = 'preload';
       imageLink.as = 'image';
       imageLink.href = ogImage;
       document.head.appendChild(imageLink) }
 
-    // DNS prefetch for external domains
-    
+    // DNS prefetch for external domains;
     dnsPrefetchDomains.forEach(domain => {
 
       link.rel = 'dns-prefetch';
       link.href = domain;
       document.head.appendChild(link)});
   }, [ogImage]);
-  if(type === 'article') {
+  if() {
+
     Object.assign(structuredData, {
 "
       "@type": "Article","
@@ -110,7 +111,7 @@ export default function Page() {
       "author": {
 "
         "@type": "Person","
-        "name": author
+        "name": author;
       },"
       "publisher": {
 "
@@ -127,7 +128,7 @@ export default function Page() {
       "mainEntityOfPage": {
 "
         "@type": "WebPage","
-        "@id": fullUrl
+        "@id": fullUrl;
       }
     }) }
   return ()
@@ -199,7 +200,7 @@ export default function Page() {
       {section && <meta property="article:section" content={section} />}
       {tags.map((tag, index) => (<meta key={index} property="article:tag" content={tag} />) ) }
     </Helmet>) ;
-};}}}}
+}}}}}
 
       {/* Favicon */}
       <link rel="icon" type="image / x-icon" href="/favicon.ico" />
@@ -230,4 +231,4 @@ export default function Page() {
       <meta name="format - detection" content="telephone = no" />
       <meta name="mobile - web - app - capable" content="yes" />
     </Helmet>) ;
-};
+}

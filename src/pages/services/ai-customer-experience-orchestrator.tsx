@@ -2,57 +2,57 @@ import React from "react"
 import Head from "next/head"
 import Link from "next/link"
 import { 
-  Brain, Users, MessageSquare, Heart, Star, Zap, 
-  Shield, BarChart3, Globe, Smartphone, Database, 
-  Lock, CheckCircle, ArrowRight, Phone, Mail, MapPin,
-  Settings, Monitor, Cpu, Network, Code, Rocket,
-  Lightbulb, Activity, TrendingUp, Award, Target
+  Brain, Users, MessageSquare, Heart, Star, Zap;
+  Shield, BarChart3, Globe, Smartphone, Database;
+  Lock, CheckCircle, ArrowRight, Phone, Mail, MapPin;
+  Settings, Monitor, Cpu, Network, Code, Rocket;
+  Lightbulb, Activity, TrendingUp, Award, Target;
 } from "lucide-react"
 
 const AICustomerExperienceOrchestrator = () => {
   const features = [
-    "AI-Powered Customer Journey Mapping",
-    "Real-time Sentiment Analysis", 
-    "Predictive Customer Behavior",
-    "Omnichannel Experience Management",
-    "Intelligent Customer Segmentation",
-    "Automated Personalization Engine",
-    "Proactive Issue Resolution",
+    "AI-Powered Customer Journey Mapping"
+    "Real-time Sentiment Analysis"
+    "Predictive Customer Behavior"
+    "Omnichannel Experience Management"
+    "Intelligent Customer Segmentation"
+    "Automated Personalization Engine"
+    "Proactive Issue Resolution"
     "Customer Lifetime Value Optimization"
   ]
 
   const benefits = [
-    "Increase customer satisfaction by 45%",
-    "Reduce customer churn by 60%",
-    "Improve customer lifetime value by 35%",
-    "Boost Net Promoter Score by 50%",
-    "Reduce support ticket volume by 40%",
+    "Increase customer satisfaction by 45%"
+    "Reduce customer churn by 60%"
+    "Improve customer lifetime value by 35%"
+    "Boost Net Promoter Score by 50%"
+    "Reduce support ticket volume by 40%"
     "Accelerate customer onboarding by 70%"
   ]
 
   const useCases = [
-    "E-commerce Customer Experience",
-    "SaaS Customer Success Management",
-    "Financial Services Customer Journey",
-    "Healthcare Patient Experience",
-    "Retail Customer Engagement",
+    "E-commerce Customer Experience"
+    "SaaS Customer Success Management"
+    "Financial Services Customer Journey"
+    "Healthcare Patient Experience"
+    "Retail Customer Engagement"
     "B2B Customer Relationship Management"
   ]
 
   const pricing = [
     {
-      name: "Growth",
-      price: "$2,499/month",
+      name: "Growth"
+      price: "$2,499/month"
       details: ["Up to 10,000 customers", "Basic AI personalization", "Standard analytics", "Email support", "99.5% uptime SLA"]
-    },
+    }
     {
-      name: "Enterprise", 
-      price: "$4,999/month",
+      name: "Enterprise"
+      price: "$4,999/month"
       details: ["Up to 100,000 customers", "Advanced AI personalization", "Custom analytics", "Priority support", "99.9% uptime SLA"]
-    },
+    }
     {
-      name: "Enterprise Plus",
-      price: "$9,999/month", 
+      name: "Enterprise Plus"
+      price: "$9,999/month"
       details: ["Unlimited customers", "Full AI orchestration", "White-label solution", "24/7 dedicated support", "99.99% uptime SLA"]
     }
   ]
@@ -71,20 +71,20 @@ const AICustomerExperienceOrchestrator = () => {
           <div className="max-w-6xl mx-auto px-6">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
               <Heart className="w-4 h-4 mr-2" />
-              AI-Powered Customer Experience
+              AI-Powered Customer Experience;
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-              AI Customer Experience Orchestrator
+              AI Customer Experience Orchestrator;
             </h1>
             <p className="text-pink-100 text-xl max-w-3xl mx-auto">
               Transform customer relationships with AI-powered orchestration that increases satisfaction by 45%, reduces churn by 60%, and optimizes every touchpoint in the customer journey.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="#contact" className="bg-white text-pink-600 px-8 py-3 rounded-lg font-semibold hover:bg-pink-50 transition-colors">
-                Start Free Trial
+                Start Free Trial;
               </Link>
               <Link href="#demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                Watch Demo
+                Watch Demo;
               </Link>
             </div>
           </div>
@@ -193,7 +193,7 @@ const AICustomerExperienceOrchestrator = () => {
                 <div key={index} className={`rounded-xl p-6 shadow-lg ${tier.name === 'Enterprise' ? 'border-2 border-pink-500 bg-pink-50' : 'border border-gray-200 bg-white'}`}>
                   {tier.name === 'Enterprise' && (
                     <div className="bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
-                      Most Popular
+                      Most Popular;
                     </div>
                   )}
                   <h3 className="text-2xl font-semibold text-gray-900 mb-2">{tier.name}</h3>
@@ -211,7 +211,7 @@ const AICustomerExperienceOrchestrator = () => {
                       ? 'bg-pink-600 text-white hover:bg-pink-700' 
                       : 'bg-gray-900 text-white hover:bg-gray-800'
                   }`}>
-                    Get Started
+                    Get Started;
                   </Link>
                 </div>
               ))}
@@ -250,7 +250,7 @@ const AICustomerExperienceOrchestrator = () => {
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">Start Your Free Trial</h3>
                 <p className="text-gray-600 mb-4">Experience AI-powered customer orchestration with our 14-day free trial</p>
                 <Link href="https://ziontechgroup.com/contact" className="bg-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-pink-700 transition-colors inline-block">
-                  Start Free Trial
+                  Start Free Trial;
                 </Link>
               </div>
             </div>
@@ -261,4 +261,4 @@ const AICustomerExperienceOrchestrator = () => {
   )
 }
 
-export default AICustomerExperienceOrchestrator
+export default AICustomerExperienceOrchestrator;

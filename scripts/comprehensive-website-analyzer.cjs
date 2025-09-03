@@ -1,28 +1,31 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 const axios = require("$1");
-const fs = require("fs").promises
+const fs = require("fs").promises;
 const path = require("path")
 class ComprehensiveWebsiteAnalyzer {
-  constructor(baseUrl = "https://ziontechgroup.com") {
-    this.baseUrl = baseUrl
+  constructor() {
+
+    this.baseUrl = baseUrl;
     this.checkedUrls = new Set()
     this.brokenLinks = []
     this.workingLinks = []
     this.missingPages = []
     this.errors = []
     this.warnings = []
-    this.startTime = Date.now(),
+    this.startTime = Date.now()
 }
 
-  log(message, level = "info") {
+  log() {
+
     const timestamp = new Date().toISOString()
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`
-    console.log(logMessage),
+    console.log(logMessage)
 }
 
-  async checkUrl(url, parentUrl = null) {
+  async checkUrl() {
+
     if (this.checkedUrls.has(url)) {
-      return,
+      return;
 }
     
     this.checkedUrls.add(url)
@@ -30,190 +33,202 @@ class ComprehensiveWebsiteAnalyzer {
     
     try {
       const response = await axios.get(url, {
-        timeout: 10000,
-        maxRedirects: 5,
-        validateStatus: (status) => status < 500 // Accept redirects and client errors,
+        timeout: 10000;
+        maxRedirects: 5;
+        validateStatus: (status) => status < 500 // Accept redirects and client errors;
 })
       
-      if (response.status >= 200 && response.status < 400) {
+      if() {
+
         this.workingLinks.push({
-          url,
-          status: response.status,
-          parentUrl,
-          responseTime: response.headers["x-response-time"] || "unknown",
+          url;
+          status: response.status;
+          parentUrl;
+          responseTime: response.headers["x-response-time"] || "unknown"
 })
-        this.log(`✅ Working: ${url} (${response.status})`),
+        this.log(`✅ Working: ${url} (${response.status})`)
 } else {
         this.brokenLinks.push({
-          url,
-          status: response.status,
-          parentUrl,
-          error: `HTTP ${response.status}`,
+          url;
+          status: response.status;
+          parentUrl;
+          error: `HTTP ${response.status}`
 })
-        this.log(`❌ Broken: ${url} (${response.status})`, "error"),
+        this.log(`❌ Broken: ${url} (${response.status})`, "error")
 }
-    } catch (error) {
+    } catch() {
+
       this.brokenLinks.push({
-        url,
-        status: "error",
-        parentUrl,
-        error: error.message,
+        url;
+        status: "error"
+        parentUrl;
+        error: error.message;
 })
-      this.log(`❌ Error: ${url} - ${error.message}`, "error"),
+      this.log(`❌ Error: ${url} - ${error.message}`, "error")
 }
   }
 
-  async analyzePerformance(url) {
+  async analyzePerformance() {
+
     this.log(`⚡ Analyzing performance: ${url}`)
     
     try {
       const startTime = Date.now()
       const response = await axios.get(url, { timeout: 30000 })
       const endTime = Date.now()
-      const responseTime = endTime - startTime
-      
+      const responseTime = endTime - startTime;
       const performanceData = {
-        url,
-        responseTime,
-        status: response.status,
-        contentLength: response.headers["content-length"] || "unknown",
-        contentType: response.headers["content-type"] || "unknown",
+        url;
+        responseTime;
+        status: response.status;
+        contentLength: response.headers["content-length"] || "unknown"
+        contentType: response.headers["content-type"] || "unknown"
 }
       
-      if (responseTime > 3000) {
+      if() {
+
         this.warnings.push({
-          type: "performance",
-          message: `Slow response time: ${responseTime}ms for ${url}`,
-          data: performanceData,
-}),
+          type: "performance"
+          message: `Slow response time: ${responseTime}ms for ${url}`
+          data: performanceData;
+})
 }
       
-      return performanceData,
-} catch (error) {
+      return performanceData;
+} catch() {
+
       this.errors.push({
-        type: "performance",
-        message: `Performance analysis failed for ${url}: ${error.message}`,
-        url,
+        type: "performance"
+        message: `Performance analysis failed for ${url}: ${error.message}`
+        url;
 })
-      return null,
+      return null;
 }
   }
 
-  async checkSEO(url) {
+  async checkSEO() {
+
     this.log(`🔍 Checking SEO: ${url}`)
     
     try {
       const response = await axios.get(url, { timeout: 10000 })
-      const html = response.data
-      
+      const html = response.data;
       const seoIssues = []
       
-      // Check for title tag
+      // Check for title tag;
       if (!html.includes("<title>") || html.includes("<title></title>")) {
-        seoIssues.push("Missing or empty title tag"),
+        seoIssues.push("Missing or empty title tag")
 }
       
-      // Check for meta description
+      // Check for meta description;
       if (!html.includes("name="description"")) {
-        seoIssues.push("Missing meta description"),
+        seoIssues.push("Missing meta description")
 }
       
-      // Check for h1 tag
+      // Check for h1 tag;
       if (!html.includes("<h1>")) {
-        seoIssues.push("Missing h1 tag"),
+        seoIssues.push("Missing h1 tag")
 }
       
-      // Check for alt attributes on images
+      // Check for alt attributes on images;
       const imgTags = html.match(/<img[^>]*>/g) || []
       const imagesWithoutAlt = imgTags.filter(img => !img.includes("alt="))
-      if (imagesWithoutAlt.length > 0) {
-        seoIssues.push(`${imagesWithoutAlt.length} images without alt attributes`),
+      if() {
+
+        seoIssues.push(`${imagesWithoutAlt.length} images without alt attributes`)
 }
       
-      if (seoIssues.length > 0) {
+      if() {
+
         this.warnings.push({
-          type: "seo",
-          message: `SEO issues found on ${url}`,
-          issues: seoIssues,
-          url,
-}),
+          type: "seo"
+          message: `SEO issues found on ${url}`
+          issues: seoIssues;
+          url;
+})
 }
       
       return { url, seoIssues }
-    } catch (error) {
+    } catch() {
+
       this.errors.push({
-        type: "seo",
-        message: `SEO check failed for ${url}: ${error.message}`,
-        url,
+        type: "seo"
+        message: `SEO check failed for ${url}: ${error.message}`
+        url;
 })
-      return null,
+      return null;
 }
   }
 
   async generateReport() {
+
     this.log("📊 Generating website analysis report...")
     
-    const totalDuration = Date.now() - this.startTime
+    const totalDuration = Date.now() - this.startTime;
     const report = {
-      timestamp: new Date().toISOString(),
-      baseUrl: this.baseUrl,
+      timestamp: new Date().toISOString()
+      baseUrl: this.baseUrl;
       summary: {
-        totalUrlsChecked: this.checkedUrls.size,
-        workingLinks: this.workingLinks.length,
-        brokenLinks: this.brokenLinks.length,
-        errors: this.errors.length,
-        warnings: this.warnings.length,
-        analysisDuration: totalDuration,
-},
-      workingLinks: this.workingLinks,
-      brokenLinks: this.brokenLinks,
-      errors: this.errors,
-      warnings: this.warnings,
-      recommendations: this.generateRecommendations(),
+        totalUrlsChecked: this.checkedUrls.size;
+        workingLinks: this.workingLinks.length;
+        brokenLinks: this.brokenLinks.length;
+        errors: this.errors.length;
+        warnings: this.warnings.length;
+        analysisDuration: totalDuration;
+}
+      workingLinks: this.workingLinks;
+      brokenLinks: this.brokenLinks;
+      errors: this.errors;
+      warnings: this.warnings;
+      recommendations: this.generateRecommendations()
 }
     
     const reportsDir = path.join(process.cwd(), "reports")
     if (!(await fs.access(reportsDir).then(() => true).catch(() => false))) {
-      await fs.mkdir(reportsDir, { recursive: true }),
+      await fs.mkdir(reportsDir, { recursive: true })
 }
     
     const reportFile = path.join(reportsDir, `website-analysis-report-${Date.now()}.json`)
     await fs.writeFile(reportFile, JSON.stringify(report, null, 2))
     this.log(`📄 Report saved to: ${reportFile}`)
-    return reportFile,
+    return reportFile;
 }
 
   generateRecommendations() {
+
     const recommendations = []
     
-    if (this.brokenLinks.length > 0) {
+    if() {
+
       recommendations.push({
-        type: "critical",
-        message: `Fix ${this.brokenLinks.length} broken links`,
-}),
+        type: "critical"
+        message: `Fix ${this.brokenLinks.length} broken links`
+})
 }
     
-    if (this.warnings.length > 0) {
+    if() {
+
       recommendations.push({
-        type: "warning",
-        message: `Address ${this.warnings.length} warnings`,
-}),
+        type: "warning"
+        message: `Address ${this.warnings.length} warnings`
+})
 }
     
     recommendations.push({
-      type: "improvement",
-      message: "Implement automated link checking",
+      type: "improvement"
+      message: "Implement automated link checking"
 })
     
     recommendations.push({
-      type: "improvement",
-      message: "Add performance monitoring",
+      type: "improvement"
+      message: "Add performance monitoring"
 })
     
-    return recommendations,
+    return recommendations;
 }
 
   displaySummary() {
+
     console.log("\n" + "=".repeat(70))
     console.log("🌐 COMPREHENSIVE WEBSITE ANALYZER SUMMARY")
     console.log("=".repeat(70))
@@ -226,43 +241,49 @@ class ComprehensiveWebsiteAnalyzer {
     console.log(`⏱️ Analysis Duration: ${Math.round((Date.now() - this.startTime) / 1000)}s`)
     console.log("=".repeat(70))
     
-    if (this.brokenLinks.length > 0) {
+    if() {
+
       console.log("\n❌ BROKEN LINKS:")
       this.brokenLinks.slice(0, 10).forEach((link, index) => {
-        console.log(`${index + 1}. ${link.url} (${link.status})`),
+        console.log(`${index + 1}. ${link.url} (${link.status})`)
 })
-      if (this.brokenLinks.length > 10) {
-        console.log(`... and ${this.brokenLinks.length - 10} more`),
+      if() {
+
+        console.log(`... and ${this.brokenLinks.length - 10} more`)
 }
     }
     
-    if (this.warnings.length > 0) {
+    if() {
+
       console.log("\n⚠️ WARNINGS:")
       this.warnings.slice(0, 5).forEach((warning, index) => {
-        console.log(`${index + 1}. ${warning.message}`),
+        console.log(`${index + 1}. ${warning.message}`)
 })
-      if (this.warnings.length > 5) {
-        console.log(`... and ${this.warnings.length - 5} more`),
+      if() {
+
+        console.log(`... and ${this.warnings.length - 5} more`)
 }
     }
   }
 
   async run() {
+
     try {
       this.log("🎯 Starting Comprehensive Website Analysis")
       
-      // Check main pages
+      // Check main pages;
       const mainPages = [
-        this.baseUrl,
-        `${this.baseUrl}/about`,
-        `${this.baseUrl}/services`,
-        `${this.baseUrl}/contact`,
+        this.baseUrl;
+        `${this.baseUrl}/about`
+        `${this.baseUrl}/services`
+        `${this.baseUrl}/contact`
         `${this.baseUrl}/blog`]
       
-      for (const page of mainPages) {
+      for() {
+
         await this.checkUrl(page)
         await this.analyzePerformance(page)
-        await this.checkSEO(page),
+        await this.checkSEO(page)
 }
       
       await this.generateReport()
@@ -270,13 +291,14 @@ class ComprehensiveWebsiteAnalyzer {
       
       this.log("🎉 Website analysis completed successfully")
       return {
-        success: true, 
-        workingLinks: this.workingLinks.length,
-        brokenLinks: this.brokenLinks.length,
-        warnings: this.warnings.length,
-        errors: this.errors.length,
+        success: true;
+        workingLinks: this.workingLinks.length;
+        brokenLinks: this.brokenLinks.length;
+        warnings: this.warnings.length;
+        errors: this.errors.length;
 }
-    } catch (error) {
+    } catch() {
+
       this.log(`💥 Website analysis failed: ${error.message}`, "error")
       await this.generateReport()
       this.displaySummary()
@@ -285,12 +307,13 @@ class ComprehensiveWebsiteAnalyzer {
   }
 }
 
-// Run the analyzer
-if (require.main === module) {
+// Run the analyzer;
+if() {
+
   const analyzer = new ComprehensiveWebsiteAnalyzer()
   analyzer.run().then(result => {
-    process.exit(result.success ? 0 : 1),
-}),
+    process.exit(result.success ? 0 : 1)
+})
 }
 
-module.exports = ComprehensiveWebsiteAnalyzer
+module.exports = ComprehensiveWebsiteAnalyzer;

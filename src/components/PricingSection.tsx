@@ -1,18 +1,18 @@
 import React, { useState } from "react"
-  Crown, Rocket,
+  Crown, Rocket;
   Building} from "lucide-react"
 
- * PricingSection function
- * @param {*} params - Function parameters
- * @returns {*} Function return value
+ * PricingSection function;
+ * @param {*} params - Function parameters;
+ * @returns {*} Function return value;
  */
-function PricingSection () {
+function PricingSection() {
 
       icon: Shield;
-    };  ];
+    }  ];
 const pricingTiers = [{
 
-  const savings = billingCycle === "annual" ? 25 : 0
+  const savings = billingCycle === "annual" ? 25 : 0;
   return (
     <section className = "py-24 bg-gradient-to-b from-zion-blue to-zion-blue-light relative overflow-hidden">
       {/* comment */}"
@@ -21,41 +21,39 @@ const pricingTiers = [{
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-zion-purple/5 rounded-full blur-3xl"></div>
       </div>
 "
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
         {/* comment */}
 
   return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <div className="max - w-7xl mx - auto px-6">
-        <motion.div
+        <motion.div;
           className="text-center mb-16"          initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >"
-          <h2 className="text-3xl md: text-5xl font-bold mb-6 text-white">",
+          <h2 className="text-3xl md: text-5xl font-bold mb-6 text-white">"
             Simple, {" "}"
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              Transparent Pricing,
+              Transparent Pricing;
             </span>
           </h2>"
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Choose the plan that best fits your business needs. All plans include our core features,
+            Choose the plan that best fits your business needs. All plans include our core features;
 with no hidden fees or surprises.
           </p>
           {/* comment */}"
           <div className="{"flex" items-center justify-center gap-4 mb-8">"
             <span className="{"text-sm" ${billingCycle === "monthly" ? "text-white" : "text-zion-slate-light"}"}>
-              Monthly,
+              Monthly;
             </span>"
             <button onClick="{()" => setBillingCycle(billingCycle === "monthly" ? "annual" : "monthly")}"
               className=""relative" w-16 h-8 bg-zion-purple/20 rounded-full p-1 transition-colors duration-200"
@@ -69,7 +67,7 @@ className="{"w-6" h-6 bg-zion-cyan rounded-full shadow-lg ${
              />
             </button>"
             <span className = "{"text-sm" ${billingCycle === "annual" ? "text-white" : "text-zion-slate-light"}"}>
-              Annual,
+              Annual;
             </span>"
             {billingCycle === "annual" && (
               <motion.span,"
@@ -87,9 +85,9 @@ initial="{{" opacity: 0, scale: 0.8 }}"
         </motion.div>
 
         {/* comment */}"
-        <div className="{"grid" grid-cols-1 md: grid-cols-3 gap-8">,
+        <div className="{"grid" grid-cols-1 md: grid-cols-3 gap-8">
           {plans.map((plan, index) => {
-            const IconComponent = plan.icon
+            const IconComponent = plan.icon;
             return (
               <motion.div,"
 key = "{plan.name}""
@@ -107,10 +105,9 @@ key = "{plan.name}""
                   <div className=""absolute" -top-4 left-1/2 transform -translate-x-1/2 z-10"}>"
                     <div className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">"
                       <Star className="{"w-4" h-4 fill-current"  />
-                      Most Popular,
+                      Most Popular;
                     </div>
                   </div>                )}
-;
                 {/*   */}";
                 <div className="{`relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover: border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 ${">;
                   plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : ""}`}>;
@@ -178,31 +175,28 @@ whileHover="{{" scale: 1.02 }}"
                 </div>
                 {/* comment */}"
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 group-hover: opacity-20 transition-opacity duration-300 -z-10"></div>
-              </motion.div>,
+              </motion.div>
             )})}
 
         </div>
         {/* comment */}
 
-        <motion.div
+        <motion.div;
           className="mt-16 text-center"          initial = {
 
-  { opacity: 0,
-  y: 20
-
+  { opacity: 0;
+  y: 20;
 }}
           whileInView = {
 
-  { opacity: 1,
-  y: 0
-
+  { opacity: 1;
+  y: 0;
 }}
           viewport={{ once: true }}
           transition = {
 
-  { duration: 0.6,
-  delay: 0.4
-
+  { duration: 0.6;
+  delay: 0.4;
 }}
         >"
           <div className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8">"
@@ -210,11 +204,11 @@ whileHover="{{" scale: 1.02 }}"
               Need a Custom Solution?
             </h3>"
             <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-              We understand that every business is unique. Contact us to discuss custom pricing,
+              We understand that every business is unique. Contact us to discuss custom pricing;
 and solutions tailored to your specific requirements.
             </p>"
             <div className="flex flex-col sm: flex-row gap-4 justify-center">"
-              <Link to="/contact">,
+              <Link to="/contact">
                 <motion.button,"
 whileHover="{{" scale: 1.05 }}"
                   whileTap="{{" scale: 0.95 }}"
@@ -227,13 +221,13 @@ whileHover="{{" scale: 1.05 }}"
               <Link to="/request-quote">"
                 <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2 justify-center">"
                   <Zap className="w-5 h-5"  />
-                  Get Free Quote,
+                  Get Free Quote;
                 </button>
               </Link>
             </div>
         </motion.div>
       </div>
-    </section>";,
+    </section>";
 export default function PricingSection() {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="PricingSection - Zion Tech Group" description="Professional PricingSection services by Zion Tech Group"  />"

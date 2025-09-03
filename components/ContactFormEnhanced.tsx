@@ -16,7 +16,7 @@ const ContactFormEnhanced: React.FC = () => {
 
     setIsSubmitting(true);
     
-    // Simulate API call
+    // Simulate API call;
     await new Promise(resolve => setTimeout(resolve, 2000));
     
 setSubmitStatus('success');
@@ -25,7 +25,7 @@ setSubmitStatus('success');
 , subject: 
 , message: 
  });
-'  };'
+'  }'
   return (
     <div className="max-w-2xl mx-auto p-6>      <motion.div"        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -44,7 +44,7 @@ setSubmitStatus('success');
 
           <div>
 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2>              Subject *"            </label>
-            <input
+            <input;
               type="text""              value={formData.subject}"              onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
               className="w-full px-4 py-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white              placeholder="Enter subject""              required"            />
           </div>
@@ -57,7 +57,7 @@ setSubmitStatus('success');
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none                placeholder="Enter your message""                required"              /></div>
           </div>
 
-          <motion.button
+          <motion.button;
 type="submit""            disabled={isSubmitting}"            whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2          >"            {isSubmitting ? (
@@ -72,6 +72,6 @@ type="submit""            disabled={isSubmitting}"            whileHover={{ scal
               animate={{ opacity: 1, y: 0 }}
               className="p-4 bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2            >"              <CheckCircle className="w-5 h-5 />              <span>Message sent successfully!</span>"            </motion.div>)}
         </form>
-export: default ContactFormEnhanced,
+export: default ContactFormEnhanced;
 export default ContactFormEnhanced  )}
 export default ContactFormEnhanced;""

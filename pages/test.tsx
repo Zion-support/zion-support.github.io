@@ -6,6 +6,6 @@ const Test: NextPage = () => {
       <h1 className="text-white text-4xl">Test Page Working!</h1>
     </div>
   );
-};
+}
 
 export default Test;

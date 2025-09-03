@@ -8,46 +8,46 @@ const DataProtection: NextPage = () => {
 
   const protectionMeasures = [
     {
-      icon: Lock,
-      title: 'Data Encryption',
-      description: 'All data is encrypted both in transit and at rest using industry-standard encryption protocols.',
+      icon: Lock;
+      title: 'Data Encryption'
+      description: 'All data is encrypted both in transit and at rest using industry-standard encryption protocols.'
       details: [
-        'AES-256 encryption for data at rest',
-        'TLS 1.3 for data in transit',
-        'End-to-end encryption for sensitive communications',
+        'AES-256 encryption for data at rest'
+        'TLS 1.3 for data in transit'
+        'End-to-end encryption for sensitive communications'
         'Regular encryption key rotation'
       ]
-    },
+    }
     {
-      icon: Shield,
-      title: 'Access Controls',
-      description: 'Strict access controls ensure only authorized personnel can access your data.',
+      icon: Shield;
+      title: 'Access Controls'
+      description: 'Strict access controls ensure only authorized personnel can access your data.'
       details: [
-        'Multi-factor authentication (MFA)',
-        'Role-based access control (RBAC)',
-        'Principle of least privilege',
+        'Multi-factor authentication (MFA)'
+        'Role-based access control (RBAC)'
+        'Principle of least privilege'
         'Regular access reviews and audits'
       ]
-    },
+    }
     {
-      icon: Eye,
-      title: 'Monitoring & Logging',
-      description: 'Comprehensive monitoring and logging of all data access and modifications.',
+      icon: Eye;
+      title: 'Monitoring & Logging'
+      description: 'Comprehensive monitoring and logging of all data access and modifications.'
       details: [
-        'Real-time security monitoring',
-        'Comprehensive audit logs',
-        'Automated threat detection',
+        'Real-time security monitoring'
+        'Comprehensive audit logs'
+        'Automated threat detection'
         '24/7 security operations center'
       ]
-    },
+    }
     {
-      icon: Database,
-      title: 'Data Backup & Recovery',
-      description: 'Regular backups and disaster recovery procedures to protect against data loss.',
+      icon: Database;
+      title: 'Data Backup & Recovery'
+      description: 'Regular backups and disaster recovery procedures to protect against data loss.'
       details: [
-        'Automated daily backups',
-        'Geographically distributed storage',
-        'Point-in-time recovery capabilities',
+        'Automated daily backups'
+        'Geographically distributed storage'
+        'Point-in-time recovery capabilities'
         'Regular disaster recovery testing'
       ]
     }
@@ -55,66 +55,66 @@ const DataProtection: NextPage = () => {
 
   const complianceStandards = [
     {
-      name: 'GDPR',
-      description: 'General Data Protection Regulation compliance for EU data subjects',
-      status: 'Compliant',
+      name: 'GDPR'
+      description: 'General Data Protection Regulation compliance for EU data subjects'
+      status: 'Compliant'
       icon: '🇪🇺'
-    },
+    }
     {
-      name: 'CCPA',
-      description: 'California Consumer Privacy Act compliance for California residents',
-      status: 'Compliant',
+      name: 'CCPA'
+      description: 'California Consumer Privacy Act compliance for California residents'
+      status: 'Compliant'
       icon: '🇺🇸'
-    },
+    }
     {
-      name: 'HIPAA',
-      description: 'Health Insurance Portability and Accountability Act for healthcare data',
-      status: 'Compliant',
+      name: 'HIPAA'
+      description: 'Health Insurance Portability and Accountability Act for healthcare data'
+      status: 'Compliant'
       icon: '🏥'
-    },
+    }
     {
-      name: 'SOC 2',
-      description: 'Service Organization Control 2 Type II certification',
-      status: 'Certified',
+      name: 'SOC 2'
+      description: 'Service Organization Control 2 Type II certification'
+      status: 'Certified'
       icon: '🔒'
-    },
+    }
     {
-      name: 'ISO 27001',
-      description: 'International standard for information security management',
-      status: 'Certified',
+      name: 'ISO 27001'
+      description: 'International standard for information security management'
+      status: 'Certified'
       icon: '🌍'
     }
   ];
 
   const dataRights = [
     {
-      title: 'Right to Access',
+      title: 'Right to Access'
       description: 'You have the right to request access to your personal data and receive a copy of the data we hold about you.'
-    },
+    }
     {
-      title: 'Right to Rectification',
+      title: 'Right to Rectification'
       description: 'You can request correction of inaccurate or incomplete personal data.'
-    },
+    }
     {
-      title: 'Right to Erasure',
+      title: 'Right to Erasure'
       description: 'You have the right to request deletion of your personal data under certain circumstances.'
-    },
+    }
     {
-      title: 'Right to Portability',
+      title: 'Right to Portability'
       description: 'You can request a copy of your data in a structured, machine-readable format.'
-    },
+    }
     {
-      title: 'Right to Object',
+      title: 'Right to Object'
       description: 'You can object to the processing of your personal data for certain purposes.'
-    },
+    }
     {
-      title: 'Right to Restrict Processing',
+      title: 'Right to Restrict Processing'
       description: 'You can request that we limit the processing of your personal data.'
     }
   ];
 
   return (
-    <MainLayout
+    <MainLayout;
       title="Data Protection - Zion Tech Group"
       description="Learn about Zion Tech Group's comprehensive data protection measures, compliance standards, and your data rights."
       keywords="data protection, GDPR compliance, data security, privacy rights, data encryption, compliance standards"
@@ -127,7 +127,7 @@ const DataProtection: NextPage = () => {
               <Shield className="w-16 h-16 mx-auto mb-6 text-blue-400" />
               <h1 className="text-4xl md:text-5xl font-bold mb-6">Data Protection</h1>
               <p className="text-xl text-gray-200 mb-4">
-                Your data security and privacy are our top priorities. Learn about our comprehensive 
+                Your data security and privacy are our top priorities. Learn about our comprehensive;
                 protection measures and compliance standards.
               </p>
               <p className="text-sm text-gray-300">Last updated: {lastUpdated}</p>
@@ -249,17 +249,17 @@ const DataProtection: NextPage = () => {
                 Our data protection team is here to help with any questions about your data rights or our security measures.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <a;
                   href="mailto:privacy@ziontechgroup.com"
                   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Contact Privacy Team
+                  Contact Privacy Team;
                 </a>
-                <a
+                <a;
                   href="/privacy"
                   className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
-                  Privacy Policy
+                  Privacy Policy;
                 </a>
               </div>
             </div>
@@ -268,6 +268,6 @@ const DataProtection: NextPage = () => {
       </div>
     </MainLayout>
   );
-};
+}
 
 export default DataProtection;

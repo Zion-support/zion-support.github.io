@@ -10,50 +10,50 @@ const Documentation: NextPage = () => {
 
   const docCategories = [
     {
-      icon: Code,
-      title: 'API Documentation',
-      description: 'Complete API reference and integration guides',
+      icon: Code;
+      title: 'API Documentation'
+      description: 'Complete API reference and integration guides'
       sections: [
-        { title: 'Getting Started', description: 'Quick start guide and authentication' },
-        { title: 'Authentication', description: 'API keys, OAuth, and security' },
-        { title: 'Endpoints', description: 'Complete API endpoint reference' },
-        { title: 'SDKs & Libraries', description: 'Client libraries and code examples' },
+        { title: 'Getting Started', description: 'Quick start guide and authentication' }
+        { title: 'Authentication', description: 'API keys, OAuth, and security' }
+        { title: 'Endpoints', description: 'Complete API endpoint reference' }
+        { title: 'SDKs & Libraries', description: 'Client libraries and code examples' }
         { title: 'Rate Limits', description: 'API usage limits and best practices' }
       ]
-    },
+    }
     {
-      icon: Database,
-      title: 'Data Management',
-      description: 'Data handling, storage, and processing guides',
+      icon: Database;
+      title: 'Data Management'
+      description: 'Data handling, storage, and processing guides'
       sections: [
-        { title: 'Data Models', description: 'Schema definitions and data structures' },
-        { title: 'Import/Export', description: 'Data migration and backup procedures' },
-        { title: 'Data Security', description: 'Encryption and privacy protection' },
-        { title: 'Data Validation', description: 'Input validation and error handling' },
+        { title: 'Data Models', description: 'Schema definitions and data structures' }
+        { title: 'Import/Export', description: 'Data migration and backup procedures' }
+        { title: 'Data Security', description: 'Encryption and privacy protection' }
+        { title: 'Data Validation', description: 'Input validation and error handling' }
         { title: 'Data Analytics', description: 'Reporting and analytics features' }
       ]
-    },
+    }
     {
-      icon: Cloud,
-      title: 'Cloud Services',
-      description: 'Cloud deployment and infrastructure guides',
+      icon: Cloud;
+      title: 'Cloud Services'
+      description: 'Cloud deployment and infrastructure guides'
       sections: [
-        { title: 'Deployment', description: 'Cloud deployment strategies' },
-        { title: 'Scaling', description: 'Auto-scaling and performance optimization' },
-        { title: 'Monitoring', description: 'System monitoring and alerting' },
-        { title: 'Backup & Recovery', description: 'Data backup and disaster recovery' },
+        { title: 'Deployment', description: 'Cloud deployment strategies' }
+        { title: 'Scaling', description: 'Auto-scaling and performance optimization' }
+        { title: 'Monitoring', description: 'System monitoring and alerting' }
+        { title: 'Backup & Recovery', description: 'Data backup and disaster recovery' }
         { title: 'Security', description: 'Cloud security best practices' }
       ]
-    },
+    }
     {
-      icon: Shield,
-      title: 'Security',
-      description: 'Security implementation and best practices',
+      icon: Shield;
+      title: 'Security'
+      description: 'Security implementation and best practices'
       sections: [
-        { title: 'Authentication', description: 'User authentication and authorization' },
-        { title: 'Data Protection', description: 'GDPR compliance and data privacy' },
-        { title: 'Network Security', description: 'Firewall and network protection' },
-        { title: 'Audit Logs', description: 'Security monitoring and logging' },
+        { title: 'Authentication', description: 'User authentication and authorization' }
+        { title: 'Data Protection', description: 'GDPR compliance and data privacy' }
+        { title: 'Network Security', description: 'Firewall and network protection' }
+        { title: 'Audit Logs', description: 'Security monitoring and logging' }
         { title: 'Compliance', description: 'Industry compliance standards' }
       ]
     }
@@ -61,68 +61,68 @@ const Documentation: NextPage = () => {
 
   const quickStartGuides = [
     {
-      title: 'Quick Start Guide',
-      description: 'Get up and running in 5 minutes',
-      icon: Zap,
-      time: '5 min',
+      title: 'Quick Start Guide'
+      description: 'Get up and running in 5 minutes'
+      icon: Zap;
+      time: '5 min'
       difficulty: 'Beginner'
-    },
+    }
     {
-      title: 'API Integration',
-      description: 'Integrate our API into your application',
-      icon: Code,
-      time: '15 min',
+      title: 'API Integration'
+      description: 'Integrate our API into your application'
+      icon: Code;
+      time: '15 min'
       difficulty: 'Intermediate'
-    },
+    }
     {
-      title: 'Cloud Deployment',
-      description: 'Deploy your application to the cloud',
-      icon: Cloud,
-      time: '30 min',
+      title: 'Cloud Deployment'
+      description: 'Deploy your application to the cloud'
+      icon: Cloud;
+      time: '30 min'
       difficulty: 'Advanced'
-    },
+    }
     {
-      title: 'Security Setup',
-      description: 'Configure security and authentication',
-      icon: Shield,
-      time: '20 min',
+      title: 'Security Setup'
+      description: 'Configure security and authentication'
+      icon: Shield;
+      time: '20 min'
       difficulty: 'Intermediate'
     }
   ];
 
   const resources = [
     {
-      title: 'API Reference',
-      description: 'Complete API documentation with examples',
-      type: 'PDF',
-      size: '2.3 MB',
-      icon: Download
-    },
+      title: 'API Reference'
+      description: 'Complete API documentation with examples'
+      type: 'PDF'
+      size: '2.3 MB'
+      icon: Download;
+    }
     {
-      title: 'SDK Downloads',
-      description: 'Client libraries for popular programming languages',
-      type: 'ZIP',
-      size: '15.2 MB',
-      icon: Download
-    },
+      title: 'SDK Downloads'
+      description: 'Client libraries for popular programming languages'
+      type: 'ZIP'
+      size: '15.2 MB'
+      icon: Download;
+    }
     {
-      title: 'Postman Collection',
-      description: 'Ready-to-use API collection for testing',
-      type: 'JSON',
-      size: '1.1 MB',
-      icon: Download
-    },
+      title: 'Postman Collection'
+      description: 'Ready-to-use API collection for testing'
+      type: 'JSON'
+      size: '1.1 MB'
+      icon: Download;
+    }
     {
-      title: 'OpenAPI Specification',
-      description: 'Machine-readable API specification',
-      type: 'YAML',
-      size: '0.8 MB',
-      icon: Download
+      title: 'OpenAPI Specification'
+      description: 'Machine-readable API specification'
+      type: 'YAML'
+      size: '0.8 MB'
+      icon: Download;
     }
   ];
 
   return (
-    <MainLayout
+    <MainLayout;
       title="Documentation - Zion Tech Group"
       description="Comprehensive documentation for Zion Tech Group's services, APIs, and integration guides."
       keywords="documentation, API docs, integration guide, developer resources, technical documentation"
@@ -135,7 +135,7 @@ const Documentation: NextPage = () => {
               <Book className="w-16 h-16 mx-auto mb-6 text-blue-400" />
               <h1 className="text-4xl md:text-5xl font-bold mb-6">Documentation</h1>
               <p className="text-xl text-gray-200 mb-8">
-                Comprehensive guides, API references, and technical documentation to help you 
+                Comprehensive guides, API references, and technical documentation to help you;
                 integrate and use our services effectively.
               </p>
               
@@ -143,7 +143,7 @@ const Documentation: NextPage = () => {
               <div className="max-w-2xl mx-auto">
                 <div className="relative">
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
+                  <input;
                     type="text"
                     placeholder="Search documentation..."
                     value={searchQuery}
@@ -185,7 +185,7 @@ const Documentation: NextPage = () => {
             </div>
             <div className="relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
+              <input;
                 type="text"
                 placeholder="Search documentation..."
                 className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -198,7 +198,7 @@ const Documentation: NextPage = () => {
       {/* Documentation Categories */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="text-center mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -212,7 +212,7 @@ const Documentation: NextPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {docCategories.map((category, index) => (
-              <motion.div
+              <motion.div;
                 key={category.title}
                 className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
                 initial={{ opacity: 0, y: 30 }}
@@ -308,17 +308,17 @@ const Documentation: NextPage = () => {
                 Can't find what you're looking for? Our technical team is here to help.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <a;
                   href="/help"
                   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Contact Support
+                  Contact Support;
                 </a>
-                <a
+                <a;
                   href="/api"
                   className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
-                  API Reference
+                  API Reference;
                 </a>
               </div>
             </div>
@@ -359,7 +359,7 @@ const Documentation: NextPage = () => {
       {/* Popular Articles */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div;
             className="text-center mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -373,7 +373,7 @@ const Documentation: NextPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {popularArticles.map((article, index) => (
-              <motion.div
+              <motion.div;
                 key={article.title}
                 className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
                 initial={{ opacity: 0, y: 30 }}
@@ -404,14 +404,14 @@ const Documentation: NextPage = () => {
       {/* Download Documentation */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
+          <motion.div;
             className="max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl font-bold mb-4 text-gray-800">
-              Download Complete Documentation
+              Download Complete Documentation;
             </h2>
             <p className="text-xl text-gray-600 mb-8">
               Get the complete documentation package for offline reference.
@@ -419,11 +419,11 @@ const Documentation: NextPage = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center">
                 <Download className="w-5 h-5 mr-2" />
-                Download PDF
+                Download PDF;
               </button>
               <button className="bg-gray-600 hover:bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center">
                 <Download className="w-5 h-5 mr-2" />
-                Download ePub
+                Download ePub;
               </button>
             </div>
           </motion.div>
@@ -431,6 +431,6 @@ const Documentation: NextPage = () => {
       </section>
     </MainLayout>
   );
-};
+}
 
 export default Documentation;

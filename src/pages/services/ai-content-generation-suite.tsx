@@ -1,72 +1,72 @@
 import React from 'react';
 import { 
-  FileText, 
-  Brain, 
-  Zap, 
-  Globe, 
-  Mail, 
-  Phone, 
-  MapPin,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Users,
-  Clock,
-  Target,
-  TrendingUp
+  FileText;
+  Brain;
+  Zap;
+  Globe;
+  Mail;
+  Phone;
+  MapPin;
+  CheckCircle;
+  Star;
+  ArrowRight;
+  Users;
+  Clock;
+  Target;
+  TrendingUp;
 } from 'lucide-react';
 
 const AIContentGenerationSuite = () => {
   const features = [
-    'AI-powered blog post generation',
-    'Social media content creation',
-    'Email marketing campaigns',
-    'SEO-optimized content',
-    'Multi-language support',
-    'Brand voice consistency',
-    'Content calendar management',
+    'AI-powered blog post generation'
+    'Social media content creation'
+    'Email marketing campaigns'
+    'SEO-optimized content'
+    'Multi-language support'
+    'Brand voice consistency'
+    'Content calendar management'
     'Performance analytics'
   ];
 
   const benefits = [
-    'Save 80% content creation time',
-    'Consistent brand voice across all channels',
-    'Multi-language content generation',
-    'SEO-optimized output for better rankings',
-    'Scalable content production',
-    'Cost-effective solution',
-    '24/7 content generation capability',
+    'Save 80% content creation time'
+    'Consistent brand voice across all channels'
+    'Multi-language content generation'
+    'SEO-optimized output for better rankings'
+    'Scalable content production'
+    'Cost-effective solution'
+    '24/7 content generation capability'
     'Integration with popular platforms'
   ];
 
   const pricing = {
     starter: {
-      name: 'Starter',
-      price: '$199/month',
-      features: ['Up to 50 articles/month', '3 social media accounts', 'Basic SEO optimization', 'Email support'],
+      name: 'Starter'
+      price: '$199/month'
+      features: ['Up to 50 articles/month', '3 social media accounts', 'Basic SEO optimization', 'Email support']
       marketPrice: '$299/month'
-    },
+    }
     professional: {
-      name: 'Professional',
-      price: '$399/month',
-      features: ['Up to 200 articles/month', '10 social media accounts', 'Advanced SEO optimization', 'Priority support', 'Multi-language support'],
-      marketPrice: '$599/month',
-      popular: true
-    },
+      name: 'Professional'
+      price: '$399/month'
+      features: ['Up to 200 articles/month', '10 social media accounts', 'Advanced SEO optimization', 'Priority support', 'Multi-language support']
+      marketPrice: '$599/month'
+      popular: true;
+    }
     enterprise: {
-      name: 'Enterprise',
-      price: '$799/month',
-      features: ['Unlimited articles', 'Unlimited social accounts', 'Custom AI training', 'Dedicated support', 'API access', 'White-label solution'],
+      name: 'Enterprise'
+      price: '$799/month'
+      features: ['Unlimited articles', 'Unlimited social accounts', 'Custom AI training', 'Dedicated support', 'API access', 'White-label solution']
       marketPrice: '$1,299/month'
     }
-  };
+  }
 
   const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    phone: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com'
-  };
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
@@ -74,22 +74,22 @@ const AIContentGenerationSuite = () => {
       <div className="bg-white shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
-            <div
+            <div;
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 mb-6"
             >
               <FileText className="w-10 h-10 text-white" />
             </div>
-            <h1 
+            <h1;
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               className="text-5xl font-bold text-gray-900 mb-4"
             >
-              AI Content Generation Suite
+              AI Content Generation Suite;
             </h1>
-            <p 
+            <p;
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -97,25 +97,25 @@ const AIContentGenerationSuite = () => {
             >
               Transform your content marketing with AI-powered content creation that saves time, maintains brand consistency, and drives engagement across all channels.
             </p>
-            <div 
+            <div;
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
-              <a 
+              <a;
                 href={`tel:${contactInfo.phone}`}
                 className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center text-lg font-semibold"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now: {contactInfo.phone}
               </a>
-              <a 
+              <a;
                 href={`mailto:${contactInfo.email}`}
                 className="bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center text-lg font-semibold"
               >
                 <Mail className="w-5 h-5 mr-2" />
-                Get Free Demo
+                Get Free Demo;
               </a>
             </div>
           </div>
@@ -131,7 +131,7 @@ const AIContentGenerationSuite = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <div
+            <div;
               key={feature}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -155,7 +155,7 @@ const AIContentGenerationSuite = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <div
+              <div;
                 key={benefit}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -181,7 +181,7 @@ const AIContentGenerationSuite = () => {
         
         <div className="grid md:grid-cols-3 gap-8">
           {Object.entries(pricing).map(([key, plan], index) => (
-            <div
+            <div;
               key={key}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -193,7 +193,7 @@ const AIContentGenerationSuite = () => {
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                    Most Popular
+                    Most Popular;
                   </span>
                 </div>
               )}
@@ -214,15 +214,15 @@ const AIContentGenerationSuite = () => {
                 ))}
               </ul>
               
-              <a
+              <a;
                 href={`tel:${contactInfo.phone}`}
                 className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors ${
-                  plan.popular
+                  plan.popular;
                     ? 'bg-purple-600 text-white hover:bg-purple-700'
                     : 'bg-gray-200 text-gray-900 hover:bg-gray-300'
                 }`}
               >
-                Get Started
+                Get Started;
               </a>
             </div>
           ))}
@@ -273,12 +273,12 @@ const AIContentGenerationSuite = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
           <p className="text-gray-400 mt-2">
-            Professional AI content generation services
+            Professional AI content generation services;
           </p>
         </div>
       </footer>
     </div>
   );
-};
+}
 
 export default AIContentGenerationSuite;

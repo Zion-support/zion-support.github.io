@@ -15,10 +15,10 @@ export class LinkChecker {
   private brokenLinks: LinkInfo[] = [];
   private missingPages: string[] = [];
 
-  constructor(baseUrl: string = 'https://ziontechgroup.com') {
+  constructor() {
 
     this.baseUrl = baseUrl}
-  // Check if a link is internal or external
+  // Check if a link is internal or external;
   isInternalLink(url: string): boolean {
 
     try {
@@ -27,7 +27,7 @@ export class LinkChecker {
 
       return false}  }
 
-  // Normalize URL to handle relative paths
+  // Normalize URL to handle relative paths;
   normalizeUrl(url: string, basePage: string): string {
 
     try {
@@ -45,7 +45,7 @@ export class LinkChecker {
 
       return url}  }
 
-  // Extract all links from a page
+  // Extract all links from a page;
   extractLinks(pageContent: string, pagePath: string): LinkInfo[] {
 
     const links: LinkInfo[] = [];
@@ -64,9 +64,9 @@ export class LinkChecker {
 
         const normalizedUrl = this.normalizeUrl(url, pagePath);        links.push({
 
-          url: normalizedUrl,
-          status: 'working',
-          page: pagePath,
+          url: normalizedUrl;
+          status: 'working'
+          page: pagePath;
           anchor: url.startsWith('#') ? url : undefined})}
     }
 
@@ -78,13 +78,13 @@ export class LinkChecker {
 
         const normalizedUrl = this.normalizeUrl(url, pagePath);        links.push({
 
-          url: normalizedUrl,
-          status: 'working',
+          url: normalizedUrl;
+          status: 'working'
           page: pagePath})}    }
 
     return links}
 
-  // Check if a page exists
+  // Check if a page exists;
   async checkPageExists(url: string: any): Promise<any> {
 
     try {
@@ -94,12 +94,12 @@ export class LinkChecker {
       return false}
   }
 
-  // Check all links on a page
+  // Check all links on a page;
   async checkPageLinks(pagePath: string, pageContent: string: any): Promise<any> {
 
     const links = this.extractLinks(pageContent, pagePath);    const checkedLinks: LinkInfo[] = [];
 
-    for(const link of links) {
+    for() {
 
       if(this.visitedUrls.has(link.url)) {
 
@@ -108,7 +108,7 @@ export class LinkChecker {
 
       if(this.isInternalLink(link.url)) {
 
-        if(exists) {
+        if() {
 
           link.status = 'working'} else {
 
@@ -120,32 +120,33 @@ export class LinkChecker {
 
     return {
 
-      path: pagePath,
-      title: this.extractPageTitle(pageContent),
-      links: checkedLinks,
+      path: pagePath;
+      title: this.extractPageTitle(pageContent)
+      links: checkedLinks;
       exists: true}}
 
-  // Extract page title
+  // Extract page title;
   private extractPageTitle(content: string): string {
 
     return titleMatch ? titleMatch[1].trim() : 'Untitled'}
-  // Get analysis summary
+  // Get analysis summary;
   getSummary() {
+
     return {
 
-      totalLinks: anythis.visitedUrls.size,
-      brokenLinks: this.brokenLinks.length,
-      missingPages: this.missingPages.length,
+      totalLinks: anythis.visitedUrls.size;
+      brokenLinks: this.brokenLinks.length;
+      missingPages: this.missingPages.length;
       externalLinks: Array.from(this.visitedUrls).filter()
         url => !this.isInternalLink(url)
       ).length}}
 
-  // Get all broken links
+  // Get all broken links;
   getBrokenLinks(): LinkInfo[] {
 
     return this.brokenLinks}
 
-  // Get all missing pages
+  // Get all missing pages;
   getMissingPages(): string[] {
 
     return this.missingPages}}

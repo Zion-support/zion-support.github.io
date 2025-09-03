@@ -1,23 +1,24 @@
 import React from 'react';
 import { 
-  Cloud, 
-  TrendingUp, 
-  DollarSign, 
-  BarChart3, 
-  Zap, 
-  Shield, 
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Rocket,
-  Target,
-  Activity,
-  PieChart,
-  AlertTriangle,
-  Lightbulb
+  Cloud;
+  TrendingUp;
+  DollarSign;
+  BarChart3;
+  Zap;
+  Shield;
+  CheckCircle;
+  ArrowRight;
+  Star;
+  Rocket;
+  Target;
+  Activity;
+  PieChart;
+  AlertTriangle;
+  Lightbulb;
 } from 'lucide-react';
 
 export default function CloudFinOpsOptimizerPage() {
+
   return (
     <div className="min-h-screen bg-zion-slate-dark text-white">
       {/* Hero Section */}
@@ -26,20 +27,20 @@ export default function CloudFinOpsOptimizerPage() {
           <div className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-full text-sm font-medium mb-6">
               <Cloud className="w-4 h-4 mr-2" />
-              Cloud Cost Optimization
+              Cloud Cost Optimization;
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Cloud FinOps Optimizer
+              Cloud FinOps Optimizer;
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
               Maximize your cloud ROI with intelligent cost optimization, automated resource management, and comprehensive financial operations insights powered by AI.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105">
-                Start Free Assessment
+                Start Free Assessment;
               </button>
               <button className="px-8 py-4 border border-zion-purple text-zion-purple font-semibold rounded-lg hover:bg-zion-purple hover:text-white transition-all duration-300">
-                Schedule Consultation
+                Schedule Consultation;
               </button>
             </div>
           </div>
@@ -51,7 +52,7 @@ export default function CloudFinOpsOptimizerPage() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Cloud Financial Management
+              Comprehensive Cloud Financial Management;
             </h2>
             <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
               Our FinOps platform provides end-to-end visibility and control over your cloud spending with intelligent automation and optimization.
@@ -128,7 +129,7 @@ export default function CloudFinOpsOptimizerPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Transform Your Cloud Financial Operations
+                Transform Your Cloud Financial Operations;
               </h2>
               <div className="space-y-6">
                 <div className="flex items-start">
@@ -199,7 +200,7 @@ export default function CloudFinOpsOptimizerPage() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Perfect For Every Cloud Environment
+              Perfect For Every Cloud Environment;
             </h2>
             <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
               Whether you're running on AWS, Azure, Google Cloud, or multi-cloud environments, our FinOps platform adapts to your needs.
@@ -257,10 +258,10 @@ export default function CloudFinOpsOptimizerPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105">
-              Start Free Assessment
+              Start Free Assessment;
             </button>
             <button className="px-8 py-4 border border-zion-purple text-zion-purple font-semibold rounded-lg hover:bg-zion-purple hover:text-white transition-all duration-300">
-              Schedule Demo
+              Schedule Demo;
             </button>
           </div>
         </div>

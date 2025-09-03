@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+<<<<<<< HEAD;
 =======
 import React from "react"
 import { SEO } from "@/components/SEO"
@@ -12,4 +12,4 @@ export default function EnhancedNewsletterForm() {return (
         </p>
       </div>
   );"}"
->>>>>>> main
+>>>>>>> main;

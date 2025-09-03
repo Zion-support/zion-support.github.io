@@ -12,17 +12,8 @@ interface SEOHeadProps {
   noFollow?: boolean;
 }
 
-export default function SEOHead({ 
-  title, 
-  description, 
-  keywords = [], 
-  canonicalUrl, 
-  ogImage = '/images/zion-tech-group-og.jpg', 
-  ogType = 'website', 
-  structuredData, 
-  noIndex = false, 
-  noFollow = false 
-}: SEOHeadProps) {
+export default function SEOHead() {
+
   const fullTitle = `${title} | Zion Tech Group - AI & Technology Solutions`;
   
   const defaultKeywords = [
@@ -74,21 +65,21 @@ export default function SEOHead({
       {/* Default organization structured data */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{
         __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Zion Tech Group",
-          "url": "https://ziontechgroup.com",
-          "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
-          "description": "Leading provider of AI services, IT solutions, and innovative technology consulting for enterprise digital transformation.",
+          "@context": "https://schema.org"
+          "@type": "Organization"
+          "name": "Zion Tech Group"
+          "url": "https://ziontechgroup.com"
+          "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png"
+          "description": "Leading provider of AI services, IT solutions, and innovative technology consulting for enterprise digital transformation."
           "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-302-464-0950",
-            "contactType": "Customer Service",
+            "@type": "ContactPoint"
+            "telephone": "+1-302-464-0950"
+            "contactType": "Customer Service"
             "availableLanguage": "English"
-          },
+          }
           "sameAs": [
-            "https://linkedin.com/company/ziontechgroup",
-            "https://twitter.com/ziontechgroup",
+            "https://linkedin.com/company/ziontechgroup"
+            "https://twitter.com/ziontechgroup"
             "https://github.com/ziontechgroup"
           ]
         })
