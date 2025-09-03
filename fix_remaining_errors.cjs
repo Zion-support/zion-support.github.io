@@ -1,6 +1,6 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const fs = require("fs-extra");
-async function fixRemainingErrors() {;
+async function fixRemainingErrors() {
   console.log("🔧 Fixing remaining TypeScript syntax errors...");
   // Fix specific files with remaining errors;
   // Fix utils/api/quoteRequests.ts;
@@ -14,7 +14,6 @@ async function fixRemainingErrors() {;
     await fs.writeFile(quoteRequestsPath, content);
     console.log("✅ Fixed quoteRequests.ts");,
 }
-;
   // Fix utils/browserExtensionDetector.ts;
   const browserDetectorPath = "utils/browserExtensionDetector.ts";
   if (await fs.pathExists(browserDetectorPath)) {;
@@ -39,7 +38,7 @@ async function fixRemainingErrors() {;
   if (await fs.pathExists(sanitizePath)) {;
     let content = await fs.readFile(sanitizePath, "utf8");
     content = content.replace(;
-      /let, sanitize, d = html\.replace\(\/<scri p t\\b\[^<\]\*\(\?:\!<\/scri p t>\)<\[^<\]\*\)\*<\/scri p t>\/gi {2}""/,;
+      /let, sanitize, d = html\.replace\(\/<scri p t\\b\[^<\]\*\(\?:\!<\/scri p t>\)<\[^<\]\*\)\*<\/scri p t>\/gi {2}""/,
       let sanitized = html.replace(/<script\\b[^<]*(?:(?!<\\/script>)<[^<]*)*<\\/script>/gi, "");
     );
     content = content.replace(;

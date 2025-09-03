@@ -1,13 +1,12 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
-class SpecificSyntaxFixer {;
-  constructor() {;
-    this.projectRoot = process.cwd();,
+class SpecificSyntaxFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
 }
-;
-  log(message) {;
+  log() {
     console.log(`[${new Date().toISOString()}] ${message}`);,
 }
 ;
@@ -17,7 +16,7 @@ class SpecificSyntaxFixer {;
     let content = fs.readFileSync(filePath, "utf8");
     // Fix the specific JSX issue;
     content = content.replace(;
-      /<\/a>\s*<a\s*href="mailto:kleber@ziontechgroup.com"/g,;
+      /<\/a>\s*<a\s*href="mailto: kleber@ziontechgroup.com"/g,
       "</a>\n                <a\n                  href="mailto:kleber@ziontechgroup.com";
     );
     fs.writeFileSync(filePath, content, "utf8");
@@ -31,7 +30,7 @@ class SpecificSyntaxFixer {;
     let content = fs.readFileSync(filePath, "utf8");
     // Fix the option value issue;
     content = content.replace(;
-      /<option value=">Select a service<\/option>/g,;
+      /<option value=">Select a service<\/option>/g,
       "<option value="">Select a service</option>";
     );
     fs.writeFileSync(filePath, content, "utf8");

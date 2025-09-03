@@ -1,14 +1,14 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("child_process");
-class MasterAutomationOrchestrator {;
-  constructor() {;
+class MasterAutomationOrchestrator {
+  constructor() {
     this.projectRoot = process.cwd();
     this.startTime = new Date();
     this.results = {;
-      dependencyFix: { success: false, duration: 0, errors: [] },;
+      dependencyFix: { success: false, duration: 0, errors: [] },
       typescriptFix: { success: false, duration: 0, errors: [] },;
       healthCheck: { success: false, duration: 0, errors: [] },;
       securityScan: { success: false, duration: 0, errors: [] },;
@@ -16,8 +16,7 @@ class MasterAutomationOrchestrator {;
       buildTest: { success: false, duration: 0, errors: [] }
     }
   }
-;
-  log(message, type = "INFO") {;
+  log() {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] [${type}] ${message}`);,
 }
@@ -27,7 +26,7 @@ class MasterAutomationOrchestrator {;
     this.log(`🚀 Running ${scriptName}...`);
     try {;
       const result = execSync(`node ${scriptPath}`, { ;
-        cwd: this.projectRoot,;
+        cwd: this.projectRoot,
         stdio: "inherit",;
         encoding: "utf8";,
 });

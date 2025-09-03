@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
 const filePath = "./src/components/ChatAssistant.tsx";
@@ -9,7 +9,7 @@ try {;
   content = content.replace(/\(event: \)/g, "(event: any)");
   // Fix missing return type;
   content = content.replace(;
-    /:\s*{\s*content:\s*string\s*metadata:\s*}/g,;
+    /:\s*{\s*content:\s*string\s*metadata:\s*}/g,
     ": { content: string metadata: any }";
   );
   // Fix missing type in Date.now();

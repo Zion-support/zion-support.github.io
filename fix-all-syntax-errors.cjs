@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 // Function to fix malformed import statements;
-function fixMalformedImports(content) {;
+function fixMalformedImports() {
   // Fix patterns like: import React from "react";"import;
   content = content.replace(/import\s+([^]+);"import/g, "import $1;\nimport");
   // Fix patterns like: ";"import;
@@ -22,13 +22,12 @@ function fixMalformedImports(content) {;
   content = content.replace(/import\s+{\s*;\s*/g, "import {\n  ");
   return content;,
 }
-;
 // Function to fix specific file issues;
 function fixSpecificFileIssues(filePath, content) {;
   // Fix react-router-dom imports in Next.js files;
   if (content.includes("react-router-dom")) {;
     content = content.replace(;
-      /import\s+{\s*Link\s*}\s+from\s+"react-router-dom";/g,;
+      /import\s+{\s*Link\s*}\s+from\s+"react-router-dom";/g,
       "import Link from "next/link";";
     );
     content = content.replace(;

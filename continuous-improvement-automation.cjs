@@ -1,15 +1,14 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-class ContinuousImprovementAutomation {;
-  constructor() {;
+class ContinuousImprovementAutomation {
+  constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, "automation-improvements.log");,
 }
-;
-  log(message) {;
+  log() {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(logMessage.trim());
@@ -21,7 +20,7 @@ class ContinuousImprovementAutomation {;
       this.log(`Running: ${description}`);
       const output = execSync(command, { cwd: this.projectRoot, stdio: "pipe" });
       this.log(`✅ ${description} completed successfully`);
-      return output.toString();,
+      return output.toString();
 } catch (error) {;
       this.log(`❌ ${description} failed: ${error.message}`);
       return null;,
@@ -111,7 +110,7 @@ const { execSync } = require("child_process");
 class MaintenanceScheduler {;
   constructor() {;
     this.tasks = [;
-      { name: "Security Audit", command: "npm audit", frequency: "daily" },;
+      { name: "Security Audit", command: "npm audit", frequency: "daily" },
       { name: "Dependency Updates", command: "npm outdated", frequency: "weekly" },;
       { name: "Code Quality Check", command: "node code-quality-checker.js", frequency: "daily" },;
       { name: "Performance Analysis", command: "node performance-analyzer.js", frequency: "weekly" }

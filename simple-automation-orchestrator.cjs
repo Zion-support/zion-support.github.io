@@ -1,27 +1,28 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-class SimpleAutomationOrchestrator {;
-  constructor() {;
+
+class SimpleAutomationOrchestrator {
+  constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, "automation", "logs", "simple-automation.log");
     this.ensureDirectories();
-    this.results = {;
-      timestamp: new Date().toISOString(),;
-      status: "running",;
-      steps: [],;
-      errors: [],;
-      fixes: [],;
-      improvements: [],;
-      newScripts: [];,
-}
+    this.results = {
+      timestamp: new Date().toISOString(),
+      status: "running",
+      steps: [],
+      errors: [],
+      fixes: [],
+      improvements: [],
+      newScripts: []
+    }
   }
-;
-  ensureDirectories() {;
+
+  ensureDirectories() {
     const dirs = ["automation/logs", "scripts/automation/reports", "reports"];
-    dirs.forEach(dir => {;
+    dirs.forEach(dir => {
       const dirPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(dirPath)) {;
         fs.mkdirSync(dirPath, { recursive: true });,
@@ -29,7 +30,7 @@ class SimpleAutomationOrchestrator {;
     });,
 }
 ;
-  log(message, level = "INFO") {;
+  log() {
     const timestamp = new Date().toISOString();
     const logMessage = "[" + timestamp + "] [" + level + "] " + message;
     console.log(logMessage);
@@ -47,8 +48,8 @@ class SimpleAutomationOrchestrator {;
       const result = await stepFunction();
       const duration = Date.now() - stepStart;
       this.results.steps.push({;
-        name: stepName,;
-        status: "success",;
+        name: stepName,
+        status: "success",
         duration: duration,;
         result: result;,
 });
@@ -65,7 +66,7 @@ class SimpleAutomationOrchestrator {;
       this.results.errors.push({;
         step: stepName,;
         error: error.message,;
-        timestamp: new Date().toISOString();,
+        timestamp: new Date().toISOString();
 });
       this.log("Failed step: " + stepName + " - " + error.message, "ERROR");
       return null;,
@@ -188,8 +189,8 @@ class SimpleAutomationOrchestrator {;
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-class EnhancedErrorChecker {;
-  constructor() {;
+class EnhancedErrorChecker {
+  constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, "automation", "logs", "enhanced-error-checker.log");
     this.ensureDirectories();,

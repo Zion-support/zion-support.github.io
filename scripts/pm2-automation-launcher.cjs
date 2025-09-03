@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const fs = require("fs")
-const path = require("path")
+const fs = require("fs");
+const path = require("path");
 const { execSync, spawn } = require("child_process")
 class PM2AutomationLauncher {
   constructor() {
@@ -14,7 +14,7 @@ class PM2AutomationLauncher {
     this.ensureLogDirectory()
     this.config = this.loadConfig(),
 }
-const fs = require("fs")";const path = require("path")";const { execSync, spawn } = require("child_process")"";class PM2AutomationLauncher {
+const fs = require("fs");";const path = require("path");";const { execSync, spawn } = require("child_process")"";class PM2AutomationLauncher {
   constructor() {
     this.processes = new Map()
     this.logFile = path.join();      __dirname,..",""logs",pm2-automation-launcher.log"");";    this.ensureLogDirectory()

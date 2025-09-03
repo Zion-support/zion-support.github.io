@@ -1,16 +1,16 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 import fs from "fs";
 import path from "path";
 // List of critical files that need to be fixed;
 const criticalFiles = [;
-  "src/pages/services/index.tsx",;
+  "src/pages/services/index.tsx",
   "src/pages/solutions.tsx",;
   "tailwind.config.ts",;
   "vite.config.ts",;
   "vitest.config.ts";
 ];
-function fixServicesIndex() {;
+function fixServicesIndex() {
   const content = `import React from "react";
 import { Link  } from "react-router-dom";
 const ServicesIndex: React.FC = () => {;
@@ -56,7 +56,6 @@ export default ServicesIndex;
   fs.writeFileSync("src/pages/services/index.tsx", content);
   console.log("Fixed src/pages/services/index.tsx");,
 }
-;
 function fixSolutions() {;
   const content = `import React from "react";
 import Head from "next/head";
@@ -134,7 +133,7 @@ export default {;
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",;
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",;
   ],;
-  darkMode: "class",;
+  darkMode: "class",
   theme: {;
     extend: {;
       colors: {;

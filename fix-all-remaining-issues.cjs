@@ -1,13 +1,12 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
-class AllIssuesFixer {;
-  constructor() {;
-    this.projectRoot = process.cwd();,
+class AllIssuesFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
 }
-;
-  log(message) {;
+  log() {
     console.log(`[${new Date().toISOString()}] ${message}`);,
 }
 ;
@@ -17,7 +16,7 @@ class AllIssuesFixer {;
     let content = fs.readFileSync(filePath, "utf8");
     // Fix the specific JSX issue by rewriting the problematic section;
     content = content.replace(;
-      /<h3 className="text-2xl font-bold text-white mb-2">\s*\{factor\.factor\}<\/h3>\s*<p className="text-gray-300">\s*\{factor\.description\}<\/p>/g,;
+      /<h3 className="text-2xl font-bold text-white mb-2">\s*\{factor\.factor\}<\/h3>\s*<p className="text-gray-300">\s*\{factor\.description\}<\/p>/g,
       `<h3 className="text-2xl font-bold text-white mb-2">;
                         {factor.factor}
                       </h3>;
@@ -36,7 +35,7 @@ class AllIssuesFixer {;
     let content = fs.readFileSync(filePath, "utf8");
     // Fix the JSX structure issue;
     content = content.replace(;
-      /<\/motion\.div>\s*<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">\s*\{siteStructure\.map/g,;
+      /<\/motion\.div>\s*<div className="grid grid-cols-1 lg: grid-cols-2 gap-8">\s*\{siteStructure\.map/g,
       `</motion.div>;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {siteStructure.map`;

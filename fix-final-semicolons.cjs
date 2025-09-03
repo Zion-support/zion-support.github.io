@@ -1,15 +1,15 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
 // Function to fix all remaining semicolons in JSX;
-function fixFinalSemicolons(filePath) {;
+function fixFinalSemicolons() {
   try {;
     let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
     // More specific fixes for remaining semicolons;
     const fixes = [;
       // Fix JSX attribute semicolons;
-      { pattern: /(\w+)="([^"]*);"/g, replacement: "$1="$2"" },;
+      { pattern: /(\w+)="([^"]*);"/g, replacement: "$1="$2"" },
       { pattern: /(\w+)="([^"]*);"/g, replacement: "$1="$2"" },;
       // Fix JSX closing tag semicolons;
       { pattern: /(\/>);/g, replacement: "$1" },;
@@ -47,7 +47,6 @@ function fixFinalSemicolons(filePath) {;
     return false;,
 }
 }
-;
 // Specific files that need fixing;
 const filesToFix = [;
   `components/SEO.tsx`,;

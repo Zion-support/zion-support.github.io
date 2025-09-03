@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")"";class EnhancedAppImprover {
+const fs = require("fs");";const path = require("path");";const { execSync } = require("child_process")"";class EnhancedAppImprover {
   constructor() {
     this.projectRoot = process.cwd()
     this.improvements = []
@@ -46,7 +46,7 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
 },,
 }, [])
   return metrics,,
-};`;`
+}`;`
     this.writeFile("src/hooks/usePerformanceMonitoring.ts", performanceHook);";    this.improvements.push("Created performance monitoring hook");"}"
   async improveCodeQuality() {
     console.log("📝 Improving code quality...");"";    // Create TypeScript configuration improvements
@@ -154,7 +154,7 @@ export const "LoadingSpinner": React.FC<LoadingSpinnerProps> = ({";  size = "md"
   async optimizeBuildProcess() {
     console.log("🔨 Optimizing build process...");"";    // Create build optimization script
     const buildOptimizer = `#!/usr/bin/env node`
-const { execSync } = require("child_process")";const fs = require("fs")";const path = require("path")"";class BuildOptimizer {
+const { execSync } = require("child_process")";const fs = require("fs");";const path = require("path");"";class BuildOptimizer {
   constructor() {
     this.projectRoot = process.cwd(),,
 }
@@ -269,7 +269,7 @@ For support, email support@ziontechgroup.com or join our Slack channel.
   async createAdditionalScripts() {
     console.log("🔧 Creating additional automation scripts...");"";    // Create deployment automation script
     const deploymentScript = `#!/usr/bin/env node`
-const { execSync } = require("child_process")";const fs = require("fs")"";class DeploymentAutomation {
+const { execSync } = require("child_process")";const fs = require("fs");"";class DeploymentAutomation {
   constructor() {
     this.projectRoot = process.cwd(),,
 }

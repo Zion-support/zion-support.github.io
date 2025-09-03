@@ -1,10 +1,10 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 // List of files that need fixing based on the lint output;
 const filesToFix = [;
-  "pages/ai-services.tsx",;
+  "pages/ai-services.tsx",
   "pages/blog.tsx", ;
   "pages/help.tsx",;
   "pages/it-services.tsx",;
@@ -18,7 +18,7 @@ const filesToFix = [;
   "components/ContactForm.tsx",;
   "components/TestimonialsSection.tsx";
 ];
-function fixUnescapedEntities(content) {;
+function fixUnescapedEntities() {
   // First, restore any incorrectly replaced quotes in import statements;
   content = content.replace(/from &apos;([^&]+)&apos;/g, "from "$1"");
   content = content.replace(/import ([^&]+) from &apos;([^&]+)&apos;/g, "import $1 from "$2"");
@@ -29,7 +29,6 @@ function fixUnescapedEntities(content) {;
   content = content.replace(/(?<!import\s+[^]+from\s+[""])(?<!&)(?<!&quot)(?<!&ldquo)(?<!&rdquo)(?<!&&#34)(?<!&amp)"/g, "&quot;");
   return content;,
 }
-;
 function fixFile(filePath) {;
   try {;
     if (!fs.existsSync(filePath)) {;

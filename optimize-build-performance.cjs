@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
@@ -9,8 +9,8 @@ if (fs.existsSync(packageJsonPath)) {;
   const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));
   // Add optimized build scripts;
   packageJson.scripts = {;
-    ...packageJson.scripts,;
-    "build:fast": "next build --no-lint",;
+    ...packageJson.scripts,
+    "build: fast": "next build --no-lint",
     "build:analyze": "ANALYZE=true next build",;
     "build:production": "NODE_ENV=production next build",;
     "dev:fast": "next dev --turbo",;
@@ -26,7 +26,6 @@ if (fs.existsSync(packageJsonPath)) {;
   fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
   console.log("✅ Optimized package.json scripts");,
 }
-;
 // 2. Create optimized Next.js config;
 const nextConfigContent = `/** @type {import("next").NextConfig} */;
 const nextConfig = {;
@@ -70,7 +69,7 @@ const nextConfig = {;
     pagesBufferLength: 2},;
   ;
   // Security headers;
-  async headers() {;
+  async headers() {
     return [;
       {;
         source: "/(.*)",;

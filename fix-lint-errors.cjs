@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
@@ -10,7 +10,7 @@ const errorLines = lintOutput.split("\n").filter(line => line.includes("Error: P
 const errorFiles = new Set();
 errorLines.forEach(line => {;
   const match = line.match(/^\.\/(.+?):\d+:\d+\s+Error:/);
-  if (match) {;
+  if() {
     errorFiles.add(match[1]);,
 }
 });
@@ -25,7 +25,6 @@ function fixFile(filePath) {;
       content = content.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""]([^""]+)[""]\s*([^])/g, "import { $1 } from \"$2\"; $3");
       modified = true;,
 }
-;
     // Fix 2: Fix malformed import statements;
     content = content.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""]([^""]+)[""]\s*([^])/g, "import { $1 } from \"$2\"; $3");
     // Fix 3: Fix missing semicolons after variable declarations;

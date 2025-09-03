@@ -1,15 +1,15 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
 // Function to fix all semicolons in JSX attributes;
-function fixAllJSXSemicolons(filePath) {;
+function fixAllJSXSemicolons() {
   try {;
     let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
     // More comprehensive fixes for JSX semicolons;
     const fixes = [;
       // Fix className semicolons;
-      { pattern: /className="([^"]*);"/g, replacement: "className="$1"" },;
+      { pattern: /className="([^"]*);"/g, replacement: "className="$1"" },
       { pattern: /className="([^"]*);"/g, replacement: "className="$1"" },;
       // Fix any attribute semicolons;
       { pattern: /(\w+)="([^"]*);"/g, replacement: "$1="$2"" },;
@@ -47,7 +47,6 @@ function fixAllJSXSemicolons(filePath) {;
     return false;,
 }
 }
-;
 // Function to recursively find and fix files;
 function fixFilesInDirectory(dir) {;
   const files = fs.readdirSync(dir);

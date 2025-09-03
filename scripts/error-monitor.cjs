@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const fs = require("fs")
-const path = require("path")
+const fs = require("fs");
+const path = require("path");
 const { execSync } = require("child_process")
 class ErrorMonitor {
   constructor() {
@@ -137,10 +137,10 @@ class ErrorMonitor {
 }),
 } catch (error) {
         this.log("warn", `Could not read log file ${logFile}: ${error.message}`)
-const fs = require("fs").promises
-const path = require("path")
+const fs = require("fs");.promises
+const path = require("path");
 const { exec } = require("child_process")
-const util = require("util")
+const util = require("util");
 const execAsync = util.promisify(exec)
 class ErrorMonitor {
   constructor() {

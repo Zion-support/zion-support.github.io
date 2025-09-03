@@ -2,8 +2,8 @@ module.exports = {;
   apps: [;
     // Main application;
     {;
-      name: "bolt-app",;
-      script: "npm",;
+      name: "bolt-app",
+      script: "npm",
       args: "start",;
       cwd: "./",;
       instances: 1,;

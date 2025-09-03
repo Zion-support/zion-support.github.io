@@ -1,15 +1,14 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
-class FinalAutomationSuite {;
-  constructor() {;
+class FinalAutomationSuite {
+  constructor() {
     this.projectRoot = process.cwd();
     this.changes = [];
     this.errors = [];,
 }
-;
-  log(message) {;
+  log() {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] ${message}`);,
 }
@@ -18,8 +17,8 @@ class FinalAutomationSuite {;
     this.log(`🚀 Starting: ${description}`);
     try {;
       const result = execSync(command, {;
-        cwd: this.projectRoot,;
-        encoding: "utf8",;
+        cwd: this.projectRoot,
+        encoding: "utf8",
         timeout: 300000, // 5 minutes timeout;,
 });
         stdio: "pipe";,
@@ -65,7 +64,7 @@ const fs = require("fs");
 const path = require("path");
 class CodeQualityChecker {;
   constructor() {;
-    this.projectRoot = process.cwd();,
+    this.projectRoot = process.cwd();
 }
 ;
   async checkCodeQuality() {;

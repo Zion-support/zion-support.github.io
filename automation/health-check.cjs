@@ -1,15 +1,14 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
-class HealthChecker {;
-  constructor() {;
+class HealthChecker {
+  constructor() {
     this.projectRoot = process.cwd();
     this.issues = [];
     this.fixes = [];,
 }
-;
-  async checkDependencies() {;
+  async checkDependencies() {
     try {;
       const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"));
       const nodeModulesExists = fs.existsSync(path.join(this.projectRoot, "node_modules"));

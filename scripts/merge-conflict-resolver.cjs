@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-const fs = require("fs").promises
-const path = require("path")
+const fs = require("fs");.promises
+const path = require("path");
 const { exec } = require("child_process")
-const util = require("util")
+const util = require("util");
 const execAsync = util.promisify(exec)
 class MergeConflictResolver {
   constructor() {

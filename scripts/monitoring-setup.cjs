@@ -1,6 +1,6 @@
 
-const fs = require("fs")
-const path = require("path")
+const fs = require("fs");
+const path = require("path");
 class MonitoringSetup {
   constructor() {
     this.projectRoot = process.cwd(),
@@ -53,7 +53,7 @@ export default analytics
   async setupHealthChecks() {
     console.log("🏥 Setting up health checks...")
     const healthCheckScript = `
-const express = require("express")
+const express = require("express");
 const app = express()
 app.get("/health", (req, res) => {
   res.status(200).json({

@@ -1,190 +1,190 @@
-const SEOMeta = ({ title, description, keywords = "AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group", image = "/images / zion - tech - group - og.jpg", url = window.location.href, type = "website", structuredData }) => { const siteName = "Zion Tech Group`; const fullTitle = `${title} | ${siteName}`;`"`";,"});,"})";
-;,"});,"})";
-";,"});,"})","});,"})";
-const SEOMeta = ({ title, description, keywords = "AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group", image = "/images/zion-tech-group-og.jpg", url = window.location.href, type = "website", structuredData }) => {}"});,"})";
-";,"});,"})";
-"";,"});,"})";
-""";,"});,"})";
-    const siteName = "Zion Tech Group";,"});,`})";
-    const fullTitle = `${title} | ${siteName}`;,`});,"})";
-    // Default structured data for organization,"});,"})";
-    const defaultStructuredData = {}"});,"})";
-  "@context": "https://schema.org","""";,"});,"})";
-        "@type": "Organization","""";,"});,"})";
-        "name": "Zion Tech Group","""";,"});,"})";
-        "url": "https://ziontechgroup.com","""";,"});,"})";
-        "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png","""";,"});,"})";
-        "description": "Leading provider of AI-powered technology solutions and innovative micro SAAS services","""";,"});,"})";
-        "address": {}"});,"})";
-""";,"});,"})";
-"""";,"});,"})";
-            "@type": "PostalAddress","""";,"});,"})";
-            "streetAddress": "364 E Main St STE 1008","""";,"});,"})";
-            "addressLocality": "Middletown","""";,"});,"})";
-            "addressRegion": "DE","""";,"});,"})";
-            "postalCode": "19709","""";,"});,"})";
-  "addressCountry": "US""";,"});,"})";
+const SEOMeta = ({ title, description, keywords = "AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group", image = "/images / zion - tech - group - og.jpg", url = window.location.href, type = "website", structuredData }) => { const siteName = "Zion Tech Group`; const fullTitle = `${title} | ${siteName}`;`"`";,"});,"})"
+;,"});,"})"
+";,"});,"})","});,"})"
+const SEOMeta = ({ title, description, keywords = "AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group", image = "/images/zion-tech-group-og.jpg", url = window.location.href, type = "website", structuredData }) => {}"});,"})"
+";,"});,"})"
+"";,"});,"})"
+""";,"});,"})"
+    const siteName = "Zion Tech Group";,"});,`})"
+    const fullTitle = `${title} | ${siteName}`;,`});,"})"
+    // Default structured data for organization,"});,"})"
+    const defaultStructuredData = {}"});,"})"
+  "@context": "https://schema.org","""";,"});,"})"
+        "@type": "Organization","""";,"});,"})"
+        "name": "Zion Tech Group","""";,"});,"})"
+        "url": "https://ziontechgroup.com","""";,"});,"})"
+        "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png","""";,"});,"})"
+        "description": "Leading provider of AI-powered technology solutions and innovative micro SAAS services","""";,"});,"})"
+        "address": {}"});,"})"
+""";,"});,"})"
+"""";,"});,"})"
+            "@type": "PostalAddress","""";,"});,"})"
+            "streetAddress": "364 E Main St STE 1008","""";,"});,"})"
+            "addressLocality": "Middletown","""";,"});,"})"
+            "addressRegion": "DE","""";,"});,"})"
+            "postalCode": "19709","""";,"});,"})"
+  "addressCountry": "US""";,"});,"})"
 """;,"});,"});";,
-},"""";,"});,"})";
-        "contactPoint": {}"});,"})";
-""";,"});,"})";
-"""";,"});,"})";
-            "@type": "ContactPoint","""";,"});,"})";
-            "telephone": "+1-302-464-0950","""";,"});,"})";
-            "contactType": "customer service","""";,"});,"})";
+}"""";,"});,"})"
+        "contactPoint": {}"});,"})"
+""";,"});,"})"
+"""";,"});,"})"
+            "@type": "ContactPoint","""";,"});,"})"
+            "telephone": "+1-302-464-0950","""";,"});,"})"
+            "contactType": "customer service","""";,"});,"})"
             "email": "kleber@ziontechgroup.com"""";,"});,"});";,
-},"""";,"});,"})";
-        "sameAs"[;"""";,"});,"})";
-            "https://linkedin.com/company/ziontechgroup","""";,"});,"})";
-            "https://twitter.com/ziontechgroup","""";,"});,"})";
-            "https: //github.com/ziontechgroup"""","});,"})";
-        ],"""";,"});,"})";
-        "foundingDate": "2015","""";,"});,"})";
-        "numberOfEmployees": "50+","""";,"});,"})";
-        "serviceArea": "Worldwide","""";,"});,"})";
-        "hasOfferCatalog": {}"});,"})";
-""";,"});,"})";
-"""";,"});,"})";
-            "@type": "OfferCatalog","""";,"});,"})";
-            "name": "Technology Services","""";,"});,"})";
-            "itemListElement"[;,"});,"})";
-                {}"});,"})";
-""";,"});,"})";
-"""";,"});,"})";
-                    "@type": "Offer","""";,"});,"})";
-                    "itemOffered": {}"});,"})";
-""";,"});,"})";
-"""";,"});,"})";
-                        "@type": "Service","""";,"});,"})";
-                        "name": "AI Strategy Consulting","""";,"});,"})";
+}"""";,"});,"})"
+        "sameAs"[;"""";,"});,"})"
+            "https://linkedin.com/company/ziontechgroup","""";,"});,"})"
+            "https://twitter.com/ziontechgroup","""";,"});,"})"
+            "https: //github.com/ziontechgroup"""","});,"})"
+        ]"""";,"});,"})"
+        "foundingDate": "2015","""";,"});,"})"
+        "numberOfEmployees": "50+","""";,"});,"})"
+        "serviceArea": "Worldwide","""";,"});,"})"
+        "hasOfferCatalog": {}"});,"})"
+""";,"});,"})"
+"""";,"});,"})"
+            "@type": "OfferCatalog","""";,"});,"})"
+            "name": "Technology Services","""";,"});,"})"
+            "itemListElement"[;,"});,"})"
+                {}"});,"})"
+""";,"});,"})"
+"""";,"});,"})"
+                    "@type": "Offer","""";,"});,"})"
+                    "itemOffered": {}"});,"})"
+""";,"});,"})"
+"""";,"});,"})"
+                        "@type": "Service","""";,"});,"})"
+                        "name": "AI Strategy Consulting","""";,"});,"})"
                         "description": "Comprehensive AI strategy development and implementation consulting for enterprises""";,"});,"});";,
 }"});,"});";,
-},,"});,"})";
-                {}"});,"})";
-""";,"});,"})";
-"""";,"});,"})";
-                    "@type": "Offer","""";,"});,"})";
-                    "itemOffered": {}"});,"})";
-""";,"});,"})";
-"""";,"});,"})";
-                        "@type": "Service","""";,"});,"})";
-                        "name": "Quantum AI Fusion Platform","""";,"});,"})";
+},"});,"})"
+                {}"});,"})"
+""";,"});,"})"
+"""";,"});,"})"
+                    "@type": "Offer","""";,"});,"})"
+                    "itemOffered": {}"});,"})"
+""";,"});,"})"
+"""";,"});,"})"
+                        "@type": "Service","""";,"});,"})"
+                        "name": "Quantum AI Fusion Platform","""";,"});,"})"
                         "description": "Revolutionary platform combining quantum computing with artificial intelligence""";,"});,"});";,
 }"});,"});";,
-}"});,"})";
-            ],"});,"});";,
+}"});,"})"
+            ]"});,"});";,
 }"});,"});";,
-};,"});,"})";
-    const finalStructuredData = structuredData || defaultStructuredData,"});,"})";
-    return (<Helmet>;,"});,"})";
-      {/*   */}""";,"});,"})";
-      <title>{fullTitle}</title>"""";,"});,"})";
-      <meta name="description" content="{description}/">"""";,"});,"})";
-      <meta name="keywords" content="{keywords}/">"""";,"});,"})";
-      <meta name="author" content="Zion Tech Group"/>"""";,"});,"})";
-      <meta name="robots" content="index, follow"/>"""";,"});,"})";
-      <meta name="language" content="English"/>"""";,"});,"})";
-      <meta name="revisit-after" content="7 days"/>;,"});,"})";
-      """;,"});,"})";
-      {/*   */}"""";,"});,"})";
-      <meta property="og:title" content="{fullTitle}/">"""";,"});,"})";
-      <meta property="og:description" content="{description}/">"""";,"});,"})";
-      <meta property="og:type" content="{type}/">"""";,"});,"})";
-      <meta property="og:url" content="{url}/">"""";,"});,"})";
-      <meta property="og:image" content="{image}/">"""";,"});,"})";
-      <meta property="og: image:width" content="1200"/>"""","});,"})";
-      <meta property="og: image:height" content="630"/>"""","});,"})";
-      <meta property="og:site_name" content="{siteName}/">"""";,"});,"})";
-      <meta property="og: locale" content="en_US"/>,"});,"})";
-      """;,"});,"})";
-      {/*   */}"""";,"});,"})";
-      <meta name="twitter: card" content="summary_large_image"/>"""","});,"})";
-      <meta name="twitter: site" content="@ziontechgroup"/>"""","});,"})";
-      <meta name="twitter: creator" content="@ziontechgroup"/>"""","});,"})";
-      <meta name="twitter:title" content="{fullTitle}/">"""";,"});,"})";
-      <meta name="twitter:description" content="{description}/">"""";,"});,"})";
-      <meta name="twitter:image" content="{image}/">;,"});,"})";
-      """;,"});,"})";
-      {/*   */}"""";,"});,"})";
-      <meta name="viewport" content="width="device-width," initial-scale=1.0"/>"""";,"});,"})";
-      <meta name="theme-color" content="#22ddd2"/>"""";,"});,"})";
-      <meta name="msapplication-TileColor" content="#22ddd2"/>"""";,"});,"})";
-      <meta name="apple-mobile-web-app-capable" content="yes"/>"""";,"});,"})";
-      <meta name="apple-mobile-web-app-status-bar-style" content="default"/>"""";,"});,"})";
-      <meta name="apple-mobile-web-app-title" content="{siteName}/">;,"});,"})";
-      """;,"});,"})";
-      {/*   */}"""";,"});,"})";
-      <link rel="canonical" href="{url}/">;,"});,"})";
-      """;,"});,"})";
-      {/*   */}"""";,"});,"})";
-      <link rel="icon" type="image/x-icon" href="/favicon.ico"/>"""";,"});,"})";
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>"""";,"});,"})";
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>"""";,"});,"})";
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>"""";,"});,"})";
-      <link rel="manifest" href="/site.webmanifest"/>;,"});,"})";
-      """;,"});,"})";
-      {/*   */}"""";,"});,"})";
-      <link rel="preconnect" href="https: //fonts.googleapis.com"/>"""","});,"})";
-      <link rel="preconnect" href="https: //fonts.gstatic.com" crossOrigin="anonymous"/>,"});,"})";
-      """;,"});,"})";
-      {/*   */}"""";,"});,"})";
-      <script type="application/ld+json">;,"});,"})";
-        {JSON.stringify(finalStructuredData)}"});,"})";
-      </script>;,"});,"})";
-      """;,"});,"})";
-      {/*   */}"""";,"});,"})";
-      <meta name="application-name" content="{siteName}/">"""";,"});,"})";
-      <meta name="mobile-web-app-capable" content="yes"/>"""";,"});,"})";
-      <meta name="format-detection" content="telephone=no"/>"""";,"});,"})";
-      <meta name="msapplication-config" content="/browserconfig.xml"/>;,"});,"})";
-      """;,"});,"})";
-      {/*   */}"""";,"});,"})";
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>"""";,"});,"})";
-      <meta name="referrer" content="strict-origin-when-cross-origin"/>;,"});,"})";
-      """;,"});,"})";
-      {/*   */}"""";,"});,"})";
-      <meta name="renderer" content="webkit"/>"""";,"});,"})";
-      <meta name="force-rendering" content="webkit"/>;,"});,"})";
-    </Helmet>)};,"});,"})";
-export default SEOMeta,"});,"})";
-;,"});,"})";
-export { SEOMeta };,"});,"})";
-;,"});,"})";
-export { SEOMeta };,"});,"})";
-;,"});,"})";
-export { SEOMeta };,"});,"})";
-;,"});,"})";
-export { SEOMeta };,"});,"})";
-;,"});,"})";
-export { SEOMeta };,"});,`})";
- const SEOMeta = ({ title, description, keywords = "AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group", image = "/images / zion - tech - group - og.jpg", url = window.location.href, type = "website", structuredData }) => { const siteName = "Zion Tech Group" const fullTitle = `${title} | ${siteName}`";``;";
- const SEOMeta = ({ title, description, keywords = "AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group", image = "/images / zion - tech - group - og.jpg", url = window.location.href, type = "website", structuredData }) => { const siteName = "Zion Tech Group" const fullTitle = `${title} | ${siteName}`";`"";
-";
+};,"});,"})"
+    const finalStructuredData = structuredData || defaultStructuredData,"});,"})"
+    return (<Helmet>"});,"})"
+      {/*   */}""";,"});,"})"
+      <title>{fullTitle}</title>"""";,"});,"})"
+      <meta name="description" content="{description}/>""";,"});,"})"
+      <meta name="keywords" content="{keywords}/>""";,"});,"})"
+      <meta name="author" content="Zion Tech Group/>""";,"});,"})"
+      <meta name="robots" content="index, follow/>""";,"});,"})"
+      <meta name="language" content="English/>""";,"});,"})"
+      <meta name="revisit-after" content="7 days/>});,"})"
+      """;,"});,"})"
+      {/*   */}"""";,"});,"})"
+      <meta property="og:title" content="{fullTitle}/>""";,"});,"})"
+      <meta property="og:description" content="{description}/>""";,"});,"})"
+      <meta property="og:type" content="{type}/>""";,"});,"})"
+      <meta property="og:url" content="{url}/>""";,"});,"})"
+      <meta property="og:image" content="{image}/>""";,"});,"})"
+      <meta property="og: image:width" content="1200/>""","});,"})"
+      <meta property="og: image:height" content="630/>""","});,"})"
+      <meta property="og:site_name" content="{siteName}/>""";,"});,"})"
+      <meta property="og: locale" content="en_US/>});,"})"
+      """;,"});,"})"
+      {/*   */}"""";,"});,"})"
+      <meta name="twitter: card" content="summary_large_image/>""","});,"})"
+      <meta name="twitter: site" content="@ziontechgroup/>""","});,"})"
+      <meta name="twitter: creator" content="@ziontechgroup/>""","});,"})"
+      <meta name="twitter:title" content="{fullTitle}/>""";,"});,"})"
+      <meta name="twitter:description" content="{description}/>""";,"});,"})"
+      <meta name="twitter:image" content="{image}/>,});,"})"
+      """;,"});,"})"
+      {/*   */}"""";,"});,"})"
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>"""";,"});,"})"
+      <meta name="theme-color" content="#22ddd2/>""";,"});,"})"
+      <meta name="msapplication-TileColor" content="#22ddd2/>""";,"});,"})"
+      <meta name="apple-mobile-web-app-capable" content="yes/>""";,"});,"})"
+      <meta name="apple-mobile-web-app-status-bar-style" content="default/>""";,"});,"})"
+      <meta name="apple-mobile-web-app-title" content="{siteName}/>,});,"})"
+      """;,"});,"})"
+      {/*   */}"""";,"});,"})"
+      <link rel="canonical" href="{url}/">,"});,"})"
+      """;,"});,"})"
+      {/*   */}"""";,"});,"})"
+      <link rel="icon" type="image/x-icon" href="/favicon.ico"/>"""";,"});,"})"
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>"""";,"});,"})"
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>"""";,"});,"})"
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>"""";,"});,"})"
+      <link rel="manifest" href="/site.webmanifest"/>"});,"})"
+      """;,"});,"})"
+      {/*   */}"""";,"});,"})"
+      <link rel="preconnect" href="https: //fonts.googleapis.com"/>"""","});,"})"
+      <link rel="preconnect" href="https: //fonts.gstatic.com" crossOrigin="anonymous"/>"});,"})"
+      """;,"});,"})"
+      {/*   */}"""";,"});,"})"
+      <script type="application/ld+json">,"});,"})"
+        {JSON.stringify(finalStructuredData)}"});,"})"
+      </script>"});,"})"
+      """;,"});,"})"
+      {/*   */}"""";,"});,"})"
+      <meta name="application-name" content="{siteName}/>""";,"});,"})"
+      <meta name="mobile-web-app-capable" content="yes/>""";,"});,"})"
+      <meta name="format-detection" content="telephone=no/>""";,"});,"})"
+      <meta name="msapplication-config" content="/browserconfig.xml/>});,"})"
+      """;,"});,"})"
+      {/*   */}"""";,"});,"})"
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge/>""";,"});,"})"
+      <meta name="referrer" content="strict-origin-when-cross-origin/>});,"})"
+      """;,"});,"})"
+      {/*   */}"""";,"});,"})"
+      <meta name="renderer" content="webkit/>""";,"});,"})"
+      <meta name="force-rendering" content="webkit/>});,"})"
+    </Helmet>)};,"});,"})"
+export default SEOMeta,"});,"})"
+;,"});,"})"
+export { SEOMeta };,"});,"})"
+;,"});,"})"
+export { SEOMeta };,"});,"})"
+;,"});,"})"
+export { SEOMeta };,"});,"})"
+;,"});,"})"
+export { SEOMeta };,"});,"})"
+;,"});,"})"
+export { SEOMeta };,"});,`})"
+ const SEOMeta = ({ title, description, keywords = "AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group", image = "/images / zion - tech - group - og.jpg", url = window.location.href, type = "website", structuredData }) => { const siteName = "Zion Tech Group" const fullTitle = `${title} | ${siteName}`";``;"
+ const SEOMeta = ({ title, description, keywords = "AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group", image = "/images / zion - tech - group - og.jpg", url = window.location.href, type = "website", structuredData }) => { const siteName = "Zion Tech Group" const fullTitle = `${title} | ${siteName}`";`""
+"
 "";,
-}`";
-const SEOMetaJs = () => {;
-  return (";
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
-      <SEO title="SEOMetaJs - Zion Tech Group"";
-        description="Professional SEOMetaJs services by Zion Tech Group"";
-        keywords="seometajs, technology, services";
-      />";
-      <div className="container mx-auto px-4 py-20">";
-        <div className="text-center">";
-          <h1 className="text-4xl font-bold text-white mb-6">SEOMetaJs</h1>";
-          <p className="text-xl text-gray-300 mb-8">;
-            Professional SEOMetaJs services to help your business grow.;
-          </p>";
-          <div className="flex justify-center">";
-            <a href="/contact" ";
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover: shadow-lg transition-all duration-300";
-            >;
-              Get Started,;
-            </a>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;,;
+}`"
+const SEOMetaJs = () => {
+  return ("
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
+      <SEO title="SEOMetaJs - Zion Tech Group""
+        description="Professional SEOMetaJs services by Zion Tech Group""
+        keywords="seometajs, technology, services"
+      />"
+      <div className="container mx-auto px-4 py-20">"
+        <div className="text-center">"
+          <h1 className="text-4xl font-bold text-white mb-6">SEOMetaJs</h1>"
+          <p className="text-xl text-gray-300 mb-8">
+            Professional SEOMetaJs services to help your business grow.
+          </p>"
+          <div className="flex justify-center">"
+            <a href="/contact" "
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover: shadow-lg transition-all duration-300"
+            >
+              Get Started,
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   )}
-export default SEOMetaJs;";
+export default SEOMetaJs;"
 "

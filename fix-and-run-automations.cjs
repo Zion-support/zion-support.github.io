@@ -1,12 +1,11 @@
-#!/usr/bin/env node;
-const fs = require("fs")const path = require("path")const { execSync } = require("child_process");
-class AutomationScriptFixer {;
-  constructor() {;
+#!/usr/bin/env node
+const fs = require("fs");const path = require("path");const { execSync } = require("child_process");
+class AutomationScriptFixer {
+  constructor() {
     this.projectRoot = process.cwd();
     this.scriptsDir = path.join(this.projectRoot, "scripts");    this.fixedCount = 0;
     this.errors = []}
-;
-  log(message) {;
+  log() {
     console.log(`[${new Date().toISOString()}] ${message}`);`}
 ;
   fixMergeConflicts(filePath) {;
@@ -21,7 +20,7 @@ class AutomationScriptFixer {;
 
         fs.writeFileSync(filePath, fixedContent);
         this.fixedCount++;
-        return true;,;,
+        return true;,,
 }
       return false;,;,
 } catch (error) {;
@@ -96,7 +95,7 @@ class AutomationScriptFixer {;
 ;
       // Create a comprehensive automation report;
       const report = {;
-        timestamp: new Date().toISOString(),;
+        timestamp: new Date().toISOString(),
         "summary": {;
           totalScripts: scriptFiles.length,;
           "fixedScripts": this.fixedCount,;

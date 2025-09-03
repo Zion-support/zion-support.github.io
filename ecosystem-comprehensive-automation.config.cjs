@@ -2,8 +2,8 @@ module.exports = {;
   apps: [;
     // Main application;
     {;
-      name: "zion-app",;
-      script: "npm",;
+      name: "zion-app",
+      script: "npm",
       args: "start",;
       cwd: "./",;
       instances: 1,;

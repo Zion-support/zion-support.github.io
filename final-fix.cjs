@@ -1,12 +1,12 @@
 const fs = require("fs");
 const path = require("path");
-function fixFile(filePath) {;
+function fixFile() {
   try {;
     let content = fs.readFileSync(filePath, "utf8");
     let originalContent = content;
     // Remove duplicate export statements;
     content = content.replace(;
-      /export\s+default\s+(\w+);\s*\n\s*export\s+function\s+\1\s*\(/g,;
+      /export\s+default\s+(\w+);\s*\n\s*export\s+function\s+\1\s*\(/g,
       "export default function $1(";
     );
     // Fix malformed function declarations;
@@ -63,7 +63,6 @@ function fixFile(filePath) {;
     if (content.includes("export default function") && !content.includes("}")) {;
       content += "\n}";,
 }
-;
     if (content !== originalContent) {;
       fs.writeFileSync(filePath, content, `utf8`);
       console.log(`Fixed: ${filePath}`);

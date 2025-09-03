@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
@@ -10,7 +10,7 @@ if (fs.existsSync(nextDir)) {;
   const getDirSize = dir => {;
     let size = 0;
     const files = fs.readdirSync(dir);
-    for (const file of files) {;
+    for() {
       const filePath = path.join(dir, file);
       const stat = fs.statSync(filePath);
       if (stat.isDirectory()) {;
@@ -19,7 +19,6 @@ if (fs.existsSync(nextDir)) {;
         size += stat.size;,
 }
     }
-;
     return size;,
 }
   const size = getDirSize(nextDir);

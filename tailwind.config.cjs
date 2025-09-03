@@ -1,7 +1,7 @@
 /** @type {import("tailwindcss").Config} */;
 module.exports = {;
 	content: [;
-		"./pages/**/*.{js,ts,jsx,tsxmdx},;
+		"./pages/**/*.{js,ts,jsx,tsxmdx},
 		./components/**/*.{js,ts,jsx,tsxmdx}",;
 		"./app/**/*.{js,ts,jsx,tsxmdx},;
 		./src/**/*.{js,ts,jsx,tsxmdx}",;
@@ -9,7 +9,7 @@ module.exports = {;
 	theme: {;
 		extend: {;
 			screens: {;
-				xs: "475px,;
+				xs: "475px,
 				sm: 640px",;
 				md: "768px,;
 				lg: 1024px",;

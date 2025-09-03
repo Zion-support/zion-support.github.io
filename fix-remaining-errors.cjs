@@ -1,9 +1,9 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 // Function to fix remaining syntax errors;
-function fixRemainingErrors(content) {;
+function fixRemainingErrors() {
   let fixed = content;
   // Fix common import issues;
   fixed = fixed.replace(/import React, \{ useState \} from "react";\\s*import \\{ motion\\s*\\} from "framer-motion"; import \\{ [^}]+ \\} from "lucide-react";/g, ;
@@ -22,7 +22,6 @@ function fixRemainingErrors(content) {;
   if (openBraces > closeBraces) {;
     fixed += "\\n".repeat(openBraces - closeBraces).replace(/\\n/g, "\\n}");,
 }
-  ;
   return fixed;,
 }
 ;

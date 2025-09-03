@@ -1,14 +1,13 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
-class MinifiedFileFixer {;
-  constructor() {;
+class MinifiedFileFixer {
+  constructor() {
     this.projectRoot = process.cwd();
     this.fixedFiles = 0;
     this.errors = [];,
 }
-;
-  log(message) {;
+  log() {
     console.log(`[${new Date().toISOString()}] ${message}`);,
 }
 ;

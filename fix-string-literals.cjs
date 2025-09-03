@@ -1,10 +1,10 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 // List of files that need fixing;
 const filesToFix = [;
-  "pages/ai-services.tsx",;
+  "pages/ai-services.tsx",
   "pages/blog.tsx", ;
   "pages/help.tsx",;
   "pages/it-services.tsx",;
@@ -18,7 +18,7 @@ const filesToFix = [;
   "components/ContactForm.tsx",;
   "components/TestimonialsSection.tsx";
 ];
-function fixStringLiterals(content) {;
+function fixStringLiterals() {
   // Fix corrupted string literals in JavaScript/TypeScript code;
   content = content.replace(/= &apos;([^&]+)&apos;/g, "= "$1"");
   content = content.replace(/&apos;([^&]+)&apos;/g, ""$1"");
@@ -26,7 +26,6 @@ function fixStringLiterals(content) {;
   content = content.replace(/&quot;([^&]+)&quot;/g, ""$1"");
   return content;,
 }
-;
 function fixFile(filePath) {;
   try {;
     if (!fs.existsSync(filePath)) {;

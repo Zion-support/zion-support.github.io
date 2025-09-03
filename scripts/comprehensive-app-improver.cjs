@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const fs = require("fs")
-const path = require("path")
+const fs = require("fs");
+const path = require("path");
 const { execSync } = require("child_process")
 class ComprehensiveAppImprover {
   constructor() {
@@ -142,7 +142,7 @@ module.exports = {
 },],
 },
   // ... existing config,
-};`
+}`
     if (!configContent.includes("securityHeaders")) {
       if (configContent.includes("module.exports")) {
         configContent = configContent.replace(
@@ -518,7 +518,7 @@ echo "✅ Deployment completed successfully!"
   createTestingPipeline() {
     const testingPipeline = `#!/usr/bin/env node
 const { execSync } = require("child_process")
-const fs = require("fs")
+const fs = require("fs");
 class TestingPipeline {
   constructor() {
     this.results = {
@@ -618,7 +618,7 @@ pipeline.runPipeline().catch(console.error)
   createCodeQualityChecks() {
     const qualityChecks = `#!/usr/bin/env node
 const { execSync } = require("child_process")
-const fs = require("fs")
+const fs = require("fs");
 class CodeQualityChecks {
   constructor() {
     this.results = {
@@ -729,8 +729,8 @@ qualityChecks.runChecks().catch(console.error)
 
   createBackupSystem() {
     const backupSystem = `#!/usr/bin/env node
-const fs = require("fs")
-const path = require("path")
+const fs = require("fs");
+const path = require("path");
 const { execSync } = require("child_process")
 class BackupSystem {
   constructor() {
@@ -867,8 +867,8 @@ switch (command) {
   createBuildOptimization() {
     const buildOptimization = `#!/usr/bin/env node
 const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+const fs = require("fs");
+const path = require("path");
 class BuildOptimizer {
   constructor() {
     this.projectRoot = process.cwd()

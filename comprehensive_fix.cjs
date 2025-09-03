@@ -1,14 +1,13 @@
 const fs = require("fs");
 const path = require("path");
 // Function to create a proper Next.js page template;
-function createProperPageTemplate(pageName, isApi = false) {;
+function createProperPageTemplate() {
   if (isApi) {;
     return `import type { NextApiRequest, NextApiResponse } from "next";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res.status(200).json({ message: "API endpoint working" });,
 }`;,
 }
-  ;
   return `import type { NextPage } from "next";
 import Head from `next/head`;
 const ${pageName}: NextPage = () => {;

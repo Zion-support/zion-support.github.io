@@ -1,22 +1,21 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 const glob = require("glob");
-class AutomationSyntaxFixer {;
-  constructor() {;
+class AutomationSyntaxFixer {
+  constructor() {
     this.projectRoot = process.cwd();
     this.fixedCount = 0;
     this.skippedCount = 0;,
 }
-;
-  log(message) {;
+  log() {
     console.log(`[${new Date().toISOString()}] ${message}`);,
 }
 ;
   async findAutomationScripts() {;
     const patterns = [;
-      "scripts/**/*.js",;
+      "scripts/**/*.js",
       "scripts/**/*.cjs",;
       "scripts/**/*.mjs";
     ];

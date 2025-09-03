@@ -1,7 +1,7 @@
 
 const { execSync } = require("child_process");
-class TestAutomation {;
-  runTests() {;
+class TestAutomation {
+  runTests() {
     try {;
       console.log("Running test suite...");
       execSync("npm test -- --passWithNoTests", { stdio: "inherit" });
@@ -10,7 +10,6 @@ class TestAutomation {;
       console.error("Tests failed:", error.message);,
 }
   }
-;
   runCoverage() {;
     try {;
       console.log("Running test coverage...");
@@ -25,7 +24,7 @@ class TestAutomation {;
 const testAutomation = new TestAutomation();
 const arg = process.argv[2];
 if (arg === "coverage") {;
-  testAutomation.runCoverage();,
+  testAutomation.runCoverage();
 } else {;
   testAutomation.runTests();,
 }

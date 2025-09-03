@@ -1,16 +1,16 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 import fs from "fs";
 import path from "path";
 // Function to fix common parsing errors;
-function fixParsingErrors(filePath) {;
+function fixParsingErrors() {
   try {;
     let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
     // Fix common syntax issues;
     const fixes = [;
       // Fix unterminated strings;
-      { pattern: /([""])([^""]*?)([""])\s*$/gm, replacement: "$1$2$3" },;
+      { pattern: /([""])([^""]*?)([""])\s*$/gm, replacement: "$1$2$3" },
       ;
       // Fix missing semicolons after imports;
       { pattern: /(import\s+[^]+)(?!)\s*$/gm, replacement: "$1;" },;
@@ -43,7 +43,6 @@ function fixParsingErrors(filePath) {;
         modified = true;,
 }
     }
-;
     if (modified) {;
       fs.writeFileSync(filePath, content);
       console.log(`Fixed parsing errors in: ${filePath}`);
@@ -97,7 +96,7 @@ function createMinimalFiles() {;
 import App from "./App";
 test("renders app", () => {;
   render(<App />);
-  expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();,
+  expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
 });
 `,;
     "__tests__/App.test.tsx": `import { render, screen  } from "@testing-library/react";

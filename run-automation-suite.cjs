@@ -1,23 +1,24 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");
-class AutomationSuiteRunner {;
-  constructor() {;
+
+class AutomationSuiteRunner {
+  constructor() {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, "automation-reports");
     this.logFile = path.join(this.reportsDir, "automation-suite.log");
-    this.ensureDirectories();,
-}
-;
-  ensureDirectories() {;
-    if (!fs.existsSync(this.reportsDir)) {;
-      fs.mkdirSync(this.reportsDir, { recursive: true });,
-}
+    this.ensureDirectories();
   }
-;
-  log(message) {;
+
+  ensureDirectories() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
+  }
+  }
+  log() {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
     console.log(logMessage);
@@ -28,8 +29,8 @@ class AutomationSuiteRunner {;
     this.log(`🚀 Starting: ${description}`);
     try {;
       const result = execSync(command, {;
-        cwd: this.projectRoot,;
-        encoding: "utf8",;
+        cwd: this.projectRoot,
+        encoding: "utf8",
         timeout: 300000 // 5 minutes timeout;,
 });
       this.log(`✅ Completed: ${description}`);

@@ -1,16 +1,15 @@
 
 const { execSync } = require("child_process");
 const fs = require("fs");
-class BuildOptimizer {;
-  constructor() {;
+class BuildOptimizer {
+  constructor() {
     this.buildSteps = [;
-      "npm run lint -- --fix || true",;
+      "npm run lint -- --fix || true",
       "npm run type-check || true",;
       "npm run build || true";
     ];,
 }
-;
-  async optimizedBuild() {;
+  async optimizedBuild() {
     console.log("Starting optimized build process...");
     for (const step of this.buildSteps) {;
       try {;

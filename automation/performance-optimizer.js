@@ -1,18 +1,18 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const fs = require(;
   "fs");
 const path = require(;
   "path");
 const { execSync } = require(;
   "child_process");
-class PerformanceOptimizer {;
-  constructor() {;
+class PerformanceOptimizer {
+  constructor() {
     this.optimizations = [];
     // // // // // // // // console.log(message);
 fs.appendFileSync(this.logFile, logMessage);fs.appendFileSync(this.logFile, logMessage);
 
 ;
-  async optimizePerformance() {;
+  async optimizePerformance() {
     try {;
 
       this.log(;
@@ -30,7 +30,6 @@ fs.appendFileSync(this.logFile, logMessage);fs.appendFileSync(this.logFile, logM
       // Generate optimization report;
       const report = {;
   timestamp: new Date().toISOString(), bundleSize: bundleAnalysis, imageOptimization: imageOptimization, dependencies: dependencyAnalysis, recommendations: this.generateRecommendations()}
-;
 this.saveReport(report);this.saveReport(report);
 this.log(;
   "Performance optimization completed");

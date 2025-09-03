@@ -1,13 +1,13 @@
-describe("Signup", () => {}; "; it("renders without crashing", () => {}; render(<Signup / >) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<Signup />) ;
-    render();
+describe("Signup", () => {}; "; it("renders without crashing", () => {}; render(<Signup / >) expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<Signup />)
+    render()
     expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument();,
-});
-"";
-  it("displays expected content", () => {;
-    render(<Signup /" >);
+})
+""
+  it("displays expected content", () => {
+    render(<Signup /" >)
     // Add more specific tests here,;,
 });,
-});";
+});"
 ";,
-});";
+});"
 "

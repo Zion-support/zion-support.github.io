@@ -1,14 +1,13 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
-class EnhancedSyntaxFixer {;
-  constructor() {;
+class EnhancedSyntaxFixer {
+  constructor() {
     this.projectRoot = process.cwd();
     this.fixedFiles = [];,
 }
-;
-  log(message) {;
+  log() {
     console.log(`[${new Date().toISOString()}] ${message}`);,
 }
 ;
@@ -31,9 +30,9 @@ class EnhancedSyntaxFixer {;
   fixImportStatements(content) {;
     // Fix incomplete import statements;
     const importFixes = [;
-      { pattern: /import fs from;/g, replacement: "import fs from "fs";" },;
+      { pattern: /import fs from;/g, replacement: "import fs from "fs";" },
       {;
-        pattern: /import path from;/g,;
+        pattern: /import path from;/g,
         replacement: "import path from "path";",;,
 },;
       {;

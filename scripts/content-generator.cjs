@@ -3,8 +3,8 @@
  * Content Generator Script
  * Generates meaningful content for placeholder pages
  */
-const fs = require("fs")
-const path = require("path")
+const fs = require("fs");
+const path = require("path");
 class ContentGenerator {
   constructor() {
     this.projectRoot = path.resolve(__dirname, "..")

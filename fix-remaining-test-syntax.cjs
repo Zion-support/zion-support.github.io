@@ -1,17 +1,16 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 const glob = require("glob");
-class TestSyntaxFixer {;
-  constructor() {;
-    this.projectRoot = process.cwd();,
+class TestSyntaxFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
 }
-;
-  async fixRemainingSyntaxIssues() {;
+  async fixRemainingSyntaxIssues() {
     console.log("🔧 Fixing remaining test syntax issues...");
     const testFiles = [;
-      ...glob.sync("**/*.test.js", { cwd: this.projectRoot }),;
+      ...glob.sync("**/*.test.js", { cwd: this.projectRoot }),
       ...glob.sync("**/*.test.tsx", { cwd: this.projectRoot }),;
       ...glob.sync("**/*.test.ts", { cwd: this.projectRoot }),;
     ];

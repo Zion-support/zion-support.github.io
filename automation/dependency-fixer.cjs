@@ -1,16 +1,15 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-class DependencyFixer {;
-  constructor() {;
+class DependencyFixer {
+  constructor() {
     this.projectRoot = process.cwd();
     this.fixes = [];
     this.errors = [];,
 }
-;
-  log(message, type = "INFO") {;
+  log() {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] [${type}] ${message}`);,
 }
@@ -104,7 +103,7 @@ class DependencyFixer {;
     try {;
       // Try yarn first (it worked before);
       execSync("yarn install --ignore-engines", { ;
-        cwd: this.projectRoot,;
+        cwd: this.projectRoot,
         stdio: "inherit";,
 });
       this.fixes.push("Dependencies installed with yarn");
@@ -122,7 +121,7 @@ class DependencyFixer {;
     this.log("🔒 Running security audit fix...");
     try {;
       execSync("yarn audit --fix", { ;
-        cwd: this.projectRoot,;
+        cwd: this.projectRoot,
         stdio: "inherit";,
 });
       this.fixes.push("Security vulnerabilities fixed");
@@ -160,7 +159,7 @@ class DependencyFixer {;
       const installSuccess = await this.installDependencies();
       if (installSuccess) {;
         await this.runAuditFix();
-        await this.testBuild();,
+        await this.testBuild();
 }
       ;
       this.log("\\n📊 DEPENDENCY FIXING REPORT");

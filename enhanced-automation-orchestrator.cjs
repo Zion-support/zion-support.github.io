@@ -1,16 +1,16 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("child_process");
-class EnhancedAutomationOrchestrator {;
-  constructor() {;
+class EnhancedAutomationOrchestrator {
+  constructor() {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, "automation-reports");
     this.logFile = path.join(this.reportsDir, "enhanced-automation.log");
     this.results = {;
-      timestamp: new Date().toISOString(),;
-      status: "running",;
+      timestamp: new Date().toISOString(),
+      status: "running",
       steps: [],;
       errors: [],;
       fixes: [],;
@@ -19,10 +19,9 @@ class EnhancedAutomationOrchestrator {;
       security: {},;
       quality: {}
     }
-    this.ensureDirectories();,
+    this.ensureDirectories();
 }
-;
-  ensureDirectories() {;
+  ensureDirectories() {
     const dirs = [;
       "automation-reports",;
       "automation/logs",;

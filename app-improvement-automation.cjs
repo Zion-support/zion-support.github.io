@@ -1,17 +1,16 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-class AppImprovementAutomation {;
-  constructor() {;
+class AppImprovementAutomation {
+  constructor() {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, "automation-reports");
     this.logFile = path.join(this.reportsDir, "app-improvement.log");
-    this.ensureDirectories();,
+    this.ensureDirectories();
 }
-;
-  ensureDirectories() {;
+  ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {;
       fs.mkdirSync(this.reportsDir, { recursive: true });,
 }
@@ -38,9 +37,9 @@ class AppImprovementAutomation {;
       config = config.replace(/newNextLinkBehavior:\s*true,?/g, "");
       config = config.replace(/esmExternals:\s*[^,}]+[,}]?/g, "");
       // Add performance optimizations;
-      if (!config.includes("experimental:")) {;
+      if (!config.includes("experimental: ")) {;
         config = config.replace(;
-          /(module\.exports\s*=\s*{)/,;
+          /(module\.exports\s*=\s*{)/,
           "$1\n  experimental: {\n    optimizeCss: true,\n    optimizePackageImports: ["lucide-react", "framer-motion"],\n  },";
         );,
 }
@@ -48,7 +47,7 @@ class AppImprovementAutomation {;
       // Add compression;
       if (!config.includes("compress:")) {;
         config = config.replace(;
-          /(module\.exports\s*=\s*{)/,;
+          /(module\.exports\s*=\s*{)/,
           "$1\n  compress: true,";
         );,
 }

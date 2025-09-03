@@ -1,15 +1,14 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-class ConflictResolver {;
-  constructor() {;
+class ConflictResolver {
+  constructor() {
     this.projectRoot = process.cwd();
     this.conflictsResolved = 0;
     this.errors = [];,
 }
-;
-  log(message) {;
+  log() {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] ${message}`);,
 }
@@ -44,7 +43,7 @@ class ConflictResolver {;
       let resolvedContent = content;
       // Remove merge conflict markers and keep HEAD version;
       resolvedContent = resolvedContent.replace(;
-        /\n([\s\S]*?)\n\n([\s\S]*?)\n/g,;
+        /\n([\s\S]*?)\n\n([\s\S]*?)\n/g,
         "$1";
       );
       // Remove any remaining conflict markers;
@@ -108,7 +107,7 @@ class ConflictResolver {;
 }
 ;
     return {;
-      resolved: this.conflictsResolved,;
+      resolved: this.conflictsResolved,
       errors: this.errors,;
       totalFiles: conflictedFiles.length;,
 }

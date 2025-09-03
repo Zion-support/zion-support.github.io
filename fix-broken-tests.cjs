@@ -1,15 +1,14 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
-class TestFileFixer {;
-  constructor() {;
+class TestFileFixer {
+  constructor() {
     this.projectRoot = process.cwd();
     this.fixedCount = 0;
     this.errors = [];,
 }
-;
-  log(message) {;
+  log() {
     console.log(`[${new Date().toISOString()}] ${message}`);,
 }
 ;
@@ -60,7 +59,7 @@ import ${componentName} from "./${componentName}";
 describe("${componentName}", () => {;
   it("renders without crashing", () => {;
     render(<${componentName} />);
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();
 });
   it("displays expected content", () => {;
     render(<${componentName} />);
@@ -106,8 +105,8 @@ describe("${componentName}", () => {;
 }
 ;
     return {;
-      totalFiles: testFiles.length,;
-      fixedFiles: this.fixedCount,;
+      totalFiles: testFiles.length,
+      fixedFiles: this.fixedCount,
       errors: this.errors,;,
 }
   }

@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 // Function to fix unescaped entities;
-function fixUnescapedEntities(content, filePath) {;
+function fixUnescapedEntities() {
   let fixed = content;
   let changes = 0;
   // Fix unescaped apostrophes in JSX text content;
@@ -26,7 +26,6 @@ function fixUnescapedEntities(content, filePath) {;
 });
   return { fixed, changes }
 }
-;
 // Function to process a single file;
 function processFile(filePath) {;
   try {;
@@ -86,7 +85,7 @@ function main() {;
 }
 ;
 if (require.main === module) {;
-  main();,
+  main();
 }
 ;
 module.exports = { fixUnescapedEntities, processFile, findFiles }

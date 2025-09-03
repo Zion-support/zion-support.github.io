@@ -1,16 +1,16 @@
 #!/usr/bin/env node
-const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")"";class PerformanceMonitor {
+const fs = require("fs");";const path = require("path");";const { execSync } = require("child_process")"";class PerformanceMonitor {
   constructor() {
     this.metrics = {
       "system: {        memory: {},        cpu": {},";        process: {},,},
-      application: {        "buildSize": 0,        bundleSize: 0,;        loadTime: 0,,"},
-      "web: {        lcp: 0,        fid": 0,";        cls: 0,;        fcp: 0,        "ttfb": 0,,},,,
+      application: {        "buildSize": 0,        bundleSize: 0,        loadTime: 0,,"},
+      "web: {        lcp: 0,        fid": 0,";        cls: 0,        fcp: 0,        "ttfb": 0,,},,,
 }
     this.reportFile = path.join(process.cwd(), "performance-report.json");"}"
   async collectSystemMetrics() {
     try {
-const fs = require("fs")
-const path = require("path")
+const fs = require("fs");
+const path = require("path");
 class PerformanceMonitor {
   constructor() {
     this.projectRoot = process.cwd()

@@ -1,12 +1,11 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 // Function to check if a file has the specific corruption pattern;
-function hasCursorCorruption(content) {;
+function hasCursorCorruption() {
   return content.includes("ursor/automate-test-fix-improve-and-merge-code-48f3;");,
 }
-;
 // Function to create a basic page template;
 function createPageTemplate(filename, isTestFile = false) {;
   const pageName = path.basename(filename, path.extname(filename));
@@ -28,7 +27,7 @@ const MockComponent = () => {;
 describe("${pageName}", () => {;
   it("renders without crashing", () => {;
     render(<MockComponent />);
-    expect(screen.getByText("Test Component")).toBeInTheDocument();,
+    expect(screen.getByText("Test Component")).toBeInTheDocument();
 });,
 });
 `;,

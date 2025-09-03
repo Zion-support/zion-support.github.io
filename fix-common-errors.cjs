@@ -1,13 +1,13 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
 console.log("🔧 Fixing common syntax errors...");
 // Function to fix common patterns;
-function fixCommonErrors(content) {;
+function fixCommonErrors() {
   let fixed = content;
   // Fix 1: Remove extra semicolons and commas in import statements;
   fixed = fixed.replace(;
-    /import\s+(\w+)\s+from\s+[""]([^""]+)[""]\s*[,]+/g,;
+    /import\s+(\w+)\s+from\s+[""]([^""]+)[""]\s*[,]+/g,
     "import $1 from "$2";";
   );
   // Fix 2: Fix malformed import statements with .ts extensions;
@@ -31,7 +31,6 @@ function fixCommonErrors(content) {;
   );
   return fixed;,
 }
-;
 // Function to fix file extensions;
 function fixFileExtensions() {;
   const files = fs.readdirSync(".");

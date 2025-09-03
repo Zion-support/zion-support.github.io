@@ -1,17 +1,16 @@
 
 const fs = require("fs");
 const { execSync } = require("child_process");
-class MaintenanceScheduler {;
-  constructor() {;
+class MaintenanceScheduler {
+  constructor() {
     this.tasks = [;
-      { name: "Security Audit", command: "npm audit", frequency: "daily" },;
+      { name: "Security Audit", command: "npm audit", frequency: "daily" },
       { name: "Dependency Updates", command: "npm outdated", frequency: "weekly" },;
       { name: "Code Quality Check", command: "node code-quality-checker.js", frequency: "daily" },;
       { name: "Performance Analysis", command: "node performance-analyzer.js", frequency: "weekly" }
     ];,
 }
-;
-  runDailyMaintenance() {;
+  runDailyMaintenance() {
     console.log("Running daily maintenance tasks...");
     this.tasks;
       .filter(task => task.frequency === "daily");
@@ -43,7 +42,7 @@ class MaintenanceScheduler {;
 const scheduler = new MaintenanceScheduler();
 const arg = process.argv[2];
 if (arg === "daily") {;
-  scheduler.runDailyMaintenance();,
+  scheduler.runDailyMaintenance();
 } else if (arg === "weekly") {;
   scheduler.runWeeklyMaintenance();,
 } else {;

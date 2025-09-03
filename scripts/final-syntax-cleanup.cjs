@@ -3,8 +3,8 @@
  * Final Syntax Cleanup
  * Final cleanup of syntax issues before deployment
  */
-const fs = require("fs")
-const path = require("path")
+const fs = require("fs");
+const path = require("path");
 class FinalSyntaxCleanup {
   constructor() {
     this.projectRoot = process.cwd()
@@ -135,7 +135,7 @@ class FinalSyntaxCleanup {
         // Fix malformed JSX arrays
         { pattern: /\[([^\]]*)\];"/g, replacement: "[$1]," },
         // Fix malformed JSX objects
-        { pattern: /{([^}]*)};"/g, replacement: "{$1}," },
+        { pattern: /{([^}]*)}"/g, replacement: "{$1}," },
         // Fix malformed JSX functions
         { pattern: /function\s*\(\s*\)\s*{"/g, replacement: "function() {" },
         // Fix malformed JSX arrow functions

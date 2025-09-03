@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-const fs = require("fs").promises
-const path = require("path")
+const fs = require("fs");.promises
+const path = require("path");
 const { exec } = require("child_process")
-const util = require("util")
+const util = require("util");
 const execAsync = util.promisify(exec)
 class SyntaxFixer {
   constructor() {
@@ -86,7 +86,7 @@ class SyntaxFixer {
         .trim()
         .split(`\n`)
         .filter(line => line)
-const fs = require("fs").promises;";const path = require("path")";const { exec } = require("child_process")";const util = require("util")"";const execAsync = util.promisify(exec)
+const fs = require("fs");.promises;";const path = require("path");";const { exec } = require("child_process")";const util = require("util");"";const execAsync = util.promisify(exec)
 class SyntaxFixer {
   constructor() {
     this.logFile = path.join(__dirname, "../logs/syntax-fixer.log");";    this.reportFile = path.join(__dirname, "../logs/syntax-fixes.json");";    this.projectRoot = path.join(__dirname, "..");"}"
@@ -292,7 +292,7 @@ class SyntaxFixer {
         syntaxErrors: { found: 0, fixed: 0 },,
 }
       await this.log("Starting syntax fixer", "INFO");";      const results = {
-        "timestamp": new Date().toISOString(),;        mergeConflicts": { "found: 0, fixed": 0 },";        syntaxErrors: { "found": 0, fixed: 0 },,"}
+        "timestamp": new Date().toISOString(),        mergeConflicts": { "found: 0, fixed": 0 },";        syntaxErrors: { "found": 0, fixed: 0 },,"}
 
       // Fix merge conflicts
       const conflictFiles = await this.findMergeConflicts()

@@ -3,8 +3,8 @@
  * Application Health Check Script
  * Checks various aspects of the application health
  */
-const fs = require("fs")
-const path = require("path")
+const fs = require("fs");
+const path = require("path");
 const { execSync } = require("child_process")
 class HealthChecker {
   constructor() {
@@ -15,11 +15,11 @@ class HealthChecker {
       checks: [],
 }
   }
-const fs = require("fs")const path = require("path")const { execSync } = require("child_process")";class HealthChecker {
+const fs = require("fs");const path = require("path");const { execSync } = require("child_process")";class HealthChecker {
   constructor() {
     this.checks = []
     this.results = {
-      "timestamp: new Date().toISOString(),;      "overall": "healthy",";      checks: [],,"}}
+      "timestamp: new Date().toISOString(),      "overall": "healthy",";      checks: [],,"}}
 
   async runCheck(name, checkFn) {
     try {

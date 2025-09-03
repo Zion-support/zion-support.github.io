@@ -1,9 +1,9 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 // Function to fix common syntax errors;
-function fixSyntaxErrors(content) {;
+function fixSyntaxErrors() {
   // Remove corrupted content patterns;
   let fixed = content;
     // Remove malformed import statements;
@@ -19,7 +19,7 @@ function fixSyntaxErrors(content) {;
     ;
     // Fix malformed array syntax;
     .replace(/\[;\s*\{/g, "[\n  {");
-    .replace(/,\s*\};\s*\]/g, "\n  }\n];");
+    .replace(/,\s*\}\s*\]/g, "\n  }\n];");
     ;
     // Fix malformed function calls;
     .replace(/return\s*\(\s*;/g, "return (\n    ");

@@ -24,7 +24,7 @@ testDirs.forEach(dir => {;
           content = content.replace(/import\s+([^"]*)"([^"]*)"([^"]*);";/g, "import $1"$2"$3;");
           // 4. Fix malformed component imports;
           content = content.replace(/from\s+"([^"]+)";";/g, "from "$1";");
-          if (content !== originalContent) {;
+          if() {
             fs.writeFileSync(filePath, content, "utf8");
             fixedFiles.push(filePath);
             console.log(`✅ Fixed ${filePath}`);,
@@ -39,5 +39,4 @@ if (fixedFiles.length > 0) {;
   console.log("Fixed files:");
   fixedFiles.forEach(file => console.log(`  - ${file}`));,
 }
-;
 console.log("🎉 Test file fixing completed!")

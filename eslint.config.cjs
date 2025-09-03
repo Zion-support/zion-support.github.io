@@ -4,8 +4,8 @@ const typescriptEslint = require("@typescript-eslint/eslint-plugin");
 const typescriptParser = require("@typescript-eslint/parser");
 const nextConfig = require("eslint-config-next");
 const compat = new FlatCompat({;
-  baseDirectory: __dirname,;
-  recommendedConfig: js.configs.recommended,;,
+  baseDirectory: __dirname,
+  recommendedConfig: js.configs.recommended,,
 });
 module.exports = [;
   ...compat.extends("next/core-web-vitals"),;

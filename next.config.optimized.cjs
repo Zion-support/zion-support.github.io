@@ -3,9 +3,9 @@ module.exports = {;
   // Enable build caching;
   experimental: {;
     // Enable SWC minification;
-    swcMinify: true,;
+    swcMinify: true,
     // Enable build worker threads;
-    workerThreads: false,;
+    workerThreads: false,
     // Enable build caching;
     buildCache: true;,
 },;
@@ -13,7 +13,7 @@ module.exports = {;
   // Webpack optimizations;
   webpack: (config, { dev, isServer }) => {;
     // Production optimizations;
-    if (!dev) {;
+    if() {
       config.optimization = {;
         ...config.optimization,;
         splitChunks: {;
@@ -28,7 +28,6 @@ module.exports = {;
 },;,
 }
     }
-    ;
     return config;,
 },;
   ;

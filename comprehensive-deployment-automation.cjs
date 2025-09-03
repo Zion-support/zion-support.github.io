@@ -1,16 +1,16 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-class ComprehensiveDeploymentAutomation {;
-  constructor() {;
+class ComprehensiveDeploymentAutomation {
+  constructor() {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, "deployment-reports");
     this.logFile = path.join(this.reportsDir, "deployment-automation.log");
     this.results = {;
-      timestamp: new Date().toISOString(),;
-      status: "running",;
+      timestamp: new Date().toISOString(),
+      status: "running",
       preDeployment: {},;
       build: {},;
       tests: {},;
@@ -18,10 +18,9 @@ class ComprehensiveDeploymentAutomation {;
       postDeployment: {},;
       rollback: {}
     }
-    this.ensureDirectories();,
+    this.ensureDirectories();
 }
-;
-  ensureDirectories() {;
+  ensureDirectories() {
     const dirs = [;
       "deployment-reports",;
       "backup",;

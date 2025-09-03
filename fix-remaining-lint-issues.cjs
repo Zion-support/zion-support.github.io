@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 // Function to fix remaining lint issues;
-function fixLintIssues(content, filePath) {;
+function fixLintIssues() {
   let fixed = content;
   let changes = 0;
   // Fix 1: Escape unescaped quotes and apostrophes in JSX;
@@ -42,7 +42,6 @@ function fixLintIssues(content, filePath) {;
       fixed = fixed.replace(importRegex, `$1\nimport Link from "next/link";`);,
 }
   }
-;
   return { fixed, changes }
 }
 ;
@@ -105,7 +104,7 @@ function main() {;
 }
 ;
 if (require.main === module) {;
-  main();,
+  main();
 }
 ;
 module.exports = { fixLintIssues, processFile, findFiles }

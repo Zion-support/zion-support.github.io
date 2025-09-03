@@ -3,8 +3,8 @@
  * Automation Enhancer Script
  * Enhances existing automation scripts and creates new ones
  */
-const fs = require("fs")
-const path = require("path")
+const fs = require("fs");
+const path = require("path");
 class AutomationEnhancer {
   constructor() {
     this.projectRoot = path.resolve(__dirname, "..")
@@ -118,9 +118,9 @@ echo "✅ Deployment completed successfully!"
 /**
  * Advanced Monitoring Script
  */
-const pm2 = require("pm2")
-const fs = require("fs")
-const path = require("path")
+const pm2 = require("pm2");
+const fs = require("fs");
+const path = require("path");
 class AdvancedMonitor {
   constructor() {
     this.logPath = path.join(__dirname, "..", "logs", "monitoring.log"),
@@ -197,8 +197,8 @@ monitor.startMonitoring()
 /**
  * Performance Optimization Script
  */
-const fs = require("fs")
-const path = require("path")
+const fs = require("fs");
+const path = require("path");
 class PerformanceOptimizer {
   constructor() {
     this.projectRoot = path.resolve(__dirname, ".."),

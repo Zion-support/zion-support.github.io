@@ -1,16 +1,15 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-class DeploymentAutomator {;
-  constructor() {;
+class DeploymentAutomator {
+  constructor() {
     this.projectRoot = process.cwd();
     this.deploymentSteps = [];
     this.errors = [];,
 }
-;
-  log(message, type = "INFO") {;
+  log() {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] [${type}] ${message}`);,
 }
@@ -20,8 +19,8 @@ class DeploymentAutomator {;
       this.log(`Running: ${command}`);
       const result = execSync(command, { ;
         encoding: "utf8", ;
-        cwd: this.projectRoot,;
-        stdio: options.silent ? "pipe" : "inherit",;
+        cwd: this.projectRoot,
+        stdio: options.silent ? "pipe" : "inherit",
         ...options ;,
 });
       return result;,
@@ -168,7 +167,7 @@ class DeploymentAutomator {;
         // Step 3: Push to repository;
         await this.pushToRepository();
         // Step 4: Merge to main;
-        await this.mergeToMain();,
+        await this.mergeToMain();
 }
       ;
       // Step 5: Generate report;

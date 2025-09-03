@@ -1,17 +1,16 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-class MonitoringAutomation {;
-  constructor() {;
+class MonitoringAutomation {
+  constructor() {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, "automation-reports");
     this.logFile = path.join(this.reportsDir, "monitoring.log");
-    this.ensureDirectories();,
+    this.ensureDirectories();
 }
-;
-  ensureDirectories() {;
+  ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {;
       fs.mkdirSync(this.reportsDir, { recursive: true });,
 }
@@ -27,7 +26,7 @@ class MonitoringAutomation {;
   async createPerformanceMonitor() {;
     this.log("📊 Creating performance monitoring script...");
     const monitorPath = path.join(;
-      this.projectRoot,;
+      this.projectRoot,
       "scripts",;
       "performance-monitor-enhanced.cjs";
     );
@@ -65,7 +64,7 @@ class PerformanceMonitor {;
     try {;
       execSync("npm run build", { ;
         cwd: this.projectRoot, ;
-        stdio: "pipe",;
+        stdio: "pipe",
         timeout: 300000 ;,
 });
       const buildTime = Date.now() - startTime;

@@ -1,10 +1,10 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 console.log("🔧 Starting merge conflict resolution...");
 // Function to resolve merge conflicts in a file;
-function resolveMergeConflicts(filePath) {;
+function resolveMergeConflicts() {
   try {;
     let content = fs.readFileSync(filePath, "utf8");
     // Remove merge conflict markers;
@@ -20,13 +20,12 @@ function resolveMergeConflicts(filePath) {;
     return true;,
 } catch (error) { ;
     console.error(;
-      `❌ Error resolving conflicts in ${filePath }:`,;
+      `❌ Error resolving conflicts in ${filePath }:`,
       error.message;
     );
     return false;,
 }
 }
-;
 // Function to find all files with merge conflicts;
 function findFilesWithConflicts(dir) {;
   const files = [];

@@ -1,16 +1,15 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
-class AutomationScriptFixerV2 {;
-  constructor() {;
+class AutomationScriptFixerV2 {
+  constructor() {
     this.projectRoot = process.cwd();
     this.scriptsDir = path.join(this.projectRoot, "scripts");
     this.fixedCount = 0;
     this.errorCount = 0;,
 }
-;
-  log(message) {;
+  log() {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] ${message}`);,
 }

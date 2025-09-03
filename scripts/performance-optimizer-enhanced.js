@@ -2,8 +2,8 @@
 /**
  * Performance Optimization Script
  */
-const fs = require("fs")
-const path = require("path")
+const fs = require("fs");
+const path = require("path");
 class PerformanceOptimizer {
   constructor() {
     this.projectRoot = path.resolve(__dirname, ".."),

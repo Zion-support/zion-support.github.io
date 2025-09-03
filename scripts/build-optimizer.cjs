@@ -1,13 +1,13 @@
 #!/usr/bin/env node
-const { execSync } = require("child_process")";const fs = require("fs")";const path = require("path")"";class BuildOptimizer {  constructor() {
+const { execSync } = require("child_process")";const fs = require("fs");";const path = require("path");"";class BuildOptimizer {  constructor() {
     this.projectRoot = process.cwd()}
 
   async optimize() {
     console.log("🔨 Starting build optimization...");";    try {
       // Clean previous builds
 const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+const fs = require("fs");
+const path = require("path");
 class BuildOptimizer {
   constructor() {
     this.projectRoot = process.cwd()

@@ -2,9 +2,9 @@
 /**
  * Advanced Monitoring Script
  */
-const pm2 = require("pm2")
-const fs = require("fs")
-const path = require("path")
+const pm2 = require("pm2");
+const fs = require("fs");
+const path = require("path");
 class AdvancedMonitor {
   constructor() {
     this.logPath = path.join(__dirname, "..", "logs", "monitoring.log"),

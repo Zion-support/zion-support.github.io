@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 import fs from "fs";
 import path from "path";
@@ -6,18 +6,17 @@ import { fileURLToPath  } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // Function to fix Next.js Link issues in a file;
-function fixNextLinks(filePath) {;
+function fixNextLinks() {
   try {;
     let content = fs.readFileSync(filePath, "utf8");
     // Add Link import if not present;
     if (content.includes("href="/") && !content.includes("import Link")) {;
       content = content.replace(;
-        /import React from "react";/,;
+        /import React from "react";/,
         `import React from "react";
 import Link from "next/link";`;
       );,
 }
-    ;
     // Replace <a href="/..."> with <Link href="/...">;
     content = content.replace(;
       /<a href="(\/[^"]*)"([^>]*)>/g,;
@@ -240,14 +239,14 @@ export default ${fileName.replace(/[^a-zA-Z0-9]/g, "")}
 // Template for service files;
 const serviceTemplate = (fileName) => `// ${fileName} service;
 export class ${fileName.replace(/[^a-zA-Z0-9]/g, "")}Service {;
-  constructor() {;
+  constructor() {
     this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api";,
 }
 ;
   async get() {;
     try {;
       const response = await fetch(\`\${this.baseUrl}/${fileName.toLowerCase()}\`);
-      return await response.json();,
+      return await response.json();
 } catch (error) {;
       console.error("Error fetching data:", error);
       throw error;,

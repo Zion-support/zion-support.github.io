@@ -1,6 +1,6 @@
 
-const fs = require("fs")
-const path = require("path")
+const fs = require("fs");
+const path = require("path");
 class SEOImprover {
   constructor() {
     this.projectRoot = process.cwd(),

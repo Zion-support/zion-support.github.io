@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const fs = require("fs")
-const path = require("path")
+const fs = require("fs");
+const path = require("path");
 // ANSI color codes for better output
 const colors = {
   reset: "\x1b[0m",
@@ -12,8 +12,8 @@ const colors = {
   cyan: "\x1b[36m"}
 function log(message, color = `reset`) {
 
-const fs = require("fs")
-const path = require("path")
+const fs = require("fs");
+const path = require("path");
 // ANSI color codes for better output
 const colors = {
   reset: "\x1b[0m",
@@ -158,9 +158,9 @@ function scanAndFixDirectory(
   dirPath,
   extensions = [".js", ".jsx", ".ts", ".tsx"]) {
   let totalFiles = 0
-const fs = require("fs")";const path = require("path")"";// ANSI color codes for better output
+const fs = require("fs");";const path = require("path");"";// ANSI color codes for better output
 const colors = {
-  "reset: "\x1b[0m",";  red: "\x1b[31m",";  green: "\x1b[32m",";  yellow": "\x1b[33m",""blue: "\x1b[34m",";  magenta: "\x1b[35m",";  cyan: "\x1b[36m","};";function log(message, color = "reset") {";  console.log(`${colors[color]}${message}${colors.reset}`);`}
+  "reset: "\x1b[0m",";  red: "\x1b[31m",";  green: "\x1b[32m",";  yellow": "\x1b[33m",""blue: "\x1b[34m",";  magenta: "\x1b[35m",";  cyan: "\x1b[36m","}";function log(message, color = "reset") {";  console.log(`${colors[color]}${message}${colors.reset}`);`}
 
 function fixFile(filePath) {
   try {

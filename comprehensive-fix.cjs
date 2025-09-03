@@ -1,12 +1,12 @@
 const fs = require("fs");
 const path = require("path");
-function fixFile(filePath) {;
+function fixFile() {
   try {;
     let content = fs.readFileSync(filePath, "utf8");
     let originalContent = content;
     // Fix malformed function declarations with imports inside;
     content = content.replace(;
-      /export\s+default\s+function\s+Page\(\)\s*\{\s*import\s+\{([^}]+)\}\s+from\s+[""`]([^""`]+)[""`];/g,;
+      /export\s+default\s+function\s+Page\(\)\s*\{\s*import\s+\{([^}]+)\}\s+from\s+[""`]([^""`]+)[""`];/g,
       "import { $1  } from "$2";";
     );
     // Remove duplicate export default function Page() declarations;
@@ -73,7 +73,6 @@ function fixFile(filePath) {;
 }
       );,
 }
-;
     // Fix missing closing braces;
     if (content.includes("export default function") && !content.includes("}")) {;
       content += "\n}";,

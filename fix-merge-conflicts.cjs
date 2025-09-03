@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-function fixMergeConflicts(filePath) {;
+function fixMergeConflicts() {
   try {;
     let content = fs.readFileSync(filePath, "utf8");
     // Remove merge conflict markers and keep the content after the last marker;
@@ -17,7 +17,6 @@ function fixMergeConflicts(filePath) {;
     console.error(`Error fixing ${filePath}:`, error.message);,
 }
 }
-;
 function findAndFixFiles(dir) {;
   const files = fs.readdirSync(dir);
   for (const file of files) {;

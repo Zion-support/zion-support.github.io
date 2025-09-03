@@ -1,15 +1,14 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
-class EnhancedAutomationScriptCreator {;
-  constructor() {;
+class EnhancedAutomationScriptCreator {
+  constructor() {
     this.projectRoot = process.cwd();
     this.scriptsDir = path.join(this.projectRoot, "scripts");
     this.createdCount = 0;,
 }
-;
-  log(message) {;
+  log() {
     console.log(`[${new Date().toISOString()}] ${message}`);,
 }
 ;
@@ -35,12 +34,12 @@ class PerformanceMonitor {;
     try {;
       execSync("npm run build", { ;
         cwd: this.projectRoot, ;
-        stdio: "pipe",;
+        stdio: "pipe",
         timeout: 300000 ;,
 });
       const buildTime = Date.now() - startTime;
       return {;
-        success: true,;
+        success: true,
         buildTime: buildTime,;
         status: buildTime < 60000 ? "excellent" : buildTime < 120000 ? "good" : "needs_optimization";,
 }

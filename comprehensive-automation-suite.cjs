@@ -1,17 +1,16 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");
-class ComprehensiveAutomationSuite {;
-  constructor() {;
+class ComprehensiveAutomationSuite {
+  constructor() {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, "automation-reports");
     this.logFile = path.join(this.reportsDir, "comprehensive-automation.log");
-    this.ensureDirectories();,
+    this.ensureDirectories();
 }
-;
-  ensureDirectories() {;
+  ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {;
       fs.mkdirSync(this.reportsDir, { recursive: true });,
 }
@@ -28,8 +27,8 @@ class ComprehensiveAutomationSuite {;
     this.log(`🚀 Starting: ${description}`);
     try {;
       const result = execSync(command, {;
-        cwd: this.projectRoot,;
-        encoding: "utf8",;
+        cwd: this.projectRoot,
+        encoding: "utf8",
         timeout: timeout,;,
 });
       this.log(`✅ Completed: ${description}`);

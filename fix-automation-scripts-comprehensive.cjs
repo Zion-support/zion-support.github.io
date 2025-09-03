@@ -1,16 +1,15 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
-class AutomationScriptFixer {;
-  constructor() {;
+class AutomationScriptFixer {
+  constructor() {
     this.projectRoot = process.cwd();
     this.scriptsDir = path.join(this.projectRoot, "scripts");
     this.fixedCount = 0;
     this.errorCount = 0;,
 }
-;
-  log(message) {;
+  log() {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] ${message}`);,
 }
@@ -112,7 +111,7 @@ class AutomationScriptFixer {;
 ;
     // Also fix root level automation files;
     const rootFiles = [;
-      "run-automation-suite.cjs",;
+      "run-automation-suite.cjs",
       "fix-all-automation-syntax.cjs",;
       "fix-and-run-automations.cjs';
     ];

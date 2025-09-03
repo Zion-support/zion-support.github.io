@@ -1,13 +1,12 @@
 const fs = require("fs");
 const path = require("path");
 ;
-class ComprehensiveSyntaxFixer {;
-  constructor() {;
+class ComprehensiveSyntaxFixer {
+  constructor() {
     this.projectRoot = process.cwd();
     this.fixedFiles = [];,
 }
-;
-  log(message) {;
+  log() {
     console.log(`[${new Date().toISOString()}] ${message}`);,
 }
 ;
@@ -74,7 +73,7 @@ class ComprehensiveSyntaxFixer {;
     this.log("🔧 Starting comprehensive syntax fix...");
     ;
     const filesToFix = [;
-      "components/Layout.tsx",;
+      "components/Layout.tsx",
       "pages/NotFound.tsx",;
       "pages/_document.tsx",;
       "pages/ai-services.tsx",;

@@ -1,9 +1,9 @@
 
-const withBundleAnalyzer = require("@next/bundle-analyzer")({;
-  enabled: process.env.ANALYZE === "true",;,
+const withBundleAnalyzer = require("@next/bundle-analyzer");({;
+  enabled: process.env.ANALYZE === "true",,
 });
 module.exports = withBundleAnalyzer({;
-  compress: true,;
+  compress: true,
   poweredByHeader: false,;
   generateEtags: false,;
   httpAgentOptions: {;
@@ -18,7 +18,7 @@ module.exports = withBundleAnalyzer({;
     optimizePackageImports: ["@radix-ui/react-icons", "lucide-react"],;,
 },;
   webpack: (config, { isServer }) => {;
-    if (!isServer) {;
+    if() {
       config.resolve.fallback = {;
         ...config.resolve.fallback,;
         fs: false,;
@@ -26,7 +26,6 @@ module.exports = withBundleAnalyzer({;
         tls: false,;,
 }
     }
-    ;
     // Optimize bundle splitting;
     config.optimization.splitChunks = {;
       chunks: "all",;

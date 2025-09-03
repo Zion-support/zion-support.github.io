@@ -1,8 +1,8 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-function fixFile(filePath) {;
+function fixFile() {
   try {;
     const content = fs.readFileSync(filePath, "utf8");
     let fixed = content;
@@ -14,7 +14,7 @@ function fixFile(filePath) {;
       return match});
     // Fix broken JSX syntax;
     fixed = fixed.replace(/<([^>]+)\s*>/g, (match) => {;
-      return match.replace(/\s+/g, " ").trim();,
+      return match.replace(/\s+/g, " ").trim();
 });
     // Fix malformed arrays and objects;
     fixed = fixed.replace(/\[\s*([^\]]+)\s*\]/g, "[$1]");
@@ -30,7 +30,6 @@ function fixFile(filePath) {;
     console.error(`Error: ${filePath}`, error.message);
     return false}
 }
-;
 function processDirectory(dirPath) {;
   const files = fs.readdirSync(dirPath);
   let fixedCount = 0;

@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 // Function to fix Link issues in a file;
-function fixLinkIssues(filePath) {;
+function fixLinkIssues() {
   try {;
     let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
@@ -17,13 +17,12 @@ function fixLinkIssues(filePath) {;
         const importMatch = content.match(/import\s+React[^]*;/);
         if (importMatch) {;
           content = content.replace(;
-            importMatch[0],;
+            importMatch[0],
             importMatch[0] + "\nimport Link from "next/link";";
           );,
 }
       }
     }
-;
     // Fix closing </a> tags that should be </Link>;
     const closingPattern = /<\/a>/g;
     if (closingPattern.test(content)) {;

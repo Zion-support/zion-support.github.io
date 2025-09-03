@@ -14,7 +14,7 @@ export default Component;
 `;
 // Basic API endpoint template;
 const basicApiEndpoint = `import type { NextApiRequest, NextApiResponse } from "next";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+export default function handler() {
   res.status(200).json({ message: "API endpoint working" });,
 }
 `;
@@ -38,7 +38,6 @@ function fixEmptyFiles(dir) {;
     }
   });,
 }
-;
 // Fix empty files in pages directory;
 fixEmptyFiles("./pages");
 console.log("Fixed empty files")

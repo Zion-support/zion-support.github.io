@@ -1,18 +1,17 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("child_process");
-class ComprehensiveAppImprover {;
-  constructor() {;
+class ComprehensiveAppImprover {
+  constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, "automation-logs.txt");
     this.startTime = new Date();
     this.fixesApplied = [];
     this.errorsFound = [];,
 }
-;
-  log(message, type = "INFO") {;
+  log() {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type}] ${message}`;
     console.log(logMessage);
@@ -25,8 +24,8 @@ class ComprehensiveAppImprover {;
       this.log(`Running command: ${command}`);
       const result = execSync(command, { ;
         encoding: "utf8", ;
-        cwd: this.projectRoot,;
-        stdio: options.silent ? "pipe" : "inherit",;
+        cwd: this.projectRoot,
+        stdio: options.silent ? "pipe" : "inherit",
         ...options ;,
 });
       return result;,

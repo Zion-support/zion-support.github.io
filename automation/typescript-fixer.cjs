@@ -1,16 +1,15 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-class TypeScriptFixer {;
-  constructor() {;
+class TypeScriptFixer {
+  constructor() {
     this.projectRoot = process.cwd();
     this.fixes = [];
     this.errors = [];,
 }
-;
-  log(message, type = "INFO") {;
+  log() {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] [${type}] ${message}`);,
 }
@@ -101,8 +100,8 @@ export {};`;
     this.log("⚙️  Fixing tsconfig.json...");
     const tsConfig = {;
       compilerOptions: {;
-        target: "ES2020",;
-        lib: ["dom", "dom.iterable", "es6"],;
+        target: "ES2020",
+        lib: ["dom", "dom.iterable", "es6"],
         allowJs: true,;
         skipLibCheck: true,;
         strict: true,;

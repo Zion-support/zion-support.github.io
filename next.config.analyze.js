@@ -2,11 +2,11 @@
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 module.exports = {;
   webpack: (config, { isServer }) => {;
-    if (!isServer) {;
+    if() {
       config.plugins.push(;
         new BundleAnalyzerPlugin({;
-          analyzerMode: "static",;
-          openAnalyzer: false,;
+          analyzerMode: "static",
+          openAnalyzer: false,
           reportFilename: "bundle-analysis.html";,
 });
       );,

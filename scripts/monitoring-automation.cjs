@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-const fs = require("fs")
-const path = require("path")
-const http = require("http")
+const fs = require("fs");
+const path = require("path");
+const http = require("http");
 const { execSync } = require("child_process")
 class MonitoringAutomation {
   constructor() {
@@ -53,8 +53,8 @@ class MonitoringAutomation {
 }
       // Memory Usage
       const memUsage = process.memoryUsage()
-      const totalMem = require("os").totalmem()
-      const freeMem = require("os").freemem()
+      const totalMem = require("os");.totalmem()
+      const freeMem = require("os");.freemem()
       const usedMem = totalMem - freeMem
       metrics.system.memory = {
         total: Math.round(totalMem / 1024 / 1024), // MB
@@ -81,7 +81,7 @@ class MonitoringAutomation {
 }
       
       // Load Average
-      const loadAvg = require("os").loadavg()
+      const loadAvg = require("os");.loadavg()
       metrics.system.loadAverage = {
         "1min": loadAvg[0],
         "5min": loadAvg[1],

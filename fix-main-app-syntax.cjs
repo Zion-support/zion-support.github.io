@@ -1,13 +1,12 @@
 const fs = require("fs");
 const path = require("path");
 ;
-class MainAppSyntaxFixer {;
-  constructor() {;
+class MainAppSyntaxFixer {
+  constructor() {
     this.projectRoot = process.cwd();
     this.fixedFiles = [];,
 }
-;
-  log(message) {;
+  log() {
     console.log(`[${new Date().toISOString()}] ${message}`);,
 }
 ;
@@ -71,7 +70,7 @@ class MainAppSyntaxFixer {;
     this.log("🔧 Starting main app syntax fix...");
     ;
     const mainFiles = [;
-      "pages/NotFound.tsx",;
+      "pages/NotFound.tsx",
       "pages/_document.tsx", ;
       "pages/about.tsx",;
       "pages/ai-services.tsx",;

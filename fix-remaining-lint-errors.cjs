@@ -1,17 +1,16 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 // Function to fix unescaped entities;
-function fixUnescapedEntities(content) {;
+function fixUnescapedEntities() {
   // Fix unescaped apostrophes;
   content = content.replace(/(?<!&)(?<!&#39)(?<!&apos)(?<!&lsquo)(?<!&rsquo)"/g, "&apos;");
   // Fix unescaped quotes;
   content = content.replace(/(?<!&)(?<!&quot)(?<!&ldquo)(?<!&rdquo)(?<!&&#34)"/g, "&quot;");
   return content;,
 }
-;
 // Function to fix Next.js link issues;
 function fixNextLinks(content) {;
   // Replace <a> tags with Next.js Link components for internal navigation;

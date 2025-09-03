@@ -1,15 +1,14 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-class DeploymentOptimization {;
-  constructor() {;
+class DeploymentOptimization {
+  constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, "deployment-optimization.log");,
 }
-;
-  log(message) {;
+  log() {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(logMessage.trim());
@@ -21,7 +20,7 @@ class DeploymentOptimization {;
       this.log(`Running: ${description}`);
       const output = execSync(command, { cwd: this.projectRoot, stdio: "pipe" });
       this.log(`✅ ${description} completed successfully`);
-      return output.toString();,
+      return output.toString();
 } catch (error) {;
       this.log(`⚠️ ${description} encountered issues: ${error.message}`);
       return null;,
@@ -37,7 +36,7 @@ const fs = require("fs");
 class BuildOptimizer {;
   constructor() {;
     this.buildSteps = [;
-      "npm run lint -- --fix || true",;
+      "npm run lint -- --fix || true",
       "npm run type-check || true",;
       "npm run build || true";
     ];,
@@ -221,7 +220,7 @@ class ApplicationMonitor {;
       return JSON.parse(fs.readFileSync(this.metricsFile, "utf8"));,
 }
     return {;
-      deployments: 0,;
+      deployments: 0,
       lastDeployment: null,;
       buildTimes: [],;
       errors: [],;

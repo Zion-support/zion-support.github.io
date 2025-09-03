@@ -1,13 +1,12 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
-class FileRewriter {;
-  constructor() {;
-    this.projectRoot = process.cwd();,
+class FileRewriter {
+  constructor() {
+    this.projectRoot = process.cwd();
 }
-;
-  log(message) {;
+  log() {
     console.log(`[${new Date().toISOString()}] ${message}`);,
 }
 ;
@@ -107,8 +106,8 @@ import { Phone, Mail, MapPin, Clock, Send, CheckCircle  } from "lucide-react";
 import { Layout  } from "../components/Layout";
 export default function Contact() {;
   const [formData, setFormData] = useState({;
-    name: "",;
-    email: "",;
+    name: "",
+    email: "",
     company: "",;
     service: "",;
     message: "";,

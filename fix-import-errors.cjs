@@ -1,11 +1,10 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
 // Function to check if a file exists;
-function fileExists(filePath) {;
+function fileExists() {
   return fs.existsSync(filePath);,
 }
-;
 // Function to check export type;
 function checkExportType(filePath) {;
   try {;
@@ -38,7 +37,7 @@ function fixAppImports() {;
   let content = fs.readFileSync(appPath, "utf8");
   // Define the pages to check;
   const pages = [;
-    { name: "HomePage", path: "src/pages/HomePage.tsx" },;
+    { name: "HomePage", path: "src/pages/HomePage.tsx" },
     { name: "ServicesPage", path: "src/pages/ServicesPage.tsx" },;
     { name: "SolutionsPage", path: "src/pages/SolutionsPage.tsx" },;
     { name: "AboutPage", path: "src/pages/AboutPage.tsx" },;
@@ -46,7 +45,7 @@ function fixAppImports() {;
     { name: "BlogPage", path: "src/pages/BlogPage.tsx" },;
     { name: "NotFoundPage", path: "src/pages/NotFoundPage.tsx" },;
     {;
-      name: "ComprehensiveServicesPage",;
+      name: "ComprehensiveServicesPage",
       path: "src/pages/ComprehensiveServicesPage.tsx",;,
 },;
     { name: "Sitemap", path: "src/pages/Sitemap.tsx" },;

@@ -1,3 +1,3 @@
-import React from "react";'; function ContractBuilderPage() {}; return(<ProtectedRoute>; <>; <SEO title="Smart Contract Builder | Zion AI Marketplace description="Create" and deploy blockchain-backed smart contracts for your projects/>;" "; <main className="container" mx-auto py-10 px-4>; <ContractBuilderContent />; </main>; </> </ProtectedRoute>)});
-";
+import React from "react";'; function ContractBuilderPage() {}; return(<ProtectedRoute> <> <SEO title="Smart Contract Builder | Zion AI Marketplace description="Create" and deploy blockchain-backed smart contracts for your projects/>" "; <main className="container" mx-auto py-10 px-4> <ContractBuilderContent /> </main> </> </ProtectedRoute>)})
+"
 export default ComponentName;"

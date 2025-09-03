@@ -1,15 +1,14 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-class SecurityScanner {;
-  constructor() {;
+class SecurityScanner {
+  constructor() {
     this.projectRoot = process.cwd();
     this.vulnerabilities = [];
     this.recommendations = [];,
 }
-;
-  async scanDependencies() {;
+  async scanDependencies() {
     console.log("🔍 Scanning dependencies for vulnerabilities...");
     try {;
       execSync("npm audit", { stdio: "pipe" });
@@ -23,7 +22,7 @@ class SecurityScanner {;
   async scanSecrets() {;
     console.log("🔐 Scanning for exposed secrets...");
     const sensitivePatterns = [;
-      /password\s*[:=]\s*[""][^""]+[""]/gi,;
+      /password\s*[:=]\s*[""][^""]+[""]/gi,
       /api[_-]?key\s*[:=]\s*[""][^""]+[""]/gi,;
       /secret\s*[:=]\s*[""][^""]+[""]/gi,;
       /token\s*[:=]\s*[""][^""]+[""]/gi;

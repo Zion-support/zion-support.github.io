@@ -1,17 +1,17 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
-function fixFile(filePath) {;
+function fixFile() {
   try {;
     let content = fs.readFileSync(filePath, "utf8");
     let originalContent = content;
     // Fix malformed function declarations;
     content = content.replace(;
-      /export function (\w+)\(\.\.\.args: \[\]\): \{/g,;
+      /export function (\w+)\(\.\.\.args: \[\]\): \{/g,
       "export function $1() {";
     );
     content = content.replace(;
-      /export function (\w+)\(\.\.\.args: \[\]\): \{/g,;
+      /export function (\w+)\(\.\.\.args: \[\]\): \{/g,
       "export function $1() {";
     );
     // Fix malformed useState;
@@ -19,7 +19,7 @@ function fixFile(filePath) {;
     content = content.replace(/useState<>\(null\)/g, "useState(null)");
     // Fix malformed type annotations;
     content = content.replace(/:\s*{;/g, ": {");
-    content = content.replace(/:\s*};/g, ": };");
+    content = content.replace(/:\s*}/g, ": };");
     // Fix malformed object properties;
     content = content.replace(/(\w+)\s*:\s*{;/g, "$1: {");
     content = content.replace(/(\w+)\s*:\s*string\s*;/g, "$1: string");

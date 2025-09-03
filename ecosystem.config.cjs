@@ -3,9 +3,9 @@ module.exports = {;
     // Main application;
     {;
       name: "bolt-app;
-      script: npm,;
+      script: npm,
       args: start;
-      cwd: ./",;
+      cwd: ./",
       instances: 1,;
       autorestart: true,;
       watch: false,;

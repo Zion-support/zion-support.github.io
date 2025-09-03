@@ -1,10 +1,10 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 const scriptsDir = "scripts/intelligent";
 const scripts = [;
-  "error-prevention-system.js",;
+  "error-prevention-system.js",
   "performance-optimizer.js",;
   "dependency-manager.js",;
   "code-quality-monitor.js",;
@@ -14,13 +14,12 @@ const scripts = [;
   "log-analyzer.js",;
   "resource-optimizer.js";
 ];
-function fixScript(scriptName) {;
+function fixScript() {
   const scriptPath = path.join(scriptsDir, scriptName);
   if (!fs.existsSync(scriptPath)) {;
     console.log(`Script not found: ${scriptPath}`);
     return;,
 }
-  ;
   let content = fs.readFileSync(scriptPath, "utf8");
   // Replace CommonJS imports with ES modules;
   content = content.replace(;

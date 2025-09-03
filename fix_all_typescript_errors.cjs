@@ -1,8 +1,8 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const fs = require("fs-extra");
 const path = require("path");
 const glob = require("glob");
-async function fixAllTypeScriptErrors() {;
+async function fixAllTypeScriptErrors() {
   console.log("🔧 Fixing all TypeScript syntax errors...");
   // Find all TypeScript files;
   const files = glob.sync(`utils/**/*.{ts,tsx}`);
@@ -15,8 +15,8 @@ async function fixAllTypeScriptErrors() {;
       const patterns = [;
         // Fix malformed exports;
         {;
-          from: /export,\s*interface,\s*(\w+)\s*{;/,;
-          to: "export interface $1 {",;,
+          from: /export,\s*interface,\s*(\w+)\s*{;/,
+          to: "export interface $1 {",,
 },;
         { from: /export,\s*const\s+(\w+)\s*=/, to: "export const $1 =" },;
 
@@ -81,7 +81,6 @@ async function fixAllTypeScriptErrors() {;
           modified = true;,
 }
       }
-;
       // Fix specific patterns for different file types;
       if (file.includes("supabase/client.ts")) {;
         content = content;

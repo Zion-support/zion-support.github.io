@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 import fs from "fs";
 import path from "path";
@@ -6,18 +6,17 @@ import { fileURLToPath  } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // Function to fix Next.js Link issues in a file;
-function fixNextLinks(filePath) {;
+function fixNextLinks() {
   try {;
     let content = fs.readFileSync(filePath, "utf8");
     // Add Link import if not present;
     if (content.includes("href="/") && !content.includes("import Link")) {;
       content = content.replace(;
-        /import React from "react";/,;
+        /import React from "react";/,
         `import React from "react";
 import Link from "next/link";`;
       );,
 }
-    ;
     // Replace <a href="/..."> with <Link href="/...">;
     content = content.replace(;
       /<a href="(\/[^"]*)"([^>]*)>/g,;
@@ -206,7 +205,7 @@ export default function ${serviceName}() {;
   ];
   const pricing = [;
     {;
-      name: "Starter",;
+      name: "Starter",
       price: "$299/mo",;
       details: ["Up to 10 users", "Basic features", "Email support", "Standard SLA"];,
 },;
@@ -349,7 +348,7 @@ function getDisplayName(serviceName) {;
   return serviceName;
     .replace(/^AI/, "");
     .replace(/([A-Z])/g, " $1");
-    .trim();,
+    .trim();
 }
 ;
 // Fix remaining corrupted files;

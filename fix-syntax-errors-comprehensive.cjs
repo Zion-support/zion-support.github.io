@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 // Function to fix common syntax errors;
-function fixSyntaxErrors(content, filePath) {;
+function fixSyntaxErrors() {
   let fixed = content;
   let changes = 0;
   // Fix 1: Add missing semicolons after import statements;
@@ -80,7 +80,6 @@ function fixSyntaxErrors(content, filePath) {;
   fixed = fixed.replace(malformedArrayRegex, "$1$2$3,$4");
   return { fixed, changes }
 }
-;
 // Function to process a single file;
 function processFile(filePath) {;
   try {;
@@ -140,7 +139,7 @@ function main() {;
 }
 ;
 if (require.main === module) {;
-  main();,
+  main();
 }
 ;
 module.exports = { fixSyntaxErrors, processFile, findFiles }

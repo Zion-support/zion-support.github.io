@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")"";class PerformanceMonitor {
+const fs = require("fs");";const path = require("path");";const { execSync } = require("child_process")"";class PerformanceMonitor {
   constructor() {
     this.projectRoot = process.cwd()
     this.reportFile = path.join();      this.projectRoot,
@@ -23,7 +23,7 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
 
   async checkBundleSize() {
     this.log("📦 Checking bundle size");"";    try {
-      const buildDir = path.join(this.projectRoot, ".next");";      if (!fs.existsSync(buildDir)) {";        return { "error": "Build directory not found" };"}"
+      const buildDir = path.join(this.projectRoot, ".next");";      if (!fs.existsSync(buildDir)) {";        return { "error": "Build directory not found" }"}"
       const getDirSize = dir => {
         let size = 0
         const files = fs.readdirSync(dir)

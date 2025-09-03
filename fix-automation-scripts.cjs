@@ -1,15 +1,14 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require(`child_process`);
-class AutomationScriptFixer {;
-  constructor() {;
+class AutomationScriptFixer {
+  constructor() {
     this.projectRoot = process.cwd();
     this.fixedFiles = [];
     this.errors = [];,
 }
-;
-  log(message) {;
+  log() {
     console.log(`[${new Date().toISOString()}] ${message}`);,
 }
 ;
@@ -26,7 +25,7 @@ class AutomationScriptFixer {;
       // Fix common syntax errors;
       const fixes = [;
         // Fix template literal issues;
-        { pattern: /`([^`]*)\$\{([^}]*)\}([^`]*)`/g, replacement: ``$1${$2}$3`` },;
+        { pattern: /`([^`]*)\$\{([^}]*)\}([^`]*)`/g, replacement: ``$1${$2}$3`` },
         ;
         // Fix missing quotes in strings;
         { pattern: /console\.log\(`([^`]*)\$\{([^}]*)\}([^`]*)`\)/g, replacement: `console.log(`$1${$2}$3`)` },;

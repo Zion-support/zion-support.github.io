@@ -2,8 +2,8 @@ module.exports = {;
   apps: [;
     // Main Error Automation Orchestrator - Coordinates all error fixing activities;
     {;
-      name: "error-automation-orchestrator",;
-      script: "./scripts/automation/pm2-error-automation-orchestrator.cjs",;
+      name: "error-automation-orchestrator",
+      script: "./scripts/automation/pm2-error-automation-orchestrator.cjs",
       instances: 1,;
       autorestart: true,;
       watch: false,;

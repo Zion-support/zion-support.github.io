@@ -3,8 +3,8 @@
  * Enhanced Performance Monitor
  * Monitors application performance and provides detailed analytics
  */
-const fs = require("fs")
-const path = require("path")
+const fs = require("fs");
+const path = require("path");
 const { execSync } = require("child_process")
 class EnhancedPerformanceMonitor {
   constructor() {
@@ -175,7 +175,7 @@ if (require.main === module) {
 
 module.exports = EnhancedPerformanceMonitor
 #!/usr/bin/env node
-const fs = require("fs")const path = require("path")const { execSync } = require("child_process")";class PerformanceMonitor {
+const fs = require("fs");const path = require("path");const { execSync } = require("child_process")";class PerformanceMonitor {
   constructor() {
     this.projectRoot = process.cwd()
     this.reportsDir = path.join(this.projectRoot, "monitoring-reports");    this.ensureDirectories(),"}

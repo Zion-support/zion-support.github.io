@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
@@ -6,9 +6,9 @@ const path = require("path");
 const fixes = [;
   // Fix unterminated string literals and malformed imports;
   {;
-    pattern: /import\s+(\w+)\s+from\s+"([^"]*);";/g,;
+    pattern: /import\s+(\w+)\s+from\s+"([^"]*);";/g,
     replacement: "import $1 from "$2";";,
-},;
+},
   {;
     pattern: /describe\("([^"]*);",\s*\(\)\s*=>\s*{";/g,;
     replacement: "describe("$1", () => {";,
@@ -44,7 +44,7 @@ const fixes = [;
     replacement: "";,
 }
 ];
-function fixFile(filePath) {;
+function fixFile() {
   try {;
     let content = fs.readFileSync(filePath, "utf8");
     let originalContent = content;
@@ -72,7 +72,6 @@ function fixFile(filePath) {;
     return false;,
 }
 }
-;
 function findTestFiles(dir) {;
   const testFiles = [];
   function traverse(currentDir) {;

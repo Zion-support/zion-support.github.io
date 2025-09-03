@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 import fs from "fs";
 import path from "path";
@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // List of remaining corrupted files;
 const remainingCorruptedFiles = [;
-  "src/pages/services/Blockchain-Supply-Chain-Transparency.tsx",;
+  "src/pages/services/Blockchain-Supply-Chain-Transparency.tsx",
   "src/pages/services/BlockchainAsAService.tsx",;
   "src/pages/services/BlockchainSolutions.tsx",;
   "src/pages/services/BlockchainWeb3Platform.tsx",;
@@ -117,7 +117,7 @@ export default function ${serviceName}() {;
   ];
   const pricing = [;
     {;
-      name: "Starter",;
+      name: "Starter",
       price: "$299/mo",;
       details: ["Up to 10 users", "Basic features", "Email support", "Standard SLA"];,
 },;
@@ -245,7 +245,7 @@ export default function ${serviceName}() {;
 }
 `;
 // Function to extract service name from file path;
-function getServiceName(filePath) {;
+function getServiceName() {
   const fileName = path.basename(filePath, path.extname(filePath));
   // Handle special cases with multiple extensions;
   if (fileName.includes(".js.jsx")) {;
@@ -257,14 +257,13 @@ function getServiceName(filePath) {;
     .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
     .join("");,
 }
-;
 // Function to extract display name from service name;
 function getDisplayName(serviceName) {;
   // Remove common prefixes and convert to readable format;
   return serviceName;
     .replace(/^AI/, "");
     .replace(/([A-Z])/g, " $1");
-    .trim();,
+    .trim();
 }
 ;
 // Fix corrupted files;

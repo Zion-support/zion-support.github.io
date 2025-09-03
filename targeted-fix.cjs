@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-function fixFile(filePath) {;
+function fixFile() {
   try {;
     let content = fs.readFileSync(filePath, "utf8");
     let originalContent = content;
@@ -19,7 +19,6 @@ function fixFile(filePath) {;
         return match + "\nexport default function Page() {";,
 });,
 }
-    ;
     // Fix missing closing braces;
     if (content.includes("export default function") && !content.includes("}")) {;
       content += "\n}";,
@@ -39,7 +38,7 @@ function fixFile(filePath) {;
 ;
 // Fix specific problematic files;
 const problematicFiles = [;
-  `src/pages/Sitemap.jsx`,;
+  `src/pages/Sitemap.jsx`,
   "src/pages/HomePage.tsx",;
   "src/pages/ServicesPage.tsx",;
   "src/pages/SolutionsPage.tsx",;

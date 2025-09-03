@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 // List of files that need complete rewriting;
 const filesToRewrite = [;
-  "src/pages/SolutionsPage.tsx",;
+  "src/pages/SolutionsPage.tsx",
   "src/pages/AboutPage.tsx",;
   "src/pages/ContactPage.tsx",;
   "src/pages/BlogPage.tsx",;
@@ -17,7 +17,7 @@ const filesToRewrite = [;
   "src/pages/ServicesPage.tsx",;
   "src/pages/ComprehensiveSitemap.tsx",;
 ];
-function createBasicPage(filePath) {;
+function createBasicPage() {
   const fileName = path.basename(filePath, path.extname(filePath));
   const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1);
   let content = "";
@@ -78,7 +78,6 @@ export default function ${componentName}() {;
   );,
 }`;,
 }
-;
   return content;,
 }
 ;

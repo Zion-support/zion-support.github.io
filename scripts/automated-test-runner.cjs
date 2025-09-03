@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+const fs = require("fs");
+const path = require("path");
 class AutomatedTestRunner {
   constructor() {
     this.projectRoot = process.cwd()

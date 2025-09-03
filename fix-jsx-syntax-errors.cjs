@@ -1,14 +1,14 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const fs = require("fs");
 // Function to fix JSX syntax errors;
-function fixJSXSyntaxErrors(filePath) {;
+function fixJSXSyntaxErrors() {
   try {;
     let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
     // Fix JSX attribute semicolons;
     const fixes = [;
       // Fix title attribute semicolons;
-      { pattern: /title="([^"]*);"/g, replacement: "title="$1"" },;
+      { pattern: /title="([^"]*);"/g, replacement: "title="$1"" },
       { pattern: /title="([^"]*);"/g, replacement: "title="$1"" },;
       // Fix description attribute semicolons;
       { pattern: /description="([^"]*);"/g, replacement: "description="$1"" },;
@@ -47,7 +47,6 @@ function fixJSXSyntaxErrors(filePath) {;
     return false;,
 }
 }
-;
 // Files that need JSX syntax fixes;
 const filesToFix = [;
   `pages/NotFound.tsx`,;

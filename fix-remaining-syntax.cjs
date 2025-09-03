@@ -1,8 +1,8 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
-function fixFile(filePath) {;
+function fixFile() {
   try {;
     let content = fs.readFileSync(filePath, "utf8");
     let originalContent = content;
@@ -30,7 +30,6 @@ function fixFile(filePath) {;
       console.log(`Fixed: ${filePath}`);
       return true;,
 }
-    ;
     return false;,
 } catch (error) {;
     console.error(`Error fixing ${filePath}:`, error.message);

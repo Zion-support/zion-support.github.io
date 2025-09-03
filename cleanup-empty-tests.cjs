@@ -1,20 +1,19 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 const glob = require("glob");
-class EmptyTestCleaner {;
-  constructor() {;
+class EmptyTestCleaner {
+  constructor() {
     this.projectRoot = process.cwd();
     this.removedCount = 0;
     this.fixedCount = 0;,
 }
-;
-  async cleanupEmptyTests() {;
+  async cleanupEmptyTests() {
     console.log("🧹 Starting cleanup of empty test files...");
     // Find all test files;
     const testFiles = [;
-      ...glob.sync("**/*.test.js", { cwd: this.projectRoot }),;
+      ...glob.sync("**/*.test.js", { cwd: this.projectRoot }),
       ...glob.sync("**/*.test.tsx", { cwd: this.projectRoot }),;
       ...glob.sync("**/*.test.ts", { cwd: this.projectRoot }),;
     ];
@@ -71,7 +70,7 @@ class EmptyTestCleaner {;
   isStubFile(content) {;
     // Check if it"s a stub file that should be kept;
     const stubIndicators = [;
-      /\/\/ TODO: Add tests/,;
+      /\/\/ TODO: Add tests/,
       /\/\/ Stub file/,;
       /\/\/ Placeholder/,;
       /export.*=.*null/,;

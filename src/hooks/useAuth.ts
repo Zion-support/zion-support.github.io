@@ -8,7 +8,7 @@ import { useState, useEffect  } from "react"; interface User { id: string email:
 } } else { setAuthState({ user: null, isAuthenticated: false, isLoading: false,;,
 });,
 } }; checkAuth();";,
-}, []); const login = async (email: string, password: string) => { // In a real app, you would make an API call to your backend const mockUser: User = {" id: "1", email, name: "John Doe", role "user", " userType: "creator",,;,
+} []); const login = async (email: string, password: string) => { // In a real app, you would make an API call to your backend const mockUser: User = {" id: "1", email, name: "John Doe", role "user", " userType: "creator",,;,
 }; setAuthState({ user: mockUser, isAuthenticated: true, isLoading: false",;,
 }); " localStorage.setItem("authToken", "dummy-token"); localStorage.setItem("zion_user", JSON.stringify(mockUser)); return mockUser;,
 }; const logout = () => { setAuthState({ user: null, isAuthenticated: false, isLoading false";,

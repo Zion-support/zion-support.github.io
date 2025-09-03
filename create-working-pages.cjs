@@ -1,13 +1,12 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
-class WorkingPagesCreator {;
-  constructor() {;
-    this.projectRoot = process.cwd();,
+class WorkingPagesCreator {
+  constructor() {
+    this.projectRoot = process.cwd();
 }
-;
-  log(message) {;
+  log() {
     console.log(`[${new Date().toISOString()}] ${message}`);,
 }
 ;
@@ -23,13 +22,13 @@ export default function PricingGuide() {;
     {;
       question: "Can I change my plan at any time?", ;
       answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we\"ll prorate any billing differences.";,
-},;
+},
     {;
       question: "Is there a free trial available?", ;
       answer: "Yes, we offer a 14-day free trial for all plans. No credit card required to start your trial.";,
 },;
     {;
-      question: "What payment methods do you accept?",;
+      question: "What payment methods do you accept?",
       answer: "We accept all major credit cards, PayPal, and bank transfers for annual subscriptions.";,
 },;
     {;

@@ -1,13 +1,12 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
-class JSXSyntaxFixer {;
-  constructor() {;
+class JSXSyntaxFixer {
+  constructor() {
     this.projectRoot = process.cwd();
     this.fixedFiles = 0;,
 }
-;
-  log(message) {;
+  log() {
     console.log(`[${new Date().toISOString()}] ${message}`);,
 }
 ;

@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 // Function to fix remaining parsing errors;
-function fixParsingErrors(content, filePath) {;
+function fixParsingErrors() {
   let fixed = content;
   let changes = 0;
   // Fix 1: Add missing import statements for common patterns;
@@ -13,7 +13,6 @@ function fixParsingErrors(content, filePath) {;
       fixed = fixed.replace(importRegex, `$1\nimport { motion  } from "framer-motion";`);,
 }
   }
-;
   // Fix 2: Fix malformed import statements;
   const malformedImportRegex = /import\s*{\s*([^}]*?)\s*}\s*from\s*[""]([^""]*)[""]\s*([^]*)/g;
   fixed = fixed.replace(malformedImportRegex, (match, imports, module, rest) => {;
@@ -169,7 +168,7 @@ function main() {;
 }
 ;
 if (require.main === module) {;
-  main();,
+  main();
 }
 ;
 module.exports = { fixParsingErrors, processFile, findFiles }

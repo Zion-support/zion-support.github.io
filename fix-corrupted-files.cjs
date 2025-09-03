@@ -1,9 +1,9 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 // Function to check if a file is corrupted;
-function isCorrupted(content) {;
+function isCorrupted() {
   // Check for common corruption patterns;
   const corruptionPatterns = [;
     /import.*from.*import/,  // Double imports;
@@ -20,7 +20,6 @@ function isCorrupted(content) {;
   ;
   return corruptionPatterns.some(pattern => pattern.test(content));,
 }
-;
 // Function to create a basic service template;
 function createServiceTemplate(filename) {;
   const serviceName = path.basename(filename, path.extname(filename));
@@ -144,7 +143,7 @@ function main() {;
 }
 ;
 if (require.main === module) {;
-  main();,
+  main();
 }
 ;
 module.exports = { fixFile, isCorrupted, createServiceTemplate }

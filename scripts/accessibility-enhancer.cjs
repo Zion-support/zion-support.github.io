@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const fs = require("fs")
-const path = require("path")
+const fs = require("fs");
+const path = require("path");
 class AccessibilityEnhancer {
   constructor() {
     this.projectRoot = process.cwd()
@@ -77,7 +77,7 @@ export const accessibilityUtils = {
       document.body.removeChild(announcement),
 }, 1000),
 }
-};`
+}`
       const configDir = path.join(this.projectRoot, "lib")
       if (!fs.existsSync(configDir)) {
         fs.mkdirSync(configDir, { recursive: true }),

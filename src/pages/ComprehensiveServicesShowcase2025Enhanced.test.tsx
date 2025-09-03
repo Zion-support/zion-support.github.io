@@ -1,13 +1,13 @@
-describe("ComprehensiveServicesShowcase2025Enhanced", () => {}; "; it("renders without crashing", () => {}; render(<ComprehensiveServicesShowcase2025Enhanced / >) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<ComprehensiveServicesShowcase2025Enhanced />) ;
-    render();
+describe("ComprehensiveServicesShowcase2025Enhanced", () => {}; "; it("renders without crashing", () => {}; render(<ComprehensiveServicesShowcase2025Enhanced / >) expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<ComprehensiveServicesShowcase2025Enhanced />)
+    render()
     expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument();,
-});
-"";
-  it("displays expected content", () => {;
-    render(<ComprehensiveServicesShowcase2025Enhanced /" >);
+})
+""
+  it("displays expected content", () => {
+    render(<ComprehensiveServicesShowcase2025Enhanced /" >)
     // Add more specific tests here,;,
 });,
-});";
+});"
 ";,
-});";
+});"
 "

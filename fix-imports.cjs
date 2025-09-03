@@ -1,11 +1,11 @@
 const fs = require("fs");
 const path = require("path");
-function fixImportsInFile(filePath) {;
+function fixImportsInFile() {
   try {;
     let content = fs.readFileSync(filePath, "utf8");
     // Fix concatenated imports;
     content = content.replace(;
-      /import\s+([^]+);"import/g,;
+      /import\s+([^]+);"import/g,
       "import $1;\nimport";
     );
     content = content.replace(/import\s+([^]+);""/g, "import $1;\n");
@@ -34,7 +34,7 @@ function fixImportsInFile(filePath) {;
     content = content.replace(/defaultVariants:\s*{;/g, "defaultVariants: {");
     // Fix missing quotes and commas;
     content = content.replace(;
-      /(\w+):\s*"([^"]*)"(\w+):/g,;
+      /(\w+):\s*"([^"]*)"(\w+):/g,
       "$1: "$2",\n        $3:";
     );
     content = content.replace(;
@@ -47,7 +47,6 @@ function fixImportsInFile(filePath) {;
     console.error(`Error fixing ${filePath}:`, error.message);,
 }
 }
-;
 function walkDirectory(dir) {;
   const files = fs.readdirSync(dir);
   for (const file of files) {;

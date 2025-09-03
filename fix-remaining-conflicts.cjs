@@ -1,10 +1,10 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 // Function to resolve merge conflicts in a file;
-function resolveMergeConflicts(filePath) {;
+function resolveMergeConflicts() {
   try {;
     let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
@@ -33,7 +33,6 @@ function resolveMergeConflicts(filePath) {;
     return false;,
 }
 }
-;
 // Function to find all files with merge conflicts;
 function findFilesWithConflicts(dir) {;
   const files = [];

@@ -1,13 +1,13 @@
-describe("accessibility - auditor", () => {}; "; it("renders without crashing", () => {}; render(<accessibility - auditor />) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<accessibility - auditor />) ;
-    render();
+describe("accessibility - auditor", () => {}; "; it("renders without crashing", () => {}; render(<accessibility - auditor />) expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<accessibility - auditor />)
+    render()
     expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument();,
-});
-"";
-  it("displays expected content", () => {;
-    render(<accessibility -auditor /" >);
+})
+""
+  it("displays expected content", () => {
+    render(<accessibility -auditor /" >)
     // Add more specific tests here,;,
 });,
-});";
+});"
 ";,
-});";
+});"
 "

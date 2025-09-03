@@ -1,15 +1,14 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 const glob = require("glob");
-class TestSyntaxFixer {;
-  constructor() {;
+class TestSyntaxFixer {
+  constructor() {
     this.projectRoot = process.cwd();
     this.testDir = path.join(this.projectRoot, "__tests__");,
 }
-;
-  async fixAllTestFiles() {;
+  async fixAllTestFiles() {
     console.log("🔧 Starting test syntax fixes...");
     const testFiles = glob.sync("**/*.test.js", { cwd: this.testDir });
     for (const testFile of testFiles) {;

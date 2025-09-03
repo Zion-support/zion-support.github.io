@@ -1,7 +1,7 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
-function fixFile(filePath) {;
+function fixFile() {
   try {;
     let content = fs.readFileSync(filePath, "utf8");
     let originalContent = content;
@@ -18,11 +18,11 @@ function fixFile(filePath) {;
     content = content.replace(/\(entry: \)/g, "(entry: any)");
     content = content.replace(/\(entry: \)/g, "(entry: any)");
     content = content.replace(;
-      /\(key: keyof (\w+), value: \)/g,;
+      /\(key: keyof (\w+), value: \)/g,
       "(key: keyof $1, value: any)";
     );
     content = content.replace(;
-      /\(key: keyof (\w+), value: \)/g,;
+      /\(key: keyof (\w+), value: \)/g,
       "(key: keyof $1, value: any)";
     );
     // Fix malformed useState;
@@ -30,7 +30,7 @@ function fixFile(filePath) {;
     content = content.replace(/useState<>\(null\)/g, "useState(null)");
     // Fix malformed type annotations;
     content = content.replace(/:\s*{;/g, ": {");
-    content = content.replace(/:\s*};/g, ": };");
+    content = content.replace(/:\s*}/g, ": };");
     // Fix malformed object properties;
     content = content.replace(/(\w+)\s*:\s*{;/g, "$1: {");
     content = content.replace(/(\w+)\s*:\s*string\s*;/g, "$1: string");

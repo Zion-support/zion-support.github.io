@@ -1,17 +1,17 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("child_process");
-class ComprehensiveAutomationOrchestrator {;
-  constructor() {;
+class ComprehensiveAutomationOrchestrator {
+  constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, "automation", "logs", "comprehensive-automation.log");
     this.reportFile = path.join(this.projectRoot, "automation", "logs", "comprehensive-automation-report.json");
     this.ensureDirectories();
     this.results = {;
-      timestamp: new Date().toISOString(),;
-      status: "running",;
+      timestamp: new Date().toISOString(),
+      status: "running",
       steps: [],;
       errors: [],;
       fixes: [],;
@@ -19,8 +19,7 @@ class ComprehensiveAutomationOrchestrator {;
       newScripts: [];,
 }
   }
-;
-  ensureDirectories() {;
+  ensureDirectories() {
     const dirs = ["automation/logs", "scripts/automation/reports", "reports"];
     dirs.forEach(dir => {;
       const dirPath = path.join(this.projectRoot, dir);
@@ -66,7 +65,7 @@ class ComprehensiveAutomationOrchestrator {;
       this.results.errors.push({;
         step: stepName,;
         error: error.message,;
-        timestamp: new Date().toISOString();,
+        timestamp: new Date().toISOString();
 });
       this.log(`❌ Failed step: ${stepName} - ${error.message}`, "ERROR");
       return null;,

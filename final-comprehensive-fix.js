@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 import fs from "fs";
 import path from "path";
@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 // List of all corrupted files that need to be completely rewritten;
 const corruptedFiles = [;
   // Main pages directory;
-  "src/pages/InnovativeServicesShowcase2025.tsx",;
+  "src/pages/InnovativeServicesShowcase2025.tsx",
   "src/pages/InnovativeServicesShowcase2026.tsx",;
   "src/pages/InnovativeServicesShowcase2028.tsx",;
   "src/pages/InnovativeServicesShowcase2029.tsx",;
@@ -161,7 +161,7 @@ const corruptedFiles = [;
   "src/pages/services/AI-Supply-Chain-Optimization.tsx";
 ];
 // Function to create a proper React component;
-function createPageComponent(fileName) {;
+function createPageComponent() {
   const componentName = fileName.replace(/[^a-zA-Z0-9]/g, "");
   const displayName = fileName.replace(/\.tsx|\.jsx/g, "").replace(/([A-Z])/g, " $1").trim();
   return `import React from "react";
@@ -221,7 +221,7 @@ const ${componentName} = () => {;
     </>;
   );,
 }
-export default ${componentName};`;,
+export default ${componentName}`;,
 }
 ;
 // Function to fix Redux files properly;

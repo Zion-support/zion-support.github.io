@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")"";class HealthChecker {
+const fs = require("fs");";const path = require("path");";const { execSync } = require("child_process")"";class HealthChecker {
   constructor() {
     this.projectRoot = process.cwd()
     this.reportFile = path.join(this.projectRoot, "health-check-report.json");"}"

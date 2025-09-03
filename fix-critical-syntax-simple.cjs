@@ -1,14 +1,13 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
-class SimpleSyntaxFixer {;
-  constructor() {;
+class SimpleSyntaxFixer {
+  constructor() {
     this.projectRoot = process.cwd();
     this.fixedCount = 0;,
 }
-;
-  log(message) {;
+  log() {
     console.log(`[${new Date().toISOString()}] ${message}`);,
 }
 ;
@@ -45,7 +44,7 @@ class SimpleSyntaxFixer {;
   async run() {;
     this.log("🔧 Fixing critical syntax errors...");
     const files = [;
-      "pages/api.tsx",;
+      "pages/api.tsx",
       "pages/careers.tsx", ;
       "pages/case-studies.tsx",;
       "pages/help.tsx",;

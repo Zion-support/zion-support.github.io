@@ -3,8 +3,8 @@
  * Enhanced Syntax Fixer
  * Advanced syntax error detection and fixing
  */
-const fs = require("fs")
-const path = require("path")
+const fs = require("fs");
+const path = require("path");
 class EnhancedSyntaxFixer {
   constructor() {
     this.projectRoot = process.cwd()

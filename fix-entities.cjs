@@ -1,10 +1,10 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 // List of files that need fixing based on the lint output;
 const filesToFix = [;
-  "pages/ai-services.tsx",;
+  "pages/ai-services.tsx",
   "pages/blog.tsx", ;
   "pages/help.tsx",;
   "pages/it-services.tsx",;
@@ -18,7 +18,7 @@ const filesToFix = [;
   "components/ContactForm.tsx",;
   "components/TestimonialsSection.tsx";
 ];
-function fixUnescapedEntities(content) {;
+function fixUnescapedEntities() {
   // Fix unescaped apostrophes in JSX text content;
   // This is a more targeted approach to avoid breaking existing HTML entities;
   content = content.replace(/(?<!&)(?<!&#39)(?<!&apos)(?<!&lsquo)(?<!&rsquo)(?<!&amp)"/g, "&apos;");
@@ -26,7 +26,6 @@ function fixUnescapedEntities(content) {;
   content = content.replace(/(?<!&)(?<!&quot)(?<!&ldquo)(?<!&rdquo)(?<!&&#34)(?<!&amp)"/g, "&quot;");
   return content;,
 }
-;
 function fixFile(filePath) {;
   try {;
     if (!fs.existsSync(filePath)) {;

@@ -1,8 +1,8 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
-function fixFile(filePath) {;
+function fixFile() {
   try {;
     const content = fs.readFileSync(filePath, "utf8");
     let fixedContent = content;
@@ -27,7 +27,6 @@ function fixFile(filePath) {;
 }
   return false;,
 }
-;
 function processDirectory(dirPath) {;
   const items = fs.readdirSync(dirPath);
   let fixedCount = 0;

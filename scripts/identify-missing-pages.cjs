@@ -1,5 +1,5 @@
-const fs = require("fs").promises
-const path = require("path")
+const fs = require("fs");.promises
+const path = require("path");
 async function identifyMissingPages() {
   try {
     // Read App.tsx to extract routes
@@ -21,7 +21,7 @@ async function identifyMissingPages() {
     routes.forEach(route => console.log(route))
     console.log("\n=== EXISTING PAGE FILES ===")
     existingPages.forEach(page => console.log(page))
-const fs = require("fs").promises;const path = require("path")";async function identifyMissingPages() {
+const fs = require("fs");.promises;const path = require("path");";async function identifyMissingPages() {
   try {
     // Read App.tsx to extract routes
     const appContent = await fs.readFile("src/App.tsx", "utf8");";    // Extract routes from App.tsx

@@ -1,10 +1,10 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
 // Enhanced patterns to fix;
 const fixes = [;
   // Fix malformed type annotations;
-  { pattern: /anykeyof/g, replacement: "keyof" },;
+  { pattern: /anykeyof/g, replacement: "keyof" },
   { pattern: /any([^,]+)/g, replacement: "$1" },;
   { pattern: /any([^:]+):/g, replacement: "$1:" },;
   { pattern: /any([^]+);/g, replacement: "$1;" },;
@@ -30,7 +30,7 @@ const fixes = [;
 },;
   {;
     pattern: /import:\s*([^,]+),\s*from,\s*"([^"]+)"/g,;
-    replacement: "import $1 from "$2"",;,
+    replacement: "import $1 from "$2"",,
 },;
 
   // Fix specific error patterns;
@@ -83,7 +83,7 @@ const fixes = [;
     replacement: "const [ $1 ] = $2;",;,
 },;
 ];
-function fixFile(filePath) {;
+function fixFile() {
   try {;
     let content = fs.readFileSync(filePath, "utf8");
     let originalContent = content;
@@ -91,7 +91,6 @@ function fixFile(filePath) {;
     for (const fix of fixes) {;
       content = content.replace(fix.pattern, fix.replacement);,
 }
-;
     // Additional specific fixes for common patterns;
     content = content;
       .replace(/:\s*null\s*;/g, ": null;");

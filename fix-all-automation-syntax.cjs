@@ -1,12 +1,11 @@
-#!/usr/bin/env node;
-const fs = require("fs")const path = require("path")const { execSync } = require("child_process");
-class AutomationSyntaxFixer {;
-  constructor() {;
+#!/usr/bin/env node
+const fs = require("fs");const path = require("path");const { execSync } = require("child_process");
+class AutomationSyntaxFixer {
+  constructor() {
     this.projectRoot = process.cwd();
     this.fixedFiles = [];
     this.errors = []}
-;
-  log(message) {;
+  log() {
     console.log(`[${new Date().toISOString()}] ${message}`);`}
 ;
   getAllFiles(dir, extensions = [".js", ".cjs", ".mjs"]) {";    let files = [];
@@ -25,7 +24,7 @@ class AutomationSyntaxFixer {;
 ;
   fixImportStatements(content) {;
     // Fix incomplete import statements;
-    content = content.replace(/import fs from;/g, "import fs from "fs;");";    content = content.replace(/import path from;/g, "import path from path";");";    content = content.replace();      /import { execSync } from;/g,;
+    content = content.replace(/import fs from;/g, "import fs from "fs;");";    content = content.replace(/import path from;/g, "import path from path";");";    content = content.replace();      /import { execSync } from;/g,
       "import { execSync  } from "child_process;";");    content = content.replace();      /import axios from;/g,;
       "import axios from axios";"");
 
@@ -151,7 +150,7 @@ class AutomationSyntaxFixer {;
 ;
     // Generate report;
     const report = {;
-      timestamp: new Date().toISOString(),;
+      timestamp: new Date().toISOString(),
       "totalFiles": allFiles.length,;
       fixedFiles: fixedCount,;
       "errors": this.errors,;

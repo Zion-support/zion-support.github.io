@@ -1,15 +1,14 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
-class TargetedSyntaxFixer {;
-  constructor() {;
+class TargetedSyntaxFixer {
+  constructor() {
     this.projectRoot = process.cwd();
     this.fixedFiles = [];
     this.errors = [];,
 }
-;
-  log(message) {;
+  log() {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] ${message}`);,
 }
@@ -23,9 +22,9 @@ class TargetedSyntaxFixer {;
       const fixes = [;
         // Fix missing semicolons after import statements;
         {;
-          pattern: /^import\s+.*from\s+[""][^""]+[""]\s*$/gm,;
+          pattern: /^import\s+.*from\s+[""][^""]+[""]\s*$/gm,
           replacement: (match) => match.endsWith(";") ? match : match + ";";,
-},;
+},
         // Fix missing semicolons after export statements;
         {;
           pattern: /^export\s+.*from\s+[""][^""]+[""]\s*$/gm,;

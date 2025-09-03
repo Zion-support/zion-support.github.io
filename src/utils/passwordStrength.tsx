@@ -1,7 +1,7 @@
-// passwordStrength utility,;
-export const passwordStrength = {;
-  // Placeholder utility functions,;
-init: () => {;
+// passwordStrength utility,
+export const passwordStrength = {
+  // Placeholder utility functions,
+init: () => {
     ,;,
 }
 }

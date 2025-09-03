@@ -1,7 +1,7 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 // Function to fix remaining lint errors;
-function fixRemainingLintErrors(content) {;
+function fixRemainingLintErrors() {
   let fixed = content;
   // Fix unescaped entities;
   fixed = fixed.replace(/(?<!&)([^&])"([^&])/g, "$1&apos;$2");
@@ -9,7 +9,7 @@ function fixRemainingLintErrors(content) {;
 
   // Fix Next.js link issues - replace <a> with <Link> for internal navigation;
   fixed = fixed.replace(;
-    /<a\s+href=\/([^]+)"([^>]*)>/g,;
+    /<a\s+href=\/([^]+)"([^>]*)>/g,
     "<Link href="/$1$2>";
   );
   fixed = fixed.replace(/<\/a>/g, "</Link>");
@@ -21,7 +21,6 @@ function fixRemainingLintErrors(content) {;
   if (fixed.includes("<Link") && !fixed.includes("import Link  from "next/link)) {";
     fixed = fixed.replace(/import\s+([^]+);/, "import $1;\nimport Link from "next/link)";,
 }
-;
   return fixed}
 ;
 // Main function;

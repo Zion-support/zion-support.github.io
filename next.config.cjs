@@ -1,13 +1,12 @@
-/** @type {import("next").NextConfig} */;
-const nextConfig = {;
-  reactStrictMode: true,;
-  poweredByHeader: false,;
-  eslint: {;
-    ignoreDuringBuilds: true,;
-<<<<<<< HEAD;,
-},:next.config.js;
-  typescript: {;
-    // Allow production builds to successfully complete even if;
+/** @type {import("next").NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  poweredByHeader: false,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    // Allow production builds to successfully complete even if
     // there are type errors.;
   experimental: {;
     // Removed deprecated options;,
@@ -69,7 +68,7 @@ const nextConfig = {;
     removeConsole: process.env.NODE_ENV === "production",;,
 },;
   webpack: (config, { dev, isServer }) => {;
-    if (!dev && !isServer) {;
+    if() {
       config.resolve.alias = {;
         ...config.resolve.alias,;
         "@": new URL("./src", import.meta.url).pathname,;,

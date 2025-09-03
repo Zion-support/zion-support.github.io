@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 // Function to create a minimal valid React component;
-function createMinimalComponent(filePath) {;
+function createMinimalComponent() {
   const fileName = path.basename(filePath, path.extname(filePath));
   const componentName = fileName;
     .replace(/[-_]/g, "");
@@ -39,13 +39,13 @@ const ${componentName}${typeAnnotation} = () => {;
     </div>;
   );,
 }
-export default ${componentName};`;,
+export default ${componentName}`;,
 }
 ;
 // Function to check if a file is severely corrupted;
 function isSeverelyCorrupted(content) {;
   const corruptionIndicators = [;
-    "Parsing error",;
+    "Parsing error",
     "Unterminated string literal",;
     "Expression expected",;
     "Declaration or statement expected",;

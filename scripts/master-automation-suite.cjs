@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const { execSync, spawn } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+const fs = require("fs");
+const path = require("path");
 class MasterAutomationSuite {
   constructor() {
     this.projectRoot = process.cwd()
@@ -50,8 +50,8 @@ class MasterAutomationSuite {
     this.log("🔧 Fixing syntax errors...", "INFO")
     // Create a comprehensive syntax fixer
     const syntaxFixer = `
-      const fs = require("fs")
-      const path = require("path")
+      const fs = require("fs");
+      const path = require("path");
       const files = [
         "pages/api.tsx",
         "pages/careers.tsx",

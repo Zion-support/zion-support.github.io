@@ -1,14 +1,13 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
-class FinalTypeScriptFixer {;
-  constructor() {;
+class FinalTypeScriptFixer {
+  constructor() {
     this.projectRoot = process.cwd();
     this.fixes = [];,
 }
-;
-  log(message, type = "INFO") {;
+  log() {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] [${type}] ${message}`);,
 }
@@ -16,7 +15,7 @@ class FinalTypeScriptFixer {;
   async fixCorruptedImports() {;
     this.log("🔧 Fixing corrupted import statements...");
     const filesToFix = [;
-      "pages",;
+      "pages",
       "components",;
       "utils",;
       "hooks";

@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 import fs from "fs";
 import path from "path";
@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // List of all corrupted files that need to be completely rewritten;
 const corruptedFiles = [;
-  "src/pages/services/AI-Talent-Acquisition-Platform.tsx",;
+  "src/pages/services/AI-Talent-Acquisition-Platform.tsx",
   "src/pages/services/AI5GNetwork.tsx",;
   "src/pages/services/AIAnsible.tsx",;
   "src/pages/services/AIApplicationSecurity.tsx",;
@@ -61,7 +61,7 @@ const corruptedFiles = [;
   "src/pages/services/AIHealthcare.tsx";
 ];
 // Function to create a proper React component;
-function createServiceComponent(serviceName) {;
+function createServiceComponent() {
   const componentName = serviceName.replace(/[^a-zA-Z0-9]/g, "");
   const displayName = serviceName.replace(/AI|\.tsx|\.jsx/g, "").replace(/([A-Z])/g, " $1").trim();
   return `import React from "react";
@@ -121,7 +121,7 @@ const ${componentName} = () => {;
     </>;
   );,
 }
-export default ${componentName};`;,
+export default ${componentName}`;,
 }
 ;
 // Function to fix Next.js Link issues;

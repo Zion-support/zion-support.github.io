@@ -1,12 +1,11 @@
 const fs = require("fs");
 const path = require("path");
-class AutomationSyntaxFixer {;
-  constructor() {;
+class AutomationSyntaxFixer {
+  constructor() {
     this.projectRoot = process.cwd();
     this.fixedFiles = [];,
 }
-;
-  log(message) {;
+  log() {
     console.log(`[${new Date().toISOString()}] ${message}`);,
 }
 ;

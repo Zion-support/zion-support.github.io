@@ -1,7 +1,7 @@
-// safeStorage utility,;
-export const safeStorage = {;
-  // Placeholder utility functions,;
-init: () => {;
+// safeStorage utility,
+export const safeStorage = {
+  // Placeholder utility functions,
+init: () => {
     ,;,
 }
 }

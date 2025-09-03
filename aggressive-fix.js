@@ -1,8 +1,8 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-function createValidReactComponent(filePath) {;
+function createValidReactComponent() {
   const fileName = path.basename(filePath, path.extname(filePath));
   const componentName = fileName;
     .split("-");
@@ -31,7 +31,6 @@ export default function ${componentName}() {;
 }
 `;,
 }
-;
 function fixFile(filePath) {;
   try {;
     const content = fs.readFileSync(filePath, "utf8");

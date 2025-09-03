@@ -1,14 +1,13 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-class PerformanceOptimizer {;
-  constructor() {;
+class PerformanceOptimizer {
+  constructor() {
     this.projectRoot = process.cwd();
     this.optimizations = [];,
 }
-;
-  async optimizeImages() {;
+  async optimizeImages() {
     console.log("🖼️  Optimizing images...");
     const publicDir = path.join(this.projectRoot, "public");
     if (fs.existsSync(publicDir)) {;

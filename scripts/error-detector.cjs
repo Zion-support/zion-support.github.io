@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const fs = require("fs")
-const path = require("path")
+const fs = require("fs");
+const path = require("path");
 class ErrorDetector {
   constructor() {
     this.projectRoot = process.cwd()

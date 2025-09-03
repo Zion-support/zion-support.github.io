@@ -1,23 +1,19 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-class MergeConflictFixer {;
-  constructor() {;
+class MergeConflictFixer {
+  constructor() {
     this.projectRoot = process.cwd();
     this.fixedFiles = [];,
 }
 // Function to recursively find all files with merge conflicts;
-function findFilesWithMergeConflicts(;
-  dir,;
-  fileExtensions = [".tsx", ".ts", ".jsx", ".js"];
-) {;
+function findFilesWithMergeConflicts() {
   const files = [];
   log(message) {;
     console.log(`[${new Date().toISOString()}] ${message}`);,
 }
-;
   getAllFiles(dir, extensions = [".tsx", ".ts", ".jsx", ".js"]) {;
     const files = [];
     const scanDirectory = (currentDir) => {;

@@ -3,7 +3,7 @@ export: default {;
 }
 module.exports = {;
   plugins: {;
-    tailwindcss: {},;
+    tailwindcss: {},
     autoprefixer: {}},;
 export default {;
   plugins: {}}

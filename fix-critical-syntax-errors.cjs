@@ -1,15 +1,14 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
-class CriticalSyntaxErrorFixer {;
-  constructor() {;
+class CriticalSyntaxErrorFixer {
+  constructor() {
     this.projectRoot = process.cwd();
     this.fixedCount = 0;
     this.errorCount = 0;,
 }
-;
-  log(message, level = "INFO") {;
+  log() {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] [${level}] ${message}`);,
 }
@@ -120,7 +119,7 @@ class CriticalSyntaxErrorFixer {;
     this.log("🔧 Starting critical syntax error fixing...", "INFO");
     // Focus on the files that are causing build failures;
     const criticalFiles = [;
-      "pages/api.tsx",;
+      "pages/api.tsx",
       "pages/careers.tsx",;
       "pages/case-studies.tsx",;
       "pages/help.tsx",;

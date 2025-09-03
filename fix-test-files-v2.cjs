@@ -4,7 +4,7 @@ console.log("🔧 Fixing test files syntax errors - v2...");
 // Find all test files with syntax errors;
 const testDirs = ["__tests__"];
 const fixedFiles = [];
-function fixTestFile(filePath) {;
+function fixTestFile() {
   let content = fs.readFileSync(filePath, "utf8");
   let originalContent = content;
   // Fix unterminated strings in describe and test blocks;
@@ -20,7 +20,6 @@ function fixTestFile(filePath) {;
   content = content.replace(/describe\("([^"]*)", \(\) => \{";/g, "describe("$1", () => {");
   return { content, changed: content !== originalContent }
 }
-;
 testDirs.forEach(dir => {;
   if (fs.existsSync(dir)) {;
     const files = fs.readdirSync(dir, { recursive: true });

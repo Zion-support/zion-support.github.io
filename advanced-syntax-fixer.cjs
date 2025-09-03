@@ -1,16 +1,15 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
-class AdvancedSyntaxFixer {;
-  constructor() {;
+class AdvancedSyntaxFixer {
+  constructor() {
     this.projectRoot = process.cwd();
     this.fixedFiles = [];
     this.errors = [];
     this.reportFile = path.join(this.projectRoot, "advanced-syntax-fix-report.json");,
 }
-;
-  log(message) {;
+  log() {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] ${message}`);,
 }
@@ -24,7 +23,7 @@ class AdvancedSyntaxFixer {;
       const fixes = [;
         // Fix unterminated string literals - add closing quotes;
         {;
-          pattern: /([""])([^""]*?)(\n|$)/g,;
+          pattern: /([""])([^""]*?)(\n|$)/g,
           replacement: (match, quote, content, newline) => {;
             if (content.includes("\\" + quote) || content.includes("`")) return match;
             if (content.trim().length > 0 && !content.endsWith(quote)) {;
@@ -32,7 +31,7 @@ class AdvancedSyntaxFixer {;
 }
             return match;,
 }
-        },;
+        },
         // Fix missing semicolons after import statements;
         {;
           pattern: /^import\s+.*from\s+[""][^""]+[""]\s*$/gm,;

@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-const fs = require("fs").promises
-const path = require("path")
+const fs = require("fs");.promises
+const path = require("path");
 const { exec } = require("child_process")
-const util = require("util")
+const util = require("util");
 const execAsync = util.promisify(exec)
 class BuildHealthCheck {
   constructor() {
@@ -60,7 +60,7 @@ class BuildHealthCheck {
     const configs = [package.json",
       "tsconfig.json",vite.config.ts",
       "eslint.config.js",tailwind.config.js",]
-const fs = require("fs").promises;const path = require("path")const { exec } = require("child_process")const util = require("util")";const execAsync = util.promisify(exec)
+const fs = require("fs");.promises;const path = require("path");const { exec } = require("child_process")const util = require("util");";const execAsync = util.promisify(exec)
 class BuildHealthCheck {
   constructor() {
     this.logFile = path.join(__dirname, "../logs/build-health.log");    this.reportFile = path.join(__dirname, "../logs/build-health-report.json");    this.projectRoot = path.join(__dirname, "..")}"
@@ -188,7 +188,7 @@ class BuildHealthCheck {
   async run() {
     try {
       await this.log("Starting build health check", "INFO");";      const results = {
-        "timestamp": new Date().toISOString(),;        dependencies": await this.checkDependencies(),";        configs: await this.checkConfigFiles(),""build: await this.checkBuildAssets(),,}
+        "timestamp": new Date().toISOString(),        dependencies": await this.checkDependencies(),";        configs: await this.checkConfigFiles(),""build: await this.checkBuildAssets(),,}
 
       const actions = await this.performHealthActions(results)
       results.actions = actions

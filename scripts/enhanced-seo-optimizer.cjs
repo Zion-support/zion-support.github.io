@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const fs = require("fs")";const path = require("path")"";class SEOOptimizer {
+const fs = require("fs");";const path = require("path");"";class SEOOptimizer {
   constructor() {
     this.projectRoot = process.cwd()
     this.reportFile = path.join();      this.projectRoot,
@@ -18,7 +18,7 @@ const fs = require("fs")";const path = require("path")"";class SEOOptimizer {
       try {
         const content = fs.readFileSync(file, "utf8");";        const pageName = path.basename(file);"
         const pageAnalysis = {
-          "file": pageName,""hasTitle": content.includes("<title>") || content.includes(""title":"),""hasDescription":;";            content.includes("description") ||";            content.includes("meta name="description""),""hasKeywords":;";            content.includes("keywords") ||";            content.includes("meta name="keywords""),""hasOpenGraph":;";            content.includes(""og":") || content.includes("property=""og":"),""hasTwitterCard":;";            content.includes(""twitter":") || content.includes("name=""twitter":"),"};"
+          "file": pageName,""hasTitle": content.includes("<title>") || content.includes(""title":"),""hasDescription":;";            content.includes("description") ||";            content.includes("meta name="description""),""hasKeywords":;";            content.includes("keywords") ||";            content.includes("meta name="keywords""),""hasOpenGraph":;";            content.includes(""og":") || content.includes("property=""og":"),""hasTwitterCard":;";            content.includes(""twitter":") || content.includes("name=""twitter":"),"}"
         results.pages.push(pageAnalysis)
         if (!pageAnalysis.hasTitle) {
           results.issues.push(`${pageName}: Missing title tag`);`}

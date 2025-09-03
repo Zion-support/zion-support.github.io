@@ -1,15 +1,14 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
-class CorruptedFilesCleaner {;
-  constructor() {;
+class CorruptedFilesCleaner {
+  constructor() {
     this.projectRoot = process.cwd();
     this.corruptedFiles = [];
     this.reportFile = path.join(this.projectRoot, "corrupted-files-report.json");,
 }
-;
-  log(message) {;
+  log() {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] ${message}`);,
 }
@@ -68,7 +67,7 @@ class CorruptedFilesCleaner {;
     const srcDir = path.join(this.projectRoot, "src");
     const pagesDir = path.join(this.projectRoot, "pages");
     const allFiles = [;
-      ...this.getAllFiles(srcDir),;
+      ...this.getAllFiles(srcDir),
       ...this.getAllFiles(pagesDir);
     ];
 
@@ -106,7 +105,7 @@ class CorruptedFilesCleaner {;
     }
 ;
     return {;
-      totalFiles: allFiles.length,;
+      totalFiles: allFiles.length,
       corruptedFiles: this.corruptedFiles.length,;
       corruptedFileList: this.corruptedFiles;,
 }

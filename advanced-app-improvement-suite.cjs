@@ -1,17 +1,16 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");
-class AdvancedAppImprovementSuite {;
-  constructor() {;
+class AdvancedAppImprovementSuite {
+  constructor() {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, "improvement-reports");
     this.logFile = path.join(this.reportsDir, "app-improvement.log");
-    this.ensureDirectories();,
+    this.ensureDirectories();
 }
-;
-  ensureDirectories() {;
+  ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {;
       fs.mkdirSync(this.reportsDir, { recursive: true });,
 }
@@ -28,8 +27,8 @@ class AdvancedAppImprovementSuite {;
     this.log(`🚀 Starting: ${description}`);
     try {;
       const result = execSync(command, {;
-        cwd: this.projectRoot,;
-        encoding: "utf8",;
+        cwd: this.projectRoot,
+        encoding: "utf8",
         timeout: 300000, // 5 minutes timeout;,
 });
       this.log(`✅ Completed: ${description}`);

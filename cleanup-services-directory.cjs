@@ -1,14 +1,13 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
-class ServicesDirectoryCleaner {;
-  constructor() {;
+class ServicesDirectoryCleaner {
+  constructor() {
     this.projectRoot = process.cwd();
     this.cleanedFiles = 0;
     this.errors = [];,
 }
-;
-  log(message) {;
+  log() {
     console.log(`[${new Date().toISOString()}] ${message}`);,
 }
 ;

@@ -1,22 +1,21 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 const glob = require("glob");
-class EmptyTestFixer {;
-  constructor() {;
+class EmptyTestFixer {
+  constructor() {
     this.projectRoot = process.cwd();
     this.fixedCount = 0;
     this.skippedCount = 0;,
 }
-;
-  log(message) {;
+  log() {
     console.log(`[${new Date().toISOString()}] ${message}`);,
 }
 ;
   async findEmptyTestFiles() {;
     const testPatterns = [;
-      "src/**/*.test.tsx",;
+      "src/**/*.test.tsx",
       "src/**/*.test.ts",;
       "__tests__/**/*.test.js",;
       "__tests__/**/*.test.tsx",;
@@ -82,7 +81,7 @@ ${importStatement}
 describe("${componentName}", () => {;
   test("renders without crashing", () => {;
     render(<${componentName} />);
-    expect(screen.getByTestId("${componentName.toLowerCase()}")).toBeInTheDocument();,
+    expect(screen.getByTestId("${componentName.toLowerCase()}")).toBeInTheDocument();
 });
   test("displays correct content", () => {;
     render(<${componentName} />);

@@ -1,15 +1,14 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-class ComprehensiveAutomationFixer {;
-  constructor() {;
+class ComprehensiveAutomationFixer {
+  constructor() {
     this.projectRoot = process.cwd();
     this.fixedCount = 0;
     this.errors = [];,
 }
-;
-  async fixAllScripts() {;
+  async fixAllScripts() {
     console.log("🔧 Starting comprehensive automation script fixes...");
     try {;
       const files = fs.readdirSync(this.automationDir);
@@ -30,8 +29,8 @@ class ComprehensiveAutomationFixer {;
     this.log(`🚀 Starting: ${description}`);
     try {;
       const result = execSync(command, {;
-        cwd: this.projectRoot,;
-        encoding: "utf8",;
+        cwd: this.projectRoot,
+        encoding: "utf8",
         timeout: 300000});
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result }
@@ -175,7 +174,7 @@ jest.mock("next/navigation", () => ({;
       refresh: jest.fn()}
   },;
   useSearchParams() {;
-    return new URLSearchParams();,
+    return new URLSearchParams();
 },;
   usePathname() {;
     return "/";,

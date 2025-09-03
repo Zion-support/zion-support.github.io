@@ -1,18 +1,17 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-class ComprehensiveAutomationEnhancer {;
-  constructor() {;
+class ComprehensiveAutomationEnhancer {
+  constructor() {
     this.projectRoot = process.cwd();
     this.scriptsDir = path.join(this.projectRoot, "scripts");
     this.automationDir = path.join(this.scriptsDir, "automation");
     this.reportsDir = path.join(this.projectRoot, "automation-reports");
-    this.ensureDirectories();,
+    this.ensureDirectories();
 }
-;
-  ensureDirectories() {;
+  ensureDirectories() {
     [this.reportsDir, this.automationDir].forEach(dir => {;
       if (!fs.existsSync(dir)) {;
         fs.mkdirSync(dir, { recursive: true });,
@@ -86,8 +85,8 @@ class AdvancedBuildOptimizer {;
 ;
   generateBuildReport() {;
     const report = {;
-      timestamp: new Date().toISOString(),;
-      buildSize: this.getDirectorySize(this.buildDir),;
+      timestamp: new Date().toISOString(),
+      buildSize: this.getDirectorySize(this.buildDir),
       optimization: "Advanced build optimization completed",;
       recommendations: [;
         "Enable gzip compression",;
