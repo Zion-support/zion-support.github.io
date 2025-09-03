@@ -1,1 +1,1 @@
-export { default as LoginContent } from './LoginForm';
+export { LoginForm as LoginContent } from './LoginForm.jsx';

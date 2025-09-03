@@ -41,8 +41,13 @@
 
 2. ✅ No high-risk vulnerabilities found
 
+<<<<<<< HEAD
 5. **SECRETS**: Remove or secure 4 hardcoded secrets
 6. **SECRETS**: Use environment variables for sensitive data
+=======
+3. **SECRETS**: Remove or secure 6 hardcoded secrets
+4. **SECRETS**: Use environment variables for sensitive data
+>>>>>>> main
 
 ## 📚 Recommendations
 

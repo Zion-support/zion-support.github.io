@@ -1,107 +1,73 @@
-import type { Config } from 'tailwindcss';
-import defaultTheme from 'tailwindcss/defaultTheme';
-
-const config: Config = {
-  darkMode: 'class',
-  content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx,js,jsx}'
-  ],
-  theme: {
-    extend: {
-      colors: {
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
-        primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))'
-        },
-        secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))'
-        },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))'
-        },
-        muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))'
-        },
-        accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))'
-        },
-        popover: {
-          DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))'
-        },
-        card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))'
-        },
-        'zion-blue': {
-          DEFAULT: '#2e73ea',
-          light: '#8ab1f3',
-          dark: '#172d67'
-        },
-        'zion-purple': {
-          DEFAULT: '#a855f7',
-          light: '#c084fc',
-          dark: '#6b21a8'
-        },
-        'zion-cyan': {
-          DEFAULT: '#0d9488',
-          light: '#7aeae4',
-          dark: '#0f766e'
-        },
-        'zion-slate': {
-          DEFAULT: '#17072b',
-          light: '#451582',
-          dark: '#000000'
-        }
-      },
-      borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)'
-      },
-      fontFamily: {
-        sans: [
-          'var(--font-inter), Inter',
-          ...defaultTheme.fontFamily.sans
-        ],
-        heading: [
-          'var(--font-poppins), Poppins',
-          ...defaultTheme.fontFamily.sans
-        ]
-      },
-      keyframes: {
-        'accordion-down': {
-          from: { height: '0' },
-          to: { height: 'var(--radix-accordion-content-height)' }
-        },
-        'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0' }
-        }
-      },
-      animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out'
-      }
-    }
-  },
-  plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio')
-  ]
-};
-
-export default config;
+import type { Config } from "tailwindcss";
+export default {;
+  content: [;
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",;
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",;
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",;
+  ],;
+  darkMode: "class",;
+  theme: {;
+    extend: {;
+      colors: {;
+        // Zion Tech Group brand colors;
+        zion: {;
+          50: "#f0f9ff",;
+          100: "#e0f2fe",;
+          200: "#bae6fd",;
+          300: "#7dd3fc",;
+          400: "#38bdf8",;
+          500: "#0ea5e9",;
+          600: "#0284c7",;
+          700: "#0369a1",;
+          800: "#075985",;
+          900: "#0c4a6e",;
+          950: "#082f49",;,
+},;
+        // Extended gray palette for better contrast;
+        gray: {;
+          950: "#0a0a0a",;
+          960: "#050505",;
+          970: "#030303",;
+          980: "#020202",;
+          990: "#010101",;,
+},;
+        // Accent colors;
+        accent: {;
+          cyan: "#06b6d4",;
+          blue: "#3b82f6",;
+          purple: "#8b5cf6",;
+          pink: "#ec4899",;
+          emerald: "#10b981",;
+          amber: "#f59e0b",;
+          rose: "#f43f5e",;,
+},;,
+},;
+      animation: {;
+        "gradient": "gradient 6s ease infinite",;
+        "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",;
+        "bounce-slow": "bounce 3s infinite",;
+        "spin-slow": "spin 8s linear infinite",;,
+},;
+      keyframes: {;
+        gradient: {;
+          "0%, 100%": {;
+            "background-size": "200% 200%",;
+            "background-position": "left center",;,
+},;
+          "50%": {;
+            "background-size": "200% 200%",;
+            "background-position": "right center",;,
+},;,
+},;,
+},;
+      fontFamily: {;
+        sans: ["Inter", "system-ui", "sans-serif"],;,
+},;,
+},;,
+},;
+  plugins: [;
+    require("@tailwindcss/forms"),;
+    require("@tailwindcss/typography"),;
+    require("@tailwindcss/aspect-ratio"),;
+  ],;,
+} satisfies Config

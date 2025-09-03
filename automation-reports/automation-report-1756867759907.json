@@ -1,0 +1,80 @@
+{
+  "timestamp": "2025-09-03T02:49:19.907Z",
+  "summary": {
+    "totalScripts": 8,
+    "successful": 4,
+    "failed": 4
+  },
+  "results": [
+    {
+      "command": "npm run lint:fix",
+      "description": "ESLint Fix",
+      "success": false,
+      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 8.57.1\n\nSyntaxError: Unexpected identifier 'module'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+    },
+    {
+      "command": "npm run type-check",
+      "description": "TypeScript Type Check",
+      "success": false,
+      "error": "spawnSync /bin/sh ENOBUFS"
+    },
+    {
+      "command": "npm run test",
+      "description": "Test Suite",
+      "success": false,
+      "error": "Command failed: npm run test\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: jest: not found\n"
+    },
+    {
+      "command": "npm run build",
+      "description": "Build Application",
+      "success": false,
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nFailed to compile.\n\n./styles/globals.css.webpack[javascript/auto]!=!./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[7].oneOf[14].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[7].oneOf[14].use[2]!./styles/globals.css\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///workspace/postcss.config.js:1:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\n    at async findConfig (/workspace/node_modules/next/dist/lib/find-config.js:85:25)\n    at async getPostCssPlugins (/workspace/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:89:18)\n    at async /workspace/node_modules/next/dist/build/webpack/config/blocks/css/index.js:124:36\n    at async /workspace/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js:51:40\n    at async Span.traceAsyncFn (/workspace/node_modules/next/dist/trace/trace.js:154:20)\n\nImport trace for requested module:\n./styles/globals.css.webpack[javascript/auto]!=!./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[7].oneOf[14].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[7].oneOf[14].use[2]!./styles/globals.css\n./styles/globals.css\n\n./styles/globals.css\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///workspace/postcss.config.js:1:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\n    at async findConfig (/workspace/node_modules/next/dist/lib/find-config.js:85:25)\n    at async getPostCssPlugins (/workspace/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:89:18)\n    at async /workspace/node_modules/next/dist/build/webpack/config/blocks/css/index.js:124:36\n    at async /workspace/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js:51:40\n    at async Span.traceAsyncFn (/workspace/node_modules/next/dist/trace/trace.js:154:20)\n    at tryRunOrWebpackError (/workspace/node_modules/next/dist/compiled/webpack/bundle5.js:28:312989)\n    at __webpack_require_module__ (/workspace/node_modules/next/dist/compiled/webpack/bundle5.js:28:131165)\n    at __nested_webpack_require_153728__ (/workspace/node_modules/next/dist/compiled/webpack/bundle5.js:28:130607)\n    at /workspace/node_modules/next/dist/compiled/webpack/bundle5.js:28:131454\n    at symbolIterator (/workspace/node_modules/next/dist/compiled/neo-async/async.js:1:14444)\n    at done (/workspace/node_modules/next/dist/compiled/neo-async/async.js:1:14824)\n    at Hook.eval [as callAsync] (eval at create (/workspace/node_modules/next/dist/compiled/webpack/bundle5.js:13:28858), <anonymous>:15:1)\n    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (/workspace/node_modules/next/dist/compiled/webpack/bundle5.js:13:26012)\n    at /workspace/node_modules/next/dist/compiled/webpack/bundle5.js:28:130328\n    at symbolIterator (/workspace/node_modules/next/dist/compiled/neo-async/async.js:1:14402)\n-- inner error --\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///workspace/postcss.config.js:1:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\n    at async findConfig (/workspace/node_modules/next/dist/lib/find-config.js:85:25)\n    at async getPostCssPlugins (/workspace/node_modules/next/dist/build/webpack/config/blocks/css/plugins.js:89:18)\n    at async /workspace/node_modules/next/dist/build/webpack/config/blocks/css/index.js:124:36\n    at async /workspace/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js:51:40\n    at async Span.traceAsyncFn (/workspace/node_modules/next/dist/trace/trace.js:154:20)\n    at Object.<anonymous> (/workspace/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[7].oneOf[14].use[1]!/workspace/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[7].oneOf[14].use[2]!/workspace/styles/globals.css:1:7)\n    at /workspace/node_modules/next/dist/compiled/webpack/bundle5.js:28:922493\n    at Hook.eval [as call] (eval at create (/workspace/node_modules/next/dist/compiled/webpack/bundle5.js:13:28636), <anonymous>:7:1)\n    at Hook.CALL_DELEGATE [as _call] (/workspace/node_modules/next/dist/compiled/webpack/bundle5.js:13:25906)\n    at /workspace/node_modules/next/dist/compiled/webpack/bundle5.js:28:131198\n    at tryRunOrWebpackError (/workspace/node_modules/next/dist/compiled/webpack/bundle5.js:28:312943)\n    at __webpack_require_module__ (/workspace/node_modules/next/dist/compiled/webpack/bundle5.js:28:131165)\n    at __nested_webpack_require_153728__ (/workspace/node_modules/next/dist/compiled/webpack/bundle5.js:28:130607)\n    at /workspace/node_modules/next/dist/compiled/webpack/bundle5.js:28:131454\n    at symbolIterator (/workspace/node_modules/next/dist/compiled/neo-async/async.js:1:14444)\n\nGenerated code for /workspace/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[7].oneOf[14].use[1]!/workspace/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[7].oneOf[14].use[2]!/workspace/styles/globals.css\n\nImport trace for requested module:\n./styles/globals.css\n\n\n> Build failed because of webpack errors\n"
+    },
+    {
+      "name": "Error Detection",
+      "success": true,
+      "result": {
+        "errorsDetected": true,
+        "timestamp": "2025-09-03T02:49:09.497Z"
+      }
+    },
+    {
+      "name": "Performance Analysis",
+      "success": true,
+      "result": {
+        "performanceAnalyzed": true,
+        "timestamp": "2025-09-03T02:49:13.532Z"
+      }
+    },
+    {
+      "name": "Security Audit",
+      "success": true,
+      "result": {
+        "securityAudited": true,
+        "timestamp": "2025-09-03T02:49:14.086Z"
+      }
+    },
+    {
+      "name": "Code Quality Check",
+      "success": true,
+      "result": {
+        "qualityChecked": true,
+        "results": [
+          {
+            "check": "npm run lint",
+            "passed": true
+          },
+          {
+            "check": "npm run type-check",
+            "passed": true
+          },
+          {
+            "check": "npm run test",
+            "passed": true
+          }
+        ],
+        "timestamp": "2025-09-03T02:49:19.907Z"
+      }
+    }
+  ]
+}

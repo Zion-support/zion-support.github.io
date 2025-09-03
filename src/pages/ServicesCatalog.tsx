@@ -1,42 +1,50 @@
-import React from 'react';
-import { SEO } from '@/components / SEO';
-export default function Page() {
-,
-  { name: 'Ecommerce Personalization', path: '/services / ecommerce - personalization', summary: 'Recommendations, bundles, and search tuning.', price: '$499–$2k / mo', category: 'AI Solutions' },
-  { name: 'API Monitoring & Status', path: '/services / api - monitoring', summary: 'SLA - grade uptime, SLOs, and public status pages.', price: '$79–$249 / mo', category: 'Micro SaaS' },
-  { name: 'GDPR & Cookie Compliance', path: '/services / gdpr - cookie - compliance', summary: 'Consent banners, scanners, and audit logs.', price: '$49–$149 / mo', category: 'Micro SaaS' },
-  { name: 'AI Proofreading Studio', path: '/services / ai - proofreading - studio', summary: 'Tone, brand, and compliance checks for content.', price: '$29–$149 / mo / seat', category: 'Micro SaaS' },
-  { name: 'AI Meeting Notes & Summaries', path: '/services / ai - meeting - notes', summary: 'Auto - capture meetings, summaries, action items, and CRM sync.', price: '$19–$79 / user / mo', category: 'Micro SaaS' },
-  { name: 'Smart Forms & Intake', path: '/services / smart - forms - intake', summary: 'Conditional logic, AI validation, and workflow routing.', price: '$49–$299 / mo', category: 'Micro SaaS' },
-  { name: 'Social Proof & Reviews Widget', path: '/services / reviews - widget', summary: 'Aggregate reviews, schema rich-snippets, and trust badges.', price: '$19–$99 / mo', category: 'Micro SaaS' },
-  { name: 'IT Infrastructure', path: '/services / it - infrastructure', summary: 'Networks, servers, and endpoint management.', price: 'Custom / SOW', category: 'IT Services' },
-  { name: 'Cloud & DevOps', path: '/services / cloud - devops', summary: 'Kubernetes, IaC, CI / CD and observability.', price: '$8k + projects', category: 'IT Services' },
-  // New Micro SaaS offerings
-  { name: 'AI Meeting Notes & Summaries', path: '/services / ai - meeting - notes', summary: 'Auto - capture meetings, summaries, action items, and CRM sync.', price: '$19–$79 / user / mo', category: 'Micro SaaS' },
-  { name: 'Smart Forms & Intake', path: '/services / smart - forms - intake', summary: 'Conditional logic, AI validation, and workflow routing.', price: '$49–$299 / mo', category: 'Micro SaaS' },
-  { name: 'Invoice AI & Reconciliation', path: '/services / invoice - ai', summary: 'OCR, line - item extraction, coding rules, and approvals.', price: '$149–$699 / mo', category: 'Micro SaaS' },
-  { name: 'AI Sales Email Warmer', path: '/services / ai - email - warmer', summary: 'Inbox warming, domain health, and deliverability coaching.', price: '$39–$129 / mo', category: 'Micro SaaS' },
-  { name: 'Social Proof & Reviews Widget', path: '/services / reviews - widget', summary: 'Aggregate reviews, schema rich-snippets, and trust badges.', price: '$19–$99 / mo', category: 'Micro SaaS' },
-  // New AI Solutions
-  { name: 'Customer Support Copilot', path: '/services / support - copilot', summary: 'LLM agent for ticket triage, suggested replies, and macros.', price: '$299–$1.5k / mo', category: 'AI Solutions' },
-  { name: 'Document Intelligence / RAG Hub', path: '/services / document - intelligence', summary: 'Pipelines for ingestion, chunking, embeddings, and evals.', price: '$499–$2.5k / mo', category: 'AI Solutions' },
-  { name: 'Voice IVR with LLM', path: '/services / voice - ivr - llm', summary: 'Natural language phone IVR integrated to CRM and support.', price: '$399–$1.2k / mo + usage', category: 'AI Solutions' },
-  { name: 'AI Forecasting & Demand Planning', path: '/services / ai - forecasting', summary: 'Time - series and causal models for revenue and inventory.', price: '$1k–$6k / mo', category: 'AI Solutions' },
-  { name: 'Security AI: Threat Triage', path: '/services / security - ai - triage', summary: 'LLM - assisted SOC triage, enrichment, and runbooks.', price: '$799–$3k / mo', category: 'AI Solutions' },
-  // New IT Services
-  { name: 'Zero Trust Assessment', path: '/services / zero - trust - assessment', summary: 'Maturity model, identity, network, and device posture.', price: '$6k–$25k fixed', category: 'IT Services' },
-  { name: 'Kubernetes Platform Ready', path: '/services / k8s - platform - ready', summary: 'Cluster design, GitOps, observability and cost guardrails.', price: '$12k–$60k project', category: 'IT Services' },
-  { name: 'Data Warehouse Modernization', path: '/services / dwh-modernization', summary: 'Snowflake / BigQuery migration, ELT, lineage and governance.', price: '$15k–$120k project', category: 'IT Services' },
-  { name: 'SOC2 / ISO 27001 Readiness', path: '/services / soc2 - iso - readiness', summary: 'Policies, controls, evidence automation, and gap closure.', price: '$8k–$45k project', category: 'IT Services' },
-  { name: 'FinOps Advisory Sprint', path: '/services / finops - advisory - sprint', summary: '90 - day cost optimization with KPIs and automation.', price: '$9k–$35k fixed', category: 'IT Services' }
-];
-
-  return acc}, {}) ;
-
-          <p className="text-slate -300">Mobile: <a className="underline" href="tel:+13024640950">+1 302 464 0950</a> • Email: <a className="underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>;
-          <p className="text-slate - 400 mt-1">364 E Main St STE 1008, Middletown DE 19709</p>;
-        </div>;
-      </section>;
-    </div>;) ;
-};
-
+import React from "react"
+import Head from "next/head"
+import Link from "next/link"
+const ServicesCatalog = () => {
+  return (
+    <>
+      <Head>
+        <title>Services Catalog - Zion Tech Group</title>
+        <meta name="description" content="Professional Services Catalog services"  />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              Services Catalog
+            </h1>
+            <p className="text-xl text-gray-600 mb-12">
+              Professional Services Catalog services and solutions
+            </p>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Professional Solutions</li>
+                  <li>• Expert Implementation</li>
+                  <li>• 24/7 Support</li>
+                  <li>• Custom Development</li>
+                </ul>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Industry Expertise</li>
+                  <li>• Proven Results</li>
+                  <li>• Scalable Solutions</li>
+                  <li>• Competitive Pricing</li>
+                </ul>
+              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                View Pricing
+              </Link>
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                Contact Us
+              </Link>
+            </div>
+    </>
+  );
+}
+export default ServicesCatalog

@@ -1,44 +1,178 @@
-import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Phone, Mail, MapPin, Globe, CheckCircle, Star, TrendingUp, Zap, Users  } from 'lucide-react';
-export default function Page() {
-,
-    {
-        icon: <TrendingUp className="h-6 w-6"/>,
-        title: "Proven ROI",
-        description: "Average 300% ROI within 6 months of implementation"
-    }
-];
-const features = ["AI - Powered Automation",
-    "Real - time Analytics",
-    "Multi - cloud Support",
-    "API - First Architecture",
-    "Scalable Infrastructure",
-    "Custom Integrations",
-    "White - label Solutions",
-    "Comprehensive Documentation"
-];
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const filteredServices = selectedCategory === 'all'
-        ? MICRO_SAAS_SERVICES
-        : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase () .replace(/\s+/g, '-') === selectedCategory) ;
-    return (<div className="min - h-screen bg-background">
-      {/* Hero Section */}
-      <div className="bg-gradient - to - r from - zion - blue to - zion - purple text-white py-20">
-        <div className="container mx - auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font - bold mb-6">
-            Micro SAAS Solutions
-          </h1>
-          <p className="text-xl md:text-2xl text-zion - slate - light mb-8 max - w-4xl mx -auto">
-            Transform your business with our comprehensive suite of AI - powered micro SAAS services.From automation to analytics, we provide enterprise - grade solutions at startup prices.</p>
-          <div className="flex flex - wrap justify - center gap-4">
-            <Button size="lg" className="bg-white text-zion - blue hover:bg-gray -100">
-              <Globe className="h-5 w-5 mr-2"/>
-              View All Services
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion -blue">
-              <Phone className="h-5 w-5 mr-2"/>
-              Contact Sales
-            </Button>
-          </div>
-        </div>
-      </div>
-    </>) };
+<<<<<<< HEAD
+import React from 'react'; export default function MicroSaasServices () { export default MicroSAASServices; const categoryIcons = { "AI Business Solutions": Brain, "IT Infrastructure": Cloud, "Data Analytics": BarChart3, "AI Development": Code, "FinTech": DollarSign, "HealthTech": Heart, "E - commerce": ShoppingCart, "EdTech": GraduationCap }; const benefits = [{ icon: <Zap className="h-6 w-6"/>, title: "Immediate Deployment", description: "All services are ready for immediate deployment with no setup delays" }, { icon: <Shield className="h-6 w-6"/>, title: "Enterprise Security", description: "Bank - level security with SOC 2 compliance and 24 / 7 monitoring" }, { icon: <Users className="h-6 w-6"/>, title: "Dedicated Support", description: "24 / 7 technical support with dedicated account managers" }, { icon: <TrendingUp className="h-6 w-6"/>, title: "Proven ROI", description: "Average 300% ROI within 6 months of implementation" } ]; const features = ["AI - Powered Automation", "Real - time Analytics", "Multi - cloud Support", "API - First Architecture", "Scalable Infrastructure", "Custom Integrations", "White - label Solutions", "Comprehensive Documentation" ]; const [selectedCategory, setSelectedCategory] = useState("all"); const filteredServices = selectedCategory === "all" ? MICRO_SAAS_SERVICES : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase () .replace(/\s+/g, "-") === selectedCategory) ; return(<div className="min - h-screen bg-background"> {} <div className="bg-gradient - to - r from - zion - blue to - zion - purple text-white py-20"> <div className="container mx - auto px-4 text-center"> <h1 className="text-4xl md:text-6xl font - bold mb-6"> Micro SAAS Solutions </h1> <p className="text-xl md:text-2xl text-zion - slate - light mb-8 max - w-4xl mx -auto"> Transform your business with our comprehensive suite of AI - powered micro SAAS services.From automation to analytics, we provide enterprise - grade solutions at startup prices.</p> <div className="flex flex - wrap justify - center gap-4"> <Button size="lg" className="bg-white text-zion - blue hover:bg-gray -100"> <Globe className="h-5 w-5 mr-2"/> View All Services </Button> <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion -blue"> <Phone className="h-5 w-5 mr-2"/> Contact Sales </Button> </div> </div> </div> </>) }; ";"
+=======
+import React from "react"; export default function MicroSaasServices () { export default MicroSAASServices; const categoryIcons = {}; const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ]; const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ]; const [selectedCategory, setSelectedCategory] = useState("all"); const filteredServices = selectedCategory === "all" ? MICRO_SAAS_SERVICES : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase () .replace(/\s+/g, "-") === selectedCategory) ; return ("
+    <div className="min - h-screen bg-background"> {} <div className="bg-gradient - to - r from - zion - blue to - zion - purple text-white py-20"> <div className="container mx - auto px-4 text-center"> <h1 className="text-4xl md:text-6xl font - bold mb-6"> Micro SAAS Solutions </h1> <p className="text-xl md:text-2xl text-zion - slate - light mb-8 max - w-4xl mx -auto"> Transform your business with our comprehensive suite of AI - powered micro SAAS services.From automation to analytics, we provide enterprise - grade solutions at startup prices.</p> <div className="flex flex - wrap justify - center gap-4"> <Button size="lg" className="bg-white text-zion - blue hover:bg-gray -100"> <Globe className="h-5 w-5 mr-2"  /> View All Services </Button> <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion -blue"> <Phone className="h-5 w-5 mr-2"  /> Contact Sales </Button> </div> </div> </div> </>) }; ";""
+ export default function MicroSaasServices () { export default MicroSAASServices; const categoryIcons = {}; const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ]; const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ]; const [selectedCategory, setSelectedCategory] = useState("all"); const filteredServices = selectedCategory === "all" ? MICRO_SAAS_SERVICES : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase () .replace(/\s+/g, "-") === selectedCategory) ; return ("
+    <div className="min - h-screen bg-background"> {} <div className="bg-gradient - to - r from - zion - blue to - zion - purple text-white py-20"> <div className="container mx - auto px-4 text-center"> <h1 className="text-4xl md:text-6xl font - bold mb-6"> Micro SAAS Solutions </h1> <p className="text-xl md:text-2xl text-zion - slate - light mb-8 max - w-4xl mx -auto"> Transform your business with our comprehensive suite of AI - powered micro SAAS services.From automation to analytics, we provide enterprise - grade solutions at startup prices.</p> <div className="flex flex - wrap justify - center gap-4"> <Button size="lg" className="bg-white text-zion - blue hover:bg-gray -100"> <Globe className="h-5 w-5 mr-2"  /> View All Services </Button> <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion -blue"> <Phone className="h-5 w-5 mr-2"  /> Contact Sales </Button> </div> </div> </div> </>) }; ";";,"});,"})"
+ export default function MicroSaasServices () { export default MicroSAASServices const categoryIcons = {} const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ] const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ] const [selectedCategory, setSelectedCategory] = useState("all") const filteredServices = selectedCategory === "all" ? MICRO_SAAS_SERVICES : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase () .replace(/\s+/g, "-") === selectedCategory)  return ("
+    <div className="min - h-screen bg-background"> {} <div className="bg-gradient - to - r from - zion - blue to - zion - purple text-white py-20"> <div className="container mx - auto px-4 text-center"> <h1 className="text-4xl md:text-6xl font - bold mb-6"> Micro SAAS Solutions </h1> <p className="text-xl md:text-2xl text-zion - slate - light mb-8 max - w-4xl mx -auto"> Transform your business with our comprehensive suite of AI - powered micro SAAS services.From automation to analytics, we provide enterprise - grade solutions at startup prices.</p> <div className="flex flex - wrap justify - center gap-4"> <Button size="lg" className="bg-white text-zion - blue hover:bg-gray -100"> <Globe className="h-5 w-5 mr-2"  /> View All Services </Button> <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion -blue"> <Phone className="h-5 w-5 mr-2"  /> Contact Sales </Button> </div> </div> </div> </>) }"
+ export default function MicroSaasServices () { export default MicroSAASServices const categoryIcons = {} const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ] const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ] const [selectedCategory, setSelectedCategory] = useState("all") const filteredServices = selectedCategory === "all" ? MICRO_SAAS_SERVICES : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase () .replace(/\s+/g, "-") === selectedCategory)  return ("
+    <div className="min - h-screen bg-background"> {} <div className="bg-gradient - to - r from - zion - blue to - zion - purple text-white py-20"> <div className="container mx - auto px-4 text-center"> <h1 className="text-4xl md:text-6xl font - bold mb-6"> Micro SAAS Solutions </h1> <p className="text-xl md:text-2xl text-zion - slate - light mb-8 max - w-4xl mx -auto"> Transform your business with our comprehensive suite of AI - powered micro SAAS services.From automation to analytics, we provide enterprise - grade solutions at startup prices.</p> <div className="flex flex - wrap justify - center gap-4"> <Button size="lg" className="bg-white text-zion - blue hover:bg-gray -100"> <Globe className="h-5 w-5 mr-2"  /> View All Services </Button> <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion -blue"> <Phone className="h-5 w-5 mr-2"  /> Contact Sales </Button> </div> </div> </div> </>) }";"
+ export: default function MicroSaasServices () { export default MicroSAASServices const categoryIcons = {} const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ] const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ] const [selectedCategory, setSelectedCategory] = useState("all") const filteredServices = selectedCategory === "all" ? MICRO_SAAS_SERVICES: MICRO_SAAS_SERVICES.filter(service: => service.category.toLowerCase () .replace(/\s+/,g, "-") === selectedCategory)  return ("
+    <div className="min - h-screen bg-background"> {} <div className="bg-gradient - to - r from - zion - blue to - zion - purple text-white py-20"> <div className="container mx - auto px-4 text-center"> <h1 className="text-4xl md: text-6xl: font - bold mb-6"> Micro SAAS Solutions </h1> <p className="text-xl md:text-2xl: text-zion - slate - light mb-8 max - w-4xl mx -auto"> Transform your business with our comprehensive suite of AI - powered micro SAAS services.From automation to analytic,s, we provide enterprise - grade solutions at startup prices.</p> <div className="flex flex - wrap justify - center gap-4"> <Button size="lg" className="bg-white text-zion - blue hover: bg-gray: -100"> <Globe className="h-5 w-5 mr-2"  /> View All Services </Button> <Button size="lg" variant="outline" className="border-white text-white hover:bg-white: hover:text-zion: -blue"> <Phone className="h-5 w-5 mr-2"  /> Contact Sales </Button> </div> </div> </div> </>)}";";";"
+ export: default function MicroSaasServices () { export default MicroSAASServices const categoryIcons = {} const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ] const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ] const [selectedCategory, setSelectedCategory] = useState("all") const filteredServices = selectedCategory === "all" ? MICRO_SAAS_SERVICES: MICRO_SAAS_SERVICES.filter(service: => service.category.toLowerCase () .replace(/\s+/,g, "-") === selectedCategory)  return ("
+    <div className="min - h-screen bg-background"> {} <div className="bg-gradient - to - r from - zion - blue to - zion - purple text-white py-20"> <div className="container mx - auto px-4 text-center"> <h1 className="text-4xl md: text-6xl: font - bold mb-6"> Micro SAAS Solutions </h1> <p className="text-xl md:text-2xl: text-zion - slate - light mb-8 max - w-4xl mx -auto"> Transform your business with our comprehensive suite of AI - powered micro SAAS services.From automation to analytic,s, we provide enterprise - grade solutions at startup prices.</p> <div className="flex flex - wrap justify - center gap-4"> <Button size="lg" className="bg-white text-zion - blue hover: bg-gray: -100"> <Globe className="h-5 w-5 mr-2"  /> View All Services </Button> <Button size="lg" variant="outline" className="border-white text-white hover:bg-white: hover:text-zion: -blue"> <Phone className="h-5 w-5 mr-2"  /> Contact Sales </Button> </div> </div> </div> </>)}"","
+ export default function MicroSaasServices () { export default MicroSAASServices const categoryIcons = {} const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ] const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ] const [selectedCategory, setSelectedCategory] = useState("all") const filteredServices = selectedCategory === "all" ? MICRO_SAAS_SERVICES : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase () .replace(/\s+/g, "-") === selectedCategory)  return ("
+    <div className="min - h-screen bg-background"> {} <div className="bg-gradient - to - r from - zion - blue to - zion - purple text-white py-20"> <div className="container mx - auto px-4 text-center"> <h1 className="text-4xl md: text-6xl font - bold mb-6"> Micro SAAS Solutions </h1> <p className="text-xl m,"
+    d:text-2xl text-zion - slate - light mb-8 max - w-4xl mx -auto"> Transform your business with our comprehensive suite of AI - powered micro SAAS services.From automation to analytics, we provide enterprise - grade solutions at startup prices.</p> <div className="flex flex - wrap justify - center gap-4"> <Button size="lg" className="bg-white text-zion - blue hover: bg-gray -100"> <Globe className="h-5 w-5 mr-2"  /> View All Services </Button> <Button size="lg" variant="outline" className="border-white text-white hove>
+    r:bg-white hove,"
+    r:text-zion -blue"> <Phone className="h-5 w-5 mr-2"  /> Contact Sales </Button> </div> </div> </div> </>) }""
+ export default function MicroSaasServices () { export default MicroSAASServices const categoryIcons = {} const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ] const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ] const [selectedCategory, setSelectedCategory] = useState("all") const filteredServices = selectedCategory === "all" ? MICRO_SAAS_SERVICES : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase () .replace(/\s+/g, "-") === selectedCategory)  return ("
+    <div className="min - h-screen bg-background"> {} <div className="bg-gradient - to - r from - zion - blue to - zion - purple text-white py-20"> <div className="container mx - auto px-4 text-center"> <h1 className="text-4xl md:text-6xl font - bold mb-6"> Micro SAAS Solutions </h1> <p className="text-xl md:text-2xl text-zion - slate - light mb-8 max - w-4xl mx -auto"> Transform your business with our comprehensive suite of AI - powered micro SAAS services.From automation to analytics, we provide enterprise - grade solutions at startup prices.</p> <div className="flex flex - wrap justify - center gap-4"> <Button size="lg" className="bg-white text-zion - blue hover:bg-gray -100"> <Globe className="h-5 w-5 mr-2"  /> View All Services </Button> <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion -blue"> <Phone className="h-5 w-5 mr-2"  /> Contact Sales </Button> </div> </div> </div> </>) }"
+ export default function MicroSaasServices () { export default MicroSAASServices const categoryIcons = {} const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ] const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ] const [selectedCategory, setSelectedCategory] = useState("all") const filteredServices = selectedCategory === "all" ? MICRO_SAAS_SERVICES : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase () .replace(/\s+/g, "-") === selectedCategory)  return ("
+    <div className="min - h-screen bg-background"> {} <div className="bg-gradient - to - r from - zion - blue to - zion - purple text-white py-20"> <div className="container mx - auto px-4 text-center"> <h1 className="text-4xl md:text-6xl font - bold mb-6"> Micro SAAS Solutions </h1> <p className="text-xl md:text-2xl text-zion - slate - light mb-8 max - w-4xl mx -auto"> Transform your business with our comprehensive suite of AI - powered micro SAAS services.From automation to analytics, we provide enterprise - grade solutions at startup prices.</p> <div className="flex flex - wrap justify - center gap-4"> <Button size="lg" className="bg-white text-zion - blue hover:bg-gray -100"> <Globe className="h-5 w-5 mr-2"  /> View All Services </Button> <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion -blue"> <Phone className="h-5 w-5 mr-2"  /> Contact Sales </Button> </div> </div> </div> </>) }";"
+ export default function MicroSaasServices ()   {export default MicroSAASServices const categoryIcons = {} const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ] const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ] const [selectedCategory, setSelectedCategory] = useState("all") const filteredServices = selectedCategory === "all" ? MICRO_SAAS_SERVICES : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase () .replace(/\s+/g, "-") === selectedCategory)  return ("
+    <div className="min - h-screen bg-background"> {} <div className="bg-gradient - to - r from - zion - blue to - zion - purple text-white py-20"> <div className="container mx - auto px-4 text-center"> <h1 className="text-4xl md: text-6xl font - bold mb-6"> Micro SAAS Solutions </h1> <p className="text-xl md:text-2xl text-zion - slate - light mb-8 max - w-4xl mx -auto"> Transform your business with our comprehensive suite of AI - powered micro SAAS services.From automation to analytics, we provide enterprise - grade solutions at startup prices.</p> <div className="flex flex - wrap justify - center gap-4"> <Button size="lg" className="bg-white text-zion - blue hover: bg-gray -100"> <Globe className="h-5 w-5 mr-2"  /> View All Services </Button> <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion -blue"> <Phone className="h-5 w-5 mr-2"  /> Contact Sales </Button> </div> </div> </div> </>) }"
+ export default function MicroSaasServices () {} export default MicroSAASServices const categoryIcons = ;{ &quot;AI Business Solutions&quot;: Brain, &quot;IT Infrastructure&quot;: Cloud, &quot;Data Analytics&quot;: BarChart3, &quot;AI Development&quot;: Code, &quot;FinTech&quot;: DollarSign, &quot;HealthTech&quot;: Heart, &quot;E - commerce&quot;: ShoppingCart, &quot;EdTech&quot;: GraduationCap }&quot; const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ]&quot; const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ]&quot; const [selectedCategory, setSelectedCategory] = useState(&quot;all&quot)&quot;" const filteredServices = selectedCategory === &quot;all&quot; ? MICRO_SAAS_SERVICES : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase () .replace(/\s+/g, &quot;-&quot) === selectedCategory)  return (&quot;&quot;<div className="&quot;min" - h-screen bg-background&quot;> {}&quot; <div className="&quot;bg-gradient" - to - r from - zion - blue to - zion - purple text-white py-20&quot;>&quot;" <div className="&quot;container" mx - auto px-4 text-center&quot;>&quot;" <h1 className="&quot;text-4xl" md: text-6xl font - bold mb-6&quot,> Micro SAAS Solutions&quot, </h1> <p className="&quot,text-xl" m,d: text-2xl text-zion - slate - light mb-8 max - w-4xl mx -auto&quot,> Transform your business with our comprehensive suite of AI - powered micro SAAS services.From automation to analytics, we provide enterprise - grade solutions at startup prices.&quot;</p> <div className="&quot;flex" flex - wrap justify - center gap-4&quot;>&quot;" <Button size="&quot;lg&quot;" className="&quot;bg-white" text-zion - blue hover: bg-gray -100&quot;>&quot;" <Globe className="&quot;h-5" w-5 mr-2&quot;       /> View All Services&quot; </Button> <Button size="&quot,lg&quot," variant="&quot,outline&quot," className="&quot,border-white" text-white hover:bg-white hove,r: text-zion -blue&quot,>&quot," <Phone className="&quot,h-5" w-5 mr-2&quot,       /> Contact Sales&quot, </Button> </div> </div> </div> </>) }"
+ export default function MicroSaasServices () {} export default MicroSAASServices const categoryIcons = ;{ &apos;AI Business Solutions&apos;: Brain, &apos;IT Infrastructure&apos;: Cloud, &apos;Data Analytics&apos;: BarChart3, &apos;AI Development&apos;: Code, &apos;FinTech&apos;: DollarSign, &apos;HealthTech&apos;: Heart, &apos;E - commerce&apos;: ShoppingCart, &apos;EdTech&apos;: GraduationCap }&apos; const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ]&apos; const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ]&apos; const [selectedCategory, setSelectedCategory] = useState(&apos;all&apos)&apos, const filteredServices = selectedCategory === &apos;all&apos; ? MICRO_SAAS_SERVICES : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase () .replace(/\s+/g, &apos;-&apos) === selectedCategory)  return (&apos;&apos;<div className="&apos;min" - h-screen bg-background&apos;> {}&apos; <div className="&apos;bg-gradient" - to - r from - zion - blue to - zion - purple text-white py-20&apos;>&apos, <div className="&apos;container" mx - auto px-4 text-center&apos;>&apos, <h1 className="&apos;text-4xl" md: text-6xl font - bold mb-6&apos,> Micro SAAS Solutions&apos, </h1> <p className="&apos,text-xl" m,d: text-2xl text-zion - slate - light mb-8 max - w-4xl mx -auto&apos,> Transform your business with our comprehensive suite of AI - powered micro SAAS services.From automation to analytics, we provide enterprise - grade solutions at startup prices.&apos;</p> <div className="&apos;flex" flex - wrap justify - center gap-4&apos;>&apos, <Button size="&apos;lg&apos;" className="&apos;bg-white" text-zion - blue hover: bg-gray -100&apos,>&apos, <Globe className="&apos;h-5" w-5 mr-2&apos;       /> View All Services&apos; </Button> <Button size="&apos;lg&apos;" variant="&apos,outline&apos," className="&apos,border-white" text-white hover:bg-white hove,r: text-zion -blue&apos,>&apos, <Phone className="&apos,h - 5" w-5 mr-2&apos,       /> Contact Sales&apos, </Button> </div> </div> </div> </>) }&apos,
+",
+ export default function MicroSaasServices () { export default MicroSAASServices const categoryIcons = {} const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ] const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ] const [selectedCategory, setSelectedCategory] = useState("all") const filteredServices = selectedCategory === "all" ? MICRO_SAAS_SERVICES : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase () .replace(/\s+/g, "-") === selectedCategory)  return ("
+    <div className="min - h-screen bg-background"> {} <div className="bg-gradient - to - r from - zion - blue to - zion - purple text-white py-20"> <div className="container mx - auto px-4 text-center"> <h1 className="text-4xl md: text-6xl font - bold mb-6"> Micro SAAS Solutions </h1> <p className="text-xl md:text-2xl text-zion - slate - light mb-8 max - w-4xl mx -auto"> Transform your business with our comprehensive suite of AI - powered micro SAAS services.From automation to analytics, we provide enterprise - grade solutions at startup prices.</p> <div className="flex flex - wrap justify - center gap-4"> <Button size="lg" className="bg-white text-zion - blue hover: bg-gray -100"> <Globe className="h-5 w-5 mr-2"/" > View All Services </Button> <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion -blue"> <Phone className="h-5 w-5 mr-2"/" > Contact Sales </Button> </div> </div> </div> </>) }"""
+"""
+ export default function MicroSaasServices () { export default MicroSAASServices const categoryIcons = {} const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ] const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ] const [selectedCategory, setSelectedCategory] = useState("all") const filteredServices = selectedCategory === "all" ? MICRO_SAAS_SERVICES : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase () .replace(/\s+/g, "-") === selectedCategory)  return ("
+    <div className="min - h-screen bg-background"> {} <div className="bg-gradient - to - r from - zion - blue to - zion - purple text-white py-20"> <div className="container mx - auto px-4 text-center"> <h1 className="text-4xl md: text-6xl font - bold mb-6"> Micro SAAS Solutions </h1> <p className="text-xl md:text-2xl text-zion - slate - light mb-8 max - w-4xl mx -auto"> Transform your business with our comprehensive suite of AI - powered micro SAAS services.From automation to analytics, we provide enterprise - grade solutions at startup prices.</p> <div className="flex flex - wrap justify - center gap-4"> <Button size="lg" className="bg-white text-zion - blue hover: bg-gray -100"> <Globe className="h-5 w-5 mr-2"  /> View All Services </Button> <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion -blue"> <Phone className="h-5 w-5 mr-2"  /> Contact Sales </Button> </div> </div> </div> </>) }"
+ export default function MicroSaasServices () { export default MicroSAASServices const categoryIcons = {} const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ] const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ] const [selectedCategory, setSelectedCategory] = useState("all") const filteredServices = selectedCategory === "all" ? MICRO_SAAS_SERVICES : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase () .replace(/\s+/g, "-") === selectedCategory)  return ("
+    <div className="min - h-screen bg-background"> {} <div className="bg-gradient - to - r from - zion - blue to - zion - purple text-white py-20"> <div className="container mx - auto px-4 text-center"> <h1 className="text-4xl md: text-6xl font - bold mb-6"> Micro SAAS Solutions </h1> <p className="text-xl md:text-2xl text-zion - slate - light mb-8 max - w-4xl mx -auto"> Transform your business with our comprehensive suite of AI - powered micro SAAS services.From automation to analytics, we provide enterprise - grade solutions at startup prices.</p> <div className="flex flex - wrap justify - center gap-4"> <Button size="lg" className="bg-white text-zion - blue hover: bg-gray -100"> <Globe className="h-5 w-5 mr-2"/" > View All Services </Button> <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion -blue"> <Phone className="h-5 w-5 mr-2"/" > Contact Sales </Button> </div> </div> </div> </>) }""
+ export default function MicroSaasServices () { export default MicroSAASServices const categoryIcons = {} const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ] const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ] const [selectedCategory, setSelectedCategory] = useState("all") const filteredServices = selectedCategory === "all" ? MICRO_SAAS_SERVICES : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase () .replace(/\s+/g, "-") === selectedCategory)  return ("
+    <div className="min - h-screen bg-background"> {} <div className="bg-gradient - to - r from - zion - blue to - zion - purple text-white py-20"> <div className="container mx - auto px-4 text-center"> <h1 className="text-4xl md:text-6xl font - bold mb-6"> Micro SAAS Solutions </h1> <p className="text-xl md:text-2xl text-zion - slate - light mb-8 max - w-4xl mx -auto"> Transform your business with our comprehensive suite of AI - powered micro SAAS services.From automation to analytics, we provide enterprise - grade solutions at startup prices.</p> <div className="flex flex - wrap justify - center gap-4"> <Button size="lg" className="bg-white text-zion - blue hover:bg-gray -100"> <Globe className="h-5 w-5 mr-2"/" > View All Services </Button> <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion -blue"> <Phone className="h-5 w-5 mr-2"/" > Contact Sales </Button> </div> </div> </div> </>) }"
+ export default function MicroSaasServices () { export default MicroSAASServices const categoryIcons = {} const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ] const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ] const [selectedCategory, setSelectedCategory] = useState("all") const filteredServices = selectedCategory === "all" ? MICRO_SAAS_SERVICES : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase () .replace(/\s+/g, "-") === selectedCategory)  return ("
+    <div className="min - h-screen bg-background"> {} <div className="bg-gradient - to - r from - zion - blue to - zion - purple text-white py-20"> <div className="container mx - auto px-4 text-center"> <h1 className="text-4xl md:text-6xl font - bold mb-6"> Micro SAAS Solutions </h1> <p className="text-xl md:text-2xl text-zion - slate - light mb-8 max - w-4xl mx -auto"> Transform your business with our comprehensive suite of AI - powered micro SAAS services.From automation to analytics, we provide enterprise - grade solutions at startup prices.</p> <div className="flex flex - wrap justify - center gap-4"> <Button size="lg" className="bg-white text-zion - blue hover:bg-gray -100"> <Globe className="h-5 w-5 mr-2"/" > View All Services </Button> <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion -blue"> <Phone className="h-5 w-5 mr-2"/" > Contact Sales </Button> </div> </div> </div> </>) }"
+"""
+>>>>>>> main
