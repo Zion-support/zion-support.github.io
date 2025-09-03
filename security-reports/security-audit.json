@@ -8,15 +8,13 @@
       "moderate": 0,
       "high": 0,
       "critical": 0,
-      "total": 0
-    },
+      "total": 0},
     "dependencies": {
       "prod": 149,
       "dev": 774,
       "optional": 56,
       "peer": 0,
       "peerOptional": 0,
-      "total": 926
-    }
+      "total": 926}
   }
 }
