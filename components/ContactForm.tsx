@@ -30,14 +30,37 @@ const ContactForm: React.FC = () => {
       [name]: value
     }));
   }
+  const validateForm = (): boolean => {
+    if (!formData.name.trim()) return false;
+    if (!formData.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) return false;
+    if (!formData.message.trim()) return false;
+    return true;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!validateForm()) {
+      setSubmitStatus('error');
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Simulate form submission with better error handling
+      await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          // Simulate occasional network errors
+          if (Math.random() < 0.1) {
+            reject(new Error('Network error'));
+          } else {
+            resolve(true);
+          }
+        }, 2000);
+      });
+      
       setSubmitStatus('success');
       setFormData({
         name: '',
@@ -52,6 +75,8 @@ const ContactForm: React.FC = () => {
     } finally {
       setIsSubmitting(false);
     }
+  };
+
   return (
     <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
       <div className="grid md:grid-cols-2 gap-6">
@@ -167,7 +192,18 @@ const ContactForm: React.FC = () => {
 
       {submitStatus === 'error' && (
         <div className="p-4 bg-red-900/50 border border-red-500 rounded-lg text-red-300" role="alert">
-          There was an error sending your message. Please try again or contact us directly.
+          <div className="flex items-start gap-2">
+            <span className="text-red-400">⚠️</span>
+            <div>
+              <p className="font-semibold">Error sending message</p>
+              <p className="text-sm mt-1">
+                {!formData.name.trim() || !formData.email.trim() || !formData.message.trim() 
+                  ? "Please fill in all required fields (Name, Email, Message)."
+                  : "There was an error sending your message. Please try again or contact us directly at kleber@ziontechgroup.com"
+                }
+              </p>
+            </div>
+          </div>
         </div>
       )}
 
@@ -189,4 +225,5 @@ const ContactForm: React.FC = () => {
     </form>
   );
 }
+
 export default ContactForm;

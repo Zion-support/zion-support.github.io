@@ -8,8 +8,9 @@ const PerformanceMonitor: React.FC = () => {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
+            // LCP monitoring - remove console.log in production
           }
+        }
       });
       
       try {
@@ -22,8 +23,9 @@ const PerformanceMonitor: React.FC = () => {
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
+            // FID monitoring - remove console.log in production
           }
+        }
       });
 
       try {
@@ -39,7 +41,8 @@ const PerformanceMonitor: React.FC = () => {
           if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value;
           }
-        console.log('CLS:', clsValue);
+        }
+        // CLS monitoring - remove console.log in production
       });
 
       try {
@@ -52,7 +55,8 @@ const PerformanceMonitor: React.FC = () => {
         observer.disconnect();
         fidObserver.disconnect();
         clsObserver.disconnect();
-      }
+      };
+    }
   }, []);
 
   return null; // This component doesn't render anything
