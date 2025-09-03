@@ -1,5 +1,5 @@
 import React from 'react';
-import SEOHead from '../src/components/SEOHead';
+// import SEOHead from '../src/components/SEOHead';
 
 const FAQPage = () => {
   return (
