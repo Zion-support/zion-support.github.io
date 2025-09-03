@@ -1,5 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+import Layout from '../components/Layout';
+>>>>>>> c3407f17831351e4f4cfd0efb90f6fd048cb9536
 
 const PricingPage: React.FC = () => {
   return (

@@ -71,25 +71,99 @@ const itServices: Service[] = [
 ];
 
 export default function Services() {
-  const Section = ({ title, items }: { title: string; items: Service[] }) => (
-    <section style={{ maxWidth: 1200, margin: '0 auto', padding: '24px 16px' }}>
-      <h2 style={{ fontSize: 22, fontWeight: 800, marginBottom: 12 }}>{title}</h2>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))', gap: 12 }}>
+  const Section = ({ title, items, description }: { title: string; items: Service[]; description: string }) => (
+    <section style={{ maxWidth: 1200, margin: '0 auto', padding: '60px 20px' }}>
+      <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+        <h2 style={{ 
+          fontSize: '2.5rem', 
+          fontWeight: 800, 
+          marginBottom: '1rem',
+          color: '#0b1220'
+        }}>
+          {title}
+        </h2>
+        <p style={{ 
+          fontSize: '1.125rem', 
+          color: '#64748b',
+          maxWidth: '600px',
+          margin: '0 auto'
+        }}>
+          {description}
+        </p>
+      </div>
+      <div style={{ 
+        display: 'grid', 
+        gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', 
+        gap: '2rem' 
+      }}>
         {items.map((s) => (
-          <a key={s.name} href={s.link} style={{
-            border: '1px solid rgba(0,0,0,0.08)', borderRadius: 12, padding: 16,
-            background: 'white', textDecoration: 'none', color: '#0b1220'
-          }}>
-            <div style={{ fontWeight: 700, marginBottom: 6 }}>{s.name}</div>
-            <div style={{ opacity: 0.8, fontSize: 14, marginBottom: 8 }}>{s.summary}</div>
-            <div style={{ fontSize: 13, color: '#2563eb' }}>{s.pricing}</div>
-          </a>
+          <div key={s.name} style={{
+            background: 'white',
+            border: '1px solid #e2e8f0',
+            borderRadius: '12px',
+            padding: '2rem',
+            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
+            transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+            cursor: 'pointer'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-4px)';
+            e.currentTarget.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.1)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.05)';
+          }}
+          >
+            <h3 style={{ 
+              fontSize: '1.25rem', 
+              fontWeight: 700, 
+              marginBottom: '1rem',
+              color: '#0b1220'
+            }}>
+              {s.name}
+            </h3>
+            <p style={{ 
+              color: '#64748b', 
+              fontSize: '1rem', 
+              marginBottom: '1.5rem',
+              lineHeight: '1.6'
+            }}>
+              {s.summary}
+            </p>
+            <div style={{ 
+              display: 'flex', 
+              justifyContent: 'space-between', 
+              alignItems: 'center',
+              marginTop: 'auto'
+            }}>
+              <span style={{ 
+                fontSize: '0.875rem', 
+                color: '#22d3ee',
+                fontWeight: 600
+              }}>
+                {s.pricing}
+              </span>
+              <a 
+                href={s.link} 
+                style={{
+                  color: '#22d3ee',
+                  textDecoration: 'none',
+                  fontWeight: 600,
+                  fontSize: '0.875rem'
+                }}
+              >
+                Learn More →
+              </a>
+            </div>
+          </div>
         ))}
       </div>
     </section>
   );
 
   return (
+<<<<<<< HEAD
     <main style={{ background: '#f8fafc', minHeight: 'calc(100vh - 120px)' }}>
       <Section title="Micro SaaS" items={microSaaS} />
       <Section title="AI Services" items={aiServices} />
@@ -99,6 +173,77 @@ export default function Services() {
           display: 'inline-block', background: '#22d3ee', color: '#0b1220',
           padding: '10px 14px', borderRadius: 10, fontWeight: 700
         }}>Request a Quote</Link>
+=======
+    <main>
+      {/* Hero Section */}
+      <section style={{
+        background: 'linear-gradient(135deg, #0b1220 0%, #1e293b 100%)',
+        color: 'white',
+        padding: '80px 20px',
+        textAlign: 'center'
+      }}>
+        <div style={{ maxWidth: 800, margin: '0 auto' }}>
+          <h1 style={{ 
+            fontSize: '3rem', 
+            fontWeight: 800, 
+            marginBottom: '1rem' 
+          }}>
+            Our Services
+          </h1>
+          <p style={{ 
+            fontSize: '1.25rem', 
+            opacity: 0.9 
+          }}>
+            Comprehensive technology solutions designed to accelerate your digital transformation and drive business growth.
+          </p>
+        </div>
+      </section>
+
+      {/* Services Sections */}
+      <Section 
+        title="Micro SaaS Solutions" 
+        description="Scalable software-as-a-service platforms that solve specific business challenges with modern technology."
+        items={microSaaS} 
+      />
+      <Section 
+        title="AI Services" 
+        description="Cutting-edge artificial intelligence solutions that automate processes and unlock new business insights."
+        items={aiServices} 
+      />
+      <Section 
+        title="IT Services" 
+        description="Comprehensive IT infrastructure, security, and cloud services to support your business operations."
+        items={itServices} 
+      />
+
+      {/* CTA Section */}
+      <section style={{
+        background: 'linear-gradient(135deg, #1e293b 0%, #0b1220 100%)',
+        color: 'white',
+        padding: '80px 20px',
+        textAlign: 'center'
+      }}>
+        <div style={{ maxWidth: 800, margin: '0 auto' }}>
+          <h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '1.5rem' }}>
+            Ready to Get Started?
+          </h2>
+          <p style={{ fontSize: '1.125rem', marginBottom: '2rem', opacity: 0.9 }}>
+            Let&apos;s discuss your project requirements and create a custom solution for your business.
+          </p>
+          <Link href="/contact" style={{
+            background: '#22d3ee',
+            color: '#0b1220',
+            padding: '16px 32px',
+            borderRadius: '8px',
+            fontWeight: 600,
+            textDecoration: 'none',
+            display: 'inline-block',
+            fontSize: '1.125rem'
+          }}>
+            Request a Quote
+          </Link>
+        </div>
+>>>>>>> c3407f17831351e4f4cfd0efb90f6fd048cb9536
       </section>
     </main>
   );

@@ -4,7 +4,10 @@ const nextConfig = {
   swcMinify: true,
   compress: true,
   poweredByHeader: false,
-  eslint: { ignoreDuringBuilds: true },
+  eslint: { 
+    ignoreDuringBuilds: true,
+    dirs: ['pages', 'components', 'lib', 'hooks']
+  },
   typescript: { ignoreBuildErrors: true },
   // Ensure standard Next.js page extensions are recognized alongside any custom route files
   pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'route.tsx', 'route.ts'],
