@@ -18,6 +18,15 @@ export default [
           jsx: true,
         },
       },
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        localStorage: 'readonly',
+        process: 'readonly',
+        PerformanceObserver: 'readonly',
+        React: 'readonly',
+      },
     },
     plugins: {
       '@typescript-eslint': typescript,

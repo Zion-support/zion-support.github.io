@@ -5,7 +5,7 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import '../styles/globals.css';
 
-function Header(): any {
+function Header(): React.ReactElement {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -52,7 +52,7 @@ function Header(): any {
   );
 }
 
-function Footer(): any {
+function Footer(): React.ReactElement {
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -118,7 +118,7 @@ function Footer(): any {
       <div className="footer-bottom">
         <small>
           © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
-          <a href="/privacy">Privacy Policy</a>
+          <Link href="/privacy">Privacy Policy</Link>
         </small>
       </div>
     </footer>

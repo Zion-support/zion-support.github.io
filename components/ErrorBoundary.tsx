@@ -20,6 +20,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    // eslint-disable-next-line no-console
     console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
 
@@ -37,23 +38,23 @@ class ErrorBoundary extends Component<Props, State> {
               Something went wrong
             </h1>
             <p className="text-slate-300 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
+              We&apos;re sorry, but something unexpected happened. Please try refreshing the page.
             </p>
             <div className="space-y-3">
               <button
-                onClick={() => window.location.reload()}
+                onClick={() => typeof window !== 'undefined' && window.location.reload()}
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
               >
                 Refresh Page
               </button>
               <button
-                onClick={() => window.location.href = '/'}
+                onClick={() => typeof window !== 'undefined' && (window.location.href = '/')}
                 className="w-full bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
               >
                 Go Home
               </button>
             </div>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {typeof process !== 'undefined' && process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mt-6 text-left">
                 <summary className="text-slate-400 cursor-pointer">Error Details</summary>
                 <pre className="mt-2 text-xs text-red-400 bg-slate-800 p-3 rounded overflow-auto">

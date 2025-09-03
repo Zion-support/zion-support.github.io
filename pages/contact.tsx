@@ -1,7 +1,8 @@
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-export default function Contact(): any {
+export default function Contact(): React.ReactElement {
   const contact = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -137,7 +138,7 @@ export default function Contact(): any {
               Ready to Get Started?
             </h2>
             <p className="text-lg text-slate-300 mb-8">
-              Choose your preferred way to contact us and let's discuss how we can help 
+              Choose your preferred way to contact us and let&apos;s discuss how we can help 
               transform your business with cutting-edge technology solutions.
             </p>
             
