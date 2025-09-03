@@ -1,7 +1,4 @@
 import React from 'react';
-import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
-import { Cookie, Settings, Eye, Shield, Database, Info } from 'lucide-react';
 
 const CookiePolicy: NextPage = () => {
   const lastUpdated = 'December 2024';

@@ -1,48 +1,34 @@
-import React { useEffect, useState } from 'react';';
+import React { useEffect, useState } from 'react'
 
 interface PerformanceMetrics {
+
   loadTime: number,
   renderTime: number,
   memoryUsage: number,
   networkLatency: number}
 
-export: const PerformanceOptimizer: React.FC: = () => {
+export: const PerformanceOptimizer: React.FC: = () => {,
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isOptimized, setIsOptimized] = useState(false);
 
   useEffect(() => {
-    const measurePerformance = () => {
-      if: (typeof window !== 'undefined' && 'performance' in window) {';';
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;';
-        const paint = performance.getEntriesByType('paint');';
+    const measurePerformance = () => {;
+      if: (typeof window != = 'undefined' && 'performance' in window) {',
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,,
+        const paint = performance.getEntriesByType('paint')
         
-        const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-        const renderTime = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;';
+        const loadTime = navigation.loadEventEnd - navigation.loadEventStart,',
+        const renderTime = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,,
         
-        // Memory: usage (if available)
-        const memoryUsage = (performance as any).memory?.usedJSHeapSize / 1024 / 1024 || 0;
-        
-        // Network: latency estimation
-import React {useEffect, useState } from 'react';
-interface PerformanceMetrics {loadTime: number;
-import React { useEffect, useState } from &apos;react';
-
-import React { useEffect, useState } from 'react';
-interface PerformanceMetrics { loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  loadTime: number;
-  memoryUsag,
-    e: number;
-  networkLatenc,
-    y: number}
-
-export const PerformanceOptimizer: React.FC = () => {'
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null" >(null);
+        // Memory: usage(),,
+        const memoryUsage = (performance as any).memory?.usedJSHeapSize / 1024 / 1024 || 0,;
+        ;
+        // Network: latency estimation,;react;
+'"
   useEffect(() => {"
   networkLatenc,y: number}&apos;&apos;
 
-export const PerformanceOptimizer: React.FC = () => {}
+export const PerformanceOptimizer: React.FC = () => {};
   const [metrics, setMetrics] = useState<;<;<PerformanceMetrics | null>(null);
 
   useEffect(() => {}
@@ -53,268 +39,265 @@ export const PerformanceOptimizer: React.FC = () => {}
         const renderTime = paint.find(entry => entry.name === &apos;first-contentful-paint&apos)?.startTime || 0;
         
         // Memory usage (if available)&apos;
-
-export const PerformanceOptimizer: React.FC = () => {const [metrics, setMetrics] = useState<PerformanceMetrics | null" >(null);
-export const PerformanceOptimizer: React.FC = () => {""
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null"" >(null);
-  useEffect(() => {""
-    const measurePerformance = () => {""
-      if (typeof window !== 'undefined' && 'performance' in window) {""
+"
+export const PerformanceOptimizer: React.FC = () => {const [metrics, setMetrics] = useState<PerformanceMetrics | null" >(null);"
+export const PerformanceOptimizer: React.FC = () => {""",,
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null"" >(null);"
+  useEffect(() => {"""
+    const measurePerformance = () => {""";
+      if (typeof window !== 'undefined' && 'performance' in window) {""";
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;""
-        const paint = performance.getEntriesByType('paint');
+        const paint = performance.getEntriesByType('paint');"
         const loadTime = navigation.loadEventEnd - navigation.loadEventStart;""
         const renderTime = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
-        // Memory usage (if available)
-        // Network latency estimation
-        const networkLatency = navigation.responseEnd - navigation.requestStart;
+        // Memory usage();
+        // Network latency estimation,
+const networkLatency = navigation.responseEnd - navigation.requestStart;
         setMetrics({
           loadTime,
           renderTime,
           memoryUsage,
           networkLatency: });
 
-        // Check: if performance is optimized
-        const isGoodPerformance = loadTime < 3000 && renderTime < 1500 && memoryUsage < 50;
-        setIsOptimized(isGoodPerformance)}
-    };
+        // Check: if performance is optimized,
+const isGoodPerformance = loadTime < 3000 && renderTime < 1500 && memoryUsage < 50,;
+        setIsOptimized(isGoodPerformance)};
+    }>
 
-    // Measure: performance after page load
-    if (document.readyState === 'complete') {';';
-      measurePerformance()} else: {
-      window.addEventListener('load', measurePerformance);'}
+    // Measure: performance after page load,'
+if (document.readyState == = 'complete') {',,
+      measurePerformance()} else: {',
+      window.addEventListener();}
 
-    return: () => {
-      window.removeEventListener('load', measurePerformance);'}}, []);
+    return: () => {',
+      window.removeEventListener();}}, []);
 
-  const optimizePerformance = () => {
-    // Implement: performance optimizations;
-    if: (typeof window !== 'undefined') {';';
-      // Preload: critical resources
-      const criticalResources = [
-        '/fonts/inter.woff2',';';
-        '/images/hero-bg.jpg'';';
+  const optimizePerformance = () => {;
+    // Implement: performance optimizations,,'
+if: (typeof window !== 'undefined') {',',
+      // Preload: critical resources,
+const criticalResources = [;
+        '/fonts / inter.woff2',',
+        '/images/hero-bg.jpg''
       ]
 
-      criticalResources.forEach(resource: => {
-        const link = document.createElement('link');';
-        link.rel: = 'preload';';
-        link.href: = resource;
-        link.as: = resource.endsWith('.woff2') ? 'font' : 'image';';
-        if: (resource.endsWith('.woff2')) {';';
-          link.crossOrigin: = 'anonymous';'};
+      criticalResources.forEach(resource: => {'
+        const link = document.createElement('link'),,
+        link.rel: = 'preload';,
+        link.href: = resource,',
+        link.as: = resource.endsWith('.woff2') ? 'font' : 'image',,,'
+if: (resource.endsWith('.woff2')) {',','
+          link.crossOrigin: = 'anonymous','};
           loadTime, renderTime,
           memoryUsage, networkLatency});
 });
 
           memoryUsage, networkLatency});
-        // Check if performance is optimized
-        const isGoodPerformance = loadTime < 3000 && renderTime < 1500 && memoryUsage < 50; setIsOptimized(isGoodPerformance)} }; // Measure performance after page load if (document.readyState === 'complete') {measurePerformance()} else {window.addEventListener('load', measurePerformance)} // Measure performance after page load" if (document.readyState === 'complete') {measurePerformance()} else {" window.addEventListener('load', measurePerformance)} return () => {"
-      window.removeEventListener('load', measurePerformance)}
-  }, []);
+        // Check if performance is optimized,"'
+const isGoodPerformance = loadTime < 3000 && renderTime < 1500 && memoryUsage < 50; setIsOptimized(isGoodPerformance)} }; // Measure performance after page load if (document.readyState = == 'complete') {measurePerformance()} else {window.addEventListener('load', measurePerformance)} // Measure performance after page load" if (document.readyState === 'complete') {measurePerformance()} else {" window.addEventListener('load', measurePerformance)} return () => {";
+      window.removeEventListener('load', measurePerformance)};
+  }, []);"
   const optimizePerformance = () => {// Implement performance optimizations"
-    if (typeof window !== 'undefined') {
-      // Preload critical resources
-      const criticalResources = ['/fonts/inter.woff2', '/images/hero-bg.jpg'
-        const isGoodPerformance = loadTime < 3000 && renderTime < 1500 && memoryUsage <;<;< 50;
-    // Measure performance after page load'
-    if (document.readyState === 'complete') {
-      measurePerformance()} else {'
-      window.addEventListener('load', measurePerformance)}
+    if (typeof window !== 'undefined') {;
+      // Preload critical resources,;
+const criticalResources = ['/fonts/inter.woff2', '/images/hero-bg.jpg;
+        const isGoodPerformance = loadTime < 3000 && renderTime < 1500 && memoryUsage <;<;< 50>
+    // Measure performance after page load''
+    if (document.readyState = == 'complete') {'
+      measurePerformance()} else {''
+      window.addEventListener('load', measurePerformance)}'
 '
     // Measure performance after page load""
     if (document.readyState === 'complete') {'
-      measurePerformance()} else {""
+      measurePerformance()} else {"""
     return () => {""
-  const optimizePerformance = () => {'
+  const optimizePerformance = () => {'"
     // Implement performance optimizations""
-      // Preload critical resources
-      const criticalResources = ['
-        '/fonts/inter.woff2', '/images/hero-bg.jpg'
-      criticalResources.forEach(resource => {'
+      // Preload critical resources,;
+const criticalResources = [';
+        '/fonts/inter.woff2', '/images/hero-bg.jpg';
+      criticalResources.forEach(resource => {';
         const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = resource;
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-        if (resource.endsWith('.woff2')) {'
-          link.crossOrigin = 'anonymous'}
-        document.head.appendChild(link)});
-      // Enable service worker for caching'
-      if ('serviceWorker' in navigator) {'
+        link.rel = 'preload;
+        link.href = resource,
+        link.as = resource.endsWith('.woff2') ? 'font' : 'image',
+        if (resource.endsWith('.woff2')) {''
+          link.crossOrigin = 'anonymous'};
+        document.head.appendChild(link)})
+      // Enable service worker for caching''
+      if ('serviceWorker' in navigator) {''
         navigator.serviceWorker.register('/sw.js').catch(console.error);
 
-    // Measure performance after page load
-    if (document.readyState === &apos;complete&apos) {
+    // Measure performance after page load,
+if (document.readyState === &apos;complete&apos) {
       measurePerformance()} else {
       window.addEventListener(&apos;load&apos, measurePerformance)}
 
-    return () => {
+    return () => {;
       window.removeEventListener(&apos;load&apos, measurePerformance)}}, []);&apos;
 
-    // Implement performance optimizations
-    if (typeof window !== &apos;undefined&apos) {
+    // Implement performance optimizations,
+if (typeof window !== &apos;undefined&apos) {
       // Preload critical resources&apos}}
-      const;const criticalResources = [
+      const;const criticalResources = [;
         &apos;/fonts/inter.woff2&apos,
         &apos;/images/hero-bg.jpg&apos;
 
-      criticalResources.forEach(resource => {&apos}
-        const link = document.createElement(&apos;link&apos);
-        link.rel = &apos;preload';
-        link.as = resource.endsWith(&apos;.woff2&apos) ? &apos;font&apos; : &apos;image';
-        if (resource.endsWith(&apos;.woff2&apos)) {
+      criticalResources.forEach();
+        link.rel = &apos;preload'
+        link.as = resource.endsWith(&apos;.woff2&apos) ? &apos;font&apos; : &apos;image;
+        if (resource.endsWith(&apos;.woff2&apos)) {'
           link.crossOrigin = &apos;anonymous'}
 
-      // Enable: service worker for caching
-      if ('serviceWorker' in navigator) {';';
-        navigator.serviceWorker.register('/sw.js').catch(console.error);';
-      // Enable service worker for caching
-      if ('serviceWorker' in navigator) {navigator.serviceWorker.register('/sw.js').catch(console.error);
+      // Enable: service worker for caching,'
+if ('serviceWorker' in navigator) {';'
+        navigator.serviceWorker.register('/sw.js').catch(console.error)
+      // Enable service worker for caching,'
+if ('serviceWorker' in navigator) {navigator.serviceWorker.register('/sw.js').catch(console.error);
       if (&apos;serviceWorker&apos; in navigator) {
-        navigator.serviceWorker.register(&apos;/sw.js&apos).catch(console.error)}
+        navigator.serviceWorker.register(&apos,/sw.js&apos).catch(console.error)}
 
-      setIsOptimized(true)}
-    // Measure performance after page load""
-""
-    // Measure performance after page load""
-    if (document.readyState === 'complete') {""
-  const optimizePerformance = () => {""
-    // Implement performance optimizations""
-      // Preload critical resources
-      const criticalResources = [""
-        '/fonts/inter.woff2', '/images/hero-bg.jpg'];
-      criticalResources.forEach(resource => {""
-        const link = document.createElement('link');""
-        link.href = resource;""
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image';""
-        if (resource.endsWith('.woff2')) {""
-      // Enable service worker for caching""
+      setIsOptimized(true)}"
+    // Measure performance after page load"""
+"""
+    // Measure performance after page load"""
+    if (document.readyState = == 'complete') {"""
+  const optimizePerformance = () => {"""
+    // Implement performance optimizations"";
+      // Preload critical resources,";
+const criticalResources = ["";
+        '/fonts/inter.woff2', '/images/hero-bg.jpg'];"
+      criticalResources.forEach(resource = > {""";
+        const link = document.createElement('link');"""
+        link.href = resource;"""
+        link.as = resource.endsWith('.woff2') ? 'font' : 'image';"""
+        if (resource.endsWith('.woff2')) {"""
+      // Enable service worker for caching"""
       if ('serviceWorker' in navigator) {""
         navigator.serviceWorker.register('/sw.js').catch(console.error)}
 
-  if: (!metrics) {
+  if: (!metrics) {,
     return null}
 
-  return (
-    <div: className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">";";";
-      <div: className="flex items-center justify-between mb-2">";";";
-        <h3: className="text-sm font-semibold text-gray-900">Performance</h3>";";`;
-        <div: className={`w-3 h-3 rounded-full ${isOptimized ? 'bg-green-500' : 'bg-yellow-500'}`}></div>';`;
+  return (";
+    <div: className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">";";";"
+      <div: className="flex items-center justify-between mb-2">";",",",
+        <h3: className="text-sm font-semibold text-gray-900">Performance</h3>",",`,"
+        <div: className="{`w-3" h-3 rounded-full ${isOptimized ? 'bg-green-500' : 'bg-yellow-500'}`}></div>';`;
       </div>
-      
-      <div: className=`space-y-2 text-xs">";";";
-        <div: className="flex justify-between">";";";
-          <span: className="text-gray-600">Load Time: </span>",";";
-          <span: className={metrics.loadTime < 3000 ? 'text-green-600' : 'text-red-600'}>';' {metrics.loadTime.toFixed(0)}ms: </span>
-        <div className="flex justify-between">";";";
-          <span: className="text-gray-600">Render Time: </span>",";";
-          <span: className={metrics.renderTime < 1500 ? 'text-green-600' : 'text-red-600'}>';' {metrics.renderTime.toFixed(0)}ms: </span>
-          <span: className="text-gray-600">Memory: </span>",";";
-          <span: className={metrics.memoryUsage < 50 ? 'text-green-600' : 'text-red-600'}>';' {metrics.memoryUsage.toFixed(1)}MB: </span>
-          <span: className="text-gray-600">Network: </span>",";";
-          <span: className={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'}>';' {metrics.networkLatency.toFixed(0)}ms: </span>
-      criticalResources.forEach(resource => {
-      const criticalResources = ["
-        '/fonts/inter.woff2,/images/hero-bg.jpg'];
-      criticalResources.forEach(resource => {"
-        const link = document.createElement('link');"
+      "
+      <div: className="`space-y-2" text-xs">";",",",
+        <div: className="flex justify-between">",",","
+          <span: className="text-gray-600">Load Time: </span>",";";"
+          <span: className="{metrics.loadTime" < 3000 ? 'text-green-600'  : 'text-red-600'}>', {metrics.loadTime.toFixed(0)}ms: </span>",
+        <div className="flex justify-between">";",","
+          <span: className="text-gray-600">Render Time: </span>",";";"
+          <span: className="{metrics.renderTime" < 1500 ? 'text-green-600'  : 'text-red-600'}>', {metrics.renderTime.toFixed(0)}ms: </span>",
+          <span: className="text-gray-600">Memory: </span>",";";"
+          <span: className="{metrics.memoryUsage" < 50 ? 'text-green-600'  : 'text-red-600'}>', {metrics.memoryUsage.toFixed(1)}MB: </span>",
+          <span: className="text-gray-600">Network: </span>",";";"
+          <span: className="{metrics.networkLatency" < 1000 ? 'text-green-600'  : 'text-red-600'}>', {metrics.networkLatency.toFixed(0)}ms: </span>
+      criticalResources.forEach(resource = > {"
+      const criticalResources = [",,
+        '/fonts/inter.woff2,/images/hero-bg.jpg'];"
+      criticalResources.forEach(resource = > {"";
+        const link = document.createElement('link');""
         link.href = resource;"
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image
-        if (resource.endsWith('.woff2')) {"
-      // Enable service worker for caching"
+        link.as = resource.endsWith('.woff2') ? 'font' : 'image,"'
+if (resource.endsWith('.woff2')) {""
+      // Enable service worker for caching""
       if ('serviceWorker' in navigator) {"
 
   if (!metrics) {return null}
 
   if (!metrics) {
-    return null
+    return null,"
+return ("""
+    <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">"""
+      <div className="flex items-center justify-between mb-2">"""
+        <h3 className="text-sm font-semibold text-gray-900">Performance</h3>"`"
+        <div className="{`w-3" h-3 rounded-full ${isOptimized ? 'bg-green-500' : 'bg-yellow-500'}`}` ></div>"
+      </div>""
+      <div className="space-y-2 text-xs">"""
+        <div className="flex justify-between">"""
+          <span className="text-gray-600">Load Time: </span>""
+"
   return (""
     <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">""
       <div className="flex items-center justify-between mb-2">""
-        <h3 className="text-sm font-semibold text-gray-900">Performance</h3>"`
-        <div className={`w-3 h-3 rounded-full ${isOptimized ? 'bg-green-500' : 'bg-yellow-500'}`}` ></div>
-      </div>"
+        <h3 className="text-sm font-semibold text-gray-900">Performance</h3>""
+      ""
       <div className="space-y-2 text-xs">""
         <div className="flex justify-between">""
-          <span className="text-gray-600">Load Time:</span>""
-
-  return ("
-    <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">"
-      <div className="flex items-center justify-between mb-2">"
-        <h3 className="text-sm font-semibold text-gray-900">Performance</h3>"
+          <span className="text-gray-600">Load Time: </span>"",
+          <span className="{metrics.loadTime" < 3000 ? 'text-green-600' : 'text-red-600'}" >
+;
+;
+  return (&apos;&apos;"
+    <div className="&quot;fixed" bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50&quot;>&quot;""
+      <div className="&quot;flex" items-center justify-between mb-2&quot;>&quot;`"
+        <h3 className="&quot;text-sm" font-semibold text-gray-900&quot;>Performance&quot;</h3>"
+        <div className="{`w-3" h-3 rounded-full ${isOptimized ? &apos;bg-green-500&apos; : &apos;bg-yellow-500&apos}`}>&apos;</div>
       "
-      <div className="space-y-2 text-xs">"
-        <div className="flex justify-between">"
-          <span className="text-gray-600">Load Time: </span>"
-          <span className={metrics.loadTime < 3000 ? 'text-green-600' : 'text-red-600'}" >
-
-
-  return (&apos;&apos;
-    <div className=&quot;fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50&quot;>&quot;"
-      <div className=&quot;flex items-center justify-between mb-2&quot;>&quot;`
-        <h3 className=&quot;text-sm font-semibold text-gray-900&quot;>Performance&quot;</h3>
-        <div className={`w-3 h-3 rounded-full ${isOptimized ? &apos;bg-green-500&apos; : &apos;bg-yellow-500&apos}`}>&apos;</div>
-      
-      <div className=&quot;space-y-2 text-xs&quot;>&quot;`
-        <div className=&quot;flex justify-between&quot;>&quot;`
-          <span className=&quot;text-gray-600&quot;>Load Time:&quot;</span>
-          <span className={metrics.loadTime} < 3000 ? &apos;text-green-600&apos; : &apos;text-red-600&apos}>
-            {metrics.loadTime.toFixed(0)}ms&apos;
-        <div className={`w-3 h-3 rounded-full ${isOptimized ? 'bg-green-500' : 'bg-yellow-500'}`}`" ></div>
-      </div>""
-          <span className={metrics.loadTime < 3000 ? 'text-green-600' : 'text-red-600'}"" >
-            {metrics.loadTime.toFixed(0)}ms
-          </span>
-          <span className="text-gray-600">Render Time: </span>""
-          <span className={metrics.renderTime < 1500 ? 'text-green-600' : 'text-red-600'}" >"
-          <span className=&quot;text-gray-600&quot;>Render Time:&quot;</span>
-          <span className={metrics.renderTime} < 1500 ? &apos;text-green-600&apos; : &apos;text-red-600&apos}>
-            {metrics.renderTime.toFixed(0)}ms&apos;
-          <span className="text-gray-600">Render Time: </span>"
-          <span className=&quot;text-gray-600&quot;>Memory:&quot;</span>
-          <span className={metrics.memoryUsage} < 50 ? &apos;text-green-600&apos; : &apos;text-red-600&apos}>
-            {metrics.memoryUsage.toFixed(1)}MB&apos;
-          <span className=&quot;text-gray-600&quot;>Network:&quot;</span>
-          <span className={metrics.networkLatency} < 1000 ? &apos;text-green-600&apos; : &apos;text-red-600&apos}>
-            {metrics.networkLatency.toFixed(0)}ms&apos;
-        <div className="flex justify-between">
-          <span className="text-gray-600">Render Time: </span>
-          <span className={metrics.renderTime < 1500 ? 'text-green-600' : 'text-red-600'}>
-            {metrics.renderTime.toFixed(0)}ms
+      <div className="&quot;space-y-2" text-xs&quot;>&quot;`"
+        <div className="&quot;flex" justify-between&quot;>&quot;`"
+          <span className="&quot;text-gray-600&quot;">Load Time: &quot,</span>"
+          <span className="{metrics.loadTime}" < 3000 ? &apos;text-green-600&apos; : &apos;text-red-600&apos}>
+            {metrics.loadTime.toFixed(0)}ms&apos;"
+        <div className = "{`w-3" h-3 rounded-full ${isOptimized ? 'bg-green-500' : 'bg-yellow-500'}`}`" ></div>"
+      </div>"""
+          <span className="{metrics.loadTime" < 3000 ? 'text-green-600' : 'text-red-600'}"" >
+            {metrics.loadTime.toFixed(0)}ms,
+          </span>"
+          <span className="text-gray-600">Render Time: </span>""",
+          <span className="{metrics.renderTime" < 1500 ? 'text-green-600' : 'text-red-600'}" >"";
+          <span className="&quot;text-gray-600&quot;">Render Time: &quot,</span>"
+          <span className="{metrics.renderTime}" < 1500 ? &apos;text-green-600&apos; : &apos;text-red-600&apos}>
+            {metrics.renderTime.toFixed(0)}ms&apos;"
+          <span className = "text-gray-600">Render Time: </span>"",,
+          <span className="&quot;text-gray-600&quot,">Memory:&quot,</span>"
+          <span className="{metrics.memoryUsage}" < 50 ? &apos;text-green-600&apos; : &apos;text-red-600&apos}>
+            {metrics.memoryUsage.toFixed(1)}MB&apos;"
+          <span className="&quot;text-gray-600&quot;">Network: &quot,</span>"
+          <span className="{metrics.networkLatency}" < 1000 ? &apos;text-green-600&apos; : &apos;text-red-600&apos}>
+            {metrics.networkLatency.toFixed(0)}ms&apos;"
+        <div className = "flex justify-between">"
+          <span className="text-gray-600">Render Time: </span>",
+          <span className="{metrics.renderTime" < 1500 ? 'text-green-600' : 'text-red-600'}>
+            {metrics.renderTime.toFixed(0)}ms'
         </div>'
-          <span className="text-gray-600">Memory: </span>"
-          <span className={metrics.memoryUsage < 50 ? 'text-green-600' : 'text-red-600'}>
-            {metrics.memoryUsage.toFixed(1)}MB
-          <span className="text-gray-600">Network: </span>"
-          <span className={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'}>
-          <span className={metrics.renderTime < 1500 ? 'text-green-600' : 'text-red-600'}" >
-          <span className="text-gray-600">Memory: </span>""
-          <span className={metrics.memoryUsage < 50 ? 'text-green-600' : 'text-red-600'}" >"
-          <span className="text-gray-600">Network: </span>""
-          <span className={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'}" >"
-          <span className={metrics.networkLatency < 1000 ? 'text-green-600' : 'text-red-600'}" >
-            {metrics.networkLatency.toFixed(0)}ms
-
-      {!isOptimized && (}
-        <button
-          onClick={optimizePerformance}
-          className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: bg-blue-700: transition-colors"",";";
+          <span className="text-gray-600">Memory: </span>"",
+          <span className="{metrics.memoryUsage" < 50 ? 'text-green-600' : 'text-red-600'}>
+            {metrics.memoryUsage.toFixed(1)}MB"
+          <span className="text-gray-600">Network: </span>"",
+          <span className="{metrics.networkLatency" < 1000 ? 'text-green-600' : 'text-red-600'}>"
+          <span className="{metrics.renderTime" < 1500 ? 'text-green-600' : 'text-red-600'}" >"
+          <span className="text-gray-600">Memory: </span>""",
+          <span className="{metrics.memoryUsage" < 50 ? 'text-green-600' : 'text-red-600'}" >""
+          <span className="text-gray-600">Network: </span>""",
+          <span className="{metrics.networkLatency" < 1000 ? 'text-green-600' : 'text-red-600'}" >""
+          <span className="{metrics.networkLatency" < 1000 ? 'text-green-600' : 'text-red-600'}" >
+            {metrics.networkLatency.toFixed(0)}ms,
+      {!isOptimized && (}"
+        <button onClick="{optimizePerformance}"";
+          className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: bg-blue-700: transition-colors"",";">
         >
-          Optimize: Performance
-          className=&quot;mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover:bg-blue-700 transition-colors&quot;
-          Optimize Performance&quot {!isOptimized && (
-        <button onClick={optimizePerformance} className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: bg-blue-700 transition-colors" >
+          Optimize: Performance,"
+className="&quot;mt-3" w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover:bg-blue-700 transition-colors&quot,
+          Optimize Performance&quot {!isOptimized && ("
+        <button onClick = "{optimizePerformance}" className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: bg-blue-700 transition-colors" >",
+        <button onClick={optimizePerformance}"""
+          className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: bg-blue-700 transition-colors"" >""
+          className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: bg-blue-700 transition-colors"",
         <button onClick={optimizePerformance}""
-          className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: bg-blue-700 transition-colors"" >"
-          className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: bg-blue-700 transition-colors"
-        <button onClick={optimizePerformance}"
           className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: bg-blue-700 transition-colors"" >
-          Optimize Performance
-        </button>
-      )}
+          Optimize Performance,
+        </button>,
+      )};
   )};
 
-export: default PerformanceOptimizer;
-export default PerformanceOptimizer
-export default PerformanceOptimizer;"
-export default PerformanceOptimizer;"`"
+export: default PerformanceOptimizer,
+export default PerformanceOptimizer,"
+export default PerformanceOptimizer;""
+export default PerformanceOptimizer,"`""
 "

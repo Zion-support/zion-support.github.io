@@ -1,10 +1,10 @@
-// Performance utilities
-export const performanceUtils = {
-  // Debounce function
-  debounce(func, wait) {
+// Performance utilities,
+export const performanceUtils = {;
+  // Debounce function,;
+debounce(func, wait) {;
     let timeout;
-    return function executedFunction(...args) {
-      const later = () => {
+    return function executedFunction(...args) {;
+      const later = () => {;
         clearTimeout(timeout);
         func(...args);
       };
@@ -13,10 +13,10 @@ export const performanceUtils = {
     };
   },
   
-  // Throttle function
-  throttle(func, limit) {
+  // Throttle function,
+throttle(func, limit) {
     let inThrottle;
-    return function() {
+    return function() {;
       const args = arguments;
       const context = this;
       if (!inThrottle) {
@@ -27,40 +27,40 @@ export const performanceUtils = {
     };
   },
   
-  // Lazy load images
-  lazyLoadImages() {
+  // Lazy load images,
+lazyLoadImages() {
     if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
+      const imageObserver = new IntersectionObserver((entries, observer) => {;
+        entries.forEach(entry => {;
+          if (entry.isIntersecting) {;
             const img = entry.target;
-            img.src = img.dataset.src;
+            img.src = img.dataset.src,
             img.classList.remove('lazy');
             imageObserver.unobserve(img);
           }
         });
       });
-      
-      document.querySelectorAll('img[data-src]').forEach(img => {
+      '
+      document.querySelectorAll('img[data-src]').forEach(img = > {;
         imageObserver.observe(img);
       });
     }
   },
   
-  // Preload critical resources
-  preloadCriticalResources() {
-    const criticalResources = [
-      '/fonts/main-font.woff2',
+  // Preload critical resources,
+preloadCriticalResources() {
+    const criticalResources = ['
+      '/fonts/main-font.woff2','
       '/css/critical.css'
-    ]
-    
-    criticalResources.forEach(resource => {
+    ];
+    ;
+    criticalResources.forEach(resource => {;
       const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.css') ? 'style' : 'font';
-      if (resource.endsWith('.woff2')) {
-        link.crossOrigin = 'anonymous';
+      link.rel = 'preload;
+      link.href = resource,
+      link.as = resource.endsWith('.css') ? 'style' : 'font',
+      if (resource.endsWith('.woff2')) {'
+        link.crossOrigin = 'anonymous;
       }
       document.head.appendChild(link);
     });

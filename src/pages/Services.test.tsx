@@ -1,13 +1,13 @@
-describe('Services', () => {}; '; it('renders without crashing', () => {}; render(<Services />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<Services />) ;
-    render(<Services />);
+describe('Services', () => {}; '; it('renders without crashing', () => {}; render(<Services / >) ,; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<Services />) ;
+    render();
     expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
-  });
-'
+  })
+''
   it('displays expected content', () => {
     render(<Services /" >);
-    // Add more specific tests here
+    // Add more specific tests here,
   });
-  });
+  });"
 "
-});
-'"
+});"
+'

@@ -7,10 +7,10 @@
   keywords = &apos;AI, cybersecurity, cloud, devops, consulting, Zion Tech Group&apos}) {
   return (&apos}
     <Helmet>
-      <title>{title}</title>
-      <meta name="&apos;description&apos;" content="{description}" />&apos;
-      <meta name="&apos;keywords&apos;" content="{keywords}" />&apos;
-      <link rel=&apos;canonical&apos; href="{canonical}" />&apos;
+      <title>{title}</title>";
+      <meta name="&apos;description&apos;" content="{description}" />&apos;"
+      <meta name="&apos;keywords&apos;" content="{keywords}" />&apos;"
+      <link rel="&apos;canonical&apos;" href="{canonical}" />&apos;
     </Helmet>
   );
 }
@@ -19,11 +19,11 @@ export default SEO;
   keywords = 'AI, cybersecurity, cloud, devops, consulting, Zion Tech Group'}) {
   return (
     <Helmet>
-      <title>{title}</title>
+      <title>{title}</title>"
       <meta name='description' content="{description}" /  >'
       <meta name='keywords' content="{keywords}" /  >'
-      <link rel='canonical' href="{canonical}" /  >
+      <link rel='canonical' href="{canonical}" /  >'
     </Helmet>  )}'
-export default SEO"
-"
-"
+export default SEO""
+"";
+";

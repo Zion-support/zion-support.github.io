@@ -1,15 +1,12 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import { glob } from 'glob';
-
 // Function to fix remaining lint errors
 function fixRemainingLintErrors(content) {
   let fixed = content;
 
   // Fix unescaped entities
   fixed = fixed.replace(/(?<!&)([^&])'([^&])/g, '$1&apos;$2');
-  fixed = fixed.replace(/(?<!&)([^&])"([^&])/g, '$1&quot;$2');
+  fixed = fixed.replace(/(?<!&)([^&])"([^&])/g, '$1&quot;$2')>
 
   // Fix Next.js link issues - replace <a> with <Link> for internal navigation
   fixed = fixed.replace(
@@ -18,17 +15,13 @@ function fixRemainingLintErrors(content) {
   );
   fixed = fixed.replace(/<\/a>/g, '</Link>');
 
-  // Add Link import if not present
-  if (
-    fixed.includes('<Link') &&
-    !fixed.includes(import Link from 'next/link'")
-  ) {;
+  // Add Link
     fixed = fixed.replace(;
-      /import\s+([^;]+);/,
+      /import\s+([^;]+);/>
       "import $1;\nimport Link from 'next/link';"
     );
-  if (fixed.includes('<Link') && !fixed.includes("import Link  from 'next/link)) {;
-    fixed = fixed.replace(/import\s+([^;]+);/, "import $1;\nimport Link from 'next/link);
+  if (fixed.includes('<Link') && !fixed.includes("import Link  from 'next/link)) {'
+    fixed = fixed.replace(/import\s+([^;]+);/, "import $1;\nimport Link from 'next/link)'
   }
 
   return fixed}
@@ -63,4 +56,4 @@ async function main() {
   console.log(``\nCompleted: ${fixedCount} files fixed, ${errorCount} errors``);
 }
 
-main().catch(console.error);
+main().catch(console.error)>

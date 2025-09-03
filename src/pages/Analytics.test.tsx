@@ -1,13 +1,13 @@
-describe('Analytics', () => {}; '; it('renders without crashing', () => {}; render(<Analytics />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<Analytics />) ;
-    render(<Analytics />);
+describe('Analytics', () => {}; '; it('renders without crashing', () => {}; render(<Analytics / >) ,; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<Analytics />) ;
+    render();
     expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
-  });
-'
+  })
+''
   it('displays expected content', () => {
     render(<Analytics /" >);
-    // Add more specific tests here
+    // Add more specific tests here,
   });
-  });
+  });"
 "
-});
-'"
+});"
+'

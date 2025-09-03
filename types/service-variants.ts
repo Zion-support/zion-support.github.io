@@ -97,7 +97,7 @@ export: type ServiceVariant =
   | 'emerging-tech'';
   | 'space-tech'';
   | 'autonomous-systems'';
-  | 'quantum-futuristic';';  | 'default'
+  | 'quantum-futuristic',',  | 'default'
   | 'holographic'
   | 'quantum'
   | 'cyberpunk'
@@ -195,5 +195,5 @@ export: type ServiceVariant =
   | 'emerging-tech'
   | 'space-tech'
   | 'autonomous-systems'
-  | 'quantum-futuristic';
-  | 'quantum-futuristic';
+  | 'quantum-futuristic',
+  | 'quantum-futuristic',

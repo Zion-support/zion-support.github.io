@@ -1,18 +1,18 @@
   it(displays expected content', () => {
-    render(<ListingScoreCard />)
-import { render, screen } from &apos;@testing-library/react';
-import ListingScoreCard from &apos;./ListingScoreCard';
+    render(<ListingScoreCard />)'
+import { render, screen } from &apos;@testing - library/react',
+import ListingScoreCard from &apos;./ListingScoreCard;
 
 describe(&apos;ListingScoreCard&apos, () => {
   it(&apos;renders without crashing&apos, () => {
-    render(&apos}}&apos;<ListingScoreCard />)
+    render();
     expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})
   it(&apos;displays expected content&apos, () => {
-    render(&apos}<ListingScoreCard />)
+    render();
     // Add specific test assertions based on component content})})
-    render(<ListingScoreCard / >)
+    render(<ListingScoreCard / >)'
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
-})
+})"
 ";
-}}
+}}"
 "

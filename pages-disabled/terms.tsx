@@ -1,7 +1,4 @@
 import React from 'react';
-import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
-import { FileText, Scale, AlertTriangle, Shield, Users, Gavel } from 'lucide-react';
 
 const TermsOfService: NextPage = () => {
   const lastUpdated = 'December 2024';

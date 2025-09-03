@@ -1,7 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react'
 
 interface SEOEnhancerProps {
+
   title?: string;
   description?: string;
   keywords?: string;
@@ -10,52 +10,52 @@ interface SEOEnhancerProps {
   type?: string;
   siteName?: string}
 
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title = 'Zion Tech Group - Leading Technology Solutions Provider',
-  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
-  keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services',
-  ogImage = 'https://ziontechgroup.com/api/placeholder/1200/630',
-  url = 'https://ziontechgroup.com',
-  type = 'website',
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({',
+  title = 'Zion Tech Group - Leading Technology Solutions Provider','
+  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.','
+  keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services','
+  ogImage = 'https://ziontechgroup.com/api/placeholder/1200/630','
+  url = 'https://ziontechgroup.com','
+  type = 'website',';
   siteName = 'Zion Tech Group';
-}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} - Zion Tech Group`;
+}) => {'
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} - Zion Tech Group`
   const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
 
   return (
-    <Head>
+<Head>
       <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name = "description" content="{description}" />"
+      <meta name="keywords" content="{keywords}" />"
+      <meta name="author" content="Zion Tech Group" />"
+      <meta name="robots" content="index, follow" />"
+      <meta name="viewport" content="width="device-width," initial-scale=1" />
       
-      {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={fullUrl} />
-      <meta property="og:type" content={type} />
-      <meta property="og:site_name" content={siteName} />
+      {/* Open Graph */}"
+      <meta property="og:title" content="{fullTitle}" />"
+      <meta property="og:description" content="{description}" />"
+      <meta property="og:image" content="{ogImage}" />"
+      <meta property="og:url" content="{fullUrl}" />"
+      <meta property="og:type" content="{type}" />"
+      <meta property="og:site_name" content="{siteName}" />
       
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
+      {/* Twitter */}"
+      <meta name="twitter: card" content="summary_large_image" />",
+      <meta name="twitter:title" content="{fullTitle}" />"
+      <meta name="twitter:description" content="{description}" />"
+      <meta name="twitter:image" content="{ogImage}" />
       
-      {/* Canonical */}
-      <link rel="canonical" href={fullUrl} />
+      {/* Canonical */}"
+      <link rel="canonical" href="{fullUrl}" />
       
-      {/* Favicon */}
-      <link rel="icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      {/* Favicon */}"
+      <link rel="icon" href="/favicon.ico" />"
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />"
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />"
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />"
       <link rel="manifest" href="/site.webmanifest" />
-    </Head>
+    </Head>;
   );
 };
-
+"'
 export default SEOEnhancer;

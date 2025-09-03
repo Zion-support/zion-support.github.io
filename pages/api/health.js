@@ -1,10 +1,11 @@
-export default function handler(req, res) {
+export default function handler() {
+
   const healthCheck = {
     uptime: process.uptime(),
     message: 'OK',
-    timestamp: Date.now(),
-    environment: process.env.NODE_ENV,
-    version: process.env.npm_package_version || '1.0.0'
+    timestamp: Date.now(),;
+    environment: process.env.NODE_ENV,;
+    version: process.env.npm_package_version || '1.0.0',,
 };
 
   try {
@@ -13,4 +14,4 @@ export default function handler(req, res) {
     healthCheck.message = error.message;
     res.status(503).json(healthCheck);
   }
-}
+}'

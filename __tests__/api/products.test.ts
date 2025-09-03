@@ -1,7 +1,4 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { createMocks } from 'node-mocks-http';
-import productHandler from '@/pages/api/products/index';
-import { PrismaClient } from '@prisma/client';
 
 // Mock Prisma Client
 jest.mock('@prisma/client', () => {

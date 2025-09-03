@@ -1,10 +1,4 @@
-import { ProductListing } from '@/types/listings'; ;'';,"});,"})
-import React from "react";
-import { ProductListing } from '@/types/listings';';
-import { ProductListing } from '@/types/listings';""
-import {ProductListing } from '@/types/listings';"
-import { ProductListing } from &apos;@/types/listings';&apos;'
+import { ProductListing } from '@/types/listings'; ;'';,"});,"})""""""'@/types/listings';&apos,"
 ""
-import { ProductListing } from '@/types/listings
-";
+";"
 ;"

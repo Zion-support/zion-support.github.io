@@ -1,0 +1,29 @@
+{
+  "timestamp": "2025-09-03T04:11:40.054Z",
+  "summary": {
+    "totalIssues": 2,
+    "totalFixes": 1
+  },
+  "issues": [
+    {
+      "type": "headers",
+      "issue": "Missing Content-Security-Policy in security.config.js"
+    },
+    {
+      "type": "headers",
+      "issue": "Missing Content-Security-Policy in next.config.js"
+    }
+  ],
+  "fixes": [
+    "dependency_audit"
+  ],
+  "recommendations": [
+    "Update dependencies regularly",
+    "Use environment variables for sensitive data",
+    "Implement proper security headers",
+    "Regular security audits",
+    "Use HTTPS in production",
+    "Implement rate limiting",
+    "Use secure authentication methods"
+  ]
+}

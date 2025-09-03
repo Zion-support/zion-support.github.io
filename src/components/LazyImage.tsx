@@ -1,26 +1,25 @@
-import React, { useState, useRef, useEffect } from 'react';
-import Image from 'next/image';
-import LoadingSpinner from './LoadingSpinner';
+import React, { useState, useRef, useEffect } from 'react'
 
 interface LazyImageProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  placeholder?: 'blur' | 'empty';
+
+  src: string,,
+alt: string;
+  width?: number'
+  height?: number,
+  className?: string,,
+  priority?: boolean,'
+  placeholder?: 'blur' | 'empty',
   blurDataURL?: string}
 
-const LazyImage: React.FC<LazyImageProps> = ({
+const LazyImage: React.FC<LazyImageProps> = ({,
   src,
   alt,
   width,
-  height,
+  height,'
   className = '',
-  priority = false,
+  priority = false,'
   placeholder = 'empty',
-  blurDataURL}) => {
+  blurDataURL}) => {;
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const imgRef = useRef<HTMLDivElement>(null);
@@ -28,9 +27,9 @@ const LazyImage: React.FC<LazyImageProps> = ({
   useEffect(() => {
     if (priority) return;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
+    const observer = new IntersectionObserver(;
+      ([entry]) => {;
+        if (entry.isIntersecting) {;
           setIsInView(true);
           observer.disconnect();
         }
@@ -46,29 +45,29 @@ const LazyImage: React.FC<LazyImageProps> = ({
   }, [priority]);
 
   return (
-    <div ref={imgRef} className={`relative ${className}`}>
-      {!isLoaded && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
+    <div ref = "{imgRef}" className="{`relative" ${className}`}>
+      {!isLoaded && ("
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-100">"
           <LoadingSpinner size="sm" text="" />
         </div>
       )}
       
-      {isInView && (
-        <Image src={src}
-          alt={alt}
-          width={width}
-          height={height}
-          className={`transition-opacity duration-300 ${
-            isLoaded ? 'opacity-100' : 'opacity-0';
-}`}
-          onLoad={() => setIsLoaded(true)}
-          priority={priority}
-          placeholder={placeholder}
-          blurDataURL={blurDataURL}
+      {isInView && ("
+        <Image src="{src}""
+          alt="{alt}""
+          width="{width}""
+          height="{height}"";
+          className="{`transition-opacity" duration-300 ${>
+            isLoaded ? 'opacity-100' : 'opacity-0>
+}`}"
+          onLoad = "{()" => setIsLoaded(true)}"
+          priority="{priority}""
+          placeholder="{placeholder}""
+          blurDataURL="{blurDataURL}"
         />
       )}
-    </div>
+    </div>;
   );
 };
-
+"
 export default LazyImage;"

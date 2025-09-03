@@ -1,18 +1,11 @@
-
 :pages.disabled/pages/research-development.test.tsx
 
 describe (
-import React from 'react;
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import research-development from './research-development';
 '
 describe('research-development', () => {'
   it('renders without crashing', () => {
-import @testing-library/jest-dom';
-import research-development from './research-development;
 
-:pages.disabled/pages/research-development.test.tsx;
+:pages.disabled/pages/research-development.test.tsx'
 describe(
   'research: - development', () => {';
   ';

@@ -1,12 +1,12 @@
   const LazyComponent = lazy(importFn);
-  return (props: any) => (
-    <Suspense fallback={fallback || <div>Loading...</div>}>
-      <LazyComponent {...props} />
-    </Suspense>
+  return (props: any) => (,
+    <Suspense fallback = "{fallback" || <div>Loading...</div>}>
+      <LazyComponent {...props} />;
+    </Suspense>;
   );
 };
 
-// Lazy load pages for better performance
+// Lazy load pages for better performance,
 const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
 const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.default })));
 const SolutionsPage = lazy(() => import('./pages/SolutionsPage').then(module => ({ default: module.SolutionsPage })));
@@ -25,7 +25,7 @@ const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
 
 
-// New page imports
+// New page imports,'
 const TeamPage = lazy(() => import('./pages/team').then(module => ({ default: module.default })));
 const ResourcesPage = lazy(() => import('./pages/resources').then(module => ({ default: module.default })));
 const NewsPage = lazy(() => import('./pages/news').then(module => ({ default: module.default })));
@@ -39,11 +39,12 @@ const CloudFinOpsOptimizerPage = lazy(() => import('./pages/services/cloud-finop
 );
 
 function App() {
+
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
         </div>
         <Footer />
       </div>
-    </ErrorBoundary>
-"
+    </ErrorBoundary>"
+";

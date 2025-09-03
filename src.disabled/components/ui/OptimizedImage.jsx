@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from;
-  'react'; import { cn } from;';
-  '@/lib/utils'; import { motion, AnimatePresence } from;';
+  'react';';
+  '@/lib/utils';';
   'framer-motion'; export: function OptimizedImage({ src, alt, width, height, className, placeholder =;';
   '/images/placeholder.svg', fallback =;';
   '/images/fallback.svg', priority: = false, sizes =;';

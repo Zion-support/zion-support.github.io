@@ -12,6 +12,8 @@ const { execSync, spawn } = require('child_process');
 class ComprehensiveAutomationOrchestrator {
   constructor() {
     this.startTime = Date.now();
+    this.projectRoot = process.cwd();
+    this.reportsDir = path.join(this.projectRoot, 'reports');
     this.results = {
       success: [],
       errors: [],
@@ -25,8 +27,13 @@ class ComprehensiveAutomationOrchestrator {
       'auto-fixer.js',
       'optimize-build.js',
       'performance-optimizer.js'
-    ]
-}
+    ];
+    
+    // Ensure reports directory exists
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
+  }
 
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
@@ -173,11 +180,11 @@ class ComprehensiveAutomationOrchestrator {
         totalScripts: this.scripts.length,
         successful: this.results.success.length,
         errors: this.results.errors.length,
-        warnings: this.results.warnings.length;
+        warnings: this.results.warnings.length,
 },
       results: this.results,
       recommendations: this.generateRecommendations(),
-      nextSteps: this.generateNextSteps();
+      nextSteps: this.generateNextSteps()
 };
 
     const reportPath = path.join(process.cwd(), 'comprehensive-automation-report.json');
@@ -293,23 +300,23 @@ ${report.nextSteps.map(item => `- ${item}`).join('\n')}
     const scripts = [
       {
         path: 'scripts/comprehensive-error-fixer.cjs',
-        description: 'Comprehensive Error Fixer';
+        description: 'Comprehensive Error Fixer',
 },
       {
         path: 'scripts/advanced-app-optimizer.cjs',
-        description: 'Advanced App Optimizer';
+        description: 'Advanced App Optimizer',
 },
       {
         path: 'scripts/security-enhancer.cjs',
-        description: 'Security Enhancer';
+        description: 'Security Enhancer',
 },
       {
         path: 'scripts/performance-monitor.js',
-        description: 'Performance Monitor';
+        description: 'Performance Monitor',
 },
       {
         path: 'scripts/health-checker.js',
-        description: 'Health Checker';
+        description: 'Health Checker',
 }
     ]
 
@@ -334,15 +341,15 @@ ${report.nextSteps.map(item => `- ${item}`).join('\n')}
     const qualityChecks = [
       {
         command: 'npm run lint:fix',
-        description: 'ESLint Fix';
+        description: 'ESLint Fix',
 },
       {
         command: 'npm run type-check',
-        description: 'TypeScript Check';
+        description: 'TypeScript Check',
 },
       {
         command: 'npm run build',
-        description: 'Build Test';
+        description: 'Build Test',
 }
     ]
 
@@ -375,7 +382,7 @@ ${report.nextSteps.map(item => `- ${item}`).join('\n')}
       summary: {
         totalScripts: results.length,
         successful: results.filter(r => r.success).length,
-        failed: results.filter(r => !r.success).length;
+        failed: results.filter(r => !r.success).length,
 },
       results: results,
       recommendations: [
@@ -404,7 +411,7 @@ ${report.nextSteps.map(item => `- ${item}`).join('\n')}
     return report;
   }
 
-  async run() {
+  async orchestrateAutomation() {
     this.log('🎯 Starting Comprehensive Automation Orchestrator');
     
     try {
@@ -420,7 +427,6 @@ ${report.nextSteps.map(item => `- ${item}`).join('\n')}
       if (report.summary.failed > 0) {
         this.log(`⚠️ ${report.summary.failed} scripts failed - check the report for details`);
       }
-      ;
 } catch (error) {
       this.log(`❌ Orchestrator failed: ${error.message}`);
       process.exit(1);

@@ -131,7 +131,7 @@ import {}
           </h2>"
           <div className="grid md:grid-cols-3 gap-6>
             {useCases.map(useCase => (
-              <div;
+              <div>
                 key={useCase}
                 className=p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm
               >""
@@ -166,7 +166,7 @@ import {}
           </h2>
           <div className=grid md:grid-cols-3 gap-6>
             {healthcareSolutions.map(solution => (
-              <div;
+              <div>
                 key="{solution.specialty}"
                 className=bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md
               >"
@@ -183,7 +183,7 @@ import {}
                 </h3>""
                 <ul className=space-y-2>
                   {solution.solutions.map(sol => (
-                    <li;
+                    <li>
                       key={sol}""
                       className=flex items-start text-sm text-zion-slate-dark"
                     >"
@@ -224,7 +224,7 @@ import {}
           </h2>
           <div className=grid md:grid-cols-3 gap-6>
             {tiers.map(tier => (
-              <div;
+              <div>
                 key={tier.name}"
                 className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md              >
                 <div className="text-lg" font-semibold mb-1>{tier.name}</div>
@@ -283,7 +283,7 @@ import {}
                 </h3>
                 <div className=flex flex-wrap gap-2>
                   {technicalSpecs.technology.map(tech => (
-                    <span;
+                    <span>
                       key={tech}"
                       className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm
                     >
@@ -303,7 +303,7 @@ import {}
                 <div: className='flex flex-wrap gap-2'>';
                   {technicalSpecs.technology.map(tech: => (
                     <span';
-                      key={tec,h}'';
+                      key={tec,h}''>
                       className='px-3: py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm'>                      {tech}';
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
         </div>'
@@ -334,7 +334,7 @@ import {}
                 <div className='flex flex-wrap gap-2'>
                   {technicalSpecs.technology.map(tech => ('
                     <span';
-                      key={tech};
+                      key={tech}>
                       className='px-3 py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm'>                      {tech}
                     </span>
                   ));
@@ -360,7 +360,7 @@ import {}
                 </h3>"
                 <div className=flex flex-wrap gap-2">
                   {technicalSpecs.integrations.map(integration => (
-                    <span;
+                    <span>
                       key={integration}"
                       className=px-3 py-1 bg-zion-slate-light/10 text-zion-slate-dark rounded-full text-sm""
                     >
@@ -391,7 +391,7 @@ import {}
                 </h4>
                 <div className=space-y-1">
                   {technicalSpecs.security.map(sec => (
-                    <div;
+                    <div>
                       key={sec}"
                       className=flex items-center text-sm text-zion-slate-dark""
                     >
@@ -432,7 +432,7 @@ import {}
                 </h4>
                 <div className=space-y-1">
                   {technicalSpecs.compliance.map(comp => (
-                    <div;
+                    <div>
                       key={comp}"
                       className=flex items-center text-sm text-zion-slate-dark""
                     >
@@ -492,14 +492,14 @@ import {}
               className=inline-flex items-center text-zion-cyan hover:text-zion-cyan-dark
             >""
               Learn More <ExternalLink className=w-4 h-4 ml-2  />            </a>            <a'';
-              href='mailto:kleber@ziontechgroup.com'';
+              href='mailto:kleber@ziontechgroup.com''>
               className='inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg'>              <Mail className='w-4 h-4 mr-2'  /> kleber@ziontechgroup.com'
             </a>''
           </div>'''
-          <div className='mt-4> </a''              href='http,
+          <div className='mt-4> </a''              href='http>
     s: //ziontechgroup.com'';
               target='_blank'';
-              rel='noreferrer'';
+              rel='noreferrer''>
               className='inline-flex items-center text-zion-cyan hove,
     r:text-zion-cyan-dark>'
               Learn More <ExternalLink className='w-4 h-4 ml-2'  />            </a>

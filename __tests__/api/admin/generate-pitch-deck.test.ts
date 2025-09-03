@@ -1,7 +1,4 @@
 // Adjust path as needed
-import { createMocks } from 'node-mocks-http';
-import { NextApiRequest, NextApiResponse } from 'next';
-import handler from '@/pages/api/admin/generate-pitch-deck';
 
 // Mock Supabase client
 jest.mock('@/integrations/supabase/client', () => ({

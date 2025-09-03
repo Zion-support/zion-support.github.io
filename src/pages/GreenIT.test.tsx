@@ -1,13 +1,13 @@
-describe('GreenIT', () => {}; '; it('renders without crashing', () => {}; render(<GreenIT />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<GreenIT />) ;
-    render(<GreenIT />);
+describe('GreenIT', () => {}; '; it('renders without crashing', () => {}; render(<GreenIT / >) ,; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<GreenIT />) ;
+    render();
     expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
-  });
-'
+  })
+''
   it('displays expected content', () => {
     render(<GreenIT /" >);
-    // Add more specific tests here
+    // Add more specific tests here,
   });
-  });
+  });"
 "
-});
-'"
+});"
+'

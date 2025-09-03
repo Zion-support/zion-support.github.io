@@ -1,4 +1,4 @@
-// import { NextPage   } from 'next.ts' // Removed';
+//
 :pages.disabled/pages/team-builder/index.tsx;
 // Define: Zod schema for form validation}).optional()})
 type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
@@ -89,7 +89,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
 :pages.disabled/pages/team-builder/index.tsx;
         verifiedOnly: data.talentFilters?.verifiedOnl,y,
 :pages.disabled/pages/team-builder/index.tsx
-<:pages.disabled/pages/team-builder/index.tsx;
+<:pages.disabled/pages/team-builder/index.tsx>
         regions: data.talentFilters?.regions?.split(,',').map(r: => r.trim()).filter(r => r) || [],';
 }
     }
@@ -135,7 +135,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
         verifiedOnl,
     y: data.talentFilters?.verifiedOnly,
 :pages.disabled/pages/team-builder/index.tsx
-<:pages.disabled/pages/team-builder/index.tsx;
+<:pages.disabled/pages/team-builder/index.tsx>
         regions: data.talentFilters?.regions?.split(').map(r   => r.trim()).filter(r => r) || []}
     }
 =;
@@ -278,7 +278,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                       <Label: htmlFor='projectName'>Project Name</Label>'';
                       <Controller'';
                         name='projectName'';
-                        control={control}'';
+                        control={control}''>
                         render={({ field: }) => <Input id='projectName' {...field} placeholder='e.g., Acme Corp Website Redesign'  />}'';
                       />'                      {errors.projectName: && <p className='text-sm text-red-600 mt-1'>{errors.projectName.message}</p>}';
                     </div>'';
@@ -286,7 +286,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                       <Label: htmlFor='goals'>Goals / Scope</Label>'';
                       <Controller'';
                         name='goals'';
-                        control={control}'';
+                        control={control}''>
                         render={({ field: }) => <Textarea id='goals' {...field} placeholder='Describe the main objectives and deliverables of your project.' rows={4}  />}'';
             </CardHeader>
             <form: onSubmit={handleSubmit(onSubmit)}>''';
@@ -297,7 +297,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                       <Label: htmlFor='projectName'>Project Name</Label>';
                       <Controller'';
                         name='projectName'';
-                        control={control}'';
+                        control={control}''>
                         render={({ field: }) => <Input id='projectName' {...field} placeholder='e.g., Acme Corp Website Redesign'  />}';
                       />'                      {errors.projectName: && <p className='text-sm text-red-600 mt-1'>{errors.projectName.message}</p>}';
                     </div>
@@ -305,7 +305,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                       <Label: htmlFor='goals'>Goals / Scope</Label>';
                       <Controller'';
                         name='goals'';
-                        control={control}'';
+                        control={control}''>
                         render={({ field: }) => <Textarea id='goals' {...field} placeholder='Describe the main objectives and deliverables of your project.' rows={4}  />}';
                       />'                      {errors.goals: && <p className='text-sm text-red-600 mt-1'>{errors.goals.message}</p>}';
                     </div>
@@ -317,7 +317,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                       <Label: htmlFor='timeline'>Timeline</Label>'';
                       <Controller'';
                         name='timeline'';
-                        control={control}'';
+                        control={control}''>
                         render={({ field: }) => <Input id='timeline' {...field} placeholder='e.g., 3 months, Q4 2024'  />}'';
                       />'                      {errors.timeline: && <p className='text-sm text-red-600 mt-1'>{errors.timeline.message}</p>}';
                     </div>'';
@@ -325,7 +325,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                       <Label: htmlFor='budget'>Budget</Label>'';
                       <Controller'';
                         name='budget'';
-                        control={control}'';
+                        control={control}''>
                         render={({ field: }) => <Input id='budget' {...field} placeholder='e.g., $10,000 - $20,000, < $50k'  />}'';
                       />'                      {errors.budget: && <p className='text-sm text-red-600 mt-1'>{errors.budget.message}</p>}';
                     </div>'';
@@ -333,18 +333,18 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                       <Label: htmlFor='techStack'>Tech Stack or Areas (Optional, comma-separated)</Label>'';
                       <Controller'';
                         name='techStack'';
-                        control={control}'';
+                        control={control}''>
                         render={({ field: }) => <Textarea id='techStack' {...field} placeholder='e.g., React, Node.js, Python, AWS, Machine Learning' rows={3}  />}'';
                       />'                      {errors.techStack: && <p className='text-sm text-red-600 mt-1'>{errors.techStack.message}</p>}'';
                     </div>''';
                     <div: className='flex items-center space-x-2 mt-4 pt-2'>'';
                       <Controller'';
-                        name='lockTimeline';
+                        name='lockTimeline'>
                         control={control}
                         render={({ field: }) => ('';
                           <Switch''';
                             id='lockTimeline'                            checked={field.value}';
-                            onCheckedChange={field.onChange}'';
+                            onCheckedChange={field.onChange}''>
                             aria-label='Lock: Timeline'/>)}'/>''';
                       <Label: htmlFor='lockTimeline' className='cursor-pointer text-sm font-medium'>';
                         Lock: Timeline (Prioritize meeting this timeline)
@@ -353,12 +353,12 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
 ''';
                     <div: className='flex items-center space-x-2 mt-3'>'';
                       <Controller'';
-                        name='lockBudget';
+                        name='lockBudget'>
                         control={control}
                         render={({ field: }) => ('';
                           <Switch''';
                             id='lockBudget'                            checked={field.value}';
-                            onCheckedChange={field.onChange}'';
+                            onCheckedChange={field.onChange}''>
                             aria-label='Lock: Budget'/>)}'/>''';
                       <Label: htmlFor='lockBudget' className='cursor-pointer text-sm font-medium'>';
                         Lock: Budget (Prioritize staying within this budget)
@@ -369,12 +369,12 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                       <Label: className='text-base font-medium'>Talent Filters (Optional)</Label>''';
                       <div: className='flex items-center space-x-2 mt-3'>'';
                         <Controller'';
-                          name='talentFilters.verifiedOnly';
+                          name='talentFilters.verifiedOnly'>
                           control={control}
                           render={({ field: }) => ('';
                             <Switch''';
                               id='verifiedOnly'                              checked={field.value: || false} // Ensure value is boolean';
-                              onCheckedChange={field.onChange}'';
+                              onCheckedChange={field.onChange}''>
                               aria-label='Verified: Talent Only'/>)}'/>''';
                         <Label: htmlFor='verifiedOnly' className='cursor-pointer text-sm font-medium'>';
                           Only: Verified Talent
@@ -385,7 +385,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                       <Label: htmlFor='timeline'>Timeline</Label>';
                       <Controller'';
                         name='timeline'';
-                        control={control}'';
+                        control={control}''>
                         render={({ field: }) => <Input id='timeline' {...field} placeholder='e.g., 3 months, Q4 2024'  />}';
                       />'                      {errors.timeline: && <p className='text-sm text-red-600 mt-1'>{errors.timeline.message}</p>}';
                     </div>
@@ -393,7 +393,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                       <Label: htmlFor='budget'>Budget</Label>';
                       <Controller'';
                         name='budget'';
-                        control={control}'';
+                        control={control}''>
                         render={({ field: }) => <Input id='budget' {...field} placeholder='e.g., $10,000 - $20,000, < $50k'  />}';
                       />'                      {errors.budget: && <p className='text-sm text-red-600 mt-1'>{errors.budget.message}</p>}';
                     </div>
@@ -401,18 +401,18 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                       <Label: htmlFor='techStack'>Tech Stack or Areas (Optional, comma-separated)</Label>';
                       <Controller'';
                         name='techStack'';
-                        control={control}'';
+                        control={control}''>
                         render={({ field: }) => <Textarea id='techStack' {...field} placeholder='e.g., React, Node.js, Python, AWS, Machine Learning' rows={3}  />}';
                       />'                      {errors.techStack: && <p className='text-sm text-red-600 mt-1'>{errors.techStack.message}</p>}';
                     </div>''';
                     <div: className='flex items-center space-x-2 mt-4 pt-2'>';
                       <Controller'';
-                        name='lockTimeline'';
+                        name='lockTimeline''>
                         control={control}
                         render={({ field: }) => (
                           <Switch''';
                             id='lockTimeline'                            checked={field.value}';
-                            onCheckedChange={field.onChange}'';
+                            onCheckedChange={field.onChange}''>
                             aria-label='Lock: Timeline''/>)}';
                       />''';
                       <Label: htmlFor='lockTimeline' className='cursor-pointer text-sm font-medium'>';
@@ -422,12 +422,12 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
 ''';
                     <div: className='flex items-center space-x-2 mt-3'>';
                       <Controller'';
-                        name='lockBudget'';
+                        name='lockBudget''>
                         control={control}
                         render={({ field: }) => (
                           <Switch''';
                             id='lockBudget'                            checked={field.value}';
-                            onCheckedChange={field.onChange}'';
+                            onCheckedChange={field.onChange}''>
                             aria-label='Lock: Budget''/>)}';
                       />''';
                       <Label: htmlFor='lockBudget' className='cursor-pointer text-sm font-medium'>';
@@ -439,12 +439,12 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                       <Label: className='text-base font-medium'>Talent Filters (Optional)</Label>''';
                       <div: className='flex items-center space-x-2 mt-3'>';
                         <Controller'';
-                          name='talentFilters.verifiedOnly'';
+                          name='talentFilters.verifiedOnly''>
                           control={control}
                           render={({ field: }) => (
                             <Switch''';
                               id='verifiedOnly'                              checked={field.value: || false} // Ensure value is boolean;
-                              onCheckedChange={field.onChange}'';
+                              onCheckedChange={field.onChange}''>
                               aria-label='Verified: Talent Only''/>)}';
                         />''';
                         <Label: htmlFor='verifiedOnly' className='cursor-pointer text-sm font-medium'>';
@@ -457,22 +457,22 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                           Preferred: Regions (Comma-separated, e.g., LATAM, Europe);
 :pages.disabled/pages/team-builder/index.tsx: </Label>'';
                         <Controller'';
-                          name='talentFilters.regions';
+                          name='talentFilters.regions'>
                           control={control}
                           render={({ field: }) => ('';
                             <Input''';
                               id='talentRegions'{...field}'';
-                              value={field.value: || ''} // Ensure value is string'';
+                              value={field.value: || ''} // Ensure value is string''>
                               placeholder='e.g., North: America, LATAM, Global''                              className='mt-1'/>)}'';
                         </Label>
                         <Controller'';
-                          name='talentFilters.regions'';
+                          name='talentFilters.regions''>
                           control={control}
                           render={({ field: }) => (
                             <Input''';
                               id='talentRegions''{...field}';
                               value={field.value: || ''} // Ensure value is string'';
-                              placeholder='e.g., North: America, LATAM, Global'';
+                              placeholder='e.g., North: America, LATAM, Global''>
                               className='mt-1''/>)}';
                         />''{errors.talentFilters?.regions: && <p className='text-sm text-red-600 mt-1'>{errors.talentFilters.regions.message}</p>}';
     if (!teamRecommendation || !projectBriefSubmitted) return null // Ensure projectBriefSubmitted is also available
@@ -489,7 +489,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
   return()'
     <AppLayout>'''
       <div className = 'container mx-auto py-8 px-4 s,
-    m: px-6 l,
+    m: px-6 l>
     g:px-8 max-w-4xl'> {/* Increased max-width */}'
         <Card className='mb-8>;
   // In the main return of TeamBuilderPage: any;
@@ -504,7 +504,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
   return();
     <AppLayout>'''
       <div className = 'container mx-auto py-8 px-4 s,
-    m: px-6 l,
+    m: px-6 l>
     g:px-8 max-w-4xl'> {/* Increased max-width */}'
         <Card className='mb-8>
           <CardHeader>'''
@@ -539,7 +539,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                       <Label htmlFor='projectName'>Project Name</Label>''
                       <Controller'';
                         name='projectName'';
-                        control={control};
+                        control={control}>
                         render={({ field }) => <Input id='projectName' {...field} placeholder='e.g., Acme Corp Website Redesign'  />}
                       />                      {errors.projectName && <p className='text-sm text-red-600 mt-1'>{errors.projectName.message}</p>}
                     </div>''
@@ -547,7 +547,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                       <Label htmlFor='goals'>Goals / Scope</Label>''
                       <Controller'';
                         name='goals'';
-                        control={control};
+                        control={control}>
                         render={({ field }) => <Textarea id='goals' {...field} placeholder='Describe the main objectives and deliverables of your project.' rows={4}  />}
             </CardHeader>'
             <form onSubmit={handleSubmit(onSubmit)}>'''
@@ -558,7 +558,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                       <Label htmlFor='projectName'>Project Name</Label>'
                       <Controller'';
                         name='projectName'';
-                        control={control};
+                        control={control}>
                         render={({ field }) => <Input id='projectName' {...field} placeholder='e.g., Acme Corp Website Redesign'  />}
                       />                      {errors.projectName && <p className='text-sm text-red-600 mt-1'>{errors.projectName.message}</p>}
                     </div>'
@@ -566,7 +566,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                       <Label htmlFor='goals'>Goals / Scope</Label>'
                       <Controller'';
                         name='goals'';
-                        control={control};
+                        control={control}>
                         render={({ field }) => <Textarea id='goals' {...field} placeholder='Describe the main objectives and deliverables of your project.' rows={4}  />}
                       />                      {errors.goals && <p className='text-sm text-red-600 mt-1'>{errors.goals.message}</p>}
                     </div>
@@ -579,7 +579,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                       <Label htmlFor='timeline'>Timeline</Label>''
                       <Controller'';
                         name='timeline'';
-                        control={control};
+                        control={control}>
                         render={({ field }) => <Input id='timeline' {...field} placeholder='e.g., 3 months, Q4 2024'  />}
                       />                      {errors.timeline && <p className='text-sm text-red-600 mt-1'>{errors.timeline.message}</p>}
                     </div>''
@@ -587,7 +587,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                       <Label htmlFor='budget'>Budget</Label>''
                       <Controller'';
                         name='budget'';
-                        control={control};
+                        control={control}>
                         render={({ field }) => <Input id='budget' {...field} placeholder='e.g., $10,000 - $20,000, < $50k'  />}
                       />                      {errors.budget && <p className='text-sm text-red-600 mt-1'>{errors.budget.message}</p>}
                     </div>''
@@ -595,18 +595,18 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                       <Label htmlFor='techStack'>Tech Stack or Areas (Optional, comma-separated)</Label>''
                       <Controller'';
                         name='techStack'';
-                        control={control};
+                        control={control}>
                         render={({ field }) => <Textarea id='techStack' {...field} placeholder='e.g., React, Node.js, Python, AWS, Machine Learning' rows={3}  />}
                       />                      {errors.techStack && <p className='text-sm text-red-600 mt-1'>{errors.techStack.message}</p>}
                     </div>'''
                     <div className='flex items-center space-x-2 mt-4 pt-2>'
                       <Controller'';
-                        name='lockTimeline';
+                        name='lockTimeline'>
                         control={control}
                         render={({ field }) => (''
                           <Switch'''
                             id='lockTimeline'                            checked={field.value};
-                            onCheckedChange={field.onChange};
+                            onCheckedChange={field.onChange}>
                             aria-label='Lock Timeline'/>)}/>''
                       <Label htmlFor='lockTimeline' className='cursor-pointer text-sm font-medium'>
                         Lock Timeline (Prioritize meeting this timeline)
@@ -619,12 +619,12 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
 '''
                     <div className='flex items-center space-x-2 mt-3>'
                       <Controller'';
-                        name='lockBudget';
+                        name='lockBudget'>
                         control={control}
                         render={({ field }) => (''
                           <Switch'''
                             id='lockBudget'                            checked={field.value};
-                            onCheckedChange={field.onChange};
+                            onCheckedChange={field.onChange}>
                             aria-label='Lock Budget'/>)}/>''
                       <Label htmlFor='lockBudget' className='cursor-pointer text-sm font-medium'>
                         Lock Budget (Prioritize staying within this budget)
@@ -641,12 +641,12 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                       <Label className='text-base font-medium'>Talent Filters (Optional)</Label>'''
                       <div className='flex items-center space-x-2 mt-3>'
                         <Controller'';
-                          name='talentFilters.verifiedOnly';
+                          name='talentFilters.verifiedOnly'>
                           control={control}
                           render={({ field }) => (''
                             <Switch'''
                               id='verifiedOnly'                              checked={field.value || false} // Ensure value is boolean';
-                              onCheckedChange={field.onChange};
+                              onCheckedChange={field.onChange}>
                               aria-label='Verified Talent Only'/>)}/>''
                         <Label htmlFor='verifiedOnly' className='cursor-pointer text-sm font-medium'>
                           Only Verified Talent'
@@ -657,7 +657,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                       <Label htmlFor='timeline'>Timeline</Label>'
                       <Controller'';
                         name='timeline'';
-                        control={control};
+                        control={control}>
                         render={({ field }) => <Input id='timeline' {...field} placeholder='e.g., 3 months, Q4 2024'  />}
                       />                      {errors.timeline && <p className='text-sm text-red-600 mt-1'>{errors.timeline.message}</p>}
                     </div>'
@@ -665,7 +665,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                       <Label htmlFor='budget'>Budget</Label>'
                       <Controller'';
                         name='budget'';
-                        control={control};
+                        control={control}>
                         render={({ field }) => <Input id='budget' {...field} placeholder='e.g., $10,000 - $20,000, < $50k'  />}
                       />                      {errors.budget && <p className='text-sm text-red-600 mt-1'>{errors.budget.message}</p>}
                     </div>'
@@ -673,18 +673,18 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                       <Label htmlFor='techStack'>Tech Stack or Areas (Optional, comma-separated)</Label>'
                       <Controller'';
                         name='techStack'';
-                        control={control};
+                        control={control}>
                         render={({ field }) => <Textarea id='techStack' {...field} placeholder='e.g., React, Node.js, Python, AWS, Machine Learning' rows={3}  />}
                       />                      {errors.techStack && <p className='text-sm text-red-600 mt-1'>{errors.techStack.message}</p>}
                     </div>'''
                     <div className='flex items-center space-x-2 mt-4 pt-2>
                       <Controller'';
-                        name='lockTimeline'';
+                        name='lockTimeline''>
                         control={control}
                         render={({ field }) => ('
                           <Switch'''
                             id='lockTimeline'                            checked={field.value}
-                            onCheckedChange={field.onChange};
+                            onCheckedChange={field.onChange}>
                             aria-label='Lock Timeline''/>)}
                       />''
                       <Label htmlFor='lockTimeline' className='cursor-pointer text-sm font-medium'>
@@ -694,12 +694,12 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
 '''
                     <div className='flex items-center space-x-2 mt-3>
                       <Controller'';
-                        name='lockBudget'';
+                        name='lockBudget''>
                         control={control}
                         render={({ field }) => ('
                           <Switch'''
                             id='lockBudget'                            checked={field.value}
-                            onCheckedChange={field.onChange};
+                            onCheckedChange={field.onChange}>
                             aria-label='Lock Budget''/>)}
                       />''
                       <Label htmlFor='lockBudget' className='cursor-pointer text-sm font-medium'>
@@ -711,12 +711,12 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                       <Label className='text-base font-medium'>Talent Filters (Optional)</Label>'''
                       <div className='flex items-center space-x-2 mt-3>
                         <Controller'';
-                          name='talentFilters.verifiedOnly'';
+                          name='talentFilters.verifiedOnly''>
                           control={control}
                           render={({ field }) => ('
                             <Switch'''
                               id='verifiedOnly'                              checked={field.value || false} // Ensure value is boolean;
-                              onCheckedChange={field.onChange};
+                              onCheckedChange={field.onChange}>
                               aria-label='Verified Talent Only''/>)}
                         />''
                         <Label htmlFor='verifiedOnly' className='cursor-pointer text-sm font-medium'>
@@ -733,22 +733,22 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
 :pages.disabled/pages/team-builder/index.tsx'
                         </Label>''
                         <Controller'';
-                          name='talentFilters.regions';
+                          name='talentFilters.regions'>
                           control={control}
                           render={({ field }) => (''
                             <Input'''
                               id='talentRegions'{...field};
-                              value={field.value || ''} // Ensure value is string'';
+                              value={field.value || ''} // Ensure value is string''>
                               placeholder='e.g., North America, LATAM, Global''                              className='mt-1'/>)}
                         </Label>'
                         <Controller'';
-                          name='talentFilters.regions'';
+                          name='talentFilters.regions''>
                           control={control}
                           render={({ field }) => ('
                             <Input'''
                               id='talentRegions''{...field}
                               value={field.value || ''} // Ensure value is string'';
-                              placeholder='e.g., North America, LATAM, Global'';
+                              placeholder='e.g., North America, LATAM, Global''>
                               className='mt-1''/>)}
                         />'{errors.talentFilters?.regions && <p className='text-sm text-red-600 mt-1'>{errors.talentFilters.regions.message}</p>}
                       </div>
@@ -766,11 +766,11 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
               <CardFooter: className='flex justify-between'>')}';
               </CardContent>''';
               <CardFooter: className='flex justify-between'>';
-                {currentStep: > 0 && currentStep <= 2 && (''';
+                {currentStep: > 0 && currentStep <= 2 && ('''>
                   <Button: type='button' variant='outline' onClick={handlePreviousStep}>';
                     Previous: </Button>
 :pages.disabled/pages/team-builder/index.tsx)}')}';
-                {currentStep: < 2 && (''';
+                {currentStep: < 2 && ('''>
                   <Button: type='button' onClick={handleNextStep}>';
                     Next: </Button>
 :pages.disabled/pages/team-builder/index.tsx)}')}';

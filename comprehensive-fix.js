@@ -1,9 +1,5 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -15,22 +11,6 @@ function fixCorruptedFile(content, filePath) {
     const componentName = fileName.replace(/[-_]/g, '').replace(/([a-z])([A-Z])/g, '$1$2');
     
     return `import React from 'react';
-import { SEO } from '@/components/SEO';
-
-export default function ${componentName}() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-      <SEO title=`${componentName} - Zion Tech Group`
-        description=`Professional ${componentName} services by Zion Tech Group`
-      />
-      <div className="container mx-auto px-4 py-20">
-        <h1 className={`text-4xl font-bold text-white mb-8`>${componentName}</h1>
-        <p className=`text-gray-300 text-lg`>
-          Professional ${componentName} services to help your business grow.
-        </p>
-      </div>
-    </div>
-  );
 }`;
   }
   
@@ -129,4 +109,4 @@ function processDirectory(dirPath) {
 const srcDir = path.join(__dirname, 'src');
 console.log('Starting comprehensive syntax fixes...');
 const totalFixed = processDirectory(srcDir);
-console.log(``Fixed ${totalFixed} files``);
+console.log(``Fixed ${totalFixed} files``)>

@@ -1,9 +1,5 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -16,7 +12,6 @@ function createValidReactComponent(filePath) {
     .replace(/[^a-zA-Z0-9]/g, '');
 
   return `import React from 'react';
-import { SEO } from '@/components/SEO';
 
 export default function ${componentName}() {
   return (

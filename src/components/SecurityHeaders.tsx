@@ -1,22 +1,21 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
+const SecurityHeaders = () => {;
+  useEffect(() => {;
+    // Add Content Security Policy,;
+const meta = document.createElement('meta');
+    meta.httpEquiv = 'Content - Security-Policy',
+    meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:, connect-src 'self' https://www.google-analytics.com, frame-ancestors 'none,
+    document.head.appendChild(meta),
 
-const SecurityHeaders = () => {
-  useEffect(() => {
-    // Add Content Security Policy
-    const meta = document.createElement('meta');
-    meta.httpEquiv = 'Content-Security-Policy';
-    meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none;
-    document.head.appendChild(meta);
-
-    // Add additional security headers via meta tags
-    const securityHeaders = [
-  { httpEquiv: 'X-Frame-Options', content: 'DENY' },
-      { httpEquiv: 'X-Content-Type-Options', content: 'nosniff' },
-      { httpEquiv: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
-      { httpEquiv: 'Permissions-Policy', content: 'camera=(), microphone=(), geolocation=(), payment=(), usb=()' }
-    ]
-
-    securityHeaders.forEach(header => {
+    // Add additional security headers via meta tags,
+const securityHeaders = ['
+  { httpEquiv: 'X-Frame-Options', content: 'DENY' },'
+      { httpEquiv: 'X-Content-Type-Options', content: 'nosniff' },'
+      { httpEquiv: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },"
+      { httpEquiv: 'Permissions-Policy', content: 'camera="()," microphone="()," geolocation="()," payment="()," usb=()' }
+    ];
+;
+    securityHeaders.forEach(header => {;
       const metaTag = document.createElement('meta');
       metaTag.httpEquiv = header.httpEquiv;
       metaTag.content = header.content;
@@ -24,13 +23,13 @@ const SecurityHeaders = () => {
     });
 
     return () => {
-      // Cleanup on unmount
-      const securityMetaTags = document.querySelectorAll('meta[http-equiv]');
-      securityMetaTags.forEach(tag => {
-        if (tag.getAttribute('http-equiv')?.startsWith('X-') || 
-            tag.getAttribute('http-equiv') === 'Content-Security-Policy' ||
-            tag.getAttribute('http-equiv') === 'Referrer-Policy' ||
-            tag.getAttribute('http-equiv') === 'Permissions-Policy') {
+      // Cleanup on unmount,;
+const securityMetaTags = document.querySelectorAll('meta[http-equiv]');
+      securityMetaTags.forEach(tag = > {'
+        if (tag.getAttribute('http-equiv')?.startsWith('X-') || '
+            tag.getAttribute('http-equiv') === 'Content-Security-Policy' ||'
+            tag.getAttribute('http-equiv') === 'Referrer-Policy' ||'
+            tag.getAttribute('http-equiv') === 'Permissions-Policy') {;
           tag.remove();
         }
       });
@@ -38,5 +37,5 @@ const SecurityHeaders = () => {
   }, []);
 
   return null};
-
+"
 export default SecurityHeaders;"

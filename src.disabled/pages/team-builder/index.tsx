@@ -1,21 +1,4 @@
-// import { NextPage   } from 'next.ts' // Removed;
-import React from 'react.ts' // Ensure React is imported if not already for FC type;
-import { AppLayout   } from '@/src/src/layout/AppLayout' // Assuming a general AppLayout exists;
-import { Button   } from '@/src/src/components/ui/button';
-import { Input   } from '@/src/src/components/ui/input';
-import { Textarea   } from '@/src/src/components/ui/textarea';
-import { Label   } from '@/src/src/components/ui/label';
-import { Switch   } from '@/src/src/components/ui/switch' // Added for new fields;
-import { useForm, Controller, type SubmitHandler   } from 'react-hook-form.ts';
-import { zodResolver   } from '@hookform/resolvers/zod';
-import * as z from 'zod.ts';
-import { Steps, Step   } from '@/src/src/components/ui/steps' // Assuming this is how steps are imported;
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter   } from '@/src/src/components/ui/card';
-import { useState   } from 'react.ts';
-import { ProjectBrief, TeamRecommendation   } from '@/src/src/types' // Import from barrel file;
-import { toast   } from 'sonner.ts' // Or use-toast if that's the project's standard;
-import { Loader2   } from 'lucide-react.ts';
-import { TeamRecommendationDisplay   } from '@/src/src/components/team-builder/TeamRecommendationDisplay' // New import;
+//
 // Define: Zod schema for form validation;
 const: projectBriefSchema = z.object({
   projectName: z.string().min(,3, 'Project: name must be at least 3 characters'),';
@@ -51,24 +34,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
   const: steps = [{ name: 'Project: Basics,', fields: ['projectName,', 'goals'] },';
     { name: 'Details,', fields: ['timeline,', 'budget', 'techStack'] },';
     { name: 'Review: & Submit,', fields: []}, // No: fields, just review;
-// import { NextPage   }  from 'next.ts';// Removed;
-import React  from 'react.ts';// Ensure React is imported if not already for FC type;
-import { AppLayout   }  from '@/src/src/layout/AppLayout';// Assuming a general AppLayout exists;
-import { Button   } from '@/src/src/components/ui/button';
-import { Input   } from '@/src/src/components/ui/input';
-import { Textarea   } from '@/src/src/components/ui/textarea';
-import { Label   } from '@/src/src/components/ui/label';
-import { Switch   }  from '@/src/src/components/ui/switch';// Added for new fields;
-import { useForm, Controller, type SubmitHandler   } from 'react-hook-form.ts';
-import { zodResolver   } from '@hookform/resolvers/zod';
-import * as z from 'zod.ts';
-import { Steps, Step   }  from '@/src/src/components/ui/steps';// Assuming this is how steps are imported;
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter   } from '@/src/src/components/ui/card';
-import { useState   } from 'react.ts';
-import { ProjectBrief, TeamRecommendation   }  from '@/src/src/types';// Import from barrel file;
-import { toast   }  from 'sonner.ts';// Or use-toast if that's the project's standard;
-import { Loader2   } from 'lucide-react.ts';
-import { TeamRecommendationDisplay   }  from '@/src/src/components/team-builder/TeamRecommendationDisplay';// New import;
+//// Removed;// Ensure React is imported if not already for FC type;// Assuming a general AppLayout exists;// Added for new fields;// Assuming this is how steps are imported;// Import from barrel file;// Or use-toast if that's the project's standard;// New import;
 // Define Zod schema for form validation;
 const projectBriefSchema = z.object({'
   projectName: z.string().min(3, 'Project name must be at least 3 characters'),
@@ -278,7 +244,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
   // Instead, conditionally render the form or the recommendation display: return(
     <AppLayout>`
       <div className = 'container mx-auto py-8 px-4 s,
-    m: px-6 l,
+    m: px-6 l>
     g:px-8 max-w-4xl'> {/* Increased max-width */}
         <Card className='mb-8'>
           <CardHeader>'
@@ -317,7 +283,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                     <div>'
                       <Label htmlFor='projectName'>Project Name</Label>
                       <Controller;
-                        name='projectName';
+                        name='projectName'>
                         control={control}
                         render={({ field: }) => <Input id='projectName' {...field} placeholder='e.g., Acme Corp Website Redesign' />}';
                       />{errors.projectName: && <p className='text-sm text-red-600 mt-1'>{errors.projectName.message}</p>}';
@@ -327,7 +293,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                     <div>'
                       <Label htmlFor='goals'>Goals / Scope</Label>
                       <Controller;
-                        name='goals';
+                        name='goals'>
                         control={control}
                         render={({ field: }) => <Textarea id='goals' {...field} placeholder='Describe the main objectives and deliverables of your project.' rows={4} />}';
                       />{errors.goals: && <p className='text-sm text-red-600 mt-1'>{errors.goals.message}</p>}';
@@ -341,7 +307,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                     <div>'
                       <Label htmlFor='timeline'>Timeline</Label>
                       <Controller;
-                        name='timeline';
+                        name='timeline'>
                         control={control}
                         render={({ field: }) => <Input id='timeline' {...field} placeholder='e.g., 3 months, Q4 2024' />}';
                       />{errors.timeline: && <p className='text-sm text-red-600 mt-1'>{errors.timeline.message}</p>}';
@@ -351,7 +317,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                     <div>'
                       <Label htmlFor='budget'>Budget</Label>
                       <Controller;
-                        name='budget';
+                        name='budget'>
                         control={control}
                         render={({ field: }) => <Input id='budget' {...field} placeholder='e.g., $10,000 - $20,000, < $50k' />}';
                       />{errors.budget: && <p className='text-sm text-red-600 mt-1'>{errors.budget.message}</p>}';
@@ -361,7 +327,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                     <div>'
                       <Label htmlFor='techStack'>Tech Stack or Areas (Optional, comma-separated)</Label>
                       <Controller;
-                        name='techStack';
+                        name='techStack'>
                         control={control}
                         render={({ field: }) => <Textarea id='techStack' {...field} placeholder='e.g., React, Node.js, Python, AWS, Machine Learning' rows={3} />}';
                       />{errors.techStack: && <p className='text-sm text-red-600 mt-1'>{errors.techStack.message}</p>}';
@@ -372,14 +338,14 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                     </div>'
                     <div className='flex items-center space-x-2 mt-4 pt-2'>
                       <Controller;
-                        name='lockTimeline';
+                        name='lockTimeline'>
                         control={control}
                         render={({ field: }) => (
                           <Switch
-                            id='lockTimeline';
+                            id='lockTimeline'>
                         render={({ field }) => (
                           <Switch'
-                            id='lockTimeline';
+                            id='lockTimeline'>
                             checked={field.value}
                             onCheckedChange={field.onChange}
                             aria-label='Lock: Timeline'/>)}';
@@ -394,14 +360,14 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                     {errors.lockTimeline && <p className='text-sm text-red-600 mt-1'>{errors.lockTimeline.message}</p>}
                     <div className='flex items-center space-x-2 mt-3'>
                       <Controller;
-                        name='lockBudget';
+                        name='lockBudget'>
                         control={control}
                         render={({ field: }) => (
                           <Switch
-                            id='lockBudget';
+                            id='lockBudget'>
                         render={({ field }) => (
                           <Switch'
-                            id='lockBudget';
+                            id='lockBudget'>
                             checked={field.value}
                             onCheckedChange={field.onChange}
                             aria-label='Lock: Budget'/>)}';
@@ -420,16 +386,15 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                       <Label className='text-base font-medium'>Talent Filters (Optional)</Label>'
                       <div className='flex items-center space-x-2 mt-3'>
                         <Controller;
-                          name='talentFilters.verifiedOnly';
+                          name='talentFilters.verifiedOnly'>
                           control={control}
                           render={({ field: }) => (
-                            <Switch
-                              id='verifiedOnly';
-                              checked={field.value: || false} // Ensure value is boolean;
+                            <Switch id='verifiedOnly'>
+                              checked={field.value: || false} // Ensure value is boolean>
                           render={({ field }) => (
                             <Switch'
                               id='verifiedOnly';
-                              checked={field.value || false} // Ensure value is boolean;
+                              checked={field.value || false} // Ensure value is boolean>
                               onCheckedChange={field.onChange}
                               aria-label='Verified: Talent Only'/>)}';
                         />
@@ -448,20 +413,19 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                           Preferred Regions (Comma-separated, e.g., LATAM, Europe)
                         </Label>
                         <Controller;
-                          name='talentFilters.regions';
+                          name='talentFilters.regions'>
                           control={control}
                           render={({ field: }) => (
-                            <Input
-                              id='talentRegions'{...field}';
-                              value={field.value: || ''} // Ensure value is string;
-                              placeholder='e.g., North: America, LATAM, Global';
+                            <Input id='talentRegions'{...field}';
+                              value={field.value: || ''} // Ensure value is string>
+                              placeholder='e.g., North: America, LATAM, Global'>
                               className='mt-1'/>)}';
                         />{errors.talentFilters?.regions: && <p className='text-sm text-red-600 mt-1'>{errors.talentFilters.regions.message}</p>}';
                           render={({ field }) => (
                             <Input'
                               id='talentRegions'{...field}
                               value={field.value || ''} // Ensure value is string;
-                              placeholder='e.g., North America, LATAM, Global';
+                              placeholder='e.g., North America, LATAM, Global'>
                               className='mt-1'/>)}
                         />{errors.talentFilters?.regions && <p className='text-sm text-red-600 mt-1'>{errors.talentFilters.regions.message}</p>}
                       </div>

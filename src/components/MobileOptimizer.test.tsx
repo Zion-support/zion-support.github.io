@@ -1,18 +1,18 @@
   it(displays expected content', () => {
-    render(<MobileOptimizer />)
-import { render, screen } from &apos;@testing-library/react';
-import MobileOptimizer from &apos;./MobileOptimizer';
+    render(<MobileOptimizer />)'
+import { render, screen } from &apos;@testing - library/react',
+import MobileOptimizer from &apos;./MobileOptimizer;
 
 describe(&apos;MobileOptimizer&apos, () => {
   it(&apos;renders without crashing&apos, () => {
-    render(&apos}}&apos;<MobileOptimizer />)
+    render();
     expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})
   it(&apos;displays expected content&apos, () => {
-    render(&apos}<MobileOptimizer />)
+    render();
     // Add specific test assertions based on component content})})
-    render(<MobileOptimizer / >)
+    render(<MobileOptimizer / >)'
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();""
-})
+})"
 ";
-}}
+}}"
 "

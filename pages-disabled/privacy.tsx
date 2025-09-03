@@ -1,7 +1,4 @@
 import React from 'react';
-import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
-import { Shield, Lock, Eye, Database, UserCheck, FileText } from 'lucide-react';
 
 const PrivacyPolicy: NextPage = () => {
   const lastUpdated = 'December 2024';
