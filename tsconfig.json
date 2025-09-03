@@ -1,151 +1,147 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "useDefineForClassFields": true,
+<<<<<<< HEAD
+    "target": "ES2020",
     "lib": [
-      "ES2022",
-      "DOM",
-      "DOM.Iterable"
+      "dom",
+      "dom.iterable",
+      "es6"
     ],
+=======
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "es6"],
+>>>>>>> main
     "allowJs": true,
     "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
     "moduleResolution": "node",
-    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
     "jsx": "preserve",
     "incremental": true,
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
-    "removeComments": false,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "exactOptionalPropertyTypes": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noUncheckedIndexedAccess": true,
-    "allowUnusedLabels": false,
-    "allowUnreachableCode": false,
-    "noFallthroughCasesInSwitch": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "@components/*": [
-        "src/components/*"
-      ],
-      "@pages/*": [
-        "src/pages/*"
-      ],
-      "@layout/*": [
-        "src/layout/*"
-      ],
-      "@utils/*": [
-        "src/utils/*"
-      ],
-      "@hooks/*": [
-        "src/hooks/*"
-      ],
-      "@types/*": [
-        "src/types/*"
-      ],
-      "@assets/*": [
-        "src/assets/*"
-      ],
-      "@styles/*": [
-        "src/styles/*"
-      ],
-      "@data/*": [
-        "src/data/*"
-      ],
-      "@services/*": [
-        "src/services/*"
-      ],
-      "@context/*": [
-        "src/context/*"
-      ],
-      "@constants/*": [
-        "src/constants/*"
-      ]
-    },
-    "typeRoots": [
-      "./node_modules/@types",
-      "./types"
-    ],
-    "types": [
-      "node"
-    ],
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictBindCallApply": true,
-    "strictPropertyInitialization": true,
-    "alwaysStrict": true,
-    "tsBuildInfoFile": ".next/tsbuildinfo"
+    "baseUrl": ".",
+    "paths": {
+<<<<<<< HEAD
+      "@/*": ["./*"],
+      "@/components/*": ["./components/*"],
+      "@/pages/*": ["./pages/*"],
+      "@/lib/*": ["./lib/*"],
+      "@/utils/*": ["./utils/*"],
+      "@/types/*": ["./types/*"],
+      "@/styles/*": ["./styles/*"]
+    }
+=======
+      "@/*": [
+<<<<<<< HEAD
+        "./*"
+      ],
+      "@/components/*": [
+        "./components/*"
+      ],
+      "@/utils/*": [
+        "./utils/*"
+      ],
+      "@/hooks/*": [
+        "./hooks/*"
+      ],
+      "@/types/*": [
+        "./types/*"
+      ]
+    }
+=======
+        "./src/*"
+      ],
+      "@/components/*": [
+        "./src/components/*"
+      ],
+      "@/pages/*": [
+        "./src/pages/*"
+      ],
+      "@/utils/*": [
+        "./src/utils/*"
+      ],
+      "@/hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@/types/*": [
+        "./src/types/*"
+      ]
+    },
+    "tsBuildInfoFile": ".next/cache/tsconfig.tsbuildinfo"
+>>>>>>> main
+>>>>>>> main
   },
   "include": [
     "next-env.d.ts",
-    "pages/**/*",
-    "src/**/*",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "types/**/*.d.ts"
   ],
   "exclude": [
+<<<<<<< HEAD
+    "node_modules"
+=======
     "node_modules",
+<<<<<<< HEAD
+    ".next",
+    "out",
+    "dist",
+    "build",
+    "pages.disabled",
+    "src.disabled",
+    "components.disabled",
+    "lib.disabled",
+    "hooks.disabled",
+    "automation",
+    "automation_backup",
+    "broken_files_backup",
+    "contracts",
+    "hardhat",
+    "api-backup",
+    "pages_backup",
+    "pages.__backup",
+    "lib_backup",
+    "backup-pages",
+    "api.disabled",
+    "src.disabled",
+    "components.disabled",
+    "lib.disabled",
+    "hooks.disabled"
+=======
+<<<<<<< HEAD
+    "api-backup/**/*",
+    "automation/backups/**/*",
+    "automation_backup/**/*",
+    "**/*.backup.*",
+    "**/*.disabled.*",
+    "**/*.old.*"
+=======
+    "node_modules",
+    ".next",
+    "out",
+    "dist",
     "api-backup",
     "pages.disabled",
-    "pages.disabled_auto",
     "backup-pages",
-    "pages-backup",
-    "pages.__backup",
-    "temp_working",
-    "supabase/functions",
-    "src/routes",
+    ".backup",
+    ".disabled",
     "automation/backups",
     "automation_backup",
     "broken_files_backup",
     "contracts",
-    "cypress",
-    "temp_working",
-    "supabase/functions",
-    "data_backup",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "**/*.backup",
-    "**/*.disabled",
-    "src/utils/generateRandomListing.ts",
-    "src/utils/linkChecker.ts",
-    "src/utils/mimeTypeFallback.ts",
-    "src/utils/passwordStrength.tsx",
-    "src/utils/resourceMonitor.ts",
-    "src/utils/seoOptimizer.tsx",
-    "src/utils/serviceWorkerRegistration.ts",
-    "src/utils/unitConversion.ts",
-    "src/utils/withErrorLogging.ts",
-    "src/utils/generateRandomBlogPost.ts",
-    "src/pages/solutions/EnterpriseSolutions.tsx",
-    "src/utils/sitemapGenerator.tsx",
-    "src/pages/zion-hire-ai.tsx",
-    "src/pages/webinars.tsx",
-    "src/routes/*Routes.tsx",
-    "src/pages/services/**"
+    "hardhat"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
   ]
 }

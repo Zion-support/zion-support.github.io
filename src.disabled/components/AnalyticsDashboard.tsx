@@ -8,13 +8,25 @@ import React, { useState, useEffect, useCallback } from;
    bounceRate: number;
    avgSessionDuration: number;
    topPages: Array<{ page: string
-   views: number;
-   change: number}> trafficSources: Array<{ source: string percentage: number color: string }> deviceTypes: Array<{ device: string percentage: number color: string }> geographicData: Array<{ country: string visitors: number change: number }> hourlyTraffic: Array<{ hour: number visitors: number }> weeklyTrends: Array<{ week: string visitors: number pageViews: number }> } interface AnalyticsDashboardProps {
+   view,
+    s: number;
+   chang,
+    e: number}> trafficSources: Array<{ source: string percentag,
+    e: number colo,
+    r: string }> deviceTypes: Array<{ device: string percentag,
+    e: number colo,
+    r: string }> geographicData: Array<{ country: string visitor,
+    s: number chang,
+    e: number }> hourlyTraffic: Array<{ hou,
+    r: number visitor,
+    s: number }> weeklyTrends: Array<{ week: string visitor,
+    s: number pageView,
+    s: number }> } interface AnalyticsDashboardProps {
    showPanel?: boolean;
    autoRefresh?: boolean
    refreshInterval?: number} export function AnalyticsDashboard({ showPanel = true, autoRefresh = true, refreshInterval = 30000 }: AnalyticsDashboardProps) { const [isOpen, setIsOpen] = useState(false) const [isExpanded, setIsExpanded] = useState(false) const [timeRange, setTimeRange] = useState<;
   '1h' |;
   '24h' |;
   '7d' |;
-  '30d'>(
-  '24h') const [isLoading, setIsLoading] = useState(false) const [lastUpdate, setLastUpdate] = useState<Date>(new Date())  const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({ pageViews: 0, uniqueVisitors: 0, bounceRate: 0, avgSessionDuration: 0, topPages: [], trafficSources: [], deviceTypes: [], geographicData: [], hourlyTraffic: [], weeklyTrends: [] }) '
+  '30d'>('
+  '24h') const [isLoading, setIsLoading] = useState(false) const [lastUpdate, setLastUpdate] = useState<Date>(new Date())  const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({ pageViews: 0, uniqueVisitors: 0, bounceRate: 0, avgSessionDuration: 0, topPages: [], trafficSources: [], deviceTypes: [], geographicData: [], hourlyTraffic: [], weeklyTrends: [] }) ''

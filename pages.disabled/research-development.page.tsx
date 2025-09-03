@@ -43,7 +43,7 @@ import { FlaskConical,
   Telescope;
   '} from 'lucide-react;
   ';
-const researchAreas = [{
+const researchAreas = [{'
     id: 'ai-ml,
     name: 'Artificial Intelligence & Machine Learning;
   ',
@@ -151,7 +151,7 @@ const researchAreas = [{
     focus = [';
   'Microservices Architecture',Container Orchestration;
   ',Serverless Computing',Multi-cloud Strategies;
-  ',Cloud Security',';DevOps Automation';
+  ',Cloud Security',;DevOps Automation';
     ],
     publications: 20,
     patents: 10,
@@ -288,7 +288,7 @@ const researchProjects = [{
     outcomes = [;
   ';
       'AI ethics framework;
-  ',Responsible AI guidelines',';4 research publications',';Industry standards contribution';
+  ',Responsible AI guidelines',;4 research publications',;Industry standards contribution';
     ],
     icon: Brain,
     color:;
@@ -441,15 +441,15 @@ const patents = [{
     description: 'A security architecture pattern for cloud-native applications.}
 ];
 export { function }
-export default function ResearchDevelopment(...args[]):  {
+export default function ResearchDevelopment(...args[]):  {'
   const [selectedArea, setSelectedArea] = useState('All;
   ');
   const [selectedStatus, setSelectedStatus] = useState('All;
   ');
   const [searchTerm, setSearchTerm] = useState('');
-  const areas = [
+  const areas = ['
   'All', ...researchAreas.map(area => area.name)];
-  const statuses = [
+  const statuses = ['
   'All',Active;
   ',Completed',Planning;
   '];
@@ -458,51 +458,56 @@ export default function ResearchDevelopment(...args[]):  {
                          project.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesArea && matchesStatus && matchesSearch})}
   }
-;
-  return()
-    <div className = 'min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700'>
-      {/* Hero Section */}'
-      <section className='pt-24 pb-16'>'
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+  return();
+    <div className = 'min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700>
+      {/* Hero Section */}
+      <section className='pt-24 pb-16>'
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8'>
           <motion.div;
             initial = {
-  { opacity: 0,
+  { opacit,
+    y: 0,
   y: 20}}
             animate = {
   { opacity: 1,
   y: 0}}
-            transition={{ duration: 0.6 }}';
+            transition={{ duration: 0.6 }};
             className='text-center';
 ';
-            <div className='inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6'>'
+            <div className='inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6>'
               <FlaskConical className='w-5 h-5' />'
-              <span className='font-medium'>Research & Development</span>
-            </div>'
+              <span className='font-medium'>Research & Development</span>'
+            </div>''
             <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
-              Advancing Technology Frontiers
-            </h1>'
-            <p className='text-xl text-zion-slate-light max-w-4xl mx-auto'>
+              Advancing Technology Frontiers'
+            </h1>''
+            <p className='text-xl text-zion-slate-light max-w-4xl mx-auto>
               Explore Zion Tech Group's cutting-edge research initiatives, innovative projects,
               and breakthrough technologies that are shaping the future of technology.
             </p>
           </motion.div>
         </div>
-      </section>
-      {/* Search & Filters */}'
-      <section className='py-8'>'
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'
-          <div className='bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6'>'
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-              {/* Search */}'
-              <div className='md:col-span-1'>'
-                <div className='relative'>'
+      </section>'
+      {/* Search & Filters */}
+      <section className='py-8>'
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8>'
+          <div className='bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6>'
+            <div className='grid grid-cols-1 m,
+    d:grid-cols-3 gap-4>
+              {/* Search */}
+              <div className='md:col-span-1>'
+                <div className='relative>'
                   <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4' />
                   <input';
                     type='text';
                     placeholder='Search research...';
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}';
-                    className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan'
+                    onChange={(e) => setSearchTerm(e.target.value)};
+                    className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus: outline-none focu,
+    s:ring-2 focu,
+    s:ring-zion-cyan'
                   />
                 </div>
               </div>
@@ -510,50 +515,58 @@ export default function ResearchDevelopment(...args[]):  {
               <div>
                 <select;
                   value={selectedArea}
-                  onChange={(e) => setSelectedArea(e.target.value)}';
-                  className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan'
+                  onChange={(e) => setSelectedArea(e.target.value)};
+                  className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focu,
+    s:ring-2 focu,
+    s:ring-zion-cyan'
                 >{areas.map(area  => (
                     <option key={area} value={area}>{area}</option>
-                  ))}
+                  ));
                 </select>
               </div>
               {/* Status Filter */}
               <div>
                 <select;
                   value={selectedStatus}
-                  onChange={(e) => setSelectedStatus(e.target.value)}';
-                  className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan'
+                  onChange={(e) => setSelectedStatus(e.target.value)};
+                  className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focu,
+    s:ring-2 focu,
+    s:ring-zion-cyan'
                 >{statuses.map(status  => (
                     <option key={status} value={status}>{status}</option>
-                  ))}
+                  ));
                 </select>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      {/* Research Areas */}'
-      <section id='research-areas' className='py-16'>'
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+      </section>'
+      {/* Research Areas */}
+      <section id='research-areas' className='py-16>'
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8'>
           <motion.div;
             initial = {
-  { opacity: 0,
+  { opacit,
+    y: 0,
   y: 20}}
             whileInView = {
   { opacity: 1,
   y: 0}}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}';
+            viewport={{ once: true }};
             className='mb-12 text-center';
 ';
-            <h2 className='text-3xl font-bold text-white mb-4'>Research Areas</h2>'
+            <h2 className='text-3xl font-bold text-white mb-4'>Research Areas</h2>''
             <p className='text-zion-slate-light text-lg'>Explore our diverse research domains and cutting-edge initiatives</p>
-          </motion.div>
-'
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            {researchAreas.map(area: unknown, index: unknown {
+          </motion.div>'
+''
+          <div className='grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-3 gap-8'>
+            {researchAreas.map(are,
+    a: unknown, index: unknown {
               const IconComponent = area.icon;
-              return()
+              return();
                 <motion.div;
                   key = {area.id}
                   initial = {
@@ -565,37 +578,38 @@ export default function ResearchDevelopment(...args[]):  {
                   transition = {
   { duration: 0.6,
   delay: index * 0.1}}
-                  viewport={{ once: true }}';
-                  className='bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300';
-                  <div className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-2xl flex items-center justify-center mb-4`}>'
+                  viewport={{ once: true }};
+                  className='bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hove,
+    r:border-zion-cyan/30 transition-all duration-300';
+                  <div className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-2xl flex items-center justify-center mb-4`}>''
                     <IconComponent className='w-8 h-8 text-white' />
-                  </div>'
-                  <h3 className='text-xl font-bold text-white mb-3'>{area.name}</h3>'
-                  <p className='text-zion-slate-light mb-4'>{area.description}</p>
-'
-                  <div className='mb-4'>'
-                    <h4 className='font-semibold text-white mb-2'>Research Focus</h4>'
-                    <div className='space-y-1'>
-                      {area.focus.slice(0, 4).map((focus, idx) => ('
-                        <div key={idx} className='flex items-center gap-2 text-sm text-zion-slate-light'>'
+                  </div>''
+                  <h3 className='text-xl font-bold text-white mb-3'>{area.name}</h3>''
+                  <p className='text-zion-slate-light mb-4'>{area.description}</p>'
+''
+                  <div className='mb-4>'
+                    <h4 className='font-semibold text-white mb-2'>Research Focus</h4>''
+                    <div className='space-y-1>
+                      {area.focus.slice(0, 4).map((focus, idx) => (''
+                        <div key={idx} className='flex items-center gap-2 text-sm text-zion-slate-light>'
                           <CheckCircle className='w-3 h-3 text-green-400' />
                           <span>{focus}</span>
                         </div>
                       ))}
                     </div>
-                  </div>
-'
-                  <div className='grid grid-cols-3 gap-4 text-center'>
-                    <div>'
-                      <div className='text-2xl font-bold text-zion-cyan'>{area.publications}</div>'
+                  </div>'
+''
+                  <div className='grid grid-cols-3 gap-4 text-center>
+                    <div>''
+                      <div className='text-2xl font-bold text-zion-cyan'>{area.publications}</div>''
                       <div className='text-xs text-zion-slate-light'>Publications</div>
-                    </div>
-                    <div>'
-                      <div className='text-2xl font-bold text-zion-cyan'>{area.patents}</div>'
+                    </div>'
+                    <div>''
+                      <div className='text-2xl font-bold text-zion-cyan'>{area.patents}</div>''
                       <div className='text-xs text-zion-slate-light'>Patents</div>
-                    </div>
-                    <div>'
-                      <div className='text-2xl font-bold text-zion-cyan'>{area.projects}</div>'
+                    </div>'
+                    <div>''
+                      <div className='text-2xl font-bold text-zion-cyan'>{area.projects}</div>''
                       <div className='text-xs text-zion-slate-light'>Projects</div>
                     </div>
                   </div>
@@ -603,30 +617,33 @@ export default function ResearchDevelopment(...args[]):  {
               )})}
           </div>
         </div>
-      </section>
-      {/* Active Research Projects */}'
-      <section id = 'active-projects' className='py-16'>'
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+      </section>'
+      {/* Active Research Projects */}
+      <section id = 'active-projects' className='py-16>'
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8'>
           <motion.div;
             initial = {
-  { opacity: 0,
+  { opacit,
+    y: 0,
   y: 20}}
             whileInView = {
   { opacity: 1,
   y: 0}}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}';
+            viewport={{ once: true }};
             className='mb-12 text-center';
 ';
-            <h2 className='text-3xl font-bold text-white mb-4'>Active Research Projects</h2>'
+            <h2 className='text-3xl font-bold text-white mb-4'>Active Research Projects</h2>''
             <p className='text-zion-slate-light text-lg'>Discover our ongoing research initiatives and their impact</p>
-          </motion.div>
-'
+          </motion.div>'
+''
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-            {filteredProjects.map(project: unknown, index: unknown {
+            {filteredProjects.map(projec,
+    t: unknown, index: unknown {
               const IconComponent = getAreaIcon(project.area);
               const areaColor = getAreaColor(project.area);
-              return()
+              return();
                 <motion.div;
                   key = {project.id}
                   initial = {
@@ -638,72 +655,73 @@ export default function ResearchDevelopment(...args[]):  {
                   transition = {
   { duration: 0.6,
   delay: index * 0.1}}
-                  viewport={{ once: true }}';
-                  className='bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300'{/* Header */}';
-                  <div className='flex items-start justify-between mb-4'>'
-                    <div className='flex items-center gap-3'>`
-                      <div className={`w-16 h-16 bg-gradient-to-br ${areaColor} rounded-2xl flex items-center justify-center`}>'
+                  viewport={{ once: true }};
+                  className='bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hove,
+    r:border-zion-cyan/30 transition-all duration-300'{/* Header */};
+                  <div className='flex items-start justify-between mb-4>'
+                    <div className='flex items-center gap-3'>``
+                      <div className={`w-16 h-16 bg-gradient-to-br ${areaColor} rounded-2xl flex items-center justify-center`}>''
                         <IconComponent className='w-8 h-8 text-white' />
-                      </div>
-                      <div>'
-                        <h3 className='text-xl font-bold text-white mb-1'>{project.title}</h3>'
-                        <div className='flex items-center gap-2'>
-                          {getStatusBadge(project.status)}'
+                      </div>'
+                      <div>''
+                        <h3 className='text-xl font-bold text-white mb-1'>{project.title}</h3>''
+                        <div className='flex items-center gap-2>
+                          {getStatusBadge(project.status)}
                           <span className='text-sm text-zion-cyan'>{project.area}</span>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  {/* Description */}'
-                  <p className='text-zion-slate-light mb-4'>{project.description}</p>
-                  {/* Project Details */}'
-                  <div className='grid grid-cols-2 gap-4 mb-4'>'
-                    <div className='text-sm text-zion-slate-light'>'
-                      <span className='flex items-center gap-1'>'
+                  </div>'
+                  {/* Description */}
+                  <p className='text-zion-slate-light mb-4'>{project.description}</p>'
+                  {/* Project Details */}
+                  <div className='grid grid-cols-2 gap-4 mb-4>'
+                    <div className='text-sm text-zion-slate-light>'
+                      <span className='flex items-center gap-1>'
                         <Clock className='w-4 h-4' />
                         Duration: {project.duration}
-                      </span>
-                    </div>'
-                    <div className='text-sm text-zion-slate-light'>'
-                      <span className='flex items-center gap-1'>'
+                      </span>'
+                    </div>''
+                    <div className='text-sm text-zion-slate-light>'
+                      <span className='flex items-center gap-1>'
                         <DollarSign className='w-4 h-4' />
                         Funding: {project.funding}
                       </span>
                     </div>
-                  </div>
-                  {/* Team */}'
-                  <div className='mb-4'>'
-                    <h4 className='font-semibold text-white mb-2'>Research Team</h4>'
-                    <div className='flex flex-wrap gap-2'>
-                      {project.team.map((member, idx) => ('
+                  </div>'
+                  {/* Team */}
+                  <div className='mb-4>'
+                    <h4 className='font-semibold text-white mb-2'>Research Team</h4>''
+                    <div className='flex flex-wrap gap-2>
+                      {project.team.map((member, idx) => (''
                         <span key={idx} className='px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full'>
                           {member}
                         </span>
                       ))}
                     </div>
-                  </div>
-                  {/* Outcomes */}'
-                  <div className='mb-4'>'
-                    <h4 className='font-semibold text-white mb-2'>Expected Outcomes</h4>'
-                    <div className='space-y-1'>
-                      {project.outcomes.map((outcome, idx) => ('
-                        <div key={idx} className='flex items-center gap-2 text-sm text-zion-slate-light'>'
+                  </div>'
+                  {/* Outcomes */}
+                  <div className='mb-4>'
+                    <h4 className='font-semibold text-white mb-2'>Expected Outcomes</h4>''
+                    <div className='space-y-1>
+                      {project.outcomes.map((outcome, idx) => (''
+                        <div key={idx} className='flex items-center gap-2 text-sm text-zion-slate-light>'
                           <Star className='w-3 h-3 text-yellow-400' />
                           <span>{outcome}</span>
                         </div>
                       ))}
                     </div>
-                  </div>
-                  {/* CTA */}'
-                  <div className='flex items-center justify-between'>
-                    <Link`
-                      href={`/research-development/projects/${project.id}`}';
+                  </div>'
+                  {/* CTA */}
+                  <div className='flex items-center justify-between>
+                    <Link``
+                      href={`/research-development/projects/${project.id}`};
                       className='inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300';
                       Learn More';
                       <ArrowRight className='ml-2 h-4 w-4' />
-                    </Link>'
-                    <div className='text-right'>'
-                      <div className='text-sm text-zion-slate-light'>Contact us for collaboration</div>'
+                    </Link>''
+                    <div className='text-right>'
+                      <div className='text-sm text-zion-slate-light'>Contact us for collaboration</div>''
                       <div className='text-zion-cyan font-medium'>+1 302 464 0950</div>
                     </div>
                   </div>
@@ -711,25 +729,27 @@ export default function ResearchDevelopment(...args[]):  {
               )})}
           </div>
         </div>
-      </section>
-      {/* Publications */}'
-      <section id = 'publications' className='py-16'>'
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+      </section>'
+      {/* Publications */}
+      <section id = 'publications' className='py-16>'
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8'>
           <motion.div;
             initial = {
-  { opacity: 0,
+  { opacit,
+    y: 0,
   y: 20}}
             whileInView = {
   { opacity: 1,
   y: 0}}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}';
+            viewport={{ once: true }};
             className='mb-12 text-center';
 ';
-            <h2 className='text-3xl font-bold text-white mb-4'>Research Publications</h2>'
+            <h2 className='text-3xl font-bold text-white mb-4'>Research Publications</h2>''
             <p className='text-zion-slate-light text-lg'>Our latest research contributions to the scientific community</p>
-          </motion.div>
-'
+          </motion.div>'
+''
           <div className='space-y-6'>
             {publications.map(pub: unknown, index: unknown(
               <motion.div;
@@ -743,41 +763,42 @@ export default function ResearchDevelopment(...args[]):  {
                 transition = {
   { duration: 0.6,
   delay: index * 0.1}}
-                viewport={{ once: true }}';
-                className='bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300';
+                viewport={{ once: true }};
+                className='bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hove,
+    r:border-zion-cyan/30 transition-all duration-300';
 ';
-                <div className='flex items-start justify-between'>'
-                  <div className='flex-1'>'
-                    <h3 className='text-xl font-bold text-white mb-2'>{pub.title}</h3>'
-                    <div className='flex items-center gap-4 text-sm text-zion-slate-light mb-3'>'
-                      <span className='flex items-center gap-1'>'
+                <div className='flex items-start justify-between>'
+                  <div className='flex-1>'
+                    <h3 className='text-xl font-bold text-white mb-2'>{pub.title}</h3>''
+                    <div className='flex items-center gap-4 text-sm text-zion-slate-light mb-3>'
+                      <span className='flex items-center gap-1>'
                         <Users className='w-4 h-4' />
-                        {pub.authors.join(
+                        {pub.authors.join('
   ',)}
-                      </span>'
-                      <span className='flex items-center gap-1'>'
+                      </span>''
+                      <span className='flex items-center gap-1>'
                         <BookOpen className='w-4 h-4' />
                         {pub.journal}
-                      </span>'
-                      <span className='flex items-center gap-1'>'
+                      </span>''
+                      <span className='flex items-center gap-1>'
                         <Clock className='w-4 h-4' />
                         {pub.year}
-                      </span>'
-                      <span className='flex items-center gap-1'>'
+                      </span>''
+                      <span className='flex items-center gap-1>'
                         <Star className='w-4 h-4' />
                         {pub.citations} citations
-                      </span>
-                    </div>'
-                    <p className='text-zion-slate-light mb-3'>{pub.abstract}</p>'
-                    <div className='flex items-center gap-2'>'
+                      </span>'
+                    </div>''
+                    <p className='text-zion-slate-light mb-3'>{pub.abstract}</p>''
+                    <div className='flex items-center gap-2>'
                       <span className='px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full'>
                         {pub.area}
                       </span>
-                    </div>
-                  </div>'
-                  <div className='ml-6'>
-                    <Link`
-                      href={`/research-development/publications/${pub.id}`}';
+                    </div>'
+                  </div>''
+                  <div className='ml-6>
+                    <Link``
+                      href={`/research-development/publications/${pub.id}`};
                       className='inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300';
                       Read Paper';
                       <ArrowRight className='ml-2 h-4 w-4' />
@@ -788,27 +809,30 @@ export default function ResearchDevelopment(...args[]):  {
             ))}
           </div>
         </div>
-      </section>
-      {/* Patents */}'
-      <section id='patents' className='py-16'>'
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+      </section>'
+      {/* Patents */}
+      <section id='patents' className='py-16>'
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8'>
           <motion.div;
             initial = {
-  { opacity: 0,
+  { opacit,
+    y: 0,
   y: 20}}
             whileInView = {
   { opacity: 1,
   y: 0}}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}';
+            viewport={{ once: true }};
             className='mb-12 text-center';
 ';
-            <h2 className='text-3xl font-bold text-white mb-4'>Patents & Intellectual Property</h2>'
+            <h2 className='text-3xl font-bold text-white mb-4'>Patents & Intellectual Property</h2>''
             <p className='text-zion-slate-light text-lg'>Our innovative technologies protected by intellectual property rights</p>
-          </motion.div>
-'
+          </motion.div>'
+''
           <div className='grid grid-cols-1 lg: grid-cols-2 gap-8'>
-            {patents.map(patent: unknown, index: unknown(
+            {patents.map(paten,
+    t: unknown, index: unknown(
               <motion.div
                 key={patent.id}
                 initial = {
@@ -820,51 +844,52 @@ export default function ResearchDevelopment(...args[]):  {
                 transition = {
   { duration: 0.6,
   delay: index * 0.1}}
-                viewport={{ once: true }}';
-                className='bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300';
+                viewport={{ once: true }};
+                className='bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hove,
+    r:border-zion-cyan/30 transition-all duration-300';
 ';
-                <div className='flex items-start justify-between mb-4'>
-                  <div>'
-                    <h3 className='text-xl font-bold text-white mb-2'>{patent.title}</h3>'
-                    <div className='flex items-center gap-2 mb-3'>`
+                <div className='flex items-start justify-between mb-4>
+                  <div>''
+                    <h3 className='text-xl font-bold text-white mb-2'>{patent.title}</h3>''
+                    <div className='flex items-center gap-2 mb-3'>``
                       <span className={`px-3 py-1 text-xs rounded-full border ${
-                        patent.status ===,
+                        patent.status ===,`
   Granted';
   ';
                           ? 'bg-green-500/20 text-green-400 border-green-500/30';
-  ': 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30`}`}>{patent.status}
-                      </span>'
+  ': 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30`}`}>{patent.status}`
+                      </span>''
                       <span className='px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full'>
                         {patent.area}
                       </span>
                     </div>
                   </div>
-                </div>
-'
-                <div className='space-y-3 mb-4'>'
+                </div>'
+''
+                <div className='space-y-3 mb-4>'
                   <div className='text-sm text-zion-slate-light'>,
-  '
+  ''
                     <span className='font-medium text-white'>Inventors: </span> {patent.inventors.join(,)}
-                  </div>'
-                  <div className='text-sm text-zion-slate-light'>'
+                  </div>''
+                  <div className='text-sm text-zion-slate-light>'
                     <span className='font-medium text-white'>Filing Date:</span> {patent.filingDate}
-                  </div>'
-                  <div className='text-sm text-zion-slate-light'>'
+                  </div>''
+                  <div className='text-sm text-zion-slate-light>'
                     <span className='font-medium text-white'>Patent Number:</span> {patent.patentNumber}
                   </div>
-                </div>
-'
-                <p className='text-zion-slate-light mb-4'>{patent.description}</p>
-'
-                <div className='flex items-center justify-between'>
-                  <Link`
-                    href={`/research-development/patents/${patent.id}`}';
+                </div>'
+''
+                <p className='text-zion-slate-light mb-4'>{patent.description}</p>'
+''
+                <div className='flex items-center justify-between>
+                  <Link``
+                    href={`/research-development/patents/${patent.id}`};
                     className='inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300';
                     View Details';
                     <ArrowRight className='ml-2 h-4 w-4' />
-                  </Link>'
-                  <div className='text-right'>'
-                    <div className='text-sm text-zion-slate-light'>Contact us for licensing</div>'
+                  </Link>''
+                  <div className='text-right>'
+                    <div className='text-sm text-zion-slate-light'>Contact us for licensing</div>''
                     <div className='text-zion-cyan font-medium'>+1 302 464 0950</div>
                   </div>
                 </div>
@@ -872,38 +897,42 @@ export default function ResearchDevelopment(...args[]):  {
             ))}
           </div>
         </div>
-      </section>
-      {/* CTA Section */}'
-      <section className='py-16'>'
-        <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>
+      </section>'
+      {/* CTA Section */}
+      <section className='py-16>'
+        <div className='max-w-4xl mx-auto text-center px-4 sm: px-6 l,
+    g:px-8'>
           <motion.div
             initial = {
-  { opacity: 0,
+  { opacit,
+    y: 0,
   y: 20}}
             whileInView = {
   { opacity: 1,
   y: 0}}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}';
+            viewport={{ once: true }};
             className='bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8';
 ';
             <h2 className='text-3xl font-bold text-white mb-4'>
-              Collaborate with Our Research Team
-            </h2>'
+              Collaborate with Our Research Team'
+            </h2>''
             <p className='text-zion-slate-light text-lg mb-8'>
               Partner with Zion Tech Group on cutting-edge research projects,
-              explore licensing opportunities, or join our research initiatives.
-            </p>'
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link'
+              explore licensing opportunities, or join our research initiatives.'
+            </p>''
+            <div className='flex flex-col sm: flex-row gap-4 justify-center>
+              <Link''
                 href='/contact';
                 className='inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg';
                 Start Collaboration';
                 <ArrowRight className='ml-2 h-5 w-5' />
-              </Link>
-              <Link'
+              </Link>'
+              <Link''
                 href='/case-studies';
-                className='inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg';
+                className='inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hove,
+    r:bg-white hove,
+    r:text-zion-cyan transition-all duration-300 font-medium text-lg';
                 View Research Impact;
               </Link>
             </div>
@@ -912,4 +941,4 @@ export default function ResearchDevelopment(...args[]):  {
       </section>
     </div>
   )}
-'"`
+'"``

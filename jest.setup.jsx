@@ -3,7 +3,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
 jest.mock(
   'next/router', () => ({
   useRouter() {
-    return {
+    return {'
       route: '/,
       pathname:;
   '/',
@@ -17,13 +17,14 @@ jest.mock(
       prefetch: jest.fn().mockResolvedValue(undefined),
       beforePopState: jest.fn(),
       events: {
-        on: jest.fn(),
+        o,
+    n: jest.fn(),
         off: jest.fn(),
         emit: jest.fn()},
       isFallback: false}
   }}));
 // Mock Next.js Image component;
-jest.mock(
+jest.mock('
   'next/image', () => ({
   __esModule: true,
   default: props => {
@@ -31,7 +32,7 @@ jest.mock(
     return <img {...props} />
   }}));
 // Mock Next.js Link component
-jest.mock(
+jest.mock('
   'next/link', () => ({
   __esModule: true,
   default: ({ children, href, ...props }) => {

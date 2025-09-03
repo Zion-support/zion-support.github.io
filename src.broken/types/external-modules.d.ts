@@ -11,7 +11,8 @@ declare module '@radix-ui/react-toggle-group';
 declare module '@radix-ui/react-toggle';
 declare module;
   '*.module.css' {
-  const classes: { [key: string]: string }
+  const classes: { [ke,
+    y: string]: string }
   export default classes;
 declare module,
   @tanstack/react-query';
@@ -53,7 +54,9 @@ declare module;
   export const Webhook: LucideIcon;
   export const XCircle: LucideIcon;
   export const Zap: LucideIcon;
-  const icons: { [key: string]: LucideIcon }
+  const icon,
+    s: { [ke,
+    y: string]: LucideIcon }
   export default icons;
 declare module,
   child_process';
@@ -111,11 +114,13 @@ declare module;
 declare module;
   'class-variance-authority' {
 export function cva(...inputs: any[]): any;
-  export type VariantProps<T extends (...args: any) => any> = any;
+  export type VariantProps<T extends (...arg,
+    s: any) => any> = any;
 declare module;
   'clsx' {
   export type ClassValue = any;
-  export default function clsx(...classes: ClassValue[]): string;declare module;
+  export default function clsx(...classe,
+    s: ClassValue[]): string;declare module;
   'embla-carousel-react';
 declare module;
   'framer-motion';
@@ -139,8 +144,10 @@ declare module;
     control: Control<TFieldValues>
 handleSubmit: any;
     register: any;
-    formState: any;
-    [key: string]: any;
+    formStat,
+    e: any;
+    [ke,
+    y: string]: any;
   export function useForm<;
     TFieldValues extends FieldValues = FieldValues,
   >(options?: any): UseFormReturn<TFieldValues>
@@ -155,14 +162,17 @@ handleSubmit: any;
     control?: Control<TFieldValues>
     rules?: any;
     defaultValue?: any;
-    render: (props: any) => ReactElement;
-  export const Controller: ComponentType<ControllerProps<any, any>>;
+    render: (prop,
+    s: any) => ReactElement;
+  export const Controlle,
+    r: ComponentType<ControllerProps<any, any>>;
   export interface FormProviderProps<;
     TFieldValues extends FieldValues = FieldValues,
   > {
     children?: ReactNode;
     [key: string]: any;
-  export const FormProvider: ComponentType<FormProviderProps<any>>;
+  export const FormProvide,
+    r: ComponentType<FormProviderProps<any>>;
   export function useFormContext<;
     TFieldValues extends FieldValues = FieldValues,
   >(): UseFormReturn<TFieldValues>declare module;

@@ -1,16 +1,34 @@
-export interface RevolutionaryService2030 {
+<<<<<<< HEAD
+export interface RevolutionaryService2030 {;
   id: string;
+=======
+export interface RevolutionaryService2030 {id: string;
+>>>>>>> main
    title: string;
    description: string;
    category: string;
    subcategory: string;
-   pricing: { monthly: number;
+   pricing: {  monthly: number;
    yearly: number;
    custom: string;
    currency: string;
+<<<<<<< HEAD
+   pricingMode,
+    l: string
+   marketPric,
+    e: string} features: string[] benefits: string[] useCases: string[] targetAudience: string[] technologies: string[] integrations: string[] support: string[] website: string contactEmail: string phone: string email: string websit,
+    e: string addres,
+    s: string}  export interface MicroSaasService {
+=======
+<<<<<<< HEAD
    pricingModel: string;
-   marketPrice: string} features: string[] benefits: string[] useCases: string[] targetAudience: string[] technologies: string[] integrations: string[] support: string[] website: string contactEmail: string phone: string email: string website: string address: string}  export interface MicroSaasService {
+   marketPrice: string} features: string[] benefits: string[] useCases: string[] targetAudience: string[] technologies: string[] integrations: string[] support: string[] website: string contactEmail: string phone: string email: string website: string address: string}  export interface MicroSaasService {;
+>>>>>>> main
   id: number;
+=======
+   pricingModel: string
+   marketPrice: string} features: string[] benefits: string[] useCases: string[] targetAudience: string[] technologies: string[] integrations: string[] support: string[] website: string contactEmail: string phone: string email: string website: string address: string}  export interface MicroSaasService {id: number;
+>>>>>>> main
    name: string;
    category: string;
    pricing: string;
@@ -31,9 +49,20 @@ export interface RevolutionaryService2030 {
    freeTier: boolean;
    trialPeriod: string;
    innovationLevel: string;
+<<<<<<< HEAD
+   marketSiz,
+    e: string;
+   growthRat,
+    e: string}  export interface ITService {
+=======
    marketSize: string;
-   growthRate: string}  export interface ITService {
+<<<<<<< HEAD
+   growthRate: string}  export interface ITService {;
+>>>>>>> main
   id: number;
+=======
+   growthRate: string}  export interface ITService {id: number;
+>>>>>>> main
    name: string;
    category: string;
    description: string;
@@ -51,9 +80,20 @@ export interface RevolutionaryService2030 {
    deliveryTime: string;
    support: string;
    innovationLevel: string;
+<<<<<<< HEAD
+   marketSiz,
+    e: string;
+   complianc,
+    e: string[]}  export interface AIService {
+=======
    marketSize: string;
-   compliance: string[]}  export interface AIService {
+<<<<<<< HEAD
+   compliance: string[]}  export interface AIService {;
+>>>>>>> main
   id: number;
+=======
+   compliance: string[]}  export interface AIService {id: number;
+>>>>>>> main
    name: string;
    category: string;
    description: string;
@@ -73,5 +113,12 @@ export interface RevolutionaryService2030 {
    aiScore: number;
    useCases: string[];
    innovationLevel: string;
+<<<<<<< HEAD
+   marketSiz,
+    e: string;
+   ethicalA,
+    I: string[]}
+=======
    marketSize: string;
    ethicalAI: string[]}
+>>>>>>> main

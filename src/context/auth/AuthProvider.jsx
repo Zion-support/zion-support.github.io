@@ -1,1 +1,26 @@
+<<<<<<< HEAD
+import React, { useEffect } from 'react'';' import { supabase, getFromProfiles } from '../../integrations/supabase/client'';' import { useAuthOperations } from '../../hooks/useAuthOperations'';' import { AuthContext } from './AuthContext'';' import { cleanupAuthState } from '../../utils/authUtils''; import { useNavigate, useLocation } from 'react-router-dom'';' import { useAuthState } from './useAuthState'';' import { useAuthEventHandlers } from './useAuthEventHandlers'';' import { mapProfileToUser } from './profileMapper'';' import { loginUser, registerUser } from '@/services/authService'';' import { safeStorage } from '@/utils/safeStorage'';' import { toast } from '@/hooks/use-toast'';";""
+=======
+<<<<<<< HEAD
+import React, { useEffect } from 'react';' import { supabase, getFromProfiles } from '../../integrations/supabase/client';' import { useAuthOperations } from '../../hooks/useAuthOperations';' import { AuthContext } from './AuthContext';' import { cleanupAuthState } from '../../utils/authUtils';' import { useNavigate, useLocation } from 'react-router-dom';' import { useAuthState } from './useAuthState';' import { useAuthEventHandlers } from './useAuthEventHandlers';' import { mapProfileToUser } from './profileMapper';' import { loginUser, registerUser } from '@/services/authService';' import { safeStorage } from '@/utils/safeStorage';' import { toast } from '@/hooks/use-toast';'";
+=======
+<<<<<<< HEAD
+import React, {useEffect } from 'react'';'' import {supabase, getFromProfiles } from '../../integrations/supabase/client'';'' import {useAuthOperations } from '../../hooks/useAuthOperations'';'' import {AuthContext } from './AuthContext'';'' import {cleanupAuthState } from '../../utils/authUtils'';' import {useNavigate, useLocation } from 'react-router-dom'';'' import {useAuthState } from './useAuthState'';'' import {useAuthEventHandlers } from './useAuthEventHandlers'';'' import {mapProfileToUser } from './profileMapper'';'' import {loginUser, registerUser } from '@/services/authService'';'' import {safeStorage } from '@/utils/safeStorage'';'' import {toast } from '@/hooks/use-toast'';'";"
+=======
+<<<<<<< HEAD
+import React, { useEffect } from &apos;react&apos;';&apos;&apos; import { supabase, getFromProfiles } from &apos;../../integrations/supabase/client&apos;';&apos;&apos; import { useAuthOperations } from &apos;../../hooks/useAuthOperations&apos;';&apos;&apos; import { AuthContext } from &apos;./AuthContext&apos;';&apos;&apos; import { cleanupAuthState } from &apos;../../utils/authUtils&apos;';&apos; import { useNavigate, useLocation } from &apos;react-router-dom&apos;';&apos;&apos; import { useAuthState } from &apos;./useAuthState&apos;';&apos;&apos; import { useAuthEventHandlers } from &apos;./useAuthEventHandlers&apos;';&apos;&apos; import { mapProfileToUser } from &apos;./profileMapper&apos;';&apos;&apos; import { loginUser, registerUser } from &apos;@/services/authService&apos;';&apos;&apos; import { safeStorage } from &apos;@/utils/safeStorage&apos;';&apos;&apos; import { toast } from &apos;@/hooks/use-toast&apos;';&apos;";&quot;"
+=======
+<<<<<<< HEAD
 import React, { useEffect } from 'react'';'' import { supabase, getFromProfiles } from '../../integrations/supabase/client'';'' import { useAuthOperations } from '../../hooks/useAuthOperations'';'' import { AuthContext } from './AuthContext'';'' import { cleanupAuthState } from '../../utils/authUtils'';' import { useNavigate, useLocation } from 'react-router-dom'';'' import { useAuthState } from './useAuthState'';'' import { useAuthEventHandlers } from './useAuthEventHandlers'';'' import { mapProfileToUser } from './profileMapper'';'' import { loginUser, registerUser } from '@/services/authService'';'' import { safeStorage } from '@/utils/safeStorage'';'' import { toast } from '@/hooks/use-toast'';'";"
+<<<<<<< HEAD
+""
+=======
+=======
+import React, { useEffect }  from 'react;'' import { supabase, getFromProfiles }  from '../../integrations/supabase/client;'' import { useAuthOperations }  from '../../hooks/useAuthOperations;'' import { AuthContext }  from './AuthContext;'' import { cleanupAuthState }  from '../../utils/authUtils;' import { useNavigate, useLocation }  from 'react-router-dom;'' import { useAuthState }  from './useAuthState;'' import { useAuthEventHandlers }  from './useAuthEventHandlers;'' import { mapProfileToUser }  from './profileMapper;'' import { loginUser, registerUser }  from '@/services/authService;'' import { safeStorage }  from '@/utils/safeStorage;'' import { toast }  from '@/hooks/use-toast;'
+"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

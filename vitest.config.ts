@@ -3,15 +3,18 @@ import { defineConfig } from,
 import path from;
   'node: path';
 export default defineConfig({
-  resolve: {
-    alias: {
+  resolv,
+    e: {
+    alia,
+    s: {'
   '@: path.resolve(__dirname,
   './src'),
   '@/pages': path.resolve(__dirname,
 ,
   ./src/pages')}},
   test: {
-    environment:;
+    environmen,
+    t:;
   'jsdom,
     setupFiles:;
   './tests/setup.ts',
