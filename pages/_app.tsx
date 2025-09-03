@@ -1,7 +1,8 @@
 import type { AppProps } from 'next/app';
 import Link from 'next/link';
+import React from 'react';
 
-function Header(): any {
+function Header(): React.JSX.Element {
   return (
     <header style={{
       position: 'sticky', top: 0, zIndex: 50, background: 'rgba(11, 18, 32, 0.95)', 
@@ -76,7 +77,7 @@ function Header(): any {
   );
 }
 
-function Footer(): any {
+function Footer(): React.JSX.Element {
   return (
     <footer style={{ 
       background: 'linear-gradient(135deg, #0b1220, #1e293b)', 
@@ -167,7 +168,7 @@ function Footer(): any {
       }}>
         <small style={{ opacity: 0.7 }}>
           © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
-          <a href="/privacy" style={{ color: '#93c5fd', marginLeft: 8 }}>Privacy Policy</a>
+          <Link href="/privacy" style={{ color: '#93c5fd', marginLeft: 8 }}>Privacy Policy</Link>
         </small>
       </div>
     </footer>
