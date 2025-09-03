@@ -1,1 +1,1 @@
-const Talents = () => {;
+const Talents = () => {
