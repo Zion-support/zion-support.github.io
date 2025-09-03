@@ -2,9 +2,9 @@
   "compilerOptions": {
     "target": "ES2020",
     "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ES6"
+      "dom",
+      "dom.iterable",
+      "es6"
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -18,83 +18,41 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "types": [
-      "react",
-      "react-dom",
-      "node"
-    ],
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@/components/*": [
-        "./src/components/*"
-      ],
-      "@/pages/*": [
-        "./src/pages/*"
-      ],
-      "@/utils/*": [
-        "./src/utils/*"
-      ],
-      "@/hooks/*": [
-        "./src/hooks/*"
-      ],
-      "@/types/*": [
-        "./src/types/*"
-      ]
-    },
-    "tsBuildInfoFile": ".next/cache/tsconfig.tsbuildinfo"
+    "baseUrl": "."
   },
   "include": [
     "next-env.d.ts",
-    "pages/**/*.ts",
-    "pages/**/*.tsx",
-    "middleware.ts",
+    "pages/**/*",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "data/services.ts",
+    "styles/**/*",
+    "types/**/*",
+    "utils/**/*",
+    "**/*.ts",
+    "**/*.tsx",
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
     "node_modules",
     ".next",
     "out",
     "dist",
     "api-backup",
     "pages.disabled",
-    "pages.disabled_auto",
-    "pages.__backup",
     "backup-pages",
-    ".backup",
-    ".disabled",
-    "**/*.disabled",
-    "**/*.disabled/**",
-    "**/*disabled/**",
-    "types.disabled",
-    "src.disabled",
-    "src.broken",
-    "contracts.disabled",
-    "cypress.disabled",
-    "zion-os.disabled",
     "automation/backups",
     "automation_backup",
     "broken_files_backup",
     "contracts",
-    "hardhat",
-    "vite.config.ts",
-    "vitest.config.ts",
-    "tailwind.config.ts",
-    "tests",
-    "__tests__",
-    "test_build",
-    "test-results",
+    "cypress",
     "temp_working",
-    "src",
-    "components",
-    "lib"
+    "supabase/functions",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.backup",
+    "**/*.disabled"
   ]
 }

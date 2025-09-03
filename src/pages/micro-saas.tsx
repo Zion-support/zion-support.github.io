@@ -131,63 +131,80 @@ const MicroSAAS: React.FC = () => {
       ]
     },
     {
-      name: "E-commerce & Retail",
-      description: "Complete e-commerce solutions for online businesses",
-      icon: ShoppingCart,
-      count: 10,
-      color: "from-purple-400 to-pink-500",
-      services: [
-        "Online Store Builders",
-        "Inventory Management",
-        "Payment Processing",
-        "Order Fulfillment"
-      ]
-    },
-    {
-      name: "Data & Analytics",
-      description: "Advanced data analytics and business intelligence tools",
-      icon: BarChart3,
-      count: 8,
-      color: "from-indigo-400 to-purple-500",
-      services: [
-        "Data Visualization",
-        "Business Intelligence",
-        "Real-time Analytics",
-        "Custom Dashboards"
-      ]
+      name: "Enterprise SaaS Platforms",
+      description: "Scalable enterprise-grade software platforms for large organizations",
+      icon: Building,
+      href: "/services/enterprise-saas",
+      count: 25,
+      color: "from-yellow-400 to-orange-500",
+      solutions: ["Enterprise Management", "Team Collaboration", "Data Analytics", "Security Platforms", "Compliance", "Integration", "Scalability", "Customization"]
     }
-  ];
+  ]
 
-  const featuredMicroSAAS = [
+  const featuredMicroSaas = [
     {
-      title: "AI-Powered Project Management Suite",
-      description: "Intelligent project management with AI-driven insights and automation",
-      price: "From $29/month",
-      features: [
-        "AI Task Prioritization",
-        "Smart Resource Allocation",
-        "Automated Reporting",
-        "Team Collaboration"
-      ],
-      href: "/micro-saas/project-management",
-      color: "from-blue-400 to-cyan-500",
+      title: "AI Code Review Assistant",
+      description: "Revolutionary AI-powered code review platform that automates code analysis, security scanning, and quality assurance with 95% accuracy.",
+      price: "From $299/month",
+      features: ["AI-Powered Code Analysis", "Automated Security Scanning", "Performance Optimization", "Code Quality Metrics", "Real-time Collaboration", "Git Integration"],
+      href: "/services/ai-code-review-assistant",
+      color: "from-blue-400 to-purple-500",
       popular: true,
-      icon: Target
+      benefits: ["Reduce code review time by 70%", "Catch 95% of security vulnerabilities", "Improve code quality by 60%", "Accelerate development cycles"]
     },
     {
-      title: "Advanced Email Marketing Platform",
-      description: "Comprehensive email marketing with advanced automation and analytics",
-      price: "From $19/month",
-      features: [
-        "Drag & Drop Builder",
-        "Advanced Segmentation",
-        "A/B Testing",
-        "Analytics Dashboard"
-      ],
-      href: "/micro-saas/email-marketing",
+      title: "AI Customer Insights Platform",
+      description: "Advanced AI-powered customer analytics platform that predicts behavior, prevents churn, and maximizes customer lifetime value with 95% accuracy.",
+      price: "From $1,999/month",
+      features: ["Real-time Customer Analytics", "Predictive Behavior Modeling", "Sentiment Analysis Engine", "Customer Journey Mapping", "Churn Prediction", "Personalization Engine"],
+      href: "/services/ai-customer-insights-platform",
+      color: "from-emerald-400 to-teal-500",
+      benefits: ["Increase customer retention by 45%", "Boost revenue per customer by 35%", "Reduce churn rate by 60%", "Improve customer satisfaction by 50%"]
+    },
+    {
+      title: "AI Financial Forecasting Suite",
+      description: "Advanced AI-powered financial forecasting platform that predicts revenue, optimizes budgets, and minimizes risks with unprecedented accuracy.",
+      price: "From $2,499/month",
+      features: ["AI-Powered Revenue Forecasting", "Cash Flow Prediction Models", "Risk Assessment & Analysis", "Budget Optimization Engine", "Scenario Planning Tools", "Real-time Dashboards"],
+      href: "/services/ai-financial-forecasting-suite",
       color: "from-green-400 to-emerald-500",
-      popular: true,
-      icon: Mail
+      benefits: ["Improve forecast accuracy by 85%", "Reduce financial planning time by 70%", "Optimize cash flow management", "Minimize financial risks by 60%"]
+    },
+    {
+      title: "AI-Powered Content Creation Studio",
+      description: "Revolutionary content creation platform that uses AI to generate high-quality, engaging content across multiple formats including blog posts, social media, videos, and marketing materials.",
+      price: "From $2,999/month",
+      features: ["AI Content Generation", "Multi-format Support", "Brand Consistency", "SEO Optimization", "Real-time Collaboration", "Analytics Dashboard"],
+      href: "/services/ai-content-creation-studio",
+      color: "from-purple-400 to-pink-500",
+      benefits: ["Increase content production by 300%", "Reduce content creation costs by 60%", "Improve SEO rankings by 40%", "24/7 content generation capability"]
+    },
+    {
+      title: "Smart Project Management Platform",
+      description: "Intelligent project management solution that uses AI to optimize workflows, predict delays, and improve team productivity with automated resource allocation.",
+      price: "From $1,999/month",
+      features: ["AI Workflow Optimization", "Predictive Analytics", "Team Collaboration", "Real-time Tracking", "Resource Management", "Risk Assessment"],
+      href: "/services/smart-project-management",
+      color: "from-blue-400 to-indigo-500",
+      benefits: ["Reduce project delays by 45%", "Improve team productivity by 35%", "Optimize resource utilization", "Predict and prevent bottlenecks"]
+    },
+    {
+      title: "AI-Powered Customer Support Automation",
+      description: "Advanced customer support platform that automates responses and provides intelligent solutions to customer inquiries with 95% accuracy.",
+      price: "From $3,999/month",
+      features: ["AI Chatbots", "Smart Routing", "Knowledge Base", "Analytics Dashboard", "Multi-language Support", "Integration APIs"],
+      href: "/services/ai-customer-support",
+      color: "from-green-400 to-emerald-500",
+      benefits: ["Reduce response time by 80%", "Handle 10x more inquiries", "Improve customer satisfaction by 50%", "24/7 automated support"]
+    },
+    {
+      title: "Smart HR Management Suite",
+      description: "Comprehensive HR management platform with AI-powered recruitment, employee analytics, and automated HR processes for modern organizations.",
+      price: "From $1,799/month",
+      features: ["AI Recruitment", "Employee Analytics", "Performance Management", "Payroll Automation", "Compliance Tracking", "Employee Self-Service"],
+      href: "/services/smart-hr-management",
+      color: "from-indigo-400 to-purple-500",
+      benefits: ["Streamline recruitment by 60%", "Improve employee retention by 40%", "Reduce HR administrative time by 70%", "Enhance performance tracking"]
     }
   ];
 
