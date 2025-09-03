@@ -1,7 +1,32 @@
 import React from 'react';
-import ModernLayout from '../../../components/layout/ModernLayout';
-import { servicesList } from './_servicesData.route.js';
+import ModernLayout from '../../components/layout/ModernLayout';
+// import { servicesList } from './_servicesData.route.js';
 import { Zap, Brain, Cloud, Shield, Database, Rocket, ArrowRight, CheckCircle, DollarSign, Clock } from 'lucide-react';
+
+// Temporary services list until the proper data file is available
+const servicesList = [
+  {
+    id: 'ai-automation',
+    name: 'AI Automation',
+    description: 'Intelligent automation solutions',
+    categoryName: 'AI Solutions',
+    price: '$299/mo'
+  },
+  {
+    id: 'cloud-migration',
+    name: 'Cloud Migration',
+    description: 'Seamless cloud migration services',
+    categoryName: 'Cloud Solutions',
+    price: '$499/mo'
+  },
+  {
+    id: 'micro-saas-platform',
+    name: 'Micro SaaS Platform',
+    description: 'Ready-to-deploy SaaS solutions',
+    categoryName: 'Micro SaaS',
+    price: '$199/mo'
+  }
+];
 
 export default function ServicesPage() {
   const categories = [
