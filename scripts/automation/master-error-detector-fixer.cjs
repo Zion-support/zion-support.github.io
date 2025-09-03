@@ -26,7 +26,7 @@ class MasterErrorDetectorFixer {
     // Ensure directories exist
     this.ensureDirectories();
     
-    console.log(`'🚀 Master Error Detector & Fixer Started');
+    console.log(`🚀 Master Error Detector & Fixer Started`);
     console.log(`📁 Project Root: ${this.projectRoot});console.log(📊 Log Directory: ${this.logDir}``);
   }
 
@@ -57,9 +57,9 @@ class MasterErrorDetectorFixer {
       return { success: true, output: result };
     } catch (error) {
       return { 
-        success: false, 
-        error: error.message, 
-        output: error.stdout || error.stderr || ''
+        success: false, `);
+        error: error.message, `);
+        output: error.stdout || error.stderr || '`);
       };
     }
   }
@@ -75,8 +75,8 @@ class MasterErrorDetectorFixer {
         type: 'typescript',
         count: errors.length,
         details: errors,
-        severity: 'high'
-      });
+        severity: 'high'`);
+      });`);
       await this.log(❌ Found ${errors.length} TypeScript errors, 'ERROR'`);
       return errors;
     }

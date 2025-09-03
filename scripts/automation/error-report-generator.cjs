@@ -12,7 +12,7 @@ class ErrorReportGenerator {
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] [ErrorReportGenerator] ${message}'
+    console.log(`[${new Date().toISOString()}] [ErrorReportGenerator] ${message}`);
     );
   }
 
@@ -21,8 +21,8 @@ class ErrorReportGenerator {
 
     try {
       await this.generateErrorReport();
-      this.log('Error report generation completed.');
-    } catch (error) {
+      this.log('Error report generation completed.');`);
+    } catch (error) {`);
       this.log(Error during report generation: ${error.message}`);
     }
   }

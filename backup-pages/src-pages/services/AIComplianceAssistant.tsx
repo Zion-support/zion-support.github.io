@@ -43,8 +43,7 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
             <h1 className='text-4xl md:text-7xl font-bold text-white mb-6'>
               AI Compliance'
               <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>
-                {';
-  '}Assistant
+                {}Assistant
               </span>
             </h1>'
             <p className='text-xl text-gray-300 max-w-4xl mx-auto mb-8'>

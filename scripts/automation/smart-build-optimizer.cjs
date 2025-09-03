@@ -14,15 +14,15 @@ class SmartBuildOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'smart-build-optimizer.log'
     );
     this.performanceLog = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'build-performance.json'
     );
     this.optimizationsLog = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'build-optimizations.json'
     );
     this.ensureLogsDirectory();

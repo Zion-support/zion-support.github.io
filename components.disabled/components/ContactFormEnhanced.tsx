@@ -9,6 +9,7 @@ const ContactFormEnhanced: React.FC = () => {
     subject: '',
     message: ''
   });
+  
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
@@ -38,123 +39,172 @@ const ContactFormEnhanced: React.FC = () => {
   };
 
   return (
-    <div className='max-w-2xl mx-auto p-6'>
+    <div className="max-w-2xl mx-auto p-6">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className='bg-white rounded-xl shadow-lg p-8'
+        className="bg-white rounded-xl shadow-lg p-8"
       >
-        <div className='text-center mb-8'>
-          <h2 className='text-3xl font-bold text-gray-900 mb-4'>Get In Touch</h2>
-          <p className='text-gray-600'>
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+          <p className="text-gray-600">
             Ready to transform your business? Let's discuss how our technology solutions can drive your success.
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className='space-y-6'>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor='name' className='block text-sm font-medium text-gray-700 mb-2'>
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                 Full Name *
               </label>
-              <div className='relative'>
-                <User className='absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400' />
+              <div className="relative">
+                <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
+<<<<<<< HEAD:components/ContactFormEnhanced.tsx
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Your full name"
+                />
+=======
                   type='text'
                   id='name'
                   name='name'
                   value={formData.name}
                   onChange={handleChange}
-                  required
+                  required;
                   className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
-                  placeholder='Enter your full name'
-                />
+                  placeholder='Your full name'/>
+>>>>>>> main:components.disabled/components/ContactFormEnhanced.tsx
               </div>
             </div>
 
             <div>
-              <label htmlFor='email' className='block text-sm font-medium text-gray-700 mb-2'>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                 Email Address *
               </label>
-              <div className='relative'>
-                <Mail className='absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400' />
+              <div className="relative">
+                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
+<<<<<<< HEAD:components/ContactFormEnhanced.tsx
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="your.email@example.com"
+                />
+=======
                   type='email'
                   id='email'
                   name='email'
                   value={formData.email}
                   onChange={handleChange}
-                  required
+                  required;
                   className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
-                  placeholder='Enter your email'
-                />
+                  placeholder='your@email.com'/>
+>>>>>>> main:components.disabled/components/ContactFormEnhanced.tsx
               </div>
             </div>
           </div>
 
           <div>
-            <label htmlFor='subject' className='block text-sm font-medium text-gray-700 mb-2'>
+            <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
               Subject *
             </label>
             <input
+<<<<<<< HEAD:components/ContactFormEnhanced.tsx
+              type="text"
+              id="subject"
+              name="subject"
+              value={formData.subject}
+              onChange={handleChange}
+              required
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              placeholder="What can we help you with?"
+            />
+=======
               type='text'
               id='subject'
               name='subject'
               value={formData.subject}
               onChange={handleChange}
-              required
+              required;
               className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
-              placeholder='What can we help you with?'
-            />
+              placeholder='What can we help you with?'/>
+>>>>>>> main:components.disabled/components/ContactFormEnhanced.tsx
           </div>
 
           <div>
-            <label htmlFor='message' className='block text-sm font-medium text-gray-700 mb-2'>
+            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
               Message *
             </label>
-            <div className='relative'>
-              <MessageSquare className='absolute left-3 top-3 w-5 h-5 text-gray-400' />
+            <div className="relative">
+              <MessageSquare className="absolute left-3 top-3 text-gray-400 w-5 h-5" />
               <textarea
+<<<<<<< HEAD:components/ContactFormEnhanced.tsx
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                rows={6}
+                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                placeholder="Tell us about your project or requirements..."
+              />
+=======
                 id='message'
                 name='message'
                 value={formData.message}
                 onChange={handleChange}
-                required
+                required;
                 rows={5}
-                className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none'
-                placeholder='Tell us about your project or question...'
-              />
+                className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+                placeholder='Tell us about your project or requirements...'/>
+>>>>>>> main:components.disabled/components/ContactFormEnhanced.tsx
             </div>
           </div>
 
           <motion.button
+<<<<<<< HEAD:components/ContactFormEnhanced.tsx
+            type="submit"
+=======
             type='submit'
+>>>>>>> main:components.disabled/components/ContactFormEnhanced.tsx
             disabled={isSubmitting}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className='w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed'
+            className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 flex items-center justify-center space-x-2"
           >
             {isSubmitting ? (
-              <div className='flex items-center justify-center gap-2'>
-                <div className='w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin' />
-                Sending...
-              </div>
+              <>
+                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                <span>Sending...</span>
+              </>
             ) : (
-              <div className='flex items-center justify-center gap-2'>
-                <Send className='w-5 h-5' />
-                Send Message
-              </div>
+              <>
+                <Send className="w-5 h-5" />
+                <span>Send Message</span>
+              </>
             )}
           </motion.button>
 
+          {/* Status Messages */}
           {submitStatus === 'success' && (
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className='flex items-center gap-2 text-green-600 bg-green-50 p-3 rounded-lg'
+              className="flex items-center space-x-2 text-green-600 bg-green-50 p-3 rounded-lg"
             >
-              <CheckCircle className='w-5 h-5' />
+              <CheckCircle className="w-5 h-5" />
               <span>Message sent successfully! We'll get back to you soon.</span>
             </motion.div>
           )}
@@ -163,9 +213,9 @@ const ContactFormEnhanced: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className='flex items-center gap-2 text-red-600 bg-red-50 p-3 rounded-lg'
+              className="flex items-center space-x-2 text-red-600 bg-red-50 p-3 rounded-lg"
             >
-              <AlertCircle className='w-5 h-5' />
+              <AlertCircle className="w-5 h-5" />
               <span>Failed to send message. Please try again.</span>
             </motion.div>
           )}

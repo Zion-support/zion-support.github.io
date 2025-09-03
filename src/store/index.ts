@@ -1,8 +1,26 @@
-import { configureStore } from '@reduxjs/toolkit';
+<<<<<<< HEAD
+import { configureStore } from &apos;@reduxjs/toolkit';&apos;&apos;
+
+=======
+import { configureStore, } from '@reduxjs/toolkit';
+>>>>>>> main
 export const store = configureStore({
   reducer: {
-    // Add your reducers here
-  }
+<<<<<<< HEAD
+    // Add your reducers here, }
 });
-export type RootState = ReturnType<typeof store.getState>;
+<<<<<<< HEAD
+
+export type RootState = ReturnType;<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
+=======
+export type RootState = ReturnType<typeof store.getState" >;"
+=======
+    // Add your reducers here,
+};
+});
+export type RootState = ReturnType<typeof store.getState" ></typeof>;
+>>>>>>> main
+export type AppDispatch = typeof store.dispatch;
+""
+>>>>>>> main

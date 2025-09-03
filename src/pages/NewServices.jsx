@@ -1,2 +1,16 @@
+<<<<<<< HEAD
+ export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export function NewServices () {} const [selectedCategory, setSelectedCategory] = useState(&apos;all&apos;)&apos;' const [searchTerm, setSearchTerm] = useState(&quot;)&quot;" const;const [selectedService, setSelectedService] = useState(null);
+=======
  export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export function NewServices () { const [selectedCategory, setSelectedCategory] = useState('all') const [searchTerm, setSearchTerm] = useState(") const [selectedService, setSelectedService] = useState(null);"
+<<<<<<< HEAD
+""
+}}
+=======
+<<<<<<< HEAD
+=======
  export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export default NewServices export function NewServices () { const [selectedCategory, setSelectedCategory] = useState('all') const [searchTerm, setSearchTerm] = useState(") const [selectedService, setSelectedService] = useState(null)
+"
+}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

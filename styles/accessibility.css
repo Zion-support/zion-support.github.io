@@ -1,0 +1,189 @@
+/* Accessibility Enhancements */
+
+/* High Contrast Mode */
+.high-contrast {
+  --bg-primary: #000000;
+  --bg-secondary: #1a1a1a;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --border-color: #ffffff;
+  --accent-color: #ffff00;
+}
+
+.high-contrast * {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.high-contrast button,
+.high-contrast a {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border: 2px solid var(--border-color) !important;
+}
+
+.high-contrast button:hover,
+.high-contrast a:hover {
+  background-color: var(--accent-color) !important;
+  color: var(--bg-primary) !important;
+}
+
+/* Reduced Motion */
+.reduced-motion *,
+.reduced-motion *::before,
+.reduced-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Font Size Adjustments */
+.font-small {
+  font-size: 0.875rem;
+}
+
+.font-small h1 { font-size: 1.5rem; }
+.font-small h2 { font-size: 1.25rem; }
+.font-small h3 { font-size: 1.125rem; }
+.font-small h4 { font-size: 1rem; }
+.font-small h5 { font-size: 0.875rem; }
+.font-small h6 { font-size: 0.75rem; }
+
+.font-medium {
+  font-size: 1rem;
+}
+
+.font-medium h1 { font-size: 2rem; }
+.font-medium h2 { font-size: 1.5rem; }
+.font-medium h3 { font-size: 1.25rem; }
+.font-medium h4 { font-size: 1.125rem; }
+.font-medium h5 { font-size: 1rem; }
+.font-medium h6 { font-size: 0.875rem; }
+
+.font-large {
+  font-size: 1.125rem;
+}
+
+.font-large h1 { font-size: 2.5rem; }
+.font-large h2 { font-size: 2rem; }
+.font-large h3 { font-size: 1.5rem; }
+.font-large h4 { font-size: 1.25rem; }
+.font-large h5 { font-size: 1.125rem; }
+.font-large h6 { font-size: 1rem; }
+
+/* Focus Visible Enhancements */
+.focus-visible *:focus {
+  outline: 3px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3) !important;
+}
+
+.focus-visible button:focus,
+.focus-visible a:focus {
+  outline: 3px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3) !important;
+}
+
+/* Skip Links */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1000;
+  border-radius: 4px;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Screen Reader Only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* High contrast focus for better visibility */
+.high-contrast .focus-visible *:focus {
+  outline: 3px solid var(--accent-color) !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.3) !important;
+}
+
+/* Ensure proper contrast ratios */
+.high-contrast .text-gray-500,
+.high-contrast .text-gray-400,
+.high-contrast .text-gray-300 {
+  color: var(--text-secondary) !important;
+}
+
+.high-contrast .bg-gray-100,
+.high-contrast .bg-gray-200,
+.high-contrast .bg-gray-300 {
+  background-color: var(--bg-secondary) !important;
+}
+
+/* Button and link enhancements for accessibility */
+button:disabled,
+a:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Ensure interactive elements have minimum touch target size */
+button,
+a,
+input,
+select,
+textarea {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Improve form accessibility */
+input:invalid {
+  border-color: #ef4444;
+}
+
+input:valid {
+  border-color: #10b981;
+}
+
+/* Loading states for better UX */
+.loading {
+  position: relative;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
