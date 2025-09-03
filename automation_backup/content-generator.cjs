@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 
@@ -8,8 +7,8 @@ class ContentGenerator {
     this.templates = {
       blog: this.getBlogTemplate(),
       component: this.getComponentTemplate(),
-      page: this.getPageTemplate(),
-    };
+      page: this.getPageTemplate(),;
+};
   }
 
   getBlogTemplate() {
@@ -40,7 +39,7 @@ export default BlogPost;`;
     return `import React from 'react';
 
 interface ComponentProps {
-  // Add props here
+  // Add props here;
 }
 
 const Component: React.FC<ComponentProps> = ({}) => {
@@ -83,19 +82,19 @@ export default Page;`;
       return;
     }
 
-    const content = template
+    const content = template;
       .replace(/Blog Post Title/g, options.title || name)
       .replace(
         /Blog post description/g,
-        options.description || 'Generated content'
+        options.description || `Generated content`
       )
       .replace(/Component/g, name)
       .replace(/Page Title/g, options.title || name);
 
-    const fileName = `${name.toLowerCase().replace(/\s+/g, '-')}.${type === 'blog' ? 'tsx' : type === 'component' ? 'tsx' : 'tsx'}`;
-    const filePath = path.join(__dirname, '..', '..', 'generated', fileName);
+    const fileName = `${name.toLowerCase().replace(/\s+/g, '-')}.${type === `blog` ? 'tsx' : type === 'component' ? 'tsx' : 'tsx'}`;
+    const filePath = path.join(__dirname, '..', '..', `generated`, fileName);
 
-    // Ensure directory exists
+    // Ensure directory exists;
     const dir = path.dirname(filePath);
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
@@ -108,5 +107,5 @@ export default Page;`;
 
 // Example usage:
 // const generator = new ContentGenerator();
-// generator.generateContent('blog', 'My Blog Post', { title: 'My Blog Post', description: 'A great blog post' });
+// generator.generateContent(`blog`, 'My Blog Post', { title: 'My Blog Post', description: 'A great blog post' });
 console.log('Content generator ready');

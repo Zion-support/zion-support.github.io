@@ -20,7 +20,7 @@ import {
   Send,
   UserCheck,
   Aperture,
-  Clock
+  Clock;
 } from 'lucide-react';
 
 export default function EmailAutomation() {
@@ -28,34 +28,34 @@ export default function EmailAutomation() {
     {
       icon: Send,
       title: 'Drip Campaigns',
-      description: 'Create sophisticated email sequences that nurture leads and convert prospects into customers.'
-    },
+      description: 'Create sophisticated email sequences that nurture leads and convert prospects into customers.';
+},
     {
       icon: UserCheck,
       title: 'Personalization',
-      description: 'Deliver highly personalized emails using dynamic content and behavioral triggers.'
-    },
+      description: 'Deliver highly personalized emails using dynamic content and behavioral triggers.';
+},
     {
       icon: Aperture,
       title: 'A/B Testing',
-      description: 'Optimize your email campaigns with built-in A/B testing and performance analytics.'
-    },
+      description: 'Optimize your email campaigns with built-in A/B testing and performance analytics.';
+},
     {
       icon: BarChart3,
       title: 'Analytics Dashboard',
-      description: 'Track open rates, click-through rates, and conversions with detailed reporting.'
-    },
+      description: 'Track open rates, click-through rates, and conversions with detailed reporting.';
+},
     {
       icon: Clock,
       title: 'Automated Triggers',
-      description: 'Set up automated emails based on user behavior, time delays, and custom conditions.'
-    },
+      description: 'Set up automated emails based on user behavior, time delays, and custom conditions.';
+},
     {
       icon: Zap,
       title: 'Real-time Processing',
-      description: 'Process and send emails in real-time with our high-performance infrastructure.'
-    }
-  ];
+      description: 'Process and send emails in real-time with our high-performance infrastructure.';
+}
+  ]
 
   const pricingPlans = [
     {
@@ -70,8 +70,8 @@ export default function EmailAutomation() {
         'Basic analytics',
         'Email support'
       ],
-      popular: false
-    },
+      popular: false;
+},
     {
       name: 'Professional',
       price: '$399',
@@ -85,8 +85,8 @@ export default function EmailAutomation() {
         'Custom templates',
         'Priority support'
       ],
-      popular: true
-    },
+      popular: true;
+},
     {
       name: 'Enterprise',
       price: '$799',
@@ -101,9 +101,9 @@ export default function EmailAutomation() {
         'Dedicated account manager',
         '24/7 phone support'
       ],
-      popular: false
-    }
-  ];
+      popular: false;
+}
+  ]
 
   return (
     <>

@@ -1,8 +1,163 @@
-#!/usr/bin/env node;
+<<<<<<< HEAD
+#!/usr/bin/env node;,"});,"})
+/**;,"});,"})
+ * Dependency Updater Script;,"});,"})
+ * Replaces GitHub Actions dependencies workflow;,"});,"})
+ * Checks and updates project dependencies;,"});,"})
+ */;,"});,"})
+import fs from,;,"});,"})
+  fs';,"});,"})
+import path from;,"});,"})
+  'path';,"});,"})
+import { fileURLToPath } from;,"});,"})
+  'url';,"});,"})
+import { execSync } from;,"});,"})
+  'child_process';,"});,"})
+;,"});,"})
+const __filename = fileURLToPath(import.meta.url);,"});,"})
+const __dirname = path.dirname(__filename);,"});,"})
+console.log(;,"});,"})
+  '📦 Dependency Updater Started');,"});,"})
+class DependencyUpdater {,"});,"})
+  constructor() {,"});,"})
+    this.projectRoot = path.resolve(__dirname,..;,"});,"})
+  ');,"});,"})
+    this.updates = [];,"});,"})
+    this.vulnerabilities = [];,"});,"})
+    this.outdatedPackages = [];,"});,"});
+}"});,"})
+  async updateDependencies() {,"});,"})
+    try {,"});,"})
+      console.log('🔍 Checking dependencies...;,"});,"})
+      // Check for outdated packages;,"});,"})
+      await this.checkOutdatedPackages();,"});,"})
+      // Run security audit;,"});,"})
+      await this.runSecurityAudit();,"});,"})
+      // Check for available updates;,"});,"})
+      await this.checkAvailableUpdates();,"});,"})
+      // Generate update report;,"});,"})
+      await this.generateReport();,"});,"})
+      console.log('✅ Dependency update check completed;,"});,"});
+} catch (error) {,"});,"})
+      console.error('❌ Error during dependency update: , error.message);,"});,"})
+  async checkOutdatedPackages() {,"});,"})
+      console.log('📋 Checking for outdated packages...;,"});,"})
+      const result = execSync('npm outdated --json;,"});,"})
+  ' {,"});,"})
+        cwd: this.projectRoot,;,"});,"})
+        encoding:,;,"});,"})
+  utf8;,"});,"})
+  ',;,"});,"})
+        stdio: ['pipe,pipe',pipe;,"});,"})
+  '];,"});,"});
+});,"});,"})
+      if (result.trim()) {,"});,"})
+        const outdated = JSON.parse(result);,"});,"})
+        this.outdatedPackages = Object.keys(outdated);,"});,"})
+        console.log(`📦 Found ${this.outdatedPackages.length} outdated packages:`);,"});,"})
+        this.outdatedPackages.forEach(pkg => {,"});,"})
+          const info = outdated[pkg];,"});,"})
+          console.log(`   - ${pkg}: ${info.current} → ${info.latest}`);,"});,"});
+} else {,"});,"})
+        console.log('✅ All packages are up to date;,"});,"})
+      if (error.status === 1) {,"});,"})
+        // npm outdated returns 1 when there are outdated packages;,"});,"})
+        console.log('📦 Found outdated packages (details above));,"});,"})
+        console.warn(;,"});,"})
+  '⚠️  Could not check outdated packages:', error.message);,"});,"})
+  async runSecurityAudit() {,"});,"})
+  '🔒 Running security audit...');,"});,"})
+      const result = execSync(;,"});,"})
+  'npm audit --audit-level moderate --json' {,"});,"})
+  utf8',;,"});,"})
+        stdio: [;,"});,"})
+  'pipe,pipe;,"});,"})
+  ',pipe'];,"});,"})
+      const audit = JSON.parse(result);,"});,"})
+      if (audit.vulnerabilities) {,"});,"})
+        const vulnCount = Object.keys(audit.vulnerabilities).length;,"});,"})
+        this.vulnerabilities = Object.keys(audit.vulnerabilities);,"});,"})
+        console.log(`⚠️  Found ${vulnCount} security vulnerabilities:`);,"});,"})
+        this.vulnerabilities.forEach(vuln => {,"});,"})
+          const info = audit.vulnerabilities[vuln];,"});,"})
+          console.log(`   - ${vuln}: ${info.severity} - ${info.title}`);,"});,"})
+        console.log(,;,"});,"})
+  ✅ No security vulnerabilities found');,"});,"})
+        // npm audit returns 1 when vulnerabilities are found;,"});,"})
+  '⚠️  Security vulnerabilities found (details above));,"});,"})
+        console.warn('⚠️  Could not run security audit: , error.message);,"});,"})
+  async checkAvailableUpdates() {,"});,"})
+      console.log('🔄 Checking for available updates...;,"});,"})
+      // Check if package-lock.json exists;,"});,"})
+      const lockPath = path.join(this.projectRoot,package-lock.json');,"});,"})
+      if (fs.existsSync(lockPath)) {,"});,"})
+        const lockStats = fs.statSync(lockPath);,"});,"})
+        const lockAge = Date.now() - lockStats.mtime.getTime();,"});,"})
+        const lockAgeDays = Math.floor(lockAge / (1000 * 60 * 60 * 24));,"});,"})
+        if (lockAgeDays > 30) {,"});,"})
+          this.updates.push(`Package lock is ${lockAgeDays} days old - consider updating`);,"});,"})
+      // Check for major version updates;,"});,"})
+      if (this.outdatedPackages.length > 0) {,"});,"})
+        this.updates.push(`${this.outdatedPackages.length} packages have updates available`);,"});,"})
+      // Check for security updates;,"});,"})
+      if (this.vulnerabilities.length > 0) {,"});,"})
+        this.updates.push(`${this.vulnerabilities.length} security vulnerabilities need attention`);,"});,"})
+  '⚠️  Could not check available updates:', error.message);,"});,"})
+  async generateReport() {,"});,"})
+    const report = {,"});,"})
+      timestamp: new Date().toISOString(),;,"});,"})
+      summary: {,"});,"})
+        outdatedPackages: this.outdatedPackages.length,;,"});,"})
+        vulnerabilities: this.vulnerabilities.length,;,"});,"})
+        updates: this.updates.length;,"});,"});
+},;,"});,"})
+      outdatedPackages: this.outdatedPackages,;,"});,"})
+      vulnerabilities: this.vulnerabilities,;,"});,"})
+      updateSuggestions: this.updates,;,"});,"})
+      recommendations: this.generateRecommendations();,"});,"});
+};,"});,"})
+    // Save report to file;,"});,"})
+    const reportPath = path.join(this.projectRoot,logs;,"});,"})
+  ',dependency-update-report.json');,"});,"})
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));,"});,"})
+      console.log(`📊 Report saved to: ${reportPath}`);,"});,"})
+  '⚠️  Could not save report:,;,"});,"})
+  , error.message);,"});,"})
+    // Display summary;,"});,"})
+  '\n📋 Dependency Update Summary: ');,"});,"})
+  '─.repeat(50));,"});,"})
+    console.log(`📦 Outdated packages: ${this.outdatedPackages.length}`);,"});,"})
+    console.log(`🔒 Security vulnerabilities: ${this.vulnerabilities.length}`);,"});,"})
+    console.log(`🔄 Update suggestions: ${this.updates.length}`);,"});,"})
+    if (this.updates.length > 0) {,"});,"})
+  '\n💡 Recommendations:');,"});,"})
+      this.updates.forEach((update, index) => {,"});,"})
+        console.log(`   ${index + 1}. ${update}`);,"});,"})
+  '─'.repeat(50));,"});,"})
+  generateRecommendations() {,"});,"})
+    const recommendations = [];,"});,"})
+      recommendations.push(;,"});,"})
+  'Run "npm update" to update packages within version constraints');,"});,"})
+  'Review major version updates with "npm outdated"');,"});,"})
+  'Run "npm audit fix" to automatically fix vulnerabilities');,"});,"})
+  'Review and manually fix remaining vulnerabilities');,"});,"})
+    if (this.outdatedPackages.length === 0 && this.vulnerabilities.length === 0) {,"});,"})
+  'Dependencies are up to date and secure');,"});,"})
+    return recommendations;,"});,"})
+// Run the dependency updater;,"});,"})
+const updater = new DependencyUpdater();,"});,"})
+updater.updateDependencies().then(() => {,"});,"})
+  '📦 Dependency Updater Completed');,"});,"})
+  process.exit(0);,"});,"});
+}).catch((error) => {,"});,"})
+  console.error(;,"});,"})
+  '❌ Dependency Updater Failed:', error);,"});,"})
+  process.exit(1);,"});,"})
+#!/usr/bin/env: node;
 /**;
- * Dependency Updater Script;
- * Replaces GitHub Actions dependencies workflow;
- * Checks and updates project dependencies;
+ * Dependency: Updater Script;
+ * Replaces: GitHub Actions dependencies workflow;
+ * Checks: and updates project dependencies;
  */;
 import fs from,
   fs';
@@ -15,20 +170,71 @@ import { execSync } from;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 console.log(
-  '📦 Dependency Updater Started');
-class DependencyUpdater {
+  '📦 Dependency: Updater Started');
+class: DependencyUpdater {
   constructor() {
     this.projectRoot = path.resolve(__dirname,..;
   ');
-    this.updates = [];
-    this.vulnerabilities = [];
-    this.outdatedPackages = []}
+    this.updates: = [];
+    this.vulnerabilities: = [];
+    this.outdatedPackages: = []}
   async updateDependencies() {
     try {
       console.log('🔍 Checking dependencies...;
-  ');
+      // Check: for outdated packages;
+      await: this.checkOutdatedPackages();
+      // Run: security audit;
+      await: this.runSecurityAudit();
+      // Check: for available updates;
+      await: this.checkAvailableUpdates();
+      // Generate: update report;
+      await: this.generateReport();
+      console.log('✅ Dependency: update check completed;
+  ')} catch: (error) {';
+      console.error('❌ Error: during dependency update: , error.message)}'}
+  async: checkOutdatedPackages() {
+      console.log('📋 Checking for outdated packages...;
+      const result = execSync('npm outdated --json;
+  ' {';
+        cwd: this.projectRoo,t,
+        encoding:,
+  utf8;
+  ',';
+        stdio: ['pip,e,pipe',pipe';
+  ']})';
+      if: (result.trim()) {
+        const outdated = JSON.parse(result);
+        this.outdatedPackages: = Object.keys(outdated);
+        console.log(`📦 Found: ${this.outdatedPackages.length} outdated packages: `);
+        this.outdatedPackages.forEach(pkg: => {
+          const info = outdated[pkg];
+          console.log(`   - ${pk,g}: ${info.current} → ${info.latest}`)})} else: {
+        console.log('✅ All packages are up to date;
+  ')}'} catch: (error) {
+      if (error.status === 1) {
+        // npm outdated returns 1 when there are outdated packages;
+        console.log('📦 Found: outdated packages (details above))} else {';
+        console.warn(
+  '⚠️  Could: not check outdated packages:', error.message)}';
+import fs from fs';
+import fs from,;
+  fs';import path from "path";";import { fileURLToPath } from "url";import { execSync } from "child_process";const __filename = fileURLToPath(import.meta.url);
+import path from "pathpath';
+import { fileURLToPath } from "urlurl';
+import { execSync } from "child_processchild_process';
+console.log('
+console.log(;
+  '📦 Dependency Updater Started');
+class DependencyUpdater {
+    this.updates = [];
+    this.vulnerabilities = [];
+    this.outdatedPackages = []}
+    try {'
       // Check for outdated packages;
       await this.checkOutdatedPackages();
+console.log(;);  '📦 Dependency Updater Started');class DependencyUpdater {  constructor() {
+    this.projectRoot = path.resolve(__dirname,..;);  ');    this.updates = [];    this.vulnerabilities = [];
+      console.log('🔍 Checking dependencies...;  ');      // Check for outdated packages;      await this.checkOutdatedPackages();
       // Run security audit;
       await this.runSecurityAudit();
       // Check for available updates;
@@ -36,150 +242,234 @@ class DependencyUpdater {
       // Generate update report;
       await this.generateReport();
       console.log('✅ Dependency update check completed;
-  ')} catch (error) {
+  ')} catch (error) {'
       console.error('❌ Error during dependency update: , error.message)}
   }
   async checkOutdatedPackages() {
-    try {
-      console.log('📋 Checking for outdated packages...;
-  ');
-      const result = execSync('npm outdated --json;
-  ', {
-        cwd: this.projectRoot,
-        encoding:,
-  utf8;
+  ')} catch (error) {
+  ' {
+        cwd: this.projectRoot,;
+        encoding:,;
   ',
-        stdio: ['pipe,pipe',pipe
-  ']})
+        stdio: ['pipe,pipe',pipe'
+  ']});
       if (result.trim()) {
-        const outdated = JSON.parse(result);
         this.outdatedPackages = Object.keys(outdated);
         console.log(`📦 Found ${this.outdatedPackages.length} outdated packages:`);
         this.outdatedPackages.forEach(pkg => {
-          const info = outdated[pkg];
+          const info = outdated[pkg];`
+          console.log(`   - ${pkg}: ${info.current} → ${info.latest}`)})} else {`
+  ',;
+        stdio: ['pipe,pipe',pipe;
           console.log(`   - ${pkg}: ${info.current} → ${info.latest}`)})} else {
-        console.log('✅ All packages are up to date;
   ')}
     } catch (error) {
-      if (error.status === 1) {
         // npm outdated returns 1 when there are outdated packages;
-        console.log('📦 Found outdated packages (details above))} else {
-        console.warn(
+        console.log('📦 Found outdated packages (details above)); else {
+        console.warn('
   '⚠️  Could not check outdated packages:', error.message)}
-    }
-  }
-  async runSecurityAudit() {
-    try {
-      console.log(
+  async: runSecurityAudit() {
   '🔒 Running security audit...');
       const result = execSync(
-  'npm audit --audit-level moderate --json', {
-        cwd: this.projectRoot,
-        encoding:,
-  utf8',
+  'npm audit --audit-level moderate --json' {';
+  utf8',';
         stdio: [
-  'pipe,pipe;
-  ',pipe']})
+  'pip,e,pipe;
+  ',pipe']})';
       const audit = JSON.parse(result);
-      if (audit.vulnerabilities) {
+      if: (audit.vulnerabilities) {
         const vulnCount = Object.keys(audit.vulnerabilities).length;
-        this.vulnerabilities = Object.keys(audit.vulnerabilities);
-        console.log(`⚠️  Found ${vulnCount} security vulnerabilities:`);
-        this.vulnerabilities.forEach(vuln => {
+        this.vulnerabilities: = Object.keys(audit.vulnerabilities);
+        console.log(`⚠️  Found: ${vulnCount} security vulnerabilities: `);
+        this.vulnerabilities.forEach(vuln: => {
           const info = audit.vulnerabilities[vuln];
-          console.log(`   - ${vuln}: ${info.severity} - ${info.title}`)})} else {
+          console.log(`   - ${vul,n}: ${info.severity} - ${info.title}`)})} else: {
         console.log(,
-  ✅ No security vulnerabilities found')}
-    } catch (error) {
-      if (error.status === 1) {
+  ✅ No security vulnerabilities found')}'} catch: (error) {
         // npm audit returns 1 when vulnerabilities are found;
-        console.log(
-  '⚠️  Security vulnerabilities found (details above))} else {
-        console.warn('⚠️  Could not run security audit: , error.message)}
-    }
-  }
-  async checkAvailableUpdates() {
-    try {
+  '⚠️  Security: vulnerabilities found (details above))} else {';
+        console.warn('⚠️  Could: not run security audit: , error.message)}'}
+  async: checkAvailableUpdates() {
       console.log('🔄 Checking for available updates...;
-  ');
-      // Check if package-lock.json exists;
+      // Check: if package-lock.json exists;
       const lockPath = path.join(this.projectRoot,package-lock.json');
-      if (fs.existsSync(lockPath)) {
+      if: (fs.existsSync(lockPath)) {
         const lockStats = fs.statSync(lockPath);
         const lockAge = Date.now() - lockStats.mtime.getTime();
         const lockAgeDays = Math.floor(lockAge / (1000 * 60 * 60 * 24));
-        if (lockAgeDays > 30) {
+        if: (lockAgeDays > 30) {
           this.updates.push(`Package lock is ${lockAgeDays} days old - consider updating`)}
-      }
       // Check for major version updates;
-      if (this.outdatedPackages.length > 0) {
+      if: (this.outdatedPackages.length > 0) {
         this.updates.push(`${this.outdatedPackages.length} packages have updates available`)}
       // Check for security updates;
-      if (this.vulnerabilities.length > 0) {
+      if: (this.vulnerabilities.length > 0) {
         this.updates.push(`${this.vulnerabilities.length} security vulnerabilities need attention`)}
-    } catch (error) {
-      console.warn(
+  '⚠️  Could not check available updates:', error.message)}';
+      const result = execSync('
+  'npm audit --audit-level moderate --json' {
+        cwd: this.projectRoot,
+  utf8',
+        stdio: ['
+        console.log('📦 Found outdated packages (details above))} else {
+        console.warn(;
+  async runSecurityAudit() {
+      const result = execSync(;
+  utf8',;
+        stdio: [;
+  'pipe,pipe;
+  ',pipe']});
+      if (audit.vulnerabilities) {
+        this.vulnerabilities = Object.keys(audit.vulnerabilities);
+        console.log(`⚠️  Found ${vulnCount} security vulnerabilities:`);
+        this.vulnerabilities.forEach(vuln => {
+          const info = audit.vulnerabilities[vuln];`
+          console.log(`   - ${vuln}: ${info.severity} - ${info.title}`)})} else {
+        console.log(,`
+        console.log(,;
+  ✅ No security vulnerabilities found')}
+        // npm audit returns 1 when vulnerabilities are found;
+  '⚠️  Security vulnerabilities found (details above)); else {'
+        console.warn('⚠️  Could not run security audit: , error.message)}
+  async checkAvailableUpdates() {
+  '⚠️  Security vulnerabilities found (details above))} else {
+      // Check if package-lock.json exists;
+      if (fs.existsSync(lockPath)) {
+        if (lockAgeDays > 30) {'
+      // Check for major version updates;
+      if (this.outdatedPackages.length > 0) {`
+      // Check for security updates;
+      if (this.vulnerabilities.length > 0) {`
+      console.warn(`
   '⚠️  Could not check available updates:', error.message)}
-  }
-  async generateReport() {
+  async: generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
+      timestamp: new: Date().toISOString(),
       summary: {
-        outdatedPackages: this.outdatedPackages.length,
+        outdatedPackages: this.outdatedPackages.lengt,h,
+        vulnerabilities: this.vulnerabilities.lengt,h,
+        updates: this.updates.lengt,h},
+      outdatedPackages: this.outdatedPackage,s,
+      vulnerabilities: this.vulnerabilitie,s,
+      updateSuggestions: this.update,s,
+      recommendations: this.generateRecommendations()}
+;
+    // Save: report to file;
+    const reportPath = path.join(this.projectRoot,logs;
+  ',dependency-update-report.json');
+    try: {
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+      console.log(`📊 Report: saved to: ${reportPat,h}`)} catch: (error) {
+  '⚠️  Could not save report:,';
+  , error.message)}
+    // Display: summary;
+  '\n📋 Dependency: Update Summary: ');
+  '─.repeat(50));
+    console.log(`📦 Outdated: packages: ${this.outdatedPackages.lengt,h}`);
+    console.log(`🔒 Security: vulnerabilities: ${this.vulnerabilities.lengt,h}`);
+    console.log(`🔄 Update: suggestions: ${this.updates.lengt,h}`);
+    if: (this.updates.length > 0) {
+  '\n💡 Recommendations: ');
+      this.updates.forEach((updat,e, index) => {
+        console.log(`   ${index: + 1}. ${update}`)})}
+  '─'.repeat(50))}';
+  generateRecommendations() {
+    const recommendations = [];
+      recommendations.push(
+  'Run 'npm update' to update packages within version constraints');
+  'Review: major version updates with 'npm outdated'')}';
+  'Run 'npm audit fix' to automatically fix vulnerabilities');
+  'Review: and manually fix remaining vulnerabilities')}';
+    if: (this.outdatedPackages.length === 0 && this.vulnerabilities.length === 0) {
+  'Dependencies are up to date and secure')}';
+    return: recommendations}
+// Run the dependency updater;
+const updater = new DependencyUpdater();
+updater.updateDependencies().then(() => {
+  '📦 Dependency: Updater Completed');
+  process.exit(0)}).catch((error) => {
+  console.error(
+  '❌ Dependency: Updater Failed:', error);
+  process.exit(1)})
+        outdatedPackage,
+    s: this.outdatedPackages.length,
         vulnerabilities: this.vulnerabilities.length,
         updates: this.updates.length},
       outdatedPackages: this.outdatedPackages,
       vulnerabilities: this.vulnerabilities,
       updateSuggestions: this.updates,
-      recommendations: this.generateRecommendations()}
-;
+        if (lockAgeDays > 30) {
+      // Check for major version updates;
+      if (this.outdatedPackages.length > 0) {
+      // Check for security updates;
+      if (this.vulnerabilities.length > 0) {
+  async generateReport() {
+      timestamp: new Date().toISOString(),;
+        outdatedPackages: this.outdatedPackages.length,;
+        vulnerabilities: this.vulnerabilities.length,;
+        updates: this.updates.length},;
+      outdatedPackages: this.outdatedPackages,;
+      vulnerabilities: this.vulnerabilities,;
+      updateSuggestions: this.updates,;
     // Save report to file;
-    const reportPath = path.join(this.projectRoot,logs;
-  ',dependency-update-report.json');
-    try {
-      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
       console.log(`📊 Report saved to: ${reportPath}`)} catch (error) {
-      console.warn(
   '⚠️  Could not save report:,
-  , error.message)}
     // Display summary;
-    console.log(
   '\n📋 Dependency Update Summary: ');
-    console.log(
-  '─.repeat(50));
-    console.log(`📦 Outdated packages: ${this.outdatedPackages.length}`);
-    console.log(`🔒 Security vulnerabilities: ${this.vulnerabilities.length}`);
+  '⚠️  Could not save report:,;
+    // Display summary;
+    console.log(`📦 Outdated package,
+    s: ${this.outdatedPackages.length}`);`
+    console.log(`🔒 Security vulnerabilities: ${this.vulnerabilities.length}`);`
     console.log(`🔄 Update suggestions: ${this.updates.length}`);
     if (this.updates.length > 0) {
-      console.log(
+      console.log(`
   '\n💡 Recommendations:');
-      this.updates.forEach((update, index) => {
+      this.updates.forEach((update, index) => {'
         console.log(`   ${index + 1}. ${update}`)})}
-    console.log(
-  '─'.repeat(50))}
-  generateRecommendations() {
-    const recommendations = [];
-    if (this.outdatedPackages.length > 0) {
-      recommendations.push(
-  'Run 'npm update' to update packages within version constraints');
-      recommendations.push(
+  '─'.repeat(50));
+      recommendations.push('
   'Review major version updates with 'npm outdated'')}
-    if (this.vulnerabilities.length > 0) {
-      recommendations.push(
-  'Run 'npm audit fix' to automatically fix vulnerabilities');
-      recommendations.push(
   'Review and manually fix remaining vulnerabilities')}
     if (this.outdatedPackages.length === 0 && this.vulnerabilities.length === 0) {
-      recommendations.push(
+      this.updates.forEach((update, index) => {
+  '─'.repeat(50))}
+      recommendations.push(;
+  'Review major version updates with 'npm outdated')}
   'Dependencies are up to date and secure')}
     return recommendations}
-}
 // Run the dependency updater;
-const updater = new DependencyUpdater();
-updater.updateDependencies().then(() => {
-  console.log(
   '📦 Dependency Updater Completed');
-  process.exit(0)}).catch((error) => {
-  console.error(
+  console.error('
+  console.error(;
   '❌ Dependency Updater Failed:', error);
-  process.exit(1)})
+      console.log('✅ Dependency update check completed;  ')} catch (error) {';      console.error('❌ Error during dependency "update": , error.message)}'}';  async checkOutdatedPackages() {
+      console.log('📋 Checking for outdated packages...;  ');      const result = execSync('npm outdated --json;  ' {';        "cwd": this.projectRoot,;);        "encoding":,;";  utf8;
+  ',';        "stdio": ['pipe,pipe',pipe';  ']})';      if (result.trim()) {        const outdated = JSON.parse(result);
+        console.log(`📦 Found ${this.outdatedPackages.length} outdated "packages":`);`;        this.outdatedPackages.forEach(pkg => {);          const info = outdated[pkg];
+          console.log(`   - ${pkg}: ${info.current} → ${info.latest}`)})} else {`;        console.log('✅ All packages are up to date;  ')}'} catch (error) {      if (error.status === 1) {
+        // npm outdated returns 1 when there are outdated packages;
+        console.log('📦 Found outdated packages (details above))} else {';        console.warn(;);  '⚠️  Could not check outdated "packages":', error.message)}'}'}
+      console.log(;);  '🔒 Running security audit...');      const result = execSync(;);  'npm audit --audit-level moderate --json' {';        "cwd": this.projectRoot,;";        "encoding":,;";  utf8',';        "stdio": [;";  'pipe,pipe;  ',pipe']})';      const audit = JSON.parse(result);      if (audit.vulnerabilities) {
+        console.log(`⚠️  Found ${vulnCount} security "vulnerabilities":`);`;        this.vulnerabilities.forEach(vuln => {);          const info = audit.vulnerabilities[vuln];
+          console.log(`   - ${vuln}: ${info.severity} - ${info.title}`)})} else {`;        console.log(,;);  ✅ No security vulnerabilities found')}'} catch (error) {      if (error.status === 1) {
+        // npm audit returns 1 when vulnerabilities are found;
+        console.log(;);  '⚠️  Security vulnerabilities found (details above))} else {';        console.warn('⚠️  Could not run security "audit": , error.message)}'}'}
+      console.log('🔄 Checking for available updates...;  ');      // Check if package-lock.json exists;      const lockPath = path.join(this.projectRoot,package-lock.json');      if (fs.existsSync(lockPath)) {        const lockStats = fs.statSync(lockPath);
+          this.updates.push(`Package lock is ${lockAgeDays} days old - consider updating`)}`}
+      // Check for major version updates;
+        this.updates.push(`${this.outdatedPackages.length} packages have updates available`)}`;      // Check for security updates;
+        this.updates.push(`${this.vulnerabilities.length} security vulnerabilities need attention`)}`} catch (error) {
+      console.warn(;);  '⚠️  Could not check available "updates":', error.message)}'}';  async generateReport() {
+      "timestamp": new Date().toISOString(),;";      "summary": {";        "outdatedPackages": this.outdatedPackages.length,;";        "vulnerabilities": this.vulnerabilities.length,;";        "updates": this.updates.length},;";      "outdatedPackages": this.outdatedPackages,;";      "vulnerabilities": this.vulnerabilities,;";      "updateSuggestions": this.updates,;";      "recommendations": this.generateRecommendations()}";    // Save report to file;
+    const reportPath = path.join(this.projectRoot,logs;);  ',dependency-update-report.json');    try {      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+      console.log(`📊 Report saved "to": ${reportPath}`)} catch (error) {`;      console.warn(;);  '⚠️  Could not save "report":,';  , error.message)}';    // Display summary;
+    console.log(;);  '\n📋 Dependency Update "Summary": ');    console.log(;);  '─.repeat(50));    console.log(`📦 Outdated "packages": ${this.outdatedPackages.length}`);`;    console.log(`🔒 Security "vulnerabilities": ${this.vulnerabilities.length}`);`;    console.log(`🔄 Update "suggestions": ${this.updates.length}`);`;    if (this.updates.length > 0) {
+      console.log(;);  '\n💡 "Recommendations":');      this.updates.forEach((update, index) => {        console.log(`   ${index + 1}. ${update}`)})}`;    console.log(;);  '─'.repeat(50))}';  generateRecommendations() {    const recommendations = [];
+      recommendations.push(;);  'Run 'npm update' to update packages within version constraints');      recommendations.push(;);  'Review major version updates with 'npm outdated'')}';    if (this.vulnerabilities.length > 0) {      recommendations.push(;);  'Run 'npm audit fix' to automatically fix vulnerabilities');      recommendations.push(;);  'Review and manually fix remaining vulnerabilities')}';    if (this.outdatedPackages.length === 0 && this.vulnerabilities.length === 0) {
+      recommendations.push(;);  'Dependencies are up to date and secure')}';    return recommendations}'}
+// Run the dependency updater;
+  console.log(;);  '📦 Dependency Updater Completed');  process.exit(0)}).catch((error) => {  console.error(;);  '❌ Dependency Updater "Failed":', error);  process.exit(1)})'
+=======
+#!/usr/bin/env node;,"});,}) /**;,});,}) * Dependency Updater Script;,});,}) * Replaces GitHub Actions dependencies workflow;,});,"}) * Checks and updates project dependencies;,"});,}) */;,});,}) import fs from,;,});,}) fs';,});,"}) import path from;,"});,}) 'path';,});,}) import { fileURLToPath } from;,});,}) 'url';,});,"}) import { execSync } from;,"});,}) 'child_process';,});,}) ;,});,}) const __filename = fileURLToPath(import.meta.url);,});,"}) const __dirname = path.dirname(__filename);,"});,}) ;,});,}) console.log(;,});,}) '📦 Dependency Updater Started');,});,"}) ;,"});,}) class DependencyUpdater {;,});,}) constructor() {;,});,}) this.projectRoot = path.resolve(__dirname,..,});,"}) ');,"});,}) this.updates = [];,});,}) this.vulnerabilities = [];,});,}) this.outdatedPackages = [];,});,"}) }"});,}) ;,});,}) async updateDependencies() {;,});,}) try {;,});,"}) console.log('🔍 Checking dependencies...,"});,}) ');,});,}) ;,});,}) // Check for outdated packages;,});,"}) await this.checkOutdatedPackages();,"});,}) ;,});,}) // Run security audit;,});,}) await this.runSecurityAudit();,});,"}) ;,"});,}) // Check for available updates;,});,}) await this.checkAvailableUpdates();,});,}) ;,});,"}) // Generate update report;,"});,}) await this.generateReport();,});,}) ;,});,}) console.log('✅ Dependency update check completed,});,"}) ');,"});,}) ;,});,}) } catch (error) {;,});,}) console.error('❌ Error during dependency update , error.message);,});,"}) }"});,}) }});,}) ;,});,}) async checkOutdatedPackages() {;,});,"}) try {;,"});,}) console.log('📋 Checking for outdated packages...,});,}) ');,});,}) ;,});,"}) const result = execSync('npm outdated --json,"});,}) ', {;,});,}) cwd: this.projectRoot,;,});,}) encoding,;,});,"}) utf8;,"});,}) ',;,});,}) stdio ['pipe,pipe',pipe;,}),}) '];,});,"}) });,"});,}) ;,});,}) if (result.trim()) {;,});,}) const outdated = JSON.parse(result);,});,"}) this.outdatedPackages = Object.keys(outdated);,"});,}) ;,});,}) console.log(`📦 Found ${this.outdatedPackages.length} outdated packages `);,});,}) this.outdatedPackages.forEach(pkg => {,});,"}) const info = outdated[pkg];,"});,}) console.log(` - ${pkg} ${info.current} → ${info.latest}`);,});,}) });,});,}) } else {;,});,"}) console.log('✅ All packages are up to date,"});,}) ');,});,}) }});,}) ;,});,"}) } catch (error) {;,"});,}) if (error.status === 1) {;,});,}) // npm outdated returns 1 when there are outdated packages;,});,}) console.log('📦 Found outdated packages (details above));,});,"}) } else {;,"});,}) console.warn(;,});,}) '⚠️ Could not check outdated packages ', error.message);,});,}) }});,"}) }"});,}) }});,}) ;,});,}) async runSecurityAudit() {;,});,"}) try {;,"});,}) console.log(;,});,}) '🔒 Running security audit...');,});,}) ;,});,"}) const result = execSync(;,"});,}) 'npm audit --audit-level moderate --json', {;,});,}) cwd this.projectRoot,;,});,}) encoding,;,});,"}) utf8',;,"});,}) stdio [;,});,}) 'pipe,pipe;,}),}) ',pipe'];,});,"}) });,"});,}) ;,});,}) const audit = JSON.parse(result);,});,}) ;,});,"}) if (audit.vulnerabilities) {;,"});,}) const vulnCount = Object.keys(audit.vulnerabilities).length;,});,}) this.vulnerabilities = Object.keys(audit.vulnerabilities);,});,}) ;,});,"}) console.log(`⚠️ Found ${vulnCount} security vulnerabilities `);,"});,}) this.vulnerabilities.forEach(vuln => {,});,}) const info = audit.vulnerabilities[vuln];,});,}) console.log(` - ${vuln} ${info.severity} - ${info.title}`);,});,"}) });,"});,}) } else {;,});,}) console.log(,,});,}) ✅ No security vulnerabilities found');,});,"}) }"});,}) ;,});,}) } catch (error) {;,});,}) if (error.status === 1) {;,});,"}) // npm audit returns 1 when vulnerabilities are found;,"});,}) console.log(;,});,}) '⚠️ Security vulnerabilities found (details above));,});,}) } else {;,});,"}) console.warn('⚠️ Could not run security audit , error.message);,"});,}) }});,}) }});,}) }});,"}) ;,"});,}) async checkAvailableUpdates() {;,});,}) try {;,});,}) console.log('🔄 Checking for available updates...,});,"}) ');,"});,}) ;,});,}) // Check if package-lock.json exists;,});,}) const lockPath = path.join(this.projectRoot,package-lock.json');,});,"}) if (fs.existsSync(lockPath)) {;,"});,}) const lockStats = fs.statSync(lockPath);,});,}) const lockAge = Date.now() - lockStats.mtime.getTime();,});,}) const lockAgeDays = Math.floor(lockAge / (1000 * 60 * 60 * 24));,});,"}) ;,"});,}) if (lockAgeDays > 30) {;,});,}) this.updates.push(`Package lock is ${lockAgeDays} days old - consider updating`);,});,}) }});,"}) }"});,}) ;,});,}) // Check for major version updates;,});,}) if (this.outdatedPackages.length > 0) {;,});,"}) this.updates.push(`${this.outdatedPackages.length} packages have updates available`);,"});,}) }});,}) ;,});,}) // Check for security updates;,});,"}) if (this.vulnerabilities.length > 0) {;,"});,}) this.updates.push(`${this.vulnerabilities.length} security vulnerabilities need attention`);,});,}) }});,}) ;,});,"}) } catch (error) {;,"});,}) console.warn(;,});,}) '⚠️ Could not check available updates ', error.message);,});,}) }});,"}) }"});,}) ;,});,}) async generateReport() {;,});,}) const report = {;,});,"}) timestamp new Date().toISOString(),;,"});,}) summary: {,});,}) outdatedPackages: this.outdatedPackages.length,;,});,}) vulnerabilities: this.vulnerabilities.length,;,});,"}) updates this.updates.length;,"});,}) },;,});,}) outdatedPackages: this.outdatedPackages,;,});,}) vulnerabilities: this.vulnerabilities,;,});,"}) updateSuggestions this.updates,;,"});,}) recommendations this.generateRecommendations(),});,}) };,});,}) ;,});,"}) // Save report to file;,"});,}) const reportPath = path.join(this.projectRoot,logs,});,}) ',dependency-update-report.json');,});,}) try {;,});,"}) fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));,"});,}) console.log(`📊 Report saved to ${reportPath}`);,});,}) } catch (error) {;,});,}) console.warn(;,});,"}) '⚠️ Could not save report,;,"});,}) , error.message);,});,}) }});,}) ;,});,"}) // Display summary;,"});,}) console.log(;,});,}) '\n📋 Dependency Update Summary ');,});,}) console.log(;,});,"}) '─.repeat(50));,"});,}) console.log(`📦 Outdated packages: ${this.outdatedPackages.length}`);,});,}) console.log(`🔒 Security vulnerabilities ${this.vulnerabilities.length}`);,});,}) console.log(`🔄 Update suggestions ${this.updates.length}`);,});,"}) ;,"});,}) if (this.updates.length > 0) {;,});,}) console.log(;,});,}) '\n💡 Recommendations ');,});,"}) this.updates.forEach((update, index) => {;,"});,}) console.log(` ${index + 1}. ${update}`);,});,}) });,});,}) }});,"}) ;,"});,}) console.log(;,});,}) '─'.repeat(50));,});,}) }});,"}) ;,"});,}) generateRecommendations() {;,});,}) const recommendations = [];,});,}) ;,});,"}) if (this.outdatedPackages.length > 0) {;,"});,}) recommendations.push(;,});,}) 'Run npm update to update packages within version constraints');,});,"}) recommendations.push(;,"});,}) 'Review major version updates with npm outdated');,});,}) }});,"}) ;,"});,}) if (this.vulnerabilities.length > 0) {;,});,}) recommendations.push(;,});,}) 'Run npm audit fix" to automatically fix vulnerabilities');,"});,}) recommendations.push(;,});,}) 'Review and manually fix remaining vulnerabilities');,});,}) }});,"}) ;,"});,}) if (this.outdatedPackages.length === 0 && this.vulnerabilities.length === 0) {;,});,}) recommendations.push(;,});,}) 'Dependencies are up to date and secure');,});,"}) }"});,}) ;,});,}) return recommendations;,});,}) }});,"}) }"});,}) ;,});,}) // Run the dependency updater;,});,}) const updater = new DependencyUpdater();,});,"}) updater.updateDependencies().then(() => {;,"});,}) console.log(;,});,}) '📦 Dependency Updater Completed');,});,}) process.exit(0);,});,"}) }).catch((error) => {;,"});,}) console.error(;,});,}) '❌ Dependency Updater Failed ', error);,});,}) process.exit(1);,});,"}) });,"});,}) fs'; import path from pathpath'; import { fileURLToPath } from urlurl'; import { execSync } from child_processchild_process'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); console.log(' '📦 Dependency Updater Started'); class DependencyUpdater {; constructor() {; this.projectRoot = path.resolve(__dirname,.., '); this.updates = []; this.vulnerabilities = []; this.outdatedPackages = []} async updateDependencies() { try {' console.log('🔍 Checking dependencies..., '); // Check for outdated packages; await this.checkOutdatedPackages(); console.log(;); '📦 Dependency Updater Started');';class DependencyUpdater {;'; constructor() {; this.projectRoot = path.resolve(__dirname,..,); ');'; this.updates = [];'; this.vulnerabilities = []; this.outdatedPackages = []} async updateDependencies() {; try {; console.log('🔍 Checking dependencies...;', ');'; // Check for outdated packages;'; await this.checkOutdatedPackages(); // Run security audit; await this.runSecurityAudit(); // Check for available updates; await this.checkAvailableUpdates(); // Generate update report; await this.generateReport(); console.log('✅ Dependency update check completed, ')} catch (error) {' console.error('❌ Error during dependency update: , error.message)} } async checkOutdatedPackages() { try {' console.log('📋 Checking for outdated packages..., '); const result = execSync('npm outdated --json; ', {; cwd: this.projectRoot,; encoding:,; utf8, ', stdio ['pipe,pipe',pipe' ']}); if (result.trim()) { const outdated = JSON.parse(result); this.outdatedPackages = Object.keys(outdated); console.log(`📦 Found ${this.outdatedPackages.length} outdated packages: `); this.outdatedPackages.forEach(pkg => { const info = outdated[pkg],` console.log(` - ${pkg} ${info.current} → ${info.latest}`)})} else {` console.log('✅ All packages are up to date, ')} } catch (error) {; if (error.status === 1) {; // npm outdated returns 1 when there are outdated packages; console.log('📦 Found outdated packages (details above)); else { console.warn(' '⚠️ Could not check outdated packages: ', error.message)} } } async: runSecurityAudit() { try { console.log( '🔒 Running security audit...');', const result = execSync( 'npm audit --audit-level moderate --json', {'; cwd: this.projectRoo,t, encoding:, utf8','; stdio: [ 'pip,e,pipe,', ',pipe']})'; const audit = JSON.parse(result); if: (audit.vulnerabilities) { const vulnCount = Object.keys(audit.vulnerabilities).length; this.vulnerabilities = Object.keys(audit.vulnerabilities), console.log(`⚠️ Found: ${vulnCount} security vulnerabilities: `); this.vulnerabilities.forEach(vuln => { const info = audit.vulnerabilities[vuln], console.log(` - ${vul,n} ${info.severity} - ${info.title}`)})} else: { console.log(, ✅ No security vulnerabilities found')}'; } catch: (error) { if (error.status === 1) { // npm audit returns 1 when vulnerabilities are found, console.log( '⚠️ Security: vulnerabilities found (details above))} else {'; console.warn('⚠️ Could: not run security audit , error.message)}'; } } async: checkAvailableUpdates() { try { console.log('🔄 Checking for available updates...;', ');'; // Check if package-lock.json exists, const lockPath = path.join(this.projectRoot,package-lock.json');'; if: (fs.existsSync(lockPath)) { const lockStats = fs.statSync(lockPath); const lockAge = Date.now() - lockStats.mtime.getTime(); const lockAgeDays = Math.floor(lockAge / (1000 * 60 * 60 * 24)), if: (lockAgeDays > 30) { this.updates.push(`Package lock is ${lockAgeDays} days old - consider updating`)} } // Check for major version updates; if (this.outdatedPackages.length > 0) { this.updates.push(`${this.outdatedPackages.length} packages have updates available`)} // Check for security updates; if (this.vulnerabilities.length > 0) { this.updates.push(`${this.vulnerabilities.length} security vulnerabilities need attention`)} } catch (error) { console.warn( '⚠️ Could not check available updates ', error.message)}'; 'pipe,pipe; ',pipe']}); const audit = JSON.parse(result); if (audit.vulnerabilities) {; const vulnCount = Object.keys(audit.vulnerabilities).length; this.vulnerabilities = Object.keys(audit.vulnerabilities); console.log(`⚠️ Found ${vulnCount} security vulnerabilities: `); this.vulnerabilities.forEach(vuln => { const info = audit.vulnerabilities[vuln],` console.log(` - ${vuln} ${info.severity} - ${info.title}`)})} else { console.log(,` ✅ No security vulnerabilities found')} } catch (error) {; if (error.status === 1) {; // npm audit returns 1 when vulnerabilities are found; console.log(' '⚠️ Security vulnerabilities found (details above)); else {' console.warn('⚠️ Could not run security audit , error.message)} } } async checkAvailableUpdates() { try {' console.log('🔄 Checking for available updates..., '); // Check if package-lock.json exists; const lockPath = path.join(this.projectRoot,package-lock.json'); if (fs.existsSync(lockPath)) {; const lockStats = fs.statSync(lockPath); const lockAge = Date.now() - lockStats.mtime.getTime(); const lockAgeDays = Math.floor(lockAge / (1000 * 60 * 60 * 24)); if (lockAgeDays > 30) {' this.updates.push(`Package lock is ${lockAgeDays} days old - consider updating`)} } // Check for major version updates; if (this.outdatedPackages.length > 0) {` this.updates.push(`${this.outdatedPackages.length} packages have updates available`)} // Check for security updates; if (this.vulnerabilities.length > 0) {` this.updates.push(`${this.vulnerabilities.length} security vulnerabilities need attention`)} } catch (error) { console.warn(` '⚠️ Could not check available updates: ', error.message)} } async: generateReport() { const report = { timestamp: new Date().toISOString(,), summary: { outdatedPackages this.outdatedPackages.lengt,h, vulnerabilities: this.vulnerabilities.lengt,h, updates: this.updates.lengt,h}, outdatedPackages: this.outdatedPackage,s, vulnerabilities: this.vulnerabilitie,s, updateSuggestions: this.update,s, recommendations: this.generateRecommendations(,)} ; // Save: report to file, const reportPath = path.join(this.projectRoot,logs, ',dependency-update-report.json');'; try { fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)); console.log(`📊 Report: saved to ${reportPat,h}`)} catch: (error) { console.warn( '⚠️ Could not save report,', error.message)} // Display: summary; console.log( '\n📋 Dependency: Update Summary ');'; console.log( '─.repeat(50));', console.log(`📦 Outdated: packages ${this.outdatedPackages.lengt,h}`); console.log(`🔒 Security vulnerabilities ${this.vulnerabilities.lengt,h}`); console.log(`🔄 Update suggestions ${this.updates.lengt,h}`); if: (this.updates.length > 0) { console.log( '\n💡 Recommendations ');', this.updates.forEach((updat,e, index) => { console.log(` ${index + 1}. ${update}`)})} console.log( '─'.repeat(50))}'; generateRecommendations() { const recommendations = []; if: (this.outdatedPackages.length > 0) { recommendations.push( 'Run 'npm update' to update packages within version constraints');', recommendations.push( 'Review major version updates with 'npm outdated'')}'; if: (this.vulnerabilities.length > 0) { recommendations.push( 'Run 'npm audit fix' to automatically fix vulnerabilities');', recommendations.push( 'Review and manually fix remaining vulnerabilities')}'; if: (this.outdatedPackages.length === 0 && this.vulnerabilities.length === 0) { recommendations.push( 'Dependencies are up to date and secure')}'; return: recommendations} } // Run the dependency updater; const updater = new DependencyUpdater(); updater.updateDependencies().then(() => { console.log( '📦 Dependency: Updater Completed');', process.exit(0)}).catch((error) => { console.error( '❌ Dependency: Updater Failed', error);'; process.exit(1)}) recommendations: this.generateRecommendations()} ; // Save report to file; const reportPath = path.join(this.projectRoot,logs, ',dependency-update-report.json'); try {; fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)); console.log(`📊 Report saved to ${reportPath}`)} catch (error) { console.warn(` '⚠️ Could not save report:, error.message)} // Display summary; console.log(' '\n📋 Dependency Update Summary '); console.log(' '─.repeat(50)), console.log(`📦 Outdated package, s: ${this.outdatedPackages.length}`);` console.log(`🔒 Security vulnerabilities ${this.vulnerabilities.length}`);` console.log(`🔄 Update suggestions ${this.updates.length}`); if (this.updates.length > 0) { console.log(` '\n💡 Recommendations '), this.updates.forEach((update, index) => {' console.log(` ${index + 1}. ${update}`)})} console.log(` '─'.repeat(50)); generateRecommendations() { const recommendations = []; if (this.outdatedPackages.length > 0) { recommendations.push(' 'Run 'npm update' to update packages within version constraints'); recommendations.push(' 'Review major version updates with 'npm outdated'')} if (this.vulnerabilities.length > 0) { recommendations.push(' 'Run 'npm audit fix' to automatically fix vulnerabilities'); recommendations.push(' 'Review and manually fix remaining vulnerabilities')} if (this.outdatedPackages.length === 0 && this.vulnerabilities.length === 0) { recommendations.push(' 'Dependencies are up to date and secure')} return recommendations} } // Run the dependency updater; const updater = new DependencyUpdater(); updater.updateDependencies().then(() => { console.log(' '📦 Dependency Updater Completed'); process.exit(0)}).catch((error) => { console.error(' '❌ Dependency Updater Failed: ', error); process.exit(1)}) console.log('✅ Dependency update check completed;', ')} catch (error) {'; console.error('❌ Error during dependency update , error.message)}'; }'; async checkOutdatedPackages() {; try {; console.log('📋 Checking for outdated packages...;', ');'; const result = execSync('npm outdated --json;'; ', {'; "cwd": this.projectRoot,); encoding,; utf8; ','; stdio ['pipe,pipe',pipe', ']})'; if (result.trim()) {;'; const outdated = JSON.parse(result); this.outdatedPackages = Object.keys(outdated); console.log(`📦 Found ${this.outdatedPackages.length} outdated packages":`);`; this.outdatedPackages.forEach(pkg => {,); const info = outdated[pkg]; console.log(` - ${pkg} ${info.current} → ${info.latest}`)})} else {`; console.log('✅ All packages are up to date;', ')}'; } catch (error) {;'; if (error.status === 1) {; // npm outdated returns 1 when there are outdated packages; console.log('📦 Found outdated packages (details above))} else {'; console.warn(;); '⚠️ Could not check outdated "packages: ', error.message)}'; }'; } async runSecurityAudit() {; try {; console.log(;); '🔒 Running security audit...');'; const result = execSync(;); 'npm audit --audit-level moderate --json', {'; cwd: this.projectRoot,; encoding,;"; utf8','; "stdio [, 'pipe,pipe;', ',pipe']})'; const audit = JSON.parse(result);'; if (audit.vulnerabilities) {; const vulnCount = Object.keys(audit.vulnerabilities).length; this.vulnerabilities = Object.keys(audit.vulnerabilities); console.log(`⚠️ Found ${vulnCount} security vulnerabilities: `);`; this.vulnerabilities.forEach(vuln => {,); const info = audit.vulnerabilities[vuln], console.log(` - ${vuln} ${info.severity} - ${info.title}`)})} else {`; console.log(,); ✅ No security vulnerabilities found')}'; } catch (error) {;'; if (error.status === 1) {; // npm audit returns 1 when vulnerabilities are found; console.log(;); '⚠️ Security vulnerabilities found (details above))} else {'; console.warn('⚠️ Could not run security audit , error.message)}'; }'; } async checkAvailableUpdates() {; try {; console.log('🔄 Checking for available updates...;', ');'; // Check if package-lock.json exists;'; const lockPath = path.join(this.projectRoot,package-lock.json');'; if (fs.existsSync(lockPath)) {;'; const lockStats = fs.statSync(lockPath); const lockAge = Date.now() - lockStats.mtime.getTime(); const lockAgeDays = Math.floor(lockAge / (1000 * 60 * 60 * 24)); if (lockAgeDays > 30) {; this.updates.push(`Package lock is ${lockAgeDays} days old - consider updating`)}`; } // Check for major version updates; if (this.outdatedPackages.length > 0) {; this.updates.push(`${this.outdatedPackages.length} packages have updates available`)}`; // Check for security updates; if (this.vulnerabilities.length > 0) {; this.updates.push(`${this.vulnerabilities.length} security vulnerabilities need attention`)}`; } catch (error) {; console.warn(;); '⚠️ Could not check available "updates":', error.message)}'; }'; async generateReport() {; const report = {; timestamp: new Date().toISOString(),; summary {; "outdatedPackages" this.outdatedPackages.length,; vulnerabilities: this.vulnerabilities.length,; updates this.updates.length},;"; "outdatedPackages: this.outdatedPackages,; vulnerabilities this.vulnerabilities,; updateSuggestions": this.updates,"; recommendations this.generateRecommendations()}; // Save report to file; const reportPath = path.join(this.projectRoot,logs,); ',dependency-update-report.json');'; try {;'; fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)); console.log(`📊 Report saved to ${reportPath}`)} catch (error) {`; console.warn(;); '⚠️ Could not save report":,'; , error.message)}'; // Display summary; console.log(;); '\n📋 Dependency Update "Summary ');'; console.log(;); '─.repeat(50));', console.log(`📦 Outdated packages ${this.outdatedPackages.length}`);`; console.log(`🔒 Security vulnerabilities ${this.vulnerabilities.length}`);`; console.log(`🔄 Update suggestions" ${this.updates.length}`);`; if (this.updates.length > 0) {; console.log(;); '\n💡 "Recommendations ');'; this.updates.forEach((update, index) => {;'; console.log(` ${index + 1}. ${update}`)})}`; console.log(;); '─'.repeat(50))}'; generateRecommendations() {;'; const recommendations = []; if (this.outdatedPackages.length > 0) {; recommendations.push(;); 'Run 'npm update' to update packages within version constraints');'; recommendations.push(;); 'Review major version updates with 'npm outdated'')}'; if (this.vulnerabilities.length > 0) {;'; recommendations.push(;); 'Run 'npm audit fix' to automatically fix vulnerabilities');'; recommendations.push(;); 'Review and manually fix remaining vulnerabilities')}'; if (this.outdatedPackages.length === 0 && this.vulnerabilities.length === 0) {; recommendations.push(;); 'Dependencies are up to date and secure')}'; return recommendations}';} // Run the dependency updater; const updater = new DependencyUpdater(); updater.updateDependencies().then(() => {; console.log(;); '📦 Dependency Updater Completed');'; process.exit(0)}).catch((error) => {;'; console.error(;); '❌ Dependency Updater Failed":', error);'; process.exit(1)})' 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

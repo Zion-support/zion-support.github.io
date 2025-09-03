@@ -16,12 +16,12 @@ function analyzeFile(filePath) {
   const src = fs.readFileSync(filePath, 'utf8');
   const hasHead = /<Head[\s\S]*?>[\s\S]*?<\/Head>/.test(src);
   const hasOgTitle = /property=["']og:title["']|name=["']og:title["']/.test(
-    src
+    src;
   );
   const hasOgDesc =
     /property=["']og:description["']|name=["']og:description["']/.test(src);
   const hasOgImage = /property=["']og:image["']|name=["']og:image["']/.test(
-    src
+    src;
   );
   const missing = [];
   if (!hasOgTitle) missing.push('og:title');
@@ -33,14 +33,14 @@ function analyzeFile(filePath) {
     hasOgTitle,
     hasOgDescription: hasOgDesc,
     hasOgImage,
-    missing,
-  };
+    missing,;
+};
 }
 
 function runAudit() {
   const pagesDir = path.join(__dirname, '..', 'pages');
   const files = walk(pagesDir);
-  const report = files
+  const report = files;
     .filter(f => f.endsWith('.tsx') || f.endsWith('.jsx'))
     .map(analyzeFile);
 
@@ -51,8 +51,8 @@ function runAudit() {
     missingAny: report.filter(r => r.missing.length > 0).length,
     report,
     recommendation:
-      'Add missing OG tags in pages lacking them to improve social sharing and SEO.',
-  };
+      'Add missing OG tags in pages lacking them to improve social sharing and SEO.',;
+};
 
   const reportsDir = path.join(__dirname, '..', 'public', 'reports');
   if (!fs.existsSync(reportsDir)) fs.mkdirSync(reportsDir, { recursive: true });

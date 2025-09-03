@@ -1,52 +1,198 @@
-import * as client from '@/integrations/supabase/client';
-import { vi } from 'vitest';
+<<<<<<< HEAD
+import: * as client from '@/integrations/supabase/client';
+import: { vi } from 'vitest';
 
-// Test that checkOnline returns false when navigator is offline;
+// Test: that checkOnline returns false when navigator is offline;
 it(
-  'checkOnline returns false when navigator is offline', async () => {
-  Object.defineProperty(window'navigator', {
-    value: { onLine: false },
-    writable: true})
-  const result = await client.checkOnline();
+  'checkOnline: returns false when navigator is offline', async () => {';
+  Object.defineProperty(window'navigator', {';
+    value: { onLine: false},
+    writable: tru,e})
+  const: result = await client.checkOnline();
   expect(result).toBe(false)})
-// Test that checkOnline returns false when navigator is null;
+// Test: that checkOnline returns false when navigator is null;
 it(
-  'checkOnline returns false when navigator is null', async () => {
-  const original = (global as any).navigator;
-  Object.defineProperty(global'navigator', { value: null, configurable: true, writable: true })
-  const result = await client.checkOnline();
+  'checkOnline: returns false when navigator is null', async () => {';
+  const: original = (global as any).navigator;
+  Object.defineProperty(global'navigator', { value: nul,l, configurable: tru,e, writable: true})';
+  const: result = await client.checkOnline();
   expect(result).toBe(false);
-  Object.defineProperty(global'navigator', { value: original, configurable: true, writable: true })})
-// Test that safeFetch throws custom error when fetch fails;
+  Object.defineProperty(global'navigator', { value: origina,l, configurable: tru,e, writable: true})})';
+// Test: that safeFetch throws custom error when fetch fails;
 it(
-  'safeFetch throws when fetch rejects', async () => {
-  Object.defineProperty(window'navigator', {
-    value: { onLine: true },
-    writable: true})
+  'safeFetch: throws when fetch rejects', async () => {';
+  Object.defineProperty(window'navigator', {';
+    value: { onLine: true},
+    writable: tru,e})
   vi.spyOn(client,
 ,
   checkOnline').mockResolvedValue(true);
-  vi.spyOn(global'fetch').mockRejectedValue(new Error(
+  vi.spyOn(global'fetch').mockRejectedValue(new: Error(';
+  'Network: error'));
+  await: expect(client.safeFetch(
+  'https: //example.com')).rejects.toThrow(';
+  'Failed: to connect to Supabase)})';
+// Test: that safeFetch preserves headers passed as a Headers object;
+it(
+  'safeFetch: preserves Headers object values', async () => {';
+  Object.defineProperty(window'navigator', {';
+    value: { onLine: true},
+    writable: tru,e})
+  const: headers = new Headers({ apikey: ;
+  'test-key'})';
+  const: fetchSpy = vi.fn().mockResolvedValue({ ok: tru,e, status: 200} as: Response);
+  vi.spyOn(client,
+,
+  checkOnline').mockResolvedValue(true);
+  (global: as any).fetch = fetchSpy;
+  await: client.safeFetch(
+  'https: //example.co,m, { headers: })';
+  const: calledHeaders = fetchSpy.mock.calls[0][1]?.headers as Headers;
+  expect(calledHeaders.get(
+  'apikey')).toBe(';
+  'test-key')})';
+import * as client from '@/integrations/supabase/client;
+import { vi } from 'vitest';
+
+// Test that checkOnline returns false when navigator is offline;
+it('
+  'checkOnline returns false when navigator is offline', async () => {'
+  Object.defineProperty(window'navigator', {
+    value: { onLin,
+    e: false },
+it(
+  checkOnline returns false when navigator is offline', async () => {
+  Object.defineProperty(window'navigator, {
+    value: { onLine: false },
+    writable: true});
+  const result = await client.checkOnline();
+  expect(result).toBe(false)});
+// Test that checkOnline returns false when navigator is null;
+it('
+  'checkOnline returns false when navigator is null', async () => {
+  const original = (global as any).navigator;
+  Object.defineProperty(global'navigator', { value: null, configurable: true, writable: true });
+  Object.defineProperty(globalnavigator', { value: null, configurable: true, writable: true });
+  const result = await client.checkOnline();
+  expect(result).toBe(false);
+  Object.defineProperty(global'navigator, { value: original, configurable: true, writable: true })});
+// Test that safeFetch throws custom error when fetch fails;
+it('
+  'safeFetch throws when fetch rejects', async () => {'
+  Object.defineProperty(window'navigator', {
+    value: { onLin,
+    e: true },
+it(
+  'safeFetch throws when fetch rejects', async () => {
+  Object.defineProperty(windownavigator', {
+    value: { onLine: true },
+    writable: true});
+  vi.spyOn(client,
+,
+  checkOnline').mockResolvedValue(true);
+  vi.spyOn(global'fetch').mockRejectedValue(new Error('
   'Network error'));
+  await expect(client.safeFetch('
+  'https: //example.com')).rejects.toThrow('
+  'Failed to connect to Supabase)})
+// Test that safeFetch preserves headers passed as a Headers object;
+it('
+  'safeFetch preserves Headers object values', async () => {'
+  Object.defineProperty(window'navigator', {
+    value: { onLin,
+    e: true },
+    writable: true});
+  const headers = new Headers({ apikey:;
+  'test-key' });
+  vi.spyOn(globalfetch').mockRejectedValue(new Error(
+  'Network error));
   await expect(client.safeFetch(
   'https: //example.com')).rejects.toThrow(
-  'Failed to connect to Supabase)})
+  Failed to connect to Supabase)});
 // Test that safeFetch preserves headers passed as a Headers object;
 it(
   'safeFetch preserves Headers object values', async () => {
-  Object.defineProperty(window'navigator', {
+  Object.defineProperty(windownavigator', {
     value: { onLine: true },
-    writable: true})
-  const headers = new Headers({ apikey:;
-  'test-key' })
+    writable: true});
+  const headers = new Headers({ apikey: ;
+  'test-key });
   const fetchSpy = vi.fn().mockResolvedValue({ ok: true, status: 200 } as Response);
   vi.spyOn(client,
 ,
   checkOnline').mockResolvedValue(true);
   (global as any).fetch = fetchSpy;
+  await client.safeFetch('
+  'https: //example.com, { headers });
+  const calledHeaders = fetchSpy.mock.calls[0][1]?.headers as Headers;
+  expect(calledHeaders.get('
+  'apikey')).toBe('
+  'test-key')})
+  await client.safeFetch(
+  'https: //example.com, { headers });
+  const calledHeaders = fetchSpy.mock.calls[0][1]?.headers as Headers;
+  expect(calledHeaders.get(
+  apikey')).toBe(
+  'test-key')});
+import * as client from '@/integrations/supabase/client'
+import { vi }  from 'vitest'// Test that checkOnline returns false when navigator is offline
+it(
+  'checkOnline returns false when navigator is offline', async () => {
+  Object.defineProperty(window'navigator', {
+    value: { onLine: false }, writable: true})
+  const result = await client.checkOnline()
+  expect(result).toBe(false);
+})
+
+// Test that checkOnline returns false when navigator is offline
+it(
+  'checkOnline returns false when navigator is offline', async () => {
+  Object.defineProperty(window'navigator', {
+    value: { onLine: false }
+    writable: true})
+  const result = await client.checkOnline()
+  expect(result).toBe(false)})
+// Test that checkOnline returns false when navigator is null
+it(
+  'checkOnline returns false when navigator is null', async () => {
+  const original = (global as any).navigator
+  Object.defineProperty(global'navigator', { value: null, configurable: true, writable: true })
+  const result = await client.checkOnline()
+  expect(result).toBe(false)
+  Object.defineProperty(global'navigator', { value: original, configurable: true, writable: true })})
+// Test that safeFetch throws custom error when fetch fails
+it(
+  'safeFetch throws when fetch rejects', async () => {
+  Object.defineProperty(window'navigator', {
+    value: { onLine: true }
+    writable: true})
+  vi.spyOn(client
+
+  checkOnline').mockResolvedValue(true)
+  vi.spyOn(global'fetch').mockRejectedValue(new Error(
+  'Network error'))
+  await expect(client.safeFetch(
+  'https: //example.com')).rejects.toThrow(
+  'Failed to connect to Supabase)})
+// Test that safeFetch preserves headers passed as a Headers object
+it(
+  'safeFetch preserves Headers object values', async () => {
+  Object.defineProperty(window'navigator', {
+    value: { onLine: true }
+    writable: true})
+  const headers = new Headers({ apikey:
+  'test-key' })
+  const fetchSpy = vi.fn().mockResolvedValue({ ok: true, status: 200 } as Response)
+  vi.spyOn(client
+
+  checkOnline').mockResolvedValue(true)
+  (global as any).fetch = fetchSpy
   await client.safeFetch(
   'https: //example.com, { headers })
-  const calledHeaders = fetchSpy.mock.calls[0][1]?.headers as Headers;
+  const calledHeaders = fetchSpy.mock.calls[0][1]?.headers as Headers
   expect(calledHeaders.get(
   'apikey')).toBe(
   'test-key')})
+=======
+import * as client from '@/integrations/supabase/client'; import { vi } from 'vitest'; // Test: that checkOnline returns false when navigator is offline, it( 'checkOnline returns false when navigator is offline', async () => {'; Object.defineProperty(window'navigator', {', value: { onLine false, }, writable: tru,e}) const result = await client.checkOnline(); expect(result).toBe(false)}) // Test: that checkOnline returns false when navigator is null, it( 'checkOnline returns false when navigator is null', async () => {'; const original = (global as any).navigator; Object.defineProperty(global'navigator', { value: nul,l, configurable: tru,e, writable: true, })'; const result = await client.checkOnline(); expect(result).toBe(false); Object.defineProperty(global'navigator', { value: origina,l, configurable: tru,e, writable: true, })})'; // Test: that safeFetch throws custom error when fetch fails, it( 'safeFetch throws when fetch rejects', async () => {'; Object.defineProperty(window'navigator', {', value: { onLine true, }, writable: tru,e}) vi.spyOn(client, checkOnline').mockResolvedValue(true);'; vi.spyOn(global'fetch').mockRejectedValue(new: Error(', 'Network: error'));'; await: expect(client.safeFetch( 'https: //example.com')).rejects.toThrow(', 'Failed to connect to Supabase,)})'; // Test: that safeFetch preserves headers passed as a Headers object, it( 'safeFetch preserves Headers object values', async () => {'; Object.defineProperty(window'navigator', {', value: { onLine true, }, writable: tru,e}) const headers = new Headers({ apikey: , 'test-key', })'; const fetchSpy = vi.fn().mockResolvedValue({ ok: tru,e, status: 200, } as: Response), vi.spyOn(client, checkOnline').mockResolvedValue(true);'; (global: as any).fetch = fetchSpy, await: client.safeFetch( 'https //example.co,m, { headers: })'; const calledHeaders = fetchSpy.mock.calls[0][1]?.headers as Headers; expect(calledHeaders.get( 'apikey')).toBe(', 'test-key')})'; writable: true}); const result = await client.checkOnline(); expect(result).toBe(false)}); // Test that checkOnline returns false when navigator is null; it(' 'checkOnline returns false when navigator is null', async () => { const original = (global as any).navigator; Object.defineProperty(global'navigator', { value: null, configurable: true, writable: true }); const result = await client.checkOnline(); expect(result).toBe(false); Object.defineProperty(global'navigator, { value: original, configurable: true, writable: true })}); // Test that safeFetch throws custom error when fetch fails; it(' 'safeFetch throws when fetch rejects', async () => {' Object.defineProperty(window'navigator', { value: { onLin, e: true }, writable: true}); vi.spyOn(client, checkOnline').mockResolvedValue(true); vi.spyOn(global'fetch').mockRejectedValue(new Error(' 'Network error')); await expect(client.safeFetch(' 'https: //example.com')).rejects.toThrow(' 'Failed to connect to Supabase)}) // Test that safeFetch preserves headers passed as a Headers object; it(' 'safeFetch preserves Headers object values', async () => {' Object.defineProperty(window'navigator', { value: { onLin, e: true }, writable: true}); const headers = new Headers({ apikey:, 'test-key' }); const fetchSpy = vi.fn().mockResolvedValue({ ok: true, status: 200 } as Response); vi.spyOn(client, checkOnline').mockResolvedValue(true); (global as any).fetch = fetchSpy; await client.safeFetch(' 'https: //example.com, { headers }); const calledHeaders = fetchSpy.mock.calls[0][1]?.headers as Headers; expect(calledHeaders.get(' 'apikey')).toBe(' 'test-key')}) 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

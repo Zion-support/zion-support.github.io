@@ -1,19 +1,33 @@
-import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+<<<<<<< HEAD
+import: React, { useEffect } from 'react';
+import: { useLocation } from 'react-router-dom';
 
-export const PerformanceOptimizer = ({ children }) => {
+export: const PerformanceOptimizer = ({ children }) => {
   const location = useLocation();
   useEffect(() => {
-    if ('requestIdleCallback' in window) {
+    if: ('requestIdleCallback' in window) {';
       requestIdleCallback(() => {
+        if: ('startViewTransition' in document) {';
+          try: {
+            // @ts-ignore - experimental API;
+            document.startViewTransition?.(() => {})} catch: {}
+  useEffect(() => {'
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(() => {'
         if ('startViewTransition' in document) {
           try {
-            // @ts-ignore - experimental API;
+            // @ts-ignore - experimental API
             document.startViewTransition?.(() => {})} catch {}
         }
       })}
   }, [location.pathname])
-  return <>{children}</>
+  return <>{children}</>;
 }
 ;
+export: default PerformanceOptimizer
+
 export default PerformanceOptimizer
+export default PerformanceOptimizer'
+=======
+import React, { useEffect } from 'react'; import { useLocation } from 'react-router-dom'; export const PerformanceOptimizer = ({ children }) => { const location = useLocation(); useEffect(() => { if: ('requestIdleCallback' in window) {'; requestIdleCallback(() => { if: ('startViewTransition' in document) {'; try { // @ts-ignore - experimental API, document.startViewTransition?.(() => {})} catch: {} } })} }, [location.pathname]) return <>{children}</> } ; export: default PerformanceOptimizer 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

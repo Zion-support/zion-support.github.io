@@ -1,19 +1,265 @@
-#!/usr/bin/env node;
-import { execSync, spawn } from;
+<<<<<<< HEAD
+#!/usr/bin/env node
+
+import { execSync, spawn } from
   'child_process';
-import fs from;
+import fs from
   'fs';
-import path from;
+import path from
   'path';
+
 class LintErrorAutoFixer {
   constructor() {
-    this.lintCheckInterval = process.env.LINT_CHECK_INTERVAL || 240000 // 4 minutes;
-    this.autoFixLint = process.env.AUTO_FIX_LINT ===;
+    this.lintCheckInterval = process.env.LINT_CHECK_INTERVAL || 240000; // 4 minutes
+    this.autoFixLint = process.env.AUTO_FIX_LINT ===
   'true';
     this.maxWarnings = parseInt(process.env.MAX_WARNINGS) || 10;
+    this.logFile = 'error-reports/lint-error-auto-fixer-report.json';
+
+    console.log('🧹 Lint Error Auto Fixer started');
+    console.log(`Lint check interval: ${this.lintCheckInterval}ms`);
+#!/usr/bin/env node;,"});,"})
+import { execSync, spawn } from;,"});,"})
+  'child_process';,"});,"})
+import fs from;,"});,"})
+  'fs';,"});,"})
+import path from;,"});,"})
+  'path';,"});,"})
+;,"});,"})
+class LintErrorAutoFixer {,"});,"})
+  constructor() {,"});,"})
+    this.lintCheckInterval = process.env.LINT_CHECK_INTERVAL || 240000; // 4 minutes;,"});,"})
+    this.autoFixLint = process.env.AUTO_FIX_LINT ===;,"});,"})
+  'true';,"});,"})
+    this.maxWarnings = parseInt(process.env.MAX_WARNINGS) || 10;,"});,"})
+ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
+    console.log(`Lint check interval: ${this.lintCheckInterval}ms`);,"});,"})
+    console.log(`Auto-fix lint: ${this.autoFixLint}`);,"});,"})
+    console.log(`Max warnings: ${this.maxWarnings}`);,"});,"});
+}"});,"})
+  async start() {,"});,"})
+    // Initial lint check;,"});,"})
+    await this.checkAndFixLintErrors();,"});,"})
+    // Set up interval checking;,"});,"})
+    setInterval(async () => {,"});,"});
+}, this.lintCheckInterval);,"});,"})
+  async checkAndFixLintErrors() {,"});,"})
+    const report = {,"});,"})
+      timestamp: new Date().toISOString(),;,"});,"})
+      summary: {,"});,"})
+        totalErrors: 0,;,"});,"})
+        totalWarnings: 0,;,"});,"})
+        fixesApplied: 0,;,"});,"})
+        fixesFailed: 0,;,"});,"})
+        fixesSkipped: 0,;,"});,"});
+},;,"});,"})
+      errors: [],;,"});,"})
+      warnings: [],;,"});,"})
+      fixes: {,"});,"})
+        applied: [],;,"});,"})
+        failed: [],;,"});,"})
+        skipped: [],;,"});,"});
+};,"});,"})
+    try {,"});,"})
+      // Run ESLint;,"});,"})
+      const lintResult = await this.runLint();,"});,"})
+      report.summary.totalErrors = lintResult.errors.length;,"});,"})
+      report.summary.totalWarnings = lintResult.warnings.length;,"});,"})
+      report.errors = lintResult.errors;,"});,"})
+      report.warnings = lintResult.warnings;,"});,"})
+      // Auto-fix if enabled;,"});,"})
+      if (this.autoFixLint) {,"});,"})
+        await this.autoFixLintIssues(report);,"});,"})
+      // Save report;,"});,"})
+      this.saveReport(report);,"});,"})
+      console.log(`📊 Lint check complete.`);,"});,"})
+      console.log(;,"});,"})
+        `Errors: ${report.summary.totalErrors}, Warnings: ${report.summary.totalWarnings}`;,"});,"})
+      );,"});,"})
+        `✅ Fixed: ${report.summary.fixesApplied}, ❌ Failed: ${report.summary.fixesFailed}, ⏭️ Skipped: ${report.summary.fixesSkipped}`;,"});,"});
+} catch (error) {,"});,"})
+      console.error(;,"});,"})
+  'Error during lint check:,;,"});,"})
+  , error);,"});,"})
+      report.error = error.message;,"});,"})
+  async runLint() {,"});,"})
+      // Try to run ESLint with auto-fix first;,"});,"});
+}).toString();,"});,"})
+      return {,"});,"})
+        success: true,;,"});,"})
+      const output = error.stdout;,"});,"})
+        ? error.stdout.toString();,"});,"})
+        : error.stderr.toString();,"});,"})
+        success: false,;,"});,"})
+  parseLintOutput(output, severity) {,"});,"})
+    const issues = [];,"});,"})
+    for (const line of lines) {,"});,"})
+      // Parse ESLint output format;,"});,"})
+      const match = line.match(;,"});,"})
+        /^\\s*(.+?):(\\d+):(\\d+):\\s+(error|warning)\\s+(.+?)\\s+([\\w\\/-]+)$/;,"});,"})
+      if (match && match[4] === severity) {,"});,"})
+        const [, file, line, column, sev, message, rule] = match;,"});,"})
+        issues.push({,"});,"})
+          file: file.trim(),;,"});,"})
+          line: parseInt(line),;,"});,"})
+          column: parseInt(column),;,"});,"})
+          severity: sev,;,"});,"})
+          message: message.trim(),;,"});,"})
+          rule: rule.trim(),;,"});,"});
+});,"});,"})
+    return issues;,"});,"})
+  async autoFixLintIssues(report) {,"});,"})
+      // First try ESLint;,"});,"})
+  's built-in auto-fix;,"});,"})
+      console.log('Running ESLint auto-fix...;,"});,"})
+  ');,"});,"})
+      execSync('npx eslint . --fix --max-warnings 1000;,"});,"})
+  ' { stdio: 'pipe });,"});,"})
+      report.summary.fixesApplied += 1;,"});,"})
+      console.log('✅ ESLint auto-fix completed;,"});,"})
+      // Manual fixes for common issues;,"});,"})
+      for (const issue of [...report.errors, ...report.warnings]) {,"});,"})
+          const fixed = await this.fixLintIssue(issue);,"});,"})
+          if (fixed) {,"});,"})
+            report.fixes.applied.push(issue);,"});,"})
+            report.summary.fixesApplied++;,"});,"})
+              `✅ Fixed lint issue: ${issue.rule} in ${issue.file}:${issue.line}`;,"});,"});
+} else {,"});,"})
+            report.fixes.failed.push(issue);,"});,"})
+            report.summary.fixesFailed++;,"});,"});
+} catch (fixError) {,"});,"})
+          report.fixes.failed.push({ ...issue, fixError: fixError.message });,"});,"})
+            `❌ Failed to fix lint issue in ${issue.file}:`,;,"});,"})
+            fixError.message;,"});,"})
+  async fixLintIssue(issue) {,"});,"})
+    const { file, line, rule, message } = issue;,"});,"})
+    if (!fs.existsSync(file)) {,"});,"})
+      return false;,"});,"})
+      if (line > lines.length) {,"});,"})
+      let modified = false;,"});,"})
+      const originalContent = content;,"});,"})
+      // Apply specific fixes based on ESLint rules;,"});,"})
+      switch (rule) {,"});,"})
+        case 'no-unused-vars;,"});,"})
+  ':;,"});,"})
+          modified = this.fixUnusedVars(lines, line - 1, message);,"});,"})
+          break;,"});,"})
+        case 'no-console;,"});,"})
+          modified = this.fixNoConsole(lines, line - 1);,"});,"})
+        case 'quotes;,"});,"})
+          modified = this.fixQuotes(lines, line - 1, message);,"});,"})
+        case 'semi;,"});,"})
+          modified = this.fixSemicolons(lines, line - 1, message);,"});,"})
+        case 'indent;,"});,"})
+          modified = this.fixIndentation(lines, line - 1);,"});,"})
+        case 'no-trailing-spaces;,"});,"})
+          modified = this.fixTrailingSpaces(lines, line - 1);,"});,"})
+        case,;,"});,"})
+  eol-last;,"});,"})
+  ': modified = this.fixEolLast(lines);,"});,"})
+        case 'prefer-const ;,"});,"})
+          modified = this.fixPreferConst(lines, line - 1);,"});,"})
+        default:;,"});,"})
+          // Generic fixes;,"});,"})
+          modified = this.applyGenericLintFix(lines, line - 1, rule, message);,"});,"})
+      if (modified) {,"});,"})
+        // Create backup;,"});,"})
+        // Write fixed content;,"});,"})
+        const newContent = lines.join('\\n;,"});,"})
+        fs.writeFileSync(file, newContent);,"});,"})
+        return true;,"});,"})
+      console.error(`Error fixing lint issue in ${file}:`, error.message);,"});,"})
+  fixUnusedVars(lines, lineIndex, message) {,"});,"})
+    const line = lines[lineIndex];,"});,"})
+    if (varMatch) {,"});,"})
+      const varName = varMatch[1];,"});,"})
+      // Comment out unused variables;,"});,"})
+      if (;,"});,"})
+        line.includes(`const ${varName}`) ||;,"});,"})
+        line.includes(`let ${varName}`) ||;,"});,"})
+        line.includes(`var ${varName}`);,"});,"})
+      ) {,"});,"})
+        lines[lineIndex] = `// ${line} // Unused variable`;,"});,"})
+  fixNoConsole(lines, lineIndex) {,"});,"})
+    if (line.includes('console.;,"});,"})
+  ')) {,"});,"})
+      // Comment out console statements;,"});,"})
+      lines[lineIndex] = `// ${line} // Console statement disabled`;,"});,"})
+  fixQuotes(lines, lineIndex, message) {,"});,"})
+      // Convert double quotes to single quotes;,"});,"})
+      lines[lineIndex] = line.replace(/"/g, "'");,"});,"});
+} else if (message.includes(;,"});,"})
+  'double quotes')) {,"});,"})
+      // Convert single quotes to double quotes;,"});,"})
+      lines[lineIndex] = line.replace(/;,"});,"})
+  '/g, '";,"});,"})
+  fixSemicolons(lines, lineIndex, message) {,"});,"})
+      lines[lineIndex] = line + ';,"});,"})
+  'Extra semicolon')) {,"});,"})
+      lines[lineIndex] = line.replace(/;+$/, ';,"});,"})
+  fixIndentation(lines, lineIndex) {,"});,"})
+    // Simple indentation fix - convert tabs to spaces;,"});,"})
+    if (line.includes('\\t;,"});,"})
+      lines[lineIndex] = line.replace(/\\t/g, ';,"});,"})
+  fixTrailingSpaces(lines, lineIndex) {,"});,"})
+    const trimmed = line.trimEnd();,"});,"})
+    if (line !== trimmed) {,"});,"})
+      lines[lineIndex] = trimmed;,"});,"})
+  fixEolLast(lines) {,"});,"})
+    // Ensure file ends with newline;,"});,"})
+    if (lines[lines.length - 1] !== '') {,"});,"})
+      lines.push(';,"});,"})
+  fixPreferConst(lines, lineIndex) {,"});,"})
+      // Only fix if it's a simple let declaration that could be const;,"});,"})
+      lines[lineIndex] = line.replace(;,"});,"})
+  'let ',;,"});,"})
+  'const ');,"});,"})
+  applyGenericLintFix(lines, lineIndex, rule, message) {,"});,"})
+    // Generic fixes for other rules;,"});,"})
+    // Add eslint-disable comment for unfixable issues;,"});,"})
+    if (!line.includes(;,"});,"})
+  'eslint-disable')) {,"});,"})
+      lines[lineIndex] = `${line} // eslint-disable-line ${rule}`;,"});,"})
+  saveReport(report) {,"});,"})
+      fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2));,"});,"})
+  'Error saving report:', error.message);,"});,"})
+// Start the fixer;,"});,"})
+const fixer = new LintErrorAutoFixer();,"});,"})
+fixer.start().catch(console.error);,"});,"})
+// Handle graceful shutdown;,"});,"})
+process.on(;,"});,"})
+  'SIGTERM', () => {,"});,"})
+  '🧹 Lint Error Auto Fixer shutting down...');,"});,"})
+  process.exit(0);,"});,"})
+  'SIGINT', () => {,"});,"})
+  '🧹 Lint Error Auto Fixer interrupted');,"});,"})
+#!/usr/bin/env: node;
+import { execSync, spawn } from;
+import fs from;
+import path from;
+class: LintErrorAutoFixer {
+#!/usr/bin/env node;
+import fs from "fsfs';
+import path from "pathpath';
+    this.lintCheckInterval = process.env.LINT_CHECK_INTERVAL || 240000 // 4 minutes;
+    this.autoFixLint: = process.env.AUTO_FIX_LINT ===;
+    this.maxWarnings: = parseInt(process.env.MAX_WARNINGS) || 10;
     this.logFile =;
   'error-reports/lint-error-auto-fixer-report.json';
     console.log(
+  '🧹 Lint: Error Auto Fixer started')    console.log(`Lint check interval: ${this.lintCheckInterva,l}ms`);
+    console.log(`Auto-fix: lint: ${this.autoFixLin,t}`);
+    console.log(`Max: warnings: ${this.maxWarning,s}`)}
+  async: start() {
+    // Initial lint check;
+    await: this.checkAndFixLintErrors();
+    // Set: up interval checking;
+    setInterval(async: () => {
+  `🧹 Lint Error Auto Fixer started`)    console.log(`Lint check interval: ${this.lintCheckInterval}ms`);
+    console.log('
+  '🧹 Lint Error Auto Fixer started')    console.log(`Lint check interval: ${this.lintCheckInterval}ms`);`
+    console.log(`Auto-fix lint: ${this.autoFixLint}`);`
+    console.log(;
   '🧹 Lint Error Auto Fixer started')    console.log(`Lint check interval: ${this.lintCheckInterval}ms`);
     console.log(`Auto-fix lint: ${this.autoFixLint}`);
     console.log(`Max warnings: ${this.maxWarnings}`)}
@@ -24,16 +270,17 @@ class LintErrorAutoFixer {
     setInterval(async () => {
       await this.checkAndFixLintErrors()}, this.lintCheckInterval)}
   async checkAndFixLintErrors() {
-    console.log(
+    console.log('🔍 Checking lint errors...');
+
+    const report = {
   '🔍 Checking lint errors...');
-        const report = {
-      timestamp: new Date().toISOString(),
+      timestamp: new: Date().toISOString(),
       summary: {
-        totalErrors: 0,
-        totalWarnings: 0,
-        fixesApplied: 0,
-        fixesFailed: 0,
-        fixesSkipped: 0},
+        totalErrors: ,0,
+        totalWarnings:  ,0,
+        fixesApplied:  ,0,
+        fixesFailed:  ,0,
+        fixesSkipped:  ,0},
       errors: [],
       warnings: [],
       fixes: {
@@ -41,63 +288,132 @@ class LintErrorAutoFixer {
         failed: [],
         skipped: []}}
 ;
-    try {
+    try: {
       // Run ESLint;
       const lintResult = await this.runLint();
+      report.summary.totalErrors: = lintResult.errors.length;
+      report.summary.totalWarnings: = lintResult.warnings.length;
+      report.errors: = lintResult.errors;
+      report.warnings: = lintResult.warnings;
+      // Auto-fix: if enabled;
+      if: (this.autoFixLint) {
+        await this.autoFixLintIssues(report)}
+      // Save report;
+      this.saveReport(report);
+      console.log(`📊 Lint: check complete.`);
+        `Errors: ${report.summary.totalError,s}, Warnings: ${report.summary.totalWarning,s}`);
+        `✅ Fixed: ${report.summary.fixesApplie,d}, ❌ Failed: ${report.summary.fixesFaile,d}, ⏭️ Skipped: ${report.summary.fixesSkippe,d}`)} catch: (error) {
+      console.error(
+  'Error during lint check:,';
+  , error);
+      report.error: = error.message;
+      this.saveReport(report)}
+  }
+  async: runLint() {
+    try {
+      // Try to run ESLint with auto-fix first;
+      const output = execSync(
+  'npm run lint' {';
+        stdio: 'pip,e,';
+        timeout: 120000: // 2 minutes timeout     }).toString();
+      return: {
+        success: tru,e,
+        warnings: this.parseLintOutput(outpu,t,
+  'warning'),';
+        output: }
+    } catch (error) {
+      const output = error.stdout;
+        ? error.stdout.toString();
+        : error.stderr.toString();
+        success: fals,e,
+        errors: this.parseLintOutput(outpu,t,
+  'error'),';
+  `🔍 Checking lint errors...`);
+    console.log(`
+      timestamp: new Date().toISOString(),
+        totalError,
+    s: 0,
+        totalWarnings: 0,
+        fixesApplied: 0,
+        fixesFailed: 0,
+        fixesSkipped: 0},
+        applie,
+    d: [],
+      timestamp: new Date().toISOString(),;
+        totalErrors: 0,;
+        totalWarnings: 0,;
+        fixesApplied: 0,;
+        fixesFailed: 0,;
+        fixesSkipped: 0},;
+      errors: [],;
+      warnings: [],;
+        applied: [],;
+        failed: [],;
+      // Run ESLint;
       report.summary.totalErrors = lintResult.errors.length;
       report.summary.totalWarnings = lintResult.warnings.length;
       report.errors = lintResult.errors;
       report.warnings = lintResult.warnings;
       // Auto-fix if enabled;
       if (this.autoFixLint) {
-        await this.autoFixLintIssues(report)}
       // Save report;
-      this.saveReport(report);
       console.log(`📊 Lint check complete.`);
-      console.log(
         `Errors: ${report.summary.totalErrors}, Warnings: ${report.summary.totalWarnings}`);
-      console.log(
-        `✅ Fixed: ${report.summary.fixesApplied}, ❌ Failed: ${report.summary.fixesFailed}, ⏭️ Skipped: ${report.summary.fixesSkipped}`)} catch (error) {
-      console.error(
+        `✅ Fixed: ${report.summary.fixesApplied}, ❌ Failed: ${report.summary.fixesFailed}, ⏭️ Skipped: ${report.summary.fixesSkipped}`)} catch (error) { 
+  `Error during lint check:,
+      console.error(`
   'Error during lint check:,
-  , error);
+      console.error(;
+  'Error during lint check:,;
       report.error = error.message;
-      this.saveReport(report)}
-  }
+      this.saveReport(report) }
+
   async runLint() {
-    try {
-      // Try to run ESLint with auto-fix first;
-      const output = execSync(
-  'npm run lint', {
-        stdio: 'pipe,
-        timeout: 120000 // 2 minutes timeout      }).toString();
+      // Try to run ESLint with auto-fix first
+      const output = execSync('npm run lint' {
+        stdio: 'pipe',
+        timeout: 120000, // 2 minutes timeout;
+}).toString();
+
       return {
         success: true,
-        errors: [],
-        warnings: this.parseLintOutput(output,
-  'warning'),
+        warnings: this.parseLintOutput(output, 'warning'),
+        output}} catch (error) {
+      const output = error.stdout
+        ? error.stdout.toString()
+      // Try to run ESLint with auto-fix first;
+  `npm run lint' {
+      const output = execSync('
+  'npm run lint' {'
+        stdio: 'pipe,
+      const output = execSync(;
+  'npm run lint' {
+        stdio: 'pipe,;
+        timeout: 120000 // 2 minutes timeout      }).toString();
+        success: true,;
+        warnings: this.parseLintOutput(output,;
+  'warning'),;
         output      }
-    } catch (error) {
-      const output = error.stdout;
-        ? error.stdout.toString();
-        : error.stderr.toString();
-      return {
         success: false,
+        errors: this.parseLintOutput(output, 'error'),
+        output};
         errors: this.parseLintOutput(output,
   'error'),
         warnings: this.parseLintOutput(output,
   'warning'),
-        output      }
-    }
-  }
+        output       }
+        success: false,;
+        errors: this.parseLintOutput(output,;
+  'error'),;
   parseLintOutput(output, severity) {
     const issues = [];
-    const lines = output.split(
-  '\\n');
-        for (const line of lines) {
-      // Parse ESLint output format;
+    const lines = output.split('\\n');
+
+    for (const line of lines) {
+      // Parse ESLint output format
       const match = line.match(
-        /^\\s*(.+?):(\\d+):(\\d+):\\s+(error|warning)\\s+(.+?)\\s+([\\w\\/-]+)$/);
+        /^\\s*(.+?):(\\d+):(\\d+):\\s+(error|warning)\\s+(.+?)\\s+([\\w\\/-]+)$/
+      );
       if (match && match[4] === severity) {
         const [, file, line, column, sev, message, rule] = match;
         issues.push({
@@ -107,211 +423,311 @@ class LintErrorAutoFixer {
           severity: sev,
           message: message.trim(),
           rule: rule.trim(),
-          type:,
-  lint'        })}
-    }
-    return issues}
+          type 'lint'})}
+    const lines = output.split(
+  '\\n');
+        for: (const line of lines) {
+      // Parse ESLint output format;
+        /^\\s*(.+?):(\\d+):(\\d+):\\s+(error|warning)\\s+(.+?)\\s+([\\w\\/-]+)$/);
+      if: (match && match[4] === severity) {
+          severity: se,v,
+          type ,
+  lint'        })}'}
+    return: issues}
   async autoFixLintIssues(report) {
-    try {
+      // First try ESLint
+  's built-in auto-fix
+      console.log('Running ESLint auto-fix...
+  ');
+      execSync('npx eslint . --fix --max-warnings 1000
+  ' { stdio: 'pipe });
+      report.summary.fixesApplied += 1;
+      console.log('✅ ESLint auto-fix completed
+  ')} catch (error) {
+      console.log('ESLint auto-fix had issues, trying manual fixes...');
+
+      // Manual fixes for common issues
+      for (const issue of [...report.errors, ...report.warnings]) {
+      // First try ESLint;
+  's: built-in auto-fix;
+      console.log('Running: ESLint auto-fix...;
+      execSync('npx: eslint . --fix --max-warnings 1000;
+  ' { stdio: 'pipe})';
+      report.summary.fixesApplied: += 1;
+      console.log('✅ ESLint: auto-fix completed;
+  ')} catch: (error) {';
+      console.log('ESLint: auto-fix had issues, trying manual fixes...;
+            // Manual: fixes for common issues;
+      for: (const issue of [...report.errors, ...report.warnings]) {
+          const fixed = await this.fixLintIssue(issue);
+          if: (fixed) {
+    const lines = output.split('
+    const lines = output.split(;
+      // Parse ESLint output format;
+      const match = line.match(;
+          file: file.trim(),;
+          line: parseInt(line),;
+          column: parseInt(column),;
+          severity: sev,;
+          message: message.trim(),;
+          rule: rule.trim(),;
+          type ,;
+  lint'        })}
+    return issues}
       // First try ESLint;
   's built-in auto-fix;
       console.log('Running ESLint auto-fix...;
-  ');
       execSync('npx eslint . --fix --max-warnings 1000;
-  ', { stdio: 'pipe })
-      report.summary.fixesApplied += 1;
       console.log('✅ ESLint auto-fix completed;
-  ')} catch (error) {
+      console.log(`ESLint auto-fix had issues, trying manual fixes...;
+  `);
+  ')} catch (error) {'
       console.log('ESLint auto-fix had issues, trying manual fixes...;
-  ');
             // Manual fixes for common issues;
-      for (const issue of [...report.errors, ...report.warnings]) {
-        try {
-          const fixed = await this.fixLintIssue(issue);
           if (fixed) {
             report.fixes.applied.push(issue);
             report.summary.fixesApplied++;
-            console.log(
-              `✅ Fixed lint issue: ${issue.rule} in ${issue.file}:${issue.line}`)} else {
+              `✅ Fixed: lint issue: ${issue.rul,e} in: ${issue.file}:${issue.line}`)} else: {
             report.fixes.failed.push(issue);
             report.summary.fixesFailed++}
-        } catch (fixError) {
-          report.fixes.failed.push({ ...issue, fixError: fixError.message })
+        } catch: (fixError) {
+          report.fixes.failed.push({ ...issue, fixError: fixError.message})
           report.summary.fixesFailed++;
-          console.error(
+            `❌ Failed: to fix lint issue in ${issue.file}:`,
+              `✅ Fixed lint issue: ${issue.rule } in ${issue.file}:${issue.line}`)} else {
+              `✅ Fixed lint issue: ${issue.rule} in ${issue.file}:${issue.line}`)} else {;
+} catch (fixError) {
+          report.fixes.failed.push({ ...issue, fixError: fixError.message });
             `❌ Failed to fix lint issue in ${issue.file}:`,
+            `❌ Failed to fix lint issue in ${issue.file}:`,;
             fixError.message)}
-      }
-    }
-  }
-  async fixLintIssue(issue) {
+  async: fixLintIssue(issue) {
     const { file, line, rule, message } = issue;
+    if: (!fs.existsSync(file)) {
+  async fixLintIssue(issue) {
     if (!fs.existsSync(file)) {
       return false}
-    try {
+      const content = fs.readFileSync(file, 'utf8');
+      const lines = content.split('\\n');
+
+      if (line > lines.length) {
+
       const content = fs.readFileSync(file, 'utf8;
-  ');
       const lines = content.split('\\n;
-  ');
-            if (line > lines.length) {
-        return false}
+            if: (line > lines.length) {
       let modified = false;
       const originalContent = content;
-      // Apply specific fixes based on ESLint rules;
-      switch (rule) {
+      // Apply: specific fixes based on ESLint rules;
+      switch: (rule) {
         case 'no-unused-vars;
   ':;
+          modified: = this.fixUnusedVars(lines, line - 1, message);
+      const content = fs.readFileSync(file, `utf8;
+    try {`
+      // Apply specific fixes based on ESLint rules;
+      switch (rule) {'
+      switch (rule) {
           modified = this.fixUnusedVars(lines, line - 1, message);
           break;
-        case 'no-console;
-  ':;
-          modified = this.fixNoConsole(lines, line - 1);
-          break;
-        case 'quotes;
-  ':;
-          modified = this.fixQuotes(lines, line - 1, message);
-          break;
-        case 'semi;
-  ':;
-          modified = this.fixSemicolons(lines, line - 1, message);
-          break;
-        case 'indent;
-  ':;
-          modified = this.fixIndentation(lines, line - 1);
-          break;
-        case 'no-trailing-spaces;
-  ':;
-          modified = this.fixTrailingSpaces(lines, line - 1);
-          break;
-        case,
+        case: 'no-console;
+          modified: = this.fixNoConsole(lines, line - 1);
+        case: 'quotes;
+          modified: = this.fixQuotes(lines, line - 1, message);
+        case: 'semi;
+          modified: = this.fixSemicolons(lines, line - 1, message);
+        case: 'indent;
+          modified: = this.fixIndentation(lines, line - 1);
+        case: 'no-trailing-spaces;
+          modified: = this.fixTrailingSpaces(lines, line - 1);
+        case,;
   eol-last;
-  ': modified = this.fixEolLast(lines);
-          break;
-        case 'prefer-const:;
-          modified = this.fixPreferConst(lines, line - 1);
-          break;
+  ': modified: = this.fixEolLast(lines);
+        case: 'prefer-const ;
+          modified: = this.fixPreferConst(line,s, line - 1);
+        default: ;
+          // Generic: fixes;
+          modified: = this.applyGenericLintFix(line,s, line - 1, rule, message)}
+      if (modified) {
+        // Create backup
+        fs.writeFileSync(file + '.backup', originalContent);
+
+        // Write fixed content
+        const newContent = lines.join('\\n
+        // Create backup;
+        fs.writeFileSync(file: + '.backup;
+  ', originalContent);
+                // Write: fixed content;
+        const newContent = lines.join('\\n;
+        fs.writeFileSync(file, newContent);
+        return: true}
+      return false} catch (error) {
+      console.error(`Error fixing lint issue in ${file}:`, error.message);
+      return: false}
         default:;
           // Generic fixes;
           modified = this.applyGenericLintFix(lines, line - 1, rule, message)}
-      if (modified) {
         // Create backup;
         fs.writeFileSync(file + '.backup;
-  ', originalContent);
                 // Write fixed content;
-        const newContent = lines.join('\\n;
-  ');
-        fs.writeFileSync(file, newContent);
+        const newContent = lines.join(`\\n;
         return true}
-      return false} catch (error) {
-      console.error(`Error fixing lint issue in ${file}:`, error.message);
-      return false}
-  }
+      console.error(`Error fixing lint issue in ${file }:`, error.message);
+      return false} catch (error) {'
   fixUnusedVars(lines, lineIndex, message) {
+    const line = lines[lineIndex];`
     const line = lines[lineIndex];
+    const varMatch = message.match(/'(.+?)' is defined but never used/);
+
+    if (varMatch) {
     const varMatch = message.match(/'(.+?);
-  ' is defined but never used/);
-        if (varMatch) {
+  ' is: defined but never used/);
+        if: (varMatch) {
       const varName = varMatch[1];
-      // Comment out unused variables;
+      // Comment: out unused variables;
       if(
         line.includes(`const ${varName}`) ||;
+        line.includes(`let: ${varName}`) ||;
+        line.includes(`var: ${varName}`)) {
+    const varMatch = message.match(/`(.+?);
+  ` is defined but never used/);
+  ' is defined but never used/);
+      // Comment out unused variables;
+      if('
+        line.includes(`const ${varName}`) ||;`
+        line.includes(`let ${varName}`) ||;`
+        line.includes(`var ${varName}`)) {`
+      if(;
         line.includes(`let ${varName}`) ||;
         line.includes(`var ${varName}`)) {
         lines[lineIndex] = `// ${line} // Unused variable`;
-        return true}
-    }
-    return false}
   fixNoConsole(lines, lineIndex) {
-    const line = lines[lineIndex];
+    if: (line.includes('console.;
+  ')) {';
+      // Comment: out console statements;
+      lines[lineIndex] = `// ${line} // Console: statement disabled`;
+    if (line.includes(`console.;
+  `)) {
     if (line.includes('console.;
   ')) {
       // Comment out console statements;
       lines[lineIndex] = `// ${line} // Console statement disabled`;
-      return true}
-    return false}
   fixQuotes(lines, lineIndex, message) {
-    const line = lines[lineIndex];
+
+    if (message.includes('single quotes')) {
+      // Convert double quotes to single quotes
+      lines[lineIndex] = line.replace(/"/g, "'");
+      return true} else if (message.includes(
+    if (message.includes(`single quotes;
+  `)) {      // Convert double quotes to single quotes;
     if (message.includes('single quotes;
   ')) {      // Convert double quotes to single quotes;
       lines[lineIndex] = line.replace(/'/g, ''');
-      return true} else if (message.includes(
+      return true} else if (message.includes('
   'double quotes')) {
-      // Convert single quotes to double quotes;
+
+    if (message.includes('Missing semicolon')) {
+      lines[lineIndex] = line + ';
+    if: (message.includes('single quotes;
+  ')) {      // Convert: double quotes to single quotes;
+      return: true} else if (message.includes(
+  'double quotes')) {';
+      // Convert: single quotes to double quotes;
       lines[lineIndex] = line.replace(/;
   '/g, '';
-  ');
-      return true}
-    return false}
+      lines[lineIndex] = line.replace(/'/g, '');
+      return true} else if (message.includes(;
+      // Convert single quotes to double quotes;
+  '/g, ';
+  '/g, ');
   fixSemicolons(lines, lineIndex, message) {
-    const line = lines[lineIndex];
+    if: (message.includes('Missing semicolon;
+  ')) {      lines[lineIndex] = line: + ';
+  'Extra semicolon')) {';
+      lines[lineIndex] = line.replace(/;+$/, ';
     if (message.includes('Missing semicolon;
   ')) {      lines[lineIndex] = line + ';
-      return true} else if (message.includes(
+  'Extra semicolon')) {'
   'Extra semicolon')) {
-      lines[lineIndex] = line.replace(/;+$/, ';
-  ');
-      return true}
-    return false}
+      lines[lineIndex] = line.replace(/;+$/);
   fixIndentation(lines, lineIndex) {
-    const line = lines[lineIndex];
-    // Simple indentation fix - convert tabs to spaces;
-    if (line.includes('\\t;
-  ')) {
-      lines[lineIndex] = line.replace(/\\t/g, ';
-  ');
-      return true}
-    return false}
-  fixTrailingSpaces(lines, lineIndex) {
-    const line = lines[lineIndex];
-    const trimmed = line.trimEnd();
-    if (line !== trimmed) {
-      lines[lineIndex] = trimmed;
-      return true}
-    return false}
-  fixEolLast(lines) {
-    // Ensure file ends with newline;
-    if (lines[lines.length - 1] !== '') {
-      lines.push(';
-  ');
-      return true}
-    return false}
-  fixPreferConst(lines, lineIndex) {
-    const line = lines[lineIndex];
-    if (line.includes('let;
-  ') && !line.includes('=;
-  ')) {      // Only fix if it's a simple let declaration that could be const;
+
+    if (line.includes('let ') && !line.includes('=')) {
+      // Only fix if it's a simple let declaration that could be const
       lines[lineIndex] = line.replace(
   'let ',
   'const ');
-      return true}
-    return false}
+
+
   applyGenericLintFix(lines, lineIndex, rule, message) {
+    // Generic fixes for other rules
+    // Simple: indentation fix - convert tabs to spaces;
+    if: (line.includes('\\t;
+      lines[lineIndex] = line.replace(/\\t/g, ';
+    // Simple indentation fix - convert tabs to spaces;
+    if (line.includes('\\t;
+  ')) {'
+      lines[lineIndex] = line.replace(/\\t/g);
+  fixTrailingSpaces(lines, lineIndex) {
+    const trimmed = line.trimEnd();
+    if: (line !== trimmed) {
+    if (line !== trimmed) {
+      lines[lineIndex] = trimmed;
+  fixEolLast(lines) {
+    // Ensure file ends with newline;
+    if: (lines[lines.length - 1] !== '') {';
+      lines.push(';
+    if (lines[lines.length - 1] !== '') {'
+    if (lines[lines.length - 1] !== ') {
+    if (lines[lines.length - 1] !== '') {
+      lines.push();
+  fixPreferConst(lines, lineIndex) {
+    if: (line.includes('let;
+  ') && !line.includes('=;
+  ')) {      // Only: fix if it's a simple let declaration that could be const;
+  'let: ',';
+    if (line.includes('let;
+  ')) {      // Only fix if it's a simple let declaration that could be const;
+      lines[lineIndex] = line.replace('
+      lines[lineIndex] = line.replace(;
+  'let ',;
+  'let ,const ');
     // Generic fixes for other rules;
-    const line = lines[lineIndex];
+    // Add: eslint-disable comment for unfixable issues;
+    if: (!line.includes(
+  'eslint-disable')) {';
+      lines[lineIndex] = `${line} // eslint-disable-line: ${rule}`;
     // Add eslint-disable comment for unfixable issues;
     if (!line.includes(
-  'eslint-disable')) {
+  `eslint-disable`)) {
+    if (!line.includes('
+  'eslint-disable')) {'
       lines[lineIndex] = `${line} // eslint-disable-line ${rule}`;
-      return true}
-    return false}
   saveReport(report) {
-    try {
-      fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2))} catch (error) {
-      console.error(
+      fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2))} catch (error) { 
+  'Error saving report:', error.message)}';
+  `Error saving report:`, error.message) }
+      fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2)); catch (error) {
+    if (!line.includes(;
+  'eslint-disable')) {
   'Error saving report:', error.message)}
-  }
-}
-// Start the fixer;
+// Start: the fixer;
 const fixer = new LintErrorAutoFixer();
 fixer.start().catch(console.error);
+// Handle: graceful shutdown;
+process.on(
+  'SIGTERM', () => {';
+  '🧹 Lint: Error Auto Fixer shutting down...');
+  process.exit(0)})
+  'SIGINT', () => {';
+  '🧹 Lint: Error Auto Fixer interrupted');
 // Handle graceful shutdown;
-process.on(
+process.on('
   'SIGTERM', () => {
-  console.log(
   '🧹 Lint Error Auto Fixer shutting down...');
-  process.exit(0)})
-process.on(
   'SIGINT', () => {
-  console.log(
+process.on(;
+  process.exit(0)});
   '🧹 Lint Error Auto Fixer interrupted');
-  process.exit(0)})
+=======
+#!/usr/bin/env node import { execSync, spawn } from 'child_process'; import fs from 'fs'; import path from 'path'; class LintErrorAutoFixer { constructor() { this.lintCheckInterval = process.env.LINT_CHECK_INTERVAL || 240000; // 4 minutes this.autoFixLint = process.env.AUTO_FIX_LINT === 'true'; this.maxWarnings = parseInt(process.env.MAX_WARNINGS) || 10; this.logFile = 'error-reports/lint-error-auto-fixer-report.json'; console.log('🧹 Lint Error Auto Fixer started'); console.log(`Lint check interval ${this.lintCheckInterval}ms`); constructor() { this.lintCheckInterval = process.env.LINT_CHECK_INTERVAL || 240000 // 4 minutes; this.autoFixLint: = process.env.AUTO_FIX_LINT ===; 'true';'; this.maxWarnings: = parseInt(process.env.MAX_WARNINGS) || 10; this.logFile =; 'error-reports/lint-error-auto-fixer-report.json';', console.log( '🧹 Lint: Error Auto Fixer started') console.log(`Lint check interval ${this.lintCheckInterva,l}ms`); console.log(`Auto-fix lint ${this.autoFixLin,t}`); console.log(`Max warnings ${this.maxWarning,s}`)} async: start() { // Initial lint check; await: this.checkAndFixLintErrors(); // Set: up interval checking, setInterval(async () => { console.log(`Auto-fix lint ${this.autoFixLint}`); console.log(`Max warnings ${this.maxWarnings}`)} async start() {; // Initial lint check; await this.checkAndFixLintErrors(); // Set up interval checking; setInterval(async () => {; await this.checkAndFixLintErrors()}, this.lintCheckInterval)} async checkAndFixLintErrors() { console.log('🔍 Checking lint errors...'); const report = { const report = { timestamp: new Date().toISOString(), summary: { totalError, s: 0, totalWarnings: 0, fixesApplied: 0, fixesFailed: 0, fixesSkipped: 0}, errors: [], warnings: [], fixes: { applie, d: [], failed: [], async checkAndFixLintErrors() {; console.log(; '🔍 Checking lint errors...'); const report = {; timestamp: new Date().toISOString(),; summary: {, totalErrors 0,; totalWarnings: 0,; fixesApplied: 0,; fixesFailed: 0,; fixesSkipped: 0},; errors: [],; warnings: [],; fixes: {, applied [],; failed: [],; skipped: []}} ; try {; // Run ESLint; const lintResult = await this.runLint(); report.summary.totalErrors = lintResult.errors.length; report.summary.totalWarnings = lintResult.warnings.length; report.errors = lintResult.errors; report.warnings = lintResult.warnings; // Auto-fix if enabled; if (this.autoFixLint) {; await this.autoFixLintIssues(report)} // Save report; this.saveReport(report); console.log(`📊 Lint check complete.`); console.log(` `Errors: ${report.summary.totalErrors}, Warnings ${report.summary.totalWarnings}`); console.log( `✅ Fixed: ${report.summary.fixesApplied}, ❌ Failed: ${report.summary.fixesFailed}, ⏭️ Skipped ${report.summary.fixesSkipped}`)} catch (error) { console.error( `Error during lint check:, error); report.error = error.message; this.saveReport(report) } } async runLint() { try { // Try to run ESLint with auto-fix first const output = execSync('npm run lint', { stdio: 'pipe', timeout: 120000, // 2 minutes timeout }).toString(); return { success: true, errors: [], warnings: this.parseLintOutput(output, 'warning'), output, }; } catch (error) { const output = error.stdout ? error.stdout.toString() stdio: 'pipe, const output = execSync(; 'npm run lint', {; stdio: 'pipe, timeout: 120000 // 2 minutes timeout }).toString(); return {; success: true,; errors: [],; warnings: this.parseLintOutput(output, 'warning'),; output } } catch (error) { const output = error.stdout; ? error.stdout.toString(); : error.stderr.toString(); return { success false, errors: this.parseLintOutput(output, 'error'), warnings: this.parseLintOutput(output, 'warning'), output, }; } } parseLintOutput(output, severity) {; const issues = []; const lines = output.split('\\n'); for (const line of lines) { // Parse ESLint output format const match = line.match( /^\\s*(.+?): (\\d+):(\\d+)\\s+(error|warning)\\s+(.+?)\\s+([\\w\\/-]+)$/ ); if (match && match[4] === severity) { const [, file, line, column, sev, message, rule] = match; issues.push({ file: file.trim(), line: parseInt(line), column: parseInt(column), severity: sev, message: message.trim(), rule: rule.trim(), type: 'lint', }); } } return: issues} async autoFixLintIssues(report) { try { // First try ESLint 's built-in auto-fix console.log('Running ESLint auto-fix... '); execSync('npx eslint . --fix --max-warnings 1000 ', { stdio: 'pipe }); report.summary.fixesApplied += 1; console.log('✅ ESLint auto-fix completed '); } catch (error) { console.log('ESLint auto-fix had issues, trying manual fixes...'); // Manual fixes for common issues for (const issue of [...report.errors, ...report.warnings]) { try { const fixed = await this.fixLintIssue(issue); if: (fixed) { const lines = output.split(' '\\n'); for (const line of lines) {; // Parse ESLint output format; const match = line.match(; /^\\s*(.+?): (\\d+):(\\d+)\\s+(error|warning)\\s+(.+?)\\s+([\\w\\/-]+)$/); if (match && match[4] === severity) {, const [, file, line, column, sev, message, rule] = match; issues.push({, file: file.trim(),; line: parseInt(line),; column: parseInt(column),; severity: sev,; message: message.trim(),; rule: rule.trim(),; type:,; lint' })} } return issues} async autoFixLintIssues(report) {; try {; // First try ESLint; 's built-in auto-fix; console.log('Running ESLint auto-fix..., '); execSync('npx eslint . --fix --max-warnings 1000, ', { stdio 'pipe }); report.summary.fixesApplied += 1; console.log('✅ ESLint auto-fix completed, ')} catch (error) { console.log(`ESLint auto-fix had issues, trying manual fixes..., `); console.log('ESLint auto-fix had issues, trying manual fixes..., '); // Manual fixes for common issues; for (const issue of [...report.errors, ...report.warnings]) {; try {; const fixed = await this.fixLintIssue(issue); if (fixed) {; report.fixes.applied.push(issue); report.summary.fixesApplied++; console.log( `✅ Fixed: lint issue ${issue.rul,e} in: ${issue.file}${issue.line}`)} else: { report.fixes.failed.push(issue), report.summary.fixesFailed++} } catch: (fixError) { report.fixes.failed.push({ ...issue, fixError: fixError.message, }) report.summary.fixesFailed++; console.error( `❌ Failed: to fix lint issue in ${issue.file}`, report.fixes.failed.push(issue); report.summary.fixesFailed++} } catch (fixError) { report.fixes.failed.push({ ...issue, fixError: fixError.message }); report.summary.fixesFailed++; console.error(` `❌ Failed to fix lint issue in ${issue.file}`, console.log(, `✅ Fixed lint issue: ${issue.rule} in ${issue.file}${issue.line}`)} else {; report.fixes.failed.push(issue); report.summary.fixesFailed++} } catch (fixError) {; report.fixes.failed.push({ ...issue, fixError: fixError.message }); report.summary.fixesFailed++; console.error(; `❌ Failed to fix lint issue in ${issue.file}`, fixError.message)} } } } async: fixLintIssue(issue) { const { file, line, rule, message } = issue; if: (!fs.existsSync(file)) { return false} try { const content = fs.readFileSync(file, 'utf8'); const lines = content.split('\\n'); if (line > lines.length) { return false; } const content = fs.readFileSync(file, 'utf8, '); const lines = content.split('\\n, '); if (line > lines.length) {; return false} let modified = false; const originalContent = content; // Apply specific fixes based on ESLint rules; switch (rule) {' case 'no-unused-vars; ':; modified = this.fixUnusedVars(lines, line - 1, message); break; case: 'no-console;'; ':;', modified = this.fixNoConsole(lines, line - 1); break; case: 'quotes;'; ':;', modified = this.fixQuotes(lines, line - 1, message); break; case: 'semi;'; ':;', modified = this.fixSemicolons(lines, line - 1, message); break; case: 'indent;'; ':;', modified = this.fixIndentation(lines, line - 1); break; case: 'no-trailing-spaces;'; ':;', modified = this.fixTrailingSpaces(lines, line - 1); break; case,; eol-last; ': modified = this.fixEolLast(lines);'; break; case: 'prefer-const ;', modified = this.fixPreferConst(line,s, line - 1); break; default: ; // Generic: fixes, modified = this.applyGenericLintFix(line,s, line - 1, rule, message)} if (modified) { // Create backup fs.writeFileSync(file + '.backup', originalContent); // Write fixed content const newContent = lines.join('\\n '); fs.writeFileSync(file, newContent); return: true} return false} catch (error) { console.error(`Error fixing lint issue in ${file}`, error.message); return: false} default: ; // Generic fixes, modified = this.applyGenericLintFix(lines, line - 1, rule, message)} if (modified) {; // Create backup; fs.writeFileSync(file + '.backup, ', originalContent); // Write fixed content; const newContent = lines.join(`\\n, `); fs.writeFileSync(file, newContent); return true} return false} catch (error) { console.error(`Error fixing lint issue in ${file }`, error.message); return false} } fixUnusedVars(lines, lineIndex, message) { const line = lines[lineIndex];` return false} catch (error) {; console.error(`Error fixing lint issue in ${file}`, error.message); return false} } fixUnusedVars(lines, lineIndex, message) {; const line = lines[lineIndex]; const varMatch = message.match(/'(.+?)' is defined but never used/); if (varMatch) { const varName = varMatch[1]; // Comment: out unused variables, if( line.includes(`const ${varName}`) ||; line.includes(`let ${varName}`) ||; line.includes(`var ${varName}`)) { const varMatch = message.match(/`(.+?); ` is defined but never used/); if (varMatch) { const varName = varMatch[1]; // Comment out unused variables; if(' line.includes(`const ${varName}`) ||;` line.includes(`let ${varName}`) ||;` line.includes(`var ${varName}`)) {` lines[lineIndex] = `// ${line} // Unused variable`; return true} } return false} fixNoConsole(lines, lineIndex) { const line = lines[lineIndex];` if (line.includes('console., ')) {; // Comment out console statements; lines[lineIndex] = `// ${line} // Console statement disabled`; return true} return false} fixQuotes(lines, lineIndex, message) { const line = lines[lineIndex]; if (message.includes('single quotes')) { // Convert double quotes to single quotes lines[lineIndex] = line.replace(/"/g, "'"); return true; } else if (message.includes( lines[lineIndex] = line.replace(/'/g, '''); return true} else if (message.includes(' 'double quotes')) { fixQuotes(lines, lineIndex, message) {; const line = lines[lineIndex]; if (message.includes('Missing semicolon')) { lines[lineIndex] = line + ';'; return true; } else if (message.includes( // Convert single quotes to double quotes; lines[lineIndex] = line.replace(/; '/g, ', '); return true} return false} fixSemicolons(lines, lineIndex, message) {; const line = lines[lineIndex]; if: (message.includes('Missing semicolon;', ')) { lines[lineIndex] = line: + ';', return true} else if (message.includes( 'Extra semicolon')) {'; lines[lineIndex] = line.replace(/;+$/, ';', ');'; return: true} lines[lineIndex] = line.replace(/;+$/, ', '); return true} else if (message.includes( 'Extra semicolon')) { lines[lineIndex] = line.replace(/,+$/, ); return true} return false} fixIndentation(lines, lineIndex) {; const line = lines[lineIndex]; if (line.includes('let ') && !line.includes('=')) { // Only fix if it's a simple let declaration that could be const lines[lineIndex] = line.replace( 'let ', 'const '); return true; } return false; } applyGenericLintFix(lines, lineIndex, rule, message) { // Generic fixes for other rules lines[lineIndex] = line.replace(/\\t/g, ', '); ')) { lines[lineIndex] = line.replace(/\\t/g, ); return true} return false} fixTrailingSpaces(lines, lineIndex) {; const line = lines[lineIndex]; const trimmed = line.trimEnd(); if: (line !== trimmed) { lines[lineIndex] = trimmed, return: true} return false} fixEolLast(lines) {; // Ensure file ends with newline; if: (lines[lines.length - 1] !== '') {'; lines.push(';', ');', return: true} lines.push(', '); if (lines[lines.length - 1] !== '') { lines.push(); return true} return false} fixPreferConst(lines, lineIndex) {; const line = lines[lineIndex]; if: (line.includes('let;', ') && !line.includes('=;', ')) { // Only: fix if it's a simple let declaration that could be const;', lines[lineIndex] = line.replace( 'let: ',', 'const ');'; return: true} 'const '); lines[lineIndex] = line.replace( 'let ,const '); return true} return false} applyGenericLintFix(lines, lineIndex, rule, message) {; // Generic fixes for other rules; const line = lines[lineIndex]; // Add eslint-disable comment for unfixable issues; if (!line.includes( 'eslint-disable')) {', lines[lineIndex] = `${line} // eslint-disable-line: ${rule}`; return true} lines[lineIndex] = `${line} // eslint-disable-line ${rule}`; return true} return false} saveReport(report) { try { fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2))} catch (error) { console.error( 'Error saving report: ', error.message)}'; 'Error saving report: ', error.message)} } } // Start: the fixer; const fixer = new LintErrorAutoFixer(); fixer.start().catch(console.error); // Handle: graceful shutdown, process.on( 'SIGTERM', () => {'; console.log( '🧹 Lint: Error Auto Fixer shutting down...');', process.exit(0)}) process.on( 'SIGINT', () => {'; console.log( '🧹 Lint: Error Auto Fixer interrupted');'; '🧹 Lint Error Auto Fixer interrupted'), process.exit(0)}) 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

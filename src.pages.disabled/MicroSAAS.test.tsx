@@ -1,3 +1,4 @@
-:src.pages.disabled/MicroSAAS.test.tsx;
-describe ('MicroSAAS', () => {}' it ('renders without crashing', () => {} render (<MicroSAAS />) '; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<MicroSAAS />) ;
-describe ('MicroSAAS', () => {}' it ('renders without crashing', () => {} render (<MicroSAAS />) '; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<MicroSAAS />) ''
+:src.pages.disabled/MicroSAAS.test.tsx
+describe ('MicroSAAS', () => {}; '; it ('renders without crashing', () => {}; render (<MicroSAAS />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<MicroSAAS />) ;
+
+describe ('MicroSAAS', () => {}; '; it ('renders without crashing', () => {}; render (<MicroSAAS />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<MicroSAAS />) ;''';

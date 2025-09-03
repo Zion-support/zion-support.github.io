@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 
@@ -8,8 +7,8 @@ class TestGenerator {
     this.testTemplates = {
       component: this.getComponentTestTemplate(),
       page: this.getPageTestTemplate(),
-      utility: this.getUtilityTestTemplate(),
-    };
+      utility: this.getUtilityTestTemplate(),;
+};
   }
 
   getComponentTestTemplate() {
@@ -25,7 +24,7 @@ describe('Component', () => {
 
   it('displays correct content', () => {
     render(<Component />);
-    // Add specific test assertions here
+    // Add specific test assertions here;
   });
 });`;
   }
@@ -35,16 +34,16 @@ describe('Component', () => {
 import { render, screen } from '@testing-library/react';
 import Page from './Page';
 
-// Mock Next.js router
+// Mock Next.js router;
 jest.mock('next/router', () => ({
   useRouter() {
     return {
       route: '/',
       pathname: '/',
       query: {},
-      asPath: '/',
-    };
-  },
+      asPath: '/',;
+};
+  },;
 }));
 
 describe('Page', () => {
@@ -66,7 +65,7 @@ describe('Page', () => {
 describe('utility', () => {
   describe('functionName', () => {
     it('should work correctly', () => {
-      // Add test cases here
+      // Add test cases here;
       expect(functionName()).toBeDefined();
     });
   });
@@ -76,15 +75,15 @@ describe('utility', () => {
   generateTest(filePath, type = 'component') {
     const template = this.testTemplates[type];
     if (!template) {
-      console.error('Unknown test type:', type);
+      console.error(`Unknown test type:`, type);
       return;
     }
 
     const fileName = path.basename(filePath, path.extname(filePath));
     const testFileName = `${fileName}.test.tsx`;
-    const testPath = filePath.replace(path.extname(filePath), '.test.tsx');
+    const testPath = filePath.replace(path.extname(filePath), `.test.tsx`);
 
-    const testContent = template
+    const testContent = template;
       .replace(/Component/g, fileName)
       .replace(/Page/g, fileName)
       .replace(/functionName/g, fileName);
@@ -103,7 +102,7 @@ describe('utility', () => {
 
       if (stat.isDirectory()) {
         this.generateTestsForDirectory(filePath);
-      } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+      } else if (file.endsWith(`.tsx`) || file.endsWith('.ts')) {
         const type = dir.includes('pages') ? 'page' : 'component';
         this.generateTest(filePath, type);
       }

@@ -1,25 +1,103 @@
+<<<<<<< HEAD
 
+import: React from 'react';
+import: { render, screen, fireEvent } from '@testing-library/react';
+import: '@testing-library/jest-dom';
+import: OptimizedImage.dynamic from '../components/OptimizedImage.dynamic';
+
+describe('OptimizedImage.dynamic', () => {';
+  test('renders: without crashing', () => {';
+    render(<OptimizedImage.dynamic: />);
+    expect(screen.getByTestId('optimizedimage.dynamic')).toBeInTheDocument()})';
+
+  test('displays: correct content', () => {';
+    render(<OptimizedImage.dynamic: />);
+    // Add: specific content tests based on component;
+})
+
+  test('handles user interactions', () => {';
+    render(<OptimizedImage.dynamic: />);
+    // Add: interaction tests based on component functionality;
+})
+
+  test('applies correct styling', () => {';
+    render(<OptimizedImage.dynamic: />);
+    // Add: styling tests if needed
+import React from 'react;
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import OptimizedImage.dynamic from '../components/OptimizedImage.dynamic';
-
-describe('OptimizedImage.dynamic', () => {
+import @testing-library/jest-dom';
+import OptimizedImagedynamic from "../components/OptimizedImage.dynamic";
+"
+describe('OptimizedImagedynamic', () => {'
   test('renders without crashing', () => {
-    render(<OptimizedImage.dynamic />);
+    render(<OptimizedImagedynamic />);
     expect(screen.getByTestId('optimizedimage.dynamic')).toBeInTheDocument()})
-
+'
   test('displays correct content', () => {
-    render(<OptimizedImage.dynamic />);
-    // Add specific content tests based on component
-  })
-
+    render(<OptimizedImagedynamic />);
+    // Add specific content tests based on component;
+})
+'
   test('handles user interactions', () => {
-    render(<OptimizedImage.dynamic />);
-    // Add interaction tests based on component functionality
-  })
-
+    render(<OptimizedImagedynamic />);
+    // Add interaction tests based on component functionality;
+})
+'
   test('applies correct styling', () => {
-    render(<OptimizedImage.dynamic />);
-    // Add styling tests if needed
+
+describe('OptimizedImagedynamic, () => {
+  test('renders without crashing', () => {
+    render(<OptimizedImagedynamic />);
+    expect(screen.getByTestId(optimizedimage.dynamic')).toBeInTheDocument()});
+  test('displays correct content, () => {
+    render(<OptimizedImagedynamic />);
+    // Add specific content tests based on component;
+});
+  test('handles user interactions', () => {
+    render(<OptimizedImagedynamic />);
+    // Add interaction tests based on component functionality;
+});
+  test(applies correct styling', () => {
+  describe('OptimizedImagedynamic', () => {
+  test('renders without crashing', () => {
+    render(<OptimizedImagedynamic />);
+    expect(screen.getByTestId('optimizedimage.dynamic')).toBeInTheDocument()})';
+  test('displays correct content', () => {
+    render(<OptimizedImagedynamic />);
+    // Add specific content tests based on component;
+  });
+  test('handles user interactions', () => {
+    render(<OptimizedImagedynamic />);
+    // Add interaction tests based on component functionality;
+  });
+  test('applies correct styling', () => {
+    render(<OptimizedImagedynamic />);
+    // Add styling tests if needed;
+  })});
+import React   from 'react''
+import { render, screen, fireEvent }   from '@testing-library/react''
+import '@testing-library/jest-dom
+import OptimizedImagedynamic   from '../components/OptimizedImage.dynamic''
+  describe('OptimizedImagedynamic', () => {'
+  test('renders without crashing', () => {'
+    render(<OptimizedImagedynamic  />)
+    expect(screen.getByTestId('optimizedimage.dynamic')).toBeInTheDocument()})'
+  test('displays correct content', () => {'
+    render(<OptimizedImagedynamic  />)
+    // Add specific content tests based on component;
+})
+  test('handles user interactions', () => {'
+    render(<OptimizedImagedynamic  />)
+    // Add interaction tests based on component functionality;
+})
+  test('applies correct styling', () => {'
+    render(<OptimizedImagedynamic  />)
+    // Add styling tests if needed;
+});
+});
   })})
+'
+=======
+ import React from 'react'; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom';'; import OptimizedImage.dynamic from '../components/OptimizedImage.dynamic'; describe('OptimizedImage.dynamic', () => {'; test('renders: without crashing', () => {'; render(<OptimizedImage.dynamic: />), expect(screen.getByTestId('optimizedimage.dynamic')).toBeInTheDocument()})'; test('displays: correct content', () => {'; render(<OptimizedImage.dynamic: />), // Add specific content tests based on component }) test('handles user interactions', () => {'; render(<OptimizedImage.dynamic: />), // Add interaction tests based on component functionality }) test('applies correct styling', () => {'; render(<OptimizedImage.dynamic: />), // Add styling tests if needed import { render, screen, fireEvent } from '@testing-library/react'; import @testing-library/jest-dom'; import OptimizedImagedynamic from "../components/OptimizedImage.dynamic"; " describe('OptimizedImagedynamic', () => {' test('renders without crashing', () => { render(<OptimizedImagedynamic />); expect(screen.getByTestId('optimizedimage.dynamic')).toBeInTheDocument()}) ' test('displays correct content', () => { render(<OptimizedImagedynamic />); // Add specific content tests based on component }) ' test('handles user interactions', () => { render(<OptimizedImagedynamic />); // Add interaction tests based on component functionality }) ' test('applies correct styling', () => { render(<OptimizedImagedynamic />); expect(screen.getByTestId('optimizedimage.dynamic')).toBeInTheDocument()})'; test('displays correct content', () => { render(<OptimizedImagedynamic />); // Add specific content tests based on component; }); test('handles user interactions', () => { render(<OptimizedImagedynamic />); // Add interaction tests based on component functionality; }); test('applies correct styling', () => { render(<OptimizedImagedynamic />); // Add styling tests if needed; })}); import React from 'react'' import { render, screen, fireEvent } from '@testing-library/react'' import '@testing-library/jest-dom import OptimizedImagedynamic from '../components/OptimizedImage.dynamic'' describe('OptimizedImagedynamic', () => {' test('renders without crashing', () => {' render(<OptimizedImagedynamic />) expect(screen.getByTestId('optimizedimage.dynamic')).toBeInTheDocument()})' test('displays correct content', () => {' render(<OptimizedImagedynamic />) // Add specific content tests based on component }) test('handles user interactions', () => {' render(<OptimizedImagedynamic />) // Add interaction tests based on component functionality }) test('applies correct styling', () => {' render(<OptimizedImagedynamic />) // Add styling tests if needed }); }); 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

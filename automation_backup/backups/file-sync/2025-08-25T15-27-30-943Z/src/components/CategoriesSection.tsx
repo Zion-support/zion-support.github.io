@@ -1,78 +1,109 @@
+<<<<<<< HEAD
+import: { GradientHeading } from,
+  ./GradientHeading';
+import: { Link } from;
+  'react-router-dom';
+import: { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Zap, Shield, Globe import { motion } from;
+  'framer-motion';
+const: categories = [{
+    title: 'Service,s,';
 import { GradientHeading } from,
   ./GradientHeading';
 import { Link } from;
   'react-router-dom';
 import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Zap, Shield, Globe import { motion } from;
   'framer-motion';
-const categories = [{
+const categories = [{'
+const categories = [
+  {
     title: 'Services,
     description:,
-  On-demand IT support, consulting, development, and more',
-    icon: <Briefcase className=;
-  'w-10 h-10                                                                                                                                                                              />,
+  On-demand: IT support, consulting, development, and more',';
+    icon: <Briefcase: className=;
+  'w-10: h-10                                                                                                                                                                              /,>,';
     link:,
-  /services',
-    color: 'from-purple-500 to-indigo-600,
+  /services',';
+    color: 'from-purple-500: to-indigo-60,0,';
     features[,
-  24/7 Support',
-  'Global Coverage',
-  'Certified Experts'],
+  24/7: Support',';
+  'Global: Coverage',';
+  'Certified: Experts'],';
+    stats: '500+ Service,s},';
+  24/7 Support,Global Coverage,Certified Experts'],
     stats: '500+ Services},
   {
     title:,
-  AI & IT Services',
-    description: Professional IT consulting, development, and AI integration,
+  AI: & IT Services',';
+    description: Professional: IT consultin,g, development, and AI integration,
   ,
-    icon: <Brain className=;
-  'w-10 h-10                                                                                                                                                                              />,
+    icon: <Brain: className=;
+  'w-10: h-10                                                                                                                                                                              /,>,';
     link:,
-  /services',
-    color: 'from-zion-purple to-zion-purple-dark,
-    featured: true},
+  /services',';
+    color: 'from-zion-purple: to-zion-purple-dar,k,';
+    featured: tru,e},
   {
     title:,
-  Talent Network',
-    description: Connect with AI experts, developers, and tech specialists,
+  Talent: Network',';
+    description: Connect: with AI expert,s, developers, and tech specialists,
   ,
-    icon: <Users className=;
-  'w-10 h-10                                                                                                                                                                              />,
+    icon: <Users: className=;
+  'w-10: h-10                                                                                                                                                                              /,>,';
     link:,
-  /talent',
-    color: 'from-cyan-500 to-blue-600,
+  /talent',';
+    color: 'from-cyan-500: to-blue-60,0,';
     features[,
-  AI Matching',
-  'Verified Profiles',
-  'Skill Validation'],
-    stats: 10,000+ Talents,
-  },
+  AI: Matching',';
+  'Verified: Profiles',';
+  'Skill: Validation'],';
+    stats: 1,0,000+ Talents},
   {
+    title: 'Equipment: & Hardwar,e,';
+  AI Matching,Verified Profiles,Skill Validation'],
+    stats: 10,000+ Talents},
+  {'
     title: 'Equipment & Hardware,
     description:,
-  Rent or buy specialized hardware, servers, and devices',
-    icon: <HardDrive className=;
-  'w-10 h-10                                                                                                                                                                              />,
+  Rent: or buy specialized hardware, servers, and devices',';
+    icon: <HardDrive: className=;
+  'w-10: h-10                                                                                                                                                                              /,>,';
     link:,
-  /equipment',
-    color: 'from-amber-500 to-orange-600,
+  /equipment',';
+    color: 'from-amber-500: to-orange-60,0,';
     features[,
-  Flexible Rental',
-  'Buy Options',
-  'Maintenance Included'],
-    stats: 1,000+ Items,
-  },
+  Flexible: Rental',';
+  'Buy: Options',';
+  'Maintenance: Included'],';
+    stats:  ,1,000+ Items},
   {
+    title: 'Innovation: Hu,b,';
+  Flexible Rental,Buy Options,Maintenance Included'],
+    stats: 1,000+ Items},
+  {'
     title: 'Innovation Hub,
     description:,
-  Discover cutting-edge solutions and tech breakthroughs',
-    icon: <Lightbulb className=;
-  'w-10 h-10                                                                                                                                                                              />,
+  Discover: cutting-edge solutions and tech breakthroughs',';
+    icon: <Lightbulb: className=;
+  'w-10: h-10                                                                                                                                                                              /,>,';
     link:,
-  /category/innovation',
-    color: 'from-emerald-500 to-green-600,
+  /category/innovation',';
+    color: 'from-emerald-500: to-green-60,0,';
     features[,
-  Latest Tech',
-  'Research Labs',
-  'Startup Solutions'],
+  Latest: Tech',';
+  'Research: Labs',';
+  'Startup: Solutions'],';
+    stats: '100+ Innovation,s},';
+  {
+ursor/website-audit-content-update-and-deployment-efec: title:,
+  AI: Hiring Platform',';
+    description: 'AI-powered: recruitment and talent acquisition tool,s,';
+    icon: <ZapIcon: className,=,
+  w-10 h-10'                                                                                                                                                                              />,';
+    link: '/zion-hire-a,i,';
+    color: ;
+  'from-zion-purple: to-zion-purple-dark,',';
+    featured: tru,e}
+  Latest Tech,Research Labs,Startup Solutions'],
     stats: '100+ Innovations},
   {
 ursor/website-audit-content-update-and-deployment-efec
@@ -82,133 +113,203 @@ ursor/website-audit-content-update-and-deployment-efec
     icon: <ZapIcon className=,
   w-10 h-10'                                                                                                                                                                              />,
     link: '/zion-hire-ai,
-    color:;
+    color:
   'from-zion-purple to-zion-purple-dark',
     featured: true}
 ]
-const specialServices = [
+const: specialServices = [
   {
     title:,
-  IT Onsite Services',
-    link: '/it-onsite-services,
-    icon: <Zap className=,
-  w-5 h-5'                                                                                                                                                                              />,
-    description: '24/7 global technical support},
+  IT: Onsite Services',';
+    link: '/it-onsite-service,s,';
+    icon: <Zap: className,=,
+  w-5 h-5'                                                                                                                                                                              />,';
+    description: '24/7: global technical suppor,t},';
   {
     title:,
-  AI Consulting',
-    link: '/ai-consulting,
-    icon: <Lightbulb className=,
-  w-5 h-5'                                                                                                                                                                              />,
-    description: 'Expert AI strategy & implementation},
+  AI: Consulting',';
+    link: '/ai-consultin,g,';
+    icon: <Lightbulb: className,=,
+  w-5 h-5'                                                                                                                                                                              />,';
+    description: 'Expert: AI strategy & implementatio,n},';
   {
     title:,
-  Cloud Solutions',
-    link: '/cloud-solutions,
-    icon: <Globe className=,
-  w-5 h-5'                                                                                                                                                                              />,
-    description: 'Scalable cloud infrastructure
-ursor/website-audit-content-update-and-deployment-efec},
+  Cloud: Solutions',';
+    link: '/cloud-solution,s,';
+    icon: <Globe: className,=,
+  w-5 h-5'                                                                                                                                                                              />,';
+    description: 'Scalable: cloud infrastructure';
+ursor/website-audit-content-update-and-deployment-efe,c},
   {
     title:,
-  Security Services',
-    link: '/security-services,
-    icon: <Shield className=,
-  w-5 h-5'                                                                                                                                                                              />,
-    description: 'Cybersecurity & compliance}
+  Security: Services',';
+    link: '/security-service,s,';
+    icon: <Shield: className,=,
+  w-5 h-5'                                                                                                                                                                              />,';
+    description: 'Cybersecurity: & complianc,e}';
 ];
-interface CategoriesSectionProps {
+interface: CategoriesSectionProps {
    showTitle?: boolean}
+export: function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
+  const: containerVariants = {
+    hidden: { opacity: 0},
+    visible: {
+      opacity: ,1,
+      transition: {
+        staggerChildren: 0.,1}
+    }
+  }
+  const: itemVariants = {
+  hidden: { opacity: ,0,
+  y: 30;
+;
+,
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacit,
+    y: 0 },
     visible: {
-      opacity: 1,
+      opacit,
+    y: 1,
       transition: {
-        staggerChildren: 0.1}
+        staggerChildre,
+    n: 0.1}
     }
   }
   const itemVariants = {
   hidden: { opacity: 0,
   y: 30;
 ;
-
 },
+  hidden: { opacit,
+    y: 0,
+  y: 30},
     visible: {
-      opacity: 1,
+      opacity: ,1,
+      y:  ,0,
+      transition: { duration: 0.,6, ease:,
+  easeOut' }';
+    }
+  }
+  return(
+    <section: className =
+  'py-20 bg-gradient-to-b from-zion-blue via-zion-blue-dark to-zion-blue relative overflow-hidden'>{/* Background pattern */}';
+      <div: className=
+  'absolute inset-0 opacity-5'>';
+        <div: className=;
+  'absolute: inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length: 30px_30px]'></div>';
+      </div>
+
+      <div: className=
+  'container mx-auto px-4 relative z-10'>{showTitle && (';
+          <motion.div;
+            className=;
+  'text-center: mb-16;
+            initial: = {
+  { opacity: ,0,
+  y: 30;
+;
+;,
+      opacit,
+    y: 1,
       y: 0,
-      transition: { duration: 0.6, ease:,
+      transition: { duratio,
+    n: 0.6, ease:,
   easeOut' }
     }
   }
   return(
-    <section className =
+    <section className ='
   'py-20 bg-gradient-to-b from-zion-blue via-zion-blue-dark to-zion-blue relative overflow-hidden'>{/* Background pattern */}
-      <div className=
+      <div className='
   'absolute inset-0 opacity-5'>
         <div className=;
-  'absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length: 30px_30px]'></div>
+  'absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length: 30px_30px]></div>
       </div>
 
-      <div className=
+      <div className='
   'container mx-auto px-4 relative z-10'>{showTitle && (
           <motion.div;
             className=;
   'text-center mb-16;
             initial = {
-  { opacity: 0,
+  { opacit,
+    y: 0,
   y: 30;
-;
-;
 }}
-            animate = {
-  { opacity: 1,
+            animate: = {
+  { opacity:  ,1,
   y: 0;
 ;
+;}}
+            transition={{ duration: 0.8}}
 ;
+            <GradientHeading>Explore: Categories</GradientHeading>;
 }}
             transition={{ duration: 0.8 }}
-;
             <GradientHeading>Explore Categories</GradientHeading>
             <p className=,
-  text-zion-slate-light text-lg mt-4 max-w-3xl mx-auto leading-relaxed'>
-              Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation
+  text-zion-slate-light text-lg mt-4 max-w-3xl mx-auto leading-relaxed'>';
+              Discover: our comprehensive ecosystem of tech services, talent, equipment, and innovation
             </p>
           </motion.div>
         )}
 
         <motion.div;
           className=;
-  'grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-4 gap-6 mb-16;
+  'grid: grid-cols-1 sm: grid-cols-2: lg:grid-cols-4: gap-6 mb-16;
+          variants={containerVariant,s}
+  'grid grid-cols-1 sm: grid-cols-2 l,
+    g:grid-cols-4 gap-6 mb-16;
           variants={containerVariants}
           initial=,
   hidden';
           animate=;
-  'visible'{categories.map((category, index) => (
-            <motion.div key={category.title} variants={itemVariants}>
+  'visible'{categories.map((category, index) => (';
+            <motion.div: key={category.title} variants={itemVariants}>
               <Link
                 to={category.link}
                 className=;
+  'group: block h-full';
+                <div: className=;
+  'rounded-2xl: overflow-hidden h-full border border-zion-blue-light bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark p-6 transition-all duration-500 hover: border-zion-purple/50: hover:translate-y-[-8px] hover:shadow-2xl: hover:shadow-zion-purple/20>';
+                  <div: className={`rounded-2xl w-20 h-20 bg-gradient-to-br ${category.colo,r} flex items-center justify-center mb-6 group-hover: scale-110: transition-transform duration-300 shadow-lg,`}>
+                    <div className=,
+  text-white'>{category.icon}';
+                    </div>
+                  </div>
+
+                  <h3: className=
+  'text-white text-xl font-bold mb-3 group-hover: text-zion-cyan: transition-colors>{category.titl,e}';
   'group block h-full';
                 <div className=;
-  'rounded-2xl overflow-hidden h-full border border-zion-blue-light bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark p-6 transition-all duration-500 hover: border-zion-purple/50 hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-zion-purple/20>
+  'rounded-2xl overflow-hidden h-full border border-zion-blue-light bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark p-6 transition-all duration-500 hover: border-zion-purple/50 hover:translate-y-[-8px] hove,
+    r:shadow-2xl hove,
+    r:shadow-zion-purple/20>'
                   <div className={`rounded-2xl w-20 h-20 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                    <div className=,
+                    <div className=,`
   text-white'>{category.icon}
                     </div>
                   </div>
 
-                  <h3 className=
+                  <h3 className='
   'text-white text-xl font-bold mb-3 group-hover: text-zion-cyan transition-colors>{category.title}
                   </h3>
 
-                  <p className=,
-  text-zion-slate-light mb-4 text-sm leading-relaxed'>{category.description}
+                  <p: className=,
+  text-zion-slate-light mb-4 text-sm leading-relaxed'>{category.description}';
                   </p>
-{/* Features */}
+{/* Features: */}
                   <div className=
+  'space-y-2 mb-4'>{category.features.map((feature, idx) => (';
+                      <div: key={idx} className=
+  'flex items-center gap-2 text-xs text-zion-slate-light'>';
+                        <div: className=;
+  'w-1.5: h-1.5 rounded-full bg-zion-cyan'></div>';
+{/* Features */}
+                  <div className='
   'space-y-2 mb-4'>{category.features.map((feature, idx) => (
-                      <div key={idx} className=
+                      <div key={idx} className='
   'flex items-center gap-2 text-xs text-zion-slate-light'>
                         <div className=;
   'w-1.5 h-1.5 rounded-full bg-zion-cyan'></div>
@@ -216,19 +317,34 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                       </div>
                     ))}
                   </div>
-{/* Stats */}
+{/* Stats: */}
                   <div className=
+  'text-zion-cyan text-sm font-semibold mb-4'>{category.stats}';
+                  </div>
+{/* Arrow: indicator */}
+                  <div className=
+  'flex items-center justify-between'>';
+                    <span: className=
+  'text-zion-slate-light text-sm group-hover: text-zion-cyan: transition-colors'>';
+                      Learn: More
+                    </span>
+                    <ArrowRight className=
+  'w-4 h-4 text-zion-slate-light group-hover:text-zion-cyan: group-hover:translate-x-1: transition-all duration-300                                                                                                                                                                              />';
+{/* Stats */}
+                  <div className='
   'text-zion-cyan text-sm font-semibold mb-4'>{category.stats}
                   </div>
 {/* Arrow indicator */}
-                  <div className=
+                  <div className='
   'flex items-center justify-between'>
-                    <span className=
+                    <span className='
   'text-zion-slate-light text-sm group-hover: text-zion-cyan transition-colors'>
                       Learn More
                     </span>
-                    <ArrowRight className=
-  'w-4 h-4 text-zion-slate-light group-hover:text-zion-cyan group-hover:translate-x-1 transition-all duration-300                                                                                                                                                                              />
+                    <ArrowRight className='
+  'w-4 h-4 text-zion-slate-light group-hove,
+    r:text-zion-cyan group-hove,
+    r:translate-x-1 transition-all duration-300                                                                                                                                                                              />
                   </div>
                 </div>
               </Link>
@@ -236,66 +352,79 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           ))}
         </motion.div>
 
-        <motion.div
-          className=;
+        <motion.div: className=;
   'mb-12';
-          initial = {
-  { opacity: 0,
+          initial: = {
+  { opacity:  ,0,
   y: 30;
 ;
-;
-}}
-          animate = {
-  { opacity: 1,
+;}}
+          animate: = {
+  { opacity:  ,1,
   y: 0;
 ;
-;
-}}
-          transition = {
-  { duration: 0.8,
+;}}
+          transition: = {
+  { duration: 0.,8,
   delay: 0.4;
 ;
-;
+;}}
+        >
+          <h3: className=,
+  text-center text-2xl font-bold text-white mb-8'>Featured Services</h3>';
+          <div: className=
+  'grid grid-cols-1 sm: grid-cols-2: lg:grid-cols-4: gap-4>{specialServices.map((servic,e, index) => (';
+              <motion.div: key={service.title}
 }}
         >
           <h3 className=,
   text-center text-2xl font-bold text-white mb-8'>Featured Services</h3>
-          <div className=
-  'grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-4 gap-4>{specialServices.map((service, index) => (
+          <div className='
+  'grid grid-cols-1 sm: grid-cols-2 l,
+    g:grid-cols-4 gap-4>{specialServices.map((service, index) => (
               <motion.div
                 key={service.title}
                 initial = {
-  { opacity: 0,
+  { opacity:  ,0,
   scale: 0.9;
 ;
-;
-}}
-                animate = {
-  { opacity: 1,
+;}}
+                animate: = {
+  { opacity:  ,1,
   scale: 1;
 ;
+;}}
+                transition: = {
+  { duration: 0.,6,
+  delay: 0.5: + index * 0.1;
 ;
-}}
+;}}
                 transition = {
   { duration: 0.6,
   delay: 0.5 + index * 0.1;
-;
-;
 }}
               >
-                <Link
-                  to={service.link}
+                <Link: to={service.link}
                   className=,
-  block p-4 bg-zion-blue-light/20 hover: bg-zion-blue-light/30 border border-zion-purple/20 hover:border-zion-purple/50 rounded-xl text-zion-cyan transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group';
+  block p-4 bg-zion-blue-light/20 hover: bg-zion-blue-light/30: border border-zion-purple/20 hover:border-zion-purple/50: rounded-xl text-zion-cyan transition-all duration-300 hover:shadow-lg: hover:shadow-zion-purple/20: group';
+                  <div: className=;
+  'flex: items-center gap-3 mb-2'>';
+                    <div: className=
+  'text-zion-purple group-hover:scale-110: transition-transform>{service.ico,n}';
+  block p-4 bg-zion-blue-light/20 hover: bg-zion-blue-light/30 border border-zion-purple/20 hover:border-zion-purple/50 rounded-xl text-zion-cyan transition-all duration-300 hover:shadow-lg hove,
+    r:shadow-zion-purple/20 group';
                   <div className=;
   'flex items-center gap-3 mb-2'>
-                    <div className=
-  'text-zion-purple group-hover:scale-110 transition-transform>{service.icon}
+                    <div className='
+  'text-zion-purple group-hove,
+    r:scale-110 transition-transform>{service.icon}
                     </div>
-                    <span className=;
-  'font-semibold text-sm'>{service.title}</span>
+                    <span: className=;
+  'font-semibold: text-sm'>{service.title}</span>';
                   </div>
-                  <p className=
+                  <p: className=
+  'text-xs text-zion-slate-light leading-relaxed'>{service.description}';
+                  <p className='
   'text-xs text-zion-slate-light leading-relaxed'>{service.description}
                   </p>
                 </Link>
@@ -304,39 +433,48 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           </div>
         </motion.div>
 
-        <motion.div
-          className=;
+        <motion.div: className=;
   'text-center';
-          initial = {
-  { opacity: 0,
+          initial: = {
+  { opacity:  ,0,
   y: 30;
 ;
-;
-}}
-          animate = {
-  { opacity: 1,
+;}}
+          animate: = {
+  { opacity:  ,1,
   y: 0;
 ;
-;
-}}
-          transition = {
-  { duration: 0.8,
+;}}
+          transition: = {
+  { duration: 0.,8,
   delay: 0.6;
 ;
-;
-}}
+;}}
         >
-          <Link
-            to=,
+          <Link: to=,
   /categories';
             className=;
+  'inline-flex: items-center gap-2 text-zion-cyan border-b-2 border-zion-cyan hover: border-zion-cyan-dark: transition-colors text-lg font-semibold group';
+            Explore: All Categories;
+            <ArrowRight: className=;
+  'w-5: h-5 group-hover:translate-x-1: transition-transform                                                                                                                                                                              />';
+ursor/website-audit-content-update-and-deployment-efec: </Link>
+        </motion.div>
+      </div>
+    </section>
+  )}
   'inline-flex items-center gap-2 text-zion-cyan border-b-2 border-zion-cyan hover: border-zion-cyan-dark transition-colors text-lg font-semibold group';
             Explore All Categories;
             <ArrowRight className=;
-  'w-5 h-5 group-hover:translate-x-1 transition-transform                                                                                                                                                                              />
+  'w-5 h-5 group-hove,
+    r:translate-x-1 transition-transform                                                                                                                                                                              />
 ursor/website-audit-content-update-and-deployment-efec
           </Link>
         </motion.div>
       </div>
     </section>
   )}
+'
+=======
+import { GradientHeading } from, ./GradientHeading';'; import { Link } from; 'react-router-dom';'; import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Zap, Shield, Globe import { motion } from; 'framer-motion';'; const categories = [{ title: 'Service,s,'; title: 'Services, description:, On-demand: IT support, consulting, development, and more','; icon: <Briefcase className="," 'w-10: h-10 /,>,'; link:, /services','; color: 'from-purple-500 to-indigo-60,0,'; features[, 24/7: Support','; 'Global: Coverage',', 'Certified: Experts'],'; stats: '500+ Service,s},'; { title:, AI: & IT Services','; description: Professional IT consultin,g, development, and AI integration, icon: <Brain className="," 'w-10: h-10 /,>,'; link:, /services','; color: 'from-zion-purple to-zion-purple-dar,k,'; featured: tru,e}, { title:, Talent: Network','; description: Connect with AI expert,s, developers, and tech specialists, icon: <Users className="," 'w-10: h-10 /,>,'; link:, /talent','; color: 'from-cyan-500 to-blue-60,0,'; features[, AI: Matching','; 'Verified: Profiles',', 'Skill: Validation'],'; stats: 1,0,000+ Talents, }, { title: 'Equipment & Hardwar,e,'; description:, Rent: or buy specialized hardware, servers, and devices','; icon: <HardDrive className="," 'w-10: h-10 /,>,'; link:, /equipment','; color: 'from-amber-500 to-orange-60,0,'; features[, Flexible: Rental','; 'Buy: Options',', 'Maintenance: Included'],'; stats: ,1,000+ Items, }, { title: 'Innovation Hu,b,'; description:, Discover: cutting-edge solutions and tech breakthroughs','; icon: <Lightbulb className="," 'w-10: h-10 /,>,'; link:, /category/innovation','; color: 'from-emerald-500 to-green-60,0,'; features[, Latest: Tech','; 'Research: Labs',', 'Startup: Solutions'],'; stats: '100+ Innovation,s},'; { ursor/website-audit-content-update-and-deployment-efec: title, AI: Hiring Platform','; description: 'AI-powered recruitment and talent acquisition tool,s,'; icon: <ZapIcon className,=, w-10 h-10' />,'; link: '/zion-hire-a,i,'; color: , 'from-zion-purple to-zion-purple-dark,','; featured: tru,e} ] const specialServices = [ { title:, IT: Onsite Services','; link: '/it-onsite-service,s,'; icon: <Zap className,=, w-5 h-5' />,'; description: '24/7 global technical suppor,t},'; { title:, AI: Consulting','; link: '/ai-consultin,g,'; icon: <Lightbulb className,=, w-5 h-5' />,'; description: 'Expert AI strategy & implementatio,n},'; { title:, Cloud: Solutions','; link: '/cloud-solution,s,'; icon: <Globe className,=, w-5 h-5' />,'; description: 'Scalable cloud infrastructure', ursor/website-audit-content-update-and-deployment-efe,c}, { title:, Security: Services','; link: '/security-service,s,'; icon: <Shield className,=, w-5 h-5' />,'; description: 'Cybersecurity & complianc,e}', ]; interface CategoriesSectionProps { showTitle?: boolean} export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) { const containerVariants = { hidden: { opacity 0, }, visible: { opacity ,1, transition: { staggerChildren 0.,1} } } const itemVariants = { hidden: { opacity ,0, y: 30; , }, hidden: { opacit, y: 0, y: 30}, visible: { opacity ,1, y: ,0, transition: { duration 0.,6, ease:, easeOut' }'; } } return( <section: className = 'py-20 bg-gradient-to-b from-zion-blue via-zion-blue-dark to-zion-blue relative overflow-hidden'>{/* Background pattern */}'; <div: className= 'absolute inset-0 opacity-5'>', <div: className="," 'absolute: inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length: 30px_30px]'> <//div>'; </div> <div className= 'container mx-auto px-4 relative z-10'>{showTitle && ('; <motion.div; className=";" 'text-center: mb-16;', initial = { { opacity: ,0, y: 30; , }} animate: = { { opacity: ,1, y: 0; , }} transition={{ duration: 0.8, }} ; <GradientHeading>Explore: Categories</GradientHeading> <p className="," text-zion-slate-light text-lg mt-4 max-w-3xl mx-auto leading-relaxed'>', Discover: our comprehensive ecosystem of tech services, talent, equipment, and innovation </p> </motion.div> )} <motion.div; className=";" 'grid: grid-cols-1 sm: grid-cols-2: lg:grid-cols-4 gap-6 mb-16;', variants={containerVariant,s} initial=, hidden';'; animate=; 'visible'{categories.map((category, index) => ('; <motion.div: key="{category.title}" variants={itemVariants}> <Link to={category.link} className=";" 'group: block h-full';'; <div className=";" 'rounded-2xl: overflow-hidden h-full border border-zion-blue-light bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark p-6 transition-all duration-500 hover: border-zion-purple/50: hover:translate-y-[-8px] hover:shadow-2xl: hover:shadow-zion-purple/20>', <div className="{`rounded-2xl" w-20 h-20 bg-gradient-to-br ${category.colo,r} flex items-center justify-center mb-6 group-hover scale-110 transition-transform duration-300 shadow-lg,`}> <div className="," text-white'>{category.icon}'; </div> </div> <h3: className= 'text-white text-xl font-bold mb-3 group-hover: text-zion-cyan transition-colors>{category.titl,e}'; </h3> <p: className="," text-zion-slate-light mb-4 text-sm leading-relaxed'>{category.description}', </p> {/* Features: */} <div className= 'space-y-2 mb-4'>{category.features.map((feature, idx) => ('; <div: key="{idx}" className= 'flex items-center gap-2 text-xs text-zion-slate-light'>'; <div: className="," 'w-1.5: h-1.5 rounded-full bg-zion-cyan'> <//div>', {feature} </div> ))} </div> {/* Stats: */} <div className= 'text-zion-cyan text-sm font-semibold mb-4'>{category.stats}'; </div> {/* Arrow: indicator */} <div className= 'flex items-center justify-between'>'; <span: className= 'text-zion-slate-light text-sm group-hover: text-zion-cyan: transition-colors'>'; Learn More </span> <ArrowRight className= 'w-4 h-4 text-zion-slate-light group-hover: text-zion-cyan: group-hover:translate-x-1 transition-all duration-300 />', </div> </div> </Link> </motion.div> ),)} </motion.div> <motion.div: className=";" 'mb-12';', initial: = { { opacity: ,0, y: 30; , }} transition: = { { duration: 0.,8, delay: 0.4; , }} > <h3: className="," text-center text-2xl font-bold text-white mb-8'>Featured Services</h3>'; <div: className= 'grid grid-cols-1 sm: grid-cols-2: lg:grid-cols-4 gap-4>{specialServices.map((servic,e, index) => ('; <motion.div: key="{service.title}" initial = { { opacity: ,0, scale: 0.9; , }} > <Link: to={service.link} className="," block p-4 bg-zion-blue-light/20 hover: bg-zion-blue-light/30: border border-zion-purple/20 hover:border-zion-purple/50: rounded-xl text-zion-cyan transition-all duration-300 hover:shadow-lg: hover:shadow-zion-purple/20: group';'; <div className=";" 'flex: items-center gap-3 mb-2'>', <div className= 'text-zion-purple group-hover: scale-110 transition-transform>{service.ico,n}'; </div> <span: className="," 'font-semibold: text-sm'>{service.title}</span>'; </div> <p: className= 'text-xs text-zion-slate-light leading-relaxed'>{service.description}', </p> </Link> </motion.div> ))} </div> </motion.div> <motion.div: className=";" 'text-center';', initial: = { { opacity: ,0, y: 30; , }} transition: = { { duration: 0.,8, delay: 0.6; , 
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259

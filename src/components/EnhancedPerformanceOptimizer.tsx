@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+import React { useEffect, useState, useCallback, useMemo } from 'react'; import { motion, AnimatePresence  } from 'framer-motion'; import { Zap,; Gauge,; HardDrive,; Network,; Cpu,; HardDriveIcon,; Battery,; Wifi,; WifiOff,; RefreshCw,; TrendingUp,; TrendingDown,; AlertTriangle,; CheckCircle,; Info} from 'lucide-react'; ; interface PerformanceMetrics { fcp: number;
+import React { useEffect, useState, useCallback, useMemo } from 'react'; import { motion, AnimatePresence    } from 'framer-motion'; import { Zap,; Gauge,; HardDrive,; Network,; Cpu,; HardDriveIcon,; Battery,; Wifi,; WifiOff,; RefreshCw,; TrendingUp,; TrendingDown,; AlertTriangle,; CheckCircle,; Info} from 'lucide-react'; ; interface PerformanceMetrics { fcp: number;
 
+;,"});,"})
 ;
-import React, { useEffect, useState, useCallback, useMemo } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import {  Zap, Gauge, HardDrive, Network, Cpu, HardDriveIcon, Battery, Wifi, WifiOff, RefreshCw, TrendingUp, TrendingDown, AlertTriangle, CheckCircle, Info    } from 'lucide-react'  interface PerformanceMetrics { fcp: number;
+import React { useEffect, useState, useCallback, useMemo } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import {  Zap, Gauge, HardDrive, Network, Cpu, HardDriveIcon, Battery, Wifi, WifiOff, RefreshCw, TrendingUp, TrendingDown, AlertTriangle, CheckCircle, Info    } from 'lucide-react'  interface PerformanceMetrics { fcp: number;
+import React { useEffect, useState, useCallback, useMemo } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import {  Zap, Gauge, HardDrive, Network, Cpu, HardDriveIcon, Battery, Wifi, WifiOff, RefreshCw, TrendingUp, TrendingDown, AlertTriangle, CheckCircle, Info    } from 'lucide-react'  interface PerformanceMetrics { fcp: number;';',;
+import React { useEffect, useState, useCallback, useMemo } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import {  Zap, Gauge, HardDrive, Network, Cpu, HardDriveIcon, Battery, Wifi, WifiOff, RefreshCw, TrendingUp, TrendingDown, AlertTriangle, CheckCircle, Info    } from 'lucide-react'  interface PerformanceMetrics {
+  fcp: number;
+import React { useEffect, useState, useCallback, useMemo } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import {  Zap, Gauge, HardDrive, Network, Cpu, HardDriveIcon, Battery, Wifi, WifiOff, RefreshCw, TrendingUp, TrendingDown, AlertTriangle, CheckCircle, Info    } from 'lucide-react'  interface PerformanceMetrics { fcp: number;";
+}"
+import React {useEffect, useState, useCallback, useMemo } from 'react' ;
+import {motion, AnimatePresence    } from 'framer-motion' import {Zap, Gauge, HardDrive, Network, Cpu, HardDriveIcon, Battery, Wifi, WifiOff, RefreshCw, TrendingUp, TrendingDown, AlertTriangle, CheckCircle, Info    } from 'lucide-react'  interface PerformanceMetrics {fcp: number;";
+}
+import React { useEffect, useState, useCallback, useMemo } from &apos;react&apos; import { motion, AnimatePresence    } from &apos;framer-motion&apos; import {  Zap, Gauge, HardDrive, Network, Cpu, HardDriveIcon, Battery, Wifi, WifiOff, RefreshCw, TrendingUp, TrendingDown, AlertTriangle, CheckCircle, Info    } from &apos;lucide-react&apos;  interface PerformanceMetrics { fcp: number;&apos}
+import React { useEffect, useState, useCallback, useMemo } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import {  Zap, Gauge, HardDrive, Network, Cpu, HardDriveIcon, Battery, Wifi, WifiOff, RefreshCw, TrendingUp, TrendingDown, AlertTriangle, CheckCircle, Info    } from 'lucide-react'  interface PerformanceMetrics { fcp: number;","
+import React { useEffect, useState, useCallback, useMemo } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import {  Zap, Gauge, HardDrive, Network, Cpu, HardDriveIcon, Battery, Wifi, WifiOff, RefreshCw, TrendingUp, TrendingDown, AlertTriangle, CheckCircle, Info    }  from 'lucide-react';interface PerformanceMetrics { fcp: number;"}
+""
+=======
+import React, { useEffect, useState, useCallback, useMemo } from 'react'; import { motion, AnimatePresence  } from 'framer-motion'; import { ; Zap,; Gauge,; HardDrive,; Network,; Cpu,; HardDriveIcon,; Battery,; Wifi,; WifiOff,; RefreshCw,; TrendingUp,; TrendingDown,; AlertTriangle,; CheckCircle,; Info;  } from 'lucide-react'; ; interface PerformanceMetrics {; fcp: number;
+}""
+>>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
