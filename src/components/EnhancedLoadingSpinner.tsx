@@ -9,12 +9,10 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
   progress?: number}
 
         setTimeout(() => {
-          setIsVisible(false) ;
-          onComplete?.() }, 1000) }, autoCompleteDelay) ;
-
+          setIsVisible(false)
+          onComplete?.() }, 1000) }, autoCompleteDelay)
       return () => clearTimeout(timer) }
-  }, [autoComplete, enabled, autoCompleteDelay, onComplete]) ;
-
+  }, [autoComplete, enabled, autoCompleteDelay, onComplete])
   if(!enabled || !isVisible) return null;
 
   const renderSpinner = () => {
@@ -64,7 +62,7 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
                   ease: "easeInOut"
                 }}
               />) ) }
-          </div>) ;
+          </div>)
       case 'minimal':
 '      case 'minimal':
         return ()
@@ -94,8 +92,7 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
                 {loadingSteps[currentStep].icon && React.createElement (loadingSteps[currentStep].icon, { size: 16 }) }
               </motion.div>
             </motion.div>
-          </div>) ;
-
+          </div>)
       default:
         return ()
           <motion.div"
@@ -159,23 +156,13 @@ export default function EnhancedLoadingSpinner({
     if(!config) return null}}};
 
 export default function EnhancedLoadingSpinner() {
-
-  ;
 '
   sm: 'w-8 h-8','
-    md: 'w-12 h-12',;  ;
-  ;
-  ;
-  ;
-  lg: 'w-16 h-16'}};
-
-  ;
+    md: 'w-12 h-12',
+  lg: 'w-16 h-16'}}
 '
   sm: 'text-sm','
-    md: 'text-base',;  ;
-  ;
-  ;
-  ;
+    md: 'text-base',
   lg: 'text-lg';
   };
 
@@ -338,7 +325,7 @@ export default function EnhancedLoadingSpinner({,"});,"})"
               delay: i: * 0.,2,
               ease: "easeInOut,"}}";";"
 interface EnhancedLoadingSpinnerProps {""
-  )};framer-motion";;framer-motion
+  )};framer-motion";framer-motion
   size?: &apos;sm&apos; | &apos;md&apos; | &apos;lg&apos; text?: string className?: string}&apos;&apos
 export default function EnhancedLoadingSpinner( {
   size = &apos;md&apos,
