@@ -64,16 +64,10 @@ export default function Home() {
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
             <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
-<<<<<<< HEAD
-              We deliver cutting-edge technology solutions with 150+ micro SaaS products, 
-              100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization 
-              to AI automation, quantum computing to blockchain solutions, we help businesses scale 
-              efficiently and securely in the digital age.
-=======
-              We deliver cutting-edge technology solutions with 150+ innovative micro SaaS products, 
-              90+ advanced AI services, and 100+ comprehensive IT solutions. From quantum computing 
-              to AI automation, we help businesses scale efficiently and securely with next-generation technology.
->>>>>>> 72143897074 (feat: Add 30+ new innovative services across micro SaaS, AI, and IT categories)
+              We deliver cutting-edge technology solutions with 170+ innovative micro SaaS products, 
+              105+ advanced AI services, and 120+ comprehensive IT solutions. From quantum computing 
+              to AI automation, blockchain to edge computing, we help businesses scale efficiently 
+              and securely with next-generation technology.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -90,19 +84,15 @@ export default function Home() {
 
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-blue-400 mb-2">150+</h3>
+                <h3 className="text-2xl font-bold text-blue-400 mb-2">170+</h3>
                 <p className="text-slate-300">Micro SaaS Products</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-<<<<<<< HEAD
-                <h3 className="text-2xl font-bold text-purple-400 mb-2">100+</h3>
-=======
-                <h3 className="text-2xl font-bold text-purple-400 mb-2">90+</h3>
->>>>>>> 72143897074 (feat: Add 30+ new innovative services across micro SaaS, AI, and IT categories)
+                <h3 className="text-2xl font-bold text-purple-400 mb-2">105+</h3>
                 <p className="text-slate-300">AI Services</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-green-400 mb-2">100+</h3>
+                <h3 className="text-2xl font-bold text-green-400 mb-2">120+</h3>
                 <p className="text-slate-300">IT Solutions</p>
               </div>
             </div>
@@ -120,15 +110,15 @@ export default function Home() {
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-colors">
                 <h3 className="text-2xl font-bold mb-4 text-blue-400">Micro SaaS Products</h3>
                 <p className="text-slate-300 mb-6">
-                  Innovative, focused software solutions including AI-Powered Video Clip Maker, 
-                  Smart Contract Analyzer, Cybersecurity Threat Intelligence, and 50+ more specialized tools.
+                  Innovative, focused software solutions including AI-Powered Customer Health Score, 
+                  Zero-Trust Security Monitor, Dynamic Pricing Optimization Engine, and 170+ more specialized tools.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
-                  <li>• AI-Powered Video Clip Maker</li>
-                  <li>• Smart Contract Analyzer</li>
-                  <li>• Cybersecurity Threat Intelligence</li>
-                  <li>• Multi-Language Website Translator</li>
-                  <li>• Predictive Inventory Optimizer</li>
+                  <li>• AI-Powered Customer Health Score</li>
+                  <li>• Zero-Trust Security Monitor</li>
+                  <li>• Dynamic Pricing Optimization Engine</li>
+                  <li>• Multi-Language Content Localization</li>
+                  <li>• Smart Energy Management System</li>
                 </ul>
                 <Link href="/micro-saas" className="text-blue-400 hover:text-blue-300 font-semibold">
                   View All Micro SaaS →
@@ -138,15 +128,15 @@ export default function Home() {
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-colors">
                 <h3 className="text-2xl font-bold mb-4 text-purple-400">AI Services</h3>
                 <p className="text-slate-300 mb-6">
-                  Advanced artificial intelligence solutions including autonomous AI agents, 
-                  financial trading systems, legal document analysis, and 40+ more AI-powered services.
+                  Advanced artificial intelligence solutions including Generative AI Content Studio, 
+                  AI-Powered Process Mining, AI Threat Intelligence, and 105+ more AI-powered services.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
-                  <li>• Autonomous AI Agents</li>
-                  <li>• AI-Powered Financial Trading</li>
-                  <li>• AI Legal Document Analysis</li>
-                  <li>• AI-Powered Voice Analytics</li>
-                  <li>• AI-Powered Search & Discovery</li>
+                  <li>• Generative AI Content Studio</li>
+                  <li>• AI-Powered Process Mining</li>
+                  <li>• AI Threat Intelligence & Response</li>
+                  <li>• AI Revenue Optimization Engine</li>
+                  <li>• AI Model Management & MLOps</li>
                 </ul>
                 <Link href="/ai-services" className="text-purple-400 hover:text-purple-300 font-semibold">
                   View All AI Services →

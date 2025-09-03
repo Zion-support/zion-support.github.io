@@ -1022,6 +1022,314 @@ export default function AIServices() {
         'Improved fleet efficiency',
         'Advanced autonomous capabilities'
       ]
+    },
+    {
+      icon: Brain,
+      name: 'Generative AI Content Studio',
+      description: 'Advanced GenAI platform for creating high-quality text, images, videos, and multimedia content with brand consistency.',
+      features: [
+        'Multi-modal content generation (text, image, video, audio)',
+        'Brand voice and style consistency',
+        'Custom AI model fine-tuning',
+        'Content versioning and collaboration',
+        'Plagiarism detection and originality scoring',
+        'Integration with content management systems'
+      ],
+      pricing: '$2,000 – $15,000 setup',
+      perUnit: '$0.05 – $0.50 per content piece',
+      timeline: '4–8 weeks',
+      benefits: [
+        '10x faster content production',
+        'Consistent brand messaging',
+        'Reduced content creation costs',
+        'Scalable content operations'
+      ]
+    },
+    {
+      icon: Zap,
+      name: 'AI-Powered Process Mining & Optimization',
+      description: 'Intelligent process discovery, analysis, and optimization using AI to identify bottlenecks and improvement opportunities.',
+      features: [
+        'Automated process discovery and mapping',
+        'Bottleneck identification and analysis',
+        'Process optimization recommendations',
+        'Real-time process monitoring',
+        'Compliance and audit trail analysis',
+        'ROI calculation for process improvements'
+      ],
+      pricing: '$5,000 – $25,000 project',
+      perUnit: '$500 – $2,000/month monitoring',
+      timeline: '6–12 weeks',
+      benefits: [
+        '30% process efficiency improvement',
+        'Automated process optimization',
+        'Reduced operational costs',
+        'Enhanced compliance monitoring'
+      ]
+    },
+    {
+      icon: Eye,
+      name: 'AI Video Analytics & Insights',
+      description: 'Advanced video content analysis with object detection, sentiment analysis, and engagement optimization.',
+      features: [
+        'Real-time video content analysis',
+        'Object and scene recognition',
+        'Sentiment and emotion analysis',
+        'Engagement pattern detection',
+        'Content optimization recommendations',
+        'Automated video tagging and categorization'
+      ],
+      pricing: '$3,000 – $18,000 setup',
+      perUnit: '$0.01 – $0.10 per minute',
+      timeline: '4–8 weeks',
+      benefits: [
+        '95% accuracy in content analysis',
+        'Automated video optimization',
+        'Improved engagement rates',
+        'Reduced manual video processing'
+      ]
+    },
+    {
+      icon: Database,
+      name: 'AI Data Pipeline Automation',
+      description: 'Intelligent data processing pipelines with automated ETL, quality checks, and real-time data transformation.',
+      features: [
+        'Automated ETL pipeline creation',
+        'Data quality monitoring and validation',
+        'Real-time data transformation',
+        'Anomaly detection and alerting',
+        'Data lineage tracking',
+        'Integration with cloud data platforms'
+      ],
+      pricing: '$4,000 – $20,000 setup',
+      perUnit: '$0.001 – $0.01 per record',
+      timeline: '6–10 weeks',
+      benefits: [
+        '90% reduction in data processing time',
+        'Automated data quality management',
+        'Real-time data insights',
+        'Reduced data engineering costs'
+      ]
+    },
+    {
+      icon: Shield,
+      name: 'AI Threat Intelligence & Response',
+      description: 'Advanced cybersecurity with AI-powered threat detection, analysis, and automated incident response.',
+      features: [
+        'Real-time threat detection and analysis',
+        'Behavioral anomaly detection',
+        'Automated incident response workflows',
+        'Threat intelligence correlation',
+        'Predictive security analytics',
+        'Integration with SIEM and SOAR platforms'
+      ],
+      pricing: '$8,000 – $40,000 setup',
+      perUnit: '$1,000 – $5,000/month monitoring',
+      timeline: '8–16 weeks',
+      benefits: [
+        '99.9% threat detection accuracy',
+        'Automated incident response',
+        'Reduced security incidents',
+        'Enhanced security posture'
+      ]
+    },
+    {
+      icon: TrendingUp,
+      name: 'AI Revenue Optimization Engine',
+      description: 'Machine learning-powered revenue optimization with dynamic pricing, customer segmentation, and sales forecasting.',
+      features: [
+        'Dynamic pricing optimization',
+        'Customer lifetime value prediction',
+        'Sales forecasting and planning',
+        'Revenue leakage detection',
+        'Cross-sell and upsell recommendations',
+        'Market trend analysis and insights'
+      ],
+      pricing: '$5,000 – $30,000 setup',
+      perUnit: '0.5% – 2% of revenue increase',
+      timeline: '6–12 weeks',
+      benefits: [
+        '20% average revenue increase',
+        'Automated pricing optimization',
+        'Improved sales forecasting accuracy',
+        'Enhanced customer segmentation'
+      ]
+    },
+    {
+      icon: Code,
+      name: 'AI Code Generation & Optimization',
+      description: 'Intelligent code generation, optimization, and automated testing with AI-powered development assistance.',
+      features: [
+        'Automated code generation from specifications',
+        'Code optimization and refactoring',
+        'Automated test case generation',
+        'Bug detection and fixing suggestions',
+        'Code quality analysis and improvement',
+        'Integration with development workflows'
+      ],
+      pricing: '$3,000 – $15,000 setup',
+      perUnit: '$0.10 – $1.00 per line of code',
+      timeline: '4–8 weeks',
+      benefits: [
+        '50% faster development cycles',
+        'Improved code quality',
+        'Reduced bug rates',
+        'Automated testing processes'
+      ]
+    },
+    {
+      icon: Mail,
+      name: 'AI Email Intelligence & Automation',
+      description: 'Advanced email processing with intelligent routing, response generation, and workflow automation.',
+      features: [
+        'Intelligent email classification and routing',
+        'Automated response generation',
+        'Email sentiment analysis',
+        'Priority scoring and escalation',
+        'Workflow automation and integration',
+        'Email analytics and insights'
+      ],
+      pricing: '$2,000 – $10,000 setup',
+      perUnit: '$0.01 – $0.05 per email',
+      timeline: '3–6 weeks',
+      benefits: [
+        '80% reduction in email processing time',
+        'Automated email routing',
+        'Improved response times',
+        'Enhanced email productivity'
+      ]
+    },
+    {
+      icon: Search,
+      name: 'AI-Powered Search & Discovery',
+      description: 'Intelligent search solutions with semantic understanding, personalization, and advanced analytics.',
+      features: [
+        'Semantic search and understanding',
+        'Personalized search results',
+        'Natural language query processing',
+        'Search analytics and optimization',
+        'Multi-modal search capabilities',
+        'Integration with existing systems'
+      ],
+      pricing: '$3,000 – $18,000 setup',
+      perUnit: '$0.001 – $0.01 per search',
+      timeline: '4–8 weeks',
+      benefits: [
+        '90% improvement in search relevance',
+        'Personalized user experience',
+        'Reduced search time',
+        'Enhanced content discoverability'
+      ]
+    },
+    {
+      icon: Mic,
+      name: 'AI Voice & Speech Analytics',
+      description: 'Advanced voice processing with speech recognition, sentiment analysis, and conversation intelligence.',
+      features: [
+        'Real-time speech recognition and transcription',
+        'Voice sentiment and emotion analysis',
+        'Conversation intelligence and insights',
+        'Speaker identification and verification',
+        'Voice biometric authentication',
+        'Integration with communication platforms'
+      ],
+      pricing: '$4,000 – $20,000 setup',
+      perUnit: '$0.01 – $0.10 per minute',
+      timeline: '6–10 weeks',
+      benefits: [
+        '95% accuracy in speech recognition',
+        'Real-time conversation insights',
+        'Enhanced customer experience',
+        'Automated voice processing'
+      ]
+    },
+    {
+      icon: FileText,
+      name: 'AI Document Intelligence Platform',
+      description: 'Comprehensive document processing with intelligent extraction, analysis, and workflow automation.',
+      features: [
+        'Advanced OCR and text extraction',
+        'Document classification and routing',
+        'Intelligent data extraction and validation',
+        'Document comparison and version control',
+        'Automated workflow integration',
+        'Compliance and audit trail management'
+      ],
+      pricing: '$3,000 – $18,000 setup',
+      perUnit: '$0.01 – $0.10 per document',
+      timeline: '4–8 weeks',
+      benefits: [
+        '95% accuracy in document processing',
+        'Automated document workflows',
+        'Reduced manual processing time',
+        'Enhanced compliance management'
+      ]
+    },
+    {
+      icon: Cog,
+      name: 'AI Model Management & MLOps',
+      description: 'Complete MLOps platform for model development, deployment, monitoring, and lifecycle management.',
+      features: [
+        'Automated model training and deployment',
+        'Model performance monitoring',
+        'A/B testing and model comparison',
+        'Automated retraining pipelines',
+        'Model versioning and governance',
+        'Integration with cloud platforms'
+      ],
+      pricing: '$5,000 – $25,000 setup',
+      perUnit: '$500 – $2,000/month per model',
+      timeline: '6–12 weeks',
+      benefits: [
+        '90% faster model deployment',
+        'Automated model management',
+        'Improved model performance',
+        'Reduced MLOps complexity'
+      ]
+    },
+    {
+      icon: BarChart3,
+      name: 'AI Business Intelligence & Analytics',
+      description: 'Advanced BI platform with AI-powered insights, automated reporting, and predictive analytics.',
+      features: [
+        'Automated insight generation',
+        'Predictive analytics and forecasting',
+        'Natural language query interface',
+        'Automated report generation',
+        'Anomaly detection and alerting',
+        'Integration with business systems'
+      ],
+      pricing: '$4,000 – $20,000 setup',
+      perUnit: '$200 – $1,000/month per user',
+      timeline: '6–10 weeks',
+      benefits: [
+        'Real-time business insights',
+        'Automated analytics processes',
+        'Improved decision-making speed',
+        'Enhanced data accessibility'
+      ]
+    },
+    {
+      icon: Users,
+      name: 'AI Customer Experience Optimization',
+      description: 'Comprehensive CX platform with AI-powered personalization, journey optimization, and experience analytics.',
+      features: [
+        'Real-time customer journey mapping',
+        'AI-powered personalization engine',
+        'Experience analytics and insights',
+        'Predictive customer behavior modeling',
+        'Automated experience optimization',
+        'Integration with CX platforms'
+      ],
+      pricing: '$5,000 – $25,000 setup',
+      perUnit: '$0.10 – $1.00 per customer interaction',
+      timeline: '6–12 weeks',
+      benefits: [
+        '40% improvement in customer satisfaction',
+        'Automated experience optimization',
+        'Personalized customer interactions',
+        'Enhanced customer lifetime value'
+      ]
     }
   ];
 
