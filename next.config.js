@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
-  swcMinify: true,
+  // // Deprecated in Next.js 15
   compress: true,
   poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true },

@@ -7,10 +7,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "prebuild": "echo 'skip prebuild health-check'",
+    "prebuild": "echo \"Starting build...\"",
     "export": "next export",
     "start": "next start",
-    "postbuild": "echo 'Build completed successfully'",
+    "postbuild": "echo \"Build completed\"",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "type-check": "tsc --noEmit",
@@ -50,7 +50,7 @@
     "automation:improvement:dev": "nodemon automation/continuous-automation-improvement-system.js",
     "automation:coordinator": "node automation/master-automation-coordinator.js",
     "automation:coordinator:dev": "nodemon automation/master-automation-coordinator.js",
-    "automation:all": "npm run automation:factory & npm run automation:orchestrator & npm run automation:improvement & npm run automation:coordinator",
+    "automation:all": "npm run automation:master",
     "automation:status": "node automation/check_automation_status.js",
     "automation:restart": "node automation/restart-all-automation.js",
     "automation:enhance": "node automation/enhance-all-automation.js",
@@ -160,8 +160,7 @@
     "automation:performance": "node automation/performance-optimizer.cjs",
     "automation:seo": "node automation/seo-optimizer.cjs",
     "automation:health": "node automation/health-check.cjs",
-    "automation:security": "node automation/security-scanner.cjs",
-    "automation:all": "npm run automation:master"
+    "automation:security": "node automation/security-scanner.cjs"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",

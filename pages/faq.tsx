@@ -7,8 +7,7 @@ export default function FAQ() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
-
+  }
   const faqs = [
     {
       question: "What services does Zion Tech Group offer?",
