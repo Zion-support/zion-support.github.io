@@ -1426,7 +1426,7 @@ export default function ITServices() {;
                 <ArrowRight className="ml-2 h-4 w-4 inline" />;
               </Link>;
               <Link;
-                href="/pricing";
+                href="/pricing-guide";
                 className="text-sm font-semibold leading-6 text-gray-900 hover:text-green-600">;
                 View Pricing <span aria-hidden="true">→</span>;
               </Link>;

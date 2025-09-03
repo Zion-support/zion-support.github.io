@@ -304,7 +304,7 @@ export default function Services() {;
 						<p className='mt-6 text-sm text-gray-500'>;
 							Pricing based on market research from leading technology consultancies and enterprise software vendors. ;
 							For custom enterprise solutions and volume discounts, see our{' '}
-							<Link href='/pricing' className='text-blue-600 hover:text-blue-500 underline'>Enterprise Pricing Guide</Link>.;
+							<Link href='/pricing-guide' className='text-blue-600 hover:text-blue-500 underline'>Enterprise Pricing Guide</Link>.;
 						</p>;
 					</div>;
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;

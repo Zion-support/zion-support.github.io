@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import SiteFooter from '../src/components/SiteFooter';
 ;
 const About: NextPage = () => {;
   return (;
@@ -54,7 +54,7 @@ const About: NextPage = () => {;
         </div>;
       </main>;
       ;
-      <Footer />;
+      <SiteFooter />;
     </>;
   );,
 };

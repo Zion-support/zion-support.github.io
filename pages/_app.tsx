@@ -1,7 +1,7 @@
 import React from 'react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import ErrorBoundary from '../components/ErrorBoundary';
+import ErrorBoundary from '../src/components/ErrorBoundary';
 import PerformanceMonitor from '../src/components/PerformanceMonitor';
 import '../styles/globals.css';
 ;
