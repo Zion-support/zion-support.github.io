@@ -1,30 +1,28 @@
 #!/bin/bash
 
-# Add all changes
+echo "Adding all changes..."
 git add .
 
-# Commit changes
-git commit -m "Fix syntax errors in service files
+echo "Committing changes..."
+git commit -m "Fix syntax errors in service pages
 
-- Fixed malformed JSX syntax in AIHealthcare.tsx
-- Fixed malformed JSX syntax in AIHealthcareRevenueCycle.tsx  
-- Fixed malformed JSX syntax in AIIdentityManagement.tsx
-- Fixed malformed JSX syntax in AIIncidentResponse.tsx
-- Fixed malformed JSX syntax in AIInsurance.tsx
-- Removed duplicate content and malformed syntax
-- Added proper React component structure
-- Added proper TypeScript types and imports"
+- Fixed AIHealthcare.tsx with proper React component structure
+- Fixed AIHealthcareRevenueCycle.tsx with clean syntax
+- Fixed AIIdentityManagement.tsx with proper imports and JSX
+- Removed corrupted content and malformed syntax
+- Added proper SEO components and responsive design
+- Standardized component structure across service pages"
 
-# Push to current branch
-git push origin cursor/fix-syntax-push-and-merge-to-main-1bad
+echo "Pushing to current branch..."
+git push origin cursor/fix-syntax-push-and-merge-to-main-535e
 
-# Switch to main branch
+echo "Switching to main branch..."
 git checkout main
 
-# Merge the fix branch
-git merge cursor/fix-syntax-push-and-merge-to-main-1bad
+echo "Merging changes..."
+git merge cursor/fix-syntax-push-and-merge-to-main-535e
 
-# Push to main
+echo "Pushing to main..."
 git push origin main
 
-echo "Successfully fixed syntax errors and merged to main branch"
+echo "Done!"
