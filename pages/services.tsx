@@ -66,6 +66,19 @@ const itServices: Service[] = [
     pricing: 'Typical: $10k–$150k project',
     link: 'https://ziontechgroup.com/it-services'
   }
+  ,
+  {
+    name: 'Managed Kubernetes Platform (EKS/GKE/AKS)',
+    summary: 'Secure multi‑tenant clusters, GitOps, autoscaling, observability and cost governance.',
+    pricing: 'Typical: $8k–$35k setup, $2k–$9k/month managed',
+    link: 'https://ziontechgroup.com/it-services'
+  },
+  {
+    name: 'Data Platform Quickstart',
+    summary: 'Ingestion, warehouse, dashboards and governance using Snowflake/BigQuery/Redshift.',
+    pricing: 'Typical: $12k–$45k fixed',
+    link: 'https://ziontechgroup.com/it-services'
+  }
 ];
 
 export default function Services() {
@@ -92,6 +105,16 @@ export default function Services() {
       <Section title="Micro SaaS" items={microSaaS} />
       <Section title="AI Services" items={aiServices} />
       <Section title="IT Services" items={itServices} />
+      <section style={{ maxWidth: 1200, margin: '0 auto', padding: '0 16px 8px' }}>
+        <div style={{ fontSize: 12, color: '#334155' }}>
+          Learn more on our site: <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer">ziontechgroup.com</a>
+        </div>
+      </section>
+      <section style={{ maxWidth: 1200, margin: '0 auto', padding: '0 16px 24px' }}>
+        <div style={{ fontSize: 12, color: '#334155' }}>
+          Contact: <a href="tel:+13024640950">+1 302 464 0950</a> · <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · 364 E Main St STE 1008 Middletown DE 19709
+        </div>
+      </section>
       <section style={{ maxWidth: 1200, margin: '0 auto', padding: '24px 16px' }}>
         <a href="/contact" style={{
           display: 'inline-block', background: '#22d3ee', color: '#0b1220',

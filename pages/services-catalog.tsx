@@ -80,6 +80,146 @@ export default function ServicesCatalog() {
       ]
     },
     {
+      id: 'cybersecurity',
+      title: 'Cybersecurity & Compliance',
+      icon: Shield,
+      items: [
+        {
+          name: 'Zero Trust Readiness & Rollout',
+          blurb: 'Identity-centric access, micro‑segmentation, policy enforcement and continuous verification across cloud and SaaS.',
+          price: '$12,000 – $60,000 fixed or $160 – $220/hr',
+          eta: '4–10 weeks',
+          bullets: [
+            'SSO, MFA, device posture, conditional access',
+            'Network micro‑segmentation and least privilege',
+            'Continuous verification and session trust',
+            'Reporting aligned to NIST 800‑207'
+          ],
+          link: '/services',
+          refs: [
+            { label: 'NIST Zero Trust 800‑207', href: 'https://csrc.nist.gov/publications/detail/sp/800-207/final' },
+            { label: 'CISA ZT Maturity Model', href: 'https://www.cisa.gov/resources-tools/resources/zero-trust-maturity-model' }
+          ]
+        },
+        {
+          name: 'SOC 2 / ISO 27001 Compliance Accelerator',
+          blurb: 'Policies, control mapping, evidence automation, risk register and audit prep with actionable dashboards.',
+          price: '$8,000 – $40,000 fixed',
+          eta: '3–8 weeks',
+          bullets: [
+            'Control mapping and gap analysis',
+            'Automated evidence collection workflows',
+            'Risk assessment and treatment plans',
+            'Audit‑ready documentation'
+          ],
+          link: '/services',
+          refs: [
+            { label: 'SOC 2 (AICPA)', href: 'https://us.aicpa.org/interestareas/frc/assuranceadvisoryservices/socforserviceorganizations' },
+            { label: 'ISO 27001', href: 'https://www.iso.org/isoiec-27001-information-security.html' }
+          ]
+        },
+        {
+          name: 'Application Security Program (AppSec)',
+          blurb: 'DevSecOps pipelines, SAST/DAST/SCA, SBOM, secrets scanning and secure SDLC advisory.',
+          price: '$5,000 – $28,000 fixed or $140 – $200/hr',
+          eta: '3–8 weeks',
+          bullets: [
+            'SAST/DAST/SCA toolchain integration',
+            'SBOM generation and policy gates',
+            'Threat modeling and code review playbooks',
+            'OWASP ASVS alignment'
+          ],
+          link: '/services',
+          refs: [
+            { label: 'OWASP ASVS', href: 'https://owasp.org/www-project-application-security-verification-standard/' },
+            { label: 'CNCF Software Supply Chain', href: 'https://tag-security.cncf.io/whitepapers/supply-chain-security/' }
+          ]
+        }
+      ]
+    },
+    {
+      id: 'data-analytics',
+      title: 'Data & Analytics',
+      icon: Database,
+      items: [
+        {
+          name: 'Modern BI & Metrics Layer',
+          blurb: 'Semantic layer with governed metrics, row‑level security and self‑serve dashboards.',
+          price: '$9,000 – $38,000 fixed',
+          eta: '4–9 weeks',
+          bullets: [
+            'dbt metrics or semantic layer setup',
+            'SSO, RLS/CLS and data governance',
+            'KPI catalog with lineage',
+            'Self‑serve dashboards (Looker/Metabase)'
+          ],
+          link: '/services',
+          refs: [
+            { label: 'dbt Semantic Layer', href: 'https://docs.getdbt.com/docs/build/semantic-layer' },
+            { label: 'Looker', href: 'https://cloud.google.com/looker' }
+          ]
+        },
+        {
+          name: 'Real‑time Analytics & Event Streaming',
+          blurb: 'Event collection, stream processing and low‑latency aggregates for product analytics and ops.',
+          price: '$12,000 – $55,000 fixed',
+          eta: '5–10 weeks',
+          bullets: [
+            'Kafka/Redpanda stream processing',
+            'Materialized views and OLAP tuning',
+            'Product and growth analytics frameworks',
+            'Monitoring and cost optimization'
+          ],
+          link: '/services',
+          refs: [
+            { label: 'Apache Kafka', href: 'https://kafka.apache.org/' },
+            { label: 'Redpanda', href: 'https://redpanda.com/' }
+          ]
+        }
+      ]
+    },
+    {
+      id: 'automation',
+      title: 'Automation & Integrations',
+      icon: Workflow,
+      items: [
+        {
+          name: 'AI Workflow Orchestration',
+          blurb: 'Human‑in‑the‑loop workflows, approvals and SLAs with connectors to CRM, ITSM and data platforms.',
+          price: '$4,000 – $18,000/month',
+          eta: '4–8 weeks',
+          bullets: [
+            'Orchestration with retries and compensations',
+            'LLM actions with guardrails and audit trails',
+            'Connectors for Salesforce, Zendesk, ServiceNow',
+            'Built‑in analytics and cost tracking'
+          ],
+          link: '/ai-services',
+          refs: [
+            { label: 'Temporal', href: 'https://temporal.io/' },
+            { label: 'ServiceNow', href: 'https://www.servicenow.com/' }
+          ]
+        },
+        {
+          name: 'Enterprise Integrations & iPaaS',
+          blurb: 'Secure data syncs, event bridges and API gateways with retries, DLQs and schema governance.',
+          price: '$6,000 – $42,000 fixed',
+          eta: '4–10 weeks',
+          bullets: [
+            'Event‑driven architecture with queues',
+            'Well‑documented APIs and auth flows',
+            'Schema registry and contract testing',
+            'Observability and alerting'
+          ],
+          link: '/it-services',
+          refs: [
+            { label: 'AsyncAPI', href: 'https://www.asyncapi.com/' },
+            { label: 'OpenAPI', href: 'https://www.openapis.org/' }
+          ]
+        }
+      ]
+    },
+    {
       id: 'ai',
       title: 'AI Services & Platforms',
       icon: Brain,
@@ -193,6 +333,7 @@ export default function ServicesCatalog() {
           <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-5 py-2 rounded bg-blue-600 hover:bg-blue-700">Call {contact.phone}</a>
           <a href={`mailto:${contact.email}`} className="px-5 py-2 rounded bg-purple-600 hover:bg-purple-700">Email {contact.email}</a>
           <Link href="/contact" className="px-5 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10">Contact Form</Link>
+          <a href={contact.site} className="px-5 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10">Visit Website</a>
         </div>
         <div className="mt-2 text-slate-400 text-sm">{contact.address}</div>
       </header>
