@@ -11,25 +11,25 @@ export default function Cybersecurity() {
       icon: Shield,
       title: 'Security Assessment',
       description: 'Comprehensive security audits and vulnerability assessments to identify and mitigate risks.',
-      features: ['Penetration Testing', 'Vulnerability Scanning', 'Security Audits', 'Risk Assessment'];
+      features: ['Penetration Testing', 'Vulnerability Scanning', 'Security Audits', 'Risk Assessment'],
 },
     {
       icon: Lock,
       title: 'Data Protection',
       description: 'Advanced encryption and data protection solutions to safeguard your sensitive information.',
-      features: ['Data Encryption', 'Backup Solutions', 'Access Controls', 'Data Loss Prevention'];
+      features: ['Data Encryption', 'Backup Solutions', 'Access Controls', 'Data Loss Prevention'],
 },
     {
       icon: Eye,
       title: 'Monitoring & Detection',
       description: '24/7 security monitoring and threat detection to protect against cyber attacks.',
-      features: ['SIEM Solutions', 'Threat Detection', 'Incident Response', 'Security Analytics'];
+      features: ['SIEM Solutions', 'Threat Detection', 'Incident Response', 'Security Analytics'],
 },
     {
       icon: AlertTriangle,
       title: 'Incident Response',
       description: 'Rapid response and recovery services to minimize damage from security incidents.',
-      features: ['Emergency Response', 'Forensic Analysis', 'Recovery Planning', 'Post-Incident Review'];
+      features: ['Emergency Response', 'Forensic Analysis', 'Recovery Planning', 'Post-Incident Review'],
 }
   ]
 

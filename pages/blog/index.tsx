@@ -12,7 +12,7 @@ const BlogIndex: NextPage = () => {
       date: '2024-01-15',
       author: 'Tech Team',
       href: '/blog/5g-technology-and-its-impact-on-iot-chat',
-      category: 'Technology',;
+      category: 'Technology',
 },
     {
       title: 'AI-Powered Marketplaces: The Future of Digital Commerce',

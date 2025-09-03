@@ -20,7 +20,7 @@ const Careers: NextPage = () => {
     {
       icon: Heart,
       title: 'Health & Wellness',
-      description: 'Comprehensive health insurance, dental, vision, and wellness programs.';
+      description: 'Comprehensive health insurance, dental, vision, and wellness programs.',
 },
     {
       icon: Home,
@@ -29,7 +29,7 @@ const Careers: NextPage = () => {
     {
       icon: Award,
       title: 'Growth Opportunities',
-      description: 'Professional development, training programs, and career advancement paths.';
+      description: 'Professional development, training programs, and career advancement paths.',
 },
     {
       icon: Zap,
@@ -43,7 +43,7 @@ const Careers: NextPage = () => {
       location: 'Remote',
       type: 'Full-time',
       experience: '5+ years',
-      description: 'Join our team to build cutting-edge web applications using React, Node.js, and cloud technologies.';
+      description: 'Join our team to build cutting-edge web applications using React, Node.js, and cloud technologies.',
 },
     {
       title: 'AI/ML Engineer',

@@ -61,7 +61,7 @@ export default function Dashboard() {
       status: 'In Progress',
       progress: 75,
       dueDate: '2024-02-15',
-      team: ['John Doe', 'Jane Smith', 'Mike Johnson'];
+      team: ['John Doe', 'Jane Smith', 'Mike Johnson'],
 },
     {
       id: 2,
@@ -69,7 +69,7 @@ export default function Dashboard() {
       status: 'Planning',
       progress: 25,
       dueDate: '2024-03-01',
-      team: ['Sarah Wilson', 'David Brown'];
+      team: ['Sarah Wilson', 'David Brown'],
 },
     {
       id: 3,
@@ -77,7 +77,7 @@ export default function Dashboard() {
       status: 'Completed',
       progress: 100,
       dueDate: '2024-01-30',
-      team: ['Alex Chen', 'Lisa Garcia'];
+      team: ['Alex Chen', 'Lisa Garcia'],
 }
   ]
 

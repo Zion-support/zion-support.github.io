@@ -1235,7 +1235,157 @@ export default function MicroSaaS() {
       ],
       pricing: '$14.99 - $79.99/month',
       delivery: '3-5 weeks',
-      category: 'Pet Care SaaS'}
+      category: 'Pet Care SaaS'},
+    {
+      title: 'AI-Powered Cryptocurrency Trading Bot',
+      description: 'Intelligent cryptocurrency trading platform with automated strategies and risk management',
+      icon: TrendingUp,
+      features: [
+        'AI-powered market analysis and trend prediction,Automated trading strategies with backtesting,Real-time portfolio management and rebalancing,Risk management and stop-loss automation,Multi-exchange integration and arbitrage opportunities,Performance analytics and profit optimization'
+      ],
+      pricing: '$199 - $1,999/month',
+      delivery: '4-6 weeks',
+      category: 'FinTech SaaS'},
+    {
+      title: 'Smart Home Energy Optimizer',
+      description: 'AI-driven home energy management with cost reduction and sustainability tracking',
+      icon: Zap,
+      features: [
+        'Real-time energy consumption monitoring and optimization,Smart appliance scheduling and load balancing,Renewable energy integration and battery management,Cost analysis and savings recommendations,Integration with smart meters and solar panels,Predictive maintenance for energy systems'
+      ],
+      pricing: '$29.99 - $149.99/month',
+      delivery: '3-4 weeks',
+      category: 'Energy SaaS'},
+    {
+      title: 'AI-Powered Job Matching Platform',
+      description: 'Intelligent job matching with skills analysis and career path optimization',
+      icon: Users,
+      features: [
+        'AI-powered resume analysis and skill extraction,Job matching with compatibility scoring,Career path recommendations and skill gap analysis,Salary negotiation insights and market data,Interview preparation and practice sessions,Integration with LinkedIn and job boards'
+      ],
+      pricing: '$49.99 - $299.99/month',
+      delivery: '3-5 weeks',
+      category: 'Career SaaS'},
+    {
+      title: 'Smart Inventory Management for Retail',
+      description: 'AI-driven retail inventory optimization with demand forecasting and automated reordering',
+      icon: BarChart3,
+      features: [
+        'Demand forecasting with seasonal and trend analysis,Automated reorder point calculations and safety stock optimization,Multi-location inventory tracking and management,Supplier performance monitoring and risk assessment,Integration with POS and e-commerce platforms,Real-time inventory analytics and reporting'
+      ],
+      pricing: '$199 - $1,199/month',
+      delivery: '3-5 weeks',
+      category: 'Retail SaaS'},
+    {
+      title: 'AI-Powered Content Moderation Suite',
+      description: 'Advanced content moderation with real-time detection and automated action workflows',
+      icon: Shield,
+      features: [
+        'Real-time content analysis and flagging,Multi-language content moderation and translation,Custom moderation rule configuration,Automated action and escalation workflows,Detailed analytics and reporting dashboard,API integration for seamless deployment'
+      ],
+      pricing: '$299 - $1,499/month',
+      delivery: '3-4 weeks',
+      category: 'Content Safety SaaS'},
+    {
+      title: 'Smart Healthcare Appointment Scheduler',
+      description: 'AI-powered healthcare scheduling with patient preference learning and resource optimization',
+      icon: Heart,
+      features: [
+        'Intelligent appointment scheduling with patient preferences,Automated reminder system with multiple channels,Resource optimization and capacity planning,Patient flow analytics and wait time reduction,Integration with EHR and practice management systems,Telehealth appointment support and management'
+      ],
+      pricing: '$199 - $899/month',
+      delivery: '3-5 weeks',
+      category: 'Healthcare SaaS'},
+    {
+      title: 'AI-Powered Real Estate Investment Analyzer',
+      description: 'Comprehensive real estate investment analysis with market predictions and ROI calculations',
+      icon: Home,
+      features: [
+        'Automated property valuation and market analysis,ROI and cash flow projections with AI predictions,Neighborhood trend analysis and growth forecasting,Risk assessment and investment scoring,Portfolio optimization recommendations,Integration with MLS and property databases'
+      ],
+      pricing: '$299 - $1,499/month',
+      delivery: '4-6 weeks',
+      category: 'Real Estate SaaS'},
+    {
+      title: 'Smart Fleet Management System',
+      description: 'AI-powered fleet tracking and optimization with predictive maintenance and route planning',
+      icon: Car,
+      features: [
+        'Real-time GPS tracking and route optimization,Predictive maintenance scheduling and alerts,Fuel consumption monitoring and optimization,Driver behavior analysis and safety scoring,Automated compliance reporting and documentation,Integration with telematics and IoT devices'
+      ],
+      pricing: '$399 - $1,999/month',
+      delivery: '5-8 weeks',
+      category: 'Fleet Management SaaS'},
+    {
+      title: 'AI-Powered Social Media Analytics Suite',
+      description: 'Comprehensive social media management with AI-driven content optimization and performance analytics',
+      icon: Globe,
+      features: [
+        'AI-powered content creation and optimization suggestions,Real-time social media monitoring and sentiment analysis,Automated posting schedule optimization,Influencer identification and relationship management,Competitor analysis and market intelligence,ROI tracking and performance analytics'
+      ],
+      pricing: '$149 - $799/month',
+      delivery: '3-4 weeks',
+      category: 'Social Media SaaS'},
+    {
+      title: 'Smart Compliance Management Platform',
+      description: 'Automated compliance monitoring and reporting with AI-powered risk assessment and regulatory updates',
+      icon: Shield,
+      features: [
+        'Automated compliance monitoring across multiple regulations,AI-powered risk assessment and mitigation recommendations,Real-time regulatory updates and change notifications,Document management and audit trail maintenance,Compliance reporting and dashboard analytics,Integration with business systems and data sources'
+      ],
+      pricing: '$399 - $1,999/month',
+      delivery: '5-7 weeks',
+      category: 'Compliance SaaS'},
+    {
+      title: 'AI-Powered Customer Success Platform',
+      description: 'Intelligent customer success management with predictive churn prevention and automated engagement',
+      icon: Users,
+      features: [
+        'Predictive churn analysis and prevention,Automated customer health scoring,Personalized engagement campaigns,Success milestone tracking and alerts,Integration with CRM and support systems,Advanced analytics and reporting dashboard'
+      ],
+      pricing: '$3,000 - $12,000/month',
+      delivery: '4-6 weeks',
+      category: 'Customer Success SaaS'},
+    {
+      title: 'Smart Contract Management Platform',
+      description: 'AI-powered contract lifecycle management with automated review and compliance monitoring',
+      icon: FileText,
+      features: [
+        'Automated contract review and risk assessment,Smart clause extraction and analysis,Compliance monitoring and alerts,Contract renewal and expiration tracking,Digital signature integration,Advanced search and analytics'
+      ],
+      pricing: '$2,000 - $8,000/month',
+      delivery: '3-5 weeks',
+      category: 'LegalTech SaaS'},
+    {
+      title: 'AI-Powered Voice Analytics Platform',
+      description: 'Intelligent voice analysis for call centers, sales teams, and customer service optimization',
+      icon: Mic,
+      features: [
+        'Real-time speech-to-text with sentiment analysis,Call quality scoring and performance analytics,Automated compliance monitoring and reporting,Customer emotion detection and escalation alerts,Sales conversation analysis and coaching insights,Integration with CRM and call center systems'
+      ],
+      pricing: '$299 - $1,299/month',
+      delivery: '4-6 weeks',
+      category: 'Voice Analytics SaaS'},
+    {
+      title: 'Smart Environmental Monitoring Platform',
+      description: 'IoT-based environmental monitoring with AI analytics and compliance reporting',
+      icon: TreePine,
+      features: [
+        'Real-time air quality, temperature, and humidity monitoring,AI-powered environmental trend analysis and predictions,Automated compliance reporting for environmental regulations,Alert system for threshold violations and anomalies,Integration with IoT sensors and weather APIs,Custom dashboard and reporting for stakeholders'
+      ],
+      pricing: '$199 - $999/month',
+      delivery: '4-6 weeks',
+      category: 'Environmental SaaS'},
+    {
+      title: 'AI-Powered Satellite Data Analytics',
+      description: 'Advanced satellite imagery analysis for agriculture, urban planning, and environmental monitoring',
+      icon: Satellite,
+      features: [
+        'Automated satellite imagery processing and analysis,Crop health monitoring and yield prediction,Urban development tracking and change detection,Environmental impact assessment and monitoring,Custom AI model training for specific use cases,API access for integration with existing systems'
+      ],
+      pricing: '$999 - $4,999/month',
+      delivery: '6-10 weeks',
+      category: 'Geospatial SaaS'}
   ]
 
   const technologies = [
@@ -1289,12 +1439,25 @@ export default function MicroSaaS() {
               <span className="text-base font-semibold leading-7 text-orange-600">Micro SaaS</span>
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Micro SaaS Solutions
+              Micro SaaS Solutions That Drive Growth
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Custom software solutions that solve specific business problems. From concept to deployment, 
-              we build scalable micro SaaS applications tailored to your needs.
+              Transform your business with innovative micro SaaS applications. We build scalable, secure, and intelligent software solutions that solve real-world problems and generate recurring revenue. From AI-powered automation to blockchain-based platforms, we deliver cutting-edge technology that gives you a competitive advantage.
             </p>
+            <div className="mt-8 flex items-center justify-center gap-x-8 text-sm text-gray-500">
+              <div className="flex items-center">
+                <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                <span>100+ Successful Deployments</span>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                <span>99.9% Uptime Guarantee</span>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                <span>24/7 Expert Support</span>
+              </div>
+            </div>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
                 href="/contact"

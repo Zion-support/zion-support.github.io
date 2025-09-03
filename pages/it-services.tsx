@@ -960,7 +960,237 @@ export default function ITServices() {
       ],
       pricing: '$5,000 - $30,000/month',
       delivery: '6-16 weeks',
-      category: 'IT Compliance Services'}
+      category: 'IT Compliance Services'},
+    {
+      title: 'AI-Powered IT Service Desk',
+      description: 'Intelligent IT service desk with AI chatbots, automated ticket routing, and predictive issue resolution',
+      icon: Brain,
+      features: [
+        'AI-powered chatbot for first-level support,Automated ticket classification and routing,Predictive issue detection and prevention,Knowledge base automation and self-service,Integration with ITSM and monitoring tools,Performance analytics and continuous improvement'
+      ],
+      pricing: '$3,000 - $15,000/month',
+      delivery: '4-8 weeks',
+      category: 'AI-Powered Support Services'},
+    {
+      title: 'Quantum-Safe Security Implementation',
+      description: 'Future-proof security solutions resistant to quantum computing threats with post-quantum cryptography',
+      icon: Lock,
+      features: [
+        'Post-quantum cryptography algorithm implementation,Quantum key distribution (QKD) systems,Hybrid classical-quantum security protocols,Cryptographic migration planning and execution,Quantum-safe certificate management,Compliance with quantum security standards'
+      ],
+      pricing: '$15,000 - $75,000/month',
+      delivery: '12-24 weeks',
+      category: 'Quantum Security Services'},
+    {
+      title: 'Neuromorphic Computing Infrastructure',
+      description: 'Brain-inspired computing systems for ultra-low power AI processing and edge computing optimization',
+      icon: Cpu,
+      features: [
+        'Neuromorphic chip integration and optimization,Spiking neural network deployment,Edge AI processing and inference,Low-power computing optimization,Real-time learning and adaptation,Integration with IoT and sensor networks'
+      ],
+      pricing: '$20,000 - $100,000/month',
+      delivery: '16-32 weeks',
+      category: 'Neuromorphic Computing Services'},
+    {
+      title: 'Space-Based Computing Infrastructure',
+      description: 'Satellite-based computing and edge processing for global connectivity and low-latency applications',
+      icon: Satellite,
+      features: [
+        'Satellite constellation management,Space-based edge computing deployment,Global low-latency connectivity,Orbital data processing and storage,Space-to-ground communication optimization,Integration with terrestrial networks'
+      ],
+      pricing: '$50,000 - $500,000/month',
+      delivery: '24-48 weeks',
+      category: 'Space Computing Services'},
+    {
+      title: 'Fusion Energy IT Infrastructure',
+      description: 'Specialized IT infrastructure for fusion energy research, power generation, and plasma control systems',
+      icon: Zap,
+      features: [
+        'High-performance computing for plasma simulation,Real-time control systems for fusion reactors,Data acquisition and processing systems,Safety monitoring and emergency response,Integration with power grid systems,Research collaboration platforms'
+      ],
+      pricing: '$100,000 - $1,000,000/month',
+      delivery: '32-64 weeks',
+      category: 'Fusion Energy IT Services'},
+    {
+      title: 'Synthetic Biology Computing Platform',
+      description: 'Specialized computing infrastructure for synthetic biology, bioengineering, and genetic design',
+      icon: Cpu,
+      features: [
+        'High-performance computing for genetic modeling,Bioinformatics data processing and analysis,Laboratory automation and control systems,Biological simulation and modeling platforms,Integration with laboratory equipment,Research data management and collaboration'
+      ],
+      pricing: '$25,000 - $150,000/month',
+      delivery: '20-40 weeks',
+      category: 'Synthetic Biology IT Services'},
+    {
+      title: 'Autonomous Vehicle Infrastructure',
+      description: 'IT infrastructure for autonomous vehicle testing, deployment, fleet management, and safety systems',
+      icon: Car,
+      features: [
+        'Vehicle-to-everything (V2X) communication systems,Edge computing for real-time decision making,Fleet management and coordination platforms,Safety monitoring and incident response,Integration with smart city infrastructure,Regulatory compliance and reporting systems'
+      ],
+      pricing: '$30,000 - $200,000/month',
+      delivery: '24-48 weeks',
+      category: 'Autonomous Vehicle IT Services'},
+    {
+      title: 'Digital Twin Infrastructure Platform',
+      description: 'Comprehensive digital twin infrastructure for real-time simulation, monitoring, and predictive analytics',
+      icon: Monitor,
+      features: [
+        'Real-time data synchronization and modeling,High-fidelity simulation and visualization,IoT sensor integration and data processing,Predictive analytics and maintenance systems,Integration with existing business systems,Scalable cloud and edge computing infrastructure'
+      ],
+      pricing: '$20,000 - $100,000/month',
+      delivery: '16-32 weeks',
+      category: 'Digital Twin Infrastructure Services'},
+    {
+      title: 'Metaverse Infrastructure & Platform',
+      description: 'Complete metaverse infrastructure for virtual worlds, immersive experiences, and virtual economies',
+      icon: Globe,
+      features: [
+        '3D world rendering and streaming infrastructure,Avatar and asset management systems,Real-time physics simulation and networking,Virtual economy and blockchain integration,Cross-platform compatibility and optimization,Content creation and management tools'
+      ],
+      pricing: '$40,000 - $300,000/month',
+      delivery: '24-48 weeks',
+      category: 'Metaverse Infrastructure Services'},
+    {
+      title: 'Brain-Computer Interface Infrastructure',
+      description: 'Specialized IT infrastructure for brain-computer interface systems, neural data processing, and medical applications',
+      icon: Brain,
+      features: [
+        'Neural signal acquisition and processing systems,Real-time brain activity analysis and interpretation,Medical device integration and control,Data privacy and security for neural data,Integration with healthcare systems,Research collaboration and data sharing platforms'
+      ],
+      pricing: '$35,000 - $200,000/month',
+      delivery: '28-56 weeks',
+      category: 'BCI Infrastructure Services'},
+    {
+      title: 'Underwater Computing Infrastructure',
+      description: 'Specialized computing infrastructure for underwater operations, marine research, and ocean exploration',
+      icon: Network,
+      features: [
+        'Underwater communication and networking systems,Marine data processing and analysis platforms,Autonomous underwater vehicle coordination,Oceanographic data collection and storage,Underwater sensor network management,Integration with surface and satellite systems'
+      ],
+      pricing: '$25,000 - $150,000/month',
+      delivery: '20-40 weeks',
+      category: 'Marine Computing Services'},
+    {
+      title: 'Consciousness Research Computing Platform',
+      description: 'Advanced computing infrastructure for consciousness research, AGI development, and cognitive architecture design',
+      icon: Brain,
+      features: [
+        'High-performance computing for consciousness modeling,Neural network simulation and training,Cognitive architecture development platforms,Research collaboration and data sharing systems,Ethical AI monitoring and assessment tools,Integration with neuroscience research equipment'
+      ],
+      pricing: '$100,000 - $1,000,000/month',
+      delivery: '40-80 weeks',
+      category: 'Consciousness Research IT Services'},
+    {
+      title: 'Climate Computing & Modeling Infrastructure',
+      description: 'High-performance computing infrastructure for climate modeling, environmental research, and sustainability planning',
+      icon: Globe,
+      features: [
+        'Climate simulation and modeling systems,Environmental data processing and analysis,Real-time weather and climate monitoring,Carbon tracking and sustainability analytics,Integration with satellite and sensor networks,Research collaboration and data sharing platforms'
+      ],
+      pricing: '$30,000 - $250,000/month',
+      delivery: '24-48 weeks',
+      category: 'Climate Computing Services'},
+    {
+      title: 'Space Mission Computing Infrastructure',
+      description: 'Specialized computing infrastructure for space missions, satellite operations, and space exploration',
+      icon: Satellite,
+      features: [
+        'Mission planning and trajectory optimization systems,Satellite constellation management platforms,Space debris tracking and collision avoidance,Ground station communication and control,Space weather monitoring and prediction,Integration with space agency networks'
+      ],
+      pricing: '$75,000 - $750,000/month',
+      delivery: '32-64 weeks',
+      category: 'Space Mission IT Services'},
+    {
+      title: 'Quantum Computing Infrastructure',
+      description: 'Quantum computing setup, optimization, and hybrid classical-quantum systems for enterprise applications',
+      icon: Cpu,
+      features: [
+        'Quantum computer setup and configuration,Quantum algorithm development and optimization,Hybrid classical-quantum computing workflows,Quantum error correction and noise mitigation,Quantum machine learning model training,Integration with existing IT infrastructure'
+      ],
+      pricing: '$50,000 - $500,000/month',
+      delivery: '24-48 weeks',
+      category: 'Quantum Computing Services'},
+    {
+      title: '5G & Edge Computing Networks',
+      description: '5G network deployment, edge computing infrastructure, and ultra-low latency solutions for enterprise',
+      icon: Network,
+      features: [
+        '5G network planning and deployment,Edge computing infrastructure setup,Ultra-low latency application optimization,Network slicing and virtualization,IoT device connectivity and management,Real-time data processing and analytics'
+      ],
+      pricing: '$25,000 - $200,000/month',
+      delivery: '16-32 weeks',
+      category: '5G & Edge Services'},
+    {
+      title: 'Metaverse & Virtual Reality Infrastructure',
+      description: 'VR/AR platform development, metaverse infrastructure, and immersive technology solutions',
+      icon: Monitor,
+      features: [
+        'VR/AR application development and deployment,Metaverse platform infrastructure setup,3D content creation and management,Virtual event hosting and management,Immersive training and simulation systems,Cross-platform VR/AR integration'
+      ],
+      pricing: '$15,000 - $150,000/month',
+      delivery: '12-24 weeks',
+      category: 'Metaverse Services'},
+    {
+      title: 'Green IT & Sustainable Computing',
+      description: 'Energy-efficient computing solutions, carbon footprint reduction, and sustainable IT practices',
+      icon: TreePine,
+      features: [
+        'Energy-efficient server and data center design,Carbon footprint monitoring and reduction,Renewable energy integration for IT infrastructure,Sustainable software development practices,E-waste management and recycling programs,Green cloud computing optimization'
+      ],
+      pricing: '$10,000 - $100,000/month',
+      delivery: '8-16 weeks',
+      category: 'Green IT Services'},
+    {
+      title: 'Zero-Trust Security Architecture',
+      description: 'Comprehensive zero-trust security implementation with identity verification and micro-segmentation',
+      icon: Shield,
+      features: [
+        'Zero-trust network architecture design,Identity and access management (IAM) implementation,Micro-segmentation and network isolation,Continuous security monitoring and validation,Privileged access management (PAM),Security automation and orchestration'
+      ],
+      pricing: '$20,000 - $150,000/month',
+      delivery: '12-24 weeks',
+      category: 'Zero-Trust Security Services'},
+    {
+      title: 'Hyperautomation & RPA Solutions',
+      description: 'Intelligent process automation, robotic process automation, and business process optimization',
+      icon: Settings,
+      features: [
+        'Robotic Process Automation (RPA) implementation,Intelligent document processing and workflow automation,Business process mining and optimization,AI-powered decision automation,Integration with legacy systems and APIs,Process monitoring and performance analytics'
+      ],
+      pricing: '$8,000 - $80,000/month',
+      delivery: '8-20 weeks',
+      category: 'Hyperautomation Services'},
+    {
+      title: 'Digital Twin & Simulation Platforms',
+      description: 'Digital twin development, simulation platforms, and virtual modeling solutions',
+      icon: Monitor,
+      features: [
+        'Digital twin platform development and deployment,Real-time simulation and modeling systems,IoT sensor integration and data synchronization,Predictive analytics and scenario modeling,Virtual testing and validation environments,Integration with CAD and engineering tools'
+      ],
+      pricing: '$25,000 - $250,000/month',
+      delivery: '16-32 weeks',
+      category: 'Digital Twin Services'},
+    {
+      title: 'Neuromorphic Computing Systems',
+      description: 'Brain-inspired computing infrastructure, spiking neural networks, and edge AI optimization',
+      icon: Brain,
+      features: [
+        'Neuromorphic chip integration and optimization,Spiking neural network development and deployment,Edge AI processing and optimization,Real-time learning and adaptation systems,Low-power computing infrastructure,Integration with IoT and sensor networks'
+      ],
+      pricing: '$30,000 - $300,000/month',
+      delivery: '20-40 weeks',
+      category: 'Neuromorphic Computing Services'},
+    {
+      title: 'Autonomous Systems Infrastructure',
+      description: 'Infrastructure for autonomous vehicles, drones, and robotic systems with real-time processing',
+      icon: Car,
+      features: [
+        'Autonomous vehicle computing infrastructure,Drone fleet management and control systems,Robotic system integration and coordination,Real-time sensor data processing and fusion,Edge computing for autonomous decision making,Safety and failover system implementation'
+      ],
+      pricing: '$40,000 - $400,000/month',
+      delivery: '24-48 weeks',
+      category: 'Autonomous Systems Services'}
   ]
 
   const technologies = [
@@ -1014,13 +1244,25 @@ export default function ITServices() {
               <span className="text-base font-semibold leading-7 text-green-600">IT Services</span>
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Information Technology Solutions
+              Future-Ready IT Infrastructure
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Comprehensive IT services that keep your business running smoothly. From quantum-safe cryptography 
-              to space-based computing infrastructure, we provide cutting-edge technology solutions that prepare 
-              your organization for the future of computing and digital transformation.
+              Transform your technology infrastructure with our comprehensive IT services. From quantum-safe cryptography and neuromorphic computing to space-based infrastructure and consciousness research platforms, we deliver cutting-edge solutions that prepare your organization for the next generation of computing. Our expertise spans traditional IT services to revolutionary technologies that will define the future of business.
             </p>
+            <div className="mt-8 flex items-center justify-center gap-x-8 text-sm text-gray-500">
+              <div className="flex items-center">
+                <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                <span>200+ Infrastructure Deployments</span>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                <span>Zero-Trust Security</span>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                <span>Quantum-Ready Architecture</span>
+              </div>
+            </div>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
                 href="/contact"
