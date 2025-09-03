@@ -981,6 +981,138 @@ export default function MicroSaaS() {
       pricing: '$2,000 - $8,000/month',
       delivery: '3-5 weeks',
       category: 'FleetTech SaaS'
+    },
+    {
+      title: 'AI-Powered Website Analytics for Small Business',
+      description: 'User-friendly analytics platform with AI insights and actionable recommendations for small businesses',
+      icon: BarChart3,
+      features: [
+        'Simplified dashboard with key metrics and AI-powered insights,Automated report generation and email delivery,Conversion tracking and goal setting,Competitor analysis and benchmarking,SEO performance monitoring and recommendations,Mobile app for on-the-go analytics'
+      ],
+      pricing: '$29 - $99/month',
+      delivery: '1-2 weeks',
+      category: 'Analytics SaaS'
+    },
+    {
+      title: 'Quantum-Safe Cryptography Platform',
+      description: 'Future-proof encryption solutions using quantum-resistant algorithms for enterprise security',
+      icon: Lock,
+      features: [
+        'Post-quantum cryptographic algorithms implementation,Key management and rotation automation,Compliance with NIST quantum-safe standards,API integration for existing systems,Performance optimization for quantum-safe operations,Security audit and certification support'
+      ],
+      pricing: '$2,999 - $12,999/month',
+      delivery: '8-12 weeks',
+      category: 'Security SaaS'
+    },
+    {
+      title: 'AI-Powered Voice Analytics Platform',
+      description: 'Advanced voice analysis for customer service optimization and sentiment tracking',
+      icon: Mic,
+      features: [
+        'Real-time voice sentiment analysis and emotion detection,Call quality assessment and improvement recommendations,Automated transcription with speaker identification,Compliance monitoring and risk detection,Performance analytics and coaching insights,Integration with call center and CRM systems'
+      ],
+      pricing: '$199 - $999/month',
+      delivery: '3-4 weeks',
+      category: 'Communication SaaS'
+    },
+    {
+      title: 'Blockchain-Based Supply Chain Tracker',
+      description: 'Transparent supply chain management with blockchain verification and smart contracts',
+      icon: Network,
+      features: [
+        'End-to-end supply chain visibility and tracking,Smart contract automation for payments and compliance,Product authenticity verification and anti-counterfeiting,Real-time alerts for supply chain disruptions,Sustainability tracking and carbon footprint monitoring,Integration with IoT sensors and ERP systems'
+      ],
+      pricing: '$1,999 - $8,999/month',
+      delivery: '6-10 weeks',
+      category: 'Supply Chain SaaS'
+    },
+    {
+      title: 'AI-Powered Mental Health Support Platform',
+      description: 'Intelligent mental health monitoring and support system for employee wellness programs',
+      icon: Heart,
+      features: [
+        'AI-powered mood tracking and analysis,Personalized wellness recommendations and interventions,Anonymous reporting and privacy protection,Integration with HR systems and employee benefits,Real-time crisis detection and escalation,Comprehensive analytics and reporting for HR teams'
+      ],
+      pricing: '$99 - $499/month',
+      delivery: '4-6 weeks',
+      category: 'Wellness SaaS'
+    },
+    {
+      title: 'Smart Energy Management System',
+      description: 'AI-driven energy optimization platform for buildings and facilities management',
+      icon: TreePine,
+      features: [
+        'Real-time energy consumption monitoring and analysis,AI-powered demand forecasting and optimization,Automated load balancing and peak shaving,Integration with smart meters and IoT devices,Cost savings recommendations and ROI tracking,Carbon footprint monitoring and sustainability reporting'
+      ],
+      pricing: '$299 - $1,999/month',
+      delivery: '4-6 weeks',
+      category: 'Energy SaaS'
+    },
+    {
+      title: 'AI-Powered Legal Document Analyzer',
+      description: 'Intelligent legal document review and analysis platform with contract risk assessment',
+      icon: FileText,
+      features: [
+        'Automated contract review and risk identification,Legal precedent research and case law analysis,Compliance checking against regulations and standards,Document comparison and version control,Deadline tracking and reminder automation,Integration with legal practice management systems'
+      ],
+      pricing: '$499 - $2,499/month',
+      delivery: '5-8 weeks',
+      category: 'Legal SaaS'
+    },
+    {
+      title: 'Autonomous Vehicle Fleet Management',
+      description: 'AI-powered fleet management system for autonomous and connected vehicles',
+      icon: Car,
+      features: [
+        'Real-time vehicle tracking and performance monitoring,Route optimization and traffic prediction,Maintenance scheduling and predictive analytics,Driver behavior analysis and safety scoring,Integration with autonomous vehicle APIs,Compliance monitoring and regulatory reporting'
+      ],
+      pricing: '$1,999 - $9,999/month',
+      delivery: '8-12 weeks',
+      category: 'FleetTech SaaS'
+    },
+    {
+      title: 'AI-Powered Satellite Data Analytics',
+      description: 'Advanced satellite imagery analysis for agriculture, environmental monitoring, and urban planning',
+      icon: Satellite,
+      features: [
+        'Automated satellite image processing and analysis,Crop health monitoring and yield prediction,Environmental change detection and tracking,Urban development and infrastructure monitoring,Custom algorithm development and model training,API access for third-party integrations'
+      ],
+      pricing: '$999 - $4,999/month',
+      delivery: '6-10 weeks',
+      category: 'Geospatial SaaS'
+    },
+    {
+      title: 'Intelligent Email Security Platform',
+      description: 'Advanced email security with AI-powered threat detection and zero-trust architecture',
+      icon: Shield,
+      features: [
+        'AI-powered phishing and malware detection,Advanced threat intelligence and behavioral analysis,Email encryption and secure communication,Compliance monitoring and data loss prevention,Real-time threat response and incident management,Integration with existing email infrastructure'
+      ],
+      pricing: '$199 - $999/month',
+      delivery: '3-4 weeks',
+      category: 'Security SaaS'
+    },
+    {
+      title: 'AI-Powered Personal Finance Coach',
+      description: 'Intelligent personal finance management with AI-driven budgeting and investment advice',
+      icon: TrendingUp,
+      features: [
+        'Automated expense categorization and budgeting,AI-powered investment recommendations and portfolio optimization,Goal setting and progress tracking,Bill payment automation and reminders,Credit score monitoring and improvement tips,Integration with banks and financial institutions'
+      ],
+      pricing: '$9.99 - $49.99/month',
+      delivery: '2-3 weeks',
+      category: 'FinTech SaaS'
+    },
+    {
+      title: 'Smart Home Automation Platform',
+      description: 'AI-powered home automation with voice control and predictive behavior learning',
+      icon: Home,
+      features: [
+        'Voice-controlled smart home device management,Predictive automation based on user behavior patterns,Energy efficiency optimization and cost savings,Security monitoring and alert systems,Integration with popular smart home ecosystems,Mobile app with remote control capabilities'
+      ],
+      pricing: '$19.99 - $99.99/month',
+      delivery: '3-4 weeks',
+      category: 'IoT SaaS'
     }
   ];
 

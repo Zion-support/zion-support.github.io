@@ -723,6 +723,138 @@ export default function ITServices() {
       pricing: '$3,000 - $15,000/month',
       delivery: '3-6 weeks',
       category: 'Network Security'
+    },
+    {
+      title: 'Quantum Computing Infrastructure',
+      description: 'Quantum computing setup and integration for research and enterprise applications',
+      icon: Cpu,
+      features: [
+        'Quantum computer procurement and setup,Quantum algorithm development and optimization,Hybrid classical-quantum system integration,Quantum error correction and fault tolerance,Quantum cryptography implementation,Research collaboration and training programs'
+      ],
+      pricing: '$50,000 - $500,000/month',
+      delivery: '12-24 weeks',
+      category: 'Quantum Computing'
+    },
+    {
+      title: 'Edge Computing Solutions',
+      description: 'Distributed edge computing infrastructure for IoT and real-time applications',
+      icon: Network,
+      features: [
+        'Edge server deployment and management,Real-time data processing and analytics,Low-latency application optimization,Edge AI and machine learning deployment,5G network integration and optimization,Distributed system monitoring and maintenance'
+      ],
+      pricing: '$10,000 - $75,000/month',
+      delivery: '8-16 weeks',
+      category: 'Edge Computing'
+    },
+    {
+      title: 'Blockchain Infrastructure Services',
+      description: 'Enterprise blockchain setup, smart contract development, and DeFi solutions',
+      icon: Shield,
+      features: [
+        'Private and public blockchain deployment,Smart contract development and auditing,DeFi protocol integration and development,NFT marketplace and tokenization services,Blockchain security and compliance,Cross-chain interoperability solutions'
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '12-20 weeks',
+      category: 'Blockchain Services'
+    },
+    {
+      title: 'IoT Platform Development',
+      description: 'Comprehensive IoT infrastructure with device management and data analytics',
+      icon: Globe,
+      features: [
+        'IoT device connectivity and management,Real-time data collection and processing,Edge computing and fog computing integration,Device security and firmware updates,Predictive maintenance and analytics,Integration with cloud platforms and APIs'
+      ],
+      pricing: '$8,000 - $50,000/month',
+      delivery: '10-18 weeks',
+      category: 'IoT Services'
+    },
+    {
+      title: 'DevSecOps Implementation',
+      description: 'Security-first DevOps practices with automated security testing and compliance',
+      icon: Shield,
+      features: [
+        'Secure CI/CD pipeline implementation,Automated security scanning and vulnerability assessment,Infrastructure as Code (IaC) with security controls,Compliance automation and audit trails,Container security and runtime protection,Threat modeling and security architecture review'
+      ],
+      pricing: '$12,000 - $80,000/month',
+      delivery: '8-16 weeks',
+      category: 'DevSecOps'
+    },
+    {
+      title: 'Multi-Cloud Management Platform',
+      description: 'Unified management across AWS, Azure, GCP with cost optimization and governance',
+      icon: Cloud,
+      features: [
+        'Multi-cloud resource monitoring and management,Cost optimization and FinOps implementation,Governance and compliance across clouds,Disaster recovery and backup automation,Cloud migration and modernization,Performance optimization and scaling'
+      ],
+      pricing: '$20,000 - $150,000/month',
+      delivery: '12-24 weeks',
+      category: 'Multi-Cloud'
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust implementation with identity and access management',
+      icon: Lock,
+      features: [
+        'Identity and access management (IAM) implementation,Network segmentation and micro-segmentation,Device trust and compliance verification,Data encryption and key management,Continuous monitoring and threat detection,Incident response and forensics automation'
+      ],
+      pricing: '$25,000 - $200,000/month',
+      delivery: '16-32 weeks',
+      category: 'Zero Trust Security'
+    },
+    {
+      title: 'AI Infrastructure & MLOps',
+      description: 'Machine learning infrastructure with model deployment and monitoring',
+      icon: Brain,
+      features: [
+        'ML infrastructure setup and optimization,Model training and deployment pipelines,MLOps workflow automation,Model monitoring and performance tracking,Data pipeline and feature store implementation,GPU cluster management and optimization'
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '10-20 weeks',
+      category: 'AI Infrastructure'
+    },
+    {
+      title: 'Green IT & Sustainability Solutions',
+      description: 'Sustainable IT practices with carbon footprint reduction and energy optimization',
+      icon: TreePine,
+      features: [
+        'Energy-efficient infrastructure design and implementation,Carbon footprint monitoring and reporting,Green cloud migration and optimization,Sustainable hardware procurement and lifecycle management,Data center efficiency optimization,Renewable energy integration and management'
+      ],
+      pricing: '$5,000 - $35,000/month',
+      delivery: '6-12 weeks',
+      category: 'Green IT'
+    },
+    {
+      title: 'Digital Twin Technology',
+      description: 'Digital twin creation and management for physical assets and processes',
+      icon: Monitor,
+      features: [
+        '3D modeling and simulation development,Real-time data integration and synchronization,Predictive analytics and maintenance optimization,Process optimization and performance monitoring,Integration with IoT sensors and control systems,Visualization and dashboard development'
+      ],
+      pricing: '$30,000 - $250,000/month',
+      delivery: '16-32 weeks',
+      category: 'Digital Twin'
+    },
+    {
+      title: '5G Network Implementation',
+      description: '5G network design, deployment, and optimization for enterprise applications',
+      icon: Network,
+      features: [
+        '5G network architecture design and planning,Small cell deployment and optimization,Network slicing and quality of service management,Edge computing integration with 5G,Private 5G network implementation,Performance monitoring and optimization'
+      ],
+      pricing: '$40,000 - $300,000/month',
+      delivery: '20-40 weeks',
+      category: '5G Services'
+    },
+    {
+      title: 'Hyperautomation Platform',
+      description: 'End-to-end automation platform combining RPA, AI, and process mining',
+      icon: Settings,
+      features: [
+        'Robotic Process Automation (RPA) implementation,Process mining and discovery,AI-powered decision automation,Workflow orchestration and management,Integration with enterprise systems,Performance monitoring and optimization'
+      ],
+      pricing: '$18,000 - $120,000/month',
+      delivery: '12-24 weeks',
+      category: 'Hyperautomation'
     }
   ];
 
