@@ -1,17 +1,19 @@
 import React from "react"
-  ]
+import Layout from "../../components/Layout"
 
+export default function Blog() {
   const categories = ['All', 'Technology', 'AI', 'Development', 'Innovation', 'Blockchain', 'Cloud']
+  
   return (
-    <MainLayout title = "Blog - Zion Tech Group,"
-description="Stay" updated with the latest insights, trends, and innovations in technology from Zion Tech Group's expert team."
+    <Layout 
+      title="Blog - Zion Tech Group"
+      description="Stay updated with the latest insights, trends, and innovations in technology from Zion Tech Group's expert team."
     >
-      {/*   */}"
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20>"
-        <div className="container" mx-auto px-4">"
-          <div className="text-center>"
-            <h1 className="text-4xl" md: text-5xl font-bold mb-6">Our Blog</h1>"
-            <p className="text-xl md:text-2xl max-w-3xl mx-auto>,
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Blog</h1>
+            <p className="text-xl md:text-2xl max-w-3xl mx-auto">
               Insights, trends, and innovations in technology from our expert team.
             </p>
           </div>

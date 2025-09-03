@@ -36,7 +36,10 @@ const Link = dynamic(() => import('next/link'), { ssr: false })
   Star,,});,"})"
   TrendingUp,,"});,})"
   Clock,,});,"})"
-  Award,"});,});"
+  Award,
+  Phone,
+  Mail,
+  MapPin
 } from 'lucide-react';,});,"})"
 ;,"});,})"
 export default function Services() {,});,"})"
@@ -2590,18 +2593,181 @@ className="group-hover: translate-x-1 transition-transform inline-block"
 								<span className='text-2xl font-bold text-orange-600'>4</span>,',
 							<h3 className = 'text-lg font-semibold text-gray-900 mb-2'>Deployment</h3>,'
 							<p className='text-gray-600'>Launch and monitor performance</p>,
-			</section> {/*   */}
-			<section className='bg - gradient-to-r from-blue-600 to-purple-600 py-24 sm: py-32'>,
-						<h2 className='text-3xl font-bold tracking-tight text-white sm: text-4xl'>
-							Ready to get started ? ,
-							Let&aposs discuss your project requirements and how we can help you achieve your goals.,'
-								className='group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover : bg-gray-50 transition-all duration-200 hover:scale-105',
-								aria-label='Contact us to get started
-								Contact Us,
-								<ArrowRight className = 'ml - 2 h-4 w-4 inline group-hover:translate-x-1 transition-transform' />,
-								href='/',
-								className='text - sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group',
-								aria-label='Back to homepage',
-								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>,,
-			</section>,
+			</section>
+
+			{/* Benefits & ROI Section */}
+			<section className='py-24 sm:py-32 bg-white'>
+				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
+					<div className='mx-auto max-w-2xl lg:text-center mb-16'>
+						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
+							Why Choose Zion Tech Group?
+						</h2>
+						<p className='mt-6 text-lg leading-8 text-gray-600'>
+							We deliver measurable results and exceptional value through our proven methodologies and cutting-edge technology.
+						</p>
+					</div>
+					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+						<div className='text-center group'>
+							<div className='mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 group-hover:bg-green-200 transition-colors mb-4'>
+								<TrendingUp className='h-8 w-8 text-green-600' />
+							</div>
+							<h3 className='text-lg font-semibold text-gray-900 mb-2'>Proven ROI</h3>
+							<p className='text-gray-600'>Average 300% ROI within 12 months through increased efficiency and automation</p>
+						</div>
+						<div className='text-center group'>
+							<div className='mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 group-hover:bg-blue-200 transition-colors mb-4'>
+								<Clock className='h-8 w-8 text-blue-600' />
+							</div>
+							<h3 className='text-lg font-semibold text-gray-900 mb-2'>Fast Delivery</h3>
+							<p className='text-gray-600'>50% faster delivery than industry average with agile development methodologies</p>
+						</div>
+						<div className='text-center group'>
+							<div className='mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 group-hover:bg-purple-200 transition-colors mb-4'>
+								<Shield className='h-8 w-8 text-purple-600' />
+							</div>
+							<h3 className='text-lg font-semibold text-gray-900 mb-2'>Enterprise Security</h3>
+							<p className='text-gray-600'>SOC 2 Type II certified with 99.9% uptime SLA and 24/7 monitoring</p>
+						</div>
+						<div className='text-center group'>
+							<div className='mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 group-hover:bg-orange-200 transition-colors mb-4'>
+								<Users className='h-8 w-8 text-orange-600' />
+							</div>
+							<h3 className='text-lg font-semibold text-gray-900 mb-2'>Expert Team</h3>
+							<p className='text-gray-600'>Certified professionals with 10+ years average experience in cutting-edge technologies</p>
+						</div>
+						<div className='text-center group'>
+							<div className='mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-red-100 group-hover:bg-red-200 transition-colors mb-4'>
+								<Award className='h-8 w-8 text-red-600' />
+							</div>
+							<h3 className='text-lg font-semibold text-gray-900 mb-2'>Industry Recognition</h3>
+							<p className='text-gray-600'>Award-winning solutions recognized by Gartner, Forrester, and industry leaders</p>
+						</div>
+						<div className='text-center group'>
+							<div className='mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-indigo-100 group-hover:bg-indigo-200 transition-colors mb-4'>
+								<Zap className='h-8 w-8 text-indigo-600' />
+							</div>
+							<h3 className='text-lg font-semibold text-gray-900 mb-2'>Innovation First</h3>
+							<p className='text-gray-600'>Pioneering AI, quantum computing, and emerging technologies for competitive advantage</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* Market Position & Pricing */}
+			<section className='py-24 sm:py-32 bg-gray-50'>
+				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
+					<div className='mx-auto max-w-2xl lg:text-center mb-16'>
+						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
+							Competitive Pricing & Market Position
+						</h2>
+						<p className='mt-6 text-lg leading-8 text-gray-600'>
+							We offer premium services at competitive rates, delivering exceptional value compared to industry leaders.
+						</p>
+					</div>
+					<div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+						<div className='bg-white p-8 rounded-2xl shadow-sm border border-gray-200'>
+							<h3 className='text-xl font-semibold text-gray-900 mb-4'>vs. Big Tech Consulting</h3>
+							<div className='space-y-3 mb-6'>
+								<div className='flex justify-between'>
+									<span className='text-gray-600'>Our Pricing</span>
+									<span className='font-semibold text-green-600'>$5,000 - $50,000/mo</span>
+								</div>
+								<div className='flex justify-between'>
+									<span className='text-gray-600'>Industry Average</span>
+									<span className='font-semibold text-gray-900'>$15,000 - $150,000/mo</span>
+								</div>
+								<div className='flex justify-between border-t pt-3'>
+									<span className='text-gray-600'>Savings</span>
+									<span className='font-semibold text-green-600'>60-70%</span>
+								</div>
+							</div>
+							<p className='text-sm text-gray-600'>Same quality, faster delivery, better support</p>
+						</div>
+						<div className='bg-white p-8 rounded-2xl shadow-sm border border-gray-200'>
+							<h3 className='text-xl font-semibold text-gray-900 mb-4'>vs. Boutique Agencies</h3>
+							<div className='space-y-3 mb-6'>
+								<div className='flex justify-between'>
+									<span className='text-gray-600'>Our Capabilities</span>
+									<span className='font-semibold text-blue-600'>Full-Stack</span>
+								</div>
+								<div className='flex justify-between'>
+									<span className='text-gray-600'>Industry Average</span>
+									<span className='font-semibold text-gray-900'>Specialized</span>
+								</div>
+								<div className='flex justify-between border-t pt-3'>
+									<span className='text-gray-600'>Advantage</span>
+									<span className='font-semibold text-blue-600'>One-Stop Solution</span>
+								</div>
+							</div>
+							<p className='text-sm text-gray-600'>Complete solutions without vendor management complexity</p>
+						</div>
+						<div className='bg-white p-8 rounded-2xl shadow-sm border border-gray-200'>
+							<h3 className='text-xl font-semibold text-gray-900 mb-4'>vs. Offshore Teams</h3>
+							<div className='space-y-3 mb-6'>
+								<div className='flex justify-between'>
+									<span className='text-gray-600'>Our Quality</span>
+									<span className='font-semibold text-purple-600'>Enterprise-Grade</span>
+								</div>
+								<div className='flex justify-between'>
+									<span className='text-gray-600'>Industry Average</span>
+									<span className='font-semibold text-gray-900'>Variable</span>
+								</div>
+								<div className='flex justify-between border-t pt-3'>
+									<span className='text-gray-600'>Guarantee</span>
+									<span className='font-semibold text-purple-600'>100% SLA</span>
+								</div>
+							</div>
+							<p className='text-sm text-gray-600'>Premium quality with US-based support and compliance</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* Contact Information */}
+			<section className='py-16 bg-blue-600'>
+				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
+					<div className='text-center'>
+						<h2 className='text-3xl font-bold tracking-tight text-white sm:text-4xl mb-8'>
+							Ready to Transform Your Business?
+						</h2>
+						<p className='text-xl text-blue-100 mb-8 max-w-3xl mx-auto'>
+							Get a free consultation and detailed project estimate. Our experts are ready to help you achieve your goals.
+						</p>
+						<div className='flex flex-col sm:flex-row items-center justify-center gap-6 mb-8'>
+							<div className='flex items-center text-white'>
+								<Phone className='h-5 w-5 mr-2' />
+								<a href='tel:+13024640950' className='text-lg font-semibold hover:text-blue-100 transition-colors'>
+									+1 302 464 0950
+								</a>
+							</div>
+							<div className='flex items-center text-white'>
+								<Mail className='h-5 w-5 mr-2' />
+								<a href='mailto:kleber@ziontechgroup.com' className='text-lg font-semibold hover:text-blue-100 transition-colors'>
+									kleber@ziontechgroup.com
+								</a>
+							</div>
+							<div className='flex items-center text-white'>
+								<MapPin className='h-5 w-5 mr-2' />
+								<span className='text-lg font-semibold'>364 E Main St STE 1008, Middletown, DE 19709</span>
+							</div>
+						</div>
+						<div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
+							<Link
+								href='/contact'
+								className='group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-all duration-200 hover:scale-105'
+							>
+								Get Free Consultation
+								<ArrowRight className='ml-2 h-4 w-4 inline group-hover:translate-x-1 transition-transform' />
+							</Link>
+							<Link
+								href='/request-quote'
+								className='text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group border border-white px-8 py-4 rounded-md hover:bg-white hover:text-blue-600'
+							>
+								Request Quote
+								<span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block ml-2'>→</span>
+							</Link>
+						</div>
+					</div>
+				</div>
+			</section>
 		</PageTransition>,"
