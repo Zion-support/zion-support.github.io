@@ -1022,6 +1022,358 @@ export default function AIServices() {
         'Personalized user experiences',
         'Better content discovery and recommendations'
       ]
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Drug Discovery Platform',
+      description: 'Advanced AI platform for pharmaceutical research, drug discovery, and molecular analysis with machine learning algorithms.',
+      features: [
+        'Molecular structure analysis and prediction',
+        'Drug-target interaction modeling',
+        'Toxicity and side effect prediction',
+        'Clinical trial optimization',
+        'Patent analysis and intellectual property insights',
+        'Integration with research databases and tools'
+      ],
+      pricing: '$50,000 – $500,000/project',
+      perUnit: 'Custom pricing based on research scope',
+      timeline: '12–24 weeks',
+      benefits: [
+        '60% reduction in drug discovery time',
+        'Improved success rates in clinical trials',
+        'Reduced research and development costs',
+        'Enhanced drug safety and efficacy prediction'
+      ]
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Cybersecurity Threat Intelligence',
+      description: 'Advanced threat detection and response system using machine learning for real-time security monitoring and incident response.',
+      features: [
+        'Real-time threat detection and analysis',
+        'Behavioral anomaly detection',
+        'Automated incident response and remediation',
+        'Threat intelligence and attribution',
+        'Zero-day vulnerability detection',
+        'Integration with SIEM and security tools'
+      ],
+      pricing: '$10,000 – $100,000 setup',
+      perUnit: '$0.50 – $5.00 per endpoint/month',
+      timeline: '8–16 weeks',
+      benefits: [
+        '99.9% threat detection accuracy',
+        'Real-time security incident response',
+        'Reduced false positive rates',
+        'Enhanced security posture and compliance'
+      ]
+    },
+    {
+      icon: TrendingUp,
+      name: 'AI-Powered Financial Risk Management',
+      description: 'Comprehensive financial risk assessment and management platform with predictive analytics and real-time monitoring.',
+      features: [
+        'Credit risk assessment and scoring',
+        'Market risk analysis and prediction',
+        'Operational risk identification',
+        'Regulatory compliance monitoring',
+        'Stress testing and scenario analysis',
+        'Real-time risk dashboard and alerts'
+      ],
+      pricing: '$25,000 – $200,000 setup',
+      perUnit: '$0.10 – $1.00 per transaction',
+      timeline: '10–20 weeks',
+      benefits: [
+        '95% accuracy in risk prediction',
+        'Real-time risk monitoring and alerts',
+        'Reduced financial losses',
+        'Enhanced regulatory compliance'
+      ]
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Mental Health Assistant',
+      description: 'Intelligent mental health monitoring and support platform with natural language processing and emotional analysis.',
+      features: [
+        'Emotional state analysis and monitoring',
+        'Natural language therapy conversations',
+        'Crisis detection and intervention',
+        'Personalized treatment recommendations',
+        'Progress tracking and analytics',
+        'Integration with healthcare systems'
+      ],
+      pricing: '$15,000 – $75,000 setup',
+      perUnit: '$0.25 – $2.50 per session',
+      timeline: '8–16 weeks',
+      benefits: [
+        '24/7 mental health support availability',
+        'Early intervention and crisis prevention',
+        'Personalized treatment approaches',
+        'Reduced healthcare costs and improved outcomes'
+      ]
+    },
+    {
+      icon: Globe,
+      name: 'AI-Powered Climate Change Analytics',
+      description: 'Advanced climate modeling and environmental impact analysis using machine learning for sustainability planning.',
+      features: [
+        'Climate change impact modeling',
+        'Carbon footprint analysis and optimization',
+        'Environmental risk assessment',
+        'Sustainability reporting and compliance',
+        'Green energy optimization',
+        'ESG (Environmental, Social, Governance) analytics'
+      ],
+      pricing: '$20,000 – $150,000/project',
+      perUnit: 'Custom pricing based on data volume',
+      timeline: '12–24 weeks',
+      benefits: [
+        'Accurate climate impact predictions',
+        'Optimized sustainability strategies',
+        'Enhanced ESG compliance',
+        'Reduced environmental footprint'
+      ]
+    },
+    {
+      icon: FileText,
+      name: 'AI-Powered Medical Diagnosis Assistant',
+      description: 'Advanced medical AI for diagnostic support, treatment recommendations, and patient care optimization.',
+      features: [
+        'Medical image analysis and interpretation',
+        'Symptom analysis and differential diagnosis',
+        'Treatment recommendation engine',
+        'Drug interaction and allergy checking',
+        'Patient outcome prediction',
+        'Integration with EHR and medical systems'
+      ],
+      pricing: '$30,000 – $250,000 setup',
+      perUnit: '$0.50 – $5.00 per diagnosis',
+      timeline: '12–24 weeks',
+      benefits: [
+        '95% accuracy in diagnostic support',
+        'Reduced misdiagnosis rates',
+        'Improved patient outcomes',
+        'Enhanced clinical decision support'
+      ]
+    },
+    {
+      icon: BarChart3,
+      name: 'AI-Powered Supply Chain Optimization',
+      description: 'Intelligent supply chain management with demand forecasting, logistics optimization, and risk mitigation.',
+      features: [
+        'Demand forecasting and inventory optimization',
+        'Route optimization and logistics planning',
+        'Supplier risk assessment and monitoring',
+        'Supply chain visibility and tracking',
+        'Cost optimization and efficiency analysis',
+        'Integration with ERP and logistics systems'
+      ],
+      pricing: '$25,000 – $200,000 setup',
+      perUnit: '$0.10 – $1.00 per transaction',
+      timeline: '10–20 weeks',
+      benefits: [
+        '30% reduction in supply chain costs',
+        'Improved delivery performance',
+        'Reduced supply chain risks',
+        'Enhanced operational efficiency'
+      ]
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Autonomous Vehicle Systems',
+      description: 'Advanced AI systems for autonomous vehicle navigation, safety, and fleet management.',
+      features: [
+        'Computer vision and object detection',
+        'Path planning and navigation algorithms',
+        'Real-time decision making and control',
+        'Fleet management and optimization',
+        'Safety monitoring and incident prevention',
+        'Integration with vehicle systems and sensors'
+      ],
+      pricing: '$100,000 – $1,000,000/project',
+      perUnit: 'Custom pricing based on fleet size',
+      timeline: '24–52 weeks',
+      benefits: [
+        'Enhanced vehicle safety and reliability',
+        'Optimized fleet operations',
+        'Reduced transportation costs',
+        'Improved traffic flow and efficiency'
+      ]
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Fraud Detection & Prevention',
+      description: 'Advanced fraud detection system using machine learning for real-time transaction monitoring and risk assessment.',
+      features: [
+        'Real-time transaction monitoring',
+        'Behavioral analysis and anomaly detection',
+        'Multi-channel fraud prevention',
+        'Risk scoring and decision making',
+        'Fraud pattern recognition',
+        'Integration with payment and banking systems'
+      ],
+      pricing: '$15,000 – $100,000 setup',
+      perUnit: '$0.01 – $0.10 per transaction',
+      timeline: '8–16 weeks',
+      benefits: [
+        '99.5% fraud detection accuracy',
+        'Real-time fraud prevention',
+        'Reduced false positive rates',
+        'Enhanced customer trust and security'
+      ]
+    },
+    {
+      icon: TrendingUp,
+      name: 'AI-Powered Investment Portfolio Management',
+      description: 'Intelligent investment management platform with automated trading, risk assessment, and portfolio optimization.',
+      features: [
+        'Automated trading and portfolio rebalancing',
+        'Risk assessment and management',
+        'Market analysis and prediction',
+        'ESG and sustainable investing analysis',
+        'Performance tracking and reporting',
+        'Integration with financial data providers'
+      ],
+      pricing: '$20,000 – $150,000 setup',
+      perUnit: '0.1% – 1% of assets under management',
+      timeline: '10–20 weeks',
+      benefits: [
+        'Optimized portfolio performance',
+        'Automated investment management',
+        'Enhanced risk-adjusted returns',
+        'Reduced investment management costs'
+      ]
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Personalized Learning Platform',
+      description: 'Adaptive learning system that personalizes education content and tracks student progress using AI.',
+      features: [
+        'Personalized learning path generation',
+        'Adaptive content delivery',
+        'Student performance analysis',
+        'Learning style identification',
+        'Progress tracking and reporting',
+        'Integration with educational management systems'
+      ],
+      pricing: '$10,000 – $75,000 setup',
+      perUnit: '$2.00 – $20.00 per student/month',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Improved learning outcomes',
+        'Personalized educational experiences',
+        'Enhanced student engagement',
+        'Data-driven teaching insights'
+      ]
+    },
+    {
+      icon: Globe,
+      name: 'AI-Powered Smart City Management',
+      description: 'Intelligent city management platform for traffic optimization, resource management, and citizen services.',
+      features: [
+        'Traffic flow optimization and management',
+        'Resource allocation and optimization',
+        'Citizen service automation',
+        'Environmental monitoring and management',
+        'Emergency response optimization',
+        'Integration with city infrastructure systems'
+      ],
+      pricing: '$50,000 – $500,000/project',
+      perUnit: 'Custom pricing based on city size',
+      timeline: '24–52 weeks',
+      benefits: [
+        'Improved city efficiency and sustainability',
+        'Enhanced citizen services',
+        'Reduced traffic congestion',
+        'Optimized resource utilization'
+      ]
+    },
+    {
+      icon: FileText,
+      name: 'AI-Powered Legal Research & Analysis',
+      description: 'Advanced legal research platform with case law analysis, contract review, and legal document automation.',
+      features: [
+        'Case law research and analysis',
+        'Contract review and risk assessment',
+        'Legal document generation',
+        'Precedent analysis and citation',
+        'Compliance monitoring and reporting',
+        'Integration with legal databases and systems'
+      ],
+      pricing: '$15,000 – $100,000 setup',
+      perUnit: '$0.50 – $5.00 per document',
+      timeline: '8–16 weeks',
+      benefits: [
+        '80% reduction in legal research time',
+        'Improved legal accuracy and consistency',
+        'Enhanced case preparation',
+        'Reduced legal costs and risks'
+      ]
+    },
+    {
+      icon: BarChart3,
+      name: 'AI-Powered Predictive Maintenance',
+      description: 'Intelligent maintenance system that predicts equipment failures and optimizes maintenance schedules.',
+      features: [
+        'Equipment failure prediction',
+        'Maintenance schedule optimization',
+        'Condition monitoring and analysis',
+        'Cost optimization and planning',
+        'Integration with IoT sensors and systems',
+        'Real-time alerts and notifications'
+      ],
+      pricing: '$20,000 – $150,000 setup',
+      perUnit: '$0.10 – $1.00 per asset/month',
+      timeline: '10–20 weeks',
+      benefits: [
+        '50% reduction in unplanned downtime',
+        'Optimized maintenance costs',
+        'Extended equipment lifespan',
+        'Improved operational efficiency'
+      ]
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Content Moderation',
+      description: 'Advanced content moderation system using AI for automated detection and management of inappropriate content.',
+      features: [
+        'Automated content detection and classification',
+        'Multi-modal content analysis (text, image, video)',
+        'Context-aware moderation decisions',
+        'Real-time content filtering',
+        'Customizable moderation policies',
+        'Integration with social media and content platforms'
+      ],
+      pricing: '$10,000 – $75,000 setup',
+      perUnit: '$0.001 – $0.01 per piece of content',
+      timeline: '6–12 weeks',
+      benefits: [
+        '99% accuracy in content moderation',
+        'Real-time inappropriate content detection',
+        'Reduced manual moderation costs',
+        'Enhanced platform safety and compliance'
+      ]
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Identity & Access Management',
+      description: 'Advanced identity verification and access control system with biometric authentication and behavioral analysis.',
+      features: [
+        'Multi-factor biometric authentication',
+        'Behavioral analysis and risk assessment',
+        'Real-time access control and monitoring',
+        'Privileged access management',
+        'Compliance and audit reporting',
+        'Integration with enterprise systems'
+      ],
+      pricing: '$15,000 – $100,000 setup',
+      perUnit: '$0.50 – $5.00 per user/month',
+      timeline: '8–16 weeks',
+      benefits: [
+        '99.9% identity verification accuracy',
+        'Enhanced security and access control',
+        'Reduced identity fraud and breaches',
+        'Improved compliance and audit capabilities'
+      ]
     }
   ];
 
