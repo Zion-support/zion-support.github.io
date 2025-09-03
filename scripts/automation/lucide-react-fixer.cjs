@@ -1,384 +1,586 @@
-#!/usr/bin/env node
-
+<<<<<<< HEAD
+#!/''usr/bin/env'' node;
 /**
- * Lucide React Icon Fixer - PM2 Automation
- * Automatically fixes Lucide React icon import issues
- * Runs every 30 minutes to maintain icon consistency
+ * Lucide React Icon Fixer - PM2 Automation;
+ * Automatically fixes Lucide React icon import issues;
+ * Runs every 30 minutes to maintain icon consistency;
  */
+=======
+#!/'usr/bin/env' node;
+
+/**;
+ * Lucide React Icon Fixer - PM2 Automation;
+ * Automatically fixes Lucide React icon import issues;
+ * Runs every 30 minutes to maintain icon consistency;
+ */;
+>>>>>>> main
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
-class LucideReactIconFixer {
-  constructor() {
+;
+class LucideReactIconFixer {;
+  constructor() {;
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, 'logs', 'lucide-react-fixer.log');
-    this.fixesLog = path.join(this.projectRoot, 'logs', 'lucide-fixes.json');
+    this.fixesLog = path.join(this.projectRoot, 'logs', `lucide-fixes.json`);
     this.ensureLogsDirectory();
-    
-    // Valid Lucide React icons (as of latest version)
+    ;
+    // Valid Lucide React icons (as of latest version);
     this.validIcons = this.getValidIcons();
   }
-
-  ensureLogsDirectory() {
+;
+  ensureLogsDirectory() {;
     const logsDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logsDir)) {
+    if (!fs.existsSync(logsDir)) {;
       fs.mkdirSync(logsDir, { recursive: true });
     }
   }
+<<<<<<< HEAD
 
-  log(message, level = 'INFO') {
+  log(message, level = `INFO`) {
+=======
+;
+  log(message, level = 'INFO') {;
+>>>>>>> main
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
-    fs.appendFileSync(this.logFile, logEntry);
-    console.log(`[${level}] ${message}`);
+    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
   }
+<<<<<<< HEAD
 
   getValidIcons() {
-    // Common valid Lucide React icons
-    return [
-      'User', 'UserCheck', 'UserX', 'UserPlus', 'UserMinus', 'UserEdit', 'UserSearch',
-      'Users', 'Users2', 'UserStar', 'UserHeart', 'UserCog', 'UserShield',
-      'Eye', 'EyeOff', 'MousePointer', 'Clock', 'MapPin', 'Smartphone', 'Tablet', 'Laptop',
-      'Server', 'Database', 'HardDrive', 'Cpu', 'Network', 'Wifi', 'Bluetooth', 'Radio',
-      'Signal', 'Antenna', 'Satellite', 'Orbit', 'Star', 'Navigation', 'Moon', 'Sun',
-      'Binary', 'Lock', 'Key', 'Fingerprint', 'Brain', 'Rocket', 'DollarSign', 'Search',
-      'Sparkles', 'Zap', 'Settings', 'Settings2', 'Cog', 'Cog2', 'Device', 'Desktop',
-      'Monitor', 'Smartphone', 'Tablet', 'Laptop', 'Server', 'Database', 'HardDrive',
-      'Cpu', 'Network', 'Wifi', 'Bluetooth', 'Radio', 'Signal', 'Antenna', 'Satellite',
-      'Orbit', 'Star', 'Navigation', 'Moon', 'Sun', 'Binary', 'Lock', 'Key', 'Fingerprint',
-      'Brain', 'Rocket', 'DollarSign', 'Search', 'Sparkles', 'Zap'
-    ];
+    // Common valid Lucide React icons;
+    return [`User``, 'UserCheck', 'UserX', 'UserPlus', 'UserMinus', 'UserEdit', 'UserSearch', 'Users'', 'Users2', 'UserStar', 'UserHeart', 'UserCog', 'UserShield', 'Eye'', 'EyeOff', 'MousePointer', 'Clock', 'MapPin', 'Smartphone', 'Tablet', 'Laptop', 'Server'', 'Database', 'HardDrive', 'Cpu', 'Network', 'Wifi', 'Bluetooth', 'Radio', 'Signal'', 'Antenna', 'Satellite', 'Orbit', 'Star', 'Navigation', 'Moon', 'Sun', 'Binary'', 'Lock', 'Key', 'Fingerprint', 'Brain', 'Rocket', 'DollarSign', 'Search', 'Sparkles'', 'Zap', 'Settings', 'Settings2', 'Cog', 'Cog2', 'Device', 'Desktop', 'Monitor'', 'Smartphone', 'Tablet', 'Laptop', 'Server', 'Database', 'HardDrive', 'Cpu'', 'Network', 'Wifi', 'Bluetooth', 'Radio', 'Signal', 'Antenna', 'Satellite', 'Orbit'', 'Star', 'Navigation', 'Moon', 'Sun', 'Binary', 'Lock', 'Key', 'Fingerprint', 'Brain'', 'Rocket', 'DollarSign', 'Search', 'Sparkles', `Zap`];
   }
 
   async runIconFix() {
-    this.log('🎨 Starting Lucide React icon fix automation...');
+    this.log(`🎨 Starting Lucide React icon fix automation...`);
     
     const fixes = [];
     const errors = [];
 
     try {
-      // 1. Scan for files with Lucide React imports
+      // 1. Scan for files with Lucide React imports;
       const filesWithIcons = await this.scanForIconFiles();
       
-      // 2. Fix each file with icon issues
+      // 2. Fix each file with icon issues;
       for (const file of filesWithIcons) {
         try {
           const fix = await this.fixIconImports(file);
           if (fix) fixes.push(fix);
-        } catch (error) {
+        } catch (error) {  
           errors.push({
             file: file,
-            error: error.message
+            error: error.message;
+            });
+        }
+      }
+
+=======
+;
+  getValidIcons() {;
+    // Common valid Lucide React icons;
+    return ['User', 'UserCheck', 'UserX', 'UserPlus', 'UserMinus', 'UserEdit', 'UserSearch', 'Users', 'Users2', 'UserStar', 'UserHeart', 'UserCog', 'UserShield', 'Eye', 'EyeOff', 'MousePointer', 'Clock', 'MapPin', 'Smartphone', 'Tablet', 'Laptop', 'Server', 'Database', 'HardDrive', 'Cpu', 'Network', 'Wifi', 'Bluetooth', 'Radio', 'Signal', 'Antenna', 'Satellite', 'Orbit', 'Star', 'Navigation', 'Moon', 'Sun', 'Binary', 'Lock', 'Key', 'Fingerprint', 'Brain', 'Rocket', 'DollarSign', 'Search', 'Sparkles', 'Zap', 'Settings', 'Settings2', 'Cog', 'Cog2', 'Device', 'Desktop', 'Monitor', 'Smartphone', 'Tablet', 'Laptop', 'Server', 'Database', 'HardDrive', 'Cpu', 'Network', 'Wifi', 'Bluetooth', 'Radio', 'Signal', 'Antenna', 'Satellite', 'Orbit', 'Star', 'Navigation', 'Moon', 'Sun', 'Binary', 'Lock', 'Key', 'Fingerprint', 'Brain', 'Rocket', 'DollarSign', 'Search', 'Sparkles', 'Zap'];
+  }
+;
+  async runIconFix() {;
+    this.log('🎨 Starting Lucide React icon fix automation...');
+    ;
+    const fixes = [];
+    const errors = [];
+;
+    try {;
+      // 1. Scan for files with Lucide React imports;
+      const filesWithIcons = await this.scanForIconFiles();
+      ;
+      // 2. Fix each file with icon issues;
+      for (const file of filesWithIcons) {;
+        try {;
+          const fix = await this.fixIconImports(file);
+          if (fix) fixes.push(fix);
+        } catch (error) {;
+          errors.push({;
+            file: file,;
+            error: error.message;
           });
         }
       }
-
-      // 3. Generate report
+;
+>>>>>>> main
+      // 3. Generate report;
       await this.generateReport(fixes, errors);
+<<<<<<< HEAD
+      ;
+      // 4. Commit fixes if successful;
+      if (fixes.length > 0 && errors.length === 0) {;
+        await this.commitFixes(fixes);
+      }
+;
+    } catch (error) {;
+=======
       
-      // 4. Commit fixes if successful
+      // 4. Commit fixes if successful;
       if (fixes.length > 0 && errors.length === 0) {
+<<<<<<< HEAD
         await this.commitFixes(fixes);
       }
 
-    } catch (error) {
+    } catch (error) {  
+      this.log(`Icon fix automation failed: ${error.message  }`, `ERROR`);
+=======
+        await this.commitFixes(fixes);`);
+      }`);
+`);
+    } catch (error) {`);
+>>>>>>> main
       this.log(`Icon fix automation failed: ${error.message}`, 'ERROR');
+>>>>>>> main
     }
-
+;
     return { fixes, errors };
   }
-
-  async scanForIconFiles() {
+;
+  async scanForIconFiles() {;
     const filesWithIcons = [];
-    const srcPath = path.join(this.projectRoot, 'src');
+<<<<<<< HEAD
+    const srcPath = path.join(this.projectRoot, `src`);
     
+=======
+    const srcPath = path.join(this.projectRoot, 'src');
+    ;
+>>>>>>> main
     if (!fs.existsSync(srcPath)) return filesWithIcons;
-
-    try {
+;
+    try {;
       const files = await this.getAllFiles(srcPath);
-      
-      for (const file of files) {
-        if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-          try {
+      ;
+      for (const file of files) {;
+        if (file.endsWith('.tsx') || file.endsWith('.ts')) {;
+          try {;
             const content = fs.readFileSync(file, 'utf8');
+<<<<<<< HEAD
             
-            // Check if file imports from lucide-react
-            if (content.includes('from \'lucide-react\'') || content.includes('from "lucide-react"')) {
+            // Check if file imports from lucide-react;
+            if (content.includes('from \'lucide-react\``) || content.includes(`from "lucide-react"`)) {
               filesWithIcons.push({
                 path: file,
-                content: content
+=======
+            ;
+            // Check if file imports from lucide-react;
+            if (content.includes('from \'lucide-react\') || content.includes('from "lucide-react"')) {;
+              filesWithIcons.push({;
+                path: file,;
+>>>>>>> main
+                content: content;
               });
             }
-          } catch (error) {
-            this.log(`Error reading file ${file}: ${error.message}`, 'WARN');
+          } catch (error) {  this.log(`Error reading file ${file  }: ${error.message}`, `WARN`);
           }
         }
       }
-    } catch (error) {
-      this.log(`Error scanning for icon files: ${error.message}`, 'WARN');
+    } catch (error) {  this.log(`Error scanning for icon files: ${error.message  }`, `WARN`);
     }
-
+;
     return filesWithIcons;
   }
-
-  async fixIconImports(fileInfo) {
+;
+  async fixIconImports(fileInfo) {;
     const { path: filePath, content } = fileInfo;
     let modified = false;
     let newContent = content;
+<<<<<<< HEAD
 
     try {
-      // 1. Fix duplicate imports
+      // 1. Fix duplicate imports;
       newContent = this.fixDuplicateIconImports(newContent);
       if (newContent !== content) modified = true;
 
-      // 2. Fix invalid icon names
+      // 2. Fix invalid icon names;
       newContent = this.fixInvalidIconNames(newContent);
       if (newContent !== content) modified = true;
 
-      // 3. Remove unused icon imports
+      // 3. Remove unused icon imports;
       newContent = this.removeUnusedIconImports(newContent);
       if (newContent !== content) modified = true;
 
-      // 4. Fix import statement formatting
+=======
+;
+    try {;
+      // 1. Fix duplicate imports;
+      newContent = this.fixDuplicateIconImports(newContent);
+      if (newContent !== content) modified = true;
+;
+      // 2. Fix invalid icon names;
+      newContent = this.fixInvalidIconNames(newContent);
+      if (newContent !== content) modified = true;
+;
+      // 3. Remove unused icon imports;
+      newContent = this.removeUnusedIconImports(newContent);
+      if (newContent !== content) modified = true;
+;
+>>>>>>> main
+      // 4. Fix import statement formatting;
       newContent = this.fixImportFormatting(newContent);
       if (newContent !== content) modified = true;
-
-      if (modified) {
-        fs.writeFileSync(filePath, newContent);
-        this.log(`✅ Fixed icon imports in ${path.basename(filePath)}`);
-        return { type: 'icon_imports', file: filePath, fix: 'fixed_icon_imports' };
+;
+      if (modified) {;
+        fs.writeFileSync(filePath, newContent);this.log(`✅ Fixed icon imports in ${path.basename(filePath)}`);
+        return { type: `icon_imports`, file: filePath, fix: `fixed_icon_imports` };
       }
+<<<<<<< HEAD
 
-    } catch (error) {
-      this.log(`Error fixing icon imports in ${filePath}: ${error.message}`, 'WARN');
+    } catch (error) {  this.log(`Error fixing icon imports in ${filePath  }: ${error.message}`, `WARN`);
+=======
+;
+    } catch (error) {this.log(`Error fixing icon imports in ${filePath}: ${error.message}`, 'WARN');
+>>>>>>> main
     }
-
+;
     return null;
   }
+<<<<<<< HEAD
 
   fixDuplicateIconImports(content) {
+    const lines = content.split(`\n`);
+=======
+;
+  fixDuplicateIconImports(content) {;
     const lines = content.split('\n');
+>>>>>>> main
     const newLines = [];
     const importMap = new Map();
     let inImportBlock = false;
-
-    for (let i = 0; i < lines.length; i++) {
+;
+    for (let i = 0; i < lines.length; i++) {;
       const line = lines[i];
-      
-      if (line.trim().startsWith('import ') && line.includes('lucide-react')) {
+      ;
+      if (line.trim().startsWith('import ') && line.includes('lucide-react')) {;
         inImportBlock = true;
+<<<<<<< HEAD
         
-        // Extract icons from import statement
+        // Extract icons from import statement;
         const match = line.match(/import\s*\{([^}]+)\}\s*from\s*['"]lucide-react['"]/);
         if (match) {
-          const icons = match[1].split(',').map(icon => icon.trim());
+          const icons = match[1].split(`,`).map(icon => icon.trim());
           
-          // Add to import map, avoiding duplicates
+          // Add to import map, avoiding duplicates;
           for (const icon of icons) {
             if (!importMap.has(icon)) {
+=======
+        ;
+        // Extract icons from import statement;
+        const match = line.match(/import\s*\{([^}]+)\}\s*from\s*['"]lucide-react['"]/);
+        if (match) {;
+          const icons = match[1].split(',').map(icon => icon.trim());
+          ;
+          // Add to import map, avoiding duplicates;
+          for (const icon of icons) {;
+            if (!importMap.has(icon)) {;
+>>>>>>> main
               importMap.set(icon, true);
             }
           }
         }
-      } else if (inImportBlock && line.trim() === '') {
+<<<<<<< HEAD
+      } else if (inImportBlock && line.trim() === ``) {
         inImportBlock = false;
         
-        // Reconstruct import statement with unique icons
+        // Reconstruct import statement with unique icons;
         if (importMap.size > 0) {
-          const uniqueIcons = Array.from(importMap.keys()).sort();
-          newLines.push(`import { ${uniqueIcons.join(', ')} } from 'lucide-react';`);
+          const uniqueIcons = Array.from(importMap.keys()).sort();newLines.push(`import { ${uniqueIcons.join(', ')} } from `lucide-react`;`);
         }
         
-        newLines.push('');
+        newLines.push(``);
+=======
+      } else if (inImportBlock && line.trim() === ') {;
+        inImportBlock = false;
+        ;
+        // Reconstruct import statement with unique icons;
+        if (importMap.size > 0) {;
+          const uniqueIcons = Array.from(importMap.keys()).sort();newLines.push(`import { ${uniqueIcons.join(', ')} } from 'lucide-react';`);
+        }
+        ;
+        newLines.push(');
+>>>>>>> main
         importMap.clear();
-      } else if (!inImportBlock) {
+      } else if (!inImportBlock) {;
         newLines.push(line);
       }
     }
-
+;
     return newLines.join('\n');
   }
-
-  fixInvalidIconNames(content) {
+;
+  fixInvalidIconNames(content) {;
     let newContent = content;
+<<<<<<< HEAD
 
-    // Common invalid icon mappings
-    const iconMappings = {
-      'UserHeart': 'Heart',
-      'UserEdit2': 'UserEdit',
-      'UserSearch2': 'Search',
-      'UserList2': 'Users2',
-      'UserSettings2': 'Settings2',
-      'UserShield2': 'Shield',
-      'UserStar2': 'Star',
-      'Device': 'Monitor',
-      'Desktop': 'Monitor'
+    // Common invalid icon mappings;
+    const iconMappings = {UserHeart': 'Heart',UserEdit2': 'UserEdit',UserSearch2': 'Search',UserList2': 'Users2',UserSettings2': 'Settings2',UserShield2': 'Shield',UserStar2': 'Star',Device': 'Monitor',Desktop': 'Monitor'
     };
 
-    // Replace invalid icon names
-    for (const [invalid, valid] of Object.entries(iconMappings)) {
-      const regex = new RegExp(`\\b${invalid}\\b`, 'g');
+    // Replace invalid icon names;
+    for (const [`invalid`, `valid`] of Object.entries(iconMappings)) {const regex = new RegExp(`\\b${invalid}\\b`, `g`);
       if (newContent.includes(invalid)) {
-        newContent = newContent.replace(regex, valid);
-        this.log(`🔄 Replaced invalid icon '${invalid}' with '${valid}'`);
+        newContent = newContent.replace(regex, valid);this.log(`🔄 Replaced invalid icon `${invalid}` with `${valid}``);
+=======
+;
+    // Common invalid icon mappings;
+    const iconMappings = {UserHeart': 'Heart',UserEdit2': 'UserEdit',UserSearch2': 'Search',UserList2': 'Users2',UserSettings2': 'Settings2',UserShield2': 'Shield',UserStar2': 'Star',Device': 'Monitor',Desktop': 'Monitor';
+    };
+;
+    // Replace invalid icon names;
+    for (const ['invalid', 'valid'] of Object.entries(iconMappings)) {const regex = new RegExp(`\\b${invalid}\\b`, 'g');
+      if (newContent.includes(invalid)) {;
+        newContent = newContent.replace(regex, valid);this.log(`🔄 Replaced invalid icon '${invalid}' with '${valid}'`);
+>>>>>>> main
       }
     }
-
+;
     return newContent;
   }
+<<<<<<< HEAD
 
   removeUnusedIconImports(content) {
+    const lines = content.split(`\n`);
+=======
+;
+  removeUnusedIconImports(content) {;
     const lines = content.split('\n');
+>>>>>>> main
     const newLines = [];
     let inImportBlock = false;
     let importLines = [];
     let iconNames = [];
+<<<<<<< HEAD
 
-    // First pass: collect all icon names from imports
+    // First pass: collect all icon names from imports;
     for (const line of lines) {
       if (line.trim().startsWith('import ') && line.includes('lucide-react')) {
+=======
+;
+    // First pass: collect all icon names from imports;
+    for (const line of lines) {;
+      if (line.trim().startsWith('import ') && line.includes('lucide-react')) {;
+>>>>>>> main
         const match = line.match(/import\s*\{([^}]+)\}\s*from\s*['"]lucide-react['"]/);
-        if (match) {
+        if (match) {;
           const icons = match[1].split(',').map(icon => icon.trim());
           iconNames.push(...icons);
         }
       }
     }
+<<<<<<< HEAD
 
-    // Second pass: filter used icons
+    // Second pass: filter used icons;
     for (let i = 0; i < lines.length; i++) {
+=======
+;
+    // Second pass: filter used icons;
+    for (let i = 0; i < lines.length; i++) {;
+>>>>>>> main
       const line = lines[i];
-      
-      if (line.trim().startsWith('import ') && line.includes('lucide-react')) {
+      ;
+      if (line.trim().startsWith('import ') && line.includes('lucide-react')) {;
         inImportBlock = true;
+<<<<<<< HEAD
         
-        const match = line.match(/import\s*\{([^}]+)\}\s*from\s*['"]lucide-react['"]/);
+        const match = line.match(/import\s*\{([^}]+)\}\s*from\s*[`"]lucide-react[`"]/);
         if (match) {
-          const icons = match[1].split(',').map(icon => icon.trim());
+          const icons = match[1].split(`,`).map(icon => icon.trim());
           const usedIcons = icons.filter(icon => this.isIconUsed(icon, content));
           
-          if (usedIcons.length > 0) {
-            importLines.push(`import { ${usedIcons.join(', ')} } from 'lucide-react';`);
+          if (usedIcons.length > 0) {importLines.push(`import { ${usedIcons.join(', ')} } from `lucide-react`;`);
           }
         }
-      } else if (inImportBlock && line.trim() === '') {
+      } else if (inImportBlock && line.trim() === ``) {
         inImportBlock = false;
         
-        // Add filtered imports
+        // Add filtered imports;
         newLines.push(...importLines);
-        newLines.push('');
+        newLines.push(``);
+=======
+        ;
+        const match = line.match(/import\s*\{([^}]+)\}\s*from\s*['"]lucide-react['"]/);
+        if (match) {;
+          const icons = match[1].split(',').map(icon => icon.trim());
+          const usedIcons = icons.filter(icon => this.isIconUsed(icon, content));
+          ;
+          if (usedIcons.length > 0) {importLines.push(`import { ${usedIcons.join(', ')} } from 'lucide-react';`);
+          }
+        }
+      } else if (inImportBlock && line.trim() === ') {;
+        inImportBlock = false;
+        ;
+        // Add filtered imports;
+        newLines.push(...importLines);
+        newLines.push(');
+>>>>>>> main
         importLines = [];
-      } else if (!inImportBlock) {
+      } else if (!inImportBlock) {;
         newLines.push(line);
       }
     }
+<<<<<<< HEAD
 
-    return newLines.join('\n');
+    return newLines.join(`\n`);
   }
 
   isIconUsed(iconName, content) {
-    // Check if icon is used in JSX or as a component
-    const patterns = [
-      new RegExp(`<${iconName}[\\s/>]`, 'g'),
-      new RegExp(`</${iconName}>`, 'g'),
-      new RegExp(`\\b${iconName}\\b`, 'g')
+    // Check if icon is used in JSX or as a component;
+    const patterns = [new RegExp(`<${iconName}[\\s/>]`, `g`),new RegExp(`</${iconName}>`, `g`),new RegExp(`\\b${iconName}\\b`, `g`)
+=======
+;
+    return newLines.join('\n');
+  }
+;
+  isIconUsed(iconName, content) {;
+    // Check if icon is used in JSX or as a component;
+    const patterns = [new RegExp(`<${iconName}[\\s/>]`, 'g'),new RegExp(`</${iconName}>`, 'g'),new RegExp(`\\b${iconName}\\b`, 'g');
+>>>>>>> main
     ];
-
-    for (const pattern of patterns) {
-      if (pattern.test(content)) {
+;
+    for (const pattern of patterns) {;
+      if (pattern.test(content)) {;
         return true;
       }
     }
-
+;
     return false;
   }
+<<<<<<< HEAD
 
   fixImportFormatting(content) {
-    // Clean up import formatting
-    return content
-      .replace(/import\s*\{\s*([^}]+)\s*\}\s*from\s*['"]lucide-react['"]/g, 
+    // Clean up import formatting;
+    return content;
+      .replace(/import\s*\{\s*([^}]+)\s*\}\s*from\s*[`"]lucide-react[`"]/g, 
                (match, icons) => {
-                 const cleanIcons = icons.split(',').map(icon => icon.trim()).filter(Boolean);
-                 return `import { ${cleanIcons.join(', ')} } from 'lucide-react'`;
+                 const cleanIcons = icons.split(`,`).map(icon => icon.trim()).filter(Boolean);return `import { ${cleanIcons.join(', ')} } from `lucide-react``;
                })
-      .replace(/,\s*,/g, ',') // Remove double commas
-      .replace(/,\s*}/g, '}') // Remove trailing commas
-      .replace(/{\s*,/g, '{') // Remove leading commas
-      .replace(/{\s*}/g, '{}'); // Clean empty braces
+      .replace(/,\s*,/g, `,`) // Remove double commas;
+=======
+;
+  fixImportFormatting(content) {;
+    // Clean up import formatting;
+    return content;
+      .replace(/import\s*\{\s*([^}]+)\s*\}\s*from\s*['"]lucide-react['"]/g, ;
+               (match, icons) => {;
+                 const cleanIcons = icons.split(',').map(icon => icon.trim()).filter(Boolean);return `import { ${cleanIcons.join(', ')} } from 'lucide-react'`;
+               });
+      .replace(/,\s*,/g, ',') // Remove double commas;
+>>>>>>> main
+      .replace(/,\s*}/g, '}') // Remove trailing commas;
+      .replace(/{\s*,/g, '{') // Remove leading commas;
+      .replace(/{\s*}/g, '{}'); // Clean empty braces;
   }
-
-  async getAllFiles(dirPath, arrayOfFiles = []) {
+;
+  async getAllFiles(dirPath, arrayOfFiles = []) {;
     const files = fs.readdirSync(dirPath);
+<<<<<<< HEAD
 
     for (const file of files) {
-      const fullPath = path.join(dirPath, file);
+      const fullPath = path.join(dirPath, `file);
       if (fs.statSync(fullPath).isDirectory()) {
-        arrayOfFiles = await this.getAllFiles(fullPath, arrayOfFiles);
+        arrayOfFiles = await this.getAllFiles(fullPath`, arrayOfFiles);
       } else {
+=======
+;
+    for (const file of files) {;
+      const fullPath = path.join(dirPath, 'file);
+      if (fs.statSync(fullPath).isDirectory()) {;
+        arrayOfFiles = await this.getAllFiles(fullPath', arrayOfFiles);
+      } else {;
+>>>>>>> main
         arrayOfFiles.push(fullPath);
       }
     }
-
+;
     return arrayOfFiles;
   }
+<<<<<<< HEAD
 
   async generateReport(fixes, errors) {
     const report = {
       timestamp: new Date().toISOString(),
       summary: {
         totalFixes: fixes.length,
-        totalErrors: errors.length
+        totalErrors: errors.length;
       },
       fixes: fixes,
-      errors: errors
+=======
+;
+  async generateReport(fixes, errors) {;
+    const report = {;
+      timestamp: new Date().toISOString(),;
+      summary: {;
+        totalFixes: fixes.length,;
+        totalErrors: errors.length;
+      },;
+      fixes: fixes,;
+>>>>>>> main
+      errors: errors;
     };
-
-    fs.writeFileSync(this.fixesLog, JSON.stringify(report, null, 2));
-    this.log(`📊 Icon fix report generated: ${this.fixesLog}`);
+;
+    fs.writeFileSync(this.fixesLog, JSON.stringify(report, null, 2));this.log(`📊 Icon fix report generated: ${this.fixesLog}`);
   }
+<<<<<<< HEAD
 
   async commitFixes(fixes) {
     try {
       if (fixes.length > 0) {
-        execSync('git add .', { stdio: 'pipe' });
-        execSync(`git commit -m "Auto-fix: ${fixes.length} Lucide React icon issues resolved"`, { stdio: 'pipe' });
-        this.log(`✅ Committed ${fixes.length} icon fixes to git`);
+        execSync(`git add .`, { stdio: `pipe` });execSync(`git commit -m "Auto-fix: ${fixes.length} Lucide React icon issues resolved"`, { stdio: `pipe` });this.log(`✅ Committed ${fixes.length} icon fixes to git`);
+=======
+;
+  async commitFixes(fixes) {;
+    try {;
+      if (fixes.length > 0) {;
+        execSync('git add .', { stdio: 'pipe' });execSync(`git commit -m "Auto-fix: ${fixes.length} Lucide React icon issues resolved"`, { stdio: 'pipe' });this.log(`✅ Committed ${fixes.length} icon fixes to git`);
+>>>>>>> main
       }
-    } catch (error) {
-      this.log(`Warning: Could not commit fixes: ${error.message}`, 'WARN');
+    } catch (error) {  this.log(`Warning: Could not commit fixes: ${error.message  }`, `WARN`);
     }
   }
 }
+<<<<<<< HEAD
 
-// Main execution
+// Main execution;
 async function main() {
   const fixer = new LucideReactIconFixer();
   
-  // Run the icon fix
+=======
+;
+// Main execution;
+async function main() {;
+  const fixer = new LucideReactIconFixer();
+  ;
+>>>>>>> main
+  // Run the icon fix;
   const result = await fixer.runIconFix();
-  
-  console.log(`\n🎨 Lucide React Icon Fixer Summary:`);
-  console.log(`✅ Total fixes applied: ${result.fixes.length}`);
-  console.log(`❌ Total errors encountered: ${result.errors.length}`);
-  
-  if (result.fixes.length > 0) {
-    console.log(`\n🔧 Icon fixes applied:`);
-    result.fixes.forEach(fix => {
-      console.log(`  - ${fix.type}: ${path.basename(fix.file)}`);
+  console.log(`\n🎨 Lucide React Icon Fixer Summary:`);console.log(`✅ Total fixes applied: ${result.fixes.length}`);console.log(`❌ Total errors encountered: ${result.errors.length}`);
+  ;
+  if (result.fixes.length > 0) {console.log(`\n🔧 Icon fixes applied:`);
+    result.fixes.forEach(fix => {console.log(`  - ${fix.type}: ${path.basename(fix.file)}`);
     });
   }
-  
+  ;
   process.exit(0);
 }
+<<<<<<< HEAD
 
-// Handle PM2 execution
+// Handle PM2 execution;
 if (require.main === module) {
   main().catch(error => {
+    console.error(`❌ Lucide React Icon Fixer failed:`, error);
+=======
+;
+// Handle PM2 execution;
+if (require.main === module) {;
+  main().catch(error => {;
     console.error('❌ Lucide React Icon Fixer failed:', error);
+>>>>>>> main
     process.exit(1);
   });
 }
-
+;
 module.exports = LucideReactIconFixer;

@@ -1,1 +1,6 @@
-export function BlogSection() {;
+<<<<<<< HEAD
+export: function BlogSection () {
+;
+=======
+export function BlogSection () {
+>>>>>>> main
