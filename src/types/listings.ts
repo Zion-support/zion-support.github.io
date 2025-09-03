@@ -21,7 +21,7 @@ seller: {
   views: number;
   likes: number;
   shares: number}
-;export interface ProductListing extends Listing {
+export interface ProductListing extends Listing {
 
   brand?: string;
   model?: string;
@@ -32,7 +32,7 @@ seller: {
     cost: number;
     method: string;
     estimatedDays: number}}
-;
+
 export interface ServiceListing extends Listing {
   serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support';
   duration?: string;
@@ -40,7 +40,7 @@ export interface ServiceListing extends Listing {
   experience: number;
   certifications: string[];
   portfolio?: string[]}
-;export interface TalentListing extends Listing {
+export interface TalentListing extends Listing {
 
   skills: string[];
   experience: number;
@@ -51,14 +51,14 @@ export interface ServiceListing extends Listing {
   hourlyRate: number;
   portfolio?: string[];
   references?: string[]}
-;export interface CartItem {
+export interface CartItem {
   id: string;
   title: string;
   price: number;
   quantity: number;
   type: 'product' | 'service' | 'talent';
   image?: string}
-;export interface WishlistItem {
+export interface WishlistItem {
   id: string;
   userId: string;
   listingId: string;
