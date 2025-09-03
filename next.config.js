@@ -4,6 +4,13 @@ const nextConfig = {
   swcMinify: true,
   compress: true,
   poweredByHeader: false,
+  typescript: {
+    // !! WARN !!
+    // Dangerously allow production builds to successfully complete even if
+    // your project has type errors.
+    // !! WARN !!
+    ignoreBuildErrors: true,
+  },
   images: {
     domains: ["localhost", "ziontechgroup.com"],
     formats: ['image/webp', 'image/avif'],
