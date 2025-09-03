@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Service finder utility for searching and filtering services
 
 export interface Service {
@@ -12,7 +13,7 @@ export interface Service {
 }
 
 export function findServicesByCategory(
-  allServiceArrays: Service[][], 
+  allServiceArrays: Service[][],
   categoryIncludes: string
 ): Service[] {
   const results: Service[] = [];
@@ -29,7 +30,7 @@ export function findServicesByCategory(
 }
 
 export function findServicesByTag(
-  allServiceArrays: Service[][], 
+  allServiceArrays: Service[][],
   tagIncludes: string
 ): Service[] {
   const results: Service[] = [];
@@ -37,7 +38,7 @@ export function findServicesByTag(
   for (const arr of allServiceArrays) {
     for (const s of arr) {
       if (s && s.tags && Array.isArray(s.tags)) {
-        const hasTag = s.tags.some(tag => 
+        const hasTag = s.tags.some(tag =>
           typeof tag === 'string' && tag.toLowerCase().includes(tagIncludes.toLowerCase())
         );
         if (hasTag) {
@@ -51,8 +52,8 @@ export function findServicesByTag(
 }
 
 export function findServicesByPriceRange(
-  allServiceArrays: Service[][], 
-  minPrice: number, 
+  allServiceArrays: Service[][],
+  minPrice: number,
   maxPrice: number
 ): Service[] {
   const results: Service[] = [];
@@ -69,7 +70,7 @@ export function findServicesByPriceRange(
 }
 
 export function searchServices(
-  allServiceArrays: Service[][], 
+  allServiceArrays: Service[][],
   searchTerm: string
 ): Service[] {
   const results: Service[] = [];
@@ -90,4 +91,7 @@ export function searchServices(
   }
   
   return results;
+=======
+// comment
+>>>>>>> main
 }
