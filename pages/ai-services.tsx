@@ -56,7 +56,7 @@ export default function AIServices() {
       ],
       pricing: '$4,000 - $15, 000/month',
       delivery: '4-6 weeks',
-      category: 'HR AI',;
+      category: 'HR AI',
 },
     {
       title: 'Computer Vision Solutions',
@@ -68,7 +68,7 @@ export default function AIServices() {
       ],
       pricing: '$5,000 - $20, 000/month',
       delivery: '6-8 weeks',
-      category: 'Vision AI',;
+      category: 'Vision AI',
 },
     {
       title: 'AI Chatbot & Virtual Assistant',
@@ -80,7 +80,7 @@ export default function AIServices() {
       ],
       pricing: '$2,000 - $10, 000/month',
       delivery: '2-4 weeks',
-      category: 'Conversational AI',;
+      category: 'Conversational AI',
 },
     {
       title: 'Predictive Analytics Platform',
@@ -92,7 +92,7 @@ export default function AIServices() {
       ],
       pricing: '$6,000 - $25, 000/month',
       delivery: '8-12 weeks',
-      category: 'Analytics AI',;
+      category: 'Analytics AI',
 },
     {
       title: 'AI-Powered Search Engine',
@@ -104,7 +104,7 @@ export default function AIServices() {
       ],
       pricing: '$3,500 - $12, 000/month',
       delivery: '4-6 weeks',
-      category: 'Search AI',;
+      category: 'Search AI',
 },
     {
       title: 'AI Voice & Speech Processing',
@@ -116,7 +116,7 @@ export default function AIServices() {
       ],
       pricing: '$4,000 - $15, 000/month',
       delivery: '5-8 weeks',
-      category: 'Voice AI',;
+      category: 'Voice AI',
 },
     {
       title: 'AI-Powered Fraud Detection',
