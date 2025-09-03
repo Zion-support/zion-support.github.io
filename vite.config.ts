@@ -126,7 +126,8 @@ export default defineConfig({
 			'@radix-ui/react-switch',
 			'@radix-ui/react-tabs',
 			'@radix-ui/react-toast',
-			'@radix-ui/react-tooltip'		],
+			'@radix-ui/react-tooltip'
+		],
 		exclude: ['@radix-ui/react-icons'],
 		// Enhanced dependency optimization
 		esbuildOptions: {
@@ -173,11 +174,3 @@ export default defineConfig({
 		}
 	}
 });
-import { defineConfig  } from "vite";
-import react from "@vitejs/plugin-react";
-export default defineConfig({;
-  plugins: [react()],;
-  server: {;
-    port: 3000,;,
-},;,
-})
