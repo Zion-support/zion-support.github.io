@@ -19,17 +19,17 @@ import { LoadingSpinner } from './ui / loading -spinner';
     [onItemClick];
   );
   return ();
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">;
+    <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4">;";,
       {processedData.map((item, index) => (;
-        <div;
+        <div;>
           key={item.id || index}
-          onClick={() => handleClick(item)}";
-          className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer">";
-          <h3 className="text-lg font-semibold text-zion-slate-light mb-2">;
+          onClick={() => handleClick(item)}";";
+          className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl hover: border-zion-cyan/40 transition-all duration-300 cursor-pointer">";";,
+          <h3 className="text-lg font-semibold text-zion-slate-light mb-2">;";
             {item.title}
-          </h3>";
-          <p className="text-zion-slate text-sm mb-2">{item.description}</p>";
-          <div className="text-zion-cyan text-sm">;
+          </h3>";";
+          <p className="text-zion-slate text-sm mb-2">{item.description}</p>";";
+          <div className="text-zion-cyan text-sm">;";
             Processed: {item.processed}
           </div>;
         </div>;
@@ -47,26 +47,26 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {;
         return items.slice(startIndex, endIndex) .map((item, index) => ({;
             ...item,;
             index: startIndex + index,;
-            style: {;
+            style: {;,
                 position: 'absolute',;
                 top: (startIndex + index) * itemHeight,;
                 height: itemHeight,;
                 width: '100%';,
-}
+};
         }) ) }, [items, scrollTop, itemHeight, containerHeight]) ;
     const handleScroll = useCallback((e) => {;
         setScrollTop(e.currentTarget.scrollTop) ;,
 }, []) ;
-    return (<div style = {;
+    return (<div style = {;>
   { height: containerHeight,;
   overflow: 'auto';,
-}} onScroll={handleScroll} className="border border-zion - slate / 20 rounded-lg">;
-      <div style = {;
+}} onScroll={handleScroll} className="border border-zion - slate / 20 rounded-lg">;";
+      <div style = {;>
   { height: items.length * itemHeight,;
-  position: 'relative';
+  position: 'relative';,
       ...item,;
       index: startIndex + index,;
-      style: {;
+      style: {;,
 
         position: 'absolute',;
         top: (startIndex + index) * itemHeight,;
@@ -78,19 +78,19 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {;
     setScrollTop(e.currentTarget.scrollTop);,
 }, []);
   return ();
-    <div';
+    <div';>
       style={{ height: containerHeight, overflow: 'auto' }}
-      onScroll={handleScroll}";
-      className="border border-zion-slate/20 rounded-lg">;
+      onScroll={handleScroll}";";
+      className="border border-zion-slate/20 rounded-lg">;";
       <div style={{ height: items.length * itemHeight, position: 'relative' }}>;
         {visibleItems.map(item => (;
-          <div;
+          <div;>
             key={item.id || item.index}
-            style={item.style}";
-            className="p-3 border-b border-zion-slate/10 hover:bg-zion-slate/5 transition-colors">";
-            <div className="flex items-center justify-between">";
-              <span className="text-zion-slate-light">{item.title}</span>";
-              <span className="text-zion-cyan text-sm">{item.value}</span>;
+            style={item.style}";";
+            className="p-3 border-b border-zion-slate/10 hover: bg-zion-slate/5 transition-colors">";";,
+            <div className="flex items-center justify-between">";";
+              <span className="text-zion-slate-light">{item.title}</span>";";
+              <span className="text-zion-cyan text-sm">{item.value}</span>;";
             </div>;
           </div>;
         ))}
@@ -110,29 +110,29 @@ export function PerformanceOptimizations() {;
   ]);
   const handleItemClick = useCallback(item => {;
 
-    // // // // // // // // console.log('Item clicked:', item);,
+    // // // // // // // // ,
 }, []);
-  // console.log('Item clicked:', item)}, []);
+  // }, []);
   const addItem = useCallback(() => {;
     setData(prev => [...prev,;
       {;
 
         id: Date.now(),;
-        title: `Service ${prev.length + 1}`,`;
-        description: `Description ${prev.length + 1}`,;
+        title: `Service ${prev.length + 1}`,`;`;
+        description: `Description ${prev.length + 1}`,;`;
         value: Math.floor(Math.random() * 1000)},;
     ]);,
 }, []);
-  return (";
-    <div className="space-y-8 p-6">";
-      <div className="text-center">";
-        <h2 className="text-3xl font-bold text-zion-blue mb-4">;
+  return (";";
+    <div className="space-y-8 p-6">";";
+      <div className="text-center">";";
+        <h2 className="text-3xl font-bold text-zion-blue mb-4">;";
           Performance Optimizations;
-        </h2>";
-        <p className="text-zion-slate-light text-lg">;
+        </h2>";";
+        <p className="text-zion-slate-light text-lg">;";
           Advanced performance features for better user experience;
         </p>;
       </div>;
   );,
 }
-}
+};

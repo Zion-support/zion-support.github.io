@@ -6,7 +6,7 @@ const Progress = React.forwardRef();
     const percentage = Math.min(Math.max((value / max) * 100, 0), 100);
 ;
     return();
-      <div;
+      <div;>
         ref={ref}';
         className={cn('';
           'relative w-full overflow-hidden bg-gray-200 rounded-full h-2',;
@@ -14,9 +14,9 @@ const Progress = React.forwardRef();
         )}
         {...props}
       >;
-        <div;
-          className="h-full w-full flex-1 bg-blue-600 transition-all duration-300 ease-in-out"";
-          style={{ width: `${percentage}%` }}
+        <div;>
+          className="h-full w-full flex-1 bg-blue-600 transition-all duration-300 ease-in-out"";";
+          style={{ width: `${percentage}%` }}`;
         />;
       </div>;
     );,

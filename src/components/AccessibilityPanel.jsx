@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 ;
 export default function Page() {;
-) ) }
+) ) };
             catch(error) {;
 
                 // console.error('Failed to parse accessibility settings:', error)}
@@ -22,13 +22,13 @@ export default function Page() {;
         if(newSettings.highContrast) {;
 
             root.style.setProperty('--high-contrast',1');
-            root.classList.add('high-contrast')}
+            root.classList.add('high-contrast')};
         else {;
 
             root.style.setProperty('--high-contrast',0');
             root.classList.remove('high-contrast')}
         // Font size';
-        root.style.setProperty('--font-size', `${newSettings.fontSize}%`);
+        root.style.setProperty('--font-size', `${newSettings.fontSize}%`);`;
         // Reduced motion;
         if(newSettings.reducedMotion) {;
 
@@ -67,4 +67,5 @@ export default function Page() {;
             reducedMotion: false,;
             screenReader: false,;
             keyboardNavigation: false,;
-            focusIndicator: true,`;
+            focusIndicator: true,`;`;
+;

@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'; // Added useCallback;
 import { supabase } from '@/integrations/supabase/client';
-export default function Page() {;
+export default function Page(): any {;
 );
         .order('created_at', { ascending: false });
       ;
@@ -11,10 +11,10 @@ export default function Page() {;
         return [];,
 }
       ;
-      const transformedResumes: Resume[] = resumeData.map(resume => ({;
+      const transformedResumes: Resume[] = resumeData.map(resume => ({;,
         id: resume.id,;
         user_id: resume.user_id,;
-        basic_info: {;
+        basic_info: {;,
           id: resume.id,;
           title: resume.title,;
           headline: resume.headline,;
@@ -29,7 +29,7 @@ export default function Page() {;
       ;
       setResumes(transformedResumes);
       return transformedResumes;,
-} catch(e: any) {;
+} catch(e: any) {;,
       console.error('Error fetching resumes:', e);
       setError(e.message);
       setResumes([]); // Clear resumes on error;
@@ -58,3 +58,4 @@ export default function Page() {;
     fetchResumes;,
 };,
 }
+;

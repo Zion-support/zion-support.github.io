@@ -1,36 +1,37 @@
+import React from 'react';
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 ;
-export default function Page() {;
+export default function Page(): any {;
 interface Comment {;
-  id: string;
-  author: string;
-  content: string;
-  timestamp: string;
-  likes: number;
+  id: string;,
+  author: string;,
+  content: string;,
+  timestamp: string;,
+  likes: number;,
   replies: Comment[];,
-}
+};
 ;
 interface Message {;
-  id: string;
-  sender: string;
-  content: string;
-  timestamp: string;
-  type: 'text' | 'file' | 'image' | 'link';
+  id: string;,
+  sender: string;,
+  content: string;,
+  timestamp: string;,
+  type: 'text' | 'file' | 'image' | 'link';,
   attachments?: string[];
   reactions: { type: string; count: number}[];
   isRead: boolean}
 ;
 interface FileItem {;
-  id: string;
-  name: string;
-  type: 'document' | 'image' | 'video' | 'audio' | 'archive' | 'other';
-  size: number;
-  uploadedBy: string;
-  uploadDate: string;
-  lastModified: string;
-  tags: string[];
-  sharedWith: string[];
-  permissions: 'view' | 'edit' | 'admin';
+  id: string;,
+  name: string;,
+  type: 'document' | 'image' | 'video' | 'audio' | 'archive' | 'other';,
+  size: number;,
+  uploadedBy: string;,
+  uploadDate: string;,
+  lastModified: string;,
+  tags: string[];,
+  sharedWith: string[];,
+  permissions: 'view' | 'edit' | 'admin';,
   version: string;,
 }
 ;
@@ -42,7 +43,7 @@ interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {;
   showFileSharing?: boolean;
   maxItems?: number}
 ;
-export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({;
+export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({;,
 
   showTeamMembers = true,;
 showProjects:  true,;
@@ -63,13 +64,13 @@ showProjects:  true,;
 ;
   // Sample data;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
 };,
 }, []);, []);
-    const sampleFiles: FileItem[] = [{;
+    const sampleFiles: FileItem[] = [{;,
 
         id: '1',;
         name: 'AI_Platform_Architecture.pdf',;
@@ -109,7 +110,7 @@ showProjects:  true,;
         tags['Security',Audit',Report'],;
         sharedWith['Lisa Thompson'],;
         permissions: 'view',;
-        version: '1.0';
+        version: '1.0';,
 
     ];
 ;
@@ -119,7 +120,7 @@ showProjects:  true,;
     setFiles(sampleFiles) }, []) ;
 ;
   // Get status color and icon';
-      default: return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> }}};
+      default: return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> }}};";
   // Get project status color';
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
@@ -128,8 +129,8 @@ showProjects:  true,;
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
 ;
-  // Get file type icon";
-      default: return <File className="w-5 h-5"  />}};
+  // Get file type icon";";
+      default: return <File className="w-5 h-5"  />}};";
   // Format file size;
           existingReaction.count += 1} else {;
 
@@ -137,29 +138,29 @@ showProjects:  true,;
       }
       return msg}) ) };
 ;
-  return (";
-    <div className="w-full max-w-7xl mx-auto p-6">;
-      {/* Header */}";
-      <div className="text-center mb-8">";
-        <h1 className="text-4xl font-bold text-white mb-4">Team Collaboration Tools</h1>";
-        <p className="text-zinc-400 text-lg">Enhanced collaboration, communication, and project management for your team</p>;
+  return (";";
+    <div className="w-full max-w-7xl mx-auto p-6">;";
+      {/* Header */}";";
+      <div className="text-center mb-8">";";
+        <h1 className="text-4xl font-bold text-white mb-4">Team Collaboration Tools</h1>";";
+        <p className="text-zinc-400 text-lg">Enhanced collaboration, communication, and project management for your team</p>;";
       </div>;
 
-      {/* Tab Navigation */}";
-      <div className="flex items-center justify-center mb-8">";
-        <div className="flex items-center gap-1 p-1 bg-zinc-900/30 rounded-lg">;
-          {['";
-            { id: 'team', label: 'Team Members', icon: <Users className="w-4 h-4"  /> },";
-            { id: 'projects', label: 'Projects', icon: <Target className="w-4 h-4"  /> },";
-            { id: 'communication', label: 'Communication', icon: <MessageCircle className="w-4 h-4"  /> },";
-            { id: 'files', label: 'File Sharing', icon: <FileText className="w-4 h-4"  /> }
-          ].map((tab) => (            <button;
+      {/* Tab Navigation */}";";
+      <div className="flex items-center justify-center mb-8">";";
+        <div className="flex items-center gap-1 p-1 bg-zinc-900/30 rounded-lg">;";
+          {['";";
+            { id: 'team', label: 'Team Members', icon: <Users className="w-4 h-4"  /> },";";
+            { id: 'projects', label: 'Projects', icon: <Target className="w-4 h-4"  /> },";";
+            { id: 'communication', label: 'Communication', icon: <MessageCircle className="w-4 h-4"  /> },";";
+            { id: 'files', label: 'File Sharing', icon: <FileText className="w-4 h-4"  /> }";
+          ].map((tab) => (            <button;>
               key={tab.id}
               onClick={() => setActiveTab(tab.id as )}
-              className={`flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${activeTab === tab.id';
+              className={`flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${activeTab === tab.id';`;
                   ? 'bg-zion-cyan text-white'';
-                  : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50'`;,
-}`}
+                  : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50'`;,`;
+}`}`;
 ;
               {tab.icon}
               {tab.label}
@@ -169,7 +170,7 @@ showProjects:  true,;
 
       {/* Team Members Tab */}
       {activeTab === 'team' && showTeamMembers && (;
-        <motion.div;
+        <motion.div;>
           initial = {;
 
   { opacity: 0,;
@@ -179,12 +180,12 @@ showProjects:  true,;
 
   { opacity: 1,;
   y: 0;,
-}}";
-          className="space-y-6";
+}}";";
+          className="space-y-6";";
 
-          {/* Team Stats */}";
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">;
-            <motion.div;
+          {/* Team Stats */}";";
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-8">;";,
+            <motion.div;>
               initial = {;
 
   { opacity: 0,;
@@ -194,14 +195,14 @@ showProjects:  true,;
 
   { opacity: 1,;
   y: 0;,
-}}";
-              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
-";
-              <div className="text-3xl font-bold text-white mb-2">{teamMembers.length}</div>";
-              <div className="text-zinc-400">Total Members</div>;
+}}";";
+              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";";
+";";
+              <div className="text-3xl font-bold text-white mb-2">{teamMembers.length}</div>";";
+              <div className="text-zinc-400">Total Members</div>;";
             </motion.div>;
 
-            <motion.div;
+            <motion.div;>
               initial = {;
 
   { opacity: 0,;
@@ -212,16 +213,16 @@ showProjects:  true,;
   { opacity: 1,;
   y: 0;,
 }}
-              transition={{ delay: 0.1 }}";
-              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
-";
-              <div className="text-3xl font-bold text-green-400 mb-2">;
+              transition={{ delay: 0.1 }}";";
+              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";";
+";";
+              <div className="text-3xl font-bold text-green-400 mb-2">;";
                 {teamMembers.filter(m => m.status === 'online').length}
-              </div>";
-              <div className="text-zinc-400">Online Now</div>;
+              </div>";";
+              <div className="text-zinc-400">Online Now</div>;";
             </motion.div>;
 ;
-            <motion.div;
+            <motion.div;>
               initial = {;
 
   { opacity: 0,;
@@ -232,16 +233,16 @@ showProjects:  true,;
   { opacity: 1,;
   y: 0;,
 }}
-              transition={{ delay: 0.2 }}";
-              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
-";
-              <div className="text-3xl font-bold text-blue-400 mb-2">;
+              transition={{ delay: 0.2 }}";";
+              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";";
+";";
+              <div className="text-3xl font-bold text-blue-400 mb-2">;";
                 {teamMembers.filter(m => m.availability === 'available').length}
-              </div>";
-              <div className="text-zinc-400">Available</div>;
+              </div>";";
+              <div className="text-zinc-400">Available</div>;";
             </motion.div>;
 
-            <motion.div;
+            <motion.div;>
               initial = {;
 
   { opacity: 0,;
@@ -252,20 +253,20 @@ showProjects:  true,;
   { opacity: 1,;
   y: 0;,
 }}
-              transition={{ delay: 0.3 }}";
-              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
-";
-              <div className="text-3xl font-bold text-zion-cyan mb-2">;
+              transition={{ delay: 0.3 }}";";
+              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";";
+";";
+              <div className="text-3xl font-bold text-zion-cyan mb-2">;";
                 {Array.from(new Set(teamMembers.map(m => m.department))).length}
-              </div>";
-              <div className="text-zinc-400">Departments</div>;
+              </div>";";
+              <div className="text-zinc-400">Departments</div>;";
             </motion.div>;
           </div>;
 
-          {/* Team Members Grid */}";
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">;
+          {/* Team Members Grid */}";";
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">;";,
             {teamMembers.map((member, index)  => (;
-              <motion.div;
+              <motion.div;>
                 key={member.id}
                 initial = {;
 
@@ -277,83 +278,83 @@ showProjects:  true,;
   { opacity: 1,;
   y: 0;,
 }}
-                transition={{ delay: index * 0.1 }}";
-                className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300";
+                transition={{ delay: index * 0.1 }}";";
+                className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover: bg-zinc-900/50 transition-all duration-300";";,
 
-                {/* Member Header */}";
-                <div className="flex items-center gap-4 mb-4">";
-                  <div className="relative">";
-                    <div className="w-16 h-16 bg-zinc-800 rounded-full flex items-center justify-center text-zion-cyan font-semibold text-lg">;
+                {/* Member Header */}";";
+                <div className="flex items-center gap-4 mb-4">";";
+                  <div className="relative">";";
+                    <div className="w-16 h-16 bg-zinc-800 rounded-full flex items-center justify-center text-zion-cyan font-semibold text-lg">;";
                       {member.avatar}
-                    </div>";
-                    <div className="absolute -bottom-1 -right-1">;
+                    </div>";";
+                    <div className="absolute -bottom-1 -right-1">;";
                       {getStatusDisplay(member.status).icon}
                     </div>;
-                  </div>";
-                  <div className="flex-1">";
-                    <h3 className="text-lg font-semibold text-white">{member.name}</h3>";
-                    <p className="text-zinc-400 text-sm">{member.role}</p>";
-                    <p className="text-zinc-500 text-xs">{member.department}</p>;
+                  </div>";";
+                  <div className="flex-1">";";
+                    <h3 className="text-lg font-semibold text-white">{member.name}</h3>";";
+                    <p className="text-zinc-400 text-sm">{member.role}</p>";";
+                    <p className="text-zinc-500 text-xs">{member.department}</p>;";
                   </div>;
                 </div>;
 
-                {/* Status and Availability */}";
-                <div className="flex items-center gap-2 mb-4">;`;
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusDisplay(member.status).color}`}>;
+                {/* Status and Availability */}";";
+                <div className="flex items-center gap-2 mb-4">;`;`;
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusDisplay(member.status).color}`}>;`;
                     {member.status.charAt(0).toUpperCase() + member.status.slice(1)}
-                  </span>`;
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${member.availability === 'available' ? 'text-green-400 bg-green-400/20' :';
+                  </span>`;`;
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${member.availability === 'available' ? 'text-green-400 bg-green-400/20' :';`;>
                     member.availability === 'busy' ? 'text-yellow-400 bg-yellow-400/20' :';
-                    'text-red-400 bg-red-400/20'`;,
-}`}>;
+                    'text-red-400 bg-red-400/20'`;,`;
+}`}>;`;
                     {member.availability.charAt(0) .toUpperCase () + member.availability.slice(1) }
                   </span>;
                 </div>;
 ;
-                {/* Skills */}";
-                <div className="mb-4">;";
-                  <h4 className="text-sm font-medium text-zinc-300 mb-2">Skills</h4>";
-                  <div className="flex flex-wrap gap-2">;
+                {/* Skills */}";";
+                <div className="mb-4">;";";
+                  <h4 className="text-sm font-medium text-zinc-300 mb-2">Skills</h4>";";
+                  <div className="flex flex-wrap gap-2">;";
                     {member.skills.slice(0, 3).map((skill) => (;
-                      <span;
-                        key={skill}";
-                        className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full";
+                      <span;>
+                        key={skill}";";
+                        className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full";";
 
                         {skill}
                       </span>;
                     ))}
-                    {member.skills.length > 3 && (";
-                      <span className="px-2 py-1 bg-zinc-800/50 text-zinc-400 text-xs rounded-full">;
+                    {member.skills.length > 3 && (";";
+                      <span className="px-2 py-1 bg-zinc-800/50 text-zinc-400 text-xs rounded-full">;";
                         +{member.skills.length-3} more;
                       </span>) }
                   </div>;
                 </div>;
 
-                {/* Projects */}";
-                <div className="mb-4">;";
-                  <h4 className="text-sm font-medium text-zinc-300 mb-2">Active Projects</h4>";
-                  <div className="space-y-1">;
-                    {member.projects.slice(0, 2).map((project) => (";
-                      <div key={project} className="text-xs text-zinc-400">;
+                {/* Projects */}";";
+                <div className="mb-4">;";";
+                  <h4 className="text-sm font-medium text-zinc-300 mb-2">Active Projects</h4>";";
+                  <div className="space-y-1">;";
+                    {member.projects.slice(0, 2).map((project) => (";";
+                      <div key={project} className="text-xs text-zinc-400">;";
                         • {project}
                       </div>) ) }
                   </div>;
                 </div>;
 
-                {/* Actions */}";
-                <div className="flex items-center justify-between pt-4 border-t border-zinc-700/50">;";
-                  <div className="text-xs text-zinc-500">;
+                {/* Actions */}";";
+                <div className="flex items-center justify-between pt-4 border-t border-zinc-700/50">;";";
+                  <div className="text-xs text-zinc-500">;";
                     Last seen: {member.lastSeen}
-                  </div>";
-                  <div className="flex items-center gap-2">";
-                    <button className="p-2 text-zinc-400 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors">";
-                      <MessageCircle className="w-4 h-4"  />;
-                    </button>";
-                    <button className="p-2 text-zinc-400 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors">";
-                      <Video className="w-4 h-4"  />;
-                    </button>";
-                    <button className="p-2 text-zinc-400 hover:text-zinc-300 hover:bg-zinc-800/50 rounded-lg transition-colors">";
-                      <MoreHorizontal className="w-4 h-4"  />                    </button>;
+                  </div>";";
+                  <div className="flex items-center gap-2">";";
+                    <button className="p-2 text-zinc-400 hover: text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors">";";,
+                      <MessageCircle className="w-4 h-4"  />;";
+                    </button>";";
+                    <button className="p-2 text-zinc-400 hover: text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors">";";,
+                      <Video className="w-4 h-4"  />;";
+                    </button>";";
+                    <button className="p-2 text-zinc-400 hover: text-zinc-300 hover:bg-zinc-800/50 rounded-lg transition-colors">";";,
+                      <MoreHorizontal className="w-4 h-4"  />                    </button>;";
                   </div>;
                 </div>;
               </motion.div>) ) }
@@ -362,7 +363,7 @@ showProjects:  true,;
 ;
       {/* Projects Tab */}
       {activeTab === 'projects' && showProjects && (;
-        <motion.div;
+        <motion.div;>
           initial = {;
 
   { opacity: 0,;
@@ -372,12 +373,12 @@ showProjects:  true,;
 
   { opacity: 1,;
   y: 0;,
-}}";
-          className="space-y-6";
+}}";";
+          className="space-y-6";";
 
-          {/* Project Stats */}";
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">;
-            <motion.div;
+          {/* Project Stats */}";";
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-8">;";,
+            <motion.div;>
               initial = {;
 
   { opacity: 0,;
@@ -387,14 +388,14 @@ showProjects:  true,;
 
   { opacity: 1,;
   y: 0;,
-}}";
-              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
-";
-              <div className="text-3xl font-bold text-white mb-2">{projects.length}</div>";
-              <div className="text-zinc-400">Total Projects</div>;
+}}";";
+              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";";
+";";
+              <div className="text-3xl font-bold text-white mb-2">{projects.length}</div>";";
+              <div className="text-zinc-400">Total Projects</div>;";
             </motion.div>;
 
-            <motion.div;
+            <motion.div;>
               initial = {;
 
   { opacity: 0,;
@@ -405,16 +406,16 @@ showProjects:  true,;
   { opacity: 1,;
   y: 0;,
 }}
-              transition={{ delay: 0.1 }}";
-              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
-";
-              <div className="text-3xl font-bold text-green-400 mb-2">;
+              transition={{ delay: 0.1 }}";";
+              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";";
+";";
+              <div className="text-3xl font-bold text-green-400 mb-2">;";
                 {projects.filter(p => p.status === 'active').length}
-              </div>";
-              <div className="text-zinc-400">Active</div>;
+              </div>";";
+              <div className="text-zinc-400">Active</div>;";
             </motion.div>;
 ;
-            <motion.div;
+            <motion.div;>
               initial = {;
 
   { opacity: 0,;
@@ -425,16 +426,16 @@ showProjects:  true,;
   { opacity: 1,;
   y: 0;,
 }}
-              transition={{ delay: 0.2 }}";
-              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
-";
-              <div className="text-3xl font-bold text-blue-400 mb-2">;
+              transition={{ delay: 0.2 }}";";
+              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";";
+";";
+              <div className="text-3xl font-bold text-blue-400 mb-2">;";
                 {projects.filter(p => p.status === 'completed').length}
-              </div>";
-              <div className="text-zinc-400">Completed</div>;
+              </div>";";
+              <div className="text-zinc-400">Completed</div>;";
             </motion.div>;
 
-            <motion.div;
+            <motion.div;>
               initial = {;
 
   { opacity: 0,;
@@ -445,20 +446,20 @@ showProjects:  true,;
   { opacity: 1,;
   y: 0;,
 }}
-              transition={{ delay: 0.3 }}";
-              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
-";
-              <div className="text-3xl font-bold text-zion-cyan mb-2">;
+              transition={{ delay: 0.3 }}";";
+              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";";
+";";
+              <div className="text-3xl font-bold text-zion-cyan mb-2">;";
                 ${(projects.reduce((sum, p) => sum + p.budget, 0) / 1000000).toFixed(1)}M;
-              </div>";
-              <div className="text-zinc-400">Total Budget</div>;
+              </div>";";
+              <div className="text-zinc-400">Total Budget</div>;";
             </motion.div>;
           </div>;
 
-          {/* Projects List */}";
-          <div className="space-y-6">;
+          {/* Projects List */}";";
+          <div className="space-y-6">;";
             {projects.map((project, index) => (;
-              <motion.div;
+              <motion.div;>
                 key={project.id}
                 initial = {;
 
@@ -470,87 +471,87 @@ showProjects:  true,;
   { opacity: 1,;
   y: 0;,
 }}
-                transition={{ delay: index * 0.1 }}";
-                className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300 cursor-pointer";
+                transition={{ delay: index * 0.1 }}";";
+                className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover: bg-zinc-900/50 transition-all duration-300 cursor-pointer";";,
                 onClick={() => handleProjectSelect(project)}
 ;
-                {/* Project Header */}";
-                <div className="flex items-start justify-between mb-4">";
-                  <div className="flex-1">";
-                    <h3 className="text-xl font-semibold text-white mb-2">{project.name}</h3>";
-                    <p className="text-zinc-400 mb-3">{project.description}</p>;
-";
-                    <div className="flex flex-wrap items-center gap-3">`;
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${getProjectStatusColor(project.status)}`}>;
+                {/* Project Header */}";";
+                <div className="flex items-start justify-between mb-4">";";
+                  <div className="flex-1">";";
+                    <h3 className="text-xl font-semibold text-white mb-2">{project.name}</h3>";";
+                    <p className="text-zinc-400 mb-3">{project.description}</p>;";
+";";
+                    <div className="flex flex-wrap items-center gap-3">`;`;
+                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${getProjectStatusColor(project.status)}`}>;`;
                         {project.status.charAt(0).toUpperCase() + project.status.slice(1)}
-                      </span>`;
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${getPriorityColor(project.priority)}`}>;
+                      </span>`;`;
+                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${getPriorityColor(project.priority)}`}>;`;
                         {project.priority.charAt(0).toUpperCase() + project.priority.slice(1)}
-                      </span>";
-                      <span className="px-3 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full">;
+                      </span>";";
+                      <span className="px-3 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full">;";
                         {project.client}
                       </span>;
                     </div>;
                   </div>;
-";
-                  <div className="flex items-center gap-2 ml-4">";
-                    <button className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors">";
-                      <Eye className="w-4 h-4"  />;
-                    </button>";
-                    <button className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors">";
-                      <Edit className="w-4 h-4"  />;
-                    </button>";
-                    <button className="p-2 text-zinc-400 hover:text-red-400 hover:bg-red-400/20 rounded-lg transition-colors">"                      <Trash2 className="w-4 h-4" />;
+";";
+                  <div className="flex items-center gap-2 ml-4">";";
+                    <button className="p-2 text-zinc-400 hover: text-white hover:bg-zinc-800/50 rounded-lg transition-colors">";";,
+                      <Eye className="w-4 h-4"  />;";
+                    </button>";";
+                    <button className="p-2 text-zinc-400 hover: text-white hover:bg-zinc-800/50 rounded-lg transition-colors">";";,
+                      <Edit className="w-4 h-4"  />;";
+                    </button>";";
+                    <button className="p-2 text-zinc-400 hover: text-red-400 hover:bg-red-400/20 rounded-lg transition-colors">"                      <Trash2 className="w-4 h-4" />;";,
                     </button>;
                   </div>;
                 </div>;
 
-                {/* Progress Bar */}";
-                <div className="mb-4">;";
-                  <div className="flex items-center justify-between mb-2">";
-                    <span className="text-sm text-zinc-300">Progress</span>";
-                    <span className="text-sm font-medium text-zion-cyan">{project.progress}%</span>;
-                  </div>";
-                  <div className="w-full bg-zinc-700 rounded-full h-2">;
-                    <motion.div;
-                      initial={{ width: 0 }}`;
-                      animate={{ width: `${project.progress}%` }}
+                {/* Progress Bar */}";";
+                <div className="mb-4">;";";
+                  <div className="flex items-center justify-between mb-2">";";
+                    <span className="text-sm text-zinc-300">Progress</span>";";
+                    <span className="text-sm font-medium text-zion-cyan">{project.progress}%</span>;";
+                  </div>";";
+                  <div className="w-full bg-zinc-700 rounded-full h-2">;";
+                    <motion.div;>
+                      initial={{ width: 0 }}`;`;
+                      animate={{ width: `${project.progress}%` }}`;
                       transition = {;
 
   { duration: 1,;
   delay: index * 0.1;,
-}}";
-                      className="h-2 bg-zion-cyan rounded-full";
+}}";";
+                      className="h-2 bg-zion-cyan rounded-full";";
                     />;
                   </div>;
                 </div>;
 ;
-                {/* Project Details */}";
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">;";
-                  <div className="p-3 bg-zinc-800/30 rounded-lg">";
-                    <div className="text-sm text-zinc-400 mb-1">Timeline</div>";
-                    <div className="text-white font-medium text-sm">;
+                {/* Project Details */}";";
+                <div className="grid grid-cols-1 md: grid-cols-3 gap-4 mb-4">;";";,
+                  <div className="p-3 bg-zinc-800/30 rounded-lg">";";
+                    <div className="text-sm text-zinc-400 mb-1">Timeline</div>";";
+                    <div className="text-white font-medium text-sm">;";
                       {new Date(project.startDate).toLocaleDateString()} - {new Date(project.endDate).toLocaleDateString()}
                     </div>;
                   </div>;
-";
-                  <div className="p-3 bg-zinc-800/30 rounded-lg">";
-                    <div className="text-sm text-zinc-400 mb-1">Budget</div>";
-                    <div className="text-white font-medium">${project.budget.toLocaleString()}</div>;
+";";
+                  <div className="p-3 bg-zinc-800/30 rounded-lg">";";
+                    <div className="text-sm text-zinc-400 mb-1">Budget</div>";";
+                    <div className="text-white font-medium">${project.budget.toLocaleString()}</div>;";
                   </div>;
-";
-                  <div className="p-3 bg-zinc-800/30 rounded-lg">";
-                    <div className="text-sm text-zinc-400 mb-1">Team Size</div>";
-                    <div className="text-white font-medium">{project.teamMembers.length} members</div>;
+";";
+                  <div className="p-3 bg-zinc-800/30 rounded-lg">";";
+                    <div className="text-sm text-zinc-400 mb-1">Team Size</div>";";
+                    <div className="text-white font-medium">{project.teamMembers.length} members</div>;";
                   </div>;
                 </div>;
 ;
-                {/* Tags */}";
-                <div className="flex flex-wrap gap-2">;
+                {/* Tags */}";";
+                <div className="flex flex-wrap gap-2">;";
                   {project.tags.map((tag) => (;
-                    <span;
-                      key={tag}";
-                      className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full";
+                    <span;>
+                      key={tag}";";
+                      className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full";";
 
                       {tag}
                     </span>) ) }
@@ -558,20 +559,20 @@ showProjects:  true,;
               </motion.div>;) ) }
           </div>;
 
-          {/* Add Project Button */}";
-          <div className="text-center">;
-            <button;
-              onClick={() => setShowProjectForm(true)}";
-              className="px-8 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2 mx-auto";
-";
-              <Plus className="w-5 h-5"  />              Add New Project;
+          {/* Add Project Button */}";";
+          <div className="text-center">;";
+            <button;>
+              onClick={() => setShowProjectForm(true)}";";
+              className="px-8 py-3 bg-zion-cyan text-white rounded-lg hover: bg-zion-cyan/80 transition-colors flex items-center gap-2 mx-auto";";,
+";";
+              <Plus className="w-5 h-5"  />              Add New Project;";
             </button>;
           </div>;
         </motion.div>) }
 ;
       {/* Communication Tab */}
       {activeTab === 'communication' && showCommunication && (;
-        <motion.div;
+        <motion.div;>
           initial = {;
 
   { opacity: 0,;
@@ -581,12 +582,12 @@ showProjects:  true,;
 
   { opacity: 1,;
   y: 0;,
-}}";
-          className="space-y-6";
+}}";";
+          className="space-y-6";";
 
-          {/* Communication Stats */}";
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">;
-            <motion.div;
+          {/* Communication Stats */}";";
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-8">;";,
+            <motion.div;>
               initial = {;
 
   { opacity: 0,;
@@ -596,14 +597,14 @@ showProjects:  true,;
 
   { opacity: 1,;
   y: 0;,
-}}";
-              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
-";
-              <div className="text-3xl font-bold text-white mb-2">{messages.length}</div>";
-              <div className="text-zinc-400">Total Messages</div>;
+}}";";
+              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";";
+";";
+              <div className="text-3xl font-bold text-white mb-2">{messages.length}</div>";";
+              <div className="text-zinc-400">Total Messages</div>;";
             </motion.div>;
 
-            <motion.div;
+            <motion.div;>
               initial = {;
 
   { opacity: 0,;
@@ -614,16 +615,16 @@ showProjects:  true,;
   { opacity: 1,;
   y: 0;,
 }}
-              transition={{ delay: 0.1 }}";
-              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
-";
-              <div className="text-3xl font-bold text-green-400 mb-2">;
+              transition={{ delay: 0.1 }}";";
+              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";";
+";";
+              <div className="text-3xl font-bold text-green-400 mb-2">;";
                 {messages.filter(m => m.isRead).length}
-              </div>";
-              <div className="text-zinc-400">Read</div>;
+              </div>";";
+              <div className="text-zinc-400">Read</div>;";
             </motion.div>;
 ;
-            <motion.div;
+            <motion.div;>
               initial = {;
 
   { opacity: 0,;
@@ -634,20 +635,20 @@ showProjects:  true,;
   { opacity: 1,;
   y: 0;,
 }}
-              transition={{ delay: 0.2 }}";
-              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
-";
-              <div className="text-3xl font-bold text-blue-400 mb-2">;
+              transition={{ delay: 0.2 }}";";
+              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";";
+";";
+              <div className="text-3xl font-bold text-blue-400 mb-2">;";
                 {messages.filter(m => !m.isRead).length}
-              </div>";
-              <div className="text-zinc-400">Unread</div>;
+              </div>";";
+              <div className="text-zinc-400">Unread</div>;";
             </motion.div>;
           </div>;
 
-          {/* Messages */}";
-          <div className="space-y-4">;
+          {/* Messages */}";";
+          <div className="space-y-4">;";
             {messages.map((message, index) => (;
-              <motion.div;
+              <motion.div;>
                 key={message.id}
                 initial = {;
 
@@ -659,77 +660,77 @@ showProjects:  true,;
   { opacity: 1,;
   y: 0;,
 }}
-                transition={{ delay: index * 0.1 }}`;
-                className={`p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300 ${!message.isRead ? 'border-zion-cyan/50 bg-zion-cyan/5' : ''`;,
-}`}
-";
-                <div className="flex items-start gap-4">";
-                  <div className="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center text-zion-cyan font-semibold">;
+                transition={{ delay: index * 0.1 }}`;`;
+                className={`p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300 ${!message.isRead ? 'border-zion-cyan/50 bg-zion-cyan/5' : ''`;,`;
+}`}`;
+";";
+                <div className="flex items-start gap-4">";";
+                  <div className="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center text-zion-cyan font-semibold">;";
                     {message.sender.split(' ').map(n => n[0]).join('')}
                   </div>;
-";
-                  <div className="flex-1">";
-                    <div className="flex items-center gap-3 mb-2">";
-                      <h4 className="font-semibold text-white">{message.sender}</h4>";
-                      <span className="text-xs text-zinc-500">{message.timestamp}</span>;
-                      {!message.isRead && (";
-                        <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">;
+";";
+                  <div className="flex-1">";";
+                    <div className="flex items-center gap-3 mb-2">";";
+                      <h4 className="font-semibold text-white">{message.sender}</h4>";";
+                      <span className="text-xs text-zinc-500">{message.timestamp}</span>;";
+                      {!message.isRead && (";";
+                        <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">;";
                           New;
                         </span>) }
                     </div>;
-";
-                    <p className="text-zinc-300 mb-3">{message.content}</p>;
+";";
+                    <p className="text-zinc-300 mb-3">{message.content}</p>;";
 
-                    {/* Reactions */}";
-                    <div className="flex items-center gap-2">;
+                    {/* Reactions */}";";
+                    <div className="flex items-center gap-2">;";
                       {message.reactions.map((reaction, idx) => (;
-                        <button;
+                        <button;>
                           key={idx}
                           onClick = {;
 
   () => handleMessageReaction(message.id,;
   reaction.type);,
-}";
-                          className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full hover:bg-zinc-700/50 transition-colors";
-'";
-                          {reaction.type === 'thumbsUp' && <ThumbsUp className="w-3 h-3 inline mr-1"  />}'";
-                          {reaction.type === 'check' && <CheckCircle className="w-3 h-3 inline mr-1"  />}'";
-                          {reaction.type === 'star' && <Star className="w-3 h-3 inline mr-1"  />}                          {reaction.count}
+}";";
+                          className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full hover: bg-zinc-700/50 transition-colors";";,
+'";";
+                          {reaction.type === 'thumbsUp' && <ThumbsUp className="w-3 h-3 inline mr-1"  />}'";";
+                          {reaction.type === 'check' && <CheckCircle className="w-3 h-3 inline mr-1"  />}'";";
+                          {reaction.type === 'star' && <Star className="w-3 h-3 inline mr-1"  />}                          {reaction.count}";
                         </button>) ) }
                     </div>;
                   </div>;
-";
-                  <div className="flex items-center gap-2">";
-                    <button className="p-2 text-zinc-400 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors">";
-                      <Reply className="w-4 h-4"  />;
-                    </button>";
-                    <button className="p-2 text-zinc-400 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors">";
-                      <Share2 className="w-4 h-4" />;
-                    </button>";
-                    <button className="p-2 text-zinc-400 hover:text-zinc-300 hover:bg-zinc-800/50 rounded-lg transition-colors">";
-                      <MoreHorizontal className="w-4 h-4"  />                    </button>;
+";";
+                  <div className="flex items-center gap-2">";";
+                    <button className="p-2 text-zinc-400 hover: text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors">";";,
+                      <Reply className="w-4 h-4"  />;";
+                    </button>";";
+                    <button className="p-2 text-zinc-400 hover: text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors">";";,
+                      <Share2 className="w-4 h-4" />;";
+                    </button>";";
+                    <button className="p-2 text-zinc-400 hover: text-zinc-300 hover:bg-zinc-800/50 rounded-lg transition-colors">";";,
+                      <MoreHorizontal className="w-4 h-4"  />                    </button>;";
                   </div>;
                 </div>;
               </motion.div>) ) }
           </div>;
 
-          {/* New Message Input */}";
-          <div className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">;";
-            <div className="flex items-center gap-3">";
-              <div className="flex-1">;
-                <input";
-                  type="text";
-                  placeholder="Type your message...";
-                  className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent";
+          {/* New Message Input */}";";
+          <div className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">;";";
+            <div className="flex items-center gap-3">";";
+              <div className="flex-1">;";
+                <input";";>
+                  type="text";";
+                  placeholder="Type your message...";";
+                  className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent";";,
                 />;
               </div>;
-";
-              <button className="p-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">";
-                <Paperclip className="w-4 h-4"  />;
+";";
+              <button className="p-3 bg-zion-cyan text-white rounded-lg hover: bg-zion-cyan/80 transition-colors">";";,
+                <Paperclip className="w-4 h-4"  />;";
               </button>;
-";
-              <button className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2">";
-                <Send className="w-4 h-4"  />                Send;
+";";
+              <button className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover: bg-zion-cyan/80 transition-colors flex items-center gap-2">";";,
+                <Send className="w-4 h-4"  />                Send;";
               </button>;
             </div>;
           </div>;
@@ -737,7 +738,7 @@ showProjects:  true,;
 ;
       {/* File Sharing Tab */}
       {activeTab === 'files' && showFileSharing && (;
-        <motion.div;
+        <motion.div;>
           initial = {;
 
   { opacity: 0,;
@@ -747,12 +748,12 @@ showProjects:  true,;
 
   { opacity: 1,;
   y: 0;,
-}}";
-          className="space-y-6";
+}}";";
+          className="space-y-6";";
 
-          {/* File Stats */}";
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">;
-            <motion.div;
+          {/* File Stats */}";";
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-8">;";,
+            <motion.div;>
               initial = {;
 
   { opacity: 0,;
@@ -762,14 +763,14 @@ showProjects:  true,;
 
   { opacity: 1,;
   y: 0;,
-}}";
-              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
-";
-              <div className="text-3xl font-bold text-white mb-2">{files.length}</div>";
-              <div className="text-zinc-400">Total Files</div>;
+}}";";
+              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";";
+";";
+              <div className="text-3xl font-bold text-white mb-2">{files.length}</div>";";
+              <div className="text-zinc-400">Total Files</div>;";
             </motion.div>;
 
-            <motion.div;
+            <motion.div;>
               initial = {;
 
   { opacity: 0,;
@@ -780,16 +781,16 @@ showProjects:  true,;
   { opacity: 1,;
   y: 0;,
 }}
-              transition={{ delay: 0.1 }}";
-              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
-";
-              <div className="text-3xl font-bold text-green-400 mb-2">;
+              transition={{ delay: 0.1 }}";";
+              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";";
+";";
+              <div className="text-3xl font-bold text-green-400 mb-2">;";
                 {files.filter(f => f.type === 'document').length}
-              </div>";
-              <div className="text-zinc-400">Documents</div>;
+              </div>";";
+              <div className="text-zinc-400">Documents</div>;";
             </motion.div>;
 ;
-            <motion.div;
+            <motion.div;>
               initial = {;
 
   { opacity: 0,;
@@ -800,16 +801,16 @@ showProjects:  true,;
   { opacity: 1,;
   y: 0;,
 }}
-              transition={{ delay: 0.2 }}";
-              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
-";
-              <div className="text-3xl font-bold text-blue-400 mb-2">;
+              transition={{ delay: 0.2 }}";";
+              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";";
+";";
+              <div className="text-3xl font-bold text-blue-400 mb-2">;";
                 {files.filter(f => f.type === 'image').length}
-              </div>";
-              <div className="text-zinc-400">Images</div>;
+              </div>";";
+              <div className="text-zinc-400">Images</div>;";
             </motion.div>;
 
-            <motion.div;
+            <motion.div;>
               initial = {;
 
   { opacity: 0,;
@@ -820,20 +821,20 @@ showProjects:  true,;
   { opacity: 1,;
   y: 0;,
 }}
-              transition={{ delay: 0.3 }}";
-              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
-";
-              <div className="text-3xl font-bold text-zion-cyan mb-2">;
+              transition={{ delay: 0.3 }}";";
+              className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";";
+";";
+              <div className="text-3xl font-bold text-zion-cyan mb-2">;";
                 {formatFileSize(files.reduce((sum, f) => sum + f.size, 0))}
-              </div>";
-              <div className="text-zinc-400">Total Size</div>;
+              </div>";";
+              <div className="text-zinc-400">Total Size</div>;";
             </motion.div>;
           </div>;
 
-          {/* Files List */}";
-          <div className="space-y-4">;
+          {/* Files List */}";";
+          <div className="space-y-4">;";
             {files.map((file, index) => (;
-              <motion.div;
+              <motion.div;>
                 key={file.id}
                 initial = {;
 
@@ -845,59 +846,60 @@ showProjects:  true,;
   { opacity: 1,;
   y: 0;,
 }}
-                transition={{ delay: index * 0.1 }}";
-                className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300";
-";
-                <div className="flex items-center gap-4">";
-                  <div className="p-3 bg-zinc-800/50 rounded-lg text-zion-cyan">;
+                transition={{ delay: index * 0.1 }}";";
+                className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover: bg-zinc-900/50 transition-all duration-300";";,
+";";
+                <div className="flex items-center gap-4">";";
+                  <div className="p-3 bg-zinc-800/50 rounded-lg text-zion-cyan">;";
                     {getFileTypeIcon(file.type)}
                   </div>;
-";
-                  <div className="flex-1">";
-                    <h4 className="font-semibold text-white mb-1">{file.name}</h4>";
-                    <div className="flex items-center gap-4 text-sm text-zinc-400">;
+";";
+                  <div className="flex-1">";";
+                    <h4 className="font-semibold text-white mb-1">{file.name}</h4>";";
+                    <div className="flex items-center gap-4 text-sm text-zinc-400">;";
                       <span>Size: {formatFileSize(file.size)}</span>;
                       <span>Uploaded by: {file.uploadedBy}</span>;
                       <span>Version: {file.version}</span>;
                       <span>Modified: {new Date(file.lastModified).toLocaleDateString()}</span>;
                     </div>;
 
-                    {/* Tags */}";
-                    <div className="flex flex-wrap gap-2 mt-2">;
+                    {/* Tags */}";";
+                    <div className="flex flex-wrap gap-2 mt-2">;";
                       {file.tags.map((tag) => (;
-                        <span;
-                          key={tag}";
-                          className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full";
+                        <span;>
+                          key={tag}";";
+                          className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full";";
 
                           {tag}
                         </span>) ) }
                     </div>;
                   </div>;
-";
-                  <div className="flex items-center gap-2">";
-                    <button className="p-2 text-zinc-400 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors">";
-                      <Download className="w-4 h-4"  />;
-                    </button>";
-                    <button className="p-2 text-zinc-400 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors">";
-                      <Share2 className="w-4 h-4" />;
-                    </button>";
-                    <button className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors">";
-                      <MoreHorizontal className="w-4 h-4"  />                    </button>;
+";";
+                  <div className="flex items-center gap-2">";";
+                    <button className="p-2 text-zinc-400 hover: text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors">";";,
+                      <Download className="w-4 h-4"  />;";
+                    </button>";";
+                    <button className="p-2 text-zinc-400 hover: text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors">";";,
+                      <Share2 className="w-4 h-4" />;";
+                    </button>";";
+                    <button className="p-2 text-zinc-400 hover: text-white hover:bg-zinc-800/50 rounded-lg transition-colors">";";,
+                      <MoreHorizontal className="w-4 h-4"  />                    </button>;";
                   </div>;
                 </div>;
               </motion.div>) ) }
           </div>;
 
-          {/* Upload Files */}";
-          <div className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center">;";
-            <div className="border-2 border-dashed border-zinc-600 rounded-lg p-8">";
-              <FileText className="w-16 h-16 text-zinc-600 mx-auto mb-4"  />";
-              <h3 className="text-lg font-medium text-zinc-300 mb-2">Upload Files</h3>";
-              <p className="text-zinc-400 mb-4">Drag and drop files here or click to browse</p>"              <button className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">;
+          {/* Upload Files */}";";
+          <div className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center">;";";
+            <div className="border-2 border-dashed border-zinc-600 rounded-lg p-8">";";
+              <FileText className="w-16 h-16 text-zinc-600 mx-auto mb-4"  />";";
+              <h3 className="text-lg font-medium text-zinc-300 mb-2">Upload Files</h3>";";
+              <p className="text-zinc-400 mb-4">Drag and drop files here or click to browse</p>"              <button className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover: bg-zion-cyan/80 transition-colors">;";,
                 Choose Files;
               </button>;
             </div>;
           </div>;
         </motion.div>;) };
     </div>;) };
-'"`;
+'"`;`;
+;

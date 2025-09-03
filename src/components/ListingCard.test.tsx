@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<ListingCard  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<ListingCard  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import ListingCard from &apos;./ListingCard;
 describe(&apos;ListingCard&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;ListingCard&apos, () => {;
     render();,
 }
     // comment;
-    render(<ListingCard / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<ListingCard / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

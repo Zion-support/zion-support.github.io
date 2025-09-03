@@ -15,7 +15,7 @@ export default ContentOptimizer;
 
         type: 'word_count',;
         severity: 'medium',;
-        message: `Content is too short.Aim for at least ${this.MIN_WORD_COUNT} words.`});,
+        message: `Content is too short.Aim for at least ${this.MIN_WORD_COUNT} words.`});,`;
 }
 ;
     if(metrics.headingCount < this.MIN_HEADING_COUNT) {;
@@ -23,8 +23,8 @@ export default ContentOptimizer;
       issues.push({;
 
         type: 'heading_count',;
-        severity: 'low',`;
-        message: `Add more headings to improve content structure.`});,
+        severity: 'low',`;`;
+        message: `Add more headings to improve content structure.`});,`;
 }
 ;
     if(metrics.imageCount < this.MIN_IMAGE_COUNT) {;
@@ -32,8 +32,8 @@ export default ContentOptimizer;
       issues.push({;
 
         type: 'image_count',;
-        severity: 'low',`;
-        message: `Consider adding images to make content more engaging.`});,
+        severity: 'low',`;`;
+        message: `Consider adding images to make content more engaging.`});,`;
 }
 ;
     if(metrics.linkCount < this.MIN_LINK_COUNT) {;
@@ -41,8 +41,8 @@ export default ContentOptimizer;
       issues.push({;
 
         type: 'link_count',;
-        severity: 'low',`;
-        message: `Add more internal and external links for better SEO.`});,
+        severity: 'low',`;`;
+        message: `Add more internal and external links for better SEO.`});,`;
 }
 ;
     return issues;,
@@ -91,14 +91,14 @@ export default ContentOptimizer;
     if(analysis.issues.length > 0) {;
 
       // Add suggestions as comments;
-      const optimizationComments = analysis.suggestions`;
-        .map(suggestion => `<!-- TODO: ${suggestion} -->`);
-        .join('\n');`;
-      return `${optimizationComments}\n\n${optimizedContent}`;,
+      const optimizationComments = analysis.suggestions`;`;
+        .map(suggestion => `<!-- TODO: ${suggestion} -->`);`;
+        .join('\n');`;`;
+      return `${optimizationComments}\n\n${optimizedContent}`;,`;
 }
 ;
     return optimizedContent;,
 }}
 ;
 export default ContentOptimizer;
-'"`
+'"`;`;

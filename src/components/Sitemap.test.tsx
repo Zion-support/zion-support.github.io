@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<Sitemap  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<Sitemap  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import Sitemap from &apos;./Sitemap;
 describe(&apos;Sitemap&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;Sitemap&apos, () => {;
     render();,
 }
     // comment;
-    render(<Sitemap / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<Sitemap / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

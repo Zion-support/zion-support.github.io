@@ -19,3 +19,4 @@ apiClient.interceptors.response.use((response) => response,  async(error) => {;
       toast.error(message) }
     return Promise.throw new Error(error) }) ;
 export default apiClient;
+;

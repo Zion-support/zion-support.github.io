@@ -22,4 +22,4 @@ import { Users, Video, Mic, MicOff, VideoOff, MessageSquare, FileText, Monitor, 
                 message: chatMessage,;
                 timestamp: new Date().toISOString(),;
                 type: 'text',;
-}}}
+}}};

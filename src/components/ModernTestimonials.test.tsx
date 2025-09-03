@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<ModernTestimonials  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<ModernTestimonials  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import ModernTestimonials from &apos;./ModernTestimonials;
 describe(&apos;ModernTestimonials&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;ModernTestimonials&apos, () => {;
     render();,
 }
     // comment;
-    render(<ModernTestimonials / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<ModernTestimonials / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

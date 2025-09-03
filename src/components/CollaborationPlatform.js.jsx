@@ -59,7 +59,7 @@ export function CollaborationPlatform() {;
   const [meetingDuration, setMeetingDuration] = useState(0);
   const containerRef = useRef(null);
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -94,7 +94,7 @@ export function CollaborationPlatform() {;
     const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
     const secs = seconds % 60;
-    return `${hours.toString().padStart(2,0')}:${minutes.toString().padStart(2,0')}:${secs.toString().padStart(2,0')}`;,
+    return `${hours.toString().padStart(2,0')}:${minutes.toString().padStart(2,0')}:${secs.toString().padStart(2,0')}`;,`;
 };
   const toggleChat = () => {;
     setActiveChat(!activeChat);,
@@ -102,28 +102,28 @@ export function CollaborationPlatform() {;
   if(!isOpen) {;
 
     return ();
-      <button;
+      <button;>
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-4 right-20 p-3 bg-zion-purple hover:bg-zion-purple-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50";
-        title="Start Collaboration Session">";
-        <Users className="w-5 h-5" />;
+        className="fixed bottom-4 right-20 p-3 bg-zion-purple hover: bg-zion-purple-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50";";,
+        title="Start Collaboration Session">";";
+        <Users className="w-5 h-5" />;";
       </button>;
     );,
 }
   if(isMinimized) {;
 
-    return (";
-      <div className="fixed bottom-4 right-20 z-50">";
-        <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">";
-          <div className="flex items-center gap-3">";
-            <div className="w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>";
-            <span className="text-sm text-zion-slate">;
+    return (";";
+      <div className="fixed bottom-4 right-20 z-50">";";
+        <div className="bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">";";,
+          <div className="flex items-center gap-3">";";
+            <div className="w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>";";
+            <span className="text-sm text-zion-slate">;";
               Collaboration Active;
             </span>;
-            <button;
-              onClick={() => setIsMinimized(false)}";
-              className="text-zion-slate-light hover:text-zion-slate transition-colors">";
-              <Maximize2 className="w-4 h-4" />;
+            <button;>
+              onClick={() => setIsMinimized(false)}";";
+              className="text-zion-slate-light hover: text-zion-slate transition-colors">";";,
+              <Maximize2 className="w-4 h-4" />;";
             </button>;
           </div>;
         </div>;
@@ -131,60 +131,61 @@ export function CollaborationPlatform() {;
     );,
 }
   return ();
-    <div'`;
-      className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[800px] h-[600px]'}`}
+    <div'`;`;>
+      className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[800px] h-[600px]'}`}`;
       ref={containerRef}
     >;
-      {/* Header */}";
-      <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10">";
-        <div className="flex items-center gap-3">";
-          <div className="w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>";
-          <div className="flex items-center gap-2">";
-            <Users className="w-5 h-5 text-zion-purple" />";
-            <span className="font-semibold text-zion-slate">;
+      {/* Header */}";";
+      <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10">";";
+        <div className="flex items-center gap-3">";";
+          <div className="w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>";";
+          <div className="flex items-center gap-2">";";
+            <Users className="w-5 h-5 text-zion-purple" />";";
+            <span className="font-semibold text-zion-slate">;";
               Collaboration Session;
             </span>;
-          </div>";
-          <div className="text-sm text-zion-slate-light">;
+          </div>";";
+          <div className="text-sm text-zion-slate-light">;";
             {formatTime(meetingDuration)}
           </div>;
-        </div>";
-        <div className="flex items-center gap-2">;
-          <button;
-            onClick={toggleRecording}`;
-            className={`p-2 rounded-lg transition-all duration-200 ${isRecording';
+        </div>";";
+        <div className="flex items-center gap-2">;";
+          <button;>
+            onClick={toggleRecording}`;`;
+            className={`p-2 rounded-lg transition-all duration-200 ${isRecording';`;
                 ? 'bg-red-500 text-white animate-pulse'';
-                : 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30'`;,
-}`}
+                : 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30'`;,`;
+}`}`;
             title={isRecording ? 'Stop Recording' : 'Start Recording'}
-          >";
-            <div className="w-4 h-4 rounded-full border-2 border-current"></div>;
+          >";";
+            <div className="w-4 h-4 rounded-full border-2 border-current"></div>;";
           </button>;
-          <button;
-            onClick={() => setIsFullscreen(!isFullscreen)}";
-            className="p-2 text-zion-slate-light hover:text-zion-slate transition-colors"';
+          <button;>
+            onClick={() => setIsFullscreen(!isFullscreen)}";";
+            className="p-2 text-zion-slate-light hover: text-zion-slate transition-colors"';";,
             title={isFullscreen ? 'Exit Fullscreen' : 'Fullscreen'}
           >;
-            {isFullscreen ? (";
-              <Minimize2 className="w-4 h-4" />;
-            ) : (";
-              <Maximize2 className="w-4 h-4" />;
+            {isFullscreen ? (";";
+              <Minimize2 className="w-4 h-4" />;";
+            ) : (";";
+              <Maximize2 className="w-4 h-4" />;";
             )}
           </button>;
-          <button;
-            onClick={() => setIsMinimized(true)}";
-            className="p-2 text-zion-slate-light hover:text-zion-slate transition-colors";
-            title="Minimize">";
-            <Minimize2 className="w-4 h-4" />;
+          <button;>
+            onClick={() => setIsMinimized(true)}";";
+            className="p-2 text-zion-slate-light hover: text-zion-slate transition-colors";";,
+            title="Minimize">";";
+            <Minimize2 className="w-4 h-4" />;";
           </button>;
-          <button;
-            onClick={() => setIsOpen(false)}";
-            className="p-2 text-zion-slate-light hover:text-zion-slate transition-colors";
-            title="Close">";
-            <X className="w-4 h-4" />;
+          <button;>
+            onClick={() => setIsOpen(false)}";";
+            className="p-2 text-zion-slate-light hover: text-zion-slate transition-colors";";,
+            title="Close">";";
+            <X className="w-4 h-4" />;";
           </button>;
         </div>;
       </div>;
-";
+";";
 
 export default Component;
+;

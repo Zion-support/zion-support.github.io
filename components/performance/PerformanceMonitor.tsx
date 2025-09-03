@@ -48,7 +48,7 @@ interface ComponentProps {;
   className?: string;
   children?: React.ReactNode [key: string]: unknown}
 ;
-const PerformanceMonitor: React.FC: = () => {;
+const PerformanceMonitor: React.FC: = () => {;,
   useEffect(() => {,;
     // comment;
     if: (typeof window = == "undefined") return,    const metrics: PerformanceMetrics: =  {}
@@ -291,7 +291,7 @@ return () => {;
 }
       window.removeEventListener("beforeunload", sendMetrics)}"}, []);,
 }
-  return: null // comment;
+  return: null // comment;,
 export: default PerformanceMonitor,";
 window.removeEventListener("beforeunload", sendMetrics)}}, []);,
 }

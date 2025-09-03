@@ -34,7 +34,7 @@ const SEO: React.FC<SEOProps> = ({,;
 }) => {;
   const fullTitle = title.includes(siteName) ? title : "${title} | ${siteName}";
   const fullImage = image || "/images/og-image.jpg";
-  const fullUrl = url || "https: // comment;
+  const fullUrl = url || "https: // comment;,
 
   return (;
 <Head>;
@@ -59,14 +59,14 @@ const SEO: React.FC<SEOProps> = ({,;
       <meta name="robots" content="index, follow"  />;
       <link rel="canonical" href="{fullUrl}"  />;
       {/* comment */}";
-      <script type="application/ld+json;
+      <script type="application/ld+json;>
         dangerouslySetInnerHTML="{{";
           __html: JSON.stringify({",;
-            "@context": "https:// comment;
+            "@context": "https: // comment;,
             "@type": "Organization",";
             "name": siteName,";
-            "url": "https:// comment;
-            "logo": "https:// comment;
+            "url": "https: // comment;,
+            "logo": "https: // comment;,
             "description": "Leading technology solutions provider specializing in AI, quantum computing, and innovative micro SAAS services.",";
             "address": {";
               "@type": "PostalAddress",";
@@ -83,8 +83,8 @@ const SEO: React.FC<SEOProps> = ({,;
               "email": "kleber@ziontechgroup.com";,
 },";
             "sameAs": [";
-              "https:// comment;
-              "https: // comment;
+              "https: // comment;,
+              "https: // comment;,
             ]>;,
 })>;,
 }}

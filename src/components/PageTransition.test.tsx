@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<PageTransition  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<PageTransition  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import PageTransition from &apos;./PageTransition;
 describe(&apos;PageTransition&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;PageTransition&apos, () => {;
     render();,
 }
     // comment;
-    render(<PageTransition / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<PageTransition / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

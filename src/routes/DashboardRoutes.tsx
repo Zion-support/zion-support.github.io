@@ -1,3 +1,4 @@
+import React from 'react';
 import { Route, Routes  } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import { ProtectedRoute } from '../components/ProtectedRoute';
@@ -13,45 +14,45 @@ const ProjectMilestones = lazy(() => import('../pages/ProjectMilestones'));
 const ProjectDetails = lazy(() => import('../pages/ProjectDetails'));
 const ProjectRoom = lazy(() => import('../pages/ProjectRoom'));
 ;
-const DashboardRoutes: React.FC = () => {;
+const DashboardRoutes: React.FC = () => {;,
   return(<Suspense fallback={<LoadingSpinner />}>;
       <Routes>;
-        <Route path="/dashboard" element={;
+        <Route path="/dashboard" element={;";>
           <ProtectedRoute>;
             <Dashboard />;
           </ProtectedRoute>;,
 } />;
-        <Route path="/client-dashboard" element={;
+        <Route path="/client-dashboard" element={;";>
           <ProtectedRoute>;
             <ClientDashboard />;
           </ProtectedRoute>;,
 } />;
-        <Route path="/talent-dashboard" element={;
+        <Route path="/talent-dashboard" element={;";>
           <ProtectedRoute>;
             <TalentDashboard />;
           </ProtectedRoute>;,
 } />;
-        <Route path="/creator-dashboard" element={;
+        <Route path="/creator-dashboard" element={;";>
           <ProtectedRoute>;
             <CreatorDashboard />;
           </ProtectedRoute>;,
 } />;
-        <Route path="/analytics" element={;
+        <Route path="/analytics" element={;";>
           <ProtectedRoute>;
             <Analytics />;
           </ProtectedRoute>;,
 } />;
-        <Route path="/project-milestones" element={;
+        <Route path="/project-milestones" element={;";>
           <ProtectedRoute>;
             <ProjectMilestones />;
           </ProtectedRoute>;,
 } />;
-        <Route path="/project-details" element={;
+        <Route path="/project-details" element={;";>
           <ProtectedRoute>;
             <ProjectDetails />;
           </ProtectedRoute>;,
 } />;
-        <Route path="/project-room" element={;
+        <Route path="/project-room" element={;";>
           <ProtectedRoute>;
             <ProjectRoom />;
           </ProtectedRoute>;,
@@ -62,3 +63,4 @@ const DashboardRoutes: React.FC = () => {;
 };
 ;
 export default DashboardRoutes;
+;

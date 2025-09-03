@@ -5,7 +5,7 @@ import { toggleFavorite as toggleFavoriteRequest } from '@/api/favorites';
   const [favorites, setFavorites] = useState([]);
 ;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -22,7 +22,7 @@ import { toggleFavorite as toggleFavoriteRequest } from '@/api/favorites';
   }, []);
 ;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -54,4 +54,5 @@ import { toggleFavorite as toggleFavoriteRequest } from '@/api/favorites';
 ;
 export function useFavorites() {;
   return useContext(FavoritesContext);,
-}
+};
+;

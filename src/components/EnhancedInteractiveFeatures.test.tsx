@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<EnhancedInteractiveFeatures  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<EnhancedInteractiveFeatures  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import EnhancedInteractiveFeatures from &apos;./EnhancedInteractiveFeatures;
 describe(&apos;EnhancedInteractiveFeatures&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;EnhancedInteractiveFeatures&apos, () => {;
     render();,
 }
     // comment;
-    render(<EnhancedInteractiveFeatures / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<EnhancedInteractiveFeatures / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

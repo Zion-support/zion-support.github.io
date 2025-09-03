@@ -51,7 +51,7 @@ export const FuturisticAnimatedBackground = ({;
       ctx.fillStyle = 'rgba(0, 0, 0, 0.1);
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       // Draw grid;
-      ctx.strokeStyle = `rgba(0, 255, 255, ${gridOpacity})`;
+      ctx.strokeStyle = `rgba(0, 255, 255, ${gridOpacity})`;`;
       ctx.lineWidth = 1;
       // Vertical lines;
       for(let x = 0; x < canvas.width; x += gridSize) {;
@@ -93,10 +93,10 @@ export const FuturisticAnimatedBackground = ({;
           particle.y = Math.random() * canvas.height;,
 }
         // Draw particle;
-        const alpha = (particle.life / particle.maxLife) * particle.opacity;`;
-        ctx.fillStyle = `${particle.color}${Math.floor(alpha * 255);
-          .toString(16)'`;
-          .padStart(2,0')}`;
+        const alpha = (particle.life / particle.maxLife) * particle.opacity;`;`;
+        ctx.fillStyle = `${particle.color}${Math.floor(alpha * 255);`;
+          .toString(16)'`;`;
+          .padStart(2,0')}`;`;
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fill();
@@ -110,10 +110,10 @@ export const FuturisticAnimatedBackground = ({;
           particle.size * 3;
         );
         gradient.addColorStop();
-          0,`;
-          `${particle.color}${Math.floor(alpha * 100);
-            .toString(16)'`;
-            .padStart(2,0')}`;
+          0,`;`;
+          `${particle.color}${Math.floor(alpha * 100);`;
+            .toString(16)'`;`;
+            .padStart(2,0')}`;`;
         );
         gradient.addColorStop(1,transparent');
         ctx.fillStyle = gradient;
@@ -121,8 +121,8 @@ export const FuturisticAnimatedBackground = ({;
         ctx.arc(particle.x, particle.y, particle.size * 3, 0, Math.PI * 2);
         ctx.fill();,
 });
-      // Draw connecting lines between nearby particles`;
-      ctx.strokeStyle = `rgba(0, 255, 255, ${gridOpacity * 0.5})`;
+      // Draw connecting lines between nearby particles`;`;
+      ctx.strokeStyle = `rgba(0, 255, 255, ${gridOpacity * 0.5})`;`;
       ctx.lineWidth = 0.5;
       for(let i = 0; i < particles.length; i++) {;
 
@@ -131,8 +131,8 @@ export const FuturisticAnimatedBackground = ({;
           const distance = Math.sqrt(dx * dx + dy * dy);
           if(distance < 100) {;
 
-            const alpha = (1 - distance / 100) * gridOpacity * 0.5;`;
-            ctx.strokeStyle = `rgba(0, 255, 255, ${alpha})`;
+            const alpha = (1 - distance / 100) * gridOpacity * 0.5;`;`;
+            ctx.strokeStyle = `rgba(0, 255, 255, ${alpha})`;`;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
@@ -151,16 +151,16 @@ export const FuturisticAnimatedBackground = ({;
         const size = Math.sin(time + i) * 20 + 40;
         const alpha = (Math.sin(time * 2 + i) + 1) * 0.1 + 0.05;
         // Orb glow;
-        const gradient = ctx.createRadialGradient(x, y, 0, x, y, size * 2);`;
-        gradient.addColorStop(0, `rgba(0, 255, 255, ${alpha})`);`;
-        gradient.addColorStop(0.5, `rgba(0, 255, 255, ${alpha * 0.5})`);
+        const gradient = ctx.createRadialGradient(x, y, 0, x, y, size * 2);`;`;
+        gradient.addColorStop(0, `rgba(0, 255, 255, ${alpha})`);`;`;
+        gradient.addColorStop(0.5, `rgba(0, 255, 255, ${alpha * 0.5})`);`;
         gradient.addColorStop(1,transparent');
         ctx.fillStyle = gradient;
         ctx.beginPath();
         ctx.arc(x, y, size * 2, 0, Math.PI * 2);
         ctx.fill();
-        // Orb core`;
-        ctx.fillStyle = `rgba(0, 255, 255, ${alpha * 2})`;
+        // Orb core`;`;
+        ctx.fillStyle = `rgba(0, 255, 255, ${alpha * 2})`;`;
         ctx.beginPath();
         ctx.arc(x, y, size * 0.3, 0, Math.PI * 2);
         ctx.fill();,
@@ -184,12 +184,13 @@ export const FuturisticAnimatedBackground = ({;
 };,
 }, [intensity, colorScheme]);
   return ();
-    <canvas;
-      ref={canvasRef}`;
-      className={`fixed inset-0 pointer-events-none ${className}`}
+    <canvas;>
+      ref={canvasRef}`;`;
+      className={`fixed inset-0 pointer-events-none ${className}`}`;
       style={{ zIndex: -1 }}
     />;
   );,
 };
 export default FuturisticAnimatedBackground;
-'`;
+'`;`;
+;

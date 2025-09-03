@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Youtube, Github, ArrowRight } from 'lucide-react';
 ;
-const Footer: React.FC = () => {;
+const Footer: React.FC = () => {;,
   const currentYear = new Date().getFullYear();
   ;
   const contactInfo = {;
@@ -15,7 +15,7 @@ const Footer: React.FC = () => {;
   const footerSections = [;
     {;
       title: 'Services',;
-      links: [;
+      links: [;,
         { name: 'AI & Machine Learning', href: '/services/ai-services' },;
         { name: 'Micro SaaS Solutions', href: '/services/micro-saas' },;
         { name: 'IT Infrastructure', href: '/services/it-infrastructure' },;
@@ -106,7 +106,7 @@ const Footer: React.FC = () => {;
 },;
     {;
       title: 'Solutions',;
-      links: [;
+      links: [;,
         { name: 'Enterprise Solutions', href: '/solutions/enterprise' },;
         { name: 'SMB Solutions', href: '/solutions/smb' },;
         { name: 'Startup Solutions', href: '/solutions/startup' },;
@@ -121,7 +121,7 @@ const Footer: React.FC = () => {;
 },;
     {;
       title: 'Company',;
-      links: [;
+      links: [;,
         { name: 'About Us', href: '/about' },;
         { name: 'Our Story', href: '/about/story' },;
         { name: 'Team', href: '/about/team' },;
@@ -134,7 +134,7 @@ const Footer: React.FC = () => {;
 },;
     {;
       title: 'Resources',;
-      links: [;
+      links: [;,
         { name: 'Blog', href: '/blog' },;
         { name: 'Documentation', href: '/docs' },;
         { name: 'API Reference', href: '/api' },;
@@ -147,7 +147,7 @@ const Footer: React.FC = () => {;
 },;
     {;
       title: 'Support',;
-      links: [;
+      links: [;,
         { name: 'Help Center', href: '/help' },;
         { name: 'Contact Support', href: '/contact' },;
         { name: 'Request Quote', href: '/request-quote' },;
@@ -167,48 +167,48 @@ const Footer: React.FC = () => {;
   ];
 ;
   return (;
-    <footer className="bg-gray-900 text-white">;
+    <footer className="bg-gray-900 text-white">;";
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">;
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">;";,
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-6 gap-8">;";,
           {/* Company Info */}
-          <div className="lg:col-span-2">;
-            <div className="flex items-center space-x-3 mb-6">;
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">;
-                <span className="text-white font-bold text-2xl">Z</span>;
+          <div className="lg: col-span-2">;";,
+            <div className="flex items-center space-x-3 mb-6">;";
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">;";
+                <span className="text-white font-bold text-2xl">Z</span>;";
               </div>;
               <div>;
-                <h3 className="text-xl font-bold">Zion Tech Group</h3>;
-                <p className="text-cyan-300 text-sm">Innovation • Technology • Solutions</p>;
+                <h3 className="text-xl font-bold">Zion Tech Group</h3>;";
+                <p className="text-cyan-300 text-sm">Innovation • Technology • Solutions</p>;";
               </div>;
             </div>;
-            <p className="text-gray-300 mb-6 leading-relaxed">;
+            <p className="text-gray-300 mb-6 leading-relaxed">;";
               Leading provider of innovative AI, IT, and micro SaaS solutions. ;
               Empowering businesses with cutting-edge technology and comprehensive ;
               digital transformation services.;
             </p>;
             ;
             {/* Contact Information */}
-            <div className="space-y-3">;
-              <div className="flex items-center space-x-3 text-gray-300">;
-                <Phone className="w-4 h-4 text-cyan-400" />;
-                <a href={`tel:${contactInfo.phone}`} className="hover:text-white transition-colors">;
+            <div className="space-y-3">;";
+              <div className="flex items-center space-x-3 text-gray-300">;";
+                <Phone className="w-4 h-4 text-cyan-400" />;";
+                <a href={`tel:${contactInfo.phone}`} className="hover: text-white transition-colors">;";,`;
                   {contactInfo.phone}
                 </a>;
               </div>;
-              <div className="flex items-center space-x-3 text-gray-300">;
-                <Mail className="w-4 h-4 text-cyan-400" />;
-                <a href={`mailto:${contactInfo.email}`} className="hover:text-white transition-colors">;
+              <div className="flex items-center space-x-3 text-gray-300">;";
+                <Mail className="w-4 h-4 text-cyan-400" />;";
+                <a href={`mailto:${contactInfo.email}`} className="hover: text-white transition-colors">;";,`;
                   {contactInfo.email}
                 </a>;
               </div>;
-              <div className="flex items-start space-x-3 text-gray-300">;
-                <MapPin className="w-4 h-4 text-cyan-400 mt-0.5" />;
+              <div className="flex items-start space-x-3 text-gray-300">;";
+                <MapPin className="w-4 h-4 text-cyan-400 mt-0.5" />;";
                 <span>{contactInfo.address}</span>;
               </div>;
-              <div className="flex items-center space-x-3 text-gray-300">;
-                <Globe className="w-4 h-4 text-cyan-400" />;
-                <a href={contactInfo.website} className="hover:text-white transition-colors">;
+              <div className="flex items-center space-x-3 text-gray-300">;";
+                <Globe className="w-4 h-4 text-cyan-400" />;";
+                <a href={contactInfo.website} className="hover: text-white transition-colors">;";,
                   {contactInfo.website.replace('https://', '')}
                 </a>;
               </div>;
@@ -218,23 +218,23 @@ const Footer: React.FC = () => {;
           {/* Footer Sections */}
           {footerSections.map((section) => (;
             <div key={section.title}>;
-              <h4 className="text-lg font-semibold text-white mb-4">{section.title}</h4>;
-              <ul className="space-y-2">;
+              <h4 className="text-lg font-semibold text-white mb-4">{section.title}</h4>;";
+              <ul className="space-y-2">;";
                 {section.links.slice(0, 8).map((link) => (;
                   <li key={link.name}>;
-                    <Link;
+                    <Link;>
                       to={link.href}
-                      className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm flex items-center group">;
-                      <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />;
+                      className="text-gray-300 hover: text-cyan-400 transition-colors duration-200 text-sm flex items-center group">;";,
+                      <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover: opacity-100 transition-opacity" />;";,
                       {link.name}
                     </Link>;
                   </li>;
                 ))}
                 {section.links.length > 8 && (;
                   <li>;
-                    <Link;
-                      to={section.title === 'Services' ? '/services' : section.title === 'Solutions' ? '/solutions' : `/${section.title.toLowerCase()}`}
-                      className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium">;
+                    <Link;>
+                      to={section.title === 'Services' ? '/services' : section.title === 'Solutions' ? '/solutions' : `/${section.title.toLowerCase()}`}`;
+                      className="text-cyan-400 hover: text-cyan-300 transition-colors duration-200 text-sm font-medium">;";,
                       View All {section.title} →;
                     </Link>;
                   </li>;
@@ -245,21 +245,21 @@ const Footer: React.FC = () => {;
         </div>;
 
         {/* Newsletter Signup */}
-        <div className="mt-12 pt-8 border-t border-gray-800">;
-          <div className="max-w-2xl mx-auto text-center">;
-            <h3 className="text-xl font-semibold text-white mb-2">;
+        <div className="mt-12 pt-8 border-t border-gray-800">;";
+          <div className="max-w-2xl mx-auto text-center">;";
+            <h3 className="text-xl font-semibold text-white mb-2">;";
               Stay Updated with Latest Tech Insights;
             </h3>;
-            <p className="text-gray-300 mb-6">;
+            <p className="text-gray-300 mb-6">;";
               Get exclusive access to industry trends, AI breakthroughs, and innovative solutions.;
             </p>;
-            <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">;
-              <input;
-                type="email";
-                placeholder="Enter your email";
-                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
+            <div className="flex flex-col sm: flex-row gap-3 max-w-md mx-auto">;";,
+              <input;>
+                type="email";";
+                placeholder="Enter your email";";
+                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";";,
               />;
-              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200">;
+              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-200">;";,
                 Subscribe;
               </button>;
             </div>;
@@ -267,33 +267,33 @@ const Footer: React.FC = () => {;
         </div>;
 
         {/* Social Links */}
-        <div className="mt-8 pt-8 border-t border-gray-800">;
-          <div className="flex flex-col md:flex-row justify-between items-center">;
-            <div className="flex space-x-6 mb-4 md:mb-0">;
+        <div className="mt-8 pt-8 border-t border-gray-800">;";
+          <div className="flex flex-col md: flex-row justify-between items-center">;";,
+            <div className="flex space-x-6 mb-4 md: mb-0">;";,
               {socialLinks.map((social) => (;
-                <a;
+                <a;>
                   key={social.name}
                   href={social.href}
-                  target="_blank";
-                  rel="noopener noreferrer";
-                  className="text-gray-400 hover:text-cyan-400 transition-colors duration-200";
+                  target="_blank";";
+                  rel="noopener noreferrer";";
+                  className="text-gray-400 hover: text-cyan-400 transition-colors duration-200";";,
                   aria-label={social.name}
                 >;
-                  <social.icon className="w-5 h-5" />;
+                  <social.icon className="w-5 h-5" />;";
                 </a>;
               ))}
             </div>;
-            <div className="flex flex-wrap gap-6 text-sm text-gray-400">;
-              <Link to="/privacy-policy" className="hover:text-white transition-colors">;
+            <div className="flex flex-wrap gap-6 text-sm text-gray-400">;";
+              <Link to="/privacy-policy" className="hover: text-white transition-colors">;";,
                 Privacy Policy;
               </Link>;
-              <Link to="/terms-of-service" className="hover:text-white transition-colors">;
+              <Link to="/terms-of-service" className="hover: text-white transition-colors">;";,
                 Terms of Service;
               </Link>;
-              <Link to="/cookie-policy" className="hover:text-white transition-colors">;
+              <Link to="/cookie-policy" className="hover: text-white transition-colors">;";,
                 Cookie Policy;
               </Link>;
-              <Link to="/sitemap" className="hover:text-white transition-colors">;
+              <Link to="/sitemap" className="hover: text-white transition-colors">;";,
                 Sitemap;
               </Link>;
             </div>;
@@ -302,13 +302,13 @@ const Footer: React.FC = () => {;
       </div>;
 
       {/* Bottom Bar */}
-      <div className="bg-gray-950 py-6">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <div className="flex flex-col md:flex-row justify-between items-center">;
-            <div className="text-gray-400 text-sm mb-4 md:mb-0">;
+      <div className="bg-gray-950 py-6">;";
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">;";,
+          <div className="flex flex-col md: flex-row justify-between items-center">;";,
+            <div className="text-gray-400 text-sm mb-4 md: mb-0">;";,
               © {currentYear} Zion Tech Group. All rights reserved.;
             </div>;
-            <div className="flex items-center space-x-4 text-sm text-gray-400">;
+            <div className="flex items-center space-x-4 text-sm text-gray-400">;";
               <span>ISO 27001 Certified</span>;
               <span>•</span>;
               <span>SOC 2 Type II Compliant</span>;

@@ -2,21 +2,21 @@ import { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 ;
 [];
-  recentSuggestions: {;
-    id: string;
-    userId: string;
-    suggestedMin: number;
-    suggestedMax: number;
+  recentSuggestions: {;,
+    id: string;,
+    userId: string;,
+    suggestedMin: number;,
+    suggestedMax: number;,
     actualValue?: number;
-    accepted: boolean;
-    createdAt: string;
+    accepted: boolean;,
+    createdAt: string;,
     type: 'client' | 'talent';,
 }[];
-  isLoading: boolean;
+  isLoading: boolean;,
   error: string | null;,
 }
 ;
-export function usePricingSuggestionAnalytics(days = 30) {;
+export function usePricingSuggestionAnalytics(days = 30): any {;
   const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({;
     totalSuggestions: 0,;
     acceptanceRate: 0,;
@@ -43,8 +43,8 @@ export function usePricingSuggestionAnalytics(days = 30) {;
           { category: 'data', count: 11, acceptanceRate: 0.78 },;
         ],;
         recentSuggestions: Array(10).fill(null).map((_, i) => ({;
-          id: `suggestion-${i}`,;
-          userId: `user-${Math.floor(Math.random() * 100)}`,;
+          id: `suggestion-${i}`,;`;
+          userId: `user-${Math.floor(Math.random() * 100)}`,;`;
           suggestedMin: 30 + Math.floor(Math.random() * 30),;
           suggestedMax: 60 + Math.floor(Math.random() * 40),;
           actualValue: Math.random() > 0.3 ? 45 + Math.floor(Math.random() * 30) : undefined,;
@@ -61,11 +61,11 @@ export function usePricingSuggestionAnalytics(days = 30) {;
 });
 ;,
 } catch(error) {;
-      console.error("Error fetching pricing suggestion analytics:", error);
+      console.error("Error fetching pricing suggestion analytics:", error);";
       setAnalytics(prev => ({ ;
         ...prev, ;
         isLoading: false,;
-        error: "Failed to load pricing analytics data.";,
+        error: "Failed to load pricing analytics data.";,";
 }));,
 }
   }, [days]);
@@ -78,3 +78,4 @@ export function usePricingSuggestionAnalytics(days = 30) {;
 ;
   return analytics;,
 }
+;

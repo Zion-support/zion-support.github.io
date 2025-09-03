@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<SEOHead  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<SEOHead  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import SEOHead from &apos;./SEOHead;
 describe(&apos;SEOHead&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;SEOHead&apos, () => {;
     render();,
 }
     // comment;
-    render(<SEOHead / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<SEOHead / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

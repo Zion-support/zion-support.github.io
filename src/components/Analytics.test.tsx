@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<Analytics  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<Analytics  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import Analytics from &apos;./Analytics;
 describe(&apos;Analytics&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;Analytics&apos, () => {;
     render();,
 }
     // comment;
-    render(<Analytics / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<Analytics / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

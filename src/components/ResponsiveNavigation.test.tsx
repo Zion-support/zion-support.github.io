@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<ResponsiveNavigation  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<ResponsiveNavigation  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import ResponsiveNavigation from &apos;./ResponsiveNavigation;
 describe(&apos;ResponsiveNavigation&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;ResponsiveNavigation&apos, () => {;
     render();,
 }
     // comment;
-    render(<ResponsiveNavigation / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<ResponsiveNavigation / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

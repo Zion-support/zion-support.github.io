@@ -11,7 +11,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 ;
   useEffect(() => {;
     // Check for user's motion preferences;
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;,
     setReducedMotion(prefersReducedMotion);
 ;
     // Apply accessibility settings from localStorage;
@@ -22,7 +22,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     setFontSize(savedFontSize);,
 }, []);
 ;
-  const applyAccessibilityStyles = (highContrast: boolean, fontSize: string, reducedMotion: boolean) => {;
+  const applyAccessibilityStyles = (highContrast: boolean, fontSize: string, reducedMotion: boolean) => {;,
     const root = document.documentElement;
     ;
     // High contrast mode;
@@ -51,7 +51,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     applyAccessibilityStyles(newValue, fontSize, reducedMotion);,
 };
 ;
-  const changeFontSize = (newSize: string) => {;
+  const changeFontSize = (newSize: string) => {;,
     setFontSize(newSize);
     localStorage.setItem('fontSize', newSize);
     applyAccessibilityStyles(isHighContrast, newSize, reducedMotion);,
@@ -60,13 +60,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   return (;
     <>;
       {/* Accessibility Controls */}
-      <div className="accessibility-controls fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 border">;
-        <h3 className="text-sm font-semibold mb-2 text-gray-900 dark:text-white">;
+      <div className="accessibility-controls fixed top-4 right-4 z-50 bg-white dark: bg-gray-800 shadow-lg rounded-lg p-4 border">;,
+        <h3 className="text-sm font-semibold mb-2 text-gray-900 dark: text-white">;,
           Accessibility Options;
         </h3>;
         ;
         <div className="space-y-2">;
-          <button;
+          <button;>
             onClick={toggleHighContrast}
             className={`w-full px-3 py-1 text-xs rounded ${;
               isHighContrast ;
@@ -78,12 +78,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
             {isHighContrast ? 'Disable' : 'Enable'} High Contrast;
           </button>;
           ;
-          <div className="text-xs text-gray-600 dark:text-gray-300">;
-            Font Size:;
+          <div className="text-xs text-gray-600 dark: text-gray-300">;,
+            Font Size: ;,
           </div>;
           <div className="flex gap-1">;
             {['small', 'normal', 'large', 'extra-large'].map((size) => (;
-              <button;
+              <button;>
                 key={size}
                 onClick={() => changeFontSize(size)}
                 className={`px-2 py-1 text-xs rounded ${;
@@ -101,9 +101,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       </div>;
 
       {/* Skip to main content link */}
-      <a;
+      <a;>
         href="#main-content";
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50">;
+        className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50">;,
         Skip to main content;
       </a>;
 

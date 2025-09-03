@@ -8,7 +8,7 @@ export default function Page() {;
         validMetrics++;
         if(metrics.cls <= 0.1) totalScore += 100;
         else if(metrics.cls <= 0.25) totalScore += 50;
-        else totalScore += 0}
+        else totalScore += 0};
 ;
       // TTFB scoring(0-100);
       if(metrics.ttfb !== null) {;
@@ -115,7 +115,7 @@ export default function Page() {;
     return 'Poor'};
 ;
   return ();
-    <motion.div;
+    <motion.div;>
       initial = {;
 
   { opacity: 0,;
@@ -126,56 +126,56 @@ export default function Page() {;
   { opacity: 1,;
   y: 0;,
 }}
-      className="fixed bottom-4 right-4 bg-black/80 backdrop-blur-sm border border-zinc-700 rounded-lg p-4 text-white text-sm max-w-xs z-50">";
-      <div className="flex items-center justify-between mb-3">";
-        <h3 className="font-semibold text-zion-cyan">Performance</h3>;
-        <div className={`text-lg font-bold ${getScoreColor(score)}`}>;
+      className="fixed bottom-4 right-4 bg-black/80 backdrop-blur-sm border border-zinc-700 rounded-lg p-4 text-white text-sm max-w-xs z-50">";";
+      <div className="flex items-center justify-between mb-3">";";
+        <h3 className="font-semibold text-zion-cyan">Performance</h3>;";
+        <div className={`text-lg font-bold ${getScoreColor(score)}`}>;`;
           {score}
         </div>;
       </div>;
 
-      <div className="text-xs text-zinc - 300 mb-2">;
+      <div className="text-xs text-zinc - 300 mb-2">;";
         {getScoreLabel(score) } • Core Web Vitals;
       </div>;
 
-      <div className="space - y-1 text-xs">;
-        {metrics.fcp && (<div className="flex justify -between">;
-            <span > FCP:</span>;
+      <div className="space - y-1 text-xs">;";
+        {metrics.fcp && (<div className="flex justify -between">;";
+            <span > FCP: </span>;,
             <span className={metrics.fcp <= 1800 ? 'text-green - 400' : 'text-yellow-400'}>              {metrics.fcp}ms;
             </span>;
           </div>;
         )}
-        {metrics.lcp && (";
-          <div className="flex justify-between">;
-            <span>LCP:</span>;
+        {metrics.lcp && (";";
+          <div className="flex justify-between">;";
+            <span>LCP: </span>;,
             <span className={metrics.lcp <= 2500 ? 'text-green-400' : 'text-yellow-400'}>;
               {metrics.lcp}ms;
             </span>;
           </div>;
         )}
-        {metrics.fid && (";
-          <div className="flex justify-between">;
-            <span>FID:</span>;
+        {metrics.fid && (";";
+          <div className="flex justify-between">;";
+            <span>FID: </span>;,
             <span className={metrics.fid <= 100 ? 'text-green-400' : 'text-yellow-400'}>;
               {metrics.fid}ms;
             </span>;
           </div>;
         )}
-        {metrics.cls && (";
-          <div className="flex justify-between">;
-            <span>CLS:</span>;
+        {metrics.cls && (";";
+          <div className="flex justify-between">;";
+            <span>CLS: </span>;,
             <span className={metrics.cls <= 0.1 ? 'text-green-400' : 'text-yellow-400'}>;
               {metrics.cls}
             </span>;
           </div>;
         )}
-        {metrics.ttfb && (";
-          <div className="flex justify-between">;
-            <span>TTFB:</span>;
+        {metrics.ttfb && (";";
+          <div className="flex justify-between">;";
+            <span>TTFB: </span>;,
             <span className={metrics.ttfb <= 800 ? 'text-green-400' : 'text-yellow-400'}>;
               {metrics.ttfb}ms;
             </span>;
           </div>) }
       </div>;
     </motion.div>;
-  )};'"`
+  )};'"`;`;

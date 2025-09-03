@@ -1,39 +1,39 @@
-import { useState, useEffect } from "react";
-import { DragDropContext } from "@hello-pangea/dnd";
-import { useJobApplications } from "@/hooks/useJobApplications";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
-import { toast } from "@/hooks/use-toast";
-import { KanbanColumn } from "./KanbanColumn.jsx";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { useState, useEffect } from "react";";
+import { DragDropContext } from "@hello-pangea/dnd";";
+import { useJobApplications } from "@/hooks/useJobApplications";";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";";
+import { Skeleton } from "@/components/ui/skeleton";";
+import { toast } from "@/hooks/use-toast";";
+import { KanbanColumn } from "./KanbanColumn.jsx";";
+import { useIsMobile } from "@/hooks/use-mobile";";
 // Define the kanban board columns based on application statuses;
 const COLUMNS = [;
     {;
-        id: "new",;
-        title: "Applied",;
-        description: "New applications",;,
+        id: "new",;";
+        title: "Applied",;";
+        description: "New applications",;,";
 },;
     {;
-        id: "shortlisted",;
-        title: "Shortlisted",;
-        description: "Candidates selected for review",;,
+        id: "shortlisted",;";
+        title: "Shortlisted",;";
+        description: "Candidates selected for review",;,";
 },;
     {;
-        id: "interview",;
-        title: "Interview",;
-        description: "Scheduled for interview",;,
+        id: "interview",;";
+        title: "Interview",;";
+        description: "Scheduled for interview",;,";
 },;
     {;
-        id: "hired",;
-        title: "Hired",;
-        description: "Successful candidates",;,
+        id: "hired",;";
+        title: "Hired",;";
+        description: "Successful candidates",;,";
 },;
     {;
-        id: "rejected",;
-        title: "Rejected",;
-        description: "Not moving forward",;,
+        id: "rejected",;";
+        title: "Rejected",;";
+        description: "Not moving forward",;,";
 },];
-export function KanbanBoard({ jobId }) {}
+export function KanbanBoard({ jobId }) {};
   const { applications, isLoading, updateApplicationStatus } =;
     useJobApplications(jobId);
   const [columns, setColumns] = useState({;
@@ -43,7 +43,7 @@ export function KanbanBoard({ jobId }) {}
   const isMobile = useIsMobile();
   // Initialize columns with applications based on their status;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -94,7 +94,7 @@ export function KanbanBoard({ jobId }) {}
       toast({;
 
         title: 'Status updated',;
-        description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`});,
+        description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`});,`;
 } catch(error) {;
       // Revert the UI changes if the database update fails;
       toast({;
@@ -107,16 +107,16 @@ export function KanbanBoard({ jobId }) {}
   if(isLoading) {;
 
     return ();
-      <div'`;
-        className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}
+      <div'`;`;>
+        className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}`;
       >;
         {Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (;
-          <Card key={i} className="h-[500px]">;
-            <CardHeader>";
-              <Skeleton className="h-8 w-24" />;
+          <Card key={i} className="h-[500px]">;";
+            <CardHeader>";";
+              <Skeleton className="h-8 w-24" />;";
             </CardHeader>;
-            <CardContent>";
-              <Skeleton className="h-[400px] w-full" />;
+            <CardContent>";";
+              <Skeleton className="h-[400px] w-full" />;";
             </CardContent>;
           </Card>;
         ))}
@@ -125,11 +125,11 @@ export function KanbanBoard({ jobId }) {}
 }
   if(!applications || applications.length === 0) {;
 
-    return (";
-      <Card className="text-center py-16">;
-        <CardContent>";
-          <h3 className="text-lg font-semibold mb-2">No applications yet</h3>";
-          <p className="text-muted-foreground mb-6">;
+    return (";";
+      <Card className="text-center py-16">;";
+        <CardContent>";";
+          <h3 className="text-lg font-semibold mb-2">No applications yet</h3>";";
+          <p className="text-muted-foreground mb-6">;";
             You haven't received applications for this job yet.</p>;
         </CardContent>;
       </Card>;
@@ -137,11 +137,11 @@ export function KanbanBoard({ jobId }) {}
 }
   return ();
     <DragDropContext onDragEnd={handleDragEnd}>;
-      <div'`;
-        className={`grid ${isMobile ? 'grid-cols-1 gap-y-6' : 'grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4'} overflow-x-auto`}
+      <div'`;`;>
+        className={`grid ${isMobile ? 'grid-cols-1 gap-y-6' : 'grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4'} overflow-x-auto`}`;
       >;
         {COLUMNS.map(column => (;
-          <KanbanColumn;
+          <KanbanColumn;>
             key={column.id}
             id={column.id}
             title={column.title}
@@ -154,4 +154,4 @@ export function KanbanBoard({ jobId }) {}
     </DragDropContext>;
   );,
 }
-'"`
+'"`;`;

@@ -2,19 +2,19 @@ import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
 ;
 interface Testimonial {;
-  id: string;
-  name: string;
-  position: string;
-  comp: string;
-  compLogo: string;
-  content: string;
-  rating: number;
-  industry: string;
-  results: string[];
+  id: string;,
+  name: string;,
+  position: string;,
+  comp: string;,
+  compLogo: string;,
+  content: string;,
+  rating: number;,
+  industry: string;,
+  results: string[];,
   avatar: string;,
 }
 ;
-const testimonials: Testimonial[] = [{;
+const testimonials: Testimonial[] = [{;,
 
     id: '1',;
     name: 'Sarah Chen',;
@@ -77,7 +77,7 @@ const testimonials: Testimonial[] = [{;
     rating: 5,;
     industry: 'Cloud Services',;
     results['40% cost reduction',60% performance boost',Unified management'],;
-    avatar: '/images/avatars/lisa-park.jpg';
+    avatar: '/images/avatars/lisa-park.jpg';,
 
 ];
 ;
@@ -87,7 +87,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {;
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 ;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -114,31 +114,31 @@ export default function EnhancedTestimonialsSection(...args[]):  {;
   { duration: 20,;
   repeat: Infinity }}
                 >;
-                  <Quote className="w-8 h-8 text-zion -cyan"  />                </motion.div>;
-";
-                <div className="relative z-10">;
-                  {/* Rating */}";
-                  <div className="flex items-center mb-6">;
+                  <Quote className="w-8 h-8 text-zion -cyan"  />                </motion.div>;";
+";";
+                <div className="relative z-10">;";
+                  {/* Rating */}";";
+                  <div className="flex items-center mb-6">;";
                     {[...Array(currentTestimonialData.rating)].map((_, index) => (;
-                      <motion.div;
+                      <motion.div;>
                         key={index}
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
                         transition={{ delay: index * 0.1 }}
-";
-                        <Star className="w-6 h-6 text-yellow-400 fill-current"  />                      </motion.div>;
+";";
+                        <Star className="w-6 h-6 text-yellow-400 fill-current"  />                      </motion.div>;";
                     ))}
                   </div>;
 
-                  {/* Content */}";
-                  <blockquote className="text-2xl lg:text-3xl text-white leading-relaxed mb-8 font-medium">";
-                    "{currentTestimonialData.content}";
+                  {/* Content */}";";
+                  <blockquote className="text-2xl lg: text-3xl text-white leading-relaxed mb-8 font-medium">";";,
+                    "{currentTestimonialData.content}";";
                   </blockquote>;
 
-                  {/* Results */}";
-                  <div className="grid grid-cols-1 md: grid-cols-3 gap-4 mb-8">;
+                  {/* Results */}";";
+                  <div className="grid grid-cols-1 md: grid-cols-3 gap-4 mb-8">;";,
                     {currentTestimonialData.results.map((result, index)  => (;
-                      <motion.div;
+                      <motion.div;>
                         key={result}
                         initial = {;
 
@@ -150,28 +150,28 @@ export default function EnhancedTestimonialsSection(...args[]):  {;
   { opacity: 1,;
   y: 0;,
 }}
-                        transition={{ delay: 0.3 + index * 0.1 }}";
-                        className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 text-center";
-";
-                        <p className="text-zion-cyan font-semibold">{result}</p>;
+                        transition={{ delay: 0.3 + index * 0.1 }}";";
+                        className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 text-center";";
+";";
+                        <p className="text-zion-cyan font-semibold">{result}</p>;";
                       </motion.div>;
                     ))}
                   </div>;
 
-                  {/* Author Info */}";
-                  <div className="flex items-center justify-between">;";
-                    <div className="flex items-center space-x-4">";
-                      <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center">";
-                        <span className="text-white font-bold text-xl">;
+                  {/* Author Info */}";";
+                  <div className="flex items-center justify-between">;";";
+                    <div className="flex items-center space-x-4">";";
+                      <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center">";";
+                        <span className="text-white font-bold text-xl">;";
                           {currentTestimonialData.name.split(' ').map(n => n[0]).join('')}
                         </span>;
                       </div>;
-                      <div>";
-                        <h4 className="text-xl font-bold text-white">{currentTestimonialData.name}</h4>";
-                        <p className="text-zion-cyan">{currentTestimonialData.position}</p>";
-                        <p className="text-gray-300">{currentTestimonialData.comp}</p>";
-                        <div className="flex items-center space-x-2 mt-1">";
-                          <Building className="w-4 h-4 text-zion-cyan"  />"                          <span className="text-sm text-gray-400">{currentTestimonialData.industry}</span>;
+                      <div>";";
+                        <h4 className="text-xl font-bold text-white">{currentTestimonialData.name}</h4>";";
+                        <p className="text-zion-cyan">{currentTestimonialData.position}</p>";";
+                        <p className="text-gray-300">{currentTestimonialData.comp}</p>";";
+                        <div className="flex items-center space-x-2 mt-1">";";
+                          <Building className="w-4 h-4 text-zion-cyan"  />"                          <span className="text-sm text-gray-400">{currentTestimonialData.industry}</span>;";
                         </div>;
                       </div>;
                     </div>;
@@ -181,41 +181,41 @@ export default function EnhancedTestimonialsSection(...args[]):  {;
             </motion.div>;
           </AnimatePresence>;
 
-          {/* Navigation Controls */}";
-          <div className="flex items-center justify-center mt-12 space-x-4">;
-            <motion.button;
-              onClick={prevTestimonial}";
-              className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20";
+          {/* Navigation Controls */}";";
+          <div className="flex items-center justify-center mt-12 space-x-4">;";
+            <motion.button;>
+              onClick={prevTestimonial}";";
+              className="p-3 rounded-full bg-white/10 hover: bg-white/20 transition-colors duration-200 border border-white/20";";,
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-";
-              <ChevronLeft className="w-6 h-6 text-white"  />            </motion.button>;
-";
-            <div className="flex space-x-2">;
+";";
+              <ChevronLeft className="w-6 h-6 text-white"  />            </motion.button>;";
+";";
+            <div className="flex space-x-2">;";
               {testimonials.map((_, index) => (;
-                <motion.button;
+                <motion.button;>
                   key={index}
                   onClick={() => goToTestimonial(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial';
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial';`;
                       ? 'bg-zion-cyan w-8'';
-                      : 'bg-white/30 hover:bg-white/50'`;,
-}`}
+                      : 'bg-white/30 hover:bg-white/50'`;,`;
+}`}`;
                   whileHover={{ scale: 1.2 }}
                 />) ) }
             </div>;
 
-            <motion.button;
-              onClick={nextTestimonial}";
-              className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20";
+            <motion.button;>
+              onClick={nextTestimonial}";";
+              className="p-3 rounded-full bg-white/10 hover: bg-white/20 transition-colors duration-200 border border-white/20";";,
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-";
-              <ChevronRight className="w-6 h-6 text-white"  />            </motion.button>;
+";";
+              <ChevronRight className="w-6 h-6 text-white"  />            </motion.button>;";
           </div>;
         </div>;
 
         {/* Trust Indicators */}
-        <motion.div;
+        <motion.div;>
           initial = {;
 
   { opacity: 0,;
@@ -226,19 +226,19 @@ export default function EnhancedTestimonialsSection(...args[]):  {;
           transition = {;
 
   { duration: 0.6,;
-  delay: 0.3 }}"          className="mt-20";
-";
-          <div className="text-center">;";
-            <h3 className="text-2xl font-bold text-white mb-8">;
+  delay: 0.3 }}"          className="mt-20";";
+";";
+          <div className="text-center">;";";
+            <h3 className="text-2xl font-bold text-white mb-8">;";
               Trusted by Industry Leaders;
-            </h3>";
-            <div className="grid grid-cols-1 md: grid-cols-4 gap-8 max-w-4xl mx-auto">;
+            </h3>";";
+            <div className="grid grid-cols-1 md: grid-cols-4 gap-8 max-w-4xl mx-auto">;";,
               {[';
                 { icon: Users, label: '500+ Clients', value: 'Global Reach' },;
                 { icon: Award, label: '15+ Awards', value: 'Industry Recognition' },;
                 { icon: Globe, label: '50+ Countries', value: 'Worldwide Service' },;
                 { icon: Building, label: '99.9% Uptime', value: 'Reliability' }
-              ].map((indicator, index) => (<motion.div;
+              ].map((indicator, index) => (<motion.div;>
                   key={indicator.label}
                   initial = {;
 
@@ -255,14 +255,14 @@ export default function EnhancedTestimonialsSection(...args[]):  {;
 
   { duration: 0.6,;
   delay: index * 0.1;,
-}}";
-                  className="text-center";
-";
-                  <div className="w-16 h-16 bg-zion-cyan/20 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-zion-cyan/30">";
-                    <indicator.icon className="w-8 h-8 text-zion-cyan" />;
-                  </div>";
-                  <div className="text-xl font-bold text-white mb-2">{indicator.label}</div>";
-                  <div className="text-sm text-gray-400">{indicator.value}</div>;
+}}";";
+                  className="text-center";";
+";";
+                  <div className="w-16 h-16 bg-zion-cyan/20 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-zion-cyan/30">";";
+                    <indicator.icon className="w-8 h-8 text-zion-cyan" />;";
+                  </div>";";
+                  <div className="text-xl font-bold text-white mb-2">{indicator.label}</div>";";
+                  <div className="text-sm text-gray-400">{indicator.value}</div>;";
                 </motion.div>;
               ))}
             </div>;
@@ -270,7 +270,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {;
         </motion.div>;
 
         {/* Bottom CTA */}
-        <motion.div;
+        <motion.div;>
           initial = {;
 
   { opacity: 0,;
@@ -281,24 +281,24 @@ export default function EnhancedTestimonialsSection(...args[]):  {;
           transition = {;
 
   { duration: 0.6,;
-  delay: 0.5 }}"          className="text-center mt-16";
-";
-          <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 max-w-4xl mx-auto">;";
-            <h3 className="text-3xl font-bold text-white mb-4">;
+  delay: 0.5 }}"          className="text-center mt-16";";
+";";
+          <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 max-w-4xl mx-auto">;";";
+            <h3 className="text-3xl font-bold text-white mb-4">;";
               Ready to Join Our Success Stories?;
-            </h3>";
-            <p className="text-xl text-gray-300 mb-8">;
-              Let's discuss how Zion Tech Group can transform your business with cutting-edge technology solutions.</p>";
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <a";
-                href="/contact";
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1";
+            </h3>";";
+            <p className="text-xl text-gray-300 mb-8">;";
+              Let's discuss how Zion Tech Group can transform your business with cutting-edge technology solutions.</p>";";
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">;";,
+              <a";";>
+                href="/contact";";
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover: shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1";";,
 
                 Start Your Transformation;
               </a>;
-              <a";
-                href="/case-studies";
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan/30 text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan/10 transition-all duration-300";
+              <a";";>
+                href="/case-studies";";
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan/30 text-zion-cyan font-semibold rounded-2xl hover: bg-zion-cyan/10 transition-all duration-300";";,
 
                 View Case Studies;
               </a>;
@@ -307,4 +307,5 @@ export default function EnhancedTestimonialsSection(...args[]):  {;
         </motion.div>;
       </div>;
     </section>;) }
-'"`;
+'"`;`;
+;

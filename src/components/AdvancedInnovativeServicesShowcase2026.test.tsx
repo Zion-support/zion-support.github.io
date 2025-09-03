@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<AdvancedInnovativeServicesShowcase2026  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<AdvancedInnovativeServicesShowcase2026  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import AdvancedInnovativeServicesShowcase2026 from &apos;./AdvancedInnovativeServicesShowcase2026;
 describe(&apos;AdvancedInnovativeServicesShowcase2026&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;AdvancedInnovativeServicesShowcase2026&apos, () => {;
     render();,
 }
     // comment;
-    render(<AdvancedInnovativeServicesShowcase2026 / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<AdvancedInnovativeServicesShowcase2026 / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

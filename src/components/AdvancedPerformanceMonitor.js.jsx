@@ -61,7 +61,7 @@ export function AdvancedPerformanceMonitor() {;
     setIsRefreshing(false);,
 };
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -81,7 +81,7 @@ export function AdvancedPerformanceMonitor() {;
         return 'bg-red-500 text-white';
       case 'warning':';
         return 'bg-yellow-500 text-white';
-      default:';
+      default: ';,
         return 'bg-green-500 text-white';,
 }
   };
@@ -90,12 +90,12 @@ export function AdvancedPerformanceMonitor() {;
     switch(severity) {;
 
       case 'critical':';
-        return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300';
+        return 'bg-red-100 text-red-700 dark: bg-red-900/30 dark:text-red-300';,
       case 'high':';
-        return 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300';
+        return 'bg-orange-100 text-orange-700 dark: bg-orange-900/30 dark:text-orange-300';,
       case 'medium':';
-        return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
-      default:';
+        return 'bg-yellow-100 text-yellow-700 dark: bg-yellow-900/30 dark:text-yellow-300';,
+      default: ';,
         return 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300';,
 }
   };
@@ -104,29 +104,29 @@ export function AdvancedPerformanceMonitor() {;
     switch(trend) {;
 
       case 'up':;
-        return <TrendingUp className="w-4 h-4 text-red-500" />;
-      case 'down':";
-        return <TrendingUp className="w-4 h-4 text-green-500 rotate-180" />;
-      default:";
-        return <Activity className="w-4 h-4 text-gray-500" />;,
+        return <TrendingUp className="w-4 h-4 text-red-500" />;";
+      case 'down':";";
+        return <TrendingUp className="w-4 h-4 text-green-500 rotate-180" />;";
+      default: ";";,
+        return <Activity className="w-4 h-4 text-gray-500" />;,";
 }
   };
   const getCategoryIcon = category => {;
 
     switch(category) {;
 
-      case 'Processor':";
-        return <Cpu className="w-5 h-5 text-blue-500" />;
-      case 'Memory':";
-        return <HardDrive className="w-5 h-5 text-green-500" />;
-      case 'Storage':";
-        return <HardDrive className="w-5 h-5 text-purple-500" />;
-      case 'Network':";
-        return <Network className="w-5 h-5 text-orange-500" />;
-      case 'Database':";
-        return <Database className="w-5 h-5 text-cyan-500" />;
-      default:";
-        return <Activity className="w-5 h-5 text-gray-500" />;,
+      case 'Processor':";";
+        return <Cpu className="w-5 h-5 text-blue-500" />;";
+      case 'Memory':";";
+        return <HardDrive className="w-5 h-5 text-green-500" />;";
+      case 'Storage':";";
+        return <HardDrive className="w-5 h-5 text-purple-500" />;";
+      case 'Network':";";
+        return <Network className="w-5 h-5 text-orange-500" />;";
+      case 'Database':";";
+        return <Database className="w-5 h-5 text-cyan-500" />;";
+      default: ";";,
+        return <Activity className="w-5 h-5 text-gray-500" />;,";
 }
   };
   const getUtilizationColor = utilization => {;
@@ -138,139 +138,139 @@ export function AdvancedPerformanceMonitor() {;
   if(!isOpen) {;
 
     return ();
-      <button;
-        onClick={() => setIsOpen(true)}";
-        className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-blue to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40";
-        title="Open Performance Monitor">";
-        <Activity className="w-6 h-6" />;
+      <button;>
+        onClick={() => setIsOpen(true)}";";
+        className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-blue to-zion-cyan text-white p-4 rounded-full shadow-2xl hover: shadow-3xl transition-all duration-300 hover:scale-110 z-40";";,
+        title="Open Performance Monitor">";";
+        <Activity className="w-6 h-6" />;";
       </button>;
     );,
 }
   if(isMinimized) {;
 
-    return (";
-      <div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">";
-        <div className="flex items-center gap-2 p-3">";
-          <Activity className="w-5 h-5 text-zion-blue" />";
-          <span className="text-sm font-medium text-zion-slate">;
+    return (";";
+      <div className="fixed bottom-4 right-4 bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">";";,
+        <div className="flex items-center gap-2 p-3">";";
+          <Activity className="w-5 h-5 text-zion-blue" />";";
+          <span className="text-sm font-medium text-zion-slate">;";
             Performance;
           </span>;
-          <button;
-            onClick={() => setIsMinimized(false)}";
-            className="ml-auto p-1 hover:bg-zion-slate-light rounded">";
-            <Maximize2 className="w-4 h-4" />;
+          <button;>
+            onClick={() => setIsMinimized(false)}";";
+            className="ml-auto p-1 hover: bg-zion-slate-light rounded">";";,
+            <Maximize2 className="w-4 h-4" />;";
           </button>;
         </div>;
       </div>;
     );,
 }
   return ();
-    <div';
-      className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`}
+    <div';>
+      className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`}`;
       ref={containerRef}
     >;
-      {/* Header */}";
-      <div className="bg-gradient-to-r from-zion-blue to-zion-cyan text-white p-4 flex items-center justify-between">";
-        <div className="flex items-center gap-3">";
-          <Activity className="w-6 h-6" />;
-          <div>";
-            <h2 className="text-lg font-bold">;
+      {/* Header */}";";
+      <div className="bg-gradient-to-r from-zion-blue to-zion-cyan text-white p-4 flex items-center justify-between">";";
+        <div className="flex items-center gap-3">";";
+          <Activity className="w-6 h-6" />;";
+          <div>";";
+            <h2 className="text-lg font-bold">;";
               Advanced Performance & Scalability Monitor;
-            </h2>";
-            <p className="text-sm opacity-90">;
+            </h2>";";
+            <p className="text-sm opacity-90">;";
               Real-time System Metrics & Performance Analytics;
             </p>;
           </div>;
-        </div>";
-        <div className="flex items-center gap-2">;
-          <button;
-            onClick={() => setAutoRefresh(!autoRefresh)}'`;
-            className={`p-2 rounded-lg transition-colors ${autoRefresh ? 'bg-white/20' : 'hover:bg-white/10'}`}
+        </div>";";
+        <div className="flex items-center gap-2">;";
+          <button;>
+            onClick={() => setAutoRefresh(!autoRefresh)}'`;`;
+            className={`p-2 rounded-lg transition-colors ${autoRefresh ? 'bg-white/20' : 'hover:bg-white/10'}`}`;
             title={;
 
               autoRefresh ? 'Auto-refresh enabled' : 'Auto-refresh disabled';,
 }
           >;
-            <RefreshCw'`;
-              className={`w-4 h-4 ${autoRefresh ? 'animate-spin' : ''}`}
+            <RefreshCw'`;`;>
+              className={`w-4 h-4 ${autoRefresh ? 'animate-spin' : ''}`}`;
             />;
           </button>;
-          <button;
-            onClick={() => setIsMinimized(true)}";
-            className="p-2 hover:bg-white/10 rounded-lg transition-colors">";
-            <Minimize2 className="w-4 h-4" />;
+          <button;>
+            onClick={() => setIsMinimized(true)}";";
+            className="p-2 hover: bg-white/10 rounded-lg transition-colors">";";,
+            <Minimize2 className="w-4 h-4" />;";
           </button>;
-          <button;
-            onClick={() => setIsFullscreen(!isFullscreen)}";
-            className="p-2 hover:bg-white/10 rounded-lg transition-colors">;
-            {isFullscreen ? (";
-              <Minimize2 className="w-4 h-4" />;
-            ) : (";
-              <Maximize2 className="w-4 h-4" />;
+          <button;>
+            onClick={() => setIsFullscreen(!isFullscreen)}";";
+            className="p-2 hover: bg-white/10 rounded-lg transition-colors">;";,
+            {isFullscreen ? (";";
+              <Minimize2 className="w-4 h-4" />;";
+            ) : (";";
+              <Maximize2 className="w-4 h-4" />;";
             )}
           </button>;
-          <button;
-            onClick={() => setIsOpen(false)}";
-            className="p-2 hover:bg-white/10 rounded-lg transition-colors">";
-            <X className="w-4 h-4" />;
+          <button;>
+            onClick={() => setIsOpen(false)}";";
+            className="p-2 hover: bg-white/10 rounded-lg transition-colors">";";,
+            <X className="w-4 h-4" />;";
           </button>;
         </div>;
       </div>;
 
-      {/* Controls */}";
-      <div className="bg-zion-slate-light/50 p-4 border-b border-zion-slate-light">";
-        <div className="flex items-center justify-between">";
-          <div className="flex items-center gap-4">;
-            <select;
+      {/* Controls */}";";
+      <div className="bg-zion-slate-light/50 p-4 border-b border-zion-slate-light">";";
+        <div className="flex items-center justify-between">";";
+          <div className="flex items-center gap-4">;";
+            <select;>
               value={selectedCategory}
-              onChange={e => setSelectedCategory(e.target.value)}";
-              className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate">;
+              onChange={e => setSelectedCategory(e.target.value)}";";
+              className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark: bg-zion-slate text-zion-slate">;";,
               {categories.map(category => (;
                 <option key={category} value={category}>;
                   {category === 'all' ? 'All Categories' : category}
                 </option>;
               ))}
             </select>;
-            <select;
+            <select;>
               value={timeRange}
-              onChange={e => setTimeRange(e.target.value)}";
-              className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate">;
+              onChange={e => setTimeRange(e.target.value)}";";
+              className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark: bg-zion-slate text-zion-slate">;";,
               {timeRanges.map(range => (;
                 <option key={range.value} value={range.value}>;
                   {range.label}
                 </option>;
               ))}
             </select>;
-            <button;
+            <button;>
               onClick={refreshData}
-              disabled={isRefreshing}";
-              className="px-4 py-2 bg-zion-blue text-white rounded-lg hover:bg-zion-blue/90 transition-colors disabled:opacity-50 flex items-center gap-2">;
-              <RefreshCw'`;
-                className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`}
+              disabled={isRefreshing}";";
+              className="px-4 py-2 bg-zion-blue text-white rounded-lg hover: bg-zion-blue/90 transition-colors disabled:opacity-50 flex items-center gap-2">;";,
+              <RefreshCw'`;`;>
+                className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`}`;
               />;
               Refresh;
             </button>;
-          </div>";
-          <div className="flex items-center gap-4">";
-            <label className="flex items-center gap-2 text-sm text-zion-slate">;
-              <input";
-                type="checkbox";
+          </div>";";
+          <div className="flex items-center gap-4">";";
+            <label className="flex items-center gap-2 text-sm text-zion-slate">;";
+              <input";";>
+                type="checkbox";";
                 checked={showPredictions}
-                onChange={e => setShowPredictions(e.target.checked)}";
-                className="rounded";
+                onChange={e => setShowPredictions(e.target.checked)}";";
+                className="rounded";";
               />;
               Show Predictions;
-            </label>";
-            <button className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors flex items-center gap-2">";
-              <Download className="w-4 h-4" />;
+            </label>";";
+            <button className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover: bg-zion-cyan/90 transition-colors flex items-center gap-2">";";,
+              <Download className="w-4 h-4" />;";
               Export Report;
             </button>;
           </div>;
         </div>;
       </div>;
 
-      {/* Tabs */}";
-      <div className="flex border-b border-zion-slate-light">;
+      {/* Tabs */}";";
+      <div className="flex border-b border-zion-slate-light">;";
         {[';
           { id: 'overview', label: 'Overview', icon: Activity },;
           { id: 'metrics', label: 'System Metrics', icon: BarChart3 },;
@@ -281,68 +281,68 @@ export function AdvancedPerformanceMonitor() {;
 
           const Icon = tab.icon;
           return ();
-            <button;
+            <button;>
               key={tab.id}
-              onClick={() => setActiveTab(tab.id)}`;
-              className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${activeTab === tab.id';
+              onClick={() => setActiveTab(tab.id)}`;`;
+              className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${activeTab === tab.id';`;
                   ? 'border-zion-blue text-zion-blue bg-zion-blue/5'';
-                  : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'`;,
-}`}
-            >";
-              <Icon className="w-4 h-4" />;
+                  : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'`;,`;
+}`}`;
+            >";";
+              <Icon className="w-4 h-4" />;";
               {tab.label}
             </button>;
           );,
 })}
       </div>;
 
-      {/* Content */}";
-      <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">;
-        {activeTab === 'overview' && (";
-          <div className="space-y-6">;
-            {/* System Health Overview */}";
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">;
+      {/* Content */}";";
+      <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">;";
+        {activeTab === 'overview' && (";";
+          <div className="space-y-6">;";
+            {/* System Health Overview */}";";
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4">;";,
               {systemMetrics.slice(0, 6).map(metric => (;
-                <div;
-                  key={metric.id}";
-                  className="p-4 rounded-xl border border-zion-slate-light bg-white dark:bg-zion-slate hover:shadow-lg transition-all duration-300">";
-                  <div className="flex items-center justify-between mb-3">";
-                    <div className="flex items-center gap-2">;
-                      {getCategoryIcon(metric.category)}";
-                      <h3 className="font-semibold text-zion-slate text-sm">;
+                <div;>
+                  key={metric.id}";";
+                  className="p-4 rounded-xl border border-zion-slate-light bg-white dark: bg-zion-slate hover:shadow-lg transition-all duration-300">";";,
+                  <div className="flex items-center justify-between mb-3">";";
+                    <div className="flex items-center gap-2">;";
+                      {getCategoryIcon(metric.category)}";";
+                      <h3 className="font-semibold text-zion-slate text-sm">;";
                         {metric.name}
                       </h3>;
                     </div>;
-                    <span`;
-                      className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(metric.status)}`}
+                    <span`;`;>
+                      className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(metric.status)}`}`;
                     >;
                       {metric.status}
                     </span>;
-                  </div>";
-                  <div className="text-2xl font-bold text-zion-slate mb-2">;
+                  </div>";";
+                  <div className="text-2xl font-bold text-zion-slate mb-2">;";
                     {metric.value}
                     {metric.unit}
-                  </div>";
-                  <div className="flex items-center justify-between text-sm">;
-                    <span`;
-                      className={`font-medium ${metric.trend === 'up'';
+                  </div>";";
+                  <div className="flex items-center justify-between text-sm">;";
+                    <span`;`;>
+                      className={`font-medium ${metric.trend === 'up'';`;
                           ? 'text-red-600'';
                           : metric.trend === 'down'';
                             ? 'text-green-600'';
-                            : 'text-gray-600'`;,
-}`}
+                            : 'text-gray-600'`;,`;
+}`}`;
                     >;
                       {metric.trend === 'up' ? '+' : ''}
                       {metric.change}%;
-                    </span>";
-                    <span className="text-zion-slate-light">;
+                    </span>";";
+                    <span className="text-zion-slate-light">;";
                       Threshold: {metric.threshold}
                       {metric.unit}
                     </span>;
                   </div>;
-                  {showPredictions && (";
-                    <div className="mt-3 pt-3 border-t border-zion-slate-light/30">";
-                      <div className="text-xs text-zion-slate-light">;
+                  {showPredictions && (";";
+                    <div className="mt-3 pt-3 border-t border-zion-slate-light/30">";";
+                      <div className="text-xs text-zion-slate-light">;";
                         Predicted: {metric.value * (1 + metric.change / 100)}
                         {metric.unit}
                       </div>;
@@ -352,60 +352,60 @@ export function AdvancedPerformanceMonitor() {;
               ))}
             </div>;
 
-            {/* Quick Status */}";
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">";
-              <div className="bg-gradient-to-r from-zion-blue/10 to-zion-cyan/10 p-6 rounded-xl border border-zion-blue/20">";
-                <h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">";
-                  <CheckCircle className="w-5 h-5 text-zion-blue" />;
+            {/* Quick Status */}";";
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-6">";";,
+              <div className="bg-gradient-to-r from-zion-blue/10 to-zion-cyan/10 p-6 rounded-xl border border-zion-blue/20">";";
+                <h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">";";
+                  <CheckCircle className="w-5 h-5 text-zion-blue" />;";
                   System Health Status;
-                </h3>";
-                <div className="space-y-3">";
-                  <div className="flex items-center justify-between">";
-                    <span className="text-sm text-zion-slate">;
+                </h3>";";
+                <div className="space-y-3">";";
+                  <div className="flex items-center justify-between">";";
+                    <span className="text-sm text-zion-slate">;";
                       Overall Health;
-                    </span>";
-                    <span className="px-3 py-1 bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300 rounded-full text-sm font-medium">;
+                    </span>";";
+                    <span className="px-3 py-1 bg-green-100 text-green-700 dark: bg-green-900/30 dark:text-green-300 rounded-full text-sm font-medium">;";,
                       Good;
                     </span>;
-                  </div>";
-                  <div className="flex items-center justify-between">";
-                    <span className="text-sm text-zion-slate">;
+                  </div>";";
+                  <div className="flex items-center justify-between">";";
+                    <span className="text-sm text-zion-slate">;";
                       Active Alerts;
-                    </span>";
-                    <span className="px-3 py-1 bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300 rounded-full text-sm font-medium">;
+                    </span>";";
+                    <span className="px-3 py-1 bg-yellow-100 text-yellow-700 dark: bg-yellow-900/30 dark:text-yellow-300 rounded-full text-sm font-medium">;";,
                       {;
 
                         performanceAlerts.filter(a => a.status === 'active');
                           .length;,
 }
                     </span>;
-                  </div>";
-                  <div className="flex items-center justify-between">";
-                    <span className="text-sm text-zion-slate">;
+                  </div>";";
+                  <div className="flex items-center justify-between">";";
+                    <span className="text-sm text-zion-slate">;";
                       Last Updated;
-                    </span>";
-                    <span className="text-sm text-zion-slate-light">;
+                    </span>";";
+                    <span className="text-sm text-zion-slate-light">;";
                       {new Date().toLocaleTimeString()}
                     </span>;
                   </div>;
                 </div>;
               </div>;
-";
-              <div className="bg-gradient-to-r from-zion-green/10 to-zion-emerald/10 p-6 rounded-xl border border-zion-green/20">";
-                <h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">";
-                  <TrendingUp className="w-5 h-5 text-zion-green" />;
+";";
+              <div className="bg-gradient-to-r from-zion-green/10 to-zion-emerald/10 p-6 rounded-xl border border-zion-green/20">";";
+                <h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">";";
+                  <TrendingUp className="w-5 h-5 text-zion-green" />;";
                   Scalability Overview;
-                </h3>";
-                <div className="space-y-3">;
+                </h3>";";
+                <div className="space-y-3">;";
                   {scalabilityMetrics.slice(0, 3).map(metric => (;
-                    <div;
-                      key={metric.id}";
-                      className="flex items-center justify-between">";
-                      <span className="text-sm text-zion-slate">;
+                    <div;>
+                      key={metric.id}";";
+                      className="flex items-center justify-between">";";
+                      <span className="text-sm text-zion-slate">;";
                         {metric.name}
                       </span>;
-                      <span`;
-                        className={`text-sm font-medium ${getUtilizationColor(metric.utilization)}`}
+                      <span`;`;>
+                        className={`text-sm font-medium ${getUtilizationColor(metric.utilization)}`}`;
                       >;
                         {metric.utilization}%;
                       </span>;
@@ -417,59 +417,59 @@ export function AdvancedPerformanceMonitor() {;
           </div>;
         )}
 ;
-        {activeTab === 'metrics' && (";
-          <div className="space-y-4">;
+        {activeTab === 'metrics' && (";";
+          <div className="space-y-4">;";
             {filteredMetrics.map(metric => (;
-              <div;
-                key={metric.id}";
-                className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">";
-                <div className="flex items-center gap-3">;
-                  {getCategoryIcon(metric.category)}";
-                  <div className="flex-1">";
-                    <div className="flex items-center gap-3 mb-2">";
-                      <h3 className="font-semibold text-zion-slate">;
+              <div;>
+                key={metric.id}";";
+                className="p-4 bg-white dark: bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">";";,
+                <div className="flex items-center gap-3">;";
+                  {getCategoryIcon(metric.category)}";";
+                  <div className="flex-1">";";
+                    <div className="flex items-center gap-3 mb-2">";";
+                      <h3 className="font-semibold text-zion-slate">;";
                         {metric.name}
                       </h3>;
-                      <span`;
-                        className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(metric.status)}`}
+                      <span`;`;>
+                        className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(metric.status)}`}`;
                       >;
                         {metric.status}
                       </span>;
                       {getTrendIcon(metric.trend)}
-                    </div>";
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">;
-                      <div>";
-                        <span className="text-zion-slate-light">;
-                          Current Value:;
-                        </span>";
-                        <div className="font-semibold text-zion-slate">;
+                    </div>";";
+                    <div className="grid grid-cols-2 md: grid-cols-4 gap-4 text-sm">;";,
+                      <div>";";
+                        <span className="text-zion-slate-light">;";
+                          Current Value: ;,
+                        </span>";";
+                        <div className="font-semibold text-zion-slate">;";
                           {metric.value}
                           {metric.unit}
                         </div>;
                       </div>;
-                      <div>";
-                        <span className="text-zion-slate-light">;
-                          Threshold:;
-                        </span>";
-                        <div className="font-semibold text-zion-slate">;
+                      <div>";";
+                        <span className="text-zion-slate-light">;";
+                          Threshold: ;,
+                        </span>";";
+                        <div className="font-semibold text-zion-slate">;";
                           {metric.threshold}
                           {metric.unit}
                         </div>;
                       </div>;
-                      <div>";
-                        <span className="text-zion-slate-light">Change:</span>;
-                        <div'`;
-                          className={`font-semibold ${metric.change > 0 ? 'text-red-600' : 'text-green-600'}`}
+                      <div>";";
+                        <span className="text-zion-slate-light">Change: </span>;";,
+                        <div'`;`;>
+                          className={`font-semibold ${metric.change > 0 ? 'text-red-600' : 'text-green-600'}`}`;
                         >;
                           {metric.change > 0 ? '+' : ''}
                           {metric.change}%;
                         </div>;
                       </div>;
-                      <div>";
-                        <span className="text-zion-slate-light">;
-                          Last Updated:;
-                        </span>";
-                        <div className="font-semibold text-zion-slate">;
+                      <div>";";
+                        <span className="text-zion-slate-light">;";
+                          Last Updated: ;,
+                        </span>";";
+                        <div className="font-semibold text-zion-slate">;";
                           {new Date(metric.lastUpdated).toLocaleTimeString()}
                         </div>;
                       </div>;
@@ -481,70 +481,70 @@ export function AdvancedPerformanceMonitor() {;
           </div>;
         )}
 ;
-        {activeTab === 'alerts' && (";
-          <div className="space-y-4">;
+        {activeTab === 'alerts' && (";";
+          <div className="space-y-4">;";
             {performanceAlerts.map(alert => (;
-              <div;
-                key={alert.id}";
-                className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">";
-                <div className="flex items-start gap-3">";
-                  <div className="w-12 h-12 bg-zion-orange/20 rounded-lg flex items-center justify-center">";
-                    <AlertTriangle className="w-6 h-6 text-zion-orange" />;
-                  </div>";
-                  <div className="flex-1">";
-                    <div className="flex items-center gap-3 mb-2">";
-                      <h3 className="font-semibold text-zion-slate">;
+              <div;>
+                key={alert.id}";";
+                className="p-4 bg-white dark: bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">";";,
+                <div className="flex items-start gap-3">";";
+                  <div className="w-12 h-12 bg-zion-orange/20 rounded-lg flex items-center justify-center">";";
+                    <AlertTriangle className="w-6 h-6 text-zion-orange" />;";
+                  </div>";";
+                  <div className="flex-1">";";
+                    <div className="flex items-center gap-3 mb-2">";";
+                      <h3 className="font-semibold text-zion-slate">;";
                         {alert.title}
                       </h3>;
-                      <span`;
-                        className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(alert.severity)}`}
+                      <span`;`;>
+                        className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(alert.severity)}`}`;
                       >;
                         {alert.severity}
                       </span>;
-                      <span`;
-                        className={`px-2 py-1 rounded-full text-xs font-medium ${alert.status === 'active'';
-                            ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300'';
+                      <span`;`;>
+                        className={`px-2 py-1 rounded-full text-xs font-medium ${alert.status === 'active'';`;
+                            ? 'bg-red-100 text-red-700 dark: bg-red-900/30 dark:text-red-300'';,
                             : alert.status === 'acknowledged'';
-                              ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300'';
-                              : 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'`;,
-}`}
+                              ? 'bg-yellow-100 text-yellow-700 dark: bg-yellow-900/30 dark:text-yellow-300'';,
+                              : 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'`;,`;
+}`}`;
                       >;
                         {alert.status}
                       </span>;
-                    </div>";
-                    <p className="text-zion-slate-light mb-3">;
+                    </div>";";
+                    <p className="text-zion-slate-light mb-3">;";
                       {alert.description}
-                    </p>";
-                    <div className="mb-3">";
-                      <h4 className="font-medium text-zion-slate mb-2">;
-                        Affected Systems:;
-                      </h4>";
-                      <div className="flex flex-wrap gap-2">;
+                    </p>";";
+                    <div className="mb-3">";";
+                      <h4 className="font-medium text-zion-slate mb-2">;";
+                        Affected Systems: ;,
+                      </h4>";";
+                      <div className="flex flex-wrap gap-2">;";
                         {alert.affected.map((system, index) => (;
-                          <span;
-                            key={index}";
-                            className="px-2 py-1 bg-zion-orange/10 text-zion-orange rounded-full text-xs border border-zion-orange/20">;
+                          <span;>
+                            key={index}";";
+                            className="px-2 py-1 bg-zion-orange/10 text-zion-orange rounded-full text-xs border border-zion-orange/20">;";
                             {system}
                           </span>;
                         ))}
                       </div>;
-                    </div>";
-                    <div className="mb-3">";
-                      <h4 className="font-medium text-zion-slate mb-2">;
-                        Recommendations:;
-                      </h4>";
-                      <div className="space-y-1">;
+                    </div>";";
+                    <div className="mb-3">";";
+                      <h4 className="font-medium text-zion-slate mb-2">;";
+                        Recommendations: ;,
+                      </h4>";";
+                      <div className="space-y-1">;";
                         {alert.recommendations.map((rec, index) => (;
-                          <div;
-                            key={index}";
-                            className="flex items-center gap-2 text-sm text-zion-slate-light">";
-                            <span className="w-1.5 h-1.5 bg-zion-orange rounded-full"></span>;
+                          <div;>
+                            key={index}";";
+                            className="flex items-center gap-2 text-sm text-zion-slate-light">";";
+                            <span className="w-1.5 h-1.5 bg-zion-orange rounded-full"></span>;";
                             {rec}
                           </div>;
                         ))}
                       </div>;
-                    </div>";
-                    <div className="text-sm text-zion-slate-light">;
+                    </div>";";
+                    <div className="text-sm text-zion-slate-light">;";
                       Time: {new Date(alert.timestamp).toLocaleString()}
                     </div>;
                   </div>;
@@ -554,58 +554,58 @@ export function AdvancedPerformanceMonitor() {;
           </div>;
         )}
 ;
-        {activeTab === 'scalability' && (";
-          <div className="space-y-4">;
+        {activeTab === 'scalability' && (";";
+          <div className="space-y-4">;";
             {scalabilityMetrics.map(metric => (;
-              <div;
-                key={metric.id}";
-                className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">";
-                <div className="flex items-center gap-3">";
-                  <div className="w-12 h-12 bg-zion-green/20 rounded-lg flex items-center justify-center">";
-                    <TrendingUp className="w-6 h-6 text-zion-green" />;
-                  </div>";
-                  <div className="flex-1">";
-                    <div className="flex items-center gap-3 mb-2">";
-                      <h3 className="font-semibold text-zion-slate">;
+              <div;>
+                key={metric.id}";";
+                className="p-4 bg-white dark: bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">";";,
+                <div className="flex items-center gap-3">";";
+                  <div className="w-12 h-12 bg-zion-green/20 rounded-lg flex items-center justify-center">";";
+                    <TrendingUp className="w-6 h-6 text-zion-green" />;";
+                  </div>";";
+                  <div className="flex-1">";";
+                    <div className="flex items-center gap-3 mb-2">";";
+                      <h3 className="font-semibold text-zion-slate">;";
                         {metric.name}
                       </h3>;
-                      <span`;
-                        className={`px-2 py-1 rounded-full text-xs font-medium ${getUtilizationColor(metric.utilization)}`}
+                      <span`;`;>
+                        className={`px-2 py-1 rounded-full text-xs font-medium ${getUtilizationColor(metric.utilization)}`}`;
                       >;
                         {metric.utilization}% utilized;
                       </span>;
-                    </div>";
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">;
-                      <div>";
-                        <span className="text-zion-slate-light">Current:</span>";
-                        <div className="font-semibold text-zion-slate">;
+                    </div>";";
+                    <div className="grid grid-cols-2 md: grid-cols-4 gap-4 text-sm">;";,
+                      <div>";";
+                        <span className="text-zion-slate-light">Current: </span>";";,
+                        <div className="font-semibold text-zion-slate">;";
                           {metric.current.toLocaleString()} {metric.unit}
                         </div>;
                       </div>;
-                      <div>";
-                        <span className="text-zion-slate-light">Capacity:</span>";
-                        <div className="font-semibold text-zion-slate">;
+                      <div>";";
+                        <span className="text-zion-slate-light">Capacity: </span>";";,
+                        <div className="font-semibold text-zion-slate">;";
                           {metric.capacity.toLocaleString()} {metric.unit}
                         </div>;
                       </div>;
-                      <div>";
-                        <span className="text-zion-slate-light">Growth:</span>";
-                        <div className="font-semibold text-zion-slate">;
+                      <div>";";
+                        <span className="text-zion-slate-light">Growth: </span>";";,
+                        <div className="font-semibold text-zion-slate">;";
                           {metric.growth}%;
                         </div>;
                       </div>;
-                      <div>";
-                        <span className="text-zion-slate-light">;
-                          Prediction:;
-                        </span>";
-                        <div className="font-semibold text-zion-slate">;
+                      <div>";";
+                        <span className="text-zion-slate-light">;";
+                          Prediction: ;,
+                        </span>";";
+                        <div className="font-semibold text-zion-slate">;";
                           {metric.prediction.toLocaleString()} {metric.unit}
                         </div>;
                       </div>;
                     </div>;
-                    {showPredictions && (";
-                      <div className="mt-3 pt-3 border-t border-zion-slate-light/30">";
-                        <div className="text-xs text-zion-slate-light">;
+                    {showPredictions && (";";
+                      <div className="mt-3 pt-3 border-t border-zion-slate-light/30">";";
+                        <div className="text-xs text-zion-slate-light">;";
                           Based on current growth rate, capacity will be reached';
                           in approximately{' '}
                           {Math.ceil();
@@ -623,11 +623,11 @@ export function AdvancedPerformanceMonitor() {;
           </div>;
         )}
 ;
-        {activeTab === 'analytics' && (";
-          <div className="space-y-6">";
-            <div className="text-center text-zion-slate-light">";
-              <Zap className="w-16 h-16 mx-auto mb-4 opacity-50" />";
-              <h3 className="text-lg font-semibold mb-2">;
+        {activeTab === 'analytics' && (";";
+          <div className="space-y-6">";";
+            <div className="text-center text-zion-slate-light">";";
+              <Zap className="w-16 h-16 mx-auto mb-4 opacity-50" />";";
+              <h3 className="text-lg font-semibold mb-2">;";
                 Performance Analytics;
               </h3>;
               <p>;
@@ -641,4 +641,5 @@ export function AdvancedPerformanceMonitor() {;
     </div>;
   );,
 }
-"export default ComponentName;";
+"export default ComponentName;";";
+;

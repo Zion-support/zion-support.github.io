@@ -6,7 +6,7 @@ let localStorageAvailable = null; // Cache the availability check;
 let lastAvailabilityCheck = 0;
 const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds max;
 
-function isLocalStorageAvailable() {;
+function isLocalStorageAvailable(): any {;
   const now = Date.now();
   // Use cached result if checked recently;
   if();
@@ -15,7 +15,7 @@ function isLocalStorageAvailable() {;
   ) {;
 
     return localStorageAvailable;,
-}
+};
 ;
   lastAvailabilityCheck = now;
   try {;
@@ -37,7 +37,7 @@ function isLocalStorageAvailable() {;
 }
 }
 ;
-function safeConsoleError(message, error) {;
+function safeConsoleError(message, error): any {;
 
   const env = globalThis.process?.env?.NODE_ENV ?? 'production';
   // Prevent infinite recursion in console logging';
@@ -52,7 +52,7 @@ function safeConsoleError(message, error) {;
 ;
 export const safeStorage = {;
 
-  getItem: key => {;
+  getItem: key => {;,
 
     try {;
       return localStorage.getItem(key);,
@@ -75,7 +75,7 @@ export const safeStorage = {;
 }
   },;
 
-  removeItem: key => {;
+  removeItem: key => {;,
 
     try {;
       localStorage.removeItem(key);
@@ -87,7 +87,7 @@ export const safeStorage = {;
 }
   },;
 
-  clear: () => {;
+  clear: () => {;,
     try {;
       localStorage.clear();
       return true;,
@@ -98,7 +98,7 @@ export const safeStorage = {;
 }
   },;
 
-  key: index => {;
+  key: index => {;,
 
     try {;
       return localStorage.key(index);,
@@ -118,4 +118,4 @@ export const safeStorage = {;
   }};
 ;
 export default safeStorage;
-}
+};

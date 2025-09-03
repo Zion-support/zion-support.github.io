@@ -2,15 +2,15 @@ import React from 'react';
 import Head from 'next/head';
 ;
 interface SEOProps {;
-  title: string;
-  description: string;
+  title: string;,
+  description: string;,
   keywords?: string;
   image?: string;
   url?: string;
   type?: string;,
 }
 ;
-const SEO: React.FC<SEOProps> = ({;
+const SEO: React.FC<SEOProps> = ({;,
   title,;
   description,;
   keywords = "AI solutions, cloud services, technology consulting, digital transformation, IT services, Zion Tech Group",;
@@ -36,10 +36,10 @@ const SEO: React.FC<SEOProps> = ({;
       <meta property="og:title" content={fullTitle} />;
       <meta property="og:description" content={description} />;
       <meta property="og:image" content={image} />;
-      <meta property="og:site_name" content="Zion Tech Group" />;
+      <meta property="og: site_name" content="Zion Tech Group" />;,
       ;
       {/* Twitter */}
-      <meta property="twitter:card" content="summary_large_image" />;
+      <meta property="twitter: card" content="summary_large_image" />;,
       <meta property="twitter:url" content={url} />;
       <meta property="twitter:title" content={fullTitle} />;
       <meta property="twitter:description" content={description} />;
@@ -60,10 +60,10 @@ const SEO: React.FC<SEOProps> = ({;
       <link rel="manifest" href="/site.webmanifest" />;
       ;
       {/* Structured Data */}
-      <script;
+      <script;>
         type="application/ld+json";
         dangerouslySetInnerHTML={{;
-          __html: JSON.stringify({;
+          __html: JSON.stringify({;,
             "@context": "https://schema.org",;
             "@type": "Organization",;
             "name": "Zion Tech Group",;
@@ -81,7 +81,7 @@ const SEO: React.FC<SEOProps> = ({;
               "availableLanguage": ["English", "Portuguese"];,
 },;
             "sameAs": [;
-              "https://www.linkedin.com/company/zion-technologies";
+              "https: //www.linkedin.com/company/zion-technologies";,
             ];,
 });,
 }}

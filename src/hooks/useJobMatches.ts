@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'; // Added useCallback;
 import { supabase } from '@/integrations/supabase/client';
-export default function Page() {;
+export default function Page(): any {;
 );
       setMatches([]); // Clear matches on error;,
 } finally {;
@@ -18,17 +18,17 @@ export default function Page() {;
       if(response.error) throw new Error(response.error.message);
       ;
       toast({;
-        title: "AI Matching Complete",;
-        description: `Found ${response.data.matches || 0} potential talent matches for this job.`,;,
+        title: "AI Matching Complete",;";
+        description: `Found ${response.data.matches || 0} potential talent matches for this job.`,;,`;
 });
       ;
       await fetchMatches();,
 } catch(error) {;
-      console.error("Error triggering AI matching:", error);
+      console.error("Error triggering AI matching:", error);";
       toast({;
-        title: "Matching Failed",;
-        description: "Could not process talent matching.Please try again later.",;
-        variant: "destructive",;,
+        title: "Matching Failed",;";
+        description: "Could not process talent matching.Please try again later.",;";
+        variant: "destructive",;,";
 });,
 } finally {;
       setIsProcessing(false);,
@@ -51,3 +51,4 @@ export default function Page() {;
     refetch: fetchMatches // Added refetch;,
 };,
 }
+;

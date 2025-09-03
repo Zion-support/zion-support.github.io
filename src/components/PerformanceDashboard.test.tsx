@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<PerformanceDashboard  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<PerformanceDashboard  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import PerformanceDashboard from &apos;./PerformanceDashboard;
 describe(&apos;PerformanceDashboard&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;PerformanceDashboard&apos, () => {;
     render();,
 }
     // comment;
-    render(<PerformanceDashboard / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<PerformanceDashboard / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

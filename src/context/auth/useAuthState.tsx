@@ -1,8 +1,9 @@
+import React from 'react';
 :src/context/auth/useAuthState.tsx;
 
 interface User {;
-  id: string;
-  email: string;
+  id: string;,
+  email: string;,
   displayName?: string;
   avatar?: string;
   role?: string;
@@ -12,10 +13,10 @@ interface User {;
 }
 ;
 interface AuthTokens {;
-  accessToken: string | null;
+  accessToken: string | null;,
   refreshToken: string | null}
 ;
-  accessToken: string | null;
+  accessToken: string | null;,
   refreshToken: string | null;,
 }
 ;
@@ -50,11 +51,11 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
 
                 accessToken: parsed.token,;
 :src/context/auth/useAuthState.tsx;
-                refreshToken: parsed.refreshToken || null';
+                refreshToken: parsed.refreshToken || null';,
         // // // // // // // // console.error('Error checking auth state:', error)} finally {;
 
         setIsLoading(false)})}
-                refreshToken: parsed.refreshToken || null;
+                refreshToken: parsed.refreshToken || null;,
         // // // // // // // console.error('Error checking auth state:', error)} finally {;
         setIsLoading(false)})}
           }
@@ -79,3 +80,4 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
     tokens,;
     setTokens;,
 }};
+;

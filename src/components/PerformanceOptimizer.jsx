@@ -2,8 +2,8 @@ import React, { useEffect, useMemo, useCallback } from 'react';
 import { useLocation  } from 'react-router-dom';
 ;
 export default function Page() {;
-";
-        // Add decoding="async" for better performance';
+";";
+        // Add decoding="async" for better performance';";
         img.decoding = 'async';
         // Add error handling;
         img.onerror = () => {;
@@ -57,8 +57,7 @@ export default function Page() {;
         .register('/sw.js');
         .then(registration => {;
 
-          // // console.log('SW registered: ', registration);
-;
+          // // ;
           // Check for updates';
           registration.addEventListener('updatefound', () => {;
             const newWorker = registration.installing;
@@ -71,7 +70,7 @@ export default function Page() {;
                 ) {;
 
                   // New service worker available';
-                  // // console.log('New service worker available');,
+                  // // ,
 }
               });,
 }
@@ -155,7 +154,7 @@ if(typeof window !== 'undefined') {;
 }
   });,
 }
-;";,
-});,"});,
+;";,";
+});,"});,";
 }
- export const PerformanceOptimizer = memo(({ children }) => { const location = useLocation () "
+ export const PerformanceOptimizer = memo(({ children }) => { const location = useLocation () ";

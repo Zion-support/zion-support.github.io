@@ -1,7 +1,7 @@
 import React from 'react';
 ;
   return();
-    <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>;
+    <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>;`;
       {children}
     </div>;
   );,

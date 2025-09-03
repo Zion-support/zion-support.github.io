@@ -1,3 +1,4 @@
+import React from 'react';
 import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
 ;
@@ -15,14 +16,14 @@ export function LoadingSpinner({;
 
   ;,
 }}
-            />";
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zion-cyan font-bold text-xl">;
+            />";";
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zion-cyan font-bold text-xl">;";
               ZION;
             </div>;
           </div>;
 
-          <motion.h2";
-            className="text-2xl font-bold text-white mb-2";
+          <motion.h2";";>
+            className="text-2xl font-bold text-white mb-2";";
             animate = {;
 
   { opacity: [0.7, 1,;
@@ -37,8 +38,8 @@ export function LoadingSpinner({;
             Loading {pageName}
           </motion.h2>;
 
-          <motion.p";
-            className="text-zion-slate-light";
+          <motion.p";";>
+            className="text-zion-slate-light";";
             animate = {;
 
   { opacity: [0.5, 1,;
@@ -53,16 +54,16 @@ export function LoadingSpinner({;
             Please wait while we prepare everything for you...;
           </motion.p>;
 
-          {/* Progress Bar */}";
-          <div className="mt-6 w-64 mx-auto">";
-            <div className="bg-zion-slate-light/20 rounded-full h-2 overflow-hidden">;
-              <motion.div";
-                className="h-full bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full";
-                initial={{ width: 0 }}";
-                animate={{ width: "100%" }}
+          {/* Progress Bar */}";";
+          <div className="mt-6 w-64 mx-auto">";";
+            <div className="bg-zion-slate-light/20 rounded-full h-2 overflow-hidden">;";
+              <motion.div";";>
+                className="h-full bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full";";
+                initial={{ width: 0 }}";";
+                animate={{ width: "100%" }}";
                 transition = {;
   { duration: 3,;
-  ease: "easeInOut";,
+  ease: "easeInOut";,";
 }}
               />;
             </div>;
@@ -75,12 +76,12 @@ export function LoadingSpinner({;
 ;
 export function SkeletonLoader(...args[]):  {;
 
-  return ()`;
-<div className:  {`space-y-3 ${className}`}>;
+  return ()`;`;
+<div className:  {`space-y-3 ${className}`}>;`;
       {Array.from({ length: lines }).map((_, index)  => (;
-        <motion.div;
-          key={index}";
-          className="h-4 bg-zion-slate-light/20 rounded";
+        <motion.div;>
+          key={index}";";
+          className="h-4 bg-zion-slate-light/20 rounded";";
           animate = {;
 
   {;
@@ -100,5 +101,5 @@ export function SkeletonLoader(...args[]):  {;
 
   {;
 
-            background: 'linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1), transparent),"`;
-}})
+            background: 'linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1), transparent),"`;`;
+}});

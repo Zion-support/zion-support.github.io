@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<MobileNavigation  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<MobileNavigation  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import MobileNavigation from &apos;./MobileNavigation;
 describe(&apos;MobileNavigation&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;MobileNavigation&apos, () => {;
     render();,
 }
     // comment;
-    render(<MobileNavigation / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<MobileNavigation / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

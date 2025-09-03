@@ -16,7 +16,7 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
   const navigate = useNavigate();
   const { createJob, updateJob, getJobById } = useJobs();
   const [isFormLoading, setIsFormLoading] = useState(false);
-  const [editorContent, setEditorContent] = useState("");
+  const [editorContent, setEditorContent] = useState("");";
   ;
   const {;
     form,;
@@ -34,7 +34,7 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
   const { isSubmitting } = formState;
 ;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -65,8 +65,8 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
 }
         });
         .catch((error) => {;
-          console.error("Failed to load job:", error);
-          toast.error("Failed to load job");,
+          console.error("Failed to load job:", error);";
+          toast.error("Failed to load job");,";
 });
         .finally(() => {;
           setIsFormLoading(false);,
@@ -74,12 +74,12 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
 }
   }, [jobId, getJobById, setValue, getValues, setStartDate, setEndDate, setIsRemote]); // Added getValues;
 
-  const handleEditorChange = useCallback((value: string) => {;
+  const handleEditorChange = useCallback((value: string) => {;,
     setEditorContent(value);
     setValue('description', value);,
 }, [setValue]);
 ;
-  const onSubmit = async(values: JobSchemaType) => {;
+  const onSubmit = async(values: JobSchemaType) => {;,
     setIsFormLoading(true);
 ;
     try {;
@@ -87,40 +87,40 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
       ;
       if(jobId) {;
         await updateJob(jobId, jobData);
-        toast.success("Job updated successfully!");,
+        toast.success("Job updated successfully!");,";
 } else {;
         await createJob(jobData);
-        toast.success("Job posted successfully!");
+        toast.success("Job posted successfully!");";
         form.reset();
-        setEditorContent("");,
+        setEditorContent("");,";
 }
 ;
       if(onSuccess) {;
         onSuccess();,
 }
-    } catch(error: any) {;
-      console.error("Error creating/updating job:", error);
-      toast.error(error.message || "Failed to post job");,
+    } catch(error: any) {;,
+      console.error("Error creating/updating job:", error);";
+      toast.error(error.message || "Failed to post job");,";
 } finally {;
       setIsFormLoading(false);,
 }
   };
 ;
   if(isLoading || isFormLoading) {;
-    return <div className="flex items-center justify-center p-8">Loading...</div>;,
+    return <div className="flex items-center justify-center p-8">Loading...</div>;,";
 }
 ;
   return (<Form {...form}>;
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">;
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">;";
         <div>;
-          <h3 className="text-lg font-medium">Post a Job</h3>;
-          <p className="text-sm text-muted-foreground">;
+          <h3 className="text-lg font-medium">Post a Job</h3>;";
+          <p className="text-sm text-muted-foreground">;";
             Fill in the details below to create a job posting.</p>;
         </div>;
 
         <BasicInfoFields control={form.control} />;
         ;
-        <DateFields ;
+        <DateFields ;>
           startDate={startDate} ;
           setStartDate={setStartDate}
           endDate={endDate}
@@ -128,28 +128,29 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
         />;
 
         <div>;
-          <Label htmlFor="isRemote">;
-            <Input;
-              type="checkbox";
-              id="isRemote";
+          <Label htmlFor="isRemote">;";
+            <Input;>
+              type="checkbox";";
+              id="isRemote";";
               checked={isRemote}
-              className="mr-2";
+              className="mr-2";";
               onChange={(e) => setIsRemote(e.target.checked)}
             />;
             Remote;
           </Label>;
         </div>;
 
-        <DescriptionFields ;
+        <DescriptionFields ;>
           control={form.control} ;
           handleEditorChange={handleEditorChange}
           editorContent={editorContent}
         />;
 
-        <Button type="submit" disabled={isSubmitting || isFormLoading}>;
-          {isSubmitting || isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
+        <Button type="submit" disabled={isSubmitting || isFormLoading}>;";
+          {isSubmitting || isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}";
         </Button>;
       </form>;
     </Form>;
   );,
 }
+;

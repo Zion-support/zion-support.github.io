@@ -20,13 +20,13 @@ export const Skeleton: React.FC<SkeletonProps> = ({",;
   if (height);
     style.height = typeof height === "number" ? "${height}px" : height;
   return (;
-    <div;
+    <div;>
       className = "{"animate-pulse" bg-gray-200 ${rounded ? "rounded-full" : "rounded"} ${className}"}";
       style="{style}">;
    />;
   );,
 }
-export const CardSkeleton: React.FC = () => (`";
+export const CardSkeleton: React.FC = () => (`";,
   <div className="bg-white rounded-lg shadow-md p-6">",;
     <Skeleton height="{20}" className="mb-4"  />;
     <Skeleton height="{16}" className="mb-2"  />;

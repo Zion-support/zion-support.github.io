@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<EnhancedSEOAccessibility  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<EnhancedSEOAccessibility  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import EnhancedSEOAccessibility from &apos;./EnhancedSEOAccessibility;
 describe(&apos;EnhancedSEOAccessibility&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;EnhancedSEOAccessibility&apos, () => {;
     render();,
 }
     // comment;
-    render(<EnhancedSEOAccessibility / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<EnhancedSEOAccessibility / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

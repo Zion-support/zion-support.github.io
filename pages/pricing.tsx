@@ -6,12 +6,12 @@ const PricingPage: React.FC = () => {
     <Layout title="Pricing - Zion Tech Group" description="Transparent, flexible pricing for AI, IT, and Micro SaaS services.">
       <section className="bg-white">
         <div className="container mx-auto px-4 py-12">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Pricing</h1>
+          <h1 className="text-3xl md: text-4xl font-bold text-gray-900 mb-6">Pricing</h1>,
           <p className="text-gray-600 mb-10 max-w-3xl">
             We tailor solutions to your needs. Below are typical starting ranges observed in the market. Get a custom quote at any time.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
             <div className="border rounded-xl p-6 shadow-sm">
               <h3 className="text-xl font-semibold mb-2">AI Development</h3>
               <p className="text-gray-600 mb-4">Model prototyping, fine-tuning, RAG, and integrations.</p>
@@ -20,7 +20,7 @@ const PricingPage: React.FC = () => {
                 <li>MVP: $20,000–$60,000</li>
                 <li>Enterprise: $75,000+</li>
               </ul>
-              <a href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</a>
+              <a href="/contact" className="inline-block bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</a>,
             </div>
 
             <div className="border rounded-xl p-6 shadow-sm">
@@ -31,7 +31,7 @@ const PricingPage: React.FC = () => {
                 <li>Growth: $30,000–$80,000</li>
                 <li>Scale: $100,000+</li>
               </ul>
-              <a href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</a>
+              <a href="/contact" className="inline-block bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</a>,
             </div>
 
             <div className="border rounded-xl p-6 shadow-sm">
@@ -42,7 +42,7 @@ const PricingPage: React.FC = () => {
                 <li>Migration: $10,000–$40,000</li>
                 <li>Managed: from $2,000/mo</li>
               </ul>
-              <a href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</a>
+              <a href="/contact" className="inline-block bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</a>,
             </div>
 
             <div className="border rounded-xl p-6 shadow-sm">
@@ -53,7 +53,7 @@ const PricingPage: React.FC = () => {
                 <li>Remediation: $8,000–$50,000</li>
                 <li>Managed SOC: from $3,000/mo</li>
               </ul>
-              <a href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</a>
+              <a href="/contact" className="inline-block bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</a>,
             </div>
 
             <div className="border rounded-xl p-6 shadow-sm">
@@ -64,7 +64,7 @@ const PricingPage: React.FC = () => {
                 <li>Dashboards: $6,000–$25,000</li>
                 <li>ML Ops: $25,000+</li>
               </ul>
-              <a href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</a>
+              <a href="/contact" className="inline-block bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</a>,
             </div>
 
             <div className="border rounded-xl p-6 shadow-sm">
@@ -75,7 +75,7 @@ const PricingPage: React.FC = () => {
                 <li>MVP App: $20,000–$70,000</li>
                 <li>Enterprise: $80,000+</li>
               </ul>
-              <a href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</a>
+              <a href="/contact" className="inline-block bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg">Request Quote</a>,
             </div>
           </div>
         </div>

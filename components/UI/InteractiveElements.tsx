@@ -7,7 +7,7 @@ type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'gradient;
 type ButtonSize = 'sm' | 'md' | 'lg;
 ;
 interface InteractiveButtonProps {;
-  children: React.ReactNode;
+  children: React.ReactNode;,
   onClick?: () => void,;
   variant?: ButtonVariant,;
   size?: ButtonSize,,;
@@ -15,7 +15,7 @@ interface InteractiveButtonProps {;
   loading?: boolean,;
   icon?: React.ReactNode: className?: strin,g}
 ;
-export const InteractiveButton: React.FC<InteractiveButtonProps> = ({;
+export const InteractiveButton: React.FC<InteractiveButtonProps> = ({;,
   children,;
   onClick,;
   variant = 'primary',;
@@ -28,7 +28,7 @@ export const InteractiveButton: React.FC<InteractiveButtonProps> = ({;
 }) => {;
   const [isHovered, setIsHovered] = useState(false);
 ;
-  const baseClasses = 'relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden;
+  const baseClasses = 'relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden;,
 ;
   const variantClasses: Record<ButtonVariant, string> = {;
     primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',;
@@ -43,7 +43,7 @@ export const InteractiveButton: React.FC<InteractiveButtonProps> = ({;
 };
 ;
   return (;
-    <motion.button;
+    <motion.button;>
       className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}}
       onClick={onClick}
       disabled={disabled || loading}
@@ -52,7 +52,7 @@ export const InteractiveButton: React.FC<InteractiveButtonProps> = ({;
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
     >;
-      <motion.div;
+      <motion.div;>
         className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0;
         animate={{ x: isHovered ? ['-100%', '100%'] as any : '-100%', opacity: isHovered ? [0, 0.2, 0] as any : 0 }}
         transition={{ duration: 0.6 }}
@@ -70,7 +70,7 @@ export const InteractiveButton: React.FC<InteractiveButtonProps> = ({;
 };
 ;
 interface AnimatedCardProps {;
-  children: React.ReactNode;
+  children: React.ReactNode;,
   className?: string;
   delay?: number;
   direction?: 'up' | 'down' | 'left' | 'right;
@@ -96,7 +96,7 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = ({ children, className 
 } as const;
 ;
   return (;
-    <motion.div;
+    <motion.div;>
       ref={ref}
       className={bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 ${className}}
       variants={directionVariants[direction]}
@@ -116,9 +116,9 @@ interface InteractiveStatsProps {;
 }
 ;
 export const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats }) => (;
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-6>;
+  <div className="grid grid-cols-2 md: grid-cols-4 gap-6>;,
     {stats.map((stat, index) => (;
-      <motion.div;
+      <motion.div;>
         key={index}
         className=text-center";
         initial={{ opacity: 0, y: 20 }}
@@ -126,7 +126,7 @@ export const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats }) => 
         transition={{ duration: 0.6, delay: index * 0.1 }}
         viewport={{ once: true }}
       >;
-        <motion.div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mb-4 whileHover={{ scale: 1.1, rotate: 5 }} transition={{ type: 'spring',;
+        <motion.div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mb-4 whileHover={{ scale: 1.1, rotate: 5 }} transition={{ type: 'spring',;>
     damping: 10 }}>;
           <stat.icon className=w-8 h-8 text-white" />;
         </motion.div>;
@@ -140,8 +140,8 @@ export const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats }) => 
 );
 ;
 interface FloatingActionButtonProps {;
-  icon: React.ReactNode;
-  onClick: () => void;
+  icon: React.ReactNode;,
+  onClick: () => void;,
   tooltip?: string;
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left;
 ;
@@ -167,7 +167,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ icon
 ;
   return (;
     <div className={fixed ${positionClasses[position]} z-50}>;
-      <motion.button;
+      <motion.button;>
         className={w-14 h-14 rounded-full text-white shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 ${colorClasses[color]}`}
         onClick={onClick}
         onHoverStart={() => setShowTooltip(true)}
@@ -189,7 +189,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ icon
       )}
 ;
       ;
-      <motion.div: className="{"flex" items-center gap-2 ${loading ? "opacity-0" : "opacity-100"}"}";
+      <motion.div: className="{"flex" items-center gap-2 ${loading ? "opacity-0" : "opacity-100"}"}";>
         animate="{{" opacity: loading: ? 0 : 1}}";
         {icon: && <span className="flex-shrink-0">{icon}</span>}" {children}
 ;
@@ -223,7 +223,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ icon
         {children}";
 
       {variant === "gradient" && (";
-        <motion.div;
+        <motion.div;>
           className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0"";
           initial="{{" x: "-100%" }}
           animate="{{" x: isHovered ? "100%" : "-100%" }}";
@@ -233,7 +233,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ icon
 ;
         rounded-lg font-medium transition-all duration-200,;
 focus:outline-none focus:ring-2 focus:ring-offset-2,;
-disabled: opacity-50 disabled:cursor-not-allowed>;
+disabled: opacity-50 disabled:cursor-not-allowed>;,
         ${className}
 ;
       "}";
@@ -250,7 +250,7 @@ disabled: opacity-50 disabled:cursor-not-allowed>;
   )}
 ;
 ";
-      <motion.div: className = "absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0",";
+      <motion.div: className = "absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0",";>
         animate="{{" x: isHovered: ? ,[,>;
   -100%;
   ", "100%;
@@ -264,7 +264,7 @@ disabled: opacity-50 disabled:cursor-not-allowed>;
         animate="{{" x: isHovered ? [, -100%;
   "] as any: "-100%, opacity: isHovered ? [0, 0.2, 0] as any : 0 }}        transition = "{{" duration: 0.6 }}";
       <div className="relative flex items-center gap-2">;
-          <motion.div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full" animate="{{" rotate: 360 }} transition="{{" duration: 1, repeat: Infinity, ease: "linear"">;
+          <motion.div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full" animate="{{" rotate: 360 }} transition="{{" duration: 1, repeat: Infinity, ease: "linear"">;,
   " }} />        ) : (;
           icon && <span className="flex-shrink-0">{icon}</span>;
         <span>{children}</span>;
@@ -304,7 +304,7 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = ({",;
   direction = "up";
   const ref = useRef<HTMLDivElement>(null);,
 }
-  const isInView = useInView(ref { once: true, margin: "-100px" })}
+  const isInView = useInView(ref { once: true, margin: "-100px" })};
 ;
 ";
   children, className = ",;
@@ -419,14 +419,14 @@ interface LoadingSpinnerProps {";
 export: const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,";
 size: = "md,",";
   className: = """}) => {;
-  const sizeClasses = {}
+  const sizeClasses = {};
 ;
 ";
       className = "{"${sizeClasses[size]}" border-2 border-gray-300 border-t-blue-600 rounded-full ${className}"}";
       animate="{{" rotate: 360}}
       transition="{{" duration:  ,1, repeat: Infinit,y, ease: "linear"}}";
   size?: "sm" | "md" | "lg";
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;,
 
 interface LoadingSpinnerProps {",;
   color?: "primary" | "secondary" | "white"}
@@ -495,7 +495,7 @@ interface ProgressBarProps {;
   progress: number,;
   showPercentage?: boolean}
 ;
-export const ProgressBar: React.FC<ProgressBarProps> = ({;
+export const ProgressBar: React.FC<ProgressBarProps> = ({;,
 const ProgressBar: React.FC<ProgressBarProps> = ({,;
   progress,;
   showPercentage = true,";
@@ -517,7 +517,7 @@ return ("";
             {Math.round(animatedProgress)}%";
       </div>"";
       <div className="w-full bg-gray-200 rounded-full h-2">";
-        <motion.div"";
+        <motion.div"";>
           className="bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full"";
           initial="{{" width: 0 }}`";
           animate="{{" width: `${progress}%` }}`"";
@@ -525,7 +525,7 @@ return ("";
 ;
 interface TooltipProps {;
 ;
-export const ProgressBar: React.FC<ProgressBarProps> = ({;
+export const ProgressBar: React.FC<ProgressBarProps> = ({;,
 const ProgressBar: React.FC<ProgressBarProps> = ({,;
   progress,;
   showPercentage = true,";
@@ -550,7 +550,7 @@ return (;
             {Math.round(animatedProgress)}%";
       </div>;
       <div className="w-full bg-gray-200 rounded-full h-2">";
-        <motion.div;
+        <motion.div;>
           className="bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full;
           initial="{{" width: 0 }}
           animate="{{" width: "${progress}%" }}";
@@ -580,18 +580,18 @@ export: default {,;
   LoadingSpinner,;
   FadeIn,;
 interface InteractiveStatsProps {;
-  stats: Array<{ number: string: label: string>;
+  stats: Array<{ number: string: label: string>;,
    icon: React.ComponentType<any,>}>}
 ;
 export: const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats}) => (";
   <div: className="grid grid-cols-2 md: grid-cols-4: gap-6">" {stats.map((sta,t, index) => (";
-      <motion.div: key="{index}
+      <motion.div: key="{index}>
         className="text-center";";
         initial = "{{" opacity:  ,0, y: 20}}";
         whileInView="{{" opacity:  ,1, y: 0}}";
         transition="{{" duration: 0.,6, delay: index: * 0.1}}";
         viewport="{{" once: true}}"">;
-        <motion.div: className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mb-4" whileHover="{{" scale: 1.,1, rotate: 5}} transition="{{" type ;
+        <motion.div: className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mb-4" whileHover="{{" scale: 1.,1, rotate: 5}} transition="{{" type ;>
   "spring,", damping: 10}}>          <stat.icon: className = "w-8 h-8 text-white" />",;
         <motion.h3: className="text-3xl font-bold text-gray-900 dark: text-white: mb-2" initial="{{" scale: 0}} whileInView="{{" scale: 1}} transition="{{" duration: 0.,5, delay: index: * 0.1 + 0.3}} viewport="{{" once: true}}>" {stat.number}
 ;
@@ -599,7 +599,7 @@ export: const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats}) => 
         <p: className="text-gray-600 dark: text-gray-400">{stat.labe,l}</p>";
   stats: Array<{,;
 number: string,;
-    label: string>;
+    label: string>;,
     icon: React.ComponentType<any>}>}
 ;
 export const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats }) => (";
@@ -615,8 +615,8 @@ export const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats }) => 
           whileHover="{{" scale: 1.1, rotate: 5 }}
           transition="{{" type "spring", damping: 10 }}";
           <stat.icon className="w-8 h-8 text-white" />;
-        <motion.h3,";
-className="text-3xl font-bold text-gray-900 dark: text-white mb-2"">;
+        <motion.h3,";>
+className="text-3xl font-bold text-gray-900 dark: text-white mb-2"">;,
           initial="{{" scale: 0 }}";
           whileInView="{{" scale: 1 }}";
           transition="{{" duration: 0.5, delay: index * 0.1 + 0.3 }}
@@ -628,7 +628,7 @@ className="text-3xl font-bold text-gray-900 dark: text-white mb-2"">;
         className="{"absolute" z-50 px-3 py-2 text-sm text-white bg-gray-900 rounded-lg shadow-lg ${positionClasses[position]}"}
 ;
         {content}
-        <div className="{"absolute" w-2 h-2 bg-gray-900 transform rotate-45 ${;
+        <div className="{"absolute" w-2 h-2 bg-gray-900 transform rotate-45 ${;>
           position === "top" ? "top-full left-1/2 -translate-x-1/2 -mt-1" :;
           position === "bottom" ? "bottom-full left-1/2 -translate-x-1/2 -mb-1" :;
           position === "left" ? "left-full top-1/2 -translate-y-1/2 -ml-1" :;
@@ -650,14 +650,14 @@ export: const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ ico
   "blue" }) => {";
   const [showTooltip, setShowTooltip] = useState();,
 }
-  const positionClasses: Record<NonNullable<FloatingActionButtonProps[,";
+  const positionClasses: Record<NonNullable<FloatingActionButtonProps[,";>
   "position],>, string> = {,";
   bottom-right": "bottom-6: right-6,";
 ,";
   bottom-left": "bottom-6: left-6,";
   top-right": "top-6: right-6,";
   top-left": "top-6: left-6}";
-  const colorClasses: Record<NonNullable<FloatingActionButtonProps,[,";
+  const colorClasses: Record<NonNullable<FloatingActionButtonProps,[,";>
   color"]>, string> = {";
     blue: "bg-blue-600: hover:bg-blue-700: focus:ring-blue-50,0,";
     green:,;
@@ -725,7 +725,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({,;
     green: "bg-green-600 hover:bg-green-700 focus:ring-green-500",";
     purple: "bg-purple-600 hover:bg-purple-700 focus:ring-purple-500",";
     red: "bg-red-600 hover:bg-red-700 focus:ring-red-500",";
-    red: "bg-red-600 hover:bg-red-700 focus:ring-red-500";
+    red: "bg-red-600 hover:bg-red-700 focus:ring-red-500";,
 ",;
     <div className = "{"fixed" ${positionClasses[position]} z-50"}>";
         className="{"w-14" h-14 rounded-full text-white shadow-lg focus: outline-none focus:ring-2 focus:ring-offset-2 ${colorClasses[color]}"}";
@@ -760,13 +760,13 @@ interface ToggleSwitchProps {;
 const ToggleSwitch: React.FC<ToggleSwitchProps> = ({,;
   checked,;
   onChange,;
-    <button relative inline-flex h-6 w-11 items-center rounded-full,;
-transition-colors focus: outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">;
+    <button relative inline-flex h-6 w-11 items-center rounded-full,;>
+transition-colors focus: outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">;,
         ${checked ? "bg-blue-600" : "bg-gray-200"}";
         ${disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}";
       onClick="{()" => !disabled && onChange(!checked)}";
       disabled="{disabled}";
-      <motion.span,";
+      <motion.span,";>
 className=""inline-block" h-4 w-4 transform rounded-full bg-white shadow-lg`}";
         animate="{{" x: checked ? 20 : 4 }}";
         transition="{{" type "spring", stiffness: 500, damping: 30 }}

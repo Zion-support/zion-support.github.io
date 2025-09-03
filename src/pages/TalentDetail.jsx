@@ -6,11 +6,11 @@ import NotFound from '@/components/NotFound';''';
 import Spinner from '@/components/Spinner';''';
 import TalentProfile from '@/components/TalentProfile';
 ;
-export default function TalentDetail() {}
+export default function TalentDetail() {};
   const { id } = useParams();
   const { data, isLoading } = useQuery(';
     ['talent', id],;
-    () => api.get(`/talent/${id}`).then((r) => r.data),;
+    () => api.get(`/talent/${id}`).then((r) => r.data),;`;
     { enabled: !!id }
   );
 ;
@@ -19,9 +19,10 @@ export default function TalentDetail() {}
   if (isLoading) return <Spinner />;
   if (!data) return <NotFound />;
 ;
-  return <TalentProfile {...data} />;'`;,
-}'`'`;
-'`'`'`;
+  return <TalentProfile {...data} />;'`;,`;
+}'`'`;`;
+'`'`'`;`;
 
 ;
 export { TalentDetail };
+;

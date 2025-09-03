@@ -11,7 +11,7 @@ import { getCartKey } from '@/utils/cartUtils';''';
 import { useNavigate } from 'react-router-dom';''';
 import { safeStorage } from '@/utils/safeStorage';
 ;
-export default function WishlistPage() {}
+export default function WishlistPage() {};
   const [favorites, setFavorites] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
@@ -38,7 +38,7 @@ export default function WishlistPage() {}
     // Show loading or null while auth check or redirect happens;
     return null; // Or a loading spinner;,
 }
-  const addToCart = item => {}
+  const addToCart = item => {};
     const stored = safeStorage.getItem(getCartKey(user?.id));
     const cart = stored ? JSON.parse(stored) : [];
     cart.push({}
@@ -50,7 +50,7 @@ export default function WishlistPage() {}
     dispatch({ type: 'SET_ITEMS', payload: cart });,
 };
 ;
-  const addToCart = item => {}
+  const addToCart = item => {};
 ';
 '';
 ''';
@@ -70,12 +70,12 @@ export default function WishlistPage() {}
 ;
   if (loading) {}
     return();
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 pt-24">"";
-        <div className="container mx-auto px-4 py-8">"";
-          <div className="flex items-center justify-center min-h-[400px]">"";
-            <div className="text-center">"";
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-600 mx-auto mb-4"></div>"";
-              <p className="text-slate-600 dark:text-slate-400">Loading...</p>;
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark: from-slate-900 dark:to-slate-800 pt-24">"";";,
+        <div className="container mx-auto px-4 py-8">"";";
+          <div className="flex items-center justify-center min-h-[400px]">"";";
+            <div className="text-center">"";";
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-600 mx-auto mb-4"></div>"";";
+              <p className="text-slate-600 dark: text-slate-400">Loading...</p>;";,
             </div>;
           </div>;
         </div>;

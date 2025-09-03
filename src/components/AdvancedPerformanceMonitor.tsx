@@ -1,6 +1,6 @@
 import {   Activity, Zap, Clock,  TrendingUp, AlertTriangle  } from 'lucide-react';
 ;
-export default function Page() {;
+export default function Page(): any {;
 );
 ;
   // Calculate performance score based on Core Web Vitals;
@@ -13,7 +13,7 @@ export default function Page() {;
         validMetrics++;
         if(metrics.fcp < 1800) totalScore += 100;
         else if(metrics.fcp < 3000) totalScore += 50;
-        else totalScore += 0}
+        else totalScore += 0};
 ;
       // LCP scoring(0-100);
       if(metrics.lcp !== null) {;
@@ -39,8 +39,8 @@ export default function Page() {;
         else if(metrics.cls < 0.25) totalScore += 50;
         else totalScore += 0}
 ;
-      let rating: 'good' | 'needs-improvement' | 'poor';
-      let color: string;
+      let rating: 'good' | 'needs-improvement' | 'poor';,
+      let color: string;,
 ;
       if(averageScore >= 90) {;
 
@@ -56,8 +56,8 @@ export default function Page() {;
 ;
   TrendingUp,';
   AlertTriangle} from 'lucide-react';    ;
-    let grade: 'A' | 'B' | 'C' | 'D' | 'F';
-    let color: string;
+    let grade: 'A' | 'B' | 'C' | 'D' | 'F';,
+    let color: string;,
 ;
     if(averageScore >= 90) {;
       grade = 'A';
@@ -112,7 +112,7 @@ export default function Page() {;
       // Layout Shift;
       const clsObserver = new PerformanceObserver(list => {;
 
-        let clsValue = 0;        list.getEntries().forEach((entry: any) => {;
+        let clsValue = 0;        list.getEntries().forEach((entry: any) => {;,
 
           if(!entry.hadRecentInput) {;
 
@@ -138,7 +138,7 @@ export default function Page() {;
 ;
   // Format time values;
   ;
-    return `${Math.round(time)}ms`};
+    return `${Math.round(time)}ms`};`;
 ;
   // Format CLS value;
   ;
@@ -172,28 +172,29 @@ export default function Page() {;
           : value < 0.25';
             ? '🟡 Needs Improvement'';
             : '🔴 Poor';
-      default:';
+      default: ';,
         return 'N/A'}  };
 ;
   if(!isVisible) {;
 
     return ();
-      <button;
+      <button;>
         onClick={() => setIsVisible(true)}
-        className="fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg hover:bg-zion-cyan/90 transition-all duration-300 z-50">";
-        <Activity className="w-6 h-6"  />      </button>;
+        className="fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg hover: bg-zion-cyan/90 transition-all duration-300 z-50">";";,
+        <Activity className="w-6 h-6"  />      </button>;";
     )}
 ;
-  return (";
-    <div className="fixed bottom-4 right-4 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/30 rounded-2xl p-6 shadow-2xl z-50 max-w-sm">";
-      <div className="flex items-center justify-between mb-4">";
-        <h3 className="text-lg font-bold text-white flex items-center">";
-          <Zap className="w-5 h-5 mr-2 text-zion-cyan"  />          Performance Monitor;
+  return (";";
+    <div className="fixed bottom-4 right-4 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/30 rounded-2xl p-6 shadow-2xl z-50 max-w-sm">";";
+      <div className="flex items-center justify-between mb-4">";";
+        <h3 className="text-lg font-bold text-white flex items-center">";";
+          <Zap className="w-5 h-5 mr-2 text-zion-cyan"  />          Performance Monitor;";
         </h3>;
-        <button;
-          onClick={() => setIsVisible(false)}";
-          className="text-zion-slate-light hover:text-white transition-colors">;
+        <button;>
+          onClick={() => setIsVisible(false)}";";
+          className="text-zion-slate-light hover: text-white transition-colors">;";,
           ×;
         </button>;
       </div>;
-  );"}";
+  );"}";";
+;

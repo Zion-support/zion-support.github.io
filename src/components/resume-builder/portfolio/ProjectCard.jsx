@@ -2,30 +2,30 @@ import React, { useState } from 'react';
 import { useState } from 'react';
 ;
 export default function Page() {;
-            alt={project.title}";
-            className="w-full h-full object-cover";
+            alt={project.title}";";
+            className="w-full h-full object-cover";";
           />;
-        ) : (";
-          <div className="w-full h-full flex items-center justify-center bg-muted">";
-            <FileText className="h-12 w-12 text-muted-foreground/50" />;
+        ) : (";";
+          <div className="w-full h-full flex items-center justify-center bg-muted">";";
+            <FileText className="h-12 w-12 text-muted-foreground/50" />;";
           </div>;
         )}
       </div>;
-";
-      <CardContent className="flex-grow pt-6">";
-        <div className="space-y-2">";
-          <h3 className="font-semibold text-lg">{project.title}</h3>;
+";";
+      <CardContent className="flex-grow pt-6">";";
+        <div className="space-y-2">";";
+          <h3 className="font-semibold text-lg">{project.title}</h3>;";
 
-          {project.description && (";
-            <p className="text-sm text-muted-foreground line-clamp-3">;
+          {project.description && (";";
+            <p className="text-sm text-muted-foreground line-clamp-3">;";
               {project.description}
             </p>;
           )}
 ;
-          {project.technologies && project.technologies.length > 0 && (";
-            <div className="flex flex-wrap gap-1 mt-2">;
-              {project.technologies.map((tech, index) => (";
-                <Badge key={index} variant="secondary" className="text-xs">;
+          {project.technologies && project.technologies.length > 0 && (";";
+            <div className="flex flex-wrap gap-1 mt-2">;";
+              {project.technologies.map((tech, index) => (";";
+                <Badge key={index} variant="secondary" className="text-xs">;";
                   {tech}
                 </Badge>;
               ))}
@@ -33,48 +33,48 @@ export default function Page() {;
           )}
         </div>;
       </CardContent>;
-";
-      <CardFooter className="flex justify-between border-t bg-muted/40 p-4">";
-        <div className="flex gap-2">;
+";";
+      <CardFooter className="flex justify-between border-t bg-muted/40 p-4">";";
+        <div className="flex gap-2">;";
           {project.github_url && (;
-            <a;
-              href={project.github_url}";
-              target="_blank";
-              rel="noopener noreferrer";
+            <a;>
+              href={project.github_url}";";
+              target="_blank";";
+              rel="noopener noreferrer";";
               ;
-              title="GitHub">";
-              <Button variant="ghost" size="icon">";
-                <Github className="h-4 w-4" />;
+              title="GitHub">";";
+              <Button variant="ghost" size="icon">";";
+                <Github className="h-4 w-4" />;";
               </Button>;
             </a>;
           )}
 ;
           {project.demo_url && (;
-            <a;
-              href={project.demo_url}";
-              target="_blank";
-              rel="noopener noreferrer";
+            <a;>
+              href={project.demo_url}";";
+              target="_blank";";
+              rel="noopener noreferrer";";
               ;
-              title="Live demo">";
-              <Button variant="ghost" size="icon">";
-                <Link className="h-4 w-4" />;
+              title="Live demo">";";
+              <Button variant="ghost" size="icon">";";
+                <Link className="h-4 w-4" />;";
               </Button>;
             </a>;
           )}
         </div>;
-";
-        <div className="flex gap-2">;
-          <Button";
-            variant="ghost";
-            size="icon";
-            onClick={() => onEdit(project)}">";
-            <Edit className="h-4 w-4" />;
+";";
+        <div className="flex gap-2">;";
+          <Button";";>
+            variant="ghost";";
+            size="icon";";
+            onClick={() => onEdit(project)}">";";
+            <Edit className="h-4 w-4" />;";
           </Button>;
-          <Button";
-            variant="ghost";
-            size="icon";
-            onClick={() => setDeleteDialogOpen(true)}">";
-            <Trash2 className="h-4 w-4" />;
+          <Button";";>
+            variant="ghost";";
+            size="icon";";
+            onClick={() => setDeleteDialogOpen(true)}">";";
+            <Trash2 className="h-4 w-4" />;";
           </Button>;
         </div>;
       </CardFooter>;
@@ -89,9 +89,9 @@ export default function Page() {;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
             <AlertDialogCancel>Cancel</AlertDialogCancel>;
-            <AlertDialogAction;
-              onClick={handleDelete}";
-              className="bg-destructive text-destructive-foreground">;
+            <AlertDialogAction;>
+              onClick={handleDelete}";";
+              className="bg-destructive text-destructive-foreground">;";
               Delete;
             </AlertDialogAction>;
           </AlertDialogFooter>;
@@ -100,4 +100,4 @@ export default function Page() {;
     </Card>;
   );,
 }
-'"
+'";

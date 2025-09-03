@@ -22,27 +22,27 @@ export default function Home() {;
   const stats = [;
     {;
       icon: Users,;
-      value: "500+",;
-      label: "Global Clients",;
-      description: "Serving businesses worldwide";,
+      value: "500+",;";
+      label: "Global Clients",;";
+      description: "Serving businesses worldwide";,";
 },;
     {;
       icon: Globe,;
-      value: "25+",;
-      label: "Countries",;
-      description: "International presence";,
+      value: "25+",;";
+      label: "Countries",;";
+      description: "International presence";,";
 },;
     {;
       icon: Code,;
-      value: "1000+",;
-      label: "Projects",;
-      description: "Successfully delivered";,
+      value: "1000+",;";
+      label: "Projects",;";
+      description: "Successfully delivered";,";
 },;
     {;
       icon: Shield,;
-      value: "99.9%",;
-      label: "Uptime",;
-      description: "Reliable infrastructure";,
+      value: "99.9%",;";
+      label: "Uptime",;";
+      description: "Reliable infrastructure";,";
 }
   ];
 ;
@@ -72,3 +72,4 @@ export { Home };
 export { Home };
 ;
 export { Home };
+;

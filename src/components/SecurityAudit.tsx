@@ -2,18 +2,18 @@
 import React, { useState, useEffect } from 'react';
 
 interface SecurityIssue {;
-  id: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
-  title: string;
-  description: string;
+  id: string;,
+  severity: 'low' | 'medium' | 'high' | 'critical';,
+  title: string;,
+  description: string;,
   status: 'open' | 'resolved';,
 }
 ;
-export default function SecurityAudit() {;
+export default function SecurityAudit(): any {;
   const [issues, setIssues] = useState<SecurityIssue[]>([]);
 
   useEffect(() => {;
-    const auditIssues: SecurityIssue[] = [;
+    const auditIssues: SecurityIssue[] = [;,
       {;
         id: '1',;
         severity: 'high',;
@@ -33,17 +33,18 @@ export default function SecurityAudit() {;
 }, []);
 
   return (;
-    <div className="space-y-4">;
-      <h2 className="text-2xl font-bold">Security Audit Report</h2>;
-      <div className="grid gap-4">;
+    <div className="space-y-4">;";
+      <h2 className="text-2xl font-bold">Security Audit Report</h2>;";
+      <div className="grid gap-4">;";
         {issues.map((issue) => (;
-          <div key={issue.id} className="border rounded-lg p-4">;
-            <h3 className="font-semibold">{issue.title}</h3>;
-            <p className="text-gray-600">{issue.description}</p>;
-            <span className="text-sm text-blue-600">Severity: {issue.severity}</span>;
+          <div key={issue.id} className="border rounded-lg p-4">;";
+            <h3 className="font-semibold">{issue.title}</h3>;";
+            <p className="text-gray-600">{issue.description}</p>;";
+            <span className="text-sm text-blue-600">Severity: {issue.severity}</span>;";
           </div>;
         ))}
       </div>;
     </div>;
   );,
 }
+;

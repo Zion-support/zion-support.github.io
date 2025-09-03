@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<ServiceWorkerRegistration  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<ServiceWorkerRegistration  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import ServiceWorkerRegistration from &apos;./ServiceWorkerRegistration;
 describe(&apos;ServiceWorkerRegistration&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;ServiceWorkerRegistration&apos, () => {;
     render();,
 }
     // comment;
-    render(<ServiceWorkerRegistration / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<ServiceWorkerRegistration / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

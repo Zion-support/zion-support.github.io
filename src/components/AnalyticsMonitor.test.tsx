@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<AnalyticsMonitor  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<AnalyticsMonitor  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import AnalyticsMonitor from &apos;./AnalyticsMonitor;
 describe(&apos;AnalyticsMonitor&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;AnalyticsMonitor&apos, () => {;
     render();,
 }
     // comment;
-    render(<AnalyticsMonitor / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<AnalyticsMonitor / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

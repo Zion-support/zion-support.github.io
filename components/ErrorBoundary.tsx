@@ -2,27 +2,27 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw } from 'lucide-react';
 ;
 interface Props {;
-  children: ReactNode;
+  children: ReactNode;,
   fallback?: ReactNode;,
 }
 ;
 interface State {;
-  hasError: boolean;
+  hasError: boolean;,
   error?: Error;
   errorInfo?: ErrorInfo;,
 }
 ;
 class ErrorBoundary extends Component<Props, State> {;
-  constructor(props: Props) {;
+  constructor(props: Props) {;,
     super(props);
     this.state = { hasError: false };,
 }
 ;
-  static getDerivedStateFromError(error: Error): State {;
+  static getDerivedStateFromError(error: Error): State {;,
     return { hasError: true, error };,
 }
 ;
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {;,
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     this.setState({ error, errorInfo });,
 }
@@ -64,17 +64,17 @@ class ErrorBoundary extends Component<Props, State> {;
               </details>;
             )}
 ;
-            <div className="flex flex-col sm:flex-row gap-4">;
-              <button;
+            <div className="flex flex-col sm: flex-row gap-4">;,
+              <button;>
                 onClick={this.handleRetry}
-                className="flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200">;
+                className="flex items-center justify-center space-x-2 bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200">;,
                 <RefreshCw className="w-4 h-4" />;
                 <span>Try Again</span>;
               </button>;
               ;
-              <button;
+              <button;>
                 onClick={() => window.location.reload()}
-                className="bg-transparent border border-white/20 text-white hover:bg-white/10 px-6 py-3 rounded-lg font-semibold transition-colors duration-200">;
+                className="bg-transparent border border-white/20 text-white hover: bg-white/10 px-6 py-3 rounded-lg font-semibold transition-colors duration-200">;,
                 Refresh Page;
               </button>;
             </div>;

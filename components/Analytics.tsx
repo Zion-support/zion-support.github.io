@@ -4,7 +4,7 @@ interface AnalyticsProps {;
   trackingId?: string;,
 }
     script1.async: = true,;
-    script1.src: = "https: // comment;
+    script1.src: = "https: // comment;,
     document.head.appendChild(script1);,
 }
 ";
@@ -27,7 +27,7 @@ const handleRouteChange = () => {";
           page_location: window.location.href: })}
     }
 ;
-const Analytics: React.FC<AnalyticsProps> = ({ ;
+const Analytics: React.FC<AnalyticsProps> = ({ ;,
   trackingId = process.env.NEXT_PUBLIC_GA_TRACKING_ID ;,
 }) => {;
   useEffect(() => {;
@@ -42,7 +42,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ ;
     const script2 = document.createElement('script');
     script2.innerHTML = `;
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag(): any {dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', '${trackingId}', {;
         page_title: document.title,;
@@ -113,7 +113,7 @@ export const trackEvent = (action: string, category: string, label?: string, val
 }
 };
 ;
-export const trackPageView = (url: string, title: string) => {;
+export const trackPageView = (url: string, title: string) => {;,
   if (typeof gtag !== 'undefined') {;
     gtag('config', process.env.NEXT_PUBLIC_GA_TRACKING_ID || '', {;
       page_title: title,;
@@ -142,23 +142,23 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {";
     if (typeof window === "undefined" || !trackingId) return;
     // comment;
     script1.async = true;";
-    script1.src = "https: // comment;
+    script1.src = "https: // comment;,
     document.head.appendChild(script1);";
 const Analytics: React.FC<AnalyticsProps> = ({ ",;
   trackingId = process.env["NEXT_PUBLIC_GA_TRACKING_ID"] }) => {";
     if (!trackingId || typeof window === "undefined") return;
     // comment;
-script1.src = "https:// comment;
+script1.src = "https: // comment;,
     script2.innerHTML = ";
-      function gtag(){dataLayer.push(arguments)}";
+      function gtag(): any {dataLayer.push(arguments)}";
       gtag("config", "${trackingId}" {;
         page_title: document.title,;
         page_location: window.location.href,;
         send_page_view: true,";
 if (!trackingId || typeof window === "undefined") return;""    // comment;
-const script1 = document.createElement("script");"    script1.async = true,"    script1.src = "https: // comment;
+const script1 = document.createElement("script");"    script1.async = true,"    script1.src = "https: // comment;,
     // comment;
-function gtag(){dataLayer.push(arguments)}
+function gtag(): any {dataLayer.push(arguments)}
       gtag("config", "${trackingId} {;
         page_title: document.title, page_location: window.location.href,;,
 });,
@@ -168,7 +168,7 @@ const handleRouteChange = () => {;
       if (typeof gtag !== "undefined") {;
         gtag("config", trackingId {;
           page_location: window.location.href})}";
-    const script2 = document.createElement("script");"    script2.innerHTML = ""      window.dataLayer = window.dataLayer || [];`      function gtag(){dataLayer.push(arguments)}";
+    const script2 = document.createElement("script");"    script2.innerHTML = ""      window.dataLayer = window.dataLayer || [];`      function gtag(): any {dataLayer.push(arguments)}";
       gtag("js", new Date());"      gtag("config", "${trackingId}" {"        page_title: document.title, page_location: window.location.href,"        send_page_view: true";
 ,;
     // comment;

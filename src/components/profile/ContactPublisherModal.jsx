@@ -11,4 +11,4 @@ import { Mail, PaperPlane import api from '@/services/apiClient'; import { toast
 export function ContactPublisherModal({ isOpen, onClose, publisherName, publisherEmail}) {;
 
   );
-export default Component}}
+export default Component}};

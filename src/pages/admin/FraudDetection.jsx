@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react";"";
-import SEO from "@/components/SEO";"";
-import { Card, CardContent } from "@/components/ui/card";"";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";"";
-import { Button } from "@/components/ui/button";"";
-import { toast } from "@/hooks/use-toast";"";
-import { supabase } from "@/integrations/supabase/client";";
-// Import refactored components"";
-import { FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent } from "@/components/admin/fraud-detection";
+import React, { useState, useEffect } from "react";"";";
+import SEO from "@/components/SEO";"";";
+import { Card, CardContent } from "@/components/ui/card";"";";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";"";";
+import { Button } from "@/components/ui/button";"";";
+import { toast } from "@/hooks/use-toast";"";";
+import { supabase } from "@/integrations/supabase/client";";";
+// Import refactored components"";";
+import { FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent } from "@/components/admin/fraud-detection";";
 export { function };
-export default function FraudDetection() {}
+export default function FraudDetection() {};
     const [flags, setFlags] = useState([]);
-    const [filteredFlags, setFilteredFlags] = useState([]);";
-    const [isLoading, setIsLoading] = useState(true);"";
-    const [searchQuery, setSearchQuery] = useState("");
+    const [filteredFlags, setFilteredFlags] = useState([]);";";
+    const [isLoading, setIsLoading] = useState(true);"";";
+    const [searchQuery, setSearchQuery] = useState("");";
     const [statusFilter, setStatusFilter] = useState(null);
     const [severityFilter, setSeverityFilter] = useState(null);
     const [contentTypeFilter, setContentTypeFilter] = useState(null);
@@ -24,20 +24,20 @@ export default function FraudDetection() {}
         false_positives: 0,;
         actioned_count: 0});
     // Fetch fraud flags;
-    const fetchFraudFlags = async () => {}
+    const fetchFraudFlags = async () => {};
         setIsLoading(true);
         try {}
-";
-            const { data, error } = await supabase"";
-                .from("fraud_flags")"";
-                .select("*")"";
-                .order("timestamp", { ascending: false });
+";";
+            const { data, error } = await supabase"";";
+                .from("fraud_flags")"";";
+                .select("*")"";";
+                .order("timestamp", { ascending: false });";
             if (error);
                 throw error;
             setFlags(data || []);
             setFilteredFlags(data || []);
             // Calculate stats;
-            const newStats = {}
+            const newStats = {};
   total_flags: data?.length || 0,;
                 pending_flags: data?.filter(flag => flag.status === 'pending').length || 0,';
                 suspicious_count: data?.filter(flag => flag.severity === 'suspicious').length || 0,';

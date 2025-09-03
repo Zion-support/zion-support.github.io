@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<AdvancedSearch  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<AdvancedSearch  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import AdvancedSearch from &apos;./AdvancedSearch;
 describe(&apos;AdvancedSearch&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;AdvancedSearch&apos, () => {;
     render();,
 }
     // comment;
-    render(<AdvancedSearch / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<AdvancedSearch / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

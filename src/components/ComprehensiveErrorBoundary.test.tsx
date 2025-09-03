@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<ComprehensiveErrorBoundary  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<ComprehensiveErrorBoundary  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import ComprehensiveErrorBoundary from &apos;./ComprehensiveErrorBoundary;
 describe(&apos;ComprehensiveErrorBoundary&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;ComprehensiveErrorBoundary&apos, () => {;
     render();,
 }
     // comment;
-    render(<ComprehensiveErrorBoundary / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<ComprehensiveErrorBoundary / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

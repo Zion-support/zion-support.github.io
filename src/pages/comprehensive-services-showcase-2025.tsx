@@ -50,7 +50,7 @@ import { ;
   Workflow as WorkflowIcon;,
 } from 'lucide-react';
 ;
-export function ComprehensiveServicesShowcase2025() {;
+export function ComprehensiveServicesShowcase2025(): any {;
   const serviceCategories = [;
     {;
       id: 'ai-ml',;
@@ -58,7 +58,7 @@ export function ComprehensiveServicesShowcase2025() {;
       icon: Brain,;
       color: 'from-purple-500 to-cyan-500',;
       description: 'Revolutionary AI solutions that transform business operations',;
-      services: [;
+      services: [;,
         {;
           name: 'AI Autonomous Business Intelligence',;
           href: '/services/ai-autonomous-business-intelligence',;
@@ -115,7 +115,7 @@ export function ComprehensiveServicesShowcase2025() {;
       icon: Atom,;
       color: 'from-blue-500 to-purple-600',;
       description: 'Next-generation computing power for complex problem solving',;
-      services: [;
+      services: [;,
         {;
           name: 'Quantum AI Hybrid Platform',;
           href: '/services/quantum-ai-hybrid-platform',;
@@ -156,7 +156,7 @@ export function ComprehensiveServicesShowcase2025() {;
       icon: Shield,;
       color: 'from-red-500 to-purple-600',;
       description: 'Enterprise-grade security solutions for modern threats',;
-      services: [;
+      services: [;,
         {;
           name: 'AI Cybersecurity Platform',;
           href: '/services/ai-cybersecurity-platform',;
@@ -189,7 +189,7 @@ export function ComprehensiveServicesShowcase2025() {;
       icon: Cloud,;
       color: 'from-cyan-500 to-blue-600',;
       description: 'Scalable cloud solutions and infrastructure management',;
-      services: [;
+      services: [;,
         {;
           name: 'Cloud DevOps',;
           href: '/services/cloud-devops',;
@@ -222,7 +222,7 @@ export function ComprehensiveServicesShowcase2025() {;
       icon: Rocket,;
       color: 'from-green-500 to-emerald-600',;
       description: 'Strategic digital transformation consulting and implementation',;
-      services: [;
+      services: [;,
         {;
           name: 'Digital Twin',;
           href: '/services/digital-twin',;
@@ -255,7 +255,7 @@ export function ComprehensiveServicesShowcase2025() {;
       icon: Building2,;
       color: 'from-orange-500 to-red-600',;
       description: 'Focused software solutions for specific business needs',;
-      services: [;
+      services: [;,
         {;
           name: 'Micro CRM',;
           href: '/services/micro-crm',;
@@ -315,54 +315,54 @@ export function ComprehensiveServicesShowcase2025() {;
   ];
 ;
   return (;
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate-darker to-zion-slate-darkest">;
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate-darker to-zion-slate-darkest">;";
       {/* Hero Section */}
-      <section className="relative overflow-hidden">;
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20"></div>;
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">;
-          <div className="text-center max-w-6xl mx-auto">;
-            <motion.div;
+      <section className="relative overflow-hidden">;";
+        <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20"></div>;";
+        <div className="relative container mx-auto px-4 sm: px-6 lg:px-8 pt-32 pb-20">;";,
+          <div className="text-center max-w-6xl mx-auto">;";
+            <motion.div;>
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center px-6 py-3 bg-zion-purple/20 border border-zion-purple/30 rounded-full text-zion-cyan text-lg font-medium mb-8">;
-              <Star className="w-5 h-5 mr-2" />;
+              className="inline-flex items-center px-6 py-3 bg-zion-purple/20 border border-zion-purple/30 rounded-full text-zion-cyan text-lg font-medium mb-8">;";
+              <Star className="w-5 h-5 mr-2" />;";
               2025 Comprehensive Services Showcase;
             </motion.div>;
-            <motion.h1;
+            <motion.h1;>
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">;
+              className="text-6xl md: text-7xl font-bold text-white mb-8 leading-tight">;";,
               Zion Tech Group;
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-blue">;
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-blue">;";
                 Innovation Hub;
               </span>;
             </motion.h1>;
-            <motion.p;
+            <motion.p;>
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-2xl text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto">;
+              className="text-2xl text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto">;";
               Discover our comprehensive portfolio of cutting-edge AI, Quantum Computing, ;
               Cybersecurity, and Micro SaaS solutions designed to transform your business ;
               and drive innovation in 2025 and beyond.;
             </motion.p>;
-            <motion.div;
+            <motion.div;>
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-6 justify-center">;
-              <Link;
-                to="/contact";
-                className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/25 text-lg">;
+              className="flex flex-col sm: flex-row gap-6 justify-center">;";,
+              <Link;>
+                to="/contact";";
+                className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover: from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/25 text-lg">;";,
                 Get Started Today;
-                <ArrowRight className="ml-3 w-6 h-6" />;
+                <ArrowRight className="ml-3 w-6 h-6" />;";
               </Link>;
-              <Link;
-                to="/demo";
-                className="inline-flex items-center px-10 py-5 border-2 border-zion-purple/30 text-zion-purple font-semibold rounded-xl hover:bg-zion-purple/10 transition-all duration-300 text-lg">;
-                <Play className="mr-3 w-6 h-6" />;
+              <Link;>
+                to="/demo";";
+                className="inline-flex items-center px-10 py-5 border-2 border-zion-purple/30 text-zion-purple font-semibold rounded-xl hover: bg-zion-purple/10 transition-all duration-300 text-lg">;";,
+                <Play className="mr-3 w-6 h-6" />;";
                 Watch Demo;
               </Link>;
             </motion.div>;
@@ -371,21 +371,21 @@ export function ComprehensiveServicesShowcase2025() {;
       </section>;
 
       {/* Stats Section */}
-      <section className="py-16 bg-zion-slate-dark/30">;
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
+      <section className="py-16 bg-zion-slate-dark/30">;";
+        <div className="container mx-auto px-4 sm: px-6 lg:px-8">;";,
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">;";,
             {stats.map((stat, index) => (;
-              <motion.div;
+              <motion.div;>
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center">;
-                <div className="text-4xl md:text-5xl font-bold text-zion-cyan mb-2">;
+                className="text-center">;";
+                <div className="text-4xl md: text-5xl font-bold text-zion-cyan mb-2">;";,
                   {stat.number}
                 </div>;
-                <div className="text-gray-400 font-medium">{stat.label}</div>;
+                <div className="text-gray-400 font-medium">{stat.label}</div>;";
               </motion.div>;
             ))}
           </div>;
@@ -393,38 +393,38 @@ export function ComprehensiveServicesShowcase2025() {;
       </section>;
 
       {/* Benefits Section */}
-      <section className="py-20">;
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
-          <motion.div;
+      <section className="py-20">;";
+        <div className="container mx-auto px-4 sm: px-6 lg:px-8">;";,
+          <motion.div;>
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16">;
-            <h2 className="text-4xl font-bold text-white mb-6">;
+            className="text-center mb-16">;";
+            <h2 className="text-4xl font-bold text-white mb-6">;";
               Why Choose Zion Tech Group?;
             </h2>;
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">;";
               We combine cutting-edge technology with proven expertise to deliver ;
               solutions that drive real business value and competitive advantage.;
             </p>;
           </motion.div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">;";,
             {benefits.map((benefit, index) => (;
-              <motion.div;
+              <motion.div;>
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-6">;
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-2xl flex items-center justify-center mx-auto mb-6">;
-                  <benefit.icon className="w-8 h-8 text-white" />;
+                className="text-center p-6">;";
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-2xl flex items-center justify-center mx-auto mb-6">;";
+                  <benefit.icon className="w-8 h-8 text-white" />;";
                 </div>;
-                <h3 className="text-xl font-semibold text-white mb-4">;
+                <h3 className="text-xl font-semibold text-white mb-4">;";
                   {benefit.title}
                 </h3>;
-                <p className="text-gray-400 leading-relaxed">;
+                <p className="text-gray-400 leading-relaxed">;";
                   {benefit.description}
                 </p>;
               </motion.div>;
@@ -434,84 +434,84 @@ export function ComprehensiveServicesShowcase2025() {;
       </section>;
 
       {/* Services Categories */}
-      <section className="py-20 bg-zion-slate-dark/30">;
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
-          <motion.div;
+      <section className="py-20 bg-zion-slate-dark/30">;";
+        <div className="container mx-auto px-4 sm: px-6 lg:px-8">;";,
+          <motion.div;>
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16">;
-            <h2 className="text-4xl font-bold text-white mb-6">;
+            className="text-center mb-16">;";
+            <h2 className="text-4xl font-bold text-white mb-6">;";
               Our Comprehensive Service Portfolio;
             </h2>;
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto">;
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto">;";
               Explore our extensive range of innovative services designed to meet ;
               every aspect of your digital transformation journey.;
             </p>;
           </motion.div>;
 
-          <div className="space-y-16">;
+          <div className="space-y-16">;";
             {serviceCategories.map((category, categoryIndex) => (;
-              <motion.div;
+              <motion.div;>
                 key={category.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-zion-slate-dark/50 border border-zion-slate rounded-2xl p-8">;
-                <div className="flex items-center mb-8">;
-                  <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center mr-6`}>;
-                    <category.icon className="w-8 h-8 text-white" />;
+                className="bg-zion-slate-dark/50 border border-zion-slate rounded-2xl p-8">;";
+                <div className="flex items-center mb-8">;";
+                  <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center mr-6`}>;`;
+                    <category.icon className="w-8 h-8 text-white" />;";
                   </div>;
                   <div>;
-                    <h3 className="text-3xl font-bold text-white mb-2">;
+                    <h3 className="text-3xl font-bold text-white mb-2">;";
                       {category.title}
                     </h3>;
-                    <p className="text-xl text-gray-400">;
+                    <p className="text-xl text-gray-400">;";
                       {category.description}
                     </p>;
                   </div>;
                 </div>;
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
+                <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">;";,
                   {category.services.map((service, serviceIndex) => (;
-                    <motion.div;
+                    <motion.div;>
                       key={serviceIndex}
                       initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.4, delay: serviceIndex * 0.1 }}
                       viewport={{ once: true }}
-                      className="bg-zion-slate-dark/30 border border-zion-slate rounded-xl p-6 hover:border-zion-purple/30 transition-all duration-300 group">;
-                      <div className="flex items-center mb-4">;
-                        <div className="w-12 h-12 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">;
-                          <service.icon className="w-6 h-6 text-white" />;
+                      className="bg-zion-slate-dark/30 border border-zion-slate rounded-xl p-6 hover: border-zion-purple/30 transition-all duration-300 group">;";,
+                      <div className="flex items-center mb-4">;";
+                        <div className="w-12 h-12 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center mr-4 group-hover: scale-110 transition-transform">;";,
+                          <service.icon className="w-6 h-6 text-white" />;";
                         </div>;
                         <div>;
-                          <h4 className="text-lg font-semibold text-white group-hover:text-zion-cyan transition-colors">;
+                          <h4 className="text-lg font-semibold text-white group-hover: text-zion-cyan transition-colors">;";,
                             {service.name}
                           </h4>;
-                          <div className="text-zion-cyan font-semibold">;
+                          <div className="text-zion-cyan font-semibold">;";
                             {service.price}
                           </div>;
                         </div>;
                       </div>;
-                      <p className="text-gray-400 text-sm mb-4 leading-relaxed">;
+                      <p className="text-gray-400 text-sm mb-4 leading-relaxed">;";
                         {service.description}
                       </p>;
-                      <ul className="space-y-2 mb-6">;
+                      <ul className="space-y-2 mb-6">;";
                         {service.features.map((feature, featureIndex) => (;
-                          <li key={featureIndex} className="flex items-center text-sm text-gray-300">;
-                            <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />;
+                          <li key={featureIndex} className="flex items-center text-sm text-gray-300">;";
+                            <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />;";
                             {feature}
                           </li>;
                         ))}
                       </ul>;
-                      <Link;
+                      <Link;>
                         to={service.href}
-                        className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light font-medium text-sm group-hover:underline transition-colors">;
+                        className="inline-flex items-center text-zion-cyan hover: text-zion-cyan-light font-medium text-sm group-hover:underline transition-colors">;";,
                         Learn More;
-                        <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />;
+                        <ArrowRight className="w-4 h-4 ml-1 group-hover: translate-x-1 transition-transform" />;";,
                       </Link>;
                     </motion.div>;
                   ))}
@@ -523,31 +523,31 @@ export function ComprehensiveServicesShowcase2025() {;
       </section>;
 
       {/* CTA Section */}
-      <section className="py-20">;
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
-          <motion.div;
+      <section className="py-20">;";
+        <div className="container mx-auto px-4 sm: px-6 lg:px-8">;";,
+          <motion.div;>
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center max-w-4xl mx-auto">;
-            <h2 className="text-4xl font-bold text-white mb-6">;
+            className="text-center max-w-4xl mx-auto">;";
+            <h2 className="text-4xl font-bold text-white mb-6">;";
               Ready to Transform Your Business?;
             </h2>;
-            <p className="text-xl text-gray-400 mb-8">;
+            <p className="text-xl text-gray-400 mb-8">;";
               Join thousands of businesses that have already revolutionized their ;
               operations with our innovative solutions. Let's build the future together.;
             </p>;
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">;
-              <Link;
-                to="/contact";
-                className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105 text-lg">;
+            <div className="flex flex-col sm: flex-row gap-6 justify-center">;";,
+              <Link;>
+                to="/contact";";
+                className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover: from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105 text-lg">;";,
                 Start Your Journey;
-                <ArrowRight className="ml-3 w-6 h-6" />;
+                <ArrowRight className="ml-3 w-6 h-6" />;";
               </Link>;
-              <Link;
-                to="/pricing";
-                className="inline-flex items-center px-10 py-5 border-2 border-zion-purple/30 text-zion-purple font-semibold rounded-xl hover:bg-zion-purple/10 transition-all duration-300 text-lg">;
+              <Link;>
+                to="/pricing";";
+                className="inline-flex items-center px-10 py-5 border-2 border-zion-purple/30 text-zion-purple font-semibold rounded-xl hover: bg-zion-purple/10 transition-all duration-300 text-lg">;";,
                 View Pricing Plans;
               </Link>;
             </div>;
@@ -556,19 +556,19 @@ export function ComprehensiveServicesShowcase2025() {;
       </section>;
 
       {/* Footer */}
-      <footer className="py-12 border-t border-zion-slate">;
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">;
-          <p className="text-gray-400">;
+      <footer className="py-12 border-t border-zion-slate">;";
+        <div className="container mx-auto px-4 sm: px-6 lg:px-8 text-center">;";,
+          <p className="text-gray-400">;";
             © 2025 Zion Tech Group. All rights reserved. | ;
-            <Link to="/privacy" className="text-zion-cyan hover:text-zion-cyan-light ml-2">;
+            <Link to="/privacy" className="text-zion-cyan hover: text-zion-cyan-light ml-2">;";,
               Privacy Policy;
             </Link> | ;
-            <Link to="/terms" className="text-zion-cyan hover:text-zion-cyan-light ml-2">;
+            <Link to="/terms" className="text-zion-cyan hover: text-zion-cyan-light ml-2">;";,
               Terms of Service;
             </Link>;
           </p>;
-          <div className="mt-4 text-sm text-gray-500">;
-            <p>Contact: +1 302 464 0950 | kleber@ziontechgroup.com</p>;
+          <div className="mt-4 text-sm text-gray-500">;";
+            <p>Contact: +1 302 464 0950 | kleber@ziontechgroup.com</p>;,
             <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>;
           </div>;
         </div>;

@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Settings } from 'lucide-react';
 ;
 interface AccessibilitySettings {;
-  fontSize: number;
-  highContrast: boolean;
-  reducedMotion: boolean;
+  fontSize: number;,
+  highContrast: boolean;,
+  reducedMotion: boolean;,
   keyboardNavigation: boolean;,
 }
 ;
@@ -25,7 +25,7 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
   const [isVisible, setIsVisible] = useState(false);
 ;
   // Apply accessibility styles;
-  const applyAccessibilityStyles = useCallback((highContrast: boolean, fontSize: string, reducedMotion: boolean) => {;
+  const applyAccessibilityStyles = useCallback((highContrast: boolean, fontSize: string, reducedMotion: boolean) => {;,
     const root = document.documentElement;
     ;
     if (highContrast) {;
@@ -49,75 +49,75 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
   useEffect(() => {;
     applyAccessibilityStyles(;
       settings.highContrast,;
-      `${settings.fontSize}px`,;
+      `${settings.fontSize}px`,;`;
       settings.reducedMotion;
     );,
 }, [settings, applyAccessibilityStyles]);
 ;
-  const updateSetting = (key: keyof AccessibilitySettings, value: any) => {;
+  const updateSetting = (key: keyof AccessibilitySettings, value: any) => {;,
     setSettings(prev => ({ ...prev, [key]: value }));,
 };
 ;
   if (!enabled) return null;
 ;
   return (;
-    <div className="accessibility-enhancer">;
+    <div className="accessibility-enhancer">;";
       <AnimatePresence>;
         {isVisible && (;
-          <motion.div;
+          <motion.div;>
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
-            className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4 max-w-sm z-50">;
-            <div className="flex items-center justify-between mb-4">;
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">;
+            className="fixed bottom-4 right-4 bg-white dark: bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4 max-w-sm z-50">;";,
+            <div className="flex items-center justify-between mb-4">;";
+              <h3 className="text-lg font-semibold text-gray-900 dark: text-white">;";,
                 Accessibility Settings;
               </h3>;
-              <button;
+              <button;>
                 onClick={() => setIsVisible(false)}
-                className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200";
-                aria-label="Close accessibility settings">;
+                className="text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hover:text-gray-200";";,
+                aria-label="Close accessibility settings">;";
                 ×;
               </button>;
             </div>;
 
-            <div className="space-y-4">;
+            <div className="space-y-4">;";
               <div>;
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">;
+                <label className="block text-sm font-medium text-gray-700 dark: text-gray-300 mb-2">;";,
                   Font Size: {settings.fontSize}px;
                 </label>;
-                <input;
-                  type="range";
-                  min="12";
-                  max="24";
+                <input;>
+                  type="range";";
+                  min="12";";
+                  max="24";";
                   value={settings.fontSize}
                   onChange={(e) => updateSetting('fontSize', parseInt(e.target.value))}
-                  className="w-full";
+                  className="w-full";";
                 />;
               </div>;
 
-              <div className="flex items-center space-x-2">;
-                <input;
-                  type="checkbox";
-                  id="highContrast";
+              <div className="flex items-center space-x-2">;";
+                <input;>
+                  type="checkbox";";
+                  id="highContrast";";
                   checked={settings.highContrast}
                   onChange={(e) => updateSetting('highContrast', e.target.checked)}
-                  className="rounded";
+                  className="rounded";";
                 />;
-                <label htmlFor="highContrast" className="text-sm text-gray-700 dark:text-gray-300">;
+                <label htmlFor="highContrast" className="text-sm text-gray-700 dark: text-gray-300">;";,
                   High Contrast;
                 </label>;
               </div>;
 
-              <div className="flex items-center space-x-2">;
-                <input;
-                  type="checkbox";
-                  id="reducedMotion";
+              <div className="flex items-center space-x-2">;";
+                <input;>
+                  type="checkbox";";
+                  id="reducedMotion";";
                   checked={settings.reducedMotion}
                   onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
-                  className="rounded";
+                  className="rounded";";
                 />;
-                <label htmlFor="reducedMotion" className="text-sm text-gray-700 dark:text-gray-300">;
+                <label htmlFor="reducedMotion" className="text-sm text-gray-700 dark: text-gray-300">;";,
                   Reduce Motion;
                 </label>;
               </div>;
@@ -127,10 +127,10 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
       </AnimatePresence>;
 
       {showSettings && (;
-        <button;
+        <button;>
           onClick={() => setIsVisible(!isVisible)}
-          className="fixed bottom-4 right-4 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors z-40";
-          aria-label="Open accessibility settings">;
+          className="fixed bottom-4 right-4 bg-blue-600 hover: bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors z-40";";,
+          aria-label="Open accessibility settings">;";
           <Settings size={20} />;
         </button>;
       )}

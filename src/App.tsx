@@ -155,51 +155,51 @@ const ITConsulting = lazy(() => import('./pages/ITConsulting'));
 
 // Loading component
 const LoadingSpinner = () => (
-  <motion.div
+  <motion.div>
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
-  >
-    <div className="text-center">
-      <motion.div
+  >;
+    <div className="text-center">";
+      <motion.div>
         animate={{ rotate: 360 }}
-        transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 2, repeat: Infinity, ease: "linear" }}";
         className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full mx-auto mb-4"
       />
-      <h2 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h2>
-      <p className="text-blue-300">Loading amazing experiences...</p>
+      <h2 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h2>";
+      <p className="text-blue-300">Loading amazing experiences...</p>";
     </div>
   </motion.div>
 );
 ;
 // Simple Footer component;
 const Footer = () => (;
-  <footer className="bg-zion-slate-dark text-white p-4 mt-auto">;
-    <div className="container mx-auto text-center">;
+  <footer className="bg-zion-slate-dark text-white p-4 mt-auto">;";
+    <div className="container mx-auto text-center">;";
       <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>;
-      <div className="mt-2 text-sm text-gray-300">;
-        <p>Phone: <a href="tel:+13024640950" className="hover:text-cyan-400">+1 302 464 0950</a></p>;
-        <p>Email: <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400">kleber@ziontechgroup.com</a></p>;
-        <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>;
-        <p>Website: <a href="https://ziontechgroup.com" className="hover:text-cyan-400">https://ziontechgroup.com</a></p>;
+      <div className="mt-2 text-sm text-gray-300">;";
+        <p>Phone: <a href="tel:+13024640950" className="hover:text-cyan-400">+1 302 464 0950</a></p>;";,
+        <p>Email: <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400">kleber@ziontechgroup.com</a></p>;";,
+        <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>;,
+        <p>Website: <a href="https://ziontechgroup.com" className="hover:text-cyan-400">https://ziontechgroup.com</a></p>;";,
       </div>;
     </div>;
   </footer>;
 );
 
-function App() {
+function App(): any {
   return (
     <HelmetProvider>
       <ErrorBoundary fallback={<ErrorFallback error={new Error()} resetErrorBoundary={() => {}} />}>
         <Router>
-          <div className="App min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+          <div className="App min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">";
             {/* SEO Component */}
             <SEO 
               title="Zion Tech Group - Leading AI & Technology Solutions"
               description="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Leading the future of technology."
               keywords="AI solutions, quantum computing, micro SAAS, technology consulting, digital transformation"
               ogImage="/og-image.jpg"
-              canonicalUrl="https://ziontechgroup.com"
+              canonicalUrl="https: //ziontechgroup.com",
             />
             
             {/* Performance Optimizer */}
@@ -218,15 +218,15 @@ function App() {
             <AppHeader />
             
             {/* Main Content */}
-            <main className="flex-1">
+            <main className="flex-1">";
               <Suspense fallback={<LoadingSpinner />}>
-                <AnimatePresence mode="wait">
+                <AnimatePresence mode="wait">";
                   <Routes>
                     {/* Core Routes */}
                     <Route 
                       path="/" 
                       element={
-                        <motion.div
+                        <motion.div>
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}
@@ -239,7 +239,7 @@ function App() {
                     <Route 
                       path="/about" 
                       element={
-                        <motion.div
+                        <motion.div>
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}
@@ -252,7 +252,7 @@ function App() {
                     <Route 
                       path="/services" 
                       element={
-                        <motion.div
+                        <motion.div>
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}
@@ -265,7 +265,7 @@ function App() {
                     <Route 
                       path="/contact" 
                       element={
-                        <motion.div
+                        <motion.div>
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}
@@ -278,7 +278,7 @@ function App() {
                     <Route 
                       path="/blog" 
                       element={
-                        <motion.div
+                        <motion.div>
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}
@@ -291,7 +291,7 @@ function App() {
                     <Route 
                       path="/careers" 
                       element={
-                        <motion.div
+                        <motion.div>
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}
@@ -303,112 +303,112 @@ function App() {
                     />
                     
                     {/* Service Routes */}
-                    <Route path="/ai-services" element={<AIServices />} />
-                    <Route path="/it-services" element={<ITServices />} />
-                    <Route path="/micro-saas" element={<MicroSaaS />} />
+                    <Route path="/ai-services" element={<AIServices />} />";
+                    <Route path="/it-services" element={<ITServices />} />";
+                    <Route path="/micro-saas" element={<MicroSaaS />} />";
                     
                     {/* Comprehensive Service Routes */}
       
-                    <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
-                    <Route path="/innovative-services-landing-2025" element={<InnovativeServicesLanding2025 />} />
-                    <Route path="/new-innovative-services-2025" element={<NewInnovativeServices2025 />} />
-                    <Route path="/zion-cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
+                    <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />";
+                    <Route path="/innovative-services-landing-2025" element={<InnovativeServicesLanding2025 />} />";
+                    <Route path="/new-innovative-services-2025" element={<NewInnovativeServices2025 />} />";
+                    <Route path="/zion-cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />";
                     
                     {/* Service Detail Routes */}
-                    <Route path="/services/cloud-devops" element={<CloudDevOps />} />
-                    <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
-                    <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
-                    <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
-                    <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
-                    <Route path="/services/ai-auto-email-responder" element={<AIAutoEmailResponder />} />
-                    <Route path="/services/customer-feedback-surveys" element={<CustomerFeedbackSurveys />} />
-                    <Route path="/services/ai-compliance-copilot" element={<AIComplianceCopilot />} />
-                    <Route path="/services/llm-content-studio" element={<LLMContentStudio />} />
-                    <Route path="/services/finops-advisor" element={<FinOpsAdvisor />} />
-                    <Route path="/services/returns-management" element={<ReturnsManagement />} />
-                    <Route path="/services/email-sequencer" element={<EmailSequencer />} />
-                    <Route path="/services/podcast-transcription" element={<PodcastTranscription />} />
-                    <Route path="/services/micro-crm" element={<MicroCRM />} />
-                    <Route path="/services/website-analytics" element={<WebsiteAnalytics />} />
-                    <Route path="/services/it-helpdesk" element={<ITHelpdesk />} />
-                    <Route path="/services/affiliate-tracking" element={<AffiliateTracking />} />
-                    <Route path="/services/mobile-survey" element={<MobileSurvey />} />
-                    <Route path="/services/ai-autonomous-code-reviewer" element={<AIAutonomousCodeReviewer />} />
-                    <Route path="/services/zero-trust-network-access" element={<ZeroTrustNetworkAccess />} />
-                    <Route path="/services/ai-powered-seo" element={<AIPoweredSEO />} />
-                    <Route path="/services/interview-assessment-ai" element={<InterviewAssessmentAI />} />
-                    <Route path="/services/helpdesk-platform" element={<HelpdeskPlatform />} />
-                    <Route path="/services/dsr-portal" element={<DSRPortal />} />
-                    <Route path="/services/security-headers-csp" element={<SecurityHeadersCSP />} />
-                    <Route path="/services/ai-project-management" element={<AIProjectManagement />} />
-                    <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} />
-                    <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
-                    <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
-                    <Route path="/services/new-services-showcase-2025" element={<NewServicesShowcase2025 />} />
-                    <Route path="/services/ai-workflow-orchestrator" element={<AIWorkflowOrchestrator />} />
-                    <Route path="/services/ai-data-governance-platform" element={<AIDataGovernancePlatform />} />
-                    <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
-                    <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
-                    <Route path="/services/ai-financial-risk-management" element={<AIFinancialRiskManagement />} />
+                    <Route path="/services/cloud-devops" element={<CloudDevOps />} />";
+                    <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />";
+                    <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />";
+                    <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />";
+                    <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />";
+                    <Route path="/services/ai-auto-email-responder" element={<AIAutoEmailResponder />} />";
+                    <Route path="/services/customer-feedback-surveys" element={<CustomerFeedbackSurveys />} />";
+                    <Route path="/services/ai-compliance-copilot" element={<AIComplianceCopilot />} />";
+                    <Route path="/services/llm-content-studio" element={<LLMContentStudio />} />";
+                    <Route path="/services/finops-advisor" element={<FinOpsAdvisor />} />";
+                    <Route path="/services/returns-management" element={<ReturnsManagement />} />";
+                    <Route path="/services/email-sequencer" element={<EmailSequencer />} />";
+                    <Route path="/services/podcast-transcription" element={<PodcastTranscription />} />";
+                    <Route path="/services/micro-crm" element={<MicroCRM />} />";
+                    <Route path="/services/website-analytics" element={<WebsiteAnalytics />} />";
+                    <Route path="/services/it-helpdesk" element={<ITHelpdesk />} />";
+                    <Route path="/services/affiliate-tracking" element={<AffiliateTracking />} />";
+                    <Route path="/services/mobile-survey" element={<MobileSurvey />} />";
+                    <Route path="/services/ai-autonomous-code-reviewer" element={<AIAutonomousCodeReviewer />} />";
+                    <Route path="/services/zero-trust-network-access" element={<ZeroTrustNetworkAccess />} />";
+                    <Route path="/services/ai-powered-seo" element={<AIPoweredSEO />} />";
+                    <Route path="/services/interview-assessment-ai" element={<InterviewAssessmentAI />} />";
+                    <Route path="/services/helpdesk-platform" element={<HelpdeskPlatform />} />";
+                    <Route path="/services/dsr-portal" element={<DSRPortal />} />";
+                    <Route path="/services/security-headers-csp" element={<SecurityHeadersCSP />} />";
+                    <Route path="/services/ai-project-management" element={<AIProjectManagement />} />";
+                    <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} />";
+                    <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />";
+                    <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />";
+                    <Route path="/services/new-services-showcase-2025" element={<NewServicesShowcase2025 />} />";
+                    <Route path="/services/ai-workflow-orchestrator" element={<AIWorkflowOrchestrator />} />";
+                    <Route path="/services/ai-data-governance-platform" element={<AIDataGovernancePlatform />} />";
+                    <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />";
+                    <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />";
+                    <Route path="/services/ai-financial-risk-management" element={<AIFinancialRiskManagement />} />";
                     
                     {/* AI Service Routes */}
-                    <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
-                    <Route path="/services/ai-content-marketing-suite" element={<AIContentMarketingSuite />} />
-                    <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
-                    <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurityPlatform />} />
-                    <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
-                    <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-                    <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
+                    <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />";
+                    <Route path="/services/ai-content-marketing-suite" element={<AIContentMarketingSuite />} />";
+                    <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />";
+                    <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurityPlatform />} />";
+                    <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />";
+                    <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />";
+                    <Route path="/services/digital-transformation" element={<DigitalTransformation />} />";
                     
                     {/* Additional Service Routes */}
-                    <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
-                    <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
-                    <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
-                    <Route path="/services/ai-content-creation-suite" element={<AIContentCreationSuite />} />
-                    <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
-                    <Route path="/services/ai-hr-platform" element={<AIHRPlatform />} />
-                    <Route path="/services/sustainable-technology" element={<SustainableTechnology />} />
-                    <Route path="/services/ai-predictive-maintenance" element={<AIPredictiveMaintenance />} />
-                    <Route path="/services/quantum-machine-learning" element={<QuantumMachineLearning />} />
-                    <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
+                    <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />";
+                    <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />";
+                    <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />";
+                    <Route path="/services/ai-content-creation-suite" element={<AIContentCreationSuite />} />";
+                    <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />";
+                    <Route path="/services/ai-hr-platform" element={<AIHRPlatform />} />";
+                    <Route path="/services/sustainable-technology" element={<SustainableTechnology />} />";
+                    <Route path="/services/ai-predictive-maintenance" element={<AIPredictiveMaintenance />} />";
+                    <Route path="/services/quantum-machine-learning" element={<QuantumMachineLearning />} />";
+                    <Route path="/services/ai-content-creation" element={<AIContentCreation />} />";
                     
                     {/* Additional Pages */}
-                    <Route path="/dashboard" element={<Dashboard />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/faq" element={<FAQ />} />
-                    <Route path="/search" element={<SearchPage />} />
-                    <Route path="/partners" element={<Partners />} />
-                    <Route path="/news" element={<News />} />
-                    <Route path="/case-studies" element={<CaseStudies />} />
-                    <Route path="/help" element={<HelpCenter />} />
-                    <Route path="/sitemap" element={<Sitemap />} />
+                    <Route path="/dashboard" element={<Dashboard />} />";
+                    <Route path="/login" element={<Login />} />";
+                    <Route path="/faq" element={<FAQ />} />";
+                    <Route path="/search" element={<SearchPage />} />";
+                    <Route path="/partners" element={<Partners />} />";
+                    <Route path="/news" element={<News />} />";
+                    <Route path="/case-studies" element={<CaseStudies />} />";
+                    <Route path="/help" element={<HelpCenter />} />";
+                    <Route path="/sitemap" element={<Sitemap />} />";
                     
                     {/* 404 Page */}
                     <Route 
                       path="*" 
                       element={
-                        <motion.div
+                        <motion.div>
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}
                           transition={{ duration: 0.3 }}
                           className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
                         >
-                          <div className="text-center text-white">
-                            <h1 className="text-6xl font-bold mb-4">404</h1>
-                            <h2 className="text-2xl font-semibold mb-4">Page Not Found</h2>
-                            <p className="text-gray-300 mb-8">
+                          <div className="text-center text-white">";
+                            <h1 className="text-6xl font-bold mb-4">404</h1>";
+                            <h2 className="text-2xl font-semibold mb-4">Page Not Found</h2>";
+                            <p className="text-gray-300 mb-8">";
                               The page you're looking for doesn't exist or has been moved.
                             </p>
                             <button
                               onClick={() => window.history.back()}
-                              className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors mr-4"
+                              className="px-6 py-3 bg-blue-500 text-white rounded-lg hover: bg-blue-600 transition-colors mr-4",
                             >
                               Go Back
                             </button>
                             <button
                               onClick={() => window.location.href = '/'}
-                              className="px-6 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
+                              className="px-6 py-3 bg-gray-500 text-white rounded-lg hover: bg-gray-600 transition-colors",
                             >
                               Go Home
                             </button>

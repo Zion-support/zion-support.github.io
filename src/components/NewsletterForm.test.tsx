@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<NewsletterForm  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<NewsletterForm  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import NewsletterForm from &apos;./NewsletterForm;
 describe(&apos;NewsletterForm&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;NewsletterForm&apos, () => {;
     render();,
 }
     // comment;
-    render(<NewsletterForm / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<NewsletterForm / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

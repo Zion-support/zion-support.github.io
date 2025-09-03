@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, Mail, MapPin, ChevronDown, Search, User, ShoppingCart } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 ;
-const Header: React.FC = () => {;
+const Header: React.FC = () => {;,
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -21,7 +21,7 @@ const Header: React.FC = () => {;
     {;
       name: 'Services',;
       href: '/services',;
-      dropdown: [;
+      dropdown: [;,
         { name: 'AI & Machine Learning', href: '/services/ai-services' },;
         { name: 'Micro SaaS Solutions', href: '/services/micro-saas' },;
         { name: 'IT Infrastructure', href: '/services/it-infrastructure' },;
@@ -113,7 +113,7 @@ const Header: React.FC = () => {;
     {;
       name: 'Solutions',;
       href: '/solutions',;
-      dropdown: [;
+      dropdown: [;,
         { name: 'Enterprise Solutions', href: '/solutions/enterprise' },;
         { name: 'SMB Solutions', href: '/solutions/smb' },;
         { name: 'Startup Solutions', href: '/solutions/startup' },;
@@ -129,7 +129,7 @@ const Header: React.FC = () => {;
     {;
       name: 'About',;
       href: '/about',;
-      dropdown: [;
+      dropdown: [;,
         { name: 'Our Story', href: '/about/story' },;
         { name: 'Team', href: '/about/team' },;
         { name: 'Careers', href: '/careers' },;
@@ -142,7 +142,7 @@ const Header: React.FC = () => {;
     {;
       name: 'Resources',;
       href: '/resources',;
-      dropdown: [;
+      dropdown: [;,
         { name: 'Blog', href: '/blog' },;
         { name: 'Documentation', href: '/docs' },;
         { name: 'API Reference', href: '/api' },;
@@ -155,7 +155,7 @@ const Header: React.FC = () => {;
     {;
       name: 'Support',;
       href: '/support',;
-      dropdown: [;
+      dropdown: [;,
         { name: 'Help Center', href: '/help' },;
         { name: 'Contact Support', href: '/contact' },;
         { name: 'Request Quote', href: '/request-quote' },;
@@ -172,79 +172,79 @@ const Header: React.FC = () => {;
 };
 ;
   return (;
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${;
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${;`;>
       isScrolled ;
         ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' ;
         : 'bg-white';,
-}`}>;
+}`}>;`;
       {/* Top contact bar */}
-      <div className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-2 px-4">;
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between text-sm">;
-          <div className="flex items-center space-x-6">;
-            <a href={`tel:${contactInfo.phone}`} className="flex items-center space-x-2 hover:text-cyan-200 transition-colors">;
-              <Phone className="w-4 h-4" />;
+      <div className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-2 px-4">;";
+        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between text-sm">;";
+          <div className="flex items-center space-x-6">;";
+            <a href={`tel:${contactInfo.phone}`} className="flex items-center space-x-2 hover: text-cyan-200 transition-colors">;";,`;
+              <Phone className="w-4 h-4" />;";
               <span>{contactInfo.phone}</span>;
             </a>;
-            <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-200 transition-colors">;
-              <Mail className="w-4 h-4" />;
+            <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover: text-cyan-200 transition-colors">;";,`;
+              <Mail className="w-4 h-4" />;";
               <span>{contactInfo.email}</span>;
             </a>;
-            <div className="flex items-center space-x-2">;
-              <MapPin className="w-4 h-4" />;
+            <div className="flex items-center space-x-2">;";
+              <MapPin className="w-4 h-4" />;";
               <span>{contactInfo.address}</span>;
             </div>;
           </div>;
-          <div className="flex items-center space-x-4">;
-            <a href="https://ziontechgroup.com" className="hover:text-cyan-200 transition-colors">;
+          <div className="flex items-center space-x-4">;";
+            <a href="https: //ziontechgroup.com" className="hover:text-cyan-200 transition-colors">;";,
               Visit Website;
             </a>;
-            <span className="text-cyan-200">|</span>;
-            <span className="text-cyan-200">24/7 Support Available</span>;
+            <span className="text-cyan-200">|</span>;";
+            <span className="text-cyan-200">24/7 Support Available</span>;";
           </div>;
         </div>;
       </div>;
 
       {/* Main navigation */}
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-        <div className="flex items-center justify-between h-16">;
+      <nav className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">;";,
+        <div className="flex items-center justify-between h-16">;";
           {/* Logo */}
-          <div className="flex-shrink-0">;
-            <Link to="/" className="flex items-center space-x-2">;
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">;
-                <span className="text-white font-bold text-xl">Z</span>;
+          <div className="flex-shrink-0">;";
+            <Link to="/" className="flex items-center space-x-2">;";
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">;";
+                <span className="text-white font-bold text-xl">Z</span>;";
               </div>;
-              <div className="hidden sm:block">;
-                <h1 className="text-xl font-bold text-gray-900">Zion Tech Group</h1>;
-                <p className="text-xs text-gray-600">Innovation • Technology • Solutions</p>;
+              <div className="hidden sm: block">;";,
+                <h1 className="text-xl font-bold text-gray-900">Zion Tech Group</h1>;";
+                <p className="text-xs text-gray-600">Innovation • Technology • Solutions</p>;";
               </div>;
             </Link>;
           </div>;
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">;
+          <div className="hidden lg: flex items-center space-x-8">;";,
             {navigationItems.map((item) => (;
-              <div key={item.name} className="relative group">;
-                <button;
-                  className="flex items-center space-x-1 text-gray-700 hover:text-cyan-600 px-3 py-2 text-sm font-medium transition-colors duration-200";
+              <div key={item.name} className="relative group">;";
+                <button;>
+                  className="flex items-center space-x-1 text-gray-700 hover: text-cyan-600 px-3 py-2 text-sm font-medium transition-colors duration-200";";,
                   onMouseEnter={() => setActiveDropdown(item.name)}
                   onMouseLeave={() => setActiveDropdown(null)}
                 >;
                   <span>{item.name}</span>;
-                  {item.dropdown && <ChevronDown className="w-4 h-4" />}
+                  {item.dropdown && <ChevronDown className="w-4 h-4" />}";
                 </button>;
                 ;
                 {item.dropdown && activeDropdown === item.name && (;
-                  <div;
-                    className="absolute top-full left-0 w-80 bg-white border border-gray-200 rounded-lg shadow-xl py-2 z-50";
+                  <div;>
+                    className="absolute top-full left-0 w-80 bg-white border border-gray-200 rounded-lg shadow-xl py-2 z-50";";
                     onMouseEnter={() => setActiveDropdown(item.name)}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >;
-                    <div className="grid grid-cols-1 gap-1 p-2">;
+                    <div className="grid grid-cols-1 gap-1 p-2">;";
                       {item.dropdown.map((subItem) => (;
-                        <Link;
+                        <Link;>
                           key={subItem.name}
                           to={subItem.href}
-                          className="flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-600 rounded-md transition-colors duration-200">;
+                          className="flex items-center px-3 py-2 text-sm text-gray-700 hover: bg-cyan-50 hover:text-cyan-600 rounded-md transition-colors duration-200">;";,
                           {subItem.name}
                         </Link>;
                       ))}
@@ -256,24 +256,24 @@ const Header: React.FC = () => {;
           </div>;
 
           {/* Right side actions */}
-          <div className="hidden lg:flex items-center space-x-4">;
-            <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">;
-              <Search className="w-5 h-5" />;
+          <div className="hidden lg: flex items-center space-x-4">;";,
+            <button className="p-2 text-gray-400 hover: text-gray-600 transition-colors">;";,
+              <Search className="w-5 h-5" />;";
             </button>;
-            <Link to="/pricing" className="text-gray-700 hover:text-cyan-600 px-4 py-2 text-sm font-medium transition-colors">;
+            <Link to="/pricing" className="text-gray-700 hover: text-cyan-600 px-4 py-2 text-sm font-medium transition-colors">;";,
               Pricing;
             </Link>;
-            <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium">;
+            <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium">;";,
               Get Started;
             </Link>;
           </div>;
 
           {/* Mobile menu button */}
-          <div className="lg:hidden">;
-            <button;
+          <div className="lg: hidden">;";,
+            <button;>
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 text-gray-400 hover:text-gray-600 transition-colors">;
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              className="p-2 text-gray-400 hover: text-gray-600 transition-colors">;";,
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}";
             </button>;
           </div>;
         </div>;
@@ -282,37 +282,37 @@ const Header: React.FC = () => {;
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isMenuOpen && (;
-          <motion.div;
+          <motion.div;>
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white border-t border-gray-200">;
-            <div className="px-4 py-6 space-y-4">;
+            className="lg: hidden bg-white border-t border-gray-200">;";,
+            <div className="px-4 py-6 space-y-4">;";
               {navigationItems.map((item) => (;
                 <div key={item.name}>;
-                  <Link;
+                  <Link;>
                     to={item.href}
-                    className="block text-gray-700 hover:text-cyan-600 py-2 text-base font-medium";
+                    className="block text-gray-700 hover: text-cyan-600 py-2 text-base font-medium";";,
                     onClick={() => setIsMenuOpen(false)}
                   >;
                     {item.name}
                   </Link>;
                   {item.dropdown && (;
-                    <div className="ml-4 mt-2 space-y-2">;
+                    <div className="ml-4 mt-2 space-y-2">;";
                       {item.dropdown.slice(0, 5).map((subItem) => (;
-                        <Link;
+                        <Link;>
                           key={subItem.name}
                           to={subItem.href}
-                          className="block text-gray-600 hover:text-cyan-600 py-1 text-sm";
+                          className="block text-gray-600 hover: text-cyan-600 py-1 text-sm";";,
                           onClick={() => setIsMenuOpen(false)}
                         >;
                           {subItem.name}
                         </Link>;
                       ))}
                       {item.dropdown.length > 5 && (;
-                        <Link;
+                        <Link;>
                           to={item.href}
-                          className="block text-cyan-600 hover:text-cyan-700 py-1 text-sm font-medium";
+                          className="block text-cyan-600 hover: text-cyan-700 py-1 text-sm font-medium";";,
                           onClick={() => setIsMenuOpen(false)}
                         >;
                           View All {item.name} →;
@@ -322,17 +322,17 @@ const Header: React.FC = () => {;
                   )}
                 </div>;
               ))}
-              <div className="pt-4 border-t border-gray-200">;
-                <Link;
-                  to="/pricing";
-                  className="block text-gray-700 hover:text-cyan-600 py-2 text-base font-medium";
+              <div className="pt-4 border-t border-gray-200">;";
+                <Link;>
+                  to="/pricing";";
+                  className="block text-gray-700 hover: text-cyan-600 py-2 text-base font-medium";";,
                   onClick={() => setIsMenuOpen(false)}
                 >;
                   Pricing;
                 </Link>;
-                <Link;
-                  to="/contact";
-                  className="block bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg text-center font-medium mt-4";
+                <Link;>
+                  to="/contact";";
+                  className="block bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg text-center font-medium mt-4";";
                   onClick={() => setIsMenuOpen(false)}
                 >;
                   Get Started;

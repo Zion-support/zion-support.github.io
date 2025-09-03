@@ -1,10 +1,10 @@
 import { useState, useEffect, useCallback } from 'react'; // Added useCallback;
 import { supabase } from '@/integrations/supabase/client';
 ;
-export default function Page() {;
+export default function Page(): any {;
  finally {;
       setIsLoading(false);,
-}
+};
   }, [jobId]); // jobId is a dependency of loadJobDetails;
 
   useEffect(() => {;
@@ -23,3 +23,4 @@ export default function Page() {;
 }
 ;
 export default useJobDetails;
+;

@@ -6,9 +6,9 @@ interface PerformanceOptimizerProps {preloadImages?: string[];
   criticalCSS?: string;,
 }
 ;
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;,
 preloadImages = [], preloadFonts = [;
-    'https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap;
+    'https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap;,
   ], criticalCSS'}) => {;
   useEffect(() => {;
     // Performance monitoring;
@@ -49,11 +49,11 @@ addResourceHint(image, 'image');
       ;
       {/* Preload critical resources */}
       {preloadImages.map((image, index) => (;
-        <link;
+        <link;>
 key={`preload-image-${index}}          rel="preload""          as="image""          href={image}"        />))}
       ;
       {preloadFonts.map((font, index) => (;
-        <link;
+        <link;>
 key={`preload-font-${index}`}          rel="preload""          as="style""          href={font}"          onLoad={() => {;
             const link = document.querySelector(link[href="${font}"]`);
 "            if (link) {"              (link as HTMLLinkElement).rel = 'stylesheet;,
@@ -62,7 +62,7 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
       ;
       {/* Performance hints */}
       <meta httpEquiv="x-dns-prefetch-control" content="on" />"      "      {/* Service Worker registration */}
-      <script;
+      <script;>
         dangerouslySetInnerHTML={{;
           __html:             if ('serviceWorker' in navigator) {'              window.addEventListener('load', function() {'                navigator.serviceWorker.register('/sw.js')'                  .then(function(registration) {'                    console.log('SW registered: ', registration);
 '                  })'                  .catch(function(registrationError) {;

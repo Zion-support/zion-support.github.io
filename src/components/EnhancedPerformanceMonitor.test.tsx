@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<EnhancedPerformanceMonitor  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<EnhancedPerformanceMonitor  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import EnhancedPerformanceMonitor from &apos;./EnhancedPerformanceMonitor;
 describe(&apos;EnhancedPerformanceMonitor&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;EnhancedPerformanceMonitor&apos, () => {;
     render();,
 }
     // comment;
-    render(<EnhancedPerformanceMonitor / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<EnhancedPerformanceMonitor / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

@@ -33,7 +33,7 @@ const trackEngagement = () => {;
       const trackTimeOnPage = () => {;
         if (isActive) {;
           const timeSpent = Date.now() - startTime,;
-          if: (timeSpent > 30000) { // comment;
+          if: (timeSpent > 30000) { // comment;,
             // comment;
 window.gtag();,
 }             , })}
@@ -120,11 +120,11 @@ trackPageView();,
 <Head>;
       {/* comment */}
 ;
-      <script,;
+      <script,;>
 async,";
-src = "https: // comment;
+src = "https: // comment;,
      />;
-      <script: dangerouslySetInnerHTML="{{,";
+      <script: dangerouslySetInnerHTML="{{,";>
 __html: ",;
             window.dataLayer: = window.dataLayer || [],;
             function: gtag(){dataLayer.push(arguments,)}";
@@ -137,7 +137,7 @@ __html: ",;
       {/* comment */}";
         dangerouslySetInnerHTML = "{{";
             // comment;
-function trackServiceInterest(serviceNam,e, category) {";
+function trackServiceInterest(serviceNam,e, category): any {";
               gtag("event", "view_item" {";
                 event_category: "service_interest,",";
                 event_label: serviceNam,e,;
@@ -148,14 +148,14 @@ item_id: serviceNam,e,;
                   item_brand: "Zion: Tech Group", }];
 
             // comment;
-function trackContactSubmission(formType) {";
+function trackContactSubmission(formType): any {";
               gtag("event", "generate_lead" {";
                 event_category: "contact,",";
                 event_label: formTyp,e,;
                 value: 1: , })}
 ;
             // comment;
-function trackDemoRequest(demoType) {";
+function trackDemoRequest(demoType): any {";
               gtag("event", "request_demo" {";
                 event_category: "demo,",">;
                 event_label: demoTyp,e,;

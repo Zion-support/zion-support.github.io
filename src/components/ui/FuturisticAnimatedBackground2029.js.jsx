@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';';
-const FuturisticAnimatedBackground2029 = ({ intensity = 0.8, theme = 'cyberpunk' }) => {}
+const FuturisticAnimatedBackground2029 = ({ intensity = 0.8, theme = 'cyberpunk' }) => {};
     const canvasRef = useRef(null);
     const animationRef = useRef();
     useEffect(() => {}
@@ -12,7 +12,7 @@ const FuturisticAnimatedBackground2029 = ({ intensity = 0.8, theme = 'cyberpunk'
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
         const particles = [];
-        const colors = {}
+        const colors = {};
 ';
 '';
 ''';
@@ -34,7 +34,7 @@ const FuturisticAnimatedBackground2029 = ({ intensity = 0.8, theme = 'cyberpunk'
                 color: selectedColors[Math.floor(Math.random() * selectedColors.length)],''';
                 type: Math.random() > 0.7 ? 'wave' : Math.random() > 0.5 ? 'grid' : 'particle';,
 })}
-        const animate = () => {}
+        const animate = () => {};
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             // Update and draw particles;
             particles.forEach((particle, index) => {}
@@ -53,18 +53,18 @@ const FuturisticAnimatedBackground2029 = ({ intensity = 0.8, theme = 'cyberpunk'
                 if (particle.type === 'particle') {}
                     ctx.beginPath();
                     ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);';
-                    ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2,0')}`;
+                    ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2,0')}`;`;
                     ctx.fill()}';
                 else if (particle.type === 'wave') {}
-                    ctx.beginPath();'`;
-                    ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2);'`'`;
-                    ctx.strokeStyle = `${particle.color}${Math.floor(particle.opacity * 0.5 * 255).toString(16).padStart(2,0')}`;
+                    ctx.beginPath();'`;`;
+                    ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2);'`'`;`;
+                    ctx.strokeStyle = `${particle.color}${Math.floor(particle.opacity * 0.5 * 255).toString(16).padStart(2,0')}`;`;
                     ctx.lineWidth = 2;
                     ctx.stroke()}';
                 else if (particle.type === 'grid') {}
-                    ctx.beginPath();'`;
-                    ctx.rect(particle.x - particle.size, particle.y - particle.size, particle.size * 2, particle.size * 2);'`'`;
-                    ctx.strokeStyle = `${particle.color}${Math.floor(particle.opacity * 0.3 * 255).toString(16).padStart(2,0')}`;
+                    ctx.beginPath();'`;`;
+                    ctx.rect(particle.x - particle.size, particle.y - particle.size, particle.size * 2, particle.size * 2);'`'`;`;
+                    ctx.strokeStyle = `${particle.color}${Math.floor(particle.opacity * 0.3 * 255).toString(16).padStart(2,0')}`;`;
                     ctx.lineWidth = 1;
                     ctx.stroke()}
                 // Draw connections;
@@ -75,9 +75,9 @@ const FuturisticAnimatedBackground2029 = ({ intensity = 0.8, theme = 'cyberpunk'
                         Math.pow(particle.y - otherParticle.y, 2));
                     if (distance < 200) {}
                         ctx.beginPath();
-                        ctx.moveTo(particle.x, particle.y);'`;
-                        ctx.lineTo(otherParticle.x, otherParticle.y);'`'`;
-                        ctx.strokeStyle = `${particle.color}${Math.floor((1 - distance / 200) * 0.2 * 255).toString(16).padStart(2,0')}`;
+                        ctx.moveTo(particle.x, particle.y);'`;`;
+                        ctx.lineTo(otherParticle.x, otherParticle.y);'`'`;`;
+                        ctx.strokeStyle = `${particle.color}${Math.floor((1 - distance / 200) * 0.2 * 255).toString(16).padStart(2,0')}`;`;
                         ctx.lineWidth = 0.5;
                         ctx.stroke()}
                 })});';
@@ -89,9 +89,9 @@ const FuturisticAnimatedBackground2029 = ({ intensity = 0.8, theme = 'cyberpunk'
                 const time = Date.now() * 0.001;
                 for (let i = 0; i < 10; i++) {}
                     const wave = Math.sin(time + i * 0.5) * 50;
-                    ctx.beginPath();`;
-                    ctx.arc(canvas.width / 2, canvas.height / 2, 150 + wave, 0, Math.PI * 2);``;
-                    ctx.strokeStyle = `rgba(255, 0, 128, ${0.1 * intensity})`;
+                    ctx.beginPath();`;`;
+                    ctx.arc(canvas.width / 2, canvas.height / 2, 150 + wave, 0, Math.PI * 2);``;`;
+                    ctx.strokeStyle = `rgba(255, 0, 128, ${0.1 * intensity})`;`;
                     ctx.lineWidth = 1;
                     ctx.stroke()}
                 ctx.restore()}';
@@ -104,9 +104,9 @@ const FuturisticAnimatedBackground2029 = ({ intensity = 0.8, theme = 'cyberpunk'
                         const time = Date.now() * 0.001;
                         const interference = Math.sin(x * 0.01 + time) * Math.cos(y * 0.01 + time);
                         if (Math.abs(interference) > 0.5) {}
-                            ctx.beginPath();`;
-                            ctx.arc(x, y, 2, 0, Math.PI * 2);``;
-                            ctx.fillStyle = `rgba(255, 255, 255, ${0.3 * intensity})`;
+                            ctx.beginPath();`;`;
+                            ctx.arc(x, y, 2, 0, Math.PI * 2);``;`;
+                            ctx.fillStyle = `rgba(255, 255, 255, ${0.3 * intensity})`;`;
                             ctx.fill()}
                     }
                 }
@@ -118,15 +118,15 @@ const FuturisticAnimatedBackground2029 = ({ intensity = 0.8, theme = 'cyberpunk'
                 const time = Date.now() * 0.001;
                 for (let i = 0; i < 3; i++) {}
                     const wave2 = Math.cos(time + i) * 100;
-                    ctx.beginPath();`;
-                    ctx.ellipse(canvas.width / 2 + wave1, canvas.height / 2 + wave2, 80, 40, time, 0, Math.PI * 2);``;
-                    ctx.strokeStyle = `rgba(0, 255, 255, ${0.15 * intensity})`;
+                    ctx.beginPath();`;`;
+                    ctx.ellipse(canvas.width / 2 + wave1, canvas.height / 2 + wave2, 80, 40, time, 0, Math.PI * 2);``;`;
+                    ctx.strokeStyle = `rgba(0, 255, 255, ${0.15 * intensity})`;`;
                     ctx.lineWidth = 2;
                     ctx.stroke()}
                 ctx.restore()}
             animationRef.current = requestAnimationFrame(animate)};
         animate();
-        const handleResize = () => {}
+        const handleResize = () => {};
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight};';
         window.addEventListener('resize', handleResize);
@@ -134,7 +134,7 @@ const FuturisticAnimatedBackground2029 = ({ intensity = 0.8, theme = 'cyberpunk'
             if (animationRef.current) {}
                 cancelAnimationFrame(animationRef.current)}';
             window.removeEventListener('resize', handleResize)}}, [intensity, theme]);
-    return (<canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" style = {}
+    return (<canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" style = {}";>
   {}
             opacity: intensity,';
   filter: theme === 'cyberpunk' ? 'blur(0.3px)' : 'none';,

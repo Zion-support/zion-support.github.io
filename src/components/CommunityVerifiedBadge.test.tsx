@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<CommunityVerifiedBadge  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<CommunityVerifiedBadge  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import CommunityVerifiedBadge from &apos;./CommunityVerifiedBadge;
 describe(&apos;CommunityVerifiedBadge&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;CommunityVerifiedBadge&apos, () => {;
     render();,
 }
     // comment;
-    render(<CommunityVerifiedBadge / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<CommunityVerifiedBadge / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

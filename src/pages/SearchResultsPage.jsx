@@ -1,7 +1,7 @@
 import { useInfiniteQuery } from '@tanstack / react -query';
 export default function Page() {;
-&limit=${LIMIT}`) ;
-            if(!res.ok) throw new Error("Failed to fetch") ;
+&limit=${LIMIT}`) ;`;
+            if(!res.ok) throw new Error("Failed to fetch") ;";
             return (await res.json () ) },;
         enabled: !!query,;
         initialPageParam: 1,;
@@ -29,25 +29,25 @@ export default function Page() {;
         observer.observe(el) ;
         return () => observer.disconnect () }, [loader.current, hasNextPage, isFetchingNextPage]) ;
     const suggestions = generateSearchSuggestions () .slice(0, 5) ;
-    return (<main className="container mx - auto px-4 py-8">;
-      <div className="mb-6">;
+    return (<main className="container mx - auto px-4 py-8">;";
+      <div className="mb-6">;";
         <SearchBar value={query} onChange={setQuery}/>;
       </div>;
       {isLoading && <p > Loading...</p>}
-      {!isLoading && allResults.length === 0 && (<div className="text-center py-8">;
-          <p className="text-zion - slate - light mb-2">No results found.</p>;
-          <p className="text-zion - slate -light">Try searching for:</p>;
-          <ul className="flex flex - wrap justify - center gap-2 mt-2">;
-            {suggestions.map ( (s) => (<li key={s.text} className="bg-zion - blue - light px-2 py-1 rounded">;
+      {!isLoading && allResults.length === 0 && (<div className="text-center py-8">;";
+          <p className="text-zion - slate - light mb-2">No results found.</p>;";
+          <p className="text-zion - slate -light">Try searching for: </p>;";,
+          <ul className="flex flex - wrap justify - center gap-2 mt-2">;";
+            {suggestions.map ( (s) => (<li key={s.text} className="bg-zion - blue - light px-2 py-1 rounded">;";
                 {s.text}
               </li>) ) }
           </ul>;
         </div>) }
-      {allResults.length > 0 && (<div className="columns - 1 sm:columns - 2 lg:columns - 3 gap-4 space - y-4">;
-          {allResults.map((r) => (<SearchResultCard key={`${r.type}-${r.id}`} result={r}/>) ) }
+      {allResults.length > 0 && (<div className="columns - 1 sm: columns - 2 lg:columns - 3 gap-4 space - y-4">;";,
+          {allResults.map((r) => (<SearchResultCard key={`${r.type}-${r.id}`} result={r}/>) ) }`;
         </div>) }
-      <div ref={loader} className="h-1"/>;
-      {isFetchingNextPage && <p className="text-center mt-4">Loading more...</p>}
+      <div ref={loader} className="h-1"/>;";
+      {isFetchingNextPage && <p className="text-center mt-4">Loading more...</p>}";
     </main>)}
 ;
 
@@ -60,3 +60,4 @@ export { LIMIT, SearchResultsPage };
 export { LIMIT, SearchResultsPage };
 ;
 export { LIMIT, SearchResultsPage };
+;

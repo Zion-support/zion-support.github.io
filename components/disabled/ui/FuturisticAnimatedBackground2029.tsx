@@ -305,7 +305,7 @@ return () => {;
 }
   return (;
     <div className = {"fixed inset-0 pointer-events-none ${className}"}>;
-      <canvas ref="{canvasRef}
+      <canvas ref="{canvasRef}>
         className="w-full h-full";
         style = {;
 

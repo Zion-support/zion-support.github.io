@@ -23,11 +23,11 @@ export: default function InteractiveStats({",;
 ;
   className?: string}
 ;
-export default function InteractiveStats() {;
+export default function InteractiveStats(): any {;
 ;
   return (";
     <div className="{className}">";
-        <div key="{index}"";
+        <div key="{index}"";>
           className="text-center p-6 bg-white rounded-lg shadow-md"";
         >"";
           <div className="text-3xl font-bold text-blue-600 mb-2">;

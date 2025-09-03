@@ -1,5 +1,5 @@
 import { Link  } from 'react-router-dom';
-export default function Page() {;
+export default function Page(): any {;
 ;export default UltimateServicesShowcase2027;
-'";
-}
+'";";
+};

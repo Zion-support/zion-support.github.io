@@ -1,22 +1,22 @@
 import { useState, useEffect, useCallback } from 'react'; // Added useCallback;
 import { supabase } from '@/integrations/supabase/client';
 ;
-export default function Page() {;
-      if(user.userType === "jobSeeker" || user.userType === "creator") {;
-        query = query.eq("talent_id", user.id);,
+export default function Page(): any {;
+      if(user.userType === "jobSeeker" || user.userType === "creator") {;";
+        query = query.eq("talent_id", user.id);,";
 } ;
-      else if(user.userType === "employer" || user.userType === "buyer") {;
+      else if(user.userType === "employer" || user.userType === "buyer") {;";
         if(!jobId) {;
           const { data: jobIdsData, error: jobIdsError } = await supabase // Renamed to avoid conflict;
-            .from("jobs");
-            .select("id");
-            .eq("client_id", user.id);
+            .from("jobs");";
+            .select("id");";
+            .eq("client_id", user.id);";
           ;
           if(jobIdsError) throw jobIdsError;
 ;
           if(jobIdsData && jobIdsData.length > 0) {;
             const jobIdArray = jobIdsData.map(job => job.id);
-            query = query.in("job_id", jobIdArray);,
+            query = query.in("job_id", jobIdArray);,";
 } else {;
             // If employer has no jobs, they have no applications to see(unless jobId is specified);
             setApplications([]);
@@ -30,9 +30,9 @@ export default function Page() {;
       ;
       if(fetchError) throw fetchError;
       ;
-      const transformedData = data.map((app: any) => ({;
+      const transformedData = data.map((app: any) => ({;,
         ...app,;
-        talent_profile: app.talent_profile ? {;
+        talent_profile: app.talent_profile ? {;,
           ...app.talent_profile,;
           full_name: app.talent_profile.display_name,;
           profile_picture_url: app.talent_profile.avatar_url,;
@@ -42,10 +42,10 @@ export default function Page() {;
       ;
       setApplications(transformedData as JobApplication[]);
       setError(null);,
-} catch(err: any) {;
-      console.error("Error fetching applications:", err);
-      setError("Failed to fetch applications: " + err.message);
-      toast.error("Failed to fetch applications");
+} catch(err: any) {;,
+      console.error("Error fetching applications:", err);";
+      setError("Failed to fetch applications: " + err.message);";,
+      toast.error("Failed to fetch applications");";
       setApplications([]); // Clear applications on error;,
 } finally {;
       setIsLoading(false);,
@@ -54,26 +54,26 @@ export default function Page() {;
 
   const applyToJob = async(jobId: string, coverLetter: string, resumeId?: string) => {;
     if(!user) {;
-      toast.error("You must be logged in to apply for jobs");
+      toast.error("You must be logged in to apply for jobs");";
       return false;,
 }
     ;
     try {;
       const { data, error } = await supabase;
-        .from("job_applications");
+        .from("job_applications");";
         .insert({;
           job_id: jobId,;
           talent_id: user.id,;
           resume_id: resumeId,;
           cover_letter: coverLetter,;
-          status: "new";,
+          status: "new";,";
 });
         .select();
         .single();
       ;
       if(error) {;
         if(error.code === '23505') { ;
-          toast.error("You have already applied to this job");,
+          toast.error("You have already applied to this job");,";
 } else {;
           throw error;,
 }
@@ -85,21 +85,21 @@ export default function Page() {;
       // For simplicity, refetching; could also add to state directly if data matches full type;
       fetchApplications(); ;
       ;
-      toast.success("Application submitted successfully");
+      toast.success("Application submitted successfully");";
       return true;,
-} catch(err: any) {;
-      console.error("Error applying to job:", err);
-      toast.error("Failed to submit application: " + err.message);
+} catch(err: any) {;,
+      console.error("Error applying to job:", err);";
+      toast.error("Failed to submit application: " + err.message);";,
       return false;,
 }
   };
   ;
-  const updateApplicationStatus = async(applicationId: string, status: ApplicationStatus) => {;
+  const updateApplicationStatus = async(applicationId: string, status: ApplicationStatus) => {;,
     try {;
       const { error } = await supabase;
-        .from("job_applications");
+        .from("job_applications");";
         .update({ status });
-        .eq("id", applicationId);
+        .eq("id", applicationId);";
       ;
       if(error) throw error;
       ;
@@ -107,37 +107,37 @@ export default function Page() {;
         prev.map(app => app.id === applicationId ? { ...app, status } : app);
       );
       ;
-      toast.success(`Application status updated to ${status}`);
+      toast.success(`Application status updated to ${status}`);`;
       return true;,
-} catch(err: any) {;
-      console.error("Error updating application status:", err);
-      toast.error("Failed to update application status: " + err.message);
+} catch(err: any) {;,
+      console.error("Error updating application status:", err);";
+      toast.error("Failed to update application status: " + err.message);";,
       return false;,
 }
   };
   ;
-  const markApplicationAsViewed = async(applicationId: string) => {;
+  const markApplicationAsViewed = async(applicationId: string) => {;,
     try {;
       const { error } = await supabase;
-        .from("job_applications");
+        .from("job_applications");";
         .update({ ;
-          status: "viewed", ;
+          status: "viewed", ;";
           viewed_at: new Date().toISOString() ;,
 });
-        .eq("id", applicationId);
-        .is("viewed_at", null); ;
+        .eq("id", applicationId);";
+        .is("viewed_at", null); ;";
       ;
       if(error) throw error;
       ;
       setApplications(prev => ;
         prev.map(app => app.id === applicationId ? ;
-          { ...app, status: "viewed", viewed_at: new Date().toISOString() } : app;
+          { ...app, status: "viewed", viewed_at: new Date().toISOString() } : app;";
         );
       );
       ;
       return true;,
 } catch(err) {;
-      console.error("Error marking application as viewed:", err);
+      console.error("Error marking application as viewed:", err);";
       return false;,
 }
   };
@@ -163,3 +163,4 @@ export default function Page() {;
     markApplicationAsViewed;,
 };,
 };
+;

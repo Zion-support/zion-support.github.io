@@ -1,27 +1,27 @@
 import React, { useState } from "react";
 ;
 interface Notification {;
-  id: string;
-  title: string;
-  message: string;
-  type: "success" | "warning" | "error" | "info";
-  priority: "low" | "medium" | "high" | "critical";
-  timestamp: Date;
-  read: boolean;
-  archived: boolean;
-  category: string;
+  id: string;,
+  title: string;,
+  message: string;,
+  type: "success" | "warning" | "error" | "info";,
+  priority: "low" | "medium" | "high" | "critical";,
+  timestamp: Date;,
+  read: boolean;,
+  archived: boolean;,
+  category: string;,
   actionUrl?: string;
   metadata?: Record<string, any>;,
 }
 ;
 interface AdvancedNotificationCenterProps {;
-  notifications: Notification[];
-  onMarkAsRead?: (id: string) => void;
-  onArchive?: (id: string) => void;
+  notifications: Notification[];,
+  onMarkAsRead?: (id: string) => void;,
+  onArchive?: (id: string) => void;,
   onDelete?: (id: string) => void;,
 }
 ;
-const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({;
+const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({;,
   notifications,;
   onMarkAsRead,;
   onArchive,;
@@ -40,7 +40,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
     return matchesFilter && matchesType;,
 });
 ;
-  const getTypeIcon = (type: string) => {;
+  const getTypeIcon = (type: string) => {;,
     switch (type) {;
       case "success":;
         return "✅";
@@ -50,12 +50,12 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
         return "❌";
       case "info":;
         return "ℹ️";
-      default:;
+      default: ;,
         return "📢";,
 }
   };
 ;
-  const getTypeColor = (type: string) => {;
+  const getTypeColor = (type: string) => {;,
     switch (type) {;
       case "success":;
         return "border-green-500 bg-green-50";
@@ -65,7 +65,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
         return "border-red-500 bg-red-50";
       case "info":;
         return "border-blue-500 bg-blue-50";
-      default:;
+      default: ;,
         return "border-gray-500 bg-gray-50";,
 }
   };
@@ -75,7 +75,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
       <div className="flex justify-between items-center mb-6">;
         <h2 className="text-2xl font-bold text-gray-900">Notifications</h2>;
         <div className="flex space-x-2">;
-          <select;
+          <select;>
             value={filter}
             onChange={(e) => setFilter(e.target.value as any)}
             className="px-3 py-2 border border-gray-300 rounded-md text-sm">;
@@ -83,7 +83,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
             <option value="unread">Unread</option>;
             <option value="archived">Archived</option>;
           </select>;
-          <select;
+          <select;>
             value={typeFilter}
             onChange={(e) => setTypeFilter(e.target.value)}
             className="px-3 py-2 border border-gray-300 rounded-md text-sm">;
@@ -103,7 +103,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
           </div>;
         ) : (;
           filteredNotifications.map((notification) => (;
-            <div;
+            <div;>
               key={notification.id}
               className={`border-l-4 p-4 rounded-r-lg ${getTypeColor(notification.type)} ${;
                 !notification.read ? "opacity-100" : "opacity-75";,
@@ -120,7 +120,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
                       <span className="px-2 py-1 bg-gray-200 rounded-full">;
                         {notification.category}
                       </span>;
-                      <span className={`px-2 py-1 rounded-full ${;
+                      <span className={`px-2 py-1 rounded-full ${;>
                         notification.priority === "critical" ;
                           ? "bg-red-200 text-red-800";
                           : notification.priority === "high";
@@ -136,23 +136,23 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
                 </div>;
                 <div className="flex space-x-2">;
                   {!notification.read && onMarkAsRead && (;
-                    <button;
+                    <button;>
                       onClick={() => onMarkAsRead(notification.id)}
-                      className="text-blue-600 hover:text-blue-800 text-sm">;
+                      className="text-blue-600 hover: text-blue-800 text-sm">;,
                       Mark as read;
                     </button>;
                   )}
                   {onArchive && (;
-                    <button;
+                    <button;>
                       onClick={() => onArchive(notification.id)}
-                      className="text-gray-600 hover:text-gray-800 text-sm">;
+                      className="text-gray-600 hover: text-gray-800 text-sm">;,
                       Archive;
                     </button>;
                   )}
                   {onDelete && (;
-                    <button;
+                    <button;>
                       onClick={() => onDelete(notification.id)}
-                      className="text-red-600 hover:text-red-800 text-sm">;
+                      className="text-red-600 hover: text-red-800 text-sm">;,
                       Delete;
                     </button>;
                   )}

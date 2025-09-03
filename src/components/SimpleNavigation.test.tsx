@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<SimpleNavigation  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<SimpleNavigation  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import SimpleNavigation from &apos;./SimpleNavigation;
 describe(&apos;SimpleNavigation&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;SimpleNavigation&apos, () => {;
     render();,
 }
     // comment;
-    render(<SimpleNavigation / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<SimpleNavigation / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

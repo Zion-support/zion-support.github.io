@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<ModernErrorBoundary  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<ModernErrorBoundary  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import ModernErrorBoundary from &apos;./ModernErrorBoundary;
 describe(&apos;ModernErrorBoundary&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;ModernErrorBoundary&apos, () => {;
     render();,
 }
     // comment;
-    render(<ModernErrorBoundary / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<ModernErrorBoundary / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

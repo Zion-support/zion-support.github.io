@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
-export default function ServiceVirtualScroll() {;
+export default function ServiceVirtualScroll(): any {;
 
 export function VirtualScroll < T> ({;
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -41,7 +41,7 @@ import { motion, AnimatePresence  } from 'framer-motion';
     scrollToItem(0) }, [scrollToItem]) ;
   // Auto - scroll to specific item on mount if needed;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -54,10 +54,10 @@ import { motion, AnimatePresence  } from 'framer-motion';
 }
   }, [items.length]) ;
 ;
-  return ()`;
-    <div className = {`relative ${className}`}>;
+  return ()`;`;
+    <div className = {`relative ${className}`}>;`;
       {/* Scroll to top button */}
-      {scrollTop > 200 && (<motion.button;
+      {scrollTop > 200 && (<motion.button;>
           initial = {;
 
   { opacity: 0,;
@@ -74,27 +74,27 @@ import { motion, AnimatePresence  } from 'framer-motion';
   scale: 0.8;,
 }}
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors">";
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">";
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />;
+          className="fixed bottom-6 right-6 z-50 bg-blue-600 hover: bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors">";";,
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">";";
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />;";
           </svg>;
         </motion.button>) }
 ;
       {/* Virtual scroll container */}
-      <div;
-        ref={containerRef}";
-        className="overflow-auto";
+      <div;>
+        ref={containerRef}";";
+        className="overflow-auto";";
         style={{ height }}
         onScroll={handleScroll}
       >;
-        <div style = {;
+        <div style = {;>
 
   { height: totalHeight,;
   position: 'relative';,
 }}>;
           <div  style={{ transform }}>;
             <AnimatePresence>;
-              {items.slice(visibleRange.start, visibleRange.end) .map((item, index) => (<motion.div;
+              {items.slice(visibleRange.start, visibleRange.end) .map((item, index) => (<motion.div;>
                   key={visibleRange.start + index}
                   initial = {;
 
@@ -121,49 +121,49 @@ import { motion, AnimatePresence  } from 'framer-motion';
         </div>;
       </div>;
 ;
-      {/* Scroll position indicator */};";
-      <div className="absolute top-2 right-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">;
+      {/* Scroll position indicator */};";";
+      <div className="absolute top-2 right-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">;";
         {Math.round((scrollTop / (totalHeight - height)) * 100)}%;
       </div>;
     </div>;) }
 // Specialized virtual scroll for service cards;
 interface ServiceCard {;
-  id: anystring;
-  name: string;
-  description: string;
-  category: string;
+  id: anystring;,
+  name: string;,
+  description: string;,
+  category: string;,
   icon?: string}
 interface ServiceVirtualScrollProps extends React.PropsWithChildren<{}> {;
 
-  services: ServiceCard[];
+  services: ServiceCard[];,
   height?: number;
-  onServiceClick?: (service: ServiceCard) => void;
+  onServiceClick?: (service: ServiceCard) => void;,
   className?: string}
 ;
-export default function ServiceVirtualScroll() {;
+export default function ServiceVirtualScroll(): any {;
 
-  const renderServiceCard = useCallback((service: anyServiceCard, index: number)  => (";
-    <div className="p-4">;
-      <motion.div;
+  const renderServiceCard = useCallback((service: anyServiceCard, index: number)  => (";";,
+    <div className="p-4">;";
+      <motion.div;>
         whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}";
-        className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 cursor-pointer hover:shadow-md transition-shadow";
+        whileTap={{ scale: 0.98 }}";";
+        className="bg-white dark: bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 cursor-pointer hover:shadow-md transition-shadow";";,
         onClick={() => onServiceClick?.(service)}
-      >";
-        <div className="flex items-start space-x-4">;
-          {service.icon && (";
-            <div className="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">";
-              <span className="text-2xl">{service.icon}</span>;
+      >";";
+        <div className="flex items-start space-x-4">;";
+          {service.icon && (";";
+            <div className="flex-shrink-0 w-12 h-12 bg-blue-100 dark: bg-blue-900 rounded-lg flex items-center justify-center">";";,
+              <span className="text-2xl">{service.icon}</span>;";
             </div>;
-          )}";
-          <div className="flex-1 min-w-0">";
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">;
+          )}";";
+          <div className="flex-1 min-w-0">";";
+            <h3 className="text-lg font-semibold text-gray-900 dark: text-white mb-2">;";,
               {service.name}
-            </h3>";
-            <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">;
+            </h3>";";
+            <p className="text-gray-600 dark: text-gray-300 text-sm mb-3">;";,
               {service.description}
-            </p>";
-            <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded-full">;              {service.category};
+            </p>";";
+            <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded-full">;              {service.category};";
             </span>;
           </div>;
         </div>;
@@ -171,10 +171,11 @@ export default function ServiceVirtualScroll() {;
     </div>;) , [onServiceClick]) ;
 ;
   return ();
-    <VirtualScroll items = {services};      height={height};
+    <VirtualScroll items = {services};      height={height};>
       itemHeight={120};
       renderItem={renderServiceCard};
       overscan={3};
       className={className};
      />;
-  )}'"`;
+  )}'"`;`;
+;

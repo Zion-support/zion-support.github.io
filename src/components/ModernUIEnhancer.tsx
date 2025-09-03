@@ -1,11 +1,12 @@
-export const ModernUIEnhancer: React.FC < ModernUIEnhancerProps> = ({;
+import React from 'react';
+export const ModernUIEnhancer: React.FC < ModernUIEnhancerProps> = ({;,
 
 interface ModernUIEnhancerProps {;
   // Add your props here;
 
   enabled?: boolean;
 ;
-export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({;
+export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({;,
 
   enabled = true}) => {;
 
@@ -15,12 +16,12 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({;
     // Add modern font loading';
     ;
     fontLink.rel = 'preload';
-    fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
+    fontLink.href = 'https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';,
     fontLink.as = 'style';    document.head.appendChild(fontLink) ;
 ;
     // Apply modern typography;
     ;
-    root.style.setProperty('--font-family', "'Inter', -apple-system, BlinkMacSystemFont,Segoe UI', Roboto, sans-serif");
+    root.style.setProperty('--font-family', "'Inter', -apple-system, BlinkMacSystemFont,Segoe UI', Roboto, sans-serif");";
     root.style.setProperty('--font-weight-light',300');
     root.style.setProperty('--font-weight-normal',400');
     root.style.setProperty('--font-weight-medium',500');
@@ -34,40 +35,40 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({;
 
       if(typeof value === 'string') {;
 
-        root.style.setProperty(`--color-${key}`, value)} else {;
+        root.style.setProperty(`--color-${key}`, value)} else {;`;
 
         Object.entries(value).forEach(([shade, colorValue]) => {;
-`;
-          root.style.setProperty(`--color-${key}-${shade}`, colorValue)})}
+`;`;
+          root.style.setProperty(`--color-${key}-${shade}`, colorValue)})}`;
     }) ;
 ;
-    // Apply accent color variations'`;
-    root.style.setProperty('--color-primary-light', `${accentColor}20`);'`;
-    root.style.setProperty('--color-primary-dark', `${accentColor}80`)}, [enabled, accentColor]);
+    // Apply accent color variations'`;`;
+    root.style.setProperty('--color-primary-light', `${accentColor}20`);'`;`;
+    root.style.setProperty('--color-primary-dark', `${accentColor}80`)}, [enabled, accentColor]);`;
 ;
     // Modern spacing scale(4px base unit);
     ;
     Object.entries(spacing).forEach(([key, value]) => {;
-`;
-      root.style.setProperty(`--spacing-${key}`, value)})}, [enabled]);
+`;`;
+      root.style.setProperty(`--spacing-${key}`, value)})}, [enabled]);`;
 ;
     // Modern shadow system;
     ;
     Object.entries(shadows).forEach(([key, value]) => {;
-`;
-      root.style.setProperty(`--shadow-${key}`, value)})}, [enabled]);
+`;`;
+      root.style.setProperty(`--shadow-${key}`, value)})}, [enabled]);`;
 ;
     // Modern transition system;
     ;
     Object.entries(transitions).forEach(([key, value]) => {;
-`;
-      root.style.setProperty(`--transition-${key}`, value)})}, [enabled]);
+`;`;
+      root.style.setProperty(`--transition-${key}`, value)})}, [enabled]);`;
 ;
     // Modern border radius system;
     ;
     Object.entries(radius).forEach(([key, value]) => {;
-`;
-      root.style.setProperty(`--radius-${key}`, value)})}, [enabled]);
+`;`;
+      root.style.setProperty(`--radius-${key}`, value)})}, [enabled]);`;
 ;
     if(isDarkMode) {;
 
@@ -86,35 +87,35 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({;
       root.style.setProperty('--border-color',#e2e8f0')}
   }, [enabled, isDarkMode]) ;
 ;
-    // Add modern button styles'";
+    // Add modern button styles'";";
     ;
     buttons.forEach((button) => {;
       if(!button.classList.contains('modern-enhanced')) {;
 
-        button.classList.add('modern-enhanced');`;
-        button.style.cssText += `;
-          border-radius: var(--radius-md);
-          transition: var(--transition-normal);
-          font-weight: var(--font-weight-medium);
-          box-shadow: var(--shadow-sm);`;
-        `}
+        button.classList.add('modern-enhanced');`;`;
+        button.style.cssText += `;`;
+          border-radius: var(--radius-md);,
+          transition: var(--transition-normal);,
+          font-weight: var(--font-weight-medium);,
+          box-shadow: var(--shadow-sm);`;,`;
+        `}`;
     }) ;
 ;
-    // Add modern card styles'";
+    // Add modern card styles'";";
     ;
     cards.forEach((card) => {;
       if(!card.classList.contains('modern-enhanced')) {;
 
-        card.classList.add('modern-enhanced');`;
-        card.style.cssText += `;
-          border-radius: var(--radius-lg);
-          box-shadow: var(--shadow-md);
-          transition: var(--transition-normal);
-          border: 1px solid var(--border-color);`;
-        `}
+        card.classList.add('modern-enhanced');`;`;
+        card.style.cssText += `;`;
+          border-radius: var(--radius-lg);,
+          box-shadow: var(--shadow-md);,
+          transition: var(--transition-normal);,
+          border: 1px solid var(--border-color);`;,`;
+        `}`;
     }) }, [enabled]) ;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -142,4 +143,5 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({;
 ;
   // Don't render anything - this is a utility component;
   return null};
-'"`;
+'"`;`;
+;

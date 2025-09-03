@@ -3,13 +3,13 @@ import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 ;
 interface PaginationProps {;
-  currentPage: number;
-  totalPages: number;
-  baseUrl: string;
+  currentPage: number;,
+  totalPages: number;,
+  baseUrl: string;,
   className?: string;,
 }
 ;
-const Pagination: React.FC<PaginationProps> = ({ ;
+const Pagination: React.FC<PaginationProps> = ({ ;,
   currentPage, ;
   totalPages, ;
   baseUrl, ;
@@ -55,9 +55,9 @@ const Pagination: React.FC<PaginationProps> = ({ ;
     <nav className={`flex items-center justify-center space-x-2 ${className}`}>;
       {/* Previous Button */}
       {currentPage > 1 ? (;
-        <Link;
+        <Link;>
           href={`${baseUrl}?page=${currentPage - 1}`}
-          className="flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 transition-colors">;
+          className="flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover: bg-gray-50 hover:text-gray-700 transition-colors">;,
           <ChevronLeft className="w-4 h-4 mr-1" />;
           Previous;
         </Link>;
@@ -83,7 +83,7 @@ const Pagination: React.FC<PaginationProps> = ({ ;
           const isCurrentPage = pageNumber === currentPage;
 ;
           return (;
-            <Link;
+            <Link;>
               key={pageNumber}
               href={`${baseUrl}?page=${pageNumber}`}
               className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${;
@@ -100,9 +100,9 @@ const Pagination: React.FC<PaginationProps> = ({ ;
 
       {/* Next Button */}
       {currentPage < totalPages ? (;
-        <Link;
+        <Link;>
           href={`${baseUrl}?page=${currentPage + 1}`}
-          className="flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 transition-colors">;
+          className="flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover: bg-gray-50 hover:text-gray-700 transition-colors">;,
           Next;
           <ChevronRight className="w-4 h-4 ml-1" />;
         </Link>;

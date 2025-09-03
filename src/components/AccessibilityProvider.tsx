@@ -4,9 +4,9 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
 export const useAccessibility = () => {;
 import { motion, AnimatePresence  } from 'framer-motion';
 ;
-export default function Page() {;
+export default function Page(): any {;
 > {;
-  children: ReactNode}
+  children: ReactNode};
 ;
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {;
   const [highContrast, setHighContrast] = useState(false);
@@ -17,7 +17,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 ;
   // Load accessibility preferences from localStorage;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -31,7 +31,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 ;
   // Apply accessibility settings to document;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -49,11 +49,11 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
       root.classList.remove('reduce-motion')}
 ;
     // Apply font size;
-    root.style.fontSize = `${fontSize}px`}, [highContrast, reducedMotion, fontSize]);
+    root.style.fontSize = `${fontSize}px`}, [highContrast, reducedMotion, fontSize]);`;
 ;
   // Keyboard navigation support;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -96,7 +96,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     setVoiceNavigation(newValue);
     localStorage.setItem('zion-voice-navigation', newValue.toString())};
 ;
-  const contextValue: AccessibilityContextType = {;
+  const contextValue: AccessibilityContextType = {;,
     highContrast,;
     toggleHighContrast,;
     reducedMotion,;
@@ -116,7 +116,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
       ;
       {/* Skip Links */}
       <AnimatePresence>;
-        {showSkipLinks && (<motion.div;
+        {showSkipLinks && (<motion.div;>
             initial = {;
   { opacity: 0,;
   y: -20;,
@@ -129,18 +129,18 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   { opacity: 0,;
   y: -20;,
 }}
-            className="fixed top - 0 left - 0 right - 0 z - 50 bg-zion - cyan text-black p - 4 text-center";
+            className="fixed top - 0 left - 0 right - 0 z - 50 bg-zion - cyan text-black p - 4 text-center";";
 
-            <div  className="max - w-4xl mx - auto flex flex - wrap justify - center gap-4">;
-              <a;
-                href="#main - content";
-                className="px-4 py-2 bg-white rounded-lg font - semibold hover:bg-gray - 100 focus:outline - none focus:ring - 2 focus:ring -black";
+            <div  className="max - w-4xl mx - auto flex flex - wrap justify - center gap-4">;";
+              <a;>
+                href="#main - content";";
+                className="px-4 py-2 bg-white rounded-lg font - semibold hover: bg-gray - 100 focus:outline - none focus:ring - 2 focus:ring -black";";,
                 Skip to main content;
               </a>;
-              <a href="#navigation" className="hover:underline focus:outline-none focus:ring-2 focus:ring-white rounded px-2 py-1">;
+              <a href="#navigation" className="hover: underline focus:outline-none focus:ring-2 focus:ring-white rounded px-2 py-1">;";,
                 Skip to navigation;
               </a>;
-              <a href="#footer" className="hover:underline focus:outline-none focus:ring-2 focus:ring-white rounded px-2 py-1">;
+              <a href="#footer" className="hover: underline focus:outline-none focus:ring-2 focus:ring-white rounded px-2 py-1">;";,
                 Skip to footer;
               </a>;
             </div>;
@@ -149,48 +149,49 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
       </AnimatePresence>;
 
       {/* Accessibility Controls */}
-      <div  className="fixed bottom - 4 left - 4 z -40">;
-        <motion.div;
+      <div  className="fixed bottom - 4 left - 4 z -40">;";
+        <motion.div;>
           initial = {;
   { opacity: 0,;
   x: -20;,
 }}
           animate = {;
   { opacity: 1,;
-  x: 0;
-        <motion.button;
+  x: 0;,
+        <motion.button;>
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           onClick={toggleVoiceNavigation}
-          className={`p-3 rounded-full shadow-lg transition-colors ${voiceNavigation ? 'bg-blue-500 text-white' : 'bg-gray-700 text-white';,
-}`}
-          title="Toggle voice navigation">;
-          {voiceNavigation ? <Volume2 className="w-5 h-5" /> : <VolumeX className="w-5 h-5"  />}
+          className={`p-3 rounded-full shadow-lg transition-colors ${voiceNavigation ? 'bg-blue-500 text-white' : 'bg-gray-700 text-white';,`;
+}`}`;
+          title="Toggle voice navigation">;";
+          {voiceNavigation ? <Volume2 className="w-5 h-5" /> : <VolumeX className="w-5 h-5"  />}";
         </motion.button>;
 
-        <div className="bg-white rounded-lg shadow-lg p-2">;
-          <div className="flex items-center space-x-2">;
-            <button;
+        <div className="bg-white rounded-lg shadow-lg p-2">;";
+          <div className="flex items-center space-x-2">;";
+            <button;>
               onClick={decreaseFontSize}
-              className="p-1 rounded hover:bg-gray-100";
-              title="Decrease font size">;
-              <span className="text-sm font-bold">A-</span>;
+              className="p-1 rounded hover: bg-gray-100";";,
+              title="Decrease font size">;";
+              <span className="text-sm font-bold">A-</span>;";
             </button>;
-            <span className="text-xs text-gray-600 min-w-[2rem] text-center">{fontSize}px</span>;
-            <button;
+            <span className="text-xs text-gray-600 min-w-[2rem] text-center">{fontSize}px</span>;";
+            <button;>
               onClick={increaseFontSize}
-              className="p-1 rounded hover:bg-gray-100";
-              title="Increase font size">;
-              <span className="text-sm font-bold">A+</span>;
+              className="p-1 rounded hover: bg-gray-100";";,
+              title="Increase font size">;";
+              <span className="text-sm font-bold">A+</span>;";
             </button>;
           </div>;
-          <button;
+          <button;>
             onClick={resetFontSize}
-            className="w-full mt-1 text-xs text-gray-500 hover:text-gray-700";
-            title="Reset font size">;
+            className="w-full mt-1 text-xs text-gray-500 hover: text-gray-700";";,
+            title="Reset font size">;";
             Reset;
           </button>;
         </div>;
       </div>;
     </AccessibilityContext.Provider>;
   )};
+;

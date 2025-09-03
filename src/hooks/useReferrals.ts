@@ -1,10 +1,10 @@
 import { useState, useEffect, useCallback } from 'react'; // Added useCallback;
 import { toast } from '@/hooks/use-toast';
 ;
-export default function Page() {;
+export default function Page(): any {;
       setReferralCode(data || null); // Set to null if no data;,
 } catch(error) {;
-      console.error("Error in fetchReferralCode:", error);,
+      console.error("Error in fetchReferralCode:", error);,";
 }
   }, [user?.id]);
 ;
@@ -20,7 +20,7 @@ export default function Page() {;
       if(error) throw error;
       setReferrals(data || []);,
 } catch(error) {;
-      console.error("Error fetching referrals:", error);,
+      console.error("Error fetching referrals:", error);,";
 }
   }, [user?.id]);
 ;
@@ -36,7 +36,7 @@ export default function Page() {;
       if(error) throw error;
       setRewards(data || []);,
 } catch(error) {;
-      console.error("Error fetching rewards:", error);,
+      console.error("Error fetching rewards:", error);,";
 }
   }, [user?.id]);
 ;
@@ -73,7 +73,7 @@ export default function Page() {;
 });
       ;,
 } catch(error) {;
-      console.error("Error fetching referral stats:", error);,
+      console.error("Error fetching referral stats:", error);,";
 }
   }, [user?.id]);
 ;
@@ -100,9 +100,9 @@ export default function Page() {;
     try {;
       if(!user) {;
         toast({;
-          title: "Authentication required",;
-          description: "You need to be logged in to generate a referral code",;
-          variant: "destructive",;,
+          title: "Authentication required",;";
+          description: "You need to be logged in to generate a referral code",;";
+          variant: "destructive",;,";
 });
         return;,
 }
@@ -114,58 +114,58 @@ export default function Page() {;
       if(error) throw error;
 ;
       toast({;
-        title: "Success!",;
-        description: "Your referral code has been generated",;
-        variant: "success",;,
+        title: "Success!",;";
+        description: "Your referral code has been generated",;";
+        variant: "success",;,";
 });
 ;
       await fetchReferralCode(); ;
       ;
       return data;,
-} catch(error: any) {;
-      console.error("Error generating referral code:", error);
+} catch(error: any) {;,
+      console.error("Error generating referral code:", error);";
       toast({;
-        title: "Error generating code",;
-        description: error.message || "There was a problem generating your referral code",;
-        variant: "destructive",;,
+        title: "Error generating code",;";
+        description: error.message || "There was a problem generating your referral code",;";
+        variant: "destructive",;,";
 });,
 }
   };
 ;
   const getReferralLink = useCallback(() => { // Wrapped in useCallback;
-    if(!referralCode?.code) return ""; // Check referralCode.code;
+    if(!referralCode?.code) return ""; // Check referralCode.code;";
     ;
-    const baseUrl = typeof window !== "undefined" ? window.location.origin : "";
-    return `${baseUrl}/?ref=${referralCode.code}`;,
+    const baseUrl = typeof window !== "undefined" ? window.location.origin : "";";
+    return `${baseUrl}/?ref=${referralCode.code}`;,`;
 }, [referralCode?.code]); // Dependency on referralCode.code;
 
   const copyReferralLink = useCallback(() => { // Wrapped in useCallback;
     const link = getReferralLink();
-    if(link && typeof navigator !== "undefined" && navigator.clipboard) {;
+    if(link && typeof navigator !== "undefined" && navigator.clipboard) {;";
       navigator.clipboard.writeText(link);
       toast({;
-        title: "Copied!",;
-        description: "Referral link copied to clipboard",;
-        variant: "success",;,
+        title: "Copied!",;";
+        description: "Referral link copied to clipboard",;";
+        variant: "success",;,";
 });,
 } else {;
       toast({;
-        title: "Cannot copy link",;
-        description: referralCode ? "Clipboard API not available." : "Please generate a referral code first",;
-        variant: "destructive",;,
+        title: "Cannot copy link",;";
+        description: referralCode ? "Clipboard API not available." : "Please generate a referral code first",;";
+        variant: "destructive",;,";
 });,
 }
   }, [getReferralLink, referralCode]); // Dependencies;
 
-  const shareOnSocialMedia = useCallback((platform: 'twitter' | 'facebook' | 'linkedin') => { // Wrapped;
+  const shareOnSocialMedia = useCallback((platform: 'twitter' | 'facebook' | 'linkedin') => { // Wrapped;,
     const link = getReferralLink();
-    const text = "Join Zion AI marketplace for AI talent and opportunities!";
+    const text = "Join Zion AI marketplace for AI talent and opportunities!";";
     ;
     if(!link) {;
       toast({;
-        title: "Cannot share",;
-        description: "Please generate a referral code first",;
-        variant: "destructive",;,
+        title: "Cannot share",;";
+        description: "Please generate a referral code first",;";
+        variant: "destructive",;,";
 });
       return;,
 }
@@ -174,17 +174,17 @@ export default function Page() {;
     ;
     switch(platform) {;
       case 'twitter':;
-        shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(link)}`;
+        shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(link)}`;`;
         break;
       case 'facebook':;
-        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(link)}`;
+        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(link)}`;`;
         break;
       case 'linkedin':;
-        shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(link)}`;
+        shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(link)}`;`;
         break;,
 }
     ;
-    if(shareUrl && typeof window !== "undefined") {;
+    if(shareUrl && typeof window !== "undefined") {;";
       window.open(shareUrl, '_blank');,
 }
   }, [getReferralLink]); // Dependency;
@@ -205,3 +205,4 @@ export default function Page() {;
     fetchReferralCode, ;,
 };,
 }
+;

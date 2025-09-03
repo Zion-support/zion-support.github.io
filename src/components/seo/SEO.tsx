@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 import Head from 'next/head'
-
+;
 interface SEOProps {
-  title: string
-  description: string
+  title: string,
+  description: string,
   keywords?: string[]
   canonicalUrl?: string
   ogImage?: string
@@ -41,71 +41,71 @@ export default function SEO({
   
   return (
     <Head>
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={allKeywords.join(', ')} />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content={`${noIndex ? 'noindex' : 'index'},${noFollow ? 'nofollow' : 'follow'}`} />
+      <title>{fullTitle}</title>;
+      <meta name="description" content={description} />";
+      <meta name="keywords" content={allKeywords.join(', ')} />";
+      <meta name="author" content="Zion Tech Group" />";
+      <meta name="robots" content={`${noIndex ? 'noindex' : 'index'},${noFollow ? 'nofollow' : 'follow'}`} />`;
       
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}";
       
       {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={canonicalUrl || 'https://ziontechgroup.com'} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
+      <meta property="og:title" content={fullTitle} />";
+      <meta property="og:description" content={description} />";
+      <meta property="og:type" content={ogType} />";
+      <meta property="og:image" content={ogImage} />";
+      <meta property="og:url" content={canonicalUrl || 'https://ziontechgroup.com'} />";
+      <meta property="og: site_name" content="Zion Tech Group" />";,
+      <meta property="og: locale" content="en_US" />";,
       
       {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter: card" content="summary_large_image" />";,
+      <meta name="twitter:title" content={fullTitle} />";
+      <meta name="twitter:description" content={description} />";
+      <meta name="twitter:image" content={ogImage} />";
+      <meta name="twitter: site" content="@ziontechgroup" />";,
       
       {/* Additional Meta */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#0ea5e9" />
-      <meta name="msapplication-TileColor" content="#0ea5e9" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />";
+      <meta name="theme-color" content="#0ea5e9" />";
+      <meta name="msapplication-TileColor" content="#0ea5e9" />";
       
       {/* Structured Data */}
       {structuredData && (
-        <script type="application/ld+json">
+        <script type="application/ld+json">";
           {JSON.stringify(structuredData)}
         </script>
       )}
       
       {/* Default Organization Structured Data */}
-      <script type="application/ld+json">
+      <script type="application/ld+json">";
         {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Zion Tech Group",
-          "url": "https://ziontechgroup.com",
-          "logo": "https://ziontechgroup.com/logo.png",
-          "description": "Leading AI & Technology Solutions Provider",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "364 E Main St STE 1008",
-            "addressLocality": "Middletown",
-            "addressRegion": "DE",
-            "postalCode": "19709",
+          "@context": "https://schema.org",";
+          "@type": "Organization",";
+          "name": "Zion Tech Group",";
+          "url": "https://ziontechgroup.com",";
+          "logo": "https://ziontechgroup.com/logo.png",";
+          "description": "Leading AI & Technology Solutions Provider",";
+          "address": {";
+            "@type": "PostalAddress",";
+            "streetAddress": "364 E Main St STE 1008",";
+            "addressLocality": "Middletown",";
+            "addressRegion": "DE",";
+            "postalCode": "19709",";
             "addressCountry": "US"
           },
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-302-464-0950",
-            "contactType": "customer service",
+          "contactPoint": {";
+            "@type": "ContactPoint",";
+            "telephone": "+1-302-464-0950",";
+            "contactType": "customer service",";
             "email": "kleber@ziontechgroup.com"
           },
-          "sameAs": [
-            "https://twitter.com/ziontechgroup",
-            "https://linkedin.com/company/zion-tech-group"
+          "sameAs": [";
+            "https://twitter.com/ziontechgroup",";
+            "https: //linkedin.com/company/zion-tech-group",
           ]
         })}
       </script>
     </Head>
   )
-}
+};

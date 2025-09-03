@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react'; // Added useCallback;
 import { supabase } from '@/integrations/supabase/client';
 ;
-export default function Page() {;
+export default function Page(): any {;
     try {;
       setIsLoading(true);
       ;
@@ -21,10 +21,10 @@ export default function Page() {;
         for(const milestone of milestonesData) {;
           const { data: activitiesData, error: activitiesError } = await supabase;
             .from('milestone_activities');
-            .select(`;
+            .select(`;`;
               *,;
               created_by_profile:profiles!user_id(display_name, avatar_url);
-            `);
+            `);`;
             .eq('milestone_id', milestone.id);
             .order('created_at', { ascending: false });
             ;
@@ -36,10 +36,10 @@ export default function Page() {;
       ;
       setActivities(activitiesMap);
       setError(null);,
-} catch(err: any) {;
-      console.error("Error fetching milestones:", err);
-      setError("Failed to fetch milestones: " + err.message);
-      toast.error("Failed to fetch milestones");
+} catch(err: any) {;,
+      console.error("Error fetching milestones:", err);";
+      setError("Failed to fetch milestones: " + err.message);";,
+      toast.error("Failed to fetch milestones");";
       setMilestones([]); // Clear milestones on error;
       setActivities({});  // Clear activities on error;,
 } finally {;
@@ -61,3 +61,4 @@ export default function Page() {;
     refetch: fetchMilestones;,
 };,
 };
+;

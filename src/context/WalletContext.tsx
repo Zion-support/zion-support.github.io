@@ -2,7 +2,7 @@ import React, { createContext, useState, useContext, ReactNode, useCallback, use
 import Web3Modal from 'web3modal';
 import { ethers } from 'ethers';
 ;
-export default function Page() {;
+export default function Page(): any {;
 > = ({ children }) => {;
   const [wallet, setWallet] = useState<WalletState>(initialWalletState);
   const [web3ModalInstance, setWeb3ModalInstance] = useState<Web3Modal | null>(null);
@@ -48,7 +48,7 @@ export default function Page() {;
         isConnected: true,;,
 });
 ;
-      instance.on('accountsChanged', (accounts: string[]) => {;
+      instance.on('accountsChanged', (accounts: string[]) => {;,
         if(accounts.length > 0) {;
           // Re-fetch signer and network info as account change might imply network change in some wallets;
           const newProvider = new ethers.providers.Web3Provider(instance);
@@ -80,11 +80,10 @@ export default function Page() {;
           chainId: newNetwork.chainId,;
           isConnected: true,;,
 });
-        console.log('Network changed to:', newNetwork.chainId);,
+        ,
 });
 ;
-      instance.on('disconnect', (error: any) => {;
-        console.log('Disconnected', error);
+      instance.on('disconnect', (error: any) => {;,
         disconnectWallet();,
 });
 ;,
@@ -96,7 +95,7 @@ export default function Page() {;
   }, [web3ModalInstance, disconnectWallet]); // Added disconnectWallet;
 
   const displayAddress = wallet.address;
-    ? `${wallet.address.substring(0, 6)}...${wallet.address.substring(wallet.address.length-4)}`;
+    ? `${wallet.address.substring(0, 6)}...${wallet.address.substring(wallet.address.length-4)}`;`;
     : null;
 ;
   return (<WalletContext.Provider value={{ ...wallet, connectWallet, disconnectWallet, displayAddress }}>;
@@ -112,3 +111,4 @@ export const useWallet = (): WalletContextType => {;
 }
   return context;,
 };
+;

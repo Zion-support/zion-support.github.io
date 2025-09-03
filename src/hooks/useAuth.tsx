@@ -1,10 +1,10 @@
 
 interface User {;
 
-  id: string;
-  email: string;
-  name: string;
-  role: 'user' | 'admin' | 'moderator';
+  id: string;,
+  email: string;,
+  name: string;,
+  role: 'user' | 'admin' | 'moderator';,
   userType?: string;
   displayName?: string;
 :src/hooks/useAuth.tsx;
@@ -13,15 +13,15 @@ interface User {;
 ;
 interface AuthState {;
 
-  user: User | null;
-  isAuthenticated: boolean;
+  user: User | null;,
+  isAuthenticated: boolean;,
 :src/hooks/useAuth.tsx;
-  isLoading: boolean;
+  isLoading: boolean;,
   isLoading: boolean}
 ;,
 }
 ;
-export function useAuth(...args: unknown[]): unknown {;
+export function useAuth(...args: unknown[]): unknown {;,
   const [authState, setAuthState] = useState<AuthState>({;
 
     user: null,;
@@ -133,3 +133,4 @@ export function useAuth(...args: unknown[]): unknown {;
 ';
     updateProfile,;,
 }}
+;

@@ -17,7 +17,7 @@ import {}
   Mail,''';
   MapPin} from 'lucide-react';
 ;
-const EnhancedComprehensiveServicesShowcase = () => {}
+const EnhancedComprehensiveServicesShowcase = () => {};
 ';
 '';
 ''';
@@ -41,7 +41,7 @@ const EnhancedComprehensiveServicesShowcase = () => {}
       ...service,';
       category: service.category || 'Innovation',';
       price: service.price || '$2,999',';
-      description:'';
+      description: '';,
         service.description || service.tagline || 'Revolutionary service',;
       features: service.features || [],;
       benefits: service.benefits || [],';
@@ -50,7 +50,7 @@ const EnhancedComprehensiveServicesShowcase = () => {}
       badge: service.badge || 'New'}));
   ];
 ;
-  const filteredServices = transformedServices.filter(service => {}
+  const filteredServices = transformedServices.filter(service => {};
     const matchesSearch =;
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -72,7 +72,7 @@ const EnhancedComprehensiveServicesShowcase = () => {}
 ''';
       id: 'Quantum Computing',''';
       name: 'Quantum Computing',''';
-      count: transformedServices.filter(s => s.category.includes('Quantum'));
+      count: transformedServices.filter(s => s.category.includes('Quantum'));,
         .length},;
     {}
 ';
@@ -80,7 +80,7 @@ const EnhancedComprehensiveServicesShowcase = () => {}
 ''';
       id: 'Blockchain & Web3',''';
       name: 'Blockchain & Web3',''';
-      count: transformedServices.filter(s => s.category.includes('Blockchain'));
+      count: transformedServices.filter(s => s.category.includes('Blockchain'));,
         .length},;
     {}
 ';
@@ -88,7 +88,7 @@ const EnhancedComprehensiveServicesShowcase = () => {}
 ''';
       id: 'Space Technology',''';
       name: 'Space Technology',''';
-      count: transformedServices.filter(s => s.category.includes('Space'));
+      count: transformedServices.filter(s => s.category.includes('Space'));,
         .length},;
     {}
 ';
@@ -96,7 +96,7 @@ const EnhancedComprehensiveServicesShowcase = () => {}
 ''';
       id: 'Green Technology',''';
       name: 'Green Technology',''';
-      count: transformedServices.filter(s => s.category.includes('Green'));
+      count: transformedServices.filter(s => s.category.includes('Green'));,
         .length},;
     {}
 ';
@@ -104,7 +104,7 @@ const EnhancedComprehensiveServicesShowcase = () => {}
 ''';
       id: 'Cybersecurity',''';
       name: 'Cybersecurity','';
-      count: transformedServices.filter(s =>''';
+      count: transformedServices.filter(s =>''';,
         s.category.includes('Cybersecurity');
       ).length},;
     {}
@@ -113,7 +113,7 @@ const EnhancedComprehensiveServicesShowcase = () => {}
 ''';
       id: 'Micro SaaS',''';
       name: 'Micro SaaS',''';
-      count: transformedServices.filter(s => s.category.includes('Micro SaaS'));
+      count: transformedServices.filter(s => s.category.includes('Micro SaaS'));,
         .length},;
     {}
 ';
@@ -121,7 +121,7 @@ const EnhancedComprehensiveServicesShowcase = () => {}
 ''';
       id: 'Data & Analytics',''';
       name: 'Data & Analytics',''';
-      count: transformedServices.filter(s => s.category.includes('Data'));
+      count: transformedServices.filter(s => s.category.includes('Data'));,
         .length},;
     {}
 ';
@@ -129,7 +129,7 @@ const EnhancedComprehensiveServicesShowcase = () => {}
 ''';
       id: 'Cloud & DevOps',''';
       name: 'Cloud & DevOps',''';
-      count: transformedServices.filter(s => s.category.includes('Cloud'));
+      count: transformedServices.filter(s => s.category.includes('Cloud'));,
         .length},;
     {}
 ';
@@ -137,99 +137,99 @@ const EnhancedComprehensiveServicesShowcase = () => {}
 ''';
       id: 'Digital Transformation',''';
       name: 'Digital Transformation',''';
-      count: transformedServices.filter(s => s.category.includes('Digital'));
+      count: transformedServices.filter(s => s.category.includes('Digital'));,
         .length}
   ];
 ;
-  const handleServiceClick = service => {}
+  const handleServiceClick = service => {};
     setSelectedService(service);,
 };
 ;
-  const closeModal = () => {}
+  const closeModal = () => {};
     setSelectedService(null);,
 };
 ;
   return();
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">";
-      {/* Header Section */}"";
-      <section className="py-20 px-4 sm:px-6 lg:px-8">"";
-        <div className="max-w-7xl mx-auto text-center">"";
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">";
-            Zion Tech Group"";
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">';
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">";";
+      {/* Header Section */}"";";
+      <section className="py-20 px-4 sm: px-6 lg:px-8">"";";,
+        <div className="max-w-7xl mx-auto text-center">"";";
+          <h1 className="text-4xl md: text-6xl font-bold mb-6">";";,
+            Zion Tech Group"";";
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">';";
               {' '}
               Innovative Services 2025;
-            </span>";
-          </h1>"";
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">;
+            </span>";";
+          </h1>"";";
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">;";
             Discover our cutting-edge portfolio of micro SAAS solutions, IT;
             services, and AI-powered innovations designed to transform your;
             business and drive competitive advantage in the digital age;
           </p>;
-";
-          {/* Key Statistics */}"";
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">"";
-            <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">"";
-              <div className="text-3xl font-bold text-blue-400 mb-2">;
-                {transformedServices.length}+";
-              </div>"";
-              <div className="text-sm text-gray-300">Innovative Services</div>";
-            </div>"";
-            <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">"";
-              <div className="text-3xl font-bold text-cyan-400 mb-2">15+</div>"";
-              <div className="text-sm text-gray-300">Technology Categories</div>";
-            </div>"";
-            <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">"";
-              <div className="text-3xl font-bold text-green-400 mb-2">99%</div>"";
-              <div className="text-sm text-gray-300">Client Satisfaction</div>";
-            </div>"";
-            <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">"";
-              <div className="text-3xl font-bold text-purple-400 mb-2">;
-                24/7";
-              </div>"";
-              <div className="text-sm text-gray-300">Support Available</div>;
+";";
+          {/* Key Statistics */}"";";
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">"";";,
+            <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">"";";
+              <div className="text-3xl font-bold text-blue-400 mb-2">;";
+                {transformedServices.length}+";";
+              </div>"";";
+              <div className="text-sm text-gray-300">Innovative Services</div>";";
+            </div>"";";
+            <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">"";";
+              <div className="text-3xl font-bold text-cyan-400 mb-2">15+</div>"";";
+              <div className="text-sm text-gray-300">Technology Categories</div>";";
+            </div>"";";
+            <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">"";";
+              <div className="text-3xl font-bold text-green-400 mb-2">99%</div>"";";
+              <div className="text-sm text-gray-300">Client Satisfaction</div>";";
+            </div>"";";
+            <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">"";";
+              <div className="text-3xl font-bold text-purple-400 mb-2">;";
+                24/7";";
+              </div>"";";
+              <div className="text-sm text-gray-300">Support Available</div>;";
             </div>;
           </div>;
-";
-          {/* Search and Filter */}"";
-          <div className="max-w-2xl mx-auto mb-8">"";
-            <div className="relative">";
-              <input"";
-                type="text"";
-                placeholder="Search services, features, or technologies...";
-                value={searchTerm}";
-                onChange={e => setSearchTerm(e.target.value)}"";
-                className="w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400";
-              />";
-              <svg"";
-                className="absolute right-3 top-3 h-6 w-6 text-gray-400"";
-                fill="none"";
-                stroke="currentColor"";
-                viewBox="0 0 24 24">";
-                <path"";
-                  strokeLinecap="round"";
-                  strokeLinejoin="round"";
-                  strokeWidth={2}"";
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z";
+";";
+          {/* Search and Filter */}"";";
+          <div className="max-w-2xl mx-auto mb-8">"";";
+            <div className="relative">";";
+              <input"";";>
+                type="text"";";
+                placeholder="Search services, features, or technologies...";";
+                value={searchTerm}";";
+                onChange={e => setSearchTerm(e.target.value)}"";";
+                className="w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-400";";,
+              />";";
+              <svg"";";>
+                className="absolute right-3 top-3 h-6 w-6 text-gray-400"";";
+                fill="none"";";
+                stroke="currentColor"";";
+                viewBox="0 0 24 24">";";
+                <path"";";>
+                  strokeLinecap="round"";";
+                  strokeLinejoin="round"";";
+                  strokeWidth={2}"";";
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z";";
                 />;
               </svg>;
             </div>;
           </div>;
-";
-          {/* Category Filter */}"";
-          <div className="flex flex-wrap justify-center gap-4 mb-12">;
+";";
+          {/* Category Filter */}"";";
+          <div className="flex flex-wrap justify-center gap-4 mb-12">;";
             {serviceCategories.map(category => (;
-              <button;
+              <button;>
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${}`;
 ';
 '';
-'''`;
-                  activeCategory === category.id'''`'`;
-                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'''`'`'`;
-                    : 'bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hover:bg-white/20'````;,
-}`}
+'''`;`;
+                  activeCategory === category.id'''`'`;`;
+                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'''`'`'`;`;
+                    : 'bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hover:bg-white/20'````;,`;
+}`}`;
               >;
                 {category.name} ({category.count});
               </button>;
@@ -237,45 +237,45 @@ const EnhancedComprehensiveServicesShowcase = () => {}
           </div>;
         </div>;
       </section>;
-";
-      {/* Services Grid */}"";
-      <section className="py-20 px-4 sm:px-6 lg:px-8">"";
-        <div className="max-w-7xl mx-auto">"";
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+";";
+      {/* Services Grid */}"";";
+      <section className="py-20 px-4 sm: px-6 lg:px-8">"";";,
+        <div className="max-w-7xl mx-auto">"";";
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">;";,
             {filteredServices.map((service, index) => (;
-              <div;
-                key={service.id}";
-                onClick={() => handleServiceClick(service)}"";
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer"">"";
-                <div className="text-4xl mb-4">{service.icon}</div>"";
-                <h3 className="text-xl font-semibold text-white mb-3">;
-                  {service.name}";
-                </h3>"";
-                <p className="text-gray-300 mb-4 line-clamp-3">;
+              <div;>
+                key={service.id}";";
+                onClick={() => handleServiceClick(service)}"";";
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-white/40 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer"">"";";,
+                <div className="text-4xl mb-4">{service.icon}</div>"";";
+                <h3 className="text-xl font-semibold text-white mb-3">;";
+                  {service.name}";";
+                </h3>"";";
+                <p className="text-gray-300 mb-4 line-clamp-3">;";
                   {service.description}
-                </p>";
-"";
-                <div className="flex items-center justify-between mb-4">"";
-                  <span className="px-3 py-1 bg-white/10 rounded-full text-sm text-white">;
-                    {service.category}";
-                  </span>"";
-                  <span className="text-lg font-bold text-blue-400">';
+                </p>";";
+"";";
+                <div className="flex items-center justify-between mb-4">"";";
+                  <span className="px-3 py-1 bg-white/10 rounded-full text-sm text-white">;";
+                    {service.category}";";
+                  </span>"";";
+                  <span className="text-lg font-bold text-blue-400">';";
                     ${service.displayPrice?.toLocaleString() || 'Contact Us'}
                   </span>;
-                </div>";
-"";
-                <div className="flex flex-wrap gap-2 mb-4">;
+                </div>";";
+"";";
+                <div className="flex flex-wrap gap-2 mb-4">;";
                   {service.tags?.slice(0, 3).map((tag, tagIndex) => (;
-                    <span";
-                      key={tagIndex}"";
-                      className="px-2 py-1 bg-white/5 rounded text-xs text-gray-300">;
+                    <span";";>
+                      key={tagIndex}"";";
+                      className="px-2 py-1 bg-white/5 rounded text-xs text-gray-300">;";
                       {tag}
                     </span>;
                   ))}
-                </div>";
-"";
-                <div className="text-sm text-gray-400">"";
-                  <div className="flex items-center justify-between">;
+                </div>";";
+"";";
+                <div className="text-sm text-gray-400">"";";
+                  <div className="flex items-center justify-between">;";
                     <span>ROI: {service.roi}</span>;
                     <span>Delivery: {service.estimatedDelivery}</span>;
                   </div>;
@@ -285,49 +285,49 @@ const EnhancedComprehensiveServicesShowcase = () => {}
           </div>;
         </div>;
       </section>;
-";
-      {/* Why Choose Zion Tech Group */}"";
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">"";
-        <div className="max-w-7xl mx-auto">"";
-          <div className="text-center mb-16">"";
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
-              Why Choose Zion Tech Group?";
-            </h2>"";
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
+";";
+      {/* Why Choose Zion Tech Group */}"";";
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">"";";,
+        <div className="max-w-7xl mx-auto">"";";
+          <div className="text-center mb-16">"";";
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">;";,
+              Why Choose Zion Tech Group?";";
+            </h2>"";";
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;";
               We combine cutting-edge technology with proven business expertise;
               to deliver solutions that drive real results;
             </p>;
-          </div>";
-"";
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"";
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">"";
-              <div className="text-4xl mb-4">🚀</div>"";
-              <h3 className="text-xl font-semibold text-white mb-3">;
-                Innovation First";
-              </h3>"";
-              <p className="text-gray-300">;
+          </div>";";
+"";";
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">"";";,
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">"";";
+              <div className="text-4xl mb-4">🚀</div>"";";
+              <h3 className="text-xl font-semibold text-white mb-3">;";
+                Innovation First";";
+              </h3>"";";
+              <p className="text-gray-300">;";
                 We stay ahead of technology trends, offering the latest AI,;
                 quantum computing, and emerging tech solutions;
               </p>;
-            </div>";
-"";
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">"";
-              <div className="text-4xl mb-4">💼</div>"";
-              <h3 className="text-xl font-semibold text-white mb-3">;
-                Business Focused";
-              </h3>"";
-              <p className="text-gray-300">;
+            </div>";";
+"";";
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">"";";
+              <div className="text-4xl mb-4">💼</div>"";";
+              <h3 className="text-xl font-semibold text-white mb-3">;";
+                Business Focused";";
+              </h3>"";";
+              <p className="text-gray-300">;";
                 Every solution is designed with ROI in mind, ensuring measurable;
                 business impact and value creation;
               </p>;
-            </div>";
-"";
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">"";
-              <div className="text-4xl mb-4">🔒</div>"";
-              <h3 className="text-xl font-semibold text-white mb-3">;
-                Enterprise Grade";
-              </h3>"";
-              <p className="text-gray-300">;
+            </div>";";
+"";";
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">"";";
+              <div className="text-4xl mb-4">🔒</div>"";";
+              <h3 className="text-xl font-semibold text-white mb-3">;";
+                Enterprise Grade";";
+              </h3>"";";
+              <p className="text-gray-300">;";
                 Built with security, scalability, and compliance in mind for;
                 enterprise-level reliability;
               </p>;
@@ -335,27 +335,27 @@ const EnhancedComprehensiveServicesShowcase = () => {}
           </div>;
         </div>;
       </section>;
-";
-      {/* CTA Section */}"";
-      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">"";
-        <div className="max-w-4xl mx-auto text-center">"";
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
-            Ready to Transform Your Business?";
-          </h2>"";
-          <p className="text-xl text-gray-300 mb-8">';
+";";
+      {/* CTA Section */}"";";
+      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">"";";
+        <div className="max-w-4xl mx-auto text-center">"";";
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">;";,
+            Ready to Transform Your Business?";";
+          </h2>"";";
+          <p className="text-xl text-gray-300 mb-8">';";
             Let's discuss how our innovative services can help drive your;
-            digital transformation and competitive advantage";
-          </p>"";
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-            <a"";
-              href="mailto:kleber@ziontechgroup.com"";
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">;
+            digital transformation and competitive advantage";";
+          </p>"";";
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">";";,
+            <a"";";>
+              href="mailto: kleber@ziontechgroup.com"";";,
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover: from-blue-700 hover:to-cyan-700 transition-all duration-300">;";,
               Get Custom Quote;
-            </a>";
-            <a"";
-              href="tel:+13024640950"";
-              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">;
-              Call Us: +1 302 464 0950;
+            </a>";";
+            <a"";";>
+              href="tel: +13024640950"";";,
+              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800 transition-all duration-300">;";,
+              Call Us: +1 302 464 0950;,
             </a>;
           </div>;
         </div>;
@@ -373,3 +373,4 @@ export { EnhancedComprehensiveServicesShowcase };
 export { EnhancedComprehensiveServicesShowcase };
 ;
 export { EnhancedComprehensiveServicesShowcase };
+;

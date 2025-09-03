@@ -54,7 +54,7 @@ import { ;
   MapPin;,
 } from 'lucide-react';
 ;
-export default function AIComplianceCopilot() {;
+export default function AIComplianceCopilot(): any {;
   const features = [;
     {;
       icon: Shield,;
@@ -117,32 +117,32 @@ export default function AIComplianceCopilot() {;
   ];
 ;
   return (;
-    <div className="min-h-screen bg-zion-blue">;
+    <div className="min-h-screen bg-zion-blue">;";
       <Helmet>;
         <title>AI Compliance Copilot - Zion Tech Group</title>;
-        <meta name="description" content="AI-powered compliance automation platform that helps organizations maintain regulatory compliance, reduce risks, and streamline compliance workflows." />;
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-compliance-copilot" />;
+        <meta name="description" content="AI-powered compliance automation platform that helps organizations maintain regulatory compliance, reduce risks, and streamline compliance workflows." />;";
+        <link rel="canonical" href="https: //ziontechgroup.com/services/ai-compliance-copilot" />;";,
       </Helmet>;
 
       {/* Hero Section */}
-      <div className="bg-zion-blue-dark border-b border-zion-purple/30">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
-          <div className="text-center">;
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full mb-6">;
-              <Shield className="w-10 h-10 text-white" />;
+      <div className="bg-zion-blue-dark border-b border-zion-purple/30">;";
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">;";,
+          <div className="text-center">;";
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full mb-6">;";
+              <Shield className="w-10 h-10 text-white" />;";
             </div>;
-            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">;
+            <h1 className="text-4xl lg: text-5xl font-bold text-white mb-6">;";,
               AI Compliance Copilot;
             </h1>;
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">;
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">;";
               Transform your compliance operations with AI-powered automation. ;
               Reduce risks, ensure regulatory adherence, and streamline compliance workflows.;
             </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25">;
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">;";,
+              <button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-dark hover:to-zion-purple-dark text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25">;";,
                 Get Started;
               </button>;
-              <button className="border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/20 px-8 py-3 rounded-lg font-medium transition-all duration-300">;
+              <button className="border border-zion-purple/30 text-zion-cyan hover: bg-zion-purple/20 px-8 py-3 rounded-lg font-medium transition-all duration-300">;";,
                 Schedule Demo;
               </button>;
             </div>;
@@ -151,28 +151,28 @@ export default function AIComplianceCopilot() {;
       </div>;
 
       {/* Features Section */}
-      <div className="py-16">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <div className="text-center mb-12">;
-            <h2 className="text-3xl font-bold text-white mb-4">;
+      <div className="py-16">;";
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">;";,
+          <div className="text-center mb-12">;";
+            <h2 className="text-3xl font-bold text-white mb-4">;";
               Powerful Compliance Automation;
             </h2>;
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">;
+            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">;";
               Our AI Compliance Copilot combines advanced artificial intelligence with ;
               industry expertise to deliver comprehensive compliance solutions.;
             </p>;
           </div>;
           ;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">;";,
             {features.map((feature, index) => {;
               const Icon = feature.icon;
               return (;
-                <div key={index} className="bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6 hover:border-zion-cyan/50 transition-all duration-300">;
-                  <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4">;
-                    <Icon className="w-6 h-6 text-white" />;
+                <div key={index} className="bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6 hover: border-zion-cyan/50 transition-all duration-300">;";,
+                  <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4">;";
+                    <Icon className="w-6 h-6 text-white" />;";
                   </div>;
-                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>;
-                  <p className="text-zion-slate-light">{feature.description}</p>;
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>;";
+                  <p className="text-zion-slate-light">{feature.description}</p>;";
                 </div>;
               );,
 })}
@@ -181,45 +181,45 @@ export default function AIComplianceCopilot() {;
       </div>;
 
       {/* Benefits Section */}
-      <div className="py-16 bg-zion-blue-dark">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">;
+      <div className="py-16 bg-zion-blue-dark">;";
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">;";,
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">;";,
             <div>;
-              <h2 className="text-3xl font-bold text-white mb-6">;
+              <h2 className="text-3xl font-bold text-white mb-6">;";
                 Why Choose AI Compliance Copilot?;
               </h2>;
-              <div className="space-y-4">;
+              <div className="space-y-4">;";
                 {benefits.map((benefit, index) => (;
-                  <div key={index} className="flex items-center space-x-3">;
-                    <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />;
-                    <span className="text-zion-slate-light">{benefit}</span>;
+                  <div key={index} className="flex items-center space-x-3">;";
+                    <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />;";
+                    <span className="text-zion-slate-light">{benefit}</span>;";
                   </div>;
                 ))}
               </div>;
-              <button className="mt-8 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25 flex items-center space-x-2">;
+              <button className="mt-8 bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-dark hover:to-zion-purple-dark text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25 flex items-center space-x-2">;";,
                 <span>Learn More</span>;
-                <ArrowRight className="w-5 h-5" />;
+                <ArrowRight className="w-5 h-5" />;";
               </button>;
             </div>;
             ;
-            <div className="bg-zion-blue-darker border border-zion-purple/30 rounded-lg p-8">;
-              <h3 className="text-2xl font-bold text-white mb-6 text-center">Key Metrics</h3>;
-              <div className="grid grid-cols-2 gap-6">;
-                <div className="text-center">;
-                  <div className="text-3xl font-bold text-zion-cyan mb-2">60%</div>;
-                  <div className="text-zion-slate-light text-sm">Cost Reduction</div>;
+            <div className="bg-zion-blue-darker border border-zion-purple/30 rounded-lg p-8">;";
+              <h3 className="text-2xl font-bold text-white mb-6 text-center">Key Metrics</h3>;";
+              <div className="grid grid-cols-2 gap-6">;";
+                <div className="text-center">;";
+                  <div className="text-3xl font-bold text-zion-cyan mb-2">60%</div>;";
+                  <div className="text-zion-slate-light text-sm">Cost Reduction</div>;";
                 </div>;
-                <div className="text-center">;
-                  <div className="text-3xl font-bold text-zion-cyan mb-2">80%</div>;
-                  <div className="text-zion-slate-light text-sm">Task Automation</div>;
+                <div className="text-center">;";
+                  <div className="text-3xl font-bold text-zion-cyan mb-2">80%</div>;";
+                  <div className="text-zion-slate-light text-sm">Task Automation</div>;";
                 </div>;
-                <div className="text-center">;
-                  <div className="text-3xl font-bold text-zion-cyan mb-2">24/7</div>;
-                  <div className="text-zion-slate-light text-sm">Monitoring</div>;
+                <div className="text-center">;";
+                  <div className="text-3xl font-bold text-zion-cyan mb-2">24/7</div>;";
+                  <div className="text-zion-slate-light text-sm">Monitoring</div>;";
                 </div>;
-                <div className="text-center">;
-                  <div className="text-3xl font-bold text-zion-cyan mb-2">99.9%</div>;
-                  <div className="text-zion-slate-light text-sm">Accuracy</div>;
+                <div className="text-center">;";
+                  <div className="text-3xl font-bold text-zion-cyan mb-2">99.9%</div>;";
+                  <div className="text-zion-slate-light text-sm">Accuracy</div>;";
                 </div>;
               </div>;
             </div>;
@@ -228,23 +228,23 @@ export default function AIComplianceCopilot() {;
       </div>;
 
       {/* Use Cases Section */}
-      <div className="py-16">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <div className="text-center mb-12">;
-            <h2 className="text-3xl font-bold text-white mb-4">;
+      <div className="py-16">;";
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">;";,
+          <div className="text-center mb-12">;";
+            <h2 className="text-3xl font-bold text-white mb-4">;";
               Industry Applications;
             </h2>;
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">;
+            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">;";
               Our AI Compliance Copilot is designed to meet the unique compliance ;
               challenges across various industries and sectors.;
             </p>;
           </div>;
           ;
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-6">;";,
             {useCases.map((useCase, index) => (;
-              <div key={index} className="bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">;
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>;
-                <p className="text-zion-slate-light">{useCase.description}</p>;
+              <div key={index} className="bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">;";
+                <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>;";
+                <p className="text-zion-slate-light">{useCase.description}</p>;";
               </div>;
             ))}
           </div>;
@@ -252,20 +252,20 @@ export default function AIComplianceCopilot() {;
       </div>;
 
       {/* CTA Section */}
-      <div className="py-16 bg-zion-blue-dark">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
-          <h2 className="text-3xl font-bold text-white mb-6">;
+      <div className="py-16 bg-zion-blue-dark">;";
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;";,
+          <h2 className="text-3xl font-bold text-white mb-6">;";
             Ready to Transform Your Compliance Operations?;
           </h2>;
-          <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">;
+          <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">;";
             Join leading organizations that trust Zion Tech Group to automate and ;
             streamline their compliance processes with AI-powered solutions.;
           </p>;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-            <button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25">;
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">;";,
+            <button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-dark hover:to-zion-purple-dark text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25">;";,
               Start Free Trial;
             </button>;
-            <button className="border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/20 px-8 py-3 rounded-lg font-medium transition-all duration-300">;
+            <button className="border border-zion-purple/30 text-zion-cyan hover: bg-zion-purple/20 px-8 py-3 rounded-lg font-medium transition-all duration-300">;";,
               Contact Sales;
             </button>;
           </div>;
@@ -273,4 +273,4 @@ export default function AIComplianceCopilot() {;
       </div>;
     </div>;
   );,
-}
+};

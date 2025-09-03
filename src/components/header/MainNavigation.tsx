@@ -41,65 +41,65 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
 ;
   return (;
-    <nav className={`flex items-center space-x-8 ${className}`}>;
+    <nav className={`flex items-center space-x-8 ${className}`}>;`;
       {/* Home */}
-      <Link ;
-        to="/" ;
-        className="text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors">;
+      <Link ;>
+        to="/" ;";
+        className="text-sm font-medium text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
         Home;
       </Link>;
 
       {/* Services Dropdown */}
-      <div className="relative group">;
-        <button;
+      <div className="relative group">;";
+        <button;>
           onMouseEnter={() => setIsServicesOpen(true)}
           onMouseLeave={() => setIsServicesOpen(false)}
-          className="flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors">;
-          <Zap className="w-4 h-4" />;
+          className="flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
+          <Zap className="w-4 h-4" />;";
           <span>Services</span>;
-          <ChevronDown className="w-3 h-3" />;
+          <ChevronDown className="w-3 h-3" />;";
         </button>;
         ;
         {isServicesOpen && (;
-          <div ;
+          <div ;>
             onMouseEnter={() => setIsServicesOpen(true)} ;
             onMouseLeave={() => setIsServicesOpen(false)}
-            className="absolute top-full left-0 mt-2 w-96 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">;
-            <div className="p-4">;
-              <div className="grid grid-cols-3 gap-4">;
+            className="absolute top-full left-0 mt-2 w-96 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">;";
+            <div className="p-4">;";
+              <div className="grid grid-cols-3 gap-4">;";
                 <div>;
-                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">;
-                    <Rocket className="w-4 h-4 mr-2" />;
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">;";
+                    <Rocket className="w-4 h-4 mr-2" />;";
                     Micro SAAS;
                   </h4>;
-                  <ul className="space-y-2 text-sm">;
+                  <ul className="space-y-2 text-sm">;";
                     <li>;
-                      <Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                      <Link to="/services" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                         All Services;
                       </Link>;
                     </li>;
                     <li>;
-                      <Link to="/services/ai-sales-copilot" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                      <Link to="/services/ai-sales-copilot" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                         AI Sales Copilot;
                       </Link>;
                     </li>;
                     <li>;
-                      <Link to="/services/cloud-finops-optimizer" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                      <Link to="/services/cloud-finops-optimizer" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                         Cloud FinOps Optimizer;
                       </Link>;
                     </li>;
                     <li>;
-                      <Link to="/services/ai-compliance-assistant" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                      <Link to="/services/ai-compliance-assistant" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                         AI Compliance Assistant;
                       </Link>;
                     </li>;
                     <li>;
-                      <Link to="/services/ai-business-intelligence" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                      <Link to="/services/ai-business-intelligence" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                         AI Business Intelligence;
                       </Link>;
                     </li>;
                     <li>;
-                      <Link to="/services/ai-customer-support-automation" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                      <Link to="/services/ai-customer-support-automation" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                         AI Customer Support;
                       </Link>;
                     </li>;
@@ -107,70 +107,70 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
                 </div>;
                 ;
                 <div>;
-                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">;
-                    <Shield className="w-4 h-4 mr-2" />;
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">;";
+                    <Shield className="w-4 h-4 mr-2" />;";
                     IT Services;
                   </h4>;
-                  <ul className="space-y-2 text-sm">;
+                  <ul className="space-y-2 text-sm">;";
                     <li>;
-                      <Link to="/services/quantum-neural-network-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                      <Link to="/services/quantum-neural-network-platform" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                         Quantum Neural Network;
                       </Link>;
                     </li>;
                     <li>;
-                      <Link to="/services/autonomous-business-operations-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                      <Link to="/services/autonomous-business-operations-platform" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                         Autonomous Operations;
                       </Link>;
                     </li>;
                     <li>;
-                      <Link to="/services/ai-powered-it-asset-management" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                      <Link to="/services/ai-powered-it-asset-management" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                         AI Asset Management;
                       </Link>;
                     </li>;
                     <li>;
-                      <Link to="/services/enhanced-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                      <Link to="/services/enhanced-services" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                         Enhanced Services;
                       </Link>;
                     </li>;
                     <li>;
-                      <Link to="/services/it-onsite-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                      <Link to="/services/it-onsite-services" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                         Onsite Support;
                       </Link>;
                     </li>;
                     <li>;
                 <div>;
-                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">;
-                    <Brain className="w-4 h-4 mr-2" />;
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">;";
+                    <Brain className="w-4 h-4 mr-2" />;";
                     AI Solutions;
                   </h4>;
-                  <ul className="space-y-2 text-sm">;
+                  <ul className="space-y-2 text-sm">;";
                     <li>;
-                      <Link to="/services/ai-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                      <Link to="/services/ai-services" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                         AI Services;
                       </Link>;
                     </li>;
                     <li>;
-                      <Link to="/services/ai-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                      <Link to="/services/ai-solutions" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                         AI Solutions;
                       </Link>;
                     </li>;
                     <li>;
-                      <Link to="/services/ai-cybersecurity-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                      <Link to="/services/ai-cybersecurity-platform" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                         AI Cybersecurity;
                       </Link>;
                     </li>;
                     <li>;
-                      <Link to="/services/ai-healthcare-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                      <Link to="/services/ai-healthcare-platform" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                         AI Healthcare;
                       </Link>;
                     </li>;
                     <li>;
-                      <Link to="/services/ai-supply-chain-optimization" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                      <Link to="/services/ai-supply-chain-optimization" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                         AI Supply Chain;
                       </Link>;
                     </li>;
                     <li>;
-                      <Link to="/services/ai-quantum-hybrid-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                      <Link to="/services/ai-quantum-hybrid-platform" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                         AI Quantum Hybrid;
                       </Link>;
                     </li>;
@@ -178,12 +178,12 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
                 </div>;
               </div>;
               ;
-              <div className="mt-4 pt-4 border-t border-zion-purple/20">;
-                <Link ;
-                  to="/services" ;
-                  className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">;
+              <div className="mt-4 pt-4 border-t border-zion-purple/20">;";
+                <Link ;>
+                  to="/services" ;";
+                  className="text-zion-cyan hover: text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">;";,
                   View All Services;
-                  <TrendingUp className="w-4 h-4 ml-2" />;
+                  <TrendingUp className="w-4 h-4 ml-2" />;";
                 </Link>;
               </div>;
             </div>;
@@ -192,47 +192,47 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
       </div>;
 
       {/* Solutions Dropdown */}
-      <div className="relative group">;
-        <button;
+      <div className="relative group">;";
+        <button;>
           onMouseEnter={() => setIsSolutionsOpen(true)}
           onMouseLeave={() => setIsSolutionsOpen(false)}
-          className="flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors">;
-          <Brain className="w-4 h-4" />;
+          className="flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
+          <Brain className="w-4 h-4" />;";
           <span>Solutions</span>;
-          <ChevronDown className="w-3 h-3" />;
+          <ChevronDown className="w-3 h-3" />;";
         </button>;
         ;
         {isSolutionsOpen && (;
-          <div ;
+          <div ;>
             onMouseEnter={() => setIsSolutionsOpen(true)} ;
             onMouseLeave={() => setIsSolutionsOpen(false)}
-            className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">;
-            <div className="p-4">;
-              <div className="grid grid-cols-2 gap-4">;
+            className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">;";
+            <div className="p-4">;";
+              <div className="grid grid-cols-2 gap-4">;";
                 {/* Talent */}
                 <div>;
-                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">;
-                    <Users className="w-4 h-4 mr-2" />;
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">;";
+                    <Users className="w-4 h-4 mr-2" />;";
                     Talent;
                   </h4>;
-                  <ul className="space-y-2 text-sm">;
+                  <ul className="space-y-2 text-sm">;";
                     <li>;
-                      <Link to="/talent" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                      <Link to="/talent" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                         Find Experts;
                       </Link>;
                     </li>;
                     <li>;
-                      <Link to="/zion-hire-ai" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                      <Link to="/zion-hire-ai" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                         AI Hiring;
                       </Link>;
                     </li>;
                     <li>;
-                      <Link to="/talent" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                      <Link to="/talent" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                         Skill Matching;
                       </Link>;
                     </li>;
                     <li>;
-                      <Link to="/talent" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                      <Link to="/talent" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                         Project Teams;
                       </Link>;
                     </li>;
@@ -240,28 +240,28 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
                 </div>;
                 ;
                 <div>;
-                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">;
-                    <HardDrive className="w-4 h-4 mr-2" />;
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">;";
+                    <HardDrive className="w-4 h-4 mr-2" />;";
                     Resources;
                   </h4>;
-                  <ul className="space-y-2 text-sm">;
+                  <ul className="space-y-2 text-sm">;";
                     <li>;
-                      <Link to="/enterprise" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                      <Link to="/enterprise" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                         Enterprise Solutions;
                       </Link>;
                     </li>;
                     <li>;
-                      <Link to="/solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                      <Link to="/solutions" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                         Industry Solutions;
                       </Link>;
                     </li>;
                     <li>;
-                      <Link to="/case-studies" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                      <Link to="/case-studies" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                         Case Studies;
                       </Link>;
                     </li>;
                     <li>;
-                      <Link to="/marketplace" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                      <Link to="/marketplace" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                         Marketplace;
                       </Link>;
                     </li>;
@@ -269,12 +269,12 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
                 </div>;
               </div>;
               ;
-              <div className="mt-4 pt-4 border-t border-zion-purple/20">;
-                <Link ;
-                  to="/request-quote" ;
-                  className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">;
+              <div className="mt-4 pt-4 border-t border-zion-purple/20">;";
+                <Link ;>
+                  to="/request-quote" ;";
+                  className="text-zion-cyan hover: text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">;";,
                   Get Custom Quote;
-                  <TrendingUp className="w-4 h-4 ml-2" />;
+                  <TrendingUp className="w-4 h-4 ml-2" />;";
                 </Link>;
               </div>;
             </div>;
@@ -283,55 +283,55 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
       </div>;
 
       {/* Company Dropdown */}
-      <div className="relative group">;
-        <button;
+      <div className="relative group">;";
+        <button;>
           onMouseEnter={() => setIsCompanyOpen(true)}
           onMouseLeave={() => setIsCompanyOpen(false)}
-          className="flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors">;
-          <Building2 className="w-4 h-4" />;
+          className="flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
+          <Building2 className="w-4 h-4" />;";
           <span>Company</span>;
-          <ChevronDown className="w-3 h-3" />;
+          <ChevronDown className="w-3 h-3" />;";
         </button>;
         ;
         {isCompanyOpen && (;
-          <div ;
+          <div ;>
             onMouseEnter={() => setIsCompanyOpen(true)} ;
             onMouseLeave={() => setIsCompanyOpen(false)}
-            className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">;
-            <div className="p-4">;
-              <ul className="space-y-2 text-sm">;
+            className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">;";
+            <div className="p-4">;";
+              <ul className="space-y-2 text-sm">;";
                 <li>;
-                  <Link to="/about" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                  <Link to="/about" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                     About Us;
                   </Link>;
                 </li>;
                 <li>;
-                  <Link to="/team" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                  <Link to="/team" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                     Our Team;
                   </Link>;
                 </li>;
                 <li>;
-                  <Link to="/careers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                  <Link to="/careers" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                     Careers;
                   </Link>;
                 </li>;
                 <li>;
-                  <Link to="/news" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                  <Link to="/news" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                     News;
                   </Link>;
                 </li>;
                 <li>;
-                  <Link to="/events" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                  <Link to="/events" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                     Events;
                   </Link>;
                 </li>;
                 <li>;
-                  <Link to="/partners" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                  <Link to="/partners" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                     Partners;
                   </Link>;
                 </li>;
                 <li>;
-                  <Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                  <Link to="/contact" className="text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
                     Contact;
                   </Link>;
                 </li>;
@@ -342,25 +342,26 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
       </div>;
 
       {/* Resources */}
-      <Link ;
-        to="/resources" ;
-        className="text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors">;
+      <Link ;>
+        to="/resources" ;";
+        className="text-sm font-medium text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
         Resources;
       </Link>;
 
       {/* Blog */}
-      <Link ;
-        to="/blog" ;
-        className="text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors">;
+      <Link ;>
+        to="/blog" ;";
+        className="text-sm font-medium text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
         Blog;
       </Link>;
 
       {/* Contact */}
-      <Link ;
-        to="/contact" ;
-        className="text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors">;
+      <Link ;>
+        to="/contact" ;";
+        className="text-sm font-medium text-zion-slate-light hover: text-zion-cyan transition-colors">;";,
         Contact;
       </Link>;
     </nav>;
   );,
 } ;
+;

@@ -1,26 +1,27 @@
-"use client";";
-import * as React from "react";
+import React from 'react';
+"use client";";";
+import * as React from "react";";
 export const ThemeProvider({ children }) {;
 export const useTheme = () => {;
 
-"use client";
+"use client";";
 const initialState = {;
-";
-  theme: "dark",;
+";";
+  theme: "dark",;";
     setTheme: () => null};
 export const ThemeProvider({ children }) {;
-";
-    const [theme] = useState("dark");
+";";
+    const [theme] = useState("dark");";
     useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
 };,
 }, []);, []);
-        const root = window.document.documentElement;";
-        root.classList.remove("light", "dark");";
-        root.classList.add("dark")}, []);
+        const root = window.document.documentElement;";";
+        root.classList.remove("light", "dark");";";
+        root.classList.add("dark")}, []);";
     const value = {;
 
   theme,;
@@ -31,7 +32,7 @@ export const ThemeProvider({ children }) {;
     </ThemeContext.Provider>)}
 export const useTheme = () => {;
     const context = useContext(ThemeProviderContext);
-    if(context === null)";
-        throw new Error("useTheme must be used within a ThemeProvider");
+    if(context === null)";";
+        throw new Error("useTheme must be used within a ThemeProvider");";
     return context};
-"}
+"}";

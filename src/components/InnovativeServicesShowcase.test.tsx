@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<InnovativeServicesShowcase  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<InnovativeServicesShowcase  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import InnovativeServicesShowcase from &apos;./InnovativeServicesShowcase;
 describe(&apos;InnovativeServicesShowcase&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;InnovativeServicesShowcase&apos, () => {;
     render();,
 }
     // comment;
-    render(<InnovativeServicesShowcase / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<InnovativeServicesShowcase / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

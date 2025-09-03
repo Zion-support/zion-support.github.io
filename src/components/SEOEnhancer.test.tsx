@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<SEOEnhancer  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<SEOEnhancer  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import SEOEnhancer from &apos;./SEOEnhancer;
 describe(&apos;SEOEnhancer&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;SEOEnhancer&apos, () => {;
     render();,
 }
     // comment;
-    render(<SEOEnhancer / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<SEOEnhancer / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

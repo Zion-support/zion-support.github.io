@@ -37,13 +37,13 @@ import {
   Server
 } from 'lucide-react';
 
-const ModernFooter = () => {
+const ModernFooter = () => {;
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
     {
       title: 'Services',
-      links: [
+      links: [,
         { name: 'AI Services', href: '/ai-services', icon: Brain },
         { name: 'IT Services', href: '/it-services', icon: Server },
         { name: 'Micro SaaS', href: '/micro-saas', icon: Code },
@@ -60,7 +60,7 @@ const ModernFooter = () => {
     },
     {
       title: 'Company',
-      links: [
+      links: [,
         { name: 'About Us', href: '/about' },
         { name: 'Our Team', href: '/team' },
         { name: 'Careers', href: '/careers' },
@@ -72,7 +72,7 @@ const ModernFooter = () => {
     },
     {
       title: 'Resources',
-      links: [
+      links: [,
         { name: 'Documentation', href: '/docs' },
         { name: 'API Reference', href: '/api' },
         { name: 'Blog', href: '/blog' },
@@ -84,76 +84,76 @@ const ModernFooter = () => {
     },
     {
       title: 'Legal',
-      links: [
+      links: [,
         { name: 'Privacy Policy', href: '/privacy' },
         { name: 'Terms of Service', href: '/terms' },
         { name: 'Cookie Policy', href: '/cookies' },
         { name: 'GDPR Compliance', href: '/gdpr' },
         { name: 'Security', href: '/security' }
       ]
-    }
+    };
   ];
 
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github };
   ];
 
-  const scrollToTop = () => {
+  const scrollToTop = () => {;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 text-white">";
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">";,
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-8">";,
           {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center mb-6">
-              <div className="h-10 w-10 bg-blue-600 rounded-lg flex items-center justify-center mr-3">
-                <span className="text-white font-bold text-xl">Z</span>
+          <div className="lg: col-span-2">";,
+            <div className="flex items-center mb-6">";
+              <div className="h-10 w-10 bg-blue-600 rounded-lg flex items-center justify-center mr-3">";
+                <span className="text-white font-bold text-xl">Z</span>";
               </div>
-              <span className="text-2xl font-bold">Zion Tech Group</span>
+              <span className="text-2xl font-bold">Zion Tech Group</span>";
             </div>
-            <p className="text-gray-300 mb-6 max-w-md">
+            <p className="text-gray-300 mb-6 max-w-md">";
               Leading provider of AI solutions, cloud services, and technology consulting. 
               We help businesses transform through innovative technology and intelligent automation.
             </p>
             
             {/* Contact Info */}
-            <div className="space-y-3">
-              <div className="flex items-center text-gray-300">
-                <Phone className="h-5 w-5 mr-3 text-blue-400" />
-                <a href="tel:+13024640950" className="hover:text-white transition-colors">
+            <div className="space-y-3">";
+              <div className="flex items-center text-gray-300">";
+                <Phone className="h-5 w-5 mr-3 text-blue-400" />";
+                <a href="tel: +13024640950" className="hover:text-white transition-colors">";,
                   +1 302 464 0950
                 </a>
               </div>
-              <div className="flex items-center text-gray-300">
-                <Mail className="h-5 w-5 mr-3 text-blue-400" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
+              <div className="flex items-center text-gray-300">";
+                <Mail className="h-5 w-5 mr-3 text-blue-400" />";
+                <a href="mailto: kleber@ziontechgroup.com" className="hover:text-white transition-colors">";,
                   kleber@ziontechgroup.com
                 </a>
               </div>
-              <div className="flex items-center text-gray-300">
-                <MapPin className="h-5 w-5 mr-3 text-blue-400" />
+              <div className="flex items-center text-gray-300">";
+                <MapPin className="h-5 w-5 mr-3 text-blue-400" />";
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
 
             {/* Social Links */}
-            <div className="flex space-x-4 mt-6">
+            <div className="flex space-x-4 mt-6">";
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 bg-gray-800 rounded-lg hover:bg-blue-600 transition-colors"
+                  className="p-2 bg-gray-800 rounded-lg hover: bg-blue-600 transition-colors",
                   aria-label={social.name}
                 >
-                  <social.icon className="h-5 w-5" />
+                  <social.icon className="h-5 w-5" />";
                 </a>
               ))}
             </div>
@@ -162,15 +162,15 @@ const ModernFooter = () => {
           {/* Footer Links */}
           {footerSections.map((section) => (
             <div key={section.title}>
-              <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
-              <ul className="space-y-3">
+              <h3 className="text-lg font-semibold mb-4">{section.title}</h3>";
+              <ul className="space-y-3">";
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-gray-300 hover:text-white transition-colors flex items-center"
+                      className="text-gray-300 hover: text-white transition-colors flex items-center",
                     >
-                      {link.icon && <link.icon className="h-4 w-4 mr-2" />}
+                      {link.icon && <link.icon className="h-4 w-4 mr-2" />}";
                       {link.name}
                     </Link>
                   </li>
@@ -182,28 +182,28 @@ const ModernFooter = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 text-sm">
+      <div className="border-t border-gray-800">";
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">";,
+          <div className="flex flex-col md: flex-row justify-between items-center">";,
+            <div className="text-gray-400 text-sm">";
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-            <div className="flex items-center space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <div className="flex items-center space-x-6 mt-4 md: mt-0">";,
+              <Link href="/privacy" className="text-gray-400 hover: text-white text-sm transition-colors">";,
                 Privacy
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link href="/terms" className="text-gray-400 hover: text-white text-sm transition-colors">";,
                 Terms
               </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link href="/cookies" className="text-gray-400 hover: text-white text-sm transition-colors">";,
                 Cookies
               </Link>
               <button
                 onClick={scrollToTop}
-                className="flex items-center text-gray-400 hover:text-white text-sm transition-colors"
+                className="flex items-center text-gray-400 hover: text-white text-sm transition-colors",
               >
                 Back to top
-                <ArrowUp className="h-4 w-4 ml-1" />
+                <ArrowUp className="h-4 w-4 ml-1" />";
               </button>
             </div>
           </div>
@@ -214,3 +214,4 @@ const ModernFooter = () => {
 };
 
 export default ModernFooter;
+;

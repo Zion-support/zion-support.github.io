@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<NotFound  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<NotFound  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import NotFound from &apos;./NotFound;
 describe(&apos;NotFound&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;NotFound&apos, () => {;
     render();,
 }
     // comment;
-    render(<NotFound / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<NotFound / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<ModernLoadingSpinner  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<ModernLoadingSpinner  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import ModernLoadingSpinner from &apos;./ModernLoadingSpinner;
 describe(&apos;ModernLoadingSpinner&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;ModernLoadingSpinner&apos, () => {;
     render();,
 }
     // comment;
-    render(<ModernLoadingSpinner / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<ModernLoadingSpinner / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

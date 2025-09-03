@@ -1,5 +1,6 @@
+import React from 'react';
 import { Link, useSearchParams  } from 'react-router-dom';
-export default function Page() {;
+export default function Page(): any {;
 ,;
     {;
       id: 'ai - sales',;
@@ -165,7 +166,7 @@ export default function Page() {;
           return new Date(b.lastUpdated) .getTime () - new Date(a.lastUpdated) .getTime () ;
         case 'popularity':;
           return b.relevance - a.relevance;
-        default:;
+        default: ;,
           return b.relevance - a.relevance;,
 }
     }) ;
@@ -174,7 +175,7 @@ export default function Page() {;
     setIsSearching(false) ;,
 };
 ;
-  const toggleFilter = (filterType: keyof typeof activeFilters, value: string) => {;
+  const toggleFilter = (filterType: keyof typeof activeFilters, value: string) => {;,
     setActiveFilters(prev => ({;
       ...prev,;
       [filterType]: prev[filterType].includes (value) ? prev[filterType].filter(v => v !== value) : [...prev[filterType], value];,
@@ -192,7 +193,7 @@ export default function Page() {;
 };
 ;
   // Handle search;
-  const handleSearch = useCallback((e: React.FormEvent) => {;
+  const handleSearch = useCallback((e: React.FormEvent) => {;,
     e.preventDefault () ;
     if(searchQuery.trim () ) {;
       setSearchParams({ q: searchQuery.trim () }) ;
@@ -201,7 +202,7 @@ export default function Page() {;
 }
   };
 ;
-  const toggleFilter = (filterId: string) => {;
+  const toggleFilter = (filterId: string) => {;,
     const newFilters = new Set(selectedFilters) ;
     if(newFilters.has (filterId) ) {;
       newFilters.delete(filterId) ;,
@@ -219,7 +220,7 @@ export default function Page() {;
     setSearchParams({}) ;,
 };
 ;
-  const getResultIcon = (type: string) => {;
+  const getResultIcon = (type: string) => {;,
     switch(type) {;
       case 'service': return Zap;
       case 'page': return FileText;
@@ -227,17 +228,17 @@ export default function Page() {;
       case 'case - study': return FileText;
       case 'documentation': return Code;
       default: return FileText;,
-}
+};
   };
 ;
-  const getResultColor = (type: string) => {;
+  const getResultColor = (type: string) => {;,
     switch(type) {;
       case 'service': return 'from - blue - 500 to - indigo - 500';
       case 'blog': return 'from - green - 500 to - emerald - 500';
       case 'case - study': return 'from - purple - 500 to - pink - 500';
       case 'documentation': return 'from - orange - 500 to - red - 500';
       default: return 'from - gray - 500 to - slate - 500';,
-}
+};
   };
 ;
   // Calculate filter counts;
@@ -247,41 +248,41 @@ export default function Page() {;
       result.type === filter.id) .length;,
 }) ;
 ;
-  return (<div  className="min - h-screen bg-gradient - to - br from - slate - 50 via - blue - 50 to - indigo -50">;
+  return (<div  className="min - h-screen bg-gradient - to - br from - slate - 50 via - blue - 50 to - indigo -50">;";
       {/* Header */}
-      <div  className="bg-white border-b border-gray -200">;
-        <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-8">;
-          <motion.div;
+      <div  className="bg-white border-b border-gray -200">;";
+        <div  className="max - w-7xl mx - auto px-4 sm: px-6 lg:px-8 py-8">;";,
+          <motion.div;>
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-center">;
-            <h1 className="text-3xl font - bold text-gray - 900 mb-4">Search Zion Tech Group</h1>;
-            <p className="text-gray - 600 max - w-2xl mx -auto">;
+            className="text-center">;";
+            <h1 className="text-3xl font - bold text-gray - 900 mb-4">Search Zion Tech Group</h1>;";
+            <p className="text-gray - 600 max - w-2xl mx -auto">;";
               Find services, documentation, case studies, and insights across our comprehensive technology portfolio.</p>;
           </motion.div>;
         </div>;
       </div>;
 
-      <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-8">;
+      <div  className="max - w-7xl mx - auto px-4 sm: px-6 lg:px-8 py-8">;";,
         {/* Search Form */}
-        <motion.div;
+        <motion.div;>
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mb-8">;
-          <form onSubmit={handleSearch} className="max - w-3xl mx -auto">;
-            <div  className="relative">;
-              <Search className="absolute left - 4 top - 1/2 transform - translate - y-1 / 2 h-6 w-6 text-gray -400" />;
-              <input;
-                type="text";
+          className="mb-8">;";
+          <form onSubmit={handleSearch} className="max - w-3xl mx -auto">;";
+            <div  className="relative">;";
+              <Search className="absolute left - 4 top - 1/2 transform - translate - y-1 / 2 h-6 w-6 text-gray -400" />;";
+              <input;>
+                type="text";";
                 value={searchQuery}
                 onChange={ (e) => setSearchQuery(e.target.value) }
-                placeholder="Search for services, solutions, documentation, or insights...";
-                className="w-full pl - 12 pr - 4 py-4 text-lg border border-gray - 300 rounded-xl shadow-sm focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border-blue -500";
+                placeholder="Search for services, solutions, documentation, or insights...";";
+                className="w-full pl - 12 pr - 4 py-4 text-lg border border-gray - 300 rounded-xl shadow-sm focus: outline - none focus:ring - 2 focus:ring - blue - 500 focus:border-blue -500";";,
               />;
-              <button     type="submit";
-                className="absolute right - 2 top - 1/2 transform - translate - y-1 / 2 px-6 py-2 bg-gradient - to - r from - blue - 600 to - purple - 600 text-white rounded-lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration -200">;
+              <button     type="submit";";>
+                className="absolute right - 2 top - 1/2 transform - translate - y-1 / 2 px-6 py-2 bg-gradient - to - r from - blue - 600 to - purple - 600 text-white rounded-lg hover: from - blue - 700 hover:to - purple - 700 transition - all duration -200">;";,
                 Search;
               </button>;
             </div>;
@@ -289,44 +290,44 @@ export default function Page() {;
         </motion.div>;
 
         {/* Filters and Results */}
-        <div  className="grid grid - cols - 1 lg:grid - cols - 4 gap-8">;
+        <div  className="grid grid - cols - 1 lg: grid - cols - 4 gap-8">;";,
           {/* Filters Sidebar */}
-          <div  className="lg:col - span -1">;
-            <div  className="bg-white rounded-xl shadow-sm border border-gray - 200 p -6">;
-              <div  className="flex items - center justify - between mb-4">;
-                <h3 className="text-lg font - semibold text-gray -900">Filters</h3>;
-                <button     onClick={clearFilters}
-                  className="text-sm text-blue - 600 hover:text-blue -700">;
+          <div  className="lg: col - span -1">;";,
+            <div  className="bg-white rounded-xl shadow-sm border border-gray - 200 p -6">;";
+              <div  className="flex items - center justify - between mb-4">;";
+                <h3 className="text-lg font - semibold text-gray -900">Filters</h3>;";
+                <button     onClick={clearFilters}>
+                  className="text-sm text-blue - 600 hover: text-blue -700">;";,
                   Clear All;
                 </button>;
               </div>;
 
               {/* Sort Options */}
-              <div  className="mb-6">;
-                <label className="block text-sm font - medium text-gray - 700 mb-2">Sort By</label>;
-                <select;
+              <div  className="mb-6">;";
+                <label className="block text-sm font - medium text-gray - 700 mb-2">Sort By</label>;";
+                <select;>
                   value={sortBy}
                   onChange={ (e) => setSortBy(e.target.value as any) }
-                  className="w-full px-3 py-2 border border-gray - 300 rounded-lg focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border-blue -500">;
-                  <option value="relevance">Relevance</option>;
-                  <option value="date">Date</option>;
-                  <option value="popularity">Popularity</option>;
+                  className="w-full px-3 py-2 border border-gray - 300 rounded-lg focus: outline - none focus:ring - 2 focus:ring - blue - 500 focus:border-blue -500">;";,
+                  <option value="relevance">Relevance</option>;";
+                  <option value="date">Date</option>;";
+                  <option value="popularity">Popularity</option>;";
                 </select>;
               </div>;
 
               {/* Filter Options */}
-              <div  className="space - y-3">;
-                {filterOptions.map(filter => (<button     key={filter.id}
+              <div  className="space - y-3">;";
+                {filterOptions.map(filter => (<button     key={filter.id}>
                     onClick={ () => toggleFilter(filter.id) }
-                    className={`w-full flex items - center justify - between p - 3 rounded-lg transition - colors ${selectedFilters.has(filter.id) ? 'bg-blue - 50 border border-blue - 200';
+                    className={`w-full flex items - center justify - between p - 3 rounded-lg transition - colors ${selectedFilters.has(filter.id) ? 'bg-blue - 50 border border-blue - 200';`;
                         : 'hover:bg-gray - 50';,
-}`}
+}`}`;
                   >;
-                    <div  className="flex items - center space - x-3">;
-                      <filter.icon className="h-5 w-5 text-gray -600" />;
-                      <span className="text-sm font - medium text-gray -700">{filter.name}</span>;
+                    <div  className="flex items - center space - x-3">;";
+                      <filter.icon className="h-5 w-5 text-gray -600" />;";
+                      <span className="text-sm font - medium text-gray -700">{filter.name}</span>;";
                     </div>;
-                    <span className="text-sm text-gray -500">{filter.count}</span>;
+                    <span className="text-sm text-gray -500">{filter.count}</span>;";
                   </button>) ) }
               </div>;
             </div>;
@@ -334,40 +335,40 @@ export default function Page() {;
         </motion.div>;
 
         {/* Search Results */}
-        <motion.div;
+        <motion.div;>
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="max - w-6xl mx -auto">;
+          className="max - w-6xl mx -auto">;";
           {/* Results Count */}
-          <div  className="mb-6">;
-            <p className="text-slate -300">;
-              {searchQuery ? `Found ${filteredResults.length} results for "${searchQuery}"` : `Showing ${filteredResults.length} items`}
+          <div  className="mb-6">;";
+            <p className="text-slate -300">;";
+              {searchQuery ? `Found ${filteredResults.length} results for "${searchQuery}"` : `Showing ${filteredResults.length} items`}`;
             </p>;
-            <div className="grid md:grid-cols-2 gap-8 mb-12">;
-              <div className="bg-white p-6 rounded-lg shadow-md">;
-                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>;
-                <ul className="text-gray-600 space-y-2">;
+            <div className="grid md: grid-cols-2 gap-8 mb-12">;";,
+              <div className="bg-white p-6 rounded-lg shadow-md">;";
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>;";
+                <ul className="text-gray-600 space-y-2">;";
                   <li>• Professional Solutions</li>;
                   <li>• Expert Implementation</li>;
                   <li>• 24/7 Support</li>;
                   <li>• Custom Development</li>;
                 </ul>;
               </div>;
-              <div className="bg-white p-6 rounded-lg shadow-md">;
-                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>;
-                <ul className="text-gray-600 space-y-2">;
+              <div className="bg-white p-6 rounded-lg shadow-md">;";
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>;";
+                <ul className="text-gray-600 space-y-2">;";
                   <li>• Industry Expertise</li>;
                   <li>• Proven Results</li>;
                   <li>• Scalable Solutions</li>;
                   <li>• Competitive Pricing</li>;
                 </ul>;
               </div>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">;";,
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">;";,
                 View Pricing;
               </Link>;
-              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">;
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover: bg-gray-700 transition-colors">;";,
                 Contact Us;
               </Link>;
             </div>;
@@ -375,3 +376,4 @@ export default function Page() {;
   );,
 }
 export default SearchPage;
+;

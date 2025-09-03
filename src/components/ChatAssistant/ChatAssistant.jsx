@@ -1,16 +1,16 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
-import { AuthContext } from "../../context/auth/AuthContext";
+import { AuthContext } from "../../context/auth/AuthContext";";
 ;
 ;
 ;
-import { ChatInput } from "./ChatInput.jsx";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";import { X import { focusManagement } from '@/utils/accessibility';
-export function ChatAssistant({ isOpen, onClose, recipient, conversationId, initialMessages = [], onSendMessage, contextHeader }) {}
+import { ChatInput } from "./ChatInput.jsx";";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";";
+import { Button } from "@/components/ui/button";import { X import { focusManagement } from '@/utils/accessibility';";
+export function ChatAssistant({ isOpen, onClose, recipient, conversationId, initialMessages = [], onSendMessage, contextHeader }) {};
     const auth = useContext(AuthContext);
     const isGuest = !auth?.isAuthenticated;
     // Hooks called unconditionally at the top';
-    const localStorageKey = `chatHistory-${recipient.id}`; // Key is always generated'';
+    const localStorageKey = `chatHistory-${recipient.id}`; // Key is always generated'';`;
     const [storedGuestMessages, setStoredGuestMessages] = useLocalStorage(isGuest ? localStorageKey : 'dummy-guest-key', // Use a dummy key if not guest to prevent LS write for logged-in users;
     []);
     const [displayGuestMessages, setDisplayGuestMessages] = useState([]);
@@ -23,7 +23,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
     // Effect for guest user messages;
     useEffect(() => {}
         if (isGuest) {}
-            // Priority: initialMessages prop > localStorage > empty array;
+            // Priority: initialMessages prop > localStorage > empty array;,
             if (initialMessages && initialMessages.length > 0) {}
                 setDisplayGuestMessages(initialMessages);
                 setStoredGuestMessages(initialMessages); // Persist if initialMessages are provided;
@@ -53,7 +53,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
         else {;
 
             const newMessages = valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn;
-            setLoggedInMessages(newMessages)}
+            setLoggedInMessages(newMessages)};
     };
     const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000);
     useEffect(() => {;
@@ -115,7 +115,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             if(e.key === 'Escape') {;
 
                 e.preventDefault();
-                handleModalCancel()}
+                handleModalCancel()};
         };
         const removeTrap = guestModalRef.current ? focusManagement.trapFocus(guestModalRef.current) : null;
         document.addEventListener('keydown', handleKey);
@@ -133,82 +133,82 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             if(e.key === 'Escape') {;
 
                 e.preventDefault();
-                onClose()}
+                onClose()};
         };
         document.addEventListener('keydown', handleKeyDown);
         return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, onClose]);
     if(!isOpen);
-        return null;";
-    return (<div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="chat-assistant-title">";
-      <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">;
-        {/* Header */}";
-        <div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">";
-          <div className="flex items-center space-x-3">";
-            <Avatar className="h-10 w-10 border border-zion-purple/20">;
-              <AvatarImage src={recipient.avatarUrl} alt={recipient.name}/>";
-              <AvatarFallback className="bg-zion-purple/20 text-white">;
+        return null;";";
+    return (<div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="chat-assistant-title">";";
+      <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">;";
+        {/* Header */}";";
+        <div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">";";
+          <div className="flex items-center space-x-3">";";
+            <Avatar className="h-10 w-10 border border-zion-purple/20">;";
+              <AvatarImage src={recipient.avatarUrl} alt={recipient.name}/>";";
+              <AvatarFallback className="bg-zion-purple/20 text-white">;";
                 {recipient.name.charAt(0).toUpperCase()}
               </AvatarFallback>;
             </Avatar>;
-            <div>";
-              <h2 id="chat-assistant-title" className="font-medium text-white">;
+            <div>";";
+              <h2 id="chat-assistant-title" className="font-medium text-white">;";
                 {recipient.name}
-              </h2>";
-              {recipient.role && (<div className="text-xs text-zion-slate">{recipient.role}</div>)}
+              </h2>";";
+              {recipient.role && (<div className="text-xs text-zion-slate">{recipient.role}</div>)}";
             </div>;
-          </div>";
-          <Button variant="ghost" size="icon" className="text-white hover:bg-zion-purple/10 rounded-full" onClick={onClose} >";
-            <X className="h-5 w-5"/>;
+          </div>";";
+          <Button variant="ghost" size="icon" className="text-white hover:bg-zion-purple/10 rounded-full" onClick={onClose} >";";
+            <X className="h-5 w-5"/>;";
           </Button>;
         </div>;
 
-        {/* Context Header(Optional) */}";
-        {contextHeader && (<div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">;
+        {/* Context Header(Optional) */}";";
+        {contextHeader && (<div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">;";
             {contextHeader}
           </div>)}
 ;
-        {/* Messages */}";
-        <div className="flex-1 overflow-y-auto p-4 space-y-4" aria-live="polite">";
-          {currentMessages.length === 0 ? (<div className="text-center text-zion-slate py-8">;
+        {/* Messages */}";";
+        <div className="flex-1 overflow-y-auto p-4 space-y-4" aria-live="polite">";";
+          {currentMessages.length === 0 ? (<div className="text-center text-zion-slate py-8">;";
               <p>Start a conversation with {recipient.name}</p>;
             </div>) : (currentMessages.map((msg) => (<ChatMessage key={msg.id} role={msg.role} message={msg.message}/>)))}
           <div ref={messagesEndRef}/>;
         </div>;
 
-        {/* Input */}";
-            {contextHeader}"});,"});,
+        {/* Input */}";";
+            {contextHeader}"});,"});,";
 }
           </div>)}});,
 }
-  })";
-"";";,
-});,"})";
-        {/* comment */}"";,"});,
+  })";";
+"";";,";
+});,"})";";
+        {/* comment */}"";,"});,";
 }
-  })";
-        <div className="flex-1" overflow-y-auto p-4 space-y-4" aria-live="polite>"";";,
-});,"})";
-          {currentMessages.length === 0 ? (<div className="text-center text-zion-slate py-8>;";,
-});,"})";
-              <p>Start a conversation with {recipient.name}</p>;,"});,
+  })";";
+        <div className="flex-1" overflow-y-auto p-4 space-y-4" aria-live="polite>"";";,";
+});,"})";";
+          {currentMessages.length === 0 ? (<div className="text-center text-zion-slate py-8>;";,";
+});,"})";";
+              <p>Start a conversation with {recipient.name}</p>;,"});,";
 }
-  })";
-            </div>) : (currentMessages.map((msg) => (<ChatMessage key="{msg.id}" role="{msg.role}" message="{msg.message}/">)))}});,"})";
-          <div ref="{messagesEndRef}/">;,"});,
+  })";";
+            </div>) : (currentMessages.map((msg) => (<ChatMessage key="{msg.id}" role="{msg.role}" message="{msg.message}/">)))}});,"})";";
+          <div ref="{messagesEndRef}/">;,"});,";
 }
   });,
 }
-        </div>;";,
-});,"})";
-";,"});,"})";
+        </div>;";,";
+});,"})";";
+";,"});,"})";";
         {/* comment */}
   });,
 }
-  })";
-        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">;,
+  })";";
+        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">;,";
 });,
 }
-  })";
-          <ChatInput onSend="{handleSendMessage}/">);,
+  })";";
+          <ChatInput onSend="{handleSendMessage}/">);,";
 }
-"export default ComponentName;"
+"export default ComponentName;";

@@ -1,22 +1,22 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";";
 interface LazyImageProps {;
   src: string,,;
 alt: string,;
-  width?: number";
+  width?: number";";
   height?: number,;
   className?: string,,;
-  priority?: boolean,";
-  placeholder?: "blur" | "empty",;
+  priority?: boolean,";";
+  placeholder?: "blur" | "empty",;";
   blurDataURL?: string}
 ;
 const LazyImage: React.FC<LazyImageProps> = ({,;
   src,;
   alt,;
   width,;
-  height,";
-  className = ",;
-  priority = false,";
-  placeholder = "empty",;
+  height,";";
+  className = ",;";
+  priority = false,";";
+  placeholder = "empty",;";
   blurDataURL}) => {;
   const [isLoaded, setIsLoaded] = useState(false);,
 }
@@ -48,25 +48,25 @@ const LazyImage: React.FC<LazyImageProps> = ({,;
   }, [priority]);,
 }
   return (;
-    <div ref = "{imgRef}" className="{"relative" ${className}"}>;
-      {!isLoaded && (";
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-100">";
-          <LoadingSpinner size="sm" text=""  />;
+    <div ref = "{imgRef}" className="{"relative" ${className}"}>;";
+      {!isLoaded && (";";
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-100">";";
+          <LoadingSpinner size="sm" text=""  />;";
         </div>;
       )}
 ;
-      {isInView && (";
-        <Image src="{src}
-          alt="{alt}
-          width="{width}
-          height="{height}
-          className="{"transition-opacity" duration-300 ${>;
-            isLoaded ? "opacity-100" : 'opacity-0>;,
-}"}";
-          onLoad = "{()" => setIsLoaded(true)}";
-          priority="{priority}
-          placeholder="{placeholder}
-          blurDataURL="{blurDataURL}" />;
+      {isInView && (";";
+        <Image src="{src}";>
+          alt="{alt}";
+          width="{width}";
+          height="{height}";
+          className="{"transition-opacity" duration-300 ${>;";
+            isLoaded ? "opacity-100" : 'opacity-0>;,";
+}"}";";
+          onLoad = "{()" => setIsLoaded(true)}";";
+          priority="{priority}";
+          placeholder="{placeholder}";
+          blurDataURL="{blurDataURL}" />;";
       )}
 ;
     </div>;
@@ -81,29 +81,29 @@ const LazyImage: React.FC<LazyImageProps> = ({,;
     return () => observer.disconnect();,;,
 }, [priority]);
   return (;
-    <div ref = "{imgRef}" className="{`relative" ${className}`}>;
-      {!isLoaded && (";
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-100">";
-          <LoadingSpinner size="sm" text="" />;
+    <div ref = "{imgRef}" className="{`relative" ${className}`}>;`;
+      {!isLoaded && (";";
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-100">";";
+          <LoadingSpinner size="sm" text="" />;";
         </div>;
       )}
       ;
-      {isInView && (";
-        <Image src="{src}"";
-          alt="{alt}"";
-          width="{width}"";
-          height="{height}"";
-          className="{`transition-opacity" duration-300 ${>;
-            isLoaded ? "opacity-100" : 'opacity-0>;,;,
-}`}";
-          onLoad = "{()" => setIsLoaded(true)}";
-          priority="{priority}"";
-          placeholder="{placeholder}"";
-          blurDataURL="{blurDataURL}";
+      {isInView && (";";
+        <Image src="{src}"";";>
+          alt="{alt}"";";
+          width="{width}"";";
+          height="{height}"";";
+          className="{`transition-opacity" duration-300 ${>;";`;
+            isLoaded ? "opacity-100" : 'opacity-0>;,;,";
+}`}";";`;
+          onLoad = "{()" => setIsLoaded(true)}";";
+          priority="{priority}"";";
+          placeholder="{placeholder}"";";
+          blurDataURL="{blurDataURL}";";
         />;
       )}
     </div>;
   );,;,
 }
-";
-export default LazyImage;"
+";";
+export default LazyImage;";

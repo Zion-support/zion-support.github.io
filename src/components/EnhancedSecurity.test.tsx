@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<EnhancedSecurity  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<EnhancedSecurity  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import EnhancedSecurity from &apos;./EnhancedSecurity;
 describe(&apos;EnhancedSecurity&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;EnhancedSecurity&apos, () => {;
     render();,
 }
     // comment;
-    render(<EnhancedSecurity / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<EnhancedSecurity / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

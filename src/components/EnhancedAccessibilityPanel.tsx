@@ -3,7 +3,7 @@ import {  import { motion, AnimatePresence  } from 'framer-motion';
  params - Function parameters;
  * @returns {*} Function return value;
  */;
-function EnhancedAccessibilityPanel () {;
+function EnhancedAccessibilityPanel(): any {;
 
   Accessibility,;
   Eye,;
@@ -35,24 +35,24 @@ function EnhancedAccessibilityPanel () {;
 ;
 interface AccessibilitySettings {;
 
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  screenReader: boolean;
-  focusIndicator: boolean;
-  colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
-  fontSize: number;
-  lineHeight: number;
-  letterSpacing: number;
+  highContrast: boolean;,
+  largeText: boolean;,
+  reducedMotion: boolean;,
+  screenReader: boolean;,
+  focusIndicator: boolean;,
+  colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';,
+  fontSize: number;,
+  lineHeight: number;,
+  letterSpacing: number;,
   wordSpacing: number}
 interface AccessibilityIssue {;
-  id: string;
-  type: 'error' | 'warning' | 'info';
-  message: string;
+  id: string;,
+  type: 'error' | 'warning' | 'info';,
+  message: string;,
   element?: string;
-  recommendation: string;
-  severity: 'low' | 'medium' | 'high';
-export function EnhancedAccessibilityPanel() {;
+  recommendation: string;,
+  severity: 'low' | 'medium' | 'high';,
+export function EnhancedAccessibilityPanel(): any {;
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({;
@@ -114,19 +114,19 @@ export function EnhancedAccessibilityPanel() {;
       // Apply typography settings;
       document.documentElement.style.setProperty(';
         '--font-size',;
-        `${updatedSettings.fontSize}px`;
+        `${updatedSettings.fontSize}px`;`;
       );
       document.documentElement.style.setProperty(';
         '--line-height',;
         updatedSettings.lineHeight.toString();
       );
       document.documentElement.style.setProperty(';
-        '--letter-spacing',`;
-        `${updatedSettings.letterSpacing}px`;
+        '--letter-spacing',`;`;
+        `${updatedSettings.letterSpacing}px`;`;
       );
       document.documentElement.style.setProperty(';
-        '--word-spacing',`;
-        `${updatedSettings.wordSpacing}px`;
+        '--word-spacing',`;`;
+        `${updatedSettings.wordSpacing}px`;`;
       );
 ;
       // Save to localStorage;
@@ -139,10 +139,10 @@ export function EnhancedAccessibilityPanel() {;
 ;
   // Load settings from localStorage;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
 };,
 }, []);, []);
-}}
+}};

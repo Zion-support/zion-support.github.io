@@ -1,9 +1,10 @@
+import React from 'react';
 
 interface CartState { items: CartItem[]}
 ;
 const initialState: CartState = { items: [] };
 ;
-function cartReducer(state: CartState, action: CartAction): CartState {;
+function cartReducer(state: CartState, action: CartAction): CartState {;,
   switch(action.type) {;
     case 'ADD_ITEM': {;
       ;
@@ -22,7 +23,7 @@ function cartReducer(state: CartState, action: CartAction): CartState {;
       return { items: [] };
     case 'SET_ITEMS':;
       return { items: action.payload };
-    default:;
+    default: ;,
       return state}
 }
 ;
@@ -69,9 +70,10 @@ export function CartProvider({ children }: { children: React.ReactNode }) {;
       safeStorage.setItem(GUEST_CART_KEY, JSON.stringify(state.items))}
   }, [state.items, user]);
 ;
-  const value: CartContextType = {;
+  const value: CartContextType = {;,
     items: state.items,;
     dispatch,;,
 };
 ;
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>}
+;

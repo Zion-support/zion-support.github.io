@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<EnhancedContactIntegration  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<EnhancedContactIntegration  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import EnhancedContactIntegration from &apos;./EnhancedContactIntegration;
 describe(&apos;EnhancedContactIntegration&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;EnhancedContactIntegration&apos, () => {;
     render();,
 }
     // comment;
-    render(<EnhancedContactIntegration / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<EnhancedContactIntegration / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

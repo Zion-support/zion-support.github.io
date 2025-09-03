@@ -14,42 +14,42 @@ import { ;
 } from "lucide-react";
 ;
 interface AIConversation {;
-  id: string;
-  type: "chat" | "task" | "analysis" | "recommendation";
-  title: string;
-  description: string;
-  status: "active" | "completed" | "archived";
-  priority: "low" | "medium" | "high" | "critical";
-  createdAt: string;
+  id: string;,
+  type: "chat" | "task" | "analysis" | "recommendation";,
+  title: string;,
+  description: string;,
+  status: "active" | "completed" | "archived";,
+  priority: "low" | "medium" | "high" | "critical";,
+  createdAt: string;,
   lastUpdated: string;,
 }
 ;
 interface AIInsight {;
-  id: string;
-  title: string;
-  description: string;
-  type: "positive" | "warning" | "critical" | "info";
-  impact: "high" | "medium" | "low";
-  confidence: number;
+  id: string;,
+  title: string;,
+  description: string;,
+  type: "positive" | "warning" | "critical" | "info";,
+  impact: "high" | "medium" | "low";,
+  confidence: number;,
   data: Record<string, string | number | boolean>;
   createdAt: string;,
 }
 ;
 interface AIFeature {;
-  id: string;
-  name: string;
-  description: string;
-  icon: React.ReactNode;
-  status: "active" | "beta" | "coming-soon";
-  usage: number;
+  id: string;,
+  name: string;,
+  description: string;,
+  icon: React.ReactNode;,
+  status: "active" | "beta" | "coming-soon";,
+  usage: number;,
   accuracy: number;,
 }
 ;
-const AdvancedAIAssistant: React.FC = () => {;
+const AdvancedAIAssistant: React.FC = () => {;,
   const [selectedView, setSelectedView] = useState<"overview" | "conversations" | "insights" | "features">("overview");
   const [searchQuery, setSearchQuery] = useState("");
 ;
-  const aiFeatures: AIFeature[] = [;
+  const aiFeatures: AIFeature[] = [;,
     {;
       id: "1",;
       name: "Natural Language Processing",;
@@ -106,7 +106,7 @@ const AdvancedAIAssistant: React.FC = () => {;
 }
   ];
 ;
-  const aiInsights: AIInsight[] = [;
+  const aiInsights: AIInsight[] = [;,
     {;
       id: "1",;
       title: "Project Timeline Optimization",;
@@ -139,7 +139,7 @@ const AdvancedAIAssistant: React.FC = () => {;
 }
   ];
 ;
-  const getInsightIcon = (type: string) => {;
+  const getInsightIcon = (type: string) => {;,
     switch (type) {;
       case "positive":;
         return <CheckCircle className="w-6 h-6 text-green-400" />;
@@ -147,7 +147,7 @@ const AdvancedAIAssistant: React.FC = () => {;
         return <AlertCircle className="w-6 h-6 text-yellow-400" />;
       case "critical":;
         return <AlertCircle className="w-6 h-6 text-red-400" />;
-      default:;
+      default: ;,
         return <Activity className="w-6 h-6 text-blue-400" />;,
 }
   };
@@ -173,7 +173,7 @@ const AdvancedAIAssistant: React.FC = () => {;
             { id: "insights", label: "Insights" },;
             { id: "features", label: "Features" }
           ].map((tab) => (;
-            <button;
+            <button;>
               key={tab.id}
               onClick={() => setSelectedView(tab.id as any)}
               className={`px-6 py-3 mx-2 mb-2 rounded-lg font-medium transition-colors ${;
@@ -189,18 +189,18 @@ const AdvancedAIAssistant: React.FC = () => {;
 
         {/* Search Bar */}
         <div className="max-w-md mx-auto mb-8">;
-          <input;
+          <input;>
             type="text";
             placeholder="Search AI features and insights...";
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500";
+            className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500";,
           />;
         </div>;
 
         {/* Content based on selected view */}
         {selectedView === "overview" && (;
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">;
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6">;,
             {aiFeatures.slice(0, 6).map((feature) => (;
               <div key={feature.id} className="bg-gray-800 p-6 rounded-lg border border-gray-700">;
                 <div className="flex items-center mb-4">;
@@ -211,7 +211,7 @@ const AdvancedAIAssistant: React.FC = () => {;
                 </div>;
                 <p className="text-gray-300 mb-4">{feature.description}</p>;
                 <div className="flex justify-between items-center">;
-                  <span className={`px-3 py-1 rounded-full text-sm ${;
+                  <span className={`px-3 py-1 rounded-full text-sm ${;>
                     feature.status === "active" ;
                       ? "bg-green-900 text-green-300";
                       : feature.status === "beta";
@@ -243,7 +243,7 @@ const AdvancedAIAssistant: React.FC = () => {;
                     <p className="text-gray-300 mb-4">{insight.description}</p>;
                     <div className="flex items-center justify-between">;
                       <div className="flex items-center space-x-4">;
-                        <span className={`px-3 py-1 rounded-full text-sm ${;
+                        <span className={`px-3 py-1 rounded-full text-sm ${;>
                           insight.impact === "high" ;
                             ? "bg-red-900 text-red-300";
                             : insight.impact === "medium";
@@ -268,7 +268,7 @@ const AdvancedAIAssistant: React.FC = () => {;
         )}
 ;
         {selectedView === "features" && (;
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">;
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6">;,
             {aiFeatures.map((feature) => (;
               <div key={feature.id} className="bg-gray-800 p-6 rounded-lg border border-gray-700">;
                 <div className="flex items-center mb-4">;
@@ -284,7 +284,7 @@ const AdvancedAIAssistant: React.FC = () => {;
                     <span className="text-white">{feature.usage}%</span>;
                   </div>;
                   <div className="w-full bg-gray-700 rounded-full h-2">;
-                    <div ;
+                    <div ;>
                       className="bg-blue-600 h-2 rounded-full" ;
                       style={{ width: `${feature.usage}%` }}
                     ></div>;
@@ -294,7 +294,7 @@ const AdvancedAIAssistant: React.FC = () => {;
                     <span className="text-white">{feature.accuracy}%</span>;
                   </div>;
                   <div className="w-full bg-gray-700 rounded-full h-2">;
-                    <div ;
+                    <div ;>
                       className="bg-green-600 h-2 rounded-full" ;
                       style={{ width: `${feature.accuracy}%` }}
                     ></div>;

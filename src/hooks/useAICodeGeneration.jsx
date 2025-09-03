@@ -12,7 +12,7 @@ export const useAICodeGeneration = () => {;
     const [history, setHistory] = useState([]);
     const generationTimeoutRef = useRef(null);
     // Generate code using AI;
-    const generateCode = useCallback(async (prompt, options) => {}
+    const generateCode = useCallback(async (prompt, options) => {};
         setIsGenerating(true);
         try {}
             // Simulate AI processing - in production, this would call an AI service;
@@ -32,7 +32,7 @@ export const useAICodeGeneration = () => {;
             // Add to history;
             const historyItem = {;
 
-                id: `gen_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,;
+                id: `gen_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,;`;
                 prompt,;
                 code: generatedCode,;
                 timestamp: new Date(),;
@@ -47,7 +47,7 @@ export const useAICodeGeneration = () => {;
                 framework: options.framework,;
                 style: options.style,;
                 target: options.target,;
-                quality: options.quality;
+                quality: options.quality;,
             // // // // // // // // // console.error('Failed to generate code:', error);
             trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {                error: error instanceof Error ? error.message : 'Unknown error';,
 });
@@ -91,7 +91,7 @@ export const useAICodeGeneration = () => {;
                 complexity: analysis.complexity,;
                 maintainability: analysis.maintainability,;
                 security: analysis.security,;
-                performance: analysis.performance;
+                performance: analysis.performance;,
             // // // // // // // // // console.error('Failed to analyze code:', error);
             trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {                error: error instanceof Error ? error.message : 'Unknown error';,
 });
@@ -227,8 +227,8 @@ export const useAICodeGeneration = () => {;
 }, null, 2);
             filename = 'generated-code.json'}
         else if(format === 'md') {;
-'`;
-            exportContent = `# Generated Code\n\n\`\`\`typescript\n${generatedCode}\n\`\`\`\n\n## Analysis\n\n${codeAnalysis ? JSON.stringify(codeAnalysis, null, 2) : 'No analysis available'}`;
+'`;`;
+            exportContent = `# Generated Code\n\n\`\`\`typescript\n${generatedCode}\n\`\`\`\n\n## Analysis\n\n${codeAnalysis ? JSON.stringify(codeAnalysis, null, 2) : 'No analysis available'}`;`;
             filename = 'generated-code.md'}
         else {;
 
@@ -248,8 +248,8 @@ export const useAICodeGeneration = () => {;
         const lines = code.split('\n').length;
         const functions = (code.match(/function\s+\w+|const\s+\w+\s*=\s*\(|=>/g) || []).length;
         const classes = (code.match(/class\s+\w+/g) || []).length;
-        const imports = (code.match(/import\s+.*from|import\s+.*require/g) || []).length;'";
-        const dependencies = (code.match(/from\s+['"][^'"]+['"]|require\s*\(['"][^'"]+['"]/g) || []).length;
+        const imports = (code.match(/import\s+.*from|import\s+.*require/g) || []).length;'";";
+        const dependencies = (code.match(/from\s+['"][^'"]+['"]|require\s*\(['"][^'"]+['"]/g) || []).length;";
         return {;
 
             linesOfCode: lines,;
@@ -260,8 +260,8 @@ export const useAICodeGeneration = () => {;
 }}, []);
     // Helper functions for code generation;
     const generateReactTypeScriptCode = (prompt, options) => {;
-'`;
-        return `import React, { useState, useEffect, useCallback } from 'react';
+'`;`;
+        return `import React, { useState, useEffect, useCallback } from 'react';`;
 import { motion  } from 'framer-motion';
 ;
 export default function Page() {;
@@ -272,21 +272,21 @@ export default function Page() {;
 }, []);
 ;
   return ();
-    <motion.div;
+    <motion.div;>
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}";
-      className="generated-component";
+      animate={{ opacity: 1 }}";";
+      className="generated-component";";
 
       {/* TODO: Implement component based on prompt: ${prompt} */}
       <h1>Generated Component</h1>;
       <p>This component was generated based on your prompt.</p>;
     </motion.div>;
   )};
-`;
-export default GeneratedComponent;`};
+`;`;
+export default GeneratedComponent;`};`;
     const generateExpressCode = (prompt, _options) => {;
-'`;
-        return `import express from 'express';
+'`;`;
+        return `import express from 'express';`;
 import cors from 'cors';
 import helmet from 'helmet';
 ;
@@ -303,16 +303,16 @@ app.get('/', (req, res) => {;
 
   res.json({ message: 'Generated API based on prompt: ${prompt}})});
 ;
-// TODO: Implement additional routes based on prompt;
+// TODO: Implement additional routes based on prompt;,
 
 app.listen(PORT, () => {;
-  // // // // // // // // // console.log(\`Server running on port \${PORT}\`);,
-});`;    };
+  // // // // // // // // // ,`;
+});`;    };`;
     const generatePythonCode = (prompt, _options) => {;
-`;
-        return `#!/usr/bin/env python3";
+`;`;
+        return `#!/usr/bin/env python3";";`;
 
-Generated Python code based on prompt: ${prompt}";
+Generated Python code based on prompt: ${prompt}";";
 
 ;
 import asyncio;
@@ -320,42 +320,42 @@ from typing import Optional, List, Dict, Any;
 from dataclasses import dataclass;
 
 @dataclass;
-class GeneratedClass:";
-    """Generated class based on prompt.;
+class GeneratedClass: ";";,
+    """Generated class based on prompt.;";
     def __init__(self):;
-        # TODO: Implement initialization;
+        # TODO: Implement initialization;,
         pass;
 
-    async def process_data(self, data: Any) -> Any:";
-        """Process data based on prompt requirements.;
-        # TODO: Implement data processing logic;
+    async def process_data(self, data: Any) -> Any:";";,
+        """Process data based on prompt requirements.;";
+        # TODO: Implement data processing logic;,
         return data;
 
-async def main():";
-    """Main function.;
+async def main():";";
+    """Main function.;";
     instance = GeneratedClass();
-    # TODO: Implement main logic based on prompt;
-";
-if __name__ == "__main__":`;
-    asyncio.run(main())`;,
+    # TODO: Implement main logic based on prompt;,
+";";
+if __name__ == "__main__":`;`;
+    asyncio.run(main())`;,`;
 };
     const generateGenericCode = (prompt, options) => {;
-`;
-        return `// Generated ${options.language} code based on prompt: ${prompt}
+`;`;
+        return `// Generated ${options.language} code based on prompt: ${prompt}`;
 // Framework: ${options.framework || 'none'}
 // Style: ${options.style}
 // Target: ${options.target}
 ;
-// TODO: Implement code based on prompt requirements;
+// TODO: Implement code based on prompt requirements;,
 // This is a placeholder implementation;
 
-// // // // // // // // // console.log("Generated code placeholder");
-// // // // // // // // // console.log("Prompt:", "${prompt}");
-// // // // // // // // // console.log("Language:", "${options.language}");`;,
+// // // // // // // // // ";
+// // // // // // // // // ";
+// // // // // // // // // `;,`;
 };
-// // console.log("Generated code placeholder");
-// // console.log("Prompt:", "${prompt}");
-// // console.log("Language:", "${options.language}");`};
+// // ";
+// // ";
+// // `};`;
     // Helper functions for code analysis    const cyclomaticComplexity = (code.match(/if|else|for|while|switch|case|catch|&&|\|\||\?/g) || []).length + 1;
         return Math.min(10, Math.max(1, Math.floor(cyclomaticComplexity / 5)));,
 };
@@ -390,8 +390,8 @@ if __name__ == "__main__":`;
         if(code.includes('setInterval') || code.includes('setTimeout')) {;
 
             suggestions.push({;
-`;
-                id: `suggestion_${Date.now()}_1`,;
+`;`;
+                id: `suggestion_${Date.now()}_1`,;`;
                 type: 'performance',;
                 title: 'Optimize Timer Usage',;
                 description: 'Consider using requestAnimationFrame for visual updates and cleanup timers properly',;
@@ -407,8 +407,8 @@ if __name__ == "__main__":`;
         if(code.includes('innerHTML') || code.includes('document.write')) {;
 
             suggestions.push({;
-`;
-                id: `suggestion_${Date.now()}_2`,;
+`;`;
+                id: `suggestion_${Date.now()}_2`,;`;
                 type: 'security',;
                 title: 'Prevent XSS Attacks',;
                 description: 'Avoid using innerHTML with user input to prevent XSS vulnerabilities',;
@@ -424,8 +424,8 @@ if __name__ == "__main__":`;
         if(code.includes('console.log')) {;
 
             suggestions.push({;
-`;
-                id: `suggestion_${Date.now()}_3`,;
+`;`;
+                id: `suggestion_${Date.now()}_3`,;`;
                 type: 'best_practice',;
                 title: 'Remove Console Logs',;
                 description: 'Remove console.log statements for production code',;
@@ -453,20 +453,20 @@ if __name__ == "__main__":`;
 
             issues.push({;
 
-                severity: 'warning',";
-                message: 'Usage of "" type reduces type safety',;
+                severity: 'warning',";";
+                message: 'Usage of "" type reduces type safety',;";
                 line: code.split('\n').findIndex(line => line.includes('')) + 1;,
 })}
         return issues};
     // Helper functions for code optimization;
     const optimizeForAccessibility = (code) => {;
         return code;
-            .replace(/<div>/g, '<div role="main">');
-            .replace(/<button>/g, '<button aria-label="Action button">');
-            .replace(/<img/g, '<img alt="Description"')};
+            .replace(/<div>/g, '<div role="main">');";
+            .replace(/<button>/g, '<button aria-label="Action button">');";
+            .replace(/<img/g, '<img alt="Description"')};";>
     // Helper functions for test generation;
     const generateJestTests = (_code) => {;
-        return `import { render, screen, fireEvent } from '@testing-library/react';
+        return `import { render, screen, fireEvent } from '@testing-library/react';`;
 ;
 ;
 describe('GeneratedComponent', () => {;
@@ -480,40 +480,40 @@ describe('GeneratedComponent', () => {;
   it('handles user interactions', () => {;
     render(<GeneratedComponent />);
     // TODO: Add specific test cases based on component functionality;,
-});`;,
-});`;,
+});`;,`;
+});`;,`;
 };
     const generatePytestTests = (_code) => {;
-`;
-        return `import pytest;
+`;`;
+        return `import pytest;`;
 from generated_module import GeneratedClass;
 ;
-class TestGeneratedClass:;
+class TestGeneratedClass: ;,
     def test_initialization(self):;
         instance = GeneratedClass();
         assert instance is not None;
 
     def test_process_data(self):;
-        instance = GeneratedClass()";
-        result = instance.process_data("test")";
-        assert result == "test";
-`;
-    # TODO: Add more specific test cases based on class functionality`;,
+        instance = GeneratedClass()";";
+        result = instance.process_data("test")";";
+        assert result == "test";";
+`;`;
+    # TODO: Add more specific test cases based on class functionality`;,`;
 };
     const generateGenericTests = (_code, language) => {;
-`;
-        return `// Generated tests for ${language} code;
-// TODO: Implement specific test cases based on code functionality;
+`;`;
+        return `// Generated tests for ${language} code;`;
+// TODO: Implement specific test cases based on code functionality;,
 
 describe('Generated Code Tests', () => {;
 
   it('should work as expected', () => {;
-    // TODO: Add test implementation`;
-    expect(true).toBe(true)})});`};
+    // TODO: Add test implementation`;,`;
+    expect(true).toBe(true)})});`};`;
     // Helper functions for documentation generation;
     const generateJSDoc = (_code) => {;
-`;
-        return `/**;
+`;`;
+        return `/**;`;
  * Generated Component;
  *;
  * This component was generated based on user requirements.*;
@@ -522,34 +522,34 @@ describe('Generated Code Tests', () => {;
  * <GeneratedComponent />;
  */;
 export const GeneratedComponent = () => {;
-  // Component implementation`;,
-};`;,
+  // Component implementation`;,`;
+};`;,`;
 };
     const generatePythonDoc = (_code) => {;
-"`;
-        return `""";
+"`;`;
+        return `""";";`;
 Generated Module;
 
-This module was generated based on user requirements.;";
-""";
+This module was generated based on user requirements.;";";
+""";";
 ;
-def generated_function():;";
-    """;
+def generated_function():;";";
+    """;";
     Generated function with docstring.;
 ;
-    Returns:;
-        str: Description of return value";
-    """;`;
-    pass`;,
+    Returns: ;,
+        str: Description of return value";";,
+    """;`;`;
+    pass`;,`;
 };
     const generateGenericDocs = (_code, language) => {;
-`;
-        return `/**;
+`;`;
+        return `/**;`;
  * Generated ${language} Code;
  *;
  * This code was generated based on user requirements.*;
- * TODO: Add specific documentation based on code functionality`;
- */`};
+ * TODO: Add specific documentation based on code functionality`;,`;
+ */`};`;
     // Cleanup timeout on unmount;
     useEffect(() => {;
   // TODO: Add dependencies if needed;,
@@ -587,4 +587,5 @@ export default with;
 export default with;
 export default with;
 export default with;
-'"`;
+'"`;`;
+;

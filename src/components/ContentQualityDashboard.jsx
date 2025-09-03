@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X } from 'lucide-react';
-import ContentQualityAnalyzer from "../utils/contentQualityAnalyzer.jsx";
+import ContentQualityAnalyzer from "../utils/contentQualityAnalyzer.jsx";";
 const ContentQualityDashboard = ({ className = '' }) => {;
     const [isOpen, setIsOpen] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
@@ -54,8 +54,8 @@ const ContentQualityDashboard = ({ className = '' }) => {;
                     metaDescription: 'Contact Zion Tech Group for all your technology needs.Our team is ready to help you transform your business.',;
 import React, { useState, useEffect, useCallback } from 'react';';
 import { BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X } from 'lucide-react';
-import ContentQualityAnalyzer from "../utils/contentQualityAnalyzer.jsx";';
-const ContentQualityDashboard = ({ className = '' }) => {}
+import ContentQualityAnalyzer from "../utils/contentQualityAnalyzer.jsx";';";
+const ContentQualityDashboard = ({ className = '' }) => {};
     const [isOpen, setIsOpen] = useState(false);
     const [isLoading, setIsLoading] = useState(false);';
     const [report, setReport] = useState(null);'';
@@ -63,7 +63,7 @@ const ContentQualityDashboard = ({ className = '' }) => {}
     const [searchTerm, setSearchTerm] = useState('');''';
     const [filterStatus, setFilterStatus] = useState('all');
     const contentAnalyzer = ContentQualityAnalyzer.getInstance();
-    const analyzeAllPages = useCallback(async () => {}
+    const analyzeAllPages = useCallback(async () => {};
         setIsLoading(true);
         try {}
             // Simulate analyzing all pages in the application;
@@ -121,5 +121,5 @@ const ContentQualityDashboard = ({ className = '' }) => {}
                     title: 'Contact Us - Get in Touch',''';
                     content: 'Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business with cutting-edge solutions.',''';
                     metaDescription: 'Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business.',''';
-";
-))
+";";
+));

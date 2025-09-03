@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<SearchComponent  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<SearchComponent  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import SearchComponent from &apos;./SearchComponent;
 describe(&apos;SearchComponent&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;SearchComponent&apos, () => {;
     render();,
 }
     // comment;
-    render(<SearchComponent / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<SearchComponent / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

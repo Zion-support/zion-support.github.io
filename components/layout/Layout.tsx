@@ -1,7 +1,7 @@
-import React from 'react'
-import ModernHeader from './ModernHeader'
+import React from 'react';
+import ModernHeader from './ModernHeader';
 import ModernFooter from './ModernFooter'
-
+;
 type LayoutProps = { children: React.ReactNode }
 
 export default function Layout({ children }: LayoutProps) {

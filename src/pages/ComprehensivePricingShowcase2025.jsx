@@ -52,7 +52,7 @@ const ComprehensivePricingShowcase2025 = () => {;
                 return price >= range.min}
         }
         return true}) ;
-    const getServiceTypeColor = (type) => {}
+    const getServiceTypeColor = (type) => {};
         switch (type) {}
 ';
 '';
@@ -63,7 +63,7 @@ const ComprehensivePricingShowcase2025 = () => {;
                 return 'bg-green-100 text-green-800 border-green-200';''';
             case 'AI Service':'''';
                 return 'bg-purple-100 text-purple-800 border-purple-200';''';
-            default:'''';
+            default: '''';,
                 return 'bg-gray-100 text-gray-800 border-gray-200'}
     };
     const getCategoryIcon = (category) => {;
@@ -92,3 +92,4 @@ export { ComprehensivePricingShowcase2025 };
 export { ComprehensivePricingShowcase2025 };
 ;
 export { ComprehensivePricingShowcase2025 };
+;

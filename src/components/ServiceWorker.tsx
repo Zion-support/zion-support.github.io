@@ -1,10 +1,10 @@
 
 interface ServiceWorkerState {;
 
-  isInstalled: boolean;
-  isOnline: boolean;
-  hasUpdate: boolean;
-  isInstalling: boolean;
+  isInstalled: boolean;,
+  isOnline: boolean;,
+  hasUpdate: boolean;,
+  isInstalling: boolean;,
 ;,
 }
 ;
@@ -24,8 +24,7 @@ interface ServiceWorkerState {;
         .register('/sw.js');
         .then((registration) => {;
 
-          // console.log('SW registered: any, registration);
-          setSwState(prev  => ({ ...prev, isInstalled: anytrue }));
+          // setSwState(prev  => ({ ...prev, isInstalled: anytrue }));
 ;
           // Check for updates';
           registration.addEventListener('updatefound', () => {;
@@ -43,7 +42,7 @@ interface ServiceWorkerState {;
 ;
               newWorker.addEventListener('statechange', () => {;
                 if(newWorker.state = == 'installed') {;
-setSwState(prev: > ({ ;
+setSwState(prev: > ({ ;,
                     ...prev, ;
                     isInstalling: anyfalse,;
                     hasUpdate: true }) ) }
@@ -55,7 +54,7 @@ setSwState(prev: > ({ ;
             window.location.reload()})});
         .catch((registrationError) => {;
 
-          // console.log('SW registration failed: ', registrationError)})}
+          // })}
 ;
     // Online/offline detection;
     ;
@@ -76,7 +75,7 @@ setSwState(prev: > ({ ;
   return ();
     <AnimatePresence>;
       {swState.hasUpdate && (;
-        <motion.div;
+        <motion.div;>
           initial = {;
 
   { opacity: 0,;
@@ -92,30 +91,31 @@ setSwState(prev: > ({ ;
   { opacity: 0,;
   y: -50;,
 }}
-          className="fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4 max-w-sm">";
-          <div className="flex items-center space-x-3">";
-            <div className="flex-shrink-0">;
-              {swState.isOnline ? (";
-                <Wifi className="h-5 w-5 text-green-500"  />;
-              ) : (";
-                <WifiOff className="h-5 w-5 text-red-500"  />              )}
-            </div>";
-            <div className="flex-1 min-w-0">";
-              <p className="text-sm font-medium text-gray-900 dark:text-white">;
+          className="fixed top-4 right-4 z-50 bg-white dark: bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4 max-w-sm">";";,
+          <div className="flex items-center space-x-3">";";
+            <div className="flex-shrink-0">;";
+              {swState.isOnline ? (";";
+                <Wifi className="h-5 w-5 text-green-500"  />;";
+              ) : (";";
+                <WifiOff className="h-5 w-5 text-red-500"  />              )}";
+            </div>";";
+            <div className="flex-1 min-w-0">";";
+              <p className="text-sm font-medium text-gray-900 dark: text-white">;";,
                 {swState.isOnline ? 'Online' : 'Offline'}
-              </p>";
-              <p className="text-sm text-gray-500 dark:text-gray-400">;
+              </p>";";
+              <p className="text-sm text-gray-500 dark: text-gray-400">;";,
                 {swState.hasUpdate ? 'Update available' : 'Up to date'}
               </p>;
             </div>;
             {swState.hasUpdate && (;
-              <button;
-                onClick={handleUpdate}";
-                className="flex-shrink-0 bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors">;
+              <button;>
+                onClick={handleUpdate}";";
+                className="flex-shrink-0 bg-blue-600 hover: bg-blue-700 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors">;";,
                 Update;
               </button>;) };
           </div>;
         </motion.div>;
       )};
     </AnimatePresence>;
-  )}'";
+  )}'";";
+;

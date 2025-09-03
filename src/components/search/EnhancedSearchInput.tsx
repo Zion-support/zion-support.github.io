@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"; // Added useMemo;
+import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"; // Added useMemo;";
 import { Search, X  } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions'; ;
@@ -8,7 +8,7 @@ export function EnhancedSearchInput({;
   value,;
   onChange,;
   onSelectSuggestion,;
-  placeholder = "Search...",;
+  placeholder = "Search...",;";
   searchSuggestions;,
 }: EnhancedSearchInputProps) {;
   const [isFocused, setIsFocused] = useState(false);
@@ -18,11 +18,11 @@ export function EnhancedSearchInput({;
   const containerRef = useRef<HTMLDivElement>(null);
 ;
   const debouncedFilterSuggestions = useMemo(// Changed from useCallback to useMemo;
-    () => debounce((currentValue: string, suggestions: SearchSuggestion[]) => {;
+    () => debounce((currentValue: string, suggestions: SearchSuggestion[]) => {;,
       if(!currentValue) {;
         setFilteredSuggestions(suggestions.filter(s => s.type === 'recent'));
         return;,
-}
+};
 ;
       const filtered = suggestions.filter(suggestion =>;
         suggestion.text.toLowerCase().includes(currentValue.toLowerCase());
@@ -40,7 +40,7 @@ export function EnhancedSearchInput({;
   );
 ;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -54,40 +54,40 @@ export function EnhancedSearchInput({;
 }, [value, searchSuggestions, debouncedFilterSuggestions]);
 ;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
 };,
 }, []);, []);
-    function handleClickOutside(event: MouseEvent) {;
+    function handleClickOutside(event: MouseEvent) {;,
       if(containerRef.current && !containerRef.current.contains(event.target as Node)) {;
         setIsFocused(false);,
-}
+};
     }
     ;
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);,
+    document.addEventListener("mousedown", handleClickOutside);";
+    return () => document.removeEventListener("mousedown", handleClickOutside);,";
 }, []);
 ;
-  const handleSelectSuggestion = (suggestionText: string) => { // Renamed suggestion to suggestionText;
+  const handleSelectSuggestion = (suggestionText: string) => { // Renamed suggestion to suggestionText;,
     onChange(suggestionText);
     if(onSelectSuggestion) {;
       onSelectSuggestion(suggestionText);,
-}
+};
     setIsFocused(false);
     inputRef.current?.blur();
     setHighlightedIndex(-1); ;,
 };
 ;
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {;
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {;,
     if(!isFocused || filteredSuggestions.length === 0) {;
       if(e.key === 'Escape') { ;
         e.preventDefault();
         setIsFocused(false);
         setHighlightedIndex(-1);
         inputRef.current?.blur();,
-}
+};
       return;,
 }
 ;
@@ -112,25 +112,25 @@ export function EnhancedSearchInput({;
         setHighlightedIndex(-1);
         inputRef.current?.blur();
         break;
-      default:;
+      default: ;,
         break;,
 }
   };
   ;
-  return (<div;
-      className="relative w-full";
+  return (<div;>
+      className="relative w-full";";
       ref={containerRef}
-      role="combobox";
+      role="combobox";";
       aria-expanded={isFocused && filteredSuggestions.length > 0}
-      aria-haspopup="listbox";
-      aria-controls="autocomplete-suggestions-list">;
-      <div className="relative">;
-        <Search ;
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" ;
+      aria-haspopup="listbox";";
+      aria-controls="autocomplete-suggestions-list">;";
+      <div className="relative">;";
+        <Search ;>
+          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" ;";
         />;
-        <Input;
+        <Input;>
           ref={inputRef}
-          type="text";
+          type="text";";
           value={value}
           onChange={(e) => {;
             onChange(e.target.value);,
@@ -138,29 +138,30 @@ export function EnhancedSearchInput({;
           onFocus={() => setIsFocused(true)}
           onKeyDown={handleKeyDown} ;
           placeholder={placeholder}
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate";
-          aria-autocomplete="list";
-          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
+          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder: text-zion-slate";";,
+          aria-autocomplete="list";";
+          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}`;
         />;
         {value && (;
-          <button;
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white";
+          <button;>
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover: text-white";";,
             onClick={() => onChange('')}
             ;
           >;
-            <X className="h-4 w-4" />;
+            <X className="h-4 w-4" />;";
           </button>;
         )}
       </div>;
       ;
-      <AutocompleteSuggestions;
+      <AutocompleteSuggestions;>
         suggestions={filteredSuggestions}
         searchTerm={value}
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
         highlightedIndex={highlightedIndex} ;
-        listId="autocomplete-suggestions-list" ;
+        listId="autocomplete-suggestions-list" ;";
       />;
     </div>;
   );,
 }
+;

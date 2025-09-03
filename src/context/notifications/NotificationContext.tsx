@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 import { supabase } from '@/integrations/supabase/client';
-export default function Page() {;
+export default function Page(): any {;
 ,;
   fetchNotifications: async () => {},;,
 };
@@ -28,7 +28,7 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
       notificationOps.fetchNotifications();,
 }
     ;
-    let channel: ReturnType<typeof supabase.channel> | undefined;
+    let channel: ReturnType<typeof supabase.channel> | undefined;,
     if(user && notificationOps) { // Ensure notificationOps is available for fetch on change;
       channel = supabase;
         .channel('notifications-changes');
@@ -37,10 +37,9 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
             event: '*', ;
             schema: 'public',;
             table: 'notifications',;
-            filter: `user_id=eq.${user.id}`;,
+            filter: `user_id=eq.${user.id}`;,`;
 },;
           (payload) => {;
-            console.log('Notification change received:', payload);
             notificationOps.fetchNotifications(); // Call fetchNotifications from the stable notificationOps;,
 }
         );
@@ -59,3 +58,4 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
     </NotificationContext.Provider>;
   );,
 };
+;

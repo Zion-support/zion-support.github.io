@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<TrustScoreBadge  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<TrustScoreBadge  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import TrustScoreBadge from &apos;./TrustScoreBadge;
 describe(&apos;TrustScoreBadge&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;TrustScoreBadge&apos, () => {;
     render();,
 }
     // comment;
-    render(<TrustScoreBadge / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<TrustScoreBadge / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

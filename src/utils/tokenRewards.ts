@@ -1,10 +1,10 @@
 
-export async function rewardOnboarding(...args: any[]): any {;
+export async function rewardOnboarding(...args: any[]): any {;,
 
 export async function rewardOnboarding(;
   userId: string,;
   action: string,;
-  amount: number;
+  amount: number;,
 ): Promise<any> {;
   await apiClient('/functions/v1/token-manager/earn', {;
     method: 'POST',;
@@ -15,11 +15,11 @@ export async function rewardOnboarding(;
 export async function earnTokensForPurchase(;
   userId: string,;
   purchaseAmount: number,;
-  purchaseType: string;
+  purchaseType: string;,
 ): Promise<any> {;
   await apiClient('/functions/v1/token-manager/earn', {;
     method: 'POST',;
-    body: JSON.stringify({;
+    body: JSON.stringify({;,
       userId,;
       action: 'purchase',;
       amount: purchaseAmount,;
@@ -30,11 +30,11 @@ export async function earnTokensForPurchase(;
 ;
 export async function earnTokensForReferral(;
   userId: string,;
-  referredUserId: string;
+  referredUserId: string;,
 ): Promise<any> {;
   await apiClient('/functions/v1/token-manager/earn', {;
     method: 'POST',;
-    body: JSON.stringify({;
+    body: JSON.stringify({;,
       userId,;
       action: 'referral',;
       referredUserId,;
@@ -46,7 +46,7 @@ export async function earnTokensForReferral(;
 export async function earnTokensForAction(;
   userId: string,;
   action: string,;
-  amount: number;
+  amount: number;,
 ): Promise<any> {;
   await apiClient('/functions/v1/token-manager/earn', {;
     method: 'POST',;
@@ -56,8 +56,8 @@ export async function earnTokensForAction(;
 ;
 export default earnTokensForAction;
 // comment;
-export const tokenRewards = {}
+export const tokenRewards = {};
 ;
 
 export default tokenRewards;
-}
+};

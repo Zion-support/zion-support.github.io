@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<EnhancedPerformanceOptimizer  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<EnhancedPerformanceOptimizer  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import EnhancedPerformanceOptimizer from &apos;./EnhancedPerformanceOptimizer;
 describe(&apos;EnhancedPerformanceOptimizer&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;EnhancedPerformanceOptimizer&apos, () => {;
     render();,
 }
     // comment;
-    render(<EnhancedPerformanceOptimizer / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<EnhancedPerformanceOptimizer / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

@@ -2,7 +2,7 @@
 ;
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
-import App from "./App.tsx";
+import App from "./App.tsx";";
 import './index.css';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -16,7 +16,7 @@ import { LanguageProvider } from '@/context/LanguageContext';
 import { WhitelabelProvider } from '@/context/WhitelabelContext';
 import { AppLayout } from '@/layout/AppLayout';
 // Import auth and notification providers;
-import { AuthProvider } from "./context/auth/AuthProvider.jsx";
+import { AuthProvider } from "./context/auth/AuthProvider.jsx";";
 ;
 // Import analytics provider;
 
@@ -26,8 +26,8 @@ import { AuthProvider } from "./context/auth/AuthProvider.jsx";
 ;
 // Initialize a React Query client with global error handling;
 const queryClient = new QueryClient({;
-    defaultOptions: {;
-        queries: {;
+    defaultOptions: {;,
+        queries: {;,
             retry: 1,;
             refetchOnWindowFocus: false,;,
 },;,
@@ -48,7 +48,7 @@ const renderApp = () => {;
                             <AuthProvider>;
                                 <NotificationProvider>;
                                     <AnalyticsProvider>;
-                                        <LanguageProvider authState={{;
+                                        <LanguageProvider authState={{;>
                                             isAuthenticated: false,;
                                             user: null;,
 }}>;
@@ -80,13 +80,13 @@ const renderApp = () => {;
 
 function displayFatalError(message) {;
     if (rootElement) {;
-        rootElement.innerHTML = `;
+        rootElement.innerHTML = `;`;
 
 ;
-            <div style="padding:20px;text-align:center;font-family:sans-serif;">;
+            <div style="padding: 20px;text-align:center;font-family:sans-serif;">;";,
                 <h1>Application Error</h1>;
                 <p>${message}</p>;
-            </div>`;,
+            </div>`;,`;
 }
 }
 ;
@@ -102,4 +102,5 @@ window.addEventListener('error', (e) => {;
     console.error('Unhandled error:', e.error || e.message);
     displayFatalError(e.message);,
 });
+;
 ;

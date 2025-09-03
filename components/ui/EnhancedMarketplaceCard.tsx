@@ -4,8 +4,8 @@ import { Card } from './Card';
 import { Badge } from './Badge';
 ;
 type EnhancedMarketplaceCardProps = {;
-  title: string;
-  description: string;
+  title: string;,
+  description: string;,
   price?: string;
   image?: string;,
 };

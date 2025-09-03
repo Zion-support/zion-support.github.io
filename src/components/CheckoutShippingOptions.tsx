@@ -1,21 +1,21 @@
 
 interface Address {;
-  name: string;
-  address: string;
-  city: string;
+  name: string;,
+  address: string;,
+  city: string;,
   country: string}
 ;
 interface ShippingRate {;
-  id: string;
-  carrier: string;
-  service: string;
-  rate: string;
-  currency: string;
+  id: string;,
+  carrier: string;,
+  service: string;,
+  rate: string;,
+  currency: string;,
   delivery_days?: number | null;
   tax?: string}
 ;
 interface Props {;
-  toAddress: Address | null;
+  toAddress: Address | null;,
   onSelect?: (rate: ShippingRate) => void}
 ;
 export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {;
@@ -24,7 +24,7 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {;
   const [selected, setSelected] = useState<string>('');
 ;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -47,16 +47,16 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {;
 ;
   if(!toAddress) return null;
 ;
-  return (<div className="my-4">;
-      <h2 className="font-semibold mb-2">Shipping Options</h2>;
+  return (<div className="my-4">;";
+      <h2 className="font-semibold mb-2">Shipping Options</h2>;";
       {loading && <p>Loading...</p>}
       {!loading && (;
-        <RadioGroup value={selected} onValueChange={handleChange} className="space-y-2">;
+        <RadioGroup value={selected} onValueChange={handleChange} className="space-y-2">;";
           {rates.map(rate => (;
-            <label key={rate.id} className="flex items-center gap-2">;
+            <label key={rate.id} className="flex items-center gap-2">;";
               <RadioGroupItem value={rate.id}  />;
-              <span>{`${rate.carrier} ${rate.service} - ${rate.rate} ${rate.currency}`}</span>;
-              {rate.tax && <span className="ml-1 text-sm">(+{rate.tax} taxes)</span>}
+              <span>{`${rate.carrier} ${rate.service} - ${rate.rate} ${rate.currency}`}</span>;`;
+              {rate.tax && <span className="ml-1 text-sm">(+{rate.tax} taxes)</span>}";
             </label>;
           ))}
         </RadioGroup>;
@@ -65,3 +65,4 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {;
   )}
 ;
 export type { ShippingRate };
+;

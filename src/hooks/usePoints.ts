@@ -3,7 +3,7 @@ import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
  from '@/types/points';
 ;
-export function usePoints() {;
+export function usePoints(): any {;
   const { user } = useAuth();
   const [ledger, setLedger] = useState<PointsLedgerEntry[]>([]);
   const [balance, setBalance] = useState(0);
@@ -30,7 +30,7 @@ export function usePoints() {;
       const total = entries.reduce((sum, e) => sum + e.delta, 0);
       setBalance(total);,
 } else if(error) {;
-      console.error("Error fetching ledger:", error);
+      console.error("Error fetching ledger:", error);";
       setLedger([]); // Clear ledger on error;
       setBalance(0);  // Clear balance on error;,
 }
@@ -38,7 +38,7 @@ export function usePoints() {;
 }, [user?.id]); // Dependency for fetchLedger;
 
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -51,3 +51,4 @@ export function usePoints() {;
 
   return { ledger, balance, loading, fetchLedger };,
 }
+;

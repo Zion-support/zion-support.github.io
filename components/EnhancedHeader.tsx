@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
   User,;
   ShoppingCart,;,
 } from "lucide-react";
-export default function EnhancedHeader() {;
+export default function EnhancedHeader(): any {;
 
   const router = useRouter();,
 }
@@ -55,12 +55,12 @@ export default function EnhancedHeader() {;
   ];
 
   return (";
-    <header className = "{"fixed" w-full z-50 transition-all duration-300 ${";
+    <header className = "{"fixed" w-full z-50 transition-all duration-300 ${";>
         scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm">;,
 }"}
 ;
     >";
-      <div className = "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
+      <div className = "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
         <div className="flex justify-between items-center py-4">,;
           {/* comment */}";
           <div className="flex items-center">";
@@ -68,7 +68,7 @@ export default function EnhancedHeader() {;
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">";
                 <span className="text-white font-bold text-lg">Z</span>;
               </div>";
-              <div className="hidden sm: block">";
+              <div className="hidden sm: block">";,
                 <span className="text-xl font-bold text-gray-900">;
                   Zion Tech Group,;
                 </span>";
@@ -79,7 +79,7 @@ export default function EnhancedHeader() {;
           </div>;
 ,;
           {/* comment */}";
-          <nav className="hidden lg: flex items-center space-x-1">;
+          <nav className="hidden lg: flex items-center space-x-1">;,
             {navigation.map(item => (",;
               <div key="{item.name}" className="relative">;
                 {item.dropdown ? (";
@@ -98,9 +98,9 @@ export default function EnhancedHeader() {;
                     {activeDropdown === item.name && (";
                       <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg py-2 z-50 border">;
                         {item.dropdown.map(dropdownItem => (";
-                          <Link key="{dropdownItem.name}
+                          <Link key="{dropdownItem.name}>
                             href="{dropdownItem.href}
-                            className="{"block" px-4 py-2 text-sm text-gray-700 hover: bg-blue-50 hover:text-blue-600 transition-colors"">;
+                            className="{"block" px-4 py-2 text-sm text-gray-700 hover: bg-blue-50 hover:text-blue-600 transition-colors"">;,
                             onClick="{()" => setActiveDropdown(null)}
 ;
                           >;
@@ -114,7 +114,7 @@ export default function EnhancedHeader() {;
 ;
                   </div>;
                 ) : (";
-                  <Link href="{item.href}
+                  <Link href="{item.href}>
                     className="{"text-sm" font-medium px-4 py-2 rounded-md transition-colors ${;
                       router.pathname === item.href";
                         ? "text-blue-600 bg-blue-50;
@@ -133,29 +133,29 @@ export default function EnhancedHeader() {;
           {/* comment */}";
           <div className=""hidden" md: flex items-center space-x-4"}>";
             <form onSubmit="{handleSearch}" className="relative">";
-              <input type="text;
+              <input type="text;>
                 placeholder="Search...;
                 value="{searchQuery}
                 onChange="{e" => setSearchQuery(e.target.value)}";
-                className="w-64 px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />";
+                className="w-64 px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />";,
               <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400"  />;
             </form>";
             <div className="flex items-center space-x-3 text-sm text-gray-600">";
-              <a href="tel:+13024640950;
-                className="flex items-center space-x-1 hover:text-blue-600 transition-colors">";
+              <a href="tel: +13024640950;,>
+                className="flex items-center space-x-1 hover: text-blue-600 transition-colors">";,
                 <Phone className="h-4 w-4"  />";
-                <span className="hidden lg:inline">+1 (302) 464-0950</span>;
+                <span className="hidden lg: inline">+1 (302) 464-0950</span>;,
               </a>";
-              <a href="mailto: kleber@ziontechgroup.com;
-                className="flex items-center space-x-1 hover:text-blue-600 transition-colors">";
+              <a href="mailto: kleber@ziontechgroup.com;,>
+                className="flex items-center space-x-1 hover: text-blue-600 transition-colors">";,
                 <Mail className="h-4 w-4"  />";
-                <span className="hidden lg:inline">Contact</span>;
+                <span className="hidden lg: inline">Contact</span>;,
               </a>;
             </div>;
 ,;
           {/* comment */}";
           <button onClick="{()" => setMobileMenuOpen(!mobileMenuOpen)}";
-            className="lg: hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100">;
+            className="lg: hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100">;,
             {mobileMenuOpen ? (";
               <X className="h-6 w-6"  />;
             ) : (";
@@ -167,7 +167,7 @@ export default function EnhancedHeader() {;
         {/* comment */}
 ;
         {mobileMenuOpen && (";
-          <div className="lg: hidden">";
+          <div className="lg: hidden">";,
             <div className="{"px-2" pt-2 pb-3 space-y-1 bg-white border-t">;
               {navigation.map(item => (",;
                 <div key="{item.name}">;
@@ -187,9 +187,9 @@ export default function EnhancedHeader() {;
                       {activeDropdown === item.name && (";
                         <div className="pl-4 space-y-1">;
                           {item.dropdown.map(dropdownItem => (";
-                            <Link key="{dropdownItem.name}
+                            <Link key="{dropdownItem.name}>
                               href="{dropdownItem.href}
-                              className="{"block" px-3 py-2 text-sm text-gray-600 hover: text-blue-600 hover:bg-gray-50 rounded-md;
+                              className="{"block" px-3 py-2 text-sm text-gray-600 hover: text-blue-600 hover:bg-gray-50 rounded-md;,
                               onClick="{()" => {,;
                                 setMobileMenuOpen(false),;
                                 setActiveDropdown(null)}}
@@ -205,7 +205,7 @@ export default function EnhancedHeader() {;
 ;
                     </div>;
                   ) : (";
-                    <Link href="{item.href}
+                    <Link href="{item.href}>
                       className="{"block" px-3 py-2 text-base font-medium rounded-md ${;
                         router.pathname === item.href";
                           ? "text-blue-600 bg-blue-50;
@@ -224,24 +224,24 @@ export default function EnhancedHeader() {;
               {/* comment */}";
               <div className=""px-3" py-2"}>";
                 <form onSubmit="{handleSearch}" className="relative">";
-                  <input type="text;
+                  <input type="text;>
                     placeholder="Search...;
                     value="{searchQuery}
                     onChange="{e" => setSearchQuery(e.target.value)}";
-                    className="w-full px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />";
+                    className="w-full px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />";,
                   <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400"  />;
                 </form>;
               </div>;
 ,;
               {/* comment */}";
               <div className="px-3 py-2 space-y-2">";
-                <a href="tel: +13024640950;
-                  className="flex items-center space-x-2 text-sm text-gray-600 hover:text-blue-600">";
+                <a href="tel: +13024640950;,>
+                  className="flex items-center space-x-2 text-sm text-gray-600 hover: text-blue-600">";,
                   <Phone className="h-4 w-4"  />;
                   <span>+1 (302) 464-0950</span>;
                 </a>";
-                <a href="mailto: kleber@ziontechgroup.com;
-                  className="flex items-center space-x-2 text-sm text-gray-600 hover:text-blue-600">";
+                <a href="mailto: kleber@ziontechgroup.com;,>
+                  className="flex items-center space-x-2 text-sm text-gray-600 hover: text-blue-600">";,
                   <Mail className="h-4 w-4"  />;
                   <span>kleber@ziontechgroup.com</span>;
                 </a>;

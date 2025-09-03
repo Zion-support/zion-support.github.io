@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<CaseStudies  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<CaseStudies  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import CaseStudies from &apos;./CaseStudies;
 describe(&apos;CaseStudies&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;CaseStudies&apos, () => {;
     render();,
 }
     // comment;
-    render(<CaseStudies / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<CaseStudies / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

@@ -1,5 +1,5 @@
 // comment;
-export const apiErrorHandler = {}
+export const apiErrorHandler = {};
 ;
     variant: 'destructive',;
     error?.message || fallbackMessage || 'An unexpected error occurred';  toast({;
@@ -8,3 +8,4 @@ export const apiErrorHandler = {}
     title: 'Error',;
     description: message});
   // Log error for debugging;
+;

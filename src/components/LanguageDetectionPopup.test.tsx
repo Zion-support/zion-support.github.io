@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<LanguageDetectionPopup  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<LanguageDetectionPopup  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import LanguageDetectionPopup from &apos;./LanguageDetectionPopup;
 describe(&apos;LanguageDetectionPopup&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;LanguageDetectionPopup&apos, () => {;
     render();,
 }
     // comment;
-    render(<LanguageDetectionPopup / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<LanguageDetectionPopup / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<EnhancedUserExperience  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<EnhancedUserExperience  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import EnhancedUserExperience from &apos;./EnhancedUserExperience;
 describe(&apos;EnhancedUserExperience&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;EnhancedUserExperience&apos, () => {;
     render();,
 }
     // comment;
-    render(<EnhancedUserExperience / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<EnhancedUserExperience / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

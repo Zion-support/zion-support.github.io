@@ -1,7 +1,7 @@
 'use client';';
 import React, { useState, useCallback, useEffect } from 'react';';
 import { motion, AnimatePresence } from 'framer-motion';';
-import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const AccessibilityPanel = ({ enabled = true, defaultSettings = { /* empty */ }, onSettingsChange, className = '' }) => {}
+import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const AccessibilityPanel = ({ enabled = true, defaultSettings = { /* empty */ }, onSettingsChange, className = '' }) => {};
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({}
         highContrast: false,;
@@ -47,7 +47,7 @@ import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const Acces
             root.style.removeProperty('--large-text');''';
             root.classList.remove('large-text')}''';
         // Font size'''';
-        root.style.setProperty('--font-size', `${settings.fontSize}px`);''';
+        root.style.setProperty('--font-size', `${settings.fontSize}px`);''';`;
         // Color blind modes'''';
         root.style.setProperty('--color-blind-mode', settings.colorBlindMode);
         // Reduced motion;
@@ -122,25 +122,25 @@ import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const Acces
     }, [settings.highContrast, settings.largeText, settings.reducedMotion, enabled, settings.screenReader]);
     const updateSetting = useCallback((key, value) => {}
         setSettings(prev => {}
-            const newSettings = {}
+            const newSettings = {};
   ...prev,;
   [key]: value;,
 };
             // Add notification;
-            const notification = {}
-`;
-`'`;
-`'`'`;
-  id: Date.now().toString(),`'`'`'`;
-                message: `${key.replace(/([A-Z])/g, $1').toLowerCase()'`'`'`'`;,
-} ${value ? 'enabled' : 'disabled'}`,''';
+            const notification = {};
+`;`;
+`'`;`;
+`'`'`;`;
+  id: Date.now().toString(),`'`'`'`;`;
+                message: `${key.replace(/([A-Z])/g, $1').toLowerCase()'`'`'`'`;,`;
+} ${value ? 'enabled' : 'disabled'}`,''';`;
                 type: 'success',;
                 timestamp: Date.now();,
 };
             setNotifications(prev => [notification, ...prev.slice(0, 2)]);
             return newSettings})}, []);
     const resetToDefaults = useCallback(() => {}
-        const defaultSettings = {}
+        const defaultSettings = {};
   highContrast: false,;
             largeText: false,;
             fontSize: 16,';
@@ -166,4 +166,4 @@ export { AccessibilityPanel };
 export { AccessibilityPanel };
 ;
 export { AccessibilityPanel };
-)
+);

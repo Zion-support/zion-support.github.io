@@ -3,7 +3,7 @@ interface OptimizedImageProps {";
 interface OptimizedImageProps {;
 
   src: string,,;
-alt: string;
+alt: string;,
   width?: number;
   height?: number;
   className?: string,;
@@ -35,7 +35,7 @@ src, alt,;
   blurDataURL, sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"}) => {;
   return(";
     <div className={cn("relative overflow-hidden", className)}>;
-      <Image src="{src}
+      <Image src="{src}>
         alt="{alt}
         width="{width}
         height="{height}
@@ -51,7 +51,7 @@ className="object-cover transition-transform duration-300 hover: scale-105"  />,
 ;
 export default OptimizedImage;
 :components/disabled/ui/OptimizedImage.tsx,";
-className = "object-cover transition-transform duration-300 hover: scale-105" />;
+className = "object-cover transition-transform duration-300 hover: scale-105" />;,
     </div>,;
   )}
 ;

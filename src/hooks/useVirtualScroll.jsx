@@ -4,7 +4,7 @@ export default function Page() {;
 , [state.scrollTop, containerHeight, itemHeight, overscan, items.length]);
     // Update virtual items when parameters change;
     useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -55,7 +55,7 @@ export default function Page() {;
             case 'end':;
                 scrollTop = (index * itemHeight) - containerHeight + itemHeight;
                 break;
-            default:;
+            default: ;,
                 scrollTop = index * itemHeight}
         scrollTop = Math.max(0, Math.min(scrollTop, state.totalHeight - containerHeight));
         if(enableSmoothScrolling) {;
@@ -93,7 +93,7 @@ export default function Page() {;
         return index >= state.startIndex && index <= state.endIndex}, [state.startIndex, state.endIndex]);
     // Infinite scroll detection;
     useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -119,7 +119,7 @@ export default function Page() {;
             container.removeEventListener('scroll', handleScrollEnd)}}, [enableInfiniteScroll, threshold]);
     // Cleanup on unmount;
     useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -137,7 +137,7 @@ export default function Page() {;
     const containerProps = {;
 
   ref: containerRef,;
-        style: {;
+        style: {;,
 
             height: containerHeight,;
             overflow: 'auto',;
@@ -149,15 +149,15 @@ export default function Page() {;
     // List props;
     const listProps = {;
 
-  style: {;
+  style: {;,
 
             height: state.totalHeight,;
             position: 'relative',;
-  transform: `translateY(${virtualScrollParams.offsetY;
+  transform: `translateY(${virtualScrollParams.offsetY;,`;
 
 ;
-`;,
-}px)`;,
+`;,`;
+}px)`;,`;
 }
     };
     return {;
@@ -180,7 +180,7 @@ export const useVirtualScrollWithSearch = (items, searchQuery, searchFields, opt
     const [searchResults, setSearchResults] = useState({ indices[], highlights: new Map() });
     // Filter items based on search query;
     useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -210,8 +210,8 @@ export const useVirtualScrollWithSearch = (items, searchQuery, searchFields, opt
                     while(pos !== -1) {;
 
                         highlightPositions.push(pos);
-                        pos = value.indexOf(query, pos + 1)}`;
-                    itemHighlights.push(...highlightPositions.map(p => `${String(field)}:${p}`))}
+                        pos = value.indexOf(query, pos + 1)}`;`;
+                    itemHighlights.push(...highlightPositions.map(p => `${String(field)}:${p}`))}`;
             });
             if(isMatch) {;
 
@@ -237,7 +237,7 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {;
     const [totalHeight, setTotalHeight] = useState(0);
     // Calculate item heights;
     useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -285,7 +285,7 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {;
 });
     // Update virtual items based on scroll position;
     useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -310,4 +310,4 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {;
         findIndexFromScrollTop,;
         state;,
 }};
-'`
+'`;`;

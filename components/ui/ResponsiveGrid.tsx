@@ -1,7 +1,7 @@
 import React from 'react';
 ;
 interface ResponsiveGridProps {;
-  children: React.ReactNode;
+  children: React.ReactNode;,
   className?: string;
   cols?: {;
     default?: number;
@@ -13,7 +13,7 @@ interface ResponsiveGridProps {;
   gap?: number;,
 }
 ;
-const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({ ;
+const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({ ;,
   children, ;
   className = '',;
   cols = { default: 1, sm: 2, md: 3, lg: 4 },;

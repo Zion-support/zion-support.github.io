@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<ComprehensiveSEOEnhancer  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<ComprehensiveSEOEnhancer  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import ComprehensiveSEOEnhancer from &apos;./ComprehensiveSEOEnhancer;
 describe(&apos;ComprehensiveSEOEnhancer&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;ComprehensiveSEOEnhancer&apos, () => {;
     render();,
 }
     // comment;
-    render(<ComprehensiveSEOEnhancer / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<ComprehensiveSEOEnhancer / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

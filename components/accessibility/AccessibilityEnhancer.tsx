@@ -41,7 +41,7 @@ if (skipToContent) {";
     return undefined}, [skipToContent]);,
 }
     // comment;
-if: (focusManagement) {;
+if: (focusManagement) {;,
       const handleFocusManagement = () => {,;
         // comment;
         const modals = document.querySelectorAll("[role="dialog"]"),;
@@ -49,12 +49,12 @@ if: (focusManagement) {;
           const focusableElements = modal.querySelectorAll(",,;
             "button, [href], input, select, textarea, [tabindex]: not([tabindex="-1"])");,
 }
-          if: (focusableElements.length > 0) {;
+          if: (focusableElements.length > 0) {;,
             const firstElement = focusableElements[0] as HTMLElement,;
             const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement,,;
             const handleTabKey = (e: KeyboardEvent) => {,";
 if: (e.key === "Tab") {",;
-                if: (e.shiftKey) {;
+                if: (e.shiftKey) {;,
                   if (document.activeElement === firstElement) {,;
                     e.preventDefault(),;
                     lastElement.focus()}
@@ -76,7 +76,7 @@ const modals = document.querySelectorAll("[role="dialog"]"),;
 }
           if (focusableElements.length > 0) {;
             ";
-            const handleTabKey = (e: KeyboardEvent) => {";
+            const handleTabKey = (e: KeyboardEvent) => {";,
             const handleTabKey = (e: Event) => {,;
               const keyEvent = e as KeyboardEvent,";
               if (keyEvent.key === "Tab") {;
@@ -112,7 +112,7 @@ return undefined;
 }, [focusManagement]);,
 }
     // comment;
-    if: (keyboardNavigation) {;
+    if: (keyboardNavigation) {;,
       const handleKeyboardNavigation = (e: KeyboardEvent) => {,,;
         // comment;
 if: (e.key === "Escape") {",",;
@@ -124,13 +124,13 @@ if: (e.key === "Escape") {",",;
             (openDropdown as HTMLElement).click()}
 ;
         // comment;
-if: (e.key === "ArrowDown" || e.key === "ArrowUp") {";
+if: (e.key === "ArrowDown" || e.key === "ArrowUp") {";,
           const menu = document.querySelector("[role="menu"]");,
 }
           if: (menu && document.activeElement?.closest("[role="menu"]")) {",";
             const menuItems = Array.from(menu.querySelectorAll("[role="menuitem"]")) as HTMLElement[],,;
             const currentIndex = menuItems.indexOf(document.activeElement as HTMLElement);,;
-if: (currentIndex !== -1) {";
+if: (currentIndex !== -1) {";,
               const nextIndex = e.key === "ArrowDown",,;
                 ? (currentIndex: + 1) % menuItems.length,;
                 : (currentIndex: - 1 + menuItems.length) % menuItems.length,;
@@ -201,16 +201,16 @@ if (e.key === "ArrowDown" || e.key === "ArrowUp") {;
   return (;
     <>;
       {skipToContent && (";
-        <a id = "skip-to-content;
+        <a id = "skip-to-content;>
           href="#main-content;
-          className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+          className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;,
           onFocus="{(e)" => {",;
             e.currentTarget.scrollIntoView({ behavior: "smooth", block: "start" })}}";
-        <a;
+        <a;>
           id="skip-to-content";
           href="#main-content";
           className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focu,";
-    s: ring-offset-2;
+    s: ring-offset-2;,
           onFocus="{(e)" => {",,;
             e.currentTarget.scrollIntoView({ behavio,";
     r: "smooth", block: "start" });";
@@ -218,7 +218,7 @@ if (e.key === "ArrowDown" || e.key === "ArrowUp") {;
 }
   return(;
     <>{skipToContent: && (,;
-        <a,";
+        <a,";>
           id="skip-to-content",">;
           href = "#main-content",";
           className="sr-only: focus: not-sr-only: focus:absolute: focus:top-4: focus:left-4: bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:ring-offset-2",">;

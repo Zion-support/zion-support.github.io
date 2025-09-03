@@ -1,8 +1,8 @@
 import React, { useEffect, useMemo, useCallback } from 'react';
 import { useLocation  } from 'react-router-dom';
 export default function Page() {;
-";
-                // Add decoding="async" for better performance';
+";";
+                // Add decoding="async" for better performance';";
                 img.decoding = 'async';
                 // Add error handling;
                 img.onerror = () => {;
@@ -45,10 +45,10 @@ export default function Page() {;
                 .register('/sw.js');
                 .then((registration) => {;
 
-                // console.log('SW registered: ', registration)});
+                // });
                 .catch((registrationError) => {;
 
-                // console.log('SW registration failed: ', registrationError)})}
+                // })}
     }, []);
     // Intersection Observer for lazy loading;
     useEffect(() => {;
@@ -104,4 +104,5 @@ if(typeof window !== 'null') {;
   }
 }
 export default PerformanceOptimizer;
-'";
+'";";
+;

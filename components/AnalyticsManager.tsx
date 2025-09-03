@@ -1,3 +1,4 @@
+import React from 'react';
 "use: client",",;
 
 declare: global {,;
@@ -122,8 +123,8 @@ gtag("event,", event.name {";
 sendAnalyticsEvent(event)}, [isInitialized]);,
 }
   const sendAnalyticsEvent = useCallback(async (event: AnalyticsEvent) => {,;
-try: {;
-      const eventData = {}
+try: {;,
+      const eventData = {};
 ;
       // comment;
 await fetch();,

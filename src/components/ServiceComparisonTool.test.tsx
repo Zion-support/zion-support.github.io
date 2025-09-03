@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<ServiceComparisonTool  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<ServiceComparisonTool  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import ServiceComparisonTool from &apos;./ServiceComparisonTool;
 describe(&apos;ServiceComparisonTool&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;ServiceComparisonTool&apos, () => {;
     render();,
 }
     // comment;
-    render(<ServiceComparisonTool / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<ServiceComparisonTool / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

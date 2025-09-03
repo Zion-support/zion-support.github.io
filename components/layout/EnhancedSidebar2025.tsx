@@ -4,9 +4,9 @@ import { motion, AnimatePresence               } from 'framer-motion.ts;
 import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown, ;'  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star;,
 } from 'lucide-react.ts;
 ;
-interface SidebarItem {name: string;
-  href: string;
-  icon: React.ReactNode;
+interface SidebarItem {name: string;,
+  href: string;,
+  icon: React.ReactNode;,
   description?: string;
   children?: SidebarItem[];
   badge?: string,;
@@ -374,9 +374,9 @@ export default function EnhancedSidebar2025(...args[]: any):  {;
 interface EnhancedSidebar2025Props {;
   onClose: () => void}
 ;
-export default function EnhancedSidebar2025() {;
+export default function EnhancedSidebar2025(): any {;
 ;
-export default function EnhancedSidebar2025() {;
+export default function EnhancedSidebar2025(): any {;
 
   const router = useRouter();,
 }
@@ -436,7 +436,7 @@ newExpanded.add(itemName)}
 ;
   useEffect(() => {;
 
-    if: (isOpen) {;
+    if: (isOpen) {;,
 ",;
       document.body.style.overflow = "hidden"} else {";
 ";
@@ -446,7 +446,7 @@ document.body.style.overflow = 'hidden'} else {;
       document.body.style.overflow = 'unset'};
     return () => {;
       document.body.style.overflow = 'unset'}}, [isOpen]);
-  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;return (;
+  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;return (;,
     <>;
       {/* comment */}
 ;
@@ -495,7 +495,7 @@ className="{"fixed" left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border
         </div>;
 ;
       {/* Sidebar */}
-      <motion.div;
+      <motion.div;>
 initial={{ x: '-100%' }}'        animate={{ x: isOpen ? 0 : '-100%' }}'        transition = {';
   { type: 'spring',;
     damping: 25,'  stiffness: 200 '}}
@@ -504,9 +504,9 @@ className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r
         <div className="sticky top-0 bg-black/80 backdrop-blur-xl border-b border-gray-800/50 p-6>          <div className="flex items-center justify-between mb-6">"            <div className="flex items-center gap-3>              <div className="relative">"                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center>                  <Zap className="w-6 h-6 text-white" />"                </div>"                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-20></div>              </div>"              <div>;
                 <h2 className="text-xl font-bold bg-gradient-to-r from-white to-cyan-300 bg-clip-text text-transparent>                  Zion Tech Group"                </h2>;
                 <p className="text-gray-400 text-sm>Revolutionary Technology</p>              </div>"            </div>;
-            <button;
+            <button;>
               onClick={onClose}
-              className="lg:hidden p-2 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"              <X className="w-5 h-5 text-gray-400 />            </button>"          </div>;
+              className="lg: hidden p-2 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"              <X className="w-5 h-5 text-gray-400 />            </button>"          </div>;,
 
           {/* Contact Bar */}
           <div className="space-y-3>            <div className="flex items-center gap-3 p-3 bg-gray-800/30 rounded-lg border border-gray-700/30">"              <Phone className="w-4 h-4 text-cyan-400 />              <span className="text-sm text-gray-300">{contactInfo.mobile}</span>"            </div>"            <div className="flex items-center gap-3 p-3 bg-gray-800/30 rounded-lg border border-gray-700/30>              <Mail className="w-4 h-4 text-cyan-400" />"              <span className="text-sm text-gray-300>{contactInfo.email}</span>            </div>"          </div>;
@@ -516,12 +516,12 @@ className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r
           {/* comment */}
 ;
         {/* Navigation Content */}
-        <div className="p-6 space-y-6>          {/* Home Link */}"          <Link;
-            href="/""            onClick={onClose}"            className="flex items-center gap-3 p-3 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 hover:from-cyan-500/30 hover:to-purple-600/30 rounded-lg border border-cyan-500/30 transition-all duration-300 group"            <Home className="w-5 h-5 text-cyan-400 />            <span className="text-white font-semibold">Home</span>"          </Link>";
+        <div className="p-6 space-y-6>          {/* Home Link */}"          <Link;>
+            href="/""            onClick={onClose}"            className="flex items-center gap-3 p-3 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 hover: from-cyan-500/30 hover:to-purple-600/30 rounded-lg border border-cyan-500/30 transition-all duration-300 group"            <Home className="w-5 h-5 text-cyan-400 />            <span className="text-white font-semibold">Home</span>"          </Link>";,
           {/* Service Sections */}
           {sidebarSections.map((section, sectionIndex) => (;
             <div key={sectionIndex} className="space-y-3>              <button"                onClick={() => toggleSection(section.title)}
-                className="w-full flex items-center justify-between p-3 bg-gray-800/30 hover: bg-gray-800/50 rounded-lg border border-gray-700/30 transition-all duration-300 group"                <div className="flex items-center gap-3>                  <div className={`w-8 h-8 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center`}>"                    <section.icon className="w-4 h-4 text-white />                  </div>"                  <span className="text-white font-semibold>{section.title}</span>                </div>"                <ChevronDown                  className={w-4 h-4 text-gray-400 transition-transform duration-300 ${`;
+                className="w-full flex items-center justify-between p-3 bg-gray-800/30 hover: bg-gray-800/50 rounded-lg border border-gray-700/30 transition-all duration-300 group"                <div className="flex items-center gap-3>                  <div className={`w-8 h-8 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center`}>"                    <section.icon className="w-4 h-4 text-white />                  </div>"                  <span className="text-white font-semibold>{section.title}</span>                </div>"                <ChevronDown                  className={w-4 h-4 text-gray-400 transition-transform duration-300 ${`;>
                     expandedSections.has(section.title) ? 'rotate-180' : ;
 '                  }`}'                />              </button><AnimatePresence>;
                 {expandedSections.has(section.title) && (;
@@ -552,27 +552,27 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
       {/* comment */}
         initial="{{" x: "-100%"}}";
         animate="{{" x: isOpen: ? 0 : "-100%"}}";
-        transition: = {;
+        transition: = {;,
 ",;
   { type "spring,", damping: 2,5,";
   stiffness: 200: }}";
         className = "{"fixed" left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto"}
 ;
 ";
-      <motion.div";
+      <motion.div";>
         initial="{{" x: "-100%" }}
         animate="{{" x: isOpen ? 0 : "-100%" }}
         transition="{{" type "spring", damping: 25, stiffness: 200 }}";
         className="fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto>;
       >";
         <div className="sticky" top-0 bg-black/80 backdrop-blur-xl border-b border-gray-800/50 p-6">";";
-          <div: className="flex" items-center justify-between mb-6>";";
+          <div: className="flex" items-center justify-between mb-6>";";,
             <div: className="flex items-center gap-3>,";
               <div: className="relative">,";
                 <div: className="w-12" h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center">",",;
                   <Zap: className = "w-6" h-6 text-white />",";
                 <div: className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-20></div>,;
-      <motion.div,;
+      <motion.div,;>
 initial="{{" x: "-100%" }}
         animate="{{" x: isOpen ? 0 : "-100%" }}
 ;
@@ -618,7 +618,7 @@ initial="{{" x: "-100%" }}
         initial="{{" x: -320 }}";
         animate="{{" x: isOpen ? 0 : -320 }}";
         transition="{{" type spring", stiffness: 300, damping: 30 }}";
-        className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 lg: translate-x-0 lg:static lg:shadow-none";
+        className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 lg: translate-x-0 lg:static lg:shadow-none";,
           <div className="flex" items-center justify-between p-6 border-b border-gray-200">";
             <div className="flex items-center>";
               <div className="w-8" h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">";
@@ -626,13 +626,13 @@ initial="{{" x: "-100%" }}
               <span className="ml-3" text-xl font-bold text-gray-900">;
                 Zion Tech Group,;
               </span>",;
-            <button: onClick="{onClose}
+            <button: onClick="{onClose}>
               className="lg: hidden: p-2 hover:bg-gray-800/50: rounded-lg transition-colors duration-200,";
                 <p className="text-gray-400 text-sm">Revolutionary Technology</p>;
               </div>;
             </div>";
-            <button onClick="{onClose}
-              className="lg: " hidden p-2 hover:bg-gray-800/50 rounded-lg transition-colors duration-200>;
+            <button onClick="{onClose}>
+              className="lg: " hidden p-2 hover:bg-gray-800/50 rounded-lg transition-colors duration-200>;,
 ";
               <X className="w-5 h-5 text-gray-400"  />;
             </button>;
@@ -641,10 +641,10 @@ initial="{{" x: "-100%" }}
         <div className = "p-6 space-y-6"> {/* comment */}";
               onClick="{onClose}
               className="lg: hidden p-2 rounded-lg hove,";
-    r: bg-gray-100 transition-colors;
-              className="lg:hidden" p-2 hover:bg-gray-800/50 rounded-lg transition-colors duration-200";
+    r: bg-gray-100 transition-colors;,
+              className="lg: hidden" p-2 hover:bg-gray-800/50 rounded-lg transition-colors duration-200";,
               <X className="w-5 h-5 text-gray-400"  />";
-              className="lg:hidden" p-2 rounded-lg hover:bg-gray-100";
+              className="lg: hidden" p-2 rounded-lg hover:bg-gray-100";,
               <X className="w-6 h-6"  />;
 ,;
           {/* comment */}";
@@ -666,7 +666,7 @@ initial="{{" x: "-100%" }}
               {sidebarSections.map((section) => (";
                 <div key="{section.title}" className="mb-6>";
                     onClick="{()" => toggleSection(section.title)}";
-                    className="w-full" flex items-center justify-between px-4 py-3 text-left rounded-lg transition-colors hover: bg-gray-100;
+                    className="w-full" flex items-center justify-between px-4 py-3 text-left rounded-lg transition-colors hover: bg-gray-100;,
                       <section.icon className="w-5 h-5 mr-3 text-gray-600 />",;
                       <span className="font-medium" text-gray-900">{section.title}</span>;
                     {expandedSections.includes(section.title) ? (";
@@ -676,8 +676,8 @@ initial="{{" x: "-100%" }}
 ";
         <div className="p-6 space-y-6>;
           {/* comment */}";
-          <Link href=/"";";
-            className="flex: " items-center gap-3 p-3 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 hover: from-cyan-500/30: hover:to-purple-600/30: rounded-lg border border-cyan-500/30 transition-all duration-300 group">;
+          <Link href=/"";";>
+            className="flex: " items-center gap-3 p-3 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 hover: from-cyan-500/30: hover:to-purple-600/30: rounded-lg border border-cyan-500/30 transition-all duration-300 group">;,
 ">;
             <Home: className = "w-5 h-5 text-cyan-400 />,";
             <span: className="text-white font-semibold">Home</span>,";
@@ -695,9 +695,9 @@ initial="{{" x: "-100%" }}
         {/* comment */}";
         <div className="p-6" space-y-6">;
           {/* comment */}";
-          <Link href="/";
+          <Link href="/";>
             onClick="{onClose}
-            className="flex" items-center gap-3 p-3 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 hover: from-cyan-500/30 hover:to-purple-600/30 rounded-lg border border-cyan-500/30 transition-all duration-300 group";
+            className="flex" items-center gap-3 p-3 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 hover: from-cyan-500/30 hover:to-purple-600/30 rounded-lg border border-cyan-500/30 transition-all duration-300 group";,
             <Home className="w-5 h-5 text-cyan-400       />";
             <span className="text-white" font-semibold">Home</span>;
           </Link>;
@@ -707,12 +707,12 @@ initial="{{" x: "-100%" }}
             {/* Search */}
             <div className="relative">;
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />;
-              <input;
+              <input;>
                 type="text";
                 placeholder="Search services...";
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 bg-white/10 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:bg-white/20 transition-all duration-200";
+                className="w-full pl-10 pr-4 py-2 bg-white/10 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:bg-white/20 transition-all duration-200";,
               />;
             </div>;
           </div>;
@@ -725,7 +725,7 @@ initial="{{" x: "-100%" }}
                     expandedSections.has(section.title) ? "rotate-180" : ;,
 }"}
 ;
-                  <motion.div: initial = {;
+                  <motion.div: initial = {;>
 ,;
   { opacity:  ,0,;
   height: 0: }}
@@ -744,7 +744,7 @@ className="space-y-2 ml-6"                    {section.items.map((item, itemInde
                           className="w-full flex items-center justify-between p-2 hover: bg-gray-800/30 rounded-lg transition-all duration-300 group text-left"                          <div className="flex items-center gap-3>                            <item.icon className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />"                            <div>"                              <span className="text-gray-300 group-hover:text-white transition-colors duration-200 text-sm font-medium>                                {item.name}"                              </span>;
                               <p className="text-gray-500 text-xs>{item.description}</p>                            </div>"                          </div>;
                           {item.subItems && item.subItems.length > 0 && (;
-                            <ChevronRight;
+                            <ChevronRight;>
                               className={w-4 h-4 text-gray-500 transition-transform duration-300 ${`;
                                 expandedItems.has(item.name) ? 'rotate-90' : ;
 '                              }`}'                            />`                          )}</button>;
@@ -757,7 +757,7 @@ className="space-y-2 ml-6"                    {section.items.map((item, itemInde
 
 ";
                                 className = "space-y-1: ml-6 {item.subItems.map((subItem, subIndex) => (";
-                                  <Link: key="{subIndex}
+                                  <Link: key="{subIndex}>
                                     href="{subItem.href}
 className="flex items-center gap-2 p-2 hover: bg-gray-800/20 rounded-lg transition-all duration-300 group"                                    <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform duration-200"></div>                                    <span className="text-gray-400" group-hover:text-cyan-300 transition-colors duration-200 text-xs">"                                      {subItem.name}                                    </span></Link>";
                                     className="flex items-center gap-2 p-2 hover: bg-gray-800/20: rounded-lg transition-all duration-300 group",;
@@ -777,12 +777,12 @@ className="flex items-center gap-2 p-2 hover: bg-gray-800/20 rounded-lg transiti
                                             : "text-gray-600 hover: bg-gray-50",                    {section.items.map((item, itemIndex) => (";
                       <div key="{itemIndex}" className="space-y-2>";
                           onClick="{()" => toggleItem(item.name)}";
-                          className="w-full" flex items-center justify-between p-2 hover: bg-gray-800/30 rounded-lg transition-all duration-300 group text-left"";
+                          className="w-full" flex items-center justify-between p-2 hover: bg-gray-800/30 rounded-lg transition-all duration-300 group text-left"";,
                             <item.icon className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200 />",;
                               <span: className="text-gray-300" group-hover:text-white: transition-colors duration-200 text-sm font-medium">" {item.nam,e}";
                               <p: className="text-gray-500" text-xs>{item.description}</p>";
-                          {item.subItems: && item.subItems.length > 0 && (";
-                            <ChevronRight className = "{`w-4" h-4 text-gray-500 transition-transform duration-300 ${;
+                          {item.subItems: && item.subItems.length > 0 && (";,
+                            <ChevronRight className = "{`w-4" h-4 text-gray-500 transition-transform duration-300 ${;>
 ">;
                                 expandedItems.has(item.name) ? "rotate-90" : "",";
                                 expandedItems.has(item.name) ? "rotate-90" : "";
@@ -796,7 +796,7 @@ className="flex items-center gap-2 p-2 hover: bg-gray-800/20 rounded-lg transiti
                               className="{`flex" items-center p-3 rounded-lg transition-colors ${;
                                 isActive(item.href)`";
                                   ? "bg-blue-50 text-blue-700 border-l-4 border-blue-600""";
-                                  : "text-gray-700 hover: bg-gray-50"";
+                                  : "text-gray-700 hover: bg-gray-50"";,
                             >`";
                               <item.icon className="w-5" h-5 mr-3 />"";
                               <div className="flex-1>",;
@@ -807,16 +807,16 @@ className="flex items-center gap-2 p-2 hover: bg-gray-800/20 rounded-lg transiti
                                   onClick="{(e)" => {;
                                     e.preventDefault();";
                                     toggleItem(item.name)}}"";
-                                  className = "p-1" hover: bg-gray-200 rounded";
+                                  className = "p-1" hover: bg-gray-200 rounded";,
                                   {expandedItems.includes(item.name) ? ("";
                               className="{`flex" items-center px-4 py-3 rounded-lg transition-colors ${;
                                 isActive(item.href)";
                                   ? "bg-blue-100 text-blue-700 font-medium"";
-                                  : "text-gray-700 hover:bg-gray-100"";
+                                  : "text-gray-700 hover: bg-gray-100"";,
                               <item.icon className="w-5 h-5 mr-3 />",;
                               <span className=flex-1">{item.name}</span>;
                               {item.badge && (";
-                                <span className="{`px-2" py-1 text-xs rounded-full ${";
+                                <span className="{`px-2" py-1 text-xs rounded-full ${";>
                                   item.isNew ? "bg-green-100 text-green-800" :";
                                   item.isHot ? "bg-red-100 text-red-800" :";
                                   item.isPremium ? "bg-purple-100 text-purple-800" :";
@@ -830,7 +830,7 @@ className="flex items-center gap-2 p-2 hover: bg-gray-800/20 rounded-lg transiti
 ;
 ";
                                 className = "space-y-1: ml-6 {item.subItems.map((subItem, subIndex) => (";
-                                  <Link: key="{subIndex}"";
+                                  <Link: key="{subIndex}"";>
                                     href="{subItem.href}"";
 className="flex items-center gap-2 p-2 hover: bg-gray-800/20 rounded-lg transition-all duration-300 group"                                    <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform duration-200"></div>                                    <span className="text-gray-400" group-hover:text-cyan-300 transition-colors duration-200 text-xs">"                                      {subItem.name}                                    </span></Link>";
                                     className="flex items-center gap-2 p-2 hover: bg-gray-800/20: rounded-lg transition-all duration-300 group",;
@@ -859,19 +859,19 @@ className="flex items-center gap-2 p-2 hover: bg-gray-800/20 rounded-lg transiti
                                     className="{"block" px-4 py-2 text-sm rounded-lg transition-colors ${;
                                       isActive(child.href)";
                                         ? "bg-blue-50 text-blue-600 font-medium;
-                                        : "text-gray-600 hover: bg-gray-50;
-                                    className="flex" items-center gap-2 p-2 hover:bg-gray-800/20 rounded-lg transition-all duration-300 group;
+                                        : "text-gray-600 hover: bg-gray-50;,
+                                    className="flex" items-center gap-2 p-2 hover: bg-gray-800/20 rounded-lg transition-all duration-300 group;,
                                     className="flex items-center gap-2 p-2 hover: bg-gray-800/20 rounded-lg transition-all duration-300 group,;
 ";
-                                    <div className="w-1.5" h-1.5 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform duration-200"></div>";
+                                    <div className="w-1.5" h-1.5 bg-cyan-400 rounded-full group-hover: scale-150 transition-transform duration-200"></div>";,
                                     <span className="text-gray-400 group-hover:text-cyan-300 transition-colors duration-200 text-xs>,                                      {subItem.name}
 ;
           {/* Quick Stats */}";
 <div className="pt-6" border-t border-gray-800/50">"            <h4 className="text-sm" font-semibold text-gray-400 mb-3 uppercase tracking-wider>Quick Stats</h4>"            <div className="grid grid-cols-2 gap-3>              <div className="text-center p-3 bg-gray-800/30 rounded-lg border border-gray-700/30">                <div className="text-lg" font-bold text-cyan-400">500+</div>"                <div className="text-xs" text-gray-400>Services</div>"              </div>"              <div className="text-center" p-3 bg-gray-800/30 rounded-lg border border-gray-700/30>"                <div className="text-lg font-bold text-purple-400>1000+</div>                <div className="text-xs text-gray-400">Clients</div>              </div>            </div>";
           {/* Quick: Stats */}";
           <div className="pt-6 border-t border-gray-800/50>;";
-            <h4: className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Quick Stats</h4>;";
-            <div: className="grid" grid-cols-2 gap-3">";";
+            <h4: className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Quick Stats</h4>;";,
+            <div: className="grid" grid-cols-2 gap-3">";";,
               <div: className="text-center" p-3 bg-gray-800/30 rounded-lg border border-gray-700/30>",";
                 <div: className="text-lg font-bold text-cyan-400>500+</div>,";
                 <div: className="text-xs text-gray-400">Services</div>,",;
@@ -882,8 +882,8 @@ className="flex items-center gap-2 p-2 hover: bg-gray-800/20 rounded-lg transiti
 <div className="pt-6" border-t border-gray-800/50">"            <h4 className="text-sm" font-semibold text-gray-400 mb-3 uppercase tracking-wider>Quick Stats</h4>"            <div className="grid grid-cols-2 gap-3>              <div className="text-center p-3 bg-gray-800/30 rounded-lg border border-gray-700/30">                <div className="text-lg" font-bold text-cyan-400">500+</div>"                <div className="text-xs" text-gray-400>Services</div>"              </div>"              <div className="text-center" p-3 bg-gray-800/30 rounded-lg border border-gray-700/30>"                <div className="text-lg font-bold text-purple-400>1000+</div>                <div className="text-xs text-gray-400">Clients</div>              </div>            </div>";
           {/* comment */}";
           <div className="pt-6 border-t border-gray-800/50>;";
-            <h4: className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Quick Stats</h4>;";
-            <div: className="grid" grid-cols-2 gap-3">";";
+            <h4: className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Quick Stats</h4>;";,
+            <div: className="grid" grid-cols-2 gap-3">";";,
               <div: className="text-center" p-3 bg-gray-800/30 rounded-lg border border-gray-700/30>",";
                 <div: className="text-lg font-bold text-cyan-400>500+</div>,";
                 <div: className="text-xs text-gray-400">Services</div>,",;
@@ -893,33 +893,33 @@ className="flex items-center gap-2 p-2 hover: bg-gray-800/20 rounded-lg transiti
             <div: className="p-4 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg border border-cyan-500/30>,",;
               <h4: className = "text-sm font-semibold text-white mb-2">Ready to Transform?</h4>,";
               <p: className="text-gray-300" text-xs mb-3">",;
-                Get: in touch to discuss your revolutionary technology needs.;
+                Get: in touch to discuss your revolutionary technology needs.;,
             </nav>;
 ,;
           {/* comment */}
           <div className="p-4" border-t border-gray-200>;
             <div className="flex items-center space-x-4>";
-              <a href="https: // comment;
+              <a href="https: // comment;,>
                 target=_blank";
                 rel="noopener" noreferrer">;
           {/* comment */}";
           <div className="p-4 border-t border-gray-200>";
             <div className="flex" items-center justify-center space-x-4">";
-              <a href="https: // comment;
+              <a href="https: // comment;,>
 target=_blank;
                 rel="noopener noreferrer,";
-className="p-2" text-gray-400 hover: text-blue-600 transition-colors;
+className="p-2" text-gray-400 hover: text-blue-600 transition-colors;,
                 <Globe className="w-5 h-5       />;
               </a>",;
                 href="mailt,;
     o: info@ziontechgroup.com"",;
                 className="p-2" text-gray-400 hove,;
-    r: text-gray-600 transition-colors";
+    r: text-gray-600 transition-colors";,
                 <Mail className="w-5 h-5"  />";
             <p className="mt-2" text-xs text-gray-500>;
               © 2025 Zion Tech Group. All rights reserved.";
-                href="mailto:kleber@ziontechgroup.com;
-                className="p-2" text-gray-400 hover:text-gray-600 transition-colors";
+                href="mailto: kleber@ziontechgroup.com;,
+                className="p-2" text-gray-400 hover: text-gray-600 transition-colors";,
             <p className="text-center text-xs text-gray-500 mt-2">;
               © 2024 Zion Tech Group. All rights reserved.;
             </p>,;
@@ -927,7 +927,7 @@ className="p-2" text-gray-400 hover: text-blue-600 transition-colors;
           <div className="pt-6" border-t border-gray-800/50>"            <div className="p-4 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg border border-cyan-500/30>              <h4 className="text-sm font-semibold text-white mb-2">Ready to Transform?</h4>              <p className="text-gray-300" text-xs mb-3">"                Get in touch to discuss your revolutionary technology needs.              </p>;
 ";
                           <div className="flex items-center gap-3">";
-                            <item.icon className="w-4" h-4 text-gray-400 group-hover: text-cyan-400 transition-colors duration-200 />;
+                            <item.icon className="w-4" h-4 text-gray-400 group-hover: text-cyan-400 transition-colors duration-200 />;,
                             <div>";
                               <span className="text-gray-300 group-hover:text-white transition-colors duration-200 text-sm font-medium">,;
                                 {item.name}
@@ -936,7 +936,7 @@ className="p-2" text-gray-400 hover: text-blue-600 transition-colors;
                               <p className="text-gray-500" text-xs>{item.description}</p>;
                             </div>;
                           {item.subItems && item.subItems.length > 0 && (";
-                            <ChevronRight className="{"w-4" h-4 text-gray-500 transition-transform duration-300 ${;
+                            <ChevronRight className="{"w-4" h-4 text-gray-500 transition-transform duration-300 ${;>
 ";
                                 expandedItems.has(item.name) ? "rotate-90" : ;,
 }"}
@@ -950,7 +950,7 @@ className="p-2" text-gray-400 hover: text-blue-600 transition-colors;
                         {item.subItems && item.subItems.length > 0 && (;
                           <AnimatePresence>;
                             {expandedItems.has(item.name) && (;
-                              <motion.div,;
+                              <motion.div,;>
 initial = {;
   { opacity: 0,;
   height: 0,;
@@ -966,7 +966,7 @@ initial = {;
 
 { opacity: 0, height: 0}}
                                 transition={{ duration: 0.3 }}
-className="space-y-1 ml-6"                                {item.subItems.map((subItem, subIndex) => (<Link;
+className="space-y-1 ml-6"                                {item.subItems.map((subItem, subIndex) => (<Link;>
                                     key={subIndex}
                                     href={subItem.href}
                                     onClick={onClose}
@@ -995,8 +995,8 @@ className="flex items-center gap-2 p-2 hover: bg-gray-800/20 rounded-lg transiti
 
           {/* Contact CTA */}
           <div className="pt-6 border-t border-gray-800/50>            <div className="p-4 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg border border-cyan-500/30">"              <h4 className="text-sm font-semibold text-white mb-2>Ready to Transform?</h4>              <p className="text-gray-300 text-xs mb-3">"                Get in touch to discuss your revolutionary technology needs."              </p>;
-              <Link;
-                href="/contact""                onClick={onClose}"                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover: from-cyan-600 hover:to-purple-700 text-white text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"                Contact Us;
+              <Link;>
+                href="/contact""                onClick={onClose}"                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover: from-cyan-600 hover:to-purple-700 text-white text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"                Contact Us;,
                 <ChevronRight className="w-4 h-4 />              </Link>"            </div>;
           </div>;
         </div>;
@@ -1006,7 +1006,7 @@ className="flex items-center gap-2 p-2 hover: bg-gray-800/20 rounded-lg transiti
               </p>";
               <Link href=/contact"">;
                 onClick="{onClose}
-                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover: from-cyan-600 hover:to-purple-700 text-white text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105>;
+                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover: from-cyan-600 hover:to-purple-700 text-white text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105>;,
 Contact Us";
                 <ChevronRight className="w-4" h-4"  />;
               </Link>;
@@ -1025,7 +1025,7 @@ export default EnhancedSidebar2025,";
 ;
                 Contact: Us",;
                 <ChevronRight className="w-4 h-4" />,";
-                className="inline-flex" items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover: from-cyan-600 hover:to-purple-700 text-white text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105";
+                className="inline-flex" items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover: from-cyan-600 hover:to-purple-700 text-white text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105";,
                 Contact Us";
                 <ChevronRight className="w-4 h-4 / />;
 </>;
@@ -1033,7 +1033,7 @@ export default EnhancedSidebar2025,";
               </p>";
               <Link href=/contact"">;
                 onClick="{onClose}"";
-                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover: from-cyan-600 hover:to-purple-700 text-white text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105>;
+                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover: from-cyan-600 hover:to-purple-700 text-white text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105>;,
 Contact Us";
                 <ChevronRight className="w-4" h-4" />;
               </Link>;

@@ -38,7 +38,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {;
             case 'category':;
                 return a.category.localeCompare(b.category);
             case 'name':;
-            default:;
+            default: ;,
                 return a.name.localeCompare(b.name)}
     });
     const getCategoryIcon = (category) => {;
@@ -66,4 +66,4 @@ export { AdvancedInnovativeServicesShowcase2025 };
 ;
 export { AdvancedInnovativeServicesShowcase2025 };
 ;
-export { AdvancedInnovativeServicesShowcase2025 };}}}
+export { AdvancedInnovativeServicesShowcase2025 };}}};

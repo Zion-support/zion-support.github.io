@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Phone, Mail, MessageCircle, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 ;
-const FloatingContactWidget: React.FC = () => {;
+const FloatingContactWidget: React.FC = () => {;,
   const [isOpen, setIsOpen] = useState(false);
 ;
   const contactOptions = [;
@@ -29,8 +29,8 @@ const FloatingContactWidget: React.FC = () => {;
   return (;
     <>;
       {/* Floating Contact Button */}
-      <motion.button;
-        className="fixed bottom-6 right-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50";
+      <motion.button;>
+        className="fixed bottom-6 right-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-lg hover: shadow-xl transition-all duration-300 z-50";,
         onClick={() => setIsOpen(!isOpen)}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
@@ -40,7 +40,7 @@ const FloatingContactWidget: React.FC = () => {;
       >;
         <AnimatePresence mode="wait">;
           {isOpen ? (;
-            <motion.div;
+            <motion.div;>
               key="close";
               initial={{ rotate: -90, opacity: 0 }}
               animate={{ rotate: 0, opacity: 1 }}
@@ -50,7 +50,7 @@ const FloatingContactWidget: React.FC = () => {;
               <X className="w-6 h-6" />;
             </motion.div>;
           ) : (;
-            <motion.div;
+            <motion.div;>
               key="contact";
               initial={{ rotate: 90, opacity: 0 }}
               animate={{ rotate: 0, opacity: 1 }}
@@ -66,7 +66,7 @@ const FloatingContactWidget: React.FC = () => {;
       {/* Contact Options Panel */}
       <AnimatePresence>;
         {isOpen && (;
-          <motion.div;
+          <motion.div;>
             className="fixed bottom-24 right-6 bg-white rounded-2xl shadow-2xl p-6 z-50 min-w-[280px]";
             initial={{ opacity: 0, y: 20, scale: 0.8 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -80,15 +80,15 @@ const FloatingContactWidget: React.FC = () => {;
             ;
             <div className="space-y-3">;
               {contactOptions.map((option, index) => (;
-                <motion.a;
+                <motion.a;>
                   key={option.label}
                   href={option.action}
-                  className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors group";
+                  className="flex items-center p-3 rounded-lg hover: bg-gray-50 transition-colors group";,
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
                 >;
-                  <div className="flex items-center justify-center w-10 h-10 bg-blue-100 rounded-full text-blue-600 group-hover:bg-blue-200 transition-colors">;
+                  <div className="flex items-center justify-center w-10 h-10 bg-blue-100 rounded-full text-blue-600 group-hover: bg-blue-200 transition-colors">;,
                     {option.icon}
                   </div>;
                   <div className="ml-3 flex-1">;
@@ -101,8 +101,8 @@ const FloatingContactWidget: React.FC = () => {;
 
             <div className="mt-4 pt-4 border-t border-gray-200">;
               <div className="text-xs text-gray-500 text-center">;
-                <div className="font-medium">Business Hours:</div>;
-                <div>Mon-Fri: 9AM-6PM EST</div>;
+                <div className="font-medium">Business Hours: </div>;,
+                <div>Mon-Fri: 9AM-6PM EST</div>;,
                 <div>24/7 Emergency Support</div>;
               </div>;
             </div>;
@@ -113,7 +113,7 @@ const FloatingContactWidget: React.FC = () => {;
       {/* Backdrop */}
       <AnimatePresence>;
         {isOpen && (;
-          <motion.div;
+          <motion.div;>
             className="fixed inset-0 bg-black bg-opacity-20 z-40";
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

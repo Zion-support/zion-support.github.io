@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<ListingScoreCard  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<ListingScoreCard  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import ListingScoreCard from &apos;./ListingScoreCard;
 describe(&apos;ListingScoreCard&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;ListingScoreCard&apos, () => {;
     render();,
 }
     // comment;
-    render(<ListingScoreCard / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<ListingScoreCard / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

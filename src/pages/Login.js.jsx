@@ -2,7 +2,7 @@ import React, { useState } from 'react';''';
 import { SEO } from '@/components/SEO';''';
 import { GradientHeading } from '@/components/GradientHeading';''';
 import { Button } from '@/components/ui/button';
-export default function Login() {}
+export default function Login() {};
   const { isAuthenticated, user, isLoading } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
@@ -42,9 +42,9 @@ export default function Login() {}
     );,
 }
 ;
-  // Optional: Render a loading indicator while isLoading is true;
+  // Optional: Render a loading indicator while isLoading is true;,
   if (isLoading) {}
-    return <div className="p-4 text-center text-foreground">Loading...</div>; // Or a proper loading spinner component;,
+    return <div className="p-4 text-center text-foreground">Loading...</div>; // Or a proper loading spinner component;,";
 }
 ;
   // If authenticated and isLoading is false, the useEffect above should have navigated.;

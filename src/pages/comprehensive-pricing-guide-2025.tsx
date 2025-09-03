@@ -52,45 +52,45 @@ import {;
 } from 'lucide-react';
 ;
 interface PricingTier {;
-  name: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
+  name: string;,
+  price: string;,
+  period: string;,
+  description: string;,
+  features: string[];,
   popular?: boolean;
   savings?: string;
   marketPrice?: string;,
 }
 ;
 interface ServiceCategory {;
-  id: string;
-  name: string;
-  description: string;
-  icon: React.ComponentType<any>;
-  services: Array<{;
-    name: string;
-    description: string;
-    pricingTiers: PricingTier[];
-    marketComparison: string;
-    roi: string;
+  id: string;,
+  name: string;,
+  description: string;,
+  icon: React.ComponentType<any>;,
+  services: Array<{;,
+    name: string;,
+    description: string;,
+    pricingTiers: PricingTier[];,
+    marketComparison: string;,
+    roi: string;,
     implementationTime: string;,
 }>;,
 }
 ;
-export default function ComprehensivePricingGuide2025() {;
+export default function ComprehensivePricingGuide2025(): any {;
   const [selectedCategory, setSelectedCategory] = useState<string>('ai-saas');
 ;
-  const serviceCategories: ServiceCategory[] = [;
+  const serviceCategories: ServiceCategory[] = [;,
     {;
       id: 'ai-saas',;
       name: 'AI-Powered SaaS Solutions',;
       description: 'Intelligent software solutions that leverage artificial intelligence to automate and optimize business processes',;
       icon: Brain,;
-      services: [;
+      services: [;,
         {;
           name: 'AI Sales Copilot Pro',;
           description: 'Intelligent sales automation platform with AI-powered lead scoring and follow-up automation',;
-          pricingTiers: [;
+          pricingTiers: [;,
             {;
               name: 'Starter',;
               price: '$299',;
@@ -127,7 +127,7 @@ export default function ComprehensivePricingGuide2025() {;
         {;
           name: 'AI Business Intelligence Suite',;
           description: 'Advanced analytics platform with predictive insights and custom dashboards',;
-          pricingTiers: [;
+          pricingTiers: [;,
             {;
               name: 'Basic',;
               price: '$499',;
@@ -168,11 +168,11 @@ export default function ComprehensivePricingGuide2025() {;
       name: 'Cloud & DevOps Solutions',;
       description: 'Scalable cloud infrastructure and DevOps automation services',;
       icon: Cloud,;
-      services: [;
+      services: [;,
         {;
           name: 'Cloud FinOps Optimizer',;
           description: 'Comprehensive cloud cost management and optimization platform',;
-          pricingTiers: [;
+          pricingTiers: [;,
             {;
               name: 'Starter',;
               price: '$199',;
@@ -213,11 +213,11 @@ export default function ComprehensivePricingGuide2025() {;
       name: 'Cybersecurity & Compliance',;
       description: 'Advanced security solutions and compliance management platforms',;
       icon: Shield,;
-      services: [;
+      services: [;,
         {;
           name: 'AI Compliance Assistant',;
           description: 'Automated compliance monitoring and reporting platform',;
-          pricingTiers: [;
+          pricingTiers: [;,
             {;
               name: 'Basic',;
               price: '$399',;
@@ -258,11 +258,11 @@ export default function ComprehensivePricingGuide2025() {;
       name: 'Business Process Automation',;
       description: 'Streamlined solutions for optimizing core business operations',;
       icon: Building,;
-      services: [;
+      services: [;,
         {;
           name: 'AI Project Management Platform',;
           description: 'Smart project management with AI workflow optimization',;
-          pricingTiers: [;
+          pricingTiers: [;,
             {;
               name: 'Team',;
               price: '$299',;
@@ -306,38 +306,38 @@ export default function ComprehensivePricingGuide2025() {;
     <>;
       <Helmet>;
         <title>Comprehensive Pricing Guide 2025 - Zion Tech Group</title>;
-        <meta name="description" content="Get detailed pricing information for our AI-powered micro SAAS services, IT solutions, and technology services. Compare our competitive rates with market prices." />;
-        <meta name="keywords" content="pricing, AI services pricing, micro SAAS pricing, IT services cost, Zion Tech Group pricing" />;
-        <link rel="canonical" href="https://ziontechgroup.com/comprehensive-pricing-guide-2025" />;
+        <meta name="description" content="Get detailed pricing information for our AI-powered micro SAAS services, IT solutions, and technology services. Compare our competitive rates with market prices." />;";
+        <meta name="keywords" content="pricing, AI services pricing, micro SAAS pricing, IT services cost, Zion Tech Group pricing" />;";
+        <link rel="canonical" href="https: //ziontechgroup.com/comprehensive-pricing-guide-2025" />;";,
       </Helmet>;
 
-      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-darker">;
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-darker">;";
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
-          <div className="max-w-7xl mx-auto text-center">;
-            <motion.div;
+        <section className="relative py-20 px-4 sm: px-6 lg:px-8">;";,
+          <div className="max-w-7xl mx-auto text-center">;";
+            <motion.div;>
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >;
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
+              <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">;";,
                 Comprehensive Pricing Guide;
-                <span className="text-zion-cyan"> 2025</span>;
+                <span className="text-zion-cyan"> 2025</span>;";
               </h1>;
-              <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">;
+              <p className="text-xl md: text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">;";,
                 Transparent pricing for our AI-powered micro SAAS services and IT solutions. ;
                 Save up to 70% compared to market rates while getting superior technology and support.;
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link;
-                  to="/contact";
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105">;
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">;";,
+                <Link;>
+                  to="/contact";";
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover: from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105">;";,
                   Get Custom Quote;
-                  <ArrowRight className="ml-2 w-5 h-5" />;
+                  <ArrowRight className="ml-2 w-5 h-5" />;";
                 </Link>;
-                <a;
-                  href="tel:+13024640950";
-                  className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">;
+                <a;>
+                  href="tel: +13024640950";";,
+                  className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover: bg-zion-cyan hover:text-white transition-all duration-300">;";,
                   Call +1 (302) 464-0950;
                 </a>;
               </div>;
@@ -346,68 +346,68 @@ export default function ComprehensivePricingGuide2025() {;
         </section>;
 
         {/* Value Proposition */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">;
-          <div className="max-w-7xl mx-auto">;
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-              <motion.div;
+        <section className="py-16 px-4 sm: px-6 lg:px-8">;";,
+          <div className="max-w-7xl mx-auto">;";
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">;";,
+              <motion.div;>
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="text-center">;
-                <div className="p-4 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">;
-                  <DollarSign className="w-8 h-8 text-zion-cyan" />;
+                className="text-center">;";
+                <div className="p-4 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">;";
+                  <DollarSign className="w-8 h-8 text-zion-cyan" />;";
                 </div>;
-                <h3 className="text-xl font-bold text-white mb-2">Up to 70% Savings</h3>;
-                <p className="text-zion-slate-light">Our competitive pricing saves you thousands compared to market rates</p>;
+                <h3 className="text-xl font-bold text-white mb-2">Up to 70% Savings</h3>;";
+                <p className="text-zion-slate-light">Our competitive pricing saves you thousands compared to market rates</p>;";
               </motion.div>;
 
-              <motion.div;
+              <motion.div;>
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="text-center">;
-                <div className="p-4 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">;
-                  <Award className="w-8 h-8 text-zion-cyan" />;
+                className="text-center">;";
+                <div className="p-4 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">;";
+                  <Award className="w-8 h-8 text-zion-cyan" />;";
                 </div>;
-                <h3 className="text-xl font-bold text-white mb-2">Superior Technology</h3>;
-                <p className="text-zion-slate-light">Cutting-edge AI and advanced features that outperform competitors</p>;
+                <h3 className="text-xl font-bold text-white mb-2">Superior Technology</h3>;";
+                <p className="text-zion-slate-light">Cutting-edge AI and advanced features that outperform competitors</p>;";
               </motion.div>;
 
-              <motion.div;
+              <motion.div;>
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="text-center">;
-                <div className="p-4 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">;
-                  <Headphones className="w-8 h-8 text-zion-cyan" />;
+                className="text-center">;";
+                <div className="p-4 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">;";
+                  <Headphones className="w-8 h-8 text-zion-cyan" />;";
                 </div>;
-                <h3 className="text-xl font-bold text-white mb-2">Expert Support</h3>;
-                <p className="text-zion-slate-light">Dedicated support team with deep technical expertise</p>;
+                <h3 className="text-xl font-bold text-white mb-2">Expert Support</h3>;";
+                <p className="text-zion-slate-light">Dedicated support team with deep technical expertise</p>;";
               </motion.div>;
             </div>;
           </div>;
         </section>;
 
         {/* Category Navigation */}
-        <section className="py-8 px-4 sm:px-6 lg:px-8">;
-          <div className="max-w-7xl mx-auto">;
-            <div className="flex flex-wrap gap-4 justify-center">;
+        <section className="py-8 px-4 sm: px-6 lg:px-8">;";,
+          <div className="max-w-7xl mx-auto">;";
+            <div className="flex flex-wrap gap-4 justify-center">;";
               {serviceCategories.map((category) => {;
                 const Icon = category.icon;
                 return (;
-                  <button;
+                  <button;>
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
-                    className={`flex items-center gap-2 px-6 py-3 rounded-lg border transition-all duration-300 ${;
+                    className={`flex items-center gap-2 px-6 py-3 rounded-lg border transition-all duration-300 ${;`;
                       selectedCategory === category.id;
                         ? 'border-zion-cyan bg-zion-cyan text-white';
                         : 'border-zion-purple/30 text-zion-slate-light hover:border-zion-cyan hover:text-zion-cyan';,
-}`}
+}`}`;
                   >;
-                    <Icon className="w-5 h-5" />;
+                    <Icon className="w-5 h-5" />;";
                     {category.name}
                   </button>;
                 );,
@@ -417,120 +417,120 @@ export default function ComprehensivePricingGuide2025() {;
         </section>;
 
         {/* Services Pricing */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">;
-          <div className="max-w-7xl mx-auto">;
-            <div className="mb-12 text-center">;
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
+        <section className="py-16 px-4 sm: px-6 lg:px-8">;";,
+          <div className="max-w-7xl mx-auto">;";
+            <div className="mb-12 text-center">;";
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">;";,
                 {selectedCategory.name}
               </h2>;
-              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
+              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;";
                 {selectedCategory.description}
               </p>;
             </div>;
 
-            <div className="space-y-16">;
+            <div className="space-y-16">;";
               {selectedCategory.services.map((service, serviceIndex) => (;
-                <motion.div;
+                <motion.div;>
                   key={service.name}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-zion-slate-dark border border-zion-purple/30 rounded-xl p-8">;
-                  <div className="text-center mb-8">;
-                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">;
+                  className="bg-zion-slate-dark border border-zion-purple/30 rounded-xl p-8">;";
+                  <div className="text-center mb-8">;";
+                    <h3 className="text-2xl md: text-3xl font-bold text-white mb-4">;";,
                       {service.name}
                     </h3>;
-                    <p className="text-zion-slate-light text-lg mb-6">;
+                    <p className="text-zion-slate-light text-lg mb-6">;";
                       {service.description}
                     </p>;
                     ;
                     {/* Service Metrics */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">;
-                      <div className="text-center">;
-                        <div className="text-2xl font-bold text-zion-cyan mb-2">;
+                    <div className="grid grid-cols-1 md: grid-cols-3 gap-6 max-w-2xl mx-auto">;";,
+                      <div className="text-center">;";
+                        <div className="text-2xl font-bold text-zion-cyan mb-2">;";
                           {service.roi}
                         </div>;
-                        <div className="text-sm text-zion-slate-light">ROI</div>;
+                        <div className="text-sm text-zion-slate-light">ROI</div>;";
                       </div>;
-                      <div className="text-center">;
-                        <div className="text-2xl font-bold text-zion-cyan mb-2">;
+                      <div className="text-center">;";
+                        <div className="text-2xl font-bold text-zion-cyan mb-2">;";
                           {service.implementationTime}
                         </div>;
-                        <div className="text-sm text-zion-slate-light">Implementation</div>;
+                        <div className="text-sm text-zion-slate-light">Implementation</div>;";
                       </div>;
-                      <div className="text-center">;
-                        <div className="text-2xl font-bold text-zion-cyan mb-2">;
+                      <div className="text-center">;";
+                        <div className="text-2xl font-bold text-zion-cyan mb-2">;";
                           {service.marketComparison}
                         </div>;
-                        <div className="text-sm text-zion-slate-light">Market Comparison</div>;
+                        <div className="text-sm text-zion-slate-light">Market Comparison</div>;";
                       </div>;
                     </div>;
                   </div>;
 
                   {/* Pricing Tiers */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
+                  <div className="grid grid-cols-1 md: grid-cols-3 gap-6">;";,
                     {service.pricingTiers.map((tier, tierIndex) => (;
-                      <motion.div;
+                      <motion.div;>
                         key={tier.name}
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.3, delay: tierIndex * 0.1 }}
                         viewport={{ once: true }}
-                        className={`relative bg-zion-slate-darker border rounded-xl p-6 ${;
+                        className={`relative bg-zion-slate-darker border rounded-xl p-6 ${;`;
                           tier.popular ;
                             ? 'border-zion-cyan shadow-2xl shadow-zion-cyan/20' ;
                             : 'border-zion-purple/30';,
-}`}
+}`}`;
                       >;
                         {tier.popular && (;
-                          <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">;
-                            <span className="px-4 py-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-sm font-semibold rounded-full">;
+                          <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">;";
+                            <span className="px-4 py-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-sm font-semibold rounded-full">;";
                               Most Popular;
                             </span>;
                           </div>;
                         )}
 ;
-                        <div className="text-center mb-6">;
-                          <h4 className="text-xl font-bold text-white mb-2">{tier.name}</h4>;
-                          <div className="mb-2">;
-                            <span className="text-3xl font-bold text-zion-cyan">{tier.price}</span>;
-                            <span className="text-zion-slate-light">{tier.period}</span>;
+                        <div className="text-center mb-6">;";
+                          <h4 className="text-xl font-bold text-white mb-2">{tier.name}</h4>;";
+                          <div className="mb-2">;";
+                            <span className="text-3xl font-bold text-zion-cyan">{tier.price}</span>;";
+                            <span className="text-zion-slate-light">{tier.period}</span>;";
                           </div>;
-                          <p className="text-zion-slate-light text-sm">{tier.description}</p>;
+                          <p className="text-zion-slate-light text-sm">{tier.description}</p>;";
                         </div>;
 
                         {/* Market Price Comparison */}
                         {tier.marketPrice && (;
-                          <div className="mb-4 p-3 bg-zion-slate-dark rounded-lg">;
-                            <div className="flex items-center justify-between text-sm">;
-                              <span className="text-zion-slate-light">Market Price:</span>;
-                              <span className="text-zion-slate-light line-through">{tier.marketPrice}</span>;
+                          <div className="mb-4 p-3 bg-zion-slate-dark rounded-lg">;";
+                            <div className="flex items-center justify-between text-sm">;";
+                              <span className="text-zion-slate-light">Market Price: </span>;";,
+                              <span className="text-zion-slate-light line-through">{tier.marketPrice}</span>;";
                             </div>;
-                            <div className="text-center mt-2">;
-                              <span className="text-zion-cyan font-semibold">{tier.savings}</span>;
+                            <div className="text-center mt-2">;";
+                              <span className="text-zion-cyan font-semibold">{tier.savings}</span>;";
                             </div>;
                           </div>;
                         )}
 ;
                         {/* Features */}
-                        <ul className="space-y-3 mb-6">;
+                        <ul className="space-y-3 mb-6">;";
                           {tier.features.map((feature, idx) => (;
-                            <li key={idx} className="flex items-center text-sm text-zion-slate-light">;
-                              <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />;
+                            <li key={idx} className="flex items-center text-sm text-zion-slate-light">;";
+                              <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />;";
                               {feature}
                             </li>;
                           ))}
                         </ul>;
 
                         {/* CTA Button */}
-                        <Link;
-                          to="/contact";
-                          className={`w-full text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${;
+                        <Link;>
+                          to="/contact";";
+                          className={`w-full text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${;`;
                             tier.popular;
-                              ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan-light hover:to-zion-blue-light';
+                              ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover: from-zion-cyan-light hover:to-zion-blue-light';,
                               : 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white';,
-}`}
+}`}`;
                         >;
                           Get Started;
                         </Link>;
@@ -544,18 +544,18 @@ export default function ComprehensivePricingGuide2025() {;
         </section>;
 
         {/* Additional Benefits */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">;
-          <div className="max-w-7xl mx-auto">;
-            <div className="text-center mb-12">;
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-zion-slate-dark/50">;";,
+          <div className="max-w-7xl mx-auto">;";
+            <div className="text-center mb-12">;";
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">;";,
                 Why Choose Zion Tech Group?;
               </h2>;
-              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
+              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;";
                 Beyond competitive pricing, we offer unmatched value and expertise;
               </p>;
             </div>;
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">;";,
               {[;
                 {;
                   icon: Timer,;
@@ -580,18 +580,18 @@ export default function ComprehensivePricingGuide2025() {;
               ].map((benefit, index) => {;
                 const Icon = benefit.icon;
                 return (;
-                  <motion.div;
+                  <motion.div;>
                     key={benefit.title}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="text-center">;
-                    <div className="p-4 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">;
-                      <Icon className="w-8 h-8 text-zion-cyan" />;
+                    className="text-center">;";
+                    <div className="p-4 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">;";
+                      <Icon className="w-8 h-8 text-zion-cyan" />;";
                     </div>;
-                    <h3 className="text-lg font-bold text-white mb-2">{benefit.title}</h3>;
-                    <p className="text-zion-slate-light text-sm">{benefit.description}</p>;
+                    <h3 className="text-lg font-bold text-white mb-2">{benefit.title}</h3>;";
+                    <p className="text-zion-slate-light text-sm">{benefit.description}</p>;";
                   </motion.div>;
                 );,
 })}
@@ -600,30 +600,30 @@ export default function ComprehensivePricingGuide2025() {;
         </section>;
 
         {/* Contact Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">;
-          <div className="max-w-4xl mx-auto text-center">;
-            <motion.div;
+        <section className="py-20 px-4 sm: px-6 lg:px-8">;";,
+          <div className="max-w-4xl mx-auto text-center">;";
+            <motion.div;>
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >;
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">;";,
                 Ready to Get Started?;
               </h2>;
-              <p className="text-xl text-zion-slate-light mb-8">;
+              <p className="text-xl text-zion-slate-light mb-8">;";
                 Contact our team for a personalized quote and consultation;
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link;
-                  to="/contact";
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300">;
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">;";,
+                <Link;>
+                  to="/contact";";
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover: from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300">;";,
                   Get Custom Quote;
-                  <ArrowRight className="ml-2 w-5 h-5" />;
+                  <ArrowRight className="ml-2 w-5 h-5" />;";
                 </Link>;
-                <a;
-                  href="tel:+13024640950";
-                  className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">;
+                <a;>
+                  href="tel: +13024640950";";,
+                  className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover: bg-zion-cyan hover:text-white transition-all duration-300">;";,
                   Call +1 (302) 464-0950;
                 </a>;
               </div>;
@@ -633,4 +633,4 @@ export default function ComprehensivePricingGuide2025() {;
       </div>;
     </>;
   );,
-}
+};

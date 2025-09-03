@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 ;
-const SecurityEnhancer: React.FC = () => {;
+const SecurityEnhancer: React.FC = () => {;,
   useEffect(() => {;
     addSecurityHeaders();
     setupSecurityMonitoring();,
@@ -17,13 +17,13 @@ const SecurityEnhancer: React.FC = () => {;
     let suspiciousActivityCount = 0;
     const maxSuspiciousActivities = 10;
 ;
-    const handleSuspiciousActivity = (event: Event) => {;
+    const handleSuspiciousActivity = (event: Event) => {;,
       suspiciousActivityCount++;
       console.warn('Suspicious activity detected:', event.type);
       ;
       if (suspiciousActivityCount > maxSuspiciousActivities) {;
         console.error('Multiple suspicious activities detected.');,
-}
+};
     };
 ;
     document.addEventListener('DOMContentLoaded', () => {;

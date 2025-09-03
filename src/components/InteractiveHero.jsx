@@ -10,7 +10,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
     const [isHovered, setIsHovered] = useState(false);
     const [activeStat, setActiveStat] = useState(0);
     useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -30,10 +30,10 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
     const containerVariants = {;
 
         hidden: { opacity: 0 },;
-        visible: {;
+        visible: {;,
 
             opacity: 1,;
-            transition: {;
+            transition: {;,
 
                 duration: 0.8,;
                 staggerChildren: 0.2;,
@@ -43,15 +43,15 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
   hidden: { opacity: 0,;
   y: 30;,
 },;
-        visible: {;
+        visible: {;,
 
             opacity: 1,;
             y: 0,;
-            transition: {;
+            transition: {;,
 
                 duration: 0.6,;
-                ease: "easeOut";,
+                ease: "easeOut";,";
 };
     const floatingVariants = {;
-'";
-}}}}}
+'";";
+}}}}};

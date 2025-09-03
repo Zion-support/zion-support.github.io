@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';''';
 import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucide-react';
 ;
 const AccessibilityContext = createContext(null);
-export const useAccessibility = () => {}
-";
+export const useAccessibility = () => {};
+";";
 ;';
 import { motion, AnimatePresence } from 'framer - motion';
 ;
@@ -18,25 +18,25 @@ export default function Page() {;,
 
 const AccessibilityContext = createContext (null);,
 }
-    const context = useContext (AccessibilityContext) ";
-    if (!context) {}";
+    const context = useContext (AccessibilityContext) ";";
+    if (!context) {}";";
 
-        throw new Error("useAccessibility must be used within an AccessibilityProvider")}
+        throw new Error("useAccessibility must be used within an AccessibilityProvider")}";
 ;
     return context}
 ;
 // comment;
-export const AccessibilityProvider = ({ children }) => {}
+export const AccessibilityProvider = ({ children }) => {};
 ;
     const [highContrast, setHighContrast] = useState();,
 }
-    const [reducedMotion, setReducedMotion] = useState(false)";
-    const [fontSize, setFontSize] = useState("medium")";
-    const [colorBlindMode, setColorBlindMode] = useState("none");,
+    const [reducedMotion, setReducedMotion] = useState(false)";";
+    const [fontSize, setFontSize] = useState("medium")";";
+    const [colorBlindMode, setColorBlindMode] = useState("none");,";
 }
     // comment;
-    useEffect(() => {}";
-        const savedSettings = localStorage.getItem("zion-accessibility-settings");,
+    useEffect(() => {}";";
+        const savedSettings = localStorage.getItem("zion-accessibility-settings");,";
 }
         if (savedSettings) {}
 ;
@@ -44,28 +44,28 @@ export const AccessibilityProvider = ({ children }) => {}
 }
             setHighContrast();,
 }
-            setReducedMotion(settings.reducedMotion || false)",;
-            setFontSize(settings.fontSize || "medium")",;
-            setColorBlindMode(settings.colorBlindMode || "none")}
+            setReducedMotion(settings.reducedMotion || false)",;";
+            setFontSize(settings.fontSize || "medium")",;";
+            setColorBlindMode(settings.colorBlindMode || "none")}";
 ;,
 }, []);,
 }
     // comment;
-        const settings = {}
+        const settings = {};
 ;
-  highContrast,";
-            reducedMotion,";
+  highContrast,";";
+            reducedMotion,";";
             fontSize,;
   highContrast,;
-            reducedMotion,";
-            fontSize,""";
- const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  } return context }";;import React { useState, useEffect, createContext, useContext } from "react"";";
- const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  } return context }";;import React { useState, useEffect, createContext, useContext } from "react";
- const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  } return context };import React { useState, useEffect, createContext, useContext } from "react";
- const AccessibilityContext = createContext (null)  export const useAccessibility = () => {const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  } return context }";;import React {useState, useEffect, createContext, useContext } from "react"";
- const AccessibilityContext = createContext (null)  export const useAccessibility = () => {} const;const;const context = useContext (AccessibilityContext)  if (!context) { throw new Error (&apos; &apos;useAccessibility must be used within an AccessibilityProvider&apos)  } return context }";&apos;import React { useState, useEffect, createContext, useContext } from &apos;react&apos,;
-&apos,";
- const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  } return context }";;import React { useState, useEffect, createContext, useContext } from "react;
+            reducedMotion,";";
+            fontSize,""";";
+ const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  } return context }";;import React { useState, useEffect, createContext, useContext } from "react"";";";
+ const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  } return context }";;import React { useState, useEffect, createContext, useContext } from "react";";
+ const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  } return context };import React { useState, useEffect, createContext, useContext } from "react";";
+ const AccessibilityContext = createContext (null)  export const useAccessibility = () => {const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  } return context }";;import React {useState, useEffect, createContext, useContext } from "react"";";
+ const AccessibilityContext = createContext (null)  export const useAccessibility = () => {} const;const;const context = useContext (AccessibilityContext)  if (!context) { throw new Error (&apos; &apos;useAccessibility must be used within an AccessibilityProvider&apos)  } return context }";&apos;import React { useState, useEffect, createContext, useContext } from &apos;react&apos,;";
+&apos,";";
+ const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  } return context }";;import React { useState, useEffect, createContext, useContext } from "react;";
 
- const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  } return context }";import React { useState, useEffect, createContext, useContext }  from 'react,";
-"
+ const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  } return context }";import React { useState, useEffect, createContext, useContext }  from 'react,";";
+";

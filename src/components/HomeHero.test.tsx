@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<HomeHero  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<HomeHero  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import HomeHero from &apos;./HomeHero;
 describe(&apos;HomeHero&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;HomeHero&apos, () => {;
     render();,
 }
     // comment;
-    render(<HomeHero / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<HomeHero / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

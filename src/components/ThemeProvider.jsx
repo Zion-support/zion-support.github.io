@@ -10,7 +10,7 @@ export const ThemeProvider = ({ children }) => {;
   const [theme, setTheme] = React.useState('dark');
 ;
   React.useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -46,3 +46,4 @@ export const ThemeProvider = ({ children }) => {;
 }
   return context;,
 };
+;

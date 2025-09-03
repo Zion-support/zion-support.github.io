@@ -11,7 +11,7 @@ import { ;
   CheckCircle;,
 } from 'lucide-react';
 ;
-const ServicesSection: React.FC = () => {;
+const ServicesSection: React.FC = () => {;,
   const services = [;
     {;
       icon: Brain,;
@@ -68,7 +68,7 @@ const ServicesSection: React.FC = () => {;
       <div className="container mx-auto px-4">;
         {/* Section Header */}
         <div className="text-center mb-16">;
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;,
             Our <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Services</span>;
           </h2>;
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
@@ -77,13 +77,13 @@ const ServicesSection: React.FC = () => {;
         </div>;
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
+        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;,
           {services.map((service, index) => {;
             const IconComponent = service.icon;
             return (;
-              <div;
+              <div;>
                 key={index}
-                className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-2xl">;
+                className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-2xl">;,
                 {/* Icon */}
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;
                   <IconComponent className="w-8 h-8 text-white" />;
@@ -104,11 +104,11 @@ const ServicesSection: React.FC = () => {;
                 </ul>;
 
                 {/* CTA */}
-                <Link;
+                <Link;>
                   href={service.href}
-                  className="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-200 group/link">;
+                  className="inline-flex items-center space-x-2 text-blue-400 hover: text-blue-300 transition-colors duration-200 group/link">;,
                   <span className="font-semibold">Learn More</span>;
-                  <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />;
+                  <ArrowRight className="w-4 h-4 group-hover/link: translate-x-1 transition-transform" />;,
                 </Link>;
               </div>;
             );,
@@ -124,15 +124,15 @@ const ServicesSection: React.FC = () => {;
             <p className="text-gray-300 mb-8 text-lg">;
               Let's discuss how our technology solutions can help you achieve your goals.;
             </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <Link;
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">;,
+              <Link;>
                 href="/contact";
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl">;
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl">;,
                 Get Free Consultation;
               </Link>;
-              <Link;
+              <Link;>
                 href="/services";
-                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-all duration-300">;
+                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white hover:text-blue-900 transition-all duration-300">;,
                 View All Services;
               </Link>;
             </div>;

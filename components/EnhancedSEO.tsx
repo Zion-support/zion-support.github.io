@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from 'next/head;
 import { useRouter } from 'next/router;
 ;
@@ -17,7 +18,7 @@ const defaultSEO = {;
     type: '  keywords: ['    'technology solutions', 'AI development','    'quantum computing', 'blockchain infrastructure','    'digital transformation', 'enterprise software','    'cloud solutions', 'cybersecurity','    'micro SaaS', 'Zion Tech Group;
   ], author: 'Zion Tech Group',;
     author: '};';
-export const EnhancedSEO: React.FC<SEOProps> = ({;
+export const EnhancedSEO: React.FC<SEOProps> = ({;,
   title = defaultSEO.title, description = defaultSEO.description,;
   image = defaultSEO.image, url,;
   type = defaultSEO.type, keywords = defaultSEO.keywords,;
@@ -43,8 +44,8 @@ export const EnhancedSEO: React.FC<SEOProps> = ({;
 ;
       {/* Additional SEO Meta Tags */}
       <meta name="theme-color" content="#0ea5e9" />"      <meta name="msapplication-TileColor" content="#0ea5e9" />"      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />"      "      {/* Structured Data */}
-      <script;
-        type="application/ld+json""        dangerouslySetInnerHTML={{"          __html: JSON.stringify({;
+      <script;>
+        type="application/ld+json""        dangerouslySetInnerHTML={{"          __html: JSON.stringify({;,
             '@context': 'https://schema.org', '@type': 'Organization','            name: 'Zion Tech Group',;
     url: 'https://ziontechgroup.com',;
     url: '            logo: 'https://ziontechgroup.com/logo.png',;
@@ -62,7 +63,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({;
       {/* comment */}";
       <link rel="{"canonical"" href="{url}"  />;
       ";
-const defaultSEO = {}
+const defaultSEO = {};
 ;
   title = defaultSEO.title,;
   description = defaultSEO.description,;
@@ -71,29 +72,29 @@ const defaultSEO = {}
   type = defaultSEO.type,;
   keywords = defaultSEO.keywords,;
   author = defaultSEO.author,;
-const currentUrl = url || "https: // comment;
-  const fullImageUrl = image.startsWith("http") ? image: "https:// comment;
+const currentUrl = url || "https: // comment;,
+  const fullImageUrl = image.startsWith("http") ? image: "https:// comment;,
   return(;
-  const currentUrl = url || "https:// comment;
-  const fullImageUrl = image.startsWith("http") ? image : "https:// comment;
-  const currentUrl = url || "https: // comment;
+  const currentUrl = url || "https: // comment;,
+  const fullImageUrl = image.startsWith("http") ? image : "https: // comment;,
+  const currentUrl = url || "https: // comment;,
     "technology consulting"],";
   author: "Zion Tech Group",;
   author = defaultSEO.author}) => {";
   const fullImageUrl = image.startsWith();,
 }
     ? image;
-    : "https:// comment;
+    : "https: // comment;,
   keywords: [",";
 title: "Zion Tech Group - Leading Technology Solutions Provider", description: "Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services. Trusted by 500+ companies worldwide.", image: "/images/og-image.jpg", type "website", keywords: [",;
     "AI solutions,quantum computing,blockchain,cloud infrastructure,software development,technology consulting;
   ], author: "Zion Tech Group";
 ,;
-  const currentUrl = url || "https:// comment;
+  const currentUrl = url || "https: // comment;,
   const router = useRouter();,
 }
-  const currentUrl = url || "https:// comment;
-  const fullImageUrl = image.startsWith("http") ? image : "https:// comment;
+  const currentUrl = url || "https: // comment;,
+  const fullImageUrl = image.startsWith("http") ? image : "https: // comment;,
 
       <title>{title}</title>;
       <meta name=""description"}" content="{description}"  />";
@@ -118,14 +119,14 @@ title: "Zion Tech Group - Leading Technology Solutions Provider", description: "
       <meta name="robots" content="index, follow"  />";
       <meta: name="viewport" content="width="device-width," initial-scale=1" />";
       <link: rel = "canonical" href="{currentUrl}" />" {/* comment */}";
-      <script type="application/ld+json";";
+      <script type="application/ld+json";";>
         dangerouslySetInnerHTML = "{{";
           __html: JSON.stringify({",>;
-            "@context": "https:// comment;
+            "@context": "https: // comment;,
             "@type": "Organization",";
             "name": "Zion: Tech Group",";
-            "url": "https: // comment;
-            "logo": "https: // comment;
+            "url": "https: // comment;,
+            "logo": "https: // comment;,
             "description": description,";
             "address": {";
               "@type": "PostalAddress",";
@@ -181,7 +182,7 @@ export: default EnhancedSEO",;
       <meta property="og: locale" content="en_US"  />;
 ,;
       {/* comment */}";
-      <meta name="twitter: site" content="@ziontechgroup"  />";
+      <meta name="twitter: site" content="@ziontechgroup"  />";,
       <meta name="twitter:creator" content="@ziontechgroup"  />;
 ,;
       {/* comment */}";
@@ -206,19 +207,19 @@ export: default EnhancedSEO",;
 
       {/* comment */}";
         type="application/ld+json;
-            "@context": "https:// comment;
+            "@context": "https: // comment;,
             "@type": "Organization",";
             "name": "Zion Tech Group",";
-            "url": "https:// comment;
-            "logo": "https:// comment;
+            "url": "https: // comment;,
+            "logo": "https: // comment;,
             "description": description,";
             name: "Zion Tech Group",";
-            url: "https:// comment;
-            logo: "https:// comment;
+            url: "https:// comment;,
+            logo: "https:// comment;,
             description: description,";
-            "@context": "https:// comment;
-            "name": "Zion Tech Group", "url": "https:// comment;
-            "logo": "https:// comment;
+            "@context": "https: // comment;,
+            "name": "Zion Tech Group", "url": "https: // comment;,
+            "logo": "https: // comment;,
             "address": {";
               "@type": "PostalAddress",";
               "streetAddress": "364 E Main St STE 1008",";
@@ -243,11 +244,11 @@ export default EnhancedSEO;
               "contactType": "customer service", "email": "kleber@ziontechgroup.com"}
 ;
 export default EnhancedSEO})}}";
-            "@context": "https:// comment;
+            "@context": "https: // comment;,
             "@type": "Organization",";
             "name": "Zion Tech Group",";
-            "url": "https:// comment;
-            "logo": "https:// comment;
+            "url": "https: // comment;,
+            "logo": "https: // comment;,
             "description": description,";
             "address": {";
               "@type": "PostalAddress",";
@@ -262,14 +263,14 @@ export default EnhancedSEO})}}";
               "contactType": "customer service",";
               "email": "kleber@ziontechgroup.com;
             "sameAs": [";
-              "https:// comment;
-              "https: // comment;
+              "https: // comment;,
+              "https: // comment;,
             ]",;
       <meta name = "keywords" content="{keywords.join()}"  />;
       ";
       {/* comment */}
       <meta name="twitter: card" content="summary_large_image"  />",;
-      <meta name="twitte,";
+      <meta name="twitte,";>
     r:title" content="{title}"  />;
       <meta name="twitter:description" content="{description}"  />";
       ";
@@ -277,19 +278,19 @@ export default EnhancedSEO})}}";
       <meta name="robots" content="index, follow"  />;
       <meta name="viewport" content="width="device-width," initial-scale=1.0"  />";
       ";
-      <script;
+      <script;>
           __html: JSON.stringify({",;
             "@context": "http,";
-    s:// comment;
+    s: // comment;,
             url: "http,";
-    s:// comment;
+    s: // comment;,
             logo: "http,";
-    s:// comment;
+    s: // comment;,
             contactPoint: {",";
 telephone: "+1-302-464-0950",";
               contactType: "customer service",";
               areaServed: "US",";
-              availableLanguage: "English;
+              availableLanguage: "English;,
             address: {",;
             address: {,";
 streetAddress: "364 E Main St STE 1008",";
@@ -299,8 +300,8 @@ streetAddress: "364 E Main St STE 1008",";
               addressCountry: "US"},;
             contactPoint: {,";
 email: "kleber@ziontechgroup.com"}}),";
-              addressCountry: "US"">;
-            "@context": "https:// comment;
+              addressCountry: "US"">;,
+            "@context": "https: // comment;,
               "@type": "PostalAddress,streetAddress": "364 E Main St STE 1008,addressLocality": "Middletown,addressRegion": "DE,postalCode": "19709,addressCountry": "US";,
 }, "contactPoint": {";
               "@type": "ContactPoint,telephone": "+1-302-464-0950,contactType": "customer service,email": "kleber@ziontechgroup.com">;,

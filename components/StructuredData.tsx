@@ -5,7 +5,7 @@ interface StructuredDataProps {;
 ;
 export const StructuredData: React.FC<StructuredDataProps> = ({ data }) => {;
   return (";
-    <script";
+    <script";>
       type = "application/ld+json;
       dangerouslySetInnerHTML="{{" __html: JSON.stringify(data) }}>;
    />;
@@ -17,15 +17,15 @@ export const OrganizationSchema = () => {";
       "@type": "ContactPoint",";
       contactType: "customer service",";
       url: "http,";
-    s:// comment;
+    s: // comment;,
     sameAs: [",;
       "http,";
-    s:// comment;
-      "https:// comment;
+    s: // comment;,
+      "https: // comment;,
     sameAs: [",;
-      "https:// comment;
-      "https: // comment;
-      "https:// comment;
+      "https: // comment;,
+      "https: // comment;,
+      "https: // comment;,
     "foundingDate": "2020",";
     "numberOfEmployees": "50-100",";
     "industry": "Technology Services";,
@@ -44,21 +44,21 @@ export const WebSiteSchema = () => {";
 
 ;,
 }";
-    "@context": "https:// comment;
+    "@context": "https: // comment;,
     "@type": "WebSite",";
-    "@context": "https:// comment;
+    "@context": "https: // comment;,
     name: "Zion Tech Group",";
     url: "http,";
-    s:// comment;
+    s: // comment;,
     description: ",;
       "Leading provider of revolutionary technology solutions, AI services, and cutting-edge innovations.",";
     potentialAction: {",;
       "@type": "SearchAction",";
       target: "http,";
-    s:// comment;
-      target: "https:// comment;
+    s: // comment;,
+      target: "https:// comment;,
       "query-input": "required name=search_term_string",";
-      target: "https:// comment;
+      target: "https:// comment;,
 
 ";
   return <StructuredData data="{websiteData}"  />;
@@ -71,7 +71,7 @@ export const ServiceSchema = () => {";
     hasOfferCatalog: {",;
       "@type": "OfferCatalog",";
       name: "AI Services",;
-      itemListElement: [";
+      itemListElement: [";,
         {",;
           "@type": "Offer",";
           itemOffered: {",;

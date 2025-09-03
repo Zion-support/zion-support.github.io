@@ -3,10 +3,10 @@ import { motion  } from 'framer-motion';
 ;
 export default function Page() {;
 ,;
-        visible: {;
+        visible: {;,
 
             opacity: 1,;
-            transition: {;
+            transition: {;,
 
                 staggerChildren: 0.2;,
 };
@@ -15,23 +15,23 @@ export default function Page() {;
   hidden: { y: 30,;
   opacity: 0;,
 },;
-        visible: {;
+        visible: {;,
 
             y: 0,;
             opacity: 1,;
-            transition: {;
+            transition: {;,
 
                 duration: 0.6;,
-};";
-    return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">;
-      {/* Background Elements */}";
-      <div className="absolute inset-0 bg-quantum-gradient opacity-10"></div>;";
-      <div className="absolute inset-0 bg-quantum-mesh"></div>;
+};";";
+    return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">;";
+      {/* Background Elements */}";";
+      <div className="absolute inset-0 bg-quantum-gradient opacity-10"></div>;";";
+      <div className="absolute inset-0 bg-quantum-mesh"></div>;";
 
-      {/* Floating Elements */}";
-      <div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>'";
-      <div className="absolute bottom-20 right-10 w-40 h-40 bg-zion-purple/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>;
-";
+      {/* Floating Elements */}";";
+      <div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>'";";
+      <div className="absolute bottom-20 right-10 w-40 h-40 bg-zion-purple/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>;";
+";";
 
   );
-export default Component}}}}
+export default Component}}}};

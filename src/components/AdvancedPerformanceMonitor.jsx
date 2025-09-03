@@ -82,11 +82,11 @@ const mockPerformanceAlerts = [{;
     type: 'performance',;
     severity: 'medium',;
     title: 'High CPU Usage Detected',;
-    description:';
+    description: ';,
       'CPU usage has exceeded 75% for the last 10 minutes, indicating potential performance degradation.',;
     timestamp: '2024-01-15T10:00:00.000Z',;
     affected: ['Web Server 1',Application Server 2'],;
-    recommendations: [';
+    recommendations: [';,
       'Scale horizontally',Optimize database queries',Review background processes',;
     ],;
     status: 'active'},;
@@ -96,11 +96,11 @@ const mockPerformanceAlerts = [{;
     type: 'scalability',;
     severity: 'high',;
     title: 'Database Connection Pool Near Capacity',;
-    description:';
+    description: ';,
       'Database connection pool is at 89% capacity, approaching the maximum limit.',;
     timestamp: '2024-01-15T09:45:00.000Z',;
     affected: ['Database Cluster',Application Servers'],;
-    recommendations: [';
+    recommendations: [';,
       'Increase connection pool size',Implement connection pooling',Monitor query performance',;
     ],;
     status: 'active'},;
@@ -122,7 +122,7 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {;
   const containerRef = useRef(null) ;
 ;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -154,7 +154,7 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {;
         return 'text-yellow-500';
       case 'normal':';
         return 'text-green-500';
-      default:';
+      default: ';,
         return 'text-gray-500';,
 }
   };
@@ -164,13 +164,13 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {;
     switch(status) {;
 
       case 'critical':;
-        return <AlertTriangle className="w-4 h-4 text-red-500" />;
-      case 'warning':";
-        return <AlertTriangle className="w-4 h-4 text-yellow-500" />;
-      case 'normal':";
-        return <CheckCircle className="w-4 h-4 text-green-500" />;
-      default:";
-        return <Activity className="w-4 h-4 text-gray-500" />;,
+        return <AlertTriangle className="w-4 h-4 text-red-500" />;";
+      case 'warning':";";
+        return <AlertTriangle className="w-4 h-4 text-yellow-500" />;";
+      case 'normal':";";
+        return <CheckCircle className="w-4 h-4 text-green-500" />;";
+      default: ";";,
+        return <Activity className="w-4 h-4 text-gray-500" />;,";
 }
   };
 ;
@@ -178,16 +178,16 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {;
 
     switch(trend) {;
 
-      case 'up':";
-        return <TrendingUp className="w-4 h-4 text-red-500" />;
+      case 'up':";";
+        return <TrendingUp className="w-4 h-4 text-red-500" />;";
       case 'down':;
-        return (";
-          <TrendingUp className="w-4 h-4 text-green-500 transform rotate-180" />;
+        return (";";
+          <TrendingUp className="w-4 h-4 text-green-500 transform rotate-180" />;";
         );
-      case 'stable':";
-        return <BarChart3 className="w-4 h-4 text-blue-500" />;
-      default:";
-        return <Activity className="w-4 h-4 text-gray-500" />;,
+      case 'stable':";";
+        return <BarChart3 className="w-4 h-4 text-blue-500" />;";
+      default: ";";,
+        return <Activity className="w-4 h-4 text-gray-500" />;,";
 }
   };
 ;
@@ -195,102 +195,102 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {;
 ;
   if(isMinimized) {;
 
-    return (";
-      <div className="fixed bottom-4 right-4 z-50">;
-        <button;
-          onClick={() => setIsMinimized(false)}";
-          className="bg-zion-blue text-white p-3 rounded-full shadow-lg hover:bg-zion-blue/80 transition-all duration-300">";
-          <Maximize2 className="w-5 h-5" />;
+    return (";";
+      <div className="fixed bottom-4 right-4 z-50">;";
+        <button;>
+          onClick={() => setIsMinimized(false)}";";
+          className="bg-zion-blue text-white p-3 rounded-full shadow-lg hover: bg-zion-blue/80 transition-all duration-300">";";,
+          <Maximize2 className="w-5 h-5" />;";
         </button>;
       </div>) ;,
 }
 ;
   return ();
-    <div;
+    <div;>
       ref={containerRef}
-      className={`fixed bottom-4 right-4 z-50 bg-white dark:bg-zion-slate-dark rounded-lg shadow-2xl border border-zion-slate-light/20 transition-all duration-300 ${isExpanded ? 'w-96 h-96' : 'w-80 h-64'`;,
-}`}
+      className={`fixed bottom-4 right-4 z-50 bg-white dark:bg-zion-slate-dark rounded-lg shadow-2xl border border-zion-slate-light/20 transition-all duration-300 ${isExpanded ? 'w-96 h-96' : 'w-80 h-64'`;,`;
+}`}`;
     >;
-      {/* Header */}";
-      <div className="flex items-center justify-between p-4 border-b border-zion-slate-light/20">";
-        <div className="flex items-center space-x-2">";
-          <Activity className="w-5 h-5 text-zion-cyan" />";
-          <h3 className="font-semibold text-zion-slate-dark dark:text-white">;
+      {/* Header */}";";
+      <div className="flex items-center justify-between p-4 border-b border-zion-slate-light/20">";";
+        <div className="flex items-center space-x-2">";";
+          <Activity className="w-5 h-5 text-zion-cyan" />";";
+          <h3 className="font-semibold text-zion-slate-dark dark: text-white">;";,
             Performance Monitor;
           </h3>;
-          <div`;
-            className={`w-2 h-2 rounded-full ${systemHealth === 'good'';
+          <div`;`;>
+            className={`w-2 h-2 rounded-full ${systemHealth === 'good'';`;
                 ? 'bg-green-500'';
                 : systemHealth === 'warning'';
                   ? 'bg-yellow-500'';
-                  : 'bg-red-500'`;,
-}`}
+                  : 'bg-red-500'`;,`;
+}`}`;
           />;
-        </div>";
-        <div className="flex items-center space-x-2">;
-          <button;
-            onClick={() => setShowAlerts(!showAlerts)}";
-            className="p-1 hover:bg-zion-slate-light/20 rounded transition-colors">;
-            <AlertTriangle'`;
-              className={`w-4 h-4 ${showAlerts ? 'text-yellow-500' : 'text-gray-400'}`}
+        </div>";";
+        <div className="flex items-center space-x-2">;";
+          <button;>
+            onClick={() => setShowAlerts(!showAlerts)}";";
+            className="p-1 hover: bg-zion-slate-light/20 rounded transition-colors">;";,
+            <AlertTriangle'`;`;>
+              className={`w-4 h-4 ${showAlerts ? 'text-yellow-500' : 'text-gray-400'}`}`;
             />;
           </button>;
-          <button;
+          <button;>
             onClick={refreshMetrics}
-            disabled={isRefreshing}";
-            className="p-1 hover:bg-zion-slate-light/20 rounded transition-colors disabled:opacity-50">;
-            <RefreshCw'`;
-              className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`}
+            disabled={isRefreshing}";";
+            className="p-1 hover: bg-zion-slate-light/20 rounded transition-colors disabled:opacity-50">;";,
+            <RefreshCw'`;`;>
+              className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`}`;
             />;
           </button>;
-          <button;
-            onClick={() => setIsExpanded(!isExpanded)}";
-            className="p-1 hover:bg-zion-slate-light/20 rounded transition-colors">;
-            {isExpanded ? (";
-              <Minimize2 className="w-4 h-4" />;
-            ) : (";
-              <Maximize2 className="w-4 h-4" />;
+          <button;>
+            onClick={() => setIsExpanded(!isExpanded)}";";
+            className="p-1 hover: bg-zion-slate-light/20 rounded transition-colors">;";,
+            {isExpanded ? (";";
+              <Minimize2 className="w-4 h-4" />;";
+            ) : (";";
+              <Maximize2 className="w-4 h-4" />;";
             )}
           </button>;
-          <button;
-            onClick={() => setIsMinimized(true)}";
-            className="p-1 hover:bg-zion-slate-light/20 rounded transition-colors">";
-            <X className="w-4 h-4" />;
+          <button;>
+            onClick={() => setIsMinimized(true)}";";
+            className="p-1 hover: bg-zion-slate-light/20 rounded transition-colors">";";,
+            <X className="w-4 h-4" />;";
           </button>;
         </div>;
       </div>;
 
-      {/* Content */}";
-      <div className="p-4 space-y-4 overflow-y-auto h-full">;
-        {/* Performance Score */}";
-        <div className="text-center">";
-          <div className="text-2xl font-bold text-zion-cyan">;
+      {/* Content */}";";
+      <div className="p-4 space-y-4 overflow-y-auto h-full">;";
+        {/* Performance Score */}";";
+        <div className="text-center">";";
+          <div className="text-2xl font-bold text-zion-cyan">;";
             {performanceScore}
-          </div>";
-          <div className="text-sm text-zion-slate-light">Performance Score</div>;
+          </div>";";
+          <div className="text-sm text-zion-slate-light">Performance Score</div>;";
         </div>;
 
-        {/* Key Metrics */}";
-        <div className="grid grid-cols-2 gap-3">;
+        {/* Key Metrics */}";";
+        <div className="grid grid-cols-2 gap-3">;";
           {mockSystemMetrics.slice(0, 4).map(metric => (;
-            <div;
-              key={metric.id}";
-              className="p-3 bg-zion-slate-light/10 rounded-lg cursor-pointer hover:bg-zion-slate-light/20 transition-colors";
+            <div;>
+              key={metric.id}";";
+              className="p-3 bg-zion-slate-light/10 rounded-lg cursor-pointer hover: bg-zion-slate-light/20 transition-colors";";,
               onClick={() => setSelectedMetric(metric)}
-            >";
-              <div className="flex items-center justify-between mb-2">";
-                <span className="text-xs text-zion-slate-light">;
+            >";";
+              <div className="flex items-center justify-between mb-2">";";
+                <span className="text-xs text-zion-slate-light">;";
                   {metric.name}
                 </span>;
                 {getStatusIcon(metric.status)}
-              </div>";
-              <div className="text-lg font-semibold text-zion-slate-dark dark:text-white">;
+              </div>";";
+              <div className="text-lg font-semibold text-zion-slate-dark dark: text-white">;";,
                 {metric.value}
                 {metric.unit}
-              </div>";
-              <div className="flex items-center space-x-1 text-xs">;
+              </div>";";
+              <div className="flex items-center space-x-1 text-xs">;";
                 {getTrendIcon(metric.trend)}
-                <span;
+                <span;>
                   className={;
 
                     metric.change >= 0 ? 'text-red-500' : 'text-green-500';,
@@ -304,37 +304,37 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {;
         </div>;
 
         {/* Alerts */}
-        {showAlerts && mockPerformanceAlerts.length > 0 && (";
-          <div className="space-y-2">";
-            <h4 className="text-sm font-semibold text-zion-slate-dark dark:text-white">;
+        {showAlerts && mockPerformanceAlerts.length > 0 && (";";
+          <div className="space-y-2">";";
+            <h4 className="text-sm font-semibold text-zion-slate-dark dark: text-white">;";,
               Active Alerts;
             </h4>;
             {mockPerformanceAlerts.map(alert => (;
-              <div;
-                key={alert.id}`;
-                className={`p-3 rounded-lg border-l-4 ${alert.severity === 'high'';
-                    ? 'border-red-500 bg-red-50 dark:bg-red-900/20'';
+              <div;>
+                key={alert.id}`;`;
+                className={`p-3 rounded-lg border-l-4 ${alert.severity === 'high'';`;
+                    ? 'border-red-500 bg-red-50 dark: bg-red-900/20'';,
                     : alert.severity === 'medium'';
-                      ? 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20'';
-                      : 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'`;,
-}`}
-              >";
-                <div className="flex items-start justify-between">";
-                  <div className="flex-1">";
-                    <h5 className="text-sm font-semibold text-zion-slate-dark dark:text-white">;
+                      ? 'border-yellow-500 bg-yellow-50 dark: bg-yellow-900/20'';,
+                      : 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'`;,`;
+}`}`;
+              >";";
+                <div className="flex items-start justify-between">";";
+                  <div className="flex-1">";";
+                    <h5 className="text-sm font-semibold text-zion-slate-dark dark: text-white">;";,
                       {alert.title}
-                    </h5>";
-                    <p className="text-xs text-zion-slate-light mt-1">;
+                    </h5>";";
+                    <p className="text-xs text-zion-slate-light mt-1">;";
                       {alert.description}
                     </p>;
                   </div>;
-                  <span`;
-                    className={`text-xs px-2 py-1 rounded-full ${alert.severity === 'high'';
-                        ? 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'';
+                  <span`;`;>
+                    className={`text-xs px-2 py-1 rounded-full ${alert.severity === 'high'';`;
+                        ? 'bg-red-100 text-red-800 dark: bg-red-900 dark:text-red-200'';,
                         : alert.severity === 'medium'';
-                          ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200'';
-                          : 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'`;,
-}`}
+                          ? 'bg-yellow-100 text-yellow-800 dark: bg-yellow-900 dark:text-yellow-200'';,
+                          : 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'`;,`;
+}`}`;
                   >;
                     {alert.severity}
                   </span>;
@@ -343,19 +343,19 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {;
           </div>) }
 ;
         {/* Expanded View */}
-        {isExpanded && (";
-          <div className="space-y-4">";
-            <div className="border-t border-zion-slate-light/20 pt-4">";
-              <h4 className="text-sm font-semibold text-zion-slate-dark dark:text-white mb-3">;
+        {isExpanded && (";";
+          <div className="space-y-4">";";
+            <div className="border-t border-zion-slate-light/20 pt-4">";";
+              <h4 className="text-sm font-semibold text-zion-slate-dark dark: text-white mb-3">;";,
                 System Health Overview;
-              </h4>";
-              <div className="space-y-2">;
+              </h4>";";
+              <div className="space-y-2">;";
                 {mockSystemMetrics.map(metric => (;
-                  <div;
-                    key={metric.id}";
-                    className="flex items-center justify-between text-sm">";
-                    <span className="text-zion-slate-light">{metric.name}</span>";
-                    <div className="flex items-center space-x-2">;
+                  <div;>
+                    key={metric.id}";";
+                    className="flex items-center justify-between text-sm">";";
+                    <span className="text-zion-slate-light">{metric.name}</span>";";
+                    <div className="flex items-center space-x-2">;";
                       <span className={getStatusColor(metric.status)}>;
                         {metric.value}
                         {metric.unit}
@@ -369,14 +369,14 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {;
       </div>;
     </div>) ;,
 }
-const mockScalabilityMetrics = [] export function AdvancedPerformanceMonitor() {const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState("overview") const [selectedCategory, setSelectedCategory] = useState("all") const [timeRange, setTimeRange] = useState("1h") const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const categories = [] const timeRanges = [] const filteredMetrics =" selectedCategory === "all" ? systemMetrics : systemMetrics.filter(metric => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true);,
-}
-const mockScalabilityMetrics = []&apos;&apos; export function AdvancedPerformanceMonitor() {} const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const;const [activeTab, setActiveTab] = useState(&apos;overview&apos)&apos, const [selectedCategory, setSelectedCategory] = useState(&apos;all&apos)&apos, const [timeRange, setTimeRange] = useState(&apos;1h&apos)&apos, const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const;const categories = []&apos, const timeRanges = []&apos; const filteredMetrics =&apos; selectedCategory === &apos;all&apos; ? systemMetrics : systemMetrics.filter(metric => metric.category === selectedCategory)&apos; const refreshData = async () => { setIsRefreshing(true)}
+const mockScalabilityMetrics = [] export function AdvancedPerformanceMonitor() {const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState("overview") const [selectedCategory, setSelectedCategory] = useState("all") const [timeRange, setTimeRange] = useState("1h") const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const categories = [] const timeRanges = [] const filteredMetrics =" selectedCategory === "all" ? systemMetrics : systemMetrics.filter(metric => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true);,";
+};
+const mockScalabilityMetrics = []&apos;&apos; export function AdvancedPerformanceMonitor() {} const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const;const [activeTab, setActiveTab] = useState(&apos;overview&apos)&apos, const [selectedCategory, setSelectedCategory] = useState(&apos;all&apos)&apos, const [timeRange, setTimeRange] = useState(&apos;1h&apos)&apos, const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const;const categories = []&apos, const timeRanges = []&apos; const filteredMetrics =&apos; selectedCategory === &apos;all&apos; ? systemMetrics : systemMetrics.filter(metric => metric.category === selectedCategory)&apos; const refreshData = async () => { setIsRefreshing(true)};
 ;
-const mockScalabilityMetrics = [] export function AdvancedPerformanceMonitor() { const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState("overview") const [selectedCategory, setSelectedCategory] = useState("all") const [timeRange, setTimeRange] = useState("1h") const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const categories = [] const timeRanges = [] const filteredMetrics =" selectedCategory === "all" ? systemMetrics : systemMetrics.filter(metric => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true);,
-}
+const mockScalabilityMetrics = [] export function AdvancedPerformanceMonitor() { const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState("overview") const [selectedCategory, setSelectedCategory] = useState("all") const [timeRange, setTimeRange] = useState("1h") const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const categories = [] const timeRanges = [] const filteredMetrics =" selectedCategory === "all" ? systemMetrics : systemMetrics.filter(metric => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true);,";
+};
 ;,
 }}
 ;
-const mockScalabilityMetrics = [] export function AdvancedPerformanceMonitor() { const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState("overview") const [selectedCategory, setSelectedCategory] = useState("all") const [timeRange, setTimeRange] = useState("1h") const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const categories = [] const timeRanges = [] const filteredMetrics =" selectedCategory === "all' ? systemMetrics : systemMetrics.filter(metric => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true)";
-"}
+const mockScalabilityMetrics = [] export function AdvancedPerformanceMonitor() { const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState("overview") const [selectedCategory, setSelectedCategory] = useState("all") const [timeRange, setTimeRange] = useState("1h") const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const categories = [] const timeRanges = [] const filteredMetrics =" selectedCategory === "all' ? systemMetrics : systemMetrics.filter(metric => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true)";";
+"}";

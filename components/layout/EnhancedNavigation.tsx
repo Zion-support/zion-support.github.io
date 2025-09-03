@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
-const EnhancedNavigation: React.FC = () => {
+const EnhancedNavigation: React.FC = () => {,
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
 
@@ -10,14 +10,14 @@ const EnhancedNavigation: React.FC = () => {
     { name: 'AI Services', href: '/ai-services' },
     { name: 'IT Services', href: '/it-services' },
     { name: 'Micro SaaS', href: '/micro-saas' },
-    { name: 'Additional Services', href: '/additional-services' },
+    { name: 'Additional Services', href: '/additional-services' },;
   ];
 
   const products = [
     { name: 'All Products', href: '/products' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Guides', href: '/guides' },
+    { name: 'Guides', href: '/guides' },;
   ];
 
   return (
@@ -35,15 +35,15 @@ const EnhancedNavigation: React.FC = () => {
         </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg: flex items-center space-x-8">,
                           <Link href="/">
-                <span className="text-gray-600 hover:text-blue-600 transition-colors">Home</span>
+                <span className="text-gray-600 hover: text-blue-600 transition-colors">Home</span>,
               </Link>
             
             {/* Services Dropdown */}
             <div className="relative group">
               <button 
-                className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
+                className="flex items-center text-gray-600 hover: text-blue-600 transition-colors",
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
               >
@@ -60,7 +60,7 @@ const EnhancedNavigation: React.FC = () => {
                     key={service.name}
                     href={service.href}
                   >
-                    <span className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    <span className="block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600 transition-colors">,
                       {service.name}
                     </span>
                   </Link>
@@ -70,17 +70,17 @@ const EnhancedNavigation: React.FC = () => {
 
             {/* Products Dropdown */}
             <div className="relative group">
-              <button className="flex items-center text-gray-600 hover:text-blue-600 transition-colors">
+              <button className="flex items-center text-gray-600 hover: text-blue-600 transition-colors">,
                 Products
                 <ChevronDown className="ml-1 w-4 h-4" />
               </button>
-              <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-xl rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-xl rounded-lg py-2 opacity-0 invisible group-hover: opacity-100 group-hover:visible transition-all duration-200">,
                 {products.map((product) => (
                   <Link
                     key={product.name}
                     href={product.href}
                   >
-                    <span className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    <span className="block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600 transition-colors">,
                       {product.name}
                     </span>
                   </Link>
@@ -88,33 +88,33 @@ const EnhancedNavigation: React.FC = () => {
               </div>
             </div>
 
-            <Link href="/about"><span className="text-gray-600 hover:text-blue-600 transition-colors">
+            <Link href="/about"><span className="text-gray-600 hover: text-blue-600 transition-colors">,
               About
             </span></Link>
             
-            <Link href="/blog"><span className="text-gray-600 hover:text-blue-600 transition-colors">
+            <Link href="/blog"><span className="text-gray-600 hover: text-blue-600 transition-colors">,
               Blog
             </span></Link>
             
-            <Link href="/talent"><span className="text-gray-600 hover:text-blue-600 transition-colors">
+            <Link href="/talent"><span className="text-gray-600 hover: text-blue-600 transition-colors">,
               Careers
             </span></Link>
             
-            <Link href="/contact"><span className="text-gray-600 hover:text-blue-600 transition-colors">
+            <Link href="/contact"><span className="text-gray-600 hover: text-blue-600 transition-colors">,
               Contact
             </span></Link>
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:block">
-            <Link href="/contact"><span className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+          <div className="hidden lg: block">,
+            <Link href="/contact"><span className="bg-blue-600 hover: bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">,
               Get Started
             </span></Link>
           </div>
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden"
+            className="lg: hidden",
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -123,9 +123,9 @@ const EnhancedNavigation: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden py-4 border-t border-gray-200">
+          <div className="lg: hidden py-4 border-t border-gray-200">,
             <div className="space-y-2">
-              <Link href="/"><span className="block py-2 text-gray-600 hover:text-blue-600">
+              <Link href="/"><span className="block py-2 text-gray-600 hover: text-blue-600">,
                 Home
               </span></Link>
               
@@ -136,7 +136,7 @@ const EnhancedNavigation: React.FC = () => {
                     key={service.name}
                     href={service.href}
                   >
-                    <span className="block py-2 pl-4 text-gray-600 hover:text-blue-600">
+                    <span className="block py-2 pl-4 text-gray-600 hover: text-blue-600">,
                       {service.name}
                     </span>
                   </Link>
@@ -150,26 +150,26 @@ const EnhancedNavigation: React.FC = () => {
                     key={product.name}
                     href={product.href}
                   >
-                    <span className="block py-2 pl-4 text-gray-600 hover:text-blue-600">
+                    <span className="block py-2 pl-4 text-gray-600 hover: text-blue-600">,
                       {product.name}
                     </span>
                   </Link>
                 ))}
               </div>
               
-              <Link href="/about"><span className="block py-2 text-gray-600 hover:text-blue-600">
+              <Link href="/about"><span className="block py-2 text-gray-600 hover: text-blue-600">,
                 About
               </span></Link>
               
-              <Link href="/blog"><span className="block py-2 text-gray-600 hover:text-blue-600">
+              <Link href="/blog"><span className="block py-2 text-gray-600 hover: text-blue-600">,
                 Blog
               </span></Link>
               
-              <Link href="/talent"><span className="block py-2 text-gray-600 hover:text-blue-600">
+              <Link href="/talent"><span className="block py-2 text-gray-600 hover: text-blue-600">,
                 Careers
               </span></Link>
               
-              <Link href="/contact"><span className="block py-2 text-gray-600 hover:text-blue-600">
+              <Link href="/contact"><span className="block py-2 text-gray-600 hover: text-blue-600">,
                 Contact
               </span></Link>
               

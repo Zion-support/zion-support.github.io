@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<ScrollToTop  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<ScrollToTop  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import ScrollToTop from &apos;./ScrollToTop;
 describe(&apos;ScrollToTop&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;ScrollToTop&apos, () => {;
     render();,
 }
     // comment;
-    render(<ScrollToTop / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<ScrollToTop / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

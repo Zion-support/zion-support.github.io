@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';''';
 import { Star, CheckCircle, Clock, Users, TrendingUp, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 ;
 ;
-import SEOHead from "../components/SEOHead.jsx";
+import SEOHead from "../components/SEOHead.jsx";";
 const AdvancedServicesShowcase2025 = () => {;
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');    const [sortBy, setSortBy] = useState('name');
@@ -26,8 +26,8 @@ const AdvancedServicesShowcase2025 = () => {;
             case 'category':;
                 return a.category.localeCompare(b.category);
             case 'name':;
-            default:;
-                return a.name.localeCompare(b.name)}
+            default: ;,
+                return a.name.localeCompare(b.name)};
     });
     const getCategoryIcon = (category) => {;
         const icons = {;
@@ -58,4 +58,4 @@ export { AdvancedServicesShowcase2025 };
 ;
 export { AdvancedServicesShowcase2025 };
 ;
-export { AdvancedServicesShowcase2025 };}}}
+export { AdvancedServicesShowcase2025 };}}};

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Shield, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Activity, BarChart3 } from 'lucide-react';
 ;
-export default function AIIncidentResponse() {;
+export default function AIIncidentResponse(): any {;
   const features = [;
     'Automated incident detection and response',;
     'Real-time threat analysis and mitigation',;
@@ -18,42 +18,42 @@ export default function AIIncidentResponse() {;
   ];
 ;
   return (;
-    <div className="min-h-screen bg-white">;
-      <section className="bg-gradient-to-br from-red-600 via-orange-600 to-yellow-600 py-20 text-center">;
-        <div className="max-w-5xl mx-auto px-6">;
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">;
-            <Shield className="w-4 h-4 mr-2" />;
+    <div className="min-h-screen bg-white">;";
+      <section className="bg-gradient-to-br from-red-600 via-orange-600 to-yellow-600 py-20 text-center">;";
+        <div className="max-w-5xl mx-auto px-6">;";
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">;";
+            <Shield className="w-4 h-4 mr-2" />;";
             AI-Powered Incident Response Intelligence;
           </div>;
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Incident Response Platform</h1>;
-          <p className="text-red-100 text-xl">Transform your security operations with AI-powered incident response that detects, analyzes, and mitigates threats in real-time.</p>;
+          <h1 className="text-4xl md: text-6xl font-bold text-white mb-4">AI Incident Response Platform</h1>;";,
+          <p className="text-red-100 text-xl">Transform your security operations with AI-powered incident response that detects, analyzes, and mitigates threats in real-time.</p>;";
         </div>;
       </section>;
 
-      <section className="py-16 max-w-6xl mx-auto px-6">;
-        <div className="grid md:grid-cols-2 gap-10">;
+      <section className="py-16 max-w-6xl mx-auto px-6">;";
+        <div className="grid md: grid-cols-2 gap-10">;";,
           <div>;
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Incident Response Features</h2>;
-            <ul className="space-y-3">;
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Incident Response Features</h2>;";
+            <ul className="space-y-3">;";
               {features.map((f) => (;
-                <li key={f} className="flex items-start">;
-                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />;
-                  <span className="text-gray-700">{f}</span>;
+                <li key={f} className="flex items-start">;";
+                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />;";
+                  <span className="text-gray-700">{f}</span>;";
                 </li>;
               ))}
             </ul>;
-            <div className="mt-6 text-sm text-gray-600">;
+            <div className="mt-6 text-sm text-gray-600">;";
               Built with enterprise-grade security, SOC 2 compliance, and 99.9% uptime SLA.;
             </div>;
           </div>;
-          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Competitive Pricing</h3>;
-            <div className="grid md:grid-cols-3 gap-4">;
+          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;";
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Competitive Pricing</h3>;";
+            <div className="grid md: grid-cols-3 gap-4">;";,
               {tiers.map((t) => (;
-                <div key={t.name} className="rounded-lg p-4 border border-gray-200 hover:border-red-300 transition-colors">;
-                  <div className="text-lg font-semibold mb-1">{t.name}</div>;
-                  <div className="text-2xl font-bold text-red-600 mb-2">{t.price}</div>;
-                  <ul className="text-sm text-gray-600 space-y-1">;
+                <div key={t.name} className="rounded-lg p-4 border border-gray-200 hover: border-red-300 transition-colors">;";,
+                  <div className="text-lg font-semibold mb-1">{t.name}</div>;";
+                  <div className="text-2xl font-bold text-red-600 mb-2">{t.price}</div>;";
+                  <ul className="text-sm text-gray-600 space-y-1">;";
                     {t.details.map((d) => (;
                       <li key={d}>{d}</li>;
                     ))}
@@ -61,12 +61,12 @@ export default function AIIncidentResponse() {;
                 </div>;
               ))}
             </div>;
-            <div className="mt-6 flex flex-wrap gap-3">;
-              <a href="/pricing" className="px-5 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors inline-flex items-center">;
-                View Full Pricing <ArrowRight className="w-4 h-4 ml-2" />;
+            <div className="mt-6 flex flex-wrap gap-3">;";
+              <a href="/pricing" className="px-5 py-3 bg-red-600 text-white rounded-lg hover: bg-red-700 transition-colors inline-flex items-center">;";,
+                View Full Pricing <ArrowRight className="w-4 h-4 ml-2" />;";
               </a>;
-              <a href="https://calendly.com/zion-tech-group" className="px-5 py-3 border border-red-600 text-red-600 rounded-lg hover:bg-red-50 transition-colors inline-flex items-center">;
-                Schedule Demo <Phone className="w-4 h-4 ml-2" />;
+              <a href="https: //calendly.com/zion-tech-group" className="px-5 py-3 border border-red-600 text-red-600 rounded-lg hover:bg-red-50 transition-colors inline-flex items-center">;";,
+                Schedule Demo <Phone className="w-4 h-4 ml-2" />;";
               </a>;
             </div>;
           </div>;
@@ -74,4 +74,4 @@ export default function AIIncidentResponse() {;
       </section>;
     </div>;
   );,
-}
+};

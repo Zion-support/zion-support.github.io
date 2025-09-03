@@ -14,10 +14,10 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
     setIsLoading(true);
     try {;
       const { data, error } = await supabase;
-        .from("suggested_talents");
-        .select(`;
+        .from("suggested_talents");";
+        .select(`;`;
           *,;
-          talent_profile:talent_id(;
+          talent_profile: talent_id(;,
             id,;
             user_id,;
             full_name,;
@@ -32,36 +32,36 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
             category,;
             company_name;
           );
-        `);
-        .eq("job_id", jobId);
+        `);`;
+        .eq("job_id", jobId);";
 ;
       if(error) throw error;
       setTalents(data || []);,
 } catch(error) {;
-      console.error("Error fetching suggested talents:", error);
+      console.error("Error fetching suggested talents:", error);";
       toast({;
-        title: "Error",;
-        description: "Failed to load suggested talents.Please try again later.",;
-        variant: "destructive",;,
+        title: "Error",;";
+        description: "Failed to load suggested talents.Please try again later.",;";
+        variant: "destructive",;,";
 });,
 } finally {;
       setIsLoading(false);,
 }
   }, [jobId]); // jobId is a dependency of fetchSuggestedTalents;
 
-  const handleViewProfile = (talentId: string) => {;
-    console.log("View talent profile:", talentId);
+  const handleViewProfile = (talentId: string) => {;,
+    ";
     toast({;
-      title: "View Profile",;
-      description: `Navigating to talent profile: ${talentId}`,;,
+      title: "View Profile",;";
+      description: `Navigating to talent profile: ${talentId}`,;,`;
 });,
 };
 ;
-  const handleInvite = (talentId: string) => {;
-    console.log("Invite talent:", talentId);
+  const handleInvite = (talentId: string) => {;,
+    ";
     toast({;
-      title: "Invite Talent",;
-      description: `Inviting talent: ${talentId}`,;,
+      title: "Invite Talent",;";
+      description: `Inviting talent: ${talentId}`,;,`;
 });,
 };
 ;
@@ -73,7 +73,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
 };
 ;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -99,20 +99,20 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
 };,
 });
 ;
-  return (<Card className="border-zion-blue-light bg-zion-blue">;
+  return (<Card className="border-zion-blue-light bg-zion-blue">;";
       <CardHeader>;
-        <CardTitle>{jobTitle ? `Talents for ${jobTitle}` : 'Suggested Talents'}</CardTitle>;
+        <CardTitle>{jobTitle ? `Talents for ${jobTitle}` : 'Suggested Talents'}</CardTitle>;`;
       </CardHeader>;
       ;
-      <CardContent className="pt-6">;
+      <CardContent className="pt-6">;";
         {isLoading ? (;
           <div>Loading suggested talents...</div>;
         ) : talents.length === 0 ? (;
           <EmptyMatchesCard onRefresh={handleRefresh} isProcessing={isProcessing} />;
         ) : (;
-          <div className="space-y-4">;
+          <div className="space-y-4">;";
             {transformedTalents.map((talent) => (;
-              <JobMatchCard;
+              <JobMatchCard;>
                 key={talent.id}
                 matchId={talent.id}
                 talentId={talent.id}
@@ -135,3 +135,4 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
     </Card>;
   );,
 }
+;

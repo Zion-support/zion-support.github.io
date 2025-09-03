@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<EnhancedHero  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<EnhancedHero  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import EnhancedHero from &apos;./EnhancedHero;
 describe(&apos;EnhancedHero&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;EnhancedHero&apos, () => {;
     render();,
 }
     // comment;
-    render(<EnhancedHero / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<EnhancedHero / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

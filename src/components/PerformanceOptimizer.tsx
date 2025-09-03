@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 ;
 interface PerformanceMetrics {;
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
+  loadTime: number;,
+  firstContentfulPaint: number;,
+  largestContentfulPaint: number;,
+  cumulativeLayoutShift: number;,
   firstInputDelay: number;,
 }
 ;
-const PerformanceOptimizer: React.FC = () => {;
+const PerformanceOptimizer: React.FC = () => {;,
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isOptimized, setIsOptimized] = useState(false);
 ;
@@ -54,7 +54,7 @@ const PerformanceOptimizer: React.FC = () => {;
     images.forEach((img) => {;
       if (!img.loading) {;
         img.loading = 'lazy';,
-}
+};
       if (!img.decoding) {;
         img.decoding = 'async';,
 }
@@ -63,7 +63,7 @@ const PerformanceOptimizer: React.FC = () => {;
 ;
   const preloadCriticalResources = () => {;
     const criticalFonts = [;
-      'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
+      'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';,
     ];
 ;
     criticalFonts.forEach((font) => {;
@@ -79,7 +79,7 @@ const PerformanceOptimizer: React.FC = () => {;
     // Enable service worker for caching;
     if ('serviceWorker' in navigator) {;
       navigator.serviceWorker.register('/sw.js');,
-}
+};
 ;
     // Enable compression;
     document.documentElement.style.setProperty('--compression-enabled', 'true');
@@ -88,18 +88,18 @@ const PerformanceOptimizer: React.FC = () => {;
 };
 ;
   return (;
-    <div className="performance-optimizer">;
+    <div className="performance-optimizer">;";
       {metrics && (;
-        <div className="fixed bottom-4 left-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 max-w-sm z-50">;
-          <h3 className="text-lg font-semibold mb-2">Performance Metrics</h3>;
-          <div className="space-y-2 text-sm">;
+        <div className="fixed bottom-4 left-4 bg-white dark: bg-gray-800 rounded-lg shadow-lg p-4 max-w-sm z-50">;";,
+          <h3 className="text-lg font-semibold mb-2">Performance Metrics</h3>;";
+          <div className="space-y-2 text-sm">;";
             <div>Load Time: {metrics.loadTime.toFixed(0)}ms</div>;
             <div>LCP: {metrics.largestContentfulPaint.toFixed(0)}ms</div>;
           </div>;
           {!isOptimized && (;
-            <button;
+            <button;>
               onClick={enableOptimizations}
-              className="mt-3 w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">;
+              className="mt-3 w-full px-4 py-2 bg-blue-600 text-white rounded-md hover: bg-blue-700 transition-colors">;";,
               Enable Optimizations;
             </button>;
           )}

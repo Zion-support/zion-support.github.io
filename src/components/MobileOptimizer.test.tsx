@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<MobileOptimizer  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<MobileOptimizer  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import MobileOptimizer from &apos;./MobileOptimizer;
 describe(&apos;MobileOptimizer&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;MobileOptimizer&apos, () => {;
     render();,
 }
     // comment;
-    render(<MobileOptimizer / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<MobileOptimizer / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

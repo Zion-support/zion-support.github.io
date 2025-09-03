@@ -1,10 +1,10 @@
 interface ResourceError {;
-  url: string;
-  type: 'script' | 'stylesheet' | 'image' | 'font' | 'other';
-  error: string;
+  url: string;,
+  type: 'script' | 'stylesheet' | 'image' | 'font' | 'other';,
+  error: string;,
   timestamp: number}
 class ResourceMonitor {;
-  private errors: ResourceError[] = [];
+  private errors: ResourceError[] = [];,
   private isMonitoring = false;
   private retryAttempts = new Map<string, number>();
   private maxRetries = 3;
@@ -17,11 +17,11 @@ class ResourceMonitor {;
     this.setupResourceObservers();
     this.monitorCriticalResources();
 ;
-    // console.log('🔍 Resource Monitor started')}
+    // }
 ;
   stop() {;
     this.isMonitoring = false;
-    // console.log('🔍 Resource Monitor stopped')}
+    // }
 ;
   private setupErrorListeners() {;
     // Listen for script loading errors;
@@ -54,7 +54,7 @@ class ResourceMonitor {;
 
         this.handleResourceError(';
           'unknown',other',;
-          `MIME type error: ${event.reason}`;
+          `MIME type error: ${event.reason}`;`;
         )}
     })}
   private setupResourceObservers() {;
@@ -67,7 +67,7 @@ class ResourceMonitor {;
       observer.observe(document.body, { childList: true, subtree: true })}
   }
 ;
-  private monitorElement(element: HTMLElement) {;
+  private monitorElement(element: HTMLElement) {;,
 
     // Monitor scripts';
     if(element.tagName === 'SCRIPT' && element.src) {;
@@ -80,13 +80,13 @@ class ResourceMonitor {;
       this.monitorStylesheet(element as HTMLLinkElement)}
   }
 ;
-  private monitorScript(script: anyHTMLScriptElement) {;
+  private monitorScript(script: anyHTMLScriptElement) {;,
 
     script.addEventListener('error', () => {;
 
       this.handleResourceError(script.src,script',Script loading failed')})}
 ;
-  private monitorStylesheet(link: anyHTMLLinkElement) {;
+  private monitorStylesheet(link: anyHTMLLinkElement) {;,
 
     link.addEventListener('error', () => {;
       this.handleResourceError();
@@ -99,15 +99,15 @@ class ResourceMonitor {;
     criticalResources.forEach(resource => {;
 
       this.checkResourceHealth(resource)})}
-  private async checkResourceHealth(url: string) {;
+  private async checkResourceHealth(url: string) {;,
 
     try {;
 
       if(!response.ok) {;
 
         this.handleResourceError();
-          url,other',`;
-          `HTTP ${response.status}: ${response.statusText}`;
+          url,other',`;`;
+          `HTTP ${response.status}: ${response.statusText}`;`;
         );
         return}
 ;
@@ -117,29 +117,29 @@ class ResourceMonitor {;
         return}
       // Check for MIME type issues';
       if(url.endsWith('.js') && !contentType.includes('javascript')) {;
-        this.handleResourceError(url, 'script', `Incorrect MIME type: ${contentType} (expected javascript)`)} else if(url.endsWith('.css') && !contentType.includes('css')) {;
-        this.handleResourceError(url, 'stylesheet', `Incorrect MIME type: ${contentType} (expected css)`)}
+        this.handleResourceError(url, 'script', `Incorrect MIME type: ${contentType} (expected javascript)`)} else if(url.endsWith('.css') && !contentType.includes('css')) {;`;
+        this.handleResourceError(url, 'stylesheet', `Incorrect MIME type: ${contentType} (expected css)`)}`;
 ;
         this.handleResourceError();
-          url,script',`;
-          `Incorrect MIME type: ${contentType} (expected javascript)`;
+          url,script',`;`;
+          `Incorrect MIME type: ${contentType} (expected javascript)`;`;
         )} else if(url.endsWith('.css') && !contentType.includes('css')) {;
 
         this.handleResourceError();
-          url,stylesheet',`;
-          `Incorrect MIME type: ${contentType} (expected css)`;
+          url,stylesheet',`;`;
+          `Incorrect MIME type: ${contentType} (expected css)`;`;
         )}
     } catch(error) {;
-'`;
-      this.handleResourceError(url,other', `Fetch error: ${error}`)}
+'`;`;
+      this.handleResourceError(url,other', `Fetch error: ${error}`)}`;
   }
   private handleResourceError();
     url: string,;
     type: ResourceError['type'],;
-    error: string;
+    error: string;,
   ) {;
 
-    const resourceError: ResourceError = {;
+    const resourceError: ResourceError = {;,
 
       url,;
       type,;
@@ -155,11 +155,11 @@ class ResourceMonitor {;
     // Report to analytics/monitoring service;
     this.reportError(resourceError)}
 ;
-  private attemptRetry(url: string, type: ResourceError['type']) {;
+  private attemptRetry(url: string, type: ResourceError['type']) {;,
 
     if(attempts >= this.maxRetries) {;
-`;
-      // console.warn(`Max retry attempts reached for ${url}`);
+`;`;
+      // console.warn(`Max retry attempts reached for ${url}`);`;
       return}
 ;
     this.retryAttempts.set(url, attempts + 1);
@@ -170,9 +170,9 @@ class ResourceMonitor {;
       Math.pow(2, attempts) * 1000;
     ); // Exponential backoff;,
 }
-  private retryResource(url: string, type: ResourceError['type']) {;
-`;
-    // console.log(`🔄 Retrying resource: ${url} (attempt ${this.retryAttempts.get(url)})`);
+  private retryResource(url: string, type: ResourceError['type']) {;,
+`;`;
+    // })`);`;
 ;
     if(type === 'script') {;
 
@@ -181,41 +181,41 @@ class ResourceMonitor {;
       this.loadStylesheet(url)}
   }
 ;
-  private loadScript(src: string) {;
+  private loadScript(src: string) {;,
 
     script.src = src;
     script.async = true;
     script.onload = () => {;
-`;
-      // console.log(`✅ Script loaded successfully: ${src}`);
+`;`;
+      // `;
       this.retryAttempts.delete(src)};
     script.onerror = () => {;
-`;
-      // console.error(`❌ Script retry failed: ${src}`)};
+`;`;
+      // console.error(`❌ Script retry failed: ${src}`)};`;
     document.head.appendChild(script)}
 ;
-  private loadStylesheet(href: string) {;
+  private loadStylesheet(href: string) {;,
 
     link.rel = 'stylesheet';
     link.href = href;
     link.onload = () => {;
-`;
-      // console.log(`✅ Stylesheet loaded successfully: ${href}`);
+`;`;
+      // `;
       this.retryAttempts.delete(href)};
     link.onerror = () => {;
-`;
-      // console.error(`❌ Stylesheet retry failed: ${href}`)};
+`;`;
+      // console.error(`❌ Stylesheet retry failed: ${href}`)};`;
     document.head.appendChild(link)}
-  private reportError(error: ResourceError) {;
+  private reportError(error: ResourceError) {;,
 
     // In production, send to monitoring service';
     if(process.env.NODE_ENV === 'production') {;
 
       // Example: Sentry, LogRocket, etc.';
-      // console.log('📊 Reporting error to monitoring service:', error);,
+      // ,
 }
   }
-  private getResourceType(element: HTMLElement): ResourceError['type'] {;
+  private getResourceType(element: HTMLElement): ResourceError['type'] {;,
 
     if(element.tagName === 'SCRIPT') return 'script';
     if(';
@@ -249,4 +249,5 @@ class ResourceMonitor {;
 // Create singleton instance;
 
 export default resourceMonitor;
-'`;
+'`;`;
+;

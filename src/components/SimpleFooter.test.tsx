@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<SimpleFooter  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<SimpleFooter  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import SimpleFooter from &apos;./SimpleFooter;
 describe(&apos;SimpleFooter&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;SimpleFooter&apos, () => {;
     render();,
 }
     // comment;
-    render(<SimpleFooter / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<SimpleFooter / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

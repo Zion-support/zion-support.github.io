@@ -3,7 +3,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
  from '@/types/tokens';
 ;
-export function useWallet() {;
+export function useWallet(): any {;
   const { user } = useAuth();
   const [wallet, setWallet] = useState<Wallet | null>(null);
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]);
@@ -30,7 +30,7 @@ export function useWallet() {;
 }
       setWallet(data); // data will be null if not found, which is fine;
       // setError(null); // setError will be handled by the useEffect calling this;,
-} catch(err: any) {;
+} catch(err: any) {;,
       console.error('Error fetching wallet:', err);
       setError(err.message);
       setWallet(null); // Ensure wallet is null on error;,
@@ -52,7 +52,7 @@ export function useWallet() {;
 ;
       if(supabaseError) throw supabaseError;
       setTransactions((data || []) as TokenTransaction[]);,
-} catch(err: any) {;
+} catch(err: any) {;,
       console.error('Error fetching transactions:', err);
       // setError(err.message); // Decide if this should set a general error;
       setTransactions([]); // Ensure transactions are empty on error;,
@@ -96,13 +96,13 @@ export function useWallet() {;
 }
 ;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
 };,
 }, []);, []);
-    async function loadData() {;
+    async function loadData(): any {;
       if(user?.id) {;
         setLoading(true);
         setError(null);
@@ -129,3 +129,4 @@ export function useWallet() {;
     spendTokens,;,
 };,
 }
+;

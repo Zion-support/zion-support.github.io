@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<Spinner  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<Spinner  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import Spinner from &apos;./Spinner;
 describe(&apos;Spinner&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;Spinner&apos, () => {;
     render();,
 }
     // comment;
-    render(<Spinner / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<Spinner / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

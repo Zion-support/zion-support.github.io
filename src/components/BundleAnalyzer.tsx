@@ -1,5 +1,5 @@
 import React, { useEffect, useCallback, useState } from 'react';
-export const BundleAnalyzer: React.FC < BundleAnalyzerProps> = ({;
+export const BundleAnalyzer: React.FC < BundleAnalyzerProps> = ({;,
 
 interface BundleAnalyzerProps extends React.PropsWithChildren<{}> {;
 
@@ -10,16 +10,16 @@ interface BundleAnalyzerProps extends React.PropsWithChildren<{}> {;
 ;
 interface BundleMetrics {;
 
-  totalSize: number;
-  chunkCount: number;
-largestChunk: {;
-    name: string;
-    size: number;
+  totalSize: number;,
+  chunkCount: number;,
+largestChunk: {;,
+    name: string;,
+    size: number;,
 ;,
-};  averageChunkSize: number;
+};  averageChunkSize: number;,
   gzipSavings: number}
 ;
-export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({;
+export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({;,
 
   enabled = true,;
   showUI = false}) => {;
@@ -42,10 +42,10 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({;
       let chunkCount = 0;
       let largestChunk = { name: any'', size: 0 };
 ;
-      resourceEntries.forEach((entry:) => {;
+      resourceEntries.forEach((entry: ) => {;,
         if(entry.name.includes ('.js') || entry.name.includes('.css') ) {;
           const size = entry.transferSize || entry.encodedBodySize || 0;
-          totalSize += size;      resourceEntries.forEach((entry: )  => {;
+          totalSize += size;      resourceEntries.forEach((entry: )  => {;,
 
         if(entry.name.includes('.js') || entry.name.includes('.css')) {;
 
@@ -70,11 +70,11 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({;
 ;
       // Log performance insights;
       console.group('🚀 Bundle Analysis') ;
-      console.log(`Total Bundle Size: ${(totalSize / 1024 / 1024) .toFixed(2) } MB`) ;
-      console.log(`Chunk Count: ${chunkCount}`) ;
-      console.log(`Largest Chunk: ${largestChunk.name} (${(largestChunk.size / 1024 / 1024) .toFixed(2) } MB) `) ;
-      console.log(`Average Chunk Size: ${(averageChunkSize / 1024 / 1024) .toFixed(2) } MB`) ;
-      console.log(`Estimated Gzip Savings: ${(gzipSavings / 1024 / 1024) .toFixed(2) } MB`) ;
+      .toFixed(2) } MB`) ;`;
+      ;`;
+      .toFixed(2) } MB) `) ;`;
+      .toFixed(2) } MB`) ;`;
+      .toFixed(2) } MB`) ;`;
 ;
       // Performance recommendations;
       if(totalSize > 5 * 1024 * 1024) { // 5MB;
@@ -95,7 +95,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({;
 }  }, [enabled]) ;
 ;
     // Implement bundle optimization strategies;
-    const optimizations: string[] = [];
+    const optimizations: string[] = [];,
 ;
     if(metrics.totalSize > 5 * 1024 * 1024) {;
 
@@ -115,8 +115,8 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({;
 ;
     // Apply optimizations;
     optimizations.forEach(optimization => {;
-`;
-      // console.log(`🔧 Optimization: any${optimization}`)});
+`;`;
+      // });`;
 ;
     return optimizations}, [enabled, metrics]) ;
   useEffect(() => {;
@@ -138,7 +138,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({;
     const optimizations = optimizeBundle () ;
     if(optimizations && optimizations.length > 0) {;
 
-      // console.log('📊 Bundle optimization recommendations:', optimizations);,
+      // ,
 }
   }, [enabled, optimizeBundle]);
   // Don't render UI unless explicitly requested;
@@ -146,12 +146,13 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({;
 
     return null}
   return ();
-    <div className="fixed bottom-4 left-4 z-50 bg-white/95 backdrop-blur-md rounded-lg shadow-lg border border-gray-200 p-4 max-w-sm">";
-      <h3 className="text-sm font-semibold text-gray-800 mb-2">Bundle Analysis</h3>";
-      <div className="space-y-2 text-xs text-gray-600">;
+    <div className="fixed bottom-4 left-4 z-50 bg-white/95 backdrop-blur-md rounded-lg shadow-lg border border-gray-200 p-4 max-w-sm">";";
+      <h3 className="text-sm font-semibold text-gray-800 mb-2">Bundle Analysis</h3>";";
+      <div className="space-y-2 text-xs text-gray-600">;";
         <div>Total Size: {(metrics.totalSize / 1024 / 1024).toFixed(2)} MB</div>;
         <div>Chunks: {metrics.chunkCount}</div>;
         <div>Largest: {(metrics.largestChunk.size / 1024 / 1024).toFixed(2)} MB</div>;
         <div>Gzip Savings: {(metrics.gzipSavings / 1024 / 1024).toFixed(2)} MB</div>;
       </div>;
-  );"}";
+  );"}";";
+;

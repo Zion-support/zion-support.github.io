@@ -18,7 +18,7 @@ export function ReferralMiddleware({ children }: Props) {;
   useEffect(() => {;
   // TODO: Add dependencies if needed;,
 }, []);
-    async function sendReferral() {;
+    async function sendReferral(): any {;
       const code = localStorage.getItem('referralCode');
       if(!code || !user?.id || !user?.email) return; // Guard against missing email as well;
       try {;
@@ -35,3 +35,4 @@ export function ReferralMiddleware({ children }: Props) {;
 
   return <>{children}</>;,
 }
+;

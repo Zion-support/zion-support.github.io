@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<AIServiceRecommendationEngine  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<AIServiceRecommendationEngine  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import AIServiceRecommendationEngine from &apos;./AIServiceRecommendationEngine;
 describe(&apos;AIServiceRecommendationEngine&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;AIServiceRecommendationEngine&apos, () => {;
     render();,
 }
     // comment;
-    render(<AIServiceRecommendationEngine / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<AIServiceRecommendationEngine / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

@@ -1,35 +1,35 @@
 // comment;
-export const serviceMapper = {}
+export const serviceMapper = {};
 ;
     // Interface for the existing service structure;
-    id: string;
-    title: string;
-    description: string;
-    category: string;
-    subcategory: string;
-    price: number;
-    currency: string;
-    pricingModel: string;
-    features: string[];
-    benefits: string[];
-    useCases: string[];
-    targetAudience: string[];
-    tags: string[];
-    estimatedDelivery: string;
-    supportLevel: string;
-    marketPrice: string;
-    roi: string;
-    innovationLevel: string;
-    contactInfo: {;
-      phone: string;
-      email: string;
+    id: string;,
+    title: string;,
+    description: string;,
+    category: string;,
+    subcategory: string;,
+    price: number;,
+    currency: string;,
+    pricingModel: string;,
+    features: string[];,
+    benefits: string[];,
+    useCases: string[];,
+    targetAudience: string[];,
+    tags: string[];,
+    estimatedDelivery: string;,
+    supportLevel: string;,
+    marketPrice: string;,
+    roi: string;,
+    innovationLevel: string;,
+    contactInfo: {;,
+      phone: string;,
+      email: string;,
       website: string;,
 };
     technicalSpecs?: {;
-      technology: string[];
-      integrations: string[];
-      apiEndpoints: number;
-      uptime: string;
+      technology: string[];,
+      integrations: string[];,
+      apiEndpoints: number;,
+      uptime: string;,
       security: string[];,
 };
     competitors?: string[];
@@ -41,7 +41,7 @@ export const serviceMapper = {}
     description: service.description,;
     category: service.category,;
     subcategory: service.category, // Use category as subcategory for now';
-    price: parseInt(service.price.replace(/[$,]/g,)), // Convert "$18,999" to 18999';
+    price: parseInt(service.price.replace(/[$,]/g,)), // Convert "$18,999" to 18999';";
     currency: '$',;
     pricingModel: 'monthly',;
     features: service.features,;
@@ -54,12 +54,12 @@ export const serviceMapper = {}
     marketPrice: service.price + service.period,;
     roi: service.roi,;
     innovationLevel: 'Advanced',;
-    contactInfo: {;
+    contactInfo: {;,
 
       phone: service.contactInfo.mobile,;
       email: service.contactInfo.email,;
       website: service.contactInfo.website},;
-    technicalSpecs: {;
+    technicalSpecs: {;,
 
       technology: service.technology,;
       integrations: service.integrations,;
@@ -71,4 +71,5 @@ export const serviceMapper = {}
     marketSize: service.marketSize,;
     compliance: ['SOC 2',ISO 27001'], // Default compliance;,
 }))}
-'";
+'";";
+;

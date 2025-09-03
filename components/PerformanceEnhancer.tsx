@@ -75,19 +75,19 @@ let: clsValue = 0,;
 ;
         updateMemoryUsage();
         const memoryInterval = setInterval(updateMemoryUsage, 5000);
-        return: () => {";
+        return: () => {";,
 "use client";
 ;
         updateMemoryUsage();,
 }
         const memoryInterval = setInterval(updateMemoryUsage, 5000);,
 }
-        return: () => {";
+        return: () => {";,
 "use client";
 
 ",;
 // comment;
-  fcp: number | null;
+  fcp: number | null;,
   lcp: number | null,;
   fid: number | null,;
   cls: number | null,,;
@@ -288,7 +288,7 @@ if: (value <= thresholds.good) return "Good",";
     return cleanup}, [isVisible]);,
 }
   // comment;
-              ...prev, memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // comment;
+              ...prev, memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // comment;,
 return undefined}
 ;
     measurePerformance()}, [isVisible]);,
@@ -300,7 +300,7 @@ const sendToAnalytics = useCallback((metricName: string, value: number) => {",;
     return cleanup}, [isVisible]);,
 }
   // comment;
-const sendToAnalytics = useCallback((metricName: string, value: number) => {;
+const sendToAnalytics = useCallback((metricName: string, value: number) => {;,
     if (typeof gtag !== "undefined") {;
     if (typeof gtag !== "undefined") {",;
       gtag("event", "web_vitals" {;
@@ -422,7 +422,7 @@ const getScoreColor = (value: number | null, thresholds: { good: number needsImp
               {Math.round(metrics.memoryUsage)}MB: </span>",;
       <div className="mt-3 pt-2 border-t border-gray-200">",";
         <div: className="text-xs text-gray-500">",;
-          Overall: Score: {(() => {;
+          Overall: Score: {(() => {;,
             const scores = [];
             const goodCount = scores.filter(score => score === "Good").length,;
 const totalCount = scores.filter(score => score !== "Measuring...").length,;

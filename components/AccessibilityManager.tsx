@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 ;
 interface AccessibilitySettings {;
-  highContrast: boolean;
-  fontSize: "small" | "normal" | "large" | "xlarge";
-  reducedMotion: boolean;
-  focusVisible: boolean;
+  highContrast: boolean;,
+  fontSize: "small" | "normal" | "large" | "xlarge";,
+  reducedMotion: boolean;,
+  focusVisible: boolean;,
   screenReader: boolean;,
 }
 ;
-const AccessibilityManager: React.FC = () => {;
+const AccessibilityManager: React.FC = () => {;,
   const [settings, setSettings] = useState<AccessibilitySettings>({;
     highContrast: false,;
     fontSize: "normal",;
@@ -29,7 +29,7 @@ const AccessibilityManager: React.FC = () => {;
     }
   }, []);
 ;
-  const updateSetting = (key: keyof AccessibilitySettings, value: boolean | string) => {;
+  const updateSetting = (key: keyof AccessibilitySettings, value: boolean | string) => {;,
     const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
     localStorage.setItem('accessibilitySettings', JSON.stringify(newSettings));
@@ -38,7 +38,7 @@ const AccessibilityManager: React.FC = () => {;
     applyAccessibilityStyles(newSettings);,
 };
 ;
-  const applyAccessibilityStyles = (settings: AccessibilitySettings) => {;
+  const applyAccessibilityStyles = (settings: AccessibilitySettings) => {;,
     const root = document.documentElement;
     ;
     // High contrast mode;
@@ -73,7 +73,7 @@ const AccessibilityManager: React.FC = () => {;
       ;
       <div className="setting-group">;
         <label>;
-          <input;
+          <input;>
             type="checkbox";
             checked={settings.highContrast}
             onChange={(e) => updateSetting('highContrast', e.target.checked)}
@@ -84,8 +84,8 @@ const AccessibilityManager: React.FC = () => {;
       ;
       <div className="setting-group">;
         <label>;
-          Font Size:;
-          <select;
+          Font Size: ;,
+          <select;>
             value={settings.fontSize}
             onChange={(e) => updateSetting('fontSize', e.target.value)}
           >;
@@ -99,7 +99,7 @@ const AccessibilityManager: React.FC = () => {;
       ;
       <div className="setting-group">;
         <label>;
-          <input;
+          <input;>
             type="checkbox";
             checked={settings.reducedMotion}
             onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
@@ -110,7 +110,7 @@ const AccessibilityManager: React.FC = () => {;
       ;
       <div className="setting-group">;
         <label>;
-          <input;
+          <input;>
             type="checkbox";
             checked={settings.focusVisible}
             onChange={(e) => updateSetting('focusVisible', e.target.checked)}
@@ -121,7 +121,7 @@ const AccessibilityManager: React.FC = () => {;
       ;
       <div className="setting-group">;
         <label>;
-          <input;
+          <input;>
             type="checkbox";
             checked={settings.screenReader}
             onChange={(e) => updateSetting('screenReader', e.target.checked)}

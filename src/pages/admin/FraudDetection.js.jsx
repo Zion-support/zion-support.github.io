@@ -11,7 +11,7 @@ import {}
   FraudFilters,;
   FraudFlagsTable,';
   FraudTabContent} from '@/components/admin/fraud-detection';
-export default function FraudDetection() {}
+export default function FraudDetection() {};
   const [flags, setFlags] = useState([]);
   const [filteredFlags, setFilteredFlags] = useState([]);
   const [isLoading, setIsLoading] = useState(true);';
@@ -27,7 +27,7 @@ export default function FraudDetection() {}
     false_positives: 0,;
     actioned_count: 0});
   // Fetch fraud flags;
-  const fetchFraudFlags = async () => {}
+  const fetchFraudFlags = async () => {};
     setIsLoading(true);
     try {}
 ';
@@ -41,23 +41,23 @@ export default function FraudDetection() {}
       setFlags(data || []);
       setFilteredFlags(data || []);
       // Calculate stats;
-      const newStats = {}
+      const newStats = {};
         total_flags: data?.length || 0,';
-        pending_flags:'';
+        pending_flags: '';,
           data?.filter(flag => flag.status === 'pending').length || 0,';
-        suspicious_count:'';
+        suspicious_count: '';,
           data?.filter(flag => flag.severity === 'suspicious').length || 0,';
-        dangerous_count:'';
+        dangerous_count: '';,
           data?.filter(flag => flag.severity === 'dangerous').length || 0,;
-        false_positives: any;
+        false_positives: any;,
           data?.filter(flag => flag.is_false_positive).length || 0,;
-        actioned_count:';
+        actioned_count: ';,
           data?.filter('';
             flag => flag.action_taken && flag.action_taken !== 'none';
           ).length || 0};
       setStats(newStats);,
 } catch (error) {}
-      // console.error("Error fetching fraud flags:", error);
+      // console.error("Error fetching fraud flags:", error);";
       toast({}
 ';
 '';
@@ -100,7 +100,7 @@ export default function FraudDetection() {}
     setFilteredFlags(result);,
 }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]);
   const handleAction = async (flagId, action) => {}
-    try {}
+    try {};
 ';
 '';
 ''';
@@ -121,13 +121,13 @@ export default function FraudDetection() {}
 '';
 ''';
         title: 'Flag updated',''';
-        description: `Action '${action}' was applied successfully.`});
+        description: `Action '${action}' was applied successfully.`});`;
       // Refresh the data;
       fetchFraudFlags();,
 } catch (error) {}
-";
-"";
-      // console.error("Error updating fraud flag:", error);
+";";
+"";";
+      // console.error("Error updating fraud flag:", error);";
       toast({}
 ';
 '';
@@ -137,7 +137,7 @@ export default function FraudDetection() {}
         variant: 'destructive'});,
 }
   };
-  const resetFilters = () => {}
+  const resetFilters = () => {};
 ';
 '';
 ''';
@@ -153,29 +153,29 @@ export default function FraudDetection() {}
     contentTypeFilter;
   );
   return();
-    (";
-      <SEO"";
-        title="Fraud Detection | Admin Dashboard"";
-        description="Monitor and manage fraud detection alerts on the Zion AI Marketplace";
+    (";";
+      <SEO"";";>
+        title="Fraud Detection | Admin Dashboard"";";
+        description="Monitor and manage fraud detection alerts on the Zion AI Marketplace";";
       />;
-    ),";
-    ("";
-      <div className="container mx-auto px-4 py-8">"";
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">";
-          <div>"";
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
-              Fraud Detection";
-            </h1>"";
-            <p className="text-zion-slate-light mt-2">;
+    ),";";
+    ("";";
+      <div className="container mx-auto px-4 py-8">"";";
+        <div className="flex flex-col md: flex-row items-start md:items-center justify-between mb-8">";";,
+          <div>"";";
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;";
+              Fraud Detection";";
+            </h1>"";";
+            <p className="text-zion-slate-light mt-2">;";
               Monitor suspicious activities and protect the marketplace from;
               fraud and abuse;
             </p>;
-          </div>";
-"";
-          <div className="mt-4 md:mt-0">;
-            <Button";
-              onClick={fetchFraudFlags}"";
-              className="bg-zion-purple hover:bg-zion-purple-light";
+          </div>";";
+"";";
+          <div className="mt-4 md: mt-0">;";,
+            <Button";";>
+              onClick={fetchFraudFlags}"";";
+              className="bg-zion-purple hover: bg-zion-purple-light";";,
               disabled={isLoading}
             >;
               Refresh Data;
@@ -184,19 +184,19 @@ export default function FraudDetection() {}
         </div>;
 
         {/* Stats Cards */}
-        <FraudStatsCards stats={stats} />";
-"";
-        <Tabs defaultValue="all" className="mb-8">";
-          <TabsList>"";
-            <TabsTrigger value="all">All Flags</TabsTrigger>"";
-            <TabsTrigger value="pending">Pending Review</TabsTrigger>"";
-            <TabsTrigger value="dangerous">Dangerous</TabsTrigger>"";
-            <TabsTrigger value="actioned">Actioned</TabsTrigger>;
-          </TabsList>";
-"";
-          <TabsContent value="all" className="mt-6">;
+        <FraudStatsCards stats={stats} />";";
+"";";
+        <Tabs defaultValue="all" className="mb-8">";";
+          <TabsList>"";";
+            <TabsTrigger value="all">All Flags</TabsTrigger>"";";
+            <TabsTrigger value="pending">Pending Review</TabsTrigger>"";";
+            <TabsTrigger value="dangerous">Dangerous</TabsTrigger>"";";
+            <TabsTrigger value="actioned">Actioned</TabsTrigger>;";
+          </TabsList>";";
+"";";
+          <TabsContent value="all" className="mt-6">;";
             {/* Search and Filters */}
-            <FraudFilters;
+            <FraudFilters;>
               searchQuery={searchQuery}
               setSearchQuery={setSearchQuery}
               statusFilter={statusFilter}
@@ -208,10 +208,10 @@ export default function FraudDetection() {}
               resetFilters={resetFilters}
             />;
 
-            {/* Flags Table */}";
-            <Card>"";
-              <CardContent className="p-0">;
-                <FraudFlagsTable;
+            {/* Flags Table */}";";
+            <Card>"";";
+              <CardContent className="p-0">;";
+                <FraudFlagsTable;>
                   flags={filteredFlags}
                   isLoading={isLoading}
                   hasFilters={hasFilters}
@@ -220,18 +220,18 @@ export default function FraudDetection() {}
                 />;
               </CardContent>;
             </Card>;
-          </TabsContent>";
-"";
-          <TabsContent value="pending">"";
-            <FraudTabContent tabValue="pending" />;
-          </TabsContent>";
-"";
-          <TabsContent value="dangerous">"";
-            <FraudTabContent tabValue="dangerous" />;
-          </TabsContent>";
-"";
-          <TabsContent value="actioned">"";
-            <FraudTabContent tabValue="actioned" />;
+          </TabsContent>";";
+"";";
+          <TabsContent value="pending">"";";
+            <FraudTabContent tabValue="pending" />;";
+          </TabsContent>";";
+"";";
+          <TabsContent value="dangerous">"";";
+            <FraudTabContent tabValue="dangerous" />;";
+          </TabsContent>";";
+"";";
+          <TabsContent value="actioned">"";";
+            <FraudTabContent tabValue="actioned" />;";
           </TabsContent>;
         </Tabs>;
       </div>)}

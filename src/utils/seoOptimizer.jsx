@@ -188,7 +188,7 @@ export class SEOOptimizer {;
   static generateTitle(path) {;
     const baseTitle = 'Zion Tech Group';
     if(path === '/') {;
-      return `${baseTitle} - Revolutionary Technology Solutions`;,
+      return `${baseTitle} - Revolutionary Technology Solutions`;,`;
 }
 ;
     static KEYWORD_MAPPINGS = {;
@@ -219,7 +219,7 @@ export class SEOOptimizer {;
         const baseTitle = 'Zion Tech Group';
         if(path === '/') {;
 
-            return `${baseTitle} - Revolutionary Technology Solutions`;,
+            return `${baseTitle} - Revolutionary Technology Solutions`;,`;
 }
 ;
         const pathSegments = path.split('/').filter(Boolean);
@@ -231,8 +231,8 @@ export class SEOOptimizer {;
             .split('-');
             .map(word => word.charAt(0).toUpperCase() + word.slice(1));
             .join(' ');
-`;
-        return `${formattedSegment} - ${baseTitle}`;,
+`;`;
+        return `${formattedSegment} - ${baseTitle}`;,`;
 }
 ;
     static generateDescription(path) {;
@@ -249,26 +249,26 @@ export class SEOOptimizer {;
 ;
     static generateCanonicalUrl(path) {;
 
-        const baseUrl = 'https://ziontechgroup.com';`;
-        return `${baseUrl}${path}`;,
+        const baseUrl = 'https: //ziontechgroup.com';`;,`;
+        return `${baseUrl}${path}`;,`;
 }
 ;
     static generateStructuredData(path) {;
 
         const baseData = {;
 
-            "@context": "https://schema.org",";
-            "@type": "WebPage",";
-            "name": this.generateTitle(path),";
-            "description": this.generateDescription(path),";
-            "url": this.generateCanonicalUrl(path),";
-            "publisher": {;
-";
-                "@type": "Organization",";
-                "name": "Zion Tech Group",";
-                "url": "https://ziontechgroup.com",;
-";
-                "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";,
+            "@context": "https://schema.org",";";
+            "@type": "WebPage",";";
+            "name": this.generateTitle(path),";";
+            "description": this.generateDescription(path),";";
+            "url": this.generateCanonicalUrl(path),";";
+            "publisher": {;";
+";";
+                "@type": "Organization",";";
+                "name": "Zion Tech Group",";";
+                "url": "https://ziontechgroup.com",;";
+";";
+                "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";,";
 }
 ;,
 };
@@ -278,27 +278,27 @@ export class SEOOptimizer {;
 
             return {;
 
-                ...baseData,";
-                "@type": "Organization",";
-                "name": "Zion Tech Group",";
-                "url": "https://ziontechgroup.com",";
-                "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",";
-                "description": "Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.",";
-                "address": {;
-";
-                    "@type": "PostalAddress",";
-                    "streetAddress": "364 E Main St STE 1008",";
-                    "addressLocality": "Middletown",";
-                    "addressRegion": "DE",";
-                    "postalCode": "19709",";
-                    "addressCountry": "US";,
-},";
-                "contactPoint": {;
-";
-                    "@type": "ContactPoint",";
-                    "telephone": "+1-302-464-0950",";
-                    "contactType": "customer service",";
-                    "email": "kleber@ziontechgroup.com";,
+                ...baseData,";";
+                "@type": "Organization",";";
+                "name": "Zion Tech Group",";";
+                "url": "https://ziontechgroup.com",";";
+                "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",";";
+                "description": "Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.",";";
+                "address": {;";
+";";
+                    "@type": "PostalAddress",";";
+                    "streetAddress": "364 E Main St STE 1008",";";
+                    "addressLocality": "Middletown",";";
+                    "addressRegion": "DE",";";
+                    "postalCode": "19709",";";
+                    "addressCountry": "US";,";
+},";";
+                "contactPoint": {;";
+";";
+                    "@type": "ContactPoint",";";
+                    "telephone": "+1-302-464-0950",";";
+                    "contactType": "customer service",";";
+                    "email": "kleber@ziontechgroup.com";,";
 }
             };,
 }
@@ -307,13 +307,13 @@ export class SEOOptimizer {;
 
             return {;
 
-                ...baseData,";
-                "@type": "Service",";
-                "serviceType": path.split('/').pop()?.replace(/-/g,),";
-                "provider": {;
-";
-                    "@type": "Organization",";
-                    "name": "Zion Tech Group";,
+                ...baseData,";";
+                "@type": "Service",";";
+                "serviceType": path.split('/').pop()?.replace(/-/g,),";";
+                "provider": {;";
+";";
+                    "@type": "Organization",";";
+                    "name": "Zion Tech Group";,";
 }
             };,
 }
@@ -337,8 +337,8 @@ export class SEOOptimizer {;
 });,
 }
 ;
-        // Check for missing meta description'";
-        if(!content.includes('name="description"')) {;
+        // Check for missing meta description'";";
+        if(!content.includes('name="description"')) {;";
 
             issues.push({;
 
@@ -349,8 +349,8 @@ export class SEOOptimizer {;
 });,
 }
 ;
-        // Check for short meta description";
-        const descMatch = content.match(/name="description" content="([^"]+)"/);
+        // Check for short meta description";";
+        const descMatch = content.match(/name="description" content="([^"]+)"/);";
         if(descMatch && descMatch[1].length < 120) {;
 
             issues.push({;
@@ -391,35 +391,35 @@ export class SEOOptimizer {;
 }
 ;
     static generateMetaTags(seoData) {;
-`;
-        return `;
-    <title>${seoData.title}</title>";
-    <meta name="description" content="${seoData.description}" />'";
-    <meta name="keywords" content="${seoData.keywords.join(',)}" />";
-    <link rel="canonical" href="${seoData.canonicalUrl}" />;
+`;`;
+        return `;`;
+    <title>${seoData.title}</title>";";
+    <meta name="description" content="${seoData.description}" />'";";
+    <meta name="keywords" content="${seoData.keywords.join(',)}" />";";
+    <link rel="canonical" href="${seoData.canonicalUrl}" />;";
 
-    <!-- Open Graph-->";
-    <meta property="og:title" content="${seoData.title}" />";
-    <meta property="og:description" content="${seoData.description}" />";
-    <meta property="og:type" content="website" />";
-    <meta property="og:url" content="${seoData.canonicalUrl}" />'";
-    <meta property="og:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" />;
+    <!-- Open Graph-->";";
+    <meta property="og:title" content="${seoData.title}" />";";
+    <meta property="og:description" content="${seoData.description}" />";";
+    <meta property="og: type" content="website" />";";,
+    <meta property="og:url" content="${seoData.canonicalUrl}" />'";";
+    <meta property="og:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" />;";
 
-    <!-- Twitter -->";
-    <meta name="twitter:card" content="summary_large_image" />";
-    <meta name="twitter:title" content="${seoData.title}" />";
-    <meta name="twitter:description" content="${seoData.description}" />'";
-    <meta name="twitter:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" />;
+    <!-- Twitter -->";";
+    <meta name="twitter: card" content="summary_large_image" />";";,
+    <meta name="twitter:title" content="${seoData.title}" />";";
+    <meta name="twitter:description" content="${seoData.description}" />'";";
+    <meta name="twitter:image" content="${seoData.ogImage || 'https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc'}" />;";
 
-    <!-- Structured Data -->";
-    <script type="application/ld+json">;
+    <!-- Structured Data -->";";
+    <script type="application/ld+json">;";
       ${JSON.stringify(seoData.structuredData, null, 2)}
-    </script>`;
-    `;,
+    </script>`;`;
+    `;,`;
 }
 }
 ;
 export const seoOptimizer = new SEOOptimizer();
 ;
 export default SEOOptimizer;
-'"`}}
+'"`}};`;

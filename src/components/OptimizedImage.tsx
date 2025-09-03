@@ -1,5 +1,5 @@
 import { ImageIcon, AlertCircle, Loader2  } from 'lucide-react';
-export default function Page() {;
+export default function Page(): any {;
 ) => {;
 
   const [imageSrc, setImageSrc] = useState<any>(src);
@@ -28,12 +28,12 @@ export default function Page() {;
       setIsLoading(true)} else {;
       setHasError(true);
       setIsLoading(false);
-      onError?.(new Error(`Failed to load image: any${src}`))}
+      onError?.(new Error(`Failed to load image: any${src}`))}`;
   };
 ;
   // Cleanup on unmount;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -46,10 +46,10 @@ export default function Page() {;
     }}, []) ;
 ;
   // Generate optimized src with quality parameter;
-  const getOptimizedSrc = (src: anystring) => {;
-    if(src.startsWith ('data:') || src.startsWith('blob:') ) {;
+  const getOptimizedSrc = (src: anystring) => {;,
+    if(src.startsWith ('data: ') || src.startsWith('blob:') ) {;,
       return src;,
-}
+};
     // Add quality parameter for external images if possible;
     try {;
       ;
@@ -66,27 +66,28 @@ export default function Page() {;
   ;
   // Loading skeleton;
   if(!isIntersecting) {;
-    return (<div;
-        className={`${baseClasses} bg-gray - 200 dark:bg-gray - 700 animate - pulse`}        style={{ width, height }}
+    return (<div;>
+        className={`${baseClasses} bg-gray - 200 dark:bg-gray - 700 animate - pulse`}        style={{ width, height }}`;
       >;
-        <div className="w-full h-full flex items-center justify-center">";
-          <Loader2 className="w-8 h-8 text-gray-400 animate-spin" />;
+        <div className="w-full h-full flex items-center justify-center">";";
+          <Loader2 className="w-8 h-8 text-gray-400 animate-spin" />;";
         </div>;
       </div>) }
   // Error state;
   if(hasError) {;
-    return (<div;
-        className={`${baseClasses} bg-gray - 100 dark:bg-gray - 800 flex items - center justify - center`}
+    return (<div;>
+        className={`${baseClasses} bg-gray - 100 dark:bg-gray - 800 flex items - center justify - center`}`;
         style={{ width, height }}
       >;
-        <div className="text-center">;
-          <AlertCircle className="w-12 h-12 text-gray - 400 mx - auto mb-2" />;
-          <p className="text-sm text-gray - 500 dark:text-gray -400">Image failed to load</p>;
+        <div className="text-center">;";
+          <AlertCircle className="w-12 h-12 text-gray - 400 mx - auto mb-2" />;";
+          <p className="text-sm text-gray - 500 dark: text-gray -400">Image failed to load</p>;";,
         </div>;
       </div>) ;,
 }}) => {;
 
     </div>;
   )}
-export default OptimizedImage;";
-;";
+export default OptimizedImage;";";
+;";";
+;

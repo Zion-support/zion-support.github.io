@@ -1,6 +1,7 @@
+import React from 'react';
 import { Link, useLocation  } from 'react-router-dom';
  from 'react';
-export const EnhancedMobileNavigation: React.FC = () => {;
+export const EnhancedMobileNavigation: React.FC = () => {;,
 import { motion, AnimatePresence  } from 'framer-motion';
 ;
  from 'lucide-react';
@@ -9,19 +10,19 @@ import { motion, AnimatePresence  } from 'framer-motion';
 ;
 interface NavigationItem {;
 
-  label: string;
-  path: string;
+  label: string;,
+  path: string;,
   icon: React.ComponentType<{ size?: number; className?: string;,
 }>;,
 } from 'lucide - react';
 ;
 interface NavigationItem {;
-  label: string;
-  path: string;
+  label: string;,
+  path: string;,
   icon: React.ComponentType<{ size?: number; className?: string }>;
   children?: NavigationItem[];  description?: string}
 ;
-const navigationItems: NavigationItem[] = [{;
+const navigationItems: NavigationItem[] = [{;,
 
     label: 'Home',;
     path: '/',;
@@ -81,7 +82,7 @@ const navigationItems: NavigationItem[] = [{;
         label: 'Consulting',;
         path: '/services/consulting',;
         icon: Users,;
-        description: 'Strategic IT consulting';
+        description: 'Strategic IT consulting';,
 
     ]},;
   {;
@@ -96,7 +97,7 @@ const navigationItems: NavigationItem[] = [{;
     label: 'Contact',;
     path: '/contact',;
     icon: Phone,;
-    description: 'Get in touch with us';
+    description: 'Get in touch with us';,
 
 ];
 ;
@@ -107,13 +108,13 @@ const navigationItems: NavigationItem[] = [{;
     icon: FileText,;
     color: 'bg-zion-blue'};];
 ;
-export const EnhancedMobileNavigation: React.FC = () => {;
+export const EnhancedMobileNavigation: React.FC = () => {;,
   const [isOpen, setIsOpen] = useState(false);
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
   const [activePath, setActivePath] = useState('/');
 ;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -122,26 +123,26 @@ export const EnhancedMobileNavigation: React.FC = () => {;
     setActivePath(location.pathname)}, [location]);
 ;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
 };,
 }, []);, []);
-    const handleClickOutside = (event: MouseEvent) => {;
+    const handleClickOutside = (event: MouseEvent) => {;,
 
       if(menuRef.current && !menuRef.current.contains(event.target as Node)) {;
 
-        setIsOpen(false)}
+        setIsOpen(false)};
     };
 ;
-export default function EnhancedMobileNavigation() {;
+export default function EnhancedMobileNavigation(): any {;
 
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   ;
-  const navigationItems: NavigationItem[] = [{;
+  const navigationItems: NavigationItem[] = [{;,
       label: 'Home',;
       path: '/',;
       icon: Home;,
@@ -150,7 +151,7 @@ export default function EnhancedMobileNavigation() {;
       label: 'Services',;
       path: '/services',;
       icon: Briefcase,;
-      children: [;
+      children: [;,
         { label: 'AI Solutions', path: '/ai-services', icon: Brain },;
         { label: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },;
         { label: 'Cybersecurity', path: '/services/ai-cybersecurity-suite', icon: Shield },;
@@ -178,7 +179,7 @@ export default function EnhancedMobileNavigation() {;
 ;
   // Close mobile menu when route changes;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -189,7 +190,7 @@ export default function EnhancedMobileNavigation() {;
 ;
   // Prevent body scroll when menu is open;
   useEffect(() => {;
-  // TODO: Add dependencies if needed;
+  // TODO: Add dependencies if needed;,
 
   return () => {;
     // Cleanup function;,
@@ -204,7 +205,7 @@ export default function EnhancedMobileNavigation() {;
       document.removeEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = 'unset'}}, [isOpen]);
 ;
-  const toggleExpanded = (label: string) => {;
+  const toggleExpanded = (label: string) => {;,
 
     setExpandedItems(prev => {;
 
@@ -219,8 +220,8 @@ export default function EnhancedMobileNavigation() {;
 ;
     if(path === '/') {};
 ;
-    return ()      <div key = {item.label} className="w-full">;
-        <motion.div;
+    return ()      <div key = {item.label} className="w-full">;";
+        <motion.div;>
           initial={false}
           animate = {;
 
@@ -228,52 +229,52 @@ export default function EnhancedMobileNavigation() {;
   0.1)' : 'transparent' ;
 ;,
 }}
-          className={`relative ${depth > 0 ? 'ml-4' : ''}`}
-          <Link;
+          className={`relative ${depth > 0 ? 'ml-4' : ''}`}`;
+          <Link;>
             to={item.path}
-            onClick={() => handleNavigation(item.path)}`;
-            className={`flex items-center justify-between w-full p-4 text-left transition-all duration-200 ${isItemActive';
+            onClick={() => handleNavigation(item.path)}`;`;
+            className={`flex items-center justify-between w-full p-4 text-left transition-all duration-200 ${isItemActive';`;
                 ? 'text-zion-cyan border-l-2 border-zion-cyan'';
-                : 'text-white hover:text-zion-cyan'`;,
-}`}
-";
-            <div className="flex items-center gap-3">;
-              <item.icon;
+                : 'text-white hover:text-zion-cyan'`;,`;
+}`}`;
+";";
+            <div className="flex items-center gap-3">;";
+              <item.icon;>
                 size={20}
                 className={isItemActive ? 'text-zion-cyan' : 'text-zion-slate-light'}
               />;
-              <div>";
-                <span className="font-medium">{item.label}</span>;
-                {item.description && (";
-                  <p className="text-sm text-zion-slate-light mt-1">{item.description}</p>;
+              <div>";";
+                <span className="font-medium">{item.label}</span>;";
+                {item.description && (";";
+                  <p className="text-sm text-zion-slate-light mt-1">{item.description}</p>;";
                 )}
               </div>;
             </div>;
             {hasChildren && (;
-              <ChevronDown;
-                size={16}`;
-                className={`transition-transform duration-200 ${                size={16}`                className={`transition-transform duration-200 ${';
-                  isExpanded ? 'rotate-180' : ''`;,
-}`}
+              <ChevronDown;>
+                size={16}`;`;
+                className={`transition-transform duration-200 ${                size={16}`                className={`transition-transform duration-200 ${';`;
+                  isExpanded ? 'rotate-180' : ''`;,`;
+}`}`;
               />) }          </Link>;
 
           {hasChildren && (;
-            <button;
-              onClick={() => toggleExpanded(item.label)}";
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light hover:text-white transition-colors"'`;
-              aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${item.label} submenu`}
+            <button;>
+              onClick={() => toggleExpanded(item.label)}";";
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light hover: text-white transition-colors"'`;,`;
+              aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${item.label} submenu`}`;
 ;
-              <ChevronDown;
-                size={16}`;
-                className={`transition-transform duration-200 ${                size={16}`                className={`transition-transform duration-200 ${';
-                  isExpanded ? 'rotate-180' : ''`;,
-}`}
+              <ChevronDown;>
+                size={16}`;`;
+                className={`transition-transform duration-200 ${                size={16}`                className={`transition-transform duration-200 ${';`;
+                  isExpanded ? 'rotate-180' : ''`;,`;
+}`}`;
               />;
             </button>;) }        </motion.div>;
 
         {hasChildren && (;
           <AnimatePresence>;
-            {isExpanded && (<motion.div;
+            {isExpanded && (<motion.div;>
                 initial = {;
 
   { height: 0,;
@@ -293,10 +294,10 @@ export default function EnhancedMobileNavigation() {;
 
   { duration: 0.3,;
   ease: 'easeInOut';,
-}}";
-                className="overflow-hidden";
-";
-                <div className="border-l border-zion-slate-light/20 ml-4">;
+}}";";
+                className="overflow-hidden";";
+";";
+                <div className="border-l border-zion-slate-light/20 ml-4">;";
                   {item.children!.map(child => renderNavigationItem(child, depth + 1))}
                 </div>;
               </motion.div>;) };
@@ -305,23 +306,23 @@ export default function EnhancedMobileNavigation() {;
   return ();
     <>;
       {/* Mobile Menu Toggle */}
-      <button;
-        onClick = {() => setIsOpen(true)}";
-        className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 rounded-lg";
+      <button;>
+        onClick = {() => setIsOpen(true)}";";
+        className="lg: hidden p-2 text-white hover:text-zion-cyan transition-colors focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 rounded-lg";";,
 
         <Menu size={24}   />;
       </button>;
 
       {/* Mobile Menu Overlay */}
       <AnimatePresence>;
-        {isOpen && (<motion.div;
+        {isOpen && (<motion.div;>
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}";
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 lg:hidden";
+            transition={{ duration: 0.2 }}";";
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 lg: hidden";";,
 
-            <motion.div;
+            <motion.div;>
               ref={menuRef}
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
@@ -330,95 +331,95 @@ export default function EnhancedMobileNavigation() {;
 
   { duration: 0.3,;
   ease: 'easeOut';,
-}}";
-              className="absolute right-0 top-0 h-full w-full max-w-sm bg-zion-slate-dark border-l border-zion-cyan/30 shadow-2xl";
+}}";";
+              className="absolute right-0 top-0 h-full w-full max-w-sm bg-zion-slate-dark border-l border-zion-cyan/30 shadow-2xl";";
 
-              {/* Header */}";
-              <div className="flex items-center justify-between p-6 border-b border-zion-slate-light/20">";
-                <div className="flex items-center gap-3">";
-                  <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">";
-                    <Zap size={20} className="text-white"  />                  </div>;
-                  <div>";
-                    <h1 className="text-xl font-bold text-white">Zion Tech Group</h1>";
-                    <p className="text-sm text-zion-slate-light">Technology Solutions</p>;
+              {/* Header */}";";
+              <div className="flex items-center justify-between p-6 border-b border-zion-slate-light/20">";";
+                <div className="flex items-center gap-3">";";
+                  <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">";";
+                    <Zap size={20} className="text-white"  />                  </div>;";
+                  <div>";";
+                    <h1 className="text-xl font-bold text-white">Zion Tech Group</h1>";";
+                    <p className="text-sm text-zion-slate-light">Technology Solutions</p>;";
                   </div>;
-                  <span className="text-white font-semibold">Zion Tech</span>;
+                  <span className="text-white font-semibold">Zion Tech</span>;";
                 </div>;
-                <button;
-                  onClick={() => setIsOpen(false)}";
-                  className="p-2 text-zion-slate-light hover:text-white transition-colors rounded-lg hover:bg-zion-slate-light/10";
+                <button;>
+                  onClick={() => setIsOpen(false)}";";
+                  className="p-2 text-zion-slate-light hover: text-white transition-colors rounded-lg hover:bg-zion-slate-light/10";";,
 
                   <X size={24}   />;
                 </button>;
               </div>;
 ;
-              {/* Navigation Content */}";
-              <div className="flex-1 overflow-y-auto">;
-                {/* Quick Actions */}";
-                <div className="p-6 border-b border-zion-slate-light/20">;";
-                  <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">;
+              {/* Navigation Content */}";";
+              <div className="flex-1 overflow-y-auto">;";
+                {/* Quick Actions */}";";
+                <div className="p-6 border-b border-zion-slate-light/20">;";";
+                  <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">;";
                     Quick Actions;
-                  </h3>";
-                  <div className="grid grid-cols-3 gap-3">;
+                  </h3>";";
+                  <div className="grid grid-cols-3 gap-3">;";
                     {quickActions.map(action => (;
-                      <Link;
+                      <Link;>
                         key={action.label}
                         to={action.path}
-                        onClick={() => handleNavigation(action.path)}`;
-                        className={`${action.color} p-4 rounded-lg text-white text-center hover:scale-105 transition-transform duration-200`}
-";
-                        <action.icon size={20} className="mx-auto mb-2" />";
-                        <span className="text-xs font-medium">{action.label}</span>;
+                        onClick={() => handleNavigation(action.path)}`;`;
+                        className={`${action.color} p-4 rounded-lg text-white text-center hover:scale-105 transition-transform duration-200`}`;
+";";
+                        <action.icon size={20} className="mx-auto mb-2" />";";
+                        <span className="text-xs font-medium">{action.label}</span>;";
                       </Link>;
                     ))}
                   </div>;
                 </div>;
 
-                {/* Main Navigation */}";
-                <nav className="p-6">;";
-                  <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">;
+                {/* Main Navigation */}";";
+                <nav className="p-6">;";";
+                  <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">;";
                     Navigation;
-                  </h3>";
-                  <div className="space-y-1">;
+                  </h3>";";
+                  <div className="space-y-1">;";
                     {navigationItems.map(item => renderNavigationItem(item))}
                   </div>;
                 </nav>;
               </div>;
 
-                {/* Contact Information */}";
-                <div className="p-6 border-t border-zion-slate-light/20">;";
-                  <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">;
+                {/* Contact Information */}";";
+                <div className="p-6 border-t border-zion-slate-light/20">;";";
+                  <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">;";
                     Contact Info;
-                  </h3>";
-                  <div className="space-y-3 text-sm">";
-                    <div className="flex items-center gap-3 text-zion-slate-light">;
+                  </h3>";";
+                  <div className="space-y-3 text-sm">";";
+                    <div className="flex items-center gap-3 text-zion-slate-light">;";
                       <Mail size={16}   />;
                       <span>info@ziontechgroup.com</span>;
-                    </div>";
-                    <div className="flex items-center gap-3 text-zion-slate-light">;
+                    </div>";";
+                    <div className="flex items-center gap-3 text-zion-slate-light">;";
                       <Phone size={16}   />;
                       <span>+1(555) 123-4567</span>;
-                    </div>";
-                    <div className="flex items-center gap-3 text-zion-slate-light">;
+                    </div>";";
+                    <div className="flex items-center gap-3 text-zion-slate-light">;";
                       <MapPin size={16}   />;
                       <span>123 Tech Street, Innovation City</span>;
-                    </div>";
-                    <div className="flex items-center gap-3 text-zion-slate-light">;
+                    </div>";";
+                    <div className="flex items-center gap-3 text-zion-slate-light">;";
                       <Clock size={16}  />;
                       <span > Mon - Fri 9AM - 6PM EST</span>                    </div>;
                   </div>;
                 </div>;
               </div>;
 
-              {/* Footer */}";
-              <div className="p-6 border-t border-zion-slate-light/20">;";
-                <div className="flex items-center justify-between text-sm text-zion-slate-light">;
-                  <span>© 2024 Zion Tech Group</span>";
-                  <div className="flex items-center gap-4">";
-                    <Link to="/privacy" className="hover:text-white transition-colors">;
+              {/* Footer */}";";
+              <div className="p-6 border-t border-zion-slate-light/20">;";";
+                <div className="flex items-center justify-between text-sm text-zion-slate-light">;";
+                  <span>© 2024 Zion Tech Group</span>";";
+                  <div className="flex items-center gap-4">";";
+                    <Link to="/privacy" className="hover: text-white transition-colors">;";,
                       Privacy;
-                    </Link>";
-                    <Link to="/terms" className="hover:text-white transition-colors">;
+                    </Link>";";
+                    <Link to="/terms" className="hover: text-white transition-colors">;";,
                       Terms;
                     </Link>;
                   </div>;
@@ -429,5 +430,5 @@ export default function EnhancedMobileNavigation() {;
       </AnimatePresence>;
     </>;
   )}};
-'"`;
-}
+'"`;`;
+};

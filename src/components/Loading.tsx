@@ -1,63 +1,63 @@
-import React from "react";
+import React from "react";";
   text?: string;
   fullScreen?: boolean}
 ;
-export default function Loading() {;
+export default function Loading(): any {;
 ;
-export default function Loading() {;
+export default function Loading(): any {;
 
-  const sizeClasses = {}
+  const sizeClasses = {};
 ;
   const content = (;
-    <div className="{"flex" flex-col items-center justify-center space-y-4">";
-      <Loader2 className="{"${sizeClasses[size]}" animate-spin text-blue-600"}       />;
-      {text && (";
-        <p className=""text-gray-600" text-sm font-medium"}>{text}</p>;
+    <div className="{"flex" flex-col items-center justify-center space-y-4">";";
+      <Loader2 className="{"${sizeClasses[size]}" animate-spin text-blue-600"}       />;";
+      {text && (";";
+        <p className=""text-gray-600" text-sm font-medium"}>{text}</p>;";
       )}
 ;
     </div>;
   );,
 }
   if (fullScreen) {;
-    return (";
-    <div className = "min-h-screen flex items-center justify-center bg-white">;
+    return (";";
+    <div className = "min-h-screen flex items-center justify-center bg-white">;";
         {content}
 ;
       </div>;
     );,
 }
 ;
-  return (";
-    <div className = "flex items-center justify-center p-8">;
+  return (";";
+    <div className = "flex items-center justify-center p-8">;";
       {content}
 ;
     </div>;
   );,
 }
 // comment;
-export function SkeletonCard() {;
+export function SkeletonCard(): any {;
 
-  return (";
-    <div className = "bg-white rounded-lg p-6 shadow-sm animate-pulse">";
-      <div className="h-4 bg-gray-200 rounded w-3/4 mb-4"></di></div>";
-      <div className="h-3 bg-gray-200 rounded w-1/2 mb-2"></di></div>";
-      <div className="h-3 bg-gray-200 rounded w-2/3"></di></div>;
+  return (";";
+    <div className = "bg-white rounded-lg p-6 shadow-sm animate-pulse">";";
+      <div className="h-4 bg-gray-200 rounded w-3/4 mb-4"></di></div>";";
+      <div className="h-3 bg-gray-200 rounded w-1/2 mb-2"></di></div>";";
+      <div className="h-3 bg-gray-200 rounded w-2/3"></di></div>;";
     </div>;
   );,
-}
-export function SkeletonText() {;
+};
+export function SkeletonText(): any {;
 
-  return (";
-    <div className="animate-pulse space-y-2">;
+  return (";";
+    <div className="animate-pulse space-y-2">;";
       {Array.from({ length: lines,;,
-}).map((_, i) => (";
-        <div key="{i}
-          className="{"h-3" bg-gray-200 rounded ${;
-            i === lines - 1 ? "w-2/3" : 'w-full>;,
-}"}
+}).map((_, i) => (";";
+        <div key="{i}";>
+          className="{"h-3" bg-gray-200 rounded ${;";
+            i === lines - 1 ? "w-2/3" : 'w-full>;,";
+}"}";
 ;
         ></di></div>;
       ))}
 ;
     </div>;
-  );"}"
+  );"}";

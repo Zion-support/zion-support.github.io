@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<ProductReviews  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<ProductReviews  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import ProductReviews from &apos;./ProductReviews;
 describe(&apos;ProductReviews&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;ProductReviews&apos, () => {;
     render();,
 }
     // comment;
-    render(<ProductReviews / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<ProductReviews / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

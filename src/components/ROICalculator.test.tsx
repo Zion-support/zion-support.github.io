@@ -1,6 +1,6 @@
-  it(displays expected content", () => {;
-    render(<ROICalculator  />)";
-import { render, screen } from &apos;@testing - library/react",;
+  it(displays expected content", () => {;";
+    render(<ROICalculator  />)";";
+import { render, screen } from &apos;@testing - library/react",;";
 import ROICalculator from &apos;./ROICalculator;
 describe(&apos;ROICalculator&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
@@ -12,8 +12,8 @@ describe(&apos;ROICalculator&apos, () => {;
     render();,
 }
     // comment;
-    render(<ROICalculator / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
+    render(<ROICalculator / >)";";
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,";
+})";";
+";,";
 }}))

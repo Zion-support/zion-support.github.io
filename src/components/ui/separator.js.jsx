@@ -18,7 +18,7 @@ var __rest =;
 import { jsx as _jsx } from 'react/jsx-runtime';''';
 import React from 'react';''';
 import { cn } from '@/lib/utils';
-const Separator = React.forwardRef((_a, ref) => {}
+const Separator = React.forwardRef((_a, ref) => {};
 ';
 '';
 ''';
@@ -28,7 +28,7 @@ const Separator = React.forwardRef((_a, ref) => {}
     'div',;
     Object.assign() {}
         ref: ref,';
-        className: cn('';
+        className: cn('';,
           'shrink-0 bg-border',';
           orientation === 'horizontal' ? 'h-[1px] w-full' : 'h-full w-[1px]',;
           className;
