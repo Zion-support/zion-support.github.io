@@ -1,1 +1,141 @@
-import React from 'react'; import { motion    } from 'framer-motion'; import { Link    } from 'react-router-dom'; import { ; Database,; Shield,; Search,; Filter,; BarChart3,; Rocket,; CheckCircle,; Star,; ArrowRight,; Globe,; Lock,; Eye,; Activity,; Clock,; Award,; Lightbulb,; Sparkles,; Phone,; Mail,; MapPin,; DollarSign,; Calendar,; BookOpen,; GraduationCap,; Settings,; Monitor,; Network,; Cpu,; Brain,; Zap,; Target,; Heart,; Users,; FileText,; Key,; Fingerprint,; Wifi,; Bluetooth,; Satellite,; Telescope,; Microscope,; Flask,; Pill,; Stethoscope,; Calculator,; CreditCard,; ShoppingCart,; Truck,; Warehouse,; Factory,; Building2,; Home,; Store,; Bank,; Insurance,; Law,; Gavel,; Timer,; Stopwatch,; Thermometer,; Compass,; Map,; Navigation,; Download,; Upload,; Share,; Copy,; Edit,; Trash,; Save,; Plus,; Minus,; X,; Check,; Info,; AlertTriangle,; Bug,; Code,; Server,; Cloud,; HardDrive,; Archive,; RefreshCw,; TrendingUp,; TrendingDown,; PieChart,; LineChart,; ScatterChart;    } from 'lucide-react'; ; export function AIDataGovernancePlatform() {; const features = [; {; icon: Database,; title: 'Intelligent Data Discovery',; description: 'AI-powered scanning and classification of data across all systems and repositories',; benefits: ['Automated data mapping', 'Smart classification', 'Sensitive data detection', 'Real-time discovery']; },; {; icon: Shield,; title: 'Advanced Data Protection',; description: 'Comprehensive security measures including encryption, access controls, and compliance monitoring',; benefits: ['End-to-end encryption', 'Role-based access', 'Audit logging', 'Compliance automation']; },; {; icon: Search,; title: 'Smart Data Lineage',; description: 'Track data flow and transformations across your entire data ecosystem',; benefits: ['Visual data flow', 'Impact analysis', 'Change tracking', 'Dependency mapping']; },; {; icon: BarChart3,; title: 'Data Quality Intelligence',; description: 'AI-driven data quality assessment and improvement recommendations',; benefits: ['Quality scoring', 'Anomaly detection', 'Automated cleansing', 'Quality metrics']; },; {; icon: Rocket,; title: 'Compliance Automation',; description: 'Automated compliance checks and reporting for GDPR, CCPA, HIPAA, and more',; benefits: ['Regulatory mapping', 'Automated audits', 'Compliance dashboards', 'Risk assessment']; }; ]; ; const pricingPlans = [; {; name: 'Foundation',; price: '$499',; period: '/month',; description: 'Perfect for small organizations starting their data governance journey',; features: [; 'Basic data discovery(up to 10TB)',; 'Standard data classification',; 'Basic access controls',; 'GDPR compliance tools',; 'Email support',; 'Standard reporting',; 'Up to 10 users',; 'Cloud deployment'; ],; cta: 'Start Free Trial',; popular: false; },; {; name: 'Professional',; price: '$1,299',; period: '/month',; description: 'Ideal for growing organizations with complex data environments',; features: [; 'Advanced AI discovery(up to 100TB)',; 'Intelligent classification',; 'Advanced access controls',; 'Multi-compliance support',; 'Priority support',; 'Advanced analytics',; 'Up to 50 users',; 'API access',; 'Custom integrations',; 'Advanced security features',; 'Data lineage tracking',; 'Quality monitoring'; ],; cta: 'Start Free Trial',; popular: true; },; {; name: 'Enterprise',; price: '$2,999',; period: '/month',; description: 'For large organizations with enterprise-scale data governance needs',; features: [; 'Unlimited data discovery',; 'Custom AI models',; 'Enterprise security',; 'Full compliance suite',; '24/7 dedicated support',; 'Unlimited users',; 'Custom deployment',; 'On-premise options',; 'SLA guarantees',; 'Advanced analytics',; 'Custom integrations',; 'White-label solutions'; ],; cta: 'Contact Sales',; popular: false; }; ]; ; const complianceFrameworks = [; {; title: 'GDPR Compliance',; description: 'Full compliance with European data protection regulations',; icon: Shield,; benefits: ['Data subject rights', 'Consent management', 'Data portability', 'Breach notification']; },; {; title: 'CCPA Compliance',; description: 'California Consumer Privacy Act compliance and automation',; icon: Lock,; benefits: ['Consumer rights', 'Opt-out mechanisms', 'Data disclosure', 'Privacy notices']; },; {; title: 'HIPAA Compliance',; description: 'Healthcare data protection and privacy compliance',; icon: Heart,; benefits: ['PHI protection', 'Access controls', 'Audit trails', 'Risk assessment']; },; {; title: 'SOC 2 Compliance',; description: 'Security, availability, and confidentiality compliance',; icon: Award,; benefits: ['Security controls', 'Availability monitoring', 'Confidentiality measures', 'Audit support']; }; ]; ; const dataQualityMetrics = [; 'Completeness', 'Accuracy', 'Consistency', 'Timeliness', 'Validity', 'Uniqueness',; 'Integrity', 'Reliability', 'Accessibility', 'Usability', 'Relevance', 'Precision'; ]; ; const integrations = [; 'Snowflake', 'AWS S3', 'Azure Data Lake', 'Google BigQuery', 'Databricks', 'Apache Kafka',; 'MongoDB', 'PostgreSQL', 'MySQL', 'Oracle', 'SQL Server', 'Elasticsearch', 'Splunk',; 'Tableau', 'Power BI', 'Looker', 'Apache Airflow', 'dbt', 'Fivetran', 'Stitch'; ]; ; return (; <div className="min-h-screen bg-zion-blue text-white">;"";" {}";"";" <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-900/20 via-indigo-900/20 to-purple-900/20">";"";" <div className="max-w-7xl mx-auto text-center">; <motion.div;" initial={{ opacity: 0, y: 20 }};";" animate={{ opacity: 1, y: 0 }};";" transition={{ duration: 0.8  }};"";" >";"";" <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-medium mb-6">";"";" <Sparkles className="w-4 h-4 mr-2" />;";" AI-Powered Data Governance;"";" </div>";"";" <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">;";" AI Data Governance Platform;"";" </h1>";"";" <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;";" Master your data with AI-powered governance, compliance automation, and intelligent data quality management.;";" Ensure data security, compliance, and trust across your organization.;"";" </p>";"";" <div className="flex flex-col sm:flex-row gap-4 justify-center">;"";" <Link";"";" to="/contact";"";" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105";";" >;"";" Start Free Trial";"";" <ArrowRight className="ml-2 w-5 h-5" />;";" </Link>;"";" <Link";"";" to="#demo";"";" className="inline-flex items-center px-8 py-4 border border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"; >; Watch Demo; </Link>; </div>;" </motion.div>;";" </div>;";" </section>;"";" {}";"";" <section className="py-20 px-4 sm:px-6 lg:px-8">";"";" <div className="max-w-7xl mx-auto">;" <motion.div;";" initial={{ opacity: 0, y: 20 }};";" whileInView={{ opacity: 1, y: 0 }};"";" transition={{ duration: 0.8  }}";"";" className="text-center mb-16";"";" >";"";" <h2 className="text-3xl md:text-4xl font-bold mb-6">;";" Intelligent Data Governance Features;"";" </h2>";"";" <p className="text-xl text-gray-300 max-w-3xl mx-auto">; Our AI platform provides comprehensive data governance capabilities that scale with your business;" and ensure compliance with global regulations.;";" </p>;";" </motion.div>;";"";" <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">; {features.map((feature, index) => (; <motion.div;" key={index};";" initial={{ opacity: 0, y: 20 }};";" whileInView={{ opacity: 1, y: 0 }};"";" transition={{ duration: 0.6, delay: index * 0.1 }}";"";" className="bg-gradient-to-br from-blue-900/20 to-indigo-900/20 p-8 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300";"";" >";"";" <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6">";"";" <feature.icon className="w-8 h-8 text-white" />;"";" </div>";"";" <h3 className="text-xl font-bold mb-4">{feature.title}</h3>";"";" <p className="text-gray-300 mb-4">{feature.description}</p>";"";" <ul className="space-y-2">;"";" {feature.benefits.map((benefit, idx) => (";"";" <li key={idx} className="flex items-center text-sm text-gray-400">";"";" <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />; {benefit}; </li>; ))}; </ul>; </motion.div>; ))};" </div>;";" </div>;";" </section>;"";" {}";"";" <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/10 to-indigo-900/10">";"";" <div className="max-w-7xl mx-auto">;" <motion.div;";" initial={{ opacity: 0, y: 20 }};";" whileInView={{ opacity: 1, y: 0 }};"";" transition={{ duration: 0.8  }}";"";" className="text-center mb-16";"";" >";"";" <h2 className="text-3xl md:text-4xl font-bold mb-6">;";" Global Compliance Support;"";" </h2>";"";" <p className="text-xl text-gray-300 max-w-3xl mx-auto">;" Stay compliant with major global regulations through automated compliance monitoring and reporting.;";" </p>;";" </motion.div>;";"";" <div className="grid grid-cols-1 md:grid-cols-2 gap-8">; {complianceFrameworks.map((framework, index) => (; <motion.div;" key={index};";" initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }};";" whileInView={{ opacity: 1, x: 0 }};"";" transition={{ duration: 0.6, delay: index * 0.1 }}";"";" className="bg-gradient-to-br from-indigo-900/20 to-purple-900/20 p-8 rounded-2xl border border-indigo-500/20";"";" >";"";" <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6">";"";" <framework.icon className="w-8 h-8 text-white" />;"";" </div>";"";" <h3 className="text-xl font-bold mb-4">{framework.title}</h3>";"";" <p className="text-gray-300 mb-4">{framework.description}</p>";"";" <ul className="space-y-2">;"";" {framework.benefits.map((benefit, idx) => (";"";" <li key={idx} className="flex items-center text-sm text-gray-400">";"";" <CheckCircle className="w-4 h-4 text-indigo-400 mr-2 flex-shrink-0" />; {benefit}; </li>; ))}; </ul>; </motion.div>; ))};" </div>;";" </div>;";" </section>;"";" {}";"";" <section className="py-20 px-4 sm:px-6 lg:px-8">";"";" <div className="max-w-7xl mx-auto">;" <motion.div;";" initial={{ opacity: 0, y: 20 }};";" whileInView={{ opacity: 1, y: 0 }};"";" transition={{ duration: 0.8  }}";"";" className="text-center mb-16";"";" >";"";" <h2 className="text-3xl md:text-4xl font-bold mb-6">;";" Comprehensive Data Quality Metrics;"";" </h2>";"";" <p className="text-xl text-gray-300 max-w-3xl mx-auto">;" Monitor and improve data quality across 12 key dimensions with AI-powered insights and recommendations.;";" </p>;";" </motion.div>;";"";" <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">; {dataQualityMetrics.map((metric, index) => (; <motion.div;" key={index};";" initial={{ opacity: 0, scale: 0.8 }};";" whileInView={{ opacity: 1, scale: 1 }};"";" transition={{ duration: 0.4, delay: index * 0.05 }}";"";" className="bg-gradient-to-br from-purple-800/20 to-blue-800/20 p-4 rounded-xl border border-purple-500/20 text-center hover:border-blue-500/40 transition-all duration-300";"";" >";"";" <span className="text-sm font-medium text-gray-300">{metric}</span>; </motion.div>; ))};" </div>;";" </div>;";" </section>;"";" {}";"";" <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/10 to-indigo-900/10">";"";" <div className="max-w-7xl mx-auto">;" <motion.div;";" initial={{ opacity: 0, y: 20 }};";" whileInView={{ opacity: 1, y: 0 }};"";" transition={{ duration: 0.8  }}";"";" className="text-center mb-16";"";" >";"";" <h2 className="text-3xl md:text-4xl font-bold mb-6">;";" Enterprise Integrations;"";" </h2>";"";" <p className="text-xl text-gray-300 max-w-3xl mx-auto">; Connect with your existing data infrastructure.Our platform integrates with leading data platforms,;" databases, and analytics tools.;";" </p>;";" </motion.div>;";"";" <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6">; {integrations.map((integration, index) => (; <motion.div;" key={index};";" initial={{ opacity: 0, scale: 0.8 }};";" whileInView={{ opacity: 1, scale: 1 }};"";" transition={{ duration: 0.4, delay: index * 0.05 }}";"";" className="bg-gradient-to-br from-gray-800/20 to-gray-700/20 p-4 rounded-xl border border-gray-600/20 text-center hover:border-blue-500/40 transition-all duration-300";"";" >";"";" <span className="text-sm font-medium text-gray-300">{integration}</span>; </motion.div>; ))};" </div>;";" </div>;";" </section>;"";" {}";"";" <section className="py-20 px-4 sm:px-6 lg:px-8">";"";" <div className="max-w-7xl mx-auto">;" <motion.div;";" initial={{ opacity: 0, y: 20 }};";" whileInView={{ opacity: 1, y: 0 }};"";" transition={{ duration: 0.8  }}";"";" className="text-center mb-16";"";" >";"";" <h2 className="text-3xl md:text-4xl font-bold mb-6">;";" Transparent Pricing Plans;"";" </h2>";"";" <p className="text-xl text-gray-300 max-w-3xl mx-auto">; Choose the plan that fits your data governance needs.All plans include our core AI features;" and come with a 14-day free trial.;";" </p>;";" </motion.div>;";"";" <div className="grid grid-cols-1 md:grid-cols-3 gap-8">; {pricingPlans.map((plan, index) => (; <motion.div; key={index}; initial={{ opacity: 0, y: 20 }}; whileInView={{ opacity: 1, y: 0 }}; transition={{ duration: 0.6, delay: index * 0.1 }}; className={`bg-gradient-to-br from-blue-900/20 to-indigo-900/20 p-8 rounded-2xl border ${; plan.popular; ? 'border-blue-500/50 shadow-lg shadow-blue-500/20';" : 'border-blue-500/20';";" } relative`};";" >;"";" {plan.popular && (";"";" <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">";"";" <span className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-semibold">; Most Popular;" </span>;";" </div>;";" )};";"";" <div className="text-center mb-6">";"";" <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>";"";" <div className="flex items-baseline justify-center mb-2">";"";" <span className="text-4xl font-bold">{plan.price}</span>";"";" <span className="text-gray-400 ml-1">{plan.period}</span>;"";" </div>";"";" <p className="text-gray-400">{plan.description}</p>;";" </div>;";"";" <ul className="space-y-3 mb-8">;"";" {plan.features.map((feature, idx) => (";"";" <li key={idx} className="flex items-center text-gray-300">";"";" <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />; {feature}; </li>; ))}; </ul>; <Link; to={plan.name === 'Enterprise' ? '/contact' : '/pricing'}; className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${; plan.popular; ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white hover:from-blue-600 hover:to-indigo-700'; : 'border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'; }`}; >; {plan.cta}; </Link>; </motion.div>; ))};" </div>;";" </div>;";" </section>;"";" {}";"";" <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/20 to-indigo-900/20">";"";" <div className="max-w-4xl mx-auto text-center">; <motion.div;" initial={{ opacity: 0, y: 20 }};";" whileInView={{ opacity: 1, y: 0 }};";" transition={{ duration: 0.8  }};"";" >";"";" <h2 className="text-3xl md:text-4xl font-bold mb-6">;";" Ready to Master Your Data?;"";" </h2>";"";" <p className="text-xl text-gray-300 mb-8">;";" Join leading organizations already using our AI platform to ensure data quality,;";" compliance, and trust across their data ecosystem.;"";" </p>";"";" <div className="flex flex-col sm:flex-row gap-4 justify-center">;"";" <Link";"";" to="/contact";"";" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105";";" >;"";" Start Your Free Trial";"";" <ArrowRight className="ml-2 w-5 h-5" />;";" </Link>;"";" <Link";"";" to="/pricing";"";" className="inline-flex items-center px-8 py-4 border border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"; >; View Full Pricing; </Link>; </div>;" </motion.div>;";" </div>;";" </section>;"";" {}";"";" <section className="py-16 px-4 sm:px-6 lg:px-8">";"";" <div className="max-w-4xl mx-auto text-center">; <motion.div;" initial={{ opacity: 0, y: 20 }};";" whileInView={{ opacity: 1, y: 0 }};";" transition={{ duration: 0.8  }};"";" >";"";" <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>";"";" <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";"";" <div className="flex flex-col items-center">";"";" <Phone className="w-8 h-8 text-blue-400 mb-4" />";"";" <h3 className="font-semibold mb-2">Phone</h3>";"";" <p className="text-gray-400">+1 302 464 0950</p>;"";" </div>";"";" <div className="flex flex-col items-center">";"";" <Mail className="w-8 h-8 text-blue-400 mb-4" />";"";" <h3 className="font-semibold mb-2">Email</h3>";"";" <p className="text-gray-400">kleber@ziontechgroup.com</p>;"";" </div>";"";" <div className="flex flex-col items-center">";"";" <MapPin className="w-8 h-8 text-blue-400 mb-4" />";"";" <h3 className="font-semibold mb-2">Address</h3>";"";" <p className="text-gray-400">364 E Main St STE 1008<br / / / / / />Middletown DE 19709</p>; </div>; </div>; </motion.div>; </div>;" </section>;";" </div>;";" );"";" }";"";"
+import React from "react"
+import Link from "next/link"
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from "lucide-react"
+  );
+export default function AiDataGovernancePlatform() {
+  const features = [
+    "Feature 1",
+    "Feature 2",
+    "Feature 3"
+  ]
+  const benefits = [
+    "Benefit 1",
+    "Benefit 2",
+    "Benefit 3"
+  ]
+  const useCases = [
+    "Use Case 1",
+    "Use Case 2",
+    "Use Case 3"
+  ]
+  const pricing = [
+      }
+];
+    {
+      name: "Professional",
+      price: "$799/mo",
+      details: ["Up to 50 users", "Advanced features", "Priority support", "99.9% SLA"]
+    }
+  ];
+    {
+      name: "Enterprise",
+      price: "$1,999/mo",
+    }
+  ];
+
+  ]
+  return (
+    <div className="min-h-screen bg-white">
+      <section className="bg-gradient-to-br from-indigo-500 via-blue-500 to-cyan-500 py-20 text-center">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
+            <Database className="w-4 h-4 mr-2"  />
+            AI-Powered Ai Data Governance Platform Intelligence
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Ai Data Governance Platform Platform</h1>
+          <p className="text-indigo-100 text-xl">
+            Transform your ai data governance platform operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.
+          </p>
+        </div>
+      </section>
+      <section className="py-16 max-w-6xl mx-auto px-6">
+        <div className="grid md:grid-cols-2 gap-10">
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Ai Data Governance Platform Features</h2>
+            <ul className="space-y-3">
+              {features.map((feature, index) => (
+                <li key={index} className="flex items-start">
+                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />
+                  <span className="text-gray-700">{feature}</span>
+                </li>
+              ))}
+
+            </ul>
+            <div className="mt-6 text-sm text-gray-600">
+              Built with enterprise-grade security, SOC 2 compliance, and 99.9% uptime SLA.
+            </div>
+          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Competitive Pricing</h3>
+            <div className="grid md:grid-cols-3 gap-4">
+              {pricing.map((tier, index) => (
+                <div key={index} className="rounded-lg p-4 border border-gray-200 hover:border-indigo-300 transition-colors">
+                  <div className="text-lg font-semibold mb-1">{tier.name}</div>
+                  <div className="text-2xl font-bold text-indigo-600 mb-2">{tier.price}</div>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    {tier.details.map((detail, detailIndex) => (
+                      <li key={detailIndex}>{detail}</li>
+                    ))}
+
+                  </ul>
+                </div>
+              ))}
+
+            </div>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link href="/pricing" className="px-5 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors inline-flex items-center">
+                View Full Pricing <ArrowRight className="w-4 h-4 ml-2"  />
+              </Link>
+              <Link href="/contact" className="px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors inline-flex items-center">
+                Contact Sales <Phone className="w-4 h-4 ml-2"  />
+              </Link>
+            </div>
+      </section>
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Key Benefits</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
+                <div className="flex items-center mb-3">
+                  <Zap className="w-6 h-6 text-indigo-600 mr-3"  />
+                  <h3 className="text-lg font-semibold text-gray-900">Performance</h3>
+                </div>
+                <p className="text-gray-600">{benefit}</p>
+              </div>
+            ))}
+
+          </div>
+      </section>
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Industries We Serve</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {useCases.map((industry, index) => (
+              <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-3">
+                  <Target className="w-5 h-5 text-indigo-600 mr-3"  />
+                  <h3 className="text-lg font-semibold text-gray-900">{industry}</h3>
+                </div>
+                <p className="text-gray-600">Comprehensive ai data governance platform solutions tailored for {industry.toLowerCase()}.</p>
+              </div>
+            ))}
+
+          </div>
+      </section>
+      <section className="py-16 bg-indigo-600">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Ai Data Governance Platform?</h2>
+          <p className="text-indigo-100 text-xl mb-8">
+            Get started with our AI-powered ai data governance platform platform today.
+          </p>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <Link href="/contact" className="px-8 py-3 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center">
+              Get Started <ArrowRight className="w-4 h-4 ml-2"  />
+            </Link>
+            <Link href="/demo" className="px-8 py-3 border border-white text-white rounded-lg hover:bg-white/10 transition-colors inline-flex items-center">
+              Schedule Demo <Mail className="w-4 h-4 ml-2"  />
+            </Link>
+          </div>
+      </section>
+    </div>
+  ),

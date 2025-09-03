@@ -79,7 +79,12 @@ temp/
 .vite/
 core
 
-# Automation and reports (exclude from build)
+# Automation logs and data (continuously changing)
+automation/logs/*.log
+automation/logs/*.runtime.log
+automation/data/*.json
+!automation/data/autonomous-config.json
+<<<<<<< HEAD# Automation and reports (exclude from build)
 automation/
 link-reports/
 maintenance-reports/

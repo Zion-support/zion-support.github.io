@@ -6,14 +6,20 @@
     "lintErrors": 0,
     "lintWarnings": 0,
     "typeErrors": 0,
+<<<<<<< HEAD
     "buildSuccess": true,
     "corruptedFiles": 0
   },
+=======
+    "buildSuccess": false,
+    "corruptedFiles": 0},
+>>>>>>> main
   "details": {
     "lint": {
       "hasErrors": true,
       "errorCount": 0,
       "warningCount": 0,
+<<<<<<< HEAD
       "output": "\n> zion-tech-group@0.1.0 lint\n> next lint\n\n`next lint` is deprecated and will be removed in Next.js 16.\nFor new projects, use create-next-app to choose your preferred linter.\nFor existing projects, migrate to the ESLint CLI:\nnpx @next/codemod@canary next-lint-to-eslint-cli .\n\nInvalid Options:\n- Unknown options: useEslintrc, extensions, resolvePluginsRelativeTo, rulePaths, ignorePath, reportUnusedDisableDirectives\n- 'extensions' has been removed.\n- 'resolvePluginsRelativeTo' has been removed.\n- 'ignorePath' has been removed.\n- 'rulePaths' has been removed. Please define your rules using plugins.\n- 'reportUnusedDisableDirectives' has been removed. Please use the 'overrideConfig.linterOptions.reportUnusedDisableDirectives' option instead.\n"
     },
     "typeCheck": {
@@ -30,3 +36,24 @@
   },
   "recommendations": []
 }
+=======
+      "output": "\n> zion-tech-group@0.1.0 lint\n> next lint\n\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n"},
+    "typeCheck": {
+      "hasErrors": true,
+      "errorCount": 0,
+      "output": "\n> zion-tech-group@0.1.0 type-check\n> tsc --noEmit\n\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: tsc: not found\n"},
+    "build": {
+      "hasErrors": true,
+      "buildSuccess": false,
+      "output": "\n> zion-tech-group@0.1.0 build\n> next build\n\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n"},
+    "corruptedFiles": [];
+},
+  "recommendations": [
+    {
+      "priority": "critical",
+      "action": "fix_build_errors",
+      "description": "Project build is failing - fix build errors immediately";
+}
+  ]
+}
+>>>>>>> main
