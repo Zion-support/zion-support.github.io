@@ -17,6 +17,9 @@ const ServicesOverview = lazy(() => import('./pages/services-overview'));
 const AIContentGenerationSuite = lazy(() => import('./pages/services/ai-content-generation-suite'));
 const CloudMigrationServices = lazy(() => import('./pages/services/cloud-migration-services'));
 const SmartCRMPlatform = lazy(() => import('./pages/services/smart-crm-platform'));
+const AICustomerChurnPredictor = lazy(() => import('./pages/services/ai-customer-churn-predictor'));
+const AIFraudDetectionPlatform = lazy(() => import('./pages/services/ai-fraud-detection-platform'));
+const AIContentCreationStudio = lazy(() => import('./pages/services/ai-content-creation-studio'));
 
 // Simple Header component
 const Header = () => (
@@ -69,6 +72,9 @@ function App() {
             <Route path="/services/ai-content-generation-suite" element={<AIContentGenerationSuite />} />
             <Route path="/services/cloud-migration-services" element={<CloudMigrationServices />} />
             <Route path="/services/smart-crm-platform" element={<SmartCRMPlatform />} />
+            <Route path="/services/ai-customer-churn-predictor" element={<AICustomerChurnPredictor />} />
+            <Route path="/services/ai-fraud-detection-platform" element={<AIFraudDetectionPlatform />} />
+            <Route path="/services/ai-content-creation-studio" element={<AIContentCreationStudio />} />
             <Route path="*" element={<HomePage />} />
           </Routes>
         </Suspense>

@@ -6,11 +6,15 @@ import { REAL_MICRO_SAAS_SERVICES_2025 } from "../../data/realMicroSaasServices2
 export default function Index() {
   const features = [
     "AI-powered customer churn prediction with 94% accuracy",
-    "Real-time fraud detection and prevention",
+    "Real-time fraud detection and prevention with 99.2% accuracy",
     "Advanced supply chain optimization algorithms",
     "Healthcare diagnostics with 96% accuracy",
     "Intelligent content creation and marketing automation",
-    "Predictive maintenance for industrial equipment"
+    "Predictive maintenance for industrial equipment",
+    "AI trading algorithms for financial markets",
+    "Smart home automation and IoT management",
+    "Legal document analysis and compliance monitoring",
+    "Voice assistant and natural language processing"
   ]
   const benefits = [
     "Reduce operational costs by 25-40%",
@@ -31,22 +35,21 @@ export default function Index() {
   const pricing = [
     {
       name: "Starter",
-      price: "$99/mo",
-      details: ["Basic AI features", "Up to 1,000 users", "Email support", "Standard SLA"]
+      price: "$299/mo",
+      details: ["Basic AI features", "Up to 10,000 users", "Email support", "Standard SLA", "14-day free trial"]
     },
     {
       name: "Professional",
-      price: "$499/mo",
-      details: ["Advanced AI features", "Up to 10,000 users", "Priority support", "99.9% SLA"]
+      price: "$799/mo",
+      details: ["Advanced AI features", "Up to 50,000 users", "Priority support", "99.9% SLA", "API access", "30-day free trial"]
     },
     {
       name: "Enterprise",
       price: "$1,999/mo",
-      details: ["Full AI suite", "Unlimited users", "24/7 support", "99.99% SLA", "Custom integrations"]
+      details: ["Full AI suite", "Unlimited users", "24/7 support", "99.99% SLA", "Custom integrations", "White-label options", "60-day free trial"]
     }
   ];
-
-  ]
+  
   return (
     <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-indigo-500 via-blue-500 to-cyan-500 py-20 text-center">
@@ -146,7 +149,48 @@ export default function Index() {
               </a>
             </div>
       </section>
+
+      {/* Featured Services */}
       <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Featured AI Services</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {REAL_MICRO_SAAS_SERVICES_2025.slice(0, 6).map((service) => (
+              <div key={service.id} className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                    <Brain className="w-6 h-6 text-indigo-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900">{service.name}</h3>
+                    <p className="text-sm text-gray-600">{service.category}</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-4 text-sm">{service.description}</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl font-bold text-indigo-600">{service.pricing}</span>
+                  <Link 
+                    href={service.link}
+                    className="text-indigo-600 hover:text-indigo-700 font-semibold text-sm"
+                  >
+                    Learn More →
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Link 
+              href="/services/comprehensive-micro-saas-showcase" 
+              className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
+            >
+              View All 20+ AI Services <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Key Benefits</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -194,4 +238,5 @@ export default function Index() {
           </div>
       </section>
     </div>
-  ),
+  );
+}
