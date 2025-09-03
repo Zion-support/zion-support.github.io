@@ -4,26 +4,30 @@ const React = dynamic(() => import('react'), { ssr: false })
     <>
 <Head>
         <title>Careers - Zion Tech Group</title>
-        <meta name = "description content="Join" our team of innovative developers, AI engineers, and technology experts. Explore career opportunities at Zion Tech Group." />"
-        <meta name="viewport content="width=device-width," initial-scale=1" />
+        <meta 
+          name="description" 
+          content="Join our team of innovative developers, AI engineers, and technology experts. Explore career opportunities at Zion Tech Group." 
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       "
-<Layout title = "Careers,"
-description="Join" our team of innovative developers and technology experts"
+<Layout 
+        title="Careers"
+        description="Join our team of innovative developers and technology experts"
       >
         {/*   */}"
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20>"
-          <div className="container" mx-auto px-4 text-center">"
-            <h1 className="text-5xl md: text-6xl font-bold mb-6>"
-              Join Our <span className="text-transparent" bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Team</span>
-            </h1>"
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8>'
+        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Join Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Team</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
               Be part of a team that's building the future of technology. Work on cutting-edge projects with the latest tools and technologies.
             </p>"
-            <div className="flex" flex-col sm:flex-row gap-4 justify-center">"
-              <button className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300>
-                View Open Positions"
-                <ArrowRight className="ml-2" w-5 h-5" />
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
+                View Open Positions
+                <ArrowRight className="ml-2 w-5 h-5" />
               </button>"
               <button className="inline-flex items-center px-8 py-3 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300>
                 Learn About Our Culture,

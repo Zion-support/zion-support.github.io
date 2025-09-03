@@ -8,22 +8,24 @@ const Footer = dynamic(() => import('../src/components/Footer'), { ssr: false })
     <>
 <Head>
         <title>Download Brochures - Zion Tech Group</title>
-        <meta name = "description content="Download" our comprehensive brochures to learn more about our AI services, IT solutions, and micro SaaS development capabilities." />"
-        <meta name="viewport content="width=device-width," initial-scale=1" />"
-        <link rel="canonical href="https:" //ziontechgroup.com/brochure" />
+        <meta 
+          name="description" 
+          content="Download our comprehensive brochures to learn more about our AI services, IT solutions, and micro SaaS development capabilities." 
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://ziontechgroup.com/brochure" />
       </Head>
       
       <Navigation />
       "
-      <main className="min-h-screen bg-white>,
-        {/*   */}"
-        <section className="bg-gradient-to-br" from-blue-50 to-indigo-100 py-20">"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>"
-            <div className=text-center">"
-              <h1 className="text-5xl font-bold text-gray-900 mb-6>"
-                Download Our <span className=text-blue-600">Brochures</span>
-              </h1>"
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8>,
+      <main className="min-h-screen bg-white">
+        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-5xl font-bold text-gray-900 mb-6">
+                Download Our <span className="text-blue-600">Brochures</span>
+              </h1>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
                 Get detailed information about our services, case studies, and success stories. Download our comprehensive brochures to learn more about how we can help your business.
               </p>
             </div>
@@ -31,11 +33,11 @@ const Footer = dynamic(() => import('../src/components/Footer'), { ssr: false })
         </section>
 
         {/*   */}"
-        <section className="py-20" bg-white">"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>"
-            <div className="text-center" mb-16">"
-              <h2 className="text-3xl font-bold text-gray-900 mb-4>Available Brochures</h2>"
-              <p className="text-lg" text-gray-600">
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Available Brochures</h2>
+              <p className="text-lg text-gray-600">
                 Choose the brochure that best fits your information needs,
               </p>
             </div>
