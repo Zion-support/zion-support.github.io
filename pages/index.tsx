@@ -13,16 +13,16 @@ export default function Home() {
     <>
       <Head>
         <title>Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions</title>
-        <meta name="description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 340+ innovative services including quantum computing, AI automation, blockchain, edge computing, and enterprise technology solutions." />
+        <meta name="description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 450+ innovative services including quantum computing, AI automation, blockchain, edge computing, 5G networks, and enterprise technology solutions." />
         <meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, quantum computing, blockchain, edge computing, 5G, IoT, MLOps, DevSecOps" />
         <link rel="canonical" href={contact.site} />
         <meta property="og:title" content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions" />
-        <meta property="og:description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 340+ innovative services including quantum computing, AI automation, blockchain, edge computing, and enterprise technology solutions." />
+        <meta property="og:description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 450+ innovative services including quantum computing, AI automation, blockchain, edge computing, 5G networks, and enterprise technology solutions." />
         <meta property="og:url" content={contact.site} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions" />
-        <meta name="twitter:description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 340+ innovative services including quantum computing, AI automation, blockchain, edge computing, and enterprise technology solutions." />
+        <meta name="twitter:description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 450+ innovative services including quantum computing, AI automation, blockchain, edge computing, 5G networks, and enterprise technology solutions." />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -64,16 +64,10 @@ export default function Home() {
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
             <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
-<<<<<<< HEAD
-              We deliver cutting-edge technology solutions with 150+ micro SaaS products, 
-              100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization 
-              to AI automation, quantum computing to blockchain solutions, we help businesses scale 
-              efficiently and securely in the digital age.
-=======
-              We deliver cutting-edge technology solutions with 150+ innovative micro SaaS products, 
-              90+ advanced AI services, and 100+ comprehensive IT solutions. From quantum computing 
-              to AI automation, we help businesses scale efficiently and securely with next-generation technology.
->>>>>>> 72143897074 (feat: Add 30+ new innovative services across micro SaaS, AI, and IT categories)
+              We deliver cutting-edge technology solutions with 200+ innovative micro SaaS products, 
+              120+ advanced AI services, and 130+ comprehensive IT solutions. From quantum computing 
+              to AI automation, edge computing to blockchain solutions, we help businesses scale 
+              efficiently and securely with next-generation technology.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -90,19 +84,15 @@ export default function Home() {
 
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-blue-400 mb-2">150+</h3>
+                <h3 className="text-2xl font-bold text-blue-400 mb-2">200+</h3>
                 <p className="text-slate-300">Micro SaaS Products</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-<<<<<<< HEAD
-                <h3 className="text-2xl font-bold text-purple-400 mb-2">100+</h3>
-=======
-                <h3 className="text-2xl font-bold text-purple-400 mb-2">90+</h3>
->>>>>>> 72143897074 (feat: Add 30+ new innovative services across micro SaaS, AI, and IT categories)
+                <h3 className="text-2xl font-bold text-purple-400 mb-2">120+</h3>
                 <p className="text-slate-300">AI Services</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-green-400 mb-2">100+</h3>
+                <h3 className="text-2xl font-bold text-green-400 mb-2">130+</h3>
                 <p className="text-slate-300">IT Solutions</p>
               </div>
             </div>
@@ -120,15 +110,15 @@ export default function Home() {
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-colors">
                 <h3 className="text-2xl font-bold mb-4 text-blue-400">Micro SaaS Products</h3>
                 <p className="text-slate-300 mb-6">
-                  Innovative, focused software solutions including AI-Powered Video Clip Maker, 
-                  Smart Contract Analyzer, Cybersecurity Threat Intelligence, and 50+ more specialized tools.
+                  Innovative, focused software solutions including AI-Powered Video Content Analyzer, 
+                  Carbon Footprint Tracker, Edge Computing Optimization, and 100+ more specialized tools.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
-                  <li>• AI-Powered Video Clip Maker</li>
-                  <li>• Smart Contract Analyzer</li>
-                  <li>• Cybersecurity Threat Intelligence</li>
-                  <li>• Multi-Language Website Translator</li>
-                  <li>• Predictive Inventory Optimizer</li>
+                  <li>• AI-Powered Video Content Analyzer</li>
+                  <li>• Carbon Footprint Tracker & Optimizer</li>
+                  <li>• Edge Computing Optimization Platform</li>
+                  <li>• AI-Powered Content Moderation Platform</li>
+                  <li>• Smart Resource Booking System</li>
                 </ul>
                 <Link href="/micro-saas" className="text-blue-400 hover:text-blue-300 font-semibold">
                   View All Micro SaaS →
@@ -138,15 +128,15 @@ export default function Home() {
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-colors">
                 <h3 className="text-2xl font-bold mb-4 text-purple-400">AI Services</h3>
                 <p className="text-slate-300 mb-6">
-                  Advanced artificial intelligence solutions including autonomous AI agents, 
-                  financial trading systems, legal document analysis, and 40+ more AI-powered services.
+                  Advanced artificial intelligence solutions including autonomous research assistants, 
+                  medical image analysis, algorithmic trading systems, and 60+ more AI-powered services.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
-                  <li>• Autonomous AI Agents</li>
-                  <li>• AI-Powered Financial Trading</li>
-                  <li>• AI Legal Document Analysis</li>
-                  <li>• AI-Powered Voice Analytics</li>
-                  <li>• AI-Powered Search & Discovery</li>
+                  <li>• AI-Powered Autonomous Research Assistant</li>
+                  <li>• AI-Powered Medical Image Analysis</li>
+                  <li>• AI-Powered Algorithmic Trading System</li>
+                  <li>• AI-Powered Cybersecurity Threat Hunter</li>
+                  <li>• AI-Powered Drug Discovery Platform</li>
                 </ul>
                 <Link href="/ai-services" className="text-purple-400 hover:text-purple-300 font-semibold">
                   View All AI Services →
@@ -156,15 +146,15 @@ export default function Home() {
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-colors">
                 <h3 className="text-2xl font-bold mb-4 text-green-400">IT & Cloud Services</h3>
                 <p className="text-slate-300 mb-6">
-                  Comprehensive IT solutions including quantum computing consulting, blockchain & Web3 solutions, 
-                  DevSecOps automation, and 40+ more enterprise-grade services.
+                  Comprehensive IT solutions including AI infrastructure & MLOps, 5G network implementation, 
+                  zero trust security architecture, and 60+ more enterprise-grade services.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
-                  <li>• Quantum Computing Consulting</li>
-                  <li>• Blockchain & Web3 Solutions</li>
-                  <li>• DevSecOps & Security Automation</li>
-                  <li>• Enterprise Data Platform</li>
-                  <li>• High-Performance Computing Solutions</li>
+                  <li>• AI Infrastructure & MLOps Platform</li>
+                  <li>• 5G Network Implementation & Optimization</li>
+                  <li>• Zero Trust Security Architecture</li>
+                  <li>• Data Mesh Architecture Implementation</li>
+                  <li>• Multi-Cloud Strategy & Management</li>
                 </ul>
                 <Link href="/it-services" className="text-green-400 hover:text-green-300 font-semibold">
                   View All IT Services →

@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Mail, Code, Cog, Search } from 'lucide-react';
+import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Mail, Code, Cog, Search, Users, BarChart3, Globe } from 'lucide-react';
 
 export default function AIServices() {
   const contact = {
@@ -1021,6 +1021,336 @@ export default function AIServices() {
         'Reduced transportation costs',
         'Improved fleet efficiency',
         'Advanced autonomous capabilities'
+      ]
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Autonomous Research Assistant',
+      description: 'Intelligent research automation that conducts literature reviews, data analysis, and generates comprehensive research reports.',
+      features: [
+        'Automated literature review and synthesis',
+        'Data collection and analysis from multiple sources',
+        'Research report generation and formatting',
+        'Citation management and verification',
+        'Research gap identification',
+        'Integration with academic databases'
+      ],
+      pricing: '$3,000 – $15,000/project',
+      perUnit: '$0.50 – $2.00 per research query',
+      timeline: '4–8 weeks',
+      benefits: [
+        '80% reduction in research time',
+        'Comprehensive data analysis',
+        'Automated report generation',
+        'Enhanced research accuracy'
+      ]
+    },
+    {
+      icon: Eye,
+      name: 'AI-Powered Medical Image Analysis',
+      description: 'Advanced medical imaging analysis with disease detection, diagnosis assistance, and treatment recommendations.',
+      features: [
+        'Medical image classification and analysis',
+        'Disease detection and diagnosis assistance',
+        'Treatment recommendation algorithms',
+        'Patient outcome prediction',
+        'Integration with medical systems',
+        'Radiologist workflow optimization'
+      ],
+      pricing: '$5,000 – $25,000/setup',
+      perUnit: '$0.10 – $1.00 per image analysis',
+      timeline: '6–12 weeks',
+      benefits: [
+        '95% accuracy in image analysis',
+        'Faster diagnosis and treatment',
+        'Reduced medical errors',
+        'Improved patient outcomes'
+      ]
+    },
+    {
+      icon: TrendingUp,
+      name: 'AI-Powered Algorithmic Trading System',
+      description: 'Advanced algorithmic trading with machine learning models for market prediction and automated trading strategies.',
+      features: [
+        'Machine learning market prediction models',
+        'Automated trading strategy execution',
+        'Risk management and portfolio optimization',
+        'Real-time market analysis',
+        'Backtesting and performance analytics',
+        'Integration with trading platforms'
+      ],
+      pricing: '$10,000 – $50,000/setup',
+      perUnit: 'Performance-based fees (10-20% of profits)',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Enhanced trading performance',
+        'Automated risk management',
+        '24/7 market monitoring',
+        'Data-driven trading decisions'
+      ]
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Cybersecurity Threat Hunter',
+      description: 'Intelligent threat hunting with behavioral analysis, anomaly detection, and automated incident response.',
+      features: [
+        'Behavioral analysis and anomaly detection',
+        'Automated threat hunting and investigation',
+        'Incident response automation',
+        'Threat intelligence integration',
+        'Security orchestration and automation',
+        'Integration with SIEM systems'
+      ],
+      pricing: '$8,000 – $40,000/setup',
+      perUnit: '$0.05 – $0.50 per security event',
+      timeline: '6–12 weeks',
+      benefits: [
+        'Proactive threat detection',
+        'Automated incident response',
+        'Reduced security incidents',
+        'Enhanced security posture'
+      ]
+    },
+    {
+      icon: FileText,
+      name: 'AI-Powered Legal Document Analysis',
+      description: 'Intelligent legal document processing with contract analysis, risk assessment, and compliance monitoring.',
+      features: [
+        'Contract analysis and risk assessment',
+        'Legal document summarization',
+        'Compliance monitoring and alerts',
+        'Legal research automation',
+        'Case law analysis and citation',
+        'Integration with legal management systems'
+      ],
+      pricing: '$4,000 – $20,000/setup',
+      perUnit: '$0.10 – $1.00 per document',
+      timeline: '6–10 weeks',
+      benefits: [
+        '90% reduction in document review time',
+        'Enhanced risk identification',
+        'Automated compliance monitoring',
+        'Improved legal accuracy'
+      ]
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Personalization Engine',
+      description: 'Advanced personalization with user behavior analysis, content recommendation, and experience optimization.',
+      features: [
+        'User behavior analysis and modeling',
+        'Content recommendation algorithms',
+        'Experience personalization engine',
+        'A/B testing and optimization',
+        'Real-time personalization',
+        'Integration with marketing platforms'
+      ],
+      pricing: '$3,000 – $15,000/setup',
+      perUnit: '$0.01 – $0.10 per personalization event',
+      timeline: '4–8 weeks',
+      benefits: [
+        '40% improvement in engagement',
+        'Personalized user experiences',
+        'Increased conversion rates',
+        'Data-driven optimization'
+      ]
+    },
+    {
+      icon: Database,
+      name: 'AI-Powered Data Quality Management',
+      description: 'Intelligent data quality assessment with automated cleaning, validation, and enrichment processes.',
+      features: [
+        'Automated data quality assessment',
+        'Data cleaning and validation',
+        'Data enrichment and augmentation',
+        'Duplicate detection and removal',
+        'Data lineage tracking',
+        'Integration with data platforms'
+      ],
+      pricing: '$2,000 – $10,000/setup',
+      perUnit: '$0.001 – $0.01 per data record',
+      timeline: '3–6 weeks',
+      benefits: [
+        '95% improvement in data quality',
+        'Automated data cleaning',
+        'Reduced data errors',
+        'Enhanced data reliability'
+      ]
+    },
+    {
+      icon: Mic,
+      name: 'AI-Powered Real-Time Translation',
+      description: 'Advanced real-time translation with context awareness, cultural adaptation, and multi-modal support.',
+      features: [
+        'Real-time speech and text translation',
+        'Context-aware translation algorithms',
+        'Cultural adaptation and localization',
+        'Multi-modal translation support',
+        'Offline translation capabilities',
+        'Integration with communication platforms'
+      ],
+      pricing: '$2,000 – $12,000/setup',
+      perUnit: '$0.01 – $0.10 per translation',
+      timeline: '4–8 weeks',
+      benefits: [
+        '99% translation accuracy',
+        'Real-time communication support',
+        'Cultural sensitivity',
+        'Multi-language capabilities'
+      ]
+    },
+    {
+      icon: BarChart3,
+      name: 'AI-Powered Business Intelligence Platform',
+      description: 'Intelligent business intelligence with automated insights, predictive analytics, and natural language queries.',
+      features: [
+        'Automated insight generation',
+        'Natural language query processing',
+        'Predictive analytics and forecasting',
+        'Automated report generation',
+        'Data visualization and dashboards',
+        'Integration with business systems'
+      ],
+      pricing: '$5,000 – $25,000/setup',
+      perUnit: '$0.10 – $1.00 per query',
+      timeline: '6–10 weeks',
+      benefits: [
+        'Faster business insights',
+        'Automated report generation',
+        'Data-driven decision making',
+        'Reduced analysis time'
+      ]
+    },
+    {
+      icon: Globe,
+      name: 'AI-Powered Supply Chain Optimization',
+      description: 'Intelligent supply chain management with demand forecasting, route optimization, and risk assessment.',
+      features: [
+        'Demand forecasting and planning',
+        'Route optimization algorithms',
+        'Supply chain risk assessment',
+        'Inventory optimization',
+        'Supplier performance analysis',
+        'Integration with ERP systems'
+      ],
+      pricing: '$8,000 – $40,000/setup',
+      perUnit: '$0.05 – $0.50 per optimization event',
+      timeline: '8–16 weeks',
+      benefits: [
+        '30% reduction in supply chain costs',
+        'Improved demand forecasting',
+        'Optimized logistics operations',
+        'Enhanced risk management'
+      ]
+    },
+    {
+      icon: Code,
+      name: 'AI-Powered Code Generation Assistant',
+      description: 'Intelligent code generation with automated testing, documentation, and optimization suggestions.',
+      features: [
+        'Automated code generation',
+        'Code optimization suggestions',
+        'Automated testing and validation',
+        'Documentation generation',
+        'Code review and quality analysis',
+        'Integration with development tools'
+      ],
+      pricing: '$2,000 – $10,000/setup',
+      perUnit: '$0.01 – $0.10 per code generation',
+      timeline: '3–6 weeks',
+      benefits: [
+        '50% faster development cycles',
+        'Improved code quality',
+        'Automated testing and documentation',
+        'Reduced development costs'
+      ]
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Drug Discovery Platform',
+      description: 'Intelligent drug discovery with molecular analysis, compound screening, and clinical trial optimization.',
+      features: [
+        'Molecular analysis and modeling',
+        'Compound screening and optimization',
+        'Clinical trial design and optimization',
+        'Drug interaction analysis',
+        'Biomarker identification',
+        'Integration with research databases'
+      ],
+      pricing: '$15,000 – $75,000/setup',
+      perUnit: '$1.00 – $10.00 per analysis',
+      timeline: '12–24 weeks',
+      benefits: [
+        'Faster drug discovery process',
+        'Improved success rates',
+        'Reduced development costs',
+        'Enhanced drug efficacy'
+      ]
+    },
+    {
+      icon: Eye,
+      name: 'AI-Powered Quality Control System',
+      description: 'Intelligent quality control with defect detection, process optimization, and predictive maintenance.',
+      features: [
+        'Automated defect detection',
+        'Process optimization algorithms',
+        'Predictive maintenance scheduling',
+        'Quality trend analysis',
+        'Root cause analysis',
+        'Integration with manufacturing systems'
+      ],
+      pricing: '$5,000 – $25,000/setup',
+      perUnit: '$0.01 – $0.10 per inspection',
+      timeline: '6–12 weeks',
+      benefits: [
+        '99% defect detection accuracy',
+        'Reduced quality issues',
+        'Optimized production processes',
+        'Predictive maintenance capabilities'
+      ]
+    },
+    {
+      icon: TrendingUp,
+      name: 'AI-Powered Energy Management System',
+      description: 'Intelligent energy optimization with consumption analysis, renewable integration, and cost optimization.',
+      features: [
+        'Energy consumption analysis',
+        'Renewable energy integration',
+        'Cost optimization algorithms',
+        'Demand response management',
+        'Energy storage optimization',
+        'Integration with smart grid systems'
+      ],
+      pricing: '$4,000 – $20,000/setup',
+      perUnit: '$0.01 – $0.10 per energy optimization',
+      timeline: '6–10 weeks',
+      benefits: [
+        '25% reduction in energy costs',
+        'Optimized renewable energy usage',
+        'Improved energy efficiency',
+        'Automated energy management'
+      ]
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Risk Assessment Platform',
+      description: 'Intelligent risk assessment with predictive modeling, scenario analysis, and mitigation strategies.',
+      features: [
+        'Predictive risk modeling',
+        'Scenario analysis and simulation',
+        'Risk mitigation strategies',
+        'Real-time risk monitoring',
+        'Compliance risk assessment',
+        'Integration with risk management systems'
+      ],
+      pricing: '$6,000 – $30,000/setup',
+      perUnit: '$0.05 – $0.50 per risk assessment',
+      timeline: '6–12 weeks',
+      benefits: [
+        'Proactive risk management',
+        'Improved risk prediction accuracy',
+        'Automated risk mitigation',
+        'Enhanced decision making'
       ]
     }
   ];
