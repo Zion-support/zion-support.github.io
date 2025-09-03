@@ -1,36 +1,39 @@
-import React, { useEffect, useState, useCallback } from 'react;
-import { motion, AnimatePresence } from 'framer-motion;
-import { ;'  BarChart3, Users, ;
-  Eye, MousePointer, ;
-  Clock, TrendingUp, ;
-  Globe, Smartphone,;
-  Monitor, Tablet,;
-  Download, Share2,;
-  Heart, MessageCircle;,
-} from 'lucide-react;
-;
-interface AnalyticsData {pageViews: number;
+import React, { useEffect, useState, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  BarChart3, Users, 
+  Eye, MousePointer, 
+  Clock, TrendingUp, 
+  Globe, Smartphone,
+  Monitor, Tablet,
+  Download, Share2,
+  Heart, MessageCircle,
+} from 'lucide-react';
+
+interface AnalyticsData {
+  pageViews: number;
   uniqueVisitors: number;
   bounceRate: number;
   avgSessionDuration: number;
   topPages: Array<{ page: string; views: number }>;
   trafficSources: Array<{ source: string; percentage: number }>;
   deviceTypes: Array<{ device: string; percentage: number }>;
-userEngagement: {;scrollDepth: number;
+  userEngagement: {
+    scrollDepth: number;
     clickThroughRate: number;
     timeOnPage: number;
-    socialShares: number;,
-};
+    socialShares: number;
+  };
   realTimeUsers: number;
-  conversionRate: number;,
+  conversionRate: number;
 }
-  const [isLoading, setIsLoading] = useState(true);,
-}
-  const [selectedTimeRange, setSelectedTimeRange] = useState("7d");,
-}
-  const fetchAnalyticsData = useCallback(async () => {;
-    setIsLoading(true);,
-}
+
+const EnhancedAnalytics: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [selectedTimeRange, setSelectedTimeRange] = useState("7d");
+
+  const fetchAnalyticsData = useCallback(async () => {
+    setIsLoading(true);
     try: {,;
       // comment;
       await: new Promise(resolve => setTimeout(resolve, 1000));,

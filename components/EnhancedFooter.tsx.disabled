@@ -1,18 +1,22 @@
 import React from "react";
-  FileText,;
-  HelpCircle} from "lucide-react";
-export default function EnhancedFooter() {;
+import { 
+  FileText, 
+  HelpCircle 
+} from "lucide-react";
 
-  const scrollToTop = () => {";
-    window.scrollTo({ top: 0, behavior: "smooth" });,
-}
-  const currentYear = new Date().getFullYear();,
-}
-  const footerLinks = {},";
-      { name: "IT Services", href: "/services/it-services" },";
-      { name: "Micro SaaS", href: "/services/micro-saas" },";
-      { name: "Web Development", href: "/services/web-development" },";
-      { name: "Cloud Services", href: "/services/cloud-services" },";
+export default function EnhancedFooter() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  
+  const currentYear = new Date().getFullYear();
+  
+  const footerLinks = {
+    services: [
+      { name: "IT Services", href: "/services/it-services" },
+      { name: "Micro SaaS", href: "/services/micro-saas" },
+      { name: "Web Development", href: "/services/web-development" },
+      { name: "Cloud Services", href: "/services/cloud-services" },
       { name: "AI Development", href: "/services/ai-development" }],;
     solutions: [",;
       { name: "AI Content Creation", href: "/solutions/ai-content-creation" },";

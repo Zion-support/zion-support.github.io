@@ -1,19 +1,19 @@
 import React, { useState } from "react";
-import { ;
-  Brain, ;
-  TrendingUp, ;
-  Zap, ;
-  MessageCircle, ;
-  Users, ;
-  Shield,;
-  CheckCircle,;
-  AlertCircle,;
-  Clock,;
-  Activity,;
-  Bot;,
+import { 
+  Brain, 
+  TrendingUp, 
+  Zap, 
+  MessageCircle, 
+  Users, 
+  Shield,
+  CheckCircle,
+  AlertCircle,
+  Clock,
+  Activity,
+  Bot,
 } from "lucide-react";
-;
-interface AIConversation {;
+
+interface AIConversation {
   id: string;
   type: "chat" | "task" | "analysis" | "recommendation";
   title: string;
