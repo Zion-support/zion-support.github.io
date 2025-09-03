@@ -1,5 +1,5 @@
-# Handle client-side routing for SPA
-/*    /index.html   200
+# Handle client-side routing for SPA - REMOVED as it was causing all pages to serve the same content
+# /*    /index.html   200
 
 # Normalize trailing slashes for key marketing pages
 /services      /services     301!

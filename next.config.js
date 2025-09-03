@@ -8,7 +8,7 @@ const nextConfig = {
     dirs: ['pages', 'components', 'lib', 'hooks']
   },
   typescript: { ignoreBuildErrors: true },
-  trailingSlash: true,
+  trailingSlash: false,
   generateBuildId: async () => {
     return 'build-' + Date.now()
   },

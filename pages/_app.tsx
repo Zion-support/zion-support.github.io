@@ -7,19 +7,42 @@ import '../styles/globals.css';
 
 function Header(): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 
   return (
     <header className="header">
       <nav className="header-nav">
         <Link href="/" className="header-logo">
-          Zion Tech Group
+          <span className="logo-text">Zion Tech Group</span>
+          <span className="logo-tagline">Innovative Technology Solutions</span>
         </Link>
         
         <div className="header-nav-links">
           <Link href="/" className="header-nav-link">Home</Link>
-          <Link href="/services" className="header-nav-link">All Services</Link>
-          <Link href="/services-catalog" className="header-nav-link">Catalog</Link>
+          
+          {/* Services Dropdown */}
+          <div 
+            className="header-nav-dropdown"
+            onMouseEnter={() => setServicesDropdownOpen(true)}
+            onMouseLeave={() => setServicesDropdownOpen(false)}
+          >
+            <span className="header-nav-link dropdown-trigger">
+              Services <span className="dropdown-arrow">▼</span>
+            </span>
+            <div className={`dropdown-menu ${servicesDropdownOpen ? 'open' : ''}`}>
+              <Link href="/services" className="dropdown-item">All Services</Link>
+              <Link href="/micro-saas" className="dropdown-item">Micro SaaS Products</Link>
+              <Link href="/ai-services" className="dropdown-item">AI Services</Link>
+              <Link href="/it-services" className="dropdown-item">IT Services</Link>
+              <Link href="/services-catalog" className="dropdown-item">Services Catalog</Link>
+            </div>
+          </div>
+
+          <Link href="/about" className="header-nav-link">About</Link>
+          <Link href="/blog" className="header-nav-link">Blog</Link>
           <Link href="/pricing" className="header-nav-link">Pricing</Link>
+          <Link href="/faq" className="header-nav-link">FAQ</Link>
+          <Link href="/request-quote" className="header-nav-link">Get Quote</Link>
           <Link href="/contact" className="header-nav-cta">Contact</Link>
         </div>
 
@@ -36,8 +59,15 @@ function Header(): any {
       <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
         <Link href="/" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Home</Link>
         <Link href="/services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>All Services</Link>
+        <Link href="/micro-saas" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Micro SaaS</Link>
+        <Link href="/ai-services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>AI Services</Link>
+        <Link href="/it-services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>IT Services</Link>
         <Link href="/services-catalog" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
+        <Link href="/about" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>About</Link>
+        <Link href="/blog" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
         <Link href="/pricing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
+        <Link href="/faq" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
+        <Link href="/request-quote" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Get Quote</Link>
         <Link href="/contact" className="header-nav-cta" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
       </div>
     </header>
@@ -50,64 +80,95 @@ function Footer(): any {
       <div className="footer-content">
         {/* Company Info */}
         <div className="footer-section">
-          <div className="footer-logo">Zion Tech Group</div>
+          <div className="footer-logo">
+            <span className="logo-text">Zion Tech Group</span>
+            <span className="logo-tagline">Innovative Technology Solutions</span>
+          </div>
           <p>
             Leading provider of innovative micro SaaS products, AI services, and IT solutions. 
-            Empowering businesses with cutting-edge technology.
+            Empowering businesses with cutting-edge technology and digital transformation.
           </p>
-          <div className="text-sm space-y-2">
-            <div>📞 <a href="tel:+13024640950" className="text-blue-300">+1 302 464 0950</a></div>
-            <div>✉️ <a href="mailto:kleber@ziontechgroup.com" className="text-blue-300">kleber@ziontechgroup.com</a></div>
-            <div>📍 364 E Main St STE 1008, Middletown DE 19709</div>
+          <div className="contact-info">
+            <div className="contact-item">
+              <span className="contact-icon">📞</span>
+              <a href="tel:+13024640950" className="contact-link">+1 302 464 0950</a>
+            </div>
+            <div className="contact-item">
+              <span className="contact-icon">✉️</span>
+              <a href="mailto:kleber@ziontechgroup.com" className="contact-link">kleber@ziontechgroup.com</a>
+            </div>
+            <div className="contact-item">
+              <span className="contact-icon">📍</span>
+              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+            </div>
           </div>
         </div>
 
         {/* Services */}
         <div className="footer-section">
-          <h3>Services</h3>
-          <Link href="/services">All Services</Link>
-          <Link href="/micro-saas">Micro SaaS Products</Link>
-          <Link href="/ai-services">AI Services</Link>
-          <Link href="/it-services">IT Services</Link>
-          <Link href="/services-catalog">Services Catalog</Link>
-          <Link href="/pricing">Pricing</Link>
-          <div className="text-sm mt-2 space-y-1">
-            <div>• 120+ Micro SaaS Products</div>
-            <div>• 80+ AI Services</div>
-            <div>• 80+ IT Solutions</div>
+          <h3>Our Services</h3>
+          <div className="footer-links">
+            <Link href="/services" className="footer-link">All Services</Link>
+            <Link href="/micro-saas" className="footer-link">Micro SaaS Products</Link>
+            <Link href="/ai-services" className="footer-link">AI Services</Link>
+            <Link href="/it-services" className="footer-link">IT Services</Link>
+            <Link href="/services-catalog" className="footer-link">Services Catalog</Link>
+            <Link href="/pricing" className="footer-link">Pricing Plans</Link>
+          </div>
+          <div className="service-stats">
+            <div className="stat-item">• 120+ Micro SaaS Products</div>
+            <div className="stat-item">• 80+ AI Services</div>
+            <div className="stat-item">• 80+ IT Solutions</div>
+            <div className="stat-item">• 24/7 Support</div>
           </div>
         </div>
 
-        {/* Quick Links */}
+        {/* Company */}
         <div className="footer-section">
-          <h3>Quick Links</h3>
-          <Link href="/">Home</Link>
-          <Link href="/about">About Us</Link>
-          <Link href="/contact">Contact Us</Link>
-          <Link href="/faq">FAQ</Link>
-          <Link href="/privacy">Privacy Policy</Link>
-          <Link href="/terms">Terms of Service</Link>
-          <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer">Main Website</a>
+          <h3>Company</h3>
+          <div className="footer-links">
+            <Link href="/" className="footer-link">Home</Link>
+            <Link href="/about" className="footer-link">About Us</Link>
+            <Link href="/blog" className="footer-link">Blog</Link>
+            <Link href="/contact" className="footer-link">Contact Us</Link>
+            <Link href="/faq" className="footer-link">FAQ</Link>
+            <Link href="/request-quote" className="footer-link">Request Quote</Link>
+            <Link href="/privacy" className="footer-link">Privacy Policy</Link>
+            <Link href="/terms" className="footer-link">Terms of Service</Link>
+          </div>
         </div>
 
-        {/* Contact CTA */}
+        {/* Get Started */}
         <div className="footer-section">
           <h3>Get Started</h3>
-          <p className="text-sm">
-            Ready to transform your business with our innovative solutions?
+          <p className="footer-description">
+            Ready to transform your business with our innovative solutions? 
+            Let's discuss your project requirements.
           </p>
-          <div className="space-y-2">
+          <div className="footer-cta">
             <Link href="/contact" className="footer-cta-button">Request Quote</Link>
             <a href="tel:+13024640950" className="footer-cta-secondary">Call Now</a>
+            <a href="mailto:kleber@ziontechgroup.com" className="footer-cta-secondary">Email Us</a>
+          </div>
+          <div className="social-links">
+            <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="social-link">
+              🌐 Main Website
+            </a>
           </div>
         </div>
       </div>
       
       <div className="footer-bottom">
-        <small>
-          © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
-          <a href="/privacy">Privacy Policy</a>
-        </small>
+        <div className="footer-bottom-content">
+          <small>
+            © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+          </small>
+          <div className="footer-bottom-links">
+            <Link href="/privacy" className="footer-bottom-link">Privacy Policy</Link>
+            <Link href="/terms" className="footer-bottom-link">Terms of Service</Link>
+            <Link href="/contact" className="footer-bottom-link">Contact</Link>
+          </div>
+        </div>
       </div>
     </footer>
   );
