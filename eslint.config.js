@@ -8,7 +8,12 @@ import next from '@next/eslint-plugin-next';
 export default [
   js.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: [
+      'scripts/**/*.{js,jsx,ts,tsx}',
+      'automation/**/*.{js,jsx,ts,tsx}',
+      'utils/**/*.{js,jsx,ts,tsx}',
+      'tests/**/*.{js,jsx,ts,tsx}',
+    ],
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {
@@ -53,7 +58,22 @@ export default [
   },
   {
     ignores: [
-      '**/*',
+      'node_modules/**',
+      '.next/**',
+      'dist/**',
+      'out/**',
+      'coverage/**',
+      'build/**',
+      'src/**',
+      'temp_backup/**',
+      'temp_broken_components/**',
+      'src.disabled/**',
+      'solutions.disabled/**',
+      'tests.disabled/**',
+      'types.disabled/**',
+      'zion-os.disabled/**',
+      'public/**',
+      'z*/*.disabled/**',
     ],
   },
 ];
