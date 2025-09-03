@@ -19,7 +19,9 @@ import {
   Rocket,
   ShoppingCart,
   BarChart3,
-  Info
+  Info,
+  Building,
+  Cpu
 } from 'lucide-react';
 
 const Navigation = () => {
@@ -37,20 +39,28 @@ const Navigation = () => {
   }, []);
 
   const navigationItems = [
-  { name: 'Home', href: '/' },
+    { name: 'Home', href: '/' },
     { 
       name: 'Services', 
       href: '/services', 
       dropdown: [
-        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI services' },
+        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI solutions' },
         { name: 'IT Services', href: '/it-services', icon: Network, description: 'Comprehensive IT solutions' },
         { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Scalable SaaS solutions' },
-        { name: 'Web Development', href: '/services/web-development', icon: Code, description: 'Custom web applications' },
-        { name: 'Cloud Services', href: '/services/cloud-services', icon: Cloud, description: 'Cloud infrastructure' },
-        { name: 'AI Development', href: '/services/ai-development', icon: Brain, description: 'AI development services' }
+        { name: 'Services Overview', href: '/services-overview', icon: BarChart3, description: 'All services overview' },
+        { name: 'Blockchain Solutions', href: '/blockchain-solutions', icon: Shield, description: 'Blockchain & Web3' },
+        { name: 'IoT Solutions', href: '/iot-solutions', icon: Cpu, description: 'IoT & Edge Computing' }
       ]
     },
-    { name: 'Solutions', href: '/solutions' },
+    { 
+      name: 'Solutions', 
+      href: '/solutions',
+      dropdown: [
+        { name: 'Enterprise Solutions', href: '/solutions', icon: Building, description: 'Enterprise-grade solutions' },
+        { name: 'Startup Solutions', href: '/solutions', icon: Rocket, description: 'Startup-focused solutions' },
+        { name: 'Industry Solutions', href: '/solutions', icon: Globe, description: 'Industry-specific solutions' }
+      ]
+    },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
     { name: 'Blog', href: '/blog' },
@@ -58,9 +68,9 @@ const Navigation = () => {
   ];
 
   const contactInfo = [
-  { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
+    { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
     { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
-    { icon: MapPin, text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
+    { icon: MapPin, text: '364 E Main St STE 1008, Middletown DE 19709', href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709' }
   ];
 
   const toggleDropdown = (name: string) => {

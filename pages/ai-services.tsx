@@ -198,9 +198,93 @@ export default function AIServices() {
       features: [
         'Automated code generation from specifications,Code review and optimization suggestions,Bug detection and fixing recommendations,Documentation generation,Test case generation and validation,Integration with development workflows',
       ],
-      pricing: '$4,000 - $15, 000/month',
-      delivery: '6-10 weeks',
+      pricing: '$4,000 - $15,000/month',
+      delivery: '5-8 weeks',
       category: 'Development AI',
+    },
+    {
+      title: 'AI-Powered Legal Document Analysis',
+      description:
+        'Intelligent legal document review, contract analysis, and compliance monitoring',
+      icon: FileText,
+      features: [
+        'Automated contract review and analysis,Risk assessment and clause identification,Compliance monitoring and reporting,Legal research and precedent analysis,Document comparison and version control,Integration with legal management systems',
+      ],
+      pricing: '$5,500 - $18,000/month',
+      delivery: '6-10 weeks',
+      category: 'Legal AI',
+    },
+    {
+      title: 'AI-Powered Healthcare Diagnostics',
+      description:
+        'Medical image analysis, diagnostic assistance, and patient monitoring systems',
+      icon: Heart,
+      features: [
+        'Medical image analysis and interpretation,Diagnostic assistance and recommendations,Patient monitoring and alert systems,Drug interaction and allergy checking,Medical record analysis and insights,Integration with healthcare systems',
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '10-16 weeks',
+      category: 'Healthcare AI',
+    },
+    {
+      title: 'AI-Powered Financial Trading',
+      description:
+        'Algorithmic trading, market analysis, and risk management systems',
+      icon: TrendingUp,
+      features: [
+        'Algorithmic trading strategy development,Real-time market analysis and predictions,Risk management and portfolio optimization,High-frequency trading algorithms,Market sentiment analysis,Compliance and regulatory reporting',
+      ],
+      pricing: '$12,000 - $50,000/month',
+      delivery: '12-20 weeks',
+      category: 'Financial AI',
+    },
+    {
+      title: 'AI-Powered Energy Management',
+      description:
+        'Smart energy optimization, consumption analysis, and sustainability solutions',
+      icon: Zap,
+      features: [
+        'Energy consumption analysis and optimization,Predictive maintenance for energy systems,Smart grid management and optimization,Renewable energy integration,Cost optimization and billing analysis,Carbon footprint tracking and reporting',
+      ],
+      pricing: '$6,000 - $25,000/month',
+      delivery: '8-14 weeks',
+      category: 'Energy AI',
+    },
+    {
+      title: 'AI-Powered Autonomous Vehicles',
+      description:
+        'Self-driving vehicle systems, traffic optimization, and fleet management',
+      icon: Car,
+      features: [
+        'Autonomous vehicle control systems,Traffic flow optimization and management,Fleet management and routing,Vehicle-to-vehicle communication,Real-time traffic analysis,Predictive maintenance for vehicles',
+      ],
+      pricing: '$15,000 - $60,000/month',
+      delivery: '16-24 weeks',
+      category: 'Autonomous AI',
+    },
+    {
+      title: 'AI-Powered Environmental Monitoring',
+      description:
+        'Environmental data analysis, climate monitoring, and sustainability tracking',
+      icon: TreePine,
+      features: [
+        'Environmental data collection and analysis,Climate change monitoring and predictions,Air and water quality assessment,Wildlife and ecosystem monitoring,Sustainability metrics and reporting,Environmental compliance tracking',
+      ],
+      pricing: '$4,500 - $18,000/month',
+      delivery: '6-12 weeks',
+      category: 'Environmental AI',
+    },
+    {
+      title: 'AI-Powered Space Technology',
+      description:
+        'Satellite data analysis, space mission optimization, and astronomical research',
+      icon: Satellite,
+      features: [
+        'Satellite data processing and analysis,Space mission planning and optimization,Astronomical data analysis and discovery,Space debris tracking and management,Earth observation and monitoring,Space weather prediction and analysis',
+      ],
+      pricing: '$20,000 - $80,000/month',
+      delivery: '20-32 weeks',
+      category: 'Space AI',
     },
     {
       title: 'AI-Powered Market Research',

@@ -38,7 +38,11 @@ import {
   Car,
   TreePine,
   Satellite,
-  Mic
+  Mic,
+  ShoppingCart,
+  Search,
+  Package,
+  Share2
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -145,6 +149,61 @@ export default function MicroSaaS() {
       pricing: '$5,000 - $20,000/month',
       delivery: '6-10 weeks',
       category: 'Analytics SaaS'
+    },
+    {
+      title: 'AI-Powered E-Commerce Returns Manager',
+      description: 'Intelligent return processing system with automated label generation and tracking',
+      icon: ShoppingCart,
+      features: [
+        'Automated return request processing,Smart return label generation,Real-time return status tracking,Inventory management integration,Fraud detection and prevention,Analytics and reporting dashboard'
+      ],
+      pricing: '$1,800 - $6,500/month',
+      delivery: '2-4 weeks',
+      category: 'E-Commerce SaaS'
+    },
+    {
+      title: 'Remote Team Collaboration Hub',
+      description: 'Comprehensive platform for distributed teams with project management and communication',
+      icon: Users,
+      features: [
+        'Project management and task tracking,Real-time video conferencing,File sharing and collaboration,Team performance analytics,Integration with popular tools,White-label customization'
+      ],
+      pricing: '$2,200 - $8,000/month',
+      delivery: '3-5 weeks',
+      category: 'Collaboration SaaS'
+    },
+    {
+      title: 'AI SEO Optimization Suite',
+      description: 'Intelligent SEO analysis and optimization platform with content recommendations',
+      icon: Search,
+      features: [
+        'Automated SEO audits and analysis,Keyword research and optimization,Content gap analysis,Technical SEO monitoring,Competitor analysis and tracking,Performance reporting and insights'
+      ],
+      pricing: '$1,500 - $5,500/month',
+      delivery: '2-3 weeks',
+      category: 'SEO SaaS'
+    },
+    {
+      title: 'Smart Inventory Management System',
+      description: 'AI-powered inventory optimization with demand forecasting and automated reordering',
+      icon: Package,
+      features: [
+        'Demand forecasting and analytics,Automated reorder point management,Multi-location inventory tracking,Supplier management and integration,Cost optimization algorithms,Real-time inventory visibility'
+      ],
+      pricing: '$2,800 - $9,000/month',
+      delivery: '4-6 weeks',
+      category: 'Inventory SaaS'
+    },
+    {
+      title: 'AI-Powered Social Media Manager',
+      description: 'Intelligent social media automation with content scheduling and engagement analytics',
+      icon: Share2,
+      features: [
+        'Automated content scheduling,AI-generated social media posts,Engagement analytics and insights,Hashtag optimization,Influencer collaboration tools,Multi-platform management'
+      ],
+      pricing: '$1,200 - $4,500/month',
+      delivery: '2-3 weeks',
+      category: 'Social Media SaaS'
     },
     {
       title: 'Workflow Automation Engine',
@@ -1045,6 +1104,23 @@ export default function MicroSaaS() {
               Custom software solutions that solve specific business problems. From concept to deployment, 
               we build scalable micro SaaS applications tailored to your needs.
             </p>
+            <div className="mt-8 bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Market Insights</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-orange-600">$2.3B</div>
+                  <div className="text-gray-600">Micro SaaS Market Size</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-600">25%</div>
+                  <div className="text-gray-600">Annual Growth Rate</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-purple-600">$50K+</div>
+                  <div className="text-gray-600">Average Monthly Revenue</div>
+                </div>
+              </div>
+            </div>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
                 href="/contact"

@@ -197,6 +197,50 @@ export default function ITServices() {
       category: 'API Services'
     },
     {
+      title: 'AI-Powered IT Operations',
+      description: 'Intelligent IT operations with AI-driven automation and predictive maintenance',
+      icon: Brain,
+      features: [
+        'AI-driven incident detection and resolution,Predictive maintenance and capacity planning,Automated root cause analysis,Intelligent alert correlation and filtering,Self-healing infrastructure capabilities,IT operations analytics and insights'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: 'AI Operations'
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security implementation and management',
+      icon: Shield,
+      features: [
+        'Zero trust network architecture design,Identity and access management (IAM),Micro-segmentation implementation,Continuous security monitoring,Privileged access management,Security policy automation and enforcement'
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '8-16 weeks',
+      category: 'Security Services'
+    },
+    {
+      title: 'Green IT & Sustainability Solutions',
+      description: 'Sustainable IT practices and carbon footprint reduction strategies',
+      icon: TreePine,
+      features: [
+        'Energy-efficient infrastructure design,Carbon footprint assessment and reduction,Green cloud migration strategies,Sustainable procurement and lifecycle management,Environmental compliance and reporting,Renewable energy integration'
+      ],
+      pricing: '$4,000 - $20,000/month',
+      delivery: '6-12 weeks',
+      category: 'Sustainability Services'
+    },
+    {
+      title: 'Edge AI & Machine Learning Infrastructure',
+      description: 'Edge computing infrastructure for AI and machine learning workloads',
+      icon: Cpu,
+      features: [
+        'Edge AI infrastructure design and deployment,Distributed machine learning pipelines,Real-time inference optimization,Edge device management and monitoring,Hybrid cloud-edge AI solutions,Edge AI security and compliance'
+      ],
+      pricing: '$7,000 - $35,000/month',
+      delivery: '8-16 weeks',
+      category: 'Edge AI Services'
+    },
+    {
       title: 'Disaster Recovery & Business Continuity',
       description: 'Comprehensive disaster recovery planning and implementation',
       icon: Shield,
