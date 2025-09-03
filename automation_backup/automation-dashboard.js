@@ -25,7 +25,7 @@ class AutomationDashboard {
     fs.appendFileSync(this.logFile, logMessage)}
   loadAutomationSystems() {
     const systems = [
-      {
+  {
         name:,
   lint-monitor',
         path: 'lint-monitor.js,

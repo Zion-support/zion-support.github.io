@@ -23,7 +23,7 @@ import {
 
 const SitemapPage: React.FC = () => {
   const siteStructure = [
-    {
+  {
       category: 'Main Pages',
       icon: Home,
       pages: [

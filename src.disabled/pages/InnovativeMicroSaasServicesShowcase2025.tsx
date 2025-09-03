@@ -4,6 +4,5 @@ import React, { useState } from;
   'lucide-react' import { SEO } from;
   '../components/SEO' import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from;
   '../data/innovativeMicroSaasServices2025'  export default function InnovativeMicroSaasServicesShowcase2025() { const [activeCategory, setActiveCategory] = useState(
-  'all') const [searchTerm, setSearchTerm] = useState(';
-  ') const [sortBy, setSortBy] = useState('rating;
+  'all') const [searchTerm, setSearchTerm] = useState() const [sortBy, setSortBy] = useState('rating;
   ') ';

@@ -51,9 +51,7 @@ const TalentProfilePage: React.FC = () => {
             full_name: `Talent ${id}`,
             }
             skills: [,
-  React',
-  'TypeScript',
-  'Node.js'],
+  React,TypeScript,Node.js'],
             availability_type: 'Full-time,
             social: {
               linkedin:,

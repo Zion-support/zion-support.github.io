@@ -1,10 +1,27 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD:solutions.disabled/ai-content-creation.tsx
 // import SEO from '../../components/SEO';
 // import { Card } from '../../components/ui/Card';
 // import { Button } from '../../components/ui/Button';
 // import { Badge } from '../../components/ui/Badge';
+=======
+<<<<<<< HEAD
+import SEOHead from '../../components/SEOHead';
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+import { Card } from '../../components/ui/Card';
+import { Button } from '../../components/ui/Button';
+>>>>>>> main
+import { Badge } from '../../components/ui/Badge';
+<<<<<<< HEAD
+=======
+import { Button } from '../../components/ui/Button';
+import { Card } from '../../components/ui/Card';
+>>>>>>> main:pages/solutions/ai-content-creation.tsx
 import {
   Brain,
   ArrowRight,
@@ -23,13 +40,22 @@ import {
   BarChart3,
 } from 'lucide-react';
 
+>>>>>>> main
 export default function AIContentCreation() {
   const features = [
-    {
+  {
       icon: FileText,
       title: 'Blog Post Generation',
+<<<<<<< HEAD
+      description: 'Automatically generate high-quality blog posts with AI',
+=======
+<<<<<<< HEAD
       description:
         'Create engaging, SEO-optimized blog posts automatically with AI-powered content generation.',
+=======
+      description: 'Automatically generate high-quality blog posts with AI'
+>>>>>>> main
+>>>>>>> main
     },
     {
       icon: PenTool,
@@ -64,17 +90,21 @@ export default function AIContentCreation() {
   ];
 
   const pricingPlans = [
-    {
+  {
       name: 'Starter',
       price: '$299',
       period: '/month',
       description: 'Perfect for small businesses and content creators',
       features: [
+<<<<<<< HEAD
         'Up to 50 blog posts/month',
         'Social media content generation',
         'Basic SEO optimization',
         '2 languages supported',
         'Email support',
+=======
+        'Up to 50 blog posts/month,Social media content generation,2 languages supported,Email support',
+>>>>>>> main
       ],
       popular: false,
     },
@@ -84,21 +114,26 @@ export default function AIContentCreation() {
       period: '/month',
       description: 'Ideal for growing businesses and marketing teams',
       features: [
+<<<<<<< HEAD
         'Up to 200 blog posts/month',
         'Advanced social media campaigns',
         'Premium SEO optimization',
         '5 languages supported',
         'Content analytics dashboard',
         'Priority support',
+=======
+        'Up to 200 blog posts/month,Advanced social media campaigns,5 languages supported,Content analytics dashboard,Priority support',
+>>>>>>> main
       ],
       popular: true,
     },
     {
       name: 'Enterprise',
-      price: '$1,299',
+      price: '$1, 299',
       period: '/month',
       description: 'For large organizations with high content needs',
       features: [
+<<<<<<< HEAD
         'Unlimited blog posts',
         'Custom content templates',
         'Advanced AI models',
@@ -106,6 +141,9 @@ export default function AIContentCreation() {
         'Custom integrations',
         'Dedicated account manager',
         '24/7 phone support',
+=======
+        'Unlimited blog posts,Custom content templates,Advanced AI models,Unlimited languages,Custom integrations,Dedicated account manager,24/7 phone support',
+>>>>>>> main
       ],
       popular: false,
     },
@@ -113,10 +151,33 @@ export default function AIContentCreation() {
 
   return (
     <>
+<<<<<<< HEAD:solutions.disabled/ai-content-creation.tsx
       <Head>
         <title>AI Content Creation - Zion Tech Group</title>
         <meta name="description" content="Automated content generation using advanced AI models for blogs, social media, and marketing materials. Boost your content strategy with AI." />
         <meta name="keywords" content="AI content creation, automated content, blog generation, social media content, SEO optimization" />
+=======
+<<<<<<< HEAD
+      <SEOHead
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <SEO
+>>>>>>> main
+        title="AI Content Creation - Zion Tech Group"
+        description="Automated content generation using advanced AI models for blogs, social media, and marketing materials. Boost your content strategy with AI."
+        keywords="AI content creation, automated content, blog generation, social media content, SEO optimization"
+      />
+=======
+>>>>>>> main
+>>>>>>> main
+      <Head>
+        <title>AI Content Creation - Zion Tech Group</title>
+        <meta name="description" content="Automated content generation using advanced AI models for blogs, social media, and marketing materials. Boost your content strategy with AI." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://ziontechgroup.com/solutions/ai-content-creation" />
+>>>>>>> main:pages/solutions/ai-content-creation.tsx
       </Head>
 
       {/* Hero Section */}
@@ -136,7 +197,10 @@ export default function AIContentCreation() {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your content strategy with our advanced AI-powered
+<<<<<<< HEAD
               content creation platform. Generate high-quality, SEO-optimized
+=======
+>>>>>>> main
               content for blogs, social media, and marketing materials in
               minutes.
             </p>

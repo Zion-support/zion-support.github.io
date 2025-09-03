@@ -1,10 +1,28 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD:solutions.disabled/customer-support.tsx
 // import SEO from '../../components/SEO';
 // import { Card } from '../../components/ui/Card';
 // import { Button } from '../../components/ui/Button';
 // import { Badge } from '../../components/ui/Badge';
+=======
+<<<<<<< HEAD
+import SEOHead from '../../components/SEOHead';
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
+import { Card } from '../../components/ui/Card';
+import { Button } from '../../components/ui/Button';
+>>>>>>> main
+import { Badge } from '../../components/ui/Badge';
+<<<<<<< HEAD
+=======
+import { Button } from '../../components/ui/Button';
+import { Card } from '../../components/ui/Card';
+>>>>>>> main:pages/solutions/customer-support.tsx
 import {
   Headphones,
   ArrowRight,
@@ -18,9 +36,10 @@ import {
   Users,
 } from 'lucide-react';
 
+>>>>>>> main
 export default function CustomerSupport() {
   const features = [
-    {
+  {
       icon: Bot,
       title: 'AI Chatbots',
       description:
@@ -60,6 +79,24 @@ export default function CustomerSupport() {
 
   return (
     <>
+<<<<<<< HEAD:solutions.disabled/customer-support.tsx
+=======
+<<<<<<< HEAD
+      <SEOHead
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <SEO
+>>>>>>> main
+        title="Customer Support Platform - Zion Tech Group"
+        description="AI-powered customer support system with chatbots, ticket management, and knowledge base. Improve customer satisfaction."
+        keywords="customer support, AI chatbots, ticket management, knowledge base, helpdesk"
+      />
+=======
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main:pages/solutions/customer-support.tsx
       <Head>
         <title>Customer Support Platform - Zion Tech Group</title>
         <meta name="description" content="AI-powered customer support system with chatbots, ticket management, and knowledge base. Improve customer satisfaction." />
