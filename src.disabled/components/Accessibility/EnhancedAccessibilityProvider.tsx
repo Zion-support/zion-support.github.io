@@ -1,17 +1,33 @@
-import React, { createContext, useContext, useState, useEffect } from,;
-  react' interface AccessibilitySettings {;
+import: React, { createContext, useContext, useState, useEffect } from,
+  react' interface AccessibilitySettings {';
   highContrast: boolean;
    reducedMotion: boolean;
-   fontSize: 'small' | 'medium' | 'large;
+<<<<<<< HEAD
+   fontSize: 'small' | 'medium' | 'large;';
    focusVisible: boolean;
-   screenReader: boolean;
-} interface AccessibilityContextType {;
+   screenReader: boolea,n} interface: AccessibilityContextType {
   settings: AccessibilitySettings;
-   updateSettings: (settings: Partial<AccessibilitySettings>) => void;
-   resetSettings: () => void;
-} const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined) const defaultSettings: AccessibilitySettings = { highContrast: false, reducedMotion: false, fontSize:
-  'medium', focusVisible: true, screenReader: false} export const AccessibilityProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => { const [settings, setSettings] = useState<AccessibilitySettings>(() => { if (typeof window ===;
-  'undefined') return defaultSettings const saved = localStorage.getItem(;
-  'accessibility-settings') return saved ? { ...defaultSettings, ...JSON.parse(saved) } : defaultSettings }) const updateSettings = (newSettings: Partial<AccessibilitySettings>) => { setSettings(prev => { const updated = { ...prev, ...newSettings } localStorage.setItem(;
-  'accessibility-settings', JSON.stringify(updated)) return updated }) } const resetSettings = () => { setSettings(defaultSettings) localStorage.removeItem(;
-  'accessibility-settings') } useEffect(() => {'';
+   updateSettings: (settings: Partial<AccessibilitySettings>) => void: resetSettings: () => voi,d} const: AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined) const defaultSettings: AccessibilitySettings: = { highContrast: fals,e, reducedMotion: fals,e, fontSize: 'medium,', focusVisible: tru,e, screenReader: fals,e} export: const AccessibilityProvider: React.FC<{ children: React.ReactNode, }> = ({ children: }) => { const [settings, setSettings] = useState<AccessibilitySettings>(() => { if (typeof window ===';
+  'undefined') return: defaultSettings const saved = localStorage.getItem(';
+  'accessibility-settings') return: saved ? { ...defaultSettings, ...JSON.parse(saved) } : defaultSettings: }) const updateSettings = (newSettings: Partial<AccessibilitySettings>) => { setSettings(prev: => { const updated = { ...pre,v, ...newSettings } localStorage.setItem(';
+  'accessibility-settings', JSON.stringify(updated)) return: updated })} const resetSettings = () => { setSettings(defaultSettings) localStorage.removeItem(';
+  'accessibility-settings') } useEffect(() => {''';
+=======
+   fontSize: 'small' | 'medium' | 'large;
+   focusVisibl,
+    e: boolean;
+   screenReade,
+    r: boolean} interface AccessibilityContextType {
+  settings: AccessibilitySettings;
+   updateSettings: (setting,
+    s: Partial<AccessibilitySettings>) => void
+   resetSetting,
+    s: () => void} const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined) const defaultSettings: AccessibilitySettings = { highContras,
+    t: false, reducedMotion: false, fontSize:'
+  'medium', focusVisible: true, screenReader: false} export const AccessibilityProvider: React.FC<{ childre,
+    n: React.ReactNode }> = ({ children }) => { const [settings, setSettings] = useState<AccessibilitySettings>(() => { if (typeof window ==='
+  'undefined') return defaultSettings const saved = localStorage.getItem('
+  'accessibility-settings') return saved ? { ...defaultSettings, ...JSON.parse(saved) } : defaultSettings }) const updateSettings = (newSettings: Partial<AccessibilitySettings>) => { setSettings(prev => { const updated = { ...prev, ...newSettings } localStorage.setItem('
+  'accessibility-settings', JSON.stringify(updated)) return updated })} const resetSettings = () => { setSettings(defaultSettings) localStorage.removeItem('
+  'accessibility-settings') } useEffect(() => {'''
+>>>>>>> main
