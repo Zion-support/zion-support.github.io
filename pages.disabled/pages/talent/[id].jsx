@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';'
 import { useParams } from 'react-router-dom';'
 import SEO from '@/components/SEO';'
@@ -13,7 +14,11 @@ export default function TalentProfilePage() {}
     useEffect(() => {
         const fetchProfile = async () => {
             if (!id) {
-'setError('Profile not found');
+'
+    useEffect(() => {}
+        const fetchProfile = async () => {}
+            if (!id) {}
+                setError('Profile not found');
                 setLoading(false);
                 return;
 
@@ -26,7 +31,9 @@ export default function TalentProfilePage() {}
 
 :pages.disabled/pages/talent/[id].jsx
             catch (err) {
-'setError('Profile not found');
+'
+            catch (err) {}
+                setError('Profile not found');
 
             finally {}
                 setLoading(false);
@@ -47,7 +54,9 @@ export default function TalentProfilePage() {}
           </h1>
           {profile.bio && <p>{profile.bio}</p>}
 :pages.disabled/pages/talent/[id].jsx
-          {profile.hourly_rate && <p>Hourly Rate: ${profile.hourly_rate}/hr</p>}"{profile.skills && (<div>""
+          {profile.hourly_rate && <p>Hourly Rate: ${profile.hourly_rate}/hr</p>}"
+          {profile.hourly_rate && <p>Hourly Rate: ${profile.hourly_rate}/hr</p>}
+          {profile.skills && (<div>""
               <h2 className="font-semibold">Skills</h2>""
               <ul className="list-disc ml-5">
                 {profile.skills.map(skill => (<li key={skill}>{skill}</li>))}
@@ -56,7 +65,12 @@ export default function TalentProfilePage() {}
             </div>)}"
           {profile.social && (<div>""
               <h2 className="font-semibold">Social Links</h2>""
-              <ul className="list-disc ml-5">"{Object.entries(profile.social).map(([platform, url]) => (<li key={platform}>""
+              <ul className="list-disc ml-5">"
+            </div>)}
+          {profile.social && (<div>""
+              <h2 className="font-semibold">Social Links</h2>""
+              <ul className="list-disc ml-5">
+                {Object.entries(profile.social).map(([platform, url]) => (<li key={platform}>""
                     <a href={url} className="text-zion-cyan" target="_blank" rel="noopener noreferrer">
                       {platform}
                     </a>
@@ -65,5 +79,18 @@ export default function TalentProfilePage() {}
             </div>)}
         </div>
       </main>
+:src/pages/talent/[id].jsx
+    </>);
+}}}}}
+
+export { TalentProfilePage };
+
+export { TalentProfilePage };
+
+export { TalentProfilePage };
+
+export { TalentProfilePage };
     </>);'"`
 }}}}}'"`'"`
+=======
+>>>>>>> main

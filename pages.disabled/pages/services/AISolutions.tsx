@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/AISolutions.tsx
-import {Brain,
+import {
+
+import {}
+  Brain,
   Zap,
   TrendingUp,
   Users,
@@ -89,7 +93,13 @@ import {Brain,
 ;
 export function AISolutions(...args: unknown[]): unknown {
 
-  return<div className="min-h-screen bg-gray-900 text-white">
+  return 
+  Joy
+} from 'lucide-react';
+;
+export function AISolutions(...args: unknown[]): unknown {}
+  return;
+    <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}"
       <section className="relative overflow-hidden bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 py-20">"
         <div className="absolute inset-0 bg-black/20"></div>"
@@ -119,7 +129,18 @@ export function AISolutions(...args: unknown[]): unknown {
               </Link>
               <Link"
                 to="/request-quote""
-                className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-white/20">
+                className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-white/20"
+              <Link;
+                to="/contact""
+                className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2""
+              >
+                Get Started;
+                <ArrowRight className="w-5 h-5"  />
+              </Link>
+              <Link;
+                to="/request-quote""
+                className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-white/20""
+              >
                 Request Quote;
               </Link>
             </div>
@@ -140,7 +161,14 @@ export function AISolutions(...args: unknown[]): unknown {
           >"
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive AI Capabilities
-            </h2>"<p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            </h2>"
+            viewport={{ once: true }}
+            className="text-center mb-16""
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Comprehensive AI Capabilities;
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Our AI solutions cover the full spectrum of artificial;
               intelligence technologies, enabling businesses to harness the;
               power of machine learning and automation.
@@ -159,7 +187,13 @@ export function AISolutions(...args: unknown[]): unknown {
                 className="bg-gray-700/50 rounded-lg p-6 border border-gray-600 hover:border-cyan-500/50 transition-colors"
               >"
                 <div className="flex items-center gap-3 mb-4">"
-                  <div className="p-2 bg-cyan-500/20 rounded-lg">"<feature.icon className="w-6 h-6 text-cyan-400" />
+                  <div className="p-2 bg-cyan-500/20 rounded-lg">"
+                viewport={{ once: true }}
+                className="bg-gray-700/50 rounded-lg p-6 border border-gray-600 hover:border-cyan-500/50 transition-colors""
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-cyan-500/20 rounded-lg">
+                    <feature.icon className="w-6 h-6 text-cyan-400" />
                   </div>"
                   <h3 className="text-xl font-semibold text-white">
                     {feature.title}
@@ -172,7 +206,12 @@ export function AISolutions(...args: unknown[]): unknown {
                     <li
                       key={idx}"
                       className="flex items-center gap-2 text-sm text-gray-400"
-                    >"<CheckCircle className="w-4 h-4 text-cyan-400"  />
+                    >"
+                    <li;
+                      key={idx}
+                      className="flex items-center gap-2 text-sm text-gray-400""
+                    >
+                      <CheckCircle className="w-4 h-4 text-cyan-400"  />
                       {benefit}
                     </li>
                   ))}
@@ -196,7 +235,14 @@ export function AISolutions(...args: unknown[]): unknown {
           >"
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications
-            </h2>"<p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            </h2>"
+            viewport={{ once: true }}
+            className="text-center mb-16""
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Industry Applications;
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Discover how AI solutions are transforming industries and creating;
               new opportunities for innovation and growth.
             </p>
@@ -212,7 +258,11 @@ export function AISolutions(...args: unknown[]): unknown {
 :pages.disabled/pages/services/AISolutions.tsx
                 viewport={{ once: true }}"
                 className="bg-gradient-to-r from-gray-800 to-gray-700 rounded-lg p-8 border border-gray-600"
-              >"<div className="flex items-center gap-4 mb-6">
+              >"
+                viewport={{ once: true }}
+                className="bg-gradient-to-r from-gray-800 to-gray-700 rounded-lg p-8 border border-gray-600""
+              >
+                <div className="flex items-center gap-4 mb-6">
                   <div;
                     className={`p-3 rounded-lg bg-gradient-to-r ${useCase.color}`}
                   >"
@@ -228,7 +278,12 @@ export function AISolutions(...args: unknown[]): unknown {
                     <li
                       key={idx}"
                       className="flex items-center gap-3 text-gray-300"
-                    >"<ArrowRight className="w-4 h-4 text-cyan-400"  />
+                    >"
+                    <li;
+                      key={idx}
+                      className="flex items-center gap-3 text-gray-300""
+                    >
+                      <ArrowRight className="w-4 h-4 text-cyan-400"  />
                       {application}
                     </li>
                   ))}
@@ -252,7 +307,14 @@ export function AISolutions(...args: unknown[]): unknown {
           >"
             <h2 className="text-4xl font-bold text-white mb-4">
               Cutting-Edge Technologies
-            </h2>"<p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            </h2>"
+            viewport={{ once: true }}
+            className="text-center mb-16""
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Cutting-Edge Technologies;
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               We leverage the latest AI technologies and frameworks to deliver;
               robust, scalable, and efficient solutions for our clients.
             </p>
@@ -261,7 +323,10 @@ export function AISolutions(...args: unknown[]): unknown {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 :pages.disabled/pages/services/AISolutions.tsx
             {technologies.map(tech: unknown, index: unknown()
-              <motion.divkey={tech.name}
+              <motion.div
+            {technologies.map(tech: unknown, index: unknown (
+              <motion.div;
+                key={tech.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -270,7 +335,13 @@ export function AISolutions(...args: unknown[]): unknown {
                 className="bg-gray-700/30 rounded-lg p-6 border border-gray-600 hover:border-cyan-500/30 transition-colors"
               >"
                 <div className="flex items-center gap-3 mb-4">"
-                  <tech.icon className="w-6 h-6 text-cyan-400" />"<h3 className="text-lg font-semibold text-white">
+                  <tech.icon className="w-6 h-6 text-cyan-400" />"
+                viewport={{ once: true }}
+                className="bg-gray-700/30 rounded-lg p-6 border border-gray-600 hover:border-cyan-500/30 transition-colors""
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <tech.icon className="w-6 h-6 text-cyan-400" />
+                  <h3 className="text-lg font-semibold text-white">
                     {tech.name}
                   </h3>
                 </div>"
@@ -308,7 +379,18 @@ export function AISolutions(...args: unknown[]): unknown {
               </Link>
               <Link"
                 to="/services""
-                className="bg-transparent hover:bg-white/10 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-white">
+                className="bg-transparent hover:bg-white/10 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-white"
+              <Link;
+                to="/contact""
+                className="bg-white text-cyan-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2""
+              >
+                Schedule Consultation;
+                <ArrowRight className="w-5 h-5"  />
+              </Link>
+              <Link;
+                to="/services""
+                className="bg-transparent hover:bg-white/10 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-white""
+              >
                 Explore All Services;
               </Link>
             </div>
@@ -320,3 +402,5 @@ export function AISolutions(...args: unknown[]): unknown {
 
 export default AISolutions;
 '"`
+=======
+>>>>>>> main

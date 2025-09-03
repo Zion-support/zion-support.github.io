@@ -1,244 +1,287 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Phone, Mail, MapPin, ChevronDown } from 'lucide-react';
-import MainNavigation from './MainNavigation';
+;
+import { UserMenu } from './UserMenu.jsx';
+import { LanguageSelector } from './LanguageSelector.jsx';
+import { MainNavigation } from '@/layout/MainNavigation';
+import { MobileMenu } from './MobileMenu.jsx';
+import { useAuth } from '@/hooks/useAuth';
+import { useWhitelabel } from '@/context/WhitelabelContext';
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { generateSearchSuggestions } from "@/data/marketplaceData";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Menu, X, Sparkles } from "lucide-react";
+import { Search as SearchIcon } from "lucide-react";
 
-export default function Header() {
+export function Header({ hideLogin = false, customLogo, customTheme }) {  const { user } = useAuth();
+  const { isWhitelabel, primaryColor } = useWhitelabel();
+  const navigate = useNavigate();'
+  const [query, setQuery] = useState('');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const searchSuggestions = generateSearchSuggestions();
+  // If we have a white-label tenant and no specific customTheme is provided,'
+  // use the tenant's primary color;
+  const effectiveTheme =
+    customTheme ||
+    (isWhitelabel;
+      ? {}
+          primaryColor,'
+          backgroundColor: '#000000', // Default dark background''
+          textColor: '#ffffff', // Default light text;
+        }
+      : undefined);
+  const headerStyle = effectiveTheme;
+    ? {}
+        backgroundColor: effectiveTheme.backgroundColor,
+=======
+import React { useState, useEffect } from "react" const [query, setQuery] = useState(") const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false) const [isScrolled, setIsScrolled] = useState(false) const searchSuggestions = generateSearchSuggestions()";";";";";" const [query, setQuery] = useState(") const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false) const [isScrolled, setIsScrolled] = useState(false) const searchSuggestions = generateSearchSuggestions()";"
+export function Header({hideLogin = false, customLogo, customTheme }) {const { user } = useAuth()
+}
+  const {isWhitelabel, primaryColor } = useWhitelabel()
+}
+  const navigate = useNavigate()""react&apos;react-router-dom&apos;./Logo&apos;&apos;./UserMenu&apos;&apos;./LanguageSelector&apos;&apos;@/layout/MainNavigation&apos;&apos;./MobileMenu&apos;@/hooks/useAuth&apos;&apos;@/context/WhitelabelContext&apos;&apos;@/components/search/EnhancedSearchInput&apos;&apos;@/data/marketplaceData&apos;&apos;react-router-dom&apos;&apos;@/components/ui/button&apos;&apos;lucide-react&apos;&apos;lucide-react&apos;&apos, export function Header({ hideLogin = false, customLogo, customTheme }) {} const { user } = useAuth() const;const;const { isWhitelabel, primaryColor } = useWhitelabel()&apos; ;&apos;const navigate = useNavigate()";&apos;&apos; const [query, setQuery] = useState(&apos)&apos, const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false) const [isScrolled, setIsScrolled] = useState(false) const;const;const searchSuggestions = generateSearchSuggestions()";";&quot;"""""""""""""""""""""""""""""""""""""""""""" const [query, setQuery] = useState(") const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false) const [isScrolled, setIsScrolled] = useState(false) const searchSuggestions = generateSearchSuggestions()";""
+export function Header({ hideLogin = false, customLogo, customTheme }) {
+  const { user } = useAuth()
+}
+  const { isWhitelabel, primaryColor } = useWhitelabel();"
+  const navigate = useNavigate();""
+  const [query, setQuery] = useState()
+}
+  const navigate = useNavigate()
+}
+  const [query, setQuery] = useState()
+}
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+}
+  const [isScrolled, setIsScrolled] = useState(false)
+}
+  const searchSuggestions = generateSearchSuggestions()"
+  "
+  // comment
+const effectiveTheme = customTheme ||
+    (isWhitelabel,
+      ? {
+          primaryColor,"
+          backgroundColor: "#000000", // comment
+      ? {primaryColor,
+          backgroundColor: "#000000", // comment
+textColor: "#ffffff", // comment
 
+      : undefined)
+}
+  const headerStyle = effectiveTheme,
+    ? {backgroundColor: effectiveTheme.backgroundColor,
+>>>>>>> main
+        color: effectiveTheme.textColor,
+        borderColor: "${effectiveTheme.primaryColor}20"}
+
+<<<<<<< HEAD
+  // Handle scroll effect
   useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 20);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+=======
+    : {}
+>>>>>>> main
 
-  return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-zinc-900/95 backdrop-blur-md border-b border-zinc-800' 
-        : 'bg-transparent'
-    }`}>
-      {/* Top Bar */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
-            <div className="flex items-center space-x-6 mb-2 sm:mb-0">
-              <a href="tel:+13024640950" className="flex items-center hover:text-blue-100 transition-colors">
-                <Phone className="w-4 h-4 mr-2" />
-                +1 302 464 0950
-              </a>
-              <a href="mailto:kleber@ziontechgroup.com" className="flex items-center hover:text-blue-100 transition-colors">
-                <Mail className="w-4 h-4 mr-2" />
-                kleber@ziontechgroup.com
-              </a>
-            </div>
-            <div className="flex items-center space-x-4">
-              <span className="flex items-center">
-                <MapPin className="w-4 h-4 mr-2" />
-                364 E Main St STE 1008, Middletown DE 19709
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Header */}
-      <div className="bg-zinc-900/95 backdrop-blur-md">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <Link to="/" className="flex items-center space-x-3">
-              <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-2 rounded-lg">
-                <span className="text-white font-bold text-xl">ZT</span>
-              </div>
-              <div className="hidden sm:block">
-                <h1 className="text-xl font-bold text-white">Zion Tech Group</h1>
-                <p className="text-xs text-gray-400">Innovation • Technology • Solutions</p>
-              </div>
-            </Link>
-
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
-              <MainNavigation />
-            </nav>
-
-            {/* CTA Buttons */}
-            <div className="hidden lg:flex items-center space-x-4">
-              <Link
-                to="/contact"
-                className="text-gray-300 hover:text-white transition-colors duration-200"
-              >
-                Contact
-              </Link>
-              <Link
-                to="/request-quote"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-              >
-                Get Quote
-              </Link>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-gray-400 hover:text-white transition-colors"
-            >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden bg-zinc-900/98 backdrop-blur-md border-t border-zinc-800">
-          <div className="px-4 py-6 space-y-4">
-            {/* Mobile Navigation Links */}
-            <div className="space-y-3">
-              <Link
-                to="/"
-                className="block text-white hover:text-blue-400 transition-colors py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Home
-              </Link>
-              
-              {/* Services Dropdown */}
-              <div className="relative">
-                <button className="flex items-center justify-between w-full text-white hover:text-blue-400 transition-colors py-2">
-                  <span>Services</span>
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-                <div className="pl-4 space-y-2 mt-2">
-                  <Link
-                    to="/services"
-                    className="block text-gray-300 hover:text-blue-400 transition-colors py-1"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    All Services
-                  </Link>
-                  <Link
-                    to="/services/ai-autonomous-code-review"
-                    className="block text-gray-300 hover:text-blue-400 transition-colors py-1"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    AI Code Review
-                  </Link>
-                  <Link
-                    to="/services/ai-supply-chain-risk-management"
-                    className="block text-gray-300 hover:text-blue-400 transition-colors py-1"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Supply Chain Risk Management
-                  </Link>
-                  <Link
-                    to="/services/quantum-financial-trading-platform"
-                    className="block text-gray-300 hover:text-blue-400 transition-colors py-1"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Quantum Trading Platform
-                  </Link>
-                </div>
-              </div>
-
-              {/* Solutions Dropdown */}
-              <div className="relative">
-                <button className="flex items-center justify-between w-full text-white hover:text-blue-400 transition-colors py-2">
-                  <span>Solutions</span>
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-                <div className="pl-4 space-y-2 mt-2">
-                  <Link
-                    to="/solutions"
-                    className="block text-gray-300 hover:text-blue-400 transition-colors py-1"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    All Solutions
-                  </Link>
-                  <Link
-                    to="/solutions/healthcare"
-                    className="block text-gray-300 hover:text-blue-400 transition-colors py-1"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Healthcare
-                  </Link>
-                  <Link
-                    to="/solutions/financial"
-                    className="block text-gray-300 hover:text-blue-400 transition-colors py-1"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Financial Services
-                  </Link>
-                  <Link
-                    to="/solutions/manufacturing"
-                    className="block text-gray-300 hover:text-blue-400 transition-colors py-1"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Manufacturing
-                  </Link>
-                </div>
-              </div>
-
-              <Link
-                to="/about"
-                className="block text-white hover:text-blue-400 transition-colors py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                About Us
-              </Link>
-              
-              <Link
-                to="/pricing"
-                className="block text-white hover:text-blue-400 transition-colors py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Pricing
-              </Link>
-              
-              <Link
-                to="/contact"
-                className="block text-white hover:text-blue-400 transition-colors py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Contact
-              </Link>
-            </div>
-
-            {/* Mobile CTA */}
-            <div className="pt-4 border-t border-zinc-700">
-              <Link
-                to="/request-quote"
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold text-center block hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Get Free Quote
-              </Link>
-            </div>
-
-            {/* Contact Info */}
-            <div className="pt-4 border-t border-zinc-700 space-y-2">
-              <a
-                href="tel:+13024640950"
-                className="flex items-center text-gray-300 hover:text-blue-400 transition-colors"
-              >
-                <Phone className="w-4 h-4 mr-2" />
-                +1 302 464 0950
-              </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="flex items-center text-gray-300 hover:text-blue-400 transition-colors"
-              >
-                <Mail className="w-4 h-4 mr-2" />
-                kleber@ziontechgroup.com
-              </a>
-            </div>
-          </div>
-        </div>
-      )}
-    </header>
-  );
+  // comment
+useEffect(() => {const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20)};""
+    window.addEventListener()
 }
+    return () => window.removeEventListener("scroll", handleScroll)}, [])
+}
+  const handleSubmit = e => {
+    e.preventDefault()
+}
+    if (query.trim()) {"
+      navigate("/search?q="${encodeURIComponent(query)}");""
+  const handleSubmit = e => {e.preventDefault()
+}
+    if (query.trim()) {"
+      navigate("/search?q="${encodeURIComponent(query)}");"
+      setQuery("")}
+  }
+
+  const toggleMobileMenu = () => {setIsMobileMenuOpen(!isMobileMenuOpen)}
+
+  return ("
+    <header"
+      className = "{"sticky" top-0 z-50 w-full transition-all duration-300 ${
+        isScrolled"
+          ? "bg-zion-blue-dark/95 backdrop-blur-xl border-b border-zion-purple/30 shadow-2xl shadow-zion-purple/20""
+          : "bg-zion-blue-dark/90 backdrop-blur-md border-b border-zion-purple/20">
+}"}"
+      style = "{headerStyle}"
+    >
+      {/* comment */}""
+      <div className=""absolute" inset-0 bg-[url("data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+")] opacity-30"  />"
+    <header className="{"sticky" top-0 z-50 w-full transition-all duration-300 ${ isScrolled ? "bg-zion-blue-dark/95 backdrop-blur-xl border-b border-zion-purple/30 shadow-2xl shadow-zion-purple/20" : "bg-zion-blue-dark/90 backdrop-blur-md border-b border-zion-purple/20" }"} style="{headerStyle}" >
+      {/* comment */}"
+      <div className=""absolute" inset-0 bg-[url("data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+")] opacity-30"  />
+      "
+      {/* comment */}""
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zion-purple/10 to-transparent opacity-50"  />"
+      ""
+      <div className="container flex h-16 items-center px-4 sm: px-6 relative z-10">",
+        <Logo customLogo="{customLogo}""
+          customColor="{effectiveTheme?.primaryColor}"  />
+        "
+        {/* comment */}""
+        <div className="ml-6 flex-1 hidden lg: block">
+          <MainNavigation  />
+        </div>
+        ",
+        {/* comment */}""
+        <form onSubmit="{handleSubmit}" className="hidden md: block w-80 mx-6">""
+          <div className="relative group">"",
+            <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg blur opacity-0 group-hove,"
+    r: opacity-100 transition-opacity duration-300"></div>",
+            <EnhancedSearchInput value="{query}""
+              onChange="{setQuery}""
+              onSelectSuggestion="{text" => {
+                setQuery(text);""
+                navigate("/search?q = "${encodeURIComponent(text)}")}}""
+              suggestions="{searchSuggestions}"""
+              placeholder=""Search" services, solutions..."""
+              className="w-full bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg px-4 py-2 text-white placeholder-zion-purple/50 focus: outline-none focus:ring-2 focu,
+    s:ring-zion-purple/50 focu,"
+    s: border-transparent"
+      "
+      <div className="container flex h-16 items-center px-4 sm: px-6 relative z-10">",
+        <Logo customLogo="{customLogo}" customColor="{effectiveTheme?.primaryColor}"  />
+        
+        {/* comment */}"
+        <div className="ml-6 flex-1 hidden lg: block">
+        ,
+        {/* comment */}"
+        <form onSubmit="{handleSubmit}" className="hidden md: block w-80 mx-6">"
+          <div className="relative group">"
+            <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>",
+            <EnhancedSearchInput value="{query}" onChange="{setQuery}" onSelectSuggestion="{text" => {
+                setQuery(text);"
+              suggestions = "{searchSuggestions}""
+          primaryColor, """
+          backgroundColor: "#000000", // comment
+          textColor: "#ffffff", // comment
+
+        backgroundColor: effectiveTheme.backgroundColor, color: effectiveTheme.textColor,
+  // comment
+useEffect(() => {
+    const handleScroll = () => {"
+      setIsScrolled(window.scrollY > 20)};"""
+    window.addEventListener("scroll", handleScroll);""
+  
+    if (query.trim()) {""
+      navigate("/search?q="${encodeURIComponent(query)}");"""
+      navigate("/search?q = ${encodeURIComponent(query)}"),
+      setQuery()}
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)}
+
+  return (""
+    <header className = "{"sticky" top-0 z-50 w-full transition-all duration-300 ${"
+        isScrolled""
+          ? "bg-zion-blue-dark/95 backdrop-blur-xl border-b border-zion-purple/30 shadow-2xl shadow-zion-purple/20""
+          : "bg-zion-blue-dark/90 backdrop-blur-md border-b border-zion-purple/20", ""
+      style="{headerStyle}"" >""
+      {/* comment */}"""
+      <div className="absolute inset-0 bg-[url("data: image/svg+xml,base64, PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+")] opacity-30" /" >"
+      "
+      {/* comment */}"""
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zion-purple/10 to-transparent opacity-50" /" >""
+      """
+        <Logo customLogo="{customLogo}""
+        /" >"
+        "
+        {/* comment */}"""
+          <MainNavigation /" >"
+        "
+        {/* comment */}"""
+        <form onSubmit="{handleSubmit}" className="hidden md: block w-80 mx-6">"""
+          <div className="relative group">""",
+            <EnhancedSearchInput value="{query}"">
+              onSelectSuggestion="{text" =" > {"
+                setQuery(text);""
+              suggestions = {searchSuggestions}"""
+              placeholder="Search services, solutions...""
+              className="w-full bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg px-4 py-2 text-white placeholder-zion-purple/50 focus: outline-none focus:ring-2 focus:ring-zion-purple/50 focus:border-transparent"
+        </form>
+        ",
+        {/* comment */}""
+        {/* comment */}"""
+        <div className="flex items-center space-x-4">
+          {!hideLogin && (
+            <>
+              {user ? ("
+                <UserMenu user="{user}"  />"
+              ) : (""
+                <div className="flex items-center space-x-3">"
+                  <Button""
+                    variant="ghost"""
+                    onClick="{()" => navigate("/login")}"
+                    className="text-zion-purple hover:text-white hove,"
+    r: bg-zion-purple/20"
+                    Sign In,
+                  </Button>",
+                    onClick="{()" => navigate("/register")}"
+                    className="bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple/80 hove,"
+    r: to-zion-cyan/80 text-white"",
+                <UserMenu user="{user}" /" >""
+              ) : ("""
+                  <Button variant="ghost" onClick="{()" => navigate("/login")}"
+                  <Button """
+                    variant="ghost""
+                    onClick="{()" =" > navigate("/login")}""
+                    className="text-zion-purple hover: text-white hover:bg-zion-purple/20"",
+                  <Button onClick="{()" => navigate("/register")}"
+                    onClick="{()" =" > navigate("/register')}""
+                    className="bg-gradient-to-r from-zion-purple to-zion-cyan hover: from-zion-purple/80 hover:to-zion-cyan/80 text-white"
+                    Get Started,
+              )}
+
+</>
+          "
+          <LanguageSelector /" >"
+          {/* comment */}"
+          <button onClick={toggleMobileMenu}""
+            className="lg: hidden p-2 text-zion-purple hove,
+    r:text-white hove,"
+    r: bg-zion-purple/20 rounded-lg transition-colors"">
+          <button onClick="{toggleMobileMenu}" className="lg: hidden p-2 text-zion-purple hover:text-white hover:bg-zion-purple/20 rounded-lg transition-colors" >",
+            {isMobileMenuOpen ? <X size="{24}"  /> : <Menu size="{24}"  />}"
+          <button onClick={toggleMobileMenu}"""
+            className="lg: hidden p-2 text-zion-purple hover:text-white hover:bg-zion-purple/20 rounded-lg transition-colors"" >"",
+            {isMobileMenuOpen ? <X size="{24}" /" > : <Menu size="{24}" /" >}"
+          <button onClick={toggleMobileMenu}""
+            className="lg: hidden p-2 text-zion-purple hover:text-white hover:bg-zion-purple/20 rounded-lg transition-colors  >",
+            {isMobileMenuOpen ? <X size="{24}" /" > : <Menu size="{24}" /" >}
+
+          </button>
+      {/* comment */}"
+      <MobileMenu isOpen="{isMobileMenuOpen}" onClose="{()" => setIsMobileMenuOpen(false)}"
+      <MobileMenu isOpen="{isMobileMenuOpen}""
+        onClose="{()" =" > setIsMobileMenuOpen(false)}""
+        user="{user}""
+        onNavigate="{path" => {
+          navigate(path)
+}
+          setIsMobileMenuOpen(false)}}
+
+    </header>"
+  )}""
+  )}""";"
+}"""
+"
+
+export default Component

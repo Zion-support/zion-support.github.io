@@ -1,131 +1,154 @@
-const fs = require('fs');
-const path = require('path');
+#!/usr/bin/env node;
 
-// Common syntax fixes
-const fixes = [
-  // Fix import statements with spaces
-  { 
-    pattern: /import\s+\{\s*([^}]+)\s*\}\s+from\s+['"`]([^'"`]+)\s*-\s*([^'"`]+)['"`]/g,
-    replacement: "import { $1 } from '$2-$3'"
-  },
-  // Fix import statements with .ts extension
-  { 
-    pattern: /from\s+['"`]([^'"`]+)\.ts['"`]/g,
-    replacement: "from '$1'"
-  },
-  // Fix function declarations with incorrect syntax
-  { 
-    pattern: /export\s+(?:default\s+)?(?:React\.memo\s*\()?function\s+(\w+)\s*\(\.\.\.args\s*:\s*any\[\]\)\s*:\s*any\s*\{/g,
-    replacement: "export default function $1() {"
-  },
-  // Fix useState calls with spaces
-  { 
-    pattern: /useState\s*\(\s*([^)]+)\s*\)\s*;/g,
-    replacement: "useState($1);"
-  },
-  // Fix className with spaces
-  { 
-    pattern: /className\s*=\s*["'`]([^"'`]+)\s*-\s*([^"'`]+)["'`]/g,
-    replacement: 'className="$1-$2"'
-  },
-  // Fix JSX attributes with spaces
-  { 
-    pattern: /(\w+)\s*-\s*(\w+)\s*=/g,
-    replacement: '$1-$2='
-  },
-  // Fix array access with spaces
-  { 
-    pattern: /\[\s*([^\]]+)\s*\]/g,
-    replacement: '[$1]'
-  },
-  // Fix object property access with spaces
-  { 
-    pattern: /\.\s*([^\s]+)/g,
-    replacement: '.$1'
-  },
-  // Fix function calls with spaces
-  { 
-    pattern: /(\w+)\s*\(\s*([^)]+)\s*\)/g,
-    replacement: '$1($2)'
-  },
-  // Fix template literals with spaces
-  { 
-    pattern: /\$\{\s*([^}]+)\s*\}/g,
-    replacement: '${$1}'
-  }
-];
-
-function fixFile(filePath) {
+<<<<<<< HEAD
+function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
     
-    // Apply all fixes
-    fixes.forEach(fix => {
-      content = content.replace(fix.pattern, fix.replacement);
-    });
+    // Fix common syntax errors
+    content = content
+      // Fix malformed quotes
+      .replace(/''/g, '\n')
+      .replace(/';'/g, ';\n')
+      .replace(/';/g, ';\n')
+      .replace(/`'/g, '`\n')
+      .replace(/'`/g, '\n`')
+      // Fix missing newlines after imports
+      .replace(/';import/g, ';\nimport')
+      .replace(/';const/g, ';\nconst')
+      .replace(/';interface/g, ';\ninterface')
+      .replace(/';export/g, ';\nexport')
+      // Fix malformed JSX
+      .replace(/className="([^"]*)"([^"]*)"([^"]*)"/g, 'className="$1$2$3"')
+      .replace(/className={`([^`]*)`([^`]*)`([^`]*)`}/g, 'className={`$1$2$3`}')
+      // Fix malformed template literals
+      .replace(/`([^`]*)`([^`]*)`([^`]*)`/g, '`$1$2$3`')
+      // Fix malformed function calls
+      .replace(/\(([^)]*)\);([^;]*);/g, '($1);\n$2;')
+      // Clean up multiple newlines
+      .replace(/\n{3,}/g, '\n\n')
+      // Fix malformed object properties
+      .replace(/(\w+):\s*'([^']*)',\s*'([^']*)'/g, '$1: \'$2\',\n    $1: \'$3\'')
+      .replace(/(\w+):\s*'([^']*)',\s*(\w+):/g, '$1: \'$2\',\n    $3:');
     
-    // Additional specific fixes
-    content = content.replace(/import\s+React\s+from\s+['"`]react\.ts['"`]/g, "import React from 'react'");
-    content = content.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"`]framer\s*-\s*motion\.ts['"`]/g, "import { $1 } from 'framer-motion'");
-    content = content.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"`]lucide\s*-\s*react\.ts['"`]/g, "import { $1 } from 'lucide-react'");
-    content = content.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"`]react\s*-\s*router\s*-\s*dom\.ts['"`]/g, "import { $1 } from 'react-router-dom'");
-    
-    // Fix common JSX issues
-    content = content.replace(/role\s*=\s*["'`]button["'`]/g, '');
-    content = content.replace(/aria\s*-\s*label\s*=\s*["'`][^"'`]*["'`]/g, '');
-    
-    // Fix spacing issues in class names
-    content = content.replace(/bg\s*-\s*([^\s]+)/g, 'bg-$1');
-    content = content.replace(/text\s*-\s*([^\s]+)/g, 'text-$1');
-    content = content.replace(/border\s*-\s*([^\s]+)/g, 'border-$1');
-    content = content.replace(/rounded\s*-\s*([^\s]+)/g, 'rounded-$1');
-    content = content.replace(/px\s*-\s*([^\s]+)/g, 'px-$1');
-    content = content.replace(/py\s*-\s*([^\s]+)/g, 'py-$1');
-    content = content.replace(/w\s*-\s*([^\s]+)/g, 'w-$1');
-    content = content.replace(/h\s*-\s*([^\s]+)/g, 'h-$1');
-    content = content.replace(/gap\s*-\s*([^\s]+)/g, 'gap-$1');
-    content = content.replace(/mb\s*-\s*([^\s]+)/g, 'mb-$1');
-    content = content.replace(/mt\s*-\s*([^\s]+)/g, 'mt-$1');
-    content = content.replace(/ml\s*-\s*([^\s]+)/g, 'ml-$1');
-    content = content.replace(/mr\s*-\s*([^\s]+)/g, 'mr-$1');
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-function processDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
-  let fixedCount = 0;
-  
-  files.forEach(file => {
-    const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
-    
+// Get all TypeScript/JavaScript files
+const componentsDir = 'components';
+const files = [];
+
+function getAllFiles(dir) {
+  const items = fs.readdirSync(dir);
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
     if (stat.isDirectory()) {
-      // Skip node_modules and other non-source directories
-      if (!['node_modules', '.git', '.next', 'out', 'dist'].includes(file)) {
-        fixedCount += processDirectory(filePath);
-      }
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-      if (fixFile(filePath)) {
-        fixedCount++;
-      }
+      getAllFiles(fullPath);
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')) {
+      files.push(fullPath);
     }
-  });
-  
-  return fixedCount;
+  }
 }
 
-// Start fixing from the src directory
-console.log('Starting syntax fixes...');
-const fixedCount = processDirectory('./src');
-console.log(`Fixed ${fixedCount} files.`);
+getAllFiles(componentsDir);
+
+// Fix all files
+files.forEach(fixSyntaxErrors);
+
+console.log(`Fixed ${files.length} files`);
+=======
+const fs = require("fs");
+const path = require("path");
+// Function to fix common syntax errors;
+function fixSyntaxErrors(content) {;
+  // Remove corrupted content patterns;
+  let fixed = content;
+    // Remove malformed import statements;
+    .replace(/import React \{ useState \} from "react";\s*import \{ motion\s*\} from "framer-motion"; import \{ [^}]+ \} from "lucide-react";/g, "import React, { useState } from "react";\nimport { motion  } from "framer-motion";\nimport { Shield, TrendingUp, Brain, CheckCircle, Star, ArrowRight, Users, Target, Clock, DollarSign, Database, Zap, Globe, Activity, AlertTriangle, Eye, Lock, Download, Upload, RefreshCw, Settings, Play, Gauge, BarChart3, Cpu, Factory, Truck, HardHat, Thermometer, GaugeIcon, AlertCircle, CheckSquare, XCircle, ShieldCheck, Fingerprint, Search, Bell, FileText, CreditCard, Building, ShoppingCart  } from "lucide-react";");
+    ;
+    // Fix malformed JSX attributes;
+    .replace(/className="([^"]*)"/g, "className="$1"");
+    .replace(/className="([^"]*)"/g, "className="$1"");
+    ;
+    // Fix malformed object properties;
+    .replace(/title: "([^"]*)" description:;/g, "title: "$1",\n    description:");
+    .replace(/icon: ([^,}]+) color: "([^"]*)",/g, "icon: $1,\n    color: "$2",");
+    ;
+    // Fix malformed array syntax;
+    .replace(/\[;\s*\{/g, "[\n  {");
+    .replace(/,\s*\};\s*\]/g, "\n  }\n];");
+    ;
+    // Fix malformed function calls;
+    .replace(/return\s*\(\s*;/g, "return (\n    ");
+    .replace(/return\s*\(\s*<div/g, "return (\n    <div");
+    ;
+    // Remove corrupted patterns;
+    .replace(/; return\(\); <div[^>]*>/g, "return (\n    <div");
+    .replace(/; export default[^]*;.*$/g, ");\n\nexport default ComponentName;");
+    ;
+    // Fix malformed template literals;
+    .replace(/`\s*\{\s*activeTab === "([^"]+)" && \(\s*`/g, "{activeTab === "$1" && (");
+    .replace(/`\s*\}\s*\{\s*activeTab === "([^"]+)" && \(/g, "}\n{activeTab === "$1" && (");
+    ;
+    // Remove duplicate content;
+    .replace(/(import React[^]+;[\s\S]*?export default[^]+)\1+/g, "$1");
+    ;
+    // Clean up extra semicolons and commas;
+    .replace(/;+$/gm, ";");
+    .replace(/,\s*}/g, "\n  }");
+    .replace(/,\s*]/g, "\n]");
+    ;
+    // Fix malformed JSX closing tags;
+    .replace(/<\/div>\s*;\s*\)\s*;\s*}/g, "</div>\n  );\n};");
+    ;
+    // Remove corrupted patterns at the end;
+    .replace(/;,"\}\);,"\}\)\s*$/g, ");\n\nexport default ComponentName;");
+    .replace(/>>>>>>> pr-\d+.*$/g, "");
+    .replace(/;,"\}\);,"\}\)\s*$/g, ");\n\nexport default ComponentName;");
+  return fixed;,
+}
+;
+// Function to process a single file;
+function processFile(filePath) {;
+  try {;
+    const content = fs.readFileSync(filePath, "utf8");
+    // Skip if file is too corrupted;
+    if (content.length < 100 || content.includes(">>>>>>> pr-")) {;
+      console.log(`Skipping corrupted file: ${filePath}`);
+      return;,
+}
+    ;
+    const fixed = fixSyntaxErrors(content);
+    if (fixed !== content) {;
+      fs.writeFileSync(filePath, fixed);
+      console.log(`Fixed: ${filePath}`);,
+}
+  } catch (error) {;
+    console.error(`Error processing ${filePath}:`, error.message);,
+}
+}
+;
+// Function to recursively process directory;
+function processDirectory(dirPath) {;
+  const items = fs.readdirSync(dirPath);
+  for (const item of items) {;
+    const fullPath = path.join(dirPath, item);
+    const stat = fs.statSync(fullPath);
+    if (stat.isDirectory()) {;
+      processDirectory(fullPath);,
+} else if (item.endsWith(".tsx") || item.endsWith(".ts") || item.endsWith(".jsx") || item.endsWith(".js")) {;
+      processFile(fullPath);,
+}
+  }
+}
+;
+// Main execution;
+console.log("Starting syntax error fixes...");
+processDirectory("./src");
+console.log("Syntax error fixes completed!')
+>>>>>>> main

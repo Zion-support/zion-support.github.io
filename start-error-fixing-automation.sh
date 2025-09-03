@@ -6,18 +6,6 @@
 set -e
 
 echo "🚀 Starting Enhanced Error Fixing Automation System..."
-echo "📁 Project: Zion Tech Group"
-echo "⏰ Timestamp: $(date)"
-echo ""
-
-# Ensure we're in the project root
-cd "$(dirname "$0")"
-
-# Create necessary directories
-echo "📁 Creating log directories..."
-mkdir -p automation/logs
-mkdir -p automation/reports
-mkdir -p automation/backups
 
 # Colors for output
 RED='\033[0;31m'
@@ -28,46 +16,38 @@ NC='\033[0m' # No Color
 
 # Function to print colored output
 print_status() {
-    echo -e "${BLUE}[INFO]${NC} $1"
+    echo -e "${BLUE}[$(date '+%Y-%m-%d %H:%M:%S')]${NC} $1"
 }
 
 print_success() {
-    echo -e "${GREEN}[SUCCESS]${NC} $1"
+    echo -e "${GREEN}✅ $1${NC}"
 }
 
 print_warning() {
-    echo -e "${YELLOW}[WARNING]${NC} $1"
+    echo -e "${YELLOW}⚠️  $1${NC}"
 }
 
 print_error() {
-    echo -e "${RED}[ERROR]${NC} $1"
+    echo -e "${RED}❌ $1${NC}"
 }
-
-# Check if we're in the right directory
-if [ ! -f "package.json" ]; then
-    print_error "package.json not found. Please run this script from the project root."
-    exit 1
-fi
 
 # Check if PM2 is installed
 if ! command -v pm2 &> /dev/null; then
-    print_warning "PM2 not found. Installing PM2..."
+    print_error "PM2 is not installed. Installing PM2..."
     npm install -g pm2
 fi
 
-# Create necessary directories
-print_status "Creating automation directories..."
+# Create logs directory
+print_status "Creating logs directory..."
 mkdir -p automation/logs
-mkdir -p automation/reports
 
-# Install dependencies if needed
-if [ ! -d "node_modules" ]; then
-    print_status "Installing dependencies..."
-    npm install
-fi
+# Stop any existing PM2 processes
+print_status "Stopping existing PM2 processes..."
+pm2 stop all 2>/dev/null || true
+pm2 delete all 2>/dev/null || true
 
-# Install PM2 logrotate for log management
-echo "📊 Setting up PM2 logrotate..."
+# Install PM2 logrotate module
+print_status "Installing PM2 logrotate module..."
 pm2 install pm2-logrotate || true
 pm2 set pm2-logrotate:max_size 10M
 pm2 set pm2-logrotate:retain 30
@@ -75,23 +55,78 @@ pm2 set pm2-logrotate:compress true
 pm2 set pm2-logrotate:workerInterval 60
 pm2 set pm2-logrotate:rotateInterval '0 0 * * *'
 
-# Stop any existing PM2 processes
-print_status "Stopping existing PM2 processes..."
-pm2 stop ecosystem-error-fixing.config.cjs 2>/dev/null || true
-pm2 delete ecosystem-error-fixing.config.cjs 2>/dev/null || true
-
-# Start the error fixing automation
-print_status "Starting error fixing automation with PM2..."
-pm2 start ecosystem-error-fixing.config.cjs --update-env
+# Start the enhanced ecosystem
+print_status "Starting enhanced error fixing automation ecosystem..."
+pm2 start ecosystem-enhanced.config.cjs --update-env
 
 # Wait a moment for processes to start
 sleep 5
 
-# Show status
-echo ""
-echo "📊 PM2 Status:"
+# Check status
+print_status "Checking PM2 status..."
 pm2 status
 
+<<<<<<< HEAD
+# Show logs for error fixing processes
+print_status "Showing recent logs for error fixing processes..."
+echo ""
+echo "=== Master Error Fixer Logs ==="
+pm2 logs master-error-fixer --lines 10 --nostream || true
+
+echo ""
+echo "=== TypeScript Error Fixer Logs ==="
+pm2 logs typescript-error-fixer --lines 10 --nostream || true
+
+echo ""
+echo "=== ESLint Error Fixer Logs ==="
+pm2 logs eslint-error-fixer --lines 10 --nostream || true
+
+echo ""
+echo "=== Console Error Fixer Logs ==="
+pm2 logs console-error-fixer --lines 10 --nostream || true
+
+# Save PM2 configuration
+print_status "Saving PM2 configuration..."
+pm2 save
+
+# Setup PM2 startup script
+print_status "Setting up PM2 startup script..."
+pm2 startup || true
+
+print_success "Enhanced Error Fixing Automation System started successfully!"
+print_success "All error fixing automations are now running with PM2"
+
+echo ""
+echo "📊 Available PM2 Commands:"
+echo "  pm2 status                    - Show all processes"
+echo "  pm2 logs                      - Show all logs"
+echo "  pm2 logs [process-name]       - Show logs for specific process"
+echo "  pm2 restart [process-name]    - Restart specific process"
+echo "  pm2 stop [process-name]       - Stop specific process"
+echo "  pm2 delete [process-name]     - Delete specific process"
+echo "  pm2 monit                     - Monitor processes in real-time"
+echo "  pm2 reload all               - Reload all processes"
+echo "  pm2 stop all                 - Stop all processes"
+echo "  pm2 delete all               - Delete all processes"
+
+echo ""
+echo "🔧 Error Fixing Automation Schedule:"
+echo "  • Console Error Fixer:        Every 10 minutes"
+echo "  • TypeScript Error Fixer:     Every 15 minutes"
+echo "  • ESLint Error Fixer:         Every 20 minutes"
+echo "  • JSX Error Fixer:            Every 25 minutes"
+echo "  • Master Error Fixer:         Every 30 minutes"
+echo "  • Comprehensive Error Fixer:  Every 45 minutes"
+echo "  • Build Error Detector:       Every 30 minutes"
+echo "  • Error Prevention Monitor:   Every 5 minutes"
+echo "  • Critical Error Alerts:      Every minute"
+
+echo ""
+echo "📁 Log files are stored in: automation/logs/"
+echo "📄 Reports are generated in the project root"
+
+print_success "Error fixing automation system is ready!"
+=======
 # Show logs
 print_status "Recent logs from error fixing automation:"
 pm2 logs --lines 20
@@ -142,16 +177,13 @@ echo "  pm2 logs                   - View all logs"
 echo "  pm2 status                 - Check process status"
 
 print_status "The automation will now continuously fix errors in your project:"
-echo "  • TypeScript errors (every 5-10 minutes)"
-echo "  • ESLint errors (every 15 minutes)"
-echo "  • Build errors (every 15 minutes)"
-echo "  • Dependency issues (every 30 minutes)"
-echo "  • Performance monitoring (every 30 minutes)"
-echo "  • Code quality analysis (every hour)"
-echo "  • Security scanning (every 2 hours)"
-echo "  • Link health checking (every 2 hours)"
-echo "  • Automated testing (every 4 hours)"
-echo "  • Backup management (every 8 hours)"
-echo "  • System health reporting (every hour)"
+echo "  • TypeScript errors (every 15-30 minutes)"
+echo "  • ESLint errors (every 20 minutes)"
+echo "  • JSX errors (every 30 minutes)"
+echo "  • Console statements (every 15 minutes)"
+echo "  • Build errors (every 10 minutes)"
+echo "  • Import/export errors (continuous)"
+echo "  • Unused variables (continuous)"
 
 print_success "Your project errors will be automatically fixed! 🎉"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-1571
