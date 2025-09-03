@@ -2,7 +2,7 @@ import React from "react"
 import Head from "next/head"
 import Link from "next/link"
 
-export default function NotFound() {
+export default function API() {
   return (
     <>
       <Head>
@@ -34,5 +34,10 @@ export default function NotFound() {
                   Contact Us →
                 </Link>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
-  )}
+  )
+}

@@ -25,5 +25,8 @@ export default function NotFound() {
               Go Home
             </Link>
           </div>
+        </div>
+      </div>
     </>
-  )}
+  )
+}

@@ -4,14 +4,15 @@ import Link from "next/link"
 import { ArrowRight, Award, BarChart3, Bot, Brain, CheckCircle, Eye, MessageSquare, Shield, Zap } from "lucide-react"
 import Navigation from "../src/components/Navigation"
 import Footer from "../src/components/Footer"
-export default function NotFound() {
+
+export default function AIServices() {
   return (
     <>
       <Head>
         <title>AI Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI services including machine learning, natural language processing, computer vision, and autonomous systems." />
       </Head>
-      <Navigation  />
+      <Navigation />
       
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
         {/* comment */}
@@ -157,9 +158,11 @@ export default function NotFound() {
                   Our AI implementations have delivered measurable business value.
                 </p>
               </div>
+            </div>
+          </div>
         </section>
       </div>
-      <Footer  />
+      <Footer />
     </>
   )
-}}
+}
