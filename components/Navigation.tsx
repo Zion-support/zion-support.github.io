@@ -24,9 +24,11 @@ const Navigation: React.FC = () => {
       dropdown: [
         { name: 'AI Development', href: '/services/ai-development' },
         { name: 'Cloud Architecture', href: '/services/cloud-architecture' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },
+        { name: 'Cybersecurity', href: '/services/it/cybersecurity' },
         { name: 'Data Analytics', href: '/services/data-analytics' },
         { name: 'DevOps', href: '/services/devops' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Micro SaaS', href: '/micro-saas' },
       ]
     },
     { 
@@ -36,8 +38,11 @@ const Navigation: React.FC = () => {
         { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
         { name: 'IoT Platforms', href: '/iot-platforms' },
         { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+        { name: 'Healthcare Solutions', href: '/solutions/healthcare' },
       ]
     },
+    { name: 'Pricing', href: '/pricing' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];

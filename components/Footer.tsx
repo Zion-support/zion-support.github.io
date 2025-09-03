@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/services/cybersecurity" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <Link href="/services/it/cybersecurity" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Cybersecurity
                 </Link>
               </li>
@@ -104,6 +104,16 @@ const Footer: React.FC = () => {
                   DevOps
                 </Link>
               </li>
+              <li>
+                <Link href="/it-services" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  IT Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/micro-saas" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  Micro SaaS
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -111,6 +121,11 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-white font-bold text-lg mb-6">Solutions</h3>
             <ul className="space-y-3">
+              <li>
+                <Link href="/solutions" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  All Solutions
+                </Link>
+              </li>
               <li>
                 <Link href="/blockchain-solutions" className="text-gray-400 hover:text-white transition-colors duration-200">
                   Blockchain Solutions
@@ -127,8 +142,8 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/solutions/enterprise-solutions" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Enterprise Solutions
+                <Link href="/pricing" className="text-gray-400 hover:text-white transition-colors duration-200">
+                  Pricing
                 </Link>
               </li>
             </ul>
