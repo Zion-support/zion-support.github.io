@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
+// Security middleware for Zion Tech Group
 export function middleware(request: NextRequest) {
   const response = NextResponse.next();
 
@@ -28,5 +29,4 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
-};
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],};

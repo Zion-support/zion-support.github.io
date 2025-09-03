@@ -1,8 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const EnhancedNavigation = () => {
-  return (
+const EnhancedNavigation = () => {  return (
     <nav className="bg-white shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
@@ -20,8 +19,7 @@ const EnhancedNavigation = () => {
               About
             </Link>
             <Link href="/contact" className="text-gray-700 hover:text-blue-600">
-              Contact
-            </Link>
+              Contact            </Link>
           </div>
         </div>
       </div>
