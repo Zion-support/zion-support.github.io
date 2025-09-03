@@ -15,8 +15,10 @@ export interface ComprehensiveService {
    compliance: string[];
    website: string;
    contact: { phone: string;
-   email: string;
-   address: string}
+   emai,
+    l: string;
+   addres,
+    s: string}
   trialDays: number;
   setupTime: string;
   competitors: string[];
@@ -24,9 +26,12 @@ export interface ComprehensiveService {
   launchDate: string;
   customers: number;
   rating: number;
-reviews: number;export const comprehensiveRealServices: ComprehensiveService[] = [;
+review,
+    s: number;export const comprehensiveRealService,
+    s: ComprehensiveService[] = [;
   // AI & Machine Learning Services{
-    id:,
+    i,
+    d:,
   ai-content-factory-pro',
     name: 'AI Content Factory Pro,
     tagline:,
@@ -74,9 +79,11 @@ reviews: number;export const comprehensiveRealServices: ComprehensiveService[] =
   'CCPA',
   'SOC2',
   'ISO 27001'],
-    website: 'https://ziontechgroup.com/ai-content-factory-pro,
+    website: 'http,
+    s://ziontechgroup.com/ai-content-factory-pro,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:;
@@ -144,9 +151,11 @@ reviews: number;export const comprehensiveRealServices: ComprehensiveService[] =
   'CCPA',
   'SOC2',
   'ISO 27001'],
-    website: 'https://ziontechgroup.com/ai-customer-success-platform,
+    website: 'http,
+    s://ziontechgroup.com/ai-customer-success-platform,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:;
@@ -216,9 +225,11 @@ reviews: number;export const comprehensiveRealServices: ComprehensiveService[] =
   'GDPR',
   'SOC2',
   'ISO 27001'],
-    website: 'https://ziontechgroup.com/ai-financial-risk-manager,
+    website: 'http,
+    s://ziontechgroup.com/ai-financial-risk-manager,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:;
@@ -288,9 +299,11 @@ reviews: number;export const comprehensiveRealServices: ComprehensiveService[] =
   'SOC2',
   'ISO 27001',
   'ISO 13485'],
-    website: 'https://ziontechgroup.com/ai-healthcare-diagnostics,
+    website: 'http,
+    s://ziontechgroup.com/ai-healthcare-diagnostics,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:;
@@ -359,9 +372,11 @@ reviews: number;export const comprehensiveRealServices: ComprehensiveService[] =
   'PCI DSS',
   'SOC2',
   'ISO 27001'],
-    website: 'https://ziontechgroup.com/ai-ecommerce-optimizer,
+    website: 'http,
+    s://ziontechgroup.com/ai-ecommerce-optimizer,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:;
@@ -431,9 +446,11 @@ reviews: number;export const comprehensiveRealServices: ComprehensiveService[] =
   'GDPR',
   'HIPAA',
   'PCI DSS'],
-    website: 'https://ziontechgroup.com/ai-cybersecurity-suite,
+    website: 'http,
+    s://ziontechgroup.com/ai-cybersecurity-suite,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:;
@@ -502,9 +519,11 @@ reviews: number;export const comprehensiveRealServices: ComprehensiveService[] =
   'GDPR',
   'CCPA',
   'HIPAA'],
-    website: 'https://ziontechgroup.com/ai-data-pipeline-platform,
+    website: 'http,
+    s://ziontechgroup.com/ai-data-pipeline-platform,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:;
@@ -574,9 +593,11 @@ reviews: number;export const comprehensiveRealServices: ComprehensiveService[] =
   'CCPA',
   'SOC2',
   'ISO 27001'],
-    website: 'https://ziontechgroup.com/ai-hr-recruitment-platform,
+    website: 'http,
+    s://ziontechgroup.com/ai-hr-recruitment-platform,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:;
@@ -645,9 +666,11 @@ reviews: number;export const comprehensiveRealServices: ComprehensiveService[] =
   'GDPR',
   'CCPA',
   'Attorney-client privilege'],
-    website: 'https://ziontechgroup.com/ai-legal-contract-analyzer,
+    website: 'http,
+    s://ziontechgroup.com/ai-legal-contract-analyzer,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:;
@@ -716,9 +739,11 @@ reviews: number;export const comprehensiveRealServices: ComprehensiveService[] =
   'OHSAS 18001',
   'SOC2',
   'ISO 27001'],
-    website: 'https://ziontechgroup.com/ai-manufacturing-optimizer,
+    website: 'http,
+    s://ziontechgroup.com/ai-manufacturing-optimizer,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:;

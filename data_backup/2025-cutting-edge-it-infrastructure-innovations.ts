@@ -28,16 +28,21 @@ export interface CuttingEdgeITInfrastructureInnovation2025 {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-   address: string;
-   website: string}
+   addres,
+    s: string;
+   websit,
+    e: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
-  rating: number;
-reviews: number;export const cuttingEdgeITInfrastructureInnovations2025 = [;
+  ratin,
+    g: number;
+review,
+    s: number;export const cuttingEdgeITInfrastructureInnovations2025 = [;
   // Quantum-Safe Cloud Infrastructure Platform{
-    id:,
+    i,
+    d:,
   quantum-safe-cloud-infrastructure-platform',
     name: 'Quantum-Safe Cloud Infrastructure Platform,
     tagline:,
@@ -47,7 +52,8 @@ reviews: number;export const cuttingEdgeITInfrastructureInnovations2025 = [;
   IT Infrastructure & Security',
     type: 'Micro SAAS,
     pricing: {
-      starter:,
+      starte,
+    r:,
   $899/month',
       professional: $1,999/month,
   ,
@@ -95,10 +101,11 @@ reviews: number;export const cuttingEdgeITInfrastructureInnovations2025 = [;
     mobile: '+1 302 464 0950,
     address:,
   364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com,
+    website: 'http,
+    s://ziontechgroup.com,
     slug:,
   /quantum-safe-cloud-infrastructure-platform'},
-  // Autonomous Edge Computing Network{
+  // Autonomous Edge Computing Network{'
     id: 'autonomous-edge-computing-network,
     name:,
   Autonomous Edge Computing Network',
@@ -109,7 +116,8 @@ reviews: number;export const cuttingEdgeITInfrastructureInnovations2025 = [;
     type:,
   Micro SAAS',
     pricing: {
-      starter:;
+      starte,
+    r:;
   '$599/month,
       professional:,
   $1,299/month',
@@ -157,10 +165,11 @@ reviews: number;export const cuttingEdgeITInfrastructureInnovations2025 = [;
     mobile: '+1 302 464 0950,
     address:,
   364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com,
+    website: 'http,
+    s://ziontechgroup.com,
     slug:,
   /autonomous-edge-computing-network'},
-  // Neuromorphic Computing Infrastructure{
+  // Neuromorphic Computing Infrastructure{'
     id: 'neuromorphic-computing-infrastructure,
     name:,
   Neuromorphic Computing Infrastructure',
@@ -173,7 +182,8 @@ reviews: number;export const cuttingEdgeITInfrastructureInnovations2025 = [;
   Micro SAAS;
   ',
     pricing: {
-      starter:$2,999/month,
+      starte,
+    r:$2,999/month,
   ,
       professional: $6,999/month,
   ,
@@ -250,11 +260,12 @@ reviews: number;export const cuttingEdgeITInfrastructureInnovations2025 = [;
     address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-    website: 'https://ziontechgroup.com,
+    website: 'http,
+    s://ziontechgroup.com,
     slug:,
   /neuromorphic-computing-infrastructure;
   '},
-  // Autonomous Data Center Management Platform{
+  // Autonomous Data Center Management Platform{'
     id: 'autonomous-data-center-management-platform,
     name:,
   Autonomous Data Center Management Platform;
@@ -268,7 +279,8 @@ reviews: number;export const cuttingEdgeITInfrastructureInnovations2025 = [;
   Micro SAAS;
   ',
     pricing: {
-      starter:$1,499/month,
+      starte,
+    r:$1,499/month,
   ,
       professional: $3,499/month,
   ,
@@ -345,6 +357,7 @@ competitiveAdvantage: 'Only fully autonomous data center management platform wit
     address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-    website: 'https://ziontechgroup.com,
+    website: 'http,
+    s://ziontechgroup.com,
     slug: '/autonomous-data-center-management-platform';
 ]}}

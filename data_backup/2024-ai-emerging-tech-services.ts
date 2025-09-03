@@ -28,18 +28,23 @@ export interface AIEmergingTechService {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-   address: string;
-   website: string}
+   addres,
+    s: string;
+   websit,
+    e: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
-  rating: number;
-  reviews: number}
+  ratin,
+    g: number;
+  review,
+    s: number}
 export const aiEmergingTechServices: AIEmergingTechService[] = [;
   // AI-Powered Video Generation Platform{
 :data_backup/2024-ai-emerging-tech-services.ts;
-    id: 'ai-video-generation-platform',
+    i,
+    d: 'ai-video-generation-platform',
     name: 'AI Video Generation Platform',
     tagline: 'Create professional videos with AI in minutes',
     price: '$499',
@@ -84,7 +89,8 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
     color: 'from-purple-500 to-pink-600,
     textColor:,
   text-purple-400',
-    link: 'https://ziontechgroup.com/ai-video-generation-platform,
+    link: 'http,
+    s://ziontechgroup.com/ai-video-generation-platform,
     marketPosition:;
   'Competitive with Runway ML ($35/month), Synthesia ($30/month), and Lumen5 ($19/month). Our advantage: Better quality, more features, and professional-grade output.,
   ,
@@ -117,12 +123,14 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   65% annual growth',
     variant: 'quantum-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Advanced quantum ML platform with hybrid classical-quantum algorithms, real-time quantum simulation, and comprehensive research tools. Includes educational resources and collaboration features.',
@@ -177,7 +185,8 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
     color: 'from-red-500 to-orange-600,
     textColor:,
   text-red-400',
-    link: 'https://ziontechgroup.com/ai-cybersecurity-platform,
+    link: 'http,
+    s://ziontechgroup.com/ai-cybersecurity-platform,
     marketPosition:;
   'Competitive with CrowdStrike ($8.99/user/month), SentinelOne ($8.99/user/month), and Darktrace ($50,000/year). Our advantage: Better AI, lower cost, and comprehensive protection.,
   ,
@@ -210,12 +219,14 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   25.8% annual growth',
     variant: 'autonomous-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Advanced robotics platform with AI-powered navigation, computer vision, and comprehensive fleet management. Includes development tools, safety monitoring, and cloud-based control.',
@@ -270,7 +281,8 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
     color: 'from-green-500 to-emerald-600,
     textColor:,
   text-green-400',
-    link: 'https://ziontechgroup.com/blockchain-ai-platform,
+    link: 'http,
+    s://ziontechgroup.com/blockchain-ai-platform,
     marketPosition:;
   'Competitive with SingularityNET ($AGI tokens), Ocean Protocol ($OCEAN tokens), and Fetch.ai ($FET tokens). Our advantage: Better usability, comprehensive features, and enterprise support.,
   ,
@@ -303,12 +315,14 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   38.9% annual growth',
     variant: 'edge-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Advanced edge AI platform with optimized models, real-time processing, and comprehensive device management. Includes security features, cloud synchronization, and multi-device coordination.',
@@ -363,7 +377,8 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
     color: 'from-emerald-500 to-green-600,
     textColor:,
   text-emerald-400',
-    link: 'https://ziontechgroup.com/ai-drug-discovery-platform,
+    link: 'http,
+    s://ziontechgroup.com/ai-drug-discovery-platform,
     marketPosition:;
   'Competitive with Atomwise ($50,000/project), BenevolentAI ($100,000/project), and Insilico Medicine ($200,000/project). Our advantage: Lower cost, better AI models, and comprehensive tools.,
   ,
@@ -396,12 +411,14 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [;
   35% annual growth',
     variant: 'simulation-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Advanced climate modeling platform with AI prediction models, comprehensive risk assessment, and adaptation planning tools. Includes real-time monitoring, scenario modeling, and policy recommendations.',

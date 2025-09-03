@@ -2,18 +2,24 @@ const CACHE_NAME =;
   'static-cache-v1';
 const DATA_CACHE_NAME =;
   'data-cache-v1';
-const FILES_TO_CACHE = [
+<<<<<<< HEAD
+const FILES_TO_CACHE = ['
   '/',
   '/index.html',
   '/offline.html',
   '/manifest.json',
   '/vite.svg'];
+self.addEventListener('
+=======
+const FILES_TO_CACHE = [
+  '/,/index.html,/offline.html,/manifest.json,/vite.svg'];
 self.addEventListener(
+>>>>>>> main
   'install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE)));
   self.skipWaiting()})
-self.addEventListener(
+self.addEventListener('
   'activate', event => {  event.waitUntil(
     caches.keys().then(keyList =>;
       Promise.all(
@@ -22,17 +28,17 @@ self.addEventListener(
             return caches.delete(key)}
         }))));
   self.clients.claim()})
-self.addEventListener(
+self.addEventListener('
   'fetch', event => {
   if (event.request.method !==;
   'GET') return;
-  if (event.request.url.includes(
+  if (event.request.url.includes('
   '/api/')) {    event.respondWith(
       caches.open(DATA_CACHE_NAME).then(cache =>;
         fetch(event.request);
           .then(response => {
             if (response.status === 200) {
-              cache.put(event.request, response.clone())}
+              cache.put(event.request, response.clone());
             return response})
           .catch(() => cache.match(event.request))));
     return}
@@ -40,5 +46,5 @@ self.addEventListener(
     caches.match(event.request).then(response => {
       return(
         response ||;
-        fetch(event.request).catch(() => caches.match(
+        fetch(event.request).catch(() => caches.match('
   '/offline.html')))}))})

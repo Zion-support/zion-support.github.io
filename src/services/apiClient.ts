@@ -1,41 +1,27 @@
-import axios from 'axios';
-import { toast } from 'react-hot-toast';
-
-const apiClient = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL || '/api',
-  withCredentials: true,
-  timeout: 10000,
-  headers: {
-    'Content-Type': 'application/json'
-  }
-});
-
-// Request interceptor
-apiClient.interceptors.request.use(
-  (config) => {
-    const token = localStorage.getItem('token');
-    if (token) {
-      config.headers.Authorization = 'Bearer ' + token;
-    }
-    return config;
-  },
-  (error) => {
-    return Promise.reject(error);
-  }
-);
-
-// Response interceptor
-apiClient.interceptors.response.use(
-  (response) => {
-    return response;
-  },
-  (error) => {
-    if (error.response?.status === 401) {
-      localStorage.removeItem('token');
-      window.location.href = '/login';
-    }
-    return Promise.reject(error);
-  }
-);
-
-export default apiClient;
+<<<<<<< HEAD
+import axios from 'axios' import { toast } from 'react - hot - toast' const apiClient = axios.create ({ baseURL: process.env.NEXT_PUBLIC_API_URL || '/api', withCredentials: true, timeout: 10000, headers: { 'Content - Type': 'application / json'}}) ';
+;
+=======
+<<<<<<< HEAD
+import axios from 'axios' import {toast } from 'react - hot - toast' const apiClient = axios.create ({baseURL: process.env.NEXT_PUBLIC_API_URL || '/api', withCredentials: true, timeout: 10000, headers: { 'Content - Type': 'application / json'}}) ';'
+;
+=======
+<<<<<<< HEAD
+import axios from &apos;axios&apos; import { toast } from &apos;react - hot - toast&apos; ;&apos;const apiClient = axios.create ({ baseURL: process.env.NEXT_PUBLIC_API_URL || &apos;/api&apos;, withCredentials: true, timeout: 10000, headers: { &apos;Content - Type&apos;: &apos;application / json&apos;}}) ';
+;&apos;'
+=======
+<<<<<<< HEAD
+import axios from 'axios' import { toast } from 'react - hot - toast' const apiClient = axios.create ({ baseURL: process.env.NEXT_PUBLIC_API_URL || '/api', withCredentials: true, timeout: 10000, headers: { 'Content - Type': 'application / json'}}) ';'
+;
+<<<<<<< HEAD
+""
+=======
+=======
+import axios from 'axios' import { toast }  from 'react - hot - toast';const apiClient = axios.create ({ baseURL: process.env.NEXT_PUBLIC_API_URL || '/api', withCredentials: true, timeout: 10000, headers: { 'Content - Type': 'application / json'}}) 
+;
+"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

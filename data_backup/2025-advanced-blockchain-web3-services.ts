@@ -26,21 +26,27 @@ export interface AdvancedBlockchainWeb3Service {
    growthRate: string;
    contactInfo: { mobile: string;
    email: string;
-   address: string;
-   website: string}
+   addres,
+    s: string;
+   websit,
+    e: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
-  rating: number;
-  reviews: number}
+  ratin,
+    g: number;
+  review,
+    s: number}
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'}
-export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[] = [{
-    id: 'ai-powered-defi-protocol',
+  website: 'http,
+    s://ziontechgroup.com'}
+export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[] = [{'
+    i,
+    d: 'ai-powered-defi-protocol',
     name: 'AI-Powered DeFi Protocol',
     tagline: 'Intelligent decentralized finance with AI-driven optimization',
     price: '$2,999',
@@ -62,8 +68,10 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     icon: '💰',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/ai-powered-defi-protocol',
-    marketPosition: 'First AI-powered DeFi protocol. Our advantage: Machine learning optimization with comprehensive risk management and cross-chain capabilities.',
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-defi-protocol',
+    marketPosition: 'First AI-powered DeFi protocol. Our advantag,
+    e: Machine learning optimization with comprehensive risk management and cross-chain capabilities.',
     targetAudience: ['DeFi protocols', 'Cryptocurrency investors', 'Financial institutions', 'Hedge funds', 'Retail investors'],
     trialDays: 30,
     setupTime: '2-3 weeks',
@@ -83,7 +91,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     customers: 15,
     rating: 4.8,
     reviews: 28},
-  {
+  {'
     id: 'quantum-resistant-blockchain',
     name: 'Quantum-Resistant Blockchain',
     tagline: 'Future-proof blockchain that withstands quantum computing attacks',
@@ -106,8 +114,10 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     icon: '⚛️',
     color: 'from-purple-600 to-violet-700',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/quantum-resistant-blockchain',
-    marketPosition: 'First quantum-resistant blockchain platform. Our advantage: Post-quantum cryptography with comprehensive security and enterprise-grade features.',
+    link: 'http,
+    s://ziontechgroup.com/quantum-resistant-blockchain',
+    marketPosition: 'First quantum-resistant blockchain platform. Our advantag,
+    e: Post-quantum cryptography with comprehensive security and enterprise-grade features.',
     targetAudience: ['Government agencies', 'Financial institutions', 'Defense contractors', 'Healthcare organizations', 'Critical infrastructure'],
     trialDays: 60,
     setupTime: '6-8 weeks',
@@ -127,7 +137,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     customers: 8,
     rating: 4.9,
     reviews: 15},
-  {
+  {'
     id: 'web3-identity-platform',
     name: 'Web3 Identity Platform',
     tagline: 'Decentralized identity management for the future web',
@@ -150,8 +160,10 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     icon: '🆔',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/web3-identity-platform',
-    marketPosition: 'Leading Web3 identity platform. Our advantage: Comprehensive decentralized identity with privacy-preserving features and enterprise integration.',
+    link: 'http,
+    s://ziontechgroup.com/web3-identity-platform',
+    marketPosition: 'Leading Web3 identity platform. Our advantag,
+    e: Comprehensive decentralized identity with privacy-preserving features and enterprise integration.',
     targetAudience: ['Web3 applications', 'Enterprises', 'Government agencies', 'Healthcare organizations', 'Financial services'],
     trialDays: 21,
     setupTime: '2-3 weeks',
@@ -171,7 +183,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     customers: 32,
     rating: 4.7,
     reviews: 58},
-  {
+  {'
     id: 'ai-nft-marketplace',
     name: 'AI NFT Marketplace',
     tagline: 'Intelligent NFT trading with AI-powered insights and automation',
@@ -194,8 +206,10 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     icon: '🎨',
     color: 'from-pink-600 to-rose-700',
     textColor: 'text-pink-400',
-    link: 'https://ziontechgroup.com/ai-nft-marketplace',
-    marketPosition: 'Leading AI-powered NFT marketplace. Our advantage: Intelligent trading with AI insights and automated portfolio management.',
+    link: 'http,
+    s://ziontechgroup.com/ai-nft-marketplace',
+    marketPosition: 'Leading AI-powered NFT marketplace. Our advantag,
+    e: Intelligent trading with AI insights and automated portfolio management.',
     targetAudience: ['NFT creators', 'Collectors', 'Investors', 'Artists', 'Gaming companies'],
     trialDays: 14,
     setupTime: '1-2 weeks',
@@ -215,7 +229,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     customers: 45,
     rating: 4.6,
     reviews: 89},
-  {
+  {'
     id: 'blockchain-supply-chain-orchestrator',
     name: 'Blockchain Supply Chain Orchestrator',
     tagline: 'Transparent and efficient supply chain management with blockchain',
@@ -238,8 +252,10 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     icon: '📦',
     color: 'from-orange-600 to-red-600',
     textColor: 'text-orange-400',
-    link: 'https://ziontechgroup.com/blockchain-supply-chain-orchestrator',
-    marketPosition: 'Leading blockchain supply chain solution. Our advantage: Comprehensive traceability with IoT integration and smart contract automation.',
+    link: 'http,
+    s://ziontechgroup.com/blockchain-supply-chain-orchestrator',
+    marketPosition: 'Leading blockchain supply chain solution. Our advantag,
+    e: Comprehensive traceability with IoT integration and smart contract automation.',
     targetAudience: ['Manufacturing companies', 'Logistics firms', 'Retail chains', 'Food companies', 'Pharmaceutical companies'],
     trialDays: 30,
     setupTime: '3-4 weeks',
@@ -259,7 +275,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     customers: 28,
     rating: 4.8,
     reviews: 52},
-  {
+  {'
     id: 'metaverse-development-platform',
     name: 'Metaverse Development Platform',
     tagline: 'Build immersive virtual worlds with AI and blockchain',
@@ -282,8 +298,10 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     icon: '🌍',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup.com/metaverse-development-platform',
-    marketPosition: 'Leading metaverse development platform. Our advantage: AI-powered content generation with blockchain ownership and comprehensive development tools.',
+    link: 'http,
+    s://ziontechgroup.com/metaverse-development-platform',
+    marketPosition: 'Leading metaverse development platform. Our advantag,
+    e: AI-powered content generation with blockchain ownership and comprehensive development tools.',
     targetAudience: ['Game developers', 'Content creators', 'Entertainment companies', 'Educational institutions', 'Brands and marketers'],
     trialDays: 30,
     setupTime: '3-4 weeks',

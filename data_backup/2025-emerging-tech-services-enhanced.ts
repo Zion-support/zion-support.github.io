@@ -26,23 +26,29 @@ export interface EmergingTechService {
    growthRate: string;
    contactInfo: { mobile: string;
    email: string;
-   address: string;
-   website: string}
+   addres,
+    s: string;
+   websit,
+    e: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
-  rating: number;
-reviews: number;const contact = {
-  mobile:,
+  ratin,
+    g: number;
+review,
+    s: number;const contact = {
+  mobil,
+    e:,
   +1 302 464 0950',
   email: 'kleber@ziontechgroup.com,
   address:,
   364 E Main St STE 1008 Middletown DE 19709',
-  ;
-  website: 'https://ziontechgroup.com}
+  website: 'http,
+    s://ziontechgroup.com}
 export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
-    id:,
+    i,
+    d:,
   space-mining-platform',
     name: 'Space Mining Platform,
     tagline:,
@@ -70,7 +76,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
     color: 'from-purple-600 to-indigo-700,
     textColor:,
   text-purple-400',
-    link: 'https://ziontechgroup.com/space-mining-platform,
+    link: 'http,
+    s://ziontechgroup.com/space-mining-platform,
     marketPosition:,
   First-to-market space mining platform. Competes with space agencies ($100M+ projects). Our advantage: Automated mining and cost-effective operations.,
     targetAudience[;
@@ -95,7 +102,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
   No direct competitors - first-to-market technology'],
     marketSize: '$100B+ potential space mining market,
     growthRate:;
-  '500%+ YoY (emerging market)',
+  '500%+ YoY (emerging market),
     contactInfo: contact,
     realImplementation: true,
     implementationDetails:,
@@ -133,7 +140,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
     color: 'from-green-600 to-emerald-700,
     textColor:,
   text-green-400',
-    link: 'https://ziontechgroup.com/quantum-bio-computing,
+    link: 'http,
+    s://ziontechgroup.com/quantum-bio-computing,
     marketPosition:,
   First-to-market quantum bio-computing platform. Competes with quantum computing ($10,000/month), bio-computing ($5,000/month). Our advantage: Hybrid approach and biological integration.,
     targetAudience[;
@@ -161,12 +169,14 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
   700% annual growth',
     variant: 'quantum-bio-enterprise,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Quantum bio-computing platform with hybrid processing, biological integration, and comprehensive research tools.',
@@ -203,7 +213,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
     color: 'from-pink-600 to-rose-700,
     textColor:,
   text-pink-400',
-    link: 'https://ziontechgroup.com/brain-computer-interface,
+    link: 'http,
+    s://ziontechgroup.com/brain-computer-interface,
     marketPosition:,
   Competes with Neuralink ($10,000+), Kernel ($50,000+). Our advantage: Advanced algorithms and 90% cost reduction.,
     targetAudience[;
@@ -231,12 +242,14 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
   300% annual growth',
     variant: 'bci-enterprise,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Advanced BCI platform with neural signal processing, real-time monitoring, and comprehensive research tools.',
@@ -273,7 +286,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
     color: 'from-yellow-600 to-amber-700,
     textColor:,
   text-yellow-400',
-    link: 'https://ziontechgroup.com/quantum-energy-platform,
+    link: 'http,
+    s://ziontechgroup.com/quantum-energy-platform,
     marketPosition:,
   Competes with energy consulting ($500/hour), energy management ($1,000/month). Our advantage: Quantum optimization and automated energy management.,
     targetAudience[;
@@ -301,12 +315,14 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
   400% annual growth',
     variant: 'quantum-energy-enterprise,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy management tools.',
@@ -343,7 +359,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
     color: 'from-blue-600 to-indigo-700,
     textColor:,
   text-blue-400',
-    link: 'https://ziontechgroup.com/autonomous-vehicle-ai,
+    link: 'http,
+    s://ziontechgroup.com/autonomous-vehicle-ai,
     marketPosition:,
   Competes with Waymo ($50,000+), Tesla Autopilot ($10,000+). Our advantage: Advanced AI and affordable pricing.,
     targetAudience[;
@@ -371,12 +388,14 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
   45% annual growth',
     variant: 'autonomous-vehicle-enterprise,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Autonomous vehicle AI platform with intelligent driving, safety systems, and fleet management capabilities.',
@@ -413,7 +432,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
     color: 'from-indigo-600 to-purple-700,
     textColor:,
   text-indigo-400',
-    link: 'https://ziontechgroup.com/quantum-materials-discovery,
+    link: 'http,
+    s://ziontechgroup.com/quantum-materials-discovery,
     marketPosition:,
   Competes with materials consulting ($300/hour), simulation tools ($2,000/month). Our advantage: Quantum simulation and AI discovery.,
     targetAudience[;
@@ -441,12 +461,14 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
   500% annual growth',
     variant: 'quantum-materials-enterprise,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Quantum materials discovery platform with simulation capabilities, AI discovery, and comprehensive research tools.',
@@ -483,7 +505,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
     color: 'from-gray-600 to-slate-700,
     textColor:,
   text-gray-400',
-    link: 'https://ziontechgroup.com/quantum-robotics,
+    link: 'http,
+    s://ziontechgroup.com/quantum-robotics,
     marketPosition:,
   Competes with robotics platforms ($5,000/month), AI robotics ($3,000/month). Our advantage: Quantum enhancement and superior performance.,
     targetAudience[;
@@ -511,12 +534,14 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
   350% annual growth',
     variant: 'quantum-robotics-enterprise,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Quantum robotics platform with enhanced capabilities, AI control, and comprehensive robotic management tools.',
@@ -553,7 +578,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
     color: 'from-red-600 to-pink-700,
     textColor:,
   text-red-400',
-    link: 'https://ziontechgroup.com/quantum-internet-security,
+    link: 'http,
+    s://ziontechgroup.com/quantum-internet-security,
     marketPosition:,
   Competes with cybersecurity platforms ($500/month), encryption tools ($200/month). Our advantage: Quantum security and unbreakable encryption.,
     targetAudience[;
@@ -581,12 +607,14 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
   450% annual growth',
     variant: 'quantum-internet-enterprise,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Quantum internet security platform with unbreakable encryption, real-time monitoring, and comprehensive security management.',
@@ -623,7 +651,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
     color: 'from-orange-600 to-red-700,
     textColor:,
   text-orange-400',
-    link: 'https://ziontechgroup.com/quantum-logistics-optimization,
+    link: 'http,
+    s://ziontechgroup.com/quantum-logistics-optimization,
     marketPosition:,
   Competes with logistics platforms ($500/month), optimization tools ($300/month). Our advantage: Quantum optimization and superior performance.,
     targetAudience[;
@@ -651,12 +680,14 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
   380% annual growth',
     variant: 'quantum-logistics-enterprise,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Quantum logistics platform with optimization algorithms, real-time tracking, and comprehensive supply chain management.',
@@ -693,7 +724,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
     color: 'from-teal-600 to-cyan-700,
     textColor:,
   text-teal-400',
-    link: 'https://ziontechgroup.com/metaverse-ai-development,
+    link: 'http,
+    s://ziontechgroup.com/metaverse-ai-development,
     marketPosition:,
   Competes with metaverse platforms ($200/month), AI development ($500/month). Our advantage: AI integration and comprehensive development tools.,
     targetAudience[;
@@ -721,12 +753,14 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
   52% annual growth',
     variant: 'metaverse-ai-enterprise,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Metaverse AI development platform with intelligent systems, content generation, and comprehensive development tools.',
@@ -763,7 +797,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
     color: 'from-purple-600 to-indigo-600,
     textColor:,
   text-purple-400',
-    link: 'https://ziontechgroup.com/quantum-machine-learning-platform,
+    link: 'http,
+    s://ziontechgroup.com/quantum-machine-learning-platform,
     marketPosition:,
   Competes with IBM Quantum ($custom), Google Quantum AI ($custom). Our advantage: Hybrid quantum-classical approach and comprehensive ML tools.,
     targetAudience[;
@@ -791,12 +826,14 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
   45% annual growth',
     variant: 'quantum-ml-enterprise,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Quantum machine learning platform with hybrid quantum-classical algorithms and comprehensive ML tools.',
@@ -845,7 +882,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
     textColor:,
   text-blue-400;
   ',
-    link: 'https://ziontechgroup.com/neuromorphic-computing-platform,
+    link: 'http,
+    s://ziontechgroup.com/neuromorphic-computing-platform,
     marketPosition:,
   Competes with Intel Loihi ($custom), BrainChip ($custom). Our advantage: Comprehensive software platform and hardware agnostic approach.,
     targetAudience['AI research labs;
@@ -877,14 +915,16 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
   ',
     variant: 'neuromorphic-enterprise,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Neuromorphic computing platform with spiking neural networks and hardware acceleration support.;
@@ -936,7 +976,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
     textColor:,
   text-green-400;
   ',
-    link: 'https://ziontechgroup.com/synthetic-biology-platform,
+    link: 'http,
+    s://ziontechgroup.com/synthetic-biology-platform,
     marketPosition:,
   Competes with Benchling ($custom), SnapGene ($custom). Our advantage: Comprehensive design tools and automation capabilities.,
     targetAudience['Biotechnology companies;
@@ -1017,7 +1058,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
     textColor:,
   text-purple-400;
   ',
-    link: 'https://ziontechgroup.com/space-resource-mining-platform,
+    link: 'http,
+    s://ziontechgroup.com/space-resource-mining-platform,
     marketPosition: 'First-to-market space resource mining platform with automated asteroid mining and space-based manufacturing capabilities.;
   ',
     targetAudience['Space agencies;
@@ -1063,14 +1105,16 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
   ',
     variant: 'space-mining,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Advanced space resource mining platform with automated robotics, resource processing, and comprehensive space operations management.;
@@ -1122,7 +1166,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
     textColor:,
   text-pink-400;
   ',
-    link: 'https://ziontechgroup.com/brain-computer-interface-platform,
+    link: 'http,
+    s://ziontechgroup.com/brain-computer-interface-platform,
     marketPosition: 'Leading brain-computer interface platform with advanced neural signal processing and real-time communication capabilities.;
   ',
     targetAudience['Healthcare organizations;
@@ -1171,14 +1216,16 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
   ',
     variant: 'neural-interface,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Comprehensive brain-computer interface platform with advanced neural processing, real-time communication, and extensive application development capabilities.;
@@ -1230,7 +1277,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
     textColor:,
   text-cyan-400;
   ',
-    link: 'https://ziontechgroup.com/quantum-materials-discovery-platform,
+    link: 'http,
+    s://ziontechgroup.com/quantum-materials-discovery-platform,
     marketPosition: 'First-to-market quantum materials discovery platform with quantum computing-powered simulation and prediction capabilities.;
   ',
     targetAudience['Materials science companies;
@@ -1276,14 +1324,16 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
   ',
     variant: 'quantum-materials,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Advanced quantum materials discovery platform with quantum computing integration, automated workflows, and comprehensive materials science capabilities.;
@@ -1335,7 +1385,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
     textColor:,
   text-green-400;
   ',
-    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform,
+    link: 'http,
+    s://ziontechgroup.com/autonomous-vehicle-ai-platform,
     marketPosition: 'Leading autonomous vehicle AI platform with advanced perception, decision-making, and safety capabilities.;
   ',
     targetAudience['Automotive manufacturers;
@@ -1384,14 +1435,16 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
   ',
     variant: 'autonomous-vehicles,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Comprehensive autonomous vehicle AI platform with advanced perception, decision-making, and safety systems for next-generation transportation.;
@@ -1443,7 +1496,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
     textColor:,
   text-emerald-400;
   ',
-    link: 'https://ziontechgroup.com/quantum-bio-computing-platform,
+    link: 'http,
+    s://ziontechgroup.com/quantum-bio-computing-platform,
     marketPosition: 'First-to-market quantum bio-computing platform with quantum-biological hybrid processing and advanced biological simulation capabilities.;
   ',
     targetAudience['Pharmaceutical companies;
@@ -1489,14 +1543,16 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
   ',
     variant: 'quantum-biology,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Advanced quantum bio-computing platform with quantum-biological hybrid processing, comprehensive biological simulation, and extensive research capabilities.;
@@ -1548,7 +1604,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
     textColor:,
   text-yellow-400;
   ',
-    link: 'https://ziontechgroup.com/quantum-energy-platform,
+    link: 'http,
+    s://ziontechgroup.com/quantum-energy-platform,
     marketPosition: 'Leading quantum energy platform with quantum-powered optimization and advanced energy system modeling capabilities.;
   ',
     targetAudience['Energy companies;
@@ -1594,14 +1651,16 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [{
   ',
     variant: 'quantum-energy,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Advanced quantum energy platform with quantum-powered optimization, fusion simulation, and comprehensive energy system management capabilities.;

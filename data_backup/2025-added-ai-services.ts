@@ -1,11 +1,13 @@
 import type { InnovativeAIService } from './innovative-ai-services';
-const contact = {
+const contact = {'
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'}
-export const addedAIServices2025: InnovativeAIService[] = [{
-    id: 'agentic-customer-support-suite',
+  website: 'http,
+    s://ziontechgroup.com'}
+export const addedAIServices2025: InnovativeAIService[] = [{'
+    i,
+    d: 'agentic-customer-support-suite',
     name: 'Agentic Customer Support Suite',
     tagline: 'LLM agents that resolve tickets end-to-end with approvals and guardrails',
     price: '$1,499',
@@ -23,7 +25,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     icon: '🤖',
     color: 'from-cyan-700 to-indigo-700',
     textColor: 'text-cyan-300',
-    link: 'https://ziontechgroup.com/services/agentic-customer-support-suite',
+    link: 'http,
+    s://ziontechgroup.com/services/agentic-customer-support-suite',
     marketPosition: 'Higher resolution rate vs. generic chatbots due to tool use and approvals',
     targetAudience: 'E-commerce, SaaS, marketplaces, fintech',
     trialDays: 14,
@@ -45,7 +48,7 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     customers: 64,
     rating: 4.8,
     reviews: 38},
-  {
+  {'
     id: 'ai-governance-and-risk-suite',
     name: 'AI Governance & Risk Suite',
     tagline: 'Policies, evaluations, and monitoring for safe AI at scale',
@@ -63,7 +66,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     icon: '⚖️',
     color: 'from-fuchsia-600 to-rose-700',
     textColor: 'text-fuchsia-300',
-    link: 'https://ziontechgroup.com/services/ai-governance-and-risk-suite',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-governance-and-risk-suite',
     marketPosition: 'Practical guardrails and reporting for CIO/CISO requirements',
     targetAudience: 'Enterprise compliance, security, and data leaders',
     trialDays: 7,
@@ -85,7 +89,7 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     customers: 19,
     rating: 4.7,
     reviews: 17},
-  {
+  {'
     id: 'marketing-content-studio',
     name: 'AI Marketing Content Studio',
     tagline: 'On-brand content at scale with approvals and performance insights',
@@ -103,7 +107,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     icon: '📝',
     color: 'from-pink-600 to-rose-700',
     textColor: 'text-pink-200',
-    link: 'https://ziontechgroup.com/services/ai-marketing-content-studio',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-marketing-content-studio',
     marketPosition: 'Guardrailed, workflow-first vs. generic content generators',
     targetAudience: 'Content teams, agencies, founders',
     trialDays: 14,
@@ -125,7 +130,7 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     customers: 73,
     rating: 4.7,
     reviews: 40},
-  {
+  {'
     id: 'agentic-sales-engineer',
     name: 'Agentic Sales Engineer',
     tagline: 'Pre-sales technical answers, demos, and POC scaffolds 24/7',
@@ -143,7 +148,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     icon: '🧪',
     color: 'from-indigo-700 to-blue-800',
     textColor: 'text-indigo-200',
-    link: 'https://ziontechgroup.com/services/agentic-sales-engineer',
+    link: 'http,
+    s://ziontechgroup.com/services/agentic-sales-engineer',
     marketPosition: 'Bridges marketing and engineering with safe, useful outputs',
     targetAudience: 'Developer tools, B2B SaaS',
     trialDays: 7,
@@ -165,7 +171,7 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     customers: 21,
     rating: 4.6,
     reviews: 12},
-  {
+  {'
     id: 'ai-fraud-detection-workbench',
     name: 'AI Fraud Detection Workbench',
     tagline: 'Detect anomalous behavior with explainable alerts and playbooks',
@@ -183,7 +189,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     icon: '🕵️',
     color: 'from-rose-600 to-red-700',
     textColor: 'text-rose-200',
-    link: 'https://ziontechgroup.com/services/ai-fraud-detection-workbench',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-fraud-detection-workbench',
     marketPosition: 'Blend ML + rules + actions for pragmatic risk reduction',
     targetAudience: 'Fintech, marketplaces, platforms',
     trialDays: 7,
@@ -194,7 +201,7 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     integrations['Snowflake', 'Kafka', 'Kinesis', 'Datadog'],
     useCases['Payment fraud', 'Account takeovers', 'Promo abuse'],
     roi: 'Reduce fraud loss 15–40%',
-    competitors['Sift (lite)', 'DIY ML + rules'],
+    competitors['Sift (lite), 'DIY ML + rules'],
     marketSize: '$12B fraud detection',
     growthRate: '19% YoY',
     variant: 'risk-managed',
@@ -205,7 +212,7 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     customers: 11,
     rating: 4.7,
     reviews: 9},
-  {
+  {'
     id: 'agentic-finops-optimizer',
     name: 'Agentic FinOps Optimizer',
     tagline: 'Autonomously rightsizes cloud resources with approvals',
@@ -223,7 +230,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     icon: '💸',
     color: 'from-emerald-600 to-green-700',
     textColor: 'text-emerald-200',
-    link: 'https://ziontechgroup.com/services/agentic-finops-optimizer',
+    link: 'http,
+    s://ziontechgroup.com/services/agentic-finops-optimizer',
     marketPosition: 'Actionable FinOps with guardrails vs. read-only reports',
     targetAudience: 'Cloud-native orgs, platform teams',
     trialDays: 14,
@@ -234,7 +242,7 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     integrations['AWS', 'GCP', 'Azure', 'Jira'],
     useCases['EC2/GKE/EKS/AKS rightsizing', 'Idle resources cleanup'],
     roi: 'Save 10–30% cloud spend in 90 days',
-    competitors['CloudHealth (lite)', 'Custom scripts'],
+    competitors['CloudHealth (lite), 'Custom scripts'],
     marketSize: '$6B cloud cost',
     growthRate: '21% YoY',
     variant: 'finops-agent',
@@ -245,7 +253,7 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     customers: 23,
     rating: 4.8,
     reviews: 14},
-  {
+  {'
     id: 'r-d-tooling-copilot',
     name: 'R&D Tooling Copilot',
     tagline: 'Internal dev copilot with secure codebase grounding and actions',
@@ -263,7 +271,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     icon: '🧰',
     color: 'from-indigo-700 to-slate-800',
     textColor: 'text-indigo-200',
-    link: 'https://ziontechgroup.com/services/r-d-tooling-copilot',
+    link: 'http,
+    s://ziontechgroup.com/services/r-d-tooling-copilot',
     marketPosition: 'Safer than generic copilots with org context and guardrails',
     targetAudience: 'Platform and product engineering teams',
     trialDays: 7,
@@ -274,7 +283,7 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     integrations['GitHub', 'GitLab', 'Jira', 'PagerDuty'],
     useCases['Refactors', 'Runbooks', 'On-call help'],
     roi: 'Developer throughput up 20–40%',
-    competitors['GitHub Copilot (org tuned)'],
+    competitors['GitHub Copilot (org tuned)],
     marketSize: '$8B dev tooling',
     growthRate: '20% YoY',
     variant: 'dev-managed',
@@ -285,7 +294,7 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     customers: 17,
     rating: 4.6,
     reviews: 13},
-  {
+  {'
     id: 'agentic-hr-recruiting-suite',
     name: 'Agentic HR Recruiting Suite',
     tagline: 'Source, screen, and schedule with bias-aware guardrails',
@@ -303,7 +312,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     icon: '🧑‍💼',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-200',
-    link: 'https://ziontechgroup.com/services/agentic-hr-recruiting-suite',
+    link: 'http,
+    s://ziontechgroup.com/services/agentic-hr-recruiting-suite',
     marketPosition: 'Practical agent workflows vs. generic ATS plugins',
     targetAudience: 'High-growth startups, agencies, enterprise HR',
     trialDays: 14,
@@ -314,7 +324,7 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     integrations['Greenhouse', 'Lever', 'Workday'],
     useCases['Sourcing', 'Screening', 'Scheduling'],
     roi: 'Time-to-hire down 20–40%',
-    competitors['Eightfold (lite)', 'Hiretual'],
+    competitors['Eightfold (lite), 'Hiretual'],
     marketSize: '$18B recruiting tech',
     growthRate: '16% YoY',
     variant: 'hr-agents',
@@ -325,7 +335,7 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     customers: 31,
     rating: 4.7,
     reviews: 18},
-  {
+  {'
     id: 'agentic-ops-runbook-engine',
     name: 'Agentic Ops Runbook Engine',
     tagline: 'Execute runbooks with approvals, rollbacks, and observability',
@@ -343,7 +353,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     icon: '🛠️',
     color: 'from-indigo-700 to-slate-800',
     textColor: 'text-indigo-200',
-    link: 'https://ziontechgroup.com/services/agentic-ops-runbook-engine',
+    link: 'http,
+    s://ziontechgroup.com/services/agentic-ops-runbook-engine',
     marketPosition: 'Actionable vs. passive knowledge bases',
     targetAudience: 'SRE, platform, and ops teams',
     trialDays: 7,
@@ -365,7 +376,7 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     customers: 22,
     rating: 4.6,
     reviews: 12},
-  {
+  {'
     id: 'agentic-revenue-forecasting-studio',
     name: 'Agentic Revenue Forecasting Studio',
     tagline: 'Blend ML forecasts with scenario planning and explainability',
@@ -383,7 +394,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     icon: '📈',
     color: 'from-cyan-700 to-indigo-700',
     textColor: 'text-cyan-200',
-    link: 'https://ziontechgroup.com/services/agentic-revenue-forecasting-studio',
+    link: 'http,
+    s://ziontechgroup.com/services/agentic-revenue-forecasting-studio',
     marketPosition: 'Finance-first interface with explainable ML',
     targetAudience: 'RevOps and FP&A teams',
     trialDays: 14,
@@ -394,7 +406,7 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     integrations['Salesforce', 'HubSpot', 'Snowflake'],
     useCases['Bookings', 'Retention', 'Cost planning'],
     roi: 'Forecast accuracy up 10–20%',
-    competitors['Pigment (lite)', 'Anaplan (lite)'],
+    competitors['Pigment (lite), 'Anaplan (lite)],
     marketSize: '$5B FP&A tools',
     growthRate: '13% YoY',
     variant: 'rev-ml',
@@ -405,7 +417,7 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     customers: 16,
     rating: 4.6,
     reviews: 9},
-  {
+  {'
     id: 'agentic-supply-chain-copilot',
     name: 'Agentic Supply Chain Copilot',
     tagline: 'Continuously optimize inventory and logistics with live signals',
@@ -423,7 +435,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     icon: '🚚',
     color: 'from-emerald-600 to-green-700',
     textColor: 'text-emerald-200',
-    link: 'https://ziontechgroup.com/services/agentic-supply-chain-copilot',
+    link: 'http,
+    s://ziontechgroup.com/services/agentic-supply-chain-copilot',
     marketPosition: 'From dashboards to decisions with guardrails',
     targetAudience: 'Retail, manufacturing, logistics',
     trialDays: 14,
@@ -434,7 +447,7 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     integrations['ERP', 'WMS', 'TMS', 'Snowflake'],
     useCases['Inventory', 'Replenishment', 'Logistics'],
     roi: 'Reduce stockouts and costs 10–25%',
-    competitors['Kinaxis (lite)', 'o9 (lite)'],
+    competitors['Kinaxis (lite), 'o9 (lite)],
     marketSize: '$7B supply chain tech',
     growthRate: '15% YoY',
     variant: 'supply-agents',
@@ -445,7 +458,7 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     customers: 19,
     rating: 4.7,
     reviews: 11},
-  {
+  {'
     id: 'agentic-sales-engineer',
     name: 'Agentic Sales Engineer',
     tagline: 'Answers technical questions, drafts diagrams, and builds demo scaffolds 24/7',
@@ -463,7 +476,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     icon: '🧩',
     color: 'from-indigo-700 to-sky-700',
     textColor: 'text-indigo-200',
-    link: 'https://ziontechgroup.com/services/agentic-sales-engineer',
+    link: 'http,
+    s://ziontechgroup.com/services/agentic-sales-engineer',
     marketPosition: 'Bridges presales gaps without scaling headcount',
     targetAudience: 'SaaS, APIs, data platforms',
     trialDays: 14,
@@ -485,7 +499,7 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     customers: 31,
     rating: 4.7,
     reviews: 18},
-  {
+  {'
     id: 'ai-marketing-content-studio',
     name: 'AI Marketing Content Studio',
     tagline: 'On-brand content at scale with SEO briefs, approvals, and analytics',
@@ -503,7 +517,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     icon: '✍️',
     color: 'from-rose-600 to-violet-700',
     textColor: 'text-rose-200',
-    link: 'https://ziontechgroup.com/services/ai-marketing-content-studio',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-marketing-content-studio',
     marketPosition: 'Combines research + generation + approvals in one',
     targetAudience: 'B2B/B2C marketing teams and agencies',
     trialDays: 7,
@@ -525,7 +540,7 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     customers: 76,
     rating: 4.6,
     reviews: 44},
-  {
+  {'
     id: 'risk-and-compliance-copilot',
     name: 'Risk & Compliance Copilot',
     tagline: 'Continuously assess AI risks, map controls, and generate audit evidence',
@@ -543,7 +558,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     icon: '🧭',
     color: 'from-emerald-700 to-slate-700',
     textColor: 'text-emerald-200',
-    link: 'https://ziontechgroup.com/services/risk-and-compliance-copilot',
+    link: 'http,
+    s://ziontechgroup.com/services/risk-and-compliance-copilot',
     marketPosition: 'Practical compliance ops with real automation',
     targetAudience: 'CISO, Risk, Compliance, Data Leaders',
     trialDays: 7,
@@ -565,7 +581,7 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     customers: 19,
     rating: 4.8,
     reviews: 11},
-  {
+  {'
     id: 'autonomous-analytics-briefs',
     name: 'Autonomous Analytics Briefs',
     tagline: 'Weekly plain-English insights from your data warehouse',
@@ -583,7 +599,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     icon: '📈',
     color: 'from-violet-700 to-indigo-700',
     textColor: 'text-violet-200',
-    link: 'https://ziontechgroup.com/services/autonomous-analytics-briefs',
+    link: 'http,
+    s://ziontechgroup.com/services/autonomous-analytics-briefs',
     marketPosition: 'From dashboards to decisions, without hiring analysts',
     targetAudience: 'Founders, marketing, product, finance',
     trialDays: 14,
@@ -605,7 +622,7 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     customers: 25,
     rating: 4.7,
     reviews: 13},
-  {
+  {'
     id: 'agentic-qa-and-test-writer',
     name: 'Agentic QA & Test Writer',
     tagline: 'Writes and maintains unit/e2e tests with CI integration',
@@ -623,7 +640,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     icon: '🧪',
     color: 'from-emerald-700 to-teal-800',
     textColor: 'text-emerald-200',
-    link: 'https://ziontechgroup.com/services/agentic-qa-and-test-writer',
+    link: 'http,
+    s://ziontechgroup.com/services/agentic-qa-and-test-writer',
     marketPosition: 'Safer PRs with better tests and fewer flakes',
     targetAudience: 'Engineering teams and platform groups',
     trialDays: 7,
@@ -634,7 +652,7 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     integrations['GitHub', 'GitLab', 'Jenkins', 'CircleCI'],
     useCases['Improve coverage', 'Reduce flakiness', 'Speed reviews'],
     roi: 'Cut regressions and review time 20–40%',
-    competitors['Manual test writing', 'Copilot (generic)'],
+    competitors['Manual test writing', 'Copilot (generic)],
     marketSize: '$9B QA tooling',
     growthRate: '13% YoY',
     variant: 'qa-agent',
@@ -645,7 +663,7 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     customers: 12,
     rating: 4.6,
     reviews: 8},
-  {
+  {'
     id: 'ai-data-contracts-assistant',
     name: 'AI Data Contracts Assistant',
     tagline: 'Defines, validates, and enforces data contracts with owners',
@@ -663,7 +681,8 @@ export const addedAIServices2025: InnovativeAIService[] = [{
     icon: '📜',
     color: 'from-amber-700 to-orange-700',
     textColor: 'text-amber-200',
-    link: 'https://ziontechgroup.com/services/ai-data-contracts-assistant',
+    link: 'http,
+    s://ziontechgroup.com/services/ai-data-contracts-assistant',
     marketPosition: 'Prevents data breaks before they happen',
     targetAudience: 'Data platform, analytics engineering',
     trialDays: 14,

@@ -1,20 +1,27 @@
-export interface Listing {
+<<<<<<< HEAD
+export interface Listing {;
   id: string;
-  title: string;
-  description: string;
-  price: number;
-  category: string;
-  tags: string[];
-  images: string[];
-  rating: number;
-  reviews: number;
-  location: string;
-  createdAt: string;
-  updatedAt: string;
-  seller: {
-    id: string;
-    name: string;
-    rating: number;
-    reviews: number;
-  };
+=======
+export interface Listing {id: string;
+>>>>>>> main
+   title: string;
+   description: string;
+   price: number;
+   currency: string;
+   category: string;
+   subcategory?: string;
+   tags: string[];
+   images: string[];
+   seller: {  id: string;
+   name: string;
+<<<<<<< HEAD
+   ratin,
+    g: number
+   review,
+    s: number} location: string ;
 }
+=======
+   rating: number
+   reviews: number} location: string ;
+}
+>>>>>>> main

@@ -1,57 +1,35 @@
-export default {
-  login: async (credentials) => {
-    try {
-      const response = await fetch('/api/auth/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(credentials)
-      });
-      
-        throw new Error('Login failed');
-      }
-      
-      return await response.json();
-    } catch (error) {
-      console.error('Login error:', error);
-      throw error;
-    }
-  },
-  
-  logout: async () => {
-    try {
-      const response = await fetch('/api/auth/logout', {
-        method: 'POST'
-      });
-      
-        throw new Error('Logout failed');
-      }
-      
-      return await response.json();
-    } catch (error) {
-      console.error('Logout error:', error);
-      throw error;
-    }
-  },
-  
-  register: async (userData) => {
-    try {
-      const response = await fetch('/api/auth/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(userData)
-      });
-      
-        throw new Error('Registration failed');
-      }
-      
-      return await response.json();
-    } catch (error) {
-      console.error('Registration error:', error);
-      throw error;
-    }
-  }
-};
+<<<<<<< HEAD
+ export default authService';
+;
+=======
+<<<<<<< HEAD
+import React from 'react';
+import {SEO } from '@/components/SEO';
+
+export default function auth() {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      <SEO title="auth - Zion Tech Group" description="Professional auth services by Zion Tech Group" />
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold text-white mb-8">auth</h1>
+        <p className="text-gray-300 text-lg">
+          Professional auth services to help your business grow.
+        </p>
+      </div>
+    </div>
+  );
+}
+=======
+<<<<<<< HEAD
+ export default authService';'
+=======
+ export default authService
+>>>>>>> main
+;
+<<<<<<< HEAD
+&apos;'
+=======
+
+""
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

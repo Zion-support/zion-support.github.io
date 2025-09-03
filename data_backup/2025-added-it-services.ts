@@ -1,16 +1,19 @@
 import type { AdvancedITService } from './advanced-it-services';
-const contact = {
+const contact = {'
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'}
-export const addedITServices2025: AdvancedITService[] = [{
-    id: 'managed-mlops-platform',
+  website: 'http,
+    s://ziontechgroup.com'}
+export const addedITServices2025: AdvancedITService[] = [{'
+    i,
+    d: 'managed-mlops-platform',
     name: 'Managed MLOps Platform',
     tagline: 'Productionize models with CI/CD, monitoring, and governance',
     price: '$3,499',
     period: '/month',
-    description: 'End-to-end MLOps stack: feature store, CI/CD, drift detection, lineage, and cost controls. Delivered as a secure managed service in your cloud.',
+    description: 'End-to-end MLOps stac,
+    k: feature store, CI/CD, drift detection, lineage, and cost controls. Delivered as a secure managed service in your cloud.',
     features[;
       'Model registry and lineage',
       'Data/Concept drift detection',
@@ -23,7 +26,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     icon: '🛠️',
     color: 'from-slate-600 to-blue-700',
     textColor: 'text-slate-300',
-    link: 'https://ziontechgroup.com/services/managed-mlops-platform',
+    link: 'http,
+    s://ziontechgroup.com/services/managed-mlops-platform',
     marketPosition: 'Opinionated, secure, and done-for-you compared to DIY ML stacks',
     targetAudience: 'Mid-market and enterprise data teams',
     trialDays: 0,
@@ -45,7 +49,7 @@ export const addedITServices2025: AdvancedITService[] = [{
     customers: 28,
     rating: 4.9,
     reviews: 21},
-  {
+  {'
     id: 'zero-trust-access-service',
     name: 'Zero-Trust Access Service',
     tagline: 'Private, identity-aware access to internal apps without VPNs',
@@ -63,7 +67,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     icon: '🔐',
     color: 'from-amber-600 to-rose-700',
     textColor: 'text-amber-200',
-    link: 'https://ziontechgroup.com/services/zero-trust-access-service',
+    link: 'http,
+    s://ziontechgroup.com/services/zero-trust-access-service',
     marketPosition: 'Simpler than full SASE faster rollout than DIY BeyondCorp',
     targetAudience: 'SaaS companies, regulated industries, remote teams',
     trialDays: 14,
@@ -85,7 +90,7 @@ export const addedITServices2025: AdvancedITService[] = [{
     customers: 52,
     rating: 4.8,
     reviews: 44},
-  {
+  {'
     id: 'sre-oncall-as-a-service',
     name: 'SRE On-Call as a Service',
     tagline: 'Production-grade reliability with shared on-call and SLIs/SLOs',
@@ -96,14 +101,15 @@ export const addedITServices2025: AdvancedITService[] = [{
       'SLIs/SLOs and error budgets',
       'Incident response and runbooks',
       'Auto-remediation playbooks',
-      'Observability setup (logs, traces, metrics)',
+      'Observability setup (logs, traces, metrics),
       'Monthly reliability reviews';
     ],
     popular: true,
     icon: '🧭',
     color: 'from-slate-700 to-black',
     textColor: 'text-slate-200',
-    link: 'https://ziontechgroup.com/services/sre-oncall-as-a-service',
+    link: 'http,
+    s://ziontechgroup.com/services/sre-oncall-as-a-service',
     marketPosition: 'Hands-on reliability partner vs. tooling-only vendors',
     targetAudience: 'Seed to Series C startups, scale-ups',
     trialDays: 0,
@@ -125,7 +131,7 @@ export const addedITServices2025: AdvancedITService[] = [{
     customers: 14,
     rating: 4.9,
     reviews: 11},
-  {
+  {'
     id: 'data-platform-accelerator',
     name: 'Data Platform Accelerator',
     tagline: 'Stand up a modern data stack in your cloud in weeks',
@@ -143,7 +149,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     icon: '🗄️',
     color: 'from-cyan-700 to-blue-800',
     textColor: 'text-cyan-200',
-    link: 'https://ziontechgroup.com/services/data-platform-accelerator',
+    link: 'http,
+    s://ziontechgroup.com/services/data-platform-accelerator',
     marketPosition: 'Faster time-to-value vs. DIY lakehouse',
     targetAudience: 'Product and analytics teams',
     trialDays: 0,
@@ -165,7 +172,7 @@ export const addedITServices2025: AdvancedITService[] = [{
     customers: 9,
     rating: 4.8,
     reviews: 7},
-  {
+  {'
     id: 'managed-kubernetes-platform',
     name: 'Managed Kubernetes Platform',
     tagline: 'Secure, observable, cost-aware Kubernetes managed for you',
@@ -183,7 +190,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     icon: '☸️',
     color: 'from-blue-700 to-slate-800',
     textColor: 'text-blue-200',
-    link: 'https://ziontechgroup.com/services/managed-kubernetes-platform',
+    link: 'http,
+    s://ziontechgroup.com/services/managed-kubernetes-platform',
     marketPosition: 'Opinionated platform engineering without the platform tax',
     targetAudience: 'Startups and scale-ups on AWS/GCP/Azure',
     trialDays: 0,
@@ -205,7 +213,7 @@ export const addedITServices2025: AdvancedITService[] = [{
     customers: 7,
     rating: 4.8,
     reviews: 5},
-  {
+  {'
     id: 'secure-data-mesh',
     name: 'Secure Data Mesh',
     tagline: 'Domain-oriented data products with governance and lineage',
@@ -223,7 +231,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     icon: '🕸️',
     color: 'from-purple-700 to-fuchsia-800',
     textColor: 'text-purple-200',
-    link: 'https://ziontechgroup.com/services/secure-data-mesh',
+    link: 'http,
+    s://ziontechgroup.com/services/secure-data-mesh',
     marketPosition: 'Pragmatic mesh patterns vs. big-bang replatforming',
     targetAudience: 'Enterprises modernizing data',
     trialDays: 0,
@@ -245,7 +254,7 @@ export const addedITServices2025: AdvancedITService[] = [{
     customers: 5,
     rating: 4.7,
     reviews: 4},
-  {
+  {'
     id: 'enterprise-sso-and-iam-hardening',
     name: 'Enterprise SSO & IAM Hardening',
     tagline: 'Design and implement robust identity with least privilege',
@@ -263,7 +272,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     icon: '🔑',
     color: 'from-amber-700 to-orange-800',
     textColor: 'text-amber-200',
-    link: 'https://ziontechgroup.com/services/enterprise-sso-and-iam-hardening',
+    link: 'http,
+    s://ziontechgroup.com/services/enterprise-sso-and-iam-hardening',
     marketPosition: 'Security-focused rollout with measurable reductions in access risk',
     targetAudience: 'SaaS and regulated industries',
     trialDays: 0,
@@ -285,7 +295,7 @@ export const addedITServices2025: AdvancedITService[] = [{
     customers: 12,
     rating: 4.8,
     reviews: 8},
-  {
+  {'
     id: 'managed-vulnerability-management',
     name: 'Managed Vulnerability Management',
     tagline: 'Continuous scanning, prioritization, and remediation workflows',
@@ -303,7 +313,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     icon: '🛡️',
     color: 'from-red-600 to-rose-700',
     textColor: 'text-red-200',
-    link: 'https://ziontechgroup.com/services/managed-vulnerability-management',
+    link: 'http,
+    s://ziontechgroup.com/services/managed-vulnerability-management',
     marketPosition: 'Hands-on remediation vs. scan-and-forget',
     targetAudience: 'SMBs to mid-market with compliance needs',
     trialDays: 0,
@@ -314,7 +325,7 @@ export const addedITServices2025: AdvancedITService[] = [{
     integrations['Jira', 'ServiceNow', 'Splunk'],
     useCases['Patch cycles', 'Cloud misconfig fixes', 'Compliance evidence'],
     roi: 'Reduce exploitable vulns 40–70%',
-    competitors['Qualys (managed)', 'Tenable (managed)'],
+    competitors['Qualys (managed), 'Tenable (managed)],
     marketSize: '$15B vuln mgmt',
     growthRate: '12% YoY',
     variant: 'managed-security',
@@ -325,7 +336,7 @@ export const addedITServices2025: AdvancedITService[] = [{
     customers: 18,
     rating: 4.7,
     reviews: 13},
-  {
+  {'
     id: 'managed-sase-lite',
     name: 'Managed SASE Lite',
     tagline: 'Secure access, DNS filtering, and app gateway without complexity',
@@ -343,7 +354,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     icon: '🛰️',
     color: 'from-indigo-600 to-violet-700',
     textColor: 'text-indigo-200',
-    link: 'https://ziontechgroup.com/services/managed-sase-lite',
+    link: 'http,
+    s://ziontechgroup.com/services/managed-sase-lite',
     marketPosition: 'Right-sized SASE for startups and SMBs',
     targetAudience: 'Remote-first orgs, regulated SMBs',
     trialDays: 0,
@@ -354,7 +366,7 @@ export const addedITServices2025: AdvancedITService[] = [{
     integrations['Okta', 'Azure AD', 'Google Workspace'],
     useCases['Secure remote access', 'Web filtering', 'Basic DLP'],
     roi: 'Reduce breach risk and tickets',
-    competitors['Cloudflare One (managed)', 'Zscaler (lite)'],
+    competitors['Cloudflare One (managed), 'Zscaler (lite)],
     marketSize: '$25B SASE',
     growthRate: '17% YoY',
     variant: 'managed',
@@ -365,7 +377,7 @@ export const addedITServices2025: AdvancedITService[] = [{
     customers: 10,
     rating: 4.6,
     reviews: 7},
-  {
+  {'
     id: 'data-quality-observability-service',
     name: 'Data Quality Observability Service',
     tagline: 'Detect schema drift, freshness, and anomalies with alerts',
@@ -383,7 +395,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     icon: '📊',
     color: 'from-cyan-700 to-blue-800',
     textColor: 'text-cyan-200',
-    link: 'https://ziontechgroup.com/services/data-quality-observability-service',
+    link: 'http,
+    s://ziontechgroup.com/services/data-quality-observability-service',
     marketPosition: 'From alerts to actions with owners and SLAs',
     targetAudience: 'Analytics and data platform teams',
     trialDays: 0,
@@ -394,7 +407,7 @@ export const addedITServices2025: AdvancedITService[] = [{
     integrations['Snowflake', 'BigQuery', 'Databricks'],
     useCases['Pipeline health', 'Data SLAs', 'Incident mgmt'],
     roi: 'Reduce data downtime 40–60%',
-    competitors['Monte Carlo (managed)', 'Bigeye (lite)'],
+    competitors['Monte Carlo (managed), 'Bigeye (lite)],
     marketSize: '$2B data observability',
     growthRate: '20% YoY',
     variant: 'managed-data',
@@ -405,7 +418,7 @@ export const addedITServices2025: AdvancedITService[] = [{
     customers: 12,
     rating: 4.7,
     reviews: 9},
-  {
+  {'
     id: 'cost-aware-kubernetes-hardening',
     name: 'Cost-Aware Kubernetes Hardening',
     tagline: 'Secure clusters with policies, budgets, and golden paths',
@@ -423,7 +436,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     icon: '☸️',
     color: 'from-slate-700 to-black',
     textColor: 'text-slate-200',
-    link: 'https://ziontechgroup.com/services/cost-aware-kubernetes-hardening',
+    link: 'http,
+    s://ziontechgroup.com/services/cost-aware-kubernetes-hardening',
     marketPosition: 'Security and FinOps in one engagement',
     targetAudience: 'Platform and security teams',
     trialDays: 0,
@@ -445,7 +459,7 @@ export const addedITServices2025: AdvancedITService[] = [{
     customers: 8,
     rating: 4.8,
     reviews: 6},
-  {
+  {'
     id: 'data-platform-modernization',
     name: 'Data Platform Modernization',
     tagline: 'Warehouse, lakehouse, and ELT rebuilt for speed, cost, and governance',
@@ -463,7 +477,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     icon: '🗄️',
     color: 'from-slate-700 to-blue-700',
     textColor: 'text-slate-200',
-    link: 'https://ziontechgroup.com/services/data-platform-modernization',
+    link: 'http,
+    s://ziontechgroup.com/services/data-platform-modernization',
     marketPosition: 'Outcome-focused delivery with fixed milestones',
     targetAudience: 'Data teams from scale-ups to enterprise',
     trialDays: 0,
@@ -485,13 +500,14 @@ export const addedITServices2025: AdvancedITService[] = [{
     customers: 17,
     rating: 4.8,
     reviews: 12},
-  {
+  {'
     id: 'sre-and-reliability-ops',
     name: 'SRE & Reliability Ops',
     tagline: 'SLIs/SLOs, on-call, incident response, and performance engineering',
     price: '$4,500',
     period: '/month',
-    description: 'Establishes reliability fundamentals: golden signals, error budgets, runbooks, and a monthly ops cadence with postmortems and tuning.',
+    description: 'Establishes reliability fundamental,
+    s: golden signals, error budgets, runbooks, and a monthly ops cadence with postmortems and tuning.',
     features[;
       'SLIs/SLOs and error budgets',
       'On-call rotations and tooling',
@@ -503,7 +519,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     icon: '⚙️',
     color: 'from-emerald-700 to-slate-800',
     textColor: 'text-emerald-200',
-    link: 'https://ziontechgroup.com/services/sre-and-reliability-ops',
+    link: 'http,
+    s://ziontechgroup.com/services/sre-and-reliability-ops',
     marketPosition: 'Hands-on reliability vs. advisory-only',
     targetAudience: 'SaaS, fintech, marketplaces',
     trialDays: 0,
@@ -525,7 +542,7 @@ export const addedITServices2025: AdvancedITService[] = [{
     customers: 24,
     rating: 4.9,
     reviews: 19},
-  {
+  {'
     id: 'zero-trust-email-and-endpoint',
     name: 'Zero-Trust Email & Endpoint',
     tagline: 'DMARC, DKIM, phishing simulation, EDR rollouts, and device posture',
@@ -543,7 +560,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     icon: '🛡️',
     color: 'from-orange-600 to-rose-700',
     textColor: 'text-orange-200',
-    link: 'https://ziontechgroup.com/services/zero-trust-email-and-endpoint',
+    link: 'http,
+    s://ziontechgroup.com/services/zero-trust-email-and-endpoint',
     marketPosition: 'Quick wins with measurable risk reduction',
     targetAudience: 'Mid-market IT and security',
     trialDays: 0,
@@ -565,7 +583,7 @@ export const addedITServices2025: AdvancedITService[] = [{
     customers: 13,
     rating: 4.7,
     reviews: 10},
-  {
+  {'
     id: 'managed-observability-platform',
     name: 'Managed Observability Platform',
     tagline: 'Logs, metrics, traces, and SLOs delivered as a managed stack',
@@ -583,7 +601,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     icon: '📊',
     color: 'from-indigo-700 to-blue-800',
     textColor: 'text-indigo-200',
-    link: 'https://ziontechgroup.com/services/managed-observability-platform',
+    link: 'http,
+    s://ziontechgroup.com/services/managed-observability-platform',
     marketPosition: 'Outcome-oriented ops vs. tool resell we tune signals and noise',
     targetAudience: 'SRE, platform, app teams',
     trialDays: 0,
@@ -605,7 +624,7 @@ export const addedITServices2025: AdvancedITService[] = [{
     customers: 6,
     rating: 4.8,
     reviews: 4},
-  {
+  {'
     id: 'network-modernization-accelerator',
     name: 'Network Modernization Accelerator',
     tagline: 'SD-WAN, zero-trust, and cloud interconnect in weeks',
@@ -623,7 +642,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     icon: '🌐',
     color: 'from-cyan-700 to-blue-800',
     textColor: 'text-cyan-200',
-    link: 'https://ziontechgroup.com/services/network-modernization-accelerator',
+    link: 'http,
+    s://ziontechgroup.com/services/network-modernization-accelerator',
     marketPosition: 'Pragmatic, cost-aware modernization vs. multi-year projects',
     targetAudience: 'Mid-market IT and security',
     trialDays: 0,
@@ -645,7 +665,7 @@ export const addedITServices2025: AdvancedITService[] = [{
     customers: 4,
     rating: 4.7,
     reviews: 3},
-  {
+  {'
     id: 'data-governance-foundation',
     name: 'Data Governance Foundation',
     tagline: 'Catalog, lineage, access controls, and data contracts delivered',
@@ -663,7 +683,8 @@ export const addedITServices2025: AdvancedITService[] = [{
     icon: '📚',
     color: 'from-emerald-700 to-teal-800',
     textColor: 'text-emerald-200',
-    link: 'https://ziontechgroup.com/services/data-governance-foundation',
+    link: 'http,
+    s://ziontechgroup.com/services/data-governance-foundation',
     marketPosition: 'Practical, outcome-first governance vs. shelfware',
     targetAudience: 'Data platform and analytics leaders',
     trialDays: 0,

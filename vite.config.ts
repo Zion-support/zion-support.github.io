@@ -1,19 +1,24 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-
+import { defineConfig } from;
+  'vite';
+import react from;
+  '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
-  resolve: {
-    alias: {
-      '@': '/src',
-    },
-  },
-  server: {
-    port: 3000,
-    open: true,
-  },
   build: {
-    outDir: 'dist',
-    sourcemap: true,
-  },
-});
+    sourcema,
+    p: false,
+    target:,
+  es2018',
+    outDir: 'dist,
+    rollupOptions: {
+      outpu,
+    t: {
+        manualChunk,
+    s: {,
+  react-vendor': [;
+  'react,
+,
+  react-dom'],
+  'router-vendor': [;
+  'react-router-dom]}}}}})
+// Duplicate block removed to resolve multiple default export error.;

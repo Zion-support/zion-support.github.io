@@ -28,16 +28,21 @@ export interface RealMarketService {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-   address: string;
-   website: string}realImplementation: boolean;
+   addres,
+    s: string;
+   websit,
+    e: string}realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
-  rating: number;
-  reviews: number}
+  ratin,
+    g: number;
+  review,
+    s: number}
 export const realMarketServices: RealMarketService[] = [;
-  // AI-Powered Business Intelligence{
-    id: 'ai-business-intelligence-pro',
+  // AI-Powered Business Intelligence{'
+    i,
+    d: 'ai-business-intelligence-pro',
     name: 'AI Business Intelligence Pro',
     tagline: 'Transform data into actionable insights with AI',
     price: '$299',
@@ -59,7 +64,8 @@ export const realMarketServices: RealMarketService[] = [;
     icon: '📊',
     color: 'from-blue-500 to-indigo-600',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-business-intelligence-pro',
+    link: 'http,
+    s://ziontechgroup.com/ai-business-intelligence-pro',
     marketPosition: 'Competitive with Tableau ($70/user/month), Power BI ($9.99/user/month), and Looker ($30/user/month). Our advantage: AI automation, predictive analytics, and lower cost per user.',
     targetAudience: 'Business analysts, Data scientists, Executives, Marketing teams, Sales teams, Operations managers',
     trialDays: 14,
@@ -74,18 +80,20 @@ export const realMarketServices: RealMarketService[] = [;
     marketSize: '$29.48B market',
     growthRate: '15.7% annual growth',
     variant: 'ai-futuristic',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     implementationDetails: 'Production-ready SaaS platform with real-time data processing, machine learning models, and comprehensive analytics dashboard. Includes data connectors for major business tools.',
     launchDate: '2024-03-01',
     customers: 1800,
     rating: 4.7,
     reviews: 950},
-  // Customer Success Automation Platform{
+  // Customer Success Automation Platform{'
     id: 'customer-success-automation',
     name: 'Customer Success Automation Platform',
     tagline: 'Automate customer success and reduce churn',
@@ -108,7 +116,8 @@ export const realMarketServices: RealMarketService[] = [;
     icon: '🎯',
     color: 'from-green-500 to-emerald-600',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/customer-success-automation',
+    link: 'http,
+    s://ziontechgroup.com/customer-success-automation',
     marketPosition: 'Competitive with Gainsight ($500/user/month), Totango ($500/user/month), and ChurnZero ($500/user/month). Our advantage: Lower cost, easier setup, and better automation.',
     targetAudience: 'Customer success managers, SaaS companies, B2B businesses, Account managers, Product managers',
     trialDays: 21,
@@ -123,18 +132,20 @@ export const realMarketServices: RealMarketService[] = [;
     marketSize: '$1.5B market',
     growthRate: '25% annual growth',
     variant: 'micro-saas-futuristic',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     implementationDetails: 'Fully functional customer success platform with automated workflows, health scoring algorithms, and comprehensive reporting. Includes mobile app for field teams.',
     launchDate: '2024-02-15',
     customers: 1200,
     rating: 4.8,
     reviews: 680},
-  // API Security & Monitoring Suite{
+  // API Security & Monitoring Suite{'
     id: 'api-security-monitoring-suite',
     name: 'API Security & Monitoring Suite',
     tagline: 'Protect and monitor your APIs in real-time',
@@ -157,7 +168,8 @@ export const realMarketServices: RealMarketService[] = [;
     icon: '🔒',
     color: 'from-red-500 to-pink-600',
     textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/api-security-monitoring-suite',
+    link: 'http,
+    s://ziontechgroup.com/api-security-monitoring-suite',
     marketPosition: 'Competitive with Kong ($250/month), Tyk ($450/month), and AWS API Gateway ($3.50/million calls). Our advantage: Better security features, comprehensive monitoring, and competitive pricing.',
     targetAudience: 'DevOps engineers, Security teams, API developers, Platform engineers, CTOs',
     trialDays: 14,
@@ -172,18 +184,20 @@ export const realMarketServices: RealMarketService[] = [;
     marketSize: '$4.5B market',
     growthRate: '18.5% annual growth',
     variant: 'enterprise-futuristic',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     implementationDetails: 'Production-ready API security platform with real-time threat detection, comprehensive monitoring, and automated security testing. Includes Kubernetes deployment support.',
     launchDate: '2024-01-20',
     customers: 950,
     rating: 4.6,
     reviews: 520},
-  // E-commerce Automation Platform{
+  // E-commerce Automation Platform{'
     id: 'ecommerce-automation-platform',
     name: 'E-commerce Automation Platform',
     tagline: 'Automate your entire e-commerce operation',
@@ -206,7 +220,8 @@ export const realMarketServices: RealMarketService[] = [;
     icon: '🛒',
     color: 'from-purple-500 to-violet-600',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/ecommerce-automation-platform',
+    link: 'http,
+    s://ziontechgroup.com/ecommerce-automation-platform',
     marketPosition: 'Competitive with Shopify Plus ($2000/month), BigCommerce Enterprise ($400/month), and WooCommerce Enterprise. Our advantage: Lower cost, better automation, and comprehensive features.',
     targetAudience: 'E-commerce businesses, Online retailers, Dropshipping companies, Digital marketers, Store owners',
     trialDays: 30,
@@ -221,18 +236,20 @@ export const realMarketServices: RealMarketService[] = [;
     marketSize: '$18.2B market',
     growthRate: '22% annual growth',
     variant: 'micro-saas-futuristic',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     implementationDetails: 'Comprehensive e-commerce automation platform with real-time inventory tracking, automated order processing, and intelligent marketing automation. Includes mobile apps for customers and staff.',
     launchDate: '2024-02-01',
     customers: 2100,
     rating: 4.7,
     reviews: 1100},
-  // HR Automation Suite{
+  // HR Automation Suite{'
     id: 'hr-automation-suite',
     name: 'HR Automation Suite',
     tagline: 'Streamline HR processes with intelligent automation',
@@ -255,7 +272,8 @@ export const realMarketServices: RealMarketService[] = [;
     icon: '👥',
     color: 'from-orange-500 to-red-600',
     textColor: 'text-orange-400',
-    link: 'https://ziontechgroup.com/hr-automation-suite',
+    link: 'http,
+    s://ziontechgroup.com/hr-automation-suite',
     marketPosition: 'Competitive with BambooHR ($6.19/employee/month), Workday ($100/user/month), and ADP ($10/employee/month). Our advantage: Better automation, lower cost, and comprehensive features.',
     targetAudience: 'HR professionals, Small to medium businesses, Recruiters, HR managers, Business owners',
     trialDays: 21,
@@ -270,18 +288,20 @@ export const realMarketServices: RealMarketService[] = [;
     marketSize: '$15.6B market',
     growthRate: '12.8% annual growth',
     variant: 'hr-futuristic',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     implementationDetails: 'Full-featured HR automation platform with AI-powered recruitment, comprehensive employee management, and automated compliance reporting. Includes mobile apps and integration capabilities.',
     launchDate: '2024-01-10',
     customers: 1600,
     rating: 4.8,
     reviews: 890},
-  // Financial Analytics Platform{
+  // Financial Analytics Platform{'
     id: 'financial-analytics-platform',
     name: 'Financial Analytics Platform',
     tagline: 'Real-time financial insights and forecasting',
@@ -304,7 +324,8 @@ export const realMarketServices: RealMarketService[] = [;
     icon: '💰',
     color: 'from-yellow-500 to-amber-600',
     textColor: 'text-yellow-400',
-    link: 'https://ziontechgroup.com/financial-analytics-platform',
+    link: 'http,
+    s://ziontechgroup.com/financial-analytics-platform',
     marketPosition: 'Competitive with QuickBooks Online ($30/month), Xero ($25/month), and FreshBooks ($15/month). Our advantage: Better analytics, AI forecasting, and comprehensive financial insights.',
     targetAudience: 'CFOs, Financial analysts, Accountants, Business owners, Finance managers',
     trialDays: 14,
@@ -319,18 +340,20 @@ export const realMarketServices: RealMarketService[] = [;
     marketSize: '$11.9B market',
     growthRate: '16.2% annual growth',
     variant: 'micro-saas-futuristic',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     implementationDetails: 'Production-ready financial analytics platform with real-time data processing, AI-powered forecasting models, and comprehensive reporting. Includes mobile apps and API access.',
     launchDate: '2024-02-20',
     customers: 1400,
     rating: 4.7,
     reviews: 780},
-  // Project Management AI Platform{
+  // Project Management AI Platform{'
     id: 'project-management-ai-platform',
     name: 'Project Management AI Platform',
     tagline: 'AI-powered project management and team collaboration',
@@ -353,7 +376,8 @@ export const realMarketServices: RealMarketService[] = [;
     icon: '📋',
     color: 'from-teal-500 to-cyan-600',
     textColor: 'text-teal-400',
-    link: 'https://ziontechgroup.com/project-management-ai-platform',
+    link: 'http,
+    s://ziontechgroup.com/project-management-ai-platform',
     marketPosition: 'Competitive with Asana ($10.99/user/month), Monday.com ($8/user/month), and ClickUp ($5/user/month). Our advantage: AI-powered insights, better automation, and competitive pricing.',
     targetAudience: 'Project managers, Team leaders, Business analysts, Operations managers, Development teams',
     trialDays: 21,
@@ -368,18 +392,20 @@ export const realMarketServices: RealMarketService[] = [;
     marketSize: '$6.68B market',
     growthRate: '14.3% annual growth',
     variant: 'micro-saas-futuristic',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     implementationDetails: 'Full-featured project management platform with AI-powered insights, comprehensive collaboration tools, and automated workflow optimization. Includes mobile apps and extensive integrations.',
     launchDate: '2024-01-25',
     customers: 1900,
     rating: 4.8,
     reviews: 1050},
-  // Marketing Automation Suite{
+  // Marketing Automation Suite{'
     id: 'marketing-automation-suite',
     name: 'Marketing Automation Suite',
     tagline: 'Automate your entire marketing operation',
@@ -402,7 +428,8 @@ export const realMarketServices: RealMarketService[] = [;
     icon: '📢',
     color: 'from-pink-500 to-rose-600',
     textColor: 'text-pink-400',
-    link: 'https://ziontechgroup.com/marketing-automation-suite',
+    link: 'http,
+    s://ziontechgroup.com/marketing-automation-suite',
     marketPosition: 'Competitive with HubSpot ($45/month), Marketo ($895/month), and Pardot ($1250/month). Our advantage: Lower cost, better automation, and comprehensive features.',
     targetAudience: 'Marketing professionals, Digital marketers, Small businesses, Marketing agencies, Growth hackers',
     trialDays: 30,
@@ -417,11 +444,13 @@ export const realMarketServices: RealMarketService[] = [;
     marketSize: '$25.1B market',
     growthRate: '19.8% annual growth',
     variant: 'marketing-futuristic',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      website: 'http,
+    s://ziontechgroup.com'},
     realImplementation: true,
     implementationDetails: 'Comprehensive marketing automation platform with AI-powered personalization, comprehensive analytics, and automated campaign management. Includes mobile apps and extensive integrations.',
     launchDate: '2024-02-10',

@@ -15,18 +15,22 @@ export const advancedEmergingTechServices2025 = [{
   '24/7 space operations monitoring';
     ],
     pricing: {
-      starter: { price: 999, period:;
+      starte,
+    r: { pric,
+    e: 999, period:;
   'month', features[;
   'Basic space operations',
   'Resource mapping',
   'Standard support'] },
-      professional: { price: 2999, period:;
+      professional: { pric,
+    e: 2999, period:;
   'month', features[;
   'Advanced mining operations',
   'Custom strategies',
   'Priority support',
   'Dedicated operations team'] },
-      enterprise: { price: 7999, period:,
+      enterprise: { pric,
+    e: 7999, period:,
   month', features[;
   'Full mining operations',
   'Custom space solutions',
@@ -39,9 +43,11 @@ export const advancedEmergingTechServices2025 = [{
   'Asteroid Mining',
   'Lunar Resources',
   'Space Operations'],
-    website: 'https://ziontechgroup.com/space-mining-operations,
+    website: 'http,
+    s://ziontechgroup.com/space-mining-operations,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -49,7 +55,7 @@ export const advancedEmergingTechServices2025 = [{
     targetAudience: Space agencies, mining companies, aerospace firms, government agencies,
   ,
     competitiveAdvantage: Industry-leading space mining operations, comprehensive resource mapping, and extensive space agency integration},
-  {
+  {'
     id: 'quantum-bio-computing-platform,
     name:,
   QuantumBio Computing',
@@ -65,18 +71,22 @@ export const advancedEmergingTechServices2025 = [{
   '24/7 platform monitoring';
     ],
     pricing: {
-      starter: { price: 599, period:;
+      starte,
+    r: { pric,
+    e: 599, period:;
   'month', features[;
   'Basic quantum bio features',
   'Standard processing',
   'Email support'] },
-      professional: { price: 1499, period:;
+      professional: { pric,
+    e: 1499, period:;
   'month', features[;
   'Advanced quantum bio',
   'Custom algorithms',
   'Priority support',
   'Dedicated research team'] },
-      enterprise: { price: 3999, period:,
+      enterprise: { pric,
+    e: 3999, period:,
   month', features[;
   'Full quantum bio platform',
   'Custom solutions',
@@ -89,9 +99,11 @@ export const advancedEmergingTechServices2025 = [{
   'Biological Computing',
   'DNA Computing',
   'Hybrid Processing'],
-    website: 'https://ziontechgroup.com/quantum-bio-computing,
+    website: 'http,
+    s://ziontechgroup.com/quantum-bio-computing,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -99,7 +111,7 @@ export const advancedEmergingTechServices2025 = [{
     targetAudience: Research institutions, pharmaceutical companies, biotechnology firms, government agencies,
   ,
     competitiveAdvantage: Industry-first quantum-biological hybrid computing, advanced DNA-based algorithms, and comprehensive research platform integration},
-  {
+  {'
     id: 'brain-computer-interface-platform,
     name:,
   BrainInterface Pro',
@@ -115,18 +127,22 @@ export const advancedEmergingTechServices2025 = [{
   '24/7 neural monitoring';
     ],
     pricing: {
-      starter: { price: 799, period:;
+      starte,
+    r: { pric,
+    e: 799, period:;
   'month', features[;
   'Basic neural interface',
   'Standard processing',
   'Email support'] },
-      professional: { price: 1999, period:;
+      professional: { pric,
+    e: 1999, period:;
   'month', features[;
   'Advanced neural interface',
   'Custom algorithms',
   'Priority support',
   'Dedicated research team'] },
-      enterprise: { price: 4999, period:,
+      enterprise: { pric,
+    e: 4999, period:,
   month', features[;
   'Full neural platform',
   'Custom solutions',
@@ -139,9 +155,11 @@ export const advancedEmergingTechServices2025 = [{
   'Cognitive Enhancement',
   'Neurological Research',
   'Medical Technology'],
-    website: 'https://ziontechgroup.com/brain-interface-pro,
+    website: 'http,
+    s://ziontechgroup.com/brain-interface-pro,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -149,7 +167,7 @@ export const advancedEmergingTechServices2025 = [{
     targetAudience: Medical research institutions, healthcare providers, neuroscience labs, government agencies,
   ,
     competitiveAdvantage: Advanced neural signal processing, comprehensive cognitive enhancement tools, and extensive medical device integration},
-  {
+  {'
     id: 'quantum-energy-fusion-platform,
     name:,
   QuantumEnergy Fusion',
@@ -165,18 +183,22 @@ export const advancedEmergingTechServices2025 = [{
   '24/7 energy monitoring';
     ],
     pricing: {
-      starter: { price: 1299, period:;
+      starte,
+    r: { pric,
+    e: 1299, period:;
   'month', features[;
   'Basic fusion simulation',
   'Standard optimization',
   'Email support'] },
-      professional: { price: 3499, period:;
+      professional: { pric,
+    e: 3499, period:;
   'month', features[;
   'Advanced fusion platform',
   'Custom algorithms',
   'Priority support',
   'Dedicated energy team'] },
-      enterprise: { price: 8999, period:,
+      enterprise: { pric,
+    e: 8999, period:,
   month', features[;
   'Full fusion platform',
   'Custom solutions',
@@ -189,9 +211,11 @@ export const advancedEmergingTechServices2025 = [{
   'Quantum Energy',
   'Sustainable Energy',
   'Energy Optimization'],
-    website: 'https://ziontechgroup.com/quantum-energy-fusion,
+    website: 'http,
+    s://ziontechgroup.com/quantum-energy-fusion,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -199,7 +223,7 @@ export const advancedEmergingTechServices2025 = [{
     targetAudience: Energy companies, power utilities, research institutions, government agencies,
   ,
     competitiveAdvantage: Industry-first quantum fusion simulation, advanced energy optimization, and comprehensive power grid integration},
-  {
+  {'
     id: 'autonomous-vehicle-ai-platform,
     name:,
   AutonomousVehicle AI',
@@ -215,18 +239,22 @@ export const advancedEmergingTechServices2025 = [{
   '24/7 autonomous operations';
     ],
     pricing: {
-      starter: { price: 399, period:;
+      starte,
+    r: { pric,
+    e: 399, period:;
   'month', features[;
   'Up to 10 vehicles',
   'Basic AI navigation',
   'Standard monitoring'] },
-      professional: { price: 999, period:;
+      professional: { pric,
+    e: 999, period:;
   'month', features[;
   'Up to 100 vehicles',
   'Advanced AI',
   'Custom algorithms',
   'Priority support'] },
-      enterprise: { price: 2499, period:,
+      enterprise: { pric,
+    e: 2499, period:,
   month', features[;
   'Unlimited vehicles',
   'Custom AI training',
@@ -239,9 +267,11 @@ export const advancedEmergingTechServices2025 = [{
   'AI Navigation',
   'Fleet Management',
   'Transportation'],
-    website: 'https://ziontechgroup.com/autonomous-vehicle-ai,
+    website: 'http,
+    s://ziontechgroup.com/autonomous-vehicle-ai,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -249,7 +279,7 @@ export const advancedEmergingTechServices2025 = [{
     targetAudience: Automotive companies, transportation firms, logistics companies, government agencies,
   ,
     competitiveAdvantage: Advanced AI navigation with 99.8% accuracy, comprehensive safety systems, and extensive vehicle system integration},
-  {
+  {'
     id: 'quantum-materials-discovery-platform,
     name:,
   QuantumMaterials Discovery',
@@ -265,18 +295,22 @@ export const advancedEmergingTechServices2025 = [{
   '24/7 discovery operations';
     ],
     pricing: {
-      starter: { price: 699, period:;
+      starte,
+    r: { pric,
+    e: 699, period:;
   'month', features[;
   'Basic materials simulation',
   'Standard discovery',
   'Email support'] },
-      professional: { price: 1799, period:;
+      professional: { pric,
+    e: 1799, period:;
   'month', features[;
   'Advanced materials platform',
   'Custom algorithms',
   'Priority support',
   'Dedicated research team'] },
-      enterprise: { price: 4499, period:,
+      enterprise: { pric,
+    e: 4499, period:,
   month', features[;
   'Full materials platform',
   'Custom solutions',
@@ -289,9 +323,11 @@ export const advancedEmergingTechServices2025 = [{
   'Materials Science',
   'AI Discovery',
   'Research Platform'],
-    website: 'https://ziontechgroup.com/quantum-materials-discovery,
+    website: 'http,
+    s://ziontechgroup.com/quantum-materials-discovery,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -299,7 +335,7 @@ export const advancedEmergingTechServices2025 = [{
     targetAudience: Materials science companies, research institutions, manufacturing firms, government agencies,
   ,
     competitiveAdvantage: Industry-first quantum materials simulation, advanced AI discovery algorithms, and comprehensive research platform integration},
-  {
+  {'
     id: 'quantum-robotics-platform,
     name:,
   QuantumRobotics Pro',
@@ -315,18 +351,22 @@ export const advancedEmergingTechServices2025 = [{
   '24/7 robotic operations';
     ],
     pricing: {
-      starter: { price: 499, period:;
+      starte,
+    r: { pric,
+    e: 499, period:;
   'month', features[;
   'Up to 5 robots',
   'Basic quantum features',
   'Standard control'] },
-      professional: { price: 1299, period:;
+      professional: { pric,
+    e: 1299, period:;
   'month', features[;
   'Up to 25 robots',
   'Advanced quantum features',
   'Custom algorithms',
   'Priority support'] },
-      enterprise: { price: 3299, period:,
+      enterprise: { pric,
+    e: 3299, period:,
   month', features[;
   'Unlimited robots',
   'Custom quantum solutions',
@@ -339,9 +379,11 @@ export const advancedEmergingTechServices2025 = [{
   'Robotics',
   'Automation',
   'Intelligent Systems'],
-    website: 'https://ziontechgroup.com/quantum-robotics-pro,
+    website: 'http,
+    s://ziontechgroup.com/quantum-robotics-pro,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -349,7 +391,7 @@ export const advancedEmergingTechServices2025 = [{
     targetAudience: Robotics companies, manufacturing firms, automation specialists, research institutions,
   ,
     competitiveAdvantage: Industry-first quantum-enhanced robotics, advanced AI automation, and comprehensive robotic system integration},
-  {
+  {'
     id: 'quantum-internet-security-platform,
     name:,
   QuantumInternet Security',
@@ -365,18 +407,22 @@ export const advancedEmergingTechServices2025 = [{
   '24/7 quantum security operations';
     ],
     pricing: {
-      starter: { price: 299, period:;
+      starte,
+    r: { pric,
+    e: 299, period:;
   'month', features[;
   'Basic quantum security',
   'Standard encryption',
   'Email support'] },
-      professional: { price: 799, period:;
+      professional: { pric,
+    e: 799, period:;
   'month', features[;
   'Advanced quantum security',
   'Custom protocols',
   'Priority support',
   'Dedicated security team'] },
-      enterprise: { price: 1999, period:,
+      enterprise: { pric,
+    e: 1999, period:,
   month', features[;
   'Full quantum security',
   'Custom solutions',
@@ -389,9 +435,11 @@ export const advancedEmergingTechServices2025 = [{
   'Cybersecurity',
   'Encryption',
   'Secure Communication'],
-    website: 'https://ziontechgroup.com/quantum-internet-security,
+    website: 'http,
+    s://ziontechgroup.com/quantum-internet-security,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -399,7 +447,7 @@ export const advancedEmergingTechServices2025 = [{
     targetAudience: Internet service providers, telecommunications companies, government agencies, cybersecurity firms,
   ,
     competitiveAdvantage: Industry-first quantum internet security, unbreakable quantum encryption, and comprehensive internet infrastructure integration},
-  {
+  {'
     id: 'quantum-logistics-optimization-platform,
     name:,
   QuantumLogistics Pro',
@@ -415,18 +463,22 @@ export const advancedEmergingTechServices2025 = [{
   '24/7 logistics operations';
     ],
     pricing: {
-      starter: { price: 199, period:;
+      starte,
+    r: { pric,
+    e: 199, period:;
   'month', features[;
   'Up to 10 routes',
   'Basic optimization',
   'Standard monitoring'] },
-      professional: { price: 599, period:;
+      professional: { pric,
+    e: 599, period:;
   'month', features[;
   'Up to 100 routes',
   'Advanced quantum features',
   'Custom models',
   'Priority support'] },
-      enterprise: { price: 1499, period:,
+      enterprise: { pric,
+    e: 1499, period:,
   month', features[;
   'Unlimited routes',
   'Custom quantum solutions',
@@ -439,9 +491,11 @@ export const advancedEmergingTechServices2025 = [{
   'Logistics',
   'Supply Chain',
   'Route Optimization'],
-    website: 'https://ziontechgroup.com/quantum-logistics-pro,
+    website: 'http,
+    s://ziontechgroup.com/quantum-logistics-pro,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -449,7 +503,7 @@ export const advancedEmergingTechServices2025 = [{
     targetAudience: Logistics companies, supply chain managers, transportation firms, e-commerce businesses,
   ,
     competitiveAdvantage: Advanced quantum route optimization, comprehensive logistics automation, and extensive logistics system integration},
-  {
+  {'
     id: 'quantum-metaverse-development-platform,
     name:,
   QuantumMetaverse Pro',
@@ -465,18 +519,22 @@ export const advancedEmergingTechServices2025 = [{
   '24/7 platform monitoring';
     ],
     pricing: {
-      starter: { price: 399, period:;
+      starte,
+    r: { pric,
+    e: 399, period:;
   'month', features[;
   'Basic metaverse features',
   'Standard graphics',
   'Email support'] },
-      professional: { price: 999, period:;
+      professional: { pric,
+    e: 999, period:;
   'month', features[;
   'Advanced metaverse platform',
   'Custom solutions',
   'Priority support',
   'Dedicated development team'] },
-      enterprise: { price: 2499, period:,
+      enterprise: { pric,
+    e: 2499, period:,
   month', features[;
   'Full metaverse platform',
   'Custom solutions',
@@ -489,9 +547,11 @@ export const advancedEmergingTechServices2025 = [{
   'Metaverse',
   'Virtual Reality',
   'AI Graphics'],
-    website: 'https://ziontechgroup.com/quantum-metaverse-pro,
+    website: 'http,
+    s://ziontechgroup.com/quantum-metaverse-pro,
     contact: {
-phone:,
+phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,

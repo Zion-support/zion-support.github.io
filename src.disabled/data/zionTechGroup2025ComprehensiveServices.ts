@@ -1,8 +1,11 @@
 export interface ZionService {
    id: string;
-   title: string;
-   description: string;
-   category:, Micro SaaS' | 'AI Solutions' | 'IT Services' | 'Cybersecurity' | 'Cloud & DevOps' | 'Digital Transformation' | 'Industry Specific' | 'Emerging Tech';
+   titl,
+    e: string;
+   descriptio,
+    n: string;
+   categor,
+    y:, Micro SaaS' | 'AI Solutions' | 'IT Services' | 'Cybersecurity' | 'Cloud & DevOps' | 'Digital Transformation' | 'Industry Specific' | 'Emerging Tech';
    price: string;
    billing: 'month' | 'year' | 'project' | 'hour;
    features: string[];
@@ -12,5 +15,8 @@ export interface ZionService {
    contactInfo: {
    mobile: string;
    email: string;
-   address: string;
-   website: string} ctaLabel: string href: string external?: boolean } export const zionTechGroup2025Services: ZionService[] = [';
+   addres,
+    s: string;
+   websit,
+    e: string} ctaLabel: string hre,
+    f: string external?: boolean } export const zionTechGroup2025Services: ZionService[] = [';

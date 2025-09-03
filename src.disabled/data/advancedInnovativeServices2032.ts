@@ -1,8 +1,11 @@
 export interface AdvancedInnovativeService2032 {
    id: string;
-   title: string;
-   description: string;
-   category:, Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Sustainability' | 'Digital Twin' | 'Edge AI' | 'Quantum AI' | 'Neuromorphic Computing';
+   titl,
+    e: string;
+   descriptio,
+    n: string;
+   categor,
+    y:, Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Sustainability' | 'Digital Twin' | 'Edge AI' | 'Quantum AI' | 'Neuromorphic Computing';
    subcategory: string;
    price: number;
    currency: string;
@@ -20,5 +23,9 @@ export interface AdvancedInnovativeService2032 {
    contactInfo: {
    phone: string;
    email: string;
-   website: string;
-   address: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[] scalability: string } competitors?: string[] marketSize?: string compliance?: string[] } export const ADVANCED_INNOVATIVE_SERVICES_2032: AdvancedInnovativeService2032[] = [';
+   websit,
+    e: string;
+   addres,
+    s: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string securit,
+    y: string[] scalabilit,
+    y: string } competitors?: string[] marketSize?: string compliance?: string[] } export const ADVANCED_INNOVATIVE_SERVICES_2032: AdvancedInnovativeService2032[] = [';
