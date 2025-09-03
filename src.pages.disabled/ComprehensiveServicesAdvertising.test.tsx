@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import ComprehensiveServicesAdvertising  from './ComprehensiveServicesAdvertising';describe('ComprehensiveServicesAdvertising', () => {
+import ComprehensiveServicesAdvertising  from './ComprehensiveServicesAdvertising'describe('ComprehensiveServicesAdvertising', () => {
   it('renders without crashing', () => {
     render(<ComprehensiveServicesAdvertising />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()

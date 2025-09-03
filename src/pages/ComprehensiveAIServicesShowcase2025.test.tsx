@@ -5,12 +5,12 @@ import ComprehensiveAIServicesShowcase2025 from './ComprehensiveAIServicesShowca
 describe('ComprehensiveAIServicesShowcase2025', () => {"
   it('renders without crashing', () => {
     render(<ComprehensiveAIServicesShowcase2025 /" >);"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
-});
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+})
 "
   it('displays expected content', () => {
-    render(<ComprehensiveAIServicesShowcase2025 /" >);
-    // Add more specific tests here,
-});,
+    render(<ComprehensiveAIServicesShowcase2025 /" >)
+    // Add more specific tests here
 });
+})
 "

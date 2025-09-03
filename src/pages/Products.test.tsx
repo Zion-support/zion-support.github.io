@@ -5,12 +5,12 @@ import Products from './Products
 describe('Products', () => {"
   it('renders without crashing', () => {
     render(<Products /" >);"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
-});
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+})
 "
   it('displays expected content', () => {
-    render(<Products /" >);
-    // Add more specific tests here,
-});,
+    render(<Products /" >)
+    // Add more specific tests here
 });
+})
 "

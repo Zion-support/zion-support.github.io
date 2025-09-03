@@ -5,12 +5,12 @@ import Sitemap from './Sitemap
 describe('Sitemap', () => {"
   it('renders without crashing', () => {
     render(<Sitemap /" >);"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
-});
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+})
 "
   it('displays expected content', () => {
-    render(<Sitemap /" >);
-    // Add more specific tests here,
-});,
+    render(<Sitemap /" >)
+    // Add more specific tests here
 });
+})
 "
