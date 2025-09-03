@@ -53,7 +53,7 @@ export default function AISalesCopilot() {
               </h1>
               <p className='text-xl text-zion-slate-light max-w-3xl mx-auto mb-8'>
                 Transform your sales process with AI-powered automation. Qualify;
-                leads, personalize outreach, and close more deals with;
+                leads, personalize outreach, and close more deals with
                 intelligent sales assistance that works 24/7.
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -81,7 +81,7 @@ export default function AISalesCopilot() {
                 Why Choose AI Sales Copilot?
               </h2>
               <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
-                Boost your sales performance with intelligent automation and;
+                Boost your sales performance with intelligent automation and
                 data-driven insights
               </p>
             </div>
@@ -106,7 +106,7 @@ export default function AISalesCopilot() {
                   Personalized Outreach
                 </h3>
                 <p className='text-zion-slate-light'>
-                  Generate personalized messages and follow-ups that resonate;
+                  Generate personalized messages and follow-ups that resonate
                   with each prospect's unique needs.
                 </p>
               </div>
@@ -118,7 +118,7 @@ export default function AISalesCopilot() {
                   Predictive Analytics
                 </h3>
                 <p className='text-zion-slate-light'>
-                  Forecast sales outcomes and identify the best opportunities;
+                  Forecast sales outcomes and identify the best opportunities
                   with AI-powered predictions.
                 </p>
               </div>
@@ -130,7 +130,7 @@ export default function AISalesCopilot() {
                   24/7 Availability
                 </h3>
                 <p className='text-zion-slate-light'>
-                  Your AI copilot never sleeps, engaging prospects at optimal;
+                  Your AI copilot never sleeps, engaging prospects at optimal
                   times across all time zones.
                 </p>
               </div>
@@ -142,7 +142,7 @@ export default function AISalesCopilot() {
                   Performance Optimization
                 </h3>
                 <p className='text-zion-slate-light'>
-                  Continuously learn and improve from every interaction to;
+                  Continuously learn and improve from every interaction to
                   maximize conversion rates.
                 </p>
               </div>
@@ -154,7 +154,7 @@ export default function AISalesCopilot() {
                   Compliance & Security
                 </h3>
                 <p className='text-zion-slate-light'>
-                  Built-in compliance features ensure all communications meet;
+                  Built-in compliance features ensure all communications meet
                   regulatory requirements.
                 </p>
               </div>
@@ -183,7 +183,7 @@ export default function AISalesCopilot() {
                       </h3>
                       <p className='text-zion-slate-light'>
                         AI algorithms analyze prospect behavior, company data,
-                        and engagement patterns to automatically score and;
+                        and engagement patterns to automatically score and
                         prioritize leads.
                       </p>
                     </div>
@@ -207,7 +207,7 @@ export default function AISalesCopilot() {
                         Smart Follow-up Sequences
                       </h3>
                       <p className='text-zion-slate-light'>
-                        Automatically schedule and send personalized follow-ups;
+                        Automatically schedule and send personalized follow-ups
                         based on prospect engagement and response patterns.
                       </p>
                     </div>
@@ -235,7 +235,7 @@ export default function AISalesCopilot() {
                     Real-time Analytics Dashboard
                   </h3>
                   <p className='text-zion-slate-light mb-6'>
-                    Monitor your sales performance with comprehensive analytics;
+                    Monitor your sales performance with comprehensive analytics
                     and actionable insights.
                   </p>
                   <div className='grid grid-cols-2 gap-4 text-center'>
@@ -269,7 +269,7 @@ export default function AISalesCopilot() {
                 Simple, Transparent Pricing
               </h2>
               <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
-                Choose the plan that fits your business needs. All plans include;
+                Choose the plan that fits your business needs. All plans include
                 a 14-day free trial.
               </p>
             </div>
@@ -414,7 +414,7 @@ export default function AISalesCopilot() {
               Ready to Transform Your Sales Process?
             </h2>
             <p className='text-xl text-zion-slate-light mb-8'>
-              Join thousands of sales teams who have already increased their;
+              Join thousands of sales teams who have already increased their
               conversion rates with AI Sales Copilot.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>

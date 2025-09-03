@@ -61,7 +61,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   }, []);
   useEffect(() => {
     updateMetrics();
-    const interval = setInterval(updateMetrics, 30000) // Update every 30 seconds;
+    const interval = setInterval(updateMetrics, 30000) // Update every 30 seconds
     return () => clearInterval(interval)}, [updateMetrics])
   if (!metrics) {
     return (
@@ -160,5 +160,5 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       </AnimatePresence>
     </div>
   )}
-;
+
 export default EnhancedPerformanceMonitor

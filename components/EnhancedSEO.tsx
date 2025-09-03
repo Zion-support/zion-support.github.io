@@ -33,7 +33,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   keywords = defaultSEO.keywords,
   author = defaultSEO.author}) => {
   const router = useRouter();
-  const currentUrl = url || `https://ziontechgroup.com${router.asPath}`;
+  const currentUrl = url || `https://ziontechgroup.com${router.asPath}`
   const fullImageUrl = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`
   return(
     <Head>
@@ -84,5 +84,5 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       />
     </Head>
   )}
-;
+
 export default EnhancedSEO

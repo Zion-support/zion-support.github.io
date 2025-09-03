@@ -276,12 +276,12 @@ const sidebarSections = [
 
 interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
 
-  isOpen: boolean;
+  isOpen: boolean
   onClose: ()               => void}
 
 export default function EnhancedSidebar2025(...args[]: any):  {
 
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set())
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
 
       newExpanded.delete(sectionTitle)} else {
@@ -289,9 +289,9 @@ export default function EnhancedSidebar2025(...args[]: any):  {
       newExpanded.add(sectionTitle)}
     setExpandedSections(newExpanded)};
 
-  const filteredServices = sidebarSections.flatMap(section =>;
-    section.items.flatMap(item =>;
-      item.subItems?.filter(child =>;
+  const filteredServices = sidebarSections.flatMap(section =>
+    section.items.flatMap(item =>
+      item.subItems?.filter(child =>
         child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         child.description?.toLowerCase().includes(searchQuery.toLowerCase());
       ) || [];
@@ -314,7 +314,7 @@ export default function EnhancedSidebar2025(...args[]: any):  {
     return () => {;
       document.body.style.overflow = 'unset'}}, [isOpen]);
 
-  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;
+  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href
 
   return (
     <>
@@ -580,10 +580,10 @@ export default function EnhancedSidebar2025(...args[]: any):  {
                 Contact Us
                 <ChevronRight className="w-4 h-4" />
               </Link>
-            </div>;
-          </div>;
-        </div>;
-      </motion.div>;
-    </>;
-  );
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </>
+  )
 }

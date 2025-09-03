@@ -62,5 +62,5 @@ const addCSPForInlineStyles = () => {
   'csp-nonce-' + Math.random().toString(36).substr(2, 9))'      document.head.appendChild(style)'    }// Initialize security headers    addSecurityHeaders();
     addCSPForInlineStyles()}, []);
   return null}
-;
+
 export default SecurityHeaders

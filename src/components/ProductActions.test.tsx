@@ -1,8 +1,5 @@
-import { render, screen } from '@testing-library/react';
-import ProductActions from './ProductActions';
-
-describe('ProductActions', () => {
-  it('renders without crashing', () => {
+import { render, screen } from '@testing-library/reactimport ProductActions from ./ProductActionsdescribe(ProductActions, () => {'
+  it(renders without crashing', () => {'
     render(<ProductActions />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
   it('displays expected content', () => {

@@ -74,7 +74,7 @@ export default function CybersecurityServicesPage(...args: any[]): any {
   'hourly': return;
   'Hourly'      case;
   'project-based': return;
-  'Project-based;
+  'Project-based
       default: return model}
   }
   return()
@@ -120,7 +120,7 @@ export default function CybersecurityServicesPage(...args: any[]): any {
               <span className='text-white'>That Never Sleeps</span>
             </h1>'
             <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8'>
-              Protect your business with enterprise-grade cybersecurity solutions. Our AI-powered security;
+              Protect your business with enterprise-grade cybersecurity solutions. Our AI-powered security
               platform provides 24/7 protection against evolving cyber threats.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
@@ -322,7 +322,7 @@ export default function CybersecurityServicesPage(...args: any[]): any {
                 { name: 'ISO 27001, icon:,
   🌐', description: 'Information Security },
                 { name:,
-  NIST', icon: '🇺🇸, description:;
+  NIST', icon: '🇺🇸, description:
   'Cybersecurity Framework' }
               ].map((standard)  => (
 '
@@ -364,7 +364,7 @@ export default function CybersecurityServicesPage(...args: any[]): any {
               Ready to Secure Your Business?
             </h2>'
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-              Don;
+              Don
   't wait until it's too late. Get a comprehensive security assessment and protect your business today.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -409,14 +409,14 @@ function SecurityServiceCard(...args: any[]): any {,
   Network,
   Key,
   ShieldCheck} from 'lucide-react.ts;
-  ';
+  '
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedSubcategory, setSelectedSubcategory] = useState<any>(
   'all')
   const [priceRange, setPriceRange] = useState<any>(
   'all');
   // Filter only security services;
-    let matchesPrice = true;
+    let matchesPrice = true
     if (priceRange ===
   'low') matchesPrice = service.price < 500;
     else if (priceRange ===;
@@ -426,11 +426,11 @@ function SecurityServiceCard(...args: any[]): any {,
     return matchesSearch && matchesSubcategory && matchesPrice})
   const getPricingModelIcon = (model: anystring) => {
     switch (model) {
-  '';
+  ''
       case 'monthly
-  ': return <Clock className='w-4 h-4'  />'';
+  ': return <Clock className='w-4 h-4'  />''
       case
-  'hourly': return <Zap className='w-4 h-4'  />'';
+  'hourly': return <Zap className='w-4 h-4'  />''
       case
   'project-based: return <Zap className='w-4 h-4'  />'
       default: return <DollarSign className='w-4 h-4'  />}
@@ -457,7 +457,7 @@ function SecurityServiceCard(...args: any[]): any {,
   'hourly': return;
   'Hourly'      case;
   'project-based': return;
-  'Project-based;
+  'Project-based
       default: return model}
   }
   return ('
@@ -566,7 +566,7 @@ function SecurityServiceCard(...args: any[]): any {,
   Database,
   Monitor'} from 'lucide-react';
                 setSelectedSubcategory(
-  'all');
+  'all')
                 setPriceRange(
   'all')}}>                Clear Filters
               </Button>
@@ -610,7 +610,7 @@ function SecurityServiceCard(...args: any[]): any {,
               Comprehensive Security Services
             </h2>'
             <p className='text-zion-slate-light text-lg max-w-2xl mx-auto'>
-              Choose from our range of cybersecurity services designed to address specific;
+              Choose from our range of cybersecurity services designed to address specific
               security challenges and protect your business assets.
             </p>
           </div>
@@ -668,7 +668,7 @@ function SecurityServiceCard(...args: any[]): any {,
               Advanced Security Technologies
             </h2>'
             <p className='text-zion-slate-light text-lg max-w-2xl mx-auto'>
-              We leverage cutting-edge security technologies and tools to deliver;
+              We leverage cutting-edge security technologies and tools to deliver
               comprehensive protection for your business.
             </p>
           </div>
@@ -693,7 +693,7 @@ function SecurityServiceCard(...args: any[]): any {,
               Compliance & Standards
             </h2>'
             <p className='text-zion-slate-light text-lg max-w-2xl mx-auto'>
-              Our security solutions help you meet industry standards and regulatory;
+              Our security solutions help you meet industry standards and regulatory
               requirements across multiple sectors.
             </p>
           </div>
@@ -718,7 +718,7 @@ function SecurityServiceCard(...args: any[]): any {,
               Threat Intelligence & Monitoring
             </h2>'
             <p className='text-zion-slate-light text-lg max-w-2xl mx-auto'>
-              Stay ahead of emerging threats with our comprehensive threat intelligence;
+              Stay ahead of emerging threats with our comprehensive threat intelligence
               and 24 / 7 security monitoring services.
             </p>
           </div>
@@ -743,7 +743,7 @@ function SecurityServiceCard(...args: any[]): any {,
               Why Choose ZionTech Group for Cybersecurity?
             </h2>'
             <p className='text-zion-slate-light text-lg max-w-2xl mx-auto'>
-              We combine deep security expertise with industry knowledge to deliver;
+              We combine deep security expertise with industry knowledge to deliver
               solutions that protect your business and build customer trust.
             </p>
           </div>'
@@ -753,7 +753,7 @@ function SecurityServiceCard(...args: any[]): any {,
                 <Star className='w-10 h-10 text-white'  />
               </div>'
               <h3 className='text-white text-xl font-bold mb-3'>Certified Experts</h3>'              <p className='text-zion-slate-light'>
-                CISSP, CISM, and CEH certified security professionals with;
+                CISSP, CISM, and CEH certified security professionals with
                 extensive experience in enterprise security.
               </p>
             </div>'
@@ -764,7 +764,7 @@ function SecurityServiceCard(...args: any[]): any {,
               <h3 className='text-white text-xl font-bold mb-3'>Proven Track Record<string, any>
 '
               <p className='text-zion-slate-light'>
-                Successfully protected over 500+ businesses from cyber threats;
+                Successfully protected over 500+ businesses from cyber threats
                 with zero major security breaches.
               </p>
             </div>'
@@ -773,7 +773,7 @@ function SecurityServiceCard(...args: any[]): any {,
                 <Zap className='w-10 h-10 text-white'  />
               </div>'
               <h3 className='text-white text-xl font-bold mb-3'>24/7 Support</h3>'              <p className='text-zion-slate-light'>
-                Round-the-clock security monitoring and incident response;
+                Round-the-clock security monitoring and incident response
                 to protect your business at all times.
               </p>
             </div>
@@ -788,7 +788,7 @@ function SecurityServiceCard(...args: any[]): any {,
               Transparent Security Pricing
             </h2>'
             <p className='text-zion-slate-light text-lg max-w-2xl mx-auto'>
-              Competitive pricing for enterprise-grade security solutions with;
+              Competitive pricing for enterprise-grade security solutions with
               flexible payment options and comprehensive protection.
             </p>
           </div>'
@@ -859,7 +859,7 @@ function SecurityServiceCard(...args: any[]): any {,
             Ready to Secure Your Business?
           </h2>'
           <p className='text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto'>
-            Contact our cybersecurity experts today to discuss how we can help you;
+            Contact our cybersecurity experts today to discuss how we can help you
             protect your business from evolving threats.
           </p>'
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12'>'
@@ -1148,7 +1148,7 @@ function SecurityServiceCard(...args: any[]): any {,
           </h2>'
           <p className='text-xl mb-8 text-red-100 max-w-3xl mx-auto'>
             Don;
-  't wait until it's too late. Our cybersecurity experts are ready to help you build;
+  't wait until it's too late. Our cybersecurity experts are ready to help you build
             a robust security posture and protect your valuable assets.
           </p>'
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -1172,7 +1172,7 @@ function SecurityServiceCard(...args: any[]): any {,
             <div>'
               <h3 className='text-2xl font-bold mb-6 text-red-400'>ZionTech Group</h3>'
               <p className='text-gray-300 mb-6'>
-                Your trusted cybersecurity partner. We help businesses protect their digital assets;
+                Your trusted cybersecurity partner. We help businesses protect their digital assets
                 with comprehensive security solutions and expert guidance.
               </p>'
               <div className='flex space-x-4'>'

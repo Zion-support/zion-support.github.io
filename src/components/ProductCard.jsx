@@ -1,31 +1,16 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { Heart } from 'lucide-react';
-import { useWishlist } from '@/hooks/useWishlist';
-import { Button } from '@/components/ui/button';
-import {
+import React, { useState } from 'reactimport Link from next/linkimport Image from next/imageimport { Heart } from lucide-reactimport { useWishlist } from @/hooks/useWishlistimport { Button } from @/components/ui/buttonimport {'
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger
-} from '@/components/ui/tooltip';
-import { useDispatch } from 'react-redux';
-import { addItem } from '@/store/cartSlice';
-import { useAuth } from '@/context/auth/AuthProvider';
-import { useRouter } from 'next/router';
-import { useMediaQuery } from 'usehooks-ts';
-import { useEnqueueSnackbar } from '@/context/SnackbarContext';
-import { captureException } from '@sentry/nextjs';
-
-export default function ProductCard({ product, onBuy, buyDisabled = false }) {
+} from @/components/ui/tooltipimport { useDispatch } from react-reduximport { addItem } from @/store/cartSliceimport { useAuth } from @/context/auth/AuthProviderimport { useRouter } from next/routerimport { useMediaQuery } from usehooks-tsimport { useEnqueueSnackbar } from @/context/SnackbarContextimport { captureException } from @sentry/nextjsexport default function ProductCard({ product, onBuy, buyDisabled = false }) {
   const { isAuthenticated } = useAuth();
   const { isWishlisted, toggle } = useWishlist();
   const [imageError, setImageError] = useState(false);
   const router = useRouter();
   const enqueueSnackbar = useEnqueueSnackbar();
 
-  if (!product || typeof product.id !== 'string' || typeof product.title !== 'string' || product.title.trim() === '') {
+  if (!product || typeof product.id !== string' || typeof product.title !== 'string' || product.title.trim() === '') {'
     captureException(new Error('Invalid product data received by ProductCard'), {
       extra: { product }
     });

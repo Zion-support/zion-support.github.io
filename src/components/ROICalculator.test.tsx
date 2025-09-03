@@ -1,7 +1,4 @@
-import { render, screen } from '@testing-library/react';
-import ROICalculator from './ROICalculator';
-
-describe('ROICalculator', () => {
+import { render, screen } from '@testing-library/reactimport ROICalculator from ./ROICalculatordescribe(ROICalculator', () => {
   it('renders without crashing', () => {
     render(<ROICalculator />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})

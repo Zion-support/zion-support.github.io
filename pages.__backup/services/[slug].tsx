@@ -303,7 +303,7 @@ export async function getStaticPaths() {
   'blocking'}
 }
 export async function getStaticProps({ params }: { params: { slug: string } }) {
-  // For now, return mock data to fix build;
+  // For now, return mock data to fix build
   return {
     props: {
       service: mockService,

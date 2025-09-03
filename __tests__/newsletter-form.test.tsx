@@ -15,7 +15,7 @@ test(,
   mockedApi.post.mockResolvedValue({})
   render(<NewsletterForm />);
   fireEvent.input(screen.getByPlaceholderText(/enter your email/i), {
-    target: { value:;
+    target: { value:
   'test@example.com }})
   fireEvent.submit(screen.getByRole(
   'button', { name: /subscribe/i }))

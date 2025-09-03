@@ -1,7 +1,4 @@
-import { render, screen } from '@testing-library/react';
-import ResponsiveNavigation from './ResponsiveNavigation';
-
-describe('ResponsiveNavigation', () => {
+import { render, screen } from '@testing-library/reactimport ResponsiveNavigation from ./ResponsiveNavigationdescribe(ResponsiveNavigation', () => {
   it('renders without crashing', () => {
     render(<ResponsiveNavigation />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})

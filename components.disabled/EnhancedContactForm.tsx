@@ -57,7 +57,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
   const [submitStatus, setSubmitStatus] = useState<'idle;
   ' | 'success;
   ' | 'error;
-  '>('idle;
+  '>('idle
   ')
   const [currentStep, setCurrentStep] = useState<typeof 1>(1)
   const [isValidating, setIsValidating] = useState<typeof false>(false)
@@ -68,7 +68,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
   useEffect(: unknown {
     if (firstInputRef.current) {
       firstInputRef.current.focus()}
-  }, []);
+  }, [])
   // Validate form data
   const validateForm = (): boolean => {
     const newErrors: Partial<ContactFormData> = {}
@@ -164,7 +164,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
         setErrors({
           firstName: !formData.firstName ? 'First name is required;
   ' : undefined,
-          lastName: !formData.lastName ? 'Last name is required;
+          lastName: !formData.lastName ? 'Last name is required
   ' : undefined,
           email: !formData.email ? 'Email is required
   ' : undefined})
@@ -200,7 +200,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
   // Timeline options;
   const timelineOptions = [
   'Immediate (1-2 weeks),Quick (1-2 months),Standard (3-6 months),Extended (6+ months),Flexible';
-  ];
+  ]
   if (isSubmitted) {
     return
       <motion.div
@@ -299,7 +299,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
           placeholder='+1 (555) 123-4567'/>
       </div>
     </motion.div>
-  );
+  )
   const renderStep2 = : unknown
     <motion.div
       initial={{ opacity: 0, x: 20 }}
@@ -375,7 +375,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
         </label>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
           {contactMethods.map(method: unknown {
-            const Icon = method.icon;
+            const Icon = method.icon
             return
               <label
                 key={method.value}
@@ -400,7 +400,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
         </div>
       </div>
     </motion.div>
-  );
+  )
   const renderStep3 = : unknown
     <motion.div
       initial={{ opacity: 0, x: 20 }}
@@ -473,7 +473,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
       <div className='text-center mb-8'>
         <h2 className='text-3xl font-bold text-white mb-4'>Get Started Today</h2>
         <p className='text-gray-300 max-w-2xl mx-auto'>
-          Ready to transform your business with cutting-edge AI, quantum computing, and autonomous solutions?;
+          Ready to transform your business with cutting-edge AI, quantum computing, and autonomous solutions?
           Let's discuss your project and create something extraordinary together.
         </p>
       </div>

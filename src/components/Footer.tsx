@@ -1,7 +1,4 @@
-import React, { useState } from 'react.ts';
-import { Link               } from 'react-router-dom.ts';
-import { motion               } from 'framer-motion.ts';
-import { Twitter,
+import React, { useState } from 'react.tsimport { Link               } from react-router-dom.tsimport { motion               } from framer-motion.tsimport { Twitter,'
   Linkedin,
   Instagram,
   Globe,
@@ -62,13 +59,12 @@ import { Twitter,
   BarChart,
   Users2,
   Settings,
-  Palette} from 'lucide-react';
-export function Footer(...args: any[]): any {
+  Palette} from lucide-reactexport function Footer(...args: any[]): any {
   const currentYear = new Date().getFullYear();
   const [activeSection, setActiveSection] = useState<any>(null);
   const footerSections = [
     {
-      title: 'Comp',
+      title: Comp','
       icon: Building,
       links: [{ name: 'About Us', path: '/about', icon: Users },
         { name: 'Our Story', path: '/about/story', icon: FileText },
@@ -223,8 +219,7 @@ export function Footer(...args: any[]): any {
                   <Link
                     key={link.name}
                     to={link.path}
-                    className='block text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-200 group';
-                    <div className='flex items-center space-x-2'>
+                    className='block text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-200 group<div className=flex items-center space-x-2'>
                       <link.icon className='w-3 h-3 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200' />
                       <span>{link.name}</span>
                     </div>
@@ -458,8 +453,7 @@ export function Footer(...args: any[]): any {
       {/* Back to Top Button */}
       <button
         onClick={scrollToTop}
-        className='fixed bottom-6 right-6 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-300 hover:-translate-y-1 flex items-center justify-center text-white';
-        aria-label='Back to top'>
+        className='fixed bottom-6 right-6 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-300 hover:-translate-y-1 flex items-center justify-center text-whitearia-label=Back to top'>
         <ArrowUp className='w-5 h-5' />
       </button>
     </footer>

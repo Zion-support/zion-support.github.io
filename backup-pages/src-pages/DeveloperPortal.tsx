@@ -106,7 +106,7 @@ const data = await response.json()`;
           </h1>'
           <p className='text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed'>
             Build amazing applications with our powerful APIs, comprehensive documentation,
-            and developer tools. Everything you need to integrate Zion Tech Group;
+            and developer tools. Everything you need to integrate Zion Tech Group
   's services.
           </p>
 '
@@ -428,7 +428,7 @@ const data = await response.json()`;
             Ready to Build Something Amazing?
           </h2>'
           <p className='text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto'>
-            Join thousands of developers who are already building innovative applications;
+            Join thousands of developers who are already building innovative applications
             with our powerful APIs and services.
           </p>
 '
@@ -448,5 +448,5 @@ const data = await response.json()`;
         </div>
       </section>
     </div>) }
-;
+
 export default DeveloperPortal}}}}''`

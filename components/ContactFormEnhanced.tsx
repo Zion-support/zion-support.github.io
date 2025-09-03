@@ -23,7 +23,7 @@ const ContactFormEnhanced: React.FC = () => {
     try {
       // Simulate API call;
       await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
+      setSubmitStatus('success')
       setFormData({ name: '', email: '', subject: '', message: '' })} catch (error) {
       setSubmitStatus('error')} finally {
       setIsSubmitting(false)}
@@ -149,5 +149,5 @@ const ContactFormEnhanced: React.FC = () => {
       </motion.div>
     </div>
   )}
-;
+
 export default ContactFormEnhanced

@@ -39,7 +39,7 @@ describe('Profile Page;
     const mockProfileData: UserProfile = {
       id: '1,
       name:,
-  Jane;
+  Jane
   ',
       email: 'jane@example.com,
       avatarUrl: '',
@@ -67,7 +67,7 @@ describe('Profile Page;
       name: 'New Name;
   '}
 ;
-    // Mock initial fetch;
+    // Mock initial fetch
     global.fetch = mockFetchImplementation(initialProfileData)
     render(<Profile />);
     await screen.findByDisplayValue('Jane;
@@ -98,6 +98,6 @@ describe('Profile Page;
   ' }), // Only 'name;
   ' should be in the body for this update})));
     // The fetch for GET (initial) + PUT (save);
-    expect(global.fetch).toHaveBeenCalledTimes(2);
+    expect(global.fetch).toHaveBeenCalledTimes(2)
     // Verify the input field is updated (optimistic update or re-fetch might occur)
     // If the component re-fetches or updates state from PUT response: await screen.findByDisplayValue('New Name)})})

@@ -29,7 +29,7 @@ import { Badge } from;
       id: 4, title: 'Data Analytics and Machine Learning: Driving Business Intelligence','      description: 'Discover how advanced analytics and machine learning are transforming business intelligence and decision-making processes.', speaker: 'David Kim','      speakerTitle: 'Data Science Director', speakerCompany: 'Zion Tech Group','      date: '2025-01-28', time: '2:30 PM EST','      duration: '55 minutes', category: 'Analytics','      attendees: 890, rating: 4.6,'      image: '/api/placeholder/600/400', tags: ['Data Analytics', 'Machine Learning', 'Business Intelligence', 'Decision Making'], featured: false,'      status: 'recorded', recordingUrl: '/webinars/data-analytics-ml-recording''    },'    {
       id: 5, title: 'AI-Powered Customer Experience: The New Competitive Advantage','      description: 'Explore how AI is revolutionizing customer service and experience, with real-world examples and implementation strategies.','      speaker: 'Lisa Wang', speakerTitle: 'Customer Experience Lead','      speakerCompany: 'Zion Tech Group', date: '2025-01-25','      time: '3:30 PM EST', duration: '40 minutes','      category: 'Customer Experience', attendees: 1100,'      rating: 4.8, image: '/api/placeholder/600/400','      tags: ['Customer Experience', 'AI', 'Automation', 'Competitive Advantage'], featured: false,'      status: 'recorded', recordingUrl: '/webinars/ai-customer-experience-recording''    },'    {
       id: 6, title: 'Digital Transformation: A Roadmap for Modern Organizations','      description: 'Complete roadmap for organizations looking to embrace digital transformation and leverage emerging technologies.', speaker: 'James Wilson','      speakerTitle: 'Digital Transformation Consultant', speakerCompany: 'Zion Tech Group','      date: '2025-01-22', time: '1:30 PM EST','      duration: '65 minutes', category: 'Digital Transformation','      attendees: 1350, rating: 4.9,'      image: '/api/placeholder/600/400', tags: ['Digital Transformation', 'Strategy', 'Technology', 'Innovation'], featured: false,'      status: 'recorded', recordingUrl: '/webinars/digital-transformation-roadmap-recording''    }'  ];
-  const categories = [{ name: 'All Categories', count: 24, active: true }, { name: 'AI Strategy', count: 6, active: false },'    { name: 'Security', count: 4, active: false }, { name: 'Cloud Computing', count: 5, active: false },'    { name: 'Analytics', count: 3, active: false }, { name: 'Customer Experience', count: 3, active: false },'    { name: 'Digital Transformation', count: 2, active: false }, { name: 'Other', count: 1, active: false }'  ]';
+  const categories = [{ name: 'All Categories', count: 24, active: true }, { name: 'AI Strategy', count: 6, active: false },'    { name: 'Security', count: 4, active: false }, { name: 'Cloud Computing', count: 5, active: false },'    { name: 'Analytics', count: 3, active: false }, { name: 'Customer Experience', count: 3, active: false },'    { name: 'Digital Transformation', count: 2, active: false }, { name: 'Other', count: 1, active: false }'  ]'
   const featuredWebinar = webinars.find(webinar => webinar.featured)
   return(
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'      <SEO '        title='Webinars - Zion Tech Group' '        description='Join our expert-led webinars on AI, technology trends, and business innovation. Learn from industry leaders and get actionable insights.''      />'{/* Hero Section */}
@@ -56,7 +56,7 @@ import { Badge } from;
                     <div className='absolute top-4 right-4'>'                      <Badge variant='secondary' className='text-xs'>'                        {featuredWebinar.duration}'                      </Badge>
                     </div>
                     <div className='absolute inset-0 flex items-center justify-center'>'                      <Button size='lg' className='bg-white/20 backdrop-blur-sm text-white hover:bg-white/30'>'                        <Play className='w-6 h-6 mr-2' />'                        {featuredWebinar.status ===,
-  upcoming;
+  upcoming
   ' ? 'Register Now
   ': 'Watch Recording}'                      </Button>,
   </div>
@@ -64,7 +64,7 @@ import { Badge } from;
                   <div className='p-8'>'                    <div className='flex items-center mb-4'>'                      <Badge variant='outline' className='mr-3'>{featuredWebinar.category}</Badge>'                      <Badge variant={featuredWebinar.status === 'upcoming;
   ' ? 'default;
   ': 'secondary} className='text-xs'>'                        {featuredWebinar.status ===,
-  upcoming;
+  upcoming
   ' ? 'Upcoming
   ': 'Recorded}'                      </Badge>,
   </div>
@@ -72,7 +72,7 @@ import { Badge } from;
                     </div>
                     <div className='grid grid-cols-2 gap-4 mb-6'>'                      <div className='text-center'>'                        <div className='text-2xl font-bold text-green-400'>{featuredWebinar.attendees.toLocaleString()}</div>'                        <div className='text-sm text-gray-400'>Attendees</div>'                      </div>'                      <div className='text-center'>'                        <div className='text-2xl font-bold text-blue-400'>{featuredWebinar.rating}/5</div>'                        <div className='text-sm text-gray-400'>Rating</div>'                      </div>'                    </div>
                     <div className='flex items-center justify-between'>'                      <div className='flex items-center text-gray-400 text-sm'>'                        <Calendar className='w-4 h-4 mr-2' />'                        {new Date(featuredWebinar.date).toLocaleDateString()}'                        <Clock className='w-4 h-4 ml-4 mr-2' />'                        {featuredWebinar.time}'                      </div>
-                      <Button className='bg-gradient-to-r from-blue-500 to-purple-600 text-white'>'                        {featuredWebinar.status === 'upcoming;
+                      <Button className='bg-gradient-to-r from-blue-500 to-purple-600 text-white'>'                        {featuredWebinar.status === 'upcoming
   ' ? 'Register Now
   ': 'Watch Recording}'                        <ArrowRight className='w-4 h-4 ml-2' />'                      </Button>'                    </div>
                   </div>
@@ -106,7 +106,7 @@ import { Badge } from;
 ,
   </Badge>'                          </div>
                           <div className='absolute inset-0 flex items-center justify-center'>'                            <Button size='sm' className='bg-white/20 backdrop-blur-sm text-white hover: bg-white/30'>'                              <Play className='w-4 h-4 mr-2' />'                              {webinar.status ===;
-  'upcoming' ?;
+  'upcoming' ?
   'Register' :
   'Watch}
 ,
@@ -118,7 +118,7 @@ import { Badge } from;
                             ))}
                           </div>
                           <div className='flex items-center justify-between'>'                            <Button variant='outline' size='sm'>'                              <Eye className='w-4 h-4 mr-2' />'                              View Details'                            </Button>
-                            <div className='flex gap-2'>'                              <Button size='sm' className='bg-gradient-to-r from-blue-500 to-purple-600 text-white'>'                                {webinar.status ===;
+                            <div className='flex gap-2'>'                              <Button size='sm' className='bg-gradient-to-r from-blue-500 to-purple-600 text-white'>'                                {webinar.status ===
   'upcoming' ?
   'Register': 'Watch}
   '                              </Button>'                              <Button variant='outline' size='sm'>'                                <Share2 className='w-4 h-4' />'                              </Button>'                            </div>
@@ -178,5 +178,5 @@ import { Badge } from;
       </section>
     </div>
   )}
-;
+
 export default Webinars

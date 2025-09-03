@@ -16,7 +16,7 @@ const MartechAutomation: NextPage = () => (
           MarTech Automation
         </h1>
         <p className='text-lg text-gray-200 mb-6'>
-          CDP pipelines, audience building, real-time personalization, and;
+          CDP pipelines, audience building, real-time personalization, and
           multi-touch attribution that connect to your channels.
         </p>
         <div className='flex flex-wrap gap-3'>
@@ -109,5 +109,5 @@ const MartechAutomation: NextPage = () => (
       </div>
     </section>
   </MainLayout>
-);
+)
 export default MartechAutomation

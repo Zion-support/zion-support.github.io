@@ -205,7 +205,7 @@ const Blog: NextPage = () => {
       post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch})
-  const featuredPosts = blogPosts.filter(post => post.featured);
+  const featuredPosts = blogPosts.filter(post => post.featured)
   const recentPosts = blogPosts.slice(0, 4)
   return(
     <div className='min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50'>
@@ -222,7 +222,7 @@ const Blog: NextPage = () => {
             Technology Insights & Trends
           </h1>
           <p className='text-xl text-gray-600 max-w-4xl mx-auto mb-8'>
-            Stay ahead of the curve with expert insights, industry analysis, and cutting-edge strategies;
+            Stay ahead of the curve with expert insights, industry analysis, and cutting-edge strategies
             from our team of technology leaders and innovators.
           </p>
           <div className='flex flex-wrap justify-center gap-4 text-sm text-gray-500'>
@@ -323,7 +323,7 @@ const Blog: NextPage = () => {
             Technology Insights & Trends
           </h1>
           <p className='text-xl text-gray-600 max-w-4xl mx-auto mb-8'>
-            Stay ahead of the curve with expert insights, industry analysis, and cutting-edge strategies;
+            Stay ahead of the curve with expert insights, industry analysis, and cutting-edge strategies
             from our team of technology leaders and innovators.
           </p>
           <div className='flex flex-wrap justify-center gap-4 text-sm text-gray-500'>
@@ -507,5 +507,5 @@ const Blog: NextPage = () => {
       <Footer />
     </div>
   )}
-;
+
 export default Blog

@@ -1,6 +1,4 @@
-import React, { useState } from 'react'';
-import { motion } from 'framer-motion';
-import {}
+import React, { useState } from 'react'import { motion } from framer-motionimport {}
   TrendingUp,
   TrendingDown,
   Users,
@@ -11,141 +9,70 @@ import {}
   Activity,
   Star,
   ArrowUpRight,
-  ArrowDownRight,';
-  Shield,'';
-  Brain,''';
-  Rocket} from 'lucide-react'';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card'';
-import { Button } from './ui/button'';
-import { Badge } from './ui/badge';
-const AdvancedAnalyticsDashboard = () => {}
-';
-'';
-''';
-  const [timeRange, setTimeRange] = useState('30d')';';
-  const [selectedMetric, setSelectedMetric] = useState('overview');
+  ArrowDownRight,;
+  Shield,'Brain,'Rocket} from lucide-react'import { Card, CardContent, CardHeader, CardTitle } from ./ui/card;'
+import { Button  } from './ui/button;import { Badge  } from ./ui/badgeconst AdvancedAnalyticsDashboard = () => {}const [timeRange, setTimeRange] = useState(30d);const [selectedMetric, setSelectedMetric] = useState(overview);
   // Mock data - in real app this would come from API;
   const metrics = []{}
-';
-'';
-''';
-      title: 'Total Revenue',''';
-      value: '$2.4M','';
-      change: 12.5,''';
-      changeType: 'increase',''
-      icon: <DollarSign className='w-6 h-6' />,''';
-      color: 'from-green-500 to-emerald-600'},
+title: Total Revenue,'value: $2.4M','change: 12.5,'changeType: increase',''
+      icon: <DollarSign className='w-6 h-6' />,''color: from-green-500 to-emerald-600'},'
     {}
-';
-      title: 'Active Clients',';
-      value: '1,247',
-      change: 8.2,'''';
-      changeType: 'increase',''''
-      icon: <Users className='w-6 h-6' />,';
-      color: 'from-blue-500 to-cyan-600'},
+title: Active Clients',value: 1,247',
+      change: 8.2,'''changeType: increase',''''
+      icon: <Users className='w-6 h-6' />,color: from-blue-500 to-cyan-600'},'
     {}
-';
-      title: 'Service Performance',';
-      value: '94.2%',
-      change: 2.1,'''';
-      changeType: 'increase',''''
-      icon: <Target className='w-6 h-6' />,';
-      color: 'from-purple-500 to-pink-600'},
+title: Service Performance',value: 94.2%',
+      change: 2.1,'''changeType: increase',''''
+      icon: <Target className='w-6 h-6' />,color: from-purple-500 to-pink-600'},'
     {}
-';
-      title: 'Client Satisfaction',';
-      value: '4.8/5',
-      change: 0.3,'''';
-      changeType: 'increase',''''
-      icon: <Star className='w-6 h-6' />,';
-      color: 'from-yellow-500 to-orange-600'}
+title: Client Satisfaction',value: 4.8/5',
+      change: 0.3,'''changeType: increase',''''
+      icon: <Star className='w-6 h-6' />,color: from-yellow-500 to-orange-600'}'
   ];
   const servicePerformance = []{}
-';
-'';
-''';
-      name: 'AI CRM Platform',
+'name: AI CRM Platform',
       performance: 96,
-      growth: 15.2,';
-      clients: 89,'';
-      revenue: 450000,''';
-      status: 'trending'},
+      growth: 15.2,clients: 89,revenue: 450000,'status: trending'},
     {}
-';
-'';
-''';
-      name: 'Quantum Computing',
+'name: Quantum Computing',
       performance: 92,
-      growth: 28.7,';
-      clients: 23,'';
-      revenue: 1200000,''';
-      status: 'trending'},
+      growth: 28.7,clients: 23,revenue: 1200000,'status: trending'},
     {}
-';
-'';
-''';
-      name: 'Blockchain Solutions',
+'name: Blockchain Solutions',
       performance: 88,
-      growth: 12.4,';
-      clients: 156,'';
-      revenue: 780000,''';
-      status: 'stable'},
+      growth: 12.4,clients: 156,revenue: 780000,'status: stable'},
     {}
-';
-'';
-''';
-      name: 'Cybersecurity Suite',
+'name: Cybersecurity Suite',
       performance: 94,
-      growth: 18.9,';
-      clients: 203,'';
-      revenue: 920000,''';
-      status: 'trending'},
+      growth: 18.9,clients: 203,revenue: 920000,'status: trending'},
     {}
-';
-'';
-''';
-      name: 'IoT Platform',
+'name: IoT Platform',
       performance: 85,
       growth: 8.7,
       clients: 67,
-      revenue: 340000,';
-      status: 'stable'}
-  ]';
-  const categoryDistribution = [''
+      revenue: 340000,status: stable'}'
+  ]const categoryDistribution = ['
     { label: 'AI & ML', value: 35, color: 'from-purple-500 to-pink-600' },'{ label: 'Quantum', value: 20, color: 'from-blue-500 to-cyan-600' },'{ label: 'Blockchain', value: 25, color: 'from-green-500 to-emerald-600' },'{ label: 'Cybersecurity', value: 15, color: 'from-red-500 to-pink-600' },'{ label: 'IoT', value: 5, color: 'from-orange-500 to-yellow-600' }
   ];
   const getStatusIcon = status => {}
     switch (status) {}
-'''';
-      case 'trending':''''
-        return <TrendingUp className='w-4 h-4 text-green-500' />'';';
-      case 'stable':''''
-        return <Activity className='w-4 h-4 text-blue-500' />'';';
-      case 'declining':''''
-        return <TrendingDown className='w-4 h-4 text-red-500' />';';
+'''case trending':''''
+        return <TrendingUp className='w-4 h-4 text-green-500' />case stable':''''
+        return <Activity className='w-4 h-4 text-blue-500' />case declining':''''
+        return <TrendingDown className='w-4 h-4 text-red-500' />;
       default:''''
         return <Activity className='w-4 h-4 text-gray-500' />
     }
   }
   const getStatusColor = status => {}
     switch (status) {}
-';
-      case 'trending':'';
-        return 'bg-green-100 text-green-800';
-      case 'stable':'';
-        return 'bg-blue-100 text-blue-800';
-      case 'declining':'';
-        return 'bg-red-100 text-red-800';
-      default:'';
-        return 'bg-gray-100 text-gray-800'}
-  }';';
+case trending':'return bg-green-100 text-green-800case stable':'return bg-blue-100 text-blue-800case declining':'return bg-red-100 text-red-800default:return bg-gray-100 text-gray-800'}'
+  };
   return (''''
     <div className='max-w-7xl mx-auto p-6'>
       {/* Header */}
       <motion.div;
-        initial={{ opacity: 0, y: 20 }}''';
-        animate={{ opacity: 1, y: 0 }}'''';
-        className='mb-8''''>''''
+        initial={{ opacity: 0, y: 20 }}''animate={{ opacity: 1, y: 0 }}''className=mb-8''''>''''
         <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4'>'''
           <div>''''
             <h1 className='text-3xl font-bold text-zion-blue-dark mb-2'>
@@ -155,14 +82,10 @@ const AdvancedAnalyticsDashboard = () => {}
               Real-time insights into service performance, client metrics, and;
               business intelligence
             </p>
-          </div>''';
-''''
+          </div>'''''
           <div className='flex gap-2'>'{['7d',30d',90d',1y'].map(range => (
               <Button;
-                key={range}'''';
-                variant={timeRange === range ? 'default' : 'outline'}'''';
-                size='sm''';
-                onClick={() => setTimeRange(range)}
+                key={range}'''variant={timeRange === range ? default' : 'outline'}'''size=sm''onClick={() => setTimeRange(range)}'
               >{range}
               </Button>
             ))}
@@ -172,9 +95,7 @@ const AdvancedAnalyticsDashboard = () => {}
       {/* Metrics Cards */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}''';
-        transition={{ delay: 0.1 }}'''';
-        className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 '>{metrics.map((metric, index) => (
+        animate={{ opacity: 1, y: 0 }}'transition={{ delay: 0.1 }}''className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 '>{metrics.map((metric, index) => (
           <motion.div;
             key={index}
             initial={{ opacity: 0, y: 20 }}
@@ -190,7 +111,7 @@ const AdvancedAnalyticsDashboard = () => {}
                   <div className='flex items-center gap-1'>''''{metric.changeType === 'increase' ? (''''
                       <ArrowUpRight className='w-4 h-4 text-green-500' />''') : (''''
                       <ArrowDownRight className='w-4 h-4 text-red-500' />
-                    )}'`
+                    )}'`'
                     <span'`'`
                       className={`text-sm font-medium ${metric.changeType === 'increase' ? 'text-green-600' : 'text-red-600'}`}
                     >{metric.change}%
@@ -211,9 +132,7 @@ const AdvancedAnalyticsDashboard = () => {}
       {/* Service Performance Table */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}''';
-        transition={{ delay: 0.2 }}'''';
-        className='mb-8 '>
+        animate={{ opacity: 1, y: 0 }}''transition={{ delay: 0.2 }}''className=mb-8 '>'
         <Card>'''
           <CardHeader>''''
             <CardTitle className='flex items-center gap-2'>''''
@@ -251,9 +170,7 @@ const AdvancedAnalyticsDashboard = () => {}
                     <motion.tr;
                       key={index}
                       initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}''';
-                      transition={{ delay: 0.1 * index }}'''';
-                      className='border-b border-zion-slate-light/10 hover:bg-zion-blue-light/5''''>''''
+                      animate={{ opacity: 1, x: 0 }}''transition={{ delay: 0.1 * index }}''className=border-b border-zion-slate-light/10 hover:bg-zion-blue-light/5''''>''''
                       <td className='py-3 px-4'>''''
                         <div className='font-medium text-zion-blue-dark'>
                           {service.name}
@@ -307,9 +224,7 @@ const AdvancedAnalyticsDashboard = () => {}
       {/* Charts and Insights */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}''';
-        transition={{ delay: 0.3 }}'''';
-        className='grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8 '>{/* Category Distribution */}
+        animate={{ opacity: 1, y: 0 }}''transition={{ delay: 0.3 }}''className=grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8 '>{/* Category Distribution */}'
         <Card>'''
           <CardHeader>''''
             <CardTitle className='flex items-center gap-2'>''''
@@ -323,9 +238,7 @@ const AdvancedAnalyticsDashboard = () => {}
                 <motion.div;
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}''';
-                  transition={{ delay: 0.1 * index }}'''';
-                  className='flex items-center justify-between''''>''''
+                  animate={{ opacity: 1, x: 0 }}''transition={{ delay: 0.1 * index }}''className=flex items-center justify-between''''>''''
                   <div className='flex items-center gap-3'>`
                     <div``;
                       className={`w-4 h-4 bg-gradient-to-r ${category.color} rounded-full`}'''></div>''''
@@ -370,8 +283,7 @@ const AdvancedAnalyticsDashboard = () => {}
                     category
                   </p>
                 </div>
-              </div>''';
-''''
+              </div>'''''
               <div className='flex items-start gap-3 p-3 bg-zion-blue/10 rounded-lg'>''''
                 <Users className='w-5 h-5 text-zion-blue mt-1' />'''
                 <div>''''
@@ -382,8 +294,7 @@ const AdvancedAnalyticsDashboard = () => {}
                     New client acquisition rate increased by 18% this quarter
                   </p>
                 </div>
-              </div>''';
-''''
+              </div>'''''
               <div className='flex items-start gap-3 p-3 bg-zion-purple/10 rounded-lg'>''''
                 <Star className='w-5 h-5 text-zion-purple mt-1' />'''
                 <div>''''
@@ -402,9 +313,7 @@ const AdvancedAnalyticsDashboard = () => {}
       {/* CTA Section */}
       <motion.div;
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}''';
-        transition={{ delay: 0.4 }}'''';
-        className='text-center''''>''''
+        animate={{ opacity: 1, y: 0 }}''transition={{ delay: 0.4 }}''className=text-center''''>''''
         <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white'>''''
           <h3 className='text-3xl font-bold mb-4'>Get Detailed Analytics</h3>''''
           <p className='text-xl mb-6 max-w-2xl mx-auto'>
@@ -413,18 +322,12 @@ const AdvancedAnalyticsDashboard = () => {}
             decisions.'''
           </p>''''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>'''
-            <Button'''';
-              className='bg-white text-zion-purple hover:bg-zion-slate-light''';
-              onClick={() =>';
-                window.open('';
-                  'mailto:kleber@ziontechgroup.com?subject=Analytics Dashboard Access',_blank')}'''>''''
+            <Button'''className=bg-white text-zion-purple hover:bg-zion-slate-light''onClick={() =>;'
+                window.open('mailto:kleber@ziontechgroup.com?subject=Analytics Dashboard Access',_blank')}'''>''''
               <Rocket className='w-5 h-5 mr-2' />
               Request Access
             </Button>'''
-            <Button'''';
-              variant='outline''''';
-              className='border-white text-white hover:bg-white hover:text-zion-purple''';
-              onClick={() => window.open('tel:+13024640950',_blank')}'''>''''
+            <Button'''variant=outline''''className=border-white text-white hover:bg-white hover:text-zion-purple''onClick={() => window.open(tel:+13024640950',_blank')}'''>''''
               <Shield className='w-5 h-5 mr-2' />
               Schedule Demo
             </Button>
@@ -433,12 +336,9 @@ const AdvancedAnalyticsDashboard = () => {}
       </motion.div>
     </div>)}
 export default AdvancedAnalyticsDashboard;
-export { AdvancedAnalyticsDashboard }
-;
-export { AdvancedAnalyticsDashboard }
-;
-export { AdvancedAnalyticsDashboard }
-;
+export { AdvancedAnalyticsDashboard };
+export { AdvancedAnalyticsDashboard };
+export { AdvancedAnalyticsDashboard };
 export { AdvancedAnalyticsDashboard }
 
 export { AdvancedAnalyticsDashboard }

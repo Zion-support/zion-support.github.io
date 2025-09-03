@@ -34,7 +34,7 @@ import { Badge } from;
   const companyStats = [{ label: 'Team Members', value: '50+', icon: Users }, { label: 'Years Combined Experience', value: '500+', icon: Award },'    { label: 'PhD Holders', value: '15+', icon: GraduationCap }, { label: 'Research Papers Published', value: '100+', icon: Star }'  ]';
   const values = [
     {
-      title: 'Innovation First', description: 'We push the boundaries of what&apos;s possible with AI and technology', ,
+      title: 'Innovation First', description: 'We push the boundaries of what&aposs possible with AI and technology', ,
   '      icon: Brain    },
     {
       title: 'Client Success', description: 'Our success is measured by the success of our clients','      icon: Target'    }, {
@@ -160,5 +160,5 @@ import { Badge } from;
       </section>
     </div>
   )}
-;
+
 export default Team

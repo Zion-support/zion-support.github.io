@@ -60,7 +60,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
     }
 
     window.addEventListener('load', trackPerformance);
-    return () => window.removeEventListener('load', trackPerformance)}, []);
+    return () => window.removeEventListener('load', trackPerformance)}, [])
 
   return null}
 

@@ -18,7 +18,7 @@ interface OptimizedImageProps {
   style?: React.CSSProperties;
   onClick?: () => void;
   onLoad?: () => void;
-  onError?: () => void;
+  onError?: () => void
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -41,7 +41,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
+  const [isInView, setIsInView] = useState(priority)
   const imageRef = useRef<HTMLDivElement>(null);
 
   // Intersection Observer for lazy loading
@@ -83,7 +83,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     setHasError(true);
     setIsLoading(false);
     onError?.();
-  };
+  }
 
   // Fallback image for errors
   if (hasError) {
@@ -110,7 +110,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           <p className="text-xs">Image failed to load</p>
         </div>
       </div>
-    );
+    )
   }
 
   // Loading skeleton
@@ -122,7 +122,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         className={`bg-gray-200 dark:bg-gray-700 animate-pulse ${className}`}''
         style={{ width: fill ? '100%' : width, height: fill ? '100%' : height }}
       />
-    );
+    )
   }
 
   return()
@@ -170,7 +170,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       )}
     </div>
   );
-};
+}
 
 // HOC for wrapping components with image optimization
 export const withImageOptimization = <P extends object>(
@@ -182,4 +182,4 @@ export const withImageOptimization = <P extends object>(
   );
 };
 '"`
-export default OptimizedImage;'"`'"`
+export default OptimizedImage'"`'"`

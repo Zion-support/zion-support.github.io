@@ -13,7 +13,7 @@ import React, { useState } from,
   ')''	const filteredServices = comprehensiveExpandedServices.filter(service => {
 		const matchesCategory = selectedCategory ===;
   'all' || service.category === selectedCategory;
-  '		const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||'			service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+  '		const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||'			service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
 		return matchesCategory && matchesSearch})
 	const popularServices = comprehensiveExpandedServices.filter(service => service.popular)
 	return(
@@ -39,7 +39,7 @@ import React, { useState } from,
   all;
   ')}'								className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
   '									selectedCategory === 'all';
-  '										? 'bg-blue-600 text-white';
+  '										? 'bg-blue-600 text-white'
   ': 'bg-gray-100 text-gray-700 hover:bg-gray-200'								}`}'							>`								All Services
 							</button>
 							{serviceCategories.map((category) => (
@@ -82,7 +82,7 @@ import React, { useState } from,
 					</div>
 					{/* Services by Category */}
 					{serviceCategories.map((category) => {
-						const categoryServices = filteredServices.filter(service => service.category === category.name);
+						const categoryServices = filteredServices.filter(service => service.category === category.name)
 						if (categoryServices.length === 0) return null
 						return(
 							<div key={category.name} className='mb-16'>'								<div className='mb-8'>'									<h3 className='text-2xl font-bold text-gray-900 mb-2'>'										{category.icon} {category.name}'									</h3>

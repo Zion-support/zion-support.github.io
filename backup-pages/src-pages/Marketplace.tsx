@@ -28,11 +28,11 @@ const Marketplace: React.FC = () => {
   ');
   const [selectedCategory, setSelectedCategory] = useState('all;
   ');
-  const [selectedType, setSelectedType] = useState('all;
+  const [selectedType, setSelectedType] = useState('all
   ')
   const [viewMode, setViewMode] = useState<'grid;
   ' | 'list;
-  '>('grid;
+  '>('grid
   ')
   const [expandedItem, setExpandedItem] = useState<string | null>(null);
     return matchesCategory && matchesSearch})
@@ -74,7 +74,7 @@ const Marketplace: React.FC = () => {
         return 'bg-green-500/20 text-green-400;
   ';
       default:';
-        return;
+        return
   'bg-slate-500/20 text-slate-400}
   }
 
@@ -120,7 +120,7 @@ const Marketplace: React.FC = () => {
       default:';
         return;
   'bg-gradient-to-r from-gray-500 to-slate-500}  }
-;
+
   return()
     <>
       <SEO'
@@ -149,7 +149,7 @@ const Marketplace: React.FC = () => {
 '
               <p className='text-xl md:text-2xl text-zion-cyan-light max-w-4xl mx-auto leading-relaxed mb-8'>
                 Discover cutting-edge AI, quantum computing, cybersecurity, and;
-                cloud solutions from leading technology vendors. All solutions;
+                cloud solutions from leading technology vendors. All solutions
                 are vetted and enterprise-ready.
               </p>
               {/* Search Bar */}'
@@ -159,7 +159,7 @@ const Marketplace: React.FC = () => {
                   <input';
                     type='text''                    placeholder='Search solutions, vendors, or technologies...';
                     value={searchTerm}
-                    onChange={e => setSearchTerm(e.target.value)}';
+                    onChange={e => setSearchTerm(e.target.value)}'
                     className='w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-zion-cyan-light focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent'
                   />
                 </div>
@@ -177,7 +177,7 @@ const Marketplace: React.FC = () => {
                   onClick={() => setSelectedCategory(category.id)}`;
                   className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
                     selectedCategory === category.id,
-  ? 'bg-zion-purple text-white shadow-lg';
+  ? 'bg-zion-purple text-white shadow-lg'
   ': 'bg-white/10 text-zion-cyan-light hover:bg-white/20 border border-white/20`}`}
                 >'
                   <category.icon className='w-5 h-5' />
@@ -196,7 +196,7 @@ const Marketplace: React.FC = () => {
                 <span className='text-white font-medium'>Sort by:</span>
                 <select;
                   value={sortBy}
-                  onChange={e => setSortBy(e.target.value)}';
+                  onChange={e => setSortBy(e.target.value)}'
                   className='px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent'>'
                   <option value='popularity'>Popularity</option>'
                   <option value='rating'>Rating</option>'
@@ -355,11 +355,11 @@ const Marketplace: React.FC = () => {
               viewport={{ once: true }}
             >'
               <h2 className='text-4xl font-bold text-white mb-6'>
-                Can't Find What You;
+                Can't Find What You
   're Looking For?
               </h2>'
               <p className='text-xl text-zion-cyan-light mb-8 max-w-3xl mx-auto'>
-                Our technology experts can help you find the perfect solution or;
+                Our technology experts can help you find the perfect solution or
                 even develop a custom solution tailored to your specific needs.
               </p>
 '

@@ -37,7 +37,7 @@ describe('ResetPassword Page;
   ',
       path = '/reset-password/: uid/:token} = {}
   ) => {
-    window.history.pushState({}'Test page;
+    window.history.pushState({}'Test page
   ', route)
     return render(
       <MemoryRouter initialEntries={[route]}>
@@ -47,14 +47,14 @@ describe('ResetPassword Page;
         </Routes>
       </MemoryRouter>
     )}
-;
+
   test('renders password inputs and submit button
   ', () => {
     renderWithRouter(<ResetPassword />);
     expect(screen.getByLabelText(/new password/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/confirm new password/i)).toBeInTheDocument();
     expect(
-      screen.getByRole('button;
+      screen.getByRole('button
   ', { name: /reset password/i })).toBeInTheDocument()})
   test(,
   shows error if passwords do not match
@@ -66,7 +66,7 @@ describe('ResetPassword Page;
       target: { value: 'password456;
   ' }})
     fireEvent.click(screen.getByRole('button;
-  ', { name: /reset password/i }));
+  ', { name: /reset password/i }))
     await waitFor(() => {
       expect(screen.getByText(/passwords do not match/i)).toBeInTheDocument()})})
   test(,
@@ -102,7 +102,7 @@ describe('ResetPassword Page;
   test(,
   shows error message on failed submission (mocked);
   ', async () => {
-    // authService.resetPassword.mockRejectedValueOnce(new Error('Invalid token;
+    // authService.resetPassword.mockRejectedValueOnce(new Error('Invalid token
   '))
     renderWithRouter(<ResetPassword />);
     fireEvent.change(screen.getByLabelText(/new password/i), {
@@ -117,7 +117,7 @@ describe('ResetPassword Page;
   testuid;
   ''testtoken;
   ''newpassword123;
-  ');
+  ')
     // })
     // await waitFor(() => {
     //   expect(screen.getByText(/failed to reset password/i)).toBeInTheDocument()

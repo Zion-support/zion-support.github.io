@@ -83,13 +83,13 @@ import { Search, Book, Video, MessageCircle, Phone, Mail, FileText, Download } f
   Mon-Fri 9AM-6PM EST', action: 'Call +1 302 464 0950'    },
   '    {
       icon: Mail, title:,
-  Email Support;
+  Email Support
   ','      description: 'Send us your questions and get detailed responses, availability:,
   Response within 24 hours',
   '      action: 'Send Email'    }'  ]
   return(
     <MainLayout;
-      title='Help Center - Zion Tech Group''      description='Get help and support for Zion Tech Group services. Find guides, tutorials, FAQs, and contact our support team for assistance.''      keywords='help center, support, documentation, tutorials, FAQ, customer service''    >'      <div className='min-h-screen bg-gray-50'>'        {/* Hero Section */}'        <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'          <div className='container mx-auto px-4 text-center'>'            <h1 className='text-4xl md: text-5xl font-bold mb-6'>Help Center</h1>'            <p className='text-xl text-gray-200 max-w-3xl mx-auto'>'              Find answers, get support, and learn how to make the most of our services. '              We&apos;re here to help you succeed.'
+      title='Help Center - Zion Tech Group''      description='Get help and support for Zion Tech Group services. Find guides, tutorials, FAQs, and contact our support team for assistance.''      keywords='help center, support, documentation, tutorials, FAQ, customer service''    >'      <div className='min-h-screen bg-gray-50'>'        {/* Hero Section */}'        <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'          <div className='container mx-auto px-4 text-center'>'            <h1 className='text-4xl md: text-5xl font-bold mb-6'>Help Center</h1>'            <p className='text-xl text-gray-200 max-w-3xl mx-auto'>'              Find answers, get support, and learn how to make the most of our services. '              We&aposre here to help you succeed.'
   '            </p>'          </div>
         </section>
         {/* Search Bar */}
@@ -146,5 +146,5 @@ import { Search, Book, Video, MessageCircle, Phone, Mail, FileText, Download } f
       </div>
     </MainLayout>
   )}
-;
+
 export default Help

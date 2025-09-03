@@ -44,7 +44,7 @@ describe('TeamBuilderPage;
     // Reset useAuth mock for each test if its behavior needs to change per test,
     // for now, it consistently returns a user.;
     jest;
-      .mocked(useAuth);
+      .mocked(useAuth)
       .mockImplementation(() => ({ user: { id: 'test-user-id } }) as any)})
   it('renders the initial form step correctly
   ', () => {
@@ -53,7 +53,7 @@ describe('TeamBuilderPage;
   ')).toBeInTheDocument();
     expect(screen.getByLabelText(/Project Name/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/Goals \/ Scope/i)).toBeInTheDocument();
-    expect(screen.getByRole('button;
+    expect(screen.getByRole('button
   ', { name: /Next/i })).toBeInTheDocument()})
   it('shows validation errors for empty required fields on step 1
   ', async () => {
@@ -65,7 +65,7 @@ describe('TeamBuilderPage;
   Project name must be at least 3 characters;
   ')).toBeVisible();
     expect(
-      await screen.findByText('Goals/scope must be at least 10 characters;
+      await screen.findByText('Goals/scope must be at least 10 characters
   ')).toBeVisible()})
   it('navigates to the second step on valid input for step 1
   ', async () => {
@@ -81,7 +81,7 @@ describe('TeamBuilderPage;
     expect(await screen.findByLabelText(/Timeline/i)).toBeVisible();
     expect(screen.getByLabelText(/Budget/i)).toBeVisible();
     expect(
-      screen.getByRole('button;
+      screen.getByRole('button
   ', { name: /Previous/i })).toBeInTheDocument()})
   it(,
   navigates to the review step (step 3) on valid input for step 2
@@ -117,7 +117,7 @@ describe('TeamBuilderPage;
       id: 'rec-123, // Added id as TeamRecommendationDisplay might use it;
       project_brief_id:,
   brief-xyz;
-  ', // Added project_brief_id;
+  ', // Added project_brief_id
       recommendationSummary: 1 PM, 1 Dev,
   ,
       roles: [{
@@ -174,7 +174,7 @@ describe('TeamBuilderPage;
       '/api/team-builder/generate;
   ',
       expect.any(Object))})
-  it('shows an error toast if API call fails;
+  it('shows an error toast if API call fails
   ', async () => {
     (fetch as jest.Mock).mockResolvedValueOnce({
       ok: false,
@@ -201,7 +201,7 @@ describe('TeamBuilderPage;
   ', { name: /Next/i }));
     await screen.findByText(/Review Your Project Brief/i);
     fireEvent.click(
-      screen.getByRole('button;
+      screen.getByRole('button
   ', { name: /Get Team Recommendation/i }))
     await waitFor(() => {
       expect(toast.error).toHaveBeenCalledWith('AI failed miserably')})})})

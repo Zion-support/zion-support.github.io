@@ -23,7 +23,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   blurDataURL, sizes,
   fill = false, style,
   onLoad, onError}) => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false)
   const [hasError, setHasError] = useState(false)
   const imgRef = useRef<HTMLImageElement>(null);
   // Generate a simple blur placeholder if none provided;
@@ -48,7 +48,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
         })}, {
         rootMargin: '50px 0px',
         threshold: 0.1})
-    observer.observe(imgRef.current);
+    observer.observe(imgRef.current)
     return () => {
       if (imgRef.current) {
         observer.unobserve(imgRef.current)}
@@ -91,5 +91,5 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
           aria-hidden='true'/>)}
     </div>
   )}
-;
+
 export default ImageOptimizer

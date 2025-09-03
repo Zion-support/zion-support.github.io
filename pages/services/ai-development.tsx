@@ -211,4 +211,4 @@ const AIDevelopment: NextPage = () => {
   );
 };
 
-export default AIDevelopment;
+export default AIDevelopment

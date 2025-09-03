@@ -22,7 +22,7 @@ import { '  FileText, Scale,
       id: 'intellectual-property','      title: 'Intellectual Property', icon: Shield,'      content: ['        'All content, trademarks, and intellectual property belong to Zion Tech Group', 'Users retain ownership of their data and content','        'We grant limited license to use our services as specified in these terms', 'Unauthorized use of our intellectual property is strictly prohibited''      ]'    }, {
       id: 'limitation-of-liability','      title: 'Limitation of Liability', icon: AlertTriangle,'      content: ['        'Our services are provided 'as is;
   ' without warranties of any kind', 'We are not liable for any indirect, incidental, or consequential damages','        'Our total liability is limited to the amount paid for the specific service', 'Some jurisdictions may not allow limitation of liability, so these limitations may not apply''      ]'    }
-  ];
+  ]
   const contactInfo = {
     email: 'legal@ziontechgroup.com', phone: '+1 (555) 123-4567', address: '123 Technology Drive, San Francisco, CA 94105''  }'
   return(
@@ -106,10 +106,10 @@ import { '  FileText, Scale,
                 <div className='text-center'>'                  <div className='p-3 rounded-lg bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 w-fit mx-auto mb-3'>'                    <Globe className='w-6 h-6 text-blue-400' />'                  </div>'                  <h3 className='text-white font-semibold mb-2'>Address</h3>'                  <p className='text-gray-300 text-sm'>{contactInfo.address}</p>'                </div>'              </div>
             </Card>
             {/* Changes to Terms */}
-            <Card className='p-8'>'              <h2 className='text-3xl font-bold text-white mb-6'>Changes to Terms</h2>'              <div className='prose prose-invert max-w-none'>'                <p className='text-gray-300 mb-4'>'                  We reserve the right, at our sole discretion, to modify or replace these Terms at any time. '                  If a revision is material, we will try to provide at least 30 days notice prior to any new;
+            <Card className='p-8'>'              <h2 className='text-3xl font-bold text-white mb-6'>Changes to Terms</h2>'              <div className='prose prose-invert max-w-none'>'                <p className='text-gray-300 mb-4'>'                  We reserve the right, at our sole discretion, to modify or replace these Terms at any time. '                  If a revision is material, we will try to provide at least 30 days notice prior to any new
                   terms taking effect.
                 </p>
-                <p className='text-gray-300 mb-4'>'                  What constitutes a material change will be determined at our sole discretion. By continuing '                  to access or use our services after those revisions become effective, you agree to be bound;
+                <p className='text-gray-300 mb-4'>'                  What constitutes a material change will be determined at our sole discretion. By continuing '                  to access or use our services after those revisions become effective, you agree to be bound
                   by the revised terms.
                 </p>
                 <div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4'>'                  <div className='flex items-start'>'                    <Clock className='w-5 h-5 text-yellow-400 mr-3 mt-0.5 flex-shrink-0' />'                    <div>'                      <h4 className='text-yellow-400 font-semibold mb-2'>Stay Updated</h4>'                      <p className='text-gray-300 text-sm'>'                        We recommend that you review these Terms periodically for any changes. '                        Changes to these Terms are effective when they are posted on this page.
@@ -124,5 +124,5 @@ import { '  FileText, Scale,
       </section>
     </div>
   )}
-;
+
 export default Terms

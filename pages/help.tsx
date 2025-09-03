@@ -83,7 +83,7 @@ const Help: NextPage = () => {
       description: "Connect with other users and get peer support",
       link: "/community"
     }
-  ];
+  ]
 
   return (
     <Layout
@@ -238,4 +238,4 @@ const Help: NextPage = () => {
   );
 };
 
-export default Help;
+export default Help

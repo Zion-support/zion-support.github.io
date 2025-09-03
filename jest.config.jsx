@@ -9,7 +9,7 @@ const customJestConfig = {
   moduleNameMapper: {,
   ^@/(.*)$': '<rootDir>/$1},
   collectCoverageFrom: [,
-  components/**/*.{js,jsx,ts,tsx},pages/**/*.{js,jsx,ts,tsx},utils/**/*.{js,jsx,ts,tsx},!**/*.d.ts',!**/node_modules/**;
+  components/**/*.{js,jsx,ts,tsx},pages/**/*.{js,jsx,ts,tsx},utils/**/*.{js,jsx,ts,tsx},!**/*.d.ts',!**/node_modules/**
   '
   ],
   testPathIgnorePatterns: [
@@ -20,5 +20,5 @@ const customJestConfig = {
   ',<rootDir>/dao/',<rootDir>/pages.disabled/';
   ]}
 ;
-// createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async;
+// createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
 module.exports = createJestConfig(customJestConfig)

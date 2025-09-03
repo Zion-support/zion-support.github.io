@@ -72,7 +72,7 @@ case 'Cybersecurity;
           Past
         </span>
       )}  }
-;
+
   return ('
     <div className='min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700'>
       {/* Hero Section */}'
@@ -91,7 +91,7 @@ case 'Cybersecurity;
             </h1>'
             <p className='text-xl text-zion-slate-light max-w-4xl mx-auto'>
               Discover the latest technology trends, learn from industry;
-              experts, and network with professionals at our comprehensive;
+              experts, and network with professionals at our comprehensive
               events, workshops, and webinars.
             </p>
           </motion.div>
@@ -109,7 +109,7 @@ case 'Cybersecurity;
                   <input';
                     type='text''                    placeholder='Search events...';
                     value={searchTerm}
-                    onChange={e => setSearchTerm(e.target.value)}';
+                    onChange={e => setSearchTerm(e.target.value)}'
                     className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan'
                   />
                 </div>
@@ -118,7 +118,7 @@ case 'Cybersecurity;
               <div>
                 <select;
                   value={selectedType}
-                  onChange={e => setSelectedType(e.target.value)}';
+                  onChange={e => setSelectedType(e.target.value)}'
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan'
                 >{eventTypes.map(type => (
                     <option key={type} value={type}>
@@ -131,7 +131,7 @@ case 'Cybersecurity;
               <div>
                 <select;
                   value={selectedCategory}
-                  onChange={e => setSelectedCategory(e.target.value)}';
+                  onChange={e => setSelectedCategory(e.target.value)}'
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan'
                 >{categories.map(category => (
                     <option key={category} value={category}>
@@ -144,7 +144,7 @@ case 'Cybersecurity;
               <div>
                 <select;
                   value={selectedStatus}
-                  onChange={e => setSelectedStatus(e.target.value)}';
+                  onChange={e => setSelectedStatus(e.target.value)}'
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan'
                 >{statuses.map(status => (
                     <option key={status} value={status}>
@@ -153,7 +153,7 @@ case 'Cybersecurity;
   ';
                         ? 'Upcoming';
   ': status === 'past';
-  ';
+  '
                           ? 'Past
                           : status}
                     </option>
@@ -377,7 +377,7 @@ return()                  <motion.div
             </h2>'
             <p className='text-zion-slate-light text-lg mb-8'>
               Partner with Zion Tech Group to host technology events, workshops,
-              or webinars. Let;
+              or webinars. Let
   's create valuable learning experiences together.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>

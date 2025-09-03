@@ -37,7 +37,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         link.rel = 'preload';
         link.href = href;
         link.as = as;
-        if (type) link.type = type;
+        if (type) link.type = type
         document.head.appendChild(link)}
 
       // Preload critical resources
@@ -50,7 +50,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
   return (
     <Head>
-      // Preload critical resources;
+      // Preload critical resources
       preloadImages.forEach(image => {
 ursor/automate-test-fix-improve-and-merge-code-48f3
   return(
@@ -107,5 +107,5 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
 ursor/automate-test-fix-improve-and-merge-code-48f3}          ``        }}/>
     </Head>
   )}
-;
+
 export default PerformanceOptimizer

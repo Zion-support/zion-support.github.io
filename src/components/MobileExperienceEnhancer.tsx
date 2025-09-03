@@ -1,8 +1,5 @@
 
-import React, { useEffect, useState, useCallback } from 'react';
-
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import React, { useEffect, useState, useCallback } from 'reactimport { motion, AnimatePresence } from framer-motionimport { '
   Smartphone, 
   Tablet, 
   Monitor, 
@@ -22,12 +19,8 @@ import {
   ArrowDown,
   ArrowLeft,
   ArrowRight
-} from 'lucide-react';
-
-interface TouchGesture {
-  type: 'swipe' | 'pinch' | 'rotate' | 'tap' | 'longpress';
-  direction?: 'up' | 'down' | 'left' | 'right';
-  distance?: number;
+} from lucide-reactinterface TouchGesture {
+  type: swipe' | 'pinch' | 'rotate' | 'tap' | 'longpressdirection?: up' | 'down' | 'left' | 'rightdistance?: number;
   duration?: number;
 }
 
@@ -44,7 +37,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
-  const [deviceOrientation, setDeviceOrientation] = useState<'portrait' | 'landscape'>('portrait');
+  const [deviceOrientation, setDeviceOrientation] = useState<portrait' | 'landscape'>('portrait');'
   const [touchStart, setTouchStart] = useState<{ x: number; y: number; time: number } | null>(null);
   const [touchEnd, setTouchEnd] = useState<{ x: number; y: number; time: number } | null>(null);
   const [gestureHistory, setGestureHistory] = useState<TouchGesture[]>([]);
@@ -139,10 +132,8 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
         if (Math.abs(deltaX) > Math.abs(deltaY)) {
           // Horizontal swipe
-          gesture.direction = deltaX > 0 ? 'right' : 'left';
-          
-          // Handle horizontal navigation
-          if (gesture.direction === 'left') {
+          gesture.direction = deltaX > 0 ? 'right' : 'left// Handle horizontal navigation'
+          if (gesture.direction === left') {'
             // Swipe left - go forward
             if (window.history.length > 1) {
               window.history.forward();
@@ -155,10 +146,8 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
           }
         } else {
           // Vertical swipe
-          gesture.direction = deltaY > 0 ? 'down' : 'up';
-          
-          // Handle vertical gestures
-          if (gesture.direction === 'up' && distance > 100) {
+          gesture.direction = deltaY > 0 ? 'down' : 'up// Handle vertical gestures'
+          if (gesture.direction === up' && distance > 100) {'
             // Swipe up - scroll to top
             window.scrollTo({ top: 0, behavior: 'smooth' });
           } else if (gesture.direction === 'down' && distance > 100) {
@@ -193,9 +182,8 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
   const handleMobileNavigation = useCallback((action: string) => {
     switch (action) {
       case 'home':
-        window.location.href = '/';
-        break;
-      case 'search':
+        window.location.href = '/break;'
+      case search':'
         // Trigger search functionality
         const searchInput = document.querySelector('input[type="search"]') as HTMLInputElement;
         if (searchInput) {

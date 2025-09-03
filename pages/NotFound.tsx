@@ -24,7 +24,7 @@ const NotFound: React.FC = () => {
     { name: 'Blog', url: '/blog', icon: BookOpen }, { name: 'Pricing', url: '/pricing', icon: DollarSign },
     { name: 'Team', url: '/team', icon: Award }, { name: 'Webinars', url: '/webinars', icon: Calendar },
     { name: 'White Papers', url: '/white-papers', icon: FileText }, { name: 'Privacy Policy', url: '/privacy', icon: Shield }
-  ];
+  ]
 
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4'>
@@ -58,10 +58,10 @@ const NotFound: React.FC = () => {
           >
             <h2 className='text-4xl font-bold text-white mb-4'>Page Not Found</h2>
             <p className='text-xl text-gray-300 mb-6'>
-              Sorry, the page you are looking for doesn&apos;t exist or has been moved.
+              Sorry, the page you are looking for doesn&apost exist or has been moved.
             </p>
             <p className='text-gray-400'>
-              Don&apos;t worry, we&apos;ll help you find what you are looking for.
+              Don&apos;t worry, we&aposll help you find what you are looking for.
             </p>
           </motion.div>
           {/* Action Buttons */}
@@ -125,7 +125,7 @@ const NotFound: React.FC = () => {
             <div className='bg-slate-800/50 rounded-lg p-8'>
               <h3 className='text-2xl font-bold text-white mb-4'>Still Need Help?</h3>
               <p className='text-gray-300 mb-6'>
-                If you can&apos;t find what you&apos;re looking for, our team is here to help.
+                If you can&apos;t find what you&aposre looking for, our team is here to help.
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <Link
@@ -151,4 +151,4 @@ const NotFound: React.FC = () => {
   );
 };
 
-export default NotFound;
+export default NotFound

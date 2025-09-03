@@ -65,7 +65,7 @@ const PWARegistration: React.FC = () => {
     setShowInstallPrompt(false);
 React, { useEffect, useState } from,
   react';
-import { motion, AnimatePresence  } from 'lucide-react';import { Download, X, Smartphone, Monitor  } from 'lucide-react'';interface BeforeInstallPromptEvent extends Event {
+import { motion, AnimatePresence  } from 'lucide-react';import { Download, X, Smartphone, Monitor  } from 'lucide-react''interface BeforeInstallPromptEvent extends Event {
   readonly platforms: string[]
   readonly userChoice: Promise<{
     outcome: 'accepted;
@@ -113,7 +113,7 @@ if (outcome ===;
   '      console.log('User dismissed the install prompt;
   ')'    }'setDeferredPrompt(null)    setShowInstallPrompt(false)}
 ;
-const handleDismiss = () => {setShowInstallPrompt(false);
+const handleDismiss = () => {setShowInstallPrompt(false)
     setDeferredPrompt(null)}
 
   if (isInstalled || !showInstallPrompt) {
@@ -193,5 +193,5 @@ className='fixed bottom-4 left-4 right-4 z-50 max-w-md mx-auto''      >'        
       </motion.div>
     </AnimatePresence>
   )}
-;
+
 export default PWARegistration

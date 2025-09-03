@@ -3,7 +3,7 @@ import Head from 'next/head';
 
 export default function Index() {
   return (
-    <>;
+    <>
       <Head>
         <title>Zion Tech Group - Leading Technology Solutions Provider</title>
         <meta name='description' content='Zion Tech Group delivers cutting-edge AI, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with our innovative technology solutions.' />
@@ -90,7 +90,7 @@ export default function Index() {
             }}
             onMouseOut={(e) => {
               e.target.style.background = 'transparent';
-              e.target.style.color = '#00d4ff';
+              e.target.style.color = '#00d4ff'
             }}
           >
             Get Started
@@ -98,5 +98,5 @@ export default function Index() {
         </div>
       </div>
     </>
-  );
+  )
 }

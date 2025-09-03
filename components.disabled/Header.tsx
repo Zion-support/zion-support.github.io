@@ -15,7 +15,7 @@ const Header: React.FC = () => {
       setIsScrolled(window.scrollY > 0)}
 ;
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)}, []);
+    return () => window.removeEventListener('scroll', handleScroll)}, [])
   const navigationItems = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
@@ -98,5 +98,5 @@ const Header: React.FC = () => {
       </div>
     </header>
   )}
-;
+
 export default Header

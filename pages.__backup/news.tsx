@@ -34,7 +34,7 @@ const NewsPage: React.FC = () => {
       featured: true,
       image:,
   /api/placeholder/600/400',
-      tags: [;
+      tags: [
   'AI Consciousness,
 ,
   Breakthrough',
@@ -105,7 +105,7 @@ const NewsPage: React.FC = () => {
   TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap,
   Clock, BookOpen, Video, Podcast, FileText, Search} from 'lucide-react;
   ';
-import Link from 'next/link;
+import Link from 'next/link
   '
 return(
     <UltraAdvancedFuturisticBackground>
@@ -495,7 +495,7 @@ export default function News() {
   from-orange-500 to-red-500;
   ',
       industry: 'from-indigo-500 to-purple-500}
-    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600;
+    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600
   '}
 
   return(
@@ -540,7 +540,7 @@ export default function News() {
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                    selectedCategory === category.id;
+                    selectedCategory === category.id
                       ?,
   bg-gradient-to-r from-cyan-500 to-blue-600 text-white
   ': 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white}`}
@@ -583,7 +583,7 @@ export default function News() {
   numeric;
   ',
       month: 'long,
-      day: 'numeric;
+      day: 'numeric
   '})}
 
   return(
@@ -1269,7 +1269,7 @@ export default function News() {
               Ready to Stay Informed?
             </h2>
             <p className='text-xl text-gray-300 mb-8'>
-              Explore our latest research, industry insights, and technology breakthroughs;
+              Explore our latest research, industry insights, and technology breakthroughs
               that are shaping the future of AI and quantum computing.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -1381,7 +1381,7 @@ title: 'Partnership with TechCorp Announced for Cloud Infrastructure',
       author: 'Prof. Maria Garcia',
       readTime: '7 min read',
       image: '📚'}
-  ];
+  ]
   const categories = ['All', 'Company News', 'Partnerships', 'Innovation', 'Technology', 'Sustainability', 'Case Studies', 'Research']
 
   return(

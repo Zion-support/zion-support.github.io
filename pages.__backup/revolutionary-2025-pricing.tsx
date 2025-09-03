@@ -58,7 +58,7 @@ export default function Revolutionary2025PricingPage() {
   ': '/month,
       savings: billingCycle ===,
   yearly;
-  ' ? 'Save 20%;
+  ' ? 'Save 20%
   ': ',
       features: [
   'Access to 50+ Services',
@@ -111,7 +111,7 @@ export default function Revolutionary2025PricingPage() {
   ',
         'White-label Solutions;
   ',
-        'API Access;
+        'API Access
   ',
         'SLA Guarantees
   '      ],
@@ -126,7 +126,7 @@ export default function Revolutionary2025PricingPage() {
   // Market analysis;
   const marketAnalysis = {
     totalMarketSize:,
-  $150B+;
+  $150B+
   ',
     growthRate: '250% annually,
     customerSatisfaction:,
@@ -143,7 +143,7 @@ export default function Revolutionary2025PricingPage() {
       <div className='min-h-screen'>
         <Head>
           <title>
-            Revolutionary 2025 Pricing - Zion Tech Group | Competitive AI & IT;
+            Revolutionary 2025 Pricing - Zion Tech Group | Competitive AI & IT
             Solutions
           </title>
           <meta
@@ -182,7 +182,7 @@ export default function Revolutionary2025PricingPage() {
               </h1>
               <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
                 Experience the future of technology at competitive prices. Our;
-                revolutionary services deliver 10x better performance at 50%;
+                revolutionary services deliver 10x better performance at 50%
                 lower costs than traditional solutions.
               </p>
               {/* Billing Toggle */}
@@ -190,7 +190,7 @@ export default function Revolutionary2025PricingPage() {
                 <span className='text-gray-400'>Monthly</span>
                 <button;
                   onClick={() => setBillingCycle(billingCycle ===,
-  monthly' ?;
+  monthly' ?
   'yearly': 'monthly)}                  className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
                     billingCycle ===,
   yearly' ?
@@ -284,7 +284,7 @@ export default function Revolutionary2025PricingPage() {
                 Choose Your Transformation Plan
               </h2>
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Start with our starter plan and scale up as you grow. All plans;
+                Start with our starter plan and scale up as you grow. All plans
                 include our revolutionary AI and quantum computing services.
               </p>
             </motion.div>
@@ -356,7 +356,7 @@ export default function Revolutionary2025PricingPage() {
                 Individual Service Pricing
               </h2>
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Choose individual services or bundle them for maximum savings.;
+                Choose individual services or bundle them for maximum savings.
                 All services include free trials and comprehensive support.
               </p>
             </motion.div>
@@ -489,7 +489,7 @@ export default function Revolutionary2025PricingPage() {
               </h2>
               <p className='text-xl text-gray-300 mb-8'>
                 Contact our team to discuss your specific needs and get a custom;
-                quote. We offer flexible pricing and payment options to fit your;
+                quote. We offer flexible pricing and payment options to fit your
                 budget.
               </p>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>

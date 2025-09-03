@@ -8,12 +8,12 @@ import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel';
 jest.mock(
   'react-markdown', () => (props: { children: React.ReactNode }) => (
   <div data-testid='mock-markdown'>{props.children}</div>
-));
+))
 // Define a type for Pie props for better type safety
 interface MockPieProps {
   data: Array<{ name: string
    value: number }>
-  children?: React.ReactNode;
+  children?: React.ReactNode
   // Add other props if used by the actual Pie component and needed for the mock}
 // Mock recharts
 jest.mock(
@@ -54,7 +54,7 @@ const mockSections = [
   How tokens are distributed.'}];
 const mockDistributionData = [
   { name: 'Team, value: 20 },
-  { name:;
+  { name:
   'Marketing', value: 30 }]
 describe(
   'WhitepaperPreviewPanel', () => {
@@ -65,7 +65,7 @@ describe(
         sections={[]}
         distributionChartData={[]}
         tokenName='MyToken';
-        tokenSupply='1000000'/>);
+        tokenSupply='1000000'/>)
     expect(screen.getByText(/MyToken - Whitepaper Draft/i)).toBeInTheDocument()
     expect(screen.getByText(/Total Supply: 1000000/i)).toBeInTheDocument()})
   test(
@@ -80,7 +80,7 @@ describe(
       expect(screen.getByTestId(
   'mock-markdown')).toHaveTextContent(
         `## ${section.title}`);
-      // Check if content is rendered;
+      // Check if content is rendered
       expect(screen.getByTestId(
   'mock-markdown')).toHaveTextContent(
         section.content)})
@@ -121,7 +121,7 @@ describe(
   'mock-cell').length).toBe(
       mockDistributionData.length);
     expect(screen.getByTestId(
-  'mock-tooltip')).toBeInTheDocument();
+  'mock-tooltip')).toBeInTheDocument()
     expect(screen.getByTestId(
   'mock-legend')).toBeInTheDocument()
     expect(screen.getByText(
@@ -134,7 +134,7 @@ describe(
         distributionChartData={[]} // Empty data/>);
     expect(
       screen.queryByTestId(
-  'mock-responsive-container')).not.toBeInTheDocument();
+  'mock-responsive-container')).not.toBeInTheDocument()
     expect(screen.queryByText(
   'Distribution Chart')).not.toBeInTheDocument()})
   test(

@@ -73,7 +73,7 @@ export default function Update202508150406() {
                 <div className='bg-gradient-to-r from-fuchsia-500/10 to-cyan-500/10 p-6 rounded-xl border border-fuchsia-500/20'>
                   <h3 className='text-fuchsia-400 font-semibold mb-3'>Phase 2: Advanced AI Orchestration</h3>
                   <p className='text-white/80 mb-4'>
-                    Preparing to launch enhanced AI coordination systems that will enable cross-platform;
+                    Preparing to launch enhanced AI coordination systems that will enable cross-platform
                     automation and intelligent decision-making across all Zion Tech Group services.
                   </p>
                   <div className='text-sm text-white/60'>
@@ -148,7 +148,7 @@ export default function Update202508150406() {
                 <div className='bg-gradient-to-r from-fuchsia-500/10 to-cyan-500/10 p-6 rounded-xl border border-fuchsia-500/20'>
                   <h3 className='text-fuchsia-400 font-semibold mb-3'>Phase 2: Advanced AI Orchestration</h3>
                   <p className='text-white/80 mb-4'>
-                    Preparing to launch enhanced AI coordination systems that will enable cross-platform;
+                    Preparing to launch enhanced AI coordination systems that will enable cross-platform
                     automation and intelligent decision-making across all Zion Tech Group services.
                   </p>
                   <div className='text-sm text-white/60'>

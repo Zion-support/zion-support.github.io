@@ -11,7 +11,7 @@ interface Props {
 interface State {
   hasError: boolean;
   error: Error | null;
-  errorInfo: ErrorInfo | null;
+  errorInfo: ErrorInfo | null
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -68,7 +68,7 @@ class ErrorBoundary extends Component<Props, State> {
       // Custom fallback UI
       if (this.props.fallback) {
 
-        return this.props.fallback;
+        return this.props.fallback
       }
 
       // Default error UI
@@ -183,4 +183,4 @@ export const useErrorHandler = () => {
   return { handleError };
 };
 '"
-export default ErrorBoundary;'"'"
+export default ErrorBoundary'"'"

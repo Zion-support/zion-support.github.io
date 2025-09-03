@@ -1,14 +1,7 @@
-import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-// Layout Components;
-import { EnhancedHeader } from './components/EnhancedHeader';
-import { EnhancedFooter } from './components/EnhancedFooter';
-import { Sidebar } from './components/Sidebar';
-
-// Loading component
+import React, { Suspense, lazy } from 'reactimport { BrowserRouter as Router, Routes, Route } from react-router-dom// Layout Components;'
+import { EnhancedHeader } from ./components/EnhancedHeaderimport { EnhancedFooter } from ./components/EnhancedFooterimport { Sidebar } from ./components/Sidebar// Loading component
 const LoadingSpinner = () => (
-  <div className='flex items-center justify-center min-h-screen'>
+  <div className=flex items-center justify-center min-h-screen'>'
     <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600'></div>
   </div>
 )
@@ -41,7 +34,6 @@ const Training = createLazyComponent(() => import('./pages/Training'));
 const Webinars = createLazyComponent(() => import('./pages/Webinars'));
 const Research = createLazyComponent(() => import('./pages/Research'));
 const Sitemap = createLazyComponent(() => import('./pages/Sitemap'));
-
 // Additional required components
 const FAQ = createLazyComponent(() => import('./pages/FAQ'));
 const Privacy = createLazyComponent(() => import('./pages/Privacy'));
@@ -52,26 +44,21 @@ const Accessibility = createLazyComponent(() => import('./pages/Accessibility'))
 const SystemStatus = createLazyComponent(() => import('./pages/SystemStatus'));
 const Search = createLazyComponent(() => import('./pages/Search'));
 const Categories = createLazyComponent(() => import('./pages/Categories'));
-
 // New Autonomous AI Services 2025
 const AIAutonomousContentMarketingPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-Content-Marketing-Platform'));
 const AIAutonomousCustomerSuccessPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-Customer-Success-Platform'));
 const AIAutonomousDevOpsPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-DevOps-Platform'));
 const AIAutonomousSalesPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-Sales-Platform'));
 const AIAutonomousHRPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-HR-Platform'));
-
 // 2028 Services Showcase
 const InnovativeServicesShowcase2028 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2028'));
-
 // 2025 Innovative Services
 const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025'));
 const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
-
 // Sitemap-aligned pages
 const AiSolutions = lazy(() => import('./pages/AiSolutions'));
 const SolutionsEnterprise = lazy(() => import('./pages/solutions/Enterprise'));
 const SolutionsHealthcare = lazy(() => import('./pages/solutions/Healthcare'));
-
 // AI Service pages
 const AILegalDocumentAutomation = createLazyComponent(() => import('./pages/services/AILegalDocumentAutomation'));
 const AIContentGenerator = createLazyComponent(() => import('./pages/services/ai-content-generator'));
@@ -88,7 +75,6 @@ const AIProjectManagement = createLazyComponent(() => import('./pages/services/a
 const AISupplyChainOptimization = createLazyComponent(() => import('./pages/services/ai-supply-chain-optimization'));
 const AIWorkflowAutomation = createLazyComponent(() => import('./pages/services/ai-workflow-automation'));
 const AIWorkflowOrchestrator = createLazyComponent(() => import('./pages/services/ai-workflow-orchestrator'));
-
 // New AI Services
 const AIDataGovernancePlatform = createLazyComponent(() => import('./pages/services/AI-Data-Governance-Platform'));
 const AIFinancialRiskManagement = createLazyComponent(() => import('./pages/services/AI-Financial-Risk-Management'));
@@ -97,7 +83,6 @@ const AIESGCompliancePlatform = createLazyComponent(() => import('./pages/servic
 const AIDigitalTwinPlatform = createLazyComponent(() => import('./pages/services/AI-Digital-Twin-Platform'));
 const AIEdgeComputingPlatform = createLazyComponent(() => import('./pages/services/AI-Edge-Computing-Platform'));
 const AIQuantumMachineLearning = createLazyComponent(() => import('./pages/services/AI-Quantum-Machine-Learning'));
-
 // Quantum Computing Services
 const QuantumComputing = createLazyComponent(() => import('./pages/services/QuantumComputing'));
 const QuantumAIPlatform = createLazyComponent(() => import('./pages/services/QuantumAIPlatform'));
@@ -107,7 +92,6 @@ const QuantumComputingElite = createLazyComponent(() => import('./pages/services
 const QuantumComputingSolutions = createLazyComponent(() => import('./pages/services/QuantumComputingSolutions'));
 const QuantumMachineLearning = createLazyComponent(() => import('./pages/services/QuantumMachineLearning'));
 const QuantumTechnology = createLazyComponent(() => import('./pages/services/QuantumTechnology'));
-
 // Other Services
 const BlockchainEnterpriseSolutions = createLazyComponent(() => import('./pages/services/blockchain-enterprise-solutions'));
 const CloudDevOps = createLazyComponent(() => import('./pages/services/cloud-devops'));
@@ -297,9 +281,8 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorB
                     <Route path='/zion-cutting-edge-services-2029' element={<ZionCuttingEdgeServices2029 />} />
                     <Route path='/cutting-edge-services-2029' element={<ZionCuttingEdgeServices2029 />} />{/* 404 Page */}
                     <Route
-                      path='*';
-                      element={
-                        <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
+                      path='*element={'
+                        <div className=min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'
                           <div className='text-center text-white'>
                             <h1 className='text-6xl font-bold mb-4'>404</h1>
                             <h2 className='text-2xl font-semibold mb-4'>Page Not Found</h2>
@@ -333,20 +316,14 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorB
             {/* Chat Assistant */}
             <ChatAssistant
               enabled={true}
-              position='bottom-right';
-              theme='auto';
-              language='en'/>
+              position='bottom-righttheme=autolanguage=en'/>
           </div>
         </Router>
       </ErrorBoundary>
     </HelmetProvider>
-  )}
-;
+  )};
 export default App;
-import React, { Suspense, lazy, useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { ErrorBoundary } from 'react-error-boundary';
-('')
+import React, { Suspense, lazy, useState } from 'reactimport { Routes, Route } from react-router-domimport { ErrorBoundary } from react-error-boundary(')
       <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>
         <PerformanceOptimizer>
           <SEO />

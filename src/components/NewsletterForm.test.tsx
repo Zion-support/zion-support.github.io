@@ -1,8 +1,5 @@
-import { render, screen } from '@testing-library/react';
-import NewsletterForm from './NewsletterForm';
-
-describe('NewsletterForm', () => {
-  it('renders without crashing', () => {
+import { render, screen } from '@testing-library/reactimport NewsletterForm from ./NewsletterFormdescribe(NewsletterForm, () => {'
+  it(renders without crashing', () => {'
     render(<NewsletterForm />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
   it('displays expected content', () => {

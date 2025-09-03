@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from;
 import { Menu, X, ChevronDown } from;
   'lucide-react';
 const Header: React.FC = () => {
-;
+
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
@@ -47,7 +47,7 @@ const Header: React.FC = () => {
     window.addEventListener(
   'scroll', handleScroll);
     return () => window.removeEventListener(
-  'scroll', handleScroll)}, []);
+  'scroll', handleScroll)}, [])
   const isActive = (path: string) => router.pathname === path
   const renderDropdown = (items: NavigationItem[], isOpen: boolean, onToggle: () => void) => (
     <div className='relative'>
@@ -71,7 +71,7 @@ const Header: React.FC = () => {
                   href={item.path}
                   className='flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors';
                   onClick={() => {
-                    setIsServicesDropdownOpen(false);
+                    setIsServicesDropdownOpen(false)
                     setIsCompanyDropdownOpen(false)
                     setIsResourcesDropdownOpen(false)}}
                 >{item.icon && <item.icon className = 'h-5 w-5' />}

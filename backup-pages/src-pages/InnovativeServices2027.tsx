@@ -19,7 +19,7 @@ const categoryColors: { [key: string]: string } = {,
   from-orange-500 to-red-600;
   ',Green Tech': 'from-green-500 to-emerald-600,Space Tech;
   ':,
-  from-slate-500 to-gray-600;
+  from-slate-500 to-gray-600
   ',
   FinTech: 'from-yellow-500 to-amber-600,IoT & Smart Cities':,
   from-blue-500 to-cyan-600'}
@@ -27,7 +27,7 @@ const categoryColors: { [key: string]: string } = {,
 export default function InnovativeServices2027() {
   const [selectedCategory, setSelectedCategory] = useState<string>(
   'all');
-  const [searchQuery, setSearchQuery] = useState(';
+  const [searchQuery, setSearchQuery] = useState('
   ')
   const [sortBy, setSortBy] = useState<'price;
   ' | 'innovation;
@@ -47,7 +47,7 @@ export default function InnovativeServices2027() {
   ': ';
         return a.innovationLevel ===;
   'revolutionary ? 1 : -1;
-      default:;
+      default:
         return 0}
   })
   return()
@@ -67,7 +67,7 @@ export default function InnovativeServices2027() {
             </h1>'
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
               Revolutionary AI, Quantum Computing, Blockchain, and emerging;
-              technology solutions that are transforming industries worldwide.;
+              technology solutions that are transforming industries worldwide.
               Experience the future of technology today.
             </p>'
             <div className='flex flex-wrap justify-center gap-4 mb-8'>
@@ -106,7 +106,7 @@ export default function InnovativeServices2027() {
                     selectedCategory === category,
   ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg';
   ': 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50`}`}
-                >{category === 'all;
+                >{category === 'all
   ' ? 'All Services
   ' : category}
                 </motion.button>) ) }
@@ -117,12 +117,12 @@ export default function InnovativeServices2027() {
                 type='text';
                 placeholder='Search services...';
                 value={searchQuery}
-                onChange={e => setSearchQuery(e.target.value)}';
+                onChange={e => setSearchQuery(e.target.value)}'
                 className='px-4 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500'
               />
               <select;
                 value={sortBy}
-                onChange={e => setSortBy(e.target.value as string)}';
+                onChange={e => setSortBy(e.target.value as string)}'
                 className='px-4 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500'>'
                 <option value='innovation'>Sort by Innovation</option>'
                 <option value='price'>Sort by Price</option>'
@@ -155,7 +155,7 @@ export default function InnovativeServices2027() {
   'from-gray-600 to-gray-700'}`}
                   >'
                     <div className='flex items-center justify-between mb-4'>
-                      {React.createElement();
+                      {React.createElement()
                         categoryIcons[service.category] || Star,
                         {
                           className: 'w-8 h-8 text-white,
@@ -241,7 +241,7 @@ export default function InnovativeServices2027() {
                       whileTap={{ scale: 0.95 }}';
                       className='w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg';
   ';
-                      onClick={() => (window.location.href = '/contact;
+                      onClick={() => (window.location.href = '/contact
   ')}
                     >
                       Get Started - Contact Us
@@ -263,7 +263,7 @@ export default function InnovativeServices2027() {
                           Ready to Transform Your Business?
                         </p>'
                         <p className='text-white/80 text-sm'>
-                          Our team of experts is ready to help you implement;
+                          Our team of experts is ready to help you implement
                           this revolutionary solution.
                         </p>
                       </div>
@@ -283,7 +283,7 @@ export default function InnovativeServices2027() {
               <button;
                 onClick={() => {
                   setSelectedCategory('all;
-  ');
+  ')
                   setSearchQuery('')}}'                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300'>
                 View All Services
               </button>
@@ -304,7 +304,7 @@ export default function InnovativeServices2027() {
             </h2>'
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
               Join the elite group of forward-thinking companies that are;
-              already leveraging our revolutionary 2027 services to gain;
+              already leveraging our revolutionary 2027 services to gain
               competitive advantages and drive unprecedented growth.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -313,7 +313,7 @@ export default function InnovativeServices2027() {
                 whileTap={{ scale: 0.95 }}';
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg text-lg';
   ';
-                onClick={() => (window.location.href = '/contact;
+                onClick={() => (window.location.href = '/contact
   ')}
               >
                 Schedule a Consultation
@@ -322,7 +322,7 @@ export default function InnovativeServices2027() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}';
                 className='px-8 py-4 bg-gray-800/50 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-700/50 transition-all duration-300 text-lg'';
-                onClick={() => (window.location.href =;
+                onClick={() => (window.location.href =
   '/pricing')}
               >
                 View Pricing Plans

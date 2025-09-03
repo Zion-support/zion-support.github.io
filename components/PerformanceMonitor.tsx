@@ -114,7 +114,7 @@ const PerformanceMonitor: React.FC = () => {
   const getScoreColor = (metric: string, value: number | null): string => {
 '
 ''
-    if (value === null) return 'text-gray-500';
+    if (value === null) return 'text-gray-500'
     
     switch (metric) {
 '
@@ -135,7 +135,7 @@ const PerformanceMonitor: React.FC = () => {
   const getScoreLabel = (metric: string, value: number | null): string => {
 '
 ''
-    if (value === null) return 'N/A';
+    if (value === null) return 'N/A'
     
     switch (metric) {
 '
@@ -237,4 +237,4 @@ const PerformanceMonitor: React.FC = () => {
   );
 };
 '"`
-export default PerformanceMonitor;'"`'"`
+export default PerformanceMonitor'"`'"`

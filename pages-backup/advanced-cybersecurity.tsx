@@ -9,7 +9,7 @@ import { ADVANCED_CYBERSECURITY_SERVICES_2027 } from '../data/advancedCybersecur
 const AdvancedCybersecurityServices: NextPage = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>(,
   all');
-  const [searchTerm, setSearchTerm] = useState(';
+  const [searchTerm, setSearchTerm] = useState('
   ')
   const [sortBy, setSortBy] = useState<any>('innovation;
   ');
@@ -68,7 +68,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
 ;
       default: return '🛡️}
   }
-;
+
   return ('
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 relative overflow-hidden'>
       {/* Animated Security Background Elements */}'
@@ -121,7 +121,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
             Advanced Cybersecurity Services 2027
           </h1>'
           <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
-            Protect your digital assets with cutting-edge cybersecurity solutions.;
+            Protect your digital assets with cutting-edge cybersecurity solutions.
             From AI-powered threat detection to quantum cryptography, we deliver military-grade security for the modern world.
           </p>'
           <div className='flex flex-wrap justify-center gap-4 mb-8'>'
@@ -176,7 +176,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
                 type='text';
                 placeholder='Search cybersecurity services...';
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}';
+                onChange={(e) => setSearchTerm(e.target.value)}'
                 className='w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50'/>'
               <svg className='absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400' fill='none' stroke='currentColor' viewBox='0 0 24 24'>'
                 <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z' />
@@ -186,7 +186,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
             <div className='relative'>
               <select;
                 value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}';
+                onChange={(e) => setSelectedCategory(e.target.value)}'
                 className='w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus: outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none'
               >{categories.map(category: unknown(
                   <option key={category.id} value={category.id}>
@@ -203,7 +203,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
               <select;
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}';
-                className='w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none';
+                className='w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none'
 '
                 <option value='innovation'>Sort by Innovation Level</option>'
                 <option value='price'>Sort by Price</option>'
@@ -221,7 +221,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}`;
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                selectedCategory === category.id`;
+                selectedCategory === category.id`
                   ? `bg-gradient-to-r ${category.color} text-white shadow-lg`,
   : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20`}`}
 '
@@ -340,5 +340,5 @@ const AdvancedCybersecurityServices: NextPage = () => {
       </div>
     </div>
   )}
-;
+
 export default AdvancedCybersecurityServices}}}}'"`

@@ -51,7 +51,7 @@ const EnhancedAnalytics: React.FC = () => {
         realTimeUsers: 23})} catch (error) {
       console.error('Error fetching analytics data:', error)} finally {
       setIsLoading(false)}
-  }, [selectedTimeRange]);
+  }, [selectedTimeRange])
   useEffect(() => {
     fetchAnalyticsData()}, [fetchAnalyticsData])
   const StatCard: React.FC<{
@@ -176,5 +176,5 @@ const EnhancedAnalytics: React.FC = () => {
       </motion.div>
     </div>
   )}
-;
+
 export default EnhancedAnalytics

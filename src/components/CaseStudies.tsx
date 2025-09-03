@@ -1,10 +1,6 @@
-import { motion     } from 'framer-motion';
-import { CheckCircle, TrendingUp, Users, DollarSign     } from 'lucide-react';
-interface CaseStudy {
-  id: string title: string description: string industry: string results: { metric: string value: string icon: React.ReactNode}[];
-  technologies: string[]
+import { motion     } from 'framer-motionimport { CheckCircle, TrendingUp, Users, DollarSign     } from lucide-reactinterface CaseStudy {id: string title: string description: string industry: string results: { metric: string value: string icon: React.ReactNode}[];technologies: string[]'
   duration: string}
-const caseStudies: CaseStudy[] = [{ id: '1',
+const caseStudies: CaseStudy[] = [{ id: 1,
     title: 'AI-Powered Customer Service Automation',
     description: 'Implemented multi-agent AI system for enterprise customer service, reducing response time and improving satisfaction.',
     industry: 'E-commerce',
@@ -41,8 +37,7 @@ export default function CaseStudies() {
         {/* Header */}
         <div className='mx-auto max-w-2xl lg:text-center mb-16'>
           <motion.h2
-            className='text-base font-semibold leading-7 text-blue-600';
-            initial={{ opacity: 0, y: 20 }}
+            className='text-base font-semibold leading-7 text-blue-600initial={{ opacity: 0, y: 20 }}'
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true  }}
             transition={{ duration: 0.6  }}
@@ -50,8 +45,7 @@ export default function CaseStudies() {
             Success Stories
           </motion.h2>
           <motion.p
-            className='mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl';
-            initial={{ opacity: 0, y: 20 }}
+            className=mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xlinitial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true  }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -59,8 +53,7 @@ export default function CaseStudies() {
             Real results from real clients
           </motion.p>
           <motion.p
-            className='mt-6 text-lg leading-8 text-gray-600';
-            initial={{ opacity: 0, y: 20 }}
+            className=mt-6 text-lg leading-8 text-gray-600initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true  }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -68,17 +61,16 @@ export default function CaseStudies() {
             See how our AI, cloud, and cybersecurity solutions have transformed businesses across industries.</motion.p>
         </div>
         {/* Case Studies Grid */}
-        <div className='grid gap-8 lg:grid-cols-1'>
+        <div className=grid gap-8 lg:grid-cols-1'>'
           {caseStudies.map((study, index) => (
             <motion.div
               key={study.id}
-              className='bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300';
-              initial={{ opacity: 0, y: 30 }}
+              className='bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300initial={{ opacity: 0, y: 30 }}'
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true  }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <div className='p-8'>
+              <div className=p-8'>'
                 {/* Header */}
                 <div className='flex items-start justify-between mb-6'>
                   <div>
@@ -132,18 +124,16 @@ export default function CaseStudies() {
         </div>
         {/* CTA */}
         <motion.div
-          className='text-center mt-12';
-          initial={{ opacity: 0, y: 20 }}
+          className='text-center mt-12initial={{ opacity: 0, y: 20 }}'
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true  }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <p className='text-lg text-gray-600 mb-6'>
+          <p className=text-lg text-gray-600 mb-6'>'
             Ready to see similar results for your business?
           </p>
           <a
-            href='/contact';
-            className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl'>
+            href='/contactclassName=inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl'>
             Start Your Project
           </a>
         </motion.div>

@@ -64,7 +64,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       'DevOps',
       'Data Analytics';
     ]}
-;
+
   const finalStructuredData = structuredData || defaultStructuredData
   return (
     <Head>

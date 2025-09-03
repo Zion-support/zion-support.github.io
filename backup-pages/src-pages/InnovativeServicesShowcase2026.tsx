@@ -38,28 +38,28 @@
     return filtered}, [searchQuery, selectedCategory, sortBy]) ;
     switch (category) {
       case,
-  AI & Automation;
+  AI & Automation
   ': 
         return <Cpu className='w-5 h-5'  />
-      case 'Quantum Computing;
+      case 'Quantum Computing
   ':'
         return <Zap className='w-5 h-5'  />
-      case 'Blockchain;
+      case 'Blockchain
   ':'
         return <Database className='w-5 h-5'  />
-      case 'Cybersecurity;
+      case 'Cybersecurity
   ':'
         return <Shield className='w-5 h-5'  />
-      case 'IoT;
+      case 'IoT
   ':'
         return <Globe className='w-5 h-5'  />
-      case 'AI & Content;
+      case 'AI & Content
   ':'
         return <Cpu className='w-5 h-5'  />
-      case 'DevOps;
+      case 'DevOps
   ':'
         return <Database className='w-5 h-5'  />
-      case 'Finance;
+      case 'Finance
   ':'
         return <TrendingUp className='w-5 h-5'  />
       case 'Sustainability:'
@@ -73,7 +73,7 @@
 ,
   'Advanced;
   ': 'bg-gradient-to-r from-blue-600 to-cyan-600,;
-  Cutting-Edge;
+  Cutting-Edge
   ': 'bg-gradient-to-r from-green-600 to-emerald-600}
     return()
       <span className = {`${colors[level as keyof typeof colors] || colors.Advanced} text-white text-xs px-2 py-1 rounded-full font-semibold`}>
@@ -111,7 +111,7 @@
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Discover cutting - edge micro SAAS solutions that transform industries and drive innovation.;
+            Discover cutting - edge micro SAAS solutions that transform industries and drive innovation.
             From AI - powered platforms to quantum - safe cybersecurity, we deliver the future of technology.
           </motion.p>
           {/* Contact Information */}
@@ -151,7 +151,7 @@
                 <input';
                   type='text''                  placeholder='Search services...';
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}';
+                  onChange={(e) => setSearchQuery(e.target.value)}'
                   className='w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                 />
               </div>
@@ -159,7 +159,7 @@
               <div className='flex items-center gap-2'>'
                 <Filter className='w-4 h-4 text-slate-400'  />                <select;
                   value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}';
+                  onChange={(e) => setSelectedCategory(e.target.value)}'
                   className='w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                 >{categories.map (category  => (<option key={category.id} value={category.id}>{category.name}</option>) ) }
                 </select>
@@ -170,7 +170,7 @@
                 <select;
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}';
-                  className='bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none';
+                  className='bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none'
 '
                   <option value='innovation'>Innovation Level</option>'
                   <option value='price'>Price</option>'
@@ -311,7 +311,7 @@
               Ready to Transform Your Business?
             </h2>'
             <p className='text-xl text-gray-300 mb-8'>
-              Let's discuss how our innovative solutions can drive your success.;
+              Let's discuss how our innovative solutions can drive your success.
               Get in touch with our experts today.
             </p>'
             <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
@@ -344,7 +344,7 @@
             <h2 className='text-4xl font-bold mb-6'>Ready to Transform Your Business?</h2>'
             <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
               Our innovative services are designed to give you a competitive edge in the rapidly evolving technology landscape.;
-  ';
+  '
               Let's discuss how we can help you achieve your goals.
             </p>
 '

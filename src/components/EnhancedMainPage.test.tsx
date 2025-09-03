@@ -1,8 +1,5 @@
-import { render, screen } from '@testing-library/react';
-import EnhancedMainPage from './EnhancedMainPage';
-
-describe('EnhancedMainPage', () => {
-  it('renders without crashing', () => {
+import { render, screen } from '@testing-library/reactimport EnhancedMainPage from ./EnhancedMainPagedescribe(EnhancedMainPage, () => {'
+  it(renders without crashing', () => {'
     render(<EnhancedMainPage />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
   it('displays expected content', () => {

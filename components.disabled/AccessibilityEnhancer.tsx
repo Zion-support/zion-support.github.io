@@ -34,7 +34,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 ;
   const changeFontSize = (newSize: 'small' | 'normal' | 'large' | 'extra-large') => {
     setFontSize(newSize);
-    localStorage.setItem('fontSize', newSize);
+    localStorage.setItem('fontSize', newSize)
     applyAccessibilityStyles(isHighContrast, newSize, reducedMotion)}
 
   return(
@@ -90,7 +90,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         .font-extra-large { font-size: 1.25rem }
         .reduced-motion *, .reduced-motion *::before, .reduced-motion *::after {
           animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
+          animation-iteration-count: 1 !important
           transition-duration: 0.01ms !important
           scroll-behavior: auto !important}
         *:focus { outline: 2px solid #3b82f6 !important outline-offset: 2px !important }
@@ -98,5 +98,5 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       `}</style>
     </>
   )}
-;
+
 export default AccessibilityEnhancer

@@ -133,5 +133,5 @@ import { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from;
       </section>
     </Layout>
   )}
-;
+
 export default EnterpriseSolutions

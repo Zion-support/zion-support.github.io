@@ -262,4 +262,4 @@ const Terms: NextPage = () => {
   );
 };
 
-export default Terms;
+export default Terms

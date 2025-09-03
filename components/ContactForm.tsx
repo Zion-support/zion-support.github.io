@@ -21,7 +21,7 @@ const ContactForm: React.FC = () => {
     service: '',
     message: ''});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false)
   const [errors, setErrors] = useState<Partial<FormData>>({});
 
   const services = [
@@ -33,7 +33,7 @@ const ContactForm: React.FC = () => {
     'Data Analytics',
     'Digital Transformation',
     'Other',
-  ];
+  ]
 
   const validateForm = (): boolean => {
 
@@ -90,7 +90,7 @@ const ContactForm: React.FC = () => {
         service: '',
         message: ''});
     }, 3000);
-  };
+  }
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -106,7 +106,7 @@ const ContactForm: React.FC = () => {
 
       setErrors(prev => ({ ...prev, [name]: undefined }));
     }
-  };
+  }
 
   if (isSubmitted) {
 
@@ -124,7 +124,7 @@ const ContactForm: React.FC = () => {
           Thank you for reaching out. We'll get back to you within 24 hours.
         </p>
       </motion.div>
-    );
+    )
   }
 
   return (
@@ -317,4 +317,4 @@ const ContactForm: React.FC = () => {
   );
 };
 
-export default ContactForm;
+export default ContactForm

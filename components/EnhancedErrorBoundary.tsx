@@ -7,7 +7,7 @@ interface Props {
    onError?: (error: Error, errorInfo: ErrorInfo) => void;
    showDetails?: boolean}
 interface State {
-  hasError: boolean;
+  hasError: boolean
    error: Error | null
    errorInfo: ErrorInfo | null}
 class EnhancedErrorBoundary extends Component<Props, State> {
@@ -67,7 +67,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 ;
   override render() {
     if (this.state.hasError) {
-      // Custom fallback UI;
+      // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback}
       // Default error UI
@@ -93,7 +93,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   Something went wrong
                 </h3>
                 <p className='text-sm text-gray-500'>
-                  We&apos;re sorry, but something unexpected happened.'
+                  We&aposre sorry, but something unexpected happened.'
                 </p>
               </div>
             </div>

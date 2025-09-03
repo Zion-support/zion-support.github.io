@@ -15,7 +15,7 @@ const ErrorPage: React.FC<{ statusCode: number }> = ({ statusCode }) => (
       </p>
     </div>
   </div>
-);
+)
 // Simple loading component
 const ProfileLoadingState: React.FC = () => (
   <div className='min-h-screen bg-zion-blue py-8 text-white flex items-center justify-center'>
@@ -24,10 +24,10 @@ const ProfileLoadingState: React.FC = () => (
       <p>Loading profile...</p>
     </div>
   </div>
-);
+)
 const TalentProfilePage: React.FC = () => {
   const { id } = useParams()
-  const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null);
+  const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
@@ -53,7 +53,7 @@ const TalentProfilePage: React.FC = () => {
           setProfile(mockProfile);
           setLoading(false)}, 1000)} catch (err) {
         setError(
-  'Talent not found');
+  'Talent not found')
         setLoading(false)}
     }
     if (id) {

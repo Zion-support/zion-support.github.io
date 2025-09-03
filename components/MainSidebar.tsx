@@ -69,12 +69,12 @@ import { Home,
 
 interface SidebarProps extends React.PropsWithChildren<{}> {
 
-  isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
+  isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean
   onClose: ()               => void}
 
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
-  const router = useRouter();
+  const router = useRouter()
   const [expandedSections, setExpandedSections] = useState<any>([]);
 
   const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
@@ -150,7 +150,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group/', icon: Linkedin, color: 'text-blue-500' },
     { name: 'Twitter', href: 'https://twitter.com/ZionTechGroup', icon: Twitter, color: 'text-blue-400' },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code, color: 'text-gray-400' },
-  ];
+  ]
 
   const renderNavSection = (title: anyanyanyanyanyanyanyanyanyanyanyanyanystring, items[], sectionKey: string)               => (
     <div key={sectionKey} className="mb-6">
@@ -192,7 +192,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         </div>
       )}
     </div>
-  );
+  )
 
   return (
     <>
@@ -326,7 +326,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
           {/* Copyright */}
           <div className="text-xs text-zion-slate-light text-center">
-            © {new Date().getFullYear()} Zion Tech Group;
+            © {new Date().getFullYear()} Zion Tech Group
           </div>
         </div>
       </div>
@@ -334,4 +334,4 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   );
 };
 
-export default MainSidebar;
+export default MainSidebar

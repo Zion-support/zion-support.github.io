@@ -1,7 +1,4 @@
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import {
-  Phone,
+import { Link } from 'react-router-domimport { motion } from framer-motionimport {Phone,'
   Mail,
   MapPin,
   Linkedin,
@@ -35,12 +32,11 @@ import {
   GraduationCap,
   Atom,
   PenTool,
-  DollarSign} from 'lucide-react';
-export function EnhancedFooter() {
+  DollarSign} from lucide-reactexport function EnhancedFooter() {
   const currentYear = new Date().getFullYear();
   const footerSections = [
     {
-      title: 'Featured Services',
+      title: Featured Services,'
       links: [{ name: 'AI Content Generator', href: '/services/ai-content-generator', icon: PenTool, featured: true },
         { name: 'Smart Inventory Management', href: '/services/smart-inventory-management', icon: Database, featured: true },
         { name: 'Cloud Migration Services', href: '/services/cloud-migration-services', icon: Cloud, featured: true },
@@ -146,12 +142,10 @@ export function EnhancedFooter() {
                   <a
                     key={social.name}
                     href={social.href}
-                    target='_blank';
-                    rel='noopener noreferrer';
-                    className={`text-gray-400 ${social.color} transition-colors hover:scale-110 transform`}
+                    target='_blankrel=noopener noreferrerclassName={`text-gray-400 ${social.color} transition-colors hover:scale-110 transform`}'
                     aria-label={social.name}
                   >
-                    <social.icon className='w-5 h-5' />
+                    <social.icon className=w-5 h-5' />'
                   </a>
                 ))}
               </div>
@@ -207,9 +201,7 @@ export function EnhancedFooter() {
             </p>
             <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>
               <input
-                type='email';
-                placeholder='Enter your email';
-                className='flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent'/>
+                type='emailplaceholder=Enter your emailclassName=flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent'/>
               <button className='px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105'>
                 Subscribe
               </button>
@@ -254,8 +246,7 @@ export function EnhancedFooter() {
         transition={{ delay: 0.5 }}
         className='fixed bottom-6 right-6 z-50'>
         <Link
-          to='/contact';
-          className='flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group transform hover:scale-105'>
+          to='/contactclassName=flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group transform hover:scale-105'>
           <MessageCircle className='w-5 h-5 group-hover:scale-110 transition-transform' />
           <span className='hidden sm:block font-medium'>Contact Us</span>
         </Link>

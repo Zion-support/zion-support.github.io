@@ -131,7 +131,7 @@ const Footer: React.FC = () => {
         { label: 'Support', path: '/support' },
         { label: 'Request Quote', path: '/request-quote' }
       ]}
-  ];
+  ]
   const contactInfo = [
     { icon: Mail, label: 'Email', value: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
     { icon: Phone, label: 'Phone', value: '+1 302 464 0950', href: 'tel:+13024640950' },
@@ -454,5 +454,5 @@ export default Footer;
 export default Footer;
 export default Footer;
 export default Footer;
-export default Footer;
+export default Footer
 export default Footer

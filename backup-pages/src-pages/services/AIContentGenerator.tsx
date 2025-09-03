@@ -109,12 +109,12 @@ export default function AIContentGenerator(...args[]):  {
       ],';
       cta: 'Contact Sales,
       popular: false}
-  ];
+  ]
   return()
     <>
 <=;
       <SEO '>        title = 'AI Content Generator - Create Engaging Content with AI';
-        description='Generate high-quality, SEO-optimized content 10x faster with AI. Create articles, images, videos, and more for blogs, social media, and marketing campaigns.';
+        description='Generate high-quality, SEO-optimized content 10x faster with AI. Create articles, images, videos, and more for blogs, social media, and marketing campaigns.'
         canonical='/services/ai-content-generator'
        />
 '      <div className='min-h-screen bg-futuristic'>
@@ -136,7 +136,7 @@ export default function AIContentGenerator(...args[]):  {
                 AI Content Generator
               </h1>'
               <p className='text-xl md:text-2xl text-gray-300 mb-8'>
-                Create engaging, SEO-optimized content 10x faster with artificial intelligence.;
+                Create engaging, SEO-optimized content 10x faster with artificial intelligence.
                 Generate articles, images, videos, and more for  platform.
               </p>'
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -167,7 +167,7 @@ export default function AIContentGenerator(...args[]):  {
                 AI-Powered Content Creation
               </h2>'
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Leverage cutting-edge artificial intelligence to create high-quality content;
+                Leverage cutting-edge artificial intelligence to create high-quality content
                 that engages your audience and drives results.
               </p>
             </div>
@@ -241,7 +241,7 @@ export default function AIContentGenerator(...args[]):  {
                 Perfect for Every Team
               </h2>'
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Whether you;
+                Whether you
   're a solo creator or enterprise team, our platform scales with you
               </p>
             </div>
@@ -287,7 +287,7 @@ export default function AIContentGenerator(...args[]):  {
                 Proven Results
               </h2>'
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Join thousands of content creators and marketers who have transformed;
+                Join thousands of content creators and marketers who have transformed
                 their content strategy with AI-powered generation.
               </p>
             </div>
@@ -330,7 +330,7 @@ export default function AIContentGenerator(...args[]):  {
                 Simple, Transparent Pricing
               </h2>'
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Choose the plan that fits your content creation needs.;
+                Choose the plan that fits your content creation needs.
                 All plans include a 14-day free trial.
               </p>
             </div>
@@ -405,7 +405,7 @@ export default function AIContentGenerator(...args[]):  {
                 Ready to Revolutionize Your Content Creation?
               </h2>'
               <p className='text-xl text-gray-300 mb-8'>
-                Join thousands of creators using AI to produce engaging content;
+                Join thousands of creators using AI to produce engaging content
                 faster, smarter, and more effectively than ever before.
               </p>'
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>'

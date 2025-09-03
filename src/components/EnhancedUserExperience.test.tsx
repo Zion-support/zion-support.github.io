@@ -1,8 +1,5 @@
-import { render, screen } from '@testing-library/react';
-import EnhancedUserExperience from './EnhancedUserExperience';
-
-describe('EnhancedUserExperience', () => {
-  it('renders without crashing', () => {
+import { render, screen } from '@testing-library/reactimport EnhancedUserExperience from ./EnhancedUserExperiencedescribe(EnhancedUserExperience, () => {'
+  it(renders without crashing', () => {'
     render(<EnhancedUserExperience />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
   it('displays expected content', () => {

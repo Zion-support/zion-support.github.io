@@ -14,13 +14,13 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSig
   '        'Rapid prototyping;
   ', 'User feedback integration;
   ',';
-  'Scalable architecture''      ];
+  'Scalable architecture''      ]
   '    }, {
       title: 'AI-Powered Analytics,'      description:
   'Data-driven insights to make informed business decisions', icon: <Target className='w-8 h-8' />,'      features: [',
   Real-time analytics dashboard',
   'Predictive modeling',
-  '        'Customer behavior analysis;
+  '        'Customer behavior analysis
   ', 'Performance optimization'
   '      ]'    }, {
       title: 'Cloud Infrastructure,
@@ -30,14 +30,14 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSig
   ', 'Cost optimization;
   ',';
   'High availability',
-  'Global deployment''      ];
+  'Global deployment''      ]
   '    }, {
       title: 'Digital Marketing Automation,'      description:
   'Automated marketing tools to accelerate growth', icon: <Zap className='w-8 h-8' />,'      features: [';
   'Lead generation automation',
   'Email marketing campaigns',
   '        'Social media management;
-  ', 'Conversion optimization';
+  ', 'Conversion optimization'
   '      ]'    }
   ]
   const benefits = [
@@ -91,7 +91,7 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSig
   'Dedicated team',
   '24/7 support',
   '        'Custom integrations;
-  ', 'Ongoing optimization';
+  ', 'Ongoing optimization'
   '      ], popular: false    }
   ]
   return(
@@ -127,7 +127,7 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSig
         </div>
       </section>
       {/* Packages Section */}
-      <section className='py-20 bg-gray-50' id='packages'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Startup Packages</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              Choose the package that fits your startup&apos;s current stage and needs.'
+      <section className='py-20 bg-gray-50' id='packages'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Startup Packages</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              Choose the package that fits your startup&aposs current stage and needs.'
   '            </p>'          </div>
           <div className='grid md: grid-cols-3 gap-8 max-w-6xl mx-auto'>'            {packages.map((pkg, index) => ('              <div key={index} className={`bg-white p-8 rounded-lg shadow-lg relative ${pkg.popular ?,
   ring-2 ring-blue-500': '}`}>,
@@ -148,7 +148,7 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSig
         </div>
       </section>
       {/* Success Stories */}
-      <section className='py-20'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Startup Success Stories</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              See how we&apos;ve helped startups achieve their goals and scale successfully.'
+      <section className='py-20'>'        <div className='container mx-auto px-4'>'          <div className='text-center mb-16'>'            <h2 className='text-4xl font-bold text-gray-900 mb-4'>Startup Success Stories</h2>'            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>'              See how we&aposve helped startups achieve their goals and scale successfully.'
   '            </p>'          </div>
           <div className='grid md: grid-cols-3 gap-8'>'            <div className='bg-white p-6 rounded-lg shadow-lg'>'              <div className='flex items-center mb-4'>'                {[...Array(5)].map((_, i) => ('                  <Star key={i} className='w-5 h-5 text-yellow-400 fill-current' />'                ))}'              </div>
               <p className='text-gray-600 mb-4'>'                'Zion Tech Group helped us launch our MVP in just 6 weeks. Their expertise and ''                startup-friendly approach made all the difference.'''              </p>'              <div className='font-semibold text-gray-900'>Sarah Chen</div>'              <div className='text-sm text-gray-500'>CEO, TechStart Inc.</div>'            </div>'
@@ -166,5 +166,5 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSig
       </section>
     </MainLayout>
   )}
-;
+
 export default Startups

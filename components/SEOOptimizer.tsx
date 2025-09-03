@@ -39,7 +39,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     'numberOfEmployees': '50+', 'industry': 'Technology Services'
   };
 
-  const finalStructuredData = structuredData || defaultStructuredData;
+  const finalStructuredData = structuredData || defaultStructuredData
   return (
     <Head>
       {/* Basic Meta Tags */}
@@ -52,7 +52,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name='generator' content='Next.js' />
       {/* Canonical URL */}
       {canonicalUrl && <link rel='canonical' href={canonicalUrl} />}
-;
+
       {/* Open Graph */}
       <meta property='og:title' content={fullTitle} />
       <meta property='og:description' content={fullDescription} />
@@ -102,4 +102,4 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   );
 };
 
-export default SEOOptimizer;
+export default SEOOptimizer

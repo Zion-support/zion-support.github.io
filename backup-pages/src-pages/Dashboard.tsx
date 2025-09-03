@@ -98,7 +98,7 @@
       default:';
         return 'bg-gray-100 text-gray-800'}
   }
-;
+
   return ('
     <div className = 'min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50'>
       {/* Header */}'
@@ -238,7 +238,7 @@ export default function Dashboard() {
   /help', color: 'from-purple-500 to-pink-500 },{ name: 'Billing & Plans, icon: DollarSign, href:,
   /pricing', color: 'from-yellow-500 to-orange-500 },{ name: 'API Documentation, icon: Code, href:,
   /api-docs', color: 'from-gray-500 to-slate-500 }
-  ];
+  ]
   return ('
     <div className='min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50'>
       {/* Header */}'
@@ -280,7 +280,7 @@ export default function Dashboard() {
               animate = {
   { opacity: 1,
   y: 0}}
-              transition={{ delay: index * 0.1 }}';
+              transition={{ delay: index * 0.1 }}'
               className='bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow'>'
               <div className='flex items-center justify-between mb-4'>'
                 <div className='p-2 bg-zion-purple/20 rounded-lg'>

@@ -1,16 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
+import React, { useState, useEffect } from 'reactimport { Link } from react-router-domimport { motion, AnimatePresence } from framer-motionimport {'
   Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud,
   Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen,
   MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star,
   Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool,
   Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,
-  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from 'lucide-react';
-export function EnhancedHeader() {
+  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from lucide-reactexport function EnhancedHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState(');'
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   useEffect(() => {
@@ -282,9 +278,8 @@ export const EnhancedHeader: React.FC = () => {
             ))}
           </nav>
           <button;
-            aria-label='Toggle navigation';
-            onClick={() => setMobileOpen((v) => !v)}
-            className='md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+            aria-label='Toggle navigationonClick={() => setMobileOpen((v) => !v)}'
+            className=md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100'
           >
             <svg xmlns='http://www.w3.org/2000/svg' className='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
               <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M4 6h16M4 12h16M4 18h16' />

@@ -69,7 +69,7 @@ describe(
         expectedShipping:,
   1 day',
         warranty: '1 year,
-        returnPolicy:;
+        returnPolicy:
   '30 days'}
     }
     require(
@@ -105,7 +105,7 @@ describe(
     expect(mockInfoFnForToast).toHaveBeenCalledTimes(1);
     expect(mockInfoFnForToast).toHaveBeenCalledWith(
   'Please log in to add items to your cart.');
-    expect(mockDispatch).not.toHaveBeenCalled();
+    expect(mockDispatch).not.toHaveBeenCalled()
     expect(mockSuccessFnForToast).not.toHaveBeenCalled()})
   test(
   'authenticated user clicking 'Add to Cart' adds item and shows success toast', async () => {
@@ -134,7 +134,7 @@ describe(
         quantity: 1}})
     expect(mockSuccessFnForToast).toHaveBeenCalledTimes(1);
     expect(mockSuccessFnForToast).toHaveBeenCalledWith(
-      `1× ${product.name} added`);
+      `1× ${product.name} added`)
     expect(mockNavigate).not.toHaveBeenCalledWith(
       expect.stringContaining(
   '/login'))

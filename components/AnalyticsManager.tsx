@@ -13,7 +13,7 @@ interface AnalyticsEvent {
   name: string;
   category: string;
   action?: string;
-  label?: string;
+  label?: string
   value?: number
   custom_parameters?: Record<string, any>}
 
@@ -28,7 +28,7 @@ interface PerformanceMetrics {
 interface UserBehavior {
   pageViews: number;
   sessionDuration: number;
-  bounceRate: number;
+  bounceRate: number
   conversionRate: number}
 
 const AnalyticsManager: React.FC = () => {
@@ -132,7 +132,7 @@ const AnalyticsManager: React.FC = () => {
       })}
 
     // Custom analytics
-    sendAnalyticsEvent(event)}, [isInitialized]);
+    sendAnalyticsEvent(event)}, [isInitialized])
 
   const sendAnalyticsEvent = useCallback(async (event: AnalyticsEvent) => {
     try {
@@ -294,7 +294,7 @@ const AnalyticsManager: React.FC = () => {
     }
   }, [trackEvent, trackConversion, trackPerformance, trackUserProperties]);
 
-  return null; // This component doesn't render anything
+  return null // This component doesn't render anything
 }
 
 export default AnalyticsManager

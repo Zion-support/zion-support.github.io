@@ -49,7 +49,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
       // Track when user leaves
       const handleBeforeUnload = () => {
         isActive = false;
-        const timeSpent = Date.now() - startTime;
+        const timeSpent = Date.now() - startTime
         if (typeof window !== 'undefined' && window.gtag) {
           window.gtag('event', 'page_exit', {
             event_category: 'user_behavior',
@@ -143,7 +143,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
     // Initialize tracking
     trackPageView();
     const cleanup = trackEngagement();
-    trackCustomEvents();
+    trackCustomEvents()
 
     return cleanup}, [pageName, customEvents])
   return (

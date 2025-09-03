@@ -83,7 +83,7 @@ const Blog: NextPage = () => {
     "Cybersecurity",
     "IoT",
     "Industry Insights"
-  ];
+  ]
 
   return (
     <Layout
@@ -237,4 +237,4 @@ const Blog: NextPage = () => {
   );
 };
 
-export default Blog;
+export default Blog

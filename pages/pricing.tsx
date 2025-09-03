@@ -88,7 +88,7 @@ const Pricing: NextPage = () => {
       startingPrice: "$15,000",
       features: ["Smart contract development", "Blockchain integration", "Security auditing", "Deployment support"]
     }
-  ];
+  ]
 
   return (
     <Layout
@@ -295,4 +295,4 @@ const Pricing: NextPage = () => {
   );
 };
 
-export default Pricing;
+export default Pricing

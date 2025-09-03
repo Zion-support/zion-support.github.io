@@ -21,7 +21,7 @@ import Link from;
 export default function WebinarsPage() {
 	const pageTitle =;
   'Webinars | Zion Tech Group';
-	const pageDescription =;
+	const pageDescription =
   'Watch live and on-demand webinars on AI, quantum computing, and modern SaaS.'
 	return (
 		<>

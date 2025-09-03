@@ -30,7 +30,7 @@ import { Badge } from;
       scenario: 'Healthcare AI Solution', description: 'AI-powered diagnostic tool for medical practice','      features: ['        'Medical image analysis', 'Patient data integration','        'HIPAA compliance', 'Clinical decision support','        'Training and certification''      ], price: '$15,000 - $35, 000','      timeline: '8-12 weeks', roi: '400% ROI within 8 months''    }'  ];
   const costSavingTips = [
     {
-:pages/pricing-guide.tsx;
+:pages/pricing-guide.tsx
       tip: 'Start with MVP', description: 'Begin with a minimum viable product and iterate based on results','      savings: 'Save 40-60% on initial development''    }, {'      tip: 'Use Existing Frameworks','      description: 'Leverage our pre-built AI frameworks and templates', savings: 'Reduce development time by 50%''    },'    {
       tip: 'Phased Implementation', description: 'Implement solution in phases to spread costs over time','      savings: 'Improve cash flow and reduce risk''    }, {'      tip: 'Long-term Partnership','      description: 'Sign annual contracts for ongoing development and support', savings: 'Get 20% discount on all services''    }'  ]return(
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'      <SEO '        title='Pricing Guide - Zion Tech Group' '        description='Comprehensive guide to understanding AI solution pricing. Learn about cost factors, get estimates, and find the best pricing strategy for your project.''      />'{/* Hero Section */}
@@ -129,5 +129,5 @@ import { Badge } from;
       </section>
     </div>
   )}
-;
+
 export default PricingGuide

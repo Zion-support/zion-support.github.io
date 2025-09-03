@@ -1,8 +1,5 @@
-import { render, screen } from '@testing-library/react';
-import ComprehensiveOptimizer from './ComprehensiveOptimizer';
-
-describe('ComprehensiveOptimizer', () => {
-  it('renders without crashing', () => {
+import { render, screen } from '@testing-library/reactimport ComprehensiveOptimizer from ./ComprehensiveOptimizerdescribe(ComprehensiveOptimizer, () => {'
+  it(renders without crashing', () => {'
     render(<ComprehensiveOptimizer />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})
   it('displays expected content', () => {

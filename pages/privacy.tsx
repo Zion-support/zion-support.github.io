@@ -219,4 +219,4 @@ const Privacy: NextPage = () => {
   );
 };
 
-export default Privacy;
+export default Privacy

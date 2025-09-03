@@ -211,4 +211,4 @@ const WebDevelopment: NextPage = () => {
   );
 };
 
-export default WebDevelopment;
+export default WebDevelopment

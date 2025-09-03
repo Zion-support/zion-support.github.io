@@ -21,7 +21,7 @@ import {
   Download,
   Share2;
   '} from 'lucide-react;
-  ';
+  '
 export default function AIComplianceAssistant() {
   return ('
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
@@ -43,12 +43,12 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
             <h1 className='text-4xl md:text-7xl font-bold text-white mb-6'>
               AI Compliance'
               <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>
-                {';
+                {'
   '}Assistant
               </span>
             </h1>'
             <p className='text-xl text-gray-300 max-w-4xl mx-auto mb-8'>
-              Automate regulatory compliance with intelligent monitoring, risk assessment, and policy management.;
+              Automate regulatory compliance with intelligent monitoring, risk assessment, and policy management.
               Stay ahead of regulatory changes and ensure your organization maintains compliance across all frameworks.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -76,7 +76,7 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
               Key Features
             </h2>'
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Our AI Compliance Assistant provides comprehensive tools to automate and streamline;
+              Our AI Compliance Assistant provides comprehensive tools to automate and streamline
               your compliance management processes.
             </p>
           </motion.div>
@@ -124,7 +124,7 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
               Platform Benefits
             </h2>'
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Experience the advantages of AI-powered compliance management that drives;
+              Experience the advantages of AI-powered compliance management that drives
               efficiency and reduces regulatory risk.
             </p>
           </motion.div>
@@ -220,7 +220,7 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
               Industry Use Cases
             </h2>'
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Discover how organizations across industries leverage our AI Compliance Assistant;
+              Discover how organizations across industries leverage our AI Compliance Assistant
               to maintain regulatory compliance and reduce risk.
             </p>
           </motion.div>
@@ -268,7 +268,7 @@ title='AI Compliance Assistant - Zion Tech Group''        description='Automate 
               Ready to Automate Your Compliance?
             </h2>'
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-              Join organizations already leveraging AI-powered compliance management;
+              Join organizations already leveraging AI-powered compliance management
               to reduce risk and maintain regulatory standards.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'

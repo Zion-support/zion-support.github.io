@@ -1,7 +1,4 @@
-import { render, screen } from '@testing-library/react';
-import SEOEnhancer from './SEOEnhancer';
-
-describe('SEOEnhancer', () => {
+import { render, screen } from '@testing-library/reactimport SEOEnhancer from ./SEOEnhancerdescribe(SEOEnhancer', () => {
   it('renders without crashing', () => {
     render(<SEOEnhancer />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})

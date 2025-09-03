@@ -47,7 +47,7 @@ const AccessibilityManager: React.FC = () => {
       root.classList.remove('high-contrast')}
 
     // Font size
-    root.setAttribute('data-font-size', settings.fontSize);
+    root.setAttribute('data-font-size', settings.fontSize)
 
     // Reduced motion
     if (settings.reducedMotion) {
@@ -82,7 +82,7 @@ const AccessibilityManager: React.FC = () => {
   }
 
   const handleToggle = (key: keyof AccessibilitySettings, value: boolean) => {
-    updateSetting(key, value);
+    updateSetting(key, value)
     announceToScreenReader(`${key} ${value ? 'enabled' : 'disabled'}`)}
 
   const handleFontSizeChange = (size: AccessibilitySettings['fontSize']) => {

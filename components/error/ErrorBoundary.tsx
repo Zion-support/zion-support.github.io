@@ -5,7 +5,7 @@ interface Props {
    fallback?: ReactNode;
    onError?: (error: Error, errorInfo: ErrorInfo) => void}
 interface State {
-  hasError: boolean;
+  hasError: boolean
    error?: Error
    errorInfo?: ErrorInfo}
 class ErrorBoundary extends Component<Props, State> {
@@ -46,7 +46,7 @@ class ErrorBoundary extends Component<Props, State> {
 ;
   render() {
     if (this.state.hasError) {
-      // Custom fallback UI;
+      // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback}
       // Default error UI
@@ -71,7 +71,7 @@ class ErrorBoundary extends Component<Props, State> {
               Something went wrong
             </h1>
             <p className='text-gray-600 text-center mb-6'>
-              We&apos;re sorry, but something unexpected happened. Please try refreshing the page.'
+              We&aposre sorry, but something unexpected happened. Please try refreshing the page.'
             </p>
             <div className='flex flex-col sm: flex-row gap-3'>
               <button

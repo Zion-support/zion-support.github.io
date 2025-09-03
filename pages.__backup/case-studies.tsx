@@ -38,7 +38,7 @@ const CaseStudies: NextPage = () => {
         timeframe: '6 months},
       description:,
   SecureBank Corp was experiencing significant losses due to fraudulent transactions and customer dissatisfaction from false positive alerts. Our AI-powered fraud detection system revolutionized their security infrastructure.',
-      technologies: [;
+      technologies: [
   'Machine Learning,
 ,
   Real-time Analytics',
@@ -340,7 +340,7 @@ const CaseStudies: NextPage = () => {
   const filteredCaseStudies = caseStudies.filter(study => {
     const matchesIndustry = selectedIndustry === 'All;
   ' || study.industry === selectedIndustry;
-    const matchesService = selectedService === 'All;
+    const matchesService = selectedService === 'All
   ' || study.service === selectedService    return matchesIndustry && matchesService})
   const featuredCaseStudies = caseStudies.filter(study => study.featured)
   return(
@@ -366,7 +366,7 @@ const CaseStudies: NextPage = () => {
           <p className='text-xl text-gray-600 max-w-4xl mx-auto mb-8'>
             Discover how we&apos;ve helped businesses across industries achieve;
             remarkable results through innovative technology solutions. From;
-            AI-powered systems to cloud transformations, see the real impact of;
+            AI-powered systems to cloud transformations, see the real impact of
             our work.
           </p>
           <div className='flex flex-wrap justify-center gap-4 text-sm text-gray-500'>
@@ -505,7 +505,7 @@ const CaseStudies: NextPage = () => {
         {/* Results Count */}
         <div className='mb-8'>
           <p className='text-gray-600'>
-            Showing <span className='font-semibold'>{filteredCaseStudies.length}</span> case studies{selectedIndustry !==;
+            Showing <span className='font-semibold'>{filteredCaseStudies.length}</span> case studies{selectedIndustry !==
   'All' && ` in ${selectedIndustry}`}
             {selectedService !==
   'All' && ` for ${selectedService}`}          </p>
@@ -577,7 +577,7 @@ const CaseStudies: NextPage = () => {
             <div className='text-center mb-12'>
               <h2 className='text-3xl font-bold mb-4'>Our Track Record</h2>
               <p className='text-xl opacity-90 max-w-2xl mx-auto'>
-                These numbers represent real results achieved for our clients;
+                These numbers represent real results achieved for our clients
                 across various industries and project types.
               </p>
             </div>
@@ -611,7 +611,7 @@ const CaseStudies: NextPage = () => {
             </h2>
             <p className='text-xl text-gray-600 mb-8 max-w-2xl mx-auto'>
               Let&apos;s discuss how we can help you achieve similar results;
-              with innovative technology solutions tailored to your specific;
+              with innovative technology solutions tailored to your specific
               business needs.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -633,5 +633,5 @@ const CaseStudies: NextPage = () => {
     </div>
   )}
 ;
-export default CaseStudies;
+export default CaseStudies
 export default CaseStudies

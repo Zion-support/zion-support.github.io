@@ -17,7 +17,7 @@ const AIOpsCopilot: NextPage = () => {
             AI Ops Copilot
           </h1>
           <p className='text-lg text-gray-200 mb-6'>
-            An end-to-end AI assistant for SRE teams that correlates signals;
+            An end-to-end AI assistant for SRE teams that correlates signals
             across logs, metrics, traces, and alerts to auto-triage incidents,
             generate runbooks, and recommend remediations.
           </p>
@@ -108,5 +108,5 @@ const AIOpsCopilot: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
+
 export default AIOpsCopilot

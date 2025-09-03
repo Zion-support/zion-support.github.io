@@ -87,7 +87,7 @@ return a.price - b.price'      case;
             <p className='text-xl text-zion-slate-light mb-8 leading-relaxed'>
               Transform your business with cutting-edge technology solutions.;
               From AI-powered analytics to quantum computing, discover the;
-              future of business technology with our comprehensive micro SAAS;
+              future of business technology with our comprehensive micro SAAS
               platform.
             </p>
             {/* Search Bar */}'
@@ -97,7 +97,7 @@ return a.price - b.price'      case;
                 <input';
                   type='text''                  placeholder='Search for services, technologies, or solutions...';
                   value={searchQuery}
-                  onChange={e => setSearchQuery(e.target.value)}';
+                  onChange={e => setSearchQuery(e.target.value)}'
                   className='w-full bg-zion-slate-light/10 border border-zion-cyan/20 rounded-xl px-12 py-4 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent text-lg'
                 />
               </div>
@@ -111,7 +111,7 @@ return a.price - b.price'      case;
                 transition={{ duration: 0.6, delay: 0.2 }}
               >'
                 <div className='text-3xl font-bold text-zion-cyan mb-2'>
-                  {INNOVATIVE_MICRO_SAAS_SERVICES_2025.length +;
+                  {INNOVATIVE_MICRO_SAAS_SERVICES_2025.length +
                     ADDITIONAL_INNOVATIVE_SERVICES_2025.length}
                   +
                 </div>'
@@ -159,7 +159,7 @@ return a.price - b.price'      case;
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
-                  selectedCategory === category.id`;
+                  selectedCategory === category.id`
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`,
   : 'bg-zion-slate-light/10 text-zion-slate-light hover:bg-zion-slate-light/20 hover:text-white`}`}
               >'
@@ -179,7 +179,7 @@ return a.price - b.price'      case;
               <div className='flex items-center gap-2'>'
                 <Filter className='w-4 h-4 text-zion-cyan'  />                <select;
                   value={selectedPriceRange}
-                  onChange={e => setSelectedPriceRange(e.target.value)}';
+                  onChange={e => setSelectedPriceRange(e.target.value)}'
                   className='bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan'
                 >{priceRanges.map(range => (
                     <option key={range.id} value={range.id}>
@@ -192,7 +192,7 @@ return a.price - b.price'      case;
               <div className='flex items-center gap-2'>'
                 <TrendingUp className='w-4 h-4 text-zion-cyan'  />                <select;
                   value={sortBy}
-                  onChange={e => setSortBy(e.target.value)}';
+                  onChange={e => setSortBy(e.target.value)}'
                   className='bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan'
                 >{sortOptions.map(option => (
                     <option key={option.id} value={option.id}>
@@ -204,7 +204,7 @@ return a.price - b.price'      case;
             </div>
 '
             <div className='text-zion-slate-light'>
-              Showing {sortedServices.length} of{';
+              Showing {sortedServices.length} of{'
   '}
               {INNOVATIVE_MICRO_SAAS_SERVICES_2025.length} services
             </div>
@@ -236,7 +236,7 @@ return a.price - b.price'      case;
                         <div`
                           className={`w-12 h-12 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-xl flex items-center justify-center`}
                         >{getCategoryIcon(service.category) &&;
-                            React.createElement();
+                            React.createElement()
                               getCategoryIcon(service.category),
                               { className: 'w-6 h-6 text-white
   ' })}
@@ -338,7 +338,7 @@ return a.price - b.price'      case;
                   onClick={() => {
                     setSearchQuery('');
                     setSelectedCategory(
-  'all');
+  'all')
                     setSelectedPriceRange(
   'all')}}'                  className='btn-futuristic px-6 py-3'>
                   View All Services
@@ -360,7 +360,7 @@ return a.price - b.price'      case;
               <span className='text-gradient'>Specialized Solutions</span>
             </h2>'
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
-              Discover our specialized technology solutions designed for;
+              Discover our specialized technology solutions designed for
               specific industries and use cases
             </p>
           </motion.div>
@@ -411,7 +411,7 @@ return a.price - b.price'      case;
             </h2>'
             <p className='text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto'>
               Get in touch with our technology experts to discuss your specific;
-              needs and discover how our innovative solutions can drive your;
+              needs and discover how our innovative solutions can drive your
               business forward.
             </p>
 '

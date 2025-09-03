@@ -8,7 +8,7 @@ interface ModernLayoutProps extends React.PropsWithChildren<{}> {
   children: React.ReactNode;
   title?: string;
   description?: string;
-  keywords?: string;
+  keywords?: string
   canonical?: string}
 
 const ModernLayout: React.FC<ModernLayoutProps> = ({
@@ -107,12 +107,12 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
       <div className="min-h-screen bg-white text-gray-900 flex flex-col">
         <ModernHeader />
         <main className="flex-1 pt-20">
-          {children};
-        </main>;
-        <ModernFooter />;
-      </div>;
-    </>;
+          {children}
+        </main>
+        <ModernFooter />
+      </div>
+    </>
   );
 };
 
-export default ModernLayout;}
+export default ModernLayout}

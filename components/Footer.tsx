@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
       { name: 'Support', href: '/contact' },
       { name: 'Pricing Guide', href: '/pricing-guide' }
     ]
-  };
+  }
 
   return (
     <footer className='bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white'>
@@ -160,4 +160,4 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer;
+export default Footer

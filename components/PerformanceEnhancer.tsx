@@ -105,7 +105,7 @@ const PerformanceEnhancer: React.FC = () => {
       if (value !== null && value !== undefined) {
         sendToAnalytics(key.toUpperCase(), value)}
     })}, [metrics, sendToAnalytics]);
-  if (!isVisible) return null;
+  if (!isVisible) return null
   const getScoreColor = (value: number | null, thresholds: { good: number needsImprovement: number }) => {
     if (value === null) return 'text-gray-500'
     if (value <= thresholds.good) return 'text-green-500';
@@ -176,12 +176,12 @@ const PerformanceEnhancer: React.FC = () => {
             const totalCount = scores.filter(score => score !== 'Measuring...').length;
             if (totalCount === 0) return 'Measuring...';
             if (goodCount === totalCount) return 'Excellent';
-            if (goodCount >= totalCount * 0.75) return 'Good';
+            if (goodCount >= totalCount * 0.75) return 'Good'
             if (goodCount >= totalCount * 0.5) return 'Needs Improvement'
             return 'Poor'})()}
         </div>
       </div>
     </div>
   )}
-;
+
 export default PerformanceEnhancer

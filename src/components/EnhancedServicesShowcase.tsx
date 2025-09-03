@@ -1,9 +1,6 @@
 
 ;
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
+import { motion } from 'framer-motionimport { Link } from react-router-domimport {Brain,'
   Shield,
   Cloud,
   Database,
@@ -15,10 +12,9 @@ import {
   Users,
   Clock,
   CheckCircle,
-  Search} from 'lucide-react';
-export const EnhancedServicesShowcase: React.FC = () => {
+  Search} from lucide-reactexport const EnhancedServicesShowcase: React.FC = () => {
   const services = [{
-      title: 'AI Workflow Automation',
+      title: AI Workflow Automation,'
       description: 'Transform business operations with intelligent automation that learns and scales',
       price: 'From $299/month',
       path: '/services/ai-workflow-automation',

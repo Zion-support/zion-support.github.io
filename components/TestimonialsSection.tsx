@@ -77,5 +77,5 @@ const TestimonialsSection: React.FC = () => {
       </div>
     </section>
   )}
-;
+
 export default TestimonialsSection

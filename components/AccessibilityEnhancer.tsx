@@ -49,7 +49,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     applyAccessibilityStyles(newValue, fontSize, reducedMotion)}
 
   const changeFontSize = (newSize: string) => {
-    setFontSize(newSize);
+    setFontSize(newSize)
     localStorage.setItem('fontSize', newSize)
     applyAccessibilityStyles(isHighContrast, newSize, reducedMotion)}
   return (
@@ -174,7 +174,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           height: auto;
           padding: inherit;
           margin: inherit;
-          overflow: visible;
+          overflow: visible
           clip: auto
           white-space: normal}
       `}</style>

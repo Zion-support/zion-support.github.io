@@ -1,7 +1,4 @@
-import { render, screen } from '@testing-library/react';
-import SEOHead from './SEOHead';
-
-describe('SEOHead', () => {
+import { render, screen } from '@testing-library/reactimport SEOHead from ./SEOHeaddescribe(SEOHead', () => {
   it('renders without crashing', () => {
     render(<SEOHead />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})

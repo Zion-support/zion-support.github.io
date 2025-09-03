@@ -36,14 +36,14 @@ function fixFile(filePath) {
       new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g,\\$&')}`;g;
   '),
       `export default ${camelCaseName}`);
-    // Update title and meta description;
+    // Update title and meta description
     const title = filename.replace(/-/g,).replace(/\b\w/g, l => l.toUpperCase())
     newContent = newContent.replace(
       /<title>.*?<\/title>/g,
       `<title>${title} - Zion Tech Solutions</title>`)
     newContent = newContent.replace(
       /<meta name='description' content='.*?' \/>/g,
-      `<meta name='description' content='${title} blog post' />`);
+      `<meta name='description' content='${title} blog post' />`)
     // Update h1 content
     newContent = newContent.replace(
       /<h1>.*?<\/h1>/g,
@@ -88,5 +88,5 @@ export default toCamelCase;
 export default toCamelCase;
 export default toCamelCase;
 export default toCamelCase;
-export default toCamelCase;
+export default toCamelCase
 export default toCamelCase

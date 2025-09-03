@@ -42,7 +42,7 @@ import { Cookie, Settings, Shield, Eye, Database, CheckCircle } from;
   ','      description: 'We obtain your consent before setting non-essential cookies.'    }, {
   '      icon: Settings,
       title:,
-  Cookie Management;
+  Cookie Management
   ', description: 'You can manage your cookie preferences at any time.'    },'    {
       icon: CheckCircle, title:,
   Transparency',
@@ -92,7 +92,7 @@ import { Cookie, Settings, Shield, Eye, Database, CheckCircle } from;
                   <li>Advertising networks</li>
                   <li>Customer support tools</li>
                 </ul>
-                <h2 className='text-2xl font-bold text-gray-900 mb-6'>Updates to This Policy</h2>'                <p className='text-gray-700 mb-4'>'                  We may update this cookie policy from time to time to reflect changes in our practices '                  or for other operational, legal, or regulatory reasons. We will notify you of any material;
+                <h2 className='text-2xl font-bold text-gray-900 mb-6'>Updates to This Policy</h2>'                <p className='text-gray-700 mb-4'>'                  We may update this cookie policy from time to time to reflect changes in our practices '                  or for other operational, legal, or regulatory reasons. We will notify you of any material
                   changes by posting the updated policy on our website.
                 </p>
                 <h2 className='text-2xl font-bold text-gray-900 mb-6'>Contact Us</h2>'                <p className='text-gray-700 mb-4'>'                  If you have any questions about our use of cookies or this cookie policy, please contact us: </p>'                <div className='bg-white p-4 rounded-lg border'>'                  <p className='text-gray-700'><strong>Email:</strong> privacy@ziontechgroup.com</p>'                  <p className='text-gray-700'><strong>Phone:</strong> +1 302 464 0950</p>'                  <p className='text-gray-700'><strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>'                </div>'              </div>
@@ -107,5 +107,5 @@ import { Cookie, Settings, Shield, Eye, Database, CheckCircle } from;
       </div>
     </MainLayout>
   )}
-;
+
 export default Cookies

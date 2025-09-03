@@ -16,7 +16,7 @@ const AISalesAssistant: NextPage = () => (
           AI Sales Assistant
         </h1>
         <p className='text-lg text-gray-200 mb-6'>
-          Automatically research prospects, score leads, and generate;
+          Automatically research prospects, score leads, and generate
           context-aware, multi-channel outreach that books more meetings.
         </p>
         <div className='flex flex-wrap gap-3'>
@@ -82,7 +82,7 @@ const AISalesAssistant: NextPage = () => (
           </li>
         </ul>
         <div className='mt-6 text-sm text-gray-600'>
-          Pricing competitive with tools like Apollo, Clay, Outreach, and;
+          Pricing competitive with tools like Apollo, Clay, Outreach, and
           Lavender.
         </div>
         <div className='mt-4'>
@@ -95,5 +95,5 @@ const AISalesAssistant: NextPage = () => (
       </div>
     </section>
   </MainLayout>
-);
+)
 export default AISalesAssistant

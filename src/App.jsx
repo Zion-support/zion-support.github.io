@@ -1,11 +1,5 @@
-import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader.jsx';
-import { Footer } from './components/Footer.jsx';
-import { ChatAssistant } from './components/ChatAssistant.tsx';
-('');
-// Home and main pages';
-const Home = lazy(() => import('./pages/Home.tsx'));
+import React, { Suspense, lazy } from 'reactimport { BrowserRouter as Router, Routes, Route } from react-router-domimport { AppHeader } from ./layout/AppHeader.jsximport { Footer } from ./components/Footer.jsximport { ChatAssistant } from ./components/ChatAssistant.tsx(');
+// Home and main pagesconst Home = lazy(() => import(./pages/Home.tsx'));'
 const About = lazy(() => import('./pages/About.tsx'));
 const Contact = lazy(() => import('./pages/Contact.tsx'));
 const BlogPage = lazy(() => import('./pages/BlogPage.tsx'));
@@ -86,9 +80,8 @@ function App() {}
               <Route path='/pricing' element={<ComprehensivePricing />} />{/* Services routes */}
               <Route path='/services' element={<ServicesPage />} />{/* Catch-all route for 404 */}
               <Route
-                path='*'''';
-                element={}
-                  <div className='flex items-center justify-center min-h-screen'>
+                path='*'''element={}
+                  <div className=flex items-center justify-center min-h-screen'>'
                     <div className='text-center'>
                       <h1 className='text-4xl font-bold text-zion-cyan mb-4'>
                         404 - Page Not Found
@@ -97,8 +90,7 @@ function App() {}
                         The page you're looking for doesn't exist.
                       </p>
                       <a
-                        href='/'''';
-                        className='bg-zion-purple text-white px-6 py-3 rounded-lg hover:bg-zion-purple-dark transition-colors'''">
+                        href='/'''className=bg-zion-purple text-white px-6 py-3 rounded-lg hover:bg-zion-purple-dark transition-colors'''">'"
                         Go Home
                       </a>
                     </div>
@@ -114,12 +106,8 @@ function App() {}
     </Router>
   )}
 export default App;
-export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
-;
-export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
-;
-export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
-;
-export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
-;
+export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App };
+export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App };
+export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App };
+export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App };
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }

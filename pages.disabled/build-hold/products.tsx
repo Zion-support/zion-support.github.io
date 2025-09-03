@@ -103,7 +103,7 @@ import Link from;
   'Cybersecurity',
   '    'SaaS Development;
   ', 'Digital Transformation;
-  ',';
+  ','
   'IoT & Edge Computing''  ]'
   return(
     <MainLayout;
@@ -166,5 +166,5 @@ import Link from;
       </section>
     </MainLayout>
   )}
-;
+
 export default Products

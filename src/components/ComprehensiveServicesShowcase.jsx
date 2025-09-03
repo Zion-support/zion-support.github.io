@@ -1,6 +1,4 @@
-import React, { useState } from 'react'';
-import { motion, AnimatePresence } from 'framer-motion';
-import {}
+import React, { useState } from 'react'import { motion, AnimatePresence } from framer-motionimport {}
   Brain,
   Shield,
   Rocket,
@@ -11,41 +9,20 @@ import {}
   Users,
   TrendingUp,
   CheckCircle,
-  DollarSign,';
-  Clock,'';
-  Target,''';
-  Award''''} from 'lucide-react'';
-import { Link } from 'react-router-dom';
-
-// Import the new service data;
-;
-const serviceCategories = []{}
-';
-    id: 'micro-saas','''';
-    name: 'Micro SAAS Solutions','''';
-    icon: <Rocket className='w-6 h-6' />,';
-    color: 'from-purple-600 to-pink-600',
+  DollarSign,;
+  Clock,'Target,'Award'''} from 'lucide-react'import { Link } from react-router-dom// Import the new service data;const serviceCategories = []{}id: micro-saas','''name: Micro SAAS Solutions','''icon: <Rocket className=w-6 h-6' />,color: from-purple-600 to-pink-600','
     services: revolutionary2027AdvancedMicroSaasServices},
   {}
-';
-    id: 'it-infrastructure','''';
-    name: 'IT Infrastructure & Cybersecurity',''''
-    icon: <Shield className='w-6 h-6' />,';
-    color: 'from-red-600 to-orange-600',
+id: it-infrastructure','''name: IT Infrastructure & Cybersecurity',''''
+    icon: <Shield className='w-6 h-6' />,color: from-red-600 to-orange-600','
     services: revolutionary2027ITInfrastructureCybersecurityServices},
   {}
-';
-    id: 'ai-innovation','''';
-    name: 'AI Innovation Services',''''
-    icon: <Brain className='w-6 h-6' />,';
-    color: 'from-blue-600 to-cyan-600',
+id: ai-innovation','''name: AI Innovation Services',''''
+    icon: <Brain className='w-6 h-6' />,color: from-blue-600 to-cyan-600','
     services: revolutionary2027AIInnovationServices}
 ];
 export function ComprehensiveServicesShowcase() {}
-';
-'';
-''';
-  const [selectedCategory, setSelectedCategory] = useState('micro-saas');
+'const [selectedCategory, setSelectedCategory] = useState(micro-saas');
   const [selectedService, setSelectedService] = useState(null);
   const containerVariants = {}
     hidden: { opacity: 0 },
@@ -64,9 +41,7 @@ export function ComprehensiveServicesShowcase() {}
       y: 0,
       opacity: 1,
       transition: {}
-''';
-        duration: 0.5,'''';
-        ease: 'easeOut'''}
+''duration: 0.5,''ease: easeOut'''}'
     }
   }
 ;
@@ -77,24 +52,20 @@ export function ComprehensiveServicesShowcase() {}
       scale: 1,
       opacity: 1,
       transition: {}
-''';
-        duration: 0.4,'''';
-        ease: 'easeOut'''}
+''duration: 0.4,''ease: easeOut'''}'
     }
-  }';';
+  };
   return (''''
     <section className='py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>''''
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         {/* Header Section */}'''
-        <motion.div '''';
-          className='text-center mb-16''';
-          initial = {}
+        <motion.div '''className=text-center mb-16''initial = {}'
   { opacity: 0,
   y: 30}}
           animate = {}
   { opacity: 1,
   y: 0}}
-          transition={{ duration: 0.6 }}'''>''''
+          transition={{ duration: 0.6 }}''>''''
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
             Revolutionary 2027 Services'''
           </h2>''''
@@ -131,8 +102,7 @@ export function ComprehensiveServicesShowcase() {}
         </motion.div>
         {/* Category Navigation */}'''
         <motion.div ''''
-          className='flex flex-wrap justify-center gap-4 mb-12''';
-          initial = {}
+          className='flex flex-wrap justify-center gap-4 mb-12''initial = {}'
   { opacity: 0,
   y: 20}}
           animate = {}
@@ -146,9 +116,9 @@ export function ComprehensiveServicesShowcase() {}
               onClick={() => setSelectedCategory(category.id)}
               className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${}
 `;
-`'`;
+``;
 `'`'`;
-                selectedCategory === category.id`'`'`'`;
+                selectedCategory === category.id`'`'`'`;'
                   ? `bg-gradient-to-r ${category.color} text-white shadow-lg`''`'`'`
                   : 'bg-zion-slate-dark text-zion-cyan-light hover:bg-zion-slate hover:text-zion-cyan border border-zion-cyan/30'````}`}
             >{category.icon}
@@ -157,25 +127,14 @@ export function ComprehensiveServicesShowcase() {}
         </motion.div>
         {/* Services Grid */}'''
         <motion.div''''
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'''';
-          variants={containerVariants}'''';
-          initial='hidden'''';
-          animate='visible'''>{currentServices.map((service) => (
-            <motion.div''';
-              key={service.id}'''';
-              className='group cursor-pointer''';
-              variants={itemVariants}
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'''variants={containerVariants}''initial=hidden'''animate=visible'''>{currentServices.map((service) => (
+            <motion.div''key={service.id}''className=group cursor-pointer''variants={itemVariants}
               onClick={ () => setSelectedService (service) }
-            >'''
-              <motion.div'''';
-                className='bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 h-full''';
-                variants={cardVariants}
+            >''
+              <motion.div'''className=bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 h-full''variants={cardVariants}'
                 whileHover = {}
   {}
-''';
-                  y: -8,'''';
-                  boxShadow: '0 20px 40px rgba(0, 0, 0,'''';
-  0.3)'}}
+'y: -8,''boxShadow: 0 20px 40px rgba(0, 0, 0,'''0.3)}}
               >'''{/* Service Header */}''''
                 <div className='flex items-start justify-between mb-4'>''''
                   <div className='text-4xl'>{service.icon}</div>'''{service.popular && (''''
@@ -208,8 +167,7 @@ export function ComprehensiveServicesShowcase() {}
                   <div className='flex flex-wrap gap-2'>
                     {service.features.slice(0, 3).map((feature, index) => (
                       <span'''
-                        key={index}'''';
-                        className='bg-zion-slate/50 text-zion-cyan-light text-xs px-2 py-1 rounded-full '>{feature}
+                        key={index}'''className=bg-zion-slate/50 text-zion-cyan-light text-xs px-2 py-1 rounded-full '>{feature}
                       </span>
                     ))}'''{service.features.length > 3 && (''''
                       <span className='bg-zion-cyan/20 text-zion-cyan text-xs px-2 py-1 rounded-full'>
@@ -230,9 +188,7 @@ export function ComprehensiveServicesShowcase() {}
                 </div>
 '''{/* CTA Button */}''''
                 <div className='flex items-center justify-between'>
-                  <Link''';
-                    to={service.link}'''';
-                    className='flex items-center space-x-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-medium hover:shadow-lg transition-all duration-300 group-hover:scale-105 '>'''
+                  <Link''to={service.link}''className=flex items-center space-x-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-medium hover:shadow-lg transition-all duration-300 group-hover:scale-105 '>'''
                     <span>Learn More</span>''''
                     <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform' />'''
                   </Link>''''
@@ -244,9 +200,7 @@ export function ComprehensiveServicesShowcase() {}
             </motion.div>) ) }
         </motion.div>
         {/* Call to Action */}'''
-        <motion.div '''';
-          className='text-center mt-16''';
-          initial = {}
+        <motion.div '''className=text-center mt-16''initial = {}'
   { opacity: 0,
   y: 30}}
           animate = {}
@@ -254,7 +208,7 @@ export function ComprehensiveServicesShowcase() {}
   y: 0}}
           transition = {}
   { duration: 0.6,
-  delay: 0.4}}'''>''''
+  delay: 0.4}}''>''''
           <div className='bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30'>''''
             <h3 className='text-2xl font-bold text-white mb-4'>
               Ready to Get Started?'''
@@ -265,13 +219,11 @@ export function ComprehensiveServicesShowcase() {}
             </p>''''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'''
               <Link''''
-                to='/contact'''';
-                className='bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105 '>
+                to='/contact'''className=bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105 '>'
                 Schedule Consultation
               </Link>'''
               <a''''
-                href='tel:+13024640950'''';
-                className='bg-zion-slate-dark text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover:bg-zion-slate hover:border-zion-cyan/50 transition-all duration-300 '>
+                href='tel:+13024640950'''className=bg-zion-slate-dark text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover:bg-zion-slate hover:border-zion-cyan/50 transition-all duration-300 '>'
                 Call Now: +1 302 464 0950
               </a>
             </div>
@@ -281,16 +233,12 @@ export function ComprehensiveServicesShowcase() {}
       {/* Service Detail Modal */}
       <AnimatePresence>
         {selectedService && ('''
-          <motion.div'''';
-            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4''';
-            initial={{ opacity: 0 }}
+          <motion.div'''className=fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4''initial={{ opacity: 0 }}'
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={ () => setSelectedService (null) }
-          >'''
-            <motion.div'''';
-              className='bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto''';
-              initial = {}
+          >''
+            <motion.div'''className=bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto''initial = {}'
   { scale: 0.9,
   opacity: 0}}
               animate = {}
@@ -299,19 +247,15 @@ export function ComprehensiveServicesShowcase() {}
               exit = {}
   { scale: 0.9,
   opacity: 0}}
-              onClick={(e) => e.stopPropagation()}'''>''''
+              onClick={(e) => e.stopPropagation()}''>''''
               <div className='flex items-start justify-between mb-6'>''''
                 <div className='text-6xl'>{selectedService.icon}</div>
-                <button''';
-                  onClick={() => setSelectedService(null)}'''';
-                  className='text-zion-cyan-light hover:text-white transition-colors '>
+                <button''onClick={() => setSelectedService(null)}''className=text-zion-cyan-light hover:text-white transition-colors '>'
                   ✕
                 </button>
-              </div>''';
-''''
+              </div>'''''
               <h2 className='text-3xl font-bold text-white mb-4'>{selectedService.name}</h2>''''
-              <p className='text-zion-cyan-light text-lg mb-6'>{selectedService.description}</p>''';
-''''
+              <p className='text-zion-cyan-light text-lg mb-6'>{selectedService.description}</p>'''''
               <div className='grid md:grid-cols-2 gap-8'>'''
                 <div>''''
                   <h3 className='text-xl font-semibold text-white mb-4'>Features</h3>''''
@@ -347,25 +291,21 @@ export function ComprehensiveServicesShowcase() {}
                       <span className='text-zion-cyan-light'>Rating:</span>''''
                       <span className='text-white font-medium'>{selectedService.rating}/5 ({selectedService.reviews} reviews)</span>
                     </div>
-                  </div>''';
-''''
+                  </div>'''''
                   <div className='mt-6'>''''
                     <h4 className='text-lg font-semibold text-white mb-2'>ROI</h4>''''
                     <p className='text-zion-cyan-light text-sm'>{selectedService.roi}</p>
                   </div>
                 </div>
-              </div>''';
-''''
+              </div>'''''
               <div className='mt-8 pt-6 border-t border-zion-cyan/20'>''''
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                   <Link'''
-                    to={selectedService.link}'''';
-                    className='bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 text-center '>
+                    to={selectedService.link}'''className=bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 text-center '>
                     Get Started Now
                   </Link>'''
                   <a''''
-                    href='tel:+13024640950'''';
-                    className='bg-zion-slate text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover:bg-zion-slate-dark transition-all duration-300 text-center '>
+                    href='tel:+13024640950'''className=bg-zion-slate text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover:bg-zion-slate-dark transition-all duration-300 text-center '>'
                     Call for Consultation
                   </a>
                 </div>
@@ -375,4 +315,4 @@ export function ComprehensiveServicesShowcase() {}
       </AnimatePresence>
     </section>
   )}''`;
-''`'"`
+''`'"`'"

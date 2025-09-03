@@ -15,7 +15,7 @@ interface PerformanceMonitorProps {
    refreshInterval?: number}
 const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 showDetails = false, autoRefresh = true,refreshInterval = 30000}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [lastUpdated, setLastUpdated] = useState<Date>(new Date())
   const [alerts, setAlerts] = useState<string[]>([])
@@ -31,7 +31,7 @@ const calculateOverallScore = useCallback((metrics: PerformanceMetrics): number 
 const collectMetrics = useCallback(async (): Promise<PerformanceMetrics> => {
     return new Promise((resolve) => {
       if (typeof window === 'undefined;
-  ' || !('performance;
+  ' || !('performance
   ' in window)) {'        resolve({
   '          fcp: 0, lcp: 0, fid: 0, cls: 0, ttfb: 0, fmp: 0, tti: 0, score: 0})
         return}
@@ -89,7 +89,7 @@ const updateMetrics = useCallback(async () => {setIsLoading(true);
       setMetrics(newMetrics);
       setLastUpdated(new Date());
       // Generate alerts based on metrics;
-      const newAlerts: string[] = [];
+      const newAlerts: string[] = []
 if (newMetrics.fcp > 3000) newAlerts.push(,
   First Contentful Paint is slow
   ')'      if (newMetrics.lcp > 4000) newAlerts.push(
@@ -114,7 +114,7 @@ const getScoreColor = (score: number): string => {
   const getScoreBgColor = (score: number): string => {
     if (score >= 90) return;
   'bg-green-100'    if (score >= 70) return;
-  'bg-yellow-100'    return;
+  'bg-yellow-100'    return
   'bg-red-100'  }'
   if (!showDetails) {
     return(
@@ -176,5 +176,5 @@ className='flex items-center justify-center text-green-600 dark:text-green-400 b
       )}
     </div>
   )}
-;
+
 export default EnhancedPerformanceMonitor

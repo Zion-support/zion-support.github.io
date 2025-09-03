@@ -211,4 +211,4 @@ const CloudServices: NextPage = () => {
   );
 };
 
-export default CloudServices;
+export default CloudServices

@@ -9,13 +9,13 @@ interface Toast {
 
 interface ToastContextType {
   toasts: Toast[];
-  addToast: (toast: Omit<Toast, 'id'>) => void
+  addToast: (toast: Omit<Toast, 'id'>) => void;
   removeToast: (id: string) => void}
 
-const ToastContext = createContext<ToastContextType | undefined>(undefined)
+const ToastContext = createContext<ToastContextType | undefined>(undefined);
 
 export function ToastProvider({ children }: { children: React.ReactNode }) {
-  const [toasts, setToasts] = useState<Toast[]>([])
+  const [toasts, setToasts] = useState<Toast[]>([]);
 
   const addToast = useCallback((toast: Omit<Toast, 'id'>) => {
     const id = Math.random().toString(36).substr(2, 9);
@@ -29,7 +29,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
       setToasts(prev => prev.filter(t => t.id !== id))}, duration)}, []);
 
   const removeToast = useCallback((id: string) => {
-    setToasts(prev => prev.filter(t => t.id !== id))}, [])
+    setToasts(prev => prev.filter(t => t.id !== id))}, []);
 
   return (
     <ToastContext.Provider value={{ toasts, addToast, removeToast }}>
@@ -44,7 +44,7 @@ export function useToast() {
     throw new Error('useToast must be used within a ToastProvider')}
   return context}
 
-function ToastContainer({ toasts, removeToast }: { toasts: Toast[] removeToast: (id: string) => void }) {
+function ToastContainer({ toasts, removeToast }: { toasts: Toast[]; removeToast: (id: string) => void }) {
   return (
     <div className="fixed top-4 right-4 z-50 space-y-2">
       {toasts.map(toast => (
@@ -59,7 +59,7 @@ function Toast({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => vo
     error: 'bg-red-500',
     warning: 'bg-yellow-500',
     info: 'bg-blue-500',
-  }[toast.type]
+  }[toast.type];
 
   return (
     <div className={`${bgColor} text-white px-4 py-3 rounded-lg shadow-lg max-w-sm`}>
