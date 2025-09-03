@@ -287,6 +287,259 @@ export default function ITServices() {
         'Innovative IoT applications'
       ],
       category: 'Emerging Technologies'
+    },
+    {
+      icon: Cloud,
+      name: 'Edge Computing Infrastructure',
+      description: 'Distributed edge computing solutions for low-latency applications and real-time processing.',
+      features: [
+        'Edge server deployment and management',
+        'Content delivery network optimization',
+        'Real-time data processing at the edge',
+        'Edge AI and machine learning deployment',
+        '5G network integration',
+        'Edge security and compliance'
+      ],
+      pricing: '$150 – $350/hour',
+      projectPricing: '$40,000 – $200,000/project',
+      timeline: '8–16 weeks',
+      benefits: [
+        '50% reduction in latency',
+        'Improved application performance',
+        'Enhanced user experience',
+        'Reduced bandwidth costs'
+      ],
+      category: 'Cloud & Infrastructure'
+    },
+    {
+      icon: Shield,
+      name: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust implementation with identity verification and micro-segmentation.',
+      features: [
+        'Identity and access management (IAM)',
+        'Network micro-segmentation',
+        'Device trust and compliance',
+        'Application security controls',
+        'Data encryption and protection',
+        'Continuous security monitoring'
+      ],
+      pricing: '$8,000 – $50,000/project',
+      projectPricing: '$3,000 – $12,000/month managed',
+      timeline: '6–16 weeks',
+      benefits: [
+        'Enhanced security posture',
+        'Reduced attack surface',
+        'Compliance with regulations',
+        'Improved threat detection'
+      ],
+      category: 'Security'
+    },
+    {
+      icon: Database,
+      name: 'Data Lake & Warehouse Modernization',
+      description: 'Modern data architecture with cloud-native data lakes and real-time analytics.',
+      features: [
+        'Cloud data lake design and implementation',
+        'Real-time data streaming and processing',
+        'Data governance and cataloging',
+        'Advanced analytics and ML integration',
+        'Data quality and lineage tracking',
+        'Cost optimization and performance tuning'
+      ],
+      pricing: '$120 – $300/hour',
+      projectPricing: '$30,000 – $150,000/project',
+      timeline: '8–20 weeks',
+      benefits: [
+        'Unified data platform',
+        'Real-time analytics capabilities',
+        'Improved data quality',
+        'Reduced data processing costs'
+      ],
+      category: 'Data Management'
+    },
+    {
+      icon: Code,
+      name: 'Microservices Architecture Design',
+      description: 'Scalable microservices architecture with service mesh and container orchestration.',
+      features: [
+        'Microservices design and implementation',
+        'Service mesh and API gateway setup',
+        'Container orchestration with Kubernetes',
+        'Service discovery and load balancing',
+        'Distributed tracing and monitoring',
+        'DevOps and CI/CD integration'
+      ],
+      pricing: '$150 – $350/hour',
+      projectPricing: '$25,000 – $100,000/project',
+      timeline: '6–16 weeks',
+      benefits: [
+        'Improved scalability and performance',
+        'Faster development and deployment',
+        'Better fault isolation',
+        'Enhanced team productivity'
+      ],
+      category: 'Development'
+    },
+    {
+      icon: Globe,
+      name: 'Progressive Web App Development',
+      description: 'Modern PWA development with offline capabilities and native app features.',
+      features: [
+        'PWA architecture and implementation',
+        'Service worker development',
+        'Offline functionality and caching',
+        'Push notifications and background sync',
+        'App-like user experience',
+        'Performance optimization'
+      ],
+      pricing: '$100 – $250/hour',
+      projectPricing: '$20,000 – $80,000/project',
+      timeline: '4–12 weeks',
+      benefits: [
+        'Native app-like experience',
+        'Offline functionality',
+        'Reduced development costs',
+        'Cross-platform compatibility'
+      ],
+      category: 'Development'
+    },
+    {
+      icon: Server,
+      name: 'Hybrid Cloud Management',
+      description: 'Seamless hybrid cloud operations with multi-cloud orchestration and management.',
+      features: [
+        'Multi-cloud strategy and planning',
+        'Hybrid cloud architecture design',
+        'Cloud cost optimization and governance',
+        'Disaster recovery and backup solutions',
+        'Security and compliance management',
+        'Performance monitoring and optimization'
+      ],
+      pricing: '$120 – $280/hour',
+      projectPricing: '$15,000 – $75,000/project',
+      timeline: '4–12 weeks',
+      benefits: [
+        'Flexible cloud deployment',
+        'Reduced vendor lock-in',
+        'Optimized costs and performance',
+        'Enhanced disaster recovery'
+      ],
+      category: 'Cloud & Infrastructure'
+    },
+    {
+      icon: BarChart3,
+      name: 'Real-Time Analytics Platform',
+      description: 'Streaming analytics platform with real-time data processing and visualization.',
+      features: [
+        'Real-time data streaming and processing',
+        'Stream analytics and complex event processing',
+        'Real-time dashboards and visualization',
+        'Machine learning model deployment',
+        'Data pipeline monitoring and alerting',
+        'Scalable architecture design'
+      ],
+      pricing: '$150 – $350/hour',
+      projectPricing: '$35,000 – $120,000/project',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Real-time business insights',
+        'Faster decision making',
+        'Improved operational efficiency',
+        'Enhanced customer experience'
+      ],
+      category: 'Data Management'
+    },
+    {
+      icon: Cpu,
+      name: 'Quantum Computing Integration',
+      description: 'Quantum computing solutions and hybrid quantum-classical system integration.',
+      features: [
+        'Quantum algorithm development',
+        'Hybrid quantum-classical systems',
+        'Quantum machine learning applications',
+        'Quantum cryptography implementation',
+        'Quantum simulation and optimization',
+        'Quantum hardware integration'
+      ],
+      pricing: '$200 – $500/hour',
+      projectPricing: '$50,000 – $300,000/project',
+      timeline: '12–32 weeks',
+      benefits: [
+        'Exponential computational power',
+        'Advanced optimization capabilities',
+        'Enhanced security with quantum cryptography',
+        'Competitive advantage in research'
+      ],
+      category: 'Emerging Technologies'
+    },
+    {
+      icon: TestTube,
+      name: 'AI/ML Model Deployment & MLOps',
+      description: 'End-to-end machine learning operations with model deployment and monitoring.',
+      features: [
+        'ML model deployment and serving',
+        'Model versioning and management',
+        'A/B testing and experimentation',
+        'Model monitoring and drift detection',
+        'Automated retraining pipelines',
+        'MLOps workflow automation'
+      ],
+      pricing: '$150 – $350/hour',
+      projectPricing: '$25,000 – $100,000/project',
+      timeline: '6–16 weeks',
+      benefits: [
+        'Faster model deployment',
+        'Improved model performance',
+        'Automated ML operations',
+        'Reduced operational overhead'
+      ],
+      category: 'AI & Machine Learning'
+    },
+    {
+      icon: BookOpen,
+      name: 'Digital Transformation Consulting',
+      description: 'Strategic digital transformation with technology roadmap and change management.',
+      features: [
+        'Digital strategy and roadmap development',
+        'Technology assessment and selection',
+        'Change management and training',
+        'Process optimization and automation',
+        'Customer experience transformation',
+        'Innovation and R&D strategy'
+      ],
+      pricing: '$200 – $400/hour',
+      projectPricing: '$30,000 – $150,000/project',
+      timeline: '8–24 weeks',
+      benefits: [
+        'Strategic technology alignment',
+        'Improved operational efficiency',
+        'Enhanced customer experience',
+        'Competitive advantage'
+      ],
+      category: 'Consulting'
+    },
+    {
+      icon: Wrench,
+      name: 'AR/VR Development & Integration',
+      description: 'Augmented and virtual reality solutions for training, visualization, and customer engagement.',
+      features: [
+        'AR/VR application development',
+        '3D modeling and animation',
+        'Spatial computing and tracking',
+        'Multi-platform deployment',
+        'User experience design',
+        'Performance optimization'
+      ],
+      pricing: '$120 – $300/hour',
+      projectPricing: '$40,000 – $200,000/project',
+      timeline: '8–24 weeks',
+      benefits: [
+        'Immersive user experiences',
+        'Enhanced training and education',
+        'Improved customer engagement',
+        'Innovative business applications'
+      ],
+      category: 'Emerging Technologies'
     }
   ];
 

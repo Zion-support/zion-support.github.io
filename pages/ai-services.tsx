@@ -187,6 +187,204 @@ export default function AIServices() {
         'Higher average order value',
         'Reduced bounce rates'
       ]
+    },
+    {
+      icon: Brain,
+      name: 'Autonomous AI Agents',
+      description: 'Self-operating AI agents that can perform complex tasks and make decisions autonomously.',
+      features: [
+        'Multi-step task automation',
+        'Decision-making capabilities',
+        'Natural language interaction',
+        'Tool and API integration',
+        'Learning and adaptation',
+        'Error handling and recovery'
+      ],
+      pricing: '$10,000 – $50,000 setup',
+      perUnit: '$0.50 – $5.00 per task',
+      timeline: '8–16 weeks',
+      benefits: [
+        '90% reduction in manual tasks',
+        '24/7 autonomous operation',
+        'Improved task accuracy',
+        'Scalable automation capabilities'
+      ]
+    },
+    {
+      icon: Eye,
+      name: 'Advanced Computer Vision Analytics',
+      description: 'Deep learning computer vision for complex visual analysis and real-time processing.',
+      features: [
+        'Object detection and tracking',
+        'Facial recognition and analysis',
+        'Scene understanding and classification',
+        'Real-time video processing',
+        'Custom model training',
+        'Edge deployment optimization'
+      ],
+      pricing: '$8,000 – $40,000 setup',
+      perUnit: '$0.05 – $0.50 per image',
+      timeline: '6–12 weeks',
+      benefits: [
+        '99.8% accuracy in visual analysis',
+        'Real-time processing capabilities',
+        'Automated quality control',
+        'Enhanced security monitoring'
+      ]
+    },
+    {
+      icon: Database,
+      name: 'Intelligent Data Processing Pipeline',
+      description: 'AI-powered data ingestion, cleaning, and transformation with automated quality assurance.',
+      features: [
+        'Automated data ingestion and validation',
+        'Intelligent data cleaning and deduplication',
+        'Schema detection and mapping',
+        'Data quality scoring and monitoring',
+        'Automated transformation rules',
+        'Real-time data processing'
+      ],
+      pricing: '$5,000 – $25,000 setup',
+      perUnit: '$0.001 – $0.01 per record',
+      timeline: '4–8 weeks',
+      benefits: [
+        '95% reduction in data processing time',
+        'Automated data quality assurance',
+        'Improved data accuracy',
+        'Reduced manual data handling'
+      ]
+    },
+    {
+      icon: TrendingUp,
+      name: 'Advanced Predictive Analytics',
+      description: 'Sophisticated machine learning models for complex business forecasting and optimization.',
+      features: [
+        'Multi-variate time series forecasting',
+        'Causal inference and impact analysis',
+        'Scenario modeling and simulation',
+        'Automated feature engineering',
+        'Model ensemble and optimization',
+        'Real-time prediction updates'
+      ],
+      pricing: '$6,000 – $30,000 setup',
+      perUnit: 'Custom pricing based on complexity',
+      timeline: '6–12 weeks',
+      benefits: [
+        '98% accuracy in predictions',
+        'Automated forecasting processes',
+        'Improved business planning',
+        'Risk mitigation strategies'
+      ]
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Cybersecurity Intelligence',
+      description: 'Advanced threat detection and response using machine learning and behavioral analysis.',
+      features: [
+        'Behavioral anomaly detection',
+        'Threat intelligence and correlation',
+        'Automated incident response',
+        'Zero-day attack detection',
+        'Security orchestration and automation',
+        'Continuous threat monitoring'
+      ],
+      pricing: '$10,000 – $60,000 setup',
+      perUnit: '$0.10 – $1.00 per event',
+      timeline: '8–16 weeks',
+      benefits: [
+        '99.5% threat detection accuracy',
+        'Automated security response',
+        'Reduced false positives',
+        'Enhanced security posture'
+      ]
+    },
+    {
+      icon: Mic,
+      name: 'Conversational AI Platform',
+      description: 'Advanced conversational AI with context awareness and multi-modal interaction.',
+      features: [
+        'Context-aware conversations',
+        'Multi-modal interaction (voice, text, image)',
+        'Emotion recognition and response',
+        'Knowledge graph integration',
+        'Multi-language support',
+        'Conversation analytics and optimization'
+      ],
+      pricing: '$8,000 – $40,000 setup',
+      perUnit: '$0.02 – $0.20 per interaction',
+      timeline: '6–12 weeks',
+      benefits: [
+        '95% conversation success rate',
+        'Natural human-like interactions',
+        'Improved customer satisfaction',
+        'Reduced support costs'
+      ]
+    },
+    {
+      icon: FileText,
+      name: 'Intelligent Document Intelligence',
+      description: 'Advanced document processing with understanding, extraction, and automated workflows.',
+      features: [
+        'Document understanding and classification',
+        'Intelligent data extraction',
+        'Document comparison and analysis',
+        'Automated workflow routing',
+        'Compliance checking and validation',
+        'Multi-format document support'
+      ],
+      pricing: '$4,000 – $20,000 setup',
+      perUnit: '$0.01 – $0.10 per document',
+      timeline: '4–8 weeks',
+      benefits: [
+        '98% accuracy in data extraction',
+        'Automated document processing',
+        'Improved compliance tracking',
+        'Reduced manual document handling'
+      ]
+    },
+    {
+      icon: Search,
+      name: 'Intelligent Search & Discovery Engine',
+      description: 'AI-powered search with semantic understanding, personalization, and intelligent suggestions.',
+      features: [
+        'Semantic search and understanding',
+        'Personalized search results',
+        'Intelligent query suggestions',
+        'Multi-modal search capabilities',
+        'Search analytics and optimization',
+        'Real-time search indexing'
+      ],
+      pricing: '$3,000 – $15,000 setup',
+      perUnit: '$0.001 – $0.01 per search',
+      timeline: '4–8 weeks',
+      benefits: [
+        '90% improvement in search relevance',
+        'Personalized user experience',
+        'Increased content discovery',
+        'Better user engagement'
+      ]
+    },
+    {
+      icon: Cog,
+      name: 'AI-Powered Process Optimization',
+      description: 'Intelligent process mining and optimization using AI to identify bottlenecks and improvements.',
+      features: [
+        'Process discovery and mapping',
+        'Bottleneck identification and analysis',
+        'Automated process optimization',
+        'Performance prediction and simulation',
+        'Resource allocation optimization',
+        'Continuous process improvement'
+      ],
+      pricing: '$5,000 – $25,000 setup',
+      perUnit: '$0.05 – $0.50 per process',
+      timeline: '6–10 weeks',
+      benefits: [
+        '40% improvement in process efficiency',
+        'Automated optimization recommendations',
+        'Reduced operational costs',
+        'Better resource utilization'
+      ]
     }
   ];
 
