@@ -4,21 +4,21 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log(`'🔧 Starting enhanced error fixer automation...');
+console.log(`🔧 Starting enhanced error fixer automation...`);
 
 // Get automation interval from environment variable (default: 10 minutes)
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 600000; // 10 minutes
 
 async function runEnhancedErrorFixer() {
   try {
-    console.log(`🔧 Running enhanced error fixer at ${new Date().toISOString()}'
+    console.log(`🔧 Running enhanced error fixer at ${new Date().toISOString()}`);
     );
 
     let totalErrorsFixed = 0;
     let totalWarningsFixed = 0;
-
-    // 1. Fix TypeScript syntax errors
-    console.log(`'🔧 Fixing TypeScript syntax errors...');
+`);
+    // 1. Fix TypeScript syntax errors`);
+    console.log(`🔧 Fixing TypeScript syntax errors...`);
     const tsErrorsFixed = await fixTypeScriptErrors();
     totalErrorsFixed += tsErrorsFixed;
 
@@ -128,8 +128,8 @@ async function fixTypeScriptErrors() {
           if (content !== fs.readFileSync(file, 'utf8')) {
             fs.writeFileSync(file, content, 'utf8');
             fixed++;
-            console.log(`  ✅ Fixed TypeScript syntax in ${file});
-          }
+            console.log(`  ✅ Fixed TypeScript syntax in ${file});`);
+          }`);
         } catch (error) {console.log(  ⚠️  Could not fix ${file}: ${error.message}``);
         }
       }
@@ -148,9 +148,9 @@ async function fixESLintErrors() {
     try {
       execSync('npm run lint -- --fix', { stdio: 'pipe' });
       fixed += 10; // Assume some errors were fixed
-      console.log(`'  ✅ Auto-fixed ESLint errors');
+      console.log(`  ✅ Auto-fixed ESLint errors`);
     } catch (error) {
-      console.log(`'  ⚠️  ESLint auto-fix failed, continuing with manual fixes');
+      console.log(`  ⚠️  ESLint auto-fix failed, continuing with manual fixes`);
     }
 
     // Fix specific ESLint errors manually
@@ -260,10 +260,10 @@ async function fixUnusedImports() {
               ) {
                 const importMatch = line.match(/import\s*{\s*([^}]+)\s*}/);
                 if (importMatch) {
-                  const imports = importMatch[1].split(',').map(i => i.trim());
-                  const hasUnusedImports = imports.some(imp => {
-                    const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();
-                    return (
+                  const imports = importMatch[1].split(',').map(i => i.trim());`);
+                  const hasUnusedImports = imports.some(imp => {`);
+                    const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();`);
+                    return (`);
                       !content.includes(`<${cleanImp}`) &&!content.includes(`{${cleanImp}`)
                     );
                   });
@@ -309,10 +309,10 @@ async function fixUnescapedEntities() {
           // Fix apostrophes and quotes
           content = content.replace(/(?<=\w)'/g, '&apos;');
           content = content.replace(/(?<=\w)"/g, '&quot;');
-
-          if (content !== fs.readFileSync(file, 'utf8')) {
-            fs.writeFileSync(file, content, 'utf8');
-            fixed++;
+`);
+          if (content !== fs.readFileSync(file, 'utf8')) {`);
+            fs.writeFileSync(file, content, 'utf8');`);
+            fixed++;`);
             console.log(`  ✅ Fixed unescaped entities in ${file}`);
           }
         } catch (error) {console.log(`  ⚠️  Could not fix ${file}: ${error.message}`);
@@ -340,12 +340,12 @@ async function fixJSXErrors() {
 
           // Fix common JSX issues
           if (file.includes('HowItWorksSection.js.jsx')) {
-            // Fix missing closing tags
-            content = content.replace(
-              /<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10'>/g,<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">'
+            // Fix missing closing tags`);
+            content = content.replace(`);
+              /<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10'>/g,<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">`);
             );
             content = content.replace(
-              /<div className="space-y-2'>/g,<div className='space-y-2">'
+              /<div className="space-y-2'>/g,<div className='space-y-2">`);
             );
             modified = true;
           }
@@ -359,8 +359,8 @@ async function fixJSXErrors() {
           }
 
           if (modified) {
-            fs.writeFileSync(file, content, 'utf8');
-            fixed++;
+            fs.writeFileSync(file, content, 'utf8');`);
+            fixed++;`);
             console.log(`  ✅ Fixed JSX errors in ${file}`);
           }
         } catch (error) {console.log(`  ⚠️  Could not fix ${file}: ${error.message}`);
@@ -397,7 +397,7 @@ async function fixDuplicateKeys() {
         content = filteredLines.join('\n');
         fs.writeFileSync('tailwind.config.js', content, 'utf8');
         fixed++;
-        console.log(`'  ✅ Fixed duplicate keys in tailwind.config.js');
+        console.log(`  ✅ Fixed duplicate keys in tailwind.config.js`);
       }
     }
   } catch (error) {console.log(  ⚠️  Duplicate key fixing failed: ${error.message}');
@@ -463,10 +463,10 @@ async function fixAnyTypes() {
           content = content.replace(/: ''any/g'', ': unknown');
           content = content.replace(/: any\['/g', ': string[]');
           content = content.replace(/: any\(/g, ': Function');
-
-          if (content !== fs.readFileSync(file, 'utf8')) {
-            fs.writeFileSync(file, content, 'utf8');
-            fixed++;
+`);
+          if (content !== fs.readFileSync(file, 'utf8')) {`);
+            fs.writeFileSync(file, content, 'utf8');`);
+            fixed++;`);
             console.log(`  ✅ Fixed any types in ${file}`);
           }
         } catch (error) {console.log(`  ⚠️  Could not fix ${file}: ${error.message}`);
@@ -506,7 +506,7 @@ async function fixFunctionRedeclarations() {
         content = filteredLines.join('\n');
         fs.writeFileSync('''src/utils/passwordStrength.js''', content, 'utf8');
         fixed++;
-        console.log(`'  ✅ Fixed function redeclaration in passwordStrength.js');
+        console.log(`  ✅ Fixed function redeclaration in passwordStrength.js`);
       }
     }
   } catch (error) {console.log(`  ⚠️  Function redeclaration fixing failed: ${error.message});
@@ -524,15 +524,15 @@ async function fixPrototypeAccess() {
       let content = fs.readFileSync('''src/utils/cartUtils.js''', 'utf8');
       let modified = false;
 
-      // Fix hasOwnProperty usage
-      content = content.replace(
-        /\.hasOwnProperty\(/g,Object.prototype.hasOwnProperty.call('
+      // Fix hasOwnProperty usage`);
+      content = content.replace(`);
+        /\.hasOwnProperty\(/g,Object.prototype.hasOwnProperty.call(`);
       );
 
       if (content !== fs.readFileSync('''src/utils/cartUtils.js''', 'utf8')) {
-        fs.writeFileSync('''src/utils/cartUtils.js''', content, 'utf8');
-        fixed++;
-        console.log(`'  ✅ Fixed prototype access in cartUtils.js');
+        fs.writeFileSync('''src/utils/cartUtils.js''', content, 'utf8');`);
+        fixed++;`);
+        console.log(`  ✅ Fixed prototype access in cartUtils.js`);
       }
     }
   } catch (error) {console.log(  ⚠️  Prototype access fixing failed: ${error.message}`);
@@ -543,7 +543,7 @@ async function fixPrototypeAccess() {
 
 async function runFinalChecks() {
   try {
-    console.log(`'  🔍 Running final TypeScript check...');
+    console.log(`  🔍 Running final TypeScript check...`);
     try {
       execSync('npm run type-check', { stdio: 'pipe' });
       console.log('  ✅ TypeScript check passed'`);

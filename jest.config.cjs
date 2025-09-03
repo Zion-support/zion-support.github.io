@@ -44,7 +44,7 @@ module.exports = {
     '^@/middleware/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^vitest$': '<rootDir>/tests/__mocks__/vitestMock.js',
     // Special module mocks
-    '^msw/node$': require.resolve('msw/node'),
+    '^msw/node$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^next/router$': 'next-router-mock',
     '^next/navigation$': '<rootDir>/tests/__mocks__/emptyModule.js',
     'react-router-dom$': '<rootDir>/src/stubs/react-router-dom.tsx',

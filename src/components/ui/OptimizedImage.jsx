@@ -1,1 +1,16 @@
-import React, { useState, useRef, useEffect } from 'react' import { cn } from '@/lib/utils' import { motion, AnimatePresence } from 'framer-motion' export function OptimizedImage({ src, alt, width, height, className, placeholder = '/images/placeholder.svg', fallback = '/images/fallback.svg', priority = false, sizes = '100vw', loading = 'lazy', onLoad, onError, aspectRatio = 'auto', objectFit = 'cover', blur = false, quality = 75 }) {} const [isLoaded, setIsLoaded] = useState(false) const [hasError, setHasError] = useState(false) const [isInView, setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)';';"
+<<<<<<< HEAD
+import React, {useState, useRef, useEffect } from 'react' ;
+import {cn } from '@/lib/utils' import {motion, AnimatePresence } from 'framer-motion' export function OptimizedImage({src, alt, width, height, className, placeholder = '/images/placeholder.svg', fallback = '/images/fallback.svg', priority = false, sizes = '100vw', loading = 'lazy', onLoad, onError, aspectRatio = 'auto', objectFit = 'cover', blur = false, quality = 75 }) {} const [isLoaded, setIsLoaded] = useState(false) const [hasError, setHasError] = useState(false) const [isInView, setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)';';"
+=======
+<<<<<<< HEAD
+import React, { useState, useRef, useEffect } from &apos;react&apos; import { cn } from &apos;@/lib/utils&apos; import { motion, AnimatePresence } from &apos;framer-motion&apos;&apos;' export function OptimizedImage({ src, alt, width, height, className, placeholder = &apos;/images/placeholder.svg&apos;, fallback = &apos;/images/fallback.svg&apos;, priority = false, sizes = &apos;100vw&apos;, loading = &apos;lazy&apos;, onLoad, onError, aspectRatio = &apos;auto&apos;, objectFit = &apos;cover&apos;, blur = false, quality = 75 }) {}&apos; const [isLoaded, setIsLoaded] = useState(false) const [hasError, setHasError] = useState(false) const [isInView, setIsInView] = useState(priority) const;const;const imgRef = useRef(null) ;const observerRef = useRef(null)';';&apos;'
+=======
+<<<<<<< HEAD
+import React, { useState, useRef, useEffect } from 'react' import { cn } from '@/lib/utils' import { motion, AnimatePresence } from 'framer-motion' export function OptimizedImage({ src, alt, width, height, className, placeholder = '/images/placeholder.svg', fallback = '/images/fallback.svg', priority = false, sizes = '100vw', loading = 'lazy', onLoad, onError, aspectRatio = 'auto', objectFit = 'cover', blur = false, quality = 75 }) {} const [isLoaded, setIsLoaded] = useState(false) const [hasError, setHasError] = useState(false) const [isInView, setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null)';';""
+""
+=======
+import React, { useState, useRef, useEffect } from 'react' import { cn } from '@/lib/utils' import { motion, AnimatePresence }  from 'framer-motion';export function OptimizedImage({ src, alt, width, height, className, placeholder = '/images/placeholder.svg', fallback = '/images/fallback.svg', priority = false, sizes = '100vw', loading = 'lazy', onLoad, onError, aspectRatio = 'auto', objectFit = 'cover', blur = false, quality = 75 }) {} const [isLoaded, setIsLoaded] = useState(false) const [hasError, setHasError] = useState(false) const [isInView, setIsInView] = useState(priority) const imgRef = useRef(null) const observerRef = useRef(null);"
+"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

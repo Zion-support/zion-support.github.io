@@ -360,7 +360,7 @@ this.log(`✅ Master error fixer completed successfully. Total fixes: ${totalFix
 // Main continuous loop
 async function runContinuous() {
   const masterErrorFixer = new MasterErrorFixer();
-  console.log(`🚀 Starting master error fixer with ${masterErrorFixer.AUTOMATION_INTERVAL / 1000 / 60} minute intervals'
+  console.log(`🚀 Starting master error fixer with ${masterErrorFixer.AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   );
 
   // Run initial error fixer
@@ -370,8 +370,8 @@ async function runContinuous() {
   setInterval(async () => {
     await masterErrorFixer.runMasterErrorFixer();
   }, masterErrorFixer.AUTOMATION_INTERVAL);
-
-  console.log( ✅ Master error fixer running. Next check in ${masterErrorFixer.AUTOMATION_INTERVAL / 1000 / 60} minutes
+`);
+  console.log( ✅ Master error fixer running. Next check in ${masterErrorFixer.AUTOMATION_INTERVAL / 1000 / 60} minutes`);
   `);
 }
 

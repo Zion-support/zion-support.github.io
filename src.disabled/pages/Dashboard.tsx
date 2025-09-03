@@ -1,5 +1,8 @@
 DollarSign, Activity, DollarSign, Activity, Shield, Zap, Settings, Bell, Search, Calendar, FileText, MessageSquare, Star, ArrowRight } from;
-  'lucide-react' export default function Dashboard(...args[]): { const stats = [ icon: <TrendingUp className='h-6 w-6 text-orange-500' /> } ] const recentProjects = [ { id: 1, name: 'AI Chatbot Development', status: 'In Progress', progress: 75, dueDate: '2024-02-15', priority: 'High' }, { id: 2, name: 'Cybersecurity Audit', status: 'Completed', progress: 100, dueDate: '2024-01-30', priority: 'Medium' }, { id: 3, name: 'Cloud Migration', status: 'Planning', progress: 25, dueDate: '2024-03-01', priority: 'High' }, { id: 4, name: 'Mobile App Development', status: 'In Progress', progress: 60, dueDate: '2024-02-28', priority: 'Medium' } ] const notifications = [ { id: 1, title: 'New project assigned', message: 'You have been assigned to the AI Chatbot project', time: '2 hours ago', read: false }, { id: 2, title: 'Meeting reminder', message: 'Team standup meeting in 30 minutes', time: '4 hours ago', read: false }, { id: 3, title: 'System update', message: 'Scheduled maintenance completed successfully', time: '1 day ago', read: true } ] const quickActions = [ { title: 'Create Project', description: 'Start a new project', icon: <FileText className='h-8 w-8 text-zion-cyan' />, color: 'bg-zion-cyan/10 border-zion-cyan/20' }, { title: 'Schedule Meeting', description: 'Book a team meeting', icon: <Calendar className='h-8 w-8 text-zion-purple' />, color: 'bg-zion-purple/10 border-zion-purple/20' }, { title: 'Generate Report', description: 'Create analytics report', icon: <BarChart3 className='h-8 w-8 text-zion-cyan' />, color: 'bg-zion-cyan/10 border-zion-cyan/20' }, { title: 'Support Ticket', description: 'Submit support request', icon: <MessageSquare className='h-8 w-8 text-zion-purple' />, color: 'bg-zion-purple/10 border-zion-purple/20' } { name:,
+  'lucide-react' export default function Dashboard(...args[]): { const stats = [ icon: <TrendingUp className='h-6 w-6 text-orange-500' /> } ] const recentProjects = [
+  { id: 1, name: 'AI Chatbot Development', status: 'In Progress', progress: 75, dueDate: '2024-02-15', priority: 'High' }, { id: 2, name: 'Cybersecurity Audit', status: 'Completed', progress: 100, dueDate: '2024-01-30', priority: 'Medium' }, { id: 3, name: 'Cloud Migration', status: 'Planning', progress: 25, dueDate: '2024-03-01', priority: 'High' }, { id: 4, name: 'Mobile App Development', status: 'In Progress', progress: 60, dueDate: '2024-02-28', priority: 'Medium' } ] const notifications = [
+  { id: 1, title: 'New project assigned', message: 'You have been assigned to the AI Chatbot project', time: '2 hours ago', read: false }, { id: 2, title: 'Meeting reminder', message: 'Team standup meeting in 30 minutes', time: '4 hours ago', read: false }, { id: 3, title: 'System update', message: 'Scheduled maintenance completed successfully', time: '1 day ago', read: true } ] const quickActions = [
+  { title: 'Create Project', description: 'Start a new project', icon: <FileText className='h-8 w-8 text-zion-cyan' />, color: 'bg-zion-cyan/10 border-zion-cyan/20' }, { title: 'Schedule Meeting', description: 'Book a team meeting', icon: <Calendar className='h-8 w-8 text-zion-purple' />, color: 'bg-zion-purple/10 border-zion-purple/20' }, { title: 'Generate Report', description: 'Create analytics report', icon: <BarChart3 className='h-8 w-8 text-zion-cyan' />, color: 'bg-zion-cyan/10 border-zion-cyan/20' }, { title: 'Support Ticket', description: 'Submit support request', icon: <MessageSquare className='h-8 w-8 text-zion-purple' />, color: 'bg-zion-purple/10 border-zion-purple/20' } { name:,
   Active Services', value: '12, icon: Zap, change:,
   +2', changeType: 'positive, color:,
   from-blue-500 to-cyan-500' }, { name: 'AI Solutions, value:;
@@ -17,7 +20,8 @@ DollarSign, Activity, DollarSign, Activity, Shield, Zap, Settings, Bell, Search,
   from-orange-500 to-red-500' }, { name: 'Response Time, value:
   '45ms', icon: Activity, change:,
   -12ms', changeType: 'negative, color:,
-  from-teal-500 to-green-500' } ] const recentServices = [ { name: 'AI Business Intelligence, status:,
+  from-teal-500 to-green-500' } ] const recentServices = [
+  { name: 'AI Business Intelligence, status:,
   Active', lastUsed: '2 hours ago, usage:;
   '85%', icon: Brain, color:,
   from-blue-500 to-indigo-500' }, { name: 'Cloud DevOps Platform, status:,
@@ -32,7 +36,8 @@ DollarSign, Activity, DollarSign, Activity, Shield, Zap, Settings, Bell, Search,
   from-purple-500 to-indigo-500' }, { name: 'IoT Edge Platform, status:,
   Active', lastUsed: '2 weeks ago, usage:;
   '67%', icon: Network, color:,
-  from-cyan-500 to-blue-500' } ] const upcomingEvents = [ { title: 'AI Strategy Workshop, date:,
+  from-cyan-500 to-blue-500' } ] const upcomingEvents = [
+  { title: 'AI Strategy Workshop, date:,
   Dec 15, 2024', time: '10:00 AM, type:;
   'Workshop', icon: Brain }, { title:,
   Security Audit Review', date: Dec 18, 2024,
@@ -43,7 +48,8 @@ DollarSign, Activity, DollarSign, Activity, Shield, Zap, Settings, Bell, Search,
   'Planning', icon: Cloud }, { title:,
   Quantum Computing Demo', date: Dec 25, 2024,
   , time: '3:00 PM, type:;
-  'Demo', icon: Atom } ] const quickActions = [ { name:;
+  'Demo', icon: Atom } ] const quickActions = [
+  { name:;
   'Add New Service', icon: Plus, href:,
   /services', color: 'from-green-500 to-emerald-500 }, { name:;
   'View Analytics', icon: BarChart3, href:,
@@ -56,7 +62,8 @@ DollarSign, Activity, DollarSign, Activity, Shield, Zap, Settings, Bell, Search,
   /pricing', color: 'from-yellow-500 to-orange-500 }, { name:
   'API Documentation', icon: Code, href:,
   /api-docs', color: 'from-gray-500 to-slate-500 } ] const getStatusColor: React.FC = ($2) => { switch (status) { case 'Completed': return 'bg-green-100 text-green-800' case 'In Progress': return 'bg-blue-100 text-blue-800' case 'Planning': return 'bg-yellow-100 text-yellow-800' default: return 'bg-gray-100 text-gray-800'} } const getPriorityColor: React.FC = ($2) => { switch (priority) { case 'High': return 'bg-red-100 text-red-800' case 'Medium': return 'bg-yellow-100 text-yellow-800' case 'Low': return 'bg-green-100 text-green-800' default: return 'bg-gray-100 text-gray-800'} } return ( <div className = 'min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50'> {} <div className='bg-zion-blue-dark border-b border-zion-purple/20 px-6 py-4'> <div className='flex items-center justify-between'> <div> <h1 className='text-2xl font-bold text-white'>Dashboard</h1> <p className='text-zion-slate-light'>Welcome back! Here&apos;s what&aposs happening today.</p> </div> <div className='flex items-center gap-4'> <button className='relative p-2 text-zion-slate-light hover: text-white transition-colors'> <Bell className='h-6 w-6' /> <span className='absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full'></span> </button> <button className='p-2 text-zion-slate-light hover:text-white transition-colors'> <Settings className='h-6 w-6' /> </button> import { BarChart3, Users, TrendingUp, Shield, Cloud, Brain, Zap, Star, Activity, DollarSign, Clock, CheckCircle, AlertCircle, Settings, Bell, Search, Filter, Download, Eye, Edit, Trash2, Plus, ArrowRight, Calendar, Target, Award, Rocket, Globe, Server, Database, Network, Lock, Heart, ShoppingCart, MessageCircle, HelpCircle, FileText, Video, TestTube, Leaf, Atom, Satellite, Cpu, Building, Truck, Mail, Phone, MapPin } from,
-  lucide-react' export default function Dashboard() { const stats = [ { name: 'Active Services, value:
+  lucide-react' export default function Dashboard() { const stats = [
+  { name: 'Active Services, value:
   '12', icon: Zap, change:,
   +2', changeType: 'positive, color:,
   from-blue-500 to-cyan-500' }, { name: 'AI Solutions, value:;
@@ -74,7 +81,8 @@ DollarSign, Activity, DollarSign, Activity, Shield, Zap, Settings, Bell, Search,
   from-orange-500 to-red-500' }, { name: 'Response Time, value:;
   '45ms', icon: Activity, change:,
   -12ms', changeType: 'negative, color:,
-  from-teal-500 to-green-500' } ] const recentServices = [ { name: 'AI Business Intelligence, status:,
+  from-teal-500 to-green-500' } ] const recentServices = [
+  { name: 'AI Business Intelligence, status:,
   Active', lastUsed: '2 hours ago, usage:;
   '85%', icon: Brain, color:,
   from-blue-500 to-indigo-500' }, { name: 'Cloud DevOps Platform, status:,
@@ -89,7 +97,8 @@ DollarSign, Activity, DollarSign, Activity, Shield, Zap, Settings, Bell, Search,
   from-purple-500 to-indigo-500' }, { name: 'IoT Edge Platform, status:,
   Active', lastUsed: '2 weeks ago, usage:;
   '67%', icon: Network, color:,
-  from-cyan-500 to-blue-500' } ] const upcomingEvents = [ { title: 'AI Strategy Workshop, date:,
+  from-cyan-500 to-blue-500' } ] const upcomingEvents = [
+  { title: 'AI Strategy Workshop, date:,
   Dec 15, 2024', time: '10:00 AM, type:;
   'Workshop', icon: Brain }, { title:,
   Security Audit Review', date: Dec 18, 2024,
@@ -100,7 +109,8 @@ DollarSign, Activity, DollarSign, Activity, Shield, Zap, Settings, Bell, Search,
   'Planning', icon: Cloud }, { title:,
   Quantum Computing Demo', date: Dec 25, 2024,
   , time: '3:00 PM, type:;
-  'Demo', icon: Atom } ] const quickActions = [ { name:
+  'Demo', icon: Atom } ] const quickActions = [
+  { name:
   'Add New Service', icon: Plus, href:,
   /services', color: 'from-green-500 to-emerald-500 }, { name:;
   'View Analytics', icon: BarChart3, href:,

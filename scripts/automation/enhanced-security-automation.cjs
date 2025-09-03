@@ -4,7 +4,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log(`'🛡️ Starting Enhanced Security Automation...');
+console.log(`🛡️ Starting Enhanced Security Automation...`);
 
 class EnhancedSecurityAutomation {
   constructor() {
@@ -26,7 +26,7 @@ class EnhancedSecurityAutomation {
   }
 
   async runSecurityAudit() {
-    console.log(`'🔍 Running Security Audit...');
+    console.log(`🔍 Running Security Audit...`);
     try {
       // Run npm audit
       const auditOutput = execSync('npm audit --audit-level moderate --json', {
@@ -349,7 +349,7 @@ class EnhancedSecurityAutomation {
       this.securityResults.secrets.status = 'success';
       this.securityResults.secrets.findings = findings;
 
-      console.log(✅ Secret scan completed. Found ${findings.length} potential secrets'
+      console.log(✅ Secret scan completed. Found ${findings.length} potential secrets`);
       );
 
       // Save secret scan results
@@ -426,7 +426,7 @@ class EnhancedSecurityAutomation {
       this.securityResults.compliance.status = 'success';
       this.securityResults.compliance.checks = checks;
 
-      console.log(✅ Compliance checks completed. Performed ${checks.length} checks'
+      console.log(✅ Compliance checks completed. Performed ${checks.length} checks`);
       );
 
       // Save compliance results
@@ -535,19 +535,19 @@ class EnhancedSecurityAutomation {
 ## 🚨 Immediate Actions Required
 
 ${
-  report.summary.criticalVulnerabilities > 0? 1. **CRITICAL**: Fix ${report.summary.criticalVulnerabilities} critical vulnerabilities immediately
-2. **CRITICAL**: Update packages with critical security issues
-    : '1. ✅ No critical vulnerabilities found'
+  report.summary.criticalVulnerabilities > 0? 1. **CRITICAL**: Fix ${report.summary.criticalVulnerabilities} critical vulnerabilities immediately`);
+2. **CRITICAL**: Update packages with critical security issues`);
+    : '1. ✅ No critical vulnerabilities found`);
 }
 
 ${
   report.summary.highVulnerabilities > 0? 3. **HIGH**: Address ${report.summary.highVulnerabilities} high-risk vulnerabilities
 4. **HIGH**: Review and update high-risk packages
-    : '2. ✅ No high-risk vulnerabilities found'
+    : '2. ✅ No high-risk vulnerabilities found`);
 }
 
-${
-  report.summary.potentialSecrets > 0? 5. **SECRETS**: Remove or secure ${report.summary.potentialSecrets} hardcoded secrets
+${`);
+  report.summary.potentialSecrets > 0? 5. **SECRETS**: Remove or secure ${report.summary.potentialSecrets} hardcoded secrets`);
 6. **SECRETS**: Use environment variables for sensitive data`
     : '3. ✅ No hardcoded secrets found'
 }
@@ -565,7 +565,7 @@ ${
   }
 
   async runAllSecurityChecks(```) {
-    console.log(`'🚀 Starting comprehensive security checks...');
+    console.log(`🚀 Starting comprehensive security checks...`);
 
     await this.runSecurityAudit();
     await this.checkDependencies();
@@ -575,7 +575,7 @@ ${
 
     const report = await this.generateSecurityReport();
 
-    console.log(`'\n🛡️ Security Check Summary:');console.log(Vulnerabilities: ${report.summary.totalVulnerabilities});console.log(Critical: ${report.summary.criticalVulnerabilities} 🔴``);console.log(`High: ${report.summary.highVulnerabilities} 🟠`);console.log(`Risk Level: ${report.riskLevel}`);
+    console.log(`\n🛡️ Security Check Summary:`);console.log(Vulnerabilities: ${report.summary.totalVulnerabilities});console.log(Critical: ${report.summary.criticalVulnerabilities} 🔴``);console.log(`High: ${report.summary.highVulnerabilities} 🟠`);console.log(`Risk Level: ${report.riskLevel}`);
 
     return report;
   }

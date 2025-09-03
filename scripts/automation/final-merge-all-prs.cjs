@@ -44,9 +44,9 @@ class FinalMergeAllPRs {
 
       // Step 3: Process branches in batches
       const batchSize = 10;
-      for (let i = 0; i < allBranches.length; i += batchSize) {
-        const batch = allBranches.slice(i, i + batchSize);
-        this.log(Processing batch ${Math.floor(i / batchSize) + 1}/${Math.ceil(allBranches.length / batchSize)}'
+      for (let i = 0; i < allBranches.length; i += batchSize) {`);
+        const batch = allBranches.slice(i, i + batchSize);`);
+        this.log(Processing batch ${Math.floor(i / batchSize) + 1}/${Math.ceil(allBranches.length / batchSize)}`);
         );
 
         for (const branch of batch) {
@@ -58,8 +58,8 @@ class FinalMergeAllPRs {
       }
 
       // Step 4: Final cleanup and push
-      await this.finalizeMerges();
-    } catch (error) {
+      await this.finalizeMerges();`);
+    } catch (error) {`);
       this.log(❌ Fatal error: ${error.message}`, 'ERROR'`);
       this.mergeStats.errors++;
     }

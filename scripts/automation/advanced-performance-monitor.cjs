@@ -14,15 +14,15 @@ class AdvancedPerformanceMonitor {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'advanced-performance-monitor.log'
     );
     this.performanceLog = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'performance-metrics.json'
     );
     this.alertsLog = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'performance-alerts.json'
     );
     this.ensureLogsDirectory();
@@ -298,7 +298,7 @@ class AdvancedPerformanceMonitor {
   async getBuildMetrics() {
     try {
       const buildLogPath = path.join(
-        this.projectRoot,logs',
+        this.projectRoot, 'logs',
         'build-performance.json'
       );
       if (fs.existsSync(buildLogPath)) {
