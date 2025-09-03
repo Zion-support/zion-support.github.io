@@ -82,7 +82,7 @@ function Header(): any {
             style={{
               background: 'none', border: 'none', color: 'white', fontSize: '1.2rem',
               cursor: 'pointer', padding: '6px', borderRadius: 4
-            }}
+            }
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle mobile menu"
             aria-expanded={mobileMenuOpen}
