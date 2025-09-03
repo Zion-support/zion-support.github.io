@@ -1,16 +1,25 @@
 User-agent: *
 Allow: /
 
-# Sitemap
+<<<<<<< HEAD
+Sitemap: https://bolt.new.zion.app/sitemap.xml
+=======
 Sitemap: https://ziontechgroup.com/sitemap.xml
+>>>>>>> main
 
-# Crawl-delay
-Crawl-delay: 1
-
-# Disallow admin and private areas
+# Block access to admin areas
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
+<<<<<<< HEAD
+Disallow: /private/
+
+# Allow access to important pages
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /contact
+=======
 Disallow: /automation/
 Disallow: /scripts/
 Disallow: /error-reports/
@@ -24,3 +33,4 @@ Allow: /services
 Allow: /contact
 Allow: /blog
 Allow: /careers
+>>>>>>> main

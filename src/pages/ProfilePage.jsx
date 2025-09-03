@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage () {;,"});,"})
+}"});,"})
+=======
+<<<<<<< HEAD
+ import: { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage () {;
+};
+=======
+<<<<<<< HEAD
+ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage () {;
+}
+=======
+<<<<<<< HEAD
+ import {MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage ()   {,;
+};
+=======
+<<<<<<< HEAD
+ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2} export default ;function ProfilePage () {
+};
+=======
+<<<<<<< HEAD
+ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage () {,;, };
+=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
@@ -28,5 +51,11 @@ const ProfilePage = () => {
     </div>
   );
 };
+>>>>>>> main
 
 export default ProfilePage;
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

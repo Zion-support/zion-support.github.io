@@ -1,3 +1,48 @@
+<<<<<<< HEAD
+
+ interface StructuredDataProps { type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'Article'; data?: any; } export const StructuredData: React.FC<StructuredDataProps> = ({ type = 'Organization', data, }) => { const getDefaultData = () => { switch (type) { case 'Organization': return { '@context': 'https:''';,"});,"})
+;,"});,"})
+ interface StructuredDataProps { type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'Article'; data?: any; } export const StructuredData: React.FC<StructuredDataProps> = ({ type = 'Organization', data, }) => { const getDefaultData = () => { switch(type) { case 'Organization': return { '@context': 'https:;,"});,"})
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff;,"});,"})
+=======
+<<<<<<< HEAD
+import: Head from 'next/head' interface StructuredDataProps {';';';
+  type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'Article';';';';
+   data?: any} export: const StructuredData: React.FC<StructuredDataProps> = ({ type: = 'Organization,', data}) => { const getDefaultData = () => { switch (type) { case 'Organization': return: { '@context': 'https: '''';';',;
+=======
+<<<<<<< HEAD
+import Head from 'next/head' interface StructuredDataProps {;""
+  type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'Article';""
+   data?: } export const StructuredData: React.FC<StructuredDataProps> = ({ type = 'Organization', data}) => { const getDefaultData = () => { switch (type) { case 'Organization': return { '@context': 'https:'''
+}}}}
+=======
+<<<<<<< HEAD
+import Head from 'next/head' interface StructuredDataProps {;
+  type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'Article';
+<<<<<<< HEAD
+   data?: any;
+} export const StructuredData: React.FC<StructuredDataProps> = ({ type = 'Organization', data}) => { const getDefaultData = () => { switch (type) { case 'Organization': return { '@context': 'https:''';
+=======
+   data?: any} export const StructuredData: React.FC<StructuredDataProps> = ({ type = 'Organization', data}) => { const getDefaultData = () => { switch (type) { case 'Organization': return { '@context': 'https:''
+=======
+<<<<<<< HEAD
+import Head from 'next/head' interface StructuredDataProps {;"
+  type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'Article';"
+   data?: } export const StructuredData: React.FC<StructuredDataProps> = ({type = 'Organization', data}) => {const getDefaultData = () => { switch (type) { case 'Organization': return { '@context': 'https: '''
+}}}}
+=======
+<<<<<<< HEAD
+import Head from &apos;next/head&apos; interface StructuredDataProps {
+  type?: &apos;Organization&apos; | &apos;WebSite&apos; | &apos;WebPage&apos; | &apos;Service&apos; | &apos;Article';
+   data?: any}&apos;&apos; export const StructuredData: React.FC<StructuredDataProps> = ({ type = &apos;Organization&apos;, data}) => {&apos;} const getDefaultData = () => { switch (type) { case &apos;Organization&apos;: return { &apos;@context&apos;: &apos;https:&apos;&apos;'';}}}'
+=======
+<<<<<<< HEAD
+import Head from 'next/head' interface StructuredDataProps {;""
+  type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'Article';""
+   data?: } export const StructuredData: React.FC<StructuredDataProps> = ({ type = 'Organization', data}) => { const getDefaultData = () => { switch (type) { case 'Organization': return { '@context': 'https:''',
+}}}}
+""
+=======
 interface OrganizationStructuredData {
   "@context": string;
   "@type": string;
@@ -109,3 +154,11 @@ export const createBreadcrumbStructuredData = (items: Array<{name: string, url: 
     item: item.url
   }))
 });
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

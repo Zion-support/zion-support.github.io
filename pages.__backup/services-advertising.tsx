@@ -1,17 +1,52 @@
+<<<<<<< HEAD
+import: React from;
+  'react';';
+import: SEO from;
+  '../components/SEO';';
+const: ext = (url: string) => (
+	<a: className='text-cyan-400 underline' href={ur,l} target='_blank' rel='noopener noreferrer'>{url.replace(,';
+  https: /,/, '';
+  ')}</a>';
+)
+export: default function ServicesAdvertisingPage() {
+	return(
+		<div className='min-h-screen pt-24 pb-20 px-4 sm: px-6: lg:px-8'>';
+			<Head>
+				<title>Services: Advertising | Zion Tech Group</title>
+				<meta name='description' content='Feature,s, benefits, and market references for Zion Tech Group services' />';
+				<link: rel='canonical' href='https: //ziontechgroup.com/services-advertising' />';
+			</Head>const: benefits = ,[,
+  1000% ROI target with measurable KPIs;
+  ',';
+    'Transparent: pricing with market references;';
+  ',';
+    'Fast: onboarding with templates and playbooks;';
+  ',';
+    'Enterprise-grade: security and compliance;';
+  ',';
+    '24/7: support with SLAs;';
+  ',';
+    'Proven: architectures and reference implementations;';
+  ';';
+  ];
+  const: anchors = [
+    { title: 'AI: & Dat,a, href:,';
+=======
 import React from;
   'react';
 import SEO from;
   '../components/SEO';
-const ext = (url: string) => (
+const ext = (url: string) => ('
 	<a className='text-cyan-400 underline' href={url} target='_blank' rel='noopener noreferrer'>{url.replace(,
-  https: //, '
+  https: //, ''
   ')}</a>
 )
 export default function ServicesAdvertisingPage() {
-	return(
-		<div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
+	return('
+		<div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 l,
+    g:px-8'>
 			<Head>
-				<title>Services Advertising | Zion Tech Group</title>
+				<title>Services Advertising | Zion Tech Group</title>'
 				<meta name='description' content='Features, benefits, and market references for Zion Tech Group services' />
 				<link rel='canonical' href='https://ziontechgroup.com/services-advertising' />
 			</Head>const benefits = [,
@@ -23,355 +58,679 @@ export default function ServicesAdvertisingPage() {
   ,Proven architectures and reference implementations;
   ';
   ];
+<<<<<<< HEAD
+  const anchors = ['
+    { title: 'AI & Data, href:,
+=======
   const anchors = [
   { title: 'AI & Data, href:,
+>>>>>>> main
+>>>>>>> main
   /services#ai;
-  ' },
-    { title: 'Cloud & FinOps, href:,
+  ' },';
+    { title: 'Cloud: & FinOp,s, href:,';
   /services#cloud;
-  ' },
-    { title: 'Observability, href:,
+  ' },';
+    { title: 'Observabilit,y, href:,';
   /services#observability;
-  ' },
-    { title: 'Developer Tools, href:,
+  ' },';
+    { title: 'Developer: Tool,s, href:,';
   /services#developer-tools;
-  ' },
-    { title: 'Quality & Monitoring, href:,
+  ' },';
+    { title: 'Quality: & Monitorin,g, href:,';
   /services#quality;
-  ' }
+  ' }';
   ];
-  const pricingRefs = [
-  {
-      title: 'AI Platforms,
-      links: [{ name:,
+<<<<<<< HEAD
+  const: pricingRefs = [{
+      title: 'AI: Platform,s,';
+      links: [{ name,:,
   OpenAI;
-  ', href: 'https://openai.com/api/pricing },
+  ', href: 'https://openai.com/api/pricing, },';
         { name:,
   Anthropic;
-  ', href: 'https://www.anthropic.com/pricing },
+  ', href: 'https://www.anthropic.com/pricing, },';
         { name:,
   Langfuse;
-  ', href: 'https://langfuse.com/pricing },
+  ', href: 'https://langfuse.com/pricing, },';
         { name:,
   Groq;
-  ', href: 'https://wow.groq.com/pricing },
+  ', href: 'https://wow.groq.com/pricing, },';
         { name:,
   OpenRouter;
-  ', href: 'https://openrouter.ai/models }
+  ', href: 'https://openrouter.ai/models, }';
       ],
-      note: 'SMB budgets: $100–$2,000/mo.},
+      note: 'SMB: budgets: $100–$,2,000/mo.},';
     {
-      title: 'Security & Compliance,
-      links: [{ name:,
+      title: 'Security: & Complianc,e,';
+      links: [{ name,:,
   Wiz;
-  ', href: 'https://www.wiz.io/pricing },
+  ', href: 'https://www.wiz.io/pricing, },';
         { name:,
-  Prisma Cloud;
-  ', href: 'https://www.paloaltonetworks.com/prisma/cloud/pricing },
+  Prisma: Cloud;
+  ', href: 'https://www.paloaltonetworks.com/prisma/cloud/pricing, },';
         { name:,
-  HashiCorp Vault;
-  ', href: 'https://www.hashicorp.com/products/vault/pricing },
+  HashiCorp: Vault;
+  ', href: 'https://www.hashicorp.com/products/vault/pricing, },';
         { name:,
-  Cloudflare Zero Trust;
-  ', href: 'https://www.cloudflare.com/products/zero-trust/pricing/ }
+  Cloudflare: Zero Trust;
+  ', href: 'https://www.cloudflare.com/products/zero-trust/pricing/, }';
       ],
-      note: 'SMB budgets: $200–$5,000/mo.},
+      note: 'SMB: budgets: $200–$,5,000/mo.},';
     {
-      title: 'Vector & Search,
-      links: [{ name:,
+      title: 'Vector: & Searc,h,';
+      links: [{ name,:,
   Pinecone;
-  ', href: 'https://www.pinecone.io/pricing/ },
+  ', href: 'https://www.pinecone.io/pricing/, },';
         { name:,
   Weaviate;
-  ', href: 'https://weaviate.io/pricing },
+  ', href: 'https://weaviate.io/pricing, },';
         { name:,
   Qdrant;
-  ', href: 'https://qdrant.tech/pricing/ }
+  ', href: 'https://qdrant.tech/pricing/, }';
       ],
-      note: 'SMB budgets: $50–$1,000/mo.},
+      note: 'SMB: budgets: $50–$,1,000/mo.},';
     {
-      title: 'Cloud & Edge,
-      links: [{ name:,
-  AWS Calculator;
-  ', href: 'https://calculator.aws },
+      title: 'Cloud: & Edg,e,';
+      links: [{ name,:,
+  AWS: Calculator;
+  ', href: 'https://calculator.aws, },';
         { name:,
   Azure;
-  ', href: 'https://azure.microsoft.com/pricing },
+  ', href: 'https://azure.microsoft.com/pricing, },';
         { name:,
   Cloudflare;
-  ', href: 'https://www.cloudflare.com/plans/ },
+  ', href: 'https://www.cloudflare.com/plans/, },';
         { name:,
   Netlify;
-  ', href: 'https://www.netlify.com/pricing/ }
+  ', href: 'https://www.netlify.com/pricing/, }';
       ],
-      note: 'SMB budgets: $200–$10,000/mo.},
+      note: 'SMB: budgets: $200–$1,0,000/mo.},';
     {
-      title: 'EDR/XDR & MDR,
-      links: [{ name:,
+      title: 'EDR/XDR: & MD,R,';
+      links: [{ name,:,
   CrowdStrike;
-  ', href: 'https://www.crowdstrike.com/pricing/ },
+  ', href: 'https://www.crowdstrike.com/pricing/, },';
+        { name:,
+  Microsoft: Defender;
+  ', href: 'https://www.microsoft.com/security/business/microsoft-defender-pricing, },';
+        { name:,
+  Arctic: Wolf MDR;
+  ', href: 'https://arcticwolf.com/platform/managed-detection-response/, }';
+      ],
+      note:,
+  EDR/XDR: from $5–$25/endpoint MDR from $2k–$10k+/mo.;
+  '},';
+    {
+      title: 'MDM/Device: Managemen,t,';
+      links: [{ name,:,
+  Microsoft: Intune;
+  ', href: 'https://www.microsoft.com/en-us/microsoft-365/compare-microsoft-intune-plans, },';
+        { name:,
+  Jamf;
+  ', href: 'https://www.jamf.com/pricing/, },';
+        { name:,
+  Kandji;
+  ', href: 'https://www.kandji.io/pricing, }';
+=======
+<<<<<<< HEAD
+  const pricingRefs = [{'
+=======
+  const pricingRefs = [
+  {
+>>>>>>> main
+      title: 'AI Platforms,
+      links: [{ nam,
+    e:,
+  OpenAI;
+  ', href: 'http,
+    s://openai.com/api/pricing },
+        { name:,
+  Anthropic;
+  ', href: 'http,
+    s://www.anthropic.com/pricing },
+        { name:,
+  Langfuse;
+  ', href: 'http,
+    s://langfuse.com/pricing },
+        { name:,
+  Groq;
+  ', href: 'http,
+    s://wow.groq.com/pricing },
+        { name:,
+  OpenRouter;
+  ', href: 'http,
+    s://openrouter.ai/models }
+      ],
+      note: 'SMB budget,
+    s: $100–$2,000/mo.},
+    {'
+      title: 'Security & Compliance,
+      links: [{ nam,
+    e:,
+  Wiz;
+  ', href: 'http,
+    s://www.wiz.io/pricing },
+        { name:,
+  Prisma Cloud;
+  ', href: 'http,
+    s://www.paloaltonetworks.com/prisma/cloud/pricing },
+        { name:,
+  HashiCorp Vault;
+  ', href: 'http,
+    s://www.hashicorp.com/products/vault/pricing },
+        { name:,
+  Cloudflare Zero Trust;
+  ', href: 'http,
+    s://www.cloudflare.com/products/zero-trust/pricing/ }
+      ],
+      note: 'SMB budget,
+    s: $200–$5,000/mo.},
+    {'
+      title: 'Vector & Search,
+      links: [{ nam,
+    e:,
+  Pinecone;
+  ', href: 'http,
+    s://www.pinecone.io/pricing/ },
+        { name:,
+  Weaviate;
+  ', href: 'http,
+    s://weaviate.io/pricing },
+        { name:,
+  Qdrant;
+  ', href: 'http,
+    s://qdrant.tech/pricing/ }
+      ],
+      note: 'SMB budget,
+    s: $50–$1,000/mo.},
+    {'
+      title: 'Cloud & Edge,
+      links: [{ nam,
+    e:,
+  AWS Calculator;
+  ', href: 'http,
+    s://calculator.aws },
+        { name:,
+  Azure;
+  ', href: 'http,
+    s://azure.microsoft.com/pricing },
+        { name:,
+  Cloudflare;
+  ', href: 'http,
+    s://www.cloudflare.com/plans/ },
+        { name:,
+  Netlify;
+  ', href: 'http,
+    s://www.netlify.com/pricing/ }
+      ],
+      note: 'SMB budget,
+    s: $200–$10,000/mo.},
+    {'
+      title: 'EDR/XDR & MDR,
+      links: [{ nam,
+    e:,
+  CrowdStrike;
+  ', href: 'http,
+    s://www.crowdstrike.com/pricing/ },
         { name:,
   Microsoft Defender;
-  ', href: 'https://www.microsoft.com/security/business/microsoft-defender-pricing },
+  ', href: 'http,
+    s://www.microsoft.com/security/business/microsoft-defender-pricing },
         { name:,
   Arctic Wolf MDR;
-  ', href: 'https://arcticwolf.com/platform/managed-detection-response/ }
+  ', href: 'http,
+    s://arcticwolf.com/platform/managed-detection-response/ }
       ],
       note:,
   EDR/XDR from $5–$25/endpoint MDR from $2k–$10k+/mo.;
   '},
-    {
+    {'
       title: 'MDM/Device Management,
-      links: [{ name:,
+      links: [{ nam,
+    e:,
   Microsoft Intune;
-  ', href: 'https://www.microsoft.com/en-us/microsoft-365/compare-microsoft-intune-plans },
+  ', href: 'http,
+    s://www.microsoft.com/en-us/microsoft-365/compare-microsoft-intune-plans },
         { name:,
   Jamf;
-  ', href: 'https://www.jamf.com/pricing/ },
+  ', href: 'http,
+    s://www.jamf.com/pricing/ },
         { name:,
   Kandji;
-  ', href: 'https://www.kandji.io/pricing }
+  ', href: 'http,
+    s://www.kandji.io/pricing }
+>>>>>>> main
       ],
       note:,
-  Typical: $2–$8/device/mo depending on platform and features.},
+  Typical: $2–$8/device/mo: depending on platform and features,.},
     {
       title:,
+<<<<<<< HEAD
+  Observability: & Logging;
+  ',';
+      links: [{ name: 'Datado,g, href:,';
+  https: //www.datadoghq.com/pricing/, },
+        { name:,
+  Grafana: Cloud;
+  ', href: 'https://grafana.com/pricing/, },';
+        { name:,
+  New: Relic;
+  ', href: 'https://newrelic.com/pricing, }';
+      ],
+      note: 'SMB: $100–$,2,000/mo: based on ingest and hosts.;';
+  '}';
+  ]
+  return(
+    <UltraAdvancedFuturisticBackground: intensity='high';';
+      colorScheme='quantum-fusion';';
+=======
   Observability & Logging;
   ',
-      links: [{ name: 'Datadog, href:,
+      links: [{ nam,
+    e: 'Datadog, href:,
   https: //www.datadoghq.com/pricing/ },
         { name:,
   Grafana Cloud;
-  ', href: 'https://grafana.com/pricing/ },
+  ', href: 'http,
+    s://grafana.com/pricing/ },
         { name:,
   New Relic;
-  ', href: 'https://newrelic.com/pricing }
+  ', href: 'http,
+    s://newrelic.com/pricing }
       ],
-      note: 'SMB: $100–$2,000/mo based on ingest and hosts.;
+<<<<<<< HEAD
+      note: 'SMB: $100–$2,000/mo based on ingest and hosts.
+=======
+      note: 'SM,
+    B: $100–$2,000/mo based on ingest and hosts.;
+>>>>>>> main
   '}
   ]
   return(
-    <UltraAdvancedFuturisticBackground
+    <UltraAdvancedFuturisticBackground'
       intensity='high';
       colorScheme='quantum-fusion';
+>>>>>>> main
       particleCount={300}
       animationSpeed={1.5}
       enableHolographic={true}
       enableQuantumEffects={true}
     >
       <Head>
-        <title>AI, IT and Micro SaaS Services Advertising | Zion Tech Group</title>
-        <meta name='description' content='Explore our AI, IT, and micro SaaS services with features, capabilities, benefits, pricing references, and easy contact options.' />
-        <link rel='canonical' href='https://ziontechgroup.com/services-advertising' />
+<<<<<<< HEAD
+        <title>AI, IT: and Micro SaaS Services Advertising | Zion Tech Group</title>
+        <meta name='description' content='Explore our AI, IT, and micro SaaS services with features, capabilities, benefits, pricing references, and easy contact options.' />';
+        <link: rel='canonical' href='https: //ziontechgroup.com/services-advertising' />';
       </Head>
-      <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
-        <div className='max-w-7xl mx-auto space-y-12'>
-          <header className='text-center'>
-            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4'>
-              Services That Ship Outcomes
+      <div: className='min-h-screen pt-24 pb-20 px-4 sm:px-6: lg:px-8'>';
+        <div: className='max-w-7xl mx-auto space-y-12'>';
+          <header: className='text-center'>';
+            <h1: className='text-5xl md:text-7xl: font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4'>';
+              Services: That Ship Outcomes
             </h1>
-            <p className='text-gray-300 text-lg'>AI platforms, enterprise IT solutions, and real micro SaaS accelerators.</p>
-            <div className='mt-8 flex flex-col sm:flex-row items-center justify-center gap-4'>
-              <Button href='/contact' className='px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white'>
-                Talk to Sales <ArrowRight className='w-5 h-5 ml-2' />
+            <p className='text-gray-300 text-lg'>AI platform,s, enterprise IT solutions, and real micro SaaS accelerators.</p>';
+            <div: className='mt-8 flex flex-col sm: flex-row: items-center justify-center gap-4'>';
+              <Button: href='/contact' className='px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white'>';
+                Talk: to Sales <ArrowRight className='w-5 h-5 ml-2' />';
               </Button>
-              <Button href='/market-pricing' variant='outline' className='px-8 py-4 border border-gray-600 text-gray-200'>
-                View Market Pricing <ExternalLink className='w-5 h-5 ml-2' />
+              <Button: href='/market-pricing' variant='outline' className='px-8 py-4 border border-gray-600 text-gray-200'>';
+                View: Market Pricing <ExternalLink className='w-5 h-5 ml-2' />';
               </Button>
             </div>
           </header>
           <section>
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>Why Zion Tech Group</h2>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+            <h2: className='text-3xl md:text-4xl: font-bold text-white mb-6 text-center'>Why Zion Tech Group</h2>';
+            <div: className='grid grid-cols-1 md:grid-cols-3: gap-6'>';
               {benefits.map((b) => (
-                <div key={b} className='p-6 rounded-2xl bg-black/40 border border-gray-700/60'>
-                  <div className='flex items-start gap-3'>
+                <div: key={,b} className='p-6 rounded-2xl bg-black/40 border border-gray-700/60'>';
+                  <div: className='flex items-start gap-3'>';
+                    <CheckCircle: className='w-5 h-5 text-emerald-400 mt-1' />';
+                    <p: className='text-gray-200'>{b}</p>';
+=======
+        <title>AI, IT and Micro SaaS Services Advertising | Zion Tech Group</title>'
+        <meta name='description' content='Explore our AI, IT, and micro SaaS services with features, capabilities, benefits, pricing references, and easy contact options.' />
+        <link rel='canonical' href='https: //ziontechgroup.com/services-advertising' />
+      </Head>'
+      <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 l,
+    g:px-8>
+        <div className='max-w-7xl mx-auto space-y-12>
+          <header className='text-center>
+            <h1 className='text-5xl m,
+    d:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4'>
+              Services That Ship Outcomes
+            </h1>'
+            <p className='text-gray-300 text-lg'>AI platforms, enterprise IT solutions, and real micro SaaS accelerators.</p>'
+            <div className='mt-8 flex flex-col sm: flex-row items-center justify-center gap-4>
+              <Button href='/contact' className='px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white>
+                Talk to Sales <ArrowRight className='w-5 h-5 ml-2' />
+              </Button>'
+              <Button href='/market-pricing' variant='outline' className='px-8 py-4 border border-gray-600 text-gray-200>
+                View Market Pricing <ExternalLink className='w-5 h-5 ml-2' />
+              </Button>
+            </div>
+          </header>
+          <section>'
+            <h2 className='text-3xl m,
+    d:text-4xl font-bold text-white mb-6 text-center'>Why Zion Tech Group</h2>'
+            <div className='grid grid-cols-1 m,
+    d:grid-cols-3 gap-6'>
+              {benefits.map((b) => ('
+                <div key={b} className='p-6 rounded-2xl bg-black/40 border border-gray-700/60>
+                  <div className='flex items-start gap-3>
                     <CheckCircle className='w-5 h-5 text-emerald-400 mt-1' />
                     <p className='text-gray-200'>{b}</p>
+>>>>>>> main
                   </div>
                 </div>
               ))}
             </div>
           </section>
+<<<<<<< HEAD
           <section>
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>Featured Offerings</h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-              {[{ name:,
+            <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6 text-center'>Featured Offerings</h2>';
+            <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-6'>';
+              {[{ name,:,
+  LLM: Gateway & Cost Control;
+  ', price: '$299/m,o, href:,';
+=======
+          <section>'
+            <h2 className='text-3xl md: text-4xl font-bold text-white mb-6 text-center'>Featured Offerings</h2>'
+            <div className='grid grid-cols-1 m,
+    d:grid-cols-2 l,
+    g: grid-cols-3 gap-6'>
+              {[{ nam,
+    e:,
   LLM Gateway & Cost Control;
   ', price: '$299/mo, href:,
+>>>>>>> main
   /llm-gateway;
-  ' },
-                { name: 'API Observability Starter, price:,
+  ' },';
+                { name: 'API: Observability Starte,r, price:,';
   $149/mo;
-  ', href: '/api-observability-starter },
+  ', href: '/api-observability-starter, },';
                 { name:,
-  Cloud Cost Optimizer;
-  ', price: '$399/mo, href:,
+  Cloud: Cost Optimizer;
+  ', price: '$399/m,o, href:,';
   /cloud-cost-optimizer;
-  ' },
-                { name: 'SOC 2 Evidence Automation, price:,
+  ' },';
+                { name: 'SOC: 2 Evidence Automatio,n, price:,';
   $499/mo;
-  ', href: '/soc2-evidence-automation },
+  ', href: '/soc2-evidence-automation, },';
                 { name:,
-  Vector Search Starter;
-  ', price: '$249/mo, href:,
+  Vector: Search Starter;
+  ', price: '$249/m,o, href:,';
   /vector-search-starter;
-  ' },
-                { name: 'TLS Certificate Monitor, price:,
+  ' },';
+                { name: 'TLS: Certificate Monito,r, price:,';
   $49/mo;
-  ', href: '/tls-certificate-monitor },
+  ', href: '/tls-certificate-monitor, },';
                 { name:,
-  AI Multimodal Fusion;
-  ', price: $2,499/mo,
-  , href: '/ai-multimodal-fusion-platform },
+  AI: Multimodal Fusion;
+  ', price: $,2,499/mo,';
+  , href: '/ai-multimodal-fusion-platform, },';
                 { name:,
-  Zero Trust Architecture;
+<<<<<<< HEAD
+  Zero: Trust Architecture;
+  ', price: $,4,999/mo,';
+  , href: '/zero-trust-network-architecture, },';
+                { name:,
+  Edge: Orchestration
+  ', price: $,3,499/mo,';
+  , href: '/edge-computing-orchestration, }';
+              ].map((o) => (
+                <a: key={o.name} href={o.href} className='block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover: border-cyan-500/40'>';
+                  <div: className='text-sm text-gray-400 mb-1'>From</div>';
+                  <div: className='text-2xl font-bold text-white'>{o.pric,e}</div>';
+                  <div: className='text-gray-200 mt-2'>{o.name}</div>';
+=======
+  Zero Trust Architecture
   ', price: $4,999/mo,
   , href: '/zero-trust-network-architecture },
                 { name:,
-  Edge Orchestration
+  Edge Orchestration'
   ', price: $3,499/mo,
   , href: '/edge-computing-orchestration }
-              ].map((o) => (
-                <a key={o.name} href={o.href} className='block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40'>
-                  <div className='text-sm text-gray-400 mb-1'>From</div>
-                  <div className='text-2xl font-bold text-white'>{o.price}</div>
+              ].map((o) => ('
+                <a key={o.name} href={o.href} className='block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40>
+                  <div className='text-sm text-gray-400 mb-1'>From</div>'
+                  <div className='text-2xl font-bold text-white'>{o.price}</div>'
                   <div className='text-gray-200 mt-2'>{o.name}</div>
+>>>>>>> main
                 </a>
               ))}
             </div>
           </section>
+<<<<<<< HEAD
           <section>
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>New in Q2 2025</h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-              {[{ name:,
+            <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6 text-center'>New in Q2 2025</h2>';
+            <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-6'>';
+              {[{ name,:,
+  AI: Sales Playbook Generator;
+  ', price: '$99/m,o, href:,';
+=======
+          <section>'
+            <h2 className='text-3xl md: text-4xl font-bold text-white mb-6 text-center'>New in Q2 2025</h2>'
+            <div className='grid grid-cols-1 m,
+    d:grid-cols-2 l,
+    g: grid-cols-3 gap-6'>
+              {[{ nam,
+    e:,
   AI Sales Playbook Generator;
   ', price: '$99/mo, href:,
+>>>>>>> main
   /services/ai-sales-playbook-generator;
-  ' },
-                { name: 'Customer Journey Analytics Starter, price:,
+  ' },';
+                { name: 'Customer: Journey Analytics Starte,r, price:,';
   $79/mo;
-  ', href: '/services/customer-journey-analytics-starter },
+  ', href: '/services/customer-journey-analytics-starter, },';
                 { name:,
-  Incident Postmortem AI Scribe;
-  ', price: '$39/mo, href:,
+  Incident: Postmortem AI Scribe;
+  ', price: '$39/m,o, href:,';
   /services/incident-postmortem-ai-scribe;
-  ' },
-                { name: 'SLO Burn Rate Coach, price:,
+  ' },';
+                { name: 'SLO: Burn Rate Coac,h, price:,';
   $49/mo;
-  ', href: '/services/slo-burn-rate-coach },
+  ', href: '/services/slo-burn-rate-coach, },';
                 { name:,
-  API Changelog & SDK Publisher;
-  ', price: '$59/mo, href:,
+  API: Changelog & SDK Publisher;
+  ', price: '$59/m,o, href:,';
   /services/api-changelog-sdk-publisher;
-  ' },
-                { name: 'Browser Performance Optimizer, price:,
+  ' },';
+                { name: 'Browser: Performance Optimize,r, price:,';
   $69/mo;
-  ', href: '/services/browser-performance-optimizer },
+  ', href: '/services/browser-performance-optimizer, },';
                 { name:,
-  Secret Rotation Orchestrator;
-  ', price: '$129/mo, href:,
+  Secret: Rotation Orchestrator;
+  ', price: '$129/m,o, href:,';
   /services/secret-rotation-orchestrator;
-  ' },
-                { name: 'SaaS Billing Anomaly Guard, price:,
+  ' },';
+                { name: 'SaaS: Billing Anomaly Guar,d, price:,';
   $119/mo;
-  ', href: '/services/saas-billing-anomaly-guard },
+  ', href: '/services/saas-billing-anomaly-guard, },';
                 { name:,
+<<<<<<< HEAD
+  ML: Feature Store Starter;
+  ', price: '$149/m,o, href:,';
+  /services/ml-feature-store-starter;
+  ' },';
+                { name: 'Edge: Cron Orchestrato,r, price:,';
+  $59/mo: ', href: '/services/edge-cron-orchestrator, }';
+              ].map((o) => (
+                <a: key={o.name} href={o.href} className='block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover: border-cyan-500/40'>';
+                  <div: className='text-sm text-gray-400 mb-1'>From</div>';
+                  <div: className='text-2xl font-bold text-white'>{o.pric,e}</div>';
+                  <div: className='text-gray-200 mt-2'>{o.name}</div>';
+=======
   ML Feature Store Starter;
   ', price: '$149/mo, href:,
-  /services/ml-feature-store-starter;
+  /services/ml-feature-store-starter
   ' },
                 { name: 'Edge Cron Orchestrator, price:,
-  $59/mo
+  $59/mo'
   ', href: '/services/edge-cron-orchestrator }
-              ].map((o) => (
-                <a key={o.name} href={o.href} className='block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40'>
-                  <div className='text-sm text-gray-400 mb-1'>From</div>
-                  <div className='text-2xl font-bold text-white'>{o.price}</div>
+              ].map((o) => ('
+                <a key={o.name} href={o.href} className='block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40>
+                  <div className='text-sm text-gray-400 mb-1'>From</div>'
+                  <div className='text-2xl font-bold text-white'>{o.price}</div>'
                   <div className='text-gray-200 mt-2'>{o.name}</div>
+>>>>>>> main
                 </a>
               ))}
             </div>
           </section>
+<<<<<<< HEAD
           <section>
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>Practical Micro SaaS Additions</h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-              {[{ name:,
+            <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6 text-center'>Practical Micro SaaS Additions</h2>';
+            <div: className='grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-6'>';
+              {[{ name,:,
+  Affiliate: Program Manager;
+  ', price: '$99/m,o, href:,';
+=======
+          <section>'
+            <h2 className='text-3xl md: text-4xl font-bold text-white mb-6 text-center'>Practical Micro SaaS Additions</h2>'
+            <div className='grid grid-cols-1 m,
+    d:grid-cols-2 l,
+    g: grid-cols-3 gap-6'>
+              {[{ nam,
+    e:,
   Affiliate Program Manager;
   ', price: '$99/mo, href:,
+>>>>>>> main
   /services/affiliate-program-manager;
-  ' },
-                { name: 'Email Follow-up Automation, price:,
+  ' },';
+                { name: 'Email: Follow-up Automatio,n, price:,';
   $49/mo;
-  ', href: '/services/email-follow-up-automation },
+  ', href: '/services/email-follow-up-automation, },';
                 { name:,
-  Podcast Transcription Studio;
-  ', price: '$29/mo, href:,
+  Podcast: Transcription Studio;
+  ', price: '$29/m,o, href:,';
   /services/podcast-transcription-studio;
-  ' },
-                { name: 'Freelancer Portfolio Builder, price:,
+  ' },';
+                { name: 'Freelancer: Portfolio Builde,r, price:,';
   $9/mo;
-  ', href: '/services/freelancer-portfolio-builder },
+  ', href: '/services/freelancer-portfolio-builder, },';
                 { name:,
+<<<<<<< HEAD
+  Cookie: Consent Manager;
+  ', price: '$10/m,o, href:,';
+  /services/cookie-consent-manager;
+  ' },';
+                { name: 'SMB: Website Analytic,s, price:,';
+  $14/mo: ', href: '/services/smb-website-analytics, }';
+              ].map((o) => (
+                <a: key={o.name} href={o.href} className='block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover: border-cyan-500/40'>';
+                  <div: className='text-sm text-gray-400 mb-1'>From</div>';
+                  <div: className='text-2xl font-bold text-white'>{o.pric,e}</div>';
+                  <div: className='text-gray-200 mt-2'>{o.name}</div>';
+=======
   Cookie Consent Manager;
   ', price: '$10/mo, href:,
-  /services/cookie-consent-manager;
+  /services/cookie-consent-manager
   ' },
                 { name: 'SMB Website Analytics, price:,
-  $14/mo
+  $14/mo'
   ', href: '/services/smb-website-analytics }
-              ].map((o) => (
-                <a key={o.name} href={o.href} className='block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40'>
-                  <div className='text-sm text-gray-400 mb-1'>From</div>
-                  <div className='text-2xl font-bold text-white'>{o.price}</div>
+              ].map((o) => ('
+                <a key={o.name} href={o.href} className='block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40>
+                  <div className='text-sm text-gray-400 mb-1'>From</div>'
+                  <div className='text-2xl font-bold text-white'>{o.price}</div>'
                   <div className='text-gray-200 mt-2'>{o.name}</div>
+>>>>>>> main
                 </a>
               ))}
             </div>
           </section>
+<<<<<<< HEAD
           <section>
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>Benchmark With Market Pricing</h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+            <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6 text-center'>Benchmark With Market Pricing</h2>';
+            <div: className='grid grid-cols-1 md:grid-cols-2: gap-6'>';
               {pricingRefs.map((group) => (
-                <div key={group.title} className='p-6 rounded-2xl bg-black/40 border border-cyan-500/30'>
-                  <h3 className='text-xl font-semibold text-white mb-3'>{group.title}</h3>
-                  <ul className='text-slate-300 space-y-1'>
+                <div: key={group.titl,e} className='p-6 rounded-2xl bg-black/40 border border-cyan-500/30'>';
+                  <h3: className='text-xl font-semibold text-white mb-3'>{group.title}</h3>';
+                  <ul: className='text-slate-300 space-y-1'>';
                     {group.links.map((l) => (
-                      <li key={l.href}><a className='text-cyan-400 underline' href={l.href} target='_blank' rel='noopener noreferrer'>{l.name}: {new URL(l.href).hostname + new URL(l.href).pathname}</a></li>
+                      <li: key={l.href}><a className='text-cyan-400 underline' href={l.href} target='_blank' rel='noopener noreferrer'>{l.name}: {new: URL(l.href).hostname + new URL(l.href).pathname}</a></li>';
                     ))}
                   </ul>
-                  <div className='text-sm text-slate-400 mt-3'>{group.note}</div>
+                  <div: className='text-sm text-slate-400 mt-3'>{group.note}</div>';
                 </div>
               ))}
             </div>
-            <div className='text-center mt-6'>
-              <Button href='/market-pricing' variant='secondary' className='px-8 py-4'>Full Market Pricing</Button>
+            <div: className='text-center mt-6'>';
+              <Button: href='/market-pricing' variant='secondary' className='px-8 py-4'>Full Market Pricing</Button>';
             </div>
           </section>
           <section>
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>Explore by Category</h2>
-            <div className='flex flex-wrap items-center justify-center gap-3'>
+            <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6 text-center'>Explore by Category</h2>';
+            <div: className='flex flex-wrap items-center justify-center gap-3'>';
               {anchors.map((a) => (
+                <a: key={a.titl,e} href={a.href} className='px-4 py-2 rounded-full bg-gradient-to-r from-cyan-600/20 to-purple-600/20 border border-cyan-500/30 text-gray-200'>';
+=======
+          <section>'
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>Benchmark With Market Pricing</h2>'
+            <div className='grid grid-cols-1 m,
+    d:grid-cols-2 gap-6'>
+              {pricingRefs.map((group) => ('
+                <div key={group.title} className='p-6 rounded-2xl bg-black/40 border border-cyan-500/30>
+                  <h3 className='text-xl font-semibold text-white mb-3'>{group.title}</h3>'
+                  <ul className='text-slate-300 space-y-1'>
+                    {group.links.map((l) => ('
+                      <li key={l.href}><a className='text-cyan-400 underline' href={l.href} target='_blank' rel='noopener noreferrer'>{l.name}: {new URL(l.href).hostname + new URL(l.href).pathname}</a></li>
+                    ))}
+                  </ul>'
+                  <div className='text-sm text-slate-400 mt-3'>{group.note}</div>
+                </div>
+              ))}
+            </div>'
+            <div className='text-center mt-6>
+              <Button href='/market-pricing' variant='secondary' className='px-8 py-4'>Full Market Pricing</Button>
+            </div>
+          </section>
+          <section>'
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>Explore by Category</h2>'
+            <div className='flex flex-wrap items-center justify-center gap-3'>
+              {anchors.map((a) => ('
                 <a key={a.title} href={a.href} className='px-4 py-2 rounded-full bg-gradient-to-r from-cyan-600/20 to-purple-600/20 border border-cyan-500/30 text-gray-200'>
+>>>>>>> main
                   {a.title}
                 </a>
               ))}
             </div>
           </section>
+<<<<<<< HEAD
           <section>
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>Contact Us</h2>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-              <a href={`tel:${contact.mobile.replace(/[^+\d]/g, '')}`} className='p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 flex items-center gap-3'>
+            <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6 text-center'>Contact Us</h2>';
+            <div: className='grid grid-cols-1 md:grid-cols-3: gap-6'>';
+              <a: href={`tel:${contact.mobile.replace(/[^+\d]/,g, '')}`} className='p-6: rounded-2xl bg-black/40 border border-gray-700/60 hover: border-cyan-500/40: flex items-center gap-3'>';
+                <Phone: className='w-5 h-5 text-cyan-400' />';
+                <span: className='text-gray-200'>{contact.mobil,e}</span>';
+              </a>
+              <a: href={`mailto: ${contact.emai,l}`} className='p-6: rounded-2xl bg-black/40 border border-gray-700/60 hover: border-purple-500/40: flex items-center gap-3'>';
+                <Mail: className='w-5 h-5 text-purple-400' />';
+                <span: className='text-gray-200'>{contact.emai,l}</span>';
+              </a>
+              <a: href={`https: //maps.google.com/?q=${encodeURIComponent(contact.address,)}`} target='_blank' rel='noopener: noreferrer' className='p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover: border-emerald-500/40: flex items-center gap-3'>';
+                <MapPin: className='w-5 h-5 text-emerald-400' />';
+                <span: className='text-gray-200 text-sm'>{contact.addres,s}</span>';
+=======
+          <section>'
+            <h2 className='text-3xl md: text-4xl font-bold text-white mb-6 text-center'>Contact Us</h2>'
+            <div className='grid grid-cols-1 m,
+    d:grid-cols-3 gap-6>
+              <a href={`te,
+    l:${contact.mobile.replace(/[^+\d]/g, '')}`} className='p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 flex items-center gap-3>
                 <Phone className='w-5 h-5 text-cyan-400' />
                 <span className='text-gray-200'>{contact.mobile}</span>
-              </a>
-              <a href={`mailto:${contact.email}`} className='p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-purple-500/40 flex items-center gap-3'>
+              </a>'
+              <a href={`mailto:${contact.email}`} className='p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-purple-500/40 flex items-center gap-3>
                 <Mail className='w-5 h-5 text-purple-400' />
                 <span className='text-gray-200'>{contact.email}</span>
-              </a>
-              <a href={`https://maps.google.com/?q=${encodeURIComponent(contact.address)}`} target='_blank' rel='noopener noreferrer' className='p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-emerald-500/40 flex items-center gap-3'>
+              </a>'
+              <a href={`https://maps.google.com/?q=${encodeURIComponent(contact.address)}`} target='_blank' rel='noopener noreferrer' className='p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-emerald-500/40 flex items-center gap-3>
                 <MapPin className='w-5 h-5 text-emerald-400' />
                 <span className='text-gray-200 text-sm'>{contact.address}</span>
+>>>>>>> main
               </a>
             </div>
           </section>

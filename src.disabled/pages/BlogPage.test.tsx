@@ -1,4 +1,23 @@
+<<<<<<< HEAD
+describe: (
+  'BlogPage', () => {}' it ('renders without crashing';
+  ', () => {} render: (<BlogPage />) '; expect: (screen.getByRole (';
+  'main') || screen.getByText: (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content';
+  ', () => {} render: (<BlogPage />) ''';
+=======
 describe (
+<<<<<<< HEAD
+  'BlogPage', () => {}' it ('renders without crashing
+  ', () => {} render (<BlogPage />) ' expect (screen.getByRole (
+=======
+<<<<<<< HEAD
+  'BlogPage', () => {} it('renders without crashing', () => {} render (<BlogPage />) '; expect (screen.getByRole ('
+  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content'
+  ', () => {} render (<BlogPage />) '''
+=======
   'BlogPage', () => {}' it('renders without crashing', () => {} render (<BlogPage />) ' expect (screen.getByRole (
+>>>>>>> main
   'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
   ', () => {} render (<BlogPage />) ''
+>>>>>>> main
+>>>>>>> main

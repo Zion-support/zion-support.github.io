@@ -27,14 +27,18 @@ class MonitoringAutomation {
 
   async createPerformanceMonitor() {
     this.log('📊 Creating performance monitoring script...');
-    
-    const monitorPath = path.join(this.projectRoot, 'scripts', 'performance-monitor-enhanced.cjs');
+
+    const monitorPath = path.join(
+      this.projectRoot,
+      'scripts',
+      'performance-monitor-enhanced.cjs'
+    );
     const scriptsDir = path.dirname(monitorPath);
-    
+
     if (!fs.existsSync(scriptsDir)) {
       fs.mkdirSync(scriptsDir, { recursive: true });
     }
-    
+
     const monitorScript = `#!/usr/bin/env node
 
 const fs = require('fs');
@@ -249,14 +253,18 @@ monitor.run().catch(console.error);
 
   async createMaintenanceScript() {
     this.log('🔧 Creating maintenance script...');
-    
-    const maintenancePath = path.join(this.projectRoot, 'scripts', 'maintenance.cjs');
+
+    const maintenancePath = path.join(
+      this.projectRoot,
+      'scripts',
+      'maintenance.cjs'
+    );
     const scriptsDir = path.dirname(maintenancePath);
-    
+
     if (!fs.existsSync(scriptsDir)) {
       fs.mkdirSync(scriptsDir, { recursive: true });
     }
-    
+
     const maintenanceScript = `#!/usr/bin/env node
 
 const fs = require('fs');
@@ -423,14 +431,14 @@ maintenance.run().catch(console.error);
 
   async createCronJob() {
     this.log('⏰ Creating cron job configuration...');
-    
+
     const cronPath = path.join(this.projectRoot, 'scripts', 'setup-cron.sh');
     const scriptsDir = path.dirname(cronPath);
-    
+
     if (!fs.existsSync(scriptsDir)) {
       fs.mkdirSync(scriptsDir, { recursive: true });
     }
-    
+
     const cronScript = `#!/bin/bash
 
 # Setup cron jobs for automation
@@ -466,10 +474,10 @@ crontab -l
 
   async run() {
     this.log('🚀 Starting Monitoring Automation');
-    
+
     const results = {
       timestamp: new Date().toISOString(),
-      scripts: {}
+      scripts: {},
     };
 
     // Create monitoring scripts
@@ -478,7 +486,10 @@ crontab -l
     results.scripts.cronJob = await this.createCronJob();
 
     // Generate report
-    const reportPath = path.join(this.reportsDir, 'monitoring-setup-report.json');
+    const reportPath = path.join(
+      this.reportsDir,
+      'monitoring-setup-report.json'
+    );
     fs.writeFileSync(reportPath, JSON.stringify(results, null, 2));
 
     this.log('📊 Report generated: ' + reportPath);

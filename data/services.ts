@@ -4808,7 +4808,12 @@ export const services: Service[] = [
 ,
   SaaS ARR forecasting,Retail allocation,Manufacturing S&OP'
     ],
+<<<<<<< HEAD
+<<<<<<< HEAD
+    technologies: ['Python', 'Prophet', 'NeuralForecast', 'dbt', 'Snowflake/BigQuery'],
+=======
     technologies: ['Python,Prophet,NeuralForecast,dbt,Snowflake/BigQuery'],
+>>>>>>> main
     link: 'https://ziontechgroup.com/services/ai-sales-forecasting-suite',
     icon: '📈'
   },
@@ -5294,6 +5299,18 @@ export const services: Service[] = [
     technologies: ['Microsoft 365,Active Directory,VMware,Backup Solutions,Monitoring Tools'],
     link: 'https://ziontechgroup.com/services/managed-it-services-support',
     icon: '🛠️'
+=======
+    technologies: [
+  'Python,
+,
+  Prophet',
+  'NeuralForecast',
+  'dbt',
+  'Snowflake/BigQuery'],
+    link: 'https://ziontechgroup.com/services/ai-sales-forecasting-suite,
+    icon:,
+  📈'
+>>>>>>> origin/main
   }
 ];
 
