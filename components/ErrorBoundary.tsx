@@ -24,7 +24,7 @@ export class ErrorBoundary extends Component<Props, State> {
     
     // Log error to monitoring service
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'exception', {
+      window.gtag('event,exception', {
         description: error.message,
         fatal: false,
       });

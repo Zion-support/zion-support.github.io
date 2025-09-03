@@ -48,10 +48,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     // Font size adjustments
     root.classList.remove(
-      'font-small',
-      'font-normal',
-      'font-large',
-      'font-extra-large'
+      'font-small,font-normal,font-large,font-extra-large'
     );
     root.classList.add(`font-${fontSize}`);
     // Reduced motion
@@ -97,7 +94,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
             Font Size:
           </div>
           <div className="flex gap-1">
-            {['small', 'normal', 'large', 'extra-large'].map(size => (
+            {['small,normal,large,extra-large'].map(size => (
               <button
                 key={size}
                 onClick={() => changeFontSize(size)}

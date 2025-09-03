@@ -62,8 +62,8 @@ export function useAuth() {
     const mockUser: User = {"
       id: '1',
       email,"
-      name: 'John Doe',"
-      role: 'user',"
+      name: 'John Doe,
+      role: 'user,
       userType: 'creator',
     };
 
@@ -73,7 +73,7 @@ export function useAuth() {
       isLoading: false,
     });
 "
-    localStorage.setItem('authToken', 'dummy-token');"
+    localStorage.setItem('authToken,dummy-token');"
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
 
     return mockUser;,
@@ -105,7 +105,7 @@ export function useAuth() {
     });
 "
     localStorage.setItem('zion_user', JSON.stringify(mockUser));"
-    localStorage.setItem('authToken', 'dummy-token');
+    localStorage.setItem('authToken,dummy-token');
 
     return mockUser;,
 };

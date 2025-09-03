@@ -1,46 +1,45 @@
 import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
-import SEOHead from '../src/components/SEO/SEOHead';
-import ErrorBoundary from '../src/components/ErrorBoundary';
-import { CheckCircle, Star, Users, Zap, Shield, Globe, Phone, Mail, ArrowRight } from 'lucide-react';
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, Phone, Mail } from 'lucide-react';
 
-export default function Pricing() {
-  const pricingPlans = [
+const Pricing = () => {
+  const plans = [
     {
       name: 'Starter',
-      price: '$99',
+      price: '$2,999',
       period: '/month',
       description: 'Perfect for small businesses getting started',
       features: [
-        'Basic AI consultation',
+        'Up to 5 team members',
+        'Basic AI services',
         'Email support',
-        'Monthly reports',
-        'Up to 5 users',
-        'Basic integrations'
+        'Standard hosting',
+        'Basic analytics',
+        'Monthly reports'
       ],
       popular: false,
-      cta: 'Get Started',
-      href: '/contact'
+      color: 'from-blue-500 to-blue-600'
     },
     {
       name: 'Professional',
-      price: '$299',
+      price: '$7,999',
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
-        'Advanced AI solutions',
+        'Up to 25 team members',
+        'Advanced AI services',
         'Priority support',
+        'Premium hosting',
+        'Advanced analytics',
         'Weekly reports',
-        'Up to 25 users',
-        'Advanced integrations',
-        'Custom workflows',
-        'Training sessions'
+        'Custom integrations',
+        'API access'
       ],
       popular: true,
-      cta: 'Most Popular',
-      href: '/contact'
+      color: 'from-purple-500 to-purple-600'
     },
     {
       name: 'Enterprise',
@@ -48,56 +47,57 @@ export default function Pricing() {
       period: '',
       description: 'For large organizations with complex needs',
       features: [
-        'Full AI implementation',
+        'Unlimited team members',
+        'Full AI suite',
         '24/7 dedicated support',
-        'Real-time monitoring',
-        'Unlimited users',
-        'Custom integrations',
-        'White-label solutions',
-        'Dedicated account manager',
-        'SLA guarantee'
+        'Enterprise hosting',
+        'Custom analytics',
+        'Real-time reports',
+        'Unlimited integrations',
+        'Full API access',
+        'Custom development',
+        'Dedicated account manager'
       ],
       popular: false,
-      cta: 'Contact Sales',
-      href: '/contact'
+      color: 'from-green-500 to-green-600'
     }
   ];
 
   const addOns = [
     {
-      name: 'AI Development',
+      name: 'Additional AI Credits',
+      price: '$0.10',
+      description: 'Per AI request beyond plan limits',
+      icon: Zap
+    },
+    {
+      name: 'Premium Support',
+      price: '$500',
+      description: 'Per month for priority support',
+      icon: Shield
+    },
+    {
+      name: 'Custom Development',
       price: '$150',
-      period: '/hour',
-      description: 'Custom AI model development and training'
+      description: 'Per hour for custom features',
+      icon: Users
     },
     {
-      name: 'Cloud Migration',
-      price: '$2,500',
-      period: '/project',
-      description: 'Complete cloud infrastructure migration'
-    },
-    {
-      name: 'Security Audit',
-      price: '$1,500',
-      period: '/audit',
-      description: 'Comprehensive security assessment and recommendations'
-    },
-    {
-      name: 'Training & Support',
+      name: 'Training Sessions',
       price: '$200',
-      period: '/hour',
-      description: 'Team training and ongoing technical support'
+      description: 'Per hour for team training',
+      icon: Globe
     }
   ];
 
   return (
-    <ErrorBoundary>
-      <SEOHead
-        title="Pricing - Zion Tech Group | Transparent Technology Solutions Pricing"
-        description="Choose the perfect plan for your business. Transparent pricing for AI services, IT solutions, and micro SaaS development. No hidden fees."
-        keywords={["pricing", "AI services pricing", "IT services cost", "micro SaaS pricing", "technology consulting rates", "enterprise solutions"]}
-        canonicalUrl="https://ziontechgroup.com/pricing"
-      />
+    <>
+      <Head>
+        <title>Pricing - Zion Tech Group</title>
+        <meta name="description" content="Transparent pricing for AI services, IT solutions, and micro SaaS development. Choose the plan that fits your business needs." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://ziontechgroup.com/pricing" />
+      </Head>
       
       <Navigation />
       
@@ -107,11 +107,10 @@ export default function Pricing() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-5xl font-bold text-gray-900 mb-6">
-                Transparent <span className="text-blue-600">Pricing</span>
+                Simple, Transparent <span className="text-blue-600">Pricing</span>
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-                Choose the perfect plan for your business needs. No hidden fees, no surprises. 
-                Scale up or down as your business grows.
+                Choose the plan that fits your business needs. All plans include our core services with no hidden fees.
               </p>
             </div>
           </div>
@@ -121,46 +120,40 @@ export default function Pricing() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
-                <div key={index} className={`relative bg-white rounded-2xl shadow-lg p-8 ${
-                  plan.popular ? 'ring-2 ring-blue-500 transform scale-105' : ''
-                }`}>
+              {plans.map((plan, index) => (
+                <div key={index} className={`relative bg-white rounded-2xl shadow-lg border-2 ${
+                  plan.popular ? 'border-purple-500 scale-105' : 'border-gray-200'
+                } overflow-hidden`}>
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        {plan.cta}
-                      </span>
+                    <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-purple-500 to-purple-600 text-white text-center py-2 text-sm font-semibold">
+                      Most Popular
                     </div>
                   )}
                   
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                    <p className="text-gray-600 mb-4">{plan.description}</p>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-5xl font-bold text-gray-900">{plan.price}</span>
-                      <span className="text-xl text-gray-600 ml-1">{plan.period}</span>
+                  <div className="p-8">
+                    <div className="text-center mb-8">
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                      <p className="text-gray-600 mb-4">{plan.description}</p>
+                      <div className="flex items-baseline justify-center">
+                        <span className="text-5xl font-bold text-gray-900">{plan.price}</span>
+                        <span className="text-gray-600 ml-1">{plan.period}</span>
+                      </div>
                     </div>
+
+                    <ul className="space-y-4 mb-8">
+                      {plan.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center">
+                          <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                          <span className="text-gray-700">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <Link href="/contact" className={`block w-full bg-gradient-to-r ${plan.color} text-white py-3 px-6 rounded-lg font-semibold text-center hover:opacity-90 transition-opacity`}>
+                      Get Started
+                      <ArrowRight className="w-4 h-4 ml-2 inline" />
+                    </Link>
                   </div>
-
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                        <span className="text-gray-600">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <Link
-                    href={plan.href}
-                    className={`block w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors ${
-                      plan.popular
-                        ? 'bg-blue-600 text-white hover:bg-blue-700'
-                        : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                    }`}
-                  >
-                    {plan.popular ? 'Get Started' : plan.cta}
-                  </Link>
                 </div>
               ))}
             </div>
@@ -173,26 +166,23 @@ export default function Pricing() {
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Additional Services</h2>
               <p className="text-lg text-gray-600">
-                Enhance your plan with these professional services
+                Enhance your plan with these optional add-ons
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {addOns.map((addon, index) => (
                 <div key={index} className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{addon.name}</h3>
-                  <div className="flex items-baseline mb-3">
-                    <span className="text-3xl font-bold text-blue-600">{addon.price}</span>
-                    <span className="text-gray-600 ml-1">{addon.period}</span>
+                  <div className="flex items-center mb-4">
+                    <div className="p-3 bg-blue-100 rounded-lg mr-4">
+                      <addon.icon className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900">{addon.name}</h3>
+                      <p className="text-2xl font-bold text-blue-600">{addon.price}</p>
+                    </div>
                   </div>
-                  <p className="text-gray-600 text-sm mb-4">{addon.description}</p>
-                  <Link
-                    href="/contact"
-                    className="text-blue-600 hover:text-blue-700 font-semibold text-sm flex items-center"
-                  >
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-1" />
-                  </Link>
+                  <p className="text-gray-600">{addon.description}</p>
                 </div>
               ))}
             </div>
@@ -208,38 +198,26 @@ export default function Pricing() {
                 Everything you need to know about our pricing
               </p>
             </div>
-            
+
             <div className="space-y-8">
               <div className="bg-gray-50 rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Can I change my plan anytime?</h3>
-                <p className="text-gray-600">
-                  Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, 
-                  and we'll prorate any billing differences.
-                </p>
+                <p className="text-gray-600">Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing differences.</p>
               </div>
-              
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Is there a setup fee?</h3>
-                <p className="text-gray-600">
-                  No setup fees for any of our plans. You only pay the monthly subscription fee. 
-                  Enterprise plans may include custom setup as part of the service.
-                </p>
-              </div>
-              
+
               <div className="bg-gray-50 rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">What payment methods do you accept?</h3>
-                <p className="text-gray-600">
-                  We accept all major credit cards, PayPal, and bank transfers for enterprise customers. 
-                  All payments are processed securely through our payment partners.
-                </p>
+                <p className="text-gray-600">We accept all major credit cards, bank transfers, and can arrange custom payment terms for enterprise clients.</p>
               </div>
-              
+
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Do you offer refunds?</h3>
-                <p className="text-gray-600">
-                  We offer a 30-day money-back guarantee for all new customers. If you're not satisfied 
-                  with our services, we'll provide a full refund.
-                </p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Is there a free trial available?</h3>
+                <p className="text-gray-600">Yes, we offer a 14-day free trial for all plans. No credit card required to get started.</p>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">What happens if I exceed my plan limits?</h3>
+                <p className="text-gray-600">We'll notify you when you're approaching your limits. You can either upgrade your plan or purchase additional credits as needed.</p>
               </div>
             </div>
           </div>
@@ -252,14 +230,14 @@ export default function Pricing() {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Have questions about our pricing? Our team is here to help you choose the perfect plan for your business.
+              Contact our team to discuss your specific needs and get a custom quote.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Contact Sales
               </Link>
-              <Link href="/demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                Schedule Demo
+              <Link href="/pricing-guide" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                View Detailed Pricing Guide
               </Link>
             </div>
           </div>
@@ -267,6 +245,8 @@ export default function Pricing() {
       </main>
       
       <Footer />
-    </ErrorBoundary>
+    </>
   );
-}
+};
+
+export default Pricing;

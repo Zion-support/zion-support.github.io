@@ -1,6 +1,6 @@
-import React, { createContext, useContext, useReducer, useEffect } from 'react';"
-import { safeStorage } from '@/utils/safeStorage';"
-import { useAuth } from '@/hooks/useAuth';"
+import React, { createContext, useContext, useReducer, useEffect } from 'react
+import { safeStorage } from '@/utils/safeStorage
+import { useAuth } from '@/hooks/useAuth
 import { getCartKey, mergeCartItems } from '@/utils/cartUtils';
 
 const initialState = { items: [] };

@@ -1,51 +1,46 @@
 
 :pages.disabled/pages/services/Cloud.tsx;
 const CloudServices = () => {
-  const cloudServices = [{
-      title: 'Cloud Migration & Strategy','';
-      description: 'Comprehensive cloud migration services with multi-cloud strategy and cost optimization.','';
-      price: 'From $8,500/project','';
-      features['Cloud readiness assessment', 'Multi-cloud strategy planning', 'Migration roadmap development', 'Cost optimization analysis'],      icon: Cloud},
+  const cloudServices = [
+  {
+      title: 'Cloud Migration & Strategy,';
+      description: 'Comprehensive cloud migration services with multi-cloud strategy and cost optimization.,';
+      price: 'From $8,500/project,';
+      features['Cloud readiness assessment,Multi-cloud strategy planning,Migration roadmap development,Cost optimization analysis'],      icon: Cloud},
     {
 ''';
-      title: 'Cloud-Native Development','';
-      description: 'Build scalable applications using cloud-native technologies and microservices architecture.','';
-      price: 'From $12,000/project','';
-      features['Microservices architecture', 'Serverless development', 'API-first design', 'Cloud-native databases'],
+      title: 'Cloud-Native Development,';
+      description: 'Build scalable applications using cloud-native technologies and microservices architecture.,';
+      price: 'From $12,000/project,';
+      features['Microservices architecture,Serverless development,API-first design,Cloud-native databases'],
       icon: Server},
 :pages.disabled/pages/services/Cloud.tsx{
 ''';
       title: 'Cloud Security & Compliance'}';
-      description: 'Enterprise-grade security solutions with compliance frameworks and threat protection.',';
-      price: 'From $6,500/month',';
-      features: ['Identity and access management', 'Data encryption', 'Compliance monitoring', 'Security auditing'],
+      description: 'Enterprise-grade security solutions with compliance frameworks and threat protection.,;
+      price: 'From $6,500/month,;
+      features: ['Identity and access management,Data encryption,Compliance monitoring,Security auditing'],
       icon: Shield}
 :pages.disabled/pages/services/Cloud.tsx;
   ]},    {
 ';
-'';
-      name: 'Microsoft Azure','';
-      description: 'Enterprise cloud platform with hybrid capabilities',';
+      name: 'Microsoft Azure,';
+      description: 'Enterprise cloud platform with hybrid capabilities,;
       icon: Server,'';
-      features['Virtual Machines', 'Azure SQL', 'Functions', 'Monitor']},
+      features['Virtual Machines,Azure SQL,Functions,Monitor']},
     {
 ';
-'';
-      features['Compute Engine', 'Cloud Storage', 'Cloud Functions', 'BigQuery']}';
-      name: 'Google Cloud Platform',';
-      description: 'AI-first cloud platform with advanced analytics',';
+      features['Compute Engine,Cloud Storage,Cloud Functions,BigQuery']}';
+      name: 'Google Cloud Platform,;
+      description: 'AI-first cloud platform with advanced analytics,;
       icon: Globe,';
-      features: ['Compute Engine', 'Cloud Storage', 'Cloud Functions', 'BigQuery']}
+      features: ['Compute Engine,Cloud Storage,Cloud Functions,BigQuery']}
   ]';
-  const benefits = [''Scalable infrastructure that grows with your business',';
-    'Reduced capital expenditure and operational costs',';
-    'Enhanced security and compliance capabilities',';
-    'Faster time to market with cloud-native tools',';
-    'Global availability and disaster recovery',';Automated scaling and resource management';
+  const benefits = [''Scalable infrastructure that grows with your business',Reduced capital expenditure and operational costs',Enhanced security and compliance capabilities',Faster time to market with cloud-native tools',Global availability and disaster recovery,;Automated scaling and resource management';
   ];
 :pages.disabled/pages/services/Cloud.tsx;
 ';
-  return (''
+  return (
     <div className = 'min-h-screen bg-slate-900 text-white'>'{/* Hero Section */}''
       <section className='relative pt-24 pb-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto text-center'>''
@@ -85,8 +80,7 @@ const CloudServices = () => {
               and accelerate your business growth.
             </p>
 :pages.disabled/pages/services/Cloud.tsx
-          </div>';
-''
+          </div>'
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>'{cloudServices.map((service, index) => (''
               <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300'>''
                 <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
@@ -120,8 +114,7 @@ const CloudServices = () => {
               solutions for your specific needs.
             </p>
 :pages.disabled/pages/services/Cloud.tsx
-          </div>';
-''
+          </div>'
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>'{cloudPlatforms.map((platform, index) => (''
               <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300'>''
                 <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>''

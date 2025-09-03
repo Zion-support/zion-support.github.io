@@ -1,4 +1,4 @@
-import React from 'react';"
+import React from 'react
 import { Link } from 'react-router-dom';
 import { 
   Mail, 
@@ -20,7 +20,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
-    {"
+  {"
       title: 'Services',
       links: ["
         { name: 'AI Services', href: '/services/ai' },"
@@ -132,7 +132,7 @@ export function Footer() {
                 {section.links.map((link) => (
                   <li key={link.name}" >
                     <Link to={link.href}"
-                      className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm flex items-center group"" >"
+                      className='text-zion-slate-light hover:text-zion-cyan transition-colors text-sm flex items-center group  >'
                       <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" /" >
                       {link.name}
                     </Link>

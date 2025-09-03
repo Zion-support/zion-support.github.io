@@ -1,4 +1,4 @@
- const SEOHead = ({ title = 'Zion Tech Group - AI - Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting - edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images / zion - tech - group - og.jpg', url = 'https:'''';import { Helmet } from 'react-helmet-async';"
+ const SEOHead = ({ title = 'Zion Tech Group - AI - Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting - edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images / zion - tech - group - og.jpg', url = 'https:'''';import { Helmet } from 'react-helmet-async
 const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images/zion-tech-group-og.jpg', url = 'https://ziontechgroup.com', type = 'website', publishedTime, modifiedTime, author = 'Zion Tech Group' }) => {}"
 '
 ''
@@ -48,33 +48,33 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
         {JSON.stringify({}"
 '''
 ''''
-            '@context': 'https://schema.org',''''
-            '@type': 'Organization',''''
-            'name': 'Zion Tech Group',''''
-            'url': 'https://ziontechgroup.com',''''
-            'logo': 'https://ziontechgroup.com/images/zion-tech-group-logo.png',''''
+            '@context': 'https://schema.org,'''
+            '@type': 'Organization,'''
+            'name': 'Zion Tech Group,'''
+            'url': 'https://ziontechgroup.com,'''
+            'logo': 'https://ziontechgroup.com/images/zion-tech-group-logo.png,'''
             'description': description,''''
             'address': {}"
 '''
 ''''
-                '@type': 'PostalAddress',''''
-                'streetAddress': '364 E Main St STE 1008',''''
-                'addressLocality': 'Middletown',''''
-                'addressRegion': 'DE',''''
-                'postalCode': '19709',''''
+                '@type': 'PostalAddress,'''
+                'streetAddress': '364 E Main St STE 1008,'''
+                'addressLocality': 'Middletown,'''
+                'addressRegion': 'DE,'''
+                'postalCode': '19709,'''
                 'addressCountry': 'US'''',
 },''''
             'contactPoint': {}"
 '''
 ''''
-                '@type': 'ContactPoint',''''
-                'telephone': '+1-302-464-0950',''''
-                'contactType': 'customer service',''''
+                '@type': 'ContactPoint,'''
+                'telephone': '+1-302-464-0950,'''
+                'contactType': 'customer service,'''
                 'email': 'kleber@ziontechgroup.com'''',
 },''''
             'sameAs'['''
-                'https://linkedin.com/company/ziontechgroup',''''
-                'https://twitter.com/ziontechgroup',''''
+                'https://linkedin.com/company/ziontechgroup,'''
+                'https://twitter.com/ziontechgroup,'''
                 'https://github.com/ziontechgroup''',
 ]
         }) }
@@ -85,26 +85,26 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
           {JSON.stringify({}"
 '''
 ''''
-                '@context': 'https://schema.org',''''
-                '@type': 'Article',''''
+                '@context': 'https://schema.org,'''
+                '@type': 'Article,'''
                 'headline': fullTitle,''''
                 'description': description,''''
                 'image': image,''''
                 'author': {}"
 '''
 ''''
-                    '@type': 'Organization',''''
+                    '@type': 'Organization,'''
                     'name': author''',
 },''''
                 'publisher': {}"
 '''
 ''''
-                    '@type': 'Organization',''''
+                    '@type': 'Organization,'''
                     'name': siteName,''''
                     'logo': {}"
 '''
 ''''
-                        '@type': 'ImageObject',''''
+                        '@type': 'ImageObject,'''
                         'url': 'https://ziontechgroup.com/images/zion-tech-group-logo.png''',
 }''',
 },''''
@@ -113,7 +113,7 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
                 'mainEntityOfPage': {}"
 '''
 ''''
-                    '@type': 'WebPage',''''
+                    '@type': 'WebPage,'''
                     '@id': url,
 }
             })}

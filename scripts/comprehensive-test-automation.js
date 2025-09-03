@@ -117,7 +117,7 @@ class TestAutomation {
     console.log('♿ Running accessibility tests...');
     try {
       // Check for axe-core or similar;
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const packageJson = JSON.parse(fs.readFileSync('package.json,utf8'));
       const hasAxe = packageJson.dependencies?.['@axe-core/react'] || packageJson.devDependencies?.['@axe-core/react'];
       if (hasAxe) {
         console.log('✅ Accessibility testing framework detected')} else {
@@ -203,11 +203,7 @@ test('Performance test - Bundle size', async ({ page }) => {
       errors: this.errors,
       warnings: this.warnings,
       recommendations: [
-        'Add more unit tests for critical components',
-        'Implement E2E tests for user journeys',
-        'Set up continuous integration for automated testing',
-        'Add performance monitoring in production',
-        'Implement accessibility testing in CI/CD pipeline';
+        'Add more unit tests for critical components,Implement E2E tests for user journeys,Set up continuous integration for automated testing,Add performance monitoring in production,Implement accessibility testing in CI/CD pipeline';
       ]}
     fs.writeFileSync('test-automation-report.json', JSON.stringify(report, null, 2))}
   printTestSummary() {

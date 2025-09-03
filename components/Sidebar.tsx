@@ -34,7 +34,6 @@ import {
   ArrowRight,
   Calendar,
   DollarSign,
-  Play,
   X
 } from 'lucide-react';
 
@@ -56,16 +55,15 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   };
 
   const mainNavigation = [
-    { name: 'Home', href: '/', icon: Home },
+  { name: 'Home', href: '/', icon: Home },
     { name: 'About', href: '/about', icon: Users },
-    { name: 'Pricing', href: '/pricing', icon: DollarSign },
     { name: 'Contact', href: '/contact', icon: Phone },
     { name: 'Blog', href: '/blog', icon: FileText },
     { name: 'Careers', href: '/careers', icon: Briefcase }
   ];
 
   const services = [
-    { name: 'AI Services', href: '/ai-services', icon: Brain },
+  { name: 'AI Services', href: '/ai-services', icon: Brain },
     { name: 'IT Services', href: '/it-services', icon: Network },
     { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
     { name: 'Web Development', href: '/services/web-development', icon: Code },
@@ -74,7 +72,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   ];
 
   const solutions = [
-    { name: 'AI Content Creation', href: '/solutions/ai-content-creation', icon: Brain },
+  { name: 'AI Content Creation', href: '/solutions/ai-content-creation', icon: Brain },
     { name: 'Customer Support', href: '/solutions/customer-support', icon: Users },
     { name: 'Email Automation', href: '/solutions/email-automation', icon: Mail },
     { name: 'Event Management', href: '/solutions/event-management', icon: Calendar },
@@ -83,30 +81,30 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   ];
 
   const resources = [
-    { name: 'Documentation', href: '/docs', icon: FileText },
+  { name: 'Documentation', href: '/docs', icon: FileText },
     { name: 'API Reference', href: '/api', icon: Code },
     { name: 'Help & Support', href: '/help', icon: HelpCircle },
     { name: 'Training', href: '/training', icon: Users },
     { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
     { name: 'Pricing Guide', href: '/pricing-guide', icon: DollarSign },
-    { name: 'Demo', href: '/demo', icon: Play },
-    { name: 'Brochure', href: '/brochure', icon: FileText }
+    { name: 'Search', href: '/search', icon: Search },
+    { name: 'Sitemap', href: '/sitemap', icon: Globe }
   ];
 
   const legal = [
-    { name: 'Privacy Policy', href: '/privacy', icon: Lock },
+  { name: 'Privacy Policy', href: '/privacy', icon: Lock },
     { name: 'Terms of Service', href: '/terms', icon: FileText },
     { name: 'Cookie Policy', href: '/cookies', icon: Settings }
   ];
 
   const contactInfo = [
-    { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
+  { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
     { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
     { icon: MapPin, text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
+  { icon: Linkedin, href: '#', label: 'LinkedIn' },
     { icon: Twitter, href: '#', label: 'Twitter' },
     { icon: Facebook, href: '#', label: 'Facebook' },
     { icon: Instagram, href: '#', label: 'Instagram' }

@@ -19,7 +19,7 @@ import {
 
 export default function WorkflowAutomation() {
   const features = [
-    {
+  {
       icon: Zap,
       title: 'Process Automation',
       description:

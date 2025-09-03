@@ -57,7 +57,7 @@ const ContentRoutes = () => {
       <Route path="/api-docs" element={<Navigate to="/developers/docs" replace />} />
       <Route path="/sitemap" element={<Sitemap />} />
       <Route path="/sitemap-page" element={<SitemapPage />} />
-    </Routes>
+    </Routes>;
   );
 };
 export { ContentRoutes };

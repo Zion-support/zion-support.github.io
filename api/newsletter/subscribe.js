@@ -5,8 +5,7 @@ async function handler(req, res) {;
   'POST') {';
     res.statusCode = 405;
     res.setHeader(;
-  'Allow',';
-  'POST');';
+  'Allow',POST');';
     res.end(;
   'Method Not Allowed');';
     return}

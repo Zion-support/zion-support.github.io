@@ -5,10 +5,8 @@
  */;
 import fs from,
   fs';
-import path from "path";
-  'path';
-import { fileURLToPath } from "url";
-  'url';
+import path from "pathpath';
+import { fileURLToPath } from "urlurl';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 console.log(
@@ -47,9 +45,7 @@ class LinkIntegrityChecker {
         this.checkedFiles++;
         const content = fs.readFileSync(file,utf8');
         // Check for broken image references;
-        const imgRegex = /<img[^>]+src=[';
-  ']([^'']+)[';
-  ']/g;
+        const imgRegex = /<img[^>]+src=[]([^'']+)[]/g;
         let match;
         while ((match = imgRegex.exec(content)) !== null) {
           const src = match[1];
@@ -57,17 +53,14 @@ class LinkIntegrityChecker {
             this.issues.push(`Broken image reference in ${file}: ${src}`)}
         }
         // Check for broken script references;
-        const scriptRegex = /<script[^>]+src=['']([^';
-  ']+)['']/g;
+        const scriptRegex = /<script[^>]+src=['']([^]+)['']/g;
         while ((match = scriptRegex.exec(content)) !== null) {
           const src = match[1];
           if (!this.isValidAsset(src, file)) {
             this.issues.push(`Broken script reference in ${file}: ${src}`)}
         }
         // Check for broken stylesheet references;
-        const linkRegex = /<link[^>]+href=[';
-  ']([^'']+)[';
-  ']/g;
+        const linkRegex = /<link[^>]+href=[]([^'']+)[]/g;
         while ((match = linkRegex.exec(content)) !== null) {
           const href = match[1];
           if (!this.isValidAsset(href, file)) {
@@ -165,9 +158,7 @@ class LinkIntegrityChecker {
       if (fs.existsSync(indexHtmlPath)) {
         const content = fs.readFileSync(indexHtmlPath,utf8');
         // Check for broken asset references;
-        const assetRegex = /(src|href)=[';
-  ']([^'']+)[";
-  ']/g;
+        const assetRegex = /(src|href)=[]([^'']+)[]/g;
         let match;
         while ((match = assetRegex.exec(content)) !== null) {
           const assetPath = match[2];

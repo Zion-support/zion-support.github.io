@@ -33,47 +33,30 @@ const lintRules = {
   ': /<[^>]+\s+[a-zA-Z_$][a-zA-Z0-9_$]*\s*=\s*\{[^}]+\}[^>]*>/g}
 // File extensions to check;
 const extensions = ['.js
-  ', '.jsx;
-  ', '.ts;
-  ', '.tsx;
+  ,.jsx;
+  ,.ts;
+  ,.tsx;
   '];
 // Directories to ignore;
 const ignoreDirs = [
   'node_modules;
-  ',
-  '.git;
-  ',
-  'dist;
-  ',
-  'build;
-  ',
-  '.next;
-  ',
-  'out;
-  ',
-  'coverage;
-  ',
-  'temp;
-  ',
-  'tmp;
-  ',
-  'logs;
-  ',
-  'reports;
-  ',
-  'test-reports;
-  ',
-  'security-reports;
-  ',
-  'ci-cd-reports;
-  ',
-  'link-reports;
-  ',
-  'broken_files_backup;
-  ',
-  'temp_backup;
-  ',
-  'temp_working;
+  ,.git;
+  ,dist;
+  ,build;
+  ,.next;
+  ,out;
+  ,coverage;
+  ,temp;
+  ,tmp;
+  ,logs;
+  ,reports;
+  ,test-reports;
+  ,security-reports;
+  ,ci-cd-reports;
+  ,link-reports;
+  ,broken_files_backup;
+  ,temp_backup;
+  ,temp_working;
   ';
 ];
 // Issues found;

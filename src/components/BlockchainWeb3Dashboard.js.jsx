@@ -1,6 +1,6 @@
-import { useState, useCallback } from 'react';"
-import { motion, AnimatePresence } from 'framer-motion';"
-import { Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2 } from 'lucide-react'
+import { useState, useCallback } from 'react
+import { motion, AnimatePresence } from 'framer-motion
+import { Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2 }  from 'lucide-react';
 ;"
 export const BlockchainWeb3Dashboard = ({ className = '' }) => {
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true",
@@ -13,16 +13,16 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
 '
 ''
 '''
-        name: '','''
-        description: '','''
+        name: ',''
+        description: ',''
         image: '',
 })
     const [transactionForm, setTransactionForm] = useState({}"
 '
 ''
 '''
-        to: '','''
-        value: '','''
+        to: ',''
+        value: ',''
         data: '',
 })
     const handleConnectWallet = useCallback(async () => {}
@@ -41,11 +41,11 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 const metadata = {}
   name: nftForm.name, description: nftForm.description, image: nftForm.image || `https://via.placeholder.com/300x300/6366f1/ffffff?text=${nftForm.name```"`
 ```'`",`
-}`'';",
-}';'
-                await mintNFT(contracts[1]?.address || '', metadata)';'
+}`',
+}
+                await mintNFT(contracts[1]?.address || '', metadata)
                 setNftForm({ name: '', description: '', image: '' })'
-                setShowMintNFT(false)';'
+                setShowMintNFT(false)
                 trackEvent('blockchain',dashboard',nft_minted')}
             catch (error) {}"
 '
@@ -164,14 +164,14 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 <button onClick = {}
   () =" > addContract({}"
 '
-                name: 'New Contract','
+                name: 'New Contract,
                 address: '0x' + Math.random().toString(36).substr(2, 40),'
                 network: 'ethereum', abi[],'
                 functions['function1',function2'],'
-                events['Event1','Event2']"
+                events['Event1,Event2']"
             '''
 '''',
-})} className='px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700'>';''
+})} className='px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700'>'
                   <Plus className='w-4 h-4 inline mr-2'/" >
                   Add Contract
                 </button>"
@@ -281,9 +281,9 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 <button onClick = {}
   () =" > createDeFiPosition({}"
 '
-                type: 'staking','
-                protocol: 'Zion Protocol','
-                asset: 'ZION','
+                type: 'staking,
+                protocol: 'Zion Protocol,
+                asset: 'ZION,
                 amount: '1000', apy: 12.5,'
   rewards: '125'
             '''

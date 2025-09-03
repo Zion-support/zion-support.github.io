@@ -57,7 +57,7 @@ function ToastContainer({ toasts, removeToast }: { toasts: Toast[]; removeToast:
 
 function Toast({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => void }) {
   const bgColor = {"
-    success: 'bg-green-500', error: 'bg-red-500',"
+    success: 'bg-green-500', error: 'bg-red-500,
     warning: 'bg-yellow-500', info: 'bg-blue-500',
   }[toast.type];
 
