@@ -1,6 +1,7 @@
 const CACHE_NAME =;
   'zion-tech-group-v1';
-const urlsToCache = [
+<<<<<<< HEAD
+const urlsToCache = ['
   '/',
   '/about',
   '/services',
@@ -11,18 +12,22 @@ const urlsToCache = [
   '/apple-touch-icon.png',
   '/favicon-32x32.png',
   '/favicon-16x16.png';
+=======
+const urlsToCache = [
+  '/,/about,/services,/contact,/careers,/manifest.json,/favicon.ico,/apple-touch-icon.png,/favicon-32x32.png,/favicon-16x16.png';
+>>>>>>> main
 ];
 // Install event - cache resources;
-self.addEventListener(
+self.addEventListener('
   'install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME);
       .then((cache) => {
-        console.log(
+        console.log('
   'Opened cache');
         return cache.addAll(urlsToCache)}))})
 // Fetch event - serve from cache when offline;
-self.addEventListener(
+self.addEventListener('
   'fetch', (event) => {
   event.respondWith(
     caches.match(event.request);
@@ -33,13 +38,13 @@ self.addEventListener(
         return fetch(event.request)}
 )))})
 // Activate event - clean up old caches;
-self.addEventListener(
+self.addEventListener('
   'activate', (event) => {
 event.waitUntil(caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
           if (cacheName !== CACHE_NAME) {
-            console.log(
+            console.log('
   'Deleting old cache:', cacheName);
             return caches.delete(cacheName)}
         }))}))})

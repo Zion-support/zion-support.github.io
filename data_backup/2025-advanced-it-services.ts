@@ -1,3 +1,102 @@
+<<<<<<< HEAD
+import { ServiceVariant } from '../types/service-variants';
+
+export interface AdvancedITService {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  variant: ServiceVariant;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+    website: string;
+  };
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
+}
+
+const contact = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+
+export const advancedITServices2025: AdvancedITService[] = [
+  {
+    id: 'quantum-cloud-infrastructure-platform',
+    name: 'Quantum Cloud Infrastructure Platform',
+    tagline: 'Next-generation quantum-enhanced cloud infrastructure with unprecedented performance',
+    price: '$1,299',
+    period: '/month',
+    description: 'Next-generation quantum-enhanced cloud infrastructure platform that provides unprecedented performance, security, and scalability for enterprise applications with quantum computing capabilities.',
+    features: [
+      'Quantum-enhanced computing resources',
+      'Advanced security with quantum encryption',
+      'Auto-scaling infrastructure',
+      'Global edge computing network',
+      'Integration with major cloud providers',
+      'Advanced monitoring and analytics',
+      'Custom quantum algorithms',
+      '24/7 technical support',
+      'Disaster recovery and backup'
+    ],
+    popular: true,
+    icon: '⚛️',
+    color: 'from-purple-600 to-violet-700',
+    textColor: 'text-purple-400',
+    link: 'https://ziontechgroup.com/quantum-cloud-infrastructure',
+    marketPosition: 'Quantum-enhanced cloud infrastructure specialized for enterprise applications.',
+    targetAudience: 'Enterprise IT teams, Cloud architects, Research institutions',
+    trialDays: 30,
+    setupTime: '2-3 weeks',
+    category: 'Quantum Cloud Infrastructure',
+    realService: true,
+    technology: ['Quantum Computing', 'Cloud Infrastructure', 'Quantum Encryption'],
+    integrations: ['AWS', 'Azure', 'Google Cloud', 'IBM Quantum'],
+    useCases: ['High-performance computing', 'Quantum research', 'Enterprise applications'],
+    roi: 'Improve computational performance by 100-1000x for quantum-optimized workloads.',
+    competitors: ['IBM Quantum', 'Google Quantum', 'Microsoft Azure Quantum', 'AWS Braket'],
+    marketSize: '$5B quantum cloud',
+    growthRate: '65% YoY',
+    variant: 'quantum-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Quantum-enhanced cloud infrastructure with hybrid classical-quantum computing capabilities.',
+    launchDate: '2025-01-10',
+    customers: 45,
+    rating: 4.9,
+    reviews: 34
+  }
+];
+=======
 export const advancedITServices2025 = [{
     id:,
   quantum-cloud-infrastructure-platform',
@@ -15,18 +114,22 @@ export const advancedITServices2025 = [{
   '24/7 technical support';
     ],
     pricing: {
-      starter: { price: 299, period:;
+      starte,
+    r: { pric,
+    e: 299, period:;
   'month', features[;
   'Up to 100 vCPUs',
   'Basic quantum features',
   'Standard support'] },
-      professional: { price: 799, period:;
+      professional: { pric,
+    e: 799, period:;
   'month', features[;
   'Up to 500 vCPUs',
   'Advanced quantum features',
   'Priority support',
   'Custom algorithms'] },
-      enterprise: { price: 1999, period:,
+      enterprise: { pric,
+    e: 1999, period:,
   month', features[;
   'Unlimited resources',
   'Custom quantum solutions',
@@ -39,9 +142,11 @@ export const advancedITServices2025 = [{
   'Cloud Infrastructure',
   'Security',
   'Scalability'],
-    website: 'https://ziontechgroup.com/quantum-cloud-infrastructure,
+    website: 'http,
+    s://ziontechgroup.com/quantum-cloud-infrastructure,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -49,7 +154,7 @@ export const advancedITServices2025 = [{
     targetAudience: Enterprise businesses, cloud providers, research institutions, government agencies,
   ,
     competitiveAdvantage: Industry-first quantum-enhanced cloud infrastructure, advanced security with quantum encryption, and global edge computing network},
-  {
+  {'
     id: 'intelligent-edge-computing-orchestrator,
     name:,
   EdgeComputing AI',
@@ -65,18 +170,22 @@ export const advancedITServices2025 = [{
   'Global edge network management';
     ],
     pricing: {
-      starter: { price: 199, period:;
+      starte,
+    r: { pric,
+    e: 199, period:;
   'month', features[;
   'Up to 10 edge nodes',
   'Basic AI optimization',
   'Standard monitoring'] },
-      professional: { price: 599, period:;
+      professional: { pric,
+    e: 599, period:;
   'month', features[;
   'Up to 100 edge nodes',
   'Advanced AI',
   'Custom algorithms',
   'Priority support'] },
-      enterprise: { price: 1499, period:,
+      enterprise: { pric,
+    e: 1499, period:,
   month', features[;
   'Unlimited edge nodes',
   'Custom AI training',
@@ -89,9 +198,11 @@ export const advancedITServices2025 = [{
   'Edge Computing',
   'IoT',
   'Distributed Computing'],
-    website: 'https://ziontechgroup.com/edge-computing-ai,
+    website: 'http,
+    s://ziontechgroup.com/edge-computing-ai,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -99,7 +210,7 @@ export const advancedITServices2025 = [{
     targetAudience: IoT companies, telecommunications, manufacturing, smart cities,
   ,
     competitiveAdvantage: Advanced AI-powered edge orchestration, comprehensive distributed computing optimization, and extensive IoT device integration},
-  {
+  {'
     id: 'zero-trust-security-platform,
     name:,
   ZeroTrust Security Pro',
@@ -115,18 +226,22 @@ export const advancedITServices2025 = [{
   '24/7 security operations center';
     ],
     pricing: {
-      starter: { price: 149, period:;
+      starte,
+    r: { pric,
+    e: 149, period:;
   'month', features[;
   'Up to 100 users',
   'Basic zero-trust',
   'Standard monitoring'] },
-      professional: { price: 399, period:;
+      professional: { pric,
+    e: 399, period:;
   'month', features[;
   'Up to 1,000 users',
   'Advanced security',
   'Custom policies',
   'Priority support'] },
-      enterprise: { price: 999, period:,
+      enterprise: { pric,
+    e: 999, period:,
   month', features[;
   'Unlimited users',
   'Custom security rules',
@@ -139,9 +254,11 @@ export const advancedITServices2025 = [{
   'Cybersecurity',
   'Identity Management',
   'Threat Detection'],
-    website: 'https://ziontechgroup.com/zero-trust-security-pro,
+    website: 'http,
+    s://ziontechgroup.com/zero-trust-security-pro,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -149,7 +266,7 @@ export const advancedITServices2025 = [{
     targetAudience: IT security teams, cybersecurity firms, enterprise businesses, government agencies,
   ,
     competitiveAdvantage: Comprehensive zero-trust implementation, advanced threat detection, and extensive security tool integration},
-  {
+  {'
     id: 'blockchain-enterprise-platform,
     name:,
   EnterpriseBlockchain Pro',
@@ -165,18 +282,22 @@ export const advancedITServices2025 = [{
   '24/7 platform support';
     ],
     pricing: {
-      starter: { price: 199, period:;
+      starte,
+    r: { pric,
+    e: 199, period:;
   'month', features[;
   'Up to 1,000 transactions/sec',
   'Basic blockchain',
   'Standard support'] },
-      professional: { price: 599, period:;
+      professional: { pric,
+    e: 599, period:;
   'month', features[;
   'Up to 10,000 transactions/sec',
   'Advanced features',
   'Custom solutions',
   'Priority support'] },
-      enterprise: { price: 1499, period:,
+      enterprise: { pric,
+    e: 1499, period:,
   month', features[;
   'Unlimited transactions',
   'Custom blockchain',
@@ -189,9 +310,11 @@ export const advancedITServices2025 = [{
   'Smart Contracts',
   'Enterprise',
   'Compliance'],
-    website: 'https://ziontechgroup.com/enterprise-blockchain-pro,
+    website: 'http,
+    s://ziontechgroup.com/enterprise-blockchain-pro,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -199,7 +322,7 @@ export const advancedITServices2025 = [{
     targetAudience: Financial institutions, supply chain companies, healthcare providers, government agencies,
   ,
     competitiveAdvantage: Enterprise-grade blockchain infrastructure, comprehensive compliance tools, and seamless business system integration},
-  {
+  {'
     id: 'ai-powered-devops-platform,
     name:,
   DevOps AI Pro',
@@ -215,18 +338,22 @@ export const advancedITServices2025 = [{
   '24/7 platform monitoring';
     ],
     pricing: {
-      starter: { price: 99, period:;
+      starte,
+    r: { pric,
+    e: 99, period:;
   'month', features[;
   'Up to 10 developers',
   'Basic AI automation',
   'Standard CI/CD'] },
-      professional: { price: 299, period:;
+      professional: { pric,
+    e: 299, period:;
   'month', features[;
   'Up to 50 developers',
   'Advanced AI',
   'Custom workflows',
   'Priority support'] },
-      enterprise: { price: 799, period:,
+      enterprise: { pric,
+    e: 799, period:,
   month', features[;
   'Unlimited developers',
   'Custom AI training',
@@ -239,9 +366,11 @@ export const advancedITServices2025 = [{
   'DevOps',
   'CI/CD',
   'Automation'],
-    website: 'https://ziontechgroup.com/devops-ai-pro,
+    website: 'http,
+    s://ziontechgroup.com/devops-ai-pro,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -249,7 +378,7 @@ export const advancedITServices2025 = [{
     targetAudience: Development teams, DevOps engineers, software companies, enterprise businesses,
   ,
     competitiveAdvantage: Advanced AI-powered DevOps automation, comprehensive workflow optimization, and extensive development tool integration},
-  {
+  {'
     id: 'quantum-networking-platform,
     name:,
   QuantumNet Pro',
@@ -265,18 +394,22 @@ export const advancedITServices2025 = [{
   '24/7 network support';
     ],
     pricing: {
-      starter: { price: 399, period:;
+      starte,
+    r: { pric,
+    e: 399, period:;
   'month', features[;
   'Up to 1Gbps',
   'Basic quantum features',
   'Standard support'] },
-      professional: { price: 999, period:;
+      professional: { pric,
+    e: 999, period:;
   'month', features[;
   'Up to 10Gbps',
   'Advanced quantum features',
   'Custom protocols',
   'Priority support'] },
-      enterprise: { price: 2499, period:,
+      enterprise: { pric,
+    e: 2499, period:,
   month', features[;
   'Unlimited bandwidth',
   'Custom quantum solutions',
@@ -289,9 +422,11 @@ export const advancedITServices2025 = [{
   'Networking',
   'Security',
   'High-Speed Communication'],
-    website: 'https://ziontechgroup.com/quantum-net-pro,
+    website: 'http,
+    s://ziontechgroup.com/quantum-net-pro,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -299,7 +434,7 @@ export const advancedITServices2025 = [{
     targetAudience: Telecommunications, financial institutions, government agencies, research institutions,
   ,
     competitiveAdvantage: Industry-first quantum networking platform, ultra-secure quantum encryption, and advanced routing algorithms},
-  {
+  {'
     id: 'autonomous-it-operations-platform,
     name:,
   AutonomousIT Pro',
@@ -315,18 +450,22 @@ export const advancedITServices2025 = [{
   '24/7 autonomous operations';
     ],
     pricing: {
-      starter: { price: 199, period:;
+      starte,
+    r: { pric,
+    e: 199, period:;
   'month', features[;
   'Up to 100 servers',
   'Basic autonomy',
   'Standard monitoring'] },
-      professional: { price: 599, period:;
+      professional: { pric,
+    e: 599, period:;
   'month', features[;
   'Up to 1,000 servers',
   'Advanced AI',
   'Custom automation',
   'Priority support'] },
-      enterprise: { price: 1499, period:,
+      enterprise: { pric,
+    e: 1499, period:,
   month', features[;
   'Unlimited servers',
   'Custom AI training',
@@ -339,9 +478,11 @@ export const advancedITServices2025 = [{
   'Autonomous Operations',
   'Infrastructure Management',
   'Automation'],
-    website: 'https://ziontechgroup.com/autonomous-it-pro,
+    website: 'http,
+    s://ziontechgroup.com/autonomous-it-pro,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -349,7 +490,7 @@ export const advancedITServices2025 = [{
     targetAudience: IT operations teams, system administrators, enterprise businesses, managed service providers,
   ,
     competitiveAdvantage: Advanced autonomous IT operations, comprehensive issue prediction, and extensive IT tool integration},
-  {
+  {'
     id: 'quantum-data-center-platform,
     name:,
   QuantumDataCenter Pro',
@@ -365,18 +506,22 @@ export const advancedITServices2025 = [{
   '24/7 data center support';
     ],
     pricing: {
-      starter: { price: 499, period:;
+      starte,
+    r: { pric,
+    e: 499, period:;
   'month', features[;
   'Up to 100 racks',
   'Basic quantum features',
   'Standard support'] },
-      professional: { price: 1299, period:;
+      professional: { pric,
+    e: 1299, period:;
   'month', features[;
   'Up to 500 racks',
   'Advanced quantum features',
   'Custom solutions',
   'Priority support'] },
-      enterprise: { price: 2999, period:,
+      enterprise: { pric,
+    e: 2999, period:,
   month', features[;
   'Unlimited racks',
   'Custom quantum solutions',
@@ -389,9 +534,11 @@ export const advancedITServices2025 = [{
   'Data Center',
   'Infrastructure',
   'Energy Efficiency'],
-    website: 'https://ziontechgroup.com/quantum-data-center-pro,
+    website: 'http,
+    s://ziontechgroup.com/quantum-data-center-pro,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -399,7 +546,7 @@ export const advancedITServices2025 = [{
     targetAudience: Data center operators, cloud providers, enterprise businesses, government agencies,
   ,
     competitiveAdvantage: Industry-first quantum-enhanced data center, advanced energy efficiency, and comprehensive quantum computing integration},
-  {
+  {'
     id: 'quantum-cybersecurity-platform,
     name:,
   QuantumCyber Pro',
@@ -415,18 +562,22 @@ export const advancedITServices2025 = [{
   '24/7 quantum security operations';
     ],
     pricing: {
-      starter: { price: 299, period:;
+      starte,
+    r: { pric,
+    e: 299, period:;
   'month', features[;
   'Up to 100 endpoints',
   'Basic quantum security',
   'Standard monitoring'] },
-      professional: { price: 799, period:;
+      professional: { pric,
+    e: 799, period:;
   'month', features[;
   'Up to 1,000 endpoints',
   'Advanced quantum features',
   'Custom solutions',
   'Priority support'] },
-      enterprise: { price: 1999, period:,
+      enterprise: { pric,
+    e: 1999, period:,
   month', features[;
   'Unlimited endpoints',
   'Custom quantum security',
@@ -439,9 +590,11 @@ export const advancedITServices2025 = [{
   'Cybersecurity',
   'Encryption',
   'Threat Detection'],
-    website: 'https://ziontechgroup.com/quantum-cyber-pro,
+    website: 'http,
+    s://ziontechgroup.com/quantum-cyber-pro,
     contact: {
-      phone:,
+      phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -449,7 +602,7 @@ export const advancedITServices2025 = [{
     targetAudience: IT security teams, cybersecurity firms, government agencies, financial institutions,
   ,
     competitiveAdvantage: Industry-first quantum cybersecurity platform, unbreakable quantum encryption, and advanced threat detection},
-  {
+  {'
     id: 'quantum-cloud-migration-platform,
     name:,
   QuantumMigration Pro',
@@ -465,18 +618,22 @@ export const advancedITServices2025 = [{
   '24/7 migration support';
     ],
     pricing: {
-      starter: { price: 199, period:;
+      starte,
+    r: { pric,
+    e: 199, period:;
   'month', features[;
   'Up to 100 workloads',
   'Basic migration tools',
   'Standard support'] },
-      professional: { price: 599, period:;
+      professional: { pric,
+    e: 599, period:;
   'month', features[;
   'Up to 1,000 workloads',
   'Advanced quantum features',
   'Custom strategies',
   'Priority support'] },
-      enterprise: { price: 1499, period:,
+      enterprise: { pric,
+    e: 1499, period:,
   month', features[;
   'Unlimited workloads',
   'Custom quantum solutions',
@@ -489,9 +646,11 @@ export const advancedITServices2025 = [{
   'Cloud Migration',
   'AI',
   'Zero Downtime'],
-    website: 'https://ziontechgroup.com/quantum-migration-pro,
+    website: 'http,
+    s://ziontechgroup.com/quantum-migration-pro,
     contact: {
-phone:,
+phon,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com},
     marketSize:,
@@ -500,3 +659,4 @@ phone:,
   ,
     competitiveAdvantage: Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration';
 ]}
+>>>>>>> main

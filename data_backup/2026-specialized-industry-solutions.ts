@@ -26,23 +26,29 @@ export interface SpecializedIndustrySolution {
    growthRate: string;
    contactInfo: { mobile: string;
    email: string;
-   address: string;
-   website: string}
+   addres,
+    s: string;
+   websit,
+    e: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
-  rating: number;
-reviews: number;const contact = {
-  mobile:,
+  ratin,
+    g: number;
+review,
+    s: number;const contact = {
+  mobil,
+    e:,
   +1 302 464 0950',
   email: 'kleber@ziontechgroup.com,
   address:,
   364 E Main St STE 1008 Middletown DE 19709',
-  ;
-  website: 'https://ziontechgroup.com}
+  website: 'http,
+    s://ziontechgroup.com}
 export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [{
-    id:,
+    i,
+    d:,
   healthcare-ai-diagnostic-platform',
     name: 'Healthcare AI Diagnostic Platform,
     tagline:,
@@ -53,7 +59,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     description:;
   'Comprehensive AI-powered diagnostic platform that assists healthcare professionals in accurate diagnosis, treatment planning, and patient care optimization.',
     features[;
-  'AI-powered image analysis (X-rays, MRIs, CT scans)',
+  'AI-powered image analysis (X-rays, MRIs, CT scans),
   'Symptom analysis and diagnosis support',
   'Treatment recommendation engine',
   'Patient data management',
@@ -70,7 +76,8 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     color: 'from-green-600 to-emerald-600,
     textColor:,
   text-green-400',
-    link: 'https://ziontechgroup.com/healthcare-ai-diagnostic-platform,
+    link: 'http,
+    s://ziontechgroup.com/healthcare-ai-diagnostic-platform,
     marketPosition:,
   Leading healthcare AI diagnostic platform. Competes with IBM Watson Health ($50K+ setup), Google Health AI ($100K+ setup). Our advantage: Cost-effective implementation and comprehensive features.,
     targetAudience:;
@@ -146,7 +153,8 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     color: 'from-yellow-600 to-orange-600,
     textColor:,
   text-yellow-400',
-    link: 'https://ziontechgroup.com/fintech-blockchain-platform,
+    link: 'http,
+    s://ziontechgroup.com/fintech-blockchain-platform,
     marketPosition:,
   Leading fintech blockchain platform. Competes with Ripple ($100K+ setup), ConsenSys ($200K+ setup). Our advantage: Cost-effective implementation and comprehensive financial services.,
     targetAudience:;
@@ -222,7 +230,8 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     color: 'from-blue-600 to-indigo-600,
     textColor:,
   text-blue-400',
-    link: 'https://ziontechgroup.com/manufacturing-iot-platform,
+    link: 'http,
+    s://ziontechgroup.com/manufacturing-iot-platform,
     marketPosition:,
   Leading manufacturing IoT platform. Competes with Siemens Mindsphere ($50K+ setup), GE Predix ($100K+ setup). Our advantage: Cost-effective implementation and comprehensive features.,
     targetAudience:;
@@ -298,7 +307,8 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     color: 'from-pink-600 to-purple-600,
     textColor:,
   text-pink-400',
-    link: 'https://ziontechgroup.com/retail-ai-optimization-platform,
+    link: 'http,
+    s://ziontechgroup.com/retail-ai-optimization-platform,
     marketPosition:,
   Leading retail AI optimization platform. Competes with Salesforce Commerce Cloud ($2K+ setup), Adobe Commerce ($2.5K+ setup). Our advantage: AI-powered optimization and comprehensive features.,
     targetAudience:;
@@ -367,7 +377,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
   'Multi-carrier integration',
   'Mobile app for drivers';
     ]];
-export const INDUSTRY_SOLUTION_CATEGORIES = [
+export const INDUSTRY_SOLUTION_CATEGORIES = ['
   'Healthcare Technology',
   'FinTech Solutions',
   'Manufacturing Technology',

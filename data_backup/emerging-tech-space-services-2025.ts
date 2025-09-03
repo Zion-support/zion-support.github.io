@@ -28,16 +28,21 @@ export interface EmergingTechSpaceService2025 {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-   address: string;
-   website: string}
+   addres,
+    s: string;
+   websit,
+    e: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-reviews: number;export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [;
+review,
+    s: number;export const emergingTechSpaceServices202,
+    5: EmergingTechSpaceService2025[] = [;
   // Space Technology & Mining{
-    id:,
+    i,
+    d:,
   quantum-space-mining-platform',
     name: 'Quantum Space Mining Platform,
     tagline:,
@@ -65,9 +70,11 @@ reviews: number;export const emergingTechSpaceServices2025: EmergingTechSpaceSer
     color: 'from-slate-800 to-slate-900,
     textColor:,
   text-slate-300',
-    link: 'https://ziontechgroup.com/quantum-space-mining-platform,
+    link: 'http,
+    s://ziontechgroup.com/quantum-space-mining-platform,
     marketPosition:;
-  'First quantum space mining platform. Traditional space mining: $50,000+/month. Our quantum platform: $12,999/month with 20x better resource detection.,
+  'First quantum space mining platform. Traditional space minin,
+    g: $50,000+/month. Our quantum platform: $12,999/month with 20x better resource detection.,
   ,
     targetAudience: Space mining companies, Aerospace companies, Government space agencies, Research institutions, Investment firms, Technology companies',
     trialDays: 14,
@@ -106,12 +113,14 @@ reviews: number;export const emergingTechSpaceServices2025: EmergingTechSpaceSer
   400% annual growth',
     variant: 'quantum-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Full-stack quantum space mining platform with satellite integration, real-time monitoring, and comprehensive mining optimization. Includes custom mining strategy development and regulatory compliance.',
@@ -148,9 +157,11 @@ reviews: number;export const emergingTechSpaceServices2025: EmergingTechSpaceSer
     color: 'from-blue-800 to-indigo-900,
     textColor:,
   text-blue-300',
-    link: 'https://ziontechgroup.com/quantum-space-communication-network,
+    link: 'http,
+    s://ziontechgroup.com/quantum-space-communication-network,
     marketPosition:;
-  'First quantum space communication network. Traditional space communication: $30,000+/month. Our quantum network: $8,999/month with unbreakable security.,
+  'First quantum space communication network. Traditional space communicatio,
+    n: $30,000+/month. Our quantum network: $8,999/month with unbreakable security.,
   ,
     targetAudience: Space agencies, Satellite companies, Aerospace companies, Research institutions, Government agencies, Telecommunications companies',
     trialDays: 21,
@@ -189,12 +200,14 @@ reviews: number;export const emergingTechSpaceServices2025: EmergingTechSpaceSer
   280% annual growth',
     variant: 'quantum-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Enterprise-grade quantum space communication network with satellite integration, ground station support, and comprehensive security. Includes custom communication protocols and mission support.',
@@ -231,9 +244,11 @@ reviews: number;export const emergingTechSpaceServices2025: EmergingTechSpaceSer
     color: 'from-emerald-700 to-teal-800,
     textColor:,
   text-emerald-300',
-    link: 'https://ziontechgroup.com/space-colony-automation-platform,
+    link: 'http,
+    s://ziontechgroup.com/space-colony-automation-platform,
     marketPosition:;
-  'First space colony automation platform. No direct competitors. Comparable to industrial automation: $100,000+/month. Our platform: $15,999/month with space-specific features.,
+  'First space colony automation platform. No direct competitors. Comparable to industrial automatio,
+    n: $100,000+/month. Our platform: $15,999/month with space-specific features.,
   ,
     targetAudience: Space agencies, Space companies, Research institutions, Government agencies, Aerospace companies, Technology companies',
     trialDays: 30,
@@ -272,12 +287,14 @@ reviews: number;export const emergingTechSpaceServices2025: EmergingTechSpaceSer
   350% annual growth',
     variant: 'ai-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Comprehensive space colony automation platform with life support integration, robotic systems, and environmental controls. Includes custom automation development and colony planning services.',
@@ -314,9 +331,11 @@ reviews: number;export const emergingTechSpaceServices2025: EmergingTechSpaceSer
     color: 'from-yellow-600 to-orange-600,
     textColor:,
   text-yellow-400',
-    link: 'https://ziontechgroup.com/quantum-space-propulsion-system,
+    link: 'http,
+    s://ziontechgroup.com/quantum-space-propulsion-system,
     marketPosition:;
-  'First quantum space propulsion platform. Traditional propulsion: $100,000+/month. Our quantum system: $25,999/month with revolutionary capabilities.,
+  'First quantum space propulsion platform. Traditional propulsio,
+    n: $100,000+/month. Our quantum system: $25,999/month with revolutionary capabilities.,
   ,
     targetAudience: Space agencies, Aerospace companies, Research institutions, Government agencies, Technology companies, Investment firms',
     trialDays: 14,
@@ -355,12 +374,14 @@ reviews: number;export const emergingTechSpaceServices2025: EmergingTechSpaceSer
   250% annual growth',
     variant: 'quantum-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Advanced quantum space propulsion system with spacecraft integration, mission planning, and comprehensive monitoring. Includes custom propulsion design and mission optimization services.',
@@ -397,9 +418,11 @@ reviews: number;export const emergingTechSpaceServices2025: EmergingTechSpaceSer
     color: 'from-violet-600 to-purple-700,
     textColor:,
   text-violet-400',
-    link: 'https://ziontechgroup.com/space-research-automation-platform,
+    link: 'http,
+    s://ziontechgroup.com/space-research-automation-platform,
     marketPosition:;
-  'First space research automation platform. Traditional research tools: $20,000+/month. Our platform: $6,999/month with 10x productivity improvement.,
+  'First space research automation platform. Traditional research tool,
+    s: $20,000+/month. Our platform: $6,999/month with 10x productivity improvement.,
   ,
     targetAudience: Space research institutions, Universities, Government agencies, Aerospace companies, Technology companies, Research organizations',
     trialDays: 30,
@@ -438,12 +461,14 @@ reviews: number;export const emergingTechSpaceServices2025: EmergingTechSpaceSer
   200% annual growth',
     variant: 'ai-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Comprehensive space research automation platform with data collection, analysis, and collaboration tools. Includes custom research workflow development and integration services.',

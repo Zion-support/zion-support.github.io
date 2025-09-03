@@ -11,8 +11,10 @@ declare module 'jspdf' {
     setTextColor(...args: any[]): void;
     setFillColor(...args: any[]): void;
     setDrawColor(...args: any[]): void;
-    setLineWidth(...args: any[]): void;
-    splitTextToSize(text: string, size: number): string[];
+    setLineWidth(...arg,
+    s: any[]): void;
+    splitTextToSize(tex,
+    t: string, size: number): string[];
     output(type?: string): any}
   export function autoTable(...args: any[]): void}
 declare module 'jspdf-autotable' {

@@ -8,27 +8,24 @@ export const PASSWORD_STRENGTH = {
   MEDIUM: 'medium',
   STRONG: 'strong',
   VERY_STRONG: 'very-strong'}
-;
 /**;
  * Password strength colors;
  */;
-export const PASSWORD_COLORS = {
+export const PASSWORD_COLORS = {'
   [PASSWORD_STRENGTH.VERY_WEAK]: 'bg-red-500',
   [PASSWORD_STRENGTH.WEAK]: 'bg-orange-500',
   [PASSWORD_STRENGTH.MEDIUM]: 'bg-yellow-500',
   [PASSWORD_STRENGTH.STRONG]: 'bg-blue-500',
   [PASSWORD_STRENGTH.VERY_STRONG]: 'bg-green-500'}
-;
 /**;
  * Password strength labels;
  */;
-export const PASSWORD_LABELS = {
+export const PASSWORD_LABELS = {'
   [PASSWORD_STRENGTH.VERY_WEAK]: 'Very Weak',
   [PASSWORD_STRENGTH.WEAK]: 'Weak',
   [PASSWORD_STRENGTH.MEDIUM]: 'Medium',
   [PASSWORD_STRENGTH.STRONG]: 'Strong',
   [PASSWORD_STRENGTH.VERY_STRONG]: 'Very Strong'}
-;
 /**;
  * Check if password contains lowercase letters;
  * @param {string} password - Password to check;
@@ -36,7 +33,6 @@ export const PASSWORD_LABELS = {
  */;
 export const hasLowercase = (password) => {
   return /[a-z]/.test(password)}
-;
 /**;
  * Check if password contains uppercase letters;
  * @param {string} password - Password to check;
@@ -44,7 +40,6 @@ export const hasLowercase = (password) => {
  */;
 export const hasUppercase = (password) => {
   return /[A-Z]/.test(password)}
-;
 /**;
  * Check if password contains numbers;
  * @param {string} password - Password to check;
@@ -52,15 +47,13 @@ export const hasUppercase = (password) => {
  */;
 export const hasNumbers = (password) => {
   return /\d/.test(password)}
-;
 /**;
  * Check if password contains special characters;
  * @param {string} password - Password to check;
  * @returns {boolean} True if contains special characters;
  */;
-export const hasSpecialChars = (password) => {
-  return /[!@#$%^&*()_+\-=[\]{}';:"\\|,.<>/?]/.test(password)}
-;
+export const hasSpecialChars = (password) => {'
+  return /[!@#$%^&*()_+\-=[\]{};:"\\|,.<>/?]/.test(password)}
 /**;
  * Check password length;
  * @param {string} password - Password to check;
@@ -72,7 +65,6 @@ export const getLengthScore = (password) => {
   if (password.length < 12) return 1;
   if (password.length < 16) return 2;
   return 3}
-;
 /**;
  * Calculate password strength score;
  * @param {string} password - Password to check;
@@ -92,8 +84,7 @@ export const calculatePasswordScore = (password) => {
   const uniqueChars = new Set(password).size;
   if (uniqueChars > 8) score += 10;
   if (uniqueChars > 12) score += 10;
-  return Math.min(100, Math.round(score))}
-;
+  return Math.min(100, Math.round(score));
 /**;
  * Get password strength level;
  * @param {string} password - Password to check;
@@ -106,7 +97,6 @@ export const getPasswordStrength = (password) => {
   if (score < 60) return PASSWORD_STRENGTH.MEDIUM;
   if (score < 80) return PASSWORD_STRENGTH.STRONG;
   return PASSWORD_STRENGTH.VERY_STRONG}
-;
 /**;
  * Get password strength feedback;
  * @param {string} password - Password to check;
@@ -114,23 +104,22 @@ export const getPasswordStrength = (password) => {
  */;
 export const getPasswordFeedback = (password) => {
   const feedback = [];
-  if (!password) {
+  if (!password) {"
     feedback.push('Enter a password');
     return feedback}
-  if (password.length < 8) {
+  if (password.length < 8) {'
     feedback.push('Password should be at least 8 characters long')}
-  if (!hasLowercase(password)) {
+  if (!hasLowercase(password)) {'
     feedback.push('Include lowercase letters')}
-  if (!hasUppercase(password)) {
+  if (!hasUppercase(password)) {'
     feedback.push('Include uppercase letters')}
-  if (!hasNumbers(password)) {
+  if (!hasNumbers(password)) {'
     feedback.push('Include numbers')}
-  if (!hasSpecialChars(password)) {
+  if (!hasSpecialChars(password)) {'
     feedback.push('Include special characters')}
-  if (feedback.length === 0) {
+  if (feedback.length === 0) {'
     feedback.push('Password is strong!')}
   return feedback}
-;
 /**;
  * Validate password requirements;
  * @param {string} password - Password to validate;
@@ -149,7 +138,6 @@ export const validatePassword = (password) => {
     color: PASSWORD_COLORS[strength],
     label: PASSWORD_LABELS[strength]}
 }
-;
 export default {
   PASSWORD_STRENGTH,
   PASSWORD_COLORS,
@@ -163,4 +151,3 @@ export default {
   getPasswordStrength,
   getPasswordFeedback,
   validatePassword}
-;

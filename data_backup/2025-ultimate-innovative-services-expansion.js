@@ -4,7 +4,8 @@ const contact = {
     email: 'kleber@ziontechgroup.com,
     address:,
   364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com}
+  website: 'http,
+    s://ziontechgroup.com}
 export const ultimateInnovativeServices2025 = [;
     // 1. AI-Powered Quantum Financial Analytics Platform{
         id:,
@@ -35,7 +36,8 @@ export const ultimateInnovativeServices2025 = [;
         color: 'from-purple-600 to-indigo-700,
         textColor:,
   text-purple-400',
-        link: 'https://ziontechgroup.com/quantum-financial-analytics,
+        link: 'http,
+    s://ziontechgroup.com/quantum-financial-analytics,
         marketPosition:,
   First-to-market quantum financial analytics platform. Competes with Bloomberg Terminal ($24,000/year) and Thomson Reuters ($15,000/year) with quantum computing advantage.',
         targetAudience: Investment banks, Hedge funds, Asset management firms, Financial institutions, High-frequency trading firms',
@@ -65,7 +67,8 @@ export const ultimateInnovativeServices2025 = [;
         rating: 4.9,
         reviews: 18,
         pricingTiers: {
-            starter:,
+            starte,
+    r:,
   $2,999/month',
             professional: $4,999/month,
   ,
@@ -79,12 +82,12 @@ export const ultimateInnovativeServices2025 = [;
   'Investment Management',
   'Trading',
   'Risk Management'],
-        compliance[
+        compliance['
   'SOX',
   'GLBA',
   'PCI-DSS',
   'SOC 2 Type II']},
-    // 2. Autonomous AI Research Assistant Platform{
+    // 2. Autonomous AI Research Assistant Platform{'
         id: 'autonomous-ai-research-assistant,
         name:,
   Autonomous AI Research Assistant Platform',
@@ -113,7 +116,8 @@ export const ultimateInnovativeServices2025 = [;
         color: 'from-blue-600 to-cyan-700,
         textColor:,
   text-blue-400',
-        link: 'https://ziontechgroup.com/autonomous-ai-research-assistant,
+        link: 'http,
+    s://ziontechgroup.com/autonomous-ai-research-assistant,
         marketPosition:,
   First autonomous AI research platform. Competes with traditional research tools but offers unprecedented automation and discovery capabilities.',
         targetAudience: Research institutions, Universities, Pharmaceutical companies, R&D departments, Government agencies',
@@ -143,7 +147,8 @@ export const ultimateInnovativeServices2025 = [;
         rating: 4.8,
         reviews: 32,
         pricingTiers: {
-            starter:,
+            starte,
+    r:,
   $1,499/month',
             professional: $2,999/month,
   ,
@@ -158,12 +163,12 @@ export const ultimateInnovativeServices2025 = [;
   'Pharmaceuticals',
   'Government',
   'Technology'],
-        compliance[
+        compliance['
   'GDPR',
   'HIPAA',
   'FERPA',
   'SOC 2 Type II']},
-    // 3. Quantum-Secure IoT Management Platform{
+    // 3. Quantum-Secure IoT Management Platform{'
         id: 'quantum-secure-iot-management,
         name:,
   Quantum-Secure IoT Management Platform',
@@ -191,7 +196,8 @@ export const ultimateInnovativeServices2025 = [;
         color: 'from-green-600 to-emerald-700,
         textColor:,
   text-green-400',
-        link: 'https://ziontechgroup.com/quantum-secure-iot-management,
+        link: 'http,
+    s://ziontechgroup.com/quantum-secure-iot-management,
         marketPosition:,
   First quantum-secure IoT platform. Competes with AWS IoT ($0.08 per million messages) and Azure IoT ($0.50 per million messages) with quantum security advantage.',
         targetAudience: Manufacturing companies, Smart cities, Healthcare facilities, Energy companies, Transportation companies',
@@ -221,7 +227,8 @@ export const ultimateInnovativeServices2025 = [;
         rating: 4.7,
         reviews: 56,
         pricingTiers: {
-            starter:,
+            starte,
+    r:,
   $899/month',
             professional: $1,799/month,
   ,
@@ -236,12 +243,12 @@ export const ultimateInnovativeServices2025 = [;
   'Energy',
   'Transportation',
   'Smart Cities'],
-        compliance[
+        compliance['
   'ISO 27001',
   'SOC 2 Type II',
   'GDPR',
   'HIPAA']},
-    // 4. AI-Powered Autonomous Supply Chain Optimization{
+    // 4. AI-Powered Autonomous Supply Chain Optimization{'
         id: 'ai-autonomous-supply-chain-optimization,
         name:,
   AI Autonomous Supply Chain Optimization',
@@ -270,7 +277,8 @@ export const ultimateInnovativeServices2025 = [;
         color: 'from-orange-600 to-red-700,
         textColor:,
   text-orange-400',
-        link: 'https://ziontechgroup.com/ai-autonomous-supply-chain-optimization,
+        link: 'http,
+    s://ziontechgroup.com/ai-autonomous-supply-chain-optimization,
         marketPosition:,
   Advanced AI supply chain platform. Competes with SAP SCM ($custom) and Oracle SCM ($custom) with autonomous optimization capabilities.',
         targetAudience: Manufacturing companies, Retail chains, E-commerce businesses, Logistics companies, Distribution centers',
@@ -300,7 +308,8 @@ export const ultimateInnovativeServices2025 = [;
         rating: 4.8,
         reviews: 67,
         pricingTiers: {
-            starter:,
+            starte,
+    r:,
   $1,799/month',
             professional: $3,599/month,
   ,
@@ -315,11 +324,11 @@ export const ultimateInnovativeServices2025 = [;
   'E-commerce',
   'Logistics',
   'Distribution'],
-        compliance[
+        compliance['
   'ISO 9001',
   'SOC 2 Type II',
   'GDPR']},
-    // 5. Quantum Neural Network Development Platform{
+    // 5. Quantum Neural Network Development Platform{'
         id: 'quantum-neural-network-development,
         name:,
   Quantum Neural Network Development Platform',
@@ -347,7 +356,8 @@ export const ultimateInnovativeServices2025 = [;
         color: 'from-indigo-600 to-purple-700,
         textColor:,
   text-indigo-400',
-        link: 'https://ziontechgroup.com/quantum-neural-network-development,
+        link: 'http,
+    s://ziontechgroup.com/quantum-neural-network-development,
         marketPosition:,
   First quantum neural network development platform. Competes with traditional AI platforms but offers quantum computing advantages.',
         targetAudience: AI research labs, Technology companies, Research institutions, Government agencies, Defense contractors',
@@ -377,7 +387,8 @@ export const ultimateInnovativeServices2025 = [;
         rating: 4.9,
         reviews: 12,
         pricingTiers: {
-            starter:,
+            starte,
+    r:,
   $3,499/month',
             professional: $6,999/month,
   ,
@@ -392,11 +403,11 @@ export const ultimateInnovativeServices2025 = [;
   'Defense',
   'Pharmaceuticals',
   'Finance'],
-        compliance[
+        compliance['
   'ITAR',
   'SOC 2 Type II',
   'ISO 27001']},
-    // 6. AI-Powered Autonomous Business Operations Platform{
+    // 6. AI-Powered Autonomous Business Operations Platform{'
         id: 'ai-autonomous-business-operations,
         name:,
   AI Autonomous Business Operations Platform',
@@ -424,7 +435,8 @@ export const ultimateInnovativeServices2025 = [;
         color: 'from-teal-600 to-cyan-700,
         textColor:,
   text-teal-400',
-        link: 'https://ziontechgroup.com/ai-autonomous-business-operations,
+        link: 'http,
+    s://ziontechgroup.com/ai-autonomous-business-operations,
         marketPosition:,
   Advanced autonomous business platform. Competes with SAP ERP ($custom) and Oracle ERP ($custom) with AI automation capabilities.',
         targetAudience: Enterprise companies, Mid-market businesses, Growing startups, Multi-location businesses, International companies',
@@ -454,7 +466,8 @@ export const ultimateInnovativeServices2025 = [;
         rating: 4.8,
         reviews: 89,
         pricingTiers: {
-            starter:,
+            starte,
+    r:,
   $2,199/month',
             professional: $4,399/month,
   ,
@@ -469,12 +482,12 @@ export const ultimateInnovativeServices2025 = [;
   'Services',
   'Technology',
   'Healthcare'],
-        compliance[
+        compliance['
   'SOX',
   'SOC 2 Type II',
   'GDPR',
   'HIPAA']},
-    // 7. Quantum-Secure Healthcare Data Platform{
+    // 7. Quantum-Secure Healthcare Data Platform{'
         id: 'quantum-secure-healthcare-data,
         name:,
   Quantum-Secure Healthcare Data Platform',
@@ -502,7 +515,8 @@ export const ultimateInnovativeServices2025 = [;
         color: 'from-red-600 to-pink-700,
         textColor:,
   text-red-400',
-        link: 'https://ziontechgroup.com/quantum-secure-healthcare-data,
+        link: 'http,
+    s://ziontechgroup.com/quantum-secure-healthcare-data,
         marketPosition:,
   First quantum-secure healthcare platform. Competes with Epic ($custom) and Cerner ($custom) with quantum security advantage.',
         targetAudience: Hospitals, Medical clinics, Healthcare networks, Research institutions, Pharmaceutical companies',
@@ -532,7 +546,8 @@ export const ultimateInnovativeServices2025 = [;
         rating: 4.9,
         reviews: 23,
         pricingTiers: {
-            starter:,
+            starte,
+    r:,
   $1,299/month',
             professional: $2,599/month,
   ,
@@ -546,12 +561,12 @@ export const ultimateInnovativeServices2025 = [;
   'Pharmaceuticals',
   'Research',
   'Medical Devices'],
-        compliance[
+        compliance['
   'HIPAA',
   'HITECH',
   'SOC 2 Type II',
   'ISO 27001']},
-    // 8. AI-Powered Autonomous Marketing Platform{
+    // 8. AI-Powered Autonomous Marketing Platform{'
         id: 'ai-autonomous-marketing-platform,
         name:,
   AI Autonomous Marketing Platform',
@@ -579,7 +594,8 @@ export const ultimateInnovativeServices2025 = [;
         color: 'from-yellow-600 to-orange-700,
         textColor:,
   text-yellow-400',
-        link: 'https://ziontechgroup.com/ai-autonomous-marketing-platform,
+        link: 'http,
+    s://ziontechgroup.com/ai-autonomous-marketing-platform,
         marketPosition:,
   Advanced autonomous marketing platform. Competes with HubSpot ($800/month) and Marketo ($custom) with AI automation capabilities.',
         targetAudience: Marketing agencies, E-commerce businesses, B2B companies, SaaS companies, Growing businesses',
@@ -609,7 +625,8 @@ export const ultimateInnovativeServices2025 = [;
         rating: 4.7,
         reviews: 156,
         pricingTiers: {
-            starter:,
+            starte,
+    r:,
   $999/month',
             professional: $1,999/month,
   ,
@@ -624,11 +641,11 @@ export const ultimateInnovativeServices2025 = [;
   'SaaS',
   'Marketing Agencies',
   'Retail'],
-        compliance[
+        compliance['
   'GDPR',
   'CCPA',
   'SOC 2 Type II']},
-    // 9. Quantum-Secure Cloud Infrastructure Platform{
+    // 9. Quantum-Secure Cloud Infrastructure Platform{'
         id: 'quantum-secure-cloud-infrastructure,
         name:,
   Quantum-Secure Cloud Infrastructure Platform',
@@ -656,7 +673,8 @@ export const ultimateInnovativeServices2025 = [;
         color: 'from-gray-600 to-blue-700,
         textColor:,
   text-gray-400',
-        link: 'https://ziontechgroup.com/quantum-secure-cloud-infrastructure,
+        link: 'http,
+    s://ziontechgroup.com/quantum-secure-cloud-infrastructure,
         marketPosition:,
   Advanced quantum-secure cloud platform. Competes with AWS ($custom), Azure ($custom), and Google Cloud ($custom) with quantum security advantage.',
         targetAudience: Technology companies, Financial institutions, Healthcare organizations, Government agencies, Enterprise companies',
@@ -686,7 +704,8 @@ export const ultimateInnovativeServices2025 = [;
         rating: 4.8,
         reviews: 67,
         pricingTiers: {
-            starter:,
+            starte,
+    r:,
   $1,599/month',
             professional: $3,199/month,
   ,
@@ -701,12 +720,12 @@ export const ultimateInnovativeServices2025 = [;
   'Healthcare',
   'Government',
   'Enterprise'],
-        compliance[
+        compliance['
   'SOC 2 Type II',
   'ISO 27001',
   'PCI-DSS',
   'HIPAA']},
-    // 10. AI-Powered Autonomous Legal Platform{
+    // 10. AI-Powered Autonomous Legal Platform{'
         id: 'ai-autonomous-legal-platform,
         name:,
   AI Autonomous Legal Platform',
@@ -735,7 +754,8 @@ export const ultimateInnovativeServices2025 = [;
         color: 'from-indigo-600 to-purple-700,
         textColor:,
   text-indigo-400',
-        link: 'https://ziontechgroup.com/ai-autonomous-legal-platform,
+        link: 'http,
+    s://ziontechgroup.com/ai-autonomous-legal-platform,
         marketPosition:,
   Advanced autonomous legal platform. Competes with DocuSign ($25/month) and ContractPodAi ($custom) with AI automation capabilities.',
         targetAudience: Law firms, Corporate legal departments, Government agencies, Legal tech companies, Growing businesses',
@@ -765,7 +785,8 @@ export const ultimateInnovativeServices2025 = [;
         rating: 4.8,
         reviews: 45,
         pricingTiers: {
-            starter:,
+            starte,
+    r:,
   $1,899/month',
             professional: $3,799/month,
   ,

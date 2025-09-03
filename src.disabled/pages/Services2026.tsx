@@ -7,7 +7,8 @@ import React, { useMemo, useState } from;
   '../data/innovativeMicroSaasServices2026'  const Services2026: React.FC = (): JSX.Element => { const [query, setQuery] = useState(,
   ') const [selectedCategory, setSelectedCategory] = useState('all;
   ') const [sortBy, setSortBy] = useState('innovation;
-  ')  const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2026, ...SPECIALIZED_SERVICES_2026]  const categories = [ { id: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;all, name:;
+  ')  const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2026, ...SPECIALIZED_SERVICES_2026]  const categories = [
+  { id: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;all, name:;
   'All Services', icon: GitFork, count: allServices.length }, { id:,
   AI & Analytics', name: 'AI & Analytics, icon: Brain, count: allServices.filter(s => s.category ===,
   AI & Analytics').length }, { id: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Quantum Computing, name: 'Quantum Computing;
@@ -30,4 +31,4 @@ import React, { useMemo, useState } from;
   Sustainability;
   ').length }, { id: anyanyanyanyanyanyanyanyanyanyanyanyany&aposAI & IoT, name:;
   'AI & IoT', icon: BarChart3, count: allServices.filter(s => s.category ===;
-  'AI & IoT').length } ]  const filteredAndSorted = useMemo(() => { let filtered = allServices '
+  'AI & IoT').length } ]  const filteredAndSorted = useMemo(() => { let filtered = allServices ''
