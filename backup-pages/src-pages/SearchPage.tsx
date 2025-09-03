@@ -30,8 +30,7 @@ import {
   Eye,
   Calendar as CalendarIcon,
   User,
-  Tag as TagIcon} from 'lucide-react;
-  ';
+  Tag as TagIcon}  from 'lucide-react;;
 interface SearchResult {
   id: string;
    type: 'service ' | 'talent ' | 'equipment ' | 'comp ';
@@ -287,8 +286,7 @@ interface SearchResult {
     setSelectedFilters (newFilters) }
   // Clear all filters;
     setSelectedTags([]);
-  setSearchQuery(';
-  ');
+  setSearchQuery();
     setSearchParams({})}
       case 'page;
   ': return FileText;
@@ -403,8 +401,7 @@ interface SearchResult {
                     className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
                       selectedFilters.has(filter.id);
                         ?,
-  bg-blue-50 border border-blue-200';
-  ': 'hover:bg-gray-50`}`}
+  bg-blue-50 border border-blue-200: 'hover:bg-gray-50`}`}
                   >'
                     <div className='flex items-center space-x-3'>'
                       <filter.icon className='h-5 w-5 text-gray-600' />'

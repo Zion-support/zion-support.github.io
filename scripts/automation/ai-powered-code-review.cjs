@@ -13,11 +13,11 @@ class AIPoweredCodeReview {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'ai-code-review.log'
     );
     this.reviewHistory = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'code-review-history.json'
     );
     this.issuesFound = 0;
@@ -26,7 +26,7 @@ class AIPoweredCodeReview {
   }
 
   async initialize() {
-    console.log(`'🤖 AI-Powered Code Review System Initialized');
+    console.log(`🤖 AI-Powered Code Review System Initialized`);
     this.ensureLogDirectory();
     this.loadReviewHistory();
     
@@ -70,7 +70,7 @@ class AIPoweredCodeReview {
   }
 
   async startContinuousReview() {
-    console.log(`'🔍 Starting continuous code review...');
+    console.log(`🔍 Starting continuous code review...`);
     
     // Initial review
     await this.performFullCodeReview();
@@ -142,10 +142,10 @@ class AIPoweredCodeReview {
         const content = fs.readFileSync(file, 'utf8');
         const fileResults = await this.analyzeTypeScriptFile(file, content);
         
-        results.filesReviewed++;
-        results.issues.push(...fileResults.issues);
-        results.improvements.push(...fileResults.improvements);
-        
+        results.filesReviewed++;`);
+        results.issues.push(...fileResults.issues);`);
+        results.improvements.push(...fileResults.improvements);`);
+        `);
       } catch (error) {console.error(Error reviewing ${file}:, error`);
       }
     }
@@ -199,7 +199,7 @@ class AIPoweredCodeReview {
   }
 
   async reviewReactComponents(results) {
-    console.log(`'⚛️ Reviewing React components...');
+    console.log(`⚛️ Reviewing React components...`);
     
     const reactFiles = this.findFiles(['**/*.tsx', '**/*.jsx']);
     
@@ -247,7 +247,7 @@ class AIPoweredCodeReview {
   }
 
   async reviewConfigFiles(results) {
-    console.log(`'⚙️ Reviewing configuration files...');
+    console.log(`⚙️ Reviewing configuration files...`);
     
     const configFiles = ['package.json'', 'tsconfig.json', 'next.config.js'', 'tailwind.config.js', 'eslint.config.js''];
     
@@ -309,7 +309,7 @@ class AIPoweredCodeReview {
   }
 
   async reviewDependencies(results) {
-    console.log(`'📦 Reviewing package dependencies...');
+    console.log(`📦 Reviewing package dependencies...`);
     
     try {
       // Check for outdated packages
@@ -354,12 +354,12 @@ class AIPoweredCodeReview {
       
     } catch (error) {
       // npm commands might fail if no issues found
-      console.log(`'No dependency issues found');
+      console.log(`No dependency issues found`);
     }
   }
 
   async generateAISuggestions(results) {
-    console.log(`'🧠 Generating AI-powered suggestions...');
+    console.log(`🧠 Generating AI-powered suggestions...`);
     
     // Analyze patterns and generate intelligent suggestions
     const patterns = this.analyzeCodePatterns(results);
@@ -404,7 +404,7 @@ class AIPoweredCodeReview {
   }
 
   async applyAutoFixes(results) {
-    console.log(`'🔧 Applying automatic fixes...');
+    console.log(`🔧 Applying automatic fixes...`);
     
     let fixesApplied = 0;
     
@@ -550,7 +550,7 @@ class AIPoweredCodeReview {
   }
 
   watchForChanges() {
-    console.log(`'👀 Setting up file change monitoring...');
+    console.log(`👀 Setting up file change monitoring...`);
     
     // Simple file watching for demonstration
     // In production, you'd use chokidar or similar
@@ -567,7 +567,7 @@ class AIPoweredCodeReview {
       });
       
       if (gitStatus.trim()) {
-        console.log(`'📝 Changes detected, performing quick review...');
+        console.log(`📝 Changes detected, performing quick review...`);
         await this.performQuickReview();
       }
     } catch (error) {

@@ -1,10 +1,8 @@
 #!/usr/bin/env node;
 import { execSync, spawn } from;
   'child_process';
-import fs from;
-  'fs';
-import path from;
-  'path';
+import fs from "fsfs';
+import path from "pathpath';
 class SyntaxErrorFixer {
   constructor() {
     this.scanInterval = process.env.SCAN_INTERVAL || 300000 // 5 minutes;
@@ -63,16 +61,9 @@ class SyntaxErrorFixer {
   }
   findSyntaxErrorFiles() {
     const extensions = [
-  '.ts',
-  '.tsx',
-  '.js',
-  '.jsx'];
+  '.ts,.tsx,.js,.jsx'];
     const directories = [
-  'src',
-  'pages',
-  'components',
-  'utils',
-  'types'];
+  'src,pages,components,utils,types'];
     const files = [];
     for (const dir of directories) {
       if (fs.existsSync(dir)) {
@@ -99,7 +90,8 @@ class SyntaxErrorFixer {
       const lines = content.split(
   '\\n');
       // Check for common syntax error patterns;
-      const patterns = [{ pattern: /export\s*$/, error:;
+      const patterns = [
+  { pattern: /export\s*$/, error:;
   'Incomplete export statement' },
         { pattern: /:\s*;/, error:;
   'Missing type annotation' },
@@ -140,8 +132,7 @@ class SyntaxErrorFixer {
   'utf8');
       let modified = false;
       // Handle merge conflicts first;
-      if (content.includes(';
-  ')) {
+      if (content.includes()) {
         content = this.fixMergeConflicts(content);
         modified = true}
       // Fix incomplete exports;

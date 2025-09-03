@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-02T22:55:19.271Z",
   "system": {
     "platform": "linux",
@@ -10,6 +11,103 @@
       "heapUsed": 4876120,
       "external": 1853886,
       "arrayBuffers": 18041
+=======
+<<<<<<< HEAD
+  "timestamp": "2025-09-02T22:06:15.868Z",
+  "system": {
+    "memory": {
+      "rss": 47,
+      "heapUsed": 4,
+      "heapTotal": 5,
+      "external": 1
+    },
+    "cpu": {
+      "user": 0,
+      "system": 0
+    },
+    "process": {
+      "pid": 7268,
+      "uptime": 0,
+      "version": "v22.16.0",
+      "platform": "linux",
+      "arch": "x64"
+    }
+  },
+  "application": {
+    "buildSize": 0,
+    "dependenciesSize": 622,
+    "sourceSize": 9485,
+    "fileCounts": {
+      "source": 1993,
+      "components": 689,
+      "pages": 1081
+    }
+  },
+  "build": {
+    "hasBuildArtifacts": true,
+    "buildTime": 0,
+    "bundleSize": 0,
+    "scripts": [
+      "pm2:start",
+      "pm2:stop",
+      "pm2:restart",
+      "pm2:status",
+      "pm2:logs",
+      "sitemap",
+      "pm2:fastads:start",
+      "pm2:fastads:restart",
+      "pm2:fastads:stop",
+      "pm2:cron:start",
+      "pm2:cron:restart",
+      "pm2:cron:stop",
+      "pm2:bootstrap:logrotate",
+      "functions:run",
+      "functions:run:execute",
+      "front:advertise",
+      "deps:maintain",
+      "deps:cron:start",
+      "netlify:manifest",
+      "netlify:trigger",
+      "readme:generate",
+      "search:index",
+      "content:fix",
+      "perf:monitor",
+      "perf:audit",
+      "dev",
+      "build",
+      "start",
+      "lint",
+      "lint:fix",
+      "type-check",
+      "analyze",
+      "format",
+      "format:check",
+      "test",
+      "test:watch",
+      "test:coverage"
+    ]
+  }
+=======
+  "timestamp": "2025-09-02T21:38:54.130Z",
+  "metrics": {
+    "system": {
+      "memory": {
+        "heapUsed": 4,
+        "heapTotal": 5,
+        "external": 1,
+        "rss": 46
+      },
+      "cpu": {
+        "user": 17855,
+        "system": 4463
+      },
+      "process": {
+        "uptime": 0,
+        "pid": 3705,
+        "version": "v22.16.0",
+        "platform": "linux"
+      }
+>>>>>>> main
     },
     "uptime": 0.021214539,
     "cpuUsage": {
@@ -17,6 +115,7 @@
       "system": 11972
     }
   },
+<<<<<<< HEAD
   "application": {
     "buildExists": true,
     "packageName": "bolt.new.zion.app",
@@ -30,4 +129,12 @@
     "lastModified": "2025-09-02T22:55:18.918Z"
   },
   "errors": []
+=======
+  "score": 90,
+  "recommendations": [
+    "Reduce bundle size - remove unused dependencies and optimize imports"
+
+  ]
+>>>>>>> main
+>>>>>>> main
 }

@@ -42,10 +42,10 @@ class ConflictCleanupResolver {
       await this.resolveMergeConflicts();
 
       // Step 3: Clean up duplicate files
-      await this.cleanupDuplicateFiles();
-
-      // Step 4: Finalize the merge
-      await this.finalizeMerge();
+      await this.cleanupDuplicateFiles();`);
+`);
+      // Step 4: Finalize the merge`);
+      await this.finalizeMerge();`);
     } catch (error) {this.log(❌ Fatal error: ${error.message}, 'ERROR'`);
       this.cleanupStats.errors++;
     }

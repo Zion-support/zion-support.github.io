@@ -189,10 +189,10 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
         root.style.setProperty(cssVar, value)}
     })
     // Set theme class;
-    root.classList.remove('light', 'dark');
+    root.classList.remove('light,dark');
     root.classList.add(getEffectiveTheme());
     // Set color scheme class;
-    root.classList.remove('blue', 'purple', 'green', 'orange', 'red', 'pink');
+    root.classList.remove('blue,purple,green,orange,red,pink');
     root.classList.add(colorScheme)}, [config, getEffectiveTheme, colorScheme]);
   // Listen for system theme changes;
   useEffect(() => {

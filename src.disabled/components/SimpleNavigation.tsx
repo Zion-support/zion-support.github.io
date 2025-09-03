@@ -4,7 +4,8 @@ import React, { useState, useEffect } from;
   'framer-motion' import { Menu, X, Home, Info, Phone, Brain, Code, Network, Rocket, ShoppingCart, BarChart3 } from;
   'lucide-react' const SimpleNavigation: React.FC = () => { const [scrolled, setScrolled] = useState(false) const [mobileMenuOpen, setMobileMenuOpen] = useState(false) const location = useLocation() useEffect(() => { const handleScroll = () => { setScrolled(window.scrollY > 20) } window.addEventListener(,
   scroll', handleScroll) return () => window.removeEventListener(
-  'scroll', handleScroll) }, []) useEffect(() => { setMobileMenuOpen(false) }, [location.pathname]) const navigationItems = [ { name: 'Home, href:
+  'scroll', handleScroll) }, []) useEffect(() => { setMobileMenuOpen(false) }, [location.pathname]) const navigationItems = [
+  { name: 'Home, href:
   '/', icon: Home }, { name:,
   AI Services', href: '/ai-services, icon: Brain }, { name:,
   Micro SAAS', href: '/micro-saas, icon: Code }, { name:,

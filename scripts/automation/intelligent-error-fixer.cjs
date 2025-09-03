@@ -4,17 +4,17 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log(`'🤖 Starting intelligent error fixer...');
+console.log(`🤖 Starting intelligent error fixer...`);
 
 async function fixAllErrors() {
   let totalFixes = 0;
 
   try {
-    console.log(`🤖 Running intelligent error fixer at ${new Date().toISOString()}'
+    console.log(`🤖 Running intelligent error fixer at ${new Date().toISOString()}`);
     );
-
-    // 1. Fix missing dependencies
-    console.log(`'🔧 Fixing missing dependencies...');
+`);
+    // 1. Fix missing dependencies`);
+    console.log(`🔧 Fixing missing dependencies...`);
     totalFixes += await fixMissingDependencies();
 
     // 2. Fix TypeScript errors
@@ -129,18 +129,18 @@ async function fixLintingErrors() {
   for (const file of files) {
     try {
       let content = fs.readFileSync(file, 'utf8');
-      let originalContent = content;
-
-      for (const fix of lintingFixes) {
-        if (fix.pattern.test(content)) {
+      let originalContent = content;`);
+`);
+      for (const fix of lintingFixes) {`);
+        if (fix.pattern.test(content)) {`);
           content = content.replace(fix.pattern, fix.replacement);console.log(`🔧 Applied linting fix in ${file}: ${fix.description});
           fixes++;
         }
       }
-
-      if (content !== originalContent) {
-        fs.writeFileSync(file, content);
-      }
+`);
+      if (content !== originalContent) {`);
+        fs.writeFileSync(file, content);`);
+      }`);
     } catch (error) {console.log(⚠️  Could not fix ${file}: ${error.message}``);
     }
   }
@@ -156,10 +156,10 @@ async function fixBuildErrors() {
       pattern: /Cannot find module 'react-error-boundary'/g', 'action: async () => {
         try {
           execSync('npm install react-error-boundary'', '{ stdio: 'pipe' });
-          console.log(`'✅ Installed react-error-boundary');
+          console.log(`✅ Installed react-error-boundary`);
           return 1;
         } catch (error) {
-          console.log(`'⚠️  Could not install react-error-boundary');
+          console.log(`⚠️  Could not install react-error-boundary`);
           return 0;
         }
       }', 'description: 'Install missing react-error-boundary'', '}', '{
@@ -232,10 +232,10 @@ async function fixSyntaxErrors() {
 async function runAutoFixCommands() {
   let fixes = 0;
 
-  const autoFixCommands = ['npm run lint -- --fix'', 'npx prettier --write .', 'npm run format'', ''];
-
-  for (const command of autoFixCommands) {
-    try {
+  const autoFixCommands = ['npm run lint -- --fix'', 'npx prettier --write .', 'npm run format'', ''];`);
+`);
+  for (const command of autoFixCommands) {`);
+    try {`);
       console.log(`🔧 Running: ${command}`);
       execSync(command, { stdio: 'pipe' });console.log(`✅ Completed: ${command}`);
       fixes++;
