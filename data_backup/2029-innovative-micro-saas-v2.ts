@@ -34,9 +34,12 @@ export interface InnovativeMicroSaasService2029V2 {
    exit: string;
    contact: { mobile: string;
    email: string;
-   website: string;
-   address: string}export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2[] = [{
-    id:,
+   websit,
+    e: string;
+   addres,
+    s: string}export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2[] = [{
+    i,
+    d:,
   ai-emotion-based-marketing-platform',
     name: 'AI Emotion-Based Marketing Platform,
     description:,
@@ -134,14 +137,15 @@ export interface InnovativeMicroSaasService2029V2 {
   Series A funding, $50M valuation',
     exit: 'Acquisition by major marketing platform,
     contact: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       website:,
   https: //ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709'},
-  {
+  {'
     id: 'biotech-personalized-nutrition-platform,
     name:,
   Biotech Personalized Nutrition Platform',
@@ -237,14 +241,15 @@ export interface InnovativeMicroSaasService2029V2 {
   Series B funding, $75M valuation',
     exit: 'IPO or healthcare acquisition,
     contact: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       website:,
   https: //ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709'},
-  {
+  {'
     id: 'quantum-learning-accelerator,
     name:,
   Quantum Learning Accelerator',
@@ -340,14 +345,15 @@ export interface InnovativeMicroSaasService2029V2 {
   Series A funding, $40M valuation',
     exit: 'Acquisition by major edtech comp,
     contact: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       website:,
   https: //ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709'},
-  {
+  {'
     id: 'intelligent-data-governance-platform,
     name:,
   Intelligent Data Governance Platform',
@@ -446,14 +452,15 @@ export interface InnovativeMicroSaasService2029V2 {
   Series C funding, $200M valuation',
     exit: 'IPO or enterprise acquisition,
     contact: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       website:,
   https: //ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709'},
-  {
+  {'
     id: 'ai-autonomous-business-manager,
     name:,
   AI Autonomous Business Manager',
@@ -550,7 +557,8 @@ export interface InnovativeMicroSaasService2029V2 {
   Series B funding, $100M valuation',
     exit: 'IPO or enterprise acquisition,
     contact: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       website:,

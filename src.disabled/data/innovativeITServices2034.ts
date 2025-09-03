@@ -19,5 +19,11 @@ export interface InnovativeITService2034 {
    innovationLevel: string;
    contactInfo: { phone: string;
    email: string;
-   website: string;
-   address: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[] compliance: string[]  } competitors: string[] marketTrend: string aiModel?: string trainingData?: string marketingContent: { headline: string valueProposition: string keyFeatures: string[] competitiveAdvantages: string[] testimonials?: string[] caseStudies?: string[]  } } export const INNOVATIVE_IT_SERVICES_2034: InnovativeITService2034[] = [;
+   websit,
+    e: string;
+   addres,
+    s: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string securit,
+    y: string[] complianc,
+    e: string[]  } competitors: string[] marketTrend: string aiModel?: string trainingData?: string marketingContent: { headline: string valueProposition: string keyFeature,
+    s: string[] competitiveAdvantage,
+    s: string[] testimonials?: string[] caseStudies?: string[]  } } export const INNOVATIVE_IT_SERVICES_2034: InnovativeITService2034[] = [;

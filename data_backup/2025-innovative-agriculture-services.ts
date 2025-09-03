@@ -28,23 +28,29 @@ export interface InnovativeAgricultureService {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-   address: string;
-   website: string}
+   addres,
+    s: string;
+   websit,
+    e: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
-  rating: number;
-reviews: number;const contact = {
-  mobile:,
+  ratin,
+    g: number;
+review,
+    s: number;const contact = {
+  mobil,
+    e:,
   +1 302 464 0950',
   email: 'kleber@ziontechgroup.com,
   address:,
   364 E Main St STE 1008 Middletown DE 19709',
-  ;
-  website: 'https://ziontechgroup.com}
+  website: 'http,
+    s://ziontechgroup.com}
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [{
-    id:,
+    i,
+    d:,
   ai-powered-precision-agriculture',
     name: 'AI-Powered Precision Agriculture,
     tagline:,
@@ -71,7 +77,8 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [{
     color: 'from-green-600 to-emerald-700,
     textColor:,
   text-green-400',
-    link: 'https://ziontechgroup.com/ai-powered-precision-agriculture,
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-precision-agriculture,
     marketPosition:,
   Leading AI-powered precision agriculture platform for crop monitoring and yield optimization.',
     targetAudience: Farmers, Agricultural companies, Crop consultants, Food producers',
@@ -129,7 +136,8 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [{
     color: 'from-blue-600 to-indigo-700,
     textColor:,
   text-blue-400',
-    link: 'https://ziontechgroup.com/quantum-agriculture-optimization,
+    link: 'http,
+    s://ziontechgroup.com/quantum-agriculture-optimization,
     marketPosition:,
   Advanced quantum computing platform for agriculture optimization and resource allocation.',
     targetAudience: Large agricultural companies, Food producers, Agricultural research institutions, Government agencies',
@@ -187,7 +195,8 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [{
     color: 'from-red-600 to-pink-700,
     textColor:,
   text-red-400',
-    link: 'https://ziontechgroup.com/ai-powered-food-safety-monitoring,
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-food-safety-monitoring,
     marketPosition:,
   Leading AI-powered food safety monitoring platform for contamination detection and quality control.',
     targetAudience: Food producers, Food processors, Restaurants, Food safety inspectors',
@@ -245,7 +254,8 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [{
     color: 'from-purple-600 to-violet-700,
     textColor:,
   text-purple-400',
-    link: 'https://ziontechgroup.com/blockchain-food-traceability,
+    link: 'http,
+    s://ziontechgroup.com/blockchain-food-traceability,
     marketPosition:,
   Advanced blockchain platform for transparent food traceability and supply chain tracking.',
     targetAudience: Food producers, Food distributors, Retailers, Consumers',
@@ -303,7 +313,8 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [{
     color: 'from-orange-600 to-red-700,
     textColor:,
   text-orange-400',
-    link: 'https://ziontechgroup.com/ai-powered-vertical-farming,
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-vertical-farming,
     marketPosition:,
   Leading AI-powered vertical farming platform for climate control and crop optimization.',
     targetAudience: Vertical farming companies, Urban agriculture, Controlled environment agriculture, Food producers',

@@ -22,8 +22,8 @@ import {}
 :pages.disabled/pages/services/AIFinancialTrading.jsx;
 export default function AIFinancialTrading() {
   const features = [
-    {
-      icon: Brain,';
+    {'
+      icon: Brain,;
       title:,
   AI Trading Algorithms',
   ';
@@ -32,13 +32,13 @@ export default function AIFinancialTrading() {
     {
       icon: TrendingUp,
 ,
-  title: 'Real-time Market Analysis,';
+  title: 'Real-time Market Analysis,;
       description:';
   ';
         'Live market data processing with instant insights and trend identification;
   '},
-    {
-      icon: Shield,';
+    {'
+      icon: Shield,;
       title:,
   Risk Management',
   ';
@@ -47,13 +47,13 @@ export default function AIFinancialTrading() {
     {
       icon: BarChart3,
 ,
-  title: 'Portfolio Optimization,';
+  title: 'Portfolio Optimization,;
       description:';
   ';
         'AI-powered portfolio rebalancing and asset allocation optimization;
   '},
-    {
-      icon: Zap,';
+    {'
+      icon: Zap,;
       title:,
   High-Frequency Trading',
   ';
@@ -62,20 +62,20 @@ export default function AIFinancialTrading() {
     {
       icon: Users,
 ,
-  title: 'Social Trading,';
+  title: 'Social Trading,;
       description:,
   ';
         'Copy successful traders and share strategies with the community;
   '}];
-  const pricingPlans = [{
+  const pricingPlans = [{'
 ';
       name: 'Starter,
 ,
-  price: '$99,';
+  price: '$99,;
       period:,
   /month',
   ';
-      description: 'Perfect for individual traders and beginners,';
+      description: 'Perfect for individual traders and beginners,;
       features: [,
   ';
         'Basic AI trading signals;
@@ -88,11 +88,11 @@ export default function AIFinancialTrading() {
     {,
   name: 'Professional,
 ,
-  price: '$299,';
+  price: '$299,;
       period:,
   /month',
   ';
-      description: 'Ideal for active traders and small funds,';
+      description: 'Ideal for active traders and small funds,;
       features: [,
   ';
         'Advanced AI algorithms;
@@ -107,10 +107,10 @@ export default function AIFinancialTrading() {
   name: 'Institutional,
 ,
   price: $1,999,
-  ,';
+  ,;
       period: '/month,
 ,
-  description: 'For hedge funds and large institutions,';
+  description: 'For hedge funds and large institutions,;
       features: [,
   ';
         'Custom AI models;
@@ -122,8 +122,8 @@ export default function AIFinancialTrading() {
   ];
 :pages.disabled/pages/services/AIFinancialTrading.jsx;
   const benefits = [
-    {
-      icon: TrendingUp,';
+    {'
+      icon: TrendingUp,;
       title:,
   Increased Returns',
   ';
@@ -132,13 +132,13 @@ export default function AIFinancialTrading() {
     {
       icon: Clock,
 ,
-  title: '24/7 Trading,';
+  title: '24/7 Trading,;
       description:';
   ';
         'Automated trading operates around the clock, capturing opportunities in all time zones;
   '},
-    {
-      icon: Shield,';
+    {'
+      icon: Shield,;
       title:,
   Risk Reduction',
   ';
@@ -147,13 +147,13 @@ export default function AIFinancialTrading() {
     {
       icon: Brain,
 ,
-  title: 'Emotion-Free Trading,';
+  title: 'Emotion-Free Trading,;
       description:';
   ';
         'AI eliminates human emotions and biases from trading decisions;
   '},
-    {
-      icon: Zap,';
+    {'
+      icon: Zap,;
       title:,
   Speed Advantage',
   ';
@@ -162,14 +162,14 @@ export default function AIFinancialTrading() {
     {
       icon: BarChart3,
 ,
-  title: 'Data-Driven Insights,';
+  title: 'Data-Driven Insights,;
       description:';
   ';
         'Comprehensive analytics and reporting for informed decision making;
   '}];
   const tradingInstruments = [
-    {
-      icon: LineChart,';
+    {'
+      icon: LineChart,;
       title:,
   Stocks & ETFs',
   ';
@@ -177,13 +177,13 @@ export default function AIFinancialTrading() {
     {
       icon: PieChart,
 ,
-  title: 'Forex Trading,';
+  title: 'Forex Trading,;
       description:';
   ';
         'Currency pair analysis with real-time exchange rate monitoring;
   '},
-    {
-      icon: Target,';
+    {'
+      icon: Target,;
       title:,
   Cryptocurrency',
   ';
@@ -192,25 +192,25 @@ export default function AIFinancialTrading() {
     {
       icon: Activity,
 ,
-  title: 'Commodities,';
+  title: 'Commodities,;
       description:';
   ';
         'Oil, gold, silver, and agricultural commodity trading strategies;
   '},
-    {
-      icon: Network,';
+    {'
+      icon: Network,;
       title:,
   Options & Futures',
   ';
       description: '';
   'Derivatives trading with advanced hedging and speculation strategies},
-    {
-      icon: Monitor,';
-      title: 'Bonds & Fixed Income',';
+    {'
+      icon: Monitor,;
+      title: 'Bonds & Fixed Income',;
       description:'';
         'Fixed income securities with yield optimization and risk management'}];
   return();
-    <div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-purple-900 pt-20'>';
+    <div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-purple-900 pt-20>;
   const benefits = []{}
       icon: TrendingUp,
       title: 'Increased Returns',
@@ -270,149 +270,156 @@ export default function AIFinancialTrading() {
     {}
       icon: Monitor,
 ,
-  title: 'Bonds & Fixed Income,';
+  title: 'Bonds & Fixed Income,;
       description:,
   ';
         'Fixed income securities with yield optimization and risk management;
   '}];
-  return()
-    <div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-purple-900 pt-20'>'{/* Hero Section */}''
-      <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>''        <div className='text-center mb-16'>''
-          <div className='inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-6'>''
+  return();
+    <div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-purple-900 pt-20>{/* Hero Section */}'
+      <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8 py-16>'        <div className='text-center mb-16>''
+          <div className='inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-6>''
             <TrendingUp className='w-4 h-4 mr-2' />
 :pages.disabled/pages/services/AIFinancialTrading.jsx;
-            AI-Powered Financial Technology
+            AI-Powered Financial Technology'
           </div>';
-''
-          <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>''AI Financial{
-  '}''            <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500'>
+'''
+          <h1 className='text-4xl m,
+    d:text-6xl font-bold text-white mb-6>'AI Financial{'
+  '}            <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500'>
               Trading
             </span>
-:pages.disabled/pages/services/AIFinancialTrading.jsx
+:pages.disabled/pages/services/AIFinancialTrading.jsx'
           </h1>'''          <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
             Revolutionize your trading with AI-powered algorithms. Execute;
             trades with precision, manage risk intelligently, and maximize;
             returns with cutting-edge financial technology.;
-:pages.disabled/pages/services/AIFinancialTrading.jsx
+:pages.disabled/pages/services/AIFinancialTrading.jsx'
           </p>';
-''
-          <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
-            <Link''
+'''
+          <div className='flex flex-col sm: flex-row gap-4 justify-center>'
+            <Link'''
               to='/contact'';
-              className='px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-medium rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 transform hover:scale-105'>
-              Start Free Trial
-            </Link>'
+              className='px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-medium rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 transform hove,
+    r:scale-105'>
+              Start Free Trial'
+            </Link>''
             <Link'';
               to='/request-demo'';
-              className='px-8 py-3 border border-purple-500 text-purple-400 font-medium rounded-lg hover:bg-purple-500/10 transition-all duration-200'>              Request Demo
+              className='px-8 py-3 border border-purple-500 text-purple-400 font-medium rounded-lg hove,
+    r:bg-purple-500/10 transition-all duration-200'>              Request Demo
             </Link>
           </div>
         </div>
-:pages.disabled/pages/services/AIFinancialTrading.jsx
-'{/* Key Stats */}''        <div className='grid grid-cols-1 md:grid-cols-4 gap-8 mb-16'>''
-          <div className='text-center'>''
+:pages.disabled/pages/services/AIFinancialTrading.jsx'
+'{/* Key Stats */}        <div className='grid grid-cols-1 md:grid-cols-4 gap-8 mb-16>''
+          <div className='text-center>''
             <div className='text-3xl font-bold text-purple-400 mb-2'>25%</div>'';
-:pages.disabled/pages/services/AIFinancialTrading.jsx
-            <div className='text-gray-400'>Higher Returns</div>'
-          </div>''
-          <div className='text-center'>''
-            <div className='text-3xl font-bold text-purple-400 mb-2'>24/7</div>''
-            <div className='text-gray-400'>Trading</div>'
-          </div>''
-          <div className='text-center'>''
-            <div className='text-3xl font-bold text-purple-400 mb-2'>μs</div>''
-            <div className='text-gray-400'>Execution Speed</div>'</div>''          <div className='text-center'>''
-            <div className='text-3xl font-bold text-purple-400 mb-2'>99.9%</div>''
+:pages.disabled/pages/services/AIFinancialTrading.jsx'
+            <div className='text-gray-400'>Higher Returns</div>''
+          </div>'''
+          <div className='text-center>''
+            <div className='text-3xl font-bold text-purple-400 mb-2'>24/7</div>'''
+            <div className='text-gray-400'>Trading</div>''
+          </div>'''
+          <div className='text-center>''
+            <div className='text-3xl font-bold text-purple-400 mb-2'>μs</div>'''
+            <div className='text-gray-400'>Execution Speed</div>'</div>''          <div className='text-center>''
+            <div className='text-3xl font-bold text-purple-400 mb-2'>99.9%</div>'''
             <div className='text-gray-400'>Uptime</div>
           </div>
         </div>
 :pages.disabled/pages/services/AIFinancialTrading.jsx;
-'{/* Features Grid */}''
-        <div className='mb-16'>''
+'{/* Features Grid */}'
+        <div className='mb-16>''
           <h2 className='text-3xl font-bold text-white text-center mb-12'>
-            Advanced Trading Features
+            Advanced Trading Features'
           </h2>';
-''
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            {features.map((feature, idx) => (
-              <div'key={idx}''                className='bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300''>''
-                <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4'>'';
-:pages.disabled/pages/services/AIFinancialTrading.jsx
+'''
+          <div className='grid grid-cols-1 md:grid-cols-2 l,
+    g:grid-cols-3 gap-8'>
+            {features.map((feature, idx) => ('
+              <div'key={idx}                className='bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300>'
+                <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4>';
+:pages.disabled/pages/services/AIFinancialTrading.jsx'
                   <feature.icon className='w-6 h-6 text-white' />'
-                </div>''
-                <h3 className='text-xl font-semibold text-white mb-2'>
-                  {feature.title}'</h3>''                <p className='text-gray-400'>{feature.description}</p>
+                </div>'''
+                <h3 className='text-xl font-semibold text-white mb-2>
+                  {feature.title}</h3>''                <p className='text-gray-400'>{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
 :pages.disabled/pages/services/AIFinancialTrading.jsx;
-'{/* Trading Instruments Section */}''
-        <div className='mb-16'>''
+'{/* Trading Instruments Section */}'
+        <div className='mb-16>''
           <h2 className='text-3xl font-bold text-white text-center mb-12'>
-            Trading Instruments & Markets
+            Trading Instruments & Markets'
           </h2>';
-''
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            {tradingInstruments.map((instrument, idx) => (
-              <div'key={idx}''                className='bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300''>''
-                <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4'>'';
-:pages.disabled/pages/services/AIFinancialTrading.jsx
+'''
+          <div className='grid grid-cols-1 md:grid-cols-2 l,
+    g:grid-cols-3 gap-8'>
+            {tradingInstruments.map((instrument, idx) => ('
+              <div'key={idx}                className='bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300>'
+                <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4>';
+:pages.disabled/pages/services/AIFinancialTrading.jsx'
                   <instrument.icon className='w-6 h-6 text-white' />'
-                </div>''
-                <h3 className='text-xl font-semibold text-white mb-2'>
-                  {instrument.title}'</h3>''                <p className='text-gray-400'>{instrument.description}</p>
+                </div>'''
+                <h3 className='text-xl font-semibold text-white mb-2>
+                  {instrument.title}</h3>''                <p className='text-gray-400'>{instrument.description}</p>
               </div>
             ))}
           </div>
         </div>
 :pages.disabled/pages/services/AIFinancialTrading.jsx;
-'{/* Pricing Section */}''
-        <div className='mb-16'>''
+'{/* Pricing Section */}'
+        <div className='mb-16>''
           <h2 className='text-3xl font-bold text-white text-center mb-12'>
-            Transparent Pricing Plans
+            Transparent Pricing Plans'
           </h2>'''          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricingPlans.map((plan, idx) => (
               <div;
                 key={idx}
 :pages.disabled/pages/services/AIFinancialTrading.jsx;
-                className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${,
+                className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${,`
   plan.popular'';
                     ?;
   'border-purple-500 bg-purple-500/5'';
-  '`: 'border-gray-700``}`}
-              >'{plan.popular && (''                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''
+  '`: 'border-gray-700``}`}`
+              >'{plan.popular && (''                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>''
                     <span className='bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium'>
                       Most Popular
                     </span>
-                  </div>
-:pages.disabled/pages/services/AIFinancialTrading.jsx)}';
-''
-                <div className='text-center mb-6'>''
-                  <h3 className='text-2xl font-bold text-white mb-2'>
-                    {plan.name}'
-                  </h3>''
-                  <div className='text-4xl font-bold text-purple-400 mb-1'>
-                    {plan.price}'
-                  </div>''
-                  <div className='text-gray-400 mb-4'>{plan.period}</div>''
-                  <p className='text-gray-300'>{plan.description}</p>
+                  </div>'
+:pages.disabled/pages/services/AIFinancialTrading.jsx)};
+'''
+                <div className='text-center mb-6>''
+                  <h3 className='text-2xl font-bold text-white mb-2>
+                    {plan.name}
+                  </h3>'''
+                  <div className='text-4xl font-bold text-purple-400 mb-1>
+                    {plan.price}
+                  </div>'''
+                  <div className='text-gray-400 mb-4'>{plan.period}</div>'''
+                  <p className='text-gray-300'>{plan.description}</p>'
                 </div>';
-''
+'''
                 <ul className='space-y-3 mb-8'>
-                  {plan.features.map((feature, featureIdx) => (
-                    <li'key={featureIdx}''                      className='flex items-center space-x-3''>''
+                  {plan.features.map((feature, featureIdx) => ('
+                    <li'key={featureIdx}                      className='flex items-center space-x-3>'
                       <CheckCircle className='w-5 h-5 text-purple-400 flex-shrink-0' />''
                       <span className='text-gray-300'>{feature}</span>
                     </li>
                   ))}
-:pages.disabled/pages/services/AIFinancialTrading.jsx
+:pages.disabled/pages/services/AIFinancialTrading.jsx'
                 </ul>';
-''
-                <button className='w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 transform hover:scale-105'>'{plan.popular ? (''
+'''
+                <button className='w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 transform hover:scale-105>{plan.popular ? ('''
                     <span className='bg-gradient-to-r from-purple-500 to-pink-600 text-white block'>
                       {plan.cta}
-                    </span>') : (''                    <span className='border border-gray-600 text-gray-300 block hover:border-purple-500 hover:text-purple-400'>
+                    </span>') : (''                    <span className='border border-gray-600 text-gray-300 block hover:border-purple-500 hove,
+    r:text-purple-400'>
                       {plan.cta}
                     </span>
                   )}
@@ -421,51 +428,54 @@ export default function AIFinancialTrading() {
             ))}
           </div>
         </div>
-:pages.disabled/pages/services/AIFinancialTrading.jsx
-'{/* Benefits Section */}''        <div className='mb-16'>''
+:pages.disabled/pages/services/AIFinancialTrading.jsx'
+'{/* Benefits Section */}        <div className='mb-16>''
           <h2 className='text-3xl font-bold text-white text-center mb-12'>
             Why Choose AI Financial Trading?;
-:pages.disabled/pages/services/AIFinancialTrading.jsx
+:pages.disabled/pages/services/AIFinancialTrading.jsx'
           </h2>';
-''
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            {benefits.map((benefit, idx) => (
-              <div'key={idx}''                className='bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300''>''
-                <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4'>'';
-:pages.disabled/pages/services/AIFinancialTrading.jsx
+'''
+          <div className='grid grid-cols-1 md:grid-cols-2 l,
+    g:grid-cols-3 gap-8'>
+            {benefits.map((benefit, idx) => ('
+              <div'key={idx}                className='bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300>'
+                <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4>';
+:pages.disabled/pages/services/AIFinancialTrading.jsx'
                   <benefit.icon className='w-6 h-6 text-white' />'
-                </div>''
-                <h3 className='text-xl font-semibold text-white mb-2'>
-                  {benefit.title}'</h3>''                <p className='text-gray-400'>{benefit.description}</p>
+                </div>'''
+                <h3 className='text-xl font-semibold text-white mb-2>
+                  {benefit.title}</h3>''                <p className='text-gray-400'>{benefit.description}</p>
               </div>
             ))}
           </div>
         </div>
-:pages.disabled/pages/services/AIFinancialTrading.jsx
-'{/* CTA Section */}''        <div className='text-center'>''
-          <div className='bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-2xl p-8'>''
+:pages.disabled/pages/services/AIFinancialTrading.jsx'
+'{/* CTA Section */}        <div className='text-center>''
+          <div className='bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-2xl p-8>''
             <h2 className='text-3xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIFinancialTrading.jsx;
-              Ready to Transform Your Trading?'
-            </h2>''
+              Ready to Transform Your Trading?''
+            </h2>'''
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
               Join thousands of traders who are already leveraging AI to;
-              maximize returns and minimize risks in volatile markets.'
-            </p>''
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
-              <Link''
+              maximize returns and minimize risks in volatile markets.''
+            </p>'''
+            <div className='flex flex-col sm: flex-row gap-4 justify-center>'
+              <Link'''
                 to='/contact'';
-                className='px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-medium rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 transform hover:scale-105'>
-                Start Free Trial Today
-              </Link>'
+                className='px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-medium rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 transform hove,
+    r:scale-105'>
+                Start Free Trial Today'
+              </Link>''
               <Link'';
                 to='/request-demo'';
-                className='px-8 py-3 border border-purple-500 text-purple-400 font-medium rounded-lg hover:bg-purple-500/10 transition-all duration-200'>                Schedule Demo
+                className='px-8 py-3 border border-purple-500 text-purple-400 font-medium rounded-lg hove,
+    r:bg-purple-500/10 transition-all duration-200'>                Schedule Demo
               </Link>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  )}''`;
-  ''`''`
+    </div>'
+  )}`;`
+  ''`''``

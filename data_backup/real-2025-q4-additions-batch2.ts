@@ -7,7 +7,8 @@ export interface AdditionalQ42025Service {
    description: string;
    features: string[];
    category: string;
-   link: string;
+   lin,
+    k: string;
    marketPosition?: string;
    roi?: string;
    competitors?: string[];
@@ -15,9 +16,11 @@ export interface AdditionalQ42025Service {
    integrations?: string[];
    trialDays?: number;
    setupTime?: string;
-  export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [ { id:, devsecops-copilot', name: 'DevSecOps Copilot, tagline:, Security checks, SBOM, IaC drift and CI/CD policy gates', price: '$199, period:, /month', description: Continuously scans repos and pipelines for secrets, vulnerabilities, misconfigurations and IaC drift;
+  export const real2025Q4AdditionsBatch,
+    2: AdditionalQ42025Service[] = [ { i,
+    d:, devsecops-copilot', name: 'DevSecOps Copilot, tagline:, Security checks, SBOM, IaC drift and CI/CD policy gates', price: '$199, period:, /month', description: Continuously scans repos and pipelines for secrets, vulnerabilities, misconfigurations and IaC drift;
    enforces policy gates in CI/CD with auto-fix PRs., , features[ 'Secret scanning', 'SBOM generation', 'IaC drift detection', 'CI policy gates', 'Auto-fix pull requests'], category: 'Quality & Monitoring, link:, https: //ziontechgroup.com/services/devsecops-copilot, marketPosition:, Lightweight, practical guardrails integrated with your CI/CD.', roi: 'Reduce security incidents and review toil by 30–60%., competitors[ 'Snyk', 'GitHub Advanced Security'], useCases[ 'Pipeline security', 'IaC policy', 'Compliance checks'], integrations[ 'GitHub', 'GitLab', 'Bitbucket', 'Terraform'], trialDays: 14, setupTime:, Same day'},
-	{
+	{'
 		id: 'internal-linking-automation,
 		name:,
   Internal Linking Automation',
@@ -39,8 +42,8 @@ export interface AdditionalQ42025Service {
   Operational SEO for content-heavy sites with safe automation.',
 		roi: 'Improve organic traffic 5–20% via better internal structure.,
 		competitors[;
-  'SurferSEO (partial)',
-  'ClearScope (advice)'],
+  'SurferSEO (partial),
+  'ClearScope (advice)],
 		useCases[;
   'SEO housekeeping',
   'Topic clustering',
@@ -52,7 +55,7 @@ export interface AdditionalQ42025Service {
 		trialDays: 7,
 		setupTime:,
   1 day'},
-	{
+	{'
 		id: 'ai-contract-redaction,
 		name:,
   AI Contract Redaction',
@@ -71,8 +74,8 @@ export interface AdditionalQ42025Service {
 		link:,
   https: //ziontechgroup.com/services/ai-contract-redaction,
 		competitors[;
-  'Azure Form Recognizer (custom)',
-  'OpenAI workflows (custom)'],
+  'Azure Form Recognizer (custom),
+  'OpenAI workflows (custom)],
 		useCases[;
   'Vendor reviews',
   'DSAR responses',
@@ -84,7 +87,7 @@ export interface AdditionalQ42025Service {
 		trialDays: 7,
 		setupTime:,
   1 day'},
-	{
+	{'
 		id: 'browser-performance-optimizer,
 		name:,
   Browser Performance Optimizer',
@@ -117,7 +120,7 @@ export interface AdditionalQ42025Service {
 		trialDays: 7,
 		setupTime:,
   Same day'},
-	{
+	{'
 		id: 'tenant-permissions-auditor,
 		name:,
   Tenant Permissions Auditor',
@@ -137,7 +140,7 @@ export interface AdditionalQ42025Service {
   https: //ziontechgroup.com/services/tenant-permissions-auditor,
 		competitors[;
   'Veza',
-  'SailPoint (IGA)'],
+  'SailPoint (IGA)],
 		useCases[;
   'Least privilege',
   'Audit support',
@@ -149,7 +152,7 @@ export interface AdditionalQ42025Service {
 		trialDays: 14,
 		setupTime:,
   2–3 days'},
-	{
+	{'
 		id: 'data-quality-guardrails,
 		name:,
   Data Quality Guardrails',
@@ -182,7 +185,7 @@ export interface AdditionalQ42025Service {
 		trialDays: 14,
 		setupTime:,
   1–2 days'},
-	{
+	{'
 		id: 'release-notes-automation,
 		name:,
   Release Notes Automation',
@@ -201,8 +204,8 @@ export interface AdditionalQ42025Service {
 		link:,
   https: //ziontechgroup.com/services/release-notes-automation,
 		competitors[;
-  'Release Butler (custom)',
-  'GitHub Changelog (manual)'],
+  'Release Butler (custom),
+  'GitHub Changelog (manual)],
 		useCases[;
   'SaaS releases',
   'Change logs',
@@ -214,7 +217,7 @@ export interface AdditionalQ42025Service {
 		trialDays: 7,
 		setupTime:,
   Same day'},
-	{
+	{'
 		id: 'seo-schema-studio,
 		name:,
   SEO Schema Studio',
@@ -233,7 +236,7 @@ export interface AdditionalQ42025Service {
 		link:,
   https: //ziontechgroup.com/services/seo-schema-studio,
 		competitors[;
-  'Merkle Schema Builder (tools)'],
+  'Merkle Schema Builder (tools)],
 		useCases[;
   'Rich results',
   'Content SEO',
@@ -245,7 +248,7 @@ export interface AdditionalQ42025Service {
 		trialDays: 7,
 		setupTime:,
   Same day'},
-	{
+	{'
 		id: 'ai-rubric-evaluator,
 		name:,
   AI Rubric Evaluator',
@@ -277,7 +280,7 @@ export interface AdditionalQ42025Service {
 		trialDays: 7,
 		setupTime:,
   1 day'},
-	{
+	{'
 		id: 'api-deprecation-watcher,
 		name:,
   API Deprecation Watcher',
