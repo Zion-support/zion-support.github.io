@@ -1,10 +1,48 @@
-// Middleware for Next.js 11 - using pages router approach
-// Note: Next.js 11 doesn't have the same middleware API as newer versions
-// This file is kept for compatibility but middleware functionality
-// should be implemented in _app.tsx or individual page components
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 
-export default function middleware() {
-  // Middleware logic would go here for Next.js 11
-  // For now, this is a placeholder
-  return null;
+export function middleware(_request: NextRequest) {
+  const response = NextResponse.next();
+
+  // Security headers
+<<<<<<< HEAD
+  response.headers.set('X-Content-Type-Options', 'nosniff');
+  response.headers.set('X-Frame-Options', 'DENY');
+  response.headers.set('X-XSS-Protection', '1; mode=block');
+  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+  response.headers.set(
+    'Permissions-Policy',
+    'camera=(), microphone=(), geolocation=()'
+=======
+  response.headers.set('X-Frame-Options,DENY');
+  response.headers.set('X-XSS-Protection,1; mode=block');
+  response.headers.set('Referrer-Policy,strict-origin-when-cross-origin');
+  response.headers.set(
+    'Permissions-Policy,camera=(), microphone=(), geolocation=()'
+>>>>>>> main
+  );
+
+  // Content Security Policy
+  const csp = [
+<<<<<<< HEAD
+    "default-src 'self'",
+    "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
+    "style-src 'self' 'unsafe-inline'",
+    "img-src 'self' data: https:",
+    "font-src 'self'",
+    "connect-src 'self'",
+    "frame-ancestors 'none'",
+  ].join('; ');
+=======
+    "default-src 'self',script-src 'self' 'unsafe-eval' 'unsafe-inline',style-src 'self' 'unsafe-inline',img-src 'self' data: https:,font-src 'self',connect-src 'self',frame-ancestors 'none'"
+  ].join();
+>>>>>>> main
+
+  response.headers.set('Content-Security-Policy', csp);
+
+  return response;
 }
+
+export const config = {
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
+};

@@ -1,0 +1,68 @@
+<<<<<<< HEAD
+;import { Link } from 'react-router-dom';""
+import { Home } from 'lucide-react';
+
+export const ErrorPage = ({}""
+  statusCode = 404, ';'
+  title = 'Page Not Found', ';'
+  message = 'The page you are looking for does not exist.'}) => {}""
+  return()""
+=======
+<<<<<<< HEAD
+;import { Link } from 'react-router-dom';
+export const ErrorPage = ({}
+  statusCode = 404, ';'
+  title = 'Page Not Found', ';'
+  message = 'The page you are looking for does not exist.'}) => {}
+  return()
+=======
+;import { Link } from 'react-router-dom
+import { Home } from 'lucide-react';
+
+export const ErrorPage = ({}"
+  statusCode = 404, 
+  title = 'Page Not Found', 
+  message = 'The page you are looking for does not exist.'}) => {}"
+  return()"
+>>>>>>> main
+>>>>>>> main
+    <div className='min-h-screen bg-zion-blue flex items-center justify-center'>''''
+      <div className='text-center text-white'>''''
+        <h1 className='text-6xl font-bold mb-4'>{statusCode}</h1>''''
+        <h2 className='text-2xl font-semibold mb-4'>{title}</h2>''''
+        <p className='text-lg mb-8 max-w-md mx-auto'>{message}</p>''''
+        <div className='space-x-4'>''''
+<<<<<<< HEAD
+          <Button asChild" >''''"
+=======
+<<<<<<< HEAD
+          <Button asChild>''''
+=======
+          <Button asChild" >''''
+>>>>>>> main
+>>>>>>> main
+            <Link to='/'>Go Home</Link>''''
+          </Button>''''
+          <Button variant='outline' asChild"" >''''
+            <Link to='/contact'>Contact Support</Link>
+          </Button>
+        </div>
+      </div>
+    </div>
+<<<<<<< HEAD
+  )}""
+export default ErrorPage'';""
+'''''"'"
+""
+=======
+<<<<<<< HEAD
+  )}
+export default ErrorPage'';""
+'''''"'"
+=======
+  )}"
+export default ErrorPage'"
+'''''"'"
+"
+>>>>>>> main
+>>>>>>> main

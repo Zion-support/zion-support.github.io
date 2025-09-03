@@ -1,0 +1,27 @@
+<<<<<<< HEAD
+ import { Helmet } from 'react - helmet - async' interface SEOEnhancerProps {;""
+ import { Helmet } from 'react - helmet - async' interface SEOEnhancerProps {
+=======
+ import { Helmet }  from 'react - helmet - async';interface SEOEnhancerProps {;"
+ import { Helmet }  from 'react - helmet - async';interface SEOEnhancerProps {
+>>>>>>> main
+  title?: string
+   description?: string
+   keywords?: string
+   image?: string
+   url?: string
+   type?: string
+<<<<<<< HEAD
+   structuredData?: any", "
+} const SEOEnhancer: React.FC < SEOEnhancerProps> = ({ title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Transform your business with cutting - edge AI, cloud architecture, and innovative development services. Expert technology solutions for modern enterprises.', keywords = 'technology solutions, AI services, cloud architecture, software development, digital transformation, IT consulting, micro - saas, enterprise solutions', image = 'https: '''""
+;""
+}}
+=======
+<<<<<<< HEAD
+   structuredData?: any} const SEOEnhancer: React.FC < SEOEnhancerProps> = ({ title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Transform your business with cutting - edge AI, cloud architecture, and innovative development services. Expert technology solutions for modern enterprises.', keywords = 'technology solutions, AI services, cloud architecture, software development, digital transformation, IT consulting, micro - saas, enterprise solutions', image = 'https:'''""
+=======
+   structuredData?: any",
+} const SEOEnhancer: React.FC < SEOEnhancerProps> = ({ title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Transform your business with cutting - edge AI, cloud architecture, and innovative development services. Expert technology solutions for modern enterprises.', keywords = 'technology solutions, AI services, cloud architecture, software development, digital transformation, IT consulting, micro - saas, enterprise solutions', image = 'https:'''
+}}
+>>>>>>> main
+>>>>>>> main

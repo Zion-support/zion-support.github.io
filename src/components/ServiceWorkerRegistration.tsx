@@ -1,0 +1,12 @@
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react'  interface ServiceWorkerRegistrationProps {} export const ServiceWorkerRegistration: React.FC < ServiceWorkerRegistrationProps> = () => { const [isUpdateAvailable, setIsUpdateAvailable] = useState (false)  const [registration, setRegistration] = useState < ServiceWorkerRegistration | null> (null)   useEffect ( () => { if ('serviceWorker' in navigator) { registerServiceWorker ()  } }, [])   const registerServiceWorker = async () => { try { const reg = await navigator.serviceWorker.register ('/sw.js')  setRegistration (reg)  ';'
+<<<<<<< HEAD
+""
+}}}
+=======
+=======
+import React, { useEffect, useState }  from 'react';interface ServiceWorkerRegistrationProps {} export const ServiceWorkerRegistration: React.FC < ServiceWorkerRegistrationProps> = () => { const [isUpdateAvailable, setIsUpdateAvailable] = useState (false)  const [registration, setRegistration] = useState < ServiceWorkerRegistration | null> (null)   useEffect ( () => { if ('serviceWorker' in navigator) { registerServiceWorker ()  } }, [])   const registerServiceWorker = async () => { try { const reg = await navigator.serviceWorker.register ('/sw.js')  setRegistration (reg)  
+"
+}}}
+>>>>>>> main
+>>>>>>> main
