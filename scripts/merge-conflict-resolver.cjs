@@ -1,261 +1,411 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+>>>>>>> main
 const fs = require('fs').promises;
 const path = require('path');
 const { exec } = require('child_process');
 const util = require('util');
-
+;
 const execAsync = util.promisify(exec);
-
-class MergeConflictResolver {
-  constructor() {
+;
+class MergeConflictResolver {;
+  constructor() {;
     this.logFile = path.join(__dirname, '../logs/merge-resolver.log');
     this.reportFile = path.join(__dirname, '../logs/merge-conflicts-resolved.json');
     this.projectRoot = path.join(__dirname, '..');
     this.backupDir = path.join(__dirname, '../backups/merge-conflicts');
   }
+<<<<<<< HEAD
 
-  async log(message, level = 'INFO') {
+  async log(message, level = `INFO`) {
+=======
+;
+  async log(message, level = 'INFO') {;
+>>>>>>> main
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
-    
-    try {
+    ;
+    try {;
       await fs.appendFile(this.logFile, logEntry);
       console.log(logEntry.trim());
-    } catch (error) {
+<<<<<<< HEAD
+    } catch (error) { 
+      console.error(`Failed to write to log file:`, error);
+     }
+=======
+    } catch (error) {;
       console.error('Failed to write to log file:', error);
     }
+>>>>>>> main
   }
-
-  async ensureBackupDir() {
-    try {
+;
+  async ensureBackupDir() {;
+    try {;
       await fs.mkdir(this.backupDir, { recursive: true });
-    } catch (error) {
-      await this.log(`Failed to create backup directory: ${error.message}`, 'ERROR');
+<<<<<<< HEAD
+    } catch (error) { 
+      await this.log(`Failed to create backup directory: ${error.message }`, `ERROR`);
     }
   }
 
   async findAllMergeConflicts() {
     try {
-      const { stdout } = await execAsync(`find ${this.projectRoot} -type f \\( -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json" -o -name "*.md" -o -name "*.css" -o -name "*.scss" \\) -not -path "*/node_modules/*" -not -path "*/.git/*" -not -path "*/dist/*" -not -path "*/out/*" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null || true`);
-      
+      const { stdout } = await execAsync(`find ${this.projectRoot} -type f \\( -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json" -o -name "*.md" -o -name "*.css" -o -name "*.scss" \\) -not -path "*/node_modules/*" -not -path "*/.git/*" -not -path "*/dist/*" -not -path "*/out/*" | xargs grep -l "      
+      const files = stdout.trim().split(`\n`).filter(line => line && !line.includes(`node_modules`));
+      await this.log(`Found ${files.length} files with merge conflicts`, `INFO`);
+      return files;
+    } catch (error) { 
+      await this.log(`Error finding merge conflicts: ${error.message }`, `ERROR`);
+=======
+    } catch (error) {;
+      await this.log(`Failed to create backup directory: ${error.message}`, 'ERROR');
+    }
+  }
+;
+  async findAllMergeConflicts() {;
+    try {;
+      const { stdout } = await execAsync(`find ${this.projectRoot} -type f \\( -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json" -o -name "*.md" -o -name "*.css" -o -name "*.scss" \\) -not -path "*/node_modules/*" -not -path "*/.git/*" -not -path "*/dist/*" -not -path "*/out/*" | xargs grep -l "      ;
       const files = stdout.trim().split('\n').filter(line => line && !line.includes('node_modules'));
       await this.log(`Found ${files.length} files with merge conflicts`, 'INFO');
       return files;
-    } catch (error) {
+    } catch (error) {;
       await this.log(`Error finding merge conflicts: ${error.message}`, 'ERROR');
+>>>>>>> main
       return [];
     }
   }
-
-  async backupFile(filePath) {
-    try {
+;
+  async backupFile(filePath) {;
+    try {;
       const relativePath = path.relative(this.projectRoot, filePath);
       const backupPath = path.join(this.backupDir, `${relativePath.replace(/[/\\]/g, '_')}_${Date.now()}.backup`);
+<<<<<<< HEAD
       
-      const content = await fs.readFile(filePath, 'utf8');
+      const content = await fs.readFile(filePath, `utf8`);
       await fs.writeFile(backupPath, content);
       
+      await this.log(`Backed up ${filePath} to ${backupPath}`, `INFO`);
+      return backupPath;
+    } catch (error) { 
+      await this.log(`Failed to backup ${filePath }: ${error.message}`, `ERROR`);
+=======
+      ;
+      const content = await fs.readFile(filePath, 'utf8');
+      await fs.writeFile(backupPath, content);
+      ;
       await this.log(`Backed up ${filePath} to ${backupPath}`, 'INFO');
       return backupPath;
-    } catch (error) {
+    } catch (error) {;
       await this.log(`Failed to backup ${filePath}: ${error.message}`, 'ERROR');
+>>>>>>> main
       return null;
     }
   }
-
-  async analyzeMergeConflict(content) {
+;
+  async analyzeMergeConflict(content) {;
     const conflicts = [];
     const lines = content.split('\n');
-    
+    ;
     let inConflict = false;
     let conflictStart = 0;
     let conflictMiddle = 0;
     let headContent = [];
     let branchContent = [];
-    
-    for (let i = 0; i < lines.length; i++) {
+    ;
+    for (let i = 0; i < lines.length; i++) {;
       const line = lines[i];
-      
-      if (line.startsWith('<<<<<<< HEAD')) {
-        inConflict = true;
+      ;
+      if (line.startsWith('        inConflict = true;
         conflictStart = i;
         headContent = [];
         branchContent = [];
-      } else if (line.startsWith('=======') && inConflict) {
+      } else if (line.startsWith('=======') && inConflict) {;
         conflictMiddle = i;
-      } else if (line.startsWith('>>>>>>> ') && inConflict) {
-        conflicts.push({
-          start: conflictStart,
-          middle: conflictMiddle,
-          end: i,
-          headContent: headContent.join('\n'),
-          branchContent: branchContent.join('\n'),
-          branchName: line.replace('>>>>>>> ', '')
-        });
+      } else if (line.startsWith('        conflicts.push({;
+          start: conflictStart,;
+          middle: conflictMiddle,;
+          end: i,;
+          headContent: headContent.join('\n'),;
+          branchContent: branchContent.join('\n'),;
+          branchName: line.replace('        });
         inConflict = false;
-      } else if (inConflict) {
-        if (conflictMiddle === 0) {
+      } else if (inConflict) {;
+        if (conflictMiddle === 0) {;
           headContent.push(line);
-        } else {
+        } else {;
           branchContent.push(line);
         }
       }
     }
-    
+    ;
     return conflicts;
   }
-
-  async resolveConflict(conflict, strategy = 'prefer-head') {
-    switch (strategy) {
-      case 'prefer-head':
+;
+  async resolveConflict(conflict, strategy = 'prefer-head') {;
+    switch (strategy) {;
+      case 'prefer-head':;
         return conflict.headContent;
-      case 'prefer-branch':
+      case 'prefer-branch':;
         return conflict.branchContent;
-      case 'merge-both':
+      case 'merge-both':;
         return conflict.headContent + '\n' + conflict.branchContent;
-      case 'smart-merge':
+      case 'smart-merge':;
         return this.smartMerge(conflict);
-      default:
+      default:;
         return conflict.headContent;
     }
   }
-
-  smartMerge(conflict) {
+;
+  smartMerge(conflict) {;
     const head = conflict.headContent.trim();
     const branch = conflict.branchContent.trim();
+<<<<<<< HEAD
     
-    // If one is empty, use the other
+    // If one is empty, use the other;
     if (!head) return branch;
     if (!branch) return head;
     
-    // If they're identical, use either
+    // If they're identical, use either;
     if (head === branch) return head;
     
-    // If one is a subset of the other, use the longer one
+    // If one is a subset of the other, use the longer one;
     if (head.includes(branch)) return head;
     if (branch.includes(head)) return branch;
     
-    // For imports, merge both
+    // For imports, merge both;
     if (head.includes('import') && branch.includes('import')) {
       return [head, branch].join('\n');
     }
     
-    // For object properties, try to merge
+    // For object properties, try to merge;
     if (head.includes(':') && branch.includes(':')) {
       try {
         return [head, branch].join(',\n');
       } catch {
-        return head; // Fallback to head
+        return head; // Fallback to head;
       }
     }
     
-    // Default: prefer HEAD
+=======
+    ;
+    // If one is empty, use the other;
+    if (!head) return branch;
+    if (!branch) return head;
+    ;
+    // If they're identical, use either;
+    if (head === branch) return head;
+    ;
+    // If one is a subset of the other, use the longer one;
+    if (head.includes(branch)) return head;
+    if (branch.includes(head)) return branch;
+    ;
+    // For imports, merge both;
+    if (head.includes('import') && branch.includes('import')) {;
+      return [head, branch].join('\n');
+    }
+    ;
+    // For object properties, try to merge;
+    if (head.includes(':') && branch.includes(':')) {;
+      try {;
+        return [head, branch].join(',\n');
+      } catch {;
+        return head; // Fallback to head;
+      }
+    }
+    ;
+>>>>>>> main
+    // Default: prefer HEAD;
     return head;
   }
-
-  async resolveMergeConflictsInFile(filePath) {
-    try {
+;
+  async resolveMergeConflictsInFile(filePath) {;
+    try {;
       const content = await fs.readFile(filePath, 'utf8');
       const conflicts = await this.analyzeMergeConflict(content);
-      
-      if (conflicts.length === 0) {
+      ;
+      if (conflicts.length === 0) {;
         return { resolved: false, reason: 'No conflicts found' };
       }
+<<<<<<< HEAD
       
-      // Backup original file
+=======
+      ;
+>>>>>>> main
+      // Backup original file;
       await this.backupFile(filePath);
-      
+      ;
       let resolvedContent = content;
+<<<<<<< HEAD
       
-      // Resolve conflicts from end to start to preserve line numbers
+      // Resolve conflicts from end to start to preserve line numbers;
       for (let i = conflicts.length - 1; i >= 0; i--) {
+=======
+      ;
+      // Resolve conflicts from end to start to preserve line numbers;
+      for (let i = conflicts.length - 1; i >= 0; i--) {;
+>>>>>>> main
         const conflict = conflicts[i];
         const lines = resolvedContent.split('\n');
-        
+        ;
         const resolution = await this.resolveConflict(conflict, 'smart-merge');
+<<<<<<< HEAD
         
-        // Replace the conflict block with the resolution
+=======
+        ;
+>>>>>>> main
+        // Replace the conflict block with the resolution;
         lines.splice(conflict.start, conflict.end - conflict.start + 1, resolution);
-        resolvedContent = lines.join('\n');
+        resolvedContent = lines.join(`\n`);
       }
-      
+      ;
       await fs.writeFile(filePath, resolvedContent);
+<<<<<<< HEAD
       
-      await this.log(`Resolved ${conflicts.length} conflicts in ${filePath}`, 'INFO');
+      await this.log(`Resolved ${conflicts.length} conflicts in ${filePath}`, `INFO`);
       return { resolved: true, conflictsCount: conflicts.length };
       
-    } catch (error) {
+    } catch (error) { 
+      await this.log(`Failed to resolve conflicts in ${filePath }: ${error.message}`, `ERROR`);
+=======
+      ;
+      await this.log(`Resolved ${conflicts.length} conflicts in ${filePath}`, 'INFO');
+      return { resolved: true, conflictsCount: conflicts.length };
+      ;
+    } catch (error) {;
       await this.log(`Failed to resolve conflicts in ${filePath}: ${error.message}`, 'ERROR');
+>>>>>>> main
       return { resolved: false, error: error.message };
     }
   }
-
-  async run() {
-    try {
+;
+  async run() {;
+    try {;
       await this.log('Starting merge conflict resolver', 'INFO');
       await this.ensureBackupDir();
-      
+      ;
       const conflictFiles = await this.findAllMergeConflicts();
+<<<<<<< HEAD
       
       if (conflictFiles.length === 0) {
+        await this.log('No merge conflicts found', `INFO`);
+=======
+      ;
+      if (conflictFiles.length === 0) {;
         await this.log('No merge conflicts found', 'INFO');
+>>>>>>> main
         return;
       }
-      
-      const results = {
-        timestamp: new Date().toISOString(),
-        totalFiles: conflictFiles.length,
-        resolved: 0,
-        failed: 0,
-        details: []
+      ;
+      const results = {;
+        timestamp: new Date().toISOString(),;
+        totalFiles: conflictFiles.length,;
+        resolved: 0,;
+        failed: 0,;
+        details: [];
       };
-      
-      for (const file of conflictFiles) {
+      ;
+      for (const file of conflictFiles) {;
         const result = await this.resolveMergeConflictsInFile(file);
-        
-        if (result.resolved) {
+        ;
+        if (result.resolved) {;
           results.resolved++;
-        } else {
+        } else {;
           results.failed++;
         }
+<<<<<<< HEAD
         
         results.details.push({
           file: path.relative(this.projectRoot, file),
-          ...result
+=======
+        ;
+        results.details.push({;
+          file: path.relative(this.projectRoot, file),;
+>>>>>>> main
+          ...result;
         });
       }
-      
+      ;
       await fs.writeFile(this.reportFile, JSON.stringify(results, null, 2));
+<<<<<<< HEAD
       
-      await this.log(`Merge conflict resolution completed: ${results.resolved}/${results.totalFiles} files resolved`, 'INFO');
+      await this.log(`Merge conflict resolution completed: ${results.resolved}/${results.totalFiles} files resolved`, `INFO`);
       
-      // If conflicts were resolved, trigger a build check
+      // If conflicts were resolved, trigger a build check;
       if (results.resolved > 0) {
+=======
+      ;
+      await this.log(`Merge conflict resolution completed: ${results.resolved}/${results.totalFiles} files resolved`, 'INFO');
+      ;
+      // If conflicts were resolved, trigger a build check;
+      if (results.resolved > 0) {;
+>>>>>>> main
         exec('pm2 restart build-health-check');
-        exec('pm2 restart error-monitor');
+        exec(`pm2 restart error-monitor`);
       }
+<<<<<<< HEAD
       
-    } catch (error) {
+    } catch (error) { 
+      await this.log(`Merge conflict resolver failed: ${error.message }`, `ERROR`);
+    }
+  }
+}
+
+// Run if called directly;
+if (require.main === module) {
+  const resolver = new MergeConflictResolver();
+  
+  // Run once immediately, then every 30 minutes;
+  resolver.run();
+  setInterval(() => resolver.run(), 30 * 60 * 1000);
+  
+  // Keep process alive;
+  process.on('SIGINT', () => {
+=======
+      ;
+    } catch (error) {;
       await this.log(`Merge conflict resolver failed: ${error.message}`, 'ERROR');
     }
   }
 }
-
-// Run if called directly
-if (require.main === module) {
+;
+// Run if called directly;
+if (require.main === module) {;
   const resolver = new MergeConflictResolver();
-  
-  // Run once immediately, then every 30 minutes
+  ;
+  // Run once immediately, then every 30 minutes;
   resolver.run();
   setInterval(() => resolver.run(), 30 * 60 * 1000);
-  
-  // Keep process alive
-  process.on('SIGINT', () => {
+  ;
+  // Keep process alive;
+  process.on('SIGINT', () => {;
+>>>>>>> main
     resolver.log('Merge conflict resolver shutting down', 'INFO');
     process.exit(0);
   });
 }
-
+;
 module.exports = MergeConflictResolver;
->>>>>>> e2490d5a35d5a0dd04450da6c597434927cc01aa
+=======
+const fs = require('fs').promises;';const path = require('path');';const { exec } = require('child_process');';const util = require('util');';';const execAsync = util.promisify(exec);
+;
+class MergeConflictResolver {;
+  constructor() {;
+    this.logFile = path.join(__dirname, '../logs/merge-resolver.log');';    this.reportFile = path.join(__dirname, '../logs/merge-conflicts-resolved.json');';    this.projectRoot = path.join(__dirname, '..');';    this.backupDir = path.join(__dirname, '../backups/merge-conflicts');';  }';;
+  async log(message, level = 'INFO') {';    const timestamp = new Date().toISOString();';    const logEntry = `[${timestamp}] [${level}] ${message}\n`;`;    ;
+    try {;
+      await fs.appendFile(this.logFile, logEntry);
+      console.log(logEntry.trim());,
+} catch (error) {;
+      console.error('Failed to write to log "file":', error);';    }';  }
+;
+  async ensureBackupDir() {;
+    try {;
+      await fs.mkdir(this.backupDir, { "recursive": true });,";} catch (error) {;
+      await this.log(`Failed to create backup "directory": ${error.message}`, 'ERROR');';    }`;  }';;
+  async findAllMergeConflicts() {;
+    try {;
+      const { stdout } = await execAsync(`find ${this.projectRoot} -type f \\( -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json" -o -name "*.md" -o -name "*.css" -o -name "*.scss" \\) -not -path "*/node_modules/*" -not -path "*/.git/*" -not -path "*/dist/*" -not -path "*/out/* */"
+>>>>>>> main

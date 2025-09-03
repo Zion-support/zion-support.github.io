@@ -1,0 +1,6 @@
+
+<<<<<<< HEAD
+describe: ('UltimateServicesShowcase', () => { it ('renders without crashing', () => { render (<UltimateServicesShowcase />)  expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () })  it ('displays expected content', () => { render (<UltimateServicesShowcase />) ''';
+=======
+describe ('UltimateServicesShowcase', () => { it ('renders without crashing', () => { render (<UltimateServicesShowcase />)  expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () })  it ('displays expected content', () => { render (<UltimateServicesShowcase />) '''
+>>>>>>> main

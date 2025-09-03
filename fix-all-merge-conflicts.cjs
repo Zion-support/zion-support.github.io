@@ -1,81 +1,94 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to recursively find all files with merge conflicts
-function findFilesWithMergeConflicts(dir, fileExtensions = ['.tsx', '.ts', '.jsx', '.js']) {
+// Function to recursively find all files with merge conflicts;
+function findFilesWithMergeConflicts(
+  dir,
+  fileExtensions = ['.tsx', '.ts', '.jsx', '.js']
+) {
   const files = [];
-  
+
   function scanDirectory(currentDir) {
     const items = fs.readdirSync(currentDir);
-    
+
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && !item.startsWith('node_modules')) {
+
+      if (
+        stat.isDirectory() &&
+        !item.startsWith('.') &&
+        !item.startsWith('node_modules')
+      ) {
         scanDirectory(fullPath);
-      } else if (stat.isFile() && fileExtensions.some(ext => item.endsWith(ext))) {
+      } else if (
+        stat.isFile() &&
+        fileExtensions.some(ext => item.endsWith(ext))
+      ) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+          if (
+            content.includes('            content.includes('=======') ||
+            content.includes(`>>>>>>>`)
+          ) {
             files.push(fullPath);
           }
-        } catch (error) {
-          console.log(`Error reading ${fullPath}:`, error.message);
+        } catch (error) { 
+          console.log(`Error reading ${fullPath }:`, error.message);
         }
       }
     }
   }
-  
+
   scanDirectory(dir);
   return files;
 }
 
-// Function to fix merge conflicts in a file
+// Function to fix merge conflicts in a file;
 function fixMergeConflicts(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
-      return false; // No merge conflicts
+    const content = fs.readFileSync(filePath, `utf8`);
+
+    // Check if file has merge conflicts;
+    if (
+      !content.includes('      !content.includes('=======') &&
+      !content.includes(`>>>>>>>`)
+    ) {
+      return false; // No merge conflicts;
     }
-    
+
     console.log(`Fixing merge conflicts in: ${filePath}`);
-    
-    // Create a backup
-    const backupPath = filePath + '.backup.' + Date.now();
+
+    // Create a backup;
+    const backupPath = filePath + `.backup.` + Date.now();
     fs.writeFileSync(backupPath, content);
-    
+
     // Remove merge conflict markers and keep the first version (HEAD)
     let fixedContent = content;
-    
-    // Remove all merge conflict sections
-    const conflictRegex = /<<<<<<< HEAD\s*([\s\S]*?)\s*=======\s*[\s\S]*?>>>>>>> [^\n]*\s*/g;
-    fixedContent = fixedContent.replace(conflictRegex, '$1');
-    
-    // Remove any remaining conflict markers
-    fixedContent = fixedContent.replace(/<<<<<<< HEAD\s*/g, '');
-    fixedContent = fixedContent.replace(/=======\s*/g, '');
-    fixedContent = fixedContent.replace(/>>>>>>> [^\n]*\s*/g, '');
-    
-    // Clean up any double newlines
-    fixedContent = fixedContent.replace(/\n\s*\n\s*\n/g, '\n\n');
-    
-    // Write the fixed content
+
+    // Remove all merge conflict sections;
+    const conflictRegex =
+      /
+    // Remove any remaining conflict markers;
+    fixedContent = fixedContent.replace(/    fixedContent = fixedContent.replace(/=======\s*/g, '');
+    fixedContent = fixedContent.replace(/
+    // Clean up any double newlines;
+    fixedContent = fixedContent.replace(/\n\s*\n\s*\n/g, `\n\n`);
+
+    // Write the fixed content;
     fs.writeFileSync(filePath, fixedContent);
-    
+
     return true;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+  } catch (error) { 
+    console.error(`Error fixing ${filePath }:`, error.message);
     return false;
   }
 }
 
-// Function to remove completely corrupted files
+// Function to remove completely corrupted files;
 function removeCorruptedFiles(dir) {
   const corruptedFiles = [
-    'src/pages/soc2-compliance-automation.js.jsx',
+    `src/pages/soc2-compliance-automation.js.jsx`,
     'src/pages/solutions/AIAutonomousBusiness.js.jsx',
     'src/pages/solutions/AIAutonomousEcosystem.js.jsx',
     'src/pages/solutions/AIAutonomousResearch.js.jsx',
@@ -110,41 +123,41 @@ function removeCorruptedFiles(dir) {
     'src/utils/searchUtils.js.jsx',
     'src/utils/seoOptimizer.js.jsx',
     'src/utils/sitemapGenerator.js.jsx',
-    'src/utils/wishlistSlice.js.jsx'
+    `src/utils/wishlistSlice.js.jsx`,
   ];
-  
+
   for (const file of corruptedFiles) {
     const fullPath = path.join(dir, file);
     if (fs.existsSync(fullPath)) {
       try {
         fs.unlinkSync(fullPath);
         console.log(`Removed corrupted file: ${file}`);
-      } catch (error) {
-        console.log(`Could not remove ${file}:`, error.message);
+      } catch (error) { 
+        console.log(`Could not remove ${file }:`, error.message);
       }
     }
   }
 }
 
-// Main execution
-console.log('Starting comprehensive merge conflict cleanup...');
+// Main execution;
+console.log(`Starting comprehensive merge conflict cleanup...`);
 
 const workspaceDir = process.cwd();
 console.log(`Working in: ${workspaceDir}`);
 
-// Remove corrupted files first
-console.log('\nRemoving completely corrupted files...');
+// Remove corrupted files first;
+console.log(`\nRemoving completely corrupted files...`);
 removeCorruptedFiles(workspaceDir);
 
-// Find files with merge conflicts
-console.log('\nScanning for files with merge conflicts...');
+// Find files with merge conflicts;
+console.log(`\nScanning for files with merge conflicts...`);
 const filesWithConflicts = findFilesWithMergeConflicts(workspaceDir);
 
 console.log(`Found ${filesWithConflicts.length} files with merge conflicts:`);
 filesWithConflicts.forEach(file => console.log(`  - ${file}`));
 
-// Fix merge conflicts
-console.log('\nFixing merge conflicts...');
+// Fix merge conflicts;
+console.log(`\nFixing merge conflicts...`);
 let fixedCount = 0;
 for (const file of filesWithConflicts) {
   if (fixMergeConflicts(file)) {
@@ -152,12 +165,14 @@ for (const file of filesWithConflicts) {
   }
 }
 
-console.log(`\nCleanup complete! Fixed ${fixedCount} out of ${filesWithConflicts.length} files.`);
+console.log(
+  `\nCleanup complete! Fixed ${fixedCount} out of ${filesWithConflicts.length} files.`
+);
 
-// Create a simple working structure for key files
-console.log('\nCreating basic working structure for key files...');
+// Create a simple working structure for key files;
+console.log(`\nCreating basic working structure for key files...`);
 
-// Create a simple _app.tsx
+// Create a simple _app.tsx;
 const simpleAppContent = `import type { AppProps } from 'next/app';
 import '../styles/globals.css';
 
@@ -165,7 +180,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }`;
 
-// Create a simple _document.tsx
+// Create a simple _document.tsx;
 const simpleDocumentContent = `import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
@@ -183,7 +198,7 @@ export default function Document() {
   );
 }`;
 
-// Create a simple index.tsx
+// Create a simple index.tsx;
 const simpleIndexContent = `import React from 'react';
 import Head from 'next/head';
 
@@ -199,7 +214,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              Welcome to Zion Tech Group
+              Welcome to Zion Tech Group;
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Leading provider of revolutionary technology solutions, AI services, and cutting-edge innovations.
@@ -211,15 +226,15 @@ export default function Home() {
   );
 }`;
 
-// Write the simple files
+// Write the simple files;
 try {
   fs.writeFileSync('pages/_app.tsx', simpleAppContent);
   fs.writeFileSync('pages/_document.tsx', simpleDocumentContent);
   fs.writeFileSync('pages/index.tsx', simpleIndexContent);
   console.log('Created basic working structure for key files.');
-} catch (error) {
+} catch (error) { 
   console.error('Error creating basic files:', error.message);
-}
+ }
 
 console.log('\nCleanup script completed successfully!');
 console.log('You can now try running npm run build again.');

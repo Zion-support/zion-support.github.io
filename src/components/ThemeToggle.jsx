@@ -1,1 +1,25 @@
-export const ThemeToggle = () => { useEffect(() => { const savedTheme = localStorage.getItem("theme"); const prefersDark = window.matchMedia("(prefers-color-scheme: dark) ).matches; ";"
+<<<<<<< HEAD
+ const: ThemeToggle = () => { const [isDark, setIsDark] = useState (true)  useEffect ( () => {''';';';
+=======
+<<<<<<< HEAD
+ const ThemeToggle = () => { const [isDark, setIsDark] = useState (true)  useEffect ( () => {';
+=======
+<<<<<<< HEAD
+ const ThemeToggle = () => {} const;const;const [isDark, setIsDark] = useState (true)  useEffect ( () => {&apos;&apos;
+>>>>>>> main
+>>>>>>> main
+;
+&apos;}'
+=======
+<<<<<<< HEAD
+ const ThemeToggle = () => { const [isDark, setIsDark] = useState (true)  useEffect ( () => {''
+<<<<<<< HEAD
+=======
+;""
+}}
+=======
+ const ThemeToggle = () => { const [isDark, setIsDark] = useState (true)  useEffect ( () => {'
+}}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

@@ -1,1 +1,15 @@
-const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {; const [selectedCategory, setSelectedCategory] = useState("all"); const [searchTerm, setSearchTerm] = useState("); { id: "blockchain-web3", name: "Blockchain & Web3", icon: ", color: "from-green-600 to-emerald-600" },; { id: "space-tech", name: "Space Technology", icon: ", color: "from-indigo-600 to-purple-600" },; { id: "biotech-ai", name: "Biotech & AI", icon: ", color: "from-red-600 to-pink-600" },; { id: "emerging-tech", name: "Emerging Tech", icon: ", color: "from-orange-600 to-red-600" },; { id: "micro-saas", name: "Micro SAAS", icon: ", color: "from-blue-600 to-indigo-600" },; { id: "it-services", name: "IT Services", icon: ", color: "from-gray-600 to-slate-600" }; ";"
+import React from 'react';
+import {SEO } from '@/components/SEO';
+
+export default function UltimateZionServicesShowcase() {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      <SEO title="UltimateZionServicesShowcase - Zion Tech Group" description="Professional UltimateZionServicesShowcase services by Zion Tech Group" />
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold text-white mb-8">UltimateZionServicesShowcase</h1>
+        <p className="text-gray-300 text-lg">
+          Professional UltimateZionServicesShowcase services to help your business grow.
+        </p>
+      </div>
+    </div>
+  );
+}
