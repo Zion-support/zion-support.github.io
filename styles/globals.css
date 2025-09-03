@@ -2,11 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom CSS variables */
+/* Zion Tech Group Custom Styles */
 :root {
-  --zion-blue: #3b82f6;
+  --zion-blue: #1e40af;
+  --zion-blue-dark: #1e3a8a;
+  --zion-cyan: #06b6d4;
+  --zion-cyan-light: #22d3ee;
   --zion-purple: #8b5cf6;
-  --zion-indigo: #6366f1;
+  --zion-purple-light: #a855f7;
+  --zion-green: #10b981;
+  --zion-slate: #64748b;
+  --zion-slate-light: #94a3b8;
+  --zion-slate-dark: #475569;
+  --zion-slate-lighter: #cbd5e1;
 }
 
 /* Base styles */
@@ -16,6 +24,37 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
 }
 
 /* Custom utilities */

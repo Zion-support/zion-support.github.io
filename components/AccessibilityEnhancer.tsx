@@ -17,6 +17,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     // Apply accessibility settings from localStorage
     const savedHighContrast = localStorage.getItem('highContrast') === 'true';
     const savedFontSize = localStorage.getItem('fontSize') || 'normal';
+    const savedReducedMotion = localStorage.getItem('reducedMotion') === 'true';
     
     setIsHighContrast(savedHighContrast);
     setFontSize(savedFontSize);
