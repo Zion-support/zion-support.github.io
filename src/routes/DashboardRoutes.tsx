@@ -1,4 +1,7 @@
-import { Route, Routes } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { Route, Routes  } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import { ProtectedRoute } from '../components/ProtectedRoute';
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -14,8 +17,7 @@ const ProjectDetails = lazy(() => import('../pages/ProjectDetails'));
 const ProjectRoom = lazy(() => import('../pages/ProjectRoom'));
 
 const DashboardRoutes: React.FC = () => {
-  return (
-    <Suspense fallback={<LoadingSpinner />}>
+  return(<Suspense fallback={<LoadingSpinner />}>
       <Routes>
         <Route path="/dashboard" element={
           <ProtectedRoute>
@@ -63,3 +65,19 @@ const DashboardRoutes: React.FC = () => {
 };
 
 export default DashboardRoutes;
+=======
+import React from "react"
+  );
+export default function Dashboardroutes() {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="max-w-4xl mx-auto px-6 py-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">Dashboardroutes</h1>
+        <p className="text-lg text-gray-600 mb-8">
+          This is a placeholder component for dashboardroutes.
+        </p>
+      </div>
+  )
+}
+>>>>>>> main
+>>>>>>> main

@@ -1,1 +1,25 @@
-describe ('Search', () => {}; '; it ('renders without crashing', () => {}; render (<Search />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<Search />) ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+describe('Search', () => {}; '; it('renders without crashing', () => {}; render(<Search />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<Search />) ;
+=======
+describe("Search", () => {}; "; it("renders without crashing", () => {}; render(<Search / >) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<Search  />)
+}
+    render()
+}
+    expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
+  })
+}
+""
+  it("displays expected content", () => {
+    render(<Search /" >)
+}
+    // comment
+  })
+}
+  });"
+"
+});""
+>>>>>>> main
+>>>>>>> main

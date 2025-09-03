@@ -2,8 +2,7 @@
   "timestamp": "2025-09-01T11:10:16.802Z",
   "summary": {
     "fixesApplied": 5443,
-    "fixesFailed": 0
-  },
+    "fixesFailed": 0},
   "fixesApplied": [
     "Resolved merge conflict in src/types/team-builder.ts",
     "Resolved merge conflict in src/types/vite-env.d.ts",
@@ -5450,5 +5449,5 @@
     "Fixed import extensions in src/data/comprehensiveServicesIndex.tsx"
   ],
   "fixesFailed": [],
-  "status": "success"
+  "status": "success";
 }

@@ -1,1 +1,25 @@
-describe ('Pricing', () => {}; '; it ('renders without crashing', () => {}; render (<Pricing />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<Pricing />) ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+describe('Pricing', () => {}; '; it('renders without crashing', () => {}; render(<Pricing />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<Pricing />) ;
+=======
+describe("Pricing", () => {}; "; it("renders without crashing", () => {}; render(<Pricing / >) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<Pricing  />)
+}
+    render()
+}
+    expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
+  })
+}
+""
+  it("displays expected content", () => {
+    render(<Pricing /" >)
+}
+    // comment
+  })
+}
+  });"
+"
+});""
+>>>>>>> main
+>>>>>>> main

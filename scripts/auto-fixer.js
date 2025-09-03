@@ -92,7 +92,8 @@ class AutoFixer {
     // Simple merge conflict resolution - keep HEAD version and remove markers
     let fixed = content
       .replace(/\n/g, '')
-      .replace(/.replace(/// Clean up any remaining artifacts
+      .replace(/\n[\s\S]*?      .replace(/    
+    // Clean up any remaining artifacts
     fixed = fixed
       .replace(/\n\n\n+/g, '\n\n')
       .replace(/^\s*\n/gm, '\n')
