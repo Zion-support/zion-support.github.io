@@ -60,9 +60,10 @@ import {
   MessageCircle as Communication,
   Search as SearchIcon,
   BarChart as Analytics,
-  Users2 as Team,;
-  Settings as Configuration,;
-  Palette as Design} from 'lucide-react';
+  Users2 as   Team,
+  Settings as Configuration,
+  Palette as Design
+} from 'lucide-react';
 
 export default function ComprehensiveServices() {
   const title = 'Comprehensive Services — Zion Tech Group';

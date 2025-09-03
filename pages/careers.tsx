@@ -12,11 +12,9 @@ import {
   ArrowRight,
   CheckCircle,
   MapPin,
-  Clock,;
-  DollarSign} from 'lucide-react';
+  Clock,
   DollarSign
 } from 'lucide-react';
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
 
 const Careers: NextPage = () => {
   const benefits = [
@@ -38,10 +36,8 @@ const Careers: NextPage = () => {
     {
       icon: Zap,
       title: 'Innovation Time',
-      description: 'Dedicated time for personal projects and innovation.'}
       description: 'Dedicated time for personal projects and innovation.'
-}
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+    }
   ]
 
   const openPositions = [

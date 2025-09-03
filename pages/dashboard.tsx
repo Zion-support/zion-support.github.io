@@ -20,9 +20,10 @@ import {
   Star,
   Zap,
   Shield,
-  Brain,;
-  Code,;
-  Cloud} from 'lucide-react';
+  Brain,
+  Code,
+  Cloud
+} from 'lucide-react';
 
 export default function Dashboard() {
   const [activeTab, setActiveTab] = useState('overview');

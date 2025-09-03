@@ -8,12 +8,10 @@ import {
   Clock,
   Users,
   TrendingUp,
-  Award,;
-  Globe,;
-  Zap} from 'lucide-react';
+  Award,
+  Globe,
   Zap
 } from 'lucide-react';
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
 
 const CaseStudies: NextPage = () => {
   const caseStudies = [

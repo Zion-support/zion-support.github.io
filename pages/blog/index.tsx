@@ -1,7 +1,7 @@
 import React from 'react';
 import type { NextPage } from 'next';
 import Link from 'next/link';
-import MainLayout from '../../components/layout/MainLayout';
+import MainLayout from '../components/layout/MainLayout';
 import { Calendar, User, ArrowRight } from 'lucide-react';
 
 const BlogIndex: NextPage = () => {
@@ -20,65 +20,59 @@ const BlogIndex: NextPage = () => {
       date: '2024-01-10',
       author: 'AI Team',
       href: '/blog/ai-powered-marketplaces-the-future-of-digital-commerce-chat',
-      category: 'AI'},
       category: 'AI'
-},
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+    },
     {
       title: 'API-First Development: Building Scalable Systems',
       excerpt: 'Best practices for designing and implementing API-first architectures that can scale with your business.',
       date: '2024-01-05',
       author: 'Engineering Team',
       href: '/blog/api-first-development-building-scalable-systems-chat',
-      category: 'Development'},
       category: 'Development'
-},
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+    },
+
     {
       title: 'Augmented Reality in Enterprise Applications',
       excerpt: 'Real-world applications of AR technology in business environments and how it\'s changing the way we work.',
       date: '2024-01-01',
       author: 'Innovation Team',
       href: '/blog/augmented-reality-in-enterprise-applications-chat',
-      category: 'Innovation'},
       category: 'Innovation'
-},
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+    },
+
     {
       title: 'Blockchain Technology in Modern Business Solutions',
       excerpt: 'Understanding how blockchain is being integrated into business processes and the benefits it brings.',
       date: '2023-12-28',
       author: 'Blockchain Team',
       href: '/blog/blockchain-technology-in-modern-business-solutions-chat',
-      category: 'Blockchain'},
       category: 'Blockchain'
-},
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+    },
+
     {
       title: 'Cloud-Native Architecture Best Practices',
       excerpt: 'Essential principles and practices for building applications that are designed for the cloud from the ground up.',
       date: '2023-12-25',
       author: 'Cloud Team',
       href: '/blog/cloud-native-architecture-best-practices-chat',
-      category: 'Cloud'}
       category: 'Cloud'
-}
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+    }
+
   ]
 
   const categories = ['All', 'Technology', 'AI', 'Development', 'Innovation', 'Blockchain', 'Cloud'];
 
   return (
     <MainLayout 
-      title="Blog - Zion Tech Group
-      description=Stay updated with the latest insights, trends, and innovations in technology from Zion Tech Group's expert team."
+      title="Blog - Zion Tech Group"
+      description="Stay updated with the latest insights, trends, and innovations in technology from Zion Tech Group's expert team."
     >
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20>
-        <div className=container mx-auto px-4">
-          <div className="text-center>
-            <h1 className=text-4xl md: text-5xl font-bold mb-6">Our Blog</h1>
-            <p className="text-xl md:text-2xl max-w-3xl mx-auto>
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Blog</h1>
+            <p className="text-xl md:text-2xl max-w-3xl mx-auto">
               Insights, trends, and innovations in technology from our expert team.
             </p>
           </div>
@@ -102,7 +96,7 @@ const BlogIndex: NextPage = () => {
 
       {/* Blog Posts */}
       <section className=`py-20`}>
-        <div className=container mx-auto px-4">
+        <div className="container mx-auto px-4">
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8>
             {blogPosts.map((post, index) => (
               <article key={index} className=bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">

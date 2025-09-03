@@ -1,197 +1,582 @@
-import React from 'react',;',';';
-    ';';';';
-import { motion  } from 'framer-motion'; import { Helmet  } from 'react-helmet-async',;',';';
-    ';';';';
-import { Link  } from 'react-router-dom'; import { Brain, Zap, Target, Users, Shield, BarChart3, Cloud, Lock, TrendingUp, Code, Database, Network, Smartphone, MessageSquare, FileText, ShoppingCart, Headphones, Search, Clock, Camera, CreditCard, Globe2, Monitor, Server, BarChart, PieChart, LineChart, Activity, Building2, Home, Car, GraduationCap, Heart, ShoppingBag, Briefcase, Palette, Music, Video, BookOpen, Calendar, Bell, Eye, Download, Upload, Share2, QrCode, Tablet, Laptop, Desktop, Watch, Speaker, Microphone, Image, File, Folder, Archive, Edit, Plus, Check, AlertCircle, Info, HelpCircle, ExternalLink, ArrowUpRight, ArrowDownRight, ChevronRight, ChevronLeft, ChevronUp, ChevronDown, Menu, Grid, List, Filter, SortAsc, SortDesc, RefreshCw, RotateCcw, ZoomIn, ZoomOut, Maximize, Minimize, Fullscreen, FullscreenExit, Volume, Volume2, VolumeX, Mute, Unmute, Play, Pause, Stop, SkipBack, SkipForward, Rewind, FastForward, Shuffle, Repeat, Repeat1, SkipBack as SkipBackIcon, SkipForward as SkipForwardIcon, Volume1, Volume3, Volume4, Volume5, Volume6, Volume7, Volume8, Volume9, Volume10, Volume11, Volume12, Volume13, Volume14, Volume15, Volume16, Volume17, Volume18, Volume19, Volume20, Volume21, Volume22, Volume23, Volume24, Volume25, Volume26, Volume27, Volume28, Volume29, Volume30, Volume31, Volume32, Volume33, Volume34, Volume35, Volume36, Volume37, Volume38, Volume39, Volume40, Volume41, Volume42, Volume43, Volume44, Volume45, Volume46, Volume47, Volume48, Volume49, Volume50, Volume51, Volume52, Volume53, Volume54, Volume55, Volume56, Volume57, Volume58, Volume59, Volume60, Volume61, Volume62, Volume63, Volume64, Volume65, Volume66, Volume67, Volume68, Volume69, Volume70, Volume71, Volume72, Volume73, Volume74, Volume75, Volume76, Volume77, Volume78, Volume79, Volume80, Volume81, Volume82, Volume83, Volume84, Volume85, Volume86, Volume87, Volume88, Volume89, Volume90, Volume91, Volume92, Volume93, Volume94, Volume95, Volume96, Volume97, Volume98, Volume99, Volume100  } from 'lucide-react'; export default function AIServices() { const aiServiceCategories = [{ name: "AI-Powered Business Intelligence", description: "Advanced analytics and business intelligence solutions powered by artificial intelligence", icon: Brain, count: 18, color: "from-purple-400 to-pink-500", solutions: ["Predictive Analytics", "Data Visualization", "Business Intelligence", "Machine Learning Models", "Real-time Analytics", "Custom Dashboards"] } { name: "AI Automation & Workflow", description: "Intelligent automation solutions that streamline business processes and workflows", icon: Workflow, count: 22, color: "from-blue-400 to-cyan-500", solutions: ["Process Automation", "Workflow Optimization", "RPA Solutions", "Intelligent Automation", "Business Process Management", "Task Automation"] } { name: "AI-Powered Customer Experience", description: "AI-driven solutions that enhance customer interactions and improve satisfaction", icon: Users, count: 15, color: "from-green-400 to-emerald-500", solutions: ["Chatbots", "Customer Support", "Personalization", "Sentiment Analysis", "Customer Analytics", "Voice Assistants"] } { name: "AI Security & Compliance", description: "Intelligent security solutions that protect data and ensure regulatory compliance", icon: Shield, count: 12, color: "from-red-400 to-orange-500", solutions: ["Threat Detection", "Fraud Prevention", "Compliance Monitoring", "Security Analytics", "Risk Assessment", "Privacy Protection"] } ]; const featuredAIServices = [{ title: "AI-Powered Business Intelligence Platform", description: "Advanced analytics platform that uses machine learning to provide actionable business insights and predictive analytics", price: "From $2,999/month", features: ["Predictive Analytics", "Real-time Dashboards", "Custom ML Models", "Data Visualization", "Automated Reporting", "API Integration"], href: "/services/ai-business-intelligence", color: "from-purple-400 to-pink-500", popular: true } { title: "Intelligent Document Processing Suite", description: "AI-powered document processing platform that automatically extracts, categorizes, and analyzes information from various document types", price: "From $1,499/month", features: ["OCR Technology", "Natural Language Processing", "Automated Classification", "Data Extraction", "Compliance Monitoring", "Integration APIs"], href: "/services/ai-document-processing", color: "from-blue-400 to-cyan-500" } { title: "AI-Powered Marketing Automation", description: "Intelligent marketing automation that personalizes campaigns, optimizes customer journeys, and maximizes ROI through AI-driven insights", price: "From $2,499/month", features: ["Personalization Engine", "Predictive Customer Scoring", "A/B Testing Automation", "Multi-channel Campaigns", "ROI Analytics", "CRM Integration"], href: "/services/ai-marketing-automation", color: "from-green-400 to-emerald-500" } ];',';';
-    ';';';
- import { motion    } from 'framer-motion',;',';';
-    ';';';';
-import { Helmet  } from 'react-helmet-async'; import { Link    } from 'react-router-dom',;',';';
-    ';';';';
-import { Brain, Zap, Target, Users, Shield, BarChart3, Cloud, Lock, TrendingUp, Code, Database, Network, Smartphone, MessageSquare, FileText, ShoppingCart, Headphones, Search, Clock, Camera, CreditCard, Globe2, Monitor, Server, BarChart, PieChart, LineChart, Activity, Building2, Home, Car, GraduationCap, Heart, ShoppingBag, Briefcase, Palette, Music, Video, BookOpen, Calendar, Bell, Eye, Download, Upload, Share2, QrCode, Tablet, Laptop, Desktop, Watch, Speaker, Microphone, Image, File, Folder, Archive, Edit, Plus, Check, AlertCircle, Info, HelpCircle, ExternalLink, ArrowUpRight, ArrowDownRight, ChevronRight, ChevronLeft, ChevronUp, ChevronDown, Menu, Grid, List, Filter, SortAsc, SortDesc, RefreshCw, RotateCcw, ZoomIn, ZoomOut, Maximize, Minimize, Fullscreen, FullscreenExit, Volume, Volume2, VolumeX, Mute, Unmute, Play, Pause, Stop, SkipBack, SkipForward, Rewind, FastForward, Shuffle, Repeat, Repeat1, SkipBack as SkipBackIcon, SkipForward as SkipForwardIcon, Volume1, Volume3, Volume4, Volume5, Volume6, Volume7, Volume8, Volume9, Volume10, Volume11, Volume12, Volume13, Volume14, Volume15, Volume16, Volume17, Volume18, Volume19, Volume20, Volume21, Volume22, Volume23, Volume24, Volume25, Volume26, Volume27, Volume28, Volume29, Volume30, Volume31, Volume32, Volume33, Volume34, Volume35, Volume36, Volume37, Volume38, Volume39, Volume40, Volume41, Volume42, Volume43, Volume44, Volume45, Volume46, Volume47, Volume48, Volume49, Volume50, Volume51, Volume52, Volume53, Volume54, Volume55, Volume56, Volume57, Volume58, Volume59, Volume60, Volume61, Volume62, Volume63, Volume64, Volume65, Volume66, Volume67, Volume68, Volume69, Volume70, Volume71, Volume72, Volume73, Volume74, Volume75, Volume76, Volume77, Volume78, Volume79, Volume80, Volume81, Volume82, Volume83, Volume84, Volume85, Volume86, Volume87, Volume88, Volume89, Volume90, Volume91, Volume92, Volume93, Volume94, Volume95, Volume96, Volume97, Volume98, Volume99, Volume100    } from 'lucide-react'; export default function AIServices() { const aiServiceCategories = [{ name: "AI-Powered Business Intelligence", description: "Advanced analytics and business intelligence solutions powered by artificial intelligence", icon: Brain, count: 18, color: "from-purple-400 to-pink-500", solutions: ["Predictive Analytics", "Data Visualization", "Business Intelligence", "Machine Learning Models", "Real-time Analytics", "Custom Dashboards"] } { name: "AI Automation & Workflow", description: "Intelligent automation solutions that streamline business processes and workflows", icon: Workflow, count: 22, color: "from-blue-400 to-cyan-500", solutions: ["Process Automation", "Workflow Optimization", "RPA Solutions", "Intelligent Automation", "Business Process Management", "Task Automation"] } { name: "AI-Powered Customer Experience", description: "AI-driven solutions that enhance customer interactions and improve satisfaction", icon: Users, count: 15, color: "from-green-400 to-emerald-500", solutions: ["Chatbots", "Customer Support", "Personalization", "Sentiment Analysis", "Customer Analytics", "Voice Assistants"] } { name: "AI Security & Compliance", description: "Intelligent security solutions that protect data and ensure regulatory compliance", icon: Shield, count: 12, color: "from-red-400 to-orange-500", solutions: ["Threat Detection", "Fraud Prevention", "Compliance Monitoring", "Security Analytics", "Risk Assessment", "Privacy Protection"] } ]; const featuredAIServices = [{ title: "AI-Powered Business Intelligence Platform", description: "Advanced analytics platform that uses machine learning to provide actionable business insights and predictive analytics", price: "From $2,999/month", features: ["Predictive Analytics", "Real-time Dashboards", "Custom ML Models", "Data Visualization", "Automated Reporting", "API Integration"], href: "/services/ai-business-intelligence", color: "from-purple-400 to-pink-500", popular: true } { title: "Intelligent Document Processing Suite", description: "AI-powered document processing platform that automatically extracts, categorizes, and analyzes information from various document types", price: "From $1,499/month", features: ["OCR Technology", "Natural Language Processing", "Automated Classification", "Data Extraction", "Compliance Monitoring", "Integration APIs"], href: "/services/ai-document-processing", color: "from-blue-400 to-cyan-500" } { title: "AI-Powered Marketing Automation", description: "Intelligent marketing automation that personalizes campaigns, optimizes customer journeys, and maximizes ROI through AI-driven insights", price: "From $2,499/month", features: ["Personalization Engine", "Predictive Customer Scoring", "A/B Testing Automation", "Multi-channel Campaigns", "ROI Analytics", "CRM Integration"], href: "/services/ai-marketing-automation", color: "from-green-400 to-emerald-500" } ];,"});,"})',';';
-    ';';';
- import { motion    } from 'framer-motion' import { Helmet  } from 'react-helmet-async' import { Link    } from 'react-router-dom' import { Brain, Zap, Target, Users, Shield, BarChart3, Cloud, Lock, TrendingUp, Code, Database, Network, Smartphone, MessageSquare, FileText, ShoppingCart, Headphones, Search, Clock, Camera, CreditCard, Globe2, Monitor, Server, BarChart, PieChart, LineChart, Activity, Building2, Home, Car, GraduationCap, Heart, ShoppingBag, Briefcase, Palette, Music, Video, BookOpen, Calendar, Bell, Eye, Download, Upload, Share2, QrCode, Tablet, Laptop, Desktop, Watch, Speaker, Microphone, Image, File, Folder, Archive, Edit, Plus, Check, AlertCircle, Info, HelpCircle, ExternalLink, ArrowUpRight, ArrowDownRight, ChevronRight, ChevronLeft, ChevronUp, ChevronDown, Menu, Grid, List, Filter, SortAsc, SortDesc, RefreshCw, RotateCcw, ZoomIn, ZoomOut, Maximize, Minimize, Fullscreen, FullscreenExit, Volume, Volume2, VolumeX, Mute, Unmute, Play, Pause, Stop, SkipBack, SkipForward, Rewind, FastForward, Shuffle, Repeat, Repeat1, SkipBack as SkipBackIcon, SkipForward as SkipForwardIcon, Volume1, Volume3, Volume4, Volume5, Volume6, Volume7, Volume8, Volume9, Volume10, Volume11, Volume12, Volume13, Volume14, Volume15, Volume16, Volume17, Volume18, Volume19, Volume20, Volume21, Volume22, Volume23, Volume24, Volume25, Volume26, Volume27, Volume28, Volume29, Volume30, Volume31, Volume32, Volume33, Volume34, Volume35, Volume36, Volume37, Volume38, Volume39, Volume40, Volume41, Volume42, Volume43, Volume44, Volume45, Volume46, Volume47, Volume48, Volume49, Volume50, Volume51, Volume52, Volume53, Volume54, Volume55, Volume56, Volume57, Volume58, Volume59, Volume60, Volume61, Volume62, Volume63, Volume64, Volume65, Volume66, Volume67, Volume68, Volume69, Volume70, Volume71, Volume72, Volume73, Volume74, Volume75, Volume76, Volume77, Volume78, Volume79, Volume80, Volume81, Volume82, Volume83, Volume84, Volume85, Volume86, Volume87, Volume88, Volume89, Volume90, Volume91, Volume92, Volume93, Volume94, Volume95, Volume96, Volume97, Volume98, Volume99, Volume100     } from 'lucide-react',;',';';
-    ';';';';
-export default function AIServices() { const aiServiceCategories = [{ name: 'AI-Powered Business Intelligence', description: 'Advanced analytics and business intelligence solutions powered by artificial intelligence', icon: Brain, count: 18, color: 'from-purple-400 to-pink-500', solutions: ['Predictive Analytics', 'Data Visualization', 'Business Intelligence', 'Machine Learning Models', 'Real-time Analytics', 'Custom Dashboards'] } { name: 'AI Automation & Workflow', description: 'Intelligent automation solutions that streamline business processes and workflows', icon: Workflow, count: 22, color: 'from-blue-400 to-cyan-500', solutions: ['Process Automation', 'Workflow Optimization', 'RPA Solutions', 'Intelligent Automation', 'Business Process Management', 'Task Automation'] } { name: 'AI-Powered Customer Experience', description: 'AI-driven solutions that enhance customer interactions and improve satisfaction', icon: Users, count: 15, color: 'from-green-400 to-emerald-500', solutions: ['Chatbots', 'Customer Support', 'Personalization', 'Sentiment Analysis', 'Customer Analytics', 'Voice Assistants'] } { name: 'AI Security & Compliance', description: 'Intelligent security solutions that protect data and ensure regulatory compliance', icon: Shield, count: 12, color: 'from-red-400 to-orange-500', solutions: ['Threat Detection', 'Fraud Prevention', 'Compliance Monitoring', 'Security Analytics', 'Risk Assessment', 'Privacy Protection'] } ] const featuredAIServices = [{ title: 'AI-Powered Business Intelligence Platform', description: 'Advanced analytics platform that uses machine learning to provide actionable business insights and predictive analytics', price: 'From $2,999/month', features: ['Predictive Analytics', 'Real-time Dashboards', 'Custom ML Models', 'Data Visualization', 'Automated Reporting', 'API Integration'], href: '/services/ai-business-intelligence', color: 'from-purple-400 to-pink-500', popular: true } { title: 'Intelligent Document Processing Suite', description: 'AI-powered document processing platform that automatically extracts, categorizes, and analyzes information from various document types', price: 'From $1,499/month', features: ['OCR Technology', 'Natural Language Processing', 'Automated Classification', 'Data Extraction', 'Compliance Monitoring', 'Integration APIs'], href: '/services/ai-document-processing', color: 'from-blue-400 to-cyan-500' } { title: 'AI-Powered Marketing Automation', description: 'Intelligent marketing automation that personalizes campaigns, optimizes customer journeys, and maximizes ROI through AI-driven insights', price: 'From $2,499/month', features: ['Personalization Engine', 'Predictive Customer Scoring', 'A/B Testing Automation', 'Multi-channel Campaigns', 'ROI Analytics', 'CRM Integration'], href: '/services/ai-marketing-automation', color: 'from-green-400 to-emerald-500' } ];',';';
-    ';';';
-import { motion    } from 'framer-motion' import { Helmet  } from 'react-helmet-async' import { Link    } from 'react-router-dom' import { Brain, Zap, Target, Users, Shield, BarChart3, Cloud, Lock, TrendingUp, Code, Database, Network, Smartphone, MessageSquare, FileText, ShoppingCart, Headphones, Search, Clock, Camera, CreditCard, Globe2, Monitor, Server, BarChart, PieChart, LineChart, Activity, Building2, Home, Car, GraduationCap, Heart, ShoppingBag, Briefcase, Palette, Music, Video, BookOpen, Calendar, Bell, Eye, Download, Upload, Share2, QrCode, Tablet, Laptop, Desktop, Watch, Speaker, Microphone, Image, File, Folder, Archive, Edit, Plus, Check, AlertCircle, Info, HelpCircle, ExternalLink, ArrowUpRight, ArrowDownRight, ChevronRight, ChevronLeft, ChevronUp, ChevronDown, Menu, Grid, List, Filter, SortAsc, SortDesc, RefreshCw, RotateCcw, ZoomIn, ZoomOut, Maximize, Minimize, Fullscreen, FullscreenExit, Volume, Volume2, VolumeX, Mute, Unmute, Play, Pause, Stop, SkipBack, SkipForward, Rewind, FastForward, Shuffle, Repeat, Repeat1, SkipBack as SkipBackIcon, SkipForward as SkipForwardIcon, Volume1, Volume3, Volume4, Volume5, Volume6, Volume7, Volume8, Volume9, Volume10, Volume11, Volume12, Volume13, Volume14, Volume15, Volume16, Volume17, Volume18, Volume19, Volume20, Volume21, Volume22, Volume23, Volume24, Volume25, Volume26, Volume27, Volume28, Volume29, Volume30, Volume31, Volume32, Volume33, Volume34, Volume35, Volume36, Volume37, Volume38, Volume39, Volume40, Volume41, Volume42, Volume43, Volume44, Volume45, Volume46, Volume47, Volume48, Volume49, Volume50, Volume51, Volume52, Volume53, Volume54, Volume55, Volume56, Volume57, Volume58, Volume59, Volume60, Volume61, Volume62, Volume63, Volume64, Volume65, Volume66, Volume67, Volume68, Volume69, Volume70, Volume71, Volume72, Volume73, Volume74, Volume75, Volume76, Volume77, Volume78, Volume79, Volume80, Volume81, Volume82, Volume83, Volume84, Volume85, Volume86, Volume87, Volume88, Volume89, Volume90, Volume91, Volume92, Volume93, Volume94, Volume95, Volume96, Volume97, Volume98, Volume99, Volume100     } from 'lucide-react',;',';';
-    ';';';';
-export default function AIServices() { const aiServiceCategories = [{ name: 'AI-Powered: Business Intelligence,', description: 'Advanced: analytics and business intelligence solutions powered by artificial intelligence,', icon: Brai,n, count: 1,8, color: 'from-purple-400: to-pink-500,', solutions: ['Predictive: Analytics,', 'Data Visualization', 'Business Intelligence', 'Machine Learning Models', 'Real-time Analytics', 'Custom Dashboards'] } { name: 'AI: Automation & Workflow,', description: 'Intelligent: automation solutions that streamline business processes and workflows,', icon: Workflo,w, count: 2,2, color: 'from-blue-400: to-cyan-500,', solutions: ['Process: Automation,', 'Workflow Optimization', 'RPA Solutions', 'Intelligent Automation', 'Business Process Management', 'Task Automation'] } { name: 'AI-Powered: Customer Experience,', description: 'AI-driven: solutions that enhance customer interactions and improve satisfaction,', icon: User,s, count: 1,5, color: 'from-green-400: to-emerald-500,', solutions: ['Chatbots,', 'Customer: Support', 'Personalization', 'Sentiment Analysis', 'Customer Analytics', 'Voice Assistants'] } { name: 'AI: Security & Compliance,', description: 'Intelligent: security solutions that protect data and ensure regulatory compliance,', icon: Shiel,d, count: 1,2, color: 'from-red-400: to-orange-500,', solutions: ['Threat: Detection,', 'Fraud Prevention', 'Compliance Monitoring', 'Security Analytics', 'Risk Assessment', 'Privacy Protection'] } ] const featuredAIServices = [{ title: 'AI-Powered: Business Intelligence Platform,', description: 'Advanced: analytics platform that uses machine learning to provide actionable business insights and predictive analytics,', price: 'From: $,2,999/month', features: ['Predictive: Analytics,', 'Real-time Dashboards', 'Custom ML Models', 'Data Visualization', 'Automated Reporting', 'API Integration'], href: '/services/ai-business-intelligence,', color: 'from-purple-400: to-pink-500,', popular: true} { title: 'Intelligent: Document Processing Suite,', description: 'AI-powered: document processing platform that automatically extract,s, categorizes, and analyzes information from various document types', price: 'From: $,1,499/month', features: ['OCR: Technology,', 'Natural Language Processing', 'Automated Classification', 'Data Extraction', 'Compliance Monitoring', 'Integration APIs'], href: '/services/ai-document-processing,', color: 'from-blue-400: to-cyan-500'} { title: 'AI-Powered: Marketing Automation,', description: 'Intelligent: marketing automation that personalizes campaign,s, optimizes customer journeys, and maximizes ROI through AI-driven insights', price: 'From: $,2,499/month', features: ['Personalization: Engine,', 'Predictive Customer Scoring', 'A/B Testing Automation', 'Multi-channel Campaigns', 'ROI Analytics', 'CRM Integration'], href: '/services/ai-marketing-automation,', color: 'from-green-400: to-emerald-500'} ];',',';';
-    ';';';';
-import {motion    } from 'framer-motion' import {Helmet  } from 'react-helmet-async',;',';';
-    ';';';';
-import {Link    } from 'react-router-dom' import { Brain, Zap, Target, Users, Shield, BarChart3, Cloud, Lock, TrendingUp, Code, Database, Network, Smartphone, MessageSquare, FileText, ShoppingCart, Headphones, Search, Clock, Camera, CreditCard, Globe2, Monitor, Server, BarChart, PieChart, LineChart, Activity, Building2, Home, Car, GraduationCap, Heart, ShoppingBag, Briefcase, Palette, Music, Video, BookOpen, Calendar, Bell, Eye, Download, Upload, Share2, QrCode, Tablet, Laptop, Desktop, Watch, Speaker, Microphone, Image, File, Folder, Archive, Edit, Plus, Check, AlertCircle, Info, HelpCircle, ExternalLink, ArrowUpRight, ArrowDownRight, ChevronRight, ChevronLeft, ChevronUp, ChevronDown, Menu, Grid, List, Filter, SortAsc, SortDesc, RefreshCw, RotateCcw, ZoomIn, ZoomOut, Maximize, Minimize, Fullscreen, FullscreenExit, Volume, Volume2, VolumeX, Mute, Unmute, Play, Pause, Stop, SkipBack, SkipForward, Rewind, FastForward, Shuffle, Repeat, Repeat1, SkipBack as SkipBackIcon, SkipForward as SkipForwardIcon, Volume1, Volume3, Volume4, Volume5, Volume6, Volume7, Volume8, Volume9, Volume10, Volume11, Volume12, Volume13, Volume14, Volume15, Volume16, Volume17, Volume18, Volume19, Volume20, Volume21, Volume22, Volume23, Volume24, Volume25, Volume26, Volume27, Volume28, Volume29, Volume30, Volume31, Volume32, Volume33, Volume34, Volume35, Volume36, Volume37, Volume38, Volume39, Volume40, Volume41, Volume42, Volume43, Volume44, Volume45, Volume46, Volume47, Volume48, Volume49, Volume50, Volume51, Volume52, Volume53, Volume54, Volume55, Volume56, Volume57, Volume58, Volume59, Volume60, Volume61, Volume62, Volume63, Volume64, Volume65, Volume66, Volume67, Volume68, Volume69, Volume70, Volume71, Volume72, Volume73, Volume74, Volume75, Volume76, Volume77, Volume78, Volume79, Volume80, Volume81, Volume82, Volume83, Volume84, Volume85, Volume86, Volume87, Volume88, Volume89, Volume90, Volume91, Volume92, Volume93, Volume94, Volume95, Volume96, Volume97, Volume98, Volume99, Volume100     } from 'lucide-react',;',';';
-    ';';';';
-export default function AIServices()   {const aiServiceCategories = [{ name: 'AI-Powered Business Intelligence', description: 'Advanced analytics and business intelligence solutions powered by artificial intelligence', icon: Brain, count: 18, color: 'from-purple-400 to-pink-500', solutions: ['Predictive Analytics', 'Data Visualization', 'Business Intelligence', 'Machine Learning Models', 'Real-time Analytics', 'Custom Dashboards'] } {name: 'AI Automation & Workflow', description: 'Intelligent automation solutions that streamline business processes and workflows', icon: Workflow, count: 22, color: 'from-blue-400 to-cyan-500', solutions: ['Process Automation', 'Workflow Optimization', 'RPA Solutions', 'Intelligent Automation', 'Business Process Management', 'Task Automation'] } {name: 'AI-Powered Customer Experience', description: 'AI-driven solutions that enhance customer interactions and improve satisfaction', icon: Users, count: 15, color: 'from-green-400 to-emerald-500', solutions: ['Chatbots', 'Customer Support', 'Personalization', 'Sentiment Analysis', 'Customer Analytics', 'Voice Assistants'] } {name: 'AI Security & Compliance', description: 'Intelligent security solutions that protect data and ensure regulatory compliance', icon: Shield, count: 12, color: 'from-red-400 to-orange-500', solutions: ['Threat Detection', 'Fraud Prevention', 'Compliance Monitoring', 'Security Analytics', 'Risk Assessment', 'Privacy Protection'] } ] const featuredAIServices = [{title: 'AI-Powered Business Intelligence Platform', description: 'Advanced analytics platform that uses machine learning to provide actionable business insights and predictive analytics', price: 'From $2, 999/month', features: ['Predictive Analytics', 'Real-time Dashboards', 'Custom ML Models', 'Data Visualization', 'Automated Reporting', 'API Integration'], href: '/services/ai-business-intelligence', color: 'from-purple-400 to-pink-500', popular: true } {title: 'Intelligent Document Processing Suite', description: 'AI-powered document processing platform that automatically extracts, categorizes, and analyzes information from various document types', price: 'From $1, 499/month', features: ['OCR Technology', 'Natural Language Processing', 'Automated Classification', 'Data Extraction', 'Compliance Monitoring', 'Integration APIs'], href: '/services/ai-document-processing', color: 'from-blue-400 to-cyan-500' } {title: 'AI-Powered Marketing Automation', description: 'Intelligent marketing automation that personalizes campaigns, optimizes customer journeys, and maximizes ROI through AI-driven insights', price: 'From $2,499/month', features: ['Personalization Engine', 'Predictive Customer Scoring', 'A/B Testing Automation', 'Multi-channel Campaigns', 'ROI Analytics', 'CRM Integration'], href: '/services/ai-marketing-automation', color: 'from-green-400 to-emerald-500' } ];',';';
-    ';';';
-import { motion } from 'framer-motion',;',';';
-    ';';';';
-import { Brain, Zap, Target, Users, Shield, BarChart3, Cloud, Lock, TrendingUp } from 'lucide-react',;';';
-    ';';';';
-import Link from 'next/link';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { SEO } from '../components/SEO';
+import { 
+  Brain, 
+  Zap, 
+  Target, 
+  Users, 
+  Shield, 
+  BarChart3, 
+  Cloud, 
+  Lock, 
+  TrendingUp, 
+  Code, 
+  Database, 
+  Network, 
+  Smartphone, 
+  MessageSquare, 
+  FileText, 
+  ShoppingCart, 
+  Search, 
+  Clock, 
+  Camera, 
+  CreditCard, 
+  Globe, 
+  Monitor, 
+  Server, 
+  CheckCircle,
+  ArrowRight,
+  Star,
+  DollarSign,
+  Phone,
+  Mail,
+  MapPin,
+  Settings,
+  Terminal,
+  GitBranch,
+  Container,
+  Layers,
+  HardDrive,
+  Wifi,
+  Router,
+  Key,
+  Eye,
+  AlertTriangle,
+  PieChart,
+  LineChart,
+  Activity,
+  Lightbulb,
+  Rocket,
+  Workflow,
+  Cpu,
+  Atom,
+  Bot,
+  MessageCircle,
+  Headphones,
+  Video,
+  Image,
+  File,
+  Folder,
+  Archive,
+  Edit,
+  Plus,
+  Check,
+  AlertCircle,
+  Info,
+  HelpCircle,
+  ExternalLink,
+  ArrowUpRight,
+  ArrowDownRight,
+  ChevronRight,
+  ChevronLeft,
+  ChevronUp,
+  ChevronDown,
+  Menu,
+  Grid,
+  List,
+  Filter,
+  SortAsc,
+  SortDesc,
+  RefreshCw,
+  RotateCcw,
+  RotateCw,
+  ZoomIn,
+  ZoomOut,
+  Maximize,
+  Minimize,
+  Fullscreen,
+  FullscreenExit,
+  Volume,
+  Volume2,
+  VolumeX,
+  Mute,
+  Unmute,
+  Play,
+  Pause,
+  Stop,
+  SkipBack,
+  SkipForward,
+  Rewind,
+  FastForward,
+  Shuffle,
+  Repeat,
+  Repeat1
+} from 'lucide-react';
+
 export default function AIServices() {
+  const aiServiceCategories = [
+    {
+      category: 'AI-Powered Business Intelligence',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
+      description: 'Advanced analytics and business intelligence solutions powered by artificial intelligence',
+      services: [
+        {
+          name: 'AI Business Intelligence Platform',
+          description: 'Advanced analytics platform that uses machine learning to provide actionable business insights and predictive analytics.',
+          features: ['Predictive Analytics', 'Real-time Dashboards', 'Custom ML Models', 'Data Visualization', 'Automated Reporting', 'API Integration'],
+          pricing: 'From $2,999/month',
+          marketPrice: '$5,000-10,000/month',
+          benefits: ['Make data-driven decisions', 'Predict future trends', 'Improve business performance'],
+          link: '/services/ai-business-intelligence'
+        },
+        {
+          name: 'Predictive Analytics Suite',
+          description: 'Machine learning models that predict customer behavior, market trends, and business outcomes.',
+          features: ['Customer Behavior Prediction', 'Market Trend Analysis', 'Risk Assessment', 'Demand Forecasting', 'Churn Prediction'],
+          pricing: 'From $1,999/month',
+          marketPrice: '$3,000-6,000/month',
+          benefits: ['Increase revenue by 25%', 'Reduce customer churn', 'Optimize inventory management'],
+          link: '/services/predictive-analytics'
+        },
+        {
+          name: 'Real-time Analytics Dashboard',
+          description: 'Live business intelligence dashboards with AI-powered insights and automated alerts.',
+          features: ['Real-time Data Processing', 'Automated Alerts', 'Custom Dashboards', 'Mobile Access', 'Data Export'],
+          pricing: 'From $1,499/month',
+          marketPrice: '$2,500-5,000/month',
+          benefits: ['Monitor KPIs in real-time', 'Respond to changes faster', 'Improve decision making'],
+          link: '/services/real-time-analytics'
+        }
+      ]
+    },
+    {
+      category: 'AI Automation & Workflow',
+      icon: Zap,
+      color: 'from-blue-500 to-cyan-500',
+      description: 'Intelligent automation solutions that streamline business processes and workflows',
+      services: [
+        {
+          name: 'AI Workflow Orchestrator',
+          description: 'Intelligent business process automation with custom workflows and integrations.',
+          features: ['Custom Workflows', 'API Integrations', 'Task Automation', 'Performance Analytics', 'Team Collaboration'],
+          pricing: 'From $2,499/month',
+          marketPrice: '$4,000-8,000/month',
+          benefits: ['Reduce manual tasks by 85%', 'Increase productivity by 60%', 'Streamline operations'],
+          link: '/services/ai-workflow-orchestrator'
+        },
+        {
+          name: 'Intelligent Document Processing',
+          description: 'AI-powered document processing platform that automatically extracts, categorizes, and analyzes information.',
+          features: ['OCR Technology', 'Natural Language Processing', 'Automated Classification', 'Data Extraction', 'Compliance Monitoring'],
+          pricing: 'From $1,499/month',
+          marketPrice: '$2,500-5,000/month',
+          benefits: ['Process documents 10x faster', 'Reduce errors by 95%', 'Improve organization'],
+          link: '/services/ai-document-processing'
+        },
+        {
+          name: 'RPA Solutions',
+          description: 'Robotic Process Automation that automates repetitive tasks and business processes.',
+          features: ['Task Automation', 'Process Mining', 'Bot Management', 'Exception Handling', 'Performance Monitoring'],
+          pricing: 'From $999/month',
+          marketPrice: '$1,500-3,000/month',
+          benefits: ['Reduce operational costs', 'Eliminate human errors', 'Scale operations efficiently'],
+          link: '/services/rpa-solutions'
+        }
+      ]
+    },
+    {
+      category: 'AI-Powered Customer Experience',
+      icon: Users,
+      color: 'from-green-500 to-emerald-500',
+      description: 'AI-driven solutions that enhance customer interactions and improve satisfaction',
+      services: [
+        {
+          name: 'AI Customer Support Suite',
+          description: 'Intelligent customer support platform with chatbots, sentiment analysis, and automated responses.',
+          features: ['AI Chatbots', 'Sentiment Analysis', 'Automated Responses', 'Knowledge Base', 'Multi-channel Support'],
+          pricing: 'From $1,999/month',
+          marketPrice: '$3,000-6,000/month',
+          benefits: ['Improve response time by 80%', 'Increase customer satisfaction', 'Reduce support costs'],
+          link: '/services/ai-customer-support'
+        },
+        {
+          name: 'Personalization Engine',
+          description: 'AI-powered personalization that delivers tailored experiences to each customer.',
+          features: ['Customer Profiling', 'Content Personalization', 'Product Recommendations', 'Behavioral Analysis', 'A/B Testing'],
+          pricing: 'From $2,499/month',
+          marketPrice: '$4,000-8,000/month',
+          benefits: ['Increase conversion rates by 40%', 'Improve customer engagement', 'Boost revenue'],
+          link: '/services/personalization-engine'
+        },
+        {
+          name: 'AI Marketing Automation',
+          description: 'Intelligent marketing automation that personalizes campaigns and optimizes customer journeys.',
+          features: ['Personalization Engine', 'Predictive Customer Scoring', 'A/B Testing Automation', 'Multi-channel Campaigns', 'ROI Analytics'],
+          pricing: 'From $2,499/month',
+          marketPrice: '$4,000-8,000/month',
+          benefits: ['Increase marketing ROI by 50%', 'Improve campaign performance', 'Automate marketing workflows'],
+          link: '/services/ai-marketing-automation'
+        }
+      ]
+    },
+    {
+      category: 'AI Security & Compliance',
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
+      description: 'Intelligent security solutions that protect data and ensure regulatory compliance',
+      services: [
+        {
+          name: 'AI Threat Detection',
+          description: 'Advanced threat detection system that uses machine learning to identify and prevent security breaches.',
+          features: ['Threat Detection', 'Anomaly Detection', 'Behavioral Analysis', 'Incident Response', 'Security Analytics'],
+          pricing: 'From $3,999/month',
+          marketPrice: '$6,000-12,000/month',
+          benefits: ['Detect threats 5x faster', 'Reduce false positives', 'Improve security posture'],
+          link: '/services/ai-threat-detection'
+        },
+        {
+          name: 'Fraud Prevention System',
+          description: 'AI-powered fraud detection and prevention system for financial transactions and user activities.',
+          features: ['Real-time Fraud Detection', 'Risk Scoring', 'Transaction Monitoring', 'Behavioral Analysis', 'Alert Management'],
+          pricing: 'From $2,999/month',
+          marketPrice: '$5,000-10,000/month',
+          benefits: ['Reduce fraud losses by 70%', 'Improve detection accuracy', 'Minimize false positives'],
+          link: '/services/fraud-prevention'
+        },
+        {
+          name: 'AI Compliance Monitor',
+          description: 'Automated compliance monitoring system that ensures adherence to regulations and standards.',
+          features: ['Compliance Monitoring', 'Audit Trails', 'Policy Management', 'Risk Assessment', 'Reporting'],
+          pricing: 'From $1,999/month',
+          marketPrice: '$3,000-6,000/month',
+          benefits: ['Ensure regulatory compliance', 'Reduce audit preparation time', 'Minimize compliance risks'],
+          link: '/services/ai-compliance-monitor'
+        }
+      ]
+    }
+  ];
+
+  const stats = [
+    { number: '200+', label: 'AI Models Deployed', icon: Brain },
+    { number: '95%', label: 'Accuracy Rate', icon: Target },
+    { number: '50+', label: 'AI Solutions', icon: Code },
+    { number: '24/7', label: 'AI Monitoring', icon: Clock }
+  ];
+
+  const benefits = [
+    {
+      icon: TrendingUp,
+      title: 'Proven Results',
+      description: 'Track record of successful AI implementations with measurable business outcomes.'
+    },
+    {
+      icon: Brain,
+      title: 'Advanced AI',
+      description: 'Cutting-edge machine learning and AI technologies for maximum impact.'
+    },
+    {
+      icon: Zap,
+      title: 'Rapid Implementation',
+      description: 'Quick deployment with minimal disruption to your business operations.'
+    },
+    {
+      icon: Shield,
+      title: 'Secure & Compliant',
+      description: 'Enterprise-grade security and compliance for all AI solutions.'
+    }
+  ];
+
   return (
-  return (';
-  return (';';
-  const aiServiceCategories = [';';';
-    {',';';
-    ';';';
-      name: 'AI-Powered Business Intelligence',',';';
-    ';';';
-      description: 'Advanced analytics and business intelligence solutions powered by artificial intelligence',';';
-      icon: Brain,';';';
-      count: 18,',';';
-    ';';';
-      color: 'from-purple-400 to-pink-500',',';';
-    ';';';
-      solutions: ['Predictive Analytics', 'Data Visualization', 'Business Intelligence', 'Machine Learning Models', 'Real-time Analytics', 'Custom Dashboards']';';';
-} {',';';
-    ';';';
-      name: 'AI Automation & Workflow',',';';
-    ';';';
-      description: 'Intelligent automation solutions that streamline business processes and workflows',';';
-      icon: Zap,';';';
-      count: 22,',';';
-    ';';';
-      color: 'from-blue-400 to-cyan-500',',';';
-    ';';';
-      solutions: ['Process Automation', 'Workflow Optimization', 'RPA Solutions', 'Intelligent Automation', 'Business Process Management', 'Task Automation']',';';
-    ';';';
-      name: 'AI-Powered Customer Experience',',';';
-    ';';';
-      description: 'AI-driven solutions that enhance customer interactions and improve satisfaction',';';
-      icon: Users,';';';
-      count: 15,',';';
-    ';';';
-      color: 'from-green-400 to-emerald-500',',';';
-    ';';';
-      solutions: ['Chatbots', 'Customer Support', 'Personalization', 'Sentiment Analysis', 'Customer Analytics', 'Voice Assistants']',';';
-    ';';';
-      name: 'AI Security & Compliance',',';';
-    ';';';
-      description: 'Intelligent security solutions that protect data and ensure regulatory compliance',';';
-      icon: Shield,';';';
-      count: 12,',';';
-    ';';';
-      color: 'from-red-400 to-orange-500',',';';
-    ';';';
-      solutions: ['Threat Detection', 'Fraud Prevention', 'Compliance Monitoring', 'Security Analytics', 'Risk Assessment', 'Privacy Protection']';
-}';';
-  ]';';';
-  const featuredAIServices = [',';';
-    ';';';
-      title: 'AI-Powered Business Intelligence Platform',',';';
-    ';';';
-      description: 'Advanced analytics platform that uses machine learning to provide actionable business insights and predictive analytics',',';';
-    ';';';
-      price: 'From $2,999/month',',';';
-    ';';';
-      features: ['Predictive Analytics', 'Real-time Dashboards', 'Custom ML Models', 'Data Visualization', 'Automated Reporting', 'API Integration'],',';';
-    ';';';
-      href: '/services/ai-business-intelligence',';';';
-      popular: true',';';
-    ';';';
-      title: 'Intelligent Document Processing Suite',',';';
-    ';';';
-      description: 'AI-powered document processing platform that automatically extracts, categorizes, and analyzes information from various document types',',';';
-    ';';';
-      price: 'From $1,499/month',',';';
-    ';';';
-      features: ['OCR Technology', 'Natural Language Processing', 'Automated Classification', 'Data Extraction', 'Compliance Monitoring', 'Integration APIs'],',';';
-    ';';';
-      href: '/services/ai-document-processing',',';';
-    ';';';
-      color: 'from-blue-400 to-cyan-500'',';';
-    ';';';
-      title: 'AI-Powered Marketing Automation',',';';
-    ';';';
-      description: 'Intelligent marketing automation that personalizes campaigns, optimizes customer journeys, and maximizes ROI through AI-driven insights',',';';
-    ';';';
-      price: 'From $2,499/month',',';';
-    ';';';
-      features: ['Personalization Engine', 'Predictive Customer Scoring', 'A/B Testing Automation', 'Multi-channel Campaigns', 'ROI Analytics', 'CRM Integration'],',';';
-    ';';';
-      href: '/services/ai-marketing-automation',',';';
-    ';';';
-      color: 'from-green-400 to-emerald-500'
-  return (
-    <div className="min-h-screen bg-white">
-      <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Services
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Transform your business with our comprehensive AI solutions designed to drive innovation, efficiency, and growth.
-          </p>
-        </motion.div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {aiServiceCategories.map((category, index) => (
-              key={index}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50 hover:border-slate-500/50 transition-all duration-300`
-              <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center mb-4`}>
-                <category.icon className=`w-8 h-8 text-white`} />
+    <>
+      <SEO 
+        title="AI Services - Zion Tech Group" 
+        description="Advanced AI services including business intelligence, automation, customer experience, and security solutions. Machine learning and artificial intelligence for modern businesses."
+        keywords="AI services, machine learning, artificial intelligence, business intelligence, automation, customer experience, AI security, Zion Tech Group"
+      />
+      
+      {/* Hero Section */}
+      <section className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center">
+        <div className="container mx-auto px-4 py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              AI-Powered
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Solutions</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+              Transform your business with cutting-edge artificial intelligence. From predictive analytics 
+              to intelligent automation, we deliver AI solutions that drive real results.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-400 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-500 hover:to-pink-600 transition-all duration-200 hover:scale-105"
+              >
+                <MessageSquare className="w-5 h-5 mr-2" />
+                Get Started Today
+              </Link>
+              <Link
+                to="#services"
+                className="inline-flex items-center px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-200"
+              >
+                <ArrowRight className="w-5 h-5 mr-2" />
+                Explore AI Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl p-6 border border-purple-400/20">
+                  <stat.icon className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+                  <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-gray-300">{stat.label}</div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Our AI Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive AI solutions designed to transform your business operations and drive growth
+            </p>
+          </motion.div>
+
+          <div className="space-y-16">
+            {aiServiceCategories.map((category, categoryIndex) => (
+              <motion.div
+                key={category.category}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
+                className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl p-8 border border-slate-600/50"
+              >
+                <div className="flex items-center mb-8">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mr-4`}>
+                    <category.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-3xl font-bold text-white">{category.category}</h3>
+                    <p className="text-gray-300 mt-2">{category.description}</p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {category.services.map((service, serviceIndex) => (
+                    <motion.div
+                      key={service.name}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8, delay: serviceIndex * 0.1 }}
+                      className="bg-gradient-to-br from-slate-700/50 to-slate-600/50 rounded-xl p-6 border border-slate-500/50 hover:border-purple-400/50 transition-all duration-300 hover:scale-105"
+                    >
+                      <h4 className="text-xl font-bold text-white mb-3">{service.name}</h4>
+                      <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
+                      
+                      <div className="mb-4">
+                        <h5 className="text-sm font-semibold text-purple-400 mb-2">Key Features:</h5>
+                        <ul className="space-y-1">
+                          {service.features.slice(0, 3).map((feature, index) => (
+                            <li key={index} className="text-sm text-gray-300 flex items-center">
+                              <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="mb-4">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="text-lg font-bold text-white">{service.pricing}</span>
+                          <span className="text-sm text-gray-400 line-through">{service.marketPrice}</span>
+                        </div>
+                        <p className="text-sm text-green-400 font-medium">Save up to 40% vs market rates</p>
+                      </div>
+
+                      <div className="mb-4">
+                        <h5 className="text-sm font-semibold text-purple-400 mb-2">Benefits:</h5>
+                        <ul className="space-y-1">
+                          {service.benefits.map((benefit, index) => (
+                            <li key={index} className="text-sm text-gray-300 flex items-center">
+                              <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                              {benefit}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <Link
+                        to={service.link}
+                        className="inline-flex items-center w-full justify-center px-4 py-2 bg-gradient-to-r from-purple-400 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-500 hover:to-pink-600 transition-all duration-200"
+                      >
+                        Learn More
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Link>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Why Choose Our AI Services?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide cutting-edge AI solutions that deliver measurable business value
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={benefit.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-purple-400/50 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <benefit.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">{benefit.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Transform Your Business with AI?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Join hundreds of companies already leveraging our AI solutions to drive growth and efficiency.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-400 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-500 hover:to-pink-600 transition-all duration-200 hover:scale-105"
+                >
+                  <MessageSquare className="w-5 h-5 mr-2" />
+                  Get Started Today
+                </Link>
+                <Link
+                  to="/pricing"
+                  className="inline-flex items-center px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-200"
+                >
+                  <DollarSign className="w-5 h-5 mr-2" />
+                  View Pricing
+                </Link>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">{category.name}</h3>
-              <p className="text-gray-300 text-sm mb-4">{category.description}</p>
-              <div className="text-blue-400 font-semibold">{category.count} Solutions</div>
-          ))
-      )}
-    </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Get in Touch
+              </h2>
+              <p className="text-lg text-gray-300">
+                Ready to discuss your AI needs? Contact us today.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+                className="text-center"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Phone className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
+                <p className="text-gray-300">+1 302 464 0950</p>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="text-center"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Mail className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Email</h3>
+                <p className="text-gray-300">kleber@ziontechgroup.com</p>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="text-center"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Address</h3>
+                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
-        <div className="grid md:grid-cols-3 gap-8">
-          {featuredAIServices.map((service, index) => (
-              className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border border-slate-600/50 hover:border-slate-500/50 transition-all duration-300"
-              {service.popular && (
-                <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
-                  Most Popular
-              )
-      )}
-    </div>
-  );
-}
-              <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-              <p className="text-gray-300 mb-6">{service.description}</p>
-              <div className="text-3xl font-bold text-white mb-6">{service.price}</div>
-              <ul className="space-y-2 mb-8">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-gray-300">
-                    <div className={`w-2 h-2 bg-green-400 rounded-full mr-3`></div>
-                    {feature}
-                  </li>
-              </ul>
-              <Link href={service.href}';
-                className={`w-full bg-gradient-to-r ${service.color} text-white px-6 py-3 rounded-lg font-semibold text-center block hover:shadow-lg transition-all duration-300`}';';
-                Learn More';';';
-              </Link>',';';
-    ';';';
- import { motion    } from 'framer-motion' import { Helmet  } from 'react-helmet-async' import { Link    } from 'react-router-dom' import { Brain, Zap, Target, Users, Shield, BarChart3, Cloud, Lock, TrendingUp, Code, Database, Network, Smartphone, MessageSquare, FileText, ShoppingCart, Headphones, Search, Clock, Camera, CreditCard, Globe2, Monitor, Server, BarChart, PieChart, LineChart, Activity, Building2, Home, Car, GraduationCap, Heart, ShoppingBag, Briefcase, Palette, Music, Video, BookOpen, Calendar, Bell, Eye, Download, Upload, Share2, QrCode, Tablet, Laptop, Desktop, Watch, Speaker, Microphone, Image, File, Folder, Archive, Edit, Plus, Check, AlertCircle, Info, HelpCircle, ExternalLink, ArrowUpRight, ArrowDownRight, ChevronRight, ChevronLeft, ChevronUp, ChevronDown, Menu, Grid, List, Filter, SortAsc, SortDesc, RefreshCw, RotateCcw, ZoomIn, ZoomOut, Maximize, Minimize, Fullscreen, FullscreenExit, Volume, Volume2, VolumeX, Mute, Unmute, Play, Pause, Stop, SkipBack, SkipForward, Rewind, FastForward, Shuffle, Repeat, Repeat1, SkipBack as SkipBackIcon, SkipForward as SkipForwardIcon, Volume1, Volume3, Volume4, Volume5, Volume6, Volume7, Volume8, Volume9, Volume10, Volume11, Volume12, Volume13, Volume14, Volume15, Volume16, Volume17, Volume18, Volume19, Volume20, Volume21, Volume22, Volume23, Volume24, Volume25, Volume26, Volume27, Volume28, Volume29, Volume30, Volume31, Volume32, Volume33, Volume34, Volume35, Volume36, Volume37, Volume38, Volume39, Volume40, Volume41, Volume42, Volume43, Volume44, Volume45, Volume46, Volume47, Volume48, Volume49, Volume50, Volume51, Volume52, Volume53, Volume54, Volume55, Volume56, Volume57, Volume58, Volume59, Volume60, Volume61, Volume62, Volume63, Volume64, Volume65, Volume66, Volume67, Volume68, Volume69, Volume70, Volume71, Volume72, Volume73, Volume74, Volume75, Volume76, Volume77, Volume78, Volume79, Volume80, Volume81, Volume82, Volume83, Volume84, Volume85, Volume86, Volume87, Volume88, Volume89, Volume90, Volume91, Volume92, Volume93, Volume94, Volume95, Volume96, Volume97, Volume98, Volume99, Volume100     } from 'lucide-react',;',';';
-    ';';';';
-export default function AIServices() { const aiServiceCategories = [{ name: 'AI-Powered Business Intelligence', description: 'Advanced analytics and business intelligence solutions powered by artificial intelligence', icon: Brain, count: 18, color: 'from-purple-400 to-pink-500', solutions: ['Predictive Analytics', 'Data Visualization', 'Business Intelligence', 'Machine Learning Models', 'Real-time Analytics', 'Custom Dashboards'] } { name: 'AI Automation & Workflow', description: 'Intelligent automation solutions that streamline business processes and workflows', icon: Workflow, count: 22, color: 'from-blue-400 to-cyan-500', solutions: ['Process Automation', 'Workflow Optimization', 'RPA Solutions', 'Intelligent Automation', 'Business Process Management', 'Task Automation'] } { name: 'AI-Powered Customer Experience', description: 'AI-driven solutions that enhance customer interactions and improve satisfaction', icon: Users, count: 15, color: 'from-green-400 to-emerald-500', solutions: ['Chatbots', 'Customer Support', 'Personalization', 'Sentiment Analysis', 'Customer Analytics', 'Voice Assistants'] } { name: 'AI Security & Compliance', description: 'Intelligent security solutions that protect data and ensure regulatory compliance', icon: Shield, count: 12, color: 'from-red-400 to-orange-500', solutions: ['Threat Detection', 'Fraud Prevention', 'Compliance Monitoring', 'Security Analytics', 'Risk Assessment', 'Privacy Protection'] } ] const featuredAIServices = [{ title: 'AI-Powered Business Intelligence Platform', description: 'Advanced analytics platform that uses machine learning to provide actionable business insights and predictive analytics', price: 'From $2, 999/month', features: ['Predictive Analytics', 'Real-time Dashboards', 'Custom ML Models', 'Data Visualization', 'Automated Reporting', 'API Integration'], href: '/services/ai-business-intelligence', color: 'from-purple-400 to-pink-500', popular: true } { title: 'Intelligent Document Processing Suite', description: 'AI-powered document processing platform that automatically extracts, categorizes, and analyzes information from various document types', price: 'From $1, 499/month', features: ['OCR Technology', 'Natural Language Processing', 'Automated Classification', 'Data Extraction', 'Compliance Monitoring', 'Integration APIs'], href: '/services/ai-document-processing', color: 'from-blue-400 to-cyan-500' } { title: 'AI-Powered Marketing Automation', description: 'Intelligent marketing automation that personalizes campaigns, optimizes customer journeys, and maximizes ROI through AI-driven insights', price: 'From $2,499/month', features: ['Personalization Engine', 'Predictive Customer Scoring', 'A/B Testing Automation', 'Multi-channel Campaigns', 'ROI Analytics', 'CRM Integration'], href: '/services/ai-marketing-automation', color: 'from-green-400 to-emerald-500' } ];``}',';';
-    ';';';
- import { motion    } from 'framer-motion' import { Helmet  } from 'react-helmet-async' import { Link    } from 'react-router-dom' import { Brain, Zap, Target, Users, Shield, BarChart3, Cloud, Lock, TrendingUp, Code, Database, Network, Smartphone, MessageSquare, FileText, ShoppingCart, Headphones, Search, Clock, Camera, CreditCard, Globe2, Monitor, Server, BarChart, PieChart, LineChart, Activity, Building2, Home, Car, GraduationCap, Heart, ShoppingBag, Briefcase, Palette, Music, Video, BookOpen, Calendar, Bell, Eye, Download, Upload, Share2, QrCode, Tablet, Laptop, Desktop, Watch, Speaker, Microphone, Image, File, Folder, Archive, Edit, Plus, Check, AlertCircle, Info, HelpCircle, ExternalLink, ArrowUpRight, ArrowDownRight, ChevronRight, ChevronLeft, ChevronUp, ChevronDown, Menu, Grid, List, Filter, SortAsc, SortDesc, RefreshCw, RotateCcw, ZoomIn, ZoomOut, Maximize, Minimize, Fullscreen, FullscreenExit, Volume, Volume2, VolumeX, Mute, Unmute, Play, Pause, Stop, SkipBack, SkipForward, Rewind, FastForward, Shuffle, Repeat, Repeat1, SkipBack as SkipBackIcon, SkipForward as SkipForwardIcon, Volume1, Volume3, Volume4, Volume5, Volume6, Volume7, Volume8, Volume9, Volume10, Volume11, Volume12, Volume13, Volume14, Volume15, Volume16, Volume17, Volume18, Volume19, Volume20, Volume21, Volume22, Volume23, Volume24, Volume25, Volume26, Volume27, Volume28, Volume29, Volume30, Volume31, Volume32, Volume33, Volume34, Volume35, Volume36, Volume37, Volume38, Volume39, Volume40, Volume41, Volume42, Volume43, Volume44, Volume45, Volume46, Volume47, Volume48, Volume49, Volume50, Volume51, Volume52, Volume53, Volume54, Volume55, Volume56, Volume57, Volume58, Volume59, Volume60, Volume61, Volume62, Volume63, Volume64, Volume65, Volume66, Volume67, Volume68, Volume69, Volume70, Volume71, Volume72, Volume73, Volume74, Volume75, Volume76, Volume77, Volume78, Volume79, Volume80, Volume81, Volume82, Volume83, Volume84, Volume85, Volume86, Volume87, Volume88, Volume89, Volume90, Volume91, Volume92, Volume93, Volume94, Volume95, Volume96, Volume97, Volume98, Volume99, Volume100     } from 'lucide-react',;',';';
-    ';';';';
-export default function AIServices() { const aiServiceCategories = [{ name: 'AI-Powered Business Intelligence', description: 'Advanced analytics and business intelligence solutions powered by artificial intelligence', icon: Brain, count: 18, color: 'from-purple-400 to-pink-500', solutions: ['Predictive Analytics', 'Data Visualization', 'Business Intelligence', 'Machine Learning Models', 'Real-time Analytics', 'Custom Dashboards'] } { name: 'AI Automation & Workflow', description: 'Intelligent automation solutions that streamline business processes and workflows', icon: Workflow, count: 22, color: 'from-blue-400 to-cyan-500', solutions: ['Process Automation', 'Workflow Optimization', 'RPA Solutions', 'Intelligent Automation', 'Business Process Management', 'Task Automation'] } { name: 'AI-Powered Customer Experience', description: 'AI-driven solutions that enhance customer interactions and improve satisfaction', icon: Users, count: 15, color: 'from-green-400 to-emerald-500', solutions: ['Chatbots', 'Customer Support', 'Personalization', 'Sentiment Analysis', 'Customer Analytics', 'Voice Assistants'] } { name: 'AI Security & Compliance', description: 'Intelligent security solutions that protect data and ensure regulatory compliance', icon: Shield, count: 12, color: 'from-red-400 to-orange-500', solutions: ['Threat Detection', 'Fraud Prevention', 'Compliance Monitoring', 'Security Analytics', 'Risk Assessment', 'Privacy Protection'] } ] const featuredAIServices = [{ title: 'AI-Powered Business Intelligence Platform', description: 'Advanced analytics platform that uses machine learning to provide actionable business insights and predictive analytics', price: 'From $2, 999/month', features: ['Predictive Analytics', 'Real-time Dashboards', 'Custom ML Models', 'Data Visualization', 'Automated Reporting', 'API Integration'], href: '/services/ai-business-intelligence', color: 'from-purple-400 to-pink-500', popular: true } { title: 'Intelligent Document Processing Suite', description: 'AI-powered document processing platform that automatically extracts, categorizes, and analyzes information from various document types', price: 'From $1, 499/month', features: ['OCR Technology', 'Natural Language Processing', 'Automated Classification', 'Data Extraction', 'Compliance Monitoring', 'Integration APIs'], href: '/services/ai-document-processing', color: 'from-blue-400 to-cyan-500' } { title: 'AI-Powered Marketing Automation', description: 'Intelligent marketing automation that personalizes campaigns, optimizes customer journeys, and maximizes ROI through AI-driven insights', price: 'From $2,499/month', features: ['Personalization Engine', 'Predictive Customer Scoring', 'A/B Testing Automation', 'Multi-channel Campaigns', 'ROI Analytics', 'CRM Integration'], href: '/services/ai-marketing-automation', color: 'from-green-400 to-emerald-500' } ];';';
-"";';';';
-}}',';';
-    ';';';
- import { motion    } from 'framer-motion' import { Helmet  } from 'react-helmet-async' import { Link    } from 'react-router-dom' import { Brain, Zap, Target, Users, Shield, BarChart3, Cloud, Lock, TrendingUp, Code, Database, Network, Smartphone, MessageSquare, FileText, ShoppingCart, Headphones, Search, Clock, Camera, CreditCard, Globe2, Monitor, Server, BarChart, PieChart, LineChart, Activity, Building2, Home, Car, GraduationCap, Heart, ShoppingBag, Briefcase, Palette, Music, Video, BookOpen, Calendar, Bell, Eye, Download, Upload, Share2, QrCode, Tablet, Laptop, Desktop, Watch, Speaker, Microphone, Image, File, Folder, Archive, Edit, Plus, Check, AlertCircle, Info, HelpCircle, ExternalLink, ArrowUpRight, ArrowDownRight, ChevronRight, ChevronLeft, ChevronUp, ChevronDown, Menu, Grid, List, Filter, SortAsc, SortDesc, RefreshCw, RotateCcw, ZoomIn, ZoomOut, Maximize, Minimize, Fullscreen, FullscreenExit, Volume, Volume2, VolumeX, Mute, Unmute, Play, Pause, Stop, SkipBack, SkipForward, Rewind, FastForward, Shuffle, Repeat, Repeat1, SkipBack as SkipBackIcon, SkipForward as SkipForwardIcon, Volume1, Volume3, Volume4, Volume5, Volume6, Volume7, Volume8, Volume9, Volume10, Volume11, Volume12, Volume13, Volume14, Volume15, Volume16, Volume17, Volume18, Volume19, Volume20, Volume21, Volume22, Volume23, Volume24, Volume25, Volume26, Volume27, Volume28, Volume29, Volume30, Volume31, Volume32, Volume33, Volume34, Volume35, Volume36, Volume37, Volume38, Volume39, Volume40, Volume41, Volume42, Volume43, Volume44, Volume45, Volume46, Volume47, Volume48, Volume49, Volume50, Volume51, Volume52, Volume53, Volume54, Volume55, Volume56, Volume57, Volume58, Volume59, Volume60, Volume61, Volume62, Volume63, Volume64, Volume65, Volume66, Volume67, Volume68, Volume69, Volume70, Volume71, Volume72, Volume73, Volume74, Volume75, Volume76, Volume77, Volume78, Volume79, Volume80, Volume81, Volume82, Volume83, Volume84, Volume85, Volume86, Volume87, Volume88, Volume89, Volume90, Volume91, Volume92, Volume93, Volume94, Volume95, Volume96, Volume97, Volume98, Volume99, Volume100     } from 'lucide-react',;',';';
-    ';';';';
-export default function AIServices() { const aiServiceCategories = [{ name: 'AI-Powered Business Intelligence', description: 'Advanced analytics and business intelligence solutions powered by artificial intelligence', icon: Brain, count: 18, color: 'from-purple-400 to-pink-500', solutions: ['Predictive Analytics', 'Data Visualization', 'Business Intelligence', 'Machine Learning Models', 'Real-time Analytics', 'Custom Dashboards'] } { name: 'AI Automation & Workflow', description: 'Intelligent automation solutions that streamline business processes and workflows', icon: Workflow, count: 22, color: 'from-blue-400 to-cyan-500', solutions: ['Process Automation', 'Workflow Optimization', 'RPA Solutions', 'Intelligent Automation', 'Business Process Management', 'Task Automation'] } { name: 'AI-Powered Customer Experience', description: 'AI-driven solutions that enhance customer interactions and improve satisfaction', icon: Users, count: 15, color: 'from-green-400 to-emerald-500', solutions: ['Chatbots', 'Customer Support', 'Personalization', 'Sentiment Analysis', 'Customer Analytics', 'Voice Assistants'] } { name: 'AI Security & Compliance', description: 'Intelligent security solutions that protect data and ensure regulatory compliance', icon: Shield, count: 12, color: 'from-red-400 to-orange-500', solutions: ['Threat Detection', 'Fraud Prevention', 'Compliance Monitoring', 'Security Analytics', 'Risk Assessment', 'Privacy Protection'] } ] const featuredAIServices = [{ title: 'AI-Powered Business Intelligence Platform', description: 'Advanced analytics platform that uses machine learning to provide actionable business insights and predictive analytics', price: 'From $2, 999/month', features: ['Predictive Analytics', 'Real-time Dashboards', 'Custom ML Models', 'Data Visualization', 'Automated Reporting', 'API Integration'], href: '/services/ai-business-intelligence', color: 'from-purple-400 to-pink-500', popular: true } { title: 'Intelligent Document Processing Suite', description: 'AI-powered document processing platform that automatically extracts, categorizes, and analyzes information from various document types', price: 'From $1, 499/month', features: ['OCR Technology', 'Natural Language Processing', 'Automated Classification', 'Data Extraction', 'Compliance Monitoring', 'Integration APIs'], href: '/services/ai-document-processing', color: 'from-blue-400 to-cyan-500' } { title: 'AI-Powered Marketing Automation', description: 'Intelligent marketing automation that personalizes campaigns, optimizes customer journeys, and maximizes ROI through AI-driven insights', price: 'From $2,499/month', features: ['Personalization Engine', 'Predictive Customer Scoring', 'A/B Testing Automation', 'Multi-channel Campaigns', 'ROI Analytics', 'CRM Integration'], href: '/services/ai-marketing-automation', color: 'from-green-400 to-emerald-500' } ];',';';
-    ';';';
-import { motion    } from 'framer-motion' import { Helmet  } from 'react-helmet-async' import { Link    } from 'react-router-dom' import { Brain, Zap, Target, Users, Shield, BarChart3, Cloud, Lock, TrendingUp, Code, Database, Network, Smartphone, MessageSquare, FileText, ShoppingCart, Headphones, Search, Clock, Camera, CreditCard, Globe2, Monitor, Server, BarChart, PieChart, LineChart, Activity, Building2, Home, Car, GraduationCap, Heart, ShoppingBag, Briefcase, Palette, Music, Video, BookOpen, Calendar, Bell, Eye, Download, Upload, Share2, QrCode, Tablet, Laptop, Desktop, Watch, Speaker, Microphone, Image, File, Folder, Archive, Edit, Plus, Check, AlertCircle, Info, HelpCircle, ExternalLink, ArrowUpRight, ArrowDownRight, ChevronRight, ChevronLeft, ChevronUp, ChevronDown, Menu, Grid, List, Filter, SortAsc, SortDesc, RefreshCw, RotateCcw, ZoomIn, ZoomOut, Maximize, Minimize, Fullscreen, FullscreenExit, Volume, Volume2, VolumeX, Mute, Unmute, Play, Pause, Stop, SkipBack, SkipForward, Rewind, FastForward, Shuffle, Repeat, Repeat1, SkipBack as SkipBackIcon, SkipForward as SkipForwardIcon, Volume1, Volume3, Volume4, Volume5, Volume6, Volume7, Volume8, Volume9, Volume10, Volume11, Volume12, Volume13, Volume14, Volume15, Volume16, Volume17, Volume18, Volume19, Volume20, Volume21, Volume22, Volume23, Volume24, Volume25, Volume26, Volume27, Volume28, Volume29, Volume30, Volume31, Volume32, Volume33, Volume34, Volume35, Volume36, Volume37, Volume38, Volume39, Volume40, Volume41, Volume42, Volume43, Volume44, Volume45, Volume46, Volume47, Volume48, Volume49, Volume50, Volume51, Volume52, Volume53, Volume54, Volume55, Volume56, Volume57, Volume58, Volume59, Volume60, Volume61, Volume62, Volume63, Volume64, Volume65, Volume66, Volume67, Volume68, Volume69, Volume70, Volume71, Volume72, Volume73, Volume74, Volume75, Volume76, Volume77, Volume78, Volume79, Volume80, Volume81, Volume82, Volume83, Volume84, Volume85, Volume86, Volume87, Volume88, Volume89, Volume90, Volume91, Volume92, Volume93, Volume94, Volume95, Volume96, Volume97, Volume98, Volume99, Volume100    }  from 'lucide-react';export default function AIServices() { const aiServiceCategories = [',';';
-    ';';';
-  { name: 'AI-Powered Business Intelligence', description: 'Advanced analytics and business intelligence solutions powered by artificial intelligence', icon: Brain, count: 18, color: 'from-purple-400 to-pink-500', solutions: ['Predictive Analytics,Data Visualization,Business Intelligence,Machine Learning Models,Real-time Analytics,Custom Dashboards'] } { name: 'AI Automation & Workflow', description: 'Intelligent automation solutions that streamline business processes and workflows', icon: Workflow, count: 22, color: 'from-blue-400 to-cyan-500', solutions: ['Process Automation,Workflow Optimization,RPA Solutions,Intelligent Automation,Business Process Management,Task Automation'] } { name: 'AI-Powered Customer Experience', description: 'AI-driven solutions that enhance customer interactions and improve satisfaction', icon: Users, count: 15, color: 'from-green-400 to-emerald-500', solutions: ['Chatbots,Customer Support,Personalization,Sentiment Analysis,Customer Analytics,Voice Assistants'] } { name: 'AI Security & Compliance', description: 'Intelligent security solutions that protect data and ensure regulatory compliance', icon: Shield, count: 12, color: 'from-red-400 to-orange-500', solutions: ['Threat Detection,Fraud Prevention,Compliance Monitoring,Security Analytics,Risk Assessment,Privacy Protection'] } ] const featuredAIServices = [',';';
-    ';';';
-  { title: 'AI-Powered Business Intelligence Platform', description: 'Advanced analytics platform that uses machine learning to provide actionable business insights and predictive analytics', price: 'From $2, 999/month', features: ['Predictive Analytics,Real-time Dashboards,Custom ML Models,Data Visualization,Automated Reporting,API Integration'], href: '/services/ai-business-intelligence', color: 'from-purple-400 to-pink-500', popular: true } { title: 'Intelligent Document Processing Suite', description: 'AI-powered document processing platform that automatically extracts, categorizes, and analyzes information from various document types', price: 'From $1, 499/month', features: ['OCR Technology,Natural Language Processing,Automated Classification,Data Extraction,Compliance Monitoring,Integration APIs'], href: '/services/ai-document-processing', color: 'from-blue-400 to-cyan-500' } { title: 'AI-Powered Marketing Automation', description: 'Intelligent marketing automation that personalizes campaigns, optimizes customer journeys, and maximizes ROI through AI-driven insights', price: 'From $2,499/month', features: ['Personalization Engine,Predictive Customer Scoring,A/B Testing Automation,Multi-channel Campaigns,ROI Analytics,CRM Integration'], href: '/services/ai-marketing-automation', color: 'from-green-400 to-emerald-500' } ];"',';';
-    ';';';
-  { title: 'AI-Powered Business Intelligence Platform', description: 'Advanced analytics platform that uses machine learning to provide actionable business insights and predictive analytics', price: 'From $2,999/month', features: ['Predictive Analytics,Real-time Dashboards,Custom ML Models,Data Visualization,Automated Reporting,API Integration'], href: '/services/ai-business-intelligence', color: 'from-purple-400 to-pink-500', popular: true } { title: 'Intelligent Document Processing Suite', description: 'AI-powered document processing platform that automatically extracts, categorizes, and analyzes information from various document types', price: 'From $1,499/month', features: ['OCR Technology,Natural Language Processing,Automated Classification,Data Extraction,Compliance Monitoring,Integration APIs'], href: '/services/ai-document-processing', color: 'from-blue-400 to-cyan-500' } { title: 'AI-Powered Marketing Automation', description: 'Intelligent marketing automation that personalizes campaigns, optimizes customer journeys, and maximizes ROI through AI-driven insights', price: 'From $2,499/month', features: ['Personalization Engine,Predictive Customer Scoring,A/B Testing Automation,Multi-channel Campaigns,ROI Analytics,CRM Integration'], href: '/services/ai-marketing-automation', color: 'from-green-400 to-emerald-500' } ]';';
-;"';';';
-"';';';';
