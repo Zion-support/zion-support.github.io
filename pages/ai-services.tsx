@@ -1060,6 +1060,204 @@ export default function AIServices() {
       pricing: '$12,000 - $50,000/month',
       delivery: '16-24 weeks',
       category: 'Pharmaceutical AI'
+    },
+    {
+      title: 'AI-Powered Generative Design Platform',
+      description: 'Intelligent design generation with AI-driven creativity and optimization for engineering and architecture',
+      icon: Brain,
+      features: [
+        'AI-powered design generation and optimization,Parametric design with constraint-based modeling,Multi-objective optimization for performance and cost,Design iteration and rapid prototyping,Integration with CAD and engineering software,Collaborative design review and feedback,Design validation and simulation,Patent and intellectual property analysis'
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '8-16 weeks',
+      category: 'Generative AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Vehicle Systems',
+      description: 'Advanced autonomous vehicle technology with computer vision, sensor fusion, and decision-making AI',
+      icon: Car,
+      features: [
+        'Computer vision and object detection for autonomous navigation,Sensor fusion and real-time data processing,Path planning and obstacle avoidance algorithms,Vehicle-to-vehicle and vehicle-to-infrastructure communication,Autonomous parking and valet services,Fleet management and optimization,Safety systems and emergency response,Regulatory compliance and testing support'
+      ],
+      pricing: '$25,000 - $100,000/month',
+      delivery: '20-40 weeks',
+      category: 'Autonomous Systems AI'
+    },
+    {
+      title: 'AI-Powered Financial Trading Algorithm',
+      description: 'Intelligent algorithmic trading with machine learning and real-time market analysis',
+      icon: TrendingUp,
+      features: [
+        'Real-time market data analysis and pattern recognition,Algorithmic trading strategy development and optimization,Risk management and portfolio optimization,High-frequency trading and execution algorithms,Market sentiment analysis and news impact assessment,Backtesting and performance validation,Regulatory compliance and audit trails,Multi-asset and multi-market trading support'
+      ],
+      pricing: '$15,000 - $75,000/month',
+      delivery: '12-24 weeks',
+      category: 'Financial AI'
+    },
+    {
+      title: 'AI-Powered Cybersecurity Threat Intelligence',
+      description: 'Advanced threat detection and response with AI-driven security analytics and automated incident response',
+      icon: Shield,
+      features: [
+        'AI-powered threat detection and behavioral analysis,Automated incident response and remediation,Threat intelligence aggregation and analysis,Zero-day vulnerability detection and protection,Network traffic analysis and anomaly detection,Malware detection and classification,Security orchestration and automated response,Compliance monitoring and reporting'
+      ],
+      pricing: '$10,000 - $50,000/month',
+      delivery: '8-16 weeks',
+      category: 'Cybersecurity AI'
+    },
+    {
+      title: 'AI-Powered Smart City Management',
+      description: 'Intelligent urban management with IoT integration, traffic optimization, and resource management',
+      icon: Globe,
+      features: [
+        'Traffic flow optimization and congestion management,Smart energy grid management and optimization,Waste management and environmental monitoring,Public safety and emergency response coordination,Urban planning and development optimization,Citizen engagement and digital services,Infrastructure monitoring and predictive maintenance,Data-driven policy making and governance'
+      ],
+      pricing: '$20,000 - $100,000/month',
+      delivery: '16-32 weeks',
+      category: 'Smart City AI'
+    },
+    {
+      title: 'AI-Powered Personalized Medicine Platform',
+      description: 'Precision medicine with AI-driven treatment recommendations and genomic analysis',
+      icon: Heart,
+      features: [
+        'Genomic analysis and personalized treatment recommendations,Drug interaction and side effect prediction,Clinical trial matching and patient recruitment,Medical image analysis and diagnosis assistance,Treatment outcome prediction and optimization,Electronic health record integration and analysis,Patient monitoring and health tracking,Regulatory compliance and clinical validation'
+      ],
+      pricing: '$15,000 - $60,000/month',
+      delivery: '12-24 weeks',
+      category: 'Medical AI'
+    },
+    {
+      title: 'AI-Powered Content Moderation System',
+      description: 'Intelligent content moderation with automated detection of harmful content and policy enforcement',
+      icon: Eye,
+      features: [
+        'Automated content analysis and classification,Harmful content detection and removal,Image and video content moderation,Text analysis and sentiment detection,Real-time moderation and escalation,Policy enforcement and compliance monitoring,User behavior analysis and risk assessment,Multi-language and cultural context understanding'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: 'Content Moderation AI'
+    },
+    {
+      title: 'AI-Powered Energy Trading Platform',
+      description: 'Intelligent energy trading with predictive analytics and automated market participation',
+      icon: Zap,
+      features: [
+        'Energy demand and supply forecasting,Automated energy trading and arbitrage,Grid optimization and load balancing,Renewable energy integration and management,Energy storage optimization and scheduling,Market price prediction and risk management,Regulatory compliance and reporting,Integration with energy markets and utilities'
+      ],
+      pricing: '$12,000 - $50,000/month',
+      delivery: '10-20 weeks',
+      category: 'Energy AI'
+    },
+    {
+      title: 'AI-Powered Legal Research Assistant',
+      description: 'Intelligent legal research with case law analysis, document review, and legal precedent identification',
+      icon: FileText,
+      features: [
+        'Automated legal research and case law analysis,Document review and contract analysis,Legal precedent identification and citation,Case outcome prediction and risk assessment,Legal document generation and drafting,Compliance monitoring and regulatory updates,Client communication and case management,Integration with legal databases and systems'
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '8-16 weeks',
+      category: 'Legal AI'
+    },
+    {
+      title: 'AI-Powered Agricultural Intelligence',
+      description: 'Smart agriculture with precision farming, crop monitoring, and yield optimization',
+      icon: TreePine,
+      features: [
+        'Precision agriculture and variable rate application,Crop health monitoring and disease detection,Yield prediction and optimization,Soil analysis and nutrient management,Weather prediction and climate adaptation,Pest and weed detection and management,Irrigation optimization and water management,Supply chain optimization and market analysis'
+      ],
+      pricing: '$6,000 - $30,000/month',
+      delivery: '8-16 weeks',
+      category: 'Agricultural AI'
+    },
+    {
+      title: 'AI-Powered Retail Personalization Engine',
+      description: 'Intelligent retail personalization with customer behavior analysis and dynamic pricing',
+      icon: ShoppingCart,
+      features: [
+        'Customer behavior analysis and segmentation,Personalized product recommendations,Dynamic pricing and promotion optimization,Inventory optimization and demand forecasting,Omnichannel customer experience personalization,Visual search and product discovery,Customer lifetime value prediction,Real-time personalization and A/B testing'
+      ],
+      pricing: '$10,000 - $40,000/month',
+      delivery: '8-16 weeks',
+      category: 'Retail AI'
+    },
+    {
+      title: 'AI-Powered Manufacturing Quality Assurance',
+      description: 'Intelligent manufacturing with predictive quality control and process optimization',
+      icon: Settings,
+      features: [
+        'Predictive quality control and defect prevention,Manufacturing process optimization,Equipment maintenance prediction and scheduling,Supply chain optimization and risk management,Product lifecycle management and optimization,Worker safety monitoring and compliance,Energy efficiency optimization,Integration with manufacturing execution systems'
+      ],
+      pricing: '$12,000 - $50,000/month',
+      delivery: '10-20 weeks',
+      category: 'Manufacturing AI'
+    },
+    {
+      title: 'AI-Powered Educational Assessment Platform',
+      description: 'Intelligent educational assessment with adaptive testing and learning analytics',
+      icon: Brain,
+      features: [
+        'Adaptive testing and personalized assessment,Learning analytics and progress tracking,Automated grading and feedback generation,Student performance prediction and intervention,Curriculum optimization and content recommendation,Plagiarism detection and academic integrity,Learning outcome measurement and reporting,Integration with learning management systems'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-14 weeks',
+      category: 'Educational AI'
+    },
+    {
+      title: 'AI-Powered Insurance Underwriting',
+      description: 'Intelligent insurance underwriting with risk assessment and automated policy generation',
+      icon: Shield,
+      features: [
+        'Automated risk assessment and underwriting,Claims prediction and fraud detection,Policy pricing optimization,Customer segmentation and targeting,Regulatory compliance and reporting,Real-time risk monitoring and adjustment,Integration with insurance databases and systems,Customer service automation and support'
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '8-16 weeks',
+      category: 'Insurance AI'
+    },
+    {
+      title: 'AI-Powered Logistics Optimization',
+      description: 'Intelligent logistics with route optimization, demand forecasting, and supply chain management',
+      icon: Network,
+      features: [
+        'Route optimization and delivery scheduling,Demand forecasting and inventory management,Supply chain risk assessment and mitigation,Last-mile delivery optimization,Fleet management and vehicle routing,Real-time tracking and visibility,Cost optimization and efficiency improvement,Integration with logistics and transportation systems'
+      ],
+      pricing: '$10,000 - $40,000/month',
+      delivery: '8-16 weeks',
+      category: 'Logistics AI'
+    },
+    {
+      title: 'AI-Powered Human Resources Analytics',
+      description: 'Intelligent HR analytics with talent acquisition, performance management, and workforce optimization',
+      icon: Users,
+      features: [
+        'Talent acquisition and candidate screening,Employee performance analysis and prediction,Workforce planning and optimization,Employee engagement and retention analysis,Skills gap analysis and training recommendations,Compensation analysis and optimization,Workplace diversity and inclusion analytics,Integration with HR information systems'
+      ],
+      pricing: '$6,000 - $30,000/month',
+      delivery: '6-14 weeks',
+      category: 'HR AI'
+    },
+    {
+      title: 'AI-Powered Real Estate Valuation',
+      description: 'Intelligent real estate valuation with market analysis and investment recommendations',
+      icon: Home,
+      features: [
+        'Automated property valuation and appraisal,Market trend analysis and forecasting,Investment opportunity identification and scoring,Neighborhood analysis and growth prediction,Rental yield optimization and cash flow analysis,Property condition assessment and maintenance prediction,Market timing and investment strategy,Integration with real estate databases and MLS'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: 'Real Estate AI'
+    },
+    {
+      title: 'AI-Powered Environmental Monitoring',
+      description: 'Intelligent environmental monitoring with pollution detection and climate change analysis',
+      icon: Globe,
+      features: [
+        'Air and water quality monitoring and analysis,Climate change impact assessment and prediction,Environmental risk assessment and mitigation,Wildlife monitoring and conservation,Natural disaster prediction and early warning,Environmental compliance monitoring and reporting,Sustainability metrics and carbon footprint analysis,Integration with environmental sensors and IoT devices'
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '8-16 weeks',
+      category: 'Environmental AI'
     }
   ];
   const aiTechnologies = [
