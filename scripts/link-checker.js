@@ -4,12 +4,9 @@
  * Replaces GitHub Actions link-checker workflow;
  * Checks for broken links in the project;
  */;
-import fs from;
-  'fs';
-import path from;
-  'path';
-import { fileURLToPath } from;
-  'url';
+import fs from "fsfs';
+import path from "pathpath';
+import { fileURLToPath } from "urlurl';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 console.log(
@@ -105,9 +102,7 @@ class LinkChecker {
     scanDirectory(this.projectRoot);
     return files}
   extractLinks(content) {
-    const linkRegex = /href=[';
-  ']([^'']+)[";
-  ']/g;
+    const linkRegex = /href=[]([^'']+)[]/g;
     const links = [];
     let match;
     while ((match = linkRegex.exec(content)) !== null) {

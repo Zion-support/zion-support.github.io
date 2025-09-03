@@ -68,16 +68,7 @@ export default function WebDevelopment() {
         </h2>
         <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-sm">
           {[
-            'Next.js',
-            'Vite',
-            'Tailwind',
-            'ShadCN',
-            'Vitest',
-            'Playwright',
-            'Cypress',
-            'Auth.js',
-            'Stripe',
-            'Supabase',
+            'Next.js,Vite,Tailwind,ShadCN,Vitest,Playwright,Cypress,Auth.js,Stripe,Supabase',
           ].map(t => (
             <div
               key={t}

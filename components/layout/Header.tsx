@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Brain, ChevronDown, Cloud, Code, Home, Info, Mail, Menu, Phone, X } from 'lucide-react';
@@ -38,6 +39,10 @@ const Header: React.FC = () => {
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];
+=======
+import React from 'react'
+import Link  from 'next/link';const Header: React.FC = () => {
+>>>>>>> main
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

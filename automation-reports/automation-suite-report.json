@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-02T21:22:03.716Z",
+  "timestamp": "2025-09-03T00:09:23.133Z",
   "summary": {
     "total": 8,
     "successful": 4,
@@ -10,25 +10,25 @@
       "command": "npm run lint:fix",
       "description": "ESLint Fix",
       "success": false,
-      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"lint:fix\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-02T21_22_03_129Z-debug-0.log\n"
+      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n`next lint` is deprecated and will be removed in Next.js 16.\nFor new projects, use create-next-app to choose your preferred linter.\nFor existing projects, migrate to the ESLint CLI:\nnpx @next/codemod@canary next-lint-to-eslint-cli .\n\nInvalid next.config.js options detected: \n    Expected 'image/avif' | 'image/webp', received 'image/webp,image/avif' at \"images.formats[0]\"\nSee more info here: https://nextjs.org/docs/messages/invalid-next-config\n"
     },
     {
       "command": "npm run type-check",
       "description": "TypeScript Type Check",
       "success": false,
-      "error": "Command failed: npm run type-check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: tsc: not found\n"
+      "error": "spawnSync /bin/sh ENOBUFS"
     },
     {
       "command": "npm run test",
       "description": "Test Suite",
       "success": false,
-      "error": "Command failed: npm run test\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: jest: not found\n"
+      "error": "spawnSync /bin/sh ENOBUFS"
     },
     {
       "command": "npm run build",
       "description": "Build Application",
       "success": false,
-      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n"
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nInvalid next.config.js options detected: \n    Expected 'image/avif' | 'image/webp', received 'image/webp,image/avif' at \"images.formats[0]\"\nSee more info here: https://nextjs.org/docs/messages/invalid-next-config\n"
     },
     {
       "name": "Error Detection",
@@ -44,19 +44,15 @@
       "result": {
         "issues": [
           {
-            "file": "/workspace/src/components/PerformanceMonitor.tsx",
-            "issue": "Potential infinite re-render"
-          },
-          {
             "file": "/workspace/src/components/PerformanceOptimizer.tsx",
             "issue": "Potential N+1 query problem"
           },
           {
-            "file": "/workspace/src/components/accessibility/AccessibilityEnhancer.tsx",
+            "file": "/workspace/src/components/SecurityHeaders.tsx",
             "issue": "Potential N+1 query problem"
           },
           {
-            "file": "/workspace/src/components/disabled/AdvancedAICodeGenerator.jsx",
+            "file": "/workspace/src/components/disabled/AdvancedAICodeGenerator.js.jsx",
             "issue": "Potential infinite re-render"
           },
           {
@@ -68,7 +64,7 @@
             "issue": "Potential infinite re-render"
           }
         ],
-        "count": 6
+        "count": 5
       }
     },
     {
@@ -77,11 +73,11 @@
       "result": {
         "issues": [
           {
-            "file": "/workspace/src/components/SEO.tsx",
+            "file": "/workspace/src/components/SEO/SEOHead.tsx",
             "issue": "Potential XSS vulnerability"
           },
           {
-            "file": "/workspace/src/components/seo/SEOEnhancer.tsx",
+            "file": "/workspace/src/components/seo/SEOHead.tsx",
             "issue": "Potential XSS vulnerability"
           },
           {
@@ -98,35 +94,31 @@
       "result": {
         "issues": [
           {
-            "file": "/workspace/src/components/AICodeGenerator.jsx",
+            "file": "/workspace/src/components/AICodeGenerator.js.jsx",
             "issue": "Console.log in production code"
           },
           {
-            "file": "/workspace/src/components/EnterpriseDashboard.jsx",
+            "file": "/workspace/src/components/EnterpriseDashboard.js.jsx",
             "issue": "Console.log in production code"
           },
           {
-            "file": "/workspace/src/components/MachineLearningDashboard.jsx",
+            "file": "/workspace/src/components/MachineLearningDashboard.js.jsx",
             "issue": "Console.log in production code"
           },
           {
-            "file": "/workspace/src/components/MobileExperienceEnhancer.tsx",
+            "file": "/workspace/src/components/header/LanguageSelector.jsx",
             "issue": "Console.log in production code"
           },
           {
-            "file": "/workspace/src/components/PerformanceMonitor.tsx",
+            "file": "/workspace/src/components/header/UserMenu.jsx",
             "issue": "Console.log in production code"
           },
           {
-            "file": "/workspace/src/components/seo/SEOEnhancer.tsx",
-            "issue": "Console.log in production code"
-          },
-          {
-            "file": "/workspace/src/hooks/usePerformanceMonitoring.ts",
+            "file": "/workspace/src/hooks/use-toast.js",
             "issue": "Console.log in production code"
           }
         ],
-        "count": 7
+        "count": 6
       }
     }
   ]

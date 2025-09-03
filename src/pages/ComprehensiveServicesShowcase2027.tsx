@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';"
+import React, { useState, useMemo } from 'react
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Brain, Cloud,
@@ -28,7 +28,7 @@ import {
   ShieldCheck, X;",
 } from 'lucide-react';
 // Import our existing service data"
-import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data/ultimateInnovativeServices2026';"
+import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data/ultimateInnovativeServices2026
 import { comprehensiveServices } from '../data/comprehensiveServices';
 interface Service {
   id: string;
@@ -143,10 +143,10 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {"
   };
   const getStatusColor = (status: string) => {
     switch (status.toLowerCase()) {"
-      case 'live': return 'bg-green-100 text-green-800';"
-      case 'beta': return 'bg-blue-100 text-blue-800';"
-      case 'coming soon': return 'bg-yellow-100 text-yellow-800';"
-      case 'preview': return 'bg-purple-100 text-purple-800';"
+      case 'live': return 'bg-green-100 text-green-800
+      case 'beta': return 'bg-blue-100 text-blue-800
+      case 'coming soon': return 'bg-yellow-100 text-yellow-800
+      case 'preview': return 'bg-purple-100 text-purple-800
       default: return 'bg-gray-100 text-gray-800';,
 }
   };
@@ -160,7 +160,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}"
             transition={{ duration: 0.8 }}"
-            className="text-center""" >"
+            className='text-center' >"
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
               Comprehensive Services 2027"
             </h1>"
@@ -172,14 +172,14 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {"
               <motion .button
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2""" >"
+                className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2' >"
                 <Play className="w-5 h-5" /"" >
                 Watch Demo
               </motion.button>
               <motion .button
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}"
-                className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2""" >"
+                className='border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2' >"
                 <BookOpen className="w-5 h-5" /"" >
                 View Documentation
               </motion.button>
@@ -289,7 +289,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {"
                   <div className="flex flex-wrap gap-2">
                     {service.features.slice(0, 3).map((feature, idx) => ("
                       <span key={idx}"
-                        className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full""" >
+                        className='px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full' >
                         {feature}
                       </span>
                     ))}"
@@ -320,7 +320,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {"
           <motion .div
             initial={{ opacity: 0 }}"
             animate={{ opacity: 1 }}"
-            className="text-center py-16""" >"
+            className='text-center py-16' >"
             <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" /"" >"
             <h3 className="text-xl font-semibold text-gray-300 mb-2">No services found</h3>"
             <p className="text-gray-400">Try adjusting your search or filter criteria</p>
@@ -494,14 +494,14 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {"
             <motion .button
               whileHover={{ scale: 1.05 }}"
               whileTap={{ scale: 0.95 }}"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center""" >"
+              className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center' >"
               <Phone className="w-5 h-5" /"" >
               Call +1 302 464 0950
             </motion.button>
             <motion .button
               whileHover={{ scale: 1.05 }}"
               whileTap={{ scale: 0.95 }}"
-              className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center""" >"
+              className='border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center' >"
               <Mail className="w-5 h-5" /"" >
               Email kleber@ziontechgroup.com
             </motion.button>"

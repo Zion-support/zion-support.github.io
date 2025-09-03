@@ -67,10 +67,10 @@ class LucideReactIconFixer {
       
       // 4. Commit fixes if successful
       if (fixes.length > 0 && errors.length === 0) {
-        await this.commitFixes(fixes);
-      }
-
-    } catch (error) {
+        await this.commitFixes(fixes);`);
+      }`);
+`);
+    } catch (error) {`);
       this.log(`Icon fix automation failed: ${error.message}`, 'ERROR');
     }
 

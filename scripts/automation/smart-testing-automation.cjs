@@ -15,15 +15,15 @@ class SmartTestingAutomation {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'smart-testing-automation.log'
     );
     this.testResultsLog = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'test-results.json'
     );
     this.coverageLog = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'test-coverage.json'
     );
     this.ensureLogsDirectory();

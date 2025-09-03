@@ -7,7 +7,7 @@ console.log('🔨 Running build optimizations...');
 // Clean previous builds
 const cleanBuild = () => {
   console.log('🧹 Cleaning previous builds...');
-  const dirsToClean = ['.next', 'out', 'dist'];
+  const dirsToClean = ['.next,out,dist'];
 
   dirsToClean.forEach(dir => {
     if (fs.existsSync(dir)) {

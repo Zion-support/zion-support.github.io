@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
+
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
@@ -25,17 +25,14 @@ import {
 
 export default function Solutions() {
   const solutions = [
-    {
+  {
       icon: Brain,
       title: 'AI Content Creation',
       description:
         'Automated content generation using advanced AI models for blogs, social media, and marketing materials.',
       href: '/solutions/ai-content-creation',
       features: [
-        'Blog Post Generation',
-        'Social Media Content',
-        'SEO Optimization',
-        'Multi-language Support',
+        'Blog Post Generation,Social Media Content,Multi-language Support',
       ],
       pricing: 'Starting at $299/month',
     },
@@ -46,10 +43,7 @@ export default function Solutions() {
         'Intelligent email marketing automation with personalized campaigns and advanced analytics.',
       href: '/solutions/email-automation',
       features: [
-        'Drip Campaigns',
-        'Personalization',
-        'A/B Testing',
-        'Analytics Dashboard',
+        'Drip Campaigns,Personalization,A/B Testing,Analytics Dashboard',
       ],
       pricing: 'Starting at $199/month',
     },
@@ -60,10 +54,7 @@ export default function Solutions() {
         'AI-powered customer support system with chatbots, ticket management, and knowledge base.',
       href: '/solutions/customer-support',
       features: [
-        'AI Chatbots',
-        'Ticket Management',
-        'Knowledge Base',
-        'Multi-channel Support',
+        'AI Chatbots,Ticket Management,Knowledge Base,Multi-channel Support',
       ],
       pricing: 'Starting at $399/month',
     },
@@ -74,10 +65,7 @@ export default function Solutions() {
         'Comprehensive event management platform with registration, ticketing, and attendee management.',
       href: '/solutions/event-management',
       features: [
-        'Event Registration',
-        'Ticketing System',
-        'Attendee Management',
-        'Analytics',
+        'Event Registration,Ticketing System,Attendee Management,Analytics',
       ],
       pricing: 'Starting at $149/month',
     },
@@ -88,10 +76,7 @@ export default function Solutions() {
         'Advanced project management tools with team collaboration, task tracking, and reporting.',
       href: '/solutions/project-management',
       features: [
-        'Task Management',
-        'Team Collaboration',
-        'Time Tracking',
-        'Reporting',
+        'Task Management,Team Collaboration,Time Tracking,Reporting',
       ],
       pricing: 'Starting at $99/month',
     },
@@ -102,17 +87,14 @@ export default function Solutions() {
         'Streamline business processes with custom workflow automation and integration capabilities.',
       href: '/solutions/workflow-automation',
       features: [
-        'Process Automation',
-        'Integration APIs',
-        'Custom Workflows',
-        'Monitoring',
+        'Process Automation,Integration APIs,Custom Workflows,Monitoring',
       ],
       pricing: 'Starting at $249/month',
     },
   ];
 
   const benefits = [
-    {
+  {
       icon: Zap,
       title: 'Lightning Fast Setup',
       description: 'Get your solution up and running in minutes, not months.',
@@ -136,11 +118,6 @@ export default function Solutions() {
 
   return (
     <>
-      <SEO
-        title="Solutions - Zion Tech Group"
-        description="Comprehensive technology solutions for modern businesses. AI-powered tools, automation platforms, and custom software solutions."
-        keywords="solutions, AI tools, automation, software, business solutions, technology"
-      />
       <Head>
         <title>Solutions - Zion Tech Group</title>
       </Head>

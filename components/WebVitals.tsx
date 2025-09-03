@@ -18,6 +18,7 @@ const sendToAnalytics = (metric: WebVitalsMetric) => {
       non_interaction: true,
     });
   }
+<<<<<<< HEAD
   
   // Log to console in development
   if (process.env.NODE_ENV === 'development') {
@@ -26,6 +27,11 @@ const sendToAnalytics = (metric: WebVitalsMetric) => {
 };
 
 export const WebVitals = () => {
+=======
+};
+
+const WebVitals: React.FC = () => {
+>>>>>>> main
   useEffect(() => {
     getCLS(sendToAnalytics);
     getFID(sendToAnalytics);
@@ -35,4 +41,10 @@ export const WebVitals = () => {
   }, []);
 
   return null;
+<<<<<<< HEAD
 };
+=======
+};
+
+export default WebVitals;
+>>>>>>> main

@@ -19,8 +19,8 @@ const LoginErrorFallback = memo(({ error, resetErrorBoundary }) => {}
             </details>
           )}"
           <button ''''
-            onClick={resetErrorBoundary}'''';"
-            className='w-full bg-primary text-primary-foreground hover: bg-primary/90 px-4 py-2 rounded-md font-medium''';
+            onClick={resetErrorBoundary}'''
+            className='w-full bg-primary text-primary-foreground hover: bg-primary/90 px-4 py-2 rounded-md font-medium';
             Try Again;"
           </button"" >
         </div>

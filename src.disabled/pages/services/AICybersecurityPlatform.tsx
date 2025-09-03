@@ -1,70 +1,65 @@
 import React from 'react.ts';
   Monitor,
   CreditCard} from 'lucide-react';
-export default function AICybersecurityPlatform(...args: any[]): any {
+export default function AICybersecurityPlatform() {
   const features = [
-    {
+  {
       icon: Shield,
       title: 'AI-Powered Threat Detection',
       description: 'Advanced machine learning algorithms that detect and respond to threats in real-time with 99.9% accuracy.',
-      benefits: ['Zero-day threat detection', 'Behavioral analysis', 'Anomaly identification', 'Automated response']},
+      benefits: ['Zero-day threat detection,Behavioral analysis,Anomaly identification,Automated response']},
     {
       icon: Eye,
       title: 'Continuous Monitoring',
       description: '24/7 surveillance across all endpoints, networks, and cloud environments with instant alerting.',
-      benefits: ['Real-time monitoring', 'Instant notifications', 'Comprehensive coverage', 'Historical analysis']
+      benefits: ['Real-time monitoring,Instant notifications,Comprehensive coverage,Historical analysis']
     },
     {
       icon: Lock,
       title: 'Zero-Trust Architecture',
       description: 'Implement comprehensive zero-trust security model with identity verification at every access point.',
-      benefits: ['Identity verification', 'Access control', 'Network segmentation', 'Privilege management']
+      benefits: ['Identity verification,Access control,Network segmentation,Privilege management']
     },
     {
       icon: Zap,
       title: 'Automated Incident Response',
       description: 'AI-driven incident response that automatically contains and remediates threats within seconds.',
-      benefits: ['Instant containment', 'Automated remediation', 'Playbook execution', 'Recovery automation']
+      benefits: ['Instant containment,Automated remediation,Playbook execution,Recovery automation']
     }
   ];
   const securityLayers = [
-    {
+  {
       icon: Network,
       title: 'Network Security',
       description: 'Advanced firewall, intrusion detection, and network segmentation',
-      features: ['Next-gen firewalls', 'IDS/IPS systems', 'Network monitoring', 'Traffic analysis']},
+      features: ['Next-gen firewalls,IDS/IPS systems,Network monitoring,Traffic analysis']},
     {
       icon: Server,
       title: 'Endpoint Protection',
       description: 'Comprehensive endpoint security for all devices and operating systems',
-      features: ['Antivirus protection', 'Device control', 'Application whitelisting', 'Data encryption']
+      features: ['Antivirus protection,Device control,Application whitelisting,Data encryption']
     },
     {
       icon: Globe,
       title: 'Cloud Security',
       description: 'Multi-cloud security with compliance and governance controls',
-      features: ['Cloud access security', 'Compliance monitoring', 'Data protection', 'Identity management']
+      features: ['Cloud access security,Compliance monitoring,Data protection,Identity management']
     },
     {
       icon: Smartphone,
       title: 'Mobile Security',
       description: 'Mobile device management and application security',
-      features: ['Mobile device management', 'App security', 'Data protection', 'Remote wipe']
+      features: ['Mobile device management,App security,Data protection,Remote wipe']
     }
   ];
-  const pricingPlans = [{
+  const pricingPlans = [
+  {
       name: 'Essential',
       price: '$3,500',
       period: '/month',
       description: 'Perfect for small businesses with basic security needs',
       features: [;
-        'AI threat detection',
-        'Basic monitoring',
-        'Email security',
-        'Standard support',
-        'Up to 100 endpoints',
-        'Basic reporting',
-        'Compliance templates';
+        'AI threat detection,Basic monitoring,Email security,Standard support,Up to 100 endpoints,Basic reporting,Compliance templates';
       ],
       cta: 'Get Started',
       popular: false},
@@ -74,15 +69,7 @@ export default function AICybersecurityPlatform(...args: any[]): any {
       period: '/month',
       description: 'Ideal for growing companies with advanced security requirements',
       features: [;
-        'Advanced AI detection',
-        '24/7 monitoring',
-        'Full endpoint protection',
-        'Priority support',
-        'Up to 500 endpoints',
-        'Advanced reporting',
-        'Custom playbooks',
-        'API access',
-        'Threat intelligence';
+        'Advanced AI detection,24/7 monitoring,Full endpoint protection,Priority support,Up to 500 endpoints,Advanced reporting,Custom playbooks,API access,Threat intelligence';
       ],
       cta: 'Start Free Trial',
       popular: true},
@@ -92,22 +79,13 @@ export default function AICybersecurityPlatform(...args: any[]): any {
       period: '/month',
       description: 'For large organizations requiring enterprise-grade security',
       features: [;
-        'Enterprise AI platform',
-        'Unlimited endpoints',
-        'Custom development',
-        '24/7 dedicated support',
-        'Advanced analytics',
-        'Custom integrations',
-        'White-label solutions',
-        'On-premise deployment',
-        'Dedicated security team',
-        'Compliance certification';
+        'Enterprise AI platform,Unlimited endpoints,Custom development,24/7 dedicated support,Advanced analytics,Custom integrations,White-label solutions,On-premise deployment,Dedicated security team,Compliance certification';
       ],
       cta: 'Contact Sales',
       popular: false;
   ];
   const complianceFrameworks = [
-    {
+  {
       name: 'SOC 2 Type II',
       description: 'Service Organization Control 2 compliance for data security',
       icon: Award},
@@ -133,24 +111,24 @@ export default function AICybersecurityPlatform(...args: any[]): any {
       icon: Star}
   ];
   const threatIntelligence = [
-    {
+  {
       title: 'Real-time Threat Feeds',
       description: 'Live intelligence from global security networks and research teams',
-      metrics: ['1M+ threat indicators', 'Global coverage', 'Instant updates', 'Automated integration']},
+      metrics: ['1M+ threat indicators,Global coverage,Instant updates,Automated integration']},
     {
       title: 'Behavioral Analysis',
       description: 'AI-powered analysis of user and system behavior patterns',
-      metrics: ['99.9% detection rate', 'False positive reduction', 'Pattern recognition', 'Predictive alerts']
+      metrics: ['99.9% detection rate,False positive reduction,Pattern recognition,Predictive alerts']
     },
     {
       title: 'Vulnerability Management',
       description: 'Continuous scanning and assessment of security vulnerabilities',
-      metrics: ['Automated scanning', 'Risk prioritization', 'Patch management', 'Compliance tracking']
+      metrics: ['Automated scanning,Risk prioritization,Patch management,Compliance tracking']
     },
     {
       title: 'Incident Response',
       description: 'Automated response and recovery from security incidents',
-      metrics: ['<30 second response', 'Automated containment', 'Recovery automation', 'Forensic analysis']
+      metrics: ['<30 second response,Automated containment,Recovery automation,Forensic analysis']
     }
   ];
   return(
@@ -217,9 +195,7 @@ import { SEO              } from '../../components/SEO';
 import { Button              } from '../../components/ui/Button';
 import { Card              } from '../../components/ui/Card';
 import { Badge              } from '../../components/ui/Badge';
-import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail, Lock, Eye, AlertTriangle, Users, Database, Network, Cpu              } from 'lucide-react.ts'
-
-const AICybersecurityPlatform: React.FC = (): JSX.Element => {
+import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail, Lock, Eye, AlertTriangle, Users, Database, Network, Cpu              }  from 'lucide-react.ts';const AICybersecurityPlatform: React.FC = (): JSX.Element => {
   return(
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
       <SEO

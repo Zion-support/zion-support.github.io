@@ -12,9 +12,7 @@ const ITServices: React.FC = () => {
         <li>Zero Trust and Compliance</li>
       </ul>
     </div>
-import React from 'react'
-
-const ITServices: React.FC = () => {
+import React  from 'react';const ITServices: React.FC = () => {
   return (
     <div className='max-w-5xl mx-auto px-4 py-12 text-white'>'
       <h1 className='text-4xl font-bold mb-4'>IT Services</h1>'

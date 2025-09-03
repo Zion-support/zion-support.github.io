@@ -2,86 +2,45 @@
 
 import fs from 'fs'
 import path from 'path'
-import { glob } from 'glob'
-/**
+import { glob }  from 'glob';/**
  * Repository cleanup script for Zion Tech Group
  * Removes disabled, backup, and unnecessary files
  */
 
 const CLEANUP_PATTERNS = [
   // Disabled directories
-  'src.disabled/**',
-  'pages.disabled/**',
-  'pages.disabled_auto/**',
-  'components.disabled/**',
-  'lib.disabled/**',
-  'types.disabled/**',
-  'hooks.disabled/**',
-  'contracts.disabled/**',
+  'src.disabled/**,pages.disabled/**,pages.disabled_auto/**,components.disabled/**,lib.disabled/**,types.disabled/**,hooks.disabled/**,contracts.disabled/**',
   
   // Backup directories
-  'automation_backup/**',
-  'backup-pages/**',
-  'pages.__backup/**',
-  'pages_backup/**',
-  'lib_backup/**',
-  'broken_files_backup/**',
+  'automation_backup/**,backup-pages/**,pages.__backup/**,pages_backup/**,lib_backup/**,broken_files_backup/**',
   
   // API backup
   'api-backup/**',
   
   // Temporary files
-  '**/*.backup',
-  '**/*.disabled',
-  '**/*.old',
-  '**/*.bak',
-  '**/*.tmp',
-  '**/*.temp',
+  '**/*.backup,**/*.disabled,**/*.old,**/*.bak,**/*.tmp,**/*.temp',
   
   // Build artifacts that shouldn't be in repo
-  '.next/**',
-  'out/**',
-  'dist/**',
-  'build/**',
+  '.next/**,out/**,dist/**,build/**',
   
   // Log files
-  '**/*.log',
-  '**/logs/**',
+  '**/*.log,**/logs/**',
   
   // Cache directories
-  '.cache/**',
-  'node_modules/.cache/**',
+  '.cache/**,node_modules/.cache/**',
   
   // IDE files
-  '.vscode/**',
-  '.idea/**',
-  '*.swp',
-  '*.swo',
-  '*~',
+  '.vscode/**,.idea/**,*.swp,*.swo,*~',
   
   // OS files
-  '.DS_Store',
-  'Thumbs.db',
-  'desktop.ini'
+  '.DS_Store,Thumbs.db,desktop.ini'
 ]
 const KEEP_PATTERNS = [
   // Keep important config files
-  'package.json',
-  'package-lock.json',
-  'yarn.lock',
-  'next.config.js',
-  'next.config.cjs',
-  'next.config.mjs',
-  'tsconfig.json',
-  'tailwind.config.js',
-  'postcss.config.js',
-  'eslint.config.js',
+  'package.json,package-lock.json,yarn.lock,next.config.js,next.config.cjs,next.config.mjs,tsconfig.json,tailwind.config.js,postcss.config.js,eslint.config.js',
   
   // Keep documentation
-  'README.md',
-  'CHANGELOG.md',
-  'LICENSE',
-  'docs/**',
+  'README.md,CHANGELOG.md,LICENSE,docs/**',
   
   // Keep scripts (but clean them)
   'scripts/**',
@@ -90,22 +49,13 @@ const KEEP_PATTERNS = [
   'automation/**',
   
   // Keep tests
-  '__tests__/**',
-  '**/*.test.*',
-  '**/*.spec.*',
+  '__tests__/**,**/*.test.*,**/*.spec.*',
   
   // Keep public assets
   'public/**',
   
   // Keep source code
-  'pages/**',
-  'components/**',
-  'src/**',
-  'lib/**',
-  'utils/**',
-  'hooks/**',
-  'types/**',
-  'api/**'
+  'pages/**,components/**,src/**,lib/**,utils/**,hooks/**,types/**,api/**'
 ]
 function shouldKeepFile(filePath) {
   // Check if file matches keep patterns

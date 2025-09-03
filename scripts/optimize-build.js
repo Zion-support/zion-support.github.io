@@ -30,14 +30,10 @@ try {
  * Build Optimization Script;
  * Comprehensive build optimization for Zion Tech Group;
  */;
-import fs from;
-  'fs';
-import path from;
-  'path';
-import { execSync } from;
-  'child_process';
-import { fileURLToPath } from;
-  'url';
+import fs from "fsfs';
+import path from "pathpath';
+import { execSync } from "child_processchild_process';
+import { fileURLToPath } from "urlurl';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 class BuildOptimizer {
@@ -68,7 +64,7 @@ class BuildOptimizer {
       await this.generateReport();
       console.log(
   '✅ Build optimization completed successfully!');
-      console.log(`📊 Optimization report saved to: ${path.join(this.buildDir,
+      console.log(`📊 Optimization report saved to: ${path.join(this.buildDir,`);
   'optimization-report.json')}`)    } catch (error) {
       console.error(
   '❌ Build optimization failed:', error.message);
@@ -80,10 +76,7 @@ class BuildOptimizer {
     console.log(
   '🧹 Cleaning console statements...');
     const files = this.getAllFiles(this.srcDir, [;
-  '.ts',
-  '.tsx',
-  '.js',
-  '.jsx'])    let cleanedFiles = 0;
+  '.ts,.tsx,.js,.jsx'])    let cleanedFiles = 0;
     for (const file of files) {
       try {
         let content = fs.readFileSync(file,
@@ -93,11 +86,9 @@ class BuildOptimizer {
         if (process.env.NODE_ENV ===;
   'production') {
           content = content;
-            .replace(/console\.(log|warn|error|info|debug)\([^)]*\);?/g, ';
-  ');
+            .replace(/console\.(log|warn|error|info|debug)\([^)]*\);?/g, );
             .replace(/\/\/\s*console\.(log|warn|error|info|debug)\([^)]*\);?/g, '');
-            .replace(/\/\*[\s\S]*?console\.(log|warn|error|info|debug)\([^)]*\);?[\s\S]*?\*\//g, ';
-  ')        }
+            .replace(/\/\*[\s\S]*?console\.(log|warn|error|info|debug)\([^)]*\);?[\s\S]*?\*\//g, )        }
         if (content !== originalContent) {
           fs.writeFileSync(file, content);
           cleanedFiles++}
@@ -112,7 +103,7 @@ class BuildOptimizer {
     console.log('🖼️ Optimizing images...;
   ');
     const imageDir = path.join(this.projectRoot, 'public;
-  ', 'images;
+  ,images;
   ')    if (!fs.existsSync(imageDir)) {
       this.optimizationReport.warnings.push('Images directory not found;
   ');
@@ -148,8 +139,7 @@ class BuildOptimizer {
   ');
                 // Remove unused CSS (basic implementation);
         content = content;
-          .replace(/\s+/g, ';
-  ') // Remove extra whitespace;
+          .replace(/\s+/g, ) // Remove extra whitespace;
           .replace(/\/\*[\s\S]*?\*\//g, '') // Remove comments;
           .trim();
         fs.writeFileSync(file, content);
@@ -164,10 +154,7 @@ class BuildOptimizer {
     console.log(
   '⚡ Optimizing JavaScript...');
     const jsFiles = this.getAllFiles(this.srcDir, [;
-  '.ts',
-  '.tsx',
-  '.js',
-  '.jsx'])    let optimizedJS = 0;
+  '.ts,.tsx,.js,.jsx'])    let optimizedJS = 0;
     for (const file of jsFiles) {
       try {
         let content = fs.readFileSync(file,
@@ -176,8 +163,7 @@ class BuildOptimizer {
         content = content;
           .replace(/\s+/g,
   ' ') // Remove extra whitespace;
-          .replace(/\/\/.*$/gm, ';
-  ') // Remove single-line comments;
+          .replace(/\/\/.*$/gm, ) // Remove single-line comments;
           .replace(/\/\*[\s\S]*?\*\//g, '') // Remove multi-line comments;
           .trim();
         fs.writeFileSync(file, content);

@@ -1,13 +1,41 @@
-import React from 'react';
-import Head from 'next/head';
+import React, { useState, useCallback, memo } from 'react';
 import Link from 'next/link';
 import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail } from 'lucide-react';
+import Sidebar from '../components/Sidebar';
+import SEOHead from '../src/components/SEOHead';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail, Menu } from 'lucide-react';
 
-export default function Home() {
+const Home = memo(() => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  
+  const handleSidebarToggle = useCallback(() => {
+    setSidebarOpen(prev => !prev);
+  }, []);
+  
+  const handleSidebarClose = useCallback(() => {
+    setSidebarOpen(false);
+  }, []);
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com",
+    "description": "Leading provider of revolutionary AI services, IT solutions, and micro SaaS development",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://ziontechgroup.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    }
+  };
   const stats = [
-    { number: '500+', label: 'Projects Completed' },
+  { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' }
@@ -16,29 +44,29 @@ export default function Home() {
   const services = [
     {
       title: 'AI Services',
-      description: 'Revolutionary AI solutions including autonomous systems, machine learning, and intelligent automation',
+      description: 'Cutting-edge artificial intelligence solutions including autonomous systems, machine learning, and intelligent automation',
       icon: Brain,
       href: '/ai-services',
-      features: ['AI-Powered Drug Discovery', 'Quantum Computing Interface', 'Climate Analytics', 'Space Analytics']
+      features: ['AI-Powered Email Responder', 'Computer Vision Solutions', 'Predictive Analytics Platform', 'AI Chatbot & Virtual Assistant']
     },
     {
       title: 'IT Services',
-      description: 'Comprehensive IT infrastructure, cybersecurity, cloud solutions, and digital transformation',
+      description: 'Comprehensive information technology services including cloud infrastructure, cybersecurity, and network management',
       icon: Network,
       href: '/it-services',
-      features: ['Zero Trust Security', 'Edge Computing', 'Digital Twin Platforms', 'Hyperautomation']
+      features: ['Cloud Infrastructure & Migration', 'Cybersecurity & Compliance', 'Network Infrastructure', 'IT Support & Helpdesk']
     },
     {
       title: 'Micro SaaS',
-      description: 'Innovative micro SaaS solutions for modern businesses with rapid deployment',
+      description: 'Scalable software as a service solutions tailored to your business needs with rapid deployment',
       icon: Cloud,
       href: '/micro-saas',
-      features: ['Affiliate Marketing Tracker', 'Contract Management', 'Video Content Generator', 'Energy Management']
+      features: ['AI-Powered Email Responder', 'Mobile-First Survey Platform', 'Event Management Dashboard', 'Customer Support Platform']
     }
   ];
 
   const features = [
-    {
+  {
       icon: Zap,
       title: 'Lightning Fast Delivery',
       description: 'Rapid deployment with 2-48 week delivery times depending on complexity'
@@ -82,21 +110,22 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Zion Tech Group - Leading Technology Solutions Provider</title>
-        <meta name="description" content="Transform your business with cutting-edge AI services, IT solutions, and micro SaaS development. Expert technology consulting and implementation." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ziontechgroup.com" />
-      </Head>
+      <SEOHead
+        title="Zion Tech Group - Leading Technology Solutions Provider"
+        description="Transform your business with cutting-edge AI services, IT solutions, and micro SaaS development. Expert technology consulting and implementation."
+        keywords="AI services, IT solutions, micro SaaS, technology consulting, digital transformation, cloud services, cybersecurity"
+        structuredData={structuredData}
+      />
       
       <Navigation />
+      <Sidebar isOpen={sidebarOpen} onClose={handleSidebarClose} />
       
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20" role="banner" aria-labelledby="hero-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              <h1 id="hero-heading" className="text-5xl font-bold text-gray-900 mb-6">
                 Transform Your Business with
                 <span className="text-blue-600"> Technology</span>
               </h1>
@@ -111,6 +140,15 @@ export default function Home() {
                 <Link href="/services" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
                   View Services
                 </Link>
+                <button 
+                  onClick={handleSidebarToggle}
+                  className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors flex items-center justify-center"
+                  aria-label="Open navigation menu"
+                  aria-expanded={sidebarOpen}
+                >
+                  <Menu className="w-4 h-4 mr-2" />
+                  Explore Menu
+                </button>
               </div>
             </div>
           </div>
@@ -148,22 +186,9 @@ export default function Home() {
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{service.title}</h3>
                   <p className="text-gray-600 mb-6 text-center">{service.description}</p>
-                  
-                  {/* Featured Services */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-700 mb-3">Featured Solutions:</h4>
-                    <div className="grid grid-cols-2 gap-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded">
-                          {feature}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  
                   <Link href={service.href} className="block">
                     <div className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center flex items-center justify-center">
-                      Explore Services
+                      Learn More
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </div>
                   </Link>
@@ -197,16 +222,17 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Pricing & Contact Section */}
+        {/* Innovative Services Showcase */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Competitive Pricing & Expert Support</h2>
-              <p className="text-lg text-gray-600">
-                Transparent pricing with flexible solutions tailored to your business needs
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Innovative Solutions for Modern Businesses</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Discover our cutting-edge services that are transforming industries and driving digital innovation
               </p>
             </div>
             
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
               {/* Pricing Highlights */}
               <div className="bg-white rounded-lg p-8 shadow-sm">
@@ -227,51 +253,77 @@ export default function Home() {
                   <div className="flex justify-between items-center py-3">
                     <span className="text-gray-700">Enterprise Solutions</span>
                     <span className="font-semibold text-blue-600">Custom Pricing</span>
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="p-3 rounded-lg bg-gradient-to-r from-green-500 to-emerald-600 mr-4">
+                    <Brain className="w-6 h-6 text-white" />
+>>>>>>> main
                   </div>
+                  <h3 className="text-xl font-semibold text-gray-900">AI-Powered Solutions</h3>
                 </div>
-                <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-                  <p className="text-sm text-blue-800">
-                    <strong>Free Consultation:</strong> All projects start with a complimentary strategy session to understand your needs and provide accurate pricing.
-                  </p>
-                </div>
+                <p className="text-gray-600 mb-4">From autonomous systems to predictive analytics, our AI services deliver intelligent automation and insights.</p>
+                <ul className="text-sm text-gray-500 space-y-1">
+                  <li>• Cybersecurity Threat Detection</li>
+                  <li>• Medical Diagnosis Assistant</li>
+                  <li>• Financial Risk Assessment</li>
+                  <li>• Environmental Monitoring</li>
+                </ul>
               </div>
 
-              {/* Contact Information */}
-              <div className="bg-white rounded-lg p-8 shadow-sm">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <Phone className="w-5 h-5 text-blue-600 mr-3" />
-                    <div>
-                      <p className="font-semibold text-gray-900">Phone</p>
-                      <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-700">+1 302 464 0950</a>
-                    </div>
+              <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="p-3 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-600 mr-4">
+                    <Cloud className="w-6 h-6 text-white" />
                   </div>
-                  <div className="flex items-center">
-                    <Mail className="w-5 h-5 text-blue-600 mr-3" />
-                    <div>
-                      <p className="font-semibold text-gray-900">Email</p>
-                      <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-700">kleber@ziontechgroup.com</a>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="w-5 h-5 text-blue-600 mr-3 mt-1">
-                      <svg fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-gray-900">Address</p>
-                      <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
-                    </div>
-                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900">Micro SaaS Platforms</h3>
                 </div>
-                <div className="mt-6">
-                  <Link href="/contact" className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block">
-                    Schedule Free Consultation
-                  </Link>
-                </div>
+                <p className="text-gray-600 mb-4">Scalable software solutions that grow with your business, from startup to enterprise.</p>
+                <ul className="text-sm text-gray-500 space-y-1">
+                  <li>• Podcast Transcription Service</li>
+                  <li>• Freelancer Portfolio Builder</li>
+                  <li>• Local Business CRM</li>
+                  <li>• Website Analytics for SMBs</li>
+                </ul>
               </div>
+
+              <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="p-3 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 mr-4">
+                    <Network className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900">Advanced IT Services</h3>
+                </div>
+                <p className="text-gray-600 mb-4">Next-generation IT infrastructure and services for the digital age.</p>
+                <ul className="text-sm text-gray-500 space-y-1">
+                  <li>• Quantum Computing Readiness</li>
+                  <li>• 5G Network Integration</li>
+                  <li>• Edge Computing Infrastructure</li>
+                  <li>• Zero Trust Security Architecture</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-white mb-4">Trusted by Industry Leaders</h2>
+              <p className="text-xl text-blue-100">
+                Our proven track record speaks for itself
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-blue-100">{stat.label}</div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -300,4 +352,8 @@ export default function Home() {
       <Footer />
     </>
   );
-}
+});
+
+Home.displayName = 'Home';
+
+export default Home;

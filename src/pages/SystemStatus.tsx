@@ -30,8 +30,13 @@ const SystemStatus: React.FC = () => {
             {services.map((service, index) => ("
               <div key={index} className='flex items-center justify-between p-4 border border-gray-200 rounded-lg'>"
                 <div className='flex items-center'>"
+<<<<<<< HEAD
                   <service .icon className='h-6 w-6 text-blue-600 mr-3' /" >"
                   <span className='text-lg font-medium text-gray-900'>{service.name}</span>
+=======
+                  <service .icon className='h-6 w-6 text-blue-600 mr-3' /  >'
+                  <span className='text-lg font-medium text-gray-900'>{service.name}</span>"
+>>>>>>> main
                 </div>"
                 <div className='flex items-center'>
                   {getStatusIcon(service.status)}"

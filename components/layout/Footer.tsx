@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 import React from 'react';
 import { ArrowRight, Brain, Cloud, Network, Phone, Mail, User, Heart, Info } from 'lucide-react';
+=======
+import React from 'react'
+import Link from 'next/link'
+import {   Brain, Mail,  Phone, MapPin, Linkedin, Twitter, Github, Youtube, Instagram, ArrowRight, Heart, Cloud, Database } from 'lucide-react'
+import { Button }  from '../ui/Button';const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear()
+>>>>>>> main
 
 // Common interfaces for better type safety
 interface ApiResponse<T = unknown> {
@@ -39,6 +47,7 @@ import { Button } from '../ui/Button';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   const serviceCategories = [
+<<<<<<< HEAD
     {
       title: 'AI & Automation',
       icon: Brain,
@@ -104,6 +113,35 @@ const Footer: React.FC = () => {
       icon: Instagram,
     },
   ];
+=======
+  {
+      title: 'AI & Automation', icon: Brain, color: 'text-blue-400', services: [
+        { name: 'AI Services', href: '/services/ai-services' }, { name: 'IT Services', href: '/services/it-services' }, { name: 'Micro SaaS', href: '/services/micro-saas' }, { name: 'All Services', href: '/services' }
+      ]
+    }, {
+      title: 'Cloud & Infrastructure', icon: Cloud, color: 'text-green-400', services: [
+        { name: 'IT Services', href: '/services/it-services' }, { name: 'Micro SaaS', href: '/services/micro-saas' }, { name: 'Services Overview', href: '/services' }
+      ]
+    }, {
+      title: 'Data & Analytics', icon: Database, color: 'text-purple-400', services: [
+        { name: 'AI Services', href: '/services/ai-services' }, { name: 'Products', href: '/products' }, { name: 'Case Studies', href: '/case-studies' }
+      ]
+    }
+  ]
+
+  const quickLinks = [
+  { name: 'About Us', href: '/about' }, { name: 'Our Team', href: '/team' }, { name: 'Careers', href: '/careers' }, { name: 'Case Studies', href: '/case-studies' }, { name: 'Blog', href: '/blog' }, { name: 'White Papers', href: '/whitepapers' }, { name: 'Webinars', href: '/webinars' }, { name: 'Pricing', href: '/pricing' }
+  ]
+
+  const legalLinks = [
+  { name: 'Privacy Policy', href: '/privacy' }, { name: 'Terms of Service', href: '/terms' }, { name: 'Cookie Policy', href: '/cookies' }, { name: 'Sitemap', href: '/sitemap' }
+  ]
+
+  const socialLinks = [
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin }, { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }, { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }, { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube }, { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
+  ]
+
+>>>>>>> main
   const contactInfo = {
     email: 'kleber@ziontechgroup.com',
     phone: '+1 302 464 0950',

@@ -1,9 +1,19 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 // Common interfaces for better type safety
 interface ApiResponse<T = unknown> {
   data: T;
   status: number;
   message?: string;
+=======
+import React, { useState } from 'react'
+import { Mail, Phone, MapPin, Send, CheckCircle }  from 'lucide-react';interface FormData {
+  name: string
+  email: string
+  company: string
+  service: string
+  message: string
+>>>>>>> main
 }
 
 interface User {

@@ -68,14 +68,7 @@ export default function BlockchainSolutions() {
         </h2>
         <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-sm">
           {[
-            'Polygon',
-            'Ethereum',
-            'Solana',
-            'Hyperledger',
-            'Quorum',
-            'Chainlink',
-            'WalletConnect',
-            'Ledger',
+            'Polygon,Ethereum,Solana,Hyperledger,Quorum,Chainlink,WalletConnect,Ledger',
           ].map(t => (
             <div
               key={t}

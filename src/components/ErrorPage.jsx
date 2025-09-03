@@ -1,9 +1,9 @@
-;import { Link } from 'react-router-dom';"
+;import { Link } from 'react-router-dom
 import { Home } from 'lucide-react';
 
 export const ErrorPage = ({}"
-  statusCode = 404, ';'
-  title = 'Page Not Found', ';'
+  statusCode = 404, 
+  title = 'Page Not Found', 
   message = 'The page you are looking for does not exist.'}) => {}"
   return()"
     <div className='min-h-screen bg-zion-blue flex items-center justify-center'>''''
@@ -22,6 +22,6 @@ export const ErrorPage = ({}"
       </div>
     </div>
   )}"
-export default ErrorPage'';""
+export default ErrorPage'"
 '''''"'"
 "
