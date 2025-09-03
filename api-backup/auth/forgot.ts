@@ -39,7 +39,6 @@ const sendPasswordResetEmail = async(
       <p>If you didn;
   't request this, please ignore this email.</p>
     `  }
-;
   try {
     await sgMail.send(msg);
     return {
@@ -51,7 +50,6 @@ const sendPasswordResetEmail = async(
     return { success: false, message: 'Failed to send password reset email.' }
   }
 }
-;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST;
   ') {

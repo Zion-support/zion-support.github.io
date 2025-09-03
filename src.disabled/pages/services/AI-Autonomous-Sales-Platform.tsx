@@ -131,11 +131,7 @@ const AIAutonomousSalesPlatform: React.FC = () => {
                   period: '/month',
                   description: 'Perfect for small sales teams',
                   features: [;
-                    'Up to 1,000 leads',
-                    'Basic AI automation',
-                    'Email sequences',
-                    'Standard analytics',
-                    'Email support';
+                    'Up to 1,000 leads,Basic AI automation,Email sequences,Standard analytics,Email support';
                   ]},
                 {
                   name: 'Professional',
@@ -143,12 +139,7 @@ const AIAutonomousSalesPlatform: React.FC = () => {
                   period: '/month',
                   description: 'Ideal for growing teams',
                   features: [;
-                    'Up to 10,000 leads',
-                    'Advanced AI features',
-                    'Multi-channel outreach',
-                    'Sales forecasting',
-                    'Priority support',
-                    'Custom integrations';
+                    'Up to 10,000 leads,Advanced AI features,Multi-channel outreach,Sales forecasting,Priority support,Custom integrations';
                   ],
                   popular: true},
                 {
@@ -157,12 +148,7 @@ const AIAutonomousSalesPlatform: React.FC = () => {
                   period: '/month',
                   description: 'For large sales organizations',
                   features: [
-                    'Unlimited leads',
-                    'Full AI capabilities',
-                    'Custom AI models',
-                    'Dedicated support',
-                    'White-label options',
-                    'Advanced reporting'
+                    'Unlimited leads,Full AI capabilities,Custom AI models,Dedicated support,White-label options,Advanced reporting'
                   ]}
               ].map((plan, index) => (
                 <motion.div
@@ -229,12 +215,7 @@ const AIAutonomousSalesPlatform: React.FC = () => {
                 <h3 className='text-3xl font-bold text-white mb-6'>Revolutionary Benefits</h3>
                 <div className='space-y-6'>
                   {[;
-                    'Increase sales conversion rates by 200% with AI optimization',
-                    'Reduce sales cycle time by 60% through intelligent automation',
-                    'Improve lead qualification accuracy by 85% with AI scoring',
-                    'Save 35+ hours per week on manual sales tasks',
-                    'Boost revenue per rep by 300% with AI assistance',
-                    'Scale sales operations across unlimited prospects efficiently'
+                    'Increase sales conversion rates by 200% with AI optimization,Reduce sales cycle time by 60% through intelligent automation,Improve lead qualification accuracy by 85% with AI scoring,Save 35+ hours per week on manual sales tasks,Boost revenue per rep by 300% with AI assistance,Scale sales operations across unlimited prospects efficiently'
                   ].map((benefit, index) => (
                     <div key={index} className='flex items-start'>
                       <div className='flex-shrink-0 w-6 h-6 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mr-4 mt-1'>
@@ -306,5 +287,4 @@ const AIAutonomousSalesPlatform: React.FC = () => {
       </div>
     </>
   )}
-;
 export default AIAutonomousSalesPlatform

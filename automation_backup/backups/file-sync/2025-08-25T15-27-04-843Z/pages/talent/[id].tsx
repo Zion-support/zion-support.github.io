@@ -3,7 +3,6 @@ import React from;
 import { useParams } from;
   'react-router-dom';
   availability_type?: string}
-;
 interface TalentProfileWithSocial extends TalentProfile {
   social?: Record<string, string>}
 // Simple error component to replace Next.js ErrorPage
@@ -51,11 +50,8 @@ const TalentProfilePage: React.FC = () => {
           const mockProfile: TalentProfileWithSocial = {
             full_name: `Talent ${id}`,
             }
-;
             skills: [,
-  React',
-  'TypeScript',
-  'Node.js'],
+  React,TypeScript,Node.js'],
             availability_type: 'Full-time,
             social: {
               linkedin:,

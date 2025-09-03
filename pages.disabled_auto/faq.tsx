@@ -15,7 +15,7 @@ const FAQ: NextPage = () => {
         : [...prev, index]
     )}
   const faqCategories = [
-    {
+  {
 :pages.disabled_auto/faq.tsx;
       title:,
   General Questions',
@@ -277,5 +277,4 @@ const FAQ: NextPage = () => {
       </div>
     </MainLayout>
   )}
-;
 export default FAQ

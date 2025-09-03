@@ -26,7 +26,7 @@ import Link from 'next/link';
 
 const SmallBusiness: NextPage = () => {
   const solutions = [
-    {
+  {
       title:;
   'Cloud-Based Business Management,
       description:
@@ -34,16 +34,10 @@ const SmallBusiness: NextPage = () => {
       icon: <Globe className='w-8 h-8' />,
 :pages.disabled_auto/solutions/small-business.tsx;
       features: [,
-  Customer relationship management',
-  'Inventory tracking',
-  'Financial reporting',
-  'Team collaboration tools';
+  Customer relationship management,Inventory tracking,Financial reporting,Team collaboration tools';
       ];
       features: [;
-        'Customer relationship management',
-        'Inventory tracking',
-        'Financial reporting',
-        'Team collaboration tools']},
+        'Customer relationship management,Inventory tracking,Financial reporting,Team collaboration tools']},
     {
       title: 'AI-Powered Customer Support,
       description:
@@ -51,16 +45,10 @@ const SmallBusiness: NextPage = () => {
       icon: <Users className='w-8 h-8' />,
 :pages.disabled_auto/solutions/small-business.tsx;
       features: [,
-  24/7 chatbot support',
-  'Ticket management system',
-  'Knowledge base integration',
-  'Performance analytics';
+  24/7 chatbot support,Ticket management system,Knowledge base integration,Performance analytics';
       ];
       features: [;
-        '24/7 chatbot support',
-        'Ticket management system',
-        'Knowledge base integration',
-        'Performance analytics']},
+        '24/7 chatbot support,Ticket management system,Knowledge base integration,Performance analytics']},
     {
       title: 'Digital Marketing Automation,
       description:
@@ -68,16 +56,10 @@ const SmallBusiness: NextPage = () => {
       icon: <Zap className='w-8 h-8' />,
 :pages.disabled_auto/solutions/small-business.tsx;
       features: [,
-  Email marketing campaigns',
-  'Social media management',
-  'Content generation',
-  'Lead nurturing automation';
+  Email marketing campaigns,Social media management,Content generation,Lead nurturing automation';
       ];
       features: [;
-        'Email marketing campaigns',
-        'Social media management',
-        'Content generation',
-        'Lead nurturing automation']},
+        'Email marketing campaigns,Social media management,Content generation,Lead nurturing automation']},
     {
       title: 'Cybersecurity Protection,
       description:
@@ -85,17 +67,11 @@ const SmallBusiness: NextPage = () => {
       icon: <Shield className='w-8 h-8' />,
       features: [
 :pages.disabled_auto/solutions/small-business.tsx;
-  'Data encryption',
-  'Regular security audits',
-  'Backup and recovery',
-  'Employee training';
+  'Data encryption,Regular security audits,Backup and recovery,Employee training';
       ]}
-        'Data encryption',
-        'Regular security audits',
-        'Backup and recovery',
-        'Employee training']}]
+        'Data encryption,Regular security audits,Backup and recovery,Employee training']}]
   const benefits = [
-    {
+  {
       icon: <DollarSign className='w-6 h-6' />,
 :pages.disabled_auto/solutions/small-business.tsx
       title:,
@@ -132,7 +108,7 @@ const SmallBusiness: NextPage = () => {
       title: 'Dedicated Support',
       description: 'Personal support team for your business needs'}];
   const pricing = [
-    {
+  {
 :pages.disabled_auto/solutions/small-business.tsx;
       name:,
   Starter',
@@ -141,22 +117,14 @@ const SmallBusiness: NextPage = () => {
   /month',
       description: 'Perfect for small businesses just getting started,
       features: [,
-  Up to 5 users',
-  'Basic CRM functionality',
-  'Email support',
-  'Standard security features',
-  'Monthly reporting';
+  Up to 5 users,Basic CRM functionality,Email support,Standard security features,Monthly reporting';
       ];
       name: 'Starter',
       price: '$299',
       period: '/month',
       description: 'Perfect for small businesses just getting started',
       features: [;
-        'Up to 5 users',
-        'Basic CRM functionality',
-        'Email support',
-        'Standard security features',
-        'Monthly reporting']},
+        'Up to 5 users,Basic CRM functionality,Email support,Standard security features,Monthly reporting']},
     {
       name: 'Growth,
       price:,
@@ -168,18 +136,9 @@ const SmallBusiness: NextPage = () => {
 :pages.disabled_auto/solutions/small-business.tsx;
   'Up to 15 users,
 ,
-  Advanced CRM features',
-  'AI customer support',
-  'Priority support',
-  'Advanced analytics',
-  'Custom integrations';
+  Advanced CRM features,AI customer support,Priority support,Advanced analytics,Custom integrations';
       ];
-        'Up to 15 users',
-        'Advanced CRM features',
-        'AI customer support',
-        'Priority support',
-        'Advanced analytics',
-        'Custom integrations']},
+        'Up to 15 users,Advanced CRM features,AI customer support,Priority support,Advanced analytics,Custom integrations']},
     {
       name: 'Professional,
       price:,
@@ -190,18 +149,9 @@ const SmallBusiness: NextPage = () => {
       features: [
 :pages.disabled_auto/solutions/small-business.tsx;
   'Unlimited users,
-  'Full feature access',
-  'Dedicated account manager',
-  '24/7 phone support',
-  'Custom development',
-  'Advanced security features';
+  'Full feature access,Dedicated account manager,24/7 phone support,Custom development,Advanced security features';
       ]}
-        'Unlimited users',
-        'Full feature access',
-        'Dedicated account manager',
-        '24/7 phone support',
-        'Custom development',
-        'Advanced security features']}]
+        'Unlimited users,Full feature access,Dedicated account manager,24/7 phone support,Custom development,Advanced security features']}]
   return(
     <MainLayout
       title='Small Business Solutions - Zion Tech Group';
@@ -350,5 +300,4 @@ const SmallBusiness: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
 export default SmallBusiness

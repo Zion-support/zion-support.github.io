@@ -11,25 +11,21 @@ const url = require(
   'url');
 class AutomationDashboard {
   constructor() {
-;
     this.automationSystems = new Map();
     this.metrics = new Map();
     this.alerts = [];
     this.logFile = path.join(__dirname,
-  'logs',
-  'automation-dashboard.log');
+  'logs,automation-dashboard.log');
     this.ensureLogDirectory();
     this.loadAutomationSystems();
-;
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     // // // // // // // // console.log(message);
 fs.appendFileSync(this.logFile, logMessage);fs.appendFileSync(this.logFile, logMessage);
-;
   loadAutomationSystems() {
     const systems = [
-      { name: 'lint-monitor, path:,
+  { name: 'lint-monitor, path:,
   lint-monitor.js', category: 'code-quality, status:,
   available' },
       { name: 'lint-fixer, path:,
@@ -166,7 +162,6 @@ this.log(,
         // Add delay between systems;
         await this.sleep(2000)}
     }
-;
     this.log(`📊 Completed ${results.length} systems`);
     return results}
 generateDashboardHTML() {generateDashboardHTML() {
@@ -221,8 +216,7 @@ const systems = Array.from(this.automationSystems.values());
                         <p>Last Run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() :,
   Never'}</p>
                     </div>
-                </div>`).join(';
-  ')}
+                </div>`).join()}
         </div>
         <!-- Alerts -->
         <div class='bg-white rounded-lg shadow-md p-6 mb-8
@@ -300,8 +294,7 @@ const systems = Array.from(this.automationSystems.values());
                 scales: {
                     y: {
                         beginAtZero: true,
-                        max: 100;
-})
+                        max: 100})
         function runAllSystems() {
             fetch(,
   /api/run-all', { method: 'POST })
@@ -338,8 +331,6 @@ const report = {
         runningSystems: Array.from(this.automationSystems.values()).filter(s => s.isRunning).length,
         totalAlerts: this.alerts.length,
   averageSuccessRate: this.calculateAverageSuccessRate();
-;
-;
 },
       systems: {},
       metrics: {},
@@ -399,17 +390,13 @@ createServer() {createServer() {
 const server = http.createServer((req, res) => {
       const pathname = parsedUrl.pathname;
       res.setHeader(,
-  Content-Type',
-  'application/json');
+  Content-Type,application/json');
       res.setHeader(
-  'Access-Control-Allow-Origin',
-  '*');
+  'Access-Control-Allow-Origin,*');
       res.setHeader(
-  'Access-Control-Allow-Methods',
-  'GET, POST, OPTIONS');
+  'Access-Control-Allow-Methods,GET, POST, OPTIONS');
       res.setHeader(
-  'Access-Control-Allow-Headers',
-  'Content-Type');
+  'Access-Control-Allow-Headers,Content-Type');
       if (req.method ===;
   'OPTIONS') {
         res.writeHead(200);
@@ -447,8 +434,7 @@ case;
   '/api/run': ;
           if (req.method ===;
   'POST') {
-            const body = ';
-  ';
+            const body = ;
             req.on('data, chunk => body += chunk);
             req.on(,
   end;
@@ -516,4 +502,3 @@ process.exit(1);process.exit(1);
 process.on('SIGINT, () => {
   // // // // // // // // console.log('\n🛑 Shutting down automation dashboard...');
 process.exit(0);process.exit(0)})}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
-;

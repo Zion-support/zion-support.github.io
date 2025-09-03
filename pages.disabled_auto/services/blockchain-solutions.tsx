@@ -2,40 +2,102 @@ import React from 'react';
 import Link from 'next/link';
 
 export default function BlockchainSolutions() {
-  return(
-    <div className='bg-white'>
-      <section className='container mx-auto px-4 py-12 max-w-6xl'>
-        <h1 className='text-3xl md:text-5xl font-extrabold text-gray-900'>Blockchain Solutions</h1>
-        <p className='mt-4 text-lg text-gray-600'>
-          Practical blockchain for real business outcomes: asset tokenization, supply chain, identity, and payments.
+  return (
+    <div className="bg-white">
+      <section className="container mx-auto px-4 py-12 max-w-6xl">
+        <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900">
+          Blockchain Solutions
+        </h1>
+        <p className="mt-4 text-lg text-gray-600">
+          Practical blockchain for real business outcomes: asset tokenization,
+          supply chain, identity, and payments.
         </p>
       </section>
-      <section className='bg-gray-50 border-t border-b border-gray-100'>
-        <div className='container mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl'>
-          {[{ title: 'Tokenization', desc: 'Create, manage, and trade digital assets securely.', price: '$15,000–$60,000+' },
-            { title: 'Supply Chain Traceability', desc: 'Provenance and auditability with IoT integration.', price: '$20,000–$80,000+' },
-            { title: 'Self-Sovereign Identity', desc: 'DIDs/VCs, privacy-preserving identity systems.', price: '$12,000–$50,000' },
-            { title: 'Payments & Settlement', desc: 'Stablecoin integrations and on/off ramps.', price: '$10,000–$45,000' },
-            { title: 'Smart Contract Audits', desc: 'Security reviews and formal analysis.', price: '$5,000–$25,000' },
-            { title: 'Private Chains', desc: 'Hyperledger/Quorum for enterprise use cases.', price: '$18,000–$90,000' }].map((item) => (
-            <div key={item.title} className='p-6 bg-white rounded-xl shadow-sm border border-gray-100'>
-              <h3 className='text-xl font-semibold text-gray-900'>{item.title}</h3>
-              <p className='mt-2 text-gray-600'>{item.desc}</p>
-              <p className='mt-4 text-gray-900 font-medium'>Typical budget: {item.price}</p>
+      <section className="bg-gray-50 border-t border-b border-gray-100">
+        <div className="container mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl">
+          {[
+            {
+              title: 'Tokenization',
+              desc: 'Create, manage, and trade digital assets securely.',
+              price: '$15,000–$60,000+',
+            },
+            {
+              title: 'Supply Chain Traceability',
+              desc: 'Provenance and auditability with IoT integration.',
+              price: '$20,000–$80,000+',
+            },
+            {
+              title: 'Self-Sovereign Identity',
+              desc: 'DIDs/VCs, privacy-preserving identity systems.',
+              price: '$12,000–$50,000',
+            },
+            {
+              title: 'Payments & Settlement',
+              desc: 'Stablecoin integrations and on/off ramps.',
+              price: '$10,000–$45,000',
+            },
+            {
+              title: 'Smart Contract Audits',
+              desc: 'Security reviews and formal analysis.',
+              price: '$5,000–$25,000',
+            },
+            {
+              title: 'Private Chains',
+              desc: 'Hyperledger/Quorum for enterprise use cases.',
+              price: '$18,000–$90,000',
+            },
+          ].map(item => (
+            <div
+              key={item.title}
+              className="p-6 bg-white rounded-xl shadow-sm border border-gray-100"
+            >
+              <h3 className="text-xl font-semibold text-gray-900">
+                {item.title}
+              </h3>
+              <p className="mt-2 text-gray-600">{item.desc}</p>
+              <p className="mt-4 text-gray-900 font-medium">
+                Typical budget: {item.price}
+              </p>
             </div>
           ))}
         </div>
       </section>
-      <section className='container mx-auto px-4 py-12 max-w-6xl'>
-        <h2 className='text-2xl md:text-3xl font-bold text-gray-900'>Ecosystem</h2>
-        <div className='mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-sm'>
-          {['Polygon', 'Ethereum', 'Solana', 'Hyperledger', 'Quorum', 'Chainlink', 'WalletConnect', 'Ledger'].map((t) => (
-            <div key={t} className='px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center'>{t}</div>
+      <section className="container mx-auto px-4 py-12 max-w-6xl">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+          Ecosystem
+        </h2>
+        <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-sm">
+          {[
+<<<<<<< HEAD
+            'Polygon',
+            'Ethereum',
+            'Solana',
+            'Hyperledger',
+            'Quorum',
+            'Chainlink',
+            'WalletConnect',
+            'Ledger',
+=======
+            'Polygon,Ethereum,Solana,Hyperledger,Quorum,Chainlink,WalletConnect,Ledger',
+>>>>>>> main
+          ].map(t => (
+            <div
+              key={t}
+              className="px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center"
+            >
+              {t}
+            </div>
           ))}
         </div>
-        <div className='mt-6'>
-          <Link href='/contact' className='inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold'>Discuss a use case</Link>
+        <div className="mt-6">
+          <Link
+            href="/contact"
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold"
+          >
+            Discuss a use case
+          </Link>
         </div>
       </section>
     </div>
-  )}
+  );
+}

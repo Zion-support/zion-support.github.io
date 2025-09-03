@@ -245,7 +245,6 @@ export {
   AppConfigSchema,
   RuntimeConfigSchema,
   FeatureFlagsSchema}
-;
 // Utility functions;
 export function getConfig(): Configuration {
   return config}

@@ -267,5 +267,4 @@ import {
       </section>
     </div>
   )}
-;
 export default Webinars

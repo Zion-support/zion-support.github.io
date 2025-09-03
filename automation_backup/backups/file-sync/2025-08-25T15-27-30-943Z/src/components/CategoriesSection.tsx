@@ -4,7 +4,8 @@ import { Link } from;
   'react-router-dom';
 import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Zap, Shield, Globe import { motion } from;
   'framer-motion';
-const categories = [{
+const categories = [
+  {
     title: 'Services,
     description:,
   On-demand IT support, consulting, development, and more',
@@ -14,9 +15,7 @@ const categories = [{
   /services',
     color: 'from-purple-500 to-indigo-600,
     features[,
-  24/7 Support',
-  'Global Coverage',
-  'Certified Experts'],
+  24/7 Support,Global Coverage,Certified Experts'],
     stats: '500+ Services},
   {
     title:,
@@ -40,9 +39,7 @@ const categories = [{
   /talent',
     color: 'from-cyan-500 to-blue-600,
     features[,
-  AI Matching',
-  'Verified Profiles',
-  'Skill Validation'],
+  AI Matching,Verified Profiles,Skill Validation'],
     stats: 10,000+ Talents,
   },
   {
@@ -55,9 +52,7 @@ const categories = [{
   /equipment',
     color: 'from-amber-500 to-orange-600,
     features[,
-  Flexible Rental',
-  'Buy Options',
-  'Maintenance Included'],
+  Flexible Rental,Buy Options,Maintenance Included'],
     stats: 1,000+ Items,
   },
   {
@@ -70,9 +65,7 @@ const categories = [{
   /category/innovation',
     color: 'from-emerald-500 to-green-600,
     features[,
-  Latest Tech',
-  'Research Labs',
-  'Startup Solutions'],
+  Latest Tech,Research Labs,Startup Solutions'],
     stats: '100+ Innovations},
   {
 ursor/website-audit-content-update-and-deployment-efec
@@ -130,10 +123,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   }
   const itemVariants = {
   hidden: { opacity: 0,
-  y: 30;
-;
-
-},
+  y: 30},
     visible: {
       opacity: 1,
       y: 0,
@@ -158,17 +148,12 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             initial = {
   { opacity: 0,
   y: 30;
-;
-;
 }}
             animate = {
   { opacity: 1,
   y: 0;
-;
-;
 }}
             transition={{ duration: 0.8 }}
-;
             <GradientHeading>Explore Categories</GradientHeading>
             <p className=,
   text-zion-slate-light text-lg mt-4 max-w-3xl mx-auto leading-relaxed'>
@@ -242,20 +227,14 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           initial = {
   { opacity: 0,
   y: 30;
-;
-;
 }}
           animate = {
   { opacity: 1,
   y: 0;
-;
-;
 }}
           transition = {
   { duration: 0.8,
   delay: 0.4;
-;
-;
 }}
         >
           <h3 className=,
@@ -267,20 +246,14 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                 initial = {
   { opacity: 0,
   scale: 0.9;
-;
-;
 }}
                 animate = {
   { opacity: 1,
   scale: 1;
-;
-;
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.5 + index * 0.1;
-;
-;
 }}
               >
                 <Link
@@ -310,20 +283,14 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           initial = {
   { opacity: 0,
   y: 30;
-;
-;
 }}
           animate = {
   { opacity: 1,
   y: 0;
-;
-;
 }}
           transition = {
   { duration: 0.8,
   delay: 0.6;
-;
-;
 }}
         >
           <Link
