@@ -1,8 +1,12 @@
 
-          We design and implement end-to-end AI systems that deliver measurable
-          business outcomes: demand forecasting, intelligent search, fraud
+          We: design and implement end-to-end AI systems that deliver measurable
+          business outcomes: demand: forecastin,g, intelligent search, fraud
           detection, personalization, autonomous process optimization, and more.
         </p>
       </section>
     </div>) }
-'"
+<<<<<<< HEAD
+'"";
+=======
+'""
+>>>>>>> main

@@ -1,29 +1,119 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import MainLayout from "../../src/components/layout/MainLayout";
+import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
-import { Building, Users, Rocket, Heart, DollarSign, Globe, CheckCircle, ArrowRight, Zap, Shield, Brain } from 'lucide-react';
-=======
-import type { NextPage } from
-  'next';
-import MainLayout from
-  '../../components/layout/MainLayout';
-import Link from
-  'next/link';
-import { Building, Users, Rocket, Heart, DollarSign, Globe, CheckCircle, ArrowRight, Zap, Shield, Brain } from
-  'lucide-react';
->>>>>>> origin/main
+import SEO from '../../components/SEO';
+import { Card } from '../../components/ui/Card';
+import { Button } from '../../components/ui/Button';
+import { Badge } from '../../components/ui/Badge';
+import { 
+  Brain, 
+  Mail, 
+  Headphones, 
+  Calendar, 
+  FolderKanban, 
+  Workflow,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Zap,
+  Shield,
+  Users,
+  Target,
+  Lightbulb,
+  TrendingUp
+} from 'lucide-react';
 
-const Solutions: NextPage = () => {
+export default function Solutions() {
+  const solutions = [
+    {
+      icon: Brain,
+      title: 'AI Content Creation',
+      description: 'Automated content generation using advanced AI models for blogs, social media, and marketing materials.',
+      href: '/solutions/ai-content-creation',
+      features: ['Blog Post Generation', 'Social Media Content', 'SEO Optimization', 'Multi-language Support'],
+      pricing: 'Starting at $299/month'
+    },
+    {
+      icon: Mail,
+      title: 'Email Automation',
+      description: 'Intelligent email marketing automation with personalized campaigns and advanced analytics.',
+      href: '/solutions/email-automation',
+      features: ['Drip Campaigns', 'Personalization', 'A/B Testing', 'Analytics Dashboard'],
+      pricing: 'Starting at $199/month'
+    },
+    {
+      icon: Headphones,
+      title: 'Customer Support Platform',
+      description: 'AI-powered customer support system with chatbots, ticket management, and knowledge base.',
+      href: '/solutions/customer-support',
+      features: ['AI Chatbots', 'Ticket Management', 'Knowledge Base', 'Multi-channel Support'],
+      pricing: 'Starting at $399/month'
+    },
+    {
+      icon: Calendar,
+      title: 'Event Management',
+      description: 'Comprehensive event management platform with registration, ticketing, and attendee management.',
+      href: '/solutions/event-management',
+      features: ['Event Registration', 'Ticketing System', 'Attendee Management', 'Analytics'],
+      pricing: 'Starting at $149/month'
+    },
+    {
+      icon: FolderKanban,
+      title: 'Project Management',
+      description: 'Advanced project management tools with team collaboration, task tracking, and reporting.',
+      href: '/solutions/project-management',
+      features: ['Task Management', 'Team Collaboration', 'Time Tracking', 'Reporting'],
+      pricing: 'Starting at $99/month'
+    },
+    {
+      icon: Workflow,
+      title: 'Workflow Automation',
+      description: 'Streamline business processes with custom workflow automation and integration capabilities.',
+      href: '/solutions/workflow-automation',
+      features: ['Process Automation', 'Integration APIs', 'Custom Workflows', 'Monitoring'],
+      pricing: 'Starting at $249/month'
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: Zap,
+      title: 'Lightning Fast Setup',
+      description: 'Get your solution up and running in minutes, not months.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with 99.9% uptime guarantee.'
+    },
+    {
+      icon: Users,
+      title: '24/7 Support',
+      description: 'Round-the-clock support from our expert team.'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Scalable Solutions',
+      description: 'Grow with confidence as your business expands.'
+    }
+  ];
+
   return (
-    <MainLayout
-      title="Technology Solutions - Zion Tech Group"
-      description="Discover comprehensive technology solutions tailored for enterprises, small businesses, startups, and specific industries. Transform your business with Zion Tech Group."
-    >
+    <>
+      <SEO 
+        title="Solutions - Zion Tech Group"
+        description="Comprehensive technology solutions for modern businesses. AI-powered tools, automation platforms, and custom software solutions."
+        keywords="solutions, AI tools, automation, software, business solutions, technology"
+      />
+      <Head>
+        <title>Solutions - Zion Tech Group</title>
+      </Head>
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+<<<<<<< HEAD
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md: text-6xl font-bold mb-6">
             Technology
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Solutions</span>
           </h1>
@@ -32,7 +122,7 @@ const Solutions: NextPage = () => {
             From startups to enterprises, we have the expertise to transform your operations.
           </p>
           
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               Get Your Solution
             </Link>
@@ -49,12 +139,11 @@ const Solutions: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Service Categories</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We offer comprehensive technology solutions across three main categories, 
-              each designed to address specific business needs and challenges.
+              We offer comprehensive technology solutions across three main categories, each designed to address specific business needs and challenges.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-3 gap-8">
             {/* Micro SaaS */}
             <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-xl text-center">
               <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -70,7 +159,7 @@ const Solutions: NextPage = () => {
                 <div className="text-sm text-gray-600">• Quick Implementation</div>
                 <div className="text-sm text-gray-600">• Scalable Solutions</div>
               </div>
-              <Link href="/services/micro-saas" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-block">
+              <Link href="/services/micro-saas" className="bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-block">
                 Explore Micro SaaS
               </Link>
             </div>
@@ -86,11 +175,11 @@ const Solutions: NextPage = () => {
               </p>
               <div className="space-y-2 mb-6">
                 <div className="text-sm text-gray-600">• 8+ Professional Services</div>
-                <div className="text-sm text-gray-600">• Starting at $2,000/project</div>
+                <div className="text-sm text-gray-600">• Starting at $2, 000/project</div>
                 <div className="text-sm text-gray-600">• Enterprise-Grade Security</div>
                 <div className="text-sm text-gray-600">• 24/7 Support</div>
               </div>
-              <Link href="/services/it-services" className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-block">
+              <Link href="/services/it-services" className="bg-purple-600 hover: bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-block">
                 Explore IT Services
               </Link>
             </div>
@@ -110,125 +199,112 @@ const Solutions: NextPage = () => {
                 <div className="text-sm text-gray-600">• Custom AI Models</div>
                 <div className="text-sm text-gray-600">• Advanced Analytics</div>
               </div>
-              <Link href="/services/ai-services" className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-block">
+              <Link href="/services/ai-services" className="bg-green-600 hover: bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-block">
                 Explore AI Services
               </Link>
+=======
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <Badge className="mb-4 bg-blue-500 text-white">
+              <Lightbulb className="w-4 h-4 mr-2" />
+              Innovative Solutions
+            </Badge>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Technology Solutions for
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Modern Business</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our comprehensive suite of AI-powered tools, automation platforms, 
+              and custom software solutions designed to drive growth and efficiency.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                Explore Solutions
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900">
+                Schedule Demo
+              </Button>
+>>>>>>> main
             </div>
           </div>
         </div>
       </section>
 
-      {/* Business Type Solutions */}
+      {/* Solutions Grid */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Solutions by Business Type</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Solutions
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We understand that different business types have unique needs. 
-              Our solutions are tailored to meet your specific requirements and challenges.
+              Choose from our comprehensive range of technology solutions designed to address 
+              your specific business needs and challenges.
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                <Building className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Enterprise Solutions</h3>
-              <p className="text-gray-600 mb-4">
-                Comprehensive technology solutions for large organizations with complex infrastructure needs.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-2 mb-6">
-                <li>• Digital Transformation</li>
-                <li>• Legacy System Modernization</li>
-                <li>• Enterprise Security</li>
-                <li>• Global Infrastructure</li>
-              </ul>
-              <Link href="/solutions/enterprise">
-                <a className="text-blue-600 hover:text-blue-700 font-semibold flex items-center">
-                  Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
-              </Link>
-            </div>
 
-            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                <Users className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Small Business Solutions</h3>
-              <p className="text-gray-600 mb-4">
-                Cost-effective technology solutions designed for growing small and medium businesses.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-2 mb-6">
-                <li>• Business Process Automation</li>
-                <li>• Cloud Migration</li>
-                <li>• Digital Marketing Tools</li>
-                <li>• Customer Management</li>
-              </ul>
-              <Link href="/solutions/small-business">
-                <a className="text-purple-600 hover:text-purple-700 font-semibold flex items-center">
-                  Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
-              </Link>
-            </div>
-
-            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <Rocket className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Startup Solutions</h3>
-              <p className="text-gray-600 mb-4">
-                Agile technology solutions to help startups scale quickly and efficiently.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-2 mb-6">
-                <li>• MVP Development</li>
-                <li>• Scalable Architecture</li>
-                <li>• Rapid Prototyping</li>
-                <li>• Growth Optimization</li>
-              </ul>
-              <Link href="/solutions/startups">
-                <a className="text-green-600 hover:text-green-700 font-semibold flex items-center">
-                  Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
-              </Link>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {solutions.map((solution, index) => (
+              <Card key={index} className="p-6 hover:shadow-xl transition-shadow duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="p-3 bg-blue-100 rounded-lg mr-4">
+                    <solution.icon className="h-8 w-8 text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900">{solution.title}</h3>
+                    <p className="text-sm text-blue-600 font-medium">{solution.pricing}</p>
+                  </div>
+                </div>
+                
+                <p className="text-gray-600 mb-4">{solution.description}</p>
+                
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                  <ul className="space-y-1">
+                    {solution.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <Link href={solution.href}>
+                  <Button className="w-full">
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Industry Solutions */}
+      {/* Benefits Section */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Industry-Specific Solutions</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our Solutions?
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We understand the unique challenges and requirements of different industries. 
-              Our solutions are tailored to meet industry-specific needs and compliance requirements.
+              We deliver exceptional value through innovative technology, expert support, and proven results.
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gray-50 rounded-lg p-6">
-              <div className="flex items-center space-x-3 mb-4">
-                <Heart className="w-6 h-6 text-red-600" />
-                <h3 className="text-lg font-semibold text-gray-900">Healthcare</h3>
-              </div>
-              <p className="text-gray-600 mb-4">
-                HIPAA-compliant solutions for hospitals, clinics, and healthcare providers.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Electronic Health Records</li>
-                <li>• Telemedicine Platforms</li>
-                <li>• Patient Management Systems</li>
-                <li>• Healthcare Analytics</li>
-              </ul>
-            </div>
 
-            <div className="bg-gray-50 rounded-lg p-6">
-              <div className="flex items-center space-x-3 mb-4">
-                <DollarSign className="w-6 h-6 text-green-600" />
-                <h3 className="text-lg font-semibold text-gray-900">Finance</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <div className="p-4 bg-blue-100 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <benefit.icon className="h-8 w-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3>
+                <p className="text-gray-600">{benefit.description}</p>
               </div>
+<<<<<<< HEAD
               <p className="text-gray-600 mb-4">
                 Secure, compliant solutions for banking, insurance, and fintech companies.
               </p>
@@ -317,7 +393,7 @@ const Solutions: NextPage = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <CheckCircle className="w-10 h-10 text-blue-600" />
@@ -371,7 +447,7 @@ const Solutions: NextPage = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-5 gap-8">
             <div className="text-center">
               <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-blue-600">1</span>
@@ -421,29 +497,50 @@ const Solutions: NextPage = () => {
                 We deploy your solution and provide ongoing support and optimization.
               </p>
             </div>
+=======
+            ))}
+>>>>>>> main
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20 bg-gray-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Find Your Solution?</h2>
           <p className="text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
-            Let's discuss your business needs and find the perfect technology solution to drive your success.
+            Let&apos;s discuss your business needs and find the perfect technology solution to drive your success.''
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               Get Started Today
+=======
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Let our experts help you choose the perfect solution for your business needs. 
+            Get started with a free consultation today.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact">
+              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+                Get Free Consultation
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+>>>>>>> main
             </Link>
-            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              Explore Our Services
+            <Link href="/pricing">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
+                View Pricing
+              </Button>
             </Link>
           </div>
         </div>
       </section>
-    </MainLayout>
-  );
-};
-
-export default Solutions;
+    </>
+  )
+}

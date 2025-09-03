@@ -75,7 +75,6 @@ export function AdvancedAnalytics({
   const [userSession, setUserSession] = useState<string>('');
   const [heatmapData, setHeatmapData] = useState<Array<{ x: number; y: number; type: 'click' | 'scroll' | 'hover' }>>([]);
   
->>>>>>> main
   const trackingRef = useRef<{
 
     pageViews: number;    clicks: number;
@@ -104,7 +103,6 @@ export function AdvancedAnalytics({
     
     // Send to analytics service'    this.sendAnalyticsData('pageview', pageViewData);
     
->>>>>>> main
     // Update local state
     setAnalyticsData(prev => ({
 
@@ -142,7 +140,6 @@ export function AdvancedAnalytics({
 
         ...prev.interactions,`
         [type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`]: '`
->>>>>>> main
           prev.interactions[type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`] + 1
       }
     }) ) }, [enabled, userSession, currentPage]) ;
@@ -151,7 +148,6 @@ export function AdvancedAnalytics({
   
     // Use Performance API to get metrics'
     if ('performance' in window) {
->>>>>>> main
 
       
       
@@ -189,7 +185,6 @@ export function AdvancedAnalytics({
       
       '      trackInteraction('click', { target, position });
       
->>>>>>> main
       // Add to heatmap data
       if (enableHeatmap) {
 
@@ -210,7 +205,6 @@ export function AdvancedAnalytics({
     
       trackInteraction('form', {
 
->>>>>>> main
         formId: form.id || form.className,
         formAction: form.action,
         formMethod: form.method
@@ -420,7 +414,6 @@ export function AdvancedAnalytics({
                   <Target className="w-4 h-4 text-orange-500"  />"                  <span className="text-xs text-orange-600">Conversion</span>
                 </div>"
                 <div className="text-lg font-bold text-orange-700">{analyticsData.conversionRate.toFixed(1)}%</div>
->>>>>>> main
               </div>
             </div>
 
