@@ -1,5 +1,5 @@
 import React from 'react';
-import ModernLayout from '../components/layout/ModernLayout';
+import { SEO } from '../src/components/SEO';
 import { Calendar, Clock, MapPin, Users, ExternalLink, ArrowRight, Video, Globe } from 'lucide-react';
 
 export default function EventsPage() {
@@ -87,11 +87,12 @@ export default function EventsPage() {
   const eventTypes = ['All Events', 'Conference', 'Workshop', 'Webinar', 'Panel Discussion', 'Masterclass'];
 
   return (
-    <ModernLayout
-      title="Events | Zion Tech Group"
-      description="Join us for upcoming events, webinars, and conferences on the latest technology trends and innovations."
-      canonical="https://ziontechgroup.com/events"
-    >
+    <>
+      <SEO 
+        title="Events | Zion Tech Group"
+        description="Join us for upcoming events, webinars, and conferences on the latest technology trends and innovations."
+        url="https://ziontechgroup.com/events"
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-20">
         <div className="mx-auto max-w-7xl px-6 text-center">
@@ -308,6 +309,6 @@ export default function EventsPage() {
           </div>
         </div>
       </section>
-    </ModernLayout>
+    </>
   );
 }

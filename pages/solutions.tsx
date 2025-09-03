@@ -1,5 +1,5 @@
 import React from 'react';
-import ModernLayout from '../components/layout/ModernLayout';
+import { SEO } from '../src/components/SEO';
 import { Building2, Shield, Zap, Brain, Cloud, Database, Users, ArrowRight, CheckCircle } from 'lucide-react';
 
 export default function SolutionsPage() {
@@ -166,11 +166,12 @@ export default function SolutionsPage() {
   ];
 
   return (
-    <ModernLayout
-      title="Solutions | Zion Tech Group"
-      description="Industry-specific technology solutions designed to solve real business challenges and drive digital transformation."
-      canonical="https://ziontechgroup.com/solutions"
-    >
+    <>
+      <SEO 
+        title="Solutions | Zion Tech Group"
+        description="Industry-specific technology solutions designed to solve real business challenges and drive digital transformation."
+        url="https://ziontechgroup.com/solutions"
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-20">
         <div className="mx-auto max-w-7xl px-6 text-center">
@@ -355,6 +356,6 @@ export default function SolutionsPage() {
           </div>
         </div>
       </section>
-    </ModernLayout>
+    </>
   );
 }

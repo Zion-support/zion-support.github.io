@@ -1,5 +1,5 @@
 import React from 'react';
-import ModernLayout from '../components/layout/ModernLayout';
+import { SEO } from '../src/components/SEO';
 import { FlaskConical, Brain, Cloud, Shield, Database, Zap, Users, ArrowRight, BookOpen, Lightbulb } from 'lucide-react';
 
 export default function ResearchDevelopmentPage() {
@@ -175,11 +175,12 @@ export default function ResearchDevelopmentPage() {
   ];
 
   return (
-    <ModernLayout
-      title="Research & Development | Zion Tech Group"
-      description="Exploring the frontiers of technology through innovative research, development, and collaboration."
-      canonical="https://ziontechgroup.com/research-development"
-    >
+    <>
+      <SEO 
+        title="Research & Development | Zion Tech Group"
+        description="Exploring the frontiers of technology through innovative research, development, and collaboration."
+        url="https://ziontechgroup.com/research-development"
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-20">
         <div className="mx-auto max-w-7xl px-6 text-center">
@@ -388,6 +389,6 @@ export default function ResearchDevelopmentPage() {
           </div>
         </div>
       </section>
-    </ModernLayout>
+    </>
   );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import ModernLayout from '../components/layout/ModernLayout';
+import { SEO } from '../src/components/SEO';
 import { Calendar, Clock, User, Tag, ArrowRight, ExternalLink } from 'lucide-react';
 
 export default function NewsPage() {
@@ -88,11 +88,12 @@ export default function NewsPage() {
   const featuredArticle = newsArticles.find(article => article.featured);
 
   return (
-    <ModernLayout
-      title="News & Insights | Zion Tech Group"
-      description="Stay updated with the latest news, insights, and thought leadership from Zion Tech Group and the technology industry."
-      canonical="https://ziontechgroup.com/news"
-    >
+    <>
+      <SEO 
+        title="News & Insights | Zion Tech Group"
+        description="Stay updated with the latest news, insights, and thought leadership from Zion Tech Group and the technology industry."
+        url="https://ziontechgroup.com/news"
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-20">
         <div className="mx-auto max-w-7xl px-6 text-center">
@@ -261,6 +262,6 @@ export default function NewsPage() {
           </div>
         </div>
       </section>
-    </ModernLayout>
+    </>
   );
 }
