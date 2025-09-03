@@ -70,7 +70,13 @@
     "postinstall": "npm run clean",
     "prebuild": "npm run security:audit",
     "postbuild": "npm run analyze:bundle",
-    "analyze:bundle": "ANALYZE=true npm run build"
+    "analyze:bundle": "ANALYZE=true npm run build",
+    "automation:enhanced": "node scripts/enhanced-automation-orchestrator.js",
+    "automation:test": "node scripts/enhanced-test-automation.js",
+    "automation:deploy": "node scripts/enhanced-deployment-automation.js",
+    "automation:monitor": "node scripts/enhanced-monitoring-system.js",
+    "automation:master": "node scripts/master-automation-orchestrator.js",
+    "automation:quick-test": "node scripts/quick-test.js"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^5.0.2",
@@ -130,11 +136,6 @@
   },
   "repository": {
     "type": "git",
-<<<<<<< HEAD
-    "url": "git+https://github.com/your-org/your-repo.git"
-  }
-}
-=======
     "url": "git+https://github.com/Zion-Technologies/Website.git"
   },
   "keywords": [
@@ -149,4 +150,3 @@
   "author": "Zion Tech Group",
   "license": "MIT"
 }
->>>>>>> cursor/analyze-improve-and-deploy-application-a94a
