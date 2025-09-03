@@ -42,22 +42,27 @@ const Navigation = () => {
       name: 'Services', 
       href: '/services', 
       dropdown: [
-        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI services' },
+        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI solutions' },
         { name: 'IT Services', href: '/it-services', icon: Network, description: 'Comprehensive IT solutions' },
         { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Scalable SaaS solutions' },
-        { name: 'Web Development', href: '/services/web-development', icon: Code, description: 'Custom web applications' },
-        { name: 'Cloud Services', href: '/services/cloud-services', icon: Cloud, description: 'Cloud infrastructure' },
-        { name: 'AI Development', href: '/services/ai-development', icon: Brain, description: 'AI development services' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Security solutions' },
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & automation' }
+        { name: 'All Services', href: '/services', icon: Settings, description: 'Complete service overview' }
       ]
     },
-    { name: 'Solutions', href: '/solutions' },
+    { 
+      name: 'Solutions', 
+      href: '/solutions',
+      dropdown: [
+        { name: 'AI Solutions', href: '/solutions/ai', icon: Brain, description: 'AI-powered business solutions' },
+        { name: 'Cloud Solutions', href: '/solutions/cloud', icon: Cloud, description: 'Cloud infrastructure solutions' },
+        { name: 'Security Solutions', href: '/solutions/security', icon: Shield, description: 'Cybersecurity solutions' },
+        { name: 'Digital Transformation', href: '/solutions/digital', icon: Zap, description: 'Digital transformation services' }
+      ]
+    },
     { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Pricing', href: '/pricing' }
+    { name: 'Contact', href: '/contact' },
+    { name: 'Careers', href: '/careers' }
   ];
 
   const contactInfo = [
@@ -103,7 +108,7 @@ const Navigation = () => {
                     >
                       <span>{item.name}</span>
                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                        activeDropdown === item.name ? 'rotate-180' :  
+                        activeDropdown === item.name ? 'rotate-180' : ''
                       }`} />
                     </button>
                     <AnimatePresence>
@@ -179,7 +184,7 @@ const Navigation = () => {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-gray-900/95 backdrop-blur-md border-t border-cyan-400/20"
@@ -215,15 +220,13 @@ const Navigation = () => {
                           className="flex items-center justify-between w-full text-left px-3 py-2 text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
                         >
                           <span>{item.name}</span>
-                          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                            activeDropdown === item.name ? 'rotate-180' :  
-                          }`} />
+                          <ChevronDown className="w-4 h-4" />
                         </button>
                         <AnimatePresence>
                           {activeDropdown === item.name && (
                             <motion.div
                               initial={{ opacity: 0, height: 0 }}
-                              animate={{ opacity: 1, height: 'auto' }}
+                              animate={{ opacity: 1, height: "auto" }}
                               exit={{ opacity: 0, height: 0 }}
                               transition={{ duration: 0.2 }}
                               className="ml-4 mt-2 space-y-1"

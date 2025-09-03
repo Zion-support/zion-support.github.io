@@ -5,12 +5,12 @@ import Leadership from './Leadership
 describe('Leadership', () => {"
   it('renders without crashing', () => {
     render(<Leadership /" >);"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
-});
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+})
 "
   it('displays expected content', () => {
-    render(<Leadership /" >);
-    // Add more specific tests here,
-});,
+    render(<Leadership /" >)
+    // Add more specific tests here
 });
+})
 "

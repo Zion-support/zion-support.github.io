@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
@@ -48,21 +48,8 @@ export default function Footer() {
               <li><Link href="/ai-services" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">AI Services</Link></li>
               <li><Link href="/it-services" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">IT Services</Link></li>
               <li><Link href="/micro-saas" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Micro SaaS</Link></li>
-              <li><Link href="/services/web-development" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Web Development</Link></li>
-              <li><Link href="/services/cloud-services" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Cloud Services</Link></li>
-              <li><Link href="/services/cybersecurity" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Cybersecurity</Link></li>
-            </ul>
-          </div>
-
-          {/* Solutions */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Solutions</h3>
-            <ul className="space-y-2">
-              <li><Link href="/solutions" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">All Solutions</Link></li>
-              <li><Link href="/solutions/ai-content-creation" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">AI Content Creation</Link></li>
-              <li><Link href="/solutions/customer-support" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Customer Support</Link></li>
-              <li><Link href="/solutions/email-automation" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Email Automation</Link></li>
-              <li><Link href="/solutions/project-management" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Project Management</Link></li>
+              <li><Link href="/services" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">All Services</Link></li>
+              <li><Link href="/solutions" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Solutions</Link></li>
             </ul>
           </div>
 
@@ -71,10 +58,11 @@ export default function Footer() {
             <h3 className="text-lg font-semibold">Company</h3>
             <ul className="space-y-2">
               <li><Link href="/about" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">About Us</Link></li>
+              <li><Link href="/team" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Our Team</Link></li>
               <li><Link href="/careers" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Careers</Link></li>
               <li><Link href="/blog" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Blog</Link></li>
+              <li><Link href="/case-studies" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Case Studies</Link></li>
               <li><Link href="/partners" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Partners</Link></li>
-              <li><Link href="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Pricing</Link></li>
             </ul>
           </div>
 

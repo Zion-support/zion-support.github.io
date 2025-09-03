@@ -9,8 +9,8 @@ interface OptimizedImageProps {
   width?: number;
   height?: number;
   className?: string;
-  priority?: boolean;'
-  quality?: number;''
+  priority?: boolean;
+  quality?: number;
   placeholder?: 'blur' | 'empty';
   blurDataURL?: string;
   sizes?: string;
@@ -19,17 +19,19 @@ interface OptimizedImageProps {
   onClick?: () => void;
   onLoad?: () => void;
   onError?: () => void;
+  loading?: 'lazy' | 'eager';
+  objectFit?: 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';
+  objectPosition?: string;
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
-
   src,
   alt,
-  width,'
-  height,''
+  width,
+  height,
   className = '',
-  priority = false,'
-  quality = 75,''
+  priority = false,
+  quality = 75,
   placeholder = 'empty',
   blurDataURL,
   sizes,
@@ -37,62 +39,103 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   style,
   onClick,
   onLoad,
-  onError}) => {
-
-  const [isLoading, setIsLoading] = useState(true);
+  onError,
+  loading = 'lazy',
+  objectFit = 'cover',
+  objectPosition = 'center'
+}) => {
+  const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
-  const imageRef = useRef<HTMLDivElement>(null);
+  const [isInView, setIsInView] = useState(false);
+  const imgRef = useRef<HTMLDivElement>(null);
 
-  // Intersection Observer for lazy loading
   useEffect(() => {
-    if (priority) return;
-
-    const observer = new IntersectionObserver()
+    const observer = new IntersectionObserver(
       ([entry]) => {
-
         if (entry.isIntersecting) {
-
           setIsInView(true);
           observer.disconnect();
         }
       },
+<<<<<<< HEAD
+      { threshold: 0.1 }
+=======
       {
 '
 
         rootMargin: '50px', // Start loading 50px before the image comes into view
         threshold: 0.1}
+>>>>>>> main
     );
 
-    if (imageRef.current) {
-
-      observer.observe(imageRef.current);
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
     }
 
     return () => observer.disconnect();
-  }, [priority]);
+  }, []);
 
-  // Handle image load
   const handleLoad = () => {
-    setIsLoading(false);
+    setIsLoaded(true);
     onLoad?.();
   };
 
-  // Handle image error
   const handleError = () => {
     setHasError(true);
-    setIsLoading(false);
     onError?.();
   };
 
-  // Fallback image for errors
-  if (hasError) {
+  const imageProps = {
+    src,
+    alt,
+    quality,
+    priority,
+    placeholder,
+    blurDataURL,
+    sizes,
+    onLoad: handleLoad,
+    onError: handleError,
+    style: {
+      objectFit,
+      objectPosition,
+      ...style
+    }
+  };
 
-    return()
-      <div'
-        className={`flex items-center justify-center bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400 ${className}`}''
-        style={{ width: fill ? '100%' : width, height: fill ? '100%' : height }}
+  if (fill) {
+    return (
+      <div
+        ref={imgRef}
+        className={`relative overflow-hidden ${className}`}
+        style={style}
+        onClick={onClick}
       >
+<<<<<<< HEAD
+        {isInView && !hasError && (
+          <Image
+            {...imageProps}
+            fill
+            className={`transition-opacity duration-300 ${
+              isLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
+          />
+        )}
+        {!isLoaded && !hasError && (
+          <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
+            <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin" />
+          </div>
+        )}
+        {hasError && (
+          <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
+            <div className="text-gray-400 text-center">
+              <svg className="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <p className="text-sm">Failed to load image</p>
+            </div>
+          </div>
+        )}
+=======
         <div className="text-center">"
           <svg""
             className='mx-auto h-8 w-8 mb-2'
@@ -109,33 +152,49 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           </svg>""
           <p className="text-xs">Image failed to load</p>
         </div>
+>>>>>>> main
       </div>
     );
   }
 
-  // Loading skeleton
-  if (!isInView) {
-
-    return()
-      <div`
-        ref={imageRef}`'`
-        className={`bg-gray-200 dark:bg-gray-700 animate-pulse ${className}`}''
-        style={{ width: fill ? '100%' : width, height: fill ? '100%' : height }}
-      />
-    );
-  }
-
-  return()
-    <div`
-      ref={imageRef}``
-      className={`relative ${className}`}
-      style={style}
+  return (
+    <div
+      ref={imgRef}
+      className={`relative overflow-hidden ${className}`}
       onClick={onClick}
     >
-      {/* Loading overlay */}"
-      {isLoading && (""
-        <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700 animate-pulse z-10" />
+      {isInView && !hasError && (
+        <Image
+          {...imageProps}
+          width={width}
+          height={height}
+          loading={loading}
+          className={`transition-opacity duration-300 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+        />
       )}
+<<<<<<< HEAD
+      {!isLoaded && !hasError && (
+        <div 
+          className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"
+          style={{ width, height }}
+        >
+          <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin" />
+        </div>
+      )}
+      {hasError && (
+        <div 
+          className="absolute inset-0 bg-gray-100 flex items-center justify-center"
+          style={{ width, height }}
+        >
+          <div className="text-gray-400 text-center">
+            <svg className="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <p className="text-sm">Failed to load image</p>
+          </div>
+=======
 
       {/* Next.js Image component */}
       <Image
@@ -166,20 +225,11 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       {isLoading && (""
         <div className="absolute inset-0 flex items-center justify-center z-20">""
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+>>>>>>> main
         </div>
       )}
     </div>
   );
 };
 
-// HOC for wrapping components with image optimization
-export const withImageOptimization = <P extends object>(
-  Component: React.ComponentType<P>
-) => {
-
-  return (props: P) => (
-    <Component {...props} />
-  );
-};
-'"`
-export default OptimizedImage;'"`'"`
+export default OptimizedImage;

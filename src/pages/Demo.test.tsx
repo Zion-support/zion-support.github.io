@@ -5,12 +5,12 @@ import Demo from './Demo
 describe('Demo', () => {"
   it('renders without crashing', () => {
     render(<Demo /" >);"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
-});
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+})
 "
   it('displays expected content', () => {
-    render(<Demo /" >);
-    // Add more specific tests here,
-});,
+    render(<Demo /" >)
+    // Add more specific tests here
 });
+})
 "

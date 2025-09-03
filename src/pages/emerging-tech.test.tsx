@@ -5,12 +5,12 @@ import emerging-tech from './emerging-tech
 describe('emerging-tech', () => {"
   it('renders without crashing', () => {
     render(<emerging -tech /" >);"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
-});
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+})
 "
   it('displays expected content', () => {
-    render(<emerging -tech /" >);
-    // Add more specific tests here,
-});,
+    render(<emerging -tech /" >)
+    // Add more specific tests here
 });
+})
 "

@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import HomeEnhanced  from './HomeEnhanced';describe('HomeEnhanced', () => {
+import HomeEnhanced  from './HomeEnhanced'describe('HomeEnhanced', () => {
   it('renders without crashing', () => {
     render(<HomeEnhanced />)
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()

@@ -5,12 +5,12 @@ import Compliance from './Compliance
 describe('Compliance', () => {"
   it('renders without crashing', () => {
     render(<Compliance /" >);"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
-});
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+})
 "
   it('displays expected content', () => {
-    render(<Compliance /" >);
-    // Add more specific tests here,
-});,
+    render(<Compliance /" >)
+    // Add more specific tests here
 });
+})
 "
