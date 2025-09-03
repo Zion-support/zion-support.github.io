@@ -76,6 +76,127 @@ export default function ServicesCatalog() {
             'Audit‑ready reports and reminders'
           ],
           link: '/micro-saas'
+        },
+        {
+          name: 'API Gateway & Rate Limiting Service',
+          blurb: 'Enterprise-grade API management with intelligent rate limiting, analytics, and security policies.',
+          price: '$199 – $1,299/month',
+          eta: '1–3 weeks',
+          bullets: [
+            'Dynamic rate limiting based on user tiers',
+            'API analytics and performance monitoring',
+            'JWT/OAuth2 authentication and authorization',
+            'DDoS protection and bot detection'
+          ],
+          link: '/micro-saas',
+          refs: [
+            { label: 'Kong Gateway', href: 'https://konghq.com/' },
+            { label: 'AWS API Gateway', href: 'https://aws.amazon.com/api-gateway/' }
+          ]
+        },
+        {
+          name: 'Real-time Analytics Dashboard',
+          blurb: 'Custom business intelligence dashboards with real-time data streaming and automated insights.',
+          price: '$399 – $2,499/month',
+          eta: '2–5 weeks',
+          bullets: [
+            'Real-time data visualization and alerts',
+            'Custom KPI tracking and benchmarking',
+            'Automated report generation and distribution',
+            'Mobile-responsive design with offline capabilities'
+          ],
+          link: '/micro-saas'
+        },
+        {
+          name: 'Smart Document Processing',
+          blurb: 'AI-powered document extraction, classification, and workflow automation for business processes.',
+          price: '$299 – $1,899/month',
+          eta: '2–4 weeks',
+          bullets: [
+            'OCR and intelligent data extraction',
+            'Document classification and routing',
+            'Workflow automation and approval chains',
+            'Integration with existing business systems'
+          ],
+          link: '/micro-saas'
+        },
+        {
+          name: 'Multi-Channel Notification Hub',
+          blurb: 'Unified notification system supporting email, SMS, push, Slack, and webhook integrations.',
+          price: '$149 – $999/month',
+          eta: '1–2 weeks',
+          bullets: [
+            'Template management and personalization',
+            'Delivery tracking and analytics',
+            'A/B testing for message optimization',
+            'Compliance with GDPR, CAN-SPAM regulations'
+          ],
+          link: '/micro-saas'
+        },
+        {
+          name: 'Inventory Intelligence Platform',
+          blurb: 'AI-driven inventory optimization with demand forecasting and automated reordering.',
+          price: '$499 – $3,999/month',
+          eta: '3–6 weeks',
+          bullets: [
+            'Machine learning demand forecasting',
+            'Automated reorder point calculations',
+            'Supplier performance analytics',
+            'Integration with ERP and e-commerce platforms'
+          ],
+          link: '/micro-saas'
+        },
+        {
+          name: 'Social Media Automation Suite',
+          blurb: 'Content scheduling, engagement tracking, and influencer management across all platforms.',
+          price: '$199 – $1,499/month',
+          eta: '2–4 weeks',
+          bullets: [
+            'Multi-platform content scheduling',
+            'Engagement analytics and ROI tracking',
+            'Influencer discovery and relationship management',
+            'Content performance optimization suggestions'
+          ],
+          link: '/micro-saas'
+        },
+        {
+          name: 'Employee Experience Platform',
+          blurb: 'HR automation with onboarding, performance tracking, and employee engagement tools.',
+          price: '$299 – $2,299/month',
+          eta: '3–5 weeks',
+          bullets: [
+            'Automated onboarding workflows',
+            'Performance review and goal tracking',
+            'Employee feedback and engagement surveys',
+            'Integration with payroll and benefits systems'
+          ],
+          link: '/micro-saas'
+        },
+        {
+          name: 'Smart Contract Management',
+          blurb: 'Automated contract lifecycle management with AI-powered risk assessment and renewal tracking.',
+          price: '$399 – $2,999/month',
+          eta: '3–6 weeks',
+          bullets: [
+            'Contract template library and generation',
+            'AI-powered risk and compliance analysis',
+            'Automated renewal and deadline tracking',
+            'Electronic signature and approval workflows'
+          ],
+          link: '/micro-saas'
+        },
+        {
+          name: 'IoT Device Management Platform',
+          blurb: 'Comprehensive IoT device monitoring, firmware updates, and data analytics platform.',
+          price: '$599 – $4,999/month',
+          eta: '4–8 weeks',
+          bullets: [
+            'Device provisioning and authentication',
+            'Remote firmware updates and configuration',
+            'Real-time monitoring and alerting',
+            'Data analytics and predictive maintenance'
+          ],
+          link: '/micro-saas'
         }
       ]
     },
@@ -125,6 +246,127 @@ export default function ServicesCatalog() {
             'Works with Zendesk, Intercom, Freshdesk'
           ],
           link: '/ai-services'
+        },
+        {
+          name: 'Computer Vision Analytics Platform',
+          blurb: 'Advanced image and video analysis for quality control, security, and business intelligence.',
+          price: '$2,500 – $15,000/month',
+          eta: '4–8 weeks',
+          bullets: [
+            'Object detection and classification',
+            'Facial recognition and access control',
+            'Quality inspection and defect detection',
+            'Real-time video analytics and alerts'
+          ],
+          link: '/ai-services',
+          refs: [
+            { label: 'OpenCV', href: 'https://opencv.org/' },
+            { label: 'TensorFlow', href: 'https://tensorflow.org/' }
+          ]
+        },
+        {
+          name: 'Natural Language Processing API',
+          blurb: 'Enterprise-grade NLP services for text analysis, sentiment, and language understanding.',
+          price: '$800 – $5,000/month',
+          eta: '2–4 weeks',
+          bullets: [
+            'Sentiment analysis and emotion detection',
+            'Named entity recognition and extraction',
+            'Text summarization and translation',
+            'Custom model training and fine-tuning'
+          ],
+          link: '/ai-services'
+        },
+        {
+          name: 'AI-Powered Fraud Detection',
+          blurb: 'Real-time fraud prevention using machine learning and behavioral analytics.',
+          price: '$1,500 – $12,000/month',
+          eta: '3–6 weeks',
+          bullets: [
+            'Transaction anomaly detection',
+            'Behavioral pattern analysis',
+            'Risk scoring and decision automation',
+            'Real-time alerts and case management'
+          ],
+          link: '/ai-services'
+        },
+        {
+          name: 'Intelligent Document Search',
+          blurb: 'Semantic search and knowledge discovery across enterprise document repositories.',
+          price: '$999 – $6,000/month',
+          eta: '3–5 weeks',
+          bullets: [
+            'Semantic search across multiple formats',
+            'Knowledge graph construction',
+            'Automated tagging and categorization',
+            'Integration with existing document systems'
+          ],
+          link: '/ai-services'
+        },
+        {
+          name: 'AI Content Generation Suite',
+          blurb: 'Multi-modal content creation including text, images, and video with brand consistency.',
+          price: '$1,200 – $8,500/month',
+          eta: '3–6 weeks',
+          bullets: [
+            'Brand-consistent content generation',
+            'Multi-language content creation',
+            'SEO-optimized content with keyword research',
+            'Content performance analytics and optimization'
+          ],
+          link: '/ai-services'
+        },
+        {
+          name: 'Predictive Maintenance AI',
+          blurb: 'IoT-enabled predictive maintenance using machine learning for equipment optimization.',
+          price: '$2,000 – $18,000/month',
+          eta: '4–10 weeks',
+          bullets: [
+            'Equipment failure prediction models',
+            'Maintenance scheduling optimization',
+            'Cost-benefit analysis for repairs',
+            'Integration with existing maintenance systems'
+          ],
+          link: '/ai-services'
+        },
+        {
+          name: 'AI-Powered Lead Scoring',
+          blurb: 'Intelligent lead qualification and scoring using behavioral and demographic data.',
+          price: '$800 – $4,500/month',
+          eta: '2–4 weeks',
+          bullets: [
+            'Multi-factor lead scoring algorithms',
+            'Behavioral tracking and analysis',
+            'CRM integration and automation',
+            'ROI tracking and performance optimization'
+          ],
+          link: '/ai-services'
+        },
+        {
+          name: 'Voice AI & Speech Analytics',
+          blurb: 'Advanced speech recognition, analysis, and voice-enabled applications.',
+          price: '$1,500 – $10,000/month',
+          eta: '3–7 weeks',
+          bullets: [
+            'Real-time speech-to-text conversion',
+            'Voice biometrics and authentication',
+            'Call center analytics and insights',
+            'Voice-enabled chatbot integration'
+          ],
+          link: '/ai-services'
+        },
+        {
+          name: 'AI Recommendation Engine',
+          blurb: 'Personalized recommendation systems for e-commerce, content, and services.',
+          price: '$1,800 – $12,000/month',
+          eta: '4–8 weeks',
+          bullets: [
+            'Collaborative and content-based filtering',
+            'Real-time recommendation updates',
+            'A/B testing and performance optimization',
+            'Multi-channel recommendation deployment'
+          ],
+          link: '/ai-services'
         }
       ]
     },
@@ -169,6 +411,127 @@ export default function ServicesCatalog() {
             'Snowflake/BigQuery/Redshift warehousing',
             'BI with Looker/Metabase',
             'Data catalog and access governance'
+          ],
+          link: '/it-services'
+        },
+        {
+          name: 'Kubernetes Platform Engineering',
+          blurb: 'Production-ready Kubernetes clusters with monitoring, security, and GitOps workflows.',
+          price: '$8,000 – $50,000 fixed or $160 – $250/hr',
+          eta: '4–12 weeks',
+          bullets: [
+            'Multi-cluster Kubernetes architecture',
+            'Istio service mesh and security policies',
+            'ArgoCD GitOps and CI/CD pipelines',
+            'Prometheus/Grafana monitoring stack'
+          ],
+          link: '/it-services',
+          refs: [
+            { label: 'Kubernetes', href: 'https://kubernetes.io/' },
+            { label: 'Istio', href: 'https://istio.io/' }
+          ]
+        },
+        {
+          name: 'Zero Trust Security Architecture',
+          blurb: 'Comprehensive zero trust implementation with identity, network, and data protection.',
+          price: '$12,000 – $75,000 fixed or $180 – $280/hr',
+          eta: '6–16 weeks',
+          bullets: [
+            'Identity and access management (IAM)',
+            'Network segmentation and micro-segmentation',
+            'Data encryption and key management',
+            'Continuous security monitoring and compliance'
+          ],
+          link: '/it-services'
+        },
+        {
+          name: 'Edge Computing Infrastructure',
+          blurb: 'Distributed edge computing platform for low-latency applications and IoT.',
+          price: '$10,000 – $60,000 fixed or $170 – $260/hr',
+          eta: '5–14 weeks',
+          bullets: [
+            'Multi-region edge deployment strategy',
+            'CDN integration and content optimization',
+            'Edge AI/ML model deployment',
+            'Real-time data processing and analytics'
+          ],
+          link: '/it-services'
+        },
+        {
+          name: 'Blockchain & Web3 Integration',
+          blurb: 'Enterprise blockchain solutions, smart contracts, and Web3 application development.',
+          price: '$15,000 – $100,000 fixed or $200 – $350/hr',
+          eta: '8–20 weeks',
+          bullets: [
+            'Smart contract development and auditing',
+            'DeFi protocol integration',
+            'NFT marketplace development',
+            'Cross-chain interoperability solutions'
+          ],
+          link: '/it-services'
+        },
+        {
+          name: 'Quantum-Safe Cryptography',
+          blurb: 'Post-quantum cryptography implementation for future-proof security.',
+          price: '$8,000 – $45,000 fixed or $180 – $280/hr',
+          eta: '4–10 weeks',
+          bullets: [
+            'Quantum-resistant algorithm implementation',
+            'Hybrid classical-quantum security models',
+            'Migration planning and risk assessment',
+            'Compliance with NIST standards'
+          ],
+          link: '/it-services'
+        },
+        {
+          name: '5G Network Slicing & Optimization',
+          blurb: '5G network architecture design and optimization for enterprise applications.',
+          price: '$20,000 – $120,000 fixed or $250 – $400/hr',
+          eta: '10–24 weeks',
+          bullets: [
+            'Network slicing design and implementation',
+            'Edge computing integration',
+            'IoT device management and optimization',
+            'Performance monitoring and analytics'
+          ],
+          link: '/it-services'
+        },
+        {
+          name: 'AR/VR Development Platform',
+          blurb: 'Immersive technology solutions for training, collaboration, and customer engagement.',
+          price: '$12,000 – $80,000 fixed or $200 – $350/hr',
+          eta: '6–18 weeks',
+          bullets: [
+            'Cross-platform AR/VR application development',
+            '3D asset creation and optimization',
+            'Spatial computing and hand tracking',
+            'Multi-user collaboration features'
+          ],
+          link: '/it-services'
+        },
+        {
+          name: 'Digital Twin Platform',
+          blurb: 'Real-time digital twin creation for assets, processes, and systems monitoring.',
+          price: '$15,000 – $90,000 fixed or $220 – $380/hr',
+          eta: '8–20 weeks',
+          bullets: [
+            '3D modeling and simulation capabilities',
+            'Real-time data integration and visualization',
+            'Predictive analytics and scenario modeling',
+            'IoT sensor integration and monitoring'
+          ],
+          link: '/it-services'
+        },
+        {
+          name: 'Green IT & Sustainability Solutions',
+          blurb: 'Carbon footprint reduction and sustainable technology implementation.',
+          price: '$5,000 – $35,000 fixed or $150 – $220/hr',
+          eta: '3–8 weeks',
+          bullets: [
+            'Energy efficiency assessment and optimization',
+            'Cloud carbon footprint monitoring',
+            'Sustainable software development practices',
+            'ESG reporting and compliance automation'
           ],
           link: '/it-services'
         }
