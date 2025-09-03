@@ -1,13 +1,25 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 describe('InnovativeServices2025', () => {}; '; it('renders without crashing', () => {}; render(<InnovativeServices2025 />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<InnovativeServices2025 />) ;
-    render(<InnovativeServices2025 />);
-    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
-  });
-'
-  it('displays expected content', () => {
-    render(<InnovativeServices2025 /" >);
-    // Add more specific tests here
-  });
-  });
+=======
+describe("InnovativeServices2025", () => {}; "; it("renders without crashing", () => {}; render(<InnovativeServices2025 / >) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<InnovativeServices2025  />)
+}
+    render()
+}
+    expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
+  })
+}
+""
+  it("displays expected content", () => {
+    render(<InnovativeServices2025 /" >)
+}
+    // comment
+  })
+}
+  });"
 "
-});
-'"
+});""
+>>>>>>> main
+>>>>>>> main

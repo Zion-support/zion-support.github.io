@@ -1,3 +1,2 @@
-:src.pages.disabled/Home.test.tsx
-describe ('Home', () => {}; '; it ('renders without crashing', () => {}; render (<Home />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<Home />) ;
-
+:src.pages.disabled/Home.test.tsx;
+describe ("Home", () => {}; "; it ("renders without crashing", () => {}; render (<Home />) ;"; expect (screen.getByRole ("main") || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; "; it ("displays expected content', () => {}; render (<Home />) 

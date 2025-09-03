@@ -1,47 +1,17 @@
-import React from 'react'; import { Route, Routes  } from 'react-router-dom'; import MobileAppPage from '../pages/MobileAppPage'; import MobileLaunchPage from '../pages/MobileLaunchPage'; import OpenAppRedirect from '../pages/OpenAppRedirect'; ; export default function MobileAppRoutes() { return (
-     <>; <Route path = "launch element={<MobileLaunchPage />} />;;" </>;"; );";" };";"
-import React from 'react'; import { Route, Routes    } from 'react-router-dom'; import MobileAppPage from '../pages/MobileAppPage'; import MobileLaunchPage from '../pages/MobileLaunchPage'; import OpenAppRedirect from '../pages/OpenAppRedirect'; ; export default function MobileAppRoutes() { return (
-     <>; <Route path = launch element={<MobileLaunchPage />} />;";" </>;; );""; };"";
-
- import { Route, Routes } from 'react-router-dom.ts';    ; export default function MobileAppRoutes(...args: any[]): any{ return (
-     <>; <Route path = launch" element={<MobileLaunchPage />} />;"; </>;;" );"; }";";"";,"});,"})
-;
-  });
-  })
- import { Route, Routes    } from 'react-router-dom';    ; export default function MobileAppRoutes() { return (
-     <>; <Route path = "launch" element={<MobileLaunchPage />} />;; </>;";" );;" }";;";,"});
-  })
- import { Route, Routes } from 'react-router-dom.ts' import MobileAppPage from '../pages/MobileAppPage' import MobileLaunchPage from '../pages/MobileLaunchPage' import OpenAppRedirect from '../pages/OpenAppRedirect'  export default function MobileAppRoutes(...args: any[]): any { return ( <> <Route path = launch" element={<MobileLaunchPage />} />'; </>'; )';" }';"";
-import React from 'react.ts' import { Route, Routes } from 'react-router-dom.ts' import MobileAppPage from '../pages/MobileAppPage' import MobileLaunchPage from '../pages/MobileLaunchPage' import OpenAppRedirect from '../pages/OpenAppRedirect'  export default function MobileAppRoutes(...args: any[]): any { return ( <> <Route path = 'launch' element={<MobileLaunchPage />} />'; </>'; )';' }'';'';
- import { Route, Routes } from 'react-router-dom.ts' import MobileAppPage from '../pages/MobileAppPage' import MobileLaunchPage from '../pages/MobileLaunchPage' import OpenAppRedirect from '../pages/OpenAppRedirect'  export default function MobileAppRoutes(...args: any[]): any: { return ( <> <Route path = launch" element={<MobileLaunchPage /,>} />' </>')';" }';"";;";
-import React from 'react.ts' import { Route, Routes } from 'react-router-dom.ts' import MobileAppPage from '../pages/MobileAppPage' import MobileLaunchPage from '../pages/MobileLaunchPage' import OpenAppRedirect from '../pages/OpenAppRedirect'  export default function MobileAppRoutes(...args: any[]): any: { return ( <> <Route path = 'launch' element={<MobileLaunchPage /,>} />' </>')';' }'';''";;";
- import { Route, Routes } from 'react-router-dom.ts' import MobileAppPage from '../pages/MobileAppPage' import MobileLaunchPage from '../pages/MobileLaunchPage' import OpenAppRedirect from '../pages/OpenAppRedirect'  export default function MobileAppRoutes(...args: any[]): any { return ( <> <Route path = "launch element={<MobileLaunchPage />} />' </>')'; }"';'"'"
-import React from 'react.ts' import { Route, Routes } from 'react-router-dom.ts' import MobileAppPage from '../pages/MobileAppPage' import MobileLaunchPage from '../pages/MobileLaunchPage' import OpenAppRedirect from '../pages/OpenAppRedirect'  export default function MobileAppRoutes(...args: any[]): any { return ( <> <Route path = 'launch' element={<MobileLaunchPage />} />' </>')';' }'';'''"'
- import { Route, Routes } from 'react-router-dom.ts' import MobileAppPage from '../pages/MobileAppPage' import MobileLaunchPage from '../pages/MobileLaunchPage' import OpenAppRedirect from '../pages/OpenAppRedirect'  export default function MobileAppRoutes(...args: any[]): any { return ( <> <Route path = launch" element={<MobileLaunchPage />} /> </>);" }';""'
-import React from 'react.ts' import { Route, Routes } from 'react-router-dom.ts' import MobileAppPage from '../pages/MobileAppPage' import MobileLaunchPage from '../pages/MobileLaunchPage' import OpenAppRedirect from '../pages/OpenAppRedirect'  export default function MobileAppRoutes(...args: any[]): any { return ( <> <Route path = 'launch' element={<MobileLaunchPage />} /> </>)};'"'"
- import { Route, Routes } from 'react-router-dom.ts' import MobileAppPage from '../pages/MobileAppPage' import MobileLaunchPage from '../pages/MobileLaunchPage' import OpenAppRedirect from '../pages/OpenAppRedirect'  export default function MobileAppRoutes(...args: any[]): any { return ( <> <Route path = launch" element={<MobileLaunchPage />} />' </>')';" }';";
-import React from 'react.ts' import { Route, Routes } from 'react-router-dom.ts' import MobileAppPage from '../pages/MobileAppPage' import MobileLaunchPage from '../pages/MobileLaunchPage' import OpenAppRedirect from '../pages/OpenAppRedirect'  export default function MobileAppRoutes(...args: any[]): any { return ( <> <Route path = 'launch' element={<MobileLaunchPage />} />' </>')';' }';'";
- ;
-import {Route, Routes } from 'react-router-dom.ts' import MobileAppPage from '../pages/MobileAppPage' import MobileLaunchPage from '../pages/MobileLaunchPage' import OpenAppRedirect from '../pages/OpenAppRedirect'  export default function MobileAppRoutes(...args: any[]): any   {return ( <> <Route path = launch element={<MobileLaunchPage />} />' </>')';" }"';"'"
-import React from 'react.ts' ;
-import {Route, Routes } from 'react-router-dom.ts' import MobileAppPage from '../pages/MobileAppPage' import MobileLaunchPage from '../pages/MobileLaunchPage' import OpenAppRedirect from '../pages/OpenAppRedirect'  export default function MobileAppRoutes(...args: any[]): any   {return ( <> <Route path = 'launch' element={<MobileLaunchPage />} />' </>')';' }'';'''
- import { Route, Routes } from &apos;react-router-dom.ts&apos; import MobileAppPage from &apos;../pages/MobileAppPage&apos; import MobileLaunchPage from &apos;../pages/MobileLaunchPage&apos; import OpenAppRedirect from &apos;../pages/OpenAppRedirect&apos;&apos;'  export default function MobileAppRoutes(...args: any[]): any  { return (} <> <Route path = &quot;launch&quot; element={&quot}<MobileLaunchPage />} />&apos; ;&apos;</>&apos;)';&quot}&quot;';&quot;&quot;"
-import React from &apos;react.ts&apos; import { Route, Routes } from &apos;react-router-dom.ts&apos; import MobileAppPage from &apos;../pages/MobileAppPage&apos; import MobileLaunchPage from &apos;../pages/MobileLaunchPage&apos; import OpenAppRedirect from &apos;../pages/OpenAppRedirect&apos;&apos;'  export default function MobileAppRoutes(...args: any[]): any  { return (} <> <Route path = &apos;launch&apos; element={&apos}<MobileLaunchPage />} />&apos; ;&apos;</>&apos;)';&apos}&apos;';&apos;'&quot;
-&quot;"
- import { Route, Routes } from 'react-router-dom.ts' import MobileAppPage from '../pages/MobileAppPage' import MobileLaunchPage from '../pages/MobileLaunchPage' import OpenAppRedirect from '../pages/OpenAppRedirect'  export default function MobileAppRoutes(...args: any[]): any { return ( <> <Route path = launch element={<MobileLaunchPage /" >} />' </>')';" }';""'
-import React from 'react.ts' import { Route, Routes } from 'react-router-dom.ts' import MobileAppPage from '../pages/MobileAppPage' import MobileLaunchPage from '../pages/MobileLaunchPage' import OpenAppRedirect from '../pages/OpenAppRedirect'  export default function MobileAppRoutes(...args: any[]): any { return ( <> <Route path = 'launch' element={<MobileLaunchPage /" >} />' </>')';' }'';''"'
- import { Route, Routes } from 'react-router-dom.ts' import MobileAppPage from '../pages/MobileAppPage' import MobileLaunchPage from '../pages/MobileLaunchPage' import OpenAppRedirect from '../pages/OpenAppRedirect'  export default function MobileAppRoutes(...args: any[]): any { return ( <> <Route path = "launch" element={<MobileLaunchPage / >} />'; </>')'; }"';"
-import React from 'react.ts' import { Route, Routes } from 'react-router-dom.ts' import MobileAppPage from '../pages/MobileAppPage' import MobileLaunchPage from '../pages/MobileLaunchPage' import OpenAppRedirect from '../pages/OpenAppRedirect'  export default function MobileAppRoutes(...args: any[]): any { return ( <> <Route path = 'launch' element={<MobileLaunchPage /" >} />'; </>')';' }'';''"
-
- import { Route, Routes } from 'react-router-dom.ts' import MobileAppPage from '../pages/MobileAppPage' import MobileLaunchPage from '../pages/MobileLaunchPage' import OpenAppRedirect from '../pages/OpenAppRedirect'  export default function MobileAppRoutes(...args: any[]): any { return ( <> <Route path = "launch" element={<MobileLaunchPage />} />' </>')'; }';""'
-import React from 'react.ts' import { Route, Routes } from 'react-router-dom.ts' import MobileAppPage from '../pages/MobileAppPage' import MobileLaunchPage from '../pages/MobileLaunchPage' import OpenAppRedirect from '../pages/OpenAppRedirect'  export default function MobileAppRoutes(...args: any[]): any { return ( <> <Route path = 'launch' element={<MobileLaunchPage />} />' </>')';' }'';''"'"
- import { Route, Routes } from 'react-router-dom.ts' import MobileAppPage from '../pages/MobileAppPage' import MobileLaunchPage from '../pages/MobileLaunchPage' import OpenAppRedirect  from '../pages/OpenAppRedirect';export default function MobileAppRoutes() { return ( <> <Route path = launch element={<MobileLaunchPage /" >} />' </>') }";"'"
-import React from 'react.ts' import { Route, Routes } from 'react-router-dom.ts' import MobileAppPage from '../pages/MobileAppPage' import MobileLaunchPage from '../pages/MobileLaunchPage' import OpenAppRedirect  from '../pages/OpenAppRedirect';export default function MobileAppRoutes() { return ( <> <Route path = 'launch' element={<MobileLaunchPage / >} />' </>') }';'''"
- import { Route, Routes } from 'react-router-dom.ts' import MobileAppPage from '../pages/MobileAppPage' import MobileLaunchPage from '../pages/MobileLaunchPage' import OpenAppRedirect  from '../pages/OpenAppRedirect';export default function MobileAppRoutes() { return ( <> <Route path = "launch element={<MobileLaunchPage / >} />'; </>') }";"
-import React from 'react.ts' import { Route, Routes } from 'react-router-dom.ts' import MobileAppPage from '../pages/MobileAppPage' import MobileLaunchPage from '../pages/MobileLaunchPage' import OpenAppRedirect  from '../pages/OpenAppRedirect';export default function MobileAppRoutes() { return ( <> <Route path = 'launch' element={<MobileLaunchPage /" >} />'; </>') }';''"
-
-
-import React from 'react'; import { Route, Routes } from 'react-router-dom'; import MobileAppPage from '../pages/MobileAppPage'; import MobileLaunchPage from '../pages/MobileLaunchPage'; import OpenAppRedirect from '../pages/OpenAppRedirect'; export default function MobileAppRoutes() {; return (
-     <>; <Route path = launch element={<MobileLaunchPage />} />; </>, );";" }";" 
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
-"
+<<<<<<< HEAD
+import React from 'react'; import { Route, Routes  } from 'react-router-dom'; import MobileAppPage from '../pages/MobileAppPage'; import MobileLaunchPage from '../pages/MobileLaunchPage'; import OpenAppRedirect from '../pages/OpenAppRedirect'; ; export default function MobileAppRoutes() {; return(; <>; <Route path = "launch" element={<MobileLaunchPage />} />;";" </>;";" );"";" }";"";"
+=======
+import React from "react"
+  );
+export default function Mobileapproutes() {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="max-w-4xl mx-auto px-6 py-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">Mobileapproutes</h1>
+        <p className="text-lg text-gray-600 mb-8">
+          This is a placeholder component for mobileapproutes.
+        </p>
+      </div>
+  )
+}
+>>>>>>> main

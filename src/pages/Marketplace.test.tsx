@@ -1,13 +1,25 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 describe('Marketplace', () => {}; '; it('renders without crashing', () => {}; render(<Marketplace />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<Marketplace />) ;
-    render(<Marketplace />);
-    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
-  });
-'
-  it('displays expected content', () => {
-    render(<Marketplace /" >);
-    // Add more specific tests here
-  });
-  });
+=======
+describe("Marketplace", () => {}; "; it("renders without crashing", () => {}; render(<Marketplace / >) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<Marketplace  />)
+}
+    render()
+}
+    expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
+  })
+}
+""
+  it("displays expected content", () => {
+    render(<Marketplace /" >)
+}
+    // comment
+  })
+}
+  });"
 "
-});
-'"
+});""
+>>>>>>> main
+>>>>>>> main

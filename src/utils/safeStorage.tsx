@@ -1,17 +1,131 @@
-import React from 'react';
-import {SEO } from '@/components/SEO';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export const safeStorage = {
+export default safeStorage;
 
-;,"});,"})
-export default function safeStorage() {return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-      <SEO title="safeStorage - Zion Tech Group" description="Professional safeStorage services by Zion Tech Group" />
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold text-white mb-8">safeStorage</h1>
-        <p className="text-gray-300 text-lg">
-          Professional safeStorage services to help your business grow.
-        </p>
-      </div>
-    </div>
-  );
+// In - memory storage for fallback with optimizationsconst inMemoryStore = {};
+let localStorageAvailable = null; // Cache the availability check
+let lastAvailabilityCheck = 0;
+const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds max
+
+function isLocalStorageAvailable() {
+  const now = Date.now();
+  // Use cached result if checked recently
+  if()
+    localStorageAvailable !== null &&
+    now-lastAvailabilityCheck < AVAILABILITY_CHECK_INTERVAL
+  ) {
+
+    return localStorageAvailable;
+  }
+
+  lastAvailabilityCheck = now;
+  try {
+    if(typeof window === 'undefined') {
+
+      localStorageAvailable = false;
+      return false;
+    }
+
+    const testKey = '__localStorage_test__';
+    localStorage.setItem(testKey,test');
+    localStorage.removeItem(testKey);
+    localStorageAvailable = true;
+    return true;
+  } catch {
+
+    localStorageAvailable = false;
+    return false;
+  }
 }
-"
+
+function safeConsoleError(message, error) {
+
+  const env = globalThis.process?.env?.NODE_ENV ?? 'production';
+  // Prevent infinite recursion in console logging'
+  if(env === 'production') return;
+
+  try {
+    // console.error(message, error);
+  } catch {
+
+    // Silent fail if console.error causes recursion
+  }}
+
+export const safeStorage = {
+
+  getItem: key => {
+
+    try {
+      return localStorage.getItem(key);
+    } catch(error) {
+
+      // console.warn('Failed to get item from localStorage:', error);
+      return null;
+    }
+  },
+
+  setItem: (key, value) => {
+
+    try {
+      localStorage.setItem(key, value);
+      return true;
+    } catch(error) {
+
+      // console.warn('Failed to set item in localStorage:', error);
+      return false;
+    }
+  },
+
+  removeItem: key => {
+
+    try {
+      localStorage.removeItem(key);
+      return true;
+    } catch(error) {
+
+      // console.warn('Failed to remove item from localStorage:', error);
+      return false;
+    }
+  },
+
+  clear: () => {
+    try {
+      localStorage.clear();
+      return true;
+    } catch(error) {
+
+      // console.warn('Failed to clear localStorage:', error);
+      return false;
+    }
+  },
+
+  key: index => {
+
+    try {
+      return localStorage.key(index);
+    } catch(error) {
+
+      // console.warn('Failed to get key from localStorage:', error);
+      return null;    }
+  },
+
+  get length() {
+    try {
+      return localStorage.length;
+    } catch(error) {
+
+      // console.warn('Failed to get localStorage length:', error);
+      return 0;    }
+  }};
+
+export default safeStorage;
+=======
+// comment
+export const safeStorage = {}
+
+
+export default safeStorage
+>>>>>>> main
+>>>>>>> main

@@ -1,119 +1,43 @@
+<<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 import type { NextPage } from 'next';
-import Link from 'next/link';
 import MainLayout from '../../components/layout/MainLayout';
-import { 
-  Brain, 
-  Globe, 
-  Smartphone, 
-  Cloud, 
-  Shield, 
-  BarChart3, 
-  Palette, ;
-  CheckCircle,;
-  ArrowRight} from 'lucide-react';
+import PricingGuide from '../../components/PricingGuide';
+import { services, getServicesByCategory } from '../../data/services';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, DollarSign, Target, Rocket } from 'lucide-react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+const ServicesPage: NextPage = () => {
+  const microSaasServices = getServicesByCategory('micro-saas');
+  const itServices = getServicesByCategory('it-services');
+  const aiServices = getServicesByCategory('ai-services');
+=======
+>>>>>>> main
 
-  const stats = [
-    { number: '80+', label: 'Micro SaaS Solutions', icon: Zap }, { number: '35+', label: 'IT Services', icon: Shield },
-    { number: '30+', label: 'AI Services', icon: Globe }, { number: '500+', label: 'Projects Completed', icon: TrendingUp }];
+const services = [
+  { name: 'AI Development', href: '/services/ai-development' },
+  { name: 'Cloud Services', href: '/services/cloud-services' },
+  { name: 'Web Development', href: '/services/web-development' },
+  { name: 'Mobile Development', href: '/services/mobile-development' },
+  { name: 'Blockchain Solutions', href: '/services/blockchain-solutions' },
+  { name: 'IoT Platforms', href: '/services/iot-platforms' },
+  { name: 'Cybersecurity', href: '/services/cybersecurity' },
+];
 
-  const benefits = [
-    {
-      icon: <DollarSign className="w-8 h-8" />, title: 'Competitive Pricing',
-      description: 'Transparent, market-competitive pricing with flexible plans to fit your budget and scale with your business.';
-},
-    {
-      icon: <Target className="w-8 h-8" />, title: 'Proven Results',
-      description: 'Track record of successful implementations with measurable ROI and client satisfaction across all industries.'}, {
-      icon: <Rocket className="w-8 h-8" />,
-      title: 'Fast Implementation', description: 'Rapid deployment and implementation with minimal downtime, getting you up and running quickly.';
-}, {
-      icon: <Award className="w-8 h-8" />,
-      title: 'Expert Support', description: '24/7 expert support from our experienced team of developers, engineers, and AI specialists.'
-const ServicesIndex: NextPage = () => {
-  const services = [
-    {
-      icon: Brain,
-      title: 'AI Development',
-      description: 'Custom AI solutions and machine learning models tailored to your business needs.',
-      features: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      href: '/services/ai-model-development-chat',
-      color: 'blue'},
-    {
-      icon: Globe,
-      title: 'Web Development',
-      description: 'Modern, responsive web applications built with cutting-edge technologies.',
-      features: ['React/Next.js Applications', 'E-commerce Solutions', 'Progressive Web Apps', 'API Development'],
-      href: '/services/web-application-development-chat',
-      color: 'green'},
-    {
-      icon: Smartphone,
-      title: 'Mobile Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android.',
-      features: ['iOS Development', 'Android Development', 'React Native', 'Flutter Apps'],
-      href: '/services/mobile-app-development-chat',
-      color: 'purple'},
-    {
-      icon: Cloud,
-      title: 'Cloud Solutions',
-      description: 'Scalable cloud infrastructure and migration services for modern applications.',
-      features: ['AWS/Azure/GCP', 'Cloud Migration', 'DevOps & CI/CD', 'Container Orchestration'],
-      href: '/services/cloud-migration-services-chat',
-      color: 'orange'},
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets.',
-      features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response'],
-      href: '/services/network-security-chat',
-      color: 'red'},
-    {
-      icon: BarChart3,
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with advanced analytics.',
-      features: ['Business Intelligence', 'Data Visualization', 'Predictive Modeling', 'Real-time Analytics'],
-      href: '/services/business-intelligence-chat',
-      color: 'indigo'},
-    {
-      icon: Palette,
-      title: 'UI/UX Design',
-      description: 'User-centered design solutions that enhance user experience and engagement.',
-      features: ['User Research', 'Wireframing', 'Prototyping', 'Design Systems'],
-      href: '/services/ui-ux-design-chat',
-      color: 'pink'},
-    {
-      icon: CheckCircle,
-      title: 'Quality Assurance',
-      description: 'Comprehensive testing services to ensure your applications perform flawlessly.',
-      features: ['Automated Testing', 'Performance Testing', 'Security Testing', 'User Acceptance Testing'],
-      href: '/services/quality-assurance-testing-chat',
-      color: 'teal'}
-  ]
-
-  const getColorClasses = (color: string) => {
-    const colorMap: { [key: string]: string } = {
-      blue: 'bg-blue-100 text-blue-600',
-      green: 'bg-green-100 text-green-600',
-      purple: 'bg-purple-100 text-purple-600',
-      orange: 'bg-orange-100 text-orange-600',
-      red: 'bg-red-100 text-red-600',
-      indigo: 'bg-indigo-100 text-indigo-600',
-      pink: 'bg-pink-100 text-pink-600',
-      teal: 'bg-teal-100 text-teal-600'};
-    return colorMap[color] || 'bg-gray-100 text-gray-600';
-  };
-
+export default function ServicesIndex() {
   return (
-    <MainLayout 
+<<<<<<< HEAD
+    <MainLayout
       title="Our Services - Zion Tech Group"
-      description="Comprehensive technology services including AI development, web development, mobile apps, cloud solutions, cybersecurity, and more."
+      description="Comprehensive technology solutions including Micro SaaS, IT Services, and AI Services. Transform your business with our innovative solutions."
     >
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h1 
-              className="text-5xl md: text-6xl font-bold mb-6 leading-tight"
+              className="text-5xl md:text-6xl font-bold mb-6 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -131,7 +55,7 @@ const ServicesIndex: NextPage = () => {
             </motion.p>
             
             <motion.div 
-              className="flex flex-col sm: flex-row gap-4 justify-center mb-12"
+              className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -189,7 +113,7 @@ const ServicesIndex: NextPage = () => {
             </p>
           </motion.div>
           
-          <div className="grid md: grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {/* Micro SaaS Services */}
             <motion.div 
               className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
@@ -207,7 +131,7 @@ const ServicesIndex: NextPage = () => {
                 Innovative, focused software solutions that solve specific business problems with minimal overhead and maximum impact.
               </p>
               <div className="mb-6">
-                <div className="text-sm text-gray-500 mb-2">Popular Services: </div>
+                <div className="text-sm text-gray-500 mb-2">Popular Services:</div>
                 <ul className="text-sm text-gray-600 space-y-1">
                   <li>• AI Content Generator Pro</li>
                   <li>• AI Email Responder</li>
@@ -220,7 +144,7 @@ const ServicesIndex: NextPage = () => {
                 <div className="text-sm text-gray-500 mb-2">Pricing Range:</div>
                 <div className="text-lg font-semibold text-green-600">$12 - $9,999/month</div>
               </div>
-              <Link href="/services/micro-saas" className="text-blue-600 hover: text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">
+              <Link href="/services/micro-saas" className="text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">
                 View All Micro SaaS <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
@@ -242,7 +166,7 @@ const ServicesIndex: NextPage = () => {
                 Comprehensive IT infrastructure, cloud migration, cybersecurity, and enterprise solutions for modern businesses.
               </p>
               <div className="mb-6">
-                <div className="text-sm text-gray-500 mb-2">Popular Services: </div>
+                <div className="text-sm text-gray-500 mb-2">Popular Services:</div>
                 <ul className="text-sm text-gray-600 space-y-1">
                   <li>• Cloud Migration Expert</li>
                   <li>• Edge Computing Solutions</li>
@@ -253,9 +177,9 @@ const ServicesIndex: NextPage = () => {
               </div>
               <div className="mb-6">
                 <div className="text-sm text-gray-500 mb-2">Pricing Range:</div>
-                <div className="text-lg font-semibold text-green-600">$2, 000 - $500,000/project</div>
+                <div className="text-lg font-semibold text-green-600">$2,000 - $500,000/project</div>
               </div>
-              <Link href="/services/it-services" className="text-blue-600 hover: text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">
+              <Link href="/services/it-services" className="text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">
                 View All IT Services <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
@@ -277,7 +201,7 @@ const ServicesIndex: NextPage = () => {
                 Cutting-edge artificial intelligence solutions to automate processes, gain insights, and achieve competitive advantages.
               </p>
               <div className="mb-6">
-                <div className="text-sm text-gray-500 mb-2">Popular Services: </div>
+                <div className="text-sm text-gray-500 mb-2">Popular Services:</div>
                 <ul className="text-sm text-gray-600 space-y-1">
                   <li>• AI Drug Discovery Platform</li>
                   <li>• AI Climate Modeling</li>
@@ -288,23 +212,18 @@ const ServicesIndex: NextPage = () => {
               </div>
               <div className="mb-6">
                 <div className="text-sm text-gray-500 mb-2">Pricing Range:</div>
-                <div className="text-lg font-semibold text-green-600">$4,000 - $2, 000,000/project</div>
+                <div className="text-lg font-semibold text-green-600">$4,000 - $2,000,000/project</div>
               </div>
-              <Link href="/services/ai-services" className="text-blue-600 hover: text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">
+              <Link href="/services/ai-services" className="text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">
                 View All AI Services <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
-            <p className="text-xl md:text-2xl max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to transform your business and drive growth in the digital age.
-            </p>
           </div>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-20">
+      {/* Benefits Section */}
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -319,7 +238,7 @@ const ServicesIndex: NextPage = () => {
             </p>
           </motion.div>
           
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div 
                 key={benefit.title}
@@ -348,7 +267,7 @@ const ServicesIndex: NextPage = () => {
       {/* Contact and Pricing Guidance */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="grid md: grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow">
               <h3 className="text-xl font-semibold mb-2">Talk to an Expert</h3>
               <p className="text-gray-600 mb-4">Get a tailored recommendation and a quote within 24 hours.</p>
@@ -371,7 +290,7 @@ const ServicesIndex: NextPage = () => {
             <div className="bg-white p-6 rounded-lg shadow">
               <h3 className="text-xl font-semibold mb-2">Useful Links</h3>
               <ul className="text-sm text-blue-700 space-y-2">
-                <li><a className="underline" href="https: //ziontechgroup.com">Website</a></li>
+                <li><a className="underline" href="https://ziontechgroup.com">Website</a></li>
                 <li><a className="underline" href="https://ziontechgroup.com/services">All Services</a></li>
                 <li><a className="underline" href="https://ziontechgroup.com/contact">Contact</a></li>
                 <li><a className="underline" href="https://ziontechgroup.com/privacy">Privacy</a></li>
@@ -396,13 +315,18 @@ const ServicesIndex: NextPage = () => {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Discover our most popular and innovative solutions that are transforming businesses across industries.
             </p>
+            <div className="mt-6">
+              <Link href="/services/expanded" className="inline-block text-blue-600 hover:text-blue-700 font-semibold underline">
+                Browse the expanded services catalog
+              </Link>
+            </div>
           </motion.div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.slice(0, 6).map((service, index) => (
               <motion.div 
                 key={service.id}
-                className="bg-white p-6 rounded-lg shadow-lg hover: shadow-xl transition-all duration-300 group"
+                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -417,87 +341,39 @@ const ServicesIndex: NextPage = () => {
                 </div>
                 <p className="text-gray-600 mb-4 text-sm">{service.description}</p>
                 <div className="flex justify-between items-center">
-                  <div className={`text-lg font-semibold text-green-600`>
+                  <div className="text-lg font-semibold text-green-600">
                     From ${service.pricing.starter}/mo
-          <div className=`grid md:grid-cols-2 lg:grid-cols-3 gap-8`}>
-            {services.map((service, index) => {
-              const IconComponent = service.icon;
-              return (
-                <div key={index} className={`bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow`>
-                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-6 ${getColorClasses(service.color)}`}>
-                    <IconComponent className=`h-6 w-6`} />
                   </div>
-                  
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">{service.title}</h3>
-                  <p className="text-gray-600 mb-6">{service.description}</p>
-                  
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  
                   <Link 
-                    href={service.href}
-                    className="inline-flex items-center text-blue-600 hover: text-blue-700 font-semibold"
+                    href={service.link}
+                    className="text-blue-600 hover:text-blue-700 font-semibold text-sm group-hover:text-purple-600 transition-colors inline-flex items-center"
                   >
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    Learn More <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
-              )})}
+              </motion.div>
+            ))}
           </div>
+          
+          <motion.div 
+            className="text-center mt-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <Link 
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105 hover:shadow-lg"
+            >
+              Get Custom Quote
+            </Link>
+          </motion.div>
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Process</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We follow a proven methodology to ensure successful project delivery and client satisfaction.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-blue-600">1</span>
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Discovery</h3>
-              <p className="text-gray-600">We understand your business goals and technical requirements.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-green-600">2</span>
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Planning</h3>
-              <p className="text-gray-600">We create a detailed project plan and timeline.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-purple-600">3</span>
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Development</h3>
-              <p className="text-gray-600">We build your solution using agile methodologies.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-orange-600">4</span>
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Deployment</h3>
-              <p className="text-gray-600">We deploy and provide ongoing support.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Pricing Guide */}
+      <PricingGuide />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 relative overflow-hidden">
@@ -513,9 +389,9 @@ const ServicesIndex: NextPage = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Let&apos;s discuss how our comprehensive technology solutions can help your business achieve its goals and stay ahead of the competition.''
+              Let's discuss how our comprehensive technology solutions can help your business achieve its goals and stay ahead of the competition.
             </p>
-            <div className="flex flex-col sm: flex-row justify-center gap-4">
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105 hover:shadow-lg">
                 Get Started Today
               </Link>
@@ -524,19 +400,71 @@ const ServicesIndex: NextPage = () => {
               </Link>
             </div>
           </motion.div>
-      <section className="py-20 bg-blue-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-4">Ready to Get Started?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Let&apos;s discuss your project requirements and how we can help you achieve your technology goals.
-          </p>
-          <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors inline-flex items-center">
-            Start Your Project
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
         </div>
       </section>
     </MainLayout>
-  )};
+=======
+    <main className="max-w-4xl mx-auto px-4 py-16">
+      <h1 className="text-3xl font-bold mb-6">Services</h1>
+      <ul className="space-y-2">
+        {services.map(s => (
+          <li key={s.href}>
+            <a href={s.href} className="text-blue-600 hover:underline">{s.name}</a>
+          </li>
+        ))}
+      </ul>
+    </main>
+>>>>>>> main
+  );
+}
+
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+import { services } from '../../utils/data/services';
+import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard';
+
+const ServicesIndex: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Explore our Micro SaaS, IT, AI, and Cloud services." />
+      </Head>
+      
+      <main className="container mx-auto px-4 py-12">
+        <h1 className="text-3xl font-bold mb-6">Services</h1>
+        <p className="text-gray-700 mb-10 max-w-3xl">
+          Discover battle-tested services and micro SaaS solutions. Transparent pricing and rapid delivery.
+          Visit our website at <a className="text-blue-600 underline" href="https://ziontechgroup.com" target="_blank" rel="noreferrer">ziontechgroup.com</a>.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((s) => (
+            <div key={s.id} className="flex flex-col">
+              <EnhancedMarketplaceCard
+                title={s.title}
+                description={`${s.description} Provider: ${s.provider.name}. Rating: ${s.provider.rating}/5.`}
+                price={`${s.pricing.currency} ${s.pricing.from} / ${s.pricing.type}`}
+                image={s.provider.avatar}
+              />
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-12 p-6 rounded-lg bg-gray-50 border">
+          <h2 className="text-2xl font-semibold mb-2">Contact Us</h2>
+          <p className="text-gray-700 mb-2">Mobile: +1 302 464 0950</p>
+          <p className="text-gray-700 mb-2">E-mail: <a className="text-blue-600 underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
+          <p className="text-gray-700">Address: 364 E Main St STE 1008 Middletown DE 19709</p>
+          <div className="mt-4">
+            <Link href="/contact" className="text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded">Request a quote</Link>
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+};
 
 export default ServicesIndex;
+>>>>>>> origin/main

@@ -1,21 +1,40 @@
- export default authService;'';,"});
-  })
-;
-  });,"});
-import React from 'react';
-import {SEO } from '@/components/SEO';
+// comment
+export class authService {
+  constructor() {
+    this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api"
+  }
 
-export default function auth() {return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950>
-      <SEO title=auth - Zion Tech Group" description="Professional auth services by Zion Tech Group />
-      <div className=container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold text-white mb-8>auth</h1>
-        <p className=text-gray-300 text-lg">
-          Professional auth services to help your business grow.
-        </p>
-      </div>
-    </div>
-  );
+  async get() {
+    try {
+      const response = await fetch("${this.baseUrl}/auth")
 }
-;
-&apos;'"
+      return await response.json()
+}
+    } catch (error) {
+      console.error("Error fetching data:", error)
+}
+      throw error
+    }
+
+<<<<<<< HEAD
+// Create and export a singleton instance;
+const authService = new AuthService();
+export default authService;
+
+export { API_BASE_URL };
+
+export { API_BASE_URL };
+
+export { API_BASE_URL };
+
+export { API_BASE_URL };
+
+export { API_BASE_URL };
+=======
+  }
+
+
+
+export default new authService()
+}
+>>>>>>> main

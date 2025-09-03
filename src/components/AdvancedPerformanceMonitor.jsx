@@ -1,11 +1,393 @@
-const mockScalabilityMetrics = [{ id: '1,', name: 'User: Sessions,', current: 1542,0, capacity: 2000,0, utilization: 77.,1, growth: 12.,3, prediction: 2500,0, category: 'User: Load,', unit: 'sessions,'} { id: '2,', name: 'API: Requests,', current: 125000,0, capacity: 200000,0, utilization: 62.,5, growth: 18.,7, prediction: 320000,0, category: 'API: Load,', unit: 'requests/hour,'} { id: '3,', name: 'Data: Storage,', current: 2.,8, capacity: 5.,0, utilization: 56.,0, growth: 8.,5, prediction: 4.,2, category: 'Storage,', unit: 'TB,'}] export: function AdvancedPerformanceMonitor() { const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState('overview') const [selectedCategory, setSelectedCategory] = useState('all') const [timeRange, setTimeRange] = useState('1h') const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const categories = ['all',Processor',Memory',Storage',Network',Database',Performance'] const timeRanges = [' { value: '15m,', label: '15: Minutes'} { value: '1h,', label: '1: Hour'} { value: '6h,', label: '6: Hours'} { value: '24h,', label: '24: Hours'}] const filteredMetrics =' selectedCategory === 'all' ? systemMetrics: systemMetrics.filter(metric: => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true)';'
-const mockScalabilityMetrics = [{ id: '1', name: 'User Sessions', current: 15420, capacity: 20000, utilization: 77.1, growth: 12.3, prediction: 25000, category: 'User Load', unit: 'sessions'} { id: '2', name: 'API Requests', current: 1250000, capacity: 2000000, utilization: 62.5, growth: 18.7, prediction: 3200000, category: 'API Load', unit: 'requests/hour'} { id: '3', name: 'Data Storage', current: 2.8, capacity: 5.0, utilization: 56.0, growth: 8.5, prediction: 4.2, category: 'Storage', unit: 'TB'}] export function AdvancedPerformanceMonitor() { const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState('overview') const [selectedCategory, setSelectedCategory] = useState('all') const [timeRange, setTimeRange] = useState('1h') const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const categories = ['all', Processor',Memory', Storage',Network', Database',Performance'] const timeRanges = [' { value: '15m', label: '15 Minutes' } { value: '1h', label: '1 Hour' } { value: '6h', label: '6 Hours' } { value: '24h', label: '24 Hours' }] const filteredMetrics =' selectedCategory === 'all' ? systemMetrics : systemMetrics.filter(metric => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true);
-const mockScalabilityMetrics = [{id: '1', name: 'User Sessions', current: 15420, capacity: 20000, utilization: 77.1, growth: 12.3, prediction: 25000, category: 'User Load', unit: 'sessions'} {id: '2', name: 'API Requests', current: 1250000, capacity: 2000000, utilization: 62.5, growth: 18.7, prediction: 3200000, category: 'API Load', unit: 'requests/hour'} {id: '3', name: 'Data Storage', current: 2.8, capacity: 5.0, utilization: 56.0, growth: 8.5, prediction: 4.2, category: 'Storage', unit: 'TB'}] export function AdvancedPerformanceMonitor() {const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState('overview') const [selectedCategory, setSelectedCategory] = useState('all') const [timeRange, setTimeRange] = useState('1h') const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const categories = ['all', Processor',Memory', Storage',Network', Database',Performance'] const timeRanges = [' { value: '15m', label: '15 Minutes' } {value: '1h', label: '1 Hour' } {value: '6h', label: '6 Hours' } {value: '24h', label: '24 Hours' }] const filteredMetrics =' selectedCategory === 'all' ? systemMetrics : systemMetrics.filter(metric => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true)
-const mockScalabilityMetrics = [{ id: &apos;1&apos, name: &apos;User Sessions&apos, current: 15420, capacity: 20000, utilization: 77.1, growth: 12.3, prediction: 25000, category: &apos;User Load&apos, unit: &apos;sessions&apos} { id: &apos;2&apos, name: &apos;API Requests&apos, current: 1250000, capacity: 2000000, utilization: 62.5, growth: 18.7, prediction: 3200000, category: &apos;API Load&apos, unit: &apos;requests/hour&apos} { id: &apos;3&apos, name: &apos;Data Storage&apos, current: 2.8, capacity: 5.0, utilization: 56.0, growth: 8.5, prediction: 4.2, category: &apos;Storage&apos, unit: &apos;TB&apos}]&apos;&apos; export function AdvancedPerformanceMonitor() {} const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const;const [activeTab, setActiveTab] = useState(&apos;overview&apos)&apos;' const [selectedCategory, setSelectedCategory] = useState(&apos;all&apos)&apos;' const [timeRange, setTimeRange] = useState(&apos;1h&apos)&apos;' const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const;const categories = [&apos;all&apos,Processor&apos,Memory&apos,Storage&apos,Network&apos,Database&apos,Performance&apos]&apos;' const timeRanges = [&apos { value: &apos;15m&apos, label: &apos;15 Minutes&apos} { value: &apos;1h&apos, label: &apos;1 Hour&apos} { value: &apos;6h&apos, label: &apos;6 Hours&apos} { value: &apos;24h&apos, label: &apos;24 Hours&apos}]&apos; const filteredMetrics =&apos; selectedCategory === &apos;all&apos; ? systemMetrics : systemMetrics.filter(metric => metric.category === selectedCategory)&apos; const refreshData = async () => { setIsRefreshing(true)}
-const mockScalabilityMetrics = [{ id: '1', name: 'User Sessions', current: 15420, capacity: 20000, utilization: 77.1, growth: 12.3, prediction: 25000, category: 'User Load', unit: 'sessions'} { id: '2', name: 'API Requests', current: 1250000, capacity: 2000000, utilization: 62.5, growth: 18.7, prediction: 3200000, category: 'API Load', unit: 'requests/hour'} { id: '3', name: 'Data Storage', current: 2.8, capacity: 5.0, utilization: 56.0, growth: 8.5, prediction: 4.2, category: 'Storage', unit: 'TB'}] export function AdvancedPerformanceMonitor() { const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState('overview') const [selectedCategory, setSelectedCategory] = useState('all') const [timeRange, setTimeRange] = useState('1h') const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const categories = ['all', Processor',Memory', Storage',Network', Database',Performance'] const timeRanges = [' { value: '15m', label: '15 Minutes' } { value: '1h', label: '1 Hour' } { value: '6h', label: '6 Hours' } { value: '24h', label: '24 Hours' }] const filteredMetrics =' selectedCategory === 'all' ? systemMetrics : systemMetrics.filter(metric => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true)
-"";
+<<<<<<< HEAD
+import React, { useState, useRef, useEffect } from 'react';
+import {  Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download,  } from 'lucide-react';
+ from 'lucide-react';
+
+const mockSystemMetrics = [{
+
+    id: '1',
+    name: 'CPU Usage',
+    value: 78.5,
+    unit: '%',
+    threshold: 85,
+    status: 'warning',
+    trend: 'up',
+    change: 5.2,
+    category: 'Processor',
+    lastUpdated: '2024-01-15T10:00:00.000Z'},
+  {
+
+    id: '2',
+    name: 'Memory Usage',
+    value: 65.3,
+    unit: '%',
+    threshold: 80,
+    status: 'normal',
+    trend: 'stable',
+    change: 0.8,
+    category: 'Memory',
+    lastUpdated: '2024-01-15T10:00:00.000Z'},
+  {
+
+    id: '3',
+    name: 'Disk I/O',
+    value: 1250,
+    unit: 'MB/s',
+    threshold: 1500,
+    status: 'normal',
+    trend: 'down',
+    change: -2.1,
+    category: 'Storage',
+    lastUpdated: '2024-01-15T10:00:00.000Z'},
+  {
+
+    id: '4',
+    name: 'Network Latency',
+    value: 45,
+    unit: 'ms',
+    threshold: 50,
+    status: 'normal',
+    trend: 'stable',
+    change: 0.5,
+    category: 'Network',
+    lastUpdated: '2024-01-15T10:00:00.000Z'},
+  {
+
+    id: '5',
+    name: 'Database Connections',
+    value: 89,
+    unit: 'connections',
+    threshold: 100,
+    status: 'warning',
+    trend: 'up',
+    change: 8.7,
+    category: 'Database',
+    lastUpdated: '2024-01-15T10:00:00.000Z'},
+  {
+
+    id: '6',
+    name: 'Response Time',
+    value: 180,
+    unit: 'ms',
+    threshold: 200,
+    status: 'normal',
+    trend: 'down',
+    change: -3.2,
+    category: 'Performance',
+    lastUpdated: '2024-01-15T10:00:00.000Z'},
+];
+
+const mockPerformanceAlerts = [{
+
+    id: '1',
+    type: 'performance',
+    severity: 'medium',
+    title: 'High CPU Usage Detected',
+    description:'
+      'CPU usage has exceeded 75% for the last 10 minutes, indicating potential performance degradation.',
+    timestamp: '2024-01-15T10:00:00.000Z',
+    affected: ['Web Server 1',Application Server 2'],
+    recommendations: ['
+      'Scale horizontally',Optimize database queries',Review background processes',
+    ],
+    status: 'active'},
+  {
+
+    id: '2',
+    type: 'scalability',
+    severity: 'high',
+    title: 'Database Connection Pool Near Capacity',
+    description:'
+      'Database connection pool is at 89% capacity, approaching the maximum limit.',
+    timestamp: '2024-01-15T09:45:00.000Z',
+    affected: ['Database Cluster',Application Servers'],
+    recommendations: ['
+      'Increase connection pool size',Implement connection pooling',Monitor query performance',
+    ],
+    status: 'active'},
+];
+
+export function AdvancedPerformanceMonitor({ enabled = true }) {
+
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isMinimized, setIsMinimized] = useState(false);
+  const [selectedMetric, setSelectedMetric] = useState(null);
+  const [refreshInterval, setRefreshInterval] = useState(5000);
+  const [isRefreshing, setIsRefreshing] = useState(false);
+  const [showAlerts, setShowAlerts] = useState(true);
+  const [performanceScore, setPerformanceScore] = useState(87);
+  const [trendData, setTrendData] = useState([]);
+  const [systemHealth, setSystemHealth] = useState('good');
+  const [optimizationSuggestions, setOptimizationSuggestions] = useState([]);
+
+  const containerRef = useRef(null) ;
+
+  useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
+    if(!enabled) return;
+
+    const interval = setInterval(() => {
+      refreshMetrics () ;
+    }, refreshInterval) ;
+
+    return () => clearInterval(interval) ;
+  }, [enabled, refreshInterval]) ;
+
+  const refreshMetrics = async () => {
+    setIsRefreshing(true) ;
+    // Simulate API call
+    await new Promise(resolve => setTimeout (resolve, 1000) ) ;
+    setIsRefreshing(false) ;
+  };
+
+  const getStatusColor = status => {
+
+    switch(status) {
+
+      case 'critical':'
+        return 'text-red-500';
+      case 'warning':'
+        return 'text-yellow-500';
+      case 'normal':'
+        return 'text-green-500';
+      default:'
+        return 'text-gray-500';
+    }
+  };
+
+  const getStatusIcon = status => {
+
+    switch(status) {
+
+      case 'critical':
+        return <AlertTriangle className="w-4 h-4 text-red-500" />;
+      case 'warning':"
+        return <AlertTriangle className="w-4 h-4 text-yellow-500" />;
+      case 'normal':"
+        return <CheckCircle className="w-4 h-4 text-green-500" />;
+      default:"
+        return <Activity className="w-4 h-4 text-gray-500" />;
+    }
+  };
+
+  const getTrendIcon = trend => {
+
+    switch(trend) {
+
+      case 'up':"
+        return <TrendingUp className="w-4 h-4 text-red-500" />;
+      case 'down':
+        return ("
+          <TrendingUp className="w-4 h-4 text-green-500 transform rotate-180" />
+        );
+      case 'stable':"
+        return <BarChart3 className="w-4 h-4 text-blue-500" />;
+      default:"
+        return <Activity className="w-4 h-4 text-gray-500" />;
+    }
+  };
+
+  if(!enabled) return null;
+
+  if(isMinimized) {
+
+    return ("
+      <div className="fixed bottom-4 right-4 z-50">
+        <button
+          onClick={() => setIsMinimized(false)}"
+          className="bg-zion-blue text-white p-3 rounded-full shadow-lg hover:bg-zion-blue/80 transition-all duration-300"
+        >"
+          <Maximize2 className="w-5 h-5" />
+        </button>
+      </div>) ;
+  }
+
+  return ()
+    <div
+      ref={containerRef}
+      className={`fixed bottom-4 right-4 z-50 bg-white dark:bg-zion-slate-dark rounded-lg shadow-2xl border border-zion-slate-light/20 transition-all duration-300 ${isExpanded ? 'w-96 h-96' : 'w-80 h-64'`
+      }`}
+    >
+      {/* Header */}"
+      <div className="flex items-center justify-between p-4 border-b border-zion-slate-light/20">"
+        <div className="flex items-center space-x-2">"
+          <Activity className="w-5 h-5 text-zion-cyan" />"
+          <h3 className="font-semibold text-zion-slate-dark dark:text-white">
+            Performance Monitor
+          </h3>
+          <div`
+            className={`w-2 h-2 rounded-full ${systemHealth === 'good''
+                ? 'bg-green-500''
+                : systemHealth === 'warning''
+                  ? 'bg-yellow-500''
+                  : 'bg-red-500'`
+            }`}
+          />
+        </div>"
+        <div className="flex items-center space-x-2">
+          <button
+            onClick={() => setShowAlerts(!showAlerts)}"
+            className="p-1 hover:bg-zion-slate-light/20 rounded transition-colors"
+          >
+            <AlertTriangle'`
+              className={`w-4 h-4 ${showAlerts ? 'text-yellow-500' : 'text-gray-400'}`}
+            />
+          </button>
+          <button
+            onClick={refreshMetrics}
+            disabled={isRefreshing}"
+            className="p-1 hover:bg-zion-slate-light/20 rounded transition-colors disabled:opacity-50"
+          >
+            <RefreshCw'`
+              className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`}
+            />
+          </button>
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}"
+            className="p-1 hover:bg-zion-slate-light/20 rounded transition-colors"
+          >
+            {isExpanded ? ("
+              <Minimize2 className="w-4 h-4" />
+            ) : ("
+              <Maximize2 className="w-4 h-4" />
+            )}
+          </button>
+          <button
+            onClick={() => setIsMinimized(true)}"
+            className="p-1 hover:bg-zion-slate-light/20 rounded transition-colors"
+          >"
+            <X className="w-4 h-4" />
+          </button>
+        </div>
+      </div>
+
+      {/* Content */}"
+      <div className="p-4 space-y-4 overflow-y-auto h-full">
+        {/* Performance Score */}"
+        <div className="text-center">"
+          <div className="text-2xl font-bold text-zion-cyan">
+            {performanceScore}
+          </div>"
+          <div className="text-sm text-zion-slate-light">Performance Score</div>
+        </div>
+
+        {/* Key Metrics */}"
+        <div className="grid grid-cols-2 gap-3">
+          {mockSystemMetrics.slice(0, 4).map(metric => (
+            <div
+              key={metric.id}"
+              className="p-3 bg-zion-slate-light/10 rounded-lg cursor-pointer hover:bg-zion-slate-light/20 transition-colors"
+              onClick={() => setSelectedMetric(metric)}
+            >"
+              <div className="flex items-center justify-between mb-2">"
+                <span className="text-xs text-zion-slate-light">
+                  {metric.name}
+                </span>
+                {getStatusIcon(metric.status)}
+              </div>"
+              <div className="text-lg font-semibold text-zion-slate-dark dark:text-white">
+                {metric.value}
+                {metric.unit}
+              </div>"
+              <div className="flex items-center space-x-1 text-xs">
+                {getTrendIcon(metric.trend)}
+                <span
+                  className={
+
+                    metric.change >= 0 ? 'text-red-500' : 'text-green-500'
+                  }
+                >
+                  {metric.change >= 0 ? '+' : ''}
+                  {metric.change}%
+                </span>
+              </div>
+            </div>) ) }
+        </div>
+
+        {/* Alerts */}
+        {showAlerts && mockPerformanceAlerts.length > 0 && ("
+          <div className="space-y-2">"
+            <h4 className="text-sm font-semibold text-zion-slate-dark dark:text-white">
+              Active Alerts
+            </h4>
+            {mockPerformanceAlerts.map(alert => (
+              <div
+                key={alert.id}`
+                className={`p-3 rounded-lg border-l-4 ${alert.severity === 'high''
+                    ? 'border-red-500 bg-red-50 dark:bg-red-900/20''
+                    : alert.severity === 'medium''
+                      ? 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20''
+                      : 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'`
+                }`}
+              >"
+                <div className="flex items-start justify-between">"
+                  <div className="flex-1">"
+                    <h5 className="text-sm font-semibold text-zion-slate-dark dark:text-white">
+                      {alert.title}
+                    </h5>"
+                    <p className="text-xs text-zion-slate-light mt-1">
+                      {alert.description}
+                    </p>
+                  </div>
+                  <span`
+                    className={`text-xs px-2 py-1 rounded-full ${alert.severity === 'high''
+                        ? 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200''
+                        : alert.severity === 'medium''
+                          ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200''
+                          : 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'`
+                    }`}
+                  >
+                    {alert.severity}
+                  </span>
+                </div>
+              </div>) ) }
+          </div>) }
+
+        {/* Expanded View */}
+        {isExpanded && ("
+          <div className="space-y-4">"
+            <div className="border-t border-zion-slate-light/20 pt-4">"
+              <h4 className="text-sm font-semibold text-zion-slate-dark dark:text-white mb-3">
+                System Health Overview
+              </h4>"
+              <div className="space-y-2">
+                {mockSystemMetrics.map(metric => (
+                  <div
+                    key={metric.id}"
+                    className="flex items-center justify-between text-sm"
+                  >"
+                    <span className="text-zion-slate-light">{metric.name}</span>"
+                    <div className="flex items-center space-x-2">
+                      <span className={getStatusColor(metric.status)}>
+                        {metric.value}
+                        {metric.unit}
+                      </span>
+                      {getStatusIcon(metric.status)}
+                    </div>
+                  </div>) ) }
+              </div>
+            </div>
+          </div>) }
+      </div>
+    </div>) ;
+=======
+const mockScalabilityMetrics = [] export: function AdvancedPerformanceMonitor() { const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState("overview") const [selectedCategory, setSelectedCategory] = useState("all") const [timeRange, setTimeRange] = useState("1h") const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const categories = [] const timeRanges = [] const filteredMetrics =" selectedCategory === "all" ? systemMetrics: systemMetrics.filter(metric: => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true)","
+const mockScalabilityMetrics = [] export function AdvancedPerformanceMonitor() { const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState("overview") const [selectedCategory, setSelectedCategory] = useState("all") const [timeRange, setTimeRange] = useState("1h") const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const categories = [] const timeRanges = [] const filteredMetrics =" selectedCategory === "all" ? systemMetrics : systemMetrics.filter(metric => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true)
+>>>>>>> main
+}
+const mockScalabilityMetrics = [] export function AdvancedPerformanceMonitor() {const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState("overview") const [selectedCategory, setSelectedCategory] = useState("all") const [timeRange, setTimeRange] = useState("1h") const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const categories = [] const timeRanges = [] const filteredMetrics =" selectedCategory === "all" ? systemMetrics : systemMetrics.filter(metric => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true)
+}
+const mockScalabilityMetrics = []&apos;&apos; export function AdvancedPerformanceMonitor() {} const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const;const [activeTab, setActiveTab] = useState(&apos;overview&apos)&apos, const [selectedCategory, setSelectedCategory] = useState(&apos;all&apos)&apos, const [timeRange, setTimeRange] = useState(&apos;1h&apos)&apos, const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const;const categories = []&apos, const timeRanges = []&apos; const filteredMetrics =&apos; selectedCategory === &apos;all&apos; ? systemMetrics : systemMetrics.filter(metric => metric.category === selectedCategory)&apos; const refreshData = async () => { setIsRefreshing(true)}
+
+const mockScalabilityMetrics = [] export function AdvancedPerformanceMonitor() { const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState("overview") const [selectedCategory, setSelectedCategory] = useState("all") const [timeRange, setTimeRange] = useState("1h") const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const categories = [] const timeRanges = [] const filteredMetrics =" selectedCategory === "all" ? systemMetrics : systemMetrics.filter(metric => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true)
+}
+""
 }}
-const mockScalabilityMetrics = [
-  { id: '1', name: 'User Sessions', current: 15420, capacity: 20000, utilization: 77.1, growth: 12.3, prediction: 25000, category: 'User Load', unit: 'sessions'} { id: '2', name: 'API Requests', current: 1250000, capacity: 2000000, utilization: 62.5, growth: 18.7, prediction: 3200000, category: 'API Load', unit: 'requests/hour'} { id: '3', name: 'Data Storage', current: 2.8, capacity: 5.0, utilization: 56.0, growth: 8.5, prediction: 4.2, category: 'Storage', unit: 'TB'}] export function AdvancedPerformanceMonitor() { const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState('overview') const [selectedCategory, setSelectedCategory] = useState('all') const [timeRange, setTimeRange] = useState('1h') const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const categories = ['all', Processor',Memory', Storage',Network', Database',Performance'] const timeRanges = [' { value: '15m', label: '15 Minutes' } { value: '1h', label: '1 Hour' } { value: '6h', label: '6 Hours' } { value: '24h', label: '24 Hours' }] const filteredMetrics =' selectedCategory === 'all' ? systemMetrics : systemMetrics.filter(metric => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true)
-"
-"
+
+const mockScalabilityMetrics = [] export function AdvancedPerformanceMonitor() { const [isOpen, setIsOpen] = useState(false) const [isMinimized, setIsMinimized] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [activeTab, setActiveTab] = useState("overview") const [selectedCategory, setSelectedCategory] = useState("all") const [timeRange, setTimeRange] = useState("1h") const [autoRefresh, setAutoRefresh] = useState(true) const [showPredictions, setShowPredictions] = useState(true) const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics) const [performanceAlerts, setPerformanceAlerts] = useState() mockPerformanceAlerts ) const [scalabilityMetrics, setScalabilityMetrics] = useState() mockScalabilityMetrics ) const [isRefreshing, setIsRefreshing] = useState(false) const categories = [] const timeRanges = [] const filteredMetrics =" selectedCategory === "all' ? systemMetrics : systemMetrics.filter(metric => metric.category === selectedCategory) const refreshData = async () => { setIsRefreshing(true)"
+"""

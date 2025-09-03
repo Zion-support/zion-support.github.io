@@ -7,7 +7,7 @@ const { execSync } = require('child_process');
 class AppOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
+    this.reportsDir = path.join(this.projectRoot, 'optimization-reports');
     this.ensureDirectories();
   }
 
@@ -21,182 +21,275 @@ class AppOptimizer {
     console.log(`[${new Date().toISOString()}] ${message}`);
   }
 
-  async runCommand(command, description) {
-    this.log(`🚀 Starting: ${description}`);
-    try {
-      const result = execSync(command, {
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 300000,;
-});
-      this.log(`✅ Completed: ${description}`);
-      return { success: true, output: result };
-    } catch (error) {
-      this.log(`❌ Failed: ${description} - ${error.message}`);
-      return { success: false, error: error.message };
-    }
-  }
-
-  async optimizeImages() {
+  optimizeImages() {
     this.log('🖼️ Optimizing images...');
     
-    const publicDir = path.join(this.projectRoot, 'public');
-    if (!fs.existsSync(publicDir)) {
-      this.log('⚠️ Public directory not found');
-      return { success: false, error: 'Public directory not found' };
-    }
-
-    // Find image files
-    const imageFiles = this.findImageFiles(publicDir);
-    this.log(`Found ${imageFiles.length} image files to optimize`);
-
-    // For now, just report what we found
-    // In a real implementation, you would use tools like imagemin, sharp, etc.
-    return {
-      success: true,
-      filesFound: imageFiles.length,
-      files: imageFiles.slice(0, 10) // Show first 10 files;
-};
-  }
-
-  findImageFiles(dir) {
-    const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
-    const files = [];
-
-    const scanDir = (currentDir) => {
-      const items = fs.readdirSync(currentDir);
+    try {
+      const publicDir = path.join(this.projectRoot, 'public');
+      const srcDir = path.join(this.projectRoot, 'src');
       
-      for (const item of items) {
-        const fullPath = path.join(currentDir, item);
-        const stat = fs.statSync(fullPath);
-
-        if (stat.isDirectory()) {
-          scanDir(fullPath);
-        } else if (imageExtensions.includes(path.extname(item).toLowerCase())) {
-          files.push(fullPath);
+      let optimizedCount = 0;
+      let totalSize = 0;
+      let optimizedSize = 0;
+      
+      const optimizeDirectory = (dir) => {
+        if (!fs.existsSync(dir)) return;
+        
+        const files = fs.readdirSync(dir);
+        
+        for (const file of files) {
+          const filePath = path.join(dir, file);
+          const stat = fs.statSync(filePath);
+          
+          if (stat.isDirectory()) {
+            optimizeDirectory(filePath);
+          } else if (file.match(/\.(jpg|jpeg|png|gif|webp)$/i)) {
+            const originalSize = stat.size;
+            totalSize += originalSize;
+            
+            // For now, just log the files that could be optimized
+            // In a real implementation, you would use tools like imagemin
+            this.log(`  📸 Found image: ${file} (${(originalSize / 1024).toFixed(1)} KB)`);
+            optimizedCount++;
+            optimizedSize += originalSize;
+          }
         }
+      };
+      
+      optimizeDirectory(publicDir);
+      optimizeDirectory(srcDir);
+      
+      this.log(`✅ Found ${optimizedCount} images (${(totalSize / 1024 / 1024).toFixed(2)} MB total)`);
+      
+      return {
+        success: true,
+        imageCount: optimizedCount,
+        totalSizeMB: totalSize / 1024 / 1024,
+        timestamp: new Date().toISOString()
+      };
+    } catch (error) {
+      this.log(`❌ Image optimization failed: ${error.message}`);
+      return {
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString()
+      };
+    }
+  }
+
+  optimizeBundle() {
+    this.log('📦 Optimizing bundle...');
+    
+    try {
+      // Check if build exists
+      const distPath = path.join(this.projectRoot, 'dist');
+      if (!fs.existsSync(distPath)) {
+        this.log('🔨 Building project first...');
+        execSync('npm run build', { stdio: 'pipe', cwd: this.projectRoot });
       }
-    };
-
-    scanDir(dir);
-    return files;
-  }
-
-  async analyzeBundleSize() {
-    this.log('📦 Analyzing bundle size...');
-    
-    try {
-      const result = await this.runCommand('npm run analyze', 'Bundle Analysis');
-      return result;
+      
+      // Analyze bundle size
+      const getDirectorySize = (dir) => {
+        let size = 0;
+        const files = fs.readdirSync(dir);
+        
+        for (const file of files) {
+          const filePath = path.join(dir, file);
+          const stat = fs.statSync(filePath);
+          
+          if (stat.isDirectory()) {
+            size += getDirectorySize(filePath);
+          } else {
+            size += stat.size;
+          }
+        }
+        
+        return size}
+      
+      const bundleSize = getDirectorySize(distPath);
+      const bundleSizeMB = bundleSize / 1024 / 1024;
+      
+      this.log(`✅ Bundle size: ${bundleSizeMB.toFixed(2)} MB`);
+      
+      // Check for large files
+      const largeFiles = [];
+      const findLargeFiles = (dir, baseDir = dir) => {
+        const files = fs.readdirSync(dir);
+        
+        for (const file of files) {
+          const filePath = path.join(dir, file);
+          const stat = fs.statSync(filePath);
+          
+          if (stat.isDirectory()) {
+            findLargeFiles(filePath, baseDir);
+          } else if (stat.size > 100 * 1024) { // Files larger than 100KB
+            const relativePath = path.relative(baseDir, filePath);
+            largeFiles.push({
+              file: relativePath,
+              size: stat.size,
+              sizeKB: (stat.size / 1024).toFixed(1)
+            });
+          }
+        }
+      };
+      
+      findLargeFiles(distPath);
+      
+      this.log(`📊 Found ${largeFiles.length} large files (>100KB)`);
+      
+      return {
+        success: true,
+        bundleSizeMB: bundleSizeMB,
+        largeFiles: largeFiles,
+        timestamp: new Date().toISOString()
+      };
     } catch (error) {
-      this.log('⚠️ Bundle analysis not available');
-      return { success: false, error: 'Bundle analysis not configured' };
+      this.log(`❌ Bundle optimization failed: ${error.message}`);
+      return {
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString()
+      };
     }
   }
 
-  async generateSitemap() {
-    this.log('🗺️ Generating sitemap...');
+  optimizeCode() {
+    this.log('💻 Optimizing code...');
     
     try {
-      const result = await this.runCommand('npm run sitemap', 'Sitemap Generation');
-      return result;
+      const srcDir = path.join(this.projectRoot, 'src');
+      let totalFiles = 0;
+      let optimizedFiles = 0;
+      const suggestions = [];
+      
+      const analyzeFile = (filePath) => {
+        const content = fs.readFileSync(filePath, 'utf8');
+        const lines = content.split('\n');
+        const fileSuggestions = [];
+        
+        // Check for common optimization opportunities
+        lines.forEach((line, index) => {
+          // Unused imports
+          if (line.includes('import') && !content.includes(line.split(' ')[1]?.split(' ')[0]?.split('{')[1]?.split('}')[0])) {
+            fileSuggestions.push(`Line ${index + 1}: Potential unused import`);
+          }
+          
+          // Console.log statements
+          if (line.includes('console.log') && !line.includes('//')) {
+            fileSuggestions.push(`Line ${index + 1}: Remove console.log in production`);
+          }
+          
+          // Large functions
+          if (line.includes('function') || line.includes('const') && line.includes('=') && line.includes('=>')) {
+            // This is a simplified check - in reality you'd need more sophisticated analysis
+          }
+        });
+        
+        if (fileSuggestions.length > 0) {
+          suggestions.push({
+            file: path.relative(this.projectRoot, filePath),
+            suggestions: fileSuggestions
+          });
+        }
+        
+        return fileSuggestions.length > 0;
+      };
+      
+      const scanDirectory = (dir) => {
+        if (!fs.existsSync(dir)) return;
+        
+        const files = fs.readdirSync(dir);
+        
+        for (const file of files) {
+          const filePath = path.join(dir, file);
+          const stat = fs.statSync(filePath);
+          
+          if (stat.isDirectory()) {
+            scanDirectory(filePath);
+          } else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
+            totalFiles++;
+            if (analyzeFile(filePath)) {
+              optimizedFiles++;
+            }
+          }
+        }
+      };
+      
+      scanDirectory(srcDir);
+      
+      this.log(`✅ Analyzed ${totalFiles} files, found ${suggestions.length} files with optimization opportunities`);
+      
+      return {
+        success: true,
+        totalFiles,
+        filesWithSuggestions: suggestions.length,
+        suggestions,
+        timestamp: new Date().toISOString()
+      };
     } catch (error) {
-      this.log('⚠️ Sitemap generation failed');
-      return { success: false, error: error.message };
+      this.log(`❌ Code optimization failed: ${error.message}`);
+      return {
+        success: false,
+        error: error.message,
+        timestamp: new Date().toISOString()
+      };
     }
   }
 
-  async checkPerformance() {
-    this.log('⚡ Checking performance...');
+  generateReport() {
+    this.log('📊 Generating optimization report...');
     
-    const performanceChecks = {
-      buildTime: await this.measureBuildTime(),
-      bundleSize: await this.analyzeBundleSize(),
-      imageOptimization: await this.optimizeImages();
-};
-
-    return performanceChecks;
-  }
-
-  async measureBuildTime() {
-    this.log('⏱️ Measuring build time...');
+    const imageOptimization = this.optimizeImages();
+    const bundleOptimization = this.optimizeBundle();
+    const codeOptimization = this.optimizeCode();
     
-    const startTime = Date.now();
-    const result = await this.runCommand('npm run build', 'Build Time Measurement');
-    const endTime = Date.now();
-    
-    const buildTime = endTime - startTime;
-    this.log(`Build completed in ${buildTime}ms`);
-
-    return {
-      success: result.success,
-      buildTime: buildTime,
-      buildTimeSeconds: Math.round(buildTime / 1000);
-};
-  }
-
-  async generateReport(results) {
     const report = {
       timestamp: new Date().toISOString(),
+      imageOptimization,
+      bundleOptimization,
+      codeOptimization,
       summary: {
-        totalChecks: Object.keys(results).length,
-        successful: Object.values(results).filter(r => r.success).length,
-        failed: Object.values(results).filter(r => !r.success).length;
-},
-      results: results,
-      recommendations: this.generateRecommendations(results);
-};
-
-    const reportFile = path.join(this.reportsDir, 'app-optimization-report.json');
+        imagesFound: imageOptimization.success ? imageOptimization.imageCount : 0,
+        bundleSizeMB: bundleOptimization.success ? bundleOptimization.bundleSizeMB : null,
+        codeFilesAnalyzed: codeOptimization.success ? codeOptimization.totalFiles : 0,
+        optimizationOpportunities: codeOptimization.success ? codeOptimization.filesWithSuggestions : 0
+      }
+    };
+    
+    const reportFile = path.join(this.reportsDir, `app-optimization-report-${Date.now()}.json`);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-    this.log(`📊 Optimization report generated: ${reportFile}`);
+    this.log(`📄 Report saved to: ${reportFile}`);
+    
+    // Print summary
+    console.log('\n🚀 APP OPTIMIZER SUMMARY');
+    console.log('=' * 50);
+    console.log(`Images Found: ${report.summary.imagesFound}`);
+    console.log(`Bundle Size: ${report.summary.bundleSizeMB ? `${report.summary.bundleSizeMB.toFixed(2)} MB` : 'N/A'}`);
+    console.log(`Code Files Analyzed: ${report.summary.codeFilesAnalyzed}`);
+    console.log(`Optimization Opportunities: ${report.summary.optimizationOpportunities}`);
+    console.log(`Report: ${reportFile}`);
+    
     return report;
-  }
-
-  generateRecommendations(results) {
-    const recommendations = [];
-
-    if (results.buildTime && results.buildTime.buildTimeSeconds > 30) {
-      recommendations.push({
-        type: 'performance',
-        message: 'Build time is slow. Consider optimizing dependencies and code splitting.',
-        buildTime: results.buildTime.buildTimeSeconds;
-});
-    }
-
-    if (results.imageOptimization && results.imageOptimization.filesFound > 20) {
-      recommendations.push({
-        type: 'images',
-        message: 'Many images found. Consider implementing image optimization.',
-        imageCount: results.imageOptimization.filesFound;
-});
-    }
-
-    return recommendations;
   }
 
   async run() {
-    this.log('🎯 Starting App Optimization');
-    
-    const results = await this.checkPerformance();
-    const report = await this.generateReport(results);
-
-    this.log('🎉 App Optimization Completed');
-    this.log(`📊 Summary: ${report.summary.successful}/${report.summary.totalChecks} checks successful`);
-    
-    if (report.recommendations.length > 0) {
-      this.log('💡 Recommendations:');
-      report.recommendations.forEach(rec => {
-        this.log(`   - ${rec.message}`);
-      });
+    try {
+      this.log('🚀 Starting App Optimizer');
+      
+      const report = this.generateReport();
+      
+      this.log('✅ App optimization completed');
+      
+      return report;
+    } catch (error) {
+      this.log(`💥 App optimizer error: ${error.message}`);
+      throw error;
     }
-
-    return report;
   }
 }
 
-// Run the optimizer
+// Run the app optimizer
 if (require.main === module) {
   const optimizer = new AppOptimizer();
   optimizer.run().catch(console.error);

@@ -1,13 +1,18 @@
-import React from 'react'
+<<<<<<< HEAD
+import React from 'react';
 import { 
   Users, 
   Award, 
+  Star, 
   Linkedin, 
   Twitter, 
   Mail, 
+  Building2,
   Lightbulb,
-  Rocket,;
-  Shield;
+  Rocket,
+  Shield,
+  Brain,
+  Zap
 } from 'lucide-react';
 
 export default function TeamPage() {
@@ -121,10 +126,10 @@ export default function TeamPage() {
                     </a>
                     <a href={member.twitter} target="_blank" rel="noopener noreferrer" 
                        className="text-zion-slate-light hover:text-zion-cyan transition-colors">
-                      <Twitter className={`w-5 h-5` />
+                      <Twitter className="w-5 h-5" />
                     </a>
                     <a href={`mailto:${member.email}`} 
-                       className=`text-zion-slate-light hover:text-zion-cyan transition-colors`}>
+                       className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                       <Mail className="w-5 h-5" />
                     </a>
                   </div>
@@ -229,7 +234,7 @@ export default function TeamPage() {
       </section>
 
       {/* Join Our Team Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Join Our Growing Team
@@ -249,4 +254,28 @@ export default function TeamPage() {
         </div>
       </section>
     </div>
-  )}"
+  );
+}
+=======
+import React from "react"
+import Link from "next/link"
+import { ArrowRight, Phone, Mail } from "lucide-react"
+  );
+export default function Team() {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="max-w-4xl mx-auto px-6 py-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">Team</h1>
+        <p className="text-lg text-gray-600 mb-8">
+          This is a placeholder component for team.
+        </p>
+        <div className="flex flex-col sm: flex-row gap-4">
+          <Link href="/contact" className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors inline-flex items-center">
+            Contact Us <ArrowRight className="w-4 h-4 ml-2"  />
+          </Link>
+          <Link href="/" className="px-6 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors inline-flex items-center">
+            Go Home <Phone className="w-4 h-4 ml-2"  />
+          </Link>
+        </div>
+  ),
+>>>>>>> main

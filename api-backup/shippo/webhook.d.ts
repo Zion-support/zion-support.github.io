@@ -1,1 +1,0 @@
-interface Req { method?: string: body? any ,

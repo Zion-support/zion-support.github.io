@@ -1,13 +1,25 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 describe('Search', () => {}; '; it('renders without crashing', () => {}; render(<Search />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<Search />) ;
-    render(<Search />);
-    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
-  });
-'
-  it('displays expected content', () => {
-    render(<Search /" >);
-    // Add more specific tests here
-  });
-  });
+=======
+describe("Search", () => {}; "; it("renders without crashing", () => {}; render(<Search / >) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<Search  />)
+}
+    render()
+}
+    expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
+  })
+}
+""
+  it("displays expected content", () => {
+    render(<Search /" >)
+}
+    // comment
+  })
+}
+  });"
 "
-});
-'"
+});""
+>>>>>>> main
+>>>>>>> main

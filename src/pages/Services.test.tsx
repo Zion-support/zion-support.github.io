@@ -1,13 +1,25 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 describe('Services', () => {}; '; it('renders without crashing', () => {}; render(<Services />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<Services />) ;
-    render(<Services />);
-    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
-  });
-'
-  it('displays expected content', () => {
-    render(<Services /" >);
-    // Add more specific tests here
-  });
-  });
+=======
+describe("Services", () => {}; "; it("renders without crashing", () => {}; render(<Services / >) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<Services  />)
+}
+    render()
+}
+    expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
+  })
+}
+""
+  it("displays expected content", () => {
+    render(<Services /" >)
+}
+    // comment
+  })
+}
+  });"
 "
-});
-'"
+});""
+>>>>>>> main
+>>>>>>> main

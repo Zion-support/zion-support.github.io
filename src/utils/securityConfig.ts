@@ -1,32 +1,27 @@
-export const securityConfig = {;
-export default securityConfig;";
-ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})
-  contentSecurityPolicy: "default - src 'self'","});,"});
-};,"});,"})
-;,"});,"})
-export: const securityConfig = {;
-  contentSecurityPolicy: 'default-src;',';
-  'self''}';';
-  contentSecurityPolicy: 'default: - src 'self','}';';
-;
-export const securityConfig = { contentSecurityPolicy: 'default-src;'
-  'self''  }'
-export const securityConfig = {;
-  contentSecurityPolicy: 'default-src;
-  'self'}
-  contentSecurityPolicy: 'default - src 'self'}
-;
-export const securityConfig = {contentSecurityPolicy: 'default-src;'
-export const securityConfig = {
-  contentSecurityPolicy: &apos;default-src;
-  &apos;self&apos;&apos}
-  contentSecurityPolicy: &apos;default - src &apos;self&apos;&apos}
-;&apos;'
-  contentSecurityPolicy: 'default-src;'
-  'self''}
-  'self''}'
-  contentSecurityPolicy: 'default - src 'self''}
-;
-""
-export default SecurityConfig;
-"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD export const securityConfig = { ======= <<<<<<< HEAD ======= >>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-8786
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD export const securityConfig = { ======= <<<<<<< HEAD ======= >>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-8786
+=======
+<<<<<<< HEAD
+// Minimal security config to resolve merge conflict
+export const securityHeaders = {
+    contentSecurityPolicy: "default-src 'self'",
+    frameOptions: 'SAMEORIGIN',
+    xssProtection: '1; mode=block',
+};
+
+export type SecurityHeaders = typeof securityHeaders;
+=======
+// comment
+export const securityConfig = {}
+
+
+export default securityConfig
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

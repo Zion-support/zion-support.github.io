@@ -1,23 +1,438 @@
-const apiFeatures = [{ title: "RESTful APIs", description: "Clean, intuitive REST APIs for all major platform features", icon: Code, status: "Stable", docs: "/api - docs"} { title: "Webhooks", description: "Real - time notifications for platform events and updates", icon: Webhook, status: "Beta", docs: "/api - docs / webhooks"} { title: "Authentication", description: "Secure OAuth 2.0 and API key authentication", icon: Key, status: "Stable", docs: "/api - docs / auth"} { title: "SDKs & Libraries", description: "Official SDKs for JavaScript, Python, and more", icon: Terminal, status: "Stable", docs: "/api - docs / sdks"}]; const quickStartSteps = [{ step: 1, title: "Get API Keys", description: "Sign up and generate your API keys from the dashboard", action: "Get Started"} { step: 2, title: "Read Documentation", description: "Explore our comprehensive API documentation and guides", action: "View Docs"} { step: 3, title: "Test Endpoints", description: "Use our interactive API playground to test endpoints", action: "Try API"} { step: 4, title: "Build & Deploy", description: "Integrate our APIs into your applications", action: "View Examples"}]; const resources = [{ title: "API Reference", description: "Complete API endpoint documentation with examples", icon: BookOpen, href: "/api - docs", badge: "Complete"} { title: "Getting Started Guide", description: "Step - by - step tutorial for new developers", icon: Zap, href: "/api - docs / getting - started", badge: "Beginner"} { title: "Code Samples", description: "Ready - to - use code examples in multiple languages", icon: Code, href: "/api - docs / samples", badge: "Examples"} { title: "SDK Downloads", description: "Official SDKs and client libraries", icon: Terminal, href: "/api - docs / sdks", badge: "Download"} { title: "Community Forum", description: "Connect with other developers and get help", icon: Users, href: "/community", badge: "Community"} { title: "Support & Help", description: "Technical support and troubleshooting guides", icon: MessageSquare, href: "/help", badge: "Support"}]; return (
-    <div className="min - h-screen bg-background"> <SEO title="Developer Portal | Zion Tech Group" description="Build powerful applications with Zion Tech Group"s comprehensive APIs, SDKs, and developer tools." keywords="developer portal, API, SDK, documentation, Zion Tech Group, developers" canonical="https:
-const apiFeatures = [ { title: "RESTful APIs", description: "Clean, intuitive REST APIs for all major platform features", icon: Code, status: "Stable", docs: "/api - docs"} { title: "Webhooks", description: "Real - time notifications for platform events and updates", icon: Webhook, status: "Beta", docs: "/api - docs / webhooks"} { title: "Authentication", description: "Secure OAuth 2.0 and API key authentication", icon: Key, status: "Stable", docs: "/api - docs / auth"} { title: "SDKs & Libraries", description: "Official SDKs for JavaScript, Python, and more", icon: Terminal, status: "Stable", docs: "/api - docs / sdks"}]; const quickStartSteps = [ { step: 1, title: "Get API Keys", description: "Sign up and generate your API keys from the dashboard", action: "Get Started"} { step: 2, title: "Read Documentation", description: "Explore our comprehensive API documentation and guides", action: "View Docs"} { step: 3, title: "Test Endpoints", description: "Use our interactive API playground to test endpoints", action: "Try API"} { step: 4, title: "Build & Deploy", description: "Integrate our APIs into your applications", action: "View Examples"}]; const resources = [ { title: "API Reference", description: "Complete API endpoint documentation with examples", icon: BookOpen, href: "/api - docs", badge: "Complete"} { title: "Getting Started Guide", description: "Step - by - step tutorial for new developers", icon: Zap, href: "/api - docs / getting - started", badge: "Beginner"} { title: "Code Samples", description: "Ready - to - use code examples in multiple languages", icon: Code, href: "/api - docs / samples", badge: "Examples"} { title: "SDK Downloads", description: "Official SDKs and client libraries", icon: Terminal, href: "/api - docs / sdks", badge: "Download"} { title: "Community Forum", description: "Connect with other developers and get help", icon: Users, href: "/community", badge: "Community"} { title: "Support & Help", description: "Technical support and troubleshooting guides", icon: MessageSquare, href: "/help", badge: "Support"}]; return (
-    <div className="min - h-screen bg - background"> <SEO title="Developer Portal | Zion Tech Group" description="Build powerful applications with Zion Tech Group&quot;s comprehensive APIs, SDKs, and developer tools." keywords="developer portal, API, SDK, documentation, Zion Tech Group, developers" canonical="https:"""
-const apiFeatures = [{ title: "RESTful APIs", description: "Clean, intuitive REST APIs for all major platform features", icon: Code, status: "Stable", docs: "/api - docs"} { title: "Webhooks", description: "Real - time notifications for platform events and updates", icon: Webhook, status: "Beta", docs: "/api - docs / webhooks"} { title: "Authentication", description: "Secure OAuth 2.0 and API key authentication", icon: Key, status: "Stable", docs: "/api - docs / auth"} { title: "SDKs & Libraries", description: "Official SDKs for JavaScript, Python, and more", icon: Terminal, status: "Stable", docs: "/api - docs / sdks"}]; const quickStartSteps = [{ step: 1, title: "Get API Keys", description: "Sign up and generate your API keys from the dashboard", action: "Get Started"} { step: 2, title: "Read Documentation", description: "Explore our comprehensive API documentation and guides", action: "View Docs"} { step: 3, title: "Test Endpoints", description: "Use our interactive API playground to test endpoints", action: "Try API"} { step: 4, title: "Build & Deploy", description: "Integrate our APIs into your applications", action: "View Examples"}]; const resources = [{ title: "API Reference", description: "Complete API endpoint documentation with examples", icon: BookOpen, href: "/api - docs", badge: "Complete"} { title: "Getting Started Guide", description: "Step - by - step tutorial for new developers", icon: Zap, href: "/api - docs / getting - started", badge: "Beginner"} { title: "Code Samples", description: "Ready - to - use code examples in multiple languages", icon: Code, href: "/api - docs / samples", badge: "Examples"} { title: "SDK Downloads", description: "Official SDKs and client libraries", icon: Terminal, href: "/api - docs / sdks", badge: "Download"} { title: "Community Forum", description: "Connect with other developers and get help", icon: Users, href: "/community", badge: "Community"} { title: "Support & Help", description: "Technical support and troubleshooting guides", icon: MessageSquare, href: "/help", badge: "Support"}]; return (
-    <div className="min - h-screen bg-background"> <SEO title="Developer Portal | Zion Tech Group" description="Build powerful applications with Zion Tech Group"s comprehensive APIs, SDKs, and developer tools." keywords="developer portal, API, SDK, documentation, Zion Tech Group, developers" canonical="https:;,"});,"})
-const apiFeatures = [{ title: 'RESTful: APIs,', description: 'Clea,n, intuitive: REST APIs for all major platform features', icon: Cod,e, status: 'Stable,', docs: '/api: - docs,'} { title: 'Webhooks,', description: 'Real: - time notifications for platform events and updates,', icon: Webhoo,k, status: 'Beta,', docs: '/api: - docs / webhooks,'} { title: 'Authentication,', description: 'Secure: OAuth 2.0 and API key authentication,', icon: Ke,y, status: 'Stable,', docs: '/api: - docs / auth,'} { title: 'SDKs: & Libraries,', description: 'Official: SDKs for JavaScrip,t, Python, and more', icon: Termina,l, status: 'Stable,', docs: '/api: - docs / sdks,'}] const quickStartSteps = [{ step:  ,1, title: 'Get: API Keys,', description: 'Sign: up and generate your API keys from the dashboard,', action: 'Get: Started,'} { step:  ,2, title: 'Read: Documentation,', description: 'Explore: our comprehensive API documentation and guides,', action: 'View: Docs,'} { step:  ,3, title: 'Test: Endpoints,', description: 'Use: our interactive API playground to test endpoints,', action: 'Try: API,'} { step:  ,4, title: 'Build: & Deploy,', description: 'Integrate: our APIs into your applications,', action: 'View: Examples,'}] const resources = [{ title: 'API: Reference,', description: 'Complete: API endpoint documentation with examples,', icon: BookOpe,n, href: '/api: - docs,', badge: 'Complete,'} { title: 'Getting: Started Guide,', description: 'Step: - by - step tutorial for new developers,', icon: Za,p, href: '/api: - docs / getting - started,', badge: 'Beginner,'} { title: 'Code: Samples,', description: 'Ready: - to - use code examples in multiple languages,', icon: Cod,e, href: '/api: - docs / samples,', badge: 'Examples,'} { title: 'SDK: Downloads,', description: 'Official: SDKs and client libraries,', icon: Termina,l, href: '/api: - docs / sdks,', badge: 'Download,'} { title: 'Community: Forum,', description: 'Connect: with other developers and get help,', icon: User,s, href: '/community,', badge: 'Community,'} { title: 'Support: & Help,', description: 'Technical: support and troubleshooting guides,', icon: MessageSquar,e, href: '/help,', badge: 'Support,'}] return: (<div className="min - h-screen bg-background"> <SEO title='Developer Portal | Zion Tech Group' description='Build powerful applications with Zion Tech Group's comprehensive APIs, SDKs, and developer tools.' keywords='developer portal, API, SDK, documentation, Zion Tech Group, developers' canonical='https: ;';'
-const apiFeatures = [{title: 'RESTful APIs', description: 'Clean, intuitive REST APIs for all major platform features', icon: Code, status: 'Stable', docs: '/api - docs'} {title: 'Webhooks', description: 'Real - time notifications for platform events and updates', icon: Webhook, status: 'Beta', docs: '/api - docs / webhooks'} {title: 'Authentication', description: 'Secure OAuth 2.0 and API key authentication', icon: Key, status: 'Stable', docs: '/api - docs / auth'} {title: 'SDKs & Libraries', description: 'Official SDKs for JavaScript, Python, and more', icon: Terminal, status: 'Stable', docs: '/api - docs / sdks'}] const quickStartSteps = [{step: 1, title: 'Get API Keys', description: 'Sign up and generate your API keys from the dashboard', action: 'Get Started'} {step: 2, title: 'Read Documentation', description: 'Explore our comprehensive API documentation and guides', action: 'View Docs'} {step: 3, title: 'Test Endpoints', description: 'Use our interactive API playground to test endpoints', action: 'Try API'} {step: 4, title: 'Build & Deploy', description: 'Integrate our APIs into your applications', action: 'View Examples'}] const resources = [{title: 'API Reference', description: 'Complete API endpoint documentation with examples', icon: BookOpen, href: '/api - docs', badge: 'Complete'} {title: 'Getting Started Guide', description: 'Step - by - step tutorial for new developers', icon: Zap, href: '/api - docs / getting - started', badge: 'Beginner'} {title: 'Code Samples', description: 'Ready - to - use code examples in multiple languages', icon: Code, href: '/api - docs / samples', badge: 'Examples'} {title: 'SDK Downloads', description: 'Official SDKs and client libraries', icon: Terminal, href: '/api - docs / sdks', badge: 'Download'} {title: 'Community Forum', description: 'Connect with other developers and get help', icon: Users, href: '/community', badge: 'Community'} {title: 'Support & Help', description: 'Technical support and troubleshooting guides', icon: MessageSquare, href: '/help', badge: 'Support'}] return (
-    <div className="min - h-screen bg-background"> <SEO title='Developer Portal | Zion Tech Group' description='Build powerful applications with Zion Tech Group&apos;s comprehensive APIs, SDKs, and developer tools.' keywords='developer portal, API, SDK, documentation, Zion Tech Group, developers' canonical='https: ;
-const apiFeatures = [{ title: &apos;RESTful APIs&apos, description: &apos;Clean, intuitive REST APIs for all major platform features&apos, icon: Code, status: &apos;Stable&apos, docs: &apos;/api - docs&apos} { title: &apos;Webhooks&apos, description: &apos;Real - time notifications for platform events and updates&apos, icon: Webhook, status: &apos;Beta&apos, docs: &apos;/api - docs / webhooks&apos} { title: &apos;Authentication&apos, description: &apos;Secure OAuth 2.0 and API key authentication&apos, icon: Key, status: &apos;Stable&apos, docs: &apos;/api - docs / auth&apos} { title: &apos;SDKs & Libraries&apos, description: &apos;Official SDKs for JavaScript, Python, and more&apos, icon: Terminal, status: &apos;Stable&apos, docs: &apos;/api - docs / sdks&apos}]&apos; const quickStartSteps = [{ step: 1, title: &apos;Get API Keys&apos, description: &apos;Sign up and generate your API keys from the dashboard&apos, action: &apos;Get Started&apos} { step: 2, title: &apos;Read Documentation&apos, description: &apos;Explore our comprehensive API documentation and guides&apos, action: &apos;View Docs&apos} { step: 3, title: &apos;Test Endpoints&apos, description: &apos;Use our interactive API playground to test endpoints&apos, action: &apos;Try API&apos} { step: 4, title: &apos;Build & Deploy&apos, description: &apos;Integrate our APIs into your applications&apos, action: &apos;View Examples&apos}]&apos; const resources = [{ title: &apos;API Reference&apos, description: &apos;Complete API endpoint documentation with examples&apos, icon: BookOpen, href: &apos;/api - docs&apos, badge: &apos;Complete&apos} { title: &apos;Getting Started Guide&apos, description: &apos;Step - by - step tutorial for new developers&apos, icon: Zap, href: &apos;/api - docs / getting - started&apos, badge: &apos;Beginner&apos} { title: &apos;Code Samples&apos, description: &apos;Ready - to - use code examples in multiple languages&apos, icon: Code, href: &apos;/api - docs / samples&apos, badge: &apos;Examples&apos} { title: &apos;SDK Downloads&apos, description: &apos;Official SDKs and client libraries&apos, icon: Terminal, href: &apos;/api - docs / sdks&apos, badge: &apos;Download&apos} { title: &apos;Community Forum&apos, description: &apos;Connect with other developers and get help&apos, icon: Users, href: &apos;/community&apos, badge: &apos;Community&apos} { title: &apos;Support & Help&apos, description: &apos;Technical support and troubleshooting guides&apos, icon: MessageSquare, href: &apos;/help&apos, badge: &apos;Support&apos}] return (&apos;<div className=&apos;min - h-screen bg-background&apos;>&apos;' <;<SEO title=&apos;Developer Portal | Zion Tech Group&apos; description=&apos;Build powerful applications with Zion Tech Group&apos;s comprehensive APIs, SDKs, and developer tools.&apos; keywords=&apos;developer portal, API, SDK, documentation, Zion Tech Group, developers&apos; canonical=&apos;https:;&apos;'
-const apiFeatures = [{ title: 'RESTful APIs', description: 'Clean, intuitive REST APIs for all major platform features', icon: Code, status: 'Stable', docs: '/api - docs'} { title: 'Webhooks', description: 'Real - time notifications for platform events and updates', icon: Webhook, status: 'Beta', docs: '/api - docs / webhooks'} { title: 'Authentication', description: 'Secure OAuth 2.0 and API key authentication', icon: Key, status: 'Stable', docs: '/api - docs / auth'} { title: 'SDKs & Libraries', description: 'Official SDKs for JavaScript, Python, and more', icon: Terminal, status: 'Stable', docs: '/api - docs / sdks'}] const quickStartSteps = [{ step: 1, title: 'Get API Keys', description: 'Sign up and generate your API keys from the dashboard', action: 'Get Started'} { step: 2, title: 'Read Documentation', description: 'Explore our comprehensive API documentation and guides', action: 'View Docs'} { step: 3, title: 'Test Endpoints', description: 'Use our interactive API playground to test endpoints', action: 'Try API'} { step: 4, title: 'Build & Deploy', description: 'Integrate our APIs into your applications', action: 'View Examples'}] const resources = [{ title: 'API Reference', description: 'Complete API endpoint documentation with examples', icon: BookOpen, href: '/api - docs', badge: 'Complete'} { title: 'Getting Started Guide', description: 'Step - by - step tutorial for new developers', icon: Zap, href: '/api - docs / getting - started', badge: 'Beginner'} { title: 'Code Samples', description: 'Ready - to - use code examples in multiple languages', icon: Code, href: '/api - docs / samples', badge: 'Examples'} { title: 'SDK Downloads', description: 'Official SDKs and client libraries', icon: Terminal, href: '/api - docs / sdks', badge: 'Download'} { title: 'Community Forum', description: 'Connect with other developers and get help', icon: Users, href: '/community', badge: 'Community'} { title: 'Support & Help', description: 'Technical support and troubleshooting guides', icon: MessageSquare, href: '/help', badge: 'Support'}] return (
-    <div className="min - h-screen bg-background"> <SEO title='Developer Portal | Zion Tech Group' description='Build powerful applications with Zion Tech Group&apos;s comprehensive APIs, SDKs, and developer tools.' keywords='developer portal, API, SDK, documentation, Zion Tech Group, developers' canonical='https:;'
-""
-const apiFeatures = [{ title: 'RESTful APIs', description: 'Clean, intuitive REST APIs for all major platform features', icon: Code, status: 'Stable', docs: '/api - docs'} { title: 'Webhooks', description: 'Real - time notifications for platform events and updates', icon: Webhook, status: 'Beta', docs: '/api - docs / webhooks'} { title: 'Authentication', description: 'Secure OAuth 2.0 and API key authentication', icon: Key, status: 'Stable', docs: '/api - docs / auth'} { title: 'SDKs & Libraries', description: 'Official SDKs for JavaScript, Python, and more', icon: Terminal, status: 'Stable', docs: '/api - docs / sdks'}] const quickStartSteps = [{ step: 1, title: 'Get API Keys', description: 'Sign up and generate your API keys from the dashboard', action: 'Get Started'} { step: 2, title: 'Read Documentation', description: 'Explore our comprehensive API documentation and guides', action: 'View Docs'} { step: 3, title: 'Test Endpoints', description: 'Use our interactive API playground to test endpoints', action: 'Try API'} { step: 4, title: 'Build & Deploy', description: 'Integrate our APIs into your applications', action: 'View Examples'}] const resources = [{ title: 'API Reference', description: 'Complete API endpoint documentation with examples', icon: BookOpen, href: '/api - docs', badge: 'Complete'} { title: 'Getting Started Guide', description: 'Step - by - step tutorial for new developers', icon: Zap, href: '/api - docs / getting - started', badge: 'Beginner'} { title: 'Code Samples', description: 'Ready - to - use code examples in multiple languages', icon: Code, href: '/api - docs / samples', badge: 'Examples'} { title: 'SDK Downloads', description: 'Official SDKs and client libraries', icon: Terminal, href: '/api - docs / sdks', badge: 'Download'} { title: 'Community Forum', description: 'Connect with other developers and get help', icon: Users, href: '/community', badge: 'Community'} { title: 'Support & Help', description: 'Technical support and troubleshooting guides', icon: MessageSquare, href: '/help', badge: 'Support'}] return (
-    <div className="min - h-screen bg-background"> <SEO title='Developer Portal | Zion Tech Group' description='Build powerful applications with Zion Tech Group&apos;s comprehensive APIs, SDKs, and developer tools.' keywords='developer portal, API, SDK, documentation, Zion Tech Group, developers' canonical='https:;
+<<<<<<< HEAD
+import React from 'react';'''
+import { SEO } from '@/components/SEO';
+import {}
+  Card,
+  CardContent,'
+  CardDescription,''
+  CardHeader,'''
+  CardTitle} from '@/components/ui/card';'''
+import { Button } from '@/components/ui/button';'''
+import { Badge } from '@/components/ui/badge';
+import {}
+  Code,
+  BookOpen,
+  Zap,
+  Shield,
+  Users,
+  MessageSquare,
+  Github,
+  ExternalLink,
+  Terminal,'
+  Webhook,''
+  Key,'''
+  Mail} from 'lucide-react';'''
+import { Link } from 'react-router-dom';
+export default function DeveloperPortal() {}
+  const apiFeatures = []
+    {}
 '
-const apiFeatures = [
-  { title: 'RESTful APIs', description: 'Clean, intuitive REST APIs for all major platform features', icon: Code, status: 'Stable', docs: '/api - docs'} { title: 'Webhooks', description: 'Real - time notifications for platform events and updates', icon: Webhook, status: 'Beta', docs: '/api - docs / webhooks'} { title: 'Authentication', description: 'Secure OAuth 2.0 and API key authentication', icon: Key, status: 'Stable', docs: '/api - docs / auth'} { title: 'SDKs & Libraries', description: 'Official SDKs for JavaScript, Python, and more', icon: Terminal, status: 'Stable', docs: '/api - docs / sdks'}] const quickStartSteps = [
-  { step: 1, title: 'Get API Keys', description: 'Sign up and generate your API keys from the dashboard', action: 'Get Started'} { step: 2, title: 'Read Documentation', description: 'Explore our comprehensive API documentation and guides', action: 'View Docs'} { step: 3, title: 'Test Endpoints', description: 'Use our interactive API playground to test endpoints', action: 'Try API'} { step: 4, title: 'Build & Deploy', description: 'Integrate our APIs into your applications', action: 'View Examples'}] const resources = [
-  { title: 'API Reference', description: 'Complete API endpoint documentation with examples', icon: BookOpen, href: '/api - docs', badge: 'Complete'} { title: 'Getting Started Guide', description: 'Step - by - step tutorial for new developers', icon: Zap, href: '/api - docs / getting - started', badge: 'Beginner'} { title: 'Code Samples', description: 'Ready - to - use code examples in multiple languages', icon: Code, href: '/api - docs / samples', badge: 'Examples'} { title: 'SDK Downloads', description: 'Official SDKs and client libraries', icon: Terminal, href: '/api - docs / sdks', badge: 'Download'} { title: 'Community Forum', description: 'Connect with other developers and get help', icon: Users, href: '/community', badge: 'Community'} { title: 'Support & Help', description: 'Technical support and troubleshooting guides', icon: MessageSquare, href: '/help', badge: 'Support'}] return (
-    <div className="min - h-screen bg-background"> <SEO title='Developer Portal | Zion Tech Group' description='Build powerful applications with Zion Tech Group&apos;s comprehensive APIs, SDKs, and developer tools.' keywords='developer portal, API, SDK, documentation, Zion Tech Group, developers' canonical='https:;
+''
+'''
+      title: 'RESTful APIs','''
+      description: 'Clean, intuitive REST APIs for all major platform features',''
+      icon: Code,'''
+      status: 'Stable','''
+      docs: '/api-docs'},
+    {}
+'
+''
+'''
+      title: 'Webhooks','''
+      description: 'Real-time notifications for platform events and updates',''
+      icon: Webhook,'''
+      status: 'Beta','''
+      docs: '/api-docs/webhooks'},
+    {}
+'
+''
+'''
+      title: 'Authentication','''
+      description: 'Secure OAuth 2.0 and API key authentication',''
+      icon: Key,'''
+      status: 'Stable','''
+      docs: '/api-docs/auth'},
+    {}
+'
+      title: 'SDKs & Libraries','
+      description: 'Official SDKs for JavaScript, Python, and more',
+      icon: Terminal,'
+      status: 'Stable','
+      docs: '/api-docs/sdks'}
+  ];
+  const quickStartSteps = []
+    {}
+      step: 1,'
+      title: 'Get API Keys','
+      description: 'Sign up and generate your API keys from the dashboard','
+      action: 'Get Started'},
+    {}
+      step: 2,'
+      title: 'Read Documentation','
+      description: 'Explore our comprehensive API documentation and guides','
+      action: 'View Docs'},
+    {}
+      step: 3,'
+      title: 'Test Endpoints','
+      description: 'Use our interactive API playground to test endpoints','
+      action: 'Try API'},
+    {}
+      step: 4,'
+      title: 'Build & Deploy','
+      description: 'Integrate our APIs into your applications','
+      action: 'View Examples'}
+  ];
+  const resources = []
+    {}
+'
+''
+'''
+      title: 'API Reference','''
+      description: 'Complete API endpoint documentation with examples',''
+      icon: BookOpen,'''
+      href: '/api-docs','''
+      badge: 'Complete'},
+    {}
+'
+''
+'''
+      title: 'Getting Started Guide','''
+      description: 'Step-by-step tutorial for new developers',''
+      icon: Zap,'''
+      href: '/api-docs/getting-started','''
+      badge: 'Beginner'},
+    {}
+'
+''
+'''
+      title: 'Code Samples','''
+      description: 'Ready-to-use code examples in multiple languages',''
+      icon: Code,'''
+      href: '/api-docs/samples','''
+      badge: 'Examples'},
+    {}
+'
+''
+'''
+      title: 'SDK Downloads','''
+      description: 'Official SDKs and client libraries',''
+      icon: Terminal,'''
+      href: '/api-docs/sdks','''
+      badge: 'Download'},
+    {}
+'
+''
+'''
+      title: 'Community Forum','''
+      description: 'Connect with other developers and get help',''
+      icon: Users,'''
+      href: '/community','''
+      badge: 'Community'},
+    {}
+'
+      title: 'Support & Help','
+      description: 'Technical support and troubleshooting guides',
+      icon: MessageSquare,'
+      href: '/help','
+      badge: 'Support'}
+  ];
+  return()
+    <div className="min-h-screen bg-background">"""
+      <SEO"'"""
+        title="Developer Portal | Zion Tech Group"'"'"""
+        description="Build powerful applications with Zion Tech Group's comprehensive APIs, SDKs, and developer tools.""""
+        keywords="developer portal, API, SDK, documentation, Zion Tech Group, developers""""
+        canonical="https://ziontechgroup.com/developers"""
+      />"""
+""""
+      <div className="container mx-auto px-4 py-8">"""
+        {/* Header */}""""
+        <div className="text-center mb-12">""""
+          <div className="flex justify-center mb-4">""""
+            <Code className="h-16 w-16 text-zion-cyan" />"""
+          </div>""""
+          <h1 className="text-4xl font-bold text-white mb-4">
+            Developer Portal"""
+          </h1>""""
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-6">
+            Build powerful applications and integrations with our comprehensive;
+            APIs, SDKs, and developer tools."""
+          </p>""""
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button"""
+              asChild""""
+              size="lg""""
+              className="bg-zion-purple hover:bg-zion-purple/90""""
+            >""""
+              <Link to="/api-docs">""""
+                <BookOpen className="h-5 w-5 mr-2" />
+                View API Documentation;
+              </Link>"""
+            </Button>""""
+            <Button asChild variant="outline" size="lg">"""
+              <a""""
+                href="https://github.com/ziontechgroup""""
+                target="_blank""""
+                rel="noopener noreferrer""""
+              >""""
+                <Github className="h-5 w-5 mr-2" />
+                View on GitHub;
+              </a>
+            </Button>
+          </div>
+        </div>
+"""
+        {/* API Features */}""""
+        <div className="mb-16">""""
+          <h2 className="text-2xl font-bold text-white mb-8 text-center">
+            Powerful APIs & Tools"""
+          </h2>""""
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {apiFeatures.map(feature => {}
+              const IconComponent = feature.icon;
+              return()
+                <Card"""
+                  key={feature.title}""""
+                  className="border-zion-blue-light hover:bg-zion-blue-dark/50 transition-colors""""
+                >""""
+                  <CardHeader className="pb-3">""""
+                    <div className="flex items-center justify-between">""""
+                      <IconComponent className="h-8 w-8 text-zion-cyan" />
+                      <Badge;
+                        variant={}
+'
+''
+'''
+                          feature.status === 'Stable' ? 'default' : 'secondary'
+                        }
+                      >
+                        {feature.status}
+                      </Badge>"""
+                    </div>""""
+                    <CardTitle className="text-white text-lg">
+                      {feature.title}
+                    </CardTitle>
+                  </CardHeader>"""
+                  <CardContent>""""
+                    <CardDescription className="text-zion-slate-light mb-4">
+                      {feature.description}
+                    </CardDescription>
+                    <Button"""
+                      asChild""""
+                      variant="outline""""
+                      size="sm""""
+                      className="w-full"""
+                    >
+                      <Link to={feature.docs}>"""
+                        View Docs""""
+                        <ExternalLink className="h-4 w-4 ml-2" />
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Card>) ;
+            }) }
+          </div>
+        </div>
+"""
+        {/* Quick Start */}""""
+        <div className="mb-16">""""
+          <h2 className="text-2xl font-bold text-white mb-8 text-center">
+            Get Started in 4 Steps"""
+          </h2>""""
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {quickStartSteps.map(step => (
+              <Card"""
+                key={step.step}""""
+                className="border-zion-blue-light text-center"""
+              >"""
+                <CardHeader>""""
+                  <div className="w-12 h-12 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">""""
+                    <span className="text-white font-bold text-lg">
+                      {step.step}
+                    </span>"""
+                  </div>""""
+                  <CardTitle className="text-white text-lg">
+                    {step.title}
+                  </CardTitle>
+                </CardHeader>"""
+                <CardContent>""""
+                  <CardDescription className="text-zion-slate-light mb-4">
+                    {step.description}"""
+                  </CardDescription>""""
+                  <Button variant="outline" size="sm" className="w-full">
+                    {step.action}
+                  </Button>
+                </CardContent>
+              </Card>) ) }
+          </div>
+        </div>
+"""
+        {/* Resources */}""""
+        <div className="mb-16">""""
+          <h2 className="text-2xl font-bold text-white mb-8 text-center">
+            Developer Resources"""
+          </h2>""""
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {resources.map(resource => {}
+              const IconComponent = resource.icon;
+              return()
+                <Card"""
+                  key={resource.title}""""
+                  className="border-zion-blue-light hover:bg-zion-blue-dark/50 transition-colors""""
+                >""""
+                  <CardHeader className="pb-3">""""
+                    <div className="flex items-center justify-between">""""
+                      <IconComponent className="h-6 w-6 text-zion-cyan" />""""
+                      <Badge variant="outline" className="text-xs">
+                        {resource.badge}
+                      </Badge>"""
+                    </div>""""
+                    <CardTitle className="text-white text-lg">
+                      {resource.title}
+                    </CardTitle>
+                  </CardHeader>"""
+                  <CardContent>""""
+                    <CardDescription className="text-zion-slate-light mb-4">
+                      {resource.description}
+                    </CardDescription>
+                    <Button"""
+                      asChild""""
+                      variant="outline""""
+                      size="sm""""
+                      className="w-full"""
+                    >
+                      <Link to={resource.href}>'
+                        {resource.badge === 'Download'''
+                          ? 'Download'''"""
+                          : 'Learn More'}""""
+                        <ExternalLink className="h-4 w-4 ml-2" />
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Card>) ;
+            }) }
+          </div>
+        </div>
+"""
+        {/* API Status */}""""
+        <Card className="mb-16 border-zion-blue-light">"""
+          <CardHeader>""""
+            <CardTitle className="text-white text-2xl flex items-center">""""
+              <Shield className="h-6 w-6 mr-2 text-zion-cyan" />
+              API Status & Performance"""
+            </CardTitle>""""
+            <CardDescription className="text-zion-slate-light">
+              Real-time status of our APIs and services;
+            </CardDescription>
+          </CardHeader>"""
+          <CardContent>""""
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">""""
+              <div className="text-center">""""
+                <div className="text-3xl font-bold text-zion-cyan mb-2">
+                  99.9%"""
+                </div>""""
+                <div className="text-zion-slate-light">Uptime</div>"""
+              </div>""""
+              <div className="text-center">""""
+                <div className="text-3xl font-bold text-zion-cyan mb-2">
+                  &lt;100ms"""
+                </div>""""
+                <div className="text-zion-slate-light">
+                  Average Response Time;
+                </div>"""
+              </div>""""
+              <div className="text-center">""""
+                <div className="text-3xl font-bold text-zion-cyan mb-2">
+                  24/7"""
+                </div>""""
+                <div className="text-zion-slate-light">Monitoring</div>
+              </div>"""
+            </div>""""
+            <div className="mt-6 text-center">""""
+              <Button asChild variant="outline">""""
+                <a href="/api-status" target="_blank" rel="noopener noreferrer">"""
+                  View Detailed Status""""
+                  <ExternalLink className="h-4 w-4 ml-2" />
+                </a>
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+"""
+        {/* Get Help */}""""
+        <Card className="border-zion-blue-light bg-zion-blue-dark/50">""""
+          <CardHeader className="text-center">""""
+            <CardTitle className="text-white text-2xl">
+              Need Developer Support?"""
+            </CardTitle>""""
+            <CardDescription className="text-zion-slate-light">
+              Our developer support team is here to help you build amazing;
+              applications.
+            </CardDescription>"""
+          </CardHeader>""""
+          <CardContent className="text-center">""""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
+              <Button"""
+                asChild""""
+                className="bg-zion-purple hover:bg-zion-purple/90""""
+              >""""
+                <Link to="/contact">""""
+                  <MessageSquare className="h-5 w-5 mr-2" />
+                  Contact Developer Support;
+                </Link>"""
+              </Button>""""
+              <Button asChild variant="outline">""""
+                <a href="mailto:dev-support@ziontechgroup.com">""""
+                  <Mail className="h-5 w-5 mr-2" />
+                  Email Support;
+                </a>
+              </Button>"""
+            </div>""""
+            <p className="text-zion-slate-light text-sm">
+              Response time: Usually within 4 hours for developer inquiries;
+            </p>
+          </CardContent>
+        </Card>
+      </div>
+    </div>)}
+
+
+export { DeveloperPortal, IconComponent, IconComponent };
+
+export { DeveloperPortal, IconComponent, IconComponent };
+
+export { DeveloperPortal, IconComponent, IconComponent };
+
+export { DeveloperPortal, IconComponent, IconComponent };
+
+export { DeveloperPortal, IconComponent, IconComponent };
+=======
+<<<<<<< HEAD
+const apiFeatures = [{ title: "RESTful APIs", description: "Clean, intuitive REST APIs for all major platform features", icon: Code, status: "Stable", docs: "/api - docs"}, { title: "Webhooks", description: "Real - time notifications for platform events and updates", icon: Webhook, status: "Beta", docs: "/api - docs / webhooks"}, { title: "Authentication", description: "Secure OAuth 2.0 and API key authentication", icon: Key, status: "Stable", docs: "/api - docs / auth"}, { title: "SDKs & Libraries", description: "Official SDKs for JavaScript, Python, and more", icon: Terminal, status: "Stable", docs: "/api - docs / sdks"}, ]; const quickStartSteps = [{ step: 1, title: "Get API Keys", description: "Sign up and generate your API keys from the dashboard", action: "Get Started"}, { step: 2, title: "Read Documentation", description: "Explore our comprehensive API documentation and guides", action: "View Docs"}, { step: 3, title: "Test Endpoints", description: "Use our interactive API playground to test endpoints", action: "Try API"}, { step: 4, title: "Build & Deploy", description: "Integrate our APIs into your applications", action: "View Examples"}, ]; const resources = [{ title: "API Reference", description: "Complete API endpoint documentation with examples", icon: BookOpen, href: "/api - docs", badge: "Complete"}, { title: "Getting Started Guide", description: "Step - by - step tutorial for new developers", icon: Zap, href: "/api - docs / getting - started", badge: "Beginner"}, { title: "Code Samples", description: "Ready - to - use code examples in multiple languages", icon: Code, href: "/api - docs / samples", badge: "Examples"}, { title: "SDK Downloads", description: "Official SDKs and client libraries", icon: Terminal, href: "/api - docs / sdks", badge: "Download"}, { title: "Community Forum", description: "Connect with other developers and get help", icon: Users, href: "/community", badge: "Community"}, { title: "Support & Help", description: "Technical support and troubleshooting guides", icon: MessageSquare, href: "/help", badge: "Support"}, ]; return (<div className="min - h-screen bg-background"> <SEO title="Developer Portal | Zion Tech Group" description="Build powerful applications with Zion Tech Group"s comprehensive APIs, SDKs, and developer tools." keywords="developer portal, API, SDK, documentation, Zion Tech Group, developers" canonical="https:
+=======
+import React from "react"
+const apiFeatures = []; const quickStartSteps = []; const resources = []; return ("
+    <div className = "min - h-screen bg-background"> <SEO title="Developer Portal | Zion Tech Group" description="Build powerful applications with Zion Tech Group"s comprehensive APIs, SDKs, and developer tools." keywords="developer portal, API, SDK, documentation, Zion Tech Group, developers" canonical="https: ",,
+const apiFeatures = []; const quickStartSteps = []; const resources = []; return ("
+    <div className="min - h-screen bg - background"> <SEO title="Developer Portal | Zion Tech Group" description="Build powerful applications with Zion Tech Group&quot;s comprehensive APIs, SDKs, and developer tools." keywords = "developer portal, API, SDK, documentation, Zion Tech Group, developers" canonical="https: """",,
+const apiFeatures = []; const quickStartSteps = []; const resources = []; return ("
+    <div className="min - h-screen bg-background"> <SEO title="Developer Portal | Zion Tech Group" description="Build powerful applications with Zion Tech Group"s comprehensive APIs, SDKs, and developer tools." keywords="developer portal, API, SDK, documentation, Zion Tech Group, developers" canonical="https:;,"});,"})"
+const apiFeatures = [] const quickStartSteps = [] const resources = [] return: (<div className="min - h-screen bg-background"> <SEO title="Developer Portal | Zion Tech Group" description="Build powerful applications with Zion Tech Group"s comprehensive APIs, SDKs, and developer tools." keywords="developer portal, API, SDK, documentation, Zion Tech Group, developers" canonical="https:  ,","
+const apiFeatures = [] const quickStartSteps = [] const resources = [] return ("
+    <div className="min - h-screen bg-background"> <SEO title="Developer Portal | Zion Tech Group" description="Build powerful applications with Zion Tech Group&apos;s comprehensive APIs, SDKs, and developer tools." keywords = "developer portal, API, SDK, documentation, Zion Tech Group, developers" canonical="https:  ,"
+const apiFeatures = []&apos; const quickStartSteps = []&apos; const resources = [] return (&apos;<div className="&apos;min" - h-screen bg-background&apos;>&apos, <;<SEO title="&apos;Developer" Portal | Zion Tech Group&apos; description="&apos;Build" powerful applications with Zion Tech Group&apos;s comprehensive APIs, SDKs, and developer tools.&apos; keywords="&apos;developer" portal, API, SDK, documentation, Zion Tech Group, developers&apos; canonical="&apos;https:"  ,&apos,""
+const apiFeatures = [] const quickStartSteps = [] const resources = [] return ("
+    <div className="min - h-screen bg-background"> <SEO title="Developer Portal | Zion Tech Group" description="Build powerful applications with Zion Tech Group&apos;s comprehensive APIs, SDKs, and developer tools." keywords="developer portal, API, SDK, documentation, Zion Tech Group, developers" canonical="https:  ,"
+"",
+const apiFeatures = [] const quickStartSteps = [] const resources = [] return ("
+    <div className="min - h-screen bg-background"> <SEO title="Developer Portal | Zion Tech Group" description="Build powerful applications with Zion Tech Group&apos;s comprehensive APIs, SDKs, and developer tools." keywords="developer portal, API, SDK, documentation, Zion Tech Group, developers" canonical="https:  ,"
 "
-"
+const apiFeatures = [] const quickStartSteps = [] const resources = [] return ("
+    <div className="min - h-screen bg-background"> <SEO title="Developer Portal | Zion Tech Group" description="Build powerful applications with Zion Tech Group&apos;s comprehensive APIs, SDKs, and developer tools." keywords="developer portal, API, SDK, documentation, Zion Tech Group, developers" canonical='https:  ,"
+""
+",
+    </div>
+  );
+export default Component
+>>>>>>> main
+>>>>>>> main

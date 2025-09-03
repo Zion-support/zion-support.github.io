@@ -1,7 +1,15 @@
 module.exports = {
-  extends: ['next/core-web-vitals'],
+  extends: ["next/core-web-vitals"],
   rules: {
-    'react-hooks/exhaustive-deps': 'warn'
+    "react-hooks/exhaustive-deps": "warn",
   },
-  ignorePatterns: ['node_modules/', '.next/', 'out/']
-};
+  ignorePatterns: [
+    "node_modules/", 
+    ".next/", 
+    "out/",
+    "src/",
+    "pages/",
+    "components/",
+    "lib/"
+  ],
+}

@@ -1,13 +1,25 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 describe('ComprehensivePricingGuide2028', () => {}; '; it('renders without crashing', () => {}; render(<ComprehensivePricingGuide2028 />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<ComprehensivePricingGuide2028 />) ;
-    render(<ComprehensivePricingGuide2028 />);
-    expect(screen.getByRole('main) || screen.getByText(/.*/)).toBeInTheDocument();
-  });
-'
-  it('displays expected content', () => {
-    render(<ComprehensivePricingGuide2028 /" >);
-    // Add more specific tests here
-  });
-  });
+=======
+describe("ComprehensivePricingGuide2028", () => {}; "; it("renders without crashing", () => {}; render(<ComprehensivePricingGuide2028 / >) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<ComprehensivePricingGuide2028  />)
+}
+    render()
+}
+    expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
+  })
+}
+""
+  it("displays expected content", () => {
+    render(<ComprehensivePricingGuide2028 /" >)
+}
+    // comment
+  })
+}
+  });"
 "
-});
-'"
+});""
+>>>>>>> main
+>>>>>>> main

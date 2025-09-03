@@ -1,1 +1,1 @@
-import React from; 'react' export default function ListingDetail () {'';',
+import React from; "react" export default function ListingDetail () {"";',
