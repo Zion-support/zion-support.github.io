@@ -58,7 +58,7 @@ const Developer: NextPage = () => {
       description: 'Learn how to integrate AI services into your application',
       duration: '15 min read',
       difficulty: 'Beginner',
-      tags: ['AI', 'JavaScript', 'API'];
+      tags: ['AI', 'JavaScript', 'API']
 },
     {
       title: 'Cloud Deployment Best Practices',

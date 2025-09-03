@@ -88,12 +88,12 @@ export default function API() {
               {apiEndpoints.map((endpoint, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-md p-6">
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className={`text-xl font-semibold text-gray-900`>{endpoint.name}</h3>
+                    <h3 className={`text-xl font-semibold text-gray-900`}>{endpoint.name}</h3>
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                       endpoint.method === 'GET' ? 'bg-green-100 text-green-800' :
                       endpoint.method === 'POST' ? 'bg-blue-100 text-blue-800' :
-                      'bg-gray-100 text-gray-800';
-}`}>
+                      'bg-gray-100 text-gray-800'
+                    }`}>
                       {endpoint.method}
                     </span>
                   </div>

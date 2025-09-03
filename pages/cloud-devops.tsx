@@ -11,7 +11,7 @@ export default function CloudDevOps() {
       icon: Cloud,
       title: 'Cloud Migration',
       description: 'Seamless migration to cloud platforms with zero downtime and optimized performance.',
-      features: ['AWS Migration', 'Azure Migration', 'GCP Migration', 'Hybrid Cloud Solutions'];
+      features: ['AWS Migration', 'Azure Migration', 'GCP Migration', 'Hybrid Cloud Solutions']
 },
     {
       icon: Server,

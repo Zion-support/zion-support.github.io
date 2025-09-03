@@ -61,7 +61,7 @@ export default function Dashboard() {
       status: 'In Progress',
       progress: 75,
       dueDate: '2024-02-15',
-      team: ['John Doe', 'Jane Smith', 'Mike Johnson'];
+      team: ['John Doe', 'Jane Smith', 'Mike Johnson']
 },
     {
       id: 2,

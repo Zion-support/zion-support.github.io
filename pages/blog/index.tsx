@@ -12,7 +12,7 @@ const BlogIndex: NextPage = () => {
       date: '2024-01-15',
       author: 'Tech Team',
       href: '/blog/5g-technology-and-its-impact-on-iot-chat',
-      category: 'Technology',;
+      category: 'Technology'
 },
     {
       title: 'AI-Powered Marketplaces: The Future of Digital Commerce',
@@ -73,7 +73,7 @@ const BlogIndex: NextPage = () => {
       {/* Categories */}
       <section className="py-8 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className={`flex flex-wrap justify-center gap-4`>
+          <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
               <button key={category}
                 className={`px-6 py-2 rounded-full font-semibold transition-colors ${

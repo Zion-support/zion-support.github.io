@@ -20,7 +20,7 @@ const Careers: NextPage = () => {
     {
       icon: Heart,
       title: 'Health & Wellness',
-      description: 'Comprehensive health insurance, dental, vision, and wellness programs.';
+      description: 'Comprehensive health insurance, dental, vision, and wellness programs.'
 },
     {
       icon: Home,

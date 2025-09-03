@@ -8,13 +8,13 @@ const BlockchainSolutions: NextPage = () => {
       icon: Shield,
       title: 'Smart Contract Development',
       description: 'Secure, audited smart contracts for DeFi, NFTs, and enterprise applications',
-      features: ['Solidity development', 'Security auditing', 'Gas optimization', 'Testing frameworks'];
+      features: ['Solidity development', 'Security auditing', 'Gas optimization', 'Testing frameworks']
 },
     {
       icon: Zap,
       title: 'DeFi Solutions',
       description: 'Decentralized finance platforms including DEXs, lending protocols, and yield farming',
-      features: ['DEX development', 'Lending protocols', 'Yield farming', 'Liquidity pools'];
+      features: ['DEX development', 'Lending protocols', 'Yield farming', 'Liquidity pools']
 },
     {
       icon: Globe,

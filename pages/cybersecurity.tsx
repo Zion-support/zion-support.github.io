@@ -11,7 +11,7 @@ export default function Cybersecurity() {
       icon: Shield,
       title: 'Security Assessment',
       description: 'Comprehensive security audits and vulnerability assessments to identify and mitigate risks.',
-      features: ['Penetration Testing', 'Vulnerability Scanning', 'Security Audits', 'Risk Assessment'];
+      features: ['Penetration Testing', 'Vulnerability Scanning', 'Security Audits', 'Risk Assessment']
 },
     {
       icon: Lock,
