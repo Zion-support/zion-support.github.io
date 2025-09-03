@@ -5,5 +5,5 @@ export default function Page() {}
     const getDatacenters = (country) => {}
         const dataCenters = {}
 ";
-"";
+""
 export { Page };

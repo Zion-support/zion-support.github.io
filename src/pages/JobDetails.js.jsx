@@ -20,17 +20,17 @@ export default function JobDetails() {}
   const { isWhitelabel, brandName } = useWhitelabel();
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
   if (isLoading) {}
-    return();
-      <div className="flex items-center justify-center min-h-screen">"";
+    return (
+    <div className="flex items-center justify-center min-h-screen">""
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>;
       </div>;
     );,
 }
   if (error || !job) {}
     return()";
-      <>"";
-        <div className="container mx-auto px-4 py-16 text-center">"";
-          <h1 className="text-2xl font-bold mb-4">Job Not Found</h1>"";
+      <>""
+        <div className="container mx-auto px-4 py-16 text-center">""
+          <h1 className="text-2xl font-bold mb-4">Job Not Found</h1>""
           <p className="mb-8">';
             The job you're looking for doesn't exist or has been removed.;
           </p>';
@@ -76,22 +76,22 @@ export default function JobDetails() {}
         title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={job.description.substring(0, 160)}
       />";
-"";
+""
       <main className="container mx-auto px-4 py-8">"'";
         <div className="mb-6">'"'";
           <Button variant="outline" size="sm" onClick={() => router('/jobs')}>;
             ← Back to Jobs;
           </Button>;
         </div>";
-"";
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">"";
+""
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">""
           <div className="lg:col-span-2">;
             <Card>";
-              <CardHeader>"";
+              <CardHeader>""
                 <div className="flex justify-between items-start">";
-                  <div>"";
-                    <CardTitle className="text-2xl mb-2">{job.title}</CardTitle>"";
-                    <div className="flex items-center text-muted-foreground">"";
+                  <div>""
+                    <CardTitle className="text-2xl mb-2">{job.title}</CardTitle>""
+                    <div className="flex items-center text-muted-foreground">""
                       <Calendar className="mr-2 h-4 w-4" />;
                       <span>';
                         Posted{' '}
@@ -102,21 +102,21 @@ export default function JobDetails() {}
                   </div>;
                   <Badge>{job.category}</Badge>;
                 </div>";
-              </CardHeader>"";
+              </CardHeader>""
               <CardContent className="space-y-6">";
-                <div>"";
+                <div>""
                   <h3 className="font-semibold text-lg mb-3">;
                     Job Description";
-                  </h3>"";
+                  </h3>""
                   <div className="whitespace-pre-wrap">{job.description}</div>;
                 </div>;
 ";
-                <div>"";
+                <div>""
                   <h3 className="font-semibold text-lg mb-3">;
                     Required Skills";
-                  </h3>"";
+                  </h3>""
                   <div className="flex flex-wrap gap-2">";
-                    {job.skills?.map((skill, i) => ("";
+                    {job.skills?.map((skill, i) => (""
                       <Badge key={i} variant="secondary">;
                         {skill}
                       </Badge>;
@@ -128,20 +128,20 @@ export default function JobDetails() {}
           </div>;
 
           <div>";
-            <Card>"";
-              <CardContent className="pt-6 space-y-4">"";
-                <div className="flex items-start">"";
-                  <DollarSign className="mt-1 h-5 w-5 text-muted-foreground" />"";
-                  <div className="ml-3">"";
-                    <p className="text-sm text-muted-foreground">Budget</p>"";
+            <Card>""
+              <CardContent className="pt-6 space-y-4">""
+                <div className="flex items-start">""
+                  <DollarSign className="mt-1 h-5 w-5 text-muted-foreground" />""
+                  <div className="ml-3">""
+                    <p className="text-sm text-muted-foreground">Budget</p>""
                     <p className="font-medium">{formatBudget(job.budget)}</p>;
                   </div>;
                 </div>";
-"";
-                <div className="flex items-start">"";
-                  <Clock className="mt-1 h-5 w-5 text-muted-foreground" />"";
-                  <div className="ml-3">"";
-                    <p className="text-sm text-muted-foreground">Deadline</p>"";
+""
+                <div className="flex items-start">""
+                  <Clock className="mt-1 h-5 w-5 text-muted-foreground" />""
+                  <div className="ml-3">""
+                    <p className="text-sm text-muted-foreground">Deadline</p>""
                     <p className="font-medium">;
                       {job.deadline;
                         ? new Date(job.deadline).toLocaleDateString()';
@@ -149,17 +149,17 @@ export default function JobDetails() {}
                     </p>;
                   </div>;
                 </div>";
-"";
-                <div className="flex items-start">"";
-                  <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" />"";
-                  <div className="ml-3">"";
-                    <p className="text-sm text-muted-foreground">Job Type</p>"";
+""
+                <div className="flex items-start">""
+                  <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" />""
+                  <div className="ml-3">""
+                    <p className="text-sm text-muted-foreground">Job Type</p>""
                     <p className="font-medium">Freelance / Remote</p>;
                   </div>;
                 </div>;
 
                 {!isOwnJob && (";
-                  <Button"";
+                  <Button""
                     className="w-full mt-4";
                     onClick={handleApply}
                     disabled={isOwnJob}
@@ -168,8 +168,8 @@ export default function JobDetails() {}
                   </Button>;
                 )}
 ";
-                {isOwnJob && ("";
-                  <div className="text-center p-2 bg-muted rounded-md mt-4">"";
+                {isOwnJob && (""
+                  <div className="text-center p-2 bg-muted rounded-md mt-4">""
                     <p className="text-sm text-muted-foreground">;
                       This is your job posting;
                     </p>;

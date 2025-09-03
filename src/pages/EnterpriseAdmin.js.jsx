@@ -17,7 +17,7 @@ export default function EnterpriseAdmin() {}
         title="Enterprise Admin - Zion AI Marketplace"'"'";
         description="Manage your team's access, roles, and usage on the Zion AI Marketplace.";
       />";
-"";
+""
       <main className="min-h-screen bg-background">;
         <AdminDashboard />;
       </main>;

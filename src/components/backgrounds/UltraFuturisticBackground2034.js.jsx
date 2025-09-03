@@ -21,7 +21,7 @@ canvas.height = window.innerHeight,;
 const particles = []";
         const colors = {}
 ;
-""";";
+"""";
   quantum["#00ffff", #ff00ff",#ffff00", #00ff00"], ";";
             neon["#ff0080", #8000ff",#00ffff", #ffff00"], ";";
             holographic["#ff6b6b", #4ecdc4",#45b7d1", ";
@@ -75,9 +75,9 @@ const distance = Math.sqrt(Math.pow(particle.x - otherParticle.x, 2) +;
                         Math.pow(particle.y - otherParticle.y, 2));,
 }
                     if(distance < 150) {}";
-                        ctx.beginPath()"";
-                        ctx.moveTo(particle.x, particle.y)""";
-                        ctx.lineTo(otherParticle.x, otherParticle.y)"";"""";
+                        ctx.beginPath()""
+                        ctx.moveTo(particle.x, particle.y)"""
+                        ctx.lineTo(otherParticle.x, otherParticle.y)""""""
                         ctx.strokeStyle = "${particle.color}${Math.floor((1 - distance / 150) * 0.3 * 255).toString(16).padStart(2, 0")}
                         ctx.lineWidth = 1,;
 ctx.stroke()}", ";,

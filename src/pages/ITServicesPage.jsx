@@ -75,7 +75,7 @@ const ITServicesPage = () => {}
       price: '$2,000 - $15,000',';
       features: ['';
         'Security audits',Penetration testing',Incident response',Compliance',Threat intelligence',Security training',";
-      ],"";
+      ],""
       icon: <Shield className="h-8 w-8 text-red-500" />,';
       category: 'Security',';
       badge: 'Premium',';
@@ -90,7 +90,7 @@ const ITServicesPage = () => {}
       price: '$3,000 - $12,000/month',';
       features: ['';
         'Pipeline automation',Infrastructure as code',Monitoring',Performance optimization',Container orchestration',GitOps',";
-      ],"";
+      ],""
       icon: <Zap className="h-8 w-8 text-yellow-500" />,';
       category: 'DevOps',';
       link: 'https://ziontechgroup.com/devops',';
@@ -104,7 +104,7 @@ const ITServicesPage = () => {}
       price: '$1,000 - $6,000/month',';
       features: ['';
         'Performance tuning',Backup & recovery',Security hardening',Migration support',High availability',Monitoring',";
-      ],"";
+      ],""
       icon: <Database className="h-8 w-8 text-green-500" />,';
       category: 'Database',';
       link: 'https://ziontechgroup.com/database-management',';
@@ -118,7 +118,7 @@ const ITServicesPage = () => {}
       price: '$2,500 - $20,000',';
       features: ['';
         'Network design',Security implementation',Monitoring',24/7 support',SD-WAN',Network automation',";
-      ],"";
+      ],""
       icon: <Globe className="h-8 w-8 text-purple-500" />,';
       category: 'Networking',';
       link: 'https://ziontechgroup.com/network-infrastructure',';
@@ -132,7 +132,7 @@ const ITServicesPage = () => {}
       price: '$150 - $300/hour',';
       features: ['';
         'Technology assessment',Roadmap planning',Vendor selection',ROI analysis',Digital transformation',IT governance',";
-      ],"";
+      ],""
       icon: <CheckCircle className="h-8 w-8 text-cyan-500" />,';
       category: 'Consulting',';
       link: 'https://ziontechgroup.com/it-consulting',';
@@ -146,7 +146,7 @@ const ITServicesPage = () => {}
       price: '$500 - $5,000/month',';
       features: ['';
         'Help desk support',System administration',Security management',Backup services',Proactive monitoring',Vendor management',";
-      ],"";
+      ],""
       icon: <Settings className="h-8 w-8 text-indigo-500" />,';
       category: 'Managed Services',';
       badge: 'New',';
@@ -161,7 +161,7 @@ const ITServicesPage = () => {}
       price: '$1,000 - $10,000/month',';
       features: ['';
         'Hardware provisioning',Environmental monitoring',Power management',Security',Backup power',Climate control',";
-      ],"";
+      ],""
       icon: <Server className="h-8 w-8 text-gray-500" />,';
       category: 'Data Center',';
       link: 'https://ziontechgroup.com/data-center',';
@@ -175,7 +175,7 @@ const ITServicesPage = () => {}
       price: '$15,000 - $100,000',';
       features: ['';
         'UI/UX design',Native development',Testing',App store deployment',Maintenance',Performance optimization',";
-      ],"";
+      ],""
       icon: <Smartphone className="h-8 w-8 text-orange-500" />,';
       category: 'Development',';
       link: 'https://ziontechgroup.com/mobile-development',';
@@ -189,7 +189,7 @@ const ITServicesPage = () => {}
       price: '$10,000 - $75,000',';
       features: ['';
         'Responsive design',SEO optimization',Performance tuning',Maintenance',Security',Analytics integration',";
-      ],"";
+      ],""
       icon: <Globe className="h-8 w-8 text-teal-500" />,';
       category: 'Development',';
       link: 'https://ziontechgroup.com/web-development',';
@@ -203,7 +203,7 @@ const ITServicesPage = () => {}
       price: '$5,000 - $50,000',';
       features: ['';
         'Custom AI models',Data preprocessing',Model training',API integration',Performance monitoring',Continuous learning',";
-      ],"";
+      ],""
       icon: <Brain className="h-8 w-8 text-pink-500" />,';
       category: 'AI/ML',';
       badge: 'Innovative',';
@@ -218,7 +218,7 @@ const ITServicesPage = () => {}
       price: '$20,000 - $150,000',';
       features: ['';
         'Smart contracts',DApp development',Blockchain integration',Security auditing',DeFi solutions',NFT platforms',";
-      ],"";
+      ],""
       icon: <Lock className="h-8 w-8 text-emerald-500" />,';
       category: 'Blockchain',';
       badge: 'Emerging',';
@@ -233,7 +233,7 @@ const ITServicesPage = () => {}
       price: '$8,000 - $60,000',';
       features: ['';
         'IoT platform development',Device integration',Data analytics',Real-time monitoring',Automation',Security',";
-      ],"";
+      ],""
       icon: <Wifi className="h-8 w-8 text-blue-500" />,';
       category: 'IoT',';
       link: 'https://ziontechgroup.com/iot-solutions',';
@@ -247,7 +247,7 @@ const ITServicesPage = () => {}
       price: '$3,000 - $25,000',';
       features: ['';
         'Data warehousing',ETL processes',Advanced analytics',Interactive dashboards',Predictive modeling',Real-time reporting',";
-      ],"";
+      ],""
       icon: <BarChart3 className="h-8 w-8 text-purple-500" />,';
       category: 'Analytics',';
       link: 'https://ziontechgroup.com/data-analytics',';
@@ -261,7 +261,7 @@ const ITServicesPage = () => {}
       price: '$2,000 - $15,000',';
       features: ['';
         'Backup strategies',Recovery planning',Testing',Documentation',Training',24/7 support',";
-      ],"";
+      ],""
       icon: <HardDrive className="h-8 w-8 text-red-500" />,';
       category: 'Recovery',';
       link: 'https://ziontechgroup.com/disaster-recovery',';
@@ -275,79 +275,79 @@ const ITServicesPage = () => {}
 ;
   return();
     <>";
-      <SEO"";
-        title="IT Services - Zion Tech Group"";
-        description="Comprehensive IT services including infrastructure, support, and technology consulting solutions."";
+      <SEO""
+        title="IT Services - Zion Tech Group""
+        description="Comprehensive IT services including infrastructure, support, and technology consulting solutions.""
         keywords="IT services, infrastructure, support, technology consulting, IT solutions";
       />";
-"";
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-800 text-white">"";
-        <div className="max-w-7xl mx-auto px-6 py-20">"";
-          <div className="text-center mb-16">"";
+""
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-800 text-white">""
+        <div className="max-w-7xl mx-auto px-6 py-20">""
+          <div className="text-center mb-16">""
             <h1 className="text-5xl md:text-6xl font-bold mb-6">'";
-              IT{' '}"";
+              IT{' '}""
               <span className="bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">;
                 Services;
               </span>";
-            </h1>"";
+            </h1>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
               Comprehensive information technology solutions for modern;
               businesses;
             </p>;
           </div>";
-"";
+""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {itServices.map((service, index) => (;
               <Card";
-                key={index}"";
+                key={index}""
                 className="bg-white/10 backdrop-blur-lg border-teal-400/20 hover:bg-white/20 transition-all duration-300">";
-                <CardHeader>"";
-                  <div className="flex items-center justify-between mb-4">"";
+                <CardHeader>""
+                  <div className="flex items-center justify-between mb-4">""
                     <div className="p-3 rounded-lg bg-teal-400/20">;
                       {service.icon}
                     </div>";
-                    {service.badge && ("";
+                    {service.badge && (""
                       <Badge className="bg-teal-400/20 text-teal-300 border-teal-400/30">;
                         {service.badge}
                       </Badge>;
                     )}";
-                  </div>"";
+                  </div>""
                   <CardTitle className="text-xl text-white">;
                     {service.title}";
-                  </CardTitle>"";
+                  </CardTitle>""
                   <CardDescription className="text-gray-300">;
                     {service.description}
                   </CardDescription>;
                 </CardHeader>";
-                <CardContent>"";
-                  <div className="mb-4">"";
+                <CardContent>""
+                  <div className="mb-4">""
                     <p className="text-sm text-gray-300 mb-3">;
                       {service.details}";
-                    </p>"";
+                    </p>""
                     <div className="grid grid-cols-2 gap-2 mb-4">;
                       {service.features.slice(0, 4).map((feature, idx) => (;
                         <div";
-                          key={idx}"";
-                          className="flex items-center text-xs text-teal-300"">"";
+                          key={idx}""
+                          className="flex items-center text-xs text-teal-300"">""
                           <CheckCircle className="w-3 h-3 mr-2" />;
                           {feature}
                         </div>;
                       ))}";
-                    </div>"";
-                    <div className="text-center mb-4">"";
+                    </div>""
+                    <div className="text-center mb-4">""
                       <span className="text-2xl font-bold text-teal-400">;
                         {service.price}
                       </span>;
                     </div>;
                   </div>";
-                </CardContent>"";
+                </CardContent>""
                 <CardHeader className="pt-0">;
                   <Button";
-                    asChild"";
+                    asChild""
                     className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600">;
                     <a";
-                      href={service.link}"";
-                      target="_blank"";
+                      href={service.link}""
+                      target="_blank""
                       rel="noopener noreferrer">;
                       Learn More;
                     </a>;

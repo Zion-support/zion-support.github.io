@@ -15,17 +15,17 @@ export default function WhitelabelManager() {}
 }
   return();
     <>";
-      <SEO"";
-        title="White-Label Management - Zion AI Marketplace"";
+      <SEO""
+        title="White-Label Management - Zion AI Marketplace""
         description="Create and manage white-label instances of the Zion AI Marketplace platform.";
       />";
-"";
-      <main className="flex-1 container max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">"";
+""
+      <main className="flex-1 container max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">""
         <div className="flex flex-col space-y-6">";
-          <div>"";
+          <div>""
             <h1 className="text-3xl font-bold tracking-tight">;
               White-Label Management";
-            </h1>"";
+            </h1>""
             <p className="text-muted-foreground mt-2">;
               Create and manage branded versions of the platform for agencies,;
               startups, and enterprise clients.;
@@ -34,23 +34,23 @@ export default function WhitelabelManager() {}
 
           <Tabs;
             value={activeTab}";
-            onValueChange={setActiveTab}"";
-            className="w-full"">"";
-            <TabsList className="mb-8">"";
-              <TabsTrigger value="tenants">Tenants</TabsTrigger>"";
-              <TabsTrigger value="create">Create New</TabsTrigger>"";
+            onValueChange={setActiveTab}""
+            className="w-full"">""
+            <TabsList className="mb-8">""
+              <TabsTrigger value="tenants">Tenants</TabsTrigger>""
+              <TabsTrigger value="create">Create New</TabsTrigger>""
               <TabsTrigger value="docs">Documentation</TabsTrigger>;
             </TabsList>";
-"";
+""
             <TabsContent value="tenants" className="space-y-6">;
               <TenantsList />;
             </TabsContent>";
-"";
+""
             <TabsContent value="create" className="flex justify-center">;
               <WhitelabelRequestForm />;
             </TabsContent>";
-"";
-            <TabsContent value="docs" className="space-y-6">"";
+""
+            <TabsContent value="docs" className="space-y-6">""
               <div className="prose dark:prose-invert max-w-none">;
                 <h2>White-Label Documentation</h2>;
                 <h3>DNS Configuration</h3>;

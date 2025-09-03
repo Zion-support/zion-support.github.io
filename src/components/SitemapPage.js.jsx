@@ -24,18 +24,18 @@ export default function SitemapPage() {;
             Complete navigation guide for Zion Tech Group;
           </p>;
         </div>";
-"";
+""
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">";
-          {/* Public Routes */}"";
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"";
+          {/* Public Routes */}""
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">""
             <h2 className="text-2xl font-semibold text-zion-cyan mb-4">;
-              Public Pages""";
-            </h2>"";
+              Public Pages"""
+            </h2>""
             <ul className="space-y-2">;
               {publicRoutes.map(route => (";
                 <li key={route.path}">";
-                  <Link""";
-                    to={route.path}"";
+                  <Link"""
+                    to={route.path}""
                     className="text-zion-slate-light hover: text-zion-cyan transition-colors block ">,;
                     {route.label || route.title}
 ;
@@ -45,17 +45,17 @@ export default function SitemapPage() {;
 ;
             </ul>";
           </div>;
-""";
-          {/* comment */}""";
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"";
+"""
+          {/* comment */}"""
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">""
             <h2 className="text-2xl font-semibold text-zion-cyan mb-4">;
-              Talent & Job Seeker Pages""";
-            </h2>"";
+              Talent & Job Seeker Pages"""
+            </h2>""
             <ul className="space-y-2">;
               {talentRoutes.map(route => (";
                 <li key={route.path}">";
-                  <Link""";
-                    to={route.path}"";
+                  <Link"""
+                    to={route.path}""
                     className="text-zion-slate-light hover: text-zion-cyan transition-colors block ">,;
                     {route.label || route.title}
 ;
@@ -65,17 +65,17 @@ export default function SitemapPage() {;
 ;
             </ul>";
           </div>;
-""";
-          {/* comment */}""";
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"";
+"""
+          {/* comment */}"""
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">""
             <h2 className="text-2xl font-semibold text-zion-cyan mb-4">;
-              Employer & Buyer Pages""";
-            </h2>"";
+              Employer & Buyer Pages"""
+            </h2>""
             <ul className="space-y-2">;
               {employerRoutes.map(route => (";
                 <li key={route.path}">";
-                  <Link""";
-                    to={route.path}"";
+                  <Link"""
+                    to={route.path}""
                     className="text-zion-slate-light hover: text-zion-cyan transition-colors block ">,;
                     {route.label || route.title}
 ;
@@ -85,17 +85,17 @@ export default function SitemapPage() {;
 ;
             </ul>";
           </div>;
-""";
-          {/* comment */}""";
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"";
+"""
+          {/* comment */}"""
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">""
             <h2 className="text-2xl font-semibold text-zion-cyan mb-4">;
-              Administrative Pages""";
-            </h2>"";
+              Administrative Pages"""
+            </h2>""
             <ul className="space-y-2">;
               {adminRoutes.map(route => (";
                 <li key={route.path}">";
-                  <Link""";
-                    to={route.path}"";
+                  <Link"""
+                    to={route.path}""
                     className="text-zion-slate-light hover: text-zion-cyan transition-colors block ">,;
                     {route.label || route.title}
 ;
@@ -106,22 +106,22 @@ export default function SitemapPage() {;
             </ul>;
           </div>";
         </div>;
-""";
-        {/* comment */}""";
-        <div className="mt-12 bg-white/10 backdrop-blur-sm rounded-lg p-6">"";
+"""
+        {/* comment */}"""
+        <div className="mt-12 bg-white/10 backdrop-blur-sm rounded-lg p-6">""
           <h2 className="text-2xl font-semibold text-zion-cyan mb-6">;
-            Complete Route List""";
-          </h2>""";
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4">""";
+            Complete Route List"""
+          </h2>"""
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4">"""
             {completeSitemap.map(route => (""",;
               <div key="{route.path}" className="bg-white/5 rounded p-3">;
-                <Link""";
-                  to={route.path}"";
+                <Link"""
+                  to={route.path}""
                   className="text-zion-cyan hover: text-zion-cyan-light transition-colors font-medium ">",;
-                  {route.path}""";
-                </Link>"";
+                  {route.path}"""
+                </Link>""
                 <span className="ml-2 text-xs italic text-zion-slate-light">;
-                  ({route.priority})""";
+                  ({route.priority})"""
                 </span>"""';
                 <p className="text-sm text-zion-slate-light mt-1">;
                   {route.description}

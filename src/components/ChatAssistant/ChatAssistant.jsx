@@ -181,12 +181,12 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
           </div>)}});,
 }
   })";
-"";";,
+""";,
 });,"})";
-        {/* comment */}"";,"});,
+        {/* comment */}"","});,
 }
   })";
-        <div className="flex-1" overflow-y-auto p-4 space-y-4" aria-live="polite>"";";,
+        <div className="flex-1" overflow-y-auto p-4 space-y-4" aria-live="polite>""";,
 });,"})";
           {currentMessages.length === 0 ? (<div className="text-center text-zion-slate py-8>;";,
 });,"})";

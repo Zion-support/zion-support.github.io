@@ -527,19 +527,19 @@ export const GeneratedComponent = () => {;
 };
     const generatePythonDoc = (_code) => {;
 "`;
-        return `""";
+        return `"""
 Generated Module;
 
 This module was generated based on user requirements.;";
-""";
+"""
 ;
 def generated_function():;";
-    """;
+    """
     Generated function with docstring.;
 ;
     Returns:;
         str: Description of return value";
-    """;`;
+    """`;
     pass`;,
 };
     const generateGenericDocs = (_code, language) => {;

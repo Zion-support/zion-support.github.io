@@ -1,74 +1,117 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
-;
-function fixSyntaxErrors(filePath) {;
-  console.log(`Fixing syntax errors in: ${filePath}`);
-  ;
-  let content = fs.readFileSync(filePath, 'utf8');
-  ;
-  // Fix common syntax errors;
-  content = content;
-    // Remove extra semicolons after class declarations;
-    .replace(/class\s+\w+\s*\{;/g, (match) => match.replace('{;', '{'));
-    // Remove extra semicolons after method declarations;
-    .replace(/(\w+)\s*\([^)]*\)\s*\{;/g, '$1() {');
-    // Remove extra semicolons after if/for/while statements;
-    .replace(/(if|for|while|switch)\s*\([^)]*\)\s*\{;/g, '$1() {');
-    // Remove trailing commas before closing braces;
-    .replace(/,(\s*[}\]])/g, '$1');
-    // Remove extra semicolons after closing braces;
-    .replace(/\}(\s*;)/g, '}$1');
-    // Fix method declarations with extra semicolons;
-    .replace(/(\w+)\s*\([^)]*\)\s*\{;/g, '$1() {');
-    // Remove standalone semicolons;
-    .replace(/^\s*;\s*$/gm, '');
-    // Fix object property declarations;
-    .replace(/(\w+):\s*([^,}]+),;/g, '$1: $2,');
-    // Fix array declarations;
-    .replace(/\[\s*\]\s*;/g, '[]');
-    // Remove extra semicolons in function calls;
-    .replace(/\(\s*\)\s*;/g, '()');
-    // Fix constructor calls;
-    .replace(/new\s+(\w+)\s*\(\s*\)\s*;/g, 'new $1()');
-    // Clean up multiple semicolons;
-    .replace(/;+/g, ';');
-    // Remove semicolons at end of lines that shouldn't have them;
-    .replace(/;\s*$/gm, (match, offset, string) => {;
-      const lines = string.split('\n');
-      const lineIndex = string.substring(0, offset).split('\n').length - 1;
-      const line = lines[lineIndex];
-      ;
-      // Don't remove semicolons from statements that should have them;
-      if (line.match(/(const|let|var|return|throw|break|continue)\s/)) {;
-        return match;,
+
+// Function to fix common syntax errors
+function fixSyntaxErrors(content, filePath) {
+  let fixed = content;
+  let changes = 0;
+
+  // Fix extra semicolons after imports
+  fixed = fixed.replace(/import\s+[^;]+;;+/g, (match) => {
+    changes++;
+    return match.replace(/;+$/, '');
+  });
+
+  // Fix malformed import statements with extra quotes
+  fixed = fixed.replace(/import\s+[^;]+''';+/g, (match) => {
+    changes++;
+    return match.replace(/''';+$/, '');
+  });
+
+  // Fix broken function declarations
+  fixed = fixed.replace(/const\s+\w+\s*=\s*\(\)\s*=>\s*\{\}\s*return\(\);?/g, (match) => {
+    changes++;
+    return match.replace(/return\(\);?/, 'return (');
+  });
+
+  // Fix malformed JSX returns
+  fixed = fixed.replace(/return\(\);?\s*<div/g, (match) => {
+    changes++;
+    return match.replace(/return\(\);?\s*/, 'return (\n    ');
+  });
+
+  // Fix extra semicolons in object properties
+  fixed = fixed.replace(/:\s*[^,}]+;;+/g, (match) => {
+    changes++;
+    return match.replace(/;+$/, '');
+  });
+
+  // Fix malformed string literals
+  fixed = fixed.replace(/"";+/g, (match) => {
+    changes++;
+    return match.replace(/;+$/, '');
+  });
+
+  // Fix broken export statements
+  fixed = fixed.replace(/export\s+default\s+[^;]+;;+/g, (match) => {
+    changes++;
+    return match.replace(/;+$/, '');
+  });
+
+  // Fix TypeScript interface syntax errors
+  if (filePath.endsWith('.ts') || filePath.endsWith('.tsx')) {
+    // Fix malformed interface declarations
+    fixed = fixed.replace(/interface\s+\w+\s*\{[^}]*;;+/g, (match) => {
+      changes++;
+      return match.replace(/;+$/, '');
+    });
+  }
+
+  return { content: fixed, changes };
 }
-      ;
-      // Don't remove semicolons from object/array literals;
-      if (line.match(/[\[\{]\s*$/)) {;
-        return match;,
+
+// Function to process a single file
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const { content: fixed, changes } = fixSyntaxErrors(content, filePath);
+    
+    if (changes > 0) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
+      console.log(`Fixed ${changes} issues in ${filePath}`);
+      return changes;
+    }
+    return 0;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return 0;
+  }
 }
-      ;
-      return match.replace(';', '');,
-});
-;
-  fs.writeFileSync(filePath, content);
-  console.log(`Fixed syntax errors in: ${filePath}`);,
+
+// Function to recursively find and process files
+function processDirectory(dirPath, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
+  let totalChanges = 0;
+  
+  try {
+    const items = fs.readdirSync(dirPath);
+    
+    for (const item of items) {
+      const fullPath = path.join(dirPath, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        // Skip node_modules and other build directories
+        if (!['node_modules', '.next', 'dist', 'build', 'out', '.git'].includes(item)) {
+          totalChanges += processDirectory(fullPath, extensions);
+        }
+      } else if (stat.isFile()) {
+        const ext = path.extname(item);
+        if (extensions.includes(ext)) {
+          totalChanges += processFile(fullPath);
+        }
+      }
+    }
+  } catch (error) {
+    console.error(`Error processing directory ${dirPath}:`, error.message);
+  }
+  
+  return totalChanges;
 }
-;
-// Fix the main automation files;
-const filesToFix = [;
-  'simple-automation-orchestrator.cjs',;
-  'run-automation-suite.cjs';
-];
-;
-filesToFix.forEach(file => {;
-  if (fs.existsSync(file)) {;
-    fixSyntaxErrors(file);,
-} else {;
-    console.log(`File not found: ${file}`);,
-}
-});
-;
-console.log('Syntax error fixing completed!');}}}}}}
+
+// Main execution
+console.log('Starting syntax error fixes...');
+const totalChanges = processDirectory('./src');
+console.log(`Total changes made: ${totalChanges}`);
+console.log('Syntax error fixes completed!');

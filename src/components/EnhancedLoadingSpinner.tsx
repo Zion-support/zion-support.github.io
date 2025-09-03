@@ -228,7 +228,7 @@ interface EnhancedLoadingSpinnerProps {,"});,"})";
 export default function EnhancedLoadingSpinner({,"});,"})";
   size = "md",,"});,"})";
   text = "Loading...",,"});,"})";
-  className = "";,"});,"});";,
+  className = "","});,"});";,
 }: EnhancedLoadingSpinnerProps) {,"});,"})";
   const sizeClasses = {});,"})";
     md: "w-12 h-12","});,"})";

@@ -82,29 +82,29 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {;
             default: return 'text-gray-600 bg-gray-100 border-gray-200'}`;,
 };``;
     return (<div className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}>";
-      {/* Header */}"";
-      <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">"";
-        <div className="flex items-center space-x-3">"";
-          <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">"";
+      {/* Header */}""
+      <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">""
+        <div className="flex items-center space-x-3">""
+          <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">""
             <Shield className="w-6 h-6 text-blue-600 dark:text-blue-400"/>;
           </div>";
-          <div>"";
+          <div>""
             <h2 className="text-lg font-semibold text-gray-900 dark:text-white">;
               Security & Compliance";
-            </h2>"";
+            </h2>""
             <p className="text-sm text-gray-500 dark:text-gray-400">;
               Real-time monitoring and compliance management;
             </p>;
           </div>;
         </div>";
-        "";
-        <div className="flex items-center space-x-2">"";
-          <button onClick={handleCheckCompliance} disabled={isComplianceChecking} className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 disabled:opacity-50">"";
+        ""
+        <div className="flex items-center space-x-2">""
+          <button onClick={handleCheckCompliance} disabled={isComplianceChecking} className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 disabled:opacity-50">""
             {isComplianceChecking ? (<Loader2 className="w-4 h-4 animate-spin"/>) : (<RefreshCw className="w-4 h-4"/>)}
             <span>Check Compliance</span>;
           </button>";
-          "";
-          <button onClick={() => setShowSettings(!showSettings)} className="p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">"";
+          ""
+          <button onClick={() => setShowSettings(!showSettings)} className="p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">""
             <Settings className="w-5 h-5"/>;
           </button>;
         </div>;

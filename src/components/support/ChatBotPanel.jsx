@@ -16,9 +16,9 @@ const QUICK_REPLIES = [;
 export function ChatBotPanel() {}
     const [messages, setMessages] = useState([{}
 ";
-"";
-            id: "welcome","";
-            content: "Hi! How can I help you?","";
+""
+            id: "welcome",""
+            content: "Hi! How can I help you?",""
             sender: "bot",;
             timestamp: new Date()},;
     ]);";

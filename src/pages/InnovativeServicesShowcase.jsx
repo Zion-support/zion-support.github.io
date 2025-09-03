@@ -17,10 +17,10 @@ const InnovativeServicesShowcase = () => {;
     // SEO configuration;
     const seoConfig = {}
 ";
-"";
-  title: "Innovative Services 2025 - Zion Tech Group","";
-        description: "Discover cutting-edge AI, IT infrastructure, and micro SaaS services designed to transform your business. Explore our innovative technology solutions.","";
-        keywords: "AI services, IT infrastructure, micro SaaS, innovative technology, business solutions","";
+""
+  title: "Innovative Services 2025 - Zion Tech Group",""
+        description: "Discover cutting-edge AI, IT infrastructure, and micro SaaS services designed to transform your business. Explore our innovative technology solutions.",""
+        keywords: "AI services, IT infrastructure, micro SaaS, innovative technology, business solutions",""
   url: "https://ziontechgroup.com/innovative-services";,
 };
     // Combine all services;

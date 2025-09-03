@@ -6,7 +6,7 @@ import { useAISearch } from "@/hooks/useAISearch";
 export default function SearchPage() {;
     const [params] = useSearchParams();
     const navigate = useNavigate();
-    const initial = params.get("q") || "";
+    const initial = params.get("q") || ""
     const [query, setQuery] = useState(initial);
     const { results, loading, search } = useAISearch();
     const suggestions = generateSearchSuggestions();

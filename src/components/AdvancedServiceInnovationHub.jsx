@@ -169,8 +169,8 @@ export default function AdvancedServiceInnovationHub() {return (";
             technologies[&apos;Neural Interfaces&apos,Signal Processing&apos,AI/ML&apos],;
             status: &apos,Emerging&apos}
 ;
-    ]&apos;&apos,"""""""";
-""";
+    ]&apos;&apos,""""""""
+"""
     const [selectedCategory, setSelectedCategory] = useState("all")";
     const [selectedImpact, setSelectedImpact] = useState("all")";
     const [selectedStatus, setSelectedStatus] = useState("all")";
@@ -232,55 +232,55 @@ export default function AdvancedServiceInnovationHub() {return (";
             keyPlayers["Neuralink",Kernel",Medical Device Companies"],";
             technologies["Neural Interfaces",Signal Processing",AI / ML"],",;
             id: "quantum - supremacy", "",";
-            title: "Quantum Supremacy & Commercialization", """;
-            description: "The transition from quantum research to practical commercial applications across industries.", """;
-            category: "quantum", """;
-            impact: "High", """;
+            title: "Quantum Supremacy & Commercialization", """
+            description: "The transition from quantum research to practical commercial applications across industries.", """
+            category: "quantum", """
+            impact: "High", """
             timeline: "2025 - 2030", ",;
-            adoption: 85, """;
+            adoption: 85, """
             investment: "$50B + ", "",";
             keyPlayers["IBM", Google",Microsoft", Startups"], ";
             technologies["Quantum Computing", Quantum Algorithms",Quantum Software"], ";
             status: "Emerging"} {}";
             id: "ai - consciousness", "",";
-            title: "AI Consciousness & General Intelligence", """;
+            title: "AI Consciousness & General Intelligence", """
             description: "Development of self - aware AI systems with human-like reasoning and consciousness.", "",";
-            category: "ai", """;
+            category: "ai", """
             timeline: "2030 - 2040", ",;
-            adoption: 45, """;
+            adoption: 45, """
             investment: "$100B + ", "",";
             keyPlayers["OpenAI", Anthropic",Research Labs", Universities"], ";
             technologies["AI Consciousness", General AI",Neural Networks"], ";
             id: "space - mining", "",";
-            title: "Space Mining & Resource Extraction", """;
-            description: "Commercial extraction of valuable resources from asteroids and celestial bodies.", """;
+            title: "Space Mining & Resource Extraction", """
+            description: "Commercial extraction of valuable resources from asteroids and celestial bodies.", """
             category: "space - tech", "",";
-            adoption: 30, """;
+            adoption: 30, """
             investment: "$200B + ", "",";
             keyPlayers["SpaceX", Blue Origin",Asteroid Mining Companies"], ";
             technologies["Space Robotics", Resource Processing",Space Logistics"], ";
             id: "fusion - energy", "",";
-            title: "Fusion Energy Commercialization", """;
-            description: "Breakthrough in controlled nuclear fusion for unlimited clean energy.", """;
+            title: "Fusion Energy Commercialization", """
+            description: "Breakthrough in controlled nuclear fusion for unlimited clean energy.", """
             category: "green - tech", "",";
-            adoption: 60, """;
+            adoption: 60, """
             investment: "$500B + ", "",";
             keyPlayers["ITER", Private Fusion Companies",Government Labs"], ";
             technologies["Fusion Physics", Plasma Confinement",Energy Conversion"], ";
             status: "Growing"} {}";
             id: "synthetic - biology", "",";
-            title: "Synthetic Biology Revolution", """;
-            description: "Engineering of custom organisms and biological systems for industrial applications.", """;
+            title: "Synthetic Biology Revolution", """
+            description: "Engineering of custom organisms and biological systems for industrial applications.", """
             category: "biotech - ai", "",";
             timeline: "2025 - 2035", ",;
-            adoption: 70, """;
+            adoption: 70, """
             investment: "$150B + ", "",";
             keyPlayers["Ginkgo Bioworks", Twist Bioscience",Research Institutions"], ";
             technologies["DNA Programming", Genetic Engineering",Bio - Manufacturing"], ",;
             id: "brain - computer-interfaces", "",";
             title: "Brain - Computer Interface Revolution", "",";
-            description: "Direct neural control of computers and digital systems for enhanced human capabilities.", """;
-            adoption: 40, """;
+            description: "Direct neural control of computers and digital systems for enhanced human capabilities.", """
+            adoption: 40, """
             investment: "$80B + ", "",";
             keyPlayers["Neuralink", Kernel",Medical Device Companies"], ";
             technologies["Neural Interfaces", Signal Processing",AI / ML"], ",;
@@ -345,8 +345,8 @@ export default function AdvancedServiceInnovationHub() {return (";
             case "Growing": return "bg - green-100 text-green-800",;
             case "Mature": return "bg - orange-100 text-orange-800",;
             case "Disruptive": return "bg - purple-100 text-purple-800",;
-""";
-""";";
+"""
+"""";
             case "quantum": return <Atom className="w - 5 h-5"  />",";
             case "ai": return <Brain className="w - 5 h-5"  />",";
             case "space - tech": return <Satellite className="w-5 h-5"  />",";
@@ -359,14 +359,14 @@ export default function AdvancedServiceInnovationHub() {return (";
     return (";
     <div className = "max - w-7xl mx-auto p-6">,;
 """,;
-"""";
-            case "quantum": return <Atom className = "w-5 h-5"  />"""";
-            case "ai": return <Brain className="w-5 h-5"  />"""";
-            case "space-tech": return <Satellite className="w-5 h-5"  />"""";
-            case "green-tech": return <Leaf className="w-5 h-5"  />"""";
-            case "biotech-ai": return <Dna className="w-5 h-5"  />"";,
-}"";
-    const categories = []"";
+""""
+            case "quantum": return <Atom className = "w-5 h-5"  />""""
+            case "ai": return <Brain className="w-5 h-5"  />""""
+            case "space-tech": return <Satellite className="w-5 h-5"  />""""
+            case "green-tech": return <Leaf className="w-5 h-5"  />""""
+            case "biotech-ai": return <Dna className="w-5 h-5"  />"",
+}""
+    const categories = []""
     return (";
     <div className = "max-w-7xl mx-auto p-6">;
       {/* comment */}
@@ -378,16 +378,16 @@ y: 20}} animate = {}
 ;
   { opacity: 1,;
 y: 0 ",">;
-""}} className="mb-8">"";";
+""}} className="mb-8">""";
         <div className="flex flex - col lg: flex-row lg:items-center lg:justify-between gap-4">",;
-          <div>"";";
+          <div>""";
             <h1 className="text-3xl font-bold text-zion-blue-dark mb-2">,;
               Advanced Service Innovation Hub",",;
             </h1>",";
             <p className = "text-zion-slate-light">,;
               Explore cutting-edge innovation trends, future technology roadmaps, and strategic insights for the next generation of services;
             </p>;
-          </div>"";";
+          </div>""";
           <div className = "flex gap-2">"""{["trends",roadmap",insights"].map((mode) => (<Button key="{mode}" variant="{viewMode" === mode ? "default" : "outline"} size="sm" onClick="{()" => setViewMode(mode)}>"""{mode === "trends" && <TrendingUp className="w-4 h-4 mr-2"  />}"""{mode === "roadmap" && <Rocket className="w-4 h-4 mr-2"  />}"""{mode === "insights" && <Lightbulb className="w-4 h-4 mr-2"  />}
                 {mode.charAt(0).toUpperCase() + mode.slice(1)}
 ;
@@ -396,58 +396,58 @@ y: 0 ",">;
           </div>;
       </motion.div>";
 "{/* comment */}""{viewMode = == "trends" && (<>{/* comment */}";
-""}} transition="{{" delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">"";";
+""}} transition="{{" delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">""";
             <div className = "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">",";
                 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Category</label>","                <select value="{selectedCategory}" onChange="{(e)" => setSelectedCategory(e.target.value)} className="w-full p-2 border border-zion-slate-light rounded-md">{categories.map(category => (<option key="{category.id}" value="{category.id}"> {category.name}
 ;
                     </option>) ) }
 ;
                 </select>;";
-                <label className="block text-sm font-medium text-zion-slate-dark mb-2">Impact</label>"";";
+                <label className="block text-sm font-medium text-zion-slate-dark mb-2">Impact</label>""";
                 <select value = "{selectedImpact}" onChange="{(e)" => setSelectedImpact(e.target.value)} className="w - full p-2 border border-zion-slate-light rounded-md">",;
                   <option value="all">All Impact Levels</option>",;
                   <option value = "High">High Impact</option>",;
                   <option value = "Medium">Medium Impact</option>",;
                   <option value="Low">Low Impact</option>;";
-                <label className="block text-sm font-medium text-zion-slate-dark mb-2">Status</label>"";";
+                <label className="block text-sm font-medium text-zion-slate-dark mb-2">Status</label>""";
                 <select value = "{selectedStatus}" onChange="{(e)" => setSelectedStatus(e.target.value)} className="w - full p-2 border border-zion-slate-light rounded-md">",;
                   <option value="all">All Statuses</option>",;
                   <option value = "Emerging">Emerging</option>",;
                   <option value = "Growing">Growing</option>",;
                   <option value = "Mature">Mature</option>",;
                   <option value="Disruptive">Disruptive</option>;";
-                <label className="block text-sm font-medium text-zion-slate-dark mb-2">Search</label>"";";
+                <label className="block text-sm font-medium text-zion-slate-dark mb-2">Search</label>""";
                 <Input placeholder="Search trends..." value="{searchTerm}" onChange="{(e)" => setSearchTerm(e.target.value)} className="w-full" />;
           </motion.div> {/* comment */}";
 ""}} transition = "{{" delay: 0.2 }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">{filteredTrends.map((trend, index) => (<motion.div key="{trend.id}" initial = {}
 ;
   x: index % 2 === 0 ? -20 : 20}} animate = {}">;
-  x: 0","}} transition="{{" delay: 0.1 * index }}>"";";
+  x: 0","}} transition="{{" delay: 0.1 * index }}>""";
                 <Card className="h-full hover: shadow-lg transition-shadow">",;
                   <CardHeader>",",;
                     <div className = "flex items-start justify-between mb-4">",";
                       <div className="flex items-center gap-3">",";
                         <div className="w-10 h-10 bg-zion-blue-light/10 rounded-lg flex items-center justify-center"> {getCategoryIcon(trend.category)}";
                           <CardTitle className="text - lg text-zion-blue-dark"> {trend.title}",;
-                          </CardTitle>"";";
+                          </CardTitle>""";
                           <div className="flex gap-2 mt-2">;";
                             <Badge className="{getImpactColor(trend.impact)}"> {trend.impact} Impact;
                             </Badge>;";
                             <Badge className = "{getStatusColor(trend.status)" }> {trend.status}
 ;
                   </CardHeader>;
-                  <CardContent>"";";
+                  <CardContent>""";
                     <p className = "text-zion-slate-light mb-4"> {trend.description}
 ;
-                    </p>"";";
-                    <div className="space-y-3">"";";
-                      <div className="flex justify-between items-center">"";";
+                    </p>""";
+                    <div className="space-y-3">""";
+                      <div className="flex justify-between items-center">""";
                         <span className = "text-sm text-zion-slate-light">Timeline: </span>",";
                         <span className="text-sm font-medium text-zion-slate-dark">{trend.timeline}</span>;";
                         <span className="text-sm text-zion-slate-light">Adoption Rate: </span>",",;
                         <div className = "flex items-center gap-2">",";
                           <div className="w-20 bg-zion-slate-light/20 rounded-full h-2">",";
-                            <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style="{{" width: "${trend.adoption}%" }}></div>"";";
+                            <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style="{{" width: "${trend.adoption}%" }}></div>""";
                           <span className="text-sm font-medium">{trend.adoption}%</span>;";
                         <span className = "text-sm text-zion-slate-light">Investment: </span>",";
                         <span className="text-sm font-medium text-zion-cyan">{trend.investment}</span>;";
@@ -476,15 +476,15 @@ y: 0 ",">;
       </motion.div>&apos,;
 "&apos {/* comment */}&apos;&apos,{viewMode === &apos;trends&apos; && (&apos}&apos;<>{/* comment */}";
   y: 0 "",";
-""""}} className = "mb-8">"";
-        <div className="flex flex-col lg: flex-row lg:items-center lg:justify-between gap-4">""";
-          <div>"";
+""""}} className = "mb-8">""
+        <div className="flex flex-col lg: flex-row lg:items-center lg:justify-between gap-4">"""
+          <div>""
             <h1 className="text-3xl font-bold text-zion-blue-dark mb-2">";
-              Advanced Service Innovation Hub""";
-            </h1>"";
+              Advanced Service Innovation Hub"""
+            </h1>""
             <p className="text-zion-slate-light">,;
               Explore cutting-edge innovation trends, future technology roadmaps, and strategic insights for the next generation of services";
-          </div>"";
+          </div>""
           <div className="flex gap-2">""""""{["trends", roadmap",insights"].map((mode) => (<Button key="{mode}" variant="{viewMode" === mode ? "default" : "outline"} size="sm" onClick="{()" => setViewMode(mode)}>""""""{mode === "trends" && <TrendingUp className="w-4 h-4 mr-2"  />}""""""{mode === "roadmap" && <Rocket className="w-4 h-4 mr-2"  />}""""""{mode === "insights" && <Lightbulb className="w-4 h-4 mr-2"  />}";
       </motion.div>";
 ""{/* comment */}"""{viewMode === "trends" && (<>{/* comment */}";
@@ -493,8 +493,8 @@ y: 0 ",">;
             <div className="&apos;grid" grid-cols-1 md:grid-cols-2 l,g: grid-cols-4 gap-4&apos,>"&apos,&apos,",;
                 <label className="&apos;block" text-sm font-medium text-zion-slate-dark mb-2&apos;>Category&apos;</label>&apos;&apos,&apos,&apos,;
                 <select value="{selectedCategory}" onChange="{(e)" => setSelectedCategory(e.target.value)} className="&apos;w-full" p-2 border border-zion-slate-light rounded-md&apos;>{categories.map(category = > (&apos}<option key="{category.id}" value="{category.id}">";
-""""}} transition="{{" delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">"";
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">"";
+""""}} transition="{{" delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">""
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">""
                 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Category</label>""",;
                 <select value="{selectedCategory}" onChange="{(e)" => setSelectedCategory(e.target.value)} className="w-full p-2 border border-zion-slate-light rounded-md">{categories.map(category => (<option key="{category.id}" value="{category.id}">;
                       {category.name}
@@ -516,20 +516,20 @@ y: 0 ",">;
                   <option value="&apos;Disruptive&apos;">Disruptive&apos;</option>";
                 <label className="&apos;block" text-sm font-medium text-zion-slate-dark mb-2&apos;>Search&apos;</label>&apos;&apos,&apos;&apos,";
                 <Input placeholder="&apos;Search" trends...&apos; value="{searchTerm}" onChange="{(e)" => setSearchTerm(e.target.value)} className="&apos;w-full&apos;/">&apos;";
-                <label className = "block text-sm font-medium text-zion-slate-dark mb-2">Impact</label>"";
-                <select value="{selectedImpact}" onChange="{(e)" => setSelectedImpact(e.target.value)} className="w-full p-2 border border-zion-slate-light rounded-md">""";
-                  <option value="all">All Impact Levels</option>""";
-                  <option value="High">High Impact</option>""";
-                  <option value="Medium">Medium Impact</option>""";
+                <label className = "block text-sm font-medium text-zion-slate-dark mb-2">Impact</label>""
+                <select value="{selectedImpact}" onChange="{(e)" => setSelectedImpact(e.target.value)} className="w-full p-2 border border-zion-slate-light rounded-md">"""
+                  <option value="all">All Impact Levels</option>"""
+                  <option value="High">High Impact</option>"""
+                  <option value="Medium">Medium Impact</option>"""
                   <option value="Low">Low Impact</option>";
-                <label className="block text-sm font-medium text-zion-slate-dark mb-2">Status</label>"";
-                <select value="{selectedStatus}" onChange="{(e)" => setSelectedStatus(e.target.value)} className="w-full p-2 border border-zion-slate-light rounded-md">""";
-                  <option value="all">All Statuses</option>""";
-                  <option value="Emerging">Emerging</option>""";
-                  <option value="Growing">Growing</option>""";
-                  <option value="Mature">Mature</option>""";
+                <label className="block text-sm font-medium text-zion-slate-dark mb-2">Status</label>""
+                <select value="{selectedStatus}" onChange="{(e)" => setSelectedStatus(e.target.value)} className="w-full p-2 border border-zion-slate-light rounded-md">"""
+                  <option value="all">All Statuses</option>"""
+                  <option value="Emerging">Emerging</option>"""
+                  <option value="Growing">Growing</option>"""
+                  <option value="Mature">Mature</option>"""
                   <option value="Disruptive">Disruptive</option>";
-                <label className="block text-sm font-medium text-zion-slate-dark mb-2">Search</label>"";
+                <label className="block text-sm font-medium text-zion-slate-dark mb-2">Search</label>""
                 <Input placeholder="Search trends..." value="{searchTerm}" onChange="{(e)" => setSearchTerm(e.target.value)} className="w-full" />;
           </motion.div>;
           {/* comment */}";
@@ -551,16 +551,16 @@ y: 0 ",">;
 """"}} transition = "{{" delay: 0.2 }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">{filteredTrends.map((trend, index) => (<motion.div key="{trend.id}" initial = {}
 ;
   { opacity: 0, x: index % 2 === 0 ? -20 : 20}} animate = {}";
-  x: 0","}} transition="{{" delay: 0.1 * index }}>"";
-                <Card className="h-full hover: shadow-lg transition-shadow">""";
-                  <CardHeader>"";
-                    <div className="flex items-start justify-between mb-4">"";
-                      <div className="flex items-center gap-3">"";
+  x: 0","}} transition="{{" delay: 0.1 * index }}>""
+                <Card className="h-full hover: shadow-lg transition-shadow">"""
+                  <CardHeader>""
+                    <div className="flex items-start justify-between mb-4">""
+                      <div className="flex items-center gap-3">""
                         <div className="w-10 h-10 bg-zion-blue-light/10 rounded-lg flex items-center justify-center">,;
                           {getCategoryIcon(trend.category)}";
                           <CardTitle className="text-lg text-zion-blue-dark">";
-                            {trend.title}""";
-                          </CardTitle>"";
+                            {trend.title}"""
+                          </CardTitle>""
                           <div className="flex gap-2 mt-2">";
                             <Badge className="{getImpactColor(trend.impact)}">;
                               {trend.impact} Impact,;
@@ -591,18 +591,18 @@ y: 0 ",">;
                         <span className="&apos;text-sm" text-zion-slate-light&apos;>Key Players: &apos,</span>&apos,&apos,&apos;&apos,",;
                         <div className="&apos;flex" flex-wrap gap-1 mt-1&apos;>"&apos,&apos,"{trend.keyPlayers.slice(0, 3).map((player, idx) => (&apos}&apos;<Badge key="{idx}" variant="&apos;outline&apos;" className="&apos;text-xs&apos;">;
                               {player}&apos,;
-                  <CardContent>"";
+                  <CardContent>""
                     <p className = "text-zion-slate-light mb-4">;
                       {trend.description}";
-                    </p>"";
-                    <div className="space-y-3">"";
-                      <div className="flex justify-between items-center">"";
+                    </p>""
+                    <div className="space-y-3">""
+                      <div className="flex justify-between items-center">""
                         <span className="text-sm text-zion-slate-light">Timeline: </span>""",;
                         <span className="text-sm font-medium text-zion-slate-dark">{trend.timeline}</span>";
-                        <span className="text-sm text-zion-slate-light">Adoption Rate: </span>"";
-                        <div className="flex items-center gap-2">"";
+                        <span className="text-sm text-zion-slate-light">Adoption Rate: </span>""
+                        <div className="flex items-center gap-2">""
                           <div className="w-20 bg-zion-slate-light/20 rounded-full h-2">""",;
-                            <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style="{{" width: "${trend.adoption}%" }}></div>"";
+                            <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style="{{" width: "${trend.adoption}%" }}></div>""
                           <span className="text-sm font-medium">{trend.adoption}%</span>";
                         <span className="text-sm text-zion-slate-light">Investment: </span>""",;
                         <span className="text-sm font-medium text-zion-cyan">{trend.investment}</span>";
@@ -628,32 +628,32 @@ y: 0 ",">;
                     <div className = "flex-1">",";
                       <div className="flex items-center gap-3 mb-3">",";
                         <div className="w-12 h-12 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center text-white"> {getCategoryIcon(roadmap.category)}";
-                          <CardTitle className="text-xl text-zion-blue-dark"> {roadmap.title}"";";
+                          <CardTitle className="text-xl text-zion-blue-dark"> {roadmap.title}""";
                           <p className="text-zion-slate-light">{roadmap.description}</p>;";
-                      <div className="flex flex-wrap gap-2">"";";
+                      <div className="flex flex-wrap gap-2">""";
                         <Badge className="bg - zion-blue-light / 10 text-zion-blue-dark">,;
                           Timeline: {roadmap.timeline}",;
-                        </Badge>"";";
+                        </Badge>""";
                         <Badge className="bg - zion-cyan/10 text-zion-cyan">,;
-                          Investment: {roadmap.investment}"";";
+                          Investment: {roadmap.investment}""";
                         <Badge className = "bg-zion-purple/10 text-zion-purple"> {roadmap.category.toUpperCase()}";
                   <div className="grid grid-cols-1 lg: grid-cols-3 gap-6">",";
                       <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">",";
                         <CheckCircle className="w-4 h-4 text-green-500"  />,",;
                         Key Milestones",";
                       </h4>",";
-                      <ul className="space-y-2">""{roadmap.milestones.map((milestone, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">"";"                            <div className = "w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div> {milestone}
+                      <ul className="space-y-2">""{roadmap.milestones.map((milestone, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">"""                            <div className = "w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div> {milestone}
 ;
                           </li>) ) }
 ;
                       </ul>;";
                         <Shield className="w - 4 h-4 text-orange-500"  />,;
-                        Challenges"";";
-                      <ul className="space-y-2">""{roadmap.challenges.map((challenge, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">"";";
+                        Challenges""";
+                      <ul className="space-y-2">""{roadmap.challenges.map((challenge, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">""";
                             <div className = "w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div> {challenge}";
                         <Star className="w - 4 h-4 text-yellow-500"  />,;
-                        Opportunities"";";
-                      <ul className="space-y-2">""{roadmap.opportunities.map((opportunity, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">"";";
+                        Opportunities""";
+                      <ul className="space-y-2">""{roadmap.opportunities.map((opportunity, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">""";
                             <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>;
       {/* comment */}&apos {viewMode === &apos;roadmap&apos; && (&apos}<motion.div initial = {}">;
 &apos;&apos,&apos}} transition="{{" delay: 0.1 }} className="&apos;space-y-6&apos;">{futureRoadmap.map((roadmap, index) => (&apos}&apos;<motion.div key = "{roadmap.id}" initial = {}">;
@@ -678,21 +678,21 @@ y: 0 ",">;
 """"}} transition="{{" delay: 0.1 }} className="space-y-6">{futureRoadmap.map((roadmap, index) => (<motion.div key="{roadmap.id}" initial = {}
 ;
   { opacity: 0, x: -20}} animate = {}";
-              <Card className="hover: shadow-lg transition-shadow">"";
-                  <div className="flex items-start justify-between">"";
-                    <div className="flex-1">"";
-                      <div className="flex items-center gap-3 mb-3">"";
+              <Card className="hover: shadow-lg transition-shadow">""
+                  <div className="flex items-start justify-between">""
+                    <div className="flex-1">""
+                      <div className="flex items-center gap-3 mb-3">""
                         <div className="w-12 h-12 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center text-white">,;
                           {getCategoryIcon(roadmap.category)}";
                           <CardTitle className="text-xl text-zion-blue-dark">";
-                            {roadmap.title}"";
+                            {roadmap.title}""
                           <p className="text-zion-slate-light">{roadmap.description}</p>";
-                      <div className="flex flex-wrap gap-2">"";
+                      <div className="flex flex-wrap gap-2">""
                         <Badge className="bg-zion-blue-light/10 text-zion-blue-dark">";
-                          Timeline: {roadmap.timeline}""";
-                        </Badge>"";
+                          Timeline: {roadmap.timeline}"""
+                        </Badge>""
                         <Badge className="bg-zion-cyan/10 text-zion-cyan">";
-                          Investment: {roadmap.investment}"";
+                          Investment: {roadmap.investment}""
                         <Badge className="bg-zion-purple/10 text-zion-purple">;
                           {roadmap.category.toUpperCase()}";
                   <div className="&apos;grid" grid-cols-1 lg: grid-cols-3 gap-6&apos,>"&apos,&apos,";
@@ -702,12 +702,12 @@ y: 0 ",">;
                       </h4>&apos;&apos,&apos;&apos,",;
                       <ul className="&apos;space-y-2&apos;">"&apos,&apos,"{roadmap.milestones.map((milestone, idx) => (&apos}&apos;<li key="{idx}" className="&apos;text-sm" text-zion-slate-light flex items-start gap-2&apos;>"&apos;&apos,&apos;&apos;";
                             <div className="&apos;w-2" h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0&apos;>&apos,</div>";
-                  <div className = "grid grid-cols-1 lg: grid-cols-3 gap-6">"";
-                      <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">"";
+                  <div className = "grid grid-cols-1 lg: grid-cols-3 gap-6">""
+                      <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">""
                         <CheckCircle className="w-4 h-4 text-green-500"  />";
-                        Key Milestones""";
+                        Key Milestones"""
                       </h4>""",;
-                      <ul className="space-y-2">""""{roadmap.milestones.map((milestone, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">"";
+                      <ul className="space-y-2">""""{roadmap.milestones.map((milestone, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">""
                             <div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>;
                             {milestone}
 ;
@@ -717,8 +717,8 @@ y: 0 ",">;
                       <ul className="&apos;space-y-2&apos;">"&apos;&apos,{roadmap.challenges.map((challenge, idx) => (&apos}&apos;<li key="{idx}" className="&apos;text-sm" text-zion-slate-light flex items-start gap-2&apos;>"&apos;&apos,&apos;&apos;";
                             <div className="&apos;w-2" h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0&apos;>&apos,</div>";
                         <Shield className = "w-4 h-4 text-orange-500"  />";
-                        Challenges"";
-                      <ul className="space-y-2">""""{roadmap.challenges.map((challenge, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">"";
+                        Challenges""
+                      <ul className="space-y-2">""""{roadmap.challenges.map((challenge, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">""
                             <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>;
                             {challenge}";
                         <Star className="&apos;w-4" h-4 text-yellow-500&apos;       />";
@@ -726,54 +726,54 @@ y: 0 ",">;
                       <ul className="&apos;space-y-2&apos;">"&apos;&apos,{roadmap.opportunities.map((opportunity, idx) => (&apos}&apos;<li key="{idx}" className="&apos;text-sm" text-zion-slate-light flex items-start gap-2&apos;>"&apos;&apos,&apos;&apos;";
                             <div className="&apos;w-2" h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0&apos;>&apos,</div>";
                         <Star className = "w-4 h-4 text-yellow-500"  />";
-                        Opportunities"";
-                      <ul className="space-y-2">""""{roadmap.opportunities.map((opportunity, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">"";
+                        Opportunities""
+                      <ul className="space-y-2">""""{roadmap.opportunities.map((opportunity, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">""
                             <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>;
                             {opportunity}
 ;
         </motion.div>) }";
       {/* comment */}"{viewMode === "insights" && (<motion.div initial = {}">;
-""}} transition="{{" delay: 0.1 }} className="space-y-6">"";";
+""}} transition="{{" delay: 0.1 }} className="space-y-6">""";
           <div className="grid grid - cols-1 lg: grid-cols-2 gap-6">,;
-            <Card>"";";
-                <CardTitle className="flex items-center gap-2">"";";
+            <Card>""";
+                <CardTitle className="flex items-center gap-2">""";
                   <TrendingUp className="w-5 h-5 text-zion-green"  />;
                   Investment Trends;
                 </CardTitle>,;
-              </CardHeader>"";";
-                <div className="space-y-4">"";";
-                    <span className="text-zion-slate-light">Quantum Technology</span>"";";
+              </CardHeader>""";
+                <div className="space-y-4">""";
+                    <span className="text-zion-slate-light">Quantum Technology</span>""";
                     <span className="font-semibold text-zion-cyan">$150B+</span>",",;
                   </div>"",";
                   <div className = "w-full bg-zion-slate-light/20 rounded-full h-2">"",";
                     <div className="bg-zion-cyan h-2 rounded-full" style="{{" width: "85%" }}></div>;";
-                    <span className="text-zion-slate-light">AI & Machine Learning</span>"";";
-                    <span className="font-semibold text-zion-purple">$300B+</span>"";";
+                    <span className="text-zion-slate-light">AI & Machine Learning</span>""";
+                    <span className="font-semibold text-zion-purple">$300B+</span>""";
                     <div className="bg-zion-purple h-2 rounded-full" style="{{" width: "95%" }}></div>;";
-                    <span className="text-zion-slate-light">Space Technology</span>"";";
-                    <span className="font-semibold text-zion-blue">$200B+</span>"";";
+                    <span className="text-zion-slate-light">Space Technology</span>""";
+                    <span className="font-semibold text-zion-blue">$200B+</span>""";
                     <div className="bg-zion-blue h-2 rounded-full" style="{{" width: "70%" }}></div>;";
-                    <span className="text-zion-slate-light">Biotech AI</span>"";";
-                    <span className="font-semibold text-zion-green">$100B+</span>"";";
+                    <span className="text-zion-slate-light">Biotech AI</span>""";
+                    <span className="font-semibold text-zion-green">$100B+</span>""";
                     <div className="bg-zion-green h-2 rounded-full" style="{{" width: "60%" }}></div>;";
                   <Users className="w-5 h-5 text-zion-blue"  />;
                   Market Adoption;";
-                    <span className="text-zion-slate-light">Early Adopters</span>"";";
-                    <span className="font-semibold text-zion-cyan">15%</span>"";";
+                    <span className="text-zion-slate-light">Early Adopters</span>""";
+                    <span className="font-semibold text-zion-cyan">15%</span>""";
                     <div className="bg-zion-cyan h-2 rounded-full" style="{{" width: "15%" }}></div>;";
-                    <span className="text-zion-slate-light">Growing Market</span>"";";
-                    <span className="font-semibold text-zion-purple">35%</span>"";";
+                    <span className="text-zion-slate-light">Growing Market</span>""";
+                    <span className="font-semibold text-zion-purple">35%</span>""";
                     <div className="bg-zion-purple h-2 rounded-full" style="{{" width: "35%" }}></div>;";
-                    <span className="text-zion-slate-light">Mainstream</span>"";";
-                    <span className="font-semibold text-zion-blue">40%</span>"";";
+                    <span className="text-zion-slate-light">Mainstream</span>""";
+                    <span className="font-semibold text-zion-blue">40%</span>""";
                     <div className="bg-zion-blue h-2 rounded-full" style="{{" width: "40%" }}></div>;";
-                    <span className="text-zion-slate-light">Mature Market</span>"";";
-                    <span className="font-semibold text-zion-green">10%</span>"";";
+                    <span className="text-zion-slate-light">Mature Market</span>""";
+                    <span className="font-semibold text-zion-green">10%</span>""";
                     <div className="bg-zion-green h-2 rounded-full" style="{{" width: "10%" }}></div>;";
                 <Lightbulb className="w-5 h-5 text-zion-yellow"  />;
                 Strategic Recommendations;";
-              <div className="grid grid-cols-1 md: grid-cols-2 gap-6">"";";
-                  <h4 className="font-semibold text-zion-slate-dark mb-3">Immediate Actions (0-2 years)</h4>"";";
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-6">""";
+                  <h4 className="font-semibold text-zion-slate-dark mb-3">Immediate Actions (0-2 years)</h4>""";
                   <ul className="space-y-2">",";
                     <li className="text-sm text-zion-slate-light flex items-start gap-2">",";
                       <CheckCircle className = "w - 4 h-4 text-green-500 mt-1 flex-shrink-0"  />,;
@@ -782,26 +782,26 @@ y: 0 ",">;
                       Develop AI ethics and governance frameworks";
                       Establish partnerships with space technology companies;
                     </li>;";
-                  <h4 className="font-semibold text-zion-slate-dark mb-3">Strategic Planning (2-5 years)</h4>"";";
+                  <h4 className="font-semibold text-zion-slate-dark mb-3">Strategic Planning (2-5 years)</h4>""";
                       <CheckCircle className="w-4 h-4 text-blue-500 mt-1 flex-shrink-0"  />,;
                       Build quantum internet infrastructure",",;
                       Develop synthetic biology capabilities",;
                       Invest in fusion energy research,;
       {/* comment */}";
-""}} transition="{{" delay: 0.4 }} className="mt-12 text-center">"";";
-        <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"";";
-          <h3 className="text-3xl font-bold mb-4">Ready to Shape the Future?</h3>"";";
+""}} transition="{{" delay: 0.4 }} className="mt-12 text-center">""";
+        <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">""";
+          <h3 className="text-3xl font-bold mb-4">Ready to Shape the Future?</h3>""";
           <p className="text-xl mb-6 max-w-2xl mx-auto">;
             Our innovation hub provides the insights and strategies you need to stay ahead,;
-            of emerging technologies and capitalize on future opportunities."";";
+            of emerging technologies and capitalize on future opportunities.""";
           <div className = "flex flex-col sm: flex-row gap-4 justify-center">",";
             <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {}">;
 " () => window.open();,
 }
-""}>"";";
+""}>""";
               <Users className = "w - 5 h-5 mr-2"  />,;
               Get Innovation Strategy",;
-            </Button>"";";
+            </Button>""";
             <Button variant = "outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {}>;
 " () => window.open("tel:+13024640950",_blank");";
               <Zap className="w-5 h-5 mr-2`       />;
@@ -832,27 +832,27 @@ y: 0 ",">;
                     <span className="&apos;font-semibold" text-zion-green&apos;>$100B+&apos;</span>&apos;&apos,&apos;&apos;";
                     <div className="&apos;bg-zion-green" h-2 rounded-full&apos; style="{{" width: &apos,60%&apos}}>&apos;</div>";
       {/* comment */}"{viewMode = == "insights" && (<motion.div initial = {}";
-""""}} transition="{{" delay: 0.1 }} className="space-y-6">"";
+""""}} transition="{{" delay: 0.1 }} className="space-y-6">""
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-6">";
-            <Card>"";
-                <CardTitle className="flex items-center gap-2">"";
+            <Card>""
+                <CardTitle className="flex items-center gap-2">""
                   <TrendingUp className="w-5 h-5 text-zion-green"  />;
                   Investment Trends";
-              </CardHeader>"";
-                <div className="space-y-4">"";
-                    <span className="text-zion-slate-light">Quantum Technology</span>"";
-                    <span className="font-semibold text-zion-cyan">$150B+</span>""";
-                  </div>"""";
+              </CardHeader>""
+                <div className="space-y-4">""
+                    <span className="text-zion-slate-light">Quantum Technology</span>""
+                    <span className="font-semibold text-zion-cyan">$150B+</span>"""
+                  </div>""""
                   <div className="w-full bg-zion-slate-light/20 rounded-full h-2">""""",;
                     <div className="bg-zion-cyan h-2 rounded-full" style="{{" width: "85%" }}></div>";
-                    <span className="text-zion-slate-light">AI & Machine Learning</span>"";
-                    <span className="font-semibold text-zion-purple">$300B+</span>"";
+                    <span className="text-zion-slate-light">AI & Machine Learning</span>""
+                    <span className="font-semibold text-zion-purple">$300B+</span>""
                     <div className="bg-zion-purple h-2 rounded-full" style="{{" width: "95%" }}></div>";
-                    <span className="text-zion-slate-light">Space Technology</span>"";
-                    <span className="font-semibold text-zion-blue">$200B+</span>"";
+                    <span className="text-zion-slate-light">Space Technology</span>""
+                    <span className="font-semibold text-zion-blue">$200B+</span>""
                     <div className="bg-zion-blue h-2 rounded-full" style="{{" width: "70%" }}></div>";
-                    <span className="text-zion-slate-light">Biotech AI</span>"";
-                    <span className="font-semibold text-zion-green">$100B+</span>"";
+                    <span className="text-zion-slate-light">Biotech AI</span>""
+                    <span className="font-semibold text-zion-green">$100B+</span>""
                     <div className="bg-zion-green h-2 rounded-full" style="{{" width: "60%" }}></div>;
               </CardContent>;
             </Card>";
@@ -872,17 +872,17 @@ y: 0 ",">;
                     <div className="&apos;bg-zion-green" h-2 rounded-full&apos; style="{{" width: &apos,10%&apos}}>&apos;</div>";
                   <Users className = "w-5 h-5 text-zion-blue"  />;
                   Market Adoption";
-                    <span className="text-zion-slate-light">Early Adopters</span>"";
-                    <span className="font-semibold text-zion-cyan">15%</span>"";
+                    <span className="text-zion-slate-light">Early Adopters</span>""
+                    <span className="font-semibold text-zion-cyan">15%</span>""
                     <div className="bg-zion-cyan h-2 rounded-full" style="{{" width: "15%" }}></div>";
-                    <span className="text-zion-slate-light">Growing Market</span>"";
-                    <span className="font-semibold text-zion-purple">35%</span>"";
+                    <span className="text-zion-slate-light">Growing Market</span>""
+                    <span className="font-semibold text-zion-purple">35%</span>""
                     <div className="bg-zion-purple h-2 rounded-full" style="{{" width: "35%" }}></div>";
-                    <span className="text-zion-slate-light">Mainstream</span>"";
-                    <span className="font-semibold text-zion-blue">40%</span>"";
+                    <span className="text-zion-slate-light">Mainstream</span>""
+                    <span className="font-semibold text-zion-blue">40%</span>""
                     <div className="bg-zion-blue h-2 rounded-full" style="{{" width: "40%" }}></div>";
-                    <span className="text-zion-slate-light">Mature Market</span>"";
-                    <span className="font-semibold text-zion-green">10%</span>"";
+                    <span className="text-zion-slate-light">Mature Market</span>""
+                    <span className="font-semibold text-zion-green">10%</span>""
                     <div className="bg-zion-green h-2 rounded-full" style="{{" width: "10%" }}></div>";
                 <Lightbulb className="&apos;w-5" h-5 text-zion-yellow&apos;       />;
                 Strategic Recommendations&apos;";
@@ -903,19 +903,19 @@ y: 0 ",">;
                       Invest in fusion energy research&apos;";
                 <Lightbulb className = "w-5 h-5 text-zion-yellow"  />;
                 Strategic Recommendations";
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"";
-                  <h4 className="font-semibold text-zion-slate-dark mb-3">Immediate Actions (0-2 years)</h4>"";
-                  <ul className="space-y-2">"";
-                    <li className="text-sm text-zion-slate-light flex items-start gap-2">"";
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">""
+                  <h4 className="font-semibold text-zion-slate-dark mb-3">Immediate Actions (0-2 years)</h4>""
+                  <ul className="space-y-2">""
+                    <li className="text-sm text-zion-slate-light flex items-start gap-2">""
                       <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0"  />";
-                      Invest in quantum computing research and development""";
-                    </li>""";
-                      Develop AI ethics and governance frameworks"";
+                      Invest in quantum computing research and development"""
+                    </li>"""
+                      Develop AI ethics and governance frameworks""
                       Establish partnerships with space technology companies";
-                  <h4 className="font-semibold text-zion-slate-dark mb-3">Strategic Planning (2-5 years)</h4>"";
+                  <h4 className="font-semibold text-zion-slate-dark mb-3">Strategic Planning (2-5 years)</h4>""
                       <CheckCircle className="w-4 h-4 text-blue-500 mt-1 flex-shrink-0"  />";
-                      Build quantum internet infrastructure""";
-                      Develop synthetic biology capabilities"";
+                      Build quantum internet infrastructure"""
+                      Develop synthetic biology capabilities""
                       Invest in fusion energy research",,;
 &apos,&apos,"&apos}} transition="{{" delay: 0.4 }} className="&apos;mt-12" text-center&apos;>"&apos;&apos,&apos;&apos;";
         <div className="&apos;bg-gradient-to-r" from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white&apos;>"&apos;&apos,&apos;&apos;";
@@ -935,18 +935,18 @@ y: 0 ",">;
 " () => window.open(&apos;tel: +13024640950&apos,_blank&apos);";
               <Zap className="&apos;w-5" h-5 mr-2&quot;       />;
               Speak with an Expert&quot;";
-""""}} transition = "{{" delay: 0.4 }} className="mt-12 text-center">"";
-        <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"";
-          <h3 className="text-3xl font-bold mb-4">Ready to Shape the Future?</h3>"";
+""""}} transition = "{{" delay: 0.4 }} className="mt-12 text-center">""
+        <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">""
+          <h3 className="text-3xl font-bold mb-4">Ready to Shape the Future?</h3>""
           <p className="text-xl mb-6 max-w-2xl mx-auto">;
             Our innovation hub provides the insights and strategies you need to stay ahead,";
-of emerging technologies and capitalize on future opportunities."";
+of emerging technologies and capitalize on future opportunities.""
           <div className="flex flex-col sm: flex-row gap-4 justify-center">""",;
   () => window.open("mailto: kleber@ziontechgroup.com?subject="Innovation" Strategy Consultation", _blank");
-"""}>""";
+"""}>"""
               <Users className="w-5 h-5 mr-2"  />";
-              Get Innovation Strategy""";
-            </Button>"";
+              Get Innovation Strategy"""
+            </Button>""
             <Button variant="outline" className="border-white text-white hover: bg-white hover:text-zion-purple" onClick = {}";
   () => window.open("tel: +13024640950", _blank")";
               <Zap className="w-5 h-5 mr-2"  />;

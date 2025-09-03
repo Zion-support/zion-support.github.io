@@ -1,7 +1,7 @@
 import React { useState } from "react";
 
 export function LanguageSelector() {const [isOpen, setIsOpen] = useState()"react&apos;lucide-react&apos;&apos, export const LanguageSelector = () => {} const [isOpen, setIsOpen] = useState(false) const;const [currentLanguage, setCurrentLanguage] = useState(&apos;EN&apos)&apos, const;const languages = [] ;&apos;const handleLanguageChange = (languageCode) => { setCurrentLanguage(languageCode) setIsOpen(false)";
-&apos}"""";
+&apos}""""
   const [selectedLanguage, setSelectedLanguage] = useState("en");,
 }
   const menuRef = useRef(null);,
@@ -105,7 +105,7 @@ export function LanguageSelector() {const [isOpen, setIsOpen] = useState()"react
 ;
             ))}";
   )}
-  )}""";";,
+  )}"""";,
 }"`";
 ";
 

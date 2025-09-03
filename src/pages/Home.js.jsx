@@ -27,8 +27,8 @@ export default function Home() {}
     <>;
       <SEO';
         title="Zion Tech Group - Leading AI & Technology Solutions"'"'";
-        description="Discover cutting-edge AI solutions, expert talent, and innovative technology services. Transform your business with Zion Tech Group's comprehensive tech ecosystem."";
-        canonical="/"";
+        description="Discover cutting-edge AI solutions, expert talent, and innovative technology services. Transform your business with Zion Tech Group's comprehensive tech ecosystem.""
+        canonical="/""
         url="https://ziontechgroup.com";
       />;
 

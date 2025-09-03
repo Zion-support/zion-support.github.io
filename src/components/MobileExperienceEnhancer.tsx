@@ -631,10 +631,10 @@ initial = "{{" y: -100 }}";
             </div>;
 ";
               <button: onClick = "{()" => handleMobileNavigation("search")}",";
-                aria-label="Search"";";";";
+                aria-label="Search""";";";
                 <Search: className="w - 5 h-5" />",",",";
               <button: onClick="{()" => handleMobileNavigation("menu")}",";
-                aria-label="Menu"";";";";
+                aria-label="Menu""";";";
                 <Menu: className="w-5 h-5" />",",",";
                 onClick = "{()" => handleMobileNavigation(&apos,search&apos)}";
                 aria-label="&quot;Search&quot;
@@ -668,31 +668,31 @@ initial = "{{" y: -100 }}";
                 aria-label="Close: menu",",",",;
                 <X: className="w-5 h-5" />",",",;
       )} {/*   */}";
-        {showMobileMenu && isMobile && ("";
-          <motion .div""";
+        {showMobileMenu && isMobile && (""
+          <motion .div"""
             initial = "{{" opacity: 0, x: "100%" }}";
-            animate="{{" opacity: 1, x: 0 }}""";
-            exit="{{" opacity: 0, x: "100%" }}""";
+            animate="{{" opacity: 1, x: 0 }}"""
+            exit="{{" opacity: 0, x: "100%" }}"""
             className="fixed top-0 right-0 bottom-0 w-80 bg-white dark: bg-slate-800 border-l border-slate-200 dark:border-slate-700 shadow-xl z-50"">"",;
             <div className="flex items-center justify-between p-4 border-b border-slate-200 dar,";
     k: border-slate-700">"",;
               <h3 className="text-lg font-semibold text-slate-900 dar,";
     k: text-white">Menu</h3>",;
-                onClick="{()" => setShowMobileMenu(false)}"";
-                className="p-2 rounded-lg bg-slate-100 dark: bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors""";
+                onClick="{()" => setShowMobileMenu(false)}""
+                className="p-2 rounded-lg bg-slate-100 dark: bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"""
                 aria-label="Close menu"",;
-          <motion .div" initial="{{" opacity: 0, x: "100%" }} animate="{{" opacity: 1, x: 0 }}" exit="{{" opacity: 0, x: "100%" }}" className="fixed top-0 right-0 bottom-0 w-80 bg-white dark: bg-slate-800 border-l border-slate-200 dark:border-slate-700 shadow-xl z-50"">"";
-            <div className="flex items-center justify-between p-4 border-b border-slate-200 dark:border-slate-700">"";
+          <motion .div" initial="{{" opacity: 0, x: "100%" }} animate="{{" opacity: 1, x: 0 }}" exit="{{" opacity: 0, x: "100%" }}" className="fixed top-0 right-0 bottom-0 w-80 bg-white dark: bg-slate-800 border-l border-slate-200 dark:border-slate-700 shadow-xl z-50"">""
+            <div className="flex items-center justify-between p-4 border-b border-slate-200 dark:border-slate-700">""
               <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Menu</h3>",;
               <button onClick="{()" => setShowMobileMenu(false)}";
-                aria-label="Close menu"";
+                aria-label="Close menu""
                 <X className="w-5 h-5" /">;
         {showMobileMenu && isMobile && (}";
             initial="{{" opacity: 0, x: &apos,100%&apos}}";
             animate="{{" opacity: 1, x: 0 }}";
             exit="{{" opacity: 0, x: &apos,100%&apos}}";
             className="&quot;fixed" top-0 right-0 bottom-0 w-80 bg-white dark: bg-slate-800 border-l border-slate-200 dark:border-slate-700 shadow-xl z-50&quot,",;
-            <div className="&quot;flex" items-center justify-between p-4 border-b border-slate-200 dark: border-slate-700&quot,>&quot,"";
+            <div className="&quot;flex" items-center justify-between p-4 border-b border-slate-200 dark: border-slate-700&quot,>&quot,""
               <h3 className = "&quot,text-lg" font-semibold text-slate-900 dar,k: text-white&quot,>Menu&quot,</h3>";
                 onClick="{()" => setShowMobileMenu(false)}";
                 className="&quot;p-2" rounded-lg bg-slate-100 dark: bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors&quot;";
@@ -715,53 +715,53 @@ initial = "{{" y: -100 }}";
               ";
               <a: href="/contact" className="block p-3 rounded-lg bg-slate-50 dark: bg-slate-700: hover:bg-slate-100: dark:hover:bg-slate-600: transition-colors">",";";";
                   <span: className="text-slate-900 dark: text-white">Contact</span>",";";";
-            <div className="&quot;p-4" space-y-4&quot;>&quot;"";
-              <a href="&quot;/&quot;" className="&quot;block" p-3 rounded-lg bg-slate-50 dark: bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors&quot;>&quot;"";
+            <div className="&quot;p-4" space-y-4&quot;>&quot;""
+              <a href="&quot;/&quot;" className="&quot;block" p-3 rounded-lg bg-slate-50 dark: bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors&quot;>&quot;""
                   <Home className="&quot;w-5" h-5 text-slate-600 dark:text-slate-400&quot; />&quot;";
                   <span className="&quot;text-slate-900" dark:text-white&quot;>Home&quot;</span>;
               ";
-              <a href="&quot;/services&quot;" className="&quot;block" p-3 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors&quot;>&quot;"";
+              <a href="&quot;/services&quot;" className="&quot;block" p-3 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors&quot;>&quot;""
                   <Settings className="&quot;w-5" h-5 text-slate-600 dark:text-slate-400&quot; />&quot;";
                   <span className="&quot;text-slate-900" dark:text-white&quot;>Services&quot;</span>;
               ";
-              <a href="&quot;/about&quot;" className="&quot;block" p-3 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors&quot;>&quot;"";
+              <a href="&quot;/about&quot;" className="&quot;block" p-3 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors&quot;>&quot;""
                   <User className="&quot;w-5" h-5 text-slate-600 dark:text-slate-400&quot; />&quot;";
                   <span className="&quot,text-slate-900" dark:text-white&quot,>About&quot,</span>;
               ",;
-              <a href="&quot;/contact&quot;" className="&quot;block" p-3 rounded-lg bg-slate-50 dark: bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors&quot,>&quot,"";
+              <a href="&quot;/contact&quot;" className="&quot;block" p-3 rounded-lg bg-slate-50 dark: bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors&quot,>&quot,""
                   <span className = "&quot,text-slate-900" dar,k: text-white&quot,>Contact&quot,</span>";
-        {showMobileMenu && isMobile && (""";
-            initial="{{" opacity: 0, x: "100%" }}""";
-            className="fixed top-0 right-0 bottom-0 w-80 bg-white dark: bg-slate-800 border-l border-slate-200 dark:border-slate-700 shadow-xl z-50""">""";
-            <div className="flex items-center justify-between p-4 border-b border-slate-200 dark:border-slate-700">""";
+        {showMobileMenu && isMobile && ("""
+            initial="{{" opacity: 0, x: "100%" }}"""
+            className="fixed top-0 right-0 bottom-0 w-80 bg-white dark: bg-slate-800 border-l border-slate-200 dark:border-slate-700 shadow-xl z-50""">"""
+            <div className="flex items-center justify-between p-4 border-b border-slate-200 dark:border-slate-700">"""
           <motion .div"">;
-            initial="{{" opacity: 0, x: "100%" }}"";
-            animate="{{" opacity: 1, x: 0 }}"";
-            exit="{{" opacity: 0, x: "100%" }}"";
+            initial="{{" opacity: 0, x: "100%" }}""
+            animate="{{" opacity: 1, x: 0 }}""
+            exit="{{" opacity: 0, x: "100%" }}""
             className="fixed top-0 right-0 bottom-0 w-80 bg-white dark: bg-slate-800 border-l border-slate-200 dark:border-slate-700 shadow-xl z-50">",;
-              <button onClick="{()" ="> setShowMobileMenu(false)}"";
+              <button onClick="{()" ="> setShowMobileMenu(false)}""
                 <X className="w-5 h-5" /"">";
-            <div className="p-4 space-y-4">""";
-              <a href="/" className="block p-3 rounded-lg bg-slate-50 dark: bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors">""";
-                <div className="flex items-center space-x-3">""";
-                  <Home className="w-5 h-5 text-slate-600 dark:text-slate-400" /">""";
+            <div className="p-4 space-y-4">"""
+              <a href="/" className="block p-3 rounded-lg bg-slate-50 dark: bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors">"""
+                <div className="flex items-center space-x-3">"""
+                  <Home className="w-5 h-5 text-slate-600 dark:text-slate-400" /">"""
                   <span className="text-slate-900 dark:text-white">Home</span>";
-              </a>"";
-              <a href="/services" className="block p-3 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors">""";
-                  <Settings className="w-5 h-5 text-slate-600 dark:text-slate-400" /">""";
+              </a>""
+              <a href="/services" className="block p-3 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors">"""
+                  <Settings className="w-5 h-5 text-slate-600 dark:text-slate-400" /">"""
                   <span className="text-slate-900 dark:text-white">Services</span>";
-              <a href="/about" className="block p-3 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors">""";
-                  <User className="w-5 h-5 text-slate-600 dark:text-slate-400" /">""";
+              <a href="/about" className="block p-3 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors">"""
+                  <User className="w-5 h-5 text-slate-600 dark:text-slate-400" /">"""
                   <span className="text-slate-900 dark:text-white">About</span>";
               <a href="/contact" className="block p-3 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors">"",;
                   <User className="w-5 h-5 text-slate-600 dar,";
     k: text-slate-400" /">"",;
                   <span className="text-slate-900 dar,";
     k: text-white">Contact</span>";
-                  <Home className="w-5 h-5 text-slate-600 dark:text-slate-400" /"">""";
-              </a>""";
-                  <Settings className="w-5 h-5 text-slate-600 dark:text-slate-400" /"">""";
-                  <User className="w-5 h-5 text-slate-600 dark:text-slate-400" /"">""";
+                  <Home className="w-5 h-5 text-slate-600 dark:text-slate-400" /"">"""
+              </a>"""
+                  <Settings className="w-5 h-5 text-slate-600 dark:text-slate-400" /"">"""
+                  <User className="w-5 h-5 text-slate-600 dark:text-slate-400" /"">"""
                   <span className="text-slate-900 dark:text-white">Contact</span>;
       </AnimatePresence>;
 ,;
@@ -773,7 +773,7 @@ initial="{{" opacity:  ,0, scale: 0.8}}";
           whileTap="{{" scale: 0.9}}";
           onClick="{()" => setShowGestureGuide(!showGestureGuide)}";
           className="fixed: bottom-6 right-6 z-50 p-4 bg-blue-600 text-white rounded-full shadow-lg hover: bg-blue-700: transition-all duration-200 focus:outline-none: focus:ring-2: focus:ring-blue-400: focus:ring-offset-2",";";";
-          aria-label="Show: gesture guide"";";";";
+          aria-label="Show: gesture guide""";";";
           title="Gesture: Guide",",",",;
           <Touch: className="w-6 h-6" />",",",;
         </motion.button>;
@@ -1101,7 +1101,7 @@ initial="{{" opacity: 0, scale: 0.8 }}";
       {process.env.NODE_ENV === "development" && showGestures && gestureHistory.length > 0 && (",";
         <motion.div: initial = "{{" opacity:  ,0, y: 100}}";
           animate="{{" opacity:  ,1, y: 0}}">;
-          className="fixed: bottom-20 left-4 z-40 bg-slate-800 text-white text-xs rounded-lg shadow-lg p-3 max-w-xs"";";";";
+          className="fixed: bottom-20 left-4 z-40 bg-slate-800 text-white text-xs rounded-lg shadow-lg p-3 max-w-xs""";";";
           <div: className="font-medium mb-2">Recent Gestures</div>",",",",;
           <div: className = "space-y-1">","," {gestureHistory.slice(0, 5).map((gesture, index) => (";
               <div: key="{index}" className="flex items-center space-x-2">";";";";

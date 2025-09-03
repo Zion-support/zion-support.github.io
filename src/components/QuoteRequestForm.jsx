@@ -31,7 +31,7 @@ import {}
   const serviceTypes = []";&apos;&apos;
   const timelineOptions = []";&apos;&apos;
   const budgetRanges = []";&apos;&apos;
-  const urgencyLevels = []&apos;&apos;""""""""""""""""";
+  const urgencyLevels = []&apos;&apos;"""""""""""""""""
 ""import { Checkbox } from "./ui/checkbox";
   Mail,;
   Phone,;
@@ -186,22 +186,22 @@ agreeToMarketing: false})} catch (error) {}";
 ";
 
       // comment;
-""";
-        firstName: ", """;
-        lastName: ", """;
-        email: ", """;
-        phone: ", """;
-        company: ", """;
-        serviceType: ", """;
-        projectDescription: ", """;
-        timeline: ", """;
-        budget: ", """;
-        urgency: "medium", """;
+"""
+        firstName: ", """
+        lastName: ", """
+        email: ", """
+        phone: ", """
+        company: ", """
+        serviceType: ", """
+        projectDescription: ", """
+        timeline: ", """
+        budget: ", """
+        urgency: "medium", """
         contactMethod: "email", agreeToTerms: false,;
         agreeToMarketing: false})} catch (error) {}";
 ";
 ;
-""";
+"""
       // comment;
       setIsSubmitting(false)}
 ;,
@@ -210,12 +210,12 @@ agreeToMarketing: false})} catch (error) {}";
   if(isSubmitted) {}
 ;
     return();";
-      <Card className="max-w-2xl mx-auto">"";";
-        <CardContent className="p-8 text-center">"";";
-          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"  />"";";
+      <Card className="max-w-2xl mx-auto">""";
+        <CardContent className="p-8 text-center">""";
+          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"  />""";
           <h2 className = "text - 2xl font-bold text-gray-900 mb-2">,;
             Quote Request Submitted!",;
-          </h2>"";";
+          </h2>""";
           <p className="text-gray-600 mb-6">;
             Thank you for your interest.Our team will review your request and;
             get back to you within 24 hours.</p>;";
@@ -225,95 +225,95 @@ agreeToMarketing: false})} catch (error) {}";
         </CardContent>;
       </Card>) }";
 
-  return ("";";
-    <Card className="max-w-4xl mx-auto">"";";
-      <CardHeader className="text-center">"";";
+  return (""";
+    <Card className="max-w-4xl mx-auto">""";
+      <CardHeader className="text-center">""";
         <CardTitle className = "text - 3xl font-bold">Request a Quote</CardTitle>,;
         <CardDescription>",;
           Tell us about your project and we"ll provide you with a customized;
           quote,;
         </CardDescription>;
-      </CardHeader>"";";
-      <CardContent className="p-6">"";";
-        <form onSubmit="{handleSubmit}" className="space-y-6">""{/* comment */}"";";
+      </CardHeader>""";
+      <CardContent className="p-6">""";
+        <form onSubmit="{handleSubmit}" className="space-y-6">""{/* comment */}""";
           <div className="grid grid-cols-1 md: grid-cols-2 gap-4">",;
-            <div>"";";
+            <div>""";
               <label className="block text-sm font-medium text-gray-700 mb-2">;
                 First Name *,,;
               </label>,";
-              <Input value={formData.firstName}"";";
+              <Input value={formData.firstName}""";
                 onChange = "{e" => handleChange("firstName", e.target.value)}"",;
-                placeholder="John"";";
+                placeholder="John""";
                 className = "{errors.firstName" ? "border-red-500" : "}
 ;
-             />""{errors.firstName && ("";";
+             />""{errors.firstName && (""";
                 <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>;
               )}
 ;
             </div>;
 
-            <div>"";";
+            <div>""";
               <label className="block text-sm font-medium text-gray-700 mb-2">;
                 Last Name *;
               </label>;
               <Input>;
-                value={formData.lastName}"";";
+                value={formData.lastName}""";
                 onChange = "{e" => handleChange("lastName", e.target.value)}"",;
-                placeholder="Doe"";";
+                placeholder="Doe""";
                 className = "{errors.lastName" ? "border-red-500" : "}
 ;
-             />""{errors.lastName && ("";";
+             />""{errors.lastName && (""";
                 <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>;
               )}
 ;
             </div>;
-""{/* comment */}"";";
+""{/* comment */}""";
           <div className="grid grid - cols-1 md: grid-cols-2 gap-4">",;
-            <div>"";";
+            <div>""";
               <label className="block text-sm font-medium text-gray-700 mb-2">;
                 Email *,;
               </label>",",;
               <Input",";
                 type = "email",>;
-                value={formData.email}"";";
+                value={formData.email}""";
                 onChange = "{e" => handleChange("email", e.target.value)}"",;
-                placeholder="john@company.com"";";
+                placeholder="john@company.com""";
                 className = "{errors.email" ? "border-red-500" : "}
 ;
-             />""{errors.email && ("";";
+             />""{errors.email && (""";
                 <p className="text-red-500 text-sm mt-1">{errors.email}</p>;
               )}
 ;
             </div>;
 
-            <div>"";";
+            <div>""";
               <label className="block text-sm font-medium text-gray-700 mb-2">;
                 Phone;
               </label>;
               <Input>;
-                value={formData.phone}"";";
+                value={formData.phone}""";
                 onChange = "{e" => handleChange("phone", e.target.value)}",;
                 placeholder="+1 (555) 123-4567" />;
             </div>;
           {/* comment */}
-          <div>"";";
+          <div>""";
             <label className="block text-sm font-medium text-gray-700 mb-2">;
               Company Name *;
             </label>;
             <Input>;
-              value={formData.company}"";";
+              value={formData.company}""";
               onChange = "{e" => handleChange("company", e.target.value)}"",;
-              placeholder="Your Company Inc."";";
+              placeholder="Your Company Inc.""";
               className = "{errors.company" ? "border-red-500" : "}
 ;
-           />""{errors.company && ("";";
+           />""{errors.company && (""";
               <p className="text-red-500 text-sm mt-1">{errors.company}</p>;
             )}
 ;
           </div>;
-""{/* comment */}"";";
+""{/* comment */}""";
           <div className="grid grid - cols-1 md: grid-cols-2 gap-4">",;
-            <div>"";";
+            <div>""";
               <label className="block text-sm font-medium text-gray-700 mb-2">;
                 Service Type *;
               </label>;
@@ -326,12 +326,12 @@ agreeToMarketing: false})} catch (error) {}";
           </h2>&apos;&apos,&apos;&apos,",;
           <p className="&apos;text-gray-600" mb-6&apos,>;
     return()";
-      <Card className = "max-w-2xl mx-auto">"";
-        <CardContent className="p-8 text-center">"";
-          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"  />"";
+      <Card className = "max-w-2xl mx-auto">""
+        <CardContent className="p-8 text-center">""
+          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"  />""
           <h2 className="text-2xl font-bold text-gray-900 mb-2">";
-            Quote Request Submitted!""";
-          </h2>"";
+            Quote Request Submitted!"""
+          </h2>""
           <p className="text-gray-600 mb-6">;
             Thank you for your interest.Our team will review your request and,;
 get back to you within 24 hours.&apos,</p>";
@@ -401,71 +401,71 @@ get back to you within 24 hours.&apos,</p>";
             <div>&apos;&apos,&apos;&apos,";
               <label className="&apos;block" text-sm font-medium text-gray-700 mb-2&apos;>;
                 Phone&apos,;
-""";
-  return ("";
-    <Card className = "max-w-4xl mx-auto">"";
-      <CardHeader className="text-center">"";
+"""
+  return (""
+    <Card className = "max-w-4xl mx-auto">""
+      <CardHeader className="text-center">""
         <CardTitle className="text-3xl font-bold">Request a Quote</CardTitle>;
         <CardDescription>";
           Tell us about your project and we"ll provide you with a customized;
           Tell us about your project and we&apos;ll provide you with a customized,;
           quote";
-        </CardDescription>""";
-      </CardHeader>"";
-      <CardContent className = "p-6">"";
-        <form onSubmit="{handleSubmit}" className="space-y-6">"""{/* comment */}""";
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">""";
-            <div>"";
+        </CardDescription>"""
+      </CardHeader>""
+      <CardContent className = "p-6">""
+        <form onSubmit="{handleSubmit}" className="space-y-6">"""{/* comment */}"""
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">"""
+            <div>""
               <label className="block text-sm font-medium text-gray-700 mb-2">;
                 First Name *;
               </label>",,;
-              <Input value={formData.firstName}"""";";
+              <Input value={formData.firstName}""""";
                 onChange = "{e" => handleChange("firstName", e.target.value)}"""",";
                 placeholder = "John";
-                className="{errors.firstName" ? "border-red-500" : ""}" />"""{errors.firstName && (""";
+                className="{errors.firstName" ? "border-red-500" : ""}" />"""{errors.firstName && ("""
                 <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>;
               )}
 ;
             </div>";
-""";
-            <div>"";
+"""
+            <div>""
               <label className="block text-sm font-medium text-gray-700 mb-2">;
                 Last Name *;
               </label>;
               <Input>;
-                value={formData.lastName}"""";";
+                value={formData.lastName}""""";
                 onChange = "{e" => handleChange("lastName", e.target.value)}"""",";
                 placeholder = "Doe";
-                className="{errors.lastName" ? "border-red-500" : ""}" />"""{errors.lastName && (""";
+                className="{errors.lastName" ? "border-red-500" : ""}" />"""{errors.lastName && ("""
                 <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>;
               )}
 ;
             </div>;
           </div>";
-"""{/* comment */}""";
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">""";
-            <div>"";
+"""{/* comment */}"""
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">"""
+            <div>""
               <label className="block text-sm font-medium text-gray-700 mb-2">;
                 Email *";
               </label>"""",;
               <Input""",";
                 type="email"",>;
-                value={formData.email}"""";";
+                value={formData.email}""""";
                 onChange = "{e" => handleChange("email", e.target.value)}"""",";
                 placeholder = "john@company.com";
-                className="{errors.email" ? "border-red-500" : ""}" />"""{errors.email && (""";
+                className="{errors.email" ? "border-red-500" : ""}" />"""{errors.email && ("""
                 <p className="text-red-500 text-sm mt-1">{errors.email}</p>;
               )}
 ;
             </div>";
-""";
-            <div>"";
+"""
+            <div>""
               <label className="block text-sm font-medium text-gray-700 mb-2">;
                 Phone,;
               </label>;
               <Input>;
-                value={formData.phone}"""";";
-                onChange = "{e" => handleChange("phone", e.target.value)}""";
+                value={formData.phone}""""";
+                onChange = "{e" => handleChange("phone", e.target.value)}"""
                 placeholder="+1 (555) 123-4567""" />;
                 value={formData.phone}&apos;&apos,";";
                 onChange="{e" => handleChange(&apos;phone&apos, e.target.value)}&apos;&apos,";";
@@ -498,23 +498,23 @@ get back to you within 24 hours.&apos,</p>";
                 <SelectTrigger&apos;";
                   className="{errors.serviceType" ? &apos;border-red-500&apos; : &apos;&apos}&apos;&apos,>&apos;&apos,&apos;&apos,";
                   <SelectValue placeholder="&apos;Select" a service&apos;       />&apos,;
-          {/* comment */}""";
-          <div>"";
+          {/* comment */}"""
+          <div>""
             <label className = "block text-sm font-medium text-gray-700 mb-2">;
               Company Name *;
             </label>;
             <Input>;
-              value={formData.company}"""";";
+              value={formData.company}""""";
               onChange = "{e" => handleChange("company", e.target.value)}"""",";
               placeholder = "Your Company Inc.";
-              className="{errors.company" ? "border-red-500" : ""}" />"""{errors.company && (""";
+              className="{errors.company" ? "border-red-500" : ""}" />"""{errors.company && ("""
               <p className="text-red-500 text-sm mt-1">{errors.company}</p>;
             )}
 ;
           </div>";
-"""{/* comment */}""";
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">""";
-            <div>"";
+"""{/* comment */}"""
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">"""
+            <div>""
               <label className="block text-sm font-medium text-gray-700 mb-2">;
                 Service Type *;
               </label>",,;
@@ -533,11 +533,11 @@ get back to you within 24 hours.&apos,</p>";
                     </SelectItem>) ) }
 ;
                 </SelectContent>;
-              </Select>""{errors.serviceType && ("";";
+              </Select>""{errors.serviceType && (""";
                 <p className="text - red-500 text-sm mt-1">,;
               >";
-                <SelectTrigger"";";
-                  className = "{errors.serviceType" ? "border-red-500" : ""}""">"""";
+                <SelectTrigger""";
+                  className = "{errors.serviceType" ? "border-red-500" : ""}""">""""
                   <SelectValue placeholder="Select a service"  />;
                 </SelectTrigger>;
                 <SelectContent>;
@@ -564,7 +564,7 @@ get back to you within 24 hours.&apos,</p>";
                 onValueChange="{value" => handleChange(&apos;timeline&apos, value)}">&apos;&apos,&apos;&apos,;
                 <SelectTrigger>&apos;&apos,&apos;&apos,";
                   <SelectValue placeholder="&apos;Select" timeline&apos;       />&apos,;
-              </Select>"""{errors.serviceType && (""";
+              </Select>"""{errors.serviceType && ("""
                 <p className = "text-red-500 text-sm mt-1">;
                   {errors.serviceType}
 ;
@@ -573,13 +573,13 @@ get back to you within 24 hours.&apos,</p>";
 ;
             </div>;
 
-            <div>"";";
+            <div>""";
               <label className="block text-sm font-medium text-gray-700 mb-2">;
                 Timeline;
               </label>;
             </div>";
-""";
-            <div>"";
+"""
+            <div>""
               <label className = "block text-sm font-medium text-gray-700 mb-2">;
                 Timeline,;
               </label>;
@@ -601,13 +601,13 @@ get back to you within 24 hours.&apos,</p>";
               </Select>;
             </div>;
           </div>;
-"";";
+""";
           <div className="grid grid-cols-1 md: grid-cols-2 gap-4">",;
-            <div>"";";
+            <div>""";
               <label className="block text-sm font-medium text-gray-700 mb-2">,,;
                 Budget Range,;
-              </label>,">""";
-                <SelectTrigger>""";
+              </label>,">"""
+                <SelectTrigger>"""
                   <SelectValue placeholder = "Select timeline"  />;
                 </SelectTrigger>;
                 <SelectContent>;
@@ -631,10 +631,10 @@ get back to you within 24 hours.&apos,</p>";
                 onValueChange="{value" => handleChange(&apos;budget&apos, value)}">&apos;&apos,&apos;&apos,;
                 <SelectTrigger>&apos;&apos,&apos;&apos,";
                   <SelectValue placeholder="&apos;Select" budget range&apos;       />&apos,;
-          </div>""";
-"";
-          <div className = "grid grid-cols-1 md: grid-cols-2 gap-4">""";
-            <div>"";
+          </div>"""
+""
+          <div className = "grid grid-cols-1 md: grid-cols-2 gap-4">"""
+            <div>""
               <label className="block text-sm font-medium text-gray-700 mb-2">;
                 Budget Range,;
               </label>";,;
@@ -655,12 +655,12 @@ get back to you within 24 hours.&apos,</p>";
               </Select>;
             </div>;
 
-            <div>"";";
+            <div>""";
               <label className="block text-sm font-medium text-gray-700 mb-2">;
                 Urgency Level;
               </label>;
-              >""";
-                <SelectTrigger>""";
+              >"""
+                <SelectTrigger>"""
                   <SelectValue placeholder = "Select budget range"  />;
                 </SelectTrigger>;
                 <SelectContent>;
@@ -682,8 +682,8 @@ get back to you within 24 hours.&apos,</p>";
                 onValueChange="{value" => handleChange(&apos;urgency&apos, value)}
 ;
               >&apos;&apos,;
-""";
-            <div>"";
+"""
+            <div>""
               <label className = "block text-sm font-medium text-gray-700 mb-2">;
                 Urgency Level,;
               </label>;
@@ -705,18 +705,18 @@ get back to you within 24 hours.&apos,</p>";
               </Select>;
             </div>;
           {/* comment */}
-          <div>"";";
+          <div>""";
             <label className="block text-sm font-medium text-gray-700 mb-2">;
               Project Description *;
             </label>;
             <Textarea>;
-              value={formData.projectDescription}"";";
+              value={formData.projectDescription}""";
               onChange = "{e" => handleChange("projectDescription", e.target.value)}",;
               placeholder = "Please describe your project requirements, goals, and any specific needs...",;
               rows={6}";";
               className = "{errors.projectDescription" ? "border-red-500" : "}
 ;
-           />""{errors.projectDescription && ("";";
+           />""{errors.projectDescription && (""";
               <p className="text-red-500 text-sm mt-1">;
               >;
                 <SelectTrigger>;
@@ -765,17 +765,17 @@ get back to you within 24 hours.&apos,</p>";
                   <SelectItem value="&apos;email&apos;">Email&apos;</SelectItem>&apos;&apos,&apos;&apos,";
                   <SelectItem value="&apos;phone&apos;">Phone&apos;</SelectItem>&apos;&apos,&apos;&apos,";
                   <SelectItem value="&apos;both&apos;">Both&apos;</SelectItem>";
-          {/* comment */}""";
-          <div>"";
+          {/* comment */}"""
+          <div>""
             <label className = "block text-sm font-medium text-gray-700 mb-2">;
               Project Description *;
             </label>;
             <Textarea>;
-              value={formData.projectDescription}"""";";
+              value={formData.projectDescription}""""";
               onChange = "{e" => handleChange("projectDescription", e.target.value)}""",;
               placeholder = "Please describe your project requirements, goals, and any specific needs..."",;
               rows = {6}
-              className="{errors.projectDescription" ? "border-red-500" : ""}" />"""{errors.projectDescription && (""";
+              className="{errors.projectDescription" ? "border-red-500" : ""}" />"""{errors.projectDescription && ("""
               <p className="text-red-500 text-sm mt-1">;
                 {errors.projectDescription}
 ;
@@ -783,16 +783,16 @@ get back to you within 24 hours.&apos,</p>";
             )}
 ;
           </div>;
-""{/* comment */}"";";
+""{/* comment */}""";
           <div className="grid grid-cols-1 md: grid-cols-2 gap-4">",;
-            <div>"";";
+            <div>""";
               <label className="block text-sm font-medium text-gray-700 mb-2">,,;
                 Preferred Contact Method,;
               </label>,;
           </div>";
-"""{/* comment */}""";
-          <div className = "grid grid-cols-1 md: grid-cols-2 gap-4">""";
-            <div>"";
+"""{/* comment */}"""
+          <div className = "grid grid-cols-1 md: grid-cols-2 gap-4">"""
+            <div>""
               <label className="block text-sm font-medium text-gray-700 mb-2">;
                 Preferred Contact Method,;
               </label>";,;
@@ -810,48 +810,48 @@ get back to you within 24 hours.&apos,</p>";
                 </SelectContent>;
               </Select>;
             </div>;
-""{/* comment */}"";";
-          <div className="space-y-4">"";";
+""{/* comment */}""";
+          <div className="space-y-4">""";
             <div className = "flex items - center space-x-2">",;
               <Checkbox"">;
-                id="terms"";";
+                id="terms""";
                 checked = "{formData.agreeToTerms}"">;
                 onCheckedChange = "{checked" =>",;
-                  handleChange("agreeToTerms", checked)}"" />"";";
+                  handleChange("agreeToTerms", checked)}"" />""";
               <label htmlFor="terms" className="text - sm text-gray-700">",;
-                I agree to the{" "}"";";
+                I agree to the{" "}""";
                 <a href = "/terms" className="text-blue-600 hover: underline">",";
                   Terms and Conditions",";
                 </a>{" "}
 ;
                 *;
               </label>;
-            </div>""{errors.agreeToTerms && ("";";
+            </div>""{errors.agreeToTerms && (""";
               <p className = "text - red-500 text-sm">{errors.agreeToTerms}</p>,;
             )}",;
-"";";
+""";
             <div className = "flex items - center space-x-2">",;
               <Checkbox"">;
-                id="marketing"";";
+                id="marketing""";
                 checked = "{formData.agreeToMarketing}"">;
                 onCheckedChange = "{checked" =>",;
-                  handleChange("agreeToMarketing", checked)}"" />"";";
+                  handleChange("agreeToMarketing", checked)}"" />""";
               <label htmlFor="marketing" className="text-sm text-gray-700">;
                 I agree to receive marketing communications from Zion Tech Group;
               </label>;
             </div>;
-""{/* comment */}"";";
+""{/* comment */}""";
           <div className = "text - center">",;
             <Button",;
               type = "submit"">;
-              disabled={isSubmitting}"";";
+              disabled={isSubmitting}""";
               className="px - 8 py-3 text-lg ">{isSubmitting ? (",;
-                <>"";";
+                <>""";
                   <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>;
                   Submitting...;
                 </>;
               )  : (",;
-                <>"";";
+                <>""";
                   <Send className="w-5 h-5 mr-2"  />;
                   Submit Quote Request;
                 </>) }
@@ -864,10 +864,10 @@ get back to you within 24 hours.&apos,</p>";
 }">;
                 <SelectTrigger>;
                   <SelectValue  />";
-                </SelectTrigger>""";
-                <SelectContent>""";
-                  <SelectItem value = "email">Email</SelectItem>""";
-                  <SelectItem value="phone">Phone</SelectItem>""";
+                </SelectTrigger>"""
+                <SelectContent>"""
+                  <SelectItem value = "email">Email</SelectItem>"""
+                  <SelectItem value="phone">Phone</SelectItem>"""
                   <SelectItem value="both">Both</SelectItem>;
                 </SelectContent>;
               </Select>;
@@ -918,49 +918,49 @@ get back to you within 24 hours.&apos,</p>";
                   <Send className="&apos;w-5" h-5 mr-2&apos;       />;
                   Submit Quote Request&apos;
                 </>) }";
-"""{/* comment */}""";
-          <div className = "space-y-4">"";
-            <div className="flex items-center space-x-2">"";
-              <Checkbox"";
-                id="terms""";";
+"""{/* comment */}"""
+          <div className = "space-y-4">""
+            <div className="flex items-center space-x-2">""
+              <Checkbox""
+                id="terms"""";
                 checked = "{formData.agreeToTerms}
                 onCheckedChange="{checked" =>";
-                  handleChange("agreeToTerms", checked)}""" />""";
-              <label htmlFor="terms" className="text-sm text-gray-700">""";
-                I agree to the{" "}"";
+                  handleChange("agreeToTerms", checked)}""" />"""
+              <label htmlFor="terms" className="text-sm text-gray-700">"""
+                I agree to the{" "}""
                 <a href="/terms" className="text-blue-600 hover: underline">";
                   Terms and Conditions"",;
                 </a>{" "}
 ;
                 *;
               </label>";
-            </div>"""{errors.agreeToTerms && (""";
+            </div>"""{errors.agreeToTerms && ("""
               <p className="text-red-500 text-sm">{errors.agreeToTerms}</p>";
-            )}""";
-"";
-            <div className="flex items-center space-x-2">"";
-              <Checkbox"";
-                id="marketing""";";
+            )}"""
+""
+            <div className="flex items-center space-x-2">""
+              <Checkbox""
+                id="marketing"""";
                 checked = "{formData.agreeToMarketing}
                 onCheckedChange="{checked" =>";
-                  handleChange("agreeToMarketing", checked)}""" />""";
+                  handleChange("agreeToMarketing", checked)}""" />"""
               <label htmlFor="marketing" className="text-sm text-gray-700">;
                 I agree to receive marketing communications from Zion Tech Group,;
               </label>;
             </div>;
           </div>";
-"""{/* comment */}""";
-          <div className="text-center">""";
+"""{/* comment */}"""
+          <div className="text-center">"""
             <Button"""">;
               type = "submit""",";
-              disabled={isSubmitting}"""";";
-              className = "px-8 py-3 text-lg ">{isSubmitting ? (""";
-                <>"";
+              disabled={isSubmitting}""""";
+              className = "px-8 py-3 text-lg ">{isSubmitting ? ("""
+                <>""
                   <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>;
                   Submitting...;
 </>";
-              ) : (""";
-                <>"";
+              ) : ("""
+                <>""
                   <Send className="w-5 h-5 mr-2"  />;
                   Submit Quote Request,;
 </>) }
@@ -970,14 +970,14 @@ get back to you within 24 hours.&apos,</p>";
         </form>;
       </CardContent>;
     </Card>) ;";,
-}"";";,
+}""";,
 }
-"""";
+""""
     </Card>) }&apos;&quot}&apos,;
 &apos;&apos,&apos;&apos,";
 &apos,";
-    </Card>) }"";,
-}"";";
+    </Card>) }"",
+}""";
 """"""';
 ";";
 ;";

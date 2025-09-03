@@ -126,7 +126,7 @@ export default function FraudDetection() {}
       fetchFraudFlags();,
 } catch (error) {}
 ";
-"";
+""
       // console.error("Error updating fraud flag:", error);
       toast({}
 ';
@@ -154,27 +154,27 @@ export default function FraudDetection() {}
   );
   return();
     (";
-      <SEO"";
-        title="Fraud Detection | Admin Dashboard"";
+      <SEO""
+        title="Fraud Detection | Admin Dashboard""
         description="Monitor and manage fraud detection alerts on the Zion AI Marketplace";
       />;
     ),";
-    ("";
-      <div className="container mx-auto px-4 py-8">"";
+    (""
+      <div className="container mx-auto px-4 py-8">""
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">";
-          <div>"";
+          <div>""
             <h1 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
               Fraud Detection";
-            </h1>"";
+            </h1>""
             <p className="text-zion-slate-light mt-2">;
               Monitor suspicious activities and protect the marketplace from;
               fraud and abuse;
             </p>;
           </div>";
-"";
+""
           <div className="mt-4 md:mt-0">;
             <Button";
-              onClick={fetchFraudFlags}"";
+              onClick={fetchFraudFlags}""
               className="bg-zion-purple hover:bg-zion-purple-light";
               disabled={isLoading}
             >;
@@ -185,15 +185,15 @@ export default function FraudDetection() {}
 
         {/* Stats Cards */}
         <FraudStatsCards stats={stats} />";
-"";
+""
         <Tabs defaultValue="all" className="mb-8">";
-          <TabsList>"";
-            <TabsTrigger value="all">All Flags</TabsTrigger>"";
-            <TabsTrigger value="pending">Pending Review</TabsTrigger>"";
-            <TabsTrigger value="dangerous">Dangerous</TabsTrigger>"";
+          <TabsList>""
+            <TabsTrigger value="all">All Flags</TabsTrigger>""
+            <TabsTrigger value="pending">Pending Review</TabsTrigger>""
+            <TabsTrigger value="dangerous">Dangerous</TabsTrigger>""
             <TabsTrigger value="actioned">Actioned</TabsTrigger>;
           </TabsList>";
-"";
+""
           <TabsContent value="all" className="mt-6">;
             {/* Search and Filters */}
             <FraudFilters;
@@ -209,7 +209,7 @@ export default function FraudDetection() {}
             />;
 
             {/* Flags Table */}";
-            <Card>"";
+            <Card>""
               <CardContent className="p-0">;
                 <FraudFlagsTable;
                   flags={filteredFlags}
@@ -221,16 +221,16 @@ export default function FraudDetection() {}
               </CardContent>;
             </Card>;
           </TabsContent>";
-"";
-          <TabsContent value="pending">"";
+""
+          <TabsContent value="pending">""
             <FraudTabContent tabValue="pending" />;
           </TabsContent>";
-"";
-          <TabsContent value="dangerous">"";
+""
+          <TabsContent value="dangerous">""
             <FraudTabContent tabValue="dangerous" />;
           </TabsContent>";
-"";
-          <TabsContent value="actioned">"";
+""
+          <TabsContent value="actioned">""
             <FraudTabContent tabValue="actioned" />;
           </TabsContent>;
         </Tabs>;

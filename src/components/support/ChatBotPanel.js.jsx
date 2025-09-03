@@ -9,9 +9,9 @@ import { cn } from "@/lib/utils";
 ;
 import { Send, Loader2 } from "lucide-react";import { useTheme } from "@/hooks/useTheme";
 // Define suggested quick replies";
-const QUICK_REPLIES = ["";
-    { id: "hire", text: "How do I hire?" },"";
-    { id: "match", text: "How do I get matched?" },"";
+const QUICK_REPLIES = [""
+    { id: "hire", text: "How do I hire?" },""
+    { id: "match", text: "How do I get matched?" },""
     { id: "billing", text: "Billing help" }
 ];
 export function ChatBotPanel() {;

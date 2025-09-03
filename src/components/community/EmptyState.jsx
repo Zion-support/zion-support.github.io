@@ -1,14 +1,14 @@
 import React from "react";
-""";,"});,"})";
-""";,"});,"})","});,"})","});,"})","});,"})","});,"})";
+""","});,"})";
+""","});,"})","});,"})","});,"})","});,"})","});,"})";
 const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}"});,"});,
 }
     return (";
-    <div className="text-center py-16">"""";,"});,"})";
-      <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">"""";,"});,"})";
-        <MessageSquare className="h-10 w-10 text-zion-purple"  />""";,"});,"})";
-      </div>"""";,"});,"})";
-      <h2 className="text-xl font-medium mb-2">{title}</h2>"""";,"});,"})";
+    <div className="text-center py-16">"""","});,"})";
+      <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">"""","});,"})";
+        <MessageSquare className="h-10 w-10 text-zion-purple"  />""","});,"})";
+      </div>"""","});,"})";
+      <h2 className="text-xl font-medium mb-2">{title}</h2>"""","});,"})";
       <p className="text-muted-foreground mb-6">{subtitle}</p>;,"});,"})";
       <TooltipProvider>;,"});,"})";
         <Tooltip>;,"});,"})";
@@ -50,11 +50,11 @@ const EmptyState = memo(({ title, subtitle, cta, href, hasSession }) => {}";
 const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}";
   return()";
   return();";
-    <div className="text-center py-16">"";";
-      <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">"";";
+    <div className="text-center py-16">""";
+      <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">""";
         <MessageSquare className="h - 10 w-10 text-zion-purple"  />",;
-      </div>"";";
-      <h2 className="text-xl font-medium mb-2">{title}</h2>"";";
+      </div>""";
+      <h2 className="text-xl font-medium mb-2">{title}</h2>""";
       <p className="text-muted-foreground mb-6">{subtitle}</p>;
       <TooltipProvider>;
         <Tooltip>;
@@ -81,11 +81,11 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}";
       </div>&apos;&apos,&apos;&apos,";
       <h2 className="&apos;text-xl" font-medium mb-2&apos;>{title}&apos;</h2>&apos;&apos,&apos;&apos,";
       <p className="&apos;text-muted-foreground" mb-6&quot;>{subtitle}&quot;</p>";
-    <div className = "text-center py-16">"";
-      <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">"";
-        <MessageSquare className="h-10 w-10 text-zion-purple"  />""";
-      </div>"";
-      <h2 className="text-xl font-medium mb-2">{title}</h2>"";
+    <div className = "text-center py-16">""
+      <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">""
+        <MessageSquare className="h-10 w-10 text-zion-purple"  />"""
+      </div>""
+      <h2 className="text-xl font-medium mb-2">{title}</h2>""
       <p className="text-muted-foreground mb-6">{subtitle}</p>;
       <TooltipProvider>;
         <Tooltip>;

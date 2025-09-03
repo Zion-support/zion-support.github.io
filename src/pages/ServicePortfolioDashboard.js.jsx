@@ -68,22 +68,22 @@ const ServicePortfolioDashboard = () => {;
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-zion-purple/20 via-zion-blue-light/20 to-zion-cyan/20"></div>;
           <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse"></div>          <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse delay-1000"></div>;
         </div>";
-"";
+""
         <div className="max-w-4xl mx-auto text-center relative z-10">;
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}">"";
+            transition={{ duration: 0.6 }}">""
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
               Service Portfolio Dashboard";
-            </h1>"";
+            </h1>""
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">;
               Comprehensive insights into our revolutionary service portfolio,;
               performance metrics, and strategic analysis for informed decision;
               making and portfolio optimization.";
-            </p>"";
+            </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <Button"";
+              <Button""
                 className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4";
                 onClick={() =>';
                   document'';
@@ -91,10 +91,10 @@ const ServicePortfolioDashboard = () => {;
                     ?.scrollIntoView({ behavior: 'smooth' });,
 }
               >";
-                View Dashboard"";
+                View Dashboard""
                 <ArrowRight className="w-5 h-5 ml-2" />;
               </Button>";
-              <Button"";
+              <Button""
                 className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4";
                 onClick={() =>';
                   window.open('';
@@ -109,25 +109,25 @@ const ServicePortfolioDashboard = () => {;
         </div>;
       </section>;
 ";
-      {/* Portfolio Statistics */}"";
-      <section className="py-16 px-6 bg-white">"";
+      {/* Portfolio Statistics */}""
+      <section className="py-16 px-6 bg-white">""
         <div className="max-w-6xl mx-auto">;
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}";
-            viewport={{ once: true }}"";
-            className="text-center mb-12"">"";
+            viewport={{ once: true }}""
+            className="text-center mb-12"">""
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">;
               Portfolio Overview";
-            </h2>"";
+            </h2>""
             <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">;
               Our comprehensive service portfolio spans cutting-edge;
               technologies across all major sectors, providing unmatched;
               coverage and innovation capabilities.;
             </p>;
           </motion.div>";
-"";
+""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
             {portfolioStats.map((stat, index) => (;
               <motion.div;
@@ -135,20 +135,20 @@ const ServicePortfolioDashboard = () => {;
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}">"";
+                viewport={{ once: true }}">""
                 <Card className="h-full text-center hover:shadow-lg transition-shadow">";
-                  <CardHeader>"";
+                  <CardHeader>""
                     <div className="mx-auto w-16 h-16 bg-zion-blue-light/10 rounded-full flex items-center justify-center mb-4">;
                       {stat.icon}";
-                    </div>"";
+                    </div>""
                     <CardTitle className="text-2xl font-bold text-zion-blue-dark mb-2">;
                       {stat.value}";
-                    </CardTitle>"";
+                    </CardTitle>""
                     <h3 className="text-lg font-semibold text-zion-slate-dark mb-2">;
                       {stat.label}
                     </h3>;
                   </CardHeader>";
-                  <CardContent>"";
+                  <CardContent>""
                     <p className="text-zion-slate-light">{stat.description}</p>;
                   </CardContent>;
                 </Card>;
@@ -158,24 +158,24 @@ const ServicePortfolioDashboard = () => {;
         </div>;
       </section>;
 ";
-      {/* Features Section */}"";
-      <section className="py-16 px-6 bg-zion-blue-light/5">"";
+      {/* Features Section */}""
+      <section className="py-16 px-6 bg-zion-blue-light/5">""
         <div className="max-w-6xl mx-auto">;
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}";
-            viewport={{ once: true }}"";
-            className="text-center mb-12"">"";
+            viewport={{ once: true }}""
+            className="text-center mb-12"">""
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">;
               Dashboard Features";
-            </h2>"";
+            </h2>""
             <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">;
               Powerful tools and insights to help you understand, analyze, and;
               optimize your service portfolio;
             </p>;
           </motion.div>";
-"";
+""
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
             {features.map((feature, index) => (;
               <motion.div;
@@ -183,19 +183,19 @@ const ServicePortfolioDashboard = () => {;
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}">"";
+                viewport={{ once: true }}">""
                 <Card className="h-full hover:shadow-lg transition-shadow">";
-                  <CardHeader>"";
-                    <div className="flex items-center gap-3">"";
+                  <CardHeader>""
+                    <div className="flex items-center gap-3">""
                       <div className="w-12 h-12 bg-zion-blue-light/10 rounded-lg flex items-center justify-center">;
                         {feature.icon}";
-                      </div>"";
+                      </div>""
                       <CardTitle className="text-lg text-zion-blue-dark">;
                         {feature.title}
                       </CardTitle>;
                     </div>;
                   </CardHeader>";
-                  <CardContent>"";
+                  <CardContent>""
                     <p className="text-zion-slate-light">;
                       {feature.description}
                     </p>;
@@ -207,24 +207,24 @@ const ServicePortfolioDashboard = () => {;
         </div>;
       </section>;
 ";
-      {/* Benefits Section */}"";
-      <section className="py-16 px-6 bg-white">"";
+      {/* Benefits Section */}""
+      <section className="py-16 px-6 bg-white">""
         <div className="max-w-4xl mx-auto">;
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}";
-            viewport={{ once: true }}"";
-            className="text-center mb-12"">"";
+            viewport={{ once: true }}""
+            className="text-center mb-12"">""
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">;
               Why Use Our Portfolio Dashboard?";
-            </h2>"";
+            </h2>""
             <p className="text-lg text-zion-slate-light">;
               Discover the advantages of comprehensive portfolio management and;
               strategic insights;
             </p>;
           </motion.div>";
-"";
+""
           <div className="space-y-4">;
             {benefits.map((benefit, index) => (;
               <motion.div;
@@ -232,9 +232,9 @@ const ServicePortfolioDashboard = () => {;
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}";
-                viewport={{ once: true }}"";
-                className="flex items-start gap-3"">"";
-                <CheckCircle className="w-5 h-5 text-zion-cyan mt-1 flex-shrink-0" />"";
+                viewport={{ once: true }}""
+                className="flex items-start gap-3"">""
+                <CheckCircle className="w-5 h-5 text-zion-cyan mt-1 flex-shrink-0" />""
                 <span className="text-zion-slate-dark">{benefit}</span>;
               </motion.div>;
             ))}
@@ -243,19 +243,19 @@ const ServicePortfolioDashboard = () => {;
       </section>;
 
       {/* Portfolio Dashboard Section */}";
-      <section"";
-        id="portfolio-dashboard"";
-        className="py-16 px-6 bg-zion-blue-light/5"">"";
+      <section""
+        id="portfolio-dashboard""
+        className="py-16 px-6 bg-zion-blue-light/5"">""
         <div className="max-w-7xl mx-auto">;
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}";
-            viewport={{ once: true }}"";
-            className="text-center mb-12"">"";
+            viewport={{ once: true }}""
+            className="text-center mb-12"">""
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">;
               Interactive Portfolio Dashboard";
-            </h2>"";
+            </h2>""
             <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">;
               Explore our comprehensive service portfolio with real-time;
               analytics, performance metrics, and strategic insights.;
@@ -266,36 +266,36 @@ const ServicePortfolioDashboard = () => {;
         </div>;
       </section>;
 ";
-      {/* CTA Section */}"";
-      <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan">"";
+      {/* CTA Section */}""
+      <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan">""
         <div className="max-w-4xl mx-auto text-center">;
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}">"";
+            viewport={{ once: true }}">""
             <h2 className="text-4xl font-bold text-white mb-6">;
               Ready to Optimize Your Portfolio?";
-            </h2>"";
+            </h2>""
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">;
               Our comprehensive portfolio dashboard provides the insights you;
               need to make informed decisions and drive strategic growth in your;
               technology investments.";
-            </p>"";
+            </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <Button"";
+              <Button""
                 className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4";
                 onClick={() =>';
                   window.open('';
                     'mailto:kleber@ziontechgroup.com?subject=Portfolio Optimization Consultation',_blank';
                   );,
-}">"";
+}">""
                 <Rocket className="w-5 h-5 mr-2" />;
                 Get Portfolio Strategy;
               </Button>";
               <Button"'";
                 className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4"'';
-                onClick={() => window.open('tel:+13024640950',_blank')}">"";
+                onClick={() => window.open('tel:+13024640950',_blank')}">""
                 <Shield className="w-5 h-5 mr-2" />;
                 Speak with an Expert;
               </Button>;

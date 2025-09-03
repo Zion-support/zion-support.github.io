@@ -282,24 +282,24 @@ const AdvancedServicePortfolioDashboard = () => {}
       {/* Header */}
       <motion.div;
         initial={{ opacity: 0, y: 20 }}";
-        animate={{ opacity: 1, y: 0 }}"";
-        className="mb-8"">"";
+        animate={{ opacity: 1, y: 0 }}""
+        className="mb-8"">""
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">";
-          <div>"";
+          <div>""
             <h1 className="text-3xl font-bold text-zion-blue-dark mb-2">;
               Advanced Service Portfolio Dashboard";
-            </h1>"";
+            </h1>""
             <p className="text-zion-slate-light">;
               Comprehensive insights into our cutting-edge service portfolio,;
               performance metrics, and strategic analysis;
             </p>;
           </div>";
-"";
+""
           <div className="flex gap-2">';
             {['overview',detailed',analytics'].map(mode => (;
               <Button;
                 key={mode}'";
-                variant={viewMode === mode ? 'default' : 'outline'}"";
+                variant={viewMode === mode ? 'default' : 'outline'}""
                 size="sm";
                 onClick={() => setViewMode(mode)}'">'"'";
                 {mode === 'overview' && <Eye className="w-4 h-4 mr-2" />}'"'";
@@ -316,92 +316,92 @@ const AdvancedServicePortfolioDashboard = () => {}
       <motion.div;
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}";
-        transition={{ delay: 0.1 }}"";
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"">"";
-        <Card className="hover:shadow-lg transition-shadow">"";
-          <CardHeader className="pb-3">"";
-            <div className="flex items-center justify-between">"";
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center text-white">"";
+        transition={{ delay: 0.1 }}""
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"">""
+        <Card className="hover:shadow-lg transition-shadow">""
+          <CardHeader className="pb-3">""
+            <div className="flex items-center justify-between">""
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center text-white">""
                 <Rocket className="w-6 h-6" />";
-              </div>"";
-              <div className="flex items-center gap-1">"";
-                <ArrowUpRight className="w-4 h-4 text-green-500" />"";
+              </div>""
+              <div className="flex items-center gap-1">""
+                <ArrowUpRight className="w-4 h-4 text-green-500" />""
                 <span className="text-sm font-medium text-green-600">;
                   +{portfolioMetrics.portfolioGrowth}%;
                 </span>;
               </div>;
             </div>;
           </CardHeader>";
-          <CardContent>"";
+          <CardContent>""
             <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">;
               {portfolioMetrics.totalServices}";
-            </h3>"";
+            </h3>""
             <p className="text-sm text-zion-slate-light">Total Services</p>;
           </CardContent>;
         </Card>";
-"";
-        <Card className="hover:shadow-lg transition-shadow">"";
-          <CardHeader className="pb-3">"";
-            <div className="flex items-center justify-between">"";
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center text-white">"";
+""
+        <Card className="hover:shadow-lg transition-shadow">""
+          <CardHeader className="pb-3">""
+            <div className="flex items-center justify-between">""
+              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center text-white">""
                 <DollarSign className="w-6 h-6" />";
-              </div>"";
-              <div className="flex items-center gap-1">"";
-                <ArrowUpRight className="w-4 h-4 text-green-500" />"";
+              </div>""
+              <div className="flex items-center gap-1">""
+                <ArrowUpRight className="w-4 h-4 text-green-500" />""
                 <span className="text-sm font-medium text-green-600">;
                   +{Math.round(portfolioMetrics.portfolioGrowth)}%;
                 </span>;
               </div>;
             </div>;
           </CardHeader>";
-          <CardContent>"";
+          <CardContent>""
             <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">;
               ${(portfolioMetrics.totalRevenue / 1000000).toFixed(1)}M";
-            </h3>"";
+            </h3>""
             <p className="text-sm text-zion-slate-light">Total Revenue</p>;
           </CardContent>;
         </Card>";
-"";
-        <Card className="hover:shadow-lg transition-shadow">"";
-          <CardHeader className="pb-3">"";
-            <div className="flex items-center justify-between">"";
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center text-white">"";
+""
+        <Card className="hover:shadow-lg transition-shadow">""
+          <CardHeader className="pb-3">""
+            <div className="flex items-center justify-between">""
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center text-white">""
                 <Users className="w-6 h-6" />";
-              </div>"";
-              <div className="flex items-center gap-1">"";
-                <ArrowUpRight className="w-4 h-4 text-green-500" />"";
+              </div>""
+              <div className="flex items-center gap-1">""
+                <ArrowUpRight className="w-4 h-4 text-green-500" />""
                 <span className="text-sm font-medium text-green-600">;
                   +{Math.round(portfolioMetrics.portfolioGrowth)}%;
                 </span>;
               </div>;
             </div>;
           </CardHeader>";
-          <CardContent>"";
+          <CardContent>""
             <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">;
               {portfolioMetrics.activeClients}";
-            </h3>"";
+            </h3>""
             <p className="text-sm text-zion-slate-light">Active Clients</p>;
           </CardContent>;
         </Card>";
-"";
-        <Card className="hover:shadow-lg transition-shadow">"";
-          <CardHeader className="pb-3">"";
-            <div className="flex items-center justify-between">"";
-              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-yellow-600 rounded-lg flex items-center justify-center text-white">"";
+""
+        <Card className="hover:shadow-lg transition-shadow">""
+          <CardHeader className="pb-3">""
+            <div className="flex items-center justify-between">""
+              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-yellow-600 rounded-lg flex items-center justify-center text-white">""
                 <Target className="w-6 h-6" />";
-              </div>"";
-              <div className="flex items-center gap-1">"";
-                <ArrowUpRight className="w-4 h-4 text-green-500" />"";
+              </div>""
+              <div className="flex items-center gap-1">""
+                <ArrowUpRight className="w-4 h-4 text-green-500" />""
                 <span className="text-sm font-medium text-green-600">;
                   +{Math.round(portfolioMetrics.portfolioGrowth)}%;
                 </span>;
               </div>;
             </div>;
           </CardHeader>";
-          <CardContent>"";
+          <CardContent>""
             <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">;
               {portfolioMetrics.averagePerformance}%";
-            </h3>"";
+            </h3>""
             <p className="text-sm text-zion-slate-light">Avg Performance</p>;
           </CardContent>;
         </Card>;
@@ -411,16 +411,16 @@ const AdvancedServicePortfolioDashboard = () => {}
       <motion.div;
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}";
-        transition={{ delay: 0.2 }}"";
-        className="bg-white rounded-lg shadow-lg p-6 mb-8"">"";
+        transition={{ delay: 0.2 }}""
+        className="bg-white rounded-lg shadow-lg p-6 mb-8"">""
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">";
-          <div>"";
+          <div>""
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">;
               Category;
             </label>;
             <select;
               value={selectedCategory}";
-              onChange={e => setSelectedCategory(e.target.value)}"";
+              onChange={e => setSelectedCategory(e.target.value)}""
               className="w-full p-2 border border-zion-slate-light rounded-md">;
               {categories.map(category => (;
                 <option key={category.id} value={category.id}>;
@@ -430,53 +430,53 @@ const AdvancedServicePortfolioDashboard = () => {}
             </select>;
           </div>;
 ";
-          <div>"";
+          <div>""
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">;
               Status;
             </label>;
             <select;
               value={selectedStatus}";
-              onChange={e => setSelectedStatus(e.target.value)}"";
-              className="w-full p-2 border border-zion-slate-light rounded-md"">"";
-              <option value="all">All Statuses</option>"";
-              <option value="Active">Active</option>"";
-              <option value="Development">Development</option>"";
-              <option value="Planning">Planning</option>"";
+              onChange={e => setSelectedStatus(e.target.value)}""
+              className="w-full p-2 border border-zion-slate-light rounded-md"">""
+              <option value="all">All Statuses</option>""
+              <option value="Active">Active</option>""
+              <option value="Development">Development</option>""
+              <option value="Planning">Planning</option>""
               <option value="Discontinued">Discontinued</option>;
             </select>;
           </div>;
 ";
-          <div>"";
+          <div>""
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">;
               Complexity;
             </label>;
             <select;
               value={selectedComplexity}";
-              onChange={e => setSelectedComplexity(e.target.value)}"";
-              className="w-full p-2 border border-zion-slate-light rounded-md"">"";
-              <option value="all">All Complexities</option>"";
-              <option value="Basic">Basic</option>"";
-              <option value="Intermediate">Intermediate</option>"";
-              <option value="Advanced">Advanced</option>"";
+              onChange={e => setSelectedComplexity(e.target.value)}""
+              className="w-full p-2 border border-zion-slate-light rounded-md"">""
+              <option value="all">All Complexities</option>""
+              <option value="Basic">Basic</option>""
+              <option value="Intermediate">Intermediate</option>""
+              <option value="Advanced">Advanced</option>""
               <option value="Enterprise">Enterprise</option>;
             </select>;
           </div>;
 ";
-          <div>"";
+          <div>""
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">;
               Search;
             </label>";
-            <Input"";
+            <Input""
               placeholder="Search services...";
               value={searchTerm}";
-              onChange={e => setSearchTerm(e.target.value)}"";
+              onChange={e => setSearchTerm(e.target.value)}""
               className="w-full";
             />;
           </div>";
-"";
+""
           <div className="flex items-end">";
-            <Button"";
-              variant="outline"";
+            <Button""
+              variant="outline""
               className="w-full";
               onClick={() => {}
 ';
@@ -484,7 +484,7 @@ const AdvancedServicePortfolioDashboard = () => {}
                 setSelectedStatus('all');';
                 setSelectedComplexity('all');';
                 setSearchTerm('');,
-}}">"";
+}}">""
               <Filter className="w-4 h-4 mr-2" />;
               Clear Filters;
             </Button>;
@@ -496,47 +496,47 @@ const AdvancedServicePortfolioDashboard = () => {}
       <motion.div;
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}";
-        transition={{ delay: 0.3 }}"";
+        transition={{ delay: 0.3 }}""
         className="mb-8">;
         <Card>";
-          <CardHeader>"";
-            <div className="flex items-center justify-between">"";
-              <CardTitle className="flex items-center gap-2">"";
+          <CardHeader>""
+            <div className="flex items-center justify-between">""
+              <CardTitle className="flex items-center gap-2">""
                 <BarChart3 className="w-5 h-5 text-zion-cyan" />;
                 Service Portfolio Overview";
-              </CardTitle>"";
-              <Button variant="outline" size="sm">"";
+              </CardTitle>""
+              <Button variant="outline" size="sm">""
                 <Download className="w-4 h-4 mr-2" />;
                 Export Data;
               </Button>;
             </div>;
           </CardHeader>";
-          <CardContent>"";
-            <div className="overflow-x-auto">"";
+          <CardContent>""
+            <div className="overflow-x-auto">""
               <table className="w-full">";
-                <thead>"";
-                  <tr className="border-b border-zion-slate-light/20">"";
+                <thead>""
+                  <tr className="border-b border-zion-slate-light/20">""
                     <th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">;
                       Service";
-                    </th>"";
+                    </th>""
                     <th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">;
                       Status";
-                    </th>"";
+                    </th>""
                     <th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">;
                       Performance";
-                    </th>"";
+                    </th>""
                     <th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">;
                       Clients";
-                    </th>"";
+                    </th>""
                     <th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">;
                       Revenue";
-                    </th>"";
+                    </th>""
                     <th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">;
                       Growth";
-                    </th>"";
+                    </th>""
                     <th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">;
                       Complexity";
-                    </th>"";
+                    </th>""
                     <th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">;
                       Demand;
                     </th>;
@@ -548,49 +548,49 @@ const AdvancedServicePortfolioDashboard = () => {}
                       key={service.id}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}";
-                      transition={{ delay: 0.1 * index }}"";
-                      className="border-b border-zion-slate-light/10 hover:bg-zion-blue-light/5"">"";
-                      <td className="py-3 px-4">"";
+                      transition={{ delay: 0.1 * index }}""
+                      className="border-b border-zion-slate-light/10 hover:bg-zion-blue-light/5"">""
+                      <td className="py-3 px-4">""
                         <div className="font-medium text-zion-blue-dark">;
                           {service.title}";
-                        </div>"";
+                        </div>""
                         <div className="text-sm text-zion-slate-light">;
                           {service.price}
                         </div>";
-                      </td>"";
+                      </td>""
                       <td className="py-3 px-4">;
                         <Badge className={getStatusColor(service.status)}>;
                           {service.status}
                         </Badge>";
-                      </td>"";
-                      <td className="py-3 px-4">"";
-                        <div className="flex items-center gap-2">"";
+                      </td>""
+                      <td className="py-3 px-4">""
+                        <div className="flex items-center gap-2">""
                           <div className="w-16 bg-zion-slate-light/20 rounded-full h-2">";
-                            <div"";
+                            <div""
                               className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full";
                               style={{ width: `${service.performance}%` }}
                             ></div>";
-                          </div>"";
+                          </div>""
                           <span className="text-sm font-medium">;
                             {service.performance}%;
                           </span>;
                         </div>";
-                      </td>"";
-                      <td className="py-3 px-4">"";
+                      </td>""
+                      <td className="py-3 px-4">""
                         <span className="font-medium">;
                           {service.clientCount}
                         </span>";
-                      </td>"";
-                      <td className="py-3 px-4">"";
+                      </td>""
+                      <td className="py-3 px-4">""
                         <span className="font-medium">;
                           ${(service.revenue / 1000000).toFixed(1)}M;
                         </span>";
-                      </td>"";
-                      <td className="py-3 px-4">"";
+                      </td>""
+                      <td className="py-3 px-4">""
                         <div className="flex items-center gap-1">";
-                          {service.growth > 0 ? ("";
+                          {service.growth > 0 ? (""
                             <ArrowUpRight className="w-4 h-4 text-green-500" />";
-                          ) : ("";
+                          ) : (""
                             <ArrowDownRight className="w-4 h-4 text-red-500" />;
                           )}'`;
                           <span'`'`;
@@ -600,14 +600,14 @@ const AdvancedServicePortfolioDashboard = () => {}
                             {service.growth}%;
                           </span>;
                         </div>";
-                      </td>"";
+                      </td>""
                       <td className="py-3 px-4">;
                         <Badge;
                           className={getComplexityColor(service.complexity)}
                         >;
                           {service.complexity}
                         </Badge>";
-                      </td>"";
+                      </td>""
                       <td className="py-3 px-4">;
                         <Badge;
                           className={getMarketDemandColor(service.marketDemand)}
@@ -628,17 +628,17 @@ const AdvancedServicePortfolioDashboard = () => {}
       <motion.div;
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}";
-        transition={{ delay: 0.4 }}"";
+        transition={{ delay: 0.4 }}""
         className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">;
         {/* Category Distribution */}
         <Card>";
-          <CardHeader>"";
-            <CardTitle className="flex items-center gap-2">"";
+          <CardHeader>""
+            <CardTitle className="flex items-center gap-2">""
               <PieChart className="w-5 h-5 text-zion-purple" />;
               Service Category Distribution;
             </CardTitle>;
           </CardHeader>";
-          <CardContent>"";
+          <CardContent>""
             <div className="space-y-3">';
               {categories'';
                 .filter(cat => cat.id !== 'all');
@@ -647,8 +647,8 @@ const AdvancedServicePortfolioDashboard = () => {}
                     key={category.id}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}";
-                    transition={{ delay: 0.1 * index }}"";
-                    className="flex items-center justify-between"">"";
+                    transition={{ delay: 0.1 * index }}""
+                    className="flex items-center justify-between"">""
                     <div className="flex items-center gap-3">`;
                       <div``;
                         className={`w-4 h-4 rounded-full ${}
@@ -664,12 +664,12 @@ const AdvancedServicePortfolioDashboard = () => {}
                                   : index === 4'';
                                     ? 'bg-red-500'''`;
                                     : 'bg-gray-500'``;,
-}`}"></div>"";
+}`}"></div>""
                       <span className="font-medium text-zion-slate-dark">;
                         {category.name}
                       </span>";
-                    </div>"";
-                    <div className="flex items-center gap-2">"";
+                    </div>""
+                    <div className="flex items-center gap-2">""
                       <div className="w-20 bg-zion-slate-light/20 rounded-full h-2">`;
                         <div``;
                           className={`h-2 rounded-full ${}
@@ -693,7 +693,7 @@ const AdvancedServicePortfolioDashboard = () => {}
 ``;
                             width: `${(category.count / portfolioData.length) * 100}%`}}
                         ></div>";
-                      </div>"";
+                      </div>""
                       <span className="text-sm font-medium text-zion-slate-light">;
                         {category.count}
                       </span>;
@@ -706,46 +706,46 @@ const AdvancedServicePortfolioDashboard = () => {}
 
         {/* Portfolio Insights */}
         <Card>";
-          <CardHeader>"";
-            <CardTitle className="flex items-center gap-2">"";
+          <CardHeader>""
+            <CardTitle className="flex items-center gap-2">""
               <Brain className="w-5 h-5 text-zion-cyan" />;
               Portfolio Insights;
             </CardTitle>;
           </CardHeader>";
-          <CardContent>"";
-            <div className="space-y-4">"";
-              <div className="flex items-start gap-3 p-3 bg-zion-green/10 rounded-lg">"";
+          <CardContent>""
+            <div className="space-y-4">""
+              <div className="flex items-start gap-3 p-3 bg-zion-green/10 rounded-lg">""
                 <TrendingUp className="w-5 h-5 text-zion-green mt-1" />";
-                <div>"";
+                <div>""
                   <h4 className="font-semibold text-zion-slate-dark">;
                     High Growth Services";
-                  </h4>"";
+                  </h4>""
                   <p className="text-sm text-zion-slate-light">;
                     {portfolioData.filter(s => s.growth > 30).length} services;
                     showing &gt;30% growth;
                   </p>;
                 </div>;
               </div>";
-"";
-              <div className="flex items-start gap-3 p-3 bg-zion-blue/10 rounded-lg">"";
+""
+              <div className="flex items-start gap-3 p-3 bg-zion-blue/10 rounded-lg">""
                 <Star className="w-5 h-5 text-zion-blue mt-1" />";
-                <div>"";
+                <div>""
                   <h4 className="font-semibold text-zion-slate-dark">;
                     Top Performers";
-                  </h4>"";
+                  </h4>""
                   <p className="text-sm text-zion-slate-light">';
                     {portfolioData.filter(s => s.performance > 90).length}{' '}
                     services with &gt;90% performance;
                   </p>;
                 </div>;
               </div>";
-"";
-              <div className="flex items-start gap-3 p-3 bg-zion-purple/10 rounded-lg">"";
+""
+              <div className="flex items-start gap-3 p-3 bg-zion-purple/10 rounded-lg">""
                 <Award className="w-5 h-5 text-zion-purple mt-1" />";
-                <div>"";
+                <div>""
                   <h4 className="font-semibold text-zion-slate-dark">;
                     Market Leaders";
-                  </h4>"";
+                  </h4>""
                   <p className="text-sm text-zion-slate-light">;
                     {}
 ';
@@ -768,32 +768,32 @@ const AdvancedServicePortfolioDashboard = () => {}
       <motion.div;
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}";
-        transition={{ delay: 0.5 }}"";
-        className="text-center"">"";
-        <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"";
+        transition={{ delay: 0.5 }}""
+        className="text-center"">""
+        <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">""
           <h3 className="text-3xl font-bold mb-4">;
             Ready to Expand Your Portfolio?";
-          </h3>"";
+          </h3>""
           <p className="text-xl mb-6 max-w-2xl mx-auto">;
             Our comprehensive service portfolio offers cutting-edge solutions;
             across all major technology sectors. Contact us to discuss how we;
             can help you achieve your business goals.";
-          </p>"";
+          </p>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-            <Button"";
+            <Button""
               className="bg-white text-zion-purple hover:bg-zion-slate-light";
               onClick={() =>';
                 window.open('';
                   'mailto:kleber@ziontechgroup.com?subject=Portfolio Expansion Consultation',_blank';
                 );,
-}">"";
+}">""
               <Users className="w-5 h-5 mr-2" />;
               Get Portfolio Consultation;
             </Button>";
-            <Button"";
+            <Button""
               variant="outline"'";
               className="border-white text-white hover:bg-white hover:text-zion-purple"'';
-              onClick={() => window.open('tel:+13024640950',_blank')}">"";
+              onClick={() => window.open('tel:+13024640950',_blank')}">""
               <Zap className="w-5 h-5 mr-2" />;
               Call Now;
             </Button>;

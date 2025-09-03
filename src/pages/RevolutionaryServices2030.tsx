@@ -115,49 +115,49 @@ const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="relative group"">"";
+      className="relative group"">""
       <div className="relative bg-gradient-to-br from-slate-800/80 via-slate-700/80 to-slate-800/80 backdrop-blur-xl border border-cyan-400/30 rounded-2xl p-6 hover:border-cyan-400/60 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-400/20">";
-        {/* Glow effect */}"";
+        {/* Glow effect */}""
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/5 to-blue-400/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>;
         ";
-        {/* Header */}"";
-        <div className="relative z-10">"";
-          <div className="flex items-start justify-between mb-4">"";
-            <div className="flex items-center space-x-3">"";
-              <div className="p-3 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl">"";
+        {/* Header */}""
+        <div className="relative z-10">""
+          <div className="flex items-start justify-between mb-4">""
+            <div className="flex items-center space-x-3">""
+              <div className="p-3 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl">""
                 <IconComponent className="w-6 h-6 text-white"  />              </div>";
-              <div>"";
-                <h3 className="text-xl font-bold text-white mb-1">{service.name}</h3>"";
+              <div>""
+                <h3 className="text-xl font-bold text-white mb-1">{service.name}</h3>""
                 <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">;
                   {service.category}
                 </span>;
               </div>;
             </div>;
             <button";
-              onClick={() => setIsExpanded(!isExpanded)}"";
-              className="p-2 text-cyan-400 hover:text-cyan-300 transition-colors"">"";
+              onClick={() => setIsExpanded(!isExpanded)}""
+              className="p-2 text-cyan-400 hover:text-cyan-300 transition-colors"">""
               {isExpanded ? <ChevronUp className="w-5 h-5"  /> : <ChevronDown className="w-5 h-5"  />}            </button>;
           </div>";
-"";
+""
           <p className="text-slate-300 mb-4 leading-relaxed">{service.description}</p>;
 ";
-          {/* Pricing and Key Info */}"";
-          <div className="grid grid-cols-2 gap-4 mb-4">"";
-            <div className="bg-slate-700/50 rounded-lg p-3">"";
-              <div className="flex items-center space-x-2 mb-1">"";
+          {/* Pricing and Key Info */}""
+          <div className="grid grid-cols-2 gap-4 mb-4">""
+            <div className="bg-slate-700/50 rounded-lg p-3">""
+              <div className="flex items-center space-x-2 mb-1">""
                 <DollarSign className="w-4 h-4 text-cyan-400"  />"                <span className="text-slate-400 text-sm">Pricing</span>";
-              </div>"";
+              </div>""
               <p className="text-white font-semibold">';
                 {type === 'microSaas' ? `$${service.price.toLocaleString()}/month` : '`'`;
                  type === 'itService' ? `$${service.hourlyRate}/hour` : ``;
                  `$${service.price.toLocaleString()}/month`}
               </p>;
             </div>";
-            "";
-            <div className="bg-slate-700/50 rounded-lg p-3">"";
-              <div className="flex items-center space-x-2 mb-1">"";
+            ""
+            <div className="bg-slate-700/50 rounded-lg p-3">""
+              <div className="flex items-center space-x-2 mb-1">""
                 <TrendingUp className="w-4 h-4 text-green-400"  />"                <span className="text-slate-400 text-sm">ROI</span>";
-              </div>"";
+              </div>""
               <p className="text-white font-semibold">';
                 {type === 'microSaas' ? service.roi : ''`;
                  type === 'itService' ? 'High Value' : '`'`;
@@ -166,14 +166,14 @@ const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 
             </div>;
           </div>;
 ";
-          {/* Features Preview */}"";
-          <div className="mb-4">"";
-            <h4 className="text-cyan-400 font-semibold mb-2 flex items-center">"";
+          {/* Features Preview */}""
+          <div className="mb-4">""
+            <h4 className="text-cyan-400 font-semibold mb-2 flex items-center">""
               <Sparkles className="w-4 h-4 mr-2"  />              Key Features";
-            </h4>"";
+            </h4>""
             <div className="grid grid-cols-1 gap-2">";
-              {service.features.slice(0, 3).map((feature: string, index: number) => ("";
-                <div key={index} className="flex items-center space-x-2 text-slate-300 text-sm">"";
+              {service.features.slice(0, 3).map((feature: string, index: number) => (""
+                <div key={index} className="flex items-center space-x-2 text-slate-300 text-sm">""
                   <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0"  />                  <span>{feature}</span>;
                 </div>) ) }
             </div>;
@@ -183,53 +183,53 @@ const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 
           <AnimatePresence>;
             {isExpanded && (;
               <motion.div";
-                initial={{ opacity: 0, height: 0 }}"";
+                initial={{ opacity: 0, height: 0 }}""
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}";
-                transition={{ duration: 0.3 }}"";
-                className="overflow-hidden"">"";
+                transition={{ duration: 0.3 }}""
+                className="overflow-hidden"">""
                 <div className="border-t border-slate-600 pt-4 space-y-4">;
                   {/* All Features */}";
-                  <div>"";
-                    <h4 className="text-cyan-400 font-semibold mb-2">All Features</h4>"";
+                  <div>""
+                    <h4 className="text-cyan-400 font-semibold mb-2">All Features</h4>""
                     <div className="grid grid-cols-1 gap-2">";
-                      {service.features.map((feature: string, index: number) => ("";
-                        <div key={index} className="flex items-center space-x-2 text-slate-300 text-sm">"";
+                      {service.features.map((feature: string, index: number) => (""
+                        <div key={index} className="flex items-center space-x-2 text-slate-300 text-sm">""
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0"  />                          <span>{feature}</span>;
                         </div>) ) }
                     </div>;
                   </div>;
 
                   {/* Benefits */}";
-                  <div>"";
-                    <h4 className="text-cyan-400 font-semibold mb-2">Benefits</h4>"";
+                  <div>""
+                    <h4 className="text-cyan-400 font-semibold mb-2">Benefits</h4>""
                     <div className="grid grid-cols-1 gap-2">";
-                      {service.benefits.map((benefit: string, index: number) => ("";
-                        <div key={index} className="flex items-center space-x-2 text-slate-300 text-sm">"";
+                      {service.benefits.map((benefit: string, index: number) => (""
+                        <div key={index} className="flex items-center space-x-2 text-slate-300 text-sm">""
                           <Star className="w-4 h-4 text-yellow-400 flex-shrink-0"  />                          <span>{benefit}</span>;
                         </div>) ) }
                     </div>;
                   </div>;
 
                   {/* Target Audience */}";
-                  <div>"";
-                    <h4 className="text-cyan-400 font-semibold mb-2">Target Audience</h4>"";
+                  <div>""
+                    <h4 className="text-cyan-400 font-semibold mb-2">Target Audience</h4>""
                     <div className="flex flex-wrap gap-2">";
-                      {service.targetAudience.map((audience: string, index: number) => ("";
+                      {service.targetAudience.map((audience: string, index: number) => (""
                         <span key={index} className="px-2 py-1 bg-slate-600 text-slate-300 text-xs rounded-full">;
                           {audience}
                         </span>) ) }
                     </div>;
                   </div>;
 ";
-                  {/* Additional Info */}"";
+                  {/* Additional Info */}""
                   <div className="grid grid-cols-2 gap-4">";
-                    <div>"";
-                      <h4 className="text-cyan-400 font-semibold mb-2">Market Price</h4>"";
+                    <div>""
+                      <h4 className="text-cyan-400 font-semibold mb-2">Market Price</h4>""
                       <p className="text-slate-300 text-sm">{service.marketPrice}</p>;
                     </div>";
-                    <div>"";
-                      <h4 className="text-cyan-400 font-semibold mb-2">Innovation Level</h4>"";
+                    <div>""
+                      <h4 className="text-cyan-400 font-semibold mb-2">Innovation Level</h4>""
                       <p className="text-slate-300 text-sm">{service.innovationLevel}</p>;
                     </div>;
                   </div>;
@@ -237,12 +237,12 @@ const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 
               </motion.div>) }
           </AnimatePresence>;
 ";
-          {/* CTA Button */}"";
+          {/* CTA Button */}""
           <div className="mt-6">";
-            <Link"";
-              to="/contact"";
+            <Link""
+              to="/contact""
               className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">";
-              Get Started"";
+              Get Started""
               <ArrowRight className="w-5 h-5 ml-2"  />            </Link>;
           </div>;
         </div>;
@@ -265,34 +265,34 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
         ]}
   };
 ";
-  return ("";
+  return (""
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
       <SEO"'";
         title="Revolutionary Services 2030 - Zion Tech Group"'"'";
-        description="Discover the future of technology with Zion Tech Group's revolutionary micro SAAS, IT, and AI services for 2030. Cutting-edge solutions with proven ROI and rapid deployment.""";
-        keywords="revolutionary services 2030, micro SAAS, AI services, IT solutions, quantum computing, blockchain, cybersecurity, Zion Tech Group""";
+        description="Discover the future of technology with Zion Tech Group's revolutionary micro SAAS, IT, and AI services for 2030. Cutting-edge solutions with proven ROI and rapid deployment."""
+        keywords="revolutionary services 2030, micro SAAS, AI services, IT solutions, quantum computing, blockchain, cybersecurity, Zion Tech Group"""
         image="https://ziontechgroup.com/images/revolutionary-services-2030.jpg""        url="https://ziontechgroup.com/revolutionary-services-2030";
        />;
 ";
-      {/* Hero Section */}"";
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">"";
+      {/* Hero Section */}""
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto text-center">;
           <motion.div;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}";
-            transition={{ duration: 0.8 }}"";
-            className="text-center"">"";
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full px-6 py-2 mb-6">"";
+            transition={{ duration: 0.8 }}""
+            className="text-center"">""
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full px-6 py-2 mb-6">""
               <StarIcon className="w-5 h-5 text-cyan-400"  />"              <span className="text-cyan-400 font-semibold">Revolutionary Services 2030</span>;
             </div>";
-            "";
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">"";
+            ""
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">""
               <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">;
                 Future of Technology;
               </span>";
-              <br />"";
+              <br />""
               <span className="text-white">Starts Here</span>";
-            </h1>"";
+            </h1>""
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
               Experience the future of technology with our groundbreaking AI, blockchain, cybersecurity, and emerging technology services.;
               Transform your business with solutions that were once science fiction.;
@@ -312,10 +312,10 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
         </div>;
       </div>;
 ";
-      {/* Services Section */}"";
-      <div className="relative z-10 pb-20">"";
+      {/* Services Section */}""
+      <div className="relative z-10 pb-20">""
         <div className="container mx-auto px-4">";
-          {/* Tab Navigation */}"";
+          {/* Tab Navigation */}""
           <div className="flex flex-wrap justify-center mb-12">;
             {tabs.map((tab) => (;
               <button;
@@ -329,7 +329,7 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
 }`}
               >;
 ;";
-          {/* Services Grid */};"";
+          {/* Services Grid */};""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <AnimatePresence>;
               {sortedServices.map((service, index) => {;
@@ -354,11 +354,11 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
   { duration: 0.5,;
   delay: index * 0.1;
 ";,
-}}"";
-                    className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:border-zion-cyan"">"";
-                    <option value="rating">Sort by Rating</option>"";
-                    <option value="price">Sort by Price</option>"";
-                    <option value="reviews">Sort by Reviews</option>"";
+}}""
+                    className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:border-zion-cyan"">""
+                    <option value="rating">Sort by Rating</option>""
+                    <option value="price">Sort by Price</option>""
+                    <option value="reviews">Sort by Reviews</option>""
                     <option value="aiScore">Sort by AI Score</option>;
                   </select>;
                 </div>;

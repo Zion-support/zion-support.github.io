@@ -45,17 +45,17 @@ export const AccessibilityProvider = ({ children }) => {}
     const settings = {;
 ";
 ;,"});,"})";
- const AccessibilityContext = createContext (null) ; export const useAccessibility = () => { const context = useContext (AccessibilityContext) ; if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider") } return context};"""";,"});,"})";
+ const AccessibilityContext = createContext (null) ; export const useAccessibility = () => { const context = useContext (AccessibilityContext) ; if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider") } return context};"""","});,"})";
 ;,"});,"})";
- const AccessibilityContext = createContext(null); export const useAccessibility = () => { const context = useContext(AccessibilityContext); if(!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" )} return context};,"});,"})"""";,"});,"})","});,"})","});,"})";
+ const AccessibilityContext = createContext(null); export const useAccessibility = () => { const context = useContext(AccessibilityContext); if(!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" )} return context};,"});,"})"""","});,"})","});,"})","});,"})";
 ;const AccessibilityContext = createContext(null);,"});,"})";
 export const useAccessibility = () => {}"});,"})";
   const context = useContext(AccessibilityContext);,"});,"})";
   if (!context) {}"});,"})";
 ";,"});,"})";
-"";,"});,"})";
-""";,"});,"})";
-    throw new Error("""";,"});,"})";
+"","});,"})";
+""","});,"})";
+    throw new Error("""","});,"})";
       "useAccessibility must be used within an AccessibilityProvider";,"});,"})";
     );,"});,"});";,
 }"});,"})";
@@ -70,8 +70,8 @@ export const AccessibilityProvider = ({ children }) => {}"});,"})";
   // comment;
   useEffect(() => {}"});,"})";
 ";,"});,"})";
-"";,"});,"})";
-""";,"});,"})";
+"","});,"})";
+""","});,"})";
     const savedSettings = localStorage.getItem("zion-accessibility-settings");,"});,"})";
     if (savedSettings) {}"});,"})";
       const settings = JSON.parse(savedSettings);,"});,"})";
@@ -86,9 +86,9 @@ export const AccessibilityProvider = ({ children }) => {}"});,"})";
     const settings = {}"});,"})";
       highContrast,,"});,"})";
       reducedMotion,";,"});,"})";
-      fontSize,"";,"});,"})";
-      colorBlindMode};""";,"});,"})";
-    localStorage.setItem("""";,"});,"})";
+      fontSize,"","});,"})";
+      colorBlindMode};""","});,"})";
+    localStorage.setItem("""","});,"})";
       "zion-accessibility-settings",,"});,"})";
       JSON.stringify(settings);,"});,"})";
     );,"});,"});";,
@@ -99,38 +99,38 @@ export const AccessibilityProvider = ({ children }) => {}"});,"})";
     // comment;
     if (highContrast) {}"});,"})";
 ";,"});,"})";
-"";,"});,"})";
-""";,"});,"})";
+"","});,"})";
+""","});,"})";
       root.classList.add("high-contrast");,"});,"});";,
 } else {}"});,"})";
 ";,"});,"})";
-"";,"});,"})";
-""";,"});,"})";
+"","});,"})";
+""","});,"})";
       root.classList.remove("high-contrast");,"});,"});";,
 }"});,"})";
     // comment;
     if (reducedMotion) {}"});,"})";
 ";,"});,"})";
-"";,"});,"})";
-""";,"});,"})";
+"","});,"})";
+""","});,"})";
       root.classList.add("reduced-motion");,"});,"});";,
 } else {}"});,"})";
 ";,"});,"})";
-"";,"});,"})";
-""";,"});,"})";
+"","});,"})";
+""","});,"})";
       root.classList.remove("reduced-motion");,"});,"});";,
-}"";,"});,"})";
+}"","});,"})";
     // comment;
-    root.style.fontSize ="""";,"});,"})";
+    root.style.fontSize ="""","});,"})";
       fontSize == = "small" ? "14px" : fontSize === "large" ? "18px" : "16px",";,"});,"})";
     // comment;
-    root.style.filter ="""";,"});,"})";
-      colorBlindMode === "none""""";,"});,"})";
-        ? "none""""";,"});,"})";
-        : colorBlindMode === "protanopia""""";,"});,"})";
-          ? "url(#protanopia)""""";,"});,"})";
-          : colorBlindMode === "deuteranopia""""";,"});,"})";
-            ? "url(#deuteranopia)""""";,"});,"})";
+    root.style.filter ="""","});,"})";
+      colorBlindMode === "none""""","});,"})";
+        ? "none""""","});,"})";
+        : colorBlindMode === "protanopia""""","});,"})";
+          ? "url(#protanopia)""""","});,"})";
+          : colorBlindMode === "deuteranopia""""","});,"})";
+            ? "url(#deuteranopia)""""","});,"})";
             : "url(#tritanopia);,"});,"});";,
 }, [highContrast, reducedMotion, fontSize, colorBlindMode]);,"});,"})";
   const toggleReducedMotion = () => setReducedMotion(!reducedMotion);,"});,"})";
@@ -167,7 +167,7 @@ export const AccessibilityPanel = () => {}"});,"})";
       // comment;
       if();,"});,"})";
         (event.ctrlKey || event.metaKey) &&";,"});,"})";
-        event.shiftKey &&"";,"});,"})";
+        event.shiftKey &&"","});,"})";
         event.key === "A";,"});,"})";
       ) {}"});,"})";
         event.preventDefault();,"});,"})";
@@ -176,7 +176,7 @@ export const AccessibilityPanel = () => {}"});,"})";
       // comment;
       if();,"});,"})";
         (event.ctrlKey || event.metaKey) &&";,"});,"})";
-        event.shiftKey &&"";,"});,"})";
+        event.shiftKey &&"","});,"})";
         event.key === "H";,"});,"})";
       ) {}"});,"})";
         event.preventDefault();,"});,"})";
@@ -185,14 +185,14 @@ export const AccessibilityPanel = () => {}"});,"})";
       // comment;
       if();,"});,"})";
         (event.ctrlKey || event.metaKey) &&";,"});,"})";
-        event.shiftKey &&"";,"});,"})";
+        event.shiftKey &&"","});,"})";
         event.key === "M";,"});,"})";
       ) {}"});,"})";
         event.preventDefault();,"});,"})";
         toggleReducedMotion();,"});,"});";,
-}"";,"});,"});";,
-};""";,"});,"})";
-    window.addEventListener();"";,"});,"})";
+}"","});,"});";,
+};""","});,"})";
+    window.addEventListener();"","});,"})";
     return () => window.removeEventListener("keydown", handleKeyDown);,"});,"});";,
 }, [isOpen, toggleHighContrast, toggleReducedMotion]);,"});,"})";
   return ();,"});,"})";
@@ -203,7 +203,7 @@ export const AccessibilityPanel = () => {}"});,"})";
         whileTap="{{" scale: 0.9 }}"});,"})";
         onClick="{()" => setIsOpen(true)}"});,"})";
         className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover: shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300""","});,"})";
-        aria-label="Open Accessibility Settings"""";,"});,"})">"""";,"});,"})";
+        aria-label="Open Accessibility Settings"""","});,"})">"""","});,"})";
         <Accessibility className="w-6 h-6"  />;,"});,"})";
       </motion.button>;,"});,"})";
       {/* comment */}"});,"})";
@@ -211,115 +211,115 @@ export const AccessibilityPanel = () => {}"});,"})";
         {isOpen && (;,"});,"})";
           <motion.div,"});,"})";
             initial="{{" opacity: 0 }}"});,"})";
-            animate="{{" opacity: 1 }}""";,"});,"})";
-            exit="{{" opacity: 0 }}"""";,"});,"})";
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4""";,"});,"})";
+            animate="{{" opacity: 1 }}""","});,"})";
+            exit="{{" opacity: 0 }}"""","});,"})";
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4""","});,"})";
             onClick="{()" => setIsOpen(false)}"});,"})">;,"});,"})";
             <motion.div,"});,"})";
               initial="{{" scale: 0.9, opacity: 0 }}"});,"})";
-              animate="{{" scale: 1, opacity: 1 }}""";,"});,"})";
-              exit="{{" scale: 0.9, opacity: 0 }}"""";,"});,"})";
-              className="bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto""";,"});,"})";
-              onClick="{e" => e.stopPropagation()}"});,"})">""";,"});,"})";
-              {/* comment */}"""";,"});,"})";
-              <div className="flex items-center justify-between mb-6">"""";,"});,"})";
-                <h2 className="text-xl font-bold text-white flex items-center gap-2">"""";,"});,"})";
+              animate="{{" scale: 1, opacity: 1 }}""","});,"})";
+              exit="{{" scale: 0.9, opacity: 0 }}"""","});,"})";
+              className="bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto""","});,"})";
+              onClick="{e" => e.stopPropagation()}"});,"})">""","});,"})";
+              {/* comment */}"""","});,"})";
+              <div className="flex items-center justify-between mb-6">"""","});,"})";
+                <h2 className="text-xl font-bold text-white flex items-center gap-2">"""","});,"})";
                   <Accessibility className="w-5 h-5 text-zion-cyan"  />;,"});,"})";
                   Accessibility Settings,"});,"})";
-                </h2>""";,"});,"})";
-                <Button"""";,"});,"})";
-                  variant="ghost"""";,"});,"})";
-                  size="sm"""";,"});,"})";
-                  onClick="{()" => setIsOpen(false)}"""";,"});,"})";
-                  className="text-zion-slate-light hover: text-white""","});,"})">"""";,"});,"})";
+                </h2>""","});,"})";
+                <Button"""","});,"})";
+                  variant="ghost"""","});,"})";
+                  size="sm"""","});,"})";
+                  onClick="{()" => setIsOpen(false)}"""","});,"})";
+                  className="text-zion-slate-light hover: text-white""","});,"})">"""","});,"})";
                   <X className="w-4 h-4"  />;,"});,"})";
                 </Button>;,"});,"})";
               </div>;,"});,"})";
-""";,"});,"})";
-              {/* comment */}"""";,"});,"})";
-              <div className="space-y-6">""";,"});,"})";
-                {/* comment */}"""";,"});,"})";
-                <div className="flex items-center justify-between">""";,"});,"})";
-                  <div>"""";,"});,"})";
+""","});,"})";
+              {/* comment */}"""","});,"})";
+              <div className="space-y-6">""","});,"})";
+                {/* comment */}"""","});,"})";
+                <div className="flex items-center justify-between">""","});,"})";
+                  <div>"""","});,"})";
                     <h3 className="text-white font-medium mb-1">;,"});,"})";
-                      High Contrast""";,"});,"})";
-                    </h3>"""";,"});,"})";
+                      High Contrast""","});,"})";
+                    </h3>"""","});,"})";
                     <p className="text-sm text-zion-slate-light">;,"});,"})";
                       Increase contrast for better visibility,"});,"})";
                     </p>;,"});,"})";
                   </div>";,"});,"})";
-                  <Button"""";,"});,"})";
-                    variant="{highContrast" ? "default" : "outline"}"""";,"});,"})";
-                    size="sm""";,"});,"})";
+                  <Button"""","});,"})";
+                    variant="{highContrast" ? "default" : "outline"}"""","});,"})";
+                    size="sm""","});,"})";
                     onClick={toggleHighContrast}"});,"})";
                     className={}"});,"})";
 ";,"});,"})";
-                      highContrast"";,"});,"})";
-                        ? "bg-zion-cyan text-white""";,"});,"})";
+                      highContrast"","});,"})";
+                        ? "bg-zion-cyan text-white""","});,"})";
                         : "border-zion-cyan/30 text-zion-cyan";,"});,"});";,
-}"});,"})">""";,"});,"})";
-                    {highContrast ? ("""";,"});,"})";
-                      <Eye className="w-4 h-4"  />""";,"});,"})";
-                    ) : ("""";,"});,"})";
+}"});,"})">""","});,"})";
+                    {highContrast ? ("""","});,"})";
+                      <Eye className="w-4 h-4"  />""","});,"})";
+                    ) : ("""","});,"})";
                       <EyeOff className="w-4 h-4"  />;,"});,"})";
                     )}"});,"})";
                   </Button>;,"});,"})";
                 </div>;,"});,"})";
-""";,"});,"})";
-                {/* comment */}"""";,"});,"})";
-                <div className="flex items-center justify-between">""";,"});,"})";
-                  <div>"""";,"});,"})";
+""","});,"})";
+                {/* comment */}"""","});,"})";
+                <div className="flex items-center justify-between">""","});,"})";
+                  <div>"""","});,"})";
                     <h3 className="text-white font-medium mb-1">;,"});,"})";
-                      Reduced Motion""";,"});,"})";
-                    </h3>"""";,"});,"})";
+                      Reduced Motion""","});,"})";
+                    </h3>"""","});,"})";
                     <p className="text-sm text-zion-slate-light">;,"});,"})";
                       Minimize animations and transitions,"});,"})";
                     </p>;,"});,"})";
                   </div>";,"});,"})";
-                  <Button"""";,"});,"})";
-                    variant="{reducedMotion" ? "default" : "outline"}"""";,"});,"})";
-                    size="sm""";,"});,"})";
+                  <Button"""","});,"})";
+                    variant="{reducedMotion" ? "default" : "outline"}"""","});,"})";
+                    size="sm""","});,"})";
                     onClick={toggleReducedMotion}"});,"})";
                     className={}"});,"})";
 ";,"});,"})";
-                      reducedMotion"";,"});,"})";
-                        ? "bg-zion-cyan text-white""";,"});,"})";
+                      reducedMotion"","});,"})";
+                        ? "bg-zion-cyan text-white""","});,"})";
                         : "border-zion-cyan/30 text-zion-cyan";,"});,"});";,
-}"});,"})">""";,"});,"})";
-                    {reducedMotion ? ("""";,"});,"})";
-                      <VolumeX className="w-4 h-4"  />""";,"});,"})";
-                    ) : ("""";,"});,"})";
+}"});,"})">""","});,"})";
+                    {reducedMotion ? ("""","});,"})";
+                      <VolumeX className="w-4 h-4"  />""","});,"})";
+                    ) : ("""","});,"})";
                       <Volume2 className="w-4 h-4"  />;,"});,"})";
                     )}"});,"})";
                   </Button>;,"});,"})";
                 </div>;,"});,"})";
-                {/* comment */}""";,"});,"})";
-                <div>"""";,"});,"})";
-                  <h3 className="text-white font-medium mb-3">Font Size</h3>"""";,"});,"})";
+                {/* comment */}""","});,"})";
+                <div>"""","});,"})";
+                  <h3 className="text-white font-medium mb-3">Font Size</h3>"""","});,"})";
                   <div className="flex gap-2">";,"});,"})";
                     {["small",medium",large"].map(size => (;,"});,"})";
                       <Button,"});,"})";
-                        key={size}""";,"});,"})";
-                        variant="{fontSize" === size ? "default" : "outline"}"""";,"});,"})";
-                        size="sm""";,"});,"})";
+                        key={size}""","});,"})";
+                        variant="{fontSize" === size ? "default" : "outline"}"""","});,"})";
+                        size="sm""","});,"})";
                         onClick="{()" => setFontSize(size)}"});,"})";
                         className={}"});,"})";
 ";,"});,"})";
-"";,"});,"})";
-""";,"});,"})";
-                          fontSize === size"""";,"});,"})";
-                            ? "bg-zion-cyan text-white""""";,"});,"})";
+"","});,"})";
+""","});,"})";
+                          fontSize === size"""","});,"})";
+                            ? "bg-zion-cyan text-white""""","});,"})";
                             : "border-zion-cyan/30 text-zion-cyan";,"});,"});";,
 }"});,"})">;,"});,"})";
                         {size.charAt(0).toUpperCase() + size.slice(1)}"});,"})";
                       </Button>;,"});,"})";
                     ))}"});,"})";
                   </div>;,"});,"})";
-                {/* comment */}""";,"});,"})";
-                <div>"""";,"});,"})";
+                {/* comment */}""","});,"})";
+                <div>"""","});,"})";
                   <h3 className="text-white font-medium mb-3">;,"});,"})";
-                    Color Blind Support""";,"});,"})";
-                  </h3>"""";,"});,"})";
+                    Color Blind Support""","});,"})";
+                  </h3>"""","});,"})";
                   <div className="grid grid-cols-2 gap-2">";,"});,"})";
                     {["none",protanopia",deuteranopia",tritanopia"].map();,"});,"})";
                       mode => (;,"});,"})";
@@ -327,16 +327,16 @@ export const AccessibilityPanel = () => {}"});,"})";
                           key={mode}"});,"})";
                           variant={}"});,"})";
 ";,"});,"})";
-                            colorBlindMode === mode ? "default" : "outline""";,"});,"});";,
-}"""";,"});,"})";
-                          size="sm""";,"});,"})";
+                            colorBlindMode === mode ? "default" : "outline""","});,"});";,
+}"""","});,"})";
+                          size="sm""","});,"})";
                           onClick="{()" => setColorBlindMode(mode)}"});,"})";
                           className={}"});,"})";
 ";,"});,"})";
-"";,"});,"})";
-""";,"});,"})";
-                            colorBlindMode === mode"""";,"});,"})";
-                              ? "bg-zion-cyan text-white""""";,"});,"})";
+"","});,"})";
+""","});,"})";
+                            colorBlindMode === mode"""","});,"})";
+                              ? "bg-zion-cyan text-white""""","});,"})";
                               : "border-zion-cyan/30 text-zion-cyan";,"});,"});";,
 }"});,"})">;,"});,"})";
                           {mode.charAt(0).toUpperCase() + mode.slice(1)}"});,"})";
@@ -344,35 +344,35 @@ export const AccessibilityPanel = () => {}"});,"})";
                       );,"});,"})";
                     )}"});,"})";
                   </div>;,"});,"})";
-""";,"});,"})";
-                {/* comment */}"""";,"});,"})";
-                <div className="bg-zion-blue-dark/50 rounded-lg p-4">"""";,"});,"})";
-                  <h3 className="text-white font-medium mb-3 flex items-center gap-2">"""";,"});,"})";
+""","});,"})";
+                {/* comment */}"""","});,"})";
+                <div className="bg-zion-blue-dark/50 rounded-lg p-4">"""","});,"})";
+                  <h3 className="text-white font-medium mb-3 flex items-center gap-2">"""","});,"})";
                     <Keyboard className="w-4 h-4 text-zion-cyan"  />;,"});,"})";
-                    Keyboard Shortcuts""";,"});,"})";
-                  </h3>"""";,"});,"})";
-                  <div className="space-y-2 text-sm text-zion-slate-light">"""";,"});,"})";
-                    <div className="flex justify-between">""";,"});,"})";
+                    Keyboard Shortcuts""","});,"})";
+                  </h3>"""","});,"})";
+                  <div className="space-y-2 text-sm text-zion-slate-light">"""","});,"})";
+                    <div className="flex justify-between">""","});,"})";
                       <span>Open Panel: </span>""","});,"})";
                       <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">;,"});,"})";
                         Ctrl/Cmd + Shift + A,"});,"})";
-                      </kbd>""";,"});,"})";
-                    </div>"""";,"});,"})";
-                    <div className="flex justify-between">""";,"});,"})";
+                      </kbd>""","});,"})";
+                    </div>"""","});,"})";
+                    <div className="flex justify-between">""","});,"})";
                       <span>High Contrast: </span>""","});,"})";
                       <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">;,"});,"})";
                         Ctrl/Cmd + Shift + H,"});,"})";
-                      </kbd>""";,"});,"})";
-                    </div>"""";,"});,"})";
-                    <div className="flex justify-between">""";,"});,"})";
+                      </kbd>""","});,"})";
+                    </div>"""","});,"})";
+                    <div className="flex justify-between">""","});,"})";
                       <span>Reduced Motion: </span>""","});,"})";
                       <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">;,"});,"})";
                         Ctrl/Cmd + Shift + M,"});,"})";
                       </kbd>;,"});,"})";
                     </div>;,"});,"})";
-""";,"});,"})";
-              {/* comment */}"""";,"});,"})";
-              <div className="mt-6 pt-4 border-t border-zion-cyan/20">"""";,"});,"})";
+""","});,"})";
+              {/* comment */}"""","});,"})";
+              <div className="mt-6 pt-4 border-t border-zion-cyan/20">"""","});,"})";
                 <p className="text-xs text-zion-slate-light text-center">;,"});,"})";
                   These settings are saved locally and will persist across,"});,"})";
                   sessions.</p>;,"});,"})";
@@ -384,9 +384,9 @@ export const AccessibilityPanel = () => {}"});,"})";
   );,"});,"});";,
 };,"});,"})";
 // comment;
-export const SkipToContent = () => (""";,"});,"})";
-  <a"""";,"});,"})";
-    href="#main-content"""";,"});,"})";
+export const SkipToContent = () => (""","});,"})";
+  <a"""","});,"})";
+    href="#main-content"""","});,"})";
     className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hover:bg-zion-cyan-light transition-colors duration-300"","});,"})">;,"});,"})";
     Skip to main content,"});,"})";
   </a>;,"});,"})";
@@ -394,8 +394,8 @@ export const SkipToContent = () => (""";,"});,"})";
 // comment;
 export const useFocusTrap = isActive => {}"});,"})";
   useEffect(() => {}"});,"})";
-    if (!isActive) return,""";,"});,"})";
-    const focusableElements =""""";,"});,"})";
+    if (!isActive) return,""","});,"})";
+    const focusableElements =""""","});,"})";
       "button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]);,"});,"})";
     const container = document.activeElement?.closest("[data-focus-trap]");,"});,"})";
     if(!container) return,"});,"})";
@@ -415,19 +415,19 @@ export const useFocusTrap = isActive => {}"});,"})";
             firstFocusableElement.focus();,"});,"});";,
 }"});,"});";,
 }";,"});,"});";,
-}"";,"});,"});";,
-};""";,"});,"})";
-    document.addEventListener();"";,"});,"})";
+}"","});,"});";,
+};""","});,"})";
+    document.addEventListener();"","});,"})";
     return () => document.removeEventListener("keydown", handleTabKey);,"});,"});";,
 }, [isActive]);,"});,"});";,
 };,"});,"})";
 // comment;
-export const SrOnly = ({ children }) => ("""";,"});,"})";
+export const SrOnly = ({ children }) => ("""","});,"})";
   <span className="sr-only">{children}</span>;,"});,"})";
 );,"});,"})";
-export default AccessibilityPanel;""";,"});,"})";
-""""";,"});,"})";
- const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  } return context }";;import React, { useState, useEffect, createContext, useContext } from "react"";import React, { useState, useEffect, createContext, useContext } from "react""";";
+export default AccessibilityPanel;""","});,"})";
+""""","});,"})";
+ const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  } return context }";;import React, { useState, useEffect, createContext, useContext } from "react""import React, { useState, useEffect, createContext, useContext } from "react"""";
  const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  } return context }";import React, { useState, useEffect, createContext, useContext }  from "react,;
 const AccessibilityContext = createContext()";
 export const useAccessibility = () => {}
@@ -435,8 +435,8 @@ export const useAccessibility = () => {}
   const context = useContext(AccessibilityContext)";
   if (!context) {}
 ";
-""";
-    throw new Error(""";
+"""
+    throw new Error("""
       "useAccessibility must be used within an AccessibilityProvider"    )}
 ;
   return context}
@@ -451,7 +451,7 @@ export const AccessibilityProvider = ({ children }) => {}";
   // comment;
 useEffect(() => {}
 ";
-""";
+"""
     const savedSettings = localStorage.getItem();,
 }
     if (savedSettings) {}
@@ -468,7 +468,7 @@ useEffect(() => {}
 useEffect(() => {}";
     const settings = {}
       highContrast, reducedMotion,;
-      fontSize, "";
+      fontSize, ""
       colorBlindMode}";
     const settings = {}";
       highContrast, reducedMotion,;
@@ -502,32 +502,32 @@ useEffect(() => {}
     // comment;
 if (highContrast) {}
 ";
-""";
+"""
       root.classList.add("high-contrast")} else {}
 ";
-""";
+"""
       root.classList.remove("high-contrast")}
 ;
     // comment;
 if (reducedMotion) {}
 ";
-""";
+"""
       root.classList.add("reduced-motion")} else {}
 ;
-"";
+""
       root.classList.remove("reduced - motion")", ",;,
 }";
     // comment;
-    root.style.fontSize = """;
-      fontSize === "small" ? "14px" : fontSize === "large" ? "18px" : "16px"";
+    root.style.fontSize = """
+      fontSize === "small" ? "14px" : fontSize === "large" ? "18px" : "16px""
     // comment;
-    root.style.filter =""";
-      colorBlindMode === "none"""";
-        ? "none"""";
-        : colorBlindMode === "protanopia"""";
-          ? "url(#protanopia)"""";
-          : colorBlindMode === "deuteranopia"""";
-            ? "url(#deuteranopia)""";
+    root.style.filter ="""
+      colorBlindMode === "none""""
+        ? "none""""
+        : colorBlindMode === "protanopia""""
+          ? "url(#protanopia)""""
+          : colorBlindMode === "deuteranopia""""
+            ? "url(#deuteranopia)"""
             : "url(#tritanopia),;,
 }, [highContrast, reducedMotion, fontSize, colorBlindMode]);,
 }
@@ -618,10 +618,10 @@ if();
 whileHover = "{{" scale: 1.1 }}";
         whileTap="{{" scale: 0.9 }}";
         onClick="{()" ="> setIsOpen(true)}
-        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover: shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300""";
-        aria-label="Open Accessibility Settings"""";
+        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover: shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300"""
+        aria-label="Open Accessibility Settings""""
         className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover:shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300;
-        aria-label="Open Accessibility Settings""">"";
+        aria-label="Open Accessibility Settings""">""
         <Accessibility className="w-6 h-6" /">";
       </motion.button>,;
       {/* comment */}
@@ -630,8 +630,8 @@ whileHover = "{{" scale: 1.1 }}";
         {isOpen && (;
           <motion .div,";
 initial="{{" opacity: 0 }}";
-            animate="{{" opacity: 1 }}"";
-            exit="{{" opacity: 0 }}"";
+            animate="{{" opacity: 1 }}""
+            exit="{{" opacity: 0 }}""
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4";
             onClick="{()" ="> setIsOpen(false)}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4;
@@ -640,102 +640,102 @@ initial="{{" opacity: 0 }}";
           >;
             <motion .div,";
 initial="{{" scale: 0.9, opacity: 0 }}";
-              animate="{{" scale: 1, opacity: 1 }}"";
-              exit="{{" scale: 0.9, opacity: 0 }}"";
+              animate="{{" scale: 1, opacity: 1 }}""
+              exit="{{" scale: 0.9, opacity: 0 }}""
               className="bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto;
-              onClick="{e" ="> e.stopPropagation()}">""";
-              {/* comment */}""";
-              <div className="flex items-center justify-between mb-6">"";
-                <h2 className="text-xl font-bold text-white flex items-center gap-2">"";
+              onClick="{e" ="> e.stopPropagation()}">"""
+              {/* comment */}"""
+              <div className="flex items-center justify-between mb-6">""
+                <h2 className="text-xl font-bold text-white flex items-center gap-2">""
                   <Accessibility className="w-5 h-5 text-zion-cyan" /">;
                   Accessibility Settings;
-                </h2>""";
-                <Button """;
-                  variant="ghost"""";
-                  size="sm"""";
-                  onClick="{()" ="> setIsOpen(false)}""";
-                  className="text-zion-slate-light hover: text-white""";
-                  variant="ghost""";
+                </h2>"""
+                <Button """
+                  variant="ghost""""
+                  size="sm""""
+                  onClick="{()" ="> setIsOpen(false)}"""
+                  className="text-zion-slate-light hover: text-white"""
+                  variant="ghost"""
                   size="sm"""",;
-                  onClick="{()" ="> setIsOpen(false)}"";
+                  onClick="{()" ="> setIsOpen(false)}""
                   className="text-zion-slate-light hover: text-white;
-                >"";
+                >""
                   <X className="w-4 h-4" /">";
                 </Button>";
               </div>;
 """",;
-              {/* comment */}""";
-              <div className="space-y-6">""";
-                {/* comment */}"";
-                <div className="flex items-center justify-between">""";
-                  <div>"";
+              {/* comment */}"""
+              <div className="space-y-6">"""
+                {/* comment */}""
+                <div className="flex items-center justify-between">"""
+                  <div>""
                     <h3 className="text-white font-medium mb-1">;
-                      High Contrast""";
-                    </h3>"";
+                      High Contrast"""
+                    </h3>""
                     <p className="text-sm text-zion-slate-light">;
                       Increase contrast for better visibility";
                     </p>;
                   </div>";
-                  <Button """"";
-                    variant="{highContrast" ? "default" : "outline"}""";
+                  <Button """""
+                    variant="{highContrast" ? "default" : "outline"}"""
                     size="sm";
                     onClick="{toggleHighContrast}
                     className={}
 ";
                       highContrast";
-                        ? "bg-zion-cyan text-white"";
-                        : "border-zion-cyan/30 text-zion-cyan"}"">""";
-                    {highContrast ? ("";
-                      <Eye className="w-4 h-4" /">"";
-                    ) : ("";
+                        ? "bg-zion-cyan text-white""
+                        : "border-zion-cyan/30 text-zion-cyan"}"">"""
+                    {highContrast ? (""
+                      <Eye className="w-4 h-4" /">""
+                    ) : (""
                       <EyeOff className="w-4 h-4" /">";
                     )}
 ;
                   </Button>";
                 </div>;
-""";
-                {/* comment */}""";
-                <div className="flex items-center justify-between">""";
-                  <div>"";
+"""
+                {/* comment */}"""
+                <div className="flex items-center justify-between">"""
+                  <div>""
                     <h3 className="text-white font-medium mb-1">;
-                      Reduced Motion""";
-                    </h3>"";
+                      Reduced Motion"""
+                    </h3>""
                     <p className="text-sm text-zion-slate-light">;
                       Minimize animations and transitions";
                     </p>;
                   </div>";
-                  <Button """"";
-                    variant="{reducedMotion" ? "default" : "outline"}""";
+                  <Button """""
+                    variant="{reducedMotion" ? "default" : "outline"}"""
                     size="sm";
                     onClick="{toggleReducedMotion}
                     className={}
 ";
                       reducedMotion";
-                        ? "bg-zion-cyan text-white"";
-                        : "border-zion-cyan/30 text-zion-cyan"}"">""";
-                    {reducedMotion ? ("";
-                      <VolumeX className="w-4 h-4" /">"";
-                    ) : ("";
+                        ? "bg-zion-cyan text-white""
+                        : "border-zion-cyan/30 text-zion-cyan"}"">"""
+                    {reducedMotion ? (""
+                      <VolumeX className="w-4 h-4" /">""
+                    ) : (""
                       <Volume2 className="w-4 h-4" /">";
                     )}
 ;
                   </Button>";
                 </div>;
-                {/* comment */}""";
-                <div>""";
-                  <h3 className="text-white font-medium mb-3">Font Size</h3>"";
+                {/* comment */}"""
+                <div>"""
+                  <h3 className="text-white font-medium mb-3">Font Size</h3>""
                   <div className="flex gap-2">";
                     {["small", medium",large"].map(size => (";
                       <Button ;
-                        key={size}""";
-                        variant="{fontSize" === size ? "default" : "outline"}""";
+                        key={size}"""
+                        variant="{fontSize" === size ? "default" : "outline"}"""
                         size="sm";
                         onClick="{()" ="> setFontSize(size)}
                         className={}
 ";
-""";
-                          fontSize === size""";
-                            ? "bg-zion-cyan text-white"""";
+"""
+                          fontSize === size"""
+                            ? "bg-zion-cyan text-white""""
                             : "border-zion-cyan/30 text-zion-cyan"}
 ;
                       >;
@@ -746,11 +746,11 @@ initial="{{" scale: 0.9, opacity: 0 }}";
 ;
                   </div>";
                 </div>;
-                {/* comment */}""";
-                <div>"";
+                {/* comment */}"""
+                <div>""
                   <h3 className="text-white font-medium mb-3">;
-                    Color Blind Support""";
-                  </h3>""";
+                    Color Blind Support"""
+                  </h3>"""
                   <div className="grid grid-cols-2 gap-2">";
                     {["none", protanopia",deuteranopia", tritanopia"].map()";
                       mode => (";
@@ -758,14 +758,14 @@ initial="{{" scale: 0.9, opacity: 0 }}";
                           variant={}
 "">;
                             colorBlindMode === mode ? "default"  : "outline""", ",;,
-}""";
+}"""
                           size = "sm";
                           onClick="{()" ="> setColorBlindMode(mode)}
                           className={}
 ";
-""";
-                            colorBlindMode === mode""";
-                              ? "bg-zion-cyan text-white"""";
+"""
+                            colorBlindMode === mode"""
+                              ? "bg-zion-cyan text-white""""
                               : "border-zion-cyan/30 text-zion-cyan"}
 ;
                         >;
@@ -778,28 +778,28 @@ initial="{{" scale: 0.9, opacity: 0 }}";
 ;
                   </div>";
                 </div>;
-""";
-                {/* comment */}""";
-                <div className="bg-zion-blue-dark/50 rounded-lg p-4">"";
-                  <h3 className="text-white font-medium mb-3 flex items-center gap-2">"";
+"""
+                {/* comment */}"""
+                <div className="bg-zion-blue-dark/50 rounded-lg p-4">""
+                  <h3 className="text-white font-medium mb-3 flex items-center gap-2">""
                     <Keyboard className="w-4 h-4 text-zion-cyan" /">";
-                    Keyboard Shortcuts""";
-                  </h3>""";
-                  <div className="space-y-2 text-sm text-zion-slate-light">"";
-                    <div className="flex justify-between">""";
-                      <span>Open Panel: </span>"";
+                    Keyboard Shortcuts"""
+                  </h3>"""
+                  <div className="space-y-2 text-sm text-zion-slate-light">""
+                    <div className="flex justify-between">"""
+                      <span>Open Panel: </span>""
                       <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">";
                         Ctrl/Cmd + Shift + A;
-                      </kbd>""";
-                    </div>""";
-                    <div className="flex justify-between">""";
-                      <span>High Contrast:</span>"";
+                      </kbd>"""
+                    </div>"""
+                    <div className="flex justify-between">"""
+                      <span>High Contrast:</span>""
                       <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">";
                         Ctrl/Cmd + Shift + H;
-                      </kbd>""";
-                    </div>""";
-                    <div className="flex justify-between">""";
-                      <span>Reduced Motion:</span>"";
+                      </kbd>"""
+                    </div>"""
+                    <div className="flex justify-between">"""
+                      <span>Reduced Motion:</span>""
                       <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">;
                         Ctrl/Cmd + Shift + M,;
                       </kbd>;
@@ -807,8 +807,8 @@ initial="{{" scale: 0.9, opacity: 0 }}";
                 </div>";
               </div>;
 """",;
-              {/* comment */}""";
-              <div className="mt-6 pt-4 border-t border-zion-cyan/20">"";
+              {/* comment */}"""
+              <div className="mt-6 pt-4 border-t border-zion-cyan/20">""
                 <p className="text-xs text-zion-slate-light text-center">;
                   These settings are saved locally and will persist across,;
 sessions.</p>;
@@ -820,9 +820,9 @@ sessions.</p>;
 </>;
   )}";
 // comment;
-export const SkipToContent = () => (""";
-  <a""";
-    href="#main-content""";
+export const SkipToContent = () => ("""
+  <a"""
+    href="#main-content"""
     className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hover:bg-zion-cyan-light transition-colors duration-300 ">;
     Skip to main content,;
   </a>;
@@ -830,10 +830,10 @@ export const SkipToContent = () => (""";
 // comment;
 export const useFocusTrap = isActive => {}";
   useEffect(() => {}
-    if (!isActive) return"";
+    if (!isActive) return""
   useEffect(() => {}";
     if (!isActive) return;
-    const focusableElements = """";
+    const focusableElements = """"
       "button, [href], input, select, textarea, [tabindex]: not([tabindex="-1"])";
     const container = document.activeElement?.closest();,
 }
@@ -875,16 +875,16 @@ const firstFocusableElement = focusableContent[0];
     document.addEventListener("keydown", handleTabKey)";
     return () => document.removeEventListener("keydown", handleTabKey)}, [isActive])}
 // comment;
-export const SrOnly = ({ children }) => ("";
+export const SrOnly = ({ children }) => (""
   <span className="sr-only">{children}</span>";
 );
-export default AccessibilityPanel"";
-""""";,
+export default AccessibilityPanel""
+""""",
 }";
     document.addEventListener("keydown", handleTabKey)";
     return () => document.removeEventListener("keydown", handleTabKey)}, [isActive])}
 // comment;
-export const SrOnly = ({ children }) => ("";
+export const SrOnly = ({ children }) => (""
   <span className="sr-only">{children}</span>";
 )";
 export default AccessibilityPanel;

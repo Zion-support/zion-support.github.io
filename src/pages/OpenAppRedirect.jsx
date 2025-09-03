@@ -1,8 +1,8 @@
-import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "react/jsx-runtime";"";
-import { useEffect, useState } from "react";"";
-import { useNavigate } from "react-router-dom";"";
-import SEO from "@/components/SEO";"";
-import { Button } from "@/components/ui/Button";"";
+import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "react/jsx-runtime";""
+import { useEffect, useState } from "react";""
+import { useNavigate } from "react-router-dom";""
+import SEO from "@/components/SEO";""
+import { Button } from "@/components/ui/Button";""
 import { Link } from "react-router-dom";
 // This component handles deep linking to the mobile app;
 const OpenAppRedirect = () => {}
@@ -11,9 +11,9 @@ const OpenAppRedirect = () => {}
     useEffect ( () => {}
         const attemptAppOpen = async () => {}
             const isAndroid = /Android/.test(navigator.userAgent);'";
-            // App scheme URLs (these would be your actual app's URL schemes)"";
-            const androidAppUrl = "market://details?id=app.zion.marketplace";"";
-            const iosAppUrl = "https://apps.apple.com/app/zion-ai-marketplace/id0000000000";"";
+            // App scheme URLs (these would be your actual app's URL schemes)""
+            const androidAppUrl = "market://details?id=app.zion.marketplace";""
+            const iosAppUrl = "https://apps.apple.com/app/zion-ai-marketplace/id0000000000";""
             const fallbackUrl = "/mobile-launch"; // Fallback to mobile launch page;
             let timeout;
             // Try to open the app;
@@ -42,7 +42,7 @@ const OpenAppRedirect = () => {}
                     router(fallbackUrl);,
 }, 1500);,
 }";
-            // Clear timeout if page visibility changes (meaning app opened successfully)"";
+            // Clear timeout if page visibility changes (meaning app opened successfully)""
             document.addEventListener("visibilitychange", () => {}
                 if (document.hidden && timeout) {}
                     clearTimeout(timeout)}

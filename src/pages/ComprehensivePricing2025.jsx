@@ -85,7 +85,7 @@ export default function ComprehensivePricing2025() {;
             </h1>",;
             <p className="text-xl m,";
     d: text-2xl text-zion-slate-light mb-8 leading-relaxed">",,;
-    {name: "Digital Transformation","""""";
+    {name: "Digital Transformation",""""""
   const [selectedPlan, setSelectedPlan] = useState("professional");,
 }
   const plans = [], icon: Zap,";
@@ -243,7 +243,7 @@ with flexible options to scale as you grow.;
                 <div className = "{"absolute" top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${"">;
                   billingCycle === "yearly" ? "translate-x-8" : "translate-x-1",";";,
 }"} /">;
-              </button>"";
+              </button>""
               <span className = "{"text-lg" ${billingCycle === "yearly" ? "text-white" : "text-zion-slate-light"}"}">;
                 Yearly";
                 {billingCycle === "yearly" && (";

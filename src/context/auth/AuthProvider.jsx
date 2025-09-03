@@ -21,15 +21,15 @@ export const AuthProvider = ({ children }) => {}
     // Wrapper for login to match the AuthContextType interface;
     const login = async (email, password) => {}
 ";
-        const { res, data } = await loginUser(email, password); // Calls /api/auth/login"";
-        // Check for specific "Email not confirmed" error first"";
+        const { res, data } = await loginUser(email, password); // Calls /api/auth/login""
+        // Check for specific "Email not confirmed" error first""
         if (res.status === 403 && data?.code === "EMAIL_NOT_CONFIRMED") {}
             toast({}
 ";
-"";
-                title: "Login Failed","";
-                description: data.error || "Email not confirmed. Please check your inbox to verify your email.","";
-                variant: "destructive"});"";
+""
+                title: "Login Failed",""
+                description: data.error || "Email not confirmed. Please check your inbox to verify your email.",""
+                variant: "destructive"});""
             return { error: data.error || "Email not confirmed. Please check your inbox to verify your email." }}
         // Handle other errors from the API call'";
         if (res.status === 400) { // Bad request (e.g. missing fields)'"'";
@@ -183,4 +183,4 @@ export const AuthProvider = ({ children }) => {}
       {children}
     </AuthContext.Provider>)};
 '"`;
-import React, { useEffect } from "react"";"""""""""'"; ";
+import React, { useEffect } from "react"""""""""""'"; ";

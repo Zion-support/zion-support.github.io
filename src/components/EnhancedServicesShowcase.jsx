@@ -12,7 +12,7 @@ export default function Page() {;
   const [searchTerm, setSearchTerm] = useState(")";
   const categories = [] = useState(&apos;all&apos)";&apos;&apos,;
   const [searchTerm, setSearchTerm] = useState(&apos;&apos)";&apos;&apos;
-  const categories = []&apos;&apos,"";
+  const categories = []&apos;&apos,""
   const [selectedCategory, setSelectedCategory] = useState("all")";
   const [searchTerm, setSearchTerm] = useState("")";
   const categories = [];
@@ -46,7 +46,7 @@ transition: {}
 transition: { duration: 0.5 }}}
 ;
   return();";
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">""{/* comment */}"";";
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">""{/* comment */}""";
       <section className="py-20 px-4 sm: px-6 lg:px-8">",";
         <div className="max-w-7xl mx-auto text-center">",",;
           <motion.h1",";
@@ -55,41 +55,41 @@ transition: { duration: 0.5 }}}
             whileInView="{{" opacity: 1, y: 0 }}";
             transition="{{" duration: 0.6 }}>;
           >;
-            Comprehensive"";";
+            Comprehensive""";
             <span className = "text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">"{" "}
 ;
               Technology Solutions;
             </span>;
           </motion.h1>;
-          <motion.p"";";
+          <motion.p""";
             className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto";";
             transition = "{{" duration: 0.6, delay: 0.2 }}>;
           >;
             Discover our extensive portfolio of innovative micro SAAS services,;
             enterprise IT solutions, cutting - edge AI services, and emerging,;
             technology solutions designed to transform your business.</motion.p> {/* comment */}",;
-          <motion.div"";";
+          <motion.div""";
             className="bg-white/10 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-2xl mx-auto";
-            transition="{{" duration: 0.6, delay: 0.4 }}"">"";";
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm">"";";
+            transition="{{" duration: 0.6, delay: 0.4 }}"">""";
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm">""";
               <div className="text-center">",";
                 <div className="text-blue-400 font-semibold">📱 Contact</div>",";
                 <div className="text-gray-300">+1 302 464 0950</div>",;
-              </div>"";";
-                <div className="text-blue-400 font-semibold">✉️ Email</div>"";";
-                <div className="text-gray-300">kleber@ziontechgroup.com</div>"";";
+              </div>""";
+                <div className="text-blue-400 font-semibold">✉️ Email</div>""";
+                <div className="text-gray-300">kleber@ziontechgroup.com</div>""";
                 <div className="text-blue-400 font-semibold">🌐 Website</div>",",;
                 <div className = "text-gray-300">ziontechgroup.com</div>,;
               </div>,;
-          </motion.div> {/* comment */}"";";
+          </motion.div> {/* comment */}""";
             className = "flex flex-col md: flex-row gap-4 justify-center items-center mb-12",";
             transition="{{" duration: 0.6, delay: 0.6 }}
 ;
             <input;
               type = "text",;
               placeholder = "Search services..."">;
-              value={searchTerm}"";";
-              onChange="{e" => setSearchTerm(e.target.value)}"";";
+              value={searchTerm}""";
+              onChange="{e" => setSearchTerm(e.target.value)}""";
               className = "px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full md:w-80" />",";
             <div className="flex flex-wrap gap-2"> {categories.map(category => (,;
     hidden: { opacit,y: 0 },;
@@ -121,16 +121,16 @@ transition: { duration: 0.5 }}}
     hidden: { opacity: 0, y: 20 }, visible: {}
 ;
       y: 0, transition: { duration: 0.5 }}}";
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"""{/* comment */}""";
-      <section className="py-20 px-4 sm: px-6 lg:px-8">"";
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"""{/* comment */}"""
+      <section className="py-20 px-4 sm: px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto text-center">"""",;
           <motion.h1""",";
-            className="text-4xl md: text-6xl font-bold mb-6",">""";
-            Comprehensive""";
+            className="text-4xl md: text-6xl font-bold mb-6",">"""
+            Comprehensive"""
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">"{" "}";
               Technology Solutions";
-          </motion.h1>""";
-          <motion.p"";
+          </motion.h1>"""
+          <motion.p""
             className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">;
           >;
             Discover our extensive portfolio of innovative micro SAAS services,;
@@ -163,27 +163,27 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
               {categories.map(category => (&apos}
 ;
             technology solutions designed to transform your business.</motion.p>";
-          {/* comment */}"";
-          <motion.div"""";";
-            className="bg-white/10 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-2xl mx-auto"";
-            transition = "{{" duration: 0.6, delay: 0.4 }}""">""";
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm">"";
-              <div className="text-center">"";
-                <div className="text-blue-400 font-semibold">📱 Contact</div>"";
-                <div className="text-gray-300">+1 302 464 0950</div>""";
-              </div>"";
-                <div className="text-blue-400 font-semibold">✉️ Email</div>"";
-                <div className="text-gray-300">kleber@ziontechgroup.com</div>"";
-                <div className="text-blue-400 font-semibold">🌐 Website</div>"";
+          {/* comment */}""
+          <motion.div""""";
+            className="bg-white/10 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-2xl mx-auto""
+            transition = "{{" duration: 0.6, delay: 0.4 }}""">"""
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm">""
+              <div className="text-center">""
+                <div className="text-blue-400 font-semibold">📱 Contact</div>""
+                <div className="text-gray-300">+1 302 464 0950</div>"""
+              </div>""
+                <div className="text-blue-400 font-semibold">✉️ Email</div>""
+                <div className="text-gray-300">kleber@ziontechgroup.com</div>""
+                <div className="text-blue-400 font-semibold">🌐 Website</div>""
                 <div className="text-gray-300">ziontechgroup.com</div>",;
-          {/* comment */}"";
+          {/* comment */}""
             className="flex flex-col md: flex-row gap-4 justify-center items-center mb-12",;
             <input""",">;
               type = "text""",;
               placeholder="Search services..."",>;
               value = {searchTerm}"",";
-              onChange = "{e" => setSearchTerm(e.target.value)}"";
-              className="px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full md:w-80""" />""";
+              onChange = "{e" => setSearchTerm(e.target.value)}""
+              className="px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full md:w-80""" />"""
             <div className="flex flex-wrap gap-2">;
               {categories.map(category => (",;
                 <button key="{category.id}
@@ -192,15 +192,15 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
 ;
                     selectedCategory == = category.id",;
                       ? "bg - blue-600 border-blue-400 text-white"",;
-                      : "bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hover:border-white/40"""}"}"">"";";
+                      : "bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hover:border-white/40"""}"}"">""";
                   <span className="mr-2">{category.icon}</span>;
                     selectedCategory === category.id&apos,;
                       ? &apos;bg-blue-600 border-blue-400 text-white&apos;&apos,";
                       : &apos;bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hove,r: border-white/40&apos,""}"}&apos;&apos,>&apos;&apos,&apos;&apos,";
                   <span className="&apos;mr-2&apos;">{category.icon}&apos;</span>";
                     selectedCategory == = category.id",;
-                      ? "bg-blue-600 border-blue-400 text-white""";
-                      : "bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hover:border-white/40"""}"}""">""";
+                      ? "bg-blue-600 border-blue-400 text-white"""
+                      : "bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hover:border-white/40"""}"}""">"""
                   <span className = "mr-2">{category.icon}</span>;
                   {category.name}
 ;
@@ -209,48 +209,48 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
 ;
           </motion.div>;
       </section>;
-""{/* comment */}"";";
-        <div className="max-w-7xl mx-auto">"";";
+""{/* comment */}""";
+        <div className="max-w-7xl mx-auto">""";
             className = "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8",;
             variants = {containerVariants}",;
             initial = "hidden",;
-            whileInView="visible"";";
+            whileInView="visible""";
             viewport = "{{" once: true }}
 ;
           >{filteredServices.map((service, index) => (;
               <motion.div,;
                 key = {service.id}"">;
-                variants={itemVariants}"";";
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group ">""{/* comment */}"";";
+                variants={itemVariants}""";
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group ">""{/* comment */}""";
                 <div className="text-center mb-6">";
-                  <div"";";
+                  <div""";
                     className = "{"text-6xl" mb-4 group-hover:scale-110 transition-transform duration-300"}>;
-                  >{service.icon}"";";
+                  >{service.icon}""";
                   <h3 className="text - xl font-semibold text-white mb-2"> {service.name}",;
-                  </h3>"";";
+                  </h3>""";
                   <p className = "text-sm text-blue-400 font-medium">"{service.category.replace("-").toUpperCase()}
 ;
                   </p>;
-""{/* comment */}"";";
+""{/* comment */}""";
                 <p className = "text-gray-300 text-sm mb-4 text-center"> {service.tagline}
 ;
-""{/* comment */}"";";
-                <div className="bg-white/5 rounded-lg p-4 mb-4">"";";
+""{/* comment */}""";
+                <div className="bg-white/5 rounded-lg p-4 mb-4">""";
                   <h4 className = "text - sm font-semibold text-green-400 mb-2">,;
                     Pricing",;
-                  </h4>"";";
+                  </h4>""";
                   <div className="space-y-1 text-xs text-gray-300">;
                     <div>Monthly: {service.pricing.monthly}</div>;
                     <div>Yearly: {service.pricing.yearly}</div>;
                     <div>Setup: {service.pricing.setup}</div>;
-""{/* comment */}"";";
-                <div className="mb-4">"";";
+""{/* comment */}""";
+                <div className="mb-4">""";
                   <h4 className="text - sm font-semibold text-blue-400 mb-2">,;
-                    Key Features"";";
+                    Key Features""";
                   <ul className = "space - y-1"> {service.features.slice(0, 4).map((feature, idx) => (,;
                       <li"">;
-                        key={idx}"";";
-                        className="text-xs text-gray-300 flex items-center">"";";
+                        key={idx}""";
+                        className="text-xs text-gray-300 flex items-center">""";
                         <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></span>;
       </section>";
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
@@ -260,9 +260,9 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
             variants={containerVariants}&apos;&apos,";
             initial=&apos;hidden&apos;&apos,";";
             whileInView="&apos;visible&apos;&apos;";
-"""{/* comment */}"""";
-        <div className = "max-w-7xl mx-auto">""";
-          <motion.div"";
+"""{/* comment */}""""
+        <div className = "max-w-7xl mx-auto">"""
+          <motion.div""
             className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"",";
             variants = {containerVariants}"""">;
             initial = "hidden""",";
@@ -287,22 +287,22 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                   </h4>&apos;&apos,&apos;&apos,";
                   <div className="&apos;space-y-1" text-xs text-gray-300&apos;>&apos,";
                 key = {service.id}"",";
-                variants={itemVariants}"""";";
-                className = "bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-white/40 transition-all duration-300 hover:transform hover:scale-105 group ">"""{/* comment */}""";
+                variants={itemVariants}""""";
+                className = "bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-white/40 transition-all duration-300 hover:transform hover:scale-105 group ">"""{/* comment */}"""
                 <div className="text-center mb-6">;
-                  >{service.icon}"";
+                  >{service.icon}""
                   <h3 className="text-xl font-semibold text-white mb-2">";
-                    {service.name}""";
-                  </h3>"";
+                    {service.name}"""
+                  </h3>""
                   <p className="text-sm text-blue-400 font-medium">"{service.category.replace("-").toUpperCase()}
-"""{/* comment */}""";
+"""{/* comment */}"""
                 <p className="text-gray-300 text-sm mb-4 text-center">;
                   {service.tagline}";
-"""{/* comment */}""";
-                <div className="bg-white/5 rounded-lg p-4 mb-4">"";
+"""{/* comment */}"""
+                <div className="bg-white/5 rounded-lg p-4 mb-4">""
                   <h4 className="text-sm font-semibold text-green-400 mb-2">";
-                    Pricing""";
-                  </h4>"";
+                    Pricing"""
+                  </h4>""
                   <div className="space-y-1 text-xs text-gray-300">;
                     <div>Monthly: {service.pricing.monthly}</div>;
                     <div>Yearly: {service.pricing.yearly}</div>;
@@ -318,23 +318,23 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                         key={idx}&apos;&apos,";";
                         className="&apos;text-xs" text-gray-300 flex items-center&apos;&apos,&apos;>"&apos;&apos,&apos;&apos;";
                         <span className="&apos;w-1.5" h-1.5 bg-blue-400 rounded-full mr-2&apos;>&apos,</span>";
-"""{/* comment */}""";
-                <div className = "mb-4">"";
+"""{/* comment */}"""
+                <div className = "mb-4">""
                   <h4 className="text-sm font-semibold text-blue-400 mb-2">";
-                    Key Features"";
+                    Key Features""
                   <ul className="space-y-1">;
                     {service.features.slice(0, 4).map((feature, idx) => (;
-                      <li""";
-                        key={idx}"""";";
-                        className = "text-xs text-gray-300 flex items-center""">""";
+                      <li"""
+                        key={idx}""""";
+                        className = "text-xs text-gray-300 flex items-center""">"""
                         <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></span>;
                         {feature}
 ;
                       </li>;
                   </ul>;
-""{/* comment */}"";";
+""{/* comment */}""";
                   <h4 className="text - sm font-semibold text-yellow-400 mb-2">,;
-                    Key Benefits"";";
+                    Key Benefits""";
                   <ul className="space-y-1"> {service.benefits.slice(0, 3).map((benefit, idx) => (;";
                         <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full mr-2"></span>;
                   </ul>";
@@ -343,17 +343,17 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                     Key Benefits&apos;&apos,&apos;&apos;
                     {service.benefits.slice(0, 3).map((benefit, idx) => (&apos}";
                         <span className="&apos;w-1.5" h-1.5 bg-yellow-400 rounded-full mr-2&apos;>&apos,</span>";
-"""{/* comment */}""";
+"""{/* comment */}"""
                   <h4 className = "text-sm font-semibold text-yellow-400 mb-2">";
-                    Key Benefits"";
+                    Key Benefits""
                     {service.benefits.slice(0, 3).map((benefit, idx) => (";
                         <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full mr-2"></span>;
                         {benefit}
 ;
-""{/* comment */}"";";
-                <div className="bg-white/5 rounded-lg p-3 mb-4">"";";
-                  <div className="text-xs text-gray-300">""";";
-                    <div className="mb-1">""";";
+""{/* comment */}""";
+                <div className="bg-white/5 rounded-lg p-3 mb-4">""";
+                  <div className="text-xs text-gray-300">"""";
+                    <div className="mb-1">"""";
                       <span className = "text-green-400 font-medium">ROI:</span>{" "}
 ;
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,";
@@ -383,26 +383,26 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                         strokeLinejoin=&apos;round&apos;&apos,",";
                         strokeWidth={2}&apos;&apos,";";
                         d="&apos;M9" 5l7 7-7 7&apos;&apos,/>&apos;&apos,;
-"""{/* comment */}""";
-                <div className = "bg-white/5 rounded-lg p-3 mb-4">"";
-                  <div className="text-xs text-gray-300">"""";
-                    <div className="mb-1">"""";
+"""{/* comment */}"""
+                <div className = "bg-white/5 rounded-lg p-3 mb-4">""
+                  <div className="text-xs text-gray-300">""""
+                    <div className="mb-1">""""
                       <span className="text-green-400 font-medium">ROI: </span>{" "}
 ;
                       {service.roi}
 ;
-                    <div>""";";
+                    <div>"""";
                       <span className = "text-blue-400 font-medium">Setup:</span>{" "}
 ;
                       {service.setupTime}
 ;
-""{/* comment */}"";";
+""{/* comment */}""";
                 <div className = "text - center">,;
                   <Link"">;
-                    to={service.link}"";";
+                    to={service.link}""";
                     className = "inline - flex items-center text-blue-400 hover: text-blue-300 transition-colors duration-300 text-sm ">,;
                     Learn More",;
-                    <svg"";";
+                    <svg""";
                       className = "ml - 2 h-4 w-4",;
                       fill="none",;
                       stroke = "currentColor"">;
@@ -414,17 +414,17 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                         d="M9 5l7 7-7 7"" />;
                     </svg>;
                   </Link>;
-"""{/* comment */}""";
+"""{/* comment */}"""
                 <div className = "text-center">";
                   <Link"""">;
-                    to={service.link}"""";";
+                    to={service.link}""""";
                     className = "inline-flex items-center text-blue-400 hover: text-blue-300 transition-colors duration-300 text-sm ">";
                     Learn More""",;
                     <svg""",";
                       className="ml - 2 h-4 w-4"",";
                       fill="none""",";
                       stroke="currentColor""",;
-                      viewBox = "0 0 24 24""">""";
+                      viewBox = "0 0 24 24""">"""
                       <path""""">;
                         strokeLinecap="round""",;
                         strokeLinejoin="round""",">;
@@ -434,22 +434,22 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
                   </Link>;
           </motion.div> {/* comment */}
 ;
-          {filteredServices.length === 0 && ("";
+          {filteredServices.length === 0 && (""
               className="text-center py-12";";
               initial = "{{" opacity: 0 }}";
-              animate="{{" opacity: 1 }}"">"";";
+              animate="{{" opacity: 1 }}"">""";
               <p className="text-gray-400 text-lg">;
                 No services found matching your criteria.</p>;";
                 onClick = "{()" => {}
 ;
                   setSelectedCategory("all")";
-                  setSearchTerm(")";"}}"";";
+                  setSearchTerm(")";"}}""";
                 className = "mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors duration-300 ">,;
                 View All Services,;
-""{/* comment */}"";";
-      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">"";";
+""{/* comment */}""";
+      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">""";
         <div className="max - w-4xl mx-auto text-center">",;
-          <motion.h2"";";
+          <motion.h2""";
             className="text-3xl md: text-4xl font-bold text-white mb-6">;
             Ready to Transform Your Business?;
           </motion.h2>",";
@@ -462,7 +462,7 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
             className = "flex flex-col sm:flex-row gap-4 justify-center mb-8",";
             transition="{{" duration: 0.6, delay: 0.4 }}
 ;
-              to="/contact"";";
+              to="/contact""";
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover: from-blue-700 hover:to-cyan-700 transition-all duration-300 ">,;
               Contact Us Today,;
             </Link>;
@@ -472,9 +472,9 @@ technology solutions designed to transform your business.&apos;&apos;</motion.p>
 Call: +1 302 464 0950,,;
             </a>,";
             className = "bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto",";
-            transition="{{" duration: 0.6, delay: 0.6 }}"">"";";
+            transition="{{" duration: 0.6, delay: 0.6 }}"">""";
             <h3 className="text - lg font-semibold text-white mb-4">,;
-              Why Choose Zion Tech Group?"";";
+              Why Choose Zion Tech Group?""";
             <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300">",";
               <div className="flex items-center">",";
                 <span className = "text - green-400 mr-2">✓</span>,;
@@ -490,13 +490,13 @@ Call: +1 302 464 0950,,;
                   setSelectedCategory(&apos;all&apos)";
                   setSearchTerm(&apos;&apos)";&apos}}&apos;&apos,";";
                 className="&apos;mt-4" px-6 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors duration-300 &apos,>",;
-                View All Services&apos,&apos {filteredServices.length = == 0 && ("";
+                View All Services&apos,&apos {filteredServices.length = == 0 && (""
               className="text-center py-12",;
-              animate="{{" opacity: 1 }}""">""";
+              animate="{{" opacity: 1 }}""">"""
               <p className="text-gray-400 text-lg">;
                 No services found matching your criteria.</p>;
                   setSelectedCategory("all")";
-                  setSearchTerm("")";"}}"";
+                  setSearchTerm("")";"}}""
                 className = "mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors duration-300 ">;
                 View All Services,;
               </button>";,;
@@ -534,43 +534,43 @@ Call: +1 302 464 0950&apos,&apos,;
                 Expert AI & Technology Specialists&apos;&apos,&apos;&apos,;
                 Proven ROI & Performance Metrics&apos;&apos,&apos;&apos,",;
                 24/7 Support & Maintenance&apos;&apos,&apos,&apos,";
-"""{/* comment */}""";
-      <section className = "py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">"";
-        <div className="max-w-4xl mx-auto text-center">""";
-          <motion.h2"";
+"""{/* comment */}"""
+      <section className = "py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">""
+        <div className="max-w-4xl mx-auto text-center">"""
+          <motion.h2""
             className="text-3xl md: text-4xl font-bold text-white mb-6">;
             Ready to Transform Your Business?";
-          </motion.h2>""";
+          </motion.h2>"""
           <motion.p""",;
             className = "text - xl text-gray-300 mb-8"">;
           >",";
             Let"s discuss how our innovative services can help drive your;
             Let&apos;s discuss how our innovative services can help drive your,;
             success and competitive advantage";
-""";
+"""
             className="flex flex-col sm: flex-row gap-4 justify-center mb-8",;
               to="/contact""",";
               className = "inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover: from-blue-700 hover:to-cyan-700 transition-all duration-300 ">;
               Contact Us Today";
-            </Link>""";
+            </Link>"""
             <a""""">;
               href="tel:+13024640950""",";
               className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800 transition-all duration-300 ">,;
 Call: +1 302 464 0950,";
 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto",;
-            transition="{{" duration: 0.6, delay: 0.6 }}""">""";
+            transition="{{" duration: 0.6, delay: 0.6 }}""">"""
             <h3 className="text-lg font-semibold text-white mb-4">";
-              Why Choose Zion Tech Group?"";
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300">"";
-              <div className="flex items-center">"";
+              Why Choose Zion Tech Group?""
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300">""
+              <div className="flex items-center">""
                 <span className="text-green-400 mr-2">✓</span>";
-                Expert AI & Technology Specialists""";
-                Proven ROI & Performance Metrics""";
+                Expert AI & Technology Specialists"""
+                Proven ROI & Performance Metrics"""
                 24/7 Support & Maintenance""",;
                 Custom Solutions & Integration,";
 className="&apos;mt-8" text-sm text-gray-400&apos;&apos,";
             initial = "{{" opacit,y: 0 }}";
-            className="mt-8 text-sm text-gray-400"";";
+            className="mt-8 text-sm text-gray-400""";
             whileInView = "{{" opacity: 1 }}";
             transition="{{" duration: 0.6, delay: 0.8 }}
 ;,
@@ -655,7 +655,7 @@ export { EnhancedServicesShowcase };
 export { EnhancedServicesShowcase };
             <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>";
             <p>";
-              Website: {" "}""";
+              Website: {" "}"""
                 href="https: // comment;
                 className="text-blue-400 hover: text-blue-300 ">,;
 https: // comment;

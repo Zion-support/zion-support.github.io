@@ -71,11 +71,11 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
   const renderPricingCard: unknown = (service)  => {}
 ';
     if (activeTab === 'microsaas') {}
-      return ("";
-        <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">"";
-          <div className="p-6">"";
-            <div className="text-center mb-6">"";
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h3>"";
+      return (""
+        <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">""
+          <div className="p-6">""
+            <div className="text-center mb-6">""
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h3>""
               <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full">;
                 {service.pricing}
               </span>;

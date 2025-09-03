@@ -2,8 +2,8 @@ import React from 'react';''';
 import { motion } from 'framer-motion';
 ;
 const Tabs = ({ tabs, activeTab, onTabChange }) => {}
-  return();
-    <div className="w-full">"";
+  return (
+    <div className="w-full">""
       <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg">;
         {tabs.map(tab => (;
           <button;
@@ -26,7 +26,7 @@ const Tabs = ({ tabs, activeTab, onTabChange }) => {}
         key={activeTab}
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}";
-        transition={{ duration: 0.2 }}"";
+        transition={{ duration: 0.2 }}""
         className="mt-4">;
         {tabs.find(tab => tab.id === activeTab)?.content}
       </motion.div>;

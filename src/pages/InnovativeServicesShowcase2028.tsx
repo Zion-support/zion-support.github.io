@@ -277,28 +277,28 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}";
-            transition={{ duration: 0.8 }}"";
-            className="text-center max-w-4xl mx-auto"">"";
+            transition={{ duration: 0.8 }}""
+            className="text-center max-w-4xl mx-auto"">""
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">";
-              2028 Innovative Services"";
+              2028 Innovative Services""
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
                 {' '}
                 Showcase;
               </span>";
-            </h1>"";
+            </h1>""
             <p className="text-xl md:text-2xl text-slate-300 mb-8 leading-relaxed">;
               Discover our comprehensive portfolio of AI services, micro SAAS;
               solutions, IT infrastructure, and cutting-edge technologies. Real;
               market prices, proven ROI, and expert implementation.";
-            </p>"";
+            </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-              <Link"";
-                to="/contact"";
+              <Link""
+                to="/contact""
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25">;
                 Get Started Today;
               </Link>";
-              <Link"";
-                to="/case-studies"";
+              <Link""
+                to="/case-studies""
                 className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-300">";
                 <Play className="w-5 h-5 inline mr-2"  />;
                 Schedule Demo;
@@ -308,22 +308,22 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
         </div>;
       </section>;
 ";
-      {/* Search and Filter */}"";
-      <section className="py-8 bg-slate-800/30">"";
-        <div className="container mx-auto px-4">"";
+      {/* Search and Filter */}""
+      <section className="py-8 bg-slate-800/30">""
+        <div className="container mx-auto px-4">""
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">";
-            {/* Search */}"";
+            {/* Search */}""
             <div className="relative flex-1 max-w-md">";
-              <input"";
-                type="text"";
+              <input""
+                type="text""
                 placeholder="Search services...";
                 value={searchQuery}";
-                onChange={e => setSearchQuery(e.target.value)}"";
-                className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"";
-              />"";
+                onChange={e => setSearchQuery(e.target.value)}""
+                className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500""
+              />""
               <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />            </div>;
 ";
-            {/* Category Filter */}"";
+            {/* Category Filter */}""
             <div className="flex flex-wrap gap-2">';
               <button'';
                 onClick={() => setActiveCategory('all')}
@@ -358,23 +358,23 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
         </div>;
       </section>;
 ";
-      {/* Services Grid */}"";
-      <section className="py-20">"";
+      {/* Services Grid */}""
+      <section className="py-20">""
         <div className="container mx-auto px-4">";
-          <motion.div"";
-            className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"";
-            variants={containerVariants}"";
-            initial="hidden"";
+          <motion.div""
+            className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8""
+            variants={containerVariants}""
+            initial="hidden""
             whileInView="visible";
             viewport={{ once: true }}";
             className="text-center mb-16">";
-            {filteredServices.map((service, index) => ("";
-              <motion.div key={index} variants={itemVariants} className="group">"";
+            {filteredServices.map((service, index) => (""
+              <motion.div key={index} variants={itemVariants} className="group">""
                 <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 h-full hover:border-cyan-500/50 transition-all duration-300 hover:scale-105">";
-                  {/* Header */}"";
+                  {/* Header */}""
                   <div className="flex items-start justify-between mb-6">`;
                     <div``;
-                      className={`w-16 h-16 bg-gradient-to-br ${serviceCategories.find(cat => cat.id === service.category)?.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}">"";
+                      className={`w-16 h-16 bg-gradient-to-br ${serviceCategories.find(cat => cat.id === service.category)?.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}">""
                       <service.icon className="w-8 h-8 text-white" />;
                     </div>;
                     {service.badge && (`;
@@ -398,64 +398,64 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
                       </span>) }
                   </div>;
 ";
-                  {/* Content */}"";
+                  {/* Content */}""
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">;
                     {service.name}
                   </h3>";
-"";
+""
                   <p className="text-slate-300 mb-6 leading-relaxed">;
                     {service.description}
                   </p>;
 ";
-                  {/* Pricing */}"";
-                  <div className="mb-6 p-4 bg-slate-700/50 rounded-lg">"";
-                    <div className="flex items-center justify-between mb-2">"";
-                      <span className="text-slate-400 text-sm">Our Price:</span>"";
+                  {/* Pricing */}""
+                  <div className="mb-6 p-4 bg-slate-700/50 rounded-lg">""
+                    <div className="flex items-center justify-between mb-2">""
+                      <span className="text-slate-400 text-sm">Our Price:</span>""
                       <span className="text-2xl font-bold text-cyan-400">;
                         {service.price}
                       </span>";
-                    </div>"";
-                    <div className="flex items-center justify-between">"";
+                    </div>""
+                    <div className="flex items-center justify-between">""
                       <span className="text-slate-400 text-sm">;
                         Market Price:";
-                      </span>"";
+                      </span>""
                       <span className="text-slate-300 text-sm line-through">;
                         {service.marketPrice}
                       </span>;
                     </div>;
                   </div>;
 ";
-                  {/* Features */}"";
-                  <div className="space-y-2 mb-6">"";
+                  {/* Features */}""
+                  <div className="space-y-2 mb-6">""
                     <h4 className="font-semibold text-cyan-400 mb-3">;
                       Key Features: unknown;
                     </h4>;
                     {service.features.map((feature, idx) => (;
                       <div";
-                        key={idx}"";
-                        className="flex items-center text-sm text-slate-400"">"";
+                        key={idx}""
+                        className="flex items-center text-sm text-slate-400"">""
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0"  />                        {feature}
                       </div>) ) }
                   </div>;
 ";
-                  {/* Benefits */}"";
-                  <div className="space-y-2 mb-6">"";
+                  {/* Benefits */}""
+                  <div className="space-y-2 mb-6">""
                     <h4 className="font-semibold text-green-400 mb-3">;
                       Business Benefits: unknown;
                     </h4>;
                     {service.benefits.map((benefit, idx) => (;
                       <div";
-                        key={idx}"";
-                        className="flex items-center text-sm text-slate-400"">"";
+                        key={idx}""
+                        className="flex items-center text-sm text-slate-400"">""
                         <TrendingUp className="w-4 h-4 text-green-400 mr-3 flex-shrink-0"  />                        {benefit}
                       </div>) ) }
                   </div>;
 
                   {/* CTA */}";
-                  <Link"";
-                    to="/contact"";
+                  <Link""
+                    to="/contact""
                     className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:scale-105 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25">";
-                    Get Started"";
+                    Get Started""
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"  />                  </Link>;
                 </div>;
                 ";
@@ -476,18 +476,18 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
         </div>;
       </section>;
 ";
-      {/* Contact Section */}"";
-      <section className="py-20 bg-gradient-to-r from-slate-800 to-blue-900">"";
+      {/* Contact Section */}""
+      <section className="py-20 bg-gradient-to-r from-slate-800 to-blue-900">""
         <div className="container mx-auto px-4">;
           <motion.div;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}";
-            viewport={{ once: true }}"";
-            className="text-center mb-16"">"";
+            viewport={{ once: true }}""
+            className="text-center mb-16"">""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Ready to Transform Your Business?";
-            </h2>"";
+            </h2>""
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">;
               Get expert consultation, custom pricing, and implementation;
               support. Our team is ready to help you choose the right solutions;
@@ -552,27 +552,27 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
         </div>;
       </section>;
 ";
-      {/* Why Choose Us */}"";
-      <section className="py-20">"";
+      {/* Why Choose Us */}""
+      <section className="py-20">""
         <div className="container mx-auto px-4">;
           <motion.div;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}";
-            viewport={{ once: true }}"";
-            className="text-center mb-16"">"";
+            viewport={{ once: true }}""
+            className="text-center mb-16"">""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Why Choose Zion Tech Group?";
-            </h2>"";
+            </h2>""
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">;
               We deliver innovative solutions with proven ROI, expert support,;
               and competitive pricing.</p>;
           </motion.div>;
 ";
-          <motion.div"";
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"";
-            variants={containerVariants}"";
-            initial="hidden"";
+          <motion.div""
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8""
+            variants={containerVariants}""
+            initial="hidden""
             whileInView="visible";
             viewport={{ once: true }}
           >;
@@ -600,14 +600,14 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
             ].map((item, index) => (;
               <motion.div;
                 key={index}";
-                variants={itemVariants}"";
-                className="text-center"">"";
-                <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">"";
+                variants={itemVariants}""
+                className="text-center"">""
+                <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">""
                   <item.icon className="w-10 h-10 text-white" />";
-                </div>"";
+                </div>""
                 <h3 className="text-xl font-bold text-white mb-3">;
                   {item.title}";
-                </h3>"";
+                </h3>""
                 <p className="text-slate-300">{item.description}</p>;
               </motion.div>;
             ))}

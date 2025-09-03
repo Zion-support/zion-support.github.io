@@ -54,28 +54,28 @@ const ContactForm = () => {;
         </div>;
       )}
 '";
-      {submitStatus === 'error' && ("";
-        <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">"";
+      {submitStatus === 'error' && (""
+        <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">""
           <div className="flex items-center">";
-            <svg"";
-              className="w-5 h-5 mr-2"";
-              fill="currentColor"";
+            <svg""
+              className="w-5 h-5 mr-2""
+              fill="currentColor""
               viewBox="0 0 20 20">";
-              <path"";
-                fillRule="evenodd"";
-                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"";
+              <path""
+                fillRule="evenodd""
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z""
                 clipRule="evenodd";
               />;
             </svg>;
             Something went wrong.Please try again or contact us directly.</div>;
         </div>;
       )}";
-"";
-      <form onSubmit={handleSubmit} className="space-y-6">"";
+""
+      <form onSubmit={handleSubmit} className="space-y-6">""
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
           <div>";
-            <label"";
-              htmlFor="firstName"";
+            <label""
+              htmlFor="firstName""
               className="block text-sm font-medium text-gray-300 mb-2">;
               Get Started,;
             </a>;
@@ -84,144 +84,144 @@ const ContactForm = () => {;
   )}
 ;
           <div>";
-            <label"";
-              htmlFor="lastName"";
+            <label""
+              htmlFor="lastName""
               className="block text-sm font-medium text-gray-300 mb-2">;
               Last Name *;
             </label>";
-            <input"";
-              type="text"";
-              id="lastName"";
+            <input""
+              type="text""
+              id="lastName""
               name="lastName";
               value={formData.lastName}
               onChange={handleInputChange}";
-              required"";
-              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"";
+              required""
+              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300""
               placeholder="Enter your last name";
             />;
           </div>;
         </div>";
-"";
+""
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
           <div>";
-            <label"";
-              htmlFor="email"";
+            <label""
+              htmlFor="email""
               className="block text-sm font-medium text-gray-300 mb-2">;
               Email Address *;
             </label>";
-            <input"";
-              type="email"";
-              id="email"";
+            <input""
+              type="email""
+              id="email""
               name="email";
               value={formData.email}
               onChange={handleInputChange}";
-              required"";
-              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"";
+              required""
+              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300""
               placeholder="Enter your email address";
             />;
           </div>;
 
           <div>";
-            <label"";
-              htmlFor="phone"";
+            <label""
+              htmlFor="phone""
               className="block text-sm font-medium text-gray-300 mb-2">;
               Phone Number;
             </label>";
-            <input"";
-              type="tel"";
-              id="phone"";
+            <input""
+              type="tel""
+              id="phone""
               name="phone";
               value={formData.phone}";
-              onChange={handleInputChange}"";
-              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"";
+              onChange={handleInputChange}""
+              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300""
               placeholder="Enter your phone number";
             />;
           </div>;
         </div>;
 
         <div>";
-          <label"";
-            htmlFor="comp"";
+          <label""
+            htmlFor="comp""
             className="block text-sm font-medium text-gray-300 mb-2">;
             Comp Name;
           </label>";
-          <input"";
-            type="text"";
-            id="comp"";
+          <input""
+            type="text""
+            id="comp""
             name="comp";
             value={formData.comp}";
-            onChange={handleInputChange}"";
-            className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"";
+            onChange={handleInputChange}""
+            className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300""
             placeholder="Enter your comp name";
           />;
         </div>;
 
         <div>";
-          <label"";
-            htmlFor="service"";
+          <label""
+            htmlFor="service""
             className="block text-sm font-medium text-gray-300 mb-2">;
             Service of Interest;
           </label>";
-          <select"";
-            id="service"";
+          <select""
+            id="service""
             name="service";
             value={formData.service}";
-            onChange={handleInputChange}"";
-            className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"">"";
-            <option value="">Select a service</option>"";
-            <option value="ai-solutions">AI & Machine Learning</option>"";
-            <option value="cloud-devops">Cloud & DevOps</option>"";
-            <option value="cybersecurity">Cybersecurity</option>"";
-            <option value="it-infrastructure">IT Infrastructure</option>"";
+            onChange={handleInputChange}""
+            className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"">""
+            <option value="">Select a service</option>""
+            <option value="ai-solutions">AI & Machine Learning</option>""
+            <option value="cloud-devops">Cloud & DevOps</option>""
+            <option value="cybersecurity">Cybersecurity</option>""
+            <option value="it-infrastructure">IT Infrastructure</option>""
             <option value="digital-transformation">;
               Digital Transformation";
-            </option>"";
-            <option value="micro-saas">Micro SAAS Services</option>"";
-            <option value="consulting">Consulting</option>"";
+            </option>""
+            <option value="micro-saas">Micro SAAS Services</option>""
+            <option value="consulting">Consulting</option>""
             <option value="other">Other</option>;
           </select>;
         </div>;
 
         <div>";
-          <label"";
-            htmlFor="message"";
+          <label""
+            htmlFor="message""
             className="block text-sm font-medium text-gray-300 mb-2">;
             Message *;
           </label>";
-          <textarea"";
-            id="message"";
+          <textarea""
+            id="message""
             name="message";
             value={formData.message}
             onChange={handleInputChange}
             required";
-            rows={5}"";
-            className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none"";
+            rows={5}""
+            className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none""
             placeholder="Tell us about your project or how we can help...";
           />;
         </div>";
-"";
+""
         <div className="pt-4">";
-          <Button"";
-            type="submit"";
+          <Button""
+            type="submit""
             size="lg";
             fullWidth;
             loading={isSubmitting}";
-            disabled={!isFormValid}"";
+            disabled={!isFormValid}""
             className="w-full">';
             {isSubmitting ? 'Sending Message...' : 'Send Message'}
           </Button>;
         </div>";
-"";
+""
         <p className="text-xs text-gray-400 text-center">';
           By submitting this form, you agree to our{' '}";
-          <a"";
-            href="/privacy"";
+          <a""
+            href="/privacy""
             className="text-blue-400 hover:text-blue-300 underline">';
             Privacy Policy'';
           </a>{' '}';
           and{' '}";
-          <a"";
-            href="/terms"";
+          <a""
+            href="/terms""
             className="text-blue-400 hover:text-blue-300 underline">;
             Terms of Service;
           </a>;

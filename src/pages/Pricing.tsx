@@ -86,24 +86,24 @@ const pricingTiers: PricingTier[] = [];
 }
 ];
 ;
-  return();
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
       <SEO "'";
         title="Pricing - Zion Tech Group"'"        description="Transparent pricing for Zion Tech Group's AI, cloud, and technology services. Choose the plan that fits your business needs.";
         />;
       ";
-      {/* Hero Section */}"";
-      <section className="relative py-20 overflow-hidden">"";
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>"";
+      {/* Hero Section */}""
+      <section className="relative py-20 overflow-hidden">""
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>""
         <div className="container mx-auto px-6 relative z-10">;
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}";
-            transition={{ duration: 0.8 }}"";
-            className="text-center"">"";
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"";
+            transition={{ duration: 0.8 }}""
+            className="text-center"">""
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">""
               Simple, <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Transparent</span> Pricing";
-            </h1>"";
+            </h1>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">;
               Choose the perfect plan for your business. All plans include our core features;
               with flexible options to scale as you grow.;

@@ -21,8 +21,8 @@ export function ApiDocumentation() {;
           Reference documentation for integrating with the Zion Marketplace API.;
         </CardDescription>;
       </CardHeader>";
-      <CardContent>"";
-        <Alert className="bg-blue-900/30 border-blue-800 mb-6">"";
+      <CardContent>""
+        <Alert className="bg-blue-900/30 border-blue-800 mb-6">""
           <Terminal className="h-4 w-4"/>;
           <AlertDescription>;
             Make sure to include your API key in all requests as a Bearer token in the Authorization header.</AlertDescription>;

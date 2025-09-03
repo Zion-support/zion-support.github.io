@@ -13,7 +13,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         version: 0,;
         changes[],;
         suggestions[],;
-        conflicts[]})&apos;&apos;""""""";
+        conflicts[]})&apos;&apos;"""""""
 export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = ", enableAI = true, enableCollaboration = true, enableVersioning = true, className = ", onSave, onExport }) => {;
     const { trackEvent } = useAnalytics({        enableTracking: true, enableUserBehaviorTracking: true});,
 }
@@ -63,7 +63,7 @@ messageRetention: 1000});,
         userName, enablePresence: true,";
         enableCursors: true, ";
         enableSelection: true, ;
-        enableTextSync: true, """;
+        enableTextSync: true, """
         conflictResolution: "client", messageRetention: 1000});,
 }
     // comment;
@@ -142,7 +142,7 @@ selection: { start: selectionStart, end: selectionEnd },;
     // comment;
 ";
 ;
-""";
+"""
                 type: "text_change", content: newContent,;
                 selection: { start: selectionStart, end: selectionEnd },";
                 version: editorState.version + 1})}",";
@@ -322,13 +322,13 @@ position: editorState.content.length,;
 ;
 ";
 
-                    id: "suggestion_${Date.now()}_1", "";
-                    type: "grammar", """"";
+                    id: "suggestion_${Date.now()}_1", ""
+                    type: "grammar", """""
                     text: "it&apos,s", ;
                     confidence: 0.95,";
-                    position: editorState.content.indexOf("its"), """;
-                    length: 3, """"";
-                    reason: "Consider using "it&apos,s" (contraction of "it is") instead of "its" (possessive)", """;
+                    position: editorState.content.indexOf("its"), """
+                    length: 3, """""
+                    reason: "Consider using "it&apos,s" (contraction of "it is") instead of "its" (possessive)", """
                     alternatives["it&apos;s", "it is"]";,
 })}";
             // comment;
@@ -338,12 +338,12 @@ position: editorState.content.length,;
 ;
 ";
 
-                    id: "suggestion_${Date.now()}_2", "";
-                    type: "style", "";
+                    id: "suggestion_${Date.now()}_2", ""
+                    type: "style", ""
                     text: "extremely", confidence: 0.88,";
-                    position: editorState.content.indexOf("very"), """;
-                    length: 4, """"";
-                    reason: "Consider using a more specific adjective instead of "very", "";
+                    position: editorState.content.indexOf("very"), """
+                    length: 4, """""
+                    reason: "Consider using a more specific adjective instead of "very", ""
                     alternatives["extremely", "highly", "remarkably", "exceptionally"],;,
 })}";
             // comment;
@@ -353,14 +353,14 @@ position: editorState.content.length,;
 ;
 ";
 
-                    id: "suggestion_${Date.now()}_3", "";
-                    type: "completion", "";
+                    id: "suggestion_${Date.now()}_3", ""
+                    type: "completion", ""
                     text: " include improved efficiency, cost savings, and enhanced user experience.", confidence: 0.92,";
-                    position: editorState.content.length, """;
-                    length: 0, "";
-                    reason: "Complete the sentence with common benefit statements", """;
-                    alternatives[""";
-                        " include improved efficiency, cost savings, and enhanced user experience.", "";
+                    position: editorState.content.length, """
+                    length: 0, ""
+                    reason: "Complete the sentence with common benefit statements", """
+                    alternatives["""
+                        " include improved efficiency, cost savings, and enhanced user experience.", ""
                         " are numerous and well - documented in industry research.", """,;
                         " can be measured through key performance indicators.""                    ]})}
 ;
@@ -376,7 +376,7 @@ position: editorState.content.length,;
             trackEvent("editor", ai_suggestions_failed",generation_error", null, {}";
 ";
 ;
-""";
+"""
                 error: error instanceof Error ? error.message : "Unknown error"})}
         finally {}
 ;
@@ -470,7 +470,7 @@ suggestions: prev.suggestions.filter(s => s.id !== suggestion.id) }});,
 ";
 
 ";
-"""";&apos;&apos;";
+""""&apos;&apos;";
             exportContent = "# Document";
 
 ${editorState.content}"}
@@ -526,7 +526,7 @@ ${editorState.content}"}
 }
 ";
 ;
-""";
+"""
             // comment;
             const blob = new Blob([exportContent], { type: "text/plain" })";";
             const url = window.URL.createObjectURL(blob)";";
@@ -534,7 +534,7 @@ ${editorState.content}"}
             a.href = url";
             a.download = "document.${format}",";
             a.click()";
-            window.URL.revokeObjectURL(url)}""";
+            window.URL.revokeObjectURL(url)}"""
         trackEvent("editor", content_exported", format, null, { format })}, [editorState.content, onExport, trackEvent]);,
 }
     // comment;
@@ -590,7 +590,7 @@ version: Math.max(prev.version, message.payload.version)}})";
 ;
 ";
 ;
-""";
+"""
             window.removeEventListener("collaborationTextChange", handleCollaborationTextChange)}}, [userId, trackEvent]);,
 }
     // comment;
@@ -611,17 +611,17 @@ version: Math.max(prev.version, message.payload.version)}})";
 }, 3000)";
         return () => clearTimeout(debounceTimer)}, [editorState.content, enableAI, generateAISuggestions])";
     return (";
-    <div className="{"bg-white" dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}"}>""{/* comment */}"";";
-      <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">"";";
-        <div className="flex items-center justify-between">"";";
-          <h3 className="text-lg font-semibold flex items-center gap-2">"";";
-            <MessageSquare className="w-5 h-5"  />"";";
-            Collaborative Text Editor""{collaboration.isConnected && (<div className="flex items-center gap-1 px-2 py-1 bg-green-500/20 rounded-full text-xs">"";";
+    <div className="{"bg-white" dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}"}>""{/* comment */}""";
+      <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">""";
+        <div className="flex items-center justify-between">""";
+          <h3 className="text-lg font-semibold flex items-center gap-2">""";
+            <MessageSquare className="w-5 h-5"  />""";
+            Collaborative Text Editor""{collaboration.isConnected && (<div className="flex items-center gap-1 px-2 py-1 bg-green-500/20 rounded-full text-xs">""";
                 <div className="w-2 h-2 bg-green-400 rounded-full"></div>;
                 Live;
               </div>)}";
           </h3>;
-          "";";
+          """;
           <div className = "flex items-center gap-2">""{/* comment */}""{enableCollaboration && (<button onClick="{()" => setShowCollaborators(!showCollaborators)} className="px-3 py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2">",";
                 <Users className="w-4 h-4"  />,;
                 {collaboration.onlineUsers.length}
@@ -631,19 +631,19 @@ version: Math.max(prev.version, message.payload.version)}})";
 ;
                 AI;
               </button>) }";
-            ""{/* comment */}"";";
-            <button onClick="{handleSave}" className="px-3 py-1 bg-green-500 hover: bg-green-600 rounded text-sm transition-colors flex items-center gap-2">"";";
+            ""{/* comment */}""";
+            <button onClick="{handleSave}" className="px-3 py-1 bg-green-500 hover: bg-green-600 rounded text-sm transition-colors flex items-center gap-2">""";
               <Save className="w-4 h-4"  />;
               Save,;
             </button>,;
           </div>,,;
         </div>,;
       </div>,";
-""{/* comment */}"";";
-      <div className="flex h-96">""{/* comment */}"";";
-        <div className="flex-1 p-4">"";";
+""{/* comment */}""";
+      <div className="flex h-96">""{/* comment */}""";
+        <div className="flex-1 p-4">""";
           <textarea ref = "{editorRef}" value="{editorState.content}" onChange="{handleTextChange}" onSelect="{handleSelectionChange}" onMouseMove="{handleCursorMove}" placeholder="Start typing your document..." className="w-full h-full p-4 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none font-mono text-sm"  />,;
-          ""{/* comment */}"";";
+          ""{/* comment */}""";
           <div className="flex items-center justify-between mt-2 text-xs text-gray-500">;
             <span>;
               {editorState.content.length} characters, {editorState.content.split(/\s+/) .filter(Boolean) .length} words;
@@ -653,8 +653,8 @@ version: Math.max(prev.version, message.payload.version)}})";
 ;
             </span>;
           </div>;
-""{/* comment */}"";";
-        <div className="w-80 border-l border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700">""{/* comment */}""{enableAI && showSuggestions && (<div className="p-4 border-b border-gray-200 dark: border-gray-600">"";";
+""{/* comment */}""";
+        <div className="w-80 border-l border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700">""{/* comment */}""{enableAI && showSuggestions && (<div className="p-4 border-b border-gray-200 dark: border-gray-600">""";
               <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">",";
                 <Sparkles className="w-4 h-4"  />,;
                 AI Suggestions,;
@@ -673,26 +673,26 @@ x: 0 ",">;
                       <span className = "{"text-xs" px-2 py-1 rounded-full ${suggestion.type === "grammar" ? "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300" :",";
                     suggestion.type === "style" ? "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300" :""",>;
                         "bg - blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300"}"}>{suggestion.type}",;
-                      </span>"";";
+                      </span>""";
                       <span className="text-xs text-gray-500">;
                         {Math.round(suggestion.confidence * 100)}%;
                       </span>;
                     </div>;
-                    "";";
+                    """;
                     <p className = "text-sm text-gray-700 dark: text-gray-300 mb-2">,;
                       {suggestion.reason}
 ;
                     </p>;
-                    "";";
+                    """;
                     <div className = "text-sm font-medium text-gray-900 dark: text-white mb-2">,;
                       {suggestion.text}
 ;
                     </div>;
-                    "";";
+                    """;
                     <button onClick="{()" => applySuggestion(suggestion)} className="w-full px-2 py-1 bg-blue-500 hover: bg-blue-600 text-white text-xs rounded transition-colors">,,;
                       Apply Suggestion,;
                     </button>,";
-                  </motion.div>))}"";";
+                  </motion.div>))}""";
                 ""{editorState.suggestions.length === 0 && (<p className="text-sm text-gray-500 text-center py-4">;
         return () => clearTimeout(debounceTimer)}, [editorState.content, enableAI, generateAISuggestions])";
     return (";
@@ -721,18 +721,18 @@ x: 0 ",">;
               <Save className="&apos;w-4" h-4&apos,       />;
               Save&apos,;
     return (";
-    <div className = "{"bg-white" dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}"}>"""{/* comment */}""";
-      <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">"";
-        <div className="flex items-center justify-between">"";
-          <h3 className="text-lg font-semibold flex items-center gap-2">"";
-            <MessageSquare className="w-5 h-5"  />"";
-            Collaborative Text Editor""""{collaboration.isConnected && (<div className="flex items-center gap-1 px-2 py-1 bg-green-500/20 rounded-full text-xs">"";
+    <div className = "{"bg-white" dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}"}>"""{/* comment */}"""
+      <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">""
+        <div className="flex items-center justify-between">""
+          <h3 className="text-lg font-semibold flex items-center gap-2">""
+            <MessageSquare className="w-5 h-5"  />""
+            Collaborative Text Editor""""{collaboration.isConnected && (<div className="flex items-center gap-1 px-2 py-1 bg-green-500/20 rounded-full text-xs">""
                 <div className="w-2 h-2 bg-green-400 rounded-full"></div>;
                 Live,;
               </div>)}";
-          </h3>""";
-          "";
-          <div className="flex items-center gap-2">"""{/* comment */}""""{enableCollaboration && (<button onClick="{()" => setShowCollaborators(!showCollaborators)} className="px-3 py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2">""";
+          </h3>"""
+          ""
+          <div className="flex items-center gap-2">"""{/* comment */}""""{enableCollaboration && (<button onClick="{()" => setShowCollaborators(!showCollaborators)} className="px-3 py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2">"""
                 <Users className="w-4 h-4"  />,;
                 {collaboration.onlineUsers.length}
 ;
@@ -740,8 +740,8 @@ x: 0 ",">;
             """{/* comment */}""""{enableAI && (<button onClick="{generateAISuggestions}" disabled="{isProcessing}" className="px-3 py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2 disabled:opacity-50">""""{isProcessing ? (<Loader2 className="w-4 h-4 animate-spin"  />) : (<Sparkles className="w-4 h-4"  />)}";
                 AI,;
               </button>) }";
-            """{/* comment */}""";
-            <button onClick="{handleSave}" className="px-3 py-1 bg-green-500 hover: bg-green-600 rounded text-sm transition-colors flex items-center gap-2">"";
+            """{/* comment */}"""
+            <button onClick="{handleSave}" className="px-3 py-1 bg-green-500 hover: bg-green-600 rounded text-sm transition-colors flex items-center gap-2">""
               <Save className="w-4 h-4"  />;
               Save,;
             </button>;
@@ -753,11 +753,11 @@ x: 0 ",">;
           <textarea ref="{editorRef}" value="{editorState.content}" onChange="{handleTextChange}" onSelect="{handleSelectionChange}" onMouseMove="{handleCursorMove}" placeholder="&apos;Start" typing your document...&apos; className="&apos;w-full" h-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dar,k: text-gray-100 resize-none font-mono text-sm&apos,       />",;
           &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,";
           <div className="&apos;flex" items-center justify-between mt-2 text-xs text-gray-500&apos;>&apos,";
-"""{/* comment */}""";
-      <div className = "flex h-96">"""{/* comment */}""";
-        <div className="flex-1 p-4">"";
+"""{/* comment */}"""
+      <div className = "flex h-96">"""{/* comment */}"""
+        <div className="flex-1 p-4">""
           <textarea ref="{editorRef}" value="{editorState.content}" onChange="{handleTextChange}" onSelect="{handleSelectionChange}" onMouseMove="{handleCursorMove}" placeholder="Start typing your document..." className="w-full h-full p-4 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none font-mono text-sm"  />",;
-          """{/* comment */}""";
+          """{/* comment */}"""
           <div className="flex items-center justify-between mt-2 text-xs text-gray-500">;
             <span>;
               {editorState.content.length} characters, {editorState.content.split(/\s+/) .filter(Boolean) .length} words,;
@@ -830,42 +830,42 @@ x: 0 ",">;
                     </span>&apos;&apos,&apos;&apos,";
                     <span className="&apos;text-xs" text-gray-400&apos;>;
                       {user.lastSeen.toLocaleTimeString()}&apos,;
-"""{/* comment */}""";
-        <div className = "w-80 border-l border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-700">"""{/* comment */}""""{enableAI && showSuggestions && (<div className="p-4 border-b border-gray-200 dark: border-gray-600">""";
-              <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">"";
+"""{/* comment */}"""
+        <div className = "w-80 border-l border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-700">"""{/* comment */}""""{enableAI && showSuggestions && (<div className="p-4 border-b border-gray-200 dark: border-gray-600">"""
+              <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">""
                 <Sparkles className="w-4 h-4"  />;
                 AI Suggestions";
-              </h4>""";
-              "";
+              </h4>"""
+              ""
               <div className="space-y-3">",                {editorState.suggestions.map(suggestion => (<motion.div key="{suggestion.id}" initial = {}
 ;
   { opacity: 0, x: 20}} animate = {}
 ;
   { opacity: 1,";
   x: 0 "",";
-""""}} className="p-3 bg-white dark: bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">""";
-                    <div className="flex items-start justify-between mb-2">""";
+""""}} className="p-3 bg-white dark: bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">"""
+                    <div className="flex items-start justify-between mb-2">"""
                       <span className="{"text-xs" px-2 py-1 rounded-full ${suggestion.type === "grammar" ? "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300" :"""">;
                     suggestion.type === "style" ? "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300" :""",";
-                        "bg-blue-100 text-blue-700 dark: bg-blue-900/30 dark:text-blue-300"}"}>{suggestion.type}""";
-                      </span>"";
+                        "bg-blue-100 text-blue-700 dark: bg-blue-900/30 dark:text-blue-300"}"}>{suggestion.type}"""
+                      </span>""
                       <span className="text-xs text-gray-500">;
                         {Math.round(suggestion.confidence * 100)}%;
                       </span>";
-                    </div>""";
-                    "";
+                    </div>"""
+                    ""
                     <p className="text-sm text-gray-700 dark: text-gray-300 mb-2">,;
                       {suggestion.reason}";
-                    </p>""";
-                    "";
+                    </p>"""
+                    ""
                     <div className="text-sm font-medium text-gray-900 dark: text-white mb-2">,;
                       {suggestion.text}";
-                    </div>""";
-                    "";
+                    </div>"""
+                    ""
                     <button onClick="{()" => applySuggestion(suggestion)} className="w-full px-2 py-1 bg-blue-500 hover: bg-blue-600 text-white text-xs rounded transition-colors">;
                       Apply Suggestion,;
                     </button>",;
-                  </motion.div>))}"";
+                  </motion.div>))}""
                 """"{editorState.suggestions.length === 0 && (<p className="text-sm text-gray-500 text-center py-4">;
                     No suggestions yet.Start typing to get AI-powered recommendations.</p>)}
 ;
@@ -877,41 +877,41 @@ x: 0 ",">;
                 Collaborators();,
 }
               </h4>;
-              "";";
+              """;
               <div className = "space-y-2">""{collaboration.onlineUsers.map(user => (<div key="{user.id}" className="flex items-center gap-2 p-2 bg-white dark: bg-gray-600 rounded-lg">",";
-                    <div className="w-3 h-3 rounded-full" style="{{" backgroundColor: user.color }}></div>"";";
+                    <div className="w-3 h-3 rounded-full" style="{{" backgroundColor: user.color }}></div>""";
                     <span className = "text-sm font-medium text-gray-700 dark: text-gray-300">,;
                       {user.name}
-                    </span>"";";
+                    </span>""";
                     <div className="w - 2 h-2 bg-green-400 rounded-full animate-pulse"></div>,;
-                  </div>))}"";";
+                  </div>))}""";
                 ""{collaboration.offlineUsers.map(user = > (<div key="{user.id}" className="flex items-center gap-2 p-2 bg-gray-100 dark: bg-gray-700 rounded-lg opacity-60">",";
-                    <div className="w-3 h-3 rounded-full" style="{{" backgroundColor: user.color }}></div>"";";
+                    <div className="w-3 h-3 rounded-full" style="{{" backgroundColor: user.color }}></div>""";
                     <span className = "text-sm text-gray-500 dark: text-gray-400">,;
                       {user.name}
-                    </span>"";";
+                    </span>""";
                     <span className="text-xs text-gray-400">;
                       {user.lastSeen.toLocaleTimeString()}
 ;
                     </span>;";
-"""{/* comment */}""""{enableCollaboration && showCollaborators && (<div className = "p-4 border-b border-gray-200 dark: border-gray-600">""";
-              <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">"";
+"""{/* comment */}""""{enableCollaboration && showCollaborators && (<div className = "p-4 border-b border-gray-200 dark: border-gray-600">"""
+              <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">""
                 <Users className="w-4 h-4"  />,;
                 Collaborators ({collaboration.onlineUsers.length})";
-              </h4>""";
-              "";
+              </h4>"""
+              ""
               <div className="space-y-2">""""{collaboration.onlineUsers.map(user => (<div key="{user.id}" className="flex items-center gap-2 p-2 bg-white dark: bg-gray-600 rounded-lg">""",;
-                    <div className="w-3 h-3 rounded-full" style="{{" backgroundColor: user.color }}></div>"";
+                    <div className="w-3 h-3 rounded-full" style="{{" backgroundColor: user.color }}></div>""
                     <span className="text-sm font-medium text-gray-700 dark: text-gray-300">",;
-                      {user.name}""";
-                    </span>"";
+                      {user.name}"""
+                    </span>""
                     <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>";
-                  </div>))}"";
+                  </div>))}""
                 """"{collaboration.offlineUsers.map(user => (<div key="{user.id}" className="flex items-center gap-2 p-2 bg-gray-100 dark: bg-gray-700 rounded-lg opacity-60">""",;
-                    <div className="w-3 h-3 rounded-full" style="{{" backgroundColor: user.color }}></div>"";
+                    <div className="w-3 h-3 rounded-full" style="{{" backgroundColor: user.color }}></div>""
                     <span className="text-sm text-gray-500 dark: text-gray-400">",;
-                      {user.name}""";
-                    </span>"";
+                      {user.name}"""
+                    </span>""
                     <span className="text-xs text-gray-400">;
                       {user.lastSeen.toLocaleTimeString()}
 ;
@@ -920,8 +920,8 @@ x: 0 ",">;
 ;
               </div>;
             </div>) }";
-""{/* comment */}"";";
-          <div className="p-4">"";";
+""{/* comment */}""";
+          <div className="p-4">""";
             <h4 className="font-medium text-gray-900 dark: text-white mb-3">Actions</h4>",",;
             "",";
             <div className = "space-y-2">"",";
@@ -935,7 +935,7 @@ x: 0 ",">;
                 Export as MD,",;
               </button>",";
               "",";
-              <button onClick="{()" => handleExport("html")} className="w-full px-3 py-2 bg-purple-500 hover: bg-purple-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">"";";
+              <button onClick="{()" => handleExport("html")} className="w-full px-3 py-2 bg-purple-500 hover: bg-purple-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">""";
                 <Download className="w-4 h-4"  />;
                 Export as HTML;
               </button>,;
@@ -965,22 +965,22 @@ x: 0 ",">;
               <button onClick="{()" => handleExport(&apos,html&apos)} className="&apos;w-full" px-3 py-2 bg-purple-500 hover: bg-purple-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2&apos,>"&apos,&apos,&apos;&apos,",;
                 <Download className="&apos;w-4" h-4&apos,       />;
                 Export as HTML&apos,";
-"""{/* comment */}""";
-          <div className = "p-4">"";
-            <h4 className="font-medium text-gray-900 dark: text-white mb-3">Actions</h4>""";
-            """";
+"""{/* comment */}"""
+          <div className = "p-4">""
+            <h4 className="font-medium text-gray-900 dark: text-white mb-3">Actions</h4>"""
+            """"
             <div className="space-y-2">""""",;
-              <button onClick="{()" => handleExport("txt")} className="w-full px-3 py-2 bg-gray-500 hover: bg-gray-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">"";
+              <button onClick="{()" => handleExport("txt")} className="w-full px-3 py-2 bg-gray-500 hover: bg-gray-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">""
                 <Download className="w-4 h-4"  />;
                 Export as TXT";
-              </button>""";
+              </button>"""
               """"",;
-              <button onClick="{()" => handleExport("md")} className="w-full px-3 py-2 bg-blue-500 hover: bg-blue-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">"";
+              <button onClick="{()" => handleExport("md")} className="w-full px-3 py-2 bg-blue-500 hover: bg-blue-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">""
                 <Download className="w-4 h-4"  />;
                 Export as MD";
-              </button>""";
+              </button>"""
               """"",;
-              <button onClick="{()" => handleExport("html")} className="w-full px-3 py-2 bg-purple-500 hover: bg-purple-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">"";
+              <button onClick="{()" => handleExport("html")} className="w-full px-3 py-2 bg-purple-500 hover: bg-purple-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">""
                 <Download className="w-4 h-4"  />;
                 Export as HTML,;
               </button>;
@@ -1009,7 +1009,7 @@ scale: 0 ",";
 top: y,";
                     transform: "translate(-50%",;
   -50%)","}}>";";
-              <div className="w-full h-full rounded-full border-2 border-white shadow-lg" style="{{" backgroundColor: user.color }}></div>"";";
+              <div className="w-full h-full rounded-full border-2 border-white shadow-lg" style="{{" backgroundColor: user.color }}></div>""";
               <div className="absolute top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap">;
                     transform: &apos,translate(-50%,";
   -50%)";&apos}}>";&apos;&apos,";
@@ -1034,8 +1034,8 @@ top: y,";
   {}>;
                     left: x, top: y,";
                     transform: "translate(-50%, ;
-  -50%)";"}}>"";
-              <div className = "w-full h-full rounded-full border-2 border-white shadow-lg" style="{{" backgroundColor: user.color }}></div>"";
+  -50%)";"}}>""
+              <div className = "w-full h-full rounded-full border-2 border-white shadow-lg" style="{{" backgroundColor: user.color }}></div>""
               <div className="absolute top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap">;
                 {user.name}
 ;
@@ -1043,10 +1043,10 @@ top: y,";
             </motion.div>))}
 ;
         </div>)}";
-    </div>)}"";
-""""";
+    </div>)}""
+"""""
     </div>)}
-""";
+"""
     </div>)}";
 """"'";
 `;,

@@ -380,7 +380,7 @@ export: function EnhancedHeader() {",;
 }
     // comment;
   PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from &apos;lucide-react";&apos;&apos;
-export function EnhancedHeader() {}""""";
+export function EnhancedHeader() {}"""""
   MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,";
 
   MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,;

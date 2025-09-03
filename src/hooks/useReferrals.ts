@@ -133,9 +133,9 @@ export default function Page() {;
   };
 ;
   const getReferralLink = useCallback(() => { // Wrapped in useCallback;
-    if(!referralCode?.code) return ""; // Check referralCode.code;
+    if(!referralCode?.code) return "" // Check referralCode.code;
     ;
-    const baseUrl = typeof window !== "undefined" ? window.location.origin : "";
+    const baseUrl = typeof window !== "undefined" ? window.location.origin : ""
     return `${baseUrl}/?ref=${referralCode.code}`;,
 }, [referralCode?.code]); // Dependency on referralCode.code;
 

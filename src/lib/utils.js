@@ -5,5 +5,5 @@ import clsx from,;
 export function cn() {;
   return twMerge(clsx(inputs))}";
 export function cn(...inputs) {";
-  return twMerge(clsx(inputs))}"";
+  return twMerge(clsx(inputs))}""
 "

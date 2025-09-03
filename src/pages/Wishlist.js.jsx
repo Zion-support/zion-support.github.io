@@ -37,17 +37,17 @@ export default function WishlistPage() {}
     const talentMap = TALENT_PROFILES.reduce((acc, t) => {}
         acc[t.id] = t;
         return acc}, {});
-    return (<div className="container py-8">"";
-      <h1 className="text-3xl font-bold mb-6">Wishlist</h1>"";
+    return (<div className="container py-8">""
+      <h1 className="text-3xl font-bold mb-6">Wishlist</h1>""
       {loading ? (<p>Loading...</p>) : favorites.length === 0 ? (<p>No items saved.</p>) : (<div className="responsive-grid">;
           {favorites.map(fav => {}
 ';
                 if (fav.item_type === 'talent') {}
                     const talent = talentMap[fav.item_id];
                     return talent ? (<TalentCard key={fav.item_id} talent={talent} onMessage={() => { }} onBook={() => { }} isAuthenticated={true}/>) : null}";
-                const item = productMap[fav.item_id];"";
+                const item = productMap[fav.item_id];""
                 return item ? (<div key={fav.item_id} className="relative">";
-                <ProductListingCard listing={item}/>"";
+                <ProductListingCard listing={item}/>""
                 <Button size="sm" className="absolute bottom-2 right-2" onClick={() => addToCart(item)} disabled={items.some(i => i.id === item.id)}>';
                   {items.some(i => i.id === item.id) ? 'In Cart' : 'Add to Cart'}
                 </Button>;

@@ -549,7 +549,7 @@ const MessageSuggestions = ({ suggestions }) => (<motion.div initial = {;
   y: 20,;
 ";
 ";>;
-","";";,
+",""";,
 }} className = "{"fixed" bottom-24 right-6 z-40 w-96 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dar,>;
     k:border-gray-700 overflow-hidden ${isMinimized ? "h-16" : "h-[500px]}"}">";";,
 }} className="{"fixed" bottom-24 right-6 z-40 w-96 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dar,k: border-gray-700 overflow-hidden ${isMinimized ? &apos,h-16&apos, : &apos,h-[500px]&apos}"}>;
@@ -562,7 +562,7 @@ const MessageSuggestions = ({ suggestions }) => (<motion.div initial = {;
                   <div className="&quot;flex" items-center gap-1&quot;>&quot;
                     <Sparkles className="&quot;w-3" h-3 text-yellow-300&quot;       />&quot;";
                     <span className="&quot;text-xs&quot;">Powered by AI&quot;</span>";
-"";
+""
 ", ",";";,
 }} className = "{"fixed" bottom-24 right-6 z-40 w-96 bg-white dark: bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden ${isMinimized ? "h-16" : "h-[500px]"}"}"">";
             {/* comment */}";
@@ -626,18 +626,18 @@ const MessageSuggestions = ({ suggestions }) => (<motion.div initial = {;
   x: 0,;
 ";
 ";>;
-","";,
-}} className = "{"flex" ${message.type === "user" ? "justify-end" : "justify-start"}"}">"";
-                      <div className="{"flex" items-start gap-2 max-w-[80%] ${message.type === "user" ? "flex-row-reverse" : "flex-row"}"}">"";
+","",
+}} className = "{"flex" ${message.type === "user" ? "justify-end" : "justify-start"}"}">""
+                      <div className="{"flex" items-start gap-2 max-w-[80%] ${message.type === "user" ? "flex-row-reverse" : "flex-row"}"}">""
                         <div className="{"w-8" h-8 rounded-full flex items-center justify-center flex-shrink-0 ${message.type === "user";
-                        ? "bg-blue-500 text-white"";
+                        ? "bg-blue-500 text-white""
                         : "bg-gray-200 dark:bg-gray-600 text-gray-700 dar,";
     k:text-gray-300"}"}">";
                           {message.type === "user" ? <User className="w-4 h-4"/"> : <Bot className="w-4 h-4"/">}";
                         </div>";
-"";
+""
                         <div className="{"rounded-lg" p-3 ${message.type === "user";
-                        ? "bg-blue-500 text-white"";
+                        ? "bg-blue-500 text-white""
                         : "bg-gray-100 dark:bg-gray-700 text-gray-800 dar,";
     k:text-gray-200"}"}">";
                           <p className="text-sm whitespace-pre-wrap">{message.content}</p>";
@@ -703,18 +703,18 @@ const MessageSuggestions = ({ suggestions }) => (<motion.div initial = {;
 ;
                           {/* comment */}";
                           {message.type === &apos;bot&apos; && message.metadata?.suggestions && enableSuggestions && (&apos}<MessageSuggestions suggestions = "{message.metadata.suggestions}/">)}";
-"";
+""
 ",", ";";,
-}} className = "{"flex" ${message.type === "user" ? "justify-end" : "justify-start"}"}"">""";
-                      <div className="{"flex" items-start gap-2 max-w-[80%] ${message.type === "user" ? "flex-row-reverse" : "flex-row"}"}"">""";
+}} className = "{"flex" ${message.type === "user" ? "justify-end" : "justify-start"}"}"">"""
+                      <div className="{"flex" items-start gap-2 max-w-[80%] ${message.type === "user" ? "flex-row-reverse" : "flex-row"}"}"">"""
                         <div className="{"w-8" h-8 rounded-full flex items-center justify-center flex-shrink-0 ${message.type === "user";
-                        ? "bg-blue-500 text-white"""";
+                        ? "bg-blue-500 text-white""""
                         : "bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300"}"}"">";
                           {message.type === "user" ? <User className="w-4 h-4"/""> : <Bot className="w-4 h-4"/"">}";
-                        </div>"";
-""";
+                        </div>""
+"""
                         <div className="{"rounded-lg" p-3 ${message.type === "user";
-                        ? "bg-blue-500 text-white"""";
+                        ? "bg-blue-500 text-white""""
                         : "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200"}"}"">";
                           <p className="text-sm whitespace-pre-wrap">{message.content}</p>";
 ";

@@ -41,16 +41,16 @@ export default function TalentProfilePage() {}
   return()'';
     <>''';
       <SEO title={profile.full_name} description={profile.bio || ''} />;
-      <main className="min-h-screen bg-zion-blue py-8 text-white">"";
-        <div className="container mx-auto px-4 space-y-4">"";
+      <main className="min-h-screen bg-zion-blue py-8 text-white">""
+        <div className="container mx-auto px-4 space-y-4">""
           <h1 className="text-3xl font-bold" data-testid="profile-name">;
             {profile.full_name}
           </h1>;
           {profile.bio && <p>{profile.bio}</p>}
           {profile.hourly_rate && <p>Hourly Rate: ${profile.hourly_rate}/hr</p>}
           {profile.skills && (";
-            <div>"";
-              <h2 className="font-semibold">Skills</h2>"";
+            <div>""
+              <h2 className="font-semibold">Skills</h2>""
               <ul className="list-disc ml-5">;
                 {profile.skills.map(skill => (;
                   <li key={skill}>{skill}</li>;
@@ -59,15 +59,15 @@ export default function TalentProfilePage() {}
             </div>;
           )}
           {profile.social && (";
-            <div>"";
-              <h2 className="font-semibold">Social Links</h2>"";
+            <div>""
+              <h2 className="font-semibold">Social Links</h2>""
               <ul className="list-disc ml-5">;
                 {Object.entries(profile.social).map(([platform, url]) => (;
                   <li key={platform}>;
                     <a";
-                      href={url}"";
-                      className="text-zion-cyan"";
-                      target="_blank"";
+                      href={url}""
+                      className="text-zion-cyan""
+                      target="_blank""
                       rel="noopener noreferrer">;
                       {platform}
                     </a>;

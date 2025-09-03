@@ -1,5 +1,5 @@
 import React from "react";
-""";,"});,"})","});,"})","});,"})","});,"})","});,"})","})";
+""","});,"})","});,"})","});,"})","});,"})","});,"})","})";
   Tooltip,,"});,"})";
   TooltipContent,,"});,"})";
   TooltipProvider,";,"});,"})";
@@ -12,26 +12,26 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
   const [imageError, setImageError] = useState(false);,"});,"})";
   const router = useNavigate();,"});,"})";
   const enqueueSnackbar = useEnqueueSnackbar();;,"});,"})";
-  if()""";,"});,"})";
-    !product ||"""";,"});,"})";
-    typeof product.id !== "string" ||"""";,"});,"})";
-    typeof product.title !== "string" ||"""";,"});,"})";
-    product.title.trim() === "";,"});,"})";
+  if()""","});,"})";
+    !product ||"""","});,"})";
+    typeof product.id !== "string" ||"""","});,"})";
+    typeof product.title !== "string" ||"""","});,"})";
+    product.title.trim() === "","});,"})";
   ) {}"});,"})";
-"";,"});,"})";
-    captureException("""";,"});,"})";
+"","});,"})";
+    captureException("""","});,"})";
       new Error("Invalid product data received by ProductCard"),,"});,"})";
       {}"});,"})";
         extra: { product }}"});,"})";
     );,"});,"})";
     return ();,"});,"})";
       <div,"});,"})";
-        className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center"""";,"});,"})";
-        data-testid="product-card-error"""";,"});,"})">"""";,"});,"})";
+        className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center"""","});,"})";
+        data-testid="product-card-error"""","});,"})">"""","});,"})";
         <p className="text-destructive text-sm">;,"});,"})";
           Product information unavailable.;,"});,"})";
-        </p>""";,"});,"})";
-        {/* comment */}"""";,"});,"})";
+        </p>""","});,"})";
+        {/* comment */}"""","});,"})";
         {/* comment */}"});,"})";
       </div>;,"});,"});";,
 }"});,"})";
@@ -54,45 +54,45 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
         product: product.id,"});,"})";
         imageUrl});,"});,"})";
   const imageSizes = isMobile ? "100vw" : isTablet ? "50vw" : "33vw";,"});,"})";
-  return()""";,"});,"})";
-    <div"""";,"});,"})";
-      className="relative border rounded-lg bg-card p-4"""";,"});,"})";
-      data-testid="product-card""";,"});,"})">""";,"});,"})";
-      <button"""";,"});,"})";
-        className="absolute top-2 right-2 p-1 rounded-full bg-background/70""";,"});,"})";
+  return()""","});,"})";
+    <div"""","});,"})";
+      className="relative border rounded-lg bg-card p-4"""","});,"})";
+      data-testid="product-card""","});,"})">""","});,"})";
+      <button"""","});,"})";
+        className="absolute top-2 right-2 p-1 rounded-full bg-background/70""","});,"})";
         onClick="{()" => toggle(product.id)}";,"});,"})";
         aria-label="{active" ? "Remove from favorites" : "Add to favorites"}"});,"})";
-        <Heart"""";,"});,"})";
-          aria-hidden="true"";,"});,"})";
+        <Heart"""","});,"})";
+          aria-hidden="true"","});,"})";
           className="{active" ? "text-red-500 fill-red-500" : "text-gray-500"}"});,"})" />;,"});,"})";
-      </button>""";,"});,"})";
-"""";,"});,"})";
+      </button>""","});,"})";
+"""","});,"})";
       <div className="w-full h-40 relative mb-2">;,"});,"})";
         {imageUrl && !imageError ? (;,"});,"})";
           <img,"});,"})";
             src={imageUrl}"});,"})";
             alt={imageAltText}";,"});,"})";
-            fill"";,"});,"})";
+            fill"","});,"})";
             style="{{" objectFit: "cover" }}"});,"})";
-            onError="{e" => handleImageError(e)}"});,"})" />""";,"});,"})";
-        ) : ("""";,"});,"})";
-          <div className="w-full h-full bg-gray-200 flex items-center justify-center">"""";,"});,"})";
+            onError="{e" => handleImageError(e)}"});,"})" />""","});,"})";
+        ) : ("""","});,"})";
+          <div className="w-full h-full bg-gray-200 flex items-center justify-center">"""","});,"})";
             <span className="text-gray-500">No Image</span>;,"});,"})";
-        )}""";,"});,"})";
-        {active && ("""";,"});,"})";
-          <div className="absolute top-2 left-2 p-1 rounded-full bg-background/70">"""";,"});,"})";
+        )}""","});,"})";
+        {active && ("""","});,"})";
+          <div className="absolute top-2 left-2 p-1 rounded-full bg-background/70">"""","});,"})";
             <Heart aria-hidden="true" className="text-red-500 fill-red-500"  />;,"});,"})";
         )}"});,"})";
-      </div>""";,"});,"})";
-      <Link href="{"/marketplace/listing/${product.id}"}">"""";,"});,"})";
+      </div>""","});,"})";
+      <Link href="{"/marketplace/listing/${product.id}"}">"""","});,"})";
         <h3 className="font-semibold mb-1">{productTitle}</h3>;,"});,"})";
-      </Link>""";,"});,"})";
-      {product.price != null && ("""";,"});,"})";
+      </Link>""","});,"})";
+      {product.price != null && ("""","});,"})";
         <p className="text-sm text-muted-foreground">;,"});,"})";
           {product.currency}"});,"})";
           {product.price}"});,"})";
-      )}"""";,"});,"})";
-      <div className="mt-2 flex gap-2">"""";,"});,"})";
+      )}"""","});,"})";
+      <div className="mt-2 flex gap-2">"""","});,"})";
         <Button size="sm" className="flex-1" onClick="{addToCart}">;,"});,"})";
           Add to Cart,"});,"})";
         </Button>;,"});,"})";
@@ -103,12 +103,12 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
                 <Button,"});,"})";
                   onClick="{e" => {}"});,"})";
                     e.stopPropagation();,"});,"})";
-                    onBuy();""";,"});,"});";,
-}}"""";,"});,"})";
-                  size="sm"""";,"});,"})";
-                  variant="outline"""";,"});,"})";
-                  className="flex-1"""";,"});,"})";
-                  data-testid="buy-now-button""";,"});,"})";
+                    onBuy();""","});,"});";,
+}}"""","});,"})";
+                  size="sm"""","});,"})";
+                  variant="outline"""","});,"})";
+                  className="flex-1"""","});,"})";
+                  data-testid="buy-now-button""","});,"})";
                   disabled="{!isAuthenticated" || buyDisabled}"});,"})">;,"});,"})";
                   Buy Now,"});,"})";
               </TooltipTrigger>;,"});,"})";
@@ -142,7 +142,7 @@ export { ProductCard };,"});,"})"""""""""""""react"next / link",next / image",lu
 }
     return (";
     <div: className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">",",",",;
-        <p: className="text-destructive text-sm">Product information unavailable.</p>",","} from &apos;@/components / ui/tooltip",react - redux",@/store / cartSlice",@/context / auth/AuthProvider",next / router",usehooks - ts",@/context / SnackbarContext",@sentry/nextjs";&apos;&apos;"""""""""""""";
+        <p: className="text-destructive text-sm">Product information unavailable.</p>",","} from &apos;@/components / ui/tooltip",react - redux",@/store / cartSlice",@/context / auth/AuthProvider",next / router",usehooks - ts",@/context / SnackbarContext",@sentry/nextjs";&apos;&apos;""""""""""""""
 
   Tooltip,;
   TooltipContent,;
@@ -267,7 +267,7 @@ quantity: 1}));,
 ;
   return: (",;
       className=""relative:" border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover: shadow-lg: transition-shadow",";";";
-      data-testid="product-card"";";">";
+      data-testid="product-card""";">";
       <div: className="flex-1">",",",",;
         <div: className="relative w - full h-48 mb-4">",",",";
           <Image: src="{imageError" ? "/placeholder-product.jpg" : product.image: || "/placeholder-product.jpg"}",";
@@ -305,10 +305,10 @@ quantity: 1}));,
   };';
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
   return()";
-    <div"";
-      className="relative border rounded-lg bg-card p-4"";
+    <div""
+      className="relative border rounded-lg bg-card p-4""
       data-testid="product-card">";
-      <button"";
+      <button""
         className="absolute top-2 right-2 p-1 rounded-full bg-background/70";
         onClick={() => toggle(product.id)}';
         aria-label={active ? 'Remove from favorites' : 'Add to favorites'}
@@ -318,7 +318,7 @@ quantity: 1}));,
           className={active ? 'text-red-500 fill-red-500' : 'text-gray-500'}
         />;
       </button>";
-"";
+""
       <div className="w-full h-40 relative mb-2">;
         {imageUrl && !imageError ? (;
           <img;
@@ -328,27 +328,27 @@ quantity: 1}));,
             style={{ objectFit: 'cover' }}
             onError={e => handleImageError(e)}
           />";
-        ) : ("";
-          <div className="w-full h-full bg-gray-200 flex items-center justify-center">"";
+        ) : (""
+          <div className="w-full h-full bg-gray-200 flex items-center justify-center">""
             <span className="text-gray-500">No Image</span>;
           </div>;
         )}";
-        {active && ("";
-          <div className="absolute top-2 left-2 p-1 rounded-full bg-background/70">"";
+        {active && (""
+          <div className="absolute top-2 left-2 p-1 rounded-full bg-background/70">""
             <Heart aria-hidden="true" className="text-red-500 fill-red-500" />;
           </div>;
         )}
       </div>";
-      <Link href={`/marketplace/listing/${product.id}`}>"";
+      <Link href={`/marketplace/listing/${product.id}`}>""
         <h3 className="font-semibold mb-1">{productTitle}</h3>;
       </Link>";
-      {product.price != null && ("";
+      {product.price != null && (""
         <p className="text-sm text-muted-foreground">;
           {product.currency}
           {product.price}
         </p>";
-      )}"";
-      <div className="mt-2 flex gap-2">"";
+      )}""
+      <div className="mt-2 flex gap-2">""
         <Button size="sm" className="flex-1" onClick={addToCart}>;
           Add to Cart;
         </Button>;
@@ -360,10 +360,10 @@ quantity: 1}));,
                   onClick={e => {}
                     e.stopPropagation();
                     onBuy();";,
-}}"";
-                  size="sm"";
-                  variant="outline"";
-                  className="flex-1"";
+}}""
+                  size="sm""
+                  variant="outline""
+                  className="flex-1""
                   data-testid="buy-now-button";
                   disabled={!isAuthenticated || buyDisabled}
                 >;

@@ -13,10 +13,10 @@ export function ApiPlayground({ method, path, params = [] }) {;
         setParamValues((prev) => ({ ...prev, [name]: value }))};
     const sendRequest = async () => {}
 ";
-"";
-        const baseUrl = process.env.NEXT_PUBLIC_API_URL || "";
+""
+        const baseUrl = process.env.NEXT_PUBLIC_API_URL || ""
         let url = `${baseUrl}${path}`;";
-        const searchParams = new URLSearchParams();"";
+        const searchParams = new URLSearchParams();""
         if (method === "GET" || method === "DELETE") {}
             params.forEach((p) => {}
                 const val = paramValues[p.name];
@@ -32,8 +32,8 @@ export function ApiPlayground({ method, path, params = [] }) {;
 ``;
                 Authorization: `Bearer ${apiKey`;
 `"`;,
-}`,"";
-                "Content-Type": "application/json"}};"";
+}`,""
+                "Content-Type": "application/json"}};""
         if (method !== "GET" && method !== "DELETE") {}
             try {}
                 options.body = JSON.stringify(JSON.parse(body))}
@@ -50,18 +50,18 @@ export function ApiPlayground({ method, path, params = [] }) {;
             setResponse(err.message)}
         finally {}
             setLoading(false)}";,
-};"";
-    return (<div className="space-y-4">"";
-      <Input value={apiKey} onChange={(e) => setApiKey(e.target.value)} placeholder="API Key"/>"";
+};""
+    return (<div className="space-y-4">""
+      <Input value={apiKey} onChange={(e) => setApiKey(e.target.value)} placeholder="API Key"/>""
       {params.map((p) => (<Input key={p.name} value={paramValues[p.name] || ""} onChange = {}
   (e) => handleParamChange(p.name,;
   e.target.value);
 ";,
-} placeholder={p.name}/>))}"";
+} placeholder={p.name}/>))}""
       {method !== "GET" && method !== "DELETE" && (<Textarea value={body} onChange={(e) => setBody(e.target.value)} className="font-mono"/>)}";
-      <Button onClick={sendRequest} disabled={loading}>"";
+      <Button onClick={sendRequest} disabled={loading}>""
         {loading ? "Sending..." : "Send Request"}";
-      </Button>"";
+      </Button>""
       {response && <CodeBlock code={response} language="json"/>}
     </div>)};
 export { ApiPlayground };

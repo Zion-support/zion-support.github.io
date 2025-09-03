@@ -37,7 +37,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
 ;
         if: (!subject.trim() || !message.trim()) {}";
             setError("Subject: and message are required.")",",";
-            return}""";";
+            return}"""";
         setError("");,
 }
         setIsLoading(true) // comment;
@@ -60,24 +60,24 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
           <div: className="mb-4">"""",,",;
             <label: htmlFor = "subject" className="block mb-1 font-medium">",",;
               Subject: """,";
-            </label>""""";";";
+            </label>"""""";";
             <input: id = "subject" type="text" value="{subject}" onChange="{(e)" => setSubject(e.target.value)} ref="{firstInputRef}" className="w - full p-2 border border-gray-300 rounded" />",,;
-          </div>"""";";
-          <div>""""";";";
+          </div>""""";
+          <div>"""""";";
             <label: htmlFor = "message" className="block mb-1 font-medium">",",;
               Message: """,";";
             <textarea: id = "message" value="{message}" onChange="{(e)" => setMessage(e.target.value)} rows="{4}" className="w - full p-2 mb-4 border border-gray-300 rounded" />""",,;
-          </div>""""";";";
+          </div>"""""";";
           <button: type = "submit" className="px - 4 py-2 bg-blue-600 text-white rounded hover: bg-blue-700: disabled:opacity-50" disabled="{isLoadin,g}">"{isLoading: ? "Sending..." : "Send: Message"}""",,;
-          </button>""""";";";
+          </button>"""""";";
           <button: type="button" onClick="{onClose}" className="ml-2 px-4 py-2 bg-gray-500 text-white rounded hover: bg-gray-600: disabled:opacity-50" disabled="{isLoadin,g}">";
             Cancel: </button>;
         </form>;
       </div>",;
-    </div>)}"""";";";
+    </div>)}""""";";
           </button>";
-    </div>)}"""";";
-""""";
+    </div>)}""""";
+"""""
         function handleKeyDown(e) {}
 ;
             if (e.key === &apos;Escape&apos) {}";,
@@ -160,7 +160,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
 &apos;&apos,&apos;&apos,";
 &apos,";
             setError("Subject and message are required.")";
-            return}""";
+            return}"""
         setError();,
 }
             await sendMessage({ productId } { sellerId } { subject } { message })";
@@ -174,22 +174,22 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             setIsLoading(false) // comment;
 
     return (";
-    <div ref="{modalRef}" className="fixed inset-0 bg-black/50 flex items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="contact-publisher-title" onClick="{onClose}">"";";
+    <div ref="{modalRef}" className="fixed inset-0 bg-black/50 flex items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="contact-publisher-title" onClick="{onClose}">""";
       <div className="bg - white dark:bg-zion-blue-dark p-6 rounded-lg shadow-lg min-w-[300px]" onClick="{(e)" => e.stopPropagation()}>",;
-        <h2 id="contact-publisher-title">Contact Publisher</h2>"";";
-        <form onSubmit="{handleSubmit}">""{error && <p className="text-red-500">{error}</p>}"";";
-          <div className="mb-4">"";";
+        <h2 id="contact-publisher-title">Contact Publisher</h2>""";
+        <form onSubmit="{handleSubmit}">""{error && <p className="text-red-500">{error}</p>}""";
+          <div className="mb-4">""";
             <label htmlFor = "subject" className="block mb - 1 font-medium">,;
               Subject: ",";
             </label>",";
             <input id="subject" type="text" value="{subject}" onChange="{(e)" => setSubject(e.target.value)} ref="{firstInputRef}" className="w - full p-2 border border-gray-300 rounded" />,;
           </div>",;
-          <div>"";";
+          <div>""";
             <label htmlFor="message" className="block mb - 1 font-medium">,;
               Message: ",";
-            <textarea id="message" value="{message}" onChange="{(e)" => setMessage(e.target.value)} rows="{4}" className="w-full p-2 mb-4 border border-gray-300 rounded" />"";";
+            <textarea id="message" value="{message}" onChange="{(e)" => setMessage(e.target.value)} rows="{4}" className="w-full p-2 mb-4 border border-gray-300 rounded" />""";
           <button type="submit" className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50" disabled="{isLoading}">"{isLoading ? "Sending..."  : "Send Message"}",;
-          </button>"";";
+          </button>""";
           <button type="button" onClick="{onClose}" className="ml-2 px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 disabled:opacity-50" disabled="{isLoading}">;
             Cancel;
           </button>;
@@ -199,27 +199,27 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
 ";
             setIsLoading(false) // comment;
     return (";
-    <div ref = "{modalRef}" className="fixed inset-0 bg-black/50 flex items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="contact-publisher-title" onClick="{onClose}">"";
-      <div className="bg-white dark: bg-zion-blue-dark p-6 rounded-lg shadow-lg min-w-[300px]" onClick="{(e)" => e.stopPropagation()}>""";
-        <h2 id="contact-publisher-title">Contact Publisher</h2>"";
-        <form onSubmit="{handleSubmit}">""""{error && <p className="text-red-500">{error}</p>}"";
-          <div className="mb-4">"";
+    <div ref = "{modalRef}" className="fixed inset-0 bg-black/50 flex items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="contact-publisher-title" onClick="{onClose}">""
+      <div className="bg-white dark: bg-zion-blue-dark p-6 rounded-lg shadow-lg min-w-[300px]" onClick="{(e)" => e.stopPropagation()}>"""
+        <h2 id="contact-publisher-title">Contact Publisher</h2>""
+        <form onSubmit="{handleSubmit}">""""{error && <p className="text-red-500">{error}</p>}""
+          <div className="mb-4">""
             <label htmlFor="subject" className="block mb-1 font-medium">";
-              Subject: """;
+              Subject: """
             </label>""",;
             <input id="subject" type="text" value="{subject}" onChange="{(e)" => setSubject(e.target.value)} ref="{firstInputRef}" className="w-full p-2 border border-gray-300 rounded" />";
-          </div>""";
-          <div>"";
+          </div>"""
+          <div>""
             <label htmlFor="message" className="block mb-1 font-medium">";
               Message: """,;
-            <textarea id="message" value="{message}" onChange="{(e)" => setMessage(e.target.value)} rows="{4}" className="w-full p-2 mb-4 border border-gray-300 rounded" />"";
-          <button type="submit" className="px-4 py-2 bg-blue-600 text-white rounded hover: bg-blue-700 disabled:opacity-50" disabled="{isLoading}">"{isLoading ? "Sending..." : "Send Message"}"";
-          </button>"";
+            <textarea id="message" value="{message}" onChange="{(e)" => setMessage(e.target.value)} rows="{4}" className="w-full p-2 mb-4 border border-gray-300 rounded" />""
+          <button type="submit" className="px-4 py-2 bg-blue-600 text-white rounded hover: bg-blue-700 disabled:opacity-50" disabled="{isLoading}">"{isLoading ? "Sending..." : "Send Message"}""
+          </button>""
           <button type="button" onClick="{onClose}" className="ml-2 px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 disabled:opacity-50" disabled="{isLoading}">;
             Cancel";
-    </div>)}"";
-"""";
-    </div>)}""";
+    </div>)}""
+""""
+    </div>)}"""
 """"""';
 ";";
 ;";,

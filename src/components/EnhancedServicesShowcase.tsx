@@ -397,7 +397,7 @@ export default function EnhancedServicesShowcase(...args: unknown[]): unknown ,{
   TrendingUp, Users,";
   Clock, CheckCircle,;
   Search} from "lucide-react";";
-""";
+"""
 ";
 export const EnhancedServicesShowcase: React.FC = () => {;
   const services = [], benefits: ["Reduce manual work by 70-85%", "Improve efficiency by 60%", "Cut operational costs by 40-50%"], color: "from-cyan-500 to-blue-600", glowColor: "cyan"}, {";
