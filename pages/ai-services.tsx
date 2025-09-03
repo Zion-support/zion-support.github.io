@@ -4,12 +4,6 @@ import Link from 'next/link'
 import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite, Car, TreePine } from 'lucide-react';
 import Navigation from '../src/components/Navigation'
 import Footer from '../src/components/Footer';
-import Head from 'next/head'
-import Link from 'next/link'
-import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite, Car, TreePine } from 'lucide-react'
-import Navigation from '../src/components/Navigation'
-import Footer from '../src/components/Footer'
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
 export default function AIServices() {
   const title = 'AI Services — Zion Tech Group'
   const description =
@@ -49,9 +43,6 @@ export default function AIServices() {
       delivery: '3-4 weeks',
       category: 'Document AI',
     },
-      category: 'Document AI'
-},
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       title: 'AI-Powered Talent Matching',
       description: 'Advanced recruitment platform with AI-driven candidate screening and matching',
@@ -468,10 +459,8 @@ export default function AIServices() {
       ],
       pricing: '$8,000 - $35,000/month',
       delivery: '8-16 weeks',
-      category: 'Trading AI'},
       category: 'Trading AI'
-},
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+    },
     {
       title: 'AI-Powered Medical Diagnosis Assistant',
       description: 'Intelligent medical image analysis and diagnostic support system',
@@ -481,10 +470,8 @@ export default function AIServices() {
       ],
       pricing: '$15,000 - $60,000/month',
       delivery: '12-24 weeks',
-      category: 'Medical AI'},
       category: 'Medical AI'
-},
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+    },
     {
       title: 'AI-Powered Legal Document Analysis',
       description: 'Intelligent legal document review and contract analysis platform',
@@ -741,10 +728,8 @@ export default function AIServices() {
       ],
       pricing: '$15,000 - $75,000/month',
       delivery: '12-24 weeks',
-      category: 'Medical AI'},
       category: 'Medical AI'
-},
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+    },
     {
       title: 'AI-Powered Autonomous Vehicle Control',
       description: 'Intelligent autonomous vehicle navigation and safety systems',
@@ -1170,10 +1155,8 @@ export default function AIServices() {
       ],
       pricing: '$8,000 - $35,000/month',
       delivery: '10-16 weeks',
-      category: 'Medical AI'},
       category: 'Medical AI'
-},
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+    },
     {
       title: 'AI-Powered Legal Document Analysis',
       description: 'Intelligent legal document review and contract analysis with risk assessment',
@@ -1339,10 +1322,8 @@ export default function AIServices() {
       ],
       pricing: '$15,000 - $60,000/month',
       delivery: '12-24 weeks',
-      category: 'Medical AI'},
       category: 'Medical AI'
-},
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+    },
     {
       title: 'AI-Powered Content Moderation System',
       description: 'Intelligent content moderation with automated detection of harmful content and policy enforcement',
@@ -1530,8 +1511,7 @@ export default function AIServices() {
       name: 'Generative AI',
       icon: FileText,
       description: 'Content creation and synthesis'
-},
-  ]
+]
   const benefits = [
   {
       title: 'Increased Efficiency',
@@ -1556,8 +1536,7 @@ export default function AIServices() {
       description: 'Round-the-clock AI-powered services',
       icon: Clock,
       stat: '99.9%'
-},
-  ]
+]
   return (
     <>
       <Head>

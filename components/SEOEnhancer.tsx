@@ -14,10 +14,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   description = 'Zion Tech Group provides cutting-edge AI, IT, and software development services.',
   keywords = 'technology, AI, software development, IT services',
   image = '/images/zion-tech-group-og.jpg',
-  url = 'https: //ziontechgroup.com',
-  type = 'website',
+  url = 'https://ziontechgroup.com',
   type = 'website'
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   

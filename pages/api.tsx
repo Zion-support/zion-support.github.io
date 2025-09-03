@@ -19,10 +19,8 @@ export default function API() {
       endpoint: '/api/user/profile',
       description: 'Get user profile information',
       parameters: ['token'],
-      response: 'User profile data'},
       response: 'User profile data'
-},
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+    },
     {
       name: 'Services List',
       method: 'GET',
@@ -32,8 +30,6 @@ export default function API() {
       response: 'Array of services'
     }
   ];
-  ]
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
 
   return (
     <>
