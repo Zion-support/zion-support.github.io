@@ -29,8 +29,6 @@
     "styles/**/*",
     "types/**/*",
     "utils/**/*",
-    "**/*.ts",
-    "**/*.tsx",
     ".next/types/**/*.ts"
   ],
   "exclude": [
