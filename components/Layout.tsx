@@ -1,7 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-import EnhancedNavigation from './layout/EnhancedNavigation';
-import EnhancedFooter from './layout/EnhancedFooter';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -52,11 +50,25 @@ const Layout: React.FC<LayoutProps> = ({
       </Head>
       
       <div className="min-h-screen flex flex-col">
-        <EnhancedNavigation />
-        <main className="flex-grow">
-          {children}
-        </main>
-        <EnhancedFooter />
+        <header className="sticky top-0 z-40 bg-white border-b">
+          <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a className="font-bold" href="/">Zion Tech Group</a>
+            <nav className="hidden md:flex gap-6 text-sm">
+              <a href="/">Home</a>
+              <a href="/request-quote">Request Quote</a>
+            </nav>
+          </div>
+        </header>
+        <main className="flex-grow">{children}</main>
+        <footer className="border-t">
+          <div className="max-w-6xl mx-auto px-4 py-6 text-sm text-gray-600">
+            <div>Contact: +1 302 464 0950 • kleber@ziontechgroup.com</div>
+            <div>364 E Main St STE 1008 Middletown DE 19709</div>
+            <div className="mt-2">
+              <a className="text-blue-600 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">ziontechgroup.com</a>
+            </div>
+          </div>
+        </footer>
       </div>
     </>
   );
