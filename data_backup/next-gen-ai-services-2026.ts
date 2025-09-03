@@ -28,16 +28,21 @@ export interface NextGenAIService2026 {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-   address: string;
-   website: string}
+   addres,
+    s: string;
+   websit,
+    e: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-reviews: number;export const nextGenAIServices2026: NextGenAIService2026[] = [;
+review,
+    s: number;export const nextGenAIServices202,
+    6: NextGenAIService2026[] = [;
   // AI Creative Studio Platform{
-    id:,
+    i,
+    d:,
   ai-creative-studio-platform',
     name: 'AI Creative Studio Platform,
     tagline:,
@@ -77,7 +82,8 @@ reviews: number;export const nextGenAIServices2026: NextGenAIService2026[] = [;
     textColor:,
   text-pink-400;
   ',
-    link: 'https://ziontechgroup.com/ai-creative-studio-platform,
+    link: 'http,
+    s://ziontechgroup.com/ai-creative-studio-platform,
     marketPosition: 'Competitive with Midjourney ($10-30/month), DALL-E 2 ($0.02-0.04/image), and Runway ML ($12-76/month). Our advantage: Unlimited generation, multi-format support, and comprehensive creative tools.,
   ,
     targetAudience: Marketing agencies, Content creators, Design studios, E-commerce businesses, Social media managers, Creative professionals;
@@ -129,14 +135,16 @@ reviews: number;export const nextGenAIServices2026: NextGenAIService2026[] = [;
   ',
     variant: 'ai-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Complete AI creative platform with multiple AI models, content management, collaboration tools, and enterprise features. Includes mobile apps and API access.;
@@ -175,7 +183,8 @@ reviews: number;export const nextGenAIServices2026: NextGenAIService2026[] = [;
     color: 'from-blue-600 to-indigo-600,
     textColor:,
   text-blue-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-business-platform-2026,
+    link: 'http,
+    s://ziontechgroup.com/ai-autonomous-business-platform-2026,
     marketPosition:;
   'Competitive with Salesforce Einstein ($50-300/user/month), HubSpot AI ($45-3200/month), and Microsoft Dynamics 365 ($40-190/user/month). Our advantage: Complete business autonomy, AI-powered decision-making, and 24/7 operations.,
   ,
@@ -223,12 +232,14 @@ reviews: number;export const nextGenAIServices2026: NextGenAIService2026[] = [;
   280% annual growth',
     variant: 'ai-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Complete autonomous business platform with AI-powered systems for all business functions. Includes enterprise features, custom AI training, and comprehensive integration.',
@@ -264,7 +275,8 @@ reviews: number;export const nextGenAIServices2026: NextGenAIService2026[] = [;
     color: 'from-red-600 to-pink-600,
     textColor:,
   text-red-400',
-    link: 'https://ziontechgroup.com/ai-emotional-intelligence-platform,
+    link: 'http,
+    s://ziontechgroup.com/ai-emotional-intelligence-platform,
     marketPosition:;
   'Competitive with Affectiva ($1000-5000/month), Realeyes ($500-2000/month), and Emotient ($2000-10000/month). Our advantage: Comprehensive emotional intelligence, real-time processing, and affordable pricing.,
   ,
@@ -312,12 +324,14 @@ reviews: number;export const nextGenAIServices2026: NextGenAIService2026[] = [;
   180% annual growth',
     variant: 'ai-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Complete emotional intelligence platform with real-time emotion analysis, response generation, and analytics. Includes privacy protection and compliance features.',
@@ -353,7 +367,8 @@ reviews: number;export const nextGenAIServices2026: NextGenAIService2026[] = [;
     color: 'from-green-600 to-blue-600,
     textColor:,
   text-green-400',
-    link: 'https://ziontechgroup.com/ai-multimodal-fusion-platform,
+    link: 'http,
+    s://ziontechgroup.com/ai-multimodal-fusion-platform,
     marketPosition:;
   'Competitive with OpenAI GPT-4V ($0.01-0.03/1K tokens), Google Gemini ($0.0005-0.0025/1K tokens), and Anthropic Claude ($0.008-0.024/1K tokens). Our advantage: Unified multimodal processing, comprehensive analysis, and enterprise features.,
   ,
@@ -400,12 +415,14 @@ reviews: number;export const nextGenAIServices2026: NextGenAIService2026[] = [;
   320% annual growth',
     variant: 'ai-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Complete multimodal AI platform with unified processing across all data types. Includes custom model training, API access, and enterprise features.',
@@ -442,7 +459,8 @@ reviews: number;export const nextGenAIServices2026: NextGenAIService2026[] = [;
     color: 'from-purple-600 to-blue-600,
     textColor:,
   text-purple-400',
-    link: 'https://ziontechgroup.com/ai-quantum-hybrid-computing,
+    link: 'http,
+    s://ziontechgroup.com/ai-quantum-hybrid-computing,
     marketPosition:;
   'Competitive with IBM Quantum ($0.10-1.60/quantum hour), Google Quantum AI ($0.50-2.00/quantum hour), and Amazon Braket ($0.30-1.50/quantum hour). Our advantage: AI-quantum hybrid approach, comprehensive tooling, and expert support.,
   ,
@@ -489,12 +507,14 @@ reviews: number;export const nextGenAIServices2026: NextGenAIService2026[] = [;
   400% annual growth',
     variant: 'quantum-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Complete AI-quantum hybrid platform with access to multiple quantum computers, custom algorithm development, and comprehensive support services.',

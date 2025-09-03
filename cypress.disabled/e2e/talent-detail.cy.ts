@@ -1,25 +1,37 @@
 describe(
   'talent detail page', () => {
-  it(
+  it('
   'loads profile from API', () => {
-    cy.intercept(
+<<<<<<< HEAD
+    cy.intercept('
   'GET',
   '/api/talent/t-123', {
+=======
+    cy.intercept(
+  'GET,/api/talent/t-123', {
+>>>>>>> main
       statusCode: 200,
       body: {
-        id:,
+        i,
+    d:,
   t-123',
         full_name: 'Cypress Talent,
         bio:,
   Testing bio',
         skills: [;
-  'Cypress]}}).as(
+  'Cypress]}}).as('
   'getTalent');
-    cy.visit(
+    cy.visit('
   '/talent/t-123');
-    cy.wait(
+    cy.wait('
   '@getTalent');
-    cy.get(
-  '[data-testid='talent-name']').should(
+<<<<<<< HEAD
+    cy.get('
+  '[data-testid='talent-name']).should('
   'contain',
   'Cypress Talent')})})
+=======
+    cy.get(
+  '[data-testid='talent-name']').should(
+  'contain,Cypress Talent')})})
+>>>>>>> main

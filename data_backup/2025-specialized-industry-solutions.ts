@@ -27,16 +27,21 @@ export interface SpecializedIndustrySolution {
    growthRate: string;
    contactInfo: { mobile: string;
    email: string;
-   address: string;
-   website: string}
+   addres,
+    s: string;
+   websit,
+    e: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-reviews: number;export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [;
+review,
+    s: number;export const specializedIndustrySolutions202,
+    5: SpecializedIndustrySolution[] = [;
   // MANUFACTURING & INDUSTRIAL SOLUTIONS{
-    id:,
+    i,
+    d:,
   autonomous-manufacturing-optimizer',
     name: 'Autonomous Manufacturing Optimizer,
     tagline:,
@@ -64,7 +69,8 @@ reviews: number;export const specializedIndustrySolutions2025: SpecializedIndust
     color: 'from-gray-600 to-slate-700,
     textColor:,
   text-gray-300',
-    link: 'https://ziontechgroup.com/autonomous-manufacturing-optimizer,
+    link: 'http,
+    s://ziontechgroup.com/autonomous-manufacturing-optimizer,
     marketPosition:,
   Leading autonomous manufacturing platform with 99.9% uptime guarantee',
     targetAudience: Manufacturing companies, industrial facilities, automotive industry, aerospace companies',
@@ -100,7 +106,8 @@ reviews: number;export const specializedIndustrySolutions2025: SpecializedIndust
     growthRate:,
   180% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -143,7 +150,8 @@ reviews: number;export const specializedIndustrySolutions2025: SpecializedIndust
     color: 'from-blue-600 to-indigo-700,
     textColor:,
   text-blue-300',
-    link: 'https://ziontechgroup.com/ai-powered-clinical-decision-support,
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-clinical-decision-support,
     marketPosition:,
   Leading AI clinical decision support with 99.5% accuracy rate',
     targetAudience: Hospitals, clinics, medical practices, research institutions, pharmaceutical companies',
@@ -180,7 +188,8 @@ reviews: number;export const specializedIndustrySolutions2025: SpecializedIndust
     growthRate:,
   220% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -223,7 +232,8 @@ reviews: number;export const specializedIndustrySolutions2025: SpecializedIndust
     color: 'from-green-600 to-emerald-700,
     textColor:,
   text-green-300',
-    link: 'https://ziontechgroup.com/autonomous-financial-risk-manager,
+    link: 'http,
+    s://ziontechgroup.com/autonomous-financial-risk-manager,
     marketPosition:,
   Leading autonomous risk management platform with 99.9% risk detection rate',
     targetAudience: Banks, investment firms, hedge funds, insurance companies, asset managers',
@@ -259,7 +269,8 @@ reviews: number;export const specializedIndustrySolutions2025: SpecializedIndust
     growthRate:,
   250% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -302,7 +313,8 @@ reviews: number;export const specializedIndustrySolutions2025: SpecializedIndust
     color: 'from-pink-600 to-rose-700,
     textColor:,
   text-pink-300',
-    link: 'https://ziontechgroup.com/ai-powered-retail-optimization-platform,
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-retail-optimization-platform,
     marketPosition:,
   Leading AI retail platform with 35% average sales increase',
     targetAudience: Retail chains, e-commerce companies, department stores, specialty retailers',
@@ -338,7 +350,8 @@ reviews: number;export const specializedIndustrySolutions2025: SpecializedIndust
     growthRate:,
   180% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -380,7 +393,8 @@ reviews: number;export const specializedIndustrySolutions2025: SpecializedIndust
     color: 'from-indigo-600 to-purple-700,
     textColor:,
   text-indigo-300',
-    link: 'https://ziontechgroup.com/ai-powered-adaptive-learning-platform,
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-adaptive-learning-platform,
     marketPosition:,
   Leading adaptive learning platform with 40% improvement in learning outcomes',
     targetAudience: Universities, schools, corporate training, online education platforms, edtech companies',
@@ -416,7 +430,8 @@ reviews: number;export const specializedIndustrySolutions2025: SpecializedIndust
     growthRate:,
   200% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -459,7 +474,8 @@ reviews: number;export const specializedIndustrySolutions2025: SpecializedIndust
     color: 'from-orange-600 to-red-700,
     textColor:,
   text-orange-300',
-    link: 'https://ziontechgroup.com/autonomous-logistics-optimizer,
+    link: 'http,
+    s://ziontechgroup.com/autonomous-logistics-optimizer,
     marketPosition:,
   Leading autonomous logistics platform with 30% cost reduction',
     targetAudience: Logistics companies, transportation firms, e-commerce companies, manufacturing companies',
@@ -495,7 +511,8 @@ reviews: number;export const specializedIndustrySolutions2025: SpecializedIndust
     growthRate:,
   160% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -538,7 +555,8 @@ reviews: number;export const specializedIndustrySolutions2025: SpecializedIndust
     color: 'from-yellow-600 to-orange-700,
     textColor:,
   text-yellow-300',
-    link: 'https://ziontechgroup.com/ai-powered-energy-optimization-platform,
+    link: 'http,
+    s://ziontechgroup.com/ai-powered-energy-optimization-platform,
     marketPosition:,
   Leading energy optimization platform with 25% cost reduction',
     targetAudience: Utility companies, energy providers, industrial facilities, commercial buildings',
@@ -574,7 +592,8 @@ reviews: number;export const specializedIndustrySolutions2025: SpecializedIndust
     growthRate:,
   180% annual growth',
     contactInfo: {
-      mobile:;
+      mobil,
+    e:;
   '+1 302 464 0950,
       email:,
   kleber@ziontechgroup.com',
@@ -589,12 +608,14 @@ reviews: number;export const specializedIndustrySolutions2025: SpecializedIndust
     rating: 4.6,
     reviews: 42;
 ];
-export const industryCategories2025: string[] = Array.from(
+export const industryCategories202,
+    5: string[] = Array.from(
   new Set(
     specializedIndustrySolutions2025;
       .map((s) => s.industry);
       .filter((v): v is string = > Boolean(v)))).sort();
-export const getSolutionsByIndustry = (industry: string) => {
+export const getSolutionsByIndustry = (industr,
+    y: string) => {
   if (!industry || industry ===,
   All') return specializedIndustrySolutions2025;
 return specializedIndustrySolutions2025.filter((s) => s.industry === industry)}

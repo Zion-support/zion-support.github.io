@@ -9,9 +9,12 @@ export interface Revolutionary2027ItService {
    category: string;
    realImplementation: boolean;
    contactInfo: { mobile: string;
-   email: string;
-   address: string}export const revolutionary2027ITServices: Revolutionary2027ItService[] = [{
-    id: '2027-revolutionary-it',
+   emai,
+    l: string;
+   addres,
+    s: string}export const revolutionary2027ITServices: Revolutionary2027ItService[] = [{
+    i,
+    d: '2027-revolutionary-it',
     name: '2027 Revolutionary IT Platform',
     tagline: 'Revolutionary IT for 2027',
     price: '$349/month',
@@ -26,8 +29,9 @@ export interface Revolutionary2027ItService {
     link: '/services/2027-revolutionary-it',
     category: 'Revolutionary 2027 IT',
     realImplementation: true,
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709';
 ]}}}

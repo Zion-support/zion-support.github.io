@@ -10,8 +10,10 @@ import React, { useState, useEffect, useCallback, useMemo } from;
    growthRate: number;
    averageRating: number;
    priceRange: string;
-   implementationTime: string;
-   roi: string} interface UserBehavior {
+   implementationTim,
+    e: string;
+   ro,
+    i: string} interface UserBehavior {
    pageViews: string[];
    timeSpent: number;
    interactions: string[];
@@ -19,17 +21,23 @@ import React, { useState, useEffect, useCallback, useMemo } from;
    companySize: string;
    industry: string;
    budget: string;
-   timeline: string;
-   painPoints: string[]} interface ServiceRecommendation {
+   timelin,
+    e: string;
+   painPoint,
+    s: string[]} interface ServiceRecommendation {
    id: string;
    service: ServiceCategory;
    confidence: number;
    reasoning: string[];
    benefits: string[];
    implementation: string[];
-   estimatedCost: string;
-   estimatedROI: string;
-   priority:, high' | 'medium' | 'low'} const serviceCategories: ServiceCategory[] = [ { id:;
+   estimatedCos,
+    t: string;
+   estimatedRO,
+    I: string;
+   priorit,
+    y:, high' | 'medium' | 'low'} const serviceCategories: ServiceCategory[] = [ { i,
+    d:;
   'ai-ml, name:;
   'AI & Machine Learning', icon: Brain, description:;
   'Advanced AI solutions for business automation and intelligence', popularity: 95, growthRate: 87, averageRating: 4.8, priceRange:,
@@ -59,9 +67,9 @@ import React, { useState, useEffect, useCallback, useMemo } from;
   'Connected devices and edge processing solutions', popularity: 68, growthRate: 82, averageRating: 4.3, priceRange:,
   $40K - $400K', implementationTime: '3-6 months, roi:,
   200-450%' }, { id: 'digital-twin, name:;
-  'Digital Twin Platform', icon: Eye, description:;
+  'Digital Twin Platform', icon: Eye, description:
   'Virtual representations of physical systems', popularity: 65, growthRate: 94, averageRating: 4.6, priceRange:,
-  $150K - $1.5M', implementationTime: '6-10 months, roi:
+  $150K - $1.5M', implementationTime: '6-10 months, roi:'
   '400-800%' } ]  export function AIServiceRecommendationEngine() { const [isOpen, setIsOpen] = useState(false) const [isAnalyzing, setIsAnalyzing] = useState(false) const [userBehavior, setUserBehavior] = useState<UserBehavior>({ pageViews: [], timeSpent: 0, interactions: [], interests: [], companySize:,
   medium', industry: 'technology, budget:,
-  medium', timeline: '6-12 months, painPoints: [] }) const [recommendations, setRecommendations] = useState<ServiceRecommendation[]>([]) const [selectedService, setSelectedService] = useState<ServiceRecommendation | null>(null) const [analysisProgress, setAnalysisProgress] = useState(0) '
+  medium', timeline: '6-12 months, painPoints: [] }) const [recommendations, setRecommendations] = useState<ServiceRecommendation[]>([]) const [selectedService, setSelectedService] = useState<ServiceRecommendation | null>(null) const [analysisProgress, setAnalysisProgress] = useState(0) ''

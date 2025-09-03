@@ -1,32 +1,40 @@
-import React from,
-  react.ts' import { motion } from;
+import React from react.ts' import { motion } from;
   'framer-motion.ts' import { FileText, Shield, Zap, CheckCircle, BarChart3, Sparkles, ArrowRight, Brain, Cpu, Database, Globe, Rocket, Target, TrendingUp, Layers, Scale, Gavel, BookOpen, Search, Clock, DollarSign, Phone, Mail, MapPin, Building, Home, Heart } from;
   'lucide-react.ts' import { SEO } from;
   '@/components/SEO'  export default function AILegalDocumentAutomation(...args[]: any): { const features = ['AI-powered contract analysis and generation,
-  Legal document template automation',';Compliance checking and risk assessment',';Multi-jurisdiction legal framework support',';Real-time legal research and citation',';Automated contract negotiation assistance',';Legal document version control and tracking',';Integration with legal practice management systems' ]  const benefits = ['Reduce legal document creation time by 85%',';Minimize legal risks and compliance errors',';Standardize legal processes across organizations',';Enable faster contract negotiations and closings',';Reduce legal costs by 40-60%',';Improve accuracy and consistency in legal documents' ]  const useCases = [ { industry: 'Corporate Law, description:;
+<<<<<<< HEAD
+  Legal document template automation',;Compliance checking and risk assessment',;Multi-jurisdiction legal framework support',;Real-time legal research and citation',;Automated contract negotiation assistance',;Legal document version control and tracking',;Integration with legal practice management systems' ]  const benefits = ['Reduce legal document creation time by 85%',;Minimize legal risks and compliance errors',;Standardize legal processes across organizations',;Enable faster contract negotiations and closings',;Reduce legal costs by 40-60%',;Improve accuracy and consistency in legal documents' ]  const useCases = [ { industry: 'Corporate Law, description:;
+=======
+  Legal document template automation,;Compliance checking and risk assessment,;Multi-jurisdiction legal framework support,;Real-time legal research and citation,;Automated contract negotiation assistance,;Legal document version control and tracking,;Integration with legal practice management systems' ]  const benefits = ['Reduce legal document creation time by 85%,;Minimize legal risks and compliance errors,;Standardize legal processes across organizations,;Enable faster contract negotiations and closings,;Reduce legal costs by 40-60%,;Improve accuracy and consistency in legal documents' ]  const useCases = [
+  { industry: 'Corporate Law, description:;
+>>>>>>> main
   'Automated contract generation and management for businesses', icon: Building, applications: [,
-  M&A contracts',
-  'Employment agreements',
-  'Vendor contracts',
-  'NDAs'] }, { industry: 'Real Estate, description:;
+  M&A contracts,Employment agreements,Vendor contracts,NDAs'] }, { industry: 'Real Estate, description:;
   'Streamlined property transaction documentation', icon: Home, applications: [,
-  Purchase agreements',
-  'Lease contracts',
-  'Title documents',
-  'Closing paperwork'] }, { industry: 'Healthcare, description:;
+  Purchase agreements,Lease contracts,Title documents,Closing paperwork'] }, { industry: 'Healthcare, description:;
   'Compliance-focused medical practice documentation', icon: Heart, applications: [,
-  Patient consent forms',
-  'HIPAA compliance',
-  'Medical contracts',
-  'Regulatory filings'] }, { industry: 'Startups & SMEs, description:;
+  Patient consent forms,HIPAA compliance,Medical contracts,Regulatory filings'] }, { industry: 'Startups & SMEs, description:;
   'Cost-effective legal document automation', icon: Rocket, applications: [,
+<<<<<<< HEAD
   Founder agreements',
   'Investment documents',
   'IP protection',
   'Employment contracts'] } ]  const pricing = [ { plan: 'Starter, price:,
-  $299', period: '/month, features: [';Up to 50 documents/month',';Basic contract templates',';Standard compliance checks',';Email support',';Basic legal research tools' ], recommended: false }, { plan:,
+  $299', period: '/month, features: [';Up to 50 documents/month',;Basic contract templates',;Standard compliance checks',;Email support',;Basic legal research tools' ], recommended: false }, { plan:,
   Professional', price: '$799, period:,
-  /month', features: [';Up to 200 documents/month,';Advanced contract templates',';Multi-jurisdiction support',';Priority support',';Advanced legal research',';Contract negotiation assistance' ], recommended: true }, { plan:,
+  /month', features: [';Up to 200 documents/month,;Advanced contract templates',;Multi-jurisdiction support',;Priority support',;Advanced legal research',;Contract negotiation assistance' ], recommended: true }, { plan:,
   Enterprise', price: $1, 999,
-  , period: '/month, features: [';Unlimited documents',';Custom template creation',';White-label solutions',';24/7 dedicated support',';API access',';Custom integrations' ], recommended: false } ]  const legalTechnologies = [ { name:,
+  , period: '/month, features: [';Unlimited documents',;Custom template creation',;White-label solutions',;24/7 dedicated support',;API access',;Custom integrations' ], recommended: false } ]  const legalTechnologies = [ { name:,
+  Clio', url: 'http,
+    s:'';
+=======
+  Founder agreements,Investment documents,IP protection,Employment contracts'] } ]  const pricing = [
+  { plan: 'Starter, price:,
+  $299', period: '/month, features: [';Up to 50 documents/month,;Basic contract templates,;Standard compliance checks,;Email support,;Basic legal research tools' ], recommended: false }, { plan:,
+  Professional', price: '$799, period:,
+  /month', features: [';Up to 200 documents/month,';Advanced contract templates,;Multi-jurisdiction support,;Priority support,;Advanced legal research,;Contract negotiation assistance' ], recommended: true }, { plan:,
+  Enterprise', price: $1, 999,
+  , period: '/month, features: [';Unlimited documents,;Custom template creation,;White-label solutions,;24/7 dedicated support,;API access,;Custom integrations' ], recommended: false } ]  const legalTechnologies = [
+  { name:,
   Clio', url: 'https:'';
+>>>>>>> main

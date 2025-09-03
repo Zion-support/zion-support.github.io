@@ -1,1 +1,9 @@
-export function ITServiceRequestHero() { const [location, setLocation] = useState(') const [isSubmitting, setIsSubmitting] = useState(false) const navigate = useNavigate() const handleSubmit = e => { e.preventDefault() if (!location.trim()) return setIsSubmitting(true)';'"
+<<<<<<< HEAD
+export function ITServiceRequestHero() { const [location, setLocation] = useState(') const [isSubmitting, setIsSubmitting] = useState(false) const navigate = useNavigate() const handleSubmit = e => { e.preventDefault() if (!location.trim()) return setIsSubmitting(true)''"
+=======
+<<<<<<< HEAD
+export function ITServiceRequestHero() { const [location, setLocation] = useState(') const [isSubmitting, setIsSubmitting] = useState(false) const navigate = useNavigate() const handleSubmit = e => { e.preventDefault() if (!location.trim()) return setIsSubmitting(true);""
+=======
+export function ITServiceRequestHero() { const [location, setLocation] = useState(') const [isSubmitting, setIsSubmitting] = useState(false) const navigate = useNavigate() const handleSubmit = e => { e.preventDefault() if (!location.trim()) return setIsSubmitting(true)"
+>>>>>>> main
+>>>>>>> main

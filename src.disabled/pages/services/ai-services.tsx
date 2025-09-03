@@ -4,29 +4,49 @@ import React from;
 import { Link } from;
   'react-router-dom';
 const AIServices: React.FC = () => {
-  return(
-    <div className='max-w-5xl mx-auto px-4 py-12 text-white'>
-      <h1 className='text-4xl font-bold mb-4'>AI Services</h1>
-      <p className='text-gray-300 mb-6'>Strategy, implementation, and managed AI.</p>
-      <ul className='list-disc pl-6 space-y-2 text-gray-300'>
-        <li><Link className='text-blue-400' to='/services/ai-email-responder'>AI Email Responder</Link></li>
+  return('
+    <div className='max-w-5xl mx-auto px-4 py-12 text-white>
+      <h1 className='text-4xl font-bold mb-4'>AI Services</h1>'
+      <p className='text-gray-300 mb-6'>Strategy, implementation, and managed AI.</p>'
+      <ul className='list-disc pl-6 space-y-2 text-gray-300>
+        <li><Link className='text-blue-400' to='/services/ai-email-responder'>AI Email Responder</Link></li>'
         <li><Link className='text-blue-400' to='/services/ai-seo-optimizer'>AI SEO Optimizer</Link></li>
       </ul>
+<<<<<<< HEAD
     </div>
+import React from 'react'
+=======
+    </div>'
 import React from 'react';
+<<<<<<< HEAD
+>>>>>>> main
 import { Link } from 'react-router-dom'
 
 const AIServices: React.FC = () => {
+  return ('
+    <div className='max-w-5xl mx-auto px-4 py-12 text-white>'
+      <h1 className='text-4xl font-bold mb-4'>AI Services</h1>''
+      <p className='text-gray-300 mb-6'>Strategy, implementation, and managed AI.</p>''
+      <ul className='list-disc pl-6 space-y-2 text-gray-300>'
+        <li><Link className='text-blue-400' to='/services/ai-email-responder'>AI Email Responder</Link></li>''
+=======
+import { Link }  from 'react-router-dom';const AIServices: React.FC = () => {
   return (
     <div className='max-w-5xl mx-auto px-4 py-12 text-white'>'
       <h1 className='text-4xl font-bold mb-4'>AI Services</h1>'
       <p className='text-gray-300 mb-6'>Strategy, implementation, and managed AI.</p>'
       <ul className='list-disc pl-6 space-y-2 text-gray-300'>'
         <li><Link className='text-blue-400' to='/services/ai-email-responder'>AI Email Responder</Link></li>'
+>>>>>>> main
         <li><Link className='text-blue-400' to='/services/ai-seo-optimizer'>AI SEO Optimizer</Link></li>
       </ul>
     </div>
   )}
+<<<<<<< HEAD
 ;
-export default AIServices;
+export default AIServices
 '
+=======
+export default AIServices;
+''
+>>>>>>> main

@@ -21,36 +21,64 @@ import {}
   Activity,
   Key} from 'lucide-react.ts';
 :pages.disabled/pages/services/AICybersecurityElite.tsx;
-const AICybersecurityElite: React.FC = (): JSX.Element => {
-  return()    <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>'
-const AICybersecurityElite: React.FC = (): JSX.Element => {}
-  return()    <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>
-      {/* Hero Section */}''
-      <section className='relative py-20 px-4 sm:px-6 lg:px-8'>''
+const AICybersecurityElite: React.FC = (): JSX.Element => {'
+  return()    <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light>
+const AICybersecurityElit,
+    e: React.FC = (): JSX.Element => {}
+  return()    <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light>
+      {/* Hero Section */}'
+      <section className='relative py-20 px-4 sm: px-6 l,
+    g:px-8>''
         <div className='max-w-7xl mx-auto text-center'>
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacit,
+    y: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AICybersecurityElite.tsx;
-            transition={{ duration: 0.8 }}'>''
-            <div className='flex justify-center mb-6'>''
-              <div className='p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full'>''
-                <Shield className='h-12 w-12 text-white'  />              </div>'
-            </div>''
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
-              AI Cybersecurity Elite'
-            </h1>''
-            <p className='text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto'>
+            transition={{ duration: 0.8 }}>'''
+            <div className='flex justify-center mb-6>''
+              <div className='p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full>''
+                <Shield className='h-12 w-12 text-white'  />              </div>''
+            </div>'''
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6>
+              AI Cybersecurity Elite''
+            </h1>'''
+            <p className='text-xl m,
+    d:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto'>
               Protect your business with the most advanced AI-powered;
               cybersecurity platform. Real-time threat detection, automated;
-              response, and 24/7 protection against evolving cyber threats.'
-            </p>''
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
+              response, and 24/7 protection against evolving cyber threats.''
+            </p>'''
+            <div className='flex flex-col sm: flex-row gap-4 justify-center>'
               <a'';
                 href='https://ziontechgroup.com/contact'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105'>';
-                Secure Your Business''
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hove,
+    r:scale-105>;
+                Secure Your Business'''
                 <ArrowRight className='ml-2 h-5 w-5'  />              </a>';
+            transition={{ duratio,
+    n: 0.8 }}
+          >'''
+            <div className='flex justify-center mb-6>''
+              <div className='p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full>''
+                <Shield className='h-12 w-12 text-white'  />              </div>'
+            </div>'''
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
+              AI Cybersecurity Elite'
+            </h1>'''
+            <p className='text-xl m,
+    d:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto'>
+              Protect your business with the most advanced AI-powered;
+              cybersecurity platform. Real-time threat detection, automated
+              response, and 24/7 protection against evolving cyber threats.'
+            </p>'''
+            <div className='flex flex-col sm: flex-row gap-4 justify-center>
+              <a'''
+                href='https://ziontechgroup.com/contact'';
+<<<<<<< HEAD
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105'>'
+                Secure Your Business''
+                <ArrowRight className='ml-2 h-5 w-5'  />              </a>'
             transition={{ duration: 0.8 }}
           >''
             <div className='flex justify-center mb-6'>''
@@ -62,7 +90,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
             </h1>''
             <p className='text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto'>
               Protect your business with the most advanced AI-powered;
-              cybersecurity platform. Real-time threat detection, automated;
+              cybersecurity platform. Real-time threat detection, automated
               response, and 24/7 protection against evolving cyber threats.
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -73,97 +101,133 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
                 <ArrowRight className='ml-2 h-5 w-5'  />              </a>
               <a'';
                 href='tel:+13024640950'';
-                className='inline-flex items-center px-8 py-4 bg-zion-slate text-white font-semibold rounded-lg hover:bg-zion-slate-light transition-all duration-300''>'';
+                className='inline-flex items-center px-8 py-4 bg-zion-slate text-white font-semibold rounded-lg hover:bg-zion-slate-light transition-all duration-300''>''
 :pages.disabled/pages/services/AICybersecurityElite.tsx
                 <Phone className='mr-2 h-5 w-5'  />                Call Security Team
+=======
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105'>
+                Secure Your Business'''
+                <ArrowRight className='ml-2 h-5 w-5'  />              </a>'
+              <a'';
+                href='te,
+    l:+13024640950'';
+                className='inline-flex items-center px-8 py-4 bg-zion-slate text-white font-semibold rounded-lg hove,
+    r:bg-zion-slate-light transition-all duration-300>;
+:pages.disabled/pages/services/AICybersecurityElite.tsx'
+                <Phone className='mr-2 h-5 w-5'  />                Call Security Team'
+>>>>>>> main
                 <Phone className='mr-2 h-5 w-5'  />                Call Security Team
               </a>
             </div>
           </motion.div>
         </div>
-:pages.disabled/pages/services/AICybersecurityElite.tsx
+:pages.disabled/pages/services/AICybersecurityElite.tsx'
       </section>'
-      </section>
-      {/* Features Section */}''
-      <section className='py-20 px-4 sm:px-6 lg:px-8'>''
+      </section>'
+      {/* Features Section */}'
+      <section className='py-20 px-4 sm: px-6 l,
+    g:px-8>''
         <div className='max-w-7xl mx-auto'>
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacit,
+    y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AICybersecurityElite.tsx;
-            transition={{ duration: 0.8 }}';
+            transition={{ duration: 0.8 }};
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}'';
-            className='text-center mb-16''>''
+            viewport={{ once: true }};
+            className='text-center mb-16>'
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AICybersecurityElite.tsx;
-              Military-Grade Security Features';
+<<<<<<< HEAD
+              Military-Grade Security Features'
               Military-Grade Security Features
             </h2>''
+=======
+              Military-Grade Security Features';
+              Military-Grade Security Features'
+            </h2>'''
+>>>>>>> main
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Our AI-powered cybersecurity platform combines cutting-edge;
-              technology with proven security practices to provide comprehensive;
+              technology with proven security practices to provide comprehensive
               protection for your digital assets.
             </p>
-:pages.disabled/pages/services/AICybersecurityElite.tsx
+:pages.disabled/pages/services/AICybersecurityElite.tsx'
           </motion.div>'
-          </motion.div>
-''
-          <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>
+          </motion.div>'
+'''
+          <div className='grid grid-cols-1 md: anygrid-cols-2 l,
+    g:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AICybersecurityElite.tsx;
-                transition={{ duration: 0.8, delay: index * 0.1 }}';
+                transition={{ duration: 0.8, delay: index * 0.1 }};
                 transition={{ duration: 0.8, delay: index * 0.1 }}
+<<<<<<< HEAD
                 viewport={{ once: true }}'';
                 className='bg-zion-slate p-8 rounded-xl border border-zion-slate-light hover:border-red-500 transition-all duration-300''>''
-                <div className='p-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg w-fit mb-6'>'';
+                <div className='p-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg w-fit mb-6'>''
 :pages.disabled/pages/services/AICybersecurityElite.tsx
+=======
+                viewport={{ once: true }};
+                className='bg-zion-slate p-8 rounded-xl border border-zion-slate-light hover:border-red-500 transition-all duration-300>'
+                <div className='p-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg w-fit mb-6>';
+:pages.disabled/pages/services/AICybersecurityElite.tsx'
+>>>>>>> main
                   <feature.icon className='h-8 w-8 text-white' />'
-                </div>''
-                <h3 className='text-xl font-semibold text-white mb-4'>
-                  {feature.title}'
+                </div>'''
+                <h3 className='text-xl font-semibold text-white mb-4>
+                  {feature.title}
                   <feature.icon className='h-8 w-8 text-white' />
-                </div>''
+                </div>'''
                 <h3 className='text-xl font-semibold text-white mb-4'>
                   {feature.title}
-                </h3>''
+                </h3>'''
                 <p className='text-zion-slate-light'>{feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
-:pages.disabled/pages/services/AICybersecurityElite.tsx
+:pages.disabled/pages/services/AICybersecurityElite.tsx'
       </section>'
-      </section>
-      {/* Security Features Section */}''
-      <section className='py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate'>''
+      </section>'
+      {/* Security Features Section */}'
+      <section className='py-20 px-4 sm: px-6 l,
+    g:px-8 bg-zion-slate>''
         <div className='max-w-7xl mx-auto'>
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacit,
+    y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AICybersecurityElite.tsx;
-            transition={{ duration: 0.8 }}';
+            transition={{ duration: 0.8 }};
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}'';
-            className='text-center mb-16''>''
+            viewport={{ once: true }};
+            className='text-center mb-16>'
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AICybersecurityElite.tsx;
-              Advanced Security Capabilities';
+<<<<<<< HEAD
+              Advanced Security Capabilities'
               Advanced Security Capabilities
             </h2>''
+=======
+              Advanced Security Capabilities';
+              Advanced Security Capabilities'
+            </h2>'''
+>>>>>>> main
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Go beyond basic security with our advanced AI-powered;
-              cybersecurity features designed to protect against the most;
+              cybersecurity features designed to protect against the most
               sophisticated threats.
             </p>
-:pages.disabled/pages/services/AICybersecurityElite.tsx
+:pages.disabled/pages/services/AICybersecurityElite.tsx'
           </motion.div>'
-          </motion.div>
-''
+          </motion.div>'
+'''
           <div className='grid grid-cols-1 md: anygrid-cols-2 gap-8'>
             {securityFeatures.map((feature, index) => (
               <motion.div;
@@ -171,46 +235,54 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AICybersecurityElite.tsx;
-                transition={{ duration: 0.8, delay: index * 0.1 }}';
+                transition={{ duration: 0.8, delay: index * 0.1 }};
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}'';
-                className='bg-zion-slate-dark p-8 rounded-xl border border-zion-slate-light''>''
-                <h3 className='text-xl font-semibold text-white mb-4'>
-:pages.disabled/pages/services/AICybersecurityElite.tsx{feature.title}'{feature.title}
-                </h3>''
+                viewport={{ once: true }};
+                className='bg-zion-slate-dark p-8 rounded-xl border border-zion-slate-light>'
+                <h3 className='text-xl font-semibold text-white mb-4>
+:pages.disabled/pages/services/AICybersecurityElite.tsx{feature.title}{feature.title}
+                </h3>'''
                 <p className='text-zion-slate-light'>{feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
-:pages.disabled/pages/services/AICybersecurityElite.tsx
+:pages.disabled/pages/services/AICybersecurityElite.tsx'
       </section>'
-      </section>
-      {/* Compliance Section */}''
-      <section className='py-20 px-4 sm:px-6 lg:px-8'>''
+      </section>'
+      {/* Compliance Section */}'
+      <section className='py-20 px-4 sm: px-6 l,
+    g:px-8>''
         <div className='max-w-7xl mx-auto'>
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacit,
+    y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AICybersecurityElite.tsx;
-            transition={{ duration: 0.8 }}';
+            transition={{ duration: 0.8 }};
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}'';
-            className='text-center mb-16''>''
+            viewport={{ once: true }};
+            className='text-center mb-16>'
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AICybersecurityElite.tsx;
-              Industry Compliance & Standards';
+<<<<<<< HEAD
+              Industry Compliance & Standards'
               Industry Compliance & Standards
             </h2>''
+=======
+              Industry Compliance & Standards';
+              Industry Compliance & Standards'
+            </h2>'''
+>>>>>>> main
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Our platform meets and exceeds the highest industry standards for;
-              cybersecurity, ensuring your business remains compliant with;
+              cybersecurity, ensuring your business remains compliant with
               regulatory requirements.
             </p>
-:pages.disabled/pages/services/AICybersecurityElite.tsx
+:pages.disabled/pages/services/AICybersecurityElite.tsx'
           </motion.div>'
-          </motion.div>
-''
+          </motion.div>'
+'''
           <div className='grid grid-cols-2 md: anygrid-cols-4 gap-6'>
             {complianceStandards.map((standard, index) => (
               <motion.div;
@@ -218,12 +290,19 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AICybersecurityElite.tsx;
-                transition={{ duration: 0.8, delay: index * 0.1 }}';
+                transition={{ duration: 0.8, delay: index * 0.1 }};
                 transition={{ duration: 0.8, delay: index * 0.1 }}
+<<<<<<< HEAD
                 viewport={{ once: true }}'';
                 className='bg-zion-slate p-6 rounded-xl border border-zion-slate-light text-center''>''
-                <div className='p-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg w-fit mx-auto mb-4'>'';
+                <div className='p-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg w-fit mx-auto mb-4'>''
 :pages.disabled/pages/services/AICybersecurityElite.tsx
+=======
+                viewport={{ once: true }};
+                className='bg-zion-slate p-6 rounded-xl border border-zion-slate-light text-center>'
+                <div className='p-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg w-fit mx-auto mb-4>';
+:pages.disabled/pages/services/AICybersecurityElite.tsx'
+>>>>>>> main
                   <Award className='h-6 w-6 text-white'  />'
                   <Award className='h-6 w-6 text-white'  />
                 </div>'                <h3 className='text-lg font-semibold text-white'>{standard}</h3>
@@ -231,34 +310,42 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
             ))}
           </div>
         </div>
-:pages.disabled/pages/services/AICybersecurityElite.tsx
+:pages.disabled/pages/services/AICybersecurityElite.tsx'
       </section>'
-      </section>
-      {/* Pricing Section */}''
-      <section className='py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate'>''
+      </section>'
+      {/* Pricing Section */}'
+      <section className='py-20 px-4 sm: px-6 l,
+    g:px-8 bg-zion-slate>''
         <div className='max-w-7xl mx-auto'>
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacit,
+    y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AICybersecurityElite.tsx;
-            transition={{ duration: 0.8 }}';
+            transition={{ duration: 0.8 }};
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}'';
-            className='text-center mb-16''>''
+            viewport={{ once: true }};
+            className='text-center mb-16>'
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AICybersecurityElite.tsx;
-              Comprehensive Security Plans';
+<<<<<<< HEAD
+              Comprehensive Security Plans'
               Comprehensive Security Plans
             </h2>''
+=======
+              Comprehensive Security Plans';
+              Comprehensive Security Plans'
+            </h2>'''
+>>>>>>> main
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Choose the security plan that fits your business needs. All plans;
-              include our core AI cybersecurity engine and 24/7 threat;
+              include our core AI cybersecurity engine and 24/7 threat
               monitoring.
             </p>
-:pages.disabled/pages/services/AICybersecurityElite.tsx
+:pages.disabled/pages/services/AICybersecurityElite.tsx'
           </motion.div>'
-          </motion.div>
-''
+          </motion.div>'
+'''
           <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8'>
             {pricing.map((plan, index) => (
               <motion.div;
@@ -268,15 +355,16 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
 :pages.disabled/pages/services/AICybersecurityElite.tsx;
-                className={`relative bg-zion-slate-dark p-8 rounded-xl border-2 ${
+                className={`relative bg-zion-slate-dark p-8 rounded-xl border-2 ${`
 ';
                   plan.popular'';
-                    ? 'border-red-500 shadow-2xl shadow-red-500/25'''`;
-                    : 'border-zion-slate-light'``}`}
+                    ? 'border-red-500 shadow-2xl shadow-red-500/25'''`;`
+                    : 'border-zion-slate-light'``}`}`
               >';
-                className={`relative bg-zion-slate-dark p-8 rounded-xl border-2 ${}
+                className={`relative bg-zion-slate-dark p-8 rounded-xl border-2 ${}`
                   plan.popular';
-                    ? 'border-red-500 shadow-2xl shadow-red-500/25'';
+<<<<<<< HEAD
+                    ? 'border-red-500 shadow-2xl shadow-red-500/25''
                     : 'border-zion-slate-light'`}`}
               >{plan.popular && (''
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''
@@ -284,7 +372,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
                       Most Popular
                     </span>
                   </div>
-:pages.disabled/pages/services/AICybersecurityElite.tsx)}';
+:pages.disabled/pages/services/AICybersecurityElite.tsx)}'
 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>
@@ -294,27 +382,48 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
                     <span className='text-4xl font-bold text-white'>
                       {plan.price}'
                     </span>''
+=======
+                    ? 'border-red-500 shadow-2xl shadow-red-500/25'';
+                    : 'border-zion-slate-light'`}`}`
+              >{plan.popular && ('''
+                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>''
+                    <span className='bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
+                      Most Popular
+                    </span>
+                  </div>'
+:pages.disabled/pages/services/AICybersecurityElite.tsx)};
+'''
+                <div className='text-center mb-8>''
+                  <h3 className='text-2xl font-bold text-white mb-2>
+                    {plan.name}
+                  </h3>'''
+                  <div className='flex items-baseline justify-center>''
+                    <span className='text-4xl font-bold text-white>
+                      {plan.price}
+                    </span>'''
+>>>>>>> main
                     <span className='text-zion-slate-light ml-1'>
                       {plan.period}
                     </span>')}
-''
-                <div className='text-center mb-8'>''
+'''
+                <div className='text-center mb-8>''
                   <h3 className='text-2xl font-bold text-white mb-2'>
                     {plan.name}
-                  </h3>''
-                  <div className='flex items-baseline justify-center'>''
+                  </h3>'''
+                  <div className='flex items-baseline justify-center>''
                     <span className='text-4xl font-bold text-white'>
                       {plan.price}
-                    </span>''
+                    </span>'''
                     <span className='text-zion-slate-light ml-1'>
                       {plan.period}
-                    </span>
-                  </div>''
+                    </span>'
+                  </div>'''
                   <p className='text-zion-slate-light mt-2'>
                     {plan.description}
                   </p>
+<<<<<<< HEAD
 :pages.disabled/pages/services/AICybersecurityElite.tsx
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>'
                 </div>
@@ -323,178 +432,251 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
                   {plan.features.map((feature, featureIndex) => (''
                     <li key={featureIndex} className='flex items-center'>''
                       <CheckCircle className='h-5 w-5 text-green-400 mr-3 flex-shrink-0'  />'                      <span className='text-white'>{feature}</span>
+=======
+:pages.disabled/pages/services/AICybersecurityElite.tsx'
+                </div>';
+'''
+                <ul className='space-y-4 mb-8>
+                </div>'
+'''
+                <ul className='space-y-4 mb-8>
+                  {plan.features.map((feature, featureIndex) => ('''
+                    <li key={featureIndex} className='flex items-center>''
+                      <CheckCircle className='h-5 w-5 text-green-400 mr-3 flex-shrink-0'  />                      <span className='text-white'>{feature}</span>
+>>>>>>> main
                     </li>
                   ))}
-:pages.disabled/pages/services/AICybersecurityElite.tsx
-                </ul>'
-                <a''
-                  href='https://ziontechgroup.com/contact'';
+:pages.disabled/pages/services/AICybersecurityElite.tsx'
+                </ul>''
+                <a'''
+                  href='https: //ziontechgroup.com/contact'';
                   className='w-full inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105';
-                </ul>
-                <a''
+                </ul>'
+                <a'''
                   href='https://ziontechgroup.com/contact'';
-                  className='w-full inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105''>
+                  className='w-full inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hove,
+    r:to-orange-600 transition-all duration-300 transform hove,
+    r:scale-105''>
                   Get Protected
                 </a>
               </motion.div>
             ))}
           </div>
         </div>
-:pages.disabled/pages/services/AICybersecurityElite.tsx
+:pages.disabled/pages/services/AICybersecurityElite.tsx'
       </section>'
-      </section>
-      {/* Contact Section */}''
-      <section className='py-20 px-4 sm:px-6 lg:px-8'>''
+      </section>'
+      {/* Contact Section */}'
+      <section className='py-20 px-4 sm: px-6 l,
+    g:px-8>''
         <div className='max-w-7xl mx-auto'>
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacit,
+    y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AICybersecurityElite.tsx;
-            transition={{ duration: 0.8 }}';
+            transition={{ duration: 0.8 }};
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}'';
-            className='text-center mb-16''>''
+            viewport={{ once: true }};
+            className='text-center mb-16>'
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AICybersecurityElite.tsx;
-              Ready to Secure Your Business?';
+<<<<<<< HEAD
+              Ready to Secure Your Business?'
               Ready to Secure Your Business?
             </h2>''
+=======
+              Ready to Secure Your Business?';
+              Ready to Secure Your Business?'
+            </h2>'''
+>>>>>>> main
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Get in touch with our cybersecurity experts to discuss how AI;
-              Cybersecurity Elite can protect your organization from evolving;
+              Cybersecurity Elite can protect your organization from evolving
               cyber threats.
             </p>
-:pages.disabled/pages/services/AICybersecurityElite.tsx
+:pages.disabled/pages/services/AICybersecurityElite.tsx'
           </motion.div>'
+<<<<<<< HEAD
           </motion.div>
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>''
             <div className='text-center'>''
-              <div className='p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full w-fit mx-auto mb-4'>'';
+              <div className='p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full w-fit mx-auto mb-4'>''
 :pages.disabled/pages/services/AICybersecurityElite.tsx
+=======
+          </motion.div>'
+'''
+          <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-12>''
+            <div className='text-center>''
+              <div className='p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full w-fit mx-auto mb-4>';
+:pages.disabled/pages/services/AICybersecurityElite.tsx'
+>>>>>>> main
                 <Phone className='h-8 w-8 text-white'  />'
-              </div>''
+              </div>'''
+              <h3 className='text-xl font-semibold text-white mb-2'>
+                Call Security Team'
+              </h3>''
+              <a'''
+                href='tel:+13024640950''                className='text-zion-slate-light hover:text-white transition-colors duration-300';
+                <Phone className='h-8 w-8 text-white'  />
+              </div>'''
               <h3 className='text-xl font-semibold text-white mb-2'>
                 Call Security Team
               </h3>'
-              <a''
-                href='tel:+13024640950''                className='text-zion-slate-light hover:text-white transition-colors duration-300';
-                <Phone className='h-8 w-8 text-white'  />
-              </div>''
-              <h3 className='text-xl font-semibold text-white mb-2'>
-                Call Security Team
-              </h3>
-              <a''
+              <a'''
                 href='tel:+13024640950'';
                 className='text-zion-slate-light hover:text-white transition-colors duration-300''>
                 +1 (302) 464-0950
               </a>
+<<<<<<< HEAD
 :pages.disabled/pages/services/AICybersecurityElite.tsx
-            </div>';
+            </div>'
 ''
             <div className='text-center'>''
               <div className='p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full w-fit mx-auto mb-4'>''
+=======
+:pages.disabled/pages/services/AICybersecurityElite.tsx'
+            </div>';
+'''
+            <div className='text-center>''
+              <div className='p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full w-fit mx-auto mb-4>''
+>>>>>>> main
                 <Mail className='h-8 w-8 text-white'  />'
-              </div>''
+              </div>'''
+              <h3 className='text-xl font-semibold text-white mb-2'>
+                Email Security Team'
+              </h3>''
+              <a'''
+                href='mailto:kleber@ziontechgroup.com''                className='text-zion-slate-light hover:text-white transition-colors duration-300';
+            </div>'
+'''
+            <div className='text-center>''
+              <div className='p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full w-fit mx-auto mb-4>''
+                <Mail className='h-8 w-8 text-white'  />
+              </div>'''
               <h3 className='text-xl font-semibold text-white mb-2'>
                 Email Security Team
               </h3>'
-              <a''
-                href='mailto:kleber@ziontechgroup.com''                className='text-zion-slate-light hover:text-white transition-colors duration-300';
-            </div>
-''
-            <div className='text-center'>''
-              <div className='p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full w-fit mx-auto mb-4'>''
-                <Mail className='h-8 w-8 text-white'  />
-              </div>''
-              <h3 className='text-xl font-semibold text-white mb-2'>
-                Email Security Team
-              </h3>
-              <a''
-                href='mailto:kleber@ziontechgroup.com'';
-                className='text-zion-slate-light hover:text-white transition-colors duration-300''>
+              <a'''
+                href='mailt,
+    o:kleber@ziontechgroup.com'';
+                className='text-zion-slate-light hove,
+    r:text-white transition-colors duration-300''>
                 kleber@ziontechgroup.com
               </a>
+<<<<<<< HEAD
 :pages.disabled/pages/services/AICybersecurityElite.tsx
-            </div>';
+            </div>'
 ''
             <div className='text-center'>''
               <div className='p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full w-fit mx-auto mb-4'>''
+=======
+:pages.disabled/pages/services/AICybersecurityElite.tsx'
+            </div>';
+'''
+            <div className='text-center>''
+              <div className='p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full w-fit mx-auto mb-4>''
+>>>>>>> main
                 <MapPin className='h-8 w-8 text-white'  />'
-              </div>''
+              </div>'''
+              <h3 className='text-xl font-semibold text-white mb-2>
+                Visit Security Center'
+            </div>'
+'''
+            <div className='text-center>''
+              <div className='p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full w-fit mx-auto mb-4>''
+                <MapPin className='h-8 w-8 text-white'  />
+              </div>'''
               <h3 className='text-xl font-semibold text-white mb-2'>
                 Visit Security Center'
-            </div>
-''
-            <div className='text-center'>''
-              <div className='p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full w-fit mx-auto mb-4'>''
-                <MapPin className='h-8 w-8 text-white'  />
-              </div>''
-              <h3 className='text-xl font-semibold text-white mb-2'>
-                Visit Security Center
               </h3>'              <p className='text-zion-slate-light'>
                 364 E Main St STE 1008
                 <br />
                 Middletown, DE 19709
               </p>
             </div>
+<<<<<<< HEAD
 :pages.disabled/pages/services/AICybersecurityElite.tsx
-          </div>';
+          </div>'
 ''
           <div className='text-center'>'
+=======
+:pages.disabled/pages/services/AICybersecurityElite.tsx'
+          </div>';
+'''
+          <div className='text-center>'
+>>>>>>> main
             <a'';
+              href='https: //ziontechgroup.com/contact'';
+              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105>
+          </div>'
+'''
+          <div className='text-center>
+            <a'''
               href='https://ziontechgroup.com/contact'';
-              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105'>'
-          </div>
-''
-          <div className='text-center'>
-            <a''
-              href='https://ziontechgroup.com/contact'';
-              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105''>
-              Schedule Security Assessment''
+              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hove,
+    r:to-orange-600 transition-all duration-300 transform hove,
+    r:scale-105'>
+              Schedule Security Assessment'''
               <ArrowRight className='ml-2 h-5 w-5'  />            </a>
           </div>
         </div>
-:pages.disabled/pages/services/AICybersecurityElite.tsx
+:pages.disabled/pages/services/AICybersecurityElite.tsx'
       </section>'
-      </section>
-      {/* Footer */}''
-      <footer className='py-12 px-4 sm:px-6 lg:px-8 border-t border-zion-slate-light'>''
-        <div className='max-w-7xl mx-auto text-center'>''
+      </section>'
+      {/* Footer */}'
+      <footer className='py-12 px-4 sm: px-6 lg:px-8 border-t border-zion-slate-light>''
+        <div className='max-w-7xl mx-auto text-center>''
           <p className='text-zion-slate-light mb-4'>
-:pages.disabled/pages/services/AICybersecurityElite.tsx;
+<<<<<<< HEAD
+:pages.disabled/pages/services/AICybersecurityElite.tsx
             © 2024 Zion Tech Group. All rights reserved.'
           </p>''
           <div className='flex justify-center space-x-6'>'
             <a'';
               href='https://ziontechgroup.com'';
-              className='text-zion-slate-light hover:text-white transition-colors duration-300'>';
+              className='text-zion-slate-light hover:text-white transition-colors duration-300'>'
               Visit Website''
               <ExternalLink className='inline ml-1 h-4 w-4'  />            </a>'
             <a''
+=======
+:pages.disabled/pages/services/AICybersecurityElite.tsx;
+            © 2024 Zion Tech Group. All rights reserved.''
+          </p>'''
+          <div className='flex justify-center space-x-6>'
+            <a'';
+              href='https://ziontechgroup.com'';
+              className='text-zion-slate-light hover:text-white transition-colors duration-300>;
+              Visit Website'''
+              <ExternalLink className='inline ml-1 h-4 w-4'  />            </a>''
+            <a'''
+>>>>>>> main
               href='https://ziontechgroup.com/privacy'';
               className='text-zion-slate-light hover:text-white transition-colors duration-300'>
-              Privacy Policy
-            </a>'
+              Privacy Policy'
+            </a>''
             <a'';
               href='https://ziontechgroup.com/terms'';
               className='text-zion-slate-light hover:text-white transition-colors duration-300';
             © 2024 Zion Tech Group. All rights reserved.;
-          </p>''
-          <div className='flex justify-center space-x-6'>
-            <a''
+          </p>'''
+          <div className='flex justify-center space-x-6>
+            <a'''
               href='https://ziontechgroup.com'';
-              className='text-zion-slate-light hover:text-white transition-colors duration-300''>
-              Visit Website''
-              <ExternalLink className='inline ml-1 h-4 w-4'  />            </a>
-            <a''
+              className='text-zion-slate-light hover:text-white transition-colors duration-300'>
+              Visit Website'''
+              <ExternalLink className='inline ml-1 h-4 w-4'  />            </a>'
+            <a'''
               href='https://ziontechgroup.com/privacy'';
               className='text-zion-slate-light hover:text-white transition-colors duration-300''>
               Privacy Policy
-            </a>
-            <a''
-              href='https://ziontechgroup.com/terms'';
-              className='text-zion-slate-light hover:text-white transition-colors duration-300''>
+            </a>'
+            <a'''
+              href='http,
+    s://ziontechgroup.com/terms'';
+              className='text-zion-slate-light hove,
+    r:text-white transition-colors duration-300''>
               Terms of Service
             </a>
           </div>
@@ -503,6 +685,12 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
     </div>
   )}
 :pages.disabled/pages/services/AICybersecurityElite.tsx;
+<<<<<<< HEAD
 export default AICybersecurityElite''`;
-''`''`;
+''`''`
 export default AICybersecurityElite'"`
+=======
+export default AICybersecurityElite''`;`
+''`''`;`
+export default AICybersecurityElite'"``
+>>>>>>> main

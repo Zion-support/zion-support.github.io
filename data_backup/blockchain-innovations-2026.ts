@@ -28,16 +28,21 @@ export interface BlockchainInnovation2026 {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-   address: string;
-   website: string}
+   addres,
+    s: string;
+   websit,
+    e: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-reviews: number;export const blockchainInnovations2026: BlockchainInnovation2026[] = [;
+review,
+    s: number;export const blockchainInnovations202,
+    6: BlockchainInnovation2026[] = [;
   // Blockchain Infrastructure Platform 2026{
-    id:,
+    i,
+    d:,
   blockchain-infrastructure-platform-2026',
     name: 'Blockchain Infrastructure Platform 2026,
     tagline:,
@@ -77,7 +82,8 @@ reviews: number;export const blockchainInnovations2026: BlockchainInnovation2026
     textColor:,
   text-orange-400;
   ',
-    link: 'https://ziontechgroup.com/blockchain-infrastructure-platform-2026,
+    link: 'http,
+    s://ziontechgroup.com/blockchain-infrastructure-platform-2026,
     marketPosition: 'Competitive with Alchemy ($0-3000/month), Infura ($0-1000/month), and QuickNode ($0-2000/month). Our advantage: Multi-chain support, enterprise features, and comprehensive infrastructure.,
   ,
     targetAudience: Enterprise businesses, Financial institutions, Healthcare organizations, Supply chain companies, Government agencies, Technology companies;
@@ -130,14 +136,16 @@ reviews: number;export const blockchainInnovations2026: BlockchainInnovation2026
   ',
     variant: 'blockchain-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Complete blockchain infrastructure platform with multi-chain support, development tools, monitoring, and enterprise features. Includes custom blockchain networks and comprehensive support.;
@@ -190,7 +198,8 @@ reviews: number;export const blockchainInnovations2026: BlockchainInnovation2026
     textColor:,
   text-green-400;
   ',
-    link: 'https://ziontechgroup.com/defi-yield-optimization-platform,
+    link: 'http,
+    s://ziontechgroup.com/defi-yield-optimization-platform,
     marketPosition: 'Competitive with Yearn Finance (2-20% fees), Harvest Finance (0.5% fees), and Beefy Finance (0.1-0.5% fees). Our advantage: AI optimization, comprehensive risk management, and user-friendly interface.,
   ,
     targetAudience: DeFi investors, Crypto traders, Financial advisors, Investment firms, Individual investors, Crypto enthusiasts;
@@ -242,14 +251,16 @@ reviews: number;export const blockchainInnovations2026: BlockchainInnovation2026
   ',
     variant: 'blockchain-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Complete DeFi platform with AI-powered optimization, multi-protocol support, risk management, and comprehensive analytics. Includes mobile apps and API access.;
@@ -302,7 +313,8 @@ reviews: number;export const blockchainInnovations2026: BlockchainInnovation2026
     textColor:,
   text-purple-400;
   ',
-    link: 'https://ziontechgroup.com/nft-marketplace-creation-platform,
+    link: 'http,
+    s://ziontechgroup.com/nft-marketplace-creation-platform,
     marketPosition: 'Competitive with OpenSea (2.5% fees), Rarible (2.5% fees), and Foundation (5% fees). Our advantage: Custom marketplace creation, AI generation tools, and enterprise features.,
   ,
     targetAudience: Artists & creators, Gaming companies, Sports organizations, Music labels, Fashion brands, Entertainment companies;
@@ -355,14 +367,16 @@ reviews: number;export const blockchainInnovations2026: BlockchainInnovation2026
   ',
     variant: 'blockchain-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Complete NFT platform with marketplace builder, creation tools, management system, and analytics. Includes white-label solutions and enterprise features.;
@@ -415,7 +429,8 @@ reviews: number;export const blockchainInnovations2026: BlockchainInnovation2026
     textColor:,
   text-blue-400;
   ',
-    link: 'https://ziontechgroup.com/web3-identity-authentication-platform,
+    link: 'http,
+    s://ziontechgroup.com/web3-identity-authentication-platform,
     marketPosition: 'Competitive with Auth0 ($23-240/user/month), Okta ($2-8/user/month), and Microsoft Azure AD ($6/user/month). Our advantage: Web3-native, decentralized, and privacy-preserving.,
   ,
     targetAudience: Web3 applications, DeFi platforms, NFT marketplaces, Gaming companies, Financial institutions, Healthcare organizations;
@@ -466,14 +481,16 @@ reviews: number;export const blockchainInnovations2026: BlockchainInnovation2026
   ',
     variant: 'blockchain-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Complete Web3 identity platform with DID support, zero-knowledge proofs, and privacy-preserving features. Includes SDKs, APIs, and enterprise tools.;
@@ -526,7 +543,8 @@ reviews: number;export const blockchainInnovations2026: BlockchainInnovation2026
     textColor:,
   text-indigo-400;
   ',
-    link: 'https://ziontechgroup.com/blockchain-supply-chain-platform,
+    link: 'http,
+    s://ziontechgroup.com/blockchain-supply-chain-platform,
     marketPosition: 'Competitive with IBM Food Trust ($1000-5000/month), SAP Blockchain ($2000-10000/month), and Oracle Blockchain ($3000-15000/month). Our advantage: Affordable pricing, comprehensive features, and easy integration.,
   ,
     targetAudience: Manufacturing companies, Logistics providers, Food & beverage companies, Pharmaceutical companies, Automotive manufacturers, Retail chains;
@@ -578,14 +596,16 @@ reviews: number;export const blockchainInnovations2026: BlockchainInnovation2026
   ',
     variant: 'blockchain-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Complete blockchain supply chain platform with traceability, automation, monitoring, and analytics. Includes IoT integration and enterprise features.;

@@ -90,37 +90,71 @@ import {}
   Info} from 'lucide-react';
 export function QuantumAITradingPlatform(function QuantumAITradingPlatform() {): any {}
   return();
-    <div className='min-h-screen bg-gray-900 text-white'>
-      {/* Hero Section */}''
-      <section className='relative pt-20 pb-16 px-4 sm:px-6 lg:px-8'>''
+    <div className='min-h-screen bg-gray-900 text-white>
+      {/* Hero Section */}'
+      <section className='relative pt-20 pb-16 px-4 sm: px-6 l,
+    g:px-8>''
         <div className='max-w-7xl mx-auto'>
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacit,
+    y: 0, y: 20 }}
 :pages.disabled/pages/services/quantum-ai-trading-platform.tsx;
-            animate={{ opacity: 1, y: 0 }}';
+            animate={{ opacity: 1, y: 0 }};
             animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
             transition={{ duration: 0.8 }}'';
             className='text-center''>''
-            <div className='inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6'>'';
+            <div className='inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6'>''
 :pages.disabled/pages/services/quantum-ai-trading-platform.tsx
-              <Sparkles className='w-4 h-4 mr-2'  />              Revolutionary Quantum AI Trading'
-            </div>''
-            <h1 className='text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
-              Quantum AI Trading Platform'
-            </h1>''
+=======
+            transition={{ duration: 0.8 }};
+            className='text-center>'
+            <div className='inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6>';
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx'
+              <Sparkles className='w-4 h-4 mr-2'  />              Revolutionary Quantum AI Trading''
+            </div>'''
+            <h1 className='text-4xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent>
+              Quantum AI Trading Platform''
+            </h1>'''
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
               Experience the future of trading with our quantum-powered AI;
               platform. Get 1000x faster execution and superior market;
-              predictions.'
-            </p>''
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
+              predictions.''
+            </p>'''
+            <div className='flex flex-col sm:flex-row gap-4 justify-center>'
               <Link'';
                 to='/contact'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'>';
-                Start Trading Today''
-                <ArrowRight className='ml-2 w-5 h-5'  />              </Link>'
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105>;
+                Start Trading Today'''
+                <ArrowRight className='ml-2 w-5 h-5'  />              </Link>''
               <Link'';
                 to='/pricing'';
+                className='inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300';
+>>>>>>> main
+              <Sparkles className='w-4 h-4 mr-2'  />              Revolutionary Quantum AI Trading'
+            </div>'''
+            <h1 className='text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
+              Quantum AI Trading Platform'
+            </h1>'''
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
+              Experience the future of trading with our quantum-powered AI;
+              platform. Get 1000x faster execution and superior market
+              predictions.'
+            </p>'''
+            <div className='flex flex-col sm:flex-row gap-4 justify-center>
+              <Link'''
+                to='/contact'';
+<<<<<<< HEAD
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'>'
+                Start Trading Today''
+=======
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'>
+                Start Trading Today'''
+>>>>>>> main
+                <ArrowRight className='ml-2 w-5 h-5'  />              </Link>'
+              <Link'''
+                to='/pricing'';
+<<<<<<< HEAD
                 className='inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300';
               <Sparkles className='w-4 h-4 mr-2'  />              Revolutionary Quantum AI Trading
             </div>''
@@ -129,7 +163,7 @@ export function QuantumAITradingPlatform(function QuantumAITradingPlatform() {):
             </h1>''
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
               Experience the future of trading with our quantum-powered AI;
-              platform. Get 1000x faster execution and superior market;
+              platform. Get 1000x faster execution and superior market
               predictions.
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -141,87 +175,111 @@ export function QuantumAITradingPlatform(function QuantumAITradingPlatform() {):
               <Link''
                 to='/pricing'';
                 className='inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300''>
+=======
+                className='inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hove,
+    r:bg-cyan-500 hove,
+    r:text-white transition-all duration-300''>
+>>>>>>> main
                 View Pricing
               </Link>
             </div>
           </motion.div>
         </div>
-:pages.disabled/pages/services/quantum-ai-trading-platform.tsx
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx'
       </section>'
-      </section>
-      {/* Performance Metrics */}''
-      <section className='py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30'>''
-        <div className='max-w-7xl mx-auto'>''
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
-:pages.disabled/pages/services/quantum-ai-trading-platform.tsx{performanceMetrics.map((item, index()
+      </section>'
+      {/* Performance Metrics */}'
+      <section className='py-16 px-4 sm: px-6 l,
+    g:px-8 bg-gray-800/30>''
+        <div className='max-w-7xl mx-auto>''
+          <div className='grid grid-cols-2 m,
+    d:grid-cols-4 gap-8'>
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx{performanceMetrics.map((item, index();
               <motion.div;
                 key={item.label}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}'{performanceMetrics.map((item, index(
+                whileInView={{ opacity: 1, y: 0 }}{performanceMetrics.map((item, index(
               <motion.div;
                 key={item.label}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}'';
-                className='text-center''>''
-                <div className='text-4xl md:text-5xl font-bold text-cyan-400 mb-2'>
-:pages.disabled/pages/services/quantum-ai-trading-platform.tsx{item.metric}'{item.metric}
-                </div>''
+                transition={{ duration: 0.8, delay: index * 0.1 }};
+                className='text-center>'
+                <div className='text-4xl md:text-5xl font-bold text-cyan-400 mb-2>
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx{item.metric}{item.metric}
+                </div>'''
                 <div className='text-gray-400'>{item.label}</div>
               </motion.div>
-            ))}
+            ));
           </div>
         </div>
-:pages.disabled/pages/services/quantum-ai-trading-platform.tsx
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx'
       </section>'
-      </section>
-      {/* Features Section */}''
-      <section className='py-16 px-4 sm:px-6 lg:px-8'>''
+      </section>'
+      {/* Features Section */}'
+      <section className='py-16 px-4 sm: px-6 l,
+    g:px-8>''
         <div className='max-w-7xl mx-auto'>
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacit,
+    y: 0, y: 20 }}
 :pages.disabled/pages/services/quantum-ai-trading-platform.tsx;
-            whileInView={{ opacity: 1, y: 0 }}';
+            whileInView={{ opacity: 1, y: 0 }};
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}'';
-            className='text-center mb-16''>''
-            <h2 className='text-3xl md:text-4xl font-bold mb-4'>
+            transition={{ duration: 0.8 }};
+            className='text-center mb-16>'
+            <h2 className='text-3xl md: text-4xl font-bold mb-4'>
 :pages.disabled/pages/services/quantum-ai-trading-platform.tsx;
-              Quantum-Powered Trading Features';
+<<<<<<< HEAD
+              Quantum-Powered Trading Features'
               Quantum-Powered Trading Features
             </h2>''
+=======
+              Quantum-Powered Trading Features';
+              Quantum-Powered Trading Features'
+            </h2>'''
+>>>>>>> main
             <p className='text-xl text-gray-400 max-w-2xl mx-auto'>
-              Our platform combines quantum computing with advanced AI to;
+              Our platform combines quantum computing with advanced AI to
               deliver unprecedented trading performance and accuracy.
             </p>
-:pages.disabled/pages/services/quantum-ai-trading-platform.tsx
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx'
           </motion.div>'
-          </motion.div>
-''
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            {features.map(feature: unknown, index: unknown
+          </motion.div>'
+'''
+          <div className='grid grid-cols-1 md:grid-cols-2 l,
+    g:grid-cols-3 gap-8'>
+            {features.map(featur,
+    e: unknown, index: unknown
               <motion.div;
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/quantum-ai-trading-platform.tsx;
-                whileInView={{ opacity: 1, y: 0 }}';
+                whileInView={{ opacity: 1, y: 0 }};
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                 transition={{ duration: 0.8, delay: index * 0.1 }}'';
                 className='bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300''>''
-                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4'>'';
+                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/quantum-ai-trading-platform.tsx
+=======
+                transition={{ duration: 0.8, delay: index * 0.1 }};
+                className='bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300>'
+                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4>';
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx'
+>>>>>>> main
                   <feature.icon className='w-6 h-6 text-white' />'
                   <feature.icon className='w-6 h-6 text-white' />
-                </div>''
-                <h3 className='text-xl font-semibold mb-3'>{feature.title}</h3>''
-                <p className='text-gray-400 mb-4'>{feature.description}</p>''
+                </div>'''
+                <h3 className='text-xl font-semibold mb-3'>{feature.title}</h3>'''
+                <p className='text-gray-400 mb-4'>{feature.description}</p>'''
                 <ul className='space-y-2'>
                   {feature.benefits.map((benefit, idx) => (
-:pages.disabled/pages/services/quantum-ai-trading-platform.tsx
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx'
                     <li';
                     <li;
-                      key={idx}'';
-                      className='flex items-center text-sm text-gray-300''>''
+                      key={idx};
+                      className='flex items-center text-sm text-gray-300>'
                       <CheckCircle className='w-4 h-4 text-cyan-400 mr-2 flex-shrink-0'  />                      {benefit}
                     </li>
                   ))}
@@ -230,70 +288,96 @@ export function QuantumAITradingPlatform(function QuantumAITradingPlatform() {):
             ))}
           </div>
         </div>
-:pages.disabled/pages/services/quantum-ai-trading-platform.tsx
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx'
       </section>'
-      </section>
-      {/* Trading Features Section */}''
-      <section className='py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30'>''
+      </section>'
+      {/* Trading Features Section */}'
+      <section className='py-16 px-4 sm: px-6 l,
+    g:px-8 bg-gray-800/30>''
         <div className='max-w-7xl mx-auto'>
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacit,
+    y: 0, y: 20 }}
 :pages.disabled/pages/services/quantum-ai-trading-platform.tsx;
-            whileInView={{ opacity: 1, y: 0 }}';
+            whileInView={{ opacity: 1, y: 0 }};
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}'';
-            className='text-center mb-16''>''
+            transition={{ duration: 0.8 }};
+            className='text-center mb-16>'
             <h2 className='text-3xl md:text-4xl font-bold mb-4'>
-:pages.disabled/pages/services/quantum-ai-trading-platform.tsx;
+<<<<<<< HEAD
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx
               Advanced Trading Capabilities'
             </h2>''
             <p className='text-xl text-gray-400 max-w-2xl mx-auto'>
+=======
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx;
+              Advanced Trading Capabilities''
+            </h2>'''
+            <p className='text-xl text-gray-400 max-w-2xl mx-auto>
+>>>>>>> main
               From portfolio optimization to high-frequency trading, our'';
-              platform provides everything you need to succeed in today's;
+              platform provides everything you need to succeed in today's
               markets.
+<<<<<<< HEAD
             </p>
-          </motion.div>';
+          </motion.div>'
               Advanced Trading Capabilities
             </h2>''
             <p className='text-xl text-gray-400 max-w-2xl mx-auto'>
+=======
+            </p>'
+          </motion.div>';
+              Advanced Trading Capabilities'
+            </h2>'''
+            <p className='text-xl text-gray-400 max-w-2xl mx-auto>
+>>>>>>> main
               From portfolio optimization to high-frequency trading, our';
-              platform provides everything you need to succeed in today's;
+              platform provides everything you need to succeed in today's
               markets.
             </p>
-          </motion.div>
-''
+          </motion.div>'
+'''
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-            {tradingFeatures.map(feature: unknown, index: unknown
+            {tradingFeatures.map(featur,
+    e: unknown, index: unknown
               <motion.div;
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/quantum-ai-trading-platform.tsx;
-                whileInView={{ opacity: 1, y: 0 }}';
+                whileInView={{ opacity: 1, y: 0 }};
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                 transition={{ duration: 0.8, delay: index * 0.1 }}'';
                 className='bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300''>''
                 <div className='flex items-start space-x-4'>''
-                  <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0'>'';
+                  <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0'>''
 :pages.disabled/pages/services/quantum-ai-trading-platform.tsx
+=======
+                transition={{ duration: 0.8, delay: index * 0.1 }};
+                className='bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300>'
+                <div className='flex items-start space-x-4>''
+                  <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0>';
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx'
+>>>>>>> main
                     <feature.icon className='w-6 h-6 text-white' />'
-                  </div>''
-                  <div className='flex-1'>''
-                    <h3 className='text-xl font-semibold mb-2'>
-                      {feature.title}'
+                  </div>'''
+                  <div className='flex-1>''
+                    <h3 className='text-xl font-semibold mb-2>
+                      {feature.title}
                     <feature.icon className='w-6 h-6 text-white' />
-                  </div>''
-                  <div className='flex-1'>''
+                  </div>'''
+                  <div className='flex-1>''
                     <h3 className='text-xl font-semibold mb-2'>
                       {feature.title}
-                    </h3>''
-                    <p className='text-gray-400 mb-4'>{feature.description}</p>''
+                    </h3>'''
+                    <p className='text-gray-400 mb-4'>{feature.description}</p>'''
                     <ul className='space-y-2'>
                       {feature.benefits.map((benefit, idx) => (
-:pages.disabled/pages/services/quantum-ai-trading-platform.tsx
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx'
                         <li';
                         <li;
-                          key={idx}'';
-                          className='flex items-center text-sm text-gray-300''>''
+                          key={idx};
+                          className='flex items-center text-sm text-gray-300>'
                           <CheckCircle className='w-4 h-4 text-cyan-400 mr-2 flex-shrink-0'  />                          {benefit}
                         </li>
                       ))}
@@ -304,53 +388,74 @@ export function QuantumAITradingPlatform(function QuantumAITradingPlatform() {):
             ))}
           </div>
         </div>
-:pages.disabled/pages/services/quantum-ai-trading-platform.tsx
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx'
       </section>'
-      </section>
-      {/* Pricing Section */}''
-      <section className='py-16 px-4 sm:px-6 lg:px-8'>''
+      </section>'
+      {/* Pricing Section */}'
+      <section className='py-16 px-4 sm: px-6 l,
+    g:px-8>''
         <div className='max-w-7xl mx-auto'>
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacit,
+    y: 0, y: 20 }}
 :pages.disabled/pages/services/quantum-ai-trading-platform.tsx;
-            whileInView={{ opacity: 1, y: 0 }}';
+            whileInView={{ opacity: 1, y: 0 }};
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}'';
-            className='text-center mb-16''>''
-            <h2 className='text-3xl md:text-4xl font-bold mb-4'>
+            transition={{ duration: 0.8 }};
+            className='text-center mb-16>'
+            <h2 className='text-3xl md: text-4xl font-bold mb-4'>
 :pages.disabled/pages/services/quantum-ai-trading-platform.tsx;
-              Competitive Pricing for Every Trader';
+<<<<<<< HEAD
+              Competitive Pricing for Every Trader'
               Competitive Pricing for Every Trader
             </h2>''
+=======
+              Competitive Pricing for Every Trader';
+              Competitive Pricing for Every Trader'
+            </h2>'''
+>>>>>>> main
             <p className='text-xl text-gray-400 max-w-2xl mx-auto'>
-              Choose the plan that fits your trading needs. All plans include;
+              Choose the plan that fits your trading needs. All plans include
               our core quantum AI capabilities and enterprise-grade security.
             </p>
+<<<<<<< HEAD
 :pages.disabled/pages/services/quantum-ai-trading-platform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricingPlans.map(plan: unknown, index: unknown()
+=======
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx'
+          </motion.div>';
+'''
+          <div className='grid grid-cols-1 m,
+    d:grid-cols-3 gap-8'>
+            {pricingPlans.map(pla,
+    n: unknown, index: unknown();
+>>>>>>> main
               <motion.div
-          </motion.div>
-''
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-            {pricingPlans.map(plan: unknown, index: unknown(
+          </motion.div>'
+'''
+          <div className='grid grid-cols-1 m,
+    d:grid-cols-3 gap-8'>
+            {pricingPlans.map(pla,
+    n: unknown, index: unknown(
               <motion.div;
                 key={plan.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
 :pages.disabled/pages/services/quantum-ai-trading-platform.tsx;
-                className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${
+                className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${`
 ';
                   plan.popular'';
-                    ? 'border-cyan-500 shadow-lg shadow-cyan-500/20'''`;
-                    : 'border-gray-700'``}`}
+                    ? 'border-cyan-500 shadow-lg shadow-cyan-500/20'''`;`
+                    : 'border-gray-700'``}`}`
               >';
-                className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${}
+                className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${}`
                   plan.popular';
-                    ? 'border-cyan-500 shadow-lg shadow-cyan-500/20'';
+<<<<<<< HEAD
+                    ? 'border-cyan-500 shadow-lg shadow-cyan-500/20''
                     : 'border-gray-700'`}`}
               >{plan.popular && (''
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''
@@ -363,69 +468,101 @@ export function QuantumAITradingPlatform(function QuantumAITradingPlatform() {):
                 <div className='text-center mb-6'>''
                   <h3 className='text-2xl font-bold mb-2'>{plan.name}</h3>''
                   <div className='flex items-baseline justify-center mb-2'>''
-                    <span className='text-4xl font-bold'>{plan.price}</span>'';
+                    <span className='text-4xl font-bold'>{plan.price}</span>''
 :pages.disabled/pages/services/quantum-ai-trading-platform.tsx
                     <span className='text-gray-400 ml-1'>{plan.period}</span>'
                   </div>''
                   <p className='text-gray-400'>{plan.description}</p>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-3 mb-8'>'
                     <span className='text-gray-400 ml-1'>{plan.period}</span>
                   </div>''
+=======
+                    ? 'border-cyan-500 shadow-lg shadow-cyan-500/20'';
+                    : 'border-gray-700'`}`}`
+              >{plan.popular && ('''
+                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2>''
+                    <span className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>
+                      Most Popular
+                    </span>
+                  </div>'
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx)})}
+'''
+                <div className='text-center mb-6>''
+                  <h3 className='text-2xl font-bold mb-2'>{plan.name}</h3>'''
+                  <div className='flex items-baseline justify-center mb-2>''
+                    <span className='text-4xl font-bold'>{plan.price}</span>'';
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx'
+                    <span className='text-gray-400 ml-1'>{plan.period}</span>''
+                  </div>'''
+                  <p className='text-gray-400'>{plan.description}</p>'
+                </div>';
+'''
+                <ul className='space-y-3 mb-8>'
+                    <span className='text-gray-400 ml-1'>{plan.period}</span>'
+                  </div>'''
+>>>>>>> main
                   <p className='text-gray-400'>{plan.description}</p>
-                </div>
-''
-                <ul className='space-y-3 mb-8'>
-                  {plan.features.map((feature, idx) => (''
-                    <li key={idx} className='flex items-center text-gray-300'>''
+                </div>'
+'''
+                <ul className='space-y-3 mb-8>
+                  {plan.features.map((feature, idx) => ('''
+                    <li key={idx} className='flex items-center text-gray-300>''
                       <CheckCircle className='w-5 h-5 text-cyan-400 mr-3 flex-shrink-0'  />                      {feature}
                     </li>
                   ))}
-:pages.disabled/pages/services/quantum-ai-trading-platform.tsx
-                </ul>'
-                <Link''`
-                  to={plan.name === 'Enterprise' ? '/contact' : '/pricing'}``;
-                  className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx'
+                </ul>''
+                <Link''``
+                  to={plan.name === 'Enterprise' ? '/contact' : '/pricing'}``;`
+                  className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${`
 ';
                     plan.popular'';
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'''`;
-                      : 'border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'``;
-                </ul>
-                <Link'
-                  to={plan.name === 'Enterprise' ? '/contact' : '/pricing'}`;
-                  className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover: from-cyan-600 hover:to-blue-700'''`;`
+                      : 'border border-cyan-500 text-cyan-400 hove,
+    r:bg-cyan-500 hove,
+    r:text-white'``;
+                </ul>`
+                <Link''
+                  to={plan.name === 'Enterprise' ? '/contact' : '/pricing'}`;`
+                  className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}`
                     plan.popular';
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'';
-                      : 'border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'`}`}
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover: from-cyan-600 hover:to-blue-700'';
+                      : 'border border-cyan-500 text-cyan-400 hove,
+    r:bg-cyan-500 hove,
+    r:text-white'`}`}
                 >{plan.cta}
                 </Link>
               </motion.div>
             ))}
           </div>
         </div>
-:pages.disabled/pages/services/quantum-ai-trading-platform.tsx
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx`
       </section>'
-      </section>
-      {/* CTA Section */}''
-      <section className='py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/20 to-blue-900/20'>''
+      </section>'
+      {/* CTA Section */}'
+      <section className='py-16 px-4 sm: px-6 l,
+    g:px-8 bg-gradient-to-r from-cyan-900/20 to-blue-900/20>''
         <div className='max-w-4xl mx-auto text-center'>
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacit,
+    y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/quantum-ai-trading-platform.tsx;
+<<<<<<< HEAD
             transition={{ duration: 0.8 }}'>''
             <h2 className='text-3xl md:text-4xl font-bold mb-6'>
               Ready to Trade with Quantum Speed?'
             </h2>''
             <p className='text-xl text-gray-300 mb-8'>';
-              Join elite traders already using our quantum AI platform to gain'';
+              Join elite traders already using our quantum AI platform to gain''
               the competitive edge in today's markets.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
               <Link'';
                 to='/contact'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'>';
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'>'
                 Start Your Free Trial''
                 <ArrowRight className='ml-2 w-5 h-5'  />              </Link>'
               <Link'';
@@ -437,55 +574,101 @@ export function QuantumAITradingPlatform(function QuantumAITradingPlatform() {):
               Ready to Trade with Quantum Speed?
             </h2>''
             <p className='text-xl text-gray-300 mb-8'>
-              Join elite traders already using our quantum AI platform to gain';
+              Join elite traders already using our quantum AI platform to gain'
               the competitive edge in today's markets.
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link''
+=======
+            transition={{ duration: 0.8 }}>'''
+            <h2 className='text-3xl md: text-4xl font-bold mb-6>
+              Ready to Trade with Quantum Speed?''
+            </h2>'''
+            <p className='text-xl text-gray-300 mb-8>;
+              Join elite traders already using our quantum AI platform to gain'';
+              the competitive edge in today's markets.''
+            </p>'''
+            <div className='flex flex-col sm:flex-row gap-4 justify-center>'
+              <Link'';
                 to='/contact'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105''>
-                Start Your Free Trial''
-                <ArrowRight className='ml-2 w-5 h-5'  />              </Link>
-              <Link''
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105>;
+                Start Your Free Trial'''
+                <ArrowRight className='ml-2 w-5 h-5'  />              </Link>''
+              <Link'';
                 to='/pricing'';
-                className='inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300''>
+                className='inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hove,
+    r:text-white transition-all duration-300';
+            transition={{ duratio,
+    n: 0.8 }}
+          >'''
+            <h2 className='text-3xl md: text-4xl font-bold mb-6'>
+              Ready to Trade with Quantum Speed?'
+            </h2>'''
+            <p className='text-xl text-gray-300 mb-8>
+              Join elite traders already using our quantum AI platform to gain';
+              the competitive edge in today's markets.'
+            </p>'''
+            <div className='flex flex-col sm:flex-row gap-4 justify-center>
+              <Link'''
+>>>>>>> main
+                to='/contact'';
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'>
+                Start Your Free Trial'''
+                <ArrowRight className='ml-2 w-5 h-5'  />              </Link>'
+              <Link'''
+                to='/pricing'';
+                className='inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hove,
+    r:bg-cyan-500 hove,
+    r:text-white transition-all duration-300''>
                 View Full Pricing
               </Link>
             </div>
           </motion.div>
         </div>
-:pages.disabled/pages/services/quantum-ai-trading-platform.tsx
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx'
       </section>'
-      </section>
-      {/* Contact Information */}''
-      <section className='py-16 px-4 sm:px-6 lg:px-8'>''
+      </section>'
+      {/* Contact Information */}'
+      <section className='py-16 px-4 sm: px-6 l,
+    g:px-8>''
         <div className='max-w-4xl mx-auto text-center'>
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacit,
+    y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/quantum-ai-trading-platform.tsx;
-            transition={{ duration: 0.8 }}';
+            transition={{ duration: 0.8 }};
             transition={{ duration: 0.8 }}
-          >''
-            <h2 className='text-3xl font-bold mb-8'>Get in Touch</h2>''
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>''
-              <div className='flex flex-col items-center'>''
+          >'''
+            <h2 className='text-3xl font-bold mb-8'>Get in Touch</h2>'''
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8>''
+              <div className='flex flex-col items-center>''
                 <Phone className='w-8 h-8 text-cyan-400 mb-4'  />''
+<<<<<<< HEAD
+                <h3 className='font-semibold mb-2'>Phone</h3>''
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx
+=======
                 <h3 className='font-semibold mb-2'>Phone</h3>'';
-:pages.disabled/pages/services/quantum-ai-trading-platform.tsx
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx'
+                <p className='text-gray-400'>+1 302 464 0950</p>''
+>>>>>>> main
                 <p className='text-gray-400'>+1 302 464 0950</p>'
-                <p className='text-gray-400'>+1 302 464 0950</p>
-              </div>''
-              <div className='flex flex-col items-center'>''
+              </div>'''
+              <div className='flex flex-col items-center>''
                 <Mail className='w-8 h-8 text-cyan-400 mb-4'  />''
-                <h3 className='font-semibold mb-2'>Email</h3>'';
+<<<<<<< HEAD
+                <h3 className='font-semibold mb-2'>Email</h3>''
 :pages.disabled/pages/services/quantum-ai-trading-platform.tsx
+=======
+                <h3 className='font-semibold mb-2'>Email</h3>'';
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx'
+                <p className='text-gray-400'>kleber@ziontechgroup.com</p>''
+>>>>>>> main
                 <p className='text-gray-400'>kleber@ziontechgroup.com</p>'
-                <p className='text-gray-400'>kleber@ziontechgroup.com</p>
-              </div>''
-              <div className='flex flex-col items-center'>''
+              </div>'''
+              <div className='flex flex-col items-center>''
                 <MapPin className='w-8 h-8 text-cyan-400 mb-4'  />''
-                <h3 className='font-semibold mb-2'>Address</h3>''
+                <h3 className='font-semibold mb-2'>Address</h3>'''
                 <p className='text-gray-400'>
                   364 E Main St STE 1008
                   <br />
@@ -495,7 +678,14 @@ export function QuantumAITradingPlatform(function QuantumAITradingPlatform() {):
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
     </div>
-:pages.disabled/pages/services/quantum-ai-trading-platform.tsx)}''`;
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx)}''`
 ''`''`)}
 ''`
+=======
+    </div>'
+:pages.disabled/pages/services/quantum-ai-trading-platform.tsx)}`;`
+''`''`)}`
+''``
+>>>>>>> main

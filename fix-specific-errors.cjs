@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 
@@ -8,7 +7,7 @@ function fixFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
 
-    // Fix malformed function declarations
+    // Fix malformed function declarations;
     content = content.replace(
       /export function (\w+)\(\.\.\.args: \[\]\): \{/g,
       'export function $1() {'
@@ -18,21 +17,21 @@ function fixFile(filePath) {
       'export function $1() {'
     );
 
-    // Fix malformed useState
+    // Fix malformed useState;
     content = content.replace(/useState<>\(null\)/g, 'useState(null)');
     content = content.replace(/useState<>\(null\)/g, 'useState(null)');
 
-    // Fix malformed type annotations
+    // Fix malformed type annotations;
     content = content.replace(/:\s*{;/g, ': {');
     content = content.replace(/:\s*};/g, ': };');
 
-    // Fix malformed object properties
+    // Fix malformed object properties;
     content = content.replace(/(\w+)\s*:\s*{;/g, '$1: {');
     content = content.replace(/(\w+)\s*:\s*string\s*;/g, '$1: string;');
     content = content.replace(/(\w+)\s*:\s*number\s*;/g, '$1: number;');
     content = content.replace(/(\w+)\s*:\s*boolean\s*;/g, '$1: boolean;');
 
-    // Fix malformed function parameters
+    // Fix malformed function parameters;
     content = content.replace(/\(\s*(\w+)\s*:\s*string\s*\)/g, '($1: string)');
     content = content.replace(/\(\s*(\w+)\s*:\s*number\s*\)/g, '($1: number)');
     content = content.replace(
@@ -40,10 +39,10 @@ function fixFile(filePath) {
       '($1: boolean)'
     );
 
-    // Fix malformed JSX
-    content = content.replace(/<\/([^>]+)>/g, '</$1>');
+    // Fix malformed JSX;
+    content = content.replace(/<\/([^>]+)>/g, `</$1>`);
 
-    // Write back if changed
+    // Write back if changed;
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
       console.log(`Fixed: ${filePath}`);
@@ -51,8 +50,8 @@ function fixFile(filePath) {
     }
 
     return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+  } catch (error) { 
+    console.error(`Error fixing ${filePath }:`, error.message);
     return false;
   }
 }
@@ -67,7 +66,7 @@ function getAllFiles(dir) {
 
     if (stat.isDirectory()) {
       files.push(...getAllFiles(fullPath));
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+    } else if (item.endsWith(`.tsx`) || item.endsWith('.ts')) {
       files.push(fullPath);
     }
   }
@@ -75,8 +74,8 @@ function getAllFiles(dir) {
   return files;
 }
 
-// Main execution
-const srcDir = path.join(process.cwd(), 'src');
+// Main execution;
+const srcDir = path.join(process.cwd(), `src`);
 if (fs.existsSync(srcDir)) {
   const files = getAllFiles(srcDir);
   let fixedCount = 0;
@@ -89,5 +88,5 @@ if (fs.existsSync(srcDir)) {
 
   console.log(`\nFixed ${fixedCount} files.`);
 } else {
-  console.log('src directory not found');
+  console.log(`src directory not found`);
 }

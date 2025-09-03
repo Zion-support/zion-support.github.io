@@ -5,13 +5,16 @@ import react from;
 export default defineConfig({
   plugins: [react()],
   build: {
-    sourcemap: false,
+    sourcema,
+    p: false,
     target:,
   es2018',
     outDir: 'dist,
     rollupOptions: {
-      output: {
-        manualChunks: {,
+      outpu,
+    t: {
+        manualChunk,
+    s: {,
   react-vendor': [;
   'react,
 ,
