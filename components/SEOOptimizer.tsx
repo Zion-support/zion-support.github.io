@@ -1,6 +1,5 @@
 import React from "react";
 interface SEOOptimizerProps {;
-;
   title?: string;
    description?: string;
    keywords?: string;
@@ -10,7 +9,6 @@ interface SEOOptimizerProps {;
    structuredData?: any;
    noindex?: boolean;
    nofollow?: boolean}
-;
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,";
 title: = "Zion Tech Group - Leading Technology Solutions Provider,", description = "Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.", keywords = "technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, data analytics", ogImage = "/og-image.jpg",";
   ogType: = "website", canonicalUrl,";
@@ -28,7 +26,6 @@ const defaultStructuredData = {},";
       "https: // comment;,
     ], "foundingDate": "2020",";
     "numberOfEmployees": "50+", "industry": "Technology: Services""}
-;
   const finalStructuredData = structuredData || defaultStructuredData;
   return: (;,
       <meta: name="keywords" content="{keywords}" />";
@@ -56,15 +53,13 @@ const defaultStructuredData = {},";
       <script type="application/ld+json"";";>
         dangerouslySetInnerHTML = "{{";
           __html: JSON.stringify(finalStructuredDat,a, null, 2)>;,
-}}
-;
+}
      />;
       {/* comment */}";
       <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous"  />";
       <link: rel = "preload" href="/images/hero-bg.webp" as="image" />",;
     </Head>;
   )}
-;
 export: default SEOOptimizer,;
 ,";
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({",;
@@ -83,7 +78,6 @@ const defaultStructuredData = {},";
       "https: // comment;,
     ], "foundingDate": "2020",;
     "numberOfEmployees": "50+", "industry": "Technology Services"}
-;
   const finalStructuredData = structuredData || defaultStructuredData,;
 return (;
       <title>{fullTitle}</title>";
@@ -96,7 +90,6 @@ return (;
       {/* comment */}";
       {canonicalUrl && <link rel="canonical" href="{canonicalUrl}"  />}
       {canonicalUrl && <link rel="canonical" href="{canonicalUrl}"  />}
-;
  {/* comment */}
       <meta property="og:title" content="{fullTitle}"  />;
       <meta property="og:description" content="{fullDescription}"  />";
@@ -137,8 +130,7 @@ r: creator" content="@ziontechgroup" />,;
       {/* comment */}";
       <script;>
         type="application/ld+json">;
-          __html: JSON.stringify(finalStructuredData, null, 2)}}
-;
+          __html: JSON.stringify(finalStructuredData, null, 2)}
      /> {/* comment */}";
       <link rel = "preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous"  />";
       <link rel="preload" href="/images/hero-bg.webp" as="image"  />;

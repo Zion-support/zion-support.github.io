@@ -18,7 +18,6 @@ export default function EnhancedHeader(): any {;
     const handleScroll = () => {;
       setScrolled(window.scrollY > 50);,
 }
-;
     window.addEventListener("scroll", handleScroll);,
 }
     return () => window.removeEventListener("scroll", handleScroll);,
@@ -30,10 +29,8 @@ export default function EnhancedHeader(): any {;
     if (searchQuery.trim()) {;
       router.push("/search?q="${encodeURIComponent(searchQuery.trim())}");";,
 }
-;
   const toggleDropdown = (itemName: string) => {,,;
     setActiveDropdown(activeDropdown === itemName ? null : itemName)}
-;
   const navigation = [],;,
 },;
     {";
@@ -58,7 +55,6 @@ export default function EnhancedHeader(): any {;
     <header className = "{"fixed" w-full z-50 transition-all duration-300 ${";>
         scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm">;,
 }"}
-;
     >";
       <div className = "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";,
         <div className="flex justify-between items-center py-4">,;
@@ -90,7 +86,6 @@ export default function EnhancedHeader(): any {;
                         router.pathname.startsWith(item.href + "/")";
                           ? "text-blue-600 bg-blue-50;
                           : "text-gray-700 hover: text-blue-600 hover:bg-gray-50"}"}
-;
                     >;
                       {item.name}";
                       <ChevronDown className=""ml-1" h-4 w-4"}       />;
@@ -102,16 +97,12 @@ export default function EnhancedHeader(): any {;
                             href="{dropdownItem.href}
                             className="{"block" px-4 py-2 text-sm text-gray-700 hover: bg-blue-50 hover:text-blue-600 transition-colors"">;,
                             onClick="{()" => setActiveDropdown(null)}
-;
                           >;
                             {dropdownItem.name}
-;
                           </Link>;
                         ))}
-;
                       </div>;
                     )}
-;
                   </div>;
                 ) : (";
                   <Link href="{item.href}>
@@ -119,16 +110,12 @@ export default function EnhancedHeader(): any {;
                       router.pathname === item.href";
                         ? "text-blue-600 bg-blue-50;
                         : "text-gray-700 hover: text-blue-600 hover:bg-gray-50"}"}
-;
                   >;
                     {item.name}
-;
                   </Link>;
                 )}
-;
               </div>;
             ))}
-;
           </nav>;
           {/* comment */}";
           <div className=""hidden" md: flex items-center space-x-4"}>";
@@ -161,11 +148,9 @@ export default function EnhancedHeader(): any {;
             ) : (";
               <Menu className="h-6 w-6"  />,;
             )}
-;
           </button>;
         </div>;
         {/* comment */}
-;
         {mobileMenuOpen && (";
           <div className="lg: hidden">";,
             <div className="{"px-2" pt-2 pb-3 space-y-1 bg-white border-t">;
@@ -179,7 +164,6 @@ export default function EnhancedHeader(): any {;
                           router.pathname.startsWith(item.href + "/")";
                             ? "text-blue-600 bg-blue-50;
                             : "text-gray-700 hover: text-blue-600 hover:bg-gray-50"}"}
-;
                       >;
                         {item.name}";
                         <ChevronDown className=""h-4" w-4"}       />;
@@ -192,17 +176,13 @@ export default function EnhancedHeader(): any {;
                               className="{"block" px-3 py-2 text-sm text-gray-600 hover: text-blue-600 hover:bg-gray-50 rounded-md;,
                               onClick="{()" => {,;
                                 setMobileMenuOpen(false),;
-                                setActiveDropdown(null)}}
-;
+                                setActiveDropdown(null)}
                             >;
                               {dropdownItem.name}
-;
                             </Link>;
                           ))}
-;
                         </div>;
                       )}
-;
                     </div>;
                   ) : (";
                     <Link href="{item.href}>
@@ -211,16 +191,12 @@ export default function EnhancedHeader(): any {;
                           ? "text-blue-600 bg-blue-50;
                           : "text-gray-700 hover: text-blue-600 hover:bg-gray-50"}"}";
                       onClick="{()" => setMobileMenuOpen(false)}
-;
                     >;
                       {item.name}
-;
                     </Link>;
                   )}
-;
                 </div>;
               ))}
-;
               {/* comment */}";
               <div className=""px-3" py-2"}>";
                 <form onSubmit="{handleSearch}" className="relative">";
@@ -248,9 +224,7 @@ export default function EnhancedHeader(): any {;
               </div>;
           </div>,;
         )}
-;
       </div>;
     </header>;
   );,
-}
 }

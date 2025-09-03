@@ -36,7 +36,6 @@ const PrivacyPage: React.FC = () => {
       </section>
     </Layout>
   );
-};
-
+}
 export default PrivacyPage;
 

@@ -82,7 +82,6 @@ const PricingPage: React.FC = () => {
       </section>
     </Layout>
   );
-};
-
+}
 export default PricingPage;
 

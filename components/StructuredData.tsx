@@ -1,8 +1,6 @@
 import React from "react";
 interface StructuredDataProps {;
-;
   data: any}
-;
 export const StructuredData: React.FC<StructuredDataProps> = ({ data }) => {;
   return (";
     <script";>
@@ -33,11 +31,8 @@ export const OrganizationSchema = () => {";
     foundingDate: "2020",";
     numberOfEmployees: "50-100",";
     industry: "Technology Services"}
-;
 ";
   return <StructuredData data="{organizationData}"  />;
-
-;
 export const WebSiteSchema = () => {";
   const websiteData = {}",";
       "query-input": "required name=search_term_string";
@@ -62,8 +57,6 @@ export const WebSiteSchema = () => {";
 
 ";
   return <StructuredData data="{websiteData}"  />;
-
-;
 export const ServiceSchema = () => {";
   const serviceData = {},";
     serviceType: "Artificial Intelligence",";
@@ -95,12 +88,10 @@ export const ServiceSchema = () => {";
 
 ;,
 }
-;
       ];
 
 ;,
 }
-;
 ";
   return <StructuredData data="{serviceData}"  />;,
 }";
@@ -108,11 +99,8 @@ export const ServiceSchema = () => {";
           "@type": "Offer",";
           itemOffered: {",;
             "@type": "Service",";
-            name: "Business Intelligence"}}]}}
-;
+            name: "Business Intelligence"}}]}
 ";
   return <StructuredData data="{serviceData}"  />;
-
-;
 ";
 export default Component
