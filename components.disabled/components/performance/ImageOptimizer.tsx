@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React { useState, useRef, useEffect } from 'react';
 
 interface ImageOptimizerProps {
   src: string;
@@ -14,8 +14,7 @@ interface ImageOptimizerProps {
   fill?: boolean;
   style?: React.CSSProperties;
   onLoad?: () => void;
-  onError?: () => void;
-}
+  onError?: () => void}
 
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   src,
@@ -31,52 +30,44 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   fill = false,
   style,
   onLoad,
-  onError
-}) => {
+  onError }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
   // Generate a simple blur placeholder if none provided
-  const defaultBlurDataURL = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=';
+  const defaultBlurDataURL =
+    'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=';
 
   const handleLoad = () => {
     setIsLoaded(true);
-    onLoad?.();
-  };
+    onLoad?.()};
 
   const handleError = () => {
     setHasError(true);
-    onError?.();
-  };
+    onError?.()};
 
   // Intersection Observer for lazy loading
   useEffect(() => {
     if (priority || !imgRef.current) return;
 
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+      entries => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
             // Image is in viewport, trigger load
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
+            observer.unobserve(entry.target)}
+        })}, {
         rootMargin: '50px 0px',
-        threshold: 0.1
-      }
+        threshold: 0.1 }
     );
 
     observer.observe(imgRef.current);
 
     return () => {
       if (imgRef.current) {
-        observer.unobserve(imgRef.current);
-      }
-    };
-  }, [priority]);
+        observer.unobserve(imgRef.current)}
+    }}, [priority]);
 
   if (hasError) {
     return (
@@ -88,14 +79,17 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       >
         <span className="text-gray-500 text-sm">Image failed to load</span>
       </div>
-    );
-  }
+    )}
 
   return (
     <div
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
-      style={fill ? { position: 'relative', width: '100%', height: '100%' } : { width, height, ...style }}
+      style={
+        fill
+          ? { position: 'relative', width: '100%', height: '100%' }
+          : { width, height, ...style }
+      }
     >
       <img
         src={src}
@@ -111,20 +105,17 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
           objectFit: 'cover',
           width: fill ? '100%' : width,
           height: fill ? '100%' : height,
-          ...style
-        }}
+          ...style }}
         loading={priority ? 'eager' : 'lazy'}
       />
-      
-      {/* Loading skeleton */}
-      {!isLoaded && !hasError && (
+
+      {/* Loading skeleton */}, {!isLoaded && !hasError && (
         <div
           className="absolute inset-0 bg-gray-200 animate-pulse"
           aria-hidden="true"
         />
       )}
     </div>
-  );
-};
+  )};
 
 export default ImageOptimizer;

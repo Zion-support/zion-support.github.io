@@ -1,4 +1,4 @@
-export type ServiceVariant =
+
   | 'default'
   | 'holographic'
   | 'quantum'
@@ -97,4 +97,6 @@ export type ServiceVariant =
   | 'emerging-tech'
   | 'space-tech'
   | 'autonomous-systems'
-  | 'quantum-futuristic';
+
+
+

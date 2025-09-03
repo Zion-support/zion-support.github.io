@@ -14,14 +14,12 @@ class IntelligentDependencyManager {
     this.logFile = path.join(this.projectRoot, 'logs/intelligent-dependency-manager.log');
     this.reportFile = path.join(this.projectRoot, 'logs/intelligent-dependency-manager-report.json');
     this.dependencyHistory = this.loadDependencyHistory();
-    this.ensureDirectories();
-  }
+    this.ensureDirectories()}
 
   ensureDirectories() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
-    }
+      fs.mkdirSync(logDir { recursive: true })}
   }
 
   log(message, level = 'info') {
@@ -30,23 +28,18 @@ class IntelligentDependencyManager {
     console.log(logMessage);
     
     try {
-      fs.appendFileSync(this.logFile, logMessage + '\n');
-    } catch (error) {
-      console.error('Failed to write to log file:', error.message);
-    }
+      fs.appendFileSync(this.logFile, logMessage + '\n')} catch (error) {
+      console.error('Failed to write to log file:', error.message)}
   }
 
   loadDependencyHistory() {
     try {
       if (fs.existsSync(this.reportFile)) {
         const data = fs.readFileSync(this.reportFile, 'utf8');
-        return JSON.parse(data).dependencyHistory || [];
-      }
+        return JSON.parse(data).dependencyHistory || []}
     } catch (error) {
-      this.log(`Failed to load dependency history: ${error.message}`, 'warn');
-    }
-    return [];
-  }
+      this.log(`Failed to load dependency history: ${error.message}`, 'warn')}
+    return []}
 
   saveDependencyHistory() {
     try {
@@ -56,10 +49,8 @@ class IntelligentDependencyManager {
         totalUpdates: this.dependencyHistory.length,
         lastRun: Date.now()
       };
-      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    } catch (error) {
-      this.log(`Failed to save dependency history: ${error.message}`, 'error');
-    }
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))} catch (error) {
+      this.log(`Failed to save dependency history: ${error.message}`, 'error')}
   }
 
   async analyzeDependencies() {
@@ -88,17 +79,15 @@ class IntelligentDependencyManager {
       this.log(`  - Duplicates: ${analysis.duplicates.length}`);
       this.log(`  - Unused: ${analysis.unused.length}`);
 
-      return analysis;
-    } catch (error) {
+      return analysis} catch (error) {
       this.log(`Dependency analysis failed: ${error.message}`, 'error');
-      throw error;
-    }
+      throw error}
   }
 
   async checkOutdatedDependencies() {
     try {
       this.log('🔍 Checking for outdated dependencies...');
-      const output = execSync('npm outdated --json', { 
+      const output = execSync('npm outdated --json' { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
         stdio: 'pipe' 
@@ -111,8 +100,7 @@ class IntelligentDependencyManager {
         wanted: outdated[name].wanted,
         latest: outdated[name].latest,
         type: outdated[name].type
-      }));
-    } catch (error) {
+      }))} catch (error) {
       // npm outdated returns non-zero exit code when there are outdated packages
       if (error.stdout) {
         try {
@@ -123,20 +111,17 @@ class IntelligentDependencyManager {
             wanted: outdated[name].wanted,
             latest: outdated[name].latest,
             type: outdated[name].type
-          }));
-        } catch (parseError) {
+          }))} catch (parseError) {
           this.log(`Failed to parse outdated dependencies: ${parseError.message}`, 'warn');
-          return [];
-        }
+          return []}
       }
-      return [];
-    }
+      return []}
   }
 
   async checkVulnerabilities() {
     try {
       this.log('🔒 Checking for security vulnerabilities...');
-      const output = execSync('npm audit --json', { 
+      const output = execSync('npm audit --json' { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
         stdio: 'pipe' 
@@ -149,8 +134,7 @@ class IntelligentDependencyManager {
         title: audit.vulnerabilities[name].title,
         description: audit.vulnerabilities[name].description,
         fixAvailable: audit.vulnerabilities[name].fixAvailable
-      })) : [];
-    } catch (error) {
+      })) : []} catch (error) {
       // npm audit returns non-zero exit code when vulnerabilities are found
       if (error.stdout) {
         try {
@@ -161,20 +145,17 @@ class IntelligentDependencyManager {
             title: audit.vulnerabilities[name].title,
             description: audit.vulnerabilities[name].description,
             fixAvailable: audit.vulnerabilities[name].fixAvailable
-          })) : [];
-        } catch (parseError) {
+          })) : []} catch (parseError) {
           this.log(`Failed to parse audit results: ${parseError.message}`, 'warn');
-          return [];
-        }
+          return []}
       }
-      return [];
-    }
+      return []}
   }
 
   async findDuplicateDependencies() {
     try {
       this.log('🔍 Finding duplicate dependencies...');
-      const output = execSync('npm ls --json', { 
+      const output = execSync('npm ls --json' { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
         stdio: 'pipe' 
@@ -191,38 +172,31 @@ class IntelligentDependencyManager {
                 name: dep,
                 version: node.dependencies[dep].version,
                 path: node.dependencies[dep].path
-              });
-            } else {
+              })} else {
               seen.add(dep);
-              findDuplicates(node.dependencies[dep], seen);
-            }
-          });
-        }
+              findDuplicates(node.dependencies[dep], seen)}
+          })}
       };
       
       findDuplicates(tree);
-      return duplicates;
-    } catch (error) {
+      return duplicates} catch (error) {
       this.log(`Failed to find duplicates: ${error.message}`, 'warn');
-      return [];
-    }
+      return []}
   }
 
   async findUnusedDependencies() {
     try {
       this.log('🔍 Finding unused dependencies...');
-      const output = execSync('npx depcheck --json', { 
+      const output = execSync('npx depcheck --json' { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
         stdio: 'pipe' 
       });
       
       const result = JSON.parse(output);
-      return result.dependencies || [];
-    } catch (error) {
+      return result.dependencies || []} catch (error) {
       this.log(`Failed to find unused dependencies: ${error.message}`, 'warn');
-      return [];
-    }
+      return []}
   }
 
   async updateDependencies(outdated) {
@@ -240,7 +214,7 @@ class IntelligentDependencyManager {
           `npm install --save-dev ${dep.name}@${dep.latest}` :
           `npm install ${dep.name}@${dep.latest}`;
         
-        execSync(updateCommand, { 
+        execSync(updateCommand { 
           cwd: this.projectRoot, 
           stdio: 'pipe',
           timeout: 120000 
@@ -253,8 +227,7 @@ class IntelligentDependencyManager {
           success: true
         });
         
-        this.log(`✅ Successfully updated ${dep.name}`);
-      } catch (error) {
+        this.log(`✅ Successfully updated ${dep.name}`)} catch (error) {
         this.log(`❌ Failed to update ${dep.name}: ${error.message}`, 'error');
         updates.push({
           name: dep.name,
@@ -262,12 +235,10 @@ class IntelligentDependencyManager {
           to: dep.latest,
           success: false,
           error: error.message
-        });
-      }
+        })}
     }
     
-    return updates;
-  }
+    return updates}
 
   async fixVulnerabilities(vulnerabilities) {
     this.log('🔒 Fixing security vulnerabilities...');
@@ -279,7 +250,7 @@ class IntelligentDependencyManager {
         if (vuln.fixAvailable) {
           this.log(`Fixing vulnerability in ${vuln.name}...`);
           
-          execSync(`npm audit fix`, { 
+          execSync(`npm audit fix` { 
             cwd: this.projectRoot, 
             stdio: 'pipe',
             timeout: 120000 
@@ -291,16 +262,14 @@ class IntelligentDependencyManager {
             success: true
           });
           
-          this.log(`✅ Successfully fixed vulnerability in ${vuln.name}`);
-        } else {
+          this.log(`✅ Successfully fixed vulnerability in ${vuln.name}`)} else {
           this.log(`⚠️ No fix available for ${vuln.name}`, 'warn');
           fixes.push({
             name: vuln.name,
             severity: vuln.severity,
             success: false,
             reason: 'No fix available'
-          });
-        }
+          })}
       } catch (error) {
         this.log(`❌ Failed to fix vulnerability in ${vuln.name}: ${error.message}`, 'error');
         fixes.push({
@@ -308,12 +277,10 @@ class IntelligentDependencyManager {
           severity: vuln.severity,
           success: false,
           error: error.message
-        });
-      }
+        })}
     }
     
-    return fixes;
-  }
+    return fixes}
 
   async removeUnusedDependencies(unused) {
     this.log('🗑️ Removing unused dependencies...');
@@ -324,7 +291,7 @@ class IntelligentDependencyManager {
       try {
         this.log(`Removing unused dependency: ${dep}...`);
         
-        execSync(`npm uninstall ${dep}`, { 
+        execSync(`npm uninstall ${dep}` { 
           cwd: this.projectRoot, 
           stdio: 'pipe',
           timeout: 60000 
@@ -335,49 +302,44 @@ class IntelligentDependencyManager {
           success: true
         });
         
-        this.log(`✅ Successfully removed ${dep}`);
-      } catch (error) {
+        this.log(`✅ Successfully removed ${dep}`)} catch (error) {
         this.log(`❌ Failed to remove ${dep}: ${error.message}`, 'error');
         removals.push({
           name: dep,
           success: false,
           error: error.message
-        });
-      }
+        })}
     }
     
-    return removals;
-  }
+    return removals}
 
   async optimizeDependencies() {
     this.log('⚡ Optimizing dependencies...');
     
     try {
       // Clean npm cache
-      execSync('npm cache clean --force', { 
+      execSync('npm cache clean --force' { 
         cwd: this.projectRoot, 
         stdio: 'pipe' 
       });
       
       // Remove node_modules and package-lock.json for clean install
-      execSync('rm -rf node_modules package-lock.json', { 
+      execSync('rm -rf node_modules package-lock.json' { 
         cwd: this.projectRoot, 
         stdio: 'pipe' 
       });
       
       // Install dependencies
-      execSync('npm install', { 
+      execSync('npm install' { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
         timeout: 300000 
       });
       
       this.log('✅ Dependencies optimized successfully');
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.log(`❌ Dependency optimization failed: ${error.message}`, 'error');
-      return false;
-    }
+      return false}
   }
 
   async generateDependencyReport() {
@@ -412,34 +374,27 @@ class IntelligentDependencyManager {
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
     this.log(`📊 Dependency report saved to ${reportFile}`);
-    return report;
-  }
+    return report}
 
   generateDependencyRecommendations(analysis) {
     const recommendations = [];
     
     if (analysis.outdated.length > 10) {
-      recommendations.push('Consider implementing automated dependency updates');
-    }
+      recommendations.push('Consider implementing automated dependency updates')}
     
     if (analysis.vulnerabilities.length > 0) {
-      recommendations.push('Implement security scanning in CI/CD pipeline');
-    }
+      recommendations.push('Implement security scanning in CI/CD pipeline')}
     
     if (analysis.duplicates.length > 0) {
-      recommendations.push('Review and consolidate duplicate dependencies');
-    }
+      recommendations.push('Review and consolidate duplicate dependencies')}
     
     if (analysis.unused.length > 5) {
-      recommendations.push('Regularly audit and remove unused dependencies');
-    }
+      recommendations.push('Regularly audit and remove unused dependencies')}
     
     if (analysis.totalCount > 100) {
-      recommendations.push('Consider reducing dependency count through better architecture');
-    }
+      recommendations.push('Consider reducing dependency count through better architecture')}
 
-    return recommendations;
-  }
+    return recommendations}
 
   async run() {
     this.log('🚀 Starting Intelligent Dependency Manager...');
@@ -462,12 +417,9 @@ class IntelligentDependencyManager {
       this.log(`   - Updates Applied: ${report.summary.outdatedFixed}`);
       this.log(`   - Vulnerabilities Fixed: ${report.summary.vulnerabilitiesFixed}`);
       this.log(`   - Unused Removed: ${report.summary.unusedRemoved}`);
-      this.log(`   - Optimization: ${report.summary.optimizationSuccess ? 'Success' : 'Failed'}`);
-
-    } catch (error) {
+      this.log(`   - Optimization: ${report.summary.optimizationSuccess ? 'Success' : 'Failed'}`)} catch (error) {
       this.log(`❌ Dependency Manager failed: ${error.message}`, 'error');
-      throw error;
-    }
+      throw error}
   }
 }
 
@@ -476,8 +428,6 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const manager = new IntelligentDependencyManager();
   manager.run().catch(error => {
     console.error('Fatal error:', error);
-    process.exit(1);
-  });
-}
+    process.exit(1)})}
 
 export default $1;

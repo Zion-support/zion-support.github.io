@@ -1,39 +1,40 @@
-import React, { useState } from 'react';
+import React { useState } from 'react';
 // Common interfaces for better type safety
 interface ApiResponse<T = unknown> {
   data: T;
   status: number;
-  message?: string;
-}
+  message?: string}
 
 interface User {
   id: string;
   email: string;
   name: string;
-  role: 'admin' | 'user' | 'guest';
-}
+  role: 'admin' | 'user' | 'guest'}
 
 interface Service {
   id: string;
   name: string;
   description: string;
   price: number;
-  category: string;
-}
+  category: string}
 
 interface FormData {
-  [key: string]: string | number | boolean | File;
-}
+  [key: string]: string | number | boolean | File}
 
 interface ComponentProps {
   className?: string;
   children?: React.ReactNode;
-  [key: string]: unknown;
-}
-
+  [key: string]: unknown}
 
 import { motion } from 'framer-motion';
-import { CheckCircle, Cloud, Mail, MapPin, Phone, Send, User } from 'lucide-react';
+import {
+  CheckCircle,
+  Cloud,
+  Mail,
+  MapPin,
+  Phone,
+  Send,
+  User } from 'lucide-react';
 
 interface FormData {
   name: string;
@@ -48,38 +49,30 @@ const ContactForm: React.FC = () => {
     email: '',
     compunknown: '',
     service: '',
-    message: '',
-  });
+    message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState<Partial<FormData>>({});
   const services = [
-    'AI & Machine Learning,Cloud & DevOps,Cybersecurity,Web Development,Mobile Development,Data Analytics,Digital Transformation,Other',
-  ];
+    'AI & Machine Learning,Cloud & DevOps,Cybersecurity,Web Development,Mobile Development,Data Analytics,Digital Transformation,Other' ];
   const validateForm = (): boolean => {
     const newErrors: Partial<FormData> = {};
     if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
-    }
+      newErrors.name = 'Name is required'}
 
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Email is invalid';
-    }
+      newErrors.email = 'Email is required'} else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = 'Email is invalid'}
 
     if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
-    }
+      newErrors.message = 'Message is required'}
 
     setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+    return Object.keys(newErrors).length === 0};
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validateForm()) {
-      return;
-    }
+      return}
 
     setIsSubmitting(true);
     // Simulate API call
@@ -94,10 +87,7 @@ const ContactForm: React.FC = () => {
         email: '',
         compunknown: '',
         service: '',
-        message: '',
-      });
-    }, 3000);
-  };
+        message: '' })}, 3000)};
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -107,8 +97,7 @@ const ContactForm: React.FC = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
     // Clear error when user starts typing
     if (errors[name as keyof FormData]) {
-      setErrors(prev => ({ ...prev, [name]: undefined }));
-    }
+      setErrors(prev => ({ ...prev, [name]: undefined }))}
   };
   if (isSubmitted) {
     return (
@@ -311,6 +300,5 @@ const ContactForm: React.FC = () => {
         </form>
       </div>
     </div>
-  );
-};
+  )};
 export default ContactForm;

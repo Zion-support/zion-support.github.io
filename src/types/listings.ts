@@ -1,5 +1,5 @@
-export interface Listing {
-  id: string;
+
+
    title: string;
    description: string;
    price: number;
@@ -10,6 +10,7 @@ export interface Listing {
    images: string[];
    seller: {  id: string;
    name: string;
-   rating: number
-   reviews: number} location: string ;
-}
+
+
+
+

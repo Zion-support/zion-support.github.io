@@ -1,86 +1,58 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-import Link from 'next/link';
+
+;
+  public static getDerivedStateFromError(error: Error): State {;
+    return { hasError: true, error }
+  }
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
+
+
 
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
-}
+  fallback?: ReactNode}
 
 interface State {
   hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-}
 
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
+    hasError: false,
+
   }
 
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+
+
+  public static getDerivedStateFromError(error: Error): State {
+    return { hasErro,r: true, error }
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo
-    });
 
-    // Log error to monitoring service
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+
     
-    // In production, you would send this to your error reporting service
-    if (process.env.NODE_ENV === 'production') {
-      // Example: Sentry.captureException(error, { extra: errorInfo });
-    }
+    // Send error to monitoring service""
+    if (typeof window !== 'undefined') {
+      // Example: Send to Sentry, LogRocket, etc.""
+      console.log('Error reported to monitoring service')}
   }
 
-  handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
 
-  render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z" />
 
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">
-            <div className="flex justify-center mb-4">
-              <AlertTriangle className="w-16 h-16 text-red-500" />
-            </div>
-            
-            <h1 className="text-2xl font-bold text-gray-900 mb-2">
-              Oops! Something went wrong
-            </h1>
-            
-            <p className="text-gray-600 mb-6">
-              We're sorry, but something unexpected happened. Please try again or contact support if the problem persists.
-            </p>
+                </svg>
 
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-left">
-                <h3 className="font-semibold text-red-800 mb-2">Error Details:</h3>
-                <pre className="text-xs text-red-700 overflow-auto">
-                  {this.state.error.toString()}
-                </pre>
-                {this.state.errorInfo && (
-                  <pre className="text-xs text-red-600 mt-2 overflow-auto">
-                    {this.state.errorInfo.componentStack}
-                  </pre>
-                )}
+
+                <h3 className="text-lg font-medium text-gray-900">
+                  Something went wrong
+                </h3>
               </div>
-            )}
 
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <button
-                onClick={this.handleRetry}
-                className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              </p>
+            </div>""
+
+            <div className="mt-4">
+
+                className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+
+
+
               >
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
@@ -102,14 +74,18 @@ class ErrorBoundary extends Component<Props, State> {
                   Contact our support team
                 </Link>
               </p>
+
+
             </div>
           </div>
         </div>
-      );
-    }
+      )}
 
-    return this.props.children;
-  }
-}
 
-export default ErrorBoundary;
+    return this.props.children}
+
+
+
+
+
+

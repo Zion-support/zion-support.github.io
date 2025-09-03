@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Download, X, Smartphone, Monitor } from 'lucide-react';
 
@@ -6,79 +6,69 @@ interface BeforeInstallPromptEvent extends Event {
   readonly platforms: string[];
   readonly userChoice: Promise<{
     outcome: 'accepted' | 'dismissed';
-    platform: string;
-  }>;
-  prompt(): Promise<void>;
-}
+    platform: string}>;
+  prompt(): Promise<void>}
 
 const PWARegistration: React.FC = () => {
-  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
+  const [deferredPrompt, setDeferredPrompt] =
+    useState<BeforeInstallPromptEvent | null>(null);
   const [showInstallPrompt, setShowInstallPrompt] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
 
   useEffect(() => {
     // Check if app is already installed
     if (window.matchMedia('(display-mode: standalone)').matches) {
-      setIsInstalled(true);
-    }
+      setIsInstalled(true)}
 
     // Listen for the beforeinstallprompt event
     const handleBeforeInstallPrompt = (e: Event) => {
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
-      setShowInstallPrompt(true);
-    };
+      setShowInstallPrompt(true)};
 
     // Listen for the appinstalled event
     const handleAppInstalled = () => {
       setIsInstalled(true);
       setShowInstallPrompt(false);
-      setDeferredPrompt(null);
-    };
+      setDeferredPrompt(null)};
 
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
     window.addEventListener('appinstalled', handleAppInstalled);
 
     // Register service worker
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-          console.log('Service Worker registered successfully:', registration);
-        })
-        .catch((error) => {
-          console.log('Service Worker registration failed:', error);
-        });
-    }
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then(registration => {
+          console.log('Service Worker registered successfully:', registration)})
+        .catch(error => {
+          console.log('Service Worker registration failed:', error)})}
 
     return () => {
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-      window.removeEventListener('appinstalled', handleAppInstalled);
-    };
-  }, []);
+      window.removeEventListener(
+        'beforeinstallprompt',
+        handleBeforeInstallPrompt
+      );
+      window.removeEventListener('appinstalled', handleAppInstalled)}}, []);
 
   const handleInstallClick = async () => {
     if (!deferredPrompt) return;
 
     deferredPrompt.prompt();
     const { outcome } = await deferredPrompt.userChoice;
-    
+
     if (outcome === 'accepted') {
-      console.log('User accepted the install prompt');
-    } else {
-      console.log('User dismissed the install prompt');
-    }
-    
+      console.log('User accepted the install prompt')} else {
+      console.log('User dismissed the install prompt')}
+
     setDeferredPrompt(null);
-    setShowInstallPrompt(false);
-  };
+    setShowInstallPrompt(false)};
 
   const handleDismiss = () => {
-    setShowInstallPrompt(false);
-  };
+    setShowInstallPrompt(false)};
 
   if (isInstalled) {
-    return null;
-  }
+    return null}
 
   return (
     <AnimatePresence>
@@ -97,7 +87,9 @@ const PWARegistration: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">Install App</h3>
-                  <p className="text-sm text-gray-600">Get quick access to our platform</p>
+                  <p className="text-sm text-gray-600">
+                    Get quick access to our platform
+                  </p>
                 </div>
               </div>
               <button
@@ -137,7 +129,6 @@ const PWARegistration: React.FC = () => {
         </motion.div>
       )}
     </AnimatePresence>
-  );
-};
+  )};
 
 export default PWARegistration;

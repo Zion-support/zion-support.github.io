@@ -1,25 +1,29 @@
-import React   from 'react''
-import { render, screen, fireEvent }   from '@testing-library/react''
-import '@testing-library/jest-dom
-import Badge   from '../components/Badge''
-  describe('Badge', () => {'
-  test('renders without crashing', () => {'
-    render(<Badge  />)
-    expect(screen.getByTestId('badge')).toBeInTheDocument();'
-  })
 
-  test('displays correct content', () => {'
-    render(<Badge  />)
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import Badge from '../components/Badge';
+
+
+  test('renders without crashing', () => {
+
+    render(<Badge />);
+    expect(screen.getByTestId('badge)).toBeInTheDocument()});
+
+
+  test('displays correct content', () => {
+    render(<Badge />);
+
     // Add specific content tests based on component
-  })
+  });
 
-  test('handles user interactions', () => {'
-    render(<Badge  />)
-    // Add interaction tests based on component functionality
-  })
+  test('handles user interactions', () => {
 
-  test('applies correct styling', () => {'
-    render(<Badge  />)
-    // Add styling tests if needed
-  })
-})
+    render(<Badge />);
+    // Add interaction tests based on component functionality});
+;
+  test('applies correct styling', () => {
+    render(<Badge />);
+    // Add styling tests if needed;
+
+

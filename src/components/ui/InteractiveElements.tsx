@@ -1,3 +1,23 @@
-import React, { useState, useEffect } from 'react' import { motion, useAnimation, useInView } from 'framer-motion' import { useRef } from 'react' import { ArrowRight, Sparkles, Zap, Star, Heart, ThumbsUp }  from 'lucide-react';interface InteractiveButtonProps {;
-"
-}
+
+
+  children: React.ReactNode;
+
+   onClick?: () => void;
+   variant?: &apos;primary&apos; | &apos;secondary&apos; | &apos;ghost&apos; | &apos;gradient';
+   size?: &apos;sm&apos; | &apos;md&apos; | &apos;lg';
+   disabled?: boolean;
+
+  icon: React.ReactNode;
+   onClic,k: () => void;
+   tooltip?: string;
+
+
+
+
+
+
+
+
+
+
+

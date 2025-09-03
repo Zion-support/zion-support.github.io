@@ -1,1 +1,3 @@
-export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = true, showGrid = true, showHolograms = true }) => { const canvasRef = useRef (null)  const particlesRef = useRef (null)  useEffect ( () => { '"
+
+
+

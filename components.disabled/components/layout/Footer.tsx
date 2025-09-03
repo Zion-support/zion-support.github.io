@@ -5,33 +5,28 @@ import { ArrowRight, Brain, Cloud, Network, Phone, Mail, User, Heart, Info } fro
 interface ApiResponse<T = unknown> {
   data: T;
   status: number;
-  message?: string;
-}
+  message?: string}
 
 interface User {
   id: string;
   email: string;
   name: string;
-  role: 'admin' | 'user' | 'guest';
-}
+  role: 'admin' | 'user' | 'guest'}
 
 interface Service {
   id: string;
   name: string;
   description: string;
   price: number;
-  category: string;
-}
+  category: string}
 
 interface FormData {
-  [key: string]: string | number | boolean | File;
-}
+  [key: string]: string | number | boolean | File}
 
 interface ComponentProps {
   className?: string;
   children?: React.ReactNode;
-  [key: string]: unknown;
-}
+  [key: string]: unknown}
 
 
 import Link from 'next/link';
@@ -44,71 +39,33 @@ const Footer: React.FC = () => {
       icon: Brain,
       color: 'text-blue-400',
       services: [
-        { name: 'AI Services', href: '/ai-services' },
-        { name: 'Machine Learning', href: '/ai-services#ml' },
-        { name: 'Natural Language Processing', href: '/ai-services#nlp' },
-        { name: 'Computer Vision', href: '/ai-services#vision' },
-      ],
-    },
-    {
+        { name: 'AI Services', href: '/ai-services' }, { name: 'Machine Learning', href: '/ai-services#ml' }, { name: 'Natural Language Processing', href: '/ai-services#nlp' }, { name: 'Computer Vision', href: '/ai-services#vision' } ] }, {
       title: 'IT & Infrastructure',
       icon: Cloud,
       color: 'text-green-400',
       services: [
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Cloud Migration', href: '/it-services#cloud' },
-        { name: 'Cybersecurity', href: '/it-services#security' },
-        { name: 'Network Management', href: '/it-services#network' },
-      ],
-    },
-    {
+        { name: 'IT Services', href: '/it-services' }, { name: 'Cloud Migration', href: '/it-services#cloud' }, { name: 'Cybersecurity', href: '/it-services#security' }, { name: 'Network Management', href: '/it-services#network' } ] }, {
       title: 'Software Solutions',
       icon: Code,
       color: 'text-orange-400',
       services: [
-        { name: 'Micro SaaS', href: '/micro-saas' },
-        { name: 'Custom Applications', href: '/micro-saas#custom' },
-        { name: 'API Development', href: '/micro-saas#api' },
-        { name: 'Integration Services', href: '/micro-saas#integration' },
-      ],
-    },
-  ];
+        { name: 'Micro SaaS', href: '/micro-saas' }, { name: 'Custom Applications', href: '/micro-saas#custom' }, { name: 'API Development', href: '/micro-saas#api' }, { name: 'Integration Services', href: '/micro-saas#integration' } ] } ];
   const quickLinks = [
-  { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/team' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'White Papers', href: '/whitepapers' },
-    { name: 'Webinars', href: '/webinars' },
-    { name: 'Pricing Guide', href: '/pricing-guide' },
-  ];
+  { name: 'About Us', href: '/about' }, { name: 'Our Team', href: '/team' }, { name: 'Careers', href: '/careers' }, { name: 'Case Studies', href: '/case-studies' }, { name: 'Blog', href: '/blog' }, { name: 'White Papers', href: '/whitepapers' }, { name: 'Webinars', href: '/webinars' }, { name: 'Pricing Guide', href: '/pricing-guide' } ];
   const legalLinks = [
-  { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-    { name: 'Cookie Policy', href: '/cookies' },
-    { name: 'Sitemap', href: '/sitemap' },
-  ];
+  { name: 'Privacy Policy', href: '/privacy' }, { name: 'Terms of Service', href: '/terms' }, { name: 'Cookie Policy', href: '/cookies' }, { name: 'Sitemap', href: '/sitemap' } ];
   const socialLinks = [
-  { name: 'LinkedIn', href: 'https://linkedin.com/compunknown/ziontechgroup', icon: Linkedin },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
-    {
+  { name: 'LinkedIn', href: 'https://linkedin.com/compunknown/ziontechgroup', icon: Linkedin }, { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }, { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }, {
       name: 'YouTube',
       href: 'https://youtube.com/ziontechgroup',
-      icon: Youtube,
-    },
-    {
+      icon: Youtube }, {
       name: 'Instagram',
       href: 'https://instagram.com/ziontechgroup',
-      icon: Instagram,
-    },
-  ];
+      icon: Instagram } ];
   const contactInfo = {
     email: 'kleber@ziontechgroup.com',
     phone: '+1 302 464 0950',
-    address: '364 E Main St STE 1008, Middletown DE 19709',
-  };
+    address: '364 E Main St STE 1008, Middletown DE 19709' };
   return (
     <footer className="bg-slate-900 border-t border-slate-700">
       {/* Main Footer Content */}
@@ -301,7 +258,6 @@ const Footer: React.FC = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )};
 
 export default Footer;

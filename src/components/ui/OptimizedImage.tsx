@@ -1,3 +1,21 @@
-import React, { useState, useRef, useEffect } from 'react' import { motion }  from 'framer-motion';interface OptimizedImageProps {;
-"
-}
+
+   src: string;
+   al,t: string;
+
+
+   width?: number;
+   height?: number;
+   className?: string;
+   priority?: boolean;
+   sizes?: string;
+   placeholder?: string;
+
+
+
+
+
+
+
+
+
+

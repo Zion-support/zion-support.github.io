@@ -31,7 +31,7 @@ class DependencyMonitor {
 
     const logsDir = path.dirname(this.logFile)
     if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true })
+      fs.mkdirSync(logsDir { recursive: true })
 
 
   log(message, level =
@@ -142,7 +142,7 @@ class DependencyMonitor {
   async checkOutdatedPackages() {
     try {
       const result = execSync(
-  'npm outdated --json', {
+  'npm outdated --json' {
         cwd: this.projectRoot, encoding:, utf8', stdio: 'pipe
       })
 
@@ -202,7 +202,7 @@ class DependencyMonitor {
   async checkPeerDependencies() {
     try {
       const result = execSync(
-  'npm ls --json', {
+  'npm ls --json' {
         cwd: this.projectRoot, encoding:, utf8', stdio: 'pipe
       })
 
@@ -247,7 +247,7 @@ class DependencyMonitor {
   async checkDependencyConflicts() {
     try {
       const result = execSync(
-  'npm ls --json', {
+  'npm ls --json' {
         cwd: this.projectRoot, encoding:, utf8', stdio: 'pipe
       })
 
@@ -333,7 +333,7 @@ class DependencyMonitor {
 
       // Update packages
       execSync(
-  'npm update', {
+  'npm update' {
         cwd: this.projectRoot, stdio:
   'inherit'
       })
@@ -355,7 +355,7 @@ class DependencyMonitor {
 
     try {
       execSync(
-  'npm install', {
+  'npm install' {
         cwd: this.projectRoot, stdio:
   'inherit'
       })
@@ -372,7 +372,7 @@ class DependencyMonitor {
     try {
       // Try to auto-fix with npm
       execSync(
-  'npm install --legacy-peer-deps', {
+  'npm install --legacy-peer-deps' {
         cwd: this.projectRoot, stdio:
   'inherit'
       })
@@ -396,7 +396,7 @@ class DependencyMonitor {
     try {
       // Try to resolve conflicts with npm
       execSync(
-  'npm install --force', {
+  'npm install --force' {
         cwd: this.projectRoot, stdio:
   'inherit'
       })
@@ -419,7 +419,7 @@ class DependencyMonitor {
 
     try {
       const result = execSync(
-  'npm audit --json', {
+  'npm audit --json' {
         cwd: this.projectRoot, encoding:, utf8', stdio: 'pipe
       })
 
@@ -446,7 +446,7 @@ class DependencyMonitor {
     try {
       // Try to fix vulnerabilities automatically
       execSync(
-  'npm audit fix', {
+  'npm audit fix' {
         cwd: this.projectRoot, stdio:
   'inherit'
       })
@@ -500,7 +500,7 @@ class DependencyMonitor {
   async checkMajorUpdates() {
     try {
       const result = execSync(
-  'npm outdated --json', {
+  'npm outdated --json' {
         cwd: this.projectRoot, encoding:, utf8', stdio: 'pipe
       })
 
@@ -528,7 +528,7 @@ class DependencyMonitor {
     try {
       // Update only minor and patch versions
       execSync(
-  'npm update', {
+  'npm update' {
         cwd: this.projectRoot, stdio:
   'inherit'
       })

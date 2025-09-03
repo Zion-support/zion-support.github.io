@@ -1,3 +1,28 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react' import { motion, AnimatePresence } from 'framer - motion' import { cn }  from '@/lib / utils';interface SearchResult {;
-"
-}
+
+
+   id: string;
+
+   title: string;
+   description: string;
+   url: string;
+   type: &apos;page&apos; | &apos;service&apos; | &apos;blog&apos; | &apos;case - study';
+   category: string;
+   tags: string[];
+
+
+   className?: string;
+   placeholder?: string;
+   onSearch?: (query: string) => void;
+   showFilters?: boolean;
+   showSuggestions?: boolean}&apos;&apos; export /**;
+ * Search function;
+
+
+
+
+
+
+
+
+
+

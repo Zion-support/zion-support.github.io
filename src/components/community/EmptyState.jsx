@@ -1,5 +1,20 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
+
+import {}
+  Tooltip,;
+  TooltipContent,;
+  TooltipProvider,';
+  TooltipTrigger} from &apos;@/components/ui/tooltip';&apos;&apos;
+
+    </div>)}
+export;export default EmptyState;
+export { EmptyState }
+;
+export { EmptyState }
+;
+export { EmptyState }
+
+export { EmptyState }
+
 
 const EmptyState: React.FC = () => {
   return (
@@ -26,7 +41,12 @@ const EmptyState: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default EmptyState;
+
+
+
+
+
+

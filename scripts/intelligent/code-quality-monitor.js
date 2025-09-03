@@ -14,14 +14,12 @@ class SmartCodeQualityMonitor {
     this.logFile = path.join(this.projectRoot, 'logs/smart-code-quality-monitor.log');
     this.reportFile = path.join(this.projectRoot, 'logs/smart-code-quality-monitor-report.json');
     this.qualityHistory = this.loadQualityHistory();
-    this.ensureDirectories();
-  }
+    this.ensureDirectories()}
 
   ensureDirectories() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
-    }
+      fs.mkdirSync(logDir { recursive: true })}
   }
 
   log(message, level = 'info') {
@@ -30,23 +28,18 @@ class SmartCodeQualityMonitor {
     console.log(logMessage);
     
     try {
-      fs.appendFileSync(this.logFile, logMessage + '\n');
-    } catch (error) {
-      console.error('Failed to write to log file:', error.message);
-    }
+      fs.appendFileSync(this.logFile, logMessage + '\n')} catch (error) {
+      console.error('Failed to write to log file:', error.message)}
   }
 
   loadQualityHistory() {
     try {
       if (fs.existsSync(this.reportFile)) {
         const data = fs.readFileSync(this.reportFile, 'utf8');
-        return JSON.parse(data).qualityHistory || [];
-      }
+        return JSON.parse(data).qualityHistory || []}
     } catch (error) {
-      this.log(`Failed to load quality history: ${error.message}`, 'warn');
-    }
-    return [];
-  }
+      this.log(`Failed to load quality history: ${error.message}`, 'warn')}
+    return []}
 
   saveQualityHistory() {
     try {
@@ -56,10 +49,8 @@ class SmartCodeQualityMonitor {
         totalChecks: this.qualityHistory.length,
         lastRun: Date.now()
       };
-      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    } catch (error) {
-      this.log(`Failed to save quality history: ${error.message}`, 'error');
-    }
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))} catch (error) {
+      this.log(`Failed to save quality history: ${error.message}`, 'error')}
   }
 
   async analyzeCodeQuality() {
@@ -84,14 +75,13 @@ class SmartCodeQualityMonitor {
     this.log(`  - Security Issues: ${analysis.security.issues.length}`);
     this.log(`  - Performance Issues: ${analysis.performance.issues.length}`);
 
-    return analysis;
-  }
+    return analysis}
 
   async runLinting() {
     try {
       this.log('🔍 Running ESLint analysis...');
       
-      const output = execSync('npm run lint -- --format=json', { 
+      const output = execSync('npm run lint -- --format=json' { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
         stdio: 'pipe' 
@@ -109,17 +99,14 @@ class SmartCodeQualityMonitor {
             severity: message.severity,
             rule: message.ruleId,
             message: message.message
-          });
-        });
-      });
+          })})});
       
       return {
         issues,
         totalFiles: results.length,
         errorCount: issues.filter(i => i.severity === 2).length,
         warningCount: issues.filter(i => i.severity === 1).length
-      };
-    } catch (error) {
+      }} catch (error) {
       // ESLint returns non-zero exit code when issues are found
       if (error.stdout) {
         try {
@@ -135,30 +122,25 @@ class SmartCodeQualityMonitor {
                 severity: message.severity,
                 rule: message.ruleId,
                 message: message.message
-              });
-            });
-          });
+              })})});
           
           return {
             issues,
             totalFiles: results.length,
             errorCount: issues.filter(i => i.severity === 2).length,
             warningCount: issues.filter(i => i.severity === 1).length
-          };
-        } catch (parseError) {
+          }} catch (parseError) {
           this.log(`Failed to parse linting results: ${parseError.message}`, 'warn');
-          return { issues: [], totalFiles: 0, errorCount: 0, warningCount: 0 };
-        }
+          return { issues: [], totalFiles: 0, errorCount: 0, warningCount: 0 }}
       }
-      return { issues: [], totalFiles: 0, errorCount: 0, warningCount: 0 };
-    }
+      return { issues: [], totalFiles: 0, errorCount: 0, warningCount: 0 }}
   }
 
   async runTypeChecking() {
     try {
       this.log('🔍 Running TypeScript type checking...');
       
-      const output = execSync('npm run type-check', { 
+      const output = execSync('npm run type-check' { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
         stdio: 'pipe' 
@@ -167,8 +149,7 @@ class SmartCodeQualityMonitor {
       return {
         errors: [],
         success: true
-      };
-    } catch (error) {
+      }} catch (error) {
       // TypeScript returns non-zero exit code when errors are found
       const errors = [];
       const errorOutput = error.stdout || error.stderr || '';
@@ -184,23 +165,21 @@ class SmartCodeQualityMonitor {
               column: parseInt(match[2]),
               code: match[3],
               message: match[4]
-            });
-          }
+            })}
         }
       });
       
       return {
         errors,
         success: false
-      };
-    }
+      }}
   }
 
   async runTestCoverage() {
     try {
       this.log('🔍 Running test coverage analysis...');
       
-      const output = execSync('npm run test:coverage', { 
+      const output = execSync('npm run test:coverage' { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
         stdio: 'pipe' 
@@ -213,14 +192,12 @@ class SmartCodeQualityMonitor {
       return {
         coverage,
         success: true
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Test coverage analysis failed: ${error.message}`, 'warn');
       return {
         coverage: 0,
         success: false
-      };
-    }
+      }}
   }
 
   async analyzeComplexity() {
@@ -234,8 +211,7 @@ class SmartCodeQualityMonitor {
       for (const file of files) {
         const complexity = this.calculateFileComplexity(file);
         totalComplexity += complexity;
-        fileCount++;
-      }
+        fileCount++}
       
       const averageComplexity = fileCount > 0 ? totalComplexity / fileCount : 0;
       
@@ -243,11 +219,9 @@ class SmartCodeQualityMonitor {
         score: averageComplexity.toFixed(2),
         totalFiles: fileCount,
         highComplexityFiles: files.filter(f => this.calculateFileComplexity(f) > 10).length
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Complexity analysis failed: ${error.message}`, 'warn');
-      return { score: 0, totalFiles: 0, highComplexityFiles: 0 };
-    }
+      return { score: 0, totalFiles: 0, highComplexityFiles: 0 }}
   }
 
   getSourceFiles() {
@@ -263,10 +237,8 @@ class SmartCodeQualityMonitor {
           const stat = fs.statSync(fullPath);
           
           if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-            scanDirectory(fullPath);
-          } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-            files.push(fullPath);
-          }
+            scanDirectory(fullPath)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+            files.push(fullPath)}
         }
       } catch (error) {
         // Skip directories we can't read
@@ -274,8 +246,7 @@ class SmartCodeQualityMonitor {
     };
     
     scanDirectory(this.projectRoot);
-    return files;
-  }
+    return files}
 
   calculateFileComplexity(filePath) {
     try {
@@ -301,14 +272,11 @@ class SmartCodeQualityMonitor {
       complexityPatterns.forEach(pattern => {
         const matches = content.match(pattern);
         if (matches) {
-          complexity += matches.length;
-        }
+          complexity += matches.length}
       });
       
-      return complexity;
-    } catch (error) {
-      return 0;
-    }
+      return complexity} catch (error) {
+      return 0}
   }
 
   async analyzeMaintainability() {
@@ -322,8 +290,7 @@ class SmartCodeQualityMonitor {
       for (const file of files) {
         const maintainability = this.calculateMaintainabilityIndex(file);
         totalMaintainability += maintainability;
-        fileCount++;
-      }
+        fileCount++}
       
       const averageMaintainability = fileCount > 0 ? totalMaintainability / fileCount : 0;
       
@@ -331,11 +298,9 @@ class SmartCodeQualityMonitor {
         index: averageMaintainability.toFixed(2),
         totalFiles: fileCount,
         lowMaintainabilityFiles: files.filter(f => this.calculateMaintainabilityIndex(f) < 50).length
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Maintainability analysis failed: ${error.message}`, 'warn');
-      return { index: 0, totalFiles: 0, lowMaintainabilityFiles: 0 };
-    }
+      return { index: 0, totalFiles: 0, lowMaintainabilityFiles: 0 }}
   }
 
   calculateMaintainabilityIndex(filePath) {
@@ -348,8 +313,7 @@ class SmartCodeQualityMonitor {
       
       // Reduce score for long files
       if (lines.length > 200) {
-        score -= (lines.length - 200) * 0.1;
-      }
+        score -= (lines.length - 200) * 0.1}
       
       // Reduce score for long lines
       const longLines = lines.filter(line => line.length > 120).length;
@@ -363,13 +327,10 @@ class SmartCodeQualityMonitor {
       const commentLines = lines.filter(line => line.trim().startsWith('//') || line.trim().startsWith('/*')).length;
       const commentRatio = commentLines / lines.length;
       if (commentRatio < 0.1) {
-        score -= 10;
-      }
+        score -= 10}
       
-      return Math.max(0, Math.min(100, score));
-    } catch (error) {
-      return 0;
-    }
+      return Math.max(0, Math.min(100, score))} catch (error) {
+      return 0}
   }
 
   async analyzeSecurity() {
@@ -381,19 +342,16 @@ class SmartCodeQualityMonitor {
       
       for (const file of files) {
         const securityIssues = this.findSecurityIssues(file);
-        issues.push(...securityIssues);
-      }
+        issues.push(...securityIssues)}
       
       return {
         issues,
         totalFiles: files.length,
         criticalIssues: issues.filter(i => i.severity === 'critical').length,
         highIssues: issues.filter(i => i.severity === 'high').length
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Security analysis failed: ${error.message}`, 'warn');
-      return { issues: [], totalFiles: 0, criticalIssues: 0, highIssues: 0 };
-    }
+      return { issues: [], totalFiles: 0, criticalIssues: 0, highIssues: 0 }}
   }
 
   findSecurityIssues(filePath) {
@@ -403,13 +361,7 @@ class SmartCodeQualityMonitor {
       const issues = [];
       
       const securityPatterns = [
-        { pattern: /eval\s*\(/, severity: 'critical', message: 'Use of eval() is dangerous' },
-        { pattern: /innerHTML\s*=/, severity: 'high', message: 'Direct innerHTML assignment can lead to XSS' },
-        { pattern: /document\.write/, severity: 'medium', message: 'document.write() can lead to XSS' },
-        { pattern: /localStorage\.setItem/, severity: 'medium', message: 'Sensitive data in localStorage' },
-        { pattern: /sessionStorage\.setItem/, severity: 'medium', message: 'Sensitive data in sessionStorage' },
-        { pattern: /password.*=.*['"]/, severity: 'high', message: 'Hardcoded password detected' },
-        { pattern: /api[Kk]ey.*=.*['"]/, severity: 'high', message: 'Hardcoded API key detected' }
+        { pattern: /eval\s*\(/, severity: 'critical', message: 'Use of eval() is dangerous' }, { pattern: /innerHTML\s*=/, severity: 'high', message: 'Direct innerHTML assignment can lead to XSS' }, { pattern: /document\.write/, severity: 'medium', message: 'document.write() can lead to XSS' }, { pattern: /localStorage\.setItem/, severity: 'medium', message: 'Sensitive data in localStorage' }, { pattern: /sessionStorage\.setItem/, severity: 'medium', message: 'Sensitive data in sessionStorage' }, { pattern: /password.*=.*['"]/, severity: 'high', message: 'Hardcoded password detected' }, { pattern: /api[Kk]ey.*=.*['"]/, severity: 'high', message: 'Hardcoded API key detected' }
       ];
       
       lines.forEach((line, index) => {
@@ -421,15 +373,11 @@ class SmartCodeQualityMonitor {
               severity,
               message,
               code: line.trim()
-            });
-          }
-        });
-      });
+            })}
+        })});
       
-      return issues;
-    } catch (error) {
-      return [];
-    }
+      return issues} catch (error) {
+      return []}
   }
 
   async analyzePerformance() {
@@ -441,19 +389,16 @@ class SmartCodeQualityMonitor {
       
       for (const file of files) {
         const performanceIssues = this.findPerformanceIssues(file);
-        issues.push(...performanceIssues);
-      }
+        issues.push(...performanceIssues)}
       
       return {
         issues,
         totalFiles: files.length,
         criticalIssues: issues.filter(i => i.severity === 'critical').length,
         highIssues: issues.filter(i => i.severity === 'high').length
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Performance analysis failed: ${error.message}`, 'warn');
-      return { issues: [], totalFiles: 0, criticalIssues: 0, highIssues: 0 };
-    }
+      return { issues: [], totalFiles: 0, criticalIssues: 0, highIssues: 0 }}
   }
 
   findPerformanceIssues(filePath) {
@@ -463,11 +408,7 @@ class SmartCodeQualityMonitor {
       const issues = [];
       
       const performancePatterns = [
-        { pattern: /for\s*\([^)]*\.length[^)]*\)/, severity: 'medium', message: 'Cache array length in loop' },
-        { pattern: /setTimeout\s*\(\s*0\s*\)/, severity: 'low', message: 'Use setImmediate instead of setTimeout(0)' },
-        { pattern: /console\.log/, severity: 'low', message: 'Remove console.log in production' },
-        { pattern: /\.innerHTML\s*\+/, severity: 'high', message: 'Use DocumentFragment for multiple DOM updates' },
-        { pattern: /document\.getElementById.*for/, severity: 'medium', message: 'Cache DOM elements in loops' }
+        { pattern: /for\s*\([^)]*\.length[^)]*\)/, severity: 'medium', message: 'Cache array length in loop' }, { pattern: /setTimeout\s*\(\s*0\s*\)/, severity: 'low', message: 'Use setImmediate instead of setTimeout(0)' }, { pattern: /console\.log/, severity: 'low', message: 'Remove console.log in production' }, { pattern: /\.innerHTML\s*\+/, severity: 'high', message: 'Use DocumentFragment for multiple DOM updates' }, { pattern: /document\.getElementById.*for/, severity: 'medium', message: 'Cache DOM elements in loops' }
       ];
       
       lines.forEach((line, index) => {
@@ -479,15 +420,11 @@ class SmartCodeQualityMonitor {
               severity,
               message,
               code: line.trim()
-            });
-          }
-        });
-      });
+            })}
+        })});
       
-      return issues;
-    } catch (error) {
-      return [];
-    }
+      return issues} catch (error) {
+      return []}
   }
 
   async autoFixIssues(analysis) {
@@ -499,36 +436,31 @@ class SmartCodeQualityMonitor {
     if (analysis.linting.issues.length > 0) {
       try {
         this.log('Fixing linting issues...');
-        execSync('npm run lint:fix', { 
+        execSync('npm run lint:fix' { 
           cwd: this.projectRoot, 
           stdio: 'pipe',
           timeout: 60000 
         });
         fixes.push({ type: 'linting', success: true, count: analysis.linting.issues.length });
-        this.log('✅ Linting issues fixed');
-      } catch (error) {
+        this.log('✅ Linting issues fixed')} catch (error) {
         fixes.push({ type: 'linting', success: false, error: error.message });
-        this.log(`❌ Failed to fix linting issues: ${error.message}`, 'error');
-      }
+        this.log(`❌ Failed to fix linting issues: ${error.message}`, 'error')}
     }
     
     // Auto-fix formatting issues
     try {
       this.log('Fixing formatting issues...');
-      execSync('npm run format', { 
+      execSync('npm run format' { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
         timeout: 60000 
       });
       fixes.push({ type: 'formatting', success: true });
-      this.log('✅ Formatting issues fixed');
-    } catch (error) {
+      this.log('✅ Formatting issues fixed')} catch (error) {
       fixes.push({ type: 'formatting', success: false, error: error.message });
-      this.log(`❌ Failed to fix formatting issues: ${error.message}`, 'error');
-    }
+      this.log(`❌ Failed to fix formatting issues: ${error.message}`, 'error')}
     
-    return fixes;
-  }
+    return fixes}
 
   async generateQualityReport() {
     this.log('📊 Generating code quality report...');
@@ -561,8 +493,7 @@ class SmartCodeQualityMonitor {
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
     this.log(`📊 Quality report saved to ${reportFile}`);
-    return report;
-  }
+    return report}
 
   calculateQualityScore(analysis) {
     let score = 100;
@@ -579,42 +510,33 @@ class SmartCodeQualityMonitor {
     score -= analysis.performance.criticalIssues * 3;
     score -= analysis.performance.highIssues * 1;
     
-    return Math.max(0, Math.min(100, score.toFixed(2)));
-  }
+    return Math.max(0, Math.min(100, score.toFixed(2)))}
 
   generateQualityRecommendations(analysis) {
     const recommendations = [];
     
     if (analysis.linting.errorCount > 0) {
-      recommendations.push('Fix ESLint errors to improve code consistency');
-    }
+      recommendations.push('Fix ESLint errors to improve code consistency')}
     
     if (analysis.typeChecking.errors.length > 0) {
-      recommendations.push('Resolve TypeScript errors for better type safety');
-    }
+      recommendations.push('Resolve TypeScript errors for better type safety')}
     
     if (analysis.testCoverage.coverage < 80) {
-      recommendations.push('Increase test coverage to at least 80%');
-    }
+      recommendations.push('Increase test coverage to at least 80%')}
     
     if (analysis.complexity.highComplexityFiles > 0) {
-      recommendations.push('Refactor high complexity files');
-    }
+      recommendations.push('Refactor high complexity files')}
     
     if (analysis.maintainability.index < 70) {
-      recommendations.push('Improve code maintainability through better structure');
-    }
+      recommendations.push('Improve code maintainability through better structure')}
     
     if (analysis.security.issues.length > 0) {
-      recommendations.push('Address security vulnerabilities immediately');
-    }
+      recommendations.push('Address security vulnerabilities immediately')}
     
     if (analysis.performance.issues.length > 0) {
-      recommendations.push('Optimize performance bottlenecks');
-    }
+      recommendations.push('Optimize performance bottlenecks')}
 
-    return recommendations;
-  }
+    return recommendations}
 
   async run() {
     this.log('🚀 Starting Smart Code Quality Monitor...');
@@ -639,12 +561,9 @@ class SmartCodeQualityMonitor {
       this.log(`   - Test Coverage: ${report.summary.testCoverage}%`);
       this.log(`   - Security Issues: ${report.summary.securityIssues}`);
       this.log(`   - Performance Issues: ${report.summary.performanceIssues}`);
-      this.log(`   - Auto-fixes Applied: ${report.fixes.filter(f => f.success).length}`);
-
-    } catch (error) {
+      this.log(`   - Auto-fixes Applied: ${report.fixes.filter(f => f.success).length}`)} catch (error) {
       this.log(`❌ Code Quality Monitor failed: ${error.message}`, 'error');
-      throw error;
-    }
+      throw error}
   }
 }
 
@@ -653,8 +572,6 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const monitor = new SmartCodeQualityMonitor();
   monitor.run().catch(error => {
     console.error('Fatal error:', error);
-    process.exit(1);
-  });
-}
+    process.exit(1)})}
 
 export default $1;

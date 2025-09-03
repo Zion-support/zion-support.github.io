@@ -1,0 +1,165 @@
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+
+:pages/solutions/workflow-automation.tsx
+import { Card } from '../../components/ui/Card';
+import { Button } from '../../components/ui/Button';
+
+import { Badge } from '../../components/ui/Badge';
+:solutions.disabled/workflow-automation.tsx
+import {
+  Workflow,
+  ArrowRight,
+  CheckCircle,
+  Zap,
+  Settings,
+  BarChart3,
+  Shield,
+  Globe,
+  Clock } from 'lucide-react';
+
+
+export default function WorkflowAutomation() {
+  const features = [
+  {
+      icon: Zap,
+      title: 'Process Automation',
+      description:'
+        'Automate repetitive business processes with custom workflows and triggers.' }, {
+      icon: Settings,
+      title: 'Integration APIs',
+      description:'
+        'Connect with hundreds of third-party applications and services.' }, {
+      icon: Workflow,
+      title: 'Custom Workflows',
+      description:'
+        'Build custom workflows with drag-and-drop workflow designer.' }, {
+      icon: BarChart3,
+      title: 'Monitoring & Analytics',
+      description:'
+        'Track workflow performance and identify optimization opportunities.' }, {
+      icon: Shield,
+      title: 'Security & Compliance',
+      description:'
+        'Enterprise-grade security with compliance monitoring and audit trails.' }, {
+      icon: Clock,
+      title: 'Real-time Processing',
+      description:'
+        'Execute workflows in real-time with high-performance infrastructure.' } ];
+
+  return (
+    <>
+
+        title="Workflow Automation Platform - Zion Tech Group"
+        description="Streamline business processes with custom workflow automation and integration capabilities. Boost efficiency."
+:solutions.disabled/workflow-automation.tsx
+        keywords="workflow automation, process automation, business automation, integration, workflow management"
+      />
+
+
+      <Head>
+        <title>Workflow Automation Platform - Zion Tech Group</title>
+      </Head>
+
+:solutions.disabled/workflow-automation.tsx
+                {' '}
+                Platform
+              </span>
+            </h1>'
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Streamline your business processes with powerful workflow
+              automation, custom integrations, and intelligent process
+              optimization.
+            </p>"
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                Start Free Trial"
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button"
+                size="lg""
+                variant="outline""
+                className="border-white text-white hove,
+    r:bg-white hove,
+    r:text-gray-900"
+              >
+                Schedule Demo
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}"
+      <section className="py-20 bg-gray-50">"
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8">"
+          <div className="text-center mb-16">"
+            <h2 className="text-3xl m,
+    d:text-4xl font-bold text-gray-900 mb-4">
+              Powerful Workflow Automation Features
+            </h2>"
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Everything you need to automate, optimize, and scale your business
+              processes.
+            </p>
+          </div>
+"
+          <div className="grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <Card
+                key={index}"
+                className="p-6 hover: shadow-xl transition-shadow duration-300"
+              >"
+                <div className="flex items-center mb-4">"
+                  <div className="p-3 bg-blue-100 rounded-lg mr-4">"
+                    <feature.icon className="h-8 w-8 text-blue-600" />
+                  </div>"
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    {feature.title}
+                  </h3>
+                </div>"
+                <p className="text-gray-600">{feature.description}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}"
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Ready to Automate Your Workflows?
+          </h2>"
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Join thousands of businesses already using our workflow automation
+            platform to increase efficiency and reduce manual work.
+          </p>"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button"
+              size="lg""
+              className="bg-white text-blue-600 hover:bg-gray-100"
+            >
+              Start Free Trial"
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>"
+            <Link href="/contact">
+              <Button"
+                size="lg""
+                variant="outline""
+                className="border-white text-white hove,
+    r:bg-white hove,
+    r:text-blue-600"
+              >
+                Contact Sales
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  )}
+"

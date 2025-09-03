@@ -41,11 +41,9 @@ const ${componentName}${typeAnnotation} = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
-export default ${componentName};`;
-}
+export default ${componentName};`}
 
 // Function to check if a file is severely corrupted
 function isSeverelyCorrupted(content) {
@@ -63,8 +61,7 @@ function isSeverelyCorrupted(content) {
   return corruptionIndicators.some(indicator => content.includes(indicator)) ||
          content.length < 200 ||
          content.includes('return()') ||
-         content.includes('const') && !content.includes('export');
-}
+         content.includes('const') && !content.includes('export')}
 
 // Function to fix severely corrupted files
 function fixCorruptedFile(filePath) {
@@ -75,14 +72,11 @@ function fixCorruptedFile(filePath) {
       const newContent = createMinimalComponent(filePath);
       fs.writeFileSync(filePath, newContent, 'utf8');
       console.log(`Replaced corrupted file: ${filePath}`);
-      return true;
-    }
+      return true}
     
-    return false;
-  } catch (error) {
+    return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Function to recursively find and fix corrupted files
@@ -95,16 +89,13 @@ function fixCorruptedFilesInDirectory(dirPath) {
     const stat = fs.statSync(filePath);
 
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      fixedCount += fixCorruptedFilesInDirectory(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.js')) {
+      fixedCount += fixCorruptedFilesInDirectory(filePath)} else if (file.endsWith('.tsx') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.js')) {
       if (fixCorruptedFile(filePath)) {
-        fixedCount++;
-      }
+        fixedCount++}
     }
   });
 
-  return fixedCount;
-}
+  return fixedCount}
 
 // Main execution
 console.log('Starting to fix severely corrupted files...');

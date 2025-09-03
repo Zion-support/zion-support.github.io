@@ -5,33 +5,28 @@ import { User } from 'lucide-react';
 interface ApiResponse<T = unknown> {
   data: T;
   status: number;
-  message?: string;
-}
+  message?: string}
 
 interface User {
   id: string;
   email: string;
   name: string;
-  role: 'admin' | 'user' | 'guest';
-}
+  role: 'admin' | 'user' | 'guest'}
 
 interface Service {
   id: string;
   name: string;
   description: string;
   price: number;
-  category: string;
-}
+  category: string}
 
 interface FormData {
-  [key: string]: string | number | boolean | File;
-}
+  [key: string]: string | number | boolean | File}
 
 interface ComponentProps {
   className?: string;
   children?: React.ReactNode;
-  [key: string]: unknown;
-}
+  [key: string]: unknown}
 
 
 
@@ -98,7 +93,7 @@ const PerformanceMonitor: React.FC = () => {
     const sendMetrics = () => {
       if (typeof window !== 'undefined' && (window as unknown).gtag) {
         // Send to Google Analytics;
-        (window as unknown).gtag('event,web_vitals', {
+        (window as unknown).gtag('event,web_vitals' {
           event_category: 'Performance', event_label: 'Core Web Vitals',
           custom_map: {
             metric_1: 'fcp', metric_2: 'lcp',
@@ -106,7 +101,7 @@ const PerformanceMonitor: React.FC = () => {
             metric_5: 'ttfb'}, value: Math.round(metrics.fcp || 0), non_interaction: true})}
       // Send to custom analytics endpoint;
       if (process.env.NODE_ENV === 'production') {
-        fetch('/api/analytics/performance', {
+        fetch('/api/analytics/performance' {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'}, body: JSON.stringify({

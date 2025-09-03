@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -21,18 +21,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀' },
-    { id: 'Legal Technology', name: 'Legal Technology', icon: '⚖️' },
-    { id: 'Human Resources', name: 'Human Resources', icon: '👥' },
-    { id: 'Digital Marketing', name: 'Digital Marketing', icon: '📱' },
-    { id: 'Sales Technology', name: 'Sales Technology', icon: '💼' },
-    { id: 'Financial Technology', name: 'Financial Technology', icon: '💰' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', icon: '🛡️' },
-    { id: 'Data Analytics', name: 'Data Analytics', icon: '📈' },
-    { id: 'DevOps', name: 'DevOps', icon: '⚙️' },
-    { id: 'Cloud Computing', name: 'Cloud Computing', icon: '☁️' },
-    { id: 'Blockchain', name: 'Blockchain', icon: '🔗' },
-    { id: 'Quantum Computing', name: 'Quantum Computing', icon: '⚛️' }
+    { id: 'all', name: 'All Services', icon: '🚀' }, { id: 'Legal Technology', name: 'Legal Technology', icon: '⚖️' }, { id: 'Human Resources', name: 'Human Resources', icon: '👥' }, { id: 'Digital Marketing', name: 'Digital Marketing', icon: '📱' }, { id: 'Sales Technology', name: 'Sales Technology', icon: '💼' }, { id: 'Financial Technology', name: 'Financial Technology', icon: '💰' }, { id: 'Cybersecurity', name: 'Cybersecurity', icon: '🛡️' }, { id: 'Data Analytics', name: 'Data Analytics', icon: '📈' }, { id: 'DevOps', name: 'DevOps', icon: '⚙️' }, { id: 'Cloud Computing', name: 'Cloud Computing', icon: '☁️' }, { id: 'Blockchain', name: 'Blockchain', icon: '🔗' }, { id: 'Quantum Computing', name: 'Quantum Computing', icon: '⚛️' }
   ];
 
   const pricingComparison = [
@@ -55,8 +44,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
           price: 12000,
           features: ["Basic Legal Forms", "Limited Automation", "No Risk Assessment", "Basic Support"],
           missing: ["Advanced AI", "Custom Solutions", "Enterprise Features"]
-        },
-        {
+        }, {
           name: "LegalZoom",
           price: 15000,
           features: ["Document Templates", "Basic Legal Advice", "Standard Support", "Limited AI"],
@@ -66,8 +54,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
       roi: "600% within 8 months",
       setupTime: "4-5 weeks",
       website: "https://ziontechgroup.com/ai-legal-counsel"
-    },
-    {
+    }, {
       id: "ai-autonomous-hr-platform",
       service: "AI Autonomous HR Platform",
       category: "Human Resources",
@@ -86,8 +73,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
           price: 25000,
           features: ["Basic HR Management", "Standard Reporting", "Traditional Support", "Limited AI"],
           missing: ["AI Automation", "Predictive Analytics", "Cost Optimization"]
-        },
-        {
+        }, {
           name: "BambooHR",
           price: 18000,
           features: ["HR Database", "Basic Reporting", "Standard Support", "No AI"],
@@ -97,8 +83,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
       roi: "450% within 7 months",
       setupTime: "3-4 weeks",
       website: "https://ziontechgroup.com/ai-hr-platform"
-    },
-    {
+    }, {
       id: "ai-autonomous-marketing-platform",
       service: "AI Autonomous Marketing Platform",
       category: "Digital Marketing",
@@ -117,8 +102,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
           price: 32000,
           features: ["Basic Marketing Tools", "Standard Automation", "Limited AI", "Basic Analytics"],
           missing: ["Advanced AI", "ROI Optimization", "Intelligent Insights"]
-        },
-        {
+        }, {
           name: "Marketo",
           price: 45000,
           features: ["Marketing Automation", "Basic Reporting", "Standard Support", "Limited Intelligence"],
@@ -128,8 +112,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
       roi: "500% within 6 months",
       setupTime: "4-5 weeks",
       website: "https://ziontechgroup.com/ai-marketing-platform"
-    },
-    {
+    }, {
       id: "ai-autonomous-sales-platform",
       service: "AI Autonomous Sales Platform",
       category: "Sales Technology",
@@ -148,8 +131,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
           price: 36000,
           features: ["CRM Database", "Basic Reporting", "Standard Automation", "Limited AI"],
           missing: ["AI Prediction", "Process Optimization", "Intelligent Coaching"]
-        },
-        {
+        }, {
           name: "HubSpot Sales",
           price: 24000,
           features: ["Basic CRM", "Standard Tools", "Limited Intelligence", "Basic Support"],
@@ -159,8 +141,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
       roi: "400% within 6 months",
       setupTime: "3-4 weeks",
       website: "https://ziontechgroup.com/ai-sales-platform"
-    },
-    {
+    }, {
       id: "ai-autonomous-finance-platform",
       service: "AI Autonomous Finance Platform",
       category: "Financial Technology",
@@ -179,8 +160,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
           price: 15000,
           features: ["Basic Accounting", "Standard Reporting", "Limited Automation", "No AI"],
           missing: ["AI Automation", "Intelligence", "Risk Assessment"]
-        },
-        {
+        }, {
           name: "Xero",
           price: 12000,
           features: ["Cloud Accounting", "Basic Tools", "Standard Support", "Limited Features"],
@@ -190,8 +170,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
       roi: "550% within 8 months",
       setupTime: "4-5 weeks",
       website: "https://ziontechgroup.com/ai-finance-platform"
-    },
-    {
+    }, {
       id: "ai-autonomous-cybersecurity-platform",
       service: "AI Autonomous Cybersecurity Platform",
       category: "Cybersecurity",
@@ -210,8 +189,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
           price: 50000,
           features: ["Basic Security", "Standard Monitoring", "Limited AI", "Basic Support"],
           missing: ["AI Intelligence", "Autonomous Response", "Advanced Analytics"]
-        },
-        {
+        }, {
           name: "SentinelOne",
           price: 45000,
           features: ["Security Tools", "Basic AI", "Standard Features", "Limited Intelligence"],
@@ -221,8 +199,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
       roi: "700% within 10 months",
       setupTime: "6-7 weeks",
       website: "https://ziontechgroup.com/ai-cybersecurity"
-    },
-    {
+    }, {
       id: "ai-autonomous-data-analytics-platform",
       service: "AI Autonomous Data Analytics Platform",
       category: "Data Analytics",
@@ -241,8 +218,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
           price: 35000,
           features: ["Data Visualization", "Basic Analytics", "Standard Reporting", "Limited AI"],
           missing: ["AI Intelligence", "Predictive Analytics", "Autonomous Insights"]
-        },
-        {
+        }, {
           name: "Power BI",
           price: 25000,
           features: ["Microsoft Integration", "Basic BI", "Standard Tools", "Limited Intelligence"],
@@ -252,8 +228,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
       roi: "550% within 8 months",
       setupTime: "4-5 weeks",
       website: "https://ziontechgroup.com/ai-data-analytics"
-    },
-    {
+    }, {
       id: "ai-autonomous-devops-platform",
       service: "AI Autonomous DevOps Platform",
       category: "DevOps",
@@ -272,8 +247,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
           price: 40000,
           features: ["Basic CI/CD", "Standard Tools", "Limited Automation", "No AI"],
           missing: ["AI Intelligence", "Advanced Optimization", "Intelligent Automation"]
-        },
-        {
+        }, {
           name: "GitLab CI",
           price: 30000,
           features: ["Git Integration", "Basic CI/CD", "Standard Features", "Limited Intelligence"],
@@ -283,8 +257,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
       roi: "600% within 9 months",
       setupTime: "5-6 weeks",
       website: "https://ziontechgroup.com/ai-devops"
-    },
-    {
+    }, {
       id: "ai-autonomous-cloud-management-platform",
       service: "AI Autonomous Cloud Management Platform",
       category: "Cloud Computing",
@@ -303,8 +276,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
           price: 50000,
           features: ["Basic Cloud Tools", "Standard Management", "Limited AI", "Basic Support"],
           missing: ["AI Intelligence", "Cost Optimization", "Intelligent Orchestration"]
-        },
-        {
+        }, {
           name: "Terraform Enterprise",
           price: 45000,
           features: ["Infrastructure as Code", "Basic Tools", "Standard Features", "Limited Intelligence"],
@@ -314,8 +286,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
       roi: "650% within 10 months",
       setupTime: "6-7 weeks",
       website: "https://ziontechgroup.com/ai-cloud-management"
-    },
-    {
+    }, {
       id: "ai-autonomous-blockchain-platform",
       service: "AI Autonomous Blockchain Platform",
       category: "Blockchain",
@@ -334,8 +305,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
           price: 100000,
           features: ["Basic Blockchain", "Standard Tools", "Limited AI", "Basic Support"],
           missing: ["AI Intelligence", "Advanced Analytics", "Autonomous Operations"]
-        },
-        {
+        }, {
           name: "Hyperledger",
           price: 80000,
           features: ["Enterprise Blockchain", "Basic Features", "Standard Tools", "Limited Intelligence"],
@@ -345,8 +315,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
       roi: "800% within 12 months",
       setupTime: "8-9 weeks",
       website: "https://ziontechgroup.com/ai-blockchain-platform"
-    },
-    {
+    }, {
       id: "ai-autonomous-quantum-platform",
       service: "AI Autonomous Quantum Platform",
       category: "Quantum Computing",
@@ -365,8 +334,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
           price: 200000,
           features: ["Basic Quantum", "Standard Tools", "Limited AI", "Basic Support"],
           missing: ["AI Intelligence", "Advanced Analytics", "Autonomous Operations"]
-        },
-        {
+        }, {
           name: "Google Quantum",
           price: 180000,
           features: ["Quantum Computing", "Basic Features", "Standard Tools", "Limited Intelligence"],
@@ -383,8 +351,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.service.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch});
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -486,7 +453,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
                 >
                   {categories.map((category) => (
                     <option key={category.id} value={category.id}>
-                      {category.icon} {category.name}
+                      {category.icon}, {category.name}
                     </option>
                   ))}
                 </select>
@@ -547,8 +514,7 @@ const AIServicesPricingComparison2025: React.FC = () => {
                       </div>
                     </div>
 
-                    {/* Competitors */}
-                    {service.competitors.map((competitor, index) => (
+                    {/* Competitors */}, {service.competitors.map((competitor, index) => (
                       <div key={index} className="bg-white/5 border border-gray-600 rounded-lg p-6">
                         <div className="text-center mb-6">
                           <h4 className="text-xl font-bold text-white mb-2">{competitor.name}</h4>
@@ -644,7 +610,6 @@ const AIServicesPricingComparison2025: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default AIServicesPricingComparison2025;

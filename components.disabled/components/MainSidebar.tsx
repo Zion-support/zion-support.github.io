@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import {
@@ -64,13 +64,11 @@ import {
   Award,
   Leaf,
   Sun,
-  Wind
-} from 'lucide-react';
+  Wind } from 'lucide-react';
 
 interface SidebarProps extends React.PropsWithChildren<{}> {
   isOpen: boolean;
-  onClose: () => void;
-}
+  onClose: () => void}
 
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const router = useRouter();
@@ -81,101 +79,47 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       prev.includes(section)
         ? prev.filter(s => s !== section)
         : [...prev, section]
-    );
-  };
+    )};
 
   const isActive = (path: string) => router.pathname === path;
 
   const navigation = {
     main: [
-      { name: 'Home', href: '/', icon: Home },
-      { name: 'About', href: '/about', icon: Building },
-      { name: 'Services', href: '/services', icon: Briefcase },
-      { name: 'Solutions', href: '/solutions', icon: Target },
-      { name: 'Partners', href: '/partners', icon: Handshake },
-      { name: 'Careers', href: '/careers', icon: Users },
-      { name: 'Blog', href: '/blog', icon: Newspaper },
-      { name: 'Contact', href: '/contact', icon: Phone },
-    ],
+      { name: 'Home', href: '/', icon: Home }, { name: 'About', href: '/about', icon: Building }, { name: 'Services', href: '/services', icon: Briefcase }, { name: 'Solutions', href: '/solutions', icon: Target }, { name: 'Partners', href: '/partners', icon: Handshake }, { name: 'Careers', href: '/careers', icon: Users }, { name: 'Blog', href: '/blog', icon: Newspaper }, { name: 'Contact', href: '/contact', icon: Phone } ],
     services: [
       {
         name: 'AI & Machine Learning',
         icon: Brain,
         children: [
-          { name: 'AI Development', href: '/services/ai-development' },
-          { name: 'Machine Learning', href: '/services/machine-learning' },
-          { name: 'Natural Language Processing', href: '/services/nlp' },
-          { name: 'Computer Vision', href: '/services/computer-vision' },
-        ]
-      },
-      {
+          { name: 'AI Development', href: '/services/ai-development' }, { name: 'Machine Learning', href: '/services/machine-learning' }, { name: 'Natural Language Processing', href: '/services/nlp' }, { name: 'Computer Vision', href: '/services/computer-vision' } ] }, {
         name: 'Cloud & Infrastructure',
         icon: Cloud,
         children: [
-          { name: 'Cloud Migration', href: '/services/cloud-migration' },
-          { name: 'DevOps', href: '/services/devops' },
-          { name: 'Microservices', href: '/services/microservices' },
-          { name: 'Containerization', href: '/services/containerization' },
-        ]
-      },
-      {
+          { name: 'Cloud Migration', href: '/services/cloud-migration' }, { name: 'DevOps', href: '/services/devops' }, { name: 'Microservices', href: '/services/microservices' }, { name: 'Containerization', href: '/services/containerization' } ] }, {
         name: 'Web Development',
         icon: Code,
         children: [
-          { name: 'Frontend Development', href: '/services/frontend' },
-          { name: 'Backend Development', href: '/services/backend' },
-          { name: 'Full-Stack Development', href: '/services/fullstack' },
-          { name: 'E-commerce Solutions', href: '/services/ecommerce' },
-        ]
-      },
-      {
+          { name: 'Frontend Development', href: '/services/frontend' }, { name: 'Backend Development', href: '/services/backend' }, { name: 'Full-Stack Development', href: '/services/fullstack' }, { name: 'E-commerce Solutions', href: '/services/ecommerce' } ] }, {
         name: 'Cybersecurity',
         icon: Shield,
         children: [
-          { name: 'Security Audits', href: '/services/security-audits' },
-          { name: 'Penetration Testing', href: '/services/penetration-testing' },
-          { name: 'Compliance', href: '/services/compliance' },
-          { name: 'Incident Response', href: '/services/incident-response' },
-        ]
-      },
-    ],
+          { name: 'Security Audits', href: '/services/security-audits' }, {
+            name: 'Penetration Testing',
+            href: '/services/penetration-testing' }, { name: 'Compliance', href: '/services/compliance' }, { name: 'Incident Response', href: '/services/incident-response' } ] } ],
     solutions: [
       {
         name: 'Industry Solutions',
         icon: Building2,
         children: [
-          { name: 'Healthcare', href: '/solutions/healthcare' },
-          { name: 'Finance', href: '/solutions/finance' },
-          { name: 'Education', href: '/solutions/education' },
-          { name: 'Manufacturing', href: '/solutions/manufacturing' },
-        ]
-      },
-      {
+          { name: 'Healthcare', href: '/solutions/healthcare' }, { name: 'Finance', href: '/solutions/finance' }, { name: 'Education', href: '/solutions/education' }, { name: 'Manufacturing', href: '/solutions/manufacturing' } ] }, {
         name: 'Technology Solutions',
         icon: Cpu,
         children: [
-          { name: 'IoT Platforms', href: '/solutions/iot' },
-          { name: 'Blockchain', href: '/solutions/blockchain' },
-          { name: 'Quantum Computing', href: '/solutions/quantum' },
-          { name: 'AR/VR', href: '/solutions/ar-vr' },
-        ]
-      },
-    ],
+          { name: 'IoT Platforms', href: '/solutions/iot' }, { name: 'Blockchain', href: '/solutions/blockchain' }, { name: 'Quantum Computing', href: '/solutions/quantum' }, { name: 'AR/VR', href: '/solutions/ar-vr' } ] } ],
     resources: [
-      { name: 'Documentation', href: '/docs', icon: BookOpen },
-      { name: 'API Reference', href: '/api', icon: Code },
-      { name: 'Tutorials', href: '/tutorials', icon: Video },
-      { name: 'Case Studies', href: '/case-studies', icon: FileText },
-      { name: 'White Papers', href: '/white-papers', icon: FileText },
-      { name: 'Webinars', href: '/webinars', icon: Video },
-    ],
+      { name: 'Documentation', href: '/docs', icon: BookOpen }, { name: 'API Reference', href: '/api', icon: Code }, { name: 'Tutorials', href: '/tutorials', icon: Video }, { name: 'Case Studies', href: '/case-studies', icon: FileText }, { name: 'White Papers', href: '/white-papers', icon: FileText }, { name: 'Webinars', href: '/webinars', icon: Video } ],
     support: [
-      { name: 'Help Center', href: '/help', icon: HelpCircle },
-      { name: 'Contact Support', href: '/support', icon: LifeBuoy },
-      { name: 'Status Page', href: '/status', icon: Server },
-      { name: 'Community', href: '/community', icon: Users },
-    ]
-  };
+      { name: 'Help Center', href: '/help', icon: HelpCircle }, { name: 'Contact Support', href: '/support', icon: LifeBuoy }, { name: 'Status Page', href: '/status', icon: Server }, { name: 'Community', href: '/community', icon: Users } ] };
 
   const renderNavigationItem = (item: any, level = 0) => {
     const hasChildren = item.children && item.children.length > 0;
@@ -216,9 +160,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <item.icon className="w-5 h-5 mr-3" />
             <span>{item.name}</span>
           </Link>
-        )}
-
-        {hasChildren && isExpanded && (
+        )}, {hasChildren && isExpanded && (
           <div className="mt-2 space-y-1">
             {item.children.map((child: any) => (
               <Link
@@ -237,20 +179,16 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           </div>
         )}
       </div>
-    );
-  };
+    )};
 
   return (
     <>
-      {/* Mobile overlay */}
-      {isOpen && (
+      {/* Mobile overlay */}, {isOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
           onClick={onClose}
         />
-      )}
-
-      {/* Sidebar */}
+      )}, {/* Sidebar */}
       <div
         className={`fixed top-0 left-0 h-full w-80 bg-white shadow-xl transform transition-transform duration-300 ease-in-out z-50 lg:translate-x-0 lg:static lg:shadow-none ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
@@ -263,14 +201,26 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">Z</span>
               </div>
-              <span className="ml-3 text-xl font-bold text-gray-900">Zion Tech</span>
+              <span className="ml-3 text-xl font-bold text-gray-900">
+                Zion Tech
+              </span>
             </div>
             <button
               onClick={onClose}
               className="lg:hidden p-2 rounded-lg hover:bg-gray-100"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
           </div>
@@ -363,7 +313,6 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         </div>
       </div>
     </>
-  );
-};
+  )};
 
 export default MainSidebar;

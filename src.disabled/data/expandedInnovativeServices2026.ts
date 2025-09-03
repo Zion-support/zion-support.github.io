@@ -1,4 +1,4 @@
-export interface ExpandedInnovativeService2026 {
+export: interface ExpandedInnovativeService2026 {
    id: string;
    title: string;
    description: string;
@@ -18,5 +18,4 @@ export interface ExpandedInnovativeService2026 {
    roi: string;
    innovationLevel: string;
    contactInfo: { phone: string;
-   email: string;
-   website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] = [;
+

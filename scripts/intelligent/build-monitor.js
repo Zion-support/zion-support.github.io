@@ -14,14 +14,12 @@ class IntelligentBuildMonitor {
     this.logFile = path.join(this.projectRoot, 'logs/intelligent-build-monitor.log');
     this.reportFile = path.join(this.projectRoot, 'logs/intelligent-build-monitor-report.json');
     this.buildHistory = this.loadBuildHistory();
-    this.ensureDirectories();
-  }
+    this.ensureDirectories()}
 
   ensureDirectories() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
-    }
+      fs.mkdirSync(logDir { recursive: true })}
   }
 
   log(message, level = 'info') {
@@ -30,23 +28,18 @@ class IntelligentBuildMonitor {
     console.log(logMessage);
     
     try {
-      fs.appendFileSync(this.logFile, logMessage + '\n');
-    } catch (error) {
-      console.error('Failed to write to log file:', error.message);
-    }
+      fs.appendFileSync(this.logFile, logMessage + '\n')} catch (error) {
+      console.error('Failed to write to log file:', error.message)}
   }
 
   loadBuildHistory() {
     try {
       if (fs.existsSync(this.reportFile)) {
         const data = fs.readFileSync(this.reportFile, 'utf8');
-        return JSON.parse(data).buildHistory || [];
-      }
+        return JSON.parse(data).buildHistory || []}
     } catch (error) {
-      this.log(`Failed to load build history: ${error.message}`, 'warn');
-    }
-    return [];
-  }
+      this.log(`Failed to load build history: ${error.message}`, 'warn')}
+    return []}
 
   saveBuildHistory() {
     try {
@@ -56,10 +49,8 @@ class IntelligentBuildMonitor {
         totalBuilds: this.buildHistory.length,
         lastRun: Date.now()
       };
-      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    } catch (error) {
-      this.log(`Failed to save build history: ${error.message}`, 'error');
-    }
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))} catch (error) {
+      this.log(`Failed to save build history: ${error.message}`, 'error')}
   }
 
   async analyzeBuildHealth() {
@@ -82,8 +73,7 @@ class IntelligentBuildMonitor {
     this.log(`  - Cache Health: ${analysis.cache.health}%`);
     this.log(`  - Memory Usage: ${analysis.resources.memoryUsage}MB`);
 
-    return analysis;
-  }
+    return analysis}
 
   async measureBuildTime() {
     try {
@@ -93,11 +83,10 @@ class IntelligentBuildMonitor {
       
       // Clean build directory first
       if (fs.existsSync('.next')) {
-        execSync('rm -rf .next', { cwd: this.projectRoot, stdio: 'pipe' });
-      }
+        execSync('rm -rf .next' { cwd: this.projectRoot, stdio: 'pipe' })}
       
       // Run build
-      execSync('npm run build', { 
+      execSync('npm run build' { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
         timeout: 300000 
@@ -109,16 +98,14 @@ class IntelligentBuildMonitor {
         duration,
         success: true,
         timestamp: new Date().toISOString()
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Build time measurement failed: ${error.message}`, 'error');
       return {
         duration: -1,
         success: false,
         error: error.message,
         timestamp: new Date().toISOString()
-      };
-    }
+      }}
   }
 
   async analyzeBuildSize() {
@@ -126,8 +113,7 @@ class IntelligentBuildMonitor {
       this.log('📦 Analyzing build size...');
       
       if (!fs.existsSync('.next')) {
-        return { totalSize: 0, files: [], success: false };
-      }
+        return { totalSize: 0, files: [], success: false }}
 
       const calculateSize = (dir) => {
         let totalSize = 0;
@@ -142,19 +128,16 @@ class IntelligentBuildMonitor {
           if (stat.isDirectory()) {
             const subResult = calculateSize(fullPath);
             totalSize += subResult.totalSize;
-            files.push(...subResult.files);
-          } else {
+            files.push(...subResult.files)} else {
             totalSize += stat.size;
             files.push({
               path: fullPath,
               size: stat.size,
               sizeMB: (stat.size / (1024 * 1024)).toFixed(2)
-            });
-          }
+            })}
         }
         
-        return { totalSize, files };
-      };
+        return { totalSize, files }};
 
       const result = calculateSize('.next');
       const totalSizeMB = (result.totalSize / (1024 * 1024)).toFixed(2);
@@ -163,11 +146,9 @@ class IntelligentBuildMonitor {
         totalSize: totalSizeMB,
         files: result.files,
         success: true
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Build size analysis failed: ${error.message}`, 'error');
-      return { totalSize: 0, files: [], success: false, error: error.message };
-    }
+      return { totalSize: 0, files: [], success: false, error: error.message }}
   }
 
   async checkBuildErrors() {
@@ -176,12 +157,7 @@ class IntelligentBuildMonitor {
       
       // Check for common build error patterns
       const errorPatterns = [
-        { pattern: /Module not found/, severity: 'error' },
-        { pattern: /Cannot resolve/, severity: 'error' },
-        { pattern: /Build failed/, severity: 'error' },
-        { pattern: /Out of memory/, severity: 'critical' },
-        { pattern: /Syntax error/, severity: 'error' },
-        { pattern: /Type error/, severity: 'error' }
+        { pattern: /Module not found/, severity: 'error' }, { pattern: /Cannot resolve/, severity: 'error' }, { pattern: /Build failed/, severity: 'error' }, { pattern: /Out of memory/, severity: 'critical' }, { pattern: /Syntax error/, severity: 'error' }, { pattern: /Type error/, severity: 'error' }
       ];
 
       const errors = [];
@@ -204,13 +180,9 @@ class IntelligentBuildMonitor {
                     severity,
                     message: line.trim(),
                     timestamp: new Date().toISOString()
-                  });
-                }
-              });
-            });
-          } catch (readError) {
-            this.log(`Failed to read ${logFile}: ${readError.message}`, 'warn');
-          }
+                  })}
+              })})} catch (readError) {
+            this.log(`Failed to read ${logFile}: ${readError.message}`, 'warn')}
         }
       }
       
@@ -219,11 +191,9 @@ class IntelligentBuildMonitor {
         errors,
         criticalErrors: errors.filter(e => e.severity === 'critical').length,
         regularErrors: errors.filter(e => e.severity === 'error').length
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Build error check failed: ${error.message}`, 'error');
-      return { count: 0, errors: [], criticalErrors: 0, regularErrors: 0 };
-    }
+      return { count: 0, errors: [], criticalErrors: 0, regularErrors: 0 }}
   }
 
   async checkDependencyHealth() {
@@ -234,7 +204,7 @@ class IntelligentBuildMonitor {
       
       // Check for outdated dependencies
       try {
-        const outdatedOutput = execSync('npm outdated --json', { 
+        const outdatedOutput = execSync('npm outdated --json' { 
           cwd: this.projectRoot, 
           encoding: 'utf8',
           stdio: 'pipe' 
@@ -248,9 +218,7 @@ class IntelligentBuildMonitor {
             current: outdated[name].current,
             latest: outdated[name].latest,
             severity: 'medium'
-          });
-        });
-      } catch (error) {
+          })})} catch (error) {
         // npm outdated returns non-zero when there are outdated packages
         if (error.stdout) {
           try {
@@ -262,9 +230,7 @@ class IntelligentBuildMonitor {
                 current: outdated[name].current,
                 latest: outdated[name].latest,
                 severity: 'medium'
-              });
-            });
-          } catch (parseError) {
+              })})} catch (parseError) {
             // Ignore parse errors
           }
         }
@@ -272,7 +238,7 @@ class IntelligentBuildMonitor {
       
       // Check for security vulnerabilities
       try {
-        const auditOutput = execSync('npm audit --json', { 
+        const auditOutput = execSync('npm audit --json' { 
           cwd: this.projectRoot, 
           encoding: 'utf8',
           stdio: 'pipe' 
@@ -286,9 +252,7 @@ class IntelligentBuildMonitor {
               name,
               severity: audit.vulnerabilities[name].severity,
               title: audit.vulnerabilities[name].title
-            });
-          });
-        }
+            })})}
       } catch (error) {
         // npm audit returns non-zero when vulnerabilities are found
         if (error.stdout) {
@@ -301,9 +265,7 @@ class IntelligentBuildMonitor {
                   name,
                   severity: audit.vulnerabilities[name].severity,
                   title: audit.vulnerabilities[name].title
-                });
-              });
-            }
+                })})}
           } catch (parseError) {
             // Ignore parse errors
           }
@@ -315,11 +277,9 @@ class IntelligentBuildMonitor {
         count: issues.length,
         criticalIssues: issues.filter(i => i.severity === 'critical').length,
         highIssues: issues.filter(i => i.severity === 'high').length
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Dependency health check failed: ${error.message}`, 'error');
-      return { issues: [], count: 0, criticalIssues: 0, highIssues: 0 };
-    }
+      return { issues: [], count: 0, criticalIssues: 0, highIssues: 0 }}
   }
 
   async analyzeCacheHealth() {
@@ -346,23 +306,19 @@ class IntelligentBuildMonitor {
                 if (stat.isDirectory()) {
                   const subResult = calculateCacheSize(fullPath);
                   size += subResult.size;
-                  files += subResult.files;
-                } else {
+                  files += subResult.files} else {
                   size += stat.size;
-                  files++;
-                }
+                  files++}
               }
             } catch (error) {
               // Skip directories we can't read
             }
             
-            return { size, files };
-          };
+            return { size, files }};
           
           const result = calculateCacheSize(cacheDir);
           totalCacheSize += result.size;
-          cacheFiles += result.files;
-        }
+          cacheFiles += result.files}
       }
       
       const cacheSizeMB = (totalCacheSize / (1024 * 1024)).toFixed(2);
@@ -370,21 +326,17 @@ class IntelligentBuildMonitor {
       // Calculate cache health percentage (lower is better, but some cache is good)
       let health = 100;
       if (totalCacheSize > 500 * 1024 * 1024) { // More than 500MB
-        health = 50;
-      } else if (totalCacheSize > 200 * 1024 * 1024) { // More than 200MB
-        health = 75;
-      }
+        health = 50} else if (totalCacheSize > 200 * 1024 * 1024) { // More than 200MB
+        health = 75}
       
       return {
         totalSize: cacheSizeMB,
         fileCount: cacheFiles,
         health,
         success: true
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Cache health analysis failed: ${error.message}`, 'error');
-      return { totalSize: 0, fileCount: 0, health: 0, success: false };
-    }
+      return { totalSize: 0, fileCount: 0, health: 0, success: false }}
   }
 
   async analyzeResourceUsage() {
@@ -401,11 +353,9 @@ class IntelligentBuildMonitor {
         cpuUser: cpuUsage.user,
         cpuSystem: cpuUsage.system,
         success: true
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Resource usage analysis failed: ${error.message}`, 'error');
-      return { memoryUsage: 0, memoryTotal: 0, externalMemory: 0, cpuUser: 0, cpuSystem: 0, success: false };
-    }
+      return { memoryUsage: 0, memoryTotal: 0, externalMemory: 0, cpuUser: 0, cpuSystem: 0, success: false }}
   }
 
   async optimizeBuild() {
@@ -416,7 +366,7 @@ class IntelligentBuildMonitor {
     try {
       // Clean build directories
       this.log('Cleaning build directories...');
-      execSync('rm -rf .next dist', { 
+      execSync('rm -rf .next dist' { 
         cwd: this.projectRoot, 
         stdio: 'pipe' 
       });
@@ -424,7 +374,7 @@ class IntelligentBuildMonitor {
       
       // Clear caches
       this.log('Clearing caches...');
-      execSync('npm cache clean --force', { 
+      execSync('npm cache clean --force' { 
         cwd: this.projectRoot, 
         stdio: 'pipe' 
       });
@@ -432,7 +382,7 @@ class IntelligentBuildMonitor {
       
       // Run optimized build
       this.log('Running optimized build...');
-      execSync('npm run build', { 
+      execSync('npm run build' { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
         timeout: 300000 
@@ -440,11 +390,9 @@ class IntelligentBuildMonitor {
       optimizations.push({ type: 'build', success: true });
       
       this.log('✅ Build optimization completed successfully');
-      return { success: true, optimizations };
-    } catch (error) {
+      return { success: true, optimizations }} catch (error) {
       this.log(`❌ Build optimization failed: ${error.message}`, 'error');
-      return { success: false, error: error.message, optimizations };
-    }
+      return { success: false, error: error.message, optimizations }}
   }
 
   async autoFixBuildIssues(analysis) {
@@ -456,37 +404,32 @@ class IntelligentBuildMonitor {
     if (analysis.dependencies.issues.length > 0) {
       try {
         this.log('Fixing dependency issues...');
-        execSync('npm install', { 
+        execSync('npm install' { 
           cwd: this.projectRoot, 
           stdio: 'pipe',
           timeout: 180000 
         });
         fixes.push({ type: 'dependencies', success: true, count: analysis.dependencies.issues.length });
-        this.log('✅ Dependency issues fixed');
-      } catch (error) {
+        this.log('✅ Dependency issues fixed')} catch (error) {
         fixes.push({ type: 'dependencies', success: false, error: error.message });
-        this.log(`❌ Failed to fix dependency issues: ${error.message}`, 'error');
-      }
+        this.log(`❌ Failed to fix dependency issues: ${error.message}`, 'error')}
     }
     
     // Fix cache issues
     if (analysis.cache.health < 50) {
       try {
         this.log('Fixing cache issues...');
-        execSync('rm -rf .next/cache node_modules/.cache', { 
+        execSync('rm -rf .next/cache node_modules/.cache' { 
           cwd: this.projectRoot, 
           stdio: 'pipe' 
         });
         fixes.push({ type: 'cache', success: true });
-        this.log('✅ Cache issues fixed');
-      } catch (error) {
+        this.log('✅ Cache issues fixed')} catch (error) {
         fixes.push({ type: 'cache', success: false, error: error.message });
-        this.log(`❌ Failed to fix cache issues: ${error.message}`, 'error');
-      }
+        this.log(`❌ Failed to fix cache issues: ${error.message}`, 'error')}
     }
     
-    return fixes;
-  }
+    return fixes}
 
   async generateBuildReport() {
     this.log('📊 Generating build monitoring report...');
@@ -517,38 +460,30 @@ class IntelligentBuildMonitor {
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
     this.log(`📊 Build report saved to ${reportFile}`);
-    return report;
-  }
+    return report}
 
   generateBuildRecommendations(analysis) {
     const recommendations = [];
     
     if (analysis.buildTime.duration > 60000) { // More than 1 minute
-      recommendations.push('Consider implementing incremental builds to reduce build time');
-    }
+      recommendations.push('Consider implementing incremental builds to reduce build time')}
     
     if (analysis.buildSize.totalSize > 10) { // More than 10MB
-      recommendations.push('Implement code splitting and tree shaking to reduce bundle size');
-    }
+      recommendations.push('Implement code splitting and tree shaking to reduce bundle size')}
     
     if (analysis.buildErrors.count > 0) {
-      recommendations.push('Address build errors to improve build reliability');
-    }
+      recommendations.push('Address build errors to improve build reliability')}
     
     if (analysis.dependencies.issues.length > 5) {
-      recommendations.push('Update dependencies to resolve compatibility issues');
-    }
+      recommendations.push('Update dependencies to resolve compatibility issues')}
     
     if (analysis.cache.health < 50) {
-      recommendations.push('Implement cache optimization strategies');
-    }
+      recommendations.push('Implement cache optimization strategies')}
     
     if (analysis.resources.memoryUsage > 1000) { // More than 1GB
-      recommendations.push('Optimize memory usage during build process');
-    }
+      recommendations.push('Optimize memory usage during build process')}
 
-    return recommendations;
-  }
+    return recommendations}
 
   async run() {
     this.log('🚀 Starting Intelligent Build Monitor...');
@@ -574,12 +509,9 @@ class IntelligentBuildMonitor {
       this.log(`   - Cache Health: ${report.summary.cacheHealth}%`);
       this.log(`   - Memory Usage: ${report.summary.memoryUsage}MB`);
       this.log(`   - Optimization: ${report.summary.optimizationSuccess ? 'Success' : 'Failed'}`);
-      this.log(`   - Fixes Applied: ${report.summary.fixesApplied}`);
-
-    } catch (error) {
+      this.log(`   - Fixes Applied: ${report.summary.fixesApplied}`)} catch (error) {
       this.log(`❌ Build Monitor failed: ${error.message}`, 'error');
-      throw error;
-    }
+      throw error}
   }
 }
 
@@ -588,8 +520,6 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const monitor = new IntelligentBuildMonitor();
   monitor.run().catch(error => {
     console.error('Fatal error:', error);
-    process.exit(1);
-  });
-}
+    process.exit(1)})}
 
 export default $1;

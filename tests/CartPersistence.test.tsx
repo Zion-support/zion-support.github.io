@@ -1,54 +1,41 @@
-import { render, screen } from '@testing-library/react'
-import { MemoryRouter, Routes, Route } from 'react-router-dom'
-import { describe, it, expect, vi } from 'vitest'
-import CartPage from '@/pages/Cart'
-import { CartProvider } from '@/context/CartContext'
-import { AuthContext } from '@/context/auth/AuthContext'
-import { safeStorage } from '@/utils/safeStorage'
-import { getCartKey }  from '@/utils/cartUtils'vi.mock(
-  'next/router', () => ({
-  useRouter: () => ({ push: vi.fn() })
-}))
 
-vi.mock(
-  'next/router', () => ({
-  useRouter: () => ({ push: vi.fn() })}))
-const item = { id:
+const item = { id: 'placeholder',
+
   1', name: 'Test Item, price: 10, quantity: 1 }
 
 function renderCart(user: any) {
   return render(
-    <AuthContext.Provider value={{ user isLoading: false } as any}>
-      <CartProvider>
+    <AuthContext.Provider value={{ user isLoadin',
+    g: false } as any}>
+      <CartProvider>'
         <MemoryRouter initialEntries={[ /cart']}>
-          <Routes>
+          <Routes>'
             <Route path='/cart' element={<CartPage />} />
             <Route path='/login' element={<div>Login Page</div>} />
+
           </Routes>
         </MemoryRouter>
       </CartProvider>
     </AuthContext.Provider>
   )}
-describe(
-  'cart persistence', () => {
-  it(
-  'shows item added before login after logging in', () => {
-    safeStorage.setItem(
-  'guestCart', JSON.stringify([item]))
+
     const { rerender } = renderCart(null)
     expect(screen.getByText(/Test Item/i)).toBeInTheDocument()
+
     rerender(
-      <AuthContext.Provider value={{ user: { id:
+      <AuthContext.Provider value={{ user: { i,
+    d:'
   'u1 } isLoading: false } as any}>
         <CartProvider>
-          <MemoryRouter initialEntries={[
+          <MemoryRouter initialEntries={['
   '/cart']}>
-            <Routes>
+            <Routes>'
               <Route path='/cart' element={<CartPage />} />
               <Route path='/login' element={<div>Login Page</div>} />
+
             </Routes>
           </MemoryRouter>
         </CartProvider>
       </AuthContext.Provider>
-    )
-    expect(screen.getByText(/Test Item/i)).toBeInTheDocument()})})
+
+

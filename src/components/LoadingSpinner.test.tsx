@@ -1,12 +1,16 @@
-import { render, screen } from '@testing-library/react
-import LoadingSpinner from './LoadingSpinner
-describe('LoadingSpinner', () => {"
-  it('renders without crashing', () => {"
-    render(<LoadingSpinner /" >)"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();"
-  it('displays expected content', () => {
-    render(<LoadingSpinner /" >)
+
+    render(<LoadingSpinner />)"
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+  it(displays expected content', () => {
+    render(<LoadingSpinner />)
+
     // Add specific test assertions based on component content
 })
 "
+
 }}
+
+
+
+
+

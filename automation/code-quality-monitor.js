@@ -34,7 +34,7 @@ class CodeQualityMonitor {
   'Starting code quality analysis...')
       // Analyze TypeScript complexity
       const result = execSync(
-  'npx tsc --noEmit', { encoding: 'utf8 })
+  'npx tsc --noEmit' { encoding: 'utf8 })
       this.metrics.complexity = this.calculateComplexity()
       this.metrics.maintainability = this.calculateMaintainability()
       this.metrics.testCoverage = this.calculateTestCoverage()
@@ -104,7 +104,7 @@ class CodeQualityMonitor {
     try {
       // Use TypeScript compiler to check syntax
       const result = execSync(
-  'npx tsc --noEmit --skipLibCheck', {
+  'npx tsc --noEmit --skipLibCheck' {
         cwd: this.projectRoot, encoding:, utf8', stdio: 'pipe
       })
       return []
@@ -125,7 +125,7 @@ class CodeQualityMonitor {
     try {
       // Use ESLint to check for unused imports
       const result = execSync(
-  'npx eslint --ext .ts,.tsx,.js,.jsx src --format=compact', {
+  'npx eslint --ext .ts,.tsx,.js,.jsx src --format=compact' {
         cwd: this.projectRoot, encoding:, utf8', stdio: 'pipe
 
       })
@@ -145,7 +145,7 @@ class CodeQualityMonitor {
     try {
       // Use Prettier to check formatting
       const result = execSync('npx prettier --check 'src/**/*.{ts,tsx,js,jsx}'
-  ', {
+  ' {
         cwd: this.projectRoot, encoding:, utf8
   ', stdio: 'pipe
       })
@@ -236,7 +236,7 @@ class CodeQualityMonitor {
     try {
       // Try to auto-fix with ESLint
       execSync('npx eslint --ext .ts,.tsx,.js,.jsx src --fix
-  ', {
+  ' {
         cwd: this.projectRoot, stdio: 'pipe
   '
       })
@@ -288,7 +288,7 @@ class CodeQualityMonitor {
     try {
       // Try to auto-fix with ESLint
       execSync(
-  'npx eslint --ext .ts,.tsx,.js,.jsx src --fix', {
+  'npx eslint --ext .ts,.tsx,.js,.jsx src --fix' {
         cwd: this.projectRoot, stdio:
   'pipe'
       })
@@ -332,7 +332,7 @@ class CodeQualityMonitor {
     try {
       // Use Prettier to auto-format
       execSync(
-  'npx prettier --write 'src/**/*.{ts,tsx,js,jsx}"', {
+  'npx prettier --write 'src/**/*.{ts,tsx,js,jsx}" {
         cwd: this.projectRoot, stdio:
   'pipe'
       })
@@ -416,7 +416,7 @@ class CodeQualityMonitor {
     try {
       // Use npm audit for dependency security
       execSync(
-  'npm audit', {
+  'npm audit' {
         cwd: this.projectRoot, stdio:
   'pipe'
       })

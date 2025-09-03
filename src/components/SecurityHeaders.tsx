@@ -10,18 +10,14 @@ const SecurityHeaders = () => {
 
     // Add additional security headers via meta tags
     const securityHeaders = [
-  { httpEquiv: 'X-Frame-Options', content: 'DENY' },
-      { httpEquiv: 'X-Content-Type-Options', content: 'nosniff' },
-      { httpEquiv: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
-      { httpEquiv: 'Permissions-Policy', content: 'camera=(), microphone=(), geolocation=(), payment=(), usb=()' }
+  { httpEquiv: 'X-Frame-Options', content: 'DENY' }, { httpEquiv: 'X-Content-Type-Options', content: 'nosniff' }, { httpEquiv: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' }, { httpEquiv: 'Permissions-Policy', content: 'camera=(), microphone=(), geolocation=(), payment=(), usb=()' }
     ];
 
     securityHeaders.forEach(header => {
       const metaTag = document.createElement('meta');
       metaTag.httpEquiv = header.httpEquiv;
       metaTag.content = header.content;
-      document.head.appendChild(metaTag);
-    });
+      document.head.appendChild(metaTag)});
 
     return () => {
       // Cleanup on unmount
@@ -31,13 +27,9 @@ const SecurityHeaders = () => {
             tag.getAttribute('http-equiv') === 'Content-Security-Policy' ||
             tag.getAttribute('http-equiv') === 'Referrer-Policy' ||
             tag.getAttribute('http-equiv') === 'Permissions-Policy') {
-          tag.remove();
-        }
-      });
-    };
-  }, []);
+          tag.remove()}
+      })}}, []);
 
-  return null;
-};
+  return null};
 
 export default SecurityHeaders;

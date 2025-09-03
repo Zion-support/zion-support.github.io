@@ -39,32 +39,27 @@ const AIContentStudio: React.FC = () => {
       title: 'AI Writing Assistant',
       description: 'Generate high-quality content for blogs, social media, and marketing materials',
       color: 'from-blue-500 to-cyan-500'
-    },
-    {
+    }, {
       icon: Image,
       title: 'AI Image Generation',
       description: 'Create stunning visuals and graphics using advanced AI image models',
       color: 'from-green-500 to-emerald-500'
-    },
-    {
+    }, {
       icon: Video,
       title: 'AI Video Creation',
       description: 'Produce engaging video content with AI-powered editing and effects',
       color: 'from-purple-500 to-pink-500'
-    },
-    {
+    }, {
       icon: FileText,
       title: 'Content Optimization',
       description: 'Optimize content for SEO, readability, and engagement automatically',
       color: 'from-yellow-500 to-orange-500'
-    },
-    {
+    }, {
       icon: Zap,
       title: 'Multi-Platform Publishing',
       description: 'Automatically adapt and publish content across multiple platforms',
       color: 'from-red-500 to-pink-500'
-    },
-    {
+    }, {
       icon: BarChart3,
       title: 'Performance Analytics',
       description: 'Track content performance and get AI-powered insights for improvement',
@@ -80,24 +75,21 @@ const AIContentStudio: React.FC = () => {
       benefits: ['SEO optimized,Research-backed,Multiple formats,Auto-publishing'],
       pricing: '$29/month',
       color: 'from-blue-500 to-cyan-500'
-    },
-    {
+    }, {
       title: 'Social Media Content',
       description: 'Engaging posts, captions, and stories for all social platforms',
       icon: Users,
       benefits: ['Platform-specific,Trending topics,Hashtag optimization,Scheduling'],
       pricing: '$19/month',
       color: 'from-green-500 to-emerald-500'
-    },
-    {
+    }, {
       title: 'Marketing Materials',
       description: 'Professional copy for ads, emails, and promotional content',
       icon: Target,
       benefits: ['A/B testing,Conversion focused,Brand voice,Campaign tracking'],
       pricing: '$39/month',
       color: 'from-purple-500 to-pink-500'
-    },
-    {
+    }, {
       title: 'Visual Content',
       description: 'AI-generated images, infographics, and video content',
       icon: Image,
@@ -472,7 +464,6 @@ const AIContentStudio: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AIContentStudio;

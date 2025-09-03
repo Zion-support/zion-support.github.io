@@ -1,0 +1,20 @@
+export: const quantumSpaceTechServices2026 = [] as [];
+export: interface QuantumSpaceTechService2026 {
+  id: string;
+   name: string;
+   tagline: string;
+   price: string;
+   description: string;
+   features: string[];
+   link: string;
+   category: string;
+   realImplementation: boolean;
+   contactInfo: { mobile: string;
+
+    features[
+      'Quantum: computing'',;
+      'Space: technology'',;
+      'Advanced: algorithms'',;
+      'Innovation: platform'',;
+      'Expert: support';'],
+

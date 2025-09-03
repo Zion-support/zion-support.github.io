@@ -21,8 +21,7 @@ function fixScript(scriptName) {
   
   if (!fs.existsSync(scriptPath)) {
     console.log(`Script not found: ${scriptPath}`);
-    return;
-  }
+    return}
   
   let content = fs.readFileSync(scriptPath, 'utf8');
   
@@ -51,8 +50,7 @@ const __dirname = path.dirname(__filename);`
   content = content.replace(/require\('crypto'\)/g, "import crypto from 'crypto'");
   
   fs.writeFileSync(scriptPath, content);
-  console.log(`Fixed: ${scriptName}`);
-}
+  console.log(`Fixed: ${scriptName}`)}
 
 console.log('Fixing intelligent automation scripts...');
 

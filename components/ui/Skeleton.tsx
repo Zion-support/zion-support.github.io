@@ -4,28 +4,25 @@ interface SkeletonProps {
   className?: string;
   width?: string | number;
   height?: string | number;
-  rounded?: boolean;
-}
+  rounded?: boolean}
 
-export const Skeleton: React.FC<SkeletonProps> = ({
-  className = '',
-  width,
-  height,
-  rounded = false,
+export const Skeleton: React.FC<SkeletonProps> = ({ 
+  className = '', 
+  width, 
+  height, 
+  rounded = false 
 }) => {
   const style: React.CSSProperties = {};
-
+  
   if (width) style.width = typeof width === 'number' ? `${width}px` : width;
-  if (height)
-    style.height = typeof height === 'number' ? `${height}px` : height;
+  if (height) style.height = typeof height === 'number' ? `${height}px` : height
 
   return (
     <div
       className={`animate-pulse bg-gray-200 ${rounded ? 'rounded-full' : 'rounded'} ${className}`}
       style={style}
     />
-  );
-};
+  )}
 
 export const CardSkeleton: React.FC = () => (
   <div className="bg-white rounded-lg shadow-md p-6">
@@ -34,12 +31,16 @@ export const CardSkeleton: React.FC = () => (
     <Skeleton height={16} className="mb-2" />
     <Skeleton height={16} width="60%" />
   </div>
-);
+)
 
 export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (
   <div className="space-y-2">
     {Array.from({ length: lines }).map((_, i) => (
-      <Skeleton key={i} height={16} width={i === lines - 1 ? '60%' : '100%'} />
+      <Skeleton 
+        key={i} 
+        height={16} 
+        width={i === lines - 1 ? '60%' : '100%'} 
+      />
     ))}
   </div>
-);
+)

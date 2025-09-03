@@ -1,5 +1,5 @@
-export interface InnovativeITService2028 {
-  id: string;
+
+
    title: string;
    description: string;
    category: string;
@@ -20,5 +20,8 @@ export interface InnovativeITService2028 {
    innovationLevel: string;
    contactInfo: {  phone: string;
    email: string;
-   website: string
-   address: string} technicalSpecs?: { technology: string[] integrations: string[] certifications: string[] uptime: string security: string[]  } competitors?: string[] marketSize?: string uniqueValueProposition: string sla: string responseTime: string } export const INNOVATIVE_IT_SERVICES_2028: InnovativeITService2028[] = [;
+
+
+
+
+

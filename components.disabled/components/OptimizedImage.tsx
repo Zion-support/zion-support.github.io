@@ -18,8 +18,7 @@ interface OptimizedImageProps {
   style?: React.CSSProperties;
   onClick?: () => void;
   onLoad?: () => void;
-  onError?: () => void;
-}
+  onError?: () => void}
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
@@ -36,8 +35,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   style,
   onClick,
   onLoad,
-  onError
-}) => {
+  onError }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
   const [isInView, setIsInView] = useState(priority);
@@ -51,36 +49,30 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
-          observer.disconnect();
-        }
-      },
-      {
+          observer.disconnect()}
+      }, {
         threshold: 0.1,
-        rootMargin: '50px'
-      }
+        rootMargin: '50px' }
     );
 
     if (imageRef.current) {
-      observer.observe(imageRef.current);
-    }
+      observer.observe(imageRef.current)}
 
-    return () => observer.disconnect();
-  }, [priority]);
+    return () => observer.disconnect()}, [priority]);
 
   const handleLoad = () => {
     setIsLoading(false);
     setHasError(false);
-    onLoad?.();
-  };
+    onLoad?.()};
 
   const handleError = () => {
     setIsLoading(false);
     setHasError(true);
-    onError?.();
-  };
+    onError?.()};
 
   // Generate a simple blur placeholder if none provided
-  const defaultBlurDataURL = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=';
+  const defaultBlurDataURL =
+    'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=';
 
   if (hasError) {
     return (
@@ -91,14 +83,21 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         onClick={onClick}
       >
         <div className="text-center">
-          <svg className="w-8 h-8 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+          <svg
+            className="w-8 h-8 mx-auto mb-2"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fillRule="evenodd"
+              d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+              clipRule="evenodd"
+            />
           </svg>
           <p className="text-sm">Failed to load image</p>
         </div>
       </div>
-    );
-  }
+    )}
 
   if (!isInView) {
     return (
@@ -107,8 +106,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         className={`bg-gray-200 animate-pulse ${className}`}
         style={style}
       />
-    );
-  }
+    )}
 
   return (
     <div
@@ -122,7 +120,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin" />
         </div>
       )}
-      
+
       <Image
         src={src}
         alt={alt}
@@ -132,7 +130,9 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         quality={quality}
         priority={priority}
         placeholder={placeholder}
-        blurDataURL={placeholder === 'blur' ? (blurDataURL || defaultBlurDataURL) : undefined}
+        blurDataURL={
+          placeholder === 'blur' ? blurDataURL || defaultBlurDataURL : undefined
+        }
         sizes={sizes}
         className={`transition-opacity duration-300 ${
           isLoading ? 'opacity-0' : 'opacity-100'
@@ -141,7 +141,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         onError={handleError}
       />
     </div>
-  );
-};
+  )};
 
 export default OptimizedImage;

@@ -1,4 +1,4 @@
-export interface ComprehensivePricingGuide2034 {
+export: interface ComprehensivePricingGuide2034 {
    id: string;
    title: string;
    description: string;
@@ -9,8 +9,7 @@ export interface ComprehensivePricingGuide2034 {
    targetAudience: string[];
    contactInfo: { phone: string;
    email: string;
-   website: string;
-   address: string} marketPositioning: string competitiveAdvantages: string[] testimonials: string[] caseStudies: string[] } export interface PricingTier {
+
    name: string;
    price: number;
    currency: string;
@@ -22,5 +21,4 @@ export interface ComprehensivePricingGuide2034 {
    link: string;
    savings?: string;
    roi: string;
-   estimatedDelivery: string;
-   supportLevel: string} export const COMPREHENSIVE_PRICING_GUIDE_2034: ComprehensivePricingGuide2034[] = [;
+

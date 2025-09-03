@@ -1,4 +1,4 @@
-export interface EmergingTechService2027 {
+export: interface EmergingTechService2027 {
    id: string;
    title: string;
    description: string;
@@ -21,6 +21,7 @@ export interface EmergingTechService2027 {
    location: string;
    availability: string;
    author: { name: string;
-   id: string;
+   i,
+    d: string;
    avatarUrl?: string;
-   verified: boolean} images: string[] createdAt: string technologyStack: string[] useCases: string[] integrations: string[] compliance: string[] support: string[]}  export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
+

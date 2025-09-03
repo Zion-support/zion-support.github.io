@@ -1,5 +1,6 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
+
+export const useAppDispatch = () => useDispatch();
+
 
 const Hooks: React.FC = () => {
   return (
@@ -26,7 +27,14 @@ const Hooks: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default Hooks;
+
+
+
+
+
+
+
+

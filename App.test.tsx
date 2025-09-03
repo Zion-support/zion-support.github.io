@@ -13,5 +13,4 @@ describe('App', () => {
   it('handles user interactions', () => {
     render(<App />)
     // Add interaction tests based on component functionality
-  })
-})
+

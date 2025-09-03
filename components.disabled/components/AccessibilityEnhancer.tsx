@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React { useEffect, useState } from 'react';
 import { Check } from 'lucide-react';
 
-
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-}
+  children: React.ReactNode}
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  children,
-}) => {
+  children }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState('normal');
   const [reducedMotion, setReducedMotion] = useState(false);
@@ -30,8 +27,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       savedHighContrast,
       savedFontSize,
       prefersReducedMotion
-    );
-  }, []);
+    )}, []);
 
   const applyAccessibilityStyles = (
     highContrast: boolean,
@@ -41,10 +37,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     const root = document.documentElement;
     // High contrast mode
     if (highContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
+      root.classList.add('high-contrast')} else {
+      root.classList.remove('high-contrast')}
 
     // Font size adjustments
     root.classList.remove(
@@ -53,24 +47,20 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     root.classList.add(`font-${fontSize}`);
     // Reduced motion
     if (reducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
+      root.classList.add('reduced-motion')} else {
+      root.classList.remove('reduced-motion')}
   };
 
   const toggleHighContrast = () => {
     const newValue = !isHighContrast;
     setIsHighContrast(newValue);
     localStorage.setItem('highContrast', newValue.toString());
-    applyAccessibilityStyles(newValue, fontSize, reducedMotion);
-  };
+    applyAccessibilityStyles(newValue, fontSize, reducedMotion)};
 
   const changeFontSize = (newSize: string) => {
     setFontSize(newSize);
     localStorage.setItem('fontSize', newSize);
-    applyAccessibilityStyles(isHighContrast, newSize, reducedMotion);
-  };
+    applyAccessibilityStyles(isHighContrast, newSize, reducedMotion)};
   return (
     <>
       {/* Accessibility Controls */}
@@ -200,7 +190,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           white-space: normal}
       `}</style>
     </>
-  );
-};
+  )};
 
 export default AccessibilityEnhancer;

@@ -822,6 +822,237 @@ export default function ITServices() {
       pricing: '$10,000 - $50,000/month',
       delivery: '10-20 weeks',
       category: 'Threat Intelligence'
+    },
+    {
+      title: 'Green IT Solutions',
+      description: 'Environmentally conscious IT solutions with carbon footprint reduction',
+      icon: TreePine,
+      features: [
+        'Energy-efficient server and infrastructure design,Carbon footprint monitoring and reporting,Renewable energy integration,Green data center optimization,Sustainable IT procurement and lifecycle management,Environmental compliance and reporting'
+      ],
+      pricing: '$1,500 - $8,000/month',
+      delivery: '2-4 weeks',
+      category: 'Green IT'
+    },
+    {
+      title: 'Quantum Computing Readiness',
+      description: 'Preparation and integration services for quantum computing technologies',
+      icon: Cpu,
+      features: [
+        'Quantum algorithm development and optimization,Quantum-classical hybrid system integration,Quantum security and cryptography implementation,Quantum simulation and testing environments,Quantum workforce training and development,Quantum computing strategy and roadmap planning'
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '8-16 weeks',
+      category: 'Quantum Computing'
+    },
+    {
+      title: '5G Network Integration',
+      description: '5G network deployment and integration services for enterprise applications',
+      icon: Wifi,
+      features: [
+        '5G network planning and deployment,5G enterprise application development,Network slicing and quality of service management,5G security and privacy implementation,Edge computing integration with 5G,5G performance monitoring and optimization'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: '5G Services'
+    },
+    {
+      title: 'Blockchain Infrastructure Services',
+      description: 'Blockchain network deployment and management for enterprise applications',
+      icon: Shield,
+      features: [
+        'Private and consortium blockchain deployment,Smart contract development and auditing,Blockchain security and consensus mechanisms,Interoperability and cross-chain solutions,Blockchain monitoring and analytics,Regulatory compliance and governance'
+      ],
+      pricing: '$3,500 - $18,000/month',
+      delivery: '4-10 weeks',
+      category: 'Blockchain Services'
+    },
+    {
+      title: 'IoT Platform Management',
+      description: 'Comprehensive IoT infrastructure and device management services',
+      icon: Network,
+      features: [
+        'IoT device provisioning and management,Edge gateway deployment and configuration,IoT data collection and processing,Device security and firmware management,IoT analytics and insights,Integration with enterprise systems'
+      ],
+      pricing: '$2,000 - $10,000/month',
+      delivery: '3-6 weeks',
+      category: 'IoT Services'
+    },
+    {
+      title: 'Digital Twin Implementation',
+      description: 'Digital twin creation and management for physical assets and processes',
+      icon: Monitor,
+      features: [
+        '3D modeling and simulation creation,Real-time data integration and synchronization,Predictive maintenance and optimization,Digital twin analytics and insights,Integration with IoT and sensor networks,Collaborative digital twin environments'
+      ],
+      pricing: '$6,000 - $30,000/month',
+      delivery: '8-16 weeks',
+      category: 'Digital Twin Services'
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security implementation and management',
+      icon: Lock,
+      features: [
+        'Identity and access management (IAM) implementation,Micro-segmentation and network isolation,Continuous authentication and authorization,Device and application trust verification,Security policy automation and enforcement,Zero trust monitoring and analytics'
+      ],
+      pricing: '$4,500 - $22,000/month',
+      delivery: '6-12 weeks',
+      category: 'Zero Trust Security'
+    },
+    {
+      title: 'AI-Powered IT Operations (AIOps)',
+      description: 'Intelligent IT operations with machine learning-driven automation and predictive analytics',
+      icon: Brain,
+      features: [
+        'AI-powered incident detection and root cause analysis,Automated remediation and self-healing systems,Predictive capacity planning and resource optimization,Anomaly detection and performance monitoring,Intelligent alert correlation and noise reduction,Automated change management and deployment,Integration with existing monitoring and ITSM tools,Continuous learning and improvement algorithms'
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '8-16 weeks',
+      category: 'AIOps Services'
+    },
+    {
+      title: 'Edge Computing Infrastructure',
+      description: 'Comprehensive edge computing solutions with distributed processing and real-time analytics',
+      icon: Cpu,
+      features: [
+        'Edge computing platform design and deployment,Distributed data processing and analytics,Edge AI and machine learning model deployment,Low-latency application optimization,Edge security and device management,Multi-cloud edge orchestration,Edge-to-cloud data synchronization,Real-time streaming and event processing'
+      ],
+      pricing: '$6,000 - $30,000/month',
+      delivery: '6-14 weeks',
+      category: 'Edge Computing Services'
+    },
+    {
+      title: 'Serverless Architecture & Functions',
+      description: 'Serverless computing solutions with function-as-a-service and event-driven architecture',
+      icon: Cloud,
+      features: [
+        'Serverless architecture design and implementation,Function-as-a-Service (FaaS) development,Event-driven architecture and microservices,API Gateway and service mesh configuration,Serverless database and storage solutions,Cost optimization and performance tuning,Monitoring and observability for serverless,Integration with cloud-native services'
+      ],
+      pricing: '$4,000 - $20,000/month',
+      delivery: '4-10 weeks',
+      category: 'Serverless Services'
+    },
+    {
+      title: 'Container Security & Compliance',
+      description: 'Comprehensive container security with vulnerability scanning and compliance automation',
+      icon: Shield,
+      features: [
+        'Container image scanning and vulnerability assessment,Runtime security monitoring and protection,Compliance automation for containerized workloads,Secrets management and encryption,Network security and micro-segmentation,Container registry security and governance,DevSecOps integration and CI/CD security,Compliance reporting and audit trails'
+      ],
+      pricing: '$3,500 - $18,000/month',
+      delivery: '4-8 weeks',
+      category: 'Container Security Services'
+    },
+    {
+      title: 'Data Mesh & Distributed Data Architecture',
+      description: 'Modern data architecture with distributed data mesh and domain-driven design',
+      icon: Network,
+      features: [
+        'Data mesh architecture design and implementation,Domain-driven data product development,Distributed data governance and cataloging,Self-serve data platform development,Data product lifecycle management,Cross-domain data sharing and collaboration,Real-time data streaming and processing,Data quality and lineage tracking'
+      ],
+      pricing: '$10,000 - $50,000/month',
+      delivery: '12-24 weeks',
+      category: 'Data Architecture Services'
+    },
+    {
+      title: 'Cloud-Native Application Development',
+      description: 'Modern cloud-native application development with microservices and containerization',
+      icon: Code,
+      features: [
+        'Cloud-native application architecture design,Microservices development and orchestration,Containerization with Docker and Kubernetes,API-first development and documentation,Cloud-native database and storage solutions,Observability and monitoring implementation,CI/CD pipeline development and optimization,Cloud-native security and compliance'
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '8-20 weeks',
+      category: 'Cloud-Native Development Services'
+    },
+    {
+      title: 'IT Service Management (ITSM) Automation',
+      description: 'Intelligent IT service management with automated workflows and AI-powered support',
+      icon: Settings,
+      features: [
+        'ITSM platform implementation and customization,Automated incident and problem management,AI-powered service desk and chatbot integration,Change management automation and approval workflows,Asset management and lifecycle tracking,Service catalog and self-service portal development,Performance analytics and reporting,Integration with monitoring and management tools'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-14 weeks',
+      category: 'ITSM Services'
+    },
+    {
+      title: 'Hybrid Cloud Management Platform',
+      description: 'Unified hybrid cloud management with multi-cloud orchestration and governance',
+      icon: Cloud,
+      features: [
+        'Multi-cloud and hybrid cloud architecture design,Unified cloud management and orchestration,Cloud cost optimization and FinOps implementation,Cross-cloud security and compliance management,Data migration and synchronization services,Disaster recovery across cloud environments,Cloud governance and policy enforcement,Performance monitoring and optimization'
+      ],
+      pricing: '$12,000 - $60,000/month',
+      delivery: '10-24 weeks',
+      category: 'Hybrid Cloud Services'
+    },
+    {
+      title: 'IT Infrastructure Automation & Orchestration',
+      description: 'Comprehensive infrastructure automation with intelligent orchestration and self-healing',
+      icon: Settings,
+      features: [
+        'Infrastructure as Code (IaC) implementation and management,Automated provisioning and configuration management,Intelligent orchestration and workflow automation,Self-healing infrastructure and automated recovery,Infrastructure monitoring and alerting automation,Compliance automation and policy enforcement,Cost optimization through automated scaling,Integration with existing tools and processes'
+      ],
+      pricing: '$6,000 - $30,000/month',
+      delivery: '6-16 weeks',
+      category: 'Infrastructure Automation Services'
+    },
+    {
+      title: 'Cybersecurity Operations Center (SOC) as a Service',
+      description: '24/7 security operations center with advanced threat detection and response capabilities',
+      icon: Shield,
+      features: [
+        '24/7/365 security monitoring and threat detection,Advanced threat hunting and incident response,Security information and event management (SIEM),Endpoint detection and response (EDR),Network security monitoring and analysis,Vulnerability management and assessment,Compliance monitoring and reporting,Threat intelligence and security research'
+      ],
+      pricing: '$15,000 - $75,000/month',
+      delivery: '4-8 weeks',
+      category: 'SOC Services'
+    },
+    {
+      title: 'Digital Workplace & Collaboration Solutions',
+      description: 'Modern digital workplace with unified communication and collaboration platforms',
+      icon: Users,
+      features: [
+        'Unified communication and collaboration platform setup,Digital workspace optimization and user experience,Remote work infrastructure and security,Video conferencing and virtual meeting solutions,Document collaboration and knowledge management,Employee productivity and engagement analytics,Integration with business applications,Change management and user training'
+      ],
+      pricing: '$3,000 - $15,000/month',
+      delivery: '4-10 weeks',
+      category: 'Digital Workplace Services'
+    },
+    {
+      title: 'IT Asset Management & Lifecycle Services',
+      description: 'Comprehensive IT asset management with automated lifecycle tracking and optimization',
+      icon: Database,
+      features: [
+        'IT asset discovery and inventory management,Automated asset lifecycle tracking and management,Software license management and compliance,Hardware procurement and disposal services,Asset performance monitoring and optimization,Cost tracking and budget management,Integration with ITSM and procurement systems,Compliance reporting and audit support'
+      ],
+      pricing: '$2,500 - $12,000/month',
+      delivery: '3-8 weeks',
+      category: 'IT Asset Management Services'
+    },
+    {
+      title: 'Cloud Migration & Modernization Services',
+      description: 'Comprehensive cloud migration with application modernization and optimization',
+      icon: Cloud,
+      features: [
+        'Cloud migration strategy and planning,Application assessment and modernization,Data migration and synchronization,Legacy system integration and API development,Performance optimization and cost reduction,Cloud-native application refactoring,Testing and validation services,Training and change management support'
+      ],
+      pricing: '$10,000 - $100,000/month',
+      delivery: '8-24 weeks',
+      category: 'Cloud Migration Services'
+    },
+    {
+      title: 'IT Compliance & Governance Services',
+      description: 'Comprehensive IT compliance management with automated governance and audit support',
+      icon: Shield,
+      features: [
+        'Compliance framework implementation (SOX, GDPR, HIPAA),IT governance structure and policy development,Automated compliance monitoring and reporting,Risk assessment and management,Audit preparation and support,Regulatory change management,Training and awareness programs,Integration with existing systems and processes'
+      ],
+      pricing: '$5,000 - $30,000/month',
+      delivery: '6-16 weeks',
+      category: 'IT Compliance Services'
     }
   ];
 

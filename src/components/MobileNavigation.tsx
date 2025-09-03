@@ -1,3 +1,16 @@
-import React, { memo, useState, useEffect } from 'react' import { motion, AnimatePresence } from 'framer - motion' import { Link }  from 'react - router - dom';interface MobileNavigationProps {;
-"
-}
+
+   isOpen: boolean;
+   onClos,e: () => void} interface NavigationItem {
+   name: string;
+
+   href: string
+
+
+
+
+
+
+
+
+
+

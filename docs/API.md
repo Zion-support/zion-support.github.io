@@ -29,7 +29,6 @@ GET /api/health
 ```
 
 **Response:**
-
 ```json
 {
   "status": "healthy",
@@ -47,7 +46,6 @@ POST /api/contact
 ```
 
 **Request Body:**
-
 ```json
 {
   "name": "John Doe",
@@ -57,7 +55,6 @@ POST /api/contact
 ```
 
 **Response:**
-
 ```json
 {
   "success": true,

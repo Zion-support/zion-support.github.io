@@ -6,12 +6,10 @@ const nextConfig = require('eslint-config-next');
 
 const compat = new FlatCompat({
   baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-});
+  recommendedConfig: js.configs.recommended });
 
 module.exports = [
-  ...compat.extends('next/core-web-vitals'),
-  {
+  ...compat.extends('next/core-web-vitals') {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       parser: typescriptParser,
@@ -19,21 +17,15 @@ module.exports = [
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
+          jsx: true } } },
     plugins: {
-      '@typescript-eslint': typescriptEslint,
-    },
+      '@typescript-eslint': typescriptEslint },
     rules: {
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
       'react/no-unescaped-entities': 'off',
       'react-hooks/exhaustive-deps': 'warn'
-    },
-  },
-  {
+    } }, {
     ignores: [
       'node_modules/',
       '.next/',
@@ -43,6 +35,4 @@ module.exports = [
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs'
-    ],
-  },
-];
+    ] } ];

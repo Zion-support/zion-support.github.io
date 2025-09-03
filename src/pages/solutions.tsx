@@ -1,2 +1,61 @@
- import Head from 'next / head' import Link from 'next / link' export default React.memo(function Solutions () { return (<> <Head> <title > Solutions - Zion Tech Group</title> <meta name='description' content='Technology solutions for your business' / /" > </Head> <main className='min - h-screen bg - white'> <div className='max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 py - 20'> <div className='text - center mb - 16'> <h1 className='text - 4xl font - bold text - gray - 900 mb - 6'> Our Solutions </h1> <p className='text - xl text - gray - 600 max - w-3xl mx - auto'> Tailored technology solutions to meet your specific needs. </p> </div> <div className='grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8'> <div className='p - 6 border border - gray - 200 rounded - lg'> <h3 className='text - xl font - semibold text - gray - 900 mb - 4'>Enterprise Solutions</h3> <p className='text - gray - 600 mb - 4'>Scalable solutions for large organizations.</p> <p className='text - blue - 600 font - semibold'>Custom pricing</p> </div> <div className='p - 6 border border - gray - 200 rounded - lg'> <h3 className='text - xl font - semibold text - gray - 900 mb - 4'>SMB Solutions</h3> <p className='text - gray - 600 mb - 4'>Cost - effective solutions for small businesses.</p> <p className='text - blue - 600 font - semibold'>Starting from $1, 000 / month</p> </div> <div className='p - 6 border border - gray - 200 rounded - lg'> <h3 className='text - xl font - semibold text - gray - 900 mb - 4'>Startup Solutions</h3> <p className='text - gray - 600 mb - 4'>Innovative solutions for growing startups.</p> <p className='text - blue - 600 font - semibold'>Starting from $800 / month</p> </div> </div> <div className='text - center mt - 12'> <Link href='/contact' className='bg - blue - 600 text - white px - 8 py - 3 rounded - lg hover: bg - blue - 700 transition - colors'> Learn More </Link> </div> </div> </main> </>) }''""
- import Head from 'next / head' import Link  from 'next / link';export default React.memo(function Solutions () { return (<> <Head> <title > Solutions - Zion Tech Group</title> <meta name='description' content='Technology solutions for your business' / /" > </Head> <main className='min - h-screen bg - white'> <div className='max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 py - 20'> <div className='text - center mb - 16'> <h1 className='text - 4xl font - bold text - gray - 900 mb - 6'> Our Solutions </h1> <p className='text - xl text - gray - 600 max - w-3xl mx - auto'> Tailored technology solutions to meet your specific needs. </p> </div> <div className='grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8'> <div className='p - 6 border border - gray - 200 rounded - lg'> <h3 className='text - xl font - semibold text - gray - 900 mb - 4'>Enterprise Solutions</h3> <p className='text - gray - 600 mb - 4'>Scalable solutions for large organizations.</p> <p className='text - blue - 600 font - semibold'>Custom pricing</p> </div> <div className='p - 6 border border - gray - 200 rounded - lg'> <h3 className='text - xl font - semibold text - gray - 900 mb - 4'>SMB Solutions</h3> <p className='text - gray - 600 mb - 4'>Cost - effective solutions for small businesses.</p> <p className='text - blue - 600 font - semibold'>Starting from $1, 000 / month</p> </div> <div className='p - 6 border border - gray - 200 rounded - lg'> <h3 className='text - xl font - semibold text - gray - 900 mb - 4'>Startup Solutions</h3> <p className='text - gray - 600 mb - 4'>Innovative solutions for growing startups.</p> <p className='text - blue - 600 font - semibold'>Starting from $800 / month</p> </div> </div> <div className='text - center mt - 12'> <Link href='/contact' className='bg - blue - 600 text - white px - 8 py - 3 rounded - lg hover: bg - blue - 700 transition - colors'> Learn More </Link> </div> </div> </main> </>) }''
+
+  return (
+    <>
+      <Head>
+        <title>Solutions - Zion Tech Group | Industry-Specific Technology Solutions</title>
+        <meta name="description" content="Industry-specific technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
+        {/* Navigation */}
+        <nav className="bg-white/90 backdrop-blur-md shadow-lg border-b border-gray-200 sticky top-0 z-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center h-16">
+              <div className="flex items-center">
+                <Link href="/" className="text-2xl font-bold text-gray-900">Zion Tech Group</Link>
+              </div>
+              <div className="hidden md:flex space-x-8">
+                <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Home</Link>
+                <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Services</Link>
+                <Link href="/solutions" className="text-blue-600 font-medium">Solutions</Link>
+                <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">About</Link>
+                <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Contact</Link>
+                <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Blog</Link>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        {/* Hero Section */}
+        <section className="py-20 sm:py-32">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-4xl sm:text-6xl font-bold text-gray-900 mb-6">
+              Industry <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Solutions</span>
+            </h1>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
+              Tailored technology solutions designed specifically for your industry challenges and opportunities
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+                Get Custom Solution
+              </Link>
+              <Link href="/services" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
+                View Services
+              </Link>
+            </div>
+          </div>
+
+    </>
+  )});
+
+
+
+
+
+
+
+
+
+

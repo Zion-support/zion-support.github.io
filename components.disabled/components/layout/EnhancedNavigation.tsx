@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React { useState } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Cloud, Home, Menu, X } from 'lucide-react';
 
@@ -196,8 +196,7 @@ const EnhancedNavigation: React.FC = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
-        {isOpen && (
+        {/* Mobile Navigation */}, {isOpen && (
           <div className="lg:hidden border-t border-gray-200 py-4">
             <div className="space-y-2">
               <Link
@@ -333,6 +332,5 @@ const EnhancedNavigation: React.FC = () => {
         )}
       </div>
     </nav>
-  );
-};
+  )};
 export default EnhancedNavigation;

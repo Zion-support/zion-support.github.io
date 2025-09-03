@@ -8,19 +8,18 @@ interface SEOProps {
   url?: string;
   type?: string;
   keywords?: string[];
-  author?: string;
-}
+  author?: string}
 
 const defaultSEO = {
   title: 'Zion Tech Group - Leading Technology Solutions Provider',
-  description: 'Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services. Trusted by 500+ companies worldwide.',
+  description:
+    'Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services. Trusted by 500+ companies worldwide.',
   image: '/images/og-image.jpg',
   type: 'website',
   keywords: [
-    'AI solutions,quantum computing,blockchain,cloud infrastructure,software development,technology consulting'
+
   ],
-  author: 'Zion Tech Group'
-};
+  author: 'Zion Tech Group' };
 
 const EnhancedSEO: React.FC<SEOProps> = ({
   title = defaultSEO.title,
@@ -29,11 +28,12 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   url,
   type = defaultSEO.type,
   keywords = defaultSEO.keywords,
-  author = defaultSEO.author
-}) => {
+  author = defaultSEO.author }) => {
   const router = useRouter();
   const currentUrl = url || `https://ziontechgroup.com${router.asPath}`;
-  const fullImageUrl = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
+  const fullImageUrl = image.startsWith('http')
+    ? image
+    : `https://ziontechgroup.com${image}`;
 
   return (
     <Head>
@@ -41,7 +41,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(,)} />
       <meta name="author" content={author} />
-      
+
       {/* Open Graph */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -49,18 +49,18 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta property="og:url" content={currentUrl} />
       <meta property="og:type" content={type} />
       <meta property="og:site_name" content="Zion Tech Group" />
-      
+
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={fullImageUrl} />
-      
+
       {/* Additional SEO */}
       <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="canonical" href={currentUrl} />
-      
+
       {/* Structured Data */}
       <script
         type="application/ld+json"
@@ -76,21 +76,16 @@ const EnhancedSEO: React.FC<SEOProps> = ({
               telephone: '+1-302-464-0950',
               contactType: 'customer service',
               areaServed: 'US',
-              availableLanguage: 'English'
-            },
+              availableLanguage: 'English' },
             address: {
               '@type': 'PostalAddress',
               streetAddress: '364 E Main St STE 1008',
               addressLocality: 'Middletown',
               addressRegion: 'DE',
               postalCode: '19709',
-              addressCountry: 'US'
-            }
-          })
-        }}
+              addressCountry: 'US' } }) }}
       />
     </Head>
-  );
-};
+  )};
 
 export default EnhancedSEO;

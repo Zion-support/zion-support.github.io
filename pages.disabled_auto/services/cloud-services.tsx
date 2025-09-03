@@ -1,101 +1,34 @@
-import React from 'react';
-import Link from 'next/link';
+import: React from 'react';';
+import: Link from 'next/link';';
 
-export default function CloudServices() {
-  return (
-    <div className="bg-white">
-      <section className="container mx-auto px-4 py-12 max-w-6xl">
-        <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900">
-          Cloud Architecture & DevOps
-        </h1>
-        <p className="mt-4 text-lg text-gray-600">
-          Design, migrate, and operate secure, scalable cloud platforms on AWS,
-          GCP, and Azure. We build golden paths with IaC, GitOps, and
-          observability baked in.
-        </p>
-        <div className="mt-6 flex gap-3 text-sm">
-          <Link
-            href="/pricing"
-            className="text-blue-600 hover:text-blue-700 underline"
-          >
-            Pricing
-          </Link>
-          <Link
-            href="/contact"
-            className="text-blue-600 hover:text-blue-700 underline"
-          >
-            Contact
-          </Link>
-        </div>
-      </section>
-      <section className="bg-gray-50 border-t border-b border-gray-100">
-        <div className="container mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl">
-          {[
-            {
-              title: 'Cloud Landing Zone',
-              price: '$12,000–$40,000',
-              desc: 'Secure multi-account setup, SSO, guardrails, baseline networking.',
-            },
-            {
-              title: 'Kubernetes Platform',
-              price: '$20,000–$70,000',
-              desc: 'EKS/GKE/AKS with GitOps, autoscaling, service mesh, and observability.',
-            },
-            {
-              title: 'Data Platform',
-              price: '$15,000–$60,000',
-              desc: 'Warehouses, lakes, streaming, governance, and lineage.',
-            },
-            {
-              title: 'Cloud Migration',
-              price: '$8,000–$50,000',
-              desc: 'Rehost, replatform, or refactor with reliability and cost control.',
-            },
-            {
-              title: 'FinOps & Cost Control',
-              price: '$4,000–$12,000/mo',
-              desc: 'Monitoring, rightsizing, savings plans, budget alerts.',
-            },
-            {
-              title: 'Platform SRE',
-              price: '$6,000–$18,000/mo',
-              desc: 'SLOs, incident response, chaos drills, and capacity planning.',
-            },
-          ].map(item => (
-            <div
-              key={item.title}
-              className="p-6 bg-white rounded-xl shadow-sm border border-gray-100"
-            >
-              <h3 className="text-xl font-semibold text-gray-900">
-                {item.title}
-              </h3>
-              <p className="mt-2 text-gray-600">{item.desc}</p>
-              <p className="mt-4 text-gray-900 font-medium">
-                Typical budget: {item.price}
-              </p>
+
             </div>
-          ))}
+          ));
         </div>
-      </section>
-      <section className="container mx-auto px-4 py-12 max-w-6xl">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-          Tools & IaC
-        </h2>
-        <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-sm">
-          {[
-            'Terraform,Pulumi,ArgoCD,FluxCD,Prometheus,Grafana,Loki,OpenTelemetry,AWS,GCP,Azure,Cloudflare',
-          ].map(t => (
+
+            'Terraform',
+            'Pulumi',
+            'ArgoCD',
+            'FluxCD',
+            'Prometheus',
+            'Grafana',
+            'Loki',
+            'OpenTelemetry',
+            'AWS',
+            'GCP',
+            'Azure',
+            'Cloudflare' ].map(t => (
             <div
               key={t}
               className="px-3 py-2 bg-gray-100 text-gray-800 rounded-md text-center"
             >
               {t}
             </div>
-          ))}
-        </div>
+          ));
+        </div>"
         <div className="mt-6">
-          <Link
-            href="/contact"
+          <Link"
+            href="/contact""
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold"
           >
             Plan a migration workshop
@@ -103,5 +36,7 @@ export default function CloudServices() {
         </div>
       </section>
     </div>
-  );
+  )
 }
+"
+
