@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Link, useLocation  } from 'react-router-dom';
  from 'react';
 export const EnhancedMobileNavigation: React.FC = () => {
@@ -438,9 +435,3 @@ export default function EnhancedMobileNavigation() {
     </>
   )}};
 '"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

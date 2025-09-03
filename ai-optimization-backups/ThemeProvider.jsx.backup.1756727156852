@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-=======
-'use client';
->>>>>>> main
-import * as React from 'react';
+import React, { useState } from 'react';import * as React from 'react';
 
 const ThemeContext = React.createContext({
 

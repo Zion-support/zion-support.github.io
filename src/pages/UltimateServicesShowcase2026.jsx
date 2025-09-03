@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -118,31 +117,7 @@ const UltimateServicesShowcase2026 = () => {
             <div className="mt-4">""""
               <strong>Website:</strong> <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 underline">https://ziontechgroup.com</a>
             </div>
-          </motion.div>
-=======
-import React from "react"
-export default UltimateServicesShowcase2026,
-export default UltimateServicesShowcase2026""
- export: default UltimateServicesShowcase2026,,"
-export: default UltimateServicesShowcase2026""",,
- export default UltimateServicesShowcase2026,",
- export default UltimateServicesShowcase2026","
-export default function UltimateServicesShowcase2026() {return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="UltimateServicesShowcase2026 - Zion Tech Group" description="Professional UltimateServicesShowcase2026 services by Zion Tech Group"  />"
-      <div className="container mx-auto px-4 py-20">"
-        <h1 className="text-4xl font-bold text-white mb-8">UltimateServicesShowcase2026</h1>"
-        <p className="text-gray-300 text-lg">
-          Professional UltimateServicesShowcase2026 services to help your business grow.
-        </p>
-      </div>
-  )
-}
- );
-export default UltimateServicesShowcase2026,
-export default UltimateServicesShowcase2026&apos;&apos,
->>>>>>> main
-"""
+          </motion.div>"""
 const UltimateServicesShowcase2026: React.FC = () => {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
@@ -162,7 +137,6 @@ const UltimateServicesShowcase2026: React.FC = () => {
               Get Started,
             </a>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
 """
@@ -376,9 +350,3 @@ export { UltimateServicesShowcase2026 };
 export { UltimateServicesShowcase2026 };
 
 export { UltimateServicesShowcase2026 };
-=======
-    </div>;,
-  )}
-
-export default UltimateServicesShowcase2026;""
->>>>>>> main

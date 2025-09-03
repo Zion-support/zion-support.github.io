@@ -1,86 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
-<<<<<<< HEAD
 
-<<<<<<< HEAD
  * Header function
  * @param {*} params - Function parameters
  * @returns {*} Function return value
  */
 function Header({ className }: HeaderProps) {
-
-=======
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
-  Menu,
-  X,
-  Search,
-  User,
-  Bell,
-  Settings,
-  LogOut,
-  ChevronDown,
-  Globe,
-  Sun,
-  Moon,
-  Zap,
-  Brain,
-  Shield,
-  Users,
-  HardDrive,
-  TrendingUp,
-  Building2,
-  FileText,
-  HelpCircle,
-  BarChart3,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Play,
-  ChevronLeft,
-  ChevronRight,
-  Rocket,
-  Target,
-  Handshake,
-  Lightbulb,
-  Cpu,
-  Database,
-  Network,
-  Smartphone,
-  Lock,
-  Code,
-  Server,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Bot,
-  Workflow,
-  Eye,
-  Sparkles,
-  Atom,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  Activity,
-  MessageCircle,
-  BarChart,
-  Users2,
-  Settings as SettingsIcon,
-  Palette,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Cloud
-} from 'lucide-react';
-
-interface HeaderProps {
-<<<<<<< HEAD
-  // Add your props here
-
-=======
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
   className?: string;
 }
 
@@ -94,19 +20,12 @@ export function Header({ className }: HeaderProps) {
   const location = useLocation();
 
   useEffect(() => {
-<<<<<<< HEAD
-    
-=======
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
-    };
+        };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-<<<<<<< HEAD
     // You can add theme switching logic here
   }}};
 
@@ -132,39 +51,7 @@ export function Header({ className }: HeaderProps) {
               <Zap className="w-6 h-6 lg:w-7 lg:h-7 text-white"  />
             </div>"
             <div className="hidden sm:block">"
-              <h1 className="text-xl lg:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
-=======
-  const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
-  };
-
-  const navigation = [
-    { name: 'Home', href: '/', current: location.pathname === '/' },
-    { name: 'Services', href: '/services', current: location.pathname.startsWith('/services') },
-    { name: 'Solutions', href: '/solutions', current: location.pathname.startsWith('/solutions') },
-    { name: 'About', href: '/about', current: location.pathname.startsWith('/about') },
-    { name: 'Contact', href: '/contact', current: location.pathname === '/contact' },
-    { name: 'Blog', href: '/blog', current: location.pathname.startsWith('/blog') },
-    { name: 'Pricing', href: '/pricing', current: location.pathname === '/pricing' }
-  ];
-
-  return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-800' 
-        : 'bg-transparent'
-    } ${className || ''}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                <Zap className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
-                Zion Tech Group
+              <h1 className="text-xl lg:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">                Zion Tech Group
               </span>
             </Link>
           </div>
@@ -190,35 +77,19 @@ export function Header({ className }: HeaderProps) {
           <div className="flex items-center space-x-4">
             {/* Search */}
             <button
-<<<<<<< HEAD
               onClick={() => setIsSearchOpen(!isSearchOpen)}"
               className="p-2 text-gray-300 hover:text-blue-400 transition-colors"
               
             >"
-              <Search className="w-5 h-5"  />
-=======
-              onClick={() => setIsSearchOpen(!isSearchOpen)}
-              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-md transition-colors duration-200"
-            >
-              <Search className="w-5 h-5" />
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
-            </button>
+              <Search className="w-5 h-5"  />            </button>
 
             {/* Theme toggle */}
             <button
-<<<<<<< HEAD
               onClick={toggleTheme}"
               className="p-2 text-gray-300 hover:text-blue-400 transition-colors"
               
             >'"
-              {theme === 'dark' ? <Sun className="w-5 h-5"  /> : <Moon className="w-5 h-5"  />}
-=======
-              onClick={toggleTheme}
-              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-md transition-colors duration-200"
-            >
-              {theme === 'light' ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
-            </button>
+              {theme === 'dark' ? <Sun className="w-5 h-5"  /> : <Moon className="w-5 h-5"  />}            </button>
 
             {/* User menu */}
             <div className="relative">
@@ -230,7 +101,6 @@ export function Header({ className }: HeaderProps) {
                 <ChevronDown className="w-4 h-4" />
               </button>
 
-<<<<<<< HEAD
               <AnimatePresence>
                 {isUserMenuOpen && (<motion.div
                     initial={{ opacity: 0, y: -10 }}
@@ -286,29 +156,7 @@ export function Header({ className }: HeaderProps) {
                       </button>
                     </div>
                   </motion.div>) }
-              </AnimatePresence>
-=======
-              {isUserMenuOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50">
-                  <Link
-                    to="/profile"
-                    className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-cyan-400"
-                  >
-                    Profile
-                  </Link>
-                  <Link
-                    to="/settings"
-                    className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-cyan-400"
-                  >
-                    Settings
-                  </Link>
-                  <button className="block w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-cyan-400">
-                    Sign out
-                  </button>
-                </div>
-              )}
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
-            </div>
+              </AnimatePresence>            </div>
 
             {/* CTA Button */}
             <Link
@@ -320,19 +168,11 @@ export function Header({ className }: HeaderProps) {
 
             {/* Mobile menu button */}
             <button
-<<<<<<< HEAD
               onClick={toggleMobileMenu}"
               className="lg:hidden p-2 text-gray-300 hover:text-blue-400 transition-colors"
               
             >"
-              {isMobileMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
-=======
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-md transition-colors duration-200"
-            >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
-            </button>
+              {isMobileMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}            </button>
           </div>
         </div>
 
@@ -387,7 +227,6 @@ export function Header({ className }: HeaderProps) {
   );
 }
 
-<<<<<<< HEAD
       {/* Enhanced Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
@@ -584,6 +423,3 @@ export function Header({ className }: HeaderProps) {
       </AnimatePresence>
     </header>) }
 '"
-=======
-export default Header;
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9

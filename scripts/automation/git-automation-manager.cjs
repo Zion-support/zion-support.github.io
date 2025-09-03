@@ -366,7 +366,7 @@ class GitAutomationManager {
       const content = fs.readFileSync(filePath, 'utf8');
       
       // Simple conflict resolution strategies
-      if (content.includes('<<<<<<< HEAD')) {
+      if (content.includes('')) {
         // Remove conflict markers and keep both versions or choose one
         const resolvedContent = this.resolveConflictMarkers(content);
         fs.writeFileSync(filePath, resolvedContent);
@@ -383,10 +383,9 @@ class GitAutomationManager {
   resolveConflictMarkers(content) {
     // Simple strategy: keep both versions separated by a comment
     return content
-      .replace(/<<<<<<< HEAD\n/g, '// HEAD version:\n')
-      .replace(/=======\n/g, '\n// Branch version:\n')
-      .replace(/>>>>>>> [^\n]*\n/g, '\n');
-  }
+      .replace(/\n/g, '// HEAD version:\n')
+      .replace(/\n/g, '\n// Branch version:\n')
+      .replace(/  }
 
   categorizeChanges(status) {
     const categories = {

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
  * SEO function
  * @param {*} params - Function parameters
@@ -8,15 +5,7 @@
  */
 function SEO({
 
-interface SEOProps {  title?: string;
-=======
-<<<<<<< HEAD
-import { Helmet  } from 'react-helmet-async';
-
-interface SEOProps {
-  title?: string;
->>>>>>> main
-  description?: string;
+interface SEOProps {  title?: string;  description?: string;
   keywords?: string;
   image?: string;
   url?: string;
@@ -29,7 +18,6 @@ export const SEO: React.FC<SEOProps> = ({
   keywords = 'AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group',
   image = '/og-image.svg',
   url = 'https://ziontechgroup.com',
-<<<<<<< HEAD
   type = 'website',
   author = 'Zion Tech Group',
   publishedTime,
@@ -87,15 +75,7 @@ export const SEO: React.FC<SEOProps> = ({
           }        `}
       </script>
     </Helmet>) }
-'"`
-=======
-  type = 'website'
-}) => {
-  return(<Helmet>
-      {/* Basic Meta Tags */}
-      <title>{title}</title>
->>>>>>> main
-      <meta name="description" content={description} />
+'"`      <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
@@ -138,293 +118,6 @@ export const SEO: React.FC<SEOProps> = ({
             "contactType": "customer service"
           }
         })}
-=======
-import Head from "next/head"
-import React from "react"
-import { Helmet  } from "react - helmet-async", SEOProps {title?: string;description?: string
-export const SEO: React.FC < SEOProps> = ({,
-"
-export default function Page() {
-export default function Page() {;
-
-interface SEOProps {
-<<<<<<< HEAD  title?: string;
-   description?: string;
-   keywords?: string;
-   image?: string;
-   url?: string;
-   type?: string}
-
-export const SEO: React.FC<SEOProps> = ({,
-ursor/automate-test-fix-improve-and-merge-code-48f3,
-    <Helmet>      {/* comment */}
-
-      <title>{title}</title>;"
-      <meta name = "description" content="{description}"  />"      <meta name="keywords" content="{keywords}"  />"      <meta name="author" content="Zion Tech Group"  />"      <meta name="robots" content="index, follow"  />"      <link rel="canonical" href="{url}"  />"      {/* comment */}"
-      <meta property="og: type" content="{type}"  />"      <meta property="og:url" content="{url}"  />"      <meta property="og:title" content="{title}"  />"      <meta property="og:description" content="{description}"  />"      <meta property="og:image" content="{image}"  />"      <meta property="og:site_name" content="Zion Tech Group"  />"      {/* comment */}";"
-      <meta property = "twitter:card" content="summary_large_image"  />"      <meta property="twitter:url" content="{url}"  />"      <meta property="twitter:title" content="{title}"  />"      <meta property="twitter:description" content="{description}"  />"      <meta property="twitter:image" content="{image}"  />"      {/* comment */}"
-      <meta name="viewport" content="width="device - width," initial-scale=1.0"  />"      <meta httpEquiv="X-UA-Compatible" content="IE=edge"  />"      "      {/* comment */}",
-      <script type = "application/ld+json">"        {JSON.stringify({"          "@context": "https:// comment
-
-  &apos;react-helmet-async&apos;interface SEOProps {
-
-  title?: string
-  description?: string,react-helmet-async";&apos;&apos
-export default function Page() {}
-
-export default function Page() {
-
-interface SEOProps ;{"
-interface SEOProps {title?: string;
-interface SEOProps {;
-
-  title?: string
-  description?: string
-  keywords?: string
-  image?: string
-  url?: string"
-  type?: string}
-
-"
-export const SEO: React.FC<SEOProps> = ({""",
-  title = "Zion Tech Group - Leading Technology Solutions Provider","""
-  description = "Leading technology solutions provider offering AI services, IT services, and micro SaaS solutions. Enterprise-grade infrastructure and development services.", """
-  keywords = "technology solutions, AI services, IT services, micro SaaS, enterprise software, cloud services, cybersecurity","""
-  image = "https: // comment
-  url = "https: // comment
-  type = "website"}) => {"
-  const structuredData = {}
-
-"
-export const SEO: React.FC<SEOProps> = ({"",
-export const SEO: React.FC<SEOProps> = ({title = "Zion Tech Group - Leading Technology Solutions Provider","
-  description = "Leading technology solutions provider offering AI services, IT services, and micro SaaS solutions. Enterprise-grade infrastructure and development services.","
-  keywords = "technology solutions, AI services, IT services, micro SaaS, enterprise software, cloud services, cybersecurity",
-  image = "https: // comment
-  url = "https: // comment
-  type = "website
-}) => {const structuredData = {}: SEOProps) {
-  const router = useRouter()
-}
-  const canonicalUrl = url || "https: // comment
-export const SEO: React.FC<SEOProps> = ({",
-  title = "Zion Tech Group - Leading Technology Solutions","
-  description = "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.","
-  keywords = "AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group","
-  image = "/og-image.svg","
-  url = "https:// comment
-  type = "website
-}) => {
-  return(<Helmet>
-      {/* comment */}
-
-      <title>{title}</title>"
-title = "Zion Tech Group - Leading Technology Solutions", description = "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.", keywords = "AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group", image = "/og-image.svg","  url = "https: // comment
-    <Helmet>
-      {/* comment */}
-
-      <title>{title}</title>"
-      <meta name=`description" content="{description}"  />"      <meta name="keywords" content="{keywords}"  />"      <meta name="author" content="Zion Tech Group"  />"      <meta name="robots" content="index, follow"  />"      <link rel="canonical" href="{url}"  />""      {/* comment */}"
-      <meta property="og: type" content="{type}"  />"      <meta property="og:url" content="{url}"  />"      <meta property="og:title" content="{title}"  />"      <meta property="og:description" content="{description}"  />"      <meta property="og:image" content="{image}"  />"      <meta property="og:site_name" content="Zion Tech Group"  />""      {/* comment */}""
-      <meta property="twitter:card" content="summary_large_image"  />"      <meta property="twitter:url" content="{url}"  />"      <meta property="twitter:title" content="{title}"  />"      <meta property="twitter:description" content="{description}"  />"      <meta property="twitter:image" content="{image}"  />""      {/* comment */}"
-      <meta name="viewport" content="width="device-width," initial-scale=1.0"  />"      <meta httpEquiv="X-UA-Compatible" content="IE=edge"  />"      "      {/* comment */}""
-      <script type="application/ld+json">"        {JSON.stringify({"          "@context": "https:// comment
-  title = "Zion Tech Group - Advanced AI Solutions","
-  description = "Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services.","
-  keywords = "AI, artificial intelligence, cloud computing, digital transformation, automation","
-  image = "/og-image.jpg","
-  url = "https:// comment
-  type = "website"
-ursor/automate-test-fix-improve-and-merge-code-48f3}
-
-    <Helmet>      {/* comment */}
-
-      <title>{title}</title>"
-      <;<meta name="&apos;description&apos;" content="{description}"  />&apos;&apos,      <meta name="&apos;keywords&apos;" content="{keywords}"  />&apos;&apos,      <meta name="&apos;author&apos;" content="&apos;Zion" Tech Group&apos;       />&apos;&apos,      <meta name="&apos;robots&apos;" content="&apos;index," follow&apos;       />&apos;&apos,      <link rel="&apos;canonical&apos;" href="{url}"  />&apos;&apos;      {/* comment */}&apos;&apos;"
-      <meta property="&apos;og:" type&apos, content="{type}"  />&apos;&apos,      <meta property="&apos;og:" url&apos, content="{url}"  />&apos;&apos,      <meta property="&apos;og:" title&apos, content="{title}"  />&apos;&apos,      <meta property="&apos;og:" description&apos, content="{description}"  />&apos;&apos,      <meta property="&apos;og:" image&apos, content="{image}"  />&apos;&apos,      <meta property="&apos;og: " site_name&apos, content="&apos,Zion" Tech Group&apos,       />&apos,&apos,      {/* comment */}&apos;&apos,"
-      <meta property="&apos;twitter: " card&apos; content="&apos,summary_large_image&apos,"  />&apos,&apos,"      <meta property="&apos,twitte,r:" url&apos, content="{url}"  />&apos;&apos,      <meta property="&apos;twitter:" title&apos, content="{title}"  />&apos;&apos,      <meta property="&apos;twitter:" description&apos, content="{description}"  />&apos;&apos,      <meta property="&apos;twitter:" image&apos, content="{image}"  />&apos;&apos;      {/* comment */}&apos;&apos;"
-      <meta name="&apos;viewport&apos;" content="&apos;width=device-width," initial-scale="1.0&apos;"  />&apos;&apos,      <meta httpEquiv="&apos;X-UA-Compatible&apos;" content="&apos;IE=edge&apos;"  />&apos;      &apos;      {/* comment */}&apos;&apos,"
-      <script type="&apos;application/ld+json&apos;">&apos;        {JSON.stringify({&apos;          &apos;@context&apos;: &apos;https: // comment
-  title = "Zion Tech Group - Leading Technology Solutions Provider","
-  description = "Leading technology solutions provider offering AI services, IT services, and micro SaaS solutions. Enterprise-grade infrastructure and development services.","
-  keywords = "technology solutions, AI services, IT services, micro SaaS, enterprise software, cloud services, cybersecurity","
-  image = "https:// comment
-  url = "https:// comment
-  type = "website"}) => {"
-  const structuredData = {},"
-    "address": {"
-      "@type": "PostalAddress","
-      "streetAddress": "364 E Main St STE 1008","
-      "addressLocality": "Middletown","
-      "addressRegion": "DE","
-      "postalCode": "19709","
-      "addressCountry": "US""
-      "contactType": "customer service"}
-
-  }
-
-  return (
-<Head>
-      {/* comment */}"
-      <title>{title}</title>"
-      <meta name = "description" content="{description}"  />""
-      <meta name="keywords" content="{keywords}"  />""
-      <meta name="author" content="Zion Tech Group"  />""
-      <meta name="robots" content="index, follow"  />""
-      <link rel="canonical" href="{url}"  />
-      "
-      {/* comment */}""
-      <meta property="og:type" content="{type}"  />""
-      <meta property="og:url" content="{url}"  />""
-      <meta property="og:title" content="{title}"  />""
-      <meta property="og:description" content="{description}"  />""
-      <meta property="og:image" content="{image}"  />""
-      <title>{title}</title>"""
-      <meta name="description" content="{description}" /" >""
-      <meta name="keywords" content="{keywords}" /" >""
-      <meta name="author" content="Zion Tech Group" /" >""
-      <meta name="robots" content="index, follow" /" >""
-      <link rel="canonical" href="{url}" /" >"
-      "
-      {/* comment */}"""
-      <meta property="og: type" content="{type}" /" >""
-      <meta property="og:url" content="{url}" /" >""
-      <meta property="og:title" content="{title}" /" >""
-      <meta property="og:description" content="{description}" /" >""
-      <meta property="og:image" content="{image}" /" >""
-      <meta property="og: site_name" content="Zion Tech Group" /" >"
-      ",
-      {/* comment */}"""
-      <meta property="twitter: card" content="summary_large_image" /" >"",
-      <meta property="twitter:url" content="{url}" /" >""
-      <meta property="twitter:title" content="{title}" /" >""
-      <meta property="twitter:description" content="{description}" /" >""
-      <meta property="twitter:image" content="{image}" /" >"
-      "
-      {/* comment */}"""
-      <meta name="viewport" content="width="device-width," initial-scale=1.0" /" >""
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" /" >"
-      "
-      {/* comment */}""
-      <title>{title}</title>"
-      <meta name="description" content="{description}"  />"
-      <meta name="keywords" content="{keywords}"  />"
-      <meta name="author" content="Zion Tech Group"  />"
-      <meta name="robots" content="index, follow"  />"
-      <link rel="canonical" href="{url}"  />
-
-      {/* comment */}"
-      <meta property="og:type" content="{type}"  />"
-      <meta property="og:url" content="{url}"  />"
-      <meta property="og:title" content="{title}"  />"
-      <meta property="og:description" content="{description}"  />"
-      <meta property="og:image" content="{image}"  />"
-      <meta property="og: site_name" content="Zion Tech Group"  />
-,
-      {/* comment */}"
-      <meta property="twitter: card" content="summary_large_image"  />",
-      <meta property="twitter:url" content="{url}"  />"
-      <meta property="twitter:title" content="{title}"  />"
-      <meta property="twitter:description" content="{description}"  />"
-      <meta property="twitter:image" content="{image}"  />
-
-      {/* comment */}"
-      <meta property="og: type" content="{type}"  />"
-      <meta property="og: url" content="{url}"  />"
-      <meta property="og: title" content="{title}"  />"
-      <meta property="og: description" content="{description}"  />"
-      <meta property="og: image" content="{image}"  />"
-      <meta property="og: site_name" content="Zion Tech Group"  />",
-      <meta property="og: type" content="{type}"  />"
-      <meta property="og:url" content="{canonicalUrl}"  />"
-      <meta property="og:type" content="{type}"  />"
-      <meta property="og:url" content="{url}"  />"
-      <meta property="og:title" content="{title}"  />"
-      <meta property="og:description" content="{description}"  />"
-      <meta property="og:image" content="{image}"  />"
-      <meta property="og: site_name" content="Zion Tech Group"  />
-      ",
-      {/* comment */}""
-      <meta property="twitter: card" content="summary_large_image"  />"",
-      <meta property="twitte,"
-    r:url" content="{url}"  />""
-      <meta property="twitter:title" content="{title}"  />""
-      <meta property="twitter:description" content="{description}"  />""
-      <meta property="twitter:image" content="{image}"  />
-      "
-      {/* comment */}""
-      <meta name="viewport" content="width="device-width," initial-scale=1.0"  />""
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge"  />
-      "
-      {/* comment */}"
-      <meta name="twitter: card" content="summary_large_image"  />",
-      <meta name="twitter:url" content="{url}"  />"
-      <meta name="twitter:title" content="{title}"  />"
-      <meta name="twitter:description" content="{description}"  />"
-      <meta name="twitter:image" content="{image}"  />"
-      <meta name="twitter: site" content="@ziontechgroup"  />
-      ,
-      {/* comment */}"
-      <meta name="viewport" content="width=device-width, initial-scale=1"  />"
-      <meta name="theme-color" content="#3B82F6"  />
-      
-      {/* comment */}"
-      <script type="application/ld+json""
-        dangerouslySetInnerHTML="{{" __html: JSON.stringify(structuredData) }}
-
-            />"
-      <meta property="twitter: card" content="summary_large_image"  />",
-      <meta property="twitter:url" content="{url}"  />"
-      <meta property="twitter: title" content="{title}"  />"
-      <meta property="twitter: description" content="{description}"  />"
-      <meta property="twitter: image" content="{image}"  />
-      
-      {/* comment */}"
-      <meta name="robots" content="{noindex" ? "noindex, nofollow" : "index,follow"}       />"
-      <meta name="viewport" content="width=device-width, initial-scale=1"  />"
-      <meta name="theme-color" content="#2563eb"  />"
-      <meta name="msapplication-TileColor" content="#2563eb"  />
-      
-      {/* Article specific meta tags */}
-      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-      {section && <meta property="article:section" content={section} />}
-      {tags.map(tag => (
-        <meta key={tag} property="article:tag" content={tag} />
-      ))}      
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />      
-      {/* comment */}"
-      <script type="application/ld+json">
-        {JSON.stringify({"
-          "@context": "https:// comment
-          "@type": "Organization","
-          "name": "Zion Tech Group","
-          "url": "https:// comment
-          "logo": "https:// comment
-          "description": description,"
-          "sameAs": ["https:// comment
-            "https: // comment
-          ],"
-          "contactPoint": {"
-            "@type": "ContactPoint","
-            "telephone": "+1-555-ZION-TECH","
-            "contactType": "customer service"
-
-
-        })}
-
-      </script>
-    </Helmet>"
-      <script type = "application/ld+json">
-        {JSON.stringify(structuredData)}
-
->>>>>>> main
       </script>
     </Helmet>
   );
@@ -504,8 +197,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
       <meta name="author" content="Zion Tech Group" /" >"
     </Head>
   )}
-<<<<<<< HEAD
-=======
 
 "
 export default SEO;"
@@ -513,5 +204,3 @@ export default SEO;"
   )}
 };";
 "
->>>>>>> main
->>>>>>> main

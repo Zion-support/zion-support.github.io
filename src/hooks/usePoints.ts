@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { useEffect, useState, useCallback } from 'react'; // Added useCallback
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
@@ -53,4 +51,3 @@ export function usePoints() {
 
   return { ledger, balance, loading, fetchLedger };
 }
->>>>>>> main

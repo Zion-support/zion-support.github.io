@@ -37,7 +37,6 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
   };
 
   // Organized Services Categories
-<<<<<<< HEAD
   const servicesCategories = [{
       title: 'AI & Machine Learning',
       icon: Brain,
@@ -280,11 +279,6 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
       ]
     }
   ];
-=======
-
-      // Close other dropdowns'      if(nav.name === 'Services') {
->>>>>>> main
-
         setServicesDropdownOpen(true);
         setSolutionsDropdownOpen(false);
         setCompanyDropdownOpen(false);
@@ -325,17 +319,9 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
 
   return ()
     <>`
-      <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${<<<<<<< HEAD
-        scrolled
+      <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${        scrolled
           ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10'
-          : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'
-=======
-
-        scrolled '
-          ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10' '
-          : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'`
->>>>>>> main
-      }`}>
+          : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'      }`}>
         <div className="container-responsive">"
           <div className="flex h-20 items-center justify-between">
             {/* Logo */}"
@@ -356,14 +342,8 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                 </span>
               </Link>
             </div>
-<<<<<<< HEAD
 
-            {/* Desktop Navigation */}
-=======
-            
-            {/* Desktop Navigation */}"
->>>>>>> main
-            <nav className="hidden lg:flex items-center space-x-8">
+            {/* Desktop Navigation */}            <nav className="hidden lg:flex items-center space-x-8">
               {navigation.map((item) => ("
                 <div key={item.name} className="relative">
                   {item.hasDropdown ? ("

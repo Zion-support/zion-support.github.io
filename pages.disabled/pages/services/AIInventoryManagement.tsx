@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIInventoryManagement.tsx
 :pages.disabled/pages/services/AIInventoryManagement.tsx
 <:pages.disabled/pages/services/AIInventoryManagement.tsx
@@ -1068,5 +1067,3 @@ export default function AIInventoryManagement(...args: any[]): any {}
   )}'"`'"`
     </div>;
   )}'"`
-=======
->>>>>>> main

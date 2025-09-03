@@ -795,13 +795,7 @@ export const innovativeAIServices2031: AIService[] = [{
 ];
 
 // Export all services;
-<<<<<<< HEAD
-export const allInnovativeServices2031: unknown = {}
-=======
-export const allInnovativeServices2031 = {
-
->>>>>>> main
-  microSaas: innovativeMicroSaasServices2031,
+export const allInnovativeServices2031: unknown = {}  microSaas: innovativeMicroSaasServices2031,
   itInfrastructure: innovativeITInfrastructureServices2031,;  ;
   ;
   ;

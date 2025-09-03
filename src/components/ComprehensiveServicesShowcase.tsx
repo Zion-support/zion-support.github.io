@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {  import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
 
 export default function Page() {
@@ -338,9 +335,3 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
       </section>;
     </div>;) };
 export default ComprehensiveServicesShowcase}}}}'"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

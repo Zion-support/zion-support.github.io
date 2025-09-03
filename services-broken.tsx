@@ -1,21 +1,10 @@
-<<<<<<< HEAD
 import React from "react";,
 } from "lucide-react";
 export default function Services() {;
 	const title = "Services — Zion Tech Group";
 	const description = "AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.";
 	return (;
-		<>;
-=======
-import React from 'react'
-import { Award, Brain, CheckCircle, Clock, ArrowRight, Cloud, Shield, Code } from 'lucide-react'
-export default function Services() {
-	const title = 'Services — Zion Tech Group'
-	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.'
-	return (
-		<>
->>>>>>> 76992df8e20fa7e692ee5c73d3d2f5eb418043c0
-			{/* Hero Section */}
+		<>;			{/* Hero Section */}
 			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">;
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">;
 					<div className="mx-auto max-w-2xl text-center">;

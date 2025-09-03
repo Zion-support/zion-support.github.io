@@ -160,7 +160,6 @@ class $1 {
   console.error(`❌ Error during performance measurement: `, error);,
 } catch (error) {
   console.error(`❌ Error during performance measurement: `, error);
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
       this.logError(`Performance measurement failed`, error);,
 }
       ;,
@@ -207,7 +206,6 @@ class $1 {
       measurement.buildTime = -1;,
 } catch (error) {
   console.error(`Error measuring build performance: `, error);      measurement.buildTime = -1;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
       measurement.buildSuccess = false;,
 }
   }
@@ -249,11 +247,10 @@ class $1 {
         execSync("npm run build", {
   cwd: this.projectRoot,;
           stdio: "pipe",;
-<<<<<<< HEAD;
+;
           timeout: 120000;
-=======;
-<<<<<<< HEAD          timeout: 120000;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-1c7d;,
+;
+          timeout: 120000;
 });
         ;
         return {
@@ -335,7 +332,6 @@ class $1 {
       measurement.bundleSize = -1;,
 } catch (error) {
   console.error(`Error measuring bundle size: `, error);      measurement.bundleSize = -1;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
   }
 ;
@@ -430,7 +426,6 @@ class $1 {
       measurement.memoryUsage = -1;,
 } catch (error) {
   console.error(`Error measuring runtime performance: `, error);      measurement.memoryUsage = -1;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
       measurement.cpuUsage = -1;,
 }
   }
@@ -456,7 +451,6 @@ class $1 {
       return { memory: 0, cpu: 0   }
     } catch (error) {
   console.error("Error getting system metrics: ", error);      return { memory: 0, cpu: 0   }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
   }
 ;
@@ -701,7 +695,6 @@ class $1 {
 }
     } catch (error) {
   console.error("Error logging performance results: ", error)}
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
   logError(message, error) {
@@ -727,7 +720,6 @@ class $1 {
 }
     } catch (error) {
   console.error("Error logging error: ", error)}
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
   monitorBuilds() {

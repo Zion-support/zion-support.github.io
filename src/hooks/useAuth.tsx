@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 interface User {
 
@@ -135,4 +133,3 @@ export function useAuth(...args: unknown[]): unknown {
 '
     updateProfile,
   }}
->>>>>>> main

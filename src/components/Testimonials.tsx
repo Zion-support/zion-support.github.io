@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export default function Testimonials() {
 interface Testimonial {
   quote: string;
@@ -69,9 +66,3 @@ interface TestimonialsProps {
 }
 
 export default Testimonials;
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

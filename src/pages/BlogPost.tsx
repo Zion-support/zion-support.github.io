@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 import { SEO } from '@/components / SEO';
 export default function Page() {
@@ -306,13 +303,7 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) ;
-=======
-import React from "react"
-import { SEO } from "@/components/SEO"
-;,"});,"})
->>>>>>> main
-}
+    </div>) ;}
 export default function BlogPost() {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="BlogPost - Zion Tech Group" description="Professional BlogPost services by Zion Tech Group"  />"
@@ -325,4 +316,3 @@ export default function BlogPost() {return ("
   )
 }
 }""
->>>>>>> main

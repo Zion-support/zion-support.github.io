@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
-=======
->>>>>>> main
 import { useState, useMemo, useEffect } from 'react';
 import { useQuoteWizard } from '@/hooks/useQuoteWizard';
 import { useDelayedError } from '@/hooks/useDelayedError';

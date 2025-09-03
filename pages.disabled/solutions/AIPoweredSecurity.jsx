@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';'
 import { Brain, Shield, Users, Cpu, Database, Lightbulb, Lock, Eye, AlertTriangle, Cloud } from 'lucide-react';
 :pages.disabled/solutions/AIPoweredSecurity.jsx
@@ -442,5 +441,3 @@ export default AIPoweredSecurity;'"
 }}}}'"'"
 export default AIPoweredSecurity;
 }}}}'""
-=======
->>>>>>> main

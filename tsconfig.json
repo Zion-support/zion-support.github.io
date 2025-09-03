@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "lib": [
+    "target": "es5",
+    "useDefineForClassFields": true,    "lib": [
       "dom",
       "dom.iterable",
       "es6"
@@ -52,18 +52,10 @@
     }
   },
   "include": [
-    "next-env.d.ts",
-    "pages/**/*",
-    "components/**/*.ts",
-    "components/**/*.tsx",
-    "data/services.ts",
-    "styles/**/*",
-    "types/**/*",
-    "utils/**/*",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
+    "src/main.tsx",
+    "src/App.tsx",
+    "tailwind.config.js",
+    "postcss.config.js"  ],
   "exclude": [
     "node_modules",
     ".next",

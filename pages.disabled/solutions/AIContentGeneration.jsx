@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';'
 import { Target, TrendingUp, Users, Globe, Cpu, Lightbulb, FileText, PenTool, Image, Video, Music } from 'lucide-react';
 :pages.disabled/solutions/AIContentGeneration.jsx
@@ -438,5 +437,3 @@ export default AIContentGeneration;'"
 }}}}'"'"
 export default AIContentGeneration;
 }}}}'""
-=======
->>>>>>> main

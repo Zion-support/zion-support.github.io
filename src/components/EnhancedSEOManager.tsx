@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Helmet } from 'react - helmet -async';
  from 'react';
 export default EnhancedSEOManager;
@@ -154,9 +151,3 @@ export default EnhancedSEOManager;
 export default function;
     return;
 '"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

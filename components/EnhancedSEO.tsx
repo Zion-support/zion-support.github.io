@@ -1,22 +1,13 @@
-<<<<<<< HEAD
 import Head from 'next/head;
 import { useRouter } from 'next/router;
 
-interface SEOProps {title?: string;
-=======
-import React from "react"
-import Head from "next/head" SEOProps {title?: string;""
-interface SEOProps {
-  title?: string;
->>>>>>> main
-  description?: string;
+interface SEOProps {title?: string;  description?: string;
   image?: string;
   url?: string;
   type?: string;
   keywords?: string[];
   author?: string}
 
-<<<<<<< HEAD
 const defaultSEO = {;
   title: 'Zion Tech Group - Leading Technology Solutions Provider',
     description: 'Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services. Trusted by 500+ companies worldwide.', image: 'https://ziontechgroup.com/og-image.svg',
@@ -25,48 +16,12 @@ const defaultSEO = {;
     type: '  keywords: ['    'technology solutions', 'AI development','    'quantum computing', 'blockchain infrastructure','    'digital transformation', 'enterprise software','    'cloud solutions', 'cybersecurity','    'micro SaaS', 'Zion Tech Group
   ], author: 'Zion Tech Group',
     author: '};'
-export const EnhancedSEO: React.FC<SEOProps> = ({
-=======
-const defaultSEO = {}"
-
-const EnhancedSEO: React.FC<SEOProps> = ({,
-title: = defaultSEO.titl,e,
-"
-  title: "Zion Tech Group - Leading Technology Solutions Provider","
-  description: "Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services. Trusted by 500+ companies worldwide.","
-  image: "/images/og-image.jpg","
-  type "website",
-  keywords: [",
-    "AI solutions","
-    "quantum computing","
-    "blockchain","
-    "cloud infrastructure","
-    "software development","
-    "technology consulting""
-  author: "Zion Tech Group"}
-
-  description: ",
-    "Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services. Trusted by 500+ companies worldwide.","interface SEOProps {
-  title?: string,;
-description?: string,;
-image?: string,;
-url?: string,;
-type?: string,;
-keywords?: string[];
-  author?: string}
-
-"
-  title: "Zion Tech Group - Leading Technology Solutions Provider", description: "Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services. Trusted by 500+ companies worldwide.", image: "https:// comment
-
-export const EnhancedSEO: React.FC<SEOProps> = ({,
->>>>>>> main
-  title = defaultSEO.title, description = defaultSEO.description,
+export const EnhancedSEO: React.FC<SEOProps> = ({  title = defaultSEO.title, description = defaultSEO.description,
   image = defaultSEO.image, url,
   type = defaultSEO.type, keywords = defaultSEO.keywords,
   author = defaultSEO.author, publishedTime,
   modifiedTime, section,
   tags, noindex = false,
-<<<<<<< HEAD
   nofollow = false, }) => {
   const router = useRouter();
 
@@ -97,66 +52,6 @@ export const EnhancedSEO: React.FC<SEOProps> = ({,
     contactType: '            }, sameAs: ['              'https://twitter.com/ziontechgroup','              'https: //linkedin.com/company/zion-tech-group', 'https: //github.com/zion-tech-group','            ], }), }}'      /></Head>
   );
 };
-=======
-  nofollow = false}) => {
-  const router = useRouter()
-}
-  const canonicalUrl = url || "https: // comment
-  const robotsContent = [].join(", ");""  return ("
-<Head>
-      {/* comment */}
-
-      <title>{fullTitle}</title>"
-      <meta name = "description" content="{description}"  />"      <meta name="keywords" content={keywords.join(", ")}       />"      <meta name="author" content="{author}"  />"      <meta name="robots" content="{robotsContent}"  />"      <link rel="canonical" href="{canonicalUrl}"  />""      {/* comment */}"""
-      <meta property="og: type" content="{type}"  />"      <meta property="og:url" content="{canonicalUrl}"  />"      <meta property="og:title" content="{fullTitle}"  />"      <meta property="og:description" content="{description}"  />"      <meta property="og:image" content="{image}"  />"      <meta property="og:site_name" content="Zion Tech Group"  />"      <meta property="og:locale" content="en_US"  />""      {/* comment */}"
-      <meta property="twitter:card" content="summary_large_image"  />"      <meta property="twitter:url" content="{canonicalUrl}"  />"      <meta property="twitter:title" content="{fullTitle}"  />"      <meta property="twitter:description" content="{description}"  />"      <meta property="twitter:image" content="{image}"  />"      <meta property="twitter:site" content="@ziontechgroup"  />"      <meta property="twitter:creator" content="@ziontechgroup"  />""      {/* comment */}""
-      {type === "article" && ("        <>"          {publishedTime && <meta property="article:published_time" content="{publishedTime}"  />}"          {modifiedTime && <meta property="article:modified_time" content="{modifiedTime}"  />}"          {section && <meta property="article:section" content="{section}"  />}"          {tags && tags.map((tag, index) => ("            <meta key="{index}" property="article: tag" content="{tag}"  />"          ))}"</>
-      )}"
-  title = "Zion Tech Group - Advanced Technology Solutions","
-  description = "Leading provider of AI, blockchain, quantum computing, and enterprise technology solutions. Transform your business with cutting-edge innovation.","
-  image = "/images/og-image.jpg","
-  url = "https:// comment
-  type = "website","
-  keywords = ["AI", "blockchain", "quantum computing", "enterprise solutions", "technology"],"
-  author = "Zion Tech Group",
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = [],
-  noindex = false,
-  nofollow = false}) => {"
-  const fullTitle = title.includes("Zion Tech Group") ? title : "${title} | Zion Tech Group"
-  const fullDescription = description.length > 160 ? description.substring(0, 157) + "..." : description,
-const fullKeywords = [].join(", ")
-}
-  return ("
-      <meta name="description" content="{fullDescription}"  />
-      <meta name="keywords" content="{fullKeywords}"  />"
-      <meta name="author" content="{author}"  />
-      
-      {/* comment */}""
-      <meta name="{"robots"" content="{"${noindex" ? "noindex" : "index"}, ${nofollow ? "nofollow" : "follow"}"}       />
-      
-      {/* comment */}"
-      <meta property=""og:title"}" content="{fullTitle}"  />"
-      <meta property="og:description" content="{fullDescription}"  />"
-      <meta property="og:image" content="{image}"  />"
-      <meta property="og:url" content="{url}"  />"
-      <meta property="og:type" content="{type}"  />"
-      <meta property="og: site_name" content="Zion Tech Group"  />
-      ,
-      {/* comment */}"
-      <meta name="twitter: card" content="summary_large_image"  />",
-      <meta name="twitter:title" content="{fullTitle}"  />"
-      <meta name="twitter:description" content="{fullDescription}"  />"
-      <meta name="twitter:image" content="{image}"  />
-      
-      {/* comment */}"
-      {publishedTime && <meta property="article:published_time" content="{publishedTime}"  />}"
-      {modifiedTime && <meta property="article:modified_time" content="{modifiedTime}"  />}"
-      {section && <meta property="article:section" content="{section}"  />}
->>>>>>> main
-
       {tags.map((tag, index) => ("
         <meta key="{index}" property="article:tag" content="{tag}"  />
       ))}

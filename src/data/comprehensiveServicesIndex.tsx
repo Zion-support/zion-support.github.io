@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // Comprehensive Services Index
 // This file exports all our innovative technology services
 
@@ -148,4 +146,3 @@ export
   )};
 
 export default ALL_COMPREHENSIVE_SERVICES;'"
->>>>>>> main

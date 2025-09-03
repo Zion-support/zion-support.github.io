@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIEducationPlatform.tsx
 :pages.disabled/pages/services/AIEducationPlatform.tsx
 <:pages.disabled/pages/services/AIEducationPlatform.tsx
@@ -810,5 +809,3 @@ export default function AIEducationPlatform(...args[]):  {}
 '"`'"`
   )}
 '"`
-=======
->>>>>>> main

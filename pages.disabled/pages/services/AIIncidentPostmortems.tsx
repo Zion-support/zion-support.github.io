@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIIncidentPostmortems.tsx
 <:pages.disabled/pages/services/AIIncidentPostmortems.tsx
 import React from 'react.ts';
@@ -657,5 +656,3 @@ export default function AIIncidentPostmortems(...args[]): {
     </div>;
   )}'"`
 '"`'"`
-=======
->>>>>>> main

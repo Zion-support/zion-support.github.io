@@ -138,11 +138,8 @@ export default function Page() {
             position: 'relative',
   transform: `translateY(${virtualScrollParams.offsetY
 
-<<<<<<< HEAD
-=======
 
 `
->>>>>>> main
 }px)`
         }
     };

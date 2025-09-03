@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {}
   Truck,
   Package,
@@ -727,5 +726,3 @@ const AISupplyChainOptimization: React.FC = () => {}
 
 export default AISupplyChainOptimization;'"`
 '"`'"`
-=======
->>>>>>> main

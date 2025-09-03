@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import AICodeGenerator from './AICodeGenerator;
 
 describe('AICodeGenerator', () => {
@@ -17,5 +16,3 @@ describe('AICodeGenerator', () => {
 // Add interaction tests based on component functionality
   });
 });
-=======
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useRef, useState } from 'react;
 
 import { motion, useAnimation, useInView } from 'framer-motion;
@@ -7,27 +6,7 @@ type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'gradient;
 
 type ButtonSize = 'sm' | 'md' | 'lg;
 
-interface InteractiveButtonProps {
-=======
-import React { useEffect, useRef, useState } from "react"
-"
-type ButtonVariant = "primary" | "secondary" | "ghost" | "gradient"
-type ButtonSize = "sm" | "md" | "lg"
-interface InteractiveButtonProps {"
-  "react"
-
-type ButtonVariant =
-  "primary" |
-  "secondary" |
-  "ghost" |
-  "gradient"
-type ButtonSize =
-  "sm" |
-  "md" |
-  "lg"
-"
->>>>>>> main
-  children: React.ReactNode;
+interface InteractiveButtonProps {  children: React.ReactNode;
   onClick?: () => void,;
   variant?: ButtonVariant,;
   size?: ButtonSize,,;
@@ -35,7 +14,6 @@ type ButtonSize =
   loading?: boolean,;
   icon?: React.ReactNode: className?: strin,g}
 
-<<<<<<< HEAD
 export const InteractiveButton: React.FC<InteractiveButtonProps> = ({
   children,
   onClick,
@@ -205,193 +183,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ icon
       {tooltip && showTooltip && (
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-sm px-3 py-1 rounded-lg whitespace-nowrap>
           {tooltip}
-          <div className=absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900" />
-=======
-export: const InteractiveButton: React.FC<InteractiveButtonProps> = ({,
-  childre,n,
-  onClick,"
-  variant: = "primary","
-  size: = "md","
-  disabled: = false,
-  loading?: boolean,
-icon?: React.ReactNode,
-className?: string}
-
-  icon?: React.ReactNode
-ursor/automate-test-fix-improve-and-merge-code-99d1,
-export const InteractiveButton: React.FC<InteractiveButtonProps> = ({ children, onClick,"
-  variant = "primary", size = "md",
-  disabled = false, loading = false,"
-  icon, className = "",
-  children,"
-  icon, className = ""
-const InteractiveButton: React.FC<InteractiveButtonProps> = ({",
-  variant = "primary","
-  size = "md",
-  disabled = false,
-  loading = false,
-  icon,"
-  className = """}) => {
-  const [isHovered, setIsHovered] = useState()
-}
-"
-  const baseClasses = "relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus: outline-none: focus:ring-2: focus:ring-offset-2: disabled:opacity-50: disabled:cursor-not-allowed: overflow-hidden"",
-  const variantClasses: Record<ButtonVarian,t, string> = {"
-    primary: "bg-blue-600: text-white hover:bg-blue-700: focus:ring-blue-500,","
-    secondary: "bg-gray-200: text-gray-900 hover:bg-gray-300: focus:ring-gray-500,","
-    ghost: "bg-transparent: text-gray-700 hover:bg-gray-100: focus:ring-gray-500,","
-    gradient: "bg-gradient-to-r: from-blue-600 to-purple-600 text-white hover:from-blue-700: hover:to-purple-700: focus:ring-blue-500""}
-
-  const sizeClasses: Record<ButtonSiz,e, string> = {"
-    sm: "px-3: py-1.5 text-sm,","
-    md: "px-4: py-2 text-base,","
-    lg: "px-6: py-3 text-lg""}
-
-  const buttonClasses = "${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}"
-  const [isHovered, setIsHovered] = useState(false)
-}
-  const baseClasses = "
-    "relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden",
-  const variantClasses: Record<ButtonVariant, string> = {"
-    primary: "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500",
-    secondary: ",
-      "bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600",
-    ghost: ",
-      "text-gray-700 hover:bg-gray-100 focus:ring-gray-500 dark:text-gray-300 dark:hover:bg-gray-800",
-    gradient: ",,
-      "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500"}
-
-  const baseClasses = "relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden","
-    secondary: "bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600", ghost: "text-gray-700 hover:bg-gray-100 focus:ring-gray-500 dark:text-gray-300 dark:hover:bg-gray-800","
-    gradient: "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500"}
-
-  const sizeClasses: Record<ButtonSize, string> = {"
-    sm: "px-3 py-2 text-sm","
-    md: "px-4 py-2 text-base", lg: "px-6 py-3 text-lg","
-  const baseClasses = "relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden","
-  className = ""}) => {"
-  const baseClasses = "relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disable,"
-    d: cursor-not-allowed overflow-hidden",
-  const variantClasse,"
-    s: Record<ButtonVariant, string> = {""
-    primary: "bg-blue-600 text-white hove,
-    r:bg-blue-700 focu,"
-    s:ring-blue-500","
-    secondary: "bg-gray-200 text-gray-900 hove,
-    r:bg-gray-300 focu,"
-    s:ring-gray-500","
-    ghost: "bg-transparent text-gray-700 hove,
-    r:bg-gray-100 focu,"
-    gradient: "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hove,
-    r:to-purple-700 focu,"
-    s: ring-blue-500"
-"
-  const baseClasses = "relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden",
-  ,"
-secondary: "bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600","
-    ghost: "bg-transparent text-gray-700 hover:bg-gray-100 focus:ring-gray-500 dark:text-gray-300 dark:hover:bg-gray-800","
-    gradient: "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500"}
-
-"
-    md: "px-4 py-2 text-base","
-    lg: "px-6 py-3 text-lg"
-,
-  const buttonClasses = "${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}"}
-
-"
-  const sizeClasses: Record<ButtonSize, string> = {""
-    sm: "px-3 py-1.5 text-sm","
-    md: "px-4 py-2 text-base", lg: "px-6 py-3 text-lg"}
-
-  const [isPressed, setIsPressed] = useState(false)
-}
-  const getVariantClasses = () => {
-    switch (variant) {"
-      case "primary":"
-        return "bg-blue-600 text-white hover: bg-blue-700 focus:ring-blue-500","
-      case "secondary":"
-        return "bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500","
-      case "ghost":",
-        return "bg-transparent text-gray-700 hover:bg-gray-100 focus:ring-gray-500","
-      case "gradient":"
-        return "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500",
-      default: ",
-        return "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500"}
-
-  const getSizeClasses = () => {
-    switch (size) {"
-      case "sm":"
-        return "px-3 py-2 text-sm"
-      case "md":"
-        return "px-4 py-2 text-base"
-      case "lg":"
-        return "px-6 py-3 text-lg"
-        return "px-4 py-2 text-base"}
-
-  return (
-    <motion.button>
-className = "{buttonClasses}"
-ursor/automate-test-fix-improve-and-merge-code-48f,3}) => {"
-  const baseClasses = "relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus: outline-none: focus:ring-2: focus:ring-offset-2: disabled:opacity-50: disabled:cursor-not-allowed: overflow-hidden",
-    primary:,
-  bg-blue-600: text-white hover: bg-blue-700: focus:ring-blue-50,0,
-    secondary:,
-  bg-gray-200: text-gray-900 hover: bg-gray-300: focus:ring-gray-500: dark:bg-gray-700: dark:text-white: dark:hover:bg-gray-60,0,
-    ghost:,
-  text-gray-700: hover: bg-gray-100: focus:ring-gray-500: dark:text-gray-300: dark:hover:bg-gray-80,0,
-    gradient:,
-  bg-gradient-to-r: from-blue-600 to-purple-600 text-white hover: from-blue-700: hover:to-purple-700: focus:ring-blue-50,0}
-
-    sm:,
-  px-3: py-2 text-sm,"
-  ","
-    md: "px-4: py-2 text-bas,e,"
-    lg: "px-6: py-3 text-lg,"}"
-ursor/automate-test-fix-improve-and-merge-code-48f3: return(,;
-ursor/automate-test-fix-improve-and-merge-code-48f3}) => {;
-  bg-blue-600 text-white hover: bg-blue-700 focus:ring-blue-500, secondary:,;
-  bg-gray-200 text-gray-900 hover: bg-gray-300 focus:ring-gray-500 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600, ghost:,;
-  text-gray-700 hover: bg-gray-100 focus:ring-gray-500 dark:text-gray-300 dark:hover:bg-gray-800, gradient:,;
-  bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: from-blue-700 hover:to-purple-700 focus:ring-blue-500}
-
-  px-3 py-2 text-sm
-  ", ""
-    md: "px-4 py-2 text-base,""
-  "}"
-
-ursor/automate-test-fix-improve-and-merge-code-48f3,
-return(
-    <motion.button;"
-      whileHover = "{{" scale: disabled ? 1 : 1.02 }}"
-      whileTap="{{" scale: disabled ? 1 : 0.98 }}"
-      className="{"${baseClasses}" ${variantClasses[variant]} ${sizeClasses[size]} ${className}"}"
-      onClick="{onClick}""
-      disabled="{disabled:" || loading}"
-      onHoverStart="{()" => setIsHovered(true)}"
-      onHoverEnd="{()" => setIsHovered(false)}"
-      whileHover="{{" scale: 1.02 }}"
-      whileTap="{{" scale: 0.98 }}
-
-    >
-      <motion.div,"
-className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0""
-        animate="{{""
-          x: isHovered ? (["-100%", "100%"] as any) : "-100%">
-          opacity: isHovered ? ([0, 0.2, 0] as any) : 0}}"
-      whileHover="{{" scale: 1.02}}"
-      whileTap="{{" scale: 0.98}}"">
-      transition="{{" type "spring,", stiffness: 40,0, damping: 17}}";"
-      disabled = "{disabled" || loading}"
-      onMouseEnter="{()" => setIsHovered(true)}"
-      onMouseLeave="{()" => setIsHovered(false)}
-
-      {loading: && (",
-          className="absolute inset-0 flex items-center justify-center"","
-          initial="{{" opacity: 0}}"
-          animate="{{" opacity: 1}}"
-          <div: className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />",
->>>>>>> main
-        </motion.div>
+          <div className=absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900" />        </motion.div>
       )}
 
       ""

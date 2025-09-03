@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, useAnimation  } from 'framer-motion';
+import {  import { motion, useAnimation  } from 'framer-motion';
  from 'lucide-react';
 
 interface Stat {
@@ -84,8 +83,6 @@ export default function EnhancedStatsSection(...args[]):  {
     triggerOnce: true
   }) ;
 
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   useEffect(() => {
     if(inView) {
 

@@ -1002,7 +1002,6 @@ score += (goalMatches / profile.primaryGoals.length) * 20,return Math.min(100, s
                   Call Now,
                 </Button>
               </div>
-<<<<<<< HEAD
             </div>
           </motion.div>
         </motion.div>)}
@@ -1019,19 +1018,3 @@ export { AdvancedServiceRecommendation };
 export { AdvancedServiceRecommendation };
 
 export { AdvancedServiceRecommendation };
-=======
-          </motion.div>        </motion.div>)}
-
-    </div>)}
-
-export default AdvancedServiceRecommendation,export { AdvancedServiceRecommendation }
-;
-export { AdvancedServiceRecommendation }
-;
-export { AdvancedServiceRecommendation }
-;
-export { AdvancedServiceRecommendation }
-
-"
-export { AdvancedServiceRecommendation }"`"""
->>>>>>> main

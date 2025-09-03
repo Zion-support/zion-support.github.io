@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useMemo, useCallback } from 'react';
 import { useLocation  } from 'react-router-dom';
 
@@ -152,11 +151,7 @@ if(typeof window !== 'undefined') {
         window.gc();
       }
     }
-  }
-=======
-export const PerformanceOptimizer = ({ children }) => { const location = useLocation () ; ;,"})
->>>>>>> main
-}
+  }}
   })
 }
 ;"

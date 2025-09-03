@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react';'''
 import { format } from 'date-fns';'''
 import { MessageSquare } from 'lucide-react';'''
@@ -17,17 +16,7 @@ export function ConversationDetailView() {    const { user } = useAuth();
         if (activeConversation) {}
             loadMessages(activeConversation.id)}
     }, [activeConversation?.id, loadMessages]);
-    useEffect(() => {}
-=======
-import React, { useState, useEffect, useRef } from 'react';
-import { format } from 'date-fns';
-export default function Page() {
-, [activeConversation?.id, loadMessages]);
-    useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
->>>>>>> main
-        scrollToBottom()}, [activeMessages]);
+    useEffect(() => {}        scrollToBottom()}, [activeMessages]);
     const scrollToBottom = () => {
 
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })};

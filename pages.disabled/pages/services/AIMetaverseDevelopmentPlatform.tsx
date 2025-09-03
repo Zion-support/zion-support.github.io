@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIMetaverseDevelopmentPlatform.tsx
 export default function AIMetaverseDevelopmentPlatform() {
     'AI-powered 3D world generation and design',;'
@@ -444,5 +443,3 @@ export default function AIMetaverseDevelopmentPlatform(function AIMetaverseDevel
   )}}}'"`'"`
     </>
   )}}}'"`
-=======
->>>>>>> main

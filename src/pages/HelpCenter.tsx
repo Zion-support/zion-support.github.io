@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';import { 
   Search, 
@@ -370,4 +368,3 @@ export default function HelpCenter() {return ("
   )
 }
 }""
->>>>>>> main

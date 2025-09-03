@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ;
 export { function };export default function AISupplyChainOptimization(...args: []):  {}
   return()
@@ -667,5 +666,3 @@ export { function };export default function AISupplyChainOptimization(...args: [
   )}}}}}}'"'"
     </>
   )}}}}}}'""
-=======
->>>>>>> main

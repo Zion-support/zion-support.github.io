@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIEntertainment.tsx
 import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Video, BarChart3 export default function AIEntertainment() {
     'Automated content moderation and filtering',;'
@@ -232,5 +231,3 @@ import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
   )}}'"'"
     </div>;
   )}}'""
-=======
->>>>>>> main

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from "react"
 const AIServices2026: React.FC = () => {} const [searchQuery, setSearchQuery] = useState("")" const [selectedCategory, setSelectedCategory] = useState("all")
 }
@@ -32,4 +30,3 @@ const AIServices2026: React.FC = () => {
 
 );
 export default AIServices2026;""
->>>>>>> main

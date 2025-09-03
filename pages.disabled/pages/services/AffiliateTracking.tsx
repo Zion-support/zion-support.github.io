@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail export { function };
 :pages.disabled/pages/services/AffiliateTracking.tsx
 export default function AffiliateTracking(...args: unknown[]): unknown {  const features: { title: string; description: string }[] = [
@@ -400,5 +399,3 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
 
 // Duplicate leftover block removed;
 }}}'"`
-=======
->>>>>>> main

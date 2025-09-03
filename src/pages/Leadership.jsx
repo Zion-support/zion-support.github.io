@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';'''
 import { Link } from 'react-router-dom';'''
 import { Users, Award, Target, Zap, Linkedin, Mail } from 'lucide-react';
@@ -343,6 +342,3 @@ export { Leadership };
 export { Leadership };
 
 export { Leadership };
-=======
-import React from 'react'; export default Leadership; const Leadership = () => { const leadershipTeam = [{ name: "Dr.Sarah Chen", role: "Chief Executive Officer", image: "/leadership / sarah-chen.jpg", bio: "Dr.Sarah Chen is a visionary leader with over 15 years of experience in technology innovation and business transformation.She has led multiple successful startups and has been instrumental in bringing AI and quantum computing solutions to market.", experience: "15 + years in technology leadership", education: "Ph.D. in Computer Science, Stanford University", expertise["Strategic Leadership", "AI Strategy", "Business Development", "Innovation Management"], achievements["Led comp to 300% growth in 3 years", "Named Top 50 Women in Tech by Forbes", "Published 25 + research papers", "Advisor to 3 successful tech startups" ], linkedin: "https:
->>>>>>> main

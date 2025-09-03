@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+import {  import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
 interface SEOMetrics {
@@ -115,38 +114,6 @@ autoAnalyze:  true,;
   // Analyze SEO
   
     setIsAnalyzing(true) ;
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    // Simulate analysis delay
-    await new Promise(resolve => setTimeout (resolve, 2000) ) ;
-
-    setAnalysis(mockAnalysis) ;
-    setIsAnalyzing(false) ;
-    onAnalysisComplete?.(mockAnalysis) }, [mockAnalysis, onAnalysisComplete]) ;
-
-  // Auto - analyze on mount
-  useEffect(() => {
-    if(autoAnalyze) {
-
-      analyzeSEO()}
-  }, [autoAnalyze, analyzeSEO]);
-
-  // Get score color'
-      default: return 'text-zion-slate'}
-  };
-
-  // Get priority color'
-      default: return 'text-zion-slate bg-zion-slate/10 border-zion-slate/200'}
-  };
-
-  // Filter issues by category
-<<<<<<< HEAD
-  
-    if(selectedCategory === 'all') return analysis?.issues || [];
-=======
-  const filteredIssues = useMemo(() => {;'    if(selectedCategory === 'all') return analysis?.issues || [];
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     return analysis?.issues.filter(issue => issue.category === selectedCategory) || []}, [analysis, selectedCategory]) ;
 
   // Filter suggestions by priority

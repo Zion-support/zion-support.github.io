@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // Minimal type declarations for offline development
 
 // React stubs
@@ -71,4 +69,3 @@ declare module 'zod' {  export type infer<T> = ;
 }
 export default useEffect;
 export default useRef;
->>>>>>> main

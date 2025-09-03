@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';'
 import { Link } from 'react-router-dom';'
 import { Cloud, Server, Database, Shield, GitFork, ArrowRight, CheckCircle, Monitor } from 'lucide-react';
@@ -429,5 +428,3 @@ export default CloudDevOpsServices;'"
 }}}'"'"
 export default CloudDevOpsServices;
 }}}'""
-=======
->>>>>>> main

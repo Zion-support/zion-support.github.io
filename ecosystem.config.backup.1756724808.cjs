@@ -235,7 +235,6 @@ module.exports = {
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
-<<<<<<< HEAD
       env: {
         NODE_ENV: 'production'
       },
@@ -343,7 +342,6 @@ module.exports = {
       log_file: './logs/intelligent-build-pipeline.log',
       error_file: './logs/intelligent-build-pipeline-error.log',
       out_file: './logs/intelligent-build-pipeline-out.log'
-=======
       env: { NODE_ENV: 'production' },
       cron_restart: '0 */6 * * *',
       log_file: 'logs/auto-fix-and-build.log',
