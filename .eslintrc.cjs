@@ -7,9 +7,10 @@ module.exports = {
     "node_modules/", 
     ".next/", 
     "out/",
-    "src/",
-    "pages/",
-    "components/",
-    "lib/"
+    "build/",
+    "dist/",
+    "*.config.js",
+    "*.config.cjs",
+    "*.config.mjs"
   ],
 }

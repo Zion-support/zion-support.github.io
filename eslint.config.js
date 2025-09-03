@@ -1,22 +1,19 @@
 import js from "@eslint/js";
-import typescript from "@typescript-eslint/eslint-plugin";
-import typescriptParser from "@typescript-eslint/parser";
-import react from "eslint-plugin-react";
-import reactHooks from "eslint-plugin-react-hooks";
+
 export default [
   js.configs.recommended,
   {
     files: ["**/*.{js,jsx,ts,tsx}"],
     languageOptions: {
-      parser: typescriptParser,
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-        ecmaVersion: 12,
-        sourceType: "module",
-      },
+      ecmaVersion: "latest",
+      sourceType: "module",
       globals: {
+        // Browser globals
+        window: "readonly",
+        document: "readonly",
+        navigator: "readonly",
+        localStorage: "readonly",
+        sessionStorage: "readonly",
         // Node.js globals
         process: "readonly",
         console: "readonly",
@@ -27,57 +24,11 @@ export default [
         module: "readonly",
         require: "readonly",
         exports: "readonly",
-        // Test globals
-        describe: "readonly",
-        it: "readonly",
-        test: "readonly",
-        expect: "readonly",
-        beforeEach: "readonly",
-        afterEach: "readonly",
-        beforeAll: "readonly",
-        afterAll: "readonly",
-        jest: "readonly",
-        // Browser globals
-        window: "readonly",
-        document: "readonly",
-        navigator: "readonly",
-        localStorage: "readonly",
-        sessionStorage: "readonly",
       },
-    },
-    plugins: {
-      "@typescript-eslint": typescript,
-      "react": react,
-      "react-hooks": reactHooks,
     },
     rules: {
-      "@typescript-eslint/no-unused-vars": "warn",
-      "@typescript-eslint/no-explicit-any": "warn",
-      "react-hooks/exhaustive-deps": "warn",
-      "react/react-in-jsx-scope": "off",
-      "no-undef": "off", // TypeScript handles this
-    },
-    settings: {
-      react: {
-        version: "detect",
-      },
-    },
-  },
-  {
-    files: ["**/*.test.{js,jsx,ts,tsx}", "**/__tests__/**/*.{js,jsx,ts,tsx}", "**/tests/**/*.{js,jsx,ts,tsx}"],
-    languageOptions: {
-      globals: {
-        describe: "readonly",
-        it: "readonly",
-        test: "readonly",
-        expect: "readonly",
-        beforeEach: "readonly",
-        afterEach: "readonly",
-        beforeAll: "readonly",
-        afterAll: "readonly",
-        jest: "readonly",
-        vi: "readonly",
-      },
+      "no-unused-vars": "warn",
+      "no-undef": "off",
     },
   },
   {
@@ -123,27 +74,6 @@ export default [
       "app-improvement-*.cjs",
       "analyze-*.cjs",
       "code-quality-*.js",
-      "components/*.dynamic.jsx",
-      "components/Accessibility*.tsx",
-      "components/Accessibility*.jsx",
-      "components/AdvancedAIAssistant.tsx",
-      "components/AdvancedDataVisualization.tsx",
-      "components/AdvancedNotificationCenter.tsx",
-      "components/Analytics.tsx",
-      "components/AnalyticsManager.tsx",
-      "components/AnalyticsTracker.tsx",
-      "components/ContactForm.tsx",
-      "api/create-payment-intent.js",
-      "api/newsletter/subscribe.js",
-      "api/quotes.js",
-      "api/shipping-rates.js",
-      "api/wallet.js",
-      "automation/comprehensive-app-improver.cjs",
-      "automation/dependency-fixer.cjs",
-      "automation/deployment-automator.cjs",
-      "automation/master-automation-orchestrator.cjs",
-      "automation/performance-optimizer.js",
-      "automation/typescript-fixer.cjs",
       "*.report.json",
       "temp_*/",
       "test_build/",
@@ -178,4 +108,4 @@ export default [
       "pages.disabled_auto/",
     ],
   },
-]
+];
