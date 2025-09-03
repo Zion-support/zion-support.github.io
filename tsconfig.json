@@ -53,6 +53,8 @@
     "**/*.spec.ts",
     "**/*.spec.tsx",
     "**/*.backup",
-    "**/*.disabled"
+    "**/*.disabled",
+    "components/AccessibilityEnhancer.tsx",
+    "components/AccessibilityManager.tsx"
   ]
 }
