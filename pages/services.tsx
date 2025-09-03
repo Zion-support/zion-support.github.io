@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 type Service = {
   name: string;
   summary: string;
@@ -81,10 +83,18 @@ export default function Services(): any {
       <Section title="Micro SaaS" items={microSaaS} />
       <Section title="AI Services" items={aiServices} />
       <Section title="IT Services" items={itServices} />
+<<<<<<< HEAD
       <section style={{ maxWidth: 1200, margin: '0 auto', padding: '24px 16px', }}>
         <a href="/contact" style={{
           display: 'inline-block', background: '#22d3ee', color: '#0b1220',
           padding: '10px 14px', borderRadius: 10, fontWeight: 700}}>Request a Quote</a>
+=======
+      <section style={{ maxWidth: 1200, margin: '0 auto', padding: '24px 16px' }}>
+        <Link href="/contact" style={{
+          display: 'inline-block', background: '#22d3ee', color: '#0b1220',
+          padding: '10px 14px', borderRadius: 10, fontWeight: 700
+        }}>Request a Quote</Link>
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-761f
       </section>
     </main>
   );
