@@ -66,9 +66,9 @@ export default function Home() {
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
             <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
-              We deliver cutting-edge technology solutions with 120+ micro SaaS products, 
-              80+ advanced AI services, and 80+ comprehensive IT solutions. From cloud optimization 
-              to AI automation, we help businesses scale efficiently and securely.
+              We deliver cutting-edge technology solutions with 150+ innovative micro SaaS products, 
+              90+ advanced AI services, and 100+ comprehensive IT solutions. From AI-powered automation 
+              to quantum-safe security, we help businesses scale efficiently, securely, and profitably.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -85,16 +85,19 @@ export default function Home() {
 
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-blue-400 mb-2">120+</h3>
+                <h3 className="text-2xl font-bold text-blue-400 mb-2">150+</h3>
                 <p className="text-slate-300">Micro SaaS Products</p>
+                <p className="text-sm text-slate-400 mt-1">Starting from $99/month</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-purple-400 mb-2">80+</h3>
+                <h3 className="text-2xl font-bold text-purple-400 mb-2">90+</h3>
                 <p className="text-slate-300">AI Services</p>
+                <p className="text-sm text-slate-400 mt-1">Starting from $2,000 setup</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                <h3 className="text-2xl font-bold text-green-400 mb-2">80+</h3>
+                <h3 className="text-2xl font-bold text-green-400 mb-2">100+</h3>
                 <p className="text-slate-300">IT Solutions</p>
+                <p className="text-sm text-slate-400 mt-1">Starting from $80/hour</p>
               </div>
             </div>
           </div>
@@ -111,55 +114,67 @@ export default function Home() {
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-colors">
                 <h3 className="text-2xl font-bold mb-4 text-blue-400">Micro SaaS Products</h3>
                 <p className="text-slate-300 mb-6">
-                  Innovative, focused software solutions including Cloud Cost Guard, 
-                  Smart Invoice Processing, AI-Powered Code Review, and 36+ more specialized tools.
+                  Revolutionary micro SaaS solutions that deliver instant ROI. Our 150+ specialized tools 
+                  automate complex business processes, reduce costs by up to 40%, and scale with your growth. 
+                  From AI-powered automation to smart analytics, we've got your business covered.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
-                  <li>• Cloud Cost Guard (FinOps Assistant)</li>
-                  <li>• Smart Invoice Processing & AP Automation</li>
-                  <li>• AI-Powered Code Review Assistant</li>
-                  <li>• Dynamic Pricing Optimization Engine</li>
-                  <li>• Intelligent Supply Chain Monitor</li>
+                  <li>• AI-Powered Video Content Generator - 90% faster video production</li>
+                  <li>• Smart Energy Management System - 25% energy cost reduction</li>
+                  <li>• AI Fraud Detection & Prevention - 99.5% accuracy</li>
+                  <li>• Voice Commerce Assistant - 40% conversion increase</li>
+                  <li>• Predictive Maintenance Platform - 30% maintenance cost savings</li>
                 </ul>
-                <Link href="/micro-saas" className="text-blue-400 hover:text-blue-300 font-semibold">
-                  View All Micro SaaS →
-                </Link>
+                <div className="flex items-center justify-between">
+                  <Link href="/micro-saas" className="text-blue-400 hover:text-blue-300 font-semibold">
+                    View All Micro SaaS →
+                  </Link>
+                  <span className="text-sm text-slate-500">Starting at $99/month</span>
+                </div>
               </div>
 
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-colors">
                 <h3 className="text-2xl font-bold mb-4 text-purple-400">AI Services</h3>
                 <p className="text-slate-300 mb-6">
-                  Advanced artificial intelligence solutions including healthcare diagnostics, 
-                  cybersecurity threat detection, smart manufacturing, and 25+ more AI-powered services.
+                  Cutting-edge AI solutions that transform businesses. Our 90+ AI services deliver 
+                  unprecedented accuracy, automation, and insights. From medical imaging analysis 
+                  to quantum-safe security, we're pushing the boundaries of artificial intelligence.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
-                  <li>• AI-Powered Healthcare Diagnostics</li>
-                  <li>• AI-Powered Cybersecurity Threat Detection</li>
-                  <li>• Smart Manufacturing Quality Control</li>
-                  <li>• AI-Powered Smart City Solutions</li>
-                  <li>• Intelligent Process Mining & Optimization</li>
+                  <li>• Generative AI Content Studio - 95% content creation time reduction</li>
+                  <li>• AI-Powered Medical Imaging Analysis - 98% diagnostic accuracy</li>
+                  <li>• AI-Powered Supply Chain Optimization - 25% cost reduction</li>
+                  <li>• AI-Powered Code Generation & Review - 60% faster development</li>
+                  <li>• AI-Powered Semantic Search Engine - 85% relevance improvement</li>
                 </ul>
-                <Link href="/ai-services" className="text-purple-400 hover:text-purple-300 font-semibold">
-                  View All AI Services →
-                </Link>
+                <div className="flex items-center justify-between">
+                  <Link href="/ai-services" className="text-purple-400 hover:text-purple-300 font-semibold">
+                    View All AI Services →
+                  </Link>
+                  <span className="text-sm text-slate-500">Starting at $2,000 setup</span>
+                </div>
               </div>
 
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-colors">
                 <h3 className="text-2xl font-bold mb-4 text-green-400">IT & Cloud Services</h3>
                 <p className="text-slate-300 mb-6">
-                  Comprehensive IT solutions including enterprise integration, high-performance computing, 
-                  IoT platforms, digital transformation, and 30+ more enterprise-grade services.
+                  Enterprise-grade IT solutions that power digital transformation. Our 100+ services 
+                  include quantum-safe security, 5G infrastructure, and neuromorphic computing. 
+                  We deliver future-proof technology that scales with your ambitions.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
-                  <li>• Enterprise Application Integration</li>
-                  <li>• Advanced Threat Intelligence Platform</li>
-                  <li>• High-Performance Computing Solutions</li>
-                  <li>• IoT Platform & Device Management</li>
-                  <li>• Enterprise Digital Transformation Consulting</li>
+                  <li>• Zero Trust Security Architecture - Enhanced security posture</li>
+                  <li>• Quantum-Safe Cryptography Implementation - Future-proof security</li>
+                  <li>• 5G Network Infrastructure & Applications - Ultra-fast connectivity</li>
+                  <li>• Digital Twin Development Platform - Predictive maintenance</li>
+                  <li>• Neuromorphic Computing Solutions - Revolutionary AI processing</li>
                 </ul>
-                <Link href="/it-services" className="text-green-400 hover:text-green-300 font-semibold">
-                  View All IT Services →
-                </Link>
+                <div className="flex items-center justify-between">
+                  <Link href="/it-services" className="text-green-400 hover:text-green-300 font-semibold">
+                    View All IT Services →
+                  </Link>
+                  <span className="text-sm text-slate-500">Starting at $80/hour</span>
+                </div>
               </div>
             </div>
           </div>
@@ -169,11 +184,12 @@ export default function Home() {
         <section className="py-16 px-4 bg-slate-900/40">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
-              Ready to Transform Your Business?
+              Ready to Transform Your Business with Cutting-Edge Technology?
             </h2>
             <p className="text-lg text-slate-300 mb-8">
-              Get in touch with our experts to discuss your project requirements and discover 
-              how our innovative solutions can drive your business forward.
+              Join 500+ successful businesses that have transformed their operations with our innovative solutions. 
+              Our expert team delivers measurable results: average 40% cost reduction, 60% efficiency improvement, 
+              and 99.9% uptime guarantee. Let's discuss how we can accelerate your digital transformation.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">

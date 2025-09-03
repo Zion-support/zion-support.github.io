@@ -301,37 +301,336 @@ export default function ITServices() {
       ],
       pricing: '$150 – $350/hour',
       projectPricing: '$40,000 – $200,000/project',
-      timeline: '8–16 weeks',
+      timeline: '6–16 weeks',
       benefits: [
-        '50% reduction in latency',
-        'Improved application performance',
-        'Enhanced user experience',
-        'Reduced bandwidth costs'
+        'Ultra-low latency applications',
+        'Improved user experience',
+        'Reduced bandwidth costs',
+        'Enhanced data privacy'
       ],
-      category: 'Cloud & Infrastructure'
+      category: 'Emerging Technologies'
     },
     {
       icon: Shield,
       name: 'Zero Trust Security Architecture',
-      description: 'Comprehensive zero trust implementation with identity verification and micro-segmentation.',
+      description: 'Comprehensive zero trust security implementation with identity verification and micro-segmentation.',
       features: [
         'Identity and access management (IAM)',
-        'Network micro-segmentation',
-        'Device trust and compliance',
-        'Application security controls',
-        'Data encryption and protection',
-        'Continuous security monitoring'
+        'Micro-segmentation and network isolation',
+        'Continuous security monitoring',
+        'Privileged access management',
+        'Security orchestration and automation',
+        'Compliance and audit reporting'
       ],
-      pricing: '$8,000 – $50,000/project',
-      projectPricing: '$3,000 – $12,000/month managed',
-      timeline: '6–16 weeks',
+      pricing: '$200 – $400/hour',
+      projectPricing: '$50,000 – $300,000/project',
+      timeline: '8–20 weeks',
       benefits: [
         'Enhanced security posture',
         'Reduced attack surface',
-        'Compliance with regulations',
-        'Improved threat detection'
+        'Automated threat response',
+        'Compliance with regulations'
       ],
       category: 'Security'
+    },
+    {
+      icon: Database,
+      name: 'Quantum-Safe Cryptography Implementation',
+      description: 'Post-quantum cryptography solutions to protect against future quantum computing threats.',
+      features: [
+        'Quantum-safe algorithm implementation',
+        'Cryptographic key management',
+        'Hybrid classical-quantum systems',
+        'Migration planning and execution',
+        'Performance optimization',
+        'Compliance and certification support'
+      ],
+      pricing: '$250 – $500/hour',
+      projectPricing: '$75,000 – $500,000/project',
+      timeline: '12–32 weeks',
+      benefits: [
+        'Future-proof security',
+        'Quantum threat protection',
+        'Regulatory compliance',
+        'Long-term data protection'
+      ],
+      category: 'Advanced Security'
+    },
+    {
+      icon: Cpu,
+      name: '5G Network Infrastructure & Applications',
+      description: '5G network deployment, optimization, and application development for ultra-fast connectivity.',
+      features: [
+        '5G network planning and deployment',
+        'Network slicing and optimization',
+        '5G application development',
+        'IoT and edge computing integration',
+        'Performance monitoring and analytics',
+        'Security and compliance implementation'
+      ],
+      pricing: '$200 – $450/hour',
+      projectPricing: '$100,000 – $1,000,000/project',
+      timeline: '16–40 weeks',
+      benefits: [
+        'Ultra-fast connectivity',
+        'Low-latency applications',
+        'Massive IoT connectivity',
+        'Enhanced mobile experiences'
+      ],
+      category: 'Telecommunications'
+    },
+    {
+      icon: Globe,
+      name: 'Digital Twin Development Platform',
+      description: 'Digital twin creation and management for physical assets, processes, and systems.',
+      features: [
+        '3D modeling and simulation',
+        'Real-time data integration',
+        'Predictive analytics and modeling',
+        'Virtual reality and AR interfaces',
+        'IoT sensor integration',
+        'Performance optimization and insights'
+      ],
+      pricing: '$150 – $350/hour',
+      projectPricing: '$50,000 – $400,000/project',
+      timeline: '12–32 weeks',
+      benefits: [
+        'Improved asset management',
+        'Predictive maintenance capabilities',
+        'Optimized operations',
+        'Reduced downtime and costs'
+      ],
+      category: 'Emerging Technologies'
+    },
+    {
+      icon: BarChart3,
+      name: 'Real-Time Data Streaming Platform',
+      description: 'High-performance data streaming and real-time analytics infrastructure.',
+      features: [
+        'Apache Kafka and streaming platforms',
+        'Real-time data processing pipelines',
+        'Event-driven architecture implementation',
+        'Stream analytics and machine learning',
+        'Data lake and warehouse integration',
+        'Monitoring and alerting systems'
+      ],
+      pricing: '$120 – $300/hour',
+      projectPricing: '$30,000 – $200,000/project',
+      timeline: '6–16 weeks',
+      benefits: [
+        'Real-time data insights',
+        'Improved decision-making speed',
+        'Scalable data processing',
+        'Enhanced customer experiences'
+      ],
+      category: 'Data Management'
+    },
+    {
+      icon: Smartphone,
+      name: 'Progressive Web App (PWA) Development',
+      description: 'Advanced PWA development with offline capabilities and native app-like experiences.',
+      features: [
+        'Service worker implementation',
+        'Offline functionality and caching',
+        'Push notifications and background sync',
+        'App-like user interface',
+        'Performance optimization',
+        'Cross-platform compatibility'
+      ],
+      pricing: '$100 – $250/hour',
+      projectPricing: '$20,000 – $100,000/project',
+      timeline: '4–12 weeks',
+      benefits: [
+        'Native app-like experience',
+        'Reduced development costs',
+        'Improved user engagement',
+        'Faster deployment cycles'
+      ],
+      category: 'Development'
+    },
+    {
+      icon: Server,
+      name: 'Multi-Cloud Infrastructure Management',
+      description: 'Comprehensive multi-cloud strategy, migration, and management across AWS, Azure, and GCP.',
+      features: [
+        'Multi-cloud architecture design',
+        'Cloud migration and optimization',
+        'Cost optimization and management',
+        'Disaster recovery and backup',
+        'Security and compliance management',
+        'Performance monitoring and analytics'
+      ],
+      pricing: '$150 – $350/hour',
+      projectPricing: '$40,000 – $300,000/project',
+      timeline: '8–24 weeks',
+      benefits: [
+        'Reduced vendor lock-in',
+        'Optimized costs and performance',
+        'Enhanced reliability and security',
+        'Improved scalability'
+      ],
+      category: 'Cloud & Infrastructure'
+    },
+    {
+      icon: LinkIcon,
+      name: 'GraphQL API Gateway & Federation',
+      description: 'Advanced GraphQL implementation with federation, caching, and real-time subscriptions.',
+      features: [
+        'GraphQL schema design and implementation',
+        'API federation and microservices integration',
+        'Real-time subscriptions and live data',
+        'Advanced caching strategies',
+        'Performance monitoring and optimization',
+        'Developer experience enhancement'
+      ],
+      pricing: '$120 – $280/hour',
+      projectPricing: '$25,000 – $150,000/project',
+      timeline: '6–16 weeks',
+      benefits: [
+        'Improved API performance',
+        'Enhanced developer experience',
+        'Reduced over-fetching and under-fetching',
+        'Real-time data capabilities'
+      ],
+      category: 'Development'
+    },
+    {
+      icon: Wrench,
+      name: 'DevSecOps & Security Automation',
+      description: 'Integrated security into DevOps pipelines with automated security testing and compliance.',
+      features: [
+        'Security integration in CI/CD pipelines',
+        'Automated vulnerability scanning',
+        'Infrastructure as Code security',
+        'Compliance automation and reporting',
+        'Security monitoring and alerting',
+        'Incident response automation'
+      ],
+      pricing: '$150 – $350/hour',
+      projectPricing: '$30,000 – $200,000/project',
+      timeline: '6–16 weeks',
+      benefits: [
+        'Enhanced security posture',
+        'Automated compliance',
+        'Faster security feedback',
+        'Reduced security risks'
+      ],
+      category: 'Security'
+    },
+    {
+      icon: Database,
+      name: 'Data Mesh Architecture Implementation',
+      description: 'Decentralized data architecture with domain-oriented data ownership and self-serve platforms.',
+      features: [
+        'Data mesh architecture design',
+        'Domain-driven data modeling',
+        'Self-serve data platform development',
+        'Data product development',
+        'Federated governance implementation',
+        'Data quality and lineage tracking'
+      ],
+      pricing: '$200 – $400/hour',
+      projectPricing: '$75,000 – $500,000/project',
+      timeline: '16–40 weeks',
+      benefits: [
+        'Improved data scalability',
+        'Enhanced data ownership',
+        'Faster data product development',
+        'Better data governance'
+      ],
+      category: 'Data Management'
+    },
+    {
+      icon: Globe,
+      name: 'WebAssembly (WASM) Application Development',
+      description: 'High-performance web applications using WebAssembly for near-native performance.',
+      features: [
+        'WebAssembly application development',
+        'Performance optimization and tuning',
+        'Cross-platform compatibility',
+        'Integration with existing web applications',
+        'Security and sandboxing',
+        'Development tooling and debugging'
+      ],
+      pricing: '$150 – $350/hour',
+      projectPricing: '$40,000 – $250,000/project',
+      timeline: '8–20 weeks',
+      benefits: [
+        'Near-native performance',
+        'Cross-platform compatibility',
+        'Enhanced security',
+        'Improved user experience'
+      ],
+      category: 'Development'
+    },
+    {
+      icon: Cpu,
+      name: 'Neuromorphic Computing Solutions',
+      description: 'Brain-inspired computing solutions for energy-efficient AI and edge processing.',
+      features: [
+        'Neuromorphic chip integration',
+        'Spiking neural network implementation',
+        'Edge AI optimization',
+        'Low-power computing solutions',
+        'Real-time pattern recognition',
+        'Adaptive learning systems'
+      ],
+      pricing: '$300 – $600/hour',
+      projectPricing: '$100,000 – $1,000,000/project',
+      timeline: '20–52 weeks',
+      benefits: [
+        'Ultra-low power consumption',
+        'Real-time processing capabilities',
+        'Adaptive learning systems',
+        'Revolutionary computing paradigm'
+      ],
+      category: 'Emerging Technologies'
+    },
+    {
+      icon: TestTube,
+      name: 'Automated Testing & QA Platform',
+      description: 'Comprehensive automated testing solutions with AI-powered test generation and execution.',
+      features: [
+        'AI-powered test case generation',
+        'Automated regression testing',
+        'Performance and load testing',
+        'Security vulnerability testing',
+        'Cross-browser and device testing',
+        'Continuous testing integration'
+      ],
+      pricing: '$100 – $250/hour',
+      projectPricing: '$20,000 – $100,000/project',
+      timeline: '4–12 weeks',
+      benefits: [
+        '90% reduction in testing time',
+        'Improved test coverage',
+        'Automated quality assurance',
+        'Faster release cycles'
+      ],
+      category: 'Quality Assurance'
+    },
+    {
+      icon: BookOpen,
+      name: 'Technical Documentation & Knowledge Management',
+      description: 'Comprehensive technical documentation and knowledge management systems.',
+      features: [
+        'API documentation generation',
+        'Interactive documentation portals',
+        'Knowledge base management',
+        'Version control and collaboration',
+        'Search and discovery optimization',
+        'Integration with development tools'
+      ],
+      pricing: '$80 – $200/hour',
+      projectPricing: '$10,000 – $50,000/project',
+      timeline: '2–8 weeks',
+      benefits: [
+        'Improved developer onboarding',
+        'Reduced support tickets',
+        'Enhanced knowledge sharing',
+        'Better API adoption'
+      ],
+      category: 'Documentation'
     },
     {
       icon: Database,

@@ -496,6 +496,226 @@ export default function MicroSaaS() {
       category: 'Remote Work'
     },
     {
+      icon: Brain,
+      name: 'AI-Powered Video Content Generator',
+      description: 'Automated video creation from text, images, and audio with AI-driven editing and optimization.',
+      features: [
+        'Text-to-video generation with AI avatars',
+        'Automated video editing and transitions',
+        'Multi-language voice synthesis',
+        'Brand-consistent video templates',
+        'Social media format optimization',
+        'Performance analytics and A/B testing'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '90% reduction in video production time',
+        'Consistent brand messaging across videos',
+        'Automated content localization',
+        'Improved engagement rates'
+      ],
+      category: 'Content Creation'
+    },
+    {
+      icon: Zap,
+      name: 'Smart Energy Management System',
+      description: 'IoT-powered energy monitoring and optimization for buildings and facilities.',
+      features: [
+        'Real-time energy consumption monitoring',
+        'AI-powered usage pattern analysis',
+        'Automated energy optimization recommendations',
+        'Predictive maintenance alerts',
+        'Carbon footprint tracking',
+        'Cost savings reporting and analytics'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '25% reduction in energy costs',
+        'Automated energy optimization',
+        'Improved sustainability metrics',
+        'Predictive maintenance insights'
+      ],
+      category: 'IoT & Smart Buildings'
+    },
+    {
+      icon: Shield,
+      name: 'AI Fraud Detection & Prevention',
+      description: 'Real-time fraud detection using machine learning and behavioral analysis.',
+      features: [
+        'Real-time transaction monitoring',
+        'Behavioral pattern analysis',
+        'Machine learning fraud models',
+        'Risk scoring and assessment',
+        'Automated fraud prevention actions',
+        'Compliance reporting and audit trails'
+      ],
+      pricing: '$399 – $2,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '99.5% fraud detection accuracy',
+        'Real-time risk assessment',
+        'Reduced false positives',
+        'Automated fraud prevention'
+      ],
+      category: 'Financial Security'
+    },
+    {
+      icon: Globe,
+      name: 'Voice Commerce Assistant',
+      description: 'AI-powered voice shopping and customer service for e-commerce platforms.',
+      features: [
+        'Natural language voice processing',
+        'Product search and recommendations',
+        'Voice-based order placement',
+        'Multi-language support',
+        'Integration with e-commerce platforms',
+        'Voice analytics and insights'
+      ],
+      pricing: '$249 – $1,799/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '40% increase in conversion rates',
+        'Improved accessibility',
+        'Enhanced customer experience',
+        'Reduced cart abandonment'
+      ],
+      category: 'E-commerce Innovation'
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Talent Acquisition Platform',
+      description: 'Intelligent recruitment with automated candidate screening and matching.',
+      features: [
+        'AI-powered resume screening',
+        'Automated candidate matching',
+        'Video interview analysis',
+        'Skills assessment automation',
+        'Bias detection and mitigation',
+        'Recruitment analytics and reporting'
+      ],
+      pricing: '$299 – $2,499/month',
+      timeline: '4–5 weeks',
+      benefits: [
+        '60% reduction in time-to-hire',
+        'Improved candidate quality',
+        'Reduced recruitment bias',
+        'Automated screening processes'
+      ],
+      category: 'HR Technology'
+    },
+    {
+      icon: FileText,
+      name: 'Smart Legal Document Analyzer',
+      description: 'AI-powered legal document review, risk assessment, and compliance monitoring.',
+      features: [
+        'Automated contract analysis',
+        'Risk identification and scoring',
+        'Compliance monitoring and alerts',
+        'Legal precedent research',
+        'Document comparison and versioning',
+        'Legal analytics and reporting'
+      ],
+      pricing: '$399 – $2,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '80% reduction in document review time',
+        'Improved risk identification',
+        'Automated compliance monitoring',
+        'Enhanced legal accuracy'
+      ],
+      category: 'Legal Technology'
+    },
+    {
+      icon: TrendingUp,
+      name: 'Predictive Maintenance Platform',
+      description: 'IoT and AI-driven equipment maintenance prediction and optimization.',
+      features: [
+        'Real-time equipment monitoring',
+        'Predictive failure analysis',
+        'Maintenance scheduling optimization',
+        'Spare parts inventory management',
+        'Cost optimization recommendations',
+        'Maintenance analytics and reporting'
+      ],
+      pricing: '$299 – $2,499/month',
+      timeline: '4–5 weeks',
+      benefits: [
+        '30% reduction in maintenance costs',
+        'Prevented equipment failures',
+        'Optimized maintenance schedules',
+        'Improved equipment uptime'
+      ],
+      category: 'Industrial IoT'
+    },
+    {
+      icon: Mail,
+      name: 'AI Email Personalization Engine',
+      description: 'Advanced email personalization using AI and behavioral data analysis.',
+      features: [
+        'Dynamic content personalization',
+        'Behavioral trigger automation',
+        'Send time optimization',
+        'Subject line A/B testing',
+        'Customer journey mapping',
+        'Personalization analytics and insights'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '50% increase in email engagement',
+        'Automated personalization',
+        'Improved customer experience',
+        'Higher conversion rates'
+      ],
+      category: 'Email Marketing'
+    },
+    {
+      icon: Settings,
+      name: 'No-Code Mobile App Builder',
+      description: 'Drag-and-drop mobile app creation with AI-powered design suggestions.',
+      features: [
+        'Visual app builder interface',
+        'AI-powered design recommendations',
+        'Pre-built component library',
+        'Real-time preview and testing',
+        'App store deployment automation',
+        'Analytics and performance monitoring'
+      ],
+      pricing: '$149 – $1,299/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '90% reduction in app development time',
+        'No coding skills required',
+        'Faster time-to-market',
+        'Cost-effective app development'
+      ],
+      category: 'Mobile Development'
+    },
+    {
+      icon: Globe,
+      name: 'AI-Powered Social Media Manager',
+      description: 'Automated social media content creation, scheduling, and engagement optimization.',
+      features: [
+        'AI-generated content creation',
+        'Optimal posting time optimization',
+        'Hashtag research and optimization',
+        'Engagement automation',
+        'Competitor analysis and monitoring',
+        'Social media analytics and reporting'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '70% increase in social media engagement',
+        'Automated content creation',
+        'Improved brand visibility',
+        'Reduced social media management time'
+      ],
+      category: 'Social Media Management'
+    },
+    {
       icon: BarChart3,
       name: 'Business Intelligence Dashboard',
       description: 'Real-time business analytics with customizable dashboards and automated reporting.',

@@ -298,6 +298,182 @@ export default function AIServices() {
       ]
     },
     {
+      icon: Brain,
+      name: 'Generative AI Content Studio',
+      description: 'Advanced AI content generation platform for text, images, videos, and interactive media.',
+      features: [
+        'Multi-modal content generation (text, image, video)',
+        'Brand-consistent content creation',
+        'Interactive content and experiences',
+        'Real-time content optimization',
+        'Multi-language content generation',
+        'Content performance analytics'
+      ],
+      pricing: '$5,000 – $25,000 setup',
+      perUnit: '$0.05 – $0.50 per content piece',
+      timeline: '4–8 weeks',
+      benefits: [
+        '95% reduction in content creation time',
+        'Consistent brand messaging',
+        'Scalable content production',
+        'Improved engagement rates'
+      ]
+    },
+    {
+      icon: Zap,
+      name: 'AI-Powered Process Mining & Optimization',
+      description: 'Intelligent process discovery, analysis, and optimization using AI and machine learning.',
+      features: [
+        'Automated process discovery and mapping',
+        'Process performance analysis and optimization',
+        'Bottleneck identification and resolution',
+        'Predictive process analytics',
+        'Compliance monitoring and reporting',
+        'Process automation recommendations'
+      ],
+      pricing: '$8,000 – $40,000 setup',
+      perUnit: '$0.10 – $1.00 per process instance',
+      timeline: '6–12 weeks',
+      benefits: [
+        '40% improvement in process efficiency',
+        'Automated process optimization',
+        'Reduced operational costs',
+        'Enhanced compliance monitoring'
+      ]
+    },
+    {
+      icon: Eye,
+      name: 'AI-Powered Medical Imaging Analysis',
+      description: 'Advanced medical image analysis and diagnostic assistance using deep learning.',
+      features: [
+        'Medical image classification and detection',
+        'Automated diagnostic assistance',
+        'Disease progression tracking',
+        'Treatment response monitoring',
+        'Radiology workflow optimization',
+        'Clinical decision support systems'
+      ],
+      pricing: '$15,000 – $75,000 setup',
+      perUnit: '$0.50 – $5.00 per image analysis',
+      timeline: '8–16 weeks',
+      benefits: [
+        '98% accuracy in medical image analysis',
+        'Faster diagnostic processes',
+        'Improved patient outcomes',
+        'Reduced diagnostic errors'
+      ]
+    },
+    {
+      icon: Database,
+      name: 'AI-Powered Knowledge Graph Builder',
+      description: 'Intelligent knowledge extraction and relationship mapping for enterprise data.',
+      features: [
+        'Automated knowledge extraction from documents',
+        'Entity relationship mapping and visualization',
+        'Semantic search and discovery',
+        'Knowledge graph maintenance and updates',
+        'Integration with existing data systems',
+        'Intelligent query processing'
+      ],
+      pricing: '$6,000 – $30,000 setup',
+      perUnit: '$0.01 – $0.10 per knowledge entity',
+      timeline: '6–10 weeks',
+      benefits: [
+        '90% improvement in information discovery',
+        'Automated knowledge management',
+        'Enhanced data relationships',
+        'Improved decision-making capabilities'
+      ]
+    },
+    {
+      icon: TrendingUp,
+      name: 'AI-Powered Supply Chain Optimization',
+      description: 'Intelligent supply chain management with predictive analytics and automated optimization.',
+      features: [
+        'Demand forecasting and planning',
+        'Supplier risk assessment and monitoring',
+        'Inventory optimization and management',
+        'Route optimization and logistics planning',
+        'Supply chain disruption prediction',
+        'Sustainability and carbon footprint tracking'
+      ],
+      pricing: '$10,000 – $50,000 setup',
+      perUnit: '$0.05 – $0.50 per optimization decision',
+      timeline: '8–16 weeks',
+      benefits: [
+        '25% reduction in supply chain costs',
+        'Improved demand forecasting accuracy',
+        'Reduced supply chain disruptions',
+        'Enhanced sustainability metrics'
+      ]
+    },
+    {
+      icon: Mic,
+      name: 'AI-Powered Voice Analytics & Insights',
+      description: 'Advanced voice analysis for customer service, sales, and communication optimization.',
+      features: [
+        'Voice emotion and sentiment analysis',
+        'Call quality and performance analytics',
+        'Customer satisfaction prediction',
+        'Sales conversation optimization',
+        'Voice biometric authentication',
+        'Real-time coaching and feedback'
+      ],
+      pricing: '$4,000 – $20,000 setup',
+      perUnit: '$0.02 – $0.20 per minute analyzed',
+      timeline: '4–8 weeks',
+      benefits: [
+        '30% improvement in customer satisfaction',
+        'Enhanced sales conversion rates',
+        'Automated quality monitoring',
+        'Real-time performance insights'
+      ]
+    },
+    {
+      icon: Code,
+      name: 'AI-Powered Code Generation & Review',
+      description: 'Intelligent code generation, review, and optimization using advanced language models.',
+      features: [
+        'Automated code generation from specifications',
+        'Intelligent code review and suggestions',
+        'Bug detection and vulnerability scanning',
+        'Code optimization and refactoring',
+        'Documentation generation and maintenance',
+        'Performance analysis and improvement'
+      ],
+      pricing: '$5,000 – $25,000 setup',
+      perUnit: '$0.01 – $0.10 per line of code',
+      timeline: '4–8 weeks',
+      benefits: [
+        '60% reduction in development time',
+        'Improved code quality and security',
+        'Automated code optimization',
+        'Enhanced developer productivity'
+      ]
+    },
+    {
+      icon: Search,
+      name: 'AI-Powered Semantic Search Engine',
+      description: 'Intelligent search with natural language understanding and contextual results.',
+      features: [
+        'Natural language query processing',
+        'Contextual search result ranking',
+        'Multi-modal search (text, image, video)',
+        'Personalized search experiences',
+        'Real-time search analytics',
+        'Integration with existing search systems'
+      ],
+      pricing: '$3,000 – $15,000 setup',
+      perUnit: '$0.001 – $0.01 per search query',
+      timeline: '4–8 weeks',
+      benefits: [
+        '85% improvement in search relevance',
+        'Enhanced user experience',
+        'Automated search optimization',
+        'Increased content discoverability'
+      ]
+    },
+    {
       icon: Mic,
       name: 'Conversational AI Platform',
       description: 'Advanced conversational AI with context awareness and multi-modal interaction.',
