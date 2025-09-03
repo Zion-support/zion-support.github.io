@@ -6,7 +6,7 @@ import { Calendar, User, ArrowRight, Tag, Search } from 'lucide-react';
 
 export default function Blog() {
   const blogPosts = [
-    {
+  {
       id: 1,
       title: 'The Future of AI in Business: Trends to Watch in 2024',
       excerpt: 'Explore the latest AI trends that are reshaping how businesses operate and compete in the digital landscape.',
@@ -75,13 +75,7 @@ export default function Blog() {
   ];
 
   const categories = [
-    'All Posts',
-    'AI & Machine Learning',
-    'Micro SaaS',
-    'Cybersecurity',
-    'Cloud Computing',
-    'Digital Transformation',
-    'Development'
+    'All Posts,AI & Machine Learning,Micro SaaS,Cybersecurity,Cloud Computing,Digital Transformation,Development'
   ];
 
   const featuredPost = blogPosts.find(post => post.featured);

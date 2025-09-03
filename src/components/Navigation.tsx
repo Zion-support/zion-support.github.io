@@ -19,17 +19,13 @@ import {
   Rocket,
   ShoppingCart,
   BarChart3,
-  Info,
-  Database,
-  Search
+  Info
 } from 'lucide-react';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [showSearch, setShowSearch] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,25 +42,31 @@ const Navigation = () => {
       name: 'Services', 
       href: '/services', 
       dropdown: [
-        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI services' },
+        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI solutions' },
         { name: 'IT Services', href: '/it-services', icon: Network, description: 'Comprehensive IT solutions' },
         { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Scalable SaaS solutions' },
-        { name: 'Web Development', href: '/services/web-development', icon: Code, description: 'Custom web applications' },
-        { name: 'Cloud Services', href: '/services/cloud-services', icon: Cloud, description: 'Cloud infrastructure' },
-        { name: 'AI Development', href: '/services/ai-development', icon: Brain, description: 'AI development services' },
-        { name: 'Database Solutions', href: '/services/database-solutions', icon: Database, description: 'Database design and optimization' }
+        { name: 'All Services', href: '/services', icon: Settings, description: 'Complete service overview' }
       ]
     },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'Pricing', href: '/pricing' },
+    { 
+      name: 'Solutions', 
+      href: '/solutions',
+      dropdown: [
+        { name: 'AI Solutions', href: '/solutions/ai', icon: Brain, description: 'AI-powered business solutions' },
+        { name: 'Cloud Solutions', href: '/solutions/cloud', icon: Cloud, description: 'Cloud infrastructure solutions' },
+        { name: 'Security Solutions', href: '/solutions/security', icon: Shield, description: 'Cybersecurity solutions' },
+        { name: 'Digital Transformation', href: '/solutions/digital', icon: Zap, description: 'Digital transformation services' }
+      ]
+    },
     { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' },
     { name: 'Careers', href: '/careers' }
   ];
 
   const contactInfo = [
-    { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
+  { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
     { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
     { icon: MapPin, text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
   ];
@@ -78,15 +80,7 @@ const Navigation = () => {
     setActiveDropdown(null);
   };
 
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
-    }
-  };
-
-  return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+  return (<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-gray-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -107,8 +101,7 @@ const Navigation = () => {
               <div key={item.name} className="relative">
                 {item.dropdown ? (
                   <div className="relative">
-                    <button
-                      onClick={() => toggleDropdown(item.name)}
+                    <button onClick={() => toggleDropdown(item.name)}
                       className="flex items-center space-x-1 text-gray-300 hover:text-cyan-300 transition-colors duration-200 py-2"
                     >
                       <span>{item.name}</span>
@@ -123,7 +116,7 @@ const Navigation = () => {
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 10, scale: 0.95 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-cyan-400/20 rounded-xl shadow-2xl shadow-cyan-400/10 overflow-hidden"
+                          className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-cyan-400/20 rounded-xl shadow-2xl shadow-cyan-400/10 overflow-hidden"
                         >
                           <div className="p-4">
                             {item.dropdown.map((dropdownItem) => (
@@ -163,40 +156,8 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Search and CTA */}
-          <div className="hidden lg:flex items-center space-x-4">
-            {/* Search Button */}
-            <button
-              onClick={() => setShowSearch(!showSearch)}
-              className="p-2 text-gray-300 hover:text-cyan-300 transition-colors duration-200"
-              aria-label="Search"
-            >
-              <Search className="w-5 h-5" />
-            </button>
-            
-            {/* Search Input */}
-            <AnimatePresence>
-              {showSearch && (
-                <motion.form
-                  initial={{ opacity: 0, width: 0 }}
-                  animate={{ opacity: 1, width: 'auto' }}
-                  exit={{ opacity: 0, width: 0 }}
-                  onSubmit={handleSearch}
-                  className="flex items-center"
-                >
-                  <input
-                    type="text"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="Search..."
-                    className="px-3 py-1 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
-                    autoFocus
-                  />
-                </motion.form>
-              )}
-            </AnimatePresence>
-
-            {/* CTA Button */}
+          {/* CTA Button */}
+          <div className="hidden lg:block">
             <Link
               href="/contact"
               className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
@@ -221,7 +182,7 @@ const Navigation = () => {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-gray-900/95 backdrop-blur-md border-t border-cyan-400/20"
@@ -248,24 +209,20 @@ const Navigation = () => {
 
               {/* Navigation Links */}
               <div className="space-y-2">
-                {navigationItems.map((item) => (
-                  <div key={item.name}>
+                {navigationItems.map((item) => (<div key={item.name}>
                     {item.dropdown ? (
                       <div>
-                        <button
-                          onClick={() => toggleDropdown(item.name)}
+                        <button onClick={() => toggleDropdown(item.name)}
                           className="flex items-center justify-between w-full text-left px-3 py-2 text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
                         >
                           <span>{item.name}</span>
-                          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                            activeDropdown === item.name ? 'rotate-180' : ''
-                          }`} />
+                          <ChevronDown className="w-4 h-4" />
                         </button>
                         <AnimatePresence>
                           {activeDropdown === item.name && (
                             <motion.div
                               initial={{ opacity: 0, height: 0 }}
-                              animate={{ opacity: 1, height: 'auto' }}
+                              animate={{ opacity: 1, height: "auto" }}
                               exit={{ opacity: 0, height: 0 }}
                               transition={{ duration: 0.2 }}
                               className="ml-4 mt-2 space-y-1"
@@ -296,27 +253,6 @@ const Navigation = () => {
                     )}
                   </div>
                 ))}
-              </div>
-
-              {/* Mobile Search */}
-              <div className="pt-4 border-t border-gray-700">
-                <form onSubmit={handleSearch} className="mb-4">
-                  <div className="flex items-center space-x-2">
-                    <input
-                      type="text"
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      placeholder="Search..."
-                      className="flex-1 px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
-                    />
-                    <button
-                      type="submit"
-                      className="p-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition-colors"
-                    >
-                      <Search className="w-4 h-4" />
-                    </button>
-                  </div>
-                </form>
               </div>
 
               {/* Mobile CTA */}

@@ -5,40 +5,40 @@ import {
 } from 'lucide-react';
 export default function Partners() {
   const partners = [
-    {
+  {
       id: 1, name: "Microsoft",
       category: "Technology Partner", description: "Strategic partnership in cloud computing and AI solutions",
       logo: "/api/placeholder/200/100", website: "https://microsoft.com",
-      benefits: ["Azure Integration", "AI Services", "Enterprise Solutions"]
+      benefits: ["Azure Integration,AI Services,Enterprise Solutions"]
     }, {
       id: 2,
       name: "Google Cloud", category: "Cloud Partner",
       description: "Advanced cloud infrastructure and machine learning platforms", logo: "/api/placeholder/200/100",
-      website: "https://cloud.google.com", benefits: ["GCP Services", "ML Platforms", "Data Analytics"]
+      website: "https://cloud.google.com", benefits: ["GCP Services,ML Platforms,Data Analytics"]
     }, {
       id: 3,
       name: "IBM", category: "Quantum Computing Partner",
       description: "Quantum computing research and development collaboration", logo: "/api/placeholder/200/100",
-      website: "https://ibm.com", benefits: ["Quantum Systems", "Research Collaboration", "Enterprise AI"]
+      website: "https://ibm.com", benefits: ["Quantum Systems,Research Collaboration,Enterprise AI"]
     }, {
       id: 4,
       name: "Amazon Web Services", category: "Cloud Infrastructure Partner",
       description: "Comprehensive cloud services and infrastructure solutions", logo: "/api/placeholder/200/100",
-      website: "https://aws.amazon.com", benefits: ["AWS Services", "Infrastructure", "Global Reach"]
+      website: "https://aws.amazon.com", benefits: ["AWS Services,Infrastructure,Global Reach"]
     }, {
       id: 5,
       name: "NVIDIA", category: "AI Hardware Partner",
       description: "Advanced GPU solutions for AI and machine learning workloads", logo: "/api/placeholder/200/100",
-      website: "https://nvidia.com", benefits: ["GPU Solutions", "AI Acceleration", "Deep Learning"]
+      website: "https://nvidia.com", benefits: ["GPU Solutions,AI Acceleration,Deep Learning"]
     }, {
       id: 6,
       name: "Intel", category: "Technology Partner",
       description: "Advanced processor technologies and AI optimization", logo: "/api/placeholder/200/100",
-      website: "https://intel.com", benefits: ["Processor Tech", "AI Optimization", "Performance"]
+      website: "https://intel.com", benefits: ["Processor Tech,AI Optimization,Performance"]
     }
   ];
   const partnershipTypes = [
-    {
+  {
       title: "Technology Partners", description: "Leading technology companies providing cutting-edge solutions",
       icon: Building, count: 12,
       color: "from-blue-500 to-cyan-500"
@@ -58,9 +58,7 @@ export default function Partners() {
     }
   ];
   const benefits = [
-    "Access to cutting-edge technology and platforms", "Joint research and development opportunities",
-    "Global market reach and distribution channels", "Technical support and training programs",
-    "Co-marketing and go-to-market strategies", "Priority access to new features and updates"
+    "Access to cutting-edge technology and platforms,Joint research and development opportunities,Global market reach and distribution channels,Technical support and training programs,Co-marketing and go-to-market strategies,Priority access to new features and updates"
   ];
   return (
     <>

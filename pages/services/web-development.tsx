@@ -24,7 +24,7 @@ import {
 
 export default function WebDevelopment() {
   const features = [
-    {
+  {
       icon: Code,
       title: 'Custom Development',
       description: 'Tailored web applications built with modern technologies and best practices'
@@ -57,7 +57,7 @@ export default function WebDevelopment() {
   ];
 
   const technologies = [
-    { name: 'React', category: 'Frontend' },
+  { name: 'React', category: 'Frontend' },
     { name: 'Next.js', category: 'Framework' },
     { name: 'Node.js', category: 'Backend' },
     { name: 'TypeScript', category: 'Language' },
@@ -70,29 +70,29 @@ export default function WebDevelopment() {
   ];
 
   const services = [
-    {
+  {
       title: 'Frontend Development',
       description: 'Modern, responsive user interfaces built with React, Vue, or Angular',
       icon: Monitor,
-      features: ['Responsive Design', 'Progressive Web Apps', 'Component Architecture', 'State Management']
+      features: ['Responsive Design,Progressive Web Apps,Component Architecture,State Management']
     },
     {
       title: 'Backend Development',
       description: 'Scalable server-side applications and APIs',
       icon: Server,
-      features: ['RESTful APIs', 'GraphQL', 'Microservices', 'Database Design']
+      features: ['RESTful APIs,GraphQL,Microservices,Database Design']
     },
     {
       title: 'Full-Stack Solutions',
       description: 'Complete web applications from frontend to backend',
       icon: Cloud,
-      features: ['End-to-End Development', 'DevOps Integration', 'Performance Optimization', 'Security Implementation']
+      features: ['End-to-End Development,DevOps Integration,Performance Optimization,Security Implementation']
     },
     {
       title: 'E-commerce Platforms',
       description: 'Custom online stores and marketplace solutions',
       icon: BarChart3,
-      features: ['Payment Integration', 'Inventory Management', 'Order Processing', 'Analytics Dashboard']
+      features: ['Payment Integration,Inventory Management,Order Processing,Analytics Dashboard']
     }
   ];
 

@@ -25,7 +25,7 @@ import {
 
 export default function EmailAutomation() {
   const features = [
-    {
+  {
       icon: Send,
       title: 'Drip Campaigns',
       description:
@@ -64,17 +64,13 @@ export default function EmailAutomation() {
   ];
 
   const pricingPlans = [
-    {
+  {
       name: 'Starter',
       price: '$199',
       period: '/month',
       description: 'Perfect for small businesses starting with email marketing',
       features: [
-        'Up to 10, 000 emails/month',
-        'Basic drip campaigns',
-        'Email templates',
-        'Basic analytics',
-        'Email support',
+        'Up to 10, 000 emails/month,Basic drip campaigns,Email templates,Basic analytics,Email support',
       ],
       popular: false,
     },
@@ -84,12 +80,7 @@ export default function EmailAutomation() {
       period: '/month',
       description: 'Ideal for growing businesses with advanced needs',
       features: [
-        'Up to 50, 000 emails/month',
-        'Advanced automation',
-        'A/B testing',
-        'Advanced analytics',
-        'Custom templates',
-        'Priority support',
+        'Up to 50, 000 emails/month,Advanced automation,A/B testing,Advanced analytics,Custom templates,Priority support',
       ],
       popular: true,
     },
@@ -99,13 +90,7 @@ export default function EmailAutomation() {
       period: '/month',
       description: 'For large organizations with high-volume needs',
       features: [
-        'Unlimited emails',
-        'Custom integrations',
-        'Advanced segmentation',
-        'Dedicated IP',
-        'Custom reporting',
-        'Dedicated account manager',
-        '24/7 phone support',
+        'Unlimited emails,Custom integrations,Advanced segmentation,Dedicated IP,Custom reporting,Dedicated account manager,24/7 phone support',
       ],
       popular: false,
     },

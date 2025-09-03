@@ -1,12 +1,8 @@
 #!/usr/bin/env node;
-import { execSync } from "child_process";
-  'child_process';
-import fs from "fs";
-  'fs';
-import path from "path";
-  'path';
-import { fileURLToPath } from "url";
-  'url';
+import { execSync } from "child_processchild_process';
+import fs from "fsfs';
+import path from "pathpath';
+import { fileURLToPath } from "urlurl';
 const __dirname = path.dirname(__filename);
 // // // // // // // console.log(
   '🔍 Starting continuous quality checks automation...');

@@ -10,14 +10,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 class AutomationManager {
   constructor() {
     this.automationProcesses = [
-      'zion-website',
-      'error-monitor',
-      'health-checker',
-      'auto-fixer',
-      'syntax-fixer',
-      'dependency-manager',
-      'build-monitor',
-      'log-cleaner'
+      'zion-website,error-monitor,health-checker,auto-fixer,syntax-fixer,dependency-manager,build-monitor,log-cleaner'
     ];
   }
 
@@ -134,7 +127,7 @@ class AutomationManager {
   async restartProcess(processName) {
     if (!this.automationProcesses.includes(processName)) {
       console.error(`❌ Invalid process name: ${processName}`);
-      console.log('Valid processes:', this.automationProcesses.join(', '));
+      console.log('Valid processes:', this.automationProcesses.join(,));
       return;
     }
 
@@ -166,7 +159,7 @@ class AutomationManager {
   async showLogs(processName) {
     if (!this.automationProcesses.includes(processName)) {
       console.error(`❌ Invalid process name: ${processName}`);
-      console.log('Valid processes:', this.automationProcesses.join(', '));
+      console.log('Valid processes:', this.automationProcesses.join(,));
       return;
     }
 

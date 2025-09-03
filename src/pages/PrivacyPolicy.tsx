@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';"
-import { SEO } from '../components/SEO';"
-import { motion } from 'framer-motion';"
-import { SEO } from '../components/SEO';"
-import { Shield, Eye, Lock, Database, Users, Globe } from 'lucide-react';"
+import { motion } from 'framer-motion
+import { SEO } from '../components/SEO
+import { motion } from 'framer-motion
+import { SEO } from '../components/SEO
+import { Shield, Eye, Lock, Database, Users, Globe } from 'lucide-react
 import { Shield, Eye, Lock, Database, Users, Globe } from 'lucide-react';
 export default function PrivacyPolicy() {
   return (
@@ -21,7 +21,7 @@ export default function PrivacyPolicy() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}"
               transition={{ duration: 0.8 }}"
-              className="text-center max-w-4xl mx-auto""" >"
+              className='text-center max-w-4xl mx-auto' >"
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Privacy Policy"
               </h1>"
@@ -42,7 +42,7 @@ export default function PrivacyPolicy() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}"
               transition={{ duration: 0.8 }}"
-              className="prose prose-lg prose-invert max-w-none""" >"
+              className='prose prose-lg prose-invert max-w-none' >"
               <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50">"
                 <h2 className="text-2xl font-bold text-white mb-4">Information We Collect</h2>"
                 <p className="text-gray-300 mb-4">

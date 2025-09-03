@@ -10,17 +10,13 @@ export default function AIServices() {
     'Cutting-edge AI solutions including autonomous systems, machine learning, natural language processing, and intelligent automation.';
 
   const aiServices = [
-    {
+  {
       title: 'AI-Powered Email Responder',
       description:
         'Automated email responses with sentiment analysis and intelligent categorization',
       icon: MessageSquare,
       features: [
-        'Smart email categorization and prioritization',
-        'Automated response generation with personalization',
-        'Sentiment analysis and escalation triggers',
-        'Integration with CRM and helpdesk systems',
-        'Multi-language support and compliance',
+        'Smart email categorization and prioritization,Automated response generation with personalization,Sentiment analysis and escalation triggers,Integration with CRM and helpdesk systems,Multi-language support and compliance',
       ],
       pricing: '$2,500 - $8, 000/month',
       delivery: '2-3 weeks',
@@ -32,11 +28,7 @@ export default function AIServices() {
         'Comprehensive AI-powered content generation for marketing, social media, and documentation',
       icon: FileText,
       features: [
-        'Automated blog posts and articles',
-        'Social media content generation',
-        'Product descriptions and marketing copy',
-        'Technical documentation creation',
-        'SEO-optimized content with keyword integration',
+        'Automated blog posts and articles,Social media content generation,Product descriptions and marketing copy,Technical documentation creation,SEO-optimized content with keyword integration',
       ],
       pricing: '$1,500 - $5, 000/month',
       delivery: '1-2 weeks',
@@ -48,11 +40,7 @@ export default function AIServices() {
         'AI-powered document analysis, extraction, and processing for business automation',
       icon: FileText,
       features: [
-        'Automated data extraction from PDFs and forms',
-        'Document classification and routing',
-        'OCR with 99%+ accuracy',
-        'Contract analysis and risk assessment',
-        'Compliance monitoring and reporting',
+        'Automated data extraction from PDFs and forms,Document classification and routing,OCR with 99%+ accuracy,Contract analysis and risk assessment,Compliance monitoring and reporting',
       ],
       pricing: '$3,000 - $12, 000/month',
       delivery: '3-4 weeks',
@@ -64,11 +52,7 @@ export default function AIServices() {
         'Advanced recruitment platform with AI-driven candidate screening and matching',
       icon: Users,
       features: [
-        'Resume parsing and skill extraction',
-        'Cultural fit and personality analysis',
-        'Automated interview scheduling',
-        'Bias detection and elimination',
-        'Predictive hiring success metrics',
+        'Resume parsing and skill extraction,Cultural fit and personality analysis,Automated interview scheduling,Bias detection and elimination,Predictive hiring success metrics',
       ],
       pricing: '$4,000 - $15, 000/month',
       delivery: '4-6 weeks',
@@ -80,11 +64,7 @@ export default function AIServices() {
         'Image and video analysis for quality control, security, and automation',
       icon: Eye,
       features: [
-        'Real-time object detection and recognition',
-        'Quality control and defect detection',
-        'Facial recognition and access control',
-        'Video analytics and monitoring',
-        'Custom model training and deployment',
+        'Real-time object detection and recognition,Quality control and defect detection,Facial recognition and access control,Video analytics and monitoring,Custom model training and deployment',
       ],
       pricing: '$5,000 - $20, 000/month',
       delivery: '6-8 weeks',
@@ -96,11 +76,7 @@ export default function AIServices() {
         'Intelligent conversational AI for customer support and business automation',
       icon: Bot,
       features: [
-        'Natural language understanding',
-        'Multi-channel deployment (web, mobile, voice)',
-        'Integration with business systems',
-        'Sentiment analysis and escalation',
-        'Continuous learning and improvement',
+        'Natural language understanding,Multi-channel deployment (web, mobile, voice),Integration with business systems,Sentiment analysis and escalation,Continuous learning and improvement',
       ],
       pricing: '$2,000 - $10, 000/month',
       delivery: '2-4 weeks',
@@ -112,11 +88,7 @@ export default function AIServices() {
         'AI-driven forecasting and predictive modeling for business intelligence',
       icon: TrendingUp,
       features: [
-        'Sales forecasting and demand planning',
-        'Customer churn prediction',
-        'Financial risk assessment',
-        'Market trend analysis',
-        'Real-time dashboard and alerts',
+        'Sales forecasting and demand planning,Customer churn prediction,Financial risk assessment,Market trend analysis,Real-time dashboard and alerts',
       ],
       pricing: '$6,000 - $25, 000/month',
       delivery: '8-12 weeks',
@@ -128,11 +100,7 @@ export default function AIServices() {
         'Intelligent search with semantic understanding and personalized results',
       icon: Search,
       features: [
-        'Semantic search with natural language queries',
-        'Personalized search results',
-        'Auto-complete and suggestions',
-        'Multi-language support',
-        'Analytics and search optimization',
+        'Semantic search with natural language queries,Personalized search results,Auto-complete and suggestions,Multi-language support,Analytics and search optimization',
       ],
       pricing: '$3,500 - $12, 000/month',
       delivery: '4-6 weeks',
@@ -144,12 +112,7 @@ export default function AIServices() {
         'Advanced voice recognition, synthesis, and real-time translation services',
       icon: Mic,
       features: [
-        'Real-time speech-to-text with 99% accuracy',
-        'Multi-language voice synthesis',
-        'Voice cloning and personalization',
-        'Real-time translation and interpretation',
-        'Voice biometric authentication',
-        'Audio content analysis and insights',
+        'Real-time speech-to-text with 99% accuracy,Multi-language voice synthesis,Voice cloning and personalization,Real-time translation and interpretation,Voice biometric authentication,Audio content analysis and insights',
       ],
       pricing: '$4,000 - $15, 000/month',
       delivery: '5-8 weeks',
@@ -161,12 +124,7 @@ export default function AIServices() {
         'Real-time fraud prevention and risk assessment using machine learning',
       icon: Shield,
       features: [
-        'Real-time transaction monitoring',
-        'Behavioral pattern analysis',
-        'Anomaly detection algorithms',
-        'Risk scoring and decision automation',
-        'Multi-channel fraud prevention',
-        'Compliance reporting and audit trails',
+        'Real-time transaction monitoring,Behavioral pattern analysis,Anomaly detection algorithms,Risk scoring and decision automation,Multi-channel fraud prevention,Compliance reporting and audit trails',
       ],
       pricing: '$5,000 - $20, 000/month',
       delivery: '6-10 weeks',
@@ -178,12 +136,7 @@ export default function AIServices() {
         'Personalized recommendation system for e-commerce, content, and services',
       icon: Star,
       features: [
-        'Collaborative and content-based filtering',
-        'Real-time personalization',
-        'A/B testing and optimization',
-        'Cross-platform recommendation sync',
-        'Performance analytics and insights',
-        'Custom algorithm development',
+        'Collaborative and content-based filtering,Real-time personalization,A/B testing and optimization,Cross-platform recommendation sync,Performance analytics and insights,Custom algorithm development',
       ],
       pricing: '$3,000 - $12, 000/month',
       delivery: '4-7 weeks',
@@ -195,12 +148,7 @@ export default function AIServices() {
         'Intelligent video processing for security, marketing, and business insights',
       icon: Video,
       features: [
-        'Real-time video object detection',
-        'Facial recognition and tracking',
-        'Emotion and sentiment analysis',
-        'Video content summarization',
-        'Automated video editing and optimization',
-        'Live streaming analytics',
+        'Real-time video object detection,Facial recognition and tracking,Emotion and sentiment analysis,Video content summarization,Automated video editing and optimization,Live streaming analytics',
       ],
       pricing: '$6,000 - $25, 000/month',
       delivery: '8-12 weeks',
@@ -212,12 +160,7 @@ export default function AIServices() {
         'Intelligent process analysis and optimization for business workflows',
       icon: Settings,
       features: [
-        'Automated process discovery',
-        'Bottleneck identification and analysis',
-        'Process optimization recommendations',
-        'Compliance monitoring and reporting',
-        'Real-time process monitoring',
-        'Predictive process analytics',
+        'Automated process discovery,Bottleneck identification and analysis,Process optimization recommendations,Compliance monitoring and reporting,Real-time process monitoring,Predictive process analytics',
       ],
       pricing: '$8,000 - $30, 000/month',
       delivery: '10-16 weeks',
@@ -229,12 +172,7 @@ export default function AIServices() {
         'Intelligent supply chain management with predictive analytics and automation',
       icon: Network,
       features: [
-        'Demand forecasting and planning',
-        'Supplier risk assessment',
-        'Route optimization and logistics',
-        'Inventory optimization algorithms',
-        'Supply chain visibility and tracking',
-        'Risk mitigation and contingency planning',
+        'Demand forecasting and planning,Supplier risk assessment,Route optimization and logistics,Inventory optimization algorithms,Supply chain visibility and tracking,Risk mitigation and contingency planning',
       ],
       pricing: '$10,000 - $40, 000/month',
       delivery: '12-20 weeks',
@@ -246,12 +184,7 @@ export default function AIServices() {
         'Real-time customer sentiment monitoring across all communication channels',
       icon: MessageSquare,
       features: [
-        'Multi-channel sentiment monitoring',
-        'Real-time emotion detection',
-        'Trend analysis and reporting',
-        'Automated alert system',
-        'Customer journey sentiment mapping',
-        'Integration with CRM and support tools',
+        'Multi-channel sentiment monitoring,Real-time emotion detection,Trend analysis and reporting,Automated alert system,Customer journey sentiment mapping,Integration with CRM and support tools',
       ],
       pricing: '$2,500 - $8, 000/month',
       delivery: '3-5 weeks',
@@ -263,16 +196,95 @@ export default function AIServices() {
         'Intelligent code generation and software development assistance',
       icon: Code,
       features: [
-        'Automated code generation from specifications',
-        'Code review and optimization suggestions',
-        'Bug detection and fixing recommendations',
-        'Documentation generation',
-        'Test case generation and validation',
-        'Integration with development workflows',
+        'Automated code generation from specifications,Code review and optimization suggestions,Bug detection and fixing recommendations,Documentation generation,Test case generation and validation,Integration with development workflows',
       ],
-      pricing: '$4,000 - $15, 000/month',
-      delivery: '6-10 weeks',
+      pricing: '$4,000 - $15,000/month',
+      delivery: '5-8 weeks',
       category: 'Development AI',
+    },
+    {
+      title: 'AI-Powered Legal Document Analysis',
+      description:
+        'Intelligent legal document review, contract analysis, and compliance monitoring',
+      icon: FileText,
+      features: [
+        'Automated contract review and analysis,Risk assessment and clause identification,Compliance monitoring and reporting,Legal research and precedent analysis,Document comparison and version control,Integration with legal management systems',
+      ],
+      pricing: '$5,500 - $18,000/month',
+      delivery: '6-10 weeks',
+      category: 'Legal AI',
+    },
+    {
+      title: 'AI-Powered Healthcare Diagnostics',
+      description:
+        'Medical image analysis, diagnostic assistance, and patient monitoring systems',
+      icon: Heart,
+      features: [
+        'Medical image analysis and interpretation,Diagnostic assistance and recommendations,Patient monitoring and alert systems,Drug interaction and allergy checking,Medical record analysis and insights,Integration with healthcare systems',
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '10-16 weeks',
+      category: 'Healthcare AI',
+    },
+    {
+      title: 'AI-Powered Financial Trading',
+      description:
+        'Algorithmic trading, market analysis, and risk management systems',
+      icon: TrendingUp,
+      features: [
+        'Algorithmic trading strategy development,Real-time market analysis and predictions,Risk management and portfolio optimization,High-frequency trading algorithms,Market sentiment analysis,Compliance and regulatory reporting',
+      ],
+      pricing: '$12,000 - $50,000/month',
+      delivery: '12-20 weeks',
+      category: 'Financial AI',
+    },
+    {
+      title: 'AI-Powered Energy Management',
+      description:
+        'Smart energy optimization, consumption analysis, and sustainability solutions',
+      icon: Zap,
+      features: [
+        'Energy consumption analysis and optimization,Predictive maintenance for energy systems,Smart grid management and optimization,Renewable energy integration,Cost optimization and billing analysis,Carbon footprint tracking and reporting',
+      ],
+      pricing: '$6,000 - $25,000/month',
+      delivery: '8-14 weeks',
+      category: 'Energy AI',
+    },
+    {
+      title: 'AI-Powered Autonomous Vehicles',
+      description:
+        'Self-driving vehicle systems, traffic optimization, and fleet management',
+      icon: Car,
+      features: [
+        'Autonomous vehicle control systems,Traffic flow optimization and management,Fleet management and routing,Vehicle-to-vehicle communication,Real-time traffic analysis,Predictive maintenance for vehicles',
+      ],
+      pricing: '$15,000 - $60,000/month',
+      delivery: '16-24 weeks',
+      category: 'Autonomous AI',
+    },
+    {
+      title: 'AI-Powered Environmental Monitoring',
+      description:
+        'Environmental data analysis, climate monitoring, and sustainability tracking',
+      icon: TreePine,
+      features: [
+        'Environmental data collection and analysis,Climate change monitoring and predictions,Air and water quality assessment,Wildlife and ecosystem monitoring,Sustainability metrics and reporting,Environmental compliance tracking',
+      ],
+      pricing: '$4,500 - $18,000/month',
+      delivery: '6-12 weeks',
+      category: 'Environmental AI',
+    },
+    {
+      title: 'AI-Powered Space Technology',
+      description:
+        'Satellite data analysis, space mission optimization, and astronomical research',
+      icon: Satellite,
+      features: [
+        'Satellite data processing and analysis,Space mission planning and optimization,Astronomical data analysis and discovery,Space debris tracking and management,Earth observation and monitoring,Space weather prediction and analysis',
+      ],
+      pricing: '$20,000 - $80,000/month',
+      delivery: '20-32 weeks',
+      category: 'Space AI',
     },
     {
       title: 'AI-Powered Market Research',
@@ -280,12 +292,7 @@ export default function AIServices() {
         'Intelligent market analysis and competitive intelligence platform',
       icon: BarChart3,
       features: [
-        'Automated market trend analysis',
-        'Competitor monitoring and analysis',
-        'Consumer behavior insights',
-        'Price optimization recommendations',
-        'Market opportunity identification',
-        'Real-time market intelligence reports',
+        'Automated market trend analysis,Competitor monitoring and analysis,Consumer behavior insights,Price optimization recommendations,Market opportunity identification,Real-time market intelligence reports',
       ],
       pricing: '$5,000 - $18, 000/month',
       delivery: '6-12 weeks',
@@ -297,12 +304,7 @@ export default function AIServices() {
         'Multi-agent AI system for complex task automation and decision making',
       icon: Bot,
       features: [
-        'Multi-agent orchestration and coordination',
-        'Autonomous task execution and decision making',
-        'Agent-to-agent communication and collaboration',
-        'Self-learning and adaptation capabilities',
-        'Integration with existing business systems',
-        'Real-time monitoring and intervention protocols',
+        'Multi-agent orchestration and coordination,Autonomous task execution and decision making,Agent-to-agent communication and collaboration,Self-learning and adaptation capabilities,Integration with existing business systems,Real-time monitoring and intervention protocols',
       ],
       pricing: '$8,000 - $25,000/month',
       delivery: '8-16 weeks',
@@ -314,12 +316,7 @@ export default function AIServices() {
         'Intelligent pharmaceutical research with molecular analysis and drug design',
       icon: Brain,
       features: [
-        'Molecular structure analysis and optimization',
-        'Drug-target interaction prediction',
-        'Toxicity and side effect assessment',
-        'Clinical trial optimization and design',
-        'Patent landscape analysis',
-        'Regulatory compliance and documentation',
+        'Molecular structure analysis and optimization,Drug-target interaction prediction,Toxicity and side effect assessment,Clinical trial optimization and design,Patent landscape analysis,Regulatory compliance and documentation',
       ],
       pricing: '$15,000 - $50,000/month',
       delivery: '12-24 weeks',
@@ -331,12 +328,7 @@ export default function AIServices() {
         'Advanced climate prediction and environmental impact analysis platform',
       icon: Globe,
       features: [
-        'High-resolution climate modeling and prediction',
-        'Environmental impact assessment and monitoring',
-        'Carbon footprint tracking and optimization',
-        'Renewable energy resource optimization',
-        'Disaster risk assessment and mitigation',
-        'Sustainability reporting and compliance',
+        'High-resolution climate modeling and prediction,Environmental impact assessment and monitoring,Carbon footprint tracking and optimization,Renewable energy resource optimization,Disaster risk assessment and mitigation,Sustainability reporting and compliance',
       ],
       pricing: '$10,000 - $35,000/month',
       delivery: '10-20 weeks',
@@ -348,12 +340,7 @@ export default function AIServices() {
         'Intelligent quantum computing optimization and algorithm development',
       icon: Cpu,
       features: [
-        'Quantum algorithm optimization and development',
-        'Quantum error correction and noise mitigation',
-        'Hybrid classical-quantum computing workflows',
-        'Quantum machine learning model training',
-        'Quantum simulation and modeling',
-        'Integration with existing computing infrastructure',
+        'Quantum algorithm optimization and development,Quantum error correction and noise mitigation,Hybrid classical-quantum computing workflows,Quantum machine learning model training,Quantum simulation and modeling,Integration with existing computing infrastructure',
       ],
       pricing: '$20,000 - $75,000/month',
       delivery: '16-32 weeks',
@@ -365,12 +352,7 @@ export default function AIServices() {
         'Intelligent space mission optimization and satellite constellation management',
       icon: Globe,
       features: [
-        'Mission trajectory optimization and planning',
-        'Satellite constellation design and management',
-        'Space debris tracking and collision avoidance',
-        'Resource allocation and scheduling optimization',
-        'Communication network optimization',
-        'Mission risk assessment and mitigation',
+        'Mission trajectory optimization and planning,Satellite constellation design and management,Space debris tracking and collision avoidance,Resource allocation and scheduling optimization,Communication network optimization,Mission risk assessment and mitigation',
       ],
       pricing: '$25,000 - $100,000/month',
       delivery: '20-40 weeks',
@@ -382,12 +364,7 @@ export default function AIServices() {
         'Brain-inspired computing systems with spiking neural networks',
       icon: Brain,
       features: [
-        'Spiking neural network design and optimization',
-        'Neuromorphic chip simulation and testing',
-        'Edge AI processing and optimization',
-        'Real-time learning and adaptation',
-        'Low-power computing optimization',
-        'Integration with IoT and edge devices',
+        'Spiking neural network design and optimization,Neuromorphic chip simulation and testing,Edge AI processing and optimization,Real-time learning and adaptation,Low-power computing optimization,Integration with IoT and edge devices',
       ],
       pricing: '$12,000 - $40,000/month',
       delivery: '12-24 weeks',
@@ -398,12 +375,7 @@ export default function AIServices() {
       description: 'Intelligent biological system design and optimization',
       icon: Cpu,
       features: [
-        'Genetic circuit design and optimization',
-        'Protein structure prediction and design',
-        'Metabolic pathway engineering',
-        'Biological system simulation and modeling',
-        'Synthetic organism design and testing',
-        'Biomanufacturing optimization',
+        'Genetic circuit design and optimization,Protein structure prediction and design,Metabolic pathway engineering,Biological system simulation and modeling,Synthetic organism design and testing,Biomanufacturing optimization',
       ],
       pricing: '$18,000 - $60,000/month',
       delivery: '16-28 weeks',
@@ -414,12 +386,7 @@ export default function AIServices() {
       description: 'Intelligent fusion reactor control and plasma optimization',
       icon: Zap,
       features: [
-        'Plasma confinement optimization',
-        'Magnetic field control and stabilization',
-        'Energy output maximization',
-        'Reactor safety monitoring and control',
-        'Predictive maintenance and diagnostics',
-        'Real-time performance optimization',
+        'Plasma confinement optimization,Magnetic field control and stabilization,Energy output maximization,Reactor safety monitoring and control,Predictive maintenance and diagnostics,Real-time performance optimization',
       ],
       pricing: '$30,000 - $120,000/month',
       delivery: '24-48 weeks',
@@ -431,12 +398,7 @@ export default function AIServices() {
         'Intelligent neural signal processing and brain-computer communication',
       icon: Brain,
       features: [
-        'Neural signal acquisition and processing',
-        'Brain activity pattern recognition',
-        'Motor intention decoding and control',
-        'Cognitive state monitoring and analysis',
-        'Real-time feedback and adaptation',
-        'Medical device integration and control',
+        'Neural signal acquisition and processing,Brain activity pattern recognition,Motor intention decoding and control,Cognitive state monitoring and analysis,Real-time feedback and adaptation,Medical device integration and control',
       ],
       pricing: '$15,000 - $50,000/month',
       delivery: '20-36 weeks',
@@ -448,12 +410,7 @@ export default function AIServices() {
         'Intelligent autonomous vehicle coordination and fleet management',
       icon: Network,
       features: [
-        'Multi-vehicle coordination and communication',
-        'Dynamic route optimization and planning',
-        'Real-time traffic and obstacle avoidance',
-        'Predictive maintenance and diagnostics',
-        'Passenger safety and comfort optimization',
-        'Integration with smart city infrastructure',
+        'Multi-vehicle coordination and communication,Dynamic route optimization and planning,Real-time traffic and obstacle avoidance,Predictive maintenance and diagnostics,Passenger safety and comfort optimization,Integration with smart city infrastructure',
       ],
       pricing: '$25,000 - $80,000/month',
       delivery: '24-40 weeks',
@@ -465,12 +422,7 @@ export default function AIServices() {
         'Intelligent virtual world creation and immersive experience optimization',
       icon: Globe,
       features: [
-        'Procedural world generation and optimization',
-        'Avatar behavior and interaction modeling',
-        'Real-time physics simulation and optimization',
-        'Social interaction and community building',
-        'Virtual economy and asset management',
-        'Cross-platform integration and compatibility',
+        'Procedural world generation and optimization,Avatar behavior and interaction modeling,Real-time physics simulation and optimization,Social interaction and community building,Virtual economy and asset management,Cross-platform integration and compatibility',
       ],
       pricing: '$20,000 - $70,000/month',
       delivery: '20-36 weeks',
@@ -482,12 +434,7 @@ export default function AIServices() {
         'Intelligent digital twin creation and real-time synchronization',
       icon: Monitor,
       features: [
-        'Real-time data synchronization and modeling',
-        'Predictive analytics and simulation',
-        'Performance optimization and recommendations',
-        'Anomaly detection and alerting',
-        'What-if scenario analysis and planning',
-        'Integration with IoT sensors and systems',
+        'Real-time data synchronization and modeling,Predictive analytics and simulation,Performance optimization and recommendations,Anomaly detection and alerting,What-if scenario analysis and planning,Integration with IoT sensors and systems',
       ],
       pricing: '$12,000 - $45,000/month',
       delivery: '16-28 weeks',
@@ -499,12 +446,7 @@ export default function AIServices() {
         'Intelligent edge computing resource management and optimization',
       icon: Server,
       features: [
-        'Distributed computing resource allocation',
-        'Edge-to-cloud workload optimization',
-        'Real-time latency and bandwidth optimization',
-        'Autonomous edge device management',
-        'Data processing and analytics at the edge',
-        'Security and privacy protection',
+        'Distributed computing resource allocation,Edge-to-cloud workload optimization,Real-time latency and bandwidth optimization,Autonomous edge device management,Data processing and analytics at the edge,Security and privacy protection',
       ],
       pricing: '$8,000 - $30,000/month',
       delivery: '12-24 weeks',
@@ -516,12 +458,7 @@ export default function AIServices() {
         'Intelligent blockchain transaction analysis and DeFi optimization',
       icon: Network,
       features: [
-        'Blockchain transaction pattern analysis',
-        'DeFi protocol optimization and yield farming',
-        'Smart contract security auditing',
-        'Cryptocurrency market prediction and trading',
-        'Cross-chain bridge optimization',
-        'Regulatory compliance and reporting',
+        'Blockchain transaction pattern analysis,DeFi protocol optimization and yield farming,Smart contract security auditing,Cryptocurrency market prediction and trading,Cross-chain bridge optimization,Regulatory compliance and reporting',
       ],
       pricing: '$10,000 - $35,000/month',
       delivery: '14-26 weeks',
@@ -532,12 +469,7 @@ export default function AIServices() {
       description: 'Intelligent algorithmic trading platform with risk management and portfolio optimization',
       icon: TrendingUp,
       features: [
-        'Real-time market analysis and pattern recognition',
-        'Automated trading strategy execution',
-        'Risk management and portfolio optimization',
-        'Sentiment analysis from news and social media',
-        'Backtesting and strategy validation',
-        'Multi-asset and multi-exchange support'
+        'Real-time market analysis and pattern recognition,Automated trading strategy execution,Risk management and portfolio optimization,Sentiment analysis from news and social media,Backtesting and strategy validation,Multi-asset and multi-exchange support'
       ],
       pricing: '$8,000 - $35,000/month',
       delivery: '8-16 weeks',
@@ -548,12 +480,7 @@ export default function AIServices() {
       description: 'Intelligent medical image analysis and diagnostic support system',
       icon: Eye,
       features: [
-        'Medical image analysis (X-ray, MRI, CT scans)',
-        'Symptom analysis and differential diagnosis',
-        'Drug interaction and allergy checking',
-        'Treatment recommendation engine',
-        'Patient risk assessment and monitoring',
-        'Integration with electronic health records'
+        'Medical image analysis (X-ray, MRI, CT scans),Symptom analysis and differential diagnosis,Drug interaction and allergy checking,Treatment recommendation engine,Patient risk assessment and monitoring,Integration with electronic health records'
       ],
       pricing: '$15,000 - $60,000/month',
       delivery: '12-24 weeks',
@@ -564,12 +491,7 @@ export default function AIServices() {
       description: 'Intelligent legal document review and contract analysis platform',
       icon: FileText,
       features: [
-        'Automated contract review and analysis',
-        'Legal document classification and extraction',
-        'Risk assessment and compliance checking',
-        'Due diligence automation',
-        'Legal research and precedent analysis',
-        'Document generation and templating'
+        'Automated contract review and analysis,Legal document classification and extraction,Risk assessment and compliance checking,Due diligence automation,Legal research and precedent analysis,Document generation and templating'
       ],
       pricing: '$6,000 - $25,000/month',
       delivery: '8-14 weeks',
@@ -580,12 +502,7 @@ export default function AIServices() {
       description: 'Intelligent energy consumption optimization and renewable energy integration',
       icon: Zap,
       features: [
-        'Smart grid optimization and load balancing',
-        'Renewable energy forecasting and integration',
-        'Energy consumption pattern analysis',
-        'Predictive maintenance for energy infrastructure',
-        'Carbon footprint tracking and optimization',
-        'Real-time energy trading and arbitrage'
+        'Smart grid optimization and load balancing,Renewable energy forecasting and integration,Energy consumption pattern analysis,Predictive maintenance for energy infrastructure,Carbon footprint tracking and optimization,Real-time energy trading and arbitrage'
       ],
       pricing: '$10,000 - $40,000/month',
       delivery: '10-20 weeks',
@@ -596,12 +513,7 @@ export default function AIServices() {
       description: 'Advanced threat detection and response system with behavioral analysis',
       icon: Shield,
       features: [
-        'Real-time threat detection and analysis',
-        'Behavioral anomaly detection',
-        'Automated incident response and remediation',
-        'Zero-day vulnerability identification',
-        'Threat intelligence and attribution',
-        'Security orchestration and automation'
+        'Real-time threat detection and analysis,Behavioral anomaly detection,Automated incident response and remediation,Zero-day vulnerability identification,Threat intelligence and attribution,Security orchestration and automation'
       ],
       pricing: '$7,000 - $30,000/month',
       delivery: '8-16 weeks',
@@ -612,12 +524,7 @@ export default function AIServices() {
       description: 'Intelligent fleet optimization and autonomous vehicle coordination system',
       icon: Network,
       features: [
-        'Route optimization and traffic prediction',
-        'Vehicle health monitoring and maintenance',
-        'Passenger demand forecasting',
-        'Autonomous vehicle coordination',
-        'Safety monitoring and incident prevention',
-        'Fleet performance analytics and optimization'
+        'Route optimization and traffic prediction,Vehicle health monitoring and maintenance,Passenger demand forecasting,Autonomous vehicle coordination,Safety monitoring and incident prevention,Fleet performance analytics and optimization'
       ],
       pricing: '$12,000 - $50,000/month',
       delivery: '12-24 weeks',
@@ -628,12 +535,7 @@ export default function AIServices() {
       description: 'Advanced climate modeling and environmental impact assessment platform',
       icon: Globe,
       features: [
-        'Climate change prediction and modeling',
-        'Environmental impact assessment',
-        'Carbon sequestration optimization',
-        'Weather pattern analysis and forecasting',
-        'Ecosystem monitoring and protection',
-        'Sustainability planning and recommendations'
+        'Climate change prediction and modeling,Environmental impact assessment,Carbon sequestration optimization,Weather pattern analysis and forecasting,Ecosystem monitoring and protection,Sustainability planning and recommendations'
       ],
       pricing: '$15,000 - $60,000/month',
       delivery: '16-32 weeks',
@@ -644,12 +546,7 @@ export default function AIServices() {
       description: 'Next-generation machine learning leveraging quantum computing for complex pattern recognition',
       icon: Cpu,
       features: [
-        'Quantum neural network training and optimization',
-        'Quantum feature mapping and data encoding',
-        'Quantum kernel methods and support vector machines',
-        'Quantum reinforcement learning algorithms',
-        'Hybrid quantum-classical model training',
-        'Quantum advantage demonstration and benchmarking'
+        'Quantum neural network training and optimization,Quantum feature mapping and data encoding,Quantum kernel methods and support vector machines,Quantum reinforcement learning algorithms,Hybrid quantum-classical model training,Quantum advantage demonstration and benchmarking'
       ],
       pricing: '$25,000 - $100,000/month',
       delivery: '20-40 weeks',
@@ -660,12 +557,7 @@ export default function AIServices() {
       description: 'Advanced AI system for creating realistic synthetic media including deepfakes and virtual influencers',
       icon: Video,
       features: [
-        'High-fidelity voice cloning and synthesis',
-        'Realistic video generation and manipulation',
-        'Virtual influencer creation and management',
-        'Deepfake detection and prevention',
-        'Synthetic data generation for training',
-        'Ethical AI and content authenticity verification'
+        'High-fidelity voice cloning and synthesis,Realistic video generation and manipulation,Virtual influencer creation and management,Deepfake detection and prevention,Synthetic data generation for training,Ethical AI and content authenticity verification'
       ],
       pricing: '$8,000 - $35,000/month',
       delivery: '12-24 weeks',
@@ -676,12 +568,7 @@ export default function AIServices() {
       description: 'Intelligent neural interface system for direct brain-computer communication and control',
       icon: Brain,
       features: [
-        'Neural signal acquisition and processing',
-        'Motor intention decoding and prosthetic control',
-        'Cognitive state monitoring and analysis',
-        'Real-time feedback and adaptation',
-        'Medical device integration and control',
-        'Non-invasive brain stimulation optimization'
+        'Neural signal acquisition and processing,Motor intention decoding and prosthetic control,Cognitive state monitoring and analysis,Real-time feedback and adaptation,Medical device integration and control,Non-invasive brain stimulation optimization'
       ],
       pricing: '$20,000 - $80,000/month',
       delivery: '24-48 weeks',
@@ -692,12 +579,7 @@ export default function AIServices() {
       description: 'Intelligent drone swarm coordination system for complex missions and operations',
       icon: Network,
       features: [
-        'Swarm formation and coordination algorithms',
-        'Autonomous mission planning and execution',
-        'Real-time obstacle avoidance and navigation',
-        'Distributed sensing and data fusion',
-        'Dynamic task allocation and optimization',
-        'Integration with ground control systems'
+        'Swarm formation and coordination algorithms,Autonomous mission planning and execution,Real-time obstacle avoidance and navigation,Distributed sensing and data fusion,Dynamic task allocation and optimization,Integration with ground control systems'
       ],
       pricing: '$15,000 - $60,000/month',
       delivery: '16-32 weeks',
@@ -708,12 +590,7 @@ export default function AIServices() {
       description: 'Intelligent precision medicine platform with genomic analysis and treatment optimization',
       icon: Heart,
       features: [
-        'Genomic data analysis and interpretation',
-        'Personalized treatment recommendation engine',
-        'Drug response prediction and optimization',
-        'Biomarker discovery and validation',
-        'Clinical trial matching and enrollment',
-        'Integration with electronic health records'
+        'Genomic data analysis and interpretation,Personalized treatment recommendation engine,Drug response prediction and optimization,Biomarker discovery and validation,Clinical trial matching and enrollment,Integration with electronic health records'
       ],
       pricing: '$18,000 - $70,000/month',
       delivery: '20-36 weeks',
@@ -724,12 +601,7 @@ export default function AIServices() {
       description: 'Intelligent space debris tracking and collision avoidance system',
       icon: Satellite,
       features: [
-        'Real-time space debris tracking and cataloging',
-        'Collision risk assessment and prediction',
-        'Autonomous debris removal mission planning',
-        'Satellite constellation protection',
-        'Orbital mechanics optimization',
-        'Integration with space agency networks'
+        'Real-time space debris tracking and cataloging,Collision risk assessment and prediction,Autonomous debris removal mission planning,Satellite constellation protection,Orbital mechanics optimization,Integration with space agency networks'
       ],
       pricing: '$30,000 - $120,000/month',
       delivery: '24-48 weeks',
@@ -740,12 +612,7 @@ export default function AIServices() {
       description: 'Intelligent fusion reactor control system for plasma optimization and energy production',
       icon: Zap,
       features: [
-        'Plasma confinement and stability control',
-        'Magnetic field optimization and control',
-        'Energy output maximization algorithms',
-        'Reactor safety monitoring and protection',
-        'Predictive maintenance and diagnostics',
-        'Real-time performance optimization'
+        'Plasma confinement and stability control,Magnetic field optimization and control,Energy output maximization algorithms,Reactor safety monitoring and protection,Predictive maintenance and diagnostics,Real-time performance optimization'
       ],
       pricing: '$40,000 - $150,000/month',
       delivery: '32-64 weeks',
@@ -756,12 +623,7 @@ export default function AIServices() {
       description: 'Intelligent biological system design and optimization platform',
       icon: Cpu,
       features: [
-        'Genetic circuit design and optimization',
-        'Protein structure prediction and design',
-        'Metabolic pathway engineering',
-        'Synthetic organism design and testing',
-        'Biomanufacturing process optimization',
-        'Biosafety and biosecurity assessment'
+        'Genetic circuit design and optimization,Protein structure prediction and design,Metabolic pathway engineering,Synthetic organism design and testing,Biomanufacturing process optimization,Biosafety and biosecurity assessment'
       ],
       pricing: '$22,000 - $85,000/month',
       delivery: '24-48 weeks',
@@ -772,12 +634,7 @@ export default function AIServices() {
       description: 'Brain-inspired computing system with spiking neural networks and edge optimization',
       icon: Brain,
       features: [
-        'Spiking neural network design and training',
-        'Neuromorphic chip simulation and optimization',
-        'Edge AI processing and inference',
-        'Real-time learning and adaptation',
-        'Low-power computing optimization',
-        'Integration with IoT and edge devices'
+        'Spiking neural network design and training,Neuromorphic chip simulation and optimization,Edge AI processing and inference,Real-time learning and adaptation,Low-power computing optimization,Integration with IoT and edge devices'
       ],
       pricing: '$16,000 - $65,000/month',
       delivery: '20-40 weeks',
@@ -788,12 +645,7 @@ export default function AIServices() {
       description: 'Intelligent underwater vehicle coordination system for ocean exploration and research',
       icon: Network,
       features: [
-        'Underwater navigation and mapping',
-        'Autonomous mission planning and execution',
-        'Ocean current and weather adaptation',
-        'Marine life detection and monitoring',
-        'Underwater communication and coordination',
-        'Data collection and analysis automation'
+        'Underwater navigation and mapping,Autonomous mission planning and execution,Ocean current and weather adaptation,Marine life detection and monitoring,Underwater communication and coordination,Data collection and analysis automation'
       ],
       pricing: '$18,000 - $75,000/month',
       delivery: '24-48 weeks',
@@ -804,12 +656,7 @@ export default function AIServices() {
       description: 'Comprehensive digital twin system for global environmental monitoring and prediction',
       icon: Globe,
       features: [
-        'Real-time global environmental data integration',
-        'Climate and weather prediction modeling',
-        'Ecosystem monitoring and analysis',
-        'Natural disaster prediction and response',
-        'Resource management and optimization',
-        'Sustainability planning and recommendations'
+        'Real-time global environmental data integration,Climate and weather prediction modeling,Ecosystem monitoring and analysis,Natural disaster prediction and response,Resource management and optimization,Sustainability planning and recommendations'
       ],
       pricing: '$50,000 - $200,000/month',
       delivery: '40-80 weeks',
@@ -820,12 +667,7 @@ export default function AIServices() {
       description: 'Advanced AI system for consciousness research and artificial general intelligence development',
       icon: Brain,
       features: [
-        'Consciousness modeling and simulation',
-        'Artificial general intelligence development',
-        'Cognitive architecture design and testing',
-        'Self-awareness and introspection capabilities',
-        'Ethical AI and consciousness assessment',
-        'Integration with neuroscience research'
+        'Consciousness modeling and simulation,Artificial general intelligence development,Cognitive architecture design and testing,Self-awareness and introspection capabilities,Ethical AI and consciousness assessment,Integration with neuroscience research'
       ],
       pricing: '$100,000 - $500,000/month',
       delivery: '60-120 weeks',
@@ -836,12 +678,7 @@ export default function AIServices() {
       description: 'Advanced AI system for proactive threat detection and automated incident response',
       icon: Shield,
       features: [
-        'Real-time threat detection and analysis',
-        'Automated incident response and containment',
-        'Behavioral analysis and anomaly detection',
-        'Zero-day vulnerability identification',
-        'Threat intelligence aggregation and analysis',
-        'Integration with SIEM and security tools'
+        'Real-time threat detection and analysis,Automated incident response and containment,Behavioral analysis and anomaly detection,Zero-day vulnerability identification,Threat intelligence aggregation and analysis,Integration with SIEM and security tools'
       ],
       pricing: '$5,000 - $25,000/month',
       delivery: '6-12 weeks',
@@ -852,12 +689,7 @@ export default function AIServices() {
       description: 'Intelligent algorithmic trading system with market prediction and risk management',
       icon: TrendingUp,
       features: [
-        'Real-time market analysis and prediction',
-        'Automated trading strategy execution',
-        'Risk management and portfolio optimization',
-        'Sentiment analysis from news and social media',
-        'Backtesting and strategy validation',
-        'Integration with major trading platforms'
+        'Real-time market analysis and prediction,Automated trading strategy execution,Risk management and portfolio optimization,Sentiment analysis from news and social media,Backtesting and strategy validation,Integration with major trading platforms'
       ],
       pricing: '$10,000 - $50,000/month',
       delivery: '8-16 weeks',
@@ -868,12 +700,7 @@ export default function AIServices() {
       description: 'Advanced medical AI for diagnostic support and treatment recommendations',
       icon: Heart,
       features: [
-        'Medical image analysis and interpretation',
-        'Symptom analysis and differential diagnosis',
-        'Treatment recommendation and drug interaction checking',
-        'Patient risk assessment and monitoring',
-        'Integration with EHR and medical devices',
-        'Clinical decision support and documentation'
+        'Medical image analysis and interpretation,Symptom analysis and differential diagnosis,Treatment recommendation and drug interaction checking,Patient risk assessment and monitoring,Integration with EHR and medical devices,Clinical decision support and documentation'
       ],
       pricing: '$15,000 - $75,000/month',
       delivery: '12-24 weeks',
@@ -884,12 +711,7 @@ export default function AIServices() {
       description: 'Intelligent autonomous vehicle navigation and safety systems',
       icon: Car,
       features: [
-        'Real-time environment perception and mapping',
-        'Path planning and obstacle avoidance',
-        'Traffic prediction and route optimization',
-        'Vehicle-to-vehicle communication coordination',
-        'Safety monitoring and emergency response',
-        'Integration with vehicle control systems'
+        'Real-time environment perception and mapping,Path planning and obstacle avoidance,Traffic prediction and route optimization,Vehicle-to-vehicle communication coordination,Safety monitoring and emergency response,Integration with vehicle control systems'
       ],
       pricing: '$25,000 - $100,000/month',
       delivery: '16-32 weeks',
@@ -900,12 +722,7 @@ export default function AIServices() {
       description: 'Intelligent energy distribution and consumption optimization system',
       icon: Zap,
       features: [
-        'Real-time energy demand prediction and optimization',
-        'Renewable energy integration and storage management',
-        'Grid stability monitoring and control',
-        'Energy trading and market optimization',
-        'Predictive maintenance for grid infrastructure',
-        'Integration with smart meters and IoT devices'
+        'Real-time energy demand prediction and optimization,Renewable energy integration and storage management,Grid stability monitoring and control,Energy trading and market optimization,Predictive maintenance for grid infrastructure,Integration with smart meters and IoT devices'
       ],
       pricing: '$20,000 - $80,000/month',
       delivery: '12-24 weeks',
@@ -916,12 +733,7 @@ export default function AIServices() {
       description: 'Smart farming system with crop monitoring and yield optimization',
       icon: TreePine,
       features: [
-        'Crop health monitoring and disease detection',
-        'Precision agriculture and resource optimization',
-        'Weather prediction and irrigation management',
-        'Yield prediction and harvest optimization',
-        'Soil analysis and nutrient management',
-        'Integration with IoT sensors and drones'
+        'Crop health monitoring and disease detection,Precision agriculture and resource optimization,Weather prediction and irrigation management,Yield prediction and harvest optimization,Soil analysis and nutrient management,Integration with IoT sensors and drones'
       ],
       pricing: '$8,000 - $35,000/month',
       delivery: '10-20 weeks',
@@ -932,12 +744,7 @@ export default function AIServices() {
       description: 'Intelligent urban infrastructure management and optimization platform',
       icon: Globe,
       features: [
-        'Traffic flow optimization and congestion management',
-        'Public safety monitoring and emergency response',
-        'Resource allocation and waste management',
-        'Environmental monitoring and air quality control',
-        'Citizen service optimization and delivery',
-        'Integration with city infrastructure and IoT networks'
+        'Traffic flow optimization and congestion management,Public safety monitoring and emergency response,Resource allocation and waste management,Environmental monitoring and air quality control,Citizen service optimization and delivery,Integration with city infrastructure and IoT networks'
       ],
       pricing: '$30,000 - $150,000/month',
       delivery: '20-40 weeks',
@@ -948,12 +755,7 @@ export default function AIServices() {
       description: 'Intelligent manufacturing process optimization and quality assurance',
       icon: Settings,
       features: [
-        'Real-time quality inspection and defect detection',
-        'Predictive maintenance and equipment optimization',
-        'Production line optimization and scheduling',
-        'Supply chain optimization and demand forecasting',
-        'Worker safety monitoring and compliance',
-        'Integration with manufacturing execution systems'
+        'Real-time quality inspection and defect detection,Predictive maintenance and equipment optimization,Production line optimization and scheduling,Supply chain optimization and demand forecasting,Worker safety monitoring and compliance,Integration with manufacturing execution systems'
       ],
       pricing: '$12,000 - $60,000/month',
       delivery: '10-24 weeks',
@@ -964,12 +766,7 @@ export default function AIServices() {
       description: 'Intelligent personal health monitoring and wellness optimization',
       icon: Heart,
       features: [
-        'Continuous health monitoring and vital signs tracking',
-        'Personalized health recommendations and interventions',
-        'Medication adherence monitoring and reminders',
-        'Lifestyle optimization and habit formation',
-        'Integration with wearables and health devices',
-        'Telehealth consultation and remote monitoring'
+        'Continuous health monitoring and vital signs tracking,Personalized health recommendations and interventions,Medication adherence monitoring and reminders,Lifestyle optimization and habit formation,Integration with wearables and health devices,Telehealth consultation and remote monitoring'
       ],
       pricing: '$99 - $499/month',
       delivery: '6-12 weeks',
@@ -980,14 +777,7 @@ export default function AIServices() {
       description: 'Advanced predictive modeling platform with real-time forecasting and business intelligence',
       icon: TrendingUp,
       features: [
-        'Advanced machine learning algorithms for forecasting',
-        'Real-time data processing and model updates',
-        'Multi-variate analysis and correlation detection',
-        'Custom model training and deployment',
-        'Automated feature engineering and selection',
-        'Integration with business intelligence tools',
-        'Predictive maintenance and anomaly detection',
-        'ROI optimization and scenario planning'
+        'Advanced machine learning algorithms for forecasting,Real-time data processing and model updates,Multi-variate analysis and correlation detection,Custom model training and deployment,Automated feature engineering and selection,Integration with business intelligence tools,Predictive maintenance and anomaly detection,ROI optimization and scenario planning'
       ],
       pricing: '$8,000 - $35,000/month',
       delivery: '8-12 weeks',
@@ -998,14 +788,7 @@ export default function AIServices() {
       description: 'Advanced conversational AI with natural language understanding and multi-modal interactions',
       icon: Mic,
       features: [
-        'Natural language processing with context awareness',
-        'Multi-modal interactions (voice, text, visual)',
-        'Emotion recognition and response adaptation',
-        'Multi-language support with real-time translation',
-        'Integration with enterprise systems and APIs',
-        'Custom voice training and personality development',
-        'Conversation analytics and optimization',
-        'Scalable deployment across multiple channels'
+        'Natural language processing with context awareness,Multi-modal interactions (voice, text, visual),Emotion recognition and response adaptation,Multi-language support with real-time translation,Integration with enterprise systems and APIs,Custom voice training and personality development,Conversation analytics and optimization,Scalable deployment across multiple channels'
       ],
       pricing: '$5,000 - $25,000/month',
       delivery: '6-10 weeks',
@@ -1016,14 +799,7 @@ export default function AIServices() {
       description: 'Intelligent code analysis platform with automated reviews, security scanning, and optimization',
       icon: Code,
       features: [
-        'Automated code quality assessment and scoring',
-        'Security vulnerability detection and remediation',
-        'Performance optimization recommendations',
-        'Code style enforcement and best practices',
-        'Automated test generation and coverage analysis',
-        'Integration with CI/CD pipelines and Git workflows',
-        'Team collaboration and knowledge sharing',
-        'Custom rule creation and policy enforcement'
+        'Automated code quality assessment and scoring,Security vulnerability detection and remediation,Performance optimization recommendations,Code style enforcement and best practices,Automated test generation and coverage analysis,Integration with CI/CD pipelines and Git workflows,Team collaboration and knowledge sharing,Custom rule creation and policy enforcement'
       ],
       pricing: '$2,500 - $12,000/month',
       delivery: '4-8 weeks',
@@ -1034,14 +810,7 @@ export default function AIServices() {
       description: 'Blockchain smart contract analysis with security auditing and optimization recommendations',
       icon: Shield,
       features: [
-        'Automated smart contract security auditing',
-        'Vulnerability detection and risk assessment',
-        'Gas optimization and efficiency analysis',
-        'Compliance checking with blockchain standards',
-        'Code quality metrics and improvement suggestions',
-        'Integration with development environments',
-        'Automated testing and validation',
-        'Audit report generation and documentation'
+        'Automated smart contract security auditing,Vulnerability detection and risk assessment,Gas optimization and efficiency analysis,Compliance checking with blockchain standards,Code quality metrics and improvement suggestions,Integration with development environments,Automated testing and validation,Audit report generation and documentation'
       ],
       pricing: '$3,000 - $15,000/month',
       delivery: '5-8 weeks',
@@ -1052,14 +821,7 @@ export default function AIServices() {
       description: 'Advanced customer analytics platform with behavioral prediction and personalization',
       icon: Users,
       features: [
-        'Customer journey mapping and behavior analysis',
-        'Predictive customer lifetime value modeling',
-        'Churn prediction and retention strategies',
-        'Personalized recommendation engines',
-        'Real-time behavioral segmentation',
-        'A/B testing and optimization automation',
-        'Cross-channel customer experience tracking',
-        'Integration with CRM and marketing platforms'
+        'Customer journey mapping and behavior analysis,Predictive customer lifetime value modeling,Churn prediction and retention strategies,Personalized recommendation engines,Real-time behavioral segmentation,A/B testing and optimization automation,Cross-channel customer experience tracking,Integration with CRM and marketing platforms'
       ],
       pricing: '$4,000 - $18,000/month',
       delivery: '6-10 weeks',
@@ -1070,12 +832,7 @@ export default function AIServices() {
       description: 'End-to-end machine learning operations with automated model deployment and monitoring',
       icon: Settings,
       features: [
-        'Automated model training and deployment pipelines',
-        'Real-time model performance monitoring',
-        'A/B testing and model versioning',
-        'Automated retraining and drift detection',
-        'Model governance and compliance tracking',
-        'Integration with cloud platforms and data sources'
+        'Automated model training and deployment pipelines,Real-time model performance monitoring,A/B testing and model versioning,Automated retraining and drift detection,Model governance and compliance tracking,Integration with cloud platforms and data sources'
       ],
       pricing: '$5,000 - $20,000/month',
       delivery: '6-8 weeks',
@@ -1086,12 +843,7 @@ export default function AIServices() {
       description: 'Intelligent equipment maintenance prediction with IoT integration and cost optimization',
       icon: Settings,
       features: [
-        'Predictive failure analysis with 90%+ accuracy',
-        'Real-time equipment health monitoring',
-        'Automated maintenance scheduling optimization',
-        'Cost-benefit analysis for maintenance decisions',
-        'Integration with IoT sensors and SCADA systems',
-        'Maintenance history and performance analytics'
+        'Predictive failure analysis with 90%+ accuracy,Real-time equipment health monitoring,Automated maintenance scheduling optimization,Cost-benefit analysis for maintenance decisions,Integration with IoT sensors and SCADA systems,Maintenance history and performance analytics'
       ],
       pricing: '$3,000 - $15,000/month',
       delivery: '4-6 weeks',
@@ -1102,12 +854,7 @@ export default function AIServices() {
       description: 'Advanced NLP capabilities for text analysis, translation, and language understanding',
       icon: MessageSquare,
       features: [
-        'Multi-language text analysis and sentiment detection',
-        'Automated document summarization and extraction',
-        'Real-time translation and language detection',
-        'Named entity recognition and relationship extraction',
-        'Custom model training for domain-specific applications',
-        'API integration for seamless deployment'
+        'Multi-language text analysis and sentiment detection,Automated document summarization and extraction,Real-time translation and language detection,Named entity recognition and relationship extraction,Custom model training for domain-specific applications,API integration for seamless deployment'
       ],
       pricing: '$2,000 - $10,000/month',
       delivery: '3-5 weeks',
@@ -1118,12 +865,7 @@ export default function AIServices() {
       description: 'Intelligent financial risk analysis with real-time monitoring and predictive modeling',
       icon: TrendingUp,
       features: [
-        'Real-time credit risk assessment and scoring',
-        'Market risk analysis and portfolio optimization',
-        'Fraud detection and prevention algorithms',
-        'Regulatory compliance monitoring and reporting',
-        'Stress testing and scenario analysis',
-        'Integration with financial data sources and systems'
+        'Real-time credit risk assessment and scoring,Market risk analysis and portfolio optimization,Fraud detection and prevention algorithms,Regulatory compliance monitoring and reporting,Stress testing and scenario analysis,Integration with financial data sources and systems'
       ],
       pricing: '$4,000 - $18,000/month',
       delivery: '5-7 weeks',
@@ -1134,12 +876,7 @@ export default function AIServices() {
       description: 'Intelligent medical image analysis and diagnostic support with clinical decision assistance',
       icon: Heart,
       features: [
-        'Medical image analysis with 95%+ accuracy',
-        'Clinical decision support and recommendations',
-        'Patient risk stratification and monitoring',
-        'Drug interaction and adverse event prediction',
-        'Integration with EHR and medical imaging systems',
-        'HIPAA-compliant data processing and storage'
+        'Medical image analysis with 95%+ accuracy,Clinical decision support and recommendations,Patient risk stratification and monitoring,Drug interaction and adverse event prediction,Integration with EHR and medical imaging systems,HIPAA-compliant data processing and storage'
       ],
       pricing: '$5,000 - $25,000/month',
       delivery: '6-10 weeks',
@@ -1150,12 +887,7 @@ export default function AIServices() {
       description: 'Intelligent quality inspection and defect detection for manufacturing and production',
       icon: Eye,
       features: [
-        'Real-time defect detection and classification',
-        'Automated quality scoring and pass/fail decisions',
-        'Predictive quality analytics and trend analysis',
-        'Integration with production line systems',
-        'Custom model training for specific products',
-        'Quality reporting and compliance documentation'
+        'Real-time defect detection and classification,Automated quality scoring and pass/fail decisions,Predictive quality analytics and trend analysis,Integration with production line systems,Custom model training for specific products,Quality reporting and compliance documentation'
       ],
       pricing: '$3,000 - $12,000/month',
       delivery: '4-6 weeks',
@@ -1166,12 +898,7 @@ export default function AIServices() {
       description: 'Intelligent urban infrastructure management with IoT integration and optimization',
       icon: Globe,
       features: [
-        'Traffic flow optimization and congestion management',
-        'Energy consumption monitoring and optimization',
-        'Environmental monitoring and pollution control',
-        'Public safety and emergency response coordination',
-        'Citizen service automation and optimization',
-        'Integration with smart city infrastructure and sensors'
+        'Traffic flow optimization and congestion management,Energy consumption monitoring and optimization,Environmental monitoring and pollution control,Public safety and emergency response coordination,Citizen service automation and optimization,Integration with smart city infrastructure and sensors'
       ],
       pricing: '$8,000 - $35,000/month',
       delivery: '8-12 weeks',
@@ -1182,12 +909,7 @@ export default function AIServices() {
       description: 'Intelligent farming optimization with crop monitoring, yield prediction, and resource management',
       icon: TreePine,
       features: [
-        'Crop health monitoring and disease detection',
-        'Yield prediction and optimization recommendations',
-        'Precision agriculture and resource allocation',
-        'Weather analysis and irrigation optimization',
-        'Integration with IoT sensors and drone imagery',
-        'Sustainability tracking and compliance reporting'
+        'Crop health monitoring and disease detection,Yield prediction and optimization recommendations,Precision agriculture and resource allocation,Weather analysis and irrigation optimization,Integration with IoT sensors and drone imagery,Sustainability tracking and compliance reporting'
       ],
       pricing: '$2,500 - $10,000/month',
       delivery: '4-6 weeks',
@@ -1198,12 +920,7 @@ export default function AIServices() {
       description: 'Intelligent algorithmic trading with market analysis and risk management',
       icon: TrendingUp,
       features: [
-        'Real-time market analysis and trend prediction',
-        'Automated trading strategy execution',
-        'Risk management and portfolio optimization',
-        'Backtesting and strategy validation',
-        'Integration with trading platforms and data feeds',
-        'Compliance monitoring and regulatory reporting'
+        'Real-time market analysis and trend prediction,Automated trading strategy execution,Risk management and portfolio optimization,Backtesting and strategy validation,Integration with trading platforms and data feeds,Compliance monitoring and regulatory reporting'
       ],
       pricing: '$5,000 - $25,000/month',
       delivery: '6-8 weeks',
@@ -1214,12 +931,7 @@ export default function AIServices() {
       description: 'Advanced threat detection and response with behavioral analysis and automated defense',
       icon: Shield,
       features: [
-        'Real-time threat detection and analysis',
-        'Behavioral anomaly detection and user monitoring',
-        'Automated incident response and remediation',
-        'Threat intelligence and vulnerability assessment',
-        'Integration with security tools and SIEM systems',
-        'Compliance monitoring and audit reporting'
+        'Real-time threat detection and analysis,Behavioral anomaly detection and user monitoring,Automated incident response and remediation,Threat intelligence and vulnerability assessment,Integration with security tools and SIEM systems,Compliance monitoring and audit reporting'
       ],
       pricing: '$4,000 - $18,000/month',
       delivery: '5-7 weeks',
@@ -1230,20 +942,214 @@ export default function AIServices() {
       description: 'Intelligent personalization platform for content, products, and user experiences',
       icon: Users,
       features: [
-        'Real-time user behavior analysis and profiling',
-        'Dynamic content and product recommendations',
-        'Personalized user interface adaptation',
-        'A/B testing and optimization automation',
-        'Cross-channel personalization consistency',
-        'Integration with CRM and marketing platforms'
+        'Real-time user behavior analysis and profiling,Dynamic content and product recommendations,Personalized user interface adaptation,A/B testing and optimization automation,Cross-channel personalization consistency,Integration with CRM and marketing platforms'
       ],
       pricing: '$3,000 - $12,000/month',
       delivery: '4-6 weeks',
       category: 'Personalization AI'
+    },
+    {
+<<<<<<< HEAD
+      title: 'AI-Powered Quantum Computing Simulator',
+      description: 'Advanced quantum computing simulation and optimization platform for complex problem solving',
+      icon: Cpu,
+      features: [
+        'Quantum algorithm development and testing,Quantum circuit optimization and simulation,Quantum machine learning model training,Quantum cryptography and security protocols,Integration with classical computing systems,Real-time quantum state monitoring and analysis'
+      ],
+      pricing: '$15,000 - $50,000/month',
+      delivery: '12-20 weeks',
+      category: 'Quantum AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Vehicle Management',
+      description: 'Intelligent fleet management and autonomous vehicle coordination system',
+      icon: Car,
+      features: [
+        'Autonomous vehicle fleet coordination and optimization,Real-time traffic analysis and route optimization,Predictive maintenance and safety monitoring,Passenger experience personalization,Integration with smart city infrastructure,Regulatory compliance and safety reporting'
+      ],
+      pricing: '$20,000 - $75,000/month',
+      delivery: '16-24 weeks',
+      category: 'Autonomous AI'
+    },
+    {
+      title: 'AI-Powered Space Technology Platform',
+      description: 'Advanced space mission planning and satellite management with AI optimization',
+      icon: Satellite,
+      features: [
+        'Satellite constellation optimization and management,Space mission planning and trajectory optimization,Earth observation data analysis and insights,Space debris tracking and collision avoidance,Planetary exploration mission design,Space weather prediction and monitoring'
+      ],
+      pricing: '$25,000 - $100,000/month',
+      delivery: '20-32 weeks',
+      category: 'Space AI'
+    },
+    {
+      title: 'AI-Powered Metaverse Development Platform',
+      description: 'Comprehensive metaverse creation and management with AI-driven content generation',
+      icon: Globe,
+      features: [
+        'AI-generated 3D environments and virtual worlds,Intelligent NPC behavior and interaction systems,Virtual economy management and optimization,Cross-platform metaverse integration,Real-time content generation and adaptation,User behavior analysis and personalization'
+      ],
+      pricing: '$10,000 - $40,000/month',
+      delivery: '12-20 weeks',
+      category: 'Metaverse AI'
+    },
+    {
+      title: 'AI-Powered Blockchain Intelligence Platform',
+      description: 'Advanced blockchain analysis and DeFi optimization with AI-driven insights',
+      icon: Network,
+      features: [
+        'Blockchain transaction analysis and pattern recognition,DeFi protocol optimization and yield farming strategies,Smart contract security auditing and optimization,Cryptocurrency market prediction and trading algorithms,NFT marketplace analysis and valuation,Cross-chain interoperability and bridge optimization'
+      ],
+      pricing: '$8,000 - $30,000/month',
+      delivery: '10-16 weeks',
+      category: 'Blockchain AI'
+    },
+    {
+      title: 'AI-Powered Digital Twin Platform',
+      description: 'Comprehensive digital twin creation and management for physical assets and processes',
+      icon: Monitor,
+      features: [
+        'Real-time asset monitoring and predictive maintenance,Process optimization and simulation modeling,Performance analytics and optimization recommendations,Integration with IoT sensors and data sources,3D visualization and augmented reality interfaces,Automated decision making and control systems'
+      ],
+      pricing: '$12,000 - $45,000/month',
+      delivery: '14-22 weeks',
+      category: 'Digital Twin AI'
+    },
+    {
+      title: 'AI-Powered Edge Computing Platform',
+      description: 'Intelligent edge computing with AI processing and real-time decision making',
+      icon: Cpu,
+      features: [
+        'Distributed AI model deployment and management,Real-time data processing and analysis,Edge-to-cloud synchronization and optimization,Low-latency inference and decision making,Resource optimization and load balancing,Integration with IoT devices and sensors'
+      ],
+      pricing: '$6,000 - $25,000/month',
+      delivery: '8-14 weeks',
+      category: 'Edge AI'
+    },
+    {
+      title: 'AI-Powered Cybersecurity Intelligence Platform',
+      description: 'Advanced threat detection and response with AI-driven security automation',
+      icon: Shield,
+      features: [
+        'Real-time threat detection and analysis,Automated incident response and remediation,Behavioral analysis and anomaly detection,Zero-day vulnerability identification,Security orchestration and automation,Compliance monitoring and reporting'
+      ],
+      pricing: '$15,000 - $60,000/month',
+      delivery: '12-20 weeks',
+      category: 'Cybersecurity AI'
+    },
+    {
+      title: 'AI-Powered Healthcare Diagnostics Platform',
+      description: 'Advanced medical imaging analysis and diagnostic assistance with AI',
+      icon: Heart,
+      features: [
+        'Medical image analysis and interpretation,Disease detection and early diagnosis,Treatment recommendation and optimization,Patient monitoring and risk assessment,Integration with EHR and medical devices,Regulatory compliance and clinical validation'
+      ],
+      pricing: '$20,000 - $80,000/month',
+      delivery: '16-24 weeks',
+      category: 'Healthcare AI'
+=======
+      title: 'AI-Powered Cybersecurity Threat Detection',
+      description: 'Advanced threat detection and response system with real-time monitoring and automated incident response',
+      icon: Shield,
+      features: [
+        'Real-time threat detection and analysis,Automated incident response and containment,Behavioral anomaly detection,Zero-day threat identification,Threat intelligence integration,Compliance monitoring and reporting'
+      ],
+      pricing: '$4,500 - $18,000/month',
+      delivery: '6-8 weeks',
+      category: 'Cybersecurity AI'
+    },
+    {
+      title: 'AI-Powered Medical Diagnosis Assistant',
+      description: 'Intelligent medical diagnosis support with image analysis and symptom correlation',
+      icon: Heart,
+      features: [
+        'Medical image analysis and interpretation,Symptom correlation and diagnosis suggestions,Patient data analysis and risk assessment,Drug interaction and allergy checking,Medical literature research and insights,Integration with EHR systems'
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '10-16 weeks',
+      category: 'Medical AI'
+    },
+    {
+      title: 'AI-Powered Legal Document Analysis',
+      description: 'Intelligent legal document review and contract analysis with risk assessment',
+      icon: FileText,
+      features: [
+        'Automated contract review and analysis,Legal document summarization and key point extraction,Risk assessment and compliance checking,Legal research and precedent analysis,Document comparison and version control,Integration with legal case management systems'
+      ],
+      pricing: '$5,000 - $20,000/month',
+      delivery: '8-12 weeks',
+      category: 'Legal AI'
+    },
+    {
+      title: 'AI-Powered Financial Risk Assessment',
+      description: 'Intelligent financial risk analysis and credit scoring with predictive modeling',
+      icon: TrendingUp,
+      features: [
+        'Credit risk assessment and scoring,Market risk analysis and prediction,Fraud detection and prevention,Portfolio optimization and management,Regulatory compliance monitoring,Real-time financial alerts and recommendations'
+      ],
+      pricing: '$6,000 - $25,000/month',
+      delivery: '8-14 weeks',
+      category: 'Financial AI'
+    },
+    {
+      title: 'AI-Powered Environmental Monitoring',
+      description: 'Intelligent environmental data analysis and climate prediction with IoT integration',
+      icon: TreePine,
+      features: [
+        'Environmental data collection and analysis,Climate change prediction and modeling,Pollution monitoring and alert systems,Resource optimization and sustainability planning,Environmental compliance reporting,Integration with IoT sensors and satellite data'
+      ],
+      pricing: '$4,000 - $16,000/month',
+      delivery: '6-10 weeks',
+      category: 'Environmental AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Vehicle Systems',
+      description: 'Advanced autonomous vehicle technology with real-time decision making and safety systems',
+      icon: Car,
+      features: [
+        'Real-time object detection and path planning,Traffic pattern analysis and optimization,Vehicle-to-vehicle communication,Autonomous parking and navigation,Safety system monitoring and alerts,Integration with smart city infrastructure'
+      ],
+      pricing: '$15,000 - $60,000/month',
+      delivery: '16-24 weeks',
+      category: 'Autonomous Vehicle AI'
+    },
+    {
+      title: 'AI-Powered Satellite Data Analysis',
+      description: 'Intelligent satellite imagery analysis for agriculture, urban planning, and disaster response',
+      icon: Satellite,
+      features: [
+        'Satellite imagery analysis and interpretation,Crop monitoring and yield prediction,Urban development tracking,Disaster damage assessment,Weather pattern analysis,Integration with GIS and mapping systems'
+      ],
+      pricing: '$7,000 - $28,000/month',
+      delivery: '10-16 weeks',
+      category: 'Satellite AI'
+    },
+    {
+      title: 'AI-Powered Energy Grid Optimization',
+      description: 'Intelligent energy grid management with demand forecasting and renewable energy integration',
+      icon: Zap,
+      features: [
+        'Energy demand forecasting and optimization,Smart grid management and control,Renewable energy integration and storage,Power outage prediction and prevention,Energy efficiency optimization,Integration with smart meters and IoT devices'
+      ],
+      pricing: '$8,000 - $32,000/month',
+      delivery: '12-20 weeks',
+      category: 'Energy AI'
+    },
+    {
+      title: 'AI-Powered Drug Discovery Platform',
+      description: 'Intelligent drug discovery and development with molecular analysis and clinical trial optimization',
+      icon: Heart,
+      features: [
+        'Molecular structure analysis and drug design,Clinical trial optimization and patient matching,Drug interaction and side effect prediction,Biomarker identification and analysis,Regulatory compliance and approval tracking,Integration with pharmaceutical databases'
+      ],
+      pricing: '$12,000 - $50,000/month',
+      delivery: '16-24 weeks',
+      category: 'Pharmaceutical AI'
+>>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-68a5
     }
   ];
   const aiTechnologies = [
-    {
+  {
       name: 'Machine Learning',
       icon: Brain,
       description: 'Custom ML models and algorithms',
@@ -1275,7 +1181,7 @@ export default function AIServices() {
     },
   ];
   const benefits = [
-    {
+  {
       title: 'Increased Efficiency',
       description: 'Automate repetitive tasks and processes',
       icon: Zap,

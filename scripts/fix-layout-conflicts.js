@@ -12,8 +12,8 @@ function fixLayoutConflicts(content, filePath) {
   let changes = 0;
   
   // Check if both Layout component and Layout icon are imported
-  const hasLayoutComponent = fixedContent.includes("import Layout from '../components/Layout'") || 
-                           fixedContent.includes("import Layout from '../components/Layout';");
+  const hasLayoutComponent = fixedContent.includes("import Layout  from '../components/Layout) || 
+                           fixedContent.includes("import Layout from '../components/Layout);
   
   const hasLayoutIcon = fixedContent.includes('Layout,') || fixedContent.includes('Layout }');
   
@@ -51,22 +51,11 @@ async function main() {
   console.log('🔧 Starting Layout conflicts fix...\n');
   
   const patterns = [
-    'pages/**/*.{tsx,jsx}',
-    'src/**/*.{tsx,jsx}',
-    'components/**/*.{tsx,jsx}'
+    'pages/**/*.{tsx,jsx},src/**/*.{tsx,jsx},components/**/*.{tsx,jsx}'
   ];
   
   const excludeDirs = [
-    'node_modules',
-    '.next',
-    'build',
-    'dist',
-    'scripts',
-    'automation',
-    'automation_backup',
-    'src.disabled',
-    'pages.disabled',
-    'components.disabled'
+    'node_modules,.next,build,dist,scripts,automation,automation_backup,src.disabled,pages.disabled,components.disabled'
   ];
   
   for (const pattern of patterns) {

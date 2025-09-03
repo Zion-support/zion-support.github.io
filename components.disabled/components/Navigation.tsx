@@ -7,7 +7,7 @@ const Navigation: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const navigationItems = [
-    { name: 'Home', href: '/' },
+  { name: 'Home', href: '/' },
     {
       name: 'Services', 
       href: '/services',

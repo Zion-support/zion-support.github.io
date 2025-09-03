@@ -10,8 +10,8 @@ function fixLintErrors(content) {
   
   // Fix missing semicolons after imports
   fixed = fixed.replace(/import\s+[^;]+$/gm, (match) => {
-    if (!match.endsWith(';')) {
-      return match + ';';
+    if (!match.endsWith()) {
+      return match + ;
     }
     return match;
   });
@@ -19,8 +19,8 @@ function fixLintErrors(content) {
   // Fix malformed imports with missing commas
   fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*['"][^'"]+['"]\s*$/gm, (match, imports) => {
     // Check if imports have proper commas
-    if (imports && !imports.includes(',') && imports.trim().split(/\s+/).length > 1) {
-      const cleanImports = imports.trim().split(/\s+/).join(', ');
+    if (imports && !imports.includes(,) && imports.trim().split(/\s+/).length > 1) {
+      const cleanImports = imports.trim().split(/\s+/).join(,);
       return match.replace(imports, cleanImports);
     }
     return match;
@@ -28,8 +28,8 @@ function fixLintErrors(content) {
   
   // Fix missing semicolons after variable declarations
   fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^;]+$/gm, (match) => {
-    if (!match.endsWith(';')) {
-      return match + ';';
+    if (!match.endsWith()) {
+      return match + ;
     }
     return match;
   });

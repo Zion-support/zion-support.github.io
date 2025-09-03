@@ -1,48 +1,47 @@
 
 ;
-import { Link, useLocation } from 'react-router-dom';"
-import Header from '../layout/Header';"
+import { Link, useLocation } from 'react-router-dom
+import Header from '../layout/Header
 import Footer from '../layout/Footer';
 export default function SimplePage() {
   const location = useLocation();
   const pathname = location.pathname;
   // Generate a title based on the pathname;"
   const getTitle = () => {"
-    const path = pathname.replace('/', '').replace(/-/g, ' ');
+    const path = pathname.replace('/,').replace(/-/g, ' ');
     return path.charAt(0).toUpperCase() + path.slice(1)}
   // Generate content based on the pathname;"
   const getContent = () => {"
     if (pathname.includes('pricing')) {
       return {"
-        title: 'Pricing & Plans', description: 'Transparent pricing for our technology solutions and services.',"
+        title: 'Pricing & Plans', description: 'Transparent pricing for our technology solutions and services.,
         content: 'Our pricing is designed to be transparent and scalable. Contact us for a custom quote tailored to your specific needs and requirements.'}",
 } else if (pathname.includes('case-studies')) {
       return {"
-        title: 'Case Studies', description: 'Real-world examples of how we\\'ve helped businesses transform with technology.','
+        title: 'Case Studies', description: 'Real-world examples of how we\\'ve helped businesses transform with technology.,
         content: 'Explore our case studies to see how we\\'ve delivered measurable results for clients across various industries.'}',
 } else if (pathname.includes('blog')) {
       return {"
-        title: 'Blog & Insights', description: 'Latest insights, trends, and thought leadership in technology.',"
+        title: 'Blog & Insights', description: 'Latest insights, trends, and thought leadership in technology.,
         content: 'Stay updated with the latest technology trends, industry insights, and expert perspectives from our team.'}
     } else {
       return {"
-        title: getTitle(), description: 'Welcome to this page.',"
+        title: getTitle(), description: 'Welcome to this page.,
         content: 'This page is under development. Please check back soon for updated content.'}
     }
   }
   const pageInfo = getContent()"
   return ("
 "
-import { Link, useLocation } from 'react-router-dom';"
+import { Link, useLocation } from 'react-router-dom
 import Header from '../layout/Header'
-import Footer from '../layout/Footer'
-export default function SimplePage() {
+import Footer  from '../layout/Footer';export default function SimplePage() {
   const location = useLocation()
   const pathname = location.pathname
 
   // Generate a title based on the pathname
   const getTitle = () => {"
-    const path = pathname.replace('/', '').replace(/-/g, ' ')
+    const path = pathname.replace('/,').replace(/-/g, ' ')
     return path.charAt(0).toUpperCase() + path.slice(1),
 }
 
@@ -101,12 +100,12 @@ export default function SimplePage() {
               </p>"
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <Link;"
-                  to='/contact';"
+                  to='/contact
                   className='bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors'>
                   Contact Us
                 </Link>
                 <Link"
-                  to='/services';"
+                  to='/services
                   className='border-2 border-blue-600 text-blue-600 hover: bg-blue-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-colors'>
                   View Services
                 </Link>
