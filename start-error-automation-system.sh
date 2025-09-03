@@ -1,7 +1,5 @@
 #!/bin/bash
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 # Error Automation System Startup Script
 # This script initializes and starts the complete error fixing automation system
 
@@ -71,12 +69,6 @@ mkdir -p scripts/automation
 # Step 5: Set up PM2 logrotate
 log "Configuring PM2 logrotate..."
 pm2 install pm2-logrotate || true
-=======
-echo "🚀 Starting PM2 Error Automation System..."
-=======
-# Error Automation System Startup Script
-# This script initializes and starts the complete error automation system
->>>>>>> main
 
 echo "🚀 Starting Error Automation System..."
 
@@ -149,18 +141,15 @@ print_status "Stopping existing PM2 processes..."
 pm2 stop all 2>/dev/null || true
 pm2 delete all 2>/dev/null || true
 
-<<<<<<< HEAD
 # Install PM2 logrotate if not already installed
 echo "📦 Setting up PM2 logrotate..."
 pm2 install pm2-logrotate 2>/dev/null || true
->>>>>>> main
 pm2 set pm2-logrotate:max_size 10M
 pm2 set pm2-logrotate:retain 30
 pm2 set pm2-logrotate:compress true
 pm2 set pm2-logrotate:workerInterval 60
 pm2 set pm2-logrotate:rotateInterval '0 0 * * *'
 
-<<<<<<< HEAD
 # Step 6: Stop any existing PM2 processes
 log "Stopping existing PM2 processes..."
 pm2 stop all || true
@@ -260,9 +249,6 @@ fi
 
 success "Error Automation System is now running and monitoring your project!"
 success "The system will automatically detect and fix errors every few minutes."
-=======
-=======
->>>>>>> main
 # Start the error automation system
 print_status "Starting Error Automation System with PM2..."
 
@@ -347,69 +333,4 @@ echo "Running linting fix..."
 node scripts/automation/linting-error-fixer.cjs
 
 echo ""
-<<<<<<< HEAD
 echo "✅ System is ready!"
->>>>>>> main
-=======
-echo "Running syntax fix..."
-node scripts/automation/syntax-error-fixer.cjs
-
-echo ""
-echo "✅ Quick fixes completed!"
-EOF
-
-chmod +x quick-fix-errors.sh
-
-# Create a comprehensive fix script
-cat > comprehensive-fix-errors.sh << 'EOF'
-#!/bin/bash
-
-echo "🔧 Comprehensive Error Fix Script"
-echo "================================="
-
-echo "Running comprehensive error automation..."
-node scripts/automation/project-error-automation.cjs
-
-echo ""
-echo "Running master coordination..."
-node scripts/automation/master-error-coordinator.cjs
-
-echo ""
-echo "✅ Comprehensive fixes completed!"
-EOF
-
-chmod +x comprehensive-fix-errors.sh
-
-print_success "Error Automation System started successfully!"
-print_success "Created monitoring script: monitor-error-automation.sh"
-print_success "Created quick fix script: quick-fix-errors.sh"
-print_success "Created comprehensive fix script: comprehensive-fix-errors.sh"
-
-echo ""
-echo "🎯 Error Automation System is now running!"
-echo ""
-echo "📋 Available commands:"
-echo "  ./monitor-error-automation.sh     - Monitor the system"
-echo "  ./quick-fix-errors.sh            - Run quick fixes"
-echo "  ./comprehensive-fix-errors.sh    - Run comprehensive fixes"
-echo "  pm2 status                       - Check PM2 status"
-echo "  pm2 logs                         - View logs"
-echo ""
-echo "🔄 The system will automatically:"
-echo "  • Check for errors every 5-30 minutes"
-echo "  • Fix TypeScript errors every 20 minutes"
-echo "  • Fix linting errors every 25 minutes"
-echo "  • Fix syntax errors every 10 minutes"
-echo "  • Coordinate all processes every 15 minutes"
-echo ""
-echo "📊 Reports are saved in: automation/reports/"
-echo "📝 Logs are saved in: automation/logs/"
-echo ""
-
-# Run initial error check
-print_status "Running initial error check..."
-node scripts/automation/project-error-automation.cjs
-
-print_success "Initial error check completed!"
-print_success "Error Automation System is ready!"
->>>>>>> main
