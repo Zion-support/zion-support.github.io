@@ -155,7 +155,7 @@
     "analyze": "ANALYZE=true npm run build",
     "build:production": "NODE_ENV=production npm run build",
     "dev:fast": "npm run dev -- --turbo",
-    "lint:check": "eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 0"
+    "lint:check": "eslint eslint.config.js --max-warnings 0"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
