@@ -62,6 +62,10 @@ function Header(): any {
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
           }}>About</Link>
+          <Link href="/docs" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>Docs</Link>
           <Link href="/contact" style={{ 
             fontWeight: 600, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
             color: 'white', padding: '8px 16px', borderRadius: 8,
@@ -132,6 +136,10 @@ function Header(): any {
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
           }} onClick={() => setMobileMenuOpen(false)}>About</Link>
+          <Link href="/docs" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>Docs</Link>
         </div>
       )}
     </header>
@@ -193,14 +201,14 @@ function Footer(): any {
         <div style={{ display: 'grid', gap: 12 }}>
           <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Solutions</h3>
           <div style={{ display: 'grid', gap: 8 }}>
-            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cloud Cost Optimization</Link>
+            <Link href="/cloud-devops" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cloud & DevOps</Link>
+            <Link href="/cybersecurity" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cybersecurity</Link>
+            <Link href="/quantum-computing" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Quantum Computing</Link>
             <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>AI Automation</Link>
             <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Digital Transformation</Link>
             <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Process Automation</Link>
             <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Predictive Analytics</Link>
-            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cybersecurity</Link>
             <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Content Creation</Link>
-            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Customer Support</Link>
           </div>
         </div>
 
@@ -214,6 +222,19 @@ function Footer(): any {
             <Link href="/faq" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>FAQ</Link>
             <Link href="/privacy" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Privacy Policy</Link>
             <Link href="/terms" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Terms of Service</Link>
+          </div>
+        </div>
+
+        {/* Resources */}
+        <div style={{ display: 'grid', gap: 12 }}>
+          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Resources</h3>
+          <div style={{ display: 'grid', gap: 8 }}>
+            <Link href="/docs" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Documentation</Link>
+            <Link href="/docs/getting-started" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Getting Started</Link>
+            <Link href="/docs/api-overview" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>API Overview</Link>
+            <Link href="/docs/code-examples" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Code Examples</Link>
+            <Link href="/pricing" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Pricing</Link>
+            <Link href="/services-catalog" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Services Catalog</Link>
           </div>
         </div>
 
