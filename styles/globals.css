@@ -56,6 +56,10 @@
   transition: all 0.2s ease;
   text-decoration: none;
   color: white;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: inherit;
 }
 
 .header-nav-link:hover {
@@ -76,6 +80,61 @@
 .header-nav-cta:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Dropdown Styles */
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-trigger {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--header-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--header-border);
+  border-radius: 8px;
+  padding: 8px 0;
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  display: block;
+  padding: 8px 16px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #93c5fd;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background: var(--header-border);
+  margin: 8px 0;
 }
 
 .mobile-menu-button {
@@ -157,6 +216,76 @@
   opacity: 1;
 }
 
+/* Enhanced Footer Styles */
+.contact-info {
+  margin-top: 16px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.contact-icon {
+  font-size: 1rem;
+}
+
+.contact-link {
+  color: #93c5fd;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+  color: #60a5fa;
+  text-decoration: underline;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-link {
+  opacity: 0.8;
+  text-decoration: none;
+  color: white;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.footer-link:hover {
+  opacity: 1;
+  color: #93c5fd;
+}
+
+.service-stats {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.stat-item {
+  margin-bottom: 4px;
+}
+
+.footer-description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.footer-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
 .footer-cta-button {
   background: var(--gradient-primary);
   color: white;
@@ -165,8 +294,6 @@
   text-align: center;
   text-decoration: none;
   font-weight: 600;
-  display: block;
-  margin-bottom: 8px;
   transition: all 0.2s ease;
 }
 
@@ -183,7 +310,6 @@
   text-align: center;
   text-decoration: none;
   font-weight: 600;
-  display: block;
   transition: all 0.2s ease;
 }
 
@@ -191,23 +317,57 @@
   background: rgba(255, 255, 255, 0.2);
 }
 
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.social-link {
+  color: #93c5fd;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.social-link:hover {
+  color: #60a5fa;
+  text-decoration: underline;
+}
+
 .footer-bottom {
   border-top: 1px solid var(--header-border);
   padding: 20px;
-  text-align: center;
+}
+
+.footer-bottom-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 .footer-bottom small {
   opacity: 0.7;
 }
 
-.footer-bottom a {
-  color: #93c5fd;
-  margin-left: 8px;
-  text-decoration: none;
+.footer-bottom-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
-.footer-bottom a:hover {
+.footer-bottom-link {
+  color: #93c5fd;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.footer-bottom-link:hover {
+  color: #60a5fa;
   text-decoration: underline;
 }
 
@@ -224,6 +384,24 @@
   .footer-content {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+  
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  
+  .footer-bottom-links {
+    justify-content: center;
+  }
+  
+  .dropdown-menu {
+    position: fixed;
+    top: 60px;
+    left: 20px;
+    right: 20px;
+    min-width: auto;
   }
 }
 
