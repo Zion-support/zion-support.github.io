@@ -124,7 +124,9 @@ const Navigation = () => {
         { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI solutions' },
         { name: 'IT Services', href: '/it-services', icon: Network, description: 'Comprehensive IT solutions' },
         { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Scalable SaaS solutions' },
-        { name: 'All Services', href: '/services', icon: Settings, description: 'Complete service overview' }
+        { name: 'All Services', href: '/services', icon: Settings, description: 'Complete service overview' },
+        { name: 'Blockchain Solutions', href: '/blockchain-solutions', icon: Network, description: 'Blockchain & Web3 solutions' },
+        { name: 'IoT Solutions', href: '/iot-solutions', icon: Cpu, description: 'Internet of Things solutions' }
       ]
     },
     { 
@@ -134,7 +136,32 @@ const Navigation = () => {
         { name: 'AI Solutions', href: '/solutions/ai', icon: Brain, description: 'AI-powered business solutions' },
         { name: 'Cloud Solutions', href: '/solutions/cloud', icon: Cloud, description: 'Cloud infrastructure solutions' },
         { name: 'Security Solutions', href: '/solutions/security', icon: Shield, description: 'Cybersecurity solutions' },
-        { name: 'Digital Transformation', href: '/solutions/digital', icon: Zap, description: 'Digital transformation services' }
+        { name: 'Digital Transformation', href: '/solutions/digital', icon: Zap, description: 'Digital transformation services' },
+        { name: 'Data Analytics', href: '/solutions/analytics', icon: BarChart3, description: 'Data analytics & BI solutions' },
+        { name: 'Automation Solutions', href: '/solutions/automation', icon: Settings, description: 'Process automation solutions' }
+      ]
+    },
+    { 
+      name: 'Company', 
+      href: '/about',
+      dropdown: [
+        { name: 'About Us', href: '/about', icon: Info, description: 'Learn about our company' },
+        { name: 'Our Team', href: '/team', icon: Users, description: 'Meet our experts' },
+        { name: 'Careers', href: '/careers', icon: Rocket, description: 'Join our team' },
+        { name: 'Partners', href: '/partners', icon: Users, description: 'Our partners' },
+        { name: 'Press', href: '/press', icon: FileText, description: 'Press releases & news' }
+      ]
+    },
+    { 
+      name: 'Resources', 
+      href: '/blog',
+      dropdown: [
+        { name: 'Blog', href: '/blog', icon: FileText, description: 'Latest insights & news' },
+        { name: 'Case Studies', href: '/case-studies', icon: BarChart3, description: 'Success stories' },
+        { name: 'Documentation', href: '/docs', icon: FileText, description: 'Technical documentation' },
+        { name: 'Training', href: '/training', icon: Brain, description: 'Training & certification' },
+        { name: 'Support', href: '/support', icon: Users, description: 'Get help & support' },
+        { name: 'API Reference', href: '/api', icon: Code, description: 'API documentation' }
       ]
 <<<<<<< HEAD
     }, { name: 'Solutions', href: '/solutions' }, { name: 'About', href: '/about' }, { name: 'Contact', href: '/contact' }, { name: 'Blog', href: '/blog' }, { name: 'Careers', href: '/careers' }
@@ -144,11 +171,8 @@ const Navigation = () => {
     { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' }, { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
 =======
     },
-    { name: 'About', href: '/about' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Careers', href: '/careers' }
+    { name: 'Pricing', href: '/pricing-guide' }
   ];
 
   const contactInfo = [
