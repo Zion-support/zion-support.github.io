@@ -23,6 +23,9 @@ const MarketplacePage: React.FC = () => {
         </div>
       </section>
     </MainLayout>
+  );
+}
+
 export default function Marketplace() {
   const categories = [
     {

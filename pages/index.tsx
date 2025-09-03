@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { 
   ArrowRight, 
@@ -68,14 +67,20 @@ export default function Home() {
       title: 'Cybersecurity',
       description: 'Advanced security measures to protect your digital assets and ensure compliance.',
       color: 'from-green-500 to-emerald-500'
+    },
+    {
       icon: Zap,
       title: 'DevOps Excellence',
       description: 'Streamlined development and deployment processes for faster, more reliable software delivery.',
       color: 'from-yellow-500 to-orange-500'
+    },
+    {
       icon: Database,
       title: 'Data Analytics',
       description: 'Transform raw data into actionable insights with our advanced analytics platforms.',
       color: 'from-indigo-500 to-purple-500'
+    },
+    {
       icon: Code,
       title: 'Custom Development',
       description: 'Tailored software solutions built to meet your specific business requirements.',
@@ -83,19 +88,33 @@ export default function Home() {
     }
   ];
 
-    { number: '500+', label: 'Projects Completed' } { number: '99.9%', label: 'Uptime Guarantee' } { number: '50+', label: 'Expert Team Members' } { number: '24/7', label: 'Support Available' }
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '50+', label: 'Expert Team Members' },
+    { number: '24/7', label: 'Support Available' }
+  ];
 
   const testimonials = [
+    {
       name: 'Sarah Johnson',
       role: 'CTO, TechCorp',
       content: 'Zion Tech Group transformed our entire technology infrastructure. Their AI solutions increased our efficiency by 300%.',
       rating: 5
+    },
+    {
       name: 'Michael Chen',
       role: 'CEO, InnovateLab',
       content: 'The cloud architecture they designed is incredibly scalable and secure. We can now handle 10x more traffic.',
+      rating: 5
+    },
+    {
       name: 'Emily Rodriguez',
       role: 'VP Engineering, DataFlow',
       content: 'Their DevOps practices reduced our deployment time from hours to minutes. Outstanding work!',
+      rating: 5
+    }
+  ];
 
   return (
     <>
@@ -1460,29 +1479,3 @@ const Home = memo(() => {
 Home.displayName = 'Home';
 
 export default Home;
-=======
-
-export default function Home() {
-  return (
-    <>
-      <Head>
-        <title>Zion Tech Group</title>
-        <meta name="description" content="Leading technology solutions provider" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-      <main className="min-h-screen bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              Welcome to Zion Tech Group
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Leading provider of revolutionary technology solutions, AI services, and cutting-edge innovations.
-            </p>
-          </div>
-        </div>
-      </main>
-    </>
-  );
-}
->>>>>>> a4e4b61825d9486fa9e1113a59af8c11dc69fb90
