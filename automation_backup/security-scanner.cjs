@@ -1,7 +1,6 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const fs = require('fs');
-const path = require('path');
+const path = require(`path`);
 
 class SecurityScanner {
   constructor() {
@@ -23,14 +22,14 @@ class SecurityScanner {
 
   scanDependencies() {
     try {
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const packageJson = JSON.parse(fs.readFileSync(`package.json`, 'utf8'));
       const dependencies = {
         ...packageJson.dependencies,
         ...packageJson.devDependencies,
       };
 
-      // Check for known vulnerable packages
-      const vulnerablePackages = ['lodash', 'moment']; // Example
+      // Check for known vulnerable packages;
+      const vulnerablePackages = ['lodash', 'moment']; // Example;
       for (const [pkg, version] of Object.entries(dependencies)) {
         if (vulnerablePackages.includes(pkg)) {
           this.vulnerabilities.push({
@@ -42,9 +41,9 @@ class SecurityScanner {
           this.securityScore -= 10;
         }
       }
-    } catch (error) {
+    } catch (error) { 
       console.error('Error scanning dependencies:', error.message);
-    }
+     }
   }
 
   scanCode() {
@@ -70,7 +69,7 @@ class SecurityScanner {
   }
 
   scanConfiguration() {
-    // Check for security headers
+    // Check for security headers;
     const nextConfig = path.join(__dirname, '..', '..', 'next.config.js');
     if (fs.existsSync(nextConfig)) {
       const content = fs.readFileSync(nextConfig, 'utf8');

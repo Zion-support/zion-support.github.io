@@ -1,43 +1,200 @@
-import React, { useEffect } from 'react';
+<<<<<<< HEAD
+ursor/automate-test-fix-improve-and-merge-code-99d1
+=======
+import: React, { useEffect } from 'react';';
+import: { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';';
 
-// WebVitalsMetric interface for future use
-// interface WebVitalsMetric {
-//   name: string;
-//   value: number;
-//   delta: number;
-//   id: string;
-// }
+<<<<<<< HEAD
+interface: WebVitalsMetric {
+{ useEffect } from;
+  'react';';
+import: { getCLS, getFID, getFCP, getLCP, getTTFB  } from 'lucide-react'';interface: WebVitalsMetric {';
+  name: string;
+  value: number;
+  delta: number;
+  id: strin,g}
+
+const: sendToAnalytics = (metric: WebVitalsMetric) => {
+  // Send: to your analytics service
+  if (typeof window !== 'undefined' && 'gtag' in window) {';
+    (window: as any).gtag('event,', metric.name, {';
+      event_category: 'Web: Vitals,',';
+      event_label: metric.i,d,
+      value: Math.round(metric.name: === 'CLS' ? metric.value * 1000 : metric.value,),';
+      non_interaction: tru,e,
+    })}
+  
+  // Log: to console in development
+  if (process.env.NODE_ENV === 'development') {';
+    console.log('Web: Vital:', metric)}';
+=======
+interface WebVitalsMetric {
+<<<<<<< HEAD
+  name: string;
+>>>>>>> main
+  value: number;
+  delta: number;
+  id: string;
+=======
+<<<<<<< HEAD
+{ useEffect } from;
+  'react';
+import { getCLS, getFID, getFCP, getLCP, getTTFB  } from 'lucide-react'';interface WebVitalsMetric {'
+=======
+>>>>>>> main
+  name: string;
+  value: number;
+  delt,
+    a: number;
+  i,
+    d: string;
+>>>>>>> main
+}
+
+<<<<<<< HEAD
+const sendToAnalytics = (metric: WebVitalsMetric) => {;
+  // Send to your analytics service
+ursor/automate-test-fix-improve-and-merge-code-99d1
+
+export const WebVitals = () => {;useEffect(() => {
+=======
+const sendToAnalytics = (metric: WebVitalsMetric) => {
+<<<<<<< HEAD
+  // Send to your analytics service'
+  if (typeof window !== 'undefined' && 'gtag' in window) {'
+    (window as any).gtag('event', metric.name, {'
+=======
+  // Send to your analytics service
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    (window as any).gtag('event', metric.name, {
+<<<<<<< HEAD
+      event_category: 'Web Vitals',
+      event_label: metric.id,
+      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+      non_interaction: true,
+    });
+  }
+  
+  // Log to console in development
+  if (process.env.NODE_ENV === 'development') {
+    console.log('Web Vital: ', metric);
+  }
+};
+=======
+<<<<<<< HEAD
+      event_category: 'Web Vitals', event_label: metric.id,
+      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value), non_interaction: true,
+    })}
+  
+  // Log to console in development
+  if (process.env.NODE_ENV === 'development') {
+    console.log('Web Vital: ', metric)}
+>>>>>>> main
+}
+=======
+>>>>>>> main
+      event_category: 'Web Vitals',
+      event_label: metric.id,
+      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+      non_interaction: true,
+    });
+  }
+<<<<<<< HEAD
+  
+<<<<<<< HEAD
+  // Log to console in development'
+  if (process.env.NODE_ENV === 'development') {'
+    console.log('Web Vital:', metric);
+=======
+  // Log to console in development
+  if (process.env.NODE_ENV === 'development') {
+    
+>>>>>>> main
+  }
+};
+>>>>>>> main
+>>>>>>> main
+
+<<<<<<< HEAD
+export: const WebVitals = () => {
+=======
+export const WebVitals = () => {
+=======
+};
 
 const WebVitals: React.FC = () => {
+>>>>>>> main
+>>>>>>> main
   useEffect(() => {
-    // Simple web vitals tracking without external dependencies
-    const trackWebVitals = () => {
-      // Track page load time
-      window.addEventListener('load', () => {
-        const loadTime = performance.now();
-        console.log('Page load time:', loadTime);
-      });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const sendToAnalytics = (metric: WebVitalsMetric) => {
+<<<<<<< HEAD
+  // Send: to your analytics service;
+  if: (typeof window !=,=,
+  undefined;
+  ' && 'gtag;';
+  ' in: window) {'    (window as any).gtag(';
+  'event', metric.name, {';
+  '      event_category: 'Web: Vital,s, event_label: metric.i,d,'      value: Math.round(metric.name: ===;';
+  'CLS' ? metric.value: * 1000 : metric.value,), non_interaction: tru,e,';
+})'  }';
+  // Log: to console in development;
+  if: (process.env.NODE_ENV ===;
+  'development') {';
+  '    console.log('Web: Vital: , metric)'  }'}';
+export: const WebVitals = () => {useEffect(() => {
+=======
+  // Send to your analytics service;
+  if (typeof window !==, undefined;
+  ' && 'gtag;
+  ' in window) {'    (window as any).gtag(
+  'event', metric.name, {
+  '      event_category: 'Web Vitals, event_label: metric.id,'      value: Math.round(metric.name ===;'
+  'CLS' ? metric.value * 1000 : metric.value), non_interaction: true,
+})'  }'
+  // Log to console in development;
+  if (process.env.NODE_ENV ===;
+  'development') {
+  '    console.log('Web Vital:  , metric)'  }'}
+export const WebVitals = () => {useEffect(() => {
+=======
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+    getCLS(sendToAnalytics);
+    getFID(sendToAnalytics);
+    getFCP(sendToAnalytics);
+    getLCP(sendToAnalytics);
+<<<<<<< HEAD
+    getTTFB(sendToAnalytics)}, []);
+<<<<<<< HEAD
+  return: null}
+;
+export: default WebVitals
+=======
+  return null}
 
-      // Track first contentful paint
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'paint') {
-            console.log(`${entry.name}:`, entry.startTime);
-          }
-        }
-      });
-
-      try {
-        observer.observe({ entryTypes: ['paint'] });
-      } catch (e) {
-        // Paint timing not supported
-      }
-    };
-
-    trackWebVitals();
+export default WebVitals
+=======
+    getTTFB(sendToAnalytics);
   }, []);
 
-  return null; // This component doesn't render anything
+  return null;
+<<<<<<< HEAD
 };
 
 export default WebVitals;
+=======
+<<<<<<< HEAD
+};
+=======
+};
+
+export default WebVitals;
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

@@ -1,0 +1,20 @@
+<<<<<<< HEAD
+
+import React, { useState } from "react";";"";" import { Button } from "@/components/ui/button";";"";" import { Input } from "@/components/ui/input";";" import { useEnqueueSnackbar } from '@/context';";" export const MobileEmailCapture = () => {;";"";" const [email, setEmail] = useState("); const [isSubmitting, setIsSubmitting] = useState(false); const [isSuccess, setIsSuccess] = useState(false); const enqueueSnackbar = useEnqueueSnackbar(); const handleSubmit = async (e) => {; e.preventDefault(); if (!email || isSubmitting); return; setIsSubmitting(true); try {;"""";,"});,"})
+;,"});,"})
+import React, { useState } from "react";";"";" import { Button } from '@/components/ui/button';";"";" import { Input } from '@/components/ui/input';";" import { useEnqueueSnackbar } from '@/context';";" export const MobileEmailCapture = () => {;";"";" const [email, setEmail] = useState("); const [isSubmitting, setIsSubmitting] = useState(false); const [isSuccess, setIsSuccess] = useState(false); const enqueueSnackbar = useEnqueueSnackbar(); const handleSubmit = async(e) => {; e.preventDefault(); if(!email || isSubmitting); return; setIsSubmitting(true); try {;";,"});,"})
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff;,"});,"})
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react'';'' import { Button } from '@/components/ui/button'';'' import { Input } from '@/components/ui/input'' import { useEnqueueSnackbar } from '@/context'' export const MobileEmailCapture = () => {';;'' const [email, setEmail] = useState(') const [isSubmitting, setIsSubmitting] = useState(false) const [isSuccess, setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e.preventDefault() if (!email || isSubmitting) return setIsSubmitting(true) try {';'";
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react'';'' import { Button } from '@/components/ui/button'';'' import { Input } from '@/components/ui/input'' import { useEnqueueSnackbar } from '@/context'' export const MobileEmailCapture = () => {';;'' const [email, setEmail] = useState(') const [isSubmitting, setIsSubmitting] = useState(false) const [isSuccess, setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e.preventDefault() if (!email || isSubmitting) return setIsSubmitting(true) try {';'""
+""
+=======
+import React, { useState }  from 'react;'' import { Button }  from '@/components/ui/button;'' import { Input } from '@/components/ui/input'' import { useEnqueueSnackbar }  from '@/context export const MobileEmailCapture = () => {';;'' const [email, setEmail] = useState(') const [isSubmitting, setIsSubmitting] = useState(false) const [isSuccess, setIsSuccess] = useState(false) const enqueueSnackbar = useEnqueueSnackbar() const handleSubmit = async (e) => { e.preventDefault() if (!email || isSubmitting) return setIsSubmitting(true) try {"
+"
+>>>>>>> main
+}}}
+>>>>>>> main
+>>>>>>> main

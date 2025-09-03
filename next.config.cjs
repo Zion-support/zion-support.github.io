@@ -2,36 +2,24 @@
   'next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-eslint: {
+  eslint: {
     ignoreDuringBuilds: true,
   },
   experimental: {
-    esmExternals: false,
-    newNextLinkBehavior: true,
+    // Removed deprecated options
   },
   typescript: {
     ignoreBuildErrors: true,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,},
   images: {
-    domains: [
-  'ziontechgroup.com'],
+    domains: ['ziontechgroup.com'],
     unoptimized: true,
   },
   compiler: {
-<<<<<<< HEAD:next.config.js
     removeConsole: process.env.NODE_ENV === 'production',
-=======
-    removeConsole: process.env.NODE_ENV ===
-  'production',
->>>>>>> origin/main:next.config.cjs
   },
   webpack: (config, { dev, isServer }) => {
-    // Exclude problematic directories from the build
+    // Completely exclude problematic directories from the build
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       exclude: [
@@ -39,25 +27,17 @@ eslint: {
         /api-backup/,
         /pages\.disabled/,
         /backup-pages/,
-<<<<<<< HEAD:next.config.js
         /\.backup/,
-=======
-/\.backup/,
->>>>>>> origin/main:next.config.cjs
         /\.disabled/,
         /automation\/backups/,
         /automation_backup/,
         /broken_files_backup/,
         /contracts/,
-<<<<<<< HEAD:next.config.js
-        /contracts_backup/,
-        /cypress/,
-=======
         /hardhat/,
->>>>>>> origin/main:next.config.cjs
+        /^components\//, // Exclude root components directory
       ],
     });
-    
+
     // Add fallback for problematic modules
     config.resolve.fallback = {
       ...config.resolve.fallback,
@@ -65,15 +45,11 @@ eslint: {
       net: false,
       tls: false,
     };
-    
+
     return config;
   },
   // Try to exclude problematic directories at the Next.js level
-  pageExtensions: [
-  'tsx',
-  'ts',
-  'jsx',
-  'js'],
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   onDemandEntries: {
     // period (in ms) where the server will keep pages in the buffer
     maxInactiveAge: 25 * 1000,
@@ -82,4 +58,4 @@ eslint: {
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;

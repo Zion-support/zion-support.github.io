@@ -1,3 +1,7 @@
+#
+
+> > > > > > > origin/cursor/install-dependencies-and-fix-errors-827a
+
 # PM2 Automation System - Error Monitoring & Auto-Fixing
 
 ## 🚀 Overview
@@ -7,6 +11,7 @@ This PM2 automation system provides comprehensive error monitoring, automatic fi
 ## 🛠️ Components
 
 ### 1. Error Monitor (`scripts/error-monitor.js`)
+
 - **Purpose**: Continuously monitors for TypeScript, ESLint, and build errors
 - **Frequency**: Every 10 minutes
 - **Features**:
@@ -17,6 +22,7 @@ This PM2 automation system provides comprehensive error monitoring, automatic fi
   - Detailed error reporting
 
 ### 2. Auto Fixer (`scripts/auto-fixer.js`)
+
 - **Purpose**: Automatically fixes detected errors
 - **Frequency**: Every 2 hours or when triggered by error monitor
 - **Capabilities**:
@@ -28,6 +34,7 @@ This PM2 automation system provides comprehensive error monitoring, automatic fi
   - Validates fixes after application
 
 ### 3. Health Checker (`scripts/health-checker.js`)
+
 - **Purpose**: Monitors application and system health
 - **Frequency**: Every 5 minutes
 - **Checks**:
@@ -40,6 +47,7 @@ This PM2 automation system provides comprehensive error monitoring, automatic fi
   - Auto-restart on critical health issues
 
 ### 4. Log Cleaner (`scripts/log-cleaner.js`)
+
 - **Purpose**: Manages log files and prevents disk space issues
 - **Frequency**: Daily at 2 AM
 - **Features**:
@@ -50,6 +58,7 @@ This PM2 automation system provides comprehensive error monitoring, automatic fi
   - Rotates PM2 logs
 
 ### 5. Main Application (`zion-app`)
+
 - **Purpose**: Your main application
 - **Features**:
   - Auto-restart on failure
@@ -83,11 +92,13 @@ This PM2 automation system provides comprehensive error monitoring, automatic fi
 ## 🚦 Getting Started
 
 ### 1. Start the Automation System
+
 ```bash
 ./start-pm2-automation.sh
 ```
 
 ### 2. Start with System Boot (Optional)
+
 ```bash
 ./start-pm2-automation.sh --startup
 ```
@@ -95,16 +106,19 @@ This PM2 automation system provides comprehensive error monitoring, automatic fi
 ## 📊 Monitoring Commands
 
 ### View All Processes
+
 ```bash
 pm2 list
 ```
 
 ### Real-time Monitoring Dashboard
+
 ```bash
 pm2 monit
 ```
 
 ### View Logs
+
 ```bash
 # All logs
 pm2 logs
@@ -118,6 +132,7 @@ pm2 logs log-cleaner
 ```
 
 ### Check Application Health
+
 ```bash
 curl http://localhost:3000/health
 ```
@@ -125,49 +140,56 @@ curl http://localhost:3000/health
 ## 🔧 Management Commands
 
 ### Restart All Processes
+
 ```bash
 pm2 restart all
 ```
 
 ### Stop All Processes
+
 ```bash
 pm2 stop all
 ```
 
 ### Delete All Processes
+
 ```bash
 pm2 delete all
 ```
 
 ### Restart Specific Process
+
 ```bash
 pm2 restart zion-app
 pm2 restart error-monitor
 ```
 
 ### View Process Details
+
 ```bash
 pm2 show zion-app
 ```
 
 ### Save Configuration
+
 ```bash
 pm2 save
 ```
 
 ## 📈 Automation Schedule
 
-| Process | Frequency | Purpose |
-|---------|-----------|---------|
-| Error Monitor | Every 10 minutes | Detect and report errors |
-| Health Checker | Every 5 minutes | Monitor system health |
-| Auto Fixer | Every 2 hours | Fix detected errors |
-| Log Cleaner | Daily at 2 AM | Clean and manage logs |
-| App Restart | Daily at 4 AM | Maintenance restart |
+| Process        | Frequency        | Purpose                  |
+| -------------- | ---------------- | ------------------------ |
+| Error Monitor  | Every 10 minutes | Detect and report errors |
+| Health Checker | Every 5 minutes  | Monitor system health    |
+| Auto Fixer     | Every 2 hours    | Fix detected errors      |
+| Log Cleaner    | Daily at 2 AM    | Clean and manage logs    |
+| App Restart    | Daily at 4 AM    | Maintenance restart      |
 
 ## 🔍 Error Types Monitored
 
 ### TypeScript Errors
+
 - Type mismatches
 - Missing type annotations
 - Import/export errors
@@ -175,6 +197,7 @@ pm2 save
 - Configuration issues
 
 ### ESLint Errors
+
 - Code quality issues
 - Style violations
 - Unused variables
@@ -182,12 +205,14 @@ pm2 save
 - Best practice violations
 
 ### Build Errors
+
 - Compilation failures
 - Dependency issues
 - Configuration problems
 - Asset loading errors
 
 ### System Health Issues
+
 - High memory usage (>90%)
 - Low disk space (<10% free)
 - Process failures
@@ -197,28 +222,33 @@ pm2 save
 ## 🛡️ Auto-Fix Capabilities
 
 ### Merge Conflicts
+
 - Automatically resolves simple merge conflicts
 - Keeps HEAD version by default
 - Removes conflict markers
 
 ### Import/Export Fixes
+
 - Fixes missing imports
 - Corrects import paths
 - Removes unused imports
 - Fixes export syntax
 
 ### Type Annotations
+
 - Adds missing type annotations
 - Provides `any` type for untyped variables
 - Fixes function return types
 
 ### Syntax Fixes
+
 - Adds missing semicolons
 - Fixes incomplete declarations
 - Repairs malformed objects/arrays
 - Corrects string literals
 
 ### File Cleanup
+
 - Removes empty files or adds default exports
 - Fixes malformed file structures
 - Cleans up artifacts
@@ -226,25 +256,33 @@ pm2 save
 ## 📋 Reports and Logs
 
 ### Error Monitor Reports
+
 Location: `error-reports/error-monitor-report-*.json`
+
 - Error summary by type
 - Detailed error information
 - Recommendations for fixes
 
 ### Auto Fixer Reports
+
 Location: `error-reports/auto-fixer-report-*.json`
+
 - Applied fixes summary
 - Failed fixes with reasons
 - Success/failure status
 
 ### Health Reports
+
 Location: `logs/health-report-*.json`
+
 - System health status
 - Resource usage metrics
 - Process status information
 
 ### Log Cleaner Reports
+
 Location: `logs/log-cleaner-report-*.json`
+
 - Cleaned files summary
 - Space reclaimed
 - Archive information
@@ -252,6 +290,7 @@ Location: `logs/log-cleaner-report-*.json`
 ## 🚨 Troubleshooting
 
 ### PM2 Not Starting
+
 ```bash
 # Check PM2 status
 pm2 status
@@ -262,6 +301,7 @@ pm2 start ecosystem.config.js
 ```
 
 ### High Resource Usage
+
 ```bash
 # Check resource usage
 pm2 monit
@@ -271,6 +311,7 @@ pm2 restart <process-name>
 ```
 
 ### Automation Not Working
+
 ```bash
 # Check automation logs
 pm2 logs error-monitor
@@ -282,6 +323,7 @@ node scripts/health-checker.js
 ```
 
 ### Build Failures
+
 ```bash
 # Check build logs
 npm run build
@@ -293,7 +335,9 @@ node scripts/auto-fixer.js
 ## 🔧 Configuration
 
 ### Ecosystem Configuration
+
 Edit `ecosystem.config.js` to modify:
+
 - Process settings
 - Memory limits
 - Restart policies
@@ -301,15 +345,19 @@ Edit `ecosystem.config.js` to modify:
 - Cron schedules
 
 ### Error Thresholds
+
 Modify in `scripts/error-monitor.js`:
+
 ```javascript
 this.errorThreshold = 5; // Number of errors before triggering fixes
 ```
 
 ### Health Check Intervals
+
 Modify cron schedules in `ecosystem.config.js`:
+
 ```javascript
-cron_restart: '*/5 * * * *' // Every 5 minutes
+cron_restart: '*/5 * * * *'; // Every 5 minutes
 ```
 
 ## 🎯 Benefits
@@ -337,4 +385,3 @@ cron_restart: '*/5 * * * *' // Every 5 minutes
 ---
 
 Your project now has a robust, automated error monitoring and fixing system powered by PM2! 🎉
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

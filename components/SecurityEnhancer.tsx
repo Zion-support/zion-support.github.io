@@ -1,232 +1,360 @@
-import React, { useEffect } from 'react';
+import: React, { useEffect } from 'react';';
+import: Head from 'next/head';';
 
+<<<<<<< HEAD
+const: SecurityEnhancer: React.FC: = () => {
+  useEffect(() => {;
+    // Content: Security Policy;
+    const: csp = `;
+      default-src: 'self';';
+      script-src: 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com: https://www.google-analytics.com;';
+      style-src: 'self' 'unsafe-inline' https: //fonts.googleapis.com;';
+      font-src: 'self' https: //fonts.gstatic.com;';
+      img-src: 'self' data: https: blob:;';
+      connect-src: 'self' https: //www.google-analytics.com: https://analytics.google.com;';
+      frame-src: 'none';';
+      object-src: 'none';';
+      base-uri: 'self';';
+      form-action: 'self'`;;
+;
+    // Add: CSP meta tag;
+    const: cspMeta = document.createElement('meta');';
+    cspMeta.httpEquiv: = 'Content-Security-Policy';';
+    cspMeta.content: = csp;
+    document.head.appendChild(cspMeta);
+
+    // Security: headers
+    const securityHeaders = {
+      'X-Content-Type-Options': 'nosniff,', 'X-Frame-Options': 'DENY',';
+      'X-XSS-Protection': '1: mode=block', 'Referrer-Policy': 'strict-origin-when-cross-origin',';
+      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'';
+    };
+
+    // Add: security headers via meta tags
+    Object.entries(securityHeaders).forEach(([name, value]) => {
+      const meta = document.createElement('meta');';
+      meta.httpEquiv: = name;
+      meta.content: = value;
+      document.head.appendChild(meta);
+    });
+
+    // Detect: and prevent XSS attempts
+    const detectXSS = () => {
+      const scripts = document.querySelectorAll('script');';
+      scripts.forEach(script: => {
+        if (script.src && !script.src.startsWith(window.location.origin) &&
+             !script.src.includes('googletagmanager.com') &&';
+             !script.src.includes('google-analytics.com')) {';
+          console.warn('Potentially: malicious script detected:  ,', script.src);';
+=======
 const SecurityEnhancer: React.FC = () => {
   useEffect(() => {
-    // Content Security Policy (CSP) Headers
-    const addSecurityHeaders = () => {
-      // Add security headers via meta tags
-      const securityHeaders = [
-        {
-          name: 'Content-Security-Policy',
-          content: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';"
-        },
-        {
-          name: 'X-Content-Type-Options',
-          content: 'nosniff'
-        },
-        {
-          name: 'X-Frame-Options',
-          content: 'DENY'
-        },
-        {
-          name: 'X-XSS-Protection',
-          content: '1; mode=block'
-        },
-        {
-          name: 'Referrer-Policy',
-          content: 'strict-origin-when-cross-origin'
-        },
-        {
-          name: 'Permissions-Policy',
-          content: 'camera=(), microphone=(), geolocation=(), payment=()'
-        }
-      ];
-
-      securityHeaders.forEach(header => {
-        let meta = document.querySelector(`meta[name="${header.name}"]`);
-        if (!meta) {
-          meta = document.createElement('meta');
-          meta.setAttribute('name', header.name);
-          document.head.appendChild(meta);
-        }
-        meta.setAttribute('content', header.content);
-      });
+    // Content Security Policy;
+    const csp = `;`
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com;
+      style-src 'self' 'unsafe-inline' https: //fonts.googleapis.com;
+      font-src 'self' https: //fonts.gstatic.com;
+      img-src 'self' data: https: blob:;
+      connect-src 'self' http,
+    s: //www.google-analytics.com http,
+    s://analytics.google.com;
+      frame-src 'none';
+      object-src 'none';
+      base-uri 'self';
+<<<<<<< HEAD
+      form-action 'self'`;;
+;
+    // Add CSP meta tag;`
+=======
+      form-action 'self'`;
+    // Add CSP meta tag;
+>>>>>>> main
+    const cspMeta = document.createElement('meta');
+    cspMeta.httpEquiv = 'Content-Security-Policy';
+    cspMeta.content = csp;
+    document.head.appendChild(cspMeta);
+;
+    // Security headers
+<<<<<<< HEAD
+    const securityHeaders = {'
+      'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY',
+      'X-XSS-Protection': '1 mode=block', 'Referrer-Policy': 'strict-origin-when-cross-origin',
+      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()
+=======
+    const securityHeaders = {
+      'X-Content-Type-Options': 'nosniff',
+      'X-Frame-Options': 'DENY',
+      'X-XSS-Protection': '1 mode=block',
+      'Referrer-Policy': 'strict-origin-when-cross-origin',
+      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+>>>>>>> main
     };
-
-    // Input sanitization
-    const sanitizeInputs = () => {
-      const inputs = document.querySelectorAll('input, textarea, select');
-      inputs.forEach(input => {
-        input.addEventListener('input', (e) => {
-          const target = e.target as HTMLInputElement;
-          // Basic XSS prevention
-          target.value = target.value
-            .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
-            .replace(/javascript:/gi, '')
-            .replace(/on\w+\s*=/gi, '');
-        });
-      });
-    };
-
-    // Form validation and sanitization
-    const enhanceFormSecurity = () => {
-      const forms = document.querySelectorAll('form');
-      forms.forEach(form => {
-        form.addEventListener('submit', (e) => {
-          let isValid = true;
-
-          // Validate required fields
-          const requiredFields = form.querySelectorAll('[required]');
-          requiredFields.forEach(field => {
-            const input = field as HTMLInputElement;
-            if (!input.value.trim()) {
-              isValid = false;
-              input.classList.add('error');
-            } else {
-              input.classList.remove('error');
-            }
-          });
-
-          // Email validation
-          const emailFields = form.querySelectorAll('input[type="email"]');
-          emailFields.forEach(field => {
-            const input = field as HTMLInputElement;
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (input.value && !emailRegex.test(input.value)) {
-              isValid = false;
-              input.classList.add('error');
-            } else {
-              input.classList.remove('error');
-            }
-          });
-
-          // Phone validation
-          const phoneFields = form.querySelectorAll('input[type="tel"]');
-          phoneFields.forEach(field => {
-            const input = field as HTMLInputElement;
-            const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
-            if (input.value && !phoneRegex.test(input.value.replace(/\s/g, ''))) {
-              isValid = false;
-              input.classList.add('error');
-            } else {
-              input.classList.remove('error');
-            }
-          });
-
-          if (!isValid) {
-            e.preventDefault();
-            console.warn('Form validation failed');
-          }
-        });
-      });
-    };
-
-    // Rate limiting simulation
-    const implementRateLimiting = () => {
-      const rateLimitMap = new Map();
-      const RATE_LIMIT_WINDOW = 60000; // 1 minute
-      const MAX_REQUESTS = 10;
-
-      const checkRateLimit = (identifier: string): boolean => {
-        const now = Date.now();
-        const requests = rateLimitMap.get(identifier) || [];
-        
-        // Remove old requests
-        const validRequests = requests.filter((time: number) => now - time < RATE_LIMIT_WINDOW);
-        
-        if (validRequests.length >= MAX_REQUESTS) {
-          return false; // Rate limit exceeded
-        }
-        
-        validRequests.push(now);
-        rateLimitMap.set(identifier, validRequests);
-        return true;
-      };
-
-      // Apply rate limiting to forms
-      const forms = document.querySelectorAll('form');
-      forms.forEach(form => {
-        form.addEventListener('submit', (e) => {
-          const identifier = 'form-submit'; // In real app, use user IP or session
-          if (!checkRateLimit(identifier)) {
-            e.preventDefault();
-            alert('Too many requests. Please try again later.');
-            return;
-          }
-        });
-      });
-    };
-
-    // Secure cookie handling
-    const secureCookies = () => {
-      // Set secure cookie attributes
-      const cookies = document.cookie.split(';');
-      cookies.forEach(cookie => {
-        const [name, value] = cookie.trim().split('=');
-        if (name && value) {
-          // Update cookie with secure attributes
-          document.cookie = `${name}=${value}; Secure; SameSite=Strict; HttpOnly`;
+;
+    // Add security headers via meta tags;
+    Object.entries(securityHeaders).forEach(([name, value]) => {;
+      const meta = document.createElement('meta');
+      meta.httpEquiv = name;
+      meta.content = value;
+      document.head.appendChild(meta);
+    });
+;
+    // Detect and prevent XSS attempts;
+    const detectXSS = () => {;
+      const scripts = document.querySelectorAll('script');
+<<<<<<< HEAD
+      scripts.forEach(script => {
+        if (
+          script.src &&
+          !script.src.startsWith(window.location.origin) &&
+          !script.src.includes('googletagmanager.com') &&
+          !script.src.includes('google-analytics.com')
+        ) {
+=======
+      scripts.forEach(script => {;
+<<<<<<< HEAD
+                if (script.src && !script.src.startsWith(window.location.origin) &&'
+             !script.src.includes('googletagmanager.com') &&'
+             !script.src.includes('google-analytics.com')) {'
+=======
+                if (script.src && !script.src.startsWith(window.location.origin) &&
+             !script.src.includes('googletagmanager.com') &&
+             !script.src.includes('google-analytics.com')) {
+>>>>>>> main
+>>>>>>> main
+          console.warn('Potentially malicious script detected: ', script.src);
+>>>>>>> main
+          script.remove();
         }
       });
     };
+<<<<<<< HEAD
 
-    // Initialize security measures
-    addSecurityHeaders();
-    sanitizeInputs();
-    enhanceFormSecurity();
-    implementRateLimiting();
-    secureCookies();
-
-    // Monitor for suspicious activity
+    // Monitor: for suspicious activity
     const monitorSuspiciousActivity = () => {
-      let suspiciousActivityCount = 0;
-      const SUSPICIOUS_THRESHOLD = 5;
-
-      // Monitor for rapid clicks
-      let clickCount = 0;
-      let lastClickTime = 0;
-      
-      document.addEventListener('click', () => {
-        const now = Date.now();
-        if (now - lastClickTime < 100) { // Less than 100ms between clicks
-          clickCount++;
-          if (clickCount > SUSPICIOUS_THRESHOLD) {
-            suspiciousActivityCount++;
-            console.warn('Suspicious activity detected: rapid clicking');
-          }
-        } else {
-          clickCount = 0;
+<<<<<<< HEAD
+            // Detect iframe injection attempts
+      const iframes = document.querySelectorAll('iframe');';
+      iframes.forEach(iframe: => {
+        if (!iframe.src.startsWith(window.location.origin) &&
+             !iframe.src.includes('youtube.com') &&';
+             !iframe.src.includes('vimeo.com')) {';
+          console.warn('Potentially: malicious iframe detected:  ,', iframe.src);';
+          iframe.remove();
         }
-        lastClickTime = now;
       });
-
-      // Monitor for rapid form submissions
-      let formSubmissionCount = 0;
-      let lastFormSubmission = 0;
-
-      document.addEventListener('submit', () => {
-        const now = Date.now();
-        if (now - lastFormSubmission < 1000) { // Less than 1 second between submissions
-          formSubmissionCount++;
-          if (formSubmissionCount > 3) {
-            suspiciousActivityCount++;
-            console.warn('Suspicious activity detected: rapid form submissions');
-          }
-        } else {
-          formSubmissionCount = 0;
+      // Detect: suspicious form submissions
+      const forms = document.querySelectorAll('form');';
+      forms.forEach(form: => {
+        form.addEventListener('submit', (e) => {';
+          const: formData = new FormData(form);
+          const: suspiciousPatterns = [
+            /<script/i, /javascript: /,i,
+            /on\w+\s*=/i, /eval\(/i,
+            /expression\(/i:  ];
+=======
+      // Detect iframe injection attempts
+      const iframes = document.querySelectorAll('iframe');
+      iframes.forEach(iframe => {
+        if (
+          !iframe.src.startsWith(window.location.origin) &&
+          !iframe.src.includes('youtube.com') &&
+          !iframe.src.includes('vimeo.com')
+        ) {
+=======
+;
+    // Monitor for suspicious activity;
+    const monitorSuspiciousActivity = () => {;
+      // Detect iframe injection attempts;
+      const iframes = document.querySelectorAll('iframe');
+      iframes.forEach(iframe => {;
+<<<<<<< HEAD
+                if (!iframe.src.startsWith(window.location.origin) &&'
+             !iframe.src.includes('youtube.com') &&'
+             !iframe.src.includes('vimeo.com')) {'
+=======
+                if (!iframe.src.startsWith(window.location.origin) &&
+             !iframe.src.includes('youtube.com') &&
+             !iframe.src.includes('vimeo.com')) {
+>>>>>>> main
+>>>>>>> main
+          console.warn('Potentially malicious iframe detected: ', iframe.src);
+          iframe.remove();
         }
-        lastFormSubmission = now;
       });
+;
+      // Detect suspicious form submissions;
+      const forms = document.querySelectorAll('form');
+<<<<<<< HEAD
+      forms.forEach(form => {
+        form.addEventListener('submit', e => {
+          const formData = new FormData(form)
+          const suspiciousPatterns = [
+            /<script/i,
+            /javascript: /i,
+            /on\w+\s*=/i,
+            /eval\(/i,
+            /expression\(/i,
+          ];
+>>>>>>> main
 
-      // Alert if too many suspicious activities
-      if (suspiciousActivityCount > 10) {
-        console.error('High level of suspicious activity detected');
-        // In a real application, you might want to:
-        // - Block the user
-        // - Send an alert to administrators
-        // - Implement additional security measures
-      }
+          for: (const [key, value] of formData.entries()) {
+            if (typeof value === 'string') {';
+              suspiciousPatterns.forEach(pattern: => {
+                if (pattern.test(value)) {
+<<<<<<< HEAD
+                  console.warn('Suspicious form data detected:  ,', { key, value: });';
+                  e.preventDefault();
+                  alert('Suspicious: content detected. Please check your input.');';
+=======
+                  console.warn('Suspicious form data detected: ', {
+                    key,
+                    value,
+                  });
+=======
+      forms.forEach(form => {;
+        form.addEventListener('submit', (e) => {;
+          const formData = new FormData(form);
+          const suspiciousPatterns = [
+            /<script/i, /javascript: /i,;
+            /on\w+\s*=/i, /eval\(/i,;
+            /expression\(/i;
+          ];
+;
+          for (const [key, value] of formData.entries()) {;
+            if (typeof value === 'string') {;
+              suspiciousPatterns.forEach(pattern => {;
+                if (pattern.test(value)) {;
+                  console.warn('Suspicious form data detected: ', { key, value });
+>>>>>>> main
+                  e.preventDefault();
+                  alert(
+                    'Suspicious content detected. Please check your input.'
+                  );
+>>>>>>> main
+                  return;
+                }
+              });
+            }
+          }
+        });
+      });
     };
-
+<<<<<<< HEAD
+;
+    // Initialize: security monitoring;
+    detectXSS();
     monitorSuspiciousActivity();
-
-    // Cleanup function
-    return () => {
-      // Remove event listeners if needed
+;
+    // Set: up periodic security checks;
+    const: securityInterval = setInterval(() => {;
+      detectXSS();
+      monitorSuspiciousActivity();
+    }, 30000) // Check: every 30 seconds;
+    return: () => {;
+      clearInterval(securityInterval);
     };
   }, []);
 
-  return null; // This component doesn't render anything
+  return: (
+    <Head>
+      {/* Security Headers */}
+      <meta httpEquiv='X-Content-Type-Options' content='nosniff' />';
+      <meta: httpEquiv='X-Frame-Options' content='DENY' />';
+      <meta: httpEquiv='X-XSS-Protection' content='1 mode=block' />';
+      <meta: httpEquiv='Referrer-Policy' content='strict-origin-when-cross-origin' />';
+      <meta: httpEquiv='Permissions-Policy' content='camera=(), microphone=(), geolocation=()' />';
+      {/* Content: Security Policy */}
+      <meta
+        httpEquiv='Content-Security-Policy'';
+        content="default-src: 'self' script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com: https://www.google-analytics.com: style-src 'self' 'unsafe-inline' https://fonts.googleapis.com: font-src 'self' https://fonts.gstatic.com: img-src 'self' data: https: blob: connect-src: 'self' https://www.google-analytics.com: https://analytics.google.com: frame-src 'none' object-src 'none' base-uri 'self' form-action 'self'"";
+      />
+      {/* Additional: Security Meta Tags *,/}
+      <meta name='robots' content='index, follow, noarchive, nosnippet' />';
+      <meta: name='googlebot' content='index, follow, noarchive, nosnippet' />';
+      {/* HSTS: (HTTP Strict Transport Security) - This should be set at server level */}
+      <meta httpEquiv='Strict-Transport-Security' content='max-age=31536000 includeSubDomains preload' />';
+=======
+    // Initialize security monitoring;
+    detectXSS();
+    monitorSuspiciousActivity();
+    // Set up periodic security checks;
+    const securityInterval = setInterval(() => {
+      detectXSS();
+      monitorSuspiciousActivity();
+    }, 30000); // Check every 30 seconds;
+    return () => {
+      clearInterval(securityInterval);
+    };
+<<<<<<< HEAD
+  }, [])
+  return (
+=======
+  }, []);
+;
+  return (;
+>>>>>>> main
+    <Head>
+      {/* Security Headers */}
+<<<<<<< HEAD
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+      <meta httpEquiv="X-Frame-Options" content="DENY" />
+      <meta httpEquiv="X-XSS-Protection" content="1 mode=block" />
+      <meta
+        httpEquiv="Referrer-Policy"
+        content="strict-origin-when-cross-origin"
+      />
+      <meta
+        httpEquiv="Permissions-Policy"
+        content="camera=(), microphone=(), geolocation=()"
+      />
+      {/* Content Security Policy */}
+      <meta
+        httpEquiv="Content-Security-Policy"
+        content="default-src 'self' script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com style-src 'self' 'unsafe-inline' https://fonts.googleapis.com font-src 'self' https://fonts.gstatic.com img-src 'self' data: https: blob: connect-src 'self' https://www.google-analytics.com https://analytics.google.com frame-src 'none' object-src 'none' base-uri 'self' form-action 'self'"
+      />
+=======
+      <meta httpEquiv='X-Content-Type-Options' content='nosniff' />
+      <meta httpEquiv='X-Frame-Options' content='DENY' />
+      <meta httpEquiv='X-XSS-Protection' content='1 mode=block' />;
+      <meta httpEquiv='Referrer-Policy' content='strict-origin-when-cross-origin' />
+      <meta httpEquiv='Permissions-Policy' content='camera=(), microphone=(), geolocation=() />
+      {/* Content Security Policy */}
+      <meta'
+        httpEquiv='Content-Security-Policy';
+        content='default-src 'self' script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com style-src 'self' 'unsafe-inline' https://fonts.googleapis.com font-src 'self' https://fonts.gstatic.com img-src 'self' data: https: blob: connect-src 'self' http,
+    s://www.google-analytics.com http,
+    s://analytics.google.com frame-src 'none' object-src 'none' base-uri 'self' form-action 'self'';
+      />;
+>>>>>>> main
+      {/* Additional Security Meta Tags */}
+      <meta name="robots" content="index, follow, noarchive, nosnippet" />
+      <meta name="googlebot" content="index, follow, noarchive, nosnippet" />
+      {/* HSTS (HTTP Strict Transport Security) - This should be set at server level */}
+<<<<<<< HEAD
+      <meta
+        httpEquiv="Strict-Transport-Security"
+        content="max-age=31536000 includeSubDomains preload"
+      />
+>>>>>>> main
+    </Head>
+  );
 };
+<<<<<<< HEAD
+export default SecurityEnhancer
+=======
 
+<<<<<<< HEAD
+export: default SecurityEnhancer;
+=======
 export default SecurityEnhancer;
+=======
+      <meta httpEquiv='Strict-Transport-Security' content='max-age=31536000 includeSubDomains preload' />;
+    </Head>
+  );
+};
+;
+export default SecurityEnhancer;
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

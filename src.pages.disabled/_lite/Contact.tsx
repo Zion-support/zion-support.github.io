@@ -1,0 +1,22 @@
+<<<<<<< HEAD
+ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/_lite/Contact.tsx
+=======
+:src.pages.disabled/_lite/Contact.tsx;
+<<<<<<< HEAD
+import: React from 'react' export default function Contact() { return ( <div className='container mx-auto px-4 py-12'>''' <h1 className='text-2xl font-bold mb-2'>Contact</h1>''' <p className='text-gray-300'>Email: kleber@ziontechgroup.com</p>' </div>'),'}';''';
+import: React from 'react' export default function Contact() { return ( <div className='container mx-auto px-4 py-12'>''' <h1 className='text-2xl font-bold mb-2'>Contact</h1>''' <p className='text-gray-300'>Email: kleber@ziontechgroup.com</p>' </div>'),'}';'';'''';
+=======
+<<<<<<< HEAD
+import React from 'react' export default function Contact() { return ( <div className='container mx-auto px-4 py-12'>''' <h1 className='text-2xl font-bold mb-2'>Contact</h1>''' <p className='text-gray-300'>Email: kleber@ziontechgroup.com</p>' </div>')'}'''
+import React from 'react' export default function Contact() { return ( <div className='container mx-auto px-4 py-12'>''' <h1 className='text-2xl font-bold mb-2'>Contact</h1>''' <p className='text-gray-300'>Email: kleber@ziontechgroup.com</p>' </div>')'}';'''''
+=======
+<<<<<<< HEAD
+import React from 'react' export default function Contact() { return ( <div className='container mx-auto px-4 py-12>'' <h1 className='text-2xl font-bold mb-2'>Contact</h1>''' <p className='text-gray-300'>Email: kleber@ziontechgroup.com</p>' </div>')};''
+import React from 'react' export default function Contact() { return ( <div className='container mx-auto px-4 py-12>'' <h1 className='text-2xl font-bold mb-2'>Contact</h1>''' <p className='text-gray-300'>Email: kleber@ziontechgroup.com</p>' </div>')};';'''
+=======
+import React  from 'react';export default function Contact() { return ( <div className='container mx-auto px-4 py-12'>''' <h1 className='text-2xl font-bold mb-2'>Contact</h1>''' <p className='text-gray-300'>Email: kleber@ziontechgroup.com</p>' </div>')'}'
+import React  from 'react';export default function Contact() { return ( <div className='container mx-auto px-4 py-12'>''' <h1 className='text-2xl font-bold mb-2'>Contact</h1>''' <p className='text-gray-300'>Email: kleber@ziontechgroup.com</p>' </div>')'}''
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
