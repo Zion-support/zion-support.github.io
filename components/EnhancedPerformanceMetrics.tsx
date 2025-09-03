@@ -1,14 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  Clock,
-  Zap,
-  Activity,
-  BarChart3,
-  Database,
-  Users,
-  ArrowUpRight,
-  ArrowDownRight
+  Clock, Zap,
+  Activity, BarChart3,
+  Database, Users,
+  ArrowUpRight, ArrowDownRight
 } from 'lucide-react';
 
 interface PerformanceMetric {
@@ -32,83 +28,51 @@ interface PerformanceMetricsProps {
 }
 
 const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
-  title = 'Real-Time Performance Metrics',
-  subtitle = 'Monitor your system\'s performance with live data and intelligent insights',
-  showCharts = true,
-  autoRefresh = true
+  title = 'Real-Time Performance Metrics', subtitle = 'Monitor your system\'s performance with live data and intelligent insights','
+  showCharts = true, autoRefresh = true
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetric[]>([
     {
-      id: 'response-time',
-      name: 'Response Time',
-      value: 127,
-      unit: 'ms',
-      change: -12.5,
-      changeType: 'decrease',
-      target: 150,
-      status: 'excellent',
-      icon: Clock,
-      description: 'Average API response time across all endpoints'
+      id: 'response-time', name: 'Response Time',
+      value: 127, unit: 'ms',
+      change: -12.5, changeType: 'decrease',
+      target: 150, status: 'excellent',
+      icon: Clock, description: 'Average API response time across all endpoints'
     },
     {
-      id: 'throughput',
-      name: 'Throughput',
-      value: 15420,
-      unit: 'req/s',
-      change: 8.3,
-      changeType: 'increase',
-      target: 12000,
-      status: 'excellent',
-      icon: Zap,
-      description: 'Requests processed per second'
+      id: 'throughput', name: 'Throughput',
+      value: 15420, unit: 'req/s',
+      change: 8.3, changeType: 'increase',
+      target: 12000, status: 'excellent',
+      icon: Zap, description: 'Requests processed per second'
     },
     {
-      id: 'error-rate',
-      name: 'Error Rate',
-      value: 0.23,
-      unit: '%',
-      change: -15.2,
-      changeType: 'decrease',
-      target: 1.0,
-      status: 'excellent',
-      icon: Activity,
-      description: 'Percentage of failed requests'
+      id: 'error-rate', name: 'Error Rate',
+      value: 0.23, unit: '%',
+      change: -15.2, changeType: 'decrease',
+      target: 1.0, status: 'excellent',
+      icon: Activity, description: 'Percentage of failed requests'
     },
     {
-      id: 'cpu-usage',
-      name: 'CPU Usage',
-      value: 67.8,
-      unit: '%',
-      change: 5.1,
-      changeType: 'increase',
-      target: 80,
-      status: 'good',
-      icon: BarChart3,
-      description: 'Current CPU utilization across all cores'
+      id: 'cpu-usage', name: 'CPU Usage',
+      value: 67.8, unit: '%',
+      change: 5.1, changeType: 'increase',
+      target: 80, status: 'good',
+      icon: BarChart3, description: 'Current CPU utilization across all cores'
     },
     {
-      id: 'memory-usage',
-      name: 'Memory Usage',
-      value: 82.3,
-      unit: '%',
-      change: 2.8,
-      changeType: 'increase',
-      target: 85,
-      status: 'warning',
-      icon: Database,
-      description: 'RAM utilization percentage'
+      id: 'memory-usage', name: 'Memory Usage',
+      value: 82.3, unit: '%',
+      change: 2.8, changeType: 'increase',
+      target: 85, status: 'warning',
+      icon: Database, description: 'RAM utilization percentage'
     },
     {
-      id: 'active-users',
-      name: 'Active Users',
-      value: 1247,
-      unit: '',
-      change: 12.4,
-      changeType: 'increase',
-      target: 1000,
-      status: 'excellent',
-      icon: Users,
-      description: 'Concurrent users currently online'
+      id: 'active-users', name: 'Active Users',
+      value: 1247, unit: '',
+      change: 12.4, changeType: 'increase',
+      target: 1000, status: 'excellent',
+      icon: Users, description: 'Concurrent users currently online'
     }
   ]);
 
@@ -121,9 +85,7 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
     const interval = setInterval(() => {
       setMetrics(prevMetrics =>
         prevMetrics.map(metric => ({
-          ...metric,
-          value: metric.value + (Math.random() - 0.5) * metric.value * 0.1,
-          change: metric.change + (Math.random() - 0.5) * 2
+          ...metric, value: metric.value + (Math.random() - 0.5) * metric.value * 0.1, change: metric.change + (Math.random() - 0.5) * 2
         }))
       );
     }, 5000);
@@ -133,16 +95,11 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'excellent':
-        return 'text-green-500 bg-green-100';
-      case 'good':
-        return 'text-blue-500 bg-blue-100';
-      case 'warning':
-        return 'text-yellow-500 bg-yellow-100';
-      case 'critical':
-        return 'text-red-500 bg-red-100';
-      default:
-        return 'text-gray-500 bg-gray-100';
+      case 'excellent': return 'text-green-500 bg-green-100';
+      case 'good': return 'text-blue-500 bg-blue-100';
+      case 'warning': return 'text-yellow-500 bg-yellow-100';
+      case 'critical': return 'text-red-500 bg-red-100';
+      default: return 'text-gray-500 bg-gray-100';
     }
   };
 
@@ -155,12 +112,10 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
   };
 
   const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
+    hidden: { opacity: 0 }, visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
+        staggerChildren: 0.1, delayChildren: 0.2
       }
     }
   };
@@ -168,11 +123,9 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0,
-      opacity: 1,
+      y: 0, opacity: 1,
       transition: {
-        duration: 0.5,
-        ease: 'easeOut'
+        duration: 0.5, ease: 'easeOut'
       }
     }
   };

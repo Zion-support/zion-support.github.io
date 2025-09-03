@@ -10,10 +10,8 @@ interface AccessibilitySettings {
 ;
 const AccessibilityManager: React.FC = () => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,
-    fontSize: 'normal',
-    reducedMotion: false,
-    focusVisible: false,
+    highContrast: false, fontSize: 'normal',
+    reducedMotion: false, focusVisible: false,
     screenReader: false
   });
 ;
@@ -30,8 +28,7 @@ const AccessibilityManager: React.FC = () => {
       setSettings(JSON.parse(savedSettings));
     } else {;
       setSettings(prev => ({
-        ...prev,
-        reducedMotion: prefersReducedMotion,
+        ...prev, reducedMotion: prefersReducedMotion,
         highContrast: prefersHighContrast
       }));
     }
@@ -111,7 +108,7 @@ const AccessibilityManager: React.FC = () => {
       <div className='accessibility-controls fixed bottom-4 right-4 z-50'>
         <button;
           onClick={() => setIsOpen(!isOpen)}
-          className='bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2';
+          className='bg-blue-600 text-white p-3 rounded-full shadow-lg hover: bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2';
           aria-label='Open accessibility settings';
           aria-expanded={isOpen}
         >;
@@ -211,7 +208,7 @@ const AccessibilityManager: React.FC = () => {
         <h1>Zion Tech Group - Accessibility Enhanced</h1>
         <p>This website includes accessibility features to ensure all users can access our content.</p>
       </div>
-    </>
+</>
   );
 };
 ;

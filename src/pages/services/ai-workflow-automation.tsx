@@ -1,137 +1,72 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { 
-  Workflow, 
-  Zap, 
-  Users, 
-  Shield, 
-  Target, 
-  CheckCircle, 
-  ArrowRight, 
-  TrendingUp, 
-  BarChart3, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Star, 
-  Award, 
-  Lightbulb, 
-  Sparkles, 
-  Brain,
-  Settings,
-  Clock,
-  Database,
-  Link,
-  Bot,
-  Cpu,
-  Layers,
-  GitBranch,
-  Play,
-  Pause,
-  RotateCcw
-} from 'lucide-react';
-
 const AIWorkflowAutomation: React.FC = () => {
   const features = [
     {
-      icon: Workflow,
-      title: 'Visual Workflow Builder',
-      description: 'Create complex automation workflows with our intuitive drag-and-drop interface',
-      color: 'from-blue-500 to-cyan-500'
+      icon: Workflow, title: 'Visual Workflow Builder',
+      description: 'Create complex automation workflows with our intuitive drag-and-drop interface', color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Bot,
-      title: 'AI-Powered Automation',
-      description: 'Intelligent bots that learn and adapt to your business processes automatically',
-      color: 'from-green-500 to-emerald-500'
+      icon: Bot, title: 'AI-Powered Automation',
+      description: 'Intelligent bots that learn and adapt to your business processes automatically', color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: Link,
-      title: '500+ Integrations',
+      icon: Link, title: '500+ Integrations',
       description: 'Connect with popular tools like Slack, Salesforce, HubSpot, and more',
       color: 'from-purple-500 to-pink-500'
-    },
-    {
+    }, {
       icon: Clock,
-      title: 'Real-Time Processing',
-      description: 'Execute workflows instantly with sub-second response times',
+      title: 'Real-Time Processing', description: 'Execute workflows instantly with sub-second response times',
       color: 'from-yellow-500 to-orange-500'
-    },
-    {
+    }, {
       icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption, audit logs, and compliance features',
+      title: 'Enterprise Security', description: 'Bank-level security with encryption, audit logs, and compliance features',
       color: 'from-red-500 to-pink-500'
-    },
-    {
+    }, {
       icon: BarChart3,
-      title: 'Analytics & Insights',
-      description: 'Track workflow performance and optimize processes with detailed analytics',
+      title: 'Analytics & Insights', description: 'Track workflow performance and optimize processes with detailed analytics',
       color: 'from-indigo-500 to-blue-500'
     }
   ];
 
   const automationTypes = [
     {
-      title: 'Sales Automation',
-      description: 'Automate lead scoring, follow-ups, and pipeline management',
-      icon: Target,
-      benefits: ['Lead qualification', 'Email sequences', 'CRM updates', 'Pipeline tracking'],
-      pricing: '$49/month',
+      title: 'Sales Automation', description: 'Automate lead scoring, follow-ups, and pipeline management',
+      icon: Target, benefits: ['Lead qualification', 'Email sequences', 'CRM updates', 'Pipeline tracking'], pricing: '$49/month',
       color: 'from-blue-500 to-cyan-500'
-    },
-    {
+    }, {
       title: 'Marketing Automation',
-      description: 'Streamline campaigns, content distribution, and customer engagement',
-      icon: Users,
-      benefits: ['Campaign management', 'Social media posting', 'Email marketing', 'Analytics'],
-      pricing: '$39/month',
+      description: 'Streamline campaigns, content distribution, and customer engagement', icon: Users,
+      benefits: ['Campaign management', 'Social media posting', 'Email marketing', 'Analytics'], pricing: '$39/month',
       color: 'from-green-500 to-emerald-500'
-    },
-    {
+    }, {
       title: 'HR Automation',
-      description: 'Automate recruitment, onboarding, and employee management processes',
-      icon: Users,
-      benefits: ['Resume screening', 'Interview scheduling', 'Onboarding workflows', 'Performance tracking'],
-      pricing: '$59/month',
+      description: 'Automate recruitment, onboarding, and employee management processes', icon: Users,
+      benefits: ['Resume screening', 'Interview scheduling', 'Onboarding workflows', 'Performance tracking'], pricing: '$59/month',
       color: 'from-purple-500 to-pink-500'
-    },
-    {
+    }, {
       title: 'Finance Automation',
-      description: 'Automate invoicing, expense management, and financial reporting',
-      icon: BarChart3,
-      benefits: ['Invoice generation', 'Expense tracking', 'Payment processing', 'Financial reports'],
-      pricing: '$69/month',
+      description: 'Automate invoicing, expense management, and financial reporting', icon: BarChart3,
+      benefits: ['Invoice generation', 'Expense tracking', 'Payment processing', 'Financial reports'], pricing: '$69/month',
       color: 'from-yellow-500 to-orange-500'
     }
   ];
 
   const benefits = [
-    'Reduce manual work by 90%',
-    'Increase productivity by 300%',
-    'Eliminate human errors',
-    '24/7 automated operations',
-    'Scalable workflows',
-    'Cost savings up to 70%',
-    'Faster decision making',
-    'Improved compliance'
+    'Reduce manual work by 90%', 'Increase productivity by 300%',
+    'Eliminate human errors', '24/7 automated operations',
+    'Scalable workflows', 'Cost savings up to 70%',
+    'Faster decision making', 'Improved compliance'
   ];
 
   const integrations = [
-    'Salesforce',
-    'HubSpot',
-    'Slack',
-    'Microsoft Teams',
-    'Google Workspace',
-    'Zapier',
-    'Mailchimp',
-    'QuickBooks',
-    'Shopify',
-    'WordPress',
-    'Jira',
-    'Trello'
+    'Salesforce', 'HubSpot',
+    'Slack', 'Microsoft Teams',
+    'Google Workspace', 'Zapier',
+    'Mailchimp', 'QuickBooks',
+    'Shopify', 'WordPress',
+    'Jira', 'Trello'
   ];
 
   return (
@@ -144,7 +79,7 @@ const AIWorkflowAutomation: React.FC = () => {
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 lg:py-32">
+      <section className="relative overflow-hidden py-20 lg: py-32">
         <div className="container-responsive">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -166,7 +101,7 @@ const AIWorkflowAutomation: React.FC = () => {
               <p className="text-xl text-gray-300 leading-relaxed">
                 Transform your business with intelligent automation. Create powerful workflows that work 24/7, reduce manual tasks, and boost productivity across your entire organization.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm: flex-row gap-4">
                 <button className="btn-futuristic bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700">
                   <Play className="w-5 h-5" />
                   Start Automating
@@ -255,7 +190,7 @@ const AIWorkflowAutomation: React.FC = () => {
               From sales to finance, automate every aspect of your business with our specialized automation solutions.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
             {automationTypes.map((automation, index) => (
               <motion.div
                 key={automation.title}

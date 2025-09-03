@@ -2,8 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 // Async thunk for login
 export const loginUser = createAsyncThunk(
-  'auth/loginUser',
-  async (credentials, { rejectWithValue }) => {
+  'auth/loginUser', async (credentials, { rejectWithValue }) => {
     try {
       // Simulate API call
       const response = await new Promise((resolve, reject) => {
@@ -11,10 +10,8 @@ export const loginUser = createAsyncThunk(
           if (credentials.email && credentials.password) {
             resolve({
               user: {
-                id: 1,
-                email: credentials.email,
-                name: 'John Doe',
-                role: 'user'
+                id: 1, email: credentials.email,
+                name: 'John Doe', role: 'user'
               },
               token: 'mock-jwt-token'
             });
@@ -37,8 +34,7 @@ export const loginUser = createAsyncThunk(
 
 // Async thunk for signup
 export const signupUser = createAsyncThunk(
-  'auth/signupUser',
-  async (userData, { rejectWithValue }) => {
+  'auth/signupUser', async (userData, { rejectWithValue }) => {
     try {
       // Simulate API call
       const response = await new Promise((resolve, reject) => {
@@ -46,10 +42,8 @@ export const signupUser = createAsyncThunk(
           if (userData.email && userData.password && userData.name) {
             resolve({
               user: {
-                id: Date.now(),
-                email: userData.email,
-                name: userData.name,
-                role: 'user'
+                id: Date.now(), email: userData.email,
+                name: userData.name, role: 'user'
               },
               token: 'mock-jwt-token'
             });
@@ -72,8 +66,7 @@ export const signupUser = createAsyncThunk(
 
 // Async thunk for logout
 export const logoutUser = createAsyncThunk(
-  'auth/logoutUser',
-  async (_, { rejectWithValue }) => {
+  'auth/logoutUser', async (_, { rejectWithValue }) => {
     try {
       // Simulate API call
       await new Promise((resolve) => {
@@ -93,16 +86,14 @@ export const logoutUser = createAsyncThunk(
 
 // Async thunk for checking auth status
 export const checkAuthStatus = createAsyncThunk(
-  'auth/checkAuthStatus',
-  async (_, { rejectWithValue }) => {
+  'auth/checkAuthStatus', async (_, { rejectWithValue }) => {
     try {
       const token = localStorage.getItem('token');
       const user = localStorage.getItem('user');
 
       if (token && user) {
         return {
-          user: JSON.parse(user),
-          token
+          user: JSON.parse(user), token
         };
       } else {
         throw new Error('No auth data found');
@@ -114,29 +105,23 @@ export const checkAuthStatus = createAsyncThunk(
 );
 
 const initialState = {
-  user: null,
-  token: null,
-  isAuthenticated: false,
-  isLoading: false,
+  user: null, token: null,
+  isAuthenticated: false, isLoading: false,
   error: null
 };
 
 const authSlice = createSlice({
-  name: 'auth',
-  initialState,
+  name: 'auth', initialState,
   reducers: {
     clearError: (state) => {
       state.error = null;
-    },
-    setUser: (state, action) => {
+    }, setUser: (state, action) => {
       state.user = action.payload;
       state.isAuthenticated = !!action.payload;
-    },
-    setLoggedIn: (state, action) => {
+    }, setLoggedIn: (state, action) => {
       state.isAuthenticated = action.payload;
     }
-  },
-  extraReducers: (builder) => {
+  }, extraReducers: (builder) => {
     // Login
     builder
       .addCase(loginUser.pending, (state) => {

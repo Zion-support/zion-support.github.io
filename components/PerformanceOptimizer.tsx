@@ -8,7 +8,7 @@ interface PerformanceOptimizerProps {
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   preloadImages = [], preloadFonts = [
-    'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'
+    'https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'
   ], criticalCSS
 }) => {
   useEffect(() => {
@@ -18,7 +18,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP: ', entry.startTime)
+
           }
           if (entry.entryType === 'first-input') {
             console.log('FID: ', (entry as any).processingStart - entry.startTime)
@@ -34,8 +34,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] })
       } catch (e) {
-        // Fallback for browsers that don't support all entry types
-        console.log('Performance monitoring not fully supported')
+        // Fallback for browsers that don&apos;t support all entry types'
+
       }
 
       // Resource hints for better performance
@@ -104,10 +104,10 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
               window.addEventListener('load', function() {
                 navigator.serviceWorker.register('/sw.js')
                   .then(function(registration) {
-                    console.log('SW registered: ', registration)
+
                   })
                   .catch(function(registrationError) {
-                    console.log('SW registration failed: ', registrationError)
+
                   })
               })
             }

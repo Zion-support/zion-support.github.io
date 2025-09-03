@@ -1,5 +1,18 @@
 import type { NextPage } from 'next';
-import { Award, Best, Code, Cross, Globe, Mobile, Regular, Smartphone, Today, User, Users, Zap } from 'lucide-react';
+import {
+  Award,
+  Best,
+  Code,
+  Cross,
+  Globe,
+  Mobile,
+  Regular,
+  Smartphone,
+  Today,
+  User,
+  Users,
+  Zap,
+} from 'lucide-react';
 
 import Layout from '../../components/Layout';
 import Link from 'next/link';

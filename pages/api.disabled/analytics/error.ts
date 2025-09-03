@@ -28,31 +28,29 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
 
     // Log the error (in production, you might want to send to a monitoring service)
-    console.error('Client Error:', {
+    console.error('Client Error: ', {
       message: data.error.message,
       name: data.error.name,
       url: data.url,
       timestamp: new Date(data.timestamp).toISOString(),
       userAgent: data.userAgent,
       stack: data.error.stack,
-      componentStack: data.errorInfo.componentStack
+      componentStack: data.errorInfo.componentStack,
     });
 
-    // Here you could send the error to:
-    // - A monitoring service (Sentry, LogRocket, Bugsnag, etc.)
+    // Here you could send the error to: // - A monitoring service (Sentry, LogRocket, Bugsnag, etc.)
     // - A logging service (LogDNA, Papertrail, etc.)
     // - A database for analysis
     // - An alerting system (PagerDuty, Slack, etc.)
 
-    // For now, we'll just acknowledge receipt
-    res.status(200).json({ 
-      success: true, 
+    // For now, we&apos;ll just acknowledge receipt'
+    res.status(200).json({
+      success: true,
       message: 'Error logged successfully',
-      timestamp: Date.now()
+      timestamp: Date.now(),
     });
-
   } catch (error) {
-    console.error('Error processing error data:', error);
+    console.error('Error processing error data: ', error);
     res.status(500).json({ error: 'Internal server error' });
   }
 }

@@ -4,40 +4,28 @@ import { Shield, Award, Users, Clock, CheckCircle, Star } from 'lucide-react';
 const TrustIndicators: React.FC = () => {
   const indicators = [
     {
-      icon: Shield,
-      title: "Enterprise Security",
-      description: "SOC 2 Type II Certified",
-      color: "text-green-500"
+      icon: Shield, title: "Enterprise Security",
+      description: "SOC 2 Type II Certified", color: "text-green-500"
     },
     {
-      icon: Award,
-      title: "Industry Recognition",
-      description: "Top 100 Tech Companies 2026",
-      color: "text-blue-500"
+      icon: Award, title: "Industry Recognition",
+      description: "Top 100 Tech Companies 2026", color: "text-blue-500"
     },
     {
-      icon: Users,
-      title: "Expert Team",
-      description: "50+ Certified Professionals",
-      color: "text-purple-500"
+      icon: Users, title: "Expert Team",
+      description: "50+ Certified Professionals", color: "text-purple-500"
     },
     {
-      icon: Clock,
-      title: "24/7 Support",
-      description: "Round-the-clock assistance",
-      color: "text-orange-500"
+      icon: Clock, title: "24/7 Support",
+      description: "Round-the-clock assistance", color: "text-orange-500"
     },
     {
-      icon: CheckCircle,
-      title: "Quality Assurance",
-      description: "99.9% Uptime Guarantee",
-      color: "text-cyan-500"
+      icon: CheckCircle, title: "Quality Assurance",
+      description: "99.9% Uptime Guarantee", color: "text-cyan-500"
     },
     {
-      icon: Star,
-      title: "Client Satisfaction",
-      description: "98% Customer Rating",
-      color: "text-yellow-500"
+      icon: Star, title: "Client Satisfaction",
+      description: "98% Customer Rating", color: "text-yellow-500"
     }
   ];
 
@@ -53,11 +41,11 @@ const TrustIndicators: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8">
           {indicators.map((indicator, index) => (
             <div
               key={index}
-              className="text-center group hover:scale-105 transition-transform duration-300"
+              className="text-center group hover: scale-105 transition-transform duration-300"
             >
               <div className="w-16 h-16 bg-slate-800/50 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700/50 transition-colors">
                 <indicator.icon className={`w-8 h-8 ${indicator.color}`} />

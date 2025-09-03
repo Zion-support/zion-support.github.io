@@ -14,7 +14,7 @@ const ExpandedServicesPage: NextPage = () => {
   const contact = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+    address: '364 E Main St STE 1008 Middletown DE 19709',
   };
 
   return (
@@ -38,13 +38,21 @@ const ExpandedServicesPage: NextPage = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto"
           >
-            Explore our full catalog of Micro SaaS products, enterprise IT services, and AI solutions. All offerings include real features, typical pricing ranges, and direct links.
+            Explore our full catalog of Micro SaaS products, enterprise IT
+            services, and AI solutions. All offerings include real features,
+            typical pricing ranges, and direct links.
           </motion.p>
           <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href="/contact" className="bg-white text-blue-700 hover:bg-gray-100 px-6 py-3 rounded-md font-semibold inline-flex items-center justify-center">
+            <Link
+              href="/contact"
+              className="bg-white text-blue-700 hover:bg-gray-100 px-6 py-3 rounded-md font-semibold inline-flex items-center justify-center"
+            >
               Talk to Sales <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
-            <a href="tel:+13024640950" className="bg-transparent border border-white text-white hover:bg-white hover:text-blue-900 px-6 py-3 rounded-md font-semibold inline-flex items-center justify-center">
+            <a
+              href="tel:+13024640950"
+              className="bg-transparent border border-white text-white hover:bg-white hover:text-blue-900 px-6 py-3 rounded-md font-semibold inline-flex items-center justify-center"
+            >
               Call +1 302 464 0950
             </a>
           </div>
@@ -55,24 +63,47 @@ const ExpandedServicesPage: NextPage = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Micro SaaS</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            {micro.slice(0, 12).map((svc) => (
-              <div key={svc.id} className="border rounded-lg p-6 hover:shadow-lg transition-shadow">
+            {micro.slice(0, 12).map(svc => (
+              <div
+                key={svc.id}
+                className="border rounded-lg p-6 hover:shadow-lg transition-shadow"
+              >
                 <div className="flex items-start justify-between mb-3">
-                  <div className="text-3xl" aria-hidden>{svc.icon}</div>
+                  <div className="text-3xl" aria-hidden>
+                    {svc.icon}
+                  </div>
                   <div className="text-right">
-                    <div className="text-blue-600 font-semibold">From ${svc.pricing.starter}/{svc.pricing.currency === 'USD' ? 'mo' : ''}</div>
+                    <div className="text-blue-600 font-semibold">
+                      From ${svc.pricing.starter}/
+                      {svc.pricing.currency === 'USD' ? 'mo' : ''}
+                    </div>
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{svc.name}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  {svc.name}
+                </h3>
                 <p className="text-gray-600 mb-4 text-sm">{svc.description}</p>
                 <ul className="space-y-1 mb-4 text-sm text-gray-700">
                   {svc.features.slice(0, 5).map((f, i) => (
-                    <li key={i} className="flex items-center"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{f}</li>
+                    <li key={i} className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
+                      {f}
+                    </li>
                   ))}
                 </ul>
                 <div className="flex justify-between items-center">
-                  <Link href={svc.link} className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center">Learn more <ArrowRight className="w-4 h-4 ml-1" /></Link>
-                  <Link href="/contact" className="text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-medium">Get started</Link>
+                  <Link
+                    href={svc.link}
+                    className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center"
+                  >
+                    Learn more <ArrowRight className="w-4 h-4 ml-1" />
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-medium"
+                  >
+                    Get started
+                  </Link>
                 </div>
               </div>
             ))}
@@ -84,24 +115,46 @@ const ExpandedServicesPage: NextPage = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">IT Services</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            {it.slice(0, 12).map((svc) => (
-              <div key={svc.id} className="bg-white border rounded-lg p-6 hover:shadow-lg transition-shadow">
+            {it.slice(0, 12).map(svc => (
+              <div
+                key={svc.id}
+                className="bg-white border rounded-lg p-6 hover:shadow-lg transition-shadow"
+              >
                 <div className="flex items-start justify-between mb-3">
-                  <div className="text-3xl" aria-hidden>{svc.icon}</div>
+                  <div className="text-3xl" aria-hidden>
+                    {svc.icon}
+                  </div>
                   <div className="text-right">
-                    <div className="text-green-600 font-semibold">Starts at ${svc.pricing.starter.toLocaleString()}</div>
+                    <div className="text-green-600 font-semibold">
+                      Starts at ${svc.pricing.starter.toLocaleString()}
+                    </div>
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{svc.name}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  {svc.name}
+                </h3>
                 <p className="text-gray-600 mb-4 text-sm">{svc.description}</p>
                 <ul className="space-y-1 mb-4 text-sm text-gray-700">
                   {svc.features.slice(0, 6).map((f, i) => (
-                    <li key={i} className="flex items-center"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{f}</li>
+                    <li key={i} className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
+                      {f}
+                    </li>
                   ))}
                 </ul>
                 <div className="flex justify-between items-center">
-                  <Link href={svc.link} className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center">Learn more <ArrowRight className="w-4 h-4 ml-1" /></Link>
-                  <Link href="/contact" className="text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-medium">Request quote</Link>
+                  <Link
+                    href={svc.link}
+                    className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center"
+                  >
+                    Learn more <ArrowRight className="w-4 h-4 ml-1" />
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-medium"
+                  >
+                    Request quote
+                  </Link>
                 </div>
               </div>
             ))}
@@ -113,24 +166,46 @@ const ExpandedServicesPage: NextPage = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">AI Services</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            {ai.slice(0, 12).map((svc) => (
-              <div key={svc.id} className="border rounded-lg p-6 hover:shadow-lg transition-shadow">
+            {ai.slice(0, 12).map(svc => (
+              <div
+                key={svc.id}
+                className="border rounded-lg p-6 hover:shadow-lg transition-shadow"
+              >
                 <div className="flex items-start justify-between mb-3">
-                  <div className="text-3xl" aria-hidden>{svc.icon}</div>
+                  <div className="text-3xl" aria-hidden>
+                    {svc.icon}
+                  </div>
                   <div className="text-right">
-                    <div className="text-purple-600 font-semibold">From ${svc.pricing.starter.toLocaleString()}</div>
+                    <div className="text-purple-600 font-semibold">
+                      From ${svc.pricing.starter.toLocaleString()}
+                    </div>
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{svc.name}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  {svc.name}
+                </h3>
                 <p className="text-gray-600 mb-4 text-sm">{svc.description}</p>
                 <ul className="space-y-1 mb-4 text-sm text-gray-700">
                   {svc.features.slice(0, 6).map((f, i) => (
-                    <li key={i} className="flex items-center"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{f}</li>
+                    <li key={i} className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
+                      {f}
+                    </li>
                   ))}
                 </ul>
                 <div className="flex justify-between items-center">
-                  <Link href={svc.link} className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center">Learn more <ArrowRight className="w-4 h-4 ml-1" /></Link>
-                  <Link href="/contact" className="text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-medium">Book consult</Link>
+                  <Link
+                    href={svc.link}
+                    className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center"
+                  >
+                    Learn more <ArrowRight className="w-4 h-4 ml-1" />
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-medium"
+                  >
+                    Book consult
+                  </Link>
                 </div>
               </div>
             ))}
@@ -144,30 +219,88 @@ const ExpandedServicesPage: NextPage = () => {
             <div className="bg-white rounded-lg p-6 border">
               <h3 className="text-lg font-semibold mb-2">Contact</h3>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li className="flex items-center"><Phone className="w-4 h-4 mr-2 text-blue-600" />{contact.phone}</li>
-                <li className="flex items-center"><Mail className="w-4 h-4 mr-2 text-blue-600" /><a href="mailto:kleber@ziontechgroup.com" className="underline">{contact.email}</a></li>
-                <li className="flex items-center"><MapPin className="w-4 h-4 mr-2 text-blue-600" />{contact.address}</li>
+                <li className="flex items-center">
+                  <Phone className="w-4 h-4 mr-2 text-blue-600" />
+                  {contact.phone}
+                </li>
+                <li className="flex items-center">
+                  <Mail className="w-4 h-4 mr-2 text-blue-600" />
+                  <a
+                    href="mailto:kleber@ziontechgroup.com"
+                    className="underline"
+                  >
+                    {contact.email}
+                  </a>
+                </li>
+                <li className="flex items-center">
+                  <MapPin className="w-4 h-4 mr-2 text-blue-600" />
+                  {contact.address}
+                </li>
               </ul>
             </div>
             <div className="bg-white rounded-lg p-6 border">
               <h3 className="text-lg font-semibold mb-2">Useful Links</h3>
               <ul className="space-y-2 text-sm text-blue-700">
-                <li><a className="underline" href="https://ziontechgroup.com">Website</a></li>
-                <li><a className="underline" href="https://ziontechgroup.com/services">All Services</a></li>
-                <li><a className="underline" href="https://ziontechgroup.com/pricing">Pricing</a></li>
-                <li><a className="underline" href="https://ziontechgroup.com/contact">Contact</a></li>
-                <li><a className="underline" href="https://ziontechgroup.com/privacy">Privacy</a></li>
-                <li><a className="underline" href="https://ziontechgroup.com/terms">Terms</a></li>
+                <li>
+                  <a className="underline" href="https://ziontechgroup.com">
+                    Website
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="underline"
+                    href="https://ziontechgroup.com/services"
+                  >
+                    All Services
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="underline"
+                    href="https://ziontechgroup.com/pricing"
+                  >
+                    Pricing
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="underline"
+                    href="https://ziontechgroup.com/contact"
+                  >
+                    Contact
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="underline"
+                    href="https://ziontechgroup.com/privacy"
+                  >
+                    Privacy
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="underline"
+                    href="https://ziontechgroup.com/terms"
+                  >
+                    Terms
+                  </a>
+                </li>
               </ul>
             </div>
             <div className="bg-white rounded-lg p-6 border">
-              <h3 className="text-lg font-semibold mb-2">Typical Market Pricing</h3>
+              <h3 className="text-lg font-semibold mb-2">
+                Typical Market Pricing
+              </h3>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li>Micro SaaS: $12–$299/mo</li>
                 <li>IT Services: $8k–$250k/project</li>
                 <li>AI Solutions: $10k–$2M/project</li>
               </ul>
-              <p className="text-xs text-gray-500 mt-2">Ranges vary by scope, integrations, data complexity, and compliance requirements.</p>
+              <p className="text-xs text-gray-500 mt-2">
+                Ranges vary by scope, integrations, data complexity, and
+                compliance requirements.
+              </p>
             </div>
           </div>
         </div>
@@ -177,4 +310,3 @@ const ExpandedServicesPage: NextPage = () => {
 };
 
 export default ExpandedServicesPage;
-

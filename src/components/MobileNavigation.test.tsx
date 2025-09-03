@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import MobileNavigation from './MobileNavigation';
 describe('MobileNavigation', () => {
   it('renders without crashing', () => {
-    render(<MobileNavigation />)"
+    render(<MobileNavigation />)""
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it('displays expected content', () => {
     render(<MobileNavigation />)

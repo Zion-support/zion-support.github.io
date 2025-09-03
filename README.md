@@ -55,17 +55,20 @@ src/
 ## 🎨 Design System
 
 ### Color Palette
+
 - **Primary**: Zion Purple (`#8B5CF6`)
 - **Secondary**: Zion Cyan (`#22DDD2`)
 - **Background**: Zion Blue Dark (`#0F172A`)
 - **Text**: White, Zion Slate Light (`#94A3B8`)
 
 ### Typography
+
 - **Headings**: Bold, large text for hierarchy
 - **Body**: Clean, readable text with proper contrast
 - **Accents**: Zion Cyan for highlights and CTAs
 
 ### Components
+
 - **Cards**: Rounded corners with subtle borders and hover effects
 - **Buttons**: Gradient backgrounds with hover animations
 - **Navigation**: Dropdown menus with smooth transitions
@@ -74,6 +77,7 @@ src/
 ## 📱 Responsive Design
 
 The website is built with a mobile-first approach:
+
 - **Mobile**: Stacked layouts with touch-friendly interactions
 - **Tablet**: Adjusted grid layouts for medium screens
 - **Desktop**: Full-featured layouts with hover effects and advanced navigation
@@ -81,6 +85,7 @@ The website is built with a mobile-first approach:
 ## 🧭 Navigation Structure
 
 ### Main Navigation
+
 - **Home** (`/`) - Landing page with hero section and service overview
 - **Services** (`/services`) - AI, Cloud, Cybersecurity, Digital Transformation
 - **Solutions** (`/solutions`) - Industry-specific solutions
@@ -90,6 +95,7 @@ The website is built with a mobile-first approach:
 - **Contact** (`/contact`) - Get in touch and request quotes
 
 ### Footer Navigation
+
 - Organized into logical sections (Services, Solutions, Company, Resources, Support)
 - Social media links and contact information
 - Newsletter signup and trust indicators
@@ -97,21 +103,25 @@ The website is built with a mobile-first approach:
 ## 🔧 Technical Implementation
 
 ### Frontend Framework
+
 - **Next.js 15.5.2** - React framework with SSR capabilities
 - **React 18.2.0** - Modern React with hooks and functional components
 - **TypeScript** - Type-safe development
 
 ### Styling
+
 - **Tailwind CSS** - Utility-first CSS framework
 - **Custom CSS Variables** - Zion Tech Group brand colors
 - **Responsive Design** - Mobile-first approach
 
 ### State Management
+
 - **React Hooks** - useState, useEffect for local state
 - **Context API** - For global state management
 - **React Router** - Client-side routing
 
 ### Performance
+
 - **Lazy Loading** - Components loaded on demand
 - **Image Optimization** - Next.js image optimization
 - **Code Splitting** - Automatic bundle splitting
@@ -119,18 +129,21 @@ The website is built with a mobile-first approach:
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js 18+ 
+
+- Node.js 18+
 - npm or yarn package manager
 
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone <repository-url>
    cd zion-tech-group
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    # or
@@ -138,6 +151,7 @@ The website is built with a mobile-first approach:
    ```
 
 3. **Start development server**
+
    ```bash
    npm run dev
    # or
@@ -157,6 +171,7 @@ npm start
 ## 📁 Key Components
 
 ### Header Component (`src/components/header/Header.jsx`)
+
 - Logo with Zion Tech Group branding
 - Main navigation with dropdown menus
 - Search functionality with suggestions
@@ -164,6 +179,7 @@ npm start
 - Mobile-responsive design
 
 ### Footer Component (`src/components/Footer.jsx`)
+
 - Company information and branding
 - Organized link sections
 - Newsletter signup
@@ -171,12 +187,14 @@ npm start
 - Trust indicators and certifications
 
 ### Sidebar Component (`src/components/Sidebar.jsx`)
+
 - Collapsible navigation sections
 - Service and solution categories
 - Quick access to key pages
 - Mobile-friendly overlay design
 
 ### HomePage Component (`src/pages/HomePage.jsx`)
+
 - Hero section with compelling messaging
 - Feature highlights with icons
 - Statistics and social proof
@@ -186,12 +204,14 @@ npm start
 ## 🎯 Content Management
 
 ### Service Data (`src/data/marketplaceData.js`)
+
 - Search suggestions and keywords
 - Service categories and descriptions
 - Industry solutions and use cases
 - Testimonials and case studies
 
 ### Page Templates
+
 - **SimplePage.jsx** - Template for various routes with dynamic content
 - **ComprehensivePricing2025.jsx** - Pricing page with plans and add-ons
 - **Sitemap.jsx** - Complete site navigation structure
@@ -199,12 +219,14 @@ npm start
 ## 🔍 Search Functionality
 
 ### Enhanced Search Input
+
 - Real-time search suggestions
 - Recent and popular searches
 - Category-based filtering
 - Keyboard navigation support
 
 ### Search Suggestions
+
 - Service-related keywords
 - Industry-specific terms
 - Technology stack references
@@ -213,12 +235,14 @@ npm start
 ## 📊 Analytics and SEO
 
 ### SEO Features
+
 - Meta tags and descriptions
 - Structured data markup
 - Sitemap generation
 - Open Graph tags
 
 ### Performance Monitoring
+
 - Lighthouse performance metrics
 - Core Web Vitals tracking
 - Page load optimization
@@ -227,11 +251,13 @@ npm start
 ## 🚀 Deployment
 
 ### Build Process
+
 1. **Development**: `npm run dev` for local development
 2. **Build**: `npm run build` for production build
 3. **Start**: `npm start` for production server
 
 ### Environment Variables
+
 - Configure environment variables in `.env.local`
 - Set production URLs and API endpoints
 - Configure analytics and monitoring
@@ -251,6 +277,7 @@ npm start
 ## 🤝 Contributing
 
 ### Development Workflow
+
 1. Create a feature branch
 2. Make your changes
 3. Test thoroughly
@@ -258,6 +285,7 @@ npm start
 5. Code review and approval
 
 ### Code Standards
+
 - Follow React best practices
 - Use TypeScript for type safety
 - Maintain consistent styling with Tailwind CSS
@@ -266,6 +294,7 @@ npm start
 ## 📞 Support and Contact
 
 For technical support or questions about the website:
+
 - **Email**: contact@ziontechgroup.com
 - **Documentation**: Check the `/docs` section
 - **Issues**: Use the GitHub issues page

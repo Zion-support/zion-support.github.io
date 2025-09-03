@@ -8,7 +8,7 @@ import { glob } from 'glob';
 const directories = [
   'src/**/*.{js,jsx,ts,tsx}',
   'pages/**/*.{js,jsx,ts,tsx}',
-  'components/**/*.{js,jsx,ts,tsx}'
+  'components/**/*.{js,jsx,ts,tsx}',
 ];
 
 // Directories to exclude
@@ -25,7 +25,7 @@ const excludeDirs = [
   'components.disabled',
   'backup-pages',
   'pages_backup',
-  'pages.__backup'
+  'pages.__backup',
 ];
 
 let totalFiles = 0;
@@ -34,7 +34,7 @@ let totalRemoved = 0;
 
 function cleanConsoleLogs(content, filePath) {
   const originalContent = content;
-  
+
   // Remove console.log, console.warn, console.error, console.debug statements
   // But keep console.error in error handling contexts
   const patterns = [
@@ -45,12 +45,12 @@ function cleanConsoleLogs(content, filePath) {
     // Remove console.debug statements
     /^\s*console\.debug\s*\([^)]*\)\s*;?\s*$/gm,
     // Remove console.log in multi-line statements (be careful with this)
-    /console\.log\s*\([^)]*\)\s*;?\s*(?=\n)/g
+    /console\.log\s*\([^)]*\)\s*;?\s*(?=\n)/g,
   ];
-  
+
   let cleanedContent = content;
   let removedCount = 0;
-  
+
   patterns.forEach(pattern => {
     const matches = cleanedContent.match(pattern);
     if (matches) {
@@ -58,14 +58,14 @@ function cleanConsoleLogs(content, filePath) {
       cleanedContent = cleanedContent.replace(pattern, '');
     }
   });
-  
+
   // Clean up empty lines that might be left behind
   cleanedContent = cleanedContent.replace(/\n\s*\n\s*\n/g, '\n\n');
-  
+
   if (cleanedContent !== originalContent) {
     return { content: cleanedContent, removed: removedCount };
   }
-  
+
   return null;
 }
 
@@ -73,14 +73,16 @@ function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     const result = cleanConsoleLogs(content, filePath);
-    
+
     if (result) {
       fs.writeFileSync(filePath, result.content, 'utf8');
       cleanedFiles++;
       totalRemoved += result.removed;
-      console.log(`✅ Cleaned ${filePath} (removed ${result.removed} console statements)`);
+      console.log(
+        `✅ Cleaned ${filePath} (removed ${result.removed} console statements)`
+      );
     }
-    
+
     totalFiles++;
   } catch (error) {
     console.error(`❌ Error processing ${filePath}:`, error.message);
@@ -93,19 +95,19 @@ function shouldExcludeFile(filePath) {
 
 async function main() {
   console.log('🧹 Starting console.log cleanup...\n');
-  
+
   for (const pattern of directories) {
-    const files = await glob(pattern, { 
-      ignore: excludeDirs.map(dir => `**/${dir}/**`) 
+    const files = await glob(pattern, {
+      ignore: excludeDirs.map(dir => `**/${dir}/**`),
     });
-    
+
     for (const file of files) {
       if (!shouldExcludeFile(file)) {
         processFile(file);
       }
     }
   }
-  
+
   console.log(`\n📊 Cleanup Summary:`);
   console.log(`   Total files processed: ${totalFiles}`);
   console.log(`   Files cleaned: ${cleanedFiles}`);

@@ -31,10 +31,27 @@ interface ComponentProps {
   [key: string]: unknown;
 }
 
-
 import Layout from '../components/Layout';
 import Link from 'next/link';
-import { BookOpen, Can, CheckCircle, Clock, Common, FileText, Frequently, HelpCircle, Mail, MessageCircle, Phone, Quick, Search, Users, Video, Within, Yes } from 'lucide-react';
+import {
+  BookOpen,
+  Can,
+  CheckCircle,
+  Clock,
+  Common,
+  FileText,
+  Frequently,
+  HelpCircle,
+  Mail,
+  MessageCircle,
+  Phone,
+  Quick,
+  Search,
+  Users,
+  Video,
+  Within,
+  Yes,
+} from 'lucide-react';
 
 const Help: NextPage = () => {
   const faqs = [
@@ -116,9 +133,12 @@ const Help: NextPage = () => {
       link: '/knowledge-base',
     },
     {
-      icon: FileText, title: 'Knowledge Base',
-      description: 'Searchable articles and troubleshooting guides', link: '/knowledge-base',
-    }, {
+      icon: FileText,
+      title: 'Knowledge Base',
+      description: 'Searchable articles and troubleshooting guides',
+      link: '/knowledge-base',
+    },
+    {
       icon: Users,
       title: 'Community Forum',
       description: 'Connect with other users and get peer support',
@@ -309,9 +329,10 @@ const Help: NextPage = () => {
             Still Need Help?
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Can't find what you're looking for? Our support team is ready to help you with unknown questions or concerns.
             Can't find what you're looking for? Our support team is ready to
-            help you with any questions or concerns.
+            help you with unknown questions or concerns. Can't find what you're
+            looking for? Our support team is ready to help you with any
+            questions or concerns.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a

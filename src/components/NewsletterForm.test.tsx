@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import NewsletterForm from './NewsletterForm';
 describe('NewsletterForm', () => {
   it('renders without crashing', () => {
-    render(<NewsletterForm />)"
+    render(<NewsletterForm />)""
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   it('displays expected content', () => {
     render(<NewsletterForm />)

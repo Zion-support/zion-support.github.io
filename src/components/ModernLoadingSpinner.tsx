@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react' import { motion, AnimatePresence } from 'framer - motion'  interface ModernLoadingSpinnerProps {;"
-   size?: 'sm' | 'md' | 'lg' | 'xl';"
+import React, { useState, useEffect } from 'react' import { motion, AnimatePresence } from 'framer - motion'  interface ModernLoadingSpinnerProps {;""
+   size?: 'sm' | 'md' | 'lg' | 'xl';""
    variant?: 'default' | 'futuristic' | 'ai' | 'cyber' | 'quantum';
    text?: string;
    showProgress?: boolean;

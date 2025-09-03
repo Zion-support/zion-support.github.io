@@ -1,18 +1,33 @@
 {
-  "timestamp": "2025-09-02T21:11:37.279Z",
-  "optimizations": {
-    "totalFilesProcessed": 2119,
-    "totalOptimizations": 347,
-    "bundleSize": {
-      "maxFileSize": 512000,
-      "maxTotalSize": 5242880
+  "timestamp": "2025-09-03T01:45:02.749Z",
+  "optimizations": [
+    {
+      "type": "bundle",
+      "action": "Analyzed bundle and dependencies",
+      "status": "failed",
+      "error": "spawnSync /bin/sh ENOBUFS"
     },
-    "recommendations": [
-      "Consider implementing code splitting for large components",
-      "Use React.memo for expensive components",
-      "Optimize images to WebP/AVIF format",
-      "Implement lazy loading for non-critical components",
-      "Use CSS-in-JS libraries for better tree shaking"
-    ]
+    {
+      "type": "image",
+      "action": "Scanned images for optimization opportunities",
+      "status": "success"
+    },
+    {
+      "type": "import",
+      "action": "Scanned and optimized imports",
+      "status": "success"
+    },
+    {
+      "type": "monitoring",
+      "file": "performance-monitor.js",
+      "action": "Added performance monitoring utilities",
+      "status": "success"
+    }
+  ],
+  "summary": {
+    "total": 4,
+    "successful": 3,
+    "failed": 1,
+    "warnings": 0
   }
 }

@@ -1,9 +1,9 @@
-import js from '@eslint/js'
-import react from 'eslint-plugin-react'
-import reactHooks from 'eslint-plugin-react-hooks'
-import tseslint from '@typescript-eslint/eslint-plugin'
-import tsparser from '@typescript-eslint/parser'
-export default [
+const js = require('@eslint/js')
+const react = require('eslint-plugin-react')
+const reactHooks = require('eslint-plugin-react-hooks')
+const tseslint = require('@typescript-eslint/eslint-plugin')
+const tsparser = require('@typescript-eslint/parser')
+module.exports = [
   js.configs.recommended,
   {
     files: ['**/*.{js,jsx}'],
@@ -267,7 +267,7 @@ import tseslint from
 import tsparser from
   '@typescript-eslint/parser'
 
-export default [
+module.exports = [
   js.configs.recommended, {
     files: ['**/*.{js,jsx}'], languageOptions: {
       ecmaVersion: 2021, sourceType: 'module', globals: {

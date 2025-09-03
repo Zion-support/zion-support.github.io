@@ -1,30 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { X, ChevronRight, Home, Briefcase, Target, Building, FileText, Video, Mail, Brain, Cloud, Shield, Server, Rocket, Users, HelpCircle, DollarSign } from 'lucide-react';
-
 export function MobileMenu({ isOpen, onClose, user, onNavigate }) {
   const navigationItems = [
     {
-      name: 'Home',
-      href: '/',
+      name: 'Home', href: '/',
       icon: Home
-    },
-    {
+    }, {
       name: 'Services',
-      href: '/services',
-      icon: Briefcase,
+      href: '/services', icon: Briefcase,
       children: [
-        { name: 'AI Services', href: '/services/ai', icon: Brain },
-        { name: 'Cloud Solutions', href: '/services/cloud', icon: Cloud },
-        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
-        { name: 'IT Infrastructure', href: '/services/infrastructure', icon: Server },
+        { name: 'AI Services', href: '/services/ai', icon: Brain }, { name: 'Cloud Solutions', href: '/services/cloud', icon: Cloud },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield }, { name: 'IT Infrastructure', href: '/services/infrastructure', icon: Server },
         { name: 'Digital Transformation', href: '/services/transformation', icon: Rocket }
       ]
-    },
-    {
+    }, {
       name: 'Solutions',
-      href: '/solutions',
-      icon: Target,
+      href: '/solutions', icon: Target,
       children: [
         { name: 'Industry Solutions', href: '/solutions/industry' },
         { name: 'Manufacturing', href: '/solutions/manufacturing' },
@@ -32,22 +23,18 @@ export function MobileMenu({ isOpen, onClose, user, onNavigate }) {
         { name: 'Healthcare', href: '/solutions/healthcare' },
         { name: 'Retail', href: '/solutions/retail' }
       ]
-    },
-    {
+    }, {
       name: 'About',
-      href: '/about',
-      icon: Building,
+      href: '/about', icon: Building,
       children: [
         { name: 'Company', href: '/about' },
         { name: 'Team', href: '/about/team' },
         { name: 'Careers', href: '/careers' },
         { name: 'Partners', href: '/partners' }
       ]
-    },
-    {
+    }, {
       name: 'Resources',
-      href: '#',
-      icon: FileText,
+      href: '#', icon: FileText,
       children: [
         { name: 'Case Studies', href: '/case-studies' },
         { name: 'Research & Development', href: '/research-development' },
@@ -57,11 +44,9 @@ export function MobileMenu({ isOpen, onClose, user, onNavigate }) {
         { name: 'White Papers', href: '/white-papers' },
         { name: 'Webinars', href: '/webinars' }
       ]
-    },
-    {
+    }, {
       name: 'Support',
-      href: '/support',
-      icon: HelpCircle,
+      href: '/support', icon: HelpCircle,
       children: [
         { name: 'Help Center', href: '/support' },
         { name: 'Documentation', href: '/docs' },
@@ -78,7 +63,7 @@ export function MobileMenu({ isOpen, onClose, user, onNavigate }) {
   if (!isOpen) return null;
 
   return (
-    <div className="lg:hidden fixed inset-0 z-50">
+    <div className="lg: hidden fixed inset-0 z-50">
       {/* Overlay */}
       <div 
         className="absolute inset-0 bg-black/50 backdrop-blur-sm"
@@ -98,9 +83,7 @@ export function MobileMenu({ isOpen, onClose, user, onNavigate }) {
           <button
             onClick={onClose}
             className="p-2 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded-lg transition-colors"
-          >
-            <X className="h-5 w-5" />
-          </button>
+           aria-label="Button">
         </div>
 
         {/* Navigation */}
@@ -110,7 +93,7 @@ export function MobileMenu({ isOpen, onClose, user, onNavigate }) {
               <div key={item.name}>
                 {item.children ? (
                   <details className="group">
-                    <summary className="flex items-center justify-between px-4 py-3 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 cursor-pointer transition-colors">
+                    <summary className="flex items-center justify-between px-4 py-3 text-zion-slate-light hover: text-white hover:bg-zion-purple/10 cursor-pointer transition-colors">
                       <div className="flex items-center space-x-3">
                         <item.icon className="h-5 w-5" />
                         <span className="font-medium">{item.name}</span>
@@ -122,7 +105,7 @@ export function MobileMenu({ isOpen, onClose, user, onNavigate }) {
                         <Link
                           key={child.name}
                           to={child.href}
-                          className="flex items-center px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
+                          className="flex items-center px-4 py-2 text-sm text-zion-slate-light hover: text-zion-cyan hover:bg-zion-purple/10 transition-colors"
                           onClick={() => handleNavigation(child.href)}
                         >
                           {child.icon && <child.icon className="h-4 w-4 mr-3" />}
@@ -153,7 +136,7 @@ export function MobileMenu({ isOpen, onClose, user, onNavigate }) {
               <p className="text-sm text-zion-slate-light mb-2">Welcome back, {user.name}</p>
               <Link
                 to="/dashboard"
-                className="block w-full px-4 py-2 bg-zion-purple text-white text-center rounded-lg hover:bg-zion-purple/80 transition-colors"
+                className="block w-full px-4 py-2 bg-zion-purple text-white text-center rounded-lg hover: bg-zion-purple/80 transition-colors"
                 onClick={() => handleNavigation('/dashboard')}
               >
                 Go to Dashboard
@@ -170,7 +153,7 @@ export function MobileMenu({ isOpen, onClose, user, onNavigate }) {
               </Link>
               <Link
                 to="/register"
-                className="block w-full px-4 py-2 bg-gradient-to-r from-zion-purple to-zion-cyan text-white text-center rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300"
+                className="block w-full px-4 py-2 bg-gradient-to-r from-zion-purple to-zion-cyan text-white text-center rounded-lg hover: from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300"
                 onClick={() => handleNavigation('/register')}
               >
                 Get Started
@@ -182,7 +165,7 @@ export function MobileMenu({ isOpen, onClose, user, onNavigate }) {
           <div className="pt-3 border-t border-zion-purple/20">
             <Link
               to="/request-quote"
-              className="flex items-center justify-center space-x-2 px-4 py-2 text-zion-cyan hover:text-white hover:bg-zion-purple/10 rounded-lg transition-colors"
+              className="flex items-center justify-center space-x-2 px-4 py-2 text-zion-cyan hover: text-white hover:bg-zion-purple/10 rounded-lg transition-colors"
               onClick={() => handleNavigation('/request-quote')}
             >
               <DollarSign className="h-4 w-4" />

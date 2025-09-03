@@ -15,7 +15,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
             </div>
           </Link>
           {/* Desktop Navigation */}
-          <div className='hidden lg:flex items-center space-x-8'>
+          <div className='hidden lg: flex items-center space-x-8'>
             <Link href='/' className='text-gray-600 hover:text-blue-600 transition-colors'>
               Home
             </Link>
@@ -34,7 +34,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
               >
-                <Link href='/services/ai-services' className='block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600'>
+                <Link href='/services/ai-services' className='block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600'>
                   AI Services
                 </Link>
                 <Link href='/services/it-services' className='block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600'>
@@ -71,7 +71,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
                 onMouseEnter={() => setSolutionsOpen(true)}
                 onMouseLeave={() => setSolutionsOpen(false)}
               >
-                <Link href='/solutions' className='block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600'>
+                <Link href='/solutions' className='block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600'>
                   Solutions Overview
                 </Link>
                 <Link href='/solutions/enterprise' className='block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600'>

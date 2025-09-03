@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 export default function AIServices() {
   const title = 'AI Services — Zion Tech Group';
@@ -303,7 +302,7 @@ export default function AIServices() {
         'Integration with existing business systems',
         'Real-time monitoring and intervention protocols',
       ],
-      pricing: '$8,000 - $25,000/month',
+      pricing: '$8,000 - $25, 000/month',
       delivery: '8-16 weeks',
       category: 'Autonomous AI',
     },
@@ -320,7 +319,7 @@ export default function AIServices() {
         'Patent landscape analysis',
         'Regulatory compliance and documentation',
       ],
-      pricing: '$15,000 - $50,000/month',
+      pricing: '$15,000 - $50, 000/month',
       delivery: '12-24 weeks',
       category: 'Pharma AI',
     },
@@ -337,7 +336,7 @@ export default function AIServices() {
         'Disaster risk assessment and mitigation',
         'Sustainability reporting and compliance',
       ],
-      pricing: '$10,000 - $35,000/month',
+      pricing: '$10,000 - $35, 000/month',
       delivery: '10-20 weeks',
       category: 'Climate AI',
     },
@@ -354,7 +353,7 @@ export default function AIServices() {
         'Quantum simulation and modeling',
         'Integration with existing computing infrastructure',
       ],
-      pricing: '$20,000 - $75,000/month',
+      pricing: '$20,000 - $75, 000/month',
       delivery: '16-32 weeks',
       category: 'Quantum AI',
     },
@@ -371,7 +370,7 @@ export default function AIServices() {
         'Communication network optimization',
         'Mission risk assessment and mitigation',
       ],
-      pricing: '$25,000 - $100,000/month',
+      pricing: '$25,000 - $100, 000/month',
       delivery: '20-40 weeks',
       category: 'Space AI',
     },
@@ -388,7 +387,7 @@ export default function AIServices() {
         'Low-power computing optimization',
         'Integration with IoT and edge devices',
       ],
-      pricing: '$12,000 - $40,000/month',
+      pricing: '$12,000 - $40, 000/month',
       delivery: '12-24 weeks',
       category: 'Neuromorphic AI',
     },
@@ -404,7 +403,7 @@ export default function AIServices() {
         'Synthetic organism design and testing',
         'Biomanufacturing optimization',
       ],
-      pricing: '$18,000 - $60,000/month',
+      pricing: '$18,000 - $60, 000/month',
       delivery: '16-28 weeks',
       category: 'Synthetic Biology AI',
     },
@@ -420,7 +419,7 @@ export default function AIServices() {
         'Predictive maintenance and diagnostics',
         'Real-time performance optimization',
       ],
-      pricing: '$30,000 - $120,000/month',
+      pricing: '$30,000 - $120, 000/month',
       delivery: '24-48 weeks',
       category: 'Fusion AI',
     },
@@ -437,7 +436,7 @@ export default function AIServices() {
         'Real-time feedback and adaptation',
         'Medical device integration and control',
       ],
-      pricing: '$15,000 - $50,000/month',
+      pricing: '$15,000 - $50, 000/month',
       delivery: '20-36 weeks',
       category: 'BCI AI',
     },
@@ -454,7 +453,7 @@ export default function AIServices() {
         'Passenger safety and comfort optimization',
         'Integration with smart city infrastructure',
       ],
-      pricing: '$25,000 - $80,000/month',
+      pricing: '$25,000 - $80, 000/month',
       delivery: '24-40 weeks',
       category: 'Autonomous Vehicle AI',
     },
@@ -471,7 +470,7 @@ export default function AIServices() {
         'Virtual economy and asset management',
         'Cross-platform integration and compatibility',
       ],
-      pricing: '$20,000 - $70,000/month',
+      pricing: '$20,000 - $70, 000/month',
       delivery: '20-36 weeks',
       category: 'Metaverse AI',
     },
@@ -488,7 +487,7 @@ export default function AIServices() {
         'What-if scenario analysis and planning',
         'Integration with IoT sensors and systems',
       ],
-      pricing: '$12,000 - $45,000/month',
+      pricing: '$12,000 - $45, 000/month',
       delivery: '16-28 weeks',
       category: 'Digital Twin AI',
     },
@@ -505,7 +504,7 @@ export default function AIServices() {
         'Data processing and analytics at the edge',
         'Security and privacy protection',
       ],
-      pricing: '$8,000 - $30,000/month',
+      pricing: '$8,000 - $30, 000/month',
       delivery: '12-24 weeks',
       category: 'Edge AI',
     },
@@ -522,7 +521,7 @@ export default function AIServices() {
         'Cross-chain bridge optimization',
         'Regulatory compliance and reporting',
       ],
-      pricing: '$10,000 - $35,000/month',
+      pricing: '$10,000 - $35, 000/month',
       delivery: '14-26 weeks',
       category: 'Blockchain AI',
     },
@@ -677,7 +676,7 @@ export default function AIServices() {
             {aiTechnologies.map((tech, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-white rounded-2xl p-6 shadow-sm hover: shadow-md transition-shadow"
               >
                 <div className="flex items-center mb-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100">
@@ -706,7 +705,7 @@ export default function AIServices() {
               services include implementation, training, and ongoing support.
               Contact us at{' '}
               <a
-                href="mailto:kleber@ziontechgroup.com"
+                href="mailto: kleber@ziontechgroup.com"
                 className="text-blue-600 hover:text-blue-500"
               >
                 kleber@ziontechgroup.com
@@ -725,7 +724,7 @@ export default function AIServices() {
             {aiServices.map((service, index) => (
               <div
                 key={index}
-                className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300"
+                className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300"
               >
                 <div className="flex items-center gap-x-3 mb-6">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover:bg-blue-700 transition-colors">
@@ -784,7 +783,7 @@ export default function AIServices() {
               Ready to Transform Your Business with AI?
             </h2>
             <p className="mt-6 text-lg leading-8 text-blue-100">
-              Let's discuss how our AI solutions can drive your business
+              Let&apos;s discuss how our AI solutions can drive your business'
               forward. Get a free consultation and custom proposal.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">

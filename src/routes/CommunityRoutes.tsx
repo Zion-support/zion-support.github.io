@@ -1,10 +1,10 @@
-import { Route, Routes } from 'react-router-dom';"
-import { ProtectedRoute } from '../components/ProtectedRoute';"
-import CommunityPage from '../pages/CommunityPage';"
-import ForumCategoryPage from '../pages/ForumCategoryPage';"
-import ForumPostPage from '../pages/ForumPostPage';"
-import CreatePostPage from '../pages/CreatePostPage';"
-import EditPostPage from '../pages/EditPostPage';"
+import { Route, Routes } from 'react-router-dom';""
+import { ProtectedRoute } from '../components/ProtectedRoute';""
+import CommunityPage from '../pages/CommunityPage';""
+import ForumCategoryPage from '../pages/ForumCategoryPage';""
+import ForumPostPage from '../pages/ForumPostPage';""
+import CreatePostPage from '../pages/CreatePostPage';""
+import EditPostPage from '../pages/EditPostPage';""
 import { Route, Routes } from 'react-router-dom';
 import { ProtectedRoute } from '../components/ProtectedRoute';
 import CommunityPage from '../pages/CommunityPage';
@@ -23,4 +23,4 @@ export default function CommunityRoutes() {
       <Route path="edit/:postId" element={<EditPostPage />} />
       <Route path="profile/:userId" element={<CommunityProfilePage />} />
     </Routes>
-  )}"
+  )}""

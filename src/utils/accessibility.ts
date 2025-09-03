@@ -2,7 +2,7 @@ export const accessibilityUtils = {
   // Focus management
   trapFocus: (element: HTMLElement) => {
     const focusableElements = element.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      'button, [href], input, select, textarea, [tabindex]: not([tabindex="-1"])'
     );
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
@@ -30,9 +30,7 @@ export const accessibilityUtils = {
     return () => {
       element.removeEventListener('keydown', handleTabKey);
     };
-  },
-
-  // ARIA helpers
+  }, // ARIA helpers
   announceToScreenReader: (message: string) => {
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
@@ -45,9 +43,7 @@ export const accessibilityUtils = {
     setTimeout(() => {
       document.body.removeChild(announcement);
     }, 1000);
-  },
-
-  // Color contrast checker
+  }, // Color contrast checker
   getContrastRatio: (color1: string, color2: string): number => {
     const getLuminance = (color: string): number => {
       const rgb = color.match(/\d+/g);

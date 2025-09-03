@@ -6,12 +6,12 @@ interface PerformanceMetrics {
   networkLatency: number}
 
 export const PerformanceOptimizer: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null" >(null);
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null" >(null);"
   const [isOptimized, setIsOptimized] = useState(false);
   useEffect(() => {
-    const measurePerformance = () => {"
-      if (typeof window !== 'undefined' && 'performance' in window) {"
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"
+    const measurePerformance = () => {""
+      if (typeof window !== 'undefined' && 'performance' in window) {""
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;""
         const paint = performance.getEntriesByType('paint');
         const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
         const renderTime = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
@@ -35,16 +35,16 @@ export const PerformanceOptimizer: React.FC = () => {
       window.addEventListener('load', measurePerformance);
     }
 
-    // Measure performance after page load"
+    // Measure performance after page load""
     if (document.readyState === 'complete') {
-      measurePerformance()} else {"
+      measurePerformance()} else {""
       window.addEventListener('load', measurePerformance)}
 
-    return () => {"
+    return () => {""
       window.removeEventListener('load', measurePerformance)}
   }, []);
   const optimizePerformance = () => {
-    // Implement performance optimizations"
+    // Implement performance optimizations""
     if (typeof window !== 'undefined') {
       // Preload critical resources
       const criticalResources = [
@@ -75,17 +75,17 @@ export const PerformanceOptimizer: React.FC = () => {
   if (!metrics) {
     return null}
 
-  return ("
-    <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">"
-      <div className="flex items-center justify-between mb-2">"
-        <h3 className="text-sm font-semibold text-gray-900">Performance</h3>"
-        <div className={`w-3 h-3 rounded-full ${isOptimized ? 'bg-green-500' : 'bg-yellow-500'}`}" ></div>
+  return (""
+    <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">""
+      <div className="flex items-center justify-between mb-2">""
+        <h3 className="text-sm font-semibold text-gray-900">Performance</h3>""
+        <div className={`w-3 h-3 rounded-full ${isOptimized ? 'bg-green-500' : 'bg-yellow-500'}`}" ></div>"
       </div>
-      "
-      <div className="space-y-2 text-xs">"
-        <div className="flex justify-between">"
-          <span className="text-gray-600">Load Time:</span>"
-          <span className={metrics.loadTime < 3000 ? 'text-green-600' : 'text-red-600'}" >
+      ""
+      <div className="space-y-2 text-xs">""
+        <div className="flex justify-between">""
+          <span className="text-gray-600">Load Time:</span>""
+          <span className={metrics.loadTime < 3000 ? 'text-green-600' : 'text-red-600'}" >"
             {metrics.loadTime.toFixed(0)}ms
           </span>
         </div>

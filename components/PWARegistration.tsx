@@ -38,10 +38,10 @@ const PWARegistration: React.FC = () => {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
-          console.log('Service Worker registered successfully:', registration)
+
         })
         .catch((error) => {
-          console.log('Service Worker registration failed:', error)
+
         })
     }
 
@@ -55,9 +55,9 @@ const PWARegistration: React.FC = () => {
     deferredPrompt.prompt()
     const { outcome } = await deferredPrompt.userChoice
     if (outcome === 'accepted') {
-      console.log('User accepted the install prompt')
+
     } else {
-      console.log('User dismissed the install prompt')
+
     }
     
     setDeferredPrompt(null)
@@ -65,11 +65,11 @@ const PWARegistration: React.FC = () => {
   }
   const handleDismiss = () => {
     setShowInstallPrompt(false)
-React, { useEffect, useState } from, react'
-import { motion, AnimatePresence  } from 'lucide-react';import { Download, X, Smartphone, Monitor  } from 'lucide-react'';interface BeforeInstallPromptEvent extends Event {
+React, { useEffect, useState } from, react''
+import { motion, AnimatePresence  } from 'lucide-react';import { Download, X, Smartphone, Monitor  } from 'lucide-react'';interface BeforeInstallPromptEvent extends Event {'
   readonly platforms: string[]
   readonly userChoice: Promise<{
-    outcome: 'accepted
+    outcome: 'accepted'
   ' | 'dismissed
   
    platform: string  }>;prompt(): Promise<void>
@@ -96,18 +96,18 @@ const handleAppInstalled = () => {;setIsInstalled(true)
     }
 
 window.addEventListener(, beforeinstallprompt', handleBeforeInstallPrompt)'    window.addEventListener(
-  'appinstalled', handleAppInstalled)'    // Register service worker
-    if ('serviceWorker
+  'appinstalled', handleAppInstalled)'    // Register service worker'
+    if ('serviceWorker'
   ' in navigator) {'      navigator.serviceWorker.register(
   '/sw.js')
   '        .then((registration) => {'          console.log(
-  'Service Worker registered successfully: , registration)})
-  '        .catch((error) => {
-          console.log('Service Worker registration failed: , error)'        })'    }
+  'Service Worker registered successfully:  , registration)})'
+  '        .catch((error) => {'
+          console.log('Service Worker registration failed:  , error)'        })'    }'
 
     return () => {
       window.removeEventListener(
-  'beforeinstallprompt', handleBeforeInstallPrompt)'      window.removeEventListener(
+  'beforeinstallprompt', handleBeforeInstallPrompt)'      window.removeEventListener('
   'appinstalled', handleAppInstalled)'    }'  }, [])
   const handleInstallClick = async () => {;if (!deferredPrompt) return
 
@@ -119,7 +119,7 @@ if (outcome ===
   '      console.log('User accepted the install prompt
   ')'    } else {
   '      console.log('User dismissed the install prompt
-  ')'    }'setDeferredPrompt(null)    setShowInstallPrompt(false)
+  ')'    }'setDeferredPrompt(null)    setShowInstallPrompt(false)'
   }
 
 const handleDismiss = () => {;setShowInstallPrompt(false)

@@ -1,73 +1,6 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { 
-  Home, 
-  Briefcase, 
-  Users, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Globe, 
-  Linkedin, 
-  Twitter, 
-  Shield, 
-  Handshake, 
-  ChevronDown, 
-  ChevronRight, 
-  Brain, 
-  Cpu, 
-  Database, 
-  Network, 
-  Code, 
-  Palette, 
-  Target, 
-  Rocket, 
-  Eye, 
-  DollarSign, 
-  ShoppingCart, 
-  Clock, 
-  Cloud, 
-  Search, 
-  Building, 
-  Zap, 
-  Heart, 
-  Lightbulb, 
-  TrendingUp, 
-  BarChart3, 
-  Lock, 
-  AlertTriangle, 
-  Server, 
-  CheckCircle, 
-  Truck, 
-  Car, 
-  TestTube, 
-  PenTool, 
-  Building2, 
-  Atom, 
-  FileText, 
-  Quote, 
-  Newspaper, 
-  Calendar, 
-  Video, 
-  HelpCircle, 
-  LifeBuoy, 
-  Store, 
-  PieChart, 
-  Share2, 
-  Monitor, 
-  Smartphone,
-  Settings,
-  User,
-  Bell,
-  BookOpen,
-  Award,
-  Leaf,
-  Sun,
-  Wind
-import { Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Shield, Handshake, ChevronDown, ChevronRight, Brain, Cpu, Database, Network, Code, Palette, Target, Rocket, Eye, DollarSign, ShoppingCart, Clock, Cloud, Search, Building, Zap, Heart, Lightbulb, TrendingUp, BarChart3, Lock, AlertTriangle, Server, CheckCircle, Truck, Car, TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone, Settings, User, Bell, BookOpen, Award, Leaf, Sun, Wind
-   } from 'lucide-react'
-
 interface SidebarProps extends React.PropsWithChildren<{}> {
   isOpen: boolean
   onClose: () => void
@@ -93,35 +26,21 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
   const navigation = {
     main: [
-      { name: 'Home', href: '/', icon: Home },
-      { name: 'About', href: '/about', icon: Users },
-      { name: 'Services', href: '/services', icon: Briefcase },
-      { name: 'Contact', href: '/contact', icon: Phone },
-    ],
-    services: [
+      { name: 'Home', href: '/', icon: Home }, { name: 'About', href: '/about', icon: Users },
+      { name: 'Services', href: '/services', icon: Briefcase }, { name: 'Contact', href: '/contact', icon: Phone },
+    ], services: [
       { name: 'Web Development', href: '/services/web-development', icon: Code },
-      { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain },
-      { name: 'Cloud Services', href: '/services/cloud-services', icon: Cloud },
-      { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
-    ],
-    solutions: [
+      { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain }, { name: 'Cloud Services', href: '/services/cloud-services', icon: Cloud },
+      { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },  ], solutions: [
       { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building },
-      { name: 'E-commerce', href: '/solutions/ecommerce', icon: ShoppingCart },
-      { name: 'Mobile Apps', href: '/solutions/mobile', icon: Smartphone },
-      { name: 'IoT Solutions', href: '/solutions/iot', icon: Network },
-    ],
-    resources: [
+      { name: 'E-commerce', href: '/solutions/ecommerce', icon: ShoppingCart }, { name: 'Mobile Apps', href: '/solutions/mobile', icon: Smartphone },
+      { name: 'IoT Solutions', href: '/solutions/iot', icon: Network },  ], resources: [
       { name: 'Blog', href: '/blog', icon: FileText },
-      { name: 'Case Studies', href: '/case-studies', icon: Target },
-      { name: 'Documentation', href: '/docs', icon: BookOpen },
-      { name: 'Support', href: '/support', icon: LifeBuoy },
-    ],
-    company: [
+      { name: 'Case Studies', href: '/case-studies', icon: Target }, { name: 'Documentation', href: '/docs', icon: BookOpen },
+      { name: 'Support', href: '/support', icon: LifeBuoy },  ], company: [
       { name: 'Our Team', href: '/team', icon: Users },
-      { name: 'Careers', href: '/careers', icon: Briefcase },
-      { name: 'News', href: '/news', icon: Newspaper },
-      { name: 'Contact', href: '/contact', icon: Mail },
-    ]
+      { name: 'Careers', href: '/careers', icon: Briefcase }, { name: 'News', href: '/news', icon: Newspaper },
+      { name: 'Contact', href: '/contact', icon: Mail },  ]
   }
   const quickActions = [
     { name: 'Get Quote', href: '/quote', icon: DollarSign, color: 'from-green-500 to-green-600' },
@@ -132,9 +51,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
   const contactInfo = [
     { icon: Phone, text: '+1 (555) 123-4567', href: 'tel:+15551234567' },
-    { icon: Mail, text: 'info@ziontechgroup.com', href: 'mailto:info@ziontechgroup.com' },
-    { icon: MapPin, text: 'San Francisco, CA', href: '#' },
-  ]
+    { icon: Mail, text: 'info@ziontechgroup.com', href: 'mailto:info@ziontechgroup.com' }, { icon: MapPin, text: 'San Francisco, CA', href: '#' },  ]
 
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
@@ -146,7 +63,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     <div key={sectionKey} className="mb-6">
       <button
 }  Mail, MapPin, Globe, Linkedin, Twitter, Shield, Handshake, ChevronDown, ChevronRight, Brain, Cpu, Database, Network, Code, Palette, Target, Rocket, Eye, DollarSign, ShoppingCart, Clock, Cloud, Search, Building, Zap, Heart, Lightbulb, TrendingUp, BarChart3, Lock, AlertTriangle, Server, CheckCircle, Truck, Car, TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone, Settings, User, Bell, BookOpen, Award, Leaf, Sun, Wind } from
-  'lucide-react.ts'';interface SidebarProps extends React.PropsWithChildren<{}> {isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean
+  'lucide-react.ts'';interface SidebarProps extends React.PropsWithChildren<{}> {isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean'
   onClose: ()               => void}
 
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
@@ -192,7 +109,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     <div key={sectionKey} className='mb-6'>
       <button
         onClick={() => toggleSection(sectionKey)}
-        className='flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover:text-white transition-colors duration-200 font-medium'
+        className='flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover: text-white transition-colors duration-200 font-medium'
       >
         <span className='text-sm font-semibold uppercase tracking-wide'>{title}</span>
         {expandedSections.includes(sectionKey) ? (
@@ -233,7 +150,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       {/* Backdrop */}
       {isOpen && (
         <div 
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          className="fixed inset-0 bg-black/50 z-40 lg: hidden"
           onClick={onClose}
         />
       </button>  const renderNavSection = (title: anyanyanyanyanyanyanyanyanyanyanyanyanystring, items[], sectionKey: string)               => (
@@ -247,7 +164,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-200 ${`
                 isActive(item.href)
                   ?, bg-zion-cyan/20 text-zion-cyan border-l-2 border-zion-cyan'': 'text-gray-400 hover:text-white hover:bg-white/5'              }`}
-  '            >`              <item.icon className='w-4 h-4 flex-shrink-0' />'              <div className='flex-1 min-w-0'>'                <div className='font-medium'>{item.name}</div>'                {item.description && ('                  <div className='text-xs text-gray-500 truncate'>{item.description}</div>'                )}'              </div></Link>          ))}
+  '            >`              <item.icon className='w-4 h-4 flex-shrink-0' />'              <div className='flex-1 min-w-0'>'                <div className='font-medium'>{item.name}</div>'                {item.description && ('                  <div className='text-xs text-gray-500 truncate'>{item.description}</div>'                )}'              </div></Link>          ))}'
         </div>
       )}
     </div>
@@ -300,7 +217,7 @@ className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClo
                   key={action.name}
                   href={action.href}
                   onClick={onClose}
-                  className="flex flex-col items-center gap-2 p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-200 group"
+                  className="flex flex-col items-center gap-2 p-3 bg-white/5 rounded-lg hover: bg-white/10 transition-all duration-200 group"
                 >
                   <div className={`w-8 h-8 bg-gradient-to-r ${action.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200`}>
                     <action.icon className="w-4 h-4 text-white" />
@@ -369,7 +286,7 @@ className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClo
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`p-2 hover:bg-white/10 rounded-lg transition-all duration-200 ${social.color}`}
+                className={`p-2 hover: bg-white/10 rounded-lg transition-all duration-200 ${social.color}`}
                 aria-label={social.name}
               >
                 <social.icon className="w-4 h-4" />
@@ -383,12 +300,12 @@ className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClo
           </div>
         </div>
       </div>
-    </>
+</>
   )
       <div className={`fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-dark border-r border-zion-blue-light z-50 transform transition-transform duration-300 ease-in-out ${`
         isOpen ?, translate-x-0
   ': '-translate-x-full'      } lg:translate-x-0 lg:relative lg:z-auto`}>'`        {/* Header */}
-        <div className='p-6 border-b border-zion-blue-light'>'          <div className='flex items-center gap-3 mb-4'>'            <div className='w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center'>'              <Zap className='w-6 h-6 text-white' />'            </div>'            <div>              <div className='text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent'>'                ZION'              </div>
+        <div className='p-6 border-b border-zion-blue-light'>'          <div className='flex items-center gap-3 mb-4'>'            <div className='w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center'>'              <Zap className='w-6 h-6 text-white' />'            </div>'            <div>              <div className='text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent'>'                ZION'              </div>'
               <div className='text-xs text-zion-slate-light'>Tech Group</div>'            </div>'          </div>
           {/* Search */}
           <div className='relative'>'            <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4' />'            <input'              type='text''              placeholder='Search...''              className='w-full pl-10 pr-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-white/70 text-sm focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent''            />'          </div>'
@@ -408,7 +325,7 @@ className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClo
                 className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-200 ${`
                   isActive(item.href)
                     ?, bg-zion-cyan/20 text-zion-cyan border-l-2 border-zion-cyan'': 'text-gray-300 hover:text-white hover:bg-white/5'                }`}
-, >`                <item.icon className='w-4 h-4 flex-shrink-0' />'                <span className='font-medium'>{item.name}</span>'              </Link>'            ))}          </div>
+, >`                <item.icon className='w-4 h-4 flex-shrink-0' />'                <span className='font-medium'>{item.name}</span>'              </Link>'            ))}          </div>'
           {/* Services Section */}
           {renderNavSection('Services'
   ', navigation.services, 'services
@@ -428,8 +345,8 @@ className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClo
                 href={contact.href}
                 target={contact.href.startsWith(
   'http') ?
-  '_blank': '_self}
-, rel={contact.href.startsWith('http
+  '_blank': '_self}'
+, rel={contact.href.startsWith('http'
   ') ? 'noopener noreferrer
   ': '}'                className='flex items-center gap-2 text-xs text-zion-slate-light hover:text-zion-cyan transition-colors duration-200''              >'                <contact.icon className='w-3 h-3' />'                <span className='truncate'>{contact.text}</span>'              </a>'            ))}          </div>
           {/* Social Links */}
@@ -440,7 +357,7 @@ className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClo
                 <social.icon className='w-4 h-4' />'              </a>'            ))}
           </div>
           {/* Copyright */}
-          <div className='text-xs text-zion-slate-light text-center'>'            © {new Date().getFullYear()} Zion Tech Group"          </div>
+          <div className='text-xs text-zion-slate-light text-center'>'            © {new Date().getFullYear()} Zion Tech Group"          </div>'"
         </div>
       </div>
 </>)

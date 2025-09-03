@@ -1,7 +1,6 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 import { Open } from 'lucide-react';
 
-
 export default function Document() {
   return (
     <Html lang="en">
@@ -17,7 +16,7 @@ export default function Document() {
           name="keywords"
           content="Zion Tech Group, AI services, micro SaaS, IT services, DevOps, cybersecurity"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/" />
+        <link rel="canonical" href="https: //ziontechgroup.com/" />
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Zion Tech Group" />
@@ -25,7 +24,7 @@ export default function Document() {
           property="og:description"
           content="Technology solutions: AI, Micro SaaS, and enterprise IT services."
         />
-        <meta property="og:url" content="https://ziontechgroup.com/" />
+        <meta property="og: url" content="https://ziontechgroup.com/" />
         <meta property="og:image" content="/og-image.svg" />
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -35,7 +34,7 @@ export default function Document() {
           content="Technology solutions: AI, Micro SaaS, and enterprise IT services."
         />
         <meta
-          name="twitter:image"
+          name="twitter: image"
           content="https://ziontechgroup.com/og-image.svg"
         />
 

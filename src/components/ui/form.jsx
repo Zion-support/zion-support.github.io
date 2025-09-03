@@ -1,25 +1,25 @@
 import React from 'react';
 
-export const Form = ({ children, ...props }) => {
+export const Form = memo(({ children, ...props }) => {
   return <div {...props}>{children}</div>;
 };
 
-export const FormField = ({ children, name }) => {
+export const FormField = memo(({ children, name }) => {
   return <div data-field={name}>{children}</div>;
 };
 
-export const FormItem = ({ children, className = '' }) => {
+export const FormItem = memo(({ children, className = '' }) => {
   return <div className={className}>{children}</div>;
 };
 
-export const FormControl = ({ children, className = '' }) => {
+export const FormControl = memo(({ children, className = '' }) => {
   return <div className={className}>{children}</div>;
 };
 
-export const FormLabel = ({ children, className = '' }) => {
+export const FormLabel = memo(({ children, className = '' }) => {
   return <label className={className}>{children}</label>;
 };
 
-export const FormMessage = ({ className = '' }) => {
+export const FormMessage = memo(({ className = '' }) => {
   return <div className={className}></div>;
 };

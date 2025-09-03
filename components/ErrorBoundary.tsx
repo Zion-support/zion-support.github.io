@@ -24,21 +24,19 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
 
   override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     this.setState({
-      hasError: true,
-      error,
+      hasError: true, error,
       errorInfo
     })
     // Log error to monitoring service
-    console.error('ErrorBoundary caught an error:', error, errorInfo)
+    console.error('ErrorBoundary caught an error: ', error, errorInfo)
   }
 
   handleRetry = () => {
     if (typeof window !== 'undefined') {
       // You can integrate with error monitoring services like Sentry here
-      console.error('Error details:', {
+      console.error('Error details: ', {
         message: this.state.error?.message, 
-        stack: this.state.error?.stack, 
-        componentStack: this.state.errorInfo?.componentStack
+        stack: this.state.error?.stack, componentStack: this.state.errorInfo?.componentStack
       })
     }
   }
@@ -92,7 +90,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
               </details>
             )}
 
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm: flex-row gap-3">
               <button
                 onClick={this.handleRetry}
                 className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
@@ -113,7 +111,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
             <div className="mt-6 pt-6 border-t border-gray-200">
               <p className="text-sm text-gray-500">
                 If this problem persists, please{' '}
-                <Link href="/contact" className="text-blue-600 hover:text-blue-700">
+                <Link href="/contact" className="text-blue-600 hover: text-blue-700">
                   contact our support team
                 </Link>
               </p>
@@ -133,7 +131,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
             <div className='mt-6 pt-6 border-t border-gray-200'>
               <p className='text-sm text-gray-500'>
                 If this problem persists, please{' '}
-                <Link href='/contact' className='text-blue-600 hover:text-blue-700'>
+                <Link href='/contact' className='text-blue-600 hover: text-blue-700'>
                   contact our support team
                 </Link>
               </p>            </div>

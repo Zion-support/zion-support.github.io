@@ -1,6 +1,5 @@
-import React, { useState } from 'react';"
-import { Link } from 'react-router-dom';"
-import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp, Building2, FileText, HelpCircle, BarChart3 } from 'lucide-react';
+import React, { useState } from 'react';""
+import { Link } from 'react-router-dom';""
 export function MainNavigation({ className = '' }) {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);

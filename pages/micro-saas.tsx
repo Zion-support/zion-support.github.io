@@ -1,5 +1,35 @@
 import React from 'react';
-import { ArrowRight, Award, BarChart3, Brain, Calendar, CheckCircle, Clock, Cloud, Code, Database, FileText, From, Globe, Grid, MessageSquare, Mobile, Monitor, Network, No, Rapid, Server, Settings, Shield, Smartphone, Target, TrendingUp, User, Users, Zap } from 'lucide-react';
+import {
+  ArrowRight,
+  Award,
+  BarChart3,
+  Brain,
+  Calendar,
+  CheckCircle,
+  Clock,
+  Cloud,
+  Code,
+  Database,
+  FileText,
+  From,
+  Globe,
+  Grid,
+  MessageSquare,
+  Mobile,
+  Monitor,
+  Network,
+  No,
+  Rapid,
+  Server,
+  Settings,
+  Shield,
+  Smartphone,
+  Target,
+  TrendingUp,
+  User,
+  Users,
+  Zap,
+} from 'lucide-react';
 
 import Head from 'next/head';
 import Link from 'next/link';
@@ -346,7 +376,7 @@ export default function MicroSaaS() {
         'Document version control and tracking',
         'Multi-jurisdiction compliance support',
       ],
-      pricing: '$1,200 - $4,500/month',
+      pricing: '$1,200 - $4, 500/month',
       delivery: '4-6 weeks',
       category: 'Legal Tech SaaS',
     },
@@ -380,7 +410,7 @@ export default function MicroSaaS() {
         'Property condition assessment via AI',
         'ROI and cash flow projections',
       ],
-      pricing: '$1,500 - $5,000/month',
+      pricing: '$1,500 - $5, 000/month',
       delivery: '4-6 weeks',
       category: 'PropTech SaaS',
     },
@@ -431,7 +461,7 @@ export default function MicroSaaS() {
         'Automated demand response systems',
         'Cost savings analytics and reporting',
       ],
-      pricing: '$1,000 - $3,500/month',
+      pricing: '$1,000 - $3, 500/month',
       delivery: '4-6 weeks',
       category: 'Energy SaaS',
     },
@@ -465,7 +495,7 @@ export default function MicroSaaS() {
         'Real-time tracking and monitoring',
         'Compliance and safety management',
       ],
-      pricing: '$1,200 - $4,000/month',
+      pricing: '$1,200 - $4, 000/month',
       delivery: '4-6 weeks',
       category: 'Fleet SaaS',
     },
@@ -482,7 +512,7 @@ export default function MicroSaaS() {
         'Customer communication and updates',
         'Regulatory compliance and reporting',
       ],
-      pricing: '$2,000 - $6,000/month',
+      pricing: '$2,000 - $6, 000/month',
       delivery: '5-8 weeks',
       category: 'InsurTech SaaS',
     },
@@ -499,7 +529,7 @@ export default function MicroSaaS() {
         'Yield prediction and optimization',
         'Supply chain and logistics management',
       ],
-      pricing: '$1,500 - $4,500/month',
+      pricing: '$1,500 - $4, 500/month',
       delivery: '4-6 weeks',
       category: 'AgTech SaaS',
     },
@@ -584,7 +614,7 @@ export default function MicroSaaS() {
         'Compliance monitoring and reporting',
         'Sustainability and ESG tracking',
       ],
-      pricing: '$2,500 - $8,000/month',
+      pricing: '$2,500 - $8, 000/month',
       delivery: '5-8 weeks',
       category: 'Supply Chain SaaS',
     },
@@ -737,7 +767,7 @@ export default function MicroSaaS() {
             {technologies.map((tech, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-white rounded-2xl p-6 shadow-sm hover: shadow-md transition-shadow"
               >
                 <div className="flex items-center mb-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-100">
@@ -766,7 +796,7 @@ export default function MicroSaaS() {
               applications include design, development, testing, and deployment.
               Contact us at{' '}
               <a
-                href="mailto:kleber@ziontechgroup.com"
+                href="mailto: kleber@ziontechgroup.com"
                 className="text-orange-600 hover:text-orange-500"
               >
                 kleber@ziontechgroup.com
@@ -785,7 +815,7 @@ export default function MicroSaaS() {
             {microSaaSServices.map((service, index) => (
               <div
                 key={index}
-                className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300"
+                className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300"
               >
                 <div className="flex items-center gap-x-3 mb-6">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover:bg-orange-700 transition-colors">
@@ -905,9 +935,9 @@ export default function MicroSaaS() {
               Ready to Build Your Custom SaaS Solution?
             </h2>
             <p className="mt-6 text-lg leading-8 text-orange-100">
-              Let's discuss your requirements and create a custom solution that
-              drives your business forward. Get a free consultation and project
-              estimate.
+              Let&apos;s discuss your requirements and create a custom solution
+              that' drives your business forward. Get a free consultation and
+              project estimate.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link

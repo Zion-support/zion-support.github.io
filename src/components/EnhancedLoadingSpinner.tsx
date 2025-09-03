@@ -1,4 +1,4 @@
-interface EnhancedLoadingSpinnerProps {"
+interface EnhancedLoadingSpinnerProps {""
 import { motion     } from 'framer-motion'
 interface EnhancedLoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' text?: string className?: string
@@ -10,8 +10,7 @@ export default function EnhancedLoadingSpinner({
   const sizeClasses = { sm: 'w-8 h-8', md: 'w-12 h-12', lg: 'w-16 h-16'
   }
 
-  const textSizes = { sm: 'text-sm',
-    md: 'text-base', lg: 'text-lg'
+  const textSizes = { sm: 'text-sm', md: 'text-base', lg: 'text-lg'
   }
 
   return (<div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>

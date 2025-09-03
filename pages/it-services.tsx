@@ -1,5 +1,37 @@
 import React from 'react';
-import { ArrowRight, Award, BarChart3, Brain, Carbon, CheckCircle, Clock, Cloud, Code, Cpu, Cross, Database, Flexible, From, Globe, Grid, Link2, Mail, MapPin, Monitor, Network, Now, Phone, Server, Settings, Shield, TrendingUp, User, Users, Wifi, Zap } from 'lucide-react';
+import {
+  ArrowRight,
+  Award,
+  BarChart3,
+  Brain,
+  Carbon,
+  CheckCircle,
+  Clock,
+  Cloud,
+  Code,
+  Cpu,
+  Cross,
+  Database,
+  Flexible,
+  From,
+  Globe,
+  Grid,
+  Link2,
+  Mail,
+  MapPin,
+  Monitor,
+  Network,
+  Now,
+  Phone,
+  Server,
+  Settings,
+  Shield,
+  TrendingUp,
+  User,
+  Users,
+  Wifi,
+  Zap,
+} from 'lucide-react';
 
 import Head from 'next/head';
 import Link from 'next/link';
@@ -307,7 +339,7 @@ export default function ITServices() {
         'Cross-chain bridge development',
         'Regulatory compliance and KYC/AML solutions',
       ],
-      pricing: '$15,000 - $80,000/month',
+      pricing: '$15,000 - $80, 000/month',
       delivery: '12-32 weeks',
       category: 'Blockchain Services',
     },
@@ -324,7 +356,7 @@ export default function ITServices() {
         'Smart city and building automation',
         'Predictive maintenance and monitoring',
       ],
-      pricing: '$10,000 - $50,000/month',
+      pricing: '$10,000 - $50, 000/month',
       delivery: '8-24 weeks',
       category: 'IoT Services',
     },
@@ -341,7 +373,7 @@ export default function ITServices() {
         'Identity and access management (IAM)',
         'Compliance automation and reporting',
       ],
-      pricing: '$12,000 - $60,000/month',
+      pricing: '$12,000 - $60, 000/month',
       delivery: '10-28 weeks',
       category: 'Advanced Security',
     },
@@ -358,7 +390,7 @@ export default function ITServices() {
         'Hybrid classical-quantum computing',
         'Quantum security assessment and consulting',
       ],
-      pricing: '$25,000 - $150,000/month',
+      pricing: '$25,000 - $150, 000/month',
       delivery: '20-48 weeks',
       category: 'Quantum Services',
     },
@@ -375,7 +407,7 @@ export default function ITServices() {
         'Data governance and quality management',
         'Business intelligence and visualization',
       ],
-      pricing: '$8,000 - $40,000/month',
+      pricing: '$8,000 - $40, 000/month',
       delivery: '8-20 weeks',
       category: 'Data Services',
     },
@@ -392,7 +424,7 @@ export default function ITServices() {
         'API security and rate limiting',
         'Service discovery and load balancing',
       ],
-      pricing: '$6,000 - $30,000/month',
+      pricing: '$6,000 - $30, 000/month',
       delivery: '6-16 weeks',
       category: 'Architecture Services',
     },
@@ -409,7 +441,7 @@ export default function ITServices() {
         'Cloud cost optimization and FinOps',
         'Disaster recovery and backup automation',
       ],
-      pricing: '$10,000 - $45,000/month',
+      pricing: '$10,000 - $45, 000/month',
       delivery: '8-20 weeks',
       category: 'Cloud Native Services',
     },
@@ -426,7 +458,7 @@ export default function ITServices() {
         'Network automation and orchestration',
         '5G network integration and optimization',
       ],
-      pricing: '$8,000 - $35,000/month',
+      pricing: '$8,000 - $35, 000/month',
       delivery: '6-18 weeks',
       category: 'Network Services',
     },
@@ -443,7 +475,7 @@ export default function ITServices() {
         'Performance optimization and tuning',
         'Incident response and post-mortem automation',
       ],
-      pricing: '$7,000 - $32,000/month',
+      pricing: '$7,000 - $32, 000/month',
       delivery: '6-16 weeks',
       category: 'DevOps Services',
     },
@@ -460,7 +492,7 @@ export default function ITServices() {
         'AI model versioning and governance',
         'Edge AI deployment and optimization',
       ],
-      pricing: '$12,000 - $55,000/month',
+      pricing: '$12,000 - $55, 000/month',
       delivery: '10-24 weeks',
       category: 'AI/ML Services',
     },
@@ -477,7 +509,7 @@ export default function ITServices() {
         'Policy management and enforcement',
         'Third-party risk management',
       ],
-      pricing: '$6,000 - $28,000/month',
+      pricing: '$6,000 - $28, 000/month',
       delivery: '6-14 weeks',
       category: 'Compliance Services',
     },
@@ -494,7 +526,7 @@ export default function ITServices() {
         'Caching strategy implementation',
         'Performance regression testing',
       ],
-      pricing: '$5,000 - $25,000/month',
+      pricing: '$5,000 - $25, 000/month',
       delivery: '4-12 weeks',
       category: 'Performance Services',
     },
@@ -511,7 +543,7 @@ export default function ITServices() {
         'Legacy system integration and modernization',
         'Real-time data integration',
       ],
-      pricing: '$7,000 - $35,000/month',
+      pricing: '$7,000 - $35, 000/month',
       delivery: '6-18 weeks',
       category: 'Integration Services',
     },
@@ -528,7 +560,7 @@ export default function ITServices() {
         'Recovery time objective (RTO) optimization',
         'Cloud-based backup and recovery',
       ],
-      pricing: '$4,000 - $20,000/month',
+      pricing: '$4,000 - $20, 000/month',
       delivery: '4-12 weeks',
       category: 'Backup Services',
     },
@@ -684,7 +716,7 @@ export default function ITServices() {
             {technologies.map((tech, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-white rounded-2xl p-6 shadow-sm hover: shadow-md transition-shadow"
               >
                 <div className="flex items-center mb-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-100">
@@ -713,7 +745,7 @@ export default function ITServices() {
               services include implementation, training, and ongoing support.
               Contact us at{' '}
               <a
-                href="mailto:kleber@ziontechgroup.com"
+                href="mailto: kleber@ziontechgroup.com"
                 className="text-green-600 hover:text-green-500"
               >
                 kleber@ziontechgroup.com
@@ -732,7 +764,7 @@ export default function ITServices() {
             {itServices.map((service, index) => (
               <div
                 key={index}
-                className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300"
+                className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300"
               >
                 <div className="flex items-center gap-x-3 mb-6">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover:bg-green-700 transition-colors">
@@ -791,8 +823,9 @@ export default function ITServices() {
               Ready to Transform Your IT Infrastructure?
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Let's discuss how our IT services can optimize your technology
-              infrastructure. Get a free consultation and custom proposal.
+              Let&apos;s discuss how our IT services can optimize your
+              technology' infrastructure. Get a free consultation and custom
+              proposal.
             </p>
             <div className="mt-10 grid grid-cols-1 gap-8 sm: grid-cols-3">
               <div className="text-center">

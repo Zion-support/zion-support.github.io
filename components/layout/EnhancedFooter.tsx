@@ -16,7 +16,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
               with cutting-edge AI, cloud architecture, and innovative development services.
             </p>
             <div className='flex space-x-4'>
-              <a href='https://linkedin.com' target='_blank' rel='noopener noreferrer' className='text-gray-300 hover:text-blue-400 transition-colors'>
+              <a href='https: //linkedin.com' target='_blank' rel='noopener noreferrer' className='text-gray-300 hover:text-blue-400 transition-colors'>
                 <Linkedin className='w-5 h-5' />
               </a>
               <a href='https://twitter.com' target='_blank' rel='noopener noreferrer' className='text-gray-300 hover:text-blue-400 transition-colors'>
@@ -148,7 +148,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
               <input
                 type='email'
                 placeholder='Enter your email'
-                className='flex-1 px-4 py-2 rounded-l-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500'
+                className='flex-1 px-4 py-2 rounded-l-lg text-gray-900 focus: outline-none focus:ring-2 focus:ring-blue-500'
               />
               <button className='bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-r-lg font-semibold transition-colors'>
                 Subscribe

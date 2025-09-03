@@ -33,32 +33,44 @@ class ComprehensiveAutomationFixer {
 
   fixRemainingTestFiles() {
     this.log('🔧 Fixing remaining test file issues');
-    
+
     const testFiles = this.getAllTestFiles(this.projectRoot);
     let fixedCount = 0;
 
     for (const testFile of testFiles) {
       try {
         const content = fs.readFileSync(testFile, 'utf8');
-        
+
         // Fix common issues
         let fixedContent = content;
-        
+
         // Fix unterminated strings and syntax errors
         if (content.includes('render(<') && content.includes(')"')) {
-          fixedContent = content.replace(/render\(<[^>]*>\)\s*\)"/g, 'render(<Component />);');
+          fixedContent = content.replace(
+            /render\(<[^>]*>\)\s*\)"/g,
+            'render(<Component />);'
+          );
         }
-        
+
         // Fix import issues with hyphens
         if (content.includes('import case-studies')) {
-          fixedContent = content.replace(/import case-studies/g, 'import CaseStudies');
+          fixedContent = content.replace(
+            /import case-studies/g,
+            'import CaseStudies'
+          );
         }
-        
+
         // Fix missing semicolons and brackets
-        if (content.includes('expect(screen.getByRole') && !content.includes(';')) {
-          fixedContent = content.replace(/expect\([^)]*\)\.toBeInTheDocument\(\)\s*\)\s*\}\)/g, 'expect(screen.getByRole(\'main\')).toBeInTheDocument();\n  });');
+        if (
+          content.includes('expect(screen.getByRole') &&
+          !content.includes(';')
+        ) {
+          fixedContent = content.replace(
+            /expect\([^)]*\)\.toBeInTheDocument\(\)\s*\)\s*\}\)/g,
+            "expect(screen.getByRole('main')).toBeInTheDocument();\n  });"
+          );
         }
-        
+
         if (fixedContent !== content) {
           fs.writeFileSync(testFile, fixedContent);
           fixedCount++;
@@ -67,7 +79,7 @@ class ComprehensiveAutomationFixer {
         this.errors.push({ file: testFile, error: error.message });
       }
     }
-    
+
     this.log(`✅ Fixed ${fixedCount} additional test files`);
     return fixedCount;
   }
@@ -80,9 +92,18 @@ class ComprehensiveAutomationFixer {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
 
-      if (stat.isDirectory() && !item.includes('node_modules') && !item.includes('.git')) {
+      if (
+        stat.isDirectory() &&
+        !item.includes('node_modules') &&
+        !item.includes('.git')
+      ) {
         testFiles = testFiles.concat(this.getAllTestFiles(fullPath));
-      } else if (item.endsWith('.test.tsx') || item.endsWith('.test.ts') || item.endsWith('.test.jsx') || item.endsWith('.test.js')) {
+      } else if (
+        item.endsWith('.test.tsx') ||
+        item.endsWith('.test.ts') ||
+        item.endsWith('.test.jsx') ||
+        item.endsWith('.test.js')
+      ) {
         testFiles.push(fullPath);
       }
     }
@@ -92,7 +113,7 @@ class ComprehensiveAutomationFixer {
 
   createJestSetupFile() {
     this.log('🔧 Creating Jest setup file');
-    
+
     const setupContent = `import '@testing-library/jest-dom';
 
 // Mock Next.js router
@@ -158,25 +179,31 @@ global.IntersectionObserver = jest.fn().mockImplementation(() => ({
     if (!fs.existsSync(setupDir)) {
       fs.mkdirSync(setupDir, { recursive: true });
     }
-    
+
     fs.writeFileSync(path.join(setupDir, 'setup.ts'), setupContent);
     this.log('✅ Jest setup file created');
   }
 
   createMockFiles() {
     this.log('🔧 Creating mock files');
-    
+
     const mocksDir = path.join(this.projectRoot, 'tests', '__mocks__');
     if (!fs.existsSync(mocksDir)) {
       fs.mkdirSync(mocksDir, { recursive: true });
     }
 
     // Create empty module mock
-    fs.writeFileSync(path.join(mocksDir, 'emptyModule.js'), 'module.exports = {};');
-    
+    fs.writeFileSync(
+      path.join(mocksDir, 'emptyModule.js'),
+      'module.exports = {};'
+    );
+
     // Create file mock
-    fs.writeFileSync(path.join(mocksDir, 'fileMock.js'), 'module.exports = "test-file-stub";');
-    
+    fs.writeFileSync(
+      path.join(mocksDir, 'fileMock.js'),
+      'module.exports = "test-file-stub";'
+    );
+
     // Create i18n mock
     const i18nMock = `module.exports = {
   t: (key) => key,
@@ -186,15 +213,21 @@ global.IntersectionObserver = jest.fn().mockImplementation(() => ({
   },
 };`;
     fs.writeFileSync(path.join(mocksDir, 'i18n.js'), i18nMock);
-    
+
     // Create react-markdown mock
     const reactMarkdownMock = `const React = require('react');
 module.exports = ({ children }) => React.createElement('div', {}, children);`;
-    fs.writeFileSync(path.join(mocksDir, 'reactMarkdown.js'), reactMarkdownMock);
-    
+    fs.writeFileSync(
+      path.join(mocksDir, 'reactMarkdown.js'),
+      reactMarkdownMock
+    );
+
     // Create vitest mock
-    fs.writeFileSync(path.join(mocksDir, 'vitestMock.js'), 'module.exports = {};');
-    
+    fs.writeFileSync(
+      path.join(mocksDir, 'vitestMock.js'),
+      'module.exports = {};'
+    );
+
     this.log('✅ Mock files created');
   }
 
@@ -244,23 +277,30 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
   async runPerformanceOptimization() {
     const performanceIssues = [];
     const srcDir = path.join(this.projectRoot, 'src');
-    
+
     if (fs.existsSync(srcDir)) {
       const files = this.getAllFiles(srcDir, ['.js', '.jsx', '.ts', '.tsx']);
-      
+
       for (const file of files) {
         try {
           const content = fs.readFileSync(file, 'utf8');
-          
+
           // Check for performance issues
-          if (content.includes('document.querySelectorAll') && !content.includes('useMemo')) {
+          if (
+            content.includes('document.querySelectorAll') &&
+            !content.includes('useMemo')
+          ) {
             performanceIssues.push({
               file,
               issue: 'Potential N+1 query problem - consider using useMemo',
             });
           }
-          
-          if (content.includes('useEffect') && content.includes('[]') && content.includes('fetch')) {
+
+          if (
+            content.includes('useEffect') &&
+            content.includes('[]') &&
+            content.includes('fetch')
+          ) {
             performanceIssues.push({
               file,
               issue: 'Potential infinite re-render - check dependencies',
@@ -271,53 +311,68 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
         }
       }
     }
-    
+
     return { issues: performanceIssues, count: performanceIssues.length };
   }
 
   async runSecurityScan() {
     const securityIssues = [];
     const srcDir = path.join(this.projectRoot, 'src');
-    
+
     if (fs.existsSync(srcDir)) {
       const files = this.getAllFiles(srcDir, ['.js', '.jsx', '.ts', '.tsx']);
-      
+
       for (const file of files) {
         try {
           const content = fs.readFileSync(file, 'utf8');
-          
+
           // Check for security issues
-          if (content.includes('dangerouslySetInnerHTML') && !content.includes('sanitize')) {
-            securityIssues.push({ file, issue: 'Potential XSS vulnerability - sanitize HTML' });
+          if (
+            content.includes('dangerouslySetInnerHTML') &&
+            !content.includes('sanitize')
+          ) {
+            securityIssues.push({
+              file,
+              issue: 'Potential XSS vulnerability - sanitize HTML',
+            });
           }
-          
+
           if (content.includes('eval(') || content.includes('Function(')) {
-            securityIssues.push({ file, issue: 'Use of eval() detected - security risk' });
+            securityIssues.push({
+              file,
+              issue: 'Use of eval() detected - security risk',
+            });
           }
-          
-          if (content.includes('process.env') && !content.includes('NEXT_PUBLIC_')) {
-            securityIssues.push({ file, issue: 'Server-side env var in client code' });
+
+          if (
+            content.includes('process.env') &&
+            !content.includes('NEXT_PUBLIC_')
+          ) {
+            securityIssues.push({
+              file,
+              issue: 'Server-side env var in client code',
+            });
           }
         } catch (error) {
           // Skip files that can't be read
         }
       }
     }
-    
+
     return { issues: securityIssues, count: securityIssues.length };
   }
 
   async runCodeQualityAnalysis() {
     const qualityIssues = [];
     const srcDir = path.join(this.projectRoot, 'src');
-    
+
     if (fs.existsSync(srcDir)) {
       const files = this.getAllFiles(srcDir, ['.js', '.jsx', '.ts', '.tsx']);
-      
+
       for (const file of files) {
         try {
           const content = fs.readFileSync(file, 'utf8');
-          
+
           // Check for code quality issues
           if (content.includes('console.log') && !file.includes('.test.')) {
             qualityIssues.push({
@@ -325,48 +380,63 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
               issue: 'Console.log in production code - remove for production',
             });
           }
-          
+
           if (content.includes('TODO') || content.includes('FIXME')) {
-            qualityIssues.push({ file, issue: 'TODO/FIXME comment found - address before production' });
+            qualityIssues.push({
+              file,
+              issue: 'TODO/FIXME comment found - address before production',
+            });
           }
-          
+
           if (content.includes('any') && file.endsWith('.ts')) {
-            qualityIssues.push({ file, issue: 'TypeScript any type used - consider proper typing' });
+            qualityIssues.push({
+              file,
+              issue: 'TypeScript any type used - consider proper typing',
+            });
           }
         } catch (error) {
           // Skip files that can't be read
         }
       }
     }
-    
+
     return { issues: qualityIssues, count: qualityIssues.length };
   }
 
   async runDependencyCheck() {
     try {
-      const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8'));
-      const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
-      
+      const packageJson = JSON.parse(
+        fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8')
+      );
+      const dependencies = {
+        ...packageJson.dependencies,
+        ...packageJson.devDependencies,
+      };
+
       const outdatedDeps = [];
       const securityIssues = [];
-      
+
       // Check for known security issues
       const knownIssues = {
-        'react': '18.2.0',
-        'next': '15.5.2',
-        'typescript': '5.9.2',
+        react: '18.2.0',
+        next: '15.5.2',
+        typescript: '5.9.2',
       };
-      
+
       for (const [dep, version] of Object.entries(knownIssues)) {
         if (dependencies[dep] && dependencies[dep] !== version) {
-          outdatedDeps.push({ dep, current: dependencies[dep], recommended: version });
+          outdatedDeps.push({
+            dep,
+            current: dependencies[dep],
+            recommended: version,
+          });
         }
       }
-      
-      return { 
-        outdatedDeps, 
-        securityIssues, 
-        totalDeps: Object.keys(dependencies).length 
+
+      return {
+        outdatedDeps,
+        securityIssues,
+        totalDeps: Object.keys(dependencies).length,
       };
     } catch (error) {
       return { error: error.message };
@@ -381,7 +451,11 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
 
-      if (stat.isDirectory() && !item.includes('node_modules') && !item.includes('.git')) {
+      if (
+        stat.isDirectory() &&
+        !item.includes('node_modules') &&
+        !item.includes('.git')
+      ) {
         files = files.concat(this.getAllFiles(fullPath, extensions));
       } else if (extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
@@ -402,7 +476,10 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
       results: results,
     };
 
-    const reportFile = path.join(this.projectRoot, 'comprehensive-automation-report.json');
+    const reportFile = path.join(
+      this.projectRoot,
+      'comprehensive-automation-report.json'
+    );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
     this.log(`📊 Report generated: ${reportFile}`);
@@ -415,35 +492,49 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
     try {
       // Fix test files
       this.fixRemainingTestFiles();
-      
+
       // Create necessary setup files
       this.createJestSetupFile();
       this.createMockFiles();
-      
+
       // Run standard automation scripts
-      const standardResults = await this.runCommand('npm run lint:fix', 'ESLint Fix');
-      const typeCheckResults = await this.runCommand('npm run type-check', 'TypeScript Type Check');
-      const testResults = await this.runCommand('npm run test -- --passWithNoTests', 'Test Suite');
-      const buildResults = await this.runCommand('npm run build', 'Build Application');
-      
+      const standardResults = await this.runCommand(
+        'npm run lint:fix',
+        'ESLint Fix'
+      );
+      const typeCheckResults = await this.runCommand(
+        'npm run type-check',
+        'TypeScript Type Check'
+      );
+      const testResults = await this.runCommand(
+        'npm run test -- --passWithNoTests',
+        'Test Suite'
+      );
+      const buildResults = await this.runCommand(
+        'npm run build',
+        'Build Application'
+      );
+
       // Run custom automations
       const customResults = await this.runCustomAutomations();
-      
+
       // Combine results
       const allResults = [
         standardResults,
         typeCheckResults,
         testResults,
         buildResults,
-        ...customResults
+        ...customResults,
       ];
-      
+
       // Generate report
       const report = this.generateReport(allResults);
-      
+
       this.log(`🎉 Comprehensive Automation Fixer Completed`);
-      this.log(`📊 Summary: ${report.summary.successful}/${report.summary.total} successful`);
-      
+      this.log(
+        `📊 Summary: ${report.summary.successful}/${report.summary.total} successful`
+      );
+
       return report;
     } catch (error) {
       this.log(`💥 Comprehensive Automation Fixer Failed: ${error.message}`);
@@ -454,7 +545,8 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
 
 // Run the comprehensive automation fixer
 const fixer = new ComprehensiveAutomationFixer();
-fixer.run()
+fixer
+  .run()
   .then(report => {
     console.log('✅ Comprehensive Automation Fixer completed successfully');
     process.exit(0);

@@ -1,4 +1,4 @@
-import { motion     } from 'framer-motion';"
+import { motion     } from 'framer-motion';""
 import { CheckCircle, TrendingUp, Users, DollarSign     } from 'lucide-react';
 import { motion     } from 'framer-motion'
 import { CheckCircle, TrendingUp, Users, DollarSign     } from 'lucide-react'
@@ -19,7 +19,7 @@ const caseStudies: CaseStudy[] = [{ id: '1', title: 'AI-Powered Customer Service
   }
 ]
 export default function CaseStudies() {
-  return (<section className='py-24 sm:py-32 bg-gradient-to-br from-slate-50 to-blue-50'>
+  return (<section className='py-24 sm: py-32 bg-gradient-to-br from-slate-50 to-blue-50'>
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
         {/* Header */}
         <div className='mx-auto max-w-2xl lg:text-center mb-16'>
@@ -51,11 +51,11 @@ export default function CaseStudies() {
             See how our AI, cloud, and cybersecurity solutions have transformed businesses across industries.</motion.p>
         </div>
         {/* Case Studies Grid */}
-        <div className='grid gap-8 lg:grid-cols-1'>
+        <div className='grid gap-8 lg: grid-cols-1'>
           {caseStudies.map((study, index) => (
             <motion.div
               key={study.id}
-              className='bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300'
+              className='bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover: shadow-xl transition-all duration-300'
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true  }}

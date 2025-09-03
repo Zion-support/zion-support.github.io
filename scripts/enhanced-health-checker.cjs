@@ -16,16 +16,16 @@ class HealthChecker {
 
   async checkFileStructure() {
     this.log('📁 Checking file structure');
-    
+
     const requiredDirs = ['src', 'public', 'pages'];
     const requiredFiles = ['package.json', 'next.config.js', 'tsconfig.json'];
-    
+
     const results = {
       directories: {},
       files: {},
-      issues: []
+      issues: [],
     };
-    
+
     for (const dir of requiredDirs) {
       const dirPath = path.join(this.projectRoot, dir);
       results.directories[dir] = fs.existsSync(dirPath);
@@ -33,7 +33,7 @@ class HealthChecker {
         results.issues.push(`Missing directory: ${dir}`);
       }
     }
-    
+
     for (const file of requiredFiles) {
       const filePath = path.join(this.projectRoot, file);
       results.files[file] = fs.existsSync(filePath);
@@ -41,24 +41,26 @@ class HealthChecker {
         results.issues.push(`Missing file: ${file}`);
       }
     }
-    
+
     return results;
   }
 
   async checkConfiguration() {
     this.log('⚙️ Checking configuration files');
-    
+
     const results = {
       packageJson: { valid: false, issues: [] },
       nextConfig: { valid: false, issues: [] },
-      tsConfig: { valid: false, issues: [] }
+      tsConfig: { valid: false, issues: [] },
     };
-    
+
     // Check package.json
     try {
-      const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8'));
+      const packageJson = JSON.parse(
+        fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8')
+      );
       results.packageJson.valid = true;
-      
+
       if (!packageJson.scripts?.build) {
         results.packageJson.issues.push('Missing build script');
       }
@@ -68,7 +70,7 @@ class HealthChecker {
     } catch (error) {
       results.packageJson.issues.push(`Invalid JSON: ${error.message}`);
     }
-    
+
     // Check next.config.js
     try {
       const nextConfigPath = path.join(this.projectRoot, 'next.config.js');
@@ -85,14 +87,14 @@ class HealthChecker {
     } catch (error) {
       results.nextConfig.issues.push(`Error reading file: ${error.message}`);
     }
-    
+
     // Check tsconfig.json
     try {
       const tsConfigPath = path.join(this.projectRoot, 'tsconfig.json');
       if (fs.existsSync(tsConfigPath)) {
         const tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'));
         results.tsConfig.valid = true;
-        
+
         if (!tsConfig.compilerOptions) {
           results.tsConfig.issues.push('Missing compilerOptions');
         }
@@ -102,23 +104,28 @@ class HealthChecker {
     } catch (error) {
       results.tsConfig.issues.push(`Invalid JSON: ${error.message}`);
     }
-    
+
     return results;
   }
 
   async checkDependencies() {
     this.log('📦 Checking dependencies');
-    
+
     try {
-      const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8'));
-      const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
-      
+      const packageJson = JSON.parse(
+        fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8')
+      );
+      const dependencies = {
+        ...packageJson.dependencies,
+        ...packageJson.devDependencies,
+      };
+
       const results = {
         total: Object.keys(dependencies).length,
         missing: [],
-        outdated: []
+        outdated: [],
       };
-      
+
       // Check for critical dependencies
       const criticalDeps = ['react', 'next', 'typescript'];
       for (const dep of criticalDeps) {
@@ -126,7 +133,7 @@ class HealthChecker {
           results.missing.push(dep);
         }
       }
-      
+
       return results;
     } catch (error) {
       return { error: error.message };
@@ -145,35 +152,35 @@ class HealthChecker {
           ...results.fileStructure.issues,
           ...results.configuration.packageJson.issues,
           ...results.configuration.nextConfig.issues,
-          ...results.configuration.tsConfig.issues
-        ]
-      }
+          ...results.configuration.tsConfig.issues,
+        ],
+      },
     };
-    
+
     if (report.summary.issues.length > 0) {
       report.summary.overall = 'needs_attention';
     }
-    
+
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`📊 Health check report generated: ${this.reportFile}`);
-    
+
     return report;
   }
 
   async run() {
     this.log('🏥 Starting Health Check');
-    
+
     try {
       const fileStructure = await this.checkFileStructure();
       const configuration = await this.checkConfiguration();
       const dependencies = await this.checkDependencies();
-      
+
       const report = this.generateReport({
         fileStructure,
         configuration,
-        dependencies
+        dependencies,
       });
-      
+
       this.log('✅ Health check completed');
       return report;
     } catch (error) {
@@ -185,7 +192,8 @@ class HealthChecker {
 
 // Run the health checker
 const checker = new HealthChecker();
-checker.run()
+checker
+  .run()
   .then(report => {
     console.log('✅ Health check completed successfully');
     process.exit(0);

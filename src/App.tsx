@@ -1,5 +1,4 @@
 import React, { Suspense, lazy } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 // Layout Components
 import { EnhancedHeader } from './components/EnhancedHeader'
 import { EnhancedFooter } from './components/EnhancedFooter'
@@ -184,12 +183,12 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
       <div className='space-y-3'>
         <button
           onClick={resetErrorBoundary}
-          className='w-full bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors'        >
+          className='w-full bg-cyan-500 hover: bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors'        >
           Try again
         </button>
         <button
           onClick={() => window.location.href = '/'}
-          className='w-full bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors'
+          className='w-full bg-gray-700 hover: bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors'
         >
           Go home
         </button>
@@ -327,17 +326,17 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
                             <h1 className='text-6xl font-bold mb-4'>404</h1>
                             <h2 className='text-2xl font-semibold mb-4'>Page Not Found</h2>
                             <p className='text-gray-300 mb-8'>
-                              The page you're looking for doesn't exist or has been moved.
+                              The page you&apos;re looking for doesn&apos;t exist or has been moved.
                             </p>
                             <button
                               onClick={() => window.history.back()}
-                              className='px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors mr-4'
+                              className='px-6 py-3 bg-blue-500 text-white rounded-lg hover: bg-blue-600 transition-colors mr-4'
                             >
                               Go Back
                             </button>
                             <button
                               onClick={() => window.location.href = '/'}
-                              className='px-6 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors'
+                              className='px-6 py-3 bg-gray-500 text-white rounded-lg hover: bg-gray-600 transition-colors'
                             >
                               Go Home
                             </button>
@@ -429,7 +428,7 @@ import { ErrorBoundary } from 'react-error-boundary'
                     <div className='text-center'>
                       <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>
                       <p className='text-gray-600 mb-8'>Page not found</p>
-                      <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors'>
+                      <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors'>
                         Go Home
                       </a>
                     </div>
@@ -507,4 +506,3 @@ import { ErrorBoundary } from 'react-error-boundary'
   )
 }
 
-export default App

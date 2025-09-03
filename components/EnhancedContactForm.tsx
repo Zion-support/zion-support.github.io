@@ -12,7 +12,7 @@ import {
   MessageSquare,
   Clock,
   Calendar,
-  Globe
+  Globe,
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -25,7 +25,7 @@ const EnhancedContactForm: React.FC = () => {
     service: '',
     budget: '',
     timeline: '',
-    message: ''
+    message: '',
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -33,13 +33,48 @@ const EnhancedContactForm: React.FC = () => {
   const [selectedService, setSelectedService] = useState('');
 
   const services = [
-    { id: 'ai-development', name: 'AI Development', icon: Globe, color: 'from-purple-500 to-pink-500' },
-    { id: 'cloud-architecture', name: 'Cloud Architecture', icon: Globe, color: 'from-blue-500 to-cyan-500' },
-    { id: 'web-development', name: 'Web Development', icon: Globe, color: 'from-green-500 to-emerald-500' },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Globe, color: 'from-red-500 to-orange-500' },
-    { id: 'iot-platforms', name: 'IoT Platforms', icon: Globe, color: 'from-indigo-500 to-purple-500' },
-    { id: 'digital-transformation', name: 'Digital Transformation', icon: Globe, color: 'from-yellow-500 to-orange-500' },
-    { id: 'custom', name: 'Custom Solution', icon: Globe, color: 'from-gray-500 to-slate-500' },
+    {
+      id: 'ai-development',
+      name: 'AI Development',
+      icon: Globe,
+      color: 'from-purple-500 to-pink-500',
+    },
+    {
+      id: 'cloud-architecture',
+      name: 'Cloud Architecture',
+      icon: Globe,
+      color: 'from-blue-500 to-cyan-500',
+    },
+    {
+      id: 'web-development',
+      name: 'Web Development',
+      icon: Globe,
+      color: 'from-green-500 to-emerald-500',
+    },
+    {
+      id: 'cybersecurity',
+      name: 'Cybersecurity',
+      icon: Globe,
+      color: 'from-red-500 to-orange-500',
+    },
+    {
+      id: 'iot-platforms',
+      name: 'IoT Platforms',
+      icon: Globe,
+      color: 'from-indigo-500 to-purple-500',
+    },
+    {
+      id: 'digital-transformation',
+      name: 'Digital Transformation',
+      icon: Globe,
+      color: 'from-yellow-500 to-orange-500',
+    },
+    {
+      id: 'custom',
+      name: 'Custom Solution',
+      icon: Globe,
+      color: 'from-gray-500 to-slate-500',
+    },
   ];
 
   const budgetRanges = [
@@ -109,14 +144,16 @@ const EnhancedContactForm: React.FC = () => {
         service: '',
         budget: '',
         timeline: '',
-        message: ''
+        message: '',
       });
       setSelectedService('');
     }, 5000);
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
   ) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -133,9 +170,9 @@ const EnhancedContactForm: React.FC = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
+        delayChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
@@ -143,8 +180,8 @@ const EnhancedContactForm: React.FC = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 }
-    }
+      transition: { duration: 0.6 },
+    },
   };
 
   if (isSubmitted) {
@@ -163,11 +200,15 @@ const EnhancedContactForm: React.FC = () => {
               Thank You for Reaching Out!
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              We've received your message and will get back to you within 24 hours. Our team is excited to discuss your project and explore how we can help bring your vision to life.
+              We&apos;ve received your message and will get back to you within
+              24 hours. Our team is excited to discuss your project and explore
+              how we can help bring your vision to life.'
             </p>
             <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">What happens next?</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-600">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                What happens next?
+              </h3>
+              <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm text-gray-600">
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4 text-green-500" />
                   <span>Response within 24h</span>
@@ -210,17 +251,23 @@ const EnhancedContactForm: React.FC = () => {
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Let's discuss your technology needs and explore how our expertise can drive innovation and growth for your business.
+              Let&apos;s discuss your technology needs and explore how our
+              expertise can drive innovation and growth for your business.'
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-16 max-w-7xl mx-auto">
             {/* Contact Information */}
             <motion.div variants={itemVariants} className="space-y-8">
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Let's Connect</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                  Let&apos;s Connect
+                </h3>
+                '
                 <p className="text-gray-600 mb-8 leading-relaxed">
-                  Our team of technology experts is ready to help you navigate the digital landscape and implement solutions that drive real business value.
+                  Our team of technology experts is ready to help you navigate
+                  the digital landscape and implement solutions that drive real
+                  business value.
                 </p>
               </div>
 
@@ -233,12 +280,14 @@ const EnhancedContactForm: React.FC = () => {
                   <div>
                     <h4 className="font-semibold text-gray-900">Phone</h4>
                     <a
-                      href="tel:+13024640950"
+                      href="tel: +13024640950"
                       className="text-blue-600 hover:text-blue-700 text-lg"
                     >
                       +1 (302) 464-0950
                     </a>
-                    <p className="text-gray-600 text-sm">Available Monday - Friday, 9 AM - 6 PM EST</p>
+                    <p className="text-gray-600 text-sm">
+                      Available Monday - Friday, 9 AM - 6 PM EST
+                    </p>
                   </div>
                 </div>
 
@@ -249,12 +298,14 @@ const EnhancedContactForm: React.FC = () => {
                   <div>
                     <h4 className="font-semibold text-gray-900">Email</h4>
                     <a
-                      href="mailto:kleber@ziontechgroup.com"
+                      href="mailto: kleber@ziontechgroup.com"
                       className="text-blue-600 hover:text-blue-700 text-lg"
                     >
                       kleber@ziontechgroup.com
                     </a>
-                    <p className="text-gray-600 text-sm">We typically respond within 2-4 hours</p>
+                    <p className="text-gray-600 text-sm">
+                      We typically respond within 2-4 hours
+                    </p>
                   </div>
                 </div>
 
@@ -264,15 +315,21 @@ const EnhancedContactForm: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Office</h4>
-                    <p className="text-gray-900 text-lg">364 E Main St STE 1008</p>
-                    <p className="text-gray-600 text-sm">Middletown, DE 19709, United States</p>
+                    <p className="text-gray-900 text-lg">
+                      364 E Main St STE 1008
+                    </p>
+                    <p className="text-gray-600 text-sm">
+                      Middletown, DE 19709, United States
+                    </p>
                   </div>
                 </div>
               </div>
 
               {/* Quick Stats */}
               <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 text-white">
-                <h4 className="text-lg font-semibold mb-4">Why Choose Zion Tech Group?</h4>
+                <h4 className="text-lg font-semibold mb-4">
+                  Why Choose Zion Tech Group?
+                </h4>
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div>
                     <div className="text-2xl font-bold">500+</div>
@@ -300,7 +357,7 @@ const EnhancedContactForm: React.FC = () => {
                 onSubmit={handleSubmit}
                 className="bg-white rounded-2xl shadow-xl border border-gray-200 p-8"
               >
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div className="grid grid-cols-1 md: grid-cols-2 gap-6 mb-6">
                   {/* Name */}
                   <div>
                     <label
@@ -347,7 +404,7 @@ const EnhancedContactForm: React.FC = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className={`w-full pl-10 pr-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300 ${
+                        className={`w-full pl-10 pr-4 py-3 border rounded-xl focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300 ${
                           errors.email ? 'border-red-500' : 'border-gray-300'
                         }`}
                         placeholder="Enter your email"
@@ -377,7 +434,7 @@ const EnhancedContactForm: React.FC = () => {
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300"
+                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300"
                         placeholder="Enter company name"
                       />
                     </div>
@@ -417,7 +474,10 @@ const EnhancedContactForm: React.FC = () => {
                         key={service.id}
                         type="button"
                         onClick={() => {
-                          setFormData(prev => ({ ...prev, service: service.id }));
+                          setFormData(prev => ({
+                            ...prev,
+                            service: service.id,
+                          }));
                           setSelectedService(service.id);
                           if (errors.service) {
                             setErrors(prev => ({ ...prev, service: '' }));
@@ -444,7 +504,7 @@ const EnhancedContactForm: React.FC = () => {
                 </div>
 
                 {/* Budget and Timeline */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div className="grid grid-cols-1 md: grid-cols-2 gap-6 mb-6">
                   <div>
                     <label
                       htmlFor="budget"
@@ -479,7 +539,7 @@ const EnhancedContactForm: React.FC = () => {
                       name="timeline"
                       value={formData.timeline}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300"
                     >
                       <option value="">Select timeline</option>
                       {timelineOptions.map(timeline => (
@@ -505,7 +565,7 @@ const EnhancedContactForm: React.FC = () => {
                     rows={5}
                     value={formData.message}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300 ${
+                    className={`w-full px-4 py-3 border rounded-xl focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300 ${
                       errors.message ? 'border-red-500' : 'border-gray-300'
                     }`}
                     placeholder="Tell us about your project, requirements, timeline, and budget..."
@@ -522,7 +582,7 @@ const EnhancedContactForm: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-8 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-8 rounded-xl font-semibold text-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                 >
                   {isSubmitting ? (
                     <div className="flex items-center justify-center gap-3">
@@ -541,7 +601,7 @@ const EnhancedContactForm: React.FC = () => {
                   By submitting this form, you agree to our{' '}
                   <Link
                     href="/privacy"
-                    className="text-blue-600 hover:text-blue-700 underline"
+                    className="text-blue-600 hover: text-blue-700 underline"
                   >
                     Privacy Policy
                   </Link>

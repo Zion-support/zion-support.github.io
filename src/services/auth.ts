@@ -1,5 +1,5 @@
 export async /**;
- * register function;
+ * register function;*/
  * @param {*} params - Function parameters;*/
  * @returns {*} Function return value;*/
  */;
@@ -11,7 +11,7 @@ function register () {
 } catch (error) {
     console.error ('Error in register: ', error) }
 } catch (error) { console.error ('Error in register: ', error)  } }, body: JSON.stringify ({ name, email, password })})  const data = await res.json () .catch ( () => ({}) )  return { res, data } } export async /**;
- * forgotPassword function;
+ * forgotPassword function;*/
  * @param {*} params - Function parameters;*/
  * @returns {*} Function return value;*/
  */;
