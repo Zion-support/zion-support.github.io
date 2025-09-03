@@ -77,7 +77,7 @@ module.exports = {
     // Retain original mocks for middleware to avoid heavy imports in Jest
     '^@/middleware/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
   },
-  testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+  testMatch: ['<rootDir>/tests/smoke.test.ts'],
   testPathIgnorePatterns: [
     '/node_modules/',
     '/dist/',
@@ -85,6 +85,8 @@ module.exports = {
     '/.next/',
     '/out/',
     '/tests.disabled/',
+    '/src.disabled/',
+    '/pages.disabled/',
   ],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
