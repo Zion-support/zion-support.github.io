@@ -42,23 +42,26 @@ const Home = memo(() => {
   ];
   
   const services = [
-  {
+    {
       title: 'AI Services',
-      description: 'Cutting-edge artificial intelligence solutions',
+      description: 'Cutting-edge artificial intelligence solutions including autonomous systems, machine learning, and intelligent automation',
       icon: Brain,
-      href: '/services/ai-services'
+      href: '/ai-services',
+      features: ['AI-Powered Email Responder', 'Computer Vision Solutions', 'Predictive Analytics Platform', 'AI Chatbot & Virtual Assistant']
     },
     {
       title: 'IT Services',
-      description: 'Comprehensive information technology services',
+      description: 'Comprehensive information technology services including cloud infrastructure, cybersecurity, and network management',
       icon: Network,
-      href: '/services/it-services'
+      href: '/it-services',
+      features: ['Cloud Infrastructure & Migration', 'Cybersecurity & Compliance', 'Network Infrastructure', 'IT Support & Helpdesk']
     },
     {
       title: 'Micro SaaS',
-      description: 'Scalable software as a service solutions',
+      description: 'Scalable software as a service solutions tailored to your business needs with rapid deployment',
       icon: Cloud,
-      href: '/services/micro-saas'
+      href: '/micro-saas',
+      features: ['AI-Powered Email Responder', 'Mobile-First Survey Platform', 'Event Management Dashboard', 'Customer Support Platform']
     }
   ];
 
@@ -193,6 +196,89 @@ const Home = memo(() => {
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Innovative Services Showcase */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Innovative Solutions for Modern Businesses</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Discover our cutting-edge services that are transforming industries and driving digital innovation
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="p-3 rounded-lg bg-gradient-to-r from-green-500 to-emerald-600 mr-4">
+                    <Brain className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900">AI-Powered Solutions</h3>
+                </div>
+                <p className="text-gray-600 mb-4">From autonomous systems to predictive analytics, our AI services deliver intelligent automation and insights.</p>
+                <ul className="text-sm text-gray-500 space-y-1">
+                  <li>• Cybersecurity Threat Detection</li>
+                  <li>• Medical Diagnosis Assistant</li>
+                  <li>• Financial Risk Assessment</li>
+                  <li>• Environmental Monitoring</li>
+                </ul>
+              </div>
+
+              <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="p-3 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-600 mr-4">
+                    <Cloud className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900">Micro SaaS Platforms</h3>
+                </div>
+                <p className="text-gray-600 mb-4">Scalable software solutions that grow with your business, from startup to enterprise.</p>
+                <ul className="text-sm text-gray-500 space-y-1">
+                  <li>• Podcast Transcription Service</li>
+                  <li>• Freelancer Portfolio Builder</li>
+                  <li>• Local Business CRM</li>
+                  <li>• Website Analytics for SMBs</li>
+                </ul>
+              </div>
+
+              <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="p-3 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 mr-4">
+                    <Network className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900">Advanced IT Services</h3>
+                </div>
+                <p className="text-gray-600 mb-4">Next-generation IT infrastructure and services for the digital age.</p>
+                <ul className="text-sm text-gray-500 space-y-1">
+                  <li>• Quantum Computing Readiness</li>
+                  <li>• 5G Network Integration</li>
+                  <li>• Edge Computing Infrastructure</li>
+                  <li>• Zero Trust Security Architecture</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-white mb-4">Trusted by Industry Leaders</h2>
+              <p className="text-xl text-blue-100">
+                Our proven track record speaks for itself
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-blue-100">{stat.label}</div>
                 </div>
               ))}
             </div>

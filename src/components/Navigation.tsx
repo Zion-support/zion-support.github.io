@@ -37,23 +37,31 @@ const Navigation = () => {
   }, []);
 
   const navigationItems = [
-  { name: 'Home', href: '/' },
+    { name: 'Home', href: '/' },
     { 
       name: 'Services', 
       href: '/services', 
       dropdown: [
-        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI services' },
+        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI solutions' },
         { name: 'IT Services', href: '/it-services', icon: Network, description: 'Comprehensive IT solutions' },
         { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Scalable SaaS solutions' },
-        { name: 'Web Development', href: '/services/web-development', icon: Code, description: 'Custom web applications' },
-        { name: 'Cloud Services', href: '/services/cloud-services', icon: Cloud, description: 'Cloud infrastructure' },
-        { name: 'AI Development', href: '/services/ai-development', icon: Brain, description: 'AI development services' }
+        { name: 'All Services', href: '/services', icon: Settings, description: 'Complete service overview' }
       ]
     },
-    { name: 'Solutions', href: '/solutions' },
+    { 
+      name: 'Solutions', 
+      href: '/solutions',
+      dropdown: [
+        { name: 'AI Solutions', href: '/solutions/ai', icon: Brain, description: 'AI-powered business solutions' },
+        { name: 'Cloud Solutions', href: '/solutions/cloud', icon: Cloud, description: 'Cloud infrastructure solutions' },
+        { name: 'Security Solutions', href: '/solutions/security', icon: Shield, description: 'Cybersecurity solutions' },
+        { name: 'Digital Transformation', href: '/solutions/digital', icon: Zap, description: 'Digital transformation services' }
+      ]
+    },
     { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' },
     { name: 'Careers', href: '/careers' }
   ];
 

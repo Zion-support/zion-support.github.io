@@ -725,6 +725,7 @@ export default function ITServices() {
       category: 'Network Security'
     },
     {
+<<<<<<< HEAD
       title: 'AI-Powered IT Operations (AIOps)',
       description: 'Intelligent IT operations with AI-driven automation and predictive analytics',
       icon: Brain,
@@ -756,20 +757,41 @@ export default function ITServices() {
       pricing: '$15,000 - $75,000/month',
       delivery: '12-24 weeks',
       category: 'Quantum Security'
+=======
+      title: 'AI-Powered IT Operations Management',
+      description: 'Intelligent IT operations with AI-driven automation and predictive maintenance',
+      icon: Brain,
+      features: [
+        'AI-powered incident detection and resolution,Automated root cause analysis,Predictive maintenance and capacity planning,Intelligent alert correlation and noise reduction,Automated remediation and self-healing systems,Performance optimization recommendations'
+      ],
+      pricing: '$4,000 - $20,000/month',
+      delivery: '4-8 weeks',
+      category: 'AI Operations'
+>>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-68a5
     },
     {
       title: 'Edge Computing Infrastructure',
       description: 'Distributed edge computing solutions for low-latency applications and IoT',
+<<<<<<< HEAD
       icon: Cpu,
       features: [
         'Edge computing platform design and deployment,Distributed data processing and analytics,Edge AI and machine learning deployment,5G network integration and optimization,Edge security and device management,Multi-cloud edge orchestration'
       ],
       pricing: '$6,000 - $30,000/month',
       delivery: '8-16 weeks',
+=======
+      icon: Satellite,
+      features: [
+        'Edge server deployment and management,Edge-to-cloud data synchronization,Low-latency application hosting,Edge AI and machine learning inference,Edge security and access control,Edge monitoring and analytics'
+      ],
+      pricing: '$2,500 - $12,000/month',
+      delivery: '3-6 weeks',
+>>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-68a5
       category: 'Edge Computing'
     },
     {
       title: 'Green IT & Sustainability Solutions',
+<<<<<<< HEAD
       description: 'Environmentally conscious IT infrastructure and carbon footprint reduction',
       icon: TreePine,
       features: [
@@ -822,6 +844,82 @@ export default function ITServices() {
       pricing: '$10,000 - $50,000/month',
       delivery: '10-20 weeks',
       category: 'Threat Intelligence'
+=======
+      description: 'Environmentally conscious IT solutions with carbon footprint reduction',
+      icon: TreePine,
+      features: [
+        'Energy-efficient server and infrastructure design,Carbon footprint monitoring and reporting,Renewable energy integration,Green data center optimization,Sustainable IT procurement and lifecycle management,Environmental compliance and reporting'
+      ],
+      pricing: '$1,500 - $8,000/month',
+      delivery: '2-4 weeks',
+      category: 'Green IT'
+    },
+    {
+      title: 'Quantum Computing Readiness',
+      description: 'Preparation and integration services for quantum computing technologies',
+      icon: Cpu,
+      features: [
+        'Quantum algorithm development and optimization,Quantum-classical hybrid system integration,Quantum security and cryptography implementation,Quantum simulation and testing environments,Quantum workforce training and development,Quantum computing strategy and roadmap planning'
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '8-16 weeks',
+      category: 'Quantum Computing'
+    },
+    {
+      title: '5G Network Integration',
+      description: '5G network deployment and integration services for enterprise applications',
+      icon: Wifi,
+      features: [
+        '5G network planning and deployment,5G enterprise application development,Network slicing and quality of service management,5G security and privacy implementation,Edge computing integration with 5G,5G performance monitoring and optimization'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: '5G Services'
+    },
+    {
+      title: 'Blockchain Infrastructure Services',
+      description: 'Blockchain network deployment and management for enterprise applications',
+      icon: Shield,
+      features: [
+        'Private and consortium blockchain deployment,Smart contract development and auditing,Blockchain security and consensus mechanisms,Interoperability and cross-chain solutions,Blockchain monitoring and analytics,Regulatory compliance and governance'
+      ],
+      pricing: '$3,500 - $18,000/month',
+      delivery: '4-10 weeks',
+      category: 'Blockchain Services'
+    },
+    {
+      title: 'IoT Platform Management',
+      description: 'Comprehensive IoT infrastructure and device management services',
+      icon: Network,
+      features: [
+        'IoT device provisioning and management,Edge gateway deployment and configuration,IoT data collection and processing,Device security and firmware management,IoT analytics and insights,Integration with enterprise systems'
+      ],
+      pricing: '$2,000 - $10,000/month',
+      delivery: '3-6 weeks',
+      category: 'IoT Services'
+    },
+    {
+      title: 'Digital Twin Implementation',
+      description: 'Digital twin creation and management for physical assets and processes',
+      icon: Monitor,
+      features: [
+        '3D modeling and simulation creation,Real-time data integration and synchronization,Predictive maintenance and optimization,Digital twin analytics and insights,Integration with IoT and sensor networks,Collaborative digital twin environments'
+      ],
+      pricing: '$6,000 - $30,000/month',
+      delivery: '8-16 weeks',
+      category: 'Digital Twin Services'
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security implementation and management',
+      icon: Lock,
+      features: [
+        'Identity and access management (IAM) implementation,Micro-segmentation and network isolation,Continuous authentication and authorization,Device and application trust verification,Security policy automation and enforcement,Zero trust monitoring and analytics'
+      ],
+      pricing: '$4,500 - $22,000/month',
+      delivery: '6-12 weeks',
+      category: 'Zero Trust Security'
+>>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-68a5
     }
   ];
 
