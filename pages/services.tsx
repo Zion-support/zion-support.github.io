@@ -266,7 +266,9 @@ export default function Services() {
 							Zion Tech Group delivers cutting-edge, production-ready services across AI, IT infrastructure, and Micro SaaS platforms. 
 							Our solutions are designed for enterprise scalability with transparent pricing and measurable outcomes. 
 							Explore our full capabilities at{' '}
-							<a href='https://ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline font-semibold' target='_blank' rel='noreferrer'>ziontechgroup.com</a>.
+							<a href='https://ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline font-semibold' target='_blank' rel='noreferrer'>ziontechgroup.com</a>.{' '}
+							Check our latest additions in the{' '}
+							<Link href='/additional-services' className='text-blue-600 hover:text-blue-500 underline font-semibold'>Expanded Services Catalog</Link>.
 						</p>
 						<div className='mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6'>
 							<h3 className='text-lg font-semibold text-blue-900 mb-3'>Ready to Get Started?</h3>

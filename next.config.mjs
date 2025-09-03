@@ -46,6 +46,7 @@ const nextConfig = {
       ...config.resolve.alias,
       'react-router-dom': path.resolve(__dirname, 'utils/next-router-shim.tsx'),
       'react-router': path.resolve(__dirname, 'utils/next-router-shim.tsx'),
+      'next/link': path.resolve(__dirname, 'utils/next-link-shim.tsx'),
     };
 
     config.resolve.fallback = {

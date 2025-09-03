@@ -1,5 +1,5 @@
 import React from 'react';
-import '../src/index.css';
+// import '../src/index.css';
 import PerformanceMonitor from '../src/components/PerformanceMonitor';
 import ErrorBoundary from '../src/components/ErrorBoundary';
 
