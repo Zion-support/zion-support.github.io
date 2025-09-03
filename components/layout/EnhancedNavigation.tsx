@@ -18,10 +18,7 @@ const EnhancedNavigation: React.FC = () => {
   ];
 
   const products = [
-    { name: 'AI Solutions', href: '/products/ai-solutions' },
-    { name: 'Cloud Platforms', href: '/products/cloud-platforms' },
-    { name: 'Analytics Tools', href: '/products/analytics-tools' },
-    { name: 'Security Suite', href: '/products/security-suite' },
+    { name: 'All Products', href: '/products' },
   ];
 
   return (
@@ -100,6 +97,14 @@ const EnhancedNavigation: React.FC = () => {
               Blog
             </span></Link>
             
+            <Link href="/reports"><span className="text-gray-600 hover:text-blue-600 transition-colors">
+              Reports
+            </span></Link>
+            
+            <Link href="/privacy"><span className="text-gray-600 hover:text-blue-600 transition-colors">
+              Privacy
+            </span></Link>
+            
             <Link href="/talent"><span className="text-gray-600 hover:text-blue-600 transition-colors">
               Careers
             </span></Link>
@@ -167,6 +172,14 @@ const EnhancedNavigation: React.FC = () => {
               
               <Link href="/blog"><span className="block py-2 text-gray-600 hover:text-blue-600">
                 Blog
+              </span></Link>
+              
+              <Link href="/reports"><span className="block py-2 text-gray-600 hover:text-blue-600">
+                Reports
+              </span></Link>
+              
+              <Link href="/privacy"><span className="block py-2 text-gray-600 hover:text-blue-600">
+                Privacy
               </span></Link>
               
               <Link href="/talent"><span className="block py-2 text-gray-600 hover:text-blue-600">
