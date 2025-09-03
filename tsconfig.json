@@ -53,6 +53,12 @@
     "**/*.spec.ts",
     "**/*.spec.tsx",
     "**/*.backup",
-    "**/*.disabled"
+    "**/*.disabled",
+    "src",
+    "src.pages.disabled",
+    "src.pages.disabled.auto",
+    "components.disabled",
+    "src.disabled",
+    "src.pages.disabled"
   ]
 }
