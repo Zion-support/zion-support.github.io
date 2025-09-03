@@ -4,6 +4,7 @@ import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
 import Sidebar from '../components/Sidebar';
 import SEOHead from '../src/components/SEOHead';
+import Analytics from '../src/components/Analytics';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail, Menu } from 'lucide-react';
 
 const Home = memo(() => {
@@ -19,20 +20,39 @@ const Home = memo(() => {
 
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "WebSite",
+    "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
     "description": "Leading provider of revolutionary AI services, IT solutions, and micro SaaS development",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://ziontechgroup.com/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"
     },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "url": "https://ziontechgroup.com"
-    }
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"
+    },
+    "sameAs": [
+      "https://ziontechgroup.com"
+    ],
+    "foundingDate": "2020",
+    "numberOfEmployees": "10-50",
+    "industry": "Technology Services",
+    "services": [
+      "AI Services",
+      "IT Solutions", 
+      "Micro SaaS Development",
+      "Cloud Infrastructure",
+      "Cybersecurity",
+      "Digital Transformation"
+    ]
   };
   const stats = [
   { number: '500+', label: 'Projects Completed' },
@@ -101,6 +121,10 @@ const Home = memo(() => {
         description="Transform your business with cutting-edge AI services, IT solutions, and micro SaaS development. Expert technology consulting and implementation."
         keywords="AI services, IT solutions, micro SaaS, technology consulting, digital transformation, cloud services, cybersecurity"
         structuredData={structuredData}
+      />
+      <Analytics 
+        googleAnalyticsId="G-XXXXXXXXXX" 
+        facebookPixelId="XXXXXXXXXXXXXXX"
       />
       
       <Navigation />
@@ -291,8 +315,82 @@ const Home = memo(() => {
           </div>
         </section>
 
-        {/* Contact Information Section */}
+        {/* Testimonials Section */}
         <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+              <p className="text-xl text-gray-600">
+                Don't just take our word for it - hear from our satisfied clients
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white rounded-lg p-8 shadow-sm">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-6">
+                  "Zion Tech Group transformed our business with their AI-powered solutions. The ROI was immediate and the support is exceptional. Highly recommended!"
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-white font-bold">JS</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">John Smith</h4>
+                    <p className="text-gray-500 text-sm">CEO, TechCorp Solutions</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg p-8 shadow-sm">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-6">
+                  "Their micro SaaS development team delivered exactly what we needed. The platform is scalable, secure, and user-friendly. Outstanding work!"
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-white font-bold">MJ</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Maria Johnson</h4>
+                    <p className="text-gray-500 text-sm">CTO, InnovateNow Inc</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg p-8 shadow-sm">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-6">
+                  "The IT infrastructure they built for us is rock-solid. 99.9% uptime and their support team is always available. Worth every penny!"
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-white font-bold">DW</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">David Wilson</h4>
+                    <p className="text-gray-500 text-sm">IT Director, Global Enterprises</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Information Section */}
+        <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Get in Touch</h2>

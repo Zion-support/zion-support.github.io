@@ -40,7 +40,9 @@ export default function About() {
     <>
       <Head>
         <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge technology solutions." />
+        <meta name="description" content="Learn about Zion Tech Group - a leading Delaware-based technology company specializing in AI services, IT solutions, and micro SaaS development. Founded with a mission to transform businesses through innovative technology." />
+        <meta name="keywords" content="about Zion Tech Group, Delaware tech company, AI services company, IT solutions provider, micro SaaS development, technology consulting, digital transformation" />
+        <link rel="canonical" href="https://ziontechgroup.com/about" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       
@@ -70,8 +72,11 @@ export default function About() {
                 <p className="text-lg text-gray-600 mb-6">
                   To empower businesses with revolutionary technology solutions that drive growth, efficiency, and innovation. We believe technology should be accessible, secure, and transformative.
                 </p>
+                <p className="text-lg text-gray-600 mb-6">
+                  Founded in Delaware with a vision to bridge the gap between cutting-edge technology and practical business applications, Zion Tech Group has become a trusted partner for companies looking to embrace digital transformation.
+                </p>
                 <p className="text-lg text-gray-600">
-                  Founded with a vision to bridge the gap between cutting-edge technology and practical business applications, Zion Tech Group has become a trusted partner for companies looking to embrace digital transformation.
+                  Our headquarters at 364 E Main St STE 1008, Middletown DE 19709 serves as the hub for our global operations, where we develop and deploy innovative AI services, IT solutions, and micro SaaS applications that help businesses thrive in the digital age.
                 </p>
               </div>
               <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
@@ -138,6 +143,56 @@ export default function About() {
                   <div className="text-gray-600">{stat.label}</div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Team Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Team</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Meet the experts behind Zion Tech Group's innovative solutions and exceptional service delivery.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <div className="text-center">
+                  <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-white text-2xl font-bold">K</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Kleber</h3>
+                  <p className="text-blue-600 font-medium mb-3">Founder & CEO</p>
+                  <p className="text-gray-600 text-sm">
+                    Visionary leader with 15+ years in technology innovation, specializing in AI and digital transformation strategies.
+                  </p>
+                </div>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <div className="text-center">
+                  <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-white text-2xl font-bold">A</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">AI Engineering Team</h3>
+                  <p className="text-blue-600 font-medium mb-3">Machine Learning Specialists</p>
+                  <p className="text-gray-600 text-sm">
+                    Expert team of AI engineers and data scientists developing cutting-edge machine learning solutions and autonomous systems.
+                  </p>
+                </div>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <div className="text-center">
+                  <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-white text-2xl font-bold">D</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Development Team</h3>
+                  <p className="text-blue-600 font-medium mb-3">Full-Stack Engineers</p>
+                  <p className="text-gray-600 text-sm">
+                    Skilled developers creating scalable micro SaaS applications, cloud infrastructure, and enterprise solutions.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>

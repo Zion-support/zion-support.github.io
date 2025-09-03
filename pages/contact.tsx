@@ -46,26 +46,30 @@ export default function Contact() {
     {
       icon: Mail,
       title: 'Email Us',
-      details: 'info@ziontechgroup.com',
-      link: 'mailto:info@ziontechgroup.com'
+      details: 'kleber@ziontechgroup.com',
+      link: 'mailto:kleber@ziontechgroup.com',
+      description: 'Send us an email for general inquiries and support'
     },
     {
       icon: Phone,
       title: 'Call Us',
-      details: '+1 (302) 464-0950',
-      link: 'tel:+13024640950'
+      details: '+1 302 464 0950',
+      link: 'tel:+13024640950',
+      description: 'Speak directly with our team for immediate assistance'
     },
     {
       icon: MapPin,
       title: 'Visit Us',
-      details: 'Delaware, USA',
-      link: '#'
+      details: '364 E Main St STE 1008, Middletown DE 19709',
+      link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',
+      description: 'Our headquarters in Delaware, USA'
     },
     {
       icon: Clock,
       title: 'Business Hours',
       details: 'Mon - Fri: 9:00 AM - 6:00 PM EST',
-      link: '#'
+      link: '#',
+      description: '24/7 support available for enterprise clients'
     }
   ];
 
@@ -73,10 +77,16 @@ export default function Contact() {
     'AI Services',
     'IT Services',
     'Micro SaaS',
-    'Custom Development',
+    'Web Development',
+    'Cloud Services',
+    'AI Development',
+    'Cybersecurity',
+    'Blockchain Solutions',
+    'IoT Solutions',
     'Digital Transformation',
     'Enterprise Solutions',
     'Consulting',
+    'Support & Maintenance',
     'Other'
   ];
 
@@ -84,7 +94,9 @@ export default function Contact() {
     <>
       <Head>
         <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group. We're here to help transform your business with cutting-edge technology solutions." />
+        <meta name="description" content="Contact Zion Tech Group for AI services, IT solutions, and micro SaaS development. Call +1 302 464 0950 or email kleber@ziontechgroup.com for expert technology consulting." />
+        <meta name="keywords" content="contact Zion Tech Group, AI services contact, IT solutions contact, micro SaaS contact, technology consulting, Delaware tech company" />
+        <link rel="canonical" href="https://ziontechgroup.com/contact" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       
@@ -126,10 +138,11 @@ export default function Contact() {
                         <h3 className="text-lg font-semibold text-gray-900 mb-1">{info.title}</h3>
                         <a 
                           href={info.link} 
-                          className="text-gray-600 hover:text-blue-600 transition-colors"
+                          className="text-gray-600 hover:text-blue-600 transition-colors block mb-1"
                         >
                           {info.details}
                         </a>
+                        <p className="text-sm text-gray-500">{info.description}</p>
                       </div>
                     </div>
                   ))}
