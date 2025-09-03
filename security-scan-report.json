@@ -1,34 +1,47 @@
 {
-  "timestamp": "2025-09-03T16:52:55.156Z",
-  "checks": {
-    "NPM Audit": {
-      "status": "passed",
-      "message": "Audit check completed"
+  "timestamp": "2025-09-03T22:54:14.512Z",
+  "status": "completed",
+  "vulnerabilities": [
+    {
+      "name": "NPM Security Audit",
+      "status": "checked",
+      "result": {
+        "status": "vulnerabilities_found"
+      },
+      "timestamp": "2025-09-03T22:54:15.246Z"
     },
-    "Sensitive Files": {
-      "status": "passed",
-      "message": "No sensitive files in root directory"
+    {
+      "name": "Sensitive Files Check",
+      "status": "checked",
+      "result": {
+        "foundFiles": []
+      },
+      "timestamp": "2025-09-03T22:54:15.246Z"
     },
-    "Hardcoded Secrets": {
-      "status": "passed",
-      "message": "No obvious hardcoded secrets found"
+    {
+      "name": "Gitignore Security Check",
+      "status": "checked",
+      "result": {
+        "missingEntries": []
+      },
+      "timestamp": "2025-09-03T22:54:15.246Z"
     },
-    "HTTPS Configuration": {
-      "status": "warning",
-      "warning": true,
-      "message": "HTTPS configuration not found"
-    },
-    "Security Headers": {
-      "status": "passed",
-      "message": "Security headers configured"
+    {
+      "name": "Hardcoded Secrets Check",
+      "status": "checked",
+      "result": {
+        "scannedFiles": 3082,
+        "suspiciousFiles": 0
+      },
+      "timestamp": "2025-09-03T22:54:15.405Z"
     }
-  },
-  "vulnerabilities": [],
-  "summary": {
-    "total": 5,
-    "passed": 4,
-    "failed": 0,
-    "warnings": 1,
-    "vulnerabilities": 0
-  }
+  ],
+  "recommendations": [
+    {
+      "type": "npm_vulnerabilities",
+      "message": "NPM vulnerabilities detected - review and fix",
+      "severity": "high"
+    }
+  ],
+  "completedAt": "2025-09-03T22:54:15.405Z"
 }

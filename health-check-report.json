@@ -1,40 +1,51 @@
 {
-  "timestamp": "2025-09-03T17:32:53.642Z",
-  "checks": {
-    "Node.js Version": {
+  "timestamp": "2025-09-03T22:54:15.891Z",
+  "status": "completed",
+  "checks": [
+    {
+      "name": "Package.json validation",
       "status": "passed",
-      "message": "Node.js v22.16.0"
+      "result": {
+        "name": "ziontechgroup.com",
+        "version": "0.1.0"
+      },
+      "timestamp": "2025-09-03T22:54:15.891Z"
     },
-    "Package.json": {
+    {
+      "name": "Dependencies check",
+      "status": "failed",
+      "error": "node_modules not found - run npm install",
+      "timestamp": "2025-09-03T22:54:15.891Z"
+    },
+    {
+      "name": "Build directory check",
       "status": "passed",
-      "message": "package.json exists"
+      "result": {
+        "status": "no_build_directory"
+      },
+      "timestamp": "2025-09-03T22:54:15.892Z"
     },
-    "Dependencies": {
+    {
+      "name": "Disk space check",
       "status": "passed",
-      "message": "Dependencies installed"
+      "result": {
+        "used": "14G",
+        "available": "107G",
+        "usePercent": "12%"
+      },
+      "timestamp": "2025-09-03T22:54:15.897Z"
     },
-    "Disk Space": {
+    {
+      "name": "Memory check",
       "status": "passed",
-      "message": "Disk usage: 12%"
-    },
-    "Memory Usage": {
-      "status": "passed",
-      "message": "Memory usage: 9%"
-    },
-    "Build Test": {
-      "status": "passed",
-      "message": "Build successful"
-    },
-    "Linting": {
-      "status": "warning",
-      "warning": true,
-      "message": "Linting errors found"
+      "result": {
+        "total": "15Gi",
+        "used": "810Mi",
+        "free": "1.5Gi",
+        "available": "1.1Mi"
+      },
+      "timestamp": "2025-09-03T22:54:15.902Z"
     }
-  },
-  "summary": {
-    "total": 7,
-    "passed": 6,
-    "failed": 0,
-    "warnings": 1
-  }
+  ],
+  "completedAt": "2025-09-03T22:54:15.903Z"
 }
