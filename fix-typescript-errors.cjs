@@ -1,11 +1,10 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 
-// Common patterns to fix
+// Common patterns to fix;
 const fixes = [
-  // Fix malformed type annotations
+  // Fix malformed type annotations;
   { pattern: /anykeyof/g, replacement: 'keyof' },
   { pattern: /any([^,]+)/g, replacement: '$1' },
   { pattern: /any([^:]+):/g, replacement: '$1:' },
@@ -14,18 +13,18 @@ const fixes = [
   { pattern: /any([^}]+)}/g, replacement: '$1}' },
   { pattern: /any([^)]+)\)/g, replacement: '$1)' },
 
-  // Fix malformed object properties
+  // Fix malformed object properties;
   { pattern: /:\s*{;/g, replacement: ': {' },
   { pattern: /:\s*{([^}]+);/g, replacement: ': { $1' },
 
-  // Fix malformed function declarations
+  // Fix malformed function declarations;
   { pattern: /\(\s*\)\s*=>\s*{/g, replacement: '() => {' },
   { pattern: /\(\s*\)\s*=>\s*void;/g, replacement: '() => void;' },
 
-  // Fix malformed JSX
+  // Fix malformed JSX;
   { pattern: /<\/([^>]+)>/g, replacement: '</$1>' },
 
-  // Fix malformed imports
+  // Fix malformed imports;
   {
     pattern: /import:\s*{([^}]+)},\s*from,\s*'([^']+)'/g,
     replacement: "import { $1 } from '$2'",
@@ -38,15 +37,15 @@ const fixes = [
 
 function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, `utf8`);
     let originalContent = content;
 
-    // Apply all fixes
+    // Apply all fixes;
     for (const fix of fixes) {
       content = content.replace(fix.pattern, fix.replacement);
     }
 
-    // Write back if changed
+    // Write back if changed;
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
       console.log(`Fixed: ${filePath}`);
@@ -54,8 +53,8 @@ function fixFile(filePath) {
     }
 
     return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+  } catch (error) { 
+    console.error(`Error fixing ${filePath }:`, error.message);
     return false;
   }
 }
@@ -70,7 +69,7 @@ function getAllFiles(dir) {
 
     if (stat.isDirectory()) {
       files.push(...getAllFiles(fullPath));
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+    } else if (item.endsWith(`.tsx`) || item.endsWith('.ts')) {
       files.push(fullPath);
     }
   }
@@ -78,8 +77,8 @@ function getAllFiles(dir) {
   return files;
 }
 
-// Main execution
-const srcDir = path.join(process.cwd(), 'src');
+// Main execution;
+const srcDir = path.join(process.cwd(), `src`);
 if (fs.existsSync(srcDir)) {
   const files = getAllFiles(srcDir);
   let fixedCount = 0;
@@ -92,5 +91,5 @@ if (fs.existsSync(srcDir)) {
 
   console.log(`\nFixed ${fixedCount} files.`);
 } else {
-  console.log('src directory not found');
+  console.log(`src directory not found`);
 }

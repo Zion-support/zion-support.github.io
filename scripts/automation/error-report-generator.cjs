@@ -1,35 +1,52 @@
-#!/usr/bin/env node
-
+<<<<<<< HEAD
+#!/''usr/bin/env'' node;
 const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const path = require(`path`);
+const { execSync } = require(`child_process`);
 
 class ErrorReportGenerator {
   constructor() {
     this.projectRoot = process.cwd();
     this.automationInterval =
-      parseInt(process.env.AUTOMATION_INTERVAL) || 3600000; // 1 hour default
+=======
+#!/'usr/bin/env' node;
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+;
+class ErrorReportGenerator {;
+  constructor() {;
+    this.projectRoot = process.cwd();
+    this.automationInterval =;
+>>>>>>> main
+      parseInt(process.env.AUTOMATION_INTERVAL) || 3600000; // 1 hour default;
   }
+<<<<<<< HEAD
+;
+  log(message) {;
+    console.log(`[${new Date().toISOString()}] [ErrorReportGenerator] ${message}';
+=======
 
   log(message) {
-    console.log(
-      `[${new Date().toISOString()}] [ErrorReportGenerator] ${message}`
+<<<<<<< HEAD
+    console.log(`[${new Date().toISOString()}] [ErrorReportGenerator] ${message}`
     );
   }
 
   async run() {
-    this.log('Starting error report generation...');
+    this.log(`Starting error report generation...`);
 
     try {
       await this.generateErrorReport();
-      this.log('Error report generation completed.');
-    } catch (error) {
-      this.log(`Error during report generation: ${error.message}`);
+      this.log(`Error report generation completed.`);
+    } catch (error) {  
+      this.log(Error during report generation: ${error.message  }`);
     }
   }
 
   async generateErrorReport() {
-    this.log('Generating comprehensive error report...');
+    this.log(`Generating comprehensive error report...`);
 
     const report = {
       timestamp: new Date().toISOString(),
@@ -39,102 +56,192 @@ class ErrorReportGenerator {
     };
 
     try {
-      // TypeScript check
+      // TypeScript check;
       try {
-        const typeCheckResult = execSync(
-          'npx tsc --noEmit --pretty false 2>&1',
+        const typeCheckResult = execSync(npx tsc --noEmit --pretty false 2>&1`,
           {
             encoding: 'utf8',
+=======
+    console.log(`[${new Date().toISOString()}] [ErrorReportGenerator] ${message}`);
+>>>>>>> main
+    );
+  }
+;
+  async run() {;
+    this.log('Starting error report generation...');
+;
+    try {;
+      await this.generateErrorReport();
+<<<<<<< HEAD
+      this.log('Error report generation completed.');
+    } catch (error) {;
+=======
+      this.log('Error report generation completed.');`);
+    } catch (error) {`);
+>>>>>>> main
+      this.log(Error during report generation: ${error.message}`);
+    }
+  }
+;
+  async generateErrorReport() {;
+    this.log('Generating comprehensive error report...');
+;
+    const report = {;
+      timestamp: new Date().toISOString(),;
+      projectStatus: {},;
+      errorSummary: {},;
+      recommendations: [],;
+    };
+;
+    try {;
+      // TypeScript check;
+      try {;
+        const typeCheckResult = execSync(npx tsc --noEmit --pretty false 2>&1',;
+          {;
+            encoding: 'utf8',;
+>>>>>>> main
           }
         );
-        report.projectStatus.typescript = {
-          status: 'error',
-          errorCount: (typeCheckResult.match(/error TS\d+/g) || []).length,
-          details: typeCheckResult,
+        report.projectStatus.typescript = {;
+          status: 'error',;
+          errorCount: (typeCheckResult.match(/error TS\d+/g) || []).length,;
+          details: typeCheckResult,;
         };
-      } catch (error) {
+<<<<<<< HEAD
+      } catch (error) {  
         report.projectStatus.typescript = {
           status: 'error',
           errorCount: 0,
           details: error.message,
-        };
+          };
       }
 
-      // ESLint check
+      // ESLint check;
       try {
         const lintResult = execSync('npx eslint . 2>&1', {
           encoding: 'utf8',
-        });
-        report.projectStatus.eslint = {
-          status: 'error',
-          errorCount: (lintResult.match(/error/g) || []).length,
-          details: lintResult,
+=======
+      } catch (error) {;
+        report.projectStatus.typescript = {;
+          status: 'error',;
+          errorCount: 0,;
+          details: error.message,;
         };
-      } catch (error) {
+      }
+;
+      // ESLint check;
+      try {;
+        const lintResult = execSync('npx eslint . 2>&1', {;
+          encoding: 'utf8',;
+>>>>>>> main
+        });
+        report.projectStatus.eslint = {;
+          status: 'error',;
+          errorCount: (lintResult.match(/'error/g') || []).length,;
+          details: lintResult,;
+        };
+<<<<<<< HEAD
+      } catch (error) {  
         report.projectStatus.eslint = {
           status: 'error',
           errorCount: 0,
           details: error.message,
-        };
+          };
       }
 
-      // Build check
+      // Build check;
       try {
         execSync('npm run build', { stdio: 'pipe' });
         report.projectStatus.build = {
           status: 'success',
-          details: 'Build completed successfully',
+          details: 'Build completed successfully`,
         };
-      } catch (error) {
+      } catch (error) {  
         report.projectStatus.build = {
-          status: 'error',
+          status: `error`,
           details: error.message,
-        };
+          };
       }
 
-      // Generate recommendations
+      // Generate recommendations;
       report.recommendations = this.generateRecommendations(report);
 
-      // Save report
+      // Save report;
       const timestamp = Date.now();
       const reportPath = path.join(
-        this.projectRoot,
-        'error-reports',
-        `comprehensive-error-report-${timestamp}.json`
+        this.projectRoot,error-reports`, `comprehensive-error-report-${timestamp}.json`
+=======
+      } catch (error) {;
+        report.projectStatus.eslint = {;
+          status: 'error',;
+          errorCount: 0,;
+          details: error.message,;
+        };
+      }
+;
+      // Build check;
+      try {;
+        execSync('npm run build', { stdio: 'pipe' });
+        report.projectStatus.build = {;
+          status: 'success',;
+          details: 'Build completed successfully',;
+        };
+      } catch (error) {;
+        report.projectStatus.build = {;
+          status: 'error',;
+          details: error.message,;
+        };
+      }
+;
+      // Generate recommendations;
+      report.recommendations = this.generateRecommendations(report);
+;
+      // Save report;
+      const timestamp = Date.now();
+      const reportPath = path.join(;
+        this.projectRoot,error-reports', `comprehensive-error-report-${timestamp}.json`;
+>>>>>>> main
       );
-
+;
       const dir = path.dirname(reportPath);
-      if (!fs.existsSync(dir)) {
+      if (!fs.existsSync(dir)) {;
         fs.mkdirSync(dir, { recursive: true });
       }
-
-      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-      this.log(`Error report saved to: ${reportPath}`);
-    } catch (error) {
-      this.log(`Error generating report: ${error.message}`);
+;
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));this.log(`Error report saved to: ${reportPath}`);
+    } catch (error) {  this.log(`Error generating report: ${error.message  }`);
     }
   }
-
-  generateRecommendations(report) {
+;
+  generateRecommendations(report) {;
     const recommendations = [];
+<<<<<<< HEAD
 
     if (report.projectStatus.typescript?.errorCount > 0) {
-      recommendations.push('Run TypeScript error fixer to address type issues');
+      recommendations.push(`Run TypeScript error fixer to address type issues`);
     }
 
     if (report.projectStatus.eslint?.errorCount > 0) {
-      recommendations.push('Run ESLint error fixer to address linting issues');
+      recommendations.push(`Run ESLint error fixer to address linting issues`);
+=======
+;
+    if (report.projectStatus.typescript?.errorCount > 0) {;
+      recommendations.push('Run TypeScript error fixer to address type issues');
     }
-
-    if (report.projectStatus.build?.status === 'error') {
-      recommendations.push(
-        'Fix build errors to ensure project compiles correctly'
+;
+    if (report.projectStatus.eslint?.errorCount > 0) {;
+      recommendations.push('Run ESLint error fixer to address linting issues');
+>>>>>>> main
+    }
+;
+    if (report.projectStatus.build?.status === 'error') {;
+      recommendations.push(Fix build errors to ensure project compiles correctly';
       );
     }
-
+;
     return recommendations;
   }
 }
-
+;
 const generator = new ErrorReportGenerator();
 generator.run().catch(console.error);
