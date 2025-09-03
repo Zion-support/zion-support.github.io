@@ -1,0 +1,59 @@
+{
+  "timestamp": "2025-09-03T16-41-47-585Z",
+  "stage": "pre-deployment",
+  "status": "failed",
+  "checks": [
+    {
+      "name": "build-check",
+      "description": "Build Verification",
+      "startTime": "2025-09-03T16:41:47.587Z",
+      "status": "passed",
+      "output": "\n> ziontechgroup.com@0.1.0 prebuild\n> echo \"Starting build...\"\n\nStarting build...\n\n> ziontechgroup.com@0.1.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n   - Experiments (use with caution):\n     ✓ scrollRestoration\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n ✓ Compiled successfully in 3.1s\n   Collecting page data ...\n   Generating static pages (0/14) ...\n   Generating static pages (3/14) \r\n   Generating static pages (6/14) \r\n   Generating static pages (10/14) \r\n ✓ Generating static pages (14/14)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (pages)                                Size  First Load JS\n┌ ○ /                                     2.18 kB          88 kB\n├   /_app                                     0 B        85.8 kB\n├ ○ /404                                    180 B          86 kB\n├ ○ /about                                1.93 kB        87.7 kB\n├ ○ /ai-services                          7.85 kB        93.6 kB\n├ ○ /contact                              2.05 kB        87.8 kB\n├ ○ /faq                                  2.24 kB          88 kB\n├ ○ /it-services                           8.9 kB        94.7 kB\n├ ○ /micro-saas                           9.55 kB        95.3 kB\n├ ○ /pricing                              1.22 kB          87 kB\n├ ○ /privacy                              1.15 kB        86.9 kB\n├ ○ /services                             12.2 kB        97.9 kB\n├ ○ /services-catalog                     4.55 kB        90.3 kB\n└ ○ /terms                                2.11 kB        87.9 kB\n+ First Load JS shared by all             85.8 kB\n  ├ chunks/framework-a6e0b7e30f98059a.js  44.8 kB\n  ├ chunks/main-7079101eb4527540.js       36.2 kB\n  └ other shared chunks (total)           4.76 kB\n\n○  (Static)  prerendered as static content\n\n\n> ziontechgroup.com@0.1.0 postbuild\n> echo \"Build completed\"\n\nBuild completed\n",
+      "error": "",
+      "duration": 11656,
+      "endTime": "2025-09-03T16:41:59.243Z"
+    },
+    {
+      "name": "type-check",
+      "description": "TypeScript Check",
+      "startTime": "2025-09-03T16:41:59.243Z",
+      "status": "passed",
+      "output": "\n> ziontechgroup.com@0.1.0 type-check\n> tsc --noEmit\n\n",
+      "error": "",
+      "duration": 841,
+      "endTime": "2025-09-03T16:42:00.084Z"
+    },
+    {
+      "name": "lint-check",
+      "description": "Code Quality Check",
+      "startTime": "2025-09-03T16:42:00.084Z",
+      "status": "failed",
+      "output": "",
+      "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 8.57.1\n\nYou are linting \"pages/\", but all of the files matching the glob pattern \"pages/\" are ignored.\n\nIf you don't want to lint these files, remove the pattern \"pages/\" from the list of arguments passed to ESLint.\n\nIf you do want to lint these files, try the following solutions:\n\n* Check your .eslintignore file, or the eslintIgnore property in package.json, to ensure that the files are not configured to be ignored.\n* Explicitly list the files from this glob that you'd like to lint on the command-line, rather than providing a glob as an argument.\n\n",
+      "duration": 0,
+      "endTime": "2025-09-03T16:42:00.864Z"
+    },
+    {
+      "name": "security-check",
+      "description": "Security Audit",
+      "startTime": "2025-09-03T16:42:00.864Z",
+      "status": "passed",
+      "output": "# npm audit report\n\nesbuild  <=0.24.2\nSeverity: moderate\nesbuild enables any website to send any requests to the development server and read the response - https://github.com/advisories/GHSA-67mh-4wv8-2f99\nfix available via `npm audit fix --force`\nWill install vite@7.1.4, which is a breaking change\nnode_modules/esbuild\n  vite  0.11.0 - 6.1.6\n  Depends on vulnerable versions of esbuild\n  node_modules/vite\n\n2 moderate severity vulnerabilities\n\nTo address all issues (including breaking changes), run:\n  npm audit fix --force\n",
+      "error": "",
+      "duration": 623,
+      "endTime": "2025-09-03T16:42:01.487Z"
+    }
+  ],
+  "deployment": null,
+  "verification": null,
+  "summary": {
+    "totalChecks": 4,
+    "passedChecks": 3,
+    "failedChecks": 1,
+    "deploymentSuccess": false,
+    "verificationSuccess": false,
+    "recommendations": [
+      "Review failed checks and fix issues before retrying deployment"
+    ]
+  }
+}
