@@ -4,6 +4,9 @@ const nextConfig = {
   swcMinify: true,
   compress: true,
   poweredByHeader: false,
+  experimental: {
+    newNextLinkBehavior: true,
+  },
   eslint: {
     // Temporarily ignore ESLint errors during build to unblock CI
     ignoreDuringBuilds: true,
