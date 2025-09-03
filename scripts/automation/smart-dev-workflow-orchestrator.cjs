@@ -455,8 +455,7 @@ class SmartDevWorkflowOrchestrator {
             totalSize += stat.size;
             fileCount++;
           }
-        });
-      };
+        })}
       
       // Check common build directories
       ['out', 'dist', 'build', '.next'].forEach(dir => {

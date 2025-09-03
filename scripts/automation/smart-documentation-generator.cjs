@@ -9,10 +9,10 @@ console.log(`"📚 Starting Smart Documentation Generator...");
 // Get automation interval from environment variable (default: 24 hours);
 const AUTOMATION_INTERVAL =;
   parseInt(process.env.AUTOMATION_INTERVAL) || 86400000; // 24 hours;
-class SmartDocumentationGenerator {;
-  constructor() {;
-    this.documentationMetrics = {;
-      generatedDocs: [],;
+class $1 {
+  constructor() {
+  this.documentationMetrics = {
+  generatedDocs: [],;
       documentationCoverage: 0,;
       missingDocs: [],;
       documentationSuggestions: [],;
@@ -23,21 +23,21 @@ class SmartDocumentationGenerator {;
     this.ensureDirectories();,
 }
 ;
-  ensureDirectories() {;
-    if (!fs.existsSync(this.reportDir)) {;
-      fs.mkdirSync(this.reportDir, { recursive: true });,
+  ensureDirectories() {
+  if (!fs.existsSync(this.reportDir)) {
+  fs.mkdirSync(this.reportDir, { recursive: true });,
 }
-    if (!fs.existsSync(this.docsDir)) {;
-      fs.mkdirSync(this.docsDir, { recursive: true });,
+    if (!fs.existsSync(this.docsDir)) {
+  fs.mkdirSync(this.docsDir, { recursive: true });,
 }
   }
 ;
-  async generateDocumentation() {;
-    try {;
-      console.log(`📚 Running smart documentation generation at ${new Date().toISOString()}";
-  async generateDocumentation() {;
-    try {;
-      console.log(`📚 Running smart documentation generation at ${new Date().toISOString()}`;
+  async generateDocumentation() {
+  try {
+  console.log(`📚 Running smart documentation generation at ${new Date().toISOString()}";
+  async generateDocumentation() {
+  try {
+  console.log(`📚 Running smart documentation generation at ${new Date().toISOString()}`;
       );
       // Analyze codebase structure;
       await this.analyzeCodebaseStructure();
@@ -79,21 +79,21 @@ class SmartDocumentationGenerator {;
       await this.generateReport();
 
       console.log(`"✅ Smart documentation generation completed successfully");,
-} catch (error) {;
-      console.error("❌ Smart documentation generation failed: ", error.message)}
+} catch (error) {
+  console.error("❌ Smart documentation generation failed: ", error.message)}
   }
 ;
-  async analyzeCodebaseStructure() {;
-    console.log("🔍 Analyzing codebase structure...");
+  async analyzeCodebaseStructure() {
+  console.log("🔍 Analyzing codebase structure...");
 
     const srcPath = path.join(process.cwd(), "src");
-    if (!fs.existsSync(srcPath)) {;
-      console.log("⚠️ Source directory not found");
+    if (!fs.existsSync(srcPath)) {
+  console.log("⚠️ Source directory not found");
       return;,
 }
 ;
-    const structure = {;
-      components: [],;
+    const structure = {
+  components: [],;
       utilities: [],;
       hooks: [],;
       services: [],;
@@ -104,17 +104,17 @@ class SmartDocumentationGenerator {;
 ;
     const allFiles = this.findFiles(srcPath, [".ts", ".tsx", ".js", ".jsx"]);
 
-    for (const file of allFiles) {;
-      const content = fs.readFileSync(file, "utf8");
+    for (const file of allFiles) {
+  const content = fs.readFileSync(file, "utf8");
       const relativePath = path.relative(srcPath, file);
 
       if (;
         relativePath.includes("components/") ||;
         content.includes("export default") ||;
         (content.includes("function") && content.includes("props"));
-      ) {;
-        structure.components.push({;
-          path: relativePath,;
+      ) {
+  structure.components.push({
+  path: relativePath,;
           name: this.extractComponentName(content),;
           hasDocs: this.hasExistingDocs(file),;,
 });,
@@ -123,15 +123,15 @@ class SmartDocumentationGenerator {;
         relativePath.includes("helpers/") ||;
         content.includes("export function") ||;
         content.includes("export const");
-      ) {;
-        structure.utilities.push({;
-          path: relativePath,;
+      ) {
+  structure.utilities.push({
+  path: relativePath,;
           name: this.extractFunctionName(content),;
           hasDocs: this.hasExistingDocs(file),;,
 });,
-} else if (content.includes("use") && content.includes("export")) {;
-        structure.hooks.push({;
-          path: relativePath,;
+} else if (content.includes("use") && content.includes("export")) {
+  structure.hooks.push({
+  path: relativePath,;
           name: this.extractHookName(content),;
           hasDocs: this.hasExistingDocs(file),;,
 });,
@@ -139,9 +139,9 @@ class SmartDocumentationGenerator {;
         relativePath.includes("services/") ||;
         content.includes("api") ||;
         content.includes("fetch");
-      ) {;
-        structure.services.push({;
-          path: relativePath,;
+      ) {
+  structure.services.push({
+  path: relativePath,;
           name: this.extractServiceName(content),;
           hasDocs: this.hasExistingDocs(file),;,
 });,
@@ -149,14 +149,14 @@ class SmartDocumentationGenerator {;
         relativePath.includes("types/") ||;
         content.includes("interface") ||;
         content.includes("type ");
-      ) {;
-        structure.types.push({;
-          path: relativePath,;
+      ) {
+  structure.types.push({
+  path: relativePath,;
           name: this.extractTypeName(content),;,
 });,
-} else if (relativePath.includes("pages/") || content.includes("Route")) {;
-        structure.pages.push({;
-          path: relativePath,;
+} else if (relativePath.includes("pages/") || content.includes("Route")) {
+  structure.pages.push({
+  path: relativePath,;
           name: this.extractPageName(content),;,
 });,
 }
@@ -164,15 +164,14 @@ class SmartDocumentationGenerator {;
 ;
     // Analyze config files;
     const configFiles = ["package.json"", "vite.config.ts", "tsconfig.json"", "tailwind.config.js", ""];
-    for (const configFile of configFiles) {;
-
-    // Analyze config files;
+    for (const configFile of configFiles) {
+  // Analyze config files;
     const configFiles = ["package.json", "vite.config.ts", "tsconfig.json", "tailwind.config.js", "];
-    for (const configFile of configFiles) {;
-      const configPath = path.join(process.cwd(), "configFile);
-      if (fs.existsSync(configPath)) {;
-        structure.configs.push({;
-          path: configFile", name: configFile,;
+    for (const configFile of configFiles) {
+  const configPath = path.join(process.cwd(), "configFile);
+      if (fs.existsSync(configPath)) {
+  structure.configs.push({
+  path: configFile", name: configFile,;
           hasDocs: this.hasExistingDocs(configPath),;,
 });,
 }
@@ -182,8 +181,8 @@ class SmartDocumentationGenerator {;
     console.log("📊 Codebase structure analysis completed");,
 }
 ;
-  async identifyMissingDocumentation() {;
-    console.log("🔍 Identifying missing documentation...");
+  async identifyMissingDocumentation() {
+  console.log("🔍 Identifying missing documentation...");
 
     const structure = this.documentationMetrics.docPatterns.get("structure");
     if (!structure) return;
@@ -193,9 +192,9 @@ class SmartDocumentationGenerator {;
     const undocumentedComponents = structure.components.filter(;
       comp => !comp.hasDocs;
     );
-    if (undocumentedComponents.length > 0) {;
-      missingDocs.push({;
-        type: "component",;
+    if (undocumentedComponents.length > 0) {
+  missingDocs.push({
+  type: "component",;
         items: undocumentedComponents,;
         priority: "high",;,
 });,
@@ -208,9 +207,9 @@ class SmartDocumentationGenerator {;
     const undocumentedUtilities = structure.utilities.filter(;
       util => !util.hasDocs;
     );
-    if (undocumentedUtilities.length > 0) {;
-      missingDocs.push({;
-        type: "utility",;
+    if (undocumentedUtilities.length > 0) {
+  missingDocs.push({
+  type: "utility",;
         items: undocumentedUtilities,;
         priority: "medium",;,
 });,
@@ -218,9 +217,9 @@ class SmartDocumentationGenerator {;
 ;
     // Check for missing hook documentation;
     const undocumentedHooks = structure.hooks.filter(hook => !hook.hasDocs);
-    if (undocumentedHooks.length > 0) {;
-      missingDocs.push({;
-        type: "hook",;
+    if (undocumentedHooks.length > 0) {
+  missingDocs.push({
+  type: "hook",;
         items: undocumentedHooks,;
         priority: "medium",;,
 });,
@@ -230,9 +229,9 @@ class SmartDocumentationGenerator {;
     const undocumentedServices = structure.services.filter(;
       service => !service.hasDocs;
     );
-    if (undocumentedServices.length > 0) {;
-      missingDocs.push({;
-        type: `service`,;
+    if (undocumentedServices.length > 0) {
+  missingDocs.push({
+  type: `service`,;
         items: undocumentedServices,;
         priority: `high`,;
 
@@ -240,9 +239,9 @@ class SmartDocumentationGenerator {;
     const undocumentedServices = structure.services.filter(;
       service => !service.hasDocs;
     );
-    if (undocumentedServices.length > 0) {;
-      missingDocs.push({;
-        type: "service",;
+    if (undocumentedServices.length > 0) {
+  missingDocs.push({
+  type: "service",;
         items: undocumentedServices,;
         priority: "high",;,
 });,
@@ -253,17 +252,17 @@ class SmartDocumentationGenerator {;
     );,
 }
 ;
-  async generateAPIDocumentation() {;
-    console.log(`📖 Generating API documentation...`);
+  async generateAPIDocumentation() {
+  console.log(`📖 Generating API documentation...`);
     const structure = this.documentationMetrics.docPatterns.get(`structure");
     if (!structure) return;
 
     const apiDocs = [];
     // Generate documentation for services;
-    for (const service of structure.services.slice(0, 5)) {;
-      // Limit to 5 services per run;
-      try {;
-        const servicePath = path.join(process.cwd(), "src`, service.path);
+    for (const service of structure.services.slice(0, 5)) {
+  // Limit to 5 services per run;
+      try {
+  const servicePath = path.join(process.cwd(), "src`, service.path);
         const content = fs.readFileSync(servicePath, `utf8`);
         const apiDoc = this.generateServiceDocumentation(service, content);
         const docPath = path.join(;
@@ -272,10 +271,10 @@ class SmartDocumentationGenerator {;
         );
 
     // Generate documentation for services;
-    for (const service of structure.services.slice(0, 5)) {;
-      // Limit to 5 services per run;
-      try {;
-        const servicePath = path.join(process.cwd(), "src", service.path);
+    for (const service of structure.services.slice(0, 5)) {
+  // Limit to 5 services per run;
+      try {
+  const servicePath = path.join(process.cwd(), "src", service.path);
         const content = fs.readFileSync(servicePath, "utf8");
 
         const apiDoc = this.generateServiceDocumentation(service, content);
@@ -286,38 +285,38 @@ class SmartDocumentationGenerator {;
 
         // Ensure API docs directory exists;
         const apiDocsDir = path.dirname(docPath);
-        if (!fs.existsSync(apiDocsDir)) {;
-          fs.mkdirSync(apiDocsDir, { recursive: true });,
+        if (!fs.existsSync(apiDocsDir)) {
+  fs.mkdirSync(apiDocsDir, { recursive: true });,
 }
 ;
         fs.writeFileSync(docPath, apiDoc);
-        this.documentationMetrics.generatedDocs.push({;
-          type: `api`,;
+        this.documentationMetrics.generatedDocs.push({
+  type: `api`,;
           path: docPath,;
           service: service.name,;
           timestamp: new Date().toISOString()});
 console.log(✅ Generated API documentation for ${service.name}`);,
-} catch (error) {  ;
-        console.log(⚠️ Failed to generate API docs for ${service.name  }:`,;
+} catch (error) {
+  console.log(⚠️ Failed to generate API docs for ${service.name  }:`,;
           error.message;
         `);,
 }
     }
   }
 ;
-  async generateComponentDocumentation() {;
-    console.log(`"⚛️ Generating component documentation...");
+  async generateComponentDocumentation() {
+  console.log(`"⚛️ Generating component documentation...");
 
-  async generateComponentDocumentation() {;
-    console.log(``⚛️ Generating component documentation...`);
+  async generateComponentDocumentation() {
+  console.log(``⚛️ Generating component documentation...`);
     console.log(`⚛️ Generating component documentation...`);
     const structure = this.documentationMetrics.docPatterns.get("structure");
     if (!structure) return;
     // Generate documentation for components;
-    for (const component of structure.components.slice(0, 10)) {;
-      // Limit to 10 components per run;
-      try {;
-        const componentPath = path.join(process.cwd(), "src`, component.path);
+    for (const component of structure.components.slice(0, 10)) {
+  // Limit to 10 components per run;
+      try {
+  const componentPath = path.join(process.cwd(), "src`, component.path);
         const content = fs.readFileSync(componentPath, `utf8`);
         const componentDoc = this.generateComponentDoc(component, content);
         const docPath = path.join(;
@@ -326,19 +325,19 @@ console.log(✅ Generated API documentation for ${service.name}`);,
         );
         // Ensure components docs directory exists;
         const componentsDocsDir = path.dirname(docPath);
-        if (!fs.existsSync(componentsDocsDir)) {;
-          fs.mkdirSync(componentsDocsDir, { recursive: true });,
+        if (!fs.existsSync(componentsDocsDir)) {
+  fs.mkdirSync(componentsDocsDir, { recursive: true });,
 }
 ;
         fs.writeFileSync(docPath, componentDoc);
-        this.documentationMetrics.generatedDocs.push({;
-          type: `component`,;
+        this.documentationMetrics.generatedDocs.push({
+  type: `component`,;
           path: docPath,;
           component: component.name,;
           timestamp: new Date().toISOString(),;
 
-        this.documentationMetrics.generatedDocs.push({;
-          type: "component",;
+        this.documentationMetrics.generatedDocs.push({
+  type: "component",;
           path: docPath,;
           component: component.name,;
           timestamp: new Date().toISOString(),;,
@@ -346,20 +345,20 @@ console.log(✅ Generated API documentation for ${service.name}`);,
 
         console.log(`✅ Generated component documentation for ${component.name}";
         );,
-} catch (error) {;
-        console.log( ⚠️ Failed to generate component docs for ${component.name}:,;
+} catch (error) {
+  console.log( ⚠️ Failed to generate component docs for ${component.name}:,;
           error.message;
         `);,
 }
     }
   }
 ;
-  async generateSetupGuides() {;
-    console.log(`"📋 Generating setup guides...");
+  async generateSetupGuides() {
+  console.log(`"📋 Generating setup guides...");
 
     // Generate installation guide;
-  async generateSetupGuides() {;
-    console.log(``📋 Generating setup guides...`);
+  async generateSetupGuides() {
+  console.log(``📋 Generating setup guides...`);
     // Generate installation guide;
     console.log(`📋 Generating setup guides...`);
     // Generate installation guide;
@@ -377,20 +376,20 @@ console.log(✅ Generated API documentation for ${service.name}`);,
     fs.writeFileSync(deployPath, deploymentGuide);
 
     this.documentationMetrics.generatedDocs.push(;
-      {;
-        type: "guide",;
+      {
+  type: "guide",;
         path: installPath,;
         name: "Installation Guide",;
         timestamp: new Date().toISOString(),;,
 },;
-      {;
-        type: "guide",;
+      {
+  type: "guide",;
         path: devPath,;
         name: "Development Guide",;
         timestamp: new Date().toISOString(),;,
 },;
-      {;
-        type: "guide",;
+      {
+  type: "guide",;
         path: deployPath,;
         name: "Deployment Guide",;
         timestamp: new Date().toISOString(),;,
@@ -400,43 +399,44 @@ console.log(✅ Generated API documentation for ${service.name}`);,
     console.log("✅ Generated setup guides"`);,
 }
 ;
-  async updateREADME() {;
-    console.log(`"📝 Updating README...");
+  async updateREADME() {
+  console.log(`"📝 Updating README...");
 
-    try {;
-      const readmePath = path.join(process.cwd(), "README.md");
+    try {
+  const readmePath = path.join(process.cwd(), "README.md");
       let readmeContent = ";
 
-      if (fs.existsSync(readmePath)) {;
-        readmeContent = fs.readFileSync(readmePath, "utf8");,
+      if (fs.existsSync(readmePath)) {
+  readmeContent = fs.readFileSync(readmePath, "utf8");,
 }
 ;
       const updatedREADME = this.generateUpdatedREADME(readmeContent);
       fs.writeFileSync(readmePath, updatedREADME);
 
-      this.documentationMetrics.generatedDocs.push({;
-        type: "readme",;
+      this.documentationMetrics.generatedDocs.push({
+  type: "readme",;
         path: readmePath,;
         name: "README.md",;
         timestamp: new Date().toISOString(),;,
 });
 
       console.log("✅ Updated README");,
-} catch (error) {  ;,
-} catch (error) {;
-      console.log("⚠️ Failed to update README: ", error.message);,
+} catch (error) {
+  ,
+} catch (error) {
+  console.log("⚠️ Failed to update README: ", error.message);,
 }
-    } catch (error) {  ;
-      console.log("⚠️ Failed to update README: ", error.message)}
+    } catch (error) {
+  console.log("⚠️ Failed to update README: ", error.message)}
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
-  async calculateDocumentationCoverage() {;
-    console.log(`📊 Calculating documentation coverage...`);
+  async calculateDocumentationCoverage() {
+  console.log(`📊 Calculating documentation coverage...`);
     const structure = this.documentationMetrics.docPatterns.get(`structure`);
 
-  async calculateDocumentationCoverage() {;
-    console.log("📊 Calculating documentation coverage...");
+  async calculateDocumentationCoverage() {
+  console.log("📊 Calculating documentation coverage...");
 
     const structure = this.documentationMetrics.docPatterns.get("structure");
     if (!structure) return;
@@ -459,12 +459,12 @@ console.log(✅ Generated API documentation for ${service.name}`);,
     );,
 }
 ;
-  async generateReport() {;
-    console.log(`📊 Generating documentation report...`);
-    const report = {;
-      timestamp: new Date().toISOString(),;
-      summary: {;
-        totalFilesAnalyzed: this.documentationMetrics.docPatterns.get(structure`;
+  async generateReport() {
+  console.log(`📊 Generating documentation report...`);
+    const report = {
+  timestamp: new Date().toISOString(),;
+      summary: {
+  totalFilesAnalyzed: this.documentationMetrics.docPatterns.get(structure`;
         );
           ? Object.values(;
               this.documentationMetrics.docPatterns.get(`structure`);
@@ -489,28 +489,28 @@ console.log(✅ Generated API documentation for ${service.name}`);,
 console.log(📊 Documentation report saved to ${reportPath});,
 }
 ;
-  findFiles(dir, extensions) {;
-    const files = [];
+  findFiles(dir, extensions) {
+  const files = [];
 
-    function scanDirectory(currentDir) {;
-      try {;
-        const items = fs.readdirSync(currentDir);
+    function scanDirectory(currentDir) {
+  try {
+  const items = fs.readdirSync(currentDir);
 
-        for (const item of items) {;
-          const fullPath = path.join(currentDir, item);
+        for (const item of items) {
+  const fullPath = path.join(currentDir, item);
           const stat = fs.statSync(fullPath);
 
-          if (stat.isDirectory()) {;
-            scanDirectory(fullPath);,
-} else if (extensions.some(ext => item.endsWith(ext))) {;
-            files.push(fullPath);,
+          if (stat.isDirectory()) {
+  scanDirectory(fullPath);,
+} else if (extensions.some(ext => item.endsWith(ext))) {
+  files.push(fullPath);,
 }
         }
-      } catch (error) {  ;
-        // Skip directories that can`t be accessed;,
+      } catch (error) {
+  // Skip directories that can`t be accessed;,
 }
-      } catch (error) {;
-        // Skip directories that can"t be accessed;,
+      } catch (error) {
+  // Skip directories that can"t be accessed;,
 }
     }
 ;
@@ -518,44 +518,44 @@ console.log(📊 Documentation report saved to ${reportPath});,
     return files;,
 }
 ;
-  hasExistingDocs(filePath) {;
-    const docExtensions = [`.md`, ".mdx", ".txt"];
+  hasExistingDocs(filePath) {
+  const docExtensions = [`.md`, ".mdx", ".txt"];
     const basePath = filePath.replace(/\.(ts|tsx|js|jsx)$/, "");
-    return docExtensions.some(ext => {;
-      const docPath = basePath + ext;
+    return docExtensions.some(ext => {
+  const docPath = basePath + ext;
       return fs.existsSync(docPath);,
 });,
 }
 ;
-  extractComponentName(content) {;
-    const match = content.match(;
+  extractComponentName(content) {
+  const match = content.match(;
       /export\s+(?:default\s+)?(?:function|const)\s+(\w+)/;
     );
     return match ? match[1] : "UnknownComponent";,
 }
 ;
-  extractFunctionName(content) {;
-    const match = content.match(/export\s+(?:function|const)\s+(\w+)/);
+  extractFunctionName(content) {
+  const match = content.match(/export\s+(?:function|const)\s+(\w+)/);
     return match ? match[1] : "UnknownFunction";,
 }
 ;
-  extractHookName(content) {;
-    const match = content.match(/export\s+(?:function|const)\s+(\w+)/);
+  extractHookName(content) {
+  const match = content.match(/export\s+(?:function|const)\s+(\w+)/);
     return match ? match[1] : "UnknownHook";,
 }
 ;
-  extractServiceName(content) {;
-    const match = content.match(/export\s+(?:function|const|class)\s+(\w+)/);
+  extractServiceName(content) {
+  const match = content.match(/export\s+(?:function|const|class)\s+(\w+)/);
     return match ? match[1] : "UnknownService";,
 }
 ;
-  extractTypeName(content) {;
-    const match = content.match(/(?:interface|type)\s+(\w+)/);
+  extractTypeName(content) {
+  const match = content.match(/(?:interface|type)\s+(\w+)/);
     return match ? match[1] : `UnknownType`;,
 }
 ;
-  extractPageName(content) {;
-    const match = content.match(;
+  extractPageName(content) {
+  const match = content.match(;
       /export\s+(?:default\s+)?(?:function|const)\s+(\w+)/;
     );
     return match ? match[1] : `UnknownPage`;,
@@ -602,8 +602,8 @@ ${this.generateServiceExamples(service.name)}
 *Generated automatically by Smart Documentation Generator*;,
 }
 ;
-  generateComponentDoc(component, content) {;
-    return `# ${component.name}
+  generateComponentDoc(component, content) {
+  return `# ${component.name}
 ;
 ## Overview;
 ${component.name} is a React component that ${this.extractComponentPurpose(content)}.;
@@ -614,7 +614,7 @@ ${this.extractComponentProps(content)}
 ## Usage;
 \`\`\`tsx;
 import { ${component.name} } from `./${component.path}`;
-function App() {;
+function $1() {
   return (;
     <${component.name} ;
       // Add your props here;
@@ -633,10 +633,10 @@ ${this.extractComponentStyling(content)}
 *Generated automatically by Smart Documentation Generator*;,
 }
 ;
-  generateInstallationGuide() {;
-    return "# Installation Guide;
-  generateInstallationGuide() {;
-    return `# Installation Guide;
+  generateInstallationGuide() {
+  return "# Installation Guide;
+  generateInstallationGuide() {
+  return `# Installation Guide;
 ## Prerequisites;
 - Node.js (v18 or higher);
 - npm or yarn;
@@ -665,10 +665,10 @@ VITE_APP_ENV=development\`\`\`;
 *Generated automatically by Smart Documentation Generator*;,
 }
 ;
-  generateDevelopmentGuide() {;
-    return "# Development Guide;
-  generateDevelopmentGuide() {;
-    return `# Development Guide;
+  generateDevelopmentGuide() {
+  return "# Development Guide;
+  generateDevelopmentGuide() {
+  return `# Development Guide;
 ## Project Structure;
 \`\`\`;
 src/;
@@ -715,10 +715,10 @@ src/;
 *Generated automatically by Smart Documentation Generator*;,
 }
 ;
-  generateDeploymentGuide() {;
-    return "# Deployment Guide;
-  generateDeploymentGuide() {;
-    return "# Deployment Guide;
+  generateDeploymentGuide() {
+  return "# Deployment Guide;
+  generateDeploymentGuide() {
+  return "# Deployment Guide;
 ## Production Build;
 1. Build the application: \`\`\`bash;
 npm run build\`\`\`;
@@ -750,8 +750,8 @@ VITE_APP_ENV=production\`\`\";
 *Generated automatically by Smart Documentation Generator*;,
 }
 ;
-  generateUpdatedREADME(originalContent) {;
-    const packageJson = JSON.parse(fs.readFileSync(`package.json`, `utf8`));
+  generateUpdatedREADME(originalContent) {
+  const packageJson = JSON.parse(fs.readFileSync(`package.json`, `utf8`));
 return `# ${packageJson.name}
 ;
 ${packageJson.description || "A modern React application built with Vite and TypeScript."}
@@ -817,19 +817,19 @@ This project is licensed under the MIT License.;
 *README updated automatically by Smart Documentation Generator*;,
 }
 ;
-  extractServiceFunctions(content) {;
-    const functions = [];
+  extractServiceFunctions(content) {
+  const functions = [];
     const lines = content.split("\n");
-    for (const line of lines) {;
-      if (;
+    for (const line of lines) {
+  if (;
         line.includes("export function") ||;
         (line.includes("export const") &&;
           line.includes(`=`) &&;
           line.includes(`(`));
-      ) {;
-        const match = line.match(/export\s+(?:function|const)\s+(\w+)/);
-        if (match) {;
-          functions.push(match[1]);,
+      ) {
+  const match = line.match(/export\s+(?:function|const)\s+(\w+)/);
+        if (match) {
+  functions.push(match[1]);,
 }
       }
     }
@@ -841,35 +841,35 @@ This project is licensed under the MIT License.;
       .join(`\n`);,
 }
 ;
-  extractServiceParameters(content) {;
-    // Simplified parameter extractionreturn `- `params` - Parameters object\n- `options` - Optional configuration`;,
+  extractServiceParameters(content) {
+  // Simplified parameter extractionreturn `- `params` - Parameters object\n- `options` - Optional configuration`;,
 }
 ;
-  extractServiceReturns(content) {;
-    return `- Promise resolving to the API response`;,
+  extractServiceReturns(content) {
+  return `- Promise resolving to the API response`;,
 }
 ;
-  extractServiceErrors(content) {;
-    return `- Network errors are handled automatically\n- API errors are thrown with descriptive messages`;,
+  extractServiceErrors(content) {
+  return `- Network errors are handled automatically\n- API errors are thrown with descriptive messages`;,
 }
 ;
   generateServiceExamples(serviceName) {return `\`\`\`typescript;
 // Basic usage;
 const data = await ${serviceName}.fetchData();
 // With parameters;
-const result = await ${serviceName}.createItem({;
+const result = await ${serviceName}.createItem({
   name: `Example`,;
   description: `Test item`;,
 });\`\`\``;,
 }
 ;
-  extractComponentPurpose(content) {;
-    // Simplified purpose extraction;
+  extractComponentPurpose(content) {
+  // Simplified purpose extraction;
     return `provides user interface functionality`;,
 }
 ;
-  extractComponentProps(content) {;
-    // Simplified props extractionreturn `- `children` - React children\n- `className` - Additional CSS classes\n- `...props` - Additional HTML attributes`;
+  extractComponentProps(content) {
+  // Simplified props extractionreturn `- `children` - React children\n- `className` - Additional CSS classes\n- `...props` - Additional HTML attributes`;
 
     return functions;
       .map(;
@@ -878,16 +878,16 @@ const result = await ${serviceName}.createItem({;
       .join("\n");,
 }
 ;
-  extractServiceParameters(content) {;
-    // Simplified parameter extractionreturn "- `params` - Parameters object\n- `options` - Optional configuration";,
+  extractServiceParameters(content) {
+  // Simplified parameter extractionreturn "- `params` - Parameters object\n- `options` - Optional configuration";,
 }
 ;
-  extractServiceReturns(content) {;
-    return "- Promise resolving to the API response";,
+  extractServiceReturns(content) {
+  return "- Promise resolving to the API response";,
 }
 ;
-  extractServiceErrors(content) {;
-    return "- Network errors are handled automatically\n- API errors are thrown with descriptive messages";,
+  extractServiceErrors(content) {
+  return "- Network errors are handled automatically\n- API errors are thrown with descriptive messages";,
 }
 ;
   generateServiceExamples(serviceName) {return `\`\`\`typescript;
@@ -895,19 +895,19 @@ const result = await ${serviceName}.createItem({;
 const data = await ${serviceName}.fetchData();
 
 // With parameters;
-const result = await ${serviceName}.createItem({;
+const result = await ${serviceName}.createItem({
   name: "Example",;
   description: "Test item";,
 });\`\`\``;,
 }
 ;
-  extractComponentPurpose(content) {;
-    // Simplified purpose extraction;
+  extractComponentPurpose(content) {
+  // Simplified purpose extraction;
     return "provides user interface functionality";,
 }
 ;
-  extractComponentProps(content) {;
-    // Simplified props extractionreturn "- `children` - React children\n- `className` - Additional CSS classes\n- `...props` - Additional HTML attributes";,
+  extractComponentProps(content) {
+  // Simplified props extractionreturn "- `children` - React children\n- `className` - Additional CSS classes\n- `...props` - Additional HTML attributes";,
 }
 ;
   generateComponentExamples(componentName) {return `\`\`\`tsx;
@@ -926,10 +926,10 @@ const result = await ${serviceName}.createItem({;
   extractComponentStyling(content) {return `This component uses Tailwind CSS classes for styling. Custom styles can be added via the `className` prop.`;,
 }
 ;
-  generateFunctionDescription(funcName) {;
-    // Generate basic descriptions based on function name;
-    const descriptions = {;
-      fetch: `Fetches data from the API`,;
+  generateFunctionDescription(funcName) {
+  // Generate basic descriptions based on function name;
+    const descriptions = {
+  fetch: `Fetches data from the API`,;
       create: "Creates a new resource",;
       update: "Updates an existing resource",;
       delete: "Deletes a resource",;
@@ -937,9 +937,9 @@ const result = await ${serviceName}.createItem({;
       set: "Sets data",;
       validate: "Validates input data",;
       format: "Formats data for display"}
-    for (const ["key", `description`] of Object.entries(descriptions)) {;
-      if (funcName.toLowerCase().includes(key)) {;
-        return description;,
+    for (const ["key", `description`] of Object.entries(descriptions)) {
+  if (funcName.toLowerCase().includes(key)) {
+  return description;,
 }
     }
 ;
@@ -948,10 +948,10 @@ const result = await ${serviceName}.createItem({;
 }
 ;
 // Main continuous loop;
-async function runContinuous() {;
+async function runContinuous() {
   console.log(`📚 Starting smart documentation generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals";
 // Main continuous loop;
-async function runContinuous() {;
+async function runContinuous() {
   console.log(`📚 Starting smart documentation generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`;
   console.log(`📚 Starting smart documentation generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   );
@@ -960,30 +960,30 @@ async function runContinuous() {;
   // Run initial documentation generation;
   await generator.generateDocumentation();
   // Set up continuous execution;
-  setInterval(async () => {;
-    await generator.generateDocumentation();,
+  setInterval(async () => {
+  await generator.generateDocumentation();,
 }, AUTOMATION_INTERVAL);
   console.log( ✅ Smart documentation generator running. Next generation in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
   `);,
 }
 ;
 // Handle graceful shutdown;
-process.on(`SIGINT`, () => {;
+process.on(`SIGINT`, () => {
   console.log(`🛑 Received SIGINT, shutting down gracefully...");
   `);,
 }
 ;
 // Handle graceful shutdown;
-process.on("SIGINT", () => {;
+process.on("SIGINT", () => {
   console.log("🛑 Received SIGINT, shutting down gracefully...");
   process.exit(0);,
 });
 
-process.on("SIGTERM", () => {;
+process.on("SIGTERM", () => {
   console.log("🛑 Received SIGTERM, shutting down gracefully...");
   process.exit(0);,
 });
 // Start the smart documentation generator;
-runContinuous().catch(error => {;
+runContinuous().catch(error => {
   console.error("❌ Failed to start smart documentation generator: ', error);  process.exit(1);,
 })

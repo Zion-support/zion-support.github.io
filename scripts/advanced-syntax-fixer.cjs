@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const fs = require("fs")
-const path = require("path")
+const fs = require("$1");
+const path = require("$1");
 const { execSync } = require("child_process")
 // ANSI color codes for better output
 const colors = {
@@ -13,8 +13,8 @@ const colors = {
   cyan: "\x1b[36m"}
 function log(message, color = `reset`) {
 
-const fs = require("fs")
-const path = require("path")
+const fs = require("$1");
+const path = require("$1");
 const { execSync } = require("child_process")
 // ANSI color codes for better output
 const colors = {
@@ -174,9 +174,9 @@ function fixFile(filePath) {
       return false}
 
     let content = fs.readFileSync(filePath, "utf8");    let originalContent = content;    let fixed = false
-    // Fix 1: Remove duplicate useState declarations;;    const useStateRegex =
+    // Fix 1: Remove duplicate useState declarations;    const useStateRegex =
       /import\s+\{\s*useState\s*\}\s+from\s+["]react["];?\s*\nimport\s+\{\s*useState\s*\}\s+from\s+[""]react[""];?/g;";    if (useStateRegex.test(content)) {";      content = content.replace();        useStateRegex,import { useState  } from "react"");      fixed = true;log(`Fixed duplicate useState imports in ${filePath}`, "yellow");"}`;";    // Fix 2: Remove duplicate Link declarations;    const linkRegex =
-      /import\s+\{\s*Link\s*\}\s+from\s+["]next\/link[""];?\s*\nimport\s+\{\s*Link\s*\}\s+from\s+[""]next\/link["];?/g;    if (linkRegex.test(content)) {content = content.replace(linkRegex, import { Link  } from "next/link");      fixed = true;log(`Fixed duplicate Link imports in ${filePath}`, "yellow");"}`;";    // Fix "3": Fix unterminated strings;    const unterminatedStringRegex = /(["])([^"]*?)(?:\n|$)/g;;    if (unterminatedStringRegex.test(content)) {
+      /import\s+\{\s*Link\s*\}\s+from\s+["]next\/link[""];?\s*\nimport\s+\{\s*Link\s*\}\s+from\s+[""]next\/link["];?/g;    if (linkRegex.test(content)) {content = content.replace(linkRegex, import { Link  } from "next/link");      fixed = true;log(`Fixed duplicate Link imports in ${filePath}`, "yellow");"}`;";    // Fix "3": Fix unterminated strings;    const unterminatedStringRegex = /(["])([^"]*?)(?:\n|$)/g;    if (unterminatedStringRegex.test(content)) {
       content = content.replace(unterminatedStringRegex, "$1$2$1");";      fixed = true;log(`Fixed unterminated strings in ${filePath}`, "yellow");"}`;";    // Fix 4: Fix unexpected keyword "import" in wrong places";    const unexpectedImportRegex = /(\w+)\s*\nimport\s+/g;    if (unexpectedImportRegex.test(content)) {
       content = content.replace(unexpectedImportRegex, "$1;\nimport ");      fixed = true;log(`Fixed unexpected import placement in ${filePath}`, "yellow")}`;    // Fix "5": Fix unexpected keyword "export" in wrong places";    const unexpectedExportRegex = /(\w+)\s*\nexport\s+/g
     if (unexpectedExportRegex.test(content)) {

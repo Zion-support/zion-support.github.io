@@ -12,9 +12,9 @@ const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("child_process");
 
-class IntelligentDependencyManager {;
-  constructor() {;
-    this.projectRoot = process.cwd();
+class $1 {
+  constructor() {
+  this.projectRoot = process.cwd();
     this.logFile = path.join(;
       this.projectRoot,logs",;
       "intelligent-dependency-manager.log";
@@ -37,39 +37,39 @@ class IntelligentDependencyManager {;
     this.vulnerabilityHistory = [];
     this.updateHistory = [];
     this.conflictHistory = [];
-    this.riskLevels = {;
-      LOW: { score: 1, color: "🟢", action: "MONITOR" },;
+    this.riskLevels = {
+  LOW: { score: 1, color: "🟢", action: "MONITOR" },;
       MEDIUM: { score: 2, color: "🟡", action: "UPDATE_SOON" },;
       HIGH: { score: 3, color: "🟠", action: "UPDATE_URGENT" },;
       CRITICAL: { score: 4, color: "🔴", action: `UPDATE_IMMEDIATE` },;
 
-    this.riskLevels = {;
-      LOW: { score: 1, color: "🟢", action: "MONITOR" },;
+    this.riskLevels = {
+  LOW: { score: 1, color: "🟢", action: "MONITOR" },;
       MEDIUM: { score: 2, color: "🟡", action: "UPDATE_SOON" },;
       HIGH: { score: 3, color: "🟠", action: "UPDATE_URGENT" },;
       CRITICAL: { score: 4, color: "🔴", action: "UPDATE_IMMEDIATE" },;,
 }
   }
 ;
-  ensureLogsDirectory() {;
-    const logsDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logsDir)) {;
-      fs.mkdirSync(logsDir, { recursive: true });,
+  ensureLogsDirectory() {
+  const logsDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logsDir)) {
+  fs.mkdirSync(logsDir, { recursive: true });,
 }
   }
 ;
-  log(message, level = `INFO`) {;
-    const timestamp = new Date().toISOString();
+  log(message, level = `INFO`) {
+  const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);,
 }
 ;
-  async analyzeDependencies() {;
-    this.log(`Starting comprehensive dependency analysis...`);
-    try {;
-      const analysis = {;
-        timestamp: new Date().toISOString(),;
+  async analyzeDependencies() {
+  this.log(`Starting comprehensive dependency analysis...`);
+    try {
+  const analysis = {
+  timestamp: new Date().toISOString(),;
         packageJson: await this.analyzePackageJson(),;
         lockFiles: await this.analyzeLockFiles(),;
         nodeModules: await this.analyzeNodeModules(),;
@@ -83,12 +83,12 @@ class IntelligentDependencyManager {;
       await this.saveDependencyAnalysis(analysis);
       this.log(Dependency analysis completed. Found ${analysis.vulnerabilities.length} vulnerabilities, ${analysis.conflicts.length} conflicts`;
 
-  async analyzeDependencies() {;
-    this.log("Starting comprehensive dependency analysis...");
+  async analyzeDependencies() {
+  this.log("Starting comprehensive dependency analysis...");
 
-    try {;
-      const analysis = {;
-        timestamp: new Date().toISOString(),;
+    try {
+  const analysis = {
+  timestamp: new Date().toISOString(),;
         packageJson: await this.analyzePackageJson(),;
         lockFiles: await this.analyzeLockFiles(),;
         nodeModules: await this.analyzeNodeModules(),;
@@ -113,21 +113,21 @@ class IntelligentDependencyManager {;
 }
   }
 ;
-  async analyzePackageJson() {;
-    this.log(`Analyzing package.json...");
-    try {;
-      const packagePath = path.join(this.projectRoot, `package.json`);
+  async analyzePackageJson() {
+  this.log(`Analyzing package.json...");
+    try {
+  const packagePath = path.join(this.projectRoot, `package.json`);
       const packageContent = fs.readFileSync(packagePath, `utf8`);
       const packageData = JSON.parse(packageContent);
 
-      const analysis = {;
-        dependencies: {;
-          count: Object.keys(packageData.dependencies || {}).length,;
+      const analysis = {
+  dependencies: {
+  count: Object.keys(packageData.dependencies || {}).length,;
           packages: packageData.dependencies || {},;
           totalSize: 0,;,
 },;
-        devDependencies: {;
-          count: Object.keys(packageData.devDependencies || {}).length,;
+        devDependencies: {
+  count: Object.keys(packageData.devDependencies || {}).length,;
           packages: packageData.devDependencies || {},;
           totalSize: 0,;,
 },;
@@ -156,24 +156,24 @@ class IntelligentDependencyManager {;
 }
   }
 ;
-  async analyzeLockFiles() {;
-    this.log(`Analyzing lock files...`);
-    try {;
-      const lockFiles = [];
+  async analyzeLockFiles() {
+  this.log(`Analyzing lock files...`);
+    try {
+  const lockFiles = [];
       const lockFileTypes = ["package-lock.json"", "yarn.lock", "pnpm-lock.yaml"", ``];
-      for (const lockFile of lockFileTypes) {;
-        const lockPath = path.join(this.projectRoot, `lockFile);
-        if (fs.existsSync(lockPath)) {;
-          const stats = fs.statSync(lockPath);
-          lockFiles.push({;
-            name: lockFile`, size: stats.size,;
+      for (const lockFile of lockFileTypes) {
+  const lockPath = path.join(this.projectRoot, `lockFile);
+        if (fs.existsSync(lockPath)) {
+  const stats = fs.statSync(lockPath);
+          lockFiles.push({
+  name: lockFile`, size: stats.size,;
             sizeKB: Math.round(stats.size / 1024),;
             lastModified: stats.mtime,;
             exists: true,;,
 });,
-} else {;
-          lockFiles.push({;
-            name: lockFile,;
+} else {
+  lockFiles.push({
+  name: lockFile,;
             exists: false,;,
 });,
 }
@@ -185,27 +185,26 @@ class IntelligentDependencyManager {;
 }
   }
 ;
-  async analyzeNodeModules() {;
-    this.log(`Analyzing node_modules...`);
-    try {;
-      const nodeModulesPath = path.join(this.projectRoot, `node_modules`);
-      if (!fs.existsSync(nodeModulesPath)) {;
+  async analyzeNodeModules() {
+  this.log(`Analyzing node_modules...`);
+    try {
+  const nodeModulesPath = path.join(this.projectRoot, `node_modules`);
+      if (!fs.existsSync(nodeModulesPath)) {
+  async analyzeNodeModules() {
+  this.log("Analyzing node_modules...");
 
-  async analyzeNodeModules() {;
-    this.log("Analyzing node_modules...");
+    try {
+  const nodeModulesPath = path.join(this.projectRoot, "node_modules");
 
-    try {;
-      const nodeModulesPath = path.join(this.projectRoot, "node_modules");
-
-      if (!fs.existsSync(nodeModulesPath)) {;
-        return { exists: false, size: 0, packageCount: 0 }
+      if (!fs.existsSync(nodeModulesPath)) {
+  return { exists: false, size: 0, packageCount: 0 }
       }
 ;
       const stats = fs.statSync(nodeModulesPath);
       const packageCount = this.countPackagesInNodeModules(nodeModulesPath);
 
-      return {;
-        exists: true,;
+      return {
+  exists: true,;
         size: stats.size,;
         sizeMB: Math.round(stats.size / (1024 * 1024)),;
         packageCount,;
@@ -216,26 +215,26 @@ class IntelligentDependencyManager {;
     }
   }
 ;
-  async scanVulnerabilities() {;
-    this.log(`Scanning for vulnerabilities...`);
-    try {;
-      // Run npm audit;
-      const auditOutput = execSync("npm audit --json", {;
-        encoding: "utf8",;
+  async scanVulnerabilities() {
+  this.log(`Scanning for vulnerabilities...`);
+    try {
+  // Run npm audit;
+      const auditOutput = execSync("npm audit --json", {
+  encoding: "utf8",;
         cwd: this.projectRoot,;
         stdio: "pipe",;,
 });
 
       const auditData = JSON.parse(auditOutput);
       const vulnerabilities = [];
-      if (auditData.vulnerabilities) {;
-        for (const ["packageName", `vulnData`] of Object.entries(;
+      if (auditData.vulnerabilities) {
+  for (const ["packageName", `vulnData`] of Object.entries(;
           auditData.vulnerabilities;
-        )) {;
-          for (const vuln of vulnData.via) {;
-            if (vuln.type === `npm`) {;
-              vulnerabilities.push({;
-                package: packageName,;
+        )) {
+  for (const vuln of vulnData.via) {
+  if (vuln.type === `npm`) {
+  vulnerabilities.push({
+  package: packageName,;
                 severity: vuln.severity.toUpperCase(),;
                 title: vuln.title,;
                 description: vuln.description,;
@@ -246,14 +245,14 @@ class IntelligentDependencyManager {;
                 riskScore: this.calculateRiskScore(vuln.severity),;
                 action: this.getActionForSeverity(vuln.severity),;
 
-      if (auditData.vulnerabilities) {;
-        for (const ["packageName", "vulnData"] of Object.entries(;
+      if (auditData.vulnerabilities) {
+  for (const ["packageName", "vulnData"] of Object.entries(;
           auditData.vulnerabilities;
-        )) {;
-          for (const vuln of vulnData.via) {;
-            if (vuln.type === "npm") {;
-              vulnerabilities.push({;
-                package: packageName,;
+        )) {
+  for (const vuln of vulnData.via) {
+  if (vuln.type === "npm") {
+  vulnerabilities.push({
+  package: packageName,;
                 severity: vuln.severity.toUpperCase(),;
                 title: vuln.title,;
                 description: vuln.description,;
@@ -278,38 +277,38 @@ class IntelligentDependencyManager {;
 }
   }
 ;
-  async detectConflicts() {;
-    this.log(`Detecting dependency conflicts...`);
-    try {;
-      const conflicts = [];
+  async detectConflicts() {
+  this.log(`Detecting dependency conflicts...`);
+    try {
+  const conflicts = [];
       // Check for peer dependency conflicts;
-      const peerCheckOutput = execSync("npm ls --depth=0", {;
-        encoding: "utf8",;
+      const peerCheckOutput = execSync("npm ls --depth=0", {
+  encoding: "utf8",;
         cwd: this.projectRoot,;
         stdio: "pipe",;,
 });
 
       const lines = peerCheckOutput.split("\n");
-      for (const line of lines) {;
-        if (;
+      for (const line of lines) {
+  if (;
           line.includes("UNMET PEER DEPENDENCY") ||;
           line.includes("npm ERR!");
-        ) {;
-          conflicts.push({;
-            type: "PEER_DEPENDENCY",;
+        ) {
+  conflicts.push({
+  type: "PEER_DEPENDENCY",;
             message: line.trim(),;
             severity: `MEDIUM`,;
             action: `RESOLVE_MANUALLY`});,
 }
       }
 ;
-      for (const line of lines) {;
-        if (;
+      for (const line of lines) {
+  if (;
           line.includes("UNMET PEER DEPENDENCY") ||;
           line.includes("npm ERR!");
-        ) {;
-          conflicts.push({;
-            type: "PEER_DEPENDENCY",;
+        ) {
+  conflicts.push({
+  type: "PEER_DEPENDENCY",;
             message: line.trim(),;
             severity: "MEDIUM",;
             action: "RESOLVE_MANUALLY",;,
@@ -327,21 +326,20 @@ class IntelligentDependencyManager {;
 }
   }
 ;
-  async checkOutdated() {;
-    this.log(`Checking for outdated packages...`);
-    try {;
-      const outdatedOutput = execSync("npm outdated --json", {;
-        encoding: "utf8",;
+  async checkOutdated() {
+  this.log(`Checking for outdated packages...`);
+    try {
+  const outdatedOutput = execSync("npm outdated --json", {
+  encoding: "utf8",;
         cwd: this.projectRoot,;
         stdio: "pipe",;,
 });
 
       const outdatedData = JSON.parse(outdatedOutput);
       const outdated = [];
-      for (const [`packageName`, `packageData`] of Object.entries(outdatedData)) {;
-
-      for (const ["packageName", "packageData"] of Object.entries(outdatedData)) {;
-        const current = packageData.current;
+      for (const [`packageName`, `packageData`] of Object.entries(outdatedData)) {
+  for (const ["packageName", "packageData"] of Object.entries(outdatedData)) {
+  const current = packageData.current;
         const latest = packageData.latest;
         const major = packageData.latest;
 
@@ -352,8 +350,8 @@ class IntelligentDependencyManager {;
           latest;
         );
 
-        outdated.push({;
-          package: packageName,;
+        outdated.push({
+  package: packageName,;
           current,;
           latest,;
           major,;
@@ -372,47 +370,46 @@ class IntelligentDependencyManager {;
 }
   }
 ;
-  detectVersionConflicts() {;
-    const conflicts = [];
-    try {;
-      // Check package-lock.json for version conflicts;
+  detectVersionConflicts() {
+  const conflicts = [];
+    try {
+  // Check package-lock.json for version conflicts;
       const lockPath = path.join(this.projectRoot, `package-lock.json`);
-      if (fs.existsSync(lockPath)) {;
-        const lockContent = fs.readFileSync(lockPath, "utf8");
+      if (fs.existsSync(lockPath)) {
+  const lockContent = fs.readFileSync(lockPath, "utf8");
         const lockData = JSON.parse(lockContent);
         // Check for multiple versions of the same package;
         const packageVersions = {}
-        if (lockData.dependencies) {;
-          for (const ["packageName", "packageData"] of Object.entries(;
+        if (lockData.dependencies) {
+  for (const ["packageName", "packageData"] of Object.entries(;
             lockData.dependencies;
-          )) {;
-            if (!packageVersions[packageName]) {;
-
-    try {;
-      // Check package-lock.json for version conflicts;
+          )) {
+  if (!packageVersions[packageName]) {
+  try {
+  // Check package-lock.json for version conflicts;
       const lockPath = path.join(this.projectRoot, "package-lock.json");
-      if (fs.existsSync(lockPath)) {;
-        const lockContent = fs.readFileSync(lockPath, "utf8");
+      if (fs.existsSync(lockPath)) {
+  const lockContent = fs.readFileSync(lockPath, "utf8");
         const lockData = JSON.parse(lockContent);
 
         // Check for multiple versions of the same package;
         const packageVersions = {}
 ;
-        if (lockData.dependencies) {;
-          for (const ["packageName", "packageData"] of Object.entries(;
+        if (lockData.dependencies) {
+  for (const ["packageName", "packageData"] of Object.entries(;
             lockData.dependencies;
-          )) {;
-            if (!packageVersions[packageName]) {;
-              packageVersions[packageName] = [];,
+          )) {
+  if (!packageVersions[packageName]) {
+  packageVersions[packageName] = [];,
 }
             packageVersions[packageName].push(packageData.version);,
 }
         }
 ;
-        for (const ["packageName", "versions"] of Object.entries(packageVersions)) {;
-          if (versions.length > 1 && new Set(versions).size > 1) {;
-            conflicts.push({;
-              type: "VERSION_CONFLICT",;
+        for (const ["packageName", "versions"] of Object.entries(packageVersions)) {
+  if (versions.length > 1 && new Set(versions).size > 1) {
+  conflicts.push({
+  type: "VERSION_CONFLICT",;
               package: packageName,;
               versions: [...new Set(versions)],;
               severity: `HIGH`,;
@@ -427,11 +424,11 @@ class IntelligentDependencyManager {;
     return conflicts;,
 }
 ;
-  determineUpdateType(current, latest, major) {;
-    const currentParts = current.split(`.`).map(Number);
+  determineUpdateType(current, latest, major) {
+  const currentParts = current.split(`.`).map(Number);
 
-  determineUpdateType(current, latest, major) {;
-    const currentParts = current.split(".").map(Number);
+  determineUpdateType(current, latest, major) {
+  const currentParts = current.split(".").map(Number);
     const latestParts = latest.split(".").map(Number);
     const majorParts = major.split(".").map(Number);
 
@@ -441,9 +438,9 @@ class IntelligentDependencyManager {;
     return "NONE";,
 }
 ;
-  calculateUpdatePriority(updateType, current, latest) {;
-    const basePriority = {;
-      MAJOR: 100,;
+  calculateUpdatePriority(updateType, current, latest) {
+  const basePriority = {
+  MAJOR: 100,;
       MINOR: 50,;
       PATCH: 25,;
       NONE: 0,;,
@@ -460,9 +457,9 @@ class IntelligentDependencyManager {;
     return Math.round(priority);,
 }
 ;
-  calculateRiskScore(severity) {;
-    const scores = {;
-      low: 1,;
+  calculateRiskScore(severity) {
+  const scores = {
+  low: 1,;
       moderate: 2,;
       high: 3,;
       critical: 4,;,
@@ -471,9 +468,9 @@ class IntelligentDependencyManager {;
     return scores[severity.toLowerCase()] || 0;,
 }
 ;
-  getActionForSeverity(severity) {;
-    const actions = {;
-      low: "MONITOR",;
+  getActionForSeverity(severity) {
+  const actions = {
+  low: "MONITOR",;
       moderate: "UPDATE_SOON",;
       high: "UPDATE_URGENT",;
       critical: "UPDATE_IMMEDIATE",;,
@@ -482,9 +479,9 @@ class IntelligentDependencyManager {;
     return actions[severity.toLowerCase()] || "MONITOR";,
 }
 ;
-  getActionForUpdateType(updateType) {;
-    const actions = {;
-      MAJOR: "REVIEW_AND_UPDATE",;
+  getActionForUpdateType(updateType) {
+  const actions = {
+  MAJOR: "REVIEW_AND_UPDATE",;
       MINOR: "UPDATE_SAFE",;
       PATCH: "UPDATE_AUTO",;
       NONE: "NO_ACTION",;,
@@ -492,30 +489,29 @@ class IntelligentDependencyManager {;
     return actions[updateType] || "NO_ACTION`;,
 }
 ;
-  estimateDependencySize(packages) {;
-
-    return actions[updateType] || "NO_ACTION";,
+  estimateDependencySize(packages) {
+  return actions[updateType] || "NO_ACTION";,
 }
 ;
-  estimateDependencySize(packages) {;
-    // Rough estimation based on package count;
+  estimateDependencySize(packages) {
+  // Rough estimation based on package count;
     const packageCount = Object.keys(packages).length;
     return packageCount * 1024 * 1024; // 1MB per package estimate;,
 }
 ;
-  countPackagesInNodeModules(nodeModulesPath) {;
-    let count = 0;
+  countPackagesInNodeModules(nodeModulesPath) {
+  let count = 0;
 
-    try {;
-      const items = fs.readdirSync(nodeModulesPath);
-      for (const item of items) {;
-        const itemPath = path.join(nodeModulesPath, item);
+    try {
+  const items = fs.readdirSync(nodeModulesPath);
+      for (const item of items) {
+  const itemPath = path.join(nodeModulesPath, item);
         const stats = fs.statSync(itemPath);
-        if (stats.isDirectory()) {;
-          // Check if it`s a package (has package.json);
+        if (stats.isDirectory()) {
+  // Check if it`s a package (has package.json);
           const packageJsonPath = path.join(itemPath, `package.json`);
-          if (fs.existsSync(packageJsonPath)) {;
-            count++;,
+          if (fs.existsSync(packageJsonPath)) {
+  count++;,
 }
         }
       }
@@ -525,32 +521,32 @@ class IntelligentDependencyManager {;
     return count;,
 }
 ;
-  generateRecommendations(analysis) {;
-    const recommendations = [];
+  generateRecommendations(analysis) {
+  const recommendations = [];
     // Vulnerability-based recommendations;
-    if (analysis.vulnerabilities.length > 0) {;
-      const criticalVulns = analysis.vulnerabilities.filter(;
+    if (analysis.vulnerabilities.length > 0) {
+  const criticalVulns = analysis.vulnerabilities.filter(;
         v => v.severity === `CRITICAL`;
 
     // Vulnerability-based recommendations;
-    if (analysis.vulnerabilities.length > 0) {;
-      const criticalVulns = analysis.vulnerabilities.filter(;
+    if (analysis.vulnerabilities.length > 0) {
+  const criticalVulns = analysis.vulnerabilities.filter(;
         v => v.severity === "CRITICAL";
       );
       const highVulns = analysis.vulnerabilities.filter(;
         v => v.severity === "HIGH";
       );
-      if (criticalVulns.length > 0) {;
-        recommendations.push({;
-          priority: `CRITICAL`,;
+      if (criticalVulns.length > 0) {
+  recommendations.push({
+  priority: `CRITICAL`,;
           type: `SECURITY`,message: `Immediate action required: ${criticalVulns.length} critical vulnerabilities detected`,;
           action: `UPDATE_IMMEDIATE`,;
           packages: criticalVulns.map(v => v.package)});,
 }
 ;
-      if (highVulns.length > 0) {;
-        recommendations.push({;
-          priority: `HIGH`,;
+      if (highVulns.length > 0) {
+  recommendations.push({
+  priority: `HIGH`,;
           type: `SECURITY`,message: `Urgent action required: ${highVulns.length} high-severity vulnerabilities detected`,;
           action: `UPDATE_URGENT`,;
           packages: highVulns.map(v => v.package)});,
@@ -558,24 +554,24 @@ class IntelligentDependencyManager {;
     }
 ;
     // Update-based recommendations;
-    if (analysis.outdated.length > 0) {;
-      const majorUpdates = analysis.outdated.filter(;
+    if (analysis.outdated.length > 0) {
+  const majorUpdates = analysis.outdated.filter(;
         p => p.updateType === `MAJOR`;
       );
       const minorUpdates = analysis.outdated.filter(;
         p => p.updateType === "MINOR";
       );
-      if (majorUpdates.length > 0) {;
-        recommendations.push({;
-          priority: `MEDIUM`,;
+      if (majorUpdates.length > 0) {
+  recommendations.push({
+  priority: `MEDIUM`,;
           type: `UPDATES`,message: `${majorUpdates.length} major updates available. Review for breaking changes.`,;
           action: `REVIEW_AND_UPDATE`,;
           packages: majorUpdates.map(p => p.package)});,
 }
 ;
-      if (minorUpdates.length > 0) {;
-        recommendations.push({;
-          priority: `LOW`,;
+      if (minorUpdates.length > 0) {
+  recommendations.push({
+  priority: `LOW`,;
           type: `UPDATES`,message: `${minorUpdates.length} minor updates available. Safe to update.`,;
           action: `UPDATE_SAFE`,;
           packages: minorUpdates.map(p => p.package)});,
@@ -583,25 +579,25 @@ class IntelligentDependencyManager {;
     }
 ;
     // Conflict-based recommendations;
-    if (analysis.conflicts.length > 0) {;
-      recommendations.push({;
-        priority: `HIGH`,;
+    if (analysis.conflicts.length > 0) {
+  recommendations.push({
+  priority: `HIGH`,;
         type: `CONFLICTS`,message: `${analysis.conflicts.length} dependency conflicts detected. Resolve to prevent issues.`,;
         action: `RESOLVE_CONFLICTS`,;
         conflicts: analysis.conflicts,;
 
-      if (majorUpdates.length > 0) {;
-        recommendations.push({;
-          priority: "MEDIUM",;
+      if (majorUpdates.length > 0) {
+  recommendations.push({
+  priority: "MEDIUM",;
           type: "UPDATES",message: `${majorUpdates.length} major updates available. Review for breaking changes.`,;
           action: "REVIEW_AND_UPDATE",;
           packages: majorUpdates.map(p => p.package),;,
 });,
 }
 ;
-      if (minorUpdates.length > 0) {;
-        recommendations.push({;
-          priority: "LOW",;
+      if (minorUpdates.length > 0) {
+  recommendations.push({
+  priority: "LOW",;
           type: "UPDATES",message: `${minorUpdates.length} minor updates available. Safe to update.`,;
           action: "UPDATE_SAFE",;
           packages: minorUpdates.map(p => p.package),;,
@@ -610,9 +606,9 @@ class IntelligentDependencyManager {;
     }
 ;
     // Conflict-based recommendations;
-    if (analysis.conflicts.length > 0) {;
-      recommendations.push({;
-        priority: "HIGH",;
+    if (analysis.conflicts.length > 0) {
+  recommendations.push({
+  priority: "HIGH",;
         type: "CONFLICTS",message: `${analysis.conflicts.length} dependency conflicts detected. Resolve to prevent issues.`,;
         action: "RESOLVE_CONFLICTS",;
         conflicts: analysis.conflicts,;,
@@ -622,9 +618,9 @@ class IntelligentDependencyManager {;
     return recommendations;,
 }
 ;
-  async saveDependencyAnalysis(analysis) {;
-    try {;
-      fs.writeFileSync(;
+  async saveDependencyAnalysis(analysis) {
+  try {
+  fs.writeFileSync(;
         this.dependencyAnalysis,;
         JSON.stringify(analysis, null, 2);
       );
@@ -633,14 +629,14 @@ class IntelligentDependencyManager {;
 }
   }
 ;
-  async generateReport() {;
-    this.log(`Generating dependency management report...`);
+  async generateReport() {
+  this.log(`Generating dependency management report...`);
     const analysis = await this.analyzeDependencies();
     if (!analysis) return null;
 
-    const report = {;
-      summary: {;
-        totalDependencies:;
+    const report = {
+  summary: {
+  totalDependencies:;
           analysis.packageJson.dependencies.count +;
           analysis.packageJson.devDependencies.count,;
         vulnerabilities: analysis.vulnerabilities.length,;
@@ -655,29 +651,28 @@ class IntelligentDependencyManager {;
     return report;,
 }
 ;
-  calculateOverallRiskLevel(analysis) {;
-    let riskScore = 0;
+  calculateOverallRiskLevel(analysis) {
+  let riskScore = 0;
     // Add vulnerability risk;
-    for (const vuln of analysis.vulnerabilities) {;
-      riskScore += vuln.riskScore;,
+    for (const vuln of analysis.vulnerabilities) {
+  riskScore += vuln.riskScore;,
 }
 ;
     // Add conflict risk;
     riskScore += analysis.conflicts.length * 2;
     // Add outdated risk;
-    for (const pkg of analysis.outdated) {;
-
-    // Add vulnerability risk;
-    for (const vuln of analysis.vulnerabilities) {;
-      riskScore += vuln.riskScore;,
+    for (const pkg of analysis.outdated) {
+  // Add vulnerability risk;
+    for (const vuln of analysis.vulnerabilities) {
+  riskScore += vuln.riskScore;,
 }
 ;
     // Add conflict risk;
     riskScore += analysis.conflicts.length * 2;
 
     // Add outdated risk;
-    for (const pkg of analysis.outdated) {;
-      if (pkg.updateType === "MAJOR") riskScore += 3;
+    for (const pkg of analysis.outdated) {
+  if (pkg.updateType === "MAJOR") riskScore += 3;
       else if (pkg.updateType === "MINOR") riskScore += 1;,
 }
 ;
@@ -688,15 +683,15 @@ class IntelligentDependencyManager {;
     return "SAFE";,
 }
 ;
-  generateActionPlan(analysis) {;
-    const actions = [];
+  generateActionPlan(analysis) {
+  const actions = [];
     // Immediate actions;
     const criticalVulns = analysis.vulnerabilities.filter(;
       v => v.severity === "CRITICAL";
     );
-    if (criticalVulns.length > 0) {;
-      actions.push({;
-        priority: "IMMEDIATE",;
+    if (criticalVulns.length > 0) {
+  actions.push({
+  priority: "IMMEDIATE",;
         action: "npm audit fix",;
         description: "Fix critical vulnerabilities",;
         packages: criticalVulns.map(v => v.package),;,
@@ -711,9 +706,9 @@ class IntelligentDependencyManager {;
     const highVulns = analysis.vulnerabilities.filter(;
       v => v.severity === "HIGH";
     );
-    if (highVulns.length > 0) {;
-      actions.push({;
-        priority: "HIGH",;
+    if (highVulns.length > 0) {
+  actions.push({
+  priority: "HIGH",;
         action: "npm audit fix",;
         description: "Fix high-severity vulnerabilities",;
         packages: highVulns.map(v => v.package),;,
@@ -721,9 +716,9 @@ class IntelligentDependencyManager {;
 }
 ;
     // Medium priority actions;
-    if (analysis.outdated.filter(p => p.updateType === "PATCH").length > 0) {;
-      actions.push({;
-        priority: "MEDIUM",;
+    if (analysis.outdated.filter(p => p.updateType === "PATCH").length > 0) {
+  actions.push({
+  priority: "MEDIUM",;
         action: "npm update",;
         description: `Update patch versions safely`,;,
 });,
@@ -732,13 +727,13 @@ class IntelligentDependencyManager {;
     return actions;,
 }
 ;
-  async run() {;
-    try {;
-      this.log(`Intelligent Dependency Manager started`);
+  async run() {
+  try {
+  this.log(`Intelligent Dependency Manager started`);
 
-  async run() {;
-    try {;
-      this.log("Intelligent Dependency Manager started');
+  async run() {
+  try {
+  this.log("Intelligent Dependency Manager started');
 
       // Generate comprehensive report;
       const report = await this.generateReport();
@@ -746,8 +741,8 @@ class IntelligentDependencyManager {;
       if (report) {this.log(`Dependency Management Report:`);this.log(`  - Total Dependencies: ${report.summary.totalDependencies}`);this.log(`  - Vulnerabilities: ${report.summary.vulnerabilities}`);this.log(`  - Conflicts: ${report.summary.conflicts}`);this.log(`  - Outdated: ${report.summary.outdated}`);this.log(`  - Overall Risk: ${report.summary.riskLevel}`);
         // Display top recommendations;
         const topRecommendations = report.recommendations.slice(0, 3);
-        if (topRecommendations.length > 0) {;
-          this.log(`Top Recommendations: `);
+        if (topRecommendations.length > 0) {
+  this.log(`Top Recommendations: `);
           topRecommendations.forEach((rec, index) => {this.log(`  ${index + 1}. ${rec.message} (${rec.priority})`);,
 });,
 }
@@ -755,8 +750,8 @@ class IntelligentDependencyManager {;
 ;
       // Schedule next analysis;
       setTimeout(() => this.run(), 7200000); // 2 hours;,
-} catch (error) {  ;
-      this.log(Intelligent Dependency Manager failed: ${error.message  }`,;
+} catch (error) {
+  this.log(Intelligent Dependency Manager failed: ${error.message  }`,;
         `ERROR`;
       );
       setTimeout(() => this.run(), 1800000); // 30 minutes on error;,

@@ -7,7 +7,7 @@ const exts = new Set([".js", ".jsx", ".ts", ".tsx"]);
 /**;
  * Returns true if the file should be processed;
  */;
-function shouldProcess(filePath) {;
+function shouldProcess(filePath) {
   const ext = path.extname(filePath);
   return exts.has(ext);,
 }
@@ -15,7 +15,7 @@ function shouldProcess(filePath) {;
 /**;
  * Clean content by removing stray trailing apostrophes introduced at EOL;
  */;
-function cleanContent(content) {;
+function cleanContent(content) {
   // Line-level fixes;
   const lines = content.split(/\r?\n/).map(line =>;
     line;
@@ -46,43 +46,44 @@ function cleanContent(content) {;
   return out;,
 }
 ;
-function walk(dir, files = []) {;
-  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {;
-    if (entry.name === "node_modules" || entry.name.startsWith(".git"));
+function walk(dir, files = []) {
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+  if (entry.name === "node_modules" || entry.name.startsWith(".git"));
       continue;
     const p = path.join(dir, "entry.name);
-    if (entry.isDirectory()) {;
-      walk(p", files);,
-} else if (shouldProcess(p)) {;
-      files.push(p);,
+    if (entry.isDirectory()) {
+  walk(p", files);,
+} else if (shouldProcess(p)) {
+  files.push(p);,
 }
   }
   return files;,
 }
 ;
-function main() {;
+function $1() {
   const root = process.cwd();
   const files = walk(root);
   let changed = 0;
-  for (const f of files) {;
-    try {;
-      const original = fs.readFileSync(f, "utf8");
+  for (const f of files) {
+  try {
+  const original = fs.readFileSync(f, "utf8");
       const updated = cleanContent(original);
-      if (updated !== original) {;
-        fs.writeFileSync(f, updated, "utf8');
+      if (updated !== original) {
+  fs.writeFileSync(f, updated, "utf8');
         changed += 1;,
 }
-    } catch (e) {;,
-} catch (e) {;
-      // ignore file-level errors;,
-} catch (e) {;
-      // ignore file-level errors;
+    } catch (e) {
+  ,
+} catch (e) {
+  // ignore file-level errors;,
+} catch (e) {
+  // ignore file-level errors;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
   }
   console.log(`Cleaned ${changed} files.`);,
 }
 ;
-if (require.main === module) {;
+if (require.main === module) {
   main();,
 }

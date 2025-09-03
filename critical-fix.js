@@ -2,7 +2,7 @@
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-function createValidComponent(filePath) {;
+function createValidComponent(filePath) {
   const fileName = path.basename(filePath, path.extname(filePath));
   const componentName = fileName;
     .split("-");
@@ -10,7 +10,7 @@ function createValidComponent(filePath) {;
     .join("");
     .replace(/[^a-zA-Z0-9]/g, "");
   return `import React from "react";
-export default function ${componentName}() {;
+export default function ${componentName}() {
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">;
       <SEO title=`${componentName} - Zion Technologies`;
@@ -33,7 +33,7 @@ export default function ${componentName}() {;
 }
 ;
 // List of most critical files to fix;
-const criticalFiles = [;
+const criticalFiles = [
   "src/pages/services/AI-Financial-Trading-Platform.tsx",;
   "src/pages/services/AI5GNetwork.tsx",;
   "src/pages/services/AIAnsible.tsx",;
@@ -148,16 +148,16 @@ const criticalFiles = [;
   "src/pages/services/ZeroTrustNetworkAccess.tsx";
 ];
 let fixedCount = 0;
-for (const filePath of criticalFiles) {;
+for (const filePath of criticalFiles) {
   const fullPath = path.join(__dirname, filePath);
-  if (fs.existsSync(fullPath)) {;
-    try {;
-      const newContent = createValidComponent(fullPath);
+  if (fs.existsSync(fullPath)) {
+  try {
+  const newContent = createValidComponent(fullPath);
       fs.writeFileSync(fullPath, newContent);
       fixedCount++;
       console.log(``Fixed: ${filePath}``);,
-} catch (error) {;
-      console.error(`Error fixing ${filePath}:`, error.message);,
+} catch (error) {
+  console.error(`Error fixing ${filePath}:`, error.message);,
 }
   }
 }

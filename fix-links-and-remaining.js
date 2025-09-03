@@ -6,12 +6,12 @@ import { fileURLToPath  } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // Function to fix Next.js Link issues in a file;
-function fixNextLinks(filePath) {;
-  try {;
-    let content = fs.readFileSync(filePath, "utf8");
+function fixNextLinks(filePath) {
+  try {
+  let content = fs.readFileSync(filePath, "utf8");
     // Add Link import if not present;
-    if (content.includes("href="/") && !content.includes("import Link")) {;
-      content = content.replace(;
+    if (content.includes("href="/") && !content.includes("import Link")) {
+  content = content.replace(;
         /import React from "react";/,;
         `import React from "react";
 import Link from "next/link";`;
@@ -27,13 +27,13 @@ import Link from "next/link";`;
     content = content.replace(/<\/a>/g, "</Link>");
     fs.writeFileSync(filePath, content, "utf8");
     console.log(`✓ Fixed Next.js links in ${filePath}`);,
-} catch (error) {;
-    console.error(`✗ Error fixing ${filePath}:`, error.message);,
+} catch (error) {
+  console.error(`✗ Error fixing ${filePath}:`, error.message);,
 }
 }
 ;
 // List of files that need Link fixes (based on the lint output);
-const filesToFix = [;
+const filesToFix = [
   "src/pages/services/InterviewAssessmentAI.tsx",;
   "src/pages/services/IoTEdgeComputing.jsx",;
   "src/pages/services/IoTServices.jsx",;
@@ -50,7 +50,7 @@ const filesToFix = [;
 // Fix Next.js Link issues;
 filesToFix.forEach(fixNextLinks);
 // List of remaining corrupted files that need complete replacement;
-const remainingCorruptedFiles = [;
+const remainingCorruptedFiles = [
   "src/pages/services/ai-autonomous-business-operations-platform.tsx",;
   "src/pages/services/ai-autonomous-code-reviewer.tsx",;
   "src/pages/services/ai-autonomous-operations.tsx",;
@@ -179,44 +179,44 @@ const remainingCorruptedFiles = [;
 const servicePageTemplate = (serviceName, displayName) => `import React from "react";
 import Link from "next/link";
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3  } from "lucide-react";
-export default function ${serviceName}() {;
-  const features = [;
-    "AI-powered ${displayName.toLowerCase()} optimization",;
+export default function ${serviceName}() {
+  const features = [
+  "AI-powered ${displayName.toLowerCase()} optimization",;
     "Automated ${displayName.toLowerCase()} management",;
     "Real-time ${displayName.toLowerCase()} analytics",;
     "Predictive ${displayName.toLowerCase()} insights",;
     "Custom AI models for ${displayName.toLowerCase()}",;
     "Enterprise-grade security and compliance";
   ];
-  const benefits = [;
-    "Improve ${displayName.toLowerCase()} performance by 50-80%",;
+  const benefits = [
+  "Improve ${displayName.toLowerCase()} performance by 50-80%",;
     "Reduce operational costs by 35-65%",;
     "Enhance scalability and reliability",;
     "Optimize resource utilization",;
     "Scale operations efficiently",;
     "Maximize ROI and efficiency";
   ];
-  const useCases = [;
-    "Software Development",;
+  const useCases = [
+  "Software Development",;
     "E-commerce & Retail",;
     "Financial Services",;
     "Healthcare & Life Sciences",;
     "Media & Entertainment",;
     "Technology & SaaS";
   ];
-  const pricing = [;
-    {;
-      name: "Starter",;
+  const pricing = [
+  {
+  name: "Starter",;
       price: "$299/mo",;
       details: ["Up to 10 users", "Basic features", "Email support", "Standard SLA"];,
 },;
-    {;
-      name: "Professional",;
+    {
+  name: "Professional",;
       price: "$799/mo",;
       details: ["Up to 50 users", "Advanced features", "Priority support", "99.9% SLA"];,
 },;
-    {;
-      name: "Enterprise",;
+    {
+  name: "Enterprise",;
       price: "$1,999/mo",;
       details: ["Unlimited users", "Custom AI models", "Full ${displayName.toLowerCase()} suite", "24/7 dedicated support"];,
 }
@@ -334,7 +334,7 @@ export default function ${serviceName}() {;
 }
 `;
 // Function to extract service name from file path;
-function getServiceName(filePath) {;
+function getServiceName(filePath) {
   const fileName = path.basename(filePath, path.extname(filePath));
   // Convert kebab-case or camelCase to PascalCase;
   return fileName;
@@ -344,7 +344,7 @@ function getServiceName(filePath) {;
 }
 ;
 // Function to extract display name from service name;
-function getDisplayName(serviceName) {;
+function getDisplayName(serviceName) {
   // Remove common prefixes and convert to readable format;
   return serviceName;
     .replace(/^AI/, "");
@@ -353,23 +353,23 @@ function getDisplayName(serviceName) {;
 }
 ;
 // Fix remaining corrupted files;
-remainingCorruptedFiles.forEach(filePath => {;
-  try {;
-    const serviceName = getServiceName(filePath);
+remainingCorruptedFiles.forEach(filePath => {
+  try {
+  const serviceName = getServiceName(filePath);
     const displayName = getDisplayName(serviceName);
     console.log(`Fixing ${filePath}...`);
     // Ensure directory exists;
     const dir = path.dirname(filePath);
-    if (!fs.existsSync(dir)) {;
-      fs.mkdirSync(dir, { recursive: true });,
+    if (!fs.existsSync(dir)) {
+  fs.mkdirSync(dir, { recursive: true });,
 }
     ;
     // Write the fixed content;
     const content = servicePageTemplate(serviceName, displayName);
     fs.writeFileSync(filePath, content, "utf8");
     console.log(`✓ Fixed ${filePath}`);,
-} catch (error) {;
-    console.error(`✗ Error fixing ${filePath}:`, error.message);,
+} catch (error) {
+  console.error(`✗ Error fixing ${filePath}:`, error.message);,
 }
 });
 console.log("\\nFixed all remaining issues!")

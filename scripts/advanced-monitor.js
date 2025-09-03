@@ -2,8 +2,8 @@
 /**
  * Advanced Monitoring Script
  */
-const pm2 = require("pm2")
-const fs = require("fs")
+const pm2 = require("$1");
+const fs = require("$1");
 const path = require("path")
 class AdvancedMonitor {
   constructor() {

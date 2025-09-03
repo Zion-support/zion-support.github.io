@@ -8,21 +8,21 @@ const lintOutput = execSync("npm run lint 2>&1", { encoding: "utf8" });
 const errorLines = lintOutput.split("\n").filter(line => line.includes("Error: Parsing error"));
 // Extract file paths from error lines;
 const errorFiles = new Set();
-errorLines.forEach(line => {;
+errorLines.forEach(line => {
   const match = line.match(/^\.\/(.+?):\d+:\d+\s+Error:/);
-  if (match) {;
-    errorFiles.add(match[1]);,
+  if (match) {
+  errorFiles.add(match[1]);,
 }
 });
 console.log(`Found ${errorFiles.size} files with lint errors`);
 // Function to fix common syntax errors;
-function fixFile(filePath) {;
-  try {;
-    let content = fs.readFileSync(filePath, "utf8");
+function fixFile(filePath) {
+  try {
+  let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
     // Fix 1: Add missing semicolons after import statements;
-    if (content.includes("import {") && !content.includes("import {") + ";" && !content.includes("from "")) {;
-      content = content.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""]([^""]+)[""]\s*([^])/g, "import { $1 } from \"$2\"; $3");
+    if (content.includes("import {") && !content.includes("import {") + ";" && !content.includes("from "")) {
+  content = content.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""]([^""]+)[""]\s*([^])/g, "import { $1 } from \"$2\"; $3");
       modified = true;,
 }
 ;
@@ -49,32 +49,32 @@ function fixFile(filePath) {;
     // Fix 10: Fix malformed array/object syntax;
     content = content.replace(/\[\s*"([^"]*)"\s*\]/g, "[\"$1\"]");
     content = content.replace(/{\s*"([^"]*)"\s*}/g, "{\"$1\"}");
-    if (modified) {;
-      fs.writeFileSync(filePath, content);
+    if (modified) {
+  fs.writeFileSync(filePath, content);
       console.log(`Fixed: ${filePath}`);
       return true;,
 }
     ;
     return false;,
-} catch (error) {;
-    console.error(`Error fixing ${filePath}:`, error.message);
+} catch (error) {
+  console.error(`Error fixing ${filePath}:`, error.message);
     return false;,
 }
 }
 ;
 // Fix each file;
 let fixedCount = 0;
-errorFiles.forEach(filePath => {;
-  if (fixFile(filePath)) {;
-    fixedCount++;,
+errorFiles.forEach(filePath => {
+  if (fixFile(filePath)) {
+  fixedCount++;,
 }
 });
 console.log(`Fixed ${fixedCount} files`);
 // Run lint again to check remaining errors;
 console.log("\nRunning lint again to check remaining errors...");
-try {;
+try {
   execSync("npm run lint", { stdio: "inherit" });
   console.log("All lint errors fixed!");,
-} catch (error) {;
+} catch (error) {
   console.log("Some lint errors remain. Manual review may be needed.');,
 }

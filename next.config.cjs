@@ -61,37 +61,37 @@ const nextConfig = {
 export default nextConfig;
 =======
 /** @type {import("next").NextConfig} */;
-const nextConfig = {;
+const nextConfig = {
   reactStrictMode: true,;
   poweredByHeader: false,;
-  eslint: {;
-    ignoreDuringBuilds: true,;
+  eslint: {
+  ignoreDuringBuilds: true,;
 <<<<<<< HEAD;,
 },:next.config.js;
-  typescript: {;
-    // Allow production builds to successfully complete even if;
+  typescript: {
+  // Allow production builds to successfully complete even if;
     // there are type errors.;
-  experimental: {;
-    // Removed deprecated options;,
+  experimental: {
+  // Removed deprecated options;,
 },;
-  typescript: {;
-    ignoreBuildErrors: true},;
-  images: {;
-    ignoreBuildErrors: true,;,
-},  images: {;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
+  typescript: {
+  ignoreBuildErrors: true},;
+  images: {
+  ignoreBuildErrors: true,;,
+},  images: {
+  >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
     domains: ["ziontechgroup.com"],;
     unoptimized: true},;
-  compiler: {;
-    removeConsole: process.env.NODE_ENV === "production"},;
-  webpack: (config, { dev, isServer }) => {;
-    // Completely exclude problematic directories from the build;
+  compiler: {
+  removeConsole: process.env.NODE_ENV === "production"},;
+  webpack: (config, { dev, isServer }) => {
+  // Completely exclude problematic directories from the build;
 :next.config.js;
     // Keep default TS/JS handling; we already ignore build errors via config;
-    config.module.rules.push({;
-      test: /\.(ts|tsx)$/,;
-      exclude: [;
-        /node_modules/,;
+    config.module.rules.push({
+  test: /\.(ts|tsx)$/,;
+      exclude: [
+  /node_modules/,;
         /api-backup/,;
         /pages\.disabled/,;
         /backup-pages/,;
@@ -105,8 +105,8 @@ const nextConfig = {;
         /^components\//, // Exclude root components directory;
       ]});
     // Add fallback for problematic modules;
-    config.resolve.fallback = {;
-      ...config.resolve.fallback,;
+    config.resolve.fallback = {
+  ...config.resolve.fallback,;
       fs: false,;
       net: false,;
       tls: false}
@@ -114,45 +114,45 @@ const nextConfig = {;
 =======;
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-1c7d;,
 },;
-  typescript: {;
-    ignoreBuildErrors: true,;,
+  typescript: {
+  ignoreBuildErrors: true,;,
 },;
-  experimental: {;
-    optimizeCss: true,;
+  experimental: {
+  optimizeCss: true,;
     scrollRestoration: true,;
     optimizePackageImports: ["lucide-react", "@radix-ui/react-icons"],;,
 },;
-  images: {;
-    domains: ["images.unsplash.com", "via.placeholder.com"],;
+  images: {
+  domains: ["images.unsplash.com", "via.placeholder.com"],;
     formats: ["image/webp", "image/avif"],;,
 },;
   compress: true,;
-  compiler: {;
-    removeConsole: process.env.NODE_ENV === "production",;,
+  compiler: {
+  removeConsole: process.env.NODE_ENV === "production",;,
 },;
-  webpack: (config, { dev, isServer }) => {;
-    if (!dev && !isServer) {;
-      config.resolve.alias = {;
-        ...config.resolve.alias,;
+  webpack: (config, { dev, isServer }) => {
+  if (!dev && !isServer) {
+  config.resolve.alias = {
+  ...config.resolve.alias,;
         "@": new URL("./src", import.meta.url).pathname,;,
 }
     }
     return config},;
-  async headers() {;
-    return [;
-      {;
-        source: "/(.*)",;
-        headers: [;
-          {;
-            key: "X-Frame-Options",;
+  async headers() {
+  return [
+  {
+  source: "/(.*)",;
+        headers: [
+  {
+  key: "X-Frame-Options",;
             value: "DENY",;,
 },;
-          {;
-            key: "X-Content-Type-Options",;
+          {
+  key: "X-Content-Type-Options",;
             value: "nosniff",;,
 },;
-          {;
-            key: "Referrer-Policy",;
+          {
+  key: "Referrer-Policy",;
             value: "origin-when-cross-origin",;,
 },;
         ],;,

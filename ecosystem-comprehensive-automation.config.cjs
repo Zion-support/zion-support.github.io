@@ -1,8 +1,8 @@
-module.exports = {;
-  apps: [;
-    // Main application;
-    {;
-      name: "zion-app",;
+module.exports = {
+  apps: [
+  // Main application;
+    {
+  name: "zion-app",;
       script: "npm",;
       args: "start",;
       cwd: "./",;
@@ -10,26 +10,26 @@ module.exports = {;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "1G",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         PORT: 3000,;,
 },;
-      env_production: {;
-        NODE_ENV: "production",;
+      env_production: {
+  NODE_ENV: "production",;
         PORT: 3000,;,
 },;,
 },;
 
     // ENHANCED ERROR FIXING AUTOMATION - HIGHEST PRIORITY;
-    {;
-      name: "enhanced-error-fixing-automation",;
+    {
+  name: "enhanced-error-fixing-automation",;
       script: "./scripts/automation/enhanced-error-fixing-automation.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "1G",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTOMATION_INTERVAL: "900000", // 15 minutes;,
 },;
       cron_restart: "*/15 * * * *", // Every 15 minutes;
@@ -41,15 +41,15 @@ module.exports = {;
 },;
 
     // TypeScript Error Monitor - runs every 10 minutes;
-    {;
-      name: "typescript-error-monitor",;
+    {
+  name: "typescript-error-monitor",;
       script: "./scripts/automation/typescript-error-monitor.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "512M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTOMATION_INTERVAL: "600000", // 10 minutes;,
 },;
       cron_restart: "*/10 * * * *", // Every 10 minutes;
@@ -61,15 +61,15 @@ module.exports = {;
 },;
 
     // ESLint Error Cleaner - runs every 20 minutes;
-    {;
-      name: "eslint-error-cleaner",;
+    {
+  name: "eslint-error-cleaner",;
       script: "./scripts/automation/eslint-error-cleaner.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "512M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTOMATION_INTERVAL: "1200000", // 20 minutes;,
 },;
       cron_restart: "*/20 * * * *", // Every 20 minutes;
@@ -81,15 +81,15 @@ module.exports = {;
 },;
 
     // Import Error Resolver - runs every 25 minutes;
-    {;
-      name: "import-error-resolver",;
+    {
+  name: "import-error-resolver",;
       script: "./scripts/automation/import-error-resolver.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "512M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTOMATION_INTERVAL: "1500000", // 25 minutes;,
 },;
       cron_restart: "*/25 * * * *", // Every 25 minutes;
@@ -101,15 +101,15 @@ module.exports = {;
 },;
 
     // JSX Error Fixer - runs every 30 minutes;
-    {;
-      name: "jsx-error-fixer",;
+    {
+  name: "jsx-error-fixer",;
       script: "./scripts/automation/jsx-error-fixer.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "512M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTOMATION_INTERVAL: "1800000", // 30 minutes;,
 },;
       cron_restart: "*/30 * * * *", // Every 30 minutes;
@@ -121,15 +121,15 @@ module.exports = {;
 },;
 
     // Dependency Error Resolver - runs every hour;
-    {;
-      name: "dependency-error-resolver",;
+    {
+  name: "dependency-error-resolver",;
       script: "./scripts/automation/dependency-error-resolver.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "512M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTOMATION_INTERVAL: "3600000", // 1 hour;,
 },;
       cron_restart: "0 * * * *", // Every hour;
@@ -141,15 +141,15 @@ module.exports = {;
 },;
 
     // Configuration Error Fixer - runs every 2 hours;
-    {;
-      name: "config-error-fixer",;
+    {
+  name: "config-error-fixer",;
       script: "./scripts/automation/config-error-fixer.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "512M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTOMATION_INTERVAL: "7200000", // 2 hours;,
 },;
       cron_restart: "0 */2 * * *", // Every 2 hours;
@@ -161,15 +161,15 @@ module.exports = {;
 },;
 
     // Master Error Fixer - coordinates all error fixers;
-    {;
-      name: "master-error-fixer",;
+    {
+  name: "master-error-fixer",;
       script: "./scripts/automation/master-error-fixer.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "1G",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTOMATION_INTERVAL: "1800000", // 30 minutes;,
 },;
       cron_restart: "*/30 * * * *", // Every 30 minutes;
@@ -181,15 +181,15 @@ module.exports = {;
 },;
 
     // Enhanced Error Fixer - comprehensive error fixing;
-    {;
-      name: "enhanced-error-fixer",;
+    {
+  name: "enhanced-error-fixer",;
       script: "./scripts/automation/enhanced-error-fixer.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "1G",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTOMATION_INTERVAL: "3600000", // 1 hour;,
 },;
       cron_restart: "0 * * * *", // Every hour;
@@ -201,15 +201,15 @@ module.exports = {;
 },;
 
     // Error Prevention Monitor - proactive error detection;
-    {;
-      name: "error-prevention-monitor",;
+    {
+  name: "error-prevention-monitor",;
       script: "./scripts/automation/error-prevention-monitor.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "512M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTOMATION_INTERVAL: "900000", // 15 minutes;,
 },;
       cron_restart: "*/15 * * * *", // Every 15 minutes;
@@ -221,15 +221,15 @@ module.exports = {;
 },;
 
     // Critical Error Alert System - immediate error notifications;
-    {;
-      name: "critical-error-alert-system",;
+    {
+  name: "critical-error-alert-system",;
       script: "./scripts/automation/critical-error-alert-system.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "512M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTOMATION_INTERVAL: "300000", // 5 minutes;,
 },;
       cron_restart: "*/5 * * * *", // Every 5 minutes;
@@ -241,15 +241,15 @@ module.exports = {;
 },;
 
     // Error Analytics Dashboard - error reporting and analytics;
-    {;
-      name: "error-analytics-dashboard",;
+    {
+  name: "error-analytics-dashboard",;
       script: "./scripts/automation/error-analytics-dashboard.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "1G",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTOMATION_INTERVAL: "7200000", // 2 hours;,
 },;
       cron_restart: "0 */2 * * *", // Every 2 hours;
@@ -261,15 +261,15 @@ module.exports = {;
 },;
 
     // Auto Recovery Manager - automatic recovery from errors;
-    {;
-      name: "auto-recovery-manager",;
+    {
+  name: "auto-recovery-manager",;
       script: "./scripts/automation/auto-recovery-manager.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "1G",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTOMATION_INTERVAL: "600000", // 10 minutes;,
 },;
       cron_restart: "*/10 * * * *", // Every 10 minutes;
@@ -281,15 +281,15 @@ module.exports = {;
 },;
 
     // INTELLIGENT AUTOMATION SYSTEMS;
-    {;
-      name: "ai-code-analyzer",;
+    {
+  name: "ai-code-analyzer",;
       script: "./scripts/automation/ai-code-analyzer.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "1G",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AI_ANALYSIS_MODE: "true",;,
 },;
       cron_restart: "0 */2 * * *", // Every 2 hours;
@@ -300,15 +300,15 @@ module.exports = {;
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",;,
 },;
 
-    {;
-      name: "smart-performance-optimizer",;
+    {
+  name: "smart-performance-optimizer",;
       script: "./scripts/automation/smart-performance-optimizer.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "1G",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         PERFORMANCE_OPTIMIZATION_MODE: "true",;,
 },;
       cron_restart: "0 */4 * * *", // Every 4 hours;
@@ -319,15 +319,15 @@ module.exports = {;
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",;,
 },;
 
-    {;
-      name: "intelligent-dependency-manager",;
+    {
+  name: "intelligent-dependency-manager",;
       script: "./scripts/automation/intelligent-dependency-manager.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "512M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         DEPENDENCY_MANAGEMENT_MODE: "true",;,
 },;
       cron_restart: "0 6,18 * * *", // Restart at 6 AM and 6 PM;
@@ -338,15 +338,15 @@ module.exports = {;
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",;,
 },;
 
-    {;
-      name: "smart-deployment-automation",;
+    {
+  name: "smart-deployment-automation",;
       script: "./scripts/automation/smart-deployment-automation.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "1G",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         DEPLOYMENT_AUTOMATION_MODE: "true",;,
 },;
       cron_restart: "0 */6 * * *", // Every 6 hours;
@@ -357,15 +357,15 @@ module.exports = {;
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",;,
 },;
 
-    {;
-      name: "predictive-issue-detection",;
+    {
+  name: "predictive-issue-detection",;
       script: "./scripts/automation/predictive-issue-detection.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "1G",;
-      env: {;
-        NODE_ENV: "production",;,
+      env: {
+  NODE_ENV: "production",;,
 },;
       cron_restart: "0 */3 * * *", // Every 3 hours;
       log_file: "./automation/logs/predictive-issue-detection.log",;
@@ -375,15 +375,15 @@ module.exports = {;
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",;,
 },;
 
-    {;
-      name: "intelligent-build-pipeline",;
+    {
+  name: "intelligent-build-pipeline",;
       script: "./scripts/automation/intelligent-build-pipeline.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "1G",;
-      env: {;
-        NODE_ENV: "production",;,
+      env: {
+  NODE_ENV: "production",;,
 },;
       cron_restart: "0 */8 * * *", // Every 8 hours;
       log_file: "./automation/logs/intelligent-build-pipeline.log",;
@@ -394,15 +394,15 @@ module.exports = {;
 },;
 
     // CONTINUOUS MONITORING AND MAINTENANCE;
-    {;
-      name: "continuous-improvement",;
+    {
+  name: "continuous-improvement",;
       script: "./scripts/automation/continuous-improvement.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "512M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTOMATION_INTERVAL: "7200000", // 2 hours;,
 },;
       cron_restart: "0 */2 * * *", // Every 2 hours;
@@ -413,15 +413,15 @@ module.exports = {;
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",;,
 },;
 
-    {;
-      name: "daily-build-test",;
+    {
+  name: "daily-build-test",;
       script: "./scripts/automation/daily-build-test.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "512M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTOMATION_INTERVAL: "3600000", // 1 hour;,
 },;
       cron_restart: "0 * * * *", // Every hour;
@@ -432,15 +432,15 @@ module.exports = {;
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",;,
 },;
 
-    {;
-      name: "security-audit",;
+    {
+  name: "security-audit",;
       script: "./scripts/automation/security-audit.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "512M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTOMATION_INTERVAL: "14400000", // 4 hours;,
 },;
       cron_restart: "0 */4 * * *", // Every 4 hours;
@@ -451,15 +451,15 @@ module.exports = {;
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",;,
 },;
 
-    {;
-      name: "dependency-updates",;
+    {
+  name: "dependency-updates",;
       script: "./scripts/automation/dependency-updates.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "512M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTOMATION_INTERVAL: "21600000", // 6 hours;,
 },;
       cron_restart: "0 */6 * * *", // Every 6 hours;
@@ -470,15 +470,15 @@ module.exports = {;
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",;,
 },;
 
-    {;
-      name: "performance-monitor",;
+    {
+  name: "performance-monitor",;
       script: "./scripts/automation/performance-monitor.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "512M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTOMATION_INTERVAL: "7200000", // 2 hours;,
 },;
       cron_restart: "0 */2 * * *", // Every 2 hours;
@@ -489,15 +489,15 @@ module.exports = {;
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",;,
 },;
 
-    {;
-      name: "quality-checks",;
+    {
+  name: "quality-checks",;
       script: "./scripts/automation/quality-checks.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "512M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTOMATION_INTERVAL: "10800000", // 3 hours;,
 },;
       cron_restart: "0 */3 * * *", // Every 3 hours;
@@ -508,15 +508,15 @@ module.exports = {;
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",;,
 },;
 
-    {;
-      name: "link-checker",;
+    {
+  name: "link-checker",;
       script: "./scripts/automation/link-checker.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "512M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTOMATION_INTERVAL: "1800000", // 30 minutes;,
 },;
       cron_restart: "*/30 * * * *", // Every 30 minutes;
@@ -527,15 +527,15 @@ module.exports = {;
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",;,
 },;
 
-    {;
-      name: "sitemap-runner",;
+    {
+  name: "sitemap-runner",;
       script: "./scripts/automation/sitemap-runner.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "512M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTOMATION_INTERVAL: "21600000", // 6 hours;,
 },;
       cron_restart: "0 */6 * * *", // Every 6 hours;
@@ -547,9 +547,9 @@ module.exports = {;
 },;
   ],;
 
-  deploy: {;
-    production: {;
-      user: "root",;
+  deploy: {
+  production: {
+  user: "root",;
       host: "localhost",;
       ref: "origin/main",;
       repo: "git@github.com:your-username/bolt.new.zion.app.git",;

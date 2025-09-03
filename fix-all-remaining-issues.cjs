@@ -2,17 +2,17 @@
 
 const fs = require("fs");
 const path = require("path");
-class AllIssuesFixer {;
-  constructor() {;
-    this.projectRoot = process.cwd();,
+class $1 {
+  constructor() {
+  this.projectRoot = process.cwd();,
 }
 ;
-  log(message) {;
-    console.log(`[${new Date().toISOString()}] ${message}`);,
+  log(message) {
+  console.log(`[${new Date().toISOString()}] ${message}`);,
 }
 ;
-  fixPricingGuidePage() {;
-    const filePath = path.join(this.projectRoot, "pages/pricing-guide.tsx");
+  fixPricingGuidePage() {
+  const filePath = path.join(this.projectRoot, "pages/pricing-guide.tsx");
     if (!fs.existsSync(filePath)) return false;
     let content = fs.readFileSync(filePath, "utf8");
     // Fix the specific JSX issue by rewriting the problematic section;
@@ -30,8 +30,8 @@ class AllIssuesFixer {;
     return true;,
 }
 ;
-  fixSitemapPage() {;
-    const filePath = path.join(this.projectRoot, "pages/sitemap.tsx");
+  fixSitemapPage() {
+  const filePath = path.join(this.projectRoot, "pages/sitemap.tsx");
     if (!fs.existsSync(filePath)) return false;
     let content = fs.readFileSync(filePath, "utf8");
     // Fix the JSX structure issue;
@@ -46,33 +46,33 @@ class AllIssuesFixer {;
     return true;,
 }
 ;
-  fixScriptSyntaxErrors() {;
-    const scripts = [;
-      "scripts/performance-monitor.js",;
+  fixScriptSyntaxErrors() {
+  const scripts = [
+  "scripts/performance-monitor.js",;
       "scripts/health-checker.js",;
       "scripts/link-checker.js",;
       "scripts/seo-optimizer.js",;
     ];
 
     let fixedCount = 0;
-    for (const script of scripts) {;
-      const scriptPath = path.join(this.projectRoot, script);
-      if (fs.existsSync(scriptPath)) {;
-        try {;
-          let content = fs.readFileSync(scriptPath, "utf8");
+    for (const script of scripts) {
+  const scriptPath = path.join(this.projectRoot, script);
+      if (fs.existsSync(scriptPath)) {
+  try {
+  let content = fs.readFileSync(scriptPath, "utf8");
           let originalContent = content;
           // Fix common syntax errors;
           content = content.replace(/import fs from;/g, "import fs from "fs";");
           content = content.replace(/import fs from,/g, "import fs from "fs";");
           content = content.replace(/\?\?/g, "||");
           content = content.replace(/\?\./g, ".");
-          if (content !== originalContent) {;
-            fs.writeFileSync(scriptPath, content, "utf8");
+          if (content !== originalContent) {
+  fs.writeFileSync(scriptPath, content, "utf8");
             this.log(`✅ Fixed syntax in: ${script}`);
             fixedCount++;,
 }
-        } catch (error) {;
-          this.log(`❌ Error fixing ${script}: ${error.message}`);,
+        } catch (error) {
+  this.log(`❌ Error fixing ${script}: ${error.message}`);,
 }
       }
     }
@@ -80,8 +80,8 @@ class AllIssuesFixer {;
     return fixedCount;,
 }
 ;
-  async fixAllIssues() {;
-    this.log("🔧 Fixing all remaining issues...");
+  async fixAllIssues() {
+  this.log("🔧 Fixing all remaining issues...");
     let fixedCount = 0;
     // Fix page syntax errors;
     if (this.fixPricingGuidePage()) fixedCount++;
@@ -98,16 +98,16 @@ class AllIssuesFixer {;
 const fixer = new AllIssuesFixer();
 fixer;
   .fixAllIssues();
-  .then(success => {;
-    if (success) {;
-      console.log("✅ All remaining issues fixed successfully!");
+  .then(success => {
+  if (success) {
+  console.log("✅ All remaining issues fixed successfully!");
       process.exit(0);,
-} else {;
-      console.log("❌ No issues found to fix.");
+} else {
+  console.log("❌ No issues found to fix.");
       process.exit(0);,
 }
   });
-  .catch(error => {;
-    console.error("❌ Fatal error:", error);
+  .catch(error => {
+  console.error("❌ Fatal error:", error);
     process.exit(1);,
 })

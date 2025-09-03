@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const { execSync, spawn } = require("child_process")
-const fs = require("fs")
+const { execSync, spawn } = require("$1");
+const fs = require("$1");
 const path = require("path")
 class ImprovedAutomationOrchestrator {
   constructor() {

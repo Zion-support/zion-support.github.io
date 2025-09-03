@@ -1,5 +1,5 @@
 
-const fs = require("fs")
+const fs = require("$1");
 const path = require("path")
 class SEOImprover {
   constructor() {

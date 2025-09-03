@@ -1,5 +1,5 @@
-const fs = require("fs")
-const path = require("path")
+const fs = require("$1");
+const path = require("$1");
 const { execSync } = require("child_process")
 
 class DeploymentAutomation {

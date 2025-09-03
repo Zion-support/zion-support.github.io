@@ -13,14 +13,14 @@ const path = require("path");
 const { execSync } = require("child_process");
 const ErrorFixerAutomation = require("./error-fixer-automation.cjs");
 
-class ComprehensiveErrorAutomation {;
-  constructor() {;
-    this.projectRoot = process.cwd();
+class $1 {
+  constructor() {
+  this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, "automation-reports");
     this.logsDir = path.join(this.projectRoot, "logs");
     this.startTime = Date.now();
-    this.stats = {;
-      totalRuns: 0,;
+    this.stats = {
+  totalRuns: 0,;
       successfulRuns: 0,;
       failedRuns: 0,;
       totalFixes: 0,;
@@ -28,11 +28,11 @@ class ComprehensiveErrorAutomation {;
 }
   }
 ;
-  async run() {;
-    console.log(`"🚀 Starting Comprehensive Error Automation...");
+  async run() {
+  console.log(`"🚀 Starting Comprehensive Error Automation...");
 
-    try {;
-      this.ensureDirectories();
+    try {
+  this.ensureDirectories();
       await this.loadStats();
       // Run comprehensive error fixing;
       await this.runErrorFixing();
@@ -68,12 +68,13 @@ class ComprehensiveErrorAutomation {;
       await this.saveStats();
 
       console.log("✅ Comprehensive Error Automation completed successfully!");,
-} catch (error) {  ;,
-} catch (error) {;
-      console.error("❌ Comprehensive Error Automation failed: ", error);
+} catch (error) {
+  ,
+} catch (error) {
+  console.error("❌ Comprehensive Error Automation failed: ", error);
       this.stats.totalRuns++;,
-} catch (error) {  ;
-      console.error("❌ Comprehensive Error Automation failed: ", error);      this.stats.totalRuns++;
+} catch (error) {
+  console.error("❌ Comprehensive Error Automation failed: ", error);      this.stats.totalRuns++;
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
       this.stats.failedRuns++;
       await this.saveStats();
@@ -81,152 +82,151 @@ class ComprehensiveErrorAutomation {;
 }
   }
 ;
-  ensureDirectories() {;
-    ["this.reportsDir", "this.logsDir"].forEach(dir => {;
-      if (!fs.existsSync(dir)) {;
-        fs.mkdirSync(dir, { recursive: true });,
+  ensureDirectories() {
+  ["this.reportsDir", "this.logsDir"].forEach(dir => {
+  if (!fs.existsSync(dir)) {
+  fs.mkdirSync(dir, { recursive: true });,
 }
     });,
 }
 ;
-  async loadStats() {;
-    const statsFile = path.join(this.reportsDir, "automation-stats.json");
-    if (fs.existsSync(statsFile)) {;
-      try {;
-        this.stats = JSON.parse(fs.readFileSync(statsFile, "utf8"));,
-} catch (error) {  ;,
-} catch (error) {;
-        console.warn("Could not load existing stats: ", error.message);,
+  async loadStats() {
+  const statsFile = path.join(this.reportsDir, "automation-stats.json");
+    if (fs.existsSync(statsFile)) {
+  try {
+  this.stats = JSON.parse(fs.readFileSync(statsFile, "utf8"));,
+} catch (error) {
+  ,
+} catch (error) {
+  console.warn("Could not load existing stats: ", error.message);,
 }
-      } catch (error) {  ;
-        console.warn("Could not load existing stats: ", error.message)}
+      } catch (error) {
+  console.warn("Could not load existing stats: ", error.message)}
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
   }
 ;
-  async saveStats() {;
-    const statsFile = path.join(this.reportsDir, "automation-stats.json");
+  async saveStats() {
+  const statsFile = path.join(this.reportsDir, "automation-stats.json");
     fs.writeFileSync(statsFile, JSON.stringify(this.stats, null, 2));,
 }
 ;
-  async runErrorFixing() {;
-    console.log("🔧 Running Error Fixing...");
+  async runErrorFixing() {
+  console.log("🔧 Running Error Fixing...");
 
-    try {;
-      const errorFixer = new ErrorFixerAutomation();
+    try {
+  const errorFixer = new ErrorFixerAutomation();
       await errorFixer.run();
       // Update stats;
       this.stats.totalFixes += errorFixer.fixesApplied.length;
       this.stats.totalErrors += errorFixer.errorsFound.length;,
-} catch (error) {  ;
-
-      // Update stats;
+} catch (error) {
+  // Update stats;
       this.stats.totalFixes += errorFixer.fixesApplied.length;
       this.stats.totalErrors += errorFixer.errorsFound.length;,
-} catch (error) {;
-      await this.logError("Error fixing failed", error);,
+} catch (error) {
+  await this.logError("Error fixing failed", error);,
 }
   }
 ;
-  async runCodeQualityChecks() {;
-    console.log("🔍 Running Code Quality Checks...");
-    try {;
-      // Run ESLint;
+  async runCodeQualityChecks() {
+  console.log("🔍 Running Code Quality Checks...");
+    try {
+  // Run ESLint;
       console.log("  Running ESLint...");
-      execSync("npm run lint", {;
-        cwd: this.projectRoot,;
+      execSync("npm run lint", {
+  cwd: this.projectRoot,;
         stdio: "pipe",;,
 });
 
       // Run TypeScript check;
       console.log("  Running TypeScript check...");
-      execSync("npm run type-check", {;
-        cwd: this.projectRoot,;
+      execSync("npm run type-check", {
+  cwd: this.projectRoot,;
         stdio: "pipe",;,
 });
       // Run Prettier format check;
       console.log("  Running Prettier format check...");
-      execSync("npx prettier --check "src/**/*.{js,jsx,tstsx}", {;
-        cwd: this.projectRoot,;
+      execSync("npx prettier --check "src/**/*.{js,jsx,tstsx}", {
+  cwd: this.projectRoot,;
         stdio: "pipe",;,
 });,
-} catch (error) {  ;,
-} catch (error) {;
-      await this.logError("Code quality checks failed", error);,
+} catch (error) {
+  ,
+} catch (error) {
+  await this.logError("Code quality checks failed", error);,
 }
   }
 ;
-  async runPerformanceOptimizations() {;
-    console.log("⚡ Running Performance Optimizations...");
-    try {;
-      // Bundle analysis;
+  async runPerformanceOptimizations() {
+  console.log("⚡ Running Performance Optimizations...");
+    try {
+  // Bundle analysis;
       console.log("  Analyzing bundle...");
-      execSync("npm run build", {;
-        cwd: this.projectRoot,;
+      execSync("npm run build", {
+  cwd: this.projectRoot,;
         stdio: "pipe",;,
 });
       // Run performance monitoring;
       console.log("  Running performance monitoring...");
       // Add performance monitoring logic here;,
-} catch (error) {  ;
-
-      // Run performance monitoring;
+} catch (error) {
+  // Run performance monitoring;
       console.log("  Running performance monitoring...");
       // Add performance monitoring logic here;,
-} catch (error) {;
-      await this.logError("Performance optimizations failed", error);,
+} catch (error) {
+  await this.logError("Performance optimizations failed", error);,
 }
   }
 ;
-  async runSecurityChecks() {;
-    console.log("🔒 Running Security Checks...");
-    try {;
-      // Run npm audit;
+  async runSecurityChecks() {
+  console.log("🔒 Running Security Checks...");
+    try {
+  // Run npm audit;
       console.log("  Running npm audit...");
-      execSync("npm audit", {;
-        cwd: this.projectRoot,;
+      execSync("npm audit", {
+  cwd: this.projectRoot,;
         stdio: "pipe",;,
 });
       // Run security scanning;
       console.log("  Running security scanning...");
       // Add security scanning logic here;,
-} catch (error) {  ;
-
-      // Run security scanning;
+} catch (error) {
+  // Run security scanning;
       console.log("  Running security scanning...");
       // Add security scanning logic here;,
-} catch (error) {;
-      await this.logError("Security checks failed", error);,
+} catch (error) {
+  await this.logError("Security checks failed", error);,
 }
   }
 ;
-  async runDependencyUpdates() {;
-    console.log("📦 Running Dependency Updates...");
-    try {;
-      // Check for outdated packages;
+  async runDependencyUpdates() {
+  console.log("📦 Running Dependency Updates...");
+    try {
+  // Check for outdated packages;
       console.log("  Checking for outdated packages...");
-      execSync("npm outdated", {;
-        cwd: this.projectRoot,;
+      execSync("npm outdated", {
+  cwd: this.projectRoot,;
         stdio: "pipe",;,
 });
       // Update dependencies if needed;
       console.log("  Updating dependencies...");
       // Add dependency update logic here;,
-} catch (error) {  ;
-      await this.logError(`Dependency updates failed`, error);,
+} catch (error) {
+  await this.logError(`Dependency updates failed`, error);,
 }
   }
 ;
-  async generateComprehensiveReport() {;
-    console.log(`📊 Generating Comprehensive Report...`);
+  async generateComprehensiveReport() {
+  console.log(`📊 Generating Comprehensive Report...`);
     const endTime = Date.now();
     const duration = endTime - this.startTime;
-    const report = {;
-      timestamp: new Date().toISOString(),;
+    const report = {
+  timestamp: new Date().toISOString(),;
       duration: ${duration}ms`,;
       stats: this.stats,;
-      summary: {;
-        successRate:;
+      summary: {
+  successRate:;
           this.stats.totalRuns > 0;
             ? Math.round(;
                 (this.stats.successfulRuns / this.stats.totalRuns) * 100;
@@ -243,23 +243,23 @@ class ComprehensiveErrorAutomation {;
       // Update dependencies if needed;
       console.log("  Updating dependencies...");
       // Add dependency update logic here;,
-} catch (error) {;
-      await this.logError("Dependency updates failed", error);,
+} catch (error) {
+  await this.logError("Dependency updates failed", error);,
 }
   }
 ;
-  async generateComprehensiveReport() {;
-    console.log("📊 Generating Comprehensive Report...");
+  async generateComprehensiveReport() {
+  console.log("📊 Generating Comprehensive Report...");
 
     const endTime = Date.now();
     const duration = endTime - this.startTime;
 
-    const report = {;
-      timestamp: new Date().toISOString(),;
+    const report = {
+  timestamp: new Date().toISOString(),;
       duration: ${duration}ms",;
       stats: this.stats,;
-      summary: {;
-        successRate:;
+      summary: {
+  successRate:;
           this.stats.totalRuns > 0;
             ? Math.round(;
                 (this.stats.successfulRuns / this.stats.totalRuns) * 100;
@@ -281,29 +281,29 @@ class ComprehensiveErrorAutomation {;
 console.log(📄 Comprehensive report saved to: ${reportFile}``);,
 }
 ;
-  generateRecommendations() {;
-    const recommendations = [];
-    if (this.stats.totalErrors > 100) {;
-      recommendations.push({;
-        priority: `high`,;
+  generateRecommendations() {
+  const recommendations = [];
+    if (this.stats.totalErrors > 100) {
+  recommendations.push({
+  priority: `high`,;
         category: `code_quality`,;
         message: High number of errors detected. Consider code review and refactoring.",;
         action: "Review and fix critical errors first, then address warnings.",;,
 });,
 }
 ;
-    if (this.stats.failedRuns > 0) {;
-      recommendations.push({;
-        priority: "medium",;
+    if (this.stats.failedRuns > 0) {
+  recommendations.push({
+  priority: "medium",;
         category: "automation",;
         message: "Some automation runs have failed. Check logs for details.",;
         action: "Review automation logs and fix underlying issues.",;,
 });,
 }
 ;
-    if (this.stats.totalFixes === 0) {;
-      recommendations.push({;
-        priority: "low",;
+    if (this.stats.totalFixes === 0) {
+  recommendations.push({
+  priority: "low",;
         category: "maintenance",;
         message: "No fixes applied. Codebase may be in good condition.",;
         action: "Continue monitoring for new issues.",;,
@@ -313,9 +313,9 @@ console.log(📄 Comprehensive report saved to: ${reportFile}``);,
     return recommendations;,
 }
 ;
-  async logError(message, error) {;
-    const errorLog = {;
-      timestamp: new Date().toISOString(),;
+  async logError(message, error) {
+  const errorLog = {
+  timestamp: new Date().toISOString(),;
       message,;
       error: error.message,;
       stack: error.stack,;,
@@ -327,10 +327,9 @@ console.error(`❌ ${message}:`, error.message);,
 }
 ;
 // Run the automation;
-if (require.main === module) {;
-
-// Run the automation;
-if (require.main === module) {;
+if (require.main === module) {
+  // Run the automation;
+if (require.main === module) {
   const automation = new ComprehensiveErrorAutomation();
   automation.run().catch(console.error);,
 }

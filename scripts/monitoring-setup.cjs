@@ -1,5 +1,5 @@
 
-const fs = require("fs")
+const fs = require("$1");
 const path = require("path")
 class MonitoringSetup {
   constructor() {
@@ -53,7 +53,7 @@ export default analytics
   async setupHealthChecks() {
     console.log("🏥 Setting up health checks...")
     const healthCheckScript = `
-const express = require("express")
+const express = require("$1");
 const app = express()
 app.get("/health", (req, res) => {
   res.status(200).json({

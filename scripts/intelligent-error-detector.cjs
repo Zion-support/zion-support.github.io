@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const fs = require("fs")
-const path = require("path")
+const fs = require("$1");
+const path = require("$1");
 const { execSync } = require("child_process")
 class IntelligentErrorDetector {
   constructor() {
@@ -28,15 +28,15 @@ class IntelligentErrorDetector {
       const relativePath = path.relative(this.projectRoot, filePath)
       const issues = []
       // Check for common syntax errors
-      if (content.includes(";;")) {
+      if (content.includes(";")) {
         issues.push({
           type: "error",
           message: "Double semicolon detected",
-          line: this.findLineNumber(content, ";;"),
+          line: this.findLineNumber(content, ";"),
 }),
 }
 
-      if (content.includes("import") && content.includes(";;")) {
+      if (content.includes("import") && content.includes(";")) {
         issues.push({
           type: "error",
           message: "Malformed import statement",

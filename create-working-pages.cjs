@@ -2,68 +2,68 @@
 
 const fs = require("fs");
 const path = require("path");
-class WorkingPagesCreator {;
-  constructor() {;
-    this.projectRoot = process.cwd();,
+class $1 {
+  constructor() {
+  this.projectRoot = process.cwd();,
 }
 ;
-  log(message) {;
-    console.log(`[${new Date().toISOString()}] ${message}`);,
+  log(message) {
+  console.log(`[${new Date().toISOString()}] ${message}`);,
 }
 ;
-  createWorkingPricingGuide() {;
-    const filePath = path.join(this.projectRoot, "pages/pricing-guide.tsx");
+  createWorkingPricingGuide() {
+  const filePath = path.join(this.projectRoot, "pages/pricing-guide.tsx");
     const content = `import React from "react";
 import Head from "next/head";
 import { motion  } from "framer-motion";
 import { CheckCircle, Star, Zap, Shield, Globe, TrendingUp, Brain, Cloud, Network, Phone, Mail  } from "lucide-react";
 import { Layout  } from "../components/Layout";
-export default function PricingGuide() {;
-  const costSavingTips = [;
-    {;
-      question: "Can I change my plan at any time?", ;
+export default function $1() {
+  const costSavingTips = [
+  {
+  question: "Can I change my plan at any time?", ;
       answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we\"ll prorate any billing differences.";,
 },;
-    {;
-      question: "Is there a free trial available?", ;
+    {
+  question: "Is there a free trial available?", ;
       answer: "Yes, we offer a 14-day free trial for all plans. No credit card required to start your trial.";,
 },;
-    {;
-      question: "What payment methods do you accept?",;
+    {
+  question: "What payment methods do you accept?",;
       answer: "We accept all major credit cards, PayPal, and bank transfers for annual subscriptions.";,
 },;
-    {;
-      question: "Do you offer discounts for annual subscriptions?",;
+    {
+  question: "Do you offer discounts for annual subscriptions?",;
       answer: "Yes, we offer up to 20% discount for annual subscriptions compared to monthly billing.";,
 }
   ];
 
-  const pricingFactors = [;
-    {;
-      factor: "Project Complexity",;
+  const pricingFactors = [
+  {
+  factor: "Project Complexity",;
       description: "The complexity of your project directly impacts development time and resources required.",;
-      details: [;
-        "Simple websites: 1-2 weeks",;
+      details: [
+  "Simple websites: 1-2 weeks",;
         "E-commerce platforms: 4-8 weeks",;
         "Custom applications: 8-16 weeks",;
         "Enterprise solutions: 16+ weeks";
       ];,
 },;
-    {;
-      factor: "Team Size",;
+    {
+  factor: "Team Size",;
       description: "The number of developers and specialists needed for your project.",;
-      details: [;
-        "Solo developer: $75-125/hour",;
+      details: [
+  "Solo developer: $75-125/hour",;
         "Small team (2-3): $100-150/hour",;
         "Medium team (4-6): $125-175/hour",;
         "Large team (7+): $150-200/hour";
       ];,
 },;
-    {;
-      factor: "Technology Stack",;
+    {
+  factor: "Technology Stack",;
       description: "The technologies and frameworks used in your project.",;
-      details: [;
-        "Standard web technologies: Base rate",;
+      details: [
+  "Standard web technologies: Base rate",;
         "Modern frameworks (React, Vue): +15%",;
         "Mobile development: +25%",;
         "AI/ML integration: +50%";
@@ -239,47 +239,47 @@ export default function PricingGuide() {;
     return true;,
 }
 ;
-  createWorkingSitemap() {;
-    const filePath = path.join(this.projectRoot, "pages/sitemap.tsx");
+  createWorkingSitemap() {
+  const filePath = path.join(this.projectRoot, "pages/sitemap.tsx");
     const content = `import React from "react";
 import Head from "next/head";
 import { motion  } from "framer-motion";
 import { Sitemap, ExternalLink, ArrowRight  } from "lucide-react";
 import { Layout  } from "../components/Layout";
 import { Card  } from "../components/ui/Card";
-export default function SitemapPage() {;
-  const siteStructure = [;
-    {;
-      title: "Main Pages",;
-      links: [;
-        { name: "Home", url: "/", description: "Main landing page" },;
+export default function SitemapPage() {
+  const siteStructure = [
+  {
+  title: "Main Pages",;
+      links: [
+  { name: "Home", url: "/", description: "Main landing page" },;
         { name: "About", url: "/about", description: "Learn about our company" },;
         { name: "Services", url: "/services", description: "Our technology services" },;
         { name: "Contact", url: "/contact", description: "Get in touch with us" }
       ];,
 },;
-    {;
-      title: "Services",;
-      links: [;
-        { name: "AI Development", url: "/ai-services", description: "Artificial Intelligence solutions" },;
+    {
+  title: "Services",;
+      links: [
+  { name: "AI Development", url: "/ai-services", description: "Artificial Intelligence solutions" },;
         { name: "Web Development", url: "/web-development", description: "Custom web applications" },;
         { name: "Cloud Services", url: "/cloud-services", description: "Cloud infrastructure and migration" },;
         { name: "Mobile Development", url: "/mobile-development", description: "iOS and Android apps" }
       ];,
 },;
-    {;
-      title: "Resources",;
-      links: [;
-        { name: "Blog", url: "/blog", description: "Technology insights and updates" },;
+    {
+  title: "Resources",;
+      links: [
+  { name: "Blog", url: "/blog", description: "Technology insights and updates" },;
         { name: "Case Studies", url: "/case-studies", description: "Success stories and examples" },;
         { name: "Documentation", url: "/docs", description: "Technical documentation" },;
         { name: "Support", url: "/support", description: "Help and support center" }
       ];,
 },;
-    {;
-      title: "Company",;
-      links: [;
-        { name: "Careers", url: "/careers", description: "Join our team" },;
+    {
+  title: "Company",;
+      links: [
+  { name: "Careers", url: "/careers", description: "Join our team" },;
         { name: "Privacy Policy", url: "/privacy", description: "Privacy and data protection" },;
         { name: "Terms of Service", url: "/terms", description: "Terms and conditions" },;
         { name: "Sitemap", url: "/sitemap", description: "Complete site navigation" }
@@ -365,8 +365,8 @@ export default function SitemapPage() {;
     return true;,
 }
 ;
-  async createWorkingPages() {;
-    this.log("🔧 Creating working pages...");
+  async createWorkingPages() {
+  this.log("🔧 Creating working pages...");
     let createdCount = 0;
     if (this.createWorkingPricingGuide()) createdCount++;
     if (this.createWorkingSitemap()) createdCount++;
@@ -379,16 +379,16 @@ export default function SitemapPage() {;
 const creator = new WorkingPagesCreator();
 creator;
   .createWorkingPages();
-  .then(success => {;
-    if (success) {;
-      console.log("✅ Working pages created successfully!");
+  .then(success => {
+  if (success) {
+  console.log("✅ Working pages created successfully!");
       process.exit(0);,
-} else {;
-      console.log("❌ No pages were created.");
+} else {
+  console.log("❌ No pages were created.");
       process.exit(0);,
 }
   });
-  .catch(error => {;
-    console.error("❌ Fatal error:", error);
+  .catch(error => {
+  console.error("❌ Fatal error:", error);
     process.exit(1);,
 })

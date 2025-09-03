@@ -1,13 +1,13 @@
 
 // Performance optimizations for Zion Tech Group;
-const performanceOptimizations = {;
+const performanceOptimizations = {
   // Lazy load images;
-  lazyLoadImages: () => {;
-    const images = document.querySelectorAll("img[data-src]");
-    const imageObserver = new IntersectionObserver((entries) => {;
-      entries.forEach(entry => {;
-        if (entry.isIntersecting) {;
-          const img = entry.target;
+  lazyLoadImages: () => {
+  const images = document.querySelectorAll("img[data-src]");
+    const imageObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+  if (entry.isIntersecting) {
+  const img = entry.target;
           img.src = img.dataset.src;
           img.removeAttribute("data-src");
           imageObserver.unobserve(img);,
@@ -19,14 +19,14 @@ const performanceOptimizations = {;
 },;
 
   // Preload critical resources;
-  preloadCriticalResources: () => {;
-    const criticalResources = [;
-      "/fonts/inter.woff2",;
+  preloadCriticalResources: () => {
+  const criticalResources = [
+  "/fonts/inter.woff2",;
       "/css/critical.css";
     ];
 ;
-    criticalResources.forEach(resource => {;
-      const link = document.createElement("link");
+    criticalResources.forEach(resource => {
+  const link = document.createElement("link");
       link.rel = "preload";
       link.href = resource;
       link.as = resource.endsWith(".css") ? "style" : "font";
@@ -35,12 +35,12 @@ const performanceOptimizations = {;
 },;
 
   // Optimize scroll performance;
-  optimizeScroll: () => {;
-    let ticking = false;
-    const handleScroll = () => {;
-      if (!ticking) {;
-        requestAnimationFrame(() => {;
-          // Scroll handling logic here;
+  optimizeScroll: () => {
+  let ticking = false;
+    const handleScroll = () => {
+  if (!ticking) {
+  requestAnimationFrame(() => {
+  // Scroll handling logic here;
           ticking = false;,
 });
         ticking = true;,
@@ -51,16 +51,16 @@ const performanceOptimizations = {;
 },;
 
   // Initialize all optimizations;
-  init: () => {;
-    this.lazyLoadImages();
+  init: () => {
+  this.lazyLoadImages();
     this.preloadCriticalResources();
     this.optimizeScroll();,
 }
 };
 ;
 // Auto-initialize when DOM is ready;
-if (document.readyState === "loading") {;
+if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", performanceOptimizations.init);,
-} else {;
+} else {
   performanceOptimizations.init();,
 }

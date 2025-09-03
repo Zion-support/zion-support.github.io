@@ -9,7 +9,7 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
     this.reportFile = path.join(process.cwd(), "performance-report.json");"}"
   async collectSystemMetrics() {
     try {
-const fs = require("fs")
+const fs = require("$1");
 const path = require("path")
 class PerformanceMonitor {
   constructor() {

@@ -19,7 +19,7 @@ const path = require('path');
 const crypto = require('crypto');
 
 class AdvancedDevelopmentWorkflow {
-    constructor() {
+  constructor() {
         this.projectRoot = process.cwd();
         this.logFile = path.join(this.projectRoot, 'logs', 'advanced-development-workflow.log');
         this.config = this.loadConfig();

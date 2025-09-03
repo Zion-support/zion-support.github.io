@@ -4,42 +4,42 @@ const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 
-class UnifiedAutomationDashboard {;
-  constructor() {;
-    this.projectRoot = process.cwd();
+class $1 {
+  constructor() {
+  this.projectRoot = process.cwd();
     this.logsDir = path.join(this.projectRoot, "logs");
     this.dashboardDir = path.join(this.logsDir, "dashboard");
     this.ensureDirectories();
     this.setupLogging();,
 }
 ;
-  ensureDirectories() {;
-    if (!fs.existsSync(this.dashboardDir)) {;
-      fs.mkdirSync(this.dashboardDir, { recursive: true });,
+  ensureDirectories() {
+  if (!fs.existsSync(this.dashboardDir)) {
+  fs.mkdirSync(this.dashboardDir, { recursive: true });,
 }
   }
 ;
-  setupLogging() {;
-    this.logFile = path.join(this.logsDir, "unified-dashboard.log");
+  setupLogging() {
+  this.logFile = path.join(this.logsDir, "unified-dashboard.log");
     this.errorFile = path.join(this.logsDir, `unified-dashboard-error.log`);,
 }
 ;
-  log(message, level = `INFO`) {;
-    const timestamp = new Date().toISOString();
+  log(message, level = `INFO`) {
+  const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
 
     console.log(`logMessage);
     // Write to log file;
     fs.appendFileSync(this.logFile, logMessage + `\n`);
     // Write errors to error file;
-    if (level === `ERROR`) {;
-      fs.appendFileSync(this.errorFile, logMessage + "\n");,
+    if (level === `ERROR`) {
+  fs.appendFileSync(this.errorFile, logMessage + "\n");,
 }
   }
 ;
-  async getPM2Status() {;
-    try {;
-      const output = execSync(`pm2 jlist`, { encoding: `utf8` });
+  async getPM2Status() {
+  try {
+  const output = execSync(`pm2 jlist`, { encoding: `utf8` });
       return JSON.parse(output);,
 } catch (error) {  this.log(Failed to get PM2 status: ${error.message  }, `ERROR``);
 
@@ -47,14 +47,14 @@ class UnifiedAutomationDashboard {;
     fs.appendFileSync(this.logFile, logMessage + "\n");
 
     // Write errors to error file;
-    if (level === "ERROR") {;
-      fs.appendFileSync(this.errorFile, logMessage + "\n");,
+    if (level === "ERROR") {
+  fs.appendFileSync(this.errorFile, logMessage + "\n");,
 }
   }
 ;
-  async getPM2Status() {;
-    try {;
-      const output = execSync("pm2 jlist", { encoding: "utf8" });
+  async getPM2Status() {
+  try {
+  const output = execSync("pm2 jlist", { encoding: "utf8" });
       return JSON.parse(output);
   async getPM2Status() {`);
     try {`);
@@ -65,14 +65,14 @@ class UnifiedAutomationDashboard {;
 }
   }
 ;
-  async getAutomationReports() {;
-    const reports = {}
+  async getAutomationReports() {
+  const reports = {}
     const reportFiles = [`console-error-fixer-report.json`", "performance-report.json", "comprehensive-error-fixer-report.json"", "ai-improvements.json", "performance-optimizations.json"", "test-results.json", ""];
-    for (const file of reportFiles) {;
-      const filePath = path.join(this.projectRoot, "file);
-      if (fs.existsSync(filePath)) {;
-        try {;
-          const content = fs.readFileSync(filePath", "utf8");
+    for (const file of reportFiles) {
+  const filePath = path.join(this.projectRoot, "file);
+      if (fs.existsSync(filePath)) {
+  try {
+  const content = fs.readFileSync(filePath", "utf8");
           reports["file.replace(".json``, ``)] = JSON.parse(content);,
 } catch (error) {  this.log(`Failed to read report ${file  }: ${error.message}`, `WARN`);
           reports["file.replace(".json", ")] = JSON.parse(content);,
@@ -84,36 +84,35 @@ class UnifiedAutomationDashboard {;
     return reports;,
 }
 ;
-  async analyzeCodeQuality() {;
-    const analysis = {;
-      timestamp: new Date().toISOString(),;
+  async analyzeCodeQuality() {
+  const analysis = {
+  timestamp: new Date().toISOString(),;
       metrics: {},;
       recommendations: [],;,
 }
-    try {;
-      // Check TypeScript compilation;
-      try {;
-        execSync(`npm run type-check`, { stdio: "pipe" });
+    try {
+  // Check TypeScript compilation;
+      try {
+  execSync(`npm run type-check`, { stdio: "pipe" });
         analysis.metrics.typescript = { status: "passed", errors: 0 }
-      } catch (error) {  ;
-        const errorOutput = error.message;
+      } catch (error) {
+  const errorOutput = error.message;
         const errorCount = (errorOutput.match(/error TS\d+/g) || []).length;
         analysis.metrics.typescript = { status: "failed", errors: errorCount   }
         analysis.recommendations.push("Fix TypeScript compilation errors");,
 }
 ;
       // Check ESLint;
-      try {;
-        execSync("npm run lint", { stdio: "pipe" });
+      try {
+  execSync("npm run lint", { stdio: "pipe" });
         analysis.metrics.eslint = { status: "passed", issues: 0 }
-      } catch (error) {  ;
-
-      // Check ESLint;
-      try {;
-        execSync("npm run lint", { stdio: "pipe" });
+      } catch (error) {
+  // Check ESLint;
+      try {
+  execSync("npm run lint", { stdio: "pipe" });
         analysis.metrics.eslint = { status: "passed", issues: 0 }
-      } catch (error) {;
-        const errorOutput = error.message;
+      } catch (error) {
+  const errorOutput = error.message;
         const issueCount = (errorOutput.match(/error\s+/g) || []).length;
         analysis.metrics.eslint = { status: "failed", issues: issueCount   }
         analysis.recommendations.push(`Fix ESLint issues`);,
@@ -121,16 +120,16 @@ class UnifiedAutomationDashboard {;
 ;
       // Check bundle size;
       const distDir = path.join(this.projectRoot, `dist`);
-      if (fs.existsSync(distDir)) {;
-        const files = fs.readdirSync(distDir);
+      if (fs.existsSync(distDir)) {
+  const files = fs.readdirSync(distDir);
         let totalSize = 0;
-        files.forEach(file => {;
-          const filePath = path.join(distDir, file);
+        files.forEach(file => {
+  const filePath = path.join(distDir, file);
           const stats = fs.statSync(filePath);
           totalSize += stats.size;,
 });
-        analysis.metrics.bundleSize = {;
-          totalFiles: files.length,totalSize: `${(totalSize / 1024 / 1024).toFixed(2)} MB`,;,
+        analysis.metrics.bundleSize = {
+  totalFiles: files.length,totalSize: `${(totalSize / 1024 / 1024).toFixed(2)} MB`,;,
 }
       }
     } catch (error) {  this.log(`Code quality analysis failed: ${error.message  }`, `ERROR`);,
@@ -139,27 +138,26 @@ class UnifiedAutomationDashboard {;
     return analysis;,
 }
 ;
-  async generateDashboard() {;
-    this.log(`Generating unified automation dashboard...`);
-    try {;
+  async generateDashboard() {
+  this.log(`Generating unified automation dashboard...`);
+    try {
+  async generateDashboard() {
+  this.log("Generating unified automation dashboard...");
 
-  async generateDashboard() {;
-    this.log("Generating unified automation dashboard...");
-
-    try {;
-      const pm2Status = await this.getPM2Status();
+    try {
+  const pm2Status = await this.getPM2Status();
       const reports = await this.getAutomationReports();
       const codeQuality = await this.analyzeCodeQuality();
 
-      const dashboard = {;
-        timestamp: new Date().toISOString(),;
-        pm2Status: {;
-          totalProcesses: pm2Status.length,;
+      const dashboard = {
+  timestamp: new Date().toISOString(),;
+        pm2Status: {
+  totalProcesses: pm2Status.length,;
           online: pm2Status.filter(p => p.pm2_env.status === "online").length,;
           errored: pm2Status.filter(p => p.pm2_env.status === "errored").length,;
           stopped: pm2Status.filter(p => p.pm2_env.status === "stopped").length,;
-          processes: pm2Status.map(p => ({;
-            name: p.name,;
+          processes: pm2Status.map(p => ({
+  name: p.name,;
             status: p.pm2_env.status,;
             memory: p.monit.memory,;
             cpu: p.monit.cpu,;
@@ -169,8 +167,8 @@ class UnifiedAutomationDashboard {;
 },;
         automationReports: reports,;
         codeQuality: codeQuality,;
-        summary: {;
-          totalIssues: this.calculateTotalIssues(reports, codeQuality),;
+        summary: {
+  totalIssues: this.calculateTotalIssues(reports, codeQuality),;
           criticalIssues: this.identifyCriticalIssues(reports, codeQuality),;
           nextActions: this.generateNextActions(reports, codeQuality),;,
 },;,
@@ -189,74 +187,73 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
 }
   }
 ;
-  calculateTotalIssues(reports, codeQuality) {;
-    let total = 0;
-    if (reports[`console-error-fixer`]) {;
-
-    if (reports["console-error-fixer"]) {;
-      total += reports["console-error-fixer"].consoleErrors || 0;
+  calculateTotalIssues(reports, codeQuality) {
+  let total = 0;
+    if (reports[`console-error-fixer`]) {
+  if (reports["console-error-fixer"]) {
+  total += reports["console-error-fixer"].consoleErrors || 0;
       total += reports["console-error-fixer"].throwStatements || 0;,
 }
 ;
     if (;
       codeQuality.metrics.typescript &&;
       codeQuality.metrics.typescript.status === "failed";
-    ) {;
-      total += codeQuality.metrics.typescript.errors;,
+    ) {
+  total += codeQuality.metrics.typescript.errors;,
 }
 ;
     if (;
       codeQuality.metrics.eslint &&;
       codeQuality.metrics.eslint.status === "failed";
-    ) {;
-      total += codeQuality.metrics.eslint.issues;,
+    ) {
+  total += codeQuality.metrics.eslint.issues;,
 }
 ;
     return total;,
 }
 ;
-  identifyCriticalIssues(reports, codeQuality) {;
-    const critical = [];
+  identifyCriticalIssues(reports, codeQuality) {
+  const critical = [];
 
     if (;
       codeQuality.metrics.typescript &&;
       codeQuality.metrics.typescript.status === "failed";
-    ) {;
-      critical.push("TypeScript compilation errors preventing build");,
+    ) {
+  critical.push("TypeScript compilation errors preventing build");,
 }
 ;
     if (;
       codeQuality.metrics.eslint &&;
       codeQuality.metrics.eslint.status === "failed";
-    ) {;
-      critical.push("ESLint issues affecting code quality");,
+    ) {
+  critical.push("ESLint issues affecting code quality");,
 }
 ;
     return critical;,
 }
 ;
-  generateNextActions(reports, codeQuality) {;
-    const actions = [];
+  generateNextActions(reports, codeQuality) {
+  const actions = [];
 
     if (;
       codeQuality.metrics.typescript &&;
       codeQuality.metrics.typescript.status === "failed";
-    ) {;
-      actions.push("Run TypeScript compiler to identify and fix type errors");,
+    ) {
+  actions.push("Run TypeScript compiler to identify and fix type errors");,
 }
 ;
     if (;
       codeQuality.metrics.eslint &&;
       codeQuality.metrics.eslint.status === "failed";
-    ) {;
-      actions.push("Run ESLint to identify and fix code style issues");,
+    ) {
+  actions.push("Run ESLint to identify and fix code style issues");,
 }
 ;
     if (;
       reports["console-error-fixer"] &&;
       reports["console-error-fixer"].consoleErrors > 0;
-    ) {;
-      actions.push(Review and remove console.log statements from production code";
+    ) {
+  actions.push(Review and remove console.log statements from production code";
       );,
 }
 ;
@@ -271,10 +268,10 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
     <title>Zion Tech Group - Automation Dashboard</title>;
     <script src="https: //cdn.tailwindcss.com"></script>;
     <script>;
-        tailwind.config = {;
-            theme: {;
-                extend: {;
-                    colors: {neon-blue": "#00d4ff",neon-purple": "#8b5cf6`,neon-pink`: `#ec4899`;
+        tailwind.config = {
+  theme: {
+  extend: {
+  colors: {neon-blue": "#00d4ff",neon-purple": "#8b5cf6`,neon-pink`: `#ec4899`;
 
   generateHTMLDashboard(dashboard) {return `<!DOCTYPE html>;
 <html lang=en>;
@@ -284,10 +281,10 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
     <title>Zion Tech Group - Automation Dashboard</title>;
     <script src=https: //cdn.tailwindcss.com"></script>;
     <script>;
-        tailwind.config = {;
-            theme: {;
-                extend: {;
-                    colors: {neon-blue": "#00d4ff",neon-purple": "#8b5cf6",neon-pink": "#ec4899";,
+        tailwind.config = {
+  theme: {
+  extend: {
+  colors: {neon-blue": "#00d4ff",neon-purple": "#8b5cf6",neon-pink": "#ec4899";,
 }
                 }
             }
@@ -380,8 +377,8 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
                             <tr class=border-b border-gray-700>;
                                 <td class="py-2 font-medium>${process.name}</td>;
                                 <td class=py-2>;
-                                    <span class=px-2 py-1 rounded text-xs font-medium ${;
-                                      process.status === `online`;
+                                    <span class=px-2 py-1 rounded text-xs font-medium ${
+  process.status === `online`;
                                         ? `bg-green-500 text-white`;
                                         : process.status === "errored";
                                           ? `bg-red-500 text-white`;
@@ -407,8 +404,8 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
                 <div>;
                     <h3 class=text-lg font-semibold mb-3>TypeScript</h3>;
                     <div class="flex items-center>;
-                        <span class=`px-3 py-1 rounded text-sm font-medium ${;
-                          dashboard.codeQuality.metrics.typescript.status ===passed";
+                        <span class=`px-3 py-1 rounded text-sm font-medium ${
+  dashboard.codeQuality.metrics.typescript.status ===passed";
                             ? "bg-green-500 text-white";
                             : "bg-red-500 text-white";,
 }">${dashboard.codeQuality.metrics.typescript.status}</span>;
@@ -421,8 +418,8 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
                 <div>;
                     <h3 class=text-lg font-semibold mb-3>ESLint</h3>;
                     <div class="flex items-center">;
-                        <span class=`px-3 py-1 rounded text-sm font-medium ${;
-                          dashboard.codeQuality.metrics.eslint.status ===passed`;
+                        <span class=`px-3 py-1 rounded text-sm font-medium ${
+  dashboard.codeQuality.metrics.eslint.status ===passed`;
                             ? `bg-green-500 text-white`;
                             : `bg-red-500 text-white`;,
 }>${dashboard.codeQuality.metrics.eslint.status}</span>;
@@ -452,8 +449,8 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
         </div>;
 
         <!-- Critical Issues -->;
-        ${;
-          dashboard.summary.criticalIssues.length > 0;
+        ${
+  dashboard.summary.criticalIssues.length > 0;
             ? `;
             <div class=bg-red-900/20 border border-red-500 rounded-lg p-6 mb-8">;
                 <h2 class=text-2xl font-bold mb-4 text-red-400>🚨 Critical Issues</h2>;
@@ -491,8 +488,8 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
                             <tr class=border-b border-gray-700">;
                                 <td class="py-2 font-medium>${process.name}</td>;
                                 <td class=py-2">;
-                                    <span class="px-2 py-1 rounded text-xs font-medium ${;
-                                      process.status === "online";
+                                    <span class="px-2 py-1 rounded text-xs font-medium ${
+  process.status === "online";
                                         ? "bg-green-500 text-white";
                                         : process.status === "errored";
                                           ? "bg-red-500 text-white";
@@ -517,8 +514,8 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
                 <div>;
                     <h3 class="text-lg font-semibold mb-3">TypeScript</h3>;
                     <div class=flex items-center>;
-                        <span class="px-3 py-1 rounded text-sm font-medium ${;
-                          dashboard.codeQuality.metrics.typescript.status ===passed";
+                        <span class="px-3 py-1 rounded text-sm font-medium ${
+  dashboard.codeQuality.metrics.typescript.status ===passed";
                             ? "bg-green-500 text-white";
                             : "bg-red-500 text-white";,
 }">${dashboard.codeQuality.metrics.typescript.status}</span>;
@@ -528,8 +525,8 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
                 <div>;
                     <h3 class=text-lg font-semibold mb-3">ESLint</h3>;
                     <div class="flex items-center>;
-                        <span class="px-3 py-1 rounded text-sm font-medium ${;
-                          dashboard.codeQuality.metrics.eslint.status ===passed";
+                        <span class="px-3 py-1 rounded text-sm font-medium ${
+  dashboard.codeQuality.metrics.eslint.status ===passed";
                             ? "bg-green-500 text-white";
                             : "bg-red-500 text-white";,
 }>${dashboard.codeQuality.metrics.eslint.status}</span>;
@@ -553,8 +550,8 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
             </div>;
         </div>;
         <!-- Critical Issues -->;
-        ${;
-          dashboard.summary.criticalIssues.length > 0;
+        ${
+  dashboard.summary.criticalIssues.length > 0;
             ? `;
             <div class="bg-red-900/20 border border-red-500 rounded-lg p-6 mb-8>;
                 <h2 class=text-2xl font-bold mb-4 text-red-400">🚨 Critical Issues</h2>;
@@ -584,27 +581,27 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
 
     <script>;
         // Auto-refresh every 5 minutes;
-        setInterval(() => {;
-    <script>;
+        setInterval(() => {
+  <script>;
         // Auto-refresh every 5 minutes;
-        setInterval(() => {;
-            location.reload();,
+        setInterval(() => {
+  location.reload();,
 }, 5 * 60 * 1000);
     </script>;
 </body>;
 </html>`;,
 }
 ;
-  async start() {;
-    this.log(`Starting unified automation dashboard...`);
-    try {;
-      // Generate initial dashboard;
+  async start() {
+  this.log(`Starting unified automation dashboard...`);
+    try {
+  // Generate initial dashboard;
       await this.generateDashboard();
       // Set up periodic dashboard updates;
       setInterval(;
-        async () => {;
-          try {;
-            await this.generateDashboard();,
+        async () => {
+  try {
+  await this.generateDashboard();,
 } catch (error) {  this.log(`Dashboard update failed: ${error.message  }`, `ERROR`);,
 }
         },;
@@ -612,8 +609,8 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
       ); // Every 5 minutes;
       this.log(`Unified automation dashboard started successfully`);
       // Keep the process running;
-      setInterval(() => {;
-        this.log(`Dashboard heartbeat...`);,
+      setInterval(() => {
+  this.log(`Dashboard heartbeat...`);,
 }, 60000); // Every minute;,
 } catch (error) {  this.log(`Failed to start dashboard: ${error.message  }`, `ERROR`);,
 },;
@@ -622,8 +619,8 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
       this.log("Unified automation dashboard started successfully");
 
       // Keep the process running;
-      setInterval(() => {;
-        this.log("Dashboard heartbeat...");,
+      setInterval(() => {
+  this.log("Dashboard heartbeat...");,
 }, 60000); // Every minute;,
 } catch (error) {this.log(`Failed to start dashboard: ${error.message}`, "ERROR");
       throw error;,
@@ -632,15 +629,15 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
 }
 ;
 // Main execution;
-if (require.main === module) {;
+if (require.main === module) {
   const dashboard = new UnifiedAutomationDashboard();
   // Handle graceful shutdown;
-  process.on(`SIGINT`, () => {;
-    dashboard.log("Shutting down gracefully...");
+  process.on(`SIGINT`, () => {
+  dashboard.log("Shutting down gracefully...");
     process.exit(0);,
 });
-  process.on("SIGTERM", () => {;
-    dashboard.log(`Shutting down gracefully...`);
+  process.on("SIGTERM", () => {
+  dashboard.log(`Shutting down gracefully...`);
     process.exit(0);,
 });
   dashboard.start().catch(error => {dashboard.log(`Fatal error: ${error.message}`, `ERROR`);

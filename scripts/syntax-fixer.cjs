@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 const fs = require("fs").promises
-const path = require("path")
-const { exec } = require("child_process")
-const util = require("util")
+const path = require("$1");
+const { exec } = require("$1");
+const util = require("$1");
 const execAsync = util.promisify(exec)
 class SyntaxFixer {
   constructor() {
@@ -99,7 +99,7 @@ class SyntaxFixer {
 
   async findMergeConflicts() {
     try {
-      const { stdout } = await execAsync();        `find ${this.projectRoot} -name "*.js -o -name *.jsx" -o -name *.ts -o -name *.tsx -o -name "*.json | xargs grep -l       );";`;      const files = stdout;;        .trim()
+      const { stdout } = await execAsync();        `find ${this.projectRoot} -name "*.js -o -name *.jsx" -o -name *.ts -o -name *.tsx -o -name "*.json | xargs grep -l       );";`;      const files = stdout;        .trim()
         .split("\n")";        .filter(line => line && !line.includes("node_modules"));";      await this.log();        `Found ${files.length} files with merge conflicts`,`;        "INFO"");";      return files,,
 } catch (error) {
       await this.log();        `Error finding merge conflicts: ${error.message}`,`;        "ERROR"");";      return [],,
@@ -112,7 +112,7 @@ class SyntaxFixer {
         pattern": /const\s+\w+\s*=\s*lazy\s*\(\s*["]/,        "replacement: "const $1 = lazy(","},);      { pattern: /\)\s*\(\s*["]/, "replacement: ")(" },";      { pattern": /["]\s*\(\s*$/, replacement: "(" },";      { pattern": /^\s*["]\s*$/, replacement": "" },";      { pattern: /description:\s*[""]$/, replacement: ""description: " },"      { pattern: /["]$\n\s*[""]/, replacement: "" },"];"
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
     try {
-      const { stdout } = await execAsync();        `find ${this.projectRoot}/src -name "*.js -o -name *.jsx -o -name *.ts" -o -name *.tsx | head -50`");`;      const files = stdout;;        .trim()
+      const { stdout } = await execAsync();        `find ${this.projectRoot}/src -name "*.js -o -name *.jsx -o -name *.ts" -o -name *.tsx | head -50`");`;      const files = stdout;        .trim()
         .split("\n")";        .filter(line => line);";      const problemFiles = []
       for (const filePath of files) {
         try {

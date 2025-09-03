@@ -1,11 +1,13 @@
 #!/usr/bin/env node
-const { execSync, spawn } = require("child_process")
-const fs = require("fs")
+const { execSync, spawn } = require("$1");
+const fs = require("$1");
 const path = require("path")
 console.log("🛡️ Error Prevention & Automation System")
 console.log("Process: ", process.env.PM2_PROCESS || "unknown")
 class ErrorPreventionAutomation {
-const { execSync, spawn } = require("child_process")const fs = require("fs")const path = require("path")";console.log("🛡️ Error Prevention & Automation System");console.log(""Process:", process.env.PM2_PROCESS || "unknown");";class ErrorPreventionAutomation {
+const { execSync, spawn } = require("$1");
+const fs = require("$1");
+const path = require("path")";console.log("🛡️ Error Prevention & Automation System");console.log(""Process:", process.env.PM2_PROCESS || "unknown");";class ErrorPreventionAutomation {
   constructor() {
     this.logs = []
     this.errors = []

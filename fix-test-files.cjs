@@ -5,14 +5,14 @@ console.log("🔧 Fixing test files syntax errors...");
 // Find all test files with syntax errors;
 const testDirs = ["__tests__"];
 const fixedFiles = [];
-testDirs.forEach(dir => {;
-  if (fs.existsSync(dir)) {;
-    const files = fs.readdirSync(dir, { recursive: true });
-    files.forEach(file => {;
-      if (file.endsWith(".js") || file.endsWith(".jsx") || file.endsWith(".ts") || file.endsWith(".tsx")) {;
-        const filePath = path.join(dir, file);
-        if (fs.existsSync(filePath)) {;
-          let content = fs.readFileSync(filePath, "utf8");
+testDirs.forEach(dir => {
+  if (fs.existsSync(dir)) {
+  const files = fs.readdirSync(dir, { recursive: true });
+    files.forEach(file => {
+  if (file.endsWith(".js") || file.endsWith(".jsx") || file.endsWith(".ts") || file.endsWith(".tsx")) {
+  const filePath = path.join(dir, file);
+        if (fs.existsSync(filePath)) {
+  let content = fs.readFileSync(filePath, "utf8");
           let originalContent = content;
           // Fix common syntax errors from the comprehensive fixer;
           // 1. Fix malformed imports like "import React from "react";";";
@@ -24,8 +24,8 @@ testDirs.forEach(dir => {;
           content = content.replace(/import\s+([^"]*)"([^"]*)"([^"]*);";/g, "import $1"$2"$3;");
           // 4. Fix malformed component imports;
           content = content.replace(/from\s+"([^"]+)";";/g, "from "$1";");
-          if (content !== originalContent) {;
-            fs.writeFileSync(filePath, content, "utf8");
+          if (content !== originalContent) {
+  fs.writeFileSync(filePath, content, "utf8");
             fixedFiles.push(filePath);
             console.log(`✅ Fixed ${filePath}`);,
 }
@@ -35,7 +35,7 @@ testDirs.forEach(dir => {;
 }
 });
 console.log(`✅ Fixed ${fixedFiles.length} test files`);
-if (fixedFiles.length > 0) {;
+if (fixedFiles.length > 0) {
   console.log("Fixed files:");
   fixedFiles.forEach(file => console.log(`  - ${file}`));,
 }

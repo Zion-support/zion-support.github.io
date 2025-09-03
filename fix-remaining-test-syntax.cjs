@@ -3,44 +3,44 @@
 const fs = require("fs");
 const path = require("path");
 const glob = require("glob");
-class TestSyntaxFixer {;
-  constructor() {;
-    this.projectRoot = process.cwd();,
+class $1 {
+  constructor() {
+  this.projectRoot = process.cwd();,
 }
 ;
-  async fixRemainingSyntaxIssues() {;
-    console.log("🔧 Fixing remaining test syntax issues...");
-    const testFiles = [;
-      ...glob.sync("**/*.test.js", { cwd: this.projectRoot }),;
+  async fixRemainingSyntaxIssues() {
+  console.log("🔧 Fixing remaining test syntax issues...");
+    const testFiles = [
+  ...glob.sync("**/*.test.js", { cwd: this.projectRoot }),;
       ...glob.sync("**/*.test.tsx", { cwd: this.projectRoot }),;
       ...glob.sync("**/*.test.ts", { cwd: this.projectRoot }),;
     ];
     ;
-    for (const testFile of testFiles) {;
-      const filePath = path.join(this.projectRoot, testFile);
+    for (const testFile of testFiles) {
+  const filePath = path.join(this.projectRoot, testFile);
       await this.fixTestFile(filePath);,
 }
     ;
     console.log("✅ Test syntax fixes completed");,
 }
 ;
-  async fixTestFile(filePath) {;
-    try {;
-      let content = fs.readFileSync(filePath, "utf8");
+  async fixTestFile(filePath) {
+  try {
+  let content = fs.readFileSync(filePath, "utf8");
       const originalContent = content;
       // Fix common syntax issues;
       content = this.fixSyntaxIssues(content);
-      if (content !== originalContent) {;
-        fs.writeFileSync(filePath, content);
+      if (content !== originalContent) {
+  fs.writeFileSync(filePath, content);
         console.log(`✅ Fixed: ${path.relative(this.projectRoot, filePath)}`);,
 }
-    } catch (error) {;
-      console.error(`❌ Failed to fix ${filePath}:`, error.message);,
+    } catch (error) {
+  console.error(`❌ Failed to fix ${filePath}:`, error.message);,
 }
   }
 ;
-  fixSyntaxIssues(content) {;
-    // Fix broken import statements;
+  fixSyntaxIssues(content) {
+  // Fix broken import statements;
     content = content.replace(/import React from,\s*react";/g, "import React from "react";");
     content = content.replace(/import React from,\s*"react";/g, "import React from "react";");
     // Fix missing semicolons;

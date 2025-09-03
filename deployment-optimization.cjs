@@ -3,54 +3,54 @@
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-class DeploymentOptimization {;
-  constructor() {;
-    this.projectRoot = process.cwd();
+class $1 {
+  constructor() {
+  this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, "deployment-optimization.log");,
 }
 ;
-  log(message) {;
-    const timestamp = new Date().toISOString();
+  log(message) {
+  const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);,
 }
 ;
-  async runCommand(command, description) {;
-    try {;
-      this.log(`Running: ${description}`);
+  async runCommand(command, description) {
+  try {
+  this.log(`Running: ${description}`);
       const output = execSync(command, { cwd: this.projectRoot, stdio: "pipe" });
       this.log(`✅ ${description} completed successfully`);
       return output.toString();,
-} catch (error) {;
-      this.log(`⚠️ ${description} encountered issues: ${error.message}`);
+} catch (error) {
+  this.log(`⚠️ ${description} encountered issues: ${error.message}`);
       return null;,
 }
   }
 ;
-  async optimizeBuildProcess() {;
-    this.log("🏗️ Optimizing build process...");
+  async optimizeBuildProcess() {
+  this.log("🏗️ Optimizing build process...");
     // Create optimized build script;
     const buildScript = `;
 const { execSync } = require("child_process");
 const fs = require("fs");
-class BuildOptimizer {;
-  constructor() {;
-    this.buildSteps = [;
-      "npm run lint -- --fix || true",;
+class BuildOptimizer {
+  constructor() {
+  this.buildSteps = [
+  "npm run lint -- --fix || true",;
       "npm run type-check || true",;
       "npm run build || true";
     ];,
 }
 ;
-  async optimizedBuild() {;
-    console.log("Starting optimized build process...");
-    for (const step of this.buildSteps) {;
-      try {;
-        console.log(\`Executing: \${step}\`);
+  async optimizedBuild() {
+  console.log("Starting optimized build process...");
+    for (const step of this.buildSteps) {
+  try {
+  console.log(\`Executing: \${step}\`);
         execSync(step, { stdio: "inherit" });,
-} catch (error) {;
-        console.warn(\`Step failed but continuing: \${step}\`);,
+} catch (error) {
+  console.warn(\`Step failed but continuing: \${step}\`);,
 }
     }
     ;
@@ -64,8 +64,8 @@ new BuildOptimizer().optimizedBuild();
     this.log("Created optimized build script");,
 }
 ;
-  async createDockerOptimizations() {;
-    this.log("🐳 Creating Docker optimizations...");
+  async createDockerOptimizations() {
+  this.log("🐳 Creating Docker optimizations...");
     const dockerFile = `;
 # Multi-stage build for optimization;
 FROM node:18-alpine AS base;
@@ -115,11 +115,11 @@ CMD ["npx", "serve", "out"];
     this.log("Created optimized Dockerfile");,
 }
 ;
-  async createCICD() {;
-    this.log("🔄 Creating CI/CD pipeline...");
+  async createCICD() {
+  this.log("🔄 Creating CI/CD pipeline...");
     const githubActionsDir = path.join(this.projectRoot, ".github", "workflows");
-    if (!fs.existsSync(githubActionsDir)) {;
-      fs.mkdirSync(githubActionsDir, { recursive: true });,
+    if (!fs.existsSync(githubActionsDir)) {
+  fs.mkdirSync(githubActionsDir, { recursive: true });,
 }
     ;
     const cicdWorkflow = `;
@@ -205,23 +205,23 @@ jobs:;
     this.log("Created CI/CD workflow");,
 }
 ;
-  async createMonitoring() {;
-    this.log("📊 Creating monitoring and analytics...");
+  async createMonitoring() {
+  this.log("📊 Creating monitoring and analytics...");
     const monitoringScript = `;
 const fs = require("fs");
 const path = require("path");
-class ApplicationMonitor {;
-  constructor() {;
-    this.metricsFile = path.join(process.cwd(), "metrics.json");
+class ApplicationMonitor {
+  constructor() {
+  this.metricsFile = path.join(process.cwd(), "metrics.json");
     this.metrics = this.loadMetrics();,
 }
 ;
-  loadMetrics() {;
-    if (fs.existsSync(this.metricsFile)) {;
-      return JSON.parse(fs.readFileSync(this.metricsFile, "utf8"));,
+  loadMetrics() {
+  if (fs.existsSync(this.metricsFile)) {
+  return JSON.parse(fs.readFileSync(this.metricsFile, "utf8"));,
 }
-    return {;
-      deployments: 0,;
+    return {
+  deployments: 0,;
       lastDeployment: null,;
       buildTimes: [],;
       errors: [],;
@@ -229,37 +229,37 @@ class ApplicationMonitor {;
     }
   }
 ;
-  saveMetrics() {;
-    fs.writeFileSync(this.metricsFile, JSON.stringify(this.metrics, null, 2));,
+  saveMetrics() {
+  fs.writeFileSync(this.metricsFile, JSON.stringify(this.metrics, null, 2));,
 }
 ;
-  recordDeployment() {;
-    this.metrics.deployments++;
+  recordDeployment() {
+  this.metrics.deployments++;
     this.metrics.lastDeployment = new Date().toISOString();
     this.saveMetrics();
     console.log(\`Deployment #\${this.metrics.deployments} recorded\`);,
 }
 ;
-  recordBuildTime(duration) {;
-    this.metrics.buildTimes.push({;
-      duration,;
+  recordBuildTime(duration) {
+  this.metrics.buildTimes.push({
+  duration,;
       timestamp: new Date().toISOString();,
 });
     // Keep only last 10 build times;
-    if (this.metrics.buildTimes.length > 10) {;
-      this.metrics.buildTimes = this.metrics.buildTimes.slice(-10);,
+    if (this.metrics.buildTimes.length > 10) {
+  this.metrics.buildTimes = this.metrics.buildTimes.slice(-10);,
 }
     ;
     this.saveMetrics();,
 }
 ;
-  generateReport() {;
-    console.log("Application Metrics Report");
+  generateReport() {
+  console.log("Application Metrics Report");
     console.log("===");
     console.log(\`Total Deployments: \${this.metrics.deployments}\`);
     console.log(\`Last Deployment: \${this.metrics.lastDeployment || "Never"}\`);
-    if (this.metrics.buildTimes.length > 0) {;
-      const avgBuildTime = this.metrics.buildTimes.reduce((acc, bt) => acc + bt.duration, 0) / this.metrics.buildTimes.length;
+    if (this.metrics.buildTimes.length > 0) {
+  const avgBuildTime = this.metrics.buildTimes.reduce((acc, bt) => acc + bt.duration, 0) / this.metrics.buildTimes.length;
       console.log(\`Average Build Time: \${avgBuildTime.toFixed(2)}ms\`);,
 }
     ;
@@ -269,15 +269,15 @@ class ApplicationMonitor {;
 ;
 const monitor = new ApplicationMonitor();
 const command = process.argv[2];
-switch (command) {;
+switch (command) {
   case "deploy":;
     monitor.recordDeployment();
     break;
   case "build":;
     const startTime = Date.now();
     // Simulate build process;
-    setTimeout(() => {;
-      monitor.recordBuildTime(Date.now() - startTime);
+    setTimeout(() => {
+  monitor.recordBuildTime(Date.now() - startTime);
       console.log("Build time recorded");,
 }, 100);
     break;
@@ -292,8 +292,8 @@ switch (command) {;
     this.log("Created monitoring script");,
 }
 ;
-  async run() {;
-    this.log("🚀 Starting Deployment Optimization");
+  async run() {
+  this.log("🚀 Starting Deployment Optimization");
     await this.optimizeBuildProcess();
     await this.createDockerOptimizations();
     await this.createCICD();

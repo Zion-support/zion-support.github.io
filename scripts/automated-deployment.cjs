@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const { execSync } = require("child_process")
+const { execSync } = require("$1");
 const fs = require("fs")
 class AutomatedDeployment {
   constructor() {

@@ -65,7 +65,7 @@ console.log(`Fixed ${files.length} files`);
 const fs = require("fs");
 const path = require("path");
 // Function to fix common syntax errors;
-function fixSyntaxErrors(content) {;
+function fixSyntaxErrors(content) {
   // Remove corrupted content patterns;
   let fixed = content;
     // Remove malformed import statements;
@@ -80,7 +80,8 @@ function fixSyntaxErrors(content) {;
     .replace(/icon: ([^,}]+) color: "([^"]*)",/g, "icon: $1,\n    color: "$2",");
     ;
     // Fix malformed array syntax;
-    .replace(/\[;\s*\{/g, "[\n  {");
+    .replace(/\[
+  \s*\{/g, "[\n  {");
     .replace(/,\s*\};\s*\]/g, "\n  }\n];");
     ;
     // Fix malformed function calls;
@@ -114,35 +115,35 @@ function fixSyntaxErrors(content) {;
 }
 ;
 // Function to process a single file;
-function processFile(filePath) {;
-  try {;
-    const content = fs.readFileSync(filePath, "utf8");
+function processFile(filePath) {
+  try {
+  const content = fs.readFileSync(filePath, "utf8");
     // Skip if file is too corrupted;
-    if (content.length < 100 || content.includes(">>>>>>> pr-")) {;
-      console.log(`Skipping corrupted file: ${filePath}`);
+    if (content.length < 100 || content.includes(">>>>>>> pr-")) {
+  console.log(`Skipping corrupted file: ${filePath}`);
       return;,
 }
     ;
     const fixed = fixSyntaxErrors(content);
-    if (fixed !== content) {;
-      fs.writeFileSync(filePath, fixed);
+    if (fixed !== content) {
+  fs.writeFileSync(filePath, fixed);
       console.log(`Fixed: ${filePath}`);,
 }
-  } catch (error) {;
-    console.error(`Error processing ${filePath}:`, error.message);,
+  } catch (error) {
+  console.error(`Error processing ${filePath}:`, error.message);,
 }
 }
 ;
 // Function to recursively process directory;
-function processDirectory(dirPath) {;
+function processDirectory(dirPath) {
   const items = fs.readdirSync(dirPath);
-  for (const item of items) {;
-    const fullPath = path.join(dirPath, item);
+  for (const item of items) {
+  const fullPath = path.join(dirPath, item);
     const stat = fs.statSync(fullPath);
-    if (stat.isDirectory()) {;
-      processDirectory(fullPath);,
-} else if (item.endsWith(".tsx") || item.endsWith(".ts") || item.endsWith(".jsx") || item.endsWith(".js")) {;
-      processFile(fullPath);,
+    if (stat.isDirectory()) {
+  processDirectory(fullPath);,
+} else if (item.endsWith(".tsx") || item.endsWith(".ts") || item.endsWith(".jsx") || item.endsWith(".js")) {
+  processFile(fullPath);,
 }
   }
 }

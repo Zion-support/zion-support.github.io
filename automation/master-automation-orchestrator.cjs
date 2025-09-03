@@ -3,12 +3,12 @@
 const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("child_process");
-class MasterAutomationOrchestrator {;
-  constructor() {;
-    this.projectRoot = process.cwd();
+class $1 {
+  constructor() {
+  this.projectRoot = process.cwd();
     this.startTime = new Date();
-    this.results = {;
-      dependencyFix: { success: false, duration: 0, errors: [] },;
+    this.results = {
+  dependencyFix: { success: false, duration: 0, errors: [] },;
       typescriptFix: { success: false, duration: 0, errors: [] },;
       healthCheck: { success: false, duration: 0, errors: [] },;
       securityScan: { success: false, duration: 0, errors: [] },;
@@ -17,41 +17,41 @@ class MasterAutomationOrchestrator {;
     }
   }
 ;
-  log(message, type = "INFO") {;
-    const timestamp = new Date().toISOString();
+  log(message, type = "INFO") {
+  const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] [${type}] ${message}`);,
 }
 ;
-  async runScript(scriptName, scriptPath) {;
-    const startTime = Date.now();
+  async runScript(scriptName, scriptPath) {
+  const startTime = Date.now();
     this.log(`🚀 Running ${scriptName}...`);
-    try {;
-      const result = execSync(`node ${scriptPath}`, { ;
-        cwd: this.projectRoot,;
+    try {
+  const result = execSync(`node ${scriptPath}`, {
+  cwd: this.projectRoot,;
         stdio: "inherit",;
         encoding: "utf8";,
 });
       const duration = Date.now() - startTime;
       this.log(`✅ ${scriptName} completed successfully in ${duration}ms`);
-      return {;
-        success: true,;
+      return {
+  success: true,;
         duration,;
         errors: [];,
 }
       ;,
-} catch (error) {;
-      const duration = Date.now() - startTime;
+} catch (error) {
+  const duration = Date.now() - startTime;
       this.log(`❌ ${scriptName} failed: ${error.message}`, "ERROR");
-      return {;
-        success: false,;
+      return {
+  success: false,;
         duration,;
         errors: [error.message];,
 }
     }
   }
 ;
-  async runDependencyFix() {;
-    this.log("\\n🔧 PHASE 1: DEPENDENCY FIXING");
+  async runDependencyFix() {
+  this.log("\\n🔧 PHASE 1: DEPENDENCY FIXING");
     this.log("==");
     this.results.dependencyFix = await this.runScript(;
       "Dependency Fixer",;
@@ -59,8 +59,8 @@ class MasterAutomationOrchestrator {;
     );,
 }
 ;
-  async runTypeScriptFix() {;
-    this.log("\\n📝 PHASE 2: TYPESCRIPT FIXING");
+  async runTypeScriptFix() {
+  this.log("\\n📝 PHASE 2: TYPESCRIPT FIXING");
     this.log("==");
     this.results.typescriptFix = await this.runScript(;
       "TypeScript Fixer",;
@@ -68,8 +68,8 @@ class MasterAutomationOrchestrator {;
     );,
 }
 ;
-  async runHealthCheck() {;
-    this.log("\\n🔍 PHASE 3: HEALTH CHECK");
+  async runHealthCheck() {
+  this.log("\\n🔍 PHASE 3: HEALTH CHECK");
     this.log("===");
     this.results.healthCheck = await this.runScript(;
       "Health Check",;
@@ -77,8 +77,8 @@ class MasterAutomationOrchestrator {;
     );,
 }
 ;
-  async runSecurityScan() {;
-    this.log("\\n🛡️  PHASE 4: SECURITY SCAN");
+  async runSecurityScan() {
+  this.log("\\n🛡️  PHASE 4: SECURITY SCAN");
     this.log("======");
     this.results.securityScan = await this.runScript(;
       "Security Scanner",;
@@ -86,8 +86,8 @@ class MasterAutomationOrchestrator {;
     );,
 }
 ;
-  async runPerformanceOptimize() {;
-    this.log("\\n⚡ PHASE 5: PERFORMANCE OPTIMIZATION");
+  async runPerformanceOptimize() {
+  this.log("\\n⚡ PHASE 5: PERFORMANCE OPTIMIZATION");
     this.log("=");
     this.results.performanceOptimize = await this.runScript(;
       "Performance Optimizer",;
@@ -95,44 +95,44 @@ class MasterAutomationOrchestrator {;
     );,
 }
 ;
-  async runBuildTest() {;
-    this.log("\\n🏗️  PHASE 6: BUILD TEST");
+  async runBuildTest() {
+  this.log("\\n🏗️  PHASE 6: BUILD TEST");
     this.log("===");
     const startTime = Date.now();
     this.log("🚀 Running build test...");
-    try {;
-      execSync("yarn build", { ;
-        cwd: this.projectRoot,;
+    try {
+  execSync("yarn build", {
+  cwd: this.projectRoot,;
         stdio: "inherit";,
 });
       const duration = Date.now() - startTime;
       this.log(`✅ Build test completed successfully in ${duration}ms`);
-      this.results.buildTest = {;
-        success: true,;
+      this.results.buildTest = {
+  success: true,;
         duration,;
         errors: [];,
 }
       ;,
-} catch (error) {;
-      const duration = Date.now() - startTime;
+} catch (error) {
+  const duration = Date.now() - startTime;
       this.log(`❌ Build test failed: ${error.message}`, "ERROR");
-      this.results.buildTest = {;
-        success: false,;
+      this.results.buildTest = {
+  success: false,;
         duration,;
         errors: [error.message];,
 }
     }
   }
 ;
-  async generateFinalReport() {;
-    const endTime = new Date();
+  async generateFinalReport() {
+  const endTime = new Date();
     const totalDuration = endTime - this.startTime;
-    const report = {;
-      timestamp: endTime.toISOString(),;
+    const report = {
+  timestamp: endTime.toISOString(),;
       totalDuration: `${Math.round(totalDuration / 1000)}s`,;
       results: this.results,;
-      summary: {;
-        totalPhases: Object.keys(this.results).length,;
+      summary: {
+  totalPhases: Object.keys(this.results).length,;
         successfulPhases: Object.values(this.results).filter(r => r.success).length,;
         failedPhases: Object.values(this.results).filter(r => !r.success).length,;
         overallSuccess: Object.values(this.results).every(r => r.success);,
@@ -148,24 +148,24 @@ class MasterAutomationOrchestrator {;
     this.log(`Phases Completed: ${report.summary.successfulPhases}/${report.summary.totalPhases}`);
     this.log(`Overall Success: ${report.summary.overallSuccess ? "✅" : "❌"}`);
     this.log("\\n📋 Phase Results:");
-    Object.entries(this.results).forEach(([phase, result]) => {;
-      const status = result.success ? "✅" : "❌";
+    Object.entries(this.results).forEach(([phase, result]) => {
+  const status = result.success ? "✅" : "❌";
       const duration = `${result.duration}ms`;
       this.log(`  ${status} ${phase}: ${duration}`);
-      if (result.errors.length > 0) {;
-        this.log(`    Errors: ${result.errors.join(", ")}`);,
+      if (result.errors.length > 0) {
+  this.log(`    Errors: ${result.errors.join(", ")}`);,
 }
     });
     this.log(`\\n📄 Full report saved to: ${reportPath}`);
     return report;,
 }
 ;
-  async run() {;
-    this.log("🎯 MASTER AUTOMATION ORCHESTRATOR");
+  async run() {
+  this.log("🎯 MASTER AUTOMATION ORCHESTRATOR");
     this.log("====");
     this.log("Starting comprehensive automation workflow...\\n");
-    try {;
-      // Run all phases in sequence;
+    try {
+  // Run all phases in sequence;
       await this.runDependencyFix();
       await this.runTypeScriptFix();
       await this.runHealthCheck();
@@ -174,16 +174,16 @@ class MasterAutomationOrchestrator {;
       await this.runBuildTest();
       // Generate final report;
       const report = await this.generateFinalReport();
-      if (report.summary.overallSuccess) {;
-        this.log("\\n🎉 ALL AUTOMATION PHASES COMPLETED SUCCESSFULLY!");
+      if (report.summary.overallSuccess) {
+  this.log("\\n🎉 ALL AUTOMATION PHASES COMPLETED SUCCESSFULLY!");
         this.log("Your app is now optimized and ready for deployment.");,
-} else {;
-        this.log("\\n⚠️  SOME AUTOMATION PHASES HAD ISSUES");
+} else {
+  this.log("\\n⚠️  SOME AUTOMATION PHASES HAD ISSUES");
         this.log("Please review the report and fix any remaining issues.");,
 }
       ;,
-} catch (error) {;
-      this.log(`💥 Fatal error in orchestrator: ${error.message}`, "ERROR");
+} catch (error) {
+  this.log(`💥 Fatal error in orchestrator: ${error.message}`, "ERROR");
       await this.generateFinalReport();
       process.exit(1);,
 }

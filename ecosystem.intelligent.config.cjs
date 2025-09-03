@@ -1,8 +1,8 @@
-module.exports = {;
-  apps: [;
-    // Main Application;
-    {;
-      name: "zion-website",;
+module.exports = {
+  apps: [
+  // Main Application;
+    {
+  name: "zion-website",;
       script: "npm",;
       args: "run dev",;
       cwd: "/workspace",;
@@ -10,12 +10,12 @@ module.exports = {;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "1G",;
-      env: {;
-        NODE_ENV: "development",;
+      env: {
+  NODE_ENV: "development",;
         PORT: 3000,;,
 },;
-      env_production: {;
-        NODE_ENV: "production",;
+      env_production: {
+  NODE_ENV: "production",;
         PORT: 3000,;,
 },;
       log_file: "./logs/zion-website.log",;
@@ -27,15 +27,15 @@ module.exports = {;
 },;
 
     // Intelligent Error Prevention System;
-    {;
-      name: "intelligent-error-prevention",;
+    {
+  name: "intelligent-error-prevention",;
       script: "./scripts/intelligent/error-prevention-system.js",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "800M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTO_FIX: "true",;
         LOG_LEVEL: "info",;,
 },;
@@ -53,15 +53,15 @@ module.exports = {;
 },;
 
     // Smart Performance Optimizer;
-    {;
-      name: "smart-performance-optimizer",;
+    {
+  name: "smart-performance-optimizer",;
       script: "./scripts/intelligent/performance-optimizer.js",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "600M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         OPTIMIZATION_LEVEL: "aggressive",;
         AUTO_OPTIMIZE: "true",;,
 },;
@@ -79,15 +79,15 @@ module.exports = {;
 },;
 
     // Intelligent Dependency Manager;
-    {;
-      name: "intelligent-dependency-manager",;
+    {
+  name: "intelligent-dependency-manager",;
       script: "./scripts/intelligent/dependency-manager.js",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "500M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTO_UPDATE: "true",;
         SECURITY_FIRST: "true",;,
 },;
@@ -105,15 +105,15 @@ module.exports = {;
 },;
 
     // Smart Code Quality Monitor;
-    {;
-      name: "smart-code-quality-monitor",;
+    {
+  name: "smart-code-quality-monitor",;
       script: "./scripts/intelligent/code-quality-monitor.js",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "400M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTO_FIX_ISSUES: "true",;
         QUALITY_THRESHOLD: "80",;,
 },;
@@ -131,15 +131,15 @@ module.exports = {;
 },;
 
     // Intelligent Build Monitor;
-    {;
-      name: "intelligent-build-monitor",;
+    {
+  name: "intelligent-build-monitor",;
       script: "./scripts/intelligent/build-monitor.js",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "700M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTO_REBUILD: "true",;
         CACHE_OPTIMIZATION: "true",;,
 },;
@@ -157,15 +157,15 @@ module.exports = {;
 },;
 
     // Smart Security Auditor;
-    {;
-      name: "smart-security-auditor",;
+    {
+  name: "smart-security-auditor",;
       script: "./scripts/intelligent/security-auditor.js",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "300M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTO_PATCH: "true",;
         SECURITY_LEVEL: "strict",;,
 },;
@@ -183,15 +183,15 @@ module.exports = {;
 },;
 
     // Intelligent Git Workflow Automator;
-    {;
-      name: "intelligent-git-workflow",;
+    {
+  name: "intelligent-git-workflow",;
       script: "./scripts/intelligent/git-workflow-automator.js",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "400M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTO_COMMIT: "true",;
         AUTO_PUSH: "true",;
         SMART_MERGE: "true",;,
@@ -210,15 +210,15 @@ module.exports = {;
 },;
 
     // Smart Health Monitor;
-    {;
-      name: "smart-health-monitor",;
+    {
+  name: "smart-health-monitor",;
       script: "./scripts/intelligent/health-monitor.js",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "200M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTO_RECOVERY: "true",;
         HEALTH_THRESHOLD: "90",;,
 },;
@@ -236,15 +236,15 @@ module.exports = {;
 },;
 
     // Intelligent Log Analyzer;
-    {;
-      name: "intelligent-log-analyzer",;
+    {
+  name: "intelligent-log-analyzer",;
       script: "./scripts/intelligent/log-analyzer.js",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "300M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTO_CLEANUP: "true",;
         PATTERN_DETECTION: "true",;,
 },;
@@ -262,15 +262,15 @@ module.exports = {;
 },;
 
     // Smart Resource Optimizer;
-    {;
-      name: "smart-resource-optimizer",;
+    {
+  name: "smart-resource-optimizer",;
       script: "./scripts/intelligent/resource-optimizer.js",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "400M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTO_OPTIMIZE: "true",;
         MEMORY_LIMIT: "80",;,
 },;
@@ -288,9 +288,9 @@ module.exports = {;
 },;
   ],;
 
-  deploy: {;
-    production: {;
-      user: "deploy",;
+  deploy: {
+  production: {
+  user: "deploy",;
       host: "localhost",;
       ref: "origin/main",;
       repo: "git@github.com:your-username/your-repo.git",;

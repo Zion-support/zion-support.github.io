@@ -1,23 +1,23 @@
 
 // Accessibility enhancements for Zion Tech Group;
-const accessibilityEnhancements = {;
+const accessibilityEnhancements = {
   // Add ARIA labels to interactive elements;
-  addAriaLabels: () => {;
-    const buttons = document.querySelectorAll("button:not([aria-label])");
-    buttons.forEach(button => {;
-      if (!button.getAttribute("aria-label")) {;
-        button.setAttribute("aria-label", button.textContent || "Button");,
+  addAriaLabels: () => {
+  const buttons = document.querySelectorAll("button:not([aria-label])");
+    buttons.forEach(button => {
+  if (!button.getAttribute("aria-label")) {
+  button.setAttribute("aria-label", button.textContent || "Button");,
 }
     });,
 },;
 
   // Add keyboard navigation support;
-  addKeyboardNavigation: () => {;
-    const focusableElements = document.querySelectorAll("a, button, input, textarea, select");
-    focusableElements.forEach(element => {;
-      element.addEventListener("keydown", (e) => {;
-        if (e.key === "Enter" || e.key === " ") {;
-          e.preventDefault();
+  addKeyboardNavigation: () => {
+  const focusableElements = document.querySelectorAll("a, button, input, textarea, select");
+    focusableElements.forEach(element => {
+  element.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" || e.key === " ") {
+  e.preventDefault();
           element.click();,
 }
       });,
@@ -25,12 +25,12 @@ const accessibilityEnhancements = {;
 },;
 
   // Add high contrast mode support;
-  addHighContrastMode: () => {;
-    const style = document.createElement("style");
+  addHighContrastMode: () => {
+  const style = document.createElement("style");
     style.textContent = `;
-      @media (prefers-contrast: high) {;
-        * {;
-          background-color: white !important;
+      @media (prefers-contrast: high) {
+  * {
+  background-color: white !important;
           color: black !important;
           border-color: black !important;,
 }
@@ -40,16 +40,16 @@ const accessibilityEnhancements = {;
 },;
 
   // Initialize all enhancements;
-  init: () => {;
-    this.addAriaLabels();
+  init: () => {
+  this.addAriaLabels();
     this.addKeyboardNavigation();
     this.addHighContrastMode();,
 }
 };
 ;
 // Auto-initialize when DOM is ready;
-if (document.readyState === "loading") {;
+if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", accessibilityEnhancements.init);,
-} else {;
+} else {
   accessibilityEnhancements.init();,
 }

@@ -2,14 +2,14 @@
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-class PerformanceOptimizer {;
-  constructor() {;
-    this.optimizations = [];,
+class $1 {
+  constructor() {
+  this.optimizations = [];,
 }
 ;
-  async optimizeBundle() {;
-    try {;
-      // Analyze bundle size;
+  async optimizeBundle() {
+  try {
+  // Analyze bundle size;
       const bundleAnalysis = execSync("npm run build", { encoding: "utf8" });
       // Optimize images;
       this.optimizeImages();
@@ -17,18 +17,18 @@ class PerformanceOptimizer {;
       this.optimizeCSS();
       console.log("Performance optimization completed");
       return this.optimizations;,
-} catch (error) {;
-      console.error("Performance optimization failed:", error.message);
+} catch (error) {
+  console.error("Performance optimization failed:", error.message);
       return null;,
 }
   }
 ;
-  optimizeImages() {;
-    this.optimizations.push("Image optimization applied");,
+  optimizeImages() {
+  this.optimizations.push("Image optimization applied");,
 }
 ;
-  optimizeCSS() {;
-    this.optimizations.push("CSS optimization applied");,
+  optimizeCSS() {
+  this.optimizations.push("CSS optimization applied");,
 }
 }
 ;

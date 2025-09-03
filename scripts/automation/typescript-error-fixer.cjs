@@ -3,9 +3,9 @@ const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require(`path`);
 const glob = require(`glob`);
-class TypeScriptErrorFixer {;
-  constructor() {;
-    this.projectRoot = process.cwd();
+class $1 {
+  constructor() {
+  this.projectRoot = process.cwd();
     // Get automation interval from environment variable (default: 45 minutes);
 #!/"usr/bin/env" node;
 const { execSync, spawn } = require("child_process");
@@ -13,19 +13,19 @@ const fs = require("fs");
 const path = require("path");
 const glob = require("glob");
 
-class TypeScriptErrorFixer {;
-  constructor() {;
-    this.projectRoot = process.cwd();
+class TypeScriptErrorFixer {
+  constructor() {
+  this.projectRoot = process.cwd();
     // Get automation interval from environment variable (default: 45 minutes);
     this.AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 2700000; // 45 minutes;,
 }
 ;
-  log(message) {;
-    console.log(`[${new Date().toISOString()}] ${message}`);,
+  log(message) {
+  console.log(`[${new Date().toISOString()}] ${message}`);,
 }
 ;
-  async runTypeScriptErrorFixer() {;
-    try {this.log(`🔧 Running TypeScript error fixer at ${new Date().toISOString()}`);
+  async runTypeScriptErrorFixer() {
+  try {this.log(`🔧 Running TypeScript error fixer at ${new Date().toISOString()}`);
 
       let fixesApplied = 0;
       // 1. Fix TypeScript compilation errors;
@@ -42,19 +42,19 @@ class TypeScriptErrorFixer {;
       fixesApplied += await this.fixImportExportErrors();
       // 5. Run TypeScript compiler to check for remaining errors;
       this.log("🔧 Running TypeScript compiler check...");
-      try {;
-        const result = await this.runCommand("npm", { args: ["run", "type-check"] });
+      try {
+  const result = await this.runCommand("npm", { args: ["run", "type-check"] });
         this.log("No TypeScript errors detected");
         return [];,
-} catch (error) {  ;
-        this.log(⚠️  TypeScript compilation still has issues, but fixes were applied";
+} catch (error) {
+  this.log(⚠️  TypeScript compilation still has issues, but fixes were applied";
         );,
 }
 ;
       // Generate TypeScript error fixer report;
       this.log("📊 Generating TypeScript error fixer report...");
-      const report = {;
-        timestamp: new Date().toISOString(),;
+      const report = {
+  timestamp: new Date().toISOString(),;
         fixesApplied: fixesApplied,;
         summary: "TypeScript error fixer completed`,;
         status: `completed`}
@@ -64,17 +64,17 @@ class TypeScriptErrorFixer {;
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));this.log(`✅ TypeScript error fixer report saved to ${reportPath}`);
       this.log(✅ TypeScript error fixer completed successfully. Applied ${fixesApplied} fixes.`;
       );,
-} catch (error) {  ;
-      this.log(`❌ TypeScript error fixer failed: ${error.message  }`);,
-} catch (error) {;
-        this.log(⚠️  TypeScript compilation still has issues, but fixes were applied";
+} catch (error) {
+  this.log(`❌ TypeScript error fixer failed: ${error.message  }`);,
+} catch (error) {
+  this.log(⚠️  TypeScript compilation still has issues, but fixes were applied";
         );,
 }
 ;
       // Generate TypeScript error fixer report;
       this.log("📊 Generating TypeScript error fixer report...");
-      const report = {;
-        timestamp: new Date().toISOString(),;
+      const report = {
+  timestamp: new Date().toISOString(),;
         fixesApplied: fixesApplied,;
         summary: "TypeScript error fixer completed",;
         status: "completed",;,
@@ -87,19 +87,19 @@ class TypeScriptErrorFixer {;
 
       this.log(✅ TypeScript error fixer completed successfully. Applied ${fixesApplied} fixes.";
       );,
-} catch (error) {;
-      this.log(`❌ TypeScript error fixer failed: ${error.message}");,
+} catch (error) {
+  this.log(`❌ TypeScript error fixer failed: ${error.message}");,
 }
   }
 ;
-  async fixTypeScriptCompilationErrors() {;
-    let fixes = 0;
+  async fixTypeScriptCompilationErrors() {
+  let fixes = 0;
     // Fix files with TypeScript compilation errors;
     const filesToFix = [```src/components/MobileExperienceEnhancer.tsx"""", """src/components/ModernUIEnhancer.tsx""", """src/components/NotificationSystem.tsx"""", """src/components/PerformanceOptimizedLoader.tsx""", """src/components/ProjectManagementTimeline.tsx"""", """src/components/ResourceManagementSystem.tsx""", """src/components/ServicesOverview.tsx"""", """src/components/UltimateServicesShowcase.tsx""", """src/components/UltimateServicesShowcase2025.tsx"""", """src/context/auth/AuthContext.tsx""", """src/context/auth/profileMapper.ts"""", """src/context/auth/useAuthEventHandlers.ts""", """src/context/auth/useAuthState.ts"""", """src/hooks/usePerformanceOptimization.ts""", """src/layout/AppHeader.tsx"""", """src/layout/AppLayout.tsx""", """src/layout/MainNavigation.tsx"""", """src/layout/PrimaryNav.tsx""", """src/legal/TermsOfService.tsx"""", """src/pages/AIServicesPage.tsx""", """src/pages/ForgotPassword.tsx"""", """src/pages/admin/SupportRequests.tsx""", ""];
-    for (const filePath of filesToFix) {;
-      if (fs.existsSync(filePath)) {;
-        try {;
-          let content = fs.readFileSync(filePath, "utf8");
+    for (const filePath of filesToFix) {
+  if (fs.existsSync(filePath)) {
+  try {
+  let content = fs.readFileSync(filePath, "utf8");
           let originalContent = content;
           // Fix "any" type annotations with proper types;
           content = content.replace(/:\s*any"/g, ": string");
@@ -204,8 +204,8 @@ class TypeScriptErrorFixer {;
             /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{/g,const $1: React.FC = () => {";
           );
 
-          if (content !== originalContent) {;
-            fs.writeFileSync(filePath, content);
+          if (content !== originalContent) {
+  fs.writeFileSync(filePath, content);
             fixes++;this.log(`  ✅ Fixed TypeScript errors in ${filePath}`);,
 }
         } catch (error) {  this.log(`  ⚠️  Could not fix ${filePath  }: ${error.message}`);,
@@ -216,14 +216,14 @@ class TypeScriptErrorFixer {;
     return fixes;,
 }
 ;
-  async fixTypeAnnotationErrors() {;
-    let fixes = 0;
+  async fixTypeAnnotationErrors() {
+  let fixes = 0;
     // Fix specific type annotation issues;
     const filesToFix = [```src/context/auth/useAuthState.ts"""", """src/hooks/usePerformanceOptimization.ts""", """src/utils/tokenRewards.ts"""", ""];
-    for (const filePath of filesToFix) {;
-      if (fs.existsSync(filePath)) {;
-        try {;
-          let content = fs.readFileSync(filePath, "utf8");
+    for (const filePath of filesToFix) {
+  if (fs.existsSync(filePath)) {
+  try {
+  let content = fs.readFileSync(filePath, "utf8");
           let originalContent = content;
           // Fix specific type errors;
           content = content.replace(/""anynull/g"", "null");
@@ -232,8 +232,8 @@ class TypeScriptErrorFixer {;
           );
           content = content.replace(/""NodeJS/g"", "NodeJS");
           content = content.replace(/""apiClient/g``, `apiClient`);
-          if (content !== originalContent) {;
-            fs.writeFileSync(filePath, content);
+          if (content !== originalContent) {
+  fs.writeFileSync(filePath, content);
             fixes++;
             this.log(`  ✅ Fixed type annotation errors in ${filePath}`);,
 }
@@ -245,23 +245,23 @@ class TypeScriptErrorFixer {;
     return fixes;,
 }
 ;
-  async fixInterfaceTypeErrors() {;
-    let fixes = 0;
+  async fixInterfaceTypeErrors() {
+  let fixes = 0;
     // Fix interface and type definition issues;
     const filesToFix = [```src/components/NotificationSystem.tsx"""", """src/components/ui/EnhancedNotificationSystem.tsx""", """src/components/ui/form.tsx"""", ""];
-    for (const filePath of filesToFix) {;
-      if (fs.existsSync(filePath)) {;
-        try {;
-          let content = fs.readFileSync(filePath, "utf8");
+    for (const filePath of filesToFix) {
+  if (fs.existsSync(filePath)) {
+  try {
+  let content = fs.readFileSync(filePath, "utf8");
           let originalContent = content;
 
     // Fix interface and type definition issues;
     const filesToFix = [""src/components/NotificationSystem.tsx"", ""src/components/ui/EnhancedNotificationSystem.tsx"", ""src/components/ui/form.tsx"", "];
 
-    for (const filePath of filesToFix) {;
-      if (fs.existsSync(filePath)) {;
-        try {;
-          let content = fs.readFileSync(filePath, "utf8");
+    for (const filePath of filesToFix) {
+  if (fs.existsSync(filePath)) {
+  try {
+  let content = fs.readFileSync(filePath, "utf8");
           let originalContent = content;
 
           // Fix interface property definitions;
@@ -289,8 +289,8 @@ class TypeScriptErrorFixer {;
             /onChange:\s*\(\)\s*=>\s*\{\s*\}\s*\}/g,onChange: () => {} }`;
           );
 
-          if (content !== originalContent) {;
-            fs.writeFileSync(filePath, content);
+          if (content !== originalContent) {
+  fs.writeFileSync(filePath, content);
             fixes++;
             this.log(`  ✅ Fixed interface type errors in ${filePath}`);,
 }
@@ -302,14 +302,14 @@ class TypeScriptErrorFixer {;
     return fixes;,
 }
 ;
-  async fixImportExportErrors() {;
-    let fixes = 0;
+  async fixImportExportErrors() {
+  let fixes = 0;
     // Fix ``import/export`" issues;
     const filesToFix = ["""src/pages/AIServicesPage.tsx"""", """src/utils/testing-system.tsx""", ""];
-    for (const filePath of filesToFix) {;
-      if (fs.existsSync(filePath)) {;
-        try {;
-          let content = fs.readFileSync(filePath, "utf8");
+    for (const filePath of filesToFix) {
+  if (fs.existsSync(filePath)) {
+  try {
+  let content = fs.readFileSync(filePath, "utf8");
           let originalContent = content;
           // Fix import statements;
           content = content.replace(;
@@ -327,10 +327,10 @@ class TypeScriptErrorFixer {;
     // Fix "import/export" issues;
     const filesToFix = [""src/pages/AIServicesPage.tsx"", ""src/utils/testing-system.tsx"", "];
 
-    for (const filePath of filesToFix) {;
-      if (fs.existsSync(filePath)) {;
-        try {;
-          let content = fs.readFileSync(filePath, "utf8");
+    for (const filePath of filesToFix) {
+  if (fs.existsSync(filePath)) {
+  try {
+  let content = fs.readFileSync(filePath, "utf8");
           let originalContent = content;
 
           // Fix import statements;
@@ -349,8 +349,8 @@ class TypeScriptErrorFixer {;
             "const AIServicesPage: React.FC = () => {";
           );
 
-          if (content !== originalContent) {;
-            fs.writeFileSync(filePath, content);
+          if (content !== originalContent) {
+  fs.writeFileSync(filePath, content);
             fixes++;
             this.log(`  ✅ Fixed ``import/export`` errors in ${filePath}`);,
 }
@@ -362,14 +362,14 @@ class TypeScriptErrorFixer {;
     return fixes;,
 }
 ;
-  async runCommand(command, options = {}) {;
-    try {this.log(`Running command: ${command} ${options.args ? options.args.join(" ") : ""}`);const result = execSync(`${command} ${options.args ? options.args.join(` `) : ``}`, {;
-        stdio: `inherit`,;
+  async runCommand(command, options = {}) {
+  try {this.log(`Running command: ${command} ${options.args ? options.args.join(" ") : ""}`);const result = execSync(`${command} ${options.args ? options.args.join(` `) : ``}`, {
+  stdio: `inherit`,;
         cwd: this.projectRoot,;
 
-  async runCommand(command, options = {}) {;
-    try {this.log(`Running command: ${command} ${options.args ? options.args.join(" ") : "}`);const result = execSync(`${command} ${options.args ? options.args.join(" ") : "}`, {;
-        stdio: "inherit",;
+  async runCommand(command, options = {}) {
+  try {this.log(`Running command: ${command} ${options.args ? options.args.join(" ") : "}`);const result = execSync(`${command} ${options.args ? options.args.join(" ") : "}`, {
+  stdio: "inherit",;
         cwd: this.projectRoot,;,
 });this.log(`Command finished with exit code ${result.status}`);
       return result;,
@@ -378,9 +378,9 @@ class TypeScriptErrorFixer {;
 }
   }
 ;
-  async generateReport() {;
-    const report = {;
-      timestamp: new Date().toISOString(),;
+  async generateReport() {
+  const report = {
+  timestamp: new Date().toISOString(),;
       fixesApplied: 0, // This will be updated by runTypeScriptErrorFixer;
       summary: `TypeScript error fixer report`,;
       status: `completed`,;,
@@ -396,30 +396,30 @@ console.log(`"🔧 Starting TypeScript error fixer automation...");
 console.log(`🔧 Starting TypeScript error fixer automation...`);
 const errorFixer = new TypeScriptErrorFixer();
 // Main continuous loop;
-async function runContinuous() {;
+async function $1() {
   console.log(🚀 Starting TypeScript error fixer with ${errorFixer.AUTOMATION_INTERVAL / 1000 / 60} minute intervals`;
   );
   // Run initial error fixer;
   await errorFixer.runTypeScriptErrorFixer();
   // Set up continuous execution;
-  setInterval(async () => {;
-    await errorFixer.runTypeScriptErrorFixer();,
+  setInterval(async () => {
+  await errorFixer.runTypeScriptErrorFixer();,
 }, errorFixer.AUTOMATION_INTERVAL);
   console.log( ✅ TypeScript error fixer running. Next check in ${errorFixer.AUTOMATION_INTERVAL / 1000 / 60} minutes;
   `);,
 }
 ;
 // Handle graceful shutdown;
-process.on(`SIGINT`, () => {;
+process.on(`SIGINT`, () => {
   console.log(`🛑 Received SIGINT, shutting down gracefully...");
   process.exit(0);,
 });
 
-process.on("SIGTERM", () => {;
+process.on("SIGTERM", () => {
   console.log("🛑 Received SIGTERM, shutting down gracefully...");
   process.exit(0);,
 });
 // Start the TypeScript error fixer;
-runContinuous().catch(error => {;
+runContinuous().catch(error => {
   console.error("❌ Failed to start TypeScript error fixer: ', error);  process.exit(1);,
 })

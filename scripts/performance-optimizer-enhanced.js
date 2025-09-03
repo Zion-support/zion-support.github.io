@@ -2,7 +2,7 @@
 /**
  * Performance Optimization Script
  */
-const fs = require("fs")
+const fs = require("$1");
 const path = require("path")
 class PerformanceOptimizer {
   constructor() {

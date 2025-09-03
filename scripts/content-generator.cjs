@@ -3,7 +3,7 @@
  * Content Generator Script
  * Generates meaningful content for placeholder pages
  */
-const fs = require("fs")
+const fs = require("$1");
 const path = require("path")
 class ContentGenerator {
   constructor() {

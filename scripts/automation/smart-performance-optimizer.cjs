@@ -12,9 +12,9 @@ const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("child_process");
 
-class SmartPerformanceOptimizer {;
-  constructor() {;
-    this.projectRoot = process.cwd();
+class $1 {
+  constructor() {
+  this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, "logs", "smart-performance-optimizer.log");
     this.optimizationResults = path.join(this.projectRoot, "logs", "optimization-results.json");
     this.bundleAnalysis = path.join(this.projectRoot, "logs", "bundle-analysis.json");
@@ -23,47 +23,46 @@ class SmartPerformanceOptimizer {;
     ;
     this.optimizationHistory = [];
     this.performanceBaseline = null;
-    this.optimizationStrategies = {;
-      bundle: ["{ name: "Tree Shaking"", "command: "npm run build:analyze"", "impact: "HIGH" }", "{ name: "Code Splitting"", "command: "npm run build:split"", "impact: "HIGH" }", "{ name: "Minification"", "command: "npm run build:minify"", "impact: "MEDIUM" }", "{ name: "Gzip Compression"", "command: "npm run build:gzip"", "impact: "MEDIUM" }"],;
+    this.optimizationStrategies = {
+  bundle: ["{ name: "Tree Shaking"", "command: "npm run build:analyze"", "impact: "HIGH" }", "{ name: "Code Splitting"", "command: "npm run build:split"", "impact: "HIGH" }", "{ name: "Minification"", "command: "npm run build:minify"", "impact: "MEDIUM" }", "{ name: "Gzip Compression"", "command: "npm run build:gzip"", "impact: "MEDIUM" }"],;
       runtime: ["{ name: "Lazy Loading"", "command: "npm run optimize:lazy"", "impact: "HIGH" }", "{ name: "Memoization"", "command: "npm run optimize:memo"", "impact: "MEDIUM" }", "{ name: "Virtual Scrolling"", "command: "npm run optimize:virtual"", "impact: "MEDIUM" }"],;
       build: ["{ name: "Parallel Builds"", "command: "npm run build:parallel"", "impact: "HIGH" }", "{ name: "Incremental Builds"", "command: "npm run build:incremental"", "impact: "MEDIUM" }", "{ name: "Cache Optimization"", "command: "npm run build:cache"", "impact: "MEDIUM` }`];,
 }
   }
 ;
-  ensureLogsDirectory() {;
-    const logsDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logsDir)) {;
-      fs.mkdirSync(logsDir, { recursive: true });,
+  ensureLogsDirectory() {
+  const logsDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logsDir)) {
+  fs.mkdirSync(logsDir, { recursive: true });,
 }
   }
 ;
-  log(message, level = `INFO`) {;
-
-  log(message, level = "INFO") {;
-    const timestamp = new Date().toISOString();
+  log(message, level = `INFO`) {
+  log(message, level = "INFO") {
+  const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     ;
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);,
 }
 ;
-  async analyzeBundleSize() {;
-    this.log(`Analyzing bundle size...`);
-    try {;
-      // Run build with analysis;
-      const buildOutput = execSync(`npm run build`, { ;
-        encoding: "utf8", ;
+  async analyzeBundleSize() {
+  this.log(`Analyzing bundle size...`);
+    try {
+  // Run build with analysis;
+      const buildOutput = execSync(`npm run build`, {
+  encoding: "utf8", ;
         cwd: this.projectRoot,;
         stdio: "pipe";,
 });
       // Analyze dist folder;
       const distPath = path.join(this.projectRoot, `dist`);
-      if (!fs.existsSync(distPath)) {;
-        throw new Error(`Build output not found`);,
+      if (!fs.existsSync(distPath)) {
+  throw new Error(`Build output not found`);,
 }
       ;
       const bundleStats = this.analyzeDistFolder(distPath);
-      const analysis = {;
-        timestamp: new Date().toISOString(),;
+      const analysis = {
+  timestamp: new Date().toISOString(),;
         totalSize: bundleStats.totalSize,;
         fileCount: bundleStats.fileCount,;
         largestFiles: bundleStats.largestFiles,;
@@ -79,9 +78,9 @@ class SmartPerformanceOptimizer {;
 }
   }
 ;
-  analyzeDistFolder(distPath) {;
-    const stats = {;
-      totalSize: 0,;
+  analyzeDistFolder(distPath) {
+  const stats = {
+  totalSize: 0,;
       fileCount: 0,;
       largestFiles: [],;
       ;,
@@ -90,9 +89,9 @@ class SmartPerformanceOptimizer {;
 }
   }
 ;
-  analyzeDistFolder(distPath) {;
-    const stats = {;
-      totalSize: 0,;
+  analyzeDistFolder(distPath) {
+  const stats = {
+  totalSize: 0,;
       fileCount: 0,;
       largestFiles: [],;
       compressionPotential: 0;,
@@ -100,23 +99,23 @@ class SmartPerformanceOptimizer {;
     ;
     const files = this.getAllFiles(distPath);
     ;
-    for (const file of files) {;
-      try {;
-        const fileStats = fs.statSync(file);
+    for (const file of files) {
+  try {
+  const fileStats = fs.statSync(file);
         const size = fileStats.size;
         stats.totalSize += size;
         stats.fileCount++;
         if (size > 100 * 1024) { // Files larger than 100KB;
-          stats.largestFiles.push({;
-            file: path.relative(distPath, file),;
+          stats.largestFiles.push({
+  file: path.relative(distPath, file),;
             size: size,;
             sizeKB: Math.round(size / 1024);,
 });,
 }
         ;
         // Estimate compression potential;
-        if (file.endsWith(`.js`) || file.endsWith(`.css`)) {;
-          stats.compressionPotential += Math.round(size * 0.3); // Assume 30% compression;,
+        if (file.endsWith(`.js`) || file.endsWith(`.css`)) {
+  stats.compressionPotential += Math.round(size * 0.3); // Assume 30% compression;,
 }
       } catch (error) {  this.log(`Error analyzing file ${file  }: ${error.message}`, `WARN`);,
 }
@@ -133,20 +132,20 @@ class SmartPerformanceOptimizer {;
     return stats;,
 }
 ;
-  getAllFiles(dirPath) {;
-    const files = [];
+  getAllFiles(dirPath) {
+  const files = [];
     ;
-    if (fs.existsSync(dirPath)) {;
-      const items = fs.readdirSync(dirPath);
+    if (fs.existsSync(dirPath)) {
+  const items = fs.readdirSync(dirPath);
       ;
-      for (const item of items) {;
-        const fullPath = path.join(dirPath, item);
+      for (const item of items) {
+  const fullPath = path.join(dirPath, item);
         const stat = fs.statSync(fullPath);
         ;
-        if (stat.isDirectory()) {;
-          files.push(...this.getAllFiles(fullPath));,
-} else {;
-          files.push(fullPath);,
+        if (stat.isDirectory()) {
+  files.push(...this.getAllFiles(fullPath));,
+} else {
+  files.push(fullPath);,
 }
       }
     }
@@ -154,34 +153,34 @@ class SmartPerformanceOptimizer {;
     return files;,
 }
 ;
-  generateBundleRecommendations(bundleStats) {;
-    const recommendations = [];
+  generateBundleRecommendations(bundleStats) {
+  const recommendations = [];
     if (bundleStats.totalSize > 2 * 1024 * 1024) { // > 2MB;
-      recommendations.push({;
-        priority: `HIGH`,;
+      recommendations.push({
+  priority: `HIGH`,;
         type: "BUNDLE_SIZE",;
         message: "Bundle size is quite large. Consider code splitting and tree shaking.",;
         potentialSavings: Math.round(bundleStats.compressionPotential / 1024) + "KB";,
 });,
 }
     ;
-    if (bundleStats.largestFiles.length > 0) {;
-      const largestFile = bundleStats.largestFiles[0];
+    if (bundleStats.largestFiles.length > 0) {
+  const largestFile = bundleStats.largestFiles[0];
       if (largestFile.size > 500 * 1024) { // > 500KB;
-        recommendations.push({;
-          priority: `MEDIUM`,;
+        recommendations.push({
+  priority: `MEDIUM`,;
           type: `LARGE_FILE`,message: `Large file detected: ${largestFile.file} (${largestFile.sizeKB}KB). Consider splitting.`,;
-        recommendations.push({;
-          priority: "MEDIUM",;
+        recommendations.push({
+  priority: "MEDIUM",;
           type: "LARGE_FILE",message: `Large file detected: ${largestFile.file} (${largestFile.sizeKB}KB). Consider splitting.`,;
           file: largestFile.file;,
 });,
 }
     }
     ;
-    if (bundleStats.fileCount > 20) {;
-      recommendations.push({;
-        priority: `LOW`,;
+    if (bundleStats.fileCount > 20) {
+  recommendations.push({
+  priority: `LOW`,;
         type: `FILE_COUNT`,;
         message: "High number of files. Consider bundling strategies.",;
         current: bundleStats.fileCount,;
@@ -192,12 +191,12 @@ class SmartPerformanceOptimizer {;
     return recommendations;,
 }
 ;
-  async measureRuntimePerformance() {;
-    this.log("Measuring runtime performance...");
-    try {;
-      // Start dev server for performance testing;
-      const devProcess = spawn("npm", ["run", `dev`], {;
-        cwd: this.projectRoot,;
+  async measureRuntimePerformance() {
+  this.log("Measuring runtime performance...");
+    try {
+  // Start dev server for performance testing;
+      const devProcess = spawn("npm", ["run", `dev`], {
+  cwd: this.projectRoot,;
         stdio: `pipe`;,
 });
       // Wait for server to start;
@@ -205,10 +204,10 @@ class SmartPerformanceOptimizer {;
       // Run performance tests;
       const performanceMetrics = await this.runPerformanceTests();
     ;
-    try {;
-      // Start dev server for performance testing;
-      const devProcess = spawn("npm", ["run", "dev"], {;
-        cwd: this.projectRoot,;
+    try {
+  // Start dev server for performance testing;
+      const devProcess = spawn("npm", ["run", "dev"], {
+  cwd: this.projectRoot,;
         stdio: "pipe";,
 });
       ;
@@ -228,17 +227,17 @@ class SmartPerformanceOptimizer {;
 }
   }
 ;
-  async runPerformanceTests() {;
-    const metrics = {;
-      timestamp: new Date().toISOString(),;
+  async runPerformanceTests() {
+  const metrics = {
+  timestamp: new Date().toISOString(),;
       firstContentfulPaint: 0,;
       largestContentfulPaint: 0,;
       timeToInteractive: 0,;
       totalBlockingTime: 0,;
       cumulativeLayoutShift: 0;,
 }
-    try {;
-      // Simulate performance metrics (in real implementation, use Lighthouse or similar);
+    try {
+  // Simulate performance metrics (in real implementation, use Lighthouse or similar);
       metrics.firstContentfulPaint = Math.random() * 2000 + 500; // 500-2500ms;
       metrics.largestContentfulPaint = Math.random() * 3000 + 1000; // 1000-4000ms;
       metrics.timeToInteractive = Math.random() * 4000 + 2000; // 2000-6000ms;
@@ -254,36 +253,36 @@ class SmartPerformanceOptimizer {;
     return metrics;,
 }
 ;
-  async optimizeBuildProcess() {;
-    this.log(`Optimizing build process...`);
+  async optimizeBuildProcess() {
+  this.log(`Optimizing build process...`);
     const optimizations = [];
-    try {;
-      // Check current build time;
+    try {
+  // Check current build time;
       const startTime = Date.now();
-      execSync("npm run build", { ;
-        encoding: `utf8`, ;
+      execSync("npm run build", {
+  encoding: `utf8`, ;
         cwd: this.projectRoot,;
         stdio: `pipe`;,
 });
       const buildTime = Date.now() - startTime;
       // Apply build optimizations;
-      for (const strategy of this.optimizationStrategies.build) {;
-        try {this.log(`Applying build optimization: ${strategy.name}`);
-          execSync(strategy.command, { ;
-            encoding: `utf8`, ;
+      for (const strategy of this.optimizationStrategies.build) {
+  try {this.log(`Applying build optimization: ${strategy.name}`);
+          execSync(strategy.command, {
+  encoding: `utf8`, ;
             cwd: this.projectRoot,;
             stdio: `pipe`;,
 });
-          optimizations.push({;
-            name: strategy.name,;
+          optimizations.push({
+  name: strategy.name,;
             impact: strategy.impact,;
             status: `SUCCESS`,;
             timestamp: new Date().toISOString();,
 });
           ;,
 } catch (error) {  this.log(`Build optimization ${strategy.name  } failed: ${error.message}`, `WARN`);
-          optimizations.push({;
-            name: strategy.name,;
+          optimizations.push({
+  name: strategy.name,;
             impact: strategy.impact,;
             status: `FAILED`,;
             error: error.message,;
@@ -294,8 +293,8 @@ class SmartPerformanceOptimizer {;
       ;
       // Measure optimized build time;
       const optimizedStartTime = Date.now();
-      execSync("npm run build", { ;
-        encoding: `utf8`, ;
+      execSync("npm run build", {
+  encoding: `utf8`, ;
         cwd: this.projectRoot,;
         stdio: `pipe`;,
 });
@@ -304,8 +303,8 @@ class SmartPerformanceOptimizer {;
       const timeImprovement = buildTime - optimizedBuildTime;
       const improvementPercentage = Math.round((timeImprovement / buildTime) * 100);
       this.log(`Build optimization completed. Time improvement: ${timeImprovement}ms (${improvementPercentage}%)`);
-      return {;
-        originalBuildTime: buildTime,;
+      return {
+  originalBuildTime: buildTime,;
         optimizedBuildTime: optimizedBuildTime,;
         improvement: timeImprovement,;
         improvementPercentage: improvementPercentage,;
@@ -317,11 +316,11 @@ class SmartPerformanceOptimizer {;
 }
   }
 ;
-  async applyRuntimeOptimizations() {;
-    this.log(`Applying runtime optimizations...`);
+  async applyRuntimeOptimizations() {
+  this.log(`Applying runtime optimizations...`);
       ;
-      return {;
-        originalBuildTime: buildTime,;
+      return {
+  originalBuildTime: buildTime,;
         optimizedBuildTime: optimizedBuildTime,;
         improvement: timeImprovement,;
         improvementPercentage: improvementPercentage,;
@@ -333,29 +332,29 @@ class SmartPerformanceOptimizer {;
 }
   }
 ;
-  async applyRuntimeOptimizations() {;
-    this.log("Applying runtime optimizations...");
+  async applyRuntimeOptimizations() {
+  this.log("Applying runtime optimizations...");
     ;
     const optimizations = [];
     ;
-    try {;
-      for (const strategy of this.optimizationStrategies.runtime) {;
-        try {this.log(`Applying runtime optimization: ${strategy.name}`);
-          execSync(strategy.command, { ;
-            encoding: `utf8`, ;
+    try {
+  for (const strategy of this.optimizationStrategies.runtime) {
+  try {this.log(`Applying runtime optimization: ${strategy.name}`);
+          execSync(strategy.command, {
+  encoding: `utf8`, ;
             cwd: this.projectRoot,;
             stdio: `pipe`;,
 });
-          optimizations.push({;
-            name: strategy.name,;
+          optimizations.push({
+  name: strategy.name,;
             impact: strategy.impact,;
             status: `SUCCESS`,;
             timestamp: new Date().toISOString();,
 });
           ;,
 } catch (error) {  this.log(`Runtime optimization ${strategy.name  } failed: ${error.message}`, `WARN`);
-          optimizations.push({;
-            name: strategy.name,;
+          optimizations.push({
+  name: strategy.name,;
             impact: strategy.impact,;
             status: `FAILED`,;
             error: error.message,;
@@ -371,40 +370,40 @@ class SmartPerformanceOptimizer {;
 }
   }
 ;
-  async generateOptimizationReport() {;
-    this.log(`Generating optimization report...`);
-    const report = {;
-      timestamp: new Date().toISOString(),;
+  async generateOptimizationReport() {
+  this.log(`Generating optimization report...`);
+    const report = {
+  timestamp: new Date().toISOString(),;
       bundle: await this.analyzeBundleSize(),;
       performance: await this.measureRuntimePerformance(),;
       buildOptimizations: await this.optimizeBuildProcess(),;
       runtimeOptimizations: await this.applyRuntimeOptimizations(),;
-      summary: {;
-        totalOptimizations: 0,;
+      summary: {
+  totalOptimizations: 0,;
         successfulOptimizations: 0,;
         failedOptimizations: 0,;
         estimatedImprovement: 0;,
 }
     }
     // Calculate summary;
-    if (report.buildOptimizations) {;
-      ;,
+    if (report.buildOptimizations) {
+  ,
 } catch (error) {this.log(`Runtime optimization failed: ${error.message}`, "ERROR");
       return [];,
 }
   }
 ;
-  async generateOptimizationReport() {;
-    this.log("Generating optimization report...");
+  async generateOptimizationReport() {
+  this.log("Generating optimization report...");
     ;
-    const report = {;
-      timestamp: new Date().toISOString(),;
+    const report = {
+  timestamp: new Date().toISOString(),;
       bundle: await this.analyzeBundleSize(),;
       performance: await this.measureRuntimePerformance(),;
       buildOptimizations: await this.optimizeBuildProcess(),;
       runtimeOptimizations: await this.applyRuntimeOptimizations(),;
-      summary: {;
-        totalOptimizations: 0,;
+      summary: {
+  totalOptimizations: 0,;
         successfulOptimizations: 0,;
         failedOptimizations: 0,;
         estimatedImprovement: 0;,
@@ -412,15 +411,15 @@ class SmartPerformanceOptimizer {;
     }
     ;
     // Calculate summary;
-    if (report.buildOptimizations) {;
-      report.summary.totalOptimizations += report.buildOptimizations.optimizations.length;
+    if (report.buildOptimizations) {
+  report.summary.totalOptimizations += report.buildOptimizations.optimizations.length;
       report.summary.successfulOptimizations += report.buildOptimizations.optimizations.filter(o => o.status === "SUCCESS").length;
       report.summary.failedOptimizations += report.buildOptimizations.optimizations.filter(o => o.status === "FAILED").length;
       report.summary.estimatedImprovement += report.buildOptimizations.improvementPercentage;,
 }
     ;
-    if (report.runtimeOptimizations) {;
-      report.summary.totalOptimizations += report.runtimeOptimizations.length;
+    if (report.runtimeOptimizations) {
+  report.summary.totalOptimizations += report.runtimeOptimizations.length;
       report.summary.successfulOptimizations += report.runtimeOptimizations.filter(o => o.status === `SUCCESS`).length;
       report.summary.failedOptimizations += report.runtimeOptimizations.filter(o => o.status === `FAILED`).length;,
 }
@@ -432,25 +431,25 @@ class SmartPerformanceOptimizer {;
     return report;,
 }
 ;
-  async saveBundleAnalysis(analysis) {;
-    try {;
-      fs.writeFileSync(this.bundleAnalysis, JSON.stringify(analysis, null, 2));
+  async saveBundleAnalysis(analysis) {
+  try {
+  fs.writeFileSync(this.bundleAnalysis, JSON.stringify(analysis, null, 2));
       this.log(`Bundle analysis saved`);,
 } catch (error) {  this.log(`Failed to save bundle analysis: ${error.message  }`, `ERROR`);,
 }
   }
 ;
-  async saveOptimizationResults(results) {;
-    try {;
-      fs.writeFileSync(this.optimizationResults, JSON.stringify(results, null, 2));
+  async saveOptimizationResults(results) {
+  try {
+  fs.writeFileSync(this.optimizationResults, JSON.stringify(results, null, 2));
       this.log(`Optimization results saved`);,
 } catch (error) {  this.log(`Failed to save optimization results: ${error.message  }`, `ERROR`);,
 }
   }
 ;
-  async run() {;
-    try {;
-      this.log(`Smart Performance Optimizer started`);
+  async run() {
+  try {
+  this.log(`Smart Performance Optimizer started`);
       // Generate comprehensive optimization report;
       const report = await this.generateOptimizationReport();
       // Display summarythis.log(`Performance Optimization Summary:`);this.log(`  - Bundle Size: ${report.bundle ? Math.round(report.bundle.totalSize / 1024) + "KB" : """N/A"""}`);this.log(`  - Build Time Improvement: ${report.buildOptimizations ? report.buildOptimizations.improvementPercentage + `%` : ``"N/A"``}`);this.log(`  - Successful Optimizations: ${report.summary.successfulOptimizations}/${report.summary.totalOptimizations}`);
@@ -458,9 +457,9 @@ class SmartPerformanceOptimizer {;
       setTimeout(() => this.run(), 3600000); // 1 hour;,
 } catch (error) {  this.log(`Smart Performance Optimizer failed: ${error.message  }`, `ERROR`);
 
-  async run() {;
-    try {;
-      this.log("Smart Performance Optimizer started");
+  async run() {
+  try {
+  this.log("Smart Performance Optimizer started");
       ;
       // Generate comprehensive optimization report;
       const report = await this.generateOptimizationReport();

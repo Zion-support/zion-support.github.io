@@ -12,9 +12,9 @@ const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 
-class SmartDeploymentAutomation {;
-  constructor() {;
-    this.projectRoot = process.cwd();
+class $1 {
+  constructor() {
+  this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, `automation/logs/deployment.log`);
     this.ensureLogDirectory();
     this.deploymentSteps = [];
@@ -22,36 +22,36 @@ class SmartDeploymentAutomation {;
     this.environment = process.env.NODE_ENV || `development`;,
 }
 ;
-  ensureLogDirectory() {;
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {;
-      fs.mkdirSync(logDir, { recursive: true });,
+  ensureLogDirectory() {
+  const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+  fs.mkdirSync(logDir, { recursive: true });,
 }
   }
 ;
-  log(message) {;
-    const timestamp = new Date().toISOString();
+  log(message) {
+  const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] ${message}`);
     fs.appendFileSync(this.logFile, `[${timestamp}] ${message}\n`);,
 }
 ;
-  async runStep(stepName, stepFunction) {;
-    this.log(`🔄 Running step: ${stepName}`);
+  async runStep(stepName, stepFunction) {
+  this.log(`🔄 Running step: ${stepName}`);
     const stepStartTime = Date.now();
     ;
-    try {;
-      await stepFunction();
+    try {
+  await stepFunction();
       const duration = Date.now() - stepStartTime;
-      this.deploymentSteps.push({;
-        name: stepName,;
+      this.deploymentSteps.push({
+  name: stepName,;
         status: `success`,;
         duration: duration;,
 });
       this.log(`✅ Step completed: ${stepName} (${duration}ms)`);,
-} catch (error) {  ;
-      const duration = Date.now() - stepStartTime;
-      this.deploymentSteps.push({;
-        name: stepName,;
+} catch (error) {
+  const duration = Date.now() - stepStartTime;
+      this.deploymentSteps.push({
+  name: stepName,;
         status: `failed`,;
         duration: duration,;
         error: error.message;,
@@ -61,101 +61,100 @@ class SmartDeploymentAutomation {;
 }
   }
 ;
-  async preDeploymentChecks() {;
-    this.log(`🔍 Running pre-deployment checks...`);
+  async preDeploymentChecks() {
+  this.log(`🔍 Running pre-deployment checks...`);
     // Check if git is clean;
-    try {;
-      const gitStatus = execSync(`git status --porcelain`, { encoding: `utf8` });
-      if (gitStatus.trim()) {;
-        throw new Error(`Git working directory is not clean. Please commit or stash changes.`);,
+    try {
+  const gitStatus = execSync(`git status --porcelain`, { encoding: `utf8` });
+      if (gitStatus.trim()) {
+  throw new Error(`Git working directory is not clean. Please commit or stash changes.`);,
 }
-    } catch (error) {  ;
-      throw new Error(`Git check failed: ${error.message  }`);,
+    } catch (error) {
+  throw new Error(`Git check failed: ${error.message  }`);,
 }
 ;
     // Check if tests pass;
-    try {;
-      execSync(`npm run test: ci`, { stdio: `pipe` });,
-} catch (error) {  ;
-      throw new Error("Tests are failing. Please fix tests before deployment.");,
+    try {
+  execSync(`npm run test: ci`, { stdio: `pipe` });,
+} catch (error) {
+  throw new Error("Tests are failing. Please fix tests before deployment.");,
 }
 ;
     // Check if build succeeds;
-    try {;
-      execSync("npm run build", { stdio: "pipe" });,
-} catch (error) {  ;
-      throw new Error("Build is failing. Please fix build issues before deployment.");,
+    try {
+  execSync("npm run build", { stdio: "pipe" });,
+} catch (error) {
+  throw new Error("Build is failing. Please fix build issues before deployment.");,
 }
 ;
 
-  async preDeploymentChecks() {;
-    this.log("🔍 Running pre-deployment checks...");
+  async preDeploymentChecks() {
+  this.log("🔍 Running pre-deployment checks...");
     ;
     // Check if git is clean;
-    try {;
-      const gitStatus = execSync("git status --porcelain", { encoding: "utf8" });
-      if (gitStatus.trim()) {;
-        throw new Error("Git working directory is not clean. Please commit or stash changes.");,
+    try {
+  const gitStatus = execSync("git status --porcelain", { encoding: "utf8" });
+      if (gitStatus.trim()) {
+  throw new Error("Git working directory is not clean. Please commit or stash changes.");,
 }
-    } catch (error) {;
-      throw new Error(`Git check failed: ${error.message}`);,
+    } catch (error) {
+  throw new Error(`Git check failed: ${error.message}`);,
 }
 ;
     // Check if tests pass;
-    try {;
-      execSync("npm run test: ci", { stdio: "pipe" });,
-} catch (error) {;
-      throw new Error("Tests are failing. Please fix tests before deployment.");,
+    try {
+  execSync("npm run test: ci", { stdio: "pipe" });,
+} catch (error) {
+  throw new Error("Tests are failing. Please fix tests before deployment.");,
 }
 ;
     // Check if build succeeds;
-    try {;
-      execSync("npm run build", { stdio: "pipe" });,
-} catch (error) {;
-      throw new Error("Build is failing. Please fix build issues before deployment.");,
+    try {
+  execSync("npm run build", { stdio: "pipe" });,
+} catch (error) {
+  throw new Error("Build is failing. Please fix build issues before deployment.");,
 }
 ;
     this.log("✅ Pre-deployment checks passed");,
 }
 ;
-  async backupCurrentDeployment() {;
-    this.log("💾 Creating backup of current deployment...");
+  async backupCurrentDeployment() {
+  this.log("💾 Creating backup of current deployment...");
     const backupDir = path.join(this.projectRoot, `deployment-backups`);
-    if (!fs.existsSync(backupDir)) {;
-      fs.mkdirSync(backupDir, { recursive: true });,
+    if (!fs.existsSync(backupDir)) {
+  fs.mkdirSync(backupDir, { recursive: true });,
 }
 ;
     const timestamp = new Date().toISOString().replace(/[:.]/g, `-`);
     const backupPath = path.join(backupDir, `backup-${timestamp}`);
     // Create backup of current build;
-    if (fs.existsSync(`.next`)) {;
-      execSync(`cp -r .next ${backupPath}`, { stdio: `pipe` });,
+    if (fs.existsSync(`.next`)) {
+  execSync(`cp -r .next ${backupPath}`, { stdio: `pipe` });,
 }
 ;
     this.log(`✅ Backup created at: ${backupPath}`);
     return backupPath;,
 }
 ;
-  async runSecurityAudit() {;
-    this.log(`🔒 Running security audit...`);
-    try {;
-      execSync(`npm audit --audit-level high`, { stdio: "pipe" });
+  async runSecurityAudit() {
+  this.log(`🔒 Running security audit...`);
+    try {
+  execSync(`npm audit --audit-level high`, { stdio: "pipe" });
       this.log("✅ Security audit passed");,
-} catch (error) {  ;
-
-  async runSecurityAudit() {;
-    this.log("🔒 Running security audit...");
+} catch (error) {
+  async runSecurityAudit() {
+  this.log("🔒 Running security audit...");
     ;
-    try {;
-      execSync("npm audit --audit-level high", { stdio: "pipe" });
+    try {
+  execSync("npm audit --audit-level high", { stdio: "pipe" });
       this.log("✅ Security audit passed");,
-} catch (error) {;
-      this.log("⚠️ Security audit found issues, but continuing deployment");,
+} catch (error) {
+  this.log("⚠️ Security audit found issues, but continuing deployment");,
 }
   }
 ;
-  async optimizeForProduction() {;
-    this.log("⚡ Optimizing for production...");
+  async optimizeForProduction() {
+  this.log("⚡ Optimizing for production...");
     // Set production environment variables;
     process.env.NODE_ENV = "production";
     process.env.NEXT_TELEMETRY_DISABLED = "1";
@@ -164,22 +163,21 @@ class SmartDeploymentAutomation {;
     this.log(`✅ Production optimization completed`);,
 }
 ;
-  async deployToEnvironment() {;
-    this.log(`🚀 Deploying to ${this.environment} environment...`);
-    if (this.environment === `production`) {;
-      // Production deployment logic;
+  async deployToEnvironment() {
+  this.log(`🚀 Deploying to ${this.environment} environment...`);
+    if (this.environment === `production`) {
+  // Production deployment logic;
       this.log(`Deploying to production...`);
       // Add your production deployment commands here;
       // Example: execSync("vercel --prod", { stdio: "pipe" });,
-} else {;
-    ;
-    if (this.environment === "production") {;
-      // Production deployment logic;
+} else {
+  if (this.environment === "production") {
+  // Production deployment logic;
       this.log("Deploying to production...");
       // Add your production deployment commands here;
       // Example: execSync("vercel --prod", { stdio: "pipe" });,
-} else {;
-      // Development/staging deployment logic;
+} else {
+  // Development/staging deployment logic;
       this.log("Deploying to staging...");
       // Add your staging deployment commands here;
       // Example: execSync("vercel", { stdio: "pipe" });,
@@ -188,44 +186,44 @@ class SmartDeploymentAutomation {;
     this.log("✅ Deployment completed");,
 }
 ;
-  async postDeploymentChecks() {;
-    this.log("🔍 Running post-deployment checks...");
+  async postDeploymentChecks() {
+  this.log("🔍 Running post-deployment checks...");
     // Health check;
-    try {;
-      // Add your health check logic here;
+    try {
+  // Add your health check logic here;
       // Example: fetch(`https://your-app.com/health`);
       this.log(`✅ Health check passed`);,
-} catch (error) {  ;
-      throw new Error(`Health check failed: ${error.message  }`);,
+} catch (error) {
+  throw new Error(`Health check failed: ${error.message  }`);,
 }
 ;
     // Performance check;
-    try {;
-      // Add your performance check logic here;
+    try {
+  // Add your performance check logic here;
       this.log(`✅ Performance check passed`);,
-} catch (error) {  ;
-      this.log(`⚠️ Performance check failed, but deployment is functional`);,
+} catch (error) {
+  this.log(`⚠️ Performance check failed, but deployment is functional`);,
 }
   }
 ;
-  async rollback(backupPath) {;
-    this.log(`🔄 Rolling back deployment...`);
-    try {;
-      if (fs.existsSync(backupPath)) {;
-        execSync(`rm -rf .next && cp -r ${backupPath} .next`, { stdio: `pipe` });
+  async rollback(backupPath) {
+  this.log(`🔄 Rolling back deployment...`);
+    try {
+  if (fs.existsSync(backupPath)) {
+  execSync(`rm -rf .next && cp -r ${backupPath} .next`, { stdio: `pipe` });
         this.log(`✅ Rollback completed`);,
-} else {;
-        this.log(`❌ Backup not found, cannot rollback`);,
+} else {
+  this.log(`❌ Backup not found, cannot rollback`);,
 }
-    } catch (error) {  ;
-      this.log(`❌ Rollback failed: ${error.message  }`);,
+    } catch (error) {
+  this.log(`❌ Rollback failed: ${error.message  }`);,
 }
   }
 ;
-  async generateDeploymentReport() {;
-    this.log(`📊 Generating deployment report...`);
-    const report = {;
-      timestamp: new Date().toISOString(),;
+  async generateDeploymentReport() {
+  this.log(`📊 Generating deployment report...`);
+    const report = {
+  timestamp: new Date().toISOString(),;
       environment: this.environment,;
       steps: this.deploymentSteps,;
       totalDuration: Date.now() - this.startTime,;
@@ -237,18 +235,18 @@ class SmartDeploymentAutomation {;
     return report;,
 }
 ;
-  async deploy() {;
-    this.log(`🚀 Starting smart deployment...`);
+  async deploy() {
+  this.log(`🚀 Starting smart deployment...`);
     let backupPath = null;
-    try {;
-      await this.runStep(`Pre-deployment checks`, () => this.preDeploymentChecks());
+    try {
+  await this.runStep(`Pre-deployment checks`, () => this.preDeploymentChecks());
 
-  async deploy() {;
-    this.log("🚀 Starting smart deployment...");
+  async deploy() {
+  this.log("🚀 Starting smart deployment...");
     let backupPath = null;
     ;
-    try {;
-      await this.runStep("Pre-deployment checks", () => this.preDeploymentChecks());
+    try {
+  await this.runStep("Pre-deployment checks", () => this.preDeploymentChecks());
       backupPath = await this.runStep("Backup current deployment", () => this.backupCurrentDeployment());
       await this.runStep("Security audit", () => this.runSecurityAudit());
       await this.runStep("Production optimization", () => this.optimizeForProduction());
@@ -258,10 +256,10 @@ class SmartDeploymentAutomation {;
       this.log(`✅ Smart deployment completed successfully!`);
       this.log(`Total deployment time: ${report.totalDuration}ms`);
       ;,
-} catch (error) {  ;
-      this.log(`❌ Deployment failed: ${error.message  }`);
-      if (backupPath) {;
-        await this.rollback(backupPath);,
+} catch (error) {
+  this.log(`❌ Deployment failed: ${error.message  }`);
+      if (backupPath) {
+  await this.rollback(backupPath);,
 }
       ;
       const report = await this.generateDeploymentReport();
@@ -274,10 +272,10 @@ class SmartDeploymentAutomation {;
 }
 ;
 // Run deployment if called directly;
-if (require.main === module) {;
+if (require.main === module) {
   const deployment = new SmartDeploymentAutomation();
-  deployment.deploy().catch(error => {;
-    console.error(`❌ Deployment failed: `, error);    process.exit(1);,
+  deployment.deploy().catch(error => {
+  console.error(`❌ Deployment failed: `, error);    process.exit(1);,
 });,
 }
 ;

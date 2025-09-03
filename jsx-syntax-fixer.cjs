@@ -1,18 +1,18 @@
 #!/usr/bin/env node;
 const fs = require("fs");
 const path = require("path");
-class JSXSyntaxFixer {;
-  constructor() {;
-    this.projectRoot = process.cwd();
+class $1 {
+  constructor() {
+  this.projectRoot = process.cwd();
     this.fixedFiles = 0;,
 }
 ;
-  log(message) {;
-    console.log(`[${new Date().toISOString()}] ${message}`);,
+  log(message) {
+  console.log(`[${new Date().toISOString()}] ${message}`);,
 }
 ;
-  fixJSXSyntax(content) {;
-    let fixed = content;
+  fixJSXSyntax(content) {
+  let fixed = content;
     // Fix missing colons in JSX attributes;
     fixed = fixed.replace(/className=/g, "className=");
     fixed = fixed.replace(/href=/g, "href=");
@@ -55,41 +55,41 @@ class JSXSyntaxFixer {;
     return fixed;,
 }
 ;
-  async fixFile(filePath) {;
-    try {;
-      const content = fs.readFileSync(filePath, "utf8");
+  async fixFile(filePath) {
+  try {
+  const content = fs.readFileSync(filePath, "utf8");
       const fixedContent = this.fixJSXSyntax(content);
-      if (fixedContent !== content) {;
-        fs.writeFileSync(filePath, fixedContent);
+      if (fixedContent !== content) {
+  fs.writeFileSync(filePath, fixedContent);
         this.log(`✅ Fixed JSX syntax in: ${filePath}`);
         return true;,
 }
       return false;,
-} catch (error) {;
-      this.log(`❌ Error fixing ${filePath}: ${error.message}`);
+} catch (error) {
+  this.log(`❌ Error fixing ${filePath}: ${error.message}`);
       return false;,
 }
   }
 ;
-  async fixAllJSXFiles() {;
-    this.log("🚀 Starting JSX syntax fixing...");
+  async fixAllJSXFiles() {
+  this.log("🚀 Starting JSX syntax fixing...");
     const jsxFiles = [];
-    const walkDir = (dir) => {;
-      const files = fs.readdirSync(dir);
-      for (const file of files) {;
-        const filePath = path.join(dir, file);
+    const walkDir = (dir) => {
+  const files = fs.readdirSync(dir);
+      for (const file of files) {
+  const filePath = path.join(dir, file);
         const stat = fs.statSync(filePath);
-        if (stat.isDirectory() && !file.startsWith(".") && file !== "node_modules") {;
-          walkDir(filePath);,
-} else if (stat.isFile() && (file.endsWith(".tsx") || file.endsWith(".jsx"))) {;
-          jsxFiles.push(filePath);,
+        if (stat.isDirectory() && !file.startsWith(".") && file !== "node_modules") {
+  walkDir(filePath);,
+} else if (stat.isFile() && (file.endsWith(".tsx") || file.endsWith(".jsx"))) {
+  jsxFiles.push(filePath);,
 }
       }
     }
     walkDir(this.projectRoot);
-    for (const file of jsxFiles) {;
-      if (await this.fixFile(file)) {;
-        this.fixedFiles++;,
+    for (const file of jsxFiles) {
+  if (await this.fixFile(file)) {
+  this.fixedFiles++;,
 }
     }
     ;
@@ -97,15 +97,15 @@ class JSXSyntaxFixer {;
 }
 }
 ;
-if (require.main === module) {;
+if (require.main === module) {
   const fixer = new JSXSyntaxFixer();
   fixer.fixAllJSXFiles();
-    .then(() => {;
-      console.log("✅ JSX syntax fixing completed");
+    .then(() => {
+  console.log("✅ JSX syntax fixing completed");
       process.exit(0);,
 });
-    .catch((error) => {;
-      console.error("❌ JSX syntax fixing failed:", error.message);
+    .catch((error) => {
+  console.error("❌ JSX syntax fixing failed:", error.message);
       process.exit(1);,
 });,
 }

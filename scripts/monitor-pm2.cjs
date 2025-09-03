@@ -3,8 +3,8 @@
  * PM2 Monitoring Dashboard for Zion Application
  * Provides real-time monitoring of all PM2 processes
  */
-const { exec } = require("child_process")
-const fs = require("fs")
+const { exec } = require("$1");
+const fs = require("$1");
 const path = require("path")
 class PM2Monitor {
   constructor() {
@@ -12,7 +12,9 @@ class PM2Monitor {
     this.interval = 5000; // 5 seconds
     this.isRunning = false,
 }
-const { exec } = require("child_process")const fs = require("fs")const path = require("path")";class PM2Monitor {
+const { exec } = require("$1");
+const fs = require("$1");
+const path = require("path")";class PM2Monitor {
   constructor() {
     this.logsDir = "./logs";    this.interval = 5000; // 5 seconds;    this.isRunning = false}
 
@@ -154,7 +156,7 @@ const { exec } = require("child_process")const fs = require("fs")const path = re
       default:
         return 0,
 }
-      case "mb":";        return value * 1024 * 1024;      case "kb":";        return value * 1024;      case "b":";        return value;      "default":;;        return 0}
+      case "mb":";        return value * 1024 * 1024;      case "kb":";        return value * 1024;      case "b":";        return value;      "default":;        return 0}
   }
 
   // Start monitoring
@@ -253,7 +255,7 @@ async function main() {
 
   // Display help information
   showHelp() {
-    console.log("";PM2 Monitoring Dashboard - Usage);"Commands:;;  start     - Start monitoring dashboard
+    console.log("";PM2 Monitoring Dashboard - Usage);"Commands:;  start     - Start monitoring dashboard
   status    - Show current PM2 status
   logs <name> - Show logs for specific process
   report    - Generate status report

@@ -155,18 +155,18 @@ module.exports = {
   }
 };
 =======
-module.exports = {;
-  apps: [;
-    // Main Error Automation Orchestrator - Coordinates all error fixing activities;
-    {;
-      name: "error-automation-orchestrator",;
+module.exports = {
+  apps: [
+  // Main Error Automation Orchestrator - Coordinates all error fixing activities;
+    {
+  name: "error-automation-orchestrator",;
       script: "./scripts/automation/pm2-error-automation-orchestrator.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "512M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTOMATION_MODE: "true",;,
 },;
       log_file: "./automation/logs/error-orchestrator.log",;
@@ -177,15 +177,15 @@ module.exports = {;
 },;
 
     // Comprehensive Error Fixer - Runs every 2 hours;
-    {;
-      name: "comprehensive-error-fixer",;
+    {
+  name: "comprehensive-error-fixer",;
       script: "./scripts/automation/comprehensive-error-fixer-enhanced.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "1G",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTOMATION_INTERVAL: "7200000", // 2 hours;,
 },;
       cron_restart: "0 */2 * * *", // Every 2 hours;
@@ -197,15 +197,15 @@ module.exports = {;
 },;
 
     // TypeScript Error Fixer - Runs every 30 minutes;
-    {;
-      name: "typescript-error-fixer",;
+    {
+  name: "typescript-error-fixer",;
       script: "./scripts/automation/typescript-error-fixer.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "512M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTOMATION_INTERVAL: "1800000", // 30 minutes;,
 },;
       cron_restart: "*/30 * * * *", // Every 30 minutes;
@@ -217,15 +217,15 @@ module.exports = {;
 },;
 
     // Build Error Monitor - Runs every hour;
-    {;
-      name: "build-error-monitor",;
+    {
+  name: "build-error-monitor",;
       script: "./scripts/automation/build-error-monitor.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "512M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTOMATION_INTERVAL: "3600000", // 1 hour;,
 },;
       cron_restart: "0 * * * *", // Every hour;
@@ -237,15 +237,15 @@ module.exports = {;
 },;
 
     // Import/Export Fixer - Runs every 15 minutes;
-    {;
-      name: "import-export-fixer",;
+    {
+  name: "import-export-fixer",;
       script: "./scripts/automation/import-export-fixer.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "256M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTOMATION_INTERVAL: "900000", // 15 minutes;,
 },;
       cron_restart: "*/15 * * * *", // Every 15 minutes;
@@ -257,15 +257,15 @@ module.exports = {;
 },;
 
     // Enhanced Error Detector - runs every 10 minutes (HIGHEST PRIORITY);
-    {;
-      name: "enhanced-error-detector",;
+    {
+  name: "enhanced-error-detector",;
       script: "./scripts/automation/enhanced-error-detector.cjs",;
       instances: 1,;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "512M",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         AUTOMATION_INTERVAL: "600000", // 10 minutes;,
 },;
       cron_restart: "*/10 * * * *", // Restart every 10 minutes;
@@ -277,8 +277,8 @@ module.exports = {;
 },;
 
     // Main application;
-    {;
-      name: "zion-app",;
+    {
+  name: "zion-app",;
       script: "npm",;
       args: "start",;
       cwd: "./",;
@@ -286,20 +286,20 @@ module.exports = {;
       autorestart: true,;
       watch: false,;
       max_memory_restart: "1G",;
-      env: {;
-        NODE_ENV: "production",;
+      env: {
+  NODE_ENV: "production",;
         PORT: 3000,;,
 },;
-      env_production: {;
-        NODE_ENV: "production",;
+      env_production: {
+  NODE_ENV: "production",;
         PORT: 3000,;,
 },;,
 },;
   ],;
 
-  deploy: {;
-    production: {;
-      user: "ubuntu",;
+  deploy: {
+  production: {
+  user: "ubuntu",;
       host: "localhost",;
       ref: "origin/main",;
       repo: "git@github.com:your-username/zion-tech-group.git",;

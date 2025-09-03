@@ -6,7 +6,7 @@ import { fileURLToPath  } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // List of all corrupted files that need to be completely rewritten;
-const corruptedFiles = [;
+const corruptedFiles = [
   "src/pages/services/AI-Talent-Acquisition-Platform.tsx",;
   "src/pages/services/AI5GNetwork.tsx",;
   "src/pages/services/AIAnsible.tsx",;
@@ -61,13 +61,13 @@ const corruptedFiles = [;
   "src/pages/services/AIHealthcare.tsx";
 ];
 // Function to create a proper React component;
-function createServiceComponent(serviceName) {;
+function createServiceComponent(serviceName) {
   const componentName = serviceName.replace(/[^a-zA-Z0-9]/g, "");
   const displayName = serviceName.replace(/AI|\.tsx|\.jsx/g, "").replace(/([A-Z])/g, " $1").trim();
   return `import React from "react";
 import Link from "next/link";
 import Head from "next/head";
-const ${componentName} = () => {;
+const ${componentName} = () => {
   return (;
     <>;
       <Head>;
@@ -125,12 +125,12 @@ export default ${componentName};`;,
 }
 ;
 // Function to fix Next.js Link issues;
-function fixNextLinks(filePath) {;
-  try {;
-    let content = fs.readFileSync(filePath, "utf8");
+function fixNextLinks(filePath) {
+  try {
+  let content = fs.readFileSync(filePath, "utf8");
     // Add Link import if not present and file has href attributes;
-    if (content.includes("href="/") && !content.includes("import Link")) {;
-      content = content.replace(;
+    if (content.includes("href="/") && !content.includes("import Link")) {
+  content = content.replace(;
         /import React from "react";/,;
         `import React from "react";
 import Link from "next/link";`;
@@ -146,22 +146,22 @@ import Link from "next/link";`;
     content = content.replace(/<\/a>/g, "</Link>");
     fs.writeFileSync(filePath, content);
     console.log(`Fixed Next.js links in: ${filePath}`);,
-} catch (error) {;
-    console.error(`Error fixing links in ${filePath}:`, error.message);,
+} catch (error) {
+  console.error(`Error fixing links in ${filePath}:`, error.message);,
 }
 }
 ;
 // Function to fix Redux/TypeScript files;
-function fixReduxFiles() {;
-  const reduxFiles = [;
-    "src/store/hooks.ts",;
+function $1() {
+  const reduxFiles = [
+  "src/store/hooks.ts",;
     "src/store/index.ts",;
     "src/store/wishlistSlice.ts";
   ];
-  reduxFiles.forEach(filePath => {;
-    try {;
-      if (fs.existsSync(filePath)) {;
-        let content = fs.readFileSync(filePath, "utf8");
+  reduxFiles.forEach(filePath => {
+  try {
+  if (fs.existsSync(filePath)) {
+  let content = fs.readFileSync(filePath, "utf8");
         // Fix common TypeScript syntax errors;
         content = content.replace(/import\s*{([^}]*)\s*}\s*from\s*[""]react-redux[""];/, ;
           "import { $1  } from "react-redux";");
@@ -171,29 +171,29 @@ function fixReduxFiles() {;
         fs.writeFileSync(filePath, content);
         console.log(`Fixed Redux file: ${filePath}`);,
 }
-    } catch (error) {;
-      console.error(`Error fixing Redux file ${filePath}:`, error.message);,
+    } catch (error) {
+  console.error(`Error fixing Redux file ${filePath}:`, error.message);,
 }
   });,
 }
 ;
 // Function to fix test files;
-function fixTestFiles() {;
-  const testFiles = [;
-    "src/test/App.test.tsx";
+function fixTestFiles() {
+  const testFiles = [
+  "src/test/App.test.tsx";
   ];
-  testFiles.forEach(filePath => {;
-    try {;
-      if (fs.existsSync(filePath)) {;
-        let content = fs.readFileSync(filePath, "utf8");
+  testFiles.forEach(filePath => {
+  try {
+  if (fs.existsSync(filePath)) {
+  let content = fs.readFileSync(filePath, "utf8");
         // Fix common test syntax errors;
         content = content.replace(/import\s*{([^}]*)\s*}\s*from\s*[""]@testing-library\/react[""];/, ;
           "import { $1  } from "@testing-library/react";");
         fs.writeFileSync(filePath, content);
         console.log(`Fixed test file: ${filePath}`);,
 }
-    } catch (error) {;
-      console.error(`Error fixing test file ${filePath}:`, error.message);,
+    } catch (error) {
+  console.error(`Error fixing test file ${filePath}:`, error.message);,
 }
   });,
 }
@@ -202,24 +202,24 @@ function fixTestFiles() {;
 console.log("Starting comprehensive fix...");
 // 1. Fix corrupted files by rewriting them;
 console.log("Fixing corrupted files...");
-corruptedFiles.forEach(filePath => {;
-  try {;
-    const serviceName = path.basename(filePath, path.extname(filePath));
+corruptedFiles.forEach(filePath => {
+  try {
+  const serviceName = path.basename(filePath, path.extname(filePath));
     const newContent = createServiceComponent(serviceName);
     fs.writeFileSync(filePath, newContent);
     console.log(`Rewrote corrupted file: ${filePath}`);,
-} catch (error) {;
-    console.error(`Error rewriting ${filePath}:`, error.message);,
+} catch (error) {
+  console.error(`Error rewriting ${filePath}:`, error.message);,
 }
 });
 // 2. Fix Next.js Link issues in all service files;
 console.log("Fixing Next.js Link issues...");
 const serviceDir = "src/pages/services";
-if (fs.existsSync(serviceDir)) {;
+if (fs.existsSync(serviceDir)) {
   const files = fs.readdirSync(serviceDir);
-  files.forEach(file => {;
-    if (file.endsWith(".tsx") || file.endsWith(".jsx")) {;
-      const filePath = path.join(serviceDir, file);
+  files.forEach(file => {
+  if (file.endsWith(".tsx") || file.endsWith(".jsx")) {
+  const filePath = path.join(serviceDir, file);
       fixNextLinks(filePath);,
 }
   });,
@@ -233,18 +233,18 @@ console.log("Fixing test files...");
 fixTestFiles();
 // 5. Remove problematic .js.jsx files;
 console.log("Removing problematic .js.jsx files...");
-const problematicFiles = [;
+const problematicFiles = [
   "src/pages/services/AICustomerServiceAutomation.js.jsx",;
   "src/pages/services/EnterpriseIT.js.jsx";
 ];
-problematicFiles.forEach(filePath => {;
-  try {;
-    if (fs.existsSync(filePath)) {;
-      fs.unlinkSync(filePath);
+problematicFiles.forEach(filePath => {
+  try {
+  if (fs.existsSync(filePath)) {
+  fs.unlinkSync(filePath);
       console.log(`Removed problematic file: ${filePath}`);,
 }
-  } catch (error) {;
-    console.error(`Error removing ${filePath}:`, error.message);,
+  } catch (error) {
+  console.error(`Error removing ${filePath}:`, error.message);,
 }
 });
 console.log("Comprehensive fix completed!")

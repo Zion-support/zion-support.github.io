@@ -19,7 +19,7 @@ const path = require('path');
 const crypto = require('crypto');
 
 class IntelligentCICDOrchestrator {
-    constructor() {
+  constructor() {
         this.projectRoot = process.cwd();
         this.logFile = path.join(this.projectRoot, 'logs', 'intelligent-cicd-orchestrator.log');
         this.config = this.loadConfig();
