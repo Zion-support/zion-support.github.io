@@ -1,51 +1,68 @@
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
-import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Cloud } from 'lucide-react';
+import { CheckCircle, AlertCircle, XCircle, Clock, Server, Database, Cloud } from 'lucide-react';
 
 const Status: NextPage = () => {
   const services = [
     {
-      name: 'Web Application',
-      status: 'operational',
-      uptime: '99.9%',
-      responseTime: '120ms',
-      lastIncident: 'No incidents in the past 30 days'
-    },
-    {
       name: 'API Services',
-      status: 'operational',
-      uptime: '99.8%',
-      responseTime: '85ms',
-      lastIncident: 'No incidents in the past 30 days'
-    },
-    {
-      name: 'Database',
       status: 'operational',
       uptime: '99.9%',
       responseTime: '45ms',
       lastIncident: 'No incidents in the past 30 days'
     },
     {
-      name: 'Cloud Infrastructure',
+      name: 'Web Application',
       status: 'operational',
-      uptime: '99.7%',
-      responseTime: '200ms',
+      uptime: '99.8%',
+      responseTime: '120ms',
+      lastIncident: 'No incidents in the past 30 days'
+    },
+    {
+      name: 'Database',
+      status: 'operational',
+      uptime: '99.95%',
+      responseTime: '8ms',
       lastIncident: 'No incidents in the past 30 days'
     },
     {
       name: 'CDN',
       status: 'operational',
       uptime: '99.9%',
-      responseTime: '50ms',
+      responseTime: '25ms',
       lastIncident: 'No incidents in the past 30 days'
     },
     {
-      name: 'Monitoring',
+      name: 'Authentication',
       status: 'operational',
-      uptime: '100%',
-      responseTime: '30ms',
+      uptime: '99.9%',
+      responseTime: '35ms',
       lastIncident: 'No incidents in the past 30 days'
+    },
+    {
+      name: 'File Storage',
+      status: 'operational',
+      uptime: '99.9%',
+      responseTime: '65ms',
+      lastIncident: 'No incidents in the past 30 days'
+    }
+  ];
+
+  const recentIncidents = [
+    {
+      date: 'January 15, 2025',
+      title: 'Scheduled Maintenance',
+      status: 'resolved',
+      description: 'Planned maintenance window for database optimization. All services restored.',
+      duration: '2 hours'
+    },
+    {
+      date: 'January 8, 2025',
+      title: 'API Rate Limiting Issue',
+      status: 'resolved',
+      description: 'Temporary issue with rate limiting causing some API requests to fail. Issue resolved within 30 minutes.',
+      duration: '30 minutes'
     }
   ];
 
@@ -75,244 +92,187 @@ const Status: NextPage = () => {
     }
   };
 
-  const incidents = [
-    {
-      id: 1,
-      title: 'Scheduled Maintenance - API Services',
-      status: 'resolved',
-      date: '2025-01-20',
-      description: 'Scheduled maintenance window for API services completed successfully.',
-      impact: 'minor'
-    },
-    {
-      id: 2,
-      title: 'Database Performance Issue',
-      status: 'resolved',
-      date: '2025-01-15',
-      description: 'Temporary performance degradation in database queries has been resolved.',
-      impact: 'minor'
-    }
-  ];
-
   return (
     <MainLayout
       title="System Status - Zion Tech Group"
-      description="Check the current status of Zion Tech Group services and infrastructure. Monitor uptime, performance, and any ongoing incidents."
-      keywords="system status, uptime, service status, monitoring, incidents, performance"
+      description="Real-time status of Zion Tech Group services and infrastructure. Monitor uptime, performance, and incident reports."
+      keywords="system status, uptime, service status, incident reports, monitoring, infrastructure"
     >
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">System Status</h1>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-              Monitor the real-time status of our services and infrastructure. 
-              All systems are currently operational.
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            System Status
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
+            Real-time monitoring of our services and infrastructure. 
+            We maintain 99.9% uptime to ensure your applications run smoothly.
+          </p>
+          
+          {/* Overall Status */}
+          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 max-w-2xl mx-auto">
+            <div className="flex items-center justify-center mb-4">
+              <CheckCircle className="w-8 h-8 text-green-400 mr-3" />
+              <span className="text-2xl font-bold">All Systems Operational</span>
+            </div>
+            <p className="text-gray-200">Last updated: {new Date().toLocaleString()}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Status */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Service Status</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Current status of all our core services and infrastructure components.
             </p>
           </div>
-        </section>
 
-        {/* Overall Status */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <div className="flex items-center justify-center mb-4">
-                <CheckCircle className="w-12 h-12 text-green-500 mr-3" />
-                <h2 className="text-3xl font-bold text-gray-900">All Systems Operational</h2>
-              </div>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                All services are running normally. We're monitoring our systems 24/7 to ensure optimal performance.
-              </p>
-            </div>
-            
-            {/* Status Overview Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="bg-gray-50 rounded-lg p-6 text-center">
-                <Activity className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">99.9%</h3>
-                <p className="text-gray-600">Overall Uptime</p>
-              </div>
-              
-              <div className="bg-gray-50 rounded-lg p-6 text-center">
-                <Clock className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">85ms</h3>
-                <p className="text-gray-600">Average Response Time</p>
-              </div>
-              
-              <div className="bg-gray-50 rounded-lg p-6 text-center">
-                <CheckCircle className="w-12 h-12 text-green-600 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">0</h3>
-                <p className="text-gray-600">Active Incidents</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Service Status */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Service Status</h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Real-time status of all our services and infrastructure components.
-              </p>
-            </div>
-            
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div className="overflow-x-auto">
-                  <table className="w-full">
-                    <thead className="bg-gray-50">
-                      <tr>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                          Service
-                        </th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                          Status
-                        </th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                          Uptime
-                        </th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                          Response Time
-                        </th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                          Last Incident
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody className="bg-white divide-y divide-gray-200">
-                      {services.map((service, index) => (
-                        <tr key={index} className="hover:bg-gray-50">
-                          <td className="px-6 py-4 whitespace-nowrap">
-                            <div className="flex items-center">
-                              <Server className="w-5 h-5 text-gray-400 mr-3" />
-                              <span className="text-sm font-medium text-gray-900">{service.name}</span>
-                            </div>
-                          </td>
-                          <td className="px-6 py-4 whitespace-nowrap">
-                            <div className="flex items-center">
-                              {getStatusIcon(service.status)}
-                              <span className={`ml-2 inline-flex px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(service.status)}`}>
-                                {service.status}
-                              </span>
-                            </div>
-                          </td>
-                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                            {service.uptime}
-                          </td>
-                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                            {service.responseTime}
-                          </td>
-                          <td className="px-6 py-4 text-sm text-gray-500">
-                            {service.lastIncident}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, index) => (
+              <div key={service.name} className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-green-500">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-xl font-bold text-gray-900">{service.name}</h3>
+                  {getStatusIcon(service.status)}
+                </div>
+                
+                <div className="space-y-3">
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Status:</span>
+                    <span className={`px-2 py-1 rounded-full text-sm font-medium ${getStatusColor(service.status)}`}>
+                      {service.status.charAt(0).toUpperCase() + service.status.slice(1)}
+                    </span>
+                  </div>
+                  
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Uptime:</span>
+                    <span className="font-semibold text-gray-900">{service.uptime}</span>
+                  </div>
+                  
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Response Time:</span>
+                    <span className="font-semibold text-gray-900">{service.responseTime}</span>
+                  </div>
+                  
+                  <div className="pt-2 border-t border-gray-200">
+                    <p className="text-sm text-gray-500">{service.lastIncident}</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Recent Incidents */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Recent Incidents</h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                History of recent incidents and their resolution status.
-              </p>
-            </div>
-            
-            <div className="max-w-4xl mx-auto">
-              <div className="space-y-6">
-                {incidents.map((incident) => (
-                  <div key={incident.id} className="bg-gray-50 rounded-lg p-6">
-                    <div className="flex items-start justify-between">
-                      <div className="flex-1">
-                        <div className="flex items-center mb-2">
-                          <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-                          <h3 className="text-lg font-semibold text-gray-900">{incident.title}</h3>
-                        </div>
-                        <p className="text-gray-600 mb-2">{incident.description}</p>
-                        <div className="flex items-center text-sm text-gray-500">
-                          <span className="mr-4">Date: {incident.date}</span>
-                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                            incident.impact === 'minor' ? 'bg-yellow-100 text-yellow-800' : 'bg-red-100 text-red-800'
-                          }`}>
-                            {incident.impact} impact
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Monitoring Information */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Monitoring & Alerts</h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We continuously monitor our systems and will notify you of any issues.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              <div className="bg-white rounded-lg p-6 text-center">
-                <Database className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">24/7 Monitoring</h3>
-                <p className="text-gray-600 text-sm">Continuous monitoring of all systems</p>
-              </div>
-              
-              <div className="bg-white rounded-lg p-6 text-center">
-                <Activity className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Real-time Alerts</h3>
-                <p className="text-gray-600 text-sm">Instant notifications for any issues</p>
-              </div>
-              
-              <div className="bg-white rounded-lg p-6 text-center">
-                <Cloud className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Global Monitoring</h3>
-                <p className="text-gray-600 text-sm">Monitoring from multiple locations</p>
-              </div>
-              
-              <div className="bg-white rounded-lg p-6 text-center">
-                <CheckCircle className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">SLA Compliance</h3>
-                <p className="text-gray-600 text-sm">99.9% uptime guarantee</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Subscribe to Updates */}
-        <section className="py-16 bg-blue-900 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
-            <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
-              Subscribe to status updates and get notified about any service incidents.
+      {/* Performance Metrics */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Performance Metrics</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Key performance indicators for the past 30 days.
             </p>
-            <div className="max-w-md mx-auto flex">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 rounded-l-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-              <button className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-r-lg font-semibold transition-colors">
-                Subscribe
-              </button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+              <div className="bg-green-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Server className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-3xl font-bold text-gray-900 mb-2">99.9%</h3>
+              <p className="text-gray-600">Overall Uptime</p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+              <div className="bg-blue-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Clock className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-3xl font-bold text-gray-900 mb-2">45ms</h3>
+              <p className="text-gray-600">Average Response Time</p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+              <div className="bg-purple-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Database className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-3xl font-bold text-gray-900 mb-2">0</h3>
+              <p className="text-gray-600">Active Incidents</p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+              <div className="bg-indigo-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <Cloud className="w-8 h-8 text-indigo-600" />
+              </div>
+              <h3 className="text-3xl font-bold text-gray-900 mb-2">6</h3>
+              <p className="text-gray-600">Services Monitored</p>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+
+      {/* Recent Incidents */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Recent Incidents</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Historical record of service incidents and maintenance windows.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-6">
+              {recentIncidents.map((incident, index) => (
+                <div key={index} className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-green-500">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-xl font-bold text-gray-900">{incident.title}</h3>
+                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(incident.status)}`}>
+                      {incident.status.charAt(0).toUpperCase() + incident.status.slice(1)}
+                    </span>
+                  </div>
+                  
+                  <div className="flex items-center text-gray-600 mb-3">
+                    <Clock className="w-4 h-4 mr-2" />
+                    <span>{incident.date} • Duration: {incident.duration}</span>
+                  </div>
+                  
+                  <p className="text-gray-600">{incident.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Status Page Info */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">About This Status Page</h2>
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            This status page is updated in real-time and provides transparency about our service availability. 
+            We monitor our infrastructure 24/7 to ensure optimal performance.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Real-time Monitoring</h3>
+              <p className="text-gray-600">Our systems are monitored continuously with automated alerts and notifications.</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Transparent Communication</h3>
+              <p className="text-gray-600">We provide detailed incident reports and regular updates during any service issues.</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-lg">
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Proactive Maintenance</h3>
+              <p className="text-gray-600">Scheduled maintenance windows are planned in advance to minimize service disruption.</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </MainLayout>
   );
 };

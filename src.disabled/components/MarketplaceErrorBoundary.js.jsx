@@ -1,1 +1,2 @@
-function MarketplaceErrorFallback({ error, resetErrorBoundary }) { const handleRetry = async () => { try {
+
+function: MarketplaceErrorFallback ({ error, resetErrorBoundary }) { const handleRetry = async () => { try {

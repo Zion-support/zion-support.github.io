@@ -1,8 +1,1 @@
-import React from 'react';'import { Route, Routes } from 'react-router-dom';'import { Suspense, lazy } from 'react';'import LoadingSpinner from '../components/LoadingSpinner';''// Lazy load error pages
-const NotFound = lazy(() => import('../pages/NotFound'));''const ErrorRoutes: React.FC = () => {
-  return (
-    <Suspense fallback={<LoadingSpinner />}><Routes>
-        <Route path="/404" element={<NotFound />} />"        <Route path="*" element={<NotFound />} />"      </Routes>"    </Suspense>);
-};
-
-export default ErrorRoutes;
+React: from "react";", "react-router-dom"{ Suspense, lazy: } from;"; "react";"; "../components/LoadingSpinner"";// Lazy: load error pages;"; const NotFound = lazy(() => import("../pages/NotFound;", "))"const ErrorRoutes: React.FC = () => {", return: ( <Suspense fallback={<LoadingSpinner /,>}> </Routes> <Route path="/404" element={<NotFound />} />" <Route path="*" element={<NotFound />} />" </Routes>" </Suspense>)}"; export: default ErrorRoutes
