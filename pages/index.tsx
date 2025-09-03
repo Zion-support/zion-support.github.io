@@ -15,14 +15,28 @@ export default function Home() {
         <title>Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions</title>
         <meta name="description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 340+ innovative services including quantum computing, AI automation, blockchain, edge computing, and enterprise technology solutions." />
         <meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, quantum computing, blockchain, edge computing, 5G, IoT, MLOps, DevSecOps" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#3b82f6" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="language" content="en" />
         <link rel="canonical" href={contact.site} />
         <meta property="og:title" content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions" />
         <meta property="og:description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 340+ innovative services including quantum computing, AI automation, blockchain, edge computing, and enterprise technology solutions." />
         <meta property="og:url" content={contact.site} />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content={`${contact.site}/og-image.jpg`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Zion Tech Group" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions" />
         <meta name="twitter:description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 340+ innovative services including quantum computing, AI automation, blockchain, edge computing, and enterprise technology solutions." />
+        <meta name="twitter:image" content={`${contact.site}/og-image.jpg`} />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="//images.unsplash.com" />
+        <link rel="dns-prefetch" href="//via.placeholder.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -53,7 +67,7 @@ export default function Home() {
         />
       </Head>
       
-      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white" role="main">
         {/* Hero Section */}
         <section className="py-20 px-4 text-center">
           <div className="max-w-4xl mx-auto">
@@ -64,26 +78,31 @@ export default function Home() {
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
             <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
-<<<<<<< HEAD
-              We deliver cutting-edge technology solutions with 150+ micro SaaS products, 
-              100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization 
-              to AI automation, quantum computing to blockchain solutions, we help businesses scale 
-              efficiently and securely in the digital age.
-=======
               We deliver cutting-edge technology solutions with 150+ innovative micro SaaS products, 
               90+ advanced AI services, and 100+ comprehensive IT solutions. From quantum computing 
               to AI automation, we help businesses scale efficiently and securely with next-generation technology.
->>>>>>> 72143897074 (feat: Add 30+ new innovative services across micro SaaS, AI, and IT categories)
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-              <Link href="/services" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+              <Link 
+                href="/services" 
+                className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+                aria-label="View all our services and solutions"
+              >
                 View All Services
               </Link>
-              <Link href="/services-catalog" className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
+              <Link 
+                href="/services-catalog" 
+                className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+                aria-label="Browse our comprehensive services catalog"
+              >
                 Services Catalog
               </Link>
-              <Link href="/contact" className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
+              <Link 
+                href="/contact" 
+                className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+                aria-label="Get a quote for our services"
+              >
                 Get Quote
               </Link>
             </div>
@@ -94,11 +113,7 @@ export default function Home() {
                 <p className="text-slate-300">Micro SaaS Products</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-<<<<<<< HEAD
-                <h3 className="text-2xl font-bold text-purple-400 mb-2">100+</h3>
-=======
                 <h3 className="text-2xl font-bold text-purple-400 mb-2">90+</h3>
->>>>>>> 72143897074 (feat: Add 30+ new innovative services across micro SaaS, AI, and IT categories)
                 <p className="text-slate-300">AI Services</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">

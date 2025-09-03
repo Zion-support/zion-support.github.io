@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
+import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import '../styles/globals.css';
 
 function Header(): any {
@@ -54,6 +55,14 @@ function Header(): any {
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
           }}>Catalog</Link>
+          <Link href="/services-overview" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>Overview</Link>
+          <Link href="/services-comparison" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }}>Compare</Link>
           <Link href="/pricing" style={{ 
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
@@ -124,6 +133,14 @@ function Header(): any {
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
           }} onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
+          <Link href="/services-overview" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>Overview</Link>
+          <Link href="/services-comparison" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
+          }} onClick={() => setMobileMenuOpen(false)}>Compare</Link>
           <Link href="/pricing" style={{ 
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease', textDecoration: 'none', color: 'white'
@@ -262,6 +279,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ErrorBoundary>
       <PerformanceMonitor />
+      <PerformanceOptimizer />
       <Header />
       <Component {...pageProps} />
       <Footer />
