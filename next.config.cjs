@@ -6,8 +6,8 @@ const nextConfig = {
   poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
-  // Only treat *.route.tsx/ts as pages to avoid compiling corrupted files
-  pageExtensions: ['route.tsx', 'route.ts'],
+  // Restore standard Next.js page extensions so pages under `pages/` compile
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
     formats: ['image/webp', 'image/avif'],

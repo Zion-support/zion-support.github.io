@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app';
 import Link from 'next/link';
+import Head from 'next/head';
 
 function Header() {
   return (
@@ -51,6 +52,13 @@ function Footer() {
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
+      <Head>
+        <title>Zion Tech Group — AI, Cloud, and IT Services</title>
+        <meta name="description" content="Zion Tech Group delivers AI services, Micro SaaS solutions, Cloud/DevOps, and cybersecurity for high‑impact results." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#0b1220" />
+        <link rel="canonical" href="https://ziontechgroup.com/" />
+      </Head>
       <Header />
       <Component {...pageProps} />
       <Footer />

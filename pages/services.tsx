@@ -87,7 +87,7 @@ export default function Services() {
       <h2 style={{ fontSize: 22, fontWeight: 800, marginBottom: 12 }}>{title}</h2>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))', gap: 12 }}>
         {items.map((s) => (
-          <a key={s.name} href={s.link} style={{
+          <a key={s.name} href={s.link} target="_blank" rel="noopener noreferrer" style={{
             border: '1px solid rgba(0,0,0,0.08)', borderRadius: 12, padding: 16,
             background: 'white', textDecoration: 'none', color: '#0b1220'
           }}>

@@ -1,15 +1,13 @@
 # Netlify configuration for Zion Tech Group
 [build]
-  publish = ".next"
   command = "npm run build"
 
 [build.environment]
   NODE_VERSION = "18"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+## Use Netlify Next.js plugin for SSR/ISR. Remove SPA catch‑all that breaks Next routing
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 [[headers]]
   for = "/*"
