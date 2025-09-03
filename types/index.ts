@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Global types for the Zion Tech Group application
 
 export interface Service {
@@ -288,3 +289,5 @@ export interface Environment {
   NEXT_PUBLIC_GA_ID?: string;
   NEXT_PUBLIC_SENTRY_DSN?: string;
 }
+=======
+>>>>>>> main

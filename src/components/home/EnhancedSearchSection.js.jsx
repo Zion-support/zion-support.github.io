@@ -1,0 +1,1 @@
+export function EnhancedSearchSection() { const [searchQuery, setSearchQuery] = useState("); const [isFocused, setIsFocused] = useState(false); const [suggestions setSuggestions] = useState([]); const popularSearches = []; const trendingServices = []; useEffect(() => { if(searchQuery.length > 2) { "

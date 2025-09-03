@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const messageChannelHandler = {
   sendMessage: (message: string) => {
     // Implementation for sending messages
@@ -10,3 +11,5 @@ export const messageChannelHandler = {
     console.log('Setting up message receiver');
   },
 };
+=======
+>>>>>>> main

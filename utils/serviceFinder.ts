@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Service finder utility for searching and filtering services
 
 export interface Service {
@@ -90,4 +91,7 @@ export function searchServices(
   }
   
   return results;
+=======
+// comment
+>>>>>>> main
 }

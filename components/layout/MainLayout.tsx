@@ -1,25 +1,27 @@
-import React from 'react';
-import EnhancedNavigation from './EnhancedNavigation';
-import EnhancedFooter from './EnhancedFooter';
+import React from "react"
+interface MainLayoutProps {;
 
-interface MainLayoutProps {
-  children: React.ReactNode;
-  title?: string;
-  description?: string;
-  keywords?: string;
-  ogImage?: string;
-}
-
-const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
+  children: React.ReactNode,
+  title?: string,,
+  description?: string,
+  keywords?: string,
+const MainLayout: React.FC<MainLayoutProps> = ({ children,"
+  title = "Zion Tech Group","
+  description = "Leading technology solutions and AI services","
+  keywords = "technology, AI, software development, consulting"
+}) => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <EnhancedNavigation />
-      <main id="main-content" className="flex-grow" role="main">
+    <div className="min-h-screen flex flex-col">"
+      <SEOEnhancer title="{title}" description="{description}" keywords="{keywords}"  />
+      <PerformanceOptimizer  />
+      <AccessibilityEnhancer  />
+      <Header  />"
+      <main className="flex-grow">
         {children}
-      </main>
-      <EnhancedFooter />
-    </div>
-  );
-};
 
-export default MainLayout;
+      </main>
+      <Footer  />
+    </div>
+  )
+}
+""export default MainLayout

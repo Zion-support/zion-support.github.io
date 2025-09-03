@@ -1,1 +1,1 @@
-matchedTalent: TalentProfile[];
+matchedTalent: TalentProfile[]
