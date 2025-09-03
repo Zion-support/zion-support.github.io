@@ -1,5 +1,9 @@
 {
-  "timestamp": "2025-09-03T16:40:29.486Z",
+<<<<<<< HEAD
+  "timestamp": "2025-09-03T16:52:59.017Z",
+=======
+  "timestamp": "2025-09-03T16:46:24.457Z",
+>>>>>>> cursor/analyze-improve-and-deploy-application-d144
   "files": {
     "components/ErrorBoundary.tsx": {
       "path": "components/ErrorBoundary.tsx",
@@ -21,7 +25,15 @@
     },
     "pages/_app.tsx": {
       "path": "pages/_app.tsx",
+<<<<<<< HEAD
+      "lines": 118,
+=======
+<<<<<<< HEAD
+      "lines": 121,
+=======
       "lines": 126,
+>>>>>>> ce2f1c888fb90dd5d7d297f621bf29128aa0e6a6
+>>>>>>> cursor/analyze-improve-and-deploy-application-d144
       "issues": [],
       "complexity": 1
     },
@@ -68,7 +80,7 @@
     },
     "pages/index.tsx": {
       "path": "pages/index.tsx",
-      "lines": 201,
+      "lines": 34,
       "issues": [],
       "complexity": 0
     },
@@ -150,7 +162,15 @@
   },
   "summary": {
     "totalFiles": 16,
+<<<<<<< HEAD
+    "totalLines": 5598,
+=======
+<<<<<<< HEAD
+    "totalLines": 5768,
+=======
     "totalLines": 5773,
+>>>>>>> ce2f1c888fb90dd5d7d297f621bf29128aa0e6a6
+>>>>>>> cursor/analyze-improve-and-deploy-application-d144
     "averageComplexity": "1.06",
     "issues": [
       {
