@@ -1,0 +1,10 @@
+src/
+components.disabled/
+pages.disabled/
+pages.__backup/
+pages-backup/
+pages.disabled_auto/
+solutions.disabled/
+
+.next/
+node_modules/

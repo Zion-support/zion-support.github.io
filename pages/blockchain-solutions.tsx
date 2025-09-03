@@ -65,26 +65,26 @@ const BlockchainSolutions: NextPage = () => {
         </section>
 
         {/* Services Grid */}
-        <section className=py-20 bg-white">
-          <div className="container mx-auto px-4>
-            <div className=text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4>Our Blockchain Services</h2>
-              <p className=text-xl text-gray-600 max-w-2xl mx-auto">
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Blockchain Services</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Comprehensive blockchain solutions tailored to your business needs
               </p>
             </div>
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.map((service, index) => (
-                <div key={index} className=bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4>
-                    <service.icon className=w-8 h-8 text-white" />
+                <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                    <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3>{service.title}</h3>
-                  <p className=text-gray-600 mb-4">{service.description}</p>
-                  <ul className="space-y-2>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <ul className="space-y-2">
                     {service.features.map((feature, i) => (
-                      <li key={i} className=flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 />
+                      <li key={i} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -96,28 +96,28 @@ const BlockchainSolutions: NextPage = () => {
         </section>
 
         {/* Why Choose Us */}
-        <section className=py-20 bg-gray-50">
-          <div className="container mx-auto px-4>
-            <div className=text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4>Why Choose Zion Tech Group?</h2>
-              <p className=text-xl text-gray-600 max-w-2xl mx-auto">
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 We bring deep expertise and proven experience in blockchain development
               </p>
             </div>
-            <div className="grid md:grid-cols-3 gap-8>
-              <div className=text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4>
-                  <Users className=w-8 h-8 text-blue-600" />
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2>Expert Team</h3>
-                <p className=text-gray-600">Experienced blockchain developers and security experts</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Expert Team</h3>
+                <p className="text-gray-600">Experienced blockchain developers and security experts</p>
               </div>
-              <div className="text-center>
-                <div className=w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-8 h-8 text-green-600 />
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="w-8 h-8 text-green-600" />
                 </div>
-                <h3 className=text-xl font-semibold text-gray-900 mb-2">Proven Track Record</h3>
-                <p className="text-gray-600>Successfully delivered 100+ blockchain projects</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Track Record</h3>
+                <p className="text-gray-600">Successfully delivered 100+ blockchain projects</p>
               </div>
               <div className=text-center">
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4>

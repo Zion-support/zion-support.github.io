@@ -31,9 +31,10 @@ import {
   MapPin,
   TrendingUp,
   Car,
-  Brain,;
-  Satellite,;
-  TreePine} from 'lucide-react';
+  Brain,
+  Satellite,
+  TreePine
+} from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
 export default function ITServices() {
@@ -98,6 +99,109 @@ export default function ITServices() {
       features: [
         'CI/CD pipeline setup and optimization,Infrastructure as Code (IaC) implementation,Container orchestration with Kubernetes,Monitoring and logging solutions,Automated testing and quality gates,DevSecOps and security integration'
       ],
+      pricing: '$4,000 - $20,000/month',
+      delivery: '4-8 weeks',
+      category: 'DevOps Services'
+},
+    {
+      title: 'Blockchain & Web3 Solutions',
+      description: 'Decentralized applications, smart contracts, and blockchain integration',
+      icon: Network,
+      features: [
+        'Smart contract development and auditing,DeFi and NFT platform development,Blockchain integration and APIs,Cryptocurrency wallet development,Tokenization and asset management,Cross-chain interoperability solutions'
+      ],
+      pricing: '$8,000 - $50,000/month',
+      delivery: '8-16 weeks',
+      category: 'Blockchain Services'
+},
+    {
+      title: 'IoT & Edge Computing',
+      description: 'Internet of Things solutions with edge computing and real-time processing',
+      icon: Satellite,
+      features: [
+        'IoT device integration and management,Edge computing infrastructure,Real-time data processing and analytics,Sensor network design and implementation,Device security and firmware updates,Integration with cloud platforms'
+      ],
+      pricing: '$6,000 - $35,000/month',
+      delivery: '6-12 weeks',
+      category: 'IoT Services'
+},
+    {
+      title: 'AI/ML Infrastructure',
+      description: 'Machine learning platform setup and AI model deployment',
+      icon: Brain,
+      features: [
+        'MLOps pipeline development,Model training and deployment infrastructure,Data preprocessing and feature engineering,Model monitoring and retraining,GPU cluster management,AI model optimization and scaling'
+      ],
+      pricing: '$10,000 - $60,000/month',
+      delivery: '8-16 weeks',
+      category: 'AI/ML Services'
+},
+    {
+      title: 'Quantum Computing Solutions',
+      description: 'Quantum algorithm development and quantum computing integration',
+      icon: Cpu,
+      features: [
+        'Quantum algorithm design and optimization,Quantum software development,Quantum hardware integration,Quantum cryptography implementation,Quantum simulation and modeling,Hybrid classical-quantum systems'
+      ],
+      pricing: '$25,000 - $200,000/month',
+      delivery: '16-32 weeks',
+      category: 'Quantum Services'
+},
+    {
+      title: '5G & Telecommunications',
+      description: '5G network implementation and telecommunications infrastructure',
+      icon: Wifi,
+      features: [
+        '5G network planning and deployment,Telecommunications infrastructure design,Network slicing and virtualization,Edge computing for 5G,Telecom security and compliance,Integration with existing networks'
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '12-24 weeks',
+      category: 'Telecom Services'
+},
+    {
+      title: 'Augmented Reality (AR) Solutions',
+      description: 'AR application development and immersive technology integration',
+      icon: Eye,
+      features: [
+        'AR application development,3D modeling and rendering,Markerless tracking and recognition,AR cloud integration,Cross-platform AR deployment,AR analytics and user engagement'
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '8-16 weeks',
+      category: 'AR/VR Services'
+},
+    {
+      title: 'Digital Twin Technology',
+      description: 'Digital twin creation and real-time simulation platforms',
+      icon: Monitor,
+      features: [
+        'Digital twin modeling and simulation,Real-time data integration,Predictive maintenance systems,Performance optimization algorithms,Integration with IoT sensors,3D visualization and monitoring'
+      ],
+      pricing: '$12,000 - $80,000/month',
+      delivery: '12-20 weeks',
+      category: 'Digital Twin Services'
+},
+    {
+      title: 'Green IT & Sustainability',
+      description: 'Sustainable technology solutions and carbon footprint reduction',
+      icon: TreePine,
+      features: [
+        'Energy-efficient infrastructure design,Carbon footprint assessment and reduction,Green cloud migration,Sustainable software development,Electronic waste management,Renewable energy integration'
+      ],
+      pricing: '$5,000 - $30,000/month',
+      delivery: '6-12 weeks',
+      category: 'Green IT Services'
+},
+    {
+      title: 'Cybersecurity Training & Awareness',
+      description: 'Comprehensive cybersecurity education and training programs',
+      icon: Shield,
+      features: [
+        'Security awareness training programs,Phishing simulation and testing,Incident response training,Compliance training and certification,Social engineering awareness,Executive security briefings'
+      ],
+      pricing: '$2,000 - $15,000/month',
+      delivery: '2-6 weeks',
+      category: 'Security Training Services'
+},
       pricing: '$3,500 - $20,000/month',
       delivery: '4-10 weeks',
       category: 'DevOps Services'},

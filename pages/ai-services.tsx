@@ -99,6 +99,105 @@ export default function AIServices() {
       category: 'Search AI'
 },
     {
+      title: 'AI-Powered Business Intelligence',
+      description: 'Advanced analytics platform with AI-driven insights and predictive modeling',
+      icon: BarChart3,
+      features: [
+        'Automated data analysis and pattern recognition,Predictive modeling and forecasting,Natural language query interface,Real-time dashboard and alerts,Anomaly detection and root cause analysis,Integration with existing BI tools',
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '8-12 weeks',
+      category: 'Business Intelligence AI'
+},
+    {
+      title: 'AI-Driven Marketing Automation',
+      description: 'Intelligent marketing platform with automated campaign optimization',
+      icon: Target,
+      features: [
+        'Automated campaign creation and optimization,Audience segmentation and targeting,Content personalization and A/B testing,Lead scoring and nurturing workflows,ROI prediction and budget allocation,Multi-channel campaign orchestration',
+      ],
+      pricing: '$5,000 - $20,000/month',
+      delivery: '6-10 weeks',
+      category: 'Marketing AI'
+},
+    {
+      title: 'AI-Powered Fraud Detection',
+      description: 'Real-time fraud prevention and risk assessment system',
+      icon: Shield,
+      features: [
+        'Real-time transaction monitoring,Behavioral analysis and anomaly detection,Machine learning model training,False positive reduction,Compliance reporting and audit trails,Integration with payment processors',
+      ],
+      pricing: '$6,000 - $25,000/month',
+      delivery: '6-8 weeks',
+      category: 'Security AI'
+},
+    {
+      title: 'AI Voice Assistant Platform',
+      description: 'Custom voice AI solutions for customer service and business automation',
+      icon: Mic,
+      features: [
+        'Natural language voice processing,Multi-language voice recognition,Custom voice model training,Integration with business systems,Call routing and escalation,Analytics and conversation insights',
+      ],
+      pricing: '$4,000 - $18,000/month',
+      delivery: '4-8 weeks',
+      category: 'Voice AI'
+},
+    {
+      title: 'AI-Powered Supply Chain Optimization',
+      description: 'Intelligent supply chain management with demand forecasting and inventory optimization',
+      icon: Network,
+      features: [
+        'Demand forecasting and planning,Inventory optimization algorithms,Supplier performance analysis,Risk assessment and mitigation,Cost optimization recommendations,Real-time supply chain monitoring',
+      ],
+      pricing: '$10,000 - $40,000/month',
+      delivery: '10-16 weeks',
+      category: 'Supply Chain AI'
+},
+    {
+      title: 'AI-Powered Healthcare Analytics',
+      description: 'Medical data analysis and patient outcome prediction platform',
+      icon: Heart,
+      features: [
+        'Medical image analysis and diagnosis assistance,Patient risk stratification,Clinical decision support systems,Drug interaction and adverse event prediction,Population health analytics,Regulatory compliance and HIPAA security',
+      ],
+      pricing: '$15,000 - $60,000/month',
+      delivery: '12-20 weeks',
+      category: 'Healthcare AI'
+},
+    {
+      title: 'AI-Powered Financial Trading',
+      description: 'Algorithmic trading platform with AI-driven market analysis',
+      icon: TrendingUp,
+      features: [
+        'Real-time market data analysis,Algorithmic trading strategy development,Risk management and portfolio optimization,Backtesting and performance analytics,Regulatory compliance monitoring,Multi-asset class support',
+      ],
+      pricing: '$20,000 - $100,000/month',
+      delivery: '16-24 weeks',
+      category: 'FinTech AI'
+},
+    {
+      title: 'AI-Powered Smart City Solutions',
+      description: 'Intelligent urban management with IoT integration and predictive analytics',
+      icon: Globe,
+      features: [
+        'Traffic flow optimization and management,Energy consumption monitoring and optimization,Waste management and route optimization,Public safety and emergency response,Environmental monitoring and air quality,Citizen engagement and digital services',
+      ],
+      pricing: '$25,000 - $150,000/month',
+      delivery: '20-32 weeks',
+      category: 'Smart City AI'
+},
+    {
+      title: 'AI-Powered Autonomous Vehicle Systems',
+      description: 'Advanced driver assistance and autonomous vehicle technology',
+      icon: Car,
+      features: [
+        'Computer vision and object detection,Path planning and navigation algorithms,Sensor fusion and data processing,Safety systems and fail-safe mechanisms,Vehicle-to-vehicle communication,Regulatory compliance and testing',
+      ],
+      pricing: '$50,000 - $500,000/month',
+      delivery: '24-48 weeks',
+      category: 'Autonomous Vehicle AI'
+},
+    {
       title: 'AI Voice & Speech Processing',
       description: 'Advanced voice recognition, synthesis, and real-time translation services',
       icon: Mic,
@@ -394,9 +493,8 @@ export default function AIServices() {
       ],
       pricing: '$10,000 - $40,000/month',
       delivery: '10-20 weeks',
-      category: 'Energy AI'},
       category: 'Energy AI'
-},
+    },
 
     {
       title: 'AI-Powered Cybersecurity Threat Detection',
@@ -407,7 +505,6 @@ export default function AIServices() {
       ],
       pricing: '$7,000 - $30,000/month',
       delivery: '8-16 weeks',
-      category: 'Cybersecurity AI'},
       category: 'Cybersecurity AI'
 },
 

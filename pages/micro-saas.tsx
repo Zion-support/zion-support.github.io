@@ -36,9 +36,10 @@ import {
   Home,
   Heart,
   Car,
-  TreePine,;
-  Satellite,;
-  Mic} from 'lucide-react';
+  TreePine,
+  Satellite,
+  Mic
+} from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
 export default function MicroSaaS() {
@@ -96,6 +97,105 @@ export default function MicroSaaS() {
       pricing: '$2,500 - $8,000/month',
       delivery: '3-5 weeks',
       category: 'Content SaaS'},
+    {
+      title: 'AI-Powered Customer Support Platform',
+      description: 'Intelligent customer service with automated ticket routing and response generation',
+      icon: MessageSquare,
+      features: [
+        'AI-powered ticket classification and routing,Automated response generation,Knowledge base integration,Multi-channel support (email, chat, phone),Performance analytics and insights,Integration with CRM systems'
+      ],
+      pricing: '$3,500 - $12,000/month',
+      delivery: '4-6 weeks',
+      category: 'Support SaaS'
+},
+    {
+      title: 'Blockchain-Based Supply Chain Tracker',
+      description: 'Transparent supply chain management with blockchain verification and real-time tracking',
+      icon: Network,
+      features: [
+        'Blockchain-based product authentication,Real-time supply chain tracking,Smart contract automation,Quality assurance and compliance,Supplier verification and rating,Integration with IoT sensors'
+      ],
+      pricing: '$8,000 - $30,000/month',
+      delivery: '8-12 weeks',
+      category: 'Blockchain SaaS'
+},
+    {
+      title: 'AI-Powered Personal Finance Manager',
+      description: 'Intelligent personal finance tracking with automated budgeting and investment advice',
+      icon: TrendingUp,
+      features: [
+        'Automated expense categorization,Budget optimization and recommendations,Investment portfolio analysis,Goal tracking and planning,Financial health scoring,Integration with banks and investment platforms'
+      ],
+      pricing: '$2,000 - $8,000/month',
+      delivery: '3-6 weeks',
+      category: 'FinTech SaaS'
+},
+    {
+      title: 'IoT Device Management Platform',
+      description: 'Comprehensive IoT device monitoring, management, and analytics platform',
+      icon: Satellite,
+      features: [
+        'Device registration and provisioning,Real-time monitoring and alerts,Data collection and analytics,Remote device control and updates,Security and access management,Integration with cloud platforms'
+      ],
+      pricing: '$5,000 - $20,000/month',
+      delivery: '6-10 weeks',
+      category: 'IoT SaaS'
+},
+    {
+      title: 'AI-Powered Learning Management System',
+      description: 'Intelligent e-learning platform with personalized learning paths and progress tracking',
+      icon: Brain,
+      features: [
+        'Personalized learning recommendations,Adaptive content delivery,Progress tracking and analytics,Automated assessment and grading,Collaborative learning tools,Integration with video conferencing'
+      ],
+      pricing: '$4,000 - $15,000/month',
+      delivery: '5-8 weeks',
+      category: 'EdTech SaaS'
+},
+    {
+      title: 'Green Energy Management Platform',
+      description: 'Sustainable energy monitoring and optimization for businesses and homes',
+      icon: TreePine,
+      features: [
+        'Energy consumption monitoring,Renewable energy integration,Cost optimization algorithms,Carbon footprint tracking,Energy efficiency recommendations,Integration with smart meters and solar panels'
+      ],
+      pricing: '$3,000 - $12,000/month',
+      delivery: '4-8 weeks',
+      category: 'GreenTech SaaS'
+},
+    {
+      title: 'AI-Powered Healthcare Scheduling',
+      description: 'Intelligent appointment scheduling with automated optimization and patient management',
+      icon: Calendar,
+      features: [
+        'Automated appointment scheduling,Patient preference learning,Resource optimization,Wait time prediction,Telemedicine integration,Compliance and HIPAA security'
+      ],
+      pricing: '$2,500 - $10,000/month',
+      delivery: '3-6 weeks',
+      category: 'HealthTech SaaS'
+},
+    {
+      title: 'Smart Home Automation Platform',
+      description: 'Comprehensive smart home control with AI-powered automation and energy management',
+      icon: Home,
+      features: [
+        'Device integration and control,AI-powered automation rules,Energy usage optimization,Security monitoring and alerts,Voice control integration,Remote access and management'
+      ],
+      pricing: '$1,500 - $6,000/month',
+      delivery: '2-4 weeks',
+      category: 'Smart Home SaaS'
+},
+    {
+      title: 'AI-Powered Real Estate Platform',
+      description: 'Intelligent property management with automated valuation and market analysis',
+      icon: Home,
+      features: [
+        'Automated property valuation,Market trend analysis,Property listing optimization,Tenant screening and management,Maintenance scheduling,Financial reporting and analytics'
+      ],
+      pricing: '$4,000 - $18,000/month',
+      delivery: '6-10 weeks',
+      category: 'PropTech SaaS'
+},
     {
       title: 'Customer Support Platform',
       description: 'Comprehensive helpdesk solution with AI chatbots and ticket management',

@@ -4,7 +4,7 @@ import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
 import Sidebar from '../src/components/Sidebar';
 import SEOHead from '../src/components/seo/SEOHead';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail, Menu } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail, Menu, Server, Smartphone, MapPin } from 'lucide-react';
 
 const Home = memo(() => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -46,19 +46,25 @@ const Home = memo(() => {
       title: 'AI Services',
       description: 'Cutting-edge artificial intelligence solutions',
       icon: Brain,
-      href: '/services/ai-services'
+      href: '/ai-services'
     },
     {
       title: 'IT Services',
-      description: 'Comprehensive information technology services',
-      icon: Network,
-      href: '/services/it-services'
+      description: 'Comprehensive IT infrastructure and cloud solutions',
+      icon: Server,
+      href: '/it-services'
     },
     {
       title: 'Micro SaaS',
-      description: 'Scalable software as a service solutions',
-      icon: Cloud,
-      href: '/services/micro-saas'
+      description: 'Custom software-as-a-service applications',
+      icon: Smartphone,
+      href: '/micro-saas'
+    },
+    {
+      title: 'All Services',
+      description: 'Complete technology solutions overview',
+      icon: Globe,
+      href: '/comprehensive-services'
     }
   ];
 
@@ -199,6 +205,49 @@ const Home = memo(() => {
           </div>
         </section>
 
+        {/* Contact Information Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+              <p className="text-lg text-gray-600">Ready to start your next project? Contact us today.</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Phone className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
+                <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-700">
+                  +1 302 464 0950
+                </a>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Mail className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-700">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
+                <p className="text-gray-600">
+                  364 E Main St STE 1008<br />
+                  Middletown, DE 19709
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -212,8 +261,8 @@ const Home = memo(() => {
               <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Get Free Consultation
               </Link>
-              <Link href="/about" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                Learn More About Us
+              <Link href="/request-quote" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                Request Quote
               </Link>
             </div>
           </div>
