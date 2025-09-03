@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import Head from 'next/head';
@@ -34,16 +35,41 @@ const MainLayout: React.FC<MainLayoutProps> = ({
     </>
 =======
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
+=======
+import React from "react"
+interface MainLayoutProps {;
+
+  children: React.ReactNode,
+  title?: string,,
+  description?: string,
+  keywords?: string,
+const MainLayout: React.FC<MainLayoutProps> = ({ children,"
+  title = "Zion Tech Group","
+  description = "Leading technology solutions and AI services","
+  keywords = "technology, AI, software development, consulting"
+}) => {
+>>>>>>> main
   return (
-    <div className="min-h-screen flex flex-col">
-      <EnhancedNavigation />
-      <main id="main-content" className="flex-grow" role="main">
+    <div className="min-h-screen flex flex-col">"
+      <SEOEnhancer title="{title}" description="{description}" keywords="{keywords}"  />
+      <PerformanceOptimizer  />
+      <AccessibilityEnhancer  />
+      <Header  />"
+      <main className="flex-grow">
         {children}
+<<<<<<< HEAD
       </main>
       <EnhancedFooter />
     </div>
 >>>>>>> origin/main
   );
 };
+=======
+>>>>>>> main
 
-export default MainLayout;
+      </main>
+      <Footer  />
+    </div>
+  )
+}
+""export default MainLayout
