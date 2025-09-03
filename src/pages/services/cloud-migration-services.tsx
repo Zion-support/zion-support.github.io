@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { 
   Cloud, 
   Shield, 
@@ -114,30 +113,30 @@ const CloudMigrationServices = () => {
       <div className="bg-white shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 mb-6"
             >
               <Cloud className="w-10 h-10 text-white" />
-            </motion.div>
-            <motion.h1 
+            </div>
+            <h1 
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               className="text-5xl font-bold text-gray-900 mb-4"
             >
               Cloud Migration Services
-            </motion.h1>
-            <motion.p 
+            </h1>
+            <p 
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"
             >
               Seamlessly migrate your infrastructure to the cloud with zero downtime, enhanced security, and significant cost savings.
-            </motion.p>
-            <motion.div 
+            </p>
+            <div 
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
@@ -157,7 +156,7 @@ const CloudMigrationServices = () => {
                 <Mail className="w-5 h-5 mr-2" />
                 Get Free Assessment
               </a>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
@@ -171,7 +170,7 @@ const CloudMigrationServices = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <motion.div
+            <div
               key={feature}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -180,7 +179,7 @@ const CloudMigrationServices = () => {
             >
               <CheckCircle className="w-8 h-8 text-green-500 mb-4" />
               <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature}</h3>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
@@ -195,7 +194,7 @@ const CloudMigrationServices = () => {
           
           <div className="space-y-8">
             {migrationSteps.map((step, index) => (
-              <motion.div
+              <div
                 key={step.step}
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -212,7 +211,7 @@ const CloudMigrationServices = () => {
                     {step.duration}
                   </span>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -227,7 +226,7 @@ const CloudMigrationServices = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit, index) => (
-            <motion.div
+            <div
               key={benefit}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -238,7 +237,7 @@ const CloudMigrationServices = () => {
                 <Star className="w-8 h-8 text-blue-600" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit}</h3>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
@@ -253,7 +252,7 @@ const CloudMigrationServices = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             {Object.entries(pricing).map(([key, plan], index) => (
-              <motion.div
+              <div
                 key={key}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -297,7 +296,7 @@ const CloudMigrationServices = () => {
                 >
                   Get Started
                 </a>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

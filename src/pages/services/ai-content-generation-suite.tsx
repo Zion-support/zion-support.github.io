@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { 
   FileText, 
   Brain, 
@@ -75,30 +74,30 @@ const AIContentGenerationSuite = () => {
       <div className="bg-white shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 mb-6"
             >
               <FileText className="w-10 h-10 text-white" />
-            </motion.div>
-            <motion.h1 
+            </div>
+            <h1 
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               className="text-5xl font-bold text-gray-900 mb-4"
             >
               AI Content Generation Suite
-            </motion.h1>
-            <motion.p 
+            </h1>
+            <p 
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"
             >
               Transform your content marketing with AI-powered content creation that saves time, maintains brand consistency, and drives engagement across all channels.
-            </motion.p>
-            <motion.div 
+            </p>
+            <div 
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
@@ -118,7 +117,7 @@ const AIContentGenerationSuite = () => {
                 <Mail className="w-5 h-5 mr-2" />
                 Get Free Demo
               </a>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
@@ -132,7 +131,7 @@ const AIContentGenerationSuite = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <motion.div
+            <div
               key={feature}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -141,7 +140,7 @@ const AIContentGenerationSuite = () => {
             >
               <CheckCircle className="w-8 h-8 text-green-500 mb-4" />
               <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature}</h3>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
@@ -156,7 +155,7 @@ const AIContentGenerationSuite = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <motion.div
+              <div
                 key={benefit}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -167,7 +166,7 @@ const AIContentGenerationSuite = () => {
                   <Star className="w-8 h-8 text-purple-600" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit}</h3>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -182,7 +181,7 @@ const AIContentGenerationSuite = () => {
         
         <div className="grid md:grid-cols-3 gap-8">
           {Object.entries(pricing).map(([key, plan], index) => (
-            <motion.div
+            <div
               key={key}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -225,7 +224,7 @@ const AIContentGenerationSuite = () => {
               >
                 Get Started
               </a>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

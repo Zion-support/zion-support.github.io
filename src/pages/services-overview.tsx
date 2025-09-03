@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+
 import { 
   Brain, 
   Shield, 
@@ -47,22 +47,22 @@ const ServicesOverview = () => {
       <div className="bg-white shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center">
-            <motion.h1 
+            <h1 
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               className="text-5xl font-bold text-gray-900 mb-4"
             >
               Zion Tech Group Services
-            </motion.h1>
-            <motion.p 
+            </h1>
+            <p 
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               className="text-xl text-gray-600 mb-8"
             >
               Comprehensive Technology Solutions & Micro SaaS Services
-            </motion.p>
-            <motion.div 
+            </p>
+            <div 
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -82,7 +82,7 @@ const ServicesOverview = () => {
                 <Mail className="w-5 h-5 mr-2" />
                 Email Us
               </a>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
@@ -96,7 +96,7 @@ const ServicesOverview = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* AI Services */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
@@ -155,10 +155,10 @@ const ServicesOverview = () => {
                 </a>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* IT Services */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
@@ -218,10 +218,10 @@ const ServicesOverview = () => {
                 </a>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Business SaaS */}
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -281,7 +281,7 @@ const ServicesOverview = () => {
                 </a>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
